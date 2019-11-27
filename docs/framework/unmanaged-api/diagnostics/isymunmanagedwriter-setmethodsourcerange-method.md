@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427870"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange Yöntemi
-Specifies the true start and end of a method within a source file. Use this method to specify the extent of a method independently of the sequence points that exist within the method.  
+Kaynak dosya içindeki bir yöntemin doğru başlangıcını ve sonunu belirtir. Yöntemin içinde var olan sıra noktalarından bağımsız olarak bir yöntemin kapsamını belirtmek için bu yöntemi kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +39,28 @@ HRESULT SetMethodSourceRange(
   
 ## <a name="parameters"></a>Parametreler  
  `startDoc`  
- [in] A pointer to the document containing the starting position.  
+ 'ndaki Başlangıç konumunu içeren belgeye yönelik bir işaretçi.  
   
  `startLine`  
- [in] The starting line number.  
+ 'ndaki Başlangıç satır numarası.  
   
  `startColumn`  
- [in] The starting column.  
+ 'ndaki Başlangıç sütunu.  
   
  `endDoc`  
- [in] A pointer to the document containing the ending position.  
+ 'ndaki Bitiş konumunu içeren belgeye yönelik bir işaretçi.  
   
  `endLine`  
- [in] The ending line number.  
+ 'ndaki Son satır numarası.  
   
  `endColumn`  
- [in] The ending column number.  
+ 'ndaki Bitiş sütun numarası.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

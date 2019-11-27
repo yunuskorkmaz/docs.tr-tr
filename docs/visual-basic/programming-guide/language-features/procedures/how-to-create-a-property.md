@@ -15,48 +15,48 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349711"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Nasıl yapılır: Özellik Oluşturma (Visual Basic)
-You enclose a property definition between a `Property` statement and an `End Property` statement. Within this definition you define a `Get` procedure, a `Set` procedure, or both. All the property's code lies within these procedures.  
+Bir `Property` ifadesiyle bir `End Property` ifadesiyle özellik tanımını çevreedersiniz. Bu tanımda bir `Get` yordamı, `Set` yordamı veya her ikisini de tanımlarsınız. Tüm özellik kodu bu yordamların içinde yer alır.  
   
- The `Get` procedure retrieves the property's value, and the `Set` procedure stores a value. If you want the property to have read/write access, you must define both procedures. For a read-only property, you define only `Get`, and for a write-only property, you define only `Set`.  
+ `Get` yordam özelliğin değerini alır ve `Set` yordamı bir değeri depolar. Özelliğin okuma/yazma erişimine sahip olmasını istiyorsanız her iki yordamı da tanımlamanız gerekir. Salt okunurdur bir özellik için yalnızca `Get`tanımlar ve salt yazılır bir özellik için yalnızca `Set`tanımlarsınız.  
   
-### <a name="to-create-a-property"></a>To create a property  
+### <a name="to-create-a-property"></a>Bir özellik oluşturmak için  
   
-1. Outside any property or procedure, use a [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md), followed by an `End Property` statement.  
+1. Herhangi bir özellik veya yordamın dışında, bir [Property ifadesini](../../../../visual-basic/language-reference/statements/property-statement.md)ve ardından bir `End Property` ifadesini kullanın.  
   
-2. If the property takes parameters, follow the `Property` keyword with the name of the procedure, then the parameter list in parentheses.  
+2. Özelliği parametreleri alırsa, yordamın adı ile `Property` anahtar sözcüğünü, sonra parantez içindeki parametre listesini izleyin.  
   
-3. Follow the parentheses with an `As` clause to specify the data type of the property's value. You must specify the data type even for a write-only property.  
+3. Özelliğin değerinin veri türünü belirtmek için bir `As` yan tümcesiyle ayraçları izleyin. Salt yazılır bir özellik için bile veri türünü belirtmeniz gerekir.  
   
-4. Add `Get` and `Set` procedures, as appropriate. See the following directions.  
+4. `Get` ve `Set` yordamlarını uygun şekilde ekleyin. Aşağıdaki yönergelere bakın.  
   
-### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a>To create a Get procedure that retrieves a property value  
+### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a>Bir özellik değeri alan bir Get yordamı oluşturmak için  
   
-1. Between the `Property` and `End Property` statements, write a [Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md), followed by an `End Get` statement. You do not need to define any parameters for the `Get` procedure.  
+1. `Property` ve `End Property` deyimleri arasında, bir [Get deyimi](../../../../visual-basic/language-reference/statements/get-statement.md)ve ardından bir `End Get` deyimi yazın. `Get` yordamı için herhangi bir parametre tanımlamanız gerekmez.  
   
-2. Place the code statements to retrieve the property's value between the `Get` and `End Get` statements. This code can include other calculations and data manipulations in addition to generating and returning the property's value.  
+2. `Get` ve `End Get` deyimleri arasında özelliğin değerini almak için kod deyimlerini yerleştirin. Bu kod, özelliğin değerini oluşturma ve döndürmenin yanı sıra diğer hesaplamalar ve veri düzenlemeleri içerebilir.  
   
-3. Use a `Return` statement to return the property's value to the calling code.  
+3. Özelliğin değerini çağıran koda döndürmek için bir `Return` ifadesini kullanın.  
   
- You must write a `Get` procedure for a read-write property and for a read-only property. You must not define a `Get` procedure for a write-only property.  
+ Okuma-yazma özelliği ve salt okunurdur özelliği için bir `Get` yordamı yazmalısınız. Salt yazılır bir özellik için `Get` yordamı tanımlamamalısınız.  
   
-### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a>To create a Set procedure that writes a property's value  
+### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a>Özelliğin değerini yazan bir ayarlama yordamı oluşturmak için  
   
-1. Between the `Property` and `End Property` statements, write a [Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md), followed by an `End Set` statement.  
+1. `Property` ve `End Property` deyimleri arasında bir [set deyimi](../../../../visual-basic/language-reference/statements/set-statement.md)ve ardından bir `End Set` deyimi yazın.  
   
-2. In the `Set` statement, follow the `Set` keyword with a parameter list in parentheses. This parameter list must include at least a value parameter for the value passed by the calling code. The default name for this value parameter is `Value`, but you can use a different name if appropriate. The value parameter must have the same data type as the property itself.  
+2. `Set` bildiriminde, parantez içinde bir parametre listesi ile `Set` anahtar sözcüğünü izleyin. Bu parametre listesi, çağıran kodun geçirilmiş değeri için en az bir değer parametresi içermelidir. Bu değer parametresinin varsayılan adı `Value`, ancak uygunsa, farklı bir ad kullanabilirsiniz. Değer parametresi, özelliğin kendisiyle aynı veri türüne sahip olmalıdır.  
   
-3. Place the code statements to store a value in the property between the `Set` and `End Set` statements. This code can include other calculations and data manipulations in addition to validating and storing the property's value.  
+3. `Set` ve `End Set` deyimleri arasındaki özellikte bir değeri depolamak için kod deyimlerini yerleştirin. Bu kod, özelliğin değerini doğrulamaya ve depolamaya ek olarak diğer hesaplamalar ve veri düzenlemeleri içerebilir.  
   
-4. Use the value parameter to accept the value supplied by the calling code. You can either store this value directly in an assignment statement, or use it in an expression to calculate the internal value to be stored.  
+4. Çağıran kodun sağladığı değeri kabul etmek için value parametresini kullanın. Bu değeri doğrudan bir atama deyiminde saklayabilir veya depolanacağı iç değeri hesaplamak için bir ifadede kullanabilirsiniz.  
   
- You must write a `Set` procedure for a read-write property and for a write-only property. You must not define a `Set` procedure for a read-only property.  
+ Okuma-yazma özelliği için ve salt yazılır bir özellik için `Set` yordamı yazmalısınız. Salt okunurdur özelliği için `Set` yordam tanımlamanız gerekir.  
   
 ## <a name="example"></a>Örnek  
- The following example creates a read/write property that stores a full name as two constituent names, the first name and the last name. When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name. When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names. If it does not find a space, it stores it all as the first name.  
+ Aşağıdaki örnek, tam adı iki anayent adı, ilk adı ve soyadı olarak depolayan bir okuma/yazma özelliği oluşturur. Çağıran kod `fullName`okurken, `Get` yordamı iki anayent adını birleştirir ve tam adı döndürür. Çağıran kod yeni bir tam ad atarken, `Set` yordamı onu iki anayada bölmek için çalışır. Bir boşluk bulamazsa, ilk ad olarak tümünü depolar.  
   
  [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
- The following example shows typical calls to the property procedures of `fullName`. The first call sets the property value and the second call retrieves it.  
+ Aşağıdaki örnek, `fullName`Özellik yordamlarına yapılan tipik çağrıları gösterir. İlk çağrı, özellik değerini ayarlar ve ikinci çağrı onu alır.  
   
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
@@ -65,9 +65,9 @@ You enclose a property definition between a `Property` statement and an `End Pro
 - [Yordamlar](./index.md)
 - [Özellik Yordamları](./property-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
-- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Visual Basic Özellikler ve değişkenler arasındaki farklar](./differences-between-properties-and-variables.md)
 - [Nasıl yapılır: Bir Özelliği Karışık Erişim Düzeyleriyle Bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Nasıl yapılır: Bir Özellik Yordamı Çağırma](./how-to-call-a-property-procedure.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Nasıl yapılır: Visual Basic varsayılan bir özellik bildirme ve çağırma](./how-to-declare-and-call-a-default-property.md)
 - [Nasıl yapılır: Bir Özelliğe Değer Ekleme](./how-to-put-a-value-in-a-property.md)
 - [Nasıl yapılır: Bir Özellikten Değer Alma](./how-to-get-a-value-from-a-property.md)

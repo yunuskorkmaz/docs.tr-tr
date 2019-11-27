@@ -13,22 +13,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346343"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Çeşitli Veri Türleri (Visual Basic)
-Visual Basic supplies several data types that are not oriented toward numbers or characters. Instead, they deal with specialized data such as yes/no values, date/time values, and object addresses.  
+Visual Basic, sayı veya karakterlere yönelik olmayan çeşitli veri türleri sağlar. Bunun yerine, Evet/Hayır değerleri, tarih/saat değerleri ve nesne adresleri gibi özelleşmiş verilerle ilgilenir.  
   
- For a table showing a side-by-side comparison of the Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
+ Visual Basic veri türlerinin yan yana karşılaştırmasını gösteren bir tablo için bkz. [veri türleri](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="boolean-type"></a>Boolean Type  
- The [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) is an unsigned value that is interpreted as either `True` or `False`. Its data width depends on the implementing platform. If a variable can contain only two-state values such as true/false, yes/no, or on/off, declare it as `Boolean`.  
+## <a name="boolean-type"></a>Boole türü  
+ [Boolean veri türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) , `True` veya `False`olarak yorumlanan işaretsiz bir değerdir. Veri genişliği, uygulama platformuna bağlıdır. Bir değişken yalnızca doğru/yanlış, Evet/Hayır veya açık/kapalı gibi yalnızca iki durumlu değerler içeriyorsa, bunu `Boolean`olarak bildirin.  
   
-## <a name="date-type"></a>Date Type  
- The [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md) is a 64-bit value that holds both date and time information. Each increment represents 100 nanoseconds of elapsed time since the beginning (12:00 AM) of January 1 of the year 1 in the Gregorian calendar. If a variable can contain a date value, a time value, or both, declare it as `Date`.  
+## <a name="date-type"></a>Tarih türü  
+ [Tarih veri türü](../../../../visual-basic/language-reference/data-types/date-data-type.md) , hem tarih hem de saat bilgilerini tutan 64 bitlik bir değerdir. Her artış, Gregoryen takvimdeki 1 Ocak 100 ' den (12:00) itibaren geçen sürenin nanosaniye süresini temsil eder. Bir değişken bir tarih değeri, saat değeri veya her ikisi de içeriyorsa, `Date`olarak bildirin.  
   
-## <a name="object-type"></a>Object Type  
- The [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) is a 32-bit address that points to an object instance within your application or in some other application. An `Object` variable can refer to any object your application recognizes, or to data of any data type. This includes both *value types*, such as `Integer`, `Boolean`, and structure instances, and *reference types*, which are instances of objects created from classes such as `String` and <xref:System.Windows.Forms.Form>, and array instances.  
+## <a name="object-type"></a>Nesne Türü  
+ [Nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md) , uygulamanızdaki bir nesne örneğine veya başka bir uygulamaya işaret eden 32 bitlik bir adrestir. `Object` bir değişken, uygulamanızın tanıdığı herhangi bir nesneye veya herhangi bir veri türüne ait verilere başvurabilir. Bu, `Integer`, `Boolean`ve yapı örnekleri gibi *değer türlerini*ve `String` ve <xref:System.Windows.Forms.Form>ve dizi örnekleri gibi sınıflardan oluşturulan nesne örnekleri olan *başvuru türlerini*içerir.  
   
- If a variable stores a pointer to an instance of a class that you do not know at compile time, or if it can point to data of various data types, declare it as `Object`.  
+ Bir değişken, derleme zamanında tanımadığınız bir sınıfın örneğine bir işaretçi depolarsa veya çeşitli veri türlerindeki verileri işaret edebilir, `Object`olarak bildirin.  
   
- The advantage of the `Object` data type is that you can use it to store data of any data type. The disadvantage is that you incur extra operations that take more execution time and make your application perform slower. If you use an `Object` variable for value types, you incur *boxing* and *unboxing*. If you use it for reference types, you incur *late binding*.  
+ `Object` veri türünün avantajı, herhangi bir veri türünün verilerini depolamak için bunu kullanmanıza olanak sağlar. Dezavantajı, daha fazla yürütme süresi alan ve uygulamanızı daha yavaş hale getirebilmeniz için ek işlemlere neden olur. Değer türleri için bir `Object` değişkeni kullanırsanız *kutulama* ve *kutudan*çıkarma uygulanır. Bunu başvuru türleri için kullanıyorsanız, *geç bağlamaya*tabi olursunuz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

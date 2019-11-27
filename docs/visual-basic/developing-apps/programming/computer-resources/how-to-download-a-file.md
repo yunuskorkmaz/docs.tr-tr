@@ -17,43 +17,43 @@ ms.locfileid: "74345628"
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosya İndirme
 
-The <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> method can be used to download a remote file and store it to a specific location. If the `ShowUI` parameter is set to `True`, a dialog box is displayed showing the progress of the download and allowing users to cancel the operation. By default, existing files having the same name are not overwritten; if you want to overwrite existing files, set the `overwrite` parameter to `True`.
+<xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> yöntemi, uzak bir dosyayı indirmek ve belirli bir konuma depolamak için kullanılabilir. `ShowUI` parametresi `True`olarak ayarlanırsa, indirmenin ilerlemesini gösteren bir iletişim kutusu görüntülenir ve kullanıcıların işlemi iptal edebilmesine izin verir. Varsayılan olarak, aynı ada sahip var olan dosyaların üzerine yazılmaz; Varolan dosyaların üzerine yazmak istiyorsanız `overwrite` parametresini `True`olarak ayarlayın.
 
 Aşağıdaki koşullar özel bir duruma neden olabilir:
 
-- Drive name is not valid (<xref:System.ArgumentException>).
+- Sürücü adı geçerli değil (<xref:System.ArgumentException>).
 
-- Necessary authentication has not been supplied (<xref:System.UnauthorizedAccessException> or <xref:System.Security.SecurityException>).
+- Gerekli kimlik doğrulaması sağlanmadı (<xref:System.UnauthorizedAccessException> veya <xref:System.Security.SecurityException>).
 
-- The server does not respond within the specified `connectionTimeout` (<xref:System.TimeoutException>).
+- Sunucu belirtilen `connectionTimeout` (<xref:System.TimeoutException>) içinde yanıt vermiyor.
 
-- The request is denied by the Web site (<xref:System.Net.WebException>).
+- İstek Web sitesi tarafından reddedildi (<xref:System.Net.WebException>).
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
 > [!IMPORTANT]
-> Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. For example, the file Form1.vb may not be a Visual Basic source file. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın. Dosyanın içeriği beklendiği gibi olmayabilir ve dosyadan okuma yöntemleri başarısız olabilir.
+> Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, Form1. vb dosyası bir Visual Basic kaynak dosyası olmayabilir. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın. Dosyanın içeriği beklendiği gibi olmayabilir ve dosyadan okuma yöntemleri başarısız olabilir.
 
-### <a name="to-download-a-file"></a>To download a file
+### <a name="to-download-a-file"></a>Bir dosyayı indirmek için
 
-- Use the `DownloadFile` method to download the file, specifying the target file's location as a string or URI and specifying the location at which to store the file. This example downloads the file `WineList.txt` from `http://www.cohowinery.com/downloads` and saves it to `C:\Documents and Settings\All Users\Documents`:
+- Hedef dosyanın konumunu bir dize veya URI olarak belirterek ve dosyanın kaydedileceği konumu belirterek dosyayı indirmek için `DownloadFile` yöntemini kullanın. Bu örnek, `http://www.cohowinery.com/downloads` `WineList.txt` dosyayı indirir ve `C:\Documents and Settings\All Users\Documents`kaydeder:
 
   [!code-vb[VbResourceTasks#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#9)]
 
-### <a name="to-download-a-file-specifying-a-time-out-interval"></a>To download a file, specifying a time-out interval
+### <a name="to-download-a-file-specifying-a-time-out-interval"></a>Bir dosya indirmek için bir zaman aşımı aralığı belirtme
 
-- Use the `DownloadFile` method to download the file, specifying the target file's location as a string or URI, specifying the location at which to store the file, and specifying the time-out interval in milliseconds (the default is 1000). This example downloads the file `WineList.txt` from `http://www.cohowinery.com/downloads` and saves it to `C:\Documents and Settings\All Users\Documents`, specifying a time-out interval of 500 milliseconds:
+- Dosyayı indirmek için `DownloadFile` yöntemi kullanın, hedef dosyanın konumunu bir dize veya URI olarak belirterek, dosyanın kaydedileceği konumu belirterek ve zaman aşımı aralığını milisaniye cinsinden (varsayılan: 1000) belirterek. Bu örnek, `http://www.cohowinery.com/downloads` `WineList.txt` dosyayı indirir ve 500 milisaniyelik zaman aşımı aralığını belirterek `C:\Documents and Settings\All Users\Documents`kaydeder:
 
   [!code-vb[VbResourceTasks#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#10)]
 
-### <a name="to-download-a-file-supplying-a-user-name-and-password"></a>To download a file, supplying a user name and password
+### <a name="to-download-a-file-supplying-a-user-name-and-password"></a>Bir dosyayı indirmek için Kullanıcı adı ve parola sağlama
 
-- Use the `DownLoadFile` method to download the file, specifying the target file's location as a string or URI and specifying the location at which to store the file, the user name, and the password. This example downloads the file `WineList.txt` from `http://www.cohowinery.com/downloads` and saves it to `C:\Documents and Settings\All Users\Documents`, with the user name `anonymous` and a blank password.
+- Dosyayı indirmek için `DownLoadFile` yöntemini kullanın, hedef dosyanın konumunu bir dize veya URI olarak belirterek ve dosyanın kaydedileceği konumu, Kullanıcı adını ve parolayı belirtin. Bu örnek, `http://www.cohowinery.com/downloads` `WineList.txt` dosyayı indirir ve Kullanıcı adı `anonymous` ve boş bir parolayla `C:\Documents and Settings\All Users\Documents`kaydeder.
 
   [!code-vb[VbResourceTasks#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#11)]
 
   > [!IMPORTANT]
-  > The FTP protocol used by the `DownLoadFile` method sends information, including passwords, in plain text and should not be used for transmitting sensitive information.
+  > `DownLoadFile` yöntemi tarafından kullanılan FTP protokolü, parolalar da dahil olmak üzere bilgileri düz metin olarak gönderir ve hassas bilgilerin iletilmesi için kullanılmamalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

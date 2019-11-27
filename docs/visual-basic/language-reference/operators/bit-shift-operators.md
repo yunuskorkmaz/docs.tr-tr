@@ -14,9 +14,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336118"
 ---
 # <a name="bit-shift-operators-visual-basic"></a>Bit Kaydırma İşleçleri (Visual Basic)
-The following are the bit shift operators defined in Visual Basic.  
+Aşağıda Visual Basic tanımlanan bit kaydırma işleçleri verilmiştir.  
   
- [<\< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
+ [<\< Işleci](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
   
  [>> İşleci](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
   

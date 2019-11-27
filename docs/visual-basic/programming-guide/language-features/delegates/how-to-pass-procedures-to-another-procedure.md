@@ -1,5 +1,5 @@
 ---
-title: 'How to: Pass Procedures to Another Procedure'
+title: 'Nasıl yapılır: başka bir yordama yordam geçirme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
@@ -13,37 +13,37 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345241"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de Başka Bir Yordama Yordam Geçirme
-This example shows how to use delegates to pass a procedure to another procedure.  
+Bu örnek, bir yordamın başka bir yordama iletilmesi için temsilcilerin nasıl kullanılacağını gösterir.  
   
- A delegate is a type that you can use like any other type in Visual Basic. The `AddressOf` operator returns a delegate object when applied to a procedure name.  
+ Temsilci, Visual Basic diğer herhangi bir tür gibi kullanabileceğiniz bir türdür. `AddressOf` işleci bir yordam adına uygulandığında bir temsilci nesnesi döndürür.  
   
- This example has a procedure with a delegate parameter that can take a reference to another procedure, obtained with the `AddressOf` operator.  
+ Bu örnek, `AddressOf` işleci ile elde edilen başka bir yordama başvuru alan bir temsilci parametresi olan bir yordama sahiptir.  
   
-### <a name="create-the-delegate-and-matching-procedures"></a>Create the delegate and matching procedures  
+### <a name="create-the-delegate-and-matching-procedures"></a>Temsilci ve eşleştirme yordamlarını oluşturma  
   
-1. Create a delegate named `MathOperator`.  
+1. `MathOperator`adlı bir temsilci oluşturun.  
   
      [!code-vb[VbVbalrDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#1)]  
   
-2. Create a procedure named `AddNumbers` with parameters and return value that match those of `MathOperator`, so that the signatures match.  
+2. İmzaların eşleşmesi için `MathOperator`eşleşen parametrelere ve dönüş değerine sahip `AddNumbers` adlı bir yordam oluşturun.  
   
      [!code-vb[VbVbalrDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#2)]  
   
-3. Create a procedure named `SubtractNumbers` with a signature that matches `MathOperator`.  
+3. `MathOperator`eşleşen bir imzayla `SubtractNumbers` adlı bir yordam oluşturun.  
   
      [!code-vb[VbVbalrDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#3)]  
   
-4. Create a procedure named `DelegateTest` that takes a delegate as a parameter.  
+4. Bir temsilciyi parametre olarak alan `DelegateTest` adlı bir yordam oluşturun.  
   
-     This procedure can accept a reference to `AddNumbers` or `SubtractNumbers`, because their signatures match the `MathOperator` signature.  
+     İmzaları `MathOperator` imzasıyla eşleştiğinden, bu yordam `AddNumbers` veya `SubtractNumbers`bir başvuruyu kabul edebilir.  
   
      [!code-vb[VbVbalrDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#4)]  
   
-5. Create a procedure named `Test` that calls `DelegateTest` once with the delegate for `AddNumbers` as a parameter, and again with the delegate for `SubtractNumbers` as a parameter.  
+5. Bir parametre olarak `AddNumbers` temsilcisinden bir kez `DelegateTest` çağıran `Test` adlı bir yordam oluşturun ve bir parametre olarak `SubtractNumbers` için temsilciyle yeniden.  
   
      [!code-vb[VbVbalrDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#5)]  
   
-     When `Test` is called, it first displays the result of `AddNumbers` acting on `5` and `3`, which is 8. Then the result of `SubtractNumbers` acting on `9` and `3` is displayed, which is 6.  
+     `Test` çağrıldığında, önce `5` ve `3`üzerinde işlem yapan `AddNumbers` sonucunu görüntüler, bu 8 ' dir. Sonra, `9` ve `3` işlem `SubtractNumbers` sonucu 6 ' da görüntülenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

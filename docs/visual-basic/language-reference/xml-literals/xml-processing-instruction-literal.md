@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347039"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML İşleme Talimatı Değişmez Değeri (Visual Basic)
-A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.  
+<xref:System.Xml.Linq.XProcessingInstruction> nesnesini temsil eden bir sabit değer.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,37 +26,37 @@ A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.
   
 ## <a name="parts"></a>Bölümler  
  `<?`  
- Gerekli. Denotes the start of the XML processing instruction literal.  
+ Gerekli. XML işleme yönergesi sabit değerinin başlangıcını gösterir.  
   
  `piName`  
- Gerekli. Name indicating which application the processing instruction targets. Cannot begin with "xml" or "XML".  
+ Gerekli. İşleme yönergesinin hangi uygulamayı hedeflediğini belirten ad. "Xml" veya "XML" ile başlayamaz.  
   
  `piData`  
- İsteğe bağlı. String indicating how the application targeted by `piName` should process the XML document.  
+ İsteğe bağlı. `piName` tarafından hedeflenen uygulamanın XML belgesini nasıl işleyeceğini belirten dize.  
   
  `?>`  
- Gerekli. Denotes the end of the processing instruction.  
+ Gerekli. İşleme yönergesinin sonunu belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- An <xref:System.Xml.Linq.XProcessingInstruction> object.  
+ <xref:System.Xml.Linq.XProcessingInstruction> nesnesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- XML processing instruction literals indicate how applications should process an XML document. When an application loads an XML document, the application can check the XML processing instructions to determine how to process the document. The application interprets the meaning of `piName` and `piData`.  
+ XML işleme yönergesi sabit değerleri, uygulamaların bir XML belgesini nasıl işleyeceğini gösterir. Bir uygulama bir XML belgesi yüklediğinde, uygulama, belgeyi nasıl işleyeceğini belirleyebilmek için XML işleme talimatlarını denetleyebilir. Uygulama `piName` ve `piData`anlamını yorumlar.  
   
- The XML document literal uses syntax that is similar to that of the XML processing instruction. For more information, see [XML Document Literal](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
-  
-> [!NOTE]
-> The `piName` element cannot begin with the strings "xml" or "XML", because the XML 1.0 specification reserves those identifiers.  
-  
- You can assign an XML processing instruction literal to a variable or include it in an XML document literal.  
+ XML belgesi değişmez değeri, XML işleme yönergesinden benzer bir sözdizimi kullanır. Daha fazla bilgi için bkz. [XML belgesi değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
   
 > [!NOTE]
-> An XML literal can span multiple lines without needing line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+> XML 1,0 belirtimi Bu tanımlayıcıları ayırdığından `piName` öğesi "xml" veya "XML" dizeleriyle başlayamaz.  
   
- The Visual Basic compiler converts the XML processing instruction literal to a call to the <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> constructor.  
+ Bir değişkene XML işlem yönergesi sabit değeri atayabilir veya onu bir XML belge değişmez değerine ekleyebilirsiniz.  
+  
+> [!NOTE]
+> Bir XML sabit değeri, satır devamlılık karakterlerine gerek duymadan birden çok satıra yayılabilir. Bu sayede bir XML belgesinden içerik kopyalayabilir ve doğrudan bir Visual Basic programına yapıştırabilirsiniz.  
+  
+ Visual Basic derleyici, XML işleme yönergesi sabit değerini <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> oluşturucusuna bir çağrıya dönüştürür.  
   
 ## <a name="example"></a>Örnek  
- The following example creates a processing instruction identifying a style-sheet for an XML document.  
+ Aşağıdaki örnek, bir XML belgesi için stil sayfası tanımlayan bir işleme yönergesi oluşturur.  
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   
@@ -65,4 +65,4 @@ A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.
 - <xref:System.Xml.Linq.XProcessingInstruction>
 - [XML Belgesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Creating XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Visual Basic XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333044"
 ---
 # <a name="removehandler-statement"></a>RemoveHandler Deyimi
-Removes the association between an event and an event handler.  
+Bir olay ve olay işleyicisi arasındaki ilişkiyi kaldırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,14 +29,14 @@ RemoveHandler event, AddressOf eventhandler
   
 |Terim|Tanım|  
 |---|---|  
-|`event`|The name of the event being handled.|  
-|`eventhandler`|The name of the procedure currently handling the event.|  
+|`event`|İşlenmekte olan olayın adı.|  
+|`eventhandler`|Şu anda olayı işleyen yordamın adı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling for a specific event at any time during program execution.  
+ `AddHandler` ve `RemoveHandler` deyimleri, program yürütme sırasında istediğiniz zaman belirli bir olay için olay işlemeyi başlatıp durdurmalarını sağlar.  
   
 > [!NOTE]
-> For custom events, the `RemoveHandler` statement invokes the event's `RemoveHandler` accessor. For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
+> Özel olaylar için `RemoveHandler` ifade, olayın `RemoveHandler` erişimcisini çağırır. Özel olaylar hakkında daha fazla bilgi için bkz. [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
@@ -44,6 +44,6 @@ RemoveHandler event, AddressOf eventhandler
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [AddHandler Deyimi](../../../visual-basic/language-reference/statements/addhandler-statement.md)
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [İşlendiğini](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)

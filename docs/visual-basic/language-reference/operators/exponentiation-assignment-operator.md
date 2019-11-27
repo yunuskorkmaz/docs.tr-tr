@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331301"
 ---
 # <a name="-operator-visual-basic"></a>^= İşleci (Visual Basic)
-Raises the value of a variable or property to the power of an expression and assigns the result back to the variable or property.  
+Bir değişkenin veya özelliğin değerini bir ifadenin gücüne yükseltir ve sonucu değişkene veya özelliğe geri atar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,25 +27,25 @@ variableorproperty ^= expression
   
 ## <a name="parts"></a>Bölümler  
  `variableorproperty`  
- Gerekli. Any numeric variable or property.  
+ Gerekli. Herhangi bir sayısal değişken veya özellik.  
   
  `expression`  
- Gerekli. Any numeric expression.  
+ Gerekli. Herhangi bir sayısal ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The element on the left side of the `^=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ `^=` işlecinin sol tarafındaki öğe basit bir skaler değişken, bir özellik veya bir dizi öğesi olabilir. Değişken veya özellik [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)olamaz.  
   
- The `^=` operator first raises the value of the variable or property (on the left-hand side of the operator) to the power of the value of the expression (on the right-hand side of the operator). The operator then assigns the result of that operation back to the variable or property.  
+ `^=` işleci ilk olarak, değişkenin veya özelliğin değerini (işlecin sol tarafında) ifadenin değerinin (işlecinin sağ tarafında) kuvvetine yükseltir (işlecin sağ tarafındaki). İşleci daha sonra bu işlemin sonucunu değişkenine veya özelliğe geri atar.  
   
- Visual Basic always performs exponentiation in the [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md). Operands of any different type are converted to `Double`, and the result is always `Double`.  
+ Visual Basic her zaman [Double veri türünde](../../../visual-basic/language-reference/data-types/double-data-type.md)üs gerçekleştirir. Farklı türdeki işlenenler `Double`dönüştürülür ve sonuç her zaman `Double`.  
   
- The value of `expression` can be fractional, negative, or both.  
+ `expression` değeri kesirli, negatif veya her ikisi olabilir.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- The [^ Operator](../../../visual-basic/language-reference/operators/exponentiation-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `^` operator affects the behavior of the `^=` operator. If your code uses `^=` on a class or structure that overloads `^`, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ [^ İşleci](../../../visual-basic/language-reference/operators/exponentiation-operator.md) *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. `^` işleci aşırı yükleme `^=` işlecinin davranışını etkiler. Kodunuz, `^`aşırı yükleyen bir sınıf veya yapı üzerinde `^=` kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- The following example uses the `^=` operator to raise the value of one `Integer` variable to the power of a second variable and assign the result to the first variable.  
+ Aşağıdaki örnek, bir `Integer` değişkeninin değerini ikinci bir değişkenin gücüne yükseltmek ve sonucu ilk değişkene atamak için `^=` işlecini kullanır.  
   
  [!code-vb[VbVbalrOperators#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#21)]  
   
@@ -54,6 +54,6 @@ variableorproperty ^= expression
 - [^ İşleci](../../../visual-basic/language-reference/operators/exponentiation-operator.md)
 - [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)

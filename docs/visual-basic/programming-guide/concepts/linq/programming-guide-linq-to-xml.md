@@ -9,30 +9,30 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347076"
 ---
-# <a name="programming-guide-linq-to-xml-visual-basic"></a>Programming Guide (LINQ to XML) (Visual Basic)
-This section provides conceptual and how-to information about programming with [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+# <a name="programming-guide-linq-to-xml-visual-basic"></a>Programlama Kılavuzu (LINQ to XML) (Visual Basic)
+Bu bölüm [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]ile programlama hakkında kavramsal ve nasıl yapılır bilgileri sağlar.  
   
-## <a name="who-should-read-this-documentation"></a>Who Should Read This Documentation  
- This documentation targets developers who already understand Visual Basic and some basic aspects of the .NET Framework.  
+## <a name="who-should-read-this-documentation"></a>Bu belgeleri kimler okumalı  
+ Bu belgede, Visual Basic zaten anlayan geliştiriciler ve .NET Framework bazı temel yönleri hedeflededir.  
   
- The goal of this documentation is to make [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] easy to use for all kinds of developers. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] makes XML programming easier. You do not have to be an expert developer to use it.  
+ Bu belgenin amacı, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] her türlü geliştirici için kullanımı kolay hale sağlamaktır. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], XML programlamayı kolaylaştırır. Bunu kullanmak için uzman bir geliştirici olmanız gerekmez.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] relies heavily on generic classes. Therefore, is very important that you understand the use of generic types and classes. For more information, see [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] genel sınıflara çok yoğun bir şekilde güvenir. Bu nedenle, genel türlerin ve sınıfların kullanımını anlamanız çok önemlidir. Daha fazla bilgi için bkz. [Visual Basic genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Provides an overview of the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] classes, and detailed information about three of the most important classes: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute>, and <xref:System.Xml.Linq.XDocument>.|  
-|[Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)|Provides conceptual and task-based information about creating XML trees. You can create XML trees by using functional construction, or by parsing XML text from a string or a file. You can also use an <xref:System.Xml.XmlReader> to populate an XML tree.|  
-|[Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)|Provides detailed information about creating XML trees that use namespaces.|  
-|[Serializing XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)|Describes multiple approaches to serializing an XML tree, and gives guidance on which approach to use.|  
-|[LINQ to XML Axes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)|Enumerates and describes the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axis methods, which you must understand before you can write [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.|  
-|[Querying XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)|Provides common examples of querying XML trees.|  
-|[Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)|Like the Document Object Model (DOM), [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] enables you to modify an XML tree in place.|  
-|[Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|Provides information about annotations, events, streaming, and other advanced scenarios.|  
-|[LINQ to XML Security (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-security.md)|Describes security issues associated with LINQ to XML and provides some guidance for mitigating security exposure.|  
-|[Örnek XML Belgeleri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|Contains the sample XML documents that are used by many examples in this documentation.|  
+|[LINQ to XML programlamaya genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sınıflarına genel bir bakış ve en önemli sınıflardan üçü hakkında ayrıntılı bilgi sağlar: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute>ve <xref:System.Xml.Linq.XDocument>.|  
+|[XML ağaçları oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)|XML ağaçları oluşturma hakkında kavramsal ve görev tabanlı bilgiler sağlar. İşlevsel oluşturmayı kullanarak veya bir dizeden veya dosyadan XML metnini ayrıştırarak XML ağaçları oluşturabilirsiniz. Bir XML ağacını doldurmak için bir <xref:System.Xml.XmlReader> de kullanabilirsiniz.|  
+|[Ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)|Ad alanlarını kullanan XML ağaçları oluşturma hakkında ayrıntılı bilgi sağlar.|  
+|[XML ağaçlarını serileştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)|Bir XML ağacının serileştirilmesi için birden çok yaklaşım açıklar ve hangi yaklaşımın kullanılacağı konusunda rehberlik sağlar.|  
+|[LINQ to XML eksenleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)|[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorguları yazmadan önce anlamanız gereken [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eksen yöntemlerini numaralandırır ve tanımlar.|  
+|[XML ağaçlarını sorgulama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)|XML ağaçlarının sorgulanmasına ilişkin yaygın örnekler sağlar.|  
+|[XML ağaçlarını değiştirme (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)|Belge Nesne Modeli (DOM) gibi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir XML ağacını yerinde değiştirmenize olanak sağlar.|  
+|[Gelişmiş LINQ to XML Programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|Ek açıklamalar, olaylar, akış ve diğer gelişmiş senaryolar hakkında bilgi sağlar.|  
+|[LINQ to XML güvenliği (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-security.md)|LINQ to XML ilişkili güvenlik sorunlarını açıklar ve güvenlik görünürlüğünü azaltmak için bazı kılavuzluk sağlar.|  
+|[Örnek XML Belgeleri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|Bu belgelerde birçok örnek tarafından kullanılan örnek XML belgelerini içerir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

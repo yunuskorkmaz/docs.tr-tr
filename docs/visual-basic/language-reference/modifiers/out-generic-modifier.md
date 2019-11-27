@@ -16,52 +16,52 @@ ms.locfileid: "74351417"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (Genel Değiştirici) (Visual Basic)
 
-For generic type parameters, the `Out` keyword specifies that the type is covariant.
+Genel tür parametreleri için `Out` anahtar sözcüğü, türün birlikte değişken olduğunu belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Covariance enables you to use a more derived type than that specified by the generic parameter. This allows for implicit conversion of classes that implement variant interfaces and implicit conversion of delegate types.
+Kovaryans, genel parametre ile belirtilenden daha fazla türetilmiş bir tür kullanmanıza olanak sağlar. Bu, değişken arabirimleri uygulayan sınıfların örtük dönüştürülmesini ve temsilci türlerinin örtük dönüştürülmesini sağlar.
 
-For more information, see [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md).
+Daha fazla bilgi için bkz. [Kovaryans ve değişken varyans](../../programming-guide/concepts/covariance-contravariance/index.md).
 
 ## <a name="rules"></a>Kurallar
 
-You can use the `Out` keyword in generic interfaces and delegates.
+Genel arabirimlerde ve temsilcilerde `Out` anahtar sözcüğünü kullanabilirsiniz.
 
-In a generic interface, a type parameter can be declared covariant if it satisfies the following conditions:
+Bir genel arabirimde, bir tür parametresi aşağıdaki koşullara uygunsa birlikte değişken olarak bildirilemez:
 
-- The type parameter is used only as a return type of interface methods and not used as a type of method arguments.
+- Tür parametresi yalnızca Arabirim yöntemlerinin dönüş türü olarak kullanılır ve Yöntem bağımsız değişkenlerinin türü olarak kullanılmaz.
 
     > [!NOTE]
-    > There is one exception to this rule. If in a covariant interface you have a contravariant generic delegate as a method parameter, you can use the covariant type as a generic type parameter for this delegate. For more information about covariant and contravariant generic delegates, see [Variance in Delegates](../../programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates](../../programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+    > Bu kural için bir özel durum var. Bir covaryant arayüzünde bir yöntem parametresi olarak bir değişken karşıtı genel temsilciniz varsa, bu temsilci için ortak tür parametresi olarak covaryant türü ' ni kullanabilirsiniz. Covaryant ve değişken karşıtı genel Temsilciler hakkında daha fazla bilgi için bkz. [Temsilcilerde varyans](../../programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) ve [Func ve eylem genel temsilcileri için varyans kullanma](../../programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
 
-- The type parameter is not used as a generic constraint for the interface methods.
+- Tür parametresi, arabirim yöntemleri için genel kısıtlama olarak kullanılmaz.
 
-In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
+Genel bir temsilcisinde, bir tür parametresi yalnızca yöntem dönüş türü olarak kullanılırsa ve Yöntem bağımsız değişkenleri için kullanılmazsa birlikte değişken olarak bildirilemez.
 
-Covariance and contravariance are supported for reference types, but they are not supported for value types.
+Kovaryans ve değişken Varyans, başvuru türleri için desteklenir, ancak değer türleri için desteklenmez.
 
-In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
+Visual Basic, temsilci türünü belirtmeden birlikte değişken arabirimlerde olayları bildiremezsiniz. Ayrıca, birlikte değişken arabirimlerin iç içe sınıfları, numaralandırmalar veya yapıları olamaz, ancak iç içe arabirimler olabilir.
 
 ## <a name="behavior"></a>Davranış
 
-An interface that has a covariant type parameter enables its methods to return more derived types than those specified by the type parameter. For example, because in .NET Framework 4, in <xref:System.Collections.Generic.IEnumerable%601>, type T is covariant, you can assign an object of the `IEnumerable(Of String)` type to an object of the `IEnumerable(Of Object)` type without using any special conversion methods.
+Covaryant türü parametresine sahip bir arabirim, yöntemlerinin tür parametresiyle belirtenlerden daha fazla türetilmiş tür döndürmesini sağlar. Örneğin, .NET Framework 4 ' te, <xref:System.Collections.Generic.IEnumerable%601>' de T yazın ve bir özel dönüştürme yöntemi kullanmadan `IEnumerable(Of String)` türünün bir nesnesini `IEnumerable(Of Object)` türünün bir nesnesine atayabilirsiniz.
 
-A covariant delegate can be assigned another delegate of the same type, but with a more derived generic type parameter.
+Birlikte değişken temsilcisine aynı türde başka bir temsilci atanabilir, ancak daha türetilmiş bir genel tür parametresi olabilir.
 
 ## <a name="example"></a>Örnek
 
-The following example shows how to declare, extend, and implement a covariant generic interface. It also shows how to use implicit conversion for classes that implement a covariant interface.
+Aşağıdaki örnek, bir covaryant genel arabiriminin nasıl bildirileceği, genişletileceği ve uygulanacağını gösterir. Ayrıca, birlikte değişken arabirimi uygulayan sınıflar için örtük dönüştürmeyi nasıl kullanacağınızı gösterir.
 
 [!code-vb[vbVarianceKeywords#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#3)]
 
 ## <a name="example"></a>Örnek
 
-The following example shows how to declare, instantiate, and invoke a covariant generic delegate. It also shows how you can use implicit conversion for delegate types.
+Aşağıdaki örnek, bir covaryant genel temsilcisinin nasıl bildirilemeyeceğini, örneklendirilemeyeceğini ve çağıralınacağını gösterir. Ayrıca, temsilci türleri için örtük dönüştürmeyi nasıl kullanabileceğinizi gösterir.
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Genel Arabirimlerde Varyans](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- ['Ndaki](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

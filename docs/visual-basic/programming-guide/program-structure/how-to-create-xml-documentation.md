@@ -14,28 +14,28 @@ ms.locfileid: "74347418"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de XML Belgesi Oluşturma
 
-This example shows how to add XML documentation comments to your code.
+Bu örnek, kodunuza XML belge açıklamaları eklemeyi gösterir.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-create-xml-documentation-for-a-type-or-member"></a>To create XML documentation for a type or member
+## <a name="to-create-xml-documentation-for-a-type-or-member"></a>Bir tür veya üye için XML belgeleri oluşturmak için
 
-1. In the **Code Editor**, position your cursor on the line above the type or member for which you want to create documentation.
+1. **Kod Düzenleyicisi**'nde imlecinizi, belge oluşturmak istediğiniz türün veya üyenin üzerindeki satıra yerleştirin.
 
-2. Type `'''` (three single-quotation marks).
+2. `'''` yazın (üç tek tırnak işareti).
 
-    An XML skeleton for the type or member is added in the **Code Editor**.
+    Tür veya üye için bir XML iskelet **kodu, kod düzenleyicisine**eklenir.
 
-3. Add descriptive information between the appropriate tags.
+3. Uygun Etiketler arasına açıklayıcı bilgi ekleyin.
 
     > [!NOTE]
-    > If you add additional lines within the XML documentation block, each line must begin with `'''`.
+    > XML belge bloğunun içine ek satırlar eklerseniz, her satır `'''`başlamalıdır.
 
-4. Add additional code that uses the type or member with the new XML documentation comments.
+4. Yeni XML belge açıklamalarıyla türü veya üyeyi kullanan ek kod ekleyin.
 
-    IntelliSense displays the text from the \<summary> tag for the type or member.
+    IntelliSense, tür veya üye için \<Özet > etiketindeki metni görüntüler.
 
-5. Compile the code to generate an XML file containing the documentation comments. For more information, see [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
+5. Belge açıklamalarını içeren bir XML dosyası oluşturmak için kodu derleyin. Daha fazla bilgi için bkz. [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

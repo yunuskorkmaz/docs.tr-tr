@@ -26,65 +26,65 @@ ms.locfileid: "74352594"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Yordam Aşırı Yüklemesi (Visual Basic)
 
-*Overloading* a procedure means defining it in multiple versions, using the same name but different parameter lists. The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name. You do this by varying the parameter list.
+Bir yordamın *aşırı yüklenmesi* , aynı ad ancak farklı parametre listeleri kullanılarak birden çok sürümde tanımlanması anlamına gelir. Aşırı yükleme amacı, bir yordamın adına göre ayrım yapmadan daha yakından ilgili birkaç sürümünü tanımlamaktır. Bunu parametre listesini değiştirerek yapabilirsiniz.
 
-## <a name="overloading-rules"></a>Overloading Rules
+## <a name="overloading-rules"></a>Kuralları aşırı yükleme
 
-When you overload a procedure, the following rules apply:
+Bir yordamı aşırı yüklerken, aşağıdaki kurallar geçerlidir:
 
-- **Same Name**. Each overloaded version must use the same procedure name.
+- **Aynı ad**. Her aşırı yüklenmiş sürüm aynı yordam adını kullanmalıdır.
 
-- **Different Signature**. Each overloaded version must differ from all other overloaded versions in at least one of the following respects:
+- **Farklı imza**. Her aşırı yüklenmiş sürüm, aşağıdaki yönden en az birindeki diğer tüm aşırı yüklenmiş sürümlerden farklı olmalıdır:
 
-  - Number of parameters
+  - Parametre sayısı
 
-  - Order of the parameters
+  - Parametrelerin sırası
 
-  - Data types of the parameters
+  - Parametrelerin veri türleri
 
-  - Number of type parameters (for a generic procedure)
+  - Tür parametrelerinin sayısı (genel yordam için)
 
-  - Return type (only for a conversion operator)
+  - Dönüş türü (yalnızca bir dönüştürme işleci için)
 
-  Together with the procedure name, the preceding items are collectively called the *signature* of the procedure. When you call an overloaded procedure, the compiler uses the signature to check that the call correctly matches the definition.
+  Yordam adı ile birlikte, önceki öğeler her topluca yordamın *imzası* olarak adlandırılır. Aşırı yüklenmiş bir yordamı çağırdığınızda, derleyici, çağrının tanımıyla doğru şekilde eşleşip eşleşmediğini denetlemek için imzayı kullanır.
 
-- **Items Not Part of Signature**. You cannot overload a procedure without varying the signature. In particular, you cannot overload a procedure by varying only one or more of the following items:
+- **İmzanın bir parçası değil öğeleri**. İmzayı değiştirmeden bir yordamı aşırı yükleyemezsiniz. Özellikle, aşağıdaki öğelerden yalnızca birini veya birkaçını değiştirerek bir yordamı aşırı yükleyemezsiniz:
 
-  - Procedure modifier keywords, such as `Public`, `Shared`, and `Static`
+  - `Public`, `Shared`ve `Static` gibi yordam değiştirici anahtar sözcükleri
 
-  - Parameter or type parameter names
+  - Parametre veya tür parametre adları
 
-  - Type parameter constraints (for a generic procedure)
+  - Tür parametresi kısıtlamaları (genel yordam için)
 
-  - Parameter modifier keywords, such as `ByRef` and `Optional`
+  - `ByRef` ve `Optional` gibi parametre değiştirici anahtar sözcükleri
 
-  - Whether it returns a value
+  - Değer döndürüp döndürmeksizin
 
-  - The data type of the return value (except for a conversion operator)
+  - Dönüş değerinin veri türü (dönüştürme işleci dışında)
 
-  The items in the preceding list are not part of the signature. Although you cannot use them to differentiate between overloaded versions, you can vary them among overloaded versions that are properly differentiated by their signatures.
+  Yukarıdaki listede yer olan öğeler imzaya ait değildir. Bunları aşırı yüklenmiş sürümler arasında ayrım yapmak için kullanamazsınız, ancak bunları imzalarıyla düzgün şekilde ayırt edilen aşırı yüklenmiş sürümler arasında değiştirebilirsiniz.
 
-- **Late-Bound Arguments**. If you intend to pass a late bound object variable to an overloaded version, you must declare the appropriate parameter as <xref:System.Object>.
+- **Geç bağlantılı bağımsız değişkenler**. Geç bağlantılı bir nesne değişkenini aşırı yüklenmiş bir sürüme geçirmek istiyorsanız, uygun parametreyi <xref:System.Object>olarak bildirmeniz gerekir.
 
-## <a name="multiple-versions-of-a-procedure"></a>Multiple Versions of a Procedure
+## <a name="multiple-versions-of-a-procedure"></a>Yordamın birden çok sürümü
 
-Suppose you are writing a `Sub` procedure to post a transaction against a customer's balance, and you want to be able to refer to the customer either by name or by account number. To accommodate this, you can define two different `Sub` procedures, as in the following example:
+Bir müşterinin bakiyesine karşı bir işlem göndermek için bir `Sub` yordamı yazıyorsanız ve müşteriye ada veya hesap numarasına göre başvurmak istediğinizi varsayalım. Buna uyum sağlamak için, aşağıdaki örnekte olduğu gibi iki farklı `Sub` yordam tanımlayabilirsiniz:
 
 [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]
 
-### <a name="overloaded-versions"></a>Overloaded Versions
+### <a name="overloaded-versions"></a>Aşırı yüklenmiş sürümler
 
-An alternative is to overload a single procedure name. You can use the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword to define a version of the procedure for each parameter list, as follows:
+Bir alternatif, tek bir yordam adının aşırı yüklenmesine yönelik bir alternatiftir. Her bir parametre listesi için yordamın bir sürümünü tanımlamak üzere [overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) anahtar sözcüğünü aşağıda gösterildiği gibi kullanabilirsiniz:
 
 [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]
 
-#### <a name="additional-overloads"></a>Additional Overloads
+#### <a name="additional-overloads"></a>Ek aşırı yüklemeler
 
-If you also wanted to accept a transaction amount in either `Decimal` or `Single`, you could further overload `post` to allow for this variation. If you did this to each of the overloads in the preceding example, you would have four `Sub` procedures, all with the same name but with four different signatures.
+Ayrıca `Decimal` veya `Single`bir işlem miktarı kabul etmek isterseniz, bu varyasyon için izin vermek `post` daha fazla aşırı yükleme yapabilirsiniz. Yukarıdaki örnekteki aşırı yüklemelerin her birini yaptıysanız, hepsi aynı ada sahip ancak dört farklı imzaya sahip dört `Sub` yordamımız olur.
 
-## <a name="advantages-of-overloading"></a>Advantages of Overloading
+## <a name="advantages-of-overloading"></a>Aşırı yükleme avantajları
 
-The advantage of overloading a procedure is in the flexibility of the call. To use the `post` procedure declared in the preceding example, the calling code can obtain the customer identification as either a `String` or an `Integer`, and then call the same procedure in either case. The following example illustrates this:
+Bir yordamı aşırı yükleme avantajı, çağrının esnekliğine sahiptir. Yukarıdaki örnekte açıklanan `post` yordamını kullanmak için, çağıran kod müşteri kimliğini bir `String` veya `Integer`olarak edinebilir ve sonra aynı yordamı her iki durumda da çağırabilir. Aşağıdaki örnek şunu göstermektedir:
 
 [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]
 
@@ -100,4 +100,4 @@ The advantage of overloading a procedure is in the flexibility of the call. To u
 - [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](./considerations-in-overloading-procedures.md)
 - [Aşırı Yükleme Çözümü](./overload-resolution.md)
 - [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

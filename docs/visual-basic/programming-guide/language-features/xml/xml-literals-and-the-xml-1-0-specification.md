@@ -12,24 +12,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346178"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML Değişmez Değerleri ve XML 1.0 Belirtimi (Visual Basic)
-The XML literal syntax in Visual Basic supports most of the Extensible Markup Language (XML) 1.0 specification. For details about the XML 1.0 specification, see [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml) on the W3C Web site.  
+Visual Basic içindeki XML sabit sözdizimi, genişletilebilir biçimlendirme dili (XML) 1,0 belirtiminin çoğunu destekler. XML 1,0 belirtimi hakkında daha fazla bilgi için bkz. W3C Web sitesinde [Genişletilebilir Biçimlendirme Dili (XML) 1,0](https://www.w3.org/TR/xml) .  
   
-## <a name="what-visual-basic-does-not-support"></a>What Visual Basic Does Not Support  
+## <a name="what-visual-basic-does-not-support"></a>Desteklenmeyen Visual Basic  
   
-- An XML literal cannot contain a document type definition (DTD).  
+- Bir XML sabit değeri belge türü tanımı (DTD) içeremez.  
   
-- An XML document literal must start with an XML document declaration.  
+- XML belgesi değişmez değeri bir XML belgesi bildirimiyle başlamalıdır.  
   
-- An XML literal cannot contain more than 65,535 characters on one line.  
+- Bir XML sabit değeri, tek satırda 65.535 karakterden fazlasını içeremez.  
   
-- XML namespace prefixes, element names, and attribute names cannot contain more than 1,024 characters.  
+- XML ad alanı önekleri, öğe adları ve öznitelik adları 1.024 karakterden fazlasını içeremez.  
   
-## <a name="extra-features-that-visual-basic-supports"></a>Extra Features That Visual Basic Supports  
+## <a name="extra-features-that-visual-basic-supports"></a>Visual Basic desteklediği ek özellikler  
   
-- The embedded expression syntax allowed in document and element literals is not valid XML.  
+- Belge ve öğe değişmez değerlerinde izin verilen gömülü ifade sözdizimi geçerli bir XML değil.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Visual Basic XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML Belgesi Değişmez Değeri](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [XML Öğesi Değişmez Değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

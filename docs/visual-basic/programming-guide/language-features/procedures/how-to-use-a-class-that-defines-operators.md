@@ -19,25 +19,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346044"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Nasıl yapılır: İşleçleri Tanımlayan Bir Sınıf Kullanma (Visual Basic)
-If you are using a class or structure that defines its own operators, you can access those operators from Visual Basic.  
+Kendi işleçlerini tanımlayan bir sınıf veya yapı kullanıyorsanız, bu işleçlere Visual Basic erişebilirsiniz.  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ Bir sınıf veya yapı üzerinde işleç tanımlamak, işleci *aşırı yükleme* olarak da adlandırılır.  
   
 ## <a name="example"></a>Örnek  
- The following example accesses the SQL structure <xref:System.Data.SqlTypes.SqlString>, which defines the conversion operators ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in both directions between a SQL string and a Visual Basic string. Use `CType(`*SQL string expression*, `String)` to convert a SQL string to a Visual Basic string, and `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` to convert in the other direction.  
+ Aşağıdaki örnek, bir SQL dizesi ve bir Visual Basic dizesi arasında her iki yönde de dönüştürme işleçlerini ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md)) tanımlayan SQL yapısına erişir <xref:System.Data.SqlTypes.SqlString>. `CType(`*SQL dize ifadesi*kullanın, bir sql dizesini Visual Basic bir dizeye dönüştürmek için `String)` ve `CType(`*Visual Basic dize ifadesi*, <xref:System.Data.SqlTypes.SqlString>`)` diğer yönde dönüştürmek için.  
   
  [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
  [!code-vb[VbVbcnProcedures#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#31)]  
   
- The <xref:System.Data.SqlTypes.SqlString> structure defines a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) from `String` to <xref:System.Data.SqlTypes.SqlString> and another from <xref:System.Data.SqlTypes.SqlString> to `String`. The statement that assigns `title` to `jobTitle` makes use of the first operator, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function call uses the second.  
+ <xref:System.Data.SqlTypes.SqlString> yapısı, `String` bir dönüştürme işlecini ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md)) <xref:System.Data.SqlTypes.SqlString> ve <xref:System.Data.SqlTypes.SqlString> arasında bir `String`tanımlar. `jobTitle` `title` atayan ifade, ilk işleci kullanır ve <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> işlev çağrısı ikincisini kullanır.  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Be sure the class or structure you are using defines the operator you want to use. Do not assume that the class or structure has defined every operator available for overloading. For a list of available operators, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Kullandığınız sınıf veya yapının kullanmak istediğiniz işleci tanımladığından emin olun. Sınıf veya yapının, aşırı yükleme için kullanılabilen her işleci tanımladığını varsayın. Kullanılabilir operatörlerin bir listesi için bkz. [operator deyimleri](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
- Include the appropriate `Imports` statement for the SQL string at the beginning of your source file (in this case <xref:System.Data.SqlTypes>).  
+ Kaynak dosyanızın başlangıcında SQL dizesi için uygun `Imports` ifadesini ekleyin (Bu durumda <xref:System.Data.SqlTypes>).  
   
- Your project must have references to System.Data and System.XML.  
+ Projenizin System. Data ve System. XML öğesine başvuruları olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

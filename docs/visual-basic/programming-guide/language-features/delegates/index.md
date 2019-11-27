@@ -14,59 +14,59 @@ ms.locfileid: "74345233"
 ---
 # <a name="delegates-visual-basic"></a>Temsilciler (Visual Basic)
 
-Delegates are objects that refer to methods. They are sometimes described as *type-safe function pointers* because they are similar to function pointers used in other programming languages. But unlike function pointers, Visual Basic delegates are a reference type based on the class <xref:System.Delegate?displayProperty=nameWithType>. Delegates can reference both shared methods — methods that can be called without a specific instance of a class — and instance methods.
+Temsilciler yöntemlere başvuran nesnelerdir. Bazen, diğer programlama dillerinde kullanılan işlev işaretçilerine benzer olduklarından *tür açısından güvenli işlev işaretçileri* olarak açıklanırlar. Ancak işlev işaretçilerinden farklı olarak Visual Basic temsilciler, sınıf <xref:System.Delegate?displayProperty=nameWithType>dayalı bir başvuru türüdür. Temsilciler, her iki paylaşılan yönteme başvurabilir: bir sınıfın belirli bir örneği olmadan çağrılabilecek Yöntemler ve örnek yöntemleri.
 
 ## <a name="delegates-and-events"></a>Temsilciler ve Olaylar
 
-Delegates are useful in situations where you need an intermediary between a calling procedure and the procedure being called. For example, you might want an object that raises events to be able to call different event handlers under different circumstances. Unfortunately, the object raising the events cannot know ahead of time which event handler is handling a specific event. Visual Basic lets you dynamically associate event handlers with events by creating a delegate for you when you use the `AddHandler` statement. At run time, the delegate forwards calls to the appropriate event handler.
+Temsilciler, çağıran bir yordam ve çağrılan yordam arasında bir ara işlem yapmanız gereken durumlarda yararlıdır. Örneğin, olayları başlatan bir nesnenin farklı koşullarda farklı olay işleyicilerini çağırabilmesini isteyebilirsiniz. Ne yazık ki olayları oluşturan nesne, olay işleyicisinin belirli bir olayı işlemekte olduğu zamandan önce bilemez. Visual Basic, `AddHandler` ifadesini kullandığınızda sizin için bir temsilci oluşturarak olay işleyicilerini olaylarla dinamik olarak ilişkilendirmenize olanak tanır. Çalışma zamanında, temsilci çağrıları uygun olay işleyicisine iletir.
 
-Although you can create your own delegates, in most cases Visual Basic creates the delegate and takes care of the details for you. For example, an `Event` statement implicitly defines a delegate class named `<EventName>EventHandler` as a nested class of the class containing the `Event` statement, and with the same signature as the event. The `AddressOf` statement implicitly creates an instance of a delegate that refers to a specific procedure. The following two lines of code are equivalent. In the first line, you see the explicit creation of an instance of `EventHandler`, with a reference to method `Button1_Click` sent as the argument. The second line is a more convenient way to do the same thing.
+Kendi temsilcilerinizi oluşturabilseniz de çoğu durumda Visual Basic temsilciyi oluşturur ve sizin için ayrıntıları alır. Örneğin, `Event` bir ifade, `Event` ifadesini içeren sınıfın iç içe bir sınıfı olarak `<EventName>EventHandler` adlı bir temsilci sınıfını ve olayla aynı imzaya sahip olarak tanımlar. `AddressOf` deyimleri, belirli bir yordama başvuran bir temsilcinin örneğini örtülü olarak oluşturur. Aşağıdaki iki kod satırı eşdeğerdir. İlk satırda, bağımsız değişken olarak gönderilen `Button1_Click` yöntemine bir başvuruya sahip bir `EventHandler`örneğinin açıkça oluşturulmasını görürsünüz. İkinci satır, aynı şeyi yapmanın daha kolay bir yoludur.
 
 [!code-vb[VbVbalrDelegates#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#6)]
 
-You can use the shorthand way of creating delegates anywhere the compiler can determine the delegate's type by the context.
+Her yerde temsilci oluşturmak için kısayol yöntemini kullanabilirsiniz. derleyicinin, temsilcinin türünü bağlam tarafından belirleyebilmesi.
 
-## <a name="declaring-events-that-use-an-existing-delegate-type"></a>Declaring Events that Use an Existing Delegate Type
+## <a name="declaring-events-that-use-an-existing-delegate-type"></a>Var olan bir temsilci türünü kullanan olayları bildirme
 
-In some situations, you may want to declare an event to use an existing delegate type as its underlying delegate. The following syntax demonstrates how:
+Bazı durumlarda, temel aldığı temsilci olarak var olan bir temsilci türünü kullanmak üzere bir olay bildirmek isteyebilirsiniz. Aşağıdaki sözdizimi şunları göstermektedir:
 
 [!code-vb[VbVbalrDelegates#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#7)]
 
-This is useful when you want to route multiple events to the same handler.
+Bu, birden çok olayı aynı işleyiciye yönlendirmek istediğinizde yararlıdır.
 
-## <a name="delegate-variables-and-parameters"></a>Delegate Variables and Parameters
+## <a name="delegate-variables-and-parameters"></a>Değişkenleri ve parametreleri devretmek
 
-You can use delegates for other, non-event related tasks, such as free threading or with procedures that need to call different versions of functions at run time.
+Serbest iş parçacığı veya çalışma zamanında işlevlerin farklı sürümlerini çağırması gereken yordamlar gibi diğer olay dışı ilgili görevler için temsilcileri kullanabilirsiniz.
 
-For example, suppose you have a classified-ad application that includes a list box with the names of cars. The ads are sorted by title, which is normally the make of the car. A problem you may face occurs when some cars include the year of the car before the make. The problem is that the built-in sort functionality of the list box sorts only by character codes; it places all the ads starting with dates first, followed by the ads starting with the make.
+Örneğin, otomobillerin adlarını içeren bir liste kutusu içeren sınıflandırılmış bir ad uygulamanız olduğunu varsayalım. Reklamlar başlığa göre sıralanır, bu da normal olarak arabadır. Bir sorun ortaya çıktığında, bazı otomobillerin başından önce araba yılını içermesi durumunda meydana gelebilir. Sorun, liste kutusunun yerleşik sıralama işlevselliğinin yalnızca karakter kodlarına göre sıralama yaptığı bir sorundur; İlk önce tarihlerle başlayan tüm reklamları, sonra da Make ile başlayan reklamları koyar.
 
-To fix this, you can create a sort procedure in a class that uses the standard alphabetic sort on most list boxes, but is able to switch at run time to the custom sort procedure for car ads. To do this, you pass the custom sort procedure to the sort class at run time, using delegates.
+Bunu yapmak için, çoğu liste kutusunda standart alfabetik sıralamayı kullanan bir sınıfta sıralama yordamı oluşturabilirsiniz, ancak çalışma zamanında otomobil reklamları için özel sıralama yordamına geçiş yapabilir. Bunu yapmak için, özel sıralama yordamını, temsilciler kullanarak çalışma zamanında sıralama sınıfına geçitirsiniz.
 
-## <a name="addressof-and-lambda-expressions"></a>AddressOf and Lambda Expressions
+## <a name="addressof-and-lambda-expressions"></a>AddressOf ve lambda Ifadeleri
 
-Each delegate class defines a constructor that is passed the specification of an object method. An argument to a delegate constructor must be a reference to a method, or a lambda expression.
+Her temsilci sınıfı, bir nesne yönteminin belirtimini geçen bir oluşturucuyu tanımlar. Bir temsilci oluşturucusuna bağımsız değişken bir yönteme veya bir lambda ifadesine başvuru olmalıdır.
 
-To specify a reference to a method, use the following syntax:
+Bir yönteme başvuru belirtmek için aşağıdaki sözdizimini kullanın:
 
 `AddressOf` [`expression`.]`methodName`
 
-The compile-time type of the `expression` must be the name of a class or an interface that contains a method of the specified name whose signature matches the signature of the delegate class. The `methodName` can be either a shared method or an instance method. The `methodName` is not optional, even if you create a delegate for the default method of the class.
+`expression` derleme zamanı türü, imzası temsilci sınıfının imzasıyla eşleşen belirtilen adda bir yöntemi içeren bir sınıfın veya arabirimin adı olmalıdır. `methodName`, paylaşılan bir yöntem ya da bir örnek yöntemi olabilir. Sınıfının varsayılan yöntemi için bir temsilci oluştursanız bile `methodName` isteğe bağlı değildir.
 
-To specify a lambda expression, use the following syntax:
+Bir lambda ifadesi belirtmek için aşağıdaki sözdizimini kullanın:
 
-`Function` ([`parm` As `type`, `parm2` As `type2`, ...]) `expression`
+`Function` ([`parm` as `type`, `parm2` as `type2`,...]) `expression`
 
-The following example shows both `AddressOf` and lambda expressions used to specify the reference for a delegate.
+Aşağıdaki örnekte, bir temsilcinin başvurusunu belirtmek için kullanılan hem `AddressOf` hem de lambda ifadeleri gösterilmektedir.
 
 [!code-vb[VbVbalrDelegates#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class2.vb#15)]
 
-The signature of the function must match that of the delegate type. For more information about lambda expressions, see [Lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md). For more examples of lambda expression and `AddressOf` assignments to delegates, see [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).
+İşlevin imzası, temsilci türü ile aynı olmalıdır. Lambda ifadeleri hakkında daha fazla bilgi için bkz. [lambda ifadeleri](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md). Lambda ifadesinin daha fazla örneği ve temsilcilere `AddressOf` atamaları için bkz. [gevşek temsilci dönüştürme](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).
 
 ## <a name="related-topics"></a>İlgili Konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Nasıl yapılır: Temsilci Yöntemi Çağırma](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|Provides an example that shows how to associate a method with a delegate and then invoke that method through the delegate.|
-|[How to: Pass Procedures to Another Procedure in Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|Demonstrates how to use delegates to pass one procedure to another procedure.|
-|[Gevşek Temsilci Dönüştürme](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|Describes how you can assign subs and functions to delegates or handlers even when their signatures are not identical|
-|[Olaylar](../../../../visual-basic/programming-guide/language-features/events/index.md)|Provides an overview of events in Visual Basic.|
+|[Nasıl yapılır: Temsilci Yöntemi Çağırma](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|Bir yöntemi bir temsilciyle ilişkilendirmeyi ve sonra bu yöntemi temsilci aracılığıyla çağırmayı gösteren bir örnek sağlar.|
+|[Nasıl yapılır: yordamları Visual Basic başka bir yordama geçirme](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|Bir yordamı başka bir yordama geçirmek için temsilcilerin nasıl kullanılacağını gösterir.|
+|[Gevşek Temsilci Dönüştürme](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|İmzaları özdeş olmadığında bile temsilcilerin veya işleyicilere nasıl alt ve işlev atayabileceğinizi açıklar|
+|[Olaylar](../../../../visual-basic/programming-guide/language-features/events/index.md)|Visual Basic olaylar için bir genel bakış sağlar.|

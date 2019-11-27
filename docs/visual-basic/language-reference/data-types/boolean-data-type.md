@@ -21,33 +21,33 @@ ms.locfileid: "74347843"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boole Veri Türü (Visual Basic)
 
-Holds values that can be only `True` or `False`. The keywords `True` and `False` correspond to the two states of `Boolean` variables.  
+Yalnızca `True` veya `False`olabilecek değerleri tutar. `True` ve `False` anahtar sözcükleri `Boolean` değişkenlerinin iki durumuna karşılık gelir.  
   
 ## <a name="remarks"></a>Açıklamalar  
 
- Use the [Boolean Data Type (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) to contain two-state values such as true/false, yes/no, or on/off.  
+ True/false, Yes/No veya on/off gibi iki durumlu değerler içeren [Boolean veri türü (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) kullanın.  
   
- The default value of `Boolean` is `False`.  
+ `Boolean` varsayılan değeri `False`.  
   
- `Boolean` values are not stored as numbers, and the stored values are not intended to be equivalent to numbers. You should never write code that relies on equivalent numeric values for `True` and `False`. Whenever possible, you should restrict usage of `Boolean` variables to the logical values for which they are designed.  
+ `Boolean` değerler sayı olarak depolanmaz ve depolanan değerlerin sayılara eşit olması amaçlanmamıştır. `True` ve `False`için eşdeğer sayısal değerleri temel alan hiçbir kodu asla yazmamanız gerekir. Mümkün olduğunda, `Boolean` değişkenlerinin kullanımını, tasarlandıkları mantıksal değerlerle kısıtlamalısınız.  
   
 ## <a name="type-conversions"></a>Tür Dönüştürmeleri  
 
- When Visual Basic converts numeric data type values to `Boolean`, 0 becomes `False` and all other values become `True`. When Visual Basic converts `Boolean` values to numeric types, `False` becomes 0 and `True` becomes -1.  
+ Visual Basic sayısal veri türü değerlerini `Boolean`dönüştürdüğünde 0 `False` ve diğer tüm değerler `True`olur. Visual Basic `Boolean` değerlerini sayısal türlere dönüştürdüğünde, `False` 0 olur ve `True` 1 olur.  
   
- When you convert between `Boolean` values and numeric data types, keep in mind that the .NET Framework conversion methods do not always produce the same results as the Visual Basic conversion keywords. This is because the Visual Basic conversion retains behavior compatible with previous versions. For more information, see "Boolean Type Does Not Convert to Numeric Type Accurately" in [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ `Boolean` değerleri ve sayısal veri türleri arasında dönüştürme yaptığınızda, .NET Framework dönüştürme yöntemlerinin Visual Basic dönüştürme anahtar sözcükleriyle her zaman aynı sonuçları üretmeyeceğini göz önünde bulundurun. Bunun nedeni Visual Basic dönüştürmenin önceki sürümlerle uyumlu davranışları korumasından kaynaklanır. Daha fazla bilgi için bkz. [sorun giderme veri türlerinde](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)"Boole türü doğru şekilde sayısal türe dönüştürülmüyor".  
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
-- **Negative Numbers.** `Boolean` is not a numeric type and cannot represent a negative value. In any case, you should not use `Boolean` to hold numeric values.  
+- **Negatif sayılar.** `Boolean` sayısal bir tür değil ve negatif bir değeri temsil edemez. Herhangi bir durumda, sayısal değerleri tutmak için `Boolean` kullanmamalısınız.  
   
-- **Type Characters.** `Boolean` has no literal type character or identifier type character.  
+- **Tür karakterleri.** `Boolean` değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok.  
   
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Boolean?displayProperty=nameWithType> structure.  
+- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Boolean?displayProperty=nameWithType> yapısıdır.  
   
 ## <a name="example"></a>Örnek  
 
- In the following example, `runningVB` is a `Boolean` variable, which stores a simple yes/no setting.  
+ Aşağıdaki örnekte `runningVB`, basit bir Evet/Hayır ayarı depolayan bir `Boolean` değişkenidir.  
   
 ```vb  
 Dim runningVB As Boolean  

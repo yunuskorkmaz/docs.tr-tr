@@ -20,235 +20,235 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344933"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic'de LINQ'e Giriş
-Language-Integrated Query (LINQ) adds query capabilities to Visual Basic and provides simple and powerful capabilities when you work with all kinds of data. Rather than sending a query to a database to be processed, or working with different query syntax for each type of data that you are searching, LINQ introduces queries as part of the Visual Basic language. It uses a unified syntax regardless of the type of data.  
+Dil ile tümleşik sorgu (LINQ) Visual Basic 'e sorgu özellikleri ekler ve tüm veri türleriyle çalışırken basit ve güçlü yetenekler sağlar. İşlenecek bir veritabanına sorgu göndermek veya arama yaptığınız her veri türü için farklı sorgu söz dizimiyle çalışmak yerine, LINQ sorguları Visual Basic dilinin bir parçası olarak tanıtır. Veri türünden bağımsız olarak Birleşik bir sözdizimi kullanır.  
   
- LINQ enables you to query data from a SQL Server database, XML, in-memory arrays and collections, ADO.NET datasets, or any other remote or local data source that supports LINQ. You can do all this with common Visual Basic language elements. Because your queries are written in the Visual Basic language, your query results are returned as strongly-typed objects. These objects support IntelliSense, which enables you to write code faster and catch errors in your queries at compile time instead of at run time. LINQ queries can be used as the source of additional queries to refine results. They can also be bound to controls so that users can easily view and modify your query results.  
+ LINQ, SQL Server veritabanından, XML, bellek içi dizilerden ve koleksiyonlardan, ADO.NET veri kümelerinde veya LINQ destekleyen başka herhangi bir uzak ya da yerel veri kaynağından veri sorgulamanızı sağlar. Tüm bunu ortak Visual Basic dil öğeleriyle yapabilirsiniz. Sorgularınızı Visual Basic dilde yazıldığı için, sorgu sonuçlarınız kesin türü belirtilmiş nesneler olarak döndürülür. Bu nesneler IntelliSense 'i destekler, bu da çalışma zamanı yerine, derleme zamanında daha hızlı kod yazmanızı ve sorgularınızdaki hataları yakalamanıza olanak sağlar. LINQ sorguları, sonuçları iyileştirmek için ek sorguların kaynağı olarak kullanılabilir. Kullanıcıların sorgu sonuçlarınızı kolayca görüntülemesi ve değiştirebilmeleri için denetimlere de bağlanabilir.  
   
- For example, the following code example shows a LINQ query that returns a list of customers from a collection and groups them based on their location.  
+ Örneğin, aşağıdaki kod örneğinde, bir koleksiyondaki müşterilerin listesini döndüren ve konumlarına göre gruplayan bir LINQ sorgusu gösterilmektedir.  
   
  [!code-vb[VbVbalrIntroToLINQ#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#1)]  
   
-## <a name="running-the-examples"></a>Running the examples  
- To run the examples in the introduction and in the [Structure of a LINQ Query](#structure-of-a-linq-query) section, include the following code, which returns lists of customers and orders.  
+## <a name="running-the-examples"></a>Örnekleri çalıştırma  
+ Giriş bölümündeki örnekleri ve [LINQ sorgu bölümünün yapısını](#structure-of-a-linq-query) çalıştırmak için, müşteri ve siparişlerin listesini döndüren aşağıdaki kodu ekleyin.  
   
  [!code-vb[VbVbalrIntroToLINQ#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#31)]  
   
-## <a name="linq-providers"></a>LINQ providers  
- A *LINQ provider* maps your Visual Basic LINQ queries to the data source being queried. When you write a LINQ query, the provider takes that query and translates it into commands that the data source will be able to execute. The provider also converts data from the source to the objects that make up your query result. Finally, it converts objects to data when you send updates to the data source.  
+## <a name="linq-providers"></a>LINQ sağlayıcıları  
+ Bir *LINQ sağlayıcısı* Visual Basic LINQ sorgularınızı sorgulanan veri kaynağına eşler. Bir LINQ sorgusu yazdığınızda, sağlayıcı bu sorguyu alır ve veri kaynağının yürütebilecek komutlara dönüştürür. Sağlayıcı ayrıca verileri kaynaktan sorgu sonucu oluşturan nesnelere dönüştürür. Son olarak, veri kaynağına güncelleştirme gönderdiğinizde nesneleri verilere dönüştürür.  
   
- Visual Basic includes the following LINQ providers.  
+ Visual Basic aşağıdaki LINQ sağlayıcılarını içerir.  
   
 |Sağlayıcı|Açıklama|  
 |---|---|  
-|Nesnelere LINQ|The LINQ to Objects provider enables you to query in-memory collections and arrays. If an object supports either the <xref:System.Collections.IEnumerable> or <xref:System.Collections.Generic.IEnumerable%601> interface, the LINQ to Objects provider enables you to query it.<br /><br /> You can enable the LINQ to Objects provider by importing the <xref:System.Linq> namespace, which is imported by default for all Visual Basic projects.<br /><br /> For more information about the LINQ to Objects provider, see [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
-|LINQ - SQL|The LINQ to SQL provider enables you to query and modify data in a SQL Server database. This makes it easy to map the object model for an application to the tables and objects in a database.<br /><br /> Visual Basic makes it easier to work with LINQ to SQL by including the Object Relational Designer (O/R Designer). This designer is used to create an object model in an application that maps to objects in a database. The O/R Designer also provides functionality to map stored procedures and functions to the <xref:System.Data.Linq.DataContext> object, which manages communication with the database and stores state for optimistic concurrency checks.<br /><br /> For more information about the LINQ to SQL provider, see [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). For more information about the Object Relational Designer, see [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
-|LINQ - XML|The LINQ to XML provider enables you to query and modify XML. You can modify in-memory XML, or you can load XML from and save XML to a file.<br /><br /> Additionally, the LINQ to XML provider enables XML literals and XML axis properties that enable you to write XML directly in your Visual Basic code. For more information, see [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
-|LINQ - DataSet|The LINQ to DataSet provider enables you to query and update data in an ADO.NET dataset. You can add the power of LINQ to applications that use datasets in order to simplify and extend your capabilities for querying, aggregating, and updating the data in your dataset.<br /><br /> For more information, see [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
+|Nesnelere LINQ|LINQ to Objects sağlayıcı, bellek içi koleksiyonları ve dizileri sorgulamanızı sağlar. Bir nesne <xref:System.Collections.IEnumerable> ya da <xref:System.Collections.Generic.IEnumerable%601> arabirimini destekliyorsa, LINQ to Objects sağlayıcısı sorgulamanızı sağlar.<br /><br /> Tüm Visual Basic projeleri için varsayılan olarak içeri aktarılan <xref:System.Linq> ad alanını içeri aktararak LINQ to Objects sağlayıcıyı etkinleştirebilirsiniz.<br /><br /> LINQ to Objects sağlayıcısı hakkında daha fazla bilgi için bkz. [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
+|LINQ - SQL|LINQ to SQL sağlayıcı, verileri bir SQL Server veritabanında sorgulamanıza ve değiştirmenize olanak sağlar. Bu, bir uygulamanın nesne modelini bir veritabanındaki tablolar ve nesneler için eşlemeyi kolaylaştırır.<br /><br /> Visual Basic, Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) dahil LINQ to SQL birlikte çalışmayı kolaylaştırır. Bu tasarımcı, bir veritabanındaki nesnelerle eşleşen bir uygulamada nesne modeli oluşturmak için kullanılır. O/R Tasarımcısı Ayrıca, saklı yordamları ve işlevleri, veritabanı ile iletişimi yöneten ve iyimser eşzamanlılık denetimleri için durum depolayan <xref:System.Data.Linq.DataContext> nesnesine eşlemek için de işlevsellik sağlar.<br /><br /> LINQ to SQL sağlayıcısı hakkında daha fazla bilgi için bkz. [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Nesne İlişkisel Tasarımcısı hakkında daha fazla bilgi için bkz. [Visual Studio 'da LINQ to SQL araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
+|LINQ - XML|LINQ to XML sağlayıcı, XML 'yi sorgulamanıza ve değiştirmenize olanak sağlar. Bellek içi XML 'yi değiştirebilir veya XML dosyasından XML yükleyebilir ve bir dosyaya kaydedebilirsiniz.<br /><br /> Ayrıca, LINQ to XML sağlayıcı, doğrudan Visual Basic kodunuzda XML yazmanızı sağlayan XML sabit değerleri ve XML eksen özelliklerini etkinleştirir. Daha fazla bilgi için bkz. [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
+|LINQ - DataSet|LINQ to DataSet sağlayıcı, bir ADO.NET veri kümesindeki verileri sorgulamanıza ve güncelleştirmenize olanak sağlar. Veri kümenizdeki verileri sorgulama, toplama ve güncelleştirme özelliklerini basitleştirmek ve genişletmek için veri kümelerini kullanan uygulamalara LINQ 'ın gücünü ekleyebilirsiniz.<br /><br /> Daha fazla bilgi için bkz. [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
-## <a name="structure-of-a-linq-query"></a>Structure of a LINQ query  
- A LINQ query, often referred to as a *query expression*, consists of a combination of query clauses that identify the data sources and iteration variables for the query. A query expression can also include instructions for sorting, filtering, grouping, and joining, or calculations to apply to the source data. Query expression syntax resembles the syntax of SQL; therefore, you may find much of the syntax familiar.  
+## <a name="structure-of-a-linq-query"></a>LINQ sorgusunun yapısı  
+ Genellikle *sorgu ifadesi*olarak ANıLAN bir LINQ sorgusu, sorgu için veri kaynaklarını ve yineleme değişkenlerini tanımlayan bir sorgu yan tümceleri birleşimini içerir. Sorgu ifadesi Ayrıca sıralama, filtreleme, gruplama ve katılma veya kaynak verilere uygulanacak hesaplamalar için yönergeleri de içerebilir. Sorgu ifadesi söz dizimi SQL; sözdizimine benzer Bu nedenle, bilinen sözdiziminin büyük bir bölümünü bulabilirsiniz.  
   
- A query expression starts with a `From` clause. This clause identifies the source data for a query and the variables that are used to refer to each element of the source data individually. These variables are named *range variables* or *iteration variables*. The `From` clause is required for a query, except for `Aggregate` queries, where the `From` clause is optional. After the scope and source of the query are identified in the `From` or `Aggregate` clauses, you can include any combination of query clauses to refine the query. For details about query clauses, see Visual Basic LINQ Query Operators later in this topic. For example, the following query identifies a source collection of customer data as the `customers` variable, and an iteration variable named `cust`.  
+ Sorgu ifadesi `From` yan tümcesiyle başlar. Bu yan tümce, bir sorgunun kaynak verilerini ve kaynak verilerin her öğesine tek tek başvurmak için kullanılan değişkenleri tanımlar. Bu değişkenler, *Aralık değişkenleri* veya *yineleme değişkenleri*olarak adlandırılır. `From` yan tümcesi, `Aggregate` sorguları dışında, `From` yan tümcesinin isteğe bağlı olduğu bir sorgu için gereklidir. Sorgunun kapsamı ve kaynağı `From` veya `Aggregate` yan tümcelerinde tanımlandıktan sonra sorgu yan tümcelerinin herhangi bir birleşimini dahil edebilirsiniz ve sorguyu daraltın. Sorgu yan tümceleri hakkında daha fazla bilgi için bu konunun ilerleyen kısımlarında Visual Basic LINQ sorgu Işleçleri ' ne bakın. Örneğin, aşağıdaki sorgu, `customers` değişkeni olarak müşteri verilerinin kaynak koleksiyonunu ve `cust`adlı bir yineleme değişkenini tanımlar.  
   
  [!code-vb[VbVbalrIntroToLINQ#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#2)]  
   
- This example is a valid query by itself; however, the query becomes far more powerful when you add more query clauses to refine the result. For example, you can add a `Where` clause to filter the result by one or more values. Query expressions are a single line of code; you can just append additional query clauses to the end of the query. You can break up a query across multiple lines of text to improve readability by using the underscore (\_) line-continuation character. The following code example shows an example of a query that includes a `Where` clause.  
+ Bu örnek kendi kendine geçerli bir sorgudur; Ancak, sonucu iyileştirmek için daha fazla sorgu yan tümcesi eklediğinizde sorgu daha güçlü hale gelir. Örneğin, sonucu bir veya daha fazla değere göre filtrelemek için bir `Where` yan tümcesi ekleyebilirsiniz. Sorgu ifadeleri tek satırlık bir koddur; sorgu sonuna yalnızca ek sorgu yan tümceleri ekleyebilirsiniz. Alt çizgi (\_) satır devamlılık karakterini kullanarak okunabilirliği artırmak için birden çok satırlık metin üzerinde bir sorgu kesebilirsiniz. Aşağıdaki kod örneğinde, bir `Where` yan tümcesi içeren bir sorgu örneği gösterilmektedir.  
   
  [!code-vb[VbVbalrIntroToLINQ#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#3)]  
   
- Another powerful query clause is the `Select` clause, which enables you to return only selected fields from the data source. LINQ queries return enumerable collections of strongly typed objects. A query can return a collection of anonymous types or named types. You can use the `Select` clause to return only a single field from the data source. When you do this, the type of the collection returned is the type of that single field. You can also use the `Select` clause to return multiple fields from the data source. When you do this, the type of the collection returned is a new anonymous type. You can also match the fields returned by the query to the fields of a specified named type. The following code example shows a query expression that returns a collection of anonymous types that have members populated with data from the selected fields from the data source.  
+ Başka bir güçlü sorgu yan tümcesi, veri kaynağından yalnızca seçili alanları döndürmenizi sağlayan `Select` yan tümcesi. LINQ sorguları, kesin olarak belirlenmiş nesneler için sıralanabilir koleksiyonlar döndürüyor. Bir sorgu, anonim türlerin veya adlandırılmış türlerin bir koleksiyonunu döndürebilir. Yalnızca veri kaynağından tek bir alan döndürmek için `Select` yan tümcesini kullanabilirsiniz. Bunu yaptığınızda, döndürülen koleksiyonun türü bu tek alanın türüdür. Veri kaynağından birden çok alan döndürmek için `Select` yan tümcesini de kullanabilirsiniz. Bunu yaptığınızda, döndürülen koleksiyonun türü yeni bir anonim türdür. Sorgu tarafından döndürülen alanları belirtilen adlandırılmış türdeki alanlara de eşleştirebilirsiniz. Aşağıdaki kod örneği, veri kaynağından seçilen alanlardan verilerle doldurulmuş üyelere sahip anonim türlerin koleksiyonunu döndüren bir sorgu ifadesini gösterir.  
   
  [!code-vb[VbVbalrIntroToLINQ#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#4)]  
   
- LINQ queries can also be used to combine multiple sources of data and return a single result. This can be done with one or more `From` clauses, or by using the `Join` or `Group Join` query clauses. The following code example shows a query expression that combines customer and order data and returns a collection of anonymous types containing customer and order data.  
+ LINQ sorguları, birden fazla veri kaynağını birleştirmek ve tek bir sonuç döndürmek için de kullanılabilir. Bu, bir veya daha fazla `From` yan tümcesi ile veya `Join` veya `Group Join` sorgu yan tümceleri kullanılarak gerçekleştirilebilir. Aşağıdaki kod örneği, müşteri ve sipariş verilerini birleştiren ve müşteri ve sipariş verilerini içeren anonim türlerin koleksiyonunu döndüren bir sorgu ifadesini gösterir.  
   
  [!code-vb[VbVbalrIntroToLINQ#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#5)]  
   
- You can use the `Group Join` clause to create a hierarchical query result that contains a collection of customer objects. Each customer object has a property that contains a collection of all orders for that customer. The following code example shows a query expression that combines customer and order data as a hierarchical result and returns a collection of anonymous types. The query returns a type that includes a `CustomerOrders` property that contains a collection of order data for the customer. It also includes an `OrderTotal` property that contains the sum of the totals for all the orders for that customer. (This query is equivalent to a LEFT OUTER JOIN.)  
+ Bir müşteri nesneleri koleksiyonu içeren hiyerarşik bir sorgu sonucu oluşturmak için `Group Join` yan tümcesini kullanabilirsiniz. Her müşteri nesnesi ilgili müşterinin tüm siparişlerinin koleksiyonunu içeren bir özelliğe sahiptir. Aşağıdaki kod örneği, müşteri ve sipariş verilerini hiyerarşik sonuç olarak birleştiren ve anonim türlerin koleksiyonunu döndüren bir sorgu ifadesini gösterir. Sorgu, müşteri için sipariş verilerinin bir koleksiyonunu içeren bir `CustomerOrders` özelliği içeren bir tür döndürür. Ayrıca, bu müşterinin tüm siparişlerinin toplam toplamlarını içeren bir `OrderTotal` özelliği de içerir. (Bu sorgu bir LEFT OUTER JOIN ile eşdeğerdir.)  
   
  [!code-vb[VbVbalrIntroToLINQ#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#6)]  
   
- There are several additional LINQ query operators that you can use to create powerful query expressions. The next section of this topic discusses the various query clauses that you can include in a query expression. For details about Visual Basic query clauses, see [Queries](../../../../visual-basic/language-reference/queries/index.md).  
+ Güçlü sorgu ifadeleri oluşturmak için kullanabileceğiniz birkaç ek LINQ sorgu işleci vardır. Bu konunun sonraki bölümünde, bir sorgu ifadesine dahil etmek için kullanabileceğiniz çeşitli sorgu tümceleri ele alınmaktadır. Visual Basic sorgu yan tümceleri hakkında ayrıntılar için bkz. [sorgular](../../../../visual-basic/language-reference/queries/index.md).  
   
-## <a name="visual-basic-linq-query-operators"></a>Visual Basic LINQ query operators  
+## <a name="visual-basic-linq-query-operators"></a>Visual Basic LINQ sorgu işleçleri  
 
-The classes in the <xref:System.Linq> namespace and the other namespaces that support LINQ queries include methods that you can call to create and refine queries based on the needs of your application. Visual Basic includes keywords for the following common query clauses. For details about Visual Basic query clauses, see [Queries](../../../language-reference/queries/index.md).
+<xref:System.Linq> ad alanındaki sınıflar ve LINQ sorgularını destekleyen diğer ad alanları, uygulamanızın gereksinimlerine göre sorguları oluşturmak ve iyileştirmek için çağırabileceğiniz yöntemleri içerir. Visual Basic aşağıdaki ortak sorgu yan tümceleri için anahtar sözcükler içerir. Visual Basic sorgu yan tümceleri hakkında ayrıntılar için bkz. [sorgular](../../../language-reference/queries/index.md).
 
 ### <a name="from-clause"></a>From yan tümcesi
 
-Either a [`From` clause](../../../../visual-basic/language-reference/queries/from-clause.md) or an `Aggregate` clause is required to begin a query. A `From` clause specifies a source collection and an iteration variable for a query. Örneğin:
+Bir sorgu başlatmak için bir [`From` yan tümcesi](../../../../visual-basic/language-reference/queries/from-clause.md) veya bir `Aggregate` yan tümcesi gereklidir. `From` yan tümcesi bir sorgu için kaynak koleksiyonu ve yineleme değişkenini belirtir. Örneğin:
 
  [!code-vb[VbVbalrIntroToLINQ#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#7)]
 
 ### <a name="select-clause"></a>Select tümcesi
 
-İsteğe bağlı. A [`Select` clause](../../../../visual-basic/language-reference/queries/select-clause.md) declares a set of iteration variables for a query. Örneğin:
+İsteğe bağlı. [`Select` yan tümcesi](../../../../visual-basic/language-reference/queries/select-clause.md) bir sorgu için yineleme değişkenleri kümesi bildirir. Örneğin:
 
  [!code-vb[VbVbalrIntroToLINQ#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#8)]
 
-If a `Select` clause is not specified, the iteration variables for the query consist of the iteration variables specified by the `From` or `Aggregate` clause.
+Bir `Select` yan tümcesi belirtilmemişse, sorgunun yineleme değişkenleri, `From` veya `Aggregate` yan tümcesi tarafından belirtilen yineleme değişkenlerinden oluşur.
 
 ### <a name="where-clause"></a>Where yan tümcesi
 
-İsteğe bağlı. A [`Where` clause](../../../../visual-basic/language-reference/queries/where-clause.md) specifies a filtering condition for a query. Örneğin:
+İsteğe bağlı. [`Where` yan tümcesi](../../../../visual-basic/language-reference/queries/where-clause.md) , bir sorgu için filtreleme koşulunu belirtir. Örneğin:
 
  [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
-### <a name="order-by-clause"></a>Order By clause]
+### <a name="order-by-clause"></a>Order by tümcesi]
 
-|Optional. An [`Order By` clause](../../../../visual-basic/language-reference/queries/order-by-clause.md) specifies the sort order for columns in a query. Örneğin:
+| Seçim. [`Order By` yan tümcesi](../../../../visual-basic/language-reference/queries/order-by-clause.md) , bir sorgudaki sütunlar için sıralama düzenini belirtir. Örneğin:
 
  [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 
 ### <a name="join-clause"></a>Join tümcesi
 
-İsteğe bağlı. A [`Join` clause](../../../../visual-basic/language-reference/queries/join-clause.md) combines two collections into a single collection. Örneğin:
+İsteğe bağlı. [`Join` yan tümcesi](../../../../visual-basic/language-reference/queries/join-clause.md) iki koleksiyonu tek bir koleksiyonda birleştirir. Örneğin:
 
  [!code-vb[VbVbalrIntroToLINQ#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#11)]
 
 ### <a name="group-by-clause"></a>Group By tümcesi
 
-İsteğe bağlı. A [`Group By` clause](../../../../visual-basic/language-reference/queries/group-by-clause.md) groups the elements of a query result. It can be used to apply aggregate functions to each group. Örneğin:
+İsteğe bağlı. [`Group By` yan tümcesi](../../../../visual-basic/language-reference/queries/group-by-clause.md) bir sorgu sonucunun öğelerini gruplandırır. Her gruba toplama işlevleri uygulamak için kullanılabilir. Örneğin:
 
  [!code-vb[VbVbalrIntroToLINQ#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#12)]
 
 ### <a name="group-join-clause"></a>Group Join tümcesi
 
-İsteğe bağlı. A [`Group Join` clause](../../../../visual-basic/language-reference/queries/group-join-clause.md) combines two collections into a single hierarchical collection. Örneğin:
+İsteğe bağlı. [`Group Join` yan tümcesi](../../../../visual-basic/language-reference/queries/group-join-clause.md) iki koleksiyonu tek bir hiyerarşik koleksiyonda birleştirir. Örneğin:
 
  [!code-vb[VbVbalrIntroToLINQ#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#13)]
 
 ### <a name="aggregate-clause"></a>Aggregate tümcesi
 
-Either an [`Aggregate` clause](../../../../visual-basic/language-reference/queries/aggregate-clause.md) or a `From` clause is required to begin a query. An `Aggregate` clause applies one or more aggregate functions to a collection. For example, you can use the `Aggregate` clause to calculate a sum for all the elements returned by a query, as the following example does.
+Bir sorgu başlatmak için bir [`Aggregate` yan tümcesi](../../../../visual-basic/language-reference/queries/aggregate-clause.md) veya `From` yan tümcesi gereklidir. `Aggregate` yan tümcesi bir koleksiyona bir veya daha fazla toplama işlevi uygular. Örneğin, aşağıdaki örnekte olduğu gibi, bir sorgu tarafından döndürülen tüm öğelerin toplamını hesaplamak için `Aggregate` yan tümcesini kullanabilirsiniz.
 
  [!code-vb[VbVbalrIntroToLINQ#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#14)]
 
-You can also use the `Aggregate` clause to modify a query. For example, you can use the `Aggregate` clause to perform a calculation on a related query collection. Örneğin:
+Bir sorguyu değiştirmek için `Aggregate` yan tümcesini de kullanabilirsiniz. Örneğin, `Aggregate` yan tümcesini kullanarak ilgili sorgu koleksiyonunda bir hesaplama gerçekleştirebilirsiniz. Örneğin:
 
  [!code-vb[VbVbalrIntroToLINQ#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#15)]
 
 ### <a name="let-clause"></a>Let tümcesi
 
-İsteğe bağlı. A [`Let` clause](../../../../visual-basic/language-reference/queries/let-clause.md) computes a value and assigns it to a new variable in the query. Örneğin:
+İsteğe bağlı. [`Let` yan tümcesi](../../../../visual-basic/language-reference/queries/let-clause.md) bir değeri hesaplar ve bunu sorgudaki yeni bir değişkene atar. Örneğin:
 
  [!code-vb[VbVbalrIntroToLINQ#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#16)]
 
 ### <a name="distinct-clause"></a>Distinct tümcesi
 
-İsteğe bağlı. A `Distinct` clause restricts the values of the current iteration variable to eliminate duplicate values in query results. Örneğin:
+İsteğe bağlı. `Distinct` yan tümcesi, sorgu sonuçlarında yinelenen değerleri ortadan kaldırmak için geçerli yineleme değişkeninin değerlerini kısıtlar. Örneğin:
 
  [!code-vb[VbVbalrIntroToLINQ#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#17)]
 
 ### <a name="skip-clause"></a>Skip tümcesi
 
-İsteğe bağlı. A [`Skip` clause](../../../../visual-basic/language-reference/queries/skip-clause.md) bypasses a specified number of elements in a collection and then returns the remaining elements. Örneğin:
+İsteğe bağlı. [`Skip` yan tümcesi](../../../../visual-basic/language-reference/queries/skip-clause.md) , koleksiyonda belirtilen sayıda öğeyi atlar ve ardından kalan öğeleri döndürür. Örneğin:
 
  [!code-vb[VbVbalrIntroToLINQ#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#18)]
 
 ### <a name="skip-while-clause"></a>Skip While tümcesi
 
-İsteğe bağlı. A [`Skip While` clause](../../../../visual-basic/language-reference/queries/skip-while-clause.md) bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements. Örneğin:
+İsteğe bağlı. [`Skip While` yan tümcesi](../../../../visual-basic/language-reference/queries/skip-while-clause.md) , belirtilen koşul `true` olduğu sürece bir koleksiyondaki öğeleri atlar ve kalan öğeleri döndürür. Örneğin:
 
  [!code-vb[VbVbalrIntroToLINQ#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#19)]
 
 ### <a name="take-clause"></a>Take tümcesi
 
-İsteğe bağlı. A [`Take` clause](../../../../visual-basic/language-reference/queries/take-clause.md) returns a specified number of contiguous elements from the start of a collection. Örneğin:
+İsteğe bağlı. [`Take` yan tümcesi](../../../../visual-basic/language-reference/queries/take-clause.md) , bir koleksiyonun başından itibaren belirtilen sayıda bitişik öğeyi döndürür. Örneğin:
 
  [!code-vb[VbVbalrIntroToLINQ#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#20)]
 
 ### <a name="take-while-clause"></a>Take While tümcesi
 
-İsteğe bağlı. A [`Take While` clause](../../../../visual-basic/language-reference/queries/take-while-clause.md) includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements. Örneğin:
+İsteğe bağlı. [`Take While` yan tümcesi](../../../../visual-basic/language-reference/queries/take-while-clause.md) , belirtilen koşul `true` olduğu ve kalan öğeleri atlayan sürece bir koleksiyondaki öğeleri içerir. Örneğin:
 
  [!code-vb[VbVbalrIntroToLINQ#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#21)]
   
-## <a name="use-additional-linq-query-features"></a>Use additional LINQ query features  
+## <a name="use-additional-linq-query-features"></a>Ek LINQ sorgu özellikleri kullan  
   
-You can use additional LINQ query features by calling members of the enumerable and queryable types provided by LINQ. You can use these additional capabilities by calling a particular query operator on the result of a query expression. For example, the following example uses the <xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType> method to combine the results of two queries into one query result. It uses the <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> method to return the query result as a generic list.
+LINQ tarafından sunulan sıralanabilir ve sorgulanabilir türlerin üyelerini çağırarak ek LINQ sorgu özellikleri kullanabilirsiniz. Sorgu ifadesinin sonucu üzerinde belirli bir sorgu işlecini çağırarak bu ek özellikleri kullanabilirsiniz. Örneğin, aşağıdaki örnek, iki sorgunun sonuçlarını tek bir sorgu sonucuyla birleştirmek için <xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType> yöntemini kullanır. Sorgu sonucunu genel liste olarak döndürmek için <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> yöntemini kullanır.
   
  [!code-vb[VbVbalrIntroToLINQ#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#22)]  
   
- For details about additional LINQ capabilities, see [Standard Query Operators Overview](../../concepts/linq/standard-query-operators-overview.md).  
+ Ek LINQ özellikleri hakkında ayrıntılı bilgi için bkz. [Standart sorgu Işleçlerine genel bakış](../../concepts/linq/standard-query-operators-overview.md).  
   
-## <a name="connect-to-a-database-by-using-linq-to-sql"></a>Connect to a database by using LINQ to SQL  
- In Visual Basic, you identify the SQL Server database objects, such as tables, views, and stored procedures, that you want to access by using a LINQ to SQL file. A LINQ to SQL file has an extension of .dbml.  
+## <a name="connect-to-a-database-by-using-linq-to-sql"></a>LINQ to SQL kullanarak bir veritabanına bağlanma  
+ Visual Basic, LINQ to SQL bir dosya kullanarak erişmek istediğiniz tablolar, görünümler ve saklı yordamlar gibi SQL Server veritabanı nesnelerini belirlersiniz. Bir LINQ to SQL dosyası. dbml uzantısına sahiptir.  
   
- When you have a valid connection to a SQL Server database, you can add a **LINQ to SQL Classes** item template to your project. This will display the Object Relational Designer (O/R designer). The O/R Designer enables you to drag the items that you want to access in your code from the **Server Explorer**/**Database Explorer** onto the designer surface. The LINQ to SQL file adds a <xref:System.Data.Linq.DataContext> object to your project. This object includes properties and collections for the tables and views that you want access to, and methods for the stored procedures that you want to call. After you have saved your changes to the LINQ to SQL (.dbml) file, you can access these objects in your code by referencing the <xref:System.Data.Linq.DataContext> object that is defined by the O/R Designer. The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your LINQ to SQL file. For example, a LINQ to SQL file that is named Northwind.dbml will create a <xref:System.Data.Linq.DataContext> object named `NorthwindDataContext`.  
+ SQL Server veritabanına geçerli bir bağlantınız olduğunda projenize **LINQ to SQL sınıfları** öğe şablonu ekleyebilirsiniz. Bu işlem Nesne İlişkisel Tasarımcısı (O/R Designer) ' u görüntüler. O/R Tasarımcısı, kodunuzda erişmek istediğiniz öğeleri tasarımcı yüzeyine **Sunucu Gezgini**/**veritabanı Gezgini** sürüklemenize olanak sağlar. LINQ to SQL dosyası projenize bir <xref:System.Data.Linq.DataContext> nesnesi ekler. Bu nesne, erişmek istediğiniz tablo ve görünümlere yönelik özellikler ve koleksiyonlar ve çağırmak istediğiniz saklı yordamlar için yöntemler içerir. LINQ to SQL (. dbml) dosyasına yaptığınız değişiklikleri kaydettikten sonra, O nesnelere, O/R Tasarımcısı tarafından tanımlanan <xref:System.Data.Linq.DataContext> nesnesine başvurarak kodunuzda erişebilirsiniz. Projeniz için <xref:System.Data.Linq.DataContext> nesnesi, LINQ to SQL dosyanızın adına göre adlandırılır. Örneğin, Northwind. dbml adlı bir LINQ to SQL dosyası `NorthwindDataContext`adlı bir <xref:System.Data.Linq.DataContext> nesnesi oluşturur.  
   
- For examples with step-by-step instructions, see [How to: Query a Database](how-to-query-a-database-by-using-linq.md) and [How to: Call a Stored Procedure](how-to-call-a-stored-procedure-by-using-linq.md).  
+ Adım adım yönergelere sahip örnekler için bkz. [nasıl yapılır: sorgu sorgulama](how-to-query-a-database-by-using-linq.md) ve [nasıl yapılır: saklı yordam çağırma](how-to-call-a-stored-procedure-by-using-linq.md).  
   
-## <a name="visual-basic-features-that-support-linq"></a>Visual Basic features that support LINQ  
- Visual Basic includes other notable features that make the use of LINQ simple and reduce the amount of code that you must write to perform LINQ queries. Bunlar aşağıdakileri içerir:  
+## <a name="visual-basic-features-that-support-linq"></a>LINQ 'i destekleyen Visual Basic özellikleri  
+ Visual Basic, LINQ Simple kullanımını yapan ve LINQ sorguları gerçekleştirmek için yazmanız gereken kod miktarını azaltan diğer önemli özellikleri içerir. Bunlar aşağıdakileri içerir:  
   
-- **Anonymous types**, which enable you to create a new type based on a query result.  
+- Bir sorgu sonucuna dayalı yeni bir tür oluşturmanıza olanak sağlayan **anonim türler**.  
   
-- **Implicitly typed variables**, which enable you to defer specifying a type and let the compiler infer the type based on the query result.  
+- Türü belirtmeyi ertelemenizi sağlayan ve derleyicinin türü sorgu sonucuna göre çıkarmasına izin veren **örtük olarak yazılan değişkenler**.  
   
-- **Extension methods**, which enable you to extend an existing type with your own methods without modifying the type itself.  
+- **Uzantı yöntemleri**, türün kendisini değiştirmeden kendi yöntemleriniz ile var olan bir türü genişletmenizi sağlar.  
   
- For details, see [Visual Basic Features That Support LINQ](../../concepts/linq/features-that-support-linq.md).  
+ Ayrıntılar için bkz. [LINQ 'ı destekleyen Visual Basic Özellikler](../../concepts/linq/features-that-support-linq.md).  
   
-## <a name="deferred-and-immediate-query-execution"></a>Deferred and immediate query execution
+## <a name="deferred-and-immediate-query-execution"></a>Ertelenmiş ve acil sorgu yürütme
 
- Query execution is separate from creating a query. After a query is created, its execution is triggered by a separate mechanism. A query can be executed as soon as it is defined (*immediate execution*), or the definition can be stored and the query can be executed later (*deferred execution*).  
+ Sorgu yürütme, sorgu oluşturmaktan farklıdır. Bir sorgu oluşturulduktan sonra, yürütülmesi ayrı bir mekanizma tarafından tetiklenir. Sorgu, tanımlanır (*anında yürütme*), veya tanım depolanabilir ve sorgu daha sonra yürütülebilir (*ertelenmiş yürütme*).  
   
- By default, when you create a query, the query itself does not execute immediately. Instead, the query definition is stored in the variable that is used to reference the query result. When the query result variable is accessed later in code, such as in a `For…Next` loop, the query is executed. This process is referred to as *deferred execution*.  
+ Varsayılan olarak, bir sorgu oluşturduğunuzda sorgu hemen yürütülmez. Bunun yerine sorgu tanımı, sorgu sonucuna başvurmak için kullanılan değişkende depolanır. Sorgu sonuç değişkenine, bir `For…Next` döngüsünde olduğu gibi, daha sonra kod içinde erişildiğinde sorgu yürütülür. Bu işlem *ertelenmiş yürütme*olarak adlandırılır.  
   
- Queries can also be executed when they are defined, which is referred to as *immediate execution*. You can trigger immediate execution by applying a method that requires access to individual elements of the query result. This can be the result of including an aggregate function, such as `Count`, `Sum`, `Average`, `Min`, or `Max`. For more information about aggregate functions, see [Aggregate Clause](../../../language-reference/queries/aggregate-clause.md).  
+ Sorgular, tanımlandıklarında da çalıştırılabilir, bu da *anında yürütme*olarak adlandırılır. Sorgu sonucunun tek tek öğelerine erişmesi gereken bir yöntemi uygulayarak hemen yürütmeyi tetikleyebilirsiniz. Bu, `Count`, `Sum`, `Average`, `Min`veya `Max`gibi bir toplama işlevinin dahil edilmesi sonucu olabilir. Toplama işlevleri hakkında daha fazla bilgi için bkz. [Aggregate yan tümcesi](../../../language-reference/queries/aggregate-clause.md).  
   
- Using the `ToList` or `ToArray` methods will also force immediate execution. This can be useful when you want to execute the query immediately and cache the results. For more information about these methods, see [Converting Data Types](../../concepts/linq/converting-data-types.md).  
+ `ToList` veya `ToArray` yöntemlerinin kullanılması de hemen yürütmeye zorlanır. Bu, sorguyu hemen çalıştırmak ve sonuçları önbelleğe almak istediğinizde yararlı olabilir. Bu yöntemler hakkında daha fazla bilgi için bkz. [veri türlerini dönüştürme](../../concepts/linq/converting-data-types.md).  
   
- For more information about query execution, see [Writing Your First LINQ Query](../../concepts/linq/writing-your-first-linq-query.md).  
+ Sorgu yürütme hakkında daha fazla bilgi için, bkz. [Ilk LINQ sorgunuzu yazma](../../concepts/linq/writing-your-first-linq-query.md).  
   
 ## <a name="xml-in-visual-basic"></a>Visual Basic'de XML  
- The XML features in Visual Basic include XML literals and XML axis properties, which enable you easily to create, access, query, and modify XML in your code. XML literals enable you to write XML directly in your code. The Visual Basic compiler treats the XML as a first-class data object.  
+ Visual Basic ' deki XML özellikleri, kodunuzda XML oluşturma, erişme, sorgulama ve değişiklik yapma olanağı sağlayan XML değişmez değerleri ve XML eksen özelliklerini içerir. XML değişmez değerleri doğrudan kodunuzda XML yazmanızı sağlar. Visual Basic Derleyicisi, XML 'yi birinci sınıf veri nesnesi olarak değerlendirir.  
   
- The following code example shows how to create an XML element, access its sub-elements and attributes, and query the contents of the element by using LINQ.  
+ Aşağıdaki kod örneği, bir XML öğesinin nasıl oluşturulduğunu, alt öğelerine ve özniteliklerine erişmeyi ve LINQ kullanarak öğenin içeriğini sorgulamayı gösterir.  
   
  [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   
- For more information, see [XML](../xml/index.md).  
+ Daha fazla bilgi için bkz. [XML](../xml/index.md).  
   
-## <a name="related-resources"></a>Related resources  
+## <a name="related-resources"></a>İlgili kaynaklar  
   
 |Konu|Açıklama|  
 |---|---|  
-|[XML](../../language-features/xml/index.md)|Describes the XML features in Visual Basic that can be queried and that enable you to include XML as first-class data objects in your Visual Basic code.|  
-|[Sorgular](../../../language-reference/queries/index.md)|Provides reference information about the query clauses that are available in Visual Basic.|  
-|[LINQ (Language-Integrated Query)](../../concepts/linq/index.md)|Includes general information, programming guidance, and samples for LINQ.|  
-|[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)|Includes general information, programming guidance, and samples for LINQ to SQL.|  
-|[LINQ to Objects](../../concepts/linq/linq-to-objects.md)|Includes general information, programming guidance, and samples for LINQ to Objects.|  
-|[LINQ to ADO.NET (Portal Sayfası)](../../concepts/linq/linq-to-adonet-portal-page.md)|Includes links to general information, programming guidance, and samples for LINQ to ADO.NET.|  
-|[LINQ to XML](../../concepts/linq/linq-to-xml.md)|Includes general information, programming guidance, and samples for LINQ to XML.|  
+|[XML](../../language-features/xml/index.md)|Visual Basic ' deki ve Visual Basic kodunuzda birinci sınıf veri nesneleri olarak XML bulundurmasını sağlayan XML özelliklerini açıklar.|  
+|[Sorgular](../../../language-reference/queries/index.md)|Visual Basic ' de kullanılabilen sorgu yan tümceleri hakkında başvuru bilgileri sağlar.|  
+|[LINQ (dil ile tümleşik sorgu)](../../concepts/linq/index.md)|Genel bilgileri, programlama kılavuzunu ve LINQ için örnekleri içerir.|  
+|[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)|Genel bilgileri, programlama kılavuzunu ve LINQ to SQL yönelik örnekleri içerir.|  
+|[LINQ to Objects](../../concepts/linq/linq-to-objects.md)|Genel bilgileri, programlama kılavuzunu ve LINQ to Objects yönelik örnekleri içerir.|  
+|[LINQ to ADO.NET (Portal Sayfası)](../../concepts/linq/linq-to-adonet-portal-page.md)|Genel bilgiler, Programlama Kılavuzu ve LINQ to ADO.NET için örneklere bağlantılar içerir.|  
+|[LINQ to XML](../../concepts/linq/linq-to-xml.md)|Genel bilgileri, programlama kılavuzunu ve LINQ to XML yönelik örnekleri içerir.|  
   
-## <a name="how-to-and-walkthrough-topics"></a>How to and walkthrough topics
- [How to: Query a Database](how-to-query-a-database-by-using-linq.md)  
+## <a name="how-to-and-walkthrough-topics"></a>Nasıl yapılır ve İzlenecek yol konuları
+ [Nasıl yapılır: bir veritabanını sorgulama](how-to-query-a-database-by-using-linq.md)  
   
- [How to: Call a Stored Procedure](how-to-call-a-stored-procedure-by-using-linq.md)  
+ [Nasıl yapılır: saklı yordam çağırma](how-to-call-a-stored-procedure-by-using-linq.md)  
   
- [How to: Modify Data in a Database](how-to-modify-data-in-a-database-by-using-linq.md)  
+ [Nasıl yapılır: veritabanındaki verileri değiştirme](how-to-modify-data-in-a-database-by-using-linq.md)  
   
- [How to: Combine Data with Joins](how-to-combine-data-with-linq-by-using-joins.md)  
+ [Nasıl yapılır: birleşimlerle verileri birleştirme](how-to-combine-data-with-linq-by-using-joins.md)  
   
- [How to: Sort Query Results](how-to-sort-query-results-by-using-linq.md)  
+ [Nasıl yapılır: sorgu sonuçlarını sıralama](how-to-sort-query-results-by-using-linq.md)  
   
- [How to: Filter Query Results](how-to-filter-query-results-by-using-linq.md)  
+ [Nasıl yapılır: sorgu sonuçlarını filtreleme](how-to-filter-query-results-by-using-linq.md)  
   
- [How to: Count, Sum, or Average Data](how-to-count-sum-or-average-data-by-using-linq.md)  
+ [Nasıl yapılır: Count, Sum veya Average Data](how-to-count-sum-or-average-data-by-using-linq.md)  
   
- [How to: Find the Minimum or Maximum Value in a Query Result](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
+ [Nasıl yapılır: bir sorgu sonucunda en küçük veya en büyük değeri bulma](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
   
  [Nasıl yapılır: Güncelleştirme, ekleme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama (O/R Tasarımcısı)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)  
   
-## <a name="featured-book-chapters"></a>Featured book chapters  
- [Chapter 17: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) in [Programming Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
+## <a name="featured-book-chapters"></a>Öne çıkan kitap bölümleri  
+ [Bölüm 17:](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) programlamada lınq [Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ (Language-Integrated Query)](../../concepts/linq/index.md)
-- [Overview of LINQ to XML in Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)
+- [LINQ (dil ile tümleşik sorgu)](../../concepts/linq/index.md)
+- [Visual Basic LINQ to XML genel bakış](../../language-features/xml/overview-of-linq-to-xml.md)
 - [LINQ to DataSet Genel Bakış](../../../../framework/data/adonet/linq-to-dataset-overview.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [Visual Studio'daki LINQ to SQL Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)

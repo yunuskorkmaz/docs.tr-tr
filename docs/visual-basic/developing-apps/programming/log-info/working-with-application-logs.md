@@ -15,51 +15,51 @@ ms.locfileid: "74345894"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Visual Basic'te Uygulama Günlükleriyle Çalışma
 
-The `My.Application.Log` and `My.Log` objects make it easy to write logging and tracing information to logs.
+`My.Application.Log` ve `My.Log` nesneleri, günlüğe kaydetme ve izleme bilgilerini günlüklere yazmayı kolaylaştırır.
 
-## <a name="how-messages-are-logged"></a>How Messages are Logged
+## <a name="how-messages-are-logged"></a>Iletiler günlüğe nasıl kaydedilir?
 
-First, the severity of the message is checked with the <xref:System.Diagnostics.TraceSource.Switch%2A> property of the log's <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> property. By default, only messages of severity "Information" and higher are passed on to the trace listeners, specified in the log's `TraceListener` collection. Then, each listener compares the severity of the message to the listener's <xref:System.Diagnostics.TraceSource.Switch%2A> property. If the message's severity is high enough, the listener writes out the message.
+İlk olarak, iletinin önem derecesi günlüğün <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> özelliğinin <xref:System.Diagnostics.TraceSource.Switch%2A> özelliği ile denetlenir. Varsayılan olarak, günlük `TraceListener` koleksiyonunda belirtilen izleme dinleyicilerine yalnızca önem derecesi "bilgi" ve üzeri iletiler geçirilir. Ardından, her dinleyici iletinin önem derecesini dinleyicinin <xref:System.Diagnostics.TraceSource.Switch%2A> özelliği ile karşılaştırır. İletinin önem derecesi yeterince yüksekse, dinleyici iletiyi yazar.
 
-The following diagram shows how a message written to the `WriteEntry` method gets passed to the `WriteLine` methods of the log's trace listeners:
+Aşağıdaki diyagramda `WriteEntry` yöntemine yazılan bir iletinin, günlüğün izleme dinleyicilerinin `WriteLine` yöntemlerine nasıl geçirildiği gösterilmektedir:
 
-![Diagram that shows My log call.](./media/working-with-application-logs/my-log-call-messages.png)
+![Günlük çağrımı gösteren diyagram.](./media/working-with-application-logs/my-log-call-messages.png)
 
-You can change the behavior of the log and the trace listeners by changing the application's configuration file. The following diagram shows the correspondence between the parts of the log and the configuration file.
+Uygulamanın yapılandırma dosyasını değiştirerek günlük ve izleme dinleyicilerinin davranışını değiştirebilirsiniz. Aşağıdaki diyagramda, günlüğün bölümleri ile yapılandırma dosyası arasındaki yazışma gösterilmektedir.
 
-![Diagram that shows My log configuration.](./media/working-with-application-logs/my-log-configuration.png)
+![Günlük yapılandırmanızın gösterildiği diyagram.](./media/working-with-application-logs/my-log-configuration.png)
 
-## <a name="where-messages-are-logged"></a>Where Messages are Logged
+## <a name="where-messages-are-logged"></a>Iletiler günlüğe kaydedilir
 
-If the assembly has no configuration file, the `My.Application.Log` and `My.Log` objects write to the application's debug output (through the <xref:System.Diagnostics.DefaultTraceListener> class). In addition, the `My.Application.Log` object writes to the assembly's log file (through the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> class), while the `My.Log` object writes to the ASP.NET Web page's output (through the <xref:System.Web.WebPageTraceListener> class).
+Derlemenin yapılandırma dosyası yoksa, `My.Application.Log` ve `My.Log` nesneleri uygulamanın hata ayıklama çıktısına (<xref:System.Diagnostics.DefaultTraceListener> sınıfı aracılığıyla) yazar. Ayrıca, `My.Application.Log` nesnesi derlemenin günlük dosyasına (<xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> sınıfı aracılığıyla) yazılır, ancak `My.Log` nesnesi ASP.NET Web sayfasının çıktısına (<xref:System.Web.WebPageTraceListener> sınıfı aracılığıyla) yazar.
 
-The debug output can be viewed in the Visual Studio **Output** window when running your application in debug mode. To open the **Output** window, click the **Debug** menu item, point to **Windows**, and then click **Output**. In the **Output** window, select **Debug** from the **Show output from** box.
+Hata ayıklama çıktısı, uygulamanızı hata ayıklama modunda çalıştırırken Visual Studio **çıktı** penceresinde görüntülenebilir. **Çıkış** penceresini açmak Için, **Hata Ayıkla** menü öğesine tıklayın, **Windows**' ın üzerine gelin ve ardından **Çıkış**' a tıklayın. **Çıkış** penceresinde, **çıktıyı göster** kutusundan **Hata Ayıkla** ' yı seçin.
 
-By default, `My.Application.Log` writes the log file in the path for the user's application data. You can get the path from the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> property of the <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> object. The format of that path is as follows:
+Varsayılan olarak, `My.Application.Log` günlük dosyasını kullanıcının uygulama verileri yoluna yazar. <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> nesnesinin <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> özelliğinden yolunu alabilirsiniz. Yolun biçimi aşağıdaki gibidir:
 
 `BasePath`\\`CompanyName`\\`ProductName`\\`ProductVersion`
 
-A typical value for `BasePath` is as follows.
+`BasePath` için tipik bir değer aşağıdaki gibidir.
 
 C:\Documents and Settings\\`username`\Application Data
 
-The values of `CompanyName`, `ProductName`, and `ProductVersion` come from the application's assembly information. The form of the log file name is *AssemblyName*.log, where *AssemblyName* is the file name of the assembly without the extension. If more than one log file is needed, such as when the original log is unavailable when the application attempts to write to the log, the form for the log file name is *AssemblyName*-*iteration*.log, where `iteration` is a positive `Integer`.
+`CompanyName`, `ProductName`ve `ProductVersion` değerleri uygulamanın derleme bilgileriyle gelir. Günlük dosyası adının biçimi *AssemblyName*. log biçimindedir, burada *AssemblyName* uzantısı olmayan derlemenin dosya adıdır. Birden çok günlük dosyası gerekiyorsa (örneğin, uygulama günlüğe yazmaya çalıştığında özgün günlüğün kullanılamadığı durumlarda), günlük dosyası adı için olan form, `iteration` pozitif bir `Integer`olduğu *yineleme*. *log-.*
 
-You can override the default behavior by adding or changing the computer's and the application's configuration files. For more information, see [Walkthrough: Changing Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).
+Bilgisayar ve uygulamanın yapılandırma dosyalarını ekleyerek veya değiştirerek varsayılan davranışı geçersiz kılabilirsiniz. Daha fazla bilgi için bkz [. Izlenecek yol: My. Application. log bilgisinin nereden yazabileceğini değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).
 
-## <a name="configuring-log-settings"></a>Configuring Log Settings
+## <a name="configuring-log-settings"></a>Günlük ayarlarını yapılandırma
 
-The `Log` object has a default implementation that works without an application configuration file, app.config. To change the defaults, you must add a configuration file with the new settings. For more information, see [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
+`Log` nesnesi, uygulama yapılandırma dosyası, App. config olmadan çalışacak varsayılan bir uygulamaya sahiptir. Varsayılanları değiştirmek için yeni ayarlara sahip bir yapılandırma dosyası eklemeniz gerekir. Daha fazla bilgi için bkz. [Izlenecek yol: My. Application. log çıktısını filtreleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
 
-The log configuration sections are located in the `<system.diagnostics>` node in the main `<configuration>` node of the app.config file. Log information is defined in several nodes:
+Günlük yapılandırması bölümleri, App. config dosyasının ana `<configuration>` düğümündeki `<system.diagnostics>` düğümünde bulunur. Günlük bilgileri çeşitli düğümlerde tanımlanmıştır:
 
-- The listeners for the `Log` object are defined in the `<sources>` node named DefaultSource.
+- `Log` nesnenin dinleyicileri, DefaultSource adlı `<sources>` düğümünde tanımlanmıştır.
 
-- The severity filter for the `Log` object is defined in the `<switches>` node named DefaultSwitch.
+- `Log` nesnesi için önem derecesi, DefaultSwitch adlı `<switches>` düğümünde tanımlanmıştır.
 
-- The log listeners are defined in the `<sharedListeners>` node.
+- Günlük dinleyicileri `<sharedListeners>` düğümünde tanımlanmıştır.
 
- Examples of `<sources>`, `<switches>`, and `<sharedListeners>` nodes are shown in the following code:
+ `<sources>`, `<switches>`ve `<sharedListeners>` düğümlerinin örnekleri aşağıdaki kodda gösterilmiştir:
 
 ```xml
 <configuration>
@@ -86,25 +86,25 @@ The log configuration sections are located in the `<system.diagnostics>` node in
 </configuration>
 ```
 
-## <a name="changing-log-settings-after-deployment"></a>Changing Log Settings after Deployment
+## <a name="changing-log-settings-after-deployment"></a>Dağıtımdan sonra günlük ayarlarını değiştirme
 
-When you develop an application, its configuration settings are stored in the app.config file, as shown in the examples above. After you deploy your application, you can still configure the log by editing the configuration file. In a Windows-based application, this file's name is *applicationName*.exe.config, and it must reside in the same folder as the executable file. For a Web application, this is the Web.config file associated with the project.
+Bir uygulama geliştirirken, yapılandırma ayarları Yukarıdaki örneklerde gösterildiği gibi App. config dosyasında depolanır. Uygulamanızı dağıttıktan sonra yapılandırma dosyasını düzenleyerek günlüğü yapılandırmaya devam edebilirsiniz. Windows tabanlı bir uygulamada, bu dosyanın adı *ApplicationName*. exe. config olur ve yürütülebilir dosyayla aynı klasörde bulunmalıdır. Bir Web uygulaması için, bu, projeyle ilişkili Web. config dosyasıdır.
 
-When your application executes the code that creates an instance of a class for the first time, it checks the configuration file for information about the object. For the `Log` object, this happens the first time the `Log` object is accessed. The system examines the configuration file only once for any particular object—the first time your application creates the object. Therefore, you may need to restart the application for the changes to take effect.
+Uygulamanız bir sınıfın bir örneğini ilk kez oluşturan kodu yürüttüğünde, nesne hakkında bilgi için yapılandırma dosyasını kontrol eder. `Log` nesnesi için, bu, `Log` nesnesine ilk kez erişildiğinde gerçekleşir. Sistem, yapılandırma dosyasını belirli bir nesne için yalnızca bir kez inceler — uygulamanız nesneyi ilk kez oluşturduğunda. Bu nedenle, değişikliklerin etkili olması için uygulamayı yeniden başlatmanız gerekebilir.
 
-In a deployed application, you enable trace code by reconfiguring switch objects before your application starts. Typically, this involves turning the switch objects on and off or by changing the tracing levels, and then restarting your application.
+Dağıtılan bir uygulamada, uygulama başlamadan önce geçiş nesnelerini yeniden yapılandırarak izleme kodunu etkinleştirin. Genellikle bu, anahtar nesnelerinin açık ve kapalı olduğunu ya da izleme düzeylerini değiştirerek ve sonra uygulamanızı yeniden başlatarak içerir.
 
-## <a name="security-considerations"></a>Güvenlik Değerlendirmeleri
+## <a name="security-considerations"></a>Güvenlik Konuları
 
-Consider the following when writing data to the log:
+Günlüğe veri yazarken aşağıdakileri göz önünde bulundurun:
 
-- **Avoid leaking user information.** Ensure that your application writes only approved information to the log. For example, it may be acceptable for the application log to contain user names, but not user passwords.
+- **Kullanıcı bilgilerinin sızmasını önleyin.** Uygulamanızın günlüğe yalnızca onaylanan bilgileri yazdığından emin olun. Örneğin, uygulama günlüğü Kullanıcı adlarını içermesi, ancak kullanıcı parolalarını içermemesi için kabul edilebilir olabilir.
 
-- **Make log locations secure.** Any log that contains potentially sensitive information should be stored in a secure location.
+- **Günlük konumlarını güvenli hale getirin.** Potansiyel olarak hassas bilgiler içeren herhangi bir günlüğün güvenli bir konumda depolanması gerekir.
 
-- **Avoid misleading information.** In general, your application should validate all data entered by a user before using that data. This includes writing data to the application log.
+- **Yanıltıcı bilgilerden kaçının.** Genel olarak, uygulamanız bu verileri kullanmadan önce bir kullanıcı tarafından girilen tüm verileri doğrulamalıdır. Bu, uygulama günlüğüne veri yazılmasını içerir.
 
-- **Avoid denial of service.** If your application writes too much information to the log, it could fill the log or make finding important information difficult.
+- **Hizmet reddine engel olmaz.** Uygulamanız günlüğe çok fazla bilgi yazdığında, günlüğü doldurabilir veya önemli bilgileri bulmayı zorlaştırır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

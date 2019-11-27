@@ -12,7 +12,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353566"
 ---
 # <a name="statements-visual-basic"></a>Deyimler (Visual Basic)
-The topics in this section contain tables of the Visual Basic declaration and executable statements, and of important lists that apply to many statements.  
+Bu bölümdeki konular Visual Basic bildirimi ve çalıştırılabilir deyimlerinin tabloları ve birçok deyim için uygulanan önemli listeler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [A-E Deyimleri](../../../visual-basic/language-reference/statements/a-e-statements.md)  

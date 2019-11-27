@@ -1,5 +1,5 @@
 ---
-title: 'How to: Sort An Array'
+title: 'Nasıl yapılır: bir diziyi sıralama'
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -14,13 +14,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351848"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>How to: sort an array in Visual Basic
+# <a name="how-to-sort-an-array-in-visual-basic"></a>Nasıl yapılır: Visual Basic bir diziyi sıralama
 
-This article shows an example of how to sort an array of strings in Visual Basic.
+Bu makalede, Visual Basic bir dize dizisinin nasıl sıralanacağını gösteren bir örnek gösterilmektedir.
 
 ## <a name="example"></a>Örnek
 
-This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:
+Bu örnek, `zooAnimals`adlı `String` nesnelerinin bir dizisini bildirir, onu doldurur ve alfabetik olarak sıralar:
   
 ```vb
 Private Sub SortAnimals()
@@ -32,13 +32,13 @@ Private Sub SortAnimals()
 End Sub
 ```
 
-## <a name="robust-programming"></a>Robust programming
+## <a name="robust-programming"></a>Güçlü programlama
 
 Aşağıdaki koşullar özel bir duruma neden olabilir:
 
-- Array is empty (<xref:System.ArgumentNullException> class).
-- Array is multidimensional (<xref:System.RankException> class).
-- One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).
+- Dizi boş (<xref:System.ArgumentNullException> sınıf).
+- Dizi çok boyutlu (<xref:System.RankException> sınıf).
+- Dizinin bir veya daha fazla öğesi <xref:System.IComparable> arabirimini (<xref:System.InvalidOperationException> sınıfı) uygulamıyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Call an Event Handler'
+title: 'Nasıl yapılır: olay Işleyicisi çağırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -17,41 +17,41 @@ ms.locfileid: "74340423"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Nasıl yapılır: Olay İşleyicisi Çağırma (Visual Basic)
 
-An *event* is an action or occurrence — such as a mouse click or a credit limit exceeded — that is recognized by some program component, and for which you can write code to respond. An *event handler* is the code you write to respond to an event.
+Bir *olay* , bir program bileşeni tarafından tanınan ve yanıt vermek için kod yazabileceğiniz bir fare tıklaması veya kredi limiti gibi bir eylem veya oluşumdır. *Olay işleyicisi* , bir olaya yanıt vermek için yazdığınız koddur.
 
- An event handler in Visual Basic is a `Sub` procedure. However, you do not normally call it the same way as other `Sub` procedures. Instead, you identify the procedure as a handler for the event. You can do this either with a [Handles](../../../language-reference/statements/handles-clause.md) clause and a [WithEvents](../../../language-reference/modifiers/withevents.md) variable, or with an [AddHandler Statement](../../../language-reference/statements/addhandler-statement.md). Using a `Handles` clause is the default way to declare an event handler in Visual Basic. This is the way the event handlers are written by the designers when you program in the integrated development environment (IDE). The `AddHandler` statement is suitable for raising events dynamically at run time.
+ Visual Basic bir olay işleyicisi `Sub` yordamdır. Ancak, normalde bunu diğer `Sub` yordamlarıyla aynı şekilde çağırmayın. Bunun yerine, yordamı olay için bir işleyici olarak belirlersiniz. Bunu bir [Handles](../../../language-reference/statements/handles-clause.md) yan tümcesi ve [WithEvents](../../../language-reference/modifiers/withevents.md) değişkeniyle ya da bir [AddHandler ifadesiyle](../../../language-reference/statements/addhandler-statement.md)yapabilirsiniz. `Handles` yan tümcesinin kullanılması, Visual Basic bir olay işleyicisini belirtmenin varsayılan yoludur. Bu, tümleşik geliştirme ortamında (IDE) programlama yaparken, tasarımcı tarafından yazılan olay işleyicilerinin yoludur. `AddHandler` deyimleri, olayları çalışma zamanında dinamik olarak yükseltmek için uygundur.
 
- When the event occurs, Visual Basic automatically calls the event handler procedure. Any code that has access to the event can cause it to occur by executing a [RaiseEvent Statement](../../../language-reference/statements/raiseevent-statement.md).
+ Olay gerçekleştiğinde, Visual Basic olay işleyicisi yordamını otomatik olarak çağırır. Olaya erişimi olan herhangi bir kod, bir [RaiseEvent ifadesiyle](../../../language-reference/statements/raiseevent-statement.md)yürütülerek oluşmasına neden olabilir.
 
- You can associate more than one event handler with the same event. In some cases you can dissociate a handler from an event. For more information, see [Events](../events/index.md).
+ Birden fazla olay işleyicisini aynı olayla ilişkilendirebilirsiniz. Bazı durumlarda, bir etkinliğin bir olaydan ilişkisini kaldırabilirsiniz. Daha fazla bilgi için bkz. [Olaylar](../events/index.md).
 
-### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>To call an event handler using Handles and WithEvents
+### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>Handles ve WithEvents kullanarak bir olay işleyicisini çağırmak için
 
-1. Make sure the event is declared with an [Event Statement](../../../language-reference/statements/event-statement.md).
+1. Olayın bir [Event ifadesiyle](../../../language-reference/statements/event-statement.md)bildiriminin bulunduğundan emin olun.
 
-2. Declare an object variable at module or class level, using the [WithEvents](../../../language-reference/modifiers/withevents.md) keyword. The `As` clause for this variable must specify the class that raises the event.
+2. [WithEvents](../../../language-reference/modifiers/withevents.md) anahtar sözcüğünü kullanarak modül veya sınıf düzeyinde bir nesne değişkeni bildirin. Bu değişkenin `As` yan tümcesi, olayı oluşturan sınıfı belirtmelidir.
 
-3. In the declaration of the event-handling `Sub` procedure, add a [Handles](../../../language-reference/statements/handles-clause.md) clause that specifies the `WithEvents` variable and the event name.
+3. Olay işleme `Sub` yordamının bildiriminde, `WithEvents` değişkenini ve olay adını belirten bir [Handles](../../../language-reference/statements/handles-clause.md) yan tümcesi ekleyin.
 
-4. When the event occurs, Visual Basic automatically calls the `Sub` procedure. Your code can use a `RaiseEvent` statement to make the event occur.
+4. Olay gerçekleştiğinde, Visual Basic `Sub` yordamını otomatik olarak çağırır. Kodunuz, olayın gerçekleşmesini sağlamak için `RaiseEvent` bir ifade kullanabilir.
 
-     The following example defines an event and a `WithEvents` variable that refers to the class that raises the event. The event-handling `Sub` procedure uses a `Handles` clause to specify the class and event it handles.
+     Aşağıdaki örnek, olayını oluşturan sınıfa başvuran bir olayı ve bir `WithEvents` değişkenini tanımlar. Olay işleme `Sub` yordamı, işleyeceği sınıfı ve olayı belirtmek için bir `Handles` yan tümcesi kullanır.
 
      [!code-vb[VbVbcnProcedures#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#4)]
 
-### <a name="to-call-an-event-handler-using-addhandler"></a>To call an event handler using AddHandler
+### <a name="to-call-an-event-handler-using-addhandler"></a>AddHandler kullanarak bir olay işleyicisini çağırmak için
 
-1. Make sure the event is declared with an `Event` statement.
+1. Olayın bir `Event` ifadesiyle bildirildiği emin olun.
 
-2. Execute an [AddHandler Statement](../../../language-reference/statements/addhandler-statement.md) to dynamically connect the event-handling `Sub` procedure with the event.
+2. Olay işleme `Sub` yordamını olaya dinamik olarak bağlamak için bir [AddHandler ifadesini](../../../language-reference/statements/addhandler-statement.md) yürütün.
 
-3. When the event occurs, Visual Basic automatically calls the `Sub` procedure. Your code can use a `RaiseEvent` statement to make the event occur.
+3. Olay gerçekleştiğinde, Visual Basic `Sub` yordamını otomatik olarak çağırır. Kodunuz, olayın gerçekleşmesini sağlamak için `RaiseEvent` bir ifade kullanabilir.
 
-     The following example defines a `Sub` procedure to handle the <xref:System.Windows.Forms.Form.Closing> event of a form. It then uses the [AddHandler Statement](../../../language-reference/statements/addhandler-statement.md) to associate the `catchClose` procedure as an event handler for <xref:System.Windows.Forms.Form.Closing>.
+     Aşağıdaki örnek, bir formun <xref:System.Windows.Forms.Form.Closing> olayını işlemek için bir `Sub` yordamı tanımlar. Daha sonra, `catchClose` yordamını <xref:System.Windows.Forms.Form.Closing>bir olay işleyicisi olarak ilişkilendirmek için [AddHandler ifadesini](../../../language-reference/statements/addhandler-statement.md) kullanır.
 
      [!code-vb[VbVbcnProcedures#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#5)]
 
-     You can dissociate an event handler from an event by executing the [RemoveHandler Statement](../../../language-reference/statements/removehandler-statement.md).
+     [RemoveHandler ifadesini](../../../language-reference/statements/removehandler-statement.md)yürüterek bir olay işleyicisinin bir olaydan ilişkisini kaldırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -28,7 +28,7 @@ Bu konuda <xref:System.Windows.Controls.ToolTip> denetimine yönelik stiller ve 
 |VisualState adı|VisualStateGroup adı|Açıklama|  
 |-|-|-|  
 |Kapatıldı|OpenStates|Varsayılan durum.|  
-|Open|OpenStates|<xref:System.Windows.Controls.ToolTip> görünür.|  
+|Açık|OpenStates|<xref:System.Windows.Controls.ToolTip> görünür.|  
 |Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
 |Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
 |Invalidunodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  

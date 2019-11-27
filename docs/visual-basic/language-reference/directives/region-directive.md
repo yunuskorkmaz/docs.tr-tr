@@ -19,7 +19,7 @@ ms.locfileid: "74343790"
 ---
 # <a name="region-directive"></a>#Region Yönergesi
 
-Collapses and hides sections of code in Visual Basic files.  
+Visual Basic dosyalardaki kod bölümlerini daraltır ve gizler.  
   
 ## <a name="syntax"></a>Sözdizimi  
 
@@ -32,16 +32,16 @@ Collapses and hides sections of code in Visual Basic files.
   
 |Terim|Tanım|  
 |---|---|  
-|`identifier_string`|Gerekli. String that acts as the title of a region when it is collapsed. Regions are collapsed by default.|  
-|`#End Region`|Terminates the `#Region` block.|  
+|`identifier_string`|Gerekli. Daraltılan bir bölgenin başlığı olarak davranan dize. Bölgeler varsayılan olarak daraltılır.|  
+|`#End Region`|`#Region` bloğunu sonlandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
 
- Use the `#Region` directive to specify a block of code to expand or collapse when using the outlining feature of the Visual Studio Code Editor. You can place, or *nest*, regions within other regions to group similar regions together.  
+ Visual Studio Code düzenleyicisinin ana hat özelliğini kullanırken genişletilecek veya daraltılacak bir kod bloğu belirtmek için `#Region` yönergesini kullanın. Benzer bölgeleri gruplamak için diğer bölgelere bölge yerleştirebilir veya *iç içe*geçirebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
 
- This example uses the `#Region` directive.  
+ Bu örnek `#Region` yönergesini kullanır.  
   
  [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
   

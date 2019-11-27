@@ -14,17 +14,17 @@ ms.locfileid: "74347012"
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>Fareye Erişme (Visual Basic)
 
-The `My.Computer.Mouse` object provides a way to find information about the computer's mouse, such as if a mouse exists, the number of mouse buttons, and details about the mouse wheel.  
+`My.Computer.Mouse` nesnesi, fare gibi bilgisayarın faresi, fare düğmelerinin sayısı ve fare tekerleği hakkındaki ayrıntılar gibi bilgileri bulmak için bir yol sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
 
- This table lists tasks associated with the `My.Computer.Mouse` object and points to topics demonstrating how to accomplish each.  
+ Bu tablo `My.Computer.Mouse` nesnesiyle ilişkili görevleri listeler ve bunların her birinin nasıl yapılacağını gösteren konulara işaret eder.  
   
 |Bitiş|Bkz.|  
 |--------|---------|  
-|Determine whether the mouse has a scroll wheel.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists>|  
-|Determine whether the left and right mouse buttons have been swapped|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped>|  
-|Set how much to scroll when the mouse wheel is rotated one notch.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines>|  
+|Farenin bir kaydırma tekerleği olup olmadığını belirleme.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists>|  
+|Sol ve sağ fare düğmelerinin değiştirilip yüklenmediğini belirleme|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped>|  
+|Fare tekerleği bir dişli döndürüldüğünde ne kadar kaydırılacağını ayarlayın.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

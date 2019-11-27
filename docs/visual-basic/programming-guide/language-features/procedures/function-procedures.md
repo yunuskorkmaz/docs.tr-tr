@@ -17,16 +17,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341082"
 ---
 # <a name="function-procedures-visual-basic"></a>İşlev Yordamları (Visual Basic)
-A `Function` procedure is a series of Visual Basic statements enclosed by the `Function` and `End Function` statements. The `Function` procedure performs a task and then returns control to the calling code. When it returns control, it also returns a value to the calling code.  
+`Function` yordam, `Function` ve `End Function` deyimlerinin içine alınmış Visual Basic deyimlerinin bir dizisidir. `Function` yordam bir görevi gerçekleştirir ve ardından çağıran koda denetim döndürür. Denetimi döndürdüğünde, çağıran koda de bir değer döndürür.  
   
- Each time the procedure is called, its statements run, starting with the first executable statement after the `Function` statement and ending with the first `End Function`, `Exit Function`, or `Return` statement encountered.  
+ Yordamın her çağrılışında, deyimleri `Function` deyiminden sonra ilk yürütülebilir deyimden başlayarak ve ilk `End Function`, `Exit Function`veya `Return` ifadesiyle sona ermek üzere çalışır.  
   
- You can define a `Function` procedure in a module, class, or structure. It is `Public` by default, which means you can call it from anywhere in your application that has access to the module, class, or structure in which you defined it.  
+ Bir modül, sınıf veya yapıda `Function` yordamı tanımlayabilirsiniz. Varsayılan olarak `Public`, bu, uygulamanızı tanımladığınız modüle, sınıfa veya yapıya erişimi olan uygulamanızdaki herhangi bir yerden çağırabilmeniz anlamına gelir.  
   
- A `Function` procedure can take arguments, such as constants, variables, or expressions, which are passed to it by the calling code.  
+ `Function` yordam, çağıran kod tarafından buna geçirilen sabitler, değişkenler veya ifadeler gibi bağımsız değişkenler alabilir.  
   
-## <a name="declaration-syntax"></a>Bildirim Sözdizimi  
- The syntax for declaring a `Function` procedure is as follows:  
+## <a name="declaration-syntax"></a>Bildirim Söz Dizimi  
+ `Function` yordamı bildirmek için sözdizimi aşağıdaki gibidir:  
   
 ```vb  
 [Modifiers] Function FunctionName [(ParameterList)] As ReturnType  
@@ -34,12 +34,12 @@ A `Function` procedure is a series of Visual Basic statements enclosed by the `F
 End Function  
 ```  
   
- The *modifiers* can specify access level and information regarding overloading, overriding, sharing, and shadowing. For more information, see [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
+ *Değiştiriciler* , aşırı yükleme, geçersiz kılma, paylaşma ve gölgeleme ile ilgili erişim düzeyini ve bilgileri belirtebilir. Daha fazla bilgi için bkz. [Işlev açıklaması](../../../../visual-basic/language-reference/statements/function-statement.md).  
   
- You declare each parameter the same way you do for [Sub Procedures](./sub-procedures.md).  
+ Her parametreyi [alt yordamlar](./sub-procedures.md)için yaptığınız gibi bildirirsiniz.  
   
 ### <a name="data-type"></a>Veri Türü  
- Every `Function` procedure has a data type, just as every variable does. This data type is specified by the `As` clause in the `Function` statement, and it determines the data type of the value the function returns to the calling code. The following sample declarations illustrate this.  
+ Her `Function` yordamı her değişken için olduğu gibi bir veri türüne sahiptir. Bu veri türü, `Function` deyimindeki `As` yan tümcesi tarafından belirtilir ve işlevin çağıran koda döndürdüğü değerin veri türünü belirler. Aşağıdaki örnek bildirimlerde bu gösterilmektedir.  
   
 ```vb  
 Function yesterday() As Date  
@@ -49,12 +49,12 @@ Function findSqrt(ByVal radicand As Single) As Single
 End Function  
 ```  
   
- For more information, see "Parts" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
+ Daha fazla bilgi için bkz. [Işlev deyimindeki](../../../../visual-basic/language-reference/statements/function-statement.md)"parçalar".  
   
-## <a name="returning-values"></a>Returning Values  
- The value a `Function` procedure sends back to the calling code is called its return value. The procedure returns this value in one of two ways:  
+## <a name="returning-values"></a>Değer döndürme  
+ Çağıran koda geri gönderilen `Function` yordamının değeri, dönüş değeri olarak adlandırılır. Yordam bu değeri iki şekilde döndürür:  
   
-- It uses the `Return` statement to specify the return value, and returns control immediately to the calling program. Aşağıdaki örnek bunu göstermektedir.  
+- Dönüş değerini belirtmek için `Return` ifadesini kullanır ve denetimi çağıran programa hemen döndürür. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -64,7 +64,7 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
-- It assigns a value to its own function name in one or more statements of the procedure. Control does not return to the calling program until an `Exit Function` or `End Function` statement is executed. Aşağıdaki örnek bunu göstermektedir.  
+- Yordamın bir veya daha fazla deyiminde kendi işlev adına bir değer atar. Denetim, bir `Exit Function` veya `End Function` deyimleri yürütülene kadar çağıran programa geri dönmez. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -74,27 +74,27 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
- The advantage of assigning the return value to the function name is that control does not return from the procedure until it encounters an `Exit Function` or `End Function` statement. This allows you to assign a preliminary value and adjust it later if necessary.  
+ İşlev adına dönüş değerinin atanmasından faydalanması, denetimin `Exit Function` veya `End Function` ifadesiyle karşılaşana kadar yordamdan dönmediği avantajdır. Bu, bir ön değer atamanıza ve gerekirse daha sonra ayarlamanıza olanak sağlar.  
   
- For more information about returning values, see [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md). For information about returning arrays, see [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Değer döndürme hakkında daha fazla bilgi için bkz. [Function deyimleri](../../../../visual-basic/language-reference/statements/function-statement.md). Dizileri döndürme hakkında daha fazla bilgi için bkz. [diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-## <a name="calling-syntax"></a>Calling Syntax  
- You invoke a `Function` procedure by including its name and arguments either on the right side of an assignment statement or in an expression. You must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses.  
+## <a name="calling-syntax"></a>Çağırma sözdizimi  
+ Bir `Function` yordamını, adını ve bağımsız değişkenlerini atama deyiminin sağ tarafına ya da bir ifadeye ekleyerek çağırılır. İsteğe bağlı olmayan tüm bağımsız değişkenlerin değerlerini sağlamanız gerekir ve bağımsız değişken listesini parantez içine almalısınız. Herhangi bir bağımsız değişken sağlanmazsa, isteğe bağlı olarak ayraçları atlayabilirsiniz.  
   
- The syntax for a call to a `Function` procedure is as follows:  
+ `Function` yordam çağrısı için sözdizimi aşağıdaki gibidir:  
   
- *lvalue*  `=`  *functionname* `[(` *argumentlist* `)]`  
+ *lvalue*`=`*fonksiyonadı* `[(` *bağımsız değişkenler listesi* `)]`  
   
- `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=`  *expression* `) Then`  
+ `If ((` *fonksiyonadı* `[(` *bağımsız değişkenler listesi* `)] / 3) <=`*ifadesi* `) Then`  
   
- When you call a `Function` procedure, you do not have to use its return value. If you do not, all the actions of the function are performed, but the return value is ignored. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> is often called in this manner.  
+ Bir `Function` yordamını çağırdığınızda, dönüş değerini kullanmak zorunda değilsiniz. Bunu yapmazsanız, işlevin tüm eylemleri gerçekleştirilir, ancak dönüş değeri yok sayılır. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> genellikle bu şekilde çağrılır.  
   
-### <a name="illustration-of-declaration-and-call"></a>Illustration of Declaration and Call  
- The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides.  
+### <a name="illustration-of-declaration-and-call"></a>Bildirim ve çağrı gösterimi  
+ Aşağıdaki `Function` yordam, iki tarafa ait değerler verildiğinde, doğru bir üçgenin en uzun tarafını veya hipotenüsü değerini hesaplar.  
   
  [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
- The following example shows a typical call to `hypotenuse`.  
+ Aşağıdaki örnek `hypotenuse`tipik bir çağrısını gösterir.  
   
  [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   

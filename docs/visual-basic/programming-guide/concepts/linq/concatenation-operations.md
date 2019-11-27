@@ -9,23 +9,23 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345665"
 ---
-# <a name="concatenation-operations-visual-basic"></a>Concatenation Operations (Visual Basic)
-Concatenation refers to the operation of appending one sequence to another.  
+# <a name="concatenation-operations-visual-basic"></a>Birleştirme Işlemleri (Visual Basic)
+Birleştirme, bir sırayı diğerine ekleme işlemini ifade eder.  
   
- The following illustration depicts a concatenation operation on two sequences of characters.  
+ Aşağıdaki çizimde iki karakter dizisi üzerinde birleştirme işlemi gösterilmektedir.  
   
- ![Graphic showing concatenation of two sequences.](./media/concatenation-operations/concatenation-two-sequences.png)  
+ ![İki sıranın bitiştirilmesi gösteren grafik.](./media/concatenation-operations/concatenation-two-sequences.png)  
   
- The standard query operator methods that perform concatenation are listed in the following section.  
+ Birleştirme işlemini gerçekleştiren standart sorgu işleci yöntemleri aşağıdaki bölümde listelenmiştir.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Method Name|Açıklama|Visual Basic Query Expression Syntax|Daha fazla bilgi|  
+|Yöntem adı|Açıklama|Sorgu Ifadesi söz dizimini Visual Basic|Daha Fazla Bilgi|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Concat|Concatenates two sequences to form one sequence.|Yok.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
+|Concat|Tek bir sıra oluşturmak için iki diziyi birleştirir.|Geçerli değildir.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Nasıl yapılır: dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)

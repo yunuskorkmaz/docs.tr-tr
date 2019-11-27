@@ -1,5 +1,5 @@
 ---
-title: Ad Alanları
+title: '{1&gt;Ad Alanları&lt;1}'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.global
@@ -24,49 +24,49 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347323"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic'de Ad Alanları
-Namespaces organize the objects defined in an assembly. Assemblies can contain multiple namespaces, which can in turn contain other namespaces. Namespaces prevent ambiguity and simplify references when using large groups of objects such as class libraries.  
+Ad alanları bir derlemede tanımlanan nesneleri düzenler. Derlemeler birden çok ad alanı içerebilir ve bu da diğer ad alanlarını içerebilir. Ad alanları, sınıf kitaplıkları gibi büyük nesne gruplarını kullanırken belirsizlik ve başvuruları basitleştirir.  
   
- For example, the .NET Framework defines the <xref:System.Windows.Forms.ListBox> class in the <xref:System.Windows.Forms?displayProperty=nameWithType> namespace. The following code fragment shows how to declare a variable using the fully qualified name for this class:  
+ Örneğin .NET Framework, <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanındaki <xref:System.Windows.Forms.ListBox> sınıfını tanımlar. Aşağıdaki kod parçası, bu sınıf için tam nitelikli adı kullanarak bir değişkenin nasıl bildirilemeyeceğini göstermektedir:  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
-## <a name="avoiding-name-collisions"></a>Avoiding Name Collisions  
- .NET Framework namespaces address a problem sometimes called *namespace pollution*, in which the developer of a class library is hampered by the use of similar names in another library. These conflicts with existing components are sometimes called *name collisions*.  
+## <a name="avoiding-name-collisions"></a>Ad çakışmalarını önleme  
+ .NET Framework ad alanları, bazen bir sınıf kitaplığı geliştiricisinin başka bir kitaplıktaki benzer adların kullanımıyla birlikte olduğu *ad alanı kirliliğine*de denilen bir sorunu ele alırlar. Var olan bileşenlerle ilgili bu çakışmalar bazen *ad çarpışmaları*olarak adlandırılır.  
   
- For example, if you create a new class named `ListBox`, you can use it inside your project without qualification. However, if you want to use the .NET Framework <xref:System.Windows.Forms.ListBox> class in the same project, you must use a fully qualified reference to make the reference unique. If the reference is not unique, Visual Basic produces an error stating that the name is ambiguous. The following code example demonstrates how to declare these objects:  
+ Örneğin, `ListBox`adlı yeni bir sınıf oluşturursanız, bunu proje içinde nitelik olmadan kullanabilirsiniz. Ancak, .NET Framework <xref:System.Windows.Forms.ListBox> sınıfını aynı projede kullanmak istiyorsanız, başvuruyu benzersiz hale getirmek için tam olarak nitelenmiş bir başvuru kullanmanız gerekir. Başvuru benzersiz değilse, Visual Basic adın belirsiz olduğunu belirten bir hata üretir. Aşağıdaki kod örneği, bu nesnelerin nasıl bildirileceğini göstermektedir:  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
- The following illustration shows two namespace hierarchies, both containing an object named `ListBox`:  
+ Aşağıdaki çizimde, her ikisi de `ListBox`adlı bir nesne içeren iki ad alanı hiyerarşisi gösterilmektedir:  
   
- ![Screenshot that shows two namespace hierarchies.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
+ ![İki ad alanı hiyerarşisi gösteren ekran görüntüsü.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
   
- By default, every executable file you create with Visual Basic contains a namespace with the same name as your project. For example, if you define an object within a project named `ListBoxProject`, the executable file ListBoxProject.exe contains a namespace called `ListBoxProject`.  
+ Varsayılan olarak, Visual Basic ile oluşturduğunuz her çalıştırılabilir dosya, projenizle aynı ada sahip bir ad alanı içerir. Örneğin, `ListBoxProject`adlı bir proje içinde bir nesne tanımlarsanız, ListBoxProject. exe yürütülebilir dosyası `ListBoxProject`adlı bir ad alanı içerir.  
   
- Multiple assemblies can use the same namespace. Visual Basic treats them as a single set of names. For example, you can define classes for a namespace called `SomeNameSpace` in an assembly named `Assemb1`, and define additional classes for the same namespace from an assembly named `Assemb2`.  
+ Birden çok derleme aynı ad alanını kullanabilir. Visual Basic, bunları tek bir ad kümesi olarak değerlendirir. Örneğin, `Assemb1`adlı bir derlemede `SomeNameSpace` adlı bir ad alanı için sınıflar tanımlayabilir ve `Assemb2`adlı bir derlemeden aynı ad alanı için ek sınıflar tanımlayabilirsiniz.  
   
-## <a name="fully-qualified-names"></a>Fully Qualified Names  
- Fully qualified names are object references that are prefixed with the name of the namespace in which the object is defined. You can use objects defined in other projects if you create a reference to the class (by choosing **Add Reference** from the **Project** menu) and then use the fully qualified name for the object in your code. The following code fragment shows how to use the fully qualified name for an object from another project's namespace:  
+## <a name="fully-qualified-names"></a>Tam nitelikli adlar  
+ Tam nitelikli adlar, nesnenin tanımlandığı ad alanının adı önekli nesne başvurulardır. Sınıfa bir başvuru oluşturursanız ( **Proje** menüsünden **Başvuru Ekle** ' yi seçerek) diğer projelerde tanımlı nesneleri kullanabilirsiniz ve sonra kodunuzda nesne için tam adı kullanın. Aşağıdaki kod parçası, başka bir projenin ad alanından bir nesne için tam olarak nitelenmiş adın nasıl kullanılacağını gösterir:  
   
  [!code-vb[VbVbalrApplication#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#8)]  
   
- Fully qualified names prevent naming conflicts because they make it possible for the compiler to determine which object is being used. However, the names themselves can get long and cumbersome. To get around this, you can use the `Imports` statement to define an *alias*—an abbreviated name you can use in place of a fully qualified name. For example, the following code example creates aliases for two fully qualified names, and uses these aliases to define two objects.  
+ Tam nitelikli adlar, derleyicinin hangi nesnenin kullanılmakta olduğunu belirlemesini olanaklı kıdığından, adlandırma çakışmalarını önler. Ancak, adları uzun ve çok daha fazla alabilir. Bu sorunu gidermek için `Imports` ifadesini kullanarak bir *diğer*ad tanımlayabilirsiniz — tam adı yerine kullanabileceğiniz kısaltılmış bir addır. Örneğin, aşağıdaki kod örneği iki tam ad için diğer adlar oluşturur ve iki nesneyi tanımlamak için bu diğer adları kullanır.  
   
  [!code-vb[VbVbalrApplication#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#9)]  
   
  [!code-vb[VbVbalrApplication#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#10)]  
   
- If you use the `Imports` statement without an alias, you can use all the names in that namespace without qualification, provided they are unique to the project. If your project contains `Imports` statements for namespaces that contain items with the same name, you must fully qualify that name when you use it. Suppose, for example, your project contained the following two `Imports` statements:  
+ `Imports` ifadesini bir diğer ad olmadan kullanırsanız, bu ad alanındaki tüm adları, proje için benzersiz olmaları kaydıyla, nitelendirme olmadan kullanabilirsiniz. Projeniz aynı ada sahip öğeleri içeren ad alanları için `Imports` deyimleri içeriyorsa, bu adı kullandığınızda bu adı tam olarak nitelemeniz gerekir. Örneğin, projenizin aşağıdaki iki `Imports` deyimi içerdiğini varsayalım:  
   
  [!code-vb[VbVbalrApplication#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#11)]  
   
- If you attempt to use `Class1` without fully qualifying it, Visual Basic produces an error stating that the name `Class1` is ambiguous.  
+ Tam olarak nitelemeden `Class1` kullanmaya çalışırsanız Visual Basic, `Class1` adının belirsiz olduğunu belirten bir hata üretir.  
   
-## <a name="namespace-level-statements"></a>Namespace Level Statements  
- Within a namespace, you can define items such as modules, interfaces, classes, delegates, enumerations, structures, and other namespaces. You cannot define items such as properties, procedures, variables and events at the namespace level. These items must be declared within containers such as modules, structures, or classes.  
+## <a name="namespace-level-statements"></a>Ad alanı düzeyi deyimleri  
+ Bir ad alanı içinde modüller, arabirimler, sınıflar, temsilciler, numaralandırmalar, yapılar ve diğer ad alanları gibi öğeleri tanımlayabilirsiniz. Ad alanı düzeyinde özellikler, yordamlar, değişkenler ve olaylar gibi öğeleri tanımlayamazsınız. Bu öğeler modüller, yapılar veya sınıflar gibi kapsayıcılar içinde bildirilmelidir.  
   
-## <a name="global-keyword-in-fully-qualified-names"></a>Global Keyword in Fully Qualified Names  
- If you have defined a nested hierarchy of namespaces, code inside that hierarchy might be blocked from accessing the <xref:System?displayProperty=nameWithType> namespace of the .NET Framework. The following example illustrates a hierarchy in which the `SpecialSpace.System` namespace blocks access to <xref:System?displayProperty=nameWithType>.  
+## <a name="global-keyword-in-fully-qualified-names"></a>Tam adlarda genel anahtar sözcük  
+ İç içe geçmiş bir ad alanı hiyerarşisi tanımladıysanız, bu hiyerarşinin içindeki kodun, .NET Framework <xref:System?displayProperty=nameWithType> ad alanına erişimi engellenmiş olabilir. Aşağıdaki örnek, `SpecialSpace.System` ad alanının <xref:System?displayProperty=nameWithType>erişimi engellediği bir hiyerarşiyi gösterir.  
   
 ```vb  
 Namespace SpecialSpace  
@@ -81,7 +81,7 @@ Namespace SpecialSpace
 End Namespace  
 ```  
   
- As a result, the Visual Basic compiler cannot successfully resolve the reference to <xref:System.Int32?displayProperty=nameWithType>, because `SpecialSpace.System` does not define `Int32`. You can use the `Global` keyword to start the qualification chain at the outermost level of the .NET Framework class library. This allows you to specify the <xref:System?displayProperty=nameWithType> namespace or any other namespace in the class library. Aşağıdaki örnek bunu göstermektedir.  
+ Sonuç olarak, `SpecialSpace.System` `Int32`tanımlamayan için Visual Basic Derleyicisi <xref:System.Int32?displayProperty=nameWithType>başvurusunu başarıyla çözümleyemiyor. `Global` anahtar sözcüğünü kullanarak, nitelendirme zincirini .NET Framework sınıf kitaplığının en dıştaki düzeyinde başlatabilirsiniz. Bu, sınıf kitaplığındaki <xref:System?displayProperty=nameWithType> ad alanını veya başka bir ad alanını belirtmenize olanak tanır. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Namespace SpecialSpace  
@@ -96,26 +96,26 @@ Namespace SpecialSpace
 End Namespace  
 ```  
   
- You can use `Global` to access other root-level namespaces, such as <xref:Microsoft.VisualBasic?displayProperty=nameWithType>, and any namespace associated with your project.  
+ <xref:Microsoft.VisualBasic?displayProperty=nameWithType>gibi diğer kök düzeyi ad alanlarına ve projenizle ilişkili herhangi bir ad alanına erişmek için `Global` kullanabilirsiniz.  
   
-## <a name="global-keyword-in-namespace-statements"></a>Global Keyword in Namespace Statements  
- You can also use the `Global` keyword in a [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md). This lets you define a namespace out of the root namespace of your project.  
+## <a name="global-keyword-in-namespace-statements"></a>Namespace deyimlerde Global anahtar sözcüğü  
+ Bir [Namespace deyimindeki](../../../visual-basic/language-reference/statements/namespace-statement.md)`Global` anahtar sözcüğünü de kullanabilirsiniz. Bu, projenizin kök ad alanından bir ad alanı tanımlamanızı sağlar.  
   
- All namespaces in your project are based on the root namespace for the project.  Visual Studio assigns your project name as the default root namespace for all code in your project. For example, if your project is named `ConsoleApplication1`, its programming elements belong to namespace `ConsoleApplication1`. If you declare `Namespace Magnetosphere`, references to `Magnetosphere` in the project will access `ConsoleApplication1.Magnetosphere`.  
+ Projenizdeki tüm ad alanları, projenin kök ad alanını temel alır.  Visual Studio, projenizdeki tüm kodlar için proje adınızı varsayılan kök ad alanı olarak atar. Örneğin, projeniz `ConsoleApplication1`olarak adlandırılmışsa, programlama öğeleri ad alanı `ConsoleApplication1`aittir. `Namespace Magnetosphere`bildirirseniz, projedeki `Magnetosphere` başvurular `ConsoleApplication1.Magnetosphere`erişir.  
   
- The following examples use the `Global` keyword to declare a namespace out of the root namespace for the project.  
+ Aşağıdaki örneklerde, proje için kök ad alanından bir ad alanını bildirmek üzere `Global` anahtar sözcüğü kullanılır.  
   
  [!code-vb[VbVbalrApplication#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/module1.vb#22)]  
   
- In a namespace declaration, `Global` cannot be nested in another namespace.  
+ Bir ad alanı bildiriminde, `Global` başka bir ad alanında iç içe geçirilemez.  
   
- You can use the [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic) to view and modify the **Root Namespace** of the project.  For new projects, the **Root Namespace** defaults to the project name. To cause `Global` to be the top-level namespace, you can clear the **Root Namespace** entry so that the box is empty. Clearing **Root Namespace** removes the need for the `Global` keyword in namespace declarations.  
+ Projenin **kök ad alanını** görüntülemek ve değiştirmek Için [uygulama sayfasını, Proje tasarımcısı 'nı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic) kullanabilirsiniz.  Yeni projeler için, **kök ad alanı** varsayılan olarak proje adı olur. `Global` en üst düzey ad alanı olmasını sağlamak için, **kök ad alanı** girişini temizleyerek kutunun boş olmasını sağlayabilirsiniz. **Kök ad alanını** Temizleme, ad alanı bildirimlerinde `Global` anahtar kelimesinin gereksinimini ortadan kaldırır.  
   
- If a `Namespace` statement declares a name that is also a namespace in the .NET Framework, the .NET Framework namespace becomes unavailable if the `Global` keyword is not used in a fully qualified name. To enable access to that .NET Framework namespace without using the `Global` keyword, you can include the `Global` keyword in the `Namespace` statement.  
+ `Namespace` bir ifade .NET Framework bir ad alanı olan bir ad bildirirse, `Global` anahtar sözcüğü tam bir ad içinde kullanılmıyorsa .NET Framework ad alanı kullanılamaz hale gelir. `Global` anahtar sözcüğünü kullanmadan bu .NET Framework ad alanına erişimi etkinleştirmek için `Namespace` ifadesine `Global` anahtar sözcüğünü ekleyebilirsiniz.  
   
- The following example has the `Global` keyword in the `System.Text` namespace declaration.  
+ Aşağıdaki örnekte, `System.Text` ad alanı bildiriminde `Global` anahtar sözcüğü vardır.  
   
- If the `Global` keyword was not present in the namespace declaration, <xref:System.Text.StringBuilder> could not be accessed without specifying `Global.System.Text.StringBuilder`. For a project named `ConsoleApplication1`, references to `System.Text` would access `ConsoleApplication1.System.Text` if the `Global` keyword was not used.  
+ `Global` anahtar sözcüğü ad alanı bildiriminde yoksa, <xref:System.Text.StringBuilder> `Global.System.Text.StringBuilder`belirtilmeden erişilemez. `ConsoleApplication1`adlı bir proje için, `Global` anahtar sözcüğü kullanılmazsa `System.Text` başvuruları `ConsoleApplication1.System.Text` erişir.  
   
  [!code-vb[VbVbalrApplication#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/module1.vb#21)]  
   

@@ -10,26 +10,26 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447426"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Windows Mağazası Uygulamaları için Ağ Yalıtımı
-Classes in the <xref:System.Net>,  <xref:System.Net.Http>, and <xref:System.Net.Http.Headers> namespaces can be used to develop Windows Store  apps  or desktop apps. When used in a Windows Store app, classes in these namespaces are affected by network isolation, part of the application security model used by the [!INCLUDE[win8](../../../includes/win8-md.md)]. The appropriate network capabilities must be enabled in the app manifest for a Windows Store app for the system to allow network access.  
+<xref:System.Net>, <xref:System.Net.Http>ve <xref:System.Net.Http.Headers> ad alanlarında bulunan sınıflar Windows Mağazası uygulamaları veya masaüstü uygulamaları geliştirmek için kullanılabilir. Bir Windows Mağazası uygulamasında kullanıldığında, bu ad alanlarındaki sınıflar, [!INCLUDE[win8](../../../includes/win8-md.md)]tarafından kullanılan uygulama güvenlik modelinin parçası olan ağ yalıtımıyla etkilenir. Sistemin ağ erişimine izin vermek için bir Windows Mağazası uygulamasının uygulama bildiriminde uygun ağ özellikleri etkinleştirilmelidir.  
   
-## <a name="checklist-for-network-isolation"></a>Checklist for Network Isolation  
- Use this checklist to be sure that network isolation is configured for your Windows Store app.  
+## <a name="checklist-for-network-isolation"></a>Ağ yalıtımı için denetim listesi  
+ Windows Mağazası uygulamanız için ağ yalıtımının yapılandırıldığından emin olmak için bu denetim listesini kullanın.  
   
-1. Determine the direction of network access requests needed by the app. This can be either outbound client-initiated requests or inbound unsolicited requests or it could be a combination of both of these network request types.  
+1. Uygulama için gereken ağ erişim isteklerinin yönünü belirleme. Bu, istemci tarafından başlatılan istekler veya gelen istenmeyen istekler olabilir ya da bu ağ isteği türlerinin her ikisinin bir birleşimi olabilir.  
   
-2. Determine the type of network resources that the app will communicate with. An app may need to communicate with trusted resources on a Home or Work network. An app might need to communicate with resources on the Internet. An app might need access to both types of network resources.  
+2. Uygulamanın iletişim kuracağı ağ kaynaklarının türünü saptayın. Bir uygulamanın ev veya Iş ağı üzerinde güvenilir kaynaklarla iletişim kurması gerekebilir. Bir uygulamanın Internet 'teki kaynaklarla iletişim kurması gerekebilir. Bir uygulamanın her iki tür ağ kaynağına erişmesi gerekebilir.  
   
-3. Configure the minimum-required networking isolation capabilities in the app manifest.  
+3. Uygulama bildiriminde gereken en düşük ağ yalıtımı özelliklerini yapılandırın.  
   
-4. Deploy and run your app to test it using the network isolation tools provided for troubleshooting.  
+4. Sorun giderme için sunulan ağ yalıtımı araçlarını kullanarak test etmek için uygulamanızı dağıtın ve çalıştırın.  
   
- For more detailed information on how to configure network capabilities and isolation tools used for troubleshooting network isolation, see [How to configure network isolation capabilities](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) in the Windows 8.x Store developer documentation.
+ Ağ yalıtımı sorunlarını gidermek için kullanılan ağ yeteneklerini ve yalıtım araçlarını yapılandırma hakkında daha ayrıntılı bilgi için, bkz. Windows 8. x mağaza geliştirici belgelerindeki [ağ yalıtımı yeteneklerini yapılandırma](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) .
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Connecting to a web service](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
-- [Guidelines and checklist for network isolation](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
-- [Quickstart: Connecting using HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781239(v=win.10))
-- [How to use HttpClient handlers](https://docs.microsoft.com/previous-versions/windows/apps/hh781241(v=win.10))
-- [How to secure HttpClient connections](https://docs.microsoft.com/previous-versions/windows/apps/hh781240(v=win.10))
-- [HttpClient Sample](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)
+- [Bir Web hizmetine bağlanma](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
+- [Ağ yalıtımı için yönergeler ve denetim listesi](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
+- [Hızlı başlangıç: HttpClient kullanarak bağlanma](https://docs.microsoft.com/previous-versions/windows/apps/hh781239(v=win.10))
+- [HttpClient işleyicilerini kullanma](https://docs.microsoft.com/previous-versions/windows/apps/hh781241(v=win.10))
+- [HttpClient bağlantılarını güvenli hale getirme](https://docs.microsoft.com/previous-versions/windows/apps/hh781240(v=win.10))
+- [HttpClient örneği](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

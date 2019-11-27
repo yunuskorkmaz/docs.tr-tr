@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444658"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam Yöntemi
-Creates a definition for a generic type parameter, and gets a token to that generic type parameter.  
+Genel tür parametresi için bir tanım oluşturur ve bu genel tür parametresine bir belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,34 +41,34 @@ HRESULT DefineGenericParam (
   
 ## <a name="parameters"></a>Parametreler  
  `tk`  
- [in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.  
+ 'ndaki Genel parametre tanımlanacak yöntemi veya oluşturucuyu temsil eden bir `mdTypeDef` veya `mdMethodDef` belirteci.  
   
  `ulParamSeq`  
- [in] The index of the generic parameter.  
+ 'ndaki Genel parametrenin dizini.  
   
  `dwParamFlags`  
- [in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.  
+ 'ndaki Genel parametrenin türünü açıklayan [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) numaralandırması değeri.  
   
  `szname`  
- [in] The name of the parameter.  
+ 'ndaki Parametrenin adı.  
   
  `reserved`  
- [in] This parameter is reserved for future extensibility.  
+ 'ndaki Bu parametre gelecekteki genişletilebilirlik için ayrılmıştır.  
   
  `rtkConstraints`  
- [in] A zero-terminated array of type constraints. Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.  
+ 'ndaki Tür kısıtlamaları sıfır ile sonlandırılmış dizi. Dizi üyeleri bir `mdTypeDef`, `mdTypeRef`veya `mdTypeSpec` meta veri belirteci olmalıdır.  
   
  `pgp`  
- [out] A token that represents the generic parameter.  
+ dışı Genel parametreyi temsil eden bir belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

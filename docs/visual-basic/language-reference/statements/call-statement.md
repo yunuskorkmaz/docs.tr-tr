@@ -17,7 +17,7 @@ ms.locfileid: "74350156"
 ---
 # <a name="call-statement-visual-basic"></a>Call Deyimi (Visual Basic)
 
-Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedure.  
+Denetimi bir `Function`, `Sub`veya dinamik bağlantı kitaplığı (DLL) yordamına aktarır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,21 +29,21 @@ Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedur
 
 |||
 |---|---|
-|`procedureName`|Gerekli. Name of the procedure to call.|
-|`argumentList`|İsteğe bağlı. List of variables or expressions representing arguments that are passed to the procedure when it is called. Multiple arguments are separated by commas. If you include `argumentList`, you must enclose it in parentheses.|
+|`procedureName`|Gerekli. Çağrılacak yordamın adı.|
+|`argumentList`|İsteğe bağlı. Çağrıldığında yordama geçirilen bağımsız değişkenleri temsil eden değişkenlerin veya ifadelerin listesi. Birden çok bağımsız değişken virgülle ayrılır. `argumentList`eklerseniz, parantez içine almanız gerekir.|
 |||
   
 ## <a name="remarks"></a>Açıklamalar
 
- You can use the `Call` keyword when you call a procedure. For most procedure calls, you aren’t required to use this  keyword.
+ Bir yordamı çağırdığınızda `Call` anahtar sözcüğünü kullanabilirsiniz. Çoğu yordam çağrısı için bu anahtar sözcüğünü kullanmanız gerekmez.
 
- You typically use the `Call` keyword when the called expression doesn’t start with an identifier. Use of the `Call` keyword for other uses isn't recommended.
+ Çağrılan ifade bir tanımlayıcı ile başlamadığınızda genellikle `Call` anahtar sözcüğünü kullanırsınız. Diğer kullanımlar için `Call` anahtar sözcüğünün kullanılması önerilmez.
 
- If the procedure returns a value, the `Call` statement discards it.
+ Yordam bir değer döndürürse `Call` ifade bunu atar.
 
 ## <a name="example"></a>Örnek
 
- The following code shows two examples where the `Call` keyword is necessary to call a procedure. In both examples, the called expression doesn't start with an identifier.
+ Aşağıdaki kodda, bir yordamı çağırmak için `Call` anahtar sözcüğünün gerekli olduğu iki örnek gösterilmektedir. Her iki örnekte de çağrılan ifade bir tanımlayıcı ile başlamaz.
 
  [!code-vb[VbVbalrStatements#97](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#97)]  
   

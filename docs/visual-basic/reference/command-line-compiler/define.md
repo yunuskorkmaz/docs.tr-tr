@@ -16,8 +16,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344771"
 ---
-# <a name="-define-visual-basic"></a>-define (Visual Basic)
-Defines conditional compiler constants.  
+# <a name="-define-visual-basic"></a>-tanımla (Visual Basic)
+Koşullu derleyici sabitlerini tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,34 +31,34 @@ veya
 -d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
   
 |Terim|Tanım|  
 |---|---|  
-|`symbol`|Gerekli. The symbol to define.|  
-|`value`|İsteğe bağlı. The value to assign `symbol`. If `value` is a string, it must be surrounded by backslash/quotation-mark sequences (\\") instead of quotation marks. If no value is specified, then it is taken to be True.|  
+|`symbol`|Gerekli. Tanımlanacak simge.|  
+|`value`|İsteğe bağlı. `symbol`atanacak değer. `value` bir dizeyse, tırnak işaretleri yerine ters eğik çizgi/tırnak işareti dizileri (\\") ile çevrelenmelidir. Hiçbir değer belirtilmemişse, true olarak alınır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `-define` option has an effect similar to using a `#Const` preprocessor directive in your source file, except that constants defined with `-define` are public and apply to all files in the project.  
+ `-define` seçeneği, kaynak dosyanızda `#Const` Önişlemci yönergesini kullanmayla benzer bir etkiye sahiptir, ancak `-define` ile tanımlanmış sabitler ortak olur ve projedeki tüm dosyalar için geçerlidir.  
   
- You can use symbols created by this option with the `#If`...`Then`...`#Else` directive to compile source files conditionally.  
+ Bu seçenek tarafından oluşturulan sembolleri, kaynak dosyaları koşullu olarak derlemek için `#If`...`Then`...`#Else` yönergesi ile kullanabilirsiniz.  
   
- `-d` is the short form of `-define`.  
+ `-d`, `-define`kısa bir biçimidir.  
   
- You can define multiple symbols with `-define` by using a comma to separate symbol definitions.  
+ Sembol tanımlarını ayırmak için virgül kullanarak `-define` birden çok sembol tanımlayabilirsiniz.  
   
-|To set /define in the Visual Studio integrated development environment|  
+|Visual Studio tümleşik geliştirme ortamında/define ayarlamak için|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. On the **Project** menu, click **Properties**. <br />2.  Click the **Compile** tab.<br />3.  Click **Advanced**.<br />4.  Modify the value in the **Custom Constants** box.|  
+|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Derle** sekmesine tıklayın.<br />3. **Gelişmiş**'e tıklayın.<br />4. **Özel sabitler** kutusundaki değeri değiştirin.|  
   
 ## <a name="example"></a>Örnek  
- The following code defines and then uses two conditional compiler constants.  
+ Aşağıdaki kod, iki koşullu derleyici sabiti tanımlar ve kullanır.  
   
  [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [#If...Then...#Else Yönergesi](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [#Const Yönergesi](../../../visual-basic/language-reference/directives/const-directive.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

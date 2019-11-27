@@ -18,27 +18,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347319"
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic Adlandırma Kuralları
-When you name an element in your Visual Basic application, the first character of that name must be an alphabetic character or an underscore. Note, however, that names beginning with an underscore are not compliant with the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
+Visual Basic uygulamanızda bir öğe belirlediğinizde, bu adın ilk karakteri alfabetik bir karakter veya alt çizgi olmalıdır. Ancak, bir alt çizgiyle başlayan adların, [Dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS) ile uyumlu olmadığına unutmayın.  
   
- The following suggestions apply to naming.  
+ Aşağıdaki öneriler adlandırma için geçerlidir.  
   
-- Begin each separate word in a name with a capital letter, as in `FindLastRecord` and `RedrawMyForm`.  
+- `FindLastRecord` ve `RedrawMyForm`gibi büyük harfle her bir ada sahip her bir sözcüğe başlayın.  
   
-- Begin function and method names with a verb, as in `InitNameArray` or `CloseDialog`.  
+- İşlev ve yöntem adlarını `InitNameArray` veya `CloseDialog`gibi bir fiil ile başlatın.  
   
-- Begin class, structure, module, and property names with a noun, as in `EmployeeName` or `CarAccessory`.  
+- `EmployeeName` veya `CarAccessory`içinde olduğu gibi, sınıf, yapı, modül ve özellik adlarını bir ada sahip olarak başlatın.  
   
-- Begin interface names with the prefix "I", followed by a noun or a noun phrase, like `IComponent`, or with an adjective describing the interface's behavior, like `IPersistable`. Do not use the underscore, and use abbreviations sparingly, because abbreviations can cause confusion.  
+- Arabirim adlarını "I" önekiyle, ardından `IComponent`gibi bir ad veya bir ad ifadesi ve `IPersistable`gibi arabirimin davranışını açıklayan bir sıfat ile başlatın. Alt çizgi kullanmayın ve kısaltmaların düzgün şekilde kullanılmasını sağlayabilirsiniz çünkü kısaltmalar karışıklıklara neden olabilir.  
   
-- Begin event handler names with a noun describing the type of event followed by the "`EventHandler`" suffix, as in "`MouseEventHandler`".  
+- Olay işleyicisi adlarını, "`MouseEventHandler`" içinde olduğu gibi "`EventHandler`" son eki tarafından izlenen olay türünü açıklayan bir ad ile başlatın.  
   
-- In names of event argument classes, include the "`EventArgs`" suffix.  
+- Olay bağımsız değişkeni sınıflarının adlarında, "`EventArgs`" sonekini içerir.  
   
-- If an event has a concept of "before" or "after," use a suffix in present or past tense, as in "`ControlAdd`" or "`ControlAdded`".  
+- Bir olayda "önce" veya "After" kavramı varsa, "`ControlAdd`" veya "`ControlAdded`" içinde olduğu gibi, mevcut veya geçmiş zaman hali için bir sonek kullanın.  
   
-- For long or frequently used terms, use abbreviations to keep name lengths reasonable, for example, "HTML", instead of "Hypertext Markup Language". In general, variable names greater than 32 characters are difficult to read on a monitor set to a low resolution. Also, make sure your abbreviations are consistent throughout the entire application. Randomly switching in a project between "HTML" and "Hypertext Markup Language" can lead to confusion.  
+- Uzun veya sık kullanılan şartlar için, "Köprü Metni Biçimlendirme Dili" yerine "HTML" gibi ad uzunluklarının mantıklı tutulması için kısaltmalar kullanın. Genel olarak, 32 karakterden büyük değişken adları, düşük çözünürlüğe sahip bir izleyici kümesini okumak zordur. Ayrıca, kısaltmalarınızın tüm uygulama genelinde tutarlı olduğundan emin olun. Bir projede "HTML" ve "Köprü Metni Biçimlendirme Dili" arasında rastgele geçiş, karışıklıklara yol açabilir.  
   
-- Avoid using names in an inner scope that are the same as names in an outer scope. Errors can result if the wrong variable is accessed. If a conflict occurs between a variable and the keyword of the same name, you must identify the keyword by preceding it with the appropriate type library. For example, if you have a variable called `Date`, you can use the intrinsic `Date` function only by calling <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
+- Bir dış kapsamdaki adlarla aynı olan bir iç kapsamdaki adları kullanmaktan kaçının. Yanlış değişkene erişildiğinde hatalar oluşabilir. Bir değişken ve aynı ada sahip anahtar sözcük arasında bir çakışma oluşursa, anahtar sözcüğünü uygun tür kitaplığı ile önce tanımlamalısınız. Örneğin, `Date`adlı bir değişkeniniz varsa, iç `Date` işlevini yalnızca <xref:System.DateTime.Date%2A?displayProperty=nameWithType>çağırarak kullanabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

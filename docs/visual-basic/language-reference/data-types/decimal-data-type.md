@@ -29,23 +29,23 @@ ms.locfileid: "74344039"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Onluk Veri Türü (Visual Basic)
 
-Holds signed 128-bit (16-byte) values representing 96-bit (12-byte) integer numbers scaled by a variable power of 10. The scaling factor specifies the number of digits to the right of the decimal point; it ranges from 0 through 28. With a scale of 0 (no decimal places), the largest possible value is +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9228162514264337593543950335E+28). With 28 decimal places, the largest value is +/-7.9228162514264337593543950335, and the smallest nonzero value is +/-0.0000000000000000000000000001 (+/-1E-28).
+, 10 ' un bir değişken gücüne göre ölçeklendirilmiş 96 bit (12 baytlık) tamsayı sayılarını temsil eden imzalı 128 bitlik (16 baytlık) değerleri barındırır. Ölçeklendirme faktörü, ondalık noktanın sağ tarafındaki basamak sayısını belirtir; 0 ile 28 arasında değişir. 0 ölçeğinde (ondalık basamak yok), olası en büyük değer +/-79228162514264337593543950335 (+/-7.9228162514264337593543950335E + 28) olur. 28 ondalık basamakla, en büyük değer +/-7.9228162514264337593543950335 ve sıfır olmayan en küçük değer +/-0,0000000000000000000000000001 (+/-1E-28) olur.
 
 ## <a name="remarks"></a>Açıklamalar
 
-The `Decimal` data type provides the greatest number of significant digits for a number. It supports up to 29 significant digits and can represent values in excess of 7.9228 x 10^28. It is particularly suitable for calculations, such as financial, that require a large number of digits but cannot tolerate rounding errors.
+`Decimal` veri türü, bir sayı için en çok önemli basamak sayısını sağlar. 29 ' dan fazla önemli basamağı destekler ve 7,9228 x 10 ^ 28 değerinden fazla değeri temsil edebilir. Çok sayıda basamak gerektiren, ancak yuvarlama hatalarını kabul edemeyecek finansal gibi hesaplamalar için özellikle uygundur.
 
-The default value of `Decimal` is 0.
+`Decimal` varsayılan değeri 0 ' dır.
 
 ## <a name="programming-tips"></a>Programlama İpuçları
 
-- **Precision.** `Decimal` is not a floating-point data type. The `Decimal` structure holds a binary integer value, together with a sign bit and an integer scaling factor that specifies what portion of the value is a decimal fraction. Because of this, `Decimal` numbers have a more precise representation in memory than floating-point types (`Single` and `Double`).
+- **Duyarlılık.** `Decimal` kayan nokta veri türü değil. `Decimal` yapısı bir ikili tamsayı değerini, bir işaret biti ve değerin hangi kısmının ondalık kesir olduğunu belirten bir tamsayı ölçekleme faktörüyle birlikte tutar. Bu nedenle, `Decimal` sayıların bellekte kayan nokta türlerinden (`Single` ve `Double`) daha kesin bir temsili vardır.
 
-- **Performance.** The `Decimal` data type is the slowest of all the numeric types. You should weigh the importance of precision against performance before choosing a data type.
+- **Mının.** `Decimal` veri türü, tüm sayısal türlerin en yavaş türüdür. Veri türü seçmeden önce, performans için duyarlık önem derecesine sahip olmanız gerekir.
 
-- **Widening.** The `Decimal` data type widens to `Single` or `Double`. This means you can convert `Decimal` to either of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
+- **Kan.** `Decimal` veri türü `Single` veya `Double`için widens. Bu, bir <xref:System.OverflowException?displayProperty=nameWithType> hatasıyla karşılaşmadan `Decimal` bu türlerden birine dönüştürebileceğiniz anlamına gelir.
 
-- **Trailing Zeros.** Visual Basic does not store trailing zeros in a `Decimal` literal. However, a `Decimal` variable preserves any trailing zeros acquired computationally. Aşağıdaki örnek bunu göstermektedir.
+- **Sondaki sıfırlar.** Visual Basic sondaki sıfırları bir `Decimal` değişmez değerinde depolamaz. Ancak, `Decimal` bir değişken sondaki tüm sıfırları elde edilen hesaplama sırasında korur. Aşağıdaki örnek bunu göstermektedir.
 
   ```vb
   Dim d1, d2, d3, d4 As Decimal
@@ -57,19 +57,19 @@ The default value of `Decimal` is 0.
         ", d3 = " & CStr(d3) & ", d4 = " & CStr(d4))
   ```
 
-  The output of `MsgBox` in the preceding example is as follows:
+  Önceki örnekteki `MsgBox` çıkışı aşağıdaki gibidir:
 
   ```console
   d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4
   ```
 
-- **Type Characters.** Appending the literal type character `D` to a literal forces it to the `Decimal` data type. Appending the identifier type character `@` to any identifier forces it to `Decimal`.
+- **Tür karakterleri.** Değişmez değer türü karakter `D` bir sabit değere eklenmesi, `Decimal` veri türüne zorlar. Tanımlayıcı türü karakter `@` herhangi bir tanımlayıcıya eklemek bunu `Decimal`zorlar.
 
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Decimal?displayProperty=nameWithType> structure.
+- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Decimal?displayProperty=nameWithType> yapısıdır.
 
 ## <a name="range"></a>Aralık
 
- You might need to use the `D` type character to assign a large value to a `Decimal` variable or constant. This requirement is because the compiler interprets a literal as `Long` unless a literal type character follows the literal, as the following example shows.
+ Bir `Decimal` değişkenine veya sabitine büyük bir değer atamak için `D` türü karakterini kullanmanız gerekebilir. Bu gereksinim, derleyicinin değişmez değer türü karakteri, aşağıdaki örnekte gösterildiği gibi değişmez değer bir karakter ile aynı olmadığı sürece `Long` olarak bir sabit değeri yorumlaması.
 
 ```vb
 Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.
@@ -77,11 +77,11 @@ Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.
 Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
 ```
 
-The declaration for `bigDec1` doesn't produce an overflow because the value that's assigned to it falls within the range for `Long`. The `Long` value can be assigned to the `Decimal` variable.
+`bigDec1` için bildirim bir taşma oluşturmaz çünkü kendisine atanan değer `Long`aralığı içinde yer almamıştı. `Long` değeri `Decimal` değişkenine atanabilir.
 
-The declaration for `bigDec2` generates an overflow error because the value that's assigned to it is too large for `Long`. Because the numeric literal can't first be interpreted as a `Long`, it can't be assigned to the `Decimal` variable.
+`bigDec2` için bildirim, kendisine atanan değer `Long`için çok büyük olduğundan bir taşma hatası oluşturuyor. Sayısal sabit değer ilk olarak bir `Long`olarak yorumlanamadığı için, `Decimal` değişkenine atanamaz.
 
-For `bigDec3`, the literal type character `D` solves the problem by forcing the compiler to interpret the literal as a `Decimal` instead of as a `Long`.
+`bigDec3`için, değişmez değer türü karakter `D` derleyicinin değeri `Long`yerine bir `Decimal` olarak yorumlamasını zorlayarak sorunu çözer.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

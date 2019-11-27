@@ -13,20 +13,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344142"
 ---
 # <a name="myapplicationinfo-object"></a>My.Application.Info Nesnesi
-Provides properties for getting the information about the application, such as the version number, description, loaded assemblies, and so on.  
+Sürüm numarası, açıklama, yüklenen derlemeler vb. gibi uygulama hakkındaki bilgileri almak için özellikler sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- For information about the methods and properties of the `My.Application.Info` object, see <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.  
+ `My.Application.Info` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.  
   
 > [!NOTE]
-> You can use properties of the <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> class to obtain information about a file on disk.  
+> Diskteki bir dosya hakkında bilgi edinmek için <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> sınıfının özelliklerini kullanabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** <xref:Microsoft.VisualBasic.ApplicationServices>  
+ **Ad alanı:** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
+ **Sınıf:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

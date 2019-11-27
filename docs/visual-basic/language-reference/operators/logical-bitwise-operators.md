@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350923"
 ---
 # <a name="logicalbitwise-operators-visual-basic"></a>Mantıksal/Bit Düzeyinde İşleçler (Visual Basic)
-The following are the logical/bitwise operators defined in Visual Basic.  
+Aşağıda Visual Basic tanımlanan mantıksal/bit düzeyinde işleçler verilmiştir.  
   
  [And İşleci](../../../visual-basic/language-reference/operators/and-operator.md)  
   
@@ -33,5 +33,5 @@ The following are the logical/bitwise operators defined in Visual Basic.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic mantıksal ve bit düzeyinde Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

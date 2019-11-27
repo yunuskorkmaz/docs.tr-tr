@@ -82,10 +82,10 @@ Bu konuda <xref:System.Windows.Controls.Calendar> denetimine yönelik stiller ve
 |Calendarbuttonunodaklanmış|CalendarButtonFocusStates|Düğme odağa sahip değil.|  
 |Diğinize|Odaklardaki durumlar|Düğme odağa sahiptir.|  
 |Odaklanmadan gözetle|Odaklardaki durumlar|Düğme odağa sahip değil.|  
-|Etkin|ActiveStates|Düğme etkin.|  
-|Olmadan|ActiveStates|Düğme etkin değil.|  
+|Active|ActiveStates|Düğme etkin.|  
+|Etkin değil|ActiveStates|Düğme etkin değil.|  
 |RegularDay|Gün cinsinden durumlar|Düğme <xref:System.DateTime.Today%2A?displayProperty=nameWithType>temsil etmez.|  
-|Adresten|Gün cinsinden durumlar|Düğme <xref:System.DateTime.Today%2A?displayProperty=nameWithType>temsil eder.|  
+|Bugün|Gün cinsinden durumlar|Düğme <xref:System.DateTime.Today%2A?displayProperty=nameWithType>temsil eder.|  
 |Normalgün|BlackoutDayStates|Düğme, seçilebilirler bir günü temsil eder.|  
 |BlackoutDay|BlackoutDayStates|Düğme seçilebir günü temsil eder.|  
 |Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
@@ -110,8 +110,8 @@ Bu konuda <xref:System.Windows.Controls.Calendar> denetimine yönelik stiller ve
 |Calendarbuttonunodaklanmış|CalendarButtonFocusStates|Düğme odağa sahip değil.|  
 |Diğinize|Odaklardaki durumlar|Düğme odağa sahiptir.|  
 |Odaklanmadan gözetle|Odaklardaki durumlar|Düğme odağa sahip değil.|  
-|Etkin|ActiveStates|Düğme etkin.|  
-|Olmadan|ActiveStates|Düğme etkin değil.|  
+|Active|ActiveStates|Düğme etkin.|  
+|Etkin değil|ActiveStates|Düğme etkin değil.|  
 |Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|  
 |Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  
 |Invalidunodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|  

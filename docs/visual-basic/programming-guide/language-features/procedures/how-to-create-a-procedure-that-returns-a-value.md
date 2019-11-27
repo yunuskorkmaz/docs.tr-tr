@@ -14,25 +14,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349715"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Nasıl yapılır: Değer Döndüren Bir Yordam Oluşturma (Visual Basic)
-You use a `Function` procedure to return a value to the calling code.  
+Çağırma koduna bir değer döndürmek için `Function` yordamını kullanın.  
   
-### <a name="to-create-a-procedure-that-returns-a-value"></a>To create a procedure that returns a value  
+### <a name="to-create-a-procedure-that-returns-a-value"></a>Bir değer döndüren bir yordam oluşturmak için  
   
-1. Outside any other procedure, use a `Function` statement, followed by an `End Function` statement.  
+1. Diğer herhangi bir yordamın dışında, bir `Function` ifadesini ve ardından bir `End Function` bildirisini kullanın.  
   
-2. In the `Function` statement, follow the `Function` keyword with the name of the procedure, and then the parameter list in parentheses.  
+2. `Function` bildiriminde, yordamın adı ile `Function` anahtar sözcüğünü ve ardından parantez içindeki parametre listesini izleyin.  
   
-3. Follow the parentheses with an `As` clause to specify the data type of the returned value.  
+3. Döndürülen değerin veri türünü belirtmek için bir `As` yan tümcesiyle ayraçları izleyin.  
   
-4. Place the procedure's code statements between the `Function` and `End Function` statements.  
+4. Yordamın kod deyimlerini `Function` ve `End Function` deyimleri arasına yerleştirin.  
   
-5. Use a `Return` statement to return the value to the calling code.  
+5. Değeri çağırma koduna döndürmek için bir `Return` ifadesini kullanın.  
   
-     The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides.  
+     Aşağıdaki `Function` yordam, iki tarafa ait değerler verildiğinde, doğru bir üçgenin en uzun tarafını veya hipotenüsü değerini hesaplar.  
   
      [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
-     The following example shows a typical call to `hypotenuse`.  
+     Aşağıdaki örnek `hypotenuse`tipik bir çağrısını gösterir.  
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   

@@ -38,19 +38,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336080"
 ---
 # <a name="comparison-operators-visual-basic"></a>Karşılaştırma İşleçleri (Visual Basic)
-The following are the comparison operators defined in Visual Basic.
+Aşağıda, Visual Basic tanımlanan karşılaştırma işleçleri verilmiştir.
 
- `<` operator
+ `<` işleci
 
- `<=` operator
+ `<=` işleci
 
- `>` operator
+ `>` işleci
 
- `>=` operator
+ `>=` işleci
 
- `=` operator
+ `=` işleci
 
- `<>` operator
+ `<>` işleci
 
  [Is İşleci](../../../visual-basic/language-reference/operators/is-operator.md)
 
@@ -58,7 +58,7 @@ The following are the comparison operators defined in Visual Basic.
 
  [Like İşleci](../../../visual-basic/language-reference/operators/like-operator.md)
 
- These operators compare two expressions to determine whether or not they are equal, and if not, how they differ. `Is`, `IsNot`, and `Like` are discussed in detail on separate Help pages. The relational comparison operators are discussed in detail on this page.
+ Bu işleçler, eşit olup olmadığını ve değilse ne farklılık olduğunu anlamak için iki ifadeyi karşılaştırır. `Is`, `IsNot`ve `Like` ayrı Yardım sayfalarında ayrıntılı olarak ele alınmıştır. İlişkisel karşılaştırma işleçleri bu sayfada ayrıntılı olarak ele alınmıştır.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -70,91 +70,91 @@ result = string Like pattern
   
 ## <a name="parts"></a>Bölümler
  `result`  
- Gerekli. A `Boolean` value representing the result of the comparison.
+ Gerekli. Karşılaştırmanın sonucunu temsil eden bir `Boolean` değeri.
 
  `expression1`, `expression2`  
- Gerekli. Any expression.
+ Gerekli. Herhangi bir ifade.
 
  `comparisonoperator`  
- Gerekli. Any relational comparison operator.
+ Gerekli. Herhangi bir ilişkisel karşılaştırma işleci.
 
  `object1`, `object2`  
- Gerekli. Any reference object names.
+ Gerekli. Herhangi bir başvuru nesnesi adı.
 
  `string`  
- Gerekli. Any `String` expression.
+ Gerekli. Herhangi bir `String` ifadesi.
 
  `pattern`  
- Gerekli. Any `String` expression or range of characters.
+ Gerekli. Herhangi bir `String` ifadesi veya karakter aralığı.
 
 ## <a name="remarks"></a>Açıklamalar
- The following table contains a list of the relational comparison operators and the conditions that determine whether `result` is `True` or `False`.
+ Aşağıdaki tabloda, ilişkisel karşılaştırma işleçleri listesi ve `result` `True` veya `False`olup olmadığını belirleme koşulları yer almaktadır.
 
-|İşleç|`True` if|`False` if|
+|İşleç|`True`|`False`|
 |--------------|---------------|----------------|
-|`<` (Less than)|`expression1` < `expression2`|`expression1` >= `expression2`|
-|`<=` (Less than or equal to)|`expression1` <= `expression2`|`expression1` > `expression2`|
-|`>` (Greater than)|`expression1` > `expression2`|`expression1` <= `expression2`|
-|`>=` (Greater than or equal to)|`expression1` >= `expression2`|`expression1` < `expression2`|
-|`=` (Equal to)|`expression1` = `expression2`|`expression1` <> `expression2`|
-|`<>` (Not equal to)|`expression1` <> `expression2`|`expression1` = `expression2`|
+|`<` (küçüktür)|`expression1` < `expression2`|`expression1` >= `expression2`|
+|`<=` (küçüktür veya eşittir)|`expression1` <= `expression2`|`expression1` > `expression2`|
+|`>` (büyüktür)|`expression1` > `expression2`|`expression1` <= `expression2`|
+|`>=` (büyüktür veya eşittir)|`expression1` >= `expression2`|`expression1` < `expression2`|
+|`=` (eşittir)|`expression1` = `expression2`|`expression1` <> `expression2`|
+|`<>` (eşit değildir)|`expression1` <> `expression2`|`expression1` = `expression2`|
 
 > [!NOTE]
-> The [= Operator](../../../visual-basic/language-reference/operators/assignment-operator.md) is also used as an assignment operator.
+> [= İşleci](../../../visual-basic/language-reference/operators/assignment-operator.md) atama işleci olarak da kullanılır.
 
- The `Is` operator, the `IsNot` operator, and the `Like` operator have specific comparison functionalities that differ from the operators in the preceding table.
+ `Is` işleci, `IsNot` işleci ve `Like` işleci, önceki tablodaki işleçlerden farklı olan özel karşılaştırma işlevlerine sahiptir.
 
-## <a name="comparing-numbers"></a>Comparing Numbers
- When you compare an expression of type `Single` to one of type `Double`, the `Single` expression is converted to `Double`. This behavior is opposite to the behavior found in Visual Basic 6.
+## <a name="comparing-numbers"></a>Sayıları karşılaştırma
+ `Single` türündeki bir ifadeyi `Double`türünden birine karşılaştırdığınızda, `Single` ifadesi `Double`'ye dönüştürülür. Bu davranış, Visual Basic 6 ' da bulunan davranışın tersidir.
 
- Similarly, when you compare an expression of type `Decimal` to an expression of type `Single` or `Double`, the `Decimal` expression is converted to `Single` or `Double`. For `Decimal` expressions, any fractional value less than 1E-28 might be lost. Such fractional value loss may cause two values to compare as equal when they are not. For this reason, you should take care when using equality (`=`) to compare two floating-point variables. It is safer to test whether the absolute value of the difference between the two numbers is less than a small acceptable tolerance.
+ Benzer şekilde, `Decimal` bir ifadesini `Single` veya `Double`türünde bir ifadeyle karşılaştırdığınızda `Decimal` ifadesi `Single` veya `Double`olarak dönüştürülür. `Decimal` ifadelerde, 1E-28 ' den küçük olan herhangi bir kesirli değer kaybolmuş olabilir. Bu tür kesirli değer kaybı, iki değerin, olmadıkları zaman eşit olarak karşılaştırılmasını sağlayabilir. Bu nedenle, iki kayan nokta değişkenini karşılaştırmak için eşitlik (`=`) kullanırken dikkatli olmanız gerekir. İki sayı arasındaki farkın mutlak değerinin, kabul edilebilir küçük bir toleranstan daha az olup olmadığını test etmek daha güvenlidir.
 
-### <a name="floating-point-imprecision"></a>Floating-point Imprecision
- When you work with floating-point numbers, keep in mind that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the [Mod Operator](../../../visual-basic/language-reference/operators/mod-operator.md). For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+### <a name="floating-point-imprecision"></a>Kayan nokta noktasında kesinlik eksikliği
+ Kayan noktalı sayılarla çalışırken her zaman bellekte kesin bir gösterimine sahip olmadıkları göz önünde bulundurun. Bu, değer karşılaştırması ve [Mod işleci](../../../visual-basic/language-reference/operators/mod-operator.md)gibi belirli işlemlerden beklenmedik sonuçlara neden olabilir. Daha fazla bilgi için bkz. [sorun giderme veri türleri](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
 
 ## <a name="comparing-strings"></a>Dizeleri Karşılaştırma
- When you compare strings, the string expressions are evaluated based on their alphabetical sort order, which depends on the `Option Compare` setting.
+ Dizeleri karşılaştırdığınızda, dize ifadeleri alfabetik sıralama sıralamasına göre değerlendirilir ve bu, `Option Compare` ayarına bağlıdır.
 
- `Option Compare Binary` bases string comparisons on a sort order derived from the internal binary representations of the characters. The sort order is determined by the code page. The following example shows a typical binary sort order.
+ `Option Compare Binary`, karakterlerin iç ikili gösterimlerine göre türetilmiş bir sıralama düzeninde dize karşılaştırmaları dayandırır. Sıralama düzeni kod sayfası tarafından belirlenir. Aşağıdaki örnek tipik bir ikili sıralama düzeni gösterir.
 
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`
 
- `Option Compare Text` bases string comparisons on a case-insensitive, textual sort order determined by your application's locale. When you set `Option Compare Text` and sort the characters in the preceding example, the following text sort order applies:
+ `Option Compare Text`, uygulamanızın yerel ayarı tarafından belirlenen büyük/küçük harf duyarsız, metinsel sıralama düzeninde dize karşılaştırmaları dayandırır. `Option Compare Text` ayarlayıp önceki örnekteki karakterleri sıraladığınızda aşağıdaki metin sıralama düzeni geçerlidir:
 
  `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`
 
-### <a name="locale-dependence"></a>Locale Dependence
- When you set `Option Compare Text`, the result of a string comparison can depend on the locale in which the application is running. Two characters might compare as equal in one locale but not in another. If you are using a string comparison to make important decisions, such as whether to accept an attempt to log on, you should be alert to locale sensitivity. Consider either setting `Option Compare Binary` or calling the <xref:Microsoft.VisualBasic.Strings.StrComp%2A>, which takes the locale into account.
+### <a name="locale-dependence"></a>Yerel ayar bağımlılığını
+ `Option Compare Text`ayarladığınızda, bir dize karşılaştırmasının sonucu uygulamanın çalıştığı yerel ayara bağlı olabilir. İki karakter, bir yerel ayarda eşit olarak karşılaştırılabilir ancak başka bir şekilde karşılaştırılabilir. Oturum açma denemesinin kabul edilip edilmeyeceğini kabul etmeksizin, önemli kararlar almak için bir dize karşılaştırması kullanıyorsanız, yerel ayar duyarlılığı için uyarı almanız gerekir. Yerel ayarı hesaba alan `Option Compare Binary` veya <xref:Microsoft.VisualBasic.Strings.StrComp%2A>çağırmayı düşünün.
 
-## <a name="typeless-programming-with-relational-comparison-operators"></a>Typeless Programming with Relational Comparison Operators
- The use of relational comparison operators with `Object` expressions is not allowed under `Option Strict On`. When `Option Strict` is `Off`, and either `expression1` or `expression2` is an `Object` expression, the run-time types determine how they are compared. The following table shows how the expressions are compared and the result from the comparison, depending on the runtime type of the operands.
+## <a name="typeless-programming-with-relational-comparison-operators"></a>Ilişkisel karşılaştırma Işleçleri ile Türsüz programlama
+ `Option Strict On`altında `Object` ifadelerle ilişkisel karşılaştırma işleçleri kullanımına izin verilmez. `Option Strict` `Off`ve `expression1` ya da `expression2` bir `Object` ifadesi olduğunda, çalışma zamanı türleri nasıl karşılaştırılacağını belirlenir. Aşağıdaki tabloda, işlenenlerinin çalışma zamanı türüne bağlı olarak ifadelerin karşılaştırılacağı ve Karşılaştırmanın sonucu gösterilmektedir.
 
-|If operands are|Comparison is|
+|İşlenenler|Karşılaştırma|
 |---------------------|-------------------|
-|Both `String`|Sort comparison based on string sorting characteristics.|
-|Both numeric|Objects converted to `Double`, numeric comparison.|
-|One numeric and one `String`|The `String` is converted to a `Double` and numeric comparison is performed. If the `String` cannot be converted to `Double`, an <xref:System.InvalidCastException> is thrown.|
-|Either or both are reference types other than `String`|An <xref:System.InvalidCastException> is thrown.|
+|Her iki `String`|Dize sıralama özelliklerine göre karşılaştırmayı sıralayın.|
+|Her iki sayısal|`Double`, sayısal karşılaştırmaya dönüştürülen nesneler.|
+|Bir sayısal ve bir `String`|`String` bir `Double` dönüştürülür ve sayısal karşılaştırma gerçekleştirilir. `String` `Double`olarak dönüştürülemiyorsa bir <xref:System.InvalidCastException> oluşturulur.|
+|Ya da her ikisi de `String` dışındaki başvuru türleridir|Bir <xref:System.InvalidCastException> oluşturulur.|
 
- Numeric comparisons treat `Nothing` as 0. String comparisons treat `Nothing` as `""` (an empty string).
+ Sayısal karşılaştırmalar `Nothing` 0 olarak değerlendirir. Dize karşılaştırmaları `Nothing` `""` (boş bir dize) olarak değerlendirir.
 
 ## <a name="overloading"></a>Aşırı Yükleme
- The relational comparison operators (`<`. `<=`, `>`, `>=`, `=`, `<>`) can be *overloaded*, which means that a class or structure can redefine their behavior when an operand has the type of that class or structure. If your code uses any of these operators on such a class or structure, be sure you understand the redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
+ İlişkisel karşılaştırma işleçleri (`<`. `<=`, `>`, `>=`, `=`, `<>`) *aşırı yüklenmiş*olabilir, bu da bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışlarını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleçlerden herhangi birini kullanıyorsa, yeniden tanımlanan davranışı anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
 
- Notice that the [= Operator](../../../visual-basic/language-reference/operators/assignment-operator.md) can be overloaded only as a relational comparison operator, not as an assignment operator.
+ [= İşlecinin](../../../visual-basic/language-reference/operators/assignment-operator.md) , atama işleci olarak değil, yalnızca ilişkisel karşılaştırma operatörü olarak aşırı yüklenebilir olduğuna dikkat edin.
 
 ## <a name="example"></a>Örnek
- The following example shows various uses of relational comparison operators, which you use to compare expressions. Relational comparison operators return a `Boolean` result that represents whether or not the stated expression evaluates to `True`. When you apply the `>` and `<` operators to strings, the comparison is made using the normal alphabetical sorting order of the strings. This order can be dependent on your locale setting. Whether the sort is case-sensitive or not depends on the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) setting.
+ Aşağıdaki örnek, ifadeleri karşılaştırmak için kullandığınız, ilişkisel karşılaştırma işleçlerinin çeşitli kullanımlarını gösterir. İlişkisel karşılaştırma işleçleri, belirtilen ifadenin `True`olarak değerlendirilip değerlendirilmediğini temsil eden `Boolean` bir sonuç döndürür. Dizelere `>` ve `<` işleçlerini uyguladığınızda, karşılaştırma, dizelerin normal alfabetik sıralama düzeni kullanılarak yapılır. Bu sipariş, yerel ayara bağlı olabilir. Sıralamanın büyük/küçük harfe duyarlı olup olmadığı veya [Seçenek karşılaştırma](../../../visual-basic/language-reference/statements/option-compare-statement.md) ayarına bağlı olup olmadığı.
 
  [!code-vb[VbVbalrOperators#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#1)]
 
- In the preceding example, the first comparison returns `False` and the remaining comparisons return `True`.
+ Yukarıdaki örnekte, ilk karşılaştırma `False` döndürür ve kalan karşılaştırmalar `True`döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.InvalidCastException>
 - [= İşleci](../../../visual-basic/language-reference/operators/assignment-operator.md)
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Veri Türü Sorunlarını Giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic karşılaştırma Işleçleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

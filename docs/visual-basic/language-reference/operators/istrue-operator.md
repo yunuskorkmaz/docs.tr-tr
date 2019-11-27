@@ -15,32 +15,32 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349508"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue İşleci (Visual Basic)
-Determines whether an expression is `True`.  
+Bir ifadenin `True`olup olmadığını belirler.  
   
- You cannot call `IsTrue` explicitly in your code, but the Visual Basic compiler can use it to generate code from `OrElse` clauses. If you define a class or structure and then use a variable of that type in an `OrElse` clause, you must define `IsTrue` on that class or structure.  
+ Kodunuzda açıkça `IsTrue` çağrılamaz, ancak Visual Basic Derleyicisi bunu `OrElse` yan tümcelerinden kod oluşturmak için kullanabilir. Bir sınıf veya yapı tanımlayabilir ve ardından `OrElse` yan tümcesinde bu türden bir değişken kullanırsanız, bu sınıf veya yapıda `IsTrue` tanımlamanız gerekir.  
   
- The compiler considers the `IsTrue` and `IsFalse` operators as a *matched pair*. This means that if you define one of them, you must also define the other one.  
+ Derleyici `IsTrue` ve `IsFalse` işleçlerini *eşleşen bir çift*olarak değerlendirir. Diğer bir deyişle, bunlardan birini tanımlarsanız, diğerini de tanımlamanız gerekir.  
   
-## <a name="compiler-use-of-istrue"></a>Compiler Use of IsTrue  
- When you have defined a class or structure, you can use a variable of that type in a `For`, `If`, `Else If`, or `While` statement, or in a `When` clause. If you do this, the compiler requires an operator that converts your type into a `Boolean` value so it can test a condition. It searches for a suitable operator in the following order:  
+## <a name="compiler-use-of-istrue"></a>Iıstrue derleyicisi kullanımı  
+ Bir sınıf veya yapı tanımladığınızda, bir `For`, `If`, `Else If`veya `While` ifadesinde veya bir `When` yan tümcesinde bu türde bir değişken kullanabilirsiniz. Bunu yaparsanız, derleyici bir koşulu test edebilmesi için türünüzü `Boolean` bir değere dönüştüren bir operatör gerektirir. Uygun bir işleci aşağıdaki sırayla arar:  
   
-1. A widening conversion operator from your class or structure to `Boolean`.  
+1. Sınıfınız veya yapıınızdan `Boolean`genişletme işleci.  
   
-2. A widening conversion operator from your class or structure to `Boolean?`.  
+2. Sınıfınız veya yapıınızdan `Boolean?`genişletme işleci.  
   
-3. The `IsTrue` operator on your class or structure.  
+3. Sınıfınıza veya yapınızı `IsTrue` işleci.  
   
-4. A narrowing conversion to `Boolean?` that does not involve a conversion from `Boolean` to `Boolean?`.  
+4. `Boolean` `Boolean?`'e dönüştürme içermeyen `Boolean?` için bir daraltma dönüştürmesi.  
   
-5. A narrowing conversion operator from your class or structure to `Boolean`.  
+5. Sınıfınız veya yapıınızdan `Boolean`daraltma dönüştürmesi işleci.  
   
- If you have not defined any conversion to `Boolean` or an `IsTrue` operator, the compiler signals an error.  
+ `Boolean` veya `IsTrue` işlecine herhangi bir dönüştürme tanımdıysanız, derleyici bir hata bildirir.  
   
 > [!NOTE]
-> The `IsTrue` operator can be *overloaded*, which means that a class or structure can redefine its behavior when its operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> `IsTrue` işleci *aşırı*yüklenebilir, yani işleneni Bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- The following code example defines the outline of a structure that includes definitions for the `IsFalse` and `IsTrue` operators.  
+ Aşağıdaki kod örneği, `IsFalse` ve `IsTrue` işleçleri için tanımlar içeren bir yapının ana hattını tanımlar.  
   
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   

@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347106"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While Tümcesi (Visual Basic)
-Includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.  
+Belirtilen koşul `true` olduğu ve kalan öğeleri atlayan sürece bir koleksiyondaki öğeleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,21 +28,21 @@ Take While expression
   
 |Terim|Tanım|  
 |---|---|  
-|`expression`|Gerekli. An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
+|`expression`|Gerekli. İçin öğeleri test eden bir koşulu temsil eden bir ifade. İfade bir `Boolean` değeri veya bir `Boolean`olarak değerlendirilecek `Integer` gibi işlevsel eşdeğerini döndürmelidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `Take While` clause includes elements from the start of a query result until the supplied `expression` returns `false`. After the `expression` returns `false`, the query will bypass all remaining elements. The `expression` is ignored for the remaining results.  
+ `Take While` yan tümcesi, sağlanan `expression` `false`dönene kadar bir sorgu sonucunun başından itibaren öğeleri içerir. `expression` `false`döndüğünde sorgu kalan tüm öğeleri atlar. Kalan sonuçlar için `expression` yok sayılır.  
   
- The `Take While` clause differs from the `Where` clause in that the `Where` clause can be used to include all elements from a query that meet a particular condition. The `Take While` clause includes elements only until the first time that the condition is not satisfied. The `Take While` clause is most useful when you are working with an ordered query result.  
+ `Take While` yan tümcesi, `Where` yan tümcesinin belirli bir koşulu karşılayan bir sorgudaki tüm öğeleri dahil etmek için kullanılabilir `Where` yan tümcesinden farklıdır. `Take While` yan tümcesi yalnızca koşul karşılanmadığı sürece öğeleri içerir. `Take While` yan tümcesi, düzenli bir sorgu sonucuyla çalışırken en yararlı seçenektir.  
   
 ## <a name="example"></a>Örnek  
- The following code example uses the `Take While` clause to retrieve results until the first customer without any orders is found.  
+ Aşağıdaki kod örneği, bir sipariş olmadan ilk müşteri bulunana kadar sonuçları almak için `Take While` yan tümcesini kullanır.  
   
  [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)

@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349429"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA Değişmez Değeri (Visual Basic)
-A literal representing an <xref:System.Xml.Linq.XCData> object.  
+<xref:System.Xml.Linq.XCData> nesnesini temsil eden bir sabit değer.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,33 +26,33 @@ A literal representing an <xref:System.Xml.Linq.XCData> object.
   
 ## <a name="parts"></a>Bölümler  
  `<![CDATA[`  
- Gerekli. Denotes the start of the XML CDATA section.  
+ Gerekli. XML CDATA bölümünün başlangıcını gösterir.  
   
  `content`  
- Gerekli. Text content to appear in the XML CDATA section.  
+ Gerekli. XML CDATA bölümünde görünecek metin içeriği.  
   
  `]]>`  
- Gerekli. Denotes the end of the section.  
+ Gerekli. Bölümün sonunu gösterir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- An <xref:System.Xml.Linq.XCData> object.  
+ <xref:System.Xml.Linq.XCData> nesnesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- XML CDATA sections contain raw text that should be included, but not parsed, with the XML that contains it. A XML CDATA section can contain any text. This includes reserved XML characters. The XML CDATA section ends with the sequence "]]>". This implies the following points:  
+ XML CDATA kısımları, kendisini içeren XML ile birlikte dahil edilmelidir, ancak ayrıştırılmaz olması gereken ham metni içerir. Bir XML CDATA bölümü, herhangi bir metin içerebilir. Bu, ayrılmış XML karakterleri içerir. XML CDATA bölümü "]] >" dizisiyle biter. Bu, aşağıdaki noktaları gösterir:  
   
-- You cannot use an embedded expression in an XML CDATA literal because the embedded expression delimiters are valid XML CDATA content.  
+- Gömülü ifade sınırlayıcıları geçerli XML CDATA içeriği olduğundan, bir XML CDATA değişmez değerinde gömülü bir ifade kullanamazsınız.  
   
-- XML CDATA sections cannot be nested, because `content` cannot contain the value "]]>".  
+- `content` "]] >" değerini içeremediğinden, XML CDATA bölümleri iç içe geçirilemez.  
   
- You can assign an XML CDATA literal to a variable, or include it in an XML element literal.  
+ Bir değişkene bir XML CDATA sabit değeri atayabilir veya onu bir XML öğesi değişmez değerine dahil edebilirsiniz.  
   
 > [!NOTE]
-> An XML literal can span multiple lines but does not use line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+> Bir XML sabit değeri birden fazla satıra yayılabilir, ancak satır devamlılık karakterlerini kullanmaz. Bu sayede bir XML belgesinden içerik kopyalayabilir ve doğrudan bir Visual Basic programına yapıştırabilirsiniz.  
   
- The Visual Basic compiler converts the XML CDATA literal to a call to the <xref:System.Xml.Linq.XCData.%23ctor%2A> constructor.  
+ Visual Basic derleyici, XML CDATA değişmez değerini <xref:System.Xml.Linq.XCData.%23ctor%2A> oluşturucusuna bir çağrıya dönüştürür.  
   
 ## <a name="example"></a>Örnek  
- The following example creates a CDATA section that contains the text "Can contain literal \<XML> tags".  
+ Aşağıdaki örnek, "değişmez \<XML > etiketleri içerebilir" metnini içeren bir CDATA bölümü oluşturur.  
   
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  
   
@@ -61,4 +61,4 @@ A literal representing an <xref:System.Xml.Linq.XCData> object.
 - <xref:System.Xml.Linq.XCData>
 - [XML Öğesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
 - [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Creating XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Visual Basic XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

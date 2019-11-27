@@ -50,8 +50,8 @@ Bu konuda <xref:System.Windows.Controls.TreeView> denetimine yönelik stiller ve
 |Devre dışı|Ortak durumlar|<xref:System.Windows.Controls.TreeViewItem> devre dışı bırakıldı.|  
 |Diğinize|Odaklardaki durumlar|<xref:System.Windows.Controls.TreeViewItem> odağa sahip.|  
 |Odaklanmadan gözetle|Odaklardaki durumlar|<xref:System.Windows.Controls.TreeViewItem> odağı yok.|  
-|Genişletileceğini|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> denetimi genişletilir.|  
-|Tılan|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> denetimi daraltılır.|  
+|Genişletilmiş|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> denetimi genişletilir.|  
+|Daraltılmış|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> denetimi daraltılır.|  
 |HasItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> öğeler vardır.|  
 |Noıtems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> öğe yok.|  
 |Seçildi|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> seçilidir.|  

@@ -13,9 +13,9 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343744"
 ---
-# <a name="end-keyword-statement-visual-basic"></a>End \<keyword> Statement (Visual Basic)
+# <a name="end-keyword-statement-visual-basic"></a>End \<anahtar sözcüğü > deyimin (Visual Basic)
 
-When followed by an additional keyword, terminates the definition of the statement block introduced by that keyword.
+Ardından ek bir anahtar sözcük tarafından izlenen, bu anahtar sözcük tarafından tanıtılan bildiri bloğunun tanımını sonlandırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,36 +46,36 @@ End With
   
 ## <a name="parts"></a>Bölümler
 
-|Part|Açıklama|
+|Bölümüyle|Açıklama|
 |---|---|
-|`End`|Gerekli. Terminates the definition of the programming element.|
-|`AddHandler`|Required to terminate an `AddHandler` accessor begun by a matching `AddHandler` statement in a custom [Event Statement](event-statement.md).|
-|`Class`|Required to terminate a class definition begun by a matching [Class Statement](class-statement.md).|
-|`Enum`|Required to terminate an enumeration definition begun by a matching [Enum Statement](enum-statement.md).|
-|`Event`|Required to terminate a `Custom` event definition begun by a matching [Event Statement](event-statement.md).|  
-|`Function`|Required to terminate a `Function` procedure definition begun by a matching [Function Statement](function-statement.md). If execution encounters an `End Function` statement, control returns to the calling code.|
-|`Get`|Required to terminate a `Property` procedure definition begun by a matching [Get Statement](get-statement.md). If execution encounters an `End Get` statement, control returns to the statement requesting the property's value.|
-|`If`|Required to terminate an `If`...`Then`...`Else` block definition begun by a matching `If` statement. See [If...Then...Else Statement](if-then-else-statement.md).|
-|`Interface`|Required to terminate an interface definition begun by a matching [Interface Statement](interface-statement.md).|
-|`Module`|Required to terminate a module definition begun by a matching [Module Statement](module-statement.md).|
-|`Namespace`|Required to terminate a namespace definition begun by a matching [Namespace Statement](namespace-statement.md).|
-|`Operator`|Required to terminate an operator definition begun by a matching [Operator Statement](operator-statement.md).|
-|`Property`|Required to terminate a property definition begun by a matching [Property Statement](property-statement.md).|
-|`RaiseEvent`|Required to terminate a `RaiseEvent` accessor begun by a matching `RaiseEvent` statement in a custom [Event Statement](event-statement.md).|
-|`RemoveHandler`|Required to terminate a `RemoveHandler` accessor begun by a matching `RemoveHandler` statement in a custom [Event Statement](event-statement.md).|
-|`Select`|Required to terminate a `Select`...`Case` block definition begun by a matching `Select` statement. See [Select...Case Statement](select-case-statement.md).  
-|`Set`|Required to terminate a `Property` procedure definition begun by a matching [Set Statement](set-statement.md). If execution encounters an `End Set` statement, control returns to the statement setting the property's value.  
-|`Structure`|Required to terminate a structure definition begun by a matching [Structure Statement](structure-statement.md).  
-|`Sub`|Required to terminate a `Sub` procedure definition begun by a matching [Sub Statement](sub-statement.md). If execution encounters an `End Sub` statement, control returns to the calling code.  
-|`SyncLock`|Required to terminate a `SyncLock` block definition begun by a matching `SyncLock` statement. See [SyncLock Statement](synclock-statement.md).  
-|`Try`|Required to terminate a `Try`...`Catch`...`Finally` block definition begun by a matching `Try` statement. See [Try...Catch...Finally Statement](try-catch-finally-statement.md).  
-|`While`|Required to terminate a `While` loop definition begun by a matching `While` statement. See [While...End While Statement](while-end-while-statement.md).  
-|`With`| Required to terminate a `With` block definition begun by a matching `With` statement. See [With...End With Statement](with-end-with-statement.md).  
+|`End`|Gerekli. Programlama öğesinin tanımını sonlandırır.|
+|`AddHandler`|Özel bir [olay deyimindeki](event-statement.md)eşleşen bir `AddHandler` ifadesiyle başlatılan bir `AddHandler` erişimcisini sonlandırmak için gereklidir.|
+|`Class`|Eşleşen [sınıf ifadesiyle](class-statement.md)başlatılan bir sınıf tanımını sonlandırmak için gereklidir.|
+|`Enum`|Bir sabit listesi tanımını sonlandırmak için, eşleşen bir [enum ifadesiyle](enum-statement.md)başlamış olması gerekir.|
+|`Event`|Eşleşen bir [olay bildirimiyle](event-statement.md)başlatılan `Custom` bir olay tanımını sonlandırmak için gereklidir.|  
+|`Function`|Eşleşen bir [Işlev ifadesiyle](function-statement.md)başlatılan bir `Function` yordam tanımını sonlandırmak için gereklidir. Yürütme bir `End Function` ifadesiyle karşılaşırsa, Denetim çağıran koda geri döner.|
+|`Get`|Eşleşen bir [Get ifadesiyle](get-statement.md)başlatılan `Property` yordam tanımını sonlandırmak için gereklidir. Yürütme bir `End Get` ifadesiyle karşılaşırsa, denetim özelliğin değerini isteyen ifadeye döner.|
+|`If`|Eşleşen bir `If` ifadesiyle başlatılan bir `If`...`Then`...`Else` blok tanımını sonlandırmak için gereklidir. Bkz [.... Sonra... Else bildirisi](if-then-else-statement.md).|
+|`Interface`|Eşleşen [arabirim bildirimiyle](interface-statement.md)başlatılan bir arabirim tanımını sonlandırmak için gereklidir.|
+|`Module`|Eşleşen bir [Modül ifadesiyle](module-statement.md)başlatılan bir modül tanımını sonlandırmak için gereklidir.|
+|`Namespace`|Bir ad alanı tanımını sonlandırmak için eşleşen bir [ad alanı ifadesiyle](namespace-statement.md)başlamış olması gerekir.|
+|`Operator`|Eşleşen [Işleç ifadesiyle](operator-statement.md)başlatılan bir operatör tanımını sonlandırmak için gereklidir.|
+|`Property`|Eşleşen bir [özellik ifadesiyle](property-statement.md)başlatılan bir özellik tanımını sonlandırmak için gereklidir.|
+|`RaiseEvent`|Özel bir [olay deyimindeki](event-statement.md)eşleşen bir `RaiseEvent` ifadesiyle başlatılan bir `RaiseEvent` erişimcisini sonlandırmak için gereklidir.|
+|`RemoveHandler`|Özel bir [olay deyimindeki](event-statement.md)eşleşen bir `RemoveHandler` ifadesiyle başlatılan bir `RemoveHandler` erişimcisini sonlandırmak için gereklidir.|
+|`Select`|`Select`...`Case` blok tanımının eşleşen bir `Select` ifadesiyle başlamış olması gerekir. Bkz [. Select... Case bildirisi](select-case-statement.md).  
+|`Set`|Eşleşen bir [küme ifadesiyle](set-statement.md)başlatılan bir `Property` yordam tanımını sonlandırmak için gereklidir. Yürütme bir `End Set` ifadesiyle karşılaşırsa, denetim, özelliğin değerini ayarlayarak ifadeye döner.  
+|`Structure`|Eşleşen bir [Yapı bildirimiyle](structure-statement.md)başlatılan bir yapı tanımını sonlandırmak için gereklidir.  
+|`Sub`|Eşleşen bir [Sub ifadesiyle](sub-statement.md)başlatılan bir `Sub` yordam tanımını sonlandırmak için gereklidir. Yürütme bir `End Sub` ifadesiyle karşılaşırsa, Denetim çağıran koda geri döner.  
+|`SyncLock`|Eşleşen bir `SyncLock` ifadesiyle başlatılan bir `SyncLock` blok tanımını sonlandırmak için gereklidir. Bkz. [SyncLock bildirisi](synclock-statement.md).  
+|`Try`|Eşleşen bir `Try` ifadesiyle başlatılan bir `Try`...`Catch`...`Finally` blok tanımını sonlandırmak için gereklidir. Bkz [. TRY... Yakala... Finally ekstresi](try-catch-finally-statement.md).  
+|`While`|Eşleşen bir `While` ifadesiyle başlatılan bir `While` döngüsü tanımını sonlandırmak için gereklidir. Bkz.... [ End while bildirisi](while-end-while-statement.md).  
+|`With`| Eşleşen bir `With` ifadesiyle başlatılan bir `With` blok tanımını sonlandırmak için gereklidir. Bkz.... [ WITH Ifadesiyle biter](with-end-with-statement.md).  
 |||
   
 ## <a name="directives"></a>Yönergeler
 
-When preceded by a number sign (`#`), the `End` keyword terminates a preprocessing block introduced by the corresponding directive.  
+Önünde bir sayı işareti (`#`) olduğunda, `End` anahtar sözcüğü karşılık gelen yönerge tarafından tanıtılan bir ön işleme bloğunu sonlandırır.  
 
 ```vb
 #End ExternalSource
@@ -83,21 +83,21 @@ When preceded by a number sign (`#`), the `End` keyword terminates a preprocessi
 #End Region
 ```
 
-|Part|Açıklama|
+|Bölümüyle|Açıklama|
 |---|---|
-|`#End`|Gerekli. Terminates the definition of the preprocessing block.|
-|`ExternalSource`|Required to terminate an external source block begun by a matching [#ExternalSource Directive](../directives/externalsource-directive.md).|
-|`If`|Required to terminate a conditional compilation block begun by a matching `#If` directive. See [#If...Then...#Else Directives](../directives/if-then-else-directives.md).|
-|`Region`|Required to terminate a source region block begun by a matching [#Region Directive](../directives/region-directive.md).|
+|`#End`|Gerekli. Ön işleme bloğunun tanımını sonlandırır.|
+|`ExternalSource`|Bir dış kaynak bloğunu, eşleşen bir [#ExternalSource yönergesi](../directives/externalsource-directive.md)tarafından başlatılan sonlandırmak için gereklidir.|
+|`If`|Eşleşen bir `#If` yönergesi tarafından başlatılan koşullu bir derleme bloğunu sonlandırmak için gereklidir. Bkz [. #If... Sonra... #Else yönergeleri](../directives/if-then-else-directives.md).|
+|`Region`|Eşleşen bir [#Region yönergesi](../directives/region-directive.md)tarafından başlatılan bir kaynak bölgesi bloğunu sonlandırmak için gereklidir.|
 |||
 
 ## <a name="remarks"></a>Açıklamalar
 
-The [End Statement](end-statement.md), without an additional keyword, terminates execution immediately.
+Ek anahtar sözcük olmadan [End ifadesinin](end-statement.md)yürütülmesi hemen sonlandırılır.
 
 ## <a name="smart-device-developer-notes"></a>Akıllı Cihaz Geliştirici Notları  
 
-The `End` statement, without an additional keyword, is not supported.  
+Ek bir anahtar sözcük olmadan `End` deyimleri desteklenmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

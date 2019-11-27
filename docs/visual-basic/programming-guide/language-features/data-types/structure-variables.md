@@ -16,7 +16,7 @@ ms.locfileid: "74346300"
 ---
 # <a name="structure-variables-visual-basic"></a>Yapı Değişkenleri (Visual Basic)
 
-Once you have created a structure, you can declare procedure-level and module-level variables as that type. For example, you can create a structure that records information about a computer system. The following example demonstrates this.
+Bir yapı oluşturduktan sonra, bu tür olarak yordam düzeyi ve modül düzeyi değişkenler bildirebilirsiniz. Örneğin, bir bilgisayar sistemiyle ilgili bilgileri kaydeden bir yapı oluşturabilirsiniz. Aşağıdaki örnek bunu gösterir.
 
 ```vb
 Public Structure systemInfo
@@ -26,18 +26,18 @@ Public Structure systemInfo
 End Structure
 ```
 
-You can now declare variables of that type. The following declaration illustrates this.
+Artık bu tür değişkenleri bildirebilirsiniz. Aşağıdaki bildirimde bu gösterilmektedir.
 
 ```vb
 Dim mySystem, yourSystem As systemInfo
 ```
 
 > [!NOTE]
-> In classes and modules, structures declared using the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) default to public access. If you intend a structure to be private, make sure you declare it using the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword.
+> Sınıflarda ve modüllerde, [Dim ifadesiyle](../../../../visual-basic/language-reference/statements/dim-statement.md) varsayılan olarak genel erişim için belirtilen yapılar. Bir yapıyı özel olarak düşünüyorsanız, [Private](../../../../visual-basic/language-reference/modifiers/private.md) anahtar sözcüğünü kullanarak bildirdiğinizden emin olun.
 
-## <a name="access-to-structure-values"></a>Access to Structure Values
+## <a name="access-to-structure-values"></a>Yapı değerlerine erişim
 
-To assign and retrieve values from the elements of a structure variable, you use the same syntax as you use to set and get properties on an object. You place the member access operator (`.`) between the structure variable name and the element name. The following example accesses elements of the variables previously declared as type `systemInfo`.
+Bir yapı değişkeninin öğelerinden değer atamak ve almak için, bir nesne üzerinde özellikleri ayarlamak ve almak için kullandığınız söz dizimini kullanın. Üye erişim işlecini (`.`) yapı değişkeni adı ve öğe adı arasında yerleştirebilirsiniz. Aşağıdaki örnek, daha önce tür `systemInfo`olarak belirtilen değişkenlerin öğelerine erişir.
 
 ```vb
 mySystem.cPU = "486"
@@ -45,15 +45,15 @@ Dim tooOld As Boolean
 If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True
 ```
 
-## <a name="assigning-structure-variables"></a>Assigning Structure Variables
+## <a name="assigning-structure-variables"></a>Yapı değişkenleri atama
 
-You can also assign one variable to another if both are of the same structure type. This copies all the elements of one structure to the corresponding elements in the other. The following declaration illustrates this.
+Aynı yapı türünde her ikisi de varsa, başka bir değişken de atayabilirsiniz. Bu, bir yapının tüm öğelerini diğerinin karşılık gelen öğelerine kopyalar. Aşağıdaki bildirimde bu gösterilmektedir.
 
 ```vb
 yourSystem = mySystem
 ```
 
-If a structure element is a reference type, such as a `String`, `Object`, or array, the pointer to the data is copied. In the previous example, if `systemInfo` had included an object variable, then the preceding example would have copied the pointer from `mySystem` to `yourSystem`, and a change to the object's data through one structure would be in effect when accessed through the other structure.
+Bir yapı öğesi `String`, `Object`veya dizi gibi bir başvuru türü ise, verilerin işaretçisi kopyalanır. Önceki örnekte, `systemInfo` bir nesne değişkeni içeriyorsa, yukarıdaki örnek işaretçiyi `mySystem` `yourSystem`öğesine kopyalamalıdır ve bir yapı aracılığıyla nesne verilerinde yapılan bir değişiklik, diğer yapıyla erişildiğinde geçerli olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

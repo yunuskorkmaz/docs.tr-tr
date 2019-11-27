@@ -19,31 +19,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344838"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme (Visual Basic)
-When you call a procedure, you follow the procedure name with an argument list in parentheses. You supply an argument corresponding to every required parameter the procedure defines, and you can optionally supply arguments to the `Optional` parameters. If you do not supply an `Optional` parameter in the call, you must include a comma to mark its place in the argument list if you are supplying any subsequent arguments.  
+Bir yordamı çağırdığınızda, yordam adını parantez içindeki bir bağımsız değişken listesiyle takip edersiniz. Yordamın tanımladığı her gerekli parametreye karşılık gelen bir bağımsız değişken sağlarsınız ve isteğe bağlı olarak `Optional` parametrelere bağımsız değişkenler sağlayabilirsiniz. Çağrıda bir `Optional` parametresi belirtmezseniz, sonraki bağımsız değişkenleri sağlarsanız, bağımsız değişken listesindeki yerini işaretlemek için bir virgül dahil etmeniz gerekir.  
   
- If you intend to pass an argument of a data type different from that of its corresponding parameter, such as `Byte` to `String`, you can set the type-checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) to `Off`. If `Option Strict` is `On`, you must use either widening conversions or explicit conversion keywords. For more information, see [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+ `String``Byte` gibi, karşılık gelen parametreden farklı bir veri türü bağımsız değişkenini geçirmek istiyorsanız, tür denetimi anahtarını ([Option Strict deyiminizi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) `Off`olarak ayarlayabilirsiniz. `Option Strict` `On`ise, genişleyen dönüşümler ya da açık dönüştürme anahtar sözcükleri kullanmanız gerekir. Daha fazla bilgi için bkz. [genişletme ve daraltma dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) ve [tür dönüştürme işlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
- For more information, see [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md).  
+ Daha fazla bilgi için bkz. [yordam parametreleri ve bağımsız değişkenleri](./procedure-parameters-and-arguments.md).  
   
-### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>To pass one or more arguments to a procedure  
+### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>Bir yordama bir veya daha fazla bağımsız değişken geçirmek için  
   
-1. In the calling statement, follow the procedure name with parentheses.  
+1. Çağırma ifadesinde, parantez ile yordam adını izleyin.  
   
-2. Inside the parentheses, put an argument list. Include an argument for each required parameter the procedure defines, and separate the arguments with commas.  
+2. Parantez içinde bir bağımsız değişken listesi koyun. Yordamın tanımladığı her bir gerekli parametre için bir bağımsız değişken ekleyin ve bağımsız değişkenleri virgülle ayırın.  
   
-3. Make sure each argument is a valid expression that evaluates to a data type convertible to the type the procedure defines for the corresponding parameter.  
+3. Her bağımsız değişkenin, karşılık gelen parametre için, yordamın tanımladığı türe dönüştürülebilir bir veri türünü değerlendiren geçerli bir ifade olduğundan emin olun.  
   
-4. If a parameter is defined as [Optional](../../../../visual-basic/language-reference/modifiers/optional.md), you can either include it in the argument list or omit it. If you omit it, the procedure uses the default value defined for that parameter.  
+4. Bir parametre [Isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md)olarak tanımlanmışsa bağımsız değişken listesine dahil edebilir veya atlayabilirsiniz. Bunu atlarsanız yordam, bu parametre için tanımlanan varsayılan değeri kullanır.  
   
-5. If you omit an argument for an `Optional` parameter and there is another parameter after it in the parameter list, you can mark the place of the omitted argument by an extra comma in the argument list.  
+5. Bir `Optional` parametresi için bir bağımsız değişkeni atlarsanız ve parametre listesinde bundan sonra başka bir parametre varsa, atlanan bağımsız değişkenin yerini bağımsız değişken listesinde fazladan bir virgül ile işaretleyebilirsiniz.  
   
-     The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function.  
+     Aşağıdaki örnek Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> işlevini çağırır.  
   
      [!code-vb[VbVbcnProcedures#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#34)]  
   
-     The preceding example supplies the required first argument, which is the message string to be displayed. It omits an argument for the optional second parameter, which specifies the buttons to be displayed on the message box. Because the call does not supply a value, `MsgBox` uses the default value, `MsgBoxStyle.OKOnly`, which displays only an **OK** button.  
+     Önceki örnek, görüntülenecek ileti dizesi olan gerekli ilk bağımsız değişkeni sağlar. İleti kutusunda görüntülenecek düğmeleri belirten isteğe bağlı ikinci parametre için bir bağımsız değişkeni atlar. Çağrı bir değer sağlamadığı için `MsgBox` varsayılan değer olan `MsgBoxStyle.OKOnly`kullanır ve yalnızca bir **Tamam** düğmesi görüntüler.  
   
-     The second comma in the argument list marks the place of the omitted second argument, and the last string is passed to the optional third parameter of `MsgBox`, which is the text to be displayed in the title bar.  
+     Bağımsız değişken listesindeki ikinci virgül, atlanan ikinci bağımsız değişkenin yerini işaret ediyor ve son dize, başlık çubuğunda görüntülenecek metin olan `MsgBox`isteğe bağlı üçüncü parametreye geçirilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -56,4 +56,4 @@ When you call a procedure, you follow the procedure name with an argument list i
 - [Özyinelemeli Yordamlar](./recursive-procedures.md)
 - [Yordam Aşırı Yüklemesi](./procedure-overloading.md)
 - [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Object-Oriented Programming (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [Nesne odaklı programlama (Visual Basic)](../../concepts/object-oriented-programming.md)

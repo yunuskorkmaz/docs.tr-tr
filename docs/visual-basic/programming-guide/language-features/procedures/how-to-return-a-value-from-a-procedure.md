@@ -14,35 +14,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346023"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Nasıl yapılır: Bir Yordamdan Değer Döndürme (Visual Basic)
-A `Function` procedure returns a value to the calling code either by executing a `Return` statement or by encountering an `Exit Function` or `End Function` statement.  
+`Function` yordamı, çağırma koduna bir `Return` ifadesiyle veya `Exit Function` ya da `End Function` ifadesiyle karşılaşarak bir değer döndürür.  
   
-### <a name="to-return-a-value-using-the-return-statement"></a>To return a value using the Return statement  
+### <a name="to-return-a-value-using-the-return-statement"></a>Return ifadesini kullanarak bir değer döndürmek için  
   
-1. Put a `Return` statement at the point where the procedure's task is completed.  
+1. Yordamın görevinin tamamlandığı noktaya `Return` bir ifade koyun.  
   
-2. Follow the `Return` keyword with an expression that yields the value you want to return to the calling code.  
+2. Çağırma koduna döndürmek istediğiniz değeri veren bir ifadeyle `Return` anahtar sözcüğünü izleyin.  
   
-3. You can have more than one `Return` statement in the same procedure.  
+3. Aynı yordamda birden fazla `Return` deyiminiz olabilir.  
   
-     The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, and returns it to the calling code.  
+     Aşağıdaki `Function` yordam, sağ üçgenin en uzun tarafını veya hipotenüsü değerini hesaplar ve bunu çağıran koda döndürür.  
   
      [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
-     The following example shows a typical call to `hypotenuse`, which stores the returned value.  
+     Aşağıdaki örnek, döndürülen değeri depolayan `hypotenuse`tipik bir çağrısını gösterir.  
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
-### <a name="to-return-a-value-using-exit-function-or-end-function"></a>To return a value using Exit Function or End Function  
+### <a name="to-return-a-value-using-exit-function-or-end-function"></a>Çıkış Işlevini veya End Işlevini kullanarak bir değer döndürmek için  
   
-1. In at least one place in the `Function` procedure, assign a value to the procedure's name.  
+1. `Function` yordamında en az bir yerde, yordamın adına bir değer atayın.  
   
-2. When you execute an `Exit Function` or `End Function` statement, Visual Basic returns the value most recently assigned to the procedure's name.  
+2. Bir `Exit Function` veya `End Function` bildirisini çalıştırdığınızda Visual Basic yordamın adına en son atanan değeri döndürür.  
   
-3. You can have more than one `Exit Function` statement in the same procedure, and you can mix `Return` and `Exit Function` statements in the same procedure.  
+3. Aynı yordamda birden fazla `Exit Function` deyimi olabilir ve aynı yordamda `Return` ve `Exit Function` deyimlerini karıştırabilirsiniz.  
   
-4. You can have only one `End Function` statement in a `Function` procedure.  
+4. Bir `Function` yordamında yalnızca bir `End Function` deyiminiz olabilir.  
   
-     For more information and an example, see "Return Value" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
+     Daha fazla bilgi ve örnek için bkz. [Function deyimindeki](../../../../visual-basic/language-reference/statements/function-statement.md)"dönüş değeri".  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439524"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach Yöntemi
-Called by the common language runtime (CLR) to give the profiler an opportunity to initialize its state after an attach operation.  
+Profil oluşturucuya bir iliştirme işleminden sonra durumunu başlatma fırsatı vermek için ortak dil çalışma zamanı (CLR) tarafından çağırılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,25 +36,25 @@ HRESULT InitializeForAttach(
   
 ## <a name="parameters"></a>Parametreler  
  `pCorProfilerInfoUnk`  
- [in] An interface pointer for the `ICorProfilerInfo*` interface.  
+ 'ndaki `ICorProfilerInfo*` arabirimi için bir arabirim işaretçisi.  
   
  `pvClientData`  
- [in] A pointer to the data passed to the [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in its `pvClientData` parameter. If this parameter is null, `cbClientData` will be 0 (zero). The CLR frees this memory when it returns from `InitializeForAttach`.  
+ 'ndaki `pvClientData` parametresindeki [ıclrprofile:: AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) yöntemine geçirilen verilere yönelik bir işaretçi. Bu parametre null ise, `cbClientData` 0 (sıfır) olur. CLR `InitializeForAttach`'den döndüğünde bu belleği serbest bırakır.  
   
  `cbClientData`  
- [in] The size, in bytes, of the data that `pvClientData` points to.  
+ 'ndaki `pvClientData` tarafından işaret edilen verilerin bayt cinsinden boyutu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The CLR calls `InitializeForAttach` to give the profiler an opportunity to request callbacks.  
+ CLR, profil oluşturucuya geri çağırma istekleri için bir fırsat vermek üzere `InitializeForAttach` çağırır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

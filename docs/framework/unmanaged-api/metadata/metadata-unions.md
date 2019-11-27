@@ -14,11 +14,11 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430681"
 ---
 # <a name="metadata-unions"></a>Meta Veri Birleşmeleri
-This section describes the unmanaged unions that the metadata API uses.  
+Bu bölümde, meta veri API 'sinin kullandığı yönetilmeyen birleşimler açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [CeeSectionRelocExtra Birleşimi](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
- Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section  
+ Bir bölümün yerini değiştirmek için [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) arabirimi tarafından kullanılan bir adres sapmasını temsil eder  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

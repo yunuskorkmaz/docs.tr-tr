@@ -24,62 +24,62 @@ ms.locfileid: "74346084"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a>İzlenecek Yol: Sınıfları Tanımlama (Visual Basic)
 
-This walkthrough demonstrates how to define classes, which you can then use to create objects. It also shows you how to add properties and methods to the new class, and demonstrates how to initialize an object.  
+Bu izlenecek yolda, daha sonra nesneleri oluşturmak için kullanabileceğiniz sınıfların nasıl tanımlanacağı gösterilmektedir. Ayrıca, yeni sınıfa nasıl özellik ve Yöntem ekleneceğini ve bir nesnenin nasıl başlatılacağını gösterir.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="to-define-a-class"></a>To define a class
+## <a name="to-define-a-class"></a>Bir sınıf tanımlamak için
   
-1. Create a project by clicking **New Project** on the **File** menu. The **New Project** dialog box appears.  
+1. **Dosya** menüsünde **Yeni proje ' ye** tıklayarak bir proje oluşturun. **Yeni proje** iletişim kutusu görüntülenir.  
   
-2. Select Windows Application from the list of Visual Basic project templates to display the new project.  
+2. Yeni projeyi göstermek için Visual Basic proje şablonları listesinden Windows uygulaması ' nı seçin.  
   
-3. Add a new class to the project by clicking **Add Class** on the **Project** menu. The **Add New Item** dialog box appears.  
+3. **Proje** menüsünde **Sınıf Ekle** ' ye tıklayarak projeye yeni bir sınıf ekleyin. **Yeni öğe Ekle** iletişim kutusu görüntülenir.  
   
-4. Select the **Class** template.  
+4. **Sınıf** şablonunu seçin.  
   
-5. Name the new class `UserNameInfo.vb`, and then click **Add** to display the code for the new class.  
+5. Yeni sınıf `UserNameInfo.vb`adlandırın ve ardından **Ekle** ' ye tıklayarak yeni sınıf için kodu görüntüleyin.  
   
      [!code-vb[VbVbalrOOP#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#5)]
   
     > [!NOTE]
-    > You can use the Visual Basic **Code Editor** to add a class to your startup form by typing the `Class` keyword followed by the name of the new class. The **Code Editor** provides a corresponding `End Class` statement for you.  
+    > Visual Basic **kod düzenleyicisini** kullanarak başlangıç formunuza bir sınıf ekleyebilirsiniz ve ardından yeni sınıfın adı ile `Class` anahtar sözcüğünü yazarak başlangıç formunuza bir sınıf ekleyebilirsiniz. **Kod Düzenleyicisi** sizin için karşılık gelen bir `End Class` ekstresi sağlar.  
   
-6. Define a private field for the class by adding the following code between the `Class` and `End Class` statements:  
+6. `Class` ve `End Class` deyimleri arasına aşağıdaki kodu ekleyerek sınıf için özel bir alan tanımlayın:  
   
      [!code-vb[VbVbalrOOP#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#7)]
   
-     Declaring the field as `Private` means it can be used only within the class. You can make fields available from outside a class by using access modifiers such as `Public` that provide more access. For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     Alanı `Private` olarak bildirmek, yalnızca sınıfında kullanılabileceği anlamına gelir. Daha fazla erişim sağlayan `Public` gibi erişim değiştiricilerini kullanarak alanları bir sınıfın dışından kullanılabilir hale getirebilirsiniz. Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
-7. Define a property for the class by adding the following code:  
+7. Aşağıdaki kodu ekleyerek sınıf için bir özellik tanımlayın:  
   
      [!code-vb[VbVbalrOOP#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#8)]
   
-8. Define a method for the class by adding the following code:  
+8. Aşağıdaki kodu ekleyerek sınıf için bir yöntem tanımlayın:  
   
      [!code-vb[VbVbalrOOP#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#9)]
   
-9. Define a parameterized constructor for the new class by adding a procedure named `Sub New`:  
+9. `Sub New`adlı bir yordam ekleyerek yeni sınıf için parametreli bir Oluşturucu tanımlayın:  
   
      [!code-vb[VbVbalrOOP#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#10)]
   
-     The `Sub New` constructor is called automatically when an object based on this class is created. This constructor sets the value of the field that holds the user name.  
+     `Sub New` Oluşturucusu, bu sınıfa dayalı bir nesne oluşturulduğunda otomatik olarak çağrılır. Bu Oluşturucu, Kullanıcı adını tutan alanın değerini ayarlar.  
   
-## <a name="to-create-a-button-to-test-the-class"></a>To create a button to test the class
+## <a name="to-create-a-button-to-test-the-class"></a>Sınıfı test etmek üzere bir düğme oluşturmak için
   
-1. Change the startup form to design mode by right-clicking its name in **Solution Explorer** and then clicking **View Designer**. By default, the startup form for Windows Application projects is named Form1.vb. The main form will then appear.  
+1. Başlangıç formunu, **Çözüm Gezgini** adına sağ tıklayıp **Görünüm Tasarımcısı**' na tıklayarak tasarım moduna değiştirin. Varsayılan olarak, Windows uygulama projeleri için başlangıç formu Form1. vb olarak adlandırılır. Ana form daha sonra görüntülenir.  
   
-2. Add a button to the main form and double-click it to display the code for the `Button1_Click` event handler. Add the following code to call the test procedure:  
+2. Ana forma bir düğme ekleyin ve `Button1_Click` olay işleyicisi için kodu göstermek üzere çift tıklayın. Test yordamını çağırmak için aşağıdaki kodu ekleyin:  
   
      [!code-vb[VbVbalrOOP#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#12)]
   
-## <a name="to-run-your-application"></a>To run your application
+## <a name="to-run-your-application"></a>Uygulamanızı çalıştırmak için
   
-1. Run your application by pressing F5. Click the button on the form to call the test procedure. It displays a message stating that the original `UserName` is "MOORE, BOBBY", because the procedure called the `Capitalize` method of the object.  
+1. F5 tuşuna basarak uygulamanızı çalıştırın. Test yordamını çağırmak için formdaki düğmeye tıklayın. Yordamın, nesnenin `Capitalize` yöntemini çağırdığı için, özgün `UserName` "MOORE, BODIRE" olduğunu belirten bir ileti görüntüler.  
   
-2. Click **OK** to dismiss the message box. The `Button1 Click` procedure changes the value of the `UserName` property and displays a message stating that the new value of `UserName` is "Worden, Joe".  
+2. İleti kutusunu kapatmak için **Tamam** ' ı tıklatın. `Button1 Click` yordamı `UserName` özelliğinin değerini değiştirir ve yeni `UserName` değerinin "Worden, ali" olduğunu belirten bir ileti görüntüler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Object-Oriented Programming (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [Nesne odaklı programlama (Visual Basic)](../../concepts/object-oriented-programming.md)
 - [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

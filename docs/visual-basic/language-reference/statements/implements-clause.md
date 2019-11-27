@@ -25,20 +25,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345867"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements Tümcesi (Visual Basic)
-Indicates that a class or structure member is providing the implementation for a member defined in an interface.  
+Bir sınıf veya yapı üyesinin, arabirim içinde tanımlanmış bir üye için uygulama sağladığını gösterir.  
   
 ## <a name="remarks"></a>Açıklamalar  
-The `Implements` keyword is not the same as the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md). You use the `Implements` statement to specify that a class or structure implements one or more interfaces, and then for each member you use the `Implements` keyword to specify which interface and which member it implements.
+`Implements` anahtar sözcüğü, [Implements ifadesiyle](../../../visual-basic/language-reference/statements/implements-statement.md)aynı değildir. Bir sınıf veya yapının bir veya daha fazla arabirim uyguladığını belirtmek için `Implements` ifadesini kullanın ve ardından her üye için, hangi arabirimin ve hangi üyenin uyguladığı için `Implements` anahtar sözcüğünü kullanırsınız.
 
-If a class or structure implements an interface, it must include the `Implements` statement immediately after the [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) or [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md), and it must implement all the members defined by the interface.
+Bir sınıf veya yapı bir arabirim uygularsa, [sınıf](../../../visual-basic/language-reference/statements/class-statement.md) veya [Yapı deyimden](../../../visual-basic/language-reference/statements/structure-statement.md)hemen sonra `Implements` ifadesini içermesi gerekir ve arabirim tarafından tanımlanan tüm üyeleri uygulamalıdır.
 
-## <a name="reimplementation"></a>Reimplementation  
-In a derived class, you can reimplement an interface member that the base class has already implemented. This is different from overriding the base class member in the following respects:
+## <a name="reimplementation"></a>Yeniden uygulama  
+Türetilmiş bir sınıfta, temel sınıfın zaten uygulanmış olduğu bir arabirim üyesini yeniden uygulayabilirsiniz. Bu, aşağıdaki gibi temel sınıf üyesini geçersiz kılmadan farklıdır:
 
-- The base class member does not need to be [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) to be reimplemented.
-- You can reimplement the member with a different name.
+- Temel sınıf üyesinin yeniden uygulanması için [geçersiz kılınabilir](../../../visual-basic/language-reference/modifiers/overridable.md) olması gerekmez.
+- Üyeyi farklı bir adla yeniden uygulayabilirsiniz.
 
-The `Implements` keyword can be used in the following contexts:
+`Implements` anahtar sözcüğü aşağıdaki bağlamlarda kullanılabilir:
 
 - [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)

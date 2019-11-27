@@ -12,16 +12,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349821"
 ---
 # <a name="errors-summary-visual-basic"></a>Hatalara İlişkin Özet (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaca ve kullanıma göre düzenlenir.  
   
 |Eylem|Dil öğesi|  
 |------------|----------------------|  
-|Generate run-time errors.|<xref:Microsoft.VisualBasic.Collection.Clear%2A>, [Error](../../../visual-basic/language-reference/statements/error-statement.md), <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|  
-|Get exceptions.|<xref:Microsoft.VisualBasic.ErrObject.GetException%2A>|  
-|Provide error information.|<xref:Microsoft.VisualBasic.Information.Err%2A>|  
-|Trap errors during run time.|[On Error](../../../visual-basic/language-reference/statements/on-error-statement.md), [Resume](../../../visual-basic/language-reference/statements/resume-statement.md), [Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|  
-|Provide line number of error.|<xref:Microsoft.VisualBasic.ErrObject.Erl%2A>|  
-|Provide system error code.|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|  
+|Çalışma zamanı hataları oluşturma.|<xref:Microsoft.VisualBasic.Collection.Clear%2A>, [hata](../../../visual-basic/language-reference/statements/error-statement.md), <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|  
+|Özel durumlar alın.|<xref:Microsoft.VisualBasic.ErrObject.GetException%2A>|  
+|Hata bilgilerini sağlayın.|<xref:Microsoft.VisualBasic.Information.Err%2A>|  
+|Çalışma zamanında hataları yakalama.|[Hatada](../../../visual-basic/language-reference/statements/on-error-statement.md), [sürdürülür](../../../visual-basic/language-reference/statements/resume-statement.md), [deneyin... Yakala... Son olarak](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|  
+|Hata satır numarası sağlayın.|<xref:Microsoft.VisualBasic.ErrObject.Erl%2A>|  
+|Sistem hata kodu sağlayın.|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -19,7 +19,7 @@ ms.locfileid: "74346477"
 ---
 # <a name="parameter-list-visual-basic"></a>Parametre Listesi (Visual Basic)
 
-Specifies the parameters a procedure expects when it is called. Multiple parameters are separated by commas. The following is the syntax for one parameter.
+Bir yordamın çağrıldığında beklediği parametreleri belirtir. Birden çok parametre virgülle ayrılır. Bir parametre için sözdizimi aşağıda verilmiştir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,62 +31,62 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 ## <a name="parts"></a>Bölümler
 
 `attributelist`  
-İsteğe bağlı. List of attributes that apply to this parameter. You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").
+İsteğe bağlı. Bu parametre için uygulanan özniteliklerin listesi. [Öznitelik listesini](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraç içine almalısınız ("`<`" ve "`>`").
 
 `Optional`  
-İsteğe bağlı. Specifies that this parameter is not required when the procedure is called.
+İsteğe bağlı. Yordam çağrıldığında bu parametrenin gerekli değildir olduğunu belirtir.
 
 `ByVal`  
-İsteğe bağlı. Specifies that the procedure cannot replace or reassign the variable element underlying the corresponding argument in the calling code.
+İsteğe bağlı. Yordamın, çağıran koddaki karşılık gelen bağımsız değişkeni temel alan değişken öğesini değiştirmez veya yeniden atayacağınızı belirtir.
 
 `ByRef`  
-İsteğe bağlı. Specifies that the procedure can modify the underlying variable element in the calling code the same way the calling code itself can.
+İsteğe bağlı. Yordamın, çağıran koddaki temeldeki değişken öğesini çağıran kodun kendisi ile aynı şekilde değiştirebileceğini belirtir.
 
 `ParamArray`  
-İsteğe bağlı. Specifies that the last parameter in the parameter list is an optional array of elements of the specified data type. This lets the calling code pass an arbitrary number of arguments to the procedure.
+İsteğe bağlı. Parametre listesindeki son parametrenin, belirtilen veri türü için isteğe bağlı bir öğe dizisi olduğunu belirtir. Bu, çağıran kodun yordama rastgele sayıda bağımsız değişken geçirmelerini sağlar.
 
 `parametername`  
-Gerekli. Name of the local variable representing the parameter.
+Gerekli. Parametreyi temsil eden yerel değişkenin adı.
 
 `parametertype`  
-Required if `Option Strict` is `On`. Data type of the local variable representing the parameter.
+`Option Strict` `On`olması gerekir. Parametreyi temsil eden yerel değişkenin veri türü.
 
 `defaultvalue`  
-Required for `Optional` parameters. Any constant or constant expression that evaluates to the data type of the parameter. If the type is `Object`, or a class, interface, array, or structure, the default value can only be `Nothing`.
+`Optional` parametreleri için gereklidir. Parametrenin veri türünü değerlendiren herhangi bir sabit veya sabit ifade. Tür `Object`, ya da bir sınıf, arabirim, dizi ya da yapı ise, varsayılan değer yalnızca `Nothing`olabilir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Parameters are surrounded by parentheses and separated by commas. A parameter can be declared with any data type. If you do not specify `parametertype`, it defaults to `Object`.
+Parametreler parantezler ile çevrelenmiş ve virgülle ayrılmalıdır. Bir parametre herhangi bir veri türü ile bildirilebilecek. `parametertype`belirtmezseniz, varsayılan olarak `Object`.
 
-When the calling code calls the procedure, it passes an *argument* to each required parameter. For more information, see [Differences Between Parameters and Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).
+Çağıran kod yordamı çağırdığında, gerekli her parametreye bir *bağımsız değişken* geçirir. Daha fazla bilgi için bkz. [Parametreler ve bağımsız değişkenler arasındaki farklar](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).
 
-The argument the calling code passes to each parameter is a pointer to an underlying element in the calling code. If this element is *nonvariable* (a constant, literal, enumeration, or expression), it is impossible for any code to change it. If it is a *variable* element (a declared variable, field, property, array element, or structure element), the calling code can change it. For more information, see [Differences Between Modifiable and Nonmodifiable Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).
+Çağıran kodun her parametreye geçtiği bağımsız değişken, çağıran koddaki temeldeki öğenin bir işaretçisidir. Bu öğe *değişken olmayan* bir değerse (bir sabit, değişmez değer, sabit listesi veya ifade), herhangi bir kodun değiştirilmesi olanaksızdır. *Değişken* bir öğe ise (belirtilen değişken, alan, özellik, dizi öğesi veya yapı öğesi), çağıran kod değiştirebilir. Daha fazla bilgi için bkz. [değiştirilebilir ve değiştirilemez bağımsız değişkenler arasındaki farklar](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).
 
-If a variable element is passed `ByRef`, the procedure can change it as well. For more information, see [Differences Between Passing an Argument By Value and By Reference](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md).
+Bir değişken öğesi `ByRef`geçirildiğinde yordam de değiştirebilir. Daha fazla bilgi için, [bir bağımsız değişkeni değere ve başvuruya göre geçirme arasındaki farklılıklar](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)bölümüne bakın.
 
 ## <a name="rules"></a>Kurallar
 
-- **Parentheses.** If you specify a parameter list, you must enclose it in parentheses. If there are no parameters, you can still use parentheses enclosing an empty list. This improves the readability of your code by clarifying that the element is a procedure.
+- **Ayraçlar.** Bir parametre listesi belirtirseniz, parantez içine almanız gerekir. Parametre yoksa boş bir listeyi kapsayan ayraçları kullanmaya devam edebilirsiniz. Bunun yapılması, öğenin bir yordam olduğunu açıklığa kavuşturarak kodunuzun okunabilirliğini geliştirir.
 
-- **Optional Parameters.** If you use the `Optional` modifier on a parameter, all subsequent parameters in the list must also be optional and be declared by using the `Optional` modifier.
+- **İsteğe bağlı parametreler.** Bir parametre üzerinde `Optional` değiştiricisini kullanırsanız, listedeki sonraki tüm parametrelerin da isteğe bağlı olması ve `Optional` değiştiricisi kullanılarak bildirilmelidir.
 
-     Every optional parameter declaration must supply the `defaultvalue` clause.
+     Her isteğe bağlı parametre bildirimi `defaultvalue` yan tümcesini sağlamalıdır.
 
-     For more information, see [Optional Parameters](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).
+     Daha fazla bilgi için bkz. [Isteğe bağlı parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).
 
-- **Parameter Arrays.** You must specify `ByVal` for a `ParamArray` parameter.
+- **Parametre dizileri.** Bir `ParamArray` parametresi için `ByVal` belirtmeniz gerekir.
 
-     You cannot use both `Optional` and `ParamArray` in the same parameter list.
+     Aynı parametre listesinde hem `Optional` hem de `ParamArray` kullanamazsınız.
 
-     For more information, see [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).
+     Daha fazla bilgi için bkz. [parametre dizileri](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).
 
-- **Passing Mechanism.** The default mechanism for every argument is `ByVal`, which means the procedure cannot change the underlying variable element. However, if the element is a reference type, the procedure can modify the contents or members of the underlying object, even though it cannot replace or reassign the object itself.
+- **Geçirme mekanizması.** Her bağımsız değişken için varsayılan mekanizma `ByVal`, bu da yordamın temeldeki değişken öğesini değiştiremeyeceği anlamına gelir. Ancak, öğe bir başvuru türü ise, yordam nesnenin kendisini değiştiremese veya yeniden atanmasa bile, temel nesnenin içeriğini veya üyelerini değiştirebilir.
 
-- **Parameter Names.** If the parameter's data type is an array, follow `parametername` immediately by parentheses. For more information on parameter names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+- **Parametre adları.** Parametrenin veri türü bir diziyse, ayraçları hemen `parametername` izleyin. Parametre adları hakkında daha fazla bilgi için bkz. [bildirilmemiş öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
 ## <a name="example"></a>Örnek
 
-The following example shows a `Function` procedure that defines two parameters.
+Aşağıdaki örnek, iki parametre tanımlayan bir `Function` yordamını gösterir.
 
 [!code-vb[VbVbalrStatements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#2)]
 
@@ -98,5 +98,5 @@ The following example shows a `Function` procedure that defines two parameters.
 - [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Özniteliklere genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

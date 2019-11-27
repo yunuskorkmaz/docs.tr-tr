@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438006"
 ---
 # <a name="symlinedelta-structure"></a>SYMLINEDELTA Yapısı
-Provides information to the symbol handler about methods that were moved as a result of edits.  
+Düzenleme sonucu olarak taşınan yöntemler hakkında sembol işleyicisine bilgi sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,15 +34,15 @@ typedef struct _SYMLINEDELTA
     } SYMLINEDELTA;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`mdMethod`|The method's metadata token.|  
-|`delta`|The number of lines the method was moved.|  
+|`mdMethod`|Metodun meta veri belirteci.|  
+|`delta`|Yöntemin taşındığı satır sayısı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl  
+ **Üst bilgi:** Corsya. IDL  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

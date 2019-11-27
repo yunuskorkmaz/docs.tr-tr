@@ -19,31 +19,31 @@ ms.locfileid: "74351310"
 ---
 # <a name="protected-visual-basic"></a>Korumalı (Visual Basic)
 
-A member access modifier that specifies that one or more declared programming elements are accessible only from within their own class or from a derived class.
+Bir veya daha fazla tanımlanmış programlama öğesinin yalnızca kendi sınıfının içinden veya türetilmiş bir sınıftan erişilebilir olduğunu belirten bir üye erişim değiştiricisi.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sometimes a programming element declared in a class contains sensitive data or restricted code, and you want to limit access to the element. However, if the class is inheritable and you expect a hierarchy of derived classes, it might be necessary for these derived classes to access the data or code. In such a case, you want the element to be accessible both from the base class and from all derived classes. To limit access to an element in this manner, you can declare it with `Protected`.
+Bazen bir sınıfta tanımlanan programlama öğesi hassas veriler veya kısıtlı kod içeriyorsa ve öğeye erişimi sınırlandırmak istiyorsanız. Ancak, sınıf devralınabilir ise ve türetilmiş sınıfların hiyerarşisini düşünüyorsanız, bu türetilmiş sınıfların verilere veya koda erişmesi gerekebilir. Böyle bir durumda, öğesinin hem taban sınıftan hem de tüm türetilmiş sınıflardan erişilebilir olmasını istersiniz. Bu şekilde bir öğeye erişimi sınırlandırmak için, `Protected`ile bildirebilirsiniz.
 
 > [!NOTE]
-> The `Protected` access modifier can be combined with two other modifiers:
+> `Protected` erişim değiştiricisi iki farklı değiştiriciyle birleştirilebilir:
 >
-> - The [Protected Friend](protected-friend.md) modifier makes a class member accessible from within that class, from derived classes, and from the same assembly in which the class is defined.
-> - The [Private Protected](private-protected.md) modifier makes a class member accessible by derived types, but only within its containing assembly.
+> - [Protected Friend](protected-friend.md) değiştiricisi, bir sınıf üyesini türetilmiş sınıflardan ve sınıfın tanımlandığı aynı derlemeden erişilebilir hale getirir.
+> - [Özel korumalı](private-protected.md) değiştirici, bir sınıf üyesini türetilmiş türler tarafından erişilebilir hale getirir, ancak yalnızca kendi kapsayıcı bütünleştirilmiş kodu içinde.
 
 ## <a name="rules"></a>Kurallar
 
-**Declaration Context.** You can use `Protected` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+**Bildirim bağlamı.** `Protected` yalnızca sınıf düzeyinde kullanabilirsiniz. Yani, bir `Protected` öğesi için bildirim bağlamı bir sınıf olmalıdır ve kaynak dosya, ad alanı, arabirim, modül, yapı veya yordam olamaz.
 
 ## <a name="behavior"></a>Davranış
 
-- **Access Level.** All code in a class can access its elements. Code in any class that derives from a base class can access all the `Protected` elements of the base class. This is true for all generations of derivation. This means that a class can access `Protected` elements of the base class of the base class, and so on.
+- **Erişim düzeyi.** Bir sınıftaki tüm kod öğelerine erişebilir. Bir taban sınıftan türetilen herhangi bir sınıftaki kod, temel sınıfın tüm `Protected` öğelerine erişebilir. Bu, tüm türetme oluşumlarında geçerlidir. Bu, bir sınıfın temel sınıfın temel sınıfının `Protected` öğelerine erişebileceği anlamına gelir.
 
-     Protected access is not a superset or subset of friend access.
+     Korumalı erişim arkadaş erişiminin bir üst kümesi veya alt kümesi değil.
 
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+- **Erişim değiştiricileri.** Erişim düzeyi belirten anahtar sözcüklere *erişim değiştiricileri*denir. Erişim değiştiricilerinden oluşan bir karşılaştırma için bkz. [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-The `Protected` modifier can be used in these contexts:
+`Protected` değiştiricisi şu bağlamlarda kullanılabilir:
 
 - [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
 
@@ -76,7 +76,7 @@ The `Protected` modifier can be used in these contexts:
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

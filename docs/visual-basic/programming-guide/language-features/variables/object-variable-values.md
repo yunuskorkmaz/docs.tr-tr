@@ -15,27 +15,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351796"
 ---
 # <a name="object-variable-values-visual-basic"></a>Nesne Değişkeni Değerleri (Visual Basic)
-A variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) can refer to data of any type. The value you store in an `Object` variable is kept elsewhere in memory, while the variable itself holds a pointer to the data.  
+[Nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md) değişkeni herhangi bir türdeki verilere başvurabilir. Bir `Object` değişkeninde depoladığınız değer bellekte başka bir yerde tutulur, ancak değişken verileri bir işaretçi tutar.  
   
-## <a name="object-classifier-functions"></a>Object Classifier Functions  
- Visual Basic supplies functions that return information about what an `Object` variable refers to, as shown in the following table.  
+## <a name="object-classifier-functions"></a>Nesne sınıflandırıcı Işlevleri  
+ Visual Basic, aşağıdaki tabloda gösterildiği gibi, bir `Object` değişkeninin başvurduğu hakkında bilgi döndüren işlevler sağlar.  
   
-|İşlev|Returns True if the Object variable refers to|  
+|İşlev|Nesne değişkeni öğesine başvuruyorsa true döndürür|  
 |--------------|---------------------------------------------------|  
-|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|An array of values, rather than a single value|  
-|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|A [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md) value, or a string that can be interpreted as a date and time value|  
-|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|An object of type <xref:System.DBNull>, which represents missing or nonexistent data|  
-|<xref:Microsoft.VisualBasic.Information.IsError%2A>|An exception object, which derives from <xref:System.Exception>|  
-|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Nothing](../../../../visual-basic/language-reference/nothing.md), that is, no object is currently assigned to the variable|  
-|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|A number, or a string that can be interpreted as a number|  
-|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|A reference type (such as a string, array, delegate, or class type)|  
+|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|Tek bir değer yerine bir değer dizisi|  
+|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|[Tarih veri türü](../../../../visual-basic/language-reference/data-types/date-data-type.md) değeri veya tarih ve saat değeri olarak yorumlanabilen bir dize|  
+|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|Eksik veya varolmayan verileri temsil eden <xref:System.DBNull>türünde bir nesne|  
+|<xref:Microsoft.VisualBasic.Information.IsError%2A>|<xref:System.Exception> türettiği bir özel durum nesnesi|  
+|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Hiçbir şey](../../../../visual-basic/language-reference/nothing.md)yok, başka bir deyişle, şu anda değişkene atanmış nesne yok|  
+|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|Sayı veya bir sayı olarak yorumlanabilecek dize|  
+|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|Bir başvuru türü (dize, dizi, temsilci veya sınıf türü gibi)|  
   
- You can use these functions to avoid submitting an invalid value to an operation or a procedure.  
+ Bir işleme veya yordama geçersiz bir değer gönderilmesini önlemek için bu işlevleri kullanabilirsiniz.  
   
 ## <a name="typeof-operator"></a>TypeOf İşleci  
- You can also use the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to determine whether an object variable currently refers to a specific data type. The `TypeOf`...`Is` expression evaluates to `True` if the run-time type of the operand is derived from or implements the specified type.  
+ Bir nesne değişkeninin şu anda belirli bir veri türüne başvuruda bulunup bulunmadığını anlamak için [typeof işlecini](../../../../visual-basic/language-reference/operators/typeof-operator.md) de kullanabilirsiniz. `TypeOf`...`Is` ifadesi, işlenenin çalışma zamanı türü belirtilen türden türetildiyse veya uyguluyorsa `True` olarak değerlendirilir.  
   
- The following example uses `TypeOf` on object variables referring to value and reference types.  
+ Aşağıdaki örnek, değer ve başvuru türlerine başvuran nesne değişkenlerinde `TypeOf` kullanır.  
   
 ```vb  
 ' The following statement puts a value type (Integer) in an Object variable.  
@@ -51,7 +51,7 @@ If TypeOf frm Is Label Then Debug.WriteLine("frm is Label")
 If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")  
 ```  
   
- The preceding example writes the following lines to the **Debug** window:  
+ Yukarıdaki örnek, **hata ayıklama** penceresine aşağıdaki satırları Yazar:  
   
  `num is Integer`  
   
@@ -61,10 +61,10 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
   
  `frm is Object`  
   
- The object variable `num` refers to data of type `Integer`, and `frm` refers to an object of class <xref:System.Windows.Forms.Form>.  
+ `num` nesne değişkeni `Integer`türündeki verileri ifade eder ve `frm` <xref:System.Windows.Forms.Form>bir nesneye başvurur.  
   
-## <a name="object-arrays"></a>Object Arrays  
- You can declare and use an array of `Object` variables. This is useful when you need to handle a variety of data types and object classes. All the elements in an array must have the same declared data type. Declaring this data type as `Object` allows you to store objects and class instances alongside other data types in the array.  
+## <a name="object-arrays"></a>Nesne dizileri  
+ Bir dizi `Object` değişken bildirebilir ve kullanabilirsiniz. Bu, çeşitli veri türlerini ve nesne sınıflarını işlemeniz gerektiğinde faydalıdır. Bir dizideki tüm öğeler aynı tanımlanmış veri türüne sahip olmalıdır. Bu veri türünü `Object` olarak bildirmek, nesneleri ve sınıf örneklerini dizideki diğer veri türleriyle birlikte depolamanıza olanak tanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

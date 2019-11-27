@@ -13,57 +13,57 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347454"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic'de Koşullu Derleme
-In *conditional compilation*, particular blocks of code in a program are compiled selectively while others are ignored.  
+*Koşullu derlemede*, bir programdaki belirli kod blokları, diğerleri gözardı edilirken seçime bağlı olarak derlenir.  
   
- For example, you may want to write debugging statements that compare the speed of different approaches to the same programming task, or you may want to localize an application for multiple languages. Conditional compilation statements are designed to run during compile time, not at run time.  
+ Örneğin, farklı yaklaşımların hızını aynı programlama göreviyle karşılaştıran hata ayıklama deyimleri yazmak veya bir uygulamayı birden çok dil için yerelleştirmek isteyebilirsiniz. Koşullu derleme deyimleri, çalışma zamanında değil, derleme zamanı sırasında çalışacak şekilde tasarlanmıştır.  
   
- You denote blocks of code to be conditionally compiled with the `#If...Then...#Else` directive. For example, to create French- and German-language versions of the same application from the same source code, you embed platform-specific code segments in `#If...Then` statements using the predefined constants `FrenchVersion` and `GermanVersion`. The following example demonstrates how:  
+ Kod bloklarını `#If...Then...#Else` yönergeyle koşullu olarak derlenebilecek şekilde belirtebilirsiniz. Örneğin, aynı kaynak koddan aynı uygulamanın Fransızca ve Almanca dil sürümlerini oluşturmak için, önceden tanımlanmış sabitleri `FrenchVersion` ve `GermanVersion`kullanarak platforma özgü kod kesimlerini `#If...Then` deyimlerine eklersiniz. Aşağıdaki örnek, aşağıdakilerin nasıl yapıldığını göstermektedir:  
   
  [!code-vb[VbVbalrConditionalComp#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#5)]  
   
- If you set the value of the `FrenchVersion` conditional compilation constant to `True` at compile time, the conditional code for the French version is compiled. If you set the value of the `GermanVersion` constant to `True`, the compiler uses the German version. If neither is set to `True`, the code in the last `Else` block runs.  
+ `FrenchVersion` koşullu derleme sabitinin değerini derleme zamanında `True` olarak ayarlarsanız, Fransızca sürümü için koşullu kod derlenir. `GermanVersion` sabitinin değerini `True`olarak ayarlarsanız, derleyici Almanca sürümünü kullanır. Hiçbiri `True`olarak ayarlanmazsa, son `Else` bloğundaki kod çalışır.  
   
 > [!NOTE]
-> Autocompletion will not function when editing code and using conditional compilation directives if the code is not part of the current branch.  
+> Kod düzenlenirken otomatik tamamlama çalışmaz ve kod geçerli dalın bir parçası değilse koşullu derleme yönergeleri kullanılır.  
   
-## <a name="declaring-conditional-compilation-constants"></a>Declaring Conditional Compilation Constants  
- You can set conditional compilation constants in one of three ways:  
+## <a name="declaring-conditional-compilation-constants"></a>Koşullu derleme sabitleri bildirme  
+ Koşullu derleme sabitlerini üç şekilde ayarlayabilirsiniz:  
   
-- In the **Project Designer**  
+- **Proje tasarımcısında**  
   
-- At the command line when using the command-line compiler  
+- Komut satırı derleyicisini kullanırken komut satırında  
   
-- In your code  
+- Kodunuzda  
   
- Conditional compilation constants have a special scope and cannot be accessed from standard code. The scope of a conditional compilation constant is dependent on the way it is set. The following table lists the scope of constants declared using each of the three ways mentioned above.  
+ Koşullu derleme sabitleri özel bir kapsama sahiptir ve standart koddan erişilemez. Koşullu derleme sabitinin kapsamı, ayarlandığı yönteme bağlıdır. Aşağıdaki tabloda, yukarıda bahsedilen üç yol kullanılarak bildirilen sabitlerin kapsamı listelenmektedir.  
   
-|How constant is set|Scope of constant|  
+|Sabit nasıl ayarlanır|Sabit kapsamı|  
 |---|---|  
-|**Project Designer**|Public to all files in the project|  
-|Komut satırı|Public to all files passed to the command-line compiler|  
-|`#Const` statement in code|Private to the file in which it is declared|  
+|**Proje Tasarımcısı**|Projedeki tüm dosyalar için ortak|  
+|Komut satırı|Komut satırı derleyicisine geçirilen tüm dosyalar için ortak|  
+|koddaki `#Const` ifade|Özel olarak bildirildiği dosya|  
   
-|To set constants in the Project Designer|  
+|Proje tasarımcısında sabitleri ayarlamak için|  
 |---|  
-|-   Before creating your executable file, set constants in the **Project Designer** by following the steps provided in [Managing Project and Solution Properties](/visualstudio/ide/managing-project-and-solution-properties).|  
+|-Yürütülebilir dosyanızı oluşturmadan önce, [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)bölümünde belirtilen adımları Izleyerek **Proje tasarımcısında** sabitler ayarlayın.|  
   
-|To set constants at the command line|  
+|Sabitleri komut satırında ayarlamak için|  
 |---|  
-|-   Use the **-d** switch to enter conditional compilation constants, as in the following example:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     No space is required between the **-d** switch and the first constant. For more information, see [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Command-line declarations override declarations entered in the **Project Designer**, but do not erase them. Arguments set in **Project Designer** remain in effect for subsequent compilations.<br />     When writing constants in the code itself, there are no strict rules as to their placement, since their scope is the entire module in which they are declared.|  
+|-Aşağıdaki örnekte gösterildiği gibi, koşullu derleme sabitleri girmek için **-d** anahtarını kullanın:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     **-D** anahtarı ve ilk sabit arasında boşluk gerekmez. Daha fazla bilgi için bkz. [-tanımlama (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Komut satırı bildirimleri **Proje tasarımcısında**girilen bildirimleri geçersiz kılar, ancak onları silmez. **Proje tasarımcısında** ayarlanan bağımsız değişkenler sonraki derlemeler için geçerli olmaya devam eder.<br />     Koda sabitler yazarken, kendi kapsamları bildirildiği modülün tamamı olduğundan, kendi yerleşimine göre kesin bir kural yoktur.|  
   
-|To set constants in your code|  
+|Kodunuzda sabitleri ayarlamak için|  
 |---|  
-|-   Place the constants in the declaration block of the module in which they are used. This helps keep your code organized and easier to read.|  
+|-Sabitleri, kullanıldıkları modülün bildirim bloğuna yerleştirin. Bu, kodunuzun düzenlenmesine ve okunmasını daha kolay tutmaya yardımcı olur.|  
   
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  
 |---|---|  
-|[Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Provides suggestions for making your code easy to read and maintain.|  
+|[Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Kodunuzun okunmasını ve korunmasını kolaylaştırmak için öneriler sağlar.|  
   
 ## <a name="reference"></a>Başvuru  
  [#Const Yönergesi](../../../visual-basic/language-reference/directives/const-directive.md)  
   
  [#If...Then...#Else Yönergesi](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
- [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+ [-tanımla (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)

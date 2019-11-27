@@ -17,41 +17,41 @@ ms.locfileid: "74344904"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>Nasıl yapılır: Yordam Oluşturma (Visual Basic)
 
-You enclose a procedure between a starting declaration statement (`Sub` or `Function`) and an ending declaration statement (`End Sub` or `End Function`). All the procedure's code lies between these statements.
+Bir başlangıç bildirimi bildirimi (`Sub` veya `Function`) ve bir bitiş bildirimi bildirimi (`End Sub` ya da `End Function`) arasında bir yordam alırsınız. Tüm yordamın kodu bu deyimler arasında yer alır.
 
- A procedure cannot contain another procedure, so its starting and ending statements must be outside any other procedure.
+ Yordam başka bir yordam içeremez, bu nedenle başlangıç ve bitiş deyimleri başka bir yordamın dışında olmalıdır.
 
- If you have code that performs the same task in different places, you can write the task once as a procedure and then call it from different places in your code.
+ Farklı yerlerde aynı görevi gerçekleştiren bir kodunuz varsa, görevi bir kez yordam olarak yazabilir ve ardından kodunuzda farklı yerlerden çağırabilirsiniz.
 
-### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>To create a procedure that does not return a value
+### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>Değer döndürmeyen bir yordam oluşturmak için
 
-1. Outside any other procedure, use a `Sub` statement, followed by an `End Sub` statement.
+1. Diğer herhangi bir yordamın dışında, bir `Sub` ifadesini ve ardından bir `End Sub` bildirisini kullanın.
 
-2. In the `Sub` statement, follow the `Sub` keyword with the name of the procedure, then the parameter list in parentheses.
+2. `Sub` bildiriminde, yordamın adı ile `Sub` anahtar sözcüğünü, sonra da parantez içindeki parametre listesini izleyin.
 
-3. Place the procedure's code statements between the `Sub` and `End Sub` statements.
+3. Yordamın kod deyimlerini `Sub` ve `End Sub` deyimleri arasına yerleştirin.
 
-### <a name="to-create-a-procedure-that-returns-a-value"></a>To create a procedure that returns a value
+### <a name="to-create-a-procedure-that-returns-a-value"></a>Bir değer döndüren bir yordam oluşturmak için
 
-1. Outside any other procedure, use a `Function` statement, followed by an `End Function` statement.
+1. Diğer herhangi bir yordamın dışında, bir `Function` ifadesini ve ardından bir `End Function` bildirisini kullanın.
 
-2. In the `Function` statement, follow the `Function` keyword with the name of the procedure, then the parameter list in parentheses, and then an `As` clause specifying the data type of the return value.
+2. `Function` bildiriminde, yordamın adı, sonra parantez içindeki parametre listesi ve dönüş değerinin veri türünü belirten bir `As` yan tümcesi ile `Function` anahtar sözcüğünü izleyin.
 
-3. Place the procedure's code statements between the `Function` and `End Function` statements.
+3. Yordamın kod deyimlerini `Function` ve `End Function` deyimleri arasına yerleştirin.
 
-4. Use a `Return` statement to return the value to the calling code.
+4. Değeri çağırma koduna döndürmek için bir `Return` ifadesini kullanın.
 
-### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>To connect your new procedure with the old, repetitive blocks of code
+### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>Yeni yordamınıza eski ve yinelenen kod bloklarıyla bağlanmak için
 
-1. Make sure you define the new procedure in a place where the old code has access to it.
+1. Yeni yordamı, eski kodun ona erişimi olan bir yerde tanımladığınızdan emin olun.
 
-2. In your old, repetitive code block, replace the statements that perform the repetitive task with a single statement that calls the `Sub` or `Function` procedure.
+2. Eski, yinelenen kod bloğunda, yinelenen görevi gerçekleştiren deyimleri `Sub` veya `Function` yordamını çağıran tek bir deyim ile değiştirin.
 
-3. If your procedure is a `Function` that returns a value, ensure that your calling statement performs an action with the returned value, such as storing it in a variable, or else the value will be lost.
+3. Yordamınız bir değer döndüren bir `Function` ise, çağırma deyiminizin döndürülen değeri olan bir eylem gerçekleştirdiğinden emin olun (örneğin, bir değişkende depolanması) veya aksi takdirde değer kaybedilir.
 
 ## <a name="example"></a>Örnek
 
- The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides:
+ Aşağıdaki `Function` yordam, iki tarafa ait değerler verildiğinde, doğru bir üçgenin en uzun tarafını veya hipotenüsü değerini hesaplar:
 
  [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]
 
@@ -66,4 +66,4 @@ You enclose a procedure between a starting declaration statement (`Sub` or `Func
 - [Özyinelemeli Yordamlar](recursive-procedures.md)
 - [Yordam Aşırı Yüklemesi](procedure-overloading.md)
 - [Nesneler ve Sınıflar](../objects-and-classes/index.md)
-- [Object-Oriented Programming (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [Nesne odaklı programlama (Visual Basic)](../../concepts/object-oriented-programming.md)

@@ -20,53 +20,53 @@ ms.locfileid: "74345516"
 ---
 # <a name="playing-sounds-visual-basic"></a>Ses Çalma [Visual Basic]
 
-The `My.Computer.Audio` object provides methods for playing sounds.  
+`My.Computer.Audio` nesnesi, ses çalmak için yöntemler sağlar.  
   
 ## <a name="playing-sounds"></a>Ses Çalma  
 
- Background playing lets the application execute other code while the sound plays. The `My.Computer.Audio.Play` method allows the application to play only one background sound at a time; when the application plays a new background sound, it stops playing the previous background sound. You can also play a sound and wait for it to complete.  
+ Arka planda yürütme, ses çalarken uygulamanın diğer kodu yürütmesini sağlar. `My.Computer.Audio.Play` yöntemi, uygulamanın tek seferde yalnızca bir arka plan sesi oynamasını sağlar; uygulama yeni bir arka plan sesi yürüttüğünde, önceki arka plan sesinin çalınmasını bırakır. Ayrıca bir ses oynatabilir ve tamamlanmasını bekleyebilirsiniz.  
   
- In the following example, the `My.Computer.Audio.Play` method plays a sound. When `AudioPlayMode.WaitToComplete` is specified, `My.Computer.Audio.Play` waits until the sound completes before calling code continues. When using this example, you should ensure that the file name refers to a .wav sound file that is on your computer  
+ Aşağıdaki örnekte `My.Computer.Audio.Play` yöntemi bir ses oynar. `AudioPlayMode.WaitToComplete` belirtildiğinde, kod çağrılmadan önce `My.Computer.Audio.Play` ses tamamlanana kadar bekler. Bu örneği kullanırken, dosya adının bilgisayarınızdaki bir. wav ses dosyasına başvurduğundan emin olmalısınız  
   
  [!code-vb[VbVbalrMyComputer#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#15)]  
   
- In the following example, the `My.Computer.Audio.Play` method plays a sound. When using this example, you should ensure that the application resources include a .wav sound file that is named Waterfall.  
+ Aşağıdaki örnekte `My.Computer.Audio.Play` yöntemi bir ses oynar. Bu örneği kullanırken, uygulama kaynaklarının şelale adlı bir. wav ses dosyası içerdiğinden emin olmanız gerekir.  
   
  [!code-vb[VbVbalrMyComputer#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#16)]  
   
-## <a name="playing-looping-sounds"></a>Playing Looping Sounds  
+## <a name="playing-looping-sounds"></a>Döngü seslerini oynama  
 
- In the following example, the `My.Computer.Audio.Play` method plays the specified sound in the background when `PlayMode.BackgroundLoop` is specified. When using this example, you should ensure that the file name refers to a .wav sound file that is on your computer.  
+ Aşağıdaki örnekte, `PlayMode.BackgroundLoop` belirtildiğinde `My.Computer.Audio.Play` yöntemi belirtilen sesi arka planda yürütür. Bu örneği kullanırken, dosya adının bilgisayarınızdaki bir. wav ses dosyasına başvurduğundan emin olmalısınız.  
   
  [!code-vb[VbVbalrMyComputer#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#11)]  
   
- In the following example, the `My.Computer.Audio.Play` method plays the specified sound in the background when `PlayMode.BackgroundLoop` is specified. When using this example, you should ensure that the application resources include a .wav sound file that is named Waterfall.  
+ Aşağıdaki örnekte, `PlayMode.BackgroundLoop` belirtildiğinde `My.Computer.Audio.Play` yöntemi belirtilen sesi arka planda yürütür. Bu örneği kullanırken, uygulama kaynaklarının şelale adlı bir. wav ses dosyası içerdiğinden emin olmanız gerekir.  
   
  [!code-vb[VbVbalrMyComputer#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#12)]  
   
- The preceding code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **Windows Forms Applications > Sound**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
+ Yukarıdaki kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide, **Windows Forms uygulamalarda > Ses**bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).  
   
- In general, when an application plays a looping sound, it should eventually stop the sound.  
+ Genel olarak, bir uygulama bir döngü sesi yürüttüğünde, sonunda sesi durdurmanız gerekir.  
   
-## <a name="stopping-the-playing-of-sounds-in-the-background"></a>Stopping the Playing of Sounds in the Background  
+## <a name="stopping-the-playing-of-sounds-in-the-background"></a>Arka planda seslerin çalınmasını durdurma  
 
- Use the `My.Computer.Audio.Stop` method to stop the application's currently playing background or looping sound.  
+ Uygulamanın Şu anda yürütülmekte olan arka plan veya döngü sesini durdurmak için `My.Computer.Audio.Stop` yöntemini kullanın.  
   
- In general, when an application plays a looping sound, it should stop the sound at some point.  
+ Genel olarak, bir uygulama bir döngü sesi yürüttüğünde, bir noktada sesi durdurmalıdır.  
   
- The following example stops a sound that is playing in the background.  
+ Aşağıdaki örnek, arka planda oynatılan bir sesi sonlandırır.  
   
  [!code-vb[VbVbalrMyComputer#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#18)]  
   
- The preceding code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **Windows Forms Applications > Sound**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
+ Yukarıdaki kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide, **Windows Forms uygulamalarda > Ses**bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).  
   
-## <a name="playing-system-sounds"></a>Playing System Sounds  
+## <a name="playing-system-sounds"></a>Sistem seslerini oynama  
 
- Use the `My.Computer.Audio.PlaySystemSound` method to play the specified system sound.  
+ Belirtilen sistem sesini çalmak için `My.Computer.Audio.PlaySystemSound` yöntemini kullanın.  
   
- The `My.Computer.Audio.PlaySystemSound` method takes as a parameter one of the shared members from the <xref:System.Media.SystemSound> class. The system sound <xref:System.Media.SystemSounds.Asterisk%2A> generally denotes errors.  
+ `My.Computer.Audio.PlaySystemSound` yöntemi, <xref:System.Media.SystemSound> sınıfından paylaşılan üyelerden birini parametre olarak alır. Sistem sesi <xref:System.Media.SystemSounds.Asterisk%2A> genellikle hataları gösterir.  
   
- The following example uses the `My.Computer.Audio.PlaySystemSound` method to play a system sound.  
+ Aşağıdaki örnekte, bir sistem sesini çalmak için `My.Computer.Audio.PlaySystemSound` yöntemi kullanılmaktadır.  
   
  [!code-vb[VbVbalrMyComputer#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#17)]  
   

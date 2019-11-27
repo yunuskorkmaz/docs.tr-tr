@@ -18,23 +18,23 @@ ms.locfileid: "74329585"
 ---
 # <a name="performing-tasks-with-myapplication-mycomputer-and-myuser-visual-basic"></a>My.Application, My.Computer ve My.User ile Görev Gerçekleştirme (Visual Basic)
 
-The three central `My` objects that provide access to information and commonly used functionality are `My.Application` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>), `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>), and `My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>). You can use these objects to access information that is related to the current application, the computer that the application is installed on, or the current user of the application, respectively.  
+Bilgilere ve yaygın olarak kullanılan işlevlere erişim sağlayan üç merkezi `My` nesnesi `My.Application` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>), `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>) ve `My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>). Bu nesneleri, geçerli uygulamayla, uygulamanın yüklendiği bilgisayarın veya uygulamanın geçerli kullanıcısı ile ilgili bilgilere erişmek için kullanabilirsiniz.  
   
-## <a name="myapplication-mycomputer-and-myuser"></a>My.Application, My.Computer, and My.User  
+## <a name="myapplication-mycomputer-and-myuser"></a>My. Application, My. Computer ve My. User  
 
- The following examples demonstrate how information can be retrieved using `My`.  
+ Aşağıdaki örneklerde `My`kullanılarak bilgilerin nasıl alınacağı gösterilmektedir.  
   
  [!code-vb[VbVbcnMy#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#1)]  
   
  [!code-vb[VbVbcnMy#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#2)]  
   
- In addition to retrieving information, the members exposed through these three objects also allow you to execute methods related to that object. For instance, you can access a variety of methods to manipulate files or update the registry through `My.Computer`.  
+ Bilgileri almanın yanı sıra, bu üç nesne aracılığıyla kullanıma sunulan üyeler de bu nesneyle ilgili yöntemleri yürütmelerine olanak sağlar. Örneğin, dosyaları işlemek veya kayıt defterini `My.Computer`aracılığıyla güncelleştirmek için çeşitli yöntemlere erişebilirsiniz.  
   
- File I/O is significantly easier and faster with `My`, which includes a variety of methods and properties for manipulating files, directories, and drives. The <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object allows you to read from large structured files that have delimited or fixed-width fields. This example opens the `TextFieldParser` `reader` and uses it to read from `C:\TestFolder1\test1.txt`.  
+ Dosya g/ç, dosyaları, dizinleri ve sürücüleri işlemek için çeşitli yöntemler ve özellikler içeren `My`çok daha kolay ve hızlı bir şekilde daha hızlıdır. <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> nesnesi, ayrılmış veya sabit genişlikte alanları olan büyük yapılandırılmış dosyalardan okumanızı sağlar. Bu örnek `TextFieldParser` `reader` açar ve `C:\TestFolder1\test1.txt`okumak için onu kullanır.  
   
  [!code-vb[VbVbalrTextFieldParser#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#23)]  
   
- `My.Application` allows you to change the culture for your application. The following example demonstrates how this method can be called.  
+ `My.Application`, uygulamanız için kültürü değiştirmenize izin verir. Aşağıdaki örnek, bu yöntemin nasıl çağrılacağını gösterir.  
   
  [!code-vb[VbVbcnMy#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#3)]  
   

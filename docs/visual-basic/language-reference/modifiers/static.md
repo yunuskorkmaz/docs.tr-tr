@@ -15,34 +15,34 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350754"
 ---
 # <a name="static-visual-basic"></a>Statik (Visual Basic)
-Specifies that one or more declared local variables are to continue to exist and retain their latest values after termination of the procedure in which they are declared.  
+Bir veya daha fazla tanımlanmış yerel değişkenin mevcut olmaya devam etmesi ve bildirildiği yordamın sonlandırmasından sonra en son değerlerini korumasının gerektiğini belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Normally, a local variable in a procedure ceases to exist as soon as the procedure stops. A static variable continues to exist and retains its most recent value. The next time your code calls the procedure, the variable is not reinitialized, and it still holds the latest value that you assigned to it. A static variable continues to exist for the lifetime of the class or module that it is defined in.  
+ Normalde, yordamda bir yerel değişken, yordam durdurulduğunda hemen sona erer. Statik bir değişken var olmaya devam eder ve en son değerini korur. Kodunuzun yordamı çağırması bir sonraki sefer, değişken yeniden başlatılır ve kendisine atadığınız en son değeri barındırır. Statik bir değişken, içinde tanımlanan sınıf veya modülün kullanım ömrü için mevcut olmaya devam eder.  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Declaration Context.** You can use `Static` only on local variables. This means the declaration context for a `Static` variable must be a procedure or a block in a procedure, and it cannot be a source file, namespace, class, structure, or module.  
+- **Bildirim bağlamı.** Yalnızca yerel değişkenlerde `Static` kullanabilirsiniz. Bu, bir `Static` değişkeninin bildirim bağlamının bir yordamda yordam veya bir blok olması ve bir kaynak dosya, ad alanı, sınıf, yapı veya modül olması gerektiği anlamına gelir.  
   
-     You cannot use `Static` inside a structure procedure.  
+     Yapı yordamı içinde `Static` kullanamazsınız.  
   
-- The data types of `Static` local variables cannot be inferred. For more information, see [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+- `Static` yerel değişkenlerin veri türleri çıkarsanamıyor. Daha fazla bilgi için bkz. [Yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
-- **Combined Modifiers.** You cannot specify `Static` together with `ReadOnly`, `Shadows`, or `Shared` in the same declaration.  
+- **Birleşik değiştiriciler.** Aynı bildirimde `ReadOnly`, `Shadows`veya `Shared` birlikte `Static` belirtemezsiniz.  
   
 ## <a name="behavior"></a>Davranış  
- When you declare a static variable in a `Shared` procedure, only one copy of the static variable is available for the whole application. You call a `Shared` procedure by using the class name, not a variable that points to an instance of the class.  
+ Bir `Shared` yordamında statik bir değişken bildirdiğinizde, tüm uygulama için statik değişkenin yalnızca bir kopyası kullanılabilir. Sınıfının bir örneğine işaret eden bir değişken değil, sınıf adını kullanarak bir `Shared` yordamını çağırabilirsiniz.  
   
- When you declare a static variable in a procedure that isn't `Shared`, only one copy of the variable is available for each instance of the class. You call a non-shared procedure by using a variable that points to a specific instance of the class.  
+ `Shared`olmayan bir yordamda statik bir değişken bildirdiğinizde, sınıfın her örneği için değişkenin yalnızca bir kopyası kullanılabilir. Sınıfın belirli bir örneğine işaret eden bir değişken kullanarak paylaşılmayan bir yordam çağırabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- The following example demonstrates the use of `Static`.  
+ Aşağıdaki örnek, `Static`kullanımını gösterir.  
   
  [!code-vb[VbVbalrKeywords#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#5)]  
   
- The `Static` variable `totalSales` is initialized to 0 only one time. Each time that you enter `updateSales`, `totalSales` still has the most recent value that you calculated for it.  
+ `Static` değişkeni `totalSales` yalnızca bir kez başlatılır. `updateSales`girdiğiniz her seferinde, `totalSales` hala sizin için hesapladığınız en son değere sahip olur.  
   
- The `Static` modifier can be used in this context:  
+ `Static` değiştiricisi Bu bağlamda kullanılabilir:  
   
  [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
@@ -50,7 +50,7 @@ Specifies that one or more declared local variables are to continue to exist and
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Visual Basic ömrü](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Değişken Bildirimi](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Yerel Çıkarım](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

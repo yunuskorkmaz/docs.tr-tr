@@ -20,7 +20,7 @@ ms.locfileid: "74343709"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum Deyimi (Visual Basic)
 
-Declares an enumeration and defines the values of its members.
+Bir sabit listesi bildirir ve üyelerinin değerlerini tanımlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ End Enum
 
 - `attributelist`
 
-  İsteğe bağlı. List of attributes that apply to this enumeration. You must enclose the [attribute list](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").
+  İsteğe bağlı. Bu sabit listesi için uygulanan özniteliklerin listesi. [Öznitelik listesini](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraç içine almalısınız ("`<`" ve "`>`").
 
-  The <xref:System.FlagsAttribute> attribute indicates that the value of an instance of the enumeration can include multiple enumeration members, and that each member represents a bit field in the enumeration value.
+  <xref:System.FlagsAttribute> özniteliği, sabit listesinin bir örneğinin değerinin birden çok numaralandırma üyesi içerebileceğini ve her üyenin numaralandırma değerindeki bir bit alanını temsil ettiğini gösterir.
 
 - `accessmodifier`
 
-  İsteğe bağlı. Specifies what code can access this enumeration. Can be one of the following:
+  İsteğe bağlı. Bu numaralandırmaya erişebilecek kodu belirtir. Aşağıdakilerden biri olabilir:
 
   - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 
@@ -57,130 +57,130 @@ End Enum
 
 - `Shadows`
 
-  İsteğe bağlı. Specifies that this enumeration redeclares and hides an identically named programming element, or set of overloaded elements, in a base class. You can specify [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) only on the enumeration itself, not on any of its members.
+  İsteğe bağlı. Bu sabit listesinin, bir temel sınıfta aynı adlı programlama öğesi veya aşırı yüklenmiş öğeler kümesini yeniden bildirdiğini ve gizlediğini belirtir. Her üye üzerinde değil, yalnızca Numaralandırmadaki [gölgeleri](../../../visual-basic/language-reference/modifiers/shadows.md) belirtebilirsiniz.
 
 - `enumerationname`
 
-  Gerekli. Name of the enumeration. For information on valid names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+  Gerekli. Sabit listesinin adı. Geçerli adlar hakkında daha fazla bilgi için bkz. [bildirilmemiş öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
 - `datatype`
 
-  İsteğe bağlı. Data type of the enumeration and all its members.
+  İsteğe bağlı. Numaralandırmanın ve tüm üyelerinin veri türü.
 
 - `memberlist`
 
-  Gerekli. List of member constants being declared in this statement. Multiple members appear on individual source code lines.
+  Gerekli. Bu bildirimde bildirildiği üye sabitlerinin listesi. Tek tek kaynak kodu satırlarında birden çok üye görüntülenir.
 
-  Each `member` has the following syntax and parts: `[<attribute list>] member name [ = initializer ]`
+  Her `member` aşağıdaki söz dizimi ve bölümlere sahiptir: `[<attribute list>] member name [ = initializer ]`
 
-  |Part|Açıklama|
+  |Bölümüyle|Açıklama|
   |---|---|
-  |`membername`|Gerekli. Name of this member.|
-  |`initializer`|İsteğe bağlı. Expression that is evaluated at compile time and assigned to this member.|
+  |`membername`|Gerekli. Bu üyenin adı.|
+  |`initializer`|İsteğe bağlı. Derleme zamanında değerlendirilen ve bu üyeye atanan ifade.|
 
 - `End``Enum`
 
-  Terminates the `Enum` block.
+  `Enum` bloğunu sonlandırır.
 
 ## <a name="remarks"></a>Açıklamalar
 
-If you have a set of unchanging values that are logically related to each other, you can define them together in an enumeration. This provides meaningful names for the enumeration and its members, which are easier to remember than their values. You can then use the enumeration members in many places in your code.
+Mantıksal olarak birbirleriyle ilgili değişmeyen bir değerler kümesi varsa, bunları bir numaralandırmada birlikte tanımlayabilirsiniz. Bu, sabit listesi ve üyeleri için değerlerinden daha kolay anımsanacak anlamlı adlar sağlar. Daha sonra, sabit listesi üyelerini kodunuzda birçok yerde kullanabilirsiniz.
 
-The benefits of using enumerations include the following:
+Numaralandırmalar kullanmanın avantajları şunlardır:
 
-- Reduces errors caused by transposing or mistyping numbers.
+- Dışarı veya hatalı yazma numaralarının neden olduğu hataları azaltır.
 
-- Makes it easy to change values in the future.
+- Gelecekte değerlerin değiştirilmesini kolaylaştırır.
 
-- Makes code easier to read, which means it is less likely that errors will be introduced.
+- Kodun daha kolay okunmasını sağlar, bu da hataların tanıtılmasından daha az olabilir.
 
-- Ensures forward compatibility. If you use enumerations, your code is less likely to fail if in the future someone changes the values corresponding to the member names.
+- İleriye dönük uyumluluğu sağlar. Numaralandırmalar kullanıyorsanız, gelecekte birisinin üye adlarına karşılık gelen değerleri değiştirmesinin ardından kodunuzun başarısız olma olasılığı düşüktür.
 
-An enumeration has a name, an underlying data type, and a set of members. Each member represents a constant.
+Bir numaralandırma bir ada, temel alınan veri türüne ve bir üye kümesine sahiptir. Her üye bir sabiti temsil eder.
 
-An enumeration declared at class, structure, module, or interface level, outside any procedure, is a *member enumeration*. It is a member of the class, structure, module, or interface that declares it.
+Sınıf, yapı, modül veya arabirim düzeyinde tanımlanan ve herhangi bir yordamın dışında bir numaralandırma, bir *üye numaralandırmadır*. Bunu bildiren sınıf, yapı, modül veya arabirimin bir üyesidir.
 
-Member enumerations can be accessed from anywhere within their class, structure, module, or interface. Code outside a class, structure, or module must qualify a member enumeration's name with the name of that class, structure, or module. You can avoid the need to use fully qualified names by adding an [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) statement to the source file.
+Üye numaralandırmalara, sınıfları, yapısı, modülü veya arabirimi içinde herhangi bir yerden erişilebilir. Bir sınıf, yapı veya modülün dışındaki kodun, bir üye sabit listesinin adını bu sınıf, yapı veya modülün adı ile nitelemesi gerekir. Kaynak dosyaya bir [Içeri aktarmalar](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) açıklaması ekleyerek tam nitelikli adlar kullanma gereksinimini ortadan kaldırabilirsiniz.
 
-An enumeration declared at namespace level, outside any class, structure, module, or interface, is a member of the namespace in which it appears.
+Herhangi bir sınıf, yapı, modül veya arabirim dışında, ad alanı düzeyinde belirtilen bir sabit listesi, göründüğü ad alanının bir üyesidir.
 
-The *declaration context* for an enumeration must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure. For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+Bir numaralandırma için *Bildirim bağlamı* bir kaynak dosya, ad alanı, sınıf, yapı, modül veya arabirim olmalıdır ve bir yordam olamaz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
 
-You can apply attributes to an enumeration as a whole, but not to its members individually. An attribute contributes information to the assembly's metadata.
+Öznitelikleri bir numaralandırmaya bir bütün olarak uygulayabilir, ancak üyelerine tek tek atayabilirsiniz. Bir öznitelik, bilgileri derlemenin meta verilerine katkıda bulunur.
 
 ## <a name="data-type"></a>Veri Türü
 
-The `Enum` statement can declare the data type of an enumeration. Each member takes the enumeration's data type. You can specify `Byte`, `Integer`, `Long`, `SByte`, `Short`, `UInteger`, `ULong`, or `UShort`.
+`Enum` deyimin bir numaralandırmanın veri türünü bildirebilme. Her üye, numaralandırmanın veri türünü alır. `Byte`, `Integer`, `Long`, `SByte`, `Short`, `UInteger`, `ULong`veya `UShort`belirtebilirsiniz.
 
-If you do not specify `datatype` for the enumeration, each member takes the data type of its `initializer`. If you specify both `datatype` and `initializer`, the data type of `initializer` must be convertible to `datatype`. If neither `datatype` nor `initializer` is present, the data type defaults to `Integer`.
+Sabit listesi için `datatype` belirtmezseniz, her üye `initializer`veri türünü alır. Hem `datatype` hem de `initializer`belirtirseniz `initializer` veri türü `datatype`dönüştürülebilir olmalıdır. Ne `datatype` ne de `initializer` yoksa, veri türü varsayılan olarak `Integer`.
 
-## <a name="initializing-members"></a>Initializing Members
+## <a name="initializing-members"></a>Üyeler başlatılıyor
 
-The `Enum` statement can initialize the contents of selected members in `memberlist`. You use `initializer` to supply an expression to be assigned to the member.
+`Enum` deyimleri `memberlist`seçilen üyelerin içeriğini başlatabilir. Üyeye atanacak bir ifade sağlamak için `initializer` kullanırsınız.
 
-If you do not specify `initializer` for a member, Visual Basic initializes it either to zero (if it is the first `member` in `memberlist`), or to a value greater by one than that of the immediately preceding `member`.
+Bir üye için `initializer` belirtmezseniz, Visual Basic sıfır (`memberlist`' de ilk `member`) veya hemen önceki `member`bir değere göre daha büyük bir değere başlatır.
 
-The expression supplied in each `initializer` can be any combination of literals, other constants that are already defined, and enumeration members that are already defined, including a previous member of this enumeration. You can use arithmetic and logical operators to combine such elements.
+Her bir `initializer` sağlanan ifade, herhangi bir sabit değer, önceden tanımlanmış diğer sabitler ve bu numaralandırmanın önceki bir üyesi dahil, zaten tanımlanmış olan sabit listesi üyeleri olabilir. Bu tür öğeleri birleştirmek için aritmetik ve mantıksal işleçler kullanabilirsiniz.
 
-You cannot use variables or functions in `initializer`. However, you can use conversion keywords such as `CByte` and `CShort`. You can also use `AscW` if you call it with a constant `String` or `Char` argument, since that can be evaluated at compile time.
+`initializer`değişkenleri veya işlevleri kullanamazsınız. Ancak, `CByte` ve `CShort`gibi dönüştürme anahtar sözcüklerini kullanabilirsiniz. `AscW`, derleme zamanında değerlendirilebilen bir sabit `String` veya `Char` bağımsız değişkeniyle çağırırsanız de kullanabilirsiniz.
 
-Enumerations cannot have floating-point values. If a member is assigned a floating-point value and `Option Strict` is set to on, a compiler error occurs. If `Option Strict` is off, the value is automatically converted to the `Enum` type.
+Numaralandırmalar kayan nokta değerlerine sahip olamaz. Bir üyeye kayan nokta değeri atanırsa ve `Option Strict` on olarak ayarlandıysa, bir derleyici hatası oluşur. `Option Strict` kapalıysa, değer otomatik olarak `Enum` türüne dönüştürülür.
 
-If the value of a member exceeds the allowable range for the underlying data type, or if you initialize any member to the maximum value allowed by the underlying data type, the compiler reports an error.
+Bir üyenin değeri, temel alınan veri türü için izin verilen aralığı aşarsa veya herhangi bir üyeyi temel alınan veri türü tarafından izin verilen en yüksek değere başlattığınızda, derleyici bir hata bildirir.
 
 ## <a name="modifiers"></a>Değiştiriciler
 
-Class, structure, module, and interface member enumerations default to public access. You can adjust their access levels with the access modifiers. Namespace member enumerations default to friend access. You can adjust their access levels to public, but not to private or protected. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Sınıf, yapı, modül ve arabirim üyesi numaralandırmalar, genel erişim için varsayılan. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz. Ad alanı üyesi numaralandırmalar arkadaş erişimi için varsayılan değer. Erişim düzeylerini herkese açık olarak ayarlayabilir, ancak özel veya korumalı olamaz. Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-All enumeration members have public access, and you cannot use any access modifiers on them. However, if the enumeration itself has a more restricted access level, the specified enumeration access level takes precedence.
+Tüm numaralandırma üyelerinin ortak erişimi vardır ve bunlar üzerinde herhangi bir erişim değiştiricilerini kullanamazsınız. Ancak, numaralandırmanın kendisi daha kısıtlı erişim düzeyine sahipse, belirtilen numaralandırma erişim düzeyi önceliklidir.
 
-By default, all enumerations are types and their fields are constants. Therefore the `Shared`, `Static`, and `ReadOnly` keywords cannot be used when declaring an enumeration or its members.
+Varsayılan olarak, tüm numaralandırmalar türlerdir ve alanları sabittir. Bu nedenle, bir numaralandırma veya üyeleri bildirirken `Shared`, `Static`ve `ReadOnly` anahtar sözcükleri kullanılamaz.
 
-## <a name="assigning-multiple-values"></a>Assigning Multiple Values
+## <a name="assigning-multiple-values"></a>Birden çok değer atama
 
-Enumerations typically represent mutually exclusive values. By including the <xref:System.FlagsAttribute> attribute in the `Enum` declaration, you can instead assign multiple values to an instance of the enumeration. The <xref:System.FlagsAttribute> attribute specifies that the enumeration be treated as a bit field, that is, a set of flags. These are called *bitwise* enumerations.
+Numaralandırmalar genellikle birbirini dışlayan değerleri temsil eder. `Enum` bildirimine <xref:System.FlagsAttribute> özniteliğini ekleyerek, bunun yerine sabit listesinin bir örneğine birden çok değer atayabilirsiniz. <xref:System.FlagsAttribute> özniteliği, numaralandırmanın bir bit alanı, yani bir bayrak kümesi olarak değerlendirilip değerlendirilmediğini belirtir. Bunlara *bit düzeyinde* numaralandırmalar denir.
 
-When you declare an enumeration by using the <xref:System.FlagsAttribute> attribute, we recommend that you use powers of 2, that is, 1, 2, 4, 8, 16, and so on, for the values. We also recommend that "None" be the name of a member whose value is 0. For additional guidelines, see <xref:System.FlagsAttribute> and <xref:System.Enum>.
+<xref:System.FlagsAttribute> özniteliğini kullanarak bir numaralandırma bildirdiğinizde, değerler için 2, bu, 1, 2, 4, 8, 16, vb. üslerini kullanmanızı öneririz. Ayrıca "none" değerinin değeri 0 olan üyenin adı olması önerilir. Ek yönergeler için bkz. <xref:System.FlagsAttribute> ve <xref:System.Enum>.
 
 ## <a name="example"></a>Örnek
 
-The following example shows how to use the `Enum` statement. Note that the member is referred to as `EggSizeEnum.Medium`, and not as `Medium`.
+Aşağıdaki örnek, `Enum` deyimin nasıl kullanılacağını göstermektedir. Üyenin `Medium`değil `EggSizeEnum.Medium`olarak adlandırıldığına göz önünde bulunurlar.
 
 [!code-vb[VbEnumsTask#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#41)]
 
 ## <a name="example"></a>Örnek
 
-The method in the following example is outside the `Egg` class. Therefore, `EggSizeEnum` is fully qualified as `Egg.EggSizeEnum`.
+Aşağıdaki örnekteki yöntem `Egg` sınıfının dışındadır. Bu nedenle, `EggSizeEnum` `Egg.EggSizeEnum`tam olarak nitelenir.
 
 [!code-vb[VbEnumsTask#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#42)]
 
 ## <a name="example"></a>Örnek
 
-The following example uses the `Enum` statement to define a related set of named constant values. In this case, the values are colors you might choose to design data entry forms for a database.
+Aşağıdaki örnek, ilgili bir adlandırılmış sabit değer kümesini tanımlamak için `Enum` ifadesini kullanır. Bu durumda, değerler, bir veritabanı için veri girişi formları tasarlamayı seçebileceğiniz renklerdir.
 
 [!code-vb[VbEnumsTask#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#30)]
 
 ## <a name="example"></a>Örnek
 
-The following example shows values that include both positive and negative numbers.
+Aşağıdaki örnek, hem pozitif hem de negatif sayı içeren değerleri gösterir.
 
 [!code-vb[VbEnumsTask#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#31)]
 
 ## <a name="example"></a>Örnek
 
-In the following example, an `As` clause is used to specify the `datatype` of an enumeration.
+Aşağıdaki örnekte, bir numaralandırma `datatype` belirtmek için bir `As` yan tümcesi kullanılır.
 
 [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]
 
 ## <a name="example"></a>Örnek
 
-The following example shows how to use a bitwise enumeration. Multiple values can be assigned to an instance of a bitwise enumeration. The `Enum` declaration includes the <xref:System.FlagsAttribute> attribute, which indicates that the enumeration can be treated as a set of flags.
+Aşağıdaki örnek bit düzeyinde numaralandırmanın nasıl kullanılacağını göstermektedir. Bit düzeyinde numaralandırma örneğine birden çok değer atanabilir. `Enum` bildirimi, numaralandırmanın bir dizi bayrak olarak değerlendirileceğini gösteren <xref:System.FlagsAttribute> özniteliğini içerir.
 
 [!code-vb[VbEnumsTask#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#61)]
 
 ## <a name="example"></a>Örnek
 
-The following example iterates through an enumeration. It uses the <xref:System.Enum.GetNames%2A> method to retrieve an array of member names from the enumeration, and <xref:System.Enum.GetValues%2A> to retrieve an array of member values.
+Aşağıdaki örnek bir numaralandırma boyunca yinelenir. Numaralandırmadaki üye adları dizisini almak için <xref:System.Enum.GetNames%2A> yöntemini kullanır ve üye değerleri dizisini almak için <xref:System.Enum.GetValues%2A>.
 
 [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]
 

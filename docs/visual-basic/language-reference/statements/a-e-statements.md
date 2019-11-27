@@ -10,14 +10,14 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350220"
 ---
 # <a name="a-e-statements"></a>A-E Deyimleri
-The following table contains a listing of Visual Basic language statements.  
+Aşağıdaki tablo Visual Basic Language deyimlerinin bir listesini içerir.  
   
 |||||  
 |---|---|---|---|  
-|[AddHandler](addhandler-statement.md)|[Call](call-statement.md)|[Class](class-statement.md)|[Const](const-statement.md)|  
-|[Continue](continue-statement.md)|[Declare](declare-statement.md)|[Delegate](delegate-statement.md)|[Dim](dim-statement.md)|  
-|[Do...Loop](do-loop-statement.md)|[Else](else-statement.md)|[End](end-statement.md)|[End \<keyword>](end-keyword-statement.md)|  
-|[Enum](enum-statement.md)|[Erase](erase-statement.md)|[Hata:](error-statement.md)|[Event](event-statement.md)|  
+|[AddHandler](addhandler-statement.md)|[Çaðýrmak](call-statement.md)|[Sınıfı](class-statement.md)|[Sabit](const-statement.md)|  
+|[Continue](continue-statement.md)|[Bildirileceğini](declare-statement.md)|[Ğini](delegate-statement.md)|[Boyutu](dim-statement.md)|  
+|[Do... Gerçekleştirmek](do-loop-statement.md)|[Değilse](else-statement.md)|[Erer](end-statement.md)|[End \<anahtar sözcüğü >](end-keyword-statement.md)|  
+|[Yardımının](enum-statement.md)|[Silme](erase-statement.md)|[Hata:](error-statement.md)|[Event](event-statement.md)|  
 |[Çıkış](exit-statement.md)||||  
   
 ## <a name="see-also"></a>Ayrıca bkz.

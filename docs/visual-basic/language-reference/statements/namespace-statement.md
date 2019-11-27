@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74329653"
 ---
 # <a name="namespace-statement"></a>Namespace Deyimi
-Declares the name of a namespace and causes the source code that follows the declaration to be compiled within that namespace.  
+Bir ad alanının adını bildirir ve bildirimi takip eden kaynak kodunun bu ad alanı içinde derlenmesini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,66 +32,66 @@ End Namespace
   
 ## <a name="parts"></a>Bölümler  
  Global  
- İsteğe bağlı. Allows you to define a namespace out of the root namespace of your project. See [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ İsteğe bağlı. Projenizin kök ad alanından bir ad alanı tanımlamanızı sağlar. Bkz. [Visual Basic ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
  `name`  
- Gerekli. A unique name that identifies the namespace. Must be a valid Visual Basic identifier. For more information, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Gerekli. Ad alanını tanımlayan benzersiz bir ad. Geçerli bir Visual Basic tanımlayıcısı olmalıdır. Daha fazla bilgi için bkz. [bildirilmemiş öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  `componenttypes`  
- İsteğe bağlı. Elements that make up the namespace. These include, but are not limited to, enumerations, structures, interfaces, classes, modules, delegates, and other namespaces.  
+ İsteğe bağlı. Ad alanını oluşturan öğeler. Bunlar arasında, numaralandırmalar, yapılar, arabirimler, sınıflar, modüller, temsilciler ve diğer ad alanları bunlarla sınırlı değildir.  
   
  `End Namespace`  
- Terminates a `Namespace` block.  
+ Bir `Namespace` bloğunu sonlandırır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Namespaces are used as an organizational system. They provide a way to classify and present programming elements that are exposed to other programs and applications. Note that a namespace is not a *type* in the sense that a class or structure is—you cannot declare a programming element to have the data type of a namespace.  
+ Ad alanları bir kuruluş sistemi olarak kullanılır. Diğer programlar ve uygulamalar tarafından sunulan programlama öğelerini sınıflandırmak ve sunmak için bir yol sağlar. Bir ad alanı, bir sınıf veya yapının olduğu anlamda bir *tür* değildir; bir ad alanı veri türüne sahip olacak bir programlama öğesi bildiremezsiniz.  
   
- All programming elements declared after a `Namespace` statement belong to that namespace. Visual Basic continues to compile elements into the last declared namespace until it encounters either an `End Namespace` statement or another `Namespace` statement.  
+ Bir `Namespace` deyimden sonra belirtilen tüm programlama öğeleri bu ad alanına ait. Visual Basic, bir `End Namespace` ifadesiyle veya başka bir `Namespace` ifadesiyle karşılaşana kadar öğeleri en son tanımlanan ad alanına derlemeye devam eder.  
   
- If a namespace is already defined, even outside your project, you can add programming elements to it. To do this, you use a `Namespace` statement to direct Visual Basic to compile elements into that namespace.  
+ Bir ad alanı zaten tanımlanmışsa, projeniz dışında bile buna programlama öğeleri ekleyebilirsiniz. Bunu yapmak için, Visual Basic öğeleri bu ad alanına derlemek üzere yönlendirmek üzere bir `Namespace` ifadesini kullanın.  
   
- You can use a `Namespace` statement only at the file or namespace level. This means the *declaration context* for a namespace must be a source file or another namespace, and cannot be a class, structure, module, interface, or procedure. For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ `Namespace` bir ifadesini yalnızca dosya veya ad alanı düzeyinde kullanabilirsiniz. Diğer bir deyişle, bir ad alanı için *Bildirim bağlamı* bir kaynak dosyası veya başka bir ad alanı olmalıdır ve bir sınıf, yapı, modül, arabirim veya yordam olamaz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- You can declare one namespace within another. There is no strict limit to the levels of nesting you can declare, but remember that when other code accesses the elements declared in the innermost namespace, it must use a qualification string that contains all the namespace names in the nesting hierarchy.  
+ Bir ad alanını başka bir ad alanı içinde bildirebilirsiniz. Bildirebileceğiniz iç içe geçme düzeylerine yönelik kesin bir sınır yoktur, ancak başka bir kod, iç içe geçmiş hiyerarşisinde belirtilen tüm ad alanı adlarını içeren bir nitelik dizesi kullanması gerektiğini unutmayın.  
   
-## <a name="access-level"></a>Access Level  
- Namespaces are treated as if they have a `Public` access level. A namespace can be accessed from code anywhere in the same project, from other projects that reference the project, and from any assembly built from the project.  
+## <a name="access-level"></a>Erişim düzeyi  
+ Ad alanları `Public` erişim düzeyine sahip gibi davranır. Bir ad alanına, aynı projede yer alan koddan, projeye başvuran diğer projelerden ve projeden oluşturulan herhangi bir derlemeden erişilebilir.  
   
- Programming elements declared at namespace level, meaning in a namespace but not inside any other element, can have `Public` or `Friend` access. If unspecified, the access level of such an element uses `Friend` by default. Elements you can declare at namespace level include classes, structures, modules, interfaces, enumerations, and delegates. For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Ad alanı düzeyinde tanımlanan, bir ad alanında anlamı olan ancak başka bir öğe içinde olmayan programlama öğeleri, `Public` veya `Friend` erişim içerebilir. Belirtilmemişse, böyle bir öğenin erişim düzeyi varsayılan olarak `Friend` kullanır. Ad alanı düzeyinde bildirebileceğiniz öğeler sınıflar, yapılar, modüller, arabirimler, numaralandırmalar ve temsilciler içerir. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
-## <a name="root-namespace"></a>Root Namespace  
- All namespace names in your project are based on a *root namespace*. Visual Studio assigns your project name as the default root namespace for all code in your project. For example, if your project is named `Payroll`, its programming elements belong to namespace `Payroll`. If you declare `Namespace funding`, the full name of that namespace is `Payroll.funding`.  
+## <a name="root-namespace"></a>Kök ad alanı  
+ Projenizdeki tüm ad alanı adları bir *kök ad alanını*temel alır. Visual Studio, projenizdeki tüm kodlar için proje adınızı varsayılan kök ad alanı olarak atar. Örneğin, projeniz `Payroll`olarak adlandırılmışsa, programlama öğeleri ad alanı `Payroll`aittir. `Namespace funding`bildirirseniz, bu ad alanının tam adı `Payroll.funding`.  
   
- If you want to specify an existing namespace in a `Namespace` statement, such as in the generic list class example, you can set your root namespace to a null value. To do this, click **Project Properties** from the **Project** menu and then clear the **Root namespace** entry so that the box is empty. If you did not do this in the generic list class example, the Visual Basic compiler would take `System.Collections.Generic` as a new namespace within project `Payroll`, with the full name of `Payroll.System.Collections.Generic`.  
+ Genel liste sınıfı örneğinde olduğu gibi `Namespace` bildiriminde var olan bir ad alanı belirtmek istiyorsanız, kök ad alanınızı null bir değer olarak ayarlayabilirsiniz. Bunu yapmak için **Proje** menüsünden **Proje özellikleri** ' ne tıklayın ve ardından kutunun boş olması için **kök ad alanı** girişini temizleyin. Bunu genel liste sınıfı örneğinde yapmadıysanız, Visual Basic derleyici, `Payroll.System.Collections.Generic`tam adıyla proje `Payroll`içinde yeni bir ad alanı olarak `System.Collections.Generic` alır.  
   
- Alternatively, you can use the `Global` keyword to refer to elements of namespaces defined outside your project. Doing so lets you retain your project name as the root namespace. This reduces the chance of unintentionally merging your programming elements together with those of existing namespaces. For more information, see the "Global Keyword in Fully Qualified Names" section in [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Alternatif olarak, `Global` anahtar sözcüğünü, projenizin dışında tanımlanan ad alanları öğelerine başvurmak için de kullanabilirsiniz. Bunun yapılması, proje adınızı kök ad alanı olarak korumanızı sağlar. Bu, programlama öğelerinizi, varolan ad uzaylarınızla birlikte yanlışlıkla birleştirme olasılığını azaltır. Daha fazla bilgi için [Visual Basic ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)Içindeki "tam adlarda genel anahtar sözcük" bölümüne bakın.  
   
- The `Global` keyword can also be used in a Namespace statement. This lets you define a namespace out of the root namespace of your project. For more information, see the "Global Keyword in Namespace Statements" section in [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ `Global` anahtar sözcüğü, bir Namespace ifadesinde de kullanılabilir. Bu, projenizin kök ad alanından bir ad alanı tanımlamanızı sağlar. Daha fazla bilgi için [Visual Basic ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)Içindeki "ad alanı deyimlerine genel anahtar sözcüğü" bölümüne bakın.  
   
- **Troubleshooting.** The root namespace can lead to unexpected concatenations of namespace names. If you make reference to namespaces defined outside your project, the Visual Basic compiler can construe them as nested namespaces in the root namespace. In such a case, the compiler does not recognize any types that have been already defined in the external namespaces. To avoid this, either set your root namespace to a null value as described in "Root Namespace," or use the `Global` keyword to access elements of external namespaces.  
+ **Sorunu.** Kök ad alanı, ad alanı adlarının beklenmedik birleştirmeleri oluşmasına neden olabilir. Projenizin dışında tanımlanan ad alanlarına başvuru yaparsanız, Visual Basic derleyici bunları kök ad alanında iç içe geçmiş ad alanları olarak construe. Böyle bir durumda, derleyici dış ad alanlarında zaten tanımlanmış olan herhangi bir türü tanımaz. Bunu önlemek için, kök ad alanınızı "kök ad alanı" içinde açıklandığı şekilde null bir değer olarak ayarlayın veya dış ad alanlarının öğelerine erişmek için `Global` anahtar sözcüğünü kullanın.  
   
-## <a name="attributes-and-modifiers"></a>Attributes and Modifiers  
- You cannot apply attributes to a namespace. An attribute contributes information to the assembly's metadata, which is not meaningful for source classifiers such as namespaces.  
+## <a name="attributes-and-modifiers"></a>Öznitelikler ve değiştiriciler  
+ Bir ad alanına öznitelikler uygulayamazsınız. Bir öznitelik, verileri, ad alanları gibi kaynak sınıflandırıcılar için anlamlı olmayan derlemenin meta verilerine katkıda bulunur.  
   
- You cannot apply any access or procedure modifiers, or any other modifiers, to a namespace. Because it is not a type, these modifiers are not meaningful.  
+ Herhangi bir erişim veya yordam değiştiricisi ya da başka bir değiştirici, bir ad alanına uygulayamazsınız. Bir tür olmadığından, bu değiştiriciler anlamlı değildir.  
   
 ## <a name="example"></a>Örnek  
- The following example declares two namespaces, one nested in the other.  
+ Aşağıdaki örnek, diğeri diğeri olan iki ad alanını bildirir.  
   
  [!code-vb[VbVbalrStatements#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#43)]  
   
 ## <a name="example"></a>Örnek  
- The following example declares multiple nested namespaces on a single line, and it is equivalent to the previous example.  
+ Aşağıdaki örnek, birden çok iç içe ad alanını tek bir satırda bildirir ve bu, önceki örneğe eşdeğerdir.  
   
  [!code-vb[VbVbalrStatements#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#41)]  
   
 ## <a name="example"></a>Örnek  
- The following example accesses the class defined in the previous examples.  
+ Aşağıdaki örnek, önceki örneklerde tanımlanan sınıfa erişir.  
   
  [!code-vb[VbVbalrStatements#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#42)]  
   
 ## <a name="example"></a>Örnek  
- The following example defines the skeleton of a new generic list class and adds it to the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace.  
+ Aşağıdaki örnek, yeni bir genel liste sınıfının iskelet 'sini tanımlar ve <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanına ekler.  
   
 ```vb  
 Namespace System.Collections.Generic  
@@ -106,4 +106,4 @@ End Namespace
 
 - [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Bildirilen Öğe Adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Visual Basic ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)

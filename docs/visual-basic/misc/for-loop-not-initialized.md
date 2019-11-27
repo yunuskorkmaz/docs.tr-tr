@@ -1,5 +1,5 @@
 ---
-title: For loop not initialized
+title: For döngüsü başlatılmamış
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID92
@@ -11,12 +11,12 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348451"
 ---
-# <a name="for-loop-not-initialized-visual-basic"></a>For loop not initialized (Visual Basic)
-You jumped into the middle of a `For...Next` loop.  
+# <a name="for-loop-not-initialized-visual-basic"></a>For döngüsü başlatılmamış (Visual Basic)
+`For...Next` döngüsünün ortasına atlamış olursunuz.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Remove the jump into the loop.  
+1. Döngüyü atlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

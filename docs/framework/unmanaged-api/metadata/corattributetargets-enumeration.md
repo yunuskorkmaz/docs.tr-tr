@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443876"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets Numaralandırması
-Specifies the application elements on which it is valid to apply an attribute.  
+Bir öznitelik uygulamak için geçerli olduğu uygulama öğelerini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -58,38 +58,38 @@ typedef enum CorAttributeTargets
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`catAssembly`|Attribute can be applied to an assembly.|  
-|`catModule`|Attribute can be applied to a portable executable (.dll or .exe) module.|  
-|`catClass`|Attribute can be applied to a class.|  
-|`catStruct`|Attribute can be applied to a structure; that is, a value type.|  
-|`catEnum`|Attribute can be applied to an enumeration.|  
-|`catConstructor`|Attribute can be applied to a constructor.|  
-|`catMethod`|Attribute can be applied to a method.|  
-|`catProperty`|Attribute can be applied to a property.|  
-|`catField`|Attribute can be applied to a field.|  
-|`catEvent`|Attribute can be applied to an event.|  
-|`catInterface`|Attribute can be applied to an interface.|  
-|`catParameter`|Attribute can be applied to a parameter.|  
-|`catDelegate`|Attribute can be applied to a delegate.|  
-|`catGenericParameter`|Attribute can be applied to a generic parameter.|  
-|`catAll`|Attribute can be applied to any application element.|  
-|`catClassMembers`|Attribute can be applied to a member of a class.|  
+|`catAssembly`|Öznitelik, bir derlemeye uygulanabilir.|  
+|`catModule`|Öznitelik, taşınabilir bir çalıştırılabilir (. dll veya. exe) modülüne uygulanabilir.|  
+|`catClass`|Öznitelik, bir sınıfa uygulanabilir.|  
+|`catStruct`|Öznitelik bir yapıya uygulanabilir; diğer bir deyişle, bir değer türüdür.|  
+|`catEnum`|Öznitelik, bir numaralandırmaya uygulanabilir.|  
+|`catConstructor`|Öznitelik, bir oluşturucuya uygulanabilir.|  
+|`catMethod`|Öznitelik, bir yönteme uygulanabilir.|  
+|`catProperty`|Öznitelik, bir özelliğe uygulanabilir.|  
+|`catField`|Öznitelik, bir alana uygulanabilir.|  
+|`catEvent`|Öznitelik, bir olaya uygulanabilir.|  
+|`catInterface`|Öznitelik, bir arabirime uygulanabilir.|  
+|`catParameter`|Öznitelik, bir parametreye uygulanabilir.|  
+|`catDelegate`|Öznitelik, bir temsilciye uygulanabilir.|  
+|`catGenericParameter`|Öznitelik, genel parametreye uygulanabilir.|  
+|`catAll`|Özniteliği herhangi bir uygulama öğesine uygulanabilir.|  
+|`catClassMembers`|Öznitelik, bir sınıfın üyesine uygulanabilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.  
+ `CorAttributeTargets` numaralandırma değerleri, tercih edilen birleşimi almak için bit düzeyinde veya işlemle birleştirilebilir.  
   
- The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.  
+ `CorAttributeTargets` yönetilen <xref:System.AttributeTargets?displayProperty=nameWithType> numaralandırmasını paraleller.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,37 +14,37 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348605"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Nasıl yapılır: İki Nesnenin Aynı Olup Olmadığını Belirleme (Visual Basic)
-In Visual Basic, two variable references are considered identical if their pointers are the same, that is, if both variables point to the same class instance in memory. For example, in a Windows Forms application, you might want to make a comparison to determine whether the current instance (`Me`) is the same as a particular instance, such as `Form2`.  
+Visual Basic, işaretçilerin aynısı varsa, iki değişken başvurusu özdeş kabul edilir, yani her iki değişken de bellekteki aynı sınıf örneğini işaret ediyor. Örneğin, Windows Forms bir uygulamada, geçerli örneğin (`Me`) `Form2`gibi belirli bir örnekle aynı olup olmadığını belirlemede bir karşılaştırma yapmak isteyebilirsiniz.  
   
- Visual Basic provides two operators to compare pointers. The [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) returns `True` if the objects are identical, and the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) returns `True` if they are not.  
+ Visual Basic işaretçileri karşılaştırmak için iki işleç sağlar. İf [işleci](../../../../visual-basic/language-reference/operators/is-operator.md) , nesneler aynıysa `True` döndürür ve [ınot işleci](../../../../visual-basic/language-reference/operators/isnot-operator.md) yoksa `True` döndürür.  
   
-## <a name="determining-if-two-objects-are-identical"></a>Determining if Two Objects Are Identical  
+## <a name="determining-if-two-objects-are-identical"></a>Iki nesnenin aynı olup olmadığını belirleme  
   
-#### <a name="to-determine-if-two-objects-are-identical"></a>To determine if two objects are identical  
+#### <a name="to-determine-if-two-objects-are-identical"></a>İki nesnenin aynı olup olmadığını belirleme  
   
-1. Set up a `Boolean` expression to test the two objects.  
+1. İki nesneyi test etmek için bir `Boolean` ifadesi ayarlayın.  
   
-2. In your testing expression, use the `Is` operator with the two objects as operands.  
+2. Test ifadenizde, iki nesne işlenen olarak `Is` işlecini kullanın.  
   
-     `Is` returns `True` if the objects point to the same class instance.  
+     `Is`, nesneler aynı sınıf örneğine işaret ettikten sonra `True` döndürür.  
   
-## <a name="determining-if-two-objects-are-not-identical"></a>Determining if Two Objects Are Not Identical  
- Sometimes you want to perform an action if the two objects are not identical, and it can be awkward to combine `Not` and `Is`, for example `If Not obj1 Is obj2`. In such a case you can use the `IsNot` operator.  
+## <a name="determining-if-two-objects-are-not-identical"></a>Iki nesnenin aynı olup olmadığını belirleme  
+ Bazen iki nesne özdeş değilse bir eylem gerçekleştirmek istiyor ve bu, örneğin `If Not obj1 Is obj2``Not` ve `Is`birleştirmek için de kullanılabilir. Böyle bir durumda `IsNot` işlecini kullanabilirsiniz.  
   
-#### <a name="to-determine-if-two-objects-are-not-identical"></a>To determine if two objects are not identical  
+#### <a name="to-determine-if-two-objects-are-not-identical"></a>İki nesnenin aynı olup olmadığını belirleme  
   
-1. Set up a `Boolean` expression to test the two objects.  
+1. İki nesneyi test etmek için bir `Boolean` ifadesi ayarlayın.  
   
-2. In your testing expression, use the `IsNot` operator with the two objects as operands.  
+2. Test ifadenizde, iki nesne işlenen olarak `IsNot` işlecini kullanın.  
   
-     `IsNot` returns `True` if the objects do not point to the same class instance.  
+     nesneler aynı sınıf örneğini işaret etmez `IsNot` `True` döndürür.  
   
 ## <a name="example"></a>Örnek  
- The following example tests pairs of `Object` variables to see if they point to the same class instance.  
+ Aşağıdaki örnek, aynı sınıf örneğine işaret edip ettikleri görmek için `Object` değişkenlerinin çiftlerini sınar.  
   
  [!code-vb[VbVbalrKeywords#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#14)]  
   
- The preceding example displays the following output.  
+ Yukarıdaki örnek aşağıdaki çıktıyı görüntüler.  
   
  `objA different from objB? True`  
   

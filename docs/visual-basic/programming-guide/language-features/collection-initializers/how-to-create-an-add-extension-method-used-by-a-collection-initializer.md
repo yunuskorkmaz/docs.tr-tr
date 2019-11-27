@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Koleksiyon Başlatıcısı Tarafından Kullanılan Bir Uzantı Ekleme Metodu Oluşturma'
+title: 'Nasıl yapılır: Koleksiyon Başlatıcısı Tarafından Kullanılan Bir Uzantı Ekleme Yöntemi Oluşturma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - collection initializers [Visual Basic]
@@ -12,12 +12,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346720"
 ---
 # <a name="how-to-create-an-add-extension-method-used-by-a-collection-initializer-visual-basic"></a>Nasıl yapılır: Koleksiyon Başlatıcısı Tarafından Kullanılan Bir Uzantı Ekleme Yöntemi Oluşturma (Visual Basic)
-When you use a collection initializer to create a collection, the Visual Basic compiler searches for an `Add` method of the collection type for which the parameters for the `Add` method match the types of the values in the collection initializer. This `Add` method is used to populate the collection with the values from the collection initializer.  
+Koleksiyon oluşturmak için bir koleksiyon başlatıcısı kullandığınızda Visual Basic derleyici, koleksiyon başlatıcısındaki değerlerin türleriyle eşleşen `Add` yöntemi için parametrelerin `Add` yöntemini arar. Bu `Add` yöntemi, koleksiyonu koleksiyon başlatıcısındaki değerlerle doldurmak için kullanılır.  
   
- If no matching `Add` method exists and you cannot modify the code for the collection, you can add an extension method called `Add` that takes the parameters that are required by the collection initializer. This is typically what you need to do when you use collection initializers for generic collections.  
+ Eşleşen bir `Add` yöntemi yoksa ve koleksiyon için kodu değiştiremeyeceğiniz takdirde, koleksiyon başlatıcısı tarafından gereken parametreleri alan `Add` adlı bir uzantı yöntemi ekleyebilirsiniz. Genel Koleksiyonlar için koleksiyon başlatıcıları kullandığınızda bu genellikle yapmanız gereken şeydir.  
   
 ## <a name="example"></a>Örnek  
- The following example shows how to add an extension method to the generic <xref:System.Collections.Generic.List%601> type so that a collection initializer can be used to add objects of type `Employee`. The extension method enables you to use the shortened collection initializer syntax.  
+ Aşağıdaki örnek, bir koleksiyon başlatıcısının `Employee`türündeki nesneleri eklemek için kullanılabilmesi için genel <xref:System.Collections.Generic.List%601> türüne bir genişletme yönteminin nasıl ekleneceğini gösterir. Genişletme yöntemi, kısaltılmış koleksiyon başlatıcısı sözdizimini kullanmanıza olanak sağlar.  
   
  [!code-vb[VbVbalrCollectionInitializersHowTo1#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializersHowTo1/VB/Module1.vb#1)]  
   

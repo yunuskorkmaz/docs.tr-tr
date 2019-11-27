@@ -17,30 +17,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345193"
 ---
 # <a name="determining-object-type-visual-basic"></a>Nesne Türünü Belirleme (Visual Basic)
-Generic object variables (that is, variables you declare as `Object`) can hold objects from any class. When using variables of type `Object`, you may need to take different actions based on the class of the object; for example, some objects might not support a particular property or method. Visual Basic provides two means of determining which type of object is stored in an object variable: the `TypeName` function and the `TypeOf...Is` operator.  
+Genel nesne değişkenleri (yani, `Object`olarak bildirdiğiniz değişkenler) herhangi bir sınıftan nesne tutabilir. `Object`değişkenleri kullanırken, nesnenin sınıfına göre farklı eylemler gerçekleştirmeniz gerekebilir; Örneğin, bazı nesneler belirli bir özelliği veya yöntemi desteklemiyor. Visual Basic, nesne değişkeninde hangi tür nesnenin depolandığını belirlemek için iki yol sunar: `TypeName` işlevi ve `TypeOf...Is` işleci.  
   
-## <a name="typename-and-typeofis"></a>TypeName and TypeOf…Is  
- The `TypeName` function returns a string and is the best choice when you need to store or display the class name of an object, as shown in the following code fragment:  
+## <a name="typename-and-typeofis"></a>TypeName ve TypeOf... Eklenir  
+ `TypeName` işlevi bir dize döndürür ve aşağıdaki kod parçasında gösterildiği gibi bir nesnenin sınıf adını depolamanız veya görüntüetmeniz gerektiğinde en iyi seçenektir:  
   
  [!code-vb[VbVbalrOOP#92](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#92)]  
   
- The `TypeOf...Is` operator is the best choice for testing an object's type, because it is much faster than an equivalent string comparison using `TypeName`. The following code fragment uses `TypeOf...Is` within an `If...Then...Else` statement:  
+ `TypeOf...Is` işleci, bir nesnenin türünü test etmek için en iyi seçimdir, çünkü `TypeName`kullanılarak denk dize karşılaştırmasının çok daha hızlıdır. Aşağıdaki kod parçası bir `If...Then...Else` deyimindeki `TypeOf...Is` kullanır:  
   
  [!code-vb[VbVbalrOOP#93](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#93)]  
   
- A word of caution is due here. The `TypeOf...Is` operator returns `True` if an object is of a specific type, or is derived from a specific type. Almost everything you do with Visual Basic involves objects, which include some elements not normally thought of as objects, such as strings and integers. These objects are derived from and inherit methods from <xref:System.Object>. When passed an `Integer` and evaluated with `Object`, the `TypeOf...Is` operator returns `True`. The following example reports that the parameter `InParam` is both an `Object` and an `Integer`:  
+ Burada dikkatli bir sözcük verilmiştir. `TypeOf...Is` işleci, bir nesne belirli bir tür veya belirli bir türden türetildiyse `True` döndürür. Visual Basic ile yaptığınız neredeyse her şey, genellikle dizeler ve tamsayılar gibi nesneler olarak düşünmeden bazı öğeleri içeren nesneler içerir. Bu nesneler, ' den türetilir ve <xref:System.Object>yöntemlerden devralınır. Bir `Integer` geçirildiğinde ve `Object`ile değerlendirildiğinde `TypeOf...Is` işleci `True`döndürür. Aşağıdaki örnek, `InParam` parametresinin hem `Object` hem de `Integer`olduğunu bildiriyor:  
   
  [!code-vb[VbVbalrOOP#94](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#94)]  
   
- The following example uses both `TypeOf...Is` and `TypeName` to determine the type of object passed to it in the `Ctrl` argument. The `TestObject` procedure calls `ShowType` with three different kinds of controls.  
+ Aşağıdaki örnek, `Ctrl` bağımsız değişkeninde kendisine geçirilen nesne türünü belirleyebilmek için hem `TypeOf...Is` hem de `TypeName` kullanır. `TestObject` yordamı üç farklı denetim türüyle `ShowType` çağırır.  
   
 #### <a name="to-run-the-example"></a>Örneği çalıştırmak için  
   
-1. Create a new Windows Application project and add a <xref:System.Windows.Forms.Button> control, a <xref:System.Windows.Forms.CheckBox> control, and a <xref:System.Windows.Forms.RadioButton> control to the form.  
+1. Yeni bir Windows uygulaması projesi oluşturun ve forma bir <xref:System.Windows.Forms.Button> denetimi, <xref:System.Windows.Forms.CheckBox> denetimi ve bir <xref:System.Windows.Forms.RadioButton> denetimi ekleyin.  
   
-2. From the button on your form, call the `TestObject` procedure.  
+2. Formunuzdaki düğmeden `TestObject` yordamını çağırın.  
   
-3. Add the following code to your form:  
+3. Formunuza aşağıdaki kodu ekleyin:  
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   

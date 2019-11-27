@@ -15,7 +15,7 @@ ms.locfileid: "74354122"
 ---
 # <a name="const-statement-visual-basic"></a>Const Deyimi (Visual Basic)
 
-Declares and defines one or more constants.
+Bir veya daha fazla sabiti bildirir ve tanımlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -27,82 +27,82 @@ Const constantlist
 ## <a name="parts"></a>Bölümler
 
 `attributelist`  
-İsteğe bağlı. List of attributes that apply to all the constants declared in this statement. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").
+İsteğe bağlı. Bu bildirimde belirtilen tüm sabitlere uygulanan özniteliklerin listesi. Bkz. [öznitelik listesine](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraçlar ("`<`" ve "`>`").
 
 `accessmodifier`  
-İsteğe bağlı. Use this to specify what code can access these constants. Can be [Public](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [Private](../../../visual-basic/language-reference/modifiers/private.md), or [Private Protected](../../language-reference/modifiers/private-protected.md).
+İsteğe bağlı. Bu sabitlere hangi kodun erişebileceğini belirtmek için bunu kullanın. [Ortak](../../../visual-basic/language-reference/modifiers/public.md), [korumalı](../../../visual-basic/language-reference/modifiers/protected.md), [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md), [korumalı arkadaş](../modifiers/protected-friend.md), [özel](../../../visual-basic/language-reference/modifiers/private.md)veya [özel korumalı](../../language-reference/modifiers/private-protected.md)olabilir.
 
 `Shadows`  
-İsteğe bağlı. Use this to redeclare and hide a programming element in a base class. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+İsteğe bağlı. Bir temel sınıftaki programlama öğesini yeniden bildirmek ve gizlemek için bunu kullanın. Bkz. [gölgeler](../../../visual-basic/language-reference/modifiers/shadows.md).
 
 `constantlist`  
-Gerekli. List of constants being declared in this statement.
+Gerekli. Bu bildirimde bildirildiği sabitlerin listesi.
 
 `constant` `[ ,` `constant` `... ]`
 
-Each `constant` has the following syntax and parts:
+Her `constant` aşağıdaki söz dizimi ve bölümlere sahiptir:
 
 `constantname` `[ As` `datatype` `] =` `initializer`
 
-|Part|Açıklama|
+|Bölümüyle|Açıklama|
 |----------|-----------------|
-|`constantname`|Gerekli. Name of the constant. See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`datatype`|Required if `Option Strict` is `On`. Data type of the constant.|
-|`initializer`|Gerekli. Expression that is evaluated at compile time and assigned to the constant.|
+|`constantname`|Gerekli. Sabitin adı. Bkz. [tanımlanmış öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`datatype`|`Option Strict` `On`olması gerekir. Sabitin veri türü.|
+|`initializer`|Gerekli. Derleme zamanında değerlendirilen ve sabitine atanan ifade.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-If you have a value that never changes in your application, you can define a named constant and use it in place of a literal value. A name is easier to remember than a value. You can define the constant just once and use it in many places in your code. If in a later version you need to redefine the value, the `Const` statement is the only place you need to make a change.
+Uygulamanızda hiçbir değişiklik olmayan bir değer varsa, adlandırılmış bir sabit tanımlayabilir ve bunu bir sabit değer yerine kullanabilirsiniz. Bir ad, bir değerden daha kolay anımsanacak. Sabiti yalnızca bir kez tanımlayabilir ve kodunuzda birçok yerde kullanabilirsiniz. Daha sonraki bir sürümde, değeri yeniden tanımlamanız gerekirse, değişiklik yapmak için ihtiyacınız olan tek yer `Const` deyimidir.
 
-You can use `Const` only at module or procedure level. This means the *declaration context* for a variable must be a class, structure, module, procedure, or block, and cannot be a source file, namespace, or interface. For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+`Const` yalnızca modül veya yordam düzeyinde kullanabilirsiniz. Diğer bir deyişle, bir değişken için *Bildirim bağlamı* bir sınıf, yapı, modül, yordam veya blok olmalıdır ve kaynak dosya, ad alanı veya arabirim olamaz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
 
-Local constants (inside a procedure) default to public access, and you cannot use any access modifiers on them. Class and module member constants (outside any procedure) default to private access, and structure member constants default to public access. You can adjust their access levels with the access modifiers.
+Yerel sabitler (bir yordam içinde) varsayılan olarak genel erişime ve bunlara hiçbir erişim değiştiricilerini kullanamazsınız. Sınıf ve modül üyesi sabitleri (herhangi bir yordam dışında), özel erişim için varsayılan olarak, üye sabitlerinin varsayılan olarak ortak erişimine sahiptir. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz.
 
 ## <a name="rules"></a>Kurallar
 
-- **Declaration Context.** A constant declared at module level, outside any procedure, is a *member constant*; it is a member of the class, structure, or module that declares it.
+- **Bildirim bağlamı.** Modül düzeyinde belirtilen bir sabit, herhangi bir yordamın dışında, bir *üye sabiti*; Onu bildiren sınıf, yapı veya modülün bir üyesidir.
 
-  A constant declared at procedure level is a *local constant*; it is local to the procedure or block that declares it.
+  Yordam düzeyinde belirtilen bir sabit, yerel bir *sabittir*; Bu, onu bildiren yordamın veya bloğun yereldir.
 
-- **Attributes.** You can apply attributes only to member constants, not to local constants. An attribute contributes information to the assembly's metadata, which is not meaningful for temporary storage such as local constants.
+- **Özelliklerine.** Öznitelikleri yerel sabitlere değil yalnızca üye sabitlerine uygulayabilirsiniz. Bir öznitelik, bilgileri derlemenin meta verilerine katkıda bulunur ve bu, yerel sabitler gibi geçici depolama için anlamlı değildir.
 
-- **Modifiers.** By default, all constants are `Shared`, `Static`, and `ReadOnly`. You cannot use any of these keywords when declaring a constant.
+- **İlerine.** Varsayılan olarak, tüm sabitler `Shared`, `Static`ve `ReadOnly`. Bir sabit bildirirken bu anahtar sözcüklerden hiçbirini kullanamazsınız.
 
-  At procedure level, you cannot use `Shadows` or any access modifiers to declare local constants.
+  Yordam düzeyinde, yerel sabitleri bildirmek için `Shadows` veya erişim değiştiricilerini kullanamazsınız.
 
-- **Multiple Constants.** You can declare several constants in the same declaration statement, specifying the `constantname` part for each one. Multiple constants are separated by commas.
+- **Birden çok sabit.** Aynı bildirim ifadesinde, her biri için `constantname` kısmını belirterek, birkaç sabit belirtebilirsiniz. Birden çok sabit virgülle ayrılır.
 
-## <a name="data-type-rules"></a>Data Type Rules
+## <a name="data-type-rules"></a>Veri türü kuralları
 
-- **Data Types.** The `Const` statement can declare the data type of a variable. You can specify any data type or the name of an enumeration.
+- **Veri türleri.** `Const` deyimin bir değişkenin veri türünü bildirebilme. Herhangi bir veri türü veya bir numaralandırma adı belirtebilirsiniz.
 
-- **Default Type.** If you do not specify `datatype`, the constant takes the data type of `initializer`. If you specify both `datatype` and `initializer`, the data type of `initializer` must be convertible to `datatype`. If neither `datatype` nor `initializer` is present, the data type defaults to `Object`.
+- **Varsayılan tür.** `datatype`belirtmezseniz, sabit `initializer`veri türünü alır. Hem `datatype` hem de `initializer`belirtirseniz `initializer` veri türü `datatype`dönüştürülebilir olmalıdır. Ne `datatype` ne de `initializer` yoksa, veri türü varsayılan olarak `Object`.
 
-- **Different Types.** You can specify different data types for different constants by using a separate `As` clause for each variable you declare. However, you cannot declare several constants to be of the same type by using a common `As` clause.
+- **Farklı türler.** Bildirdiğiniz her değişken için ayrı bir `As` yan tümcesi kullanarak farklı sabitler için farklı veri türleri belirtebilirsiniz. Ancak, ortak bir `As` yan tümcesini kullanarak aynı türde olan birkaç sabiti bildiremezsiniz.
 
-- **Initialization.** You must initialize the value of every constant in `constantlist`. You use `initializer` to supply an expression to be assigned to the constant. The expression can be any combination of literals, other constants that are already defined, and enumeration members that are already defined. You can use arithmetic and logical operators to combine such elements.
+- **Başlatılmasında.** `constantlist`' de her sabit değeri başlatmalısınız. Sabitine atanacak bir ifade sağlamak için `initializer` kullanırsınız. İfade, herhangi bir sabit değer, önceden tanımlanmış diğer sabitler ve önceden tanımlanmış sabit listesi üyeleri olabilir. Bu tür öğeleri birleştirmek için aritmetik ve mantıksal işleçler kullanabilirsiniz.
 
-  You cannot use variables or functions in `initializer`. However, you can use conversion keywords such as `CByte` and `CShort`. You can also use `AscW` if you call it with a constant `String` or `Char` argument, since that can be evaluated at compile time.
+  `initializer`değişkenleri veya işlevleri kullanamazsınız. Ancak, `CByte` ve `CShort`gibi dönüştürme anahtar sözcüklerini kullanabilirsiniz. `AscW`, derleme zamanında değerlendirilebilen bir sabit `String` veya `Char` bağımsız değişkeniyle çağırırsanız de kullanabilirsiniz.
 
 ## <a name="behavior"></a>Davranış
 
-- **Scope.** Local constants are accessible only from within their procedure or block. Member constants are accessible from anywhere within their class, structure, or module.
+- **Kapsam.** Yerel sabitler yalnızca kendi yordamının veya bloğunun içinden erişilebilir. Üye sabitlerine, sınıfları, yapısı veya modülü içinde herhangi bir yerden erişilebilir.
 
-- **Qualification.** Code outside a class, structure, or module must qualify a member constant's name with the name of that class, structure, or module. Code outside a procedure or block cannot refer to any local constants within that procedure or block.
+- **Yeter.** Bir sınıf, yapı veya modülün dışındaki kodun, bir üye sabitinin adını bu sınıf, yapı veya modülün adı ile nitelemeniz gerekir. Bir yordamın veya bloğun dışındaki kod, bu yordam veya blok içindeki herhangi bir yerel sabitlere başvuramaz.
 
 ## <a name="example"></a>Örnek
 
-The following example uses the `Const` statement to declare constants for use in place of literal values.
+Aşağıdaki örnek, sabit değerlerin yerine kullanılacak sabitleri bildirmek için `Const` bildirimini kullanır.
 
 [!code-vb[VbVbalrStatements#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#13)]
 
 ## <a name="example"></a>Örnek
 
-If you define a constant with data type `Object`, the Visual Basic compiler gives it the type of `initializer`, instead of `Object`. In the following example, the constant `naturalLogBase` has the run-time type `Decimal`.
+`Object`veri türü ile bir sabit tanımlarsanız Visual Basic derleyici, `Object`yerine `initializer`türünü verir. Aşağıdaki örnekte, sabit `naturalLogBase` `Decimal`çalışma zamanı türüne sahiptir.
 
 [!code-vb[VbVbalrStatements#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#87)]
 
-The preceding example uses the <xref:System.Type.ToString%2A> method on the <xref:System.Type> object returned by the [GetType Operator](../../../visual-basic/language-reference/operators/gettype-operator.md), because <xref:System.Type> cannot be converted to `String` using `CStr`.
+Yukarıdaki örnekte, <xref:System.Type> `CStr`kullanılarak `String` dönüştürülemediğinden, [GetType işleci](../../../visual-basic/language-reference/operators/gettype-operator.md)tarafından döndürülen <xref:System.Type> nesnesi üzerinde <xref:System.Type.ToString%2A> yöntemi kullanılmaktadır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: 'How to: create strings using a StringBuilder'
+title: 'Nasıl yapılır: StringBuilder kullanarak dize oluşturma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - StringBuilder class
@@ -12,13 +12,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344375"
 ---
-# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>How to: create strings using a StringBuilder in Visual Basic
+# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>Nasıl yapılır: Visual Basic StringBuilder kullanarak dize oluşturma
 
-This example constructs a long string from many smaller strings using the <xref:System.Text.StringBuilder> class. The <xref:System.Text.StringBuilder> class is more efficient than the `&=` operator for concatenating many strings.
+Bu örnek, <xref:System.Text.StringBuilder> sınıfını kullanarak çok sayıda daha küçük dizeden uzun bir dize oluşturur. <xref:System.Text.StringBuilder> sınıfı, çok sayıda dizeyi birleştirirken `&=` işleçinden daha etkilidir.
 
 ## <a name="example"></a>Örnek
 
-The following example creates an instance of the <xref:System.Text.StringBuilder> class, appends 1,000 strings to that instance, and then returns its string representation:
+Aşağıdaki örnek, <xref:System.Text.StringBuilder> sınıfının bir örneğini oluşturur, bu örneğe 1.000 dizelerini ekler ve sonra dize gösterimini döndürür:
 
  [!code-vb[VbVbalrStrings#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#70)]
 

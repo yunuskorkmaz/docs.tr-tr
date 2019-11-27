@@ -23,7 +23,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348248"
 ---
 # <a name="or-operator-visual-basic"></a>Or İşleci (Visual Basic)
-Performs a logical disjunction on two `Boolean` expressions, or a bitwise disjunction on two numeric expressions.  
+İki `Boolean` ifadelerinde mantıksal bir ayırıcı ya da iki sayısal ifadeye bit düzeyinde ayırıcı uygular.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,18 +33,18 @@ result = expression1 Or expression2
   
 ## <a name="parts"></a>Bölümler  
  `result`  
- Gerekli. Any `Boolean` or numeric expression. For `Boolean` comparison, `result` is the inclusive logical disjunction of two `Boolean` values. For bitwise operations, `result` is a numeric value representing the inclusive bitwise disjunction of two numeric bit patterns.  
+ Gerekli. Herhangi bir `Boolean` veya sayısal ifade. `Boolean` karşılaştırma için, `result` iki `Boolean` değerin kapsamlı mantıksal bir birleşimi olur. Bit düzeyinde işlemler için `result`, iki sayısal bit desenlerinin kapsamlı bit düzeyinde debirleşimin temsil eden sayısal bir değerdir.  
   
  `expression1`  
- Gerekli. Any `Boolean` or numeric expression.  
+ Gerekli. Herhangi bir `Boolean` veya sayısal ifade.  
   
  `expression2`  
- Gerekli. Any `Boolean` or numeric expression.  
+ Gerekli. Herhangi bir `Boolean` veya sayısal ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- For `Boolean` comparison, `result` is `False` if and only if both `expression1` and `expression2` evaluate to `False`. The following table illustrates how `result` is determined.  
+ `Boolean` karşılaştırma için `result` `False` ve yalnızca hem `expression1` hem de `expression2` `False`olarak değerlendirilir. Aşağıdaki tabloda `result` nasıl belirlendiği gösterilmektedir.  
   
-|If `expression1` is|And `expression2` is|The value of `result` is|  
+|`expression1`|Ve `expression2`|`result` değeri|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`True`|  
@@ -52,46 +52,46 @@ result = expression1 Or expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
-> In a `Boolean` comparison, the `Or` operator always evaluates both expressions, which could include making procedure calls. The [OrElse Operator](../../../visual-basic/language-reference/operators/orelse-operator.md) performs *short-circuiting*, which means that if `expression1` is `True`, then `expression2` is not evaluated.  
+> `Boolean` bir karşılaştırmayla `Or` işleci her zaman her iki ifadeyi değerlendirir ve bu da yordam çağrıları yapmayı içerebilir. [OrElse işleci](../../../visual-basic/language-reference/operators/orelse-operator.md) *kısa*devre uygular. Bu, `expression1` `True`, `expression2` değerlendirilmediği anlamına gelir.  
   
- For bitwise operations, the `Or` operator performs a bitwise comparison of identically positioned bits in two numeric expressions and sets the corresponding bit in `result` according to the following table.  
+ Bit düzeyinde işlemler için `Or` işleci, iki sayısal ifadede aynı şekilde konumlandırılmış bitlerin bit düzeyinde karşılaştırmasını gerçekleştirir ve aşağıdaki tabloya göre `result` karşılık gelen biti ayarlar.  
   
-|If bit in `expression1` is|And bit in `expression2` is|The bit in `result` is|  
+|`expression1` bit ise|Ve `expression2` bit|`result` bit|  
 |--------------------------------|---------------------------------|----------------------------|  
-|1\.|1\.|1\.|  
-|1\.|0|1\.|  
-|0|1\.|1\.|  
+|1|1|1|  
+|1|0|1|  
+|0|1|1|  
 |0|0|0|  
   
 > [!NOTE]
-> Since the logical and bitwise operators have a lower precedence than other arithmetic and relational operators, any bitwise operations should be enclosed in parentheses to ensure accurate execution.  
+> Mantıksal ve bit düzeyinde işleçler diğer aritmetik ve ilişkisel işleçlerden daha düşük önceliğe sahip olduğundan, doğru yürütmeyi sağlamak için herhangi bir bit düzeyinde işlemin parantez içine alınması gerekir.  
   
 ## <a name="data-types"></a>Veri Türleri  
- If the operands consist of one `Boolean` expression and one numeric expression, Visual Basic converts the `Boolean` expression to a numeric value (–1 for `True` and 0 for `False`) and performs a bitwise operation.  
+ İşlenenler bir `Boolean` ifadeden ve bir sayısal ifadeden oluşur Visual Basic, `Boolean` ifadesini sayısal bir değere dönüştürür (`True` için – 1 ve `False`için 0) ve bit düzeyinde bir işlem gerçekleştirir.  
   
- For a `Boolean` comparison, the data type of the result is `Boolean`. For a bitwise comparison, the result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Relational and Bitwise Comparisons" table in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ `Boolean` karşılaştırma için sonucun veri türü `Boolean`. Bit düzeyinde karşılaştırma için, sonuç veri türü `expression1` ve `expression2`veri türleri için uygun bir sayısal türdür. [Işleç sonuçlarının veri türlerinde](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)"Ilişkisel ve bit düzeyinde karşılaştırmalar" tablosuna bakın.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- The `Or` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ `Or` işleci *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- The following example uses the `Or` operator to perform an inclusive logical disjunction on two expressions. The result is a `Boolean` value that represents whether either of the two expressions is `True`.  
+ Aşağıdaki örnek iki ifadeye kapsamlı bir mantıksal ayırıcı gerçekleştirmek için `Or` işlecini kullanır. Sonuç, iki deyimden birinin `True`olup olmadığını temsil eden bir `Boolean` değeridir.  
   
  [!code-vb[VbVbalrOperators#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#35)]  
   
- The preceding example produces results of `True`, `True`, and `False`, respectively.  
+ Yukarıdaki örnek, sırasıyla `True`, `True`ve `False`sonuçları üretir.  
   
 ## <a name="example"></a>Örnek  
- The following example uses the `Or` operator to perform inclusive logical disjunction on the individual bits of two numeric expressions. The bit in the result pattern is set if either of the corresponding bits in the operands is set to 1.  
+ Aşağıdaki örnek, iki sayısal ifadenin tek bir bit biti üzerinde kapsamlı mantıksal ayırıcı gerçekleştirmek için `Or` işlecini kullanır. Sonuç düzenindeki bit, işlenenlerde karşılık gelen bitlerin biri 1 olarak ayarlandıysa ayarlanır.  
   
  [!code-vb[VbVbalrOperators#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#36)]  
   
- The preceding example produces results of 10, 14, and 14, respectively.  
+ Yukarıdaki örnek sırasıyla 10, 14 ve 14 sonuçlarını üretir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Mantıksal/bit düzeyinde Işleçler (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [OrElse İşleci](../../../visual-basic/language-reference/operators/orelse-operator.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic mantıksal ve bit düzeyinde Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

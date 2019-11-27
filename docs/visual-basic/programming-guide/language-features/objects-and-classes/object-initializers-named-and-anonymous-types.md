@@ -18,74 +18,74 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346130"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Nesne Başlatıcıları: Adlandırılmış ve Anonim Türler (Visual Basic)
-Object initializers enable you to specify properties for a complex object by using a single expression. They can be used to create instances of named types and of anonymous types.  
+Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesne için özellikler belirtmenize olanak tanır. Bunlar, adlandırılmış türlerin örnekleri ve anonim türler oluşturmak için kullanılabilir.  
   
 ## <a name="declarations"></a>Bildirimler  
- Declarations of instances of named and anonymous types can look almost identical, but their effects are not the same. Each category has abilities and restrictions of its own. The following example shows a convenient way to declare and initialize an instance of a named class, `Customer`, by using an object initializer list. Notice that the name of the class is specified after the keyword `New`.  
+ Adlandırılmış ve anonim türdeki örneklerin bildirimleri neredeyse özdeş olabilir, ancak etkileri aynı değildir. Her kategori kendi yeteneklerini ve kısıtlamalarını içerir. Aşağıdaki örnek, bir nesne Başlatıcısı listesi kullanarak `Customer`adlandırılmış bir sınıfın örneğini bildirmek ve başlatmak için kullanışlı bir yol gösterir. Sınıf adının `New`anahtar sözcüğünden sonra belirtildiğine dikkat edin.  
   
  [!code-vb[VbVbalrObjectInit#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#1)]  
   
- An anonymous type has no usable name. Therefore an instantiation of an anonymous type cannot include a class name.  
+ Anonim bir türün kullanılabilir adı yok. Bu nedenle, anonim bir türün örneklemesi bir sınıf adı içeremez.  
   
  [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
- The requirements and results of the two declarations are not the same. For `namedCust`, a `Customer` class that has a `Name` property must already exist, and the declaration creates an instance of that class. For `anonymousCust`, the compiler defines a new class that has one property, a string called `Name`, and creates a new instance of that class.  
+ İki bildirime ait gereksinimler ve sonuçlar aynı değildir. `namedCust`için, bir `Name` özelliğine sahip bir `Customer` sınıfı zaten var olmalıdır ve bildirim bu sınıfın bir örneğini oluşturur. `anonymousCust`, derleyici bir özelliği olan yeni bir sınıf tanımlar, `Name`adlı bir dize ve bu sınıfın yeni bir örneğini oluşturur.  
   
-## <a name="named-types"></a>Named Types  
- Object initializers provide a simple way to call the constructor of a type and then set the values of some or all properties in a single statement. The compiler invokes the appropriate constructor for the statement: the parameterless constructor if no arguments are presented, or a parameterized constructor if one or more arguments are sent. After that, the specified properties are initialized in the order in which they are presented in the initializer list.  
+## <a name="named-types"></a>Adlandırılmış türler  
+ Nesne başlatıcıları, bir türün yapıcısını çağırmak için basit bir yol sağlar ve sonra bazı veya tüm özelliklerin değerlerini tek bir deyime göre ayarlar. Derleyici, bir veya daha fazla bağımsız değişken gönderildiyse parametresiz Oluşturucu veya bir veya daha fazla bağımsız değişken gönderilirse parametreli Oluşturucu olarak ifade için uygun oluşturucuyu çağırır. Bundan sonra, belirtilen özellikler Başlatıcı listesinde sunuldukları sırada başlatılır.  
   
- Each initialization in the initializer list consists of the assignment of an initial value to a member of the class. The names and data types of the members are determined when the class is defined. In the following examples, the `Customer` class must exist, and must have members named `Name` and `City` that can accept string values.  
+ Başlatıcı listesindeki her başlatma, sınıfın bir üyesine ilk değer atamasından oluşur. Üyelerin adları ve veri türleri, sınıf tanımlandığında belirlenir. Aşağıdaki örneklerde `Customer` sınıfı var olmalıdır ve dize değerlerini kabul edebilecek `Name` ve `City` adlı üyelere sahip olmalıdır.  
   
  [!code-vb[VbVbalrObjectInit#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#3)]  
   
- Alternatively, you can obtain the same result by using the following code:  
+ Alternatif olarak, aşağıdaki kodu kullanarak aynı sonucu elde edebilirsiniz:  
   
  [!code-vb[VbVbalrObjectInit#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#4)]  
   
- Each of these declarations is equivalent to the following example, which creates a `Customer` object by using the parameterless constructor, and then specifies initial values for the `Name` and `City` properties by using a `With` statement.  
+ Bu bildirimlerin her biri, parametresiz oluşturucuyu kullanarak bir `Customer` nesnesi oluşturan aşağıdaki örneğe eşdeğerdir ve sonra `Name` ve `City` özellikler için ilk değerleri `With` bir ifade kullanarak belirtir.  
   
  [!code-vb[VbVbalrObjectInit#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#5)]  
   
- If the `Customer` class contains a parameterized constructor that enables you to send in a value for `Name`, for example, you can also declare and initialize a `Customer` object in the following ways:  
+ `Customer` sınıfı, `Name`için bir değer göndermenizi sağlayan parametreli bir Oluşturucu içeriyorsa, örneğin, aşağıdaki yollarla bir `Customer` nesnesi bildirip de başlatabilirsiniz:  
   
  [!code-vb[VbVbalrObjectInit#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#6)]  
   
- You do not have to initialize all properties, as the following code shows.  
+ Aşağıdaki kodda gösterildiği gibi tüm özellikleri başlatmak zorunda değilsiniz.  
   
  [!code-vb[VbVbalrObjectInit#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#7)]  
   
- However, the initialization list cannot be empty. Uninitialized properties retain their default values.  
+ Ancak, başlatma listesi boş olamaz. Başlatılmamış özellikler varsayılan değerlerini korurlar.  
   
-### <a name="type-inference-with-named-types"></a>Type Inference with Named Types  
- You can shorten the code for the declaration of `cust1` by combining object initializers and local type inference. This enables you to omit the `As` clause in the variable declaration. The data type of the variable is inferred from the type of the object that is created by the assignment. In the following example, the type of `cust6` is `Customer`.  
+### <a name="type-inference-with-named-types"></a>Adlandırılmış türlerle tür çıkarımı  
+ Nesne başlatıcıları ve yerel tür çıkarımı birleştirerek `cust1` bildirimi için kodu kısaltabilirsiniz. Bu, değişken bildiriminde `As` yan tümcesini atlamanızı sağlar. Değişkenin veri türü, atama tarafından oluşturulan nesnenin türünden algılanır. Aşağıdaki örnekte `cust6` türü `Customer`.  
   
  [!code-vb[VbVbalrObjectInit#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#8)]  
   
-### <a name="remarks-about-named-types"></a>Remarks About Named Types  
+### <a name="remarks-about-named-types"></a>Adlandırılmış türler hakkında açıklamalar  
   
-- A class member cannot be initialized more than one time in the object initializer list. The declaration of `cust7` causes an error.  
+- Bir sınıf üyesi, nesne başlatıcısı listesinde birden çok kez başlatılamaz. `cust7` bildirimi hataya neden olur.  
   
      [!code-vb[VbVbalrObjectInit#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#9)]  
   
-- A member can be used to initialize itself or another field. If a member is accessed before it has been initialized, as in the following declaration for `cust8`, the default value will be used. Remember that when a declaration that uses an object initializer is processed, the first thing that happens is that the appropriate constructor is invoked. After that, the individual fields in the initializer list are initialized. In the following examples, the default value for `Name` is assigned for `cust8`, and an initialized value is assigned in `cust9`.  
+- Bir üye, kendisini veya başka bir alanı başlatmak için kullanılabilir. Bir üyeye başlatıldıktan sonra, `cust8`için aşağıdaki bildirimde olduğu gibi, varsayılan değer kullanılacaktır. Bir nesne Başlatıcısı kullanan bir bildirim işlendiğinde, gerçekleşen ilk şey uygun oluşturucunun çağrılmakta olduğunu unutmayın. Bundan sonra, Başlatıcı listesindeki ayrı alanlar başlatılır. Aşağıdaki örneklerde `Name` için varsayılan değer `cust8`atanır ve başlatılmış bir değer `cust9`atanır.  
   
      [!code-vb[VbVbalrObjectInit#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#10)]  
   
-     The following example uses the parameterized constructor from `cust3` and `cust4` to declare and initialize `cust10` and `cust11`.  
+     Aşağıdaki örnek, `cust10` ve `cust11`bildirmek ve başlatmak için `cust3` ve `cust4` parametreli oluşturucuyu kullanır.  
   
      [!code-vb[VbVbalrObjectInit#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#11)]  
   
-- Object initializers can be nested. In the following example, `AddressClass` is a class that has two properties, `City` and `State`, and the `Customer` class has an `Address` property that is an instance of `AddressClass`.  
+- Nesne başlatıcıları iç içe olabilir. Aşağıdaki örnekte `AddressClass`, `City` ve `State`iki özelliği olan bir sınıftır ve `Customer` sınıfı `Address` örneği olan bir `AddressClass`özelliğine sahiptir.  
   
      [!code-vb[VbVbalrObjectInit#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#12)]  
   
-- The initialization list cannot be empty.  
+- Başlatma listesi boş olamaz.  
   
-- The instance being initialized cannot be of type Object.  
+- Başlatılan örnek Object türünde olamaz.  
   
-- Class members being initialized cannot be shared members, read-only members, constants, or method calls.  
+- Başlatılan sınıf üyeleri, paylaşılan Üyeler, salt okuma üyeleri, sabitler veya yöntem çağrıları olamaz.  
   
-- Class members being initialized cannot be indexed or qualified. The following examples raise compiler errors:  
+- Başlatılan sınıf üyeleri dizinlenemez veya nitelenmiyor. Aşağıdaki örnekler derleyici hatalarını yükseltir:  
   
      `'' Not valid.`  
   
@@ -94,44 +94,44 @@ Object initializers enable you to specify properties for a complex object by usi
      `' Dim c2 = New Customer with {.Address.City = "Springfield"}`  
   
 ## <a name="anonymous-types"></a>Anonim Türler  
- Anonymous types use object initializers to create instances of new types that you do not explicitly define and name. Instead, the compiler generates a type according to the properties you designate in the object initializer list. Because the name of the type is not specified, it is referred to as an *anonymous type*. For example, compare the following declaration to the earlier one for `cust6`.  
+ Anonim türler, açıkça tanımlamadığınız ve isimsiz olmayan yeni türlerin örneklerini oluşturmak için nesne başlatıcıları kullanır. Bunun yerine, derleyici, nesne başlatıcısı listesinde belirleyeceğiniz özelliklere göre bir tür üretir. Türün adı belirtilmediğinden, *anonim bir tür*olarak adlandırılır. Örneğin, aşağıdaki bildirimi `cust6`için önceki bir ile karşılaştırın.  
   
  [!code-vb[VbVbalrObjectInit#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#13)]  
   
- The only difference syntactically is that no name is specified after `New` for the data type. However, what happens is quite different. The compiler defines a new anonymous type that has two properties, `Name` and `City`, and creates an instance of it with the specified values. Type inference determines the types of `Name` and `City` in the example to be strings.  
+ Tek fark sözdizimi, veri türü için `New` sonrasında hiçbir adın belirtilme türüdür. Ancak, ne olur oldukça farklıdır. Derleyici, `Name` ve `City`iki özelliği olan yeni bir anonim tür tanımlar ve belirtilen değerlerle bunun bir örneğini oluşturur. Tür çıkarımı, dizeler gibi örnekteki `Name` ve `City` türlerini belirler.  
   
 > [!CAUTION]
-> The name of the anonymous type is generated by the compiler, and may vary from compilation to compilation. Your code should not use or rely on the name of an anonymous type.  
+> Anonim türün adı derleyici tarafından oluşturulur ve derlemeden derlemeye değişiklik gösterebilir. Kodunuz, anonim bir türün adını kullanmamalıdır veya bu adı kullanmalıdır.  
   
- Because the name of the type is not available, you cannot use an `As` clause to declare `cust13`. Its type must be inferred. Without using late binding, this limits the use of anonymous types to local variables.  
+ Türün adı kullanılamadığından, `cust13`bildirmek için bir `As` yan tümcesi kullanamazsınız. Türü çıkarsanmalıdır. Bu, geç bağlama kullanılmadan, anonim türlerin kullanımını yerel değişkenlere kısıtlar.  
   
- Anonymous types provide critical support for [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries. For more information about the use of anonymous types in queries, see [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) and [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
+ Anonim türler [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları için kritik destek sağlar. Sorgularda anonim türlerin kullanımı hakkında daha fazla bilgi için, bkz. Visual Basic [anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) ve [lınq 'ye giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
-### <a name="remarks-about-anonymous-types"></a>Remarks About Anonymous Types  
+### <a name="remarks-about-anonymous-types"></a>Anonim türler hakkında açıklamalar  
   
-- Typically, all or most of the properties in an anonymous type declaration will be key properties, which are indicated by typing the keyword `Key` in front of the property name.  
+- Genellikle, anonim bir tür bildirimindeki özelliklerin tümü veya çoğu, özellik adının önüne `Key` anahtar sözcüğü yazılarak belirtilen temel özelliklerdir.  
   
      [!code-vb[VbVbalrObjectInit#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#14)]  
   
-     For more information about key properties, see [Key](../../../../visual-basic/language-reference/modifiers/key.md).  
+     Anahtar özellikleri hakkında daha fazla bilgi için bkz. [anahtar](../../../../visual-basic/language-reference/modifiers/key.md).  
   
-- Like named types, initializer lists for anonymous type definitions must declare at least one property.  
+- Adlandırılmış türler gibi, anonim tür tanımlarının başlatıcı listeleri en az bir özellik bildirmelidir.  
   
      [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
-- When an instance of an anonymous type is declared, the compiler generates a matching anonymous type definition. The names and data types of the properties are taken from the instance declaration, and are included by the compiler in the definition. The properties are not named and defined in advance, as they would be for a named type. Their types are inferred. You cannot specify the data types of the properties by using an `As` clause.  
+- Anonim türün bir örneği bildirildiğinde, derleyici eşleşen bir anonim tür tanımı oluşturur. Özelliklerin adları ve veri türleri örnek bildiriminden alınır ve tanımda derleyici tarafından dahil edilir. Adlandırılmış bir tür için olduklarından özellikler önceden adlandırılmaz ve önceden tanımlanmamıştır. Türleri algılanır. `As` yan tümcesini kullanarak özelliklerin veri türlerini belirtemezsiniz.  
   
-- Anonymous types can also establish the names and values of their properties in several other ways. For example, an anonymous type property can take both the name and the value of a variable, or the name and value of a property of another object.  
+- Anonim türler, özelliklerinin adlarını ve değerlerini birkaç farklı yolla de kurabilir. Örneğin, anonim bir tür özelliği bir değişkenin adını ve değerini ya da başka bir nesnenin özelliğinin adını ve değerini alabilir.  
   
      [!code-vb[VbVbalrObjectInit#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#15)]  
   
-     For more information about the options for defining properties in anonymous types, see [How to: Infer Property Names and Types in Anonymous Type Declarations](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
+     Anonim türlerde özellikleri tanımlamaya yönelik seçenekler hakkında daha fazla bilgi için bkz. [nasıl yapılır: özellik adlarını ve türleri anonim tür bildirimlerinde çıkarım](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Nasıl yapılır: Anonim Tip Bildirimlerinden Özellik Adları ve Türlerini Çıkarma](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [Key](../../../../visual-basic/language-reference/modifiers/key.md)
 - [Nasıl yapılır: Nesne Başlatıcısı Kullanarak Nesne Bildirme](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

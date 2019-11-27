@@ -16,10 +16,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350170"
 ---
 # <a name="as-clause-visual-basic"></a>As Tümcesi (Visual Basic)
-Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.  
+Bir bildirim deyimindeki bir veri türünü veya genel tür parametresindeki kısıtlama listesini tanımlayan bir `As` yan tümcesi tanıtır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `As` keyword can be used in these contexts:  
+ `As` anahtar sözcüğü şu bağlamlarda kullanılabilir:  
   
  [Aggregate Yan Tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
@@ -37,9 +37,9 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [For...Next Statements](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [İçin... Sonraki deyimler](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [For Each...Next Statements](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [Her biri için... Sonraki deyimler](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -57,7 +57,7 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Try...Catch...Finally Statements](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Deneyin... Yakala... Finally deyimleri](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -65,5 +65,5 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
 - [Veri Türleri](../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Değişken Bildirimi](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

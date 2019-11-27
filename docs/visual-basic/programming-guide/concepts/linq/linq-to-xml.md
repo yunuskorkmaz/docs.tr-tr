@@ -10,22 +10,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331683"
 ---
 # <a name="linq-to-xml-visual-basic"></a>LINQ to XML (Visual Basic)
-LINQ to XML provides an in-memory XML programming interface that leverages the .NET Language-Integrated Query (LINQ) Framework. LINQ to XML uses the latest .NET Framework language capabilities and is comparable to an updated, redesigned Document Object Model (DOM) XML programming interface.  
+LINQ to XML, .NET dil ile tümleşik sorgu (LINQ) çerçevesini kullanan bellek içi bir XML programlama arabirimi sağlar. LINQ to XML, en son .NET Framework dil yeteneklerini kullanır ve güncelleştirilmiş, yeniden tasarlanan Belge Nesne Modeli (DOM) XML programlama arabirimine benzer.  
   
- The LINQ family of technologies provides a consistent query experience for objects (LINQ to Objects), relational databases (LINQ to SQL), and XML (LINQ to XML).  
+ LINQ teknolojileri, nesneler (LINQ to Objects), ilişkisel veritabanları (LINQ to SQL) ve XML (LINQ to XML) için tutarlı bir sorgu deneyimi sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümdekiler  
  [Başlarken (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
- Provides introductory information about LINQ to XML, including a conceptual overview and an overview of the <xref:System.Xml.Linq?displayProperty=nameWithType> classes.  
+ Kavramsal genel bakış ve <xref:System.Xml.Linq?displayProperty=nameWithType> sınıflarına genel bakış da dahil olmak üzere LINQ to XML hakkında giriş bilgileri sağlar.  
   
- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
- Provides conceptual and how-to information about programming with LINQ to XML.  
+ [Programlama Kılavuzu (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
+ LINQ to XML ile programlama hakkında kavramsal ve nasıl yapılır bilgileri sağlar.  
   
  [Başvuru (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/reference-linq-to-xml.md)  
- Provides pointers to the LINQ to XML managed reference documentation.  
+ LINQ to XML yönetilen başvuru belgelerine işaretçiler sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
+- [Visual Basic LINQ to XML genel bakış](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)

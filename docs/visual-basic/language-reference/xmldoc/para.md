@@ -12,8 +12,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352311"
 ---
-# <a name="para-visual-basic"></a>\<para> (Visual Basic)
-Specifies that the content is formatted as a paragraph.  
+# <a name="para-visual-basic"></a>\<paragraf > (Visual Basic)
+İçeriğin bir paragraf olarak biçimlendirildiğini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,15 +23,15 @@ Specifies that the content is formatted as a paragraph.
   
 ## <a name="parameters"></a>Parametreler  
  `content`  
- The text of the paragraph.  
+ Paragrafın metni.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `<para>` tag is for use inside a tag, such as [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), or [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md), and lets you add structure to the text.  
+ `<para>` etiketi, bir etiket içinde kullanılmak üzere, [\<özet >](../../../visual-basic/language-reference/xmldoc/summary.md), [\<açıklamaları >](../../../visual-basic/language-reference/xmldoc/remarks.md)veya [\<> döndürür](../../../visual-basic/language-reference/xmldoc/returns.md)ve metne yapı eklemenizi sağlar.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- This example uses the `<para>` tag to split the remarks section for the `UpdateRecord` method into two paragraphs.  
+ Bu örnek, `UpdateRecord` yönteminin açıklamalar bölümünü iki paragrafa bölmek için `<para>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

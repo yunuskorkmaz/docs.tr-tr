@@ -17,39 +17,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354098"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Bildirim Bağlamları ve Varsayılan Erişim Düzeyleri (Visual Basic)
-This topic describes which Visual Basic types can be declared within which other types, and what their access levels default to if not specified.  
+Bu konuda, hangi Visual Basic türlerinin diğer türler içinde bildirilebilecek ve belirtilmemişse erişim düzeylerinin varsayılan olarak ne olduğu açıklanmaktadır.  
   
-## <a name="declaration-context-levels"></a>Declaration Context Levels  
- The *declaration context* of a programming element is the region of code in which it is declared. This is often another programming element, which is then called the *containing element*.  
+## <a name="declaration-context-levels"></a>Bildirim bağlamı düzeyleri  
+ Bir programlama öğesinin *Bildirim bağlamı* , bildirildiği kodun bölgesidir. Bu, genellikle *kapsayan öğe*olarak adlandırılan diğer bir programlama öğesidir.  
   
- The levels for declaration contexts are the following:  
+ Bildirim bağlamlarının düzeyleri şunlardır:  
   
-- *Namespace level* — within a source file or namespace but not within a class, structure, module, or interface  
+- *Ad alanı düzeyi* — bir kaynak dosya veya ad alanı içinde, ancak bir sınıf, yapı, modül veya arabirim içinde değil  
   
-- *Module level* — within a class, structure, module, or interface but not within a procedure or block  
+- *Modül düzeyi* — bir sınıf, yapı, modül veya arabirim içinde, ancak yordam veya blok içinde değil  
   
-- *Procedure level* — within a procedure or block (such as `If` or `For`)  
+- *Yordam düzeyi* — yordam veya blok içinde (`If` veya `For`gibi)  
   
- The following table shows the default access levels for various declared programming elements, depending on their declaration contexts.  
+ Aşağıdaki tabloda, bildirim bağlamlarına bağlı olarak, çeşitli tanımlanmış programlama öğeleri için varsayılan erişim düzeyleri gösterilmektedir.  
   
-|Declared element|Namespace level|Module level|Procedure level|  
+|Bildirilmeyen öğe|Ad alanı düzeyi|Modül düzeyi|Yordam düzeyi|  
 |----------------------|---------------------|------------------|---------------------|  
-|Variable ([Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md))|Not allowed|`Private` (`Public` in `Structure`, not allowed in `Interface`)|`Public`|  
-|Constant ([Const Statement](../../../visual-basic/language-reference/statements/const-statement.md))|Not allowed|`Private` (`Public` in `Structure`, not allowed in `Interface`)|`Public`|  
-|Enumeration ([Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|Not allowed|  
-|Class ([Class Statement](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|Not allowed|  
-|Structure ([Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|Not allowed|  
-|Module ([Module Statement](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|Not allowed|Not allowed|  
-|Interface ([Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|Not allowed|  
-|Procedure ([Function Statement](../../../visual-basic/language-reference/statements/function-statement.md), [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md))|Not allowed|`Public`|Not allowed|  
-|External reference ([Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md))|Not allowed|`Public` (not allowed in `Interface`)|Not allowed|  
-|Operator ([Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md))|Not allowed|`Public` (not allowed in `Interface` or `Module`)|Not allowed|  
-|Property ([Property Statement](../../../visual-basic/language-reference/statements/property-statement.md))|Not allowed|`Public`|Not allowed|  
-|Default property ([Default](../../../visual-basic/language-reference/modifiers/default.md))|Not allowed|`Public` (not allowed in `Module`)|Not allowed|  
-|Event ([Event Statement](../../../visual-basic/language-reference/statements/event-statement.md))|Not allowed|`Public`|Not allowed|  
-|Delegate ([Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|Not allowed|  
+|Variable ([Dim deyimleri](../../../visual-basic/language-reference/statements/dim-statement.md))|İzin verilmiyor|`Private` (`Structure``Public` `Interface`izin verilmiyor)|`Public`|  
+|Sabit ([const ekstresi](../../../visual-basic/language-reference/statements/const-statement.md))|İzin verilmiyor|`Private` (`Structure``Public` `Interface`izin verilmiyor)|`Public`|  
+|Sabit Listesi ([enum ekstresi](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|İzin verilmiyor|  
+|Class ([sınıf ekstresi](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|İzin verilmiyor|  
+|Structure ([Yapı ekstresi](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|İzin verilmiyor|  
+|Module ([module ekstresi](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|İzin verilmiyor|İzin verilmiyor|  
+|Arabirim ([arabirim ekstresi](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|İzin verilmiyor|  
+|PROCEDURE ([Işlev ekstresi](../../../visual-basic/language-reference/statements/function-statement.md), [alt ifade](../../../visual-basic/language-reference/statements/sub-statement.md))|İzin verilmiyor|`Public`|İzin verilmiyor|  
+|Dış başvuru ([Declare bildirimi](../../../visual-basic/language-reference/statements/declare-statement.md))|İzin verilmiyor|`Public` (`Interface`izin verilmiyor)|İzin verilmiyor|  
+|İşleç ([Işleç ekstresi](../../../visual-basic/language-reference/statements/operator-statement.md))|İzin verilmiyor|`Public` (`Interface` veya `Module`'de izin verilmiyor)|İzin verilmiyor|  
+|Property ([özellik ekstresi](../../../visual-basic/language-reference/statements/property-statement.md))|İzin verilmiyor|`Public`|İzin verilmiyor|  
+|Varsayılan Özellik ([varsayılan](../../../visual-basic/language-reference/modifiers/default.md))|İzin verilmiyor|`Public` (`Module`izin verilmiyor)|İzin verilmiyor|  
+|Event ([olay ekstresi](../../../visual-basic/language-reference/statements/event-statement.md))|İzin verilmiyor|`Public`|İzin verilmiyor|  
+|Temsilci ([temsilci ekstresi](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|İzin verilmiyor|  
   
- For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

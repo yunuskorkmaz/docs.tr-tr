@@ -22,56 +22,56 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350806"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Boolean İfadeleri (Visual Basic)
-A *Boolean expression* is an expression that evaluates to a value of the [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` or `False`. `Boolean` expressions can take several forms. The simplest is the direct comparison of the value of a `Boolean` variable to a `Boolean` literal, as shown in the following example.  
+*Boole ifadesi* , [Boolean veri türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)değeri olarak değerlendirilen bir ifadedir: `True` veya `False`. `Boolean` ifadeler birkaç form alabilir. En basit, aşağıdaki örnekte gösterildiği gibi, bir `Boolean` değişkeninin değerinin `Boolean` değişmez değere doğrudan karşılaştırılmasının bir örneğidir.  
   
  [!code-vb[VbVbalrOperators#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#87)]  
   
-## <a name="two-meanings-of-the--operator"></a>Two Meanings of the = Operator  
- Notice that the assignment statement `newCustomer = True` looks the same as the expression in the preceding example, but it performs a different function and is used differently. In the preceding example, the expression `newCustomer = True` represents a Boolean value, and the `=` sign is interpreted as a comparison operator. In a stand-alone statement, the `=` sign is interpreted as an assignment operator and assigns the value on the right to the variable on the left. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="two-meanings-of-the--operator"></a>= Işlecinin iki anlamı  
+ Atama deyiminin `newCustomer = True` önceki örnekteki ifadeyle aynı göründüğünden, ancak farklı bir işlev gerçekleştirdiğinden ve farklı şekilde kullanıldığını unutmayın. Önceki örnekte, `newCustomer = True` ifadesi bir Boolean değeri temsil eder ve `=` işareti bir karşılaştırma işleci olarak yorumlanır. Bağımsız bir ifadede, `=` işareti atama işleci olarak yorumlanır ve sağdaki değeri soldaki değişkene atar. Aşağıdaki örnek bunu göstermektedir.  
   
  [!code-vb[VbVbalrOperators#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#88)]  
   
- For further information, see [Value Comparisons](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) and [Statements](../../../../visual-basic/language-reference/statements/index.md).  
+ Daha fazla bilgi için bkz. [değer karşılaştırmaları](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) ve [deyimleri](../../../../visual-basic/language-reference/statements/index.md).  
   
 ## <a name="comparison-operators"></a>Karşılaştırma İşleçleri  
- Comparison operators such as `=`, `<`, `>`, `<>`, `<=`, and `>=` produce Boolean expressions by comparing the expression on the left side of the operator to the expression on the right side of the operator and evaluating the result as `True` or `False`. Aşağıdaki örnek bunu göstermektedir.  
+ `=`, `<`, `>`, `<>`, `<=`ve `>=` gibi karşılaştırma işleçleri, işlecin sol tarafındaki ifadesini işlecin sağ tarafındaki ifadeye karşılaştırarak ve sonucu `True` veya `False`olarak değerlendiren Boolean ifadeler üretir. Aşağıdaki örnek bunu göstermektedir.  
   
  `42 < 81`  
   
- Because 42 is less than 81, the Boolean expression in the preceding example evaluates to `True`. For more information on this kind of expression, see [Value Comparisons](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md).  
+ 42, 81 ' den az olduğu için, önceki örnekteki Boole ifadesi `True`olarak değerlendirilir. Bu tür bir ifade hakkında daha fazla bilgi için bkz. [değer karşılaştırmaları](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md).  
   
-### <a name="comparison-operators-combined-with-logical-operators"></a>Comparison Operators Combined with Logical Operators  
- Comparison expressions can be combined using logical operators to produce more complex Boolean expressions. The following example demonstrates the use of comparison operators in conjunction with a logical operator.  
+### <a name="comparison-operators-combined-with-logical-operators"></a>Mantıksal Işleçlerle birleştirilmiş karşılaştırma Işleçleri  
+ Karşılaştırma ifadeleri, daha karmaşık Boole ifadeleri oluşturmak için mantıksal işleçler kullanılarak birleştirilebilir. Aşağıdaki örnek, bir mantıksal işleçle birlikte karşılaştırma işleçleri kullanımını gösterir.  
   
  `x > y And x < 1000`  
   
- In the preceding example, the value of the overall expression depends on the values of the expressions on each side of the `And` operator. If both expressions are `True`, then the overall expression evaluates to `True`. If either expression is `False`, then the entire expression evaluates to `False`.  
+ Yukarıdaki örnekte, genel ifadenin değeri, `And` işlecinin her tarafında ifadelerin değerlerine bağlıdır. Her iki ifade de `True`, genel ifade `True`olarak değerlendirilir. Her iki ifade de `False`, tüm ifade `False`olarak değerlendirilir.  
   
-## <a name="short-circuiting-operators"></a>Short-Circuiting Operators  
- The logical operators `AndAlso` and `OrElse` exhibit behavior known as *short-circuiting*. A short-circuiting operator evaluates the left operand first. If the left operand determines the value of the entire expression, then program execution proceeds without evaluating the right expression. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="short-circuiting-operators"></a>Kısa devre dışı Işleçler  
+ Mantıksal işleçler `AndAlso` ve `OrElse` *kısa*devre olarak bilinen davranışı gösterir. Kısa devre dışı bir işleç, önce sol işleneni değerlendirir. Sol işlenen tüm ifadenin değerini belirlerse, program yürütmesi, doğru ifadeyi değerlendirmeden devam eder. Aşağıdaki örnek bunu göstermektedir.  
   
  [!code-vb[VbVbalrOperators#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#89)]  
   
- In the preceding example, the operator evaluates the left expression, `45 < 12`. Because the left expression evaluates to `False`, the entire logical expression must evaluate to `False`. Program execution thus skips execution of the code within the `If` block without evaluating the right expression, `testFunction(3)`. This example does not call `testFunction()` because the left expression falsifies the entire expression.  
+ Yukarıdaki örnekte işleç, `45 < 12`sol ifadeyi değerlendirir. Sol ifade `False`değerlendirdiği için, mantıksal ifadenin tamamı `False`olarak değerlendirilmelidir. Program yürütme, `testFunction(3)`doğru ifadeyi değerlendirmeden `If` bloğunda kodun yürütülmesini atlar. Sol ifade tüm ifadeyi aştığından bu örnek `testFunction()` çağırmaz.  
   
- Similarly, if the left expression in a logical expression using `OrElse` evaluates to `True`, execution proceeds to the next line of code without evaluating the right expression, because the left expression has already validated the entire expression.  
+ Benzer şekilde, `OrElse` kullanan bir mantıksal ifadede sol ifade `True`değerlendirilirse, sol ifade zaten tüm ifadeyi doğruladı olduğundan, yürütme, doğru ifadeyi değerlendirmeden bir sonraki kod satırına geçer.  
   
-### <a name="comparison-with-non-short-circuiting-operators"></a>Comparison with Non-Short-Circuiting Operators  
- By contrast, both sides of the logical operator are evaluated when the logical operators `And` and `Or` are used. Aşağıdaki örnek bunu göstermektedir.  
+### <a name="comparison-with-non-short-circuiting-operators"></a>Kısa devre dışı özellikli Işleçlerle karşılaştırma  
+ Buna karşılık, mantıksal işlecin her iki tarafı da `And` ve `Or` kullanıldığında değerlendirilir. Aşağıdaki örnek bunu göstermektedir.  
   
  [!code-vb[VbVbalrOperators#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#90)]  
   
- The preceding example calls `testFunction()` even though the left expression evaluates to `False`.  
+ Yukarıdaki örnek, sol ifade `False`olarak değerlendirilse de `testFunction()` çağırır.  
   
-## <a name="parenthetical-expressions"></a>Parenthetical Expressions  
- You can use parentheses to control the order of evaluation of Boolean expressions. Expressions enclosed by parentheses evaluate first. For multiple levels of nesting, precedence is granted to the most deeply nested expressions. Within parentheses, evaluation proceeds according to the rules of operator precedence. For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+## <a name="parenthetical-expressions"></a>Parantez içinde Ifadeler  
+ Boolean ifadelerin değerlendirilme sırasını denetlemek için parantezleri kullanabilirsiniz. Parantez içine alınmış ifadeler ilk olarak değerlendirilir. Birden çok iç içe geçme düzeyi için, en derin iç içe ifadelere öncelik verilir. Parantez içinde, değerlendirme işleç önceliği kurallarına göre devam eder. Daha fazla bilgi için [Visual Basic operatör önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md)bölümüne bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic mantıksal ve bit düzeyinde Işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [Değer Karşılaştırmaları](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [Deyimler](../../../../visual-basic/programming-guide/language-features/statements.md)
 - [Karşılaştırma İşleçleri](../../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [İşleçlerin Etkili Bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
-- [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Boolean Veri Türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)

@@ -16,26 +16,26 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341385"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Değiştirilebilir ve Değiştirilemez Bağımsız Değişkenler Arasındaki Farklar (Visual Basic)
-When you call a procedure, you typically pass one or more arguments to it. Each argument corresponds to an underlying programming element. Both the underlying elements and the arguments themselves can be either modifiable or nonmodifiable.  
+Bir yordamı çağırdığınızda, genellikle bir veya daha fazla bağımsız değişken geçirin. Her bağımsız değişken temeldeki bir programlama öğesine karşılık gelir. Hem temel alınan öğeler hem de bağımsız değişkenler değiştirilebilir ya da değiştirilebilir olabilir.  
   
-## <a name="modifiable-and-nonmodifiable-elements"></a>Modifiable and Nonmodifiable Elements  
- A programming element can be either a *modifiable element*, which can have its value changed, or a *nonmodifiable element*, which has a fixed value once it has been created.  
+## <a name="modifiable-and-nonmodifiable-elements"></a>Değiştirilebilir ve değiştirilemeyen öğeler  
+ Bir programlama öğesi, değeri değişmiş olabilen *değiştirilebilir bir öğe*ya da oluşturulduktan sonra sabit bir değere sahip *değiştirilemeyen bir öğe*olabilir.  
   
- The following table lists modifiable and nonmodifiable programming elements.  
+ Aşağıdaki tabloda değiştirilebilir ve değiştirilemeyen programlama öğeleri listelenmektedir.  
   
-|Modifiable elements|Nonmodifiable elements|  
+|Değiştirilebilir öğeler|Değiştirilemeyen öğeler|  
 |-------------------------|----------------------------|  
-|Local variables (declared inside procedures), including object variables, except for read-only|Read-only variables, fields, and properties|  
-|Fields (member variables of modules, classes, and structures), except for read-only|Constants and literals|  
-|Properties, except for read-only|Enumeration members|  
-|Array elements|Expressions (even if their elements are modifiable)|  
+|Salt okunurdur hariç olmak üzere, nesne değişkenleri dahil olmak üzere yerel değişkenler (yordamlar içinde bildirilmiştir)|Salt okuma değişkenleri, alanları ve özellikleri|  
+|Alanlar (modül, sınıf ve yapıların üye değişkenleri), salt okunurdur hariç|Sabitler ve sabit değerler|  
+|Özellikler, salt okunurdur hariç|Listeleme üyeleri|  
+|Dizi öğeleri|İfadeler (öğeleri değiştirilebilir olsa bile)|  
   
-## <a name="modifiable-and-nonmodifiable-arguments"></a>Modifiable and Nonmodifiable Arguments  
- A *modifiable argument* is one with a modifiable underlying element. The calling code can store a new value at any time, and if you pass the argument [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the code in the procedure can also modify the underlying element in the calling code.  
+## <a name="modifiable-and-nonmodifiable-arguments"></a>Değiştirilebilir ve değiştirilemeyen bağımsız değişkenler  
+ *Değiştirilebilir bir bağımsız değişken* değiştirilebilir bir temel öğe. Çağıran kod herhangi bir zamanda yeni bir değer saklayabilir ve [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)bağımsız değişkenini geçirirseniz, yordamdaki kod, çağıran kodda temel alınan öğeyi de değiştirebilir.  
   
- A *nonmodifiable argument* either has a nonmodifiable underlying element or is passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). The procedure cannot modify the underlying element in the calling code, even if it is a modifiable element. If it is a nonmodifiable element, the calling code itself cannot modify it.  
+ *Değiştirilemeyen bir bağımsız değişken* , değiştirilemeyen temel olmayan bir öğeye sahiptir veya [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)' a geçirilir. Yordam, değiştirilebilir bir öğe olsa bile, çağıran kodda temeldeki öğeyi değiştiremez. Değiştirilemeyen bir öğe ise, çağıran kodun kendisi üzerinde değişiklik yapılamaz.  
   
- The called procedure might modify its local copy of a nonmodifiable argument, but that modification does not affect the underlying element in the calling code.  
+ Çağrılan yordam, değiştirilemeyen bir bağımsız değişkenin yerel kopyasını değiştirebilir, ancak bu değişiklik çağıran koddaki temeldeki öğeyi etkilemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

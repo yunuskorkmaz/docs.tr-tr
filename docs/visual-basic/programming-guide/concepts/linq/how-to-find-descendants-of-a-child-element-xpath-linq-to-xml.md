@@ -1,5 +1,5 @@
 ---
-title: 'How to: Find Descendants of a Child Element (XPath-LINQ to XML)'
+title: 'Nasıl yapılır: bir alt öğenin alt öğelerini bulma (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
 ms.openlocfilehash: beb949be521bfde70fbcdbcf18cebf49d7cc5a58
@@ -9,15 +9,15 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344680"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)
-This topic shows how to get the descendant elements of a child element with a particular name.  
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: bir alt öğenin alt öğelerini bulma (XPath-LINQ to XML) (Visual Basic)
+Bu konu başlığı altında, bir alt öğenin belirli bir ada sahip öğeleri nasıl alınacağı gösterilmektedir.  
   
- The XPath expression is:  
+ XPath ifadesi:  
   
  `./Paragraph//Text/text()`  
   
 ## <a name="example"></a>Örnek  
- This example simulates the problems of extracting text from an XML representation of a word processing document. It first selects all `Paragraph` elements, and then it selects all `Text` descendant elements of each `Paragraph` element. This doesn't select the descendant `Text` elements of the `Comment` element.  
+ Bu örnek, bir sözcük işleme belgesinin XML gösteriminden metin ayıklama sorunlarının benzetimini yapar. Önce tüm `Paragraph` öğelerini seçer ve ardından her bir `Paragraph` öğesinin tüm `Text` alt öğelerini seçer. Bu, `Comment` öğesinin alt öğe `Text` öğelerini seçmeyin.  
   
 ```vb  
 Dim root As XElement = _  
@@ -62,7 +62,7 @@ End If
 Console.WriteLine(str2)  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```console  
 Results are identical  
@@ -71,4 +71,4 @@ This is the start of a sentence.  This is a second sentence.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath kullanıcıları için LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

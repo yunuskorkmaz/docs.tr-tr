@@ -1,5 +1,5 @@
 ---
-title: 'How to: Read from text files with multiple formats'
+title: 'Nasıl yapılır: birden çok biçimdeki metin dosyalarından okuma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
@@ -18,13 +18,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74334578"
 ---
-# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>How to: Read from fext files with multiple formats in Visual Basic
+# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>Nasıl yapılır: Visual Basic birden çok biçimdeki fext dosyalarından okuma
 
-The <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object provides a way to easily and efficiently parse structured text files, such as logs. You can process a file with multiple formats by using the `PeekChars` method to determine the format of each line as you parse through the file.
+<xref:Microsoft.VisualBasic.FileIO.TextFieldParser> nesnesi, günlük gibi yapılandırılmış metin dosyalarını kolayca ve verimli bir şekilde ayrıştırabilmeniz için bir yol sağlar. Dosya aracılığıyla ayrıştırdığınızda her bir satırın biçimini belirleyebilmek için `PeekChars` yöntemini kullanarak, birden çok biçimdeki bir dosyayı işleyebilirsiniz.
   
-### <a name="to-parse-a-text-file-with-multiple-formats"></a>To parse a text file with multiple formats
+### <a name="to-parse-a-text-file-with-multiple-formats"></a>Birden çok biçimdeki bir metin dosyasını ayrıştırmak için
 
-1. Add a text file named *testfile.txt* to your project. Add the following content to the text file:
+1. Projenize *Testfile. txt* adlı bir metin dosyası ekleyin. Aşağıdaki içeriği metin dosyasına ekleyin:
 
     ```text
     Err  1001 Cannot access resource.
@@ -35,37 +35,37 @@ The <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object provides a way to
     Acc  10/04/2009User2      Standard user.
     ```
 
-2. Define the expected format and the format used when an error is reported. The last entry in each array is -1, therefore the last field is assumed to be of variable width. This occurs when the last entry in the array is less than or equal to 0.
+2. Beklenen biçimi ve bir hata bildirildiğinde kullanılan biçimi tanımlayın. Her dizideki son giriş-1 ' dir, bu nedenle son alan, değişken genişliği olarak kabul edilir. Bu, dizideki son giriş 0 ' dan küçük veya buna eşit olduğunda gerçekleşir.
 
      [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]
 
-3. Create a new <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object, defining the width and format.
+3. Genişliği ve biçimi tanımlayarak yeni bir <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> nesnesi oluşturun.
 
      [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]
 
-4. Loop through the rows, testing for format before reading.
+4. Okumadan önce biçim için test eden satırlarda döngü yapın.
 
      [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]
 
-5. Write errors to the console.
+5. Konsola hataları yazın.
 
      [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]
 
 ## <a name="example"></a>Örnek
 
-The following is the complete example that reads from the file `testfile.txt`:
+Aşağıda, `testfile.txt`dosyadan okuyan tüm örnek verilmiştir:
 
  [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]
 
-## <a name="robust-programming"></a>Robust programming
+## <a name="robust-programming"></a>Güçlü programlama
 
 Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- A row cannot be parsed using the specified format (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). The exception message specifies the line causing the exception, while the <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> property is assigned to the text contained in the line.
-- The specified file does not exist (<xref:System.IO.FileNotFoundException>).
-- A partial-trust situation in which the user does not have sufficient permissions to access the file. (<xref:System.Security.SecurityException>).
-- The path is too long (<xref:System.IO.PathTooLongException>).
-- The user does not have sufficient permissions to access the file (<xref:System.UnauthorizedAccessException>).
+- Satır belirtilen biçim (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>) kullanılarak ayrıştırılamıyor. Özel durum iletisi, özel duruma neden olan satırı belirtir, <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> özelliği satırda bulunan metne atanır.
+- Belirtilen dosya yok (<xref:System.IO.FileNotFoundException>).
+- Kullanıcının dosyaya erişmek için yeterli izinlere sahip olmadığı kısmi güven durumu. (<xref:System.Security.SecurityException>).
+- Yol çok uzun (<xref:System.IO.PathTooLongException>).
+- Kullanıcı, dosyaya erişmek için yeterli izinlere sahip değil (<xref:System.UnauthorizedAccessException>).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

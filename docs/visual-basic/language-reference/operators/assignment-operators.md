@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336546"
 ---
 # <a name="assignment-operators-visual-basic"></a>Atama İşleçleri (Visual Basic)
-The following are the assignment operators defined in Visual Basic.  
+Visual Basic içinde tanımlanan atama işleçleri aşağıda verilmiştir.  
   
  [= İşleci](../../../visual-basic/language-reference/operators/assignment-operator.md)  
   
@@ -25,13 +25,13 @@ The following are the assignment operators defined in Visual Basic.
   
  [/= İşleci](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
- [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
+ [\\= Işleci](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
   
  [+= İşleci](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
  [-= İşleci](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)  
   
- [<\<= Operator](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
+ [<\<= Işleci](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
   
  [>>= İşleci](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
   
@@ -39,6 +39,6 @@ The following are the assignment operators defined in Visual Basic.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Deyimler](../../../visual-basic/language-reference/statements/index.md)

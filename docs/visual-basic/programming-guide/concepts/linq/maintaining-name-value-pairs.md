@@ -9,32 +9,32 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331659"
 ---
-# <a name="maintaining-namevalue-pairs-visual-basic"></a>Maintaining Name/Value Pairs (Visual Basic)
-Many applications have to maintain information that is best kept as name/value pairs. This information might be configuration information or global settings. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contains some methods that make it easy to keep a set of name/value pairs. You can either keep the information as attributes or as a set of child elements.  
+# <a name="maintaining-namevalue-pairs-visual-basic"></a>Ad/değer çiftlerini koruma (Visual Basic)
+Birçok uygulamanın ad/değer çiftleri olarak en iyi şekilde tutulan bilgileri tutması gerekir. Bu bilgiler yapılandırma bilgileri veya genel ayarlar olabilir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], bir ad/değer çiftleri kümesini saklamayı kolaylaştıran bazı yöntemler içerir. Bilgileri öznitelik olarak veya bir alt öğe kümesi olarak tutabilirsiniz.  
   
- One difference between keeping the information as attributes or as child elements is that attributes have the constraint that there can be only one attribute with a particular name for an element. This limitation does not apply to child elements.  
+ Bilgileri öznitelik veya alt öğe olarak tutma arasındaki tek fark, özniteliklerin bir öğe için yalnızca belirli bir ada sahip tek bir öznitelik olabilecek kısıtlamaya sahip olduğu kısıtlamadır. Bu sınırlama alt öğeler için geçerlidir.  
   
-## <a name="setattributevalue-and-setelementvalue"></a>SetAttributeValue and SetElementValue  
- The two methods that facilitate keeping name/value pairs are <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> and <xref:System.Xml.Linq.XElement.SetElementValue%2A>. These two methods have similar semantics.  
+## <a name="setattributevalue-and-setelementvalue"></a>SetAttributeValue ve SetElementValue  
+ Ad/değer çiftlerini tutmaya yardımcı olan iki yöntem <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> ve <xref:System.Xml.Linq.XElement.SetElementValue%2A>. Bu iki yöntem benzer anlamlara sahiptir.  
   
- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> can add, modify, or remove attributes of an element.  
+ <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> bir öğenin özniteliklerini ekleyebilir, değiştirebilir veya kaldırabilir.  
   
-- If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an attribute that does not exist, the method creates a new attribute and adds it to the specified element.  
+- Mevcut olmayan bir özniteliğin adıyla <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> çağırırsanız, yöntemi yeni bir öznitelik oluşturur ve belirtilen öğeye ekler.  
   
-- If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an existing attribute and with some specified content, the contents of the attribute are replaced with the specified content.  
+- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> var olan bir özniteliğin adı ve belirtilen içeriklerle çağırırsanız, özniteliğin içeriği belirtilen içerikle değiştirilmiştir.  
   
-- If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an existing attribute, and specify null for the content, the attribute is removed from its parent.  
+- Var olan bir özniteliğin adıyla <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> çağırırsanız ve içerik için null belirtirseniz, öznitelik üst öğesinden kaldırılır.  
   
- <xref:System.Xml.Linq.XElement.SetElementValue%2A> can add, modify, or remove child elements of an element.  
+ <xref:System.Xml.Linq.XElement.SetElementValue%2A> bir öğenin alt öğelerini ekleyebilir, değiştirebilir veya kaldırabilir.  
   
-- If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of a child element that does not exist, the method creates a new element and adds it to the specified element.  
+- Mevcut olmayan bir alt öğe adı ile <xref:System.Xml.Linq.XElement.SetElementValue%2A> çağırırsanız, yöntem yeni bir öğe oluşturur ve belirtilen öğeye ekler.  
   
-- If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of an existing element and with some specified content, the contents of the element are replaced with the specified content.  
+- <xref:System.Xml.Linq.XElement.SetElementValue%2A>, var olan bir öğenin adı ve belirtilen içeriklerle çağırırsanız, öğenin içeriği belirtilen içerikle değiştirilmiştir.  
   
-- If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of an existing element, and specify null for the content, the element is removed from its parent.  
+- <xref:System.Xml.Linq.XElement.SetElementValue%2A> var olan bir öğenin adıyla çağırırsanız ve içerik için null belirtirseniz, öğe üst öğesinden kaldırılır.  
   
 ## <a name="example"></a>Örnek  
- The following example creates an element with no attributes. It then uses the <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> method to create and maintain a list of name/value pairs.  
+ Aşağıdaki örnek, öznitelikleri olmayan bir öğesi oluşturur. Daha sonra ad/değer çiftleri listesini oluşturmak ve korumak için <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> yöntemini kullanır.  
   
 ```vb  
 ' Create an element with no content.  
@@ -57,7 +57,7 @@ root.SetAttributeValue("DefaultColor", Nothing)
 Console.WriteLine(root)  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root Top="22" Left="20" Bottom="122" Right="300" DefaultColor="Color.Red" />  
@@ -66,7 +66,7 @@ Console.WriteLine(root)
 ```  
   
 ## <a name="example"></a>Örnek  
- The following example creates an element with no child elements. It then uses the <xref:System.Xml.Linq.XElement.SetElementValue%2A> method to create and maintain a list of name/value pairs.  
+ Aşağıdaki örnek, alt öğeleri olmayan bir öğe oluşturur. Daha sonra ad/değer çiftleri listesini oluşturmak ve korumak için <xref:System.Xml.Linq.XElement.SetElementValue%2A> yöntemini kullanır.  
   
 ```vb  
 ' Create an element with no content.  
@@ -91,7 +91,7 @@ root.SetElementValue("DefaultColor", Nothing)
 Console.WriteLine(root)  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  
@@ -122,4 +122,4 @@ Console.WriteLine(root)
 
 - <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>
 - <xref:System.Xml.Linq.XElement.SetElementValue%2A>
-- [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [XML ağaçlarını değiştirme (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

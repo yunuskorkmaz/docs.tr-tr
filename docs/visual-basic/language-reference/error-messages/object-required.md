@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349672"
 ---
 # <a name="object-required-visual-basic"></a>Gerekli nesne (Visual Basic)
-References to properties and methods often require an explicit object qualifier. This is such a case.  
+Özellik ve yöntemlere yapılan başvurular genellikle açık bir nesne niteleyicisi gerektirir. Bu durum böyle bir durumdur.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Check that references to an object property or method have valid object qualifier. Specify an object qualifier if you didn't provide one.  
+1. Bir nesne özelliğine veya yöntemine yapılan başvuruların geçerli nesne niteleyicisi olduğunu denetleyin. Bir nesne niteleyicisi sağlamazsanız bir nesne niteleyicisi belirtin.  
   
-2. Check the spelling of the object qualifier and make sure the object is visible in the part of the program in which you are referencing it.  
+2. Nesne niteleyicisi yazımını denetleyin ve nesnenin kendisine başvurduğunuz programın bölümünde göründüğünden emin olun.  
   
-3. If a path is supplied to a host application's **File Open** command, check that the arguments in it are correct.  
+3. Bir ana bilgisayar uygulamasının **Dosya Aç** komutuna bir yol sağlanırsa, içindeki bağımsız değişkenlerin doğru olduğundan emin olun.  
   
-4. Check the object's documentation and make sure the action is valid.  
+4. Nesnenin belgelerini denetleyin ve eylemin geçerli olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -20,27 +20,27 @@ ms.locfileid: "74350016"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Nasıl yapılır: Değişkende Birden Fazla Değer Tutma (Visual Basic)
 
-A variable holds more than one value if you declare it to be of a *composite data type*.
+Bir değişken, *bileşik veri türünde*olduğunu bildirirseniz birden fazla değeri tutar.
 
-[Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) include structures, arrays, and classes. A variable of a composite data type can hold a combination of elementary data types and other composite types. Structures and classes can hold code as well as data.
+[Bileşik veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) yapılar, diziler ve sınıflar içerir. Bileşik veri türünün bir değişkeni, Öğesel veri türlerinin ve diğer bileşik türlerin bir birleşimini tutabilir. Yapılar ve sınıflar, kodu ve verileri içerebilir.
 
-## <a name="to-hold-more-than-one-value-in-a-variable"></a>To hold more than one value in a variable
+## <a name="to-hold-more-than-one-value-in-a-variable"></a>Bir değişkende birden fazla değeri tutmak için
 
-1. Determine what composite data type you want to use for your variable.
+1. Değişkeniniz için kullanmak istediğiniz bileşik veri türünü saptayın.
 
-2. If the composite data type is not already defined, define it so that your variable can use it.
+2. Bileşik veri türü önceden tanımlanmamışsa, değişkeninizin onu kullanabilmesi için onu tanımlayın.
 
-    - Define a structure with a [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md).
+    - [Structure ifadesiyle](../../../../visual-basic/language-reference/statements/structure-statement.md)bir yapı tanımlayın.
 
-    - Define an array with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).
+    - [Dim ifadesiyle](../../../../visual-basic/language-reference/statements/dim-statement.md)bir dizi tanımlayın.
 
-    - Define a class with a [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md).
+    - [Sınıf ifadesiyle](../../../../visual-basic/language-reference/statements/class-statement.md)bir sınıf tanımlayın.
 
-3. Declare your variable with a `Dim` statement.
+3. Değişkeninizi bir `Dim` ifadesiyle bildirin.
 
-4. Follow the variable name with an `As` clause.
+4. `As` yan tümcesiyle değişken adını izleyin.
 
-5. Follow the `As` keyword with the name of the appropriate composite data type.
+5. Uygun bileşik veri türünün adı ile `As` anahtar sözcüğünü izleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

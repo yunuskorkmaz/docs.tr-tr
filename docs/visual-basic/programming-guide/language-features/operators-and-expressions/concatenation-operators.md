@@ -18,7 +18,7 @@ ms.locfileid: "74353682"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Visual Basic'de Birleştirme İşleçleri
 
-Concatenation operators join multiple strings into a single string. There are two concatenation operators, `+` and `&`. Both carry out the basic concatenation operation, as the following example shows.
+Birleştirme işleçleri birden çok dizeyi tek bir dizeye birleştirir. `+` ve `&`iki birleştirme işleci vardır. Her ikisi de aşağıdaki örnekte gösterildiği gibi temel birleştirme işlemini çalıştırır.
 
 ```vb
 Dim x As String = "Mic" & "ro" & "soft"
@@ -26,24 +26,24 @@ Dim y As String = "Mic" + "ro" + "soft"
 ' The preceding statements set both x and y to "Microsoft".
 ```
 
-These operators can also concatenate `String` variables, as the following example shows.
+Bu işleçler Ayrıca, aşağıdaki örnekte gösterildiği gibi `String` değişkenlerini de birleştirebilir.
 
 [!code-vb[VbVbalrOperators#76](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#76)]
 
-## <a name="differences-between-the-two-concatenation-operators"></a>Differences Between the Two Concatenation Operators
+## <a name="differences-between-the-two-concatenation-operators"></a>Iki birleştirme Işleci arasındaki farklar
 
-The [+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md) has the primary purpose of adding two numbers. However, it can also concatenate numeric operands with string operands. The `+` operator has a complex set of rules that determine whether to add, concatenate, signal a compiler error, or throw a run-time <xref:System.InvalidCastException> exception.
+[+ İşlecinin](../../../../visual-basic/language-reference/operators/addition-operator.md) iki sayı eklemenin birincil amacı vardır. Ancak, sayısal işlenenleri dize işlenenleri ile de birleştirebilir. `+` işleci, bir derleyici hatasına ekleme, birleştirme, sinyal sinyali atma veya bir çalışma zamanı <xref:System.InvalidCastException> özel durumu oluşturma gibi karmaşık bir kurallar kümesine sahiptir.
 
-The [& Operator](../../../../visual-basic/language-reference/operators/concatenation-operator.md) is defined only for `String` operands, and it always widens its operands to `String`, regardless of the setting of `Option Strict`. The `&` operator is recommended for string concatenation because it is defined exclusively for strings and reduces your chances of generating an unintended conversion.
+[& işleci](../../../../visual-basic/language-reference/operators/concatenation-operator.md) yalnızca `String` işlenenleri için tanımlanır ve `Option Strict`ayarından bağımsız olarak her zaman işlenenlerini `String`olarak widens. `&` işleci, dizeler için özel olarak tanımlandığından ve istenmeden dönüştürme oluşturma olasılığınızı azalttığından dize birleştirme için önerilir.
 
-## <a name="performance-string-and-stringbuilder"></a>Performance: String and StringBuilder
+## <a name="performance-string-and-stringbuilder"></a>Performans: dize ve StringBuilder
 
-If you do a significant number of manipulations on a string, such as concatenations, deletions, and replacements, your performance might profit from the <xref:System.Text.StringBuilder> class in the <xref:System.Text> namespace. It takes an extra instruction to create and initialize a <xref:System.Text.StringBuilder> object, and another instruction to convert its final value to a `String`, but you might recover this time because <xref:System.Text.StringBuilder> can perform faster.
+Birleştirmeleri, silmeler ve değişiklikler gibi bir dizede önemli sayıda değişiklik yaparsanız, performans, <xref:System.Text> ad alanındaki <xref:System.Text.StringBuilder> sınıftan elde edebilir. <xref:System.Text.StringBuilder> nesne oluşturup başlatmaya yönelik ek bir yönerge ve son değerini bir `String`dönüştürmek için başka bir yönerge kullanır, ancak <xref:System.Text.StringBuilder> daha hızlı gerçekleştirebildiğinden bu süreyi kurtarabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Types of String Manipulation Methods in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
-- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic içindeki dize düzenleme yöntemlerinin türleri](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
+- [Visual Basic aritmetik Işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic karşılaştırma Işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic mantıksal ve bit düzeyinde Işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

@@ -20,7 +20,7 @@ ms.locfileid: "74346491"
 ---
 # <a name="option-infer-statement"></a>Option Infer Deyimi
 
-Enables the use of local type inference in declaring variables.
+Değişkenleri bildirirken yerel tür çıkarımı kullanımını mümkün.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,72 +32,72 @@ Option Infer { On | Off }
 
 |Terim|Tanım|
 |---|---|
-|`On`|İsteğe bağlı. Enables local type inference.|
-|`Off`|İsteğe bağlı. Disables local type inference.|
+|`On`|İsteğe bağlı. Yerel tür çıkarımı etkinleştirilir.|
+|`Off`|İsteğe bağlı. Yerel tür çıkarımını devre dışı bırakır.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-To set `Option Infer` in a file, type `Option Infer On` or `Option Infer Off` at the top of the file, before any other source code. If the value set for `Option Infer` in a file conflicts with the value set in the IDE or on the command line, the value in the file has precedence.
+Bir dosyada `Option Infer` ayarlamak için, dosyanın en üstüne, diğer herhangi bir kaynak koddan önce `Option Infer On` veya `Option Infer Off` yazın. Bir dosyadaki `Option Infer` için ayarlanan değer IDE 'de veya komut satırında ayarlanan değer ile çakışıyorsa, dosyadaki değerin önceliği vardır.
 
-When you set `Option Infer` to `On`, you can declare local variables without explicitly stating a data type. The compiler infers the data type of a variable from the type of its initialization expression.
+`Option Infer` `On`ayarladığınızda, açıkça bir veri türü belirtmeden yerel değişkenler bildirebilirsiniz. Derleyici, başlangıç ifadesinin türünden bir değişkenin veri türünü ifade eden.
 
-In the following illustration, `Option Infer` is turned on. The variable in the declaration `Dim someVar = 2` is declared as an integer by type inference.
+Aşağıdaki çizimde `Option Infer` açıktır. Bildirim `Dim someVar = 2` değişkeni tür çıkarımı tarafından tamsayı olarak bildirilmiştir.
 
-The following screenshot shows IntelliSense when Option Infer is on:
+Aşağıdaki ekran görüntüsünde, seçenek çıkarımı açık olduğunda IntelliSense gösterilmektedir:
 
-![Screenshot showing IntelliSense view when Option Infer is on.](./media/option-infer-statement/option-infer-as-integer-on.png)
+![Seçenek çıkarımı açık olduğunda IntelliSense görünümünü gösteren ekran görüntüsü.](./media/option-infer-statement/option-infer-as-integer-on.png)
 
-In the following illustration, `Option Infer` is turned off. The variable in the declaration `Dim someVar = 2` is declared as an `Object` by type inference. In this example, the **Option Strict** setting is set to **Off** on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
+Aşağıdaki çizimde `Option Infer` kapalıdır. Bildirim `Dim someVar = 2` değişkeni tür çıkarımı tarafından `Object` olarak bildirilmiştir. Bu örnekte, **seçenek katı** ayarı [derleme sayfasında, Proje tasarımcısı 'nda (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) **kapalı** olarak ayarlanır.
 
-The following screenshot shows IntelliSense when Option Infer is off:
+Aşağıdaki ekran görüntüsünde, seçenek çıkarımı kapalı olduğunda IntelliSense gösterilmektedir:
 
-![Screenshot showing IntelliSense view when Option Infer is off.](./media/option-infer-statement/option-infer-as-object-off.png)
+![Seçenek çıkarımı kapalıyken IntelliSense görünümünü gösteren ekran görüntüsü.](./media/option-infer-statement/option-infer-as-object-off.png)
 
 > [!NOTE]
-> When a variable is declared as an `Object`, the run-time type can change while the program is running. Visual Basic performs operations called *boxing* and *unboxing* to convert between an `Object` and a value type, which makes execution slower. For information about boxing and unboxing, see the [Visual Basic Language Specification](~/_vblang/spec/conversions.md#value-type-conversions).
+> Bir değişken `Object`olarak bildirildiğinde, program çalışırken çalışma zamanı türü değişebilir. Visual Basic, bir `Object` ve değer türü arasında dönüştürmek için *kutulama* ve *kutudan* çıkarma adlı işlemleri gerçekleştirir, bu da yürütmeyi daha yavaş yapar. Kutulama ve kutudan çıkarma hakkında daha fazla bilgi için [Visual Basic dil belirtimine](~/_vblang/spec/conversions.md#value-type-conversions)bakın.
 
-Type inference applies at the procedure level, and does not apply outside a procedure in a class, structure, module, or interface.
+Tür çıkarımı yordam düzeyinde uygulanır ve bir sınıf, yapı, modül veya arabirimdeki bir yordamın dışında uygulanmaz.
 
-For additional information, see [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
+Daha fazla bilgi için bkz. [Yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
 
-## <a name="when-an-option-infer-statement-is-not-present"></a>When an Option Infer Statement Is Not Present
+## <a name="when-an-option-infer-statement-is-not-present"></a>Bir Option Infer deyimleri mevcut olmadığında
 
-If the source code does not contain an `Option Infer` statement, the **Option Infer** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used. If the command-line compiler is used, the [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) compiler option is used.
+Kaynak kodu `Option Infer` bir ifade içermiyorsa, derleme sayfasındaki **seçenek çıkarımı** ayarı, [proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) kullanılır. Komut satırı derleyicisi kullanılırsa [-OptionInfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) derleyici seçeneği kullanılır.
 
-#### <a name="to-set-option-infer-in-the-ide"></a>To set Option Infer in the IDE
+#### <a name="to-set-option-infer-in-the-ide"></a>IDE 'de seçenek çıkarımı ayarlamak için
 
-1. In **Solution Explorer**, select a project. On the **Project** menu, click **Properties**.
+1. **Çözüm Gezgini**bir proje seçin. **Proje** menüsünde **Özellikler**' e tıklayın.
 
-2. Click the **Compile** tab.
+2. **Derle** sekmesine tıklayın.
 
-3. Set the value in the **Option infer** box.
+3. **Seçenek çıkarımı** kutusunda değeri ayarlayın.
 
-When you create a new project, the **Option Infer** setting on the **Compile** tab is set to the **Option Infer** setting in the **VB Defaults** dialog box. To access the **VB Defaults** dialog box, on the **Tools** menu, click **Options**. In the **Options** dialog box, expand **Projects and Solutions**, and then click **VB Defaults**. The initial default setting in **VB Defaults** is `On`.
+Yeni bir proje oluşturduğunuzda, **Derle** sekmesindeki **seçenek** çıkar ayarı, **vb Varsayılanları** iletişim kutusundaki **seçenek çıkarımı** ayarı olarak ayarlanır. **Vb Varsayılanları** iletişim kutusuna erişmek Için, **Araçlar** menüsünde **Seçenekler**' e tıklayın. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler**' i genişletin ve ardından **vb Varsayılanları**' na tıklayın. **Vb Varsayılanları** içindeki ilk varsayılan ayar `On`.
 
-#### <a name="to-set-option-infer-on-the-command-line"></a>To set Option Infer on the command line
+#### <a name="to-set-option-infer-on-the-command-line"></a>Komut satırında bir seçenek çıkarımı ayarlamak için
 
-Include the [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) compiler option in the **vbc** command.
+**Vbc** komutuna [-OptionInfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) derleyici seçeneğini ekleyin.
 
-## <a name="default-data-types-and-values"></a>Default Data Types and Values
+## <a name="default-data-types-and-values"></a>Varsayılan veri türleri ve değerleri
 
-The following table describes the results of various combinations of specifying the data type and initializer in a `Dim` statement.
+Aşağıdaki tabloda, bir `Dim` bildiriminde veri türünü ve başlatıcıyı belirtmenin çeşitli birleşimlerinin sonuçları açıklanmaktadır.
 
-|Data type specified?|Initializer specified?|Örnek|Sonuç|
+|Veri türü belirtildi mi?|Başlatıcı belirtildi mi?|Örnek|Sonuç|
 |---|---|---|---|
-|Hayır|Hayır|`Dim qty`|If `Option Strict` is off (the default), the variable is set to `Nothing`.<br /><br /> If `Option Strict` is on, a compile-time error occurs.|
-|Hayır|Evet|`Dim qty = 5`|If `Option Infer` is on (the default), the variable takes the data type of the initializer. See [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> If `Option Infer` is off and `Option Strict` is off, the variable takes the data type of `Object`.<br /><br /> If `Option Infer` is off and `Option Strict` is on, a compile-time error occurs.|
-|Evet|Hayır|`Dim qty As Integer`|The variable is initialized to the default value for the data type. For more information, see [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).|
-|Evet|Evet|`Dim qty  As Integer = 5`|If the data type of the initializer is not convertible to the specified data type, a compile-time error occurs.|
+|Hayır|Hayır|`Dim qty`|`Option Strict` kapalıysa (varsayılan), değişken `Nothing`olarak ayarlanır.<br /><br /> `Option Strict` açık ise, bir derleme zamanı hatası oluşur.|
+|Hayır|Evet|`Dim qty = 5`|`Option Infer` açık ise (varsayılan), değişkeni başlatıcının veri türünü alır. Bkz. [Yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> `Option Infer` kapalıysa ve `Option Strict` kapalıysa, değişken `Object`veri türünü alır.<br /><br /> `Option Infer` kapalıysa ve `Option Strict` açık ise, bir derleme zamanı hatası oluşur.|
+|Evet|Hayır|`Dim qty As Integer`|Değişken, veri türü için varsayılan değer olarak başlatılır. Daha fazla bilgi için bkz. [Dim deyimleri](../../../visual-basic/language-reference/statements/dim-statement.md).|
+|Evet|Evet|`Dim qty  As Integer = 5`|Başlatıcının veri türü belirtilen veri türüne dönüştürülebilir değilse, bir derleme zamanı hatası oluşur.|
 
 ## <a name="example"></a>Örnek
 
-The following examples demonstrate how the `Option Infer` statement enables local type inference.
+Aşağıdaki örneklerde `Option Infer` ifadesinin yerel tür çıkarımı nasıl etkinleştirdiğini gösterilmektedir.
 
 [!code-vb[VbVbalrTypeInference#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#6)]
 
 ## <a name="example"></a>Örnek
 
-The following example demonstrates that the run-time type can differ when a variable is identified as an `Object`.
+Aşağıdaki örnek, bir değişken `Object`olarak tanımlandığında çalışma zamanı türünün farklı kullanılabileceğini gösterir.
 
 [!code-vb[VbVbalrTypeInference#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#11)]
 

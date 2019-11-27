@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332324"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>Nasıl yapılır: XML Özniteliklerine Erişme (Visual Basic)
-This example shows how to use an attribute axis property to access XML attributes in an XML element by name. In particular, it uses the `type` attribute axis property to access the attribute named `type` in the `phone` object.  
+Bu örnek, bir XML öğesindeki XML özniteliklerine ada göre erişmek için bir öznitelik eksen özelliğinin nasıl kullanılacağını gösterir. Özellikle, `phone` nesnesindeki `type` adlı özniteliğe erişmek için `type` Attribute Axis özelliğini kullanır.  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbXMLSamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#11)]  
@@ -24,5 +24,5 @@ This example shows how to use an attribute axis property to access XML attribute
 
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
 - [XML Özniteliği Axis Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [Accessing XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+- [Visual Basic XML 'e erişme](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

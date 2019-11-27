@@ -14,13 +14,13 @@ ms.locfileid: "74348806"
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dizin Oluşturma
 
-Use the `CreateDirectory` method of the `My.Computer.FileSystem` object to create directories.  
+Dizinler oluşturmak için `My.Computer.FileSystem` nesnesinin `CreateDirectory` yöntemini kullanın.  
   
- If the directory already exists, no exception is thrown.  
+ Dizin zaten varsa, hiçbir özel durum oluşturulmaz.  
   
-### <a name="to-create-a-directory"></a>To create a directory  
+### <a name="to-create-a-directory"></a>Bir dizin oluşturmak için  
   
-- Use the `CreateDirectory` method by specifying the full path of the location where the directory should be created. This example creates the directory `NewDirectory` in `C:\Documents and Settings\All Users\Documents`.  
+- Dizinin oluşturulması gereken konumun tam yolunu belirterek `CreateDirectory` yöntemini kullanın. Bu örnek, Dizin `NewDirectory` `C:\Documents and Settings\All Users\Documents`oluşturur.  
   
      [!code-vb[VbVbcnMyFileSystem#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#2)]  
   
@@ -28,19 +28,19 @@ Use the `CreateDirectory` method of the `My.Computer.FileSystem` object to creat
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- The directory name is malformed. For example, it contains illegal characters or is only white space (<xref:System.ArgumentException>).  
+- Dizin adı hatalı biçimlendirilmiş. Örneğin, geçersiz karakterler içeriyor veya yalnızca boşluk (<xref:System.ArgumentException>).  
   
-- The parent directory of the directory to be created is read-only (<xref:System.IO.IOException>).  
+- Oluşturulacak dizinin üst dizini salt okunurdur (<xref:System.IO.IOException>).  
   
-- The directory name is `Nothing` (<xref:System.ArgumentNullException>).  
+- Dizin adı `Nothing` (<xref:System.ArgumentNullException>).  
   
-- The directory name is too long (<xref:System.IO.PathTooLongException>).  
+- Dizin adı çok uzun (<xref:System.IO.PathTooLongException>).  
   
-- The directory name is a colon ":" (<xref:System.NotSupportedException>).  
+- Dizin adı iki nokta üst üste ":" (<xref:System.NotSupportedException>).  
   
-- The user does not have permission to create the directory (<xref:System.UnauthorizedAccessException>).  
+- Kullanıcının dizin oluşturma izni yok (<xref:System.UnauthorizedAccessException>).  
   
-- The user lacks permissions in a partial-trust situation (<xref:System.Security.SecurityException>).  
+- Kullanıcının kısmi güven durumunda izinleri eksik (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

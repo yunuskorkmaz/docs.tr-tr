@@ -15,48 +15,48 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344171"
 ---
-# <a name="nothing-keyword-visual-basic"></a>Nothing keyword (Visual Basic)
+# <a name="nothing-keyword-visual-basic"></a>Nothing anahtar sözcüğü (Visual Basic)
 
-Represents the default value of any data type. For reference types, the default value is the `null` reference. For value types, the default value depends on whether the value type is nullable.
+Herhangi bir veri türünün varsayılan değerini temsil eder. Başvuru türleri için, varsayılan değer `null` başvurusudur. Değer türleri için, varsayılan değer değer türünün null yapılabilir olup olmamasına bağlıdır.
 
 > [!NOTE]
-> For non-nullable value types, `Nothing` in Visual Basic differs from `null` in C#. In Visual Basic, if you set a variable of a non-nullable value type to `Nothing`, the variable is set to the default value for its declared type. In C#, if you assign a variable of a non-nullable value type to `null`, a compile-time error occurs.
+> Null yapılamayan değer türleri için Visual Basic `Nothing` içindeki `null` farklıdır C#. Visual Basic, null olamayan bir değer türü değişkenini `Nothing`olarak ayarlarsanız, değişken, belirtilen türü için varsayılan değere ayarlanır. ' C#De, `null`null yapılamayan bir değer türü değişkeni atarsanız, derleme zamanı hatası oluşur.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`Nothing` represents the default value of a data type. The default value depends on whether the variable is of a value type or of a reference type.
+`Nothing`, bir veri türünün varsayılan değerini temsil eder. Varsayılan değer, değişkenin bir değer türü veya bir başvuru türü olmasına bağlıdır.
 
-A variable of a *value type* directly contains its value. Value types include all numeric data types, `Boolean`, `Char`, `Date`, all structures, and all enumerations. A variable of a *reference type* stores a reference to an instance of the object in memory. Reference types include classes, arrays, delegates, and strings. For more information, see [Value Types and Reference Types](../programming-guide/language-features/data-types/value-types-and-reference-types.md).
+*Değer türünde* bir değişken doğrudan değerini içerir. Değer türleri, tüm sayısal veri türlerini, `Boolean`, `Char`, `Date`, tüm yapıları ve tüm numaralandırmalar içerir. Bir *başvuru türü* değişkeni, bir nesne örneğine bir başvuruyu, bellekteki bir başvuruya depolar. Başvuru türleri sınıflar, diziler, temsilciler ve dizeler içerir. Daha fazla bilgi için bkz. [değer türleri ve başvuru türleri](../programming-guide/language-features/data-types/value-types-and-reference-types.md).
 
-If a variable is of a value type, the behavior of `Nothing` depends on whether the variable is of a nullable data type. To represent a nullable value type, add a `?` modifier to the type name. Assigning `Nothing` to a nullable variable sets the value to `null`. For more information and examples, see [Nullable Value Types](../programming-guide/language-features/data-types/nullable-value-types.md).
+Bir değişken bir değer türünde ise, `Nothing` davranışı değişkenin null yapılabilir bir veri türünde olup olmamasına bağlıdır. Null olabilen bir değer türünü temsil etmek için tür adına bir `?` değiştiricisi ekleyin. Null atanabilir bir değişkene `Nothing` atamak, değeri `null`olarak ayarlar. Daha fazla bilgi ve örnek için bkz. [Nullable değer türleri](../programming-guide/language-features/data-types/nullable-value-types.md).
 
-If a variable is of a value type that is not nullable, assigning `Nothing` to it sets it to the default value for its declared type. If that type contains variable members, they are all set to their default values. The following example illustrates this for scalar types.
+Bir değişken null değer atanabilir olmayan bir değer türünde ise, `Nothing` atamak, kendisini belirtilen tür için varsayılan değere ayarlar. Bu tür değişken üyeleri içeriyorsa, hepsi varsayılan değerlerine ayarlanır. Aşağıdaki örnek, skalar türler için bunu gösterir.
 
 [!code-vb[VbVbalrKeywords#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class2.vb#7)]
 
-If a variable is of a reference type, assigning `Nothing` to the variable sets it to a `null` reference of the variable's type. A variable that is set to a `null` reference is not associated with any object. The following example demonstrates this:
+Bir değişken başvuru türünde ise, değişkenine `Nothing` atamak, değişkenin türünün `null` başvurusuna ayarlar. `null` başvuruya ayarlanmış bir değişken herhangi bir nesneyle ilişkili değildir. Aşağıdaki örnek şunu gösterir:
 
 [!code-vb[VbVbalrKeywords#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class3.vb#8)]
 
-When checking whether a reference (or nullable value type) variable is `null`, do not use `= Nothing` or `<> Nothing`. Always use `Is Nothing` or `IsNot Nothing`.
+Başvuru (veya null yapılabilir değer türü) değişkeninin `null`olup olmadığı denetlenirken `= Nothing` veya `<> Nothing`kullanmayın. `Is Nothing` veya `IsNot Nothing`her zaman kullanın.
 
-For strings in Visual Basic, the empty string equals `Nothing`. Therefore, `"" = Nothing` is true.
+Visual Basic dizeler için boş dize `Nothing`eşittir. Bu nedenle, `"" = Nothing` true 'dur.
 
-The following example shows comparisons that use the `Is` and `IsNot` operators:
+Aşağıdaki örnek, `Is` ve `IsNot` işleçlerini kullanan karşılaştırmaları gösterir:
 
 [!code-vb[VbVbalrKeywords#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class4.vb#9)]
 
-If you declare a variable without using an `As` clause and set it to `Nothing`, the variable has a type of `Object`. An example of this is `Dim something = Nothing`. A compile-time error occurs in this case when `Option Strict` is on and `Option Infer` is off.
+Bir `As` yan tümcesi kullanmadan bir değişken bildirir ve `Nothing`olarak ayarlarsanız, değişkenin türü `Object`olur. Buna bir örnek `Dim something = Nothing`. `Option Strict` açık olduğunda ve `Option Infer` kapalı olduğunda bu durumda derleme zamanı hatası oluşur.
 
-When you assign `Nothing` to an object variable, it no longer refers to any object instance. If the variable had previously referred to an instance, setting it to `Nothing` does not terminate the instance itself. The instance is terminated, and the memory and system resources associated with it are released, only after the garbage collector (GC) detects that there are no active references remaining.
+Bir nesne değişkenine `Nothing` atadığınızda, artık herhangi bir nesne örneğine başvurmayacaktır. Değişken daha önce bir örneğe başvurdıysa, `Nothing` olarak ayarlanması, örneğin kendisini sonlandıramaz. Örnek sonlandırılır ve bununla ilişkili bellek ve sistem kaynakları serbest bırakılır ve yalnızca çöp toplayıcı (GC) kalan etkin bir başvuru olmadığını algılar.
 
-`Nothing` differs from the <xref:System.DBNull> object, which represents an uninitialized variant or a nonexistent database column.
+`Nothing`, başlatılmamış bir varyantı veya varolmayan bir veritabanı sütununu temsil eden <xref:System.DBNull> nesnesinden farklıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dim Deyimi](./statements/dim-statement.md)
 - [Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme](../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
-- [Lifetime in Visual Basic](../programming-guide/language-features/declared-elements/lifetime.md)
+- [Visual Basic ömrü](../programming-guide/language-features/declared-elements/lifetime.md)
 - [Is İşleci](./operators/is-operator.md)
 - [IsNot İşleci](./operators/isnot-operator.md)
 - [Boş Değer Atanabilen Değer Türleri](../programming-guide/language-features/data-types/nullable-value-types.md)

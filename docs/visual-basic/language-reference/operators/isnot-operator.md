@@ -15,7 +15,7 @@ ms.locfileid: "74336070"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot İşleci (Visual Basic)
 
-Compares two object reference variables.
+İki nesne başvuru değişkenini karşılaştırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -24,21 +24,21 @@ result = object1 IsNot object2
 ```
 
 ## <a name="parts"></a>Bölümler
- `result` Required. A `Boolean` value.
+ `result` gerekiyor. Bir `Boolean` değeri.
 
- `object1` Required. Any `Object` variable or expression.
+ `object1` gerekiyor. Herhangi bir `Object` değişkeni veya ifadesi.
 
- `object2` Required. Any `Object` variable or expression.
+ `object2` gerekiyor. Herhangi bir `Object` değişkeni veya ifadesi.
 
 ## <a name="remarks"></a>Açıklamalar
- The `IsNot` operator determines if two object references refer to different objects. However, it does not perform value comparisons. If `object1` and `object2` both refer to the exact same object instance, `result` is `False`; if they do not, `result` is `True`.
+ `IsNot` işleci, iki nesne başvurusunun farklı nesnelere başvuracağını belirler. Ancak, değer karşılaştırmaları gerçekleştirmez. `object1` ve `object2` her ikisi de tam aynı nesne örneğine başvurur, `result` `False`; Aksi takdirde, `result` `True`.
 
- `IsNot` is the opposite of the `Is` operator. The advantage of `IsNot` is that you can avoid awkward syntax with `Not` and `Is`, which can be difficult to read.
+ `IsNot`, `Is` işlecinin tersidir. `IsNot` avantajı, okunması zor olabilecek `Not` ve `Is`ile garip söz dizimini önlemenize olanak sağlar.
 
- You can use the `Is` and `IsNot` operators to test both early-bound and late-bound objects.
+ `Is` ve `IsNot` işleçlerini kullanarak hem erken hem de geç bağlantılı nesneleri test edebilirsiniz.
 
 ## <a name="example"></a>Örnek
- The following code example uses both the `Is` operator and the `IsNot` operator to accomplish the same comparison.
+ Aşağıdaki kod örneği, aynı karşılaştırmayı başarmak için hem `Is` işlecini hem de `IsNot` işlecini kullanır.
 
  [!code-vb[VbVbalrOperators#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#29)]
 
@@ -46,5 +46,5 @@ result = object1 IsNot object2
 
 - [Is İşleci](is-operator.md)
 - [TypeOf İşleci](typeof-operator.md)
-- [Operator Precedence in Visual Basic](operator-precedence.md)
+- [Visual Basic operatör önceliği](operator-precedence.md)
 - [Nasıl yapılır: İki Nesnenin Aynı Olup Olmadığını Test Etme](../../programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)

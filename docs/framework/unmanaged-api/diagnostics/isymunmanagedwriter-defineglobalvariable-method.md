@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428027"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable Yöntemi
-Defines a single global variable.  
+Tek bir genel değişkeni tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,34 +41,34 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="parameters"></a>Parametreler  
  `name`  
- [in] A pointer to a `WCHAR` that defines the global variable name.  
+ 'ndaki Genel değişken adını tanımlayan bir `WCHAR` işaretçisi.  
   
  `attributes`  
- [in] The global variable attributes.  
+ 'ndaki Genel değişken öznitelikleri.  
   
  `cSig`  
- [in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.  
+ 'ndaki `signature` arabelleğinin karakter cinsinden boyutunu belirten `ULONG32`.  
   
  `signature`  
- [in] The global variable signature.  
+ 'ndaki Genel değişken imzası.  
   
  `addrKind`  
- [in] The address type.  
+ 'ndaki Adres türü.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ 'ndaki Parametre belirtiminin ilk adresi.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ 'ndaki Parametre belirtiminin ikinci adresi.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ 'ndaki Parametre belirtiminin üçüncü adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

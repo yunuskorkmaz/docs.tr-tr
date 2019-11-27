@@ -23,7 +23,7 @@ ms.locfileid: "74331100"
 ---
 # <a name="-operator-visual-basic"></a>^ İşleci (Visual Basic)
 
-Raises a number to the power of another number.
+Bir sayıyı, başka bir sayının kuvvetine yükseltir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,60 +34,60 @@ number ^ exponent
 ## <a name="parts"></a>Bölümler
 
 `number`\
-Gerekli. Any numeric expression.
+Gerekli. Herhangi bir sayısal ifade.
 
 `exponent`\
-Gerekli. Any numeric expression.
+Gerekli. Herhangi bir sayısal ifade.
 
 ## <a name="result"></a>Sonuç
 
-The result is `number` raised to the power of `exponent`, always as a `Double` value.
+Sonuç, her zaman bir `Double` değeri olarak `exponent`gücü `number` yükseltilir.
 
-## <a name="supported-types"></a>Supported Types
+## <a name="supported-types"></a>Desteklenen türler
 
-`Double`. Operands of any different type are converted to `Double`.
+`Double`. Farklı türdeki işlenenler `Double`dönüştürülür.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Visual Basic always performs exponentiation in the [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md).
+Visual Basic her zaman [Double veri türünde](../../../visual-basic/language-reference/data-types/double-data-type.md)üs gerçekleştirir.
 
-The value of `exponent` can be fractional, negative, or both.
+`exponent` değeri kesirli, negatif veya her ikisi olabilir.
 
-When more than one exponentiation is performed in a single expression, the `^` operator is evaluated as it is encountered from left to right.
+Tek bir ifadede birden fazla üs işlemi gerçekleştirildiğinde, soldan sağa ile karşılaşıldığından `^` işleci değerlendirilir.
 
 > [!NOTE]
-> The `^` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
+> `^` işleci *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
 
 ## <a name="example"></a>Örnek
 
-The following example uses the `^` operator to raise a number to the power of an exponent. The result is the first operand raised to the power of the second.
+Aşağıdaki örnek, bir sayının üssünü artırmak için `^` işlecini kullanır. Sonuç ikincinin gücüyle oluşturulan ilk işlenendir.
 
 [!code-vb[VbVbalrOperators#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#20)]
 
-The preceding example produces the following results:
+Yukarıdaki örnek aşağıdaki sonuçları üretir:
 
-`exp1` is set to 4 (2 squared).
+`exp1` 4 (2 kare) olarak ayarlanır.
 
-`exp2` is set to 19683 (3 cubed, then that value cubed).
+`exp2`, 19683 (3 odaya, sonra da bu değer) olarak ayarlanır.
 
-`exp3` is set to -125 (-5 cubed).
+`exp3`-125 (-5 odamış) olarak ayarlanır.
 
-`exp4` is set to 625 (-5 to the fourth power).
+`exp4`, 625 (-5 dördüncü güce) olarak ayarlanmıştır.
 
-`exp5` is set to 2 (cube root of 8).
+`exp5` 2 olarak ayarlanır (8. küp kökü).
 
-`exp6` is set to 0.5 (1.0 divided by the cube root of 8).
+`exp6`, 0,5 olarak ayarlanır (1,0, 8 ' in küp köküne bölünür).
 
-Note the importance of the parentheses in the expressions in the preceding example. Because of *operator precedence*, Visual Basic normally performs the `^` operator before any others, even the unary `–` operator. If `exp4` and `exp6` had been calculated without parentheses, they would have produced the following results:
+Önceki örnekteki ifadelerde parantezlerin önemini dikkate alın. *İşleç önceliği*nedeniyle, Visual Basic normalde, birli `–` işleci bile diğer tüm `^` işlecini uygular. `exp4` ve `exp6` parantez olmadan hesaplanmışsa, bunlar aşağıdaki sonuçları üretti:
 
-`exp4 = -5 ^ 4` would be calculated as –(5 to the fourth power), which would result in -625.
+`exp4 = -5 ^ 4` – (5 dördüncü güce) olarak hesaplanacak ve bu,-625 ile sonuçlanacaktır.
 
-`exp6 = 8 ^ -1.0 / 3.0` would be calculated as (8 to the –1 power, or 0.125) divided by 3.0, which would result in 0.041666666666666666666666666666667.
+`exp6 = 8 ^ -1.0 / 3.0`, 3,0 ile ayrılmış olan (– 1 güç veya 0,125), 0.041666666666666666666666666666667 ile sonuçlanabilecek şekilde hesaplanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [^= İşleci](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
 - [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic aritmetik Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

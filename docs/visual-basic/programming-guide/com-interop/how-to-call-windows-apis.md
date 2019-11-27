@@ -15,30 +15,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348709"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Nasıl yapılır: Windows API'larını Çağırma (Visual Basic)
-This example defines and calls the `MessageBox` function in user32.dll and then passes a string to it.  
+Bu örnek, User32. dll ' de `MessageBox` işlevini tanımlar ve çağırır ve sonra buna bir dize geçirir.  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbVbalrInterop#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- This example requires:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- A reference to the <xref:System> namespace.  
+- <xref:System> ad alanına bir başvuru.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- The method is not static, is abstract, or has been previously defined. The parent type is an interface, or the length of *name* or *dllName* is zero. (<xref:System.ArgumentException>)  
+- Yöntem statik değil, soyut veya daha önce tanımlanmış. Üst tür bir arabirimdir, ya da *ad* veya *DLL* uzunluğu sıfırdır. (<xref:System.ArgumentException>)  
   
-- The *name* or *dllName* is `Nothing`. (<xref:System.ArgumentNullException>)  
+- Ad veya *DLL* *adı* `Nothing`. (<xref:System.ArgumentNullException>)  
   
-- The containing type has been previously created using `CreateType`. (<xref:System.InvalidOperationException>)  
+- Kapsayan tür daha önce `CreateType`kullanılarak oluşturulmuştur. (<xref:System.InvalidOperationException>)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [A Closer Look at Platform Invoke](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
+- [Platform çağırma ' ye daha yakından bakış](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [Platform Çağırma Örnekleri](../../../framework/interop/platform-invoke-examples.md)
 - [Yönetilmeyen DLL İşlevlerini Kullanma](../../../framework/interop/consuming-unmanaged-dll-functions.md)
-- [Defining a Method with Reflection Emit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
+- [Yansıma Yayma ile bir yöntem tanımlama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
 - [İzlenecek yol: Windows API'lerini Çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
 - [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)

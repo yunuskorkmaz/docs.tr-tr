@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350831"
 ---
 # <a name="-utf8output-visual-basic"></a>-utf8output (Visual Basic)
-Displays compiler output using UTF-8 encoding.  
+UTF-8 kodlamasını kullanarak derleyici çıkışını görüntüler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -22,18 +22,18 @@ Displays compiler output using UTF-8 encoding.
 -utf8output[+ | -]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `+` &#124; `-`  
- İsteğe bağlı. The default for this option is `-utf8output-`, which means compiler output does not use UTF-8 encoding. Specifying `-utf8output` is the same as specifying `-utf8output+`.  
+ İsteğe bağlı. Bu seçenek için varsayılan değer `-utf8output-`, bu, derleyici çıkışının UTF-8 kodlamasını kullanmayacağı anlamına gelir. `-utf8output` belirtmek `-utf8output+`belirtirken de aynıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- In some international configurations, compiler output cannot be displayed correctly in the console. In such situations, use `-utf8output` and redirect compiler output to a file.  
+ Bazı uluslararası yapılandırmalarda, Derleyici çıktısı konsolunda doğru şekilde görüntülenemez. Bu gibi durumlarda `-utf8output` kullanın ve derleyici çıkışını bir dosyaya yeniden yönlendirin.  
   
 > [!NOTE]
-> The `-utf8output` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> `-utf8output` seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- The following code compiles `In.vb` and directs the compiler to display output using UTF-8 encoding.  
+ Aşağıdaki kod `In.vb` derler ve derleyiciyi UTF-8 kodlaması kullanarak çıktıyı görüntüleyecek şekilde yönlendirir.  
   
 ```console  
 vbc -utf8output in.vb  
@@ -41,5 +41,5 @@ vbc -utf8output in.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

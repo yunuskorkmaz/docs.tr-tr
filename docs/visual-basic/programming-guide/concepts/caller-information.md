@@ -9,19 +9,19 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349469"
 ---
-# <a name="caller-information-visual-basic"></a>Caller Information (Visual Basic)
+# <a name="caller-information-visual-basic"></a>Arayan bilgileri (Visual Basic)
 Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. Kaynak kodunun dosya yolunu, kaynak kodundaki satır numarasını ve arayanın üye adını alabilirsiniz. Bu bilgiler, tanılama araçlarının izlenmesine, oluşturulmasına ve bu araçlarda hata ayıklanmasına yardımcı olur.  
   
- Bu bilgileri elde etmek için her biri varsayılan değere sahip isteğe bağlı parametrelere uygulanan öznitelikler kullanabilirsiniz. The following table lists the Caller Info attributes that are defined in the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace:  
+ Bu bilgileri elde etmek için her biri varsayılan değere sahip isteğe bağlı parametrelere uygulanan öznitelikler kullanabilirsiniz. Aşağıdaki tabloda <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanında tanımlanan çağıran bilgi öznitelikleri listelenmektedir:  
   
-|Öznitelik|Açıklama|Tür|  
+|Öznitelik|Açıklama|Type|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Kaynak dosyasının arayanı içeren tam yolu. Bu, derleme zamanındaki dosya yoludur.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Yöntemin çağrıldığı kaynak dosyadaki satır numarası.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Arayanın yöntemi veya özellik adı. See [Member Names](#MEMBERNAMES) later in this topic.|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Arayanın yöntemi veya özellik adı. Bu konunun devamındaki [üye adları](#MEMBERNAMES) bölümüne bakın.|`String`|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, Arayanın Bilgisi özniteliklerinin nasıl kullanılacağı gösterilmiştir. On each call to the `TraceMessage` method, the caller information is substituted as arguments to the optional parameters.  
+ Aşağıdaki örnekte, Arayanın Bilgisi özniteliklerinin nasıl kullanılacağı gösterilmiştir. `TraceMessage` yöntemine yapılan her çağrıda, çağıran bilgileri isteğe bağlı parametrelere bağımsız değişkenler olarak değiştirilir.  
   
 ```vb  
 Private Sub DoProcessing()  
@@ -51,18 +51,18 @@ End Sub
   
  Arayan Bilgisi öznitelikleri, bir parametreyi isteğe bağlı hale getirmez. Bunun yerine, bağımsız değişken atlandığında geçirilen varsayılan değeri etkilerler.  
   
- Arayan Bilgisi değerleri, derleme zamanında Ara Dile (IL) değişmez değerler olarak verilir. Unlike the results of the <xref:System.Exception.StackTrace%2A> property for exceptions, the results aren't affected by obfuscation.  
+ Arayan Bilgisi değerleri, derleme zamanında Ara Dile (IL) değişmez değerler olarak verilir. Özel durumlar için <xref:System.Exception.StackTrace%2A> özelliğinin sonuçlarının aksine, sonuçlar gizleme tarafından etkilenmez.  
   
  Arayan bilgisini denetlemek veya gizlemek için isteğe bağlı bağımsız değişkenleri açıkça sağlayabilirsiniz.  
   
-### <a name="MEMBERNAMES"></a> Member Names  
- You can use the `CallerMemberName` attribute to avoid specifying the member name as a `String` argument to the called method. By using this technique, you avoid the problem that **Rename Refactoring** doesn't change the `String` values. Bu, özellikle aşağıdaki görevler için yararlı olur:  
+### <a name="MEMBERNAMES"></a>Üye adları  
+ Üyenin adını çağrılan metoda bir `String` bağımsız değişkeni olarak belirtmekten kaçınmak için `CallerMemberName` özniteliğini kullanabilirsiniz. Bu tekniği kullanarak, **yeniden düzenlemeyi yeniden adlandırma** sorununun `String` değerleri değiştirmediğini önleyin. Bu, özellikle aşağıdaki görevler için yararlı olur:  
   
 - İzleme ve tanılama yordamlarını kullanma.  
   
-- Implementing the <xref:System.ComponentModel.INotifyPropertyChanged> interface when binding data. Bu arabirim, bir nesnenin özelliğinin bağlama denetimine özelliğin değiştirildiğini bildirmesini ve böylece denetimin güncelleştirilmiş bilgileri görüntüleyebilmesini sağlar. Without the `CallerMemberName` attribute, you must specify the property name as a literal.  
+- Verileri bağlarken <xref:System.ComponentModel.INotifyPropertyChanged> arabirimini uygulama. Bu arabirim, bir nesnenin özelliğinin bağlama denetimine özelliğin değiştirildiğini bildirmesini ve böylece denetimin güncelleştirilmiş bilgileri görüntüleyebilmesini sağlar. `CallerMemberName` özniteliği olmadan, özellik adını bir sabit değer olarak belirtmeniz gerekir.  
   
- The following chart shows the member names that are returned when you use the `CallerMemberName` attribute.  
+ Aşağıdaki grafikte `CallerMemberName` özniteliğini kullandığınızda döndürülen üye adları gösterilmektedir.  
   
 |Çağrının oluştuğu yer|Üye adı sonucu|  
 |-------------------------|------------------------|  
@@ -76,7 +76,7 @@ End Sub
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Attributes (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
-- [Common Attributes (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
+- [Öznitelikler (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
+- [Ortak öznitelikler (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
 - [İsteğe Bağlı Parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [Programming Concepts (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+- [Programlama kavramları (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)

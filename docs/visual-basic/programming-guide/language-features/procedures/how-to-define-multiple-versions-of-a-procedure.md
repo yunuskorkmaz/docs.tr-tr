@@ -16,31 +16,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350481"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Nasıl yapılır: Bir Yordamın Birden Fazla Sürümünü Tanımlama (Visual Basic)
-You can define a procedure in multiple versions by *overloading* it, using the same name but a different parameter list for each version. The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name.  
+Aynı adı ancak her sürüm için farklı bir parametre listesini kullanarak, onu *aşırı* yükleyerek birden çok sürümde bir yordam tanımlayabilirsiniz. Aşırı yükleme amacı, bir yordamın adına göre ayrım yapmadan daha yakından ilgili birkaç sürümünü tanımlamaktır.  
   
- For more information, see [Procedure Overloading](./procedure-overloading.md).  
+ Daha fazla bilgi için bkz. [yordam aşırı yüklemesi](./procedure-overloading.md).  
   
-### <a name="to-define-multiple-versions-of-a-procedure"></a>To define multiple versions of a procedure  
+### <a name="to-define-multiple-versions-of-a-procedure"></a>Bir yordamın birden fazla sürümünü tanımlamak için  
   
-1. Write a `Sub` or `Function` declaration statement for each version of the procedure you want to define. Use the same procedure name in every declaration.  
+1. Tanımlamak istediğiniz yordamın her sürümü için bir `Sub` veya `Function` bildirim bildirimi yazın. Her bildirimde aynı yordam adını kullanın.  
   
-2. Precede the `Sub` or `Function` keyword in each declaration with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword. You can optionally omit `Overloads` in the declarations, but if you include it in any of the declarations, you must include it in every declaration.  
+2. Her bildirimdeki `Sub` veya `Function` anahtar sözcüğünün önüne [aşırı yüklemeler](../../../../visual-basic/language-reference/modifiers/overloads.md) anahtar sözcüğünü ekleyin. İsteğe bağlı olarak bildirimlerinizde `Overloads` atlayabilirsiniz, ancak bu bildirimi herhangi bir bildirime eklerseniz, her bildirime dahil etmeniz gerekir.  
   
-3. Following each declaration statement, write procedure code to handle the specific case where the calling code supplies arguments matching that version's parameter list. You do not have to test for which parameters the calling code has supplied. Visual Basic passes control to the matching version of your procedure.  
+3. Her bildirim ifadesinin ardından, çağıran kodun bu sürümün parametre listesiyle eşleşen bağımsız değişkenler sağladığı belirli bir durumu işlemek için yordam kodu yazın. Çağıran kodun sağladığı parametreleri test etmek zorunda değilsiniz. Visual Basic, denetimi prosedürünün eşleşen sürümüne geçirir.  
   
-4. Terminate each version of the procedure with the `End Sub` or `End Function` statement as appropriate.  
+4. Yordamın her sürümünü, `End Sub` veya `End Function` ifadesiyle uygun şekilde sonlandırın.  
   
 ## <a name="example"></a>Örnek  
- The following example defines a `Sub` procedure to post a transaction against a customer's balance. It uses the `Overloads` keyword to define two versions of the procedure, one that accepts the customer by name and the other by account number.  
+ Aşağıdaki örnek, bir müşterinin bakiyesine karşı bir işlem göndermek için bir `Sub` yordamı tanımlar. Yordamın, müşteriyi adı ve diğer hesap numarasına göre kabul eden iki sürümü tanımlamak için `Overloads` anahtar sözcüğünü kullanır.  
   
  [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
- The calling code can obtain the customer identification as either a `String` or an `Integer`, and then use the same calling statement in either case.  
+ Çağıran kod, müşteri kimliğini bir `String` veya `Integer`olarak edinebilir ve sonra aynı çağırma ifadesini her iki durumda da kullanabilir.  
   
- For information on how to call these versions of the `post` procedure, see [How to: Call an Overloaded Procedure](./how-to-call-an-overloaded-procedure.md).  
+ `post` yordamının bu sürümlerini çağırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: çağrı aşırı yüklenmiş bir yordam](./how-to-call-an-overloaded-procedure.md).  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Make sure each of your overloaded versions has the same procedure name but a different parameter list.  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Aşırı yüklenmiş sürümlerden her birinin aynı yordam adına, ancak farklı bir parametre listesine sahip olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

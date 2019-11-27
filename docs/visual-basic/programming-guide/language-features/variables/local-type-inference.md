@@ -21,59 +21,59 @@ ms.locfileid: "74351843"
 ---
 # <a name="local-type-inference-visual-basic"></a>Yerel Türü Arabirimi (Visual Basic Başvurusu)
 
-The Visual Basic compiler uses *type inference* to determine the data types of local variables declared without an `As` clause. The compiler infers the type of the variable from the type of the initialization expression. This enables you to declare variables without explicitly stating a type, as shown in the following example. As a result of the declarations, both `num1` and `num2` are strongly typed as integers.
+Visual Basic derleyici, bir `As` yan tümcesi olmadan bildirildiği yerel değişkenlerin veri türlerini belirlemekte *tür çıkarımı* kullanır. Derleyici, değişkenin türünü başlatma ifadesinin türünden algılar. Bu, aşağıdaki örnekte gösterildiği gibi, bir türü açıkça belirtmeden değişkenleri bildirmenize olanak sağlar. Bildirimlerin bir sonucu olarak, hem `num1` hem de `num2` tam olarak tamsayılar olarak türdedir.
 
 [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]
 
 > [!NOTE]
-> If you do not want `num2` in the previous example to be typed as an `Integer`, you can specify another type by using a declaration like `Dim num3 As Object = 3` or `Dim num4 As Double = 3`.
+> Önceki örnekte `num2` `Integer`olarak yazılmaları istemiyorsanız, `Dim num3 As Object = 3` veya `Dim num4 As Double = 3`gibi bir bildirim kullanarak başka bir tür belirtebilirsiniz.
 
 > [!NOTE]
-> Type inference can be used only for non-static local variables; it cannot be used to determine the type of class fields, properties, or functions.
+> Tür çıkarımı, yalnızca statik olmayan yerel değişkenler için kullanılabilir; sınıf alanları, özellikler veya işlevlerin türünü belirleyebilmek için kullanılamaz.
 
-Local type inference applies at procedure level. It cannot be used to declare variables at module level (within a class, structure, module, or interface but not within a procedure or block). If `num2` in the previous example were a field of a class instead of a local variable in a procedure, the declaration would cause an error with `Option Strict` on, and would classify `num2` as an `Object` with `Option Strict` off. Similarly, local type inference does not apply to procedure level variables declared as `Static`.
+Yerel tür çıkarımı yordam düzeyinde geçerlidir. Modül düzeyinde (bir sınıf, yapı, modül veya arabirim içinde değil, yordam veya blok içinde değil) değişkenleri bildirmek için kullanılamaz. Önceki örnekteki `num2`, bir yordamda yerel bir değişken yerine bir sınıfın alanı olsaydı, bildirim, üzerinde `Option Strict` bir hataya neden olur ve `Option Strict` kapalı bir `Object` olarak `num2` sınıflandırır. Benzer şekilde, yerel tür çıkarımı `Static`olarak belirtilen yordam düzeyi değişkenlerine uygulanmaz.
 
-## <a name="type-inference-vs-late-binding"></a>Type Inference vs. Late Binding
+## <a name="type-inference-vs-late-binding"></a>Tür çıkarımı ile geç bağlama
 
-Code that uses type inference resembles code that relies on late binding. However, type inference strongly types the variable instead of leaving it as `Object`. The compiler uses a variable's initializer to determine the variable's type at compile time to produce early-bound code. In the previous example, `num2`, like `num1`, is typed as an `Integer`.
+Tür çıkarımı kullanan kod, geç bağlamaya dayanan koda benzer. Ancak, tür çıkarımı türü `Object`olarak bırakmak yerine değişkeni kesin olarak türler. Derleyici, değişkenin türünü, erken bağlantılı kod oluşturmak için derleme zamanında değişkenin türünü tespit etmek için bir değişkenin başlatıcısı kullanır. Önceki örnekte, `num1`gibi `num2`, `Integer`olarak yazılır.
 
-The behavior of early-bound variables differs from that of late-bound variables, for which the type is known only at run time. Knowing the type early enables the compiler to identify problems before execution, allocate memory precisely, and perform other optimizations. Early binding also enables the Visual Basic integrated development environment (IDE) to provide IntelliSense Help about the members of an object. Early binding is also preferred for performance. This is because all data stored in a late-bound variable must be wrapped as type `Object`, and accessing members of the type at run time makes the program slower.
+Erken bağlanan değişkenlerin davranışı, türü yalnızca çalışma zamanında bilinen, geç bağlanan değişkenlerden farklıdır. Türün erken olması, derleyicinin yürütmeden önce sorunları belirlemesini, belleği tam olarak ayırmasını ve diğer iyileştirmeleri gerçekleştirmesini sağlar. Erken bağlama Ayrıca, Visual Basic tümleşik geliştirme ortamının (IDE) bir nesnenin üyeleri hakkında IntelliSense yardımı sağlamasına olanak sağlar. Erken bağlama de performans için tercih edilir. Bunun nedeni, bir geç bağlantılı değişkende depolanan tüm verilerin `Object`tür olarak sarmalanması ve çalışma zamanında türün üyelerine erişilmesi, programın daha yavaş olmasını sağlar.
 
 ## <a name="examples"></a>Örnekler
 
-Type inference occurs when a local variable is declared without an `As` clause and initialized. The compiler uses the type of the assigned initial value as the type of the variable. For example, each of the following lines of code declares a variable of type `String`.
+Yerel bir değişken bir `As` yan tümcesi olmadan bildirildiğinde ve başlatıldıktan sonra tür çıkarımı oluşur. Derleyici, değişkenin türü olarak atanan ilk değerin türünü kullanır. Örneğin, aşağıdaki kod satırlarının her biri `String`türünde bir değişken bildirir.
 
 [!code-vb[VbVbalrTypeInference#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#2)]
 
-The following code demonstrates two equivalent ways to create an array of integers.
+Aşağıdaki kod, tamsayılar dizisi oluşturmanın iki denk yolunu gösterir.
 
 [!code-vb[VbVbalrTypeInference#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#3)]
 
-It is convenient to use type inference to determine the type of a loop control variable. In the following code, the compiler infers that `number` is an `Integer` because `someNumbers2` from the previous example is an array of integers.
+Döngü denetim değişkeninin türünü belirleyebilmek için tür çıkarımı kullanmak uygun değildir. Aşağıdaki kodda, önceki örnekteki `someNumbers2` bir tamsayılar dizisi olduğundan derleyici `number` `Integer`.
 
 [!code-vb[VbVbalrTypeInference#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#4)]
 
-Local type inference can be used in `Using` statements to establish the type of the resource name, as the following example demonstrates.
+Yerel tür çıkarımı, aşağıdaki örnekte gösterildiği gibi, kaynak adının türünü oluşturmak için `Using` ifadelerde kullanılabilir.
 
 [!code-vb[VbVbalrTypeInference#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#7)]
 
-The type of a variable can also be inferred from the return values of functions, as the following example demonstrates. Both `pList1` and `pList2` are arrays of processes because `Process.GetProcesses` returns an array of processes.
+Aşağıdaki örnekte gösterildiği gibi, bir değişkenin türü, işlevlerin dönüş değerlerinden de çıkarsanamıyor. `pList1` ve `pList2`, `Process.GetProcesses` bir işlem dizisi döndürdüğünden işlem dizilerdir.
 
 [!code-vb[VbVbalrTypeInference#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#5)]
 
-## <a name="option-infer"></a>Option Infer
+## <a name="option-infer"></a>Seçenek çıkarımı
 
-`Option Infer` enables you specify whether local type inference is allowed in a particular file. To enable or to block the option, type one of the following statements at the start of the file.
+`Option Infer`, yerel tür çıkarımını belirli bir dosyada izin verilip verilmeyeceğini belirtmenizi belirler. Seçeneği etkinleştirmek veya engellemek için, dosyanın başlangıcında aşağıdaki deyimlerden birini yazın.
 
 `Option Infer On`
 
 `Option Infer Off`
 
-If you do not specify a value for `Option Infer` in your code, the compiler default is `Option Infer On`.
+Kodunuzda `Option Infer` için bir değer belirtmezseniz, varsayılan derleyici `Option Infer On`.
 
-If the value set for `Option Infer` in a file conflicts with the value set in the IDE or on the command line, the value in the file has precedence.
+Bir dosyadaki `Option Infer` için ayarlanan değer IDE 'de veya komut satırında ayarlanan değer ile çakışıyorsa, dosyadaki değerin önceliği vardır.
 
-For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
+Daha fazla bilgi için bkz. [Option Infer deyimleri](../../../../visual-basic/language-reference/statements/option-infer-statement.md) ve [derleme sayfası, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -83,4 +83,4 @@ For more information, see [Option Infer Statement](../../../../visual-basic/lang
 - [For...Next Deyimi](../../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [Option Infer Deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
 - [-optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)
-- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

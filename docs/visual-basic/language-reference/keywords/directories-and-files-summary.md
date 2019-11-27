@@ -14,24 +14,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349830"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>Dizinler ve Dosyalar Özeti (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaca ve kullanıma göre düzenlenir.  
   
- Using the `My` feature gives you greater productivity and performance in file I/O operations than using these members. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+ `My` özelliğinin kullanılması, bu üyelerin kullanılmasıyla dosya g/ç işlemlerinde daha fazla üretkenlik ve performans sağlar. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
-|**Action**|**Language element**|  
+|**Ön**|**Language öğesi**|  
 |----------------|--------------------------|  
-|Change a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
-|Change the drive.|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
-|Copy a file.|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
-|Make a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.MkDir%2A>|  
-|Remove a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.RmDir%2A>|  
-|Rename a file, directory, or folder.|<xref:Microsoft.VisualBasic.FileSystem.Rename%2A>|  
-|Return the current path.|<xref:Microsoft.VisualBasic.FileSystem.CurDir%2A>|  
-|Return a file's date/time stamp.|<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>|  
-|Return file, directory, or label attributes.|<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>|  
-|Return a file's length.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
-|Return a file's name or volume label.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
-|Set attribute information for a file.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
+|Bir dizini veya klasörü değiştirin.|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
+|Sürücüyü değiştirin.|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
+|Bir dosyayı kopyalayın.|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
+|Bir dizin veya klasör oluşturun.|<xref:Microsoft.VisualBasic.FileSystem.MkDir%2A>|  
+|Bir dizini veya klasörü kaldırın.|<xref:Microsoft.VisualBasic.FileSystem.RmDir%2A>|  
+|Bir dosya, dizin veya klasörü yeniden adlandırın.|<xref:Microsoft.VisualBasic.FileSystem.Rename%2A>|  
+|Geçerli yolu döndürün.|<xref:Microsoft.VisualBasic.FileSystem.CurDir%2A>|  
+|Bir dosyanın tarih/saat damgasını döndürün.|<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>|  
+|Dosya, dizin veya etiket özniteliklerini döndürün.|<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>|  
+|Bir dosyanın uzunluğunu döndürür.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
+|Bir dosyanın adını veya birim etiketini döndürür.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
+|Bir dosya için öznitelik bilgilerini ayarlayın.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

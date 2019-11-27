@@ -15,12 +15,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331845"
 ---
 # <a name="on-visual-basic"></a>Açık (Visual Basic)
-Introduces a response to a run-time error or turns a compiler option on.  
+Bir çalışma zamanı hatasına yanıt tanıtır veya üzerindeki bir derleyici seçeneğini açar.  
   
- In queries, identifies keys for the collections being joined.  
+ Sorgular ' da, katılmakta olan koleksiyonlara ait anahtarları tanımlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `On` keyword is used in these contexts:  
+ `On` anahtar sözcüğü şu bağlamlarda kullanılır:  
   
  [Group Join Yan Tümcesi](../../visual-basic/language-reference/queries/group-join-clause.md)  
   

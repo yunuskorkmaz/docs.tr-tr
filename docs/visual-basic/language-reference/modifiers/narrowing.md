@@ -18,16 +18,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351470"
 ---
 # <a name="narrowing-visual-basic"></a>Daraltma (Visual Basic)
-Indicates that a conversion operator (`CType`) converts a class or structure to a type that might not be able to hold some of the possible values of the original class or structure.  
+Bir dönüştürme işlecinin (`CType`) bir sınıfı ya da yapıyı özgün sınıf veya yapının olası bazı değerlerini tutabilecek bir türe dönüştürdüğü anlamına gelir.  
   
-## <a name="converting-with-the-narrowing-keyword"></a>Converting with the Narrowing Keyword  
- The conversion procedure must specify `Public Shared` in addition to `Narrowing`.  
+## <a name="converting-with-the-narrowing-keyword"></a>Daraltma anahtar sözcüğüyle dönüştürme  
+ Dönüştürme yordamının `Narrowing`ek olarak `Public Shared` belirtmesi gerekir.  
   
- Narrowing conversions do not always succeed at run time, and can fail or incur data loss. Examples are `Long` to `Integer`, `String` to `Date`, and a base type to a derived type. This last conversion is narrowing because the base type might not contain all the members of the derived type and thus is not an instance of the derived type.  
+ Daraltma dönüştürmeleri her zaman çalışma zamanında başarılı olmaz ve veri kaybına neden olabilir. Örnekler, türetilmiş bir türe `Integer`, `Date``String` ve temel bir tür `Long`. Temel tür türetilmiş türün tüm üyelerini içermediğinden ve bu nedenle türetilmiş türün bir örneği olmadığından, bu son dönüştürme daraltma yapılır.  
   
- If `Option Strict` is `On`, the consuming code must use `CType` for all narrowing conversions.  
+ `Option Strict` `On`, tüketen kodun tüm daraltma dönüştürmeleri için `CType` kullanması gerekir.  
   
- The `Narrowing` keyword can be used in this context:  
+ `Narrowing` anahtar sözcüğü bu bağlamda kullanılabilir:  
   
  [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
   

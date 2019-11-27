@@ -13,19 +13,19 @@ ms.locfileid: "74348117"
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a>Bilgisayar Hakkında Bilgi Alma (Visual Basic)
 
-The `My.Computer.Info` object provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.
+`My.Computer.Info` nesnesi, bilgisayarın belleği, yüklü derlemeler, ad ve işletim sistemi hakkında bilgi almak için özellikler sağlar.
 
 ## <a name="remarks"></a>Açıklamalar
 
-This table lists tasks commonly accomplished through the `My.Computer.Info` object and points to topics demonstrating how to perform each.
+Bu tablo, `My.Computer.Info` nesnesi aracılığıyla sık gerçekleştirilen görevleri listeler ve her birinin nasıl yapılacağını gösteren konulara işaret eder.
 
 |Bitiş|Bkz.|
 |---|---|
-|Determine how much virtual address space is available for the computer on which the application is installed|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|
-|Determine the platform type of the computer on which the application is running|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|
-|Determine the operating system of the computer on which the application is running|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName%2A>|
-|Determine what service packs have been installed on the computer on which the application is running|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|
-|Determine the installed `UICulture` on the computer on which the application is running.|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|
+|Uygulamanın yüklendiği bilgisayar için ne kadar kullanılabilir sanal adres alanı olduğunu belirleme|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|
+|Uygulamanın çalıştığı bilgisayarın Platform türünü belirleme|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|
+|Uygulamanın çalıştığı bilgisayarın işletim sistemini belirleme|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName%2A>|
+|Uygulamanın üzerinde çalıştığı bilgisayarda hangi hizmet paketlerinin yüklü olduğunu belirleme|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|
+|Uygulamanın üzerinde çalıştığı bilgisayarda yüklü `UICulture` belirlenir.|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

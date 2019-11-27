@@ -9,96 +9,96 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331734"
 ---
-# <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML Security (Visual Basic)
-This topic describes security issues associated with LINQ to XML. In addition, it provides some guidance for mitigating security exposure.  
+# <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML güvenliği (Visual Basic)
+Bu konuda LINQ to XML ilişkili güvenlik sorunları açıklanmaktadır. Ayrıca, güvenlik açısından etkilenme riskini azaltmak için bazı kılavuzluk sağlar.  
   
-## <a name="linq-to-xml-security-overview"></a>LINQ to XML Security Overview  
- LINQ to XML is designed more for programming convenience than for server-side applications with stringent security requirements. Most XML scenarios consist of processing trusted XML documents, rather than processing untrusted XML documents that are uploaded to a server. LINQ to XML is optimized for these scenarios.  
+## <a name="linq-to-xml-security-overview"></a>LINQ to XML güvenliğe genel bakış  
+ LINQ to XML, katı güvenlik gereksinimlerine sahip sunucu tarafı uygulamalardan daha fazla programlama kolaylığı için tasarlanmıştır. Çoğu XML senaryosu, bir sunucuya yüklenen güvenilmeyen XML belgelerini işlemek yerine, güvenilen XML belgelerinin işlenmesini içerir. LINQ to XML, bu senaryolar için iyileştirilmiştir.  
   
- If you must process untrusted data from unknown sources, Microsoft recommends that you use an instance of the <xref:System.Xml.XmlReader> class that has been configured to filter out known XML denial of service (DoS) attacks.  
+ Bilinmeyen kaynaklardan güvenilmeyen verileri işleyebilmeniz gerekiyorsa, Microsoft, bilinen XML hizmet reddi (DoS) saldırılarını filtrelemek için yapılandırılmış <xref:System.Xml.XmlReader> sınıfının bir örneğini kullanmanızı önerir.  
   
- If you have configured an <xref:System.Xml.XmlReader> to mitigate denial of service attacks, you can use that reader to populate a LINQ to XML tree and still benefit from the programmer productivity enhancements of LINQ to XML. Many mitigation techniques involve creating readers that are configured to mitigate the security issue, and then instantiating an XML tree through the configured reader.  
+ Hizmet reddi saldırılarını azaltmak için bir <xref:System.Xml.XmlReader> yapılandırdıysanız, bu okuyucuyu kullanarak bir LINQ to XML ağacını doldurabilir ve LINQ to XML programcı üretkenlik geliştirmelerinden faydalanabilirsiniz. Birçok azaltma tekniği, güvenlik sorununu hafifletmek üzere yapılandırılmış okuyucular oluşturmayı ve sonra yapılandırılmış okuyucu aracılığıyla bir XML ağacını örneklamayı içerir.  
   
- XML is intrinsically vulnerable to denial of service attacks because documents are unbounded in size, depth, element name size, and more. Regardless of the component that you use to process XML, you should always be prepared to recycle the application domain if it uses excessive resources.  
+ Belgeler boyut, derinlik, öğe adı boyutu ve daha fazlası için sınırsız olduğundan, XML, hizmet reddi saldırılarına karşı doğası gereği açıktır. XML işlemek için kullandığınız bileşenden bağımsız olarak, aşırı kaynak kullanıyorsa uygulama etki alanını geri dönüştürmeye her zaman hazırlıklı olmalısınız.  
   
-## <a name="mitigation-of-xml-xsd-xpath-and-xslt-attacks"></a>Mitigation of XML, XSD, XPath, and XSLT Attacks  
- LINQ to XML is built upon <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter>. LINQ to XML supports XSD and XPath through extension methods in the <xref:System.Xml.Schema?displayProperty=nameWithType> and <xref:System.Xml.XPath?displayProperty=nameWithType> namespaces. Using the <xref:System.Xml.XmlReader>, <xref:System.Xml.XPath.XPathNavigator>, and <xref:System.Xml.XmlWriter> classes in conjunction with LINQ to XML, you can invoke XSLT to transform XML trees.  
+## <a name="mitigation-of-xml-xsd-xpath-and-xslt-attacks"></a>XML, XSD, XPath ve XSLT saldırıları üzerinde risk azaltma  
+ LINQ to XML, <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter>oluşturulur. LINQ to XML, <xref:System.Xml.Schema?displayProperty=nameWithType> ve <xref:System.Xml.XPath?displayProperty=nameWithType> ad alanlarında uzantı yöntemleri aracılığıyla XSD ve XPath 'i destekler. LINQ to XML ile birlikte <xref:System.Xml.XmlReader>, <xref:System.Xml.XPath.XPathNavigator>ve <xref:System.Xml.XmlWriter> sınıfları kullanarak XML ağaçlarını dönüştürmek için XSLT 'yi çağırabilirsiniz.  
   
- If you are operating in a less secure environment, there are a number of security issues that are associated with XML and the use of the classes in <xref:System.Xml?displayProperty=nameWithType>, <xref:System.Xml.Schema?displayProperty=nameWithType>, <xref:System.Xml.XPath?displayProperty=nameWithType>, and <xref:System.Xml.Xsl?displayProperty=nameWithType>. These issues include, but are not limited to, the following:  
+ Daha az güvenli bir ortamda çalışıyorsanız, XML ile ilişkili çeşitli güvenlik sorunları ve <xref:System.Xml?displayProperty=nameWithType>, <xref:System.Xml.Schema?displayProperty=nameWithType>, <xref:System.Xml.XPath?displayProperty=nameWithType>ve <xref:System.Xml.Xsl?displayProperty=nameWithType>sınıfların kullanımı vardır. Bu sorunlar şunları içerir, ancak bunlarla sınırlı değildir:  
   
-- XSD, XPath, and XSLT are string-based languages in which you can specify operations that consume a lot of time or memory. It is the responsibility of application programmers who take XSD, XPath, or XSLT strings from untrusted sources to validate that the strings are not malicious, or to monitor and mitigate the possibility that evaluating these strings will lead to excessive system resource consumption.  
+- XSD, XPath ve XSLT, çok fazla zamanı veya belleği kullanan işlemleri belirtebileceğiniz dize tabanlı dillerdir. Dizelerin kötü amaçlı olmayan kaynaklardan XSD, XPath veya XSLT dizeleri alan ve bu dizeleri değerlendirme olasılığını izlemek ve azaltmak için, aşırı sisteme yol açacağından kaynak tüketimi.  
   
-- XSD schemas (including inline schemas) are inherently vulnerable to denial of service attacks; you should not accept schemas from untrusted sources.  
+- XSD şemaları (satır içi şemalar dahil), doğal olarak hizmet reddi saldırılarına karşı savunmasız kalır; Güvenilmeyen kaynaklardan şemaları kabul etmemelisiniz.  
   
-- XSD and XSLT can include references to other files, and such references can result in cross-zone and cross-domain attacks.  
+- XSD ve XSLT diğer dosyalara başvurular içerebilir ve bu tür başvurular, bölgeler arası ve etki alanları arası saldırılara yol açabilir.  
   
-- External entities in DTDs can result in cross-zone and cross-domain attacks.  
+- DTD 'lerde dış varlıklar, bölgeler arası ve etki alanları arası saldırılara yol açabilir.  
   
-- DTDs are vulnerable to denial of service attacks.  
+- DTD 'Ler hizmet reddi saldırılarına karşı savunmasızdır.  
   
-- Exceptionally deep XML documents can pose denial of service issues; you might want to limit the depth of XML documents.  
+- Daha fazla derin XML belgesi, hizmet reddi sorunları oluşturabilir; XML belgelerinin derinliğini kısıtlamak isteyebilirsiniz.  
   
-- Do not accept supporting components, such as <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager>, and <xref:System.Xml.XmlResolver> objects, from untrusted assemblies.  
+- Güvenilmeyen derlemelerden <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager>ve <xref:System.Xml.XmlResolver> nesneleri gibi destekleyici bileşenleri kabul etmez.  
   
-- Read data in chunks to mitigate large document attacks.  
+- Büyük belge saldırılarını azaltmak için öbeklerdeki verileri okuyun.  
   
-- Script blocks in XSLT style sheets can expose a number of attacks.  
+- XSLT stil sayfalarındaki betik blokları çok sayıda saldırı sunabilir.  
   
-- Validate carefully before constructing dynamic XPath expressions.  
+- Dinamik XPath ifadelerini oluşturmadan önce dikkatle doğrulayın.  
   
-## <a name="linq-to-xml-security-issues"></a>LINQ to XML Security Issues  
- The security issues in this topic are not presented in any particular order. All issues are important and should be addressed as appropriate.  
+## <a name="linq-to-xml-security-issues"></a>LINQ to XML güvenlik sorunları  
+ Bu konudaki güvenlik sorunları belirli bir sırada sunulmaz. Tüm sorunlar önemlidir ve uygun şekilde ele alınmalıdır.  
   
- A successful elevation of privilege attack gives a malicious assembly more control over its environment. A successful elevation of privilege attack can result in disclosure of data, denial of service, and more.  
+ Başarılı bir ayrıcalık yükselmesi saldırısı, kendi ortamı üzerinde kötü amaçlı bir derlemeye daha fazla denetim sağlar. Başarılı bir ayrıcalık yükseltme saldırısı, verilerin açığa çıkmasına, hizmet reddine ve daha fazlasına neden olabilir.  
   
- Applications should not disclose data to users who are not authorized to see that data.  
+ Uygulamalar, verileri görme yetkisine sahip olmayan kullanıcılara verileri açıklamamalıdır.  
   
- Denial of service attacks cause the XML parser or LINQ to XML to consume excessive amounts of memory or CPU time. Denial of service attacks are considered to be less severe than elevation of privilege attacks or disclosure of data attacks. However, they are important in a scenario where a server needs to process XML documents from untrusted sources.  
+ Hizmet reddi saldırıları, XML ayrıştırıcısının veya LINQ to XML aşırı miktarda belleği veya CPU süresini kullanmasına neden olur. Hizmet reddi saldırıları, ayrıcalık saldırılarının yükseltilmesinin veya veri saldırılarının açıklanmasının daha az önemli olduğu kabul edilir. Ancak, bir sunucunun güvenilmeyen kaynaklardan XML belgelerini işlemesi gereken bir senaryoda bu durumlar önemlidir.  
   
-### <a name="exceptions-and-error-messages-might-reveal-data"></a>Exceptions and Error Messages Might Reveal Data  
- The description of an error might reveal data, such as the data being transformed, file names, or implementation details. Error messages should not be exposed to callers that are not trusted. You should catch all errors and report errors with your own custom error messages.  
+### <a name="exceptions-and-error-messages-might-reveal-data"></a>Özel durumlar ve hata Iletileri verileri açığa çıkarmayabilir  
+ Bir hatanın açıklaması, dönüştürülen veriler, dosya adları veya uygulama ayrıntıları gibi verileri açığa çıkarmayabilir. Hata iletileri güvenilmeyen çağıranlara gösterilmemelidir. Kendi özel hata mesajlarınız ile tüm hataları ve rapor hatalarını yakalamalı.  
   
-### <a name="do-not-call-codeaccesspermissionsassert-in-an-event-handler"></a>Do Not Call CodeAccessPermissions.Assert in an Event Handler  
- An assembly can have lesser or greater permissions. An assembly that has greater permissions has greater control over the computer and its environments.  
+### <a name="do-not-call-codeaccesspermissionsassert-in-an-event-handler"></a>CodeAccessPermissions. bir olay Işleyicisinde onay çağrısı yapın  
+ Bir derlemenin daha az veya daha fazla izni olabilir. Daha fazla izne sahip bir derleme, bilgisayar ve ortamları üzerinde daha fazla denetime sahiptir.  
   
- If code in an assembly with greater permissions calls <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=nameWithType> in an event handler, and then the XML tree is passed to a malicious assembly that has restricted permissions, the malicious assembly can cause an event to be raised. Because the event runs code that is in the assembly with greater permissions, the malicious assembly would then be operating with elevated privileges.  
+ Daha büyük izinlere sahip bir derlemede bulunan kod bir olay işleyicisinde <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=nameWithType> çağırır ve sonra XML ağacı sınırlı izinlere sahip kötü amaçlı bir derlemeye geçirilirse, kötü amaçlı derleme bir olayın oluşturulmasına neden olabilir. Olay derlemede daha fazla izinle kod çalıştırdığı için kötü amaçlı derleme yükseltilmiş ayrıcalıklarla çalışır.  
   
- Microsoft recommends that you never call <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=nameWithType> in an event handler.  
+ Microsoft, bir olay işleyicisinde <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=nameWithType> hiçbir şekilde çağırmanızı önerir.  
   
-### <a name="dtds-are-not-secure"></a>DTDs are Not Secure  
- Entities in DTDs are inherently not secure. It is possible for a malicious XML document that contains a DTD to cause the parser to use all memory and CPU time, causing a denial of service attack. Therefore, in LINQ to XML, DTD processing is turned off by default. You should not accept DTDs from untrusted sources.  
+### <a name="dtds-are-not-secure"></a>DTD 'Ler güvenli değil  
+ DTD 'lerde varlıklar, doğal olarak güvenli değildir. Bir DTD içeren kötü amaçlı bir XML belgesi, ayrıştırıcısının tüm belleği ve CPU süresini kullanmasına neden olur ve bu da hizmet reddi saldırısına neden olur. Bu nedenle, LINQ to XML öğesinde DTD işleme varsayılan olarak kapalıdır. Güvenilmeyen kaynaklardan DTD 'Leri kabul etmemelisiniz.  
   
- One example of accepting DTDs from untrusted sources is a Web application that allows Web users to upload an XML file that references a DTD and a DTD file. Upon validation of the file, a malicious DTD could execute a denial of service attack on your server. Another example of accepting DTDs from untrusted sources is to reference a DTD on a network share that also allows anonymous FTP access.  
+ Güvenilmeyen kaynaklardan DTD 'Leri kabul etmenin bir örneği, Web kullanıcılarının bir DTD 'ye ve DTD dosyasına başvuran bir XML dosyasını karşıya yüklemesine izin veren bir Web uygulamasıdır. Dosyanın doğrulanması sırasında, kötü amaçlı bir DTD sunucunuz üzerinde bir hizmet reddi saldırısı yürütebilir. Güvenilmeyen kaynaklardan DTD 'Lerin kabul edilmesi için başka bir örnek de, anonim FTP erişimine izin veren bir ağ paylaşımındaki bir DTD 'ye başvurulmalıdır.  
   
-### <a name="avoid-excessive-buffer-allocation"></a>Avoid Excessive Buffer Allocation  
- Application developers should be aware that extremely large data sources can lead to resource exhaustion and denial of service attacks.  
+### <a name="avoid-excessive-buffer-allocation"></a>Aşırı arabellek ayırmayı önleyin  
+ Uygulama geliştiricileri, son derece büyük veri kaynaklarının kaynak tükenmesi ve hizmet reddi saldırılarına yol açabileceğini bilmelidir.  
   
- If a malicious user submits or uploads a very large XML document, it could cause LINQ to XML to consume excessive system resources. This can constitute a denial of service attack. To prevent this, you can set the <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=nameWithType> property, and create a reader that is then limited in the size of document that it can load. You then use the reader to create the XML tree.  
+ Kötü amaçlı bir Kullanıcı çok büyük bir XML belgesi gönderdiğinde veya karşıya yüklediğinde, LINQ to XML aşırı sistem kaynağı kullanmasına neden olabilir. Bu, bir hizmet reddi saldırısı oluşturabilir. Bunu engellemek için <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=nameWithType> özelliğini ayarlayabilir ve daha sonra yükleyebilen belgenin boyutuyla sınırlı bir okuyucu oluşturabilirsiniz. Ardından, XML ağacı oluşturmak için okuyucuyu kullanın.  
   
- For example, if you know that the maximum expected size of your XML documents coming from an untrusted source will be less than 50K bytes, set <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=nameWithType> to 100,000. This will not encumber your processing of XML documents, and at the same time it will mitigate denial of service threats where documents might be uploaded that would consume large amounts of memory.  
+ Örneğin, güvenilir olmayan bir kaynaktan gelen XML belgelerinin beklenen maksimum boyutunun 50 k bayttan daha az olacağını biliyorsanız, <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=nameWithType> 100.000 olarak ayarlayın. Bu, XML belgelerinin işlenmesini içermez ve aynı zamanda, belgelerin karşıya yüklenmesi, büyük miktarlarda bellek tüketebileceği hizmet reddi tehditleri ortadan kaldırılır.  
   
-### <a name="avoid-excess-entity-expansion"></a>Avoid Excess Entity Expansion  
- One of the known denial of service attacks when using a DTD is a document that causes excessive entity expansion. To prevent this, you can set the <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A?displayProperty=nameWithType> property, and create a reader that is then limited in the number of characters that result from entity expansion. You then use the reader to create the XML tree.  
+### <a name="avoid-excess-entity-expansion"></a>Aşırı varlık genişletmesinin önleyin  
+ DTD kullanırken bilinen hizmet reddi saldırılarına bir, aşırı varlık genişlemesine neden olan bir belgedir. Bunu engellemek için <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A?displayProperty=nameWithType> özelliğini ayarlayabilir ve daha sonra varlık genişletmesinden kaynaklanan karakter sayısında sınırlı bir okuyucu oluşturabilirsiniz. Ardından, XML ağacı oluşturmak için okuyucuyu kullanın.  
   
-### <a name="limit-the-depth-of-the-xml-hierarchy"></a>Limit the Depth of the XML Hierarchy  
- One possible denial of service attack is when a document is submitted that has excessive depth of hierarchy. To prevent this, you can wrap a <xref:System.Xml.XmlReader> in your own class that counts the depth of elements. If the depth exceeds a predetermined reasonable level, you can terminate the processing of the malicious document.  
+### <a name="limit-the-depth-of-the-xml-hierarchy"></a>XML hiyerarşisinin derinliğini sınırlayın  
+ Olası bir hizmet reddi saldırısı, çok sayıda hiyerarşi içeren bir belge gönderildiğinde gönderilir. Bunu engellemek için, öğelerin derinliğini sayan kendi sınıfınıza bir <xref:System.Xml.XmlReader> sardırabilirsiniz. Derinlik önceden belirlenmiş makul bir düzeyi aşarsa, kötü amaçlı belgeyi işlemeyi sonlandırabilirsiniz.  
   
-### <a name="protect-against-untrusted-xmlreader-or-xmlwriter-implementations"></a>Protect Against Untrusted XmlReader or XmlWriter Implementations  
- Administrators should verify that any externally supplied <xref:System.Xml.XmlReader> or <xref:System.Xml.XmlWriter> implementations have strong names and have been registered in the machine configuration. This prevents malicious code masquerading as a reader or writer from being loaded.  
+### <a name="protect-against-untrusted-xmlreader-or-xmlwriter-implementations"></a>Güvenilmeyen XmlReader veya XmlWriter uygulamalarına karşı koruma  
+ Yöneticiler dışarıdan sağlanan tüm <xref:System.Xml.XmlReader> veya <xref:System.Xml.XmlWriter> uygulamalarının tanımlayıcı adlara sahip olduğunu ve makine yapılandırmasında kayıtlı olduğunu doğrulamalıdır. Bu, kötü amaçlı kodun bir okuyucu veya yazıcının yüklenmesini önler.  
   
-### <a name="periodically-free-objects-that-reference-xname"></a>Periodically Free Objects that Reference XName  
- To protect against certain kinds of attacks, application programmers should free all objects that reference an <xref:System.Xml.Linq.XName> object in the application domain on a regular basis.  
+### <a name="periodically-free-objects-that-reference-xname"></a>XName 'e başvuran düzenli olarak ücretsiz nesneler  
+ Uygulama programcılarının belirli türlerde saldırılara karşı korunması için, uygulama etki alanındaki bir <xref:System.Xml.Linq.XName> nesnesine düzenli olarak başvuran tüm nesneleri boşaltmalıdır.  
   
-### <a name="protect-against-random-xml-names"></a>Protect Against Random XML Names  
- Applications that take data from untrusted sources should consider using an <xref:System.Xml.XmlReader> that is wrapped in custom code to inspect for the possibility of random XML names and namespaces. If such random XML names and namespaces are detected, the application can then terminate the processing of the malicious document.  
+### <a name="protect-against-random-xml-names"></a>Rastgele XML adlarına karşı koruma  
+ Güvenilmeyen kaynaklardan veri alan uygulamalar, rastgele XML adları ve ad alanları olasılığını denetlemek için özel kodda Sarmalanan bir <xref:System.Xml.XmlReader> kullanmayı göz önünde bulundurmalıdır. Bu tür rastgele XML adları ve ad alanları algılanırsa, uygulama kötü amaçlı belgenin işlenmesini sonlandırabilir.  
   
- You might want to limit the number of names in any given namespace (including names in no namespace) to a reasonable limit.  
+ Belirli bir ad alanındaki (ad alanı olmayan adlar dahil) ad sayısını makul bir sınıra sınırlamak isteyebilirsiniz.  
   
-### <a name="annotations-are-accessible-by-software-components-that-share-a-linq-to-xml-tree"></a>Annotations Are Accessible by Software Components that Share a LINQ to XML Tree  
- LINQ to XML could be used to build processing pipelines in which different application components load, validate, query, transform, update, and save XML data that is passed between components as XML trees. This can help optimize performance, because the overhead of loading and serializing objects to XML text is done only at the ends of the pipeline. Developers must be aware, however, that all annotations and event handlers created by one component are accessible to other components. This can create a number of vulnerabilities if the components have different levels of trust. To build secure pipelines across less trusted components, you must serialize LINQ to XML objects to XML text before passing the data to an untrusted component.  
+### <a name="annotations-are-accessible-by-software-components-that-share-a-linq-to-xml-tree"></a>Ek açıklamalar LINQ to XML ağacı paylaşan yazılım bileşenleri tarafından erişilebilir  
+ LINQ to XML, farklı uygulama bileşenlerinin XML ağaçları olarak bileşenler arasında geçirilen XML verilerini yükleme, doğrulama, sorgulama, dönüştürme, güncelleştirme ve kaydetme işlem hatlarını oluşturmak için kullanılabilir. Bu, XML metnine nesne yükleme ve serileştirilmesinin yükü yalnızca işlem hattının sonunda yapıldığından performansı iyileştirmenize yardımcı olabilir. Ancak geliştiriciler, bir bileşen tarafından oluşturulan tüm ek açıklamaların ve olay işleyicilerinin diğer bileşenler tarafından erişilebilir olduğunu bilmelidir. Bu, bileşenlerin farklı düzeylerde güven düzeyine sahip olması halinde bir dizi güvenlik açığı oluşturabilir. Daha az güvenilir bileşenlere güvenli işlem hatları oluşturmak için, verileri güvenilmeyen bir bileşene geçirmeden önce LINQ to XML nesneleri XML metnine serileştirmelidir.  
   
- Some security is provided by the common language runtime (CLR). For example, a component that does not include a private class cannot access annotations keyed by that class. However, annotations can be deleted by components that cannot read them. This could be used as a tampering attack.  
+ Bazı güvenlik, ortak dil çalışma zamanı (CLR) tarafından sağlanır. Örneğin, özel bir sınıf içermeyen bir bileşen, bu sınıf tarafından anahtarlanan ek açıklamaların erişimine erişemez. Ancak, ek açıklamalar bunları okuyadesteklemeyen bileşenler tarafından silinebilir. Bu, bir izinsiz saldırı olarak kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Programlama Kılavuzu (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

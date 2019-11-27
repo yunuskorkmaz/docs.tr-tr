@@ -36,7 +36,7 @@ ms.locfileid: "74354085"
 ---
 # <a name="declare-statement"></a>Declare Deyimi
 
-Declares a reference to a procedure implemented in an external file.
+Dış dosyada uygulanan bir yordama başvuru bildirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -54,92 +54,92 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 |Terim|Tanım|
 |---|---|
-|`attributelist`|İsteğe bağlı. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|
-|`accessmodifier`|İsteğe bağlı. Can be one of the following:<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|
-|`Shadows`|İsteğe bağlı. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|
-|`charsetmodifier`|İsteğe bağlı. Specifies character set and file search information. Can be one of the following:<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) (default)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|
-|`Sub`|Optional, but either `Sub` or `Function` must appear. Indicates that the external procedure does not return a value.|
-|`Function`|Optional, but either `Sub` or `Function` must appear. Indicates that the external procedure returns a value.|
-|`name`|Gerekli. Name of this external reference. For more information, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`Lib`|Gerekli. Introduces a `Lib` clause, which identifies the external file (DLL or code resource) that contains an external procedure.|
-|`libname`|Gerekli. Name of the file that contains the declared procedure.|
-|`Alias`|İsteğe bağlı. Indicates that the procedure being declared cannot be identified within its file by the name specified in `name`. You specify its identification in `aliasname`.|
-|`aliasname`|Required if you use the `Alias` keyword. String that identifies the procedure in one of two ways:<br /><br /> The entry point name of the procedure within its file, within quotes (`""`)<br /><br /> veya<br /><br /> A number sign (`#`) followed by an integer specifying the ordinal number of the procedure's entry point within its file|
-|`parameterlist`|Required if the procedure takes parameters. See [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|
-|`returntype`|Required if `Function` is specified and `Option Strict` is `On`. Data type of the value returned by the procedure.|
+|`attributelist`|İsteğe bağlı. Bkz. [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).|
+|`accessmodifier`|İsteğe bağlı. Aşağıdakilerden biri olabilir:<br /><br /> -   [genel](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [korumalı](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [özel](../../../visual-basic/language-reference/modifiers/private.md)<br />- [korumalı arkadaş](../../language-reference/modifiers/protected-friend.md)<br />- [özel korumalı](../../language-reference/modifiers/private-protected.md)<br /><br /> [Visual Basic erişim düzeylerine](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)bakın.|
+|`Shadows`|İsteğe bağlı. Bkz. [gölgeler](../../../visual-basic/language-reference/modifiers/shadows.md).|
+|`charsetmodifier`|İsteğe bağlı. Karakter kümesi ve dosya arama bilgilerini belirtir. Aşağıdakilerden biri olabilir:<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (varsayılan)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />[otomatik](../../../visual-basic/language-reference/modifiers/auto.md) -   |
+|`Sub`|İsteğe bağlı, ancak `Sub` ya da `Function` görünmelidir. Dış yordamın bir değer döndürmediğini belirtir.|
+|`Function`|İsteğe bağlı, ancak `Sub` ya da `Function` görünmelidir. Dış yordamın bir değer döndürdüğünü gösterir.|
+|`name`|Gerekli. Bu dış başvurunun adı. Daha fazla bilgi için bkz. [bildirilmemiş öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`Lib`|Gerekli. Bir dış yordam içeren dış dosyayı (DLL veya kod kaynağı) tanımlayan bir `Lib` yan tümcesi tanıtır.|
+|`libname`|Gerekli. Belirtilen yordamı içeren dosyanın adı.|
+|`Alias`|İsteğe bağlı. Bildirildiği yordamın, `name`içinde belirtilen ad ile dosyasında belirlenemediğini belirtir. `aliasname`kimliğini belirtin.|
+|`aliasname`|`Alias` anahtar sözcüğünü kullanmanız gerekir. İki şekilde yordamı tanımlayan dize:<br /><br /> İçindeki yordamın giriş noktası adı, tırnak içinde (`""`)<br /><br /> veya<br /><br /> Bir sayı işareti (`#`) ve ardından yordamın giriş noktasının sıra sayısını belirten bir tamsayı.|
+|`parameterlist`|Yordam parametreleri alırsa gereklidir. Bkz. [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md).|
+|`returntype`|`Function` belirtilirse ve `Option Strict` `On`gerekir. Yordamın döndürdüğü değerin veri türü.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sometimes you need to call a procedure defined in a file (such as a DLL or code resource) outside your project. When you do this, the Visual Basic compiler does not have access to the information it needs to call the procedure correctly, such as where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The `Declare` statement creates a reference to an external procedure and supplies this necessary information.
+Bazen, bir dosyada (örneğin, bir DLL veya kod kaynağı gibi) tanımlanan bir yordamı projenizin dışında çağırmanız gerekir. Bunu yaptığınızda, Visual Basic derleyicisinin yordamın nerede olduğu, nasıl tanımlandığı, arama sırası ve dönüş türü ve kullandığı dize karakter kümesi gibi yordamı çağırması için gereken bilgilere erişimi yoktur. `Declare` deyimleri, bir dış yordama yönelik bir başvuru oluşturur ve bu gerekli bilgileri sağlar.
 
-You can use `Declare` only at module level. This means the *declaration context* for an external reference must be a class, structure, or module, and cannot be a source file, namespace, interface, procedure, or block. For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+Yalnızca modül düzeyinde `Declare` kullanabilirsiniz. Bu, bir dış başvurunun *bildirim bağlamının* bir sınıf, yapı veya modül olması ve kaynak dosya, ad alanı, arabirim, yordam veya blok olması anlamına gelir. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
 
-External references default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access. You can adjust their access levels with the access modifiers.
+Dış başvurular varsayılan olarak [genel](../../../visual-basic/language-reference/modifiers/public.md) erişime sahiptir. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz.
 
 ## <a name="rules"></a>Kurallar
 
-- **Attributes.** You can apply attributes to an external reference. Any attribute you apply has effect only in your project, not in the external file.
+- **Özelliklerine.** Öznitelikleri bir dış başvuruya uygulayabilirsiniz. Uyguladığınız herhangi bir öznitelik, dış dosyada değil yalnızca projenizde etkilidir.
 
-- **Modifiers.** External procedures are implicitly [Shared](../../../visual-basic/language-reference/modifiers/shared.md). You cannot use the `Shared` keyword when declaring an external reference, and you cannot alter its shared status.
+- **İlerine.** Dış yordamlar örtük olarak [paylaşılır](../../../visual-basic/language-reference/modifiers/shared.md). Dış başvuru bildirirken `Shared` anahtar sözcüğünü kullanamazsınız ve paylaşılan durumunu değiştiremezsiniz.
 
-  An external procedure cannot participate in overriding, implement interface members, or handle events. Accordingly, you cannot use the `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements`, or `Handles` keyword in a `Declare` statement.
+  Dış yordam, geçersiz kılma, arabirim üyeleri uygulama veya olayları işleme alanına katılamaz. Buna uygun olarak, bir `Implements`deyimindeki `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Handles` veya `Declare` anahtar sözcüğünü kullanamazsınız.
 
-- **External Procedure Name.** You do not have to give this external reference the same name (in `name`) as the procedure's entry-point name within its external file (`aliasname`). You can use an `Alias` clause to specify the entry-point name. This can be useful if the external procedure has the same name as a Visual Basic reserved modifier or a variable, procedure, or any other programming element in the same scope.
-
-  > [!NOTE]
-  > Entry-point names in most DLLs are case-sensitive.
-
-- **External Procedure Number.** Alternatively, you can use an `Alias` clause to specify the ordinal number of the entry point within the export table of the external file. To do this, you begin `aliasname` with a number sign (`#`). This can be useful if any character in the external procedure name is not allowed in Visual Basic, or if the external file exports the procedure without a name.
-
-## <a name="data-type-rules"></a>Data Type Rules
-
-- **Parameter Data Types.** If `Option Strict` is `On`, you must specify the data type of each parameter in `parameterlist`. This can be any data type or the name of an enumeration, structure, class, or interface. Within `parameterlist`, you use an `As` clause to specify the data type of the argument to be passed to each parameter.
+- **Dış yordam adı.** Bu dış başvuruya, dış dosya (`aliasname`) içinde yordamın giriş noktası adı ile aynı adı (`name`) vermeniz gerekmez. Giriş noktası adını belirtmek için bir `Alias` yan tümcesi kullanabilirsiniz. Bu, dış yordamın Visual Basic ayrılmış değiştirici veya bir değişken, yordam veya aynı kapsamda başka bir programlama öğesiyle aynı ada sahipse yararlı olabilir.
 
   > [!NOTE]
-  > If the external procedure was not written for the .NET Framework, you must take care that the data types correspond. For example, if you declare an external reference to a Visual Basic 6.0 procedure with an `Integer` parameter (16 bits in Visual Basic 6.0), you must identify the corresponding argument as `Short` in the `Declare` statement, because that is the 16-bit integer type in Visual Basic. Similarly, `Long` has a different data width in Visual Basic 6.0, and `Date` is implemented differently.
+  > Çoğu dll 'deki giriş noktası adları büyük/küçük harfe duyarlıdır.
 
-- **Return Data Type.** If the external procedure is a `Function` and `Option Strict` is `On`, you must specify the data type of the value returned to the calling code. This can be any data type or the name of an enumeration, structure, class, or interface.
+- **Dış yordam numarası.** Alternatif olarak, dış dosyanın dışarı aktarma tablosundaki giriş noktasının sıra sayısını belirtmek için bir `Alias` yan tümcesi kullanabilirsiniz. Bunu yapmak için `aliasname` bir sayı işaretiyle (`#`) başlarsınız. Bu, dış yordam adındaki herhangi bir karaktere Visual Basic izin verilmiyorsa veya dış dosya yordamı bir ad olmadan dışarı aktardığında yararlı olabilir.
+
+## <a name="data-type-rules"></a>Veri türü kuralları
+
+- **Parametre veri türleri.** `Option Strict` `On`, `parameterlist`her parametrenin veri türünü belirtmeniz gerekir. Bu, herhangi bir veri türü veya bir numaralandırma, yapı, sınıf veya arabirimin adı olabilir. `parameterlist`içinde, her parametreye geçirilecek bağımsız değişkenin veri türünü belirtmek için bir `As` yan tümcesi kullanın.
 
   > [!NOTE]
-  > The Visual Basic compiler does not verify that your data types are compatible with those of the external procedure. If there is a mismatch, the common language runtime generates a <xref:System.Runtime.InteropServices.MarshalDirectiveException> exception at run time.
+  > Dış yordam .NET Framework için yazılmadığından, veri türlerinin karşılık geldiği konusunda dikkatli olmanız gerekir. Örneğin, bir Visual Basic 6,0 yordamına bir `Integer` parametresiyle (Visual Basic 6,0 ' de 16 bit) bir dış başvuru bildirirseniz, `Declare` ifadesinde 16 bit tamsayı türü olduğundan karşılık gelen bağımsız değişkeni Visual Basic deyimindeki `Short` olarak tanımlamalısınız. Benzer şekilde, `Long` Visual Basic 6,0 ' de farklı bir veri genişliğine sahiptir ve `Date` farklı şekilde uygulanır.
 
-- **Default Data Types.** If `Option Strict` is `Off` and you do not specify the data type of a parameter in `parameterlist`, the Visual Basic compiler converts the corresponding argument to the [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md). Similarly, if you do not specify `returntype`, the compiler takes the return data type to be `Object`.
+- **Dönüş veri türü.** Dış yordam bir `Function` ve `Option Strict` `On`ise, çağırma koduna döndürülen değerin veri türünü belirtmeniz gerekir. Bu, herhangi bir veri türü veya bir numaralandırma, yapı, sınıf veya arabirimin adı olabilir.
 
   > [!NOTE]
-  > Because you are dealing with an external procedure that might have been written on a different platform, it is dangerous to make any assumptions about data types or to allow them to default. It is much safer to specify the data type of every parameter and of the return value, if any. This also improves the readability of your code.
+  > Visual Basic Derleyicisi, veri türlerinizin dış yordamla uyumlu olduğunu doğrulamaz. Bir uyuşmazlık varsa, ortak dil çalışma zamanı çalışma zamanında bir <xref:System.Runtime.InteropServices.MarshalDirectiveException> özel durumu oluşturur.
+
+- **Varsayılan veri türleri.** `Option Strict` `Off` ve `parameterlist`bir parametrenin veri türünü belirtmezseniz, Visual Basic Derleyicisi ilgili bağımsız değişkeni [nesne veri türüne](../../../visual-basic/language-reference/data-types/object-data-type.md)dönüştürür. Benzer şekilde, `returntype`belirtmezseniz, derleyici döndürülen veri türünü `Object`olarak alır.
+
+  > [!NOTE]
+  > Farklı bir platformda yazılmış olabilecek bir dış yordam ile ilgilenirken, veri türleri hakkında varsayımlar yapmak veya bunların varsayılan olmasına izin vermek tehlikeli olabilir. Varsa, her parametrenin ve dönüş değerinin veri türünü belirtmek çok daha güvenlidir. Bu, kodunuzun okunabilirliğini de artırır.
 
 ## <a name="behavior"></a>Davranış
 
-- **Scope.** An external reference is in scope throughout its class, structure, or module.
+- **Kapsam.** Dış başvuru, sınıf, yapı veya modül genelinde kapsamdadır.
 
-- **Lifetime.** An external reference has the same lifetime as the class, structure, or module in which it is declared.
+- **Süre.** Dış başvuru, bildirildiği sınıf, yapı veya modülle aynı yaşam süresine sahiptir.
 
-- **Calling an External Procedure.** You call an external procedure the same way you call a `Function` or `Sub` procedure—by using it in an expression if it returns a value, or by specifying it in a [Call Statement](../../../visual-basic/language-reference/statements/call-statement.md) if it does not return a value.
+- **Dış yordam çağırma.** Bir dış yordamı, bir değeri döndürürse bir ifadede kullanarak veya bir değer döndürmezse bir [Call deyiminde](../../../visual-basic/language-reference/statements/call-statement.md) belirterek, bir `Function` veya `Sub` yordamını çağıran şekilde çağırabilirsiniz.
 
-  You pass arguments to the external procedure exactly as specified by `parameterlist` in the `Declare` statement. Do not take into account how the parameters were originally declared in the external file. Similarly, if there is a return value, use it exactly as specified by `returntype` in the `Declare` statement.
+  Bağımsız değişkenleri, `Declare` bildiriminde `parameterlist` tarafından belirtilen şekilde dış yordama geçirirsiniz. Parametrelerin dış dosyada ilk olarak nasıl bildirildiği dikkate alma. Benzer şekilde, bir dönüş değeri varsa, tam olarak `Declare` deyimindeki `returntype` tarafından belirtilen şekilde kullanın.
 
-- **Character Sets.** You can specify in `charsetmodifier` how Visual Basic should marshal strings when it calls the external procedure. The `Ansi` modifier directs Visual Basic to marshal all strings to ANSI values, and the `Unicode` modifier directs it to marshal all strings to Unicode values. The `Auto` modifier directs Visual Basic to marshal strings according to .NET Framework rules based on the external reference `name`, or `aliasname` if specified. Varsayılan değer `Ansi` şeklindedir.
+- **Karakter kümeleri.** Dış yordamı çağırdığında Visual Basic dizelerin nasıl sıralaması gerektiğini `charsetmodifier` belirtebilirsiniz. `Ansi` değiştirici, tüm dizeleri ANSI değerlerine göre sıralamak için Visual Basic yönlendirir ve `Unicode` değiştirici onu tüm dizeleri Unicode değerlerine göre sıralamak için yönlendirir. `Auto` değiştirici, Visual Basic dış `name`başvuruya göre .NET Framework kurallara göre dizeleri sıralayamaz veya belirtilmişse `aliasname`. Varsayılan değer `Ansi` şeklindedir.
 
-  `charsetmodifier` also specifies how Visual Basic should look up the external procedure within its external file. `Ansi` and `Unicode` both direct Visual Basic to look it up without modifying its name during the search. `Auto` directs Visual Basic to determine the base character set of the run-time platform and possibly modify the external procedure name, as follows:
+  `charsetmodifier` Ayrıca, Visual Basic dış yordamın dış dosyası içinde nasıl araması gerektiğini belirtir. `Ansi` ve `Unicode`, arama sırasında adını değiştirmeden aramak için doğrudan Visual Basic. `Auto`, çalışma zamanı platformunun temel karakter kümesini belirlemede Visual Basic yönlendirir ve büyük olasılıkla dış yordam adını şu şekilde değiştirebilir:
 
-  - On an ANSI platform, such as Windows 95, Windows 98, or Windows Millennium Edition, first look up the external procedure with no name modification. If that fails, append "A" to the end of the external procedure name and look it up again.
+  - Windows 95, Windows 98 veya Windows Millennium Edition gibi bir ANSI platformunda, önce ad değişikliğine sahip olmayan dış yordama bakmanız gerekir. Başarısız olursa, dış yordam adının sonuna "A" ekleyin ve tekrar arama yapın.
 
-  - On a Unicode platform, such as Windows NT, Windows 2000, or Windows XP, first look up the external procedure with no name modification. If that fails, append "W" to the end of the external procedure name and look it up again.
+  - Windows NT, Windows 2000 veya Windows XP gibi bir Unicode platformunda, önce ad değişikliğine sahip olmayan dış yordama bakmanız gerekir. Başarısız olursa, dış yordam adının sonuna "W" ekleyin ve tekrar arama yapın.
 
-- **Mechanism.** Visual Basic uses the .NET Framework *platform invoke* (PInvoke) mechanism to resolve and access external procedures. The `Declare` statement and the <xref:System.Runtime.InteropServices.DllImportAttribute> class both use this mechanism automatically, and you do not need any knowledge of PInvoke. For more information, see [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).
+- **Mekanizmadır.** Visual Basic, dış yordamları çözümlemek ve erişmek için .NET Framework *Platform çağırma* (PInvoke) mekanizmasını kullanır. `Declare` ve <xref:System.Runtime.InteropServices.DllImportAttribute> sınıfı her ikisi de bu mekanizmayı otomatik olarak kullanır ve herhangi bir PInvoke bilgisine ihtiyacınız yoktur. Daha fazla bilgi için bkz. [Izlenecek yol: Windows API 'Leri çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).
 
 > [!IMPORTANT]
-> If the external procedure runs outside the common language runtime (CLR), it is *unmanaged code*. When you call such a procedure, for example a Windows API function or a COM method, you might expose your application to security risks. For more information, see [Secure Coding Guidelines for Unmanaged Code](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).
+> Dış yordam ortak dil çalışma zamanının (CLR) dışında çalışırsa, bu, yönetilmeyen bir *koddur*. Örneğin, bir Windows API işlevi veya bir COM yöntemi gibi bir yordamı çağırdığınızda, uygulamanızı güvenlik risklerine maruz kalabilirsiniz. Daha fazla bilgi için bkz. [yönetilmeyen kod Için güvenli kodlama yönergeleri](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).
 
 ## <a name="example"></a>Örnek
 
-The following example declares an external reference to a `Function` procedure that returns the current user name. It then calls the external procedure `GetUserNameA` as part of the `getUser` procedure.
+Aşağıdaki örnek, geçerli kullanıcı adını döndüren `Function` yordamına bir dış başvuru bildirir. Ardından, `getUser` yordamının bir parçası olarak `GetUserNameA` dış yordamı çağırır.
 
 [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]
 
 ## <a name="example"></a>Örnek
 
-The <xref:System.Runtime.InteropServices.DllImportAttribute> provides an alternative way of using functions in unmanaged code. The following example declares an imported function without using a `Declare` statement.
+<xref:System.Runtime.InteropServices.DllImportAttribute> yönetilmeyen koddaki işlevleri kullanmanın alternatif bir yolunu sağlar. Aşağıdaki örnek, `Declare` bir ifade kullanmadan içeri aktarılan bir işlevi bildirir.
 
 [!code-vb[VbVbalrStatements#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#16)]
 

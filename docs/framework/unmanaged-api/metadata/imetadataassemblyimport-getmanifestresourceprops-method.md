@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436322"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps Yöntemi
-Gets the set of properties of the manifest resource with the specified metadata signature.  
+Belirtilen meta veri imzasıyla bildirim kaynağının özellik kümesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,34 +41,34 @@ HRESULT GetManifestResourceProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mdmr`  
- [in] An `mdManifestResource` token that represents the resource for which to get the properties.  
+ 'ndaki Özelliklerinin alınacağı kaynağı temsil eden `mdManifestResource` belirteç.  
   
  `szName`  
- [out] The name of the resource.  
+ dışı Kaynağın adı.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ 'ndaki `szName`geniş karakter cinsinden boyutu.  
   
  `pchName`  
- [out] A pointer to the number of wide chars actually returned in `szName`.  
+ dışı `szName`' de döndürülen geniş karakter sayısının bir işaretçisi.  
   
  `ptkImplementation`  
- [out] A pointer to an `mdFile` token or an `mdAssemblyRef` token that represents the file or assembly, respectively, that contains the resource.  
+ dışı Kaynağı içeren, sırasıyla dosyayı veya derlemeyi temsil eden bir `mdFile` belirtecinin veya `mdAssemblyRef` belirtecinin işaretçisi.  
   
  `pdwOffset`  
- [out] A pointer to a value that specifies the offset to the beginning of the resource within the file.  
+ dışı Dosyanın içindeki kaynağın başlangıcına olan sapmayı belirten bir değer işaretçisi.  
   
  `pdwResourceFlags`  
- [out] A pointer to flags that describe the metadata applied to a resource. The flags value is a combination of one or more [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) values.  
+ dışı Bir kaynağa uygulanan meta verileri tanımlayan bayrakların işaretçisi. Flags değeri bir veya daha fazla [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) değeri birleşimidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -13,19 +13,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344351"
 ---
 # <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>Nasıl yapılır: Tarihleri veya Saatleri Temsil Eden Dizeleri Doğrulama (Visual Basic)
-The following code example sets a `Boolean` value that indicates whether a string represents a valid date or time.  
+Aşağıdaki kod örneği bir dizenin geçerli bir tarih veya saati temsil edip etmediğini belirten `Boolean` bir değer ayarlar.  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbVbcnRegEx#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#2)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Replace `("01/01/03")` and `"9:30 PM"` with the date and time you want to validate. You can replace the string with another hard-coded string, with a `String` variable, or with a method that returns a string, such as `InputBox`.  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ `("01/01/03")` ve `"9:30 PM"`, doğrulamak istediğiniz tarih ve saat ile değiştirin. Dizeyi, bir `String` değişkeni ile veya `InputBox`gibi bir dize döndüren bir yöntemle değiştirebilirsiniz.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Use this method to validate the string before trying to convert the `String` to a `DateTime` variable. By checking the date or time first, you can avoid generating an exception at run time.  
+ `String` bir `DateTime` değişkenine dönüştürmeyi denemeden önce dizeyi doğrulamak için bu yöntemi kullanın. İlk olarak tarihi veya saati denetleyerek, çalışma zamanında bir özel durum oluşturmaktan kaçınabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.Information.IsDate%2A>
 - <xref:Microsoft.VisualBasic.Interaction.InputBox%2A>
-- [Validating Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
+- [Visual Basic dizeleri doğrulanıyor](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)

@@ -21,41 +21,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74339955"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Nasıl yapılır: Bir Yordam Bağımsız Değişkeninin Değerini Değiştirme (Visual Basic)
-When you call a procedure, each argument you supply corresponds to one of the parameters defined in the procedure. In some cases, the procedure code can change the value underlying an argument in the calling code. In other cases, the procedure can change only its local copy of an argument.  
+Bir yordamı çağırdığınızda, sağladığınız her bağımsız değişken yordamda tanımlanan parametrelerden birine karşılık gelir. Bazı durumlarda, yordam kodu, çağıran koddaki bağımsız değişkenin temelindeki değeri değiştirebilir. Diğer durumlarda yordam, bir bağımsız değişkenin yalnızca yerel kopyasını değiştirebilir.  
   
- When you call the procedure, Visual Basic makes a local copy of every argument that is passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). For each argument passed [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic gives the procedure code a direct reference to the programming element underlying the argument in the calling code.  
+ Yordamı çağırdığınızda Visual Basic, [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)' ı geçen her bağımsız değişkenin yerel bir kopyasını oluşturur. [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)olarak geçen her bir bağımsız değişken için, Visual Basic yordam koduna, çağıran koddaki bağımsız değişkeni temel alan programlama öğesine doğrudan başvuru verir.  
   
- If the underlying element in the calling code is a modifiable element and the argument is passed `ByRef`, the procedure code can use the direct reference to change the element's value in the calling code.  
+ Çağıran koddaki temeldeki öğe değiştirilebilir bir öğedir ve bağımsız değişken `ByRef`geçirilirse, yordam kodu doğrudan başvuruyu, çağıran koddaki öğenin değerini değiştirmek için kullanabilir.  
   
-## <a name="changing-the-underlying-value"></a>Changing the Underlying Value  
+## <a name="changing-the-underlying-value"></a>Temel alınan değeri değiştirme  
   
-#### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>To change the underlying value of a procedure argument in the calling code  
+#### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>Çağıran koddaki yordam bağımsız değişkeninin temel alınan değerini değiştirmek için  
   
-1. In the procedure declaration, specify [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) for the parameter corresponding to the argument.  
+1. Yordam bildiriminde, bağımsız değişkenine karşılık gelen parametre için [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) belirtin.  
   
-2. In the calling code, pass a modifiable programming element as the argument.  
+2. Çağıran kodda bağımsız değişken olarak değiştirilebilir bir programlama öğesi geçirin.  
   
-3. In the calling code, do not enclose the argument in parentheses in the argument list.  
+3. Çağıran kodda bağımsız değişkeni parantez içine bağımsız değişken listesine eklemeyin.  
   
-4. In the procedure code, use the parameter name to assign a value to the underlying element in the calling code.  
+4. Yordam kodunda, çağıran koddaki temel alınan öğeye bir değer atamak için parametre adını kullanın.  
   
- See the example further down for a demonstration.  
+ Tanıtım için örneğe bakın.  
   
-## <a name="changing-local-copies"></a>Changing Local Copies  
- If the underlying element in the calling code is a nonmodifiable element, or if the argument is passed `ByVal`, the procedure cannot change its value in the calling code. However, the procedure can change its local copy of such an argument.  
+## <a name="changing-local-copies"></a>Yerel kopyaları değiştirme  
+ Çağıran koddaki temeldeki öğe değiştirilemeyen bir öğe ise veya bağımsız değişken `ByVal`geçirilirse yordam, çağıran koddaki değerini değiştiremez. Ancak yordam, böyle bir bağımsız değişkenin yerel kopyasını değiştirebilir.  
   
-#### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>To change the copy of a procedure argument in the procedure code  
+#### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>Yordam kodundaki yordam bağımsız değişkeninin kopyasını değiştirmek için  
   
-1. In the procedure declaration, specify [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) for the parameter corresponding to the argument.  
+1. Yordam bildiriminde, bağımsız değişkenine karşılık gelen parametre için [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) belirtin.  
   
      veya  
   
-     In the calling code, enclose the argument in parentheses in the argument list. This forces Visual Basic to pass the argument by value, even if the corresponding parameter specifies `ByRef`.  
+     Çağıran kodda bağımsız değişkenini bağımsız değişken listesinde parantez içine alın. Bu, karşılık gelen parametre `ByRef`belirtse bile bağımsız değişkenini değere göre geçirmeye zorlar Visual Basic.  
   
-2. In the procedure code, use the parameter name to assign a value to the local copy of the argument. The underlying value in the calling code is not changed.  
+2. Yordam kodunda, bağımsız değişkenin yerel kopyasına bir değer atamak için parametre adını kullanın. Çağıran koddaki temel alınan değer değiştirilmez.  
   
 ## <a name="example"></a>Örnek  
- The following example shows two procedures that take an array variable and operate on its elements. The `increase` procedure simply adds one to each element. The `replace` procedure assigns a new array to the parameter `a()` and then adds one to each element.  
+ Aşağıdaki örnek, bir dizi değişkeni alan ve öğelerinde çalışan iki yordamı gösterir. `increase` yordamı her bir öğeye yalnızca bir tane ekler. `replace` yordamı parametre `a()` yeni bir dizi atar ve sonra her öğeye bir tane ekler.  
   
  [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
@@ -63,19 +63,19 @@ When you call a procedure, each argument you supply corresponds to one of the pa
   
  [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
- The first `MsgBox` call displays "After increase(n): 11, 21, 31, 41". Because the array `n` is a reference type, `replace` can change its members, even though the passing mechanism is `ByVal`.  
+ İlk `MsgBox` çağrısı, "artdıktan sonra (n): 11, 21, 31, 41" olarak görüntülenir. Dizi `n` bir başvuru türü olduğundan, `replace`, geçirme mekanizması `ByVal`olmasına rağmen üyelerini değiştirebilir.  
   
- The second `MsgBox` call displays "After replace(n): 101, 201, 301". Because `n` is passed `ByRef`, `replace` can modify the variable `n` in the calling code and assign a new array to it. Because `n` is a reference type, `replace` can also change its members.  
+ İkinci `MsgBox` çağrısı "yenisiyle değiştirildikten sonra (n): 101, 201, 301" olarak görüntülenir. `n` `ByRef`geçirildiğinden `replace`, çağıran koddaki `n` değişkenini değiştirebilir ve buna yeni bir dizi atayabilir. `n` bir başvuru türü olduğundan, `replace` üyelerini de değiştirebilir.  
   
- You can prevent the procedure from modifying the variable itself in the calling code. See [How to: Protect a Procedure Argument Against Value Changes](./how-to-protect-a-procedure-argument-against-value-changes.md).  
+ Yordamın, çağıran koddaki değişkenin kendisini değiştirmesini engelleyebilirsiniz. Bkz. [nasıl yapılır: bir yordam bağımsız değişkenini değer değişikliklerine karşı koruma](./how-to-protect-a-procedure-argument-against-value-changes.md).  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- When you pass a variable by reference, you must use the `ByRef` keyword to specify this mechanism.  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bir değişkeni başvuruya göre geçirdiğinizde, bu mekanizmayı belirtmek için `ByRef` anahtar sözcüğünü kullanmanız gerekir.  
   
- The default in Visual Basic is to pass arguments by value. However, it is good programming practice to include either the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword with every declared parameter. This makes your code easier to read.  
+ Visual Basic varsayılan değeri, bağımsız değişkenleri değere göre geçirmektir. Ancak, her bir belirtilen parametreye ilişkin [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) anahtar sözcüğünü eklemek iyi bir programlama uygulamasıdır. Bu, kodunuzun okunmasını kolaylaştırır.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- There is always a potential risk in allowing a procedure to change the value underlying an argument in the calling code. Make sure you expect this value to be changed, and be prepared to check it for validity before using it.  
+ Bir yordamın, çağıran koddaki bağımsız değişkenin temelindeki değeri değiştirmesine izin vermek için her zaman potansiyel bir risk vardır. Bu değerin değiştirilmesini beklediğinizden ve kullanılmadan önce geçerliliği göz önünde denetlediğinizden emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

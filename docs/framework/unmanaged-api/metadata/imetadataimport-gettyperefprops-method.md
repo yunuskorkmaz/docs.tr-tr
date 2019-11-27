@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436715"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps Metodu
-Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.  
+Belirtilen TypeRef belirteci tarafından başvurulan <xref:System.Type> ilişkili meta verileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +39,28 @@ HRESULT GetTypeRefProps (
   
 ## <a name="parameters"></a>Parametreler  
  `tr`  
- [in] The TypeRef token that represents the type to return metadata for.  
+ 'ndaki Meta verilerini döndürecek türü temsil eden TypeRef belirteci.  
   
  `ptkResolutionScope`  
- [out] A pointer to the scope in which the reference is made. This value is an AssemblyRef or ModuleRef token.  
+ dışı Başvurunun yapıldığı kapsama yönelik bir işaretçi. Bu değer bir AssemblyRef veya ModuleRef belirtecidir.  
   
  `szName`  
- [out] A buffer containing the type name.  
+ dışı Tür adını içeren bir arabellek.  
   
  `cchName`  
- [in] The requested size in wide characters of `szName`.  
+ 'ndaki `szName`geniş karakterdeki istenen boyut.  
   
  `pchName`  
- [out] The returned size in wide characters of `szName`.  
+ dışı `szName`geniş karakterdeki döndürülen boyut.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

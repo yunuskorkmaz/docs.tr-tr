@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349192"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Yığın için ayrılan alan doldu (Visual Basic)
-The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program. Its limits have been exceeded.  
+Yığın, yürütülen programınızın taleplerini dinamik olarak büyüyen ve küçüldüğü belleğin çalışma alanıdır. Sınırları aşıldı.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Check that procedures are not nested too deeply.  
+1. Yordamların çok derin iç içe olmadığını kontrol edin.  
   
-2. Make sure recursive procedures terminate properly.  
+2. Özyinelemeli yordamların düzgün sonlandırılmadığından emin olun.  
   
-3. If local variables require more local variable space than is available, try declaring some variables at the module level. You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`. Or you can use the `Static` statement to declare individual static variables within procedures.  
+3. Yerel değişkenler kullanılabilir olandan daha fazla yerel değişken alanı gerektiriyorsa, modül düzeyinde bazı değişkenler bildirmeyi deneyin. Ayrıca, `Static`ile `Property`, `Sub`veya `Function` anahtar sözcüğüyle önce statik yordamdaki tüm değişkenleri de bildirebilirsiniz. Ya da yordamlar içindeki bağımsız statik değişkenleri bildirmek için `Static` ifadesini kullanabilirsiniz.  
   
-4. Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings. You can also define the string at module level where it requires no stack space.  
+4. Sabit uzunluklu dizeler değişken uzunluklu dizeler olarak daha fazla yığın alanı kullanırken, sabit uzunluklu Dizelerinizin bazılarını değişken uzunluklu dizeler olarak yeniden tanımlayın. Dizeyi, yığın alanı gerektirmeyen modül düzeyinde de tanımlayabilirsiniz.  
   
-5. Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.  
+5. Yığın üzerinde etkin olan yordamları görüntülemek için `Calls` iletişim kutusunu kullanarak iç içe `DoEvents` işlev çağrılarının sayısını denetleyin.  
   
-6. Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack. An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code. Use the `Calls` dialog box to view which procedures are active on the stack.  
+6. Yığında zaten olan bir olay yordamını çağıran bir olay tetikleyerek bir "olay basamaklandırmaya" neden olmadığından emin olun. Olay basamaklama, Sonlandırılmamış özyinelemeli yordam çağrısına benzerdir, ancak çağrı, koddaki açık bir çağrı yerine Visual Basic tarafından yapıldığından daha az açıktır. Yığında etkin olan yordamları görüntülemek için `Calls` iletişim kutusunu kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

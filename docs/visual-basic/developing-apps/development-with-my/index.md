@@ -18,30 +18,30 @@ ms.locfileid: "74330279"
 ---
 # <a name="development-with-my-visual-basic"></a>My Özelliğiyle Geliştirme (Visual Basic)
 
-Visual Basic provides new features for rapid application development that improve productivity and ease of use while delivering power. One of these features, called `My`, provides access to information and default object instances that are related to the application and its run-time environment. This information is organized in a format that is discoverable through IntelliSense and logically delineated according to use.  
+Visual Basic, güç sunarken üretkenliği ve kullanım kolaylığını artıran hızlı uygulama geliştirmeye yönelik yeni özellikler sunar. `My`olarak adlandırılan bu özelliklerden biri, uygulamayla ve onun çalışma zamanı ortamıyla ilgili bilgilere ve varsayılan nesne örneklerine erişim sağlar. Bu bilgiler IntelliSense aracılığıyla keşfedilmiş bir biçimde düzenlenir ve kullanımına göre mantıksal olarak ayarlanır.  
   
- Top-level members of `My` are exposed as objects. Each object behaves similarly to a namespace or a class with `Shared` members, and it exposes a set of related members.  
+ `My` üst düzey üyeleri nesneler olarak gösterilir. Her nesne, bir ad alanı veya `Shared` üyelere sahip bir sınıfa benzer şekilde davranır ve ilgili üyelerin bir kümesini sunar.  
   
- This table shows the top-level `My` objects and their relationship to each other.  
+ Bu tabloda, üst düzey `My` nesneleri ve bunların birbirleriyle ilişkileri gösterilmektedir.  
   
- ![Diagram shows the object model for My.](./media/index/my-object-model-relationships.gif)  
+ ![Diyagram, My için nesne modelini gösterir.](./media/index/my-object-model-relationships.gif)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
  [My.Application, My.Computer ve My.User ile Görev Gerçekleştirme](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
- Describes the three central `My` objects, `My.Application`, `My.Computer`, and `My.User`, which provide access to information and functionality  
+ Bilgi ve işlevlere erişim sağlayan üç merkezi `My` nesnesini, `My.Application`, `My.Computer`ve `My.User`açıklar  
   
  [My.Forms ve My.WebServices ile Sağlanan Varsayılan Nesne Örnekleri](../../../visual-basic/developing-apps/development-with-my/default-object-instances-provided-by-my-forms-and-my-webservices.md)  
- Describes the `My.Forms` and `My.WebServices` objects, which provide access to forms, data sources, and XML Web services used by your application.  
+ , Uygulamanız tarafından kullanılan formlara, veri kaynaklarına ve XML Web hizmetlerine erişim sağlayan `My.Forms` ve `My.WebServices` nesnelerini açıklar.  
   
  [My.Resources ve My.Settings ile Hızlı Uygulama Geliştirme](../../../visual-basic/developing-apps/development-with-my/rapid-application-development-with-my-resources-and-my-settings.md)  
- Describes the `My.Resources` and `My.Settings` objects, which provide access to an application's resources and settings.  
+ Bir uygulamanın kaynaklarına ve ayarlarına erişim sağlayan `My.Resources` ve `My.Settings` nesnelerini açıklar.  
   
  [Visual Basic Uygulama Modeline Genel Bakış](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Describes the Visual Basic Application Startup/Shutdown model.  
+ Visual Basic uygulama başlatma/kapatması modelini açıklar.  
   
  [My Özellikleri Proje Türüne Nasıl Bağımlıdır](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
- Gives details on which `My` features are available in different project types.  
+ Farklı proje türlerinde hangi `My` özelliklerinin kullanılabildiği hakkında ayrıntılı bilgi verir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

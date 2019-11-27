@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346664"
 ---
 # <a name="type-mismatch-visual-basic"></a>Tür uyumsuzluğu (Visual Basic)
-You attempted to convert a value to another type in a way that is not valid.  
+Bir değeri, geçerli olmayan bir şekilde başka bir türe dönüştürmeye çalıştınız.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Check the assignment to make sure it is valid.  
+1. Geçerli olduğundan emin olmak için atamayı denetleyin.  
   
-2. Make sure you did not pass an object to a procedure that expects a single property or value.  
+2. Tek bir özellik veya değer bekleyen bir yordama bir nesne geçirdiğinizden emin olun.  
   
-3. Make sure you did not use a module or project name where an expression was expected.  
+3. Bir ifadenin beklenildiği bir modül veya proje adı kullandığınızdan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

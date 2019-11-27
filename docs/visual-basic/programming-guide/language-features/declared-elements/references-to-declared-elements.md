@@ -14,11 +14,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345297"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Bildirilmiş Öğelere Başvurular (Visual Basic)
-When your code refers to a declared element, the Visual Basic compiler matches the name in your reference to the appropriate declaration of that name. If more than one element is declared with the same name, you can control which of those elements is to be referenced by *qualifying* its name.  
+Kodunuz, belirtilen bir öğeye başvurduğunda, Visual Basic derleyici, bu adın uygun bildirimine başvurinizdeki adla eşleşir. Aynı ada sahip birden fazla öğe bildirilirse, adını *niteleyerek* bu öğelerin ne şekilde başvurulduğunu kontrol edebilirsiniz.  
   
- The compiler attempts to match a name reference to a name declaration with the *narrowest scope*. This means it starts with the code making the reference and works outward through successive levels of containing elements.  
+ Derleyici, bir ad başvurusunu en *dar kapsamlı*bir ad bildirimine eşleştirmeye çalışır. Bu, başvuru yapan kod ile başladığı ve kapsayan öğelerin birbirini izleyen düzeylerinde dışa doğru çalışacağı anlamına gelir.  
   
- The following example shows references to two variables with the same name. The example declares two variables, each named `totalCount`, at different levels of scope in module `container`. When the procedure `showCount` displays `totalCount` without qualification, the Visual Basic compiler resolves the reference to the declaration with the narrowest scope, namely the local declaration inside `showCount`. When it qualifies `totalCount` with the containing module `container`, the compiler resolves the reference to the declaration with the broader scope.  
+ Aşağıdaki örnek, aynı ada sahip iki değişkene yapılan başvuruları gösterir. Örnek, her bir `totalCount`, modül `container`farklı kapsam düzeylerindeki iki değişken bildirir. Yordam `showCount`, nitelendirme olmadan `totalCount` görüntülüyorsa Visual Basic derleyici, en dar kapsamı olan bildirime başvuruyu çözer, yani `showCount`içindeki yerel bildirim. `totalCount`, kapsayan modül `container`ile nitelediğinde, derleyici daha geniş kapsamlı bir bildirime başvuruyu çözer.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -41,16 +41,16 @@ Module callingModule
 End Module  
 ```  
   
-## <a name="qualifying-an-element-name"></a>Qualifying an Element Name  
- If you want to override this search process and specify a name declared in a broader scope, you must *qualify* the name with the containing element of the broader scope. In some cases, you might also have to qualify the containing element.  
+## <a name="qualifying-an-element-name"></a>Öğe adını nitelendirme  
+ Bu arama işlemini geçersiz kılmak ve daha geniş bir kapsamda belirtilen bir ad belirtmek istiyorsanız, adı daha geniş kapsamın kapsayan öğesiyle *nitelemeniz* gerekir. Bazı durumlarda, kapsayan öğesini de nitelemeniz gerekebilir.  
   
- Qualifying a name means preceding it in your source statement with information that identifies where the target element is defined. This information is called a *qualification string*. It can include one or more namespaces and a module, class, or structure.  
+ Bir adın nitelemesini, kaynak deyiminizde, hedef öğenin nerede tanımlandığını tanımlayan bilgilerle daha önce anlamına gelir. Bu bilgilere bir *nitelik dizesi*adı verilir. Bir veya daha fazla ad alanı ve bir modül, sınıf ya da yapı içerebilir.  
   
- The qualification string should unambiguously specify the module, class, or structure containing the target element. The container might in turn be located in another containing element, usually a namespace. You might need to include several containing elements in the qualification string.  
+ Nitelik dizesi, hedef öğeyi içeren modülü, sınıfı veya yapıyı kesin olarak belirtmelidir. Kapsayıcı, genellikle bir ad alanı olan başka bir kapsayan öğede bulunabilir. Nitelik dizesinde içerilen birkaç öğe eklemeniz gerekebilir.  
   
-#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>To access a declared element by qualifying its name  
+#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>Adı niteleyerek, belirtilen bir öğeye erişmek için  
   
-1. Determine the location in which the element has been defined. This might include a namespace, or even a hierarchy of namespaces. Within the lowest-level namespace, the element must be contained in a module, class, or structure.  
+1. Öğenin tanımlandığı konumu saptayın. Bu, bir ad alanı ya da bir ad uzayı hiyerarşisi içerebilir. En düşük düzey ad alanı içinde, öğe bir modül, sınıf veya yapıda bulunmalıdır.  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2. Determine a qualification path based on the target element's location. Start with the highest-level namespace, proceed to the lowest-level namespace, and end with the module, class, or structure containing the target element. Each element in the path must contain the element that follows it.  
+2. Hedef öğenin konumuna göre bir nitelik yolu belirleme. En üst düzey ad alanıyla başlayın, en düşük düzey ad alanına ilerleyin ve hedef öğeyi içeren modül, sınıf ya da yapıyla sonlandırın. Yoldaki her öğe, takip eden öğesi içermelidir.  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3. Prepare the qualification string for the target element. Place a period (`.`) after every element in the path. Your application must have access to every element in your qualification string.  
+3. Hedef öğe için nitelik dizesini hazırlayın. Yoldaki her öğeden sonra bir nokta (`.`) koyun. Uygulamanızın, nitelik dizinizdeki her öğeye erişimi olmalıdır.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4. Write the expression or assignment statement referring to the target element in the normal way.  
+4. Hedef öğeye başvuran ifade veya atama deyimini normal şekilde yazın.  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5. Precede the target element name with the qualification string. The name should immediately follow the period (`.`) that follows the module, class, or structure that contains the element.  
+5. Hedef öğe adından önce nitelik dizesiyle önce. Ad, öğeyi içeren modülü, sınıfı ya da yapıyı izleyen süreyi (`.`) hemen izlemelidir.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,9 +93,9 @@ End Module
     End Module  
     ```  
   
-6. The compiler uses the qualification string to find a clear, unambiguous declaration to which it can match the target element reference.  
+6. Derleyici, hedef öğe başvurusuyla eşleşlebileceği açık, belirsiz bir bildirim bulmak için nitelik dizesini kullanır.  
   
- You might also have to qualify a name reference if your application has access to more than one programming element that has the same name. For example, the <xref:System.Windows.Forms> and <xref:System.Web.UI.WebControls> namespaces both contain a `Label` class (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> and <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). If your application uses both, or if it defines its own `Label` class, you must distinguish the different `Label` objects. Include the namespace or import alias in the variable declaration. The following example uses the import alias.  
+ Ayrıca, uygulamanızın aynı ada sahip birden fazla programlama öğesine erişimi varsa, bir ad başvurusunu nitelemeniz gerekebilir. Örneğin, <xref:System.Windows.Forms> ve <xref:System.Web.UI.WebControls> ad alanları, bir `Label` sınıfı (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> ve <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>) içerir. Uygulamanız her ikisini de kullanıyorsa veya kendi `Label` sınıfını tanımlıyorsa, farklı `Label` nesnelerini ayırt etmeniz gerekir. Ad alanını veya içeri aktarma diğer adını değişken bildirimine ekleyin. Aşağıdaki örnek, içeri aktarma diğer adını kullanır.  
   
 ```vb  
 ' The following statement must precede all your declarations.  
@@ -104,21 +104,21 @@ Imports win = System.Windows.Forms, web = System.Web.UI.WebControls
 Dim winLabel As New win.Label()  
 ```  
   
-## <a name="members-of-other-containing-elements"></a>Members of Other Containing Elements  
- When you use a nonshared member of another class or structure, you must first qualify the member name with a variable or expression that points to an instance of the class or structure. In the following example, `demoClass` is an instance of a class named `class1`.  
+## <a name="members-of-other-containing-elements"></a>Diğer öğeleri Içeren Üyeler  
+ Başka bir sınıfın veya yapının paylaşılmayan bir üyesini kullandığınızda, önce üye adını bir sınıf veya yapının örneğine işaret eden bir değişkenle veya ifadeyle nitelemeniz gerekir. Aşağıdaki örnekte, `demoClass` `class1`adlı bir sınıfın örneğidir.  
   
 ```vb  
 Dim demoClass As class1 = New class1()  
 demoClass.someSub[(argumentlist)]  
 ```  
   
- You cannot use the class name itself to qualify a member that is not [Shared](../../../../visual-basic/language-reference/modifiers/shared.md). You must first create an instance in an object variable (in this case `demoClass`) and then reference it by the variable name.  
+ [Paylaşılmayan](../../../../visual-basic/language-reference/modifiers/shared.md)bir üyeyi nitelemek için sınıf adının kendisini kullanamazsınız. Önce bir nesne değişkeninde bir örnek oluşturmanız gerekir (Bu durumda `demoClass`) ve ardından değişken adına göre başvurmalısınız.  
   
- If a class or structure has a `Shared` member, you can qualify that member either with the class or structure name or with a variable or expression that points to an instance.  
+ Bir sınıf veya yapının `Shared` üyesi varsa, bu üyeyi sınıf veya yapı adıyla veya bir örneğe işaret eden bir değişkenle ya da ifadeyle niteleyebilirsiniz.  
   
- A module does not have any separate instances, and all its members are `Shared` by default. Therefore, you qualify a module member with the module name.  
+ Bir modül ayrı örneklere sahip değildir ve tüm üyeleri varsayılan olarak `Shared`. Bu nedenle bir modül üyesini modül adıyla niteleyebilirsiniz.  
   
- The following example shows qualified references to module member procedures. The example declares two `Sub` procedures, both named `perform`, in different modules in a project. Each one can be specified without qualification within its own module but must be qualified if referenced from anywhere else. Because the final reference in `module3` does not qualify `perform`, the compiler cannot resolve that reference.  
+ Aşağıdaki örnek, modül üye yordamlarına nitelikli başvuruları gösterir. Örnek, hem `perform`hem de bir projedeki farklı modüllerde bulunan iki `Sub` yordamlarını bildirir. Her biri kendi modülünde nitelenmeden belirlenebilir, ancak başka herhangi bir yerden başvuruluyorsa nitelenmelidir. `module3` içindeki son başvuru `perform`uygun olmadığından, derleyici bu başvuruyu çözemez.  
   
 ```vb  
 ' Assume these three modules are all in the same assembly.  
@@ -149,10 +149,10 @@ Module module3
 End Module  
 ```  
   
-## <a name="references-to-projects"></a>References to Projects  
- To use [Public](../../../../visual-basic/language-reference/modifiers/public.md) elements defined in another project, you must first set a *reference* to that project's assembly or type library. To set a reference, click **Add Reference** on the **Project** menu, or use the [-reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) command-line compiler option.  
+## <a name="references-to-projects"></a>Projelere başvurular  
+ Başka bir projede tanımlanmış [ortak](../../../../visual-basic/language-reference/modifiers/public.md) öğeleri kullanmak için, önce bu projenin derlemesine veya tür kitaplığına bir *başvuru* ayarlamanız gerekir. Bir başvuru ayarlamak için **Proje** menüsünde **Başvuru Ekle** ' ye tıklayın veya [-Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) komut satırı derleyici seçeneğini kullanın.  
   
- For example, you can use the XML object model of the .NET Framework. If you set a reference to the <xref:System.Xml> namespace, you can declare and use any of its classes, such as <xref:System.Xml.XmlDocument>. The following example uses <xref:System.Xml.XmlDocument>.  
+ Örneğin, .NET Framework XML nesne modelini kullanabilirsiniz. <xref:System.Xml> ad alanına bir başvuru ayarlarsanız, <xref:System.Xml.XmlDocument>gibi sınıflarından herhangi birini bildirebilir ve kullanabilirsiniz. Aşağıdaki örnek <xref:System.Xml.XmlDocument>kullanır.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -160,8 +160,8 @@ End Module
 Dim xDoc As System.Xml.XmlDocument  
 ```  
   
-## <a name="importing-containing-elements"></a>Importing Containing Elements  
- You can use the [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to *import* the namespaces that contain the modules or classes that you want to use. This enables you to refer to the elements defined in an imported namespace without fully qualifying their names. The following example rewrites the previous example to import the <xref:System.Xml> namespace.  
+## <a name="importing-containing-elements"></a>Içerilen öğeleri içeri aktarma  
+ Kullanmak istediğiniz modülleri veya sınıfları içeren ad alanlarını *içeri aktarmak* Için [Imports Ifadesini (.net ad alanı ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) kullanabilirsiniz. Bu, adlarını tamamen nitelemeden içeri aktarılan bir ad alanında tanımlanan öğelere başvurmanızı sağlar. Aşağıdaki örnek, <xref:System.Xml> ad alanını içeri aktarmak için önceki örneği yeniden yazar.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -171,7 +171,7 @@ Imports System.Xml
 Dim xDoc As XmlDocument  
 ```  
   
- In addition, the `Imports` statement can define an *import alias* for each imported namespace. This can make the source code shorter and easier to read. The following example rewrites the previous example to use `xD` as an alias for the <xref:System.Xml> namespace.  
+ Ayrıca, `Imports` ifade, içeri aktarılan her ad alanı için bir *içeri aktarma diğer adı* tanımlayabilir. Bu, kaynak kodu daha kısa ve daha kolay okunabilir hale getirir. Aşağıdaki örnek, <xref:System.Xml> ad alanı için bir diğer ad olarak `xD` kullanmak için önceki örneği yeniden yazar.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -181,17 +181,17 @@ Imports xD = System.Xml
 Dim xDoc As xD.XmlDocument  
 ```  
   
- The `Imports` statement does not make elements from other projects available to your application. That is, it does not take the place of setting a reference. Importing a namespace just removes the requirement to qualify the names defined in that namespace.  
+ `Imports` ifade, uygulamanız için kullanılabilir olan diğer projelerden öğe yapmaz. Diğer bir deyişle, bir başvuru ayarlamanın yerini almaz. Bir ad alanını içeri aktarmak, bu ad alanında tanımlanan adları nitelendirmek için gereken gereksinimi ortadan kaldırır.  
   
- You can also use the `Imports` statement to import modules, classes, structures, and enumerations. You can then use the members of such imported elements without qualification. However, you must always qualify nonshared members of classes and structures with a variable or expression that evaluates to an instance of the class or structure.  
+ Ayrıca, modülleri, sınıfları, yapıları ve numaralandırmalar içeri aktarmak için `Imports` ifadesini de kullanabilirsiniz. Daha sonra, bu içeri aktarılan öğelerin üyelerini nitelik olmadan kullanabilirsiniz. Ancak, sınıfların ve yapıların paylaşılmayan üyelerini her zaman, sınıf veya yapının bir örneğini değerlendiren bir değişkenle veya ifadeyle nitelemeniz gerekir.  
   
 ## <a name="naming-guidelines"></a>Adlandırma Kuralları  
- When you define two or more programming elements that have the same name, a *name ambiguity* can result when the compiler attempts to resolve a reference to that name. If more than one definition is in scope, or if no definition is in scope, the reference is irresolvable. For an example, see "Qualified Reference Example" on this Help page.  
+ Aynı ada sahip iki veya daha fazla programlama öğesi tanımladığınızda, derleyici bu ada bir başvuruyu çözmeyi denediğinde bir *ad belirsizliğe* neden olabilir. Kapsam içinde birden fazla tanım varsa veya kapsam içinde bir tanım yoksa, başvuru ırıolarak çözülebilir. Bir örnek için, bu Yardım sayfasında "nitelikli başvuru örneği" başlığına bakın.  
   
- You can avoid name ambiguity by giving all your elements unique names. Then you can make reference to any element without having to qualify its name with a namespace, module, or class. You also reduce the chances of accidentally referring to the wrong element.  
+ Tüm öğelerinizi benzersiz adlara vererek ad belirsizliğe engel olabilirsiniz. Daha sonra, adını bir ad alanı, modül veya sınıf ile nitelendirmek zorunda kalmadan herhangi bir öğeye başvuru yapabilirsiniz. Yanlışlıkla yanlış öğeye başvurma olasılığını da azaltabilirsiniz.  
   
 ## <a name="shadowing"></a>Gölge Kullanım  
- When two programming elements share the same name, one of them can hide, or *shadow*, the other one. A shadowed element is not available for reference; instead, when your code uses the shadowed element name, the Visual Basic compiler resolves it to the shadowing element. For a more detailed explanation with examples, see [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ İki programlama öğesi aynı adı paylaşıyorsa, bunlardan biri diğer birini gizleyebilir veya *gölgelendirebilir*. Gölgelendirilmiş bir öğe başvuru için kullanılamaz; Bunun yerine, kodunuz gölgeli öğe adını kullandığında, Visual Basic derleyici onu gölgeleme öğesine çözer. Örneklerle ilgili daha ayrıntılı bir açıklama için bkz. [gölgeleme Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

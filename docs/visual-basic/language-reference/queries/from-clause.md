@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343772"
 ---
 # <a name="from-clause-visual-basic"></a>From Tümcesi (Visual Basic)
-Specifies one or more range variables and a collection to query.  
+Bir veya daha fazla Aralık değişkenini ve sorgulanacak bir koleksiyonu belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,48 +31,48 @@ From element [ As type ] In collection [ _ ]
   
 |Terim|Tanım|  
 |---|---|  
-|`element`|Gerekli. A *range variable* used to iterate through the elements of the collection. A range variable is used to refer to each member of the `collection` as the query iterates through the `collection`. Must be an enumerable type.|  
-|`type`|İsteğe bağlı. The type of `element`. If no `type` is specified, the type of `element` is inferred from `collection`.|  
-|`collection`|Gerekli. Refers to the collection to be queried. Must be an enumerable type.|  
+|`element`|Gerekli. Koleksiyonun öğeleri boyunca yinelemek için kullanılan bir *Aralık değişkeni* . Sorgu `collection`üzerinde yineleme yaparken `collection` her üyesine başvurmak için bir Aralık değişkeni kullanılır. Sıralanabilir bir tür olmalıdır.|  
+|`type`|İsteğe bağlı. `element` öğesinin türü. `type` belirtilmemişse, `element` türü `collection`algılanır.|  
+|`collection`|Gerekli. Sorgulanacak koleksiyona başvurur. Sıralanabilir bir tür olmalıdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `From` clause is used to identify the source data for a query and the variables that are used to refer to an element from the source collection. These variables are called *range variables*. The `From` clause is required for a query, except when the `Aggregate` clause is used to identify a query that returns only aggregated results. For more information, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ `From` yan tümcesi, bir sorgunun kaynak verilerini ve kaynak koleksiyondaki bir öğeye başvurmak için kullanılan değişkenleri belirlemek için kullanılır. Bu değişkenlere *Aralık değişkenleri*denir. `From` yan tümcesi, bir sorgu için, yalnızca toplanmış sonuçlar döndüren bir sorguyu belirlemek için kullanılan `Aggregate` yan tümcesi dışında zorunludur. Daha fazla bilgi için bkz. [toplama yan tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- You can specify multiple `From` clauses in a query to identify multiple collections to be joined. When multiple collections are specified, they are iterated over independently, or you can join them if they are related. You can join collections implicitly by using the `Select` clause, or explicitly by using the `Join` or `Group Join` clauses. As an alternative, you can specify multiple range variables and collections in a single `From` clause, with each related range variable and collection separated from the others by a comma. The following code example shows both syntax options for the `From` clause.  
+ Birleştirilecek birden çok koleksiyonu belirlemek için bir sorguda birden çok `From` yan tümce belirtebilirsiniz. Birden çok koleksiyon belirtildiğinde, bunlar birbirinden bağımsız olarak yinelenir veya ilişkili olmaları durumunda bunlara katılabilirler. `Select` yan tümcesini kullanarak veya açıkça `Join` veya `Group Join` yan tümceleri kullanarak koleksiyonları birleştirebilirsiniz. Alternatif olarak, tek bir `From` yan tümcesinde birden çok Aralık değişkeni ve koleksiyonlar belirterek, her ilgili Aralık değişkeni ve koleksiyon diğerlerinden virgülle ayrılır. Aşağıdaki kod örneğinde `From` yan tümcesi için her iki sözdizimi seçeneği gösterilmektedir.  
   
  [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
- The `From` clause defines the scope of a query, which is similar to the scope of a `For` loop. Therefore, each `element` range variable in the scope of a query must have a unique name. Because you can specify multiple `From` clauses for a query, subsequent `From` clauses can refer to range variables in the `From` clause, or they can refer to range variables in a previous `From` clause. For example, the following example shows a nested `From` clause where the collection in the second clause is based on a property of the range variable in the first clause.  
+ `From` yan tümcesi, bir `For` döngüsünün kapsamına benzer bir sorgunun kapsamını tanımlar. Bu nedenle, bir sorgunun kapsamındaki her `element` Aralık değişkeni benzersiz bir ada sahip olmalıdır. Bir sorgu için birden çok `From` yan tümce belirtebileceğiniz için, sonraki `From` yan tümceleri `From` yan tümcesindeki Aralık değişkenlerine başvurabilir veya önceki bir `From` yan tümcesindeki Aralık değişkenlerine başvurabilirler. Örneğin, aşağıdaki örnek, ikinci yan tümcesindeki koleksiyonun ilk yan tümcesindeki Range değişkeninin bir özelliğine dayandığı iç içe geçmiş bir `From` yan tümcesini gösterir.  
   
  [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
- Each `From` clause can be followed by any combination of additional query clauses to refine the query. You can refine the query in the following ways:  
+ Her `From` yan tümcesine sorgu iyileştirmek için ek sorgu yan tümcelerinin herhangi bir birleşimi gelebilir. Sorguyu aşağıdaki yollarla geliştirebilirsiniz:  
   
-- Combine multiple collections implicitly by using the `From` and `Select` clauses, or explicitly by using the `Join` or `Group Join` clauses.  
+- Birden çok koleksiyonu dolaylı olarak `From` ve `Select` yan tümceleri kullanarak veya `Join` ya da `Group Join` yan tümcelerini kullanarak açıkça birleştirin.  
   
-- Use the `Where` clause to filter the query result.  
+- Sorgu sonucunu filtrelemek için `Where` yan tümcesini kullanın.  
   
-- Sort the result by using the `Order By` clause.  
+- `Order By` yan tümcesini kullanarak sonucu sıralayın.  
   
-- Group similar results together by using the `Group By` clause.  
+- Benzer sonuçları, `Group By` yan tümcesini kullanarak birlikte gruplandırın.  
   
-- Use the `Aggregate` clause to identify aggregate functions to evaluate for the whole query result.  
+- Tüm sorgu sonucu için değerlendirmek üzere toplama işlevlerini belirlemek için `Aggregate` yan tümcesini kullanın.  
   
-- Use the `Let` clause to introduce an iteration variable whose value is determined by an expression instead of a collection.  
+- Değeri bir koleksiyon yerine bir ifade tarafından belirlenen bir yineleme değişkenini tanıtmak için `Let` yan tümcesini kullanın.  
   
-- Use the `Distinct` clause to ignore duplicate query results.  
+- Yinelenen sorgu sonuçlarını yoksaymak için `Distinct` yan tümcesini kullanın.  
   
-- Identify parts of the result to return by using the `Skip`, `Take`, `Skip While`, and `Take While` clauses.  
+- `Skip`, `Take`, `Skip While`ve `Take While` yan tümcelerini kullanarak döndürülecek sonuç parçalarını belirler.  
   
 ## <a name="example"></a>Örnek  
- The following query expression uses a `From` clause to declare a range variable `cust` for each `Customer` object in the `customers` collection. The `Where` clause uses the range variable to restrict the output to customers from the specified region. The `For Each` loop displays the company name for each customer in the query result.  
+ Aşağıdaki sorgu ifadesi, `customers` koleksiyonundaki her bir `Customer` nesnesi için bir Aralık değişkeni `cust` bildirmek üzere bir `From` yan tümcesi kullanır. `Where` yan tümcesi, belirtilen bölgedeki müşterilere çıktıyı kısıtlamak için Aralık değişkenini kullanır. `For Each` döngüsü, sorgu sonucundaki her bir müşteri için şirket adını görüntüler.  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
-- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [For Each...Next Deyimi](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
 - [For...Next Deyimi](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)

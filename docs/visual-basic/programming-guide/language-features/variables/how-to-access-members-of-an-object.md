@@ -14,65 +14,65 @@ ms.locfileid: "74348662"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Nasıl yapılır: Bir Nesnenin Üyelerine Erişme (Visual Basic)
 
-When you have an object variable that refers to an object, you often want to work with the members of that object, such as its methods, properties, fields, and events. For example, once you have created a new <xref:System.Windows.Forms.Form> object, you might want to set its <xref:System.Windows.Forms.Control.Text%2A> property or call its <xref:System.Windows.Forms.Control.Focus%2A> method.
+Bir nesneye başvuran bir nesne değişkeniniz varsa, genellikle bu nesnenin, yöntemleri, özellikleri, alanları ve olayları gibi üyeleriyle çalışmak istersiniz. Örneğin, yeni bir <xref:System.Windows.Forms.Form> nesnesi oluşturduktan sonra, <xref:System.Windows.Forms.Control.Text%2A> özelliğini ayarlamak veya <xref:System.Windows.Forms.Control.Focus%2A> metodunu çağırmak isteyebilirsiniz.
 
-## <a name="accessing-members"></a>Accessing Members
+## <a name="accessing-members"></a>Üyelere erişme
 
-You access an object's members through the variable that refers to it.
+Bir nesnenin üyelerine, ona başvuran değişken aracılığıyla erişirsiniz.
 
-#### <a name="to-access-members-of-an-object"></a>To access members of an object
+#### <a name="to-access-members-of-an-object"></a>Bir nesnenin üyelerine erişmek için
 
-- Use the member-access operator (`.`) between the object variable name and the member name.
+- Nesne değişkeni adı ve üye adı arasındaki üye erişim işlecini (`.`) kullanın.
 
     ```vb
     currentText = newForm.Text
     ```
 
-    If the member is [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), you do not need a variable to access it.
+    Üye [paylaşılmışsa](../../../../visual-basic/language-reference/modifiers/shared.md), ona erişmek için bir değişkene ihtiyacınız yoktur.
 
-## <a name="accessing-members-of-an-object-of-known-type"></a>Accessing Members of an Object of Known Type
+## <a name="accessing-members-of-an-object-of-known-type"></a>Bilinen türdeki bir nesnenin üyelerine erişme
 
-If you know the type of an object at compile time, you can use *early binding* for a variable that refers to it.
+Derleme zamanında bir nesnenin türünü biliyorsanız, ona başvuran bir değişken için *erken bağlamayı* kullanabilirsiniz.
 
-#### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>To access members of an object for which you know the type at compile time
+#### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>Derleme zamanında türünü bildiğiniz bir nesnenin üyelerine erişmek için
 
-1. Declare the object variable to be of the type of the object you intend to assign to the variable.
+1. Değişkene atamak istediğiniz nesnenin türünün nesne değişkenini bildirin.
 
     ```vb
     Dim extraForm As System.Windows.Forms.Form
     ```
 
-    With `Option Strict On`, you can assign only <xref:System.Windows.Forms.Form> objects (or objects of a type derived from <xref:System.Windows.Forms.Form>) to `extraForm`. If you have defined a class or structure with a widening `CType` conversion to <xref:System.Windows.Forms.Form>, you can also assign that class or structure to `extraForm`.
+    `Option Strict On`, yalnızca <xref:System.Windows.Forms.Form> nesneleri (veya <xref:System.Windows.Forms.Form>türetilen bir türdeki nesneleri `extraForm`' a atayabilirsiniz. <xref:System.Windows.Forms.Form>için genişleyen `CType` dönüştürmeye sahip bir sınıf veya yapı tanımladıysanız, bu sınıfı veya yapıyı da `extraForm`atayabilirsiniz.
 
-2. Use the member-access operator (`.`) between the object variable name and the member name.
+2. Nesne değişkeni adı ve üye adı arasındaki üye erişim işlecini (`.`) kullanın.
 
     ```vb
     extraForm.Show()
     ```
 
-    You can access all of the methods and properties specific to the <xref:System.Windows.Forms.Form> class, no matter what the `Option Strict` setting is.
+    `Option Strict` ayarının ne olduğuna bakılmaksızın <xref:System.Windows.Forms.Form> sınıfına özgü tüm yöntemlere ve özelliklere erişebilirsiniz.
 
-## <a name="accessing-members-of-an-object-of-unknown-type"></a>Accessing Members of an Object of Unknown Type
+## <a name="accessing-members-of-an-object-of-unknown-type"></a>Bilinmeyen türdeki bir nesnenin üyelerine erişme
 
-If you do not know the type of an object at compile time, you must use *late binding* for any variable that refers to it.
+Derleme zamanında bir nesnenin türünü bilmiyor değilseniz, ona başvuran herhangi bir değişken için *geç bağlamayı* kullanmanız gerekir.
 
-#### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>To access members of an object for which you do not know the type at compile time
+#### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>Derleme zamanında türünü tanımadığınız bir nesnenin üyelerine erişmek için
 
-1. Declare the object variable to be of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). (Declaring a variable as `Object` is the same as declaring it as <xref:System.Object?displayProperty=nameWithType>.)
+1. Nesne [veri türünde](../../../../visual-basic/language-reference/data-types/object-data-type.md)olacak nesne değişkenini bildirin. (Bir değişkeni `Object` olarak bildirmek, <xref:System.Object?displayProperty=nameWithType>olarak bildirme ile aynıdır.)
 
     ```vb
     Dim someControl As Object
     ```
 
-    With `Option Strict On`, you can access only the members that are defined on the <xref:System.Object> class.
+    `Option Strict On`, yalnızca <xref:System.Object> sınıfında tanımlanmış üyelere erişebilirsiniz.
 
-2. Use the member-access operator (`.`) between the object variable name and the member name.
+2. Nesne değişkeni adı ve üye adı arasındaki üye erişim işlecini (`.`) kullanın.
 
     ```vb
     someControl.GetType()
     ```
 
-    To be able to access the members of any object you assign to the object variable, you must set `Option Strict Off`. When you do this, the compiler cannot guarantee that a given member is exposed by the object you assign to the variable. If the object does not expose a member you attempt to access, a <xref:System.MemberAccessException> exception occurs.
+    Nesne değişkenine atadığınız herhangi bir nesnenin üyelerine erişebilmek için `Option Strict Off`ayarlamanız gerekir. Bunu yaptığınızda derleyici, belirli bir üyenin değişkene atadığınız nesne tarafından açığa çıkarılabileceği garantisi vermez. Nesne, erişmeye çalıştığınız bir üyeyi kullanıma sunmadığından, bir <xref:System.MemberAccessException> özel durumu oluşur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: Validating Passwords Complexity
+title: Parola karmaşıklığı doğrulanıyor
 ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
@@ -12,38 +12,38 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348323"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>İzlenecek yol: Parolaların Karmaşık Olduğunu Doğrulama (Visual Basic)
-This method checks for some strong-password characteristics and updates a string parameter with information about which checks the password fails.  
+Bu yöntem, bazı güçlü parola özelliklerini denetler ve parolanın başarısız olup olmadığını kontrol eden bilgilerle bir dize parametresini güncelleştirir.  
   
- Passwords can be used in a secure system to authorize a user. However, the passwords must be difficult for unauthorized users to guess. Attackers can use a *dictionary attack* program, which iterates through all of the words in a dictionary (or multiple dictionaries in different languages) and tests whether any of the words work as a user's password. Weak passwords such as "Yankees" or "Mustang" can be guessed quickly. Stronger passwords, such as "?You'L1N3vaFiNdMeyeP@sSWerd!", are much less likely to be guessed. A password-protected system should ensure that users choose strong passwords.  
+ Parolalar, bir kullanıcıyı yetkilendirmek için güvenli bir sistemde kullanılabilir. Ancak, yetkisiz kullanıcıların tahmin edilmesi için parolaların kullanılması zor olmalıdır. Saldırganlar bir Sözlükteki tüm sözcükleri (veya farklı dillerdeki birden çok sözlükleri) kullanarak bir *sözlük saldırı* programı kullanabilir ve sözcüklerin birinin Kullanıcı parolası olarak çalışıp çalışmadığını sınar. "Yankees" veya "Mustang" gibi zayıf parolalar hızlı bir şekilde tahmin edilebilir. Daha güçlü parolalar (örneğin, "? 'L1N3vaFiNdMeyeP@sSWerd! ", tahmin edilebilir olma olasılığını çok daha az. Parola korumalı bir sistem, kullanıcıların güçlü parolalar seçmesini sağlamalıdır.  
   
- A strong password is complex (containing a mixture of uppercase, lowercase, numeric, and special characters) and is not a word. This example demonstrates how to verify complexity.  
+ Güçlü bir parola karmaşıktır (büyük harf, küçük harf, sayısal ve özel karakterlerin bir karışımını içeren) ve bir sözcük değildir. Bu örnek, karmaşıklığın nasıl doğrulanacağını göstermektedir.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Call this method by passing the string that contains that password.  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu parolayı içeren dizeyi geçirerek bu yöntemi çağırın.  
   
- This example requires:  
+ Bu örnek şunları gerektirir:  
   
-- Access to the members of the <xref:System.Text.RegularExpressions> namespace. Add an `Imports` statement if you are not fully qualifying member names in your code. For more information, see [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- <xref:System.Text.RegularExpressions> ad alanının üyelerine erişin. Kodunuzda üye adlarını tam olarak nitedıysanız `Imports` bir ifade ekleyin. Daha fazla bilgi için bkz. [Imports açıklaması (.net ad alanı ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Güvenlik  
- If you're moving the password across a network, you need to use a secure method for transferring data. For more information, see [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
+ Parolayı bir ağ üzerinden taşıyorsanız, verileri aktarmak için güvenli bir yöntem kullanmanız gerekir. Daha fazla bilgi için bkz. [ASP.NET Web uygulaması güvenliği](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
- You can improve the accuracy of the `ValidatePassword` function by adding additional complexity checks:  
+ Daha fazla karmaşıklık denetimi ekleyerek `ValidatePassword` işlevinin doğruluğunu geliştirebilirsiniz:  
   
-- Compare the password and its substrings against the user's name, user identifier, and an application-defined dictionary. In addition, treat visually similar characters as equivalent when performing the comparisons. For example, treat the letters "l" and "e" as equivalent to the numerals "1" and "3".  
+- Parolayı ve alt dizelerini kullanıcının adı, Kullanıcı tanımlayıcısı ve uygulama tanımlı bir sözlükten karşılaştırın. Ayrıca, karşılaştırmaları gerçekleştirirken görsel açıdan benzer karakterleri eşdeğer olarak değerlendirin. Örneğin, "l" ve "e" harflerini "1" ve "3" sayılarıyla eşdeğer olarak değerlendirin.  
   
-- If there is only one uppercase character, make sure it is not the password's first character.  
+- Yalnızca bir büyük harf karakteri varsa, parolanın ilk karakteri olmadığından emin olun.  
   
-- Make sure that the last two characters of the password are letter characters.  
+- Parolanın son iki karakterinin harf karakter olduğundan emin olun.  
   
-- Do not allow passwords in which all the symbols are entered from the keyboard's top row.  
+- Klavyenin en üst satırından tüm simgelerin girildiği parolalara izin vermeyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Text.RegularExpressions.Regex>
-- [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))
+- [ASP.NET Web uygulaması güvenliği](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))

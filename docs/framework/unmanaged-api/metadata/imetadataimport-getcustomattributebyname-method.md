@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437688"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName Yöntemi
-Gets the custom attribute, given its name and owner.  
+Adı ve sahibi verilen özel özniteliği alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,28 +38,28 @@ HRESULT GetCustomAttributeByName (
   
 ## <a name="parameters"></a>Parametreler  
  `tkObj`  
- [in] A metadata token representing the object that owns the custom attribute.  
+ 'ndaki Özel özniteliğin sahibi olan nesneyi temsil eden bir meta veri belirteci.  
   
  `szName`  
- [in] The name of the custom attribute.  
+ 'ndaki Özel özniteliğin adı.  
   
  `ppData`  
- [out] A pointer to an array of data that is the value of the custom attribute.  
+ dışı Özel özniteliğin değeri olan bir veri dizisine yönelik bir işaretçi.  
   
  `pcbData`  
- [out] The size in bytes of the data returned in *`ppData`.  
+ dışı *`ppData`döndürülen verilerin bayt cinsinden boyutu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- It is legal to define multiple custom attributes for the same owner; they may even have the same name. However, `GetCustomAttributeByName` returns only one instance. (`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.  
+ Aynı sahip için birden çok özel öznitelik tanımlamak geçerlidir; aynı ada bile sahip olabilirler. Ancak `GetCustomAttributeByName` yalnızca bir örnek döndürür. (`GetCustomAttributeByName`, karşılaştığı ilk örneği döndürür.) Özel bir özniteliğin tüm örneklerini bulmak için, [IMetaDataImport:: EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) yöntemini çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

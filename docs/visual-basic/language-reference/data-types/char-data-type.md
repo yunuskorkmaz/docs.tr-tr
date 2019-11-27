@@ -19,25 +19,25 @@ ms.locfileid: "74344056"
 ---
 # <a name="char-data-type-visual-basic"></a>Char Veri Türü (Visual Basic)
 
-Holds unsigned 16-bit (2-byte) code points ranging in value from 0 through 65535. Each *code point*, or character code, represents a single Unicode character.
+0 ile 65535 arasında değer değişen işaretsiz 16 bit (2 baytlık) kod noktalarını tutar. Her *kod noktası*veya karakter kodu, tek bir Unicode karakteri temsil eder.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Use the `Char` data type when you need to hold only a single character and do not need the overhead of `String`. In some cases you can use `Char()`, an array of `Char` elements, to hold multiple characters.
+Yalnızca tek bir karakteri tutmanız gerektiğinde ve `String`ek yüküne gerek duymadığınızda `Char` veri türünü kullanın. Bazı durumlarda, birden çok karakteri tutmak için `Char` öğelerinden oluşan bir dizi `Char()`kullanabilirsiniz.
 
-The default value of `Char` is the character with a code point of 0.
+`Char` varsayılan değeri, 0 kod noktası olan karakterdir.
 
-## <a name="unicode-characters"></a>Unicode Characters
+## <a name="unicode-characters"></a>Unicode karakterler
 
-The first 128 code points (0–127) of Unicode correspond to the letters and symbols on a standard U.S. keyboard. These first 128 code points are the same as those the ASCII character set defines. The second 128 code points (128–255) represent special characters, such as Latin-based alphabet letters, accents, currency symbols, and fractions. Unicode uses the remaining code points (256-65535) for a wide variety of symbols, including worldwide textual characters, diacritics, and mathematical and technical symbols.
+Unicode 'un ilk 128 kod noktası (0 – 127), standart bir ABD klavyesinde bulunan harflere ve simgelere karşılık gelir. Bu ilk 128 kod noktası, ASCII karakter kümesi tarafından tanımlananlarla aynıdır. İkinci 128 kod noktaları (128 – 255) Latin tabanlı alfabe harfleri, vurgular, para birimi sembolleri ve kesirler gibi özel karakterleri temsil eder. Unicode, dünya çapındaki metin karakterleri, Aksanlar ve matematik ve teknik semboller dahil olmak üzere çok çeşitli semboller için kalan kod noktalarını (256-65535) kullanır.
 
-You can use methods like <xref:System.Char.IsDigit%2A> and <xref:System.Char.IsPunctuation%2A> on a `Char` variable to determine its Unicode classification.
+<xref:System.Char.IsDigit%2A> ve <xref:System.Char.IsPunctuation%2A> gibi yöntemleri, bir `Char` değişkeninde, Unicode sınıflandırmasını belirleyebilmeniz için kullanabilirsiniz.
 
 ## <a name="type-conversions"></a>Tür Dönüştürmeleri
 
-Visual Basic does not convert directly between `Char` and the numeric types. You can use the <xref:Microsoft.VisualBasic.Strings.Asc%2A> or <xref:Microsoft.VisualBasic.Strings.AscW%2A> function to convert a `Char` value to an `Integer` that represents its code point. You can use the <xref:Microsoft.VisualBasic.Strings.Chr%2A> or <xref:Microsoft.VisualBasic.Strings.ChrW%2A> function to convert an `Integer` value to a `Char` that has that code point.
+Visual Basic, `Char` ve sayısal türler arasında doğrudan dönüştürmez. <xref:Microsoft.VisualBasic.Strings.Asc%2A> veya <xref:Microsoft.VisualBasic.Strings.AscW%2A> işlevini, bir `Char` değerini, kod noktasını temsil eden bir `Integer` dönüştürmek için kullanabilirsiniz. <xref:Microsoft.VisualBasic.Strings.Chr%2A> veya <xref:Microsoft.VisualBasic.Strings.ChrW%2A> işlevini, bir `Integer` değerini bu kod noktasına sahip bir `Char` dönüştürmek için kullanabilirsiniz.
 
-If the type checking switch (the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)) is on, you must append the literal type character to a single-character string literal to identify it as the `Char` data type. Aşağıdaki örnek bunu göstermektedir. The first assignment to the `charVar` variable generates compiler error [BC30512](../../misc/bc30512.md) because `Option Strict` is on. The second compiles successfully because the `c` literal type character identifies the literal as a `Char` value.
+Tür denetimi anahtarı ( [katı Ifade seçeneği](../../../visual-basic/language-reference/statements/option-strict-statement.md)) açık ise, `Char` veri türü olarak tanımlamak için, değişmez değer türü karakterini tek karakterli bir dize sabit değerine eklemeniz gerekir. Aşağıdaki örnek bunu göstermektedir. `charVar` değişkenine ilk atama, `Option Strict` açık olduğu için derleyici hatası [BC30512](../../misc/bc30512.md) oluşturur. `c` değişmez değer türü karakteri, sabit değeri bir `Char` değeri olarak tanımladığı için ikinci derleme başarıyla derlenir.
 
 ```vb
 Option Strict On
@@ -57,15 +57,15 @@ End Module
 
 ## <a name="programming-tips"></a>Programlama İpuçları
 
-- **Negative Numbers.** `Char` is an unsigned type and cannot represent a negative value. In any case, you should not use `Char` to hold numeric values.
+- **Negatif sayılar.** `Char` işaretsiz bir tür ve negatif bir değer temsil edemez. Herhangi bir durumda, sayısal değerleri tutmak için `Char` kullanmamalısınız.
 
-- **Interop Considerations.** If you interface with components not written for the .NET Framework, for example Automation or COM objects, remember that character types have a different data width (8 bits) in other environments. If you pass an 8-bit argument to such a component, declare it as `Byte` instead of `Char` in your new Visual Basic code.
+- **Birlikte çalışma konuları.** Örneğin Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle arabiriminiz varsa, başka ortamlarda karakter türlerinin farklı bir veri genişliğine (8 bit) sahip olduğunu unutmayın. Böyle bir bileşene 8 bitlik bir bağımsız değişken geçirirseniz, bunu yeni Visual Basic kodunuzda `Char` yerine `Byte` olarak bildirin.
 
-- **Widening.** The `Char` data type widens to `String`. This means you can convert `Char` to `String` and will not encounter a <xref:System.OverflowException?displayProperty=nameWithType>.
+- **Kan.** `Char` veri türü `String`widens. Bu, `Char` `String` dönüştürebileceğiniz ve bir <xref:System.OverflowException?displayProperty=nameWithType>karşılaşmayacak anlamına gelir.
 
-- **Type Characters.** Appending the literal type character `C` to a single-character string literal forces it to the `Char` data type. `Char` has no identifier type character.
+- **Tür karakterleri.** Tek karakterli bir dize sabit değerine `C` değişmez değer türü karakteri eklemek, bunu `Char` veri türüne zorlar. `Char` tanımlayıcı türü karakteri yok.
 
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Char?displayProperty=nameWithType> structure.
+- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Char?displayProperty=nameWithType> yapısıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

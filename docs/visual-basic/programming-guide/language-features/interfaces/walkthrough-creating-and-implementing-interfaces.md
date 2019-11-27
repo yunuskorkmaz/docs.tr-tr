@@ -16,96 +16,96 @@ ms.locfileid: "74345033"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>İzlenecek yol: Arabirimleri Oluşturma ve Uygulama (Visual Basic)
 
-Interfaces describe the characteristics of properties, methods, and events, but leave the implementation details up to structures or classes.  
+Arabirimler özellikler, Yöntemler ve olayların özelliklerini ve uygulama ayrıntılarını yapılar veya sınıflar için bir şekilde bırakır.  
   
- This walkthrough demonstrates how to declare and implement an interface.  
+ Bu izlenecek yol, bir arabirimin nasıl bildirileceğini ve uygulanacağını gösterir.  
   
 > [!NOTE]
-> This walkthrough doesn't provide information about how to create a user interface.  
+> Bu izlenecek yol, Kullanıcı arabirimi oluşturma hakkında bilgi sağlamaz.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="to-define-an-interface"></a>To define an interface
+## <a name="to-define-an-interface"></a>Bir arabirim tanımlamak için
   
-1. Open a new Visual Basic Windows Application project.  
+1. Yeni bir Visual Basic Windows uygulaması projesi açın.  
   
-2. Add a new module to the project by clicking **Add Module** on the **Project** menu.  
+2. **Proje** menüsünde **Modül Ekle** ' ye tıklayarak projeye yeni bir modül ekleyin.  
   
-3. Name the new module `Module1.vb` and click **Add**. The code for the new module is displayed.  
+3. Yeni modülü `Module1.vb` adlandırın ve **Ekle**' ye tıklayın. Yeni modülün kodu görüntülenir.  
   
-4. Define an interface named `TestInterface` within `Module1` by typing `Interface TestInterface` between the `Module` and `End Module` statements, and then pressing ENTER. The **Code Editor** indents the `Interface` keyword and adds an `End Interface` statement to form a code block.  
+4. `Module` ve `End Module` deyimleri arasında `Interface TestInterface` yazarak ve ardından ENTER ' a basarak `Module1` içinde `TestInterface` adlı bir arabirim tanımlayın. **Kod düzenleyicisi** `Interface` anahtar sözcüğünü girintiler ve bir kod bloğu oluşturmak için bir `End Interface` ifadesini ekler.  
   
-5. Define a property, method, and event for the interface by placing the following code between the `Interface` and `End Interface` statements:  
+5. `Interface` ve `End Interface` deyimleri arasına aşağıdaki kodu yerleştirerek arabirim için bir özellik, yöntem ve olay tanımlayın:  
   
      [!code-vb[VbVbalrOOP#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#98)]
   
 ## <a name="implementation"></a>Uygulama
 
- You may notice that the syntax used to declare interface members is different from the syntax used to declare class members. This difference reflects the fact that interfaces cannot contain implementation code.  
+ Arabirim üyelerini bildirmek için kullanılan sözdiziminin, sınıf üyelerini bildirmek için kullanılan sözdiziminden farklı olduğunu fark edebilirsiniz. Bu fark, arabirimlerin uygulama kodu içeremeyeceği gerçeğini yansıtır.  
   
-### <a name="to-implement-the-interface"></a>To implement the interface
+### <a name="to-implement-the-interface"></a>Arabirimi uygulamak için
   
-1. Add a class named `ImplementationClass` by adding the following statement to `Module1`, after the `End Interface` statement but before the `End Module` statement, and then pressing ENTER:  
+1. `Module1`, `End Interface` deyimden sonra, `End Module` ifadesinden önce, sonra ENTER 'a basarak `ImplementationClass` adlı bir sınıf ekleyin.  
   
      [!code-vb[VbVbalrOOP#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#99)]
   
-     If you are working within the integrated development environment, the **Code Editor** supplies a matching `End Class` statement when you press ENTER.  
+     Tümleşik geliştirme ortamı içinde çalışıyorsanız, ENTER tuşuna bastığınızda, **Kod Düzenleyicisi** eşleşen bir `End Class` ifadesini sağlar.  
   
-2. Add the following `Implements` statement to `ImplementationClass`, which names the interface the class implements:  
+2. Aşağıdaki `Implements` ifadesini, sınıfının uyguladığı arabirimi isimli `ImplementationClass`ekleyin:  
   
      [!code-vb[VbVbalrOOP#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#100)]
   
-     When listed separately from other items at the top of a class or structure, the `Implements` statement indicates that the class or structure implements an interface.  
+     Bir sınıfın veya yapının üstündeki diğer öğelerden ayrı olarak listelendiğinde, `Implements` ifade, sınıfın veya yapının bir arabirim uyguladığını gösterir.  
   
-     If you are working within the integrated development environment, the **Code Editor** implements the class members required by `TestInterface` when you press ENTER, and you can skip the next step.  
+     Tümleşik geliştirme ortamında çalışıyorsanız, **Kod Düzenleyicisi** , ENTER tuşuna bastığınızda `TestInterface` için gereken sınıf üyelerini uygular ve bir sonraki adımı atlayabilirsiniz.  
   
-3. If you are not working within the integrated development environment, you must implement all the members of the interface `MyInterface`. Add the following code to `ImplementationClass` to implement `Event1`, `Method1`, and `Prop1`:  
+3. Tümleşik geliştirme ortamında çalışmıyorsanız, `MyInterface`arabirimin tüm üyelerini uygulamanız gerekir. `Event1`, `Method1`ve `Prop1`uygulamak için aşağıdaki kodu `ImplementationClass` ekleyin:  
   
      [!code-vb[VbVbalrOOP#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#101)]
   
-     The `Implements` statement names the interface and interface member being implemented.  
+     `Implements` ifade, uygulanan arabirimi ve arabirim üyesini adlandırır.  
   
-4. Complete the definition of `Prop1` by adding a private field to the class that stored the property value:  
+4. Özellik değerini saklı sınıfa bir özel alan ekleyerek `Prop1` tanımını doldurun:  
   
      [!code-vb[VbVbalrOOP#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#102)]
   
-     Return the value of the `pval` from the property get accessor.  
+     Özellik Al erişimcisindeki `pval` değerini döndürün.  
   
      [!code-vb[VbVbalrOOP#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#103)]
   
-     Set the value of `pval` in the property set accessor.  
+     Özellik kümesi erişimcisinde `pval` değerini ayarlayın.  
   
      [!code-vb[VbVbalrOOP#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#104)]
   
-5. Complete the definition of `Method1` by adding the following code.  
+5. Aşağıdaki kodu ekleyerek `Method1` tanımını doldurun.  
   
      [!code-vb[VbVbalrOOP#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#105)]
   
-### <a name="to-test-the-implementation-of-the-interface"></a>To test the implementation of the interface
+### <a name="to-test-the-implementation-of-the-interface"></a>Arabirimin uygulamasını test etmek için
   
-1. Right-click the startup form for your project in the **Solution Explorer**, and click **View Code**. The editor displays the class for your startup form. By default, the startup form is called `Form1`.  
+1. **Çözüm Gezgini**projenizin başlangıç formuna sağ tıklayın ve **kodu görüntüle**' ye tıklayın. Düzenleyici, başlangıç formunuz için sınıfını görüntüler. Varsayılan olarak, başlangıç formu `Form1`olarak adlandırılır.  
   
-2. Add the following `testInstance` field to the `Form1` class:  
+2. Aşağıdaki `testInstance` alanını `Form1` sınıfına ekleyin:  
   
      [!code-vb[VbVbalrOOP#120](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#120)]
   
-     By declaring `testInstance` as `WithEvents`, the `Form1` class can handle its events.  
+     `testInstance` `WithEvents`olarak bildirerek `Form1` sınıfı olaylarını işleyebilir.  
   
-3. Add the following event handler to the `Form1` class to handle events raised by `testInstance`:  
+3. `testInstance`tarafından oluşturulan olayları işlemek için aşağıdaki olay işleyicisini `Form1` sınıfına ekleyin:  
   
      [!code-vb[VbVbalrOOP#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#106)]
   
-4. Add a subroutine named `Test` to the `Form1` class to test the implementation class:  
+4. Uygulama sınıfını test etmek için `Form1` sınıfına `Test` adlı bir altyordam ekleyin:  
   
      [!code-vb[VbVbalrOOP#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#107)]
   
-     The `Test` procedure creates an instance of the class that implements `MyInterface`, assigns that instance to the `testInstance` field, sets a property, and runs a method through the interface.  
+     `Test` yordamı, `MyInterface`uygulayan sınıfının bir örneğini oluşturur, bu örneği `testInstance` alanına atar, bir özelliği ayarlar ve arabirim aracılığıyla bir yöntemi çalıştırır.  
   
-5. Add code to call the `Test` procedure from the `Form1 Load` procedure of your startup form:  
+5. Başlangıç formunuzun `Form1 Load` yordamından `Test` yordamını çağırmak için kod ekleyin:  
   
      [!code-vb[VbVbalrOOP#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#108)]
   
-6. Run the `Test` procedure by pressing F5. The message "Prop1 was set to 9" is displayed. After you click OK, the message "The X parameter for Method1 is 5" is displayed. Click OK, and the message "The event handler caught the event" is displayed.  
+6. F5 tuşuna basarak `Test` yordamını çalıştırın. "Prop1 9 ' a ayarlanmıştır" iletisi görüntülenir. Tamam ' a tıkladıktan sonra, "Method1 X parametresi 5 olur" iletisi görüntülenir. Tamam ' a tıklayın ve "olay işleyicisi olayı yakalandı" iletisi görüntülenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

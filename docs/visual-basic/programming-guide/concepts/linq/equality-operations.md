@@ -9,17 +9,17 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346828"
 ---
-# <a name="equality-operations-visual-basic"></a>Equality Operations (Visual Basic)
-Two sequences whose corresponding elements are equal and which have the same number of elements are considered equal.  
+# <a name="equality-operations-visual-basic"></a>Eşitlik Işlemleri (Visual Basic)
+Karşılık gelen öğeleri eşit ve aynı sayıda öğeye sahip olan iki dizi eşit kabul edilir.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Method Name|Açıklama|Visual Basic Query Expression Syntax|Daha fazla bilgi|  
+|Yöntem adı|Açıklama|Sorgu Ifadesi söz dizimini Visual Basic|Daha Fazla Bilgi|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|SequenceEqual|Determines whether two sequences are equal by comparing elements in a pair-wise manner.|Yok.|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=nameWithType>|  
+|Sequenceeşittir|Öğelerin çift yönlü olarak karşılaştırılmasıyla iki sıranın eşit olup olmadığını belirler.|Geçerli değildir.|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)
+- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Nasıl yapılır: Iki klasörün Içeriğini karşılaştırma (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)

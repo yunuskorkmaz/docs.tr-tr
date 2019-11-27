@@ -20,31 +20,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345204"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Bir Dize Adı Kullanarak Bir Özelliği veya Yöntemi Çağırma (Visual Basic)
-In most cases, you can discover the properties and methods of an object at design time, and write code to handle them. However, in some cases you may not know about an object's properties and methods in advance, or you may just want the flexibility of enabling an end user to specify properties or execute methods at run time.  
+Çoğu durumda, tasarım zamanında bir nesnenin özelliklerini ve yöntemlerini bulabilir ve bunları işlemek için kod yazabilirsiniz. Ancak, bazı durumlarda bir nesnenin özellikleri ve yöntemleri önceden bilmiyor olabilir ya da bir son kullanıcının çalışma zamanında Özellikler belirtmesini veya yöntem yürütmesini sağlama esnekliğini isteyebilirsiniz.  
   
-## <a name="callbyname-function"></a>CallByName Function  
- Consider, for example, a client application that evaluates expressions entered by the user by passing an operator to a COM component. Suppose you are constantly adding new functions to the component that require new operators. When you use standard object access techniques, you must recompile and redistribute the client application before it could use the new operators. To avoid this, you can use the `CallByName` function to pass the new operators as strings, without changing the application.  
+## <a name="callbyname-function"></a>CallByName Işlevi  
+ Örneğin, bir COM bileşenine işleç geçirerek Kullanıcı tarafından girilen ifadeleri değerlendiren bir istemci uygulaması gibi düşünün. Yeni işleçler gerektiren bileşene sürekli olarak yeni işlevler eklediğinizi varsayalım. Standart nesne erişim tekniklerini kullandığınızda, istemci uygulamasını yeni işleçleri kullanabilmesi için yeniden derlemeniz ve yeniden dağıtmanız gerekir. Bunu önlemek için `CallByName` işlevini kullanarak, uygulamayı değiştirmeden yeni işleçleri dizeler olarak geçirebilirsiniz.  
   
- The `CallByName` function lets you use a string to specify a property or method at run time. The signature for the `CallByName` function looks like this:  
+ `CallByName` işlevi, çalışma zamanında bir özelliği veya yöntemi belirtmek için bir dize kullanmanıza olanak sağlar. `CallByName` işlevi için imza şöyle görünür:  
   
- *Result* = `CallByName`(*Object*, *ProcedureName*, *CallType*, *Arguments*())  
+ *Sonuç* = `CallByName`(*nesne*, *procedurename*, *çağrı türü*, *bağımsız değişkenler*())  
   
- The first argument, *Object*, takes the name of the object you want to act upon. The *ProcedureName* argument takes a string that contains the name of the method or property procedure to be invoked. The *CallType* argument takes a constant that represents the type of procedure to invoke: a method (`Microsoft.VisualBasic.CallType.Method`), a property read (`Microsoft.VisualBasic.CallType.Get`), or a property set (`Microsoft.VisualBasic.CallType.Set`). The *Arguments* argument, which is optional, takes an array of type `Object` that contains any arguments to the procedure.  
+ İlk bağımsız değişken, *nesne*, üzerinde işlem yapmak istediğiniz nesnenin adını alır. *Procedurename* bağımsız değişkeni çağrılacak yöntemin veya özellik yordamının adını içeren bir dize alır. *CallType* bağımsız değişkeni, çağrılacak yordamın türünü temsil eden bir sabit alır: bir yöntem (`Microsoft.VisualBasic.CallType.Method`), bir özellik okuma (`Microsoft.VisualBasic.CallType.Get`) veya özellik kümesi (`Microsoft.VisualBasic.CallType.Set`). İsteğe *bağlı bağımsız değişken bağımsız değişkeni,* yordamda herhangi bir bağımsız değişken içeren `Object` türünde bir dizi alır.  
   
- You can use `CallByName` with classes in your current solution, but it is most often used to access COM objects or objects from .NET Framework assemblies.  
+ `CallByName`, geçerli çözümünüzdeki sınıflarla kullanabilirsiniz, ancak genellikle COM nesnelerine veya .NET Framework derlemelerinden nesnelere erişmek için kullanılır.  
   
- Suppose you add a reference to an assembly that contains a class named `MathClass`, which has a new function named `SquareRoot`, as shown in the following code:  
+ Aşağıdaki kodda gösterildiği gibi, `SquareRoot`adlı yeni bir işleve sahip `MathClass`adlı bir sınıf içeren bir derlemeye başvuru eklediğinizi varsayalım:  
   
  [!code-vb[VbVbalrOOP#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#53)]  
   
- Your application could use text box controls to control which method will be called and its arguments. For example, if `TextBox1` contains the expression to be evaluated, and `TextBox2` is used to enter the name of the function, you can use the following code to invoke the `SquareRoot` function on the expression in `TextBox1`:  
+ Uygulamanız, hangi yöntemin çağrdığını ve bağımsız değişkenlerini denetlemek için metin kutusu denetimlerini kullanabilir. Örneğin, `TextBox1` değerlendirilecek ifadeyi içeriyorsa ve işlevin adını girmek için `TextBox2` kullanılırsa, `TextBox1`ifadesinde `SquareRoot` işlevini çağırmak için aşağıdaki kodu kullanabilirsiniz:  
   
  [!code-vb[VbVbalrOOP#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#54)]  
   
- If you enter "64" in `TextBox1`, "SquareRoot" in `TextBox2`, and then call the `CallMath` procedure, the square root of the number in `TextBox1` is evaluated. The code in the example invokes the `SquareRoot` function (which takes a string that contains the expression to be evaluated as a required argument) and returns "8" in `TextBox1` (the square root of 64). Of course, if the user enters an invalid string in `TextBox2`, if the string contains the name of a property instead of a method, or if the method had an additional required argument, a run-time error occurs. You have to add robust error-handling code when you use `CallByName` to anticipate these or any other errors.  
+ `TextBox1`"64", `TextBox2`' de "SquareRoot" girin ve ardından `CallMath` yordamını çağırırsanız, `TextBox1` içindeki sayının kare kökü değerlendirilir. Örnekteki kod, `SquareRoot` işlevini çağırır (gerekli bağımsız değişken olarak değerlendirilecek ifadeyi içeren bir dize alır) ve `TextBox1` içinde "8" döndürür (64 kare kökü). Kuşkusuz, Kullanıcı `TextBox2`' de geçersiz bir dize girerse, dize bir yöntem yerine bir özelliğin adını içeriyorsa veya metotta gerekli ek bir bağımsız değişken varsa, bir çalışma zamanı hatası oluşur. Bunu veya diğer hataları tahmin etmek için `CallByName` kullandığınızda sağlam hata işleme kodu eklemeniz gerekir.  
   
 > [!NOTE]
-> While the `CallByName` function may be useful in some cases, you must weigh its usefulness against the performance implications — using `CallByName` to invoke a procedure is slightly slower than a late-bound call. If you are invoking a function that is called repeatedly, such as inside a loop, `CallByName` can have a severe effect on performance.  
+> `CallByName` işlevi bazı durumlarda faydalı olabilirken, bir yordamı çağırmak için `CallByName` kullanarak bir yordamı geç bağlantılı çağrıdan biraz daha yavaştır. Döngü içinde olduğu gibi sürekli olarak çağrılan bir işlevi çağırdıysanız `CallByName` performans üzerinde ciddi bir etkiye sahip olabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

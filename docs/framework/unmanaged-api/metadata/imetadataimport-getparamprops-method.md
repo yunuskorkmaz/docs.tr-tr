@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437131"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps Metodu
-Gets metadata values for the parameter referenced by the specified ParamDef token.  
+Belirtilen ParamDef belirtecinin başvurduğu parametreye ait meta veri değerlerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,47 +44,47 @@ HRESULT GetParamProps (
   
 ## <a name="parameters"></a>Parametreler  
  `tk`  
- [in] A ParamDef token that represents the parameter to return metadata for.  
+ 'ndaki Meta verilerini döndürecek parametreyi temsil eden ParamDef belirteci.  
   
  `pmd`  
- [out] A pointer to a MethodDef token representing the method that takes the parameter.  
+ dışı Parametreyi alan yöntemi temsil eden bir MethodDef belirtecinin işaretçisi.  
   
  `pulSequence`  
- [out] The ordinal position of the parameter in the method argument list.  
+ dışı Yöntem bağımsız değişken listesindeki parametresinin sıra konumu.  
   
  `szName`  
- [out] A buffer to hold the name of the parameter.  
+ dışı Parametrenin adını tutan bir arabellek.  
   
  `cchName`  
- [in] The requested size in wide characters of `szName`.  
+ 'ndaki `szName`geniş karakterdeki istenen boyut.  
   
  `pchName`  
- [out] The returned size in wide characters of `szName`.  
+ dışı `szName`geniş karakterdeki döndürülen boyut.  
   
  `pdwAttr`  
- [out] A pointer to any attribute flags associated with the parameter. This is a bitmask of `CorParamAttr` values.  
+ dışı Parametresiyle ilişkili öznitelik bayraklarının bir işaretçisi. Bu, `CorParamAttr` değerlerinin bir bit dır.  
   
  `pdwCPlusTypeFlag`  
- [out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.  
+ dışı Parametrenin <xref:System.ValueType>olduğunu belirten bayrak işaretçisi.  
   
  `ppValue`  
- [out] A pointer to a constant string returned by the parameter.  
+ dışı Parametresi tarafından döndürülen sabit dize işaretçisi.  
   
  `pcchValue`  
- [out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.  
+ dışı Geniş karakterdeki `ppValue` boyutu veya `ppValue` bir dize yoksa sıfır.  
   
 ## <a name="remarks"></a>Açıklamalar
 
-The sequence values in `pulSequence` begin with 1 for parameters. A return value has a sequence number of 0.
+`pulSequence` dizi değerleri parametreler için 1 ile başlar. Dönüş değerinin sıra numarası 0 ' dır.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

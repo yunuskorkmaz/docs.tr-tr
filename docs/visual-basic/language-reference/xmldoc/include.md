@@ -12,8 +12,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348458"
 ---
-# <a name="include-visual-basic"></a>\<include> (Visual Basic)
-Refers to another file that describes the types and members in your source code.  
+# <a name="include-visual-basic"></a>\<içerme > (Visual Basic)
+Kaynak kodunuzda türleri ve üyeleri açıklayan başka bir dosya anlamına gelir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,28 +23,28 @@ Refers to another file that describes the types and members in your source code.
   
 ## <a name="parameters"></a>Parametreler  
  `filename`  
- Gerekli. The name of the file containing the documentation. The file name can be qualified with a path. Enclose `filename` in double quotation marks (" ").  
+ Gerekli. Belgeleri içeren dosyanın adı. Dosya adı bir yol ile nitelenebilir. `filename` çift tırnak işaretleri ("") içine alın.  
   
  `tagpath`  
- Gerekli. The path of the tags in `filename` that leads to the tag `name`. Enclose the path in double quotation marks (" ").  
+ Gerekli. `filename` etiket `name`yol gösteren etiketlerin yolu. Yolu çift tırnak işaretleri ("") içine alın.  
   
  `name`  
- Gerekli. The name specifier in the tag that precedes the comments. `Name` will have an `id`.  
+ Gerekli. Yorumlarla önce gelen etiketteki ad belirleyicisi. `Name` bir `id`olacaktır.  
   
  `id`  
- Gerekli. The ID for the tag that precedes the comments. Enclose the ID in single quotation marks (' ').  
+ Gerekli. Açıklamaların önündeki etiketin KIMLIĞI. KIMLIĞI tek tırnak işareti (' ') içine alın.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Use the `<include>` tag to refer to comments in another file that describe the types and members in your source code. This is an alternative to placing documentation comments directly in your source code file.  
+ Kaynak kodunuzda türleri ve üyeleri tanımlayan başka bir dosyadaki açıklamalara başvurmak için `<include>` etiketini kullanın. Bu, belge açıklamalarını doğrudan kaynak kodu dosyanıza yerleştirmeye alternatiftir.  
   
- The `<include>` tag uses the W3C XML Path Language (XPath) Version 1.0 Recommendation. For more information about ways to customize your `<include>` use, see <https://www.w3.org/TR/xpath>.  
+ `<include>` etiketinde W3C XML Path Language (XPath) sürüm 1,0 önerisi kullanılır. `<include>` kullanımını özelleştirmenin yolları hakkında daha fazla bilgi için bkz. <https://www.w3.org/TR/xpath>.  
   
 ## <a name="example"></a>Örnek  
- This example uses the `<include>` tag to import member documentation comments from a file called `commentFile.xml`.  
+ Bu örnek, `commentFile.xml`adlı bir dosyadan üye belge açıklamalarını içeri aktarmak için `<include>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#4)]  
   
- The format of the `commentFile.xml` is as follows.  
+ `commentFile.xml` biçimi aşağıdaki gibidir.  
   
 ```xml  
 <Docs>  

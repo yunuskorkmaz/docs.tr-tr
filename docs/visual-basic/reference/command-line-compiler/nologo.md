@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335429"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
-Suppresses display of the copyright banner and informational messages during compilation.  
+Derleme sırasında telif hakkı başlığının ve bilgilendirici mesajların görüntülenmesini önler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -24,13 +24,13 @@ Suppresses display of the copyright banner and informational messages during com
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- If you specify `-nologo`, the compiler does not display a copyright banner. By default, `-nologo` is not in effect.  
+ `-nologo`belirtirseniz, derleyici bir telif hakkı başlığını görüntülemez. `-nologo`, varsayılan olarak etkin değildir.  
   
 > [!NOTE]
-> The `-nologo` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> `-nologo` seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- The following code compiles `T2.vb` and does not display a copyright banner.  
+ Aşağıdaki kod `T2.vb` derler ve bir telif hakkı başlığını görüntülemez.  
   
 ```console
 vbc -nologo t2.vb  
@@ -38,5 +38,5 @@ vbc -nologo t2.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

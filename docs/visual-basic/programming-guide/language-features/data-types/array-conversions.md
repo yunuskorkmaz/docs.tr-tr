@@ -20,20 +20,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345855"
 ---
 # <a name="array-conversions-visual-basic"></a>Dizi Dönüştürmeleri (Visual Basic)
-You can convert an array type to a different array type provided you meet the following conditions:  
+Aşağıdaki koşulları karşılamanız kaydıyla, bir dizi türünü farklı bir dizi türüne dönüştürebilirsiniz:  
   
-- **Equal Rank.** The ranks of the two arrays must be the same, that is, they must have the same number of dimensions. However, the lengths of the respective dimensions do not need to be the same.  
+- **Eşit derece.** İki dizinin dereceleri aynı olmalıdır, diğer bir deyişle, aynı sayıda boyutlara sahip olmaları gerekir. Ancak, ilgili boyutların uzunluklarının aynı olması gerekmez.  
   
-- **Element Data Type.** The data types of the elements of both arrays must be reference types. You cannot convert an `Integer` array to a `Long` array, or even to an `Object` array, because at least one value type is involved. For more information, see [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+- **Öğe veri türü.** Her iki dizinin öğelerinin veri türleri başvuru türünde olmalıdır. En az bir değer türü dahil olduğu için `Integer` dizisini `Long` dizisine veya hatta `Object` dizisine dönüştüremezsiniz. Daha fazla bilgi için bkz. [değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
-- **Convertibility.** A conversion, either widening or narrowing, must be possible between the element types of the two arrays. An example that fails this requirement is an attempted conversion between a `String` array and an array of a class derived from <xref:System.Attribute?displayProperty=nameWithType>. These two types have nothing in common, and no conversion of any kind exists between them.  
+- **Söylebilirlik.** İki dizinin öğe türleri arasında genişletme veya daraltma bir dönüştürme yapılabilir olmalıdır. Bu gereksinimi başarısız yapan bir örnek, bir `String` dizisi ile <xref:System.Attribute?displayProperty=nameWithType>türetilen bir sınıfın dizisi arasında bir dönüştürme girişiminde bulunur. Bu iki tür hiçbir şey ortak değildir ve aralarında herhangi bir tür dönüştürme yoktur.  
   
- A conversion of one array type to another is widening or narrowing depending on whether the conversion of the respective elements is widening or narrowing. For more information, see [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Bir dizi türünün diğerine dönüştürülmesi, ilgili öğelerin dönüştürülmesine genişleyen veya daraltma olmasına bağlı olarak genişletme veya daraltma. Daha fazla bilgi için bkz. [genişletme ve daraltma dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
-## <a name="conversion-to-an-object-array"></a>Conversion to an Object Array  
- When you declare an `Object` array without initializing it, its element type is `Object` as long as it remains uninitialized. When you set it to an array of a specific class, it takes on the type of that class. However, its underlying type is still `Object`, and you can subsequently set it to another array of an unrelated class. Since all classes derive from `Object`, you can change the array's element type from any class to any other class.  
+## <a name="conversion-to-an-object-array"></a>Bir nesne dizisine dönüştürme  
+ `Object` bir diziyi başlatmadan bildirdiğinizde, öğe türü başlatılmamış kaldığı sürece `Object`. Belirli bir sınıfın dizisine ayarladığınızda, bu sınıfın türünü alır. Ancak, temel alınan türü hala `Object`ve daha sonra ilişkisiz bir sınıfın başka bir dizisine ayarlayabilirsiniz. Tüm sınıflar `Object`türediğinden, dizinin öğe türünü herhangi bir sınıftan başka bir sınıfa dönüştürebilirsiniz.  
   
- In the following example, no conversion exists between types `student` and `String`, but both derive from `Object`, so all assignments are valid.  
+ Aşağıdaki örnekte `student` ve `String`türleri arasında dönüştürme yoktur, ancak her ikisi de `Object`türetilir, bu nedenle tüm atamalar geçerlidir.  
   
 ```vb  
 ' Assume student has already been defined as a class.  
@@ -46,10 +46,10 @@ testArray = names
 ' testArray is now a String array.  
 ```  
   
-### <a name="underlying-type-of-an-array"></a>Underlying Type of an Array  
- If you originally declare an array with a specific class, its underlying element type is that class. If you subsequently set it to an array of another class, there must be a conversion between the two classes.  
+### <a name="underlying-type-of-an-array"></a>Bir dizinin temel alınan türü  
+ Özgün olarak belirli bir sınıf içeren bir diziyi bildirirseniz, temel alınan öğe türü bu sınıftır. Daha sonra başka bir sınıfın dizisine ayarlarsanız, iki sınıf arasında bir dönüştürme olmalıdır.  
   
- In the following example, `students` is a `student` array. Since no conversion exists between `String` and `student`, the last statement fails.  
+ Aşağıdaki örnekte, `students` bir `student` dizisidir. `String` ve `student`arasında dönüştürme olmadığından, son ifade başarısız olur.  
   
 ```vb  
 Dim students() As student  
@@ -62,10 +62,10 @@ students = names
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic dönüşümler yazın](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Örtük ve Açık Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Dizeler ve Diğer Türler Arasında Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [Nasıl yapılır: Visual Basic bir nesneyi başka bir türe dönüştürme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 - [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
 - [Tür Dönüştürme İşlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

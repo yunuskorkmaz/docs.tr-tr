@@ -12,23 +12,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349570"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub veya Function tanımlı değil (Visual Basic)
-A `Sub` or `Function` must be defined in order to be called. Possible causes of this error include:  
+Çağrılabilmesi için bir `Sub` veya `Function` tanımlanmalıdır. Bu hatanın olası nedenleri şunlardır:  
   
-- Misspelling the procedure name.  
+- Yordam adı yanlış hatalı.  
   
-- Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.  
+- **Başvurular** iletişim kutusunda ilgili projeye açıkça bir başvuru eklemek zorunda kalmadan başka bir projeden yordam çağrılmaya çalışılıyor.  
   
-- Specifying a procedure that is not visible to the calling procedure.  
+- Çağıran yordama görünmeyen bir yordam belirtme.  
   
-- Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.  
+- Belirtilen kitaplıkta veya kod kaynağında olmayan bir Windows dinamik bağlantı kitaplığı (DLL) yordamını veya Macintosh kodu-kaynak yordamını bildirme.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Make sure that the procedure name is spelled correctly.  
+1. Yordam adının doğru yazıldığından emin olun.  
   
-2. Find the name of the project containing the procedure you want to call in the **References** dialog box. If it does not appear, click the **Browse** button to search for it. Select the check box to the left of the project name, and then click **OK**.  
+2. **Başvurular** iletişim kutusunda çağırmak istediğiniz yordamı içeren projenin adını bulun. Görünmezse, aramak için, **Gözden** geçirme düğmesine tıklayın. Projenin adının solundaki onay kutusunu seçin ve ardından **Tamam**' a tıklayın.  
   
-3. Check the name of the routine.  
+3. Yordamın adını denetleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

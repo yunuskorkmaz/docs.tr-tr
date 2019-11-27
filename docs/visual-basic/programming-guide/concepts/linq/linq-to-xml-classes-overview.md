@@ -9,51 +9,51 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352002"
 ---
-# <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML Classes Overview (Visual Basic)
-This topic provides a list of the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] classes in the <xref:System.Xml.Linq> namespace, and a short description of each.  
+# <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML sınıflara genel bakış (Visual Basic)
+Bu konu, <xref:System.Xml.Linq> ad alanındaki [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sınıflarının bir listesini ve her birinin kısa bir açıklamasını sağlar.  
   
-## <a name="linq-to-xml-classes"></a>LINQ to XML Classes  
+## <a name="linq-to-xml-classes"></a>LINQ to XML sınıfları  
   
-### <a name="xattribute-class"></a>XAttribute Class  
- <xref:System.Xml.Linq.XAttribute> represents an XML attribute. For detailed information and examples, see [XAttribute Class Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xattribute-class-overview.md).  
+### <a name="xattribute-class"></a>XAttribute sınıfı  
+ <xref:System.Xml.Linq.XAttribute> bir XML özniteliğini temsil eder. Ayrıntılı bilgi ve örnekler için bkz. [XAttribute sınıfına genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xattribute-class-overview.md).  
   
-### <a name="xcdata-class"></a>XCData Class  
- <xref:System.Xml.Linq.XCData> represents a CDATA text node.  
+### <a name="xcdata-class"></a>XCData sınıfı  
+ <xref:System.Xml.Linq.XCData> CDATA metin düğümünü temsil eder.  
   
-### <a name="xcomment-class"></a>XComment Class  
- <xref:System.Xml.Linq.XComment> represents an XML comment.  
+### <a name="xcomment-class"></a>XComment sınıfı  
+ <xref:System.Xml.Linq.XComment> bir XML açıklamasını temsil eder.  
   
-### <a name="xcontainer-class"></a>XContainer Class  
- <xref:System.Xml.Linq.XContainer> is an abstract base class for all nodes that can have child nodes. The following classes derive from the <xref:System.Xml.Linq.XContainer> class:  
+### <a name="xcontainer-class"></a>XContainer sınıfı  
+ <xref:System.Xml.Linq.XContainer>, alt düğümlere sahip olan tüm düğümler için soyut bir temel sınıftır. Aşağıdaki sınıflar <xref:System.Xml.Linq.XContainer> sınıfından türetilir:  
   
 - <xref:System.Xml.Linq.XElement>  
   
 - <xref:System.Xml.Linq.XDocument>  
   
-### <a name="xdeclaration-class"></a>XDeclaration Class  
- <xref:System.Xml.Linq.XDeclaration> represents an XML declaration. An XML declaration is used to declare the XML version and the encoding of a document. In addition, an XML declaration specifies whether the XML document is stand-alone. If a document is stand-alone, there are no external markup declarations, either in an external DTD, or in an external parameter entity referenced from the internal subset.  
+### <a name="xdeclaration-class"></a>XDeclaration sınıfı  
+ <xref:System.Xml.Linq.XDeclaration> bir XML bildirimini temsil eder. XML bildirimi, XML sürümünü ve bir belgenin kodlamasını bildirmek için kullanılır. Ayrıca, XML bildirimi XML belgesinin tek başına olup olmadığını belirtir. Bir belge bağımsız ise, dış bir DTD 'de ya da iç alt kümeden başvurulan bir dış parametre varlığında dış biçimlendirme bildirimleri yoktur.  
   
-### <a name="xdocument-class"></a>XDocument Class  
- <xref:System.Xml.Linq.XDocument> represents an XML document. For detailed information and examples, see [XDocument Class Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).  
+### <a name="xdocument-class"></a>XDocument sınıfı  
+ <xref:System.Xml.Linq.XDocument> bir XML belgesini temsil eder. Ayrıntılı bilgi ve örnekler için bkz. [XDocument sınıfına genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).  
   
-### <a name="xdocumenttype-class"></a>XDocumentType Class  
- <xref:System.Xml.Linq.XDocumentType> represents an XML Document Type Definition (DTD).  
+### <a name="xdocumenttype-class"></a>XDocumentType sınıfı  
+ <xref:System.Xml.Linq.XDocumentType> bir XML belge türü tanımını (DTD) temsil eder.  
   
-### <a name="xelement-class"></a>XElement Class  
- <xref:System.Xml.Linq.XElement> represents an XML element. For detailed information and examples, see [XElement Class Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md).  
+### <a name="xelement-class"></a>XElement sınıfı  
+ <xref:System.Xml.Linq.XElement> bir XML öğesini temsil eder. Ayrıntılı bilgi ve örnekler için bkz. [XElement sınıfına genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md).  
   
-### <a name="xname-class"></a>XName Class  
- <xref:System.Xml.Linq.XName> represents names of elements (<xref:System.Xml.Linq.XElement>) and attributes (<xref:System.Xml.Linq.XAttribute>). For detailed information and examples, see [XDocument Class Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).  
+### <a name="xname-class"></a>XName sınıfı  
+ <xref:System.Xml.Linq.XName> öğelerin (<xref:System.Xml.Linq.XElement>) ve özniteliklerin (<xref:System.Xml.Linq.XAttribute>) adlarını temsil eder. Ayrıntılı bilgi ve örnekler için bkz. [XDocument sınıfına genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is designed to make XML names as straightforward as possible. Due to their complexity, XML names are often considered to be an advanced topic in XML. Arguably, this complexity comes not from namespaces, which developers use regularly in programming, but from namespace prefixes. Namespace prefixes can be useful to reduce the keystrokes required when you input XML, or to make XML easier to read. However, prefixes are often just a shortcut for using the full XML namespace, and are not required in most cases. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] simplifies XML names by resolving all prefixes to their corresponding XML namespace. Prefixes are available, if they are required, through the <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A> method.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], XML adlarını mümkün olduğunca kolay hale getirmek için tasarlanmıştır. Karmaşıklığı nedeniyle XML adları genellikle XML 'de gelişmiş bir konu olarak kabul edilir. Bu karmaşıklık, geliştiricilerin programlama içinde düzenli olarak kullanıldığı, ancak ad alanı öneklerinden bağımsız olarak, ad alanlarından değildir. Ad alanı önekleri, XML girişi yaparken veya XML 'in okunması daha kolay hale getirmek için gereken tuş vuruşlarını azaltmak için faydalı olabilir. Ancak, ön ekler genellikle tam XML ad alanını kullanmak için bir kısayoldur ve çoğu durumda gerekli değildir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], tüm ön ekleri karşılık gelen XML ad uzayına çözümleyerek XML adlarını basitleştirir. Zorunlu olmaları durumunda <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A> yöntemi aracılığıyla ön ekler kullanılabilir.  
   
- It is possible, if necessary, to control namespace prefixes. In some circumstances, if you are working with other XML systems, such as XSLT or XAML, you need to control namespace prefixes. For example, if you have an XPath expression that uses namespace prefixes and is embedded in an XSLT stylesheet, you must make sure that your XML document is serialized with namespace prefixes that match those used in the XPath expression.  
+ Gerekirse, ad alanı öneklerini denetlemek mümkündür. Bazı durumlarda, XSLT veya XAML gibi diğer XML sistemleriyle çalışıyorsanız, ad alanı öneklerini kontrol etmeniz gerekir. Örneğin, ad alanı öneklerini kullanan ve XSLT stil sayfasına gömülü bir XPath ifadeniz varsa, XML belgenizin XPath ifadesinde kullanılanlarla eşleşen ad alanı önekleri ile serileştirildiğinizden emin olmanız gerekir.  
   
-### <a name="xnamespace-class"></a>XNamespace Class  
- <xref:System.Xml.Linq.XNamespace> represents a namespace for an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute>. Namespaces are a component of an <xref:System.Xml.Linq.XName>.  
+### <a name="xnamespace-class"></a>XNamespace sınıfı  
+ <xref:System.Xml.Linq.XNamespace>, bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XAttribute>için bir ad alanı temsil eder. Ad alanları <xref:System.Xml.Linq.XName>bir bileşenidir.  
   
-### <a name="xnode-class"></a>XNode Class  
- <xref:System.Xml.Linq.XNode> is an abstract class that represents the nodes of an XML tree. The following classes derive from the <xref:System.Xml.Linq.XNode> class:  
+### <a name="xnode-class"></a>XNode sınıfı  
+ <xref:System.Xml.Linq.XNode>, bir XML ağacının düğümlerini temsil eden soyut bir sınıftır. Aşağıdaki sınıflar <xref:System.Xml.Linq.XNode> sınıfından türetilir:  
   
 - <xref:System.Xml.Linq.XText>  
   
@@ -65,27 +65,27 @@ This topic provides a list of the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-
   
 - <xref:System.Xml.Linq.XDocumentType>  
   
-### <a name="xnodedocumentordercomparer-class"></a>XNodeDocumentOrderComparer Class  
- <xref:System.Xml.Linq.XNodeDocumentOrderComparer> provides functionality to compare nodes for their document order.  
+### <a name="xnodedocumentordercomparer-class"></a>XNodeDocumentOrderComparer sınıfı  
+ <xref:System.Xml.Linq.XNodeDocumentOrderComparer>, düğümleri belge sıralarına göre karşılaştırmak için işlevsellik sağlar.  
   
-### <a name="xnodeequalitycomparer-class"></a>XNodeEqualityComparer Class  
- <xref:System.Xml.Linq.XNodeEqualityComparer> provides functionality to compare nodes for value equality.  
+### <a name="xnodeequalitycomparer-class"></a>XNodeEqualityComparer sınıfı  
+ <xref:System.Xml.Linq.XNodeEqualityComparer>, düğümleri değer eşitliğine göre karşılaştırmak için işlevsellik sağlar.  
   
-### <a name="xobject-class"></a>XObject Class  
- <xref:System.Xml.Linq.XObject> is an abstract base class of <xref:System.Xml.Linq.XNode> and <xref:System.Xml.Linq.XAttribute>. It provides annotation and event functionality.  
+### <a name="xobject-class"></a>XObject sınıfı  
+ <xref:System.Xml.Linq.XObject>, <xref:System.Xml.Linq.XNode> ve <xref:System.Xml.Linq.XAttribute>soyut temel sınıfıdır. Ek açıklama ve olay işlevselliği sağlar.  
   
-### <a name="xobjectchange-class"></a>XObjectChange Class  
- <xref:System.Xml.Linq.XObjectChange> specifies the event type when an event is raised for an <xref:System.Xml.Linq.XObject>.  
+### <a name="xobjectchange-class"></a>XObjectChange sınıfı  
+ <xref:System.Xml.Linq.XObjectChange>, bir <xref:System.Xml.Linq.XObject>için bir olay harekete çıktığında olay türünü belirtir.  
   
-### <a name="xobjectchangeeventargs-class"></a>XObjectChangeEventArgs Class  
- <xref:System.Xml.Linq.XObjectChangeEventArgs> provides data for the <xref:System.Xml.Linq.XObject.Changing> and <xref:System.Xml.Linq.XObject.Changed> events.  
+### <a name="xobjectchangeeventargs-class"></a>XObjectChangeEventArgs sınıfı  
+ <xref:System.Xml.Linq.XObjectChangeEventArgs>, <xref:System.Xml.Linq.XObject.Changing> ve <xref:System.Xml.Linq.XObject.Changed> olayları için veri sağlar.  
   
-### <a name="xprocessinginstruction-class"></a>XProcessingInstruction Class  
- <xref:System.Xml.Linq.XProcessingInstruction> represents an XML processing instruction. A processing instruction communicates information to an application that processes the XML.  
+### <a name="xprocessinginstruction-class"></a>XProcessingInstruction sınıfı  
+ <xref:System.Xml.Linq.XProcessingInstruction> bir XML işleme yönergesini temsil eder. Bir işleme yönergesi, XML 'i işleyen bir uygulamayla ilgili bilgiler iletir.  
   
-### <a name="xtext-class"></a>XText Class  
- <xref:System.Xml.Linq.XText> represents a text node. In most cases, you do not have to use this class. This class is primarily used for mixed content.  
+### <a name="xtext-class"></a>XText sınıfı  
+ <xref:System.Xml.Linq.XText> bir metin düğümünü temsil eder. Çoğu durumda, bu sınıfı kullanmak zorunda değilsiniz. Bu sınıf öncelikle karışık içerik için kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML programlamaya genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

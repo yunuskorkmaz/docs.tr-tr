@@ -19,39 +19,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340238"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Nasıl yapılır: Bir İşleç Yordamı Çağırma (Visual Basic)
-You call an operator procedure by using the operator symbol in an expression. In the case of a conversion operator, you call the [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) to convert a value from one data type to another.  
+Bir ifadede işleç sembolünü kullanarak bir işleç yordamı çağırın. Bir dönüştürme işleci söz konusu olduğunda, bir değeri bir veri türünden diğerine dönüştürmek için [CType işlevini](../../../../visual-basic/language-reference/functions/ctype-function.md) çağırın.  
   
- You do not call operator procedures explicitly. You just use the operator, or the `CType` function, in an assignment statement or an expression, the same way you ordinarily use an operator. Visual Basic makes the call to the operator procedure.  
+ Operatör yordamlarını açıkça çağırmayın. Yalnızca işlecini veya `CType` işlevini, bir atama deyiminde veya bir ifadede, normalde bir işleci kullandığınız şekilde kullanırsınız. Visual Basic işleç yordamına çağrı yapar.  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ Bir sınıf veya yapı üzerinde işleç tanımlamak, işleci *aşırı yükleme* olarak da adlandırılır.  
   
-### <a name="to-call-an-operator-procedure"></a>To call an operator procedure  
+### <a name="to-call-an-operator-procedure"></a>Bir işleç yordamını çağırmak için  
   
-1. Use the operator symbol in an expression in the ordinary way.  
+1. Bir ifadede işleç sembolünü normal şekilde kullanın.  
   
-2. Be sure the data types of the operands are appropriate for the operator, and in the correct order.  
+2. İşlenenlerin veri türlerinin operatör için uygun olduğundan ve doğru sırada olduğundan emin olun.  
   
-3. The operator contributes to the value of the expression as expected.  
+3. İşleci, ifadenin değerine beklenen şekilde katkıda bulunur.  
   
-### <a name="to-call-a-conversion-operator-procedure"></a>To call a conversion operator procedure  
+### <a name="to-call-a-conversion-operator-procedure"></a>Bir dönüştürme işleci yordamını çağırmak için  
   
-1. Use `CType` inside an expression.  
+1. `CType` bir ifadenin içinde kullanın.  
   
-2. Be sure the data types of the operands are appropriate for the conversion, and in the correct order.  
+2. İşlenenlerin veri türlerinin dönüştürme için uygun olduğundan ve doğru sırada olduğundan emin olun.  
   
-3. `CType` calls the conversion operator procedure and returns the converted value.  
+3. `CType` dönüştürme işleci yordamını çağırır ve dönüştürülen değeri döndürür.  
   
 ## <a name="example"></a>Örnek  
- The following example creates two <xref:System.TimeSpan> structures, adds them together, and stores the result in a third <xref:System.TimeSpan> structure. The <xref:System.TimeSpan> structure defines operator procedures to overload several standard operators.  
+ Aşağıdaki örnek iki <xref:System.TimeSpan> yapısı oluşturur, bunları birlikte ekler ve sonucu üçüncü bir <xref:System.TimeSpan> yapısında depolar. <xref:System.TimeSpan> yapısı, birkaç standart işlecin aşırı yüklenmesine yönelik operatör yordamlarını tanımlar.  
   
  [!code-vb[VbVbcnProcedures#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#29)]  
   
- Because <xref:System.TimeSpan> overloads the standard `+` operator, the previous example calls an operator procedure when it calculates the value of `combinedSpan`.  
+ <xref:System.TimeSpan> standart `+` işlecini aşırı yüklediğinden, önceki örnek `combinedSpan`değerini hesaplarken bir işleç yordamını çağırır.  
   
- For an example of calling a conversation operator procedure, see [How to: Use a Class that Defines Operators](./how-to-use-a-class-that-defines-operators.md).  
+ Bir konuşma işleci yordamı çağırma örneği için bkz. [nasıl yapılır: Işleçleri tanımlayan bir sınıf kullanma](./how-to-use-a-class-that-defines-operators.md).  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Be sure the class or structure you are using defines the operator you want to use.  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Kullandığınız sınıf veya yapının kullanmak istediğiniz işleci tanımladığından emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

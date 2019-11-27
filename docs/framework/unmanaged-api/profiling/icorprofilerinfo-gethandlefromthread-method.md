@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439059"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread Yöntemi
-Maps the ID of a thread to a Win32 thread handle.  
+Bir iş parçacığının KIMLIĞINI bir Win32 iş parçacığı tanıtıcısına eşler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,22 +35,22 @@ HRESULT GetHandleFromThread(
   
 ## <a name="parameters"></a>Parametreler  
  `threadId`  
- [in] The thread ID to be mapped.  
+ 'ndaki Eşleştirilecek iş parçacığı KIMLIĞI.  
   
  `phThread`  
- [out] A pointer to a Win32 thread handle.  
+ dışı Win32 iş parçacığı tanıtıcısına yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.  
+ Profil oluşturucunun, kullanılmadan önce tanıtıcıda Win32 `DuplicateHandle` işlevini çağırması gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

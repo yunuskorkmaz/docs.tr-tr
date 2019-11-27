@@ -17,8 +17,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336052"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp; Operator (Visual Basic)
-Generates a string concatenation of two expressions.  
+# <a name="amp-operator-visual-basic"></a>&amp; Işleci (Visual Basic)
+İki ifadenin dize birleştirmesini oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,27 +28,27 @@ result = expression1 & expression2
   
 ## <a name="parts"></a>Bölümler  
  `result`  
- Gerekli. Any `String` or `Object` variable.  
+ Gerekli. Herhangi bir `String` veya `Object` değişken.  
   
  `expression1`  
- Gerekli. Any expression with a data type that widens to `String`.  
+ Gerekli. `String`bir veri türüne sahip herhangi bir ifade.  
   
  `expression2`  
- Gerekli. Any expression with a data type that widens to `String`.  
+ Gerekli. `String`bir veri türüne sahip herhangi bir ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- If the data type of `expression1` or `expression2` is not `String` but widens to `String`, it is converted to `String`. If either of the data types does not widen to `String`, the compiler generates an error.  
+ `expression1` veya `expression2` veri türü `String` değilse ancak `String`için ise, `String`dönüştürülür. Veri türlerinden biri `String`olarak genişlemezse, derleyici bir hata oluşturur.  
   
- The data type of `result` is `String`. If one or both expressions evaluate to [Nothing](../../../visual-basic/language-reference/nothing.md) or have a value of <xref:System.DBNull.Value?displayProperty=nameWithType>, they are treated as a string with a value of "".  
-  
-> [!NOTE]
-> The `&` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ `result` veri türü `String`. Bir veya her iki ifade bir [Nothing](../../../visual-basic/language-reference/nothing.md) olarak değerlendirilir veya <xref:System.DBNull.Value?displayProperty=nameWithType>bir değere sahip olursa, "" değerine sahip bir dize olarak değerlendirilir.  
   
 > [!NOTE]
-> The ampersand (&) character can also be used to identify variables as type `Long`. For more information, see [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
+> `&` işleci *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+  
+> [!NOTE]
+> Ampersan (&) karakteri, değişkenleri tür `Long`olarak belirlemek için de kullanılabilir. Daha fazla bilgi için bkz. [tür karakterleri](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
   
 ## <a name="example"></a>Örnek  
- This example uses the `&` operator to force string concatenation. The result is a string value representing the concatenation of the two string operands.  
+ Bu örnek, dize birleştirmesini zorlamak için `&` işlecini kullanır. Sonuç iki dize işleneninin birleştirilmesiyle temsil eden bir dize değeridir.  
   
  [!code-vb[VbVbalrOperators#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#2)]  
   
@@ -56,6 +56,6 @@ result = expression1 & expression2
 
 - [&= İşleci](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
 - [Birleştirme İşleçleri](../../../visual-basic/language-reference/operators/concatenation-operators.md)
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Concatenation Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic birleştirme Işleçleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

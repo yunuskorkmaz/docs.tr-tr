@@ -30,10 +30,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350941"
 ---
 # <a name="like-operator-visual-basic"></a>Like İşleci (Visual Basic)
-Compares a string against a pattern.  
+Bir dizeyi bir düzene göre karşılaştırır.  
 
 > [!IMPORTANT]
-> The `Like` operator is currently not supported in .NET Core and .NET Standard projects.
+> `Like` işleci Şu anda .NET Core ve .NET Standard projelerinde desteklenmez.
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,65 +43,65 @@ result = string Like pattern
   
 ## <a name="parts"></a>Bölümler  
  `result`  
- Gerekli. Any `Boolean` variable. The result is a `Boolean` value indicating whether or not the `string` satisfies the `pattern`.  
+ Gerekli. Herhangi bir `Boolean` değişken. Sonuç, `string` `pattern`karşılayıp karşılamadığını belirten `Boolean` bir değerdir.  
   
  `string`  
- Gerekli. Any `String` expression.  
+ Gerekli. Herhangi bir `String` ifadesi.  
   
  `pattern`  
- Gerekli. Any `String` expression conforming to the pattern-matching conventions described in "Remarks."  
+ Gerekli. "Açıklamalar" bölümünde açıklanan desenler ile eşleşen kurallara uyan herhangi bir `String` ifadesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- If the value in `string` satisfies the pattern contained in `pattern`, `result` is `True`. If the string does not satisfy the pattern, `result` is `False`. If both `string` and `pattern` are empty strings, the result is `True`.  
+ `string` değeri `pattern`bulunan kalıbı karşılıyorsa `result` `True`. Dize, `False``result`. Hem `string` hem de `pattern` boş dizelerdir, sonuç `True`olur.  
   
-## <a name="comparison-method"></a>Comparison Method  
- The behavior of the `Like` operator depends on the [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md). The default string comparison method for each source file is `Option Compare Binary`.  
+## <a name="comparison-method"></a>Karşılaştırma yöntemi  
+ `Like` işlecinin davranışı [Seçenek karşılaştırma bildirimine](../../../visual-basic/language-reference/statements/option-compare-statement.md)bağlıdır. Her kaynak dosya için varsayılan dize karşılaştırma yöntemi `Option Compare Binary`.  
   
-## <a name="pattern-options"></a>Pattern Options  
- Built-in pattern matching provides a versatile tool for string comparisons. The pattern-matching features allow you to match each character in `string` against a specific character, a wildcard character, a character list, or a character range. The following table shows the characters allowed in `pattern` and what they match.  
+## <a name="pattern-options"></a>Model seçenekleri  
+ Yerleşik model eşleştirme, dize karşılaştırmaları için çok yönlü bir araç sağlar. Desenler ile eşleşen özellikler, `string` her bir karakteri belirli bir karakter, joker karakter, bir karakter listesi veya bir karakter aralığı ile eşleştirmesini sağlar. Aşağıdaki tabloda `pattern` ' de izin verilen karakterler ve bunların eşleştikleri gösterilmektedir.  
   
-|Characters in `pattern`|Matches in `string`|  
+|`pattern` karakterler|`string` eşleşiyor|  
 |-----------------------------|-------------------------|  
-|`?`|Any single character|  
-|`*`|Zero or more characters|  
-|`#`|Any single digit (0–9)|  
-|`[charlist]`|Any single character in `charlist`|  
-|`[!charlist]`|Any single character not in `charlist`|  
+|`?`|Herhangi bir tek karakter|  
+|`*`|Sıfır veya daha fazla karakter|  
+|`#`|Herhangi bir tek basamak (0 – 9)|  
+|`[charlist]`|`charlist` bir tek karakter|  
+|`[!charlist]`|`charlist` olmayan bir tek karakter|  
   
-## <a name="character-lists"></a>Character Lists  
- A group of one or more characters (`charlist`) enclosed in brackets (`[ ]`) can be used to match any single character in `string` and can include almost any character code, including digits.  
+## <a name="character-lists"></a>Karakter listeleri  
+ Köşeli ayraçlar (`[ ]`) içindeki bir veya daha fazla karakter (`charlist`) grubu, `string` tek bir karakterle eşleştirmek için kullanılabilir ve rakamlar dahil neredeyse tüm karakter kodlarını içerebilir.  
   
- An exclamation point (`!`) at the beginning of `charlist` means that a match is made if any character except the characters in `charlist` is found in `string`. When used outside brackets, the exclamation point matches itself.  
+ `charlist` başındaki bir ünlem işareti (`!`), `charlist` karakterler dışında herhangi bir karakter `string`içinde bulunursa bir eşleşmenin yapıldığı anlamına gelir. Köşeli ayraçlar dışında kullanıldığında, ünlem işareti kendisiyle eşleşir.  
   
 ## <a name="special-characters"></a>Özel Karakterler  
- To match the special characters left bracket (`[`), question mark (`?`), number sign (`#`), and asterisk (`*`), enclose them in brackets. The right bracket (`]`) cannot be used within a group to match itself, but it can be used outside a group as an individual character.  
+ Sol köşeli ayraç (`[`), soru işareti (`?`), numara işareti (`#`) ve yıldız işareti (`*`) ile eşleştirmek için bunları köşeli ayraç içine alın. Sağ köşeli ayraç (`]`), bir grup içinde kendisiyle eşleşmek için kullanılamaz, ancak tek bir karakter olarak bir grup dışında kullanılabilir.  
   
- The character sequence `[]` is considered a zero-length string (`""`). However, it cannot be part of a character list enclosed in brackets. If you want to check whether a position in `string` contains one of a group of characters or no character at all, you can use `Like` twice. For an example, see [How to: Match a String against a Pattern](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
+ `[]` karakter sırası sıfır uzunluklu bir dize (`""`) olarak kabul edilir. Ancak, köşeli ayraç içine alınmış bir karakter listesinin parçası olamaz. `string` bir konumun bir karakter grubundan birini mi yoksa herhangi bir karakteri mi içerdiğini denetlemek istiyorsanız, `Like` iki kez kullanabilirsiniz. Bir örnek için bkz. [nasıl yapılır: bir dizeyi bir düzene göre eşleştirme](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
   
-## <a name="character-ranges"></a>Character Ranges  
- By using a hyphen (`–`) to separate the lower and upper bounds of the range, `charlist` can specify a range of characters. For example, `[A–Z]` results in a match if the corresponding character position in `string` contains any character within the range `A`–`Z`, and `[!H–L]` results in a match if the corresponding character position contains any character outside the range `H`–`L`.  
+## <a name="character-ranges"></a>Karakter aralıkları  
+ Aralığın alt ve üst sınırlarını ayırmak için kısa çizgi (`–`) kullanarak `charlist` bir karakter aralığı belirtebilir. Örneğin, `string` karşılık gelen karakter konumu `A`–`Z`aralığı içinde herhangi bir karakter içeriyorsa ve `[!H–L]`, karşılık gelen karakter konumu Aralık dışında herhangi bir karakter içeriyorsa, bir eşleşme ile sonuçlanır `[A–Z]`.`H``L`  
   
- When you specify a range of characters, they must appear in ascending sort order, that is, from lowest to highest. Thus, `[A–Z]` is a valid pattern, but `[Z–A]` is not.  
+ Bir karakter aralığı belirttiğinizde, bu karakterlerin artan sıralama düzeninde görünmesi gerekir, yani en küçükten en büyüğe. Bu nedenle, `[A–Z]` geçerli bir örüntü, ancak `[Z–A]` değildir.  
   
-### <a name="multiple-character-ranges"></a>Multiple Character Ranges  
- To specify multiple ranges for the same character position, put them within the same brackets without delimiters. For example, `[A–CX–Z]` results in a match if the corresponding character position in `string` contains any character within either the range `A`–`C` or the range `X`–`Z`.  
+### <a name="multiple-character-ranges"></a>Birden çok karakter aralığı  
+ Aynı karakter konumu için birden çok Aralık belirtmek için, bunları sınırlayıcılar olmadan aynı köşeli ayraç içine alın. Örneğin, `string` karşılık gelen karakter konumu `A`–`C` veya `X`–`Z`aralığında herhangi bir karakter içeriyorsa, `[A–CX–Z]` bir eşleştirmeye neden olur.  
   
-### <a name="usage-of-the-hyphen"></a>Usage of the Hyphen  
- A hyphen (`–`) can appear either at the beginning (after an exclamation point, if any) or at the end of `charlist` to match itself. In any other location, the hyphen identifies a range of characters delimited by the characters on either side of the hyphen.  
+### <a name="usage-of-the-hyphen"></a>Kısa çizgi kullanımı  
+ Kısa çizgi (`–`), başında (ünlem işaretiyle, varsa) veya `charlist` sonunda ile eşleşmek için görünebilir. Diğer herhangi bir konumda, tire, tirein her iki tarafındaki karakterlerle sınırlandırılmış bir karakter aralığı tanımlar.  
   
-## <a name="collating-sequence"></a>Collating Sequence  
- The meaning of a specified range depends on the character ordering at run time, as determined by `Option Compare` and the locale setting of the system the code is running on. With `Option Compare Binary`, the range `[A–E]` matches `A`, `B`, `C`, `D`, and `E`. With `Option Compare Text`, `[A–E]` matches `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E`, and `e`. The range does not match `Ê` or `ê` because accented characters collate after unaccented characters in the sort order.  
+## <a name="collating-sequence"></a>Harmanlama sırası  
+ Belirtilen bir aralığın anlamı, `Option Compare` tarafından belirlendiği şekilde, çalışma zamanında karakter sıralamasına ve kodun üzerinde çalıştığı sistemin yerel ayar ayarına göre değişir. `Option Compare Binary`, Aralık `[A–E]` `A`, `B`, `C`, `D`ve `E`eşleşir. `Option Compare Text`, `[A–E]` `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E`ve `e`eşleşir. Aralık `Ê` veya `ê` eşleşmiyor çünkü aksanlı karakterler sıralama düzeninde vurgusuz sonra harmanlandıktan sonra harmanlama.  
   
-## <a name="digraph-characters"></a>Digraph Characters  
- In some languages, there are alphabetic characters that represent two separate characters. For example, several languages use the character `æ` to represent the characters `a` and `e` when they appear together. The `Like` operator recognizes that the single digraph character and the two individual characters are equivalent.  
+## <a name="digraph-characters"></a>Digraf karakterleri  
+ Bazı dillerde, iki ayrı karakteri temsil eden alfabetik karakterler vardır. Örneğin, birkaç dil, `a` karakterleri göstermek için `æ` karakter kullanır ve birlikte görüntülendiklerinde `e`. `Like` işleci, tek bir digraf karakterinin ve iki ayrı karakterin eşdeğer olduğunu algılar.  
   
- When a language that uses a digraph character is specified in the system locale settings, an occurrence of the single digraph character in either `pattern` or `string` matches the equivalent two-character sequence in the other string. Similarly, a digraph character in `pattern` enclosed in brackets (by itself, in a list, or in a range) matches the equivalent two-character sequence in `string`.  
+ Sistem yerel ayarları 'nda bir digraf karakteri kullanan bir dil belirtildiğinde, `pattern` veya `string` tek bir digraf karakterinin bir oluşumu, diğer dizedeki eşdeğer iki karakterli dizi ile eşleşir. Benzer şekilde, köşeli ayraçlar içinde `pattern` bir digraf karakteri (bir listede veya bir Aralık içinde), `string`denk iki karakterlik sırayla eşleşir.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- The `Like` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ `Like` işleci *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- This example uses the `Like` operator to compare strings to various patterns. The results go into a `Boolean` variable indicating whether each string satisfies the pattern.  
+ Bu örnek, dizeleri çeşitli desenlerle karşılaştırmak için `Like` işlecini kullanır. Sonuçlar, her bir dizenin düzene uygun olup olmadığını gösteren bir `Boolean` değişkenine gider.  
   
  [!code-vb[VbVbalrOperators#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#30)]  
   
@@ -110,7 +110,7 @@ result = string Like pattern
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [Karşılaştırma İşleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Option Compare Deyimi](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

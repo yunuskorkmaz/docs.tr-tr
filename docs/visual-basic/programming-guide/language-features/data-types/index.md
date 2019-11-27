@@ -16,32 +16,32 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346357"
 ---
 # <a name="data-types-in-visual-basic"></a>Visual Basic'de Veri Türleri
-The *data type* of a programming element refers to what kind of data it can hold and how it stores that data. Data types apply to all values that can be stored in computer memory or participate in the evaluation of an expression. Every variable, literal, constant, enumeration, property, procedure parameter, procedure argument, and procedure return value has a data type.  
+Bir programlama öğesinin *veri türü* , ne tür verileri tutabileceğini ve bu verileri nasıl depoladığını gösterir. Veri türleri, bilgisayar belleğinde depolanabilecek veya bir ifadenin değerlendirmesine katılan tüm değerlere uygulanır. Her değişken, sabit değer, sabit, numaralandırma, özellik, yordam parametresi, yordam bağımsız değişkeni ve yordam dönüş değeri bir veri türüne sahiptir.  
   
-## <a name="declared-data-types"></a>Declared Data Types  
- You define a programming element with a declaration statement, and you specify its data type with the `As` clause. The following table shows the statements you use to declare various elements.  
+## <a name="declared-data-types"></a>Belirtilen veri türleri  
+ Bir WITH bildirim deyimi ile bir programlama öğesi tanımlar ve veri türünü `As` yan tümcesiyle belirlersiniz. Aşağıdaki tabloda, çeşitli öğeleri bildirmek için kullandığınız deyimler gösterilmektedir.  
   
-|Programming element|Data type declaration|  
+|Programlama öğesi|Veri türü bildirimi|  
 |-------------------------|---------------------------|  
-|Değişken|In a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)<br /><br /> `Dim`   `amount As Double`<br /><br /> `Static`   `yourName As String`<br /><br /> `Public`   `billsPaid As Decimal = 0`|  
-|Literal|With a literal type character; see "Literal Type Characters" in [Type Characters](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)<br /><br /> `Dim searchChar As Char = "."`  `C`|  
-|Sabit|In a [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md)<br /><br /> `Const`   `modulus As Single = 4.17825F`|  
-|Sabit Listesi|In an [Enum Statement](../../../../visual-basic/language-reference/statements/enum-statement.md)<br /><br /> `Public`   `Enum`   `colors`|  
-|Özellik|In a [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)<br /><br /> `Property`   `region() As String`|  
-|Procedure parameter|In a [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md), [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md), or [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Sub addSale(ByVal`   `amount`   `As Double)`|  
-|Procedure argument|In the calling code; each argument is a programming element that has already been declared, or an expression containing declared elements<br /><br /> `subString = Left(`  `inputString`  `,`   `5`  `)`|  
-|Procedure return value|In a [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md) or [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Function convert(ByVal b As Byte)`   `As String`|  
+|Değişken|Bir [Dim ifadesinde](../../../../visual-basic/language-reference/statements/dim-statement.md)<br /><br /> `Dim`   `amount As Double`<br /><br /> `Static`   `yourName As String`<br /><br /> `Public`   `billsPaid As Decimal = 0`|  
+|Ayarını|Sabit bir tür karakteriyle birlikte; [tür karakterinde](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md) "değişmez değer türü karakterleri" başlığına bakın<br /><br /> `Dim searchChar As Char = "."`  `C`|  
+|Sabit|[Const ifadesinde](../../../../visual-basic/language-reference/statements/const-statement.md)<br /><br /> `Const`   `modulus As Single = 4.17825F`|  
+|Numaralandırma|Bir [enum ifadesinde](../../../../visual-basic/language-reference/statements/enum-statement.md)<br /><br /> `Public`   `Enum`   `colors`|  
+|Özellik|Bir [Property ifadesinde](../../../../visual-basic/language-reference/statements/property-statement.md)<br /><br /> `Property`   `region() As String`|  
+|Yordam parametresi|Bir [Sub ifadesinde](../../../../visual-basic/language-reference/statements/sub-statement.md), [Function Ifadesinde](../../../../visual-basic/language-reference/statements/function-statement.md)veya [operator ifadesinde](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Sub addSale(ByVal`   `amount`   `As Double)`|  
+|Yordam bağımsız değişkeni|Çağıran kodda; Her bağımsız değişken önceden tanımlanmış bir programlama öğesidir veya tanımlanmış öğeleri içeren bir ifade<br /><br /> `subString = Left(`  `inputString`  `,`   `5`  `)`|  
+|Yordam dönüş değeri|Bir [Function ifadesinde](../../../../visual-basic/language-reference/statements/function-statement.md) veya [işleç ifadesinde](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Function convert(ByVal b As Byte)`   `As String`|  
   
- For a list of Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
+ Visual Basic veri türleri listesi için bkz. [veri türleri](../../../../visual-basic/language-reference/data-types/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Bileşik Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic dönüşümler yazın](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Demetler](tuples.md)
 - [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

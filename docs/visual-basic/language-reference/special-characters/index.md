@@ -8,12 +8,12 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349598"
 ---
-# <a name="special-characters-visual-basic-reference"></a>Special Characters (Visual Basic Reference)
+# <a name="special-characters-visual-basic-reference"></a>Özel karakterler (Visual Basic Başvurusu)
 
-Special characters are predefined, contextual characters that modifies the program element to which they are prepended. Visual Basic supports the following special character:
+Özel karakterler, önceden tanımlanmış olan program öğesini değiştiren bağlama karakterlerinden daha önceden tanımlanmıştır. Visual Basic aşağıdaki özel karakteri destekler:
 
-- [$](interpolated.md), the interpolated string character.
+- [$](interpolated.md), enterpolasyonlu dize karakteri.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Reference](../../../visual-basic/language-reference/index.md)
+- [Visual Basic Başvurusu](../../../visual-basic/language-reference/index.md)

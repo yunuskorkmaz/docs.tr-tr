@@ -16,28 +16,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341227"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Değere ve Başvuruya Göre Bağımsız Değişken Geçirme Arasındaki Farklar (Visual Basic)
-When you pass one or more arguments to a procedure, each argument corresponds to an underlying programming element in the calling code. You can pass either the value of this underlying element, or a reference to it. This is known as the *passing mechanism*.  
+Bir yordama bir veya daha fazla bağımsız değişken geçirdiğinizde, her bağımsız değişken çağıran koddaki temel bir programlama öğesine karşılık gelir. Bu temel öğenin veya buna bir başvurunun değerini geçirebilirsiniz. Bu, *geçirme mekanizması*olarak bilinir.  
   
-## <a name="passing-by-value"></a>Passing by Value  
- You pass an argument *by value* by specifying the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic copies the value of the underlying programming element into a local variable in the procedure. The procedure code does not have any access to the underlying element in the calling code.  
+## <a name="passing-by-value"></a>Değere göre geçirme  
+ Yordam tanımındaki karşılık gelen parametrenin [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) anahtar sözcüğünü belirterek *değere göre* bir bağımsız değişken geçirirsiniz. Bu geçen mekanizmayı kullandığınızda Visual Basic, temeldeki programlama öğesinin değerini yordamdaki bir yerel değişkene kopyalar. Yordam kodu, çağıran koddaki temel alınan öğeye hiçbir erişime sahip değil.  
   
-## <a name="passing-by-reference"></a>Passing by Reference  
- You pass an argument *by reference* by specifying the [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic gives the procedure a direct reference to the underlying programming element in the calling code.  
+## <a name="passing-by-reference"></a>Başvuruya göre geçirme  
+ Yordam tanımında karşılık gelen parametre için [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) anahtar sözcüğünü belirterek bir bağımsız değişkeni *başvuruya göre* geçirirsiniz. Bu geçiş mekanizmasını kullandığınızda Visual Basic, yordama çağıran koddaki temeldeki programlama öğesine doğrudan başvuru verir.  
   
-## <a name="passing-mechanism-and-element-type"></a>Passing Mechanism and Element Type  
- The choice of passing mechanism is not the same as the classification of the underlying element type. Passing by value or by reference refers to what Visual Basic supplies to the procedure code. A value type or reference type refers to how a programming element is stored in memory.  
+## <a name="passing-mechanism-and-element-type"></a>Geçirme mekanizması ve öğe türü  
+ Geçirme mekanizması seçimi, temel öğe türünün sınıflandırmasıyla aynı değildir. Değere veya başvuruya göre geçirme, yordam koduna ne Visual Basic temin eder. Bir değer türü veya başvuru türü, bir programlama öğesinin bellekte nasıl depolandığını belirtir.  
   
- However, the passing mechanism and element type are interrelated. The value of a reference type is a pointer to the data elsewhere in memory. This means that when you pass a reference type by value, the procedure code has a pointer to the underlying element's data, even though it cannot access the underlying element itself. For example, if the element is an array variable, the procedure code does not have access to the variable itself, but it can access the array members.  
+ Ancak, geçen mekanizma ve öğe türü birbirleriyle ilişkilidir. Başvuru türünün değeri, belleğin başka bir yerindeki verilerin bir işaretçisidir. Yani, bir başvuru türü değere göre geçirdiğinizde, yordam kodunun temeldeki öğenin kendisine erişemese de, temel alınan öğenin verilerine yönelik bir işaretçisi vardır. Örneğin, öğe bir dizi değişkenidir, yordam kodu değişkene erişemez, ancak dizi üyelerine erişebilir.  
   
-## <a name="ability-to-modify"></a>Ability to Modify  
- When you pass a nonmodifiable element as an argument, the procedure can never modify it in the calling code, whether it is passed `ByVal` or `ByRef`.  
+## <a name="ability-to-modify"></a>Değiştirme özelliği  
+ Değiştirilemeyen bir öğeyi bağımsız değişken olarak geçirdiğinizde, yordam `ByVal` veya `ByRef`başarılı olup olmadığını çağıran kodda hiçbir zaman değiştiremez.  
   
- For a modifiable element, the following table summarizes the interaction between the element type and the passing mechanism.  
+ Değiştirilebilir bir öğe için aşağıdaki tablo, öğe türü ve geçen mekanizma arasındaki etkileşimi özetler.  
   
-|Element type|Passed `ByVal`|Passed `ByRef`|  
+|Öğe türü|Geçilen `ByVal`|Geçilen `ByRef`|  
 |------------------|--------------------|--------------------|  
-|Value type (contains only a value)|The procedure cannot change the variable or any of its members.|The procedure can change the variable and its members.|  
-|Reference type (contains a pointer to a class or structure instance)|The procedure cannot change the variable but can change members of the instance to which it points.|The procedure can change the variable and members of the instance to which it points.|  
+|Değer türü (yalnızca bir değer içerir)|Yordam, ya da üyelerini değiştiremez.|Yordam değişkeni ve üyelerini değiştirebilir.|  
+|Başvuru türü (bir sınıf veya yapı örneğine yönelik bir işaretçi içerir)|Yordam değişkeni değiştiremez, ancak gösterdiği örnek üyelerini değiştirebilir.|Yordam, işaret ettiği örnek değişkenini ve üyelerini değiştirebilir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

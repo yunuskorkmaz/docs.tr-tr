@@ -17,61 +17,61 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345095"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>İzlenecek yol: Olay Bildirme ve Oluşturma (Visual Basic)
-This walkthrough demonstrates how to declare and raise events for a class named `Widget`. After you complete the steps, you might want to read the companion topic, [Walkthrough: Handling Events](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), which shows how to use events from `Widget` objects to provide status information in an application.  
+Bu izlenecek yolda, `Widget`adlı bir sınıf için olayların nasıl bildirileceğini ve tetikleyeceğinizi gösterilmektedir. Adımları tamamladıktan sonra, bir uygulamada durum bilgilerini sağlamak için `Widget` nesnelerinden olayları nasıl kullanacağınızı gösteren [Izlenecek yol: olayları işleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)başlıklı yardımcı konuyu okumak isteyebilirsiniz.  
   
-## <a name="the-widget-class"></a>The Widget Class  
- Assume for the moment that you have a `Widget` class. Your `Widget` class has a method that can take a long time to execute, and you want your application to be able to put up some kind of completion indicator.  
+## <a name="the-widget-class"></a>Pencere öğesi sınıfı  
+ `Widget` sınıfa sahip olduğunuz bir süre için varsayıyoruz. `Widget` sınıfınız, yürütülmesi uzun sürebilecek bir yönteme sahiptir ve uygulamanızın bir tür tamamlanma göstergesi koyabilmesini istersiniz.  
   
- Of course, you could make the `Widget` object show a percent-complete dialog box, but then you would be stuck with that dialog box in every project in which you used the `Widget` class. A good principle of object design is to let the application that uses an object handle the user interface—unless the whole purpose of the object is to manage a form or dialog box.  
+ Kuşkusuz, `Widget` nesnenin yüzde-Tamam iletişim kutusunu göstermesini sağlayabilirsiniz, ancak ardından `Widget` sınıfını kullandığınız her projede bu iletişim kutusuyla birlikte kalmış olursunuz. Nesne tasarımının iyi bir prensibi, nesnenin tüm amacı bir form veya iletişim kutusunu yönetmediği için, bir nesneyi kullanan uygulamanın kullanıcı arabirimini işlemesini sağlamaktır.  
   
- The purpose of `Widget` is to perform other tasks, so it is better to add a `PercentDone` event and let the procedure that calls `Widget`'s methods handle that event and display status updates. The `PercentDone` event can also provide a mechanism for canceling the task.  
+ `Widget` amacı diğer görevleri gerçekleştirmelidir; bu nedenle, bir `PercentDone` olayı eklemek ve `Widget`yöntemlerini çağıran yordamın bu olayı işleme ve durum güncelleştirmelerini görüntülemesini sağlamak daha iyidir. `PercentDone` olay, görevi iptal etmek için bir mekanizma da sağlayabilir.  
   
-#### <a name="to-build-the-code-example-for-this-topic"></a>To build the code example for this topic  
+#### <a name="to-build-the-code-example-for-this-topic"></a>Bu konunun kod örneğini oluşturmak için  
   
-1. Open a new Visual Basic Windows Application project and create a form named `Form1`.  
+1. Yeni bir Visual Basic Windows uygulaması projesi açın ve `Form1`adlı bir form oluşturun.  
   
-2. Add two buttons and a label to `Form1`.  
+2. `Form1`için iki düğme ve bir etiket ekleyin.  
   
-3. Name the objects as shown in the following table.  
+3. Nesneleri aşağıdaki tabloda gösterildiği gibi adlandırın.  
   
     |Nesne|Özellik|Ayar|  
     |------------|--------------|-------------|  
-    |`Button1`|`Text`|Start Task|  
+    |`Button1`|`Text`|Başlangıç görevi|  
     |`Button2`|`Text`|İptal|  
     |`Label`|`(Name)`, `Text`|lblPercentDone, 0|  
   
-4. On the **Project** menu, choose **Add Class** to add a class named `Widget.vb` to the project.  
+4. **Proje menüsünde,** projeye `Widget.vb` adlı bir sınıf eklemek Için **Sınıf Ekle** ' yi seçin.  
   
-#### <a name="to-declare-an-event-for-the-widget-class"></a>To declare an event for the Widget class  
+#### <a name="to-declare-an-event-for-the-widget-class"></a>Pencere öğesi sınıfı için bir olay bildirmek için  
   
-- Use the `Event` keyword to declare an event in the `Widget` class. Note that an event can have `ByVal` and `ByRef` arguments, as `Widget`'s `PercentDone` event demonstrates:  
+- `Widget` sınıfında bir olay bildirmek için `Event` anahtar sözcüğünü kullanın. Bir olayın `ByVal` ve `ByRef` bağımsız değişkenleri `Widget``PercentDone` olay gösterdiği gibi olabileceğini unutmayın:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   
- When the calling object receives a `PercentDone` event, the `Percent` argument contains the percentage of the task that is complete. The `Cancel` argument can be set to `True` to cancel the method that raised the event.  
+ Çağıran nesne `PercentDone` bir olay aldığında, `Percent` bağımsız değişkeni tamamlanan görevin yüzdesini içerir. `Cancel` bağımsız değişkeni, olayı oluşturan yöntemi iptal etmek için `True` olarak ayarlanabilir.  
   
 > [!NOTE]
-> You can declare event arguments just as you do arguments of procedures, with the following exceptions: Events cannot have `Optional` or `ParamArray` arguments, and events do not have return values.  
+> Aşağıdaki özel durumlarla birlikte, yordamların bağımsız değişkenlerini yaptığınız gibi olay bağımsız değişkenlerini bildirebilirsiniz: olaylarda `Optional` veya `ParamArray` bağımsız değişken olamaz ve olayların dönüş değerleri yoktur.  
   
- The `PercentDone` event is raised by the `LongTask` method of the `Widget` class. `LongTask` takes two arguments: the length of time the method pretends to be doing work, and the minimum time interval before `LongTask` pauses to raise the `PercentDone` event.  
+ `PercentDone` olay `Widget` sınıfının `LongTask` yöntemi tarafından tetiklenir. `LongTask` iki bağımsız değişken alır: yöntemin iş yapmakta olduğu zaman uzunluğu ve `LongTask` duraklamadan önce `PercentDone` olayını tetikleyen en kısa zaman aralığı.  
   
-#### <a name="to-raise-the-percentdone-event"></a>To raise the PercentDone event  
+#### <a name="to-raise-the-percentdone-event"></a>PercentDone olayını yükseltmek için  
   
-1. To simplify access to the `Timer` property used by this class, add an `Imports` statement to the top of the declarations section of your class module, above the `Class Widget` statement.  
+1. Bu sınıf tarafından kullanılan `Timer` özelliğine erişimi basitleştirmek için, sınıf modülünüzün üst kısmına `Class Widget` deyimin üst kısmına bir `Imports` bildirimi ekleyin.  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
-2. Add the following code to the `Widget` class:  
+2. `Widget` sınıfına aşağıdaki kodu ekleyin:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
- When your application calls the `LongTask` method, the `Widget` class raises the `PercentDone` event every `MinimumInterval` seconds. When the event returns, `LongTask` checks to see if the `Cancel` argument was set to `True`.  
+ Uygulamanız `LongTask` yöntemini çağırdığında, `Widget` sınıfı her `MinimumInterval` saniyede `PercentDone` olayını oluşturur. Olay döndüğünde, `LongTask` `Cancel` bağımsız değişkeninin `True`olarak ayarlandığını denetler.  
   
- A few disclaimers are necessary here. For simplicity, the `LongTask` procedure assumes you know in advance how long the task will take. This is almost never the case. Dividing tasks into chunks of even size can be difficult, and often what matters most to users is simply the amount of time that passes before they get an indication that something is happening.  
+ Burada birkaç bildirimler gereklidir. Kolaylık sağlaması için `LongTask` yordamı, görevin ne kadar süreceğine ilişkin olduğunu varsayar. Bu neredeyse hiçbir durum değildir. Görevleri bile eşit ölçekli parçalara bölmek zor olabilir ve genellikle kullanıcıların en önemli bir şeyi, bir şeyin meydana geldiğinin bir göstergesi olmadan önce geçen süreyi belirtir.  
   
- You may have spotted another flaw in this sample. The `Timer` property returns the number of seconds that have passed since midnight; therefore, the application gets stuck if it is started just before midnight. A more careful approach to measuring time would take boundary conditions such as this into consideration, or avoid them altogether, using properties such as `Now`.  
+ Bu örnekte başka bir kusuru açığa çıkabilir. `Timer` özelliği, gece yarısından beri geçen saniye sayısını döndürür; Bu nedenle, uygulama gece yarısından önce başlatıldıysa, takılmış olur. Bu süreyi ölçmeye yönelik daha dikkatli bir yaklaşım, `Now`gibi özellikleri kullanarak bunun dikkate alınması veya bunların tamamen olmaması gibi sınır koşullarını ele alır.  
   
- Now that the `Widget` class can raise events, you can move to the next walkthrough. [Walkthrough: Handling Events](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md) demonstrates how to use `WithEvents` to associate an event handler with the `PercentDone` event.  
+ Artık `Widget` sınıfı olayları tetiklemediğini de bir sonraki izlenecek yol için geçebilirsiniz. [Izlenecek yol: olayları işleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md) , bir olay işleyicisini `PercentDone` olay ile ilişkilendirmek için `WithEvents` nasıl kullanacağınızı gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

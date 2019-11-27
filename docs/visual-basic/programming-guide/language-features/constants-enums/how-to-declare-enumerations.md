@@ -1,5 +1,5 @@
 ---
-title: 'How to: Declare Enumerations'
+title: 'Nasıl yapılır: Numaralandırmalar bildirme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], enumerations
@@ -14,31 +14,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354052"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Nasıl yapılır: Numaralandırmaları Bildirme (Visual Basic)
-You create an enumeration with the `Enum` statement in the declarations section of a class or module. You cannot declare an enumeration within a method. To specify the appropriate level of access, use `Private`, `Protected`, `Friend`, or `Public`.  
+Bir sınıfın veya modülün Bildirimler bölümünde `Enum` ifadesiyle bir numaralandırma oluşturursunuz. Bir yöntem içinde bir numaralandırma bildiremezsiniz. Uygun erişim düzeyini belirtmek için `Private`, `Protected`, `Friend`veya `Public`kullanın.  
   
- An `Enum` type has a name, an underlying type, and a set of fields, each representing a constant. The name must be a valid Visual Basic .NET qualifier. The underlying type must be one of the integer types—`Byte`, `Short`, `Long` or `Integer`. `Integer` is the default. Enumerations are always strongly typed and are not interchangeable with integer number types.  
+ `Enum` türü, her biri bir sabiti temsil eden bir ada, temel alınan türe ve bir alan kümesine sahiptir. Ad geçerli bir .NET niteleyicisi olmalıdır Visual Basic. Temel alınan tür tamsayı türlerinden biri olmalıdır —`Byte`, `Short`, `Long` veya `Integer`. `Integer` varsayılandır. Numaralandırmalar her zaman kesin olarak türlidir ve tamsayı sayı türleriyle birlikte değiştirilebilir değildir.  
   
- Enumerations cannot have floating-point values. If an enumeration is assigned a floating-point value with `Option Strict On`, a compiler error results. If `Option Strict` is `Off`, the value is automatically converted to the `Enum` type.  
+ Numaralandırmalar kayan nokta değerlerine sahip olamaz. Bir numaralandırmaya `Option Strict On`bir kayan nokta değeri atanırsa bir derleyici hatası oluşur. `Option Strict` `Off`ise, değer otomatik olarak `Enum` türüne dönüştürülür.  
   
- For information on names, and how to use the `Imports` statement to make name qualification unnecessary, see [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
+ Adlar hakkında bilgi edinmek ve ad nitelemesini gereksiz hale getirmek için `Imports` deyimin nasıl kullanılacağını öğrenmek için bkz. [numaralandırmalar ve ad niteliği](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
   
-### <a name="to-declare-an-enumeration"></a>To declare an enumeration  
+### <a name="to-declare-an-enumeration"></a>Bir numaralandırma bildirmek için  
   
-1. Write a declaration that includes a code access level, the `Enum` keyword, and a valid name, as in the following examples, each of which declares a different `Enum`.  
+1. Her biri farklı bir `Enum`bildiren aşağıdaki örneklerde olduğu gibi, kod erişim düzeyi, `Enum` anahtar sözcüğünü ve geçerli bir adı içeren bir bildirim yazın.  
   
      [!code-vb[VbEnumsTask#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#3)]  
   
-2. Define the constants in the enumeration. By default, the first constant in an enumeration is initialized to `0`, and subsequent constants are initialized to a value of one more than the previous constant. For example, the following enumeration, `Days`, contains a constant named `Sunday` with the value `0`, a constant named `Monday` with the value `1`, a constant named `Tuesday` with the value of `2`, and so on.  
+2. Sabit Listesi içindeki sabitleri tanımlayın. Varsayılan olarak, bir Numaralandırmadaki ilk sabit `0`olarak başlatılır ve sonraki sabitler önceki sabitten bir değere başlatılır. Örneğin, aşağıdaki sabit listesi `Days`, değer `0`, `1`değeri ile `Monday` adlı bir sabit, `Tuesday` değeri ile `2`adlı bir sabit olan `Sunday` adında bir sabit içerir.  
   
      [!code-vb[VbEnumsTask#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#4)]  
   
-3. You can explicitly assign values to constants in an enumeration by using an assignment statement. You can assign any integer value, including negative numbers. For example, you may want constants with values less than zero to represent error conditions. In the following enumeration, the constant `Invalid` is explicitly assigned the value `–1`, and the constant `Sunday` is assigned the value `0`. Because it is the first constant in the enumeration, `Saturday` is also initialized to the value `0`. The value of `Monday` is `1` (one more than the value of `Sunday`); the value of `Tuesday` is `2`, and so on.  
+3. Atama ifadesini kullanarak, bir Numaralandırmadaki sabitlere açıkça değer atayabilirsiniz. Negatif sayılar da dahil olmak üzere herhangi bir tamsayı değeri atayabilirsiniz. Örneğin, hata koşullarını temsil etmek için sıfırdan küçük değerler içeren sabitlerin olmasını isteyebilirsiniz. Aşağıdaki numaralandırmada, sabit `Invalid` `–1`değeri açıkça atanır ve sabit `Sunday` `0`değer atanır. Numaralandırmadaki ilk sabit olduğundan, `Saturday` `0`değer olarak da başlatılır. `Monday` değeri `1` (`Sunday`değerinden bir daha fazla); `Tuesday` değeri `2`ve bu şekilde devam eder.  
   
      [!code-vb[VbEnumsTask#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#5)]  
   
-### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>To declare an enumeration as an explicit type  
+### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>Bir sabit listesini açık bir tür olarak bildirmek için  
   
-- Specify the type of the enum by using the `As` clause, as shown in the following example.  
+- Aşağıdaki örnekte gösterildiği gibi, `As` yan tümcesini kullanarak enum türünü belirtin.  
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
@@ -46,7 +46,7 @@ You create an enumeration with the `Enum` statement in the declarations section 
 
 - [Sabit Listeleri ve Ad Niteliği](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Nasıl yapılır: Bir Sabit Listesi Üyesine Başvurma](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
+- [Nasıl yapılır: Visual Basic bir numaralandırmada yineleme yapma](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [Nasıl yapılır: Bir Sabit Listesi Değeriyle İlişkili Dizeyi Belirleme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Sabit Listesi Ne Zaman Kullanılır?](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [Sabitlere Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)

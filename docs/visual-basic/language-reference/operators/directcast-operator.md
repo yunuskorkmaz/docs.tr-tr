@@ -15,31 +15,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331315"
 ---
 # <a name="directcast-operator-visual-basic"></a>DirectCast İşleci (Visual Basic)
-Introduces a type conversion operation based on inheritance or implementation.  
+Devralma veya uygulamaya göre bir tür dönüştürme işlemi sunar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `DirectCast` does not use the Visual Basic run-time helper routines for conversion, so it can provide somewhat better performance than `CType` when converting to and from data type `Object`.  
+ `DirectCast`, dönüştürme için Visual Basic çalışma zamanı yardımcı yordamlarını kullanmaz, bu nedenle `Object`veri türüne dönüştürme sırasında `CType` kıyasla biraz daha iyi bir performans sağlayabilir.  
   
- You use the `DirectCast` keyword similar to the way you use the [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) and the [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md) keyword. You supply an expression as the first argument and a type to convert it to as the second argument. `DirectCast` requires an inheritance or implementation relationship between the data types of the two arguments. This means that one type must inherit from or implement the other.  
+ [CType işlevini](../../../visual-basic/language-reference/functions/ctype-function.md) ve [TryCast İşleci](../../../visual-basic/language-reference/operators/trycast-operator.md) anahtar sözcüğünü kullanma yöntemine benzer şekilde `DirectCast` anahtar sözcüğünü kullanırsınız. İlk bağımsız değişken olarak bir ifade ve ikinci bağımsız değişken olarak dönüştürülecek bir tür sağlarsınız. `DirectCast` iki bağımsız değişkenin veri türleri arasında devralma veya uygulama ilişkisi gerektirir. Bu, bir türün diğerini devralması ya da uygulamanız gereken anlamına gelir.  
   
-## <a name="errors-and-failures"></a>Errors and Failures  
- `DirectCast` generates a compiler error if it detects that no inheritance or implementation relationship exists. But the lack of a compiler error does not guarantee a successful conversion. If the desired conversion is narrowing, it could fail at run time. If this happens, the runtime throws an <xref:System.InvalidCastException> error.  
+## <a name="errors-and-failures"></a>Hatalar ve hatalar  
+ `DirectCast`, devralma veya uygulama ilişkisi olmadığını algılarsa bir derleyici hatası oluşturur. Ancak bir derleyici hatasının olmaması, başarılı bir dönüştürmeyi garanti etmez. İstenen dönüştürme daraltılamaz, çalışma zamanında başarısız olabilir. Bu durumda, çalışma zamanı bir <xref:System.InvalidCastException> hatası oluşturur.  
   
 ## <a name="conversion-keywords"></a>Dönüşüm Anahtar Sözcükleri  
- A comparison of the type conversion keywords is as follows.  
+ Tür dönüştürme anahtar sözcüklerini karşılaştırma aşağıdaki gibidir.  
   
-|Keyword|Veri türleri|Argument relationship|Run-time failure|  
+|Anahtar sözcüğü|Veri türleri|Bağımsız değişken ilişkisi|Çalışma zamanı hatası|  
 |---|---|---|---|  
-|[CType İşlevi](../../../visual-basic/language-reference/functions/ctype-function.md)|Any data types|Widening or narrowing conversion must be defined between the two data types|Throws <xref:System.InvalidCastException>|  
-|`DirectCast`|Any data types|One type must inherit from or implement the other type|Throws <xref:System.InvalidCastException>|  
-|[TryCast İşleci](../../../visual-basic/language-reference/operators/trycast-operator.md)|Reference types only|One type must inherit from or implement the other type|Returns [Nothing](../../../visual-basic/language-reference/nothing.md)|  
+|[CType İşlevi](../../../visual-basic/language-reference/functions/ctype-function.md)|Tüm veri türleri|İki veri türü arasında genişletme veya daraltma dönüştürmesi tanımlanmalıdır|<xref:System.InvalidCastException> oluşturur|  
+|`DirectCast`|Tüm veri türleri|Bir tür, diğer türden devralması veya uygulamamalıdır|<xref:System.InvalidCastException> oluşturur|  
+|[TryCast İşleci](../../../visual-basic/language-reference/operators/trycast-operator.md)|Yalnızca başvuru türleri|Bir tür, diğer türden devralması veya uygulamamalıdır|[Hiçbir şey](../../../visual-basic/language-reference/nothing.md) döndürmez|  
   
 ## <a name="example"></a>Örnek  
- The following example demonstrates two uses of `DirectCast`, one that fails at run time and one that succeeds.  
+ Aşağıdaki örnek, çalışma zamanında başarısız olan ve başarılı bir şekilde `DirectCast`iki kullanımını gösterir.  
   
  [!code-vb[VbVbalrKeywords#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#1)]  
   
- In the preceding example, the run-time type of `q` is `Double`. `CType` succeeds because `Double` can be converted to `Integer`. However, the first `DirectCast` fails at run time because the run-time type of `Double` has no inheritance relationship with `Integer`, even though a conversion exists. The second `DirectCast` succeeds because it converts from type <xref:System.Windows.Forms.Form> to type <xref:System.Windows.Forms.Control>, from which <xref:System.Windows.Forms.Form> inherits.  
+ Yukarıdaki örnekte, `q` çalışma zamanı türü `Double`. `Double` `Integer`dönüştürülebildiğinden `CType` başarılı olur. Ancak, bir dönüştürme var olsa da, `Double` çalışma zamanı türünün `Integer`devralma ilişkisi olmadığından ilk `DirectCast` çalışma zamanında başarısız olur. İkinci `DirectCast`, <xref:System.Windows.Forms.Form> türünden <xref:System.Windows.Forms.Form> devraldığı <xref:System.Windows.Forms.Control>türüne dönüştürülemediğinden başarılı olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

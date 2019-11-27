@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437640"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>IMetaDataImport::GetCustomAttributeProps Metodu
-Gets the value of the custom attribute, given its metadata token.  
+Meta veri belirteci verilen özel özniteliğin değerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,31 +39,31 @@ HRESULT GetCustomAttributeProps (
   
 ## <a name="parameters"></a>Parametreler  
  `cv`  
- [in] A metadata token that represents the custom attribute to be retrieved.  
+ 'ndaki Alınacak özel özniteliği temsil eden bir meta veri belirteci.  
   
  `ptkObj`  
- [out, optional] A metadata token representing the object that the custom attribute modifies. This value can be any type of metadata token except `mdCustomAttribute`.  
+ [Out, isteğe bağlı] Özel özniteliğin değiştirdiği nesneyi temsil eden bir meta veri belirteci. Bu değer, `mdCustomAttribute`hariç herhangi bir tür meta veri belirteci olabilir.  
   
  `ptkType`  
- [out, optional] An `mdMethodDef` or `mdMemberRef` metadata token representing the <xref:System.Type> of the returned custom attribute.  
+ [Out, isteğe bağlı] Döndürülen özel özniteliğin <xref:System.Type> temsil eden bir `mdMethodDef` veya `mdMemberRef` meta veri belirteci.  
   
  `ppBlob`  
- [out, optional] A pointer to an array of data that is the value of the custom attribute.  
+ [Out, isteğe bağlı] Özel özniteliğin değeri olan bir veri dizisine yönelik bir işaretçi.  
   
  `pcbSize`  
- [out, optional] The size in bytes of the data returned in *`ppBlob`.  
+ [Out, isteğe bağlı] *`ppBlob`döndürülen verilerin bayt cinsinden boyutu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- A custom attribute is stored as an array of data, the format which is understood by the metadata engine.  
+ Özel bir öznitelik, veri dizisi olarak, meta veri altyapısı tarafından anlaşılabilecek biçimde depolanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

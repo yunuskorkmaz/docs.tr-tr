@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344278"
 ---
 # <a name="-help---visual-basic"></a>-help, -? (Visual Basic)
-Displays the compiler options.  
+Derleyici seçeneklerini görüntüler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,13 +32,13 @@ veya
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- If you include this option in a compilation, no output file is created and no compilation takes place.  
+ Bu seçeneği bir derlemeye eklerseniz, hiçbir çıktı dosyası oluşturulmaz ve hiçbir derleme gerçekleşmez.  
   
 > [!NOTE]
-> The `-help` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> `-help` seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- The following code displays help from the command line.  
+ Aşağıdaki kod, komut satırından yardım görüntüler.  
   
 ```console  
 vbc -help  
@@ -46,5 +46,5 @@ vbc -help
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

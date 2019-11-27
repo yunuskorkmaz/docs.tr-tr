@@ -20,33 +20,33 @@ ms.locfileid: "74345647"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kayıt Defteri Anahtarını Silme
 
-The <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> and <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> methods can be used to delete registry keys.  
+<xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> ve <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> yöntemleri kayıt defteri anahtarlarını silmek için kullanılabilir.  
   
 ## <a name="procedure"></a>Yordam  
   
-#### <a name="to-delete-a-registry-key"></a>To delete a registry key  
+#### <a name="to-delete-a-registry-key"></a>Kayıt defteri anahtarını silmek için  
   
-- Use the `DeleteSubKey` method to delete a registry key. This example deletes the key Software/TestApp in the CurrentUser hive. You can change this in the code to the appropriate string, or have it rely on user-supplied information.  
+- Bir kayıt defteri anahtarını silmek için `DeleteSubKey` yöntemini kullanın. Bu örnek, geçerli kullanıcı kovanındaki Key Software/TestApp öğesini siler. Bu kodu kodda uygun dizeye değiştirebilir veya Kullanıcı tarafından sağlanan bilgileri kullanabilir.  
   
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- The `DeleteSubKey` method returns an empty string if the key/value pair does not exist.  
+ Anahtar/değer çifti yoksa `DeleteSubKey` yöntemi boş bir dize döndürür.  
   
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- The name of the key is `Nothing` (<xref:System.ArgumentNullException>).  
+- Anahtarın adı `Nothing` (<xref:System.ArgumentNullException>).  
   
-- The user does not have permissions to delete registry keys (<xref:System.Security.SecurityException>).  
+- Kullanıcının kayıt defteri anahtarlarını silme izni yok (<xref:System.Security.SecurityException>).  
   
-- The key name exceeds the 255-character limit (<xref:System.ArgumentException>).  
+- Anahtar adı 255 karakterlik sınırı (<xref:System.ArgumentException>) aşıyor.  
   
-- The registry key is read-only (<xref:System.UnauthorizedAccessException>).  
+- Kayıt defteri anahtarı salt okunurdur (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
 
- Registry calls fail if either sufficient run-time permissions are not granted (<xref:System.Security.Permissions.RegistryPermission>) or if the user does not have the correct access (as determined by the ACLs) for creating or writing to settings. For example, a local application that has the code access security permission might not have operating system permission.  
+ Yeterli çalışma zamanı izni verilmezse (<xref:System.Security.Permissions.RegistryPermission>) veya Kullanıcı, ayarları oluşturmaya veya bu ayarlara yazmaya yönelik doğru erişime (ACL 'Ler tarafından belirlendiği şekilde) sahip değilse, kayıt defteri çağrıları başarısız olur. Örneğin, kod erişim güvenliği iznine sahip bir yerel uygulama işletim sistemi iznine sahip olmayabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

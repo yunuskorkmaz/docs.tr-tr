@@ -16,17 +16,17 @@ ms.locfileid: "74351789"
 ---
 # <a name="object-variables-in-visual-basic"></a>Visual Basic'de Nesne Değişkenleri
 
-In addition to storing values directly, a variable can refer to an object. You assign an object to a variable for the same reasons you assign any value to a variable:
+Değerleri doğrudan depolamanın yanı sıra bir değişken bir nesneye başvurabilir. Bir değişkene herhangi bir değer atadığınız nedenlerle bir nesne atayabilirsiniz:
 
-- A variable name is often shorter and easier to remember than the full path of methods and properties necessary to access the object itself.
+- Değişken adı genellikle daha kısadır ve nesneye erişmek için gereken yöntemlerin ve özelliklerin tam yolundan daha kolay anımsanacak.
 
-- Using a variable that refers to an object is more efficient than repeatedly accessing the object itself through the necessary methods or properties.
+- Bir nesneye başvuran bir değişken kullanmak, gerekli yöntemler veya özellikler aracılığıyla nesnenin kendine sürekli olarak erişilmesinin daha etkilidir.
 
-- You can change a variable to refer to other objects while your code is running.
+- Kodunuzun çalıştığı sırada diğer nesnelere başvurmak için bir değişken değiştirebilirsiniz.
 
-## <a name="making-code-shorter"></a>Making Code Shorter
+## <a name="making-code-shorter"></a>Kodu daha kısa hale getirme
 
-You can use object variables to shorten the code you have to type. The following example uses the full path of methods and properties to access a <xref:System.Windows.Forms.Control> object.
+Yazmanız istediğiniz kodu kısaltmak için nesne değişkenlerini kullanabilirsiniz. Aşağıdaki örnek, <xref:System.Windows.Forms.Control> nesnesine erişmek için yöntemlerin ve özelliklerin tam yolunu kullanır.
 
 ```vb
 ' Assume Me is a valid Form, or replace Me with a valid Form.
@@ -35,7 +35,7 @@ Me.ActiveForm.ActiveControl.Location = New Point(100, 100)
 Me.ActiveForm.ActiveControl.Show()
 ```
 
-You can shorten this code, and speed up execution, if you use an object variable for the control. You should declare the object variable with the specific class that you intend to assign to it (`Control` in this case). Once you assign an object to the variable, you can treat it exactly the same as you treat the object to which it refers. You can set or retrieve the properties of the object or use any of its methods. The following example uses an object variable to simplify the code in the preceding example.
+Denetim için bir nesne değişkeni kullanıyorsanız, bu kodu kısaltabilir ve yürütmeyi hızlandıraseçebilirsiniz. Nesne değişkenini kendisine atamak istediğiniz belirli bir sınıfla bildirmeniz gerekir (Bu durumda`Control`). Değişkene bir nesne atadıktan sonra, başvurduğu nesneyi değerlendirdiğiniz kadar tam olarak aynı şekilde davranır. Nesnenin özelliklerini ayarlayabilir veya alabilir ya da yöntemlerinden birini kullanabilirsiniz. Aşağıdaki örnek, önceki örnekteki kodu basitleştirmek için bir nesne değişkeni kullanır.
 
 ```vb
 Dim ctrlActv As System.Windows.Forms.Control = Me.ActiveForm.ActiveControl

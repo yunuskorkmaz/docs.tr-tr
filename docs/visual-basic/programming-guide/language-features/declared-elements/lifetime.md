@@ -18,58 +18,58 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345307"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic'de Ömür
-The *lifetime* of a declared element is the period of time during which it is available for use. Variables are the only elements that have lifetime. For this purpose, the compiler treats procedure parameters and function returns as special cases of variables. The lifetime of a variable represents the period of time during which it can hold a value. Its value can change over its lifetime, but it always holds some value.  
+Belirtilen bir öğenin *yaşam süresi* , kullanım için kullanılabilir olduğu süredir. Değişkenler ömrü olan tek öğelerdir. Bu amaçla, derleyici yordam parametreleri ve işlev döndürenleri değişkenlerin özel durumları olarak değerlendirir. Bir değişkenin ömrü, bir değeri tutabileceği süreyi temsil eder. Değeri ömrü boyunca değişebilir, ancak her zaman bir değer tutar.  
   
-## <a name="different-lifetimes"></a>Different Lifetimes  
- A *member variable* (declared at module level, outside any procedure) typically has the same lifetime as the element in which it is declared. A nonshared variable declared in a class or structure exists as a separate copy for each instance of the class or structure in which it is declared. Each such variable has the same lifetime as its instance. However, a `Shared` variable has only a single lifetime, which lasts for the entire time your application is running.  
+## <a name="different-lifetimes"></a>Farklı yaşam süreleri  
+ Bir *üye değişkeni* (modül düzeyinde, herhangi bir yordam dışında) genellikle, bildirildiği öğeyle aynı yaşam süresine sahiptir. Bir sınıf veya yapıda tanımlanmış paylaşılmayan olmayan bir değişken, bildirildiği sınıf veya yapının her bir örneği için ayrı bir kopya olarak bulunur. Bu tür bir değişken, örneğiyle aynı yaşam süresine sahiptir. Ancak, bir `Shared` değişken yalnızca tek bir yaşam süresine sahiptir ve bu, uygulamanızın çalıştığı sürenin tamamına yönelik olarak sürer.  
   
- A *local variable* (declared inside a procedure) exists only while the procedure in which it is declared is running. This applies also to that procedure's parameters and to any function return. However, if that procedure calls other procedures, the local variables retain their values while the called procedures are running.  
+ *Yerel bir değişken* (bir yordam içinde belirtilen) yalnızca, bildirildiği yordamın çalıştığı sırada bulunur. Bu, bu yordamın parametreleri ve herhangi bir işlev dönüşü için de geçerlidir. Ancak, bu yordam diğer yordamları çağırırsa, çağrılan yordamlar çalışırken yerel değişkenler değerlerini korurlar.  
   
-## <a name="beginning-of-lifetime"></a>Beginning of Lifetime  
- A local variable's lifetime begins when control enters the procedure in which it is declared. Every local variable is initialized to the default value for its data type as soon as the procedure begins running. When the procedure encounters a `Dim` statement that specifies initial values, it sets those variables to those values, even if your code had already assigned other values to them.  
+## <a name="beginning-of-lifetime"></a>Yaşam süresi başlangıcı  
+ Bir yerel değişkenin ömrü denetim, bildirildiği yordama girdiğinde başlar. Her yerel değişken, yordam çalışmaya başladıktan hemen sonra veri türü için varsayılan değere başlatılır. Yordam, başlangıç değerlerini belirten bir `Dim` bildirimiyle karşılaştığında, kodunuz daha önceden başka değerler atamış olsa bile bu değişkenleri bu değerlere ayarlar.  
   
- Each member of a structure variable is initialized as if it were a separate variable. Similarly, each element of an array variable is initialized individually.  
+ Bir yapı değişkeninin her üyesi ayrı bir değişken gibi başlatılır. Benzer şekilde, bir dizi değişkeninin her öğesi ayrı ayrı başlatılır.  
   
- Variables declared within a block inside a procedure (such as a `For` loop) are initialized on entry to the procedure. These initializations take effect whether or not your code ever executes the block.  
+ Yordamın içindeki bir blok içinde bildirildiği değişkenler (örneğin, `For` döngüsü), yordama girişte başlatılır. Bu başlatmalar, kodunuzun engellemeyi bir daha yürüttüğünde ya da çalıştırmayacağı kadar etkili olur.  
   
-## <a name="end-of-lifetime"></a>End of Lifetime  
- When a procedure terminates, the values of its local variables are not preserved, and Visual Basic reclaims their memory. The next time you call the procedure, all its local variables are created afresh and reinitialized.  
+## <a name="end-of-lifetime"></a>Yaşam süresi sonu  
+ Bir yordam sonlandırıldığında, yerel değişkenlerinin değerleri korunmaz ve bellek geri kazanır Visual Basic. Yordamı bir sonraki kez çağırdığınızda, tüm yerel değişkenleri baştan ve yeniden başlatılan oluşturulur.  
   
- When an instance of a class or structure terminates, its nonshared variables lose their memory and their values. Each new instance of the class or structure creates and reinitializes its nonshared variables. However, `Shared` variables are preserved until your application stops running.  
+ Bir sınıf veya yapının örneği sonlandırıldığında, paylaşılmayan değişkenleri belleği ve değerlerini kaybeder. Sınıfın veya yapının her yeni örneği, paylaşılmayan değişkenlerini oluşturur ve yeniden başlatır. Ancak `Shared` değişkenler, uygulamanız çalışmayı durdurana kadar korunur.  
   
-## <a name="extension-of-lifetime"></a>Extension of Lifetime  
- If you declare a local variable with the `Static` keyword, its lifetime is longer than the execution time of its procedure. The following table shows how the procedure declaration determines how long a `Static` variable exists.  
+## <a name="extension-of-lifetime"></a>Yaşam süresi uzantısı  
+ `Static` anahtar sözcüğüyle yerel bir değişken bildirirseniz, ömrü yordamının yürütme süresinden daha uzun olur. Aşağıdaki tabloda, yordam bildiriminin bir `Static` değişkeninin ne kadar süre olduğunu nasıl belirlediği gösterilmektedir.  
   
-|Procedure location and sharing|Static variable lifetime begins|Static variable lifetime ends|  
+|Yordam konumu ve paylaşımı|Statik değişken ömrü başlar|Statik değişken ömrü bitiyor|  
 |------------------------------------|-------------------------------------|-----------------------------------|  
-|In a module (shared by default)|The first time the procedure is called|When your application stops running|  
-|In a class, `Shared` (procedure is not an instance member)|The first time the procedure is called either on a specific instance or on the class or structure name itself|When your application stops running|  
-|In an instance of a class, not `Shared` (procedure is an instance member)|The first time the procedure is called on the specific instance|When the instance is released for garbage collection (GC)|  
+|Bir modülde (varsayılan olarak paylaşılır)|Yordamın ilk çağrılışında|Uygulamanız çalışmayı durduruyor|  
+|Bir sınıfta `Shared` (yordam bir örnek üye değildir)|Yordamın ilk kez belirli bir örnekte veya sınıf ya da yapı adının kendisinde çağrılması|Uygulamanız çalışmayı durduruyor|  
+|Sınıf örneğinde `Shared` değil (yordam bir örnek üyesidir)|Yordamın belirli bir örnekte ilk çağrılışında|Örnek, atık toplama (GC) için bırakıldığında|  
   
-## <a name="static-variables-of-the-same-name"></a>Static Variables of the Same Name  
- You can declare static variables with the same name in more than one procedure. If you do this, the Visual Basic compiler considers each such variable to be a separate element. The initialization of one of these variables does not affect the values of the others. The same applies if you define a procedure with a set of overloads and declare a static variable with the same name in each overload.  
+## <a name="static-variables-of-the-same-name"></a>Aynı ada sahip statik değişkenler  
+ Aynı ada sahip statik değişkenleri birden fazla yordamda bildirebilirsiniz. Bunu yaparsanız, Visual Basic derleyici her bir değişkeni ayrı bir öğe olacak şekilde değerlendirir. Bu değişkenlerden birinin başlatılması, diğerlerinin değerlerini etkilemez. Aynı şekilde, bir dizi aşırı yükleme içeren bir yordam tanımlayabilir ve her bir aşırı yüklemede aynı ada sahip bir statik değişken bildirirseniz aynı durum geçerlidir.  
   
-## <a name="containing-elements-for-static-variables"></a>Containing Elements for Static Variables  
- You can declare a static local variable within a class, that is, inside a procedure in that class. However, you cannot declare a static local variable within a structure, either as a structure member or as a local variable of a procedure within that structure.  
+## <a name="containing-elements-for-static-variables"></a>Statik değişkenler için öğeleri içeren  
+ Bir sınıf içinde, bu sınıftaki bir yordamın içinde statik bir yerel değişken bildirebilirsiniz. Ancak, yapı üyesi olarak ya da bu yapı içindeki bir yordamın yerel değişkeni olarak bir yapı içinde statik bir yerel değişken bildiremezsiniz.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- The following example declares a variable with the [Static](../../../../visual-basic/language-reference/modifiers/static.md) keyword. (Note that you do not need the `Dim` keyword when the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) uses a modifier such as `Static`.)  
+ Aşağıdaki örnek, [static](../../../../visual-basic/language-reference/modifiers/static.md) anahtar sözcüğüyle bir değişken bildirir. ( [Dim ifadesinin](../../../../visual-basic/language-reference/statements/dim-statement.md) `Static`gibi bir değiştirici kullandığında `Dim` anahtar kelimesinin gerekli olmadığına unutmayın.)  
   
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbalrKeywords#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#13)]  
   
 ### <a name="comments"></a>Açıklamalar  
- In the preceding example, the variable `applesSold` continues to exist after the procedure `runningTotal` returns to the calling code. The next time `runningTotal` is called, `applesSold` retains its previously calculated value.  
+ Yukarıdaki örnekte, yordam `runningTotal` çağıran koda döndüğünde `applesSold` değişkeni var olmaya devam eder. `runningTotal` bir sonraki sefer, `applesSold` daha önce hesaplanmış değerini korur.  
   
- If `applesSold` had been declared without using `Static`, the previous accumulated values would not be preserved across calls to `runningTotal`. The next time `runningTotal` was called, `applesSold` would have been recreated and initialized to 0, and `runningTotal` would have simply returned the same value with which it was called.  
+ `applesSold` `Static`kullanılmadan bildirilirse, önceki birikmiş değerler `runningTotal`çağrıları arasında korunmaz. `runningTotal` bir sonraki çağrılışında, `applesSold` yeniden oluşturulup 0 olarak başlatılır ve `runningTotal` yalnızca çağrıldığı değeri döndürür.  
   
-### <a name="compiling-the-code"></a>Kod Derleniyor  
- You can initialize the value of a static local variable as part of its declaration. If you declare an array to be `Static`, you can initialize its rank (number of dimensions), the length of each dimension, and the values of the individual elements.  
+### <a name="compiling-the-code"></a>Kod Derleme  
+ Bir statik yerel değişkenin değerini, bildiriminin bir parçası olarak başlatabilirsiniz. Bir diziyi `Static`olarak bildirirseniz, derecesini (boyut sayısı), her boyutun uzunluğunu ve bireysel öğelerin değerlerini başlatabilirsiniz.  
   
 ### <a name="security"></a>Güvenlik  
- In the preceding example, you can produce the same lifetime by declaring `applesSold` at module level. If you changed the scope of a variable this way, however, the procedure would no longer have exclusive access to it. Because other procedures could access `applesSold` and change its value, the running total could be unreliable and the code could be more difficult to maintain.  
+ Yukarıdaki örnekte, modül düzeyinde `applesSold` bildirerek aynı yaşam süresini üretebilirsiniz. Bu şekilde bir değişkenin kapsamını değiştirdiyseniz, ancak yordam artık buna özel erişime sahip olmaz. Diğer yordamlar `applesSold` erişebileceği ve değerini değiştirebildiğinden, çalışan Toplam güvenilir olmayabilir ve kodun korunması daha zor olabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -77,8 +77,8 @@ The *lifetime* of a declared element is the period of time during which it is av
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
 - [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Değişkenler](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349926"
 ---
 # <a name="collection-object-summary-visual-basic"></a>Koleksiyon Nesnesi Özeti (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaca ve kullanıma göre düzenlenir.  
   
 |Eylem|Dil öğesi|  
 |------------|----------------------|  
-|Create a `Collection` object.|<xref:Microsoft.VisualBasic.Collection>|  
-|Add an item to a collection.|<xref:Microsoft.VisualBasic.Collection.Add*>|  
-|Remove an object from a collection.|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
-|Reference an item in a collection.|<xref:Microsoft.VisualBasic.Collection.Item*>|  
-|Return a reference to an <xref:System.Collections.IEnumerator> interface.|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
+|`Collection` nesnesi oluşturun.|<xref:Microsoft.VisualBasic.Collection>|  
+|Koleksiyona bir öğe ekleyin.|<xref:Microsoft.VisualBasic.Collection.Add*>|  
+|Bir koleksiyondan nesne kaldırma.|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
+|Koleksiyondaki bir öğeye başvuru.|<xref:Microsoft.VisualBasic.Collection.Item*>|  
+|<xref:System.Collections.IEnumerator> arabirimine bir başvuru döndürün.|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

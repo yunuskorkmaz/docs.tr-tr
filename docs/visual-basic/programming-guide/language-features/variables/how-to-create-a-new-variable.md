@@ -14,43 +14,43 @@ ms.locfileid: "74353628"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>Nasıl yapılır: Yeni Değişken Oluşturma (Visual Basic)
 
-You create a variable with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).
+[Dim ifadesiyle](../../../../visual-basic/language-reference/statements/dim-statement.md)bir değişken oluşturun.
 
-### <a name="to-create-a-new-variable"></a>To create a new variable
+### <a name="to-create-a-new-variable"></a>Yeni bir değişken oluşturmak için
 
-1. Declare the variable in a `Dim` statement.
+1. Değişkeni bir `Dim` bildiriminde bildirin.
 
     ```vb
     Dim newCustomer
     ```
 
-2. Include specifications for the variable's characteristics, such as [Private](../../../../visual-basic/language-reference/modifiers/private.md), [Static](../../../../visual-basic/language-reference/modifiers/static.md), [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md), or [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md). For more information, see [Declared Element Characteristics](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md).
+2. Değişkenin [özel](../../../../visual-basic/language-reference/modifiers/private.md), [statik](../../../../visual-basic/language-reference/modifiers/static.md), [Gölge](../../../../visual-basic/language-reference/modifiers/shadows.md)veya [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md)gibi özelliklerine ilişkin belirtimleri ekleyin. Daha fazla bilgi için bkz. [bildirilmemiş öğe özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md).
 
     ```vb
     Public Static newCustomer
     ```
 
-    You do not need the `Dim` keyword if you use other keywords in the declaration.
+    Bildirimde diğer anahtar sözcükleri kullanıyorsanız, `Dim` anahtar kelime gerek yoktur.
 
-3. Follow the specifications with the variable's name, which must follow Visual Basic rules and conventions. For more information, see [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+3. Visual Basic kuralları ve kuralları izlemeniz gereken değişkenin adıyla ilgili belirtimleri izleyin. Daha fazla bilgi için bkz. [bildirilmemiş öğe adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
     ```vb
     Public Static newCustomer
     ```
 
-4. Follow the name with the [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause to specify the variable's data type.
+4. Değişkenin veri türünü belirtmek için [as](../../../../visual-basic/language-reference/statements/as-clause.md) yan tümcesiyle birlikte adı izleyin.
 
     ```vb
     Public Static newCustomer As Customer
     ```
 
-    If you do not specify the data type, it uses the default: `Object`.
+    Veri türünü belirtmezseniz, varsayılan: `Object`kullanır.
 
-5. Follow the `As` clause with an equal sign (`=`) and follow the equal sign with the variable's initial value.
+5. Eşittir işareti (`=`) ile `As` yan tümcesini izleyin ve değişkenin başlangıç değeriyle eşittir işaretini izleyin.
 
-    Visual Basic assigns the specified value to the variable every time it runs the `Dim` statement. If you do not specify an initial value, Visual Basic assigns the default initial value for the variable's data type when it first enters the code that contains the `Dim` statement.
+    Visual Basic, `Dim` ifadesini her çalıştırdığında, değişkene belirtilen değeri atar. Bir başlangıç değeri belirtmezseniz, Visual Basic değişkenin veri türü için varsayılan başlangıç değerini, `Dim` ifadesini içeren kodu ilk kez girdiğinde atar.
 
-    If the variable is a reference type, you can create an instance of its class by including the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword in the `As` clause. If you do not use `New`, the initial value of the variable is [Nothing](../../../../visual-basic/language-reference/nothing.md).
+    Değişken bir başvuru türü ise, `As` yan tümcesine [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) anahtar sözcüğünü ekleyerek sınıfının bir örneğini oluşturabilirsiniz. `New`kullanmıyorsanız, değişkenin ilk değeri [Nothing](../../../../visual-basic/language-reference/nothing.md)olur.
 
     ```vb
     Public Static newCustomer As New Customer

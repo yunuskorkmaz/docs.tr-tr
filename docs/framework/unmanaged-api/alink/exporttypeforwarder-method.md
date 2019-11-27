@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448715"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder Yöntemi
-Adds a type forwarder to the type table of the given assembly.  
+Verilen derlemenin tür tablosuna bir tür ileticisi ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT ExportTypeForwarder(
   
 ## <a name="parameters"></a>Parametreler  
  `tkAssemblyRef`  
- Reference to the assembly to which the type forwarder refers.  
+ Tür ileticinin başvurduğu derlemeye başvuru.  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ Dışarı aktarılacak tam tür adı.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `tdPublic` veya `tdNested`gibi bayrakları `ComType`. Bu değer [DefineExportedType yöntemine](../metadata/imetadataassemblyemit-defineexportedtype-method.md)geçirilebilir.  
   
  `pType`  
- Receives the token of the exported type. This is necessary only for emitting nested types.  
+ , Dışarıya aktarılmış türün belirtecini alır. Bu yalnızca iç içe geçmiş türleri yayma için gereklidir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -17,49 +17,49 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333723"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Sabit ve Değişmez Değerli Veri Türleri (Visual Basic)
-A literal is a value that is expressed as itself rather than as a variable's value or the result of an expression, such as the number 3 or the string "Hello". A constant is a meaningful name that takes the place of a literal and retains this same value throughout the program, as opposed to a variable, whose value may change.  
+Değişmez değer, değişkenin değeri veya "Hello" dizesi gibi bir ifadenin sonucu yerine kendisini ifade eden bir değerdir. Sabit, bir sabit değerin yerini alan anlamlı bir addır ve değer değişebilir bir değişkenin aksine, bu değeri program genelinde tutar.  
   
- When [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) is `Off` and [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) is `On`, you must declare all constants explicitly with a data type. In the following example, the data type of `MyByte` is explicitly declared as data type `Byte`:  
+ [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) `Off` ve [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) `On`, bir veri türü ile tüm sabitleri açıkça bildirmeniz gerekir. Aşağıdaki örnekte `MyByte` veri türü açıkça veri türü olarak `Byte`olarak bildirilmiştir:  
   
  [!code-vb[VbVbalrConstants#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#1)]  
   
- When `Option Infer` is `On` or `Option Strict` is `Off`, you can declare a constant without specifying a data type with an `As` clause. The compiler determines the type of the constant from the type of the expression. A numeric integer literal is cast by default to the `Integer` data type. The default data type for floating-point numbers is `Double`, and the keywords `True` and `False` specify a `Boolean` constant.  
+ `Option Infer` `On` veya `Option Strict` `Off`olduğunda, bir `As` yan tümcesiyle veri türü belirtmeden bir sabit bildirebilirsiniz. Derleyici, ifadenin türünden sabit türünü belirler. Sayısal tamsayı sabit değeri, `Integer` veri türüne varsayılan olarak ayarlanır. Kayan nokta numaraları için varsayılan veri türü `Double`ve anahtar sözcükler `True` ve `False` bir `Boolean` sabiti belirler.  
   
-## <a name="literals-and-type-coercion"></a>Literals and Type Coercion  
- In some cases, you might want to force a literal to a particular data type; for example, when assigning a particularly large integral literal value to a variable of type `Decimal`. The following example produces an error:  
+## <a name="literals-and-type-coercion"></a>Değişmez değerler ve tür zorlaması  
+ Bazı durumlarda, bir sabit değeri belirli bir veri türüne zorlamak isteyebilirsiniz; Örneğin, `Decimal`türünde bir değişkene özellikle büyük bir integral sabit değeri atarken. Aşağıdaki örnek bir hata üretir:  
   
 ```vb  
 Dim myDecimal as Decimal  
 myDecimal = 100000000000000000000   ' This causes a compiler error.  
 ```  
   
- The error results from the representation of the literal. The `Decimal` data type can hold a value this large, but the literal is implicitly represented as a `Long`, which cannot.  
+ Hata, sabit değerinin gösteriminden kaynaklanmaktadır. `Decimal` veri türü bu büyüklükte bir değer tutabilir, ancak değişmez değer örtük olarak bir `Long`olarak temsil edilir; bu, olamaz.  
   
- You can coerce a literal to a particular data type in two ways: by appending a type character to it, or by placing it within enclosing characters. A type character or enclosing characters must immediately precede and/or follow the literal, with no intervening space or characters of any kind.  
+ Bir sabit değeri, belirli bir veri türüne iki şekilde dönüştürebilirsiniz: buna bir tür karakteri ekleyerek veya kapsayan karakterlerin içine yerleştirerek. Bir tür karakteri veya kapsayan karakterler, hiçbir türden boşluk veya karakter olmadan hemen önce ve/veya sabit değer içermelidir.  
   
- To make the previous example work, you can append the `D` type character to the literal, which causes it to be represented as a `Decimal`:  
+ Önceki örneğin çalışmasını sağlamak için, `D` tür karakterini literal ekleyebilirsiniz, bu da `Decimal`olarak temsil edilmesine neden olur:  
   
  [!code-vb[VbVbalrConstants#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#2)]  
   
- The following example demonstrates correct usage of type characters and enclosing characters:  
+ Aşağıdaki örnek, tür karakterlerinin ve kapsayan karakterlerin doğru kullanımını gösterir:  
   
  [!code-vb[VbVbalrConstants#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#3)]  
   
- The following table shows the enclosing characters and type characters available in Visual Basic.  
+ Aşağıdaki tabloda, Visual Basic ' de bulunan karakterlerin ve tür karakterlerinin gösterildiği gösterilmektedir.  
   
-|Veri türü|Enclosing character|Appended type character|  
+|Veri türü|Kapsayan karakter|Eklenen tür karakteri|  
 |---|---|---|  
-|`Boolean`|(none)|(none)|  
-|`Byte`|(none)|(none)|  
-|`Char`|"|C|  
-|`Date`|#|(none)|  
-|`Decimal`|(none)|D or @|  
-|`Double`|(none)|R or #|  
-|`Integer`|(none)|I or %|  
-|`Long`|(none)|L or &|  
-|`Short`|(none)|S|  
-|`Single`|(none)|F or !|  
-|`String`|"|(none)|  
+|`Boolean`|seçim|seçim|  
+|`Byte`|seçim|seçim|  
+|`Char`|"|Mş|  
+|`Date`|#|seçim|  
+|`Decimal`|seçim|D veya @|  
+|`Double`|seçim|R veya #|  
+|`Integer`|seçim|I veya%|  
+|`Long`|seçim|L veya &|  
+|`Short`|seçim|S|  
+|`Single`|seçim|F veya!|  
+|`String`|"|seçim|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -69,7 +69,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 - [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Option Explicit Deyimi](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Sabit Listelerine Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Nasıl yapılır: numaralandırma bildirme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Sabit Listeleri ve Ad Niteliği](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
 - [Sabitler ve Sabit Listeleri](../../../../visual-basic/language-reference/constants-and-enumerations.md)

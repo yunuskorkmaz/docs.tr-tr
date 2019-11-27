@@ -8,23 +8,23 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344320"
 ---
-# <a name="interpolated-strings-visual-basic-reference"></a>Interpolated Strings (Visual Basic Reference)
+# <a name="interpolated-strings-visual-basic-reference"></a>Enterpolasyonlu dizeler (Visual Basic Başvurusu)
 
-Used to construct strings.  An interpolated string looks like a template string that contains *interpolated expressions*.  An interpolated string returns a string that replaces the interpolated expressions that it contains with their string representations. This feature is available in Visual Basic 14 and later versions.
+Dizeleri oluşturmak için kullanılır.  Bir ara değerli dize, *enterpolasyonlu ifadeler*içeren bir şablon dizesi gibi görünür.  Bir enterpolasyonlu dize, içerdiği ilişkili ifadelerin dize gösterimleriyle yerini alan bir dize döndürür. Bu özellik Visual Basic 14 ve sonraki sürümlerinde kullanılabilir.
 
-The arguments of an interpolated string are easier to understand than a [composite format string](../../../../standard/base-types/composite-formatting.md#composite-format-string).  For example, the interpolated string
+Enterpolasyonlu bir dizenin bağımsız değişkenleri bir [bileşik biçim dizesinden](../../../../standard/base-types/composite-formatting.md#composite-format-string)daha kolay anlaşılır.  Örneğin, enterpolasyonlu dize
 
 ```vb
 Console.WriteLine($"Name = {name}, hours = {hours:hh}")
 ```
 
-contains two interpolated expressions, '{name}' and '{hours:hh}'. The equivalent composite format string is:
+' {name} ' ve ' {hours: hh} ' adlı iki enterpolasyonlu ifade içeriyor. Eşdeğer bileşik biçim dizesi:
 
 ```vb
 Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours)
 ```
 
-The structure of an interpolated string is:
+Enterpolasyonlu bir dizenin yapısı:
 
 ```vb
 $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text> ..."
@@ -32,48 +32,48 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 burada:
 
-- *field-width* is a signed integer that indicates the number of characters in the field. If it is positive, the field is right-aligned; if negative, left-aligned.
+- *alan genişliği* , alandaki karakter sayısını gösteren işaretli bir tamsayıdır. Pozitif ise, alan sağa hizalanır; negatif ise, sola hizalı.
 
-- *format-string* is a format string appropriate for the type of object being formatted. For example, for a <xref:System.DateTime> value, it could be a [standard date and time format string](../../../../standard/base-types/standard-date-and-time-format-strings.md) such as "D" or "d".
+- *Biçim-dize* , biçimlendirilen nesne türüne uygun bir biçim dizesidir. Örneğin, bir <xref:System.DateTime> değeri için, "D" veya "d" gibi [Standart Tarih ve saat biçimi dizesi](../../../../standard/base-types/standard-date-and-time-format-strings.md) olabilir.
 
 > [!IMPORTANT]
-> You cannot have any white space between the `$` and the `"` that starts the string. Doing so causes a compiler error.
+> `$` ile dizeyi Başlatan `"` arasında boşluk olamaz. Bunun yapılması bir derleyici hatasına neden olur.
 
-You can use an interpolated string anywhere you can use a string literal.  The interpolated string is evaluated each time the code with the interpolated string executes. This allows you to separate the definition and evaluation of an interpolated string.
+Bir dize sabit değeri kullanabileceğiniz her yerde enterpolasyonlu bir dize kullanabilirsiniz.  Enterpolasyonlu dize, enterpolasyonlu dize her çalıştırıldığında değerlendirilir. Bu, enterpolasyonlu bir dizenin tanımını ve değerlendirmesini ayırmanızı sağlar.
 
-To include a curly brace ("{" or "}") in an interpolated string, use two curly braces, "{{" or "}}".  See the Implicit Conversions section for more details.
+Bir küme ayracı ("{" veya "}"), enterpolasyonlu bir dizeye eklemek için, iki küme ayracı kullanın, "{{" veya "}}".  Daha fazla bilgi için örtük dönüşümler bölümüne bakın.
 
-If the interpolated string contains other characters with special meaning in an interpolated string, such as the quotation mark ("), colon (:), or comma (,), they should be escaped if they occur in literal text, or they should be included in an expression delimited by parentheses if they are language elements included in an interpolated expression. The following example escapes quotation marks to include them in the result string, and it uses parentheses to delimit the expression `(age == 1 ? "" : "s")` so that the colon is not interpreted as beginning a format string.
+Enterpolasyonlu dize, ara değer ("), iki nokta üst üste (:) veya virgül (,) gibi, enterpolasyonlu bir dizede özel anlamı olan başka karakterler içeriyorsa, sabit metin halinde gerçekleştiklerinde kaçışlar veya şu şekilde ayrılmış bir ifadeye dahil edilmesi gerekir Bu değerler, enterpolasyonlu bir ifadeye dahil edilen dil öğelerseler parantez. Aşağıdaki örnek, sonuç dizesine dahil etmek için tırnak işaretleri çıkar ve iki nokta üst üste bir biçim dizesine kadar yorumlanmaması için `(age == 1 ? "" : "s")` ifadeyi sınırlandırmak için ayraçları kullanır.
 
 [!code-vb[interpolated-strings](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings4.vb)]
 
-## <a name="implicit-conversions"></a>Implicit Conversions
+## <a name="implicit-conversions"></a>Örtük dönüşümler
 
-There are three implicit type conversions from an interpolated string:
+Enterpolasyonlu bir dizeden üç örtük tür dönüştürmesi vardır:
 
-1. Conversion of an interpolated string to a <xref:System.String>. The following example returns a string whose interpolated string expressions have been replaced with their string representations. Örneğin:
+1. Enterpolasyonlu bir dizenin <xref:System.String>dönüşümü. Aşağıdaki örnek, enterpolasyonlu dize ifadeleri dize gösterimleriyle değiştirilmiş olan bir dize döndürür. Örneğin:
 
    [!code-vb[interpolated-strings1](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings1.vb)]
 
-   This is the final result of a string interpretation. All occurrences of double curly braces ("{{" and "}}") are converted to a single curly brace.
+   Bu, bir dize yorumlamasının nihai sonucudur. Çift küme ayracı ("{{" ve "}}") tüm oluşumları tek bir küme ayracına dönüştürülür.
 
-2. Conversion of an interpolated string to an <xref:System.IFormattable> variable that allows you create multiple result strings with culture-specific content from a single <xref:System.IFormattable> instance. This is useful for including such things as the correct numeric and date formats for individual cultures.  All occurrences of double curly braces ("{{" and "}}") remain as double curly braces until you format the string by explicitly or implicitly calling the <xref:System.Object.ToString> method.  All contained interpolation expressions are converted to {0}, {1}, and so on.
+2. Tek bir <xref:System.IFormattable> örneğinden kültüre özgü içerikle birden çok sonuç dizesi oluşturmanıza izin veren bir <xref:System.IFormattable> değişkenine bir ara değerli dizenin dönüştürülmesi. Bu, bireysel kültürler için doğru sayısal ve tarih biçimleri gibi şeyleri dahil etmek için kullanışlıdır.  Çift küme ayracı ("{{" ve "}}") tüm oluşumları, dizeyi açıkça veya dolaylı olarak <xref:System.Object.ToString> yöntemi çağırarak biçimlendirene kadar çift küme ayraçları olarak kalır.  İçerilen tüm enterpolasyon ifadeleri {0}, {1}ve benzeri olarak dönüştürülür.
 
-   The following example uses reflection to display the members as well as the field and property values of an <xref:System.IFormattable> variable that is created from an interpolated string. It also passes the <xref:System.IFormattable> variable to the <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> method.
+   Aşağıdaki örnek, üyeleri ve enterpolasyonlu bir dizeden oluşturulan <xref:System.IFormattable> değişkeninin alan ve özellik değerlerini göstermek için yansıma kullanır. Ayrıca, <xref:System.IFormattable> değişkenini <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> yöntemine geçirir.
 
    [!code-vb[interpolated-strings2](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings2.vb)]
 
-   Note that the interpolated string can be inspected only by using reflection. If it is passed to a string formatting method, such as <xref:System.Console.WriteLine(System.String)>, its format items are resolved and the result string returned.
+   Enterpolasyonlu dize yalnızca yansıma kullanılarak incelenebileceğini unutmayın. <xref:System.Console.WriteLine(System.String)>gibi bir dize biçimlendirme yöntemine geçirilirse, biçim öğeleri çözümlenir ve sonuç dizesi döndürülür.
 
-3. Conversion of an interpolated string to a <xref:System.FormattableString> variable that represents a composite format string. Inspecting the composite format string and how it renders as a result string might, for example, help you protect against an injection attack if you were building a query. A <xref:System.FormattableString> also includes:
+3. Enterpolasyonlu bir dizenin bir bileşik biçim dizesini temsil eden <xref:System.FormattableString> değişkenine dönüştürülmesi. Bileşik biçim dizesini ve bunun sonuç dizesi olarak nasıl işlediğini incelemek, örneğin bir sorgu oluşturuyorsanız ekleme saldırısından korunmanıza yardımcı olabilir. <xref:System.FormattableString> ayrıca şunları içerir:
 
-      - A <xref:System.FormattableString.ToString> overload that produces a result string for the <xref:System.Globalization.CultureInfo.CurrentCulture>.
+      - <xref:System.Globalization.CultureInfo.CurrentCulture>için sonuç dizesi üreten <xref:System.FormattableString.ToString> aşırı yükleme.
 
-      - A <xref:System.FormattableString.Invariant%2A> method that produces a string for the <xref:System.Globalization.CultureInfo.InvariantCulture>.
+      - <xref:System.Globalization.CultureInfo.InvariantCulture>için bir dize üreten <xref:System.FormattableString.Invariant%2A> yöntemi.
 
-      - A <xref:System.FormattableString.ToString(System.IFormatProvider)> method that produces a result string for a specified culture.
+      - Belirtilen kültür için sonuç dizesi üreten <xref:System.FormattableString.ToString(System.IFormatProvider)> yöntemi.
 
-    All occurrences of double curly braces ("{{" and "}}") remain as double curly braces until you format.  All contained interpolation expressions are converted to {0}, {1}, and so on.
+    Çift küme ayracı ("{{" ve "}}") tüm oluşumları, biçimlendirene kadar çift küme ayraçları olarak kalır.  İçerilen tüm enterpolasyon ifadeleri {0}, {1}ve benzeri olarak dönüştürülür.
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]
 

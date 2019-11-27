@@ -19,23 +19,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341370"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Parametreler ve Bağımsız Değişkenler Arasındaki Farklar (Visual Basic)
-In most cases, a procedure must have some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
+Çoğu durumda, bir yordamın çağrıldığı koşullara ilişkin bazı bilgileri olması gerekir. Yinelenen veya paylaşılan görevler gerçekleştiren bir yordam, her çağrı için farklı bilgiler kullanır. Bu bilgiler, çağırdığınızda yordama geçirdiğiniz değişkenlerin, sabitlerin ve ifadelerden oluşur.  
   
- To communicate this information to the procedure, the procedure defines a *parameter*, and the calling code passes an *argument* to that parameter. You can think of the parameter as a parking space and the argument as an automobile. Just as different automobiles can park in a parking space at different times, the calling code can pass a different argument to the same parameter every time that it calls the procedure.  
+ Bu bilgileri yordamla iletmek için, yordam bir *parametreyi*tanımlar ve çağıran kod bu parametreye bir *bağımsız değişken* geçirir. Parametresini bir park alanı ve bağımsız değişkeni olarak bir otomobil olarak düşünebilirsiniz. Farklı otomobil bir park alanını farklı zamanlarda park edebilir gibi, çağıran kod, yordamı her çağırdığında aynı parametreye farklı bir bağımsız değişken geçirebilir.  
   
 ## <a name="parameters"></a>Parametreler  
- A *parameter* represents a value that the procedure expects you to pass when you call it. The procedure's declaration defines its parameters.  
+ Bir *parametre* , bu işlemi çağırdığınızda yordamın geçirilmesini beklediği bir değeri temsil eder. Yordamın bildirimi, parametrelerini tanımlar.  
   
- When you define a `Function` or `Sub` procedure, you specify a *parameter list* in parentheses immediately following the procedure name. For each parameter, you specify a name, a data type, and a passing mechanism ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). You can also indicate that a parameter is optional. This means that the calling code does not have to pass a value for it.  
+ Bir `Function` veya `Sub` yordamı tanımladığınızda, yordam adından hemen sonra parantez içinde bir *parametre listesi* belirtirsiniz. Her parametre için bir ad, veri türü ve bir geçirme mekanizması ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)) belirtirsiniz. Ayrıca, bir parametresinin isteğe bağlı olduğunu belirtebilirsiniz. Bu, çağıran kodun bunun için bir değer geçmesi gerekmediği anlamına gelir.  
   
- The name of each parameter serves as a *local variable* in the procedure. You use the parameter name the same way you use any other variable.  
+ Her parametrenin adı, yordamda *yerel bir değişken* işlevi görür. Parametre adını başka herhangi bir değişken kullandığınız şekilde kullanırsınız.  
   
-## <a name="arguments"></a>Arguments  
- An *argument* represents the value that you pass to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure.  
+## <a name="arguments"></a>Bağımsız Değişkenler  
+ Bir *bağımsız değişken* , yordamı çağırdığınızda bir yordam parametresine geçirdiğiniz değeri temsil eder. Çağıran kod, yordamı çağırdığında bağımsız değişkenleri sağlar.  
   
- When you call a `Function` or `Sub` procedure, you include an *argument list* in parentheses immediately following the procedure name. Each argument corresponds to the parameter in the same position in the list.  
+ Bir `Function` veya `Sub` yordamını çağırdığınızda, yordam adından hemen sonra parantez içine bir *bağımsız değişken listesi* dahil edersiniz. Her bağımsız değişken, listedeki aynı konumdaki parametreye karşılık gelir.  
   
- In contrast to parameter definition, arguments do not have names. Each argument is an expression, which can contain zero or more variables, constants, and literals. The data type of the evaluated expression should typically match the data type defined for the corresponding parameter, and in any case it must be convertible to the parameter type.  
+ Parametre tanımının aksine bağımsız değişkenlerin adları yoktur. Her bağımsız değişken sıfır veya daha fazla değişken, sabit ve değişmez değer içerebilen bir ifadedir. Değerlendirilen ifadenin veri türü genellikle karşılık gelen parametre için tanımlanan veri türüyle eşleşir ve herhangi bir durumda parametre türüne dönüştürülebilir olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

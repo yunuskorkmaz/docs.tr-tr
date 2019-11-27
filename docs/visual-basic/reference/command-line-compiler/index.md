@@ -1,5 +1,5 @@
 ---
-title: Command-line compiler
+title: Komut satırı derleyicisi
 ms.date: 02/20/2018
 helpviewer_keywords:
 - compilers [Visual Basic], Visual Basic options
@@ -15,24 +15,24 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344238"
 ---
-# <a name="visual-basic-command-line-compiler"></a>Visual Basic command-line compiler
+# <a name="visual-basic-command-line-compiler"></a>Visual Basic komut satırı derleyicisi
 
-The Visual Basic command-line compiler provides an alternative to compiling programs from within the Visual Studio integrated development environment (IDE). This section contains descriptions for the Visual Basic compiler options.
+Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme ortamının (IDE) içinden program derlemek için bir alternatif sağlar. Bu bölüm Visual Basic derleyici seçeneklerinin açıklamalarını içerir.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="in-this-section"></a>Bu bölümde
 
 [Komut Satırından Derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
-Describes the Visual Basic command-line compiler, which is provided as an alternative to compiling programs from within the Visual Studio IDE.
+Visual Studio IDE içinden program derlemek için alternatif olarak sunulan Visual Basic komut satırı derleyicisini açıklar.
 
-[Visual Basic Compiler Options Listed Alphabetically](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
-Lists compiler options in an alphabetical table
+[Alfabetik olarak listelenen Visual Basic derleyici seçenekleri](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
+Alfabetik bir tabloda derleyici seçeneklerini listeler
 
-[Visual Basic Compiler Options Listed by Category](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
-Presents compiler options in functional groups.
+[Kategoriye göre listelenmiş Visual Basic derleyici seçenekleri](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
+İşlev gruplarında derleyici seçeneklerini gösterir.
   
-## <a name="related-sections"></a>Related sections
+## <a name="related-sections"></a>İlgili bölümler
 
 [Visual Basic Kılavuzu](../../index.md)  
-The starting point for the Visual Basic documentation.
+Visual Basic belgelerinin başlangıç noktası.

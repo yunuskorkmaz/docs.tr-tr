@@ -21,7 +21,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346725"
 ---
 # <a name="rem-statement-visual-basic"></a>REM Deyimi (Visual Basic)
-Used to include explanatory remarks in the source code of a program.  
+Bir programın kaynak kodunda açıklayıcı açıklamalar eklemek için kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,22 +32,22 @@ REM comment
   
 ## <a name="parts"></a>Bölümler  
  `comment`  
- İsteğe bağlı. The text of any comment you want to include. A space is required between the `REM` keyword and `comment`.  
+ İsteğe bağlı. Dahil etmek istediğiniz açıklamanın metni. `REM` anahtar sözcüğü ve `comment`arasında bir boşluk olması gerekir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- You can put a `REM` statement alone on a line, or you can put it on a line following another statement. The `REM` statement must be the last statement on the line. If it follows another statement, the `REM` must be separated from that statement by a space.  
+ Bir `REM` ifadesini tek başına bir satıra koyabilirsiniz ya da başka bir deyimden sonraki bir satıra koyabilirsiniz. `REM` deyimin satırdaki son ifade olması gerekir. Başka bir deyimden sonra `REM`, bu deyimden bir boşluk ile ayrılmalıdır.  
   
- You can use a single quotation mark (`'`) instead of `REM`. This is true whether your comment follows another statement on the same line or sits alone on a line.  
+ `REM`yerine tek tırnak işareti (`'`) kullanabilirsiniz. Bu, yorumunuz aynı satırdaki başka bir deyime veya bir satırda tek başına oturduğunda geçerlidir.  
   
 > [!NOTE]
-> You cannot continue a `REM` statement by using a line-continuation sequence (`_`). Once a comment begins, the compiler does not examine the characters for special meaning. For a multiple-line comment, use another `REM` statement or a comment symbol (`'`) on each line.  
+> Bir satır devamlılık sırası (`_`) kullanarak `REM` bildirimine devam edemezsiniz. Bir yorum başladıktan sonra derleyici, özel anlam için karakterleri denetlemez. Birden çok satırlık bir açıklama için, her satırda başka bir `REM` ifadesini veya bir açıklama sembolünü (`'`) kullanın.  
   
 ## <a name="example"></a>Örnek  
- The following example illustrates the `REM` statement, which is used to include explanatory remarks in a program. It also shows the alternative of using the single quotation-mark character (`'`) instead of `REM`.  
+ Aşağıdaki örnek, bir programda açıklayıcı açıklamaları dahil etmek için kullanılan `REM` ifadesini gösterir. Ayrıca, `REM`yerine tek tırnak işareti karakteri (`'`) kullanmanın alternatifini gösterir.  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Code’daki Açıklamalar](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)
+- [Kod Açıklamaları](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)
 - [Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

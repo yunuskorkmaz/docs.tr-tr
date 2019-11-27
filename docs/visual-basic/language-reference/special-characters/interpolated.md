@@ -8,17 +8,17 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349594"
 ---
-# <a name="-visual-basic-reference"></a>$ (Visual Basic Reference)
+# <a name="-visual-basic-reference"></a>$ (Visual Basic Başvurusu)
 
-Identifies a string literal as an [interpolated string](../../programming-guide/language-features/strings/interpolated-strings.md). An interpolated string is a template-like string that contains literal text along with *interpolated expressions*. When the interpolated string is resolved, for example in an assignment statement or a method call, its interpolated expressions are replaced by their string representations in the result string. Interpolated strings are replacements for the [composite format strings](../../../standard/base-types/composite-formatting.md) supported by the .NET Framework.
+Bir dize sabit değerini, [enterpolasyonlu dize](../../programming-guide/language-features/strings/interpolated-strings.md)olarak tanımlar. Enterpolasyonlu dize, birlikte bulunan *ifadelerle*birlikte değişmez metin içeren bir şablon benzeri dizedir. Enterpolasyonlu dize çözümlendiğinde, örneğin bir atama ifadesinde veya bir yöntem çağrısında, ara değerli ifadeleri sonuç dizesinde kendi dize temsilleriyle değiştirilmiştir. Enterpolasyonlu dizeler .NET Framework tarafından desteklenen [bileşik biçim dizelerinin](../../../standard/base-types/composite-formatting.md) değiştirileridir.
 
-The following example uses the `$` character to define an interpolated string.
+Aşağıdaki örnek, bir enterpolasyonlu dize tanımlamak için `$` karakterini kullanır.
 
 [!CODE-vb[interpolated-string-symbol](../../../../samples/snippets/visualbasic/language-reference/special-characters/dollar-sign1.vb)]
 
-For more information on interpolated strings, see the [Interpolated Strings](../../programming-guide/language-features/strings/interpolated-strings.md) topic.
+Ara değerli dizeler hakkında daha fazla bilgi için bkz. [enterpolasyonlu dizeler](../../programming-guide/language-features/strings/interpolated-strings.md) konusu.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Reference](../index.md)
-- [Visual Basic Special Characters](index.md)
+- [Visual Basic Başvurusu](../index.md)
+- [Visual Basic özel karakterler](index.md)

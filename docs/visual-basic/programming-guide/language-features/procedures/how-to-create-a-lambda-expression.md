@@ -13,94 +13,94 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349751"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Nasıl yapılır: Lambda İfadesi Oluşturma (Visual Basic)
-A *lambda expression* is a function or subroutine that does not have a name. A lambda expression can be used wherever a delegate type is valid.  
+*Lambda ifadesi* , adı olmayan bir işlev veya alt yordam. Bir lambda ifadesi, bir temsilci türünün geçerli olduğu her yerde kullanılabilir.  
   
-### <a name="to-create-a-single-line-lambda-expression-function"></a>To create a single-line lambda expression function  
+### <a name="to-create-a-single-line-lambda-expression-function"></a>Tek satırlık lambda ifadesi işlevi oluşturmak için  
   
-1. In any situation where a delegate type could be used, type the keyword `Function`, as in the following example:  
+1. Temsilci türünün kullanılabileceği herhangi bir durumda, aşağıdaki örnekte olduğu gibi `Function`anahtar sözcüğünü yazın:  
   
      `Dim add1 =`   `Function`  
   
-2. In parentheses, directly after `Function`, type the parameters of the function. Notice that you do not specify a name after `Function`.  
+2. Parantez içinde, `Function`doğrudan sonra, işlevin parametrelerini yazın. `Function`sonra bir ad belirtmediğine dikkat edin.  
   
      `Dim add1 = Function`   `(num As Integer)`  
   
-3. Following the parameter list, type a single expression as the body of the function. The value that the expression evaluates to is the value returned by the function. You do not use an `As` clause to specify the return type.  
+3. Parametre listesini izleyerek işlevin gövdesi olarak tek bir ifade yazın. İfadenin değerlendirme değeri, işlev tarafından döndürülen değerdir. Dönüş türünü belirtmek için bir `As` yan tümcesi kullanmayın.  
   
      [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
-     You call the lambda expression by passing in an integer argument.  
+     Bir tamsayı bağımsız değişkeni geçirerek lambda ifadesini çağırabilirsiniz.  
   
      [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
-4. Alternatively, the same result is accomplished by the following example:  
+4. Alternatif olarak, aynı sonuç aşağıdaki örnek tarafından gerçekleştirilir:  
   
      [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
-### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>To create a single-line lambda expression subroutine  
+### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>Tek satırlık lambda ifadesi alt yordamı oluşturmak için  
   
-1. In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example.  
+1. Temsilci türünün kullanılabileceği herhangi bir durumda, aşağıdaki örnekte gösterildiği gibi `Sub`anahtar sözcüğünü yazın.  
   
      `Dim add1 =`   `Sub`  
   
-2. In parentheses, directly after `Sub`, type the parameters of the subroutine. Notice that you do not specify a name after `Sub`.  
+2. Parantez içinde, `Sub`doğrudan sonrasında, alt yordamın parametrelerini yazın. `Sub`sonra bir ad belirtmediğine dikkat edin.  
   
      `Dim add1 = Sub`   `(msg As String)`  
   
-3. Following the parameter list, type a single statement as the body of the subroutine.  
+3. Parametre listesini takip eden alt yordamın gövdesi olarak tek bir ifade yazın.  
   
      [!code-vb[VbVbalrLambdas#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#17)]  
   
-     You call the lambda expression by passing in a string argument.  
+     Bir dize bağımsız değişkenine geçirerek lambda ifadesini çağırabilirsiniz.  
   
      [!code-vb[VbVbalrLambdas#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#18)]  
   
-### <a name="to-create-a-multiline-lambda-expression-function"></a>To create a multiline lambda expression function  
+### <a name="to-create-a-multiline-lambda-expression-function"></a>Çok satırlı lambda ifadesi işlevi oluşturmak için  
   
-1. In any situation where a delegate type could be used, type the keyword `Function`, as shown in the following example.  
+1. Temsilci türünün kullanılabileceği herhangi bir durumda, aşağıdaki örnekte gösterildiği gibi `Function`anahtar sözcüğünü yazın.  
   
      `Dim add1 =`   `Function`  
   
-2. In parentheses, directly after `Function`, type the parameters of the function. Notice that you do not specify a name after `Function`.  
+2. Parantez içinde, `Function`doğrudan sonra, işlevin parametrelerini yazın. `Function`sonra bir ad belirtmediğine dikkat edin.  
   
      `Dim add1 = Function`   `(index As Integer)`  
   
-3. Press ENTER. The `End Function` statement is automatically added.  
+3. ENTER tuşuna basın. `End Function` deyimleri otomatik olarak eklenir.  
   
-4. Within the body of the function, add the following code to create an expression and return the value. You do not use an `As` clause to specify the return type.  
+4. İşlevin gövdesinde, bir ifade oluşturmak ve değeri döndürmek için aşağıdaki kodu ekleyin. Dönüş türünü belirtmek için bir `As` yan tümcesi kullanmayın.  
   
      [!code-vb[VbVbalrLambdas#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#19)]  
   
-     You call the lambda expression by passing in an integer argument.  
+     Bir tamsayı bağımsız değişkeni geçirerek lambda ifadesini çağırabilirsiniz.  
   
      [!code-vb[VbVbalrLambdas#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#20)]  
   
-### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>To create a multiline lambda expression subroutine  
+### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>Çok satırlı lambda ifadesi alt yordamı oluşturmak için  
   
-1. In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example:  
+1. Temsilci türünün kullanılabileceği herhangi bir durumda, aşağıdaki örnekte gösterildiği gibi `Sub`anahtar sözcüğünü yazın:  
   
      `Dim add1 =`   `Sub`  
   
-2. In parentheses, directly after `Sub`, type the parameters of the subroutine. Notice that you do not specify a name after `Sub`.  
+2. Parantez içinde, `Sub`doğrudan sonrasında, alt yordamın parametrelerini yazın. `Sub`sonra bir ad belirtmediğine dikkat edin.  
   
      `Dim add1 = Sub`  `(msg As String)`  
   
-3. Press ENTER. The `End Sub` statement is automatically added.  
+3. ENTER tuşuna basın. `End Sub` deyimleri otomatik olarak eklenir.  
   
-4. Within the body of the function, add the following code to execute when the subroutine is invoked.  
+4. İşlevin gövdesinde, alt yordam çağrıldığında yürütülecek aşağıdaki kodu ekleyin.  
   
      [!code-vb[VbVbalrLambdas#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#21)]  
   
-     You call the lambda expression by passing in a string argument.  
+     Bir dize bağımsız değişkenine geçirerek lambda ifadesini çağırabilirsiniz.  
   
      [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
 ## <a name="example"></a>Örnek  
- A common use of lambda expressions is to define a function that can be passed in as the argument for a parameter whose type is `Delegate`. In the following example, the <xref:System.Diagnostics.Process.GetProcesses%2A> method returns an array of the processes running on the local computer. The <xref:System.Linq.Enumerable.Where%2A> method from the <xref:System.Linq.Enumerable> class requires a `Boolean` delegate as its argument. The lambda expression in the example is used for that purpose. It returns `True` for each process that has only one thread, and those are selected in `filteredList`.  
+ Lambda ifadelerinin yaygın kullanımı, türü `Delegate`olan bir parametre için bağımsız değişken olarak geçirilebilecek bir işlev tanımlamaktır. Aşağıdaki örnekte <xref:System.Diagnostics.Process.GetProcesses%2A> yöntemi, yerel bilgisayarda çalışan işlemlerin dizisini döndürür. <xref:System.Linq.Enumerable> sınıfındaki <xref:System.Linq.Enumerable.Where%2A> yöntemi bağımsız değişkeni olarak bir `Boolean` temsilcisi gerektirir. Örnekteki lambda ifadesi bu amaçla kullanılır. Yalnızca bir iş parçacığına sahip olan her işlem için `True` döndürür ve bunlar `filteredList`seçilir.  
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
   
- The previous example is equivalent to the following code, which is written in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] syntax:  
+ Önceki örnek, [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sözdiziminde yazılan aşağıdaki koda eşdeğerdir:  
   
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   
@@ -111,6 +111,6 @@ A *lambda expression* is a function or subroutine that does not have a name. A l
 - [Function Deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Temsilciler](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [How to: Pass Procedures to Another Procedure in Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [Nasıl yapılır: yordamları Visual Basic başka bir yordama geçirme](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
 - [Delegate Deyimi](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

@@ -18,7 +18,7 @@ ms.locfileid: "74352766"
 ---
 # <a name="using-statement-visual-basic"></a>Using Deyimi (Visual Basic)
 
-Declares the beginning of a `Using` block and optionally acquires the system resources that the block controls.
+`Using` bloğunun başlangıcını bildirir ve isteğe bağlı olarak blok denetimlerinin bulunduğu sistem kaynaklarını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,12 +32,12 @@ End Using
 
 |Terim|Tanım|  
 |---|---|  
-|`resourcelist`|Required if you do not supply `resourceexpression`. List of one or more system resources that this `Using` block controls, separated by commas.|  
-|`resourceexpression`|Required if you do not supply `resourcelist`. Reference variable or expression referring to a system resource to be controlled by this `Using` block.|  
-|`statements`|İsteğe bağlı. Block of statements that the `Using` block runs.|  
-|`End Using`|Gerekli. Terminates the definition of the `Using` block and disposes of all the resources that it controls.|  
+|`resourcelist`|`resourceexpression`vermezseniz gereklidir. Bu `Using`, denetimleri virgülle ayırarak bir veya daha fazla sistem kaynağı listesi.|  
+|`resourceexpression`|`resourcelist`vermezseniz gereklidir. Bu `Using` bloğunun denetimine yönelik bir sistem kaynağını işaret eden başvuru değişkeni veya ifadesi.|  
+|`statements`|İsteğe bağlı. `Using` bloğunun çalıştığı deyimler bloğu.|  
+|`End Using`|Gerekli. `Using` bloğunun tanımını sonlandırır ve denetlediği tüm kaynakların ayırt etmesidir.|  
 
- Each resource in the `resourcelist` part has the following syntax and parts:
+ `resourcelist` bölümündeki her kaynak aşağıdaki söz dizimi ve bölümlere sahiptir:
 
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`
 
@@ -45,47 +45,47 @@ End Using
 
  `resourcename As resourcetype = resourceexpression`
 
-## <a name="resourcelist-parts"></a>resourcelist Parts
+## <a name="resourcelist-parts"></a>resourceList bölümleri
 
 |Terim|Tanım|  
 |---|---|  
-|`resourcename`|Gerekli. Reference variable that refers to a system resource that the `Using` block controls.|  
-|`New`|Required if the `Using` statement acquires the resource. If you have already acquired the resource, use the second syntax alternative.|  
-|`resourcetype`|Gerekli. The class of the resource. The class must implement the <xref:System.IDisposable> interface.|  
-|`arglist`|İsteğe bağlı. List of arguments you are passing to the constructor to create an instance of `resourcetype`. See [Parameter List](parameter-list.md).|  
-|`resourceexpression`|Gerekli. Variable or expression referring to a system resource satisfying the requirements of `resourcetype`. If you use the second syntax alternative, you must acquire the resource before passing control to the `Using` statement.|  
+|`resourcename`|Gerekli. `Using` bloğunun denetlediği bir sistem kaynağını ifade eden başvuru değişkeni.|  
+|`New`|`Using` deyimin kaynağı alması durumunda gereklidir. Kaynağı zaten aldıysanız, ikinci söz dizimi alternatifini kullanın.|  
+|`resourcetype`|Gerekli. Kaynağın sınıfı. Sınıfın <xref:System.IDisposable> arabirimini uygulaması gerekir.|  
+|`arglist`|İsteğe bağlı. `resourcetype`bir örneğini oluşturmak için oluşturucuya geçirdiğiniz bağımsız değişkenlerin listesi. Bkz. [parametre listesi](parameter-list.md).|  
+|`resourceexpression`|Gerekli. `resourcetype`gereksinimlerini karşılayan bir sistem kaynağına başvuran değişken veya ifade. İkinci sözdizimi alternatif kullanırsanız, denetimi `Using` bildirimine geçirmeden önce kaynağı edinmeniz gerekir.|  
   
 ## <a name="remarks"></a>Açıklamalar
 
- Sometimes your code requires an unmanaged resource, such as a file handle, a COM wrapper, or a SQL connection. A `Using` block guarantees the disposal of one or more such resources when your code is finished with them. This makes them available for other code to use.
+ Bazen kodunuzun dosya tanıtıcısı, COM sarmalayıcısı veya SQL bağlantısı gibi yönetilmeyen bir kaynak olması gerekir. `Using` bir blok, kodunuz ile işiniz bittiğinde bir veya daha fazla kaynağı elden çıkarma garantisi verir. Bu, diğer kodun kullanması için kullanılabilir hale getirir.
 
- Managed resources are disposed of by the .NET Framework garbage collector (GC) without any extra coding on your part. You do not need a `Using` block for managed resources. However, you can still use a `Using` block to force the disposal of a managed resource instead of waiting for the garbage collector.
+ Yönetilen kaynaklar, .NET Framework atık toplayıcı (GC) tarafından, sizin bölümlemeden herhangi bir ek kodlama yapılmadan elden alınır. Yönetilen kaynaklar için `Using` bloğuna ihtiyacınız yoktur. Ancak, bir `Using` bloğunu, atık toplayıcıyı beklemek yerine, yönetilen bir kaynağın elden çıkarılmasını zorlamak için kullanmaya devam edebilirsiniz.
 
- A `Using` block has three parts: acquisition, usage, and disposal.
+ `Using` bloğu üç bölümden oluşur: alma, kullanım ve aktiften çıkarma.
 
-- *Acquisition* means creating a variable and initializing it to refer to the system resource. The `Using` statement can acquire one or more resources, or you can acquire exactly one resource before entering the block and supply it to the `Using` statement. If you supply `resourceexpression`, you must acquire the resource before passing control to the `Using` statement.
+- *Alım* , bir değişken oluşturma ve sistem kaynağına başvuracak şekilde başlatma anlamına gelir. `Using` bildiriminde bir veya daha fazla kaynak edinebilir veya bloğu girmeden önce tam olarak bir kaynak alabilir ve bunu `Using` bildirimine sağlayabilirsiniz. `resourceexpression`sağlarsanız, denetimi `Using` bildirimine geçirmeden önce kaynağı edinmeniz gerekir.
 
-- *Usage* means accessing the resources and performing actions with them. The statements between `Using` and `End Using` represent the usage of the resources.
+- *Kullanım* , kaynaklara erişmek ve bunlarla eylemler gerçekleştirmek anlamına gelir. `Using` ve `End Using` arasındaki deyimler, kaynakların kullanımını temsil eder.
 
-- *Disposal* means calling the <xref:System.IDisposable.Dispose%2A> method on the object in `resourcename`. This allows the object to cleanly terminate its resources. The `End Using` statement disposes of the resources under the `Using` block's control.
+- *Aktiften çıkarma* , `resourcename`nesne üzerinde <xref:System.IDisposable.Dispose%2A> yönteminin çağrılması anlamına gelir. Bu, nesnenin kaynaklarını düzgün bir şekilde sonlanmasına olanak tanır. `End Using` deyimleri, `Using` bloğunun denetimindeki kaynakları ortadan kaldırır.
 
 ## <a name="behavior"></a>Davranış
 
- A `Using` block behaves like a `Try`...`Finally` construction in which the `Try` block uses the resources and the `Finally` block disposes of them. Because of this, the `Using` block guarantees disposal of the resources, no matter how you exit the block. This is true even in the case of an unhandled exception, except for a <xref:System.StackOverflowException>.
+ `Using` bloğu, `Try` bloğunun kaynakları kullandığı ve `Finally` bloğunun oluşturduğu bir `Try`...`Finally` oluşturma gibi davranır. Bu nedenle, `Using` bloğu, bloğundan çıktığınızda bağımsız olarak kaynakların elden çıkarılmasını garanti eder. Bu, <xref:System.StackOverflowException>hariç, işlenmemiş bir özel durum durumunda da geçerlidir.
 
- The scope of every resource variable acquired by the `Using` statement is limited to the `Using` block.
+ `Using` ifadesiyle alınan her kaynak değişkeninin kapsamı `Using` bloğuyla sınırlıdır.
 
- If you specify more than one system resource in the `Using` statement, the effect is the same as if you nested `Using` blocks one within another.
+ `Using` bildiriminde birden fazla sistem kaynağı belirtirseniz, efekt, iç içe geçmiş `Using` bloklarla aynı olur.
 
- If `resourcename` is `Nothing`, no call to <xref:System.IDisposable.Dispose%2A> is made, and no exception is thrown.
+ `resourcename` `Nothing`, <xref:System.IDisposable.Dispose%2A> çağrısı yapılmaz ve hiçbir özel durum oluşturulmaz.
 
-## <a name="structured-exception-handling-within-a-using-block"></a>Structured Exception Handling Within a Using Block
+## <a name="structured-exception-handling-within-a-using-block"></a>Bir using bloğu Içinde yapılandırılmış özel durum Işleme
 
- If you need to handle an exception that might occur within the `Using` block, you can add a complete `Try`...`Finally` construction to it. If you need to handle the case where the `Using` statement is not successful in acquiring a resource, you can test to see if `resourcename` is `Nothing`.
+ `Using` bloğunda oluşabilecek bir özel durumu işlemeniz gerekiyorsa, buna bir tamamen `Try`...`Finally` oluşturma ekleyebilirsiniz. `Using` deyimin kaynak alma işleminin başarılı olmadığı durumu işlemeniz gerekiyorsa, `resourcename` `Nothing`olup olmadığını görmek için test edebilirsiniz.
 
-## <a name="structured-exception-handling-instead-of-a-using-block"></a>Structured Exception Handling Instead of a Using Block
+## <a name="structured-exception-handling-instead-of-a-using-block"></a>Bir using bloğu yerine yapılandırılmış özel durum Işleme
 
- If you need finer control over the acquisition of the resources, or you need additional code in the `Finally` block, you can rewrite the `Using` block as a `Try`...`Finally` construction. The following example shows skeleton `Try` and `Using` constructions that are equivalent in the acquisition and disposal of `resource`.
+ Kaynakların alımı üzerinde daha fazla denetime ihtiyacınız varsa veya `Finally` bloğunda ek koda ihtiyacınız varsa `Using` bloğunu `Try`...`Finally` oluşturma olarak yeniden yazabilirsiniz. Aşağıdaki örnek, `resource`alımı ve aktiften çıkarılması ile eşdeğer olan iskelet `Try` ve `Using` kurulumlarını gösterir.
 
 ```vb
 Using resource As New resourceType
@@ -105,13 +105,13 @@ End Try
 ```
 
 > [!NOTE]
-> The code inside the `Using` block should not assign the object in `resourcename` to another variable. When you exit the `Using` block, the resource is disposed, and the other variable cannot access the resource to which it points.
+> `Using` bloğunun içindeki kod, `resourcename` nesneyi başka bir değişkene atamamalıdır. `Using` bloğundan çıktığınızda, kaynak atılmış olur ve diğer değişken işaret ettiği kaynağa erişemez.
 
 ## <a name="example"></a>Örnek
 
- The following example creates a file that is named log.txt and writes two lines of text to the file. The example also reads that same file and displays the lines of text:
+ Aşağıdaki örnek, log. txt adlı bir dosya oluşturur ve dosyaya iki satırlık metin yazar. Örnek ayrıca aynı dosyayı okur ve metin satırlarını görüntüler:
 
- Because the <xref:System.IO.TextWriter> and <xref:System.IO.TextReader> classes implement the <xref:System.IDisposable> interface, the code can use `Using` statements to ensure that the file is correctly closed after the write and read operations.
+ <xref:System.IO.TextWriter> ve <xref:System.IO.TextReader> sınıfları <xref:System.IDisposable> arabirimini uygulamadığından, kod, dosyanın yazma ve okuma işlemlerinden sonra doğru şekilde kapatılmasını sağlamak için `Using` deyimlerini kullanabilir.
 
  [!code-vb[VbVbalrStatements#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#50)]
 

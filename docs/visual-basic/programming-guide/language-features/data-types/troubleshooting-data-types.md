@@ -28,107 +28,107 @@ ms.locfileid: "74350507"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Veri Türleri Sorunlarını Giderme (Visual Basic)
 
-This page lists some common problems that can occur when you perform operations on intrinsic data types.
+Bu sayfada, iç veri türlerinde işlem gerçekleştirdiğinizde oluşabilecek bazı yaygın sorunlar listelenmektedir.
 
-## <a name="floating-point-expressions-do-not-compare-as-equal"></a>Floating-Point Expressions Do Not Compare as Equal
+## <a name="floating-point-expressions-do-not-compare-as-equal"></a>Kayan nokta Ifadeleri eşit olarak karşılaştırmaz
 
-When you work with floating-point numbers ([Single Data Type](../../../../visual-basic/language-reference/data-types/single-data-type.md) and [Double Data Type](../../../../visual-basic/language-reference/data-types/double-data-type.md)), remember that they are stored as binary fractions. This means they cannot hold an exact representation of any quantity that is not a binary fraction (of the form k / (2 ^ n) where k and n are integers). For example, 0.5 (= 1/2) and 0.3125 (= 5/16) can be held as precise values, whereas 0.2 (= 1/5) and 0.3 (= 3/10) can be only approximations.
+Kayan nokta numaralarıyla ([tek veri türü](../../../../visual-basic/language-reference/data-types/single-data-type.md) ve [Double veri türü](../../../../visual-basic/language-reference/data-types/double-data-type.md)) çalışırken, bunların ikili kesirler olarak depolandığını unutmayın. Bu, ikili bir kesir olmayan miktarın (k/(2 ^ n) (k ve n tamsayıların tamsayılar) tam bir temsilini tutamayacağı anlamına gelir. Örneğin, 0,5 (= 1/2) ve 0,3125 (= 5/16) kesin değerler olarak tutulabilir, ancak 0,2 (= 1/5) ve 0,3 (= 3/10) yalnızca yaklaştırmalar olabilir.
 
-Because of this imprecision, you cannot rely on exact results when you operate on floating-point values. In particular, two values that are theoretically equal might have slightly different representations.
+Bu noktasında kesinlik eksikliği nedeniyle, kayan nokta değerlerinde işlem yaparken tam sonuçlara güvenebilirsiniz. Özellikle, teorik olarak eşit olan iki değerin biraz farklı gösterimleri olabilir.
 
-| To compare floating-point quantities |
+| Kayan nokta miktarlarını karşılaştırmak için |
 |---|
-|1.  Calculate the absolute value of their difference by using the <xref:System.Math.Abs%2A> method of the <xref:System.Math> class in the <xref:System> namespace.<br />2.  Determine an acceptable maximum difference, such that you can consider the two quantities to be equal for practical purposes if their difference is no larger.<br />3.  Compare the absolute value of the difference to the acceptable difference.|
+|1. <xref:System> ad alanındaki <xref:System.Math> sınıfının <xref:System.Math.Abs%2A> yöntemini kullanarak farkının mutlak değerini hesaplayın.<br />2. kabul edilebilir en yüksek farkı, aralarındaki fark daha büyük değilse pratik amaçlar için eşit olacak şekilde düşünebileceğiniz bir maksimum fark saptayın.<br />3. farkın mutlak değerini kabul edilebilir fark ile karşılaştırın.|
 
-The following example demonstrates both incorrect and correct comparison of two `Double` values.
+Aşağıdaki örnek, iki `Double` değerinin hem yanlış hem de doğru karşılaştırmasını gösterir.
 
 [!code-vb[VbVbalrDataTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#10)]
 
-The previous example uses the <xref:System.Double.ToString%2A> method of the <xref:System.Double> structure so that it can specify better  precision than the `CStr` keyword uses. The default is 15 digits, but the "G17" format extends it to 17 digits.
+Önceki örnekte, `CStr` anahtar sözcüğünün kullandığından daha iyi bir duyarlık belirleyebilmesi için <xref:System.Double> yapısının <xref:System.Double.ToString%2A> yöntemi kullanılmaktadır. Varsayılan değer 15 haneye sahiptir, ancak "G17" biçimi bunu 17 basamağa genişletir.
 
-## <a name="mod-operator-does-not-return-accurate-result"></a>Mod Operator Does Not Return Accurate Result
+## <a name="mod-operator-does-not-return-accurate-result"></a>Mod Işleci doğru sonucu döndürmüyor
 
-Because of the imprecision of floating-point storage, the [Mod Operator](../../../../visual-basic/language-reference/operators/mod-operator.md) can return an unexpected result when at least one of the operands is floating-point.
+Kayan nokta depolama noktasında kesinlik eksikliği nedeniyle, en az bir işlenenin kayan nokta olduğu durumlarda [Mod işleci](../../../../visual-basic/language-reference/operators/mod-operator.md) beklenmeyen bir sonuç döndürebilir.
 
-The [Decimal Data Type](../../../../visual-basic/language-reference/data-types/decimal-data-type.md) does not use floating-point representation. Many numbers that are inexact in `Single` and `Double` are exact in `Decimal` (for example 0.2 and 0.3). Although arithmetic is slower in `Decimal` than in floating-point, it might be worth the performance decrease to achieve better precision.
+[Decimal veri türü](../../../../visual-basic/language-reference/data-types/decimal-data-type.md) kayan nokta gösterimini kullanmaz. `Single` ve `Double` çok fazla sayıda sayı `Decimal`. (örneğin, 0,2 ve 0,3). Aritmetik, kayan noktalı `Decimal` daha yavaş olsa da, daha iyi duyarlık elde etmek için performansın azalmasına değer verebilir.
 
-|To find the integer remainder of floating-point quantities|
+|Kayan noktalı miktarların tamsayı geri kalanını bulmak için|
 |---|
-|1.  Declare variables as `Decimal`.<br />2.  Use the literal type character `D` to force literals to `Decimal`, in case their values are too large for the `Long` data type.|
+|1. değişkenleri `Decimal`olarak bildirin.<br />2. değişmez değer türü karakter `D`, değerlerin `Long` veri türü için çok büyük olması olasılığına karşı, `Decimal`olarak sabitlerini zorlamak için kullanın.|
 
-The following example demonstrates the potential imprecision of floating-point operands.
+Aşağıdaki örnek, kayan nokta işlenenlerinin olası noktasında kesinlik eksikliği gösterir.
 
 [!code-vb[VbVbalrDataTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#11)]
 
-The previous example uses the <xref:System.Double.ToString%2A> method of the <xref:System.Double> structure so that it can specify better precision than the `CStr` keyword uses. The default is 15 digits, but the "G17" format extends it to 17 digits.
+Önceki örnekte, `CStr` anahtar sözcüğünün kullandığından daha iyi bir duyarlık belirleyebilmesi için <xref:System.Double> yapısının <xref:System.Double.ToString%2A> yöntemi kullanılmaktadır. Varsayılan değer 15 haneye sahiptir, ancak "G17" biçimi bunu 17 basamağa genişletir.
 
-Because `zeroPointTwo` is `Double`, its value for 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001. Dividing 2.0 by this quantity yields 9.9999999999999995 with a remainder of 0.19999999999999991.
+`zeroPointTwo` `Double`olduğundan, 0,2 için değeri, depolanan değeri 0.20000000000000001 olan sonsuz bir yinelenen ikili kesirdir. 2,0 bu miktara göre bölmek, 0.19999999999999991 'nin geri kalanı ile 9.9999999999999995 verir.
 
-In the expression for `decimalRemainder`, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation. Therefore the `Mod` operator yields the expected remainder of 0.0.
+`decimalRemainder`ifadesinde, değişmez değer türü karakter `D` her iki işleneni de `Decimal`zorlar ve 0,2 kesin bir gösterimine sahiptir. Bu nedenle `Mod` işleci, 0,0 'in beklenen geri kalanını verir.
 
-Note that it is not sufficient to declare `decimalRemainder` as `Decimal`. You must also force the literals to `Decimal`, or they use `Double` by default and `decimalRemainder` receives the same inaccurate value as `doubleRemainder`.
+`decimalRemainder` `Decimal`olarak bildirmek için yeterli olmadığına unutmayın. Ayrıca, değişmez değerleri `Decimal`zorlamanız gerekir veya varsayılan olarak `Double` kullanırlar `decimalRemainder` aynı yanlış değeri `doubleRemainder`olarak alır.
 
-## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Boolean Type Does Not Convert to Numeric Type Accurately
+## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Boole türü, doğru şekilde sayısal türe dönüştürülmüyor
 
-[Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) values are not stored as numbers, and the stored values are not intended to be equivalent to numbers. For compatibility with earlier versions, Visual Basic provides conversion keywords ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`, and so on) to convert between `Boolean` and numeric types. However, other languages sometimes perform these conversions differently, as do the .NET Framework methods.
+[Boole veri türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) değerleri sayı olarak depolanmaz ve depolanan değerlerin sayılara eşit olması amaçlanmamıştır. Önceki sürümlerle uyumluluk için Visual Basic, `Boolean` ve sayısal türler arasında dönüştürme yapmak üzere dönüştürme anahtar kelimeleri ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`vb.) sağlar. Ancak, diğer diller bazen .NET Framework Yöntemler gibi bu dönüştürmeleri farklı şekilde gerçekleştirebilir.
 
-You should never write code that relies on equivalent numeric values for `True` and `False`. Whenever possible, you should restrict usage of `Boolean` variables to the logical values for which they are designed. If you must mix `Boolean` and numeric values, make sure that you understand the conversion method that you select.
+`True` ve `False`için eşdeğer sayısal değerleri temel alan hiçbir kodu asla yazmamanız gerekir. Mümkün olduğunda, `Boolean` değişkenlerinin kullanımını, tasarlandıkları mantıksal değerlerle kısıtlamalısınız. `Boolean` ve sayısal değerleri karıştırmanız gerekiyorsa, seçtiğiniz dönüştürme yöntemini anladığınızdan emin olun.
 
-### <a name="conversion-in-visual-basic"></a>Conversion in Visual Basic
+### <a name="conversion-in-visual-basic"></a>Visual Basic dönüştürme
 
-When you use the `CType` or `CBool` conversion keywords to convert numeric data types to `Boolean`, 0 becomes `False` and all other values become `True`. When you convert `Boolean` values to numeric types by using the conversion keywords, `False` becomes 0 and `True` becomes -1.
+Sayısal veri türlerini `Boolean`dönüştürmek için `CType` veya `CBool` dönüştürme anahtar sözcüklerini kullandığınızda 0 `False` olur ve diğer tüm değerler `True`olur. Dönüştürme anahtar sözcüklerini kullanarak `Boolean` değerlerini sayısal türlere dönüştürdüğünüzde, `False` 0 olur ve `True`-1 olur.
 
-### <a name="conversion-in-the-framework"></a>Conversion in the Framework
+### <a name="conversion-in-the-framework"></a>Çerçevede dönüştürme
 
-The <xref:System.Convert.ToInt32%2A> method of the <xref:System.Convert> class in the <xref:System> namespace converts `True` to +1.
+<xref:System> ad alanındaki <xref:System.Convert> sınıfının <xref:System.Convert.ToInt32%2A> yöntemi `True` + 1 ' e dönüştürür.
 
-If you must convert a `Boolean` value to a numeric data type, be careful about which conversion method you use.
+Bir `Boolean` değerini sayısal veri türüne dönüştürmeniz gerekiyorsa, kullandığınız dönüştürme yöntemiyle ilgili dikkatli olun.
 
-## <a name="character-literal-generates-compiler-error"></a>Character Literal Generates Compiler Error
+## <a name="character-literal-generates-compiler-error"></a>Karakter sabit değeri derleyici hatası oluşturuyor
 
-In the absence of any type characters, Visual Basic assumes default data types for literals. The default type for a character literal — enclosed in quotation marks (`" "`) — is `String`.
+Herhangi bir tür karakteri yokluğunda Visual Basic, değişmez değerler için varsayılan veri türlerini varsayar. Bir karakter sabiti için varsayılan tür, tırnak işaretleri (`" "`) gibi) `String`.
 
-The `String` data type does not widen to the [Char Data Type](../../../../visual-basic/language-reference/data-types/char-data-type.md). This means that if you want to assign a literal to a `Char` variable, you must either make a narrowing conversion or force the literal to the `Char` type.
+`String` veri türü, [char veri türüne](../../../../visual-basic/language-reference/data-types/char-data-type.md)genişlemez. Yani, bir `Char` değişkenine bir sabit değer atamak istiyorsanız, bir daraltma dönüştürmesi yapmanız veya hazır değeri `Char` türüne zorlamanız gerekir.
 
-|To create a Char literal to assign to a variable or constant|
+|Bir değişkene veya sabitine atanacak bir Char sabit değeri oluşturmak için|
 |---|
-|1.  Declare the variable or constant as `Char`.<br />2.  Enclose the character value in quotation marks (`" "`).<br />3.  Follow the closing double quotation mark with the literal type character `C` to force the literal to `Char`. This is necessary if the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On`, and it is desirable in any case.|
+|1. değişkeni veya sabiti `Char`olarak bildirin.<br />2. karakter değerini tırnak işaretleri (`" "`) içine alın.<br />3. hazır değeri `Char`zorlamak için `C` değişmez değer türü karakteriyle birlikte kapanış çift tırnak işaretini izleyin. Bu, tür denetimi anahtarı ([Option Strict deyimin](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) `On`ve herhangi bir durumda istense gereklidir.|
 
-The following example demonstrates both unsuccessful and successful assignments of a literal to a `Char` variable.
+Aşağıdaki örnek, `Char` değişkenine bir sabit değerin hem başarısız hem de başarılı atamalarını gösterir.
 
 [!code-vb[VbVbalrDataTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#12)]
 
-There is always a risk in using narrowing conversions, because they can fail at run time. For example, a conversion from `String` to `Char` can fail if the `String` value contains more than one character. Therefore, it is better programming to use the `C` type character.
+Çalışma zamanında başarısız olabileceğinden daraltma dönüştürmeleri kullanılırken her zaman bir risk vardır. Örneğin, `String` değeri birden fazla karakter içeriyorsa, `String` `Char` ' dan bir dönüştürme başarısız olabilir. Bu nedenle, `C` türü karakteri kullanmak daha iyi bir programdır.
 
-## <a name="string-conversion-fails-at-run-time"></a>String Conversion Fails at Run Time
+## <a name="string-conversion-fails-at-run-time"></a>Çalışma zamanında dize dönüştürme başarısız oluyor
 
-The [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) participates in very few widening conversions. `String` widens only to itself and `Object`, and only `Char` and `Char()` (a `Char` array) widen to `String`. This is because `String` variables and constants can contain values that other data types cannot contain.
+[Dize veri türü](../../../../visual-basic/language-reference/data-types/string-data-type.md) , çok az genişleyen dönüşümlere katılır. widens yalnızca kendine ve `Object``String` ve yalnızca `Char` ve `Char()` (`Char` dizi) `String`için genişlemez. Bunun nedeni, `String` değişkenlerinin ve sabitlerin diğer veri türlerinin içeremeyeceği değerleri içerebildiği bir.
 
-When the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On`, the compiler disallows all implicit narrowing conversions. This includes those involving `String`. Your code can still use conversion keywords such as `CStr` and [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md), which direct the .NET Framework to attempt the conversion.
+Tür denetleme anahtarı ([Option Strict deyimin](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) `On`, derleyici tüm örtük daraltma dönüştürmelerine izin vermez. Bu, `String`ilgili olanları içerir. Kodunuz, dönüştürmeyi denemek için .NET Framework yönlendirecek `CStr` ve [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md)gibi dönüştürme anahtar sözcüklerini kullanmaya devam edebilir.
 
 > [!NOTE]
-> The narrowing-conversion error is suppressed for conversions from the elements in a `For Each…Next` collection to the loop control variable. For more information and examples, see the "Narrowing Conversions" section in [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).
+> Daraltma dönüştürme hatası, bir `For Each…Next` koleksiyonundaki öğelerden döngü denetim değişkenine dönüşümler için bastırılır. Daha fazla bilgi ve örnek için, her biri Için içindeki "dönüştürmeleri daraltma" bölümüne bakın [... Sonraki Ifade](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).
 
-### <a name="narrowing-conversion-protection"></a>Narrowing Conversion Protection
+### <a name="narrowing-conversion-protection"></a>Daraltma dönüştürme koruması
 
-The disadvantage of narrowing conversions is that they can fail at run time. For example, if a `String` variable contains anything other than "True" or "False," it cannot be converted to `Boolean`. If it contains punctuation characters, conversion to any numeric type fails. Unless you know that your `String` variable always holds values that the destination type can accept, you should not try a conversion.
+Daraltma dönüştürmelerinden sakıncası çalışma zamanında başarısız olabilir. Örneğin, bir `String` değişkeni "true" veya "false" dışında bir şey içeriyorsa, bu, `Boolean`dönüştürülemez. Noktalama karakterleri içeriyorsa, herhangi bir sayısal türe dönüştürme başarısız olur. `String` değişkeninizin her zaman hedef türün kabul edebileceği değerleri tuttuğunda, dönüştürmeyi denememelisiniz.
 
-If you must convert from `String` to another data type, the safest procedure is to enclose the attempted conversion in the [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). This lets you deal with a run-time failure.
+`String` ' den başka bir veri türüne dönüştürmeniz gerekiyorsa, en güvenli yordam, denemeye yapılan dönüştürmeyi TRY... içine almaktır [. Yakala... Finally ekstresi](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). Bu, bir çalışma zamanı hatasıyla ilgilenmenizi sağlar.
 
-### <a name="character-arrays"></a>Character Arrays
+### <a name="character-arrays"></a>Karakter dizileri
 
-A single `Char` and an array of `Char` elements both widen to `String`. However, `String` does not widen to `Char()`. To convert a `String` value to a `Char` array, you can use the <xref:System.String.ToCharArray%2A> method of the <xref:System.String?displayProperty=nameWithType> class.
+Tek bir `Char` ve `Char` öğelerinden oluşan dizi `String`için de genişledir. Ancak, `String` `Char()`olarak genişlemez. Bir `String` değerini `Char` dizisine dönüştürmek için <xref:System.String?displayProperty=nameWithType> sınıfının <xref:System.String.ToCharArray%2A> yöntemini kullanabilirsiniz.
 
-### <a name="meaningless-values"></a>Meaningless Values
+### <a name="meaningless-values"></a>Anlamlı değerler
 
-In general, `String` values are not meaningful in other data types, and conversion is highly artificial and dangerous. Whenever possible, you should restrict usage of `String` variables to the character sequences for which they are designed. You should never write code that relies on equivalent values in other types.
+Genel olarak, `String` değerleri diğer veri türlerinde anlamlı değildir ve dönüştürme yüksek oranda yapay ve tehlikeli olur. Mümkün olduğunda, `String` değişkenlerinin kullanımını, tasarlandıkları karakter dizileri ile kısıtlamalısınız. Başka türlerdeki eşdeğer değerlere bağlı olmayan hiçbir kodu asla yazmamanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic dönüşümler yazın](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
 - [Tür Dönüştürme İşlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Veri Türlerinin Etkili Kullanımı](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

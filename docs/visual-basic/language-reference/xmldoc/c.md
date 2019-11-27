@@ -12,8 +12,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348505"
 ---
-# <a name="c-visual-basic"></a>\<c> (Visual Basic)
-Indicates that text within a description is code.  
+# <a name="c-visual-basic"></a>\<c > (Visual Basic)
+Açıklama içindeki metnin kod olduğunu gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -25,15 +25,15 @@ Indicates that text within a description is code.
   
 |Parametre|Açıklama|  
 |---|---|  
-|`text`|The text you would like to indicate as code.|  
+|`text`|Kod olarak göstermek istediğiniz metin.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `<c>` tag gives you a way to indicate that text within a description should be marked as code. Use [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) to indicate multiple lines as code.  
+ `<c>` etiketi, bir açıklama içindeki metnin kod olarak işaretlenmesi gerektiğini göstermek için bir yol sağlar. Birden çok satırı kod olarak göstermek için [\<kodu >](../../../visual-basic/language-reference/xmldoc/code.md) kullanın.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- This example uses the `<c>` tag in the summary section to indicate that `Counter` is code.  
+ Bu örnek, `Counter` kodun olduğunu göstermek için Özet bölümündeki `<c>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

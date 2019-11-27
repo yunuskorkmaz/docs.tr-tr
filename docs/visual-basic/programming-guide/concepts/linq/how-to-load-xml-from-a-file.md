@@ -1,5 +1,5 @@
 ---
-title: 'How to: Load XML from a File'
+title: 'Nasıl yapılır: dosyadan XML yükleme'
 ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
 ms.openlocfilehash: 72a5adb8c7165f8113584f27bea64efde4ec58fb
@@ -9,15 +9,15 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336105"
 ---
-# <a name="how-to-load-xml-from-a-file-visual-basic"></a>How to: Load XML from a File (Visual Basic)
+# <a name="how-to-load-xml-from-a-file-visual-basic"></a>Nasıl yapılır: dosyadan XML yükleme (Visual Basic)
 
-This topic shows how to load XML from a URI by using the <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> method.
+Bu konuda <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> yöntemi kullanılarak bir URI 'den XML yükleme gösterilmektedir.
 
 ## <a name="example"></a>Örnek
 
-The following example shows how to load an XML document from a file. The following example loads books.xml and outputs the XML tree to the console.
+Aşağıdaki örnek, bir dosyadan bir XML belgesinin nasıl yükleneceğini gösterir. Aşağıdaki örnek, Books. xml ' i yükler ve XML ağacını konsola çıkarır.
 
-This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
+Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: kitaplar (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
 
 ```vb
 Dim booksFromFile As XElement = XElement.Load("books.xml")
@@ -52,4 +52,4 @@ Bu kod aşağıdaki çıktıyı üretir:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [XML 'yi ayrıştırma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
