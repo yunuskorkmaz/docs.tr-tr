@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450350"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs Yöntemi
-Enumerates the `mdAssemblyRef` instances that are defined in the assembly manifest.  
+Derleme bildiriminde tanımlanan `mdAssemblyRef` örneklerini numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,32 +38,32 @@ HRESULT EnumAssemblyRefs (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value when the `EnumAssemblyRefs` method is called for the first time.  
+ [in, out] Numaralandırıcı için bir işaretçi. `EnumAssemblyRefs` yöntemi ilk kez çağrıldığında bu null bir değer olmalıdır.  
   
  `rAssemblyRefs`  
- [out] The enumeration of `mdAssemblyRef` metadata tokens.  
+ dışı `mdAssemblyRef` meta veri belirteçleri numaralandırması.  
   
  `cMax`  
- [in] The maximum number of tokens that can be placed in the `rAssemblyRefs` array.  
+ 'ndaki `rAssemblyRefs` dizisine yerleştirilebilecek en fazla belirteç sayısı.  
   
  `pcTokens`  
- [out] The number of tokens actually placed in `rAssemblyRefs`.  
+ dışı Gerçekten `rAssemblyRefs`yer aldığı belirteçlerin sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumAssemblyRefs` başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda `pcTokens` sıfır olarak ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

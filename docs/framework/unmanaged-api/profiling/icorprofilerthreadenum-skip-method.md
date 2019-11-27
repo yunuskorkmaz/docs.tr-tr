@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447583"
 ---
 # <a name="icorprofilerthreadenumskip-method"></a>ICorProfilerThreadEnum::Skip Yöntemi
-Advances the enumerator's cursor from its current position to skip the specified number of elements.  
+Numaralandırıcının imlecini, belirtilen sayıda öğeyi atlayacak şekilde geçerli konumundan ilerletir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,27 +34,27 @@ HRESULT Skip (    [in] ULONG celt
   
 ## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] The number of elements to be skipped.  
+ 'ndaki Atlanacak öğe sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
+ Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`celt` elements were skipped.|  
-|S_FALSE|Fewer than `celt` elements were skipped, which indicates that there are no more elements.|  
+|S_OK|`celt` öğeler atlandı.|  
+|S_FALSE|Daha az sayıda öğe olmadığını belirten `celt` öğeden azı atlandı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The new position of this enumerator's cursor is (current position) + `celt`.  
+ Bu Numaralandırıcı imlecinizin yeni konumu (geçerli konum) + `celt`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

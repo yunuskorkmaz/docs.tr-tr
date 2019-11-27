@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353185"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>GetXmlNamespace İşleci (Visual Basic)
-Gets the <xref:System.Xml.Linq.XNamespace> object that corresponds to the specified XML namespace prefix.  
+Belirtilen XML ad alanı ön ekine karşılık gelen <xref:System.Xml.Linq.XNamespace> nesnesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,26 +26,26 @@ GetXmlNamespace(xmlNamespacePrefix)
   
 ## <a name="parts"></a>Bölümler  
  `xmlNamespacePrefix`  
- İsteğe bağlı. The string that identifies the XML namespace prefix. If supplied, this string must be a valid XML identifier. For more information, see [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md). If no prefix is specified, the default namespace is returned. If no default namespace is specified, the empty namespace is returned.  
+ İsteğe bağlı. XML ad alanı önekini tanımlayan dize. Sağlanırsa, bu dize geçerli bir XML tanımlayıcısı olmalıdır. Daha fazla bilgi için bkz. [BELIRTILEN XML öğelerinin ve özniteliklerin adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md). Hiçbir önek belirtilmemişse, varsayılan ad alanı döndürülür. Varsayılan ad alanı belirtilmemişse boş ad alanı döndürülür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- The <xref:System.Xml.Linq.XNamespace> object that corresponds to the XML namespace prefix.  
+ XML ad alanı ön ekine karşılık gelen <xref:System.Xml.Linq.XNamespace> nesnesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `GetXmlNamespace` operator gets the <xref:System.Xml.Linq.XNamespace> object that corresponds to the XML namespace prefix `xmlNamespacePrefix`.  
+ `GetXmlNamespace` işleci, XML ad alanı öneki `xmlNamespacePrefix`karşılık gelen <xref:System.Xml.Linq.XNamespace> nesnesini alır.  
   
- You can use XML namespace prefixes directly in XML literals and XML axis properties. However, you must use the `GetXmlNamespace` operator to convert a namespace prefix to an <xref:System.Xml.Linq.XNamespace> object before you can use it in your code. You can append an unqualified element name to an <xref:System.Xml.Linq.XNamespace> object to get a fully qualified <xref:System.Xml.Linq.XName> object, which many [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] methods require.  
+ XML ad alanı öneklerini doğrudan XML değişmez değerleri ve XML eksen özellikleri içinde kullanabilirsiniz. Ancak, kodunuzda kullanabilmeniz için bir ad alanı önekini bir <xref:System.Xml.Linq.XNamespace> nesnesine dönüştürmek üzere `GetXmlNamespace` işlecini kullanmanız gerekir. Birçok [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] yönteminin gerektirdiği tam bir <xref:System.Xml.Linq.XName> nesnesini almak için bir <xref:System.Xml.Linq.XNamespace> nesnesine nitelenmemiş bir öğe adı ekleyebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- The following example imports `ns` as an XML namespace prefix. It then uses the prefix of the namespace to create an XML literal and access the first child node that has the qualified name `ns:phone`. It then passes that child node to the `ShowName` subroutine, which constructs a qualified name by using the `GetXmlNamespace` operator. The `ShowName` subroutine then passes the qualified name to the <xref:System.Xml.Linq.XNode.Ancestors%2A> method to get the parent `ns:contact` node.  
+ Aşağıdaki örnek, `ns` bir XML ad alanı öneki olarak içeri aktarır. Daha sonra, bir XML sabit değeri oluşturmak ve nitelenmiş ada sahip ilk alt düğüme erişmek için ad alanının önekini kullanır `ns:phone`. Daha sonra bu alt düğümü, `GetXmlNamespace` işlecini kullanarak tam adı oluşturan `ShowName` alt yordama geçirir. `ShowName` alt yordamı daha sonra üst `ns:contact` düğümünü almak için tam adı <xref:System.Xml.Linq.XNode.Ancestors%2A> yöntemine geçirir.  
   
  [!code-vb[VbXMLSamples#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/GetXmlNamespace.vb#38)]  
   
- When you call `TestGetXmlNamespace.RunSample()`, it displays a message box that contains the following text:  
+ `TestGetXmlNamespace.RunSample()`çağırdığınızda, aşağıdaki metni içeren bir ileti kutusu görüntülenir:  
   
  `Name: Patrick Hines`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Imports Deyimi (XML Ad Alanı)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
-- [Accessing XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+- [Visual Basic XML 'e erişme](../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)

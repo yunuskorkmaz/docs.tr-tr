@@ -1,5 +1,5 @@
 ---
-title: Dynamic Language Runtime Overview | Microsoft Docs
+title: Dinamik dil çalışma zamanına genel bakış | Microsoft Docs
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dynamic language runtime
@@ -16,84 +16,84 @@ ms.locfileid: "74446901"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dinamik Dil Çalışma Zamanına Genel Bakış
 
-The *dynamic language runtime* (DLR) is a runtime environment that adds a set of services for dynamic languages to the common language runtime (CLR). The DLR makes it easier to develop dynamic languages to run on the .NET Framework and to add dynamic features to statically typed languages.
+*Dinamik dil çalışma zamanı* (DLR), ortak dil çalışma zamanına (CLR) dinamik diller için bir hizmet kümesi ekleyen bir çalışma zamanı ortamıdır. DLR, .NET Framework çalıştırmak ve statik olarak belirlenmiş dillere dinamik özellikler eklemek için dinamik dillerin geliştirmeyi kolaylaştırır.
 
-Dynamic languages can identify the type of an object at run time, whereas in statically typed languages such as C# and Visual Basic (when you use `Option Explicit On`) you must specify object types at design time. Examples of dynamic languages are Lisp, Smalltalk, JavaScript, PHP, Ruby, Python, ColdFusion, Lua, Cobra, and Groovy.
+Dinamik diller bir nesnenin türünü çalışma zamanında tanımlayabilir, ancak gibi statik olarak C# yazılmış dillerde ve Visual Basic (`Option Explicit On`kullandığınızda), tasarım zamanında nesne türlerini belirtmeniz gerekir. Dinamik dillere örnek olarak, Lizp, Smalltalk, JavaScript, PHP, Ruby, Python, ColdFusion, Lua, Coköşeli ve groovy verilebilir.
 
-Most dynamic languages provide the following advantages for developers:
+Çoğu dinamik dil, geliştiriciler için aşağıdaki avantajları sağlar:
 
-- The ability to use a rapid feedback loop (REPL, or read-evaluate-print loop). This lets you enter several statements and immediately execute them to see the results.
+- Hızlı geri bildirim döngüsü (REPL veya Read-değerlendir-PRINT döngüsü) kullanma özelliği. Bu, birkaç deyim girmenize ve sonuçları görmek için hemen yürütmenize imkan tanır.
 
-- Support for both top-down development and more traditional bottom-up development. For example, when you use a top-down approach, you can call functions that are not yet implemented and then add underlying implementations when you need them.
+- Hem yukarıdan aşağıya geliştirme hem de daha geleneksel en düşük geliştirme desteği. Örneğin, yukarıdan aşağı bir yaklaşım kullandığınızda henüz uygulanmayan işlevleri çağırabilir ve ardından ihtiyacınız olduğunda temel alınan uygulamaları ekleyebilirsiniz.
 
-- Easier refactoring and code modifications, because you do not have to change static type declarations throughout the code.
+- Kod genelinde statik tür bildirimlerini değiştirmeniz gerekli olmadığından, daha kolay yeniden düzenleme ve kod değişiklikleri.
 
-Dynamic languages make excellent scripting languages. Customers can easily extend applications created by using dynamic languages with new commands and functionality. Dynamic languages are also frequently used for creating Web sites and test harnesses, maintaining server farms, developing various utilities, and performing data transformations.
+Dinamik diller mükemmel betik dilleri yapar. Müşteriler, dinamik diller kullanılarak oluşturulan uygulamaları yeni komutlar ve işlevlerle kolayca genişletebilir. Dinamik diller, Web siteleri oluşturmak ve test gücünden, sunucu gruplarını korumak, çeşitli yardımcı programlar geliştirmek ve veri dönüştürmeleri gerçekleştirmek için de sık kullanılır.
 
-The purpose of the DLR is to enable a system of dynamic languages to run on the .NET Framework and give them .NET interoperability. The DLR adds dynamic objects to C# and Visual Basic to support dynamic behavior in these languages and enable their interoperation with dynamic languages.
+DLCı r 'nin amacı, dinamik dillerin bir sisteminin .NET Framework çalışmasına ve .NET birlikte çalışabilirliğine izin vermektir. DLR, bu dillerdeki dinamik davranışı C# desteklemek ve dinamik dillerle birlikte çalışabilirliği etkinleştirmek için dinamik nesneleri ve Visual Basic ekler.
 
-The DLR also helps you create libraries that support dynamic operations. For example, if you have a library that uses XML or JavaScript Object Notation (JSON) objects, your objects can appear as dynamic objects to languages that use the DLR. This lets library users write syntactically simpler and more natural code for operating with objects and accessing object members.
+DLCı, dinamik işlemleri destekleyen kitaplıklar oluşturmanıza de yardımcı olur. Örneğin, XML veya JavaScript Nesne Gösterimi (JSON) nesneleri kullanan bir kitaplığınız varsa, nesneleriniz DLR kullanan dillere dinamik nesneler olarak görünebilir. Bu, kitaplık kullanıcılarının nesnelerle çalışma ve nesne üyelerine erişme için sözdizimsel olarak daha basit ve daha doğal kodlar yazmasına olanak sağlar.
 
-For example, you might use the following code to increment a counter in XML in C#.
+Örneğin, içinde C#XML içindeki bir sayacı artırmak için aşağıdaki kodu kullanabilirsiniz.
 
 `Scriptobj.SetProperty("Count", ((int)GetProperty("Count")) + 1);`
 
-By using the DLR, you could use the following code instead for the same operation.
+DLCı 'yi kullanarak, aynı işlem için bunun yerine aşağıdaki kodu kullanabilirsiniz.
 
 `scriptobj.Count += 1;`
 
-Like the CLR, the DLR is a part of the .NET Framework and is provided with the .NET Framework and Visual Studio installation packages. The open-source version of the DLR is also available for download on the [IronLanguages/dlr](https://github.com/IronLanguages/dlr) repo on GitHub.
+CLR gibi, DLR .NET Framework bir parçasıdır ve .NET Framework ve Visual Studio yükleme paketleriyle birlikte sağlanır. DLR 'nin açık kaynaklı sürümü, GitHub 'daki [ıronlanguages/DLR](https://github.com/IronLanguages/dlr) deposunda da indirilebilir.
 
 > [!NOTE]
-> The open-source version of the DLR has all the features of the DLR that is included in Visual Studio and the .NET Framework. It also provides additional support for language implementers. For more information, see the documentation on the [IronLanguages/dlr](https://github.com/IronLanguages/dlr) repo on GitHub.
+> DLCı r 'nin açık kaynak sürümü, Visual Studio 'Ya ve .NET Framework dahil olan DLCı r 'nin tüm özelliklerine sahiptir. Ayrıca dil uygulayıcıları için ek destek sağlar. Daha fazla bilgi için GitHub 'daki [ıronlanguages/DLR](https://github.com/IronLanguages/dlr) deposu ile ilgili belgelere bakın.
 
-Examples of languages developed by using the DLR include the following:
+DLCı 'ler kullanılarak geliştirilmiş dillerin örnekleri şunları içerir:
 
-- IronPython. Available as open-source software from the [GitHub](https://github.com/IronLanguages/ironpython2) Web site.
+- IronPython. [GitHub](https://github.com/IronLanguages/ironpython2) Web sitesinden açık kaynaklı yazılım olarak kullanılabilir.
 
-- IronRuby. Available as open-source software from the [IronRuby](http://ironruby.net/) website.
+- IronRuby. [IronRuby](http://ironruby.net/) Web sitesinden açık kaynaklı yazılım olarak kullanılabilir.
 
-## <a name="primary-dlr-advantages"></a>Primary DLR Advantages
- The DLR provides the following advantages.
+## <a name="primary-dlr-advantages"></a>Birincil DLR avantajları
+ DLR aşağıdaki avantajları sağlar.
 
-### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>Simplifies Porting Dynamic Languages to the .NET Framework
- The DLR allows language implementers to avoid creating lexical analyzers, parsers, semantic analyzers, code generators, and other tools that they traditionally had to create themselves. To use the DLR, a language needs to produce *expression trees*, which represent language-level code in a tree-shaped structure, runtime helper routines, and optional dynamic objects that implement the <xref:System.Dynamic.IDynamicMetaObjectProvider> interface. The DLR and the .NET Framework automate a lot of code analysis and code generation tasks. This enables language implementers to concentrate on unique language features.
+### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>.NET Framework dinamik dillerin taşıma işlemini basitleştirir
+ DLCı 'ler, dil uygulayıcıları, çözümleyiciler, semantik çözümleyiciler, kod oluşturucuları ve geleneksel olarak kendilerini oluşturmak zorunda oldukları diğer araçları oluşturmanızı önler. DLR 'yi kullanmak için bir dilin ağaç şeklinde bir yapıda, çalışma zamanı Yardımcısı yordamlarında ve <xref:System.Dynamic.IDynamicMetaObjectProvider> arabirimini uygulayan isteğe bağlı dinamik nesnelerde dil düzeyi kodu temsil eden *ifade ağaçları*üretmesi gerekir. DLR ve .NET Framework, çok sayıda kod analizi ve kod oluşturma görevini otomatikleştirin. Bu, dil uygulayıcıları 'nın benzersiz dil özelliklerine odaklanmalarını sağlar.
 
-### <a name="enables-dynamic-features-in-statically-typed-languages"></a>Enables Dynamic Features in Statically Typed Languages
- Existing .NET Framework languages such as C# and Visual Basic can create dynamic objects and use them together with statically typed objects. For example, C# and Visual Basic can use dynamic objects for HTML, Document Object Model (DOM), and .NET reflection.
+### <a name="enables-dynamic-features-in-statically-typed-languages"></a>Statik olarak belirlenmiş dillerdeki dinamik özellikleri sunar
+ C# Ve Visual Basic gibi mevcut .NET Framework diller, dinamik nesneler oluşturabilir ve bunları statik olarak yazılmış nesnelerle birlikte kullanabilir. Örneğin, C# ve Visual Basic HTML, belge nesne MODELI (DOM) ve .net yansıma için dinamik nesneleri kullanabilir.
 
-### <a name="provides-future-benefits-of-the-dlr-and-net-framework"></a>Provides Future Benefits of the DLR and .NET Framework
- Languages implemented by using the DLR can benefit from future DLR and .NET Framework improvements. For example, if the .NET Framework releases a new version that has an improved garbage collector or faster assembly loading time, languages implemented by using the DLR immediately get the same benefit. If the DLR adds optimizations such as better compilation, the performance also improves for all languages implemented by using the DLR.
+### <a name="provides-future-benefits-of-the-dlr-and-net-framework"></a>DLCı r ve .NET Framework gelecek avantajları sağlar
+ DLCı 'ler kullanılarak uygulanan diller, gelecekteki DLCı 'ler ve .NET Framework geliştirmelerinden faydalanabilir. Örneğin, .NET Framework geliştirilmiş bir çöp toplayıcısı veya daha hızlı derleme yükleme süresi içeren yeni bir sürüm yayımlarsa, DLR kullanılarak uygulanan diller hemen aynı avantajı alır. DLR, daha iyi derleme gibi iyileştirmeler eklerse, performans da DLCı r kullanılarak uygulanan tüm diller için de geliştirilir.
 
-### <a name="enables-sharing-of-libraries-and-objects"></a>Enables Sharing of Libraries and Objects
- The objects and libraries implemented in one language can be used by other languages. The DLR also enables interoperation between statically typed and dynamic languages. For example, C# can declare a dynamic object that uses a library that is written in a dynamic language. At the same time, dynamic languages can use libraries from the .NET Framework.
+### <a name="enables-sharing-of-libraries-and-objects"></a>Kitaplıkların ve nesnelerin paylaşılmasını sunar
+ Tek bir dilde uygulanan nesneler ve kitaplıklar diğer diller tarafından kullanılabilir. DLCı, statik olarak yazılmış ve dinamik diller arasında birlikte çalışabilirliği de sunar. Örneğin, C# dinamik bir dilde yazılmış bir kitaplığı kullanan dinamik bir nesne bildirebilirler. Aynı zamanda, dinamik diller .NET Framework kitaplıklarını kullanabilir.
 
-### <a name="provides-fast-dynamic-dispatch-and-invocation"></a>Provides Fast Dynamic Dispatch and Invocation
- The DLR provides fast execution of dynamic operations by supporting advanced polymorphic caching. The DLR creates rules for binding operations that use objects to the necessary runtime implementations and then caches these rules to avoid resource-exhausting binding computations during successive executions of the same code on the same types of objects.
+### <a name="provides-fast-dynamic-dispatch-and-invocation"></a>Hızlı dinamik dağıtım ve çağırma sağlar
+ DLR, gelişmiş polimorfik önbelleğe almayı destekleyerek dinamik işlemlerin hızlı bir şekilde yürütülmesini sağlar. DLR, nesneleri gerekli çalışma zamanı uygulamalarına kullanan bağlama işlemleri için kurallar oluşturur ve ardından aynı türdeki nesne türlerinde aynı kodun ardışık yürütmeleri sırasında kaynak tüketmeyi önlemek için bu kuralları önbelleğe alır.
 
-## <a name="dlr-architecture"></a>DLR Architecture
- The following illustration shows the architecture of the dynamic language runtime.
+## <a name="dlr-architecture"></a>DLR mimarisi
+ Aşağıdaki çizimde, dinamik dil çalışma zamanının mimarisi gösterilmektedir.
 
- ![Dynamic Language Runtime Architecture Overview](./media/dlr-archoverview.png "DLR_ArchOverview") DLR architecture
+ ![Dinamik dil çalışma zamanı mimarisine genel bakış](./media/dlr-archoverview.png "DLR_ArchOverview") DLR mimarisi
 
- The DLR adds a set of services to the CLR for better supporting dynamic languages. These services include the following:
+ DLR, dinamik dilleri daha iyi desteklemek için CLR 'ye bir hizmet kümesi ekler. Bu hizmetler şunları içerir:
 
-- Expression trees. The DLR uses expression trees to represent language semantics. For this purpose, the DLR has extended LINQ expression trees to include control flow, assignment, and other language-modeling nodes. For more information, see [Expression Trees (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) or [Expression Trees (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
+- İfade ağaçları. DLR, dil semantiğini temsil etmek için ifade ağaçları kullanır. Bu amaçla, DLR, denetim akışını, atamayı ve diğer dil modelleme düğümlerini dahil etmek için LINQ ifade ağaçları genişletmiştir. Daha fazla bilgi için bkz. [ifade ağaçlarıC#()](../../csharp/programming-guide/concepts/expression-trees/index.md) veya [ifade ağaçları (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
 
-- Call site caching. A *dynamic call site* is a place in the code where you perform an operation like `a + b` or `a.b()` on dynamic objects. The DLR caches the characteristics of `a` and `b` (usually the types of these objects) and information about the operation. If such an operation has been performed previously, the DLR retrieves all the necessary information from the cache for fast dispatch.
+- Site önbelleğe alma çağrısı yapın. *Dinamik bir çağrı sitesi* , dinamik nesnelerde `a + b` veya `a.b()` gibi bir işlem gerçekleştirdiğiniz kodda yer alır. DLCı 'ler `a` ve `b` özelliklerini (genellikle bu nesnelerin türleri) ve işlemle ilgili bilgileri önbelleğe alır. Bu tür bir işlem daha önce gerçekleştirilirse, DLR hızlı dağıtım için önbellekten tüm gerekli bilgileri alır.
 
-- Dynamic object interoperability. The DLR provides a set of classes and interfaces that represent dynamic objects and operations and can be used by language implementers and authors of dynamic libraries. These classes and interfaces include <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject>, and <xref:System.Dynamic.ExpandoObject>.
+- Dinamik nesne birlikte çalışabilirliği. DLR, dinamik nesneleri ve işlemleri temsil eden bir sınıf ve arabirim kümesi sağlar ve dinamik kitaplıkların dil uygulayıcıları ve yazarları tarafından kullanılabilir. Bu sınıflar ve arabirimler <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject>ve <xref:System.Dynamic.ExpandoObject>içerir.
 
-The DLR uses binders in call sites to communicate not only with the .NET Framework, but with other infrastructures and services, including Silverlight and COM. Binders encapsulate a language's semantics and specify how to perform operations in a call site by using expression trees. This enables dynamic and statically typed languages that use the DLR to share libraries and gain access to all the technologies that the DLR supports.
+DLR, yalnızca .NET Framework değil, ancak Silverlight ve COM dahil olmak üzere diğer altyapılarla ve hizmetlerle iletişim kurmak için çağıran sitelerde ciltler kullanır. Ciltler bir dilin semantiğini kapsüller ve ifade ağaçları kullanarak bir çağrı sitesinde nasıl işlem yapılacağını belirtir. Bu, bir DLR kullanan dinamik ve statik olarak belirlenmiş dillerin kitaplıklarını paylaşmak ve DLR 'nin desteklediği tüm teknolojiler için erişim elde etmenizi sağlar.
 
-## <a name="dlr-documentation"></a>DLR Documentation
- For more information about how to use the open source version of the DLR to add dynamic behavior to a language, or about how to enable the use of a dynamic language with the .NET Framework, see the documentation on the [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) repo on GitHub.
+## <a name="dlr-documentation"></a>DLR belgeleri
+ Bir dile dinamik davranış eklemek için DLR 'nin açık kaynak sürümünü kullanma hakkında daha fazla bilgi için veya .NET Framework ile dinamik bir dilin kullanımını etkinleştirme hakkında daha fazla bilgi için GitHub 'daki [ıronlanguages/DLR](https://github.com/IronLanguages/dlr/tree/master/Docs) deposunun belgelerine bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
-- [Common Language Runtime](../../standard/clr.md)
-- [Expression Trees (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
-- [Expression Trees (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Walkthrough: Creating and Using Dynamic Objects](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [Ortak dil çalışma zamanı](../../standard/clr.md)
+- [İfade ağaçları (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [İfade ağaçları (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [İzlenecek yol: dinamik nesneler oluşturma ve kullanma](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

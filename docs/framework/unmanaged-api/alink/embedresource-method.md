@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446543"
 ---
 # <a name="embedresource-method"></a>EmbedResource Yöntemi
-Declares an embedded resource. This method does not actually embed the resource.  
+Gömülü bir kaynak bildirir. Bu yöntem, kaynağı aslında eklemez.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +39,25 @@ HRESULT EmbedResource(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- ID of the assembly.  
+ Derlemenin KIMLIĞI.  
   
  `FileToken`  
- File token or assembly ID of file that contains the resource.  
+ Kaynağı içeren dosyanın belirteç veya derleme KIMLIĞI.  
   
  `pszResourceName`  
- Name of the resource.  
+ Kaynağın adı.  
   
  `dwOffset`  
- Offset of resource from RVA.  
+ Kaynak RVA 'dan konum.  
   
  `dwFlags`  
- Accessibility flags such as `mrPublic` and `mrPrivate`. These flags may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `mrPublic` ve `mrPrivate`gibi erişilebilirlik bayrakları. Bu bayraklar [DefineExportedType yöntemine](../metadata/imetadataassemblyemit-defineexportedtype-method.md)geçirilebilir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h.  
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: Message.BodyToString Method (System.ServiceModel.Channels)
+title: Message. BodyToString yöntemi (System. ServiceModel. Channels)
 author: mairaw
 ms.author: mairaw
 ms.date: 11/01/2019
@@ -18,9 +18,9 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451208"
 ---
-# <a name="messagebodytostring-method"></a>Message.BodyToString Method
+# <a name="messagebodytostring-method"></a>Message. BodyToString yöntemi
 
-Converts the message body into a string by calling the <xref:System.ServiceModel.Channels.Message.OnBodyToString%2A?displayProperty=nameWithType> method.
+<xref:System.ServiceModel.Channels.Message.OnBodyToString%2A?displayProperty=nameWithType> yöntemini çağırarak ileti gövdesini bir dizeye dönüştürür.
 
 ```csharp
 internal void BodyToString(XmlDictionaryWriter writer);
@@ -29,19 +29,19 @@ internal void BodyToString(XmlDictionaryWriter writer);
 ## <a name="parameters"></a>Parametreler
 
 - `writer` <xref:System.Xml.XmlDictionaryWriter>\
-  The writer that is used to convert the message body to a string.
+  İleti gövdesini bir dizeye dönüştürmek için kullanılan yazıcı.
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> The `Message.BodyToString` method is internal and is not meant to be used directly in your code.
+> `Message.BodyToString` yöntemi dahili ve doğrudan kodunuzda kullanılmamalıdır.
 >
-> Microsoft does not support the use of this method in a production application under any circumstance.
+> Microsoft, bu yöntemin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.ServiceModel.Channels>
+**Ad alanı:** <xref:System.ServiceModel.Channels>
 
-**Assembly:** System.ServiceModel.dll
+**Bütünleştirilmiş kod:** System. ServiceModel. dll
 
-**.NET Framework versions:** Available since 3.0.
+**.NET Framework sürümleri:** 3,0 sürümünden itibaren kullanılabilir.

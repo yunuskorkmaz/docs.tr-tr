@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450090"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods Yöntemi
-Enumerates MethodDef tokens representing methods of the specified type.  
+Belirtilen türdeki yöntemleri temsil eden MethodDef belirteçlerini numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,35 +39,35 @@ HRESULT EnumMethods (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Numaralandırıcı için bir işaretçi. Bu yöntemin ilk çağrısı için bu NULL olmalıdır.  
   
  `cl`  
- [in] A TypeDef token representing the type with the methods to enumerate.  
+ 'ndaki Numaralandırılacak yöntemleri içeren türü temsil eden bir TypeDef belirteci.  
   
  `rMethods`  
- [out] The array to store the MethodDef tokens.  
+ dışı MethodDef belirteçlerini depolayacak dizi.  
   
  `cMax`  
- [in] The maximum size of the MethodDef `rMethods` array.  
+ 'ndaki MethodDef `rMethods` dizisinin en büyük boyutu.  
   
  `pcTokens`  
- [out] The number of MethodDef tokens returned in `rMethods`.  
+ dışı `rMethods`döndürülen MethodDef belirteçleri sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods` returned successfully.|  
-|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethods` başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak bir MethodDef belirteci yok. Bu durumda `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

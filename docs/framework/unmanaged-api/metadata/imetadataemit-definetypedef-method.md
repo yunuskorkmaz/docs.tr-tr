@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450221"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef Yöntemi
-Creates a type definition for a common language runtime type, and gets a metadata token for that type definition.  
+Ortak dil çalışma zamanı türü için bir tür tanımı oluşturur ve bu tür tanımı için bir meta veri belirteci alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,35 +39,35 @@ HRESULT DefineTypeDef (
   
 ## <a name="parameters"></a>Parametreler  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ 'ndaki Unicode 'daki türün adı.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CoreTypeAttr` values.  
+ [in] `TypeDef` öznitelikleri. Bu, `CoreTypeAttr` değerlerinin bir bit dır.  
   
  `tkExtends`  
- [in] The token of the base class. It must be either an `mdTypeDef` or an `mdTypeRef` token.  
+ 'ndaki Taban sınıfının belirteci. `mdTypeDef` ya da `mdTypeRef` belirteci olmalıdır.  
   
  `rtkImplements`  
- [in] An array of tokens specifying the interfaces that this class or interface implements.  
+ 'ndaki Bu sınıfın veya arabirimin uyguladığı arabirimleri belirten bir belirteç dizisi.  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ dışı `mdTypeDef` belirteci atandı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- A flag in `dwTypeDefFlags` specifies whether the type being created is a common type system reference type (class or interface) or a common type system value type.  
+ `dwTypeDefFlags` bir bayrak, oluşturulan türün ortak bir tür sistem başvuru türü (sınıf veya arabirim) mi yoksa ortak bir tür sistemi değer türü mi olduğunu belirtir.  
   
- Depending on the parameters supplied, this method, as a side effect, may also create an `mdInterfaceImpl` record for each interface that is inherited or implemented by this type. However, this method does not return any of these `mdInterfaceImpl` tokens. If a client wants to later add or modify an `mdInterfaceImpl` token, it must use the `IMetaDataImport` interface to enumerate them. If you want to use COM semantics of the `[default]` interface, you should supply the default interface as the first element in `rtkImplements`; a custom attribute set on the class will indicate that the class has a default interface (which is always assumed to be the first `mdInterfaceImpl` token declared for the class).  
+ Sağlanan parametrelere bağlı olarak, bu yöntem bir yan etkisi olarak, bu tür tarafından devralınan veya uygulanan her arabirim için bir `mdInterfaceImpl` kaydı da oluşturabilir. Ancak, bu yöntem bu `mdInterfaceImpl` belirteçlerinin hiçbirini döndürmez. Bir istemci daha sonra bir `mdInterfaceImpl` belirtecini eklemek veya değiştirmek isterse, bunları numaralandırmak için `IMetaDataImport` arabirimini kullanması gerekir. `[default]` arabiriminin COM semantiğini kullanmak istiyorsanız, varsayılan arabirimi `rtkImplements`ilk öğe olarak sağlamalısınız; sınıfında ayarlanan özel bir öznitelik, sınıfın varsayılan bir arabirime sahip olduğunu gösterir (Bu, her zaman sınıf için bildirildiği ilk `mdInterfaceImpl` belirteç olarak varsayılır).  
   
- Each element of the `rtkImplements` array holds an `mdTypeDef` or `mdTypeRef` token. The last element in the array must be `mdTokenNil`.  
+ `rtkImplements` dizisinin her öğesi bir `mdTypeDef` veya `mdTypeRef` belirteci barındırır. Dizideki son öğe `mdTokenNil`olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

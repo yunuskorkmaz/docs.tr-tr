@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo10::EnumerateObjectReferences
+title: 'ICorProfilerInfo10:: EnumerateObjectReferences'
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -18,9 +18,9 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449859"
 ---
-# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10::EnumerateObjectReferences Method
+# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences yöntemi
 
-Given an ObjectID, callback and clientData, enumerates each object reference (if any).
+Bir ObjectID, callback ve clientData verildiğinde, her nesne başvurusunu (varsa) numaralandırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,28 +33,28 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 #### <a name="parameters"></a>Parametreler
 
 `objectId` \
-[in] The object to enumerate references on.
+'ndaki Başvuruların numaralandırılacağı nesne.
 
 `callback` \
-[in] The function that will be called with the references for the object.
+'ndaki Nesne başvuruları ile çağrılacak işlev.
 
 `clientData` \
-[in] Profiler-provided data to pass to the `callback` function.
+'ndaki Profil Oluşturucu-`callback` işlevine geçirilecek veriler.
 
 ## <a name="remarks"></a>Açıklamalar
 
-The `EnumerateObjectReferences` method is similar to [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), except that it walks the references on demand for the profiler instead of pre-allocating an array to store the references.
+`EnumerateObjectReferences` yöntemi [nesne başvurularına](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)benzerdir, ancak başvuruları depolamak için bir diziyi önceden ayırmak yerine, Profil Oluşturucu için isteğe bağlı başvuruları açıklar.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Platformlar:** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Header:** CorProf.idl, CorProf.h
+**Üst bilgi:** CorProf. IDL, CorProf. h
 
-**Library:** CorGuids.lib
+**Kitaplık:** Corguid. lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET sürümleri:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

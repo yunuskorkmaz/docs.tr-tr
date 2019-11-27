@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446671"
 ---
 # <a name="addfile2-method"></a>AddFile2 Yöntemi
-Adds files to the assembly. Can also be used to create unbound modules.  
+Derlemeye dosya ekler. , İlişkisiz modüller oluşturmak için de kullanılabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +39,25 @@ HRESULT AddFile2(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- ID for the assembly to which the file is added.  
+ Dosyanın eklendiği derlemenin KIMLIĞI.  
   
  `pszFilename`  
- Name of the file to be added.  
+ Eklenecek dosyanın adı.  
   
  `dwFlags`  
- COM+ `FileDef` flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
+ `ffContainsNoMetaData` ve `ffWriteable`gibi COM+ `FileDef` bayrakları. `dwFlags` [DefineFile yöntemine](../metadata/imetadataassemblyemit-definefile-method.md)geçirilir.  
   
  `pEmitter`  
- Interface to [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) interface.  
+ Arabirim arabirimine [IMetaDataEmit2](../metadata/imetadataemit2-interface.md) arabirimi.  
   
  `pFileToken`  
- Receives ID for the file being added.  
+ Eklenmekte olan dosyanın KIMLIĞINI alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h.  
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

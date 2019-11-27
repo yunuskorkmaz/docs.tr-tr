@@ -1,5 +1,5 @@
 ---
-title: RtcState Class (System.Net)
+title: RtcState sınıfı (System.Net)
 ms.date: 11/01/2019
 ms.technology: dotnet-networking
 topic_type:
@@ -20,9 +20,9 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451187"
 ---
-# <a name="rtcstate-class"></a>RtcState Class
+# <a name="rtcstate-class"></a>RtcState sınıfı
 
-The `RtcState` class represents state data for a real-time communication (RTC) request.
+`RtcState` sınıfı, gerçek zamanlı iletişim (RTC) isteği için durum verilerini temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -31,14 +31,14 @@ internal class RtcState
 ```
 
 > [!WARNING]
-> The `RtcState` class is internal and is not meant to be used directly in your code.
+> `RtcState` sınıfı dahili ve doğrudan kodunuzda kullanılmamalıdır.
 > 
-> Microsoft does not support the use of this class in a production application under any circumstance.
+> Microsoft, bu sınıfın herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Net>
+**Ad alanı:** <xref:System.Net>
 
-**Assembly:** System (in System.dll)
+**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
 
-**.NET Framework versions:** Available since 4.5.
+**.NET Framework sürümleri:** 4,5 sürümünden itibaren kullanılabilir.

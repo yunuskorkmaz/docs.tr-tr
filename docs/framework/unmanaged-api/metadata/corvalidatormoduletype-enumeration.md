@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448765"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType Numaralandırması
-Specifies the type of a module.  
+Modülün türünü belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,22 +43,22 @@ typedef enum
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|The module is an invalid type.|  
-|`ValidatorModuleTypeMin`|The minimum value of the `CorValidatorModuleType` enum.|  
-|`ValidatorModuleTypePE`|The module is a portable executable (PE) file.|  
-|`ValidatorModuleTypeObj`|The module is a .obj file.|  
-|`ValidatorModuleTypeEnc`|The module is an edit-and-continue debugger session.|  
-|`ValidatorModuleTypeIncr`|The module is one that has been incrementally built.|  
-|`ValidatorModuleTypeMax`|The maximum value of the `CorValidatorModuleType` enum.|  
+|`ValidatorModuleTypeInvalid`|Modül geçersiz bir tür.|  
+|`ValidatorModuleTypeMin`|`CorValidatorModuleType` numaralandırmasının en küçük değeri.|  
+|`ValidatorModuleTypePE`|Modül, taşınabilir bir çalıştırılabilir (PE) dosyasıdır.|  
+|`ValidatorModuleTypeObj`|Modül bir. obj dosyasıdır.|  
+|`ValidatorModuleTypeEnc`|Modül, Düzenle ve devam et hata ayıklayıcı oturumundur.|  
+|`ValidatorModuleTypeIncr`|Modül artımlı olarak oluşturulan bir modüldür.|  
+|`ValidatorModuleTypeMax`|`CorValidatorModuleType` numaralandırmasının en büyük değeri.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

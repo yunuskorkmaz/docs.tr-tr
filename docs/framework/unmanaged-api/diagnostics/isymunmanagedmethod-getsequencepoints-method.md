@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448880"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints Yöntemi
-Gets all the sequence points within this method.  
+Bu yöntemin içindeki tüm sıra noktalarını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,34 +41,34 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>Parametreler  
  `cPoints`  
- [in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.  
+ 'ndaki `offsets`, `documents`, `lines`, `columns`, `endLines`ve `endColumns` dizilerinin boyutunu alan bir `ULONG32`.  
   
  `pcPoints`  
- [out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.  
+ dışı Sıra noktalarını içermesi için gereken arabelleğin uzunluğunu alan `ULONG32` işaretçisi.  
   
  `offsets`  
- [in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.  
+ 'ndaki Dizi noktaları için yöntemin başlangıcından Microsoft ara dili (MSIL) uzaklıklarını depolayan bir dizi.  
   
  `documents`  
- [in] An array in which to store the documents in which the sequence points are located.  
+ 'ndaki Dizi noktalarının bulunduğu belgelerin depolandığı bir dizi.  
   
  `lines`  
- [in] An array in which to store the lines in the documents at which the sequence points are located.  
+ 'ndaki Sıra noktalarının bulunduğu belgelerde satırların depolandığı bir dizi.  
   
  `columns`  
- [in] An array in which to store the columns in the documents at which the sequence points are located.  
+ 'ndaki Dizi noktalarının bulunduğu belgelerde sütunların depolandığı bir dizi.  
   
  `endLines`  
- [in] The array of lines in the documents at which the sequence points end.  
+ 'ndaki Sıra noktalarının sonundaki belgelerdeki satır dizisi.  
   
  `endColumns`  
- [in] The array of columns in the documents at which the sequence points end.  
+ 'ndaki Sıra noktalarının sonundaki belgelerdeki sütunların dizisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

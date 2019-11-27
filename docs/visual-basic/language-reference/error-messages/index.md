@@ -15,24 +15,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353709"
 ---
 # <a name="error-messages-visual-basic"></a>Hata İletileri (Visual Basic)
-When you write, compile, or run a Visual Basic application, the following types of errors can occur:  
+Visual Basic bir uygulama yazdığınızda, derlerken veya çalıştırdığınızda aşağıdaki hata türleri meydana gelebilir:  
   
-1. Design-time errors, which occur when you write an application in Visual Studio.  
+1. Visual Studio 'da bir uygulama yazdığınızda oluşan tasarım zamanı hataları.  
   
-2. Compile-time errors, which occur when you compile an application in Visual Studio or at a command prompt.  
+2. Visual Studio 'da veya komut isteminde bir uygulama derlerken oluşan derleme zamanı hataları.  
   
-3. Run-time errors, which occur when you run an application in Visual Studio or as a stand-alone executable file.  
+3. Visual Studio 'da veya tek başına yürütülebilir dosya olarak bir uygulamayı çalıştırdığınızda oluşan çalışma zamanı hataları.  
   
- For information about how to troubleshoot a specific error, see [Additional Resources for Visual Basic Programmers](../../../visual-basic/getting-started/additional-resources.md).  
+ Belirli bir hata giderme hakkında daha fazla bilgi için bkz. [Visual Basic programcıları Için ek kaynaklar](../../../visual-basic/getting-started/additional-resources.md).  
   
-## <a name="run-time-errors"></a>Run Time Errors  
- If a Visual Basic application tries to perform an action that the system can't execute, a run-time error occurs, and Visual Basic throws an `Exception` object. Visual Basic can generate custom errors of any data type, including `Exception` objects, by using the `Throw` statement. An application can identify the error by displaying the error number and message of a caught exception. If an error isn't caught, the application ends.  
+## <a name="run-time-errors"></a>Çalışma zamanı hataları  
+ Visual Basic bir uygulama sistemin yürütemeyeceğini bir eylem gerçekleştirmeye çalışırsa, bir çalışma zamanı hatası oluşur ve Visual Basic bir `Exception` nesnesi oluşturur. Visual Basic, `Throw` ifadesini kullanarak `Exception` nesneleri dahil olmak üzere herhangi bir veri türünde özel hatalar oluşturabilir. Bir uygulama, yakalanan bir özel durumun hata numarasını ve iletisini görüntüleyerek hatayı tanımlayabilir. Bir hata yakalanmazsa, uygulama sonlanır.  
   
- The code can trap and examine run-time errors. If you enclose the code that produces the error in a `Try` block, you can catch any thrown error within a matching `Catch` block. For information about how to trap errors at run time and respond to them in your code, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Kod, çalışma zamanı hatalarını yakalayabilir ve inceleyebilir. Hatayı oluşturan kodu bir `Try` bloğunda eklerseniz, eşleşen bir `Catch` bloğunda oluşan herhangi bir hatayı yakalayabilirsiniz. Çalışma zamanında hataları yakalama ve kodunuzda yanıtlama hakkında daha fazla bilgi için bkz [. TRY... Yakala... Finally ekstresi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
-## <a name="compile-time-errors"></a>Compile Time Errors  
- If the Visual Basic compiler encounters a problem in the code, a compile-time error occurs. In the Code Editor, you can easily identify which line of code caused the error because a wavy line appears under that line of code. The error message appears if you either point to the wavy underline or open the **Error List**, which also shows other messages.  
+## <a name="compile-time-errors"></a>Derleme zamanı hataları  
+ Visual Basic Derleyicisi kodda bir sorunla karşılaşırsa, derleme zamanı hatası oluşur. Kod Düzenleyicisi 'nde, bu kod satırının altında dalgalı bir çizgi göründüğünden, hataya neden olan kod satırını kolayca belirleyebilirsiniz. Dalgalı alt çizgiyi işaret ettikten veya **hata listesi**açarsanız, diğer iletileri de gösteren hata iletisi görüntülenir.  
   
- If an identifier has a wavy underline and a short underline appears under the rightmost character, you can generate a stub for the class, constructor, method, property, field or enum. For more information, see [Generate From Usage](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage).
+ Bir tanımlayıcının altı çizili bir alt çizgi varsa ve en sağdaki karakter altında kısa bir alt çizgi görünürse, sınıf, Oluşturucu, yöntem, özellik, alan veya Enum için bir saplama oluşturabilirsiniz. Daha fazla bilgi için bkz. [kullanımdan oluşturma](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage).
   
- By resolving warnings from the Visual Basic compiler, you might be able to write code that runs faster and has fewer bugs. These warnings identify code that may cause errors when the application is run. For example, the compiler warns you if you try to invoke a member of an unassigned object variable, return from a function without setting the return value, or execute a `Try` block with errors in the logic to catch exceptions. For more information about warnings, including how to turn them on and off, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).
+ Visual Basic derleyicisinden uyarıları çözümleyerek daha hızlı çalışan ve daha az hata içeren bir kod yazabilirsiniz. Bu uyarılar, uygulama çalıştırıldığında hatalara neden olabilecek kodu belirler. Örneğin derleyici, atanmamış bir nesne değişkeninin bir üyesini çağırmaya çalışırsanız, dönüş değerini ayarlamadan bir işlevden geri dönüş veya özel durumları yakalamak için mantığdaki hatalarla birlikte `Try` bir blok yürütmeye çalıştığınızda sizi uyarır. Bunları açma ve kapatma dahil olmak üzere uyarılar hakkında daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).

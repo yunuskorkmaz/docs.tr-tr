@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo10::IsFrozenObject
+title: 'ICorProfilerInfo10:: ısfrozenobject'
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -18,9 +18,9 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449830"
 ---
-# <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10::IsFrozenObject Method
+# <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10:: ısfrozenobject yöntemi
 
-Given an ObjectID, determines whether the object is in a read-only segment.
+ObjectID verildiğinde, nesnenin salt okunurdur bir kesimde olup olmadığını belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,21 +32,21 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 #### <a name="parameters"></a>Parametreler
 
 `objectId` \
-[in] The object to examine.
+'ndaki İncelenecek nesne.
 
 `pbFrozen` \
-[out] A `BOOL` indicating if the object is in a read-only segment.
+dışı Nesnenin salt okunurdur bir kesimde olup olmadığını belirten `BOOL`.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Platformlar:** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Header:** CorProf.idl, CorProf.h
+**Üst bilgi:** CorProf. IDL, CorProf. h
 
-**Library:** CorGuids.lib
+**Kitaplık:** Corguid. lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET sürümleri:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

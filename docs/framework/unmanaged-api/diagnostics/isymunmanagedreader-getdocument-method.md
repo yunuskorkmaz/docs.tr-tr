@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448350"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument Metodu
-Finds a document. The document language, vendor, and type are optional.  
+Bir belge bulur. Belge dili, satıcı ve tür isteğe bağlıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,25 +38,25 @@ HRESULT GetDocument (
   
 ## <a name="parameters"></a>Parametreler  
  `url`  
- [in] The URL that identifies the document.  
+ 'ndaki Belgeyi tanımlayan URL.  
   
  `language`  
- [in] The document language. This parameter is optional.  
+ 'ndaki Belge dili. Bu parametre isteğe bağlıdır.  
   
  `languageVendor`  
- [in] The identity of the vendor for the document language. This parameter is optional.  
+ 'ndaki Belge dili için satıcının kimliği. Bu parametre isteğe bağlıdır.  
   
  `documentType`  
- [in] The type of the document. This parameter is optional.  
+ 'ndaki Belge türü. Bu parametre isteğe bağlıdır.  
   
  `pRetVal`  
- [out] A pointer to the returned interface.  
+ dışı Döndürülen arabirime yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

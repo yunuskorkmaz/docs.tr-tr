@@ -1,6 +1,6 @@
 ---
-title: Install .NET Core on Debian 10 - package manager - .NET Core
-description: Use a package manager to install .NET Core SDK and runtime on Debian 10.
+title: .NET Core 'u detem 10-Package Manager 'a (.NET Core) yükler
+description: .NET Core SDK ve çalışma zamanını de, 10 ' da yüklemek için bir paket Yöneticisi kullanın.
 author: thraka
 ms.author: adegeo
 ms.date: 11/06/2019
@@ -11,23 +11,23 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451075"
 ---
-# <a name="debian-10-package-manager---install-net-core"></a>Debian 10 Package Manager - Install .NET Core
+# <a name="debian-10-package-manager---install-net-core"></a>Detem 10 Package Manager-.NET Core 'ı yükler
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-This article describes how to use a package manager to install .NET Core on Debian 10. If you're installing the runtime, we suggest you install the [ASP.NET Core runtime](#install-the-aspnet-core-runtime), as it includes both .NET Core and ASP.NET Core runtimes.
+Bu makalede, bir paket yöneticisinin .NET Core 'u de, 10 ' da yüklemek için nasıl kullanılacağı açıklanır. Çalışma zamanını yüklüyorsanız, hem .NET Core 'u hem de ASP.NET Core çalışma zamanlarını içerdiğinden [ASP.NET Core çalışma zamanını](#install-the-aspnet-core-runtime)yüklemenizi öneririz.
 
-## <a name="register-microsoft-key-and-feed"></a>Register Microsoft key and feed
+## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtar ve akışını Kaydet
 
-Before installing .NET, you'll need to:
+.NET yüklemeden önce şunları yapmanız gerekir:
 
-- Register the Microsoft key
-- register the product repository
-- Install required dependencies
+- Microsoft anahtarını kaydetme
+- Ürün deposunu kaydetme
+- Gerekli bağımlılıkları yükler
 
-This only needs to be done once per machine.
+Bu, makine başına yalnızca bir kez yapılmalıdır.
 
-Open a terminal and run the following commands.
+Bir Terminal açın ve aşağıdaki komutları çalıştırın.
 
 ```bash
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
@@ -38,9 +38,9 @@ sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 ```
 
-## <a name="install-the-net-core-sdk"></a>Install the .NET Core SDK
+## <a name="install-the-net-core-sdk"></a>.NET Core SDK 'i yükler
 
-Update the products available for installation, then install the .NET Core SDK. In your terminal, run the following commands.
+Yükleme için kullanılabilen ürünleri güncelleştirin, ardından .NET Core SDK yükleme. Terminalinizde aşağıdaki komutları çalıştırın.
 
 ```bash
 sudo apt-get update
@@ -49,9 +49,9 @@ sudo apt-get update
 sudo apt-get install dotnet-sdk-3.0
 ```
 
-## <a name="install-the-aspnet-core-runtime"></a>Install the ASP.NET Core runtime
+## <a name="install-the-aspnet-core-runtime"></a>ASP.NET Core çalışma zamanını yükler
 
-Update the products available for installation, then install the ASP.NET runtime. In your terminal, run the following commands.
+Yükleme için kullanılabilen ürünleri güncelleştirin, sonra ASP.NET çalışma zamanını yükleme. Terminalinizde aşağıdaki komutları çalıştırın.
 
 ```bash
 sudo apt-get update
@@ -60,9 +60,9 @@ sudo apt-get update
 sudo apt-get install aspnetcore-runtime-3.0
 ```
 
-## <a name="install-the-net-core-runtime"></a>Install the .NET Core runtime
+## <a name="install-the-net-core-runtime"></a>.NET Core çalışma zamanını yükler
 
-Update the products available for installation, then install the .NET Core runtime. In your terminal, run the following commands.
+Yükleme için kullanılabilen ürünleri güncelleştirin ve ardından .NET Core çalışma zamanı 'nı yükleme. Terminalinizde aşağıdaki komutları çalıştırın.
 
 ```bash
 sudo apt-get update
@@ -71,6 +71,6 @@ sudo apt-get update
 sudo apt-get install dotnet-runtime-3.0
 ```
 
-## <a name="how-to-install-other-versions"></a>How to install other versions
+## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
