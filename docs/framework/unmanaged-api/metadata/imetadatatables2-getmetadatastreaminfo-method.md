@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426221"
 ---
-# <a name="imetadatatables2getmetadatastreaminfo-method"></a><span data-ttu-id="7ecbf-102">IMetaDataTables2::GetMetaDataStreamInfo Metodu</span><span class="sxs-lookup"><span data-stu-id="7ecbf-102">IMetaDataTables2::GetMetaDataStreamInfo Method</span></span>
-<span data-ttu-id="7ecbf-103">Gets the name, size, and contents of the metadata stream at the specified index.</span><span class="sxs-lookup"><span data-stu-id="7ecbf-103">Gets the name, size, and contents of the metadata stream at the specified index.</span></span>  
+# <a name="imetadatatables2getmetadatastreaminfo-method"></a><span data-ttu-id="0baff-102">IMetaDataTables2::GetMetaDataStreamInfo Metodu</span><span class="sxs-lookup"><span data-stu-id="0baff-102">IMetaDataTables2::GetMetaDataStreamInfo Method</span></span>
+<span data-ttu-id="0baff-103">Belirtilen dizindeki meta veri akışının adını, boyutunu ve içeriğini alır.</span><span class="sxs-lookup"><span data-stu-id="0baff-103">Gets the name, size, and contents of the metadata stream at the specified index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7ecbf-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7ecbf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0baff-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0baff-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMetaDataStreamInfo (  
@@ -36,29 +36,29 @@ HRESULT GetMetaDataStreamInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7ecbf-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7ecbf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0baff-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0baff-105">Parameters</span></span>  
  `ix`  
- <span data-ttu-id="7ecbf-106">[in] The index of the requested metadata stream.</span><span class="sxs-lookup"><span data-stu-id="7ecbf-106">[in] The index of the requested metadata stream.</span></span>  
+ <span data-ttu-id="0baff-106">'ndaki İstenen meta veri akışının dizini.</span><span class="sxs-lookup"><span data-stu-id="0baff-106">[in] The index of the requested metadata stream.</span></span>  
   
  `ppchName`  
- <span data-ttu-id="7ecbf-107">[out] A pointer to the name of the stream.</span><span class="sxs-lookup"><span data-stu-id="7ecbf-107">[out] A pointer to the name of the stream.</span></span>  
+ <span data-ttu-id="0baff-107">dışı Akışın adına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0baff-107">[out] A pointer to the name of the stream.</span></span>  
   
  `ppv`  
- <span data-ttu-id="7ecbf-108">[out] A pointer to the metadata stream.</span><span class="sxs-lookup"><span data-stu-id="7ecbf-108">[out] A pointer to the metadata stream.</span></span>  
+ <span data-ttu-id="0baff-108">dışı Meta veri akışına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0baff-108">[out] A pointer to the metadata stream.</span></span>  
   
  `pcb`  
- <span data-ttu-id="7ecbf-109">[out] The size, in bytes, of `ppv`.</span><span class="sxs-lookup"><span data-stu-id="7ecbf-109">[out] The size, in bytes, of `ppv`.</span></span>  
+ <span data-ttu-id="0baff-109">dışı `ppv`bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="0baff-109">[out] The size, in bytes, of `ppv`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7ecbf-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7ecbf-110">Requirements</span></span>  
- <span data-ttu-id="7ecbf-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7ecbf-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0baff-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0baff-110">Requirements</span></span>  
+ <span data-ttu-id="0baff-111">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0baff-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7ecbf-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7ecbf-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0baff-112">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="0baff-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7ecbf-113">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7ecbf-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0baff-113">**Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="0baff-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7ecbf-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7ecbf-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0baff-114">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0baff-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7ecbf-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7ecbf-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0baff-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0baff-115">See also</span></span>
 
-- [<span data-ttu-id="7ecbf-116">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7ecbf-116">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
-- [<span data-ttu-id="7ecbf-117">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7ecbf-117">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="0baff-116">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0baff-116">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="0baff-117">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0baff-117">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
