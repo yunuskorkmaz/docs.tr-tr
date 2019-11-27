@@ -19,28 +19,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352630"
 ---
 # <a name="partial-methods-visual-basic"></a>Kısmi Yöntemler (Visual Basic)
-Partial methods enable developers to insert custom logic into code. Typically, the code is part of a designer-generated class. Partial methods are defined in a partial class that is created by a code generator, and they are commonly used to provide notification that something has been changed. They enable the developer to specify custom behavior in response to the change.  
+Kısmi Yöntemler, geliştiricilerin koda özel mantık eklemesini sağlar. Genellikle kod, tasarımcı tarafından üretilen sınıfın bir parçasıdır. Kısmi Yöntemler, bir kod üreticisi tarafından oluşturulan kısmi bir sınıfta tanımlanmıştır ve genellikle bir şeyin değiştirildiğini belirten bildirim sağlamak için kullanılır. Bu, geliştiricinin değişikliğe yanıt olarak özel davranış belirtmesini sağlar.  
   
- The designer of the code generator defines only the method signature and one or more calls to the method. Developers can then provide implementations for the method if they want to customize the behavior of the generated code. When no implementation is provided, calls to the method are removed by the compiler, resulting in no additional performance overhead.  
+ Kod oluşturucunun Tasarımcısı yalnızca yöntem imzasını ve metoda bir veya daha fazla çağrı tanımlar. Geliştiriciler daha sonra oluşturulan kodun davranışını özelleştirmek istiyorlarsa yöntemi için uygulamalar sağlayabilir. Hiçbir uygulama sağlanmazsa, metoda yapılan çağrılar derleyici tarafından kaldırılır ve ek performans yükü yoktur.  
   
 ## <a name="declaration"></a>Bildirim  
- The generated code marks the definition of a partial method by placing the keyword `Partial` at the start of the signature line.  
+ Oluşturulan kod, imza satırının başına `Partial` anahtar sözcüğünü yerleştirerek kısmi bir yöntemin tanımını işaretler.  
   
 ```vb  
 Partial Private Sub QuantityChanged()  
 End Sub  
 ```  
   
- The definition must meet the following conditions:  
+ Tanımın aşağıdaki koşullara uyması gerekir:  
   
-- The method must be a `Sub`, not a `Function`.  
+- Yöntem bir `Function`değil `Sub`olmalıdır.  
   
-- The body of the method must be left empty.  
+- Metodun gövdesi boş bırakılmalıdır.  
   
-- The access modifier must be `Private`.  
+- Erişim değiştiricisi `Private`olmalıdır.  
   
 ## <a name="implementation"></a>Uygulama  
- The implementation consists primarily of filling in the body of the partial method. The implementation is typically in a separate partial class from the definition, and is written by a developer who wants to extend the generated code.  
+ Uygulama, birincil olarak kısmi yöntemin gövdesini doldurmayla oluşur. Uygulama genellikle tanımdan ayrı bir kısmi sınıfta bulunur ve oluşturulan kodu genişletmek isteyen bir geliştirici tarafından yazılır.  
   
 ```vb  
 Private Sub QuantityChanged()  
@@ -48,25 +48,25 @@ Private Sub QuantityChanged()
 End Sub  
 ```  
   
- The previous example duplicates the signature in the declaration exactly, but variations are possible. In particular, other modifiers can be added, such as `Overloads` or `Overrides`. Only one `Overrides` modifier is permitted. For more information about method modifiers, see [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ Önceki örnek, bildirimin imzasını tam olarak yinelemediğinde, ancak Çeşitlemeler olasıdır. Özellikle, `Overloads` veya `Overrides`gibi diğer değiştiriciler eklenebilir. Yalnızca bir `Overrides` değiştiricisine izin verilir. Yöntem değiştiriciler hakkında daha fazla bilgi için bkz. [Sub deyimin](../../../../visual-basic/language-reference/statements/sub-statement.md).  
   
 ## <a name="use"></a>Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında  
- You call a partial method as you would call any other `Sub` procedure. If the method has been implemented, the arguments are evaluated and the body of the method is executed. However, remember that implementing a partial method is optional. If the method is not implemented, a call to it has no effect, and expressions passed as arguments to the method are not evaluated.  
+ Başka bir `Sub` yordamını çağırırınız gibi kısmi bir yöntemi çağırabilirsiniz. Yöntem uygulanmışsa, bağımsız değişkenler değerlendirilir ve yöntemin gövdesi yürütülür. Ancak, kısmi bir yöntemi uygulama yönteminin isteğe bağlı olduğunu unutmayın. Yöntem uygulanmemişse, bir çağrısının bir etkisi olmaz ve yöntemine bağımsız değişken olarak geçirilen ifadeler değerlendirilmez.  
   
 ## <a name="example"></a>Örnek  
- In a file named Product.Designer.vb, define a `Product` class that has a `Quantity` property.  
+ Product. Designer. vb adlı bir dosyada, `Quantity` özelliğine sahip bir `Product` sınıfı tanımlayın.  
   
  [!code-vb[VbVbalrPartialMeths#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#4)]  
   
- In a file named Product.vb, provide an implementation for `QuantityChanged`.  
+ Product. vb adlı bir dosyada `QuantityChanged`için bir uygulama sağlayın.  
   
  [!code-vb[VbVbalrPartialMeths#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#5)]  
   
- Finally, in the Main method of a project, declare a `Product` instance and provide an initial value for its `Quantity` property.  
+ Son olarak, bir projenin ana yönteminde, bir `Product` örneği bildirin ve `Quantity` özelliği için bir başlangıç değeri sağlayın.  
   
  [!code-vb[VbVbalrPartialMeths#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#6)]  
   
- A message box should appear that displays this message:  
+ Şu iletiyi görüntüleyen bir ileti kutusu görünür:  
   
  `Quantity was changed to 100`  
   

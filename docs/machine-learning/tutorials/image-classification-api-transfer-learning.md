@@ -1,6 +1,6 @@
 ---
-title: 'Tutorial: Automated visual inspection using transfer learning'
-description: This tutorial illustrates how to use transfer learning to train a TensorFlow deep learning model in ML.NET using the image detection API to classify images of concrete surfaces as cracked or not cracked.
+title: 'Öğretici: aktarım öğrenimi kullanarak otomatikleştirilmiş görsel inceleme'
+description: Bu öğreticide, somut yüzeylerin görüntülerini kırçıkarılan veya Kırçıkmıyor olarak sınıflandırmak için görüntü algılama API 'sini kullanarak ML.NET ' deki bir TensorFlow derin öğrenme modelini nasıl eğitecağın nasıl kullanılacağı gösterilmektedir.
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 11/14/2019
@@ -13,175 +13,175 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74205049"
 ---
-# <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Tutorial: Automated visual inspection using transfer learning with the ML.NET Image Classification API
+# <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Öğretici: ML.NET görüntü sınıflandırma API 'SI ile aktarım öğrenimini kullanarak otomatikleştirilmiş görsel inceleme
 
-Learn how to train a custom deep learning model using transfer learning, a pretrained TensorFlow model and the ML.NET Image Classification API to classify images of concrete surfaces as cracked or uncracked.
+Özel derin öğrenme modelini, aktarım öğrenimi, önceden eğitilen bir TensorFlow modeli ve ML.NET görüntü sınıflandırma API 'sini kullanarak, somut yüzeylerin görüntülerini kırıllanmış veya kırılk olarak sınıflandırmasına nasıl eğeceğinizi öğrenin.
 
-Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > - Sorunu anlama
-> - Learn about ML.NET Image Classification API
-> - Understand the pretrained model
-> - Use transfer learning to train a custom TensorFlow image classification model
-> - Classify images with the custom model
+> - ML.NET görüntü sınıflandırma API 'SI hakkında bilgi edinin
+> - Önceden eğitilen modeli anlama
+> - Özel bir TensorFlow görüntü sınıflandırma modelini eğitme için aktarım öğrenimi kullanma
+> - Özel model ile görüntüleri sınıflandır
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
-- [Visual Studio 2017 15.6 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) with the ".NET Core cross-platform development" workload installed.
+- [Visual Studio 2017 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
-## <a name="image-classification-transfer-learning-sample-overview"></a>Image classification transfer learning sample overview
+## <a name="image-classification-transfer-learning-sample-overview"></a>Görüntü sınıflandırma aktarım öğrenme örneğine genel bakış
 
-This sample is a C# .NET Core console application that classifies images using a pretrained deep learning TensorFlow model. The code for this sample can be found on the [dotnet/machinelearning-samples repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary) on GitHub.
+Bu örnek, önceden C# eğitilen bir derin öğrenme TensorFlow modeli kullanarak görüntüleri sınıflandırın bir .NET Core konsol uygulamasıdır. Bu örneğin kodu, GitHub 'daki [DotNet/machinöğrenim-örnekleri deposunda](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary) bulunabilir.
 
 ## <a name="understand-the-problem"></a>Sorunu anlama
 
-Image classification is a computer vision problem. Image classification takes an image as input and categorizes it into a prescribed class. Some scenarios where image classification is useful include:
+Görüntü sınıflandırması bir bilgisayar vizyonu sorunudur. Görüntü sınıflandırması bir görüntüyü giriş olarak alır ve önceden tanımlanmış bir sınıfa kategorilere ayırır. Görüntü sınıflandırmasının kullanışlı olduğu bazı senaryolar şunlardır:
 
 - Yüz tanıma
-- Emotion detection
-- Medical diagnosis
-- Landmark detection
+- Duygu algılama
+- Tıp tanısı
+- Yer işareti algılama
 
-This tutorial trains a custom image classification model to perform automated visual inspection of bridge decks to identify structures that are damaged by cracks.
+Bu öğreticide, bir özel görüntü sınıflandırma modeli sunarak, her ne kadar bozuk olan yapıları belirlemek için köprü oluşturma işlemlerini otomatik görsel denetlemesi gerçekleştirebilir.
 
-## <a name="mlnet-image-classification-api"></a>ML.NET Image Classification API
+## <a name="mlnet-image-classification-api"></a>ML.NET resim sınıflandırması API 'SI
 
-ML.NET provides various ways of performing image classification. This tutorial applies transfer learning using the Image Classification API. The Image Classification API makes use of [TensorFlow.NET](https://github.com/SciSharp/TensorFlow.NET), a low-level library that provides C# bindings for the TensorFlow C++ API.
+ML.NET, görüntü sınıflandırması yapmak için çeşitli yollar sağlar. Bu öğretici, görüntü sınıflandırması API 'sini kullanarak Aktarım öğrenimini uygular. Görüntü sınıflandırma API 'SI, TensorFlow C# C++ API 'si için bağlamalar sağlayan alt düzey bir kitaplık olan [TensorFlow.net](https://github.com/SciSharp/TensorFlow.NET)kullanımını sağlar.
 
-## <a name="what-is-transfer-learning"></a>What is transfer learning?
+## <a name="what-is-transfer-learning"></a>Aktarım öğrenimi nedir?
 
-Transfer learning applies knowledge gained from solving one problem to another related problem.
+Aktarım öğrenimi, bir problemi bir sorunla ilgili diğer soruna çözüm olarak elde edilen bilgileri uygular.
 
-Training a deep learning model from scratch requires setting several parameters, a large amount of labeled training data, and a vast amount of compute resources (hundreds of GPU hours). Using a pretrained model along with transfer learning allows you to shortcut the training process.
+Derin bir öğrenme modelini sıfırdan eğitmek için birkaç parametre, büyük miktarda etiketli eğitim verisi ve çok miktarda bilgi işlem kaynağı (yüzlerce GPU saati) ayarlanması gerekir. Aktarım öğrenimi ile önceden eğitilen bir modelin kullanılması, eğitim sürecini kısayollara eklemenize olanak tanır.
 
-## <a name="training-process"></a>Training process
+## <a name="training-process"></a>Eğitim süreci
 
-The Image Classification API starts the training process by loading a pretrained TensorFlow model. The training process consists of two steps:
+Görüntü sınıflandırma API 'SI, önceden eğitilen bir TensorFlow modeli yükleyerek eğitim sürecini başlatır. Eğitim süreci iki adımdan oluşur:
 
-1. Bottleneck phase
-2. Training phase
+1. Performans sorunu aşaması
+2. Eğitim aşaması
 
-![Training Steps](./media/image-classification-api-transfer-learning/training.png)
+![Eğitim adımları](./media/image-classification-api-transfer-learning/training.png)
 
-### <a name="bottleneck-phase"></a>Bottleneck phase
+### <a name="bottleneck-phase"></a>Performans sorunu aşaması
 
-During the bottleneck phase, the set of training images is loaded and the pixel values are used as input, or features, for the frozen layers of the pretrained model. The frozen layers include all of the layers in the neural network up to the penultimate layer, informally known as the bottleneck layer. These layers are referred to as frozen because no training will occur on these layers and operations are pass-through. It's at these frozen layers where the lower-level patterns that help a model differentiate between the different classes are computed. The larger the number of layers, the more computationally intensive this step is. Fortunately, since this is a one-time calculation, the results can be cached and used in later runs when experimenting with different parameters.
+Performans sorunu aşamasında, eğitim görüntüleri kümesi yüklenir ve piksel değerleri, önceden eğitilen modelin dondurulmuş katmanları için giriş veya özellikler olarak kullanılır. Dondurulmuş katmanlar, sinir ağındaki tüm katmanları, tıkanıklık katmanı olarak bilinen Penultimate katmanına kadar içerir. Bu katmanlarda hiçbir eğitim gerçekleşmediğinden ve işlemler doğrudan geçiş yaptığından, bu katmanlar dondurulmuş olarak adlandırılır. Farklı sınıflar arasında ayrım yapan bir modele yardımcı olan alt düzey desenlerin hesaplandığı, Bu dondurulmuş katmanlarda. Katman sayısı arttıkça bu adım daha yoğun bir işlemdir. Neyse ki, bu bir kerelik hesaplama olduğundan, sonuçlar önbelleğe alınabilir ve daha sonra farklı parametrelerle denemeler yaparken çalışır.
 
-### <a name="training-phase"></a>Training phase
+### <a name="training-phase"></a>Eğitim aşaması
 
-Once the output values from the bottleneck phase are computed, they are used as input to retrain the final layer of the model. This process is iterative and runs for the number of times specified by model parameters. During each run, the loss and accuracy are evaluated. Then, the appropriate adjustments are made to improve the model with the goal of minimizing the loss and maximizing the accuracy. Once training is finished, two model formats are output. One of them is the `.pb` version of the model and the other is the `.zip` ML.NET serialized version of the model. When working in environments supported by ML.NET, it is recommended to use the `.zip` version of the model. However, in environments where ML.NET is not supported, you have the option of using the `.pb` version.
+Performans sorunlarına neden olan çıkış değerleri hesaplandıktan sonra, modelin son katmanını yeniden eğitmek için giriş olarak kullanılırlar. Bu işlem yinelemeli ve model parametreleri tarafından belirtilen sayıda kez çalıştırılır. Her çalıştırma sırasında, kayıp ve doğruluk değerlendirilir. Daha sonra, kaybı en aza indirmek ve doğruluğu en üst düzeye çıkarmak için modeli geliştirmek üzere uygun ayarlamalar yapılır. Eğitim tamamlandığında, iki model biçimi çıkış olur. Bunlardan biri, modelin `.pb` sürümüdür ve diğeri de modelin `.zip` ML.NET serileştirilmiş sürümüdür. ML.NET tarafından desteklenen ortamlarda çalışırken, modelin `.zip` sürümünün kullanılması önerilir. Ancak, ML.NET 'in desteklenmediği ortamlarda `.pb` sürümünü kullanma seçeneğiniz vardır.
 
-## <a name="understand-the-pretrained-model"></a>Understand the pretrained model
+## <a name="understand-the-pretrained-model"></a>Önceden eğitilen modeli anlama
 
-The pretrained model used in this tutorial is the 101-layer variant of the Residual Network (ResNet) v2 model. The original model is trained to classify images into a thousand categories. The model takes as input an image of size 224 x 224 and outputs the class probabilities for each of the classes it's trained on. Part of this model is used to train a new model using custom images to make predictions between two classes.
+Bu öğreticide kullanılan önceden eğitilen model, kalan ağ (ResNet) v2 modelinin 101 katmanlı varyantıdır. Orijinal model resimleri bin kategoride sınıflandırmakta tasarlanmıştır. Model, 224 x 224 boyutundaki bir görüntüyü giriş olarak alır ve eğitilen sınıfların her biri için sınıf olasılıkların çıkışını çıkarır. Bu modelin bir parçası, iki sınıf arasında tahmine dayalı hale getirmek için özel görüntüler kullanarak yeni bir modeli eğitme için kullanılır.
 
-## <a name="create-console-application"></a>Create console application
+## <a name="create-console-application"></a>Konsol uygulaması oluşturma
 
-Now that you have a general understanding of transfer learning and the Image Classification API, it's time to build the application.
+Aktarım öğrenimine ve görüntü sınıflandırma API 'sine ilişkin genel bir bilgiye sahip olduğunuza göre, uygulamayı derlemek zaman alabilir.
 
-1. Create a **C# .NET Core Console Application** called "DeepLearning_ImageClassification_Binary".
-1. Install the **Microsoft.ML** version **1.4.0** NuGet Package:
-    1. In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.
-    1. Choose "nuget.org" as the Package source.
-    1. Select the **Browse** tab.
-    1. Check the **Include prerelease** checkbox.
-    1. Search for **Microsoft.ML**.
-    1. Select the **Install** button.
-    1. Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.
-    1. Repeat these steps for the **Microsoft.ML.Vision** version **1.4.0**, **SciSharp.TensorFlow.Redist** version **1.15.0**, and **Microsoft.ML.ImageAnalytics** version **1.4.0** NuGet packages.
+1. "DeepLearning_ImageClassification_Binary" adlı bir  **C# .NET Core konsol uygulaması** oluşturun.
+1. **Microsoft.ml** Version **1.4.0** NuGet paketini yükler:
+    1. Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
+    1. Paket kaynağı olarak "nuget.org" öğesini seçin.
+    1. **Tarayıcı** sekmesini seçin.
+    1. **Ön sürümü dahil et** onay kutusunu işaretleyin.
+    1. **Microsoft.ml**için arama yapın.
+    1. **Install** düğmesini seçin.
+    1. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin.
+    1. Bu adımları **Microsoft. ml. Vision** sürümü **1.4.0**, **SciSharp. TensorFlow. Redist** sürüm **1.15.0**ve **Microsoft. ml. ımageanalytics** sürümü **1.4.0** NuGet paketleri için yineleyin.
 
-### <a name="prepare-and-understand-the-data"></a>Prepare and understand the data
+### <a name="prepare-and-understand-the-data"></a>Verileri hazırlama ve anlama
 
 > [!NOTE]
-> The datasets for this tutorial are from Maguire, Marc; Dorafshan, Sattar; and Thomas, Robert J., "SDNET2018: A concrete crack image dataset for machine learning applications" (2018). Browse all Datasets. Paper 48. https://digitalcommons.usu.edu/all_datasets/48
+> Bu öğreticinin veri kümeleri Maguire, Marc; adresinden Dorafshan, Sattar; ve Thomas, Robert J., "SDNET2018: Machine Learning uygulamaları için somut bir görüntü veri kümesi" (2018). Tüm veri kümelerine gözatamazsınız. Kağıt 48. https://digitalcommons.usu.edu/all_datasets/48
 
-SDNET2018 is an image dataset that contains annotations for cracked and non-cracked concrete structures (bridge decks, walls, and pavement).
+SDNET2018, kırılmamış ve kırılamayan somut yapılar (köprü kümeleri, duvarlar ve Payalar) için ek açıklamalar içeren bir görüntü veri kümesidir.
 
-![SDNET2018 dataset bridge deck samples](./media/image-classification-api-transfer-learning/sdnet2018decksamples.png)
+![SDNET2018 veri kümesi Köprüsü destesi örnekleri](./media/image-classification-api-transfer-learning/sdnet2018decksamples.png)
 
-The data is organized in three subdirectories:
+Veriler üç alt dizine göre düzenlenir:
 
-- D contains bridge deck images
-- P contains pavement images
-- W contains wall images
+- D köprü destesi görüntülerini içerir
+- P paizni görüntülerini içerir
+- W duvar görüntülerini içerir
 
-Each of these subdirectories contains two additional prefixed subdirectories:
+Bu alt dizinlerin her biri, iki ek ön eki içerir:
 
-- C is the prefix used for cracked surfaces
-- U is the prefix used for uncracked surfaces
+- C, kırçıkarılan yüzeyler için kullanılan önekidir
+- U, kırçıkarılan yüzeyler için kullanılan önekidir
 
-In this tutorial, only bridge deck images are used.
+Bu öğreticide, yalnızca köprü destesi görüntüleri kullanılır.
 
-1. Download the [dataset](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/assets.zip) and unzip.
-1. Create a directory named "assets" in your project to save your dataset files.
-1. Copy the *CD* and *UD* subdirectories from the recently unzipped directory to the *assets* directory.
+1. [Veri kümesini](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/assets.zip) indirin ve sıkıştırmayı açın.
+1. Veri kümesi dosyalarınızı kaydetmek için projenizde "varlıklar" adlı bir dizin oluşturun.
+1. Son daraltılmış dizinden *CD* ve *ud* alt dizinlerini *varlıklar* dizinine kopyalayın.
 
-### <a name="create-input-and-output-classes"></a>Create input and output classes
+### <a name="create-input-and-output-classes"></a>Giriş ve çıkış sınıfları oluşturma
 
-1. Open the *Program.cs* file and replace the existing `using` statements at the top of the file with the following:
+1. *Program.cs* dosyasını açın ve dosyanın en üstündeki mevcut `using` deyimlerini aşağıdaki şekilde değiştirin:
 
     [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L1-L7)]
 
-1. Below the `Program` class in *Program.cs*, create a class called `ImageData`. This class is used to represent the initially loaded data.
+1. *Program.cs*içinde `Program` sınıfının altında `ImageData`adlı bir sınıf oluşturun. Bu sınıf başlangıçta yüklenen verileri temsil etmek için kullanılır.
 
     [!code-csharp [ImageDataClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L137-L142)]
 
-    `ImageData` contains the following properties:
+    `ImageData` aşağıdaki özellikleri içerir:
 
-    - `ImagePath` is the fully qualified path where the image is stored.
-    - `Label` is the category the image belongs to. This is the value to predict.
+    - `ImagePath`, görüntünün depolandığı tam yoldur.
+    - `Label` görüntünün ait olduğu kategorisidir. Tahmin edilecek değer budur.
 
-1. Create classes for your input and output data
+1. Giriş ve çıkış verileriniz için sınıflar oluşturma
 
-    1. Below the `ImageData` class, define the schema of your input data in a new class called `ModelInput`.
+    1. `ImageData` sınıfının altında, giriş verilerinizin şemasını `ModelInput`adlı yeni bir sınıfta tanımlayın.
 
         [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L144-L153)]
 
-        `ModelInput` contains the following properties:
+        `ModelInput` aşağıdaki özellikleri içerir:
 
-        - `ImagePath` is the fully qualified path where the image is stored.
-        - `Label` is the category the image belongs to. This is the value to predict.
-        - `Image` is the `byte[]` representation of the image. The model expects image data to be of this type for training.
-        - `LabelAsKey` is the numerical representation of the `Label`.
+        - `ImagePath`, görüntünün depolandığı tam yoldur.
+        - `Label` görüntünün ait olduğu kategorisidir. Tahmin edilecek değer budur.
+        - `Image` görüntünün `byte[]` gösterimidir. Model, yansıma verilerinin eğitim için bu türden olmasını bekler.
+        - `LabelAsKey`, `Label`sayısal gösterimidir.
 
-        Only `Image` and `LabelAsKey` are used to train the model and make predictions. The `ImagePath` and `Label` properties are kept for convenience to access the original image file name and category.
+        Modeli eğitme ve tahmin yapmak için yalnızca `Image` ve `LabelAsKey` kullanılır. `ImagePath` ve `Label` özellikleri özgün görüntü dosyası adına ve kategorisine erişmek için kolaylık sağlamak üzere tutulur.
 
-    1. Then, below the `ModelInput` class, define the schema of your output data in a new class called `ModelOutput`.
+    1. Daha sonra, `ModelInput` sınıfının altında, çıkış verilerinizin şemasını `ModelOutput`adlı yeni bir sınıfta tanımlayın.
 
         [!code-csharp [ModelOutputClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L155-L162)]
 
-        `ModelOutput` contains the following properties:
+        `ModelOutput` aşağıdaki özellikleri içerir:
 
-        - `ImagePath` is the fully qualified path where the image is stored.
-        - `Label` is the original category the image belongs to. This is the value to predict.
-        - `PredictedLabel` is the value predicted by the model.
+        - `ImagePath`, görüntünün depolandığı tam yoldur.
+        - `Label` görüntünün ait olduğu özgün kategorisidir. Tahmin edilecek değer budur.
+        - `PredictedLabel`, model tarafından tahmin edilen değerdir.
 
-        Similar to `ModelInput`, only the `PredictedLabel` is required to make predictions since it contains the prediction made by the model. The `ImagePath` and `Label` properties are retained for convenience to access the original image file name and category.
+        `ModelInput`benzer şekilde, yalnızca `PredictedLabel` model tarafından yapılan tahminleri içerdiğinden tahmine dayalı hale getirilmeleri gerekir. `ImagePath` ve `Label` özellikleri özgün görüntü dosyası adına ve kategorisine erişmek için kolaylık sağlamak amacıyla tutulur.
 
-### <a name="create-workspace-directory"></a>Create workspace directory
+### <a name="create-workspace-directory"></a>Çalışma alanı dizini oluştur
 
-When training and validation data do not change often, it is good practice to cache the computed bottleneck values for further runs.
+Eğitim ve doğrulama verileri sıklıkla değişmediğinde, daha fazla çalıştırma için hesaplanan darboğazal değerlerini önbelleğe almak iyi bir uygulamadır.
 
-1. In your project, create a new directory called *workspace* to store the computed bottleneck values and `.pb` version of the model.
+1. Projenizde, hesaplanan performans sorunu değerlerini ve modelin `.pb` sürümünü depolamak için *çalışma alanı* adlı yeni bir dizin oluşturun.
 
-### <a name="define-paths-and-initialize-variables"></a>Define paths and initialize variables
+### <a name="define-paths-and-initialize-variables"></a>Yolları tanımlama ve değişkenleri başlatma
 
-1. Inside the `Main` method, define the location of your assets, computed bottleneck values and `.pb` version of the model.
+1. `Main` yönteminin içinde, varlıklarınızın konumunu, hesaplanan tıkanıklık değerlerini ve modelin `.pb` sürümünü tanımlayın.
 
     [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L17)]
 
-1. Then, initialize the `mlContext` variable with a new instance of [MLContext](xref:Microsoft.ML.MLContext).
+1. Sonra, `mlContext` değişkenini yeni bir [Mlcontext](xref:Microsoft.ML.MLContext)örneğiyle başlatın.
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L19)]
 
-    The [MLContext](xref:Microsoft.ML.MLContext) class is a starting point for all ML.NET operations, and initializing mlContext creates a new ML.NET environment that can be shared across the model creation workflow objects. It's similar, conceptually, to `DBContext` in Entity Framework.
+    [Mlcontext](xref:Microsoft.ML.MLContext) sınıfı tüm ml.NET işlemleri için bir başlangıç noktasıdır ve mlcontext 'i başlatmak, model oluşturma iş akışı nesneleri genelinde paylaşılabilen yeni bir ml.net ortamı oluşturur. Benzer, kavramsal olarak, Entity Framework `DBContext`.
 
-## <a name="load-the-data"></a>Load the data
+## <a name="load-the-data"></a>Verileri yükleme
 
-### <a name="create-data-loading-utility-method"></a>Create data loading utility method
+### <a name="create-data-loading-utility-method"></a>Veri yükleme yardımcı programı yöntemi oluştur
 
-The images are stored in two subdirectories. Before loading the data, it needs to be formatted into a list of `ImageData` objects. To do so, create the `LoadImagesFromDirectory` method below the `Main` method.
+Görüntüler iki alt dizine depolanır. Verileri yüklemeden önce, `ImageData` nesnelerinin bir listesi halinde biçimlendirilmesi gerekir. Bunu yapmak için, `Main` yönteminin altında `LoadImagesFromDirectory` yöntemi oluşturun.
 
 ```csharp
 public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool useFolderNameAsLabel = true)
@@ -190,11 +190,11 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 }
 ```
 
-1. Inside the `LoadImagesDirectory` add the following code to get all of the file paths from the subdirectories:
+1. `LoadImagesDirectory` iç dizinlerindeki tüm dosya yollarını almak için aşağıdaki kodu ekleyin:
 
     [!code-csharp [GetFiles](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L104-L105)]
 
-1. Then, iterate through each of the files using a `foreach` statement.
+1. Ardından, bir `foreach` bildiri kullanarak her bir dosyanın üzerinde yineleyin.
 
     ```csharp
     foreach (var file in files)
@@ -203,91 +203,91 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
     }
     ```
 
-1. Inside the `foreach` statement, check that the file extensions are supported. The Image Classification API supports JPEG and PNG formats.
+1. `foreach` ifadesinin içinde, dosya uzantılarının desteklendiğinden emin olun. Resim sınıflandırma API 'SI JPEG ve PNG biçimlerini destekler.
 
     [!code-csharp [CheckExtension](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L109-L110)]
 
-1. Then, get the label for the file. If the `useFolderNameAsLabel` parameter is set to `true`, then the parent directory where the file is saved is used as the label. Otherwise, it expects the label to be a prefix of the file name or the file name itself.
+1. Ardından, dosyanın etiketini alın. `useFolderNameAsLabel` parametresi `true`olarak ayarlanırsa, dosyanın kaydedildiği üst dizin etiket olarak kullanılır. Aksi takdirde, etiketin dosya adının veya dosya adının ön eki olmasını bekler.
 
     [!code-csharp [GetLabel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L112-L126)]
 
-1. Finally, create a new instance of `ModelInput`.
+1. Son olarak, `ModelInput`yeni bir örneğini oluşturun.
 
     [!code-csharp [CreateImageData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L128-L132)]
 
-### <a name="prepare-the-data"></a>Prepare the data
+### <a name="prepare-the-data"></a>Verileri hazırlama
 
-1. Back in the `Main` method, use the `LoadFromDirectory` utility method to get the list of images used for training.
+1. `Main` yöntemine geri döndüğünüzde, eğitim için kullanılan görüntülerin listesini almak için `LoadFromDirectory` yardımcı program yöntemini kullanın.
 
     [!code-csharp [LoadImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L21)]
 
-1. Then, load the images into an [`IDataView`](xref:Microsoft.ML.IDataView) using the [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) method.
+1. Sonra, [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) yöntemini kullanarak görüntüleri bir [`IDataView`](xref:Microsoft.ML.IDataView) içine yükleyin.
 
     [!code-csharp [CreateIDataView](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L23)]
 
-1. The data is loaded in the order it was read from the directories. To balance the data, shuffle it using the [`ShuffleRows`](xref:Microsoft.ML.DataOperationsCatalog.ShuffleRows*) method.
+1. Veriler, dizinlerden okunan sıraya göre yüklenir. Verileri dengelemek için [`ShuffleRows`](xref:Microsoft.ML.DataOperationsCatalog.ShuffleRows*) yöntemi kullanarak karıştırın.
 
     [!code-csharp [ShuffleRows](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L25)]
 
-1. Machine learning models expect input to be in numerical format. Therefore, some preprocessing needs to be done on the data prior to training. Create an [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) made up of the [`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*) and `LoadRawImageBytes` transforms. The `MapValueToKey` transform takes the categorical value in the `Label` column, converts it to a numerical `KeyType` value and stores it in a new column called `LabelAsKey`. The `LoadImages` takes the values from the `ImagePath` column along with the `imageFolder` parameter to load images for training.
+1. Makine öğrenimi modelleri, girişin sayısal biçimde olmasını bekler. Bu nedenle, eğitimin öncesinde bazı ön işleme verilerin yapılması gerekir. [`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*) ve `LoadRawImageBytes` dönüştürmelerini [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) oluşturun. `MapValueToKey` Transform, `Label` sütununda kategorik değeri alır, sayısal bir `KeyType` değere dönüştürür ve `LabelAsKey`adlı yeni bir sütunda depolar. `LoadImages`, eğitim için görüntüleri yüklemek üzere `imageFolder` parametresiyle birlikte `ImagePath` sütunundaki değerleri alır.
 
     [!code-csharp [PreprocessingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L27-L33)]
 
-1. Use the [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) method to apply the data to the `preprocessingPipeline` [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) followed by the [`Transform`](xref:Microsoft.ML.Data.TransformerChain`1.Transform*) method, which returns an [`IDataView`](xref:Microsoft.ML.IDataView) containing the pre-processed data.
+1. [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) yöntemini kullanarak verileri `preprocessingPipeline` [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) ve ardından önceden işlenmiş verileri içeren bir [`IDataView`](xref:Microsoft.ML.IDataView) döndüren [`Transform`](xref:Microsoft.ML.Data.TransformerChain`1.Transform*) yöntemi ile uygulayın.
 
     [!code-csharp [PreprocessData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L35-L37)]
 
-1. To train a model, it's important to have a training dataset as well as a validation dataset. The model is trained on the training set. How well it makes predictions on unseen data is measured by the performance against the validation set. Based on the results of that performance, the model makes adjustments to what it has learned in an effort to improve. The validation set can come from either splitting your original dataset or from another source that has already been set aside for this purpose. In this case, the pre-processed dataset is split into training, validation and test sets.
+1. Bir modeli eğmek için bir eğitim veri kümesinin yanı sıra bir doğrulama veri kümesi de olması önemlidir. Model, eğitim kümesi üzerinde eğitilir. Görülmeyen veriler üzerinde tahminleri ne kadar iyi yapar doğrulama kümesine göre performans ile ölçülür. Model, bu performansın sonuçlarına bağlı olarak, geliştirme çabasında ne kadar öğrenildiği konusunda ayarlamalar yapar. Doğrulama kümesi, özgün veri kümenizi veya bu amaçla zaten ayrılmış olan başka bir kaynağı bölerek gelebilir. Bu durumda, önceden işlenmiş veri kümesi eğitim, doğrulama ve test kümelerine bölünür.
 
     [!code-csharp [CreateDataSplits](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L39-L40)]
 
-    The code sample above performs two splits. First, the pre-processed data is split and 70% is used for training while the remaining 30% is used for validation. Then, the 30% validation set is further split into validation and test sets where 90% is used for validation and 10% is used for testing.
+    Yukarıdaki kod örneği iki bölme gerçekleştirir. İlk olarak, önceden işlenmiş veriler bölünür ve %70, doğrulama için kalan %30 ' u kullanıldığında eğitim için kullanılır. Daha sonra, %30 doğrulama kümesi daha fazla doğrulama ve test kümelerine bölünür; burada %90 doğrulama için kullanılır ve test için %10 kullanılır.
 
-    A way to think about the purpose of these data partitions is taking an exam. When studying for an exam, you review your notes, books, or other resources to get a grasp on the concepts that are on the exam. This is what the train set is for. Then, you might take a mock exam to validate your knowledge. This is where the validation set comes in handy. You want to check whether you have a good grasp of the concepts before taking the actual exam. Based on those results, you take note of what you got wrong or didn't understand well and incorporate your changes as you review for the real exam. Finally, you take the exam. This is what the test set is used for. You've never seen the questions that are on the exam and now use what you learned from training and validation to apply your knowledge to the task at hand.
+    Bu veri bölümlerinin amacını düşünmek için bir yol, bir sınavın. Bir sınava göre çalışırken, sınavlarda bulunan kavramlara bir attık almak için notlarınızı, kitapları veya diğer kaynaklarınızı gözden geçirin. Bu, eğitim kümesinin için olduğu şeydir. Daha sonra, bilginizi doğrulamak için bir sahte sınava sahip olabilirsiniz. Bu, doğrulama kümesinin yararlı olduğu yerdir. Gerçek sınava girmeden önce kavramların iyi bir yermi olduğunu kontrol etmek istiyorsunuz. Bu sonuçlara dayanarak, ne kadar yanlış olduğunu veya iyi anladığınızı ve gerçek sınava göre gözden geçirdiğinize ilişkin değişikliklerinizi dahil etmediğinizi göz önünde bulmalısınız. Son olarak, sınava sahip olursunuz. Bu, için test kümesinin kullanıldığı şeydir. Sınavdaki soruları hiç gördüğdiniz ve şimdi eğitim ve doğrulamadan öğrendiklerinizi kullanarak bilgilerinizi el ile görev için nasıl uygulayacaksınız.
 
-1. Assign the partitions their respective values for the train, validation and test data.
+1. Eğitim, doğrulama ve test verileri için bölümleri ilgili değerleri atayın.
 
     [!code-csharp [CreateDatasets](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L42-L44)]
 
-## <a name="define-the-training-pipeline"></a>Define the training pipeline
+## <a name="define-the-training-pipeline"></a>Eğitim işlem hattını tanımlama
 
-Model training consists of a couple of steps. First, Image Classification API is used to train the model. Then, the encoded labels in the `PredictedLabel` column are converted back to their original categorical value using the `MapKeyToValue` transform.
+Model eğitimi birkaç adımdan oluşur. İlk olarak, modeli eğitmek için görüntü sınıflandırma API 'SI kullanılır. Daha sonra, `PredictedLabel` sütunundaki kodlanmış Etiketler, `MapKeyToValue` dönüşümü kullanılarak özgün kategorik değerlerine geri dönüştürülür.
 
-1. Create a new variable to store a set of required and optional parameters for an `ImageClassificationTrainer`. 
+1. Bir `ImageClassificationTrainer`için gerekli ve isteğe bağlı parametrelerin bir kümesini depolamak üzere yeni bir değişken oluşturun. 
 
     [!code-csharp [ClassifierOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L46-L57)]
 
-    An `ImageClassificationTrainer` takes several optional parameters:
+    `ImageClassificationTrainer` birkaç isteğe bağlı parametre alır:
 
-    - `FeatureColumnName` is the column that is used as input for the model.
-    - `LabelColumnName` is the column for the value to predict.
-    - `ValidationSet` is the [`IDataView`](xref:Microsoft.ML.IDataView) containing the validation data.
-    - `Arch` defines which of the pretrained model architectures to use. This tutorial uses the 101-layer variant of the ResNetv2 model.
-    - `MetricsCallback` binds a function to track the progress during training.
-    - `TestOnTrainSet` tells the model to measure performance against the training set when no validation set is present.
-    - `ReuseTrainSetBottleneckCachedValues` tells the model whether to use the cached values from the bottleneck phase in subsequent runs. The bottleneck phase is a one-time pass-through computation that is computationally intensive the first time it is performed. If the training data does not change and you want to experiment using a different number of epochs or batch size, using the cached values significantly reduces the amount of time required to train a model.
-    - `ReuseValidationSetBottleneckCachedValues` is similar to `ReuseTrainSetBottleneckCachedValues` only that in this case it's for the validation dataset.
-    - `WorkspacePath` defines the directory where to store the computed bottleneck values and `.pb` version of the model.
+    - `FeatureColumnName`, model için girdi olarak kullanılan sütundur.
+    - `LabelColumnName`, tahmin edilecek değerin sütundeğeridir.
+    - `ValidationSet`, doğrulama verilerini içeren [`IDataView`](xref:Microsoft.ML.IDataView) .
+    - `Arch`, önceden eğitilen model mimarilerinden hangisinin kullanılacağını tanımlar. Bu öğretici ResNetv2 modelinin 101 katman türevini kullanır.
+    - `MetricsCallback` eğitim sırasında ilerlemeyi izlemek için bir işlevi bağlar.
+    - `TestOnTrainSet`, bir doğrulama kümesi mevcut olmadığında modelin eğitim kümesine karşı performansını ölçmesini söyler.
+    - `ReuseTrainSetBottleneckCachedValues`, sonraki çalışmalarda performans sorunlarına neden olan önbelleğe alınmış değerleri kullanıp kullanmayacağınızı modele söyler. Performans sorunu, ilk çalıştırıldığında yoğun bir şekilde yoğun bir geçiş hesaplasıdır. Eğitim verileri değişmezse ve farklı sayıda dönemler veya toplu iş boyutu kullanmayı denemek istiyorsanız, önbelleğe alınmış değerleri kullanmak bir modeli eğmek için gereken süreyi önemli ölçüde azaltır.
+    - `ReuseValidationSetBottleneckCachedValues`, yalnızca bu örnekte doğrulama veri kümesi için olan `ReuseTrainSetBottleneckCachedValues` benzerdir.
+    - `WorkspacePath`, hesaplanan performans sorunu değerlerinin ve modelin `.pb` sürümünün depolanacağı dizini tanımlar.
 
-1. Define the [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) training pipeline that consists of both the `mapLabelEstimator` and the `ImageClassificationTrainer`.
+1. Hem `mapLabelEstimator` hem de `ImageClassificationTrainer`oluşan [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) eğitim işlem hattını tanımlayın.
 
     [!code-csharp [TrainingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L59-L60)]
 
-1. Use the [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) method to train your model.
+1. Modelinize eğitebilmeniz için [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) yöntemini kullanın.
 
     [!code-csharp [TrainModel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L62)]
 
-## <a name="use-the-model"></a>Use the model
+## <a name="use-the-model"></a>Modeli kullanma
 
-Now that you have trained your model, it's time to use it to classify images.
+Modelinize eğitim sahibi olduğunuza göre, görüntüleri sınıflandırmak için kullanmanın zamanı.
 
-Below the `Main` method, create a new utility method called `OutputPrediction` to display prediction information in the console.
+`Main` yönteminin altında, konsolunda tahmin bilgilerini göstermek için `OutputPrediction` adlı yeni bir yardımcı program yöntemi oluşturun.
 
 [!code-csharp [OuputPredictionMethod](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L96-L100)]
 
-### <a name="classify-a-single-image"></a>Classify a single image
+### <a name="classify-a-single-image"></a>Tek bir görüntüyü sınıflandır
 
-1. Add a new method called `ClassifySingleImage` below the `Main` method to make and output a single image prediction.
+1. Tek bir görüntü tahminini yapmak ve çıkarmak için `Main` yönteminin altına `ClassifySingleImage` adlı yeni bir yöntem ekleyin.
 
     ```csharp
     public static void ClassifySingleImage(MLContext mlContext, IDataView data, ITransformer trainedModel)
@@ -296,29 +296,29 @@ Below the `Main` method, create a new utility method called `OutputPrediction` t
     }
     ```
 
-1. Create a [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) inside the `ClassifySingleImage` method. The [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) is a convenience API, which allows you to pass in and then perform a prediction on a single instance of data.
+1. `ClassifySingleImage` yöntemi içinde [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) oluşturun. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneği üzerinde bir tahmin etmenizi ve daha sonra bir tahmin gerçekleştirmenizi sağlayan KULLANıŞLı bir API 'dir.
 
     [!code-csharp [CreatePredictionEngine](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L73)]
 
-1. To access a single `ModelInput` instance, convert the `data` [`IDataView`](xref:Microsoft.ML.IDataView) into an [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) using the [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) method and then get the first observation.
+1. Tek bir `ModelInput` örneğine erişmek için, [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) yöntemini kullanarak `data` [`IDataView`](xref:Microsoft.ML.IDataView) bir [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) dönüştürün ve ardından ilk gözlemyi alın.
 
     [!code-csharp [GetTestInputData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L75)]
 
-1. Use the [`Predict`](xref:Microsoft.ML.PredictionEngine%602.Predict*) method to classify the image.
+1. Görüntüyü sınıflandırmak için [`Predict`](xref:Microsoft.ML.PredictionEngine%602.Predict*) yöntemini kullanın.
 
     [!code-csharp [MakeSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L77)]
 
-1. Output the prediction to the console with the `OutputPrediction` method.
+1. `OutputPrediction` yöntemiyle, tahmine konsola çıkış yapın.
 
     [!code-csharp [OuputSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L79-L80)]
 
-1. Inside the `Main` method, call `ClassifySingleImage` using the test set of images.
+1. `Main` yönteminin içinde, görüntü sınama kümesini kullanarak `ClassifySingleImage` çağırın.
 
     [!code-csharp [ClassifySingleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L64)]
 
-### <a name="classify-multiple-images"></a>Classify multiple images
+### <a name="classify-multiple-images"></a>Birden çok görüntüyü sınıflandırma
 
-1. Add a new method called `ClassifyImages` below the `ClassifySingleImage` method to make and output multiple image predictions.
+1. Birden çok görüntü Tahminleri yapmak ve çıkarmak için `ClassifySingleImage` yönteminin altına `ClassifyImages` adlı yeni bir yöntem ekleyin.
 
     ```csharp
     public static void ClassifyImages(MLContext mlContext, IDataView data, ITransformer trainedModel)
@@ -327,29 +327,29 @@ Below the `Main` method, create a new utility method called `OutputPrediction` t
     }
     ```
 
-1. Create an [`IDataView`](xref:Microsoft.ML.IDataView) containing the predictions by using the [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) method. Add the following code inside the `ClassifyImages` method.
+1. [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) metodunu kullanarak tahminleri içeren bir [`IDataView`](xref:Microsoft.ML.IDataView) oluşturun. `ClassifyImages` yönteminin içine aşağıdaki kodu ekleyin.
 
     [!code-csharp [MakeMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L85)]
 
-1. In order to iterate over the predictions, convert the `predictionData` [`IDataView`](xref:Microsoft.ML.IDataView) into an [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) using the [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) method and then get the first 10 observations.
+1. Tahmine dayalı olarak yinelemek için, `predictionData` [`IDataView`](xref:Microsoft.ML.IDataView) [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) yöntemini kullanarak [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) dönüştürün ve ardından ilk 10 gözlemleme elde edin.
 
     [!code-csharp [IEnumerablePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L87)]
 
-1. Iterate and output the original and predicted labels for the predictions.
+1. Tahmine dayalı olarak orijinal ve tahmin edilen etiketleri yineleyin ve çıktı.
 
     [!code-csharp [OutputMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L89-L93)]
 
-1. Finally, inside the `Main` method, call `ClassifyImages` using the test set of images.
+1. Son olarak, `Main` yönteminin içinde, görüntü sınama kümesini kullanarak `ClassifyImages` çağırın.
 
     [!code-csharp [ClassifyImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L66)]
 
-## <a name="run-the-application"></a>Run the application
+## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-Run your console app. The output should be similar to that below. You may see warnings or processing messages, but these messages have been removed from the following results for clarity. For brevity, the output has been condensed.
+Konsol uygulamanızı çalıştırın. Çıktının aşağıdakine benzer olması gerekir. Uyarıları veya işlem iletilerini görebilirsiniz, ancak bu iletiler netme için aşağıdaki sonuçlardan kaldırılmıştır. Breçekimi için çıkış yoğunlaştırılmış.
 
-**Bottleneck phase**
+**Performans sorunu aşaması**
 
-No value is printed for the image name because the images are loaded as a `byte[]` therefore there is no image name to display.
+Görüntüler `byte[]` olarak yüklendiği için görüntü adı için hiçbir değer yazdırılamaz, bu nedenle görüntülenecek görüntü adı yok.
 
 ```test
 Phase: Bottleneck Computation, Dataset used:      Train, Image Index: 279
@@ -358,7 +358,7 @@ Phase: Bottleneck Computation, Dataset used: Validation, Image Index:   1
 Phase: Bottleneck Computation, Dataset used: Validation, Image Index:   2
 ```
 
-**Training phase**
+**Eğitim aşaması**
 
 ```text
 Phase: Training, Dataset used: Validation, Batch Processed Count:   6, Epoch:  21, Accuracy:  0.6797619
@@ -366,7 +366,7 @@ Phase: Training, Dataset used: Validation, Batch Processed Count:   6, Epoch:  2
 Phase: Training, Dataset used: Validation, Batch Processed Count:   6, Epoch:  23, Accuracy:  0.7916667
 ```
 
-**Classify images output**
+**Görüntüleri sınıflandırın çıktısı**
 
 ```text
 Classifying single image
@@ -378,31 +378,31 @@ Image: 7001-163.jpg | Actual Value: UD | Predicted Value: UD
 Image: 7001-210.jpg | Actual Value: UD | Predicted Value: UD
 ```
 
-Upon inspection of the *7001-220.jpg* image, you can see that it in fact is not cracked.
+*7001 -220. jpg* görüntüsünü incelemeden, aslında bunun kırdığını görebilirsiniz.
 
-![SDNET2018 dataset image used for prediction](./media/image-classification-api-transfer-learning/predictedimage.jpg)
+![Tahmin için kullanılan SDNET2018 veri kümesi görüntüsü](./media/image-classification-api-transfer-learning/predictedimage.jpg)
 
-Congratulations! You've now successfully built a deep learning model for classifying images.
+Tebrikler! Artık görüntülerin sınıflandırılmasına yönelik derin bir öğrenme modelini başarıyla oluşturdunuz.
 
-### <a name="improve-the-model"></a>Improve the model
+### <a name="improve-the-model"></a>Modeli geliştirme
 
-If you're not satisfied with the results of your model, you can try to improve its performance by trying some of the following approaches:
+Modelinizin sonuçlarını tatmin ediyorsanız, aşağıdaki yaklaşımlardan bazılarını deneyerek performansını geliştirmeyi deneyebilirsiniz:
 
-- **More Data**: The more examples a model learns from, the better it performs. Download the full [SDNET2018 dataset](https://digitalcommons.usu.edu/cgi/viewcontent.cgi?filename=2&article=1047&context=all_datasets&type=additional) and use it to train.
-- **Augment the data**: A common technique to add variety to the data is to augment the data by taking an image and applying different transforms (rotate, flip, shift, crop). This adds more varied examples for the model to learn from.
-- **Train for a longer time**: The longer you train, the more tuned the model will be. Increasing the number of epochs may improve the performance of your model.
-- **Experiment with the hyper-parameters**: In addition to the parameters used in this tutorial, other parameters can be tuned to potentially improve performance. Changing the learning rate, which determines the magnitude of updates made to the model after each epoch may improve performance.
-- **Use a different model architecture**: Depending on what your data looks like, the model that can best learn its features may differ. If you're not satisfied with the performance of your model, try changing the architecture.
+- **Daha fazla veri**: bir modelin öğreni daha fazla örnek, ne kadar iyi çalışır. Tam [SDNET2018 veri kümesini](https://digitalcommons.usu.edu/cgi/viewcontent.cgi?filename=2&article=1047&context=all_datasets&type=additional) indirip eğmek için kullanın.
+- **Verileri artırmak**: verileri bir görüntü alarak ve farklı dönüşümler uygulayarak (Döndür, çevir, Shift, Kırp) veri eklemek için sık kullanılan bir tekniktir. Bu, modelin öğreni için daha fazla değişken örnek ekler.
+- Daha **uzun bir süre eğitin**: daha fazla eğitede, model daha fazla ayarlanmış olur. Dönemler sayısının artırılması, modelinizin performansını iyileştirebilecek.
+- **Hyper-Parameters Ile denemeler yapın**: Bu öğreticide kullanılan parametrelere ek olarak, diğer parametreler potansiyel olarak performansı iyileştirecek şekilde ayarlanabilir. Her dönem performansı iyileştirebilmek için modele yapılan güncelleştirmelerin büyüklüğünü belirleyen öğrenme oranını değiştirme.
+- **Farklı bir model mimarisi kullanın**: verilerinizin neye benzer olduğuna bağlı olarak, özelliklerini en iyi şekilde öğrenen en iyi şekilde bir model farklı olabilir. Modelinizin performansını karşılıyoruz, mimariyi değiştirmeyi deneyin.
 
 ### <a name="additional-resources"></a>Ek Kaynaklar
 
-- [Deep Learning vs Machine Learning](/azure/machine-learning/service/concept-deep-learning-vs-machine-learning).
+- [Derin öğrenme vs Machine Learning](/azure/machine-learning/service/concept-deep-learning-vs-machine-learning).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-In this tutorial, you learned how to build a custom deep learning model using transfer learning, a pretrained image classification TensorFlow model and the ML.NET Image Classification API to classify images of concrete surfaces as cracked or uncracked.
+Bu öğreticide, aktarım öğrenimi, önceden eğitilen bir görüntü sınıflandırması TensorFlow modeli ve ML.NET görüntü sınıflandırma API 'sini kullanarak, somut yüzeyleri kırıllanmış veya kırılk olarak sınıflandırmakta olan özel bir derin öğrenme modeli oluşturmayı öğrendiniz.
 
-Advance to the next tutorial to learn more.
+Daha fazla bilgi edinmek için sonraki öğreticiye ilerleyin.
 
 > [!div class="nextstepaction"]
-> [Object Detection](object-detection-onnx.md)
+> [Nesne algılama](object-detection-onnx.md)

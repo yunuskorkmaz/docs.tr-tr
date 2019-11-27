@@ -22,27 +22,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341216"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic'de Özellikler ve Değişkenler Arasındaki Farklar
-Variables and properties both represent values that you can access. However, there are differences in storage and implementation.  
+Değişkenler ve özellikler, erişebileceğiniz değerleri temsil eder. Ancak, depolama ve uygulamada farklılıklar vardır.  
   
 ## <a name="variables"></a>Değişkenler  
- A *variable* corresponds directly to a memory location. You define a variable with a single declaration statement. A variable can be a *local variable*, defined inside a procedure and available only within that procedure, or it can be a *member variable*, defined in a module, class, or structure but not inside any procedure. A member variable is also called a *field*.  
+ *Değişken* doğrudan bir bellek konumuna karşılık gelir. Tek bir bildirim bildirimiyle bir değişken tanımlarsınız. Bir değişken, bir yordamda tanımlanmış ve yalnızca bu yordamda kullanılabilen bir *yerel değişken*olabilir ya da bir modül, sınıf veya yapıda tanımlanmış, ancak herhangi bir yordamda tanımlanmış bir *üye değişkeni*olabilir. Bir üye değişkeni de *alan*olarak adlandırılır.  
   
 ## <a name="properties"></a>Özellikler  
- A *property* is a data element defined on a module, class, or structure. You define a property with a code block between the `Property` and `End Property` statements. The code block contains a `Get` procedure, a `Set` procedure, or both. These procedures are called *property procedures* or *property accessors*. In addition to retrieving or storing the property's value, they can also perform custom actions, such as updating an access counter.  
+ Bir *özellik* , modül, sınıf veya yapıda tanımlanmış bir veri öğesidir. `Property` ve `End Property` deyimleri arasında kod bloğu içeren bir özellik tanımlarsınız. Kod bloğu `Get` yordam, `Set` yordamı veya her ikisini de içerir. Bu yordamlar, *özellik yordamları* veya *özellik erişimcileri*olarak adlandırılır. Özelliğin değerini almaya veya depolamaya ek olarak, bir erişim sayacını güncelleştirme gibi özel eylemler de gerçekleştirebilirler.  
   
-## <a name="differences"></a>Differences  
- The following table shows some important differences between variables and properties.  
+## <a name="differences"></a>Fark  
+ Aşağıdaki tabloda, değişkenler ve özellikler arasındaki bazı önemli farklılıklar gösterilmektedir.  
   
-|Point of difference|Değişken|Özellik|  
+|Fark noktası|Değişken|Özellik|  
 |-------------------------|--------------|--------------|  
-|Bildirim|Single declaration statement|Series of statements in a code block|  
-|Uygulama|Single storage location|Executable code (property procedures)|  
-|Depolama|Directly associated with variable's value|Typically has internal storage not available outside the property's containing class or module<br /><br /> Property's value might or might not exist as a stored element <sup>1</sup>|  
-|Executable code|Yok.|Must have at least one procedure|  
-|Read and write access|Read/write or read-only|Read/write, read-only, or write-only|  
-|Custom actions (in addition to accepting or returning value)|Not possible|Can be performed as part of setting or retrieving property value|  
+|Bildirim|Single bildirim ekstresi|Kod bloğundaki deyim dizisi|  
+|Uygulama|Tek depolama konumu|Yürütülebilir kod (özellik yordamları)|  
+|Depolama|Değişken değeriyle doğrudan ilişkili|Genellikle, özelliğin kapsayan sınıf veya modül dışında kullanılamayan iç depolama alanı vardır<br /><br /> Özelliğin değeri, depolanan bir öğe olarak olabilir veya mevcut olmayabilir <sup>1</sup>|  
+|Yürütülebilir kod|Yok.|En az bir yordam olmalıdır|  
+|Okuma ve yazma erişimi|Okuma/yazma veya salt okuma|Okuma/yazma, salt okunurdur veya salt yazılır|  
+|Özel eylemler (değerin kabul edilmesi veya döndürülmesinin yanı sıra)|Mümkün değil|Özellik değerinin ayarlanması veya alınması kapsamında gerçekleştirilebilir|  
   
- <sup>1</sup> Unlike a variable, the value of a property might not correspond directly to a single item of storage. The storage might be split into pieces for convenience or security, or the value might be stored in an encrypted form. In these cases the `Get` procedure would assemble the pieces or decrypt the stored value, and the `Set` procedure would encrypt the new value or split it into the constituent storage. A property value might be ephemeral, like time of day, in which case the `Get` procedure would calculate it on the fly each time you access the property.  
+ <sup>1</sup> bir değişkenin aksine, bir özelliğin değeri doğrudan tek bir depolama öğesine karşılık gelmeyebilir. Depolama, kolaylık veya güvenlik için parçalara ayrılabilir veya değer şifrelenmiş bir biçimde depolanabilir. Bu durumlarda `Get` yordamı, parçaları birleştirir veya depolanan değerin şifresini çözer ve `Set` yordamı yeni değeri şifreleyerek veya onu yapısal depolamaya bölecektir. Özellik değeri, günün saati gibi kısa ömürlü olabilir ve bu durumda `Get` yordam, özelliğe her eriştiğinizde bu işlemi bir kez hesaplayabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -53,6 +53,6 @@ Variables and properties both represent values that you can access. However, the
 - [Nasıl yapılır: Özellik Oluşturma](./how-to-create-a-property.md)
 - [Nasıl yapılır: Bir Özelliği Karışık Erişim Düzeyleriyle Bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Nasıl yapılır: Bir Özellik Yordamı Çağırma](./how-to-call-a-property-procedure.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Nasıl yapılır: Visual Basic varsayılan bir özellik bildirme ve çağırma](./how-to-declare-and-call-a-default-property.md)
 - [Nasıl yapılır: Bir Özelliğe Değer Ekleme](./how-to-put-a-value-in-a-property.md)
 - [Nasıl yapılır: Bir Özellikten Değer Alma](./how-to-get-a-value-from-a-property.md)

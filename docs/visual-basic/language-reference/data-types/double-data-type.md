@@ -28,34 +28,34 @@ ms.locfileid: "74344008"
 ---
 # <a name="double-data-type-visual-basic"></a>Double Veri Türü (Visual Basic)
 
-Holds signed IEEE 64-bit (8-byte) double-precision floating-point numbers that range in value from -1.79769313486231570E+308 through -4.94065645841246544E-324 for negative values and from 4.94065645841246544E-324 through 1.79769313486231570E+308 for positive values. Double-precision numbers store an approximation of a real number.
+Negatif değerler için-1.79769313486231570 E + 308 ile-4.94065645841246544 E-324 arasında ve 4.94065645841246544 E-324 ile 1.79769313486231570 E + 308 arasında bir değer olarak bulunan imzalanmış IEEE 64-bit (8 baytlık) çift duyarlıklı kayan nokta sayılarını barındırır pozitif değerler. Çift duyarlıklı sayılar gerçek bir sayının yaklaşık bir kısmını depolar.
 
 ## <a name="remarks"></a>Açıklamalar
 
-The `Double` data type provides the largest and smallest possible magnitudes for a number.
+`Double` veri türü, bir sayı için en büyük ve en küçük olası magnitudes sağlar.
 
-The default value of `Double` is 0.
+`Double` varsayılan değeri 0 ' dır.
 
 ## <a name="programming-tips"></a>Programlama İpuçları
 
-- **Precision.** When you work with floating-point numbers, remember that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+- **Duyarlılık.** Kayan noktalı sayılarla çalışırken her zaman bellekte kesin bir gösterimin olduğunu unutmayın. Bu, değer karşılaştırması ve `Mod` işleci gibi belirli işlemlerden beklenmedik sonuçlara neden olabilir. Daha fazla bilgi için bkz. [sorun giderme veri türleri](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
 
-- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing zero characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing zero characters do not appear when you display or print floating-point values.
+- **Sondaki sıfırlar.** Kayan nokta veri türlerinde sondaki sıfır karakteri iç temsili yok. Örneğin, 4,2000 ve 4,2 arasında ayrım yapmazlar. Sonuç olarak, kayan nokta değerlerini görüntülerken veya yazdırdığınızda sondaki sıfır karakter görünmez.
 
-- **Type Characters.** Appending the literal type character `R` to a literal forces it to the `Double` data type. For example, if an integer value is followed by `R`, the value is changed to a `Double`.
+- **Tür karakterleri.** Değişmez değer türü karakter `R` bir sabit değere eklenmesi, `Double` veri türüne zorlar. Örneğin, bir tamsayı değerinin arkasından `R`, değer bir `Double`dönüştürülür.
 
   ```vb
   ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:
   Dim dub As Double = 4.0R
   ```
 
-  Appending the identifier type character `#` to any identifier forces it to `Double`. In the following example, the variable `num` is typed as a `Double`:
+  Tanımlayıcı türü karakter `#` herhangi bir tanımlayıcıya eklemek bunu `Double`zorlar. Aşağıdaki örnekte `num` değişkeni bir `Double`olarak yazılır:
 
   ```vb
   Dim num# = 3
   ```
 
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Double?displayProperty=nameWithType> structure.
+- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Double?displayProperty=nameWithType> yapısıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

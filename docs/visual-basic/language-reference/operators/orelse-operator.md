@@ -19,7 +19,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348243"
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse İşleci (Visual Basic)
-Performs short-circuiting inclusive logical disjunction on two expressions.  
+İki ifadeye kısa devre uygulayan kapsamlı mantıksal ayırma gerçekleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,49 +29,49 @@ result = expression1 OrElse expression2
   
 ## <a name="parts"></a>Bölümler  
  `result`  
- Gerekli. Any `Boolean` expression.  
+ Gerekli. Herhangi bir `Boolean` ifadesi.  
   
  `expression1`  
- Gerekli. Any `Boolean` expression.  
+ Gerekli. Herhangi bir `Boolean` ifadesi.  
   
  `expression2`  
- Gerekli. Any `Boolean` expression.  
+ Gerekli. Herhangi bir `Boolean` ifadesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- A logical operation is said to be *short-circuiting* if the compiled code can bypass the evaluation of one expression depending on the result of another expression. If the result of the first expression evaluated determines the final result of the operation, there is no need to evaluate the second expression, because it cannot change the final result. Short-circuiting can improve performance if the bypassed expression is complex, or if it involves procedure calls.  
+ Derlenmiş kod, başka bir ifadenin sonucuna bağlı olarak bir ifadenin değerlendirmesini atlayabiliyorsa, mantıksal bir işlemin *kısa devre dışı* olduğu söylenir. Değerlendirilen ilk ifadenin sonucu işlemin nihai sonucunu belirlerse, nihai sonucu değiştiremediğinden ikinci ifadeyi değerlendirmeye gerek yoktur. Atlanan ifade karmaşık olduğunda veya yordam çağrıları içeriyorsa, kısa devre dışı hale getirebilirsiniz performansı iyileştirebilir.  
   
- If either or both expressions evaluate to `True`, `result` is `True`. The following table illustrates how `result` is determined.  
+ Ya da her iki ifade `True`olarak değerlendirilir `result` `True`. Aşağıdaki tabloda `result` nasıl belirlendiği gösterilmektedir.  
   
-|If `expression1` is|And `expression2` is|The value of `result` is|  
+|`expression1`|Ve `expression2`|`result` değeri|  
 |-------------------------|--------------------------|------------------------------|  
-|`True`|(not evaluated)|`True`|  
+|`True`|(değerlendirilmedi)|`True`|  
 |`False`|`True`|`True`|  
 |`False`|`False`|`False`|  
   
 ## <a name="data-types"></a>Veri Türleri  
- The `OrElse` operator is defined only for the [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic converts each operand as necessary to `Boolean` before evaluating the expression. If you assign the result to a numeric type, Visual Basic converts it from `Boolean` to that type such that `False` becomes `0` and `True` becomes `-1`.
-For more information, see [Boolean Type Conversions](../data-types/boolean-data-type.md#type-conversions).
+ `OrElse` işleci yalnızca [Boole veri türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md)için tanımlanır. Visual Basic, ifadeyi değerlendirmeden önce `Boolean` gereken her işleneni dönüştürür. Sonucu sayısal bir türe atarsanız, Visual Basic `Boolean` `False` `0` haline gelir ve `True` `-1`hale gelir.
+Daha fazla bilgi için bkz. [Boole tür dönüştürmeleri](../data-types/boolean-data-type.md#type-conversions).
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- The [Or Operator](../../../visual-basic/language-reference/operators/or-operator.md) and the [IsTrue Operator](../../../visual-basic/language-reference/operators/istrue-operator.md) can be *overloaded*, which means that a class or structure can redefine their behavior when an operand has the type of that class or structure. Overloading the `Or` and `IsTrue` operators affects the behavior of the `OrElse` operator. If your code uses `OrElse` on a class or structure that overloads `Or` and `IsTrue`, be sure you understand their redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ [OR işleci](../../../visual-basic/language-reference/operators/or-operator.md) ve [IsTrue işleci](../../../visual-basic/language-reference/operators/istrue-operator.md) *aşırı*yüklenebilir, bu da bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışlarını yeniden tanımlayabileceği anlamına gelir. `Or` aşırı yükleme ve `IsTrue` işleçleri `OrElse` işlecinin davranışını etkiler. Kodunuz, `Or` ve `IsTrue`aşırı yükleyen bir sınıf veya yapı üzerinde `OrElse` kullanıyorsa, yeniden tanımlanmış davranışlarını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- The following example uses the `OrElse` operator to perform logical disjunction on two expressions. The result is a `Boolean` value that represents whether either of the two expressions is true. If the first expression is `True`, the second is not evaluated.  
+ Aşağıdaki örnek, iki ifadeye mantıksal ayırıcı gerçekleştirmek için `OrElse` işlecini kullanır. Sonuç, iki ifadeden birinin doğru olup olmadığını temsil eden bir `Boolean` değeridir. İlk ifade `True`, ikincisi değerlendirilmez.  
   
  [!code-vb[VbVbalrOperators#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#37)]  
   
- The preceding example produces results of `True`, `True`, and `False` respectively. In the calculation of `firstCheck`, the second expression is not evaluated because the first is already `True`. However, the second expression is evaluated in the calculation of `secondCheck`.  
+ Yukarıdaki örnek, sırasıyla `True`, `True`ve `False` sonuçları üretir. `firstCheck`hesaplamasında ikinci ifade değerlendirilmez çünkü ilki zaten `True`. Ancak, ikinci ifade `secondCheck`hesaplamasında değerlendirilir.  
   
 ## <a name="example"></a>Örnek  
- The following example shows an `If`...`Then` statement containing two procedure calls. If the first call returns `True`, the second procedure is not called. This could produce unexpected results if the second procedure performs important tasks that should always be performed when this section of the code runs.  
+ Aşağıdaki örnek, iki yordam çağrısı içeren bir `If`...`Then` ifadesini gösterir. İlk çağrı `True`döndürürse ikinci yordam çağrılmaz. Bu, ikinci yordam kodun bu bölümü çalıştırıldığında her zaman gerçekleştirilmesi gereken önemli görevleri gerçekleştirdiğinde beklenmedik sonuçlar verebilir.  
   
  [!code-vb[VbVbalrOperators#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#38)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Mantıksal/bit düzeyinde Işleçler (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Or İşleci](../../../visual-basic/language-reference/operators/or-operator.md)
 - [IsTrue İşleci](../../../visual-basic/language-reference/operators/istrue-operator.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic mantıksal ve bit düzeyinde Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

@@ -15,29 +15,29 @@ ms.locfileid: "74347448"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>XML ile Kodunuzu Belgeleme (Visual Basic)
 
-In Visual Basic, you can document your code using XML
+Visual Basic, kodunuzu XML kullanarak belgeedebilirsiniz
 
 ## <a name="xml-documentation-comments"></a>XML Belgeleri Yorumları
 
-Visual Basic provides an easy way to automatically create XML documentation for projects. You can automatically generate an XML skeleton for your types and members, and then provide summaries, descriptive documentation for each parameter, and other remarks. With the appropriate setup, the XML documentation is automatically emitted into an XML file with the same name as your project and the .xml extension. For more information, see [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
+Visual Basic, projeler için otomatik olarak XML belgelerinin oluşturulması için kolay bir yol sağlar. Türleriniz ve üyelerinize yönelik otomatik olarak bir XML iskelet oluşturabilir, ardından her bir parametre için özetler, açıklayıcı belgeler ve diğer açıklamalar sağlayabilirsiniz. Uygun kurulumla, XML belgeleri projeniz ve. xml uzantısı ile aynı ada sahip bir XML dosyasına otomatik olarak yayılır. Daha fazla bilgi için bkz. [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
 
-The XML file can be consumed or otherwise manipulated as XML. This file is located in the same directory as the output .exe or .dll file of your project.
+XML dosyası, XML olarak tüketilebilir veya başka bir şekilde yönetilebilir. Bu dosya, projenizin output. exe veya. dll dosyası ile aynı dizinde bulunur.
 
-XML documentation starts with `'''`. The processing of these comments has some restrictions:
+XML belgeleri `'''`başlar. Bu yorumların işlenmesinde bazı kısıtlamalar vardır:
 
-- The documentation must be well-formed XML. If the XML is not well formed, a warning is generated and the documentation file contains a comment saying that an error was encountered.
+- Belgeler düzgün biçimlendirilmiş XML olmalıdır. XML düzgün biçimlendirilmediyse bir uyarı oluşturulur ve belge dosyası bir hata ile karşılaşıldığını söyleyen bir açıklama içerir.
 
-- Developers are free to create their own set of tags. There is a recommended set of tags (see "Related Sections" in this topic). Some of the recommended tags have special meanings:
+- Geliştiriciler kendi etiket kümesini oluşturmak ücretsizdir. Önerilen bir etiket kümesi vardır (Bu konudaki "Ilgili bölümler" bölümüne bakın). Önerilen etiketlerden bazılarının özel anlamları vardır:
 
-  - The \<param> tag is used to describe parameters. If used, the compiler will verify that the parameter exists and that all parameters are described in the documentation. If the verification fails, the compiler issues a warning.
+  - Parametreleri anlatmak için \<param > etiketi kullanılır. Kullanıldıysa, derleyici parametrenin var olduğunu ve tüm parametrelerin belgelerde açıklananlandığından emin olur. Doğrulama başarısız olursa, derleyici bir uyarı verir.
 
-  - The `cref` attribute can be attached to any tag to provide a reference to a code element. The compiler verifies that this code element exists. If the verification fails, the compiler issues a warning. The compiler also respects any `Imports` statements when looking for a type described in the `cref` attribute.
+  - `cref` özniteliği, bir kod öğesine başvuru sağlamak için herhangi bir etikete iliştirilebilir. Derleyici bu kod öğesinin varolduğunu doğrular. Doğrulama başarısız olursa, derleyici bir uyarı verir. Derleyici Ayrıca, `cref` özniteliğinde açıklanan bir tür ararken tüm `Imports` deyimlerine uyar.
 
-  - The \<summary> tag is used by IntelliSense in Visual Studio to display additional information about a type or member.
+  - \<Summary > etiketi, Visual Studio 'da IntelliSense tarafından bir tür veya üyeyle ilgili ek bilgileri göstermek için kullanılır.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
-For details on creating an XML file with documentation comments, see the following topics:
+Belge açıklamalarıyla bir XML dosyası oluşturma hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
 - [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 
@@ -51,5 +51,5 @@ For details on creating an XML file with documentation comments, see the followi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Developing Applications with Visual Basic](../../../visual-basic/developing-apps/index.md)
-- [Visual Basic Programming Guide](../../../visual-basic/programming-guide/index.md)
+- [Visual Basic ile uygulama geliştirme](../../../visual-basic/developing-apps/index.md)
+- [Visual Basic programlama kılavuzu](../../../visual-basic/programming-guide/index.md)

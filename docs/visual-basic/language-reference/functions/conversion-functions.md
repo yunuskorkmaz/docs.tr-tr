@@ -1,5 +1,5 @@
 ---
-title: Conversion functions
+title: Dönüştürme işlevleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [Visual Basic], conversion functions
@@ -19,29 +19,29 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348101"
 ---
-# <a name="conversion-functions-visual-basic"></a>Conversion functions (Visual Basic)
+# <a name="conversion-functions-visual-basic"></a>Dönüştürme işlevleri (Visual Basic)
 
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
-- [CBool Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [CByte Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [CChar Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [CDate Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [CDbl Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [CDec Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CBool Işlevi](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CByte Işlevi](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CChar Işlevi](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CDate Işlevi](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CDbl Işlevi](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CDec Işlevi](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - <xref:Microsoft.VisualBasic.Strings.Chr%2A>
 - <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
-- [CInt Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [CLng Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [CObj Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [CSByte Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [CShort Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [CSng Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [CStr Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CInt Işlevi](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CLng Işlevi](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CObj Işlevi](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CSByte Işlevi](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CShort Işlevi](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CSng Işlevi](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CStr Işlevi](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [CType İşlevi](../../../visual-basic/language-reference/functions/ctype-function.md)
-- [CUInt Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [CULng Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [CUShort Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CUInt Işlevi](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Külng Işlevi](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CUShort Işlevi](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - <xref:Microsoft.VisualBasic.Strings.Format%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Oct%2A>

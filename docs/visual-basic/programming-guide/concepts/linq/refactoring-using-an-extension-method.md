@@ -9,19 +9,19 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346513"
 ---
-# <a name="refactoring-using-an-extension-method-visual-basic"></a>Refactoring Using an Extension Method (Visual Basic)
-This example builds on the previous example, [Retrieving the Text of the Paragraphs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.  
+# <a name="refactoring-using-an-extension-method-visual-basic"></a>Bir genişletme yöntemi kullanarak yeniden düzenleme (Visual Basic)
+Bu örnek, bir genişletme yöntemi olarak uygulanan bir saf işlev kullanarak dizelerin birleştirilmesiyle yeniden düzenleyerek, önceki örnekte yer alan, [paragrafların (Visual Basic) metnini alma](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md).  
   
- The previous example used the <xref:System.Linq.Enumerable.Aggregate%2A> standard query operator to concatenate multiple strings into one string. However, it is more convenient to write an extension method to do this, because the resulting query smaller and more simple.  
+ Önceki örnek, birden çok dizeyi tek bir dizede birleştirmek için <xref:System.Linq.Enumerable.Aggregate%2A> standart sorgu işlecini kullandı. Bununla birlikte, bunu yapmak için bir genişletme yöntemi yazmak daha uygundur, çünkü sonuçta elde edilen sorgu daha küçük ve daha basit.  
   
 ## <a name="example"></a>Örnek  
- This example processes a WordprocessingML document, retrieving the paragraphs, the style of each paragraph, and the text of each paragraph. This example builds on the previous examples in this tutorial.  
+ Bu örnekte, bir WordprocessingML belgesi, paragrafları, her bir paragrafın stili ve her bir paragrafın metni işlenir. Bu örnekte, bu öğreticideki önceki örneklerde derleme yapılır.  
   
- The example contains multiple overloads of the `StringConcatenate` method.  
+ Örnek, `StringConcatenate` yönteminin birden çok aşırı yüklemesini içerir.  
   
- You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Kaynak [Office Open XML belgesi (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)bölümünde bu örnek için kaynak belge oluşturma yönergelerini bulabilirsiniz.  
   
- This example uses classes from the WindowsBase assembly. It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.  
+ Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.  
   
 ```vb  
 <System.Runtime.CompilerServices.Extension()> _  
@@ -65,9 +65,9 @@ End Function
 ```  
   
 ## <a name="example"></a>Örnek  
- There are four overloads of the `StringConcatenate` method. One overload simply takes a collection of strings and returns a single string. Another overload can take a collection of any type, and a delegate that projects from a singleton of the collection to a string. There are two more overloads that allow you to specify a separator string.  
+ `StringConcatenate` yönteminin dört aşırı yüklemesi vardır. Bir aşırı yükleme yalnızca bir dize koleksiyonu alır ve tek bir dize döndürür. Başka bir aşırı yükleme, herhangi bir türün bir koleksiyonunu ve bir koleksiyonun tek bir sınıfından bir dizeye olan bir temsilciyi alabilir. Bir ayırıcı dize belirtmenizi sağlayan iki aşırı yükleme daha vardır.  
   
- The following code uses all four overloads.  
+ Aşağıdaki kod dört aşırı yüklemeyi kullanır.  
   
 ```vb  
 Dim numbers As String() = {"one", "two", "three"}  
@@ -80,7 +80,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString()))
 Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString(), ":"))  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```console  
 onetwothree  
@@ -90,7 +90,7 @@ one:two:three:
 ```  
   
 ## <a name="example"></a>Örnek  
- Now, the example can be modified to take advantage of the new extension method:  
+ Şimdi, örnek yeni uzantı yönteminden faydalanmak için değiştirilebilir:  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -216,7 +216,7 @@ Module Module1
 End Module  
 ```  
   
- This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (Visual Basic)](creating-the-source-office-open-xml-document.md).
+ Bu örnek, [kaynak Office Open XML belgesi (Visual Basic) oluşturma](creating-the-source-office-open-xml-document.md)bölümünde açıklanan belgeye uygulandığında aşağıdaki çıktıyı üretir.
   
 ```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -236,14 +236,14 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
- Note that this refactoring is a variant of refactoring into a pure function. The next topic will introduce the idea of factoring into pure functions in more detail.  
+ Bu yeniden düzenleme, saf bir işleve yeniden düzenleme çeşidine sahip olduğunu unutmayın. Sonraki konu, düzenleme işlevlerini saf işlevlere daha ayrıntılı bir şekilde tanıtacaktır.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- The next example shows how to refactor this code in another way, by using pure functions:  
+ Sonraki örnekte, saf işlevleri kullanılarak bu kodun başka bir şekilde nasıl yeniden düzenlenmesi gösterilmektedir:  
   
-- [Refactoring Using a Pure Function (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [Saf Işlev kullanarak yeniden düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Saf IŞLEVLERE yeniden düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

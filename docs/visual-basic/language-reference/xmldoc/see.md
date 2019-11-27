@@ -12,8 +12,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352223"
 ---
-# <a name="see-visual-basic"></a>\<see> (Visual Basic)
-Specifies a link to another member.  
+# <a name="see-visual-basic"></a>\<bkz. > (Visual Basic)
+Başka bir üyeye bağlantı belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,15 +23,15 @@ Specifies a link to another member.
   
 ## <a name="parameters"></a>Parametreler  
  `member`  
- A reference to a member or field that is available to be called from the current compilation environment. The compiler checks that the given code element exists and passes `member` to the element name in the output XML. `member` must appear within double quotation marks (" ").  
+ Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında öğe adına `member` geçirir. `member` çift tırnak işaretleri ("") içinde yer almalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Use the `<see>` tag to specify a link from within text. Use [\<seealso>](../../../visual-basic/language-reference/xmldoc/seealso.md) to indicate text that you might want to appear in a "See Also" section.  
+ Metnin içinden bir bağlantı belirtmek için `<see>` etiketini kullanın. "Ayrıca bkz." bölümünde görünmesini isteyebileceğiniz metni göstermek için [>\<de](../../../visual-basic/language-reference/xmldoc/seealso.md) kullanın.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- This example uses the `<see>` tag in the `UpdateRecord` remarks section to refer to the `DoesRecordExist` method.  
+ Bu örnek `DoesRecordExist` yöntemine başvurmak için `UpdateRecord` açıklamaları bölümündeki `<see>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

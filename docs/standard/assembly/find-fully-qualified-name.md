@@ -1,5 +1,5 @@
 ---
-title: "How to: Find an assembly's fully qualified name"
+title: 'Nasıl yapılır: bir derlemenin tam nitelikli adını bulma'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
@@ -17,17 +17,17 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348192"
 ---
-# <a name="how-to-find-an-assemblys-fully-qualified-name"></a>How to: Find an assembly's fully qualified name
+# <a name="how-to-find-an-assemblys-fully-qualified-name"></a>Nasıl yapılır: bir derlemenin tam nitelikli adını bulma
 
-To discover the fully qualified name of a .NET Framework assembly in the global assembly cache, use the Global Assembly Cache tool ([Gacutil.exe](../../framework/tools/gacutil-exe-gac-tool.md)). See [How to: View the contents of the global assembly cache](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).
+Genel derleme önbelleğinde bir .NET Framework derlemesinin tam adını öğrenmek için genel derleme önbelleği aracını ([Gacutil. exe](../../framework/tools/gacutil-exe-gac-tool.md)) kullanın. Bkz. [nasıl yapılır: genel derleme önbelleğinin Içeriğini görüntüleme](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).
 
-For .NET Core assemblies, and for .NET Framework assemblies that aren't in the global assembly cache, you can get the fully qualified assembly name in a number of ways:
+.NET Core derlemeleri ve genel derleme önbelleğinde olmayan .NET Framework derlemeler için, tam derleme adını çeşitli yollarla alabilirsiniz:
 
-- You can use code to output the information to the console or to a variable, or you can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.
+- Bilgileri konsola veya bir değişkene çıkarmak için kodu kullanabilir veya tam nitelikli adı içeren derlemenin meta verilerini incelemek için [ıldadsm. exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz.
 
-- If the assembly is already loaded by the application, you can retrieve the value of the <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> property to get the fully qualified name. You can use the <xref:System.Type.Assembly> property of a <xref:System.Type> defined in that assembly to retrieve a reference to the <xref:System.Reflection.Assembly> object. Örnek, bir gösterim sağlar.
+- Derleme uygulama tarafından zaten yüklenmişse, tam adı almak için <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> özelliğinin değerini alabilirsiniz. <xref:System.Reflection.Assembly> nesnesine bir başvuru almak için, bu derlemede tanımlanan bir <xref:System.Type> <xref:System.Type.Assembly> özelliğini kullanabilirsiniz. Örnek, bir gösterim sağlar.
 
-- If you know the assembly's file system path, you can call the `static` (C#) or `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> method to get the fully qualified assembly name. The following is a simple example.
+- Derlemenin dosya sistemi yolunu biliyorsanız, tam derleme adını almak için `static` (C#) veya `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> yöntemini çağırabilirsiniz. Aşağıda basit bir örnek verilmiştir.
 
   ```csharp
   using System;
@@ -56,13 +56,13 @@ For .NET Core assemblies, and for .NET Framework assemblies that aren't in the g
   '   UtilityLibrary, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null
   ```
 
-- You can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.
+- Tam nitelikli adı içeren derlemenin meta verilerini incelemek için [ıldadsm. exe ' yi (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz.
 
-For more information about setting assembly attributes such as version, culture, and assembly name, see [Set assembly attributes](set-attributes.md). For more information about giving an assembly a strong name, see [Create and use strong-named assemblies](create-use-strong-named.md).
+Sürüm, kültür ve derleme adı gibi derleme özniteliklerini ayarlama hakkında daha fazla bilgi için bkz. [derleme özniteliklerini ayarlama](set-attributes.md). Bütünleştirilmiş koda tanımlayıcı ad verme hakkında daha fazla bilgi için bkz. [tanımlayıcı adlı derlemeler oluşturma ve kullanma](create-use-strong-named.md).
 
 ## <a name="example"></a>Örnek
 
-The following example shows how to display the fully qualified name of an assembly containing a specified class to the console. It uses the <xref:System.Type.Assembly?displayProperty=nameWithType> property to retrieve a reference to an assembly from a type that's defined in that assembly.
+Aşağıdaki örnek, konsoluna belirtilen bir sınıf içeren bir derlemenin tam adının nasıl görüntüleneceğini gösterir. Bu derlemede tanımlanan bir türden derlemeye başvuru almak için <xref:System.Type.Assembly?displayProperty=nameWithType> özelliğini kullanır.
 
 ```cpp
 #using <System.dll>
@@ -120,8 +120,8 @@ End Class
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Assembly names](names.md)
-- [Create assemblies](create.md)
-- [Create and use strong-named assemblies](create-use-strong-named.md)
-- [Global assembly cache](../../framework/app-domains/gac.md)
-- [How the runtime locates assemblies](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Derleme adları](names.md)
+- [Derlemeler oluştur](create.md)
+- [Tanımlayıcı adlı derlemeler oluşturma ve kullanma](create-use-strong-named.md)
+- [Genel derleme önbelleği](../../framework/app-domains/gac.md)
+- [Çalışma zamanının derlemeleri nasıl konumlandırır](../../framework/deployment/how-the-runtime-locates-assemblies.md)

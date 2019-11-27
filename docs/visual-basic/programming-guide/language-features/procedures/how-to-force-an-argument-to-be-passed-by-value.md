@@ -22,35 +22,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344523"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Nasıl yapılır: Bağımsız Değişkeni Değere Göre Geçirilecek Şekilde Zorlama (Visual Basic)
-The procedure declaration determines the passing mechanism. If a parameter is declared [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic expects to pass the corresponding argument by reference. This allows the procedure to change the value of the programming element underlying the argument in the calling code. If you wish to protect the underlying element against such change, you can override the `ByRef` passing mechanism in the procedure call by enclosing the argument name in parentheses. These parentheses are in addition to the parentheses enclosing the argument list in the call.  
+Yordam bildirimi, geçen mekanizmayı belirler. Bir parametre [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)olarak bildirilirse, Visual Basic karşılık gelen bağımsız değişkeni başvuruya göre geçmesini bekler. Bu yordam, çağıran koddaki bağımsız değişkenin temelindeki programlama öğesinin değerini değiştirmesine olanak sağlar. Temel öğeyi bu değişikliğe karşı korumak istiyorsanız, bağımsız değişken adını parantez içine alarak yordam çağrısındaki `ByRef` geçen mekanizmayı geçersiz kılabilirsiniz. Bu parantezler, çağrısındaki bağımsız değişken listesini çevreleyen parantezler için de ek olarak kullanılır.  
   
- The calling code cannot override a [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) mechanism.  
+ Çağıran kod bir [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) mekanizmasını geçersiz kılamaz.  
   
-### <a name="to-force-an-argument-to-be-passed-by-value"></a>To force an argument to be passed by value  
+### <a name="to-force-an-argument-to-be-passed-by-value"></a>Bir bağımsız değişkenin değere göre geçirilmesini zorlamak için  
   
-- If the corresponding parameter is declared `ByVal` in the procedure, you do not need to take any additional steps. Visual Basic already expects to pass the argument by value.  
+- Yordamda karşılık gelen parametre `ByVal` bildirilirse, ek adımlar uygulamanız gerekmez. Visual Basic, zaten bağımsız değişkeni değere göre geçmesini bekliyor.  
   
-- If the corresponding parameter is declared `ByRef` in the procedure, enclose the argument in parentheses in the procedure call.  
+- Yordamda karşılık gelen parametre `ByRef` bildirilirse, yordam çağrısında bağımsız değişkeni parantez içine alın.  
   
 ## <a name="example"></a>Örnek  
- The following example overrides a `ByRef` parameter declaration. In the call that forces `ByVal`, note the two levels of parentheses.  
+ Aşağıdaki örnek bir `ByRef` parametresi bildirimini geçersiz kılar. `ByVal`zorlayan çağrıda, iki parantez düzeyini unutmayın.  
   
  [!code-vb[VbVbcnProcedures#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#39)]  
   
  [!code-vb[VbVbcnProcedures#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#40)]  
   
- When `str` is enclosed in extra parentheses within the argument list, the `setNewString` procedure cannot change its value in the calling code, and `MsgBox` displays "Cannot be replaced if passed ByVal". When `str` is not enclosed in extra parentheses, the procedure can change it, and `MsgBox` displays "This is a new value for the inString argument."  
+ `str`, bağımsız değişken listesi içinde fazladan parantez içine alınmışsa, `setNewString` yordamı çağıran koddaki değerini değiştiremez ve "bir ByVal geçirildiğinde değiştirilemez" `MsgBox` görüntülenir. `str` ek parantezler içine alınmadığından, yordamı değiştirebilir `MsgBox` ve "ınString bağımsız değişkeni için yeni bir değer" görüntülenir.  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- When you pass a variable by reference, you must use the `ByRef` keyword to specify this mechanism.  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bir değişkeni başvuruya göre geçirdiğinizde, bu mekanizmayı belirtmek için `ByRef` anahtar sözcüğünü kullanmanız gerekir.  
   
- The default in Visual Basic is to pass arguments by value. However, it is good programming practice to include either the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword with every declared parameter. This makes your code easier to read.  
+ Visual Basic varsayılan değeri, bağımsız değişkenleri değere göre geçirmektir. Ancak, her bir belirtilen parametreye ilişkin [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) anahtar sözcüğünü eklemek iyi bir programlama uygulamasıdır. Bu, kodunuzun okunmasını kolaylaştırır.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- If a procedure declares a parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the correct execution of the code might depend on being able to change the underlying element in the calling code. If the calling code overrides this calling mechanism by enclosing the argument in parentheses, or if it passes a nonmodifiable argument, the procedure cannot change the underlying element. This might produce unexpected results in the calling code.  
+ Bir yordam [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)parametresini bildiriyorsa, kodun doğru yürütülmesi, çağıran kodda temel alınan öğeyi değiştirebilmeyle ilgili olarak değişebilir. Çağıran kod, bağımsız değişkeni parantez içine alarak bu çağıran mekanizmayı geçersiz kılıyorsa veya değiştirilemeyen bir bağımsız değişken geçirirse yordam, temel alınan öğeyi değiştiremez. Bu, çağıran kodda beklenmeyen sonuçlara neden olabilirler.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- There is always a potential risk in allowing a procedure to change the value underlying an argument in the calling code. Make sure you expect this value to be changed, and be prepared to check it for validity before using it.  
+ Bir yordamın, çağıran koddaki bağımsız değişkenin temelindeki değeri değiştirmesine izin vermek için her zaman potansiyel bir risk vardır. Bu değerin değiştirilmesini beklediğinizden ve kullanılmadan önce geçerliliği göz önünde denetlediğinizden emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

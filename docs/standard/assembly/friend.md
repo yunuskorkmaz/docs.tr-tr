@@ -14,18 +14,18 @@ ms.locfileid: "74348174"
 ---
 # <a name="friend-assemblies"></a>Arkadaş derlemeleri
 
-A *friend assembly* is an assembly that can access another assembly's [internal](../../csharp/language-reference/keywords/internal.md) (C#) or [Friend](../../visual-basic/language-reference/modifiers/friend.md) (Visual Basic) types and members. If you identify an assembly as a friend assembly, you no longer have to mark types and members as public in order for them to be accessed by other assemblies. This is especially convenient in the following scenarios:
+*Arkadaş derlemesi* , başka bir derlemenin [iç](../../csharp/language-reference/keywords/internal.md) (C#) veya [arkadaş](../../visual-basic/language-reference/modifiers/friend.md) (Visual Basic) türlerine ve üyelerine erişebilen bir derlemedir. Bir derlemeyi arkadaş derleme olarak belirlerseniz, diğer derlemeler tarafından erişilebilmesi için artık türleri ve üyeleri ortak olarak işaretlemeniz gerekmez. Bu, özellikle aşağıdaki senaryolarda kullanışlıdır:
 
-- During unit testing, when test code runs in a separate assembly but requires access to members in the assembly being tested that are marked as `internal` in C# or `Friend` in Visual Basic.
+- Birim testi sırasında, test kodu ayrı bir derlemede çalışırken, ancak test edilen derlemede `internal` olarak işaretlenmiş C# veya Visual Basic içinde `Friend` olarak işaretlenen üyelere erişim gerektirir.
 
-- When you are developing a class library and additions to the library are contained in separate assemblies but require access to members in existing assemblies that are marked as `internal` in C# or `Friend` in Visual Basic.
+- Bir sınıf kitaplığı geliştirirken ve kitaplığa eklemeler ayrı derlemelerde yer alır, ancak Visual Basic içinde C# veya `Friend` `internal` olarak işaretlenen mevcut derlemelerde üyelere erişim gerektirir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-You can use the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to identify one or more friend assemblies for a given assembly. The following example uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute in *Assembly A* and specifies assembly *AssemblyB* as a friend assembly. This gives assembly *AssemblyB* access to all types and members in *Assembly A* that are marked as `internal` in C# or `Friend` in Visual Basic.
+Belirli bir derleme için bir veya daha fazla Friend derlemesini belirlemek üzere <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğini kullanabilirsiniz. Aşağıdaki örnek, *derleme a* 'daki <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğini kullanır ve bir Friend derlemesi olarak bir derlemeyi *AssemblyB* olarak belirtir. Bu, *bütünleştirilmiş kod '* de `internal` olarak işaretlenen C# veya Visual Basic ' de `Friend` olarak işaretlenen tüm tür ve üyelere derleme *AssemblyB* erişimi sağlar.
 
 > [!NOTE]
-> When you compile an assembly like *AssemblyB* that will access internal types or internal members of another assembly like *Assembly A*, you must explicitly specify the name of the output file ( *.exe* or *.dll*) by using the **-out** compiler option. This is required because the compiler has not yet generated the name for the assembly it is building at the time it is binding to external references. For more information, see [-out (C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) or [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
+> *Derleme A*gibi başka bir derlemenin iç türlerine veya iç üyelerine erişecek *AssemblyB* gibi bir derlemeyi derlerken, **-Out** derleyici seçeneğini kullanarak çıkış dosyasının ( *. exe* veya *. dll*) adını açıkça belirtmeniz gerekir. Bu gereklidir çünkü derleyici, dış başvurulara bağlama sırasında oluşturmakta olduğu derlemenin adını henüz üretmemiştir. Daha fazla bilgi için bkz. [-OutC#()](../../csharp/language-reference/compiler-options/out-compiler-option.md) veya [-Out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
 
 ```csharp
 using System.Runtime.CompilerServices;
@@ -72,34 +72,34 @@ Public Class ClassWithFriendMethod
 End Class
 ```
 
-Only assemblies that you explicitly specify as friends can access `internal` (C#) or `Friend` (Visual Basic) types and members. For example, if *AssemblyB* is a friend of *Assembly A* and *Assembly C* references *AssemblyB*, *Assembly C* does not have access to `internal` (C#) or `Friend` (Visual Basic) types in *Assembly A*.
+Yalnızca arkadaş olarak açıkça belirttiğiniz derlemeler, `internal` (C#) veya `Friend` (Visual Basic) türlerine ve üyelerine erişebilir. Örneğin, *AssemblyB* , *derleme a* 'Nın arkadaşınız ve *derleme c* , *AssemblyB*'ye başvuruyorsa, *derleme c* ,C# *a derlemesinde*`internal` () veya `Friend` (Visual Basic) türlerine erişim sahibi olmaz.
 
-The compiler performs some basic validation of the friend assembly name passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute. If *Assembly A* declares *AssemblyB* as a friend assembly, the validation rules are as follows:
+Derleyici, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğine geçirilen arkadaş derleme adının bazı temel doğrulamasını gerçekleştirir. Eğer *derlemesi bir* Friend derlemesi olarak *AssemblyB* bildirirse, doğrulama kuralları aşağıdaki gibidir:
 
-- If *Assembly A* is strong named, *AssemblyB* must also be strong named. The friend assembly name that is passed to the attribute must consist of the assembly name and the public key of the strong-name key that is used to sign *AssemblyB*.
+- *Derleme A* tanımlayıcı olarak adlandırılmışsa, *AssemblyB* de tanımlayıcı adlandırılmış olmalıdır. Özniteliğine geçirilen arkadaş derleme adı, *AssemblyB*imzalamak için kullanılan tanımlayıcı ad anahtarının derleme adından ve ortak anahtarından oluşmalıdır.
 
-     The friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute cannot be the strong name of *AssemblyB*. Don't include the assembly version, culture, architecture, or public key token.
+     <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğine geçirilen arkadaş derleme adı *AssemblyB*'nin tanımlayıcı adı olamaz. Bütünleştirilmiş kod sürümü, kültür, mimari veya ortak anahtar belirtecini eklemeyin.
 
-- If *Assembly A* is not strong named, the friend assembly name should consist of only the assembly name. For more information, see [How to: Create unsigned friend assemblies](create-unsigned-friend.md).
+- *Derleme A* tanımlayıcı adlandırılmış değilse, arkadaş derleme adı yalnızca derleme adından oluşmalıdır. Daha fazla bilgi için bkz. [nasıl yapılır: imzasız arkadaş derlemeleri oluşturma](create-unsigned-friend.md).
 
-- If *AssemblyB* is strong named, you must specify the strong-name key for *AssemblyB* by using the project setting or the command-line `/keyfile` compiler option. For more information, see [How to: Create signed friend assemblies](create-signed-friend.md).
+- *AssemblyB* tanımlayıcı adlandırılmış ise, proje ayarını veya komut satırı `/keyfile` derleyici seçeneğini kullanarak *AssemblyB* için tanımlayıcı ad anahtarını belirtmeniz gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: imzalı arkadaş derlemeleri oluşturma](create-signed-friend.md).
 
- The <xref:System.Security.Permissions.StrongNameIdentityPermission> class also provides the ability to share types, with the following differences:
+ <xref:System.Security.Permissions.StrongNameIdentityPermission> sınıfı, aşağıdaki farklılıklarla türleri paylaşma özelliği de sağlar:
 
-- <xref:System.Security.Permissions.StrongNameIdentityPermission> applies to an individual type, while a friend assembly applies to the whole assembly.
+- <xref:System.Security.Permissions.StrongNameIdentityPermission> tek bir tür için geçerlidir, ancak bir arkadaş derleme tüm derleme için geçerlidir.
 
-- If there are hundreds of types in *Assembly A* that you want to share with *AssemblyB*, you have to add <xref:System.Security.Permissions.StrongNameIdentityPermission> to all of them. If you use a friend assembly, you only need to declare the friend relationship once.
+- *Bir derlemede* *AssemblyB*ile paylaşmak istediğiniz yüzlerce tür varsa, tümüne <xref:System.Security.Permissions.StrongNameIdentityPermission> eklemeniz gerekir. Bir arkadaş derleme kullanıyorsanız, yalnızca bir defa arkadaş ilişki bildirmeniz gerekir.
 
-- If you use <xref:System.Security.Permissions.StrongNameIdentityPermission>, the types you want to share have to be declared as public. If you use a friend assembly, the shared types are declared as `internal` (C#) or `Friend` (Visual Basic).
+- <xref:System.Security.Permissions.StrongNameIdentityPermission>kullanıyorsanız, paylaşmak istediğiniz türlerin ortak olarak bildirilmesini gerekir. Bir arkadaş derleme kullanıyorsanız, paylaşılan türler `internal` (C#) veya `Friend` (Visual Basic) olarak belirtilir.
 
-For information about how to access an assembly's `internal` (C#) or `Friend` (Visual Basic) types and methods from a module file (a file with the *.netmodule* extension), see [-moduleassemblyname (C#)](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md) or [-moduleassemblyname (Visual Basic)](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).
+Bir modül dosyasından ( *. netmodule* uzantılı bir dosya) birC#derlemenin `internal` () veya `Friend` (Visual Basic) türlerine ve yöntemlerine erişme hakkında daha fazla bilgi için, bkz: [-moduleassemblynameC#()](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md) veya [-moduleassemblyname (Visual Basic)](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - <xref:System.Security.Permissions.StrongNameIdentityPermission>
-- [How to: Create unsigned friend assemblies](create-unsigned-friend.md)
-- [How to: Create signed friend assemblies](create-signed-friend.md)
+- [Nasıl yapılır: imzasız arkadaş derlemeleri oluşturma](create-unsigned-friend.md)
+- [Nasıl yapılır: imzalı arkadaş derlemeleri oluşturma](create-signed-friend.md)
 - [.NET’te bütünleştirilmiş kodlar](index.md)
-- [C# programming guide](../../csharp/programming-guide/index.md)
-- [Programming concepts (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)
+- [C#Programlama Kılavuzu](../../csharp/programming-guide/index.md)
+- [Programlama kavramları (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)

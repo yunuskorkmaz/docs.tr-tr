@@ -1,5 +1,5 @@
 ---
-title: Constraints on type parameters - C# Programming Guide
+title: Tür parametrelerine yönelik kısıtlamalar- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 04/12/2018
 helpviewer_keywords:
@@ -14,104 +14,104 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204634"
 ---
-# <a name="constraints-on-type-parameters-c-programming-guide"></a>Constraints on type parameters (C# Programming Guide)
+# <a name="constraints-on-type-parameters-c-programming-guide"></a>Tür Parametrelerindeki Kısıtlamalar (C# Programlama Kılavuzu)
 
-Constraints inform the compiler about the capabilities a type argument must have. Without any constraints, the type argument could be any type. The compiler can only assume the members of <xref:System.Object?displayProperty=nameWithType>, which is the ultimate base class for any .NET type. For more information, see [Why use constraints](#why-use-constraints). If client code tries to instantiate your class by using a type that is not allowed by a constraint, the result is a compile-time error. Constraints are specified by using the `where` contextual keyword. The following table lists the seven types of constraints:
+Kısıtlamalar, derleyicisini bir tür bağımsız değişkeni olması gereken yetenekler hakkında bilgilendirir. Herhangi bir kısıtlama olmadan tür bağımsız değişkeni herhangi bir tür olabilir. Derleyici yalnızca, tüm .NET türleri için en son temel sınıf olan <xref:System.Object?displayProperty=nameWithType>üyelerini kabul edebilir. Daha fazla bilgi için bkz. [kısıtlamaların neden kullanılması](#why-use-constraints). İstemci kodu bir kısıtlama tarafından izin verilmeyen bir tür kullanarak sınıfınızın örneğini oluşturmaya çalışırsa, sonuç derleme zamanı hatasıdır. Kısıtlamalar `where` bağlamsal anahtar sözcüğü kullanılarak belirtilir. Aşağıdaki tabloda yedi tür kısıtlama listelenmektedir:
 
-|Constraint|Açıklama|
+|Kısıtlaması|Açıklama|
 |----------------|-----------------|
-|`where T : struct`|The type argument must be a non-nullable value type. For information about nullable value types, see [Nullable value types](../../language-reference/builtin-types/nullable-value-types.md). Because all value types have an accessible parameterless constructor, the `struct` constraint implies the `new()` constraint and can't be combined with the `new()` constraint. You also cannot combine the `struct` constraint with the `unmanaged` constraint.|
-|`where T : class`|The type argument must be a reference type. This constraint applies also to any class, interface, delegate, or array type.|
-|`where T : notnull`|The type argument must be a non-nullable type. The argument can be a non-nullable reference type in C# 8.0 or later, or a not nullable value type. This constraint applies also to any class, interface, delegate, or array type.|
-|`where T : unmanaged`|The type argument must be a non-nullable [unmanaged type](../../language-reference/builtin-types/unmanaged-types.md). The `unmanaged` constraint implies the `struct` constraint and can't be combined with either the `struct` or `new()` constraints.|
-|`where T : new()`|The type argument must have a public parameterless constructor. When used together with other constraints, the `new()` constraint must be specified last. The `new()` constraint can't be combined with the `struct` and `unmanaged` constraints.|
-|`where T :` *\<base class name>*|The type argument must be or derive from the specified base class.|
-|`where T :` *\<interface name>*|The type argument must be or implement the specified interface. Multiple interface constraints can be specified. The constraining interface can also be generic.|
-|`where T : U`|The type argument supplied for T must be or derive from the argument supplied for U.|
+|`where T : struct`|Tür bağımsız değişkeni null yapılamayan bir değer türü olmalıdır. Nullable değer türleri hakkında daha fazla bilgi için bkz. [Nullable değer türleri](../../language-reference/builtin-types/nullable-value-types.md). Tüm değer türlerinde erişilebilir parametresiz bir Oluşturucu olduğundan, `struct` kısıtlaması `new()` kısıtlamasını gösterir ve `new()` kısıtlaması ile birleştirilemez. Ayrıca `struct` kısıtlamasını `unmanaged` kısıtlamasıyla birleştiremezsiniz.|
+|`where T : class`|Tür bağımsız değişkeni bir başvuru türü olmalıdır. Bu kısıtlama, her sınıf, arabirim, temsilci veya dizi türü için de geçerlidir.|
+|`where T : notnull`|Tür bağımsız değişkeni null yapılamayan bir tür olmalıdır. Bağımsız değişken, C# 8,0 veya sonraki bir sürümde null atanamaz bir başvuru türü veya null yapılamayan bir değer türü olabilir. Bu kısıtlama, her sınıf, arabirim, temsilci veya dizi türü için de geçerlidir.|
+|`where T : unmanaged`|Tür bağımsız değişkeni null atanamaz bir [yönetilmeyen tür](../../language-reference/builtin-types/unmanaged-types.md)olmalıdır. `unmanaged` kısıtlaması `struct` kısıtlamasını gösterir ve `struct` ya da `new()` kısıtlamalarıyla birleştirilemez.|
+|`where T : new()`|Tür bağımsız değişkeni Ortak parametresiz bir oluşturucuya sahip olmalıdır. Diğer kısıtlamalarla birlikte kullanıldığında, `new()` kısıtlamasının en son belirtilmesi gerekir. `new()` kısıtlaması `struct` ve `unmanaged` kısıtlamalarıyla birleştirilemez.|
+|`where T :` *\<temel sınıf adı >*|Tür bağımsız değişkeni belirtilen temel sınıftan olmalıdır veya türetilmelidir.|
+|`where T :` *\<arabirimi adı >*|Tür bağımsız değişkeni belirtilen arabirimi içermelidir veya uygulamalıdır. Birden çok arabirim kısıtlaması belirlenebilir. Kısıtlama arabirimi de genel olabilir.|
+|`where T : U`|T için sağlanan tür bağımsız değişkeni U için sağlanan bağımsız değişkenden türetilmiş veya türemelidir.|
 
-## <a name="why-use-constraints"></a>Why use constraints
+## <a name="why-use-constraints"></a>Neden kısıtlama kullanılmalıdır
 
-By constraining the type parameter, you increase the number of allowable operations and method calls to those supported by the constraining type and all types in its inheritance hierarchy. When you design generic classes or methods, if you'll be performing any operation on the generic members beyond simple assignment or calling any methods not supported by <xref:System.Object?displayProperty=nameWithType>, you'll have to apply constraints to the type parameter. For example, the base class constraint tells the compiler that only objects of this type or derived from this type will be used as type arguments. Once the compiler has this guarantee, it can allow methods of that type to be called in the generic class. The following code example demonstrates the functionality you can add to the `GenericList<T>` class (in [Introduction to Generics](../../../standard/generics/index.md)) by applying a base class constraint.
+Tür parametresini kısıtlayan, izin verilen işlem ve metot çağrılarının sayısını kısıtlayan türü tarafından desteklenenlere ve devralma hiyerarşisindeki tüm türlere göre artırırsınız. Genel sınıfları veya yöntemleri tasarlarken, Genel Üyeler üzerinde basit atama veya <xref:System.Object?displayProperty=nameWithType>tarafından desteklenmeyen yöntemler çağırma durumunda herhangi bir işlem gerçekleştiriyorsunuz, tür parametresine kısıtlamalar uygulamanız gerekir. Örneğin, temel sınıf kısıtlaması derleyiciye yalnızca bu türden veya bu türden türetilmiş nesnelerin tür bağımsız değişkenleri olarak kullanılacağını söyler. Derleyiciye bu garanti verildikten sonra, genel sınıfta bu tür yöntemlerin çağrılmasına izin verebilir. Aşağıdaki kod örneği, bir temel sınıf kısıtlaması uygulayarak `GenericList<T>` sınıfına ekleyebileceğiniz işlevselliği gösterir ( [Genel türlere giriş](../../../standard/generics/index.md)olarak).
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#9)]
 
-The constraint enables the generic class to use the `Employee.Name` property. The constraint specifies that all items of type `T` are guaranteed to be either an `Employee` object or an object that inherits from `Employee`.
+Kısıtlama, genel sınıfın `Employee.Name` özelliğini kullanmasını sağlar. Kısıtlama, `T` türündeki tüm öğelerin `Employee` bir nesne veya `Employee`devralan bir nesne olduğunu belirtir.
 
-Multiple constraints can be applied to the same type parameter, and the constraints themselves can be generic types, as follows:
+Aynı tür parametresine birden çok kısıtlama uygulanabilir ve kısıtlamalar aşağıdaki gibi genel türler olabilir:
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#10)]
 
-When applying the `where T : class` constraint, avoid the `==` and `!=` operators on the type parameter because these operators will test for reference identity only, not for value equality. This behavior occurs even if these operators are overloaded in a type that is used as an argument. The following code illustrates this point; the output is false even though the <xref:System.String> class overloads the `==` operator.
+`where T : class` kısıtlaması uygulanırken, tür parametresindeki `==` ve `!=` işleçlerden kaçının, çünkü bu işleçler yalnızca başvuru kimliğini test edecek, değer eşitlik için değil. Bu davranış, bu işleçler bağımsız değişken olarak kullanılan bir türde aşırı yüklense bile oluşur. Aşağıdaki kod bu noktayı gösterir; <xref:System.String> sınıfı `==` işlecini aşırı yüklese de çıkış yanlış olur.
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#11)]
 
-The compiler only knows that `T` is a reference type at compile time and must use the default operators that are valid for all reference types. If you must test for value equality, the recommended way is to also apply the `where T : IEquatable<T>` or `where T : IComparable<T>` constraint and implement the interface in any class that will be used to construct the generic class.
+Derleyici, derleme zamanında `T` bir başvuru türü olduğunu ve tüm başvuru türleri için geçerli olan varsayılan işleçleri kullanması gerektiğini bilir. Değer eşitlik için test etmeniz gerekiyorsa, önerilen yol `where T : IEquatable<T>` veya `where T : IComparable<T>` kısıtlamasını de uygulamak ve arayüzü genel sınıfı oluşturmak için kullanılacak herhangi bir sınıfa uygulamaktır.
 
-## <a name="constraining-multiple-parameters"></a>Constraining multiple parameters
+## <a name="constraining-multiple-parameters"></a>Birden çok parametreyi kısıtlama
 
-You can apply constraints to multiple parameters, and multiple constraints to a single parameter, as shown in the following example:
+Aşağıdaki örnekte gösterildiği gibi birden çok parametreye kısıtlama uygulayabilir ve tek bir parametreye birden çok kısıtlama uygulayabilirsiniz:
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#12)]
 
-## <a name="unbounded-type-parameters"></a>Unbounded type parameters
+## <a name="unbounded-type-parameters"></a>Sınırlandırılmamış tür parametreleri
 
- Type parameters that have no constraints, such as T in public class `SampleClass<T>{}`, are called unbounded type parameters. Unbounded type parameters have the following rules:
+ Ortak sınıf `SampleClass<T>{}`gibi hiçbir kısıtlaması olmayan tür parametrelerine, sınırlandırılmamış tür parametreleri denir. Sınırlandırılmamış tür parametreleri aşağıdaki kurallara sahiptir:
 
-- The `!=` and `==` operators can't be used because there's no guarantee that the concrete type argument will support these operators.
-- They can be converted to and from `System.Object` or explicitly converted to any interface type.
-- You can compare them to [null](../../language-reference/keywords/null.md). If an unbounded parameter is compared to `null`, the comparison will always return false if the type argument is a value type.
+- Somut tür bağımsız değişkeninin bu işleçleri destekleyeceği garantisi olmadığından `!=` ve `==` işleçleri kullanılamıyor.
+- Bunlara veya `System.Object` dönüştürülebilir ya da açıkça herhangi bir arabirim türüne dönüştürülebilir.
+- Bunları [null](../../language-reference/keywords/null.md)ile karşılaştırabilirsiniz. Sınırlandırılmamış bir parametre `null`ile karşılaştırıldığında, tür bağımsız değişkeni bir değer türündeyse karşılaştırma her zaman false döndürür.
 
-## <a name="type-parameters-as-constraints"></a>Type parameters as constraints
+## <a name="type-parameters-as-constraints"></a>Parametreleri kısıtlamalar olarak yazın
 
-The use of a generic type parameter as a constraint is useful when a member function with its own type parameter has to constrain that parameter to the type parameter of the containing type, as shown in the following example:
+Genel tür parametresinin bir kısıtlama olarak kullanılması, aşağıdaki örnekte gösterildiği gibi, kendi tür parametresine sahip bir üye işlevi bu parametreyi kapsayan türün tür parametresiyle kısıtlamak için yararlıdır:
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#13)]
 
-In the previous example, `T` is a type constraint in the context of the `Add` method, and an unbounded type parameter in the context of the `List` class.
+Önceki örnekte `T`, `Add` yönteminin bağlamındaki bir tür kısıtlamasıdır ve `List` sınıfının bağlamında sınırsız bir tür parametresi olur.
 
-Type parameters can also be used as constraints in generic class definitions. The type parameter must be declared within the angle brackets together with any other type parameters:
+Tür parametreleri, genel sınıf tanımlarında kısıtlama olarak da kullanılabilir. Tür parametresi, diğer tür parametreleriyle birlikte açılı ayraç içinde bildirilmelidir:
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#14)]
 
-The usefulness of type parameters as constraints with generic classes is limited because the compiler can assume nothing about the type parameter except that it derives from `System.Object`. Use type parameters as constraints on generic classes in scenarios in which you want to enforce an inheritance relationship between two type parameters.
+Derleyici tür parametresi hakkında hiçbir şey `System.Object`türetilmediği hariç, genel sınıflarla kısıtlamalar olarak tür parametrelerinin kullanışlılığı sınırlıdır. Tür parametrelerini, iki tür parametresi arasında bir devralma ilişkisi uygulamak istediğiniz senaryolarda genel sınıflarda kısıtlamalar olarak kullanın.
 
-## <a name="notnull-constraint"></a>NotNull constraint
+## <a name="notnull-constraint"></a>NotNull kısıtlaması
 
-Beginning with C# 8.0, you can use the `notnull` constraint to specify that the type argument must be a non-nullable value type or non-nullable reference type. The `notnull` constraint can only be used in a `nullable enable` context. The compiler generates a warning if you add the `notnull` constraint in a nullable oblivious context. 
+8,0 ile C# başlayarak, tür bağımsız değişkeninin null yapılamayan bir değer türü veya null yapılamayan bir başvuru türü olması gerektiğini belirtmek için `notnull` kısıtlamasını kullanabilirsiniz. `notnull` kısıtlaması yalnızca bir `nullable enable` bağlamında kullanılabilir. `notnull` kısıtlamasını null yapılabilir bir zorunluluvou bağlamına eklerseniz derleyici bir uyarı oluşturur. 
 
-Unlike other constraints, when a type argument violates the `notnull` constraint, the compiler generates a warning when that code is compiled in a `nullable enable` context. If the code is compiled in a nullable oblivious context, the compiler doesn't generate any warnings or errors.
+Diğer kısıtlamaların aksine, bir tür bağımsız değişkeni `notnull` kısıtlamasını ihlal ettiğinde, bu kod bir `nullable enable` bağlamında derlenirse derleyici bir uyarı oluşturur. Kod, null yapılabilir bir zorunluluvou bağlamında derlenmişse, derleyici hiçbir uyarı veya hata oluşturmaz.
 
-## <a name="unmanaged-constraint"></a>Unmanaged constraint
+## <a name="unmanaged-constraint"></a>Yönetilmeyen kısıtlama
 
-Beginning with C# 7.3, you can use the `unmanaged` constraint to specify that the type parameter must be a non-nullable [unmanaged type](../../language-reference/builtin-types/unmanaged-types.md). The `unmanaged` constraint enables you to write reusable routines to work with types that can be manipulated as blocks of memory, as shown in the following example:
+7,3 ile C# başlayarak, tür parametresinin null atanamaz [yönetilmeyen bir tür](../../language-reference/builtin-types/unmanaged-types.md)olması gerektiğini belirtmek için `unmanaged` kısıtlamasını kullanabilirsiniz. `unmanaged` kısıtlaması, aşağıdaki örnekte gösterildiği gibi, bellek blokları olarak işlenebilen türlerle çalışmak için yeniden kullanılabilir yordamlar yazmanızı sağlar:
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 
-The preceding method must be compiled in an `unsafe` context because it uses the `sizeof` operator on a type not known to be a built-in type. Without the `unmanaged` constraint, the `sizeof` operator is unavailable.
+Yukarıdaki yöntemin, yerleşik tür olarak bilinen bir tür üzerinde `sizeof` işlecini kullandığından `unsafe` bağlamda derlenmesi gerekir. `unmanaged` kısıtlaması olmadan `sizeof` işleci kullanılamaz.
 
-The `unmanaged` constraint implies the `struct` constraint and can't be combined with it. Because the `struct` constraint implies the `new()` constraint, the `unmanaged` constraint can't be combined with the `new()` constraint as well.
+`unmanaged` kısıtlaması `struct` kısıtlamasını gösterir ve onunla birleştirilemez. `struct` kısıtlaması `new()` kısıtlamasını gösterdiği için `unmanaged` kısıtlaması de `new()` kısıtlaması ile birleştirilemez.
 
-## <a name="delegate-constraints"></a>Delegate constraints
+## <a name="delegate-constraints"></a>Temsilci kısıtlamaları
 
-Also beginning with C# 7.3, you can use <xref:System.Delegate?displayProperty=nameWithType> or <xref:System.MulticastDelegate?displayProperty=nameWithType> as a base class constraint. The CLR always allowed this constraint, but the C# language disallowed it. The `System.Delegate` constraint enables you to write code that works with delegates in a type-safe manner. The following code defines an extension method that combines two delegates provided they're the same type:
+Ayrıca, 7,3 C# ile başlayarak temel sınıf kısıtlaması olarak <xref:System.Delegate?displayProperty=nameWithType> veya <xref:System.MulticastDelegate?displayProperty=nameWithType> kullanabilirsiniz. CLR bu kısıtlamaya her zaman izin verilir, ancak C# dil izin vermez. `System.Delegate` kısıtlaması, temsilcilerle birlikte, tür açısından güvenli bir şekilde sorunsuz kod yazmanıza olanak sağlar. Aşağıdaki kod, iki temsilciyi aynı tür olduklarından birleştiren bir genişletme yöntemi tanımlar:
 
 [!code-csharp[using the delegate constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#16)]
 
-You can use the above method to combine delegates that are the same type:
+Aynı türdeki temsilcileri birleştirmek için yukarıdaki yöntemi kullanabilirsiniz:
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#17)]
 
-If you uncomment the last line, it won't compile. Both `first` and `test` are delegate types, but they're different delegate types.
+Son satırın açıklamasını kaldırırsanız, derlenmez. Hem `first` hem de `test` temsilci türleridir, ancak farklı temsilci türleridir.
 
-## <a name="enum-constraints"></a>Enum constraints
+## <a name="enum-constraints"></a>Sabit listesi kısıtlamaları
 
-Beginning in C# 7.3, you can also specify the <xref:System.Enum?displayProperty=nameWithType> type as a base class constraint. The CLR always allowed this constraint, but the C# language disallowed it. Generics using `System.Enum` provide type-safe programming to cache results from using the static methods in `System.Enum`. The following sample finds all the valid values for an enum type, and then builds a dictionary that maps those values to its string representation.
+C# 7,3 ' den başlayarak, <xref:System.Enum?displayProperty=nameWithType> türünü temel sınıf kısıtlaması olarak da belirtebilirsiniz. CLR bu kısıtlamaya her zaman izin verilir, ancak C# dil izin vermez. `System.Enum` kullanan genel türler, `System.Enum`statik yöntemlerin kullanılmasıyla sonuçları önbelleğe almak için tür kullanımı uyumlu programlama sağlar. Aşağıdaki örnek, bir sabit listesi türü için geçerli tüm değerleri bulur ve sonra bu değerleri dize gösterimiyle eşleyen bir sözlük oluşturur.
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
 
-The methods used make use of reflection, which has performance implications. You can call this method to build a collection that is cached and reused rather than repeating the calls that require reflection.
+Kullanılan yöntemler, performans etkilerine sahip olan yansıma kullanımını kullanır. Bu yöntemi, yansıma gerektiren çağrıları yinelemek yerine önbelleğe alınmış ve yeniden kullanılan bir koleksiyon oluşturmak için çağırabilirsiniz.
 
-You could use it as shown in the following sample to create an enum and build a dictionary of its values and names:
+Aşağıdaki örnekte gösterildiği gibi, bir sabit listesi oluşturmak ve değerlerini ve adlarını bir sözlüğü oluşturmak için kullanabilirsiniz:
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
 

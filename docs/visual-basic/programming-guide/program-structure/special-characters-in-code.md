@@ -38,54 +38,54 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347263"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Kod'da Özel Karakterler (Visual Basic)
-Sometimes you have to use special characters in your code, that is, characters that are not alphabetical or numeric. The punctuation and special characters in the Visual Basic character set have various uses, from organizing program text to defining the tasks that the compiler or the compiled program performs. They do not specify an operation to be performed.  
+Bazen kodunuzda özel karakterler kullanmanız gerekir, diğer bir deyişle, alfabetik veya sayısal olmayan karakterler. Visual Basic karakter kümesindeki noktalama ve özel karakterlerin çeşitli kullanımları vardır ve program metnini, derleyicinin ya da derlenmiş programın gerçekleştirdiği görevleri tanımlamaya yönelik olarak düzenler. Gerçekleştirilecek bir işlem belirtmez.  
   
-## <a name="parentheses"></a>Parentheses  
- Use parentheses when you define a procedure, such as a `Sub` or `Function`. You must enclose all procedure argument lists in parentheses. You also use parentheses for putting variables or arguments into logical groups, especially to override the default order of operator precedence in a complex expression. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="parentheses"></a>ayraçlar  
+ `Sub` veya `Function`gibi bir yordam tanımlarken ayraçları kullanın. Tüm yordam bağımsız değişken listelerini parantez içine almalısınız. Ayrıca, özellikle karmaşık bir ifadede işleç önceliği varsayılan sırasını geçersiz kılmak için, değişkenleri veya bağımsız değişkenleri mantıksal gruplara koymak için parantez de kullanabilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
   
  [!code-vb[VbVbcnConventions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#11)]  
   
- Following execution of the previous code, the value of `d` is 8.225 and the value of `e` is 3. The calculation for `d` uses the default precedence of `/` over `+` and is equivalent to `d = b + (c / a)`. The parentheses in the calculation for `e` override the default precedence.  
+ Önceki kodun yürütülmesi sırasında, `d` değeri 8,225 ve `e` değeri 3 ' dir. `d` hesaplama, `/` varsayılan önceliği `+` kullanır ve `d = b + (c / a)`eşdeğerdir. `e` hesaplamasında parantez varsayılan önceliği geçersiz kılar.  
   
 ## <a name="separators"></a>Ayırıcı  
- Separators do what their name suggests: they separate sections of code. In Visual Basic, the separator character is the colon (`:`). Use separators when you want to include multiple statements on a single line instead of separate lines. This saves space and improves the readability of your code. The following example shows three statements separated by colons.  
+ Ayırıcılar, adının ne gibi bir bölümünü ayırır: Visual Basic, ayırıcı karakter iki nokta olur (`:`). Ayrı satırlar yerine tek bir satıra birden çok deyim eklemek istediğinizde ayırıcılar kullanın. Bu, alanı kaydeder ve kodunuzun okunabilirliğini geliştirir. Aşağıdaki örnekte, iki nokta üst üste ile ayrılmış üç deyim gösterilmektedir.  
   
  [!code-vb[VbVbcnConventions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#12)]  
   
- For more information, see [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
+ Daha fazla bilgi için bkz. [nasıl yapılır: kod Içinde deyimleri kesme ve birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
- The colon (`:`) character is also used to identify a statement label. For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ İki nokta (`:`) karakteri de bir ifade etiketini tanımlamak için kullanılır. Daha fazla bilgi için bkz. [nasıl yapılır: Label deyimleri](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
-## <a name="concatenation"></a>Bitiştirme  
- Use the `&` operator for *concatenation*, or linking strings together. Do not confuse it with the `+` operator, which adds together numeric values. If you use the `+` operator to concatenate when you operate on numeric values, you can obtain incorrect results. The following example demonstrates this.  
+## <a name="concatenation"></a>Birleştirme  
+ *Birleştirmek*veya dizeleri birbirine bağlamak için `&` işlecini kullanın. Sayısal değerleri bir araya ekleyen `+` işleçle karıştırmayın. Sayısal değerler üzerinde çalışırken birleştirmek için `+` işlecini kullanırsanız, yanlış sonuçlar elde edebilirsiniz. Aşağıdaki örnek bunu gösterir.  
   
  [!code-vb[VbVbcnConventions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#13)]  
   
- Following execution of the previous code, the value of `resultA` is 21.01 and the value of `resultB` is "10.0111".  
+ Önceki kodun yürütülmesi sırasında, `resultA` değeri 21,01 ve `resultB` değeri "10,0111" olur.  
   
-## <a name="member-access-operators"></a>Member Access Operators  
- To access a member of a type, you use the dot (`.`) or exclamation point (`!`) operator between the type name and the member name.  
+## <a name="member-access-operators"></a>Üye erişim Işleçleri  
+ Bir türün üyesine erişmek için, tür adı ve üye adı arasında nokta (`.`) veya ünlem işareti (`!`) işlecini kullanırsınız.  
   
-### <a name="dot--operator"></a>Dot (.) Operator  
- Use the `.` operator on a class, structure, interface, or enumeration as a member access operator. The member can be a field, property, event, or method. Aşağıdaki örnek bunu göstermektedir.  
+### <a name="dot--operator"></a>Nokta (.) İşlecinde  
+ Bir sınıf, yapı, arabirim veya sabit listesi üzerinde `.` işlecini üye erişim işleci olarak kullanın. Üye bir alan, özellik, olay veya yöntem olabilir. Aşağıdaki örnek bunu göstermektedir.  
   
  [!code-vb[VbVbcnConventions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#14)]  
   
-### <a name="exclamation-point--operator"></a>Exclamation Point (!) Operator  
- Use the `!` operator only on a class or interface as a dictionary access operator. The class or interface must have a default property that accepts a single `String` argument. The identifier immediately following the `!` operator becomes the argument value passed to the default property as a string. The following example demonstrates this.  
+### <a name="exclamation-point--operator"></a>Ünlem işareti (!) İşlecinde  
+ `!` işlecini yalnızca bir sınıf veya arabirimde sözlük erişim işleci olarak kullanın. Sınıfın veya arabirimin tek bir `String` bağımsız değişkenini kabul eden bir varsayılan özelliği olmalıdır. `!` işlecinden hemen sonraki tanımlayıcı, varsayılan özelliğe dize olarak geçirilen bağımsız değişken değeri olur. Aşağıdaki örnek bunu gösterir.  
   
  [!code-vb[VbVbcnConventions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#15)]  
   
- The three output lines of `MsgBox` all display the value `32856`. The first line uses the traditional access to property `index`, the second makes use of the fact that `index` is the default property of class `hasDefault`, and the third uses dictionary access to the class.  
+ `MsgBox` her birinin üç çıkış satırı `32856`değeri görüntüler. İlk satır, özellik `index`için geleneksel erişimi kullanır, ikincisi, `index` sınıfının varsayılan özelliği olan `hasDefault`ve üçüncü sözlük ise sınıfa erişimi kullanır.  
   
- Note that the second operand of the `!` operator must be a valid Visual Basic identifier not enclosed in double quotation marks (`" "`). In other words, you cannot use a string literal or string variable. The following change to the last line of the `MsgBox` call generates an error because `"X"` is an enclosed string literal.  
+ `!` işlecinin ikinci işleneni, çift tırnak işaretleri (`" "`) içine alınmış geçerli bir Visual Basic tanımlayıcısı olmalıdır. Diğer bir deyişle, bir dize sabit değeri veya dize değişkeni kullanamazsınız. `MsgBox` çağrısının son satırına yapılan aşağıdaki değişiklik bir hata üretir çünkü `"X"` bir kapalı dize sabit değeri.  
   
  `"Dictionary access returns " & hD!"X")`  
   
 > [!NOTE]
-> References to default collections must be explicit. In particular, you cannot use the `!` operator on a late-bound variable.  
+> Varsayılan koleksiyonlara yapılan başvurular açık olmalıdır. Özellikle, `!` işlecini geç bağlı bir değişkende kullanamazsınız.  
   
- The `!` character is also used as the `Single` type character.  
+ `!` karakteri `Single` tür karakteri olarak da kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

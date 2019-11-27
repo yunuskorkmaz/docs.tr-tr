@@ -9,17 +9,17 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347141"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projecting XML in a Different Shape (Visual Basic)
-This topic shows an example of projecting XML that is in a different shape than the source XML.  
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>XML 'i farklı bir şekilde yansıtma (Visual Basic)
+Bu konuda, kaynak XML 'den farklı bir şekilde XML yansıtma örneği gösterilmektedir.  
   
- Many typical XML transformations consist of chained queries, as in this example. It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.  
+ Birçok tipik XML dönüştürmesi, bu örnekte olduğu gibi zincirleme sorgulardan oluşur. Bir dizi XML, proje ara sonuçları anonim türlerin veya adlandırılmış türlerin koleksiyonları olarak, son olarak da sonuçları kaynak XML 'den tamamen farklı bir şekilde yeniden XML 'ye proje ile başlatmak için yaygındır.  
   
 ## <a name="example"></a>Örnek  
- This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document. It also identifies the style and text of each paragraph. Finally, the example projects XML with a different shape. This example builds on the previous examples in this tutorial. The new statement that does the projection is called out in comments in the code below.  
+ Bu örnek, WordprocessingML belgesinden paragraf düğümlerini alarak bir WordprocessingML belgesini işler. Ayrıca, her bir paragrafın stilini ve metnini tanımlar. Son olarak, örnek proje XML 'SI farklı bir şekil ile. Bu örnekte, bu öğreticideki önceki örneklerde derleme yapılır. Yansıtmayı yapan yeni ifadeye aşağıdaki koddaki açıklamalarda bir tanesi çağırılır.  
   
- For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Bu örnek için kaynak belge oluşturmaya ilişkin yönergeler için bkz. [kaynak Office Open XML belgesi oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- This example uses classes from the WindowsBase assembly. It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.  
+ Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -160,7 +160,7 @@ Module Module1
 End Module  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  
@@ -228,10 +228,10 @@ End Module
 ```  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- In the next example, you'll query to find all the text in a Word document:  
+ Sonraki örnekte, bir Word belgesinde tüm metni bulmak için sorgulama yapacaksınız:  
   
-- [Finding Text in Word Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Word belgelerinde metin bulma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

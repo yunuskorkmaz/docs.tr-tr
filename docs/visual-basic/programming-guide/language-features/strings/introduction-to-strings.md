@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344307"
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>Visual Basic'de Dizelere Giriş
-This section describes the basic concepts behind using strings in Visual Basic.  
+Bu bölümde Visual Basic içindeki dizeler kullanılarak arka planda temel kavramlar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Dize Temelleri](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Introduces the basic concepts behind using strings and string variables.  
+ Dizeleri ve dize değişkenlerini kullanarak arka plandaki temel kavramları tanıtır.  
   
- [Types of String Manipulation Methods in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- Introduces several different ways to analyze and manipulate strings.  
+ [Visual Basic içindeki dize düzenleme yöntemlerinin türleri](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ Dizeleri çözümlemek ve işlemek için çeşitli farklı yollar sunar.  
   
- [How Culture Affects Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- Discusses how Visual Basic uses culture information to perform string conversions and comparisons.  
+ [Kültür Visual Basic içindeki dizeleri nasıl etkiler](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
+ Visual Basic dize dönüştürmeleri ve karşılaştırmaları gerçekleştirmek için kültür bilgilerini nasıl kullandığını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

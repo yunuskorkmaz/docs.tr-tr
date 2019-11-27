@@ -13,15 +13,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332944"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>Nasıl yapılır: XML Ad Alanı Öneklerini Bildirme ve Kullanma (Visual Basic)
-This example shows how to import the XML namespace prefix `ns` and use it in an XML literal and XML axis properties.  
+Bu örnek, `ns` XML ad alanı ön ekinin nasıl içeri aktarılacağını ve bir XML sabit değerinde ve XML eksen özelliklerinde nasıl kullanılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbXMLSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- This example requires:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- A reference to the <xref:System.Xml.Linq> namespace.  
+- <xref:System.Xml.Linq> ad alanına bir başvuru.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -29,5 +29,5 @@ This example shows how to import the XML namespace prefix `ns` and use it in an 
 - [Imports Deyimi (XML Ad Alanı)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
 - [XML Özniteliği Axis Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
 - [XML Value Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
-- [Accessing XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+- [Visual Basic XML 'e erişme](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

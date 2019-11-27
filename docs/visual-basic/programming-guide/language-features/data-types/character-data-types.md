@@ -16,35 +16,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346388"
 ---
 # <a name="character-data-types-visual-basic"></a>Karakter Veri Türleri (Visual Basic)
-Visual Basic provides *character data types* to deal with printable and displayable characters. While they both deal with Unicode characters, `Char` holds a single character whereas `String` contains an indefinite number of characters.  
+Visual Basic, yazdırılabilir ve görüntülenebilen karakterlerle uğraşmak için *karakter veri türleri* sağlar. Her ikisi de Unicode karakterlerle ilgilenirken `Char` tek bir karakter tutar, ancak `String` sonsuz sayıda karakter içerir.  
   
- For a table that displays a side-by-side comparison of the Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
+ Visual Basic veri türlerinin yan yana karşılaştırmasını görüntüleyen bir tablo için bkz. [veri türleri](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="char-type"></a>Char Type  
- The `Char` data type is a single two-byte (16-bit) Unicode character. If a variable always stores exactly one character, declare it as `Char`. Örneğin:  
+## <a name="char-type"></a>Karakter türü  
+ `Char` veri türü, tek bir iki baytlık (16 bit) Unicode karakterdir. Bir değişken her zaman tam olarak bir karakter depoluyorsa, `Char`olarak bildirin. Örneğin:  
   
  [!code-vb[VbVbalrCharTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#1)]
   
- Each possible value in a `Char` or `String` variable is a *code point*, or character code, in the Unicode character set. Unicode characters include the basic ASCII character set, various other alphabet letters, accents, currency symbols, fractions, diacritics, and mathematical and technical symbols.  
+ Bir `Char` veya `String` değişkeninde olası her bir değer, Unicode karakter kümesindeki bir *kod noktasıdır*veya karakter kodudur. Unicode karakterler temel ASCII karakter kümesini, diğer diğer alfabe harflerini, vurguları, para birimi sembollerini, kesirleri, vurguları ve matematik ve teknik sembolleri içerir.  
   
 > [!NOTE]
-> The Unicode character set reserves the code points D800 through DFFF (55296 through 55551 decimal) for *surrogate pairs*, which require two 16-bit values to represent a single code point. A `Char` variable cannot hold a surrogate pair, and a `String` uses two positions to hold such a pair.  
+> Unicode karakter kümesi, D800-DFFF (55296 ile 55551 ondalık) ile birlikte, tek bir kod noktasını temsil etmek için 2 16-bit değerleri gerektiren *yedek çiftleri*için bu kod noktalarını ayırır. `Char` değişken bir vekil çifti tutamaz ve bir `String` böyle bir çiftin bulunduğu iki konum kullanır.  
   
- For more information, see [Char Data Type](../../../../visual-basic/language-reference/data-types/char-data-type.md).  
+ Daha fazla bilgi için bkz. [char veri türü](../../../../visual-basic/language-reference/data-types/char-data-type.md).  
   
-## <a name="string-type"></a>String Type  
- The `String` data type is a sequence of zero or more two-byte (16-bit) Unicode characters. If a variable can contain an indefinite number of characters, declare it as `String`. Örneğin:  
+## <a name="string-type"></a>Dize türü  
+ `String` veri türü, sıfır veya daha fazla iki baytlık (16 bit) Unicode karakterden oluşan bir dizidir. Bir değişken belirsiz sayıda karakter içeriyorsa, `String`olarak bildirin. Örneğin:  
   
  [!code-vb[VbVbalrCharTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#2)]
   
- For more information, see [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
+ Daha fazla bilgi için bkz. [dize veri türü](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Bileşik Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic dönüşümler yazın](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

@@ -27,7 +27,7 @@ ms.locfileid: "74343821"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else Yönergeleri
 
-Conditionally compiles selected blocks of Visual Basic code.
+Seçili Visual Basic kodu bloklarını koşullu olarak derler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,26 +47,26 @@ Conditionally compiles selected blocks of Visual Basic code.
 ## <a name="parts"></a>Bölümler
 
 `expression`  
-Required for `#If` and `#ElseIf` statements, optional elsewhere. Any expression, consisting exclusively of one or more conditional compiler constants, literals, and operators, that evaluates to `True` or `False`.
+`#If` ve `#ElseIf` deyimleri için gereklidir, başka bir yerde. Yalnızca bir veya daha fazla koşullu derleyici sabiti, sabit değer ve işleçlerden oluşan, `True` veya `False`değerlendirilen herhangi bir ifade.
 
 `statements`  
-Required for `#If` statement block, optional elsewhere. Visual Basic program lines or compiler directives that are compiled if the associated expression evaluates to `True`.
+`#If` bildiri bloğu için gerekli, başka bir yerde. İlişkili ifade `True`olarak değerlendirilirse derlenen program satırları veya derleyici yönergeleri Visual Basic.
 
 `#End If`  
-Terminates the `#If` statement block.
+`#If` bildiri bloğunu sonlandırır.
 
 ## <a name="remarks"></a>Açıklamalar
 
-On the surface, the behavior of the `#If...Then...#Else` directives appears the same as that of the `If...Then...Else` statements. However, the `#If...Then...#Else` directives evaluate what is compiled by the compiler, whereas the `If...Then...Else` statements evaluate conditions at run time.
+Yüzeyde, `#If...Then...#Else` yönergelerinin davranışı `If...Then...Else` deyimleriyle aynı şekilde görünür. Ancak, `#If...Then...#Else` yönergeleri derleyicinin derlendiğini değerlendirir, ancak `If...Then...Else` deyimleri çalışma zamanında koşulları değerlendirir.
 
-Conditional compilation is typically used to compile the same program for different platforms. It is also used to prevent debugging code from appearing in an executable file. Code excluded during conditional compilation is completely omitted from the final executable file, so it has no effect on size or performance.
+Koşullu derleme genellikle farklı platformlar için aynı programı derlemek için kullanılır. Hata ayıklama kodunun yürütülebilir bir dosyada görünmesini engellemek için de kullanılır. Koşullu derleme sırasında dışlanan kod, son yürütülebilir dosyadan tamamen atlandığından, boyut veya performans üzerinde hiçbir etkisi olmaz.
 
-Regardless of the outcome of any evaluation, all expressions are evaluated using `Option Compare Binary`. The `Option Compare` statement does not affect expressions in `#If` and `#ElseIf` statements.
+Herhangi bir değerlendirmenin sonucuna bakılmaksızın, tüm ifadeler `Option Compare Binary`kullanılarak değerlendirilir. `Option Compare` deyimi `#If` ve `#ElseIf` deyimlerindeki ifadeleri etkilemez.
 
 > [!NOTE]
-> No single-line form of the `#If`, `#Else`, `#ElseIf`, and `#End If` directives exists. No other code can appear on the same line as any of the directives.
+> `#If`, `#Else`, `#ElseIf`ve `#End If` yönergelerinin tek satırlık formu yoktur. Diğer hiçbir kod, yönergelerden biriyle aynı satırda görünemez.
 
-The statements within a conditional compilation block must be complete logical statements. For example, you cannot conditionally compile only the attributes of a function, but you can conditionally declare the function along with its attributes:
+Koşullu derleme bloğunun içindeki deyimler, tamamlanmış Mantıksal deyimler olmalıdır. Örneğin, yalnızca bir işlevin özniteliklerini koşullu olarak derlenemez, ancak işlevi öznitelikleri ile birlikte koşullu olarak bildirebilirsiniz:
 
 ```vb
 #If DEBUG Then
@@ -80,7 +80,7 @@ Public Function SomeFunction() As String
 
 ## <a name="example"></a>Örnek
 
-This example uses the `#If...Then...#Else` construct to determine whether to compile certain statements.
+Bu örnek, belirli deyimlerin derlenip derlenmeyeceğini anlamak için `#If...Then...#Else` yapısını kullanır.
 
 [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]
 

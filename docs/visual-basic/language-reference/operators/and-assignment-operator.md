@@ -1,5 +1,5 @@
 ---
-title: '&amp;= Operator'
+title: '&amp;= Işleci'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.&=
@@ -17,8 +17,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350261"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;= Operator (Visual Basic)
-Concatenates a `String` expression to a `String` variable or property and assigns the result to the variable or property.  
+# <a name="amp-operator-visual-basic"></a>&amp;= Işleci (Visual Basic)
+Bir `String` ifadesini `String` değişkenine veya özelliğe ekler ve sonucu değişkenine veya özelliğe atar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,19 +28,19 @@ variableorproperty &= expression
   
 ## <a name="parts"></a>Bölümler  
  `variableorproperty`  
- Gerekli. Any `String` variable or property.  
+ Gerekli. Herhangi bir `String` değişkeni veya özelliği.  
   
  `expression`  
- Gerekli. Any `String` expression.  
+ Gerekli. Herhangi bir `String` ifadesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The element on the left side of the `&=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). The `&=` operator concatenates the `String` expression on its right to the `String` variable or property on its left, and assigns the result to the variable or property on its left.  
+ `&=` işlecinin sol tarafındaki öğe basit bir skaler değişken, bir özellik veya bir dizi öğesi olabilir. Değişken veya özellik [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)olamaz. `&=` işleci, sol tarafında bulunan `String` değişkenine veya özelliğe sağ taraftaki `String` ifadesini birleştirir ve sonucu, sol tarafında bulunan değişkene veya özelliğe atar.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- The [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `&` operator affects the behavior of the `&=` operator. If your code uses `&=` on a class or structure that overloads `&`, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ [& işleci](../../../visual-basic/language-reference/operators/concatenation-operator.md) *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. `&` işleci aşırı yükleme `&=` işlecinin davranışını etkiler. Kodunuz, `&`aşırı yükleyen bir sınıf veya yapı üzerinde `&=` kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- The following example uses the `&=` operator to concatenate two `String` variables and assign the result to the first variable.  
+ Aşağıdaki örnek iki `String` değişkeni birleştirmek ve sonucu ilk değişkene atamak için `&=` işlecini kullanır.  
   
  [!code-vb[VbVbalrOperators#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#3)]  
   
@@ -50,6 +50,6 @@ variableorproperty &= expression
 - [+= İşleci](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)
 - [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Birleştirme İşleçleri](../../../visual-basic/language-reference/operators/concatenation-operators.md)
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)

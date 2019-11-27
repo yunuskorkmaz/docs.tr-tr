@@ -1,5 +1,5 @@
 ---
-title: 'How to: View assembly contents'
+title: 'Nasıl yapılır: derleme içeriğini görüntüleme'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, viewing information
@@ -21,21 +21,21 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347053"
 ---
-# <a name="how-to-view-assembly-contents"></a>How to: View assembly contents
+# <a name="how-to-view-assembly-contents"></a>Nasıl yapılır: derleme içeriğini görüntüleme
 
-You can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to view Microsoft intermediate language (MSIL) information in a file. If the file being examined is an assembly, this information can include the assembly's attributes and references to other modules and assemblies. This information can be helpful in determining whether a file is an assembly or part of an assembly and whether the file has references to other modules or assemblies.
+Bir dosyadaki Microsoft ara dili (MSIL) bilgilerini görüntülemek için [ıldadsm. exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz. İncelenen dosya bir derlemedir, bu bilgiler derlemenin özniteliklerini ve diğer modüller ve derlemelere yönelik başvuruları içerebilir. Bu bilgiler, bir dosyanın derleme veya bir derlemenin parçası olup olmadığını ve dosyanın diğer modüllere veya derlemelere başvurular içerip içermediğini belirlemede yardımcı olabilir.
 
-To display the contents of an assembly using *Ildasm.exe*, enter **ildasm \<assembly name>** at a command prompt. For example, the following command disassembles the *Hello.exe* assembly.
+*Ildadsm. exe*' yi kullanarak bir derlemenin içeriğini göstermek için, komut istemine **ıldadsm \<bütünleştirilmiş kod adı >** girin. Örneğin, aşağıdaki komut *Hello. exe* derlemesini ayrıştırır.
 
 ```cmd
 ildasm Hello.exe
 ```
 
-To view assembly manifest information, double-click the **Manifest** icon in the MSIL Disassembler window.
+Derleme bildirimi bilgilerini görüntülemek için MSIL ayrıştırma penceresindeki **bildirim** simgesine çift tıklayın.
 
 ## <a name="example"></a>Örnek
 
-The following example starts with a basic "Hello World" program. After compiling the program, use *Ildasm.exe* to disassemble the *Hello.exe* assembly and view the assembly manifest.
+Aşağıdaki örnek, temel bir "Merhaba Dünya" programıyla başlar. Program derlendikten sonra, *Hello. exe* derlemesini ve derleme bildirimini görüntülemek Için *ıldadsm. exe* ' yi kullanın.
 
 ```cpp
 using namespace System;
@@ -75,7 +75,7 @@ Class MainApp
 End Class
 ```
 
-Running the command *ildasm.exe* on the *Hello.exe* assembly and double-clicking the **Manifest** icon in the MSIL Disassembler window produces the following output:
+*Hello. exe* derlemesinde *ıldadsm. exe* komutunu çalıştırmak ve MSIL ayrıştırma penceresindeki **bildirim** simgesine çift tıklamak aşağıdaki çıktıyı üretir:
 
 ```output
 // Metadata version: v4.0.30319
@@ -102,27 +102,27 @@ Running the command *ildasm.exe* on the *Hello.exe* assembly and double-clicking
 // Image base: 0x00600000
 ```
 
-The following table describes each directive in the assembly manifest of the *Hello.exe* assembly used in the example:
+Aşağıdaki tabloda, örnekte kullanılan *Hello. exe* derlemesinin derleme bildirimindeki her yönerge açıklanmaktadır:
 
-|Directive|Açıklama|
+|Yönergesi|Açıklama|
 |---------------|-----------------|
-|**.assembly extern \<assembly name>**|Specifies another assembly that contains items referenced by the current module (in this example, `mscorlib`).|
-|**.publickeytoken \<token>**|Specifies the token of the actual key of the referenced assembly.|
-|**.ver \<version number>**|Specifies the version number of the referenced assembly.|
-|**.assembly \<assembly name>**|Specifies the assembly name.|
-|**.hash algorithm \<int32 value>**|Specifies the hash algorithm used.|
-|**.ver \<version number>**|Specifies the version number of the assembly.|
-|**.module \<file name>**|Specifies the name of the modules that make up the assembly. In this example, the assembly consists of only one file.|
-|**.subsystem \<value>**|Specifies the application environment required for the program. In this example, the value 3 indicates that this executable is run from a console.|
-|**.corflags**|Currently a reserved field in the metadata.|
+|**. Assembly extern \<bütünleştirilmiş kod adı >**|Geçerli modülün başvurduğu öğeleri içeren başka bir derlemeyi belirtir (Bu örnekte, `mscorlib`).|
+|**. PublicKeyToken \<belirteci >**|Başvurulan derlemenin gerçek anahtarının belirtecini belirtir.|
+|**. ver \<sürüm numarası >**|Başvurulan derlemenin sürüm numarasını belirtir.|
+|**. Assembly \<bütünleştirilmiş kod adı >**|Derleme adını belirtir.|
+|**. Hash algoritması \<Int32 değeri >**|Kullanılan karma algoritmasını belirtir.|
+|**. ver \<sürüm numarası >**|Derlemenin sürüm numarasını belirtir.|
+|**. Module \<dosya adı >**|Derlemeyi oluşturan modüllerin adını belirtir. Bu örnekte, derleme yalnızca bir dosyadan oluşur.|
+|**. Subsystem \<değeri >**|Program için gereken uygulama ortamını belirtir. Bu örnekte, 3 değeri bu yürütülebilir dosyanın bir konsolundan çalıştırıldığını gösterir.|
+|**. CorFlags**|Şu anda meta verilerde ayrılmış bir alan.|
 
-An assembly manifest can contain a number of different directives, depending on the contents of the assembly. For an extensive list of the directives in the assembly manifest, see the Ecma documentation, especially "Partition II: Metadata Definition and Semantics" and "Partition III: CIL Instruction Set":
+Bütünleştirilmiş kod bildirimi, derlemenin içeriğine bağlı olarak bir dizi farklı yönergeler içerebilir. Derleme bildirimindeki yönergelerin kapsamlı bir listesi için, bkz. ECMA belgeleri, özellikle "Bölüm II: meta veri tanımı ve semantiği" ve "Bölüm III: CıL yönerge kümesi":
 
-- [ECMA C# and Common Language Infrastructure standards](/dotnet/standard/components#applicable-standards)
-- [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)
+- [ECMA C# ve ortak dil altyapısı standartları](/dotnet/standard/components#applicable-standards)
+- [Standart ECMA-335-ortak dil altyapısı (CLı)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Application domains and assemblies](../../framework/app-domains/application-domains.md#application-domains-and-assemblies)
-- [Application domains and assemblies how-to topics](../../framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
+- [Uygulama etki alanları ve derlemeler](../../framework/app-domains/application-domains.md#application-domains-and-assemblies)
+- [Uygulama etki alanları ve derlemeler ile ilgili nasıl yapılır konuları](../../framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
 - [Ildasm.exe (IL Ayrıştırıcı)](../../framework/tools/ildasm-exe-il-disassembler.md)

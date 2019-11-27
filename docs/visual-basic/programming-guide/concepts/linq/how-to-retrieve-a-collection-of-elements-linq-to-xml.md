@@ -1,5 +1,5 @@
 ---
-title: 'How to: Retrieve a Collection of Elements (LINQ to XML)'
+title: 'Nasıl yapılır: öğelerin koleksiyonunu alma (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2269f9de-8fb9-4666-b8a1-a4e754fa6a81
 ms.openlocfilehash: 592ef68206df59bc848644d0a62bf0efdb10609e
@@ -9,13 +9,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347592"
 ---
-# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a>How to: Retrieve a Collection of Elements (LINQ to XML) (Visual Basic)
-This topic demonstrates the <xref:System.Xml.Linq.XContainer.Elements%2A> method. This method retrieves a collection of the child elements of an element.  
+# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a>Nasıl yapılır: öğelerin koleksiyonunu alma (LINQ to XML) (Visual Basic)
+Bu konuda <xref:System.Xml.Linq.XContainer.Elements%2A> yöntemi gösterilmektedir. Bu yöntem, bir öğesinin alt öğelerinin bir koleksiyonunu alır.  
   
 ## <a name="example"></a>Örnek  
- This example iterates through the child elements of the `purchaseOrder` element.  
+ Bu örnek, `purchaseOrder` öğesinin alt öğeleri boyunca yinelenir.  
   
- This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: tipik satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -28,7 +28,7 @@ For Each el As XElement In childElements
 Next  
 ```  
   
- This example produces the following output.  
+ Bu örnek aşağıdaki çıktıyı üretir.  
   
 ```console  
 Name: Address  
@@ -39,4 +39,4 @@ Name: Items
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML Axes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML eksenleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

@@ -16,45 +16,45 @@ ms.locfileid: "74348838"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Farklı Dizinde Dosya Kopyası Oluşturma
 
-The `My.Computer.FileSystem.CopyFile` method allows you to copy files. Its parameters provide the ability to overwrite existing files, rename the file, show the progress of the operation, and allow the user to cancel the operation.  
+`My.Computer.FileSystem.CopyFile` yöntemi, dosyaları kopyalamanızı sağlar. Parametreleri var olan dosyaların üzerine yazma, dosyayı yeniden adlandırma, işlemin ilerlemesini gösterme ve kullanıcının işlemi iptal edebilmesini sağlar.  
   
-### <a name="to-copy-a-text-file-to-another-folder"></a>To copy a text file to another folder  
+### <a name="to-copy-a-text-file-to-another-folder"></a>Bir metin dosyasını başka bir klasöre kopyalamak için  
   
-- Use the `CopyFile` method to copy a file, specifying a source file and the target directory. The `overwrite` parameter allows you to specify whether or not to overwrite existing files. The following code examples demonstrate how to use `CopyFile`.  
+- Bir kaynak dosya ve hedef dizin belirterek bir dosyayı kopyalamak için `CopyFile` yöntemini kullanın. `overwrite` parametresi, var olan dosyaların üzerine yazılıp yazılmayacağını belirtmenize olanak tanır. Aşağıdaki kod örnekleri `CopyFile`nasıl kullanacağınızı göstermektedir.  
   
      [!code-vb[VbFileIOMisc#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#24)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- The following conditions may cause an exception to be thrown:  
+ Aşağıdaki koşullar bir özel durumun oluşturulmasına neden olabilir:  
   
-- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).  
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (\\\\.\\) (<xref:System.ArgumentException>) ile başlar.  
   
-- The system could not retrieve the absolute path (<xref:System.ArgumentException>).  
+- Sistem mutlak yolu alamadı (<xref:System.ArgumentException>).  
   
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).  
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.  
   
-- The source file is not valid or does not exist (<xref:System.IO.FileNotFoundException>).  
+- Kaynak dosya geçerli değil veya yok (<xref:System.IO.FileNotFoundException>).  
   
-- The combined path points to an existing directory (<xref:System.IO.IOException>).  
+- Birleşik yol, var olan bir dizine işaret eder (<xref:System.IO.IOException>).  
   
-- The destination file exists and `overwrite` is set to `False` (<xref:System.IO.IOException>).  
+- Hedef dosya vardır ve `overwrite` `False` (<xref:System.IO.IOException>) olarak ayarlanır.  
   
-- The user does not have sufficient permissions to access the file (<xref:System.IO.IOException>).  
+- Kullanıcı, dosyaya erişmek için yeterli izinlere sahip değil (<xref:System.IO.IOException>).  
   
-- A file in the target folder with the same name is in use (<xref:System.IO.IOException>).  
+- Hedef klasörde aynı ada sahip bir dosya kullanımda (<xref:System.IO.IOException>).  
   
-- A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).  
+- Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
   
-- `ShowUI` is set to `True`, `onUserCancel` is set to `ThrowException`, and the user has cancelled the operation (<xref:System.OperationCanceledException>).  
+- `ShowUI` `True`olarak ayarlanır `onUserCancel` `ThrowException`olarak ayarlanır ve Kullanıcı işlemi iptal etti (<xref:System.OperationCanceledException>).  
   
-- `ShowUI` is set to `True`, `onUserCancel` is set to `ThrowException`, and an unspecified I/O error occurs (<xref:System.OperationCanceledException>).  
+- `ShowUI` `True`olarak ayarlanır `onUserCancel` `ThrowException`olarak ayarlanır ve belirtilmemiş g/ç hatası oluşur (<xref:System.OperationCanceledException>).  
   
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).  
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
   
-- The user does not have required permission (<xref:System.UnauthorizedAccessException>).  
+- Kullanıcı gerekli izne sahip değil (<xref:System.UnauthorizedAccessException>).  
   
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).  
+- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo10::GetLOHObjectSizeThreshold
+title: 'ICorProfilerInfo10:: GetLOHObjectSizeThreshold'
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -18,9 +18,9 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427028"
 ---
-# <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10::GetLOHObjectSizeThreshold Method
+# <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10:: GetLOHObjectSizeThreshold yöntemi
 
-Gets the value of the configured large object heap (LOH) threshold.
+Yapılandırılmış büyük nesne yığını (LOH) eşiğinin değerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,22 +31,22 @@ HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 #### <a name="parameters"></a>Parametreler
 
 `pThreshold` \
-[out] The large object heap threshold in bytes.
+dışı Bayt cinsinden büyük nesne yığın eşiği.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Objects larger than the large object heap threshold will be allocated on the large object heap. Starting with .NET Core 3.0 the large object heap threshold is configurable, `pThreshold` will contain the active large object heap threshold size in bytes.
+Büyük nesne yığını eşiğinden daha büyük nesneler büyük nesne yığınında ayrılacaktır. .NET Core 3,0 ile başlayarak büyük nesne yığın eşiği yapılandırılabilir `pThreshold`, etkin büyük nesne yığını eşik boyutunu bayt cinsinden içerecektir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Platformlar:** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Header:** CorProf.idl, CorProf.h
+**Üst bilgi:** CorProf. IDL, CorProf. h
 
-**Library:** CorGuids.lib
+**Kitaplık:** Corguid. lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET sürümleri:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

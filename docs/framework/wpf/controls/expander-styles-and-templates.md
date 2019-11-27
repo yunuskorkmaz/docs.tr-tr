@@ -32,8 +32,8 @@ Bu konuda <xref:System.Windows.Controls.Expander> denetimine yönelik stiller ve
 |Devre dışı|Ortak durumlar|Denetim devre dışı bırakıldı.|  
 |Diğinize|Odaklardaki durumlar|Denetim odağa sahiptir.|  
 |Odaklanmadan gözetle|Odaklardaki durumlar|Denetimin odağı yok.|  
-|Genişletileceğini|ExpansionStates|Denetim genişletilir.|  
-|Tılan|ExpansionStates|Denetim genişletilmedi.|  
+|Genişletilmiş|ExpansionStates|Denetim genişletilir.|  
+|Daraltılmış|ExpansionStates|Denetim genişletilmedi.|  
 |Expandaşağı|Expanddirectiondurumları|Denetim aşağı genişletilir.|  
 |ExpandUp|Expanddirectiondurumları|Denetim genişler.|  
 |ExpandLeft|Expanddirectiondurumları|Denetim sola genişletilir.|  

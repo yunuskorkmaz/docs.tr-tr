@@ -23,7 +23,7 @@ Yönergeler ve örnek kod, kitaplığı, [ASP.NET Core](/aspnet/core/)gibi bir �
 
 Seri hale getirme örnek kodunun çoğu, JSON 'ı (örneğin girintileme ve insanlar okunabilirlik için boşluk) `true` <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> belirler. Üretim kullanımı için genellikle bu ayar için `false` varsayılan değerini kabul etmiş olursunuz.
 
-## <a name="namespaces"></a>Ad Alanları
+## <a name="namespaces"></a>{1&gt;Ad Alanları&lt;1}
 
 <xref:System.Text.Json> ad alanı tüm giriş noktalarını ve ana türleri içerir. <xref:System.Text.Json.Serialization> ad alanı, serileştirme ve seri durumdan çıkarma için özel gelişmiş senaryolar ve özelleştirmeler için öznitelikler ve API 'Leri içerir. Bu makalede gösterilen kod örnekleri, bu ad alanlarından biri veya her ikisi için `using` yönergeler gerektirir:
 
@@ -377,11 +377,11 @@ Tüm null değer özelliklerini dışlamak için, aşağıdaki örnekte gösteri
 
 Seri hale getirmek ve JSON çıktısı için örnek bir nesne aşağıda verilmiştir:
 
-|Özellik |Değer  |
+|Özellik |Value  |
 |---------|---------|
-| Tarih    | 8/1/2019 12:00:00-07:00|
+| Date    | 8/1/2019 12:00:00-07:00|
 | TemperatureCelsius| 25 |
-| Özet| null|
+| Özet| {1&gt;null&lt;1}|
 
 ```json
 {
@@ -571,9 +571,9 @@ Gösterilen türde gösterilen JSON serisini kaldırırsanız, `DatesAvailable` 
 
 Daha önce Bu örnek türünde gösterilen JSON serisini kaldırdığınızda, ek veriler `ExtensionData` özelliğinin anahtar-değer çiftleri haline gelir:
 
-|Özellik |Değer  |Notlar  |
+|Özellik |Value  |Notlar  |
 |---------|---------|---------|
-| Tarih    | 8/1/2019 12:00:00-07:00||
+| Date    | 8/1/2019 12:00:00-07:00||
 | TemperatureCelsius| 0 | Büyük/küçük harfe duyarlı uyuşmazlık (JSON içinde`temperatureCelsius`), bu nedenle özellik ayarlanmadı. |
 | Özet | Kolay ||
 | ExtensionData | temperatureCelsius: 25 |Büyük/küçük harf eşleşmediğinden, bu JSON özelliği çok fazla olur ve sözlükte anahtar-değer çifti olur.|

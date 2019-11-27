@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349394"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML Açıklama Değişmez Değeri (Visual Basic)
-A literal representing an <xref:System.Xml.Linq.XComment> object.  
+<xref:System.Xml.Linq.XComment> nesnesini temsil eden bir sabit değer.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,29 +29,29 @@ A literal representing an <xref:System.Xml.Linq.XComment> object.
   
 |Terim|Tanım|  
 |---|---|  
-|`<!--`|Gerekli. Denotes the start of the XML comment.|  
-|`content`|Gerekli. Text to appear in the XML comment. Cannot contain a series of two hyphens (--) or end with a hyphen adjacent to the closing tag.|  
-|`-->`|Gerekli. Denotes the end of the XML comment.|  
+|`<!--`|Gerekli. XML açıklamasının başlangıcını gösterir.|  
+|`content`|Gerekli. XML açıklamasında görüntülenecek metin. Bir dizi iki kısa çizgi (--) veya kapanış etiketinin bitişiğindeki bir tire ile bitemez.|  
+|`-->`|Gerekli. XML açıklamasının sonunu gösterir.|  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- An <xref:System.Xml.Linq.XComment> object.  
+ <xref:System.Xml.Linq.XComment> nesnesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- XML comment literals do not contain document content; they contain information about the document. The XML comment section ends with the sequence "-->". This implies the following points:  
+ XML açıklama değişmez değerleri belge içeriği içermez; Bunlar belge hakkında bilgiler içerir. XML açıklama bölümü "-->" sırasıyla biter. Bu, aşağıdaki noktaları gösterir:  
   
-- You cannot use an embedded expression in an XML comment literal because the embedded expression delimiters are valid XML comment content.  
+- Gömülü ifade sınırlayıcıları geçerli XML açıklama içeriği olduğundan, bir XML açıklama değişmez değerinde katıştırılmış ifade kullanamazsınız.  
   
-- XML comment sections cannot be nested, because `content` cannot contain the value "-->".  
+- `content` "-->" değerini içeremediğinden XML açıklama bölümleri iç içe geçirilemez.  
   
- You can assign an XML comment literal to a variable, or you can include it in an XML element literal.  
+ Bir değişkene bir XML açıklama sabit değeri atayabilir veya onu bir XML öğesi değişmez değerine dahil edebilirsiniz.  
   
 > [!NOTE]
-> An XML literal can span multiple lines without using line continuation characters. This feature enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+> Bir XML sabit değeri, satır devamlılık karakterleri kullanmadan birden fazla satıra yayılabilir. Bu özellik bir XML belgesinden içerik kopyalamanızı ve bunu doğrudan bir Visual Basic programına yapıştırmayı sağlar.  
   
- The Visual Basic compiler converts the XML comment literal to a call to the <xref:System.Xml.Linq.XComment.%23ctor%2A> constructor.  
+ Visual Basic derleyici, XML açıklama değişmez değerini <xref:System.Xml.Linq.XComment.%23ctor%2A> oluşturucusuna bir çağrıya dönüştürür.  
   
 ## <a name="example"></a>Örnek  
- The following example creates an XML comment that contains the text "This is a comment".  
+ Aşağıdaki örnek "This bir açıklamadır" metnini içeren bir XML açıklaması oluşturur.  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  
   
@@ -60,4 +60,4 @@ A literal representing an <xref:System.Xml.Linq.XComment> object.
 - <xref:System.Xml.Linq.XComment>
 - [XML Öğesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
 - [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Creating XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Visual Basic XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

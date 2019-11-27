@@ -18,27 +18,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343606"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic'de İşleçler ve İfadeler
-An *operator* is a code element that performs an operation on one or more code elements that hold values. Value elements include variables, constants, literals, properties, returns from `Function` and `Operator` procedures, and expressions.  
+*İşleç* , değerleri tutan bir veya daha fazla kod öğesi üzerinde bir işlem gerçekleştiren bir kod öğesidir. Değer öğeleri arasında değişkenler, sabitler, sabit değerler, özellikler, `Function` ve `Operator` yordamlarından ve ifadelerden döndürülür.  
   
- An *expression* is a series of value elements combined with operators, which yields a new value. The operators act on the value elements by performing calculations, comparisons, or other operations.  
+ *İfade* , yeni bir değer veren işleçlerle birleştirilmiş bir değer öğeleri dizisidir. İşleçler, hesaplamalar, karşılaştırmalar veya diğer işlemleri gerçekleştirerek değer öğelerine davranır.  
   
-## <a name="types-of-operators"></a>Types of Operators  
- Visual Basic provides the following types of operators:  
+## <a name="types-of-operators"></a>Işleç türleri  
+ Visual Basic aşağıdaki işleç türlerini sağlar:  
   
-- [Arithmetic Operators](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) perform familiar calculations on numeric values, including shifting their bit patterns.  
+- [Aritmetik işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) , bit desenlerini kaydırma da dahil olmak üzere sayısal değerlerde tanıdık hesaplamalar gerçekleştirir.  
   
-- [Comparison Operators](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md) compare two expressions and return a `Boolean` value representing the result of the comparison.  
+- [Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md) iki ifadeyi karşılaştırır ve karşılaştırmanın sonucunu temsil eden bir `Boolean` değeri döndürür.  
   
-- [Concatenation Operators](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) join multiple strings into a single string.  
+- [Birleştirme işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) birden çok dizeyi tek bir dizeye birleştirir.  
   
-- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md) combine `Boolean` or numeric values and return a result of the same data type as the values.  
+- [Visual Basic mantıksal ve bit düzeyinde işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md) `Boolean` veya sayısal değerleri birleştirir ve değerlerle aynı veri türünün bir sonucunu döndürür.  
   
- The value elements that are combined with an operator are called *operands* of that operator. Operators combined with value elements form expressions, except for the assignment operator, which forms a *statement*. For more information, see [Statements](../../../../visual-basic/programming-guide/language-features/statements.md).  
+ Bir işleçle birleştirilmiş değer öğelerine, bu işlecin *işlenenleri* adı verilir. İşleç, bir *deyimi*oluşturan atama işleci dışında, değer öğeleri form ifadeleriyle birleştirilir. Daha fazla bilgi için bkz. [deyimler](../../../../visual-basic/programming-guide/language-features/statements.md).  
   
-## <a name="evaluation-of-expressions"></a>Evaluation of Expressions  
- The end result of an expression represents a value, which is typically of a familiar data type such as `Boolean`, `String`, or a numeric type.  
+## <a name="evaluation-of-expressions"></a>Ifadelerin değerlendirmesi  
+ Bir ifadenin nihai sonucu, genellikle `Boolean`, `String`veya sayısal bir tür gibi tanıdık bir veri türü olan bir değeri temsil eder.  
   
- The following are examples of expressions.  
+ Aşağıda ifade örnekleri verilmiştir.  
   
  `5 + 4`  
   
@@ -56,11 +56,11 @@ An *operator* is a code element that performs an operation on one or more code e
   
  `' The preceding expression evaluates to False.`  
   
- Several operators can perform actions in a single expression or statement, as the following example illustrates.  
+ Aşağıdaki örnekte gösterildiği gibi, birkaç işleç tek bir ifadede veya deyimde eylemler gerçekleştirebilir.  
   
  [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
- In the preceding example, Visual Basic performs the operations in the expression on the right side of the assignment operator (`=`), then assigns the resulting value to the variable `x` on the left. There is no practical limit to the number of operators that can be combined into an expression, but an understanding of [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) is necessary to ensure that you get the results you expect.  
+ Yukarıdaki örnekte, Visual Basic atama işlecinin sağ tarafındaki ifadedeki işlemleri gerçekleştirir (`=`), ardından sonuç değerini soldaki değişkene `x` atar. Bir ifadede birleştirilebilecek işleç sayısında pratik bir sınır yoktur, ancak istediğiniz sonuçları aldığınızdan emin olmak için [Visual Basic operatör önceliğin](../../../../visual-basic/language-reference/operators/operator-precedence.md) anlaşılmasına gerek kalmaz.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349918"
 ---
 # <a name="control-flow-summary-visual-basic"></a>Denetim Akışı Özeti (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaca ve kullanıma göre düzenlenir.  
   
 |Eylem|Dil öğesi|  
 |------------|----------------------|  
-|Branch.|[GoTo](../../../visual-basic/language-reference/statements/goto-statement.md), [On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)|  
-|Exit or pause the program.|[End](../../../visual-basic/language-reference/statements/end-statement.md), [Exit](../../../visual-basic/language-reference/statements/exit-statement.md), [Stop](../../../visual-basic/language-reference/statements/stop-statement.md)|  
-|Loop.|[Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md), [For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md), [For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md), [While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md), [With](../../../visual-basic/language-reference/statements/with-end-with-statement.md)|  
-|Make decisions.|<xref:Microsoft.VisualBasic.Interaction.Choose%2A>, [If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md), [Select Case](../../../visual-basic/language-reference/statements/select-case-statement.md), <xref:Microsoft.VisualBasic.Interaction.Switch%2A>|  
-|Use procedures.|[Call](../../../visual-basic/language-reference/statements/call-statement.md), [Function](../../../visual-basic/language-reference/statements/function-statement.md), [Property](../../../visual-basic/language-reference/statements/property-statement.md), [Sub](../../../visual-basic/language-reference/statements/sub-statement.md)|  
+|Öğede.|[Git](../../../visual-basic/language-reference/statements/goto-statement.md), [hatada](../../../visual-basic/language-reference/statements/on-error-statement.md)|  
+|Programdan çıkın veya duraklatın.|[Bitir](../../../visual-basic/language-reference/statements/end-statement.md), [çık](../../../visual-basic/language-reference/statements/exit-statement.md), [Durdur](../../../visual-basic/language-reference/statements/stop-statement.md)|  
+|Gerçekleştirmek.|[Do... Döngü](../../../visual-basic/language-reference/statements/do-loop-statement.md), [for... İleri](../../../visual-basic/language-reference/statements/for-next-statement.md), [her biri için... İleri](../../../visual-basic/language-reference/statements/for-each-next-statement.md), while... [ Bitiş sırasında](../../../visual-basic/language-reference/statements/while-end-while-statement.md), [](../../../visual-basic/language-reference/statements/with-end-with-statement.md)|  
+|Kararlar alın.|<xref:Microsoft.VisualBasic.Interaction.Choose%2A>, [IF... Sonra... Aksi](../../../visual-basic/language-reference/statements/if-then-else-statement.md) [durumda, durum](../../../visual-basic/language-reference/statements/select-case-statement.md)' u seçin <xref:Microsoft.VisualBasic.Interaction.Switch%2A>|  
+|Yordamları kullanın.|[Call](../../../visual-basic/language-reference/statements/call-statement.md), [Function](../../../visual-basic/language-reference/statements/function-statement.md), [Property](../../../visual-basic/language-reference/statements/property-statement.md), [Sub](../../../visual-basic/language-reference/statements/sub-statement.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -36,8 +36,8 @@ Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-ve
 |**CCWs sayısı**|Geçerli COM çağrılabilir sarmalayıcılarının (CCWs) sayısını görüntüler. Bir CCW, yönetilmeyen bir COM istemcisinden başvurulmakta olan yönetilen bir nesne için bir ara sunucu. Bu sayaç, yönetilmeyen COM kodu tarafından başvurulan yönetilen nesne sayısını gösterir.|  
 |**sıralama sayısı**|Bağımsız değişkenlerin ve dönüş değerlerinin yönetilen ve yönetilmeyen koddan kaç kez sıralandığına ve uygulamanın başlamasından bu yana tam tersi gösterir. Saplamalar satır içine alınır ise bu sayaç arttırılır. (Saplamalar, bağımsız değişkenleri ve dönüş değerlerini sıralama sorumludur). Hazırlama ek yükü küçükse, saplamalar genellikle satır içine alınır.|  
 |**Saplamalar sayısı**|Ortak dil çalışma zamanı tarafından oluşturulan geçerli saplamalar sayısını görüntüler. Saplamalar, bağımsız değişkenleri sıralama ve yönetilen değerden yönetilmeyen koda döndürme ve bir COM birlikte çalışma çağrısı sırasında veya platform çağırma çağrısı sırasında sorumludur.|  
-|**TLB dışarı aktarma sayısı/sn**|Daha sonraki kullanımlar için ayrılmıştır.|  
-|**TLB içeri aktarma sayısı/sn**|Daha sonraki kullanımlar için ayrılmıştır.|  
+|**TLB dışarı aktarma sayısı/sn**|Gelecekte kullanılmak üzere ayrılmış.|  
+|**TLB içeri aktarma sayısı/sn**|Gelecekte kullanılmak üzere ayrılmış.|  
     
 ## <a name="jit-performance-counters"></a>JIT performans sayaçları  
  Performans konsolu .NET CLR JıT kategorisi, JıT derlenmiş kod hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
@@ -56,8 +56,8 @@ Bu konu, [Windows Performans İzleyicisi](https://docs.microsoft.com/previous-ve
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
-|**Yükleme zamanı yüzdesi**|Daha sonraki kullanımlar için ayrılmıştır.|  
-|**Derleme arama uzunluğu**|Daha sonraki kullanımlar için ayrılmıştır.|  
+|**Yükleme zamanı yüzdesi**|Gelecekte kullanılmak üzere ayrılmış.|  
+|**Derleme arama uzunluğu**|Gelecekte kullanılmak üzere ayrılmış.|  
 |**Yükleyici yığınındaki baytlar**|Tüm uygulama etki alanları genelinde sınıf yükleyicisi tarafından kaydedilen belleğin bayt cinsinden geçerli boyutunu görüntüler. Kaydedilmiş bellek, disk disk belleği dosyasında ayrılan fiziksel alandır.|  
 |**Geçerli AppDomain 'ler**|Bu uygulamada yüklenen uygulama etki alanlarının geçerli sayısını görüntüler.|  
 |**Geçerli derlemeler**|O anda çalışan uygulamadaki tüm uygulama etki alanları genelinde yüklenen derlemelerin geçerli sayısını görüntüler. Derleme birden çok uygulama etki alanında etki alanı nötr olarak yüklenirse, bu sayaç yalnızca bir kez artırılır.|  
@@ -156,7 +156,7 @@ Olaylar için ağ performans sayaçları şunları içerir:
   
  Bu performans sayaçları, işlem başladıktan sonra sayımlar sağlar. Oluşturulan <xref:System.Net.Sockets.Socket> bağlantı sayısı, oluşturulan bir akış yuvası bağlantısı için bir uygulama tarafından açık <xref:System.Net.Sockets.Socket> Yöntem çağrıları ve diğer sınıfların (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient>ve <xref:System.Net.Sockets.TcpClient>) (örneğin, <xref:System.Net.Sockets.Socket> sınıfına) yapılan iç çağrılardır.  
   
- **Alınan veri birimleri** ve **gönderilen veri birimleri** için sayımlar, bir uygulamanın açık <xref:System.Net.Sockets.Socket> yöntemi çağrıları kullanılarak gönderilen veya alınan veri birimi paketleri içerir (örneğin,<xref:System.Net.Sockets.UdpClient><xref:System.Net.Sockets.Socket>). Sınıfı. **Alınan** veri birimleri ve **gönderilen** veri birimleri, bir veri birimi için Ortalama bir boyut varsayarak, veri birimleri kullanılarak gönderilen veya alınan bayt sayısı çok kaba bir ölçü sağlamak için de kullanılabilir.  
+ **Alınan veri birimleri** ve **gönderilen veri birimleri** için sayımlar, bir uygulamanın açık <xref:System.Net.Sockets.Socket> yöntemi çağrıları kullanılarak gönderilen veya alınan veri birimi paketleri içerir (örneğin,<xref:System.Net.Sockets.UdpClient><xref:System.Net.Sockets.Socket>). sınıfı. **Alınan** veri birimleri ve **gönderilen** veri birimleri, bir veri birimi için Ortalama bir boyut varsayarak, veri birimleri kullanılarak gönderilen veya alınan bayt sayısı çok kaba bir ölçü sağlamak için de kullanılabilir.  
   
  Veriler için ağ performans sayaçları şunları içerir:  
   
@@ -223,7 +223,7 @@ for (int i = 0; i < Array.Length; i++)
 |-------------------------|-----------------|  
 |**Bağlantı zamanı denetimleri sayısı**|Uygulama başladıktan sonra bağlantı zamanı kod erişimi güvenlik denetimlerinin toplam sayısını görüntüler. Bağlama zamanı kod erişimi güvenlik denetimleri, bir arayan belirli bir zamanda (JıT) derleme zamanında belirli bir izin talep ettiğinde gerçekleştirilir. Bir bağlantı zamanı denetimi, çağıran başına bir kez gerçekleştirilir. Bu sayı ciddi performans sorunlarının göstergesi değildir; yalnızca güvenlik sistemi etkinliğinin bir göstergesi vardır.|  
 |**RT denetimlerinde% Time**|Son örnekten bu yana çalışma zamanı kodu erişim güvenlik denetimlerini gerçekleştirirken harcanan geçen sürenin yüzdesini görüntüler. Bu sayaç, .NET Framework bir güvenlik denetiminin sonunda güncelleştirilir. Ortalama değer değildir; Bu, son gözlemlenen değeri temsil eder.|  
-|**% Saat SIG kimlik doğrulaması**|Daha sonraki kullanımlar için ayrılmıştır.|  
+|**% Saat SIG kimlik doğrulaması**|Gelecekte kullanılmak üzere ayrılmış.|  
 |**Yığın Ilerleme derinliği**|Son çalışma zamanı kod erişimi güvenlik denetimi sırasında yığının derinliğini görüntüler. Çalışma zamanı kod erişimi güvenlik denetimleri, yığın yürüyerek gerçekleştirilir. Bu sayaç bir ortalama değil; yalnızca son gözlemlenen değeri görüntüler.|  
 |**Toplam çalışma zamanı denetimleri**|Uygulama başladıktan sonra gerçekleştirilen çalışma zamanı kodu erişimi güvenlik denetimlerinin toplam sayısını görüntüler. Çalışma zamanı kod erişimi güvenlik denetimleri, bir arayan belirli bir izin talep ettiğinde gerçekleştirilir. Çalışma zamanı denetimi, çağıran tarafından her çağrıda yapılır ve çağıranın geçerli iş parçacığı yığınını inceler. **Yığın Ilerleme derinliği** sayacı ile kullanıldığında, bu sayaç güvenlik denetimleri için gerçekleşen performans cezası olduğunu gösterir.|  
   

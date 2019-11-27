@@ -29,12 +29,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347345"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic'de Me, My, MyBase ve MyClass
-`Me`, `My`, `MyBase`, and `MyClass` in Visual Basic have similar names, but different purposes. This topic describes each of these entities in order to distinguish them.  
+Visual Basic 'de `Me`, `My`, `MyBase`ve `MyClass` benzer adlara sahiptir ancak farklı amaçlar vardır. Bu konu, bu varlıkların her birini ayırt edebilmek için açıklar.  
   
 ## <a name="me"></a>Beni  
- The `Me` keyword provides a way to refer to the specific instance of a class or structure in which the code is currently executing. `Me` behaves like either an object variable or a structure variable referring to the current instance. Using `Me` is particularly useful for passing information about the currently executing instance of a class or structure to a procedure in another class, structure, or module.  
+ `Me` anahtar sözcüğü, kodun Şu anda yürütüldüğü bir sınıfın veya yapının belirli bir örneğine başvurmak için bir yol sağlar. `Me`, nesne değişkeni ya da geçerli örneğe başvuran bir yapı değişkeni gibi davranır. `Me` kullanmak, bir sınıfın veya yapının Şu anda yürütülmekte olan örneği hakkındaki bilgileri başka bir sınıf, yapı veya modüldeki bir yordama iletmek için özellikle yararlıdır.  
   
- For example, suppose you have the following procedure in a module.  
+ Örneğin, bir modülde aşağıdaki yordama sahip olduğunuzu varsayalım.  
   
 ```vb  
 Sub ChangeFormColor(FormName As Form)  
@@ -43,20 +43,20 @@ Sub ChangeFormColor(FormName As Form)
 End Sub  
 ```  
   
- You can call this procedure and pass the current instance of the <xref:System.Windows.Forms.Form> class as an argument by using the following statement.  
+ Aşağıdaki ifadeyi kullanarak, bu yordamı çağırabilir ve <xref:System.Windows.Forms.Form> sınıfının geçerli örneğini bir bağımsız değişken olarak geçirebilirsiniz.  
   
 ```vb  
 ChangeFormColor(Me)  
 ```  
   
-## <a name="my"></a>Benim  
- The `My` feature provides easy and intuitive access to a number of .NET Framework classes, enabling the Visual Basic user to interact with the computer, application, settings, resources, and so on.  
+## <a name="my"></a>My  
+ `My` özelliği, Visual Basic kullanıcının bilgisayar, uygulama, ayarlar, kaynaklar vb. ile etkileşime geçmesini sağlayan bir dizi .NET Framework sınıfına kolay ve sezgisel erişim sağlar.  
   
 ## <a name="mybase"></a>MyBase  
- The `MyBase` keyword behaves like an object variable referring to the base class of the current instance of a class. `MyBase` is commonly used to access base class members that are overridden or shadowed in a derived class. `MyBase.New` is used to explicitly call a base class constructor from a derived class constructor.  
+ `MyBase` anahtar sözcüğü, sınıfın geçerli örneğinin temel sınıfına başvuran bir nesne değişkeni gibi davranır. `MyBase`, türetilmiş bir sınıfta geçersiz kılınan veya gölgeli temel sınıf üyelerine erişmek için kullanılır. `MyBase.New`, türetilmiş bir sınıf oluşturucusundan bir taban sınıf oluşturucuyu açıkça çağırmak için kullanılır.  
   
-## <a name="myclass"></a>MyClass  
- The `MyClass` keyword behaves like an object variable referring to the current instance of a class as originally implemented. `MyClass` is similar to `Me`, but all method calls on it are treated as if the method were `NotOverridable`.  
+## <a name="myclass"></a>Sınıfım  
+ `MyClass` anahtar sözcüğü, başlangıçta uygulanmış olan bir sınıfın geçerli örneğine başvuran bir nesne değişkeni gibi davranır. `MyClass`, `Me`benzerdir, ancak tüm Yöntem çağrıları Yöntem `NotOverridable`olarak değerlendirilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

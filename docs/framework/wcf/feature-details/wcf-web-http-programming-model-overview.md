@@ -117,17 +117,17 @@ interface ICustomer
 |<xref:System.Decimal>|Standart gösterimdeki herhangi bir ondalık (üs yok)|  
 |<xref:System.Boolean>|True veya false (büyük/küçük harf duyarsız)|  
 |<xref:System.String>|Herhangi bir dize (null dize desteklenmez ve hiçbir kaçış yapılmaz)|  
-|<xref:System.DateTime>|AA/GG/YYYY<br /><br /> AA/GG/YYYY HH: MM: SS [&#124;PM]<br /><br /> Ayın günü yılı<br /><br /> Ay günü yıl HH: MM: SS [&#124;PM]|  
+|<xref:System.DateTime>|GG/AA/YYYY<br /><br /> AA/GG/YYYY HH: MM: SS [&#124;PM]<br /><br /> Ayın günü yılı<br /><br /> Ay günü yıl HH: MM: SS [&#124;PM]|  
 |<xref:System.TimeSpan>|DD.HH:MM:SS<br /><br /> Burada gg = gün, SS = saat, MM = dakika, SS = saniye|  
 |<xref:System.Guid>|Bir GUID, örneğin:<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
 |<xref:System.DateTimeOffset>|AA/GG/YYYY SS: DD: SS MM: SS<br /><br /> Burada gg = gün, SS = saat, MM = dakika, SS = saniye|  
-|Numaralandırmalar|Örneğin, aşağıdaki kodda gösterildiği gibi, numaralandırmayı tanımlayan sabit listesi değeri.<br /><br /> `public enum Days{ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };`<br /><br /> Sorgu dizesinde her bir numaralandırma değeri (veya ilgili tamsayı değerleri) belirtilebilir.|  
+|Listelemeler|Örneğin, aşağıdaki kodda gösterildiği gibi, numaralandırmayı tanımlayan sabit listesi değeri.<br /><br /> `public enum Days{ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };`<br /><br /> Sorgu dizesinde her bir numaralandırma değeri (veya ilgili tamsayı değerleri) belirtilebilir.|  
 |Bir `TypeConverterAttribute` olan türler, türü dize gösterimine ve öğesinden dönüştürebilir.|Tür Dönüştürücüne bağlıdır.|  
   
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>Biçimler ve WCF WEB HTTP programlama modeli  
  WCF WEB HTTP programlama modelinin birçok farklı veri biçiminde çalışmak için yeni özellikleri vardır. Bağlama katmanında <xref:System.ServiceModel.WebHttpBinding>, aşağıdaki farklı veri türlerini okuyup yazabilir:  
   
-- XML  
+- {1&gt;XML&lt;1}  
   
 - JSON  
   

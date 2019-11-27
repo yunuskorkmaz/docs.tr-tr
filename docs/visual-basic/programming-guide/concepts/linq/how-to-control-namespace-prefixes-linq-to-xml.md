@@ -1,5 +1,5 @@
 ---
-title: 'How to: Control Namespace Prefixes (LINQ to XML)'
+title: 'Nasıl yapılır: ad alanı öneklerini denetleme (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
 ms.openlocfilehash: 5ba415452a8671466c3a4c71a88731e5bd3cda60
@@ -9,13 +9,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348384"
 ---
-# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>How to: Control Namespace Prefixes (Visual Basic) (LINQ to XML)
-This topic describes how you can control namespace prefixes.  
+# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Nasıl yapılır: ad alanı öneklerini denetleme (Visual Basic) (LINQ to XML)
+Bu konuda, ad alanı öneklerini nasıl denetleyebileceğinizi açıklar.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- This example declares two namespaces. It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.  
+ Bu örnek iki ad alanı bildirir. `http://www.adventure-works.com` ad alanının ön ek `aw`sahip olduğunu ve `www.fourthcoffee.com` ad alanının `fc`öneki olduğunu belirtir.  
   
 ### <a name="code"></a>Kod  
   
@@ -41,7 +41,7 @@ End Module
 ```  
   
 ### <a name="comments"></a>Açıklamalar  
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <aw:Root xmlns:fc="www.fourthcoffee.com" xmlns:aw="http://www.adventure-works.com">  
@@ -55,4 +55,4 @@ End Module
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

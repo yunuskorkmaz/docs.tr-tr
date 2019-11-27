@@ -21,7 +21,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350249"
 ---
 # <a name="and-operator-visual-basic"></a>And İşleci (Visual Basic)
-Performs a logical conjunction on two `Boolean` expressions, or a bitwise conjunction on two numeric expressions.  
+İki `Boolean` ifadeye veya iki sayısal ifadeye bit düzeyinde bir birlikte mantıksal bir birlikte gerçekleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,18 +31,18 @@ result = expression1 And expression2
   
 ## <a name="parts"></a>Bölümler  
  `result`  
- Gerekli. Any `Boolean` or numeric expression. For Boolean comparison, `result` is the logical conjunction of two `Boolean` values. For bitwise operations, `result` is a numeric value representing the bitwise conjunction of two numeric bit patterns.  
+ Gerekli. Herhangi bir `Boolean` veya sayısal ifade. Boolean karşılaştırma için, iki `Boolean` değerinin mantıksal bir `result`. Bit düzeyinde işlemler için `result`, iki sayısal bit deseninin bit düzeyinde birlikte temsil eden sayısal bir değerdir.  
   
  `expression1`  
- Gerekli. Any `Boolean` or numeric expression.  
+ Gerekli. Herhangi bir `Boolean` veya sayısal ifade.  
   
  `expression2`  
- Gerekli. Any `Boolean` or numeric expression.  
+ Gerekli. Herhangi bir `Boolean` veya sayısal ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- For Boolean comparison, `result` is `True` if and only if both `expression1` and `expression2` evaluate to `True`. The following table illustrates how `result` is determined.  
+ Boolean karşılaştırma için, yalnızca hem `expression1` hem de `expression2` `True`olarak değerlendirip `result` `True`. Aşağıdaki tabloda `result` nasıl belirlendiği gösterilmektedir.  
   
-|If `expression1` is|And `expression2` is|The value of `result` is|  
+|`expression1`|Ve `expression2`|`result` değeri|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`False`|  
@@ -50,46 +50,46 @@ result = expression1 And expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
-> In a Boolean comparison, the `And` operator always evaluates both expressions, which could include making procedure calls. The [AndAlso Operator](../../../visual-basic/language-reference/operators/andalso-operator.md) performs *short-circuiting*, which means that if `expression1` is `False`, then `expression2` is not evaluated.  
+> Boole karşılaştırmasına `And` işleci her zaman her iki ifadeyi değerlendirir ve bu da yordam çağrıları yapmayı içerebilir. [AndAlso işleci de](../../../visual-basic/language-reference/operators/andalso-operator.md) *kısa*devre uygular, yani `expression1` `False`, `expression2` değerlendirilmez.  
   
- When applied to numeric values, the `And` operator performs a bitwise comparison of identically positioned bits in two numeric expressions and sets the corresponding bit in `result` according to the following table.  
+ Sayısal değerlere uygulandığında `And` işleci iki sayısal ifadede aynı şekilde konumlandırılmış bitlerin bit düzeyinde karşılaştırmasını gerçekleştirir ve aşağıdaki tabloya göre `result` karşılık gelen biti ayarlar.  
   
-|If bit in `expression1` is|And bit in `expression2` is|The bit in `result` is|  
+|`expression1` bit ise|Ve `expression2` bit|`result` bit|  
 |--------------------------------|---------------------------------|----------------------------|  
-|1\.|1\.|1\.|  
-|1\.|0|0|  
-|0|1\.|0|  
+|1|1|1|  
+|1|0|0|  
+|0|1|0|  
 |0|0|0|  
   
 > [!NOTE]
-> Since the logical and bitwise operators have a lower precedence than other arithmetic and relational operators, any bitwise operations should be enclosed in parentheses to ensure accurate results.  
+> Mantıksal ve bit düzeyinde işleçler diğer aritmetik ve ilişkisel işleçlerden daha düşük önceliğe sahip olduğundan, doğru sonuçları sağlamak için herhangi bir bit düzeyinde işlemin parantez içine alınması gerekir.  
   
 ## <a name="data-types"></a>Veri Türleri  
- If the operands consist of one `Boolean` expression and one numeric expression, Visual Basic converts the `Boolean` expression to a numeric value (–1 for `True` and 0 for `False`) and performs a bitwise operation.  
+ İşlenenler bir `Boolean` ifadeden ve bir sayısal ifadeden oluşur Visual Basic, `Boolean` ifadesini sayısal bir değere dönüştürür (`True` için – 1 ve `False`için 0) ve bit düzeyinde bir işlem gerçekleştirir.  
   
- For a Boolean comparison, the data type of the result is `Boolean`. For a bitwise comparison, the result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Relational and Bitwise Comparisons" table in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ Boolean karşılaştırma için sonucun veri türü `Boolean`. Bit düzeyinde karşılaştırma için, sonuç veri türü `expression1` ve `expression2`veri türleri için uygun bir sayısal türdür. [Işleç sonuçlarının veri türlerinde](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)"Ilişkisel ve bit düzeyinde karşılaştırmalar" tablosuna bakın.  
   
 > [!NOTE]
-> The `And` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> `And` işleci *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- The following example uses the `And` operator to perform a logical conjunction on two expressions. The result is a `Boolean` value that represents whether both of the expressions are `True`.  
+ Aşağıdaki örnek, iki ifadeye mantıksal bir birlikte gerçekleştirmek için `And` işlecini kullanır. Sonuç, her iki ifadenin `True`olup olmadığını temsil eden bir `Boolean` değeridir.  
   
  [!code-vb[VbVbalrOperators#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#22)]  
   
- The preceding example produces results of `True` and `False`, respectively.  
+ Yukarıdaki örnek, sırasıyla `True` ve `False`sonuçları üretir.  
   
 ## <a name="example"></a>Örnek  
- The following example uses the `And` operator to perform logical conjunction on the individual bits of two numeric expressions. The bit in the result pattern is set if the corresponding bits in the operands are both set to 1.  
+ Aşağıdaki örnek, iki sayısal ifadenin ayrı bitleri üzerinde mantıksal bir işlem gerçekleştirmek için `And` işlecini kullanır. Sonuç düzenindeki bit, işlenenlerde karşılık gelen bitlerin her ikisi de 1 olarak ayarlandıysa ayarlanır.  
   
  [!code-vb[VbVbalrOperators#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#23)]  
   
- The preceding example produces results of 8, 2, and 0, respectively.  
+ Yukarıdaki örnek sırasıyla 8, 2 ve 0 sonuçlarını üretir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Mantıksal/bit düzeyinde Işleçler (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [AndAlso İşleci](../../../visual-basic/language-reference/operators/andalso-operator.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic mantıksal ve bit düzeyinde Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

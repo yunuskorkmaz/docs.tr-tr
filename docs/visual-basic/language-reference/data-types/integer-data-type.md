@@ -28,32 +28,32 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343990"
 ---
-# <a name="integer-data-type-visual-basic"></a>Integer data type (Visual Basic)
+# <a name="integer-data-type-visual-basic"></a>Tamsayı veri türü (Visual Basic)
 
 Değer olarak -2.147.483.648 ile 2.147.483.647 arasında değişen imzalı 32 bitlik (4 bayt) tamsayıları tutar.  
   
 ## <a name="remarks"></a>Açıklamalar
 
- The `Integer` data type provides optimal performance on a 32-bit processor. Diğer tamsayı türlerinin bellekten yüklenmesi ve belleğe depolanması daha yavaştır.  
+ `Integer` veri türü, 32 bitlik bir işlemcide en iyi performansı sağlar. Diğer tamsayı türlerinin bellekten yüklenmesi ve belleğe depolanması daha yavaştır.  
   
- The default value of `Integer` is 0.  
+ `Integer` varsayılan değeri 0 ' dır.  
 
-## <a name="literal-assignments"></a>Literal assignments
+## <a name="literal-assignments"></a>Değişmez değer atamaları
 
-You can declare and initialize an `Integer` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. If the integer literal is outside the range of `Integer` (that is, if it is less than <xref:System.Int32.MinValue?displayProperty=nameWithType> or greater than <xref:System.Int32.MaxValue?displayProperty=nameWithType>, a compilation error occurs.
+Bir `Integer` değişkeni bir ondalık sabit değer, bir onaltılı sabit değer, sekizlik bir sabit değer veya (Visual Basic 2017 ' den başlayarak) ikili bir değişmez değer atayarak başlatabilir ve başlatabilirsiniz. Tamsayı sabit değeri `Integer` aralığının dışındaysa (yani, <xref:System.Int32.MinValue?displayProperty=nameWithType> veya <xref:System.Int32.MaxValue?displayProperty=nameWithType>değerinden daha küçükse, bir derleme hatası oluşur.
 
-In the following example, integers equal to 90,946 that are represented as decimal, hexadecimal, and binary literals are assigned to `Integer` values.
+Aşağıdaki örnekte, ondalık, onaltılık ve ikili sabit değerler olarak temsil edilen 90.946 'e eşit tamsayılar `Integer` değerlere atanır.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Int)]  
 
 > [!NOTE]
-> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. Decimal literals have no prefix.
+> Ön ek `&h` veya `&H` bir onaltılık sabit değeri, ön ek `&b` veya `&B` bir ikili sabit değer belirtmek için, önek `&o` veya `&O`, sekizlik bir sabit değeri belirtmek için kullanılır. Ondalık değişmez değerlerinin ön eki yok.
 
-Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
+Visual Basic 2017 ' den başlayarak, aşağıdaki örnekte gösterildiği gibi, okunabilirliği geliştirmek için `_`alt çizgi karakterini bir rakam ayırıcısı olarak da kullanabilirsiniz.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
 
-Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. Örneğin:
+Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini (`_`) ön ek ile onaltılık, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak kullanabilirsiniz. Örneğin:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -61,7 +61,7 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Numeric literals can also include the `I` [type character](../../programming-guide/language-features/data-types/type-characters.md) to denote the `Integer` data type, as the following example shows.
+Sayısal değişmez değerler, aşağıdaki örnekte gösterildiği gibi `Integer` veri türünü belirtmek için `I` [tür karakterini](../../programming-guide/language-features/data-types/type-characters.md) de içerebilir.
 
 ```vb
 Dim number = &H_035826I
@@ -69,13 +69,13 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>Programlama ipuçları
 
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, such as Automation or COM objects, remember that `Integer` has a different data width (16 bits) in other environments. If you are passing a 16-bit argument to such a component, declare it as `Short` instead of `Integer` in your new Visual Basic code.  
+- **Birlikte çalışma konuları.** Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle arabirimsiz değilseniz, `Integer` başka ortamlarda farklı bir veri genişliğine (16 bit) sahip olduğunu unutmayın. Böyle bir bileşene 16 bitlik bir bağımsız değişken geçirirseniz, bunu yeni Visual Basic kodunuzda `Integer` yerine `Short` olarak bildirin.  
   
-- **Widening.** The `Integer` data type widens to `Long`, `Decimal`, `Single`, or `Double`. This means you can convert `Integer` to any one of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.  
+- **Kan.** `Integer` veri türü `Long`, `Decimal`, `Single`veya `Double`için. Bu, bir <xref:System.OverflowException?displayProperty=nameWithType> hatasıyla karşılaşmadan `Integer` bu türlerden birine dönüştürebileceğiniz anlamına gelir.  
   
-- **Type Characters.** Appending the literal type character `I` to a literal forces it to the `Integer` data type. Appending the identifier type character `%` to any identifier forces it to `Integer`.  
+- **Tür karakterleri.** Değişmez değer türü karakter `I` bir sabit değere eklenmesi, `Integer` veri türüne zorlar. Tanımlayıcı türü karakter `%` herhangi bir tanımlayıcıya eklemek bunu `Integer`zorlar.  
   
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Int32?displayProperty=nameWithType> structure.  
+- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Int32?displayProperty=nameWithType> yapısıdır.  
   
 ## <a name="range"></a>Aralık
 

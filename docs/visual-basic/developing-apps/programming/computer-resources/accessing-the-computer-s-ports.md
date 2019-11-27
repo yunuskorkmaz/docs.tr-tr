@@ -14,37 +14,37 @@ ms.locfileid: "74329590"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>Bilgisayar Bağlantı Noktalarına Erişme (Visual Basic)
 
-The `My.Computer.Ports` object provides a property and a method for accessing the computer's serial ports.  
+`My.Computer.Ports` nesnesi, bilgisayarın seri bağlantı noktalarına erişmek için bir özellik ve bir yöntem sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
  [Nasıl Yapılır: Kullanılabilir Seri Bağlantı Noktalarını Gösterme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
- Demonstrates how to show available serial ports.  
+ Kullanılabilir seri bağlantı noktalarının nasıl gösterileceğini gösterir.  
   
  [Nasıl Yapılır: Seri Bağlantı Noktalarına Ekli Modemleri Çevirme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
- Demonstrates how to dial a modem attached to the serial port of a computer.  
+ Bir bilgisayarın seri bağlantı noktasına bağlı bir modemin nasıl arayacağını gösterir.  
   
  [Nasıl Yapılır: Seri Bağlantı Noktalarına Dizeler Gönderme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
- Demonstrates how to send a string to a computer's serial port.  
+ Bilgisayarın seri bağlantı noktasına bir dizenin nasıl gönderileceğini gösterir.  
   
  [Nasıl Yapılır: Seri Bağlantı Noktalarından Dize Alma](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
- Demonstrates how to receive a string from a computer's serial port.  
+ Bilgisayarın seri bağlantı noktasından nasıl dize alınacağını gösterir.  
   
  [.NET Framework'te Bağlantı Noktası İşlemleri](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
- Describes how to use the .NET Framework when performing port operations.  
+ Bağlantı noktası işlemlerini gerçekleştirirken .NET Framework nasıl kullanılacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
 
  <xref:Microsoft.VisualBasic.Devices.Ports>  
- Describes the `My.Computer.Ports` object and its members.  
+ `My.Computer.Ports` nesnesini ve üyelerini açıklar.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames>  
- Describes the `SerialPortNames` property, which gets a collection of the names of the serial ports on the computer.  
+ Bilgisayardaki seri bağlantı noktası adlarının bir koleksiyonunu alan `SerialPortNames` özelliğini açıklar.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  
- Describes the `OpenSerialPort` method, which creates and opens a <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> object.  
+ Bir <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> nesnesi oluşturan ve açan `OpenSerialPort` yöntemi açıklanmaktadır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 
  <xref:System.IO.Ports.SerialPort>  
- Describes the .NET Framework <xref:System.IO.Ports.SerialPort> class.
+ .NET Framework <xref:System.IO.Ports.SerialPort> sınıfını açıklar.

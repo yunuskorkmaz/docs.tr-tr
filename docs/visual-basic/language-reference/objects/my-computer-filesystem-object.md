@@ -20,22 +20,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347233"
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem Nesnesi
-Provides properties and methods for working with drives, files, and directories.  
+Sürücüler, dosyalar ve dizinler ile çalışmaya yönelik özellikler ve yöntemler sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- For information about the methods and properties of the `My.Computer.FileSystem` object, see <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+ `My.Computer.FileSystem` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
- For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
+ Daha fazla bilgi için bkz. [Visual Basic dosya erişimi](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
   
 > [!NOTE]
-> You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.  
+> Sürücüler, dosyalar ve dizinler ile çalışmak için <xref:System.IO?displayProperty=nameWithType> ad alanındaki sınıfları da kullanabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
+ **Ad alanı:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
+ **Sınıf:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (<xref:Microsoft.VisualBasic.FileIO.FileSystem>erişim sağlar)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

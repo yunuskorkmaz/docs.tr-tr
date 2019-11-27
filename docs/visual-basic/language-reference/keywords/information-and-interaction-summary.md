@@ -13,17 +13,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349802"
 ---
 # <a name="information-and-interaction-summary-visual-basic"></a>Bilgi ve Etkileşim Özeti (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaca ve kullanıma göre düzenlenir.  
   
 |Eylem|Dil öğesi|  
 |------------|----------------------|  
-|Run other programs.|<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>, <xref:Microsoft.VisualBasic.Interaction.Shell%2A>|  
-|Call a method or property.|<xref:Microsoft.VisualBasic.Interaction.CallByName%2A>|  
-|Sound a beep from computer.|<xref:Microsoft.VisualBasic.Interaction.Beep%2A>|  
-|Provide a command-line string.|<xref:Microsoft.VisualBasic.Interaction.Command%2A>|  
-|Manipulate COM objects.|<xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>, <xref:Microsoft.VisualBasic.Interaction.GetObject%2A>|  
-|Retrieve color information.|<xref:Microsoft.VisualBasic.Information.QBColor%2A>, <xref:Microsoft.VisualBasic.Information.RGB%2A>|  
-|Control dialog boxes|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
+|Diğer programları çalıştırın.|<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>, <xref:Microsoft.VisualBasic.Interaction.Shell%2A>|  
+|Bir yöntemi veya özelliği çağırın.|<xref:Microsoft.VisualBasic.Interaction.CallByName%2A>|  
+|Bilgisayardan bip sesi çıkar.|<xref:Microsoft.VisualBasic.Interaction.Beep%2A>|  
+|Bir komut satırı dizesi belirtin.|<xref:Microsoft.VisualBasic.Interaction.Command%2A>|  
+|COM nesnelerini işleyin.|<xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>, <xref:Microsoft.VisualBasic.Interaction.GetObject%2A>|  
+|Renk bilgilerini alın.|<xref:Microsoft.VisualBasic.Information.QBColor%2A>, <xref:Microsoft.VisualBasic.Information.RGB%2A>|  
+|Denetim iletişim kutuları|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

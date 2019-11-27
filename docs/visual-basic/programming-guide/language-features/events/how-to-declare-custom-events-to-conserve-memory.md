@@ -14,16 +14,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345126"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>Nasıl yapılır: Bellekten Kazanacak Şekilde Özel Olayları Bildirme (Visual Basic)
-There are several circumstances when it is important that an application keep its memory usage low. Custom events allow the application to use memory only for the events that it handles.  
+Bir uygulamanın bellek kullanımını düşük tutması önemli olduğunda bazı durumlar vardır. Özel olaylar, uygulamanın yalnızca işlediği olaylar için belleği kullanmasına izin verir.  
   
- By default, when a class declares an event, the compiler allocates memory for a field to store the event information. If a class has many unused events, they needlessly take up memory.  
+ Varsayılan olarak, bir sınıf bir olay bildirdiğini derleyici, olay bilgilerini depolamak için bir alan için bellek ayırır. Bir sınıfta çok sayıda kullanılmamış olay varsa, bu, belleğin sorunsuz bir şekilde sürmasını isterler.  
   
- Instead of using the default implementation of events that Visual Basic provides, you can use custom events to manage the memory usage more carefully.  
+ Visual Basic sağladığı olayların varsayılan uygulamasını kullanmak yerine, bellek kullanımını daha dikkatli bir şekilde yönetmek için özel olayları kullanabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- In this example, the class uses one instance of the <xref:System.ComponentModel.EventHandlerList> class, stored in the `Events` field, to store information about the events in use. The <xref:System.ComponentModel.EventHandlerList> class is an optimized list class designed to hold delegates.  
+ Bu örnekte, sınıfı, kullanımdaki olaylar hakkında bilgi depolamak için `Events` alanında depolanan <xref:System.ComponentModel.EventHandlerList> sınıfının bir örneğini kullanır. <xref:System.ComponentModel.EventHandlerList> sınıfı, temsilcileri tutmak için tasarlanan iyileştirilmiş bir liste sınıfıdır.  
   
- All events in the class use the `Events` field to keep track of what methods are handling each event.  
+ Sınıftaki tüm olaylar, her bir olayın hangi yöntemlerin işleme olduğunu izlemek için `Events` alanını kullanır.  
   
  [!code-vb[VbVbalrEvents#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#22)]  
   

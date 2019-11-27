@@ -38,7 +38,7 @@ Sunucu atık toplama için kullanılacak Heap/iş parçacığı sayısını beli
 
 #### <a name="enabled-attribute"></a>enabled özniteliği
 
-|Değer|Açıklama|
+|Value|Açıklama|
 |-----------|-----------------|
 |`nn`|Sunucu GC için kullanılacak Heap sayısı.|
 

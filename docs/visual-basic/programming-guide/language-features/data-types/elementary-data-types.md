@@ -13,24 +13,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350099"
 ---
 # <a name="elementary-data-types-visual-basic"></a>Başlangıç Veri Türleri (Visual Basic)
-Visual Basic supplies a set of predefined data types, which you can use for many of your programming elements. This section describes these types and how to use them.  
+Visual Basic, programlama öğelerinizin birçoğu için kullanabileceğiniz, önceden tanımlanmış bir veri türleri kümesi sağlar. Bu bölümde bu türler ve bunların nasıl kullanılacağı açıklanmaktadır.  
   
 > [!NOTE]
-> Every elementary data type in Visual Basic is supported by a structure or a class that is in the <xref:System> namespace. The compiler uses each data type keyword as an alias for the underlying structure or class. For example, declaring a variable by using the reserved word `Byte` is the same as declaring it by using the fully qualified structure name <xref:System.Byte?displayProperty=nameWithType>.  
+> Visual Basic içindeki her bir temel veri türü, <xref:System> ad alanındaki bir yapı veya bir sınıf tarafından desteklenir. Derleyici, her bir veri türü anahtar sözcüğünü temel yapı veya sınıf için bir diğer ad olarak kullanır. Örneğin, ayrılmış sözcük `Byte` kullanarak bir değişken bildirmek, <xref:System.Byte?displayProperty=nameWithType>tam yapı adı kullanılarak bildirilmesiyle aynıdır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Sayısal Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
- Describes the integral and non-integral numeric types.  
+ İntegral ve tamsayı olmayan sayısal türleri açıklar.  
   
  [Karakter Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- Describes the `Char` and `String` types.  
+ `Char` ve `String` türlerini açıklar.  
   
  [Çeşitli Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  
- Describes the `Boolean`, `Date`, and `Object` types.  
+ `Boolean`, `Date`ve `Object` türlerini açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Introduces the Visual Basic data types and describes how to use them.  
+ Visual Basic veri türlerini tanıtır ve bunların nasıl kullanılacağını açıklar.  
   
  [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)  
- Provides an overview of the elementary data types supplied by Visual Basic.
+ Visual Basic tarafından sağlanan temel veri türlerine genel bir bakış sağlar.

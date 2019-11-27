@@ -38,7 +38,7 @@ ms.locfileid: "74343764"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim Deyimi (Visual Basic)
 
-Declares and allocates storage space for one or more variables.
+Bir veya daha fazla değişken için depolama alanı bildirir ve ayırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -51,11 +51,11 @@ Dim [ WithEvents ] variablelist
 
 - `attributelist`
 
-  İsteğe bağlı. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).
+  İsteğe bağlı. Bkz. [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).
 
 - `accessmodifier`
 
-  İsteğe bağlı. Can be one of the following:
+  İsteğe bağlı. Aşağıdakilerden biri olabilir:
 
   - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 
@@ -69,77 +69,77 @@ Dim [ WithEvents ] variablelist
 
   - [Private Protected](../../language-reference/modifiers/private-protected.md)
 
-  See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+  [Visual Basic erişim düzeylerine](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)bakın.
 
 - `Shared`
 
-  İsteğe bağlı. See [Shared](../../../visual-basic/language-reference/modifiers/shared.md).
+  İsteğe bağlı. Bkz. [paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md).
 
 - `Shadows`
 
-  İsteğe bağlı. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+  İsteğe bağlı. Bkz. [gölgeler](../../../visual-basic/language-reference/modifiers/shadows.md).
 
 - `Static`
 
-  İsteğe bağlı. See [Static](../../../visual-basic/language-reference/modifiers/static.md).
+  İsteğe bağlı. Bkz. [statik](../../../visual-basic/language-reference/modifiers/static.md).
 
 - `ReadOnly`
 
-  İsteğe bağlı. See [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).
+  İsteğe bağlı. Bkz. [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).
 
 - `WithEvents`
 
-İsteğe bağlı. Specifies that these are object variables that refer to instances of a class that can raise events. See [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).
+İsteğe bağlı. Bunların, olayları yükseltebileceği bir sınıfın örneklerine başvuran nesne değişkenleri olduğunu belirtir. Bkz. [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).
 
 - `variablelist`
 
-  Gerekli. List of variables being declared in this statement.
+  Gerekli. Bu bildirimde bildirildiği değişkenlerin listesi.
 
   `variable [ , variable ... ]`
 
-  Each `variable` has the following syntax and parts:
+  Her `variable` aşağıdaki söz dizimi ve bölümlere sahiptir:
 
   `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`
 
-  |Part|Açıklama|
+  |Bölümüyle|Açıklama|
   |---|---|
-  |`variablename`|Gerekli. Name of the variable. See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
-  |`boundslist`|İsteğe bağlı. List of bounds of each dimension of an array variable.|
-  |`New`|İsteğe bağlı. Creates a new instance of the class when the `Dim` statement runs.|
-  |`datatype`|İsteğe bağlı. Data type of the variable.|
-  |`With`|İsteğe bağlı. Introduces the object initializer list.|
-  |`propertyname`|İsteğe bağlı. The name of a property in the class you are making an instance of.|
-  |`propinitializer`|Required after `propertyname` =. The expression that is evaluated and assigned to the property name.|
-  |`initializer`|Optional if `New` is not specified. Expression that is evaluated and assigned to the variable when it is created.|
+  |`variablename`|Gerekli. Değişkenin adı. Bkz. [tanımlanmış öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
+  |`boundslist`|İsteğe bağlı. Bir dizi değişkeninin her boyutunun sınırları listesi.|
+  |`New`|İsteğe bağlı. `Dim` deyimleri çalıştırıldığında, sınıfının yeni bir örneğini oluşturur.|
+  |`datatype`|İsteğe bağlı. Değişkenin veri türü.|
+  |`With`|İsteğe bağlı. Nesne Başlatıcısı listesini tanıtır.|
+  |`propertyname`|İsteğe bağlı. Örneği yaptığınız sınıftaki bir özelliğin adı.|
+  |`propinitializer`|`propertyname` = sonra gerekli. Değerlendirilen ve özellik adına atanan ifade.|
+  |`initializer`|`New` belirtilmemişse isteğe bağlıdır. Değerlendirilen ve değişken oluşturulduğunda değişkene atanan ifade.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-The Visual Basic compiler uses the `Dim` statement to determine the variable's data type and other information, such as what code can access the variable. The following example declares a variable to hold an `Integer` value.
+Visual Basic derleyici, değişkenin veri türünü ve hangi kodun değişkene erişebileceği gibi diğer bilgileri belirlemek için `Dim` ifadesini kullanır. Aşağıdaki örnek bir `Integer` değerini tutacak bir değişken bildirir.
 
 ```vb
 Dim numberOfStudents As Integer
 ```
 
-You can specify any data type or the name of an enumeration, structure, class, or interface.
+Herhangi bir veri türü veya bir numaralandırma, yapı, sınıf veya arabirim adı belirtebilirsiniz.
 
 ```vb
 Dim finished As Boolean
 Dim monitorBox As System.Windows.Forms.Form
 ```
 
-For a reference type, you use the `New` keyword to create a new instance of the class or structure that is specified by the data type. If you use `New`, you do not use an initializer expression. Instead, you supply arguments, if they are required, to the constructor of the class from which you are creating the variable.
+Bir başvuru türü için, veri türü tarafından belirtilen sınıf veya yapının yeni bir örneğini oluşturmak üzere `New` anahtar sözcüğünü kullanırsınız. `New`kullanıyorsanız, başlatıcı ifadesi kullanmayın. Bunun yerine, varsa bağımsız değişkenleri değişkeni oluşturduğunuz sınıfın oluşturucusuna sağlarsınız.
 
 ```vb
 Dim bottomLabel As New System.Windows.Forms.Label
 ```
 
-You can declare a variable in a procedure, block, class, structure, or module. You cannot declare a variable in a source file, namespace, or interface. For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+Bir yordam, blok, sınıf, yapı veya modülde bir değişken bildirebilirsiniz. Bir kaynak dosyasında, ad alanında veya arabirimde bir değişken bildiremezsiniz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
 
-A variable that is declared at module level, outside any procedure, is a *member variable* or *field*. Member variables are in scope throughout their class, structure, or module. A variable that is declared at procedure level is a *local variable*. Local variables are in scope only within their procedure or block.
+Modül düzeyinde belirtilen bir değişken, herhangi bir yordam dışında, bir *üye değişkeni* veya *alanıdır*. Üye değişkenleri, sınıfları, yapısı veya modülleri genelinde kapsamdadır. Yordam düzeyinde belirtilen bir değişken *yerel bir değişkendir*. Yerel değişkenler yalnızca kendi yordamı veya blokları içinde kapsamdadır.
 
-The following access modifiers are used to declare variables outside a procedure: `Public`, `Protected`, `Friend`, `Protected Friend`, and `Private`. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Aşağıdaki erişim değiştiricileri, değişkenleri bir yordam dışında bildirmek için kullanılır: `Public`, `Protected`, `Friend`, `Protected Friend`ve `Private`. Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-The `Dim` keyword is optional and usually omitted if you specify any of the following modifiers: `Public`, `Protected`, `Friend`, `Protected Friend`, `Private`, `Shared`, `Shadows`, `Static`, `ReadOnly`, or `WithEvents`.
+`Dim` anahtar sözcüğü isteğe bağlıdır ve aşağıdaki değiştiricilerin herhangi birini belirtirseniz genellikle atlanır: `Public`, `Protected`, `Friend`, `Protected Friend`, `Private`, `Shared`, `Shadows`, `Static`, `ReadOnly`veya `WithEvents`.
 
 ```vb
 Public maximumAllowed As Double
@@ -148,18 +148,18 @@ Private salary As Decimal
 Static runningTotal As Integer
 ```
 
-If `Option Explicit` is on (the default), the compiler requires a declaration for every variable you use. For more information, see [Option Explicit Statement](../../../visual-basic/language-reference/statements/option-explicit-statement.md).
+`Option Explicit` açık ise (varsayılan), derleyici kullandığınız her değişken için bir bildirim gerektirir. Daha fazla bilgi için bkz. [Option Explicit deyimdir](../../../visual-basic/language-reference/statements/option-explicit-statement.md).
 
-## <a name="specifying-an-initial-value"></a>Specifying an Initial Value
+## <a name="specifying-an-initial-value"></a>Bir başlangıç değeri belirtme
 
-You can assign a value to a variable when it is created. For a value type, you use an *initializer* to supply an expression to be assigned to the variable. The expression must evaluate to a constant that can be calculated at compile time.
+Bir değişkene, oluşturulduğunda bir değer atayabilirsiniz. Değer türü için, değişkene atanacak bir ifade sağlamak üzere bir *Başlatıcı* kullanırsınız. İfade, derleme zamanında hesaplanabilecek bir sabit olarak değerlendirilmelidir.
 
 ```vb
 Dim quantity As Integer = 10
 Dim message As String = "Just started"
 ```
 
-If an initializer is specified and a data type is not specified in an `As` clause, *type inference* is used to infer the data type from the initializer. In the following example, both `num1` and `num2` are strongly typed as integers. In the second declaration, type inference infers the type from the value 3.
+Bir başlatıcı belirtilmişse ve bir `As` yan tümcesinde veri türü belirtilmemişse, veri türünü başlatıcıdan çıkarsmak için *tür çıkarımı* kullanılır. Aşağıdaki örnekte, hem `num1` hem de `num2` kesin olarak tam sayı olarak türdedir. İkinci bildirimde, tür çıkarımı tür 3 ' ten yazın.
 
 ```vb
 ' Use explicit typing.
@@ -169,30 +169,30 @@ Dim num1 As Integer = 3
 Dim num2 = 3
 ```
 
-Type inference applies at the procedure level. It does not apply outside a procedure in a class, structure, module, or interface. For more information about type inference, see [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
+Tür çıkarımı yordam düzeyinde uygulanır. Bir sınıf, yapı, modül veya arabirimdeki bir yordamın dışında uygulanmaz. Tür çıkarımı hakkında daha fazla bilgi için bkz. [Option Infer deyimleri](../../../visual-basic/language-reference/statements/option-infer-statement.md) ve [Yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
 
-For information about what happens when a data type or initializer is not specified, see [Default Data Types and Values](../../../visual-basic/language-reference/statements/dim-statement.md#default) later in this topic.
+Veri türü veya Başlatıcı belirtilmediğinde ne olacağı hakkında daha fazla bilgi için bu konunun ilerleyen kısımlarında yer alarak [varsayılan veri türleri ve değerleri](../../../visual-basic/language-reference/statements/dim-statement.md#default) bölümüne bakın.
 
-You can use an *object initializer* to declare instances of named and anonymous types. The following code creates an instance of a `Student` class and uses an object initializer to initialize properties.
+Adlandırılmış ve anonim türlerin örneklerini bildirmek için bir *nesne Başlatıcısı* kullanabilirsiniz. Aşağıdaki kod `Student` sınıfının bir örneğini oluşturur ve özellikleri başlatmak için bir nesne Başlatıcısı kullanır.
 
 ```vb
 Dim student1 As New Student With {.First = "Michael",
                                   .Last = "Tucker"}
 ```
 
-For more information about object initializers, see [How to: Declare an Object by Using an Object Initializer](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md), [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md), and [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+Nesne başlatıcıları hakkında daha fazla bilgi için bkz. [nasıl yapılır: nesne Başlatıcısı](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md), [nesne başlatıcıları: adlandırılmış ve anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)ve [anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)kullanarak nesne bildirme.
 
-## <a name="declaring-multiple-variables"></a>Declaring Multiple Variables
+## <a name="declaring-multiple-variables"></a>Birden çok değişken bildirme
 
-You can declare several variables in one declaration statement, specifying the variable name for each one, and following each array name with parentheses. Multiple variables are separated by commas.
+Tek bir bildirim ifadesinde, her biri için değişken adını belirterek ve her dizi adını parantez ile izleyerek birkaç değişken bildirebilirsiniz. Birden çok değişken virgülle ayrılır.
 
 ```vb
 Dim lastTime, nextTime, allTimes() As Date
 ```
 
-If you declare more than one variable with one `As` clause, you cannot supply an initializer for that group of variables.
+Bir `As` yan tümcesiyle birden fazla değişken bildirirseniz, bu değişken grubu için bir başlatıcı sağlayamazsınız.
 
-You can specify different data types for different variables by using a separate `As` clause for each variable you declare. Each variable takes the data type specified in the first `As` clause encountered after its `variablename` part.
+Farklı değişkenler için, bildirdiğiniz her değişken için ayrı bir `As` yan tümcesi kullanarak farklı veri türleri belirtebilirsiniz. Her değişken, `variablename` bölümünün ardından karşılaşılan ilk `As` yan tümcesinde belirtilen veri türünü alır.
 
 ```vb
 Dim a, b, c As Single, x, y As Double, i As Integer
@@ -201,26 +201,26 @@ Dim a, b, c As Single, x, y As Double, i As Integer
 
 ## <a name="arrays"></a>Diziler
 
-You can declare a variable to hold an *array*, which can hold multiple values. To specify that a variable holds an array, follow its `variablename` immediately with parentheses. For more information about arrays, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Birden çok değer içerebilen bir *diziyi*tutacak bir değişken bildirebilirsiniz. Bir değişkenin bir diziyi bulundurduğunu belirtmek için, parantez ile hemen `variablename` izleyin. Diziler hakkında daha fazla bilgi için bkz. [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).
 
-You can specify the lower and upper bound of each dimension of an array. To do this, include a `boundslist` inside the parentheses. For each dimension, the `boundslist` specifies the upper bound and optionally the lower bound. The lower bound is always zero, whether you specify it or not. Each index can vary from zero through its upper bound value.
+Bir dizinin her boyutunun alt ve üst sınırını belirtebilirsiniz. Bunu yapmak için, parantez içine bir `boundslist` ekleyin. Her boyut için `boundslist` üst sınırı ve isteğe bağlı olarak alt sınırı belirtir. Alt sınır, sizin belirtmeksizin her zaman sıfırdır. Her dizin, üst sınır değeri ile sıfırdan farklılık gösterebilir.
 
-The following two statements are equivalent. Each statement declares an array of 21 `Integer` elements. When you access the array, the index can vary from 0 through 20.
+Aşağıdaki iki deyim eşdeğerdir. Her bir ifade 21 `Integer` öğelerinden oluşan bir dizi bildirir. Diziye eriştiğinizde, dizin 0 ile 20 arasında farklılık gösterebilir.
 
 ```vb
 Dim totals(20) As Integer
 Dim totals(0 To 20) As Integer
 ```
 
-The following statement declares a two-dimensional array of type `Double`. The array has 4 rows (3 + 1) of 6 columns (5 + 1) each. Note that an upper bound represents the highest possible value for the index, not the length of the dimension. The length of the dimension is the upper bound plus one.
+Aşağıdaki ifade `Double`türünde iki boyutlu bir dizi bildirir. Dizide 4 satır (3 + 1) 6 sütun (5 + 1) bulunur. Üst sınır, boyutun uzunluğunu değil, dizin için mümkün olan en yüksek değeri temsil ettiğini unutmayın. Boyutun uzunluğu üst sınır artı bir değer.
 
 ```vb
 Dim matrix2(3, 5) As Double
 ```
 
-An array can have from 1 to 32 dimensions.
+Bir dizi 1 ile 32 arasında boyutlara sahip olabilir.
 
-You can leave all the bounds blank in an array declaration. If you do this, the array has the number of dimensions you specify, but it is uninitialized. It has a value of `Nothing` until you initialize at least some of its elements. The `Dim` statement must specify bounds either for all dimensions or for no dimensions.
+Bir dizi bildiriminde tüm sınırların boş kalmasını sağlayabilirsiniz. Bunu yaparsanız dizi, belirttiğiniz boyut sayısına sahiptir ancak başlatılmamış olur. Öğelerinin en az bir kısmını başlatana kadar bir `Nothing` değeri vardır. `Dim` deyimin tüm boyutlar veya hiçbir boyut için sınır belirtmesi gerekir.
 
 ```vb
 ' Declare an array with blank array bounds.
@@ -229,97 +229,97 @@ Dim messages() As String
 ReDim messages(4)
 ```
 
-If the array has more than one dimension, you must include commas between the parentheses to indicate the number of dimensions.
+Dizide birden fazla boyut varsa, boyut sayısını göstermek için parantez arasına virgül eklemeniz gerekir.
 
 ```vb
 Dim oneDimension(), twoDimensions(,), threeDimensions(,,) As Byte
 ```
 
-You can declare a *zero-length array* by declaring one of the array's dimensions to be -1. A variable that holds a zero-length array does not have the value `Nothing`. Zero-length arrays are required by certain common language runtime functions. If you try to access such an array, a runtime exception occurs. For more information, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Dizinin boyutlarından birini-1 olarak bildirerek *sıfır uzunluklu bir dizi* bildirebilirsiniz. Sıfır uzunluklu bir diziyi tutan bir değişken `Nothing`değerine sahip değil. Belirli ortak dil çalışma zamanı işlevleri için sıfır uzunluklu diziler gereklidir. Böyle bir diziye erişmeyi denerseniz, bir çalışma zamanı özel durumu oluşur. Daha fazla bilgi için bkz. [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).
 
-You can initialize the values of an array by using an array literal. To do this, surround the initialization values with braces (`{}`).
+Bir dizinin değerlerini bir dizi değişmez değeri kullanarak başlatabilirsiniz. Bunu yapmak için, başlatma değerlerini küme ayraçları (`{}`) ile çevreleyin.
 
 ```vb
 Dim longArray() As Long = {0, 1, 2, 3}
 ```
 
-For multidimensional arrays, the initialization for each separate dimension is enclosed in braces in the outer dimension. The elements are specified in row-major order.
+Çok boyutlu diziler için, her ayrı boyut için başlatma, dış boyuttaki küme ayraçları içine alınır. Öğeler satır birincil sırada belirtilmiştir.
 
 ```vb
 Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 ```
 
-For more information about array literals, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Dizi değişmez değerleri hakkında daha fazla bilgi için bkz. [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).
 
-## <a name="default"></a> Default Data Types and Values
+## <a name="default"></a>Varsayılan veri türleri ve değerleri
 
-The following table describes the results of various combinations of specifying the data type and initializer in a `Dim` statement.
+Aşağıdaki tabloda, bir `Dim` bildiriminde veri türünü ve başlatıcıyı belirtmenin çeşitli birleşimlerinin sonuçları açıklanmaktadır.
 
-|Data type specified?|Initializer specified?|Örnek|Sonuç|
+|Veri türü belirtildi mi?|Başlatıcı belirtildi mi?|Örnek|Sonuç|
 |---|---|---|---|
-|Hayır|Hayır|`Dim qty`|If [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) is off (the default), the variable is set to `Nothing`.<br /><br /> If `Option Strict` is on, a compile-time error occurs.|
-|Hayır|Evet|`Dim qty = 5`|If [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) is on (the default), the variable takes the data type of the initializer. See [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> If `Option Infer` is off and `Option Strict` is off, the variable takes the data type of `Object`.<br /><br /> If `Option Infer` is off and `Option Strict` is on, a compile-time error occurs.|
-|Evet|Hayır|`Dim qty As Integer`|The variable is initialized to the default value for the data type. See the table later in this section.|
-|Evet|Evet|`Dim qty  As Integer = 5`|If the data type of the initializer is not convertible to the specified data type, a compile-time error occurs.|
+|Hayır|Hayır|`Dim qty`|[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) kapalıysa (varsayılan), değişken `Nothing`olarak ayarlanır.<br /><br /> `Option Strict` açık ise, bir derleme zamanı hatası oluşur.|
+|Hayır|Evet|`Dim qty = 5`|[Seçenek çıkarımı](../../../visual-basic/language-reference/statements/option-infer-statement.md) açık ise (varsayılan), değişkeni başlatıcının veri türünü alır. Bkz. [Yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> `Option Infer` kapalıysa ve `Option Strict` kapalıysa, değişken `Object`veri türünü alır.<br /><br /> `Option Infer` kapalıysa ve `Option Strict` açık ise, bir derleme zamanı hatası oluşur.|
+|Evet|Hayır|`Dim qty As Integer`|Değişken, veri türü için varsayılan değer olarak başlatılır. Bu bölümün ilerleyen kısımlarında tabloya bakın.|
+|Evet|Evet|`Dim qty  As Integer = 5`|Başlatıcının veri türü belirtilen veri türüne dönüştürülebilir değilse, bir derleme zamanı hatası oluşur.|
 
-If you specify a data type but do not specify an initializer, Visual Basic initializes the variable to the default value for its data type. The following table shows the default initialization values.
+Bir veri türü belirtirseniz ancak Başlatıcı belirtmezseniz, Visual Basic değişkeni, veri türü için varsayılan değer olarak başlatır. Aşağıdaki tabloda varsayılan başlatma değerleri gösterilmektedir.
 
 |Veri türü|Varsayılan değer|
 |---|---|
-|All numeric types (including `Byte` and `SByte`)|0|
-|`Char`|Binary 0|
-|All reference types (including `Object`, `String`, and all arrays)|`Nothing`|
+|Tüm sayısal türler (`Byte` ve `SByte`dahil)|0|
+|`Char`|İkili 0|
+|Tüm başvuru türleri (`Object`, `String`ve tüm diziler dahil)|`Nothing`|
 |`Boolean`|`False`|
-|`Date`|12:00 AM of January 1 of the year 1 (01/01/0001 12:00:00 AM)|
+|`Date`|1 yılın 1 Ocak 12:00 (01/01/0001 12:00:00)|
 
-Each element of a structure is initialized as if it were a separate variable. If you declare the length of an array but do not initialize its elements, each element is initialized as if it were a separate variable.
+Bir yapının her öğesi ayrı bir değişken gibi başlatılır. Bir dizinin uzunluğunu bildirir ancak öğelerini başlatmayın, her öğe ayrı bir değişken gibi başlatılır.
 
-## <a name="static-local-variable-lifetime"></a>Static Local Variable Lifetime
+## <a name="static-local-variable-lifetime"></a>Statik yerel değişken ömrü
 
-A `Static` local variable has a longer lifetime than that of the procedure in which it is declared. The boundaries of the variable's lifetime depend on where the procedure is declared and whether it is `Shared`.
+`Static` yerel bir değişken, bildirildiği yordamın süresinden daha uzun bir süre içinde. Değişkenin yaşam süresinin sınırları yordamın bildirildiği yere ve `Shared`olup olmadığına bağlıdır.
 
-|Procedure declaration|Variable initialized|Variable stops existing|
+|Yordam bildirimi|Değişken başlatıldı|Değişken var olanı durduruyor|
 |---|---|---|
-|In a module|The first time the procedure is called|When your program stops execution|
-|In a class or structure, procedure is `Shared`|The first time the procedure is called either on a specific instance or on the class or structure itself|When your program stops execution|
-|In a class or structure, procedure isn't `Shared`|The first time the procedure is called on a specific instance|When the instance is released for garbage collection (GC)|
+|Bir modülde|Yordamın ilk çağrılışında|Programınız yürütmeyi durduruyor|
+|Bir sınıf veya yapıda, yordam `Shared`|Yordamın, belirli bir örnek veya sınıf ya da yapının kendisindeki ilk kez çağrılması|Programınız yürütmeyi durduruyor|
+|Bir sınıf veya yapıda, yordam `Shared` değildir|Yordamın belirli bir örnek üzerinde ilk çağrılışında|Örnek, atık toplama (GC) için bırakıldığında|
 
-## <a name="attributes-and-modifiers"></a>Attributes and Modifiers
+## <a name="attributes-and-modifiers"></a>Öznitelikler ve değiştiriciler
 
-You can apply attributes only to member variables, not to local variables. An attribute contributes information to the assembly's metadata, which is not meaningful for temporary storage such as local variables.
+Öznitelikleri, yerel değişkenlere değil yalnızca üye değişkenlerine uygulayabilirsiniz. Bir öznitelik, bilgileri derlemenin meta verilerine katkıda bulunur ve bu, yerel değişkenler gibi geçici depolama için anlamlı değildir.
 
-At module level, you cannot use the `Static` modifier to declare member variables. At procedure level, you cannot use `Shared`, `Shadows`, `ReadOnly`, `WithEvents`, or any access modifiers to declare local variables.
+Modül düzeyinde, üye değişkenlerini bildirmek için `Static` değiştiricisini kullanamazsınız. Yordam düzeyinde, yerel değişkenleri bildirmek için `Shared`, `Shadows`, `ReadOnly`, `WithEvents`veya herhangi bir erişim değiştiricilerini kullanamazsınız.
 
-You can specify what code can access a variable by supplying an `accessmodifier`. Class and module member variables (outside any procedure) default to private access, and structure member variables default to public access. You can adjust their access levels with the access modifiers. You cannot use access modifiers on local variables (inside a procedure).
+Bir `accessmodifier`sağlayarak hangi kodun bir değişkene erişebileceğini belirtebilirsiniz. Sınıf ve modül üye değişkenleri (herhangi bir yordam dışında), varsayılan olarak özel erişim ve yapı üye değişkenlerini genel erişime varsayılan olarak sağlar. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz. Yerel değişkenlerde erişim değiştiricilerini kullanamazsınız (bir yordam içinde).
 
-You can specify `WithEvents` only on member variables, not on local variables inside a procedure. If you specify `WithEvents`, the data type of the variable must be a specific class type, not `Object`. You cannot declare an array with `WithEvents`. For more information about events, see [Events](../../../visual-basic/programming-guide/language-features/events/index.md).
+Yalnızca üye değişkenlerinde `WithEvents`, bir yordamın içindeki yerel değişkenlerde değil, ' ı belirtebilirsiniz. `WithEvents`belirtirseniz, değişkenin veri türü, `Object`değil, belirli bir sınıf türü olmalıdır. `WithEvents`bir dizi bildiremezsiniz. Olaylar hakkında daha fazla bilgi için bkz. [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md).
 
 > [!NOTE]
-> Code outside a class, structure, or module must qualify a member variable's name with the name of that class, structure, or module. Code outside a procedure or block cannot refer to any local variables within that procedure or block.
+> Bir sınıf, yapı veya modülün dışındaki kodun, bir üye değişkeninin adını bu sınıf, yapı veya modülün adı ile nitelemeniz gerekir. Bir yordamın veya bloğun dışındaki kod, bu yordam veya blok içindeki herhangi bir yerel değişkene başvuramaz.
 
-## <a name="releasing-managed-resources"></a>Releasing Managed Resources
+## <a name="releasing-managed-resources"></a>Yönetilen kaynakları serbest bırakma
 
-The .NET Framework garbage collector disposes of managed resources without any extra coding on your part. However, you can force the disposal of a managed resource instead of waiting for the garbage collector.
+.NET Framework atık toplayıcı, sizin bölüminizdeki ek kodlama yapmadan yönetilen kaynakları ortadan kaldırır. Ancak, atık toplayıcıyı beklemek yerine, yönetilen bir kaynağın elden çıkarılmasını zorlayabilirsiniz.
 
-If a class holds onto a particularly valuable and scarce resource (such as a database connection or file handle), you might not want to wait until the next garbage collection to clean up a class instance that's no longer in use. A class may implement the <xref:System.IDisposable> interface to provide a way to release resources before a garbage collection. A class that implements that interface exposes a `Dispose` method that can be called to force valuable resources to be released immediately.
+Bir sınıf özellikle değerli ve nadir kaynağına (veritabanı bağlantısı veya dosya tanıtıcısı gibi) sahip olursa, artık kullanımda olmayan bir sınıf örneğini temizleyebilmek için sonraki atık toplamaya kadar beklemek istemeyebilirsiniz. Bir sınıf, bir atık toplama işleminden önce kaynakları serbest bırakmak için <xref:System.IDisposable> arabirimini uygulayabilir. Bu arabirimi uygulayan bir sınıf, değerli kaynakların hemen yayınlanmasını zorlamak için çağrılabilecek bir `Dispose` yöntemi sunar.
 
-The `Using` statement automates the process of acquiring a resource, executing a set of statements, and then disposing of the resource. However, the resource must implement the <xref:System.IDisposable> interface. For more information, see [Using Statement](../../../visual-basic/language-reference/statements/using-statement.md).
+`Using` deyimi, kaynak alma, bir deyim kümesi yürütme ve sonra kaynağı atma sürecini otomatikleştirir. Ancak, kaynağın <xref:System.IDisposable> arabirimini uygulaması gerekir. Daha fazla bilgi için bkz. [using deyimleri](../../../visual-basic/language-reference/statements/using-statement.md).
 
 ## <a name="example"></a>Örnek
 
-The following example declares variables by using the `Dim` statement with various options.
+Aşağıdaki örnek, çeşitli seçeneklerle `Dim` ifadesini kullanarak değişkenleri bildirir.
 
 [!code-vb[VbVbalrStatements#141](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#141)]
 
 ## <a name="example"></a>Örnek
 
-The following example lists the prime numbers between 1 and 30. The scope of local variables is described in code comments.
+Aşağıdaki örnekte 1 ile 30 arasında asal sayılar listelenmektedir. Yerel değişkenlerin kapsamı kod açıklamalarında açıklanmıştır.
 
 [!code-vb[VbVbalrStatements#142](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#142)]
 
 ## <a name="example"></a>Örnek
 
-In the following example, the `speedValue` variable is declared at the class level. The `Private` keyword is used to declare the variable. The variable can be accessed by any procedure in the `Car` class.
+Aşağıdaki örnekte `speedValue` değişkeni sınıf düzeyinde bildirilmiştir. `Private` anahtar sözcüğü değişkeni bildirmek için kullanılır. Değişkenine `Car` sınıfındaki herhangi bir yordam tarafından erişilebilir.
 
 [!code-vb[VbVbalrStatements#144](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#144)]
 

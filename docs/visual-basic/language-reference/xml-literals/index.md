@@ -17,17 +17,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349412"
 ---
 # <a name="xml-literals-visual-basic"></a>XML Değişmez Değerleri (Visual Basic)
-The topics in this section document the syntax of XML literals in Visual Basic. The XML literal syntax enables you to incorporate XML directly in your code.  
+Bu bölümdeki konular Visual Basic XML sabit değerlerinin sözdizimini belgebelgeleyin. XML sabit sözdizimi, doğrudan kodunuzda XML eklemenize olanak sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[XML Öğesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)|Describes the syntax for literals that represent <xref:System.Xml.Linq.XElement> objects.|  
-|[XML Belgesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)|Describes the syntax for literals that represent <xref:System.Xml.Linq.XDocument> objects.|  
-|[XML CDATA Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)|Describes the syntax for literals that represent <xref:System.Xml.Linq.XCData> objects.|  
-|[XML Açıklama Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|Describes the syntax for literals that represent <xref:System.Xml.Linq.XComment> objects.|  
-|[XML İşleme Talimatı Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|Describes the syntax for literals that represent <xref:System.Xml.Linq.XProcessingInstruction> objects.|  
+|[XML Öğesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)|<xref:System.Xml.Linq.XElement> nesnelerini temsil eden sabit değerler için sözdizimini açıklar.|  
+|[XML Belgesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)|<xref:System.Xml.Linq.XDocument> nesnelerini temsil eden sabit değerler için sözdizimini açıklar.|  
+|[XML CDATA Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)|<xref:System.Xml.Linq.XCData> nesnelerini temsil eden sabit değerler için sözdizimini açıklar.|  
+|[XML Açıklama Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|<xref:System.Xml.Linq.XComment> nesnelerini temsil eden sabit değerler için sözdizimini açıklar.|  
+|[XML İşleme Talimatı Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|<xref:System.Xml.Linq.XProcessingInstruction> nesnelerini temsil eden sabit değerler için sözdizimini açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

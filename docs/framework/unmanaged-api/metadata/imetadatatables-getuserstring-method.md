@@ -24,7 +24,7 @@ ms.locfileid: "74431428"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>IMetaDataTables::GetUserString Metodu
 
-Gets the hard-coded string at the specified index in the string column in the current scope.
+Geçerli kapsamdaki dize sütununda belirtilen dizinde sabit kodlanmış dizeyi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -39,23 +39,23 @@ HRESULT GetUserString (
 ## <a name="parameters"></a>Parametreler
 
 `ixUserString`\
-[in] The index value from which the hard-coded string will be retrieved.
+'ndaki Sabit kodlanmış dizenin alınacağı dizin değeri.
 
 `pcbData`\
-[out] A pointer to the size of `ppData`.
+dışı `ppData`boyutuna yönelik bir işaretçi.
 
 `ppData`\
-[out] A pointer to a pointer to the returned string.
+dışı Döndürülen dizeye bir işaretçi işaretçisi.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** Cor.h
+**Üst bilgi:** Cor. h
 
-**Library:** Used as a resource in MsCorEE.dll
+**Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır
 
-**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

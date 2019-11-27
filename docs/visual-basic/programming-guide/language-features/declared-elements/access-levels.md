@@ -23,73 +23,73 @@ ms.locfileid: "74348676"
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic'de Erişim Düzeyleri
 
-The *access level* of a declared element is the extent of the ability to access it, that is, what code has permission to read it or write to it. This is determined not only by how you declare the element itself, but also by the access level of the element's container. Code that cannot access a containing element cannot access any of its contained elements, even those declared as `Public`. For example, a `Public` variable in a `Private` structure can be accessed from inside the class that contains the structure, but not from outside that class.
+Tanımlı bir öğenin *erişim düzeyi* buna erişim yeteneğinin, diğer bir deyişle, hangi kodun bu dosyayı okuma veya yazma iznine sahip olduğu bir şeydir. Bu, yalnızca öğenin kendisini nasıl tanımlayacağınızın yanı sıra öğenin kapsayıcısının erişim düzeyiyle de belirlenir. Kapsayan bir öğeye erişememiş kod, `Public`olarak bildirilenler bile içerilen öğelerinden hiçbirine erişemez. Örneğin, bir `Private` yapısındaki `Public` değişkenine, yapıyı içeren sınıfın içinden, ancak bu sınıfın dışından erişilebilir.
 
-## <a name="public"></a>Ortak
+## <a name="public"></a>Genel
 
-The [Public](../../../language-reference/modifiers/public.md) keyword in the declaration statement specifies that the element can be accessed from code anywhere in the same project, from other projects that reference the project, and from any assembly built from the project. The following code shows a sample `Public` declaration:
+Bildirim deyimindeki [Public](../../../language-reference/modifiers/public.md) anahtar sözcüğü, öğeye aynı projede herhangi bir yerde, projeye başvuran diğer projelerden ve projeden oluşturulan herhangi bir derlemeden erişilebileceğini belirtir. Aşağıdaki kod bir örnek `Public` bildirimi gösterir:
 
 ```vb
 Public Class ClassForEverybody
 ```
 
-You can use `Public` only at module, interface, or namespace level. This means you can declare a public element at the level of a source file or namespace, or inside an interface, module, class, or structure, but not in a procedure.
+`Public` yalnızca modül, arabirim veya ad alanı düzeyinde kullanabilirsiniz. Bu, bir genel öğeyi bir kaynak dosya veya ad alanı düzeyinde ya da bir arabirim, modül, sınıf ya da yapı içinde veya bir yordamda değil, bir şekilde bildirebilmeniz anlamına gelir.
   
 ## <a name="protected"></a>Korumalı
 
-The [Protected](../../../language-reference/modifiers/protected.md) keyword in the declaration statement specifies that the element can be accessed only from within the same class, or from a class derived from this class. The following code shows a sample `Protected` declaration:
+Bildirim deyimindeki [Protected](../../../language-reference/modifiers/protected.md) anahtar sözcüğü, öğesinin yalnızca aynı sınıftan veya bu sınıftan türetilmiş bir sınıftan erişilebilir olduğunu belirtir. Aşağıdaki kod bir örnek `Protected` bildirimi gösterir:
 
 ```vb
 Protected Class ClassForMyHeirs
 ```
 
-You can use `Protected` only at class level, and only when you declare a member of a class. This means you can declare a protected element in a class, but not at the level of a source file or namespace, or inside an interface, module, structure, or procedure.
+`Protected` yalnızca sınıf düzeyinde ve yalnızca bir sınıfın bir üyesini bildirdiğinizde kullanabilirsiniz. Bu, bir kaynak dosya veya ad alanı düzeyinde ya da bir arabirim, modül, yapı veya yordamın içinde değil, bir sınıfta korunan bir öğe bildirebilmeniz anlamına gelir.
 
 ## <a name="friend"></a>Arkadaş
 
-The [Friend](../../../language-reference/modifiers/friend.md) keyword in the declaration statement specifies that the element can be accessed from within the same assembly, but not from outside the assembly. The following code shows a sample `Friend` declaration:
+Bildirim deyimindeki [Friend](../../../language-reference/modifiers/friend.md) anahtar sözcüğü, öğesine aynı derleme içinden erişilemeyeceğini, ancak derlemenin dışından erişilebileceğini belirtir. Aşağıdaki kod bir örnek `Friend` bildirimi gösterir:
 
 ```vb
 Friend stringForThisProject As String
 ```
 
-You can use `Friend` only at module, interface, or namespace level. This means you can declare a friend element at the level of a source file or namespace, or inside an interface, module, class, or structure, but not in a procedure.
+`Friend` yalnızca modül, arabirim veya ad alanı düzeyinde kullanabilirsiniz. Bu, bir kaynak dosya veya ad alanı düzeyinde ya da bir arabirim, modül, sınıf ya da yapının içinde veya bir yordamda değil, bir arkadaş öğesi bildirebilmeniz anlamına gelir.
 
 ## <a name="protected-friend"></a>Protected Friend
 
-The [Protected Friend](../../../language-reference/modifiers/protected-friend.md) keyword combination in the declaration statement specifies that the element can be accessed either from derived classes or from within the same assembly, or both. The following code shows a sample `Protected Friend` declaration:
+Bildirim deyimindeki [Protected Friend](../../../language-reference/modifiers/protected-friend.md) anahtar sözcüğü birleşimi, öğesine türetilmiş sınıflardan veya aynı derlemenin içinden ya da her ikisinin de erişilebileceğini belirtir. Aşağıdaki kod bir örnek `Protected Friend` bildirimi gösterir:
 
 ```vb
 Protected Friend stringForProjectAndHeirs As String
 ```
 
-You can use `Protected Friend` only at class level, and only when you declare a member of a class. This means you can declare a protected friend element in a class, but not at the level of a source file or namespace, or inside an interface, module, structure, or procedure.
+`Protected Friend` yalnızca sınıf düzeyinde ve yalnızca bir sınıfın bir üyesini bildirdiğinizde kullanabilirsiniz. Bu, bir kaynak dosya veya ad alanı düzeyinde ya da bir arabirim, modül, yapı veya yordamın içinde değil, bir sınıfta korunan bir arkadaş öğesi bildirebilmeniz anlamına gelir.
 
 ## <a name="private"></a>Özel
 
-The [Private](../../../language-reference/modifiers/private.md) keyword in the declaration statement specifies that the element can be accessed only from within the same module, class, or structure. The following code shows a sample `Private` declaration:
+Bildirim deyimindeki [Private](../../../language-reference/modifiers/private.md) anahtar sözcüğü, öğeye yalnızca aynı modül, sınıf veya yapı içinden erişilebileceğini belirtir. Aşağıdaki kod bir örnek `Private` bildirimi gösterir:
 
 ```vb
 Private _numberForMeOnly As Integer
 ```
 
-You can use `Private` only at module level. This means you can declare a private element inside a module, class, or structure, but not at the level of a source file or namespace, inside an interface, or in a procedure.
+Yalnızca modül düzeyinde `Private` kullanabilirsiniz. Bu, bir özel öğeyi bir modül, sınıf veya yapı içinde, bir kaynak dosya veya ad alanı düzeyinde, bir arabirim içinde veya bir yordamda bildirebilmeniz anlamına gelir.
 
-At the module level, the `Dim` statement without any access level keywords is equivalent to a `Private` declaration. However, you might want to use the `Private` keyword to make your code easier to read and interpret.
+Modül düzeyinde, erişim düzeyi anahtar sözcükleri olmayan `Dim` deyimleri `Private` bildirimine eşdeğerdir. Ancak, kodunuzun okunmasını ve yorumlanması daha kolay hale getirmek için `Private` anahtar sözcüğünü kullanmak isteyebilirsiniz.
 
 ## <a name="private-protected"></a>Private Protected
 
-The [Private Protected](../../../language-reference/modifiers/private-protected.md) keyword combination in the declaration statement specifies that the element can be accessed only from within the same class, as well as from derived classes found in the same assembly as the containing class. The `Private Protected` access modifier is supported starting with Visual Basic 15.5.
+Bildirim deyimindeki [özel korumalı](../../../language-reference/modifiers/private-protected.md) anahtar sözcük birleşimi, öğesinin yalnızca aynı sınıftan erişilebilir ve aynı derlemede bulunan türetilmiş sınıflardan ve kapsayan sınıfla erişilebilir olduğunu belirtir. `Private Protected` erişim değiştiricisi Visual Basic 15,5 ' den başlayarak desteklenir.
 
-The following example shows a `Private Protected` declaration:
+Aşağıdaki örnek bir `Private Protected` bildirimi gösterir:
 
 ```vb
 Private Protected internalValue As Integer
 ```
 
-You can declare a `Private Protected` element only inside of a class. You cannot declare it within an interface or structure, nor can you declare it at the level of a source file or namespace, inside an interface or a structure, or in a procedure.
+Yalnızca bir sınıfın içinde bir `Private Protected` öğesi bildirebilirsiniz. Bunu bir arabirim veya yapı içinde bildiremezsiniz veya bir arabirim ya da bir yapı içinde ya da bir yordamda bir kaynak dosya veya ad alanı düzeyinde bildiremezsiniz.
 
-The `Private Protected` access modifier is supported by Visual Basic 15.5 and later. To use it, you add the following element to your Visual Basic project ( *\*.vbproj*) file. As long as Visual Basic 15.5 or later is installed on your system, it lets you take advantage of all the language features supported by the latest version of the Visual Basic compiler:
+`Private Protected` erişim değiştiricisi Visual Basic 15,5 ve üzeri tarafından desteklenir. Bunu kullanmak için, Visual Basic projesi ( *\*. vbproj*) dosyanıza aşağıdaki öğeyi ekleyin. Visual Basic 15,5 veya üzeri bir sürümü sisteminize yüklendiği sürece, Visual Basic derleyicinin en son sürümü tarafından desteklenen tüm dil özelliklerinden yararlanmanızı sağlar:
 
 ```xml
 <PropertyGroup>
@@ -97,7 +97,7 @@ The `Private Protected` access modifier is supported by Visual Basic 15.5 and la
 </PropertyGroup>
 ```
 
-To use the `Private Protected` access modifier, you must add the following element to your Visual Basic project ( *\*.vbproj*) file:
+`Private Protected` erişim değiştiricisini kullanmak için, aşağıdaki öğeyi Visual Basic projesi ( *\*. vbproj*) dosyanıza eklemeniz gerekir:
 
 ```xml
 <PropertyGroup>
@@ -105,20 +105,20 @@ To use the `Private Protected` access modifier, you must add the following eleme
 </PropertyGroup>
 ```
 
-For more information see [setting the Visual Basic language version](../../../language-reference/configure-language-version.md).
+Daha fazla bilgi için bkz. [Visual Basic dil sürümünü ayarlama](../../../language-reference/configure-language-version.md).
 
 ## <a name="access-modifiers"></a>Erişim Değiştiricileri
 
-The keywords that specify access level are called *access modifiers*. The following table compares the access modifiers:
+Erişim düzeyi belirten anahtar sözcüklere *erişim değiştiricileri*denir. Aşağıdaki tabloda erişim değiştiricileri karşılaştırılmaktadır:
 
-|Access modifier|Access level granted|Elements you can declare with this access level|Declaration context within which you can use this modifier|
+|Erişim değiştiricisi|Erişim düzeyi verildi|Bu erişim düzeyiyle bildirebileceğiniz öğeler|Bu değiştiriciyi kullanabileceğiniz bildirim bağlamı|
 |---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|
-|`Public`|Unrestricted:<br /><br /> Any code that can see a public element can access it|Arabirimler<br /><br /> Modüller<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Structure members<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Member variables<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> External declarations<br /><br /> Temsilciler|Source file<br /><br /> Ad Alanı<br /><br /> Arabirim<br /><br /> Modül<br /><br /> örneği<br /><br /> Yapı|
-|`Protected`|Derivational:<br /><br /> Code in the class that declares a protected element, or a class derived from it, can access the element|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Member variables<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> External declarations<br /><br /> Temsilciler|örneği|
-|`Friend`|Derleme:<br /><br /> Code in the assembly that declares a friend element can access it|Arabirimler<br /><br /> Modüller<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Structure members<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Member variables<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> External declarations<br /><br /> Temsilciler|Source file<br /><br /> Ad Alanı<br /><br /> Arabirim<br /><br /> Modül<br /><br /> örneği<br /><br /> Yapı|
-|`Protected``Friend`|Union of `Protected` and `Friend`:<br /><br /> Code in the same class or the same assembly as a protected friend element, or within any class derived from the element's class, can access it|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Member variables<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> External declarations<br /><br /> Temsilciler|örneği|
-|`Private`|Declaration context:<br /><br /> Code in the type that declares a private element, including code within contained types, can access the element|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Structure members<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Member variables<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> External declarations<br /><br /> Temsilciler|Modül<br /><br /> örneği<br /><br /> Yapı|
-|`Private Protected`|Code in the class that declares a private protected element, or code in a derived class found in the same assembly as the bas class.|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Member variables<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> External declarations<br /><br /> Temsilciler|örneği|
+|`Public`|Edin<br /><br /> Ortak bir öğeyi görebileceğiniz herhangi bir kod, buna erişebilir|Arabirimler<br /><br /> Modüller<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yapı üyeleri<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> {1&gt;Sabitler&lt;1}<br /><br /> Listelemeler<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|Kaynak dosya<br /><br /> Ad alanı<br /><br /> Arabirim<br /><br /> Modül<br /><br /> Sınıf<br /><br /> Yapı|
+|`Protected`|Türetme:<br /><br /> Bir korumalı öğeyi veya ondan türetilmiş bir sınıfı bildiren sınıftaki kod öğeye erişebilir|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> {1&gt;Sabitler&lt;1}<br /><br /> Listelemeler<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|Sınıf|
+|`Friend`|{1&gt;Derleme:&lt;1}<br /><br /> Bir Friend öğesini bildiren derlemede bulunan kod, buna erişebilir|Arabirimler<br /><br /> Modüller<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yapı üyeleri<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> {1&gt;Sabitler&lt;1}<br /><br /> Listelemeler<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|Kaynak dosya<br /><br /> Ad alanı<br /><br /> Arabirim<br /><br /> Modül<br /><br /> Sınıf<br /><br /> Yapı|
+|`Protected``Friend`|`Protected` ve `Friend`birleşimi:<br /><br /> Aynı sınıftaki veya korunan arkadaş öğesiyle aynı derlemede bulunan veya öğenin sınıfından türetilmiş herhangi bir sınıfın içindeki kod, buna erişebilir|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> {1&gt;Sabitler&lt;1}<br /><br /> Listelemeler<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|Sınıf|
+|`Private`|Bildirim bağlamı:<br /><br /> İçerilen türler içindeki kod dahil olmak üzere özel bir öğeyi bildiren türdeki kod öğeye erişebilir|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yapı üyeleri<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> {1&gt;Sabitler&lt;1}<br /><br /> Listelemeler<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|Modül<br /><br /> Sınıf<br /><br /> Yapı|
+|`Private Protected`|Sınıf içindeki özel korumalı öğeyi bildiren kod veya aynı derlemede bulunan türetilmiş bir sınıftaki kodu, bas sınıfıyla aynı derlemede bulabilirsiniz.|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> {1&gt;Sabitler&lt;1}<br /><br /> Listelemeler<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|Sınıf|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -127,8 +127,8 @@ The keywords that specify access level are called *access modifiers*. The follow
 - [Bildirilen Öğe Adları](declared-element-names.md)
 - [Bildirilmiş Öğelere Başvurular](references-to-declared-elements.md)
 - [Bildirilen Öğe Özellikleri](declared-element-characteristics.md)
-- [Lifetime in Visual Basic](lifetime.md)
-- [Scope in Visual Basic](scope.md)
+- [Visual Basic ömrü](lifetime.md)
+- [Visual Basic kapsam](scope.md)
 - [Nasıl yapılır: Bir Değişkenin Kullanılabilirliğini Denetleme](how-to-control-the-availability-of-a-variable.md)
 - [Değişkenler](../variables/index.md)
 - [Değişken Bildirimi](../variables/variable-declaration.md)

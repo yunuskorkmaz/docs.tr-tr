@@ -28,28 +28,28 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204786"
 ---
 # <a name="isolated-storage"></a>Yalıtılmış Depolama
-<a name="top"></a> For desktop apps, isolated storage is a data storage mechanism that provides isolation and safety by defining standardized ways of associating code with saved data. Standart hale getirme başka yararlar da sağlar. Yöneticiler yalıtılmış depolamayı değiştirecek araçları kullanarak dosya depolama alanını yapılandırabilir, güvenlik ilkelerini ayarlayabilir ve kullanılmayan verileri silebilir. Yalıtılmış depolama ile kodunuz dosya sistemindeki güvenli konumları belirtmek için benzersiz yollara ihtiyaç duymaz ve veriniz yalnızca yalıtılmış depolama erişimi olan diğer uygulamalardan korunur. Bir uygulamanın depo alanının nerede olduğunu belirten sabit kodlu bilgi gerekli değildir.
+<a name="top"></a>Masaüstü uygulamaları için yalıtılmış depolama, kodu kaydedilen verilerle ilişkilendirmenin standartlaştırılmış yollarını tanımlayarak yalıtım ve güvenlik sağlayan bir veri depolama mekanizmasıdır. Standart hale getirme başka yararlar da sağlar. Yöneticiler yalıtılmış depolamayı değiştirecek araçları kullanarak dosya depolama alanını yapılandırabilir, güvenlik ilkelerini ayarlayabilir ve kullanılmayan verileri silebilir. Yalıtılmış depolama ile kodunuz dosya sistemindeki güvenli konumları belirtmek için benzersiz yollara ihtiyaç duymaz ve veriniz yalnızca yalıtılmış depolama erişimi olan diğer uygulamalardan korunur. Bir uygulamanın depo alanının nerede olduğunu belirten sabit kodlu bilgi gerekli değildir.
 
 > [!IMPORTANT]
-> Isolated storage is not available for Windows 8.x Store apps. Instead, use the application data classes in the `Windows.Storage` namespaces included in the Windows Runtime API to store local data and files. For more information, see [Application data](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) in the Windows Dev Center.
+> Yalıtılmış depolama, Windows 8. x Mağazası uygulamaları için kullanılamaz. Bunun yerine, yerel verileri ve dosyaları depolamak için Windows Çalışma Zamanı API 'sinde bulunan `Windows.Storage` ad alanlarında uygulama veri sınıflarını kullanın. Daha fazla bilgi için bkz. Windows Geliştirme Merkezi 'nde [uygulama verileri](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) .
 
 Bu konu aşağıdaki bölümleri içermektedir:
 
-- [Data Compartments and Stores](#data_compartments_and_stores)
+- [Veri bölmeleri ve depolar](#data_compartments_and_stores)
 
-- [Quotas for Isolated Storage](#quotas)
+- [Yalıtılmış depolama için kotalar](#quotas)
 
-- [Secure Access](#secure_access)
+- [Güvenli erişim](#secure_access)
 
-- [Allowed Usage and Security Risks](#allowed_usage)
+- [İzin verilen kullanım ve güvenlik riskleri](#allowed_usage)
 
-- [Isolated Storage Locations](#isolated_storage_locations)
+- [Yalıtılmış depolama konumları](#isolated_storage_locations)
 
-- [Creating, Enumerating, and Deleting Isolated Storage](#isolated_storage_tasks)
+- [Yalıtılmış depolamayı oluşturma, numaralandırma ve silme](#isolated_storage_tasks)
 
-- [Scenarios for Isolated Storage](#scenarios_for_isolated_storage)
+- [Yalıtılmış depolama için senaryolar](#scenarios_for_isolated_storage)
 
-- [Related Topics](#related_topics)
+- [İlgili konular](#related_topics)
 
 - [Başvuru](#reference)
 
@@ -67,9 +67,9 @@ Yalıtılmış depolama kullandığınızda, uygulamanız veriyi kodun yayımcı
 
 ## <a name="quotas-for-isolated-storage"></a>Ayrık Depolama Kotaları
 
-Bir kota, kullanılabilen yalıtılmış depolama miktarındaki bir sınırdır. Kota dosya alanı baytlarının yanı sıra depodaki dizin ve diğer bilgilerle ilgili ek yükü de içerir. Isolated storage uses permission quotas, which are storage limits that are set by using <xref:System.Security.Permissions.IsolatedStoragePermission> objects. If you try to write data that exceeds the quota, an <xref:System.IO.IsolatedStorage.IsolatedStorageException> exception is thrown.  .NET Framework Yapılandırma Aracı (Mscorcfg.msc) kullanarak değiştirilebilen güvenlik ilkesi koda hangi izinlerin verildiğini belirler. Code that has been granted <xref:System.Security.Permissions.IsolatedStoragePermission> is restricted to using no more storage than the <xref:System.Security.Permissions.IsolatedStoragePermission.UserQuota%2A> property allows. Ancak, kod farklı kullanıcı kimlikleri sunarak izin kotalarını atlayabileceği için, izin kotaları kod davranışı için kesin bir sınır yerine daha çok kodun nasıl davranacağı üzerine bir kılavuz olarak görev görür.
+Bir kota, kullanılabilen yalıtılmış depolama miktarındaki bir sınırdır. Kota dosya alanı baytlarının yanı sıra depodaki dizin ve diğer bilgilerle ilgili ek yükü de içerir. Yalıtılmış depolama, <xref:System.Security.Permissions.IsolatedStoragePermission> nesneleri kullanılarak ayarlanan depolama sınırları olan izin kotalarını kullanır. Kotayı aşan verileri yazmaya çalışırsanız bir <xref:System.IO.IsolatedStorage.IsolatedStorageException> özel durumu oluşturulur.  .NET Framework Yapılandırma Aracı (Mscorcfg.msc) kullanarak değiştirilebilen güvenlik ilkesi koda hangi izinlerin verildiğini belirler. <xref:System.Security.Permissions.IsolatedStoragePermission> verilen kod, <xref:System.Security.Permissions.IsolatedStoragePermission.UserQuota%2A> özelliğinin izin verdiğinden daha fazla depolama alanı kullanılmasıyla kısıtlıdır. Ancak, kod farklı kullanıcı kimlikleri sunarak izin kotalarını atlayabileceği için, izin kotaları kod davranışı için kesin bir sınır yerine daha çok kodun nasıl davranacağı üzerine bir kılavuz olarak görev görür.
 
-Kotalar gezici depolarda uygulanmaz. Bu nedenle kodun bunu kullanabilmesi için biraz daha yüksek bir izin düzeyi gerekir. The enumeration values <xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser> and <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByRoamingUser> specify a permission to use isolated storage for a roaming user.
+Kotalar gezici depolarda uygulanmaz. Bu nedenle kodun bunu kullanabilmesi için biraz daha yüksek bir izin düzeyi gerekir. Numaralandırma değerleri <xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser> ve <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByRoamingUser> bir gezici kullanıcı için yalıtılmış depolamayı kullanma izni belirtir.
 
 <a name="secure_access"></a>
 
@@ -77,33 +77,33 @@ Kotalar gezici depolarda uygulanmaz. Bu nedenle kodun bunu kullanabilmesi için 
 
 Yalıtılmış depolama kullanımı kısmen güvenilir uygulamaların bilgisayarın güvenlik ilkesi tarafından kontrol edilerek veri depolamasını sağlar. Bu özellikle bir kullanıcının dikkatli olarak çalıştırmak isteyeceği indirilen bileşenler için kullanışlıdır. Güvenlik ilkesi, standart I/O mekanizmalarını kullanarak dosya sistemine eriştiğinizde bu tür kod iznini nadiren verir. Ancak varsayılan olarak; yerel bilgisayardan, yerel bir ağdan veya Internet üzerinden çalıştırılan koda yalıtılmış depolama hakkı verilir.
 
-Yöneticiler uygun olan güven düzeyine göre bir uygulamanın veya kullanıcının ne kadar yalıtılmış depolama alanına sahip olacağını sınırlayabilir. Ek olarak, yöneticiler bir kullanıcının kalıcı verilerini tamamen kaldırabilir. To create or access isolated storage, code must be granted the appropriate <xref:System.Security.Permissions.IsolatedStorageFilePermission> permission.
+Yöneticiler uygun olan güven düzeyine göre bir uygulamanın veya kullanıcının ne kadar yalıtılmış depolama alanına sahip olacağını sınırlayabilir. Ek olarak, yöneticiler bir kullanıcının kalıcı verilerini tamamen kaldırabilir. Yalıtılmış depolama oluşturmak veya erişim sağlamak için, koda uygun <xref:System.Security.Permissions.IsolatedStorageFilePermission> izni verilmelidir.
 
 Yalıtılmış depolamaya erişmek için, kod tüm gerekli yerel platform işletim sistemi haklarına sahip olmalıdır. Hangi kullanıcıların dosya sistemini kullanmaya hakkı olduğunu kontrol eden erişim denetim listeleri (ACL) sağlanmalıdır. .NET Framework uygulamaları, platforma özel kimliğe bürünme işlemi gerçekleştirmedikleri sürece yalıtılmış depolamaya erişmek için işletim sistemi haklarına sahiptir. Bu durumda, uygulama kimliğine bürünülen kullanıcının yalıtılmış depolamaya erişmek için gerekli uygun işletim sistemi haklarına sahip olduğundan emin olmakta sorumludur. Bu erişim, internetten çalıştırılan veya indirilen kodun belirli bir kullanıcı ile ilgili depolama alanında okuma ve yazma işlemleri yapabilmesi için kullanışlı bir yol sağlar.
 
-To control access to isolated storage, the common language runtime uses <xref:System.Security.Permissions.IsolatedStorageFilePermission> objects. Her nesne aşağıdaki değerleri belirten özelliklere sahiptir:
+Yalıtılmış depolamaya erişimi denetlemek için ortak dil çalışma zamanı <xref:System.Security.Permissions.IsolatedStorageFilePermission> nesneleri kullanır. Her nesne aşağıdaki değerleri belirten özelliklere sahiptir:
 
-- İzin verilen kullanım, izin verilen erişim türünü belirtir. The values are members of the <xref:System.Security.Permissions.IsolatedStorageContainment> enumeration. Bu değerler hakkında daha fazla bilgi için, sonraki bölümdeki tabloya bakın.
+- İzin verilen kullanım, izin verilen erişim türünü belirtir. Değerler <xref:System.Security.Permissions.IsolatedStorageContainment> numaralandırmanın üyeleridir. Bu değerler hakkında daha fazla bilgi için, sonraki bölümdeki tabloya bakın.
 
 - Depo kotası, önceki bölümde anlatıldığı gibidir.
 
-The runtime demands <xref:System.Security.Permissions.IsolatedStorageFilePermission> permission when code first attempts to open a store. It decides whether to grant this permission, based on how much the code is trusted. If the permission is granted, the allowed usage and storage quota values are determined by security policy and by the code's request for <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Güvenlik ilkesi .Net Framework Yapılandırma Aracı (Mscorcfg.msc) kullanılarak ayarlanır. Çağrı yığınındaki tüm çağıranlar, her çağıranın en azından uygun izin verilen kullanıma sahip olduğundan emin olmak için kontrol edilir. Çalışma zamanı ayrıca dosyanın kaydedileceği depoyu açan veya oluşturan koda uygulanan kotayı da kontrol eder. Eğer bu koşullar sağlanırsa, izin verilir. Kota, depoya yazılan her dosyada tekrar denetlenir.
+Çalışma zamanı, kod ilk olarak bir depoyu açmaya çalıştığında izin <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Kodun ne kadar güvenilir olduğuna bağlı olarak, bu izni verip vermeyeceğine karar verir. İzin verildiğinde, izin verilen kullanım ve depolama kotası değerleri güvenlik ilkesi ve kodun <xref:System.Security.Permissions.IsolatedStorageFilePermission>isteği tarafından belirlenir. Güvenlik ilkesi .Net Framework Yapılandırma Aracı (Mscorcfg.msc) kullanılarak ayarlanır. Çağrı yığınındaki tüm çağıranlar, her çağıranın en azından uygun izin verilen kullanıma sahip olduğundan emin olmak için kontrol edilir. Çalışma zamanı ayrıca dosyanın kaydedileceği depoyu açan veya oluşturan koda uygulanan kotayı da kontrol eder. Eğer bu koşullar sağlanırsa, izin verilir. Kota, depoya yazılan her dosyada tekrar denetlenir.
 
-Application code is not required to request permission because the common language runtime will grant whatever <xref:System.Security.Permissions.IsolatedStorageFilePermission> is appropriate based on security policy. However, there are good reasons to request specific permissions that your application needs, including <xref:System.Security.Permissions.IsolatedStorageFilePermission>.
+Ortak dil çalışma zamanı, güvenlik ilkesine göre uygun olan <xref:System.Security.Permissions.IsolatedStorageFilePermission> olarak izin vereceğinden, uygulama kodu izin istemek için gerekli değildir. Ancak, <xref:System.Security.Permissions.IsolatedStorageFilePermission>dahil olmak üzere, uygulamanız için gereken belirli izinleri istemeniz iyi bir neden vardır.
 
 <a name="allowed_usage"></a>
 
 ## <a name="allowed-usage-and-security-risks"></a>İzin Verilen Kullanım ve Güvenlik Riskleri
 
-The allowed usage specified by <xref:System.Security.Permissions.IsolatedStorageFilePermission> determines the degree to which code will be allowed to create and use isolated storage. Aşağıdaki tablo izinde belirtilen izin verilen kullanımın hangi yalıtım türlerine karşılık geldiğini gösterir ve her izin verilen kullanım ile ilişkili güvenlik risklerini özetler.
+<xref:System.Security.Permissions.IsolatedStorageFilePermission> tarafından belirtilen izin verilen kullanım, yalıtılmış depolamayı oluşturma ve kullanma ile hangi kodun izin verileceğini belirler. Aşağıdaki tablo izinde belirtilen izin verilen kullanımın hangi yalıtım türlerine karşılık geldiğini gösterir ve her izin verilen kullanım ile ilişkili güvenlik risklerini özetler.
 
 |İzin verilen kullanım|Yalıtım türleri|Güvenlik etkisi|
 |-------------------|---------------------|---------------------|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.None>|Hiçbir yalıtılmış depolama kullanımına izin verilmez.|Güvenlik etkisi yoktur.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>|Kullanıcı, etki alanı ve derlemeye göre yalıtım Her derlemenin etki alanı içinde ayrı bir alt deposu bulunur. Bu izni kullanan depolar örtülü olarak bilgisayara göre de yalıtılır.|Bu izin düzeyi kaynakları yetkisiz aşırı kullanıma açık bırakır, ancak uygulanan kotalar bunu zorlaştırır. Buna hizmet reddi saldırısı denir.|
-|<xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByRoamingUser>|Same as `DomainIsolationByUser`, but store is saved to a location that will roam if roaming user profiles are enabled and quotas are not enforced.|Kotaların devre dışı bırakılması gerektiği için, depo kaynakları bir hizmet reddi saldırısına karşı daha savunmasızdır.|
+|<xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByRoamingUser>|`DomainIsolationByUser`ile aynıdır, ancak mağaza, dolaşım Kullanıcı profilleri etkinse ve Kotalar zorlanmadığında dolaşımını yapan bir konuma kaydedilir.|Kotaların devre dışı bırakılması gerektiği için, depo kaynakları bir hizmet reddi saldırısına karşı daha savunmasızdır.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByUser>|Kullanıcı ve derlemeye göre yalıtım Bu izni kullanan depolar örtülü olarak bilgisayara göre de yalıtılır.|Kotalar hizmet reddi saldırısını önlemeye yardımcı olmak için bu düzeyde uygulanır. Başka bir etki alanındaki aynı derleme bu depoya erişebilir ve bu nedenle uygulamalar arasında bilgi sızma olasılığı bulunur.|
-|<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser>|Same as `AssemblyIsolationByUser`, but store is saved to a location that will roam if roaming user profiles are enabled and quotas are not enforced.|Same as in `AssemblyIsolationByUser`, but without quotas, the risk of a denial of service attack increases.|
+|<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser>|`AssemblyIsolationByUser`ile aynıdır, ancak mağaza, dolaşım Kullanıcı profilleri etkinse ve Kotalar zorlanmadığında dolaşımını yapan bir konuma kaydedilir.|`AssemblyIsolationByUser`ile aynıdır, ancak kotalar olmadan hizmet reddi saldırısı riski artar.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser>|Kullanıcıya göre yalıtım. Genellikle yalnızca yönetici veya hata ayıklama araçları bu izin düzeyini kullanır.|Bu izinle olan erişim, kodun bir kullanıcının yalıtılmış depolama dosyalarını ve dizinlerini görüntülemesine ve silmesine olanak verir (derleme yalıtımına bakmaksızın). Riskler, bilgi sızması ve veri kaybını içerir ancak bunlarla sınırlı değildir.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.UnrestrictedIsolatedStorage>|Tüm kullanıcılar, etki alanları ve derlemelere göre yalıtım. Genellikle yalnızca yönetici veya hata ayıklama araçları bu izin düzeyini kullanır.|Bu izin tüm kullanıcılar için tüm yalıtılmış depoların açığa çıkma olasılığını oluşturur.|
 
@@ -115,26 +115,26 @@ Bazen yalıtılmış depolamaya yapılan bir değişikliği işletim sisteminin 
 
 |İşletim sistemi|Dosya sistemindeki konumu|
 |----------------------|-----------------------------|
-|Windows 2000, Windows XP, Windows Server 2003 (Windows NT 4.0'dan yükseltme)|Gezinme etkinleştirilmiş depolar =<br /><br /> \<SYSTEMROOT>\Profiles\\<user\>\Application Data<br /><br /> Gezici olmayan depolar =<br /><br /> \<SYSTEMROOT>\Profiles\\<user\>\Local Settings\Application Data|
-|Windows 2000 - temiz yükleme (ve Windows 98 ve Windows NT 3.51'den yükseltme)|Gezinme etkinleştirilmiş depolar =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Application Data<br /><br /> Gezici olmayan depolar =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Local Settings\Application Data|
-|Windows XP, Windows Server 2003 - temiz yükleme (Windows 2000 ve Windows 98'den yükseltme)|Gezinme etkinleştirilmiş depolar =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Application Data<br /><br /> Gezici olmayan depolar =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Local Settings\Application Data|
-|[!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7, Windows Server 2008, Windows Vista|Gezinme etkinleştirilmiş depolar =<br /><br /> \<SYSTEMDRIVE>\Users\\<user\>\AppData\Roaming<br /><br /> Gezici olmayan depolar =<br /><br /> \<SYSTEMDRIVE>\Users\\<user\>\AppData\Local|
+|Windows 2000, Windows XP, Windows Server 2003 (Windows NT 4.0'dan yükseltme)|Gezinme etkinleştirilmiş depolar =<br /><br /> \<SYSTEMROOT > \Profiles\\< User\>\Application Data<br /><br /> Gezici olmayan depolar =<br /><br /> \<SYSTEMROOT > \Profiles\\< User\>\Local Settings\Application Data|
+|Windows 2000 - temiz yükleme (ve Windows 98 ve Windows NT 3.51'den yükseltme)|Gezinme etkinleştirilmiş depolar =<br /><br /> \<SYSTEMDRIVE > \Documents ve Settings\\< User\>\Application Data<br /><br /> Gezici olmayan depolar =<br /><br /> \<SYSTEMDRIVE > \Documents ve Settings\\< User\>\Local Settings\Application Data|
+|Windows XP, Windows Server 2003 - temiz yükleme (Windows 2000 ve Windows 98'den yükseltme)|Gezinme etkinleştirilmiş depolar =<br /><br /> \<SYSTEMDRIVE > \Documents ve Settings\\< User\>\Application Data<br /><br /> Gezici olmayan depolar =<br /><br /> \<SYSTEMDRIVE > \Documents ve Settings\\< User\>\Local Settings\Application Data|
+|[!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7, Windows Server 2008, Windows Vista|Gezinme etkinleştirilmiş depolar =<br /><br /> \<SYSTEMDRIVE > \Users\\< Kullanıcı\>\AppData\Roaming<br /><br /> Gezici olmayan depolar =<br /><br /> \<SYSTEMDRIVE > \Users\\< Kullanıcı\>\AppData\Local|
 
 <a name="isolated_storage_tasks"></a>
 
 ## <a name="creating-enumerating-and-deleting-isolated-storage"></a>Ayrık Depolama Birimi Oluşturma, Numaralandırma ve Silme
 
-The .NET Framework provides three classes in the <xref:System.IO.IsolatedStorage> namespace to help you perform tasks that involve isolated storage:
+.NET Framework yalıtılmış depolamayı içeren görevleri gerçekleştirmenize yardımcı olması için <xref:System.IO.IsolatedStorage> ad alanında üç sınıf sağlar:
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, derives from <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> and provides basic management of stored assembly and application files. An instance of the <xref:System.IO.IsolatedStorage.IsolatedStorageFile> class represents a single store located in the file system.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> türetilir ve depolanan derleme ve uygulama dosyalarının temel yönetimini sağlar. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> sınıfının bir örneği dosya sisteminde bulunan tek bir depoyu temsil eder.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> derives from <xref:System.IO.FileStream?displayProperty=nameWithType> and provides access to the files in a store.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> <xref:System.IO.FileStream?displayProperty=nameWithType> türetilir ve bir depodaki dosyalara erişim sağlar.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageScope> is an enumeration that enables you to create and select a store with the appropriate isolation type.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>, uygun yalıtım türüyle bir mağaza oluşturmanıza ve seçmenize olanak tanıyan bir numaralandırmadır.
 
-Yalıtılmış depolama sınıfları, yalıtılmış depoları oluşturmanızı, numaralandırmanızı ve silmenizi sağlar. The methods for performing these tasks are available through the <xref:System.IO.IsolatedStorage.IsolatedStorageFile> object. Some operations require you to have the <xref:System.Security.Permissions.IsolatedStorageFilePermission> permission that represents the right to administer isolated storage; you might also need to have operating system rights to access the file or directory.
+Yalıtılmış depolama sınıfları, yalıtılmış depoları oluşturmanızı, numaralandırmanızı ve silmenizi sağlar. Bu görevleri gerçekleştirmeye yönelik yöntemlere <xref:System.IO.IsolatedStorage.IsolatedStorageFile> nesnesi aracılığıyla ulaşılabilir. Bazı işlemler yalıtılmış depolamayı yönetme hakkını temsil eden <xref:System.Security.Permissions.IsolatedStorageFilePermission> iznine sahip olmanızı gerektirir; Ayrıca, dosya veya dizine erişmek için işletim sistemi haklarına sahip olmanız gerekebilir.
 
-For a series of examples that demonstrate common isolated storage tasks, see the how-to topics listed in [Related Topics](#related_topics).
+Ortak yalıtılmış depolama görevlerini gösteren bir dizi örnek için, [Ilgili konularda](#related_topics)listelenen nasıl yapılır konularına bakın.
 
 <a name="scenarios_for_isolated_storage"></a>
 
@@ -146,7 +146,7 @@ Yalıtılmış depolama, aşağıdaki dört senaryo da dahil olmak üzere pek ç
 
 - Paylaşılan bileşen depolama. Uygulamalar arasında paylaşılan denetimler, veri depolarına kontrollü erişim sağlamak için yalıtılmış depolama kullanabilir.
 
-- Sunucu depolama alanı. Sunucu uygulamaları yalıtılmış depolamayı kullanarak uygulamaya istekte bulunan büyük sayıdaki kullanıcılar için tek tek depo sağlayabilir. Yalıtılmış depolama her zaman kullanıcıya göre tutulduğu için, sunucu isteği yapan kullanıcının kimliğine bürünmelidir. In this case, data is isolated based on the identity of the principal, which is the same identity the application uses to distinguish between its users.
+- Sunucu depolama alanı. Sunucu uygulamaları yalıtılmış depolamayı kullanarak uygulamaya istekte bulunan büyük sayıdaki kullanıcılar için tek tek depo sağlayabilir. Yalıtılmış depolama her zaman kullanıcıya göre tutulduğu için, sunucu isteği yapan kullanıcının kimliğine bürünmelidir. Bu durumda, veriler, uygulamanın kullanıcıları arasında ayrım yapmak için kullandığı kimliğin aynısı olan sorumlunun kimliğine göre yalıtılmıştır.
 
 - Dolaşım. Uygulamalar gezici kullanıcı profilleriyle de yalıtılmış depolama kullanabilir. Bu, bir kullanıcının yalıtılmış depolarının profil ile birlikte gezinmesini sağlar.
 
@@ -167,9 +167,9 @@ Yalıtılmış depolamayı aşağıdaki durumlarda kullanmamalısınız:
 |Başlık|Açıklama|
 |-----------|-----------------|
 |[Yalıtım Türleri](../../../docs/standard/io/types-of-isolation.md)|Farklı yalıtım türlerini açıklar.|
-|[Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Provides an example of using the <xref:System.IO.IsolatedStorage.IsolatedStorageFile> class to obtain a store isolated by user and assembly.|
-|[Nasıl yapılır: Yalıtılmış Depolama için Depoları Numaralandırma](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|Shows how to use the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> method to calculate the size of all isolated storage for the user.|
-|[Nasıl yapılır: Yalıtılmış Depolamadaki Depoları Silme](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|Shows how to use the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> method in two different ways to delete isolated stores.|
+|[Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Kullanıcı ve derlemeye göre yalıtılmış bir mağaza elde etmek için <xref:System.IO.IsolatedStorage.IsolatedStorageFile> sınıfının kullanılmasına bir örnek sağlar.|
+|[Nasıl yapılır: Yalıtılmış Depolama için Depoları Numaralandırma](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|Kullanıcı için yalıtılmış depolamanın boyutunu hesaplamak üzere <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> yönteminin nasıl kullanılacağını gösterir.|
+|[Nasıl yapılır: Yalıtılmış Depolamadaki Depoları Silme](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|Yalıtılmış depoları silmek için <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> yönteminin iki farklı şekilde nasıl kullanılacağını gösterir.|
 |[Nasıl yapılır: Yalıtılmış Depolama ile Alan Dolu Koşullarını Öngörme](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Bir yalıtılmış depodaki kalan alanın nasıl ölçüldüğünü gösterir.|
 |[Nasıl yapılır: Yalıtılmış Depolamada Dosya ve Dizinler Oluşturma](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|Bir yalıtılmış depoda dosyalar ve dizinler oluşturma ile ilgili bazı örnekler sağlar.|
 |[Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|Yalıtılmış depolamada dizin yapısının ve dosyaların nasıl okunduğunu gösterir.|

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343731"
 ---
 # <a name="end-statement"></a>End Deyimi
-Terminates execution immediately.  
+Yürütmeyi hemen sonlandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,32 +31,32 @@ End
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- You can place the `End` statement anywhere in a procedure to force the entire application to stop running. `End` closes any files opened with an `Open` statement and clears all the application's variables. The application closes as soon as there are no other programs holding references to its objects and none of its code is running.  
+ Tüm uygulamayı çalışmayı durdurmayı zorlamak için `End` ifadesini bir yordamın her yerinden yerleştirebilirsiniz. `End`, `Open` ifadesiyle açılan tüm dosyaları kapatır ve tüm uygulamanın değişkenlerini temizler. Nesneleri, nesnelerine başvuruları tutan başka hiçbir program yoksa ve kodun hiçbiri çalışmıyorsa, uygulama kapanır.  
   
 > [!NOTE]
-> The `End` statement stops code execution abruptly, and does not invoke the `Dispose` or `Finalize` method, or any other Visual Basic code. Object references held by other programs are invalidated. If an `End` statement is encountered within a `Try` or `Catch` block, control does not pass to the corresponding `Finally` block.  
+> `End` ifade kodu yürütmeyi aniden durduruyor ve `Dispose` veya `Finalize` yöntemini ya da başka bir Visual Basic kodu çağırmaz. Diğer programlar tarafından tutulan nesne başvuruları geçersiz kılınır. Bir `Try` veya `Catch` bloğunda `End` ifadesiyle karşılaşılırsa, denetim karşılık gelen `Finally` bloğuna geçmez.  
   
- The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.  
+ `Stop` deyimin yürütülmesi askıya alınır, ancak `End`aksine, derlenmiş bir çalıştırılabilir (. exe) dosyasında karşılaşılmadığı takdirde hiçbir dosyayı kapatmaz veya hiçbir değişkeni temizlemez.  
   
- Because `End` terminates your application without attending to any resources that might be open, you should try to close down cleanly before using it. For example, if your application has any forms open, you should close them before control reaches the `End` statement.  
+ `End`, açık olabilecek kaynaklara katılmaksızın uygulamanızı sonlandırdığından, kullanmadan önce düzgün bir şekilde kapatmayı denemeniz gerekir. Örneğin, uygulamanızda açık bir form varsa, denetim `End` bildirimine ulaşmadan önce bunları kapatmanız gerekir.  
   
- You should use `End` sparingly, and only when you need to stop immediately. The normal ways to terminate a procedure ([Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) and [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)) not only close down the procedure cleanly but also give the calling code the opportunity to close down cleanly. A console application, for example, can simply `Return` from the `Main` procedure.  
+ `End` gelişigüzel ve yalnızca hemen durdurmanız gerektiğinde kullanmanız gerekir. Bir yordamı ([Return deyimleri](../../../visual-basic/language-reference/statements/return-statement.md) ve [Exit ifadesini](../../../visual-basic/language-reference/statements/exit-statement.md)) sonlandırmak için normal yollar, yordamı yalnızca düzgün bir şekilde kapatmaz, aynı zamanda çağıran koda düzgün bir şekilde kapatma fırsatı verir. Örneğin, bir konsol uygulaması, `Main` yordamından yalnızca `Return` olabilir.  
   
 > [!IMPORTANT]
-> The `End` statement calls the <xref:System.Environment.Exit%2A> method of the <xref:System.Environment> class in the <xref:System> namespace. <xref:System.Environment.Exit%2A> requires that you have `UnmanagedCode` permission. If you do not, a <xref:System.Security.SecurityException> error occurs.  
+> `End` ifade <xref:System> ad alanındaki <xref:System.Environment> sınıfının <xref:System.Environment.Exit%2A> yöntemini çağırır. <xref:System.Environment.Exit%2A> için `UnmanagedCode` izninizin olması gerekir. Bunu yapmazsanız <xref:System.Security.SecurityException> bir hata oluşur.  
   
- When followed by an additional keyword, [End \<keyword> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md) delineates the end of the definition of the appropriate procedure or block. For example, `End Function` terminates the definition of a `Function` procedure.  
+ Daha sonra ek bir anahtar sözcük, [end \<anahtar sözcüğü > ifade](../../../visual-basic/language-reference/statements/end-keyword-statement.md) , uygun yordamın veya bloğun tanımının sonuna göre ayırıcılandırır. Örneğin, `End Function` bir `Function` yordamının tanımını sonlandırır.  
   
 ## <a name="example"></a>Örnek  
- The following example uses the `End` statement to terminate code execution if the user requests it.  
+ Aşağıdaki örnek, Kullanıcı istediğinde kod yürütmeyi sonlandırmak için `End` ifadesini kullanır.  
   
  [!code-vb[VbVersHelp60Controls#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVersHelp60Controls/VB/Form1.vb#64)]  
   
 ## <a name="smart-device-developer-notes"></a>Akıllı Cihaz Geliştirici Notları  
- This statement is not supported.  
+ Bu ifade desteklenmiyor.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Security.Permissions.SecurityPermissionFlag>
 - [Stop Deyimi](../../../visual-basic/language-reference/statements/stop-statement.md)
-- [End \<keyword> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+- [End \<anahtar sözcüğü > deyimleri](../../../visual-basic/language-reference/statements/end-keyword-statement.md)

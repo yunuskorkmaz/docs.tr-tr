@@ -22,61 +22,61 @@ ms.locfileid: "74343632"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Nasıl yapılır: Bir Dizeyi Belirli Bir Desene Göre Eşleştirme (Visual Basic)
 
-If you want to find out if an expression of the [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfies a pattern, then you can use the [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).
+[Dize veri türünde](../../../../visual-basic/language-reference/data-types/string-data-type.md) bir ifadenin bir kalıbı karşılayıp karşılamadığını öğrenmek Isterseniz, [LIKE işlecini](../../../../visual-basic/language-reference/operators/like-operator.md)kullanabilirsiniz.
 
-`Like` takes two operands. The left operand is a string expression, and the right operand is a string containing the pattern to be used for matching. `Like` returns a `Boolean` value indicating whether the string expression satisfies the pattern.
+`Like` iki işlenen alır. Sol işlenen bir dize ifadesidir ve sağ işlenen, eşleştirme için kullanılacak olan kalıbı içeren bir dizedir. `Like`, dize ifadesinin kalıbı karşılayıp karşılamadığını gösteren bir `Boolean` değeri döndürür.
 
-You can match each character in the string expression against a specific character, a wildcard character, a character list, or a character range. The positions of the specifications in the pattern string correspond to the positions of the characters to be matched in the string expression.
+Dize ifadesindeki her karakteri belirli bir karakter, joker karakter, bir karakter listesi veya karakter aralığı ile eşleştirebilirsiniz. Model dizesinde belirtimlerin konumları, dize ifadesinde eşleştirilecek karakterlerin konumlarına karşılık gelir.
 
-## <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>To match a character in the string expression against a specific character
+## <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>Dize ifadesindeki bir karakteri belirli bir karakterle eşleştirmek için
 
-Put the specific character directly in the pattern string. Certain special characters must be enclosed in brackets (`[ ]`). For more information, see [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).
+Belirli karakteri doğrudan model dizesine yerleştirin. Belirli özel karakterler köşeli ayraç içine alınmalıdır (`[ ]`). Daha fazla bilgi için bkz. [LIKE işleci](../../../../visual-basic/language-reference/operators/like-operator.md).
 
-The following example tests whether `myString` consists exactly of the single character `H`.
+Aşağıdaki örnek, `myString` tam olarak tek karakter `H`mi oluştuğunu sınar.
 
 [!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]
 
-## <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>To match a character in the string expression against a wildcard character
+## <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Dize ifadesindeki bir karakteri joker karakterle eşleştirmek için
 
-Put a question mark (`?`) in the pattern string. Any valid character in this position makes a successful match.
+Bir soru işareti (`?`), model dizesine koyun. Bu konumdaki geçerli bir karakter, başarılı bir eşleşme yapar.
 
-The following example tests whether `myString` consists of the single character `W` followed by exactly two characters of any values.
+Aşağıdaki örnek, `myString` tek karakterlik `W` ve ardından her değerin tam olarak iki karakterini içerip içermediğini sınar.
 
 [!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]
 
-## <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>To match a character in the string expression against a list of characters
+## <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Dize ifadesindeki bir karakteri bir karakter listesine göre eşleştirmek için
 
-Put brackets (`[ ]`) in the pattern string, and inside the brackets put the list of characters. Do not separate the characters with commas or any other separator. Any single character in the list makes a successful match.
+Köşeli parantezleri (`[ ]`), model dizesine koyun ve köşeli ayracın içine karakter listesini koyun. Karakterleri virgülle veya başka bir ayırıcıyla ayırmayın. Listedeki herhangi bir tek karakter başarılı bir eşleşme yapar.
 
-The following example tests whether `myString` consists of any valid character followed by exactly one of the characters `A`, `C`, or `E`.
+Aşağıdaki örnek, `myString` `A`, `C`veya `E`karakterlerden yalnızca birini içeren herhangi bir geçerli karakterden oluştuğunu sınar.
 
 [!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]
 
-Note that this match is case-sensitive.
+Bu eşleşmenin büyük/küçük harfe duyarlı olduğunu unutmayın.
 
-## <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>To match a character in the string expression against a range of characters
+## <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>Dize ifadesindeki bir karakteri bir karakter aralığına göre eşleştirmek için
 
-Put brackets (`[ ]`) in the pattern string, and inside the brackets put the lowest and highest characters in the range, separated by a hyphen (`–`). Any single character within the range makes a successful match.
+Köşeli parantezleri (`[ ]`), model dizesine koyun ve köşeli ayraçlar içinde, kısa çizgi (`–`) ile ayırarak aralığa en düşük ve en yüksek karakterleri koyun. Aralık içinde herhangi bir tek karakter başarılı bir eşleşme yapar.
 
-The following example tests whether `myString` consists of the characters `num` followed by exactly one of the characters `i`, `j`, `k`, `l`, `m`, or `n`.
+Aşağıdaki örnek, `myString` karakterlerin `num` ve `i`, `j`, `k`, `l`, `m`veya `n`karakterlerinden birini içerip içermediğini sınar.
 
 [!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]
 
-Note that this match is case-sensitive.
+Bu eşleşmenin büyük/küçük harfe duyarlı olduğunu unutmayın.
 
-## <a name="matching-empty-strings"></a>Matching Empty Strings
+## <a name="matching-empty-strings"></a>Eşleşen boş dizeler
 
-`Like` treats the sequence `[]` as a zero-length string (`""`). You can use `[]` to test whether the entire string expression is empty, but you cannot use it to test if a particular position in the string expression is empty. If an empty position is one of the options you need to test for, you can use `Like` more than once.
+`Like`, dizi `[]` sıfır uzunluklu bir dize (`""`) olarak değerlendirir. Tüm dize ifadesinin boş olup olmadığını test etmek için `[]` kullanabilirsiniz, ancak dize ifadesindeki belirli bir konumun boş olup olmadığını test etmek için kullanamazsınız. Boş bir konum için test etmeniz gereken seçeneklerden biri ise, `Like` birden çok kez kullanabilirsiniz.
 
-### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>To match a character in the string expression against a list of characters or no character
+### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Dize ifadesindeki bir karakteri bir karakter listesiyle veya karakter olmadan eşleştirmek için
 
-1. Call the `Like` operator twice on the same string expression, and connect the two calls with either the [Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) or the [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).
+1. Aynı dize ifadesinde `Like` işlecini iki kez çağırın ve iki çağrıyı [OR işleci](../../../../visual-basic/language-reference/operators/or-operator.md) ya da [Orelu işleciyle](../../../../visual-basic/language-reference/operators/orelse-operator.md)bağlayın.
 
-2. In the pattern string for the first `Like` clause, include the character list, enclosed in brackets (`[ ]`).
+2. İlk `Like` yan tümcesinin örüntüsünün dizesinde, köşeli ayraç içine alınmış karakter listesini ekleyin (`[ ]`).
 
-3. In the pattern string for the second `Like` clause, do not put any character at the position in question.
+3. İkinci `Like` yan tümcesinin model dizesinde, söz konusu konuma herhangi bir karakter yerleştirmeyin.
 
-    The following example tests the seven-digit telephone number `phoneNum` for exactly three numeric digits, followed by a space, a hyphen (`–`), a period (`.`), or no character at all, followed by exactly four numeric digits.
+    Aşağıdaki örnek, yedi basamaklı telefon numarası `phoneNum` tam olarak üç sayısal basamak, ardından bir boşluk, kısa çizgi (`–`), bir nokta (`.`) veya hiç karakter ve tam olarak dört sayısal basamak için sınar.
 
     [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]
 

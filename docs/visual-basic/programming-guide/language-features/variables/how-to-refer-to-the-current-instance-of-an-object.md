@@ -16,20 +16,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346891"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Nasıl yapılır: Bir Nesnenin Geçerli Örneğine Başvurma (Visual Basic)
-The *current instance* of an object is the instance in which the code is currently executing.  
+Bir nesnenin *geçerli örneği* , kodun Şu anda yürütüldüğü örneğidir.  
   
- You use the `Me` keyword to refer to the current instance.  
+ Geçerli örneğe başvurmak için `Me` anahtar sözcüğünü kullanırsınız.  
   
-### <a name="to-refer-to-the-current-instance"></a>To refer to the current instance  
+### <a name="to-refer-to-the-current-instance"></a>Geçerli örneğe başvurmak için  
   
-- Use the `Me` keyword where you would normally use the name of an object variable.  
+- Bir nesne değişkeninin adını normalde kullandığınız `Me` anahtar sözcüğünü kullanın.  
   
     ```vb  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     Although `Me` behaves like an object variable, you cannot declare it or assign anything to it. `Me` always refers to the current instance.  
+     `Me` bir nesne değişkeni gibi davransa da, bunu bildiremez veya buna hiçbir şey atayamazsınız. `Me` her zaman geçerli örneğe başvurur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

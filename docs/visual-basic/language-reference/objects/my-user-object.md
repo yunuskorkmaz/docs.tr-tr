@@ -13,15 +13,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350646"
 ---
 # <a name="myuser-object"></a>My.User Nesnesi
-Provides access to information about the current user.  
+Geçerli kullanıcı hakkındaki bilgilere erişim sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- For information about the methods and properties of the `My.User` object, see <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.  
+ `My.User` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.  
   
- For more information, see [Accessing User Data](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
+ Daha fazla bilgi için bkz. [Kullanıcı verilerine erişme](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

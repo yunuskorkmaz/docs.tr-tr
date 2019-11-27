@@ -21,18 +21,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344871"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Nasıl yapılır: Bir İşleci Tanımlama (Visual Basic)
-If you have defined a class or structure, you can define the behavior of a standard operator (such as `*`, `<>`, or `And`) when one or both of the operands is of the type of your class or structure.  
+Bir sınıf veya yapı tanımladıysanız, işlenenleri bir veya her ikisi de sınıfınızın veya yapınızın türü olduğunda standart bir işlecin (`*`, `<>`veya `And`) davranışını tanımlayabilirsiniz.  
   
- Define the standard operator as an operator procedure within the class or structure. All operator procedures must be `Public` `Shared`.  
+ Standart işleci sınıf veya yapı içinde operatör yordamı olarak tanımlayın. Tüm operatör yordamları `Public` `Shared`olmalıdır.  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ Bir sınıf veya yapı üzerinde işleç tanımlamak, işleci *aşırı yükleme* olarak da adlandırılır.  
   
 ## <a name="example"></a>Örnek  
- The following example defines the `+` operator for a structure called `height`. The structure uses heights measured in feet and inches. One *inch* is 2.54 centimeters, and one *foot* is 12 inches. To ensure normalized values (inches < 12.0), the constructor performs *modulo* 12 arithmetic. The `+` operator uses the constructor to generate normalized values.  
+ Aşağıdaki örnek, `height`adlı bir yapı için `+` işlecini tanımlar. Yapı, fit ve inç cinsinden ölçülen yükseklikleri kullanır. Bir *inç* 2,54 santimetre, bir *Foot* ise 12 inç 'tir. Normalleştirilmiş değerler (inç < 12,0) sağlamak için, Oluşturucu *Modül* 12 aritmetik işlemini gerçekleştirir. `+` işleci, normalleştirilmiş değerler oluşturmak için oluşturucuyu kullanır.  
   
  [!code-vb[VbVbcnProcedures#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#25)]  
   
- You can test the structure `height` with the following code.  
+ Aşağıdaki kodla yapıyı `height` test edebilirsiniz.  
   
  [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
 

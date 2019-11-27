@@ -15,20 +15,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346254"
 ---
 # <a name="validating-strings-in-visual-basic"></a>Visual Basic'de Dizeleri Doğrulama
-This section discusses how to validate strings in Visual Basic.  
+Bu bölümde Visual Basic dizelerin nasıl doğrulanacağı anlatılmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [How to: Validate File Names and Paths in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
- How to determine whether a string represents a file name or path.  
+ [Nasıl yapılır: Visual Basic dosya adlarını ve yolları doğrulama](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
+ Bir dizenin bir dosya adı veya yolu temsil edip etmediğini belirleme.  
   
  [Nasıl yapılır: Tarihleri veya Saatleri Temsil Eden Dizeleri Doğrulama](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-strings-that-represent-dates-or-times.md)  
- How to determine whether a string represents a valid date.  
+ Bir dizenin geçerli bir tarihi temsil edip etmediğini belirleme.  
   
- [Using Regular Expressions with the MaskedTextBox Control in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
- Demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.  
+ [Visual Basic içinde MaskedTextBox denetimiyle normal Ifadeleri kullanma](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
+ <xref:System.Windows.Forms.MaskedTextBox> denetimiyle çalışacak basit normal ifadelerin nasıl dönüştürüleceğini gösterir.  
   
  [İzlenecek yol: Parolaların Karmaşık Olduğunu Doğrulama](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
- How to determine whether a string has the characteristics of a strong password.  
+ Bir dizenin, güçlü bir parolanın özelliklerine sahip olup olmadığını belirleme.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,122 +11,122 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344802"
 ---
-# <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic compiler options listed by category
-The Visual Basic command-line compiler is provided as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE). The following is a list of the Visual Basic command-line compiler options sorted by functional category.  
+# <a name="visual-basic-compiler-options-listed-by-category"></a>Kategoriye göre listelenmiş Visual Basic derleyici seçenekleri
+Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme ortamı (IDE) içinden program derlemek için alternatif olarak sağlanır. Aşağıda, işlevsel kategoriye göre sıralanan Visual Basic komut satırı derleyici seçeneklerinin bir listesi verilmiştir.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-## <a name="compiler-output"></a>Compiler output  
+## <a name="compiler-output"></a>Derleyici çıkışı  
   
 |Seçenek|Amaç|  
 |---|---|  
-|[-nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|Suppresses compiler banner information.|  
-|[-utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|Displays compiler output using UTF-8 encoding.|  
-|[-verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|Outputs extra information during compilation.|  
-|`-modulename:<string>`|Specify the name of the source module|  
-|[-preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Specify a language for compiler output.|
+|[-nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|Derleyici başlık bilgilerini gizler.|  
+|[-utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|UTF-8 kodlamasını kullanarak derleyici çıkışını görüntüler.|  
+|[-verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|Derleme sırasında ek bilgi verir.|  
+|`-modulename:<string>`|Kaynak modülünün adını belirtin|  
+|[-preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Derleyici çıkışı için bir dil belirtin.|
   
 ## <a name="optimization"></a>İyileştirme  
   
 |Seçenek|Amaç|  
 |---|---|  
-|[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Specifies where to align the sections of the output file.|  
-|[-optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|Enables/disables optimizations.|  
+|[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Çıktı dosyasının bölümlerinin hangi noktada hizalanacağını belirtir.|  
+|[-optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|İyileştirmeleri etkinleştirilir/devre dışı bırakır.|  
   
 ## <a name="output-files"></a>Çıkış dosyaları  
   
 |Seçenek|Amaç|  
 |---|---|  
-|[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Process documentation comments to an XML file.|  
-|[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Causes the compiler to output an assembly whose binary content is identical across compilations if inputs are identical.|
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Sets the compiler to target the .NET Compact Framework.|  
-|[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Specifies an output file.|  
-|[-refonly](refonly-compiler-option.md)|Outputs only a reference assembly.|
-|[-refout](refout-compiler-option.md)|Specifies the output path of a reference assembly.|
-|[-target](../../../visual-basic/reference/command-line-compiler/target.md)|Specifies the format of the output.|  
+|[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Belge açıklamalarını bir XML dosyası ile işleyin.|  
+|[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Girişlerin özdeş olması halinde, derleyicinin ikili içerik özdeş olan bir derlemeyi çıkış yapmasına neden olur.|
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|.NET Compact Framework hedeflemek için derleyiciyi ayarlar.|  
+|[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Bir çıkış dosyasını belirtir.|  
+|[-refonly](refonly-compiler-option.md)|Yalnızca bir başvuru derlemesini verir.|
+|[-refout](refout-compiler-option.md)|Bir başvuru derlemesinin çıkış yolunu belirtir.|
+|[-target](../../../visual-basic/reference/command-line-compiler/target.md)|Çıkışın biçimini belirtir.|  
   
-## <a name="net-assemblies"></a>.NET assemblies  
+## <a name="net-assemblies"></a>.NET derlemeleri  
   
 |Seçenek|Amaç|  
 |---|---|  
-|[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)|Causes the compiler to make all type information from the specified file(s) available to the project you are currently compiling.|  
+|[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)|Derleyicinin, belirtilen dosya (lar) dan tüm tür bilgilerini şu anda derlediğiniz projede kullanılabilir hale getirmesine neden olur.|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Derlemenin tamamen veya kısmen imzalanacağını belirtir.|  
-|[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Imports a namespace from a specified assembly.|  
-|[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Specifies a key container name for a key pair to give an assembly a strong name.|  
-|[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|Specifies a file containing a key or key pair to give an assembly a strong name.|  
-|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Specifies the location of assemblies referenced by the [-reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.|  
-|[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|Imports metadata from an assembly.|  
-|[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Specifies the name of the assembly that a module will be a part of.|  
-|`-analyzer`|Run the analyzers from this assembly (Short form: -a)|  
-|`-additionalfile`|Names additional files that don't directly affect code generation but may be used by analyzers for producing errors or warnings.|  
+|[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Belirtilen derlemeden bir ad alanı içeri aktarır.|  
+|[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Bir derlemeye tanımlayıcı ad vermek için bir anahtar çifti için anahtar kapsayıcısı adı belirtir.|  
+|[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|Derlemeye tanımlayıcı ad vermek için bir anahtar veya anahtar çifti içeren bir dosya belirtir.|  
+|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|[-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) seçeneğinin başvurduğu derlemelerin konumunu belirtir.|  
+|[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|Meta verileri bir derlemeden içeri aktarır.|  
+|[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Modülün bir parçası olacağı derlemenin adını belirtir.|  
+|`-analyzer`|Bu derlemeden çözümleyiciler çalıştırın (kısa biçim:-a)|  
+|`-additionalfile`|Kod oluşturmayı doğrudan etkilemeyen, ancak hata veya uyarı üretmek için çözümleyiciler tarafından kullanılabilen ek dosyaları adlandırır.|  
   
-## <a name="debuggingerror-checking"></a>Debugging/error checking  
+## <a name="debuggingerror-checking"></a>Hata ayıklama/hata denetimi  
   
 |Seçenek|Amaç|  
 |---|---|  
-|[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|Creates a file that contains information that makes it easy to report a bug.|  
-|[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|Produces debugging information.|  
-|[-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)|Suppresses the compiler's ability to generate warnings.|  
-|[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|Prevents the compiler from displaying code for syntax-related errors and warnings.|  
-|[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|Disables integer overflow checking.|  
-|[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|Promotes warnings to errors.|  
-|`-ruleset:<file>`|Specify a ruleset file that disables specific diagnostics.|  
+|[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|Bir hatayı rapor etmelerini kolaylaştıran bilgiler içeren bir dosya oluşturur.|  
+|[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|Hata ayıklama bilgileri üretir.|  
+|[-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)|Derleyicinin uyarı oluşturma yeteneğini engeller.|  
+|[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|Derleyicinin sözdizimiyle ilgili hatalar ve uyarılar için kod görüntülemesini engeller.|  
+|[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|Tamsayı taşma denetimini devre dışı bırakır.|  
+|[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|Hatalara yönelik uyarıları yükseltir.|  
+|`-ruleset:<file>`|Belirli tanılamayı devre dışı bırakan bir RuleSet dosyası belirtin.|  
   
 ## <a name="help"></a>Yardım  
   
 |Seçenek|Amaç|  
 |---|---|  
-|[-?](../../../visual-basic/reference/command-line-compiler/help.md)|Displays the compiler options. This command is the same as specifying the `-help` option. No compilation occurs.|  
-|[-help](../../../visual-basic/reference/command-line-compiler/help.md)|Displays the compiler options. This command is the same as specifying the `-?` option. No compilation occurs.|  
+|[-?](../../../visual-basic/reference/command-line-compiler/help.md)|Derleyici seçeneklerini görüntüler. Bu komut, `-help` seçeneği belirtilerek aynıdır. Hiçbir derleme gerçekleşmez.|  
+|[-yardım](../../../visual-basic/reference/command-line-compiler/help.md)|Derleyici seçeneklerini görüntüler. Bu komut, `-?` seçeneği belirtilerek aynıdır. Hiçbir derleme gerçekleşmez.|  
   
 ## <a name="language"></a>Dil  
   
 |Seçenek|Amaç|  
 |---|---|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Specify language version: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
-|[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|Enforces explicit declaration of variables.|  
-|[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Enforces strict type semantics.|  
-|[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|Specifies whether string comparisons should be binary or use locale-specific text semantics.|  
-|[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|Enables the use of local type inference in variable declarations.|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Dil sürümünü belirtin: 9&#124;9,0&#124;10&#124;10,0&#124;11&#124;11,0.|  
+|[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|Değişkenlerin açık bildirimini uygular.|  
+|[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Katı tür semantiğini zorlar.|  
+|[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|Dize karşılaştırmalarının ikili mı yoksa yerel ayara özgü metin semantiğini mi kullanılacağını belirtir.|  
+|[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|Değişken bildirimlerinde yerel tür çıkarımı kullanımını mümkün.|  
   
 ## <a name="preprocessor"></a>Ön işlemci  
   
 |Seçenek|Amaç|  
 |---|---|  
-|[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Defines symbols for conditional compilation.|  
+|[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Koşullu derleme için sembolleri tanımlar.|  
   
 ## <a name="resources"></a>Kaynaklar  
   
 |Seçenek|Amaç|  
 |---|---|  
-|[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|Creates a link to a managed resource.|  
-|[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|Embeds a managed resource in an assembly.|  
-|[-win32icon](../../../visual-basic/reference/command-line-compiler/win32icon.md)|Inserts an .ico file into the output file.|  
-|[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Inserts a Win32 resource into the output file.|  
+|[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|Yönetilen bir kaynağa bir bağlantı oluşturur.|  
+|[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|Bir derlemede yönetilen bir kaynak gömer.|  
+|[-win32icon](../../../visual-basic/reference/command-line-compiler/win32icon.md)|Çıkış dosyasına bir. ico dosyası ekler.|  
+|[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Çıktı dosyasına bir Win32 kaynağı ekler.|  
   
 ## <a name="miscellaneous"></a>Çeşitli  
   
 |Seçenek|Amaç|  
 |---|---|  
-|[@ (Yanıt Dosyasını Belirtin)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Specifies a response file.|  
-|[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Specifies the base address of a DLL.|  
-|[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Specifies the code page to use for all source code files in the compilation.|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Specifies how the Visual Basic compiler should report internal compiler errors.|  
-|[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Tells the Windows kernel whether a particular executable supports high entropy Address Space Layout Randomization (ASLR).|  
-|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Specifies the class that contains the `Sub Main` procedure to use at startup.|  
-|[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Do not compile with Vbc.rsp|  
-|[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Causes the compiler not to reference the standard libraries.|  
-|[-nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|Instructs the compiler not to embed any application manifest into the executable file.|  
-|[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|Specifies the processor platform the compiler targets for the output file.|  
-|[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|Searches subdirectories for source files to compile.|  
-|[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|Specifies a namespace for all type declarations.|  
-|[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)|Specifies the location of Mscorlib.dll and Microsoft.VisualBasic.dll.|  
-|[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|Specifies that the compiler should compile without a reference to the Visual Basic Runtime Library, or with a reference to a specific runtime library.|  
-|[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|Identifies a user-defined Win32 application manifest file to be embedded into a project's portable executable (PE) file.|  
-|`-parallel[+&#124;-]`|Specifies whether to use concurrent build (+).|  
-|`-checksumalgorithm:<alg>`|Specify the algorithm for calculating the source file checksum stored in PDB.  Supported values are: SHA1 (default) or SHA256. <br>Due to collision problems with SHA1, Microsoft recommends SHA256 or better.|  
+|[@ (Yanıt Dosyasını Belirtin)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Bir yanıt dosyası belirtir.|  
+|[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|DLL 'nin temel adresini belirtir.|  
+|[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını belirtir.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Visual Basic derleyicisinin iç derleyici hatalarını nasıl rapor etmesi gerektiğini belirtir.|  
+|[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Windows çekirdeğine, belirli bir yürütülebilir dosyanın yüksek entropi adres alanı düzeni rastgele seçimini (ASLR) destekleyip desteklemediğini söyler.|  
+|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Başlangıçta kullanılacak `Sub Main` yordamını içeren sınıfı belirtir.|  
+|[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Vbc. rsp ile derleme|  
+|[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Derleyicinin standart kitaplıklara Başvurmamasını sağlar.|  
+|[-nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|Derleyicinin hiçbir uygulama bildirimini yürütülebilir dosyaya katıştırmamasını sağlar.|  
+|[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|Derleyicinin çıkış dosyası için hedeflediği işlemci platformunu belirtir.|  
+|[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|Kaynak dosyaları derlemek için alt dizinleri arar.|  
+|[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|Tüm tür bildirimleri için bir ad alanı belirtir.|  
+|[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)|Mscorlib. dll ve Microsoft. VisualBasic. dll dosyasının konumunu belirtir.|  
+|[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|Derleyicinin Visual Basic çalışma zamanı kitaplığına bir başvuru olmadan veya belirli bir çalışma zamanı kitaplığı başvurusuyla derlenmesi gerektiğini belirtir.|  
+|[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|Bir projenin taşınabilir yürütülebilir (PE) dosyasına gömülecek Kullanıcı tanımlı bir Win32 uygulama bildirim dosyası tanımlar.|  
+|`-parallel[+&#124;-]`|Eşzamanlı yapı (+) kullanılıp kullanılmayacağını belirtir.|  
+|`-checksumalgorithm:<alg>`|PDB 'de depolanan kaynak dosyası sağlama toplamını hesaplamak için algoritmayı belirtin.  Desteklenen değerler şunlardır: SHA1 (varsayılan) veya SHA256. <br>Microsoft, SHA1 ile ilgili çakışma sorunları nedeniyle SHA256 veya daha iyi bir performans öneriyor.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Compiler Options Listed Alphabetically](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
+- [Alfabetik olarak listelenen Visual Basic derleyici seçenekleri](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
 - [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)

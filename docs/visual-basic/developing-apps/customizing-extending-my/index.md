@@ -15,32 +15,32 @@ ms.locfileid: "74330333"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Visual Basic ile Projeleri Özelleştirme ve My Özelliklerini Genişletme
 
-You can customize project templates to provide additional `My` objects. This makes it easy for other developers to find and use your objects.
+Proje şablonlarını, ek `My` nesneleri sağlamak için özelleştirebilirsiniz. Bu, diğer geliştiricilerin nesnelerinizi bulmasını ve kullanmasını kolaylaştırır.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-- [Extending the My Namespace in Visual Basic](extending-the-my-namespace.md)  
- Describes how to add custom members and values to the `My` namespace in Visual Basic.
+- [Visual Basic ad alanını genişletme](extending-the-my-namespace.md)  
+ Visual Basic `My` ad alanına özel üye ve değerlerin nasıl ekleneceğini açıklar.
 - [My Uzantılarını Paketleme ve Dağıtma](packaging-and-deploying-custom-my-extensions.md)  
- Describes how to publish custom `My` namespace extensions by using Visual Studio templates.
+ Visual Studio şablonları kullanarak özel `My` ad alanı uzantılarının nasıl yayımlanacağını açıklar.
 - [Visual Basic Uygulama Modelini Genişletme](extending-the-visual-basic-application-model.md)  
- Describes how to specify your own extensions to the application model by overriding members of the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> class.
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> sınıfının üyelerini geçersiz kılarak uygulama modeli için kendi uzantılarınızın nasıl belirtileceğini açıklar.
 - [My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme](customizing-which-objects-are-available-in-my.md)  
- Describes how to control which `My` objects are enabled by setting your project's \_MYTYPE conditional-compilation constant.
+ Projenizin \_MYTYPE koşullu derleme sabiti ayarlanarak hangi `My` nesnelerinin etkinleştirildiğini nasıl denetleyebileceğinizi açıklar.
 
-## <a name="related-sections"></a>Related sections
+## <a name="related-sections"></a>İlgili bölümler
 
 - [My Özelliğiyle Geliştirme](../development-with-my/index.md)  
- Describes which `My` objects are available in different project types by default.
+ Varsayılan olarak farklı proje türlerinde hangi `My` nesnelerinin kullanılabildiğini açıklar.
 - [Visual Basic Uygulama Modeline Genel Bakış](../development-with-my/overview-of-the-visual-basic-application-model.md)  
- Describes Visual Basic's model for controlling the behavior of Windows Forms applications.
+ Windows Forms uygulamalarının davranışını denetlemek için Visual Basic modelini açıklar.
 - [My Özellikleri Proje Türüne Nasıl Bağımlıdır](../development-with-my/how-my-depends-on-project-type.md)  
- Describes which `My` objects are available in different project types by default.
+ Varsayılan olarak farklı proje türlerinde hangi `My` nesnelerinin kullanılabildiğini açıklar.
 - [Koşullu Derleme](../../programming-guide/program-structure/conditional-compilation.md)  
- Discusses how the compiler uses conditional-compilation to select particular sections of code to compile and exclude other sections.
+ Derleyicinin diğer bölümleri derlemek ve hariç tutmak için kodun belirli bölümlerini seçmek üzere koşullu derlemeyi nasıl kullandığını açıklar.
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- Describes the `My` object that provides properties, methods, and events related to the current application.
+ Geçerli uygulamayla ilgili özellikler, Yöntemler ve olaylar sağlayan `My` nesnesini açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Developing Applications with Visual Basic](../index.md)
+- [Visual Basic ile uygulama geliştirme](../index.md)

@@ -21,7 +21,7 @@ ms.locfileid: "74345931"
 ---
 # <a name="exit-statement-visual-basic"></a>Exit Deyimi (Visual Basic)
 
-Exits a procedure or block and transfers control immediately to the statement following the procedure call or the block definition.
+Bir yordam veya bloğundan çıkar ve denetimi yordam çağrısının veya blok tanımının ardından gelen deyime hemen aktarır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,56 +32,56 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
 ## <a name="statements"></a>Deyimler
 
  `Exit Do`  
- Immediately exits the `Do` loop in which it appears. Execution continues with the statement following the `Loop` statement. `Exit Do` can be used only inside a `Do` loop. When used within nested `Do` loops, `Exit Do` exits the innermost loop and transfers control to the next higher level of nesting.
+ Görüntülenen `Do` döngüsünden hemen çıkar. Yürütme `Loop` deyiminden sonraki deyimle devam eder. `Exit Do`, yalnızca bir `Do` döngüsü içinde kullanılabilir. İç içe geçmiş `Do` döngüleri içinde kullanıldığında, `Exit Do` en içteki döngüden çıkar ve denetimi sonraki daha yüksek iç içe geçme düzeyine aktarır.
 
  `Exit For`  
- Immediately exits the `For` loop in which it appears. Execution continues with the statement following the `Next` statement. `Exit For` can be used only inside a `For`...`Next` or `For Each`...`Next` loop. When used within nested `For` loops, `Exit For` exits the innermost loop and transfers control to the next higher level of nesting.
+ Görüntülenen `For` döngüsünden hemen çıkar. Yürütme `Next` deyiminden sonraki deyimle devam eder. `Exit For`, yalnızca bir `For`...`Next` veya `For Each`...`Next` döngüsü içinde kullanılabilir. İç içe geçmiş `For` döngüleri içinde kullanıldığında, `Exit For` en içteki döngüden çıkar ve denetimi sonraki daha yüksek iç içe geçme düzeyine aktarır.
 
  `Exit Function`  
- Immediately exits the `Function` procedure in which it appears. Execution continues with the statement following the statement that called the `Function` procedure. `Exit Function` can be used only inside a `Function` procedure.
+ Görüntülenen `Function` yordamından hemen çıkar. Yürütme `Function` yordamını çağıran deyimden sonraki deyimle devam eder. `Exit Function`, yalnızca bir `Function` yordamı içinde kullanılabilir.
 
- To specify a return value, you can assign the value to the function name on a line before the `Exit Function` statement. To assign the return value and exit the function in one statement, you can instead use the [Return Statement](return-statement.md).
+ Bir dönüş değeri belirtmek için, `Exit Function` deyimden önceki bir satırdaki işlev adına değeri atayabilirsiniz. Dönüş değerini atamak ve tek bir ifadede işlevinden çıkmak için, bunun yerine [return ifadesini](return-statement.md)kullanabilirsiniz.
 
  `Exit Property`  
- Immediately exits the `Property` procedure in which it appears. Execution continues with the statement that called the `Property` procedure, that is, with the statement requesting or setting the property's value. `Exit Property` can be used only inside a property's `Get` or `Set` procedure.
+ Görüntülenen `Property` yordamından hemen çıkar. Yürütme `Property` yordamını çağıran deyimle devam eder, diğer bir deyişle, özellik değerini talep eden veya ayarla. `Exit Property`, yalnızca özelliğin `Get` veya `Set` yordamının içinde kullanılabilir.
 
- To specify a return value in a `Get` procedure, you can assign the value to the function name on a line before the `Exit Property` statement. To assign the return value and exit the `Get` procedure in one statement, you can instead use the `Return` statement.
+ Bir `Get` yordamında bir dönüş değeri belirtmek için, `Exit Property` deyimden önceki bir satırdaki işlev adına değeri atayabilirsiniz. Dönüş değerini atamak ve tek bir ifadede `Get` yordamından çıkmak için, bunun yerine `Return` ifadesini kullanabilirsiniz.
 
- In a `Set` procedure, the `Exit Property` statement is equivalent to the `Return` statement.
+ `Set` yordamında, `Exit Property` deyimleri `Return` ifadesiyle eşdeğerdir.
 
  `Exit Select`  
- Immediately exits the `Select Case` block in which it appears. Execution continues with the statement following the `End Select` statement. `Exit Select` can be used only inside a `Select Case` statement.
+ Görüntülenen `Select Case` bloğundan hemen çıkar. Yürütme `End Select` deyiminden sonraki deyimle devam eder. `Exit Select`, yalnızca bir `Select Case` bildiriminde kullanılabilir.
 
  `Exit Sub`  
- Immediately exits the `Sub` procedure in which it appears. Execution continues with the statement following the statement that called the `Sub` procedure. `Exit Sub` can be used only inside a `Sub` procedure.
+ Görüntülenen `Sub` yordamından hemen çıkar. Yürütme `Sub` yordamını çağıran deyimden sonraki deyimle devam eder. `Exit Sub`, yalnızca bir `Sub` yordamı içinde kullanılabilir.
 
- In a `Sub` procedure, the `Exit Sub` statement is equivalent to the `Return` statement.
+ `Sub` yordamında, `Exit Sub` deyimleri `Return` ifadesiyle eşdeğerdir.
 
  `Exit Try`  
- Immediately exits the `Try` or `Catch` block in which it appears. Execution continues with the `Finally` block if there is one, or with the statement following the `End Try` statement otherwise. `Exit Try` can be used only inside a `Try` or `Catch` block, and not inside a `Finally` block.
+ Görüntülenen `Try` veya `Catch` bloğundan hemen çıkar. Yürütme, varsa `Finally` bloğuyla devam eder veya `End Try` deyiminden sonraki deyimle devam eder. `Exit Try`, `Finally` bloğu içinde değil, yalnızca bir `Try` veya `Catch` bloğunda kullanılabilir.
 
  `Exit While`  
- Immediately exits the `While` loop in which it appears. Execution continues with the statement following the `End While` statement. `Exit While` can be used only inside a `While` loop. When used within nested `While` loops, `Exit While` transfers control to the loop that is one nested level above the loop where `Exit While` occurs.
+ Görüntülenen `While` döngüsünden hemen çıkar. Yürütme `End While` deyiminden sonraki deyimle devam eder. `Exit While`, yalnızca bir `While` döngüsü içinde kullanılabilir. İç içe `While` döngüleri içinde kullanıldığında, `Exit While` denetimi, döngünün üzerinde yer alan bir iç içe geçmiş düzeyi olan döngüye `Exit While` meydana gelir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Do not confuse `Exit` statements with `End` statements. `Exit` does not define the end of a statement.
+`Exit` deyimlerini `End` deyimleriyle karıştırmayın. `Exit` deyimin sonunu tanımlamaz.
 
 ## <a name="example"></a>Örnek
 
-In the following example, the loop condition stops the loop when the `index` variable is greater than 100. The `If` statement in the loop, however, causes the `Exit Do` statement to stop the loop when the index variable is greater than 10.
+Aşağıdaki örnekte, `index` değişken 100 ' den büyükse döngü koşulu döngüyü sonlandırır. Ancak, döngüdeki `If` ifade, dizin değişkeni 10 ' dan büyük olduğunda `Exit Do` deyimin döngüyü durdurmasına neden olur.
 
 [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]
 
 ## <a name="example"></a>Örnek
 
-The following example assigns the return value to the function name `myFunction`, and then uses `Exit Function` to return from the function:
+Aşağıdaki örnek, `myFunction`işlev adına döndürülen değeri atar ve sonra işlevden geri dönmek için `Exit Function` kullanır:
 
 [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]
 
 ## <a name="example"></a>Örnek
 
-The following example uses the [Return Statement](return-statement.md) to assign the return value and exit the function:
+Aşağıdaki örnek, dönüş değerini atamak ve işlevden çıkmak için [return ifadesini](return-statement.md) kullanır:
 
 [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]
 

@@ -17,28 +17,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350769"
 ---
 # <a name="structures-visual-basic"></a>Yapılar (Visual Basic)
-A *structure* is a generalization of the user-defined type (UDT) supported by previous versions of Visual Basic. In addition to fields, structures can expose properties, methods, and events. A structure can implement one or more interfaces, and you can declare individual access levels for each field.  
+*Yapı* , önceki Visual Basic sürümleri tarafından desteklenen Kullanıcı tanımlı tür (udt) genelleştirmesidir. Alanlara ek olarak, yapılar özellikleri, yöntemleri ve olayları kullanıma sunabilir. Bir yapı bir veya daha fazla arabirim uygulayabilir ve her alan için ayrı erişim düzeyleri bildirebilirsiniz.  
   
- You can combine data items of different types to create a structure. A structure associates one or more *elements* with each other and with the structure itself. When you declare a structure, it becomes a *composite data type*, and you can declare variables of that type.  
+ Bir yapı oluşturmak için farklı türlerdeki veri öğelerini birleştirebilirsiniz. Bir yapı, bir veya daha fazla *öğeyi* birbirleriyle ve yapının kendisi ile ilişkilendirir. Bir yapıyı bildirdiğinizde, *bileşik veri türü*olur ve bu türün değişkenlerini bildirebilirsiniz.  
   
- Structures are useful when you want a single variable to hold several related pieces of information. For example, you might want to keep an employee's name, telephone extension, and salary together. You could use several variables for this information, or you could define a structure and use it for a single employee variable. The advantage of the structure becomes apparent when you have many employees and therefore many instances of the variable.  
+ Yapıları, tek bir değişkenin ilgili birçok bilgi parçasını tutabilmesini istediğinizde faydalıdır. Örneğin, bir çalışanın adını, telefon uzantısını ve maaşını birlikte tutmak isteyebilirsiniz. Bu bilgiler için birkaç değişken kullanabilir veya bir yapı tanımlayabilir ve tek bir çalışan değişkeni için kullanabilirsiniz. Yapının avantajı çok sayıda çalışanına ve bu nedenle değişkenin çok sayıda örneğine sahip olduğunuzda görünür hale gelir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: Bir Yapıyı Bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- Shows how to declare a structure and its elements.  
+ Bir yapının ve öğelerinin nasıl bildirilemeyeceğini gösterir.  
   
  [Yapı Değişkenleri](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- Covers assigning a structure to a variable and accessing its elements.  
+ Bir değişkene bir yapı atamayı ve öğelerine erişimi içerir.  
   
  [Yapılar ve Diğer Programlama Öğeleri](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
- Summarizes how structures interact with arrays, objects, procedures, and each other.  
+ Yapıların diziler, nesneler, yordamlar ve birbirleriyle nasıl etkileşime gireceğini özetler.  
   
  [Yapılar ve Sınıflar](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- Describes the similarities and differences between structures and classes.  
+ Yapılar ve sınıflar arasındaki benzerlikleri ve farklılıkları açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Introduces the Visual Basic data types and describes how to use them.  
+ Visual Basic veri türlerini tanıtır ve bunların nasıl kullanılacağını açıklar.  
   
  [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)  
- Lists the elementary data types supplied by Visual Basic.
+ Visual Basic tarafından sağlanan elemensel veri türlerini listeler.

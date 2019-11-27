@@ -14,41 +14,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351531"
 ---
 # <a name="iterator-visual-basic"></a>Yineleyici (Visual Basic)
-Specifies that a function or `Get` accessor is an iterator.  
+Bir işlev veya `Get` erişimcisinin bir yineleyici olduğunu belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- An *iterator* performs a custom iteration over a collection. An iterator uses the [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) statement to return each element in the collection one at a time. When a `Yield` statement is reached, the current location in code is retained. Yürütme, yineleyici işlevinin bir sonraki çağrılmasında bu konumdan başlar.  
+ *Yineleyici* bir koleksiyon üzerinde özel bir yineleme gerçekleştirir. Bir yineleyici, koleksiyondaki her öğeyi tek seferde döndürmek için [yield](../../../visual-basic/language-reference/statements/yield-statement.md) ifadesini kullanır. `Yield` ifadeye ulaşıldığında, koddaki geçerli konum korunur. Yürütme, yineleyici işlevinin bir sonraki çağrılmasında bu konumdan başlar.  
   
- An iterator can be implemented as a function or as a `Get` accessor of a property definition. The `Iterator` modifier appears in the declaration of the iterator function or `Get` accessor.  
+ Yineleyici, bir işlev olarak veya bir özellik tanımının `Get` erişimcisi olarak uygulanabilir. `Iterator` değiştiricisi yineleyici işlevin veya `Get` erişimcisinin bildiriminde görüntülenir.  
   
- You call an iterator from client code by using a [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+ Her biri Için bir kullanarak istemci kodundan bir yineleyici çağırın [... Sonraki Ifade](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
- The return type of an iterator function or `Get` accessor can be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.  
+ Yineleyici işlev veya `Get` erişimcisinin dönüş türü <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>veya <xref:System.Collections.Generic.IEnumerator%601>olabilir.  
   
- An iterator cannot have any `ByRef` parameters.  
+ Bir yineleyici `ByRef` parametreye sahip olamaz.  
   
- An iterator cannot occur in an event, instance constructor, static constructor, or static destructor.  
+ Bir olay, örnek Oluşturucu, statik oluşturucu veya statik yok edicisi içinde yineleyici olamaz.  
   
- An iterator can be an anonymous function. For more information, see [Iterators](../../programming-guide/concepts/iterators.md).  
+ Yineleyici bir anonim işlev olabilir. Daha fazla bilgi için bkz. [yineleyiciler](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="usage"></a>Kullanım  
- The `Iterator` modifier can be used in these contexts:  
+ `Iterator` değiştiricisi şu bağlamlarda kullanılabilir:  
   
 - [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
   
 - [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="example"></a>Örnek  
- The following example demonstrates an iterator function. The iterator function has a `Yield` statement that is inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. Each iteration of the [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement body in `Main` creates a call to the `Power` iterator function. Each call to the iterator function proceeds to the next execution of the `Yield` statement, which occurs during the next iteration of the `For…Next` loop.  
+ Aşağıdaki örnekte bir yineleyici işlevi gösterilmektedir. Yineleyici işlevi Için bir for... içinde olan bir `Yield` ifadeye sahip [... Sonraki](../../../visual-basic/language-reference/statements/for-next-statement.md) döngü. `Main` [for each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) deyimlerinin her yinelemesi, `Power` Yineleyici işlevine bir çağrı oluşturur. Yineleyici işlevine yapılan her çağrı, `For…Next` döngüsünün bir sonraki yinelemesi sırasında ortaya çıkan `Yield` deyimin bir sonraki yürütmeye ilerler.  
   
  [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   
 ## <a name="example"></a>Örnek  
- The following example demonstrates a `Get` accessor that is an iterator. The `Iterator` modifier is in the property declaration.  
+ Aşağıdaki örnek, yineleyici olan bir `Get` erişimcisini gösterir. `Iterator` değiştiricisi özellik bildiriminde bulunur.  
   
  [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
   
- For additional examples, see [Iterators](../../programming-guide/concepts/iterators.md).  
+ Ek örnekler için bkz. [yineleyiciler](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

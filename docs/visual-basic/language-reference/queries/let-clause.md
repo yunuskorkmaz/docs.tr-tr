@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350429"
 ---
 # <a name="let-clause-visual-basic"></a>Let Tümcesi (Visual Basic)
-Computes a value and assigns it to a new variable within the query.  
+Bir değeri hesaplar ve sorgu içindeki yeni bir değişkene atar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,22 +28,22 @@ Let variable = expression [, ...]
   
 |Terim|Tanım|  
 |---|---|  
-|`variable`|Gerekli. An alias that can be used to reference the results of the supplied expression.|  
-|`expression`|Gerekli. An expression that will be evaluated and assigned to the specified variable.|  
+|`variable`|Gerekli. Sağlanan ifadenin sonuçlarına başvurmak için kullanılabilecek bir diğer ad.|  
+|`expression`|Gerekli. Değerlendirilecek ve belirtilen değişkene atanacak bir ifade.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `Let` clause enables you to compute values for each query result and reference them by using an alias. The alias can be used in other clauses, such as the `Where` clause. The `Let` clause enables you to create a query statement that is easier to read because you can specify an alias for an expression clause included in the query and substitute the alias each time the expression clause is used.  
+ `Let` yan tümcesi, her sorgu sonucu için değerleri hesaplamanızı ve bir diğer ad kullanarak bunları başvurmanızı sağlar. Diğer ad, `Where` yan tümcesi gibi diğer yan tümcelerde kullanılabilir. `Let` yan tümcesi, sorguda yer alan bir ifade yan tümcesi için bir diğer ad belirtebileceğiniz ve ifade yan tümcesinin her kullanıldığı her seferinde yerine geçecek bir sorgu deyimi oluşturmanıza olanak sağlar.  
   
- You can include any number of `variable` and `expression` assignments in the `Let` clause. Separate each assignment with a comma (,).  
+ `Let` yan tümcesine istediğiniz sayıda `variable` ve `expression` ataması ekleyebilirsiniz. Her atamayı virgülle ayırın (,).  
   
 ## <a name="example"></a>Örnek  
- The following code example uses the `Let` clause to compute a 10 percent discount on products.  
+ Aşağıdaki kod örneği, ürünlerde yüzde 10 indirimi hesaplamak için `Let` yan tümcesini kullanır.  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)

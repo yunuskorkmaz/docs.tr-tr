@@ -1,5 +1,5 @@
 ---
-title: 'How to: Validate File Names and Paths'
+title: 'Nasıl yapılır: dosya adlarını ve yollarını doğrulama'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file names [Visual Basic], validating
@@ -15,14 +15,14 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344359"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'de Dosya Adlarını ve Yollarını Doğrulama
-This example returns a `Boolean` value that indicates whether a string represents a file name or path. The validation checks if the name contains characters that are not allowed by the file system.  
+Bu örnek, bir dizenin bir dosya adını veya yolunu temsil ettiğini belirten bir `Boolean` değeri döndürür. Doğrulama, adın dosya sistemi tarafından izin verilmeyen karakterler içerip içermediğini denetler.  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbVbcnRegEx#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#4)]  
   
- This example does not check if the name has incorrectly placed colons, or directories with no name, or if the length of the name exceeds the system-defined maximum length. It also does not check if the application has permission to access the file-system resource with the specified name.  
+ Bu örnek, adın yanlış bir şekilde veya ada sahip olmayan dizinlerin mi yoksa ya da adın uzunluğu sistem tarafından tanımlanan uzunluk üst sınırını aşarsa denetlemez. Ayrıca, uygulamanın, belirtilen ada sahip dosya sistemi kaynağına erişme izni olup olmadığını denetlemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IO.Path.GetInvalidPathChars%2A>
-- [Validating Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
+- [Visual Basic dizeleri doğrulanıyor](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)

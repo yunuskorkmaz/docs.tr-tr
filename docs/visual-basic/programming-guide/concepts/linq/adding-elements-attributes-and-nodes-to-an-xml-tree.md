@@ -9,28 +9,28 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345820"
 ---
-# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>Adding Elements, Attributes, and Nodes to an XML Tree (Visual Basic)
-You can add content (elements, attributes, comments, processing instructions, text, and CDATA) to an existing XML tree.  
+# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>XML ağacına öğe, öznitelik ve düğüm ekleme (Visual Basic)
+Mevcut bir XML ağacına içerik (öğe, öznitelik, yorum, işleme yönergeleri, metin ve CDATA) ekleyebilirsiniz.  
   
-## <a name="methods-for-adding-content"></a>Methods for Adding Content  
- The following methods add child content to an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XDocument>:  
-  
-|Yöntem|Açıklama|  
-|------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Add%2A>|Adds content at the end of the child content of the <xref:System.Xml.Linq.XContainer>.|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Adds content at the beginning of the child content of the <xref:System.Xml.Linq.XContainer>.|  
-  
- The following methods add content as sibling nodes of an <xref:System.Xml.Linq.XNode>. The most common node to which you add sibling content is <xref:System.Xml.Linq.XElement>, although you can add valid sibling content to other types of nodes such as <xref:System.Xml.Linq.XText> or <xref:System.Xml.Linq.XComment>.  
+## <a name="methods-for-adding-content"></a>Içerik ekleme yöntemleri  
+ Aşağıdaki yöntemler bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument>alt içerik ekler:  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Adds content after the <xref:System.Xml.Linq.XNode>.|  
-|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Adds content before the <xref:System.Xml.Linq.XNode>.|  
+|<xref:System.Xml.Linq.XContainer.Add%2A>|<xref:System.Xml.Linq.XContainer>alt içeriğinin sonuna içerik ekler.|  
+|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|<xref:System.Xml.Linq.XContainer>alt içeriğinin başlangıcında içerik ekler.|  
+  
+ Aşağıdaki yöntemler bir <xref:System.Xml.Linq.XNode>eşdüzey düğümleri olarak içerik ekler. Eşdüzey içerik eklediğiniz en yaygın düğüm <xref:System.Xml.Linq.XElement>, ancak <xref:System.Xml.Linq.XText> veya <xref:System.Xml.Linq.XComment>gibi diğer düğüm türlerine geçerli eşdüzey içerik ekleyebilirsiniz.  
+  
+|Yöntem|Açıklama|  
+|------------|-----------------|  
+|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|<xref:System.Xml.Linq.XNode>sonra içerik ekler.|  
+|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|<xref:System.Xml.Linq.XNode>öncesine içerik ekler.|  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- The following example creates two XML trees, and then modifies one of the trees.  
+ Aşağıdaki örnek iki XML ağacı oluşturur ve sonra ağaçlardan birini değiştirir.  
   
 ### <a name="code"></a>Kod  
   
@@ -82,4 +82,4 @@ Console.WriteLine(xmlTree)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [XML ağaçlarını değiştirme (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

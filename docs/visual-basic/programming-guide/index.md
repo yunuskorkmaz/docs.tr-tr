@@ -14,21 +14,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345441"
 ---
 # <a name="visual-basic-programming-guide"></a>Visual Basic Programlama Kılavuzu
-As with any modern programming language, Visual Basic supports many common programming constructs and language elements. This guide describes all the major elements of programming with Visual Basic.  
+Tüm modern programlama dillerinde olduğu gibi, Visual Basic yaygın olarak kullanılan birçok programlama yapısını ve dil öğelerini destekler. Bu kılavuzda, Visual Basic ile programlama için tüm önemli öğeler açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Program Yapısı ve Kod Kuralları](../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Contains documentation on the basic structure and code conventions of Visual Basic, such as naming conventions, comments in code, and limitations within Visual Basic.  
+ Adlandırma kuralları, koddaki açıklamalar ve Visual Basic içindeki sınırlamalar gibi Visual Basic temel yapı ve kod kuralları hakkında belgeler içerir.  
   
- [Visual Basic Language Features](../../visual-basic/programming-guide/language-features/index.md)  
- Provides links to topics that introduce and discuss important features of Visual Basic, including LINQ and XML literals.  
+ [Visual Basic dil özellikleri](../../visual-basic/programming-guide/language-features/index.md)  
+ LINQ ve XML değişmez değerleri de dahil olmak üzere Visual Basic önemli özelliklerini tanıtan ve tartışan konuların bağlantılarını sağlar.  
   
  [COM Birlikte Çalışma](../../visual-basic/programming-guide/com-interop/index.md)  
- Explains the interoperability issues associated with creating and using component object model (COM) objects with Visual Basic.  
+ Visual Basic ile bileşen nesne modeli (COM) nesneleri oluşturma ve kullanma ile ilişkili birlikte çalışabilirlik sorunlarını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Visual Basic Dili Başvurusu](../../visual-basic/language-reference/index.md)  
- Provides reference information about various aspects of Visual Basic programming.  
+ Visual Basic programlamanın çeşitli yönleri hakkında başvuru bilgileri sağlar.  
   
- [Visual Basic Command-Line Compiler](../../visual-basic/reference/command-line-compiler/index.md)  
- Offers information on using the Visual Basic command-line compiler, the compiler options, and the Keyword Upgrade tool.
+ [Visual Basic komut satırı derleyicisi](../../visual-basic/reference/command-line-compiler/index.md)  
+ Visual Basic komut satırı derleyicisini, derleyici seçeneklerini ve anahtar sözcük yükseltme aracını kullanma hakkında bilgi sağlar.

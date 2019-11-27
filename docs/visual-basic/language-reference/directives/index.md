@@ -15,19 +15,19 @@ ms.locfileid: "74343800"
 ---
 # <a name="directives-visual-basic"></a>Yönergeler (Visual Basic)
 
-The topics in this section document the Visual Basic source code compiler directives.  
+Bu bölümdeki konular Visual Basic kaynak kodu derleyici yönergelerini belgeleyin.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
- [#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md) -- Define a compiler constant  
+ [#Const Yönergesi](../../../visual-basic/language-reference/directives/const-directive.md) --derleyici sabiti tanımlama  
   
- [#ExternalSource Directive](../../../visual-basic/language-reference/directives/externalsource-directive.md) -- Indicate a mapping between source lines and text external to the source  
+ [#ExternalSource yönergesi](../../../visual-basic/language-reference/directives/externalsource-directive.md) --kaynak satırları ile kaynağın harici metni arasında bir eşleme belirtin  
   
- [#If...Then...#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md) -- Compile selected blocks of code  
+ [#If... Sonra... #Else yönergeleri](../../../visual-basic/language-reference/directives/if-then-else-directives.md) --seçili kod bloklarını derle  
   
- [#Region Directive](../../../visual-basic/language-reference/directives/region-directive.md) -- Collapse and hide sections of code in the Visual Studio editor  
+ [#Region yönergesi](../../../visual-basic/language-reference/directives/region-directive.md) --Visual Studio düzenleyicisinde kodun bölümlerini daraltma ve gizleme  
   
- **#Disable, #Enable** -- Disable and enable specific warnings for regions of code.  
+ **#Disable, #Enable** --kod bölgeleri için belirli uyarıları devre dışı bırakın ve etkinleştirin.  
   
 ```vb  
 #Disable Warning BC42356 ' suppress warning about no awaits in this method  
@@ -37,7 +37,7 @@ The topics in this section document the Visual Basic source code compiler direct
 #Enable Warning BC42356  
 ```  
   
- You can disable and enable a comma-separated list of warning codes too.  
+ Virgülle ayrılmış bir uyarı kodları listesini devre dışı bırakabilir ve etkinleştirebilirsiniz.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 

@@ -9,19 +9,19 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74338808"
 ---
-# <a name="introduction-to-pure-functional-transformations-visual-basic"></a>Introduction to Pure Functional Transformations (Visual Basic)
-This section introduces functional transformations, including the underlying concepts and supporting language constructs. It contrasts the object-oriented and functional transformation approaches to programming, including advice on how to transition to the latter. Although functional transformations can be used in many programming scenarios, XML transformation is used here as a concrete example.  
+# <a name="introduction-to-pure-functional-transformations-visual-basic"></a>Saf Işlevsel dönüşümlere giriş (Visual Basic)
+Bu bölümde, temel kavramlar ve destekleyici dil yapıları dahil işlevsel dönüşümler tanıtılmaktadır. İkinci öğesine geçiş hakkında öneri de dahil olmak üzere, programlama için nesne yönelimli ve işlevsel dönüştürme yaklaşımlarını karşıttır. İşlev dönüştürmeleri birçok programlama senaryosunda kullanılabilse de, XML dönüşümü burada somut bir örnek olarak kullanılır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[Concepts and Terminology (Functional Transformation) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)|Introduces the concepts and terminology of pure functional transformations.|  
-|[Functional Programming vs. Imperative Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)|Compares and contrasts functional programming to more traditional imperative (procedural) programming.|  
-|[Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)|Introduces pure functions, and shows examples of and pure and impure functions.|  
-|[Applicability of Functional Transformation (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|Describes typical scenarios for functional transformations.|  
-|[Functional Transformation of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|Describes functional transformations in the context of transforming XML trees.|  
+|[Kavramlar ve terminoloji (Işlevsel dönüşüm) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)|Saf işlevsel dönüştürmelerin kavramlarını ve terminolojisini tanıtır.|  
+|[Fonksiyonel programlama ile kesinlik temelli programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)|Fonksiyonel programlamayı daha geleneksel kesinlik (yordamsal) programlamaya göre karşılaştırır ve karşıtın.|  
+|[Saf IŞLEVLERE yeniden düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)|Saf işlevleri tanıtır ve saf ve Impure işlevlerinin örneklerini gösterir.|  
+|[Işlevsel dönüşümün uygulanabilirliği (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|İşlevsel dönüşümler için tipik senaryoları açıklar.|  
+|[XML işlevsel dönüştürmesi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|XML ağaçlarını dönüştürme bağlamındaki işlevsel dönüştürmeleri açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+- [XML 'nin saf Işlevsel dönüştürmeleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

@@ -23,22 +23,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351493"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
-Specifies that a property or procedure is not implemented in this class and must be overridden in a derived class before it can be used.  
+Bir özellik veya yordamın bu sınıfta uygulanmadığını ve kullanılmadan önce türetilmiş bir sınıfta geçersiz kılınmasının gerektiğini belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- You can use `MustOverride` only in a property or procedure declaration statement. The property or procedure that specifies `MustOverride` must be a member of a class, and the class must be marked [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).  
+ Yalnızca bir özellik veya yordam bildirimi ifadesinde `MustOverride` kullanabilirsiniz. `MustOverride` belirten özellik veya yordam, bir sınıfın üyesi olmalıdır ve sınıfı [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)olarak işaretlenmiş olmalıdır.  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Incomplete Declaration.** When you specify `MustOverride`, you do not supply any additional lines of code for the property or procedure, not even the `End Function`, `End Property`, or `End Sub` statement.  
+- **Tamamlanmamış bildirim.** `MustOverride`belirttiğinizde, özellik veya yordam için `End Function`, `End Property`veya `End Sub` deyimde değil, ek kod satırı sağlayamazsınız.  
   
-- **Combined Modifiers.** You cannot specify `MustOverride` together with `NotOverridable`, `Overridable`, or `Shared` in the same declaration.  
+- **Birleşik değiştiriciler.** Aynı bildirimde `NotOverridable`, `Overridable`veya `Shared` birlikte `MustOverride` belirtemezsiniz.  
   
-- **Shadowing and Overriding.** Both shadowing and overriding redefine an inherited element, but there are significant differences between the two approaches. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+- **Gölgeleme ve geçersiz kılma.** Hem gölgeleme hem de geçersiz kılma devralınan bir öğeyi yeniden tanımlayın, ancak iki yaklaşım arasında önemli farklılıklar vardır. Daha fazla bilgi için [Visual Basic 'Da gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)bölümüne bakın.  
   
-- **Alternate Terms.** An element that cannot be used except in an override is sometimes called a *pure virtual* element.  
+- **Alternatif terimler.** Bir geçersiz kılma haricinde kullanılamayan bir öğe bazen *saf sanal* öğe olarak adlandırılır.  
   
- The `MustOverride` modifier can be used in these contexts:  
+ `MustOverride` değiştiricisi şu bağlamlarda kullanılabilir:  
   
  [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
   
@@ -53,4 +53,4 @@ Specifies that a property or procedure is not implemented in this class and must
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

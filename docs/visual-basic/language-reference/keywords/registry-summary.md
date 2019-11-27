@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351679"
 ---
 # <a name="registry-summary-visual-basic"></a>Kayıt Defteri Özeti (Visual Basic)
-Visual Studio language keywords and run-time library members are organized by purpose and use.  
+Visual Studio dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaca ve kullanıma göre düzenlenir.  
   
- Using the `My` feature provides you with greater productivity and performance in registry operations than these elements. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
+ `My` özelliğinin kullanılması, bu öğelerden farklı kayıt defteri işlemlerinde daha fazla üretkenlik ve performans sağlar. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   
-|**Action**|**Language element**|  
+|**Ön**|**Language öğesi**|  
 |----------------|--------------------------|  
-|Delete program settings.|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
-|Read program settings.|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
-|Save program settings.|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
+|Program ayarlarını silin.|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
+|Program ayarlarını okuyun.|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
+|Program ayarlarını kaydet.|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

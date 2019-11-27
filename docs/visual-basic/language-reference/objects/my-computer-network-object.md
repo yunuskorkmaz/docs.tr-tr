@@ -12,19 +12,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332286"
 ---
 # <a name="mycomputernetwork-object"></a>My.Computer.Network Nesnesi
-Provides a property, event, and methods for interacting with the network to which the computer is connected.  
+Bilgisayarın bağlı olduğu ağla etkileşimde bulunmak için bir özellik, olay ve yöntemler sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- For information about the methods and properties of the `My.Computer.Network` object, see <xref:Microsoft.VisualBasic.Devices.Network>.  
+ `My.Computer.Network` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.Devices.Network>.  
   
- For more information, see [Performing Network Operations](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).  
+ Daha fazla bilgi için bkz. [ağ Işlemleri gerçekleştirme](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices?displayProperty=nameWithType>  
+ **Ad alanı:** <xref:Microsoft.VisualBasic.Devices?displayProperty=nameWithType>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Network>  
+ **Sınıf:** <xref:Microsoft.VisualBasic.Devices.Network>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

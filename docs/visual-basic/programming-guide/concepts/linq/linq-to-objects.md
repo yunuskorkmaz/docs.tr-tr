@@ -10,37 +10,37 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354312"
 ---
 # <a name="linq-to-objects-visual-basic"></a>LINQ to Objects (Visual Basic)
-The term "LINQ to Objects" refers to the use of LINQ queries with any <xref:System.Collections.IEnumerable> or <xref:System.Collections.Generic.IEnumerable%601> collection directly, without the use of an intermediate LINQ provider or API such as [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) or [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md). You can use LINQ to query any enumerable collections such as <xref:System.Collections.Generic.List%601>, <xref:System.Array>, or <xref:System.Collections.Generic.Dictionary%602>. The collection may be user-defined or may be returned by a .NET Framework API.  
+"LINQ to Objects" terimi, bir ara LINQ sağlayıcısının veya [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) veya [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)gibi API kullanılmadan doğrudan herhangi bir <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601> koleksiyonuyla LINQ sorgularının kullanımını ifade eder. <xref:System.Collections.Generic.List%601>, <xref:System.Array>veya <xref:System.Collections.Generic.Dictionary%602>gibi herhangi bir sıralanabilir koleksiyonu sorgulamak için LINQ 'i kullanabilirsiniz. Koleksiyon Kullanıcı tanımlı olabilir veya bir .NET Framework API 'SI tarafından döndürülen olabilir.  
   
- In a basic sense, LINQ to Objects represents a new approach to collections. In the old way, you had to write complex `For Each` loops that specified how to retrieve data from a collection. In the LINQ approach, you write declarative code that describes what you want to retrieve.  
+ Temel anlamda, LINQ to Objects koleksiyonlara yönelik yeni bir yaklaşımı temsil eder. Eski şekilde, bir koleksiyondan verilerin nasıl alınacağını belirtilen karmaşık `For Each` döngüleri yazmanız gerekiyordu. LINQ yaklaşımında, almak istediklerinizi açıklayan bildirim kodu yazarsınız.  
   
- In addition, LINQ queries offer three main advantages over traditional `For Each` loops:  
+ Ayrıca, LINQ sorguları geleneksel `For Each` döngülerine göre üç temel avantaj sunar:  
   
-1. They are more concise and readable, especially when filtering multiple conditions.  
+1. Özellikle birden fazla koşula filtre uygulanırken bunlar daha kısa ve okunabilir.  
   
-2. They provide powerful filtering, ordering, and grouping capabilities with a minimum of application code.  
+2. En az uygulama kodu ile güçlü filtreleme, sıralama ve gruplama özellikleri sağlar.  
   
-3. They can be ported to other data sources with little or no modification.  
+3. Bunlar, çok az değişiklik yapmadan diğer veri kaynaklarına da eklenebilir.  
   
- In general, the more complex the operation you want to perform on the data, the more benefit you will realize by using LINQ instead of traditional iteration techniques.  
+ Genel olarak, veriler üzerinde gerçekleştirmek istediğiniz işlem daha karmaşıktır, geleneksel yineleme teknikleri yerine LINQ kullanarak bunu daha fazla avantaj elde edersiniz.  
   
- The purpose of this section is to demonstrate the LINQ approach with some select examples. It is not intended to be exhaustive.  
+ Bu bölümün amacı, bazı Select örnekleri ile LINQ yaklaşımını göstermektir. Bu, kapsamlı olmak üzere tasarlanmamıştır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- Explains how LINQ can be used to query and transform strings and collections of strings. Also includes links to topics that demonstrate these principles.  
+ [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ LINQ 'in dizeleri ve dize koleksiyonlarını sorgulamak ve dönüştürmek için nasıl kullanılabileceğini açıklar. Ayrıca, bu ilkeleri gösteren konuların bağlantılarını içerir.  
   
- [LINQ and Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-reflection.md)  
- Links to a sample that demonstrates how LINQ uses reflection.  
+ [LINQ ve yansıma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-reflection.md)  
+ LINQ 'in yansıma kullanımını gösteren bir örneğe bağlantılar.  
   
- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
- Explains how LINQ can be used to interact with file systems. Also includes links to topics that demonstrate these concepts.  
+ [LINQ ve dosya dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
+ LINQ 'in dosya sistemleriyle etkileşime geçmek için nasıl kullanılabileceğini açıklar. Ayrıca, bu kavramları gösteren konuların bağlantılarını içerir.  
   
- [How to: Query an ArrayList with LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
- Demonstrates how to query an ArrayList in C#.  
+ [Nasıl yapılır: LINQ ile ArrayList 'i sorgulama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
+ İçinde C#ArrayList 'in nasıl sorgulanacağını gösterir.  
   
- [How to: Add Custom Methods for LINQ Queries (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
- Explains how to extend the set of methods that you can use for LINQ queries by adding extension methods to the <xref:System.Collections.Generic.IEnumerable%601> interface.  
+ [Nasıl yapılır: LINQ sorguları için özel yöntemler ekleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
+ <xref:System.Collections.Generic.IEnumerable%601> arabirimine uzantı yöntemleri ekleyerek, LINQ sorguları için kullanabileceğiniz yöntemlerin kümesinin nasıl genişletileceğini açıklar.  
   
- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- Provides links to topics that explain LINQ and provide examples of code that perform queries.
+ [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ LINQ ' i açıklayan ve sorguları gerçekleştiren koda örnek sağlayan konulara bağlantılar sağlar.

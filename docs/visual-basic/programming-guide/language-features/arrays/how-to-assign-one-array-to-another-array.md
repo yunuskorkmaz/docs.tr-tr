@@ -15,13 +15,13 @@ ms.locfileid: "74351884"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Nasıl yapılır: Bir Diziyi Başka Diziye Atama (Visual Basic)
 
-Because arrays are objects, you can use them in assignment statements like other object types. An array variable holds a pointer to the data constituting the array elements and the rank and length information, and an assignment copies only this pointer.
+Diziler nesneler olduğundan, bunları diğer nesne türleri gibi atama deyimleriyle kullanabilirsiniz. Dizi değişkeni, dizi öğeleri ve derecelendirme ve uzunluk bilgilerini constituting veri için bir işaretçi tutar ve bir atama yalnızca bu işaretçiyi kopyalar.
 
-### <a name="to-assign-one-array-to-another-array"></a>To assign one array to another array
+### <a name="to-assign-one-array-to-another-array"></a>Bir diziyi başka bir diziye atamak için
 
-1. Ensure that the two arrays have the same rank (number of dimensions) and compatible element data types.
+1. İki dizinin aynı dereceye (boyut sayısına) ve uyumlu öğe veri türlerine sahip olduğundan emin olun.
 
-2. Use a standard assignment statement to assign the source array to the destination array. Do not follow either array name with parentheses.
+2. Kaynak diziyi hedef diziye atamak için standart atama ekstresi kullanın. Parantez ile dizi adını takip etmez.
 
     ```vb
     Dim formArray() As System.Windows.Forms.Form
@@ -29,19 +29,19 @@ Because arrays are objects, you can use them in assignment statements like other
     controlArray = formArray
     ```
 
-When you assign one array to another, the following rules apply:
+Bir diziyi diğerine atadığınızda, aşağıdaki kurallar geçerlidir:
 
-- **Equal Ranks.** The rank (number of dimensions) of the destination array must be the same as that of the source array.
+- **Eşit dereceleri.** Hedef dizinin derecesi (boyut sayısı), kaynak dizinin ile aynı olmalıdır.
 
-  Provided the ranks of the two arrays are equal, the dimensions do not need to be equal. The number of elements in a given dimension can change during assignment.
+  İki dizinin dereceleri eşitse, boyutların eşit olması gerekmez. Belirli boyuttaki öğelerin sayısı atama sırasında değişebilir.
 
-- **Element Types.** Either both arrays must have *reference type* elements or both arrays must have *value type* elements. For more information, see [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
+- **Öğe türleri.** Her iki dizide de *başvuru türü* öğeler olmalıdır ya da her iki dizi de *değer türü* öğelerine sahip olmalıdır. Daha fazla bilgi için bkz. [değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
 
-  - If both arrays have value type elements, the element data types must be exactly the same. The only exception to this is that you can assign an array of `Enum` elements to an array of the base type of that `Enum`.
+  - Her iki dizide de değer türü öğeler varsa, öğe veri türleri tam olarak aynı olmalıdır. Bunun tek istisnası, bir dizi `Enum` öğeyi bu `Enum`temel türünün dizisine atayabilmenizi sağlar.
 
-  - If both arrays have reference type elements, the source element type must derive from the destination element type. When this is the case, the two arrays have the same inheritance relationship as their elements. This is called *array covariance*.
+  - Her iki dizide de başvuru türü öğeleri varsa, kaynak öğe türünün hedef öğe türünden türetilmesi gerekir. Bu durumda, iki dizi öğeleriyle aynı devralma ilişkisine sahiptir. Buna *dizi Kovaryans*adı verilir.
 
-The compiler reports an error if the above rules are violated, for example if the data types are not compatible or the ranks are unequal. You can add error handling to your code to make sure that the arrays are compatible before attempting an assignment. You can also use the [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) keyword if you want to avoid throwing an exception.
+Yukarıdaki kurallar ihlal edildiğinde derleyici bir hata bildirir, örneğin, veri türleri uyumlu değilse veya derecelendirmelerinin eşit olduğu durumlarda. Bir atamayı denemeden önce dizilerin uyumlu olduğundan emin olmak için kodunuza hata işleme ekleyebilirsiniz. Özel durum oluşturmamak istiyorsanız [TryCast İşleci](../../../../visual-basic/language-reference/operators/trycast-operator.md) anahtar sözcüğünü de kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

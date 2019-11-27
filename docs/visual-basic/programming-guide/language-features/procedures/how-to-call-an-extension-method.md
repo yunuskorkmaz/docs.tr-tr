@@ -14,9 +14,9 @@ ms.locfileid: "74340402"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Nasıl yapılır: Uzantı Metodu Çağırma (Visual Basic)
 
-Extension methods enable you to add methods to an existing class. After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends. For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).
+Uzantı yöntemleri varolan bir sınıfa Yöntemler eklemenizi sağlar. Bir uzantı yöntemi bildirilip, kapsama getirildikten sonra, onu genişlettiği türün örnek yöntemi gibi çağırabilirsiniz. Uzantı yöntemi yazma hakkında daha fazla bilgi için bkz. [nasıl yapılır: uzantı yöntemi yazma](./how-to-write-an-extension-method.md).
 
- The following instructions refer to extension method `PrintAndPunctuate`, which will display the string instance that invokes it, followed by whatever value is sent in for the second parameter, `punc`.
+ Aşağıdaki yönergeler `PrintAndPunctuate`uzantı yöntemine başvurur. Bu, onu çağıran dize örneğini ve ardından ikinci parametre için ' de gönderilen değeri gösterir `punc`.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -31,40 +31,40 @@ Module StringExtensions
 End Module
 ```
 
-The method must be in scope when it is called.
+Yöntem çağrıldığında kapsam içinde olmalıdır.
 
-### <a name="to-call-an-extension-method"></a>To call an extension method
+### <a name="to-call-an-extension-method"></a>Bir genişletme yöntemini çağırmak için
 
-1. Declare a variable that has the data type of the first parameter of the extension method. For `PrintAndPunctuate`, you need a <xref:System.String> variable:
+1. Uzantı yönteminin ilk parametresinin veri türüne sahip bir değişken bildirin. `PrintAndPunctuate`için bir <xref:System.String> değişkenine ihtiyacınız vardır:
 
     ```vb
     Dim example = "Ready"
     ```
 
-2. That variable will invoke the extension method, and its value is bound to the first parameter, `aString`. The following calling statement will display `Ready?`.
+2. Bu değişken, genişletme yöntemini çağırır ve değeri ilk parametreye bağlanır `aString`. Aşağıdaki çağırma ifadesinde `Ready?`görüntülenir.
 
     ```vb
     example.PrintAndPunctuate("?")
     ```
 
-     Notice that the call to this extension method looks just like a call to any one of the <xref:System.String> instance methods that require one parameter:
+     Bu genişletme yöntemine yapılan çağrının, tek bir parametre gerektiren <xref:System.String> örnek metotlarından birine yapılan bir çağrı gibi göründüğünü unutmayın:
 
     ```vb
     example.EndsWith("dy")
     example.IndexOf("R")
     ```
 
-3. Declare another string variable and call the method again to see that it works with any string.
+3. Başka bir dize değişkeni bildirin ve herhangi bir dizeyle çalıştığını görmek için yöntemi yeniden çağırın.
 
     ```vb
     Dim example2 = " or not"
     example2.PrintAndPunctuate("!!!")
     ```
 
-     The result this time is: `or not!!!`.
+     Sonuç şu anda: `or not!!!`.
 
 ## <a name="example"></a>Örnek
- The following code is a complete example of the creation and use of a simple extension method.
+ Aşağıdaki kod, basit bir genişletme yönteminin oluşturulması ve kullanılması için bir örnektir.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -99,4 +99,4 @@ End Module
 
 - [Nasıl yapılır: Genişletme Yöntemi Yazma](./how-to-write-an-extension-method.md)
 - [Genişletme Yöntemleri](./extension-methods.md)
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

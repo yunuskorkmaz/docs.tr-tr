@@ -13,17 +13,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349805"
 ---
 # <a name="financial-summary-visual-basic"></a>Mali Özet (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaca ve kullanıma göre düzenlenir.  
   
 |Eylem|Dil öğesi|  
 |------------|----------------------|  
-|Calculate depreciation.|<xref:Microsoft.VisualBasic.Financial.DDB%2A>, <xref:Microsoft.VisualBasic.Financial.SLN%2A>, <xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
-|Calculate future value.|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
-|Calculate interest rate.|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|  
-|Calculate internal rate of return.|<xref:Microsoft.VisualBasic.Financial.IRR%2A>, <xref:Microsoft.VisualBasic.Financial.MIRR%2A>|  
-|Calculate number of periods.|<xref:Microsoft.VisualBasic.Financial.NPer%2A>|  
-|Calculate payments.|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>, <xref:Microsoft.VisualBasic.Financial.Pmt%2A>, <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
-|Calculate present value.|<xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
+|Amortismanı hesaplayın.|<xref:Microsoft.VisualBasic.Financial.DDB%2A>, <xref:Microsoft.VisualBasic.Financial.SLN%2A>, <xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
+|Gelecekteki değeri hesaplayın.|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
+|Faiz oranını hesaplayın.|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|  
+|İç dönüş oranını hesaplayın.|<xref:Microsoft.VisualBasic.Financial.IRR%2A>, <xref:Microsoft.VisualBasic.Financial.MIRR%2A>|  
+|Dönemlerin sayısını hesaplayın.|<xref:Microsoft.VisualBasic.Financial.NPer%2A>|  
+|Ödemeleri hesaplayın.|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>, <xref:Microsoft.VisualBasic.Financial.Pmt%2A>, <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
+|Mevcut değeri hesaplayın.|<xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

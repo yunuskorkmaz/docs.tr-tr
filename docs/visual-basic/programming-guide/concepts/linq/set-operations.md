@@ -9,57 +9,57 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350613"
 ---
-# <a name="set-operations-visual-basic"></a>Set Operations (Visual Basic)
+# <a name="set-operations-visual-basic"></a>Işlemleri ayarlama (Visual Basic)
 
-Set operations in LINQ refer to query operations that produce a result set that is based on the presence or absence of equivalent elements within the same or separate collections (or sets).
+LINQ 'teki işlemleri, aynı veya ayrı Koleksiyonlar (veya kümeler) içindeki eşdeğer öğelerin varlığına veya yokluğuna dayalı bir sonuç kümesi üreten sorgu işlemlerine yönelik olarak ayarlayın.
 
-The standard query operator methods that perform set operations are listed in the following section.
+Ayarlanan işlemleri gerçekleştiren standart sorgu işleci yöntemleri aşağıdaki bölümde listelenmiştir.
 
 ## <a name="methods"></a>Yöntemler
 
-|Method Name|Açıklama|Visual Basic Query Expression Syntax|Daha fazla bilgi|
+|Yöntem adı|Açıklama|Sorgu Ifadesi söz dizimini Visual Basic|Daha Fazla Bilgi|
 |-----------------|-----------------|------------------------------------------|----------------------|
-|Distinct|Removes duplicate values from a collection.|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|
-|Dışlama|Returns the set difference, which means the elements of one collection that do not appear in a second collection.|Yok.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|
-|Kesiştir|Returns the set intersection, which means elements that appear in each of two collections.|Yok.|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=nameWithType>|
-|UNION|Returns the set union, which means unique elements that appear in either of two collections.|Yok.|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|
+|Distinct|Yinelenen değerleri bir koleksiyondan kaldırır.|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|
+|Dışlama|İkinci bir koleksiyonda görünmeyen bir koleksiyonun öğelerinin anlamı olan küme farkını döndürür.|Geçerli değildir.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|
+|Kesiştir|Küme kesişimini döndürür, bu iki koleksiyonun her birinde görüntülenen öğeleri gösterir.|Geçerli değildir.|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=nameWithType>|
+|UNION|İki koleksiyonda de görünen benzersiz öğeler anlamına gelen set birleşimini döndürür.|Geçerli değildir.|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|
 
-## <a name="comparison-of-set-operations"></a>Comparison of Set Operations
+## <a name="comparison-of-set-operations"></a>Ayarlama Işlemlerinin karşılaştırması
 
 ### <a name="distinct"></a>Distinct
 
-The following illustration depicts the behavior of the <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> method on a sequence of characters. The returned sequence contains the unique elements from the input sequence.
+Aşağıdaki çizimde, <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> yönteminin bir karakter dizisinde davranışı gösterilmektedir. Döndürülen dizi, Giriş dizisinden benzersiz öğeleri içerir.
 
-![Graphic showing the behavior of Distinct&#40;&#41;.](./media/set-operations/distinct-method-behavior.png)
+![DISTINCT&#40;&#41;davranışını gösteren grafik.](./media/set-operations/distinct-method-behavior.png)
 
 ### <a name="except"></a>Dışlama
 
-The following illustration depicts the behavior of <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. The returned sequence contains only the elements from the first input sequence that are not in the second input sequence.
+Aşağıdaki çizimde <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>davranışı gösterilmektedir. Döndürülen dizi yalnızca ilk giriş dizisinin ikinci giriş dizisinde olmayan öğelerini içerir.
 
-![Graphic showing the action of Except&#40;&#41;.](./media/set-operations/except-behavior-graphic.png "Shows the behavior of Except.")
+![Haricinde&#40;&#41;eylemini gösteren grafik.](./media/set-operations/except-behavior-graphic.png "Haricinde davranışını gösterir.")
 
 ### <a name="intersect"></a>Kesiştir
 
-The following illustration depicts the behavior of <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. The returned sequence contains the elements that are common to both of the input sequences.
+Aşağıdaki çizimde <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>davranışı gösterilmektedir. Döndürülen dizi, her iki giriş dizisinde da ortak olan öğeleri içerir.
 
-![Graphic showing the intersection of two sequences.](./media/set-operations/intersection-two-sequences.png)
+![İki sıranın kesişimini gösteren grafik.](./media/set-operations/intersection-two-sequences.png)
 
 ### <a name="union"></a>UNION
 
-The following illustration depicts a union operation on two sequences of characters. The returned sequence contains the unique elements from both input sequences.
+Aşağıdaki çizimde iki karakter dizisi üzerinde bir bileşim işlemi gösterilmektedir. Döndürülen dizi, her iki giriş dizisinden benzersiz öğeleri içerir.
 
-![Graphic showing the union of two sequences.](./media/set-operations/union-operation-two-sequences.png)
+![İki sıranın birleşimini gösteren grafik.](./media/set-operations/union-operation-two-sequences.png)
 
-## <a name="query-expression-syntax-example"></a>Query Expression Syntax Example
+## <a name="query-expression-syntax-example"></a>Sorgu Ifadesi söz dizimi örneği
 
-The following example uses the `Distinct` clause in a LINQ query to return the unique numbers from a list of integers.
+Aşağıdaki örnek, bir LINQ sorgusunda `Distinct` yan tümcesini kullanarak tamsayı listesinden benzersiz sayılar döndürür.
 
 [!code-vb[CsLINQSetOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQSetOps/VB/setops.vb#1)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Distinct Yan Tümcesi](../../../../visual-basic/language-reference/queries/distinct-clause.md)
-- [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
-- [How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+- [Nasıl yapılır: dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [Nasıl yapılır: Iki liste arasındaki küme farkını bulma (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

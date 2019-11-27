@@ -22,25 +22,25 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426143"
 ---
 # <a name="ihostfilter-interface"></a>IHostFilter Arabirimi
-Provides a method to indicate that a specified token will be processed.  
+Belirtilen belirtecin işleneceğini göstermek için bir yöntem sağlar.  
   
 > [!NOTE]
-> The `IHostFilter` interface must be implemented by the client.  
+> `IHostFilter` arabiriminin istemci tarafından uygulanması gerekir.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[MarkToken Yöntemi](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Indicates that the specified metadata token will be processed.|  
+|[MarkToken Yöntemi](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Belirtilen meta veri belirtecinin işleneceğini belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

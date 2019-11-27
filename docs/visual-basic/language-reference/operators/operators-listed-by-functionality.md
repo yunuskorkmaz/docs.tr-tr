@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348263"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>İşlevselliğe Göre Listelenmiş İşleçler (Visual Basic)
-See one of the categories listed below, or open this portion of the Help table of contents to see an alphabetical list of Visual Basic operators.  
+Aşağıda listelenen kategorilerden birine bakın veya Visual Basic işleçlerinin alfabetik bir listesini görmek için yardım içindekiler tablosunun bu bölümünü açın.  
   
-## <a name="categories-of-operators"></a>Categories of Operators  
+## <a name="categories-of-operators"></a>Işleç kategorileri  
   
 |İşleçler|Açıklama|  
 |---------------|-----------------|  
-|[Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)|These operators perform mathematical calculations.|  
-|[Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)|These operators perform assignment operations.|  
-|[Karşılaştırma İşleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)|These operators perform comparisons.|  
-|[Birleştirme İşleçleri](../../../visual-basic/language-reference/operators/concatenation-operators.md)|These operators combine strings.|  
-|[Logical/Bitwise Operators](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)|These operators perform logical operations.|  
-|[Bit Kaydırma İşleçleri](../../../visual-basic/language-reference/operators/bit-shift-operators.md)|These operators perform arithmetic shifts on bit patterns.|  
-|[Çeşitli İşleçler](../../../visual-basic/language-reference/operators/miscellaneous-operators.md)|These operators perform miscellaneous operations.|  
+|[Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)|Bu işleçler matematiksel hesaplamalar yapar.|  
+|[Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)|Bu işleçler atama işlemleri gerçekleştirir.|  
+|[Karşılaştırma İşleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)|Bu işleçler karşılaştırmaları gerçekleştirir.|  
+|[Birleştirme İşleçleri](../../../visual-basic/language-reference/operators/concatenation-operators.md)|Bu işleçler dizeleri birleştirir.|  
+|[Mantıksal/bit düzeyinde Işleçler](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)|Bu işleçler mantıksal işlemler gerçekleştirir.|  
+|[Bit Kaydırma İşleçleri](../../../visual-basic/language-reference/operators/bit-shift-operators.md)|Bu işleçler bit desenlerinde aritmetik vardiyalar gerçekleştirir.|  
+|[Çeşitli İşleçler](../../../visual-basic/language-reference/operators/miscellaneous-operators.md)|Bu işleçler çeşitli işlemleri gerçekleştirir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)

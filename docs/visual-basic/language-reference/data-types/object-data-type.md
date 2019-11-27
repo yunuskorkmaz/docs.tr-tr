@@ -19,17 +19,17 @@ ms.locfileid: "74343961"
 ---
 # <a name="object-data-type"></a>Nesne Veri Türü
 
-Holds addresses that refer to objects. You can assign any reference type (string, array, class, or interface) to an `Object` variable. An `Object` variable can also refer to data of any value type (numeric, `Boolean`, `Char`, `Date`, structure, or enumeration).
+Nesnelere başvuran adresleri tutar. Bir `Object` değişkenine herhangi bir başvuru türü (dize, dizi, sınıf veya arabirim) atayabilirsiniz. `Object` değişken, herhangi bir değer türü (sayısal, `Boolean`, `Char`, `Date`, yapı veya numaralandırma) verilerine de başvurabilir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-The `Object` data type can point to data of any data type, including any object instance your application recognizes. Use `Object` when you do not know at compile time what data type the variable might point to.
+`Object` veri türü, uygulamanızın tanıdığı herhangi bir nesne örneği de dahil olmak üzere herhangi bir veri türünün verilerini işaret edebilir. Değişkenin işaret edebilecekleri veri türünü derleme sırasında bilmediğinizde `Object` kullanın.
 
-The default value of `Object` is `Nothing` (a null reference).
+`Object` varsayılan değeri `Nothing` (null başvuru).
 
 ## <a name="data-types"></a>Veri Türleri
 
-You can assign a variable, constant, or expression of any data type to an `Object` variable. To determine the data type an `Object` variable currently refers to, you can use the <xref:System.Type.GetTypeCode%2A> method of the <xref:System.Type?displayProperty=nameWithType> class. Aşağıdaki örnek bunu göstermektedir.
+Bir `Object` değişkenine herhangi bir veri türü için değişken, sabit veya ifade atayabilirsiniz. Şu anda başvurduğu bir `Object` değişkeni veri türünü öğrenmek için <xref:System.Type?displayProperty=nameWithType> sınıfının <xref:System.Type.GetTypeCode%2A> yöntemini kullanabilirsiniz. Aşağıdaki örnek bunu göstermektedir.
 
 ```vb
 Dim myObject As Object
@@ -38,31 +38,31 @@ Dim datTyp As Integer
 datTyp = Type.GetTypeCode(myObject.GetType())
 ```
 
-The `Object` data type is a reference type. However, Visual Basic treats an `Object` variable as a value type when it refers to data of a value type.
+`Object` veri türü bir başvuru türüdür. Ancak Visual Basic, bir değer türünün verilerine başvurduğu zaman bir `Object` değişkenini değer türü olarak değerlendirir.
 
 ## <a name="storage"></a>Depolama
 
-Whatever data type it refers to, an `Object` variable does not contain the data value itself, but rather a pointer to the value. It always uses four bytes in computer memory, but this does not include the storage for the data representing the value of the variable. Because of the code that uses the pointer to locate the data, `Object` variables holding value types are slightly slower to access than explicitly typed variables.
+Başvurduğu veri türü ne olursa olsun, bir `Object` değişkeni veri değerinin kendisini içermez, ancak bu değer için bir işaretçi yerine. Bilgisayar belleğinde her zaman dört bayt kullanır, ancak bu, değişkenin değerini temsil eden veriler için depolama alanı içermez. Verileri bulmak için işaretçiyi kullanan kod nedeniyle, değer türlerini tutan `Object` değişkenleri açıkça yazılmış değişkenlerle daha yavaş erişime biraz daha yavaştır.
 
 ## <a name="programming-tips"></a>Programlama İpuçları
 
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that pointer types in other environments are not compatible with the Visual Basic `Object` type.
+- **Birlikte çalışma konuları.** Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle ilgili bir arabiriminiz varsa, diğer ortamlardaki işaretçi türlerinin Visual Basic `Object` türüyle uyumlu olmadığını aklınızda bulundurun.
 
-- **Performance.** A variable you declare with the `Object` type is flexible enough to contain a reference to any object. However, when you invoke a method or property on such a variable, you always incur *late binding* (at run time). To force *early binding* (at compile time) and better performance, declare the variable with a specific class name, or cast it to the specific data type.
+- **Mının.** `Object` türü ile bildirdiğiniz bir değişken, herhangi bir nesneye başvuru içermesi için yeterince esnektir. Ancak, bu tür bir değişkende bir yöntemi veya özelliği çağırdığınızda, her zaman *geç bağlamaya* (çalışma zamanında) tabi olursunuz. *Erken bağlamayı* zorlamak için (derleme zamanında) ve daha iyi performans, değişkeni belirli bir sınıf adıyla bildirin veya belirli bir veri türüne atayın.
 
-  When you declare an object variable, try to use a specific class type, for example <xref:System.OperatingSystem>, instead of the generalized `Object` type. You should also use the most specific class available, such as <xref:System.Windows.Forms.TextBox> instead of <xref:System.Windows.Forms.Control>, so that you can access its properties and methods. You can usually use the **Classes** list in the **Object Browser** to find available class names.
+  Bir nesne değişkeni bildirdiğinizde, genelleştirilmiş `Object` türü yerine belirli bir sınıf türü kullanmayı deneyin, örneğin <xref:System.OperatingSystem>. Özelliklerine ve yöntemlerine erişebilmek için, <xref:System.Windows.Forms.Control>yerine <xref:System.Windows.Forms.TextBox> gibi en özel sınıfı da kullanmanız gerekir. Kullanılabilir sınıf adlarını bulmak için genellikle **nesne tarayıcısı** **sınıfları** listesini kullanabilirsiniz.
 
-- **Widening.** All data types and all reference types widen to the `Object` data type. This means you can convert any type to `Object` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
+- **Kan.** Tüm veri türleri ve tüm başvuru türleri `Object` veri türüne göre genişledir. Bu, bir <xref:System.OverflowException?displayProperty=nameWithType> hatasıyla karşılaşmadan herhangi bir türü `Object` dönüştürebileceğiniz anlamına gelir.
 
-  However, if you convert between value types and `Object`, Visual Basic performs operations called *boxing* and *unboxing*, which make execution slower.
+  Ancak, değer türleri ve `Object`arasında dönüştürme yaparsanız, Visual Basic, yürütmeyi daha yavaş hale getiren *kutulama* ve *kutudan*çıkarma adlı işlemleri gerçekleştirir.
 
-- **Type Characters.** `Object` has no literal type character or identifier type character.
+- **Tür karakterleri.** `Object` değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok.
 
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Object?displayProperty=nameWithType> class.
+- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Object?displayProperty=nameWithType> sınıfıdır.
 
 ## <a name="example"></a>Örnek
 
-The following example illustrates an `Object` variable pointing to an object instance.
+Aşağıdaki örnekte, bir nesne örneğine işaret eden bir `Object` değişkeni gösterilmektedir.
 
 ```vb
 Dim objDb As Object

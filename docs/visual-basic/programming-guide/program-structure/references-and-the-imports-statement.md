@@ -17,41 +17,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347274"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>References ve Imports Deyimi (Visual Basic)
-You can make external objects available to your project by choosing the **Add Reference** command on the **Project** menu. References in Visual Basic can point to assemblies, which are like type libraries but contain more information.  
+**Proje** menüsünde **Başvuru Ekle** komutunu seçerek dış nesneleri projeniz için kullanılabilir hale getirebilirsiniz. Visual Basic başvurular tür kitaplıkları gibi olan ancak daha fazla bilgi içeren derlemelere işaret edebilir.  
   
-## <a name="the-imports-statement"></a>The Imports Statement  
- Assemblies include one or more namespaces. When you add a reference to an assembly, you can also add an `Imports` statement to a module that controls the visibility of that assembly's namespaces within the module. The `Imports` statement provides a scoping context that lets you use only the portion of the namespace necessary to supply a unique reference.  
+## <a name="the-imports-statement"></a>Imports ekstresi  
+ Derlemeler bir veya daha fazla ad alanı içerir. Bir derlemeye başvuru eklediğinizde, bu derlemenin modül içindeki ad alanlarının görünürlüğünü denetleyen bir modüle `Imports` deyiminizi de ekleyebilirsiniz. `Imports` ifade, benzersiz bir başvuru sağlamak için gereken ad alanının yalnızca bir kısmını kullanmanıza imkan tanıyan bir kapsam bağlamı sağlar.  
   
- The `Imports` statement has the following syntax:  
+ `Imports` deyimin sözdizimi aşağıdaki gibidir:  
   
  `Imports [Aliasname =] Namespace`  
   
- `Aliasname` refers to a short name you can use within code to refer to an imported namespace. `Namespace` is a namespace available through either a project reference, through a definition within the project, or through a previous `Imports` statement.  
+ `Aliasname`, içeri aktarılan bir ad alanına başvurmak için kod içinde kullanabileceğiniz kısa bir ad anlamına gelir. `Namespace`, proje başvurusu aracılığıyla veya proje içindeki bir tanım aracılığıyla ya da önceki bir `Imports` ifadesiyle kullanılabilir bir ad alanıdır.  
   
- A module may contain any number of `Imports` statements. They must appear after any `Option` statements, if present, but before any other code.  
+ Modül, herhangi bir sayıda `Imports` deyimi içerebilir. Varsa, varsa, herhangi bir `Option` deyimden sonra, diğer koddan önce gelmelidir.  
   
 > [!NOTE]
-> Do not confuse project references with the `Imports` statement or the `Declare` statement. Project references make external objects, such as objects in assemblies, available to Visual Basic projects. The `Imports` statement is used to simplify access to project references, but does not provide access to these objects. The `Declare` statement is used to declare a reference to an external procedure in a dynamic-link library (DLL).  
+> Proje başvurularını `Imports` ifadesiyle veya `Declare` ifadesiyle karıştırmayın. Proje başvuruları, derlemelerdeki nesneler gibi dış nesneleri Visual Basic projeleri için kullanılabilir hale getirir. `Imports` deyimleri proje başvurularına erişimi basitleştirmek için kullanılır, ancak bu nesnelere erişim sağlamaz. `Declare` deyimleri, bir dinamik bağlantı kitaplığı (DLL) içinde bir dış yordama başvuru bildirmek için kullanılır.  
   
-## <a name="using-aliases-with-the-imports-statement"></a>Using Aliases with the Imports Statement  
- The `Imports` statement makes it easier to access methods of classes by eliminating the need to explicitly type the fully qualified names of references. Aliases let you assign a friendlier name to just one part of a namespace. For example, the carriage return/line feed sequence that causes a single piece of text to be displayed on multiple lines is part of the <xref:Microsoft.VisualBasic.ControlChars> module in the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace. To use this constant in a program without an alias, you would need to type the following code:  
+## <a name="using-aliases-with-the-imports-statement"></a>Imports Ifadesiyle diğer adları kullanma  
+ `Imports` ifade, başvuruların tam adlarını açıkça yazma gereğini ortadan kaldırarak sınıfların yöntemlerine erişmeyi kolaylaştırır. Diğer adlar, bir ad alanının yalnızca bir kısmına kolay bir ad atamanızı sağlar. Örneğin, tek bir metin parçasının birden çok satırda görüntülenmesine neden olan satır başı/satır besleme sırası, <xref:Microsoft.VisualBasic?displayProperty=nameWithType> ad alanındaki <xref:Microsoft.VisualBasic.ControlChars> modülünün bir parçasıdır. Diğer adı olmayan bir programda bu sabiti kullanmak için aşağıdaki kodu yazmanız gerekir:  
   
  [!code-vb[VbVbalrApplication#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#3)]  
   
- `Imports` statements must always be the first lines immediately following any `Option` statements in a module. The following code fragment shows how to import and assign an alias to the <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> module:  
+ `Imports` deyimleri her zaman bir modüldeki tüm `Option` deyimlerinin hemen ardından ilk satır olmalıdır. Aşağıdaki kod parçası <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> modülüne nasıl bir diğer ad aktarılacağını ve atanacağını gösterir:  
   
  [!code-vb[VbVbalrApplication#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#4)]  
   
- Future references to this namespace can be considerably shorter:  
+ Bu ad alanına gelecekteki başvurular önemli ölçüde daha kısa olabilir:  
   
  [!code-vb[VbVbalrApplication#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#5)]  
   
- If an `Imports` statement does not include an alias name, elements defined within the imported namespace can be used in the module without qualification. If the alias name is specified, it must be used as a qualifier for names contained within that namespace.  
+ `Imports` bir ifade bir diğer ad içermiyorsa, içeri aktarılan ad alanı içinde tanımlanan öğeler, hiçbir nitelemeden modülde kullanılabilir. Diğer ad belirtilmişse, bu ad alanı içinde yer alan adlara yönelik bir niteleyici olarak kullanılması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.ControlChars>
 - <xref:Microsoft.VisualBasic>
-- [Namespaces in Visual Basic](namespaces.md)
+- [Visual Basic ad alanları](namespaces.md)
 - [.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)
 - [Imports Deyimi (.NET Ad Alanı ve Türü)](../../language-reference/statements/imports-statement-net-namespace-and-type.md)

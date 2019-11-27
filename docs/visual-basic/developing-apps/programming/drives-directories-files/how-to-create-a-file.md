@@ -14,45 +14,45 @@ ms.locfileid: "74348792"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosya Oluşturma
 
-This example creates an empty text file at the specified path using the <xref:System.IO.File.Create%2A> method in the <xref:System.IO.File> class.  
+Bu örnek, <xref:System.IO.File> sınıfındaki <xref:System.IO.File.Create%2A> yöntemi kullanılarak belirtilen yolda boş bir metin dosyası oluşturur.  
   
 ## <a name="example"></a>Örnek  
 
  [!code-vb[VbFileIOMisc#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/class2.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
 
- Use the `file` variable to write to the file.  
+ Dosyaya yazmak için `file` değişkenini kullanın.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- If the file already exists, it is replaced.  
+ Dosya zaten varsa, değiştirilmiştir.  
   
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- The path name is malformed. For example, it contains illegal characters or is only white space (<xref:System.ArgumentException>).  
+- Yol adı hatalı biçimlendirilmiş. Örneğin, geçersiz karakterler içeriyor veya yalnızca boşluk (<xref:System.ArgumentException>).  
   
-- The path is read-only (<xref:System.IO.IOException>).  
+- Yol salt okunurdur (<xref:System.IO.IOException>).  
   
-- The path name is `Nothing` (<xref:System.ArgumentNullException>).  
+- Yol adı `Nothing` (<xref:System.ArgumentNullException>).  
   
-- The path name is too long (<xref:System.IO.PathTooLongException>).  
+- Yol adı çok uzun (<xref:System.IO.PathTooLongException>).  
   
-- The path is invalid (<xref:System.IO.DirectoryNotFoundException>).  
+- Yol geçersiz (<xref:System.IO.DirectoryNotFoundException>).  
   
-- The path is only a colon ":" (<xref:System.NotSupportedException>).  
+- Yol yalnızca bir iki nokta üst üste ":" (<xref:System.NotSupportedException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
 
- A <xref:System.Security.SecurityException> may be thrown in partial-trust environments.  
+ Kısmi güven ortamlarında bir <xref:System.Security.SecurityException> oluşturulabilir.  
   
- The call to the <xref:System.IO.File.Create%2A> method requires <xref:System.Security.Permissions.FileIOPermission>.  
+ <xref:System.IO.File.Create%2A> metoduna yapılan çağrı <xref:System.Security.Permissions.FileIOPermission>gerektirir.  
   
- An <xref:System.UnauthorizedAccessException> is thrown if the user does not have permission to create the file.  
+ Kullanıcının dosyayı oluşturma izni yoksa bir <xref:System.UnauthorizedAccessException> oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IO>
 - <xref:System.IO.File.Create%2A>
-- [Using Libraries from Partially Trusted Code](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)
-- [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md)
+- [Kısmen güvenilen koddan kitaplıkları kullanma](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)
+- [Kod erişim güvenliği temelleri](../../../../framework/misc/code-access-security-basics.md)

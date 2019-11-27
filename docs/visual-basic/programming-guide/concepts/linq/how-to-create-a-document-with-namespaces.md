@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create a Document with Namespaces (LINQ to XML)'
+title: 'Nasıl yapılır: ad alanları ile belge oluşturma (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
 ms.openlocfilehash: bbd23840b0356cf14d2c7d6cb71591fe6461a8bd
@@ -9,21 +9,21 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332579"
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>How to: Create a Document with Namespaces (LINQ to XML) (Visual Basic)
-This topic shows how to create a document with namespaces in Visual Basic.  
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Nasıl yapılır: ad alanları ile belge oluşturma (LINQ to XML) (Visual Basic)
+Bu konu başlığı altında, Visual Basic ad alanları içeren bir belgenin nasıl oluşturulacağı gösterilmektedir.  
   
- When using XML literals in Visual Basic, users can define one global default XML namespace. This namespace is the default namespace for both XML literals and XML properties. The default XML namespace can be defined at either the project level or the file level. If it is defined at the file level, it overrides the default namespace at the project level.  
+ Visual Basic XML değişmez değerleri kullanılırken, kullanıcılar bir genel varsayılan XML ad alanı tanımlayabilir. Bu ad alanı, XML değişmez değerleri ve XML özellikleri için varsayılan ad alanıdır. Varsayılan XML ad alanı, proje düzeyinde ya da dosya düzeyinde tanımlanabilir. Dosya düzeyinde tanımlıysa, proje düzeyinde varsayılan ad alanını geçersiz kılar.  
   
- You can also define other namespaces, and specify the namespace prefixes for those namespaces.  
+ Diğer ad alanlarını da tanımlayabilir ve bu ad alanları için ad alanı öneklerini belirtebilirsiniz.  
   
- You define both default namespaces and namespaces with a prefix by using the `Imports` keyword.  
+ `Imports` anahtar sözcüğünü kullanarak, öneki ile hem varsayılan ad alanlarını hem de ad alanlarını tanımlarsınız.  
   
- For more information, see [Introduction to XML Literals in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
+ Daha fazla bilgi için bkz. [VISUAL BASIC XML değişmez değerlerine giriş](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
   
- Note that the default XML namespace only applies to elements and not to attributes. Attributes are by default always in no namespace. However, you can use a namespace prefix to put an attribute in a namespace.  
+ Varsayılan XML ad alanının yalnızca öğeler için geçerli olduğunu ve öznitelikler için geçerli olduğunu unutmayın. Öznitelikler varsayılan olarak her zaman ad alanı değildir. Ancak, bir ad alanına bir özniteliği yerleştirmek için bir ad alanı öneki kullanabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- This example creates a document that contains a namespace.  
+ Bu örnek, bir ad alanı içeren bir belge oluşturur.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -38,7 +38,7 @@ Module Module1
 End Module  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com">  
@@ -47,7 +47,7 @@ End Module
 ```  
   
 ## <a name="example"></a>Örnek  
- This example creates a document that contains two namespaces, one of which is the default namespace.  
+ Bu örnekte, biri varsayılan ad alanı olan iki ad alanı içeren bir belge oluşturulur.  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -67,7 +67,7 @@ Module Module1
 End Module  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root xmlns:fc="www.fourthcoffee.com" xmlns="http://www.adventure-works.com">  
@@ -77,9 +77,9 @@ End Module
 ```  
   
 ## <a name="example"></a>Örnek  
- The following example creates a document that contains multiple namespaces, both with namespace prefixes.  
+ Aşağıdaki örnek, ad alanı önekleri ile birlikte birden çok ad alanı içeren bir belge oluşturur.  
   
- When serializing an XML tree, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] emits namespace declarations as required so that each element is in its designated namespace.  
+ Bir XML ağacını serileştirilirken, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] her bir öğenin belirlenen ad alanında olması için ad alanı bildirimleri gerektiği gibi yayar.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -102,7 +102,7 @@ Module Module1
 End Module  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <aw:Root xmlns:fc="www.fourthcoffee.com" xmlns:aw="http://www.adventure-works.com">  
@@ -116,4 +116,4 @@ End Module
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
