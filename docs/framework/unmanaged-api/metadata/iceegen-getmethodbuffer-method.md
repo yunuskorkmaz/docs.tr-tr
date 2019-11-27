@@ -22,12 +22,12 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436333"
 ---
-# <a name="iceegengetmethodbuffer-method"></a><span data-ttu-id="3b63a-102">ICeeGen::GetMethodBuffer Metodu</span><span class="sxs-lookup"><span data-stu-id="3b63a-102">ICeeGen::GetMethodBuffer Method</span></span>
-<span data-ttu-id="3b63a-103">Gets a buffer of the appropriate size for the method at the specified relative virtual address.</span><span class="sxs-lookup"><span data-stu-id="3b63a-103">Gets a buffer of the appropriate size for the method at the specified relative virtual address.</span></span>  
+# <a name="iceegengetmethodbuffer-method"></a><span data-ttu-id="c41b3-102">ICeeGen::GetMethodBuffer Metodu</span><span class="sxs-lookup"><span data-stu-id="c41b3-102">ICeeGen::GetMethodBuffer Method</span></span>
+<span data-ttu-id="c41b3-103">Belirtilen göreli sanal adreste Yöntem için uygun boyutun bir arabelleğini alır.</span><span class="sxs-lookup"><span data-stu-id="c41b3-103">Gets a buffer of the appropriate size for the method at the specified relative virtual address.</span></span>  
   
- <span data-ttu-id="3b63a-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="3b63a-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="c41b3-104">Bu yöntem kullanılmıyor ve kullanılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="c41b3-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3b63a-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3b63a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c41b3-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c41b3-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMethodBuffer (  
@@ -36,22 +36,22 @@ HRESULT GetMethodBuffer (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3b63a-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3b63a-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c41b3-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c41b3-106">Parameters</span></span>  
  `RVA`  
- <span data-ttu-id="3b63a-107">[in] The relative virtual address of the method for which to return a buffer.</span><span class="sxs-lookup"><span data-stu-id="3b63a-107">[in] The relative virtual address of the method for which to return a buffer.</span></span>  
+ <span data-ttu-id="c41b3-107">'ndaki Arabellek döndürülecek yöntemin göreli sanal adresi.</span><span class="sxs-lookup"><span data-stu-id="c41b3-107">[in] The relative virtual address of the method for which to return a buffer.</span></span>  
   
  `lpBuffer`  
- <span data-ttu-id="3b63a-108">[out] A pointer to the returned buffer.</span><span class="sxs-lookup"><span data-stu-id="3b63a-108">[out] A pointer to the returned buffer.</span></span>  
+ <span data-ttu-id="c41b3-108">dışı Döndürülen arabelleğin işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="c41b3-108">[out] A pointer to the returned buffer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3b63a-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3b63a-109">Requirements</span></span>  
- <span data-ttu-id="3b63a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3b63a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c41b3-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c41b3-109">Requirements</span></span>  
+ <span data-ttu-id="c41b3-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c41b3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3b63a-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3b63a-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c41b3-111">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="c41b3-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3b63a-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3b63a-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c41b3-112">**Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="c41b3-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="3b63a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b63a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c41b3-113">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c41b3-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b63a-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3b63a-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c41b3-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c41b3-114">See also</span></span>
 
-- [<span data-ttu-id="3b63a-115">ICeeGen Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3b63a-115">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="c41b3-115">ICeeGen Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c41b3-115">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

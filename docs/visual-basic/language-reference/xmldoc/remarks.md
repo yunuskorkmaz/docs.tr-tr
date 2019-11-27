@@ -12,31 +12,31 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352259"
 ---
-# <a name="remarks-visual-basic"></a><span data-ttu-id="2c06a-101">\<remarks> (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c06a-101">\<remarks> (Visual Basic)</span></span>
-<span data-ttu-id="2c06a-102">Specifies a remarks section for the member.</span><span class="sxs-lookup"><span data-stu-id="2c06a-102">Specifies a remarks section for the member.</span></span>  
+# <a name="remarks-visual-basic"></a><span data-ttu-id="48f6c-101">\<açıklamalar > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="48f6c-101">\<remarks> (Visual Basic)</span></span>
+<span data-ttu-id="48f6c-102">Üye için bir açıklamalar bölümü belirtir.</span><span class="sxs-lookup"><span data-stu-id="48f6c-102">Specifies a remarks section for the member.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2c06a-103">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2c06a-103">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="48f6c-103">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="48f6c-103">Syntax</span></span>  
   
 ```xml  
 <remarks>description</remarks>  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2c06a-104">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2c06a-104">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="48f6c-104">Parametreler</span><span class="sxs-lookup"><span data-stu-id="48f6c-104">Parameters</span></span>  
  `description`  
- <span data-ttu-id="2c06a-105">A description of the member.</span><span class="sxs-lookup"><span data-stu-id="2c06a-105">A description of the member.</span></span>  
+ <span data-ttu-id="48f6c-105">Üyenin açıklaması.</span><span class="sxs-lookup"><span data-stu-id="48f6c-105">A description of the member.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2c06a-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2c06a-106">Remarks</span></span>  
- <span data-ttu-id="2c06a-107">Use the `<remarks>` tag to add information about a type, supplementing the information specified with [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md).</span><span class="sxs-lookup"><span data-stu-id="2c06a-107">Use the `<remarks>` tag to add information about a type, supplementing the information specified with [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="48f6c-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="48f6c-106">Remarks</span></span>  
+ <span data-ttu-id="48f6c-107">Bir tür hakkında bilgi eklemek için `<remarks>` etiketini kullanın, [\<özet >](../../../visual-basic/language-reference/xmldoc/summary.md)ile belirtilen bilgileri ekleyin.</span><span class="sxs-lookup"><span data-stu-id="48f6c-107">Use the `<remarks>` tag to add information about a type, supplementing the information specified with [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md).</span></span>  
   
- <span data-ttu-id="2c06a-108">This information appears in the Object Browser.</span><span class="sxs-lookup"><span data-stu-id="2c06a-108">This information appears in the Object Browser.</span></span> <span data-ttu-id="2c06a-109">For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).</span><span class="sxs-lookup"><span data-stu-id="2c06a-109">For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).</span></span>  
+ <span data-ttu-id="48f6c-108">Bu bilgiler Nesne Tarayıcısı görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="48f6c-108">This information appears in the Object Browser.</span></span> <span data-ttu-id="48f6c-109">Nesne Tarayıcısı hakkında daha fazla bilgi için bkz. [kod yapısını görüntüleme](/visualstudio/ide/viewing-the-structure-of-code).</span><span class="sxs-lookup"><span data-stu-id="48f6c-109">For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).</span></span>  
   
- <span data-ttu-id="2c06a-110">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span><span class="sxs-lookup"><span data-stu-id="2c06a-110">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="48f6c-110">Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.</span><span class="sxs-lookup"><span data-stu-id="48f6c-110">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2c06a-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="2c06a-111">Example</span></span>  
- <span data-ttu-id="2c06a-112">This example uses the `<remarks>` tag to explain what the `UpdateRecord` method does.</span><span class="sxs-lookup"><span data-stu-id="2c06a-112">This example uses the `<remarks>` tag to explain what the `UpdateRecord` method does.</span></span>  
+## <a name="example"></a><span data-ttu-id="48f6c-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="48f6c-111">Example</span></span>  
+ <span data-ttu-id="48f6c-112">Bu örnek, `UpdateRecord` yönteminin ne yaptığını açıklamak için `<remarks>` etiketini kullanır.</span><span class="sxs-lookup"><span data-stu-id="48f6c-112">This example uses the `<remarks>` tag to explain what the `UpdateRecord` method does.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a><span data-ttu-id="2c06a-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2c06a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="48f6c-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="48f6c-113">See also</span></span>
 
-- [<span data-ttu-id="2c06a-114">XML Açıklama Etiketleri</span><span class="sxs-lookup"><span data-stu-id="2c06a-114">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+- [<span data-ttu-id="48f6c-114">XML Açıklama Etiketleri</span><span class="sxs-lookup"><span data-stu-id="48f6c-114">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

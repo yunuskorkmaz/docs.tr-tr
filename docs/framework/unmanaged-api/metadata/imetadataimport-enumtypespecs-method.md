@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449975"
 ---
-# <a name="imetadataimportenumtypespecs-method"></a><span data-ttu-id="ce7b3-102">IMetaDataImport::EnumTypeSpecs Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ce7b3-102">IMetaDataImport::EnumTypeSpecs Method</span></span>
-<span data-ttu-id="ce7b3-103">Enumerates TypeSpec tokens defined in the current metadata scope.</span><span class="sxs-lookup"><span data-stu-id="ce7b3-103">Enumerates TypeSpec tokens defined in the current metadata scope.</span></span>  
+# <a name="imetadataimportenumtypespecs-method"></a><span data-ttu-id="8b642-102">IMetaDataImport::EnumTypeSpecs Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8b642-102">IMetaDataImport::EnumTypeSpecs Method</span></span>
+<span data-ttu-id="8b642-103">Geçerli meta veri kapsamında tanımlanan TypeSpec belirteçlerini numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="8b642-103">Enumerates TypeSpec tokens defined in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ce7b3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ce7b3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8b642-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8b642-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumTypeSpecs (  
@@ -36,39 +36,39 @@ HRESULT EnumTypeSpecs (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ce7b3-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ce7b3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8b642-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8b642-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="ce7b3-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="ce7b3-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="ce7b3-107">This value must be NULL for the first call of this method.</span><span class="sxs-lookup"><span data-stu-id="ce7b3-107">This value must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="8b642-106">[in, out] Numaralandırıcı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="8b642-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="8b642-107">Bu yöntemin ilk çağrısı için bu değer NULL olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="8b642-107">This value must be NULL for the first call of this method.</span></span>  
   
  `rTypeSpecs`  
- <span data-ttu-id="ce7b3-108">[out] The array used to store the TypeSpec tokens.</span><span class="sxs-lookup"><span data-stu-id="ce7b3-108">[out] The array used to store the TypeSpec tokens.</span></span>  
+ <span data-ttu-id="8b642-108">dışı TypeSpec belirteçlerini depolamak için kullanılan dizi.</span><span class="sxs-lookup"><span data-stu-id="8b642-108">[out] The array used to store the TypeSpec tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="ce7b3-109">[in] The maximum size of the `rTypeSpecs` array.</span><span class="sxs-lookup"><span data-stu-id="ce7b3-109">[in] The maximum size of the `rTypeSpecs` array.</span></span>  
+ <span data-ttu-id="8b642-109">'ndaki `rTypeSpecs` dizisinin en büyük boyutu.</span><span class="sxs-lookup"><span data-stu-id="8b642-109">[in] The maximum size of the `rTypeSpecs` array.</span></span>  
   
  `pcTypeSpecs`  
- <span data-ttu-id="ce7b3-110">[out] The number of TypeSpec tokens returned in `rTypeSpecs`.</span><span class="sxs-lookup"><span data-stu-id="ce7b3-110">[out] The number of TypeSpec tokens returned in `rTypeSpecs`.</span></span>  
+ <span data-ttu-id="8b642-110">dışı `rTypeSpecs`' de döndürülen TypeSpec belirteçleri sayısı.</span><span class="sxs-lookup"><span data-stu-id="8b642-110">[out] The number of TypeSpec tokens returned in `rTypeSpecs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ce7b3-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="ce7b3-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8b642-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="8b642-111">Return Value</span></span>  
   
-|<span data-ttu-id="ce7b3-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ce7b3-112">HRESULT</span></span>|<span data-ttu-id="ce7b3-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ce7b3-113">Description</span></span>|  
+|<span data-ttu-id="8b642-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8b642-112">HRESULT</span></span>|<span data-ttu-id="8b642-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8b642-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="ce7b3-114">`EnumTypeSpecs` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="ce7b3-114">`EnumTypeSpecs` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="ce7b3-115">There are no tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="ce7b3-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="ce7b3-116">In that case, `pcTypeSpecs` is zero.</span><span class="sxs-lookup"><span data-stu-id="ce7b3-116">In that case, `pcTypeSpecs` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="8b642-114">`EnumTypeSpecs` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="8b642-114">`EnumTypeSpecs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="8b642-115">Numaralandırılacak belirteç yok.</span><span class="sxs-lookup"><span data-stu-id="8b642-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="8b642-116">Bu durumda `pcTypeSpecs` sıfırdır.</span><span class="sxs-lookup"><span data-stu-id="8b642-116">In that case, `pcTypeSpecs` is zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ce7b3-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ce7b3-117">Remarks</span></span>  
- <span data-ttu-id="ce7b3-118">The TypeSpec tokens are created by the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="ce7b3-118">The TypeSpec tokens are created by the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8b642-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8b642-117">Remarks</span></span>  
+ <span data-ttu-id="8b642-118">TypeSpec belirteçleri [ımetadatayayma:: GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) yöntemi tarafından oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="8b642-118">The TypeSpec tokens are created by the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ce7b3-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ce7b3-119">Requirements</span></span>  
- <span data-ttu-id="ce7b3-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ce7b3-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8b642-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8b642-119">Requirements</span></span>  
+ <span data-ttu-id="8b642-120">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8b642-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ce7b3-121">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ce7b3-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="8b642-121">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="8b642-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ce7b3-122">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ce7b3-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="8b642-122">**Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir</span><span class="sxs-lookup"><span data-stu-id="8b642-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="ce7b3-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce7b3-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8b642-123">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b642-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ce7b3-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ce7b3-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8b642-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8b642-124">See also</span></span>
 
-- [<span data-ttu-id="ce7b3-125">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ce7b3-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="ce7b3-126">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ce7b3-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="8b642-125">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8b642-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="8b642-126">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8b642-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -1,6 +1,6 @@
 ---
-title: Syntax used by DebugView property
-description: Describes the special syntax used by the DebugView property to produce a string representation of expression trees
+title: DebugView özelliği tarafından kullanılan sözdizimi
+description: İfade ağaçlarının dize gösterimini üretmek için DebugView özelliği tarafından kullanılan özel sözdizimini açıklar
 author: zspitz
 ms.author: wiwagn
 ms.date: 05/22/2019
@@ -15,19 +15,19 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346877"
 ---
-# <a name="debugview-syntax"></a><span data-ttu-id="cd783-103">`DebugView` syntax</span><span class="sxs-lookup"><span data-stu-id="cd783-103">`DebugView` syntax</span></span>
+# <a name="debugview-syntax"></a><span data-ttu-id="c69d4-103">`DebugView` sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c69d4-103">`DebugView` syntax</span></span>
 
-<span data-ttu-id="cd783-104">The `DebugView` property (available only when debugging) provides a string rendering of expression trees.</span><span class="sxs-lookup"><span data-stu-id="cd783-104">The `DebugView` property (available only when debugging) provides a string rendering of expression trees.</span></span> <span data-ttu-id="cd783-105">Most of the syntax is fairly straightforward to understand; the special cases are described in the following sections.</span><span class="sxs-lookup"><span data-stu-id="cd783-105">Most of the syntax is fairly straightforward to understand; the special cases are described in the following sections.</span></span>
+<span data-ttu-id="c69d4-104">`DebugView` özelliği (yalnızca hata ayıklama sırasında kullanılabilir), ifade ağaçlarının dize işlemesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="c69d4-104">The `DebugView` property (available only when debugging) provides a string rendering of expression trees.</span></span> <span data-ttu-id="c69d4-105">Sözdiziminin çoğu anlaşılması oldukça basittir; özel durumlar aşağıdaki bölümlerde açıklanmıştır.</span><span class="sxs-lookup"><span data-stu-id="c69d4-105">Most of the syntax is fairly straightforward to understand; the special cases are described in the following sections.</span></span>
 
-<span data-ttu-id="cd783-106">Each example is followed by a comment block containing the `DebugView`.</span><span class="sxs-lookup"><span data-stu-id="cd783-106">Each example is followed by a comment block containing the `DebugView`.</span></span>
+<span data-ttu-id="c69d4-106">Her örnek, `DebugView`içeren bir açıklama bloğu tarafından izlenir.</span><span class="sxs-lookup"><span data-stu-id="c69d4-106">Each example is followed by a comment block containing the `DebugView`.</span></span>
 
-## <a name="parameterexpression"></a><span data-ttu-id="cd783-107">ParameterExpression</span><span class="sxs-lookup"><span data-stu-id="cd783-107">ParameterExpression</span></span>
+## <a name="parameterexpression"></a><span data-ttu-id="c69d4-107">ParameterExpression</span><span class="sxs-lookup"><span data-stu-id="c69d4-107">ParameterExpression</span></span>
 
-<span data-ttu-id="cd783-108"><xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> variable names are displayed with a "$" symbol at the beginning.</span><span class="sxs-lookup"><span data-stu-id="cd783-108"><xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> variable names are displayed with a "$" symbol at the beginning.</span></span>
+<span data-ttu-id="c69d4-108"><xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> değişken adları, başındaki bir "$" simgesiyle görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="c69d4-108"><xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> variable names are displayed with a "$" symbol at the beginning.</span></span>
 
-<span data-ttu-id="cd783-109">If a parameter does not have a name, it is assigned an automatically generated name, such as `$var1` or `$var2`.</span><span class="sxs-lookup"><span data-stu-id="cd783-109">If a parameter does not have a name, it is assigned an automatically generated name, such as `$var1` or `$var2`.</span></span>
+<span data-ttu-id="c69d4-109">Bir parametre bir ada sahip değilse, `$var1` veya `$var2`gibi otomatik olarak oluşturulan bir ad atanır.</span><span class="sxs-lookup"><span data-stu-id="c69d4-109">If a parameter does not have a name, it is assigned an automatically generated name, such as `$var1` or `$var2`.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="cd783-110">Örnekler</span><span class="sxs-lookup"><span data-stu-id="cd783-110">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="c69d4-110">Örnekler</span><span class="sxs-lookup"><span data-stu-id="c69d4-110">Examples</span></span>
 
 ```vb
 Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer), "num")
@@ -41,22 +41,22 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 '
 ```
 
-## <a name="constantexpressions"></a><span data-ttu-id="cd783-111">ConstantExpressions</span><span class="sxs-lookup"><span data-stu-id="cd783-111">ConstantExpressions</span></span>
+## <a name="constantexpressions"></a><span data-ttu-id="c69d4-111">ConstantExpressions</span><span class="sxs-lookup"><span data-stu-id="c69d4-111">ConstantExpressions</span></span>
 
-<span data-ttu-id="cd783-112">For <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> objects that represent integer values, strings, and `null`, the value of the constant is displayed.</span><span class="sxs-lookup"><span data-stu-id="cd783-112">For <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> objects that represent integer values, strings, and `null`, the value of the constant is displayed.</span></span>
+<span data-ttu-id="c69d4-112">Tamsayı değerlerini, dizeleri ve `null`temsil eden <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> nesneleri için, sabitin değeri görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="c69d4-112">For <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> objects that represent integer values, strings, and `null`, the value of the constant is displayed.</span></span>
 
-<span data-ttu-id="cd783-113">For some numeric types, a suffix is added to the value:</span><span class="sxs-lookup"><span data-stu-id="cd783-113">For some numeric types, a suffix is added to the value:</span></span>
+<span data-ttu-id="c69d4-113">Bazı sayısal türler için, değere bir sonek eklenir:</span><span class="sxs-lookup"><span data-stu-id="c69d4-113">For some numeric types, a suffix is added to the value:</span></span>
 
-| <span data-ttu-id="cd783-114">Tür</span><span class="sxs-lookup"><span data-stu-id="cd783-114">Type</span></span> | <span data-ttu-id="cd783-115">Keyword</span><span class="sxs-lookup"><span data-stu-id="cd783-115">Keyword</span></span> | <span data-ttu-id="cd783-116">Suffix</span><span class="sxs-lookup"><span data-stu-id="cd783-116">Suffix</span></span> |
+| <span data-ttu-id="c69d4-114">Type</span><span class="sxs-lookup"><span data-stu-id="c69d4-114">Type</span></span> | <span data-ttu-id="c69d4-115">Anahtar sözcüğü</span><span class="sxs-lookup"><span data-stu-id="c69d4-115">Keyword</span></span> | <span data-ttu-id="c69d4-116">Önekini</span><span class="sxs-lookup"><span data-stu-id="c69d4-116">Suffix</span></span> |
 |--|--|--|
-| <xref:System.UInt32> | [<span data-ttu-id="cd783-117">UInteger</span><span class="sxs-lookup"><span data-stu-id="cd783-117">UInteger</span></span>](../../../language-reference/data-types/uinteger-data-type.md) | <span data-ttu-id="cd783-118">U</span><span class="sxs-lookup"><span data-stu-id="cd783-118">U</span></span> |
-| <xref:System.Int64> | [<span data-ttu-id="cd783-119">Long</span><span class="sxs-lookup"><span data-stu-id="cd783-119">Long</span></span>](../../../language-reference/data-types/long-data-type.md) | <span data-ttu-id="cd783-120">L</span><span class="sxs-lookup"><span data-stu-id="cd783-120">L</span></span> |
-| <xref:System.UInt64> | [<span data-ttu-id="cd783-121">ULong</span><span class="sxs-lookup"><span data-stu-id="cd783-121">ULong</span></span>](../../../language-reference/data-types/ulong-data-type.md) | <span data-ttu-id="cd783-122">UL</span><span class="sxs-lookup"><span data-stu-id="cd783-122">UL</span></span> |
-| <xref:System.Double> | [<span data-ttu-id="cd783-123">Double</span><span class="sxs-lookup"><span data-stu-id="cd783-123">Double</span></span>](../../../language-reference/data-types/double-data-type.md) | <span data-ttu-id="cd783-124">D</span><span class="sxs-lookup"><span data-stu-id="cd783-124">D</span></span> |
-| <xref:System.Single> | [<span data-ttu-id="cd783-125">Single</span><span class="sxs-lookup"><span data-stu-id="cd783-125">Single</span></span>](../../../language-reference/data-types/single-data-type.md) | <span data-ttu-id="cd783-126">F</span><span class="sxs-lookup"><span data-stu-id="cd783-126">F</span></span> |
-| <xref:System.Decimal> | [<span data-ttu-id="cd783-127">Decimal</span><span class="sxs-lookup"><span data-stu-id="cd783-127">Decimal</span></span>](../../../language-reference/data-types/decimal-data-type.md) | <span data-ttu-id="cd783-128">M</span><span class="sxs-lookup"><span data-stu-id="cd783-128">M</span></span> |
+| <xref:System.UInt32> | [<span data-ttu-id="c69d4-117">UInteger</span><span class="sxs-lookup"><span data-stu-id="c69d4-117">UInteger</span></span>](../../../language-reference/data-types/uinteger-data-type.md) | <span data-ttu-id="c69d4-118">U</span><span class="sxs-lookup"><span data-stu-id="c69d4-118">U</span></span> |
+| <xref:System.Int64> | [<span data-ttu-id="c69d4-119">Kalacağını</span><span class="sxs-lookup"><span data-stu-id="c69d4-119">Long</span></span>](../../../language-reference/data-types/long-data-type.md) | <span data-ttu-id="c69d4-120">L</span><span class="sxs-lookup"><span data-stu-id="c69d4-120">L</span></span> |
+| <xref:System.UInt64> | [<span data-ttu-id="c69d4-121">'Tur</span><span class="sxs-lookup"><span data-stu-id="c69d4-121">ULong</span></span>](../../../language-reference/data-types/ulong-data-type.md) | <span data-ttu-id="c69d4-122">UL</span><span class="sxs-lookup"><span data-stu-id="c69d4-122">UL</span></span> |
+| <xref:System.Double> | [<span data-ttu-id="c69d4-123">Çift</span><span class="sxs-lookup"><span data-stu-id="c69d4-123">Double</span></span>](../../../language-reference/data-types/double-data-type.md) | <span data-ttu-id="c69d4-124">D</span><span class="sxs-lookup"><span data-stu-id="c69d4-124">D</span></span> |
+| <xref:System.Single> | [<span data-ttu-id="c69d4-125">Sunuculu</span><span class="sxs-lookup"><span data-stu-id="c69d4-125">Single</span></span>](../../../language-reference/data-types/single-data-type.md) | <span data-ttu-id="c69d4-126">F</span><span class="sxs-lookup"><span data-stu-id="c69d4-126">F</span></span> |
+| <xref:System.Decimal> | [<span data-ttu-id="c69d4-127">Kategori</span><span class="sxs-lookup"><span data-stu-id="c69d4-127">Decimal</span></span>](../../../language-reference/data-types/decimal-data-type.md) | <span data-ttu-id="c69d4-128">M</span><span class="sxs-lookup"><span data-stu-id="c69d4-128">M</span></span> |
 
-### <a name="examples"></a><span data-ttu-id="cd783-129">Örnekler</span><span class="sxs-lookup"><span data-stu-id="cd783-129">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="c69d4-129">Örnekler</span><span class="sxs-lookup"><span data-stu-id="c69d4-129">Examples</span></span>
 
 ```vb
 Dim num as Integer = 10
@@ -72,11 +72,11 @@ Dim expr As ConstantExpression = Expression.Constant(num)
 '
 ```
 
-## <a name="blockexpression"></a><span data-ttu-id="cd783-130">BlockExpression</span><span class="sxs-lookup"><span data-stu-id="cd783-130">BlockExpression</span></span>
+## <a name="blockexpression"></a><span data-ttu-id="c69d4-130">Blok Ifadesi</span><span class="sxs-lookup"><span data-stu-id="c69d4-130">BlockExpression</span></span>
 
-<span data-ttu-id="cd783-131">If the type of a <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> object differs from the type of the last expression in the block, the type is displayed within angle brackets (`<` and `>`).</span><span class="sxs-lookup"><span data-stu-id="cd783-131">If the type of a <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> object differs from the type of the last expression in the block, the type is displayed within angle brackets (`<` and `>`).</span></span> <span data-ttu-id="cd783-132">Otherwise, the type of the <xref:System.Linq.Expressions.BlockExpression> object is not displayed.</span><span class="sxs-lookup"><span data-stu-id="cd783-132">Otherwise, the type of the <xref:System.Linq.Expressions.BlockExpression> object is not displayed.</span></span>
+<span data-ttu-id="c69d4-131">Bir <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> nesnesinin türü bloktaki son ifadenin türünden farklıysa, tür açılı ayraç içinde görüntülenir (`<` ve `>`).</span><span class="sxs-lookup"><span data-stu-id="c69d4-131">If the type of a <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> object differs from the type of the last expression in the block, the type is displayed within angle brackets (`<` and `>`).</span></span> <span data-ttu-id="c69d4-132">Aksi takdirde, <xref:System.Linq.Expressions.BlockExpression> nesnenin türü gösterilmez.</span><span class="sxs-lookup"><span data-stu-id="c69d4-132">Otherwise, the type of the <xref:System.Linq.Expressions.BlockExpression> object is not displayed.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="cd783-133">Örnekler</span><span class="sxs-lookup"><span data-stu-id="cd783-133">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="c69d4-133">Örnekler</span><span class="sxs-lookup"><span data-stu-id="c69d4-133">Examples</span></span>
 
 ```vb
 Dim block As BlockExpression = Expression.Block(Expression.Constant("test"))
@@ -97,13 +97,13 @@ Dim block As BlockExpression = Expression.Block(
 '
 ```
 
-## <a name="lambdaexpression"></a><span data-ttu-id="cd783-134">LambdaExpression</span><span class="sxs-lookup"><span data-stu-id="cd783-134">LambdaExpression</span></span>
+## <a name="lambdaexpression"></a><span data-ttu-id="c69d4-134">LambdaExpression</span><span class="sxs-lookup"><span data-stu-id="c69d4-134">LambdaExpression</span></span>
 
-<span data-ttu-id="cd783-135"><xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> objects are displayed together with their delegate types.</span><span class="sxs-lookup"><span data-stu-id="cd783-135"><xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> objects are displayed together with their delegate types.</span></span>
+<span data-ttu-id="c69d4-135"><xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> nesneler, temsilci türleriyle birlikte görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="c69d4-135"><xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> objects are displayed together with their delegate types.</span></span>
 
-<span data-ttu-id="cd783-136">If a lambda expression does not have a name, it is assigned an automatically generated name, such as `#Lambda1` or `#Lambda2`.</span><span class="sxs-lookup"><span data-stu-id="cd783-136">If a lambda expression does not have a name, it is assigned an automatically generated name, such as `#Lambda1` or `#Lambda2`.</span></span>
+<span data-ttu-id="c69d4-136">Lambda ifadesinin adı yoksa, `#Lambda1` veya `#Lambda2`gibi otomatik olarak oluşturulan bir ad atanır.</span><span class="sxs-lookup"><span data-stu-id="c69d4-136">If a lambda expression does not have a name, it is assigned an automatically generated name, such as `#Lambda1` or `#Lambda2`.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="cd783-137">Örnekler</span><span class="sxs-lookup"><span data-stu-id="cd783-137">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="c69d4-137">Örnekler</span><span class="sxs-lookup"><span data-stu-id="c69d4-137">Examples</span></span>
 
 ```vb
 Dim lambda As LambdaExpression = Expression.Lambda(Of Func(Of Integer))(
@@ -127,15 +127,15 @@ Dim lambda As LambdaExpression = Expression.Lambda(Of Func(Of Integer))(
 '
 ```
 
-## <a name="labelexpression"></a><span data-ttu-id="cd783-138">LabelExpression</span><span class="sxs-lookup"><span data-stu-id="cd783-138">LabelExpression</span></span>
+## <a name="labelexpression"></a><span data-ttu-id="c69d4-138">LabelExpression</span><span class="sxs-lookup"><span data-stu-id="c69d4-138">LabelExpression</span></span>
 
-<span data-ttu-id="cd783-139">If you specify a default value for the <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType> object, this value is displayed before the <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType> object.</span><span class="sxs-lookup"><span data-stu-id="cd783-139">If you specify a default value for the <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType> object, this value is displayed before the <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType> object.</span></span>
+<span data-ttu-id="c69d4-139"><xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType> nesnesi için varsayılan bir değer belirtirseniz, bu değer <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType> nesnesinden önce görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="c69d4-139">If you specify a default value for the <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType> object, this value is displayed before the <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType> object.</span></span>
 
-<span data-ttu-id="cd783-140">The `.Label` token indicates the start of the label.</span><span class="sxs-lookup"><span data-stu-id="cd783-140">The `.Label` token indicates the start of the label.</span></span> <span data-ttu-id="cd783-141">The `.LabelTarget` token indicates the destination of the target to jump to.</span><span class="sxs-lookup"><span data-stu-id="cd783-141">The `.LabelTarget` token indicates the destination of the target to jump to.</span></span>
+<span data-ttu-id="c69d4-140">`.Label` belirteci etiketin başlangıcını gösterir.</span><span class="sxs-lookup"><span data-stu-id="c69d4-140">The `.Label` token indicates the start of the label.</span></span> <span data-ttu-id="c69d4-141">`.LabelTarget` belirteci, atlanacak hedefin hedefini gösterir.</span><span class="sxs-lookup"><span data-stu-id="c69d4-141">The `.LabelTarget` token indicates the destination of the target to jump to.</span></span>
 
-<span data-ttu-id="cd783-142">If a label does not have a name, it is assigned an automatically generated name, such as `#Label1` or `#Label2`.</span><span class="sxs-lookup"><span data-stu-id="cd783-142">If a label does not have a name, it is assigned an automatically generated name, such as `#Label1` or `#Label2`.</span></span>
+<span data-ttu-id="c69d4-142">Bir etiketin adı yoksa, `#Label1` veya `#Label2`gibi otomatik olarak oluşturulan bir ad atanır.</span><span class="sxs-lookup"><span data-stu-id="c69d4-142">If a label does not have a name, it is assigned an automatically generated name, such as `#Label1` or `#Label2`.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="cd783-143">Örnekler</span><span class="sxs-lookup"><span data-stu-id="cd783-143">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="c69d4-143">Örnekler</span><span class="sxs-lookup"><span data-stu-id="c69d4-143">Examples</span></span>
 
 ```vb
 Dim target As LabelTarget = Expression.Label(GetType(Integer), "SampleLabel")
@@ -166,11 +166,11 @@ Dim block As BlockExpression = Expression.Block(
 '
 ```
 
-## <a name="checked-operators"></a><span data-ttu-id="cd783-144">Checked Operators</span><span class="sxs-lookup"><span data-stu-id="cd783-144">Checked Operators</span></span>
+## <a name="checked-operators"></a><span data-ttu-id="c69d4-144">Denetlenen Işleçler</span><span class="sxs-lookup"><span data-stu-id="c69d4-144">Checked Operators</span></span>
 
-<span data-ttu-id="cd783-145">Checked operators are displayed with the `#` symbol in front of the operator.</span><span class="sxs-lookup"><span data-stu-id="cd783-145">Checked operators are displayed with the `#` symbol in front of the operator.</span></span> <span data-ttu-id="cd783-146">For example, the checked addition operator is displayed as `#+`.</span><span class="sxs-lookup"><span data-stu-id="cd783-146">For example, the checked addition operator is displayed as `#+`.</span></span>
+<span data-ttu-id="c69d4-145">İşaretli işleçler, işlecin önünde `#` simgesiyle birlikte görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="c69d4-145">Checked operators are displayed with the `#` symbol in front of the operator.</span></span> <span data-ttu-id="c69d4-146">Örneğin, denetlenen toplama işleci `#+`olarak görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="c69d4-146">For example, the checked addition operator is displayed as `#+`.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="cd783-147">Örnekler</span><span class="sxs-lookup"><span data-stu-id="cd783-147">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="c69d4-147">Örnekler</span><span class="sxs-lookup"><span data-stu-id="c69d4-147">Examples</span></span>
 
 ```vb
 Dim expr As Expression = Expression.AddChecked(

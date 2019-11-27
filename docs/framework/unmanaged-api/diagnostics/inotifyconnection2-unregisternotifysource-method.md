@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440990"
 ---
-# <a name="inotifyconnection2unregisternotifysource-method"></a><span data-ttu-id="afd1e-102">INotifyConnection2::UnregisterNotifySource Yöntemi</span><span class="sxs-lookup"><span data-stu-id="afd1e-102">INotifyConnection2::UnregisterNotifySource Method</span></span>
-<span data-ttu-id="afd1e-103">Removes a specified notification source object from the connection.</span><span class="sxs-lookup"><span data-stu-id="afd1e-103">Removes a specified notification source object from the connection.</span></span>  
+# <a name="inotifyconnection2unregisternotifysource-method"></a><span data-ttu-id="cc7b2-102">INotifyConnection2::UnregisterNotifySource Yöntemi</span><span class="sxs-lookup"><span data-stu-id="cc7b2-102">INotifyConnection2::UnregisterNotifySource Method</span></span>
+<span data-ttu-id="cc7b2-103">Belirtilen bir bildirim kaynağı nesnesini bağlantıdan kaldırır.</span><span class="sxs-lookup"><span data-stu-id="cc7b2-103">Removes a specified notification source object from the connection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="afd1e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="afd1e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cc7b2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cc7b2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT UnregisterNotifySource  
@@ -34,19 +34,19 @@ HRESULT UnregisterNotifySource
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="afd1e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="afd1e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cc7b2-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cc7b2-105">Parameters</span></span>  
  `in_pNotifySource`  
- <span data-ttu-id="afd1e-106">[in] Notification object to be unregistered.</span><span class="sxs-lookup"><span data-stu-id="afd1e-106">[in] Notification object to be unregistered.</span></span>  
+ <span data-ttu-id="cc7b2-106">'ndaki Kayıt kaldırılacak bildirim nesnesi.</span><span class="sxs-lookup"><span data-stu-id="cc7b2-106">[in] Notification object to be unregistered.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="afd1e-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="afd1e-107">Return Value</span></span>  
- <span data-ttu-id="afd1e-108">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="afd1e-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="cc7b2-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="cc7b2-107">Return Value</span></span>  
+ <span data-ttu-id="cc7b2-108">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="cc7b2-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="afd1e-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="afd1e-109">Requirements</span></span>  
- <span data-ttu-id="afd1e-110">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="afd1e-110">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cc7b2-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cc7b2-109">Requirements</span></span>  
+ <span data-ttu-id="cc7b2-110">**Üst bilgi:** ProtocolNotify2. IDL</span><span class="sxs-lookup"><span data-stu-id="cc7b2-110">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="afd1e-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="afd1e-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cc7b2-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cc7b2-111">See also</span></span>
 
-- [<span data-ttu-id="afd1e-112">INotifyConnection2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="afd1e-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="afd1e-113">INotifySource2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="afd1e-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="afd1e-114">INotifySink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="afd1e-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="afd1e-115">RegisterNotifySource Yöntemi</span><span class="sxs-lookup"><span data-stu-id="afd1e-115">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)
+- [<span data-ttu-id="cc7b2-112">INotifyConnection2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cc7b2-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="cc7b2-113">INotifySource2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cc7b2-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="cc7b2-114">INotifySink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cc7b2-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="cc7b2-115">RegisterNotifySource Yöntemi</span><span class="sxs-lookup"><span data-stu-id="cc7b2-115">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)

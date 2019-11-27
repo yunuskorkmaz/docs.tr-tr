@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445434"
 ---
-# <a name="imetadatatablesgetblob-method"></a><span data-ttu-id="aa687-102">IMetaDataTables::GetBlob Metodu</span><span class="sxs-lookup"><span data-stu-id="aa687-102">IMetaDataTables::GetBlob Method</span></span>
-<span data-ttu-id="aa687-103">Gets a pointer to the binary large object (BLOB) at the specified column index.</span><span class="sxs-lookup"><span data-stu-id="aa687-103">Gets a pointer to the binary large object (BLOB) at the specified column index.</span></span>  
+# <a name="imetadatatablesgetblob-method"></a><span data-ttu-id="c094d-102">IMetaDataTables::GetBlob Metodu</span><span class="sxs-lookup"><span data-stu-id="c094d-102">IMetaDataTables::GetBlob Method</span></span>
+<span data-ttu-id="c094d-103">Belirtilen sütun dizininde ikili büyük nesne (BLOB) için bir işaretçi alır.</span><span class="sxs-lookup"><span data-stu-id="c094d-103">Gets a pointer to the binary large object (BLOB) at the specified column index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aa687-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="aa687-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c094d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c094d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetBlob (  
@@ -35,26 +35,26 @@ HRESULT GetBlob (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="aa687-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="aa687-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c094d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c094d-105">Parameters</span></span>  
  `ixBlob`  
- <span data-ttu-id="aa687-106">[in] The memory address from which to get `ppData`.</span><span class="sxs-lookup"><span data-stu-id="aa687-106">[in] The memory address from which to get `ppData`.</span></span>  
+ <span data-ttu-id="c094d-106">'ndaki `ppData`alınacağı bellek adresi.</span><span class="sxs-lookup"><span data-stu-id="c094d-106">[in] The memory address from which to get `ppData`.</span></span>  
   
  `pcbData`  
- <span data-ttu-id="aa687-107">[out] A pointer to the size, in bytes, of `ppData`.</span><span class="sxs-lookup"><span data-stu-id="aa687-107">[out] A pointer to the size, in bytes, of `ppData`.</span></span>  
+ <span data-ttu-id="c094d-107">dışı Boyutun `ppData`bayt cinsinden işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="c094d-107">[out] A pointer to the size, in bytes, of `ppData`.</span></span>  
   
  `ppData`  
- <span data-ttu-id="aa687-108">[out] A pointer to a pointer to the binary data retrieved.</span><span class="sxs-lookup"><span data-stu-id="aa687-108">[out] A pointer to a pointer to the binary data retrieved.</span></span>  
+ <span data-ttu-id="c094d-108">dışı Alınan ikili verilerin işaretçisine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c094d-108">[out] A pointer to a pointer to the binary data retrieved.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aa687-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="aa687-109">Requirements</span></span>  
- <span data-ttu-id="aa687-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aa687-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c094d-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c094d-109">Requirements</span></span>  
+ <span data-ttu-id="c094d-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c094d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aa687-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="aa687-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c094d-111">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="c094d-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="aa687-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="aa687-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c094d-112">**Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="c094d-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="aa687-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aa687-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c094d-113">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c094d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aa687-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aa687-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c094d-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c094d-114">See also</span></span>
 
-- [<span data-ttu-id="aa687-115">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="aa687-115">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="aa687-116">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="aa687-116">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="c094d-115">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c094d-115">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="c094d-116">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c094d-116">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

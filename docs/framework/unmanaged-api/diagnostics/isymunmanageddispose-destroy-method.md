@@ -22,21 +22,21 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430708"
 ---
-# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="29e29-102">ISymUnmanagedDispose::Destroy Yöntemi</span><span class="sxs-lookup"><span data-stu-id="29e29-102">ISymUnmanagedDispose::Destroy Method</span></span>
-<span data-ttu-id="29e29-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span><span class="sxs-lookup"><span data-stu-id="29e29-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
+# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="9fe12-102">ISymUnmanagedDispose::Destroy Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9fe12-102">ISymUnmanagedDispose::Destroy Method</span></span>
+<span data-ttu-id="9fe12-103">Alttaki nesnenin tüm iç başvuruları serbest bırakmaya ve sonraki yöntem çağrılarında hata döndürmesine neden olur.</span><span class="sxs-lookup"><span data-stu-id="9fe12-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="29e29-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="29e29-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9fe12-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9fe12-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Destroy();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="29e29-105">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="29e29-105">Return Value</span></span>  
- <span data-ttu-id="29e29-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="29e29-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9fe12-105">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="9fe12-105">Return Value</span></span>  
+ <span data-ttu-id="9fe12-106">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="9fe12-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="29e29-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="29e29-107">Requirements</span></span>  
- <span data-ttu-id="29e29-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="29e29-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9fe12-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9fe12-107">Requirements</span></span>  
+ <span data-ttu-id="9fe12-108">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="9fe12-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="29e29-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="29e29-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9fe12-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9fe12-109">See also</span></span>
 
-- [<span data-ttu-id="29e29-110">ISymUnmanagedDispose Arabirimi</span><span class="sxs-lookup"><span data-stu-id="29e29-110">ISymUnmanagedDispose Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)
+- [<span data-ttu-id="9fe12-110">ISymUnmanagedDispose Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9fe12-110">ISymUnmanagedDispose Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)

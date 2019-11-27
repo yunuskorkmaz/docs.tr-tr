@@ -21,19 +21,19 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449090"
 ---
-# <a name="isymunmanageddocumentwriter-interface"></a><span data-ttu-id="82bb7-102">ISymUnmanagedDocumentWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="82bb7-102">ISymUnmanagedDocumentWriter Interface</span></span>
-<span data-ttu-id="82bb7-103">Provides methods for writing to a document referenced by a symbol store.</span><span class="sxs-lookup"><span data-stu-id="82bb7-103">Provides methods for writing to a document referenced by a symbol store.</span></span>  
+# <a name="isymunmanageddocumentwriter-interface"></a><span data-ttu-id="f8f74-102">ISymUnmanagedDocumentWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f8f74-102">ISymUnmanagedDocumentWriter Interface</span></span>
+<span data-ttu-id="f8f74-103">Sembol deposu tarafından başvurulan bir belgeye yazmak için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="f8f74-103">Provides methods for writing to a document referenced by a symbol store.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="82bb7-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="82bb7-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f8f74-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="f8f74-104">Methods</span></span>  
   
-|<span data-ttu-id="82bb7-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="82bb7-105">Method</span></span>|<span data-ttu-id="82bb7-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="82bb7-106">Description</span></span>|  
+|<span data-ttu-id="f8f74-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="f8f74-105">Method</span></span>|<span data-ttu-id="f8f74-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f8f74-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="82bb7-107">SetCheckSum Yöntemi</span><span class="sxs-lookup"><span data-stu-id="82bb7-107">SetCheckSum Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|<span data-ttu-id="82bb7-108">Sets checksum information.</span><span class="sxs-lookup"><span data-stu-id="82bb7-108">Sets checksum information.</span></span>|  
-|[<span data-ttu-id="82bb7-109">SetSource Yöntemi</span><span class="sxs-lookup"><span data-stu-id="82bb7-109">SetSource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|<span data-ttu-id="82bb7-110">Sets embedded source for a document that is being written.</span><span class="sxs-lookup"><span data-stu-id="82bb7-110">Sets embedded source for a document that is being written.</span></span>|  
+|[<span data-ttu-id="f8f74-107">SetCheckSum Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f8f74-107">SetCheckSum Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|<span data-ttu-id="f8f74-108">Sağlama toplamı bilgilerini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="f8f74-108">Sets checksum information.</span></span>|  
+|[<span data-ttu-id="f8f74-109">SetSource Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f8f74-109">SetSource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|<span data-ttu-id="f8f74-110">Yazılmakta olan bir belge için gömülü kaynağı ayarlar.</span><span class="sxs-lookup"><span data-stu-id="f8f74-110">Sets embedded source for a document that is being written.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="82bb7-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="82bb7-111">Requirements</span></span>  
- <span data-ttu-id="82bb7-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="82bb7-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f8f74-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f8f74-111">Requirements</span></span>  
+ <span data-ttu-id="f8f74-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="f8f74-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82bb7-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="82bb7-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8f74-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f8f74-113">See also</span></span>
 
-- [<span data-ttu-id="82bb7-114">Tanılama Simge Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="82bb7-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="f8f74-114">Tanılama Simge Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="f8f74-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

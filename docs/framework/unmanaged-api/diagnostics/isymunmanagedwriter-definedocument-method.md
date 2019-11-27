@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428046"
 ---
-# <a name="isymunmanagedwriterdefinedocument-method"></a><span data-ttu-id="9996c-102">ISymUnmanagedWriter::DefineDocument Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9996c-102">ISymUnmanagedWriter::DefineDocument Method</span></span>
-<span data-ttu-id="9996c-103">Defines a source document.</span><span class="sxs-lookup"><span data-stu-id="9996c-103">Defines a source document.</span></span> <span data-ttu-id="9996c-104">GUIDs are provided for known languages, vendors, and document types.</span><span class="sxs-lookup"><span data-stu-id="9996c-104">GUIDs are provided for known languages, vendors, and document types.</span></span>  
+# <a name="isymunmanagedwriterdefinedocument-method"></a><span data-ttu-id="b2849-102">ISymUnmanagedWriter::DefineDocument Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b2849-102">ISymUnmanagedWriter::DefineDocument Method</span></span>
+<span data-ttu-id="b2849-103">Bir kaynak belge tanımlar.</span><span class="sxs-lookup"><span data-stu-id="b2849-103">Defines a source document.</span></span> <span data-ttu-id="b2849-104">GUID 'Ler, bilinen diller, satıcılar ve belge türleri için sağlanır.</span><span class="sxs-lookup"><span data-stu-id="b2849-104">GUIDs are provided for known languages, vendors, and document types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9996c-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9996c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2849-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b2849-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineDocument(  
@@ -36,28 +36,28 @@ HRESULT DefineDocument(
     [out, retval] ISymUnmanagedDocumentWriter**  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9996c-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9996c-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b2849-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b2849-106">Parameters</span></span>  
  `url`  
- <span data-ttu-id="9996c-107">[in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.</span><span class="sxs-lookup"><span data-stu-id="9996c-107">[in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.</span></span>  
+ <span data-ttu-id="b2849-107">'ndaki Belgeyi tanımlayan Tekdüzen Kaynak Konumlandırıcı 'sını (URL) tanımlayan bir `WCHAR` işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="b2849-107">[in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.</span></span>  
   
  `language`  
- <span data-ttu-id="9996c-108">[in] A pointer to a GUID that defines the document language.</span><span class="sxs-lookup"><span data-stu-id="9996c-108">[in] A pointer to a GUID that defines the document language.</span></span>  
+ <span data-ttu-id="b2849-108">'ndaki Belge dilini tanımlayan bir GUID işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="b2849-108">[in] A pointer to a GUID that defines the document language.</span></span>  
   
  `languageVendor`  
- <span data-ttu-id="9996c-109">[in] A pointer to a GUID that defines the identity of the vendor for the document language.</span><span class="sxs-lookup"><span data-stu-id="9996c-109">[in] A pointer to a GUID that defines the identity of the vendor for the document language.</span></span>  
+ <span data-ttu-id="b2849-109">'ndaki Belge dili için satıcının kimliğini tanımlayan bir GUID işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="b2849-109">[in] A pointer to a GUID that defines the identity of the vendor for the document language.</span></span>  
   
  `documentType`  
- <span data-ttu-id="9996c-110">[in] A pointer to a GUID that defines the type of the document.</span><span class="sxs-lookup"><span data-stu-id="9996c-110">[in] A pointer to a GUID that defines the type of the document.</span></span>  
+ <span data-ttu-id="b2849-110">'ndaki Belge türünü tanımlayan GUID için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="b2849-110">[in] A pointer to a GUID that defines the type of the document.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="9996c-111">[out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="9996c-111">[out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span></span>  
+ <span data-ttu-id="b2849-111">dışı Döndürülen [ıdimunmanagedwriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) arabirimine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="b2849-111">[out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9996c-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="9996c-112">Return Value</span></span>  
- <span data-ttu-id="9996c-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="9996c-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b2849-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="b2849-112">Return Value</span></span>  
+ <span data-ttu-id="b2849-113">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="b2849-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9996c-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9996c-114">Requirements</span></span>  
- <span data-ttu-id="9996c-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9996c-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2849-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b2849-114">Requirements</span></span>  
+ <span data-ttu-id="b2849-115">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="b2849-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9996c-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9996c-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2849-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b2849-116">See also</span></span>
 
-- [<span data-ttu-id="9996c-117">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9996c-117">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="b2849-117">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b2849-117">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

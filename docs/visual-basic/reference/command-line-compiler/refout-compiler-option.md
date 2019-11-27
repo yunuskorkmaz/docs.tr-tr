@@ -14,33 +14,33 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348649"
 ---
-# <a name="-refout-visual-basic"></a><span data-ttu-id="71a41-102">-refout (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="71a41-102">-refout (Visual Basic)</span></span>
+# <a name="-refout-visual-basic"></a><span data-ttu-id="83b27-102">-refout (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="83b27-102">-refout (Visual Basic)</span></span>
 
-<span data-ttu-id="71a41-103">The **-refout** option specifies a file path where the reference assembly should be output.</span><span class="sxs-lookup"><span data-stu-id="71a41-103">The **-refout** option specifies a file path where the reference assembly should be output.</span></span>
+<span data-ttu-id="83b27-103">**-Refout** seçeneği, başvuru derlemesinin çıkış olması gereken bir dosya yolunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="83b27-103">The **-refout** option specifies a file path where the reference assembly should be output.</span></span>
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
-## <a name="syntax"></a><span data-ttu-id="71a41-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="71a41-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="83b27-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="83b27-104">Syntax</span></span>
 
 ```console
 -refout:filepath
 ```
 
-## <a name="arguments"></a><span data-ttu-id="71a41-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="71a41-105">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="83b27-105">Bağımsız Değişkenler</span><span class="sxs-lookup"><span data-stu-id="83b27-105">Arguments</span></span>
 
 `filepath`  
-<span data-ttu-id="71a41-106">The path and filename of the reference assembly.</span><span class="sxs-lookup"><span data-stu-id="71a41-106">The path and filename of the reference assembly.</span></span> <span data-ttu-id="71a41-107">It should generally be in a sub-folder of the primary assembly.</span><span class="sxs-lookup"><span data-stu-id="71a41-107">It should generally be in a sub-folder of the primary assembly.</span></span> <span data-ttu-id="71a41-108">The recommended convention (used by MSBuild) is to place the reference assembly in a "ref/" sub-folder relative to the primary assembly.</span><span class="sxs-lookup"><span data-stu-id="71a41-108">The recommended convention (used by MSBuild) is to place the reference assembly in a "ref/" sub-folder relative to the primary assembly.</span></span> <span data-ttu-id="71a41-109">All folders in `filepath` must exist; the compiler does not create them.</span><span class="sxs-lookup"><span data-stu-id="71a41-109">All folders in `filepath` must exist; the compiler does not create them.</span></span>
+<span data-ttu-id="83b27-106">Başvuru derlemesinin yolu ve dosya adı.</span><span class="sxs-lookup"><span data-stu-id="83b27-106">The path and filename of the reference assembly.</span></span> <span data-ttu-id="83b27-107">Genellikle birincil derlemenin alt klasöründe olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="83b27-107">It should generally be in a sub-folder of the primary assembly.</span></span> <span data-ttu-id="83b27-108">Önerilen kural (MSBuild tarafından kullanılır), başvuru derlemesini birincil derlemeye göre bir "ref/" alt klasörüne yerleştirmelidir.</span><span class="sxs-lookup"><span data-stu-id="83b27-108">The recommended convention (used by MSBuild) is to place the reference assembly in a "ref/" sub-folder relative to the primary assembly.</span></span> <span data-ttu-id="83b27-109">`filepath` tüm klasörler var olmalıdır; derleyici bunları oluşturmaz.</span><span class="sxs-lookup"><span data-stu-id="83b27-109">All folders in `filepath` must exist; the compiler does not create them.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="71a41-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="71a41-110">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="83b27-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="83b27-110">Remarks</span></span>
 
-<span data-ttu-id="71a41-111">Visual Basic supports the `-refout` switch starting with version 15.3.</span><span class="sxs-lookup"><span data-stu-id="71a41-111">Visual Basic supports the `-refout` switch starting with version 15.3.</span></span>
+<span data-ttu-id="83b27-111">Visual Basic, sürüm 15,3 ' den başlayarak `-refout` anahtarını destekler.</span><span class="sxs-lookup"><span data-stu-id="83b27-111">Visual Basic supports the `-refout` switch starting with version 15.3.</span></span>
 
-<span data-ttu-id="71a41-112">Reference assemblies are a special type of assembly that contain only the minimum amount of metadata required to represent the library's public API surface.</span><span class="sxs-lookup"><span data-stu-id="71a41-112">Reference assemblies are a special type of assembly that contain only the minimum amount of metadata required to represent the library's public API surface.</span></span> <span data-ttu-id="71a41-113">They include declarations for all members that are significant when referencing an assembly in build tools, but exclude all member implementations and declarations of private members that have no observable impact on their API contract.</span><span class="sxs-lookup"><span data-stu-id="71a41-113">They include declarations for all members that are significant when referencing an assembly in build tools, but exclude all member implementations and declarations of private members that have no observable impact on their API contract.</span></span> <span data-ttu-id="71a41-114">For more information, see [Reference assemblies](../../../standard/assembly/reference-assemblies.md) in .NET Guide.</span><span class="sxs-lookup"><span data-stu-id="71a41-114">For more information, see [Reference assemblies](../../../standard/assembly/reference-assemblies.md) in .NET Guide.</span></span>
+<span data-ttu-id="83b27-112">Başvuru derlemeleri, kitaplığın ortak API yüzeyini göstermek için gereken en düşük meta veri miktarını içeren özel bir derleme türüdür.</span><span class="sxs-lookup"><span data-stu-id="83b27-112">Reference assemblies are a special type of assembly that contain only the minimum amount of metadata required to represent the library's public API surface.</span></span> <span data-ttu-id="83b27-113">Derleme araçlarındaki bir derlemeye başvururken önemli olan tüm Üyeler için bildirimler içerirler, ancak API sözleşmeleri üzerinde herhangi bir observable etkisi olmayan özel üyelerin tüm üye uygulamalarını ve bildirimlerini hariç tutar.</span><span class="sxs-lookup"><span data-stu-id="83b27-113">They include declarations for all members that are significant when referencing an assembly in build tools, but exclude all member implementations and declarations of private members that have no observable impact on their API contract.</span></span> <span data-ttu-id="83b27-114">Daha fazla bilgi için bkz. .NET kılavuzundaki [başvuru derlemeleri](../../../standard/assembly/reference-assemblies.md) .</span><span class="sxs-lookup"><span data-stu-id="83b27-114">For more information, see [Reference assemblies](../../../standard/assembly/reference-assemblies.md) in .NET Guide.</span></span>
 
-<span data-ttu-id="71a41-115">The `-refout` and [`-refonly`](refonly-compiler-option.md) options are mutually exclusive.</span><span class="sxs-lookup"><span data-stu-id="71a41-115">The `-refout` and [`-refonly`](refonly-compiler-option.md) options are mutually exclusive.</span></span>
+<span data-ttu-id="83b27-115">`-refout` ve [`-refonly`](refonly-compiler-option.md) seçenekleri birbirini dışlıyor.</span><span class="sxs-lookup"><span data-stu-id="83b27-115">The `-refout` and [`-refonly`](refonly-compiler-option.md) options are mutually exclusive.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="71a41-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="71a41-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="83b27-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="83b27-116">See also</span></span>
 
-- [<span data-ttu-id="71a41-117">-refonly</span><span class="sxs-lookup"><span data-stu-id="71a41-117">-refonly</span></span>](refonly-compiler-option.md)
-- [<span data-ttu-id="71a41-118">Visual Basic Command-Line Compiler</span><span class="sxs-lookup"><span data-stu-id="71a41-118">Visual Basic Command-Line Compiler</span></span>](index.md)
-- [<span data-ttu-id="71a41-119">Örnek Derleme Komut Satırları</span><span class="sxs-lookup"><span data-stu-id="71a41-119">Sample Compilation Command Lines</span></span>](sample-compilation-command-lines.md)
+- [<span data-ttu-id="83b27-117">-refonly</span><span class="sxs-lookup"><span data-stu-id="83b27-117">-refonly</span></span>](refonly-compiler-option.md)
+- [<span data-ttu-id="83b27-118">Visual Basic komut satırı derleyicisi</span><span class="sxs-lookup"><span data-stu-id="83b27-118">Visual Basic Command-Line Compiler</span></span>](index.md)
+- [<span data-ttu-id="83b27-119">Örnek Derleme Komut Satırları</span><span class="sxs-lookup"><span data-stu-id="83b27-119">Sample Compilation Command Lines</span></span>](sample-compilation-command-lines.md)

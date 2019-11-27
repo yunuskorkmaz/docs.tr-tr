@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo10::ResumeRuntime
+title: 'ICorProfilerInfo10:: ResumeRuntime'
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -18,26 +18,26 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449805"
 ---
-# <a name="icorprofilerinfo10resumeruntime-method"></a><span data-ttu-id="f9e3e-102">ICorProfilerInfo10::ResumeRuntime Method</span><span class="sxs-lookup"><span data-stu-id="f9e3e-102">ICorProfilerInfo10::ResumeRuntime Method</span></span>
+# <a name="icorprofilerinfo10resumeruntime-method"></a><span data-ttu-id="6f708-102">ICorProfilerInfo10:: ResumeRuntime yöntemi</span><span class="sxs-lookup"><span data-stu-id="6f708-102">ICorProfilerInfo10::ResumeRuntime Method</span></span>
 
-<span data-ttu-id="f9e3e-103">Resumes the runtime without performing a GC.</span><span class="sxs-lookup"><span data-stu-id="f9e3e-103">Resumes the runtime without performing a GC.</span></span>
+<span data-ttu-id="6f708-103">GC yapmadan çalışma zamanını sürdürür.</span><span class="sxs-lookup"><span data-stu-id="6f708-103">Resumes the runtime without performing a GC.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="f9e3e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f9e3e-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="6f708-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6f708-104">Syntax</span></span>
 
 ```cpp
 HRESULT ResumeRuntime();
 ```
 
-## <a name="requirements"></a><span data-ttu-id="f9e3e-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f9e3e-105">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="6f708-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6f708-105">Requirements</span></span>
 
-<span data-ttu-id="f9e3e-106">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="f9e3e-106">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>
+<span data-ttu-id="6f708-106">**Platformlar:** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="6f708-106">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>
 
-<span data-ttu-id="f9e3e-107">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f9e3e-107">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="6f708-107">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="6f708-107">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="f9e3e-108">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f9e3e-108">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="6f708-108">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="6f708-108">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="f9e3e-109">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9e3e-109">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
+<span data-ttu-id="6f708-109">**.NET sürümleri:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f708-109">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f9e3e-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f9e3e-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6f708-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6f708-110">See also</span></span>
 
-- [<span data-ttu-id="f9e3e-111">ICorProfilerInfo10 Interface</span><span class="sxs-lookup"><span data-stu-id="f9e3e-111">ICorProfilerInfo10 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [<span data-ttu-id="6f708-111">ICorProfilerInfo10 arabirimi</span><span class="sxs-lookup"><span data-stu-id="6f708-111">ICorProfilerInfo10 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

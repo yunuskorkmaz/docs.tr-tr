@@ -21,10 +21,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436620"
 ---
-# <a name="cornativelinktype-enumeration"></a><span data-ttu-id="639b9-102">CorNativeLinkType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="639b9-102">CorNativeLinkType Enumeration</span></span>
-<span data-ttu-id="639b9-103">Provides values that indicate the type linked in native code.</span><span class="sxs-lookup"><span data-stu-id="639b9-103">Provides values that indicate the type linked in native code.</span></span>  
+# <a name="cornativelinktype-enumeration"></a><span data-ttu-id="a21eb-102">CorNativeLinkType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="a21eb-102">CorNativeLinkType Enumeration</span></span>
+<span data-ttu-id="a21eb-103">Yerel kodda bağlantılı türü gösteren değerler sağlar.</span><span class="sxs-lookup"><span data-stu-id="a21eb-103">Provides values that indicate the type linked in native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="639b9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="639b9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a21eb-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a21eb-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum   
@@ -38,26 +38,26 @@ typedef enum
 } CorNativeLinkType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="639b9-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="639b9-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a21eb-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="a21eb-105">Members</span></span>  
   
-|<span data-ttu-id="639b9-106">Üye</span><span class="sxs-lookup"><span data-stu-id="639b9-106">Member</span></span>|<span data-ttu-id="639b9-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="639b9-107">Description</span></span>|  
+|<span data-ttu-id="a21eb-106">Üye</span><span class="sxs-lookup"><span data-stu-id="a21eb-106">Member</span></span>|<span data-ttu-id="a21eb-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a21eb-107">Description</span></span>|  
 |------------|-----------------|  
-|`nltNone`|<span data-ttu-id="639b9-108">Indicates that none of the keywords are specified.</span><span class="sxs-lookup"><span data-stu-id="639b9-108">Indicates that none of the keywords are specified.</span></span>|  
-|`nltAnsi`|<span data-ttu-id="639b9-109">Indicates that an ANSI keyword is specified.</span><span class="sxs-lookup"><span data-stu-id="639b9-109">Indicates that an ANSI keyword is specified.</span></span>|  
-|`nltUnicode`|<span data-ttu-id="639b9-110">Indicates that a Unicode keyword is specified</span><span class="sxs-lookup"><span data-stu-id="639b9-110">Indicates that a Unicode keyword is specified</span></span>|  
-|`nltAuto`|<span data-ttu-id="639b9-111">Indicates that an auto keyword is specified.</span><span class="sxs-lookup"><span data-stu-id="639b9-111">Indicates that an auto keyword is specified.</span></span>|  
-|`nltOle`|<span data-ttu-id="639b9-112">Indicates that an OLE keyword is specified.</span><span class="sxs-lookup"><span data-stu-id="639b9-112">Indicates that an OLE keyword is specified.</span></span>|  
-|`nltMaxValue`|<span data-ttu-id="639b9-113">Kullanılmadı.</span><span class="sxs-lookup"><span data-stu-id="639b9-113">Not used.</span></span>|  
+|`nltNone`|<span data-ttu-id="a21eb-108">Anahtar sözcüklerin hiçbirinin belirtilmediğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="a21eb-108">Indicates that none of the keywords are specified.</span></span>|  
+|`nltAnsi`|<span data-ttu-id="a21eb-109">Bir ANSI anahtar sözcüğünün belirtildiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="a21eb-109">Indicates that an ANSI keyword is specified.</span></span>|  
+|`nltUnicode`|<span data-ttu-id="a21eb-110">Unicode anahtar sözcüğünün belirtildiğini belirtir</span><span class="sxs-lookup"><span data-stu-id="a21eb-110">Indicates that a Unicode keyword is specified</span></span>|  
+|`nltAuto`|<span data-ttu-id="a21eb-111">Bir auto anahtar sözcüğünün belirtildiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="a21eb-111">Indicates that an auto keyword is specified.</span></span>|  
+|`nltOle`|<span data-ttu-id="a21eb-112">OLE anahtar sözcüğünün belirtildiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="a21eb-112">Indicates that an OLE keyword is specified.</span></span>|  
+|`nltMaxValue`|<span data-ttu-id="a21eb-113">Kullanılmadı.</span><span class="sxs-lookup"><span data-stu-id="a21eb-113">Not used.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="639b9-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="639b9-114">Requirements</span></span>  
- <span data-ttu-id="639b9-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="639b9-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a21eb-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a21eb-114">Requirements</span></span>  
+ <span data-ttu-id="a21eb-115">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a21eb-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="639b9-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="639b9-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a21eb-116">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="a21eb-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="639b9-117">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="639b9-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a21eb-117">**Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir</span><span class="sxs-lookup"><span data-stu-id="a21eb-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="639b9-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="639b9-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a21eb-118">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a21eb-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="639b9-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="639b9-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a21eb-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a21eb-119">See also</span></span>
 
-- [<span data-ttu-id="639b9-120">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="639b9-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="a21eb-120">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="a21eb-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

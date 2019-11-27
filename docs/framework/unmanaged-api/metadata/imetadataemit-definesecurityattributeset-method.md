@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428250"
 ---
-# <a name="imetadataemitdefinesecurityattributeset-method"></a><span data-ttu-id="5db24-102">IMetaDataEmit::DefineSecurityAttributeSet Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5db24-102">IMetaDataEmit::DefineSecurityAttributeSet Method</span></span>
-<span data-ttu-id="5db24-103">Creates a set of security permissions to attach to the object referenced by the specified token.</span><span class="sxs-lookup"><span data-stu-id="5db24-103">Creates a set of security permissions to attach to the object referenced by the specified token.</span></span>  
+# <a name="imetadataemitdefinesecurityattributeset-method"></a><span data-ttu-id="7a7f7-102">IMetaDataEmit::DefineSecurityAttributeSet Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7a7f7-102">IMetaDataEmit::DefineSecurityAttributeSet Method</span></span>
+<span data-ttu-id="7a7f7-103">Belirtilen belirteç tarafından başvurulan nesneye iliştirilecek bir güvenlik izinleri kümesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="7a7f7-103">Creates a set of security permissions to attach to the object referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5db24-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5db24-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7a7f7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7a7f7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineSecurityAttributeSet (   
@@ -36,29 +36,29 @@ HRESULT DefineSecurityAttributeSet (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5db24-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5db24-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7a7f7-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7a7f7-105">Parameters</span></span>  
  `tkObj`  
- <span data-ttu-id="5db24-106">[in] The token to which the security information is attached.</span><span class="sxs-lookup"><span data-stu-id="5db24-106">[in] The token to which the security information is attached.</span></span>  
+ <span data-ttu-id="7a7f7-106">'ndaki Güvenlik bilgilerinin eklendiği belirteç.</span><span class="sxs-lookup"><span data-stu-id="7a7f7-106">[in] The token to which the security information is attached.</span></span>  
   
  `rSecAttrs`  
- <span data-ttu-id="5db24-107">[in] An array of `COR_SECATTR` structures.</span><span class="sxs-lookup"><span data-stu-id="5db24-107">[in] An array of `COR_SECATTR` structures.</span></span>  
+ <span data-ttu-id="7a7f7-107">'ndaki `COR_SECATTR` yapılarından oluşan bir dizi.</span><span class="sxs-lookup"><span data-stu-id="7a7f7-107">[in] An array of `COR_SECATTR` structures.</span></span>  
   
  `cSecAttrs`  
- <span data-ttu-id="5db24-108">[in] The number of elements in `rSecAttrs`.</span><span class="sxs-lookup"><span data-stu-id="5db24-108">[in] The number of elements in `rSecAttrs`.</span></span>  
+ <span data-ttu-id="7a7f7-108">'ndaki `rSecAttrs`öğe sayısı.</span><span class="sxs-lookup"><span data-stu-id="7a7f7-108">[in] The number of elements in `rSecAttrs`.</span></span>  
   
  `pulErrorAttr`  
- <span data-ttu-id="5db24-109">[out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.</span><span class="sxs-lookup"><span data-stu-id="5db24-109">[out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.</span></span>  
+ <span data-ttu-id="7a7f7-109">dışı Yöntem başarısız olursa, soruna neden olan öğenin `rSecAttrs` dizini belirtir.</span><span class="sxs-lookup"><span data-stu-id="7a7f7-109">[out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5db24-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5db24-110">Requirements</span></span>  
- <span data-ttu-id="5db24-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5db24-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7a7f7-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7a7f7-110">Requirements</span></span>  
+ <span data-ttu-id="7a7f7-111">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7a7f7-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5db24-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5db24-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7a7f7-112">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="7a7f7-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5db24-113">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5db24-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7a7f7-113">**Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="7a7f7-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5db24-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5db24-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7a7f7-114">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7a7f7-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5db24-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5db24-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7a7f7-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7a7f7-115">See also</span></span>
 
-- [<span data-ttu-id="5db24-116">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5db24-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="5db24-117">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5db24-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="7a7f7-116">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7a7f7-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="7a7f7-117">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7a7f7-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

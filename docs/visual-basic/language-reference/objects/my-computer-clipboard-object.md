@@ -12,25 +12,25 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344101"
 ---
-# <a name="mycomputerclipboard-object"></a><span data-ttu-id="faa6c-102">My.Computer.Clipboard Nesnesi</span><span class="sxs-lookup"><span data-stu-id="faa6c-102">My.Computer.Clipboard Object</span></span>
-<span data-ttu-id="faa6c-103">Provides methods for manipulating the Clipboard.</span><span class="sxs-lookup"><span data-stu-id="faa6c-103">Provides methods for manipulating the Clipboard.</span></span>  
+# <a name="mycomputerclipboard-object"></a><span data-ttu-id="bc7e9-102">My.Computer.Clipboard Nesnesi</span><span class="sxs-lookup"><span data-stu-id="bc7e9-102">My.Computer.Clipboard Object</span></span>
+<span data-ttu-id="bc7e9-103">Panoyu işlemek için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="bc7e9-103">Provides methods for manipulating the Clipboard.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="faa6c-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="faa6c-104">Remarks</span></span>  
- <span data-ttu-id="faa6c-105">For information about the methods and properties of the `My.Computer.Clipboard` object, see <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.</span><span class="sxs-lookup"><span data-stu-id="faa6c-105">For information about the methods and properties of the `My.Computer.Clipboard` object, see <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bc7e9-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="bc7e9-104">Remarks</span></span>  
+ <span data-ttu-id="bc7e9-105">`My.Computer.Clipboard` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.</span><span class="sxs-lookup"><span data-stu-id="bc7e9-105">For information about the methods and properties of the `My.Computer.Clipboard` object, see <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.</span></span>  
   
- <span data-ttu-id="faa6c-106">For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).</span><span class="sxs-lookup"><span data-stu-id="faa6c-106">For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).</span></span>  
+ <span data-ttu-id="bc7e9-106">Daha fazla bilgi için bkz. [Verileri Panoda Depolama ve Panodan Okuma](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).</span><span class="sxs-lookup"><span data-stu-id="bc7e9-106">For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="faa6c-107">You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.</span><span class="sxs-lookup"><span data-stu-id="faa6c-107">You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.</span></span>  
+> <span data-ttu-id="bc7e9-107">Panoyu değiştirmek için <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> sınıfının yöntemlerini de kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bc7e9-107">You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="faa6c-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="faa6c-108">Requirements</span></span>  
- <span data-ttu-id="faa6c-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="faa6c-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="bc7e9-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bc7e9-108">Requirements</span></span>  
+ <span data-ttu-id="bc7e9-109">**Ad alanı:** <xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="bc7e9-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
   
- <span data-ttu-id="faa6c-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)</span><span class="sxs-lookup"><span data-stu-id="faa6c-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)</span></span>  
+ <span data-ttu-id="bc7e9-110">**Sınıf:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (<xref:System.Windows.Forms.Clipboard>erişim sağlar)</span><span class="sxs-lookup"><span data-stu-id="bc7e9-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)</span></span>  
   
- <span data-ttu-id="faa6c-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="faa6c-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="bc7e9-111">**Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)</span><span class="sxs-lookup"><span data-stu-id="bc7e9-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="faa6c-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="faa6c-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bc7e9-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bc7e9-112">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>
-- [<span data-ttu-id="faa6c-113">My.Computer Nesnesi</span><span class="sxs-lookup"><span data-stu-id="faa6c-113">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [<span data-ttu-id="bc7e9-113">My.Computer Nesnesi</span><span class="sxs-lookup"><span data-stu-id="bc7e9-113">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

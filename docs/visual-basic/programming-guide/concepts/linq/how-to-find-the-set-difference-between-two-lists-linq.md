@@ -9,14 +9,14 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344578"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a><span data-ttu-id="a321b-102">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a321b-102">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="a321b-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span><span class="sxs-lookup"><span data-stu-id="a321b-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a><span data-ttu-id="68960-102">Nasıl yapılır: Iki liste arasındaki küme farkını bulma (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="68960-102">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="68960-103">Bu örnek, iki dize listesini karşılaştırmak ve names1. txt içinde olan ancak names2. txt içinde olmayan satırları çıkarmak için LINQ 'ın nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="68960-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="a321b-104">To create the data files</span><span class="sxs-lookup"><span data-stu-id="a321b-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="68960-104">Veri dosyalarını oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="68960-104">To create the data files</span></span>  
   
-1. <span data-ttu-id="a321b-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span><span class="sxs-lookup"><span data-stu-id="a321b-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
+1. <span data-ttu-id="68960-105">Names1. txt ve names2. txt ' i [nasıl yapılır: birleştirme ve karşılaştırma dize koleksiyonlarını (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)gösterildiği gibi çözüm klasörünüze kopyalayın.</span><span class="sxs-lookup"><span data-stu-id="68960-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a321b-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="a321b-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="68960-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="68960-106">Example</span></span>  
   
 ```vb  
 Class CompareLists  
@@ -51,11 +51,11 @@ End Class
 ' Garcia, Debra  
 ```  
   
- <span data-ttu-id="a321b-107">Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span><span class="sxs-lookup"><span data-stu-id="a321b-107">Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
+ <span data-ttu-id="68960-107">Visual Basic <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>ve <xref:System.Linq.Enumerable.Concat%2A>gibi bazı sorgu işlemleri türleri yalnızca Yöntem tabanlı sözdiziminde ifade edilebilir.</span><span class="sxs-lookup"><span data-stu-id="68960-107">Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a321b-108">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="a321b-108">Compiling the Code</span></span>  
-<span data-ttu-id="a321b-109">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span><span class="sxs-lookup"><span data-stu-id="a321b-109">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="68960-108">Kod Derleme</span><span class="sxs-lookup"><span data-stu-id="68960-108">Compiling the Code</span></span>  
+<span data-ttu-id="68960-109">System. Linq ad alanı için `Imports` ifadesiyle bir VB.NET konsol uygulaması projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="68960-109">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="a321b-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a321b-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="68960-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="68960-110">See also</span></span>
 
-- [<span data-ttu-id="a321b-111">LINQ and Strings (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a321b-111">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="68960-111">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="68960-111">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

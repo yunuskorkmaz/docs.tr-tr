@@ -22,18 +22,18 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351458"
 ---
-# <a name="notinheritable-visual-basic"></a><span data-ttu-id="9a02f-102">NotInheritable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9a02f-102">NotInheritable (Visual Basic)</span></span>
-<span data-ttu-id="9a02f-103">Specifies that a class cannot be used as a base class.</span><span class="sxs-lookup"><span data-stu-id="9a02f-103">Specifies that a class cannot be used as a base class.</span></span>  
+# <a name="notinheritable-visual-basic"></a><span data-ttu-id="6ed9f-102">NotInheritable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6ed9f-102">NotInheritable (Visual Basic)</span></span>
+<span data-ttu-id="6ed9f-103">Bir sınıfın temel sınıf olarak kullanılamayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="6ed9f-103">Specifies that a class cannot be used as a base class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9a02f-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9a02f-104">Remarks</span></span>  
- <span data-ttu-id="9a02f-105">**Alternate Terms**.</span><span class="sxs-lookup"><span data-stu-id="9a02f-105">**Alternate Terms**.</span></span> <span data-ttu-id="9a02f-106">A class that cannot be inherited is sometimes called a *sealed* class.</span><span class="sxs-lookup"><span data-stu-id="9a02f-106">A class that cannot be inherited is sometimes called a *sealed* class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6ed9f-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6ed9f-104">Remarks</span></span>  
+ <span data-ttu-id="6ed9f-105">**Alternatif terimler**.</span><span class="sxs-lookup"><span data-stu-id="6ed9f-105">**Alternate Terms**.</span></span> <span data-ttu-id="6ed9f-106">Devralınmayan bir sınıf bazen *Sealed* sınıf olarak adlandırılır.</span><span class="sxs-lookup"><span data-stu-id="6ed9f-106">A class that cannot be inherited is sometimes called a *sealed* class.</span></span>  
   
- <span data-ttu-id="9a02f-107">The `NotInheritable` modifier can be used in this context:</span><span class="sxs-lookup"><span data-stu-id="9a02f-107">The `NotInheritable` modifier can be used in this context:</span></span>  
+ <span data-ttu-id="6ed9f-107">`NotInheritable` değiştiricisi Bu bağlamda kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="6ed9f-107">The `NotInheritable` modifier can be used in this context:</span></span>  
   
- [<span data-ttu-id="9a02f-108">Class Deyimi</span><span class="sxs-lookup"><span data-stu-id="9a02f-108">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="6ed9f-108">Class Deyimi</span><span class="sxs-lookup"><span data-stu-id="6ed9f-108">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9a02f-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9a02f-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6ed9f-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6ed9f-109">See also</span></span>
 
-- [<span data-ttu-id="9a02f-110">Inherits Deyimi</span><span class="sxs-lookup"><span data-stu-id="9a02f-110">Inherits Statement</span></span>](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [<span data-ttu-id="9a02f-111">MustInherit</span><span class="sxs-lookup"><span data-stu-id="9a02f-111">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)
-- [<span data-ttu-id="9a02f-112">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="9a02f-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="6ed9f-110">Inherits Deyimi</span><span class="sxs-lookup"><span data-stu-id="6ed9f-110">Inherits Statement</span></span>](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [<span data-ttu-id="6ed9f-111">MustInherit</span><span class="sxs-lookup"><span data-stu-id="6ed9f-111">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [<span data-ttu-id="6ed9f-112">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="6ed9f-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

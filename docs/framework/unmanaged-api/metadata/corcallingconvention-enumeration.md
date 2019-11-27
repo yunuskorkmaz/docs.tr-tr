@@ -21,10 +21,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443839"
 ---
-# <a name="corcallingconvention-enumeration"></a><span data-ttu-id="f1bc8-102">CorCallingConvention Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="f1bc8-102">CorCallingConvention Enumeration</span></span>
-<span data-ttu-id="f1bc8-103">Contains values that describe the types of calling conventions that are made in managed code.</span><span class="sxs-lookup"><span data-stu-id="f1bc8-103">Contains values that describe the types of calling conventions that are made in managed code.</span></span>  
+# <a name="corcallingconvention-enumeration"></a><span data-ttu-id="c33f4-102">CorCallingConvention Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="c33f4-102">CorCallingConvention Enumeration</span></span>
+<span data-ttu-id="c33f4-103">Yönetilen kodda yapılan çağırma kurallarının türlerini tanımlayan değerleri içerir.</span><span class="sxs-lookup"><span data-stu-id="c33f4-103">Contains values that describe the types of calling conventions that are made in managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f1bc8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f1bc8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c33f4-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c33f4-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorCallingConvention  
@@ -48,31 +48,31 @@ typedef enum CorCallingConvention
 } CorCallingConvention;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f1bc8-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="f1bc8-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c33f4-105">Üyeleri</span><span class="sxs-lookup"><span data-stu-id="c33f4-105">Members</span></span>  
   
-|<span data-ttu-id="f1bc8-106">Üye</span><span class="sxs-lookup"><span data-stu-id="f1bc8-106">Member</span></span>|<span data-ttu-id="f1bc8-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f1bc8-107">Description</span></span>|  
+|<span data-ttu-id="c33f4-106">Üyesi</span><span class="sxs-lookup"><span data-stu-id="c33f4-106">Member</span></span>|<span data-ttu-id="c33f4-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c33f4-107">Description</span></span>|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|<span data-ttu-id="f1bc8-108">Indicates a default calling convention.</span><span class="sxs-lookup"><span data-stu-id="f1bc8-108">Indicates a default calling convention.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|<span data-ttu-id="f1bc8-109">Indicates that the method takes a variable number of parameters.</span><span class="sxs-lookup"><span data-stu-id="f1bc8-109">Indicates that the method takes a variable number of parameters.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|<span data-ttu-id="f1bc8-110">Indicates that the call is to a field.</span><span class="sxs-lookup"><span data-stu-id="f1bc8-110">Indicates that the call is to a field.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|<span data-ttu-id="f1bc8-111">Indicates that the call is to a local method.</span><span class="sxs-lookup"><span data-stu-id="f1bc8-111">Indicates that the call is to a local method.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|<span data-ttu-id="f1bc8-112">Indicates that the call is to a property.</span><span class="sxs-lookup"><span data-stu-id="f1bc8-112">Indicates that the call is to a property.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|<span data-ttu-id="f1bc8-113">Indicates that the call is unmanaged.</span><span class="sxs-lookup"><span data-stu-id="f1bc8-113">Indicates that the call is unmanaged.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|<span data-ttu-id="f1bc8-114">Indicates a generic method instantiation.</span><span class="sxs-lookup"><span data-stu-id="f1bc8-114">Indicates a generic method instantiation.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|<span data-ttu-id="f1bc8-115">Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.</span><span class="sxs-lookup"><span data-stu-id="f1bc8-115">Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|<span data-ttu-id="f1bc8-116">Describes an invalid 4-bit value.</span><span class="sxs-lookup"><span data-stu-id="f1bc8-116">Describes an invalid 4-bit value.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|<span data-ttu-id="f1bc8-117">Indicates that the calling convention is described by the bottom four bits.</span><span class="sxs-lookup"><span data-stu-id="f1bc8-117">Indicates that the calling convention is described by the bottom four bits.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|<span data-ttu-id="f1bc8-118">Indicates that the top bit describes a `this` parameter.</span><span class="sxs-lookup"><span data-stu-id="f1bc8-118">Indicates that the top bit describes a `this` parameter.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|<span data-ttu-id="f1bc8-119">Indicates that a `this` parameter is explicitly described in the signature.</span><span class="sxs-lookup"><span data-stu-id="f1bc8-119">Indicates that a `this` parameter is explicitly described in the signature.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|<span data-ttu-id="f1bc8-120">Indicates a generic method signature with an explicit number of type arguments.</span><span class="sxs-lookup"><span data-stu-id="f1bc8-120">Indicates a generic method signature with an explicit number of type arguments.</span></span> <span data-ttu-id="f1bc8-121">This precedes an ordinary parameter count.</span><span class="sxs-lookup"><span data-stu-id="f1bc8-121">This precedes an ordinary parameter count.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|<span data-ttu-id="c33f4-108">Varsayılan bir çağırma kuralını gösterir.</span><span class="sxs-lookup"><span data-stu-id="c33f4-108">Indicates a default calling convention.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|<span data-ttu-id="c33f4-109">Yöntemin değişken sayıda parametre aldığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="c33f4-109">Indicates that the method takes a variable number of parameters.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|<span data-ttu-id="c33f4-110">Çağrının bir alana olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="c33f4-110">Indicates that the call is to a field.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|<span data-ttu-id="c33f4-111">Çağrının yerel bir yönteme olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="c33f4-111">Indicates that the call is to a local method.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|<span data-ttu-id="c33f4-112">Çağrının bir özelliğe olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="c33f4-112">Indicates that the call is to a property.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|<span data-ttu-id="c33f4-113">Çağrının yönetilmeyen olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="c33f4-113">Indicates that the call is unmanaged.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|<span data-ttu-id="c33f4-114">Genel bir yöntem örneklemeyi gösterir.</span><span class="sxs-lookup"><span data-stu-id="c33f4-114">Indicates a generic method instantiation.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|<span data-ttu-id="c33f4-115">Değişken sayıda parametre alan bir yönteme 64 bitlik bir PInvoke çağrısını gösterir.</span><span class="sxs-lookup"><span data-stu-id="c33f4-115">Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|<span data-ttu-id="c33f4-116">Geçersiz 4 bitlik bir değeri açıklar.</span><span class="sxs-lookup"><span data-stu-id="c33f4-116">Describes an invalid 4-bit value.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|<span data-ttu-id="c33f4-117">Çağırma kuralının en alttaki dört bit tarafından açıklandığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="c33f4-117">Indicates that the calling convention is described by the bottom four bits.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|<span data-ttu-id="c33f4-118">En üstteki bitin bir `this` parametresi tanımlıyor olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="c33f4-118">Indicates that the top bit describes a `this` parameter.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|<span data-ttu-id="c33f4-119">`this` parametresinin İmzada açıkça açıklandığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="c33f4-119">Indicates that a `this` parameter is explicitly described in the signature.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|<span data-ttu-id="c33f4-120">Açık sayıda tür bağımsız değişkeni olan bir genel yöntem imzasını gösterir.</span><span class="sxs-lookup"><span data-stu-id="c33f4-120">Indicates a generic method signature with an explicit number of type arguments.</span></span> <span data-ttu-id="c33f4-121">Bu, normal bir parametre sayısından önce gelir.</span><span class="sxs-lookup"><span data-stu-id="c33f4-121">This precedes an ordinary parameter count.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f1bc8-122">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f1bc8-122">Requirements</span></span>  
- <span data-ttu-id="f1bc8-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f1bc8-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c33f4-122">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c33f4-122">Requirements</span></span>  
+ <span data-ttu-id="c33f4-123">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c33f4-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f1bc8-124">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="f1bc8-124">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="c33f4-124">**Üst bilgi:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="c33f4-124">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="f1bc8-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1bc8-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c33f4-125">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c33f4-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1bc8-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f1bc8-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c33f4-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c33f4-126">See also</span></span>
 
-- [<span data-ttu-id="f1bc8-127">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="f1bc8-127">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="c33f4-127">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="c33f4-127">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

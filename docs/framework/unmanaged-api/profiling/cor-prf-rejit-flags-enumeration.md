@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450393"
 ---
-# <a name="cor_prf_rejit_flags-enumeration"></a><span data-ttu-id="7d362-102">COR_PRF_REJIT_FLAGS Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="7d362-102">COR_PRF_REJIT_FLAGS Enumeration</span></span>
-<span data-ttu-id="7d362-103">Contains values that indicate how the [ICorProfilerInfo10::RequestReJITWithInliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) API should behave.</span><span class="sxs-lookup"><span data-stu-id="7d362-103">Contains values that indicate how the [ICorProfilerInfo10::RequestReJITWithInliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) API should behave.</span></span>  
+# <a name="cor_prf_rejit_flags-enumeration"></a><span data-ttu-id="35d17-102">COR_PRF_REJIT_FLAGS Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="35d17-102">COR_PRF_REJIT_FLAGS Enumeration</span></span>
+<span data-ttu-id="35d17-103">[ICorProfilerInfo10:: RequestReJITWithInliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) API 'sinin nasıl davrandığını belirten değerleri içerir.</span><span class="sxs-lookup"><span data-stu-id="35d17-103">Contains values that indicate how the [ICorProfilerInfo10::RequestReJITWithInliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) API should behave.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7d362-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7d362-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="35d17-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="35d17-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum  
@@ -35,22 +35,22 @@ typedef enum
 } COR_PRF_REJIT_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="7d362-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="7d362-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="35d17-105">Üyeleri</span><span class="sxs-lookup"><span data-stu-id="35d17-105">Members</span></span>  
   
-|<span data-ttu-id="7d362-106">Üye</span><span class="sxs-lookup"><span data-stu-id="7d362-106">Member</span></span>|<span data-ttu-id="7d362-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7d362-107">Description</span></span>|  
+|<span data-ttu-id="35d17-106">Üyesi</span><span class="sxs-lookup"><span data-stu-id="35d17-106">Member</span></span>|<span data-ttu-id="35d17-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="35d17-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_REJIT_BLOCK_INLINING`| <span data-ttu-id="7d362-108">ReJITted methods will be blocked from being inlined in other methods.</span><span class="sxs-lookup"><span data-stu-id="7d362-108">ReJITted methods will be blocked from being inlined in other methods.</span></span> |  
-|`COR_PRF_REJIT_INLINING_CALLBACKS`| <span data-ttu-id="7d362-109">Receive `GetFunctionParameters` callbacks for any methods that inline the methods requested to be ReJITted.</span><span class="sxs-lookup"><span data-stu-id="7d362-109">Receive `GetFunctionParameters` callbacks for any methods that inline the methods requested to be ReJITted.</span></span> |  
+|`COR_PRF_REJIT_BLOCK_INLINING`| <span data-ttu-id="35d17-108">Yeniden derlenen yöntemlerin diğer metotlarda satır içine alınmış olması engellenir.</span><span class="sxs-lookup"><span data-stu-id="35d17-108">ReJITted methods will be blocked from being inlined in other methods.</span></span> |  
+|`COR_PRF_REJIT_INLINING_CALLBACKS`| <span data-ttu-id="35d17-109">Yeniden derlenen yöntemlerin satır içi tüm yöntemler için `GetFunctionParameters` geri çağırmaları alın.</span><span class="sxs-lookup"><span data-stu-id="35d17-109">Receive `GetFunctionParameters` callbacks for any methods that inline the methods requested to be ReJITted.</span></span> |  
 
-## <a name="requirements"></a><span data-ttu-id="7d362-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7d362-110">Requirements</span></span>  
- <span data-ttu-id="7d362-111">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="7d362-111">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="35d17-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="35d17-110">Requirements</span></span>  
+ <span data-ttu-id="35d17-111">**Platformlar:** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="35d17-111">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>  
   
- <span data-ttu-id="7d362-112">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7d362-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="35d17-112">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="35d17-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7d362-113">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7d362-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="35d17-113">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="35d17-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7d362-114">**.NET Framework Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7d362-114">**.NET Framework Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]</span></span> 
+ <span data-ttu-id="35d17-114">**.NET Framework sürümleri:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]</span><span class="sxs-lookup"><span data-stu-id="35d17-114">**.NET Framework Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]</span></span> 
   
-## <a name="see-also"></a><span data-ttu-id="7d362-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7d362-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="35d17-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="35d17-115">See also</span></span>
 
-- [<span data-ttu-id="7d362-116">Profil Oluşturma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="7d362-116">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="35d17-116">Profil Oluşturma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="35d17-116">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

@@ -22,22 +22,22 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428094"
 ---
-# <a name="isymunmanagedwriterclosenamespace-method"></a><span data-ttu-id="145f0-102">ISymUnmanagedWriter::CloseNamespace Yöntemi</span><span class="sxs-lookup"><span data-stu-id="145f0-102">ISymUnmanagedWriter::CloseNamespace Method</span></span>
-<span data-ttu-id="145f0-103">Closes the most recently opened namespace.</span><span class="sxs-lookup"><span data-stu-id="145f0-103">Closes the most recently opened namespace.</span></span>  
+# <a name="isymunmanagedwriterclosenamespace-method"></a><span data-ttu-id="b6601-102">ISymUnmanagedWriter::CloseNamespace Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b6601-102">ISymUnmanagedWriter::CloseNamespace Method</span></span>
+<span data-ttu-id="b6601-103">En son açılan ad alanını kapatır.</span><span class="sxs-lookup"><span data-stu-id="b6601-103">Closes the most recently opened namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="145f0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="145f0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b6601-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b6601-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CloseNamespace();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="145f0-105">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="145f0-105">Return Value</span></span>  
- <span data-ttu-id="145f0-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="145f0-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b6601-105">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="b6601-105">Return Value</span></span>  
+ <span data-ttu-id="b6601-106">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="b6601-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="145f0-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="145f0-107">Requirements</span></span>  
- <span data-ttu-id="145f0-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="145f0-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b6601-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b6601-107">Requirements</span></span>  
+ <span data-ttu-id="b6601-108">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="b6601-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="145f0-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="145f0-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b6601-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b6601-109">See also</span></span>
 
-- [<span data-ttu-id="145f0-110">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="145f0-110">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="145f0-111">OpenNamespace Yöntemi</span><span class="sxs-lookup"><span data-stu-id="145f0-111">OpenNamespace Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-opennamespace-method.md)
+- [<span data-ttu-id="b6601-110">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b6601-110">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="b6601-111">OpenNamespace Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b6601-111">OpenNamespace Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-opennamespace-method.md)
