@@ -22,10 +22,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440821"
 ---
 # <a name="functionenter-function"></a>FunctionEnter İşlevi
-Notifies the profiler that control is being passed to a function.  
+Profil oluşturucuya denetimin bir işleve geçtiğini bildirir.  
   
 > [!NOTE]
-> The `FunctionEnter` function is deprecated in the .NET Framework version 2.0, and its use will incur a performance penalty. Use the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function instead.  
+> `FunctionEnter` işlevi, .NET Framework sürüm 2,0 ' de kullanımdan kaldırılmıştır ve kullanımı bir performans cezası olur. Bunun yerine [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) işlevini kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,29 +37,29 @@ void __stdcall FunctionEnter (
   
 ## <a name="parameters"></a>Parametreler  
  `funcID`  
- [in] The identifier of the function to which control is passed.  
+ 'ndaki Denetimin geçirildiği işlevin tanımlayıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `FunctionEnter` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+ `FunctionEnter` işlevi bir geri çağırmasıdır; Uygulamanızı uygulamanız gerekir. Uygulamanın `__declspec`(`naked`) depolama sınıfı özniteliğini kullanması gerekir.  
   
- The execution engine does not save any registers before calling this function.  
+ Yürütme altyapısı, bu işlevi çağırmadan önce hiçbir kaydı kaydetmez.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- Girişte, kayan nokta birimi (FPU) dahil olmak üzere, kullandığınız tüm Yazmaçları kaydetmelisiniz.  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- Çıkışta, çağıran tarafından gönderilen tüm parametreleri kaldırarak yığını geri yüklemeniz gerekir.  
   
- The implementation of `FunctionEnter` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter` returns.  
+ `FunctionEnter` uygulanması çöp toplamayı ertelendirilemediğinden engellenmemelidir. Yığın atık toplama kolay bir durumda olmadığından uygulama çöp toplamayı denememelidir. Çöp toplama denendiğinde, çalışma zamanı `FunctionEnter` dönüşene kadar engeller.  
   
- Also, the `FunctionEnter` function must not call into managed code or in any way cause a managed memory allocation.  
+ Ayrıca, `FunctionEnter` işlevi yönetilen koda çağrı içermemelidir veya herhangi bir şekilde yönetilen bellek ayırmaya neden olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Üst bilgi:** CorProf. IDL  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework sürümleri:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

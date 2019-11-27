@@ -1,5 +1,5 @@
 ---
-title: Message.WriteStartHeaders Method (System.ServiceModel.Channels)
+title: Message. WriteStartHeaders yöntemi (System. ServiceModel. Channels)
 author: mairaw
 ms.author: mairaw
 ms.date: 11/01/2019
@@ -18,9 +18,9 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451180"
 ---
-# <a name="messagewritestartheaders-method"></a>Message.WriteStartHeaders Method
+# <a name="messagewritestartheaders-method"></a>Message. WriteStartHeaders yöntemi
 
-Writes the start header into an XML file by calling the <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A?displayProperty=nameWithType> method.
+Başlangıç üstbilgisini, <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A?displayProperty=nameWithType> yöntemini çağırarak bir XML dosyasına yazar.
 
 ```csharp
 internal void WriteStartHeaders(XmlDictionaryWriter writer)
@@ -29,19 +29,19 @@ internal void WriteStartHeaders(XmlDictionaryWriter writer)
 ## <a name="parameters"></a>Parametreler
 
 - `writer` <xref:System.Xml.XmlDictionaryWriter>\
-  The writer that is used to write the start header into an XML file.
+  Başlangıç üst bilgisini bir XML dosyasına yazmak için kullanılan yazıcı.
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> The `Message.WriteStartHeaders` method is internal and is not meant to be used directly in your code.
+> `Message.WriteStartHeaders` yöntemi dahili ve doğrudan kodunuzda kullanılmamalıdır.
 >
-> Microsoft does not support the use of this method in a production application under any circumstance.
+> Microsoft, bu yöntemin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.ServiceModel.Channels>
+**Ad alanı:** <xref:System.ServiceModel.Channels>
 
-**Assembly:** System.ServiceModel.dll
+**Bütünleştirilmiş kod:** System. ServiceModel. dll
 
-**.NET Framework versions:** Available since 3.0.
+**.NET Framework sürümleri:** 3,0 sürümünden itibaren kullanılabilir.

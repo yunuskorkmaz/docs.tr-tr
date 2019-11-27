@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430102"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError Yöntemi
-Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
+Profil oluşturucuyu, Just-In-Time (JıT) derleyicisinin yeniden derleme sürecinde bir hatayla karşılaşdığını bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,39 +37,39 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>Parametreler  
  `moduleID`  
- [in] The `ModuleID` in which the failed recompilation attempt was made.  
+ 'ndaki Başarısız yeniden derleme denemesinin yapıldığı `ModuleID`.  
   
  `methodId`  
- [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
+ 'ndaki Başarısız yeniden derleme denemesinin yapıldığı yöntemin `MethodDef`.  
   
  `functionId`  
- [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
+ 'ndaki Yeniden derleme için yeniden Derlenmekte olan veya işaretlenmiş işlev örneği. Bu değer, hata oluşturma temelinde hata temelinde oluştuysa (örneğin, profil oluşturucu yeniden derlenecek Yöntem için geçersiz bir meta veri belirteci belirtilmişse) `NULL` olabilir.  
   
  `hrStatus`  
- [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
+ 'ndaki Hatanın doğasını gösteren bir HRESULT. Değerlerin listesi için durum HRESULTS bölümüne bakın.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Return values from this callback are ignored.  
+ Bu geri aramadan döndürülen değerler yok sayılır.  
   
-## <a name="status-hresults"></a>Status HRESULTS  
+## <a name="status-hresults"></a>Durum HRESULTS  
   
-|Status array HRESULT|Açıklama|  
+|Durum dizisi HRESULT|Açıklama|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
-|CORPROF_E_DATAINCOMPLETE|The module is not fully loaded yet, or it is in the process of being unloaded.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
-|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
-|Diğer|The operating system returned a failure outside the control of the CLR. For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
+|E_INVALIDARG|`moduleID` veya `methodDef` belirteci `NULL`.|  
+|CORPROF_E_DATAINCOMPLETE|Modül henüz tam olarak yüklenmedi veya kaldırılıyor sürecinde.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|Belirtilen modül dinamik olarak üretildi (örneğin, `Reflection.Emit`ile) ve bu nedenle bu yöntem tarafından desteklenmez.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Yöntemi toplanabilir bir derlemeye örneklenmiştir ve bu nedenle yeniden derlenmesi mümkün değildir. Yansıma dışı bir bağlamda (örneğin, `List<MyCollectibleStruct>`) tanımlanan türlerin ve işlevlerin toplanabilir bir derlemede örneklenebilir olduğunu unutmayın.|  
+|E_OUTOFMEMORY|JıT yeniden derleme için belirtilen yöntem işaretlenmeye çalışılırken CLR 'nin belleği tükendi.|  
+|Diğer|İşletim sistemi, CLR denetimi dışında bir hata döndürdü. Örneğin, bir bellek sayfasının erişim korumasını değiştirmek için bir sistem çağrısı başarısız olursa, işletim sistemi hatası görüntülenir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

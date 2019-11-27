@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450064"
 ---
 # <a name="imetadataimportenummethodswithname-method"></a>IMetaDataImport::EnumMethodsWithName Yöntemi
-Enumerates methods that have the specified name and that are defined by the type referenced by the specified TypeDef token.  
+Belirtilen ada sahip olan ve belirtilen TypeDef belirtecinin başvurduğu tür tarafından tanımlanan yöntemleri numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,41 +40,41 @@ HRESULT EnumMethodsWithName (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Numaralandırıcı için bir işaretçi. Bu yöntemin ilk çağrısı için bu NULL olmalıdır.  
   
  `cl`  
- [in] A TypeDef token representing the type whose methods to enumerate.  
+ 'ndaki Yöntemlerini Numaralandırılacak türü temsil eden bir TypeDef belirteci.  
   
  `szName`  
- [in] The name that limits the scope of the enumeration.  
+ 'ndaki Sabit listesinin kapsamını sınırlayan ad.  
   
  `rMethods`  
- [out] The array used to store the MethodDef tokens.  
+ dışı MethodDef belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- [in] The maximum size of the `rMethods` array.  
+ 'ndaki `rMethods` dizisinin en büyük boyutu.  
   
  `pcTokens`  
- [out] The number of MethodDef tokens returned in `rMethods`.  
+ dışı `rMethods`döndürülen MethodDef belirteçleri sayısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` discards all method tokens that do not have the specified name.  
+ Bu yöntem, alanları ve yöntemleri numaralandırır, ancak özellikleri veya olayları numaralandırır. [IMetaDataImport:: EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md)'ın aksine `EnumMethodsWithName`, belirtilen ada sahip olmayan tüm metot belirteçlerini atar.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodsWithName` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethodsWithName` başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

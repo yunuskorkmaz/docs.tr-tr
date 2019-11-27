@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445141"
 ---
 # <a name="icorprofilercallbackassemblyunloadfinished-method"></a>ICorProfilerCallback::AssemblyUnloadFinished Yöntemi
-Notifies the profiler that an assembly has been unloaded.  
+Profiler öğesine bir derlemenin kaldırılmış olduğunu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,24 +35,24 @@ HRESULT AssemblyUnloadFinished(
   
 ## <a name="parameters"></a>Parametreler  
  `assemblyId`  
- [in] Identifies the assembly that is being unloaded.  
+ 'ndaki Kaldırılmakta olan derlemeyi tanımlar.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the assembly was unloaded successfully.  
+ 'ndaki Derlemenin başarıyla yüklenip yüklenmediğini gösteren bir HRESULT.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The value of `assemblyId` is not valid for an information request after the [ICorProfilerCallback::AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) method returns.  
+ `assemblyId` değeri, [ICorProfilerCallback:: AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) yöntemi döndürüldüğünden bir bilgi isteği için geçerli değildir.  
   
- Some parts of unloading the assembly might continue after the `AssemblyUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the assembly has succeeded.  
+ Derlemeyi kaldırma işleminin bazı bölümleri `AssemblyUnloadFinished` geri çağrısından sonra devam edebilir. `hrStatus` HRESULT hatası, bir hatayı gösterir. Ancak `hrStatus` başarılı bir HRESULT, yalnızca derlemeyi kaldırma ilk bölümünün başarılı olduğunu gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

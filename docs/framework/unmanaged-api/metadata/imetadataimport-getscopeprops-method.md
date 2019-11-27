@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436881"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a>IMetaDataImport::GetScopeProps Metodu
-Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.  
+Geçerli meta veri kapsamındaki derleme ya da modülün adını ve isteğe bağlı olarak sürüm tanımlayıcısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,28 +38,28 @@ HRESULT GetScopeProps (
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- [out] A buffer for the assembly or module name.  
+ dışı Derleme veya modül adı için bir arabellek.  
   
  `cchName`  
- [in] The size in wide characters of `szName`.  
+ 'ndaki `szName`geniş karakterdeki boyut.  
   
  `pchName`  
- [out] The number of wide characters returned in `szName`.  
+ dışı `szName`' de döndürülen geniş karakter sayısı.  
   
  `pmvid`  
- [out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.  
+ [Out, isteğe bağlı] Derlemenin veya modülün sürümünü benzersiz bir şekilde tanımlayan GUID işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.  
+ Bu özellikleri ayarlamak için [ımetadatayayma:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) yöntemi kullanılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

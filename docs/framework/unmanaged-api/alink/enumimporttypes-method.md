@@ -24,7 +24,7 @@ ms.locfileid: "74448739"
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes Yöntemi
 
-Enumerates each type in each scope.
+Her kapsamdaki her türü numaralandırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,24 +40,24 @@ HRESULT EnumImportTypes(
 ## <a name="parameters"></a>Parametreler
 
 `hEnum`\
-Handle for enumerator.
+Numaralandırıcı için tanıtıcı.
 
 `dwMax`\
-Maximum number of types to retrieve.
+Alınacak maksimum tür sayısı.
 
 `aTypeDefs`\
-Receives type tokens, not to exceed `dwMax`.
+Tür belirteçlerini alır, `dwMax`aşmamak için kullanılamaz.
 
 `pdwCount`\
-Receives actual number of type in `aTypeDefs`.
+`aTypeDefs`gerçek tür sayısını alır.
 
 ## <a name="return-value"></a>Dönüş Değeri
 
-Returns S_OK if the method succeeds.
+Yöntem başarılı olursa S_OK döndürür.
 
 ## <a name="requirements"></a>Gereksinimler
 
-Requires alink.h
+ALink. h gerektirir
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

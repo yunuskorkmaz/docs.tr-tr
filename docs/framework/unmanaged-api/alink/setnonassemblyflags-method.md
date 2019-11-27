@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445546"
 ---
 # <a name="setnonassemblyflags-method"></a>SetNonAssemblyFlags Yöntemi
-Sets flags that are not assembly-specific.  
+Derlemeye özgü olmayan bayrakları ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,13 +34,13 @@ HRESULT SetNonAssemblyFlags(
   
 ## <a name="parameters"></a>Parametreler  
  `afFlags`  
- ALink flags.  
+ ALink bayrakları.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

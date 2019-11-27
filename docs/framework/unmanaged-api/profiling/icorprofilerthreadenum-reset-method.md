@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447593"
 ---
 # <a name="icorprofilerthreadenumreset-method"></a>ICorProfilerThreadEnum::Reset Yöntemi
-Moves the enumerator's cursor to the starting position of the sequence.  
+Numaralandırıcının imlecini sıranın başlangıç konumuna taşımaktır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,13 +32,13 @@ HRESULT Reset();
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

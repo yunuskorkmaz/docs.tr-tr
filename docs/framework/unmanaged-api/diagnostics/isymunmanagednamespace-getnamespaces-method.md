@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433890"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>ISymUnmanagedNamespace::GetNamespaces Metodu
-Gets the children of this namespace.  
+Bu ad alanının alt öğelerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT GetNamespaces(
   
 ## <a name="parameters"></a>Parametreler  
  `cNameSpaces`  
- [in] A `ULONG32` that indicates the size of the `namespaces` array.  
+ 'ndaki `namespaces` dizisinin boyutunu belirten `ULONG32`.  
   
  `pcNameSpaces`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespaces.  
+ dışı Ad alanlarını içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir `ULONG32` işaretçisi.  
   
  `namespaces`  
- [out] A pointer to the buffer that contains the namespaces.  
+ dışı Ad alanlarını içeren arabelleğin işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

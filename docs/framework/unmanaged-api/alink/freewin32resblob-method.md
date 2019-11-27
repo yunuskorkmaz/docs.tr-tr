@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449393"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob Yöntemi
-Releases the Win32 resource blob and associated resources.  
+Win32 kaynak blobu ve ilişkili kaynakları yayınlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,13 +34,13 @@ HRESULT FreeWin32ResBlob(
   
 ## <a name="parameters"></a>Parametreler  
  `ppResBlob`  
- The resource blob to be released. This method assigns the blob pointer to NULL.  
+ Yayımlanacak kaynak blobu. Bu yöntem, blob işaretçisini NULL 'a atar.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

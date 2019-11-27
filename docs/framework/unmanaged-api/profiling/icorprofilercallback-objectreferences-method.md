@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445894"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences Yöntemi
-Notifies the profiler about objects in memory that are being referenced by the specified object.  
+Belirtilen nesne tarafından başvurulan bellekteki nesneler hakkında profil oluşturucuyu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,34 +37,34 @@ HRESULT ObjectReferences(
   
 ## <a name="parameters"></a>Parametreler  
  `objectId`  
- [in] The ID of the object that is referencing objects.  
+ 'ndaki Nesnelere başvuran nesnenin KIMLIĞI.  
   
  `classId`  
- [in] The ID of the class that the specified object is an instance of.  
+ 'ndaki Belirtilen nesnenin bir örneği olduğu sınıfın KIMLIĞI.  
   
  `cObjectRefs`  
- [in] The number of objects referenced by the specified object (that is, the number of elements in the `objectRefIds` array).  
+ 'ndaki Belirtilen nesnenin başvurduğu nesne sayısı (yani `objectRefIds` dizideki öğelerin sayısı).  
   
  `objectRefIds`  
- [in] An array of IDs of objects that are being referenced by `objectId`.  
+ 'ndaki `objectId`tarafından başvurulan nesnelerin bir dizi kimliği.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `ObjectReferences` method is called for each object remaining in the heap after a garbage collection has completed. If the profiler returns an error from this callback, the profiling services will discontinue invoking this callback until the next garbage collection.  
+ Bir çöp toplama işlemi tamamlandıktan sonra yığında kalan her nesne için `ObjectReferences` yöntemi çağırılır. Profil Oluşturucu bu geri aramadan bir hata döndürürse, profil oluşturma hizmetleri sonraki atık toplamaya kadar bu geri aramayı çağırmayı sona erecek.  
   
- The `ObjectReferences` callback can be used in conjunction with the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) callback to create a complete object reference graph for the runtime. The common language runtime (CLR) ensures that each object reference is reported only once by the `ObjectReferences` method.  
+ `ObjectReferences` geri çağırması [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) geri çağırması ile birlikte kullanılabilir ve çalışma zamanı için tamamen bir nesne başvurusu grafiği oluşturur. Ortak dil çalışma zamanı (CLR), her bir nesne başvurusunun `ObjectReferences` yöntemi tarafından yalnızca bir kez raporlanmasını sağlar.  
   
- The object IDs returned by `ObjectReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects. Therefore, profilers must not attempt to inspect objects during an `ObjectReferences` call. When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, the garbage collection is complete and inspection can be safely done.  
+ Çöp toplama nesnelerin ortasında olabileceğinden, `ObjectReferences` tarafından döndürülen nesne kimlikleri geri çağırma sırasında geçerli değildir. Bu nedenle, profil oluşturucular `ObjectReferences` çağrısı sırasında nesneleri incelemeyi denememelidir. [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) çağrıldığında, çöp toplama tamamlanmıştır ve denetleme güvenle yapılabilir.  
   
- A null `ClassId` indicates that `objectId` has a type that is unloading.  
+ Null `ClassId`, `objectId`, kaldırma işlemi için bir türe sahip olduğunu gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

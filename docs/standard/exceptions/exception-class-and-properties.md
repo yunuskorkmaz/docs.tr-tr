@@ -26,7 +26,7 @@ ms.locfileid: "74283132"
 
 <xref:System.Exception> sınıfı, bir özel durumun daha kolay anlaşılmasına yardımcı olan aşağıdaki özelliklere sahiptir.
 
-| Özellik adı | Açıklama |
+| Özellik Adı | Açıklama |
 | ------------- | ----------- |
 | <xref:System.Exception.Data> | Anahtar-değer çiftlerinde rastgele verileri tutan bir <xref:System.Collections.IDictionary>. |
 | <xref:System.Exception.HelpLink> | Bir özel durumun nedeni hakkında kapsamlı bilgiler sağlayan bir yardım dosyasına bir URL (veya URN) tutabilir. |

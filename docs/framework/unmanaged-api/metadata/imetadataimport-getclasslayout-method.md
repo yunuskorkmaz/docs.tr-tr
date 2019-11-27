@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437772"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>IMetaDataImport::GetClassLayout Metodu
-Gets layout information for the class referenced by the specified TypeDef token.  
+Belirtilen TypeDef belirtecinin başvurduğu sınıfa ait düzen bilgisini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,31 +40,31 @@ HRESULT GetClassLayout  (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- [in] The TypeDef token for the class with the layout to return.  
+ 'ndaki Döndürülecek düzen ile sınıfın TypeDef belirteci.  
   
  `pdwPackSize`  
- [out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.  
+ dışı Sınıfın paket boyutunu temsil eden 1, 2, 4, 8 veya 16 değerlerinden biri.  
   
  `rFieldOffset`  
- [out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.  
+ dışı [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) değerleri dizisi.  
   
  `cMax`  
- [in] The maximum size of the `rFieldOffset` array.  
+ 'ndaki `rFieldOffset` dizisinin en büyük boyutu.  
   
  `pcFieldOffset`  
- [out] The number of elements returned in `rFieldOffset`.  
+ dışı `rFieldOffset`döndürülen öğe sayısı.  
   
  `pulClassSize`  
- [out] The size in bytes of the class represented by `td`.  
+ dışı `td`tarafından temsil edilen sınıfın bayt cinsinden boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

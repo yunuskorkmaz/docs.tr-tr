@@ -1,5 +1,5 @@
 ---
-title: char type - C# reference
+title: karakter türü- C# başvuru
 ms.date: 11/22/2019
 f1_keywords:
 - char
@@ -14,45 +14,45 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451166"
 ---
-# <a name="char-c-reference"></a>char (C# reference)
+# <a name="char-c-reference"></a>Char (C# başvuru)
 
-The `char` type keyword is an alias for the .NET <xref:System.Char?displayProperty=nameWithType> structure type that represents a Unicode UTF-16 character.
+`char` Type anahtar sözcüğü, bir Unicode UTF-16 karakteri temsil eden .NET <xref:System.Char?displayProperty=nameWithType> yapı türü için bir diğer addır.
 
-|Tür|Aralık|Boyut|.NET type|
+|Type|Aralık|Boyut|.NET türü|
 |----------|-----------|----------|-------------------------|
-|`char`|U+0000 to U+FFFF|16 bit|<xref:System.Char?displayProperty=nameWithType>|
+|`char`|U + 0000-U + FFFF|16 bit|<xref:System.Char?displayProperty=nameWithType>|
 
-The [string](reference-types.md#the-string-type) type represents text as a sequence of `char` values.
+[Dize](reference-types.md#the-string-type) türü, metni `char` değerleri dizisi olarak temsil eder.
 
 ## <a name="literals"></a>Sabit değerler
 
-You can specify a `char` value with:
+İle bir `char` değeri belirtebilirsiniz:
 
-- a character literal.
-- a Unicode escape sequence, which is `\u` followed by the four-symbol hexadecimal representation of a character code.
-- a hexadecimal escape sequence, which is `\x` followed by the hexadecimal representation of a character code.
+- bir karakter sabit değeri.
+- bir karakter kodunun dört basamaklı onaltılı temsili `\u` bir Unicode kaçış sırası.
+- `\x` bir karakter kodunun onaltılı gösterimi tarafından izlenen bir onaltılık kaçış sırası.
 
 [!code-csharp-interactive[char literals](~/samples/csharp/language-reference/builtin-types/CharType.cs#Literals)]
 
-As the preceding example shows, you also can cast the value of a character code into the corresponding `char` value.
+Yukarıdaki örnekte gösterildiği gibi, bir karakter kodunun değerini de karşılık gelen `char` değerine çevirebilirsiniz.
 
 > [!NOTE]
-> In the case of a Unicode escape sequence, you must specify all four hexadecimal digits. That is, `\u006A` is a valid escape sequence, while `\u06A` and `\u6A` are not valid.
+> Unicode kaçış sırası söz konusu olduğunda, dört onaltılık basamağı de belirtmeniz gerekir. Yani, `\u006A` geçerli bir kaçış sırası, `\u06A` ve `\u6A` geçerli değildir.
 >
-> In the case of a hexadecimal escape sequence, you can omit the leading zeros. That is, the `\x006A`, `\x06A`, and `\x6A` escape sequences are valid and correspond to the same character.
+> Onaltılı kaçış sırası söz konusu olduğunda, öndeki sıfırları atlayabilirsiniz. Diğer bir deyişle, `\x006A`, `\x06A`ve `\x6A` kaçış dizileri geçerlidir ve aynı karaktere karşılık gelir.
 
 ## <a name="conversions"></a>Dönüşümler
 
-The `char` type is implicitly convertible to the following [integral](integral-numeric-types.md) types: `ushort`, `int`, `uint`, `long`, and `ulong`. It's also implicitly convertible to the built-in [floating-point](floating-point-numeric-types.md) numeric types: `float`, `double`, and `decimal`. It's explicitly convertible to `sbyte`, `byte`, and `short` integral types.
+`char` türü örtük olarak şu [integral](integral-numeric-types.md) türlerine dönüştürülebilir: `ushort`, `int`, `uint`, `long`ve `ulong`. Ayrıca yerleşik [kayan nokta](floating-point-numeric-types.md) sayısal türlerine örtülü olarak dönüştürülebilir: `float`, `double`ve `decimal`. `sbyte`, `byte`ve `short` integral türlerine açıkça dönüştürülebilir.
 
-There are no implicit conversions from other types to the `char` type. However, any [integral](integral-numeric-types.md) or [floating-point](floating-point-numeric-types.md) numeric type is explicitly convertible to `char`.
+Diğer türlerden `char` türüne örtük dönüştürme yok. Ancak, herhangi bir [integral](integral-numeric-types.md) veya [kayan nokta](floating-point-numeric-types.md) sayısal türü `char`açıkça dönüştürülebilir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-For more information, see the [Integral types](~/_csharplang/spec/types.md#integral-types) section of the [C# language specification](~/_csharplang/spec/introduction.md).
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Integral türler](~/_csharplang/spec/types.md#integral-types) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# reference](../index.md)
-- [Built-in types table](../keywords/built-in-types-table.md)
+- [C#başvurunun](../index.md)
+- [Yerleşik türler tablosu](../keywords/built-in-types-table.md)
 - [Dizeler](../../programming-guide/strings/index.md)

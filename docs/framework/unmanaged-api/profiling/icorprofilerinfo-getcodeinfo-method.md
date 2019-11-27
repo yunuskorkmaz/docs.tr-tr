@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439233"
 ---
 # <a name="icorprofilerinfogetcodeinfo-method"></a>ICorProfilerInfo::GetCodeInfo Yöntemi
-Gets the extent of native code associated with the specified function ID.  
+Belirtilen işlev KIMLIĞIYLE ilişkili yerel kod kapsamını alır.  
   
- This method is obsolete. Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.  
+ Bu yöntem artık kullanılmıyor. Bunun yerine [ICorProfilerInfo2:: GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) yöntemini kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,27 +38,27 @@ HRESULT GetCodeInfo(
   
 ## <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] The ID of the function with which the native code is associated.  
+ 'ndaki Yerel kodun ilişkilendirildiği işlevin KIMLIĞI.  
   
  `pStart`  
- [out] A pointer to an array of bytes that compose the native code of the function.  
+ dışı İşlevin yerel kodunu oluşturan bayt dizisine yönelik bir işaretçi.  
   
  `pcSize`  
- [out] A pointer to an integer that specifies the size, in bytes, of the native code.  
+ dışı Yerel kodun boyutunu bayt cinsinden belirten bir tamsayı işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- To optimize performance, the runtime in the .NET Framework version 2.0 splits the precompiled, native code of a function into multiple regions. Consequently, the `GetCodeInfo` method is obsolete in the .NET Framework 2.0 because it is unable to handle the extent of a function's native code. Profilers should switch to using the more general `ICorProfilerInfo2::GetCodeInfo2` method instead.  
+ Performansı iyileştirmek için .NET Framework sürüm 2,0 çalışma zamanı, bir işlevin önceden derlenmiş, yerel kodunu birden çok bölgeye ayırır. Sonuç olarak, bir işlevin yerel kodunun kapsamını işleyemediği için `GetCodeInfo` yöntemi .NET Framework 2,0 artık kullanılmıyor. Profil oluşturucular, bunun yerine daha genel `ICorProfilerInfo2::GetCodeInfo2` yöntemi kullanılarak yapılmalıdır.  
   
- This function uses caller-allocated buffers.  
+ Bu işlev, arayana ayrılan arabellekleri kullanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** 1.0  
+ **.NET Framework sürümleri:** 1,0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

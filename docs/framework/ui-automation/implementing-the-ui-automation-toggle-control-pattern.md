@@ -15,38 +15,38 @@ ms.locfileid: "74447066"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>UI Otomasyonu Değiştirme Denetim Düzenini Uygulama
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IToggleProvider>, including information about methods and properties. Links to additional references are listed at the end of the topic.  
+ Bu konu, Yöntemler ve özellikler hakkında bilgiler de dahil olmak üzere <xref:System.Windows.Automation.Provider.IToggleProvider>uygulamak için kılavuz ve kuralları tanıtır. Ek başvuruların bağlantıları konunun sonunda listelenmiştir.  
   
- The <xref:System.Windows.Automation.TogglePattern> control pattern is used to support controls that can cycle through a set of states and maintain a state once set. For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
+ <xref:System.Windows.Automation.TogglePattern> denetim stili, bir durum kümesinde geçiş yapan ve bir kez ayarlandıktan sonra bir durumu korumak için kullanılan denetimleri desteklemek için kullanılır. Bu denetim modelini uygulayan denetimlerin örnekleri için bkz. [UI Otomasyonu istemcileri Için denetim model eşlemesi](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Implementation Guidelines and Conventions  
- When implementing the Toggle control pattern, note the following guidelines and conventions:  
+## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  
+ Iki durumlu denetim modelini uygularken aşağıdaki kılavuz ve kurallara göz önünde  
   
-- Controls that do not maintain state when activated, such as buttons, toolbar buttons, and hyperlinks, must implement <xref:System.Windows.Automation.Provider.IInvokeProvider> instead.  
+- Düğme, araç çubuğu düğmeleri ve köprüler gibi etkinleştirildiğinde durumu korumayan denetimler, bunun yerine <xref:System.Windows.Automation.Provider.IInvokeProvider> gerçekleştirmelidir.  
   
-- A control must cycle through its <xref:System.Windows.Automation.ToggleState> in the following order: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> and, if supported, <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
+- Bir denetim, <xref:System.Windows.Automation.ToggleState> şu sırada bir şekilde çalışmalıdır: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> ve destekleniyorsa, <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
   
-- <xref:System.Windows.Automation.TogglePattern> does not provide a SetState(newState) method due to issues surrounding the direct setting of a tri-state CheckBox without cycling through its appropriate <xref:System.Windows.Automation.ToggleState> sequence.  
+- <xref:System.Windows.Automation.TogglePattern>, Üçlü durum onay kutusunun doğrudan ayarını çevreleyen sorunlar nedeniyle uygun <xref:System.Windows.Automation.ToggleState> sırası boyunca geçiş yapılmadan bir SetState (newState) yöntemi sağlamıyor.  
   
-- The RadioButton control does not implement <xref:System.Windows.Automation.Provider.IToggleProvider>, as it is not capable of cycling through its valid states.  
+- RadioButton denetimi geçerli durumları arasında geçiş yapamayacağı için <xref:System.Windows.Automation.Provider.IToggleProvider>uygulamaz.  
   
 <a name="Required_Members_for_IToggleProvider"></a>   
-## <a name="required-members-for-itoggleprovider"></a>Required Members for IToggleProvider  
- The following properties and methods are required for implementing <xref:System.Windows.Automation.Provider.IToggleProvider>.  
+## <a name="required-members-for-itoggleprovider"></a>IToggleProvider için gerekli Üyeler  
+ <xref:System.Windows.Automation.Provider.IToggleProvider>uygulamak için aşağıdaki özellikler ve Yöntemler gereklidir.  
   
-|Required member|Member type|Notlar|  
+|Gerekli üye|Üye türü|Notlar|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|Yöntem|Yok.|  
 |<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|Özellik|Yok.|  
   
- This control pattern has no associated events.  
+ Bu denetim deseninin ilişkili olayları yok.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Özel Durumlar  
- This control pattern has no associated exceptions.  
+ Bu denetim deseninin ilişkili özel durumları yok.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445814"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply Yöntemi
-Notifies the profiler that the server-side portion of a remoting call has completed and the client is now receiving and about to process the reply.  
+Profil oluşturucuya, uzaktan iletişim çağrısının sunucu tarafı bölümünün tamamlandığını ve istemcinin artık yanıtı aldığını ve yanıt işlemesini bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,27 +35,27 @@ HRESULT RemotingClientReceivingReply(
   
 ## <a name="parameters"></a>Parametreler  
  `pCookie`  
- [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) under these conditions:  
+ 'ndaki Şu koşullarda [ICorProfilerCallback:: RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) içinde belirtilen değere karşılık gelen bir değer:  
   
-- Remoting GUID cookies are active.  
+- Uzaktan iletişim GUID tanımlama bilgileri etkin.  
   
-- The channel succeeds in transmitting the message.  
+- Kanal, iletiyi iletmede başarılı olur.  
   
-- GUID cookies are active on the server-side process.  
+- GUID tanımlama bilgileri, sunucu tarafı işleminde etkindir.  
   
- This allows easy pairing of remoting calls.  
+ Bu, uzaktan iletişim çağrılarının kolayca eşleştirilmesini sağlar.  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ 'ndaki Çağrı zaman uyumsuz ise `true` bir değer; Aksi takdirde, `false`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

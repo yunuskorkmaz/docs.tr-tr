@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442320"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope Yöntemi
-Opens an existing, on-disk file and maps its metadata into memory.  
+Mevcut, disk üzerindeki bir dosyayı açar ve meta verilerini belleğe eşler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,36 +38,36 @@ HRESULT OpenScope (
   
 ## <a name="parameters"></a>Parametreler  
  `szScope`  
- [in] The name of the file to be opened. The file must contain common language runtime (CLR) metadata.  
+ 'ndaki Açılacak dosyanın adı. Dosya, ortak dil çalışma zamanı (CLR) meta verilerini içermelidir.  
   
  `dwOpenFlags`  
- [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.  
+ 'ndaki Açma için modu (okuma, yazma, vb.) belirtmek için [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) numaralandırması değeri.  
   
  `riid`  
- [in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.  
+ 'ndaki Döndürülecek istenen meta veri arabiriminin IID 'si; çağıran, meta verileri içeri aktarmak (okumak) veya yayma (yazmak) için arabirimini kullanır.  
   
- The value of `riid` must specify one of the "import" or "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.  
+ `riid` değeri, "import" veya "yayma" arabirimlerinden birini belirtmelidir. Geçerli değerler IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 veya IID_IMetaDataImport2.  
   
  `ppIUnk`  
- [out] The pointer to the returned interface.  
+ dışı Döndürülen arabirime yönelik işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.  
+ Meta verilerin bellek içi kopyası, "içeri aktarma" arabirimlerinden birindeki yöntemler kullanılarak sorgulanabilir veya "yayma" arabirimlerinden birindeki yöntemleri kullanarak eklenebilir.  
   
- If the target file does not contain CLR metadata, the `OpenScope` method will fail.  
+ Hedef dosya CLR meta verileri içermiyorsa `OpenScope` yöntemi başarısız olur.  
   
- In the .NET Framework version 1.0 and version 1.1, if a scope is opened with `dwOpenFlags` set to ofRead, it is eligible for sharing. That is, if subsequent calls to `OpenScope` pass in the name of a file that was previously opened, the existing scope is reused and a new set of data structures is not created. However, problems can arise due to this sharing.  
+ .NET Framework sürüm 1,0 ve sürüm 1,1 ' de bir kapsam, `dwOpenFlags` ofRead olarak ayarlandıysa, paylaşım için uygundur. Diğer bir deyişle, daha önce açılan `OpenScope` için yapılan çağrılar daha önce açılmış bir dosyanın adı geçer, mevcut kapsam yeniden kullanılır ve yeni bir veri yapıları kümesi oluşturulmaz. Ancak, bu paylaşım nedeniyle sorunlar ortaya çıkabilir.  
   
- In the .NET Framework version 2.0, scopes opened with `dwOpenFlags` set to ofRead are no longer shared. Use the ofReadOnly value to allow the scope to be shared. When a scope is shared, queries that use "read/write" metadata interfaces will fail.  
+ .NET Framework sürüm 2,0 ' de, ofRead olarak ayarlanan `dwOpenFlags` ile açılan kapsamlar artık paylaşılmaz. Kapsamın paylaşılmasını sağlamak için ofReadOnly değerini kullanın. Bir kapsam paylaşıldığında, "okuma/yazma" meta veri arabirimlerini kullanan sorgular başarısız olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447191"
 ---
 # <a name="getscope2-method"></a>GetScope2 Metodu
-Gets an import scope.  
+İçeri aktarma kapsamı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT GetScope2(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- ID of target assembly.  
+ Hedef derlemenin KIMLIĞI.  
   
  `FileToken`  
- ID of file from which to import.  
+ İçinden içeri aktarılacak dosyanın KIMLIĞI.  
   
  `dwScope`  
- Zero-based scope to import.  
+ İçeri aktarılacak sıfır tabanlı kapsam.  
   
  `ppImportScope`  
- Receives pointer to [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface for indicated scope.  
+ Belirtilen kapsam için [IMetaDataImport2 arabirimi](../metadata/imetadataimport2-interface.md) arabirimine yönelik bir işaretçi alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h.  
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

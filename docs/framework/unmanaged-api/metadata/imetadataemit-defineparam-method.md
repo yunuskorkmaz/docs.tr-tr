@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431695"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam Yöntemi
-Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.  
+Belirtilen belirteç tarafından başvurulan yöntem için belirtilen imzaya sahip bir parametre tanımı oluşturur ve bu parametre tanımı için bir belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,40 +42,40 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>Parametreler  
  `md`  
- [in] The token for the method whose parameter is being defined.  
+ 'ndaki Parametresi tanımlanmakta olan metodun belirteci.  
   
  `ulParamSeq`  
- [in] The parameter sequence number.  
+ 'ndaki Parametre sıra numarası.  
   
  `szName`  
- [in] The name of the parameter in Unicode.  
+ 'ndaki Parametrenin Unicode olarak adı.  
   
  `dwParamFlags`  
- [in] Flags for the parameter. This is a bitmask of `CorParamAttr` values.  
+ 'ndaki Parametre bayrakları. Bu, `CorParamAttr` değerlerinin bir bit dır.  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_` *\** for the constant value.  
+ [in] sabit değer için *\** `ELEMENT_TYPE_`.  
   
  `pValue`  
- [in] The constant value for the parameter.  
+ 'ndaki Parametrenin sabit değeri.  
   
  `cchValue`  
- [in] The size, in Unicode characters, of `pValue`.  
+ 'ndaki `pValue`Unicode karakter cinsinden boyutu.  
   
  `ppd`  
- [out] The `mdParamDef` token assigned.  
+ dışı `mdParamDef` belirteci atandı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The sequence values in `ulParamSeq` begin with 1 for parameters. A return value has a sequence number of 0.  
+ `ulParamSeq` dizi değerleri parametreler için 1 ile başlar. Dönüş değerinin sıra numarası 0 ' dır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

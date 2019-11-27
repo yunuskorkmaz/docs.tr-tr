@@ -15,31 +15,31 @@ ms.locfileid: "74447036"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>UI Otomasyonu Pencere Denetim Düzenini Uygulama
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IWindowProvider>, including information about <xref:System.Windows.Automation.WindowPattern> properties, methods, and events. Links to additional references are listed at the end of the topic.  
+ Bu konu, <xref:System.Windows.Automation.WindowPattern> özellikleri, yöntemleri ve olayları hakkında bilgiler de dahil olmak üzere <xref:System.Windows.Automation.Provider.IWindowProvider>uygulamak için kılavuz ve kuralları tanıtır. Ek başvuruların bağlantıları konunun sonunda listelenmiştir.  
   
- The <xref:System.Windows.Automation.WindowPattern> control pattern is used to support controls that provide fundamental window-based functionality within a traditional graphical user interface (GUI). Examples of controls that must implement this control pattern include top-level application windows, multiple-document interface (MDI) child windows, resizable split pane controls, modal dialogs and balloon help windows.  
+ <xref:System.Windows.Automation.WindowPattern> denetim stili, geleneksel bir grafik kullanıcı arabirimi (GUI) içinde temel pencere tabanlı işlevselliği sağlayan denetimleri desteklemek için kullanılır. Bu denetim modelini uygulayan denetimlerin örnekleri, en üst düzey uygulama pencereleri, birden çok belge arabirimi (MDI) alt pencereleri, yeniden boyutlandırılabilir bölünmüş bölme denetimleri, kalıcı iletişim kutuları ve balon yardım pencereleri içerir.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Implementation Guidelines and Conventions  
- When implementing the Window control pattern, note the following guidelines and conventions:  
+## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  
+ Pencere denetim modelini uygularken aşağıdaki kılavuz ve kurallara göz önünde yer verilmiştir:  
   
-- To support the ability to modify both window size and screen position using UI Automation, a control must implement <xref:System.Windows.Automation.Provider.ITransformProvider> in addition to <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- UI Otomasyonu kullanarak pencere boyutunu ve ekran konumunu değiştirme özelliğini desteklemek için bir denetimin <xref:System.Windows.Automation.Provider.IWindowProvider>ek olarak <xref:System.Windows.Automation.Provider.ITransformProvider> uygulaması gerekir.  
   
-- Controls that contain title bars and title bar elements that enable the control to be moved, resized, maximized, minimized, or closed are typically required to implement <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- <xref:System.Windows.Automation.Provider.IWindowProvider>uygulamak için genellikle denetimin taşınmasını, yeniden boyutlandırılması, ekranı kaplamış, küçültülmesini veya kapatılmasını sağlayan başlık çubuklarını ve başlık çubuğu öğelerini içeren denetimler.  
   
-- Controls such as tooltip pop-ups and combo box or menu drop-downs do not typically implement <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- Araç ipucu açılır pencereleri ve Birleşik giriş kutusu ya da menü açılan listeleri gibi denetimler genellikle <xref:System.Windows.Automation.Provider.IWindowProvider>uygulamaz.  
   
-- Balloon help windows are differentiated from basic tooltip pop-ups by the provision of a window-like Close button.  
+- Balon yardım pencereleri, bir pencere gibi Kapat düğmesinin sağlanması ile temel araç ipucu açılarından farklılaştırılabilir.  
   
-- Full-screen mode is not supported by IWindowProvider as it is feature-specific to an application and is not typical window behavior.  
+- Tam ekran modu, bir uygulamaya özgü olan ve tipik bir pencere davranışı olmayan IWindowProvider tarafından desteklenmiyor.  
   
 <a name="Required_Members_for_IWindowProvider"></a>   
-## <a name="required-members-for-iwindowprovider"></a>Required Members for IWindowProvider  
- The following properties, methods, and events are required for the IWindowProvider interface.  
+## <a name="required-members-for-iwindowprovider"></a>IWindowProvider için gerekli Üyeler  
+ IWindowProvider arabirimi için aşağıdaki özellikler, Yöntemler ve olaylar gereklidir.  
   
-|Required member|Member type|Notlar|  
+|Gerekli üye|Üye türü|Notlar|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Özellik|Yok.|  
@@ -52,16 +52,16 @@ ms.locfileid: "74447036"
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Yöntem|Yok.|  
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Olay|Yok.|  
 |<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Olay|Yok.|  
-|<xref:System.Windows.Automation.WindowInteractionState>|Olay|Is not guaranteed to be <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.WindowInteractionState>|Olay|<xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction> garanti edilmez|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Özel Durumlar  
- Providers must throw the following exceptions.  
+ Sağlayıcılar aşağıdaki özel durumları oluşturması gerekir.  
   
 |Özel durum türü|Koşul|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -   When a control does not support a requested behavior.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -   When the parameter is not a valid number.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -Bir denetim istenen davranışı desteklemiyorsa.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -Parametre geçerli bir sayı değil.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

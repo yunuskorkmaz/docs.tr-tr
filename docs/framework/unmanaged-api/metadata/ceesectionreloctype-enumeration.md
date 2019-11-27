@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444163"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType Numaralandırması
-Provides values to influence the type of `reloc` instruction emitted in a call to [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
+[ICeeGen:: AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)çağrısında yayılan `reloc` yönergesinin türünü etkilemek için değerler sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -48,34 +48,34 @@ typedef enum  {
     } CeeSectionRelocType;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`srRelocAbsolute`|Generates only a section-relative `reloc`, sending nothing into a .reloc section.|  
-|`srRelocHighLow`|Generates a `reloc` for a pointer-sized location. This is transformed into BASED_HIGHLOW or BASED_DIR64 depending on the platform.|  
-|`srRelocHighAdj`|Generates a `reloc` for the top 16 bits of a 32-bit number, where the bottom 16 bits are included in the next word in the .reloc table.|  
-|`srRelocMapToken`|Generates a token map relocation, sending nothing into a .reloc section.|  
-|`srRelocRelative`|Indicates that the value is a relative address fixup.|  
-|`srRelocFilePos`|Generates only a section-relative `reloc`, sending nothing into a .reloc section. This `reloc` is relative to the file position of the section, not the section's virtual address.|  
-|`srRelocCodeRelative`|Specifies a code-relative address fixup.|  
-|`srRelocIA64Imm64`|Generates a `reloc` for a 64 bit address in an ia64 `movl` instruction.|  
-|`srRelocDir64`|Generates a `reloc` for a 64-bit address.|  
-|`srRelocIA64PcRel25`|Generate a `reloc` for a 25-bit PC-relative address in an ia64 `br.call` instruction.|  
-|`srRelocIA64PcRel64`|Generates a `reloc` for a 64-bit PC-relative address in an ia64 `brl.call` instruction.|  
-|`srRelocAbsoluteTagged`|Generates a 30-bit section-relative `reloc`, used for tagged pointer values.|  
-|`srRelocSentinel`|A sentinel value to help ensure any additions to this enum are reflected to the internal `reloc` name array.|  
-|`srNoBaseReloc`|Specifies not to emit a base `reloc`.|  
-|`srRelocPtr`|A value indicating that the pre-fixup contents of memory are a pointer rather than a section offset.|  
+|`srRelocAbsolute`|Bir. reloc bölümüne hiçbir şey göndermek için yalnızca bölüm göreli bir `reloc`oluşturur.|  
+|`srRelocHighLow`|İşaretçi boyutunda bir konum için bir `reloc` oluşturur. Bu, platforma bağlı olarak BASED_HIGHLOW veya BASED_DIR64 dönüştürülür.|  
+|`srRelocHighAdj`|32 bitlik bir sayının ilk 16 biti için bir `reloc` üretir, burada alt 16 bit,. reloc tablosundaki sonraki sözcüğe dahil edilir.|  
+|`srRelocMapToken`|Bir. reloc bölümüne hiçbir şey göndermek için bir belirteç eşlemesi konum değişikliği üretir.|  
+|`srRelocRelative`|Değerin bir göreli adres düzeltmesi olduğunu gösterir.|  
+|`srRelocFilePos`|Bir. reloc bölümüne hiçbir şey göndermek için yalnızca bölüm göreli bir `reloc`oluşturur. Bu `reloc`, bölümün sanal adresini değil, bölümün dosya konumuyla ilişkilidir.|  
+|`srRelocCodeRelative`|Kod göreli bir adres düzeltmesini belirtir.|  
+|`srRelocIA64Imm64`|IA64 `movl` yönergesinde 64 bitlik bir adres için `reloc` üretir.|  
+|`srRelocDir64`|64 bitlik bir adres için `reloc` üretir.|  
+|`srRelocIA64PcRel25`|IA64 `br.call` yönergesinde 25 bit bılgısayar göreli adresi için `reloc` oluşturun.|  
+|`srRelocIA64PcRel64`|IA64 `brl.call` yönergesinde 64 bitlik bılgısayar göreli adresi için bir `reloc` oluşturur.|  
+|`srRelocAbsoluteTagged`|Etiketli işaretçi değerleri için kullanılan 30 bitlik bölüm göreli `reloc`üretir.|  
+|`srRelocSentinel`|Bu sabit listesine yapılan eklerin iç `reloc` adı dizisine yansıtıldığından emin olmak için Sentinel değeri.|  
+|`srNoBaseReloc`|Temel `reloc`yaymamalıdır.|  
+|`srRelocPtr`|Bellek ön düzeltme içeriğinin, Bölüm boşluğu yerine bir işaretçi olduğunu gösteren bir değer.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

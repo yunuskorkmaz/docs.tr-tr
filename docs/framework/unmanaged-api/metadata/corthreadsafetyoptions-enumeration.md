@@ -23,7 +23,7 @@ ms.locfileid: "74442473"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions Numaralandırması
 
-Specifies flags to select options for thread safety.
+İş parçacığı güvenliği seçeneklerinin seçilecek bayrakları belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,21 +35,21 @@ typedef enum CorThreadSafetyOptions {
 } CorThreadSafetyOptions;
 ```
 
-## <a name="members"></a>Üyeler
+## <a name="members"></a>Üyeleri
 
-|Üye|Açıklama|
+|Üyesi|Açıklama|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|Default value. Same as `MDThreadSafetyOff`.|
-|`MDThreadSafetyOff`|Indicates that a reader/writer lock cannot be set.|
-|`MDThreadSafetyOn`|Indicates that a reader/writer lock can be set.|
+|`MDThreadSafetyDefault`|Varsayılan değer. `MDThreadSafetyOff`ile aynı.|
+|`MDThreadSafetyOff`|Bir okuyucu/yazıcı kilidinin ayarlanamayacağını belirtir.|
+|`MDThreadSafetyOn`|Bir okuyucu/yazıcı kilidinin ayarlanamayacağını gösterir.|
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** CorHdr.h
+**Üst bilgi:** CorHdr. h
 
-**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

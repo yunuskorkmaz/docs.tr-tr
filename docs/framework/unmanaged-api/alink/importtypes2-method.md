@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445670"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 Yöntemi
-Initiates the import of types. Call this method to begin importing types from each scope imported via [ImportFile Method](importfile-method.md).  
+Türlerin içeri aktarımını başlatır. [ImportFile yöntemi](importfile-method.md)aracılığıyla içeri aktarılan her kapsamdan türleri içeri aktarmaya başlamak için bu yöntemi çağırın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +39,28 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- ID of assembly into which to import.  
+ İçeri aktarılacak derleme KIMLIĞI.  
   
  `FileToken`  
- ID of file to from which to import.  
+ İçinden içeri aktarılacak dosyanın KIMLIĞI.  
   
  `dwScope`  
- Zero-based scope from which to import.  
+ İçinden içeri aktarılacak sıfır tabanlı kapsam.  
   
  `phEnum`  
- Receives enumerator handle for the types in the given scope.  
+ Verilen kapsamdaki türler için numaralandırıcı tanıtıcısını alır.  
   
  `ppImportScope`  
- Optionally receives [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface.  
+ İsteğe bağlı olarak [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) arabirimini alır.  
   
  `pdwCountOfTypes`  
- Optionally receives count of types in the specified scope.  
+ İsteğe bağlı olarak, belirtilen kapsamdaki türlerin sayısını alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

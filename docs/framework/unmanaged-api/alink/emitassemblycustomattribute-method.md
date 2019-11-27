@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446513"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute Yöntemi
-Call to set assembly-level custom attributes.  
+Derleme düzeyi özel özniteliklerini ayarlama çağrısı.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,31 +41,31 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- ID of the assembly.  
+ Derlemenin KIMLIĞI.  
   
  `FileToken`  
- File that defiles the attribute. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
+ Özniteliği olan dosyayı kaldırır. `AssemblyID` ilişkisiz bir netmodule belirtmezse NULL olabilir.  
   
  `tkType`  
- Type of the custom attribute.  
+ Özel özniteliğin türü.  
   
  `pCustomValue`  
- Custom value data.  
+ Özel değer verileri.  
   
  `cbCustomValue`  
- Length of custom value data.  
+ Özel değer verisinin uzunluğu.  
   
  `bSecurity`  
- TRUE if the custom attribute is related to assembly signing.  
+ Özel öznitelik, derleme imzalama ile ilgiliyse TRUE.  
   
  `bAllowMulti`  
- TRUE if multiple attributes are to be emitted.  
+ Birden çok öznitelik yayınlandıysanız TRUE.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

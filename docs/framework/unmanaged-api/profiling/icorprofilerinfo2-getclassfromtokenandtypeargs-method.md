@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447177"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs Yöntemi
-Gets the `ClassID` of a type by using the specified metadata token and the `ClassID` values of any type arguments.  
+Tür bağımsız değişkenlerinin belirtilen meta veri belirtecini ve `ClassID` değerlerini kullanarak bir türün `ClassID` alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,35 +38,35 @@ HRESULT GetClassFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>Parametreler  
  `moduleID`  
- [in] The ID of the module in which the type resides.  
+ 'ndaki Türün bulunduğu modülün KIMLIĞI.  
   
  `typeDef`  
- [in] An `mdTypeDef` metadata token that references the type.  
+ 'ndaki Türe başvuran bir `mdTypeDef` meta veri belirteci.  
   
  `cTypeArgs`  
- [in] The number of type parameters for the given type. This value must be zero for non-generic types.  
+ 'ndaki Verilen tür için tür parametrelerinin sayısı. Bu değer, genel olmayan türler için sıfır olmalıdır.  
   
  `typeArgs`  
- [in] An array of `ClassID` values, each of which is an argument of the type. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
+ 'ndaki Her biri türünün bağımsız değişkeni olan `ClassID` değerleri dizisi. `cTypeArgs` sıfır olarak ayarlandıysa `typeArgs` değeri NULL olabilir.  
   
  `pClassID`  
- [out] A pointer to the `ClassID` of the specified type.  
+ dışı Belirtilen türün `ClassID` bir işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Calling the `GetClassFromTokenAndTypeArgs` method with an `mdTypeRef` instead of an `mdTypeDef` metadata token can have unpredictable results; callers should resolve the `mdTypeRef` to an `mdTypeDef` when passing it.  
+ `GetClassFromTokenAndTypeArgs` yönteminin `mdTypeDef` meta veri belirteci yerine `mdTypeRef` çağrılması öngörülemeyen sonuçlara neden olabilir; çağıranlar, `mdTypeRef` bir `mdTypeDef` geçirmeden çözümlenmelidir.  
   
- If the type is not already loaded, calling `GetClassFromTokenAndTypeArgs` will trigger loading, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or other types could lead to an infinite loop as the runtime attempts to circularly load things.  
+ Tür zaten yüklü değilse, `GetClassFromTokenAndTypeArgs` çağrısı, çok sayıda bağlamda tehlikeli bir işlem olan yüklemeyi tetikleyecektir. Örneğin, modüller veya diğer türler yüklenirken bu yöntemin çağrılması, çalışma zamanı döngüsel olarak yükleme yapmayı denediğinde sonsuz döngüye neden olabilir.  
   
- In general, use of `GetClassFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular type, they should store the `ModuleID` and `mdTypeDef` of that type, and use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) to check whether a given `ClassID` is that of the desired type.  
+ Genel olarak, `GetClassFromTokenAndTypeArgs` kullanımı önerilmez. Profil oluşturucular belirli bir tür için olaylarla ilgileniyorsa, bu türün `ModuleID` ve `mdTypeDef` depolarlar ve belirli bir `ClassID` istenen türde olup olmadığını denetlemek için [ICorProfilerInfo2:: GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443150"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 Yöntemi
-Maps a managed code instruction pointer to the JIT-recompiled version of a function.  
+Yönetilen bir kod yönerge işaretçisini bir işlevin JıT yeniden derlenmiş sürümüne eşler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,28 +36,28 @@ HRESULT GetFunctionFromIP2(
   
 ## <a name="parameters"></a>Parametreler  
  `ip`  
- [in] The instruction pointer in managed code.  
+ 'ndaki Yönetilen koddaki yönerge işaretçisi.  
   
  `pFunctionId`  
- [out] The function ID.  
+ dışı İşlev KIMLIĞI.  
   
  `pReJitId`  
- [out] The identity of the JIT-recompiled version of the function.  
+ dışı İşlevin JıT yeniden derlenmesi sürümünün kimliği.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetFunctionFromIP2` is similar to `GetFunctionFromIP`, except that it gets the JIT-recompiled ID instead of the function ID of the function that contains the specified IP address.  
+ `GetFunctionFromIP2`, belirtilen IP adresini içeren işlevin işlev KIMLIĞI yerine JıT-yeniden derlenmesi KIMLIĞINI aldığından, `GetFunctionFromIP`benzer.  
   
 > [!NOTE]
-> `GetFunctionFromIP2` can trigger a garbage collection, whereas `GetFunctionFromIP` will not.  For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
+> `GetFunctionFromIP2` bir çöp toplamayı tetikleyebilir, ancak `GetFunctionFromIP` olmayacaktır.  Daha fazla bilgi için bkz. [HRESULT corprof_e_unsupported_call_sequence](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

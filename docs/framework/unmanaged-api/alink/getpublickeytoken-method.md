@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447237"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken Metodu
-Retrieves the public key token for a given keyfile or key container.  
+Belirli bir keyfile veya anahtar kapsayıcısı için ortak anahtar belirtecini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT GetPublicKeyToken(
   
 ## <a name="parameters"></a>Parametreler  
  `pszKeyFile`  
- Filename of the key.  
+ Anahtarın dosya adı.  
   
  `pszKeyContainer`  
- Name of the key container.  
+ Anahtar kapsayıcısının adı.  
   
  `pvPublicKeyToken`  
- Address where key token is to be stored.  
+ Anahtar belirtecinin depolanacağı adres.  
   
  `pcbPublicKeyToken`  
- Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`. Upon return, contains actual number of bytes used.  
+ `pvPublicKeyToken`tarafından gösterilen arabelleğin boyutunu bayt cinsinden belirtir. Dönüş sonrasında, kullanılan gerçek bayt sayısını içerir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h.  
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449515"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName Yöntemi
-Enumerates FieldDef tokens of the specified type with the specified name.  
+Belirtilen ada sahip belirtilen türdeki FieldDef belirteçlerini numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,41 +40,41 @@ HRESULT EnumFieldsWithName (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] Numaralandırıcı için bir işaretçi.  
   
  `cl`  
- [in] The token of the type whose fields are to be enumerated.  
+ 'ndaki Alanları Numaralandırılacak olan türün belirteci.  
   
  `szName`  
- [in] The field name that limits the scope of the enumeration.  
+ 'ndaki Sabit listesinin kapsamını sınırlayan alan adı.  
   
  `rFields`  
- [out] Array used to store the FieldDef tokens.  
+ dışı FieldDef belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- [in] The maximum size of the `rFields` array.  
+ 'ndaki `rFields` dizisinin en büyük boyutu.  
   
  `pcTokens`  
- [out] The actual number of FieldDef tokens returned in `rFields`.  
+ dışı `rFields`içinde döndürülen FieldDef belirteçlerinin gerçek sayısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Unlike [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` discards all field tokens that do not have the specified name.  
+ [IMetaDataImport:: EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md)'ten farklı olarak `EnumFieldsWithName`, belirtilen ada sahip olmayan tüm alan belirteçlerini atar.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName` returned successfully.|  
-|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumFieldsWithName` başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak alan yok. Bu durumda `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

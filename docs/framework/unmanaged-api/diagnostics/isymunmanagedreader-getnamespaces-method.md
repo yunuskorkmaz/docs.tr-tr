@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447738"
 ---
 # <a name="isymunmanagedreadergetnamespaces-method"></a>ISymUnmanagedReader::GetNamespaces Metodu
-Gets the namespaces defined at global scope within this symbol store.  
+Bu sembol deposu içindeki genel kapsamda tanımlanan ad alanlarını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +38,19 @@ HRESULT GetNamespaces (
   
 ## <a name="parameters"></a>Parametreler  
  `cNameSpaces`  
- [in] The size of the namespaces array.  
+ 'ndaki Ad alanları dizisinin boyutu.  
   
  `pcNameSpaces`  
- [out] A pointer to a variable that receives the length of the namespace list.  
+ dışı Ad alanı listesinin uzunluğunu alan bir değişken işaretçisi.  
   
  `namespaces`  
- [out] A pointer to a variable that receives the namespace list.  
+ dışı Ad alanı listesini alan bir değişkene yönelik işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

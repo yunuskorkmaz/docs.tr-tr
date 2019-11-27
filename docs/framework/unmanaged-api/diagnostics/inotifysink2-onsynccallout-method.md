@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442512"
 ---
 # <a name="inotifysink2onsynccallout-method"></a>INotifySink2::OnSyncCallOut Yöntemi
-Gets invoked when a call is out.  
+Bir çağrı çıkış olduğunda çağrılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +38,19 @@ HRESULT OnSyncCallOut
   
 ## <a name="parameters"></a>Parametreler  
  `in_CallID`  
- [in] ID of the call that is out. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ 'ndaki Giden çağrının KIMLIĞI. Bkz. [CALL_ID yapısı](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `out_ppBuffer`  
- [out] Call buffer.  
+ dışı Çağrı arabelleği.  
   
  `out_pBufferSize`  
- [out] Size of the call buffer, in bytes.  
+ dışı Çağrı arabelleğinin bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** ProtocolNotify2.idl  
+ **Üst bilgi:** ProtocolNotify2. IDL  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

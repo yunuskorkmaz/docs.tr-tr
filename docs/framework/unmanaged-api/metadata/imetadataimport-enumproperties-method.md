@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450016"
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties Yöntemi
-Enumerates PropertyDef tokens representing the properties of the type referenced by the specified TypeDef token.  
+Belirtilen TypeDef belirtecinin başvurduğu türün özelliklerini temsil eden PropertyDef belirteçlerini numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,35 +39,35 @@ HRESULT EnumProperties (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Numaralandırıcı için bir işaretçi. Bu yöntemin ilk çağrısı için bu NULL olmalıdır.  
   
  `td`  
- [in] A TypeDef token representing the type with properties to enumerate.  
+ 'ndaki Numaralandırılacak özellikleri olan türü temsil eden bir TypeDef belirteci.  
   
  `rProperties`  
- [out] The array used to store the PropertyDef tokens.  
+ dışı PropertyDef belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- [in] The maximum size of the `rProperties` array.  
+ 'ndaki `rProperties` dizisinin en büyük boyutu.  
   
  `pcProperties`  
- [out] The number of PropertyDef tokens returned in `rProperties`.  
+ dışı `rProperties`' de Döndürülen PropertyDef belirteçleri sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumProperties` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcProperties` is zero.|  
+|`S_OK`|`EnumProperties` başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda `pcProperties` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

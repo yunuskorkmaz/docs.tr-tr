@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440485"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope Yöntemi
-Imports an assembly into the current scope and gets a new metadata signature for the merged scope.  
+Bir derlemeyi geçerli kapsama aktarır ve birleştirilmiş kapsam için yeni bir meta veri imzası alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,46 +45,46 @@ HRESULT TranslateSigWithScope (
   
 ## <a name="parameters"></a>Parametreler  
  `pAssemImport`  
- [in] The interface for import assembly (where the signature is defined).  
+ 'ndaki İçeri aktarma derlemesi için arabirim (imzanın tanımlandığı yer).  
   
  `pbHashValue`  
- [in] The hash blob for the assembly.  
+ 'ndaki Derlemenin karma blobu.  
   
  `cbHashValue`  
- [in] The count of bytes in `pbHashValue`.  
+ 'ndaki `pbHashValue`bayt sayısı.  
   
  `import`  
- [in] The interface for import metadata scope.  
+ 'ndaki İçeri aktarma meta veri kapsamı için arabirim.  
   
  `pbSigBlob`  
- [in] The signature to be imported.  
+ 'ndaki İçeri aktarılacak imza.  
   
  `cbSigBlob`  
- [in] The size, in bytes, of `pbSigBlob`.  
+ 'ndaki `pbSigBlob`bayt cinsinden boyutu.  
   
  `pAssemEmit`  
- [in] The interface for export assembly.  
+ 'ndaki Dışarı aktarma derlemesi için arabirim.  
   
  `emit`  
- [in] The interface for export metadata scope.  
+ 'ndaki Dışarı aktarma meta verileri kapsamı için arabirim.  
   
  `pvTranslatedSig`  
- [out] The buffer to hold the translated signature blob.  
+ dışı Çevrilen imza blobunu tutan arabellek.  
   
  `cbTranslatedSigMax`  
- [in] The capacity, in bytes, of `pvTranslatedSig`.  
+ 'ndaki `pvTranslatedSig`kapasitesi (bayt cinsinden).  
   
  `pcbTranslatedSig`  
- [out] The number of actual bytes in the translated signature.  
+ dışı Çevrilen İmzadaki gerçek bayt sayısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

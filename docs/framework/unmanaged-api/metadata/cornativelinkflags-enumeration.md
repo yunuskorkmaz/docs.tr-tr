@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450195"
 ---
 # <a name="cornativelinkflags-enumeration"></a>CorNativeLinkFlags Numaralandırması
-Provides flag values used by the linker when linking native code.  
+Yerel kod bağlanırken bağlayıcı tarafından kullanılan bayrak değerlerini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,19 +40,19 @@ typedef enum
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`nlfNone`|Indicates no flags.|  
-|`nlfLastError`|Indicates a `setLastError` keyword.|  
-|`nlfNoMangle`|Indicates a `nomangle` keyword.|  
+|`nlfNone`|Bayrak olmadığını gösterir.|  
+|`nlfLastError`|Bir `setLastError` anahtar sözcüğünü gösterir.|  
+|`nlfNoMangle`|Bir `nomangle` anahtar sözcüğünü gösterir.|  
 |`nlfMaxValue`|Kullanılmadı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

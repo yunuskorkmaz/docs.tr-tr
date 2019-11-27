@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441668"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName Yöntemi
-Enumerates MemberDef tokens representing members of the specified type with the specified name.  
+Belirtilen ada sahip belirtilen türdeki üyeleri temsil eden MemberDef belirteçlerini numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,41 +40,41 @@ HRESULT EnumMembersWithName (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] Numaralandırıcı için bir işaretçi.  
   
  `cl`  
- [in] A TypeDef token representing the type with members to enumerate.  
+ 'ndaki Numaralandırılacak üyeleri olan türü temsil eden bir TypeDef belirteci.  
   
  `szName`  
- [in] The member name that limits the scope of the enumerator.  
+ 'ndaki Numaralandırıcı kapsamını sınırlayan üye adı.  
   
  `rMembers`  
- [out] The array used to store the MemberDef tokens.  
+ dışı MemberDef belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- [in] The maximum size of the `rMembers` array.  
+ 'ndaki `rMembers` dizisinin en büyük boyutu.  
   
  `pcTokens`  
- [out] The actual number of MemberDef tokens returned in `rMembers`.  
+ dışı `rMembers`' de döndürülen MemberDef belirteçlerinin gerçek sayısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` discards all field and member tokens that do not have the specified name.  
+ Bu yöntem, alanları ve yöntemleri numaralandırır, ancak özellikleri veya olayları numaralandırır. [IMetaDataImport:: EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md)'tan farklı olarak `EnumMembersWithName`, belirtilen ada sahip olmayan tüm alan ve üye belirteçlerini atar.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` returned successfully.|  
-|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumTypeDefs` başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak MemberDef belirteçleri yok. Bu durumda `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: GCLOHThreshold element
+title: GCLOHThreshold öğesi
 ms.date: 11/20/2019
 helpviewer_keywords:
 - GCLOHThreshold element
@@ -11,13 +11,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451222"
 ---
-# <a name="gclohthreshold-element"></a>GCLOHThreshold element
+# <a name="gclohthreshold-element"></a>GCLOHThreshold öğesi
 
-Specifies the threshold size, in bytes, that causes the garbage collector to put objects on the large object heap (LOH).
+Çöp toplayıcısının nesneleri büyük nesne yığınına (LOH) yerleştirmesine neden olan eşik boyutunu bayt cinsinden belirtir.
 
-[\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold>
+[\<yapılandırma >](../configuration-element.md)\
+&nbsp;&nbsp;[\<çalışma zamanı >](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold >
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,13 +30,13 @@ Specifies the threshold size, in bytes, that causes the garbage collector to put
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`enabled`|Gerekli öznitelik.<br /><br />Specifies the threshold size that causes objects to go on the large object heap.|
+|`enabled`|Gerekli öznitelik.<br /><br />Nesnelerin büyük nesne yığınında geçmesine neden olan eşik boyutunu belirtir.|
 
-### <a name="enabled-attribute"></a>enabled attribute
+### <a name="enabled-attribute"></a>enabled özniteliği
 
-|Değer|Açıklama|
+|Value|Açıklama|
 |-----------|-----------------|
-|`nnnn`|The threshold size, in bytes, that causes objects to go on the large object heap.|
+|`nnnn`|Büyük nesne yığınında nesnelerin gitmesini sağlayan bayt cinsinden eşik boyutu.|
 
 ## <a name="child-elements"></a>Alt öğeleri
 
@@ -51,11 +51,11 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-This setting was introduced in .NET Framework 4.8.
+Bu ayar .NET Framework 4,8 ' de tanıtılmıştı.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Run-time settings schema](index.md)
+- [Çalışma zamanı ayarları şeması](index.md)
 - [Yapılandırma dosyası şeması](../index.md)
-- [Fundamentals of garbage collection](../../../../standard/garbage-collection/fundamentals.md)
-- [NET Core run-time config options for GC](../../../../core/run-time-config/garbage-collector.md)
+- [Çöp toplamanın temelleri](../../../../standard/garbage-collection/fundamentals.md)
+- [GC için NET Core çalışma zamanı yapılandırma seçenekleri](../../../../core/run-time-config/garbage-collector.md)

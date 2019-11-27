@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446437"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument Yöntemi
-Gets every method that has line information in the provided document.  
+Belirtilen belgede satır bilgilerine sahip her yöntemi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,22 +38,22 @@ HRESULT GetMethodsInDocument(
   
 ## <a name="parameters"></a>Parametreler  
  `document`  
- [in] A pointer to the document.  
+ 'ndaki Belgeye yönelik bir işaretçi.  
   
  `cMethod`  
- [in] A `ULONG32` that indicates the size of the  `pRetVal` array.  
+ 'ndaki `pRetVal` dizisinin boyutunu belirten `ULONG32`.  
   
  `pcMethod`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the methods.  
+ dışı Yöntemleri içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.  
   
  `pRetVal`  
- [out] A pointer to the buffer that receives the methods.  
+ dışı Yöntemleri alan arabelleğin işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

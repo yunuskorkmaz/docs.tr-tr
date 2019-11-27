@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431956"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyProps Yöntemi
-Modifies the specified `Assembly` metadata structure.  
+Belirtilen `Assembly` meta veri yapısını değiştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,37 +41,37 @@ HRESULT SetAssemblyProps (
   
 ## <a name="parameters"></a>Parametreler  
  `pma`  
- [in] The metadata token that specifies the `Assembly` metadata structure to be modified.  
+ 'ndaki Değiştirilecek `Assembly` meta veri yapısını belirten meta veri belirteci.  
   
  `pbPublicKey`  
- [in] A pointer to the public key of the publisher of the assembly.  
+ 'ndaki Derlemenin yayımcısının ortak anahtarına yönelik bir işaretçi.  
   
  `cbPublicKey`  
- [in] The size in bytes of `pbPublicKey`.  
+ 'ndaki `pbPublicKey`bayt cinsinden boyutu.  
   
  `ulHashAlgId`  
- [in] The identifier for the hash algorithm used to hash the assembly files.  
+ 'ndaki Derleme dosyalarını karma hale yüklemek için kullanılan karma algoritmanın tanımlayıcısı.  
   
  `szName`  
- [in] The human-readable text name of the assembly.  
+ 'ndaki Derlemenin insanların okunabilir metin adı.  
   
  `pMetaData`  
- [in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.  
+ 'ndaki Derleme için sürüm, platform ve yerel ayar bilgilerini içeren ASSEMBLYMETADATA işaretçisi.  
   
  `dwAssemblyFlags`  
- [in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.  
+ 'ndaki Derlemenin çeşitli özniteliklerini belirten, [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) değerlerinin bit düzeyinde birleşimi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.  
+ `Assembly` meta veri yapısı oluşturmak için [IMetaDataAssemblyEmit::D efineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) metodunu kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445229"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString Metodu
-Gets the version number of the runtime that was used to build the assembly.  
+Derlemeyi oluşturmak için kullanılan çalışma zamanının sürüm numarasını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,25 +37,25 @@ HRESULT GetVersionString (
   
 ## <a name="parameters"></a>Parametreler  
  `pwzBuf`  
- [out] An array to store the string that specifies the version.  
+ dışı Sürümü belirten dizeyi depolayan bir dizi.  
   
  `ccBufSize`  
- [in] The size, in wide characters, of the `pwzBuf` array.  
+ 'ndaki `pwzBuf` dizisinin geniş karakterdeki boyutu.  
   
  `pccBufSize`  
- [out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.  
+ dışı `pwzBuf` dizisinde döndürülen bir null Sonlandırıcı da dahil olmak üzere geniş karakter sayısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `GetVersionString` method gets the built-for version of the current metadata scope. If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.  
+ `GetVersionString` yöntemi, geçerli meta veri kapsamının yerleşik sürümünü alır. Kapsam hiç kaydedilmediğinde, yerleşik bir sürüme sahip olmaz ve boş bir dize döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

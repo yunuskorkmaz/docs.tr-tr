@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432075"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType Yöntemi
-Creates an `ExportedType` structure containing metadata for the specified exported type, and returns the associated metadata token.  
+Belirtilen içe aktarılmış tür için meta verileri içeren bir `ExportedType` yapısı oluşturur ve ilişkili meta veri belirtecini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,39 +39,39 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- [in] The name of type to be exported. For version 1.1 of the common language runtime, the name of the exported type must exactly match the name given in the `TypeDef` for the type.  
+ 'ndaki Aktarılacak türün adı. Ortak dil çalışma zamanının 1,1 sürümü için, verilen türün adı tür için `TypeDef` verilen adla tam olarak eşleşmelidir.  
   
  `tkImplementation`  
- [in] A token specifying where the exported type is implemented. The valid values and their associated meanings are:  
+ 'ndaki İçe aktarılmış türün nerede uygulandığını belirten bir belirteç. Geçerli değerler ve bunlarla ilişkili anlamları şunlardır:  
   
-- `mdFile` The type is implemented in a different file within this assembly.  
+- `mdFile` bu derleme içindeki farklı bir dosyada uygulandı.  
   
-- `mdAssemblyRef` The type is implemented in a different assembly.  
+- `mdAssemblyRef` türü farklı bir derlemede uygulandı.  
   
-- `mdExportedTYpe` The type is nested within some other type.  
+- tür başka bir tür içinde iç içe `mdExportedTYpe`.  
   
-- `mdFileNil` The type is in the same file as the manifest and is not a nested type.  
+- `mdFileNil` türü bildirimle aynı dosyada ve iç içe geçmiş bir tür değil.  
   
  `tkTypeDef`  
- [in] A token to the metadata that specifies the type to be exported. This value is entered in the `TypeDef` table in the file that implements the type and is relevant only if that file is in this assembly.  
+ 'ndaki Meta veriye aktarılacak türü belirten bir belirteç. Bu değer, türü uygulayan dosyadaki `TypeDef` tablosuna girilir ve yalnızca bu dosya bu derlemede olduğunda ilgilidir.  
   
  `dwExportedTypeFlags`  
- [in] A bitwise combination of [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration values that define the property settings for the exported type.  
+ 'ndaki İçe aktarılmış tür için özellik ayarlarını tanımlayan [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) numaralandırma değerlerinin bit düzeyinde birleşimi.  
   
  `pmdct`  
- [out] A pointer to the returned metadata token that indicates the exported type.  
+ dışı Verilen türü gösteren döndürülen meta veri belirtecine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- An `ExportedType` metadata structure must be defined for each type that is exposed by this assembly and that is implemented in a module other than the one containing the manifest.  
+ Bu derleme tarafından sunulan ve bildirimi içeren bir modülde uygulanan her tür için bir `ExportedType` meta veri yapısı tanımlanmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

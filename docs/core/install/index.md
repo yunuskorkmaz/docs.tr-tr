@@ -1,6 +1,6 @@
 ---
-title: Install .NET Core on Windows, Linux, and macOS - .NET Core
-description: Learn where and what to install for .NET Core on Windows, Linux, and macOS versions. Discover the dependencies required to develop, deploy, and run .NET Core apps.
+title: Windows, Linux ve macOS-.NET Core 'a .NET Core 'u yükler
+description: Windows, Linux ve macOS sürümlerinde .NET Core için nereye ve ne yükleneceğini öğrenin. .NET Core uygulamaları geliştirmek, dağıtmak ve çalıştırmak için gereken bağımlılıkları bulun.
 author: thraka
 ms.author: adegeo
 ms.date: 11/06/2019
@@ -11,17 +11,17 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451089"
 ---
-# <a name="download-and-install-net-core"></a>Download and install .NET Core
+# <a name="download-and-install-net-core"></a>.NET Core indirin ve yükleyin
 
-This article provides information on how to download and install .NET Core. There are two parts to .NET Core, the **runtime** which is used to run apps, and the **SDK** which is used to create apps. The SDK includes the runtime.
+Bu makalede .NET Core 'u indirme ve yükleme hakkında bilgi verilmektedir. .NET Core 'un, uygulamaları çalıştırmak için kullanılan **çalışma zamanının** ve uygulama oluşturmak Için kullanılan **SDK** 'nın iki bölümü vardır. SDK, çalışma zamanını içerir.
 
-- If you're a user who needs .NET Core to run apps, see [Install the .NET Core Runtime](runtime.md).
+- Uygulamaları çalıştırmak için .NET Core gerektiren bir Kullanıcı kullanıyorsanız, bkz. [.NET Core çalışma zamanını yüklemek](runtime.md).
 
-- If you're a developer who needs .NET Core to create apps, see the [Install the .NET Core SDK](sdk.md).
+- Uygulama oluşturmak için .NET Core gerektiren bir geliştiricisiyseniz, [.NET Core SDK yüklemek](sdk.md)için bkz.
 
 > [!NOTE]
-> The .NET Core SDK includes the runtime.
+> .NET Core SDK çalışma zamanını içerir.
 
-## <a name="dependencies"></a>Bağımlılıklar
+## <a name="dependencies"></a>Bağımlılıkları
 
-.NET Core is supported on Windows, Linux, and macOS. For a full list of requirements, see [Supported operating systems](dependencies.md).
+.NET Core, Windows, Linux ve macOS 'ta desteklenir. Gereksinimlerin tam listesi için bkz. [desteklenen işletim sistemleri](dependencies.md).

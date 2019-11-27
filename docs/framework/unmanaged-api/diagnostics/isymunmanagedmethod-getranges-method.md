@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448930"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges Yöntemi
-Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method. The array is an array of integers and has the format [start, end, start, end]. The number of range pairs is the length of the array divided by 2.  
+Belgedeki bir konum verildiğinde, konumun bu yöntem içinde kapsamakta olduğu Microsoft ara dili (MSIL) aralıklarına karşılık gelen başlangıç ve bitiş konumu çiftleri dizisini döndürür. Dizi tamsayılar dizisidir ve [Start, End, Start, End] biçiminde olur. Aralık çifti sayısı, dizinin uzunluğu 2 ' ye bölünür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,28 +40,28 @@ HRESULT GetRanges(
   
 ## <a name="parameters"></a>Parametreler  
  `document`  
- [in] The document for which the offset is requested.  
+ 'ndaki Kaydırın istendiği belge.  
   
  `line`  
- [in] The document line corresponding to the ranges.  
+ 'ndaki Aralıklara karşılık gelen belge satırı.  
   
  `column`  
- [in] The document column corresponding to the ranges.  
+ 'ndaki Aralıklara karşılık gelen belge sütunu.  
   
  `cRanges`  
- [in] The size of the `ranges` array.  
+ 'ndaki `ranges` dizisinin boyutu.  
   
  `pcRanges`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.  
+ dışı Aralıkları içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.  
   
  `ranges`  
- [out] A pointer to the buffer that receives the ranges.  
+ dışı Aralıkları alan arabelleğin işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

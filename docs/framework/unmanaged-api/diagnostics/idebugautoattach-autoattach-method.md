@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445530"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach Yöntemi
-Performs server-invoked debugger auto attach.  
+Sunucu tarafından çağrılan hata ayıklayıcı otomatik iliştirme işlemini gerçekleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,25 +40,25 @@ HRESULT AutoAttach
   
 ## <a name="parameters"></a>Parametreler  
  `guidPort`  
- [in] Always set to `GUID_NULL`.  
+ 'ndaki Her zaman `GUID_NULL`olarak ayarlayın.  
   
  `dwPid`  
- [in] Process ID, normally retrieved with the `GetCurrentProcessId` function.  
+ 'ndaki İşlem KIMLIĞI, normalde `GetCurrentProcessId` işleviyle alındı.  
   
  `dwProgramType`  
- [in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.  
+ 'ndaki Program türü: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`veya `AUTOATTACH_PROGRAM_UNKNOWN`.  
   
  `dwProgramId`  
- [in] Program ID.  
+ 'ndaki Program KIMLIĞI.  
   
  `pszSessionId`  
- [in] String passed by the debug verb.  
+ 'ndaki Hata ayıklama fiili tarafından geçirilen dize.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** DbgAutoAttach.h  
+ **Üst bilgi:** Dbgoto Attach. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

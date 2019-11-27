@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436680"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString Metodu
-Gets the literal string represented by the specified metadata token.  
+Belirtilen meta veri belirteci tarafından temsil edilen sabit dizeyi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,25 +38,25 @@ HRESULT GetUserString (
   
 ## <a name="parameters"></a>Parametreler  
  `stk`  
- [in] The String token to return the associated string for.  
+ 'ndaki İçin ilişkili dizeyi döndürecek dize belirteci.  
   
  `szString`  
- [out] A copy of the requested string.  
+ dışı İstenen dizenin bir kopyası.  
   
  `cchString`  
- [in] The maximum size in wide characters of the requested `szString`.  
+ 'ndaki İstenen `szString`geniş karakterdeki boyut üst sınırı.  
   
  `pchString`  
- [out] The size in wide characters of the returned `szString`.  
+ dışı Döndürülen `szString`geniş karakterdeki boyut.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

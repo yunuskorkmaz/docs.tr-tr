@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437064"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps Metodu
-Gets the metadata for the property represented by the specified token.  
+Belirtilen belirteç tarafından temsil edilen özelliğin meta verilerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,61 +50,61 @@ HRESULT GetPropertyProps (
   
 ## <a name="parameters"></a>Parametreler  
  `prop`  
- [in] A token that represents the property to return metadata for.  
+ 'ndaki Meta verilerini döndürecek özelliği temsil eden bir belirteç.  
   
  `pClass`  
- [out] A pointer to the TypeDef token that represents the type that implements the property.  
+ dışı Özelliği uygulayan türü temsil eden TypeDef belirtecinin işaretçisi.  
   
  `szProperty`  
- [out] A buffer to hold the property name.  
+ dışı Özellik adını tutan bir arabellek.  
   
  `cchProperty`  
- [in] The size in wide characters of `szProperty`.  
+ 'ndaki `szProperty`geniş karakterdeki boyut.  
   
  `pchProperty`  
- [out] The number of wide characters returned in `szProperty`.  
+ dışı `szProperty`' de döndürülen geniş karakter sayısı.  
   
  `pdwPropFlags`  
- [out] A pointer to any attribute flags applied to the property. This value is a bitmask from the [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumeration.  
+ dışı Özelliğe uygulanan öznitelik bayraklarının bir işaretçisi. Bu değer [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) numaralandırmasından bir bit dır.  
   
  `ppvSig`  
- [out] A pointer to the metadata signature of the property.  
+ dışı Özelliğin meta veri imzasına yönelik bir işaretçi.  
   
  `pbSig`  
- [out] The number of bytes returned in `ppvSig`.  
+ dışı `ppvSig`döndürülen bayt sayısı.  
   
  `pdwCPlusTypeFlag`  
- [out] A flag specifying the type of the constant that is the default value of the property. This value is from the CorElementType enumeration.  
+ dışı Özelliğin varsayılan değeri olan sabitin türünü belirten bayrak. Bu değer CorElementType numaralandırmasından.  
   
  `ppDefaultValue`  
- [out] A pointer to the bytes that store the default value for this property.  
+ dışı Bu özellik için varsayılan değeri depolayan bayta yönelik bir işaretçi.  
   
  `pcchDefaultValue`  
- [out] The size in wide characters of `ppDefaultValue`, if `pdwCPlusTypeFlag` is ELEMENT_TYPE_STRING; otherwise, this value is not relevant. In that case, the length of `ppDefaultValue` is inferred from the type that is specified by `pdwCPlusTypeFlag`.  
+ dışı `pdwCPlusTypeFlag` ELEMENT_TYPE_STRING `ppDefaultValue`geniş karakterdeki boyut. Aksi takdirde, bu değer ilgili değildir. Bu durumda, `ppDefaultValue` uzunluğu `pdwCPlusTypeFlag`tarafından belirtilen türden algılanır.  
   
  `pmdSetter`  
- [out] A pointer to the MethodDef token that represents the set accessor method for the property.  
+ dışı Özelliği için set erişimcisi metodunu temsil eden MethodDef belirtecinin işaretçisi.  
   
  `pmdGetter`  
- [out] A pointer to the MethodDef token that represents the get accessor method for the property.  
+ dışı Özelliği için get erişimcisi metodunu temsil eden MethodDef belirtecinin işaretçisi.  
   
  `rmdOtherMethod`  
- [out] An array of MethodDef tokens that represent other methods associated with the property.  
+ dışı Özelliği ile ilişkili diğer yöntemleri temsil eden bir MethodDef belirteçleri dizisi.  
   
  `cMax`  
- [in] The maximum size of the `rmdOtherMethod` array. If you do not provide an array large enough to hold all the methods, they are skipped without warning.  
+ 'ndaki `rmdOtherMethod` dizisinin en büyük boyutu. Tüm yöntemleri tutacak büyüklükte bir dizi sağlamazsanız, bunlar uyarı vermeden atlanır.  
   
  `pcOtherMethod`  
- [out] The number of MethodDef tokens returned in `rmdOtherMethod`.  
+ dışı `rmdOtherMethod`döndürülen MethodDef belirteçleri sayısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

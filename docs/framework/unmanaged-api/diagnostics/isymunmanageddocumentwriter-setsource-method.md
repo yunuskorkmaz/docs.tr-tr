@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449075"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a>ISymUnmanagedDocumentWriter::SetSource Yöntemi
-Sets embedded source for a document that is being written.  
+Yazılmakta olan bir belge için gömülü kaynağı ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,16 +35,16 @@ HRESULT SetSource(
   
 ## <a name="parameters"></a>Parametreler  
  `sourceSize`  
- [in] A `ULONG32` that contains the size of the `source` buffer.  
+ 'ndaki `source` arabelleğinin boyutunu içeren bir `ULONG32`.  
   
  `source`  
- [in] The buffer that stores the embedded source.  
+ 'ndaki Gömülü kaynağı depolayan arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

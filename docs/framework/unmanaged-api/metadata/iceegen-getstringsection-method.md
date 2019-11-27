@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443257"
 ---
 # <a name="iceegengetstringsection-method"></a>ICeeGen::GetStringSection Yöntemi
-Gets a string representation of the code section referenced by the specified handle.  
+Belirtilen tanıtıcı tarafından başvurulan kod bölümünün dize gösterimini alır.  
   
- This method is obsolete and should not be used.  
+ Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +37,16 @@ HRESULT GetStringSection (
   
 ## <a name="parameters"></a>Parametreler  
  `section`  
- [in, out] The handle to the code section.  
+ [in, out] Kod bölümünün tanıtıcısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

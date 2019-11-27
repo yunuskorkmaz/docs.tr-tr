@@ -14,7 +14,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445654"
 ---
 # <a name="alink-api-unmanaged-api-reference"></a>ALink API (Yönetilmeyen API Başvurusu)
-Supports creating .NET Framework assemblies and unbound modules.  
+.NET Framework derlemeleri ve ilişkisiz modülleri oluşturmayı destekler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [AssemblyAttributesGoHere](assemblyattributesgohere.md)  

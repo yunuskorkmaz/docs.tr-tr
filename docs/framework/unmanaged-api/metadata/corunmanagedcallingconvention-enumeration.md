@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442443"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention Numaralandırması
-Specifies the calling conventions for unmanaged code.  
+Yönetilmeyen kod için çağrı kurallarını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,24 +46,24 @@ typedef enum CorUnmanagedCallingConvention {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|The C language calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|The standard calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|The "this" calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|The "fast" calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|C dili çağırma kuralı.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|Standart çağırma kuralı.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|"This" çağırma kuralı.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|"Hızlı" çağırma kuralı.|  
 |`IMAGE_CEE_CS_CALLCONV_C`|Kullanılmadı.|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|Kullanılmadı.|  
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|Kullanılmadı.|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|Kullanılmadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.  
+ CLR, .NET Framework sürüm 1,0 ' de "hızlı" çağırma kuralını desteklemez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

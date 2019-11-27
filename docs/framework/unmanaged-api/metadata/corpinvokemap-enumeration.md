@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441563"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap Numaralandırması
-Specifies options for a PInvoke call.  
+PInvoke çağrısı seçeneklerini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -65,35 +65,35 @@ typedef enum  CorPinvokeMap {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`pmNoMangle`|Use each member name as specified.|  
-|`pmCharSetMask`|Reserved.|  
-|`pmCharSetNotSpec`|Reserved.|  
-|`pmCharSetAnsi`|Marshal strings as multiple-byte character strings.|  
-|`pmCharSetUnicode`|Marshal strings as Unicode 2-byte characters.|  
-|`pmCharSetAuto`|Automatically marshal strings appropriately for the target operating system. The default is Unicode on Windows NT, Windows 2000, Windows XP, and the Windows Server 2003 family; the default is ANSI on Windows 98 and Windows Me.|  
-|`pmBestFitUseAssem`|Reserved.|  
-|`pmBestFitEnabled`|Perform best-fit mapping of Unicode characters that lack an exact match in the ANSI character set.|  
-|`pmBestFitDisabled`|Do not perform best-fit mapping of Unicode characters. In this case, all unmappable characters will be replaced by a ‘?’.|  
-|`pmBestFitMask`|Reserved.|  
-|`pmThrowOnUnmappableCharUseAssem`|Reserved.|  
-|`pmThrowOnUnmappableCharEnabled`|Throw an exception when the interop marshaler encounters an unmappable character.|  
-|`pmThrowOnUnmappableCharDisabled`|Do not throw an exception when the interop marshaler encounters an unmappable character.|  
-|`pmThrowOnUnmappableCharMask`|Reserved|  
-|`pmSupportsLastError`|Allow the callee to call the Win32 `SetLastError` function before returning from the attributed method.|  
-|`pmCallConvMask`|Reserved|  
-|`pmCallConvWinapi`|Use the default platform calling convention. For example, on Windows the default is `StdCall` and on Windows CE .NET it is `Cdecl`.|  
-|`pmCallConvCdecl`|Use the `Cdecl` calling convention. In this case, the caller cleans the stack. This enables calling functions with `varargs` (that is, functions that accept a variable number of parameters).|  
-|`pmCallConvStdcall`|Use the `StdCall` calling convention. In this case, the callee cleans the stack. This is the default convention for calling unmanaged functions with platform invoke.|  
-|`pmCallConvThiscall`|Use the `ThisCall` calling convention. In this case, the first parameter is the `this` pointer and is stored in register ECX. Other parameters are pushed on the stack. The `ThisCall` calling convention is used to call methods on classes exported from an unmanaged DLL.|  
-|`pmCallConvFastcall`|Reserved.|  
-|`pmMaxValue`|Reserved.|  
+|`pmNoMangle`|Her üye adını belirtilen şekilde kullanın.|  
+|`pmCharSetMask`|Ayrılamadı.|  
+|`pmCharSetNotSpec`|Ayrılamadı.|  
+|`pmCharSetAnsi`|Dizeleri birden çok baytlık karakter dizesi olarak sıralama.|  
+|`pmCharSetUnicode`|Dizeleri Unicode 2 baytlık karakterler olarak sıralama.|  
+|`pmCharSetAuto`|Dizeleri hedef işletim sistemi için uygun şekilde otomatik olarak sıralama. Varsayılan değer Windows NT, Windows 2000, Windows XP ve Windows Server 2003 ailesi için Unicode 'dur; Varsayılan değer Windows 98 ve Windows Me 'de ANSI 'dir.|  
+|`pmBestFitUseAssem`|Ayrılamadı.|  
+|`pmBestFitEnabled`|ANSI karakter kümesinde tam eşleşme olmayan Unicode karakterlerinin en iyi şekilde eşleşmesini gerçekleştirin.|  
+|`pmBestFitDisabled`|Unicode karakterlerin en iyi şekilde eşleşmesini gerçekleştirmeyin. Bu durumda, tüm eşlenebilir karakterler '? ' ile değiştirilirler.|  
+|`pmBestFitMask`|Ayrılamadı.|  
+|`pmThrowOnUnmappableCharUseAssem`|Ayrılamadı.|  
+|`pmThrowOnUnmappableCharEnabled`|Birlikte çalışma sıralayıcısı, eşlenebilir bir karakterle karşılaştığında bir özel durum oluşturur.|  
+|`pmThrowOnUnmappableCharDisabled`|Birlikte çalışma sıralayıcısı, eşlenebilir bir karakterle karşılaştığında özel durum oluşturmaz.|  
+|`pmThrowOnUnmappableCharMask`|Ayrılmış|  
+|`pmSupportsLastError`|Aranan yöntemden dönmeden önce çağrılan tarafından Win32 `SetLastError` işlevini çağırmaya izin verin.|  
+|`pmCallConvMask`|Ayrılmış|  
+|`pmCallConvWinapi`|Varsayılan platform çağırma kuralını kullanın. Örneğin, Windows 'da varsayılan değer `StdCall` ve Windows CE .NET ' de `Cdecl`.|  
+|`pmCallConvCdecl`|`Cdecl` çağırma kuralını kullanın. Bu durumda, çağıran yığını temizler. Bu, işlevleri `varargs` (bir değişken parametre sayısı kabul eden işlevler) ile çağırma imkanı sunar.|  
+|`pmCallConvStdcall`|`StdCall` çağırma kuralını kullanın. Bu durumda, çağrılan yığını temizler. Bu, platform Invoke ile yönetilmeyen işlevleri çağırmak için varsayılan kuraldır.|  
+|`pmCallConvThiscall`|`ThisCall` çağırma kuralını kullanın. Bu durumda, ilk parametre `this` işaretçisidir ve Register ECX konumunda depolanır. Diğer parametreler yığına gönderilir. `ThisCall` çağırma kuralı, yönetilmeyen bir DLL 'den aktarılmış sınıflarda yöntemleri çağırmak için kullanılır.|  
+|`pmCallConvFastcall`|Ayrılamadı.|  
+|`pmMaxValue`|Ayrılamadı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

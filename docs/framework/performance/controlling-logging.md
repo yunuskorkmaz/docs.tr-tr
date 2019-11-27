@@ -17,11 +17,11 @@ ms.locfileid: "74447682"
 
 Ortak dil çalışma zamanı (CLR) olaylarını izlemek için Windows olay izleme (ETW) kullanabilirsiniz. Aşağıdaki araçları kullanarak izlemeleri oluşturabilir ve görüntüleyebilirsiniz:
 
-- The [Logman](/windows-server/administration/windows-commands/logman) and [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) command-line tools, which are included with the Windows operating system.
+- Windows işletim sistemine dahil olan [Logman](/windows-server/administration/windows-commands/logman) ve [tracerpt](/windows-server/administration/windows-commands/tracerpt_1) komut satırı araçları.
 
-- The [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) tools in the [Windows Performance Toolkit](/windows-hardware/test/wpt/). For more information about Xperf, see the [Windows Performance blog](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/).
+- [Windows performans araç seti](/windows-hardware/test/wpt/)'Nde [XPerf](/windows-hardware/test/wpt/xperf-command-line-reference) araçları. XPerf hakkında daha fazla bilgi için [Windows performans blogu](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)' na bakın.
 
-CLR olay bilgilerini yakalamak için, CLR sağlayıcısı bilgisayarınıza yüklenmelidir. To confirm that the provider is installed, type `logman query providers` at the command prompt. Sağlayıcı listesi görüntülenir. Bu liste, sağlayıcılar gibi CLR sağlayıcısı için bir girdi içermelidir.
+CLR olay bilgilerini yakalamak için, CLR sağlayıcısı bilgisayarınıza yüklenmelidir. Sağlayıcının yüklendiğini doğrulamak için komut istemine `logman query providers` yazın. Sağlayıcı listesi görüntülenir. Bu liste, sağlayıcılar gibi CLR sağlayıcısı için bir girdi içermelidir.
 
 ```output
 Provider                                 GUID
@@ -29,13 +29,13 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-If the CLR provider is not listed, you can install it on Windows Vista and later operating systems by using the Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) command-line tool. Komut istemi penceresini yönetici olarak açın. Change the prompt directory to the .NET Framework 4 folder (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\ ). Bu klasör, CLE-ETW.man dosyasını içerir. Komut isteminde, CLR sağlayıcısını yüklemek için aşağıdaki komutu yazın:
+CLR sağlayıcısı listede yoksa, Windows [wevtutil](/windows-server/administration/windows-commands/wevtutil) komut satırı aracını kullanarak Windows Vista ve sonraki işletim sistemlerine yükleyebilirsiniz. Komut istemi penceresini yönetici olarak açın. İstem dizinini .NET Framework 4 klasörü olarak değiştirin (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET sürümü > \). Bu klasör, CLE-ETW.man dosyasını içerir. Komut isteminde, CLR sağlayıcısını yüklemek için aşağıdaki komutu yazın:
 
 `wevtutil im CLR-ETW.man`
 
 ## <a name="capturing-clr-etw-events"></a>CLR ETW olaylarını yakalama
 
-You can use the [Logman](/windows-server/administration/windows-commands/logman) and [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) command-line tools to capture ETW events, and the [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) and [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) tools to decode the trace events.
+ETW olaylarını yakalamak için [Logman](/windows-server/administration/windows-commands/logman) ve [XPerf](/windows-hardware/test/wpt/xperf-command-line-reference) komut satırı araçlarını ve izleme olaylarının kodunu çözmek Için [tracerpt](/windows-server/administration/windows-commands/tracerpt_1) ve [XPerf](/windows-hardware/test/wpt/xperf-command-line-reference) araçlarını kullanabilirsiniz.
 
 Bir kullanıcının, günlüğü etkinleştirmek için üç şeyi belirtmesi gerekir:
 
@@ -53,15 +53,15 @@ Bir kullanıcının, günlüğü etkinleştirmek için üç şeyi belirtmesi ger
 
      burada:
 
-    - The `-p` parameter identifies the provider GUID.
+    - `-p` parametresi, sağlayıcı GUID 'INI tanımlar.
 
-    - `0x1CCBD` specifies the categories of events that will be raised.
+    - `0x1CCBD`, oluşturulacak olayların kategorilerini belirtir.
 
-    - `0x5` sets the level of logging (in this case, verbose (5)).
+    - `0x5` günlük düzeyini (Bu durumda verbose (5)) ayarlar.
 
-    - The `-ets` parameter instructs Logman to send commands to event tracing sessions.
+    - `-ets` parametresi, Logman 'yi olay izleme oturumlarına komut gönderecek şekilde yönlendirir.
 
-    - The `-ct perf` parameter specifies that the `QueryPerformanceCounter` function will be used to log the time stamp for each event.
+    - `-ct perf` parametresi, `QueryPerformanceCounter` işlevinin her olay için zaman damgasını günlüğe kaydetmek için kullanılacağını belirtir.
 
 2. Olayları günlüğe kaydetmeyi durdurmak için şunu yazın:
 
@@ -75,7 +75,7 @@ Bir kullanıcının, günlüğü etkinleştirmek için üç şeyi belirtmesi ger
 
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`
 
-     where the GUID is the CLR ETW provider GUID, and `0x1CCBD:5` traces everything at and below level 5 (verbose).
+     burada GUID, CLR ETW sağlayıcısı GUID 'sidir ve `0x1CCBD:5` her şeyi 5. düzey (verbose) ' de izler.
 
 2. İzlemeyi durdurmak için aşağıdakileri yazın:
 
@@ -85,7 +85,7 @@ Bir kullanıcının, günlüğü etkinleştirmek için üç şeyi belirtmesi ger
 
 ## <a name="viewing-clr-etw-events"></a>CLR ETW olaylarını görüntüleme
 
-CLR ETW olaylarını görüntülemek için aşağıda listelenen komutları kullanın. For a description of the events, see [CLR ETW Events](clr-etw-events.md).
+CLR ETW olaylarını görüntülemek için aşağıda listelenen komutları kullanın. Olayların açıklaması için bkz. [CLR ETW olayları](clr-etw-events.md).
 
 ### <a name="to-view-clr-etw-events-using-tracerpt"></a>Tracerpt kullanarak CLR ETW olaylarını görüntülemek için
 
@@ -101,7 +101,7 @@ CLR ETW olaylarını görüntülemek için aşağıda listelenen komutları kull
 
      `xperf clrevents.etl`
 
-     Bu komut Xperf ETL dosya görüntüleyicisini açar. In this viewer, the CLR events show up in the **Generic Events** view. To display a data grid of events categorized by type, select a region of time in this view, and then right-click and select **Summary**.
+     Bu komut Xperf ETL dosya görüntüleyicisini açar. Bu görüntüleyicide, CLR olayları **Genel olaylar** görünümünde görünür. Türe göre kategorize edilmiş olayların veri kılavuzunu görüntülemek için, bu görünümdeki bir zaman bölgesi seçin ve ardından sağ tıklayıp **Özet**' i seçin.
 
 ### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>.etl dosyasını, virgülle ayrılmış değerler dosyasına dönüştürmek için
 
@@ -113,5 +113,5 @@ CLR ETW olaylarını görüntülemek için aşağıda listelenen komutları kull
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Performance Toolkit](/windows-hardware/test/wpt/)
+- [Windows performans araç seti](/windows-hardware/test/wpt/)
 - [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](etw-events-in-the-common-language-runtime.md)

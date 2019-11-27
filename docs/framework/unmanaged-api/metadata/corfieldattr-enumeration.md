@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450307"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr Numaralandırması
-Contains values that describe metadata about a field.  
+Bir alanla ilgili meta verileri tanımlayan değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -56,36 +56,36 @@ typedef enum CorFieldAttr {
 } CorFieldAttr;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|Specifies accessibility information.|  
-|`fdPrivateScope`|Specifies that the field cannot be referenced.|  
-|`fdPrivate`|Specifies that the field is accessible only by its parent type.|  
-|`fdFamANDAssem`|Specifies that the field is accessible by derived classes in its assembly.|  
-|`fdAssembly`|Specifies that the field is accessible by all types in its assembly.|  
-|`fdFamily`|Specifies that the field is accessible only by its type and derived classes.|  
-|`fdFamORAssem`|Specifies that the field is accessible by derived classes and by all types in its assembly.|  
-|`fdPublic`|Specifies that the field is accessible by all types with visibility of this scope.|  
-|`fdStatic`|Specifies that the field is a member of its type rather than an instance member.|  
-|`fdInitOnly`|Specifies that the field cannot be changed after it is initialized.|  
-|`fdLiteral`|Specifies that the field value is a compile-time constant.|  
-|`fdNotSerialized`|Specifies that the field is not serialized when its type is remoted.|  
-|`fdSpecialName`|Specifies that the field is special, and that its name describes how.|  
-|`fdPinvokeImpl`|Specifies that the field implementation is forwarded through PInvoke.|  
-|`fdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`fdRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the name.|  
-|`fdHasFieldMarshal`|Specifies that the field contains marshaling information.|  
-|`fdHasDefault`|Specifies that the field has a default value.|  
-|`fdHasFieldRVA`|Specifies that the field has a relative virtual address.|  
+|`fdFieldAccessMask`|Erişilebilirlik bilgilerini belirtir.|  
+|`fdPrivateScope`|Alana başvurulmadığını belirtir.|  
+|`fdPrivate`|Alana yalnızca üst öğe türüyle erişilebilir olduğunu belirtir.|  
+|`fdFamANDAssem`|Alanı, derlemesinde türetilmiş sınıflar tarafından erişilebilir olduğunu belirtir.|  
+|`fdAssembly`|Alanı, derlemesindeki tüm türler tarafından erişilebilir olduğunu belirtir.|  
+|`fdFamily`|Alanına yalnızca türü ve türetilmiş sınıflar tarafından erişilebilir olduğunu belirtir.|  
+|`fdFamORAssem`|Alan türetilmiş sınıflar ve kendi derlemesindeki tüm türler tarafından erişilebilir olduğunu belirtir.|  
+|`fdPublic`|Alana, bu kapsamın görünürlüğünü içeren tüm türler tarafından erişilebilir olduğunu belirtir.|  
+|`fdStatic`|Alanın bir örnek üyesi yerine türünün bir üyesi olduğunu belirtir.|  
+|`fdInitOnly`|Alanın başlatıldıktan sonra değiştirilemeyeceğini belirtir.|  
+|`fdLiteral`|Alan değerinin bir derleme zamanı sabiti olduğunu belirtir.|  
+|`fdNotSerialized`|Türü uzaktan olduğunda alanın serileştirilmemiş olduğunu belirtir.|  
+|`fdSpecialName`|Alanın özel olduğunu ve adının nasıl kullanıldığını belirtir.|  
+|`fdPinvokeImpl`|Alan uygulamasının PInvoke aracılığıyla iletildiğini belirtir.|  
+|`fdReservedMask`|Ortak dil çalışma zamanı tarafından iç kullanım için ayrılmıştır.|  
+|`fdRTSpecialName`|Ortak dil çalışma zamanı meta veri iç API 'Lerinin ad kodlamasını denetlemesi gerektiğini belirtir.|  
+|`fdHasFieldMarshal`|Alanın sıralama bilgilerini içerdiğini belirtir.|  
+|`fdHasDefault`|Alanın varsayılan bir değere sahip olduğunu belirtir.|  
+|`fdHasFieldRVA`|Alanın göreli bir sanal adresi olduğunu belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

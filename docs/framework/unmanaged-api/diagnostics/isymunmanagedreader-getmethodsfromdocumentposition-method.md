@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441803"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition Yöntemi
-Returns an array of methods, each of which contains the breakpoint at the given position in a document.  
+Her biri bir belgede verilen konumdaki kesme noktasını içeren bir yöntem dizisi döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,28 +40,28 @@ HRESULT GetMethodsFromDocumentPosition (
   
 ## <a name="parameters"></a>Parametreler  
  `document`  
- [in] The specified document.  
+ 'ndaki Belirtilen belge.  
   
  `line`  
- [in] The line of the specified document.  
+ 'ndaki Belirtilen belgenin satırı.  
   
  `column`  
- [in] The column of the specified document.  
+ 'ndaki Belirtilen belgenin sütunu.  
   
  `cMethod`  
- [in] The size of the `pRetVal` array.  
+ 'ndaki `pRetVal` dizisinin boyutu.  
   
  `pcMethod`  
- [out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.  
+ dışı `pRetVal` dizisinde döndürülen öğelerin sayısını alan bir değişkene yönelik işaretçi.  
   
  `pRetVal`  
- [out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.  
+ dışı Her biri, kesme noktasını içeren bir yöntemi temsil eden bir [ıstreamunmanagedmethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) nesnesine işaret eden bir işaretçiler dizisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

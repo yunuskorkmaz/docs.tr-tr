@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436278"
 ---
 # <a name="imetadataconvertergetmetadatafromtypelib-method"></a>IMetaDataConverter::GetMetaDataFromTypeLib Yöntemi
-Gets an interface pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library represented by the specified `ITypeLib` instance.  
+Belirtilen `ITypeLib` örneğiyle temsil edilen tür kitaplığının meta veri imzasını temsil eden bir [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) örneğine yönelik bir arabirim işaretçisi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT GetMetaDataFromTypeLib (
   
 ## <a name="parameters"></a>Parametreler  
  `pITL`  
- [in] Pointer to an `ITypeLib` object that represents the type library.  
+ 'ndaki Tür kitaplığını temsil eden `ITypeLib` nesnesine yönelik işaretçi.  
   
  `ppMDI`  
- [out] Pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.  
+ dışı Meta veri imzasını temsil eden `IMetaDataImport` örneğinin adresini alan bir konum işaretçisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

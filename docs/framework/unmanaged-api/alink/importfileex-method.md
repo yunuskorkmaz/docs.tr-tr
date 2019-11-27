@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446956"
 ---
 # <a name="importfileex-method"></a>ImportFileEx Yöntemi
-Imports indicated assembly or unbound module.  
+Belirtilen derleme veya ilişkisiz modül içeri aktarır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,31 +40,31 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>Parametreler  
  `pszFilename`  
- Fully qualified name of file from which to import.  
+ İçinden içeri aktarılacak dosyanın tam adı.  
   
  `pszTargetName`  
- Optional name of target file.  
+ Hedef dosyanın isteğe bağlı adı.  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ TRUE ise ImportTypes kullanılır, aksi takdirde içeri aktarma işlemi el ile gerçekleştirilmelidir.  
   
  `dwOpenFlags`  
- Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
+ [OpenScope metoduna](../metadata/imetadatadispenser-openscope-method.md)geçirilecek bayraklar.  
   
  `pImportToken`  
- Receives ID of the file being imported.  
+ İçeri aktarılmakta olan dosyanın KIMLIĞINI alır.  
   
  `ppAssemblyScope`  
- Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
+ Derleme içeri aktarma kapsamı [IMetaDataAssemblyImport Arabirimi](../metadata/imetadataassemblyimport-interface.md) arabirimini alır. Dosya bir derleme değilse NULL olarak ayarlanır.  
   
  `pdwCountOfScopes`  
- Receives count of imported files and/or scopes.  
+ İçeri aktarılan dosya ve/veya kapsamların sayısını alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h.  
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

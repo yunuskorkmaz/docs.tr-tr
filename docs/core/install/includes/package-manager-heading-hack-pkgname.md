@@ -7,33 +7,33 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450886"
 ---
 
-The packages added to the package manager feeds are named in a hackable format: `{product}-{type}-{version}`.
+Paket Yöneticisi akışlarına eklenen paketlerin adı, uyumlu bir biçimde: `{product}-{type}-{version}`.
 
-- **product**\
-The type of .NET product to install. Valid options are:
+- **ürün**\
+Yüklenecek .NET Ürün türü. Geçerli seçenekler şunlardır:
 
-  - dotnet
+  - DotNet
   - aspnetcore
 
-- **type**\
-Chooses the SDK or the runtime. Valid options are:
+- **tür**\
+SDK 'Yı veya çalışma zamanını seçer. Geçerli seçenekler şunlardır:
 
-  - sdk
+  - 'sının
   - çalışma zamanı
 
-- **version**\
-The version of the SDK or runtime to install. This article will always give the instructions for the latest supported version. Valid options are any released version, such as:
+- **sürüm**\
+Yüklenecek SDK veya çalışma zamanının sürümü. Bu makale her zaman desteklenen en son sürüme yönelik yönergelere sahip olur. Geçerli seçenekler, şu gibi yayınlanmış bir sürümdür:
 
-  - 3.0
+  - 3,0
   - 2.2
   - 2.1
 
 ### <a name="examples"></a>Örnekler
 
-- Install the .NET Core 2.2 SDK: `dotnet-sdk-2.2`
-- Install the ASP.NET Core 3.0 runtime: `aspnetcore-runtime-3.0`
-- Install the .NET Core 2.1 runtime: `dotnet-runtime-2.1`
+- .NET Core 2,2 SDK 'sını yükler: `dotnet-sdk-2.2`
+- ASP.NET Core 3,0 çalışma zamanını yükler: `aspnetcore-runtime-3.0`
+- .NET Core 2,1 çalışma zamanını yükler: `dotnet-runtime-2.1`
 
-### <a name="troubleshoot"></a>Sorun giderme
+### <a name="troubleshoot"></a>Sorunları Gider
 
-If the package combination doesn't work, it's not available. For example, there isn't an ASP.NET Core SDK, the SDK components are included with the .NET Core SDK. The value `aspnetcore-sdk-2.2` is incorrect and should be `dotnet-sdk-2.2`
+Paket birleşimi işe yaramazsa, kullanılabilir değildir. Örneğin, ASP.NET Core SDK yoktur, SDK bileşenleri .NET Core SDK eklenir. `aspnetcore-sdk-2.2` değeri hatalı ve `dotnet-sdk-2.2` olmalıdır

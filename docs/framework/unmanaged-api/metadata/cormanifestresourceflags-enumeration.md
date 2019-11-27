@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450252"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags Numaralandırması
-Indicates the visibility of resources encoded in an assembly manifest.  
+Bir derleme bildiriminde kodlanan kaynakların görünürlüğünü gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,20 +36,20 @@ typedef enum CorManifestResourceFlags {
 } CorManifestResourceFlags;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`mrVisibilityMask`|Reserved.|  
-|`mrPublic`|The resources are public.|  
-|`mrPrivate`|The resources are private.|  
+|`mrVisibilityMask`|Ayrılamadı.|  
+|`mrPublic`|Kaynaklar geneldir.|  
+|`mrPrivate`|Kaynaklar özeldir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

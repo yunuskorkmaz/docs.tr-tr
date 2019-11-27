@@ -14,29 +14,29 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447700"
 ---
 # <a name="profiling-structures"></a>Profil Oluşturma Yapıları
-This section describes the unmanaged structures that the profiling API uses.  
+Bu bölümde profil oluşturma API 'sinin kullandığı yönetilmeyen yapılar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [COR_PRF_ASSEMBLY_REFERENCE_INFO Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)  
- Provides the common language runtime with information about a reference assembly that it should consider when performing an assembly reference closure walk.  
+ Ortak dil çalışma zamanını, bir derleme başvurusu kapatma ilerlemesi gerçekleştirirken göz önünde bulundurmanız gereken bir başvuru bütünleştirilmiş kodu hakkında bilgiler sağlar.  
   
  [COR_PRF_CODE_INFO Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md)  
- Represents one contiguous block of native code stored in memory.  
+ Bellekte depolanan yerel kodun bir bitişik bloğunu temsil eder.  
   
  [COR_PRF_EX_CLAUSE_INFO Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-ex-clause-info-structure.md)  
- Stores information about a specific exception clause instance and its associated frame.  
+ Belirli bir özel durum yan tümcesi ve onunla ilişkili çerçevesini hakkında bilgi depolar.  
   
  [COR_PRF_FUNCTION Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-structure.md)  
- Provides a unique representation of a function by combining its ID with the ID of its recompiled version.  
+ , KIMLIĞINI yeniden derlenmesi sürümünün KIMLIĞIYLE birleştirerek bir işlevin benzersiz bir gösterimini sağlar.  
   
  [COR_PRF_FUNCTION_ARGUMENT_INFO Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md)  
- Represents a function's arguments, in left-to-right order.  
+ İşlevin bağımsız değişkenlerini soldan sağa sırada temsil eder.  
   
  [COR_PRF_FUNCTION_ARGUMENT_RANGE Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)  
- Represents a block of function arguments stored contiguously in left-to-right order in memory.  
+ Bitişik olarak depolanan bir işlev bağımsız değişkenlerinin bloğunu, bellekte soldan sağa doğru sırada olacak şekilde gösterir.  
   
  [COR_PRF_GC_GENERATION_RANGE Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)  
- Describes a range (that is, block) of memory that is undergoing garbage collection.  
+ Çöp toplama işlemi yapılmakta olan belleğin bir aralığını (yani bloğunu) açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  COR_DEBUG_IL_TO_NATIVE_MAP  

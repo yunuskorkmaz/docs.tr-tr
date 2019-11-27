@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445466"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource Yöntemi
-Installs a specified notification source.  
+Belirtilen bir bildirim kaynağını yükleme.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +37,16 @@ HRESULT RegisterNotifySource
   
 ## <a name="parameters"></a>Parametreler  
  `in_pNotifySource`  
- [in] Specifies the object to be used as the notification source.  
+ 'ndaki Bildirim kaynağı olarak kullanılacak nesneyi belirtir.  
   
  `out_ppNotifySink`  
- [out] Receives the object to be used as the notification sink.  
+ dışı Bildirim havuzu olarak kullanılacak nesneyi alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** ProtocolNotify2.idl  
+ **Üst bilgi:** ProtocolNotify2. IDL  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

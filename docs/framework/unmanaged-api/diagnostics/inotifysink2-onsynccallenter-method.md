@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440872"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>INotifySink2::OnSyncCallEnter Yöntemi
-Gets invoked when entering a call.  
+Bir çağrı girilirken çağrılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +38,19 @@ HRESULT OnSyncCallEnter
   
 ## <a name="parameters"></a>Parametreler  
  `in_CallID`  
- [in] ID of the call being entered. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ 'ndaki Girilen çağrının KIMLIĞI. Bkz. [CALL_ID yapısı](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `in_pBuffer`  
- [in] Call buffer.  
+ 'ndaki Çağrı arabelleği.  
   
  `in_BufferSize`  
- [in] Size of the call buffer, in bytes.  
+ 'ndaki Çağrı arabelleğinin bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** ProtocolNotify2.idl  
+ **Üst bilgi:** ProtocolNotify2. IDL  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

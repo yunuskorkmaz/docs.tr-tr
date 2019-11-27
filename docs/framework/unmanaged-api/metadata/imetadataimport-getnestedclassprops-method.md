@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437145"
 ---
 # <a name="imetadataimportgetnestedclassprops-method"></a>IMetaDataImport::GetNestedClassProps Metodu
-Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.  
+Belirtilen iç içe türün üst <xref:System.Type> için TypeDef belirtecini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT GetNestedClassProps (
   
 ## <a name="parameters"></a>Parametreler  
  `tdNestedClass`  
- [in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.  
+ 'ndaki İçin üst sınıf belirtecini döndürecek <xref:System.Type> temsil eden bir TypeDef belirteci.  
   
  `ptdEnclosingClass`  
- [out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.  
+ dışı `tdNestedClass` içinde iç içe olan <xref:System.Type> için TypeDef belirtecine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

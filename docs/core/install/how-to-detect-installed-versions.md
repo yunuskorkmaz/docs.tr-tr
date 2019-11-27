@@ -1,6 +1,6 @@
 ---
-title: Check installed .NET Core versions on Windows, Linux, and macOS - .NET Core
-description: Learn how to list which versions of .NET Core are installed on your computer. This includes the .NET Core runtime and SDK.
+title: Windows, Linux ve macOS-.NET Core 'da yüklü .NET Core sürümlerini denetleyin
+description: Bilgisayarınızda hangi .NET Core sürümlerinin yüklü olduğunu nasıl listeleyeceğinizi öğrenin. Buna .NET Core çalışma zamanı ve SDK dahildir.
 author: thraka
 ms.author: adegeo
 ms.date: 11/01/2019
@@ -13,17 +13,17 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451096"
 ---
-# <a name="how-to-check-that-net-core-is-already-installed"></a>How to check that .NET Core is already installed
+# <a name="how-to-check-that-net-core-is-already-installed"></a>.NET Core 'un zaten yüklü olduğunu denetleme
 
-This article teaches you how to check which versions of the .NET Core runtime and SDK are installed on your computer. .NET core may have already been installed if you have an integrated development environment, such as Visual Studio or Visual Studio for Mac.
+Bu makalede, hangi .NET Core çalışma zamanı ve SDK sürümlerinin bilgisayarınızda yüklü olduğunu nasıl denetleriz öğretilir. Visual Studio veya Mac için Visual Studio gibi tümleşik bir geliştirme ortamınız varsa .NET Core zaten yüklü olabilir.
 
-Installing an SDK installs the corresponding runtime.
+SDK yükleme, ilgili çalışma zamanını yüklenir.
 
-If any command in this article fails, you don't have the runtime or SDK installed. For more information, see [Download and install .NET Core](index.md).
+Bu makaledeki herhangi bir komut başarısız olursa, çalışma zamanı veya SDK yüklü değildir. Daha fazla bilgi için bkz. [.NET Core 'U indirme ve yükleme](index.md).
 
-## <a name="check-sdk-versions"></a>Check SDK versions
+## <a name="check-sdk-versions"></a>SDK sürümlerini denetle
 
-You can see which versions of the .NET Core SDK are currently installed with a terminal. Open a terminal and run the `dotnet --list-sdks` command.
+Hangi .NET Core SDK sürümlerinin bir terminalle yüklü olduğunu görebilirsiniz. Bir Terminal açın ve `dotnet --list-sdks` komutunu çalıştırın.
 
 ::: zone pivot="os-windows"
 
@@ -73,9 +73,9 @@ dotnet --list-sdks
 
 ::: zone-end
 
-## <a name="check-runtime-versions"></a>Check runtime versions
+## <a name="check-runtime-versions"></a>Çalışma zamanı sürümlerini denetle
 
-You can see which versions of the .NET Core runtime are currently installed with the `dotnet --list-runtimes` command.
+.NET Core çalışma zamanının hangi sürümlerinin Şu anda `dotnet --list-runtimes` komutuyla yüklü olduğunu görebilirsiniz.
 
 ::: zone pivot="os-windows"
 
@@ -158,9 +158,9 @@ Microsoft.NETCore.App 3.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-You can see both the SDK versions and runtime versions with the command `dotnet --info`. You'll also get other environmental related information, such as the operating system version and runtime identifier (RID).
+Komut `dotnet --info`hem SDK sürümlerini hem de çalışma zamanı sürümlerini görebilirsiniz. Ayrıca, işletim sistemi sürümü ve çalışma zamanı tanımlayıcısı (RID) gibi diğer çevresel ilgili bilgileri de alacaksınız.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Install the .NET Core Runtime](runtime.md).
-- [Install the .NET Core SDK](sdk.md).
+- [.NET Core çalışma zamanını yükler](runtime.md).
+- [.NET Core SDK 'ı yükler](sdk.md).

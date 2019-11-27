@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445592"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 Yöntemi
-Sets the name of and options for a new assembly. Do not call this method when you produce unbound modules.  
+Yeni bir derleme için adını ve seçeneklerini ayarlar. İlişkisiz modüller üretmeniz durumunda bu yöntemi çağırmayın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT SetAssemblyFile2(
   
 ## <a name="parameters"></a>Parametreler  
  `pszFilename`  
- Name of manifest file.  
+ Bildirim dosyasının adı.  
   
  `pEmitter`  
- [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) interface for this file.  
+ Bu dosya için [IMetaDataEmit2 arabirimi](../metadata/imetadataemit2-interface.md) arabirimi.  
   
  `afFlags`  
- Options represented by [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
+ [AssemblyFlags numaralandırması](../metadata/assemblyflags-enumeration.md)tarafından temsil edilen seçenekler.  
   
  `pAssemblyID`  
- Receives unique ID for the assembly being constructed.  
+ Oluşturulan derlemenin benzersiz KIMLIĞINI alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h.  
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

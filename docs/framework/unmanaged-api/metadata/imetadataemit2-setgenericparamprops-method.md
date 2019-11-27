@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440441"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps Yöntemi
-Sets property values for the generic parameter definition referenced by the specified token.  
+Belirtilen belirteç tarafından başvurulan genel parametre tanımının özellik değerlerini ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +39,28 @@ HRESULT SetGenericParamProps (
   
 ## <a name="parameters"></a>Parametreler  
  `gp`  
- [in] The token for the generic parameter definition for which to set values.  
+ 'ndaki Değerleri ayarlanacak genel parametre tanımının belirteci.  
   
  `dwParamFlags`  
- [in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.  
+ 'ndaki Genel parametrenin türünü açıklayan [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) numaralandırması değeri.  
   
  `szName`  
- [in] Optional. The name of the parameter for which to set values.  
+ 'ndaki Seçim. Değerlerinin ayarlanacağı parametrenin adı.  
   
  `reserved`  
- [in] Reserved for future extensibility.  
+ 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır.  
   
  `rtkConstraints`  
- [in] Optional. A zero-terminated array of type constraints. Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.  
+ 'ndaki Seçim. Tür kısıtlamaları sıfır ile sonlandırılmış dizi. Dizi üyeleri bir `mdTypeDef`, `mdTypeRef`veya `mdTypeSpec` meta veri belirteci olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

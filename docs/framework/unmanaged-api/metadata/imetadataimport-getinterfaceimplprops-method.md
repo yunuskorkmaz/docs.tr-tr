@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437544"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps Yöntemi
-Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.
+Belirtilen yöntemi uygulayan <xref:System.Type> için meta veri belirteçleri ve bu yöntemi bildiren arabirim için bir işaretçi alır.
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,27 +37,27 @@ HRESULT GetInterfaceImplProps (
   
 ## <a name="parameters"></a>Parametreler  
  `iiImpl`  
- [in] The metadata token representing the method to return the class and interface tokens for.  
+ 'ndaki İçin sınıfı ve arabirim belirteçlerini döndürme yöntemini temsil eden meta veri belirteci.  
   
  `pClass`  
- [out] The metadata token representing the class that implements the method.  
+ dışı Yöntemi uygulayan sınıfı temsil eden meta veri belirteci.  
   
  `ptkIface`  
- [out] The metadata token representing the interface that defines the implemented method.  
+ dışı Uygulanan yöntemi tanımlayan arabirimi temsil eden meta veri belirteci.  
 
 ## <a name="remarks"></a>Açıklamalar
 
- You obtain the value for `iImpl` by calling the [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) method.
+ [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) yöntemini çağırarak `iImpl` değerini elde edersiniz.
  
- For example, suppose that a class has an `mdTypeDef` token value of 0x02000007 and that it implements three interfaces whose types have tokens: 
+ Örneğin, bir sınıfın 0x02000007 `mdTypeDef` belirteç değerine sahip olduğunu ve türleri belirteçleri olan üç arabirim uyguladığını varsayalım: 
 
 - 0x02000003 (TypeDef)
 - 0x0100000A (TypeRef)
 - 0x0200001C (TypeDef)
 
-Conceptually, this information is stored into an interface implementation table as:
+Kavramsal olarak, bu bilgiler bir arabirim uygulama tablosunda şu şekilde depolanır:
 
-| Row number | Class token | Interface token |
+| Satır numarası | Sınıf belirteci | Arabirim belirteci |
 |------------|-------------|-----------------|
 | 4          |             |                 |
 | 5          | 02000007    | 02000003        |
@@ -65,21 +65,21 @@ Conceptually, this information is stored into an interface implementation table 
 | 7          |             |                 |
 | 8          | 02000007    | 0200001C        |
 
-Recall, the token is a 4-byte value:
+Geri çağır, belirteç 4 baytlık bir değerdir:
 
-- The lower 3 bytes hold the row number, or RID.
-- The upper byte holds the token type – 0x09 for `mdtInterfaceImpl`.
+- Alt 3 bayt satır numarasını veya RID 'yi tutar.
+- Üst bayt `mdtInterfaceImpl`için 0x09 belirteç türünü tutar.
 
-`GetInterfaceImplProps` returns the information held in the row whose token you provide in the `iImpl` argument. 
+`GetInterfaceImplProps`, belirtecini `iImpl` bağımsız değişkeninde sağladığınız satırda tutulan bilgileri döndürür. 
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

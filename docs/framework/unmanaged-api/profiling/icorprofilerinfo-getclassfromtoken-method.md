@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448117"
 ---
 # <a name="icorprofilerinfogetclassfromtoken-method"></a>ICorProfilerInfo::GetClassFromToken Metodu
-Gets the ID of the class, given the metadata token. This method is obsolete in the .NET Framework version 2.0. Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.  
+Meta veri belirteci verilen sınıfın KIMLIĞINI alır. Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor. Bunun yerine [ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,25 +36,25 @@ HRESULT GetClassFromToken(
   
 ## <a name="parameters"></a>Parametreler  
  `moduleID`  
- [in] The ID of the module that contains the class.  
+ 'ndaki Sınıfını içeren modülün KIMLIĞI.  
   
  `typeDef`  
- [in] An `mdTypeDef` metadata token that references the class.  
+ 'ndaki Sınıfa başvuran bir `mdTypeDef` meta veri belirteci.  
   
  `cTypeArgs`  
- [out] A pointer to the class ID.  
+ dışı Sınıf KIMLIĞINE yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.  
+ Bu yöntem artık kullanılmıyor; Bunun yerine, tüm türler için `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** 1.0, 1.1  
+ **.NET Framework sürümleri:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

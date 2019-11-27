@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445134"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted Yöntemi
-Notifies the profiler that an assembly is being unloaded.  
+Profiler öğesine bir derlemenin kaldırılmakta olduğunu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,19 +34,19 @@ HRESULT AssemblyUnloadStarted(
   
 ## <a name="parameters"></a>Parametreler  
  `assemblyId`  
- [in] Identifies the assembly that is being unloaded.  
+ 'ndaki Kaldırılmakta olan derlemeyi tanımlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The value of `assemblyId` is not valid for an information request after the `AssemblyUnloadStarted` method returns — this is the profiler's last chance to get information about this assembly.  
+ `assemblyId` değeri `AssemblyUnloadStarted` yöntemi çağrıldıktan sonra bir bilgi isteği için geçerli değil — bu derleme hakkında bilgi almak için profil oluşturucunun son şansı budur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

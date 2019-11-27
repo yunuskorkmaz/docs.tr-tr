@@ -24,7 +24,7 @@ ms.locfileid: "74446612"
 ---
 # <a name="assemblyattributesgoheres"></a>AssemblyAttributesGoHereS
 
-Used by ALink as a placeholder to store information about custom attributes.
+ALink tarafından özel öznitelikler hakkında bilgi depolamak için bir yer tutucu olarak kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,11 +34,11 @@ internal sealed class AssemblyAttributesGoHereS
 
 ## <a name="remarks"></a>Açıklamalar
 
-References to this type might be embedded inside netmodules whose sources contain assembly custom attributes. When building an assembly manifest from one or more netmodules that contain references to these types, ALink uses information attached to these references to emit real custom attributes. As such, this type is never instantiated, and references to it are used only as part of the build process and serve no purpose in the final assembly.
+Bu türe yapılan başvurular, kaynakları derleme özel öznitelikleri içeren netmodule 'ler içine gömülebilir. Bu türlere başvurular içeren bir veya daha fazla netmodule 'ler öğesinden bir derleme bildirimi oluştururken, ALink, gerçek özel öznitelikleri yaymak için bu başvurulara eklenen bilgileri kullanır. Bu nedenle, bu tür hiçbir şekilde örneklenemez ve yalnızca derleme işleminin bir parçası olarak kullanılır ve son derlemede hiçbir amaca uygun değildir.
 
-References to this type indicate custom attributes that are security related and are not multiple-use.
+Bu türe başvurular, güvenlikle ilgili olan ve çoklu kullanım olmayan özel öznitelikleri belirtir.
 
-These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
+Bu türler, .NET Framework içinde "iç" olarak işaretlenir ve <xref:System.Runtime.CompilerServices> ad alanında bulunur.
 
 ## <a name="requirements"></a>Gereksinimler
 

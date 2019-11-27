@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448259"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName Yöntemi
-Gets a pointer to the manifest resource with the specified name.  
+Belirtilen ada sahip bildirim kaynağına yönelik bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,22 +36,22 @@ HRESULT FindManifestResourceByName (
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- [in] The name of the resource.  
+ 'ndaki Kaynağın adı.  
   
  `ptkManifestResource`  
- [out] The array used to store the `mdManifestResource` metadata tokens, each of which represents a manifest resource.  
+ dışı Her biri bir bildirim kaynağını temsil eden `mdManifestResource` meta veri belirteçlerini depolamak için kullanılan dizi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `FindManifestResourceByName` method uses the standard rules employed by the common language runtime for resolving references.  
+ `FindManifestResourceByName` yöntemi, başvuruları çözümlemek için ortak dil çalışma zamanı tarafından çalıştırılan standart kuralları kullanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449463"
 ---
 # <a name="cor_prf_gc_root_flags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS Numaralandırması
-Indicates a property of a garbage collection root.  
+Çöp toplama kökünün bir özelliğini gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +39,22 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|The root prevents a garbage collection from moving the object.|  
-|`COR_PRF_GC_ROOT_WEAKREF`|The root does not prevent garbage collection.|  
-|`COR_PRF_GC_ROOT_INTERIOR`|The root refers to a field of the object rather than the object itself.|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|The root prevents garbage collection if the reference count of the object is a certain value.|  
+|`COR_PRF_GC_ROOT_PINNING`|Kök bir çöp toplamanın nesneyi taşımasını engeller.|  
+|`COR_PRF_GC_ROOT_WEAKREF`|Kök çöp toplamayı engellemez.|  
+|`COR_PRF_GC_ROOT_INTERIOR`|Kök nesnenin kendisi yerine nesnesinin bir alanına başvurur.|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|Nesnenin başvuru sayısı belirli bir değer ise, kök çöp toplamayı önler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots. However, not all roots are special. For example, some roots are not weak references, interior pointers, pinned, or reference-counted. For such roots, there are no flags to convey. Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.  
+ `COR_PRF_GC_ROOT_FLAGS`, özel köklerle ilgili ek bilgiler sağlayan bir bit dır. Ancak, tüm kökler özel değildir. Örneğin, bazı köklere zayıf başvurular, iç işaretçiler, sabitlenmiş veya başvuru sayılır. Bu tür kökler için, iletmek üzere bayrak yoktur. Bu nedenle, [ICorProfilerCallback2:: RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) yöntemi gibi bu numaralandırmayı kullanan Yöntemler, bayraklar bit maskesi için 0 gönderir ve tüm bayrakların kapalı olduğunu gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

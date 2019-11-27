@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438611"
 ---
 # <a name="icorprofilerinfosetfunctionrejit-method"></a>ICorProfilerInfo::SetFunctionReJIT Yöntemi
-Not implemented. Kullanmayın.  
+Uygulanmadı. Kullanmayın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,13 +33,13 @@ HRESULT SetFunctionReJIT(
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Version:** 1.0  
+ **.NET Framework sürümü:** 1,0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

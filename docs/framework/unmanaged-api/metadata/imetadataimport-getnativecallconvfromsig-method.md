@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437245"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>IMetaDataImport::GetNativeCallConvFromSig Yöntemi
-Gets the native calling convention for the method that is represented by the specified signature pointer.  
+Belirtilen imza işaretçisi tarafından temsil edilen yöntem için yerel çağırma kuralını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT GetNativeCallConvFromSig (
   
 ## <a name="parameters"></a>Parametreler  
  `pvSig`  
- [in] A pointer to the metadata signature of the method to return the calling convention for.  
+ 'ndaki Çağırma kuralını döndürmek için yönteminin meta veri imzasına yönelik bir işaretçi.  
   
  `cbSig`  
- [in] The size in bytes of `pvSig`.  
+ 'ndaki `pvSig`bayt cinsinden boyutu.  
   
  `pCallConv`  
- [out] A pointer to the native calling convention.  
+ dışı Yerel çağırma kuralına yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
