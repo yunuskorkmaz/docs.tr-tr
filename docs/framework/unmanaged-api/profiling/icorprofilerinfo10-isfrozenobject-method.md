@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo10::IsFrozenObject
+title: 'ICorProfilerInfo10:: ısfrozenobject'
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -18,35 +18,35 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449830"
 ---
-# <a name="icorprofilerinfo10isfrozenobject-method"></a><span data-ttu-id="09200-102">ICorProfilerInfo10::IsFrozenObject Method</span><span class="sxs-lookup"><span data-stu-id="09200-102">ICorProfilerInfo10::IsFrozenObject Method</span></span>
+# <a name="icorprofilerinfo10isfrozenobject-method"></a><span data-ttu-id="961ef-102">ICorProfilerInfo10:: ısfrozenobject yöntemi</span><span class="sxs-lookup"><span data-stu-id="961ef-102">ICorProfilerInfo10::IsFrozenObject Method</span></span>
 
-<span data-ttu-id="09200-103">Given an ObjectID, determines whether the object is in a read-only segment.</span><span class="sxs-lookup"><span data-stu-id="09200-103">Given an ObjectID, determines whether the object is in a read-only segment.</span></span>
+<span data-ttu-id="961ef-103">ObjectID verildiğinde, nesnenin salt okunurdur bir kesimde olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="961ef-103">Given an ObjectID, determines whether the object is in a read-only segment.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="09200-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="09200-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="961ef-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="961ef-104">Syntax</span></span>
 
 ```cpp
 HRESULT IsFrozenObject( [in]  ObjectID objectId,
                         [out] BOOL *pbFrozen);
 ```
 
-#### <a name="parameters"></a><span data-ttu-id="09200-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="09200-105">Parameters</span></span>
+#### <a name="parameters"></a><span data-ttu-id="961ef-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="961ef-105">Parameters</span></span>
 
 `objectId` \
-<span data-ttu-id="09200-106">[in] The object to examine.</span><span class="sxs-lookup"><span data-stu-id="09200-106">[in] The object to examine.</span></span>
+<span data-ttu-id="961ef-106">'ndaki İncelenecek nesne.</span><span class="sxs-lookup"><span data-stu-id="961ef-106">[in] The object to examine.</span></span>
 
 `pbFrozen` \
-<span data-ttu-id="09200-107">[out] A `BOOL` indicating if the object is in a read-only segment.</span><span class="sxs-lookup"><span data-stu-id="09200-107">[out] A `BOOL` indicating if the object is in a read-only segment.</span></span>
+<span data-ttu-id="961ef-107">dışı Nesnenin salt okunurdur bir kesimde olup olmadığını belirten `BOOL`.</span><span class="sxs-lookup"><span data-stu-id="961ef-107">[out] A `BOOL` indicating if the object is in a read-only segment.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="09200-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="09200-108">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="961ef-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="961ef-108">Requirements</span></span>
 
-<span data-ttu-id="09200-109">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="09200-109">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>
+<span data-ttu-id="961ef-109">**Platformlar:** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="961ef-109">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>
 
-<span data-ttu-id="09200-110">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="09200-110">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="961ef-110">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="961ef-110">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="09200-111">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="09200-111">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="961ef-111">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="961ef-111">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="09200-112">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="09200-112">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
+<span data-ttu-id="961ef-112">**.NET sürümleri:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="961ef-112">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="09200-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="09200-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="961ef-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="961ef-113">See also</span></span>
 
-- [<span data-ttu-id="09200-114">ICorProfilerInfo10 Interface</span><span class="sxs-lookup"><span data-stu-id="09200-114">ICorProfilerInfo10 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [<span data-ttu-id="961ef-114">ICorProfilerInfo10 arabirimi</span><span class="sxs-lookup"><span data-stu-id="961ef-114">ICorProfilerInfo10 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

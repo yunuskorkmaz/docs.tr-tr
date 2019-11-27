@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446242"
 ---
-# <a name="isymunmanagedscope2getconstants-method"></a><span data-ttu-id="89f56-102">ISymUnmanagedScope2::GetConstants Yöntemi</span><span class="sxs-lookup"><span data-stu-id="89f56-102">ISymUnmanagedScope2::GetConstants Method</span></span>
-<span data-ttu-id="89f56-103">Gets the local constants defined within this scope.</span><span class="sxs-lookup"><span data-stu-id="89f56-103">Gets the local constants defined within this scope.</span></span>  
+# <a name="isymunmanagedscope2getconstants-method"></a><span data-ttu-id="8ad39-102">ISymUnmanagedScope2::GetConstants Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8ad39-102">ISymUnmanagedScope2::GetConstants Method</span></span>
+<span data-ttu-id="8ad39-103">Bu kapsam içinde tanımlanan yerel sabitleri alır.</span><span class="sxs-lookup"><span data-stu-id="8ad39-103">Gets the local constants defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="89f56-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="89f56-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8ad39-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8ad39-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetConstants(  
@@ -36,22 +36,22 @@ HRESULT GetConstants(
              constants[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="89f56-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="89f56-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8ad39-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8ad39-105">Parameters</span></span>  
  `cConstants`  
- <span data-ttu-id="89f56-106">[in] The length of the buffer that the `pcConstants` parameter points to.</span><span class="sxs-lookup"><span data-stu-id="89f56-106">[in] The length of the buffer that the `pcConstants` parameter points to.</span></span>  
+ <span data-ttu-id="8ad39-106">'ndaki `pcConstants` parametresinin işaret ettiği arabelleğin uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="8ad39-106">[in] The length of the buffer that the `pcConstants` parameter points to.</span></span>  
   
  `pcConstants`  
- <span data-ttu-id="89f56-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span><span class="sxs-lookup"><span data-stu-id="89f56-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
+ <span data-ttu-id="8ad39-107">dışı Sabitleri içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir `ULONG32` işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="8ad39-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
   
  `constants`  
- <span data-ttu-id="89f56-108">[out] The buffer that stores the constants.</span><span class="sxs-lookup"><span data-stu-id="89f56-108">[out] The buffer that stores the constants.</span></span>  
+ <span data-ttu-id="8ad39-108">dışı Sabitleri depolayan arabellek.</span><span class="sxs-lookup"><span data-stu-id="8ad39-108">[out] The buffer that stores the constants.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="89f56-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="89f56-109">Return Value</span></span>  
- <span data-ttu-id="89f56-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="89f56-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8ad39-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="8ad39-109">Return Value</span></span>  
+ <span data-ttu-id="8ad39-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="8ad39-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="89f56-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="89f56-111">Requirements</span></span>  
- <span data-ttu-id="89f56-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="89f56-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8ad39-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8ad39-111">Requirements</span></span>  
+ <span data-ttu-id="8ad39-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="8ad39-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89f56-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="89f56-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8ad39-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8ad39-113">See also</span></span>
 
-- [<span data-ttu-id="89f56-114">ISymUnmanagedScope2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="89f56-114">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+- [<span data-ttu-id="8ad39-114">ISymUnmanagedScope2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8ad39-114">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
