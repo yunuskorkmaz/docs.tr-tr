@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442875"
 ---
 # <a name="icorprofilerinfo4getobjectsize2-method"></a>ICorProfilerInfo4::GetObjectSize2 Yöntemi
-Returns the size of a specified object. Replaces the [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) method by reporting sizes of objects that are larger than what can be expressed in a `ULONG`.  
+Belirtilen nesnenin boyutunu döndürür. [ICorProfilerInfo:: GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) yöntemini, `ULONG`belirtilebilenden daha büyük nesnelerin raporlama boyutlarına göre değiştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,22 +35,22 @@ HRESULT GetObjectSize2(
   
 ## <a name="parameters"></a>Parametreler  
  `objectId`  
- [in] The ID of the object.  
+ 'ndaki Nesnenin KIMLIĞI.  
   
  `pcSize`  
- [out] A pointer to the object's size, in bytes.  
+ dışı Nesnenin boyutunun bayt cinsinden işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Different objects of the same types often have the same size. However, some types, such as arrays or strings, may have a different size for each object.  
+ Aynı türdeki farklı nesneler genellikle aynı boyutta olur. Ancak, diziler veya dizeler gibi bazı türlerin her nesne için farklı boyutta bir boyutu olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

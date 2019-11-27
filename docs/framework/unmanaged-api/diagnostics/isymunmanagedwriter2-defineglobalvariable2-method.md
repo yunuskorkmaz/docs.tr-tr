@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438279"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 Yöntemi
-Defines a single global variable.  
+Tek bir genel değişkeni tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,31 +40,31 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>Parametreler  
  `name`  
- [in] The global variable name.  
+ 'ndaki Genel değişken adı.  
   
  `attributes`  
- [in] The global variable attributes.  
+ 'ndaki Genel değişken öznitelikleri.  
   
  `sigToken`  
- [in] The metadata token of the signature.  
+ 'ndaki İmzanın meta veri belirteci.  
   
  `addrKind`  
- [in] The address type.  
+ 'ndaki Adres türü.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ 'ndaki Parametre belirtiminin ilk adresi.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ 'ndaki Parametre belirtiminin ikinci adresi.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ 'ndaki Parametre belirtiminin üçüncü adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl  
+ **Üst bilgi:** Corsya. IDL  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
