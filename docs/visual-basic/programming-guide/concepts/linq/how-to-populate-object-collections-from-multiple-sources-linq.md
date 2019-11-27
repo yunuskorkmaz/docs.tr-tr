@@ -9,20 +9,20 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346972"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Nasıl yapılır: birden çok kaynaktan nesne koleksiyonları doldurma (LINQ) (Visual Basic)
 
-This example shows how to merge data from different sources into a sequence of new types.
+Bu örnekte, farklı kaynaklardaki verilerin yeni türler dizisine nasıl birleştiriyapılacağı gösterilmektedir.
 
 > [!NOTE]
-> Don't try to join in-memory data or data in the file system with data that is still in a database. Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources. Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough. To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.
+> Dosya sistemindeki bellek içi verileri veya verileri, hala veritabanında bulunan verilerle birleştirmeyi denemeyin. Bu tür etki alanları arası birleştirmeler, birleştirme işlemlerinin veritabanı sorguları ve diğer kaynak türleri için tanımlanabileceğinden farklı yollarla tanımsız sonuçlar verebilir. Ayrıca, veritabanındaki veri miktarı yeterince büyükse, bu tür bir işlemin bellek dışı bir özel duruma neden olabileceği bir risk vardır. Bir veritabanındaki verileri bellek içi verilere katmak için, önce veritabanı sorgusunda `ToList` veya `ToArray` çağırın ve ardından döndürülen koleksiyonda birleştirmeyi gerçekleştirin.
 
-## <a name="to-create-the-data-file"></a>To create the data file
+## <a name="to-create-the-data-file"></a>Veri dosyası oluşturmak için
 
-- Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+- Names. csv ve puanlarını. csv dosyalarını, [benzer dosyalardan (LINQ) (Visual Basic) nasıl yapılır: Içerik ekleme](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)bölümünde açıklandığı gibi proje klasörünüze kopyalayın.
 
 ## <a name="example"></a>Örnek
 
-The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format. The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores. The ID is used as the foreign key.
+Aşağıdaki örnek,. csv biçiminde elektronik tablo verilerinin benzetimini yapan iki bellekteki iki bellek koleksiyonundan birleştirilmiş verileri depolamak için adlandırılmış bir tür `Student` nasıl kullanacağınızı gösterir. İlk dize koleksiyonu, öğrenci adlarını ve kimliklerini temsil eder ve ikinci koleksiyon öğrenci KIMLIĞINI (ilk sütunda) ve dört sınav puanlarını temsil eder. KIMLIK yabancı anahtar olarak kullanılır.
 
 ```vb
 Imports System.Collections.Generic
@@ -100,9 +100,9 @@ End Class
 ' The average score of Michael Tucker is 92
 ```
 
-In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.
+[Select yan](../../../../visual-basic/language-reference/queries/select-clause.md) tümcesinde bir nesne Başlatıcısı, her yeni `Student` nesnesini iki kaynaktaki verileri kullanarak oluşturmak için kullanılır.
 
-If you don't have to store the results of a query, anonymous types can be more convenient than named types. Named types are required if you pass the query results outside the method in which the query is executed. The following example performs the same task as the previous example, but uses anonymous types instead of named types:
+Bir sorgunun sonuçlarını depolamanız gerekmiyorsa, anonim türler adlandırılmış türlerden daha kullanışlı olabilir. Sorgu sonuçlarını sorgunun yürütüldüğü yöntemin dışına geçirirseniz adlandırılmış türler gereklidir. Aşağıdaki örnek, önceki örnekle aynı görevi gerçekleştirir, ancak adlandırılmış türler yerine anonim türler kullanır:
 
 ```vb
 ' Merge the data by using an anonymous type.
@@ -130,4 +130,4 @@ Next
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

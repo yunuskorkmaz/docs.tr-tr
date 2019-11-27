@@ -13,8 +13,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343539"
 ---
-# <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
-Specifies the code page to use for all source-code files in the compilation.  
+# <a name="-codepage-visual-basic"></a>-CodePage (Visual Basic)
+Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,16 +26,16 @@ Specifies the code page to use for all source-code files in the compilation.
   
 |Terim|Tanım|  
 |---|---|  
-|`id`|Gerekli. The compiler uses the code page specified by `id` to interpret the encoding of the source files.|  
+|`id`|Gerekli. Derleyici, kaynak dosyaların kodlamasını yorumlamak için `id` tarafından belirtilen kod sayfasını kullanır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- To compile source code saved with a specific encoding, you can use `-codepage` to specify which code page should be used. The `-codepage` option applies to all source-code files in your compilation. For more information, see [Character Encoding in the .NET Framework](../../../standard/base-types/character-encoding.md).  
+ Belirli bir kodlamayla kaydedilen kaynak kodu derlemek için, hangi kod sayfasının kullanılacağını belirtmek için `-codepage` kullanabilirsiniz. `-codepage` seçeneği, derinizdeki tüm kaynak kodu dosyaları için geçerlidir. Daha fazla bilgi için [.NET Framework karakter kodlaması](../../../standard/base-types/character-encoding.md)bölümüne bakın.  
   
- The `-codepage` option is not needed if the source-code files were saved using the current ANSI code page, Unicode, or UTF-8 with a signature. Visual Studio saves all source-code files with the current ANSI code page by default, unless the user specifies another encoding in the **Encoding** dialog box. Visual Studio uses the **Encoding** dialog box to open source-code files saved with a different code page.  
+ Kaynak kodu dosyaları bir imzayla geçerli ANSI kod sayfası, Unicode veya UTF-8 kullanılarak kaydedilmişse `-codepage` seçeneği gerekli değildir. Kullanıcı **kodlama** iletişim kutusunda başka bir kodlama belirtmediği takdirde, Visual Studio tüm kaynak kodu dosyalarını varsayılan olarak geçerli ANSI kod sayfasıyla kaydeder. Visual Studio, farklı bir kod sayfasıyla kaydedilen kaynak kodu dosyalarını açmak için **kodlama** iletişim kutusunu kullanır.  
   
 > [!NOTE]
-> The `-codepage` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> `-codepage` seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)

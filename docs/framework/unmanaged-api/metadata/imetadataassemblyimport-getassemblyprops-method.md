@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449437"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps Yöntemi
-Gets the set of properties for the assembly with the specified metadata signature.  
+Belirtilen meta veri imzasına sahip derleme için özellik kümesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,40 +43,40 @@ HRESULT GetAssemblyProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mda`  
- [in]. The `mdAssembly` metadata token that represents the assembly for which to get the properties.  
+ [in]. Özelliklerinin alınacağı derlemeyi temsil eden `mdAssembly` meta veri belirteci.  
   
  `ppbPublicKey`  
- [out] A pointer to the public key or the metadata token.  
+ dışı Ortak anahtara veya meta veri belirtecine yönelik bir işaretçi.  
   
  `pcbPublicKey`  
- [out] The number of bytes in the returned public key.  
+ dışı Döndürülen ortak anahtardaki bayt sayısı.  
   
  `pulHashAlgId`  
- [out] A pointer to the algorithm used to hash the files in the assembly.  
+ dışı Derlemedeki dosyaları karma hale almak için kullanılan algoritmanın işaretçisi.  
   
  `szName`  
- [out] The simple name of the assembly.  
+ dışı Derlemenin basit adı.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ 'ndaki `szName`geniş karakter cinsinden boyutu.  
   
  `pchName`  
- [out] The number of wide chars actually returned in `szName`.  
+ dışı `szName`' de döndürülen geniş karakter sayısı.  
   
  `pMetaData`  
- [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
+ dışı Derleme meta verilerini içeren bir ASSEMBLYMETADATA yapısına yönelik işaretçi.  
   
  `pdwAssemblyFlags`  
- [out] Flags that describe the metadata applied to an assembly. This value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
+ dışı Bir derlemeye uygulanan meta verileri tanımlayan bayraklar. Bu değer bir veya daha fazla [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) değerinin birleşimidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

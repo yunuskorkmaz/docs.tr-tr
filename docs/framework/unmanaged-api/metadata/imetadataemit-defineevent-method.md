@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432558"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent Yöntemi
-Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.  
+Belirtilen meta veri imzasıyla bir olay tanımı oluşturur ve bu olay tanımına bir belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,40 +43,40 @@ HRESULT DefineEvent (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- [in] The token for the target class or interface. This is either a `mdTypeDef` or `mdTypeDefNil` token.  
+ 'ndaki Hedef sınıf veya arabirim için belirteç. Bu bir `mdTypeDef` veya `mdTypeDefNil` belirtecidir.  
   
  `szEvent`  
- [in] The name of the event.  
+ 'ndaki Etkinliğin adı.  
   
  `dwEventFlags`  
- [in] Event flags.  
+ 'ndaki Olay bayrakları.  
   
  `tkEventType`  
- [in] The token for the event class. This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.  
+ 'ndaki Olay sınıfı için belirteç. Bu bir `mdTypeDef`, bir `mdTypeRef`veya `mdTokenNil` belirteç.  
   
  `mdAddOn`  
- [in] The method used to subscribe to the event, or null.  
+ 'ndaki Olaya abone olmak için kullanılan yöntem veya null.  
   
  `mdRemoveOn`  
- [in] The method used to unsubscribe to the event, or null.  
+ 'ndaki Olayın aboneliğini kaldırmak için kullanılan yöntem veya null.  
   
  `mdFire`  
- [in] The method used (by a derived class) to raise the event.  
+ 'ndaki Olayı yükseltmek için kullanılan Yöntem (türetilmiş bir sınıf tarafından).  
   
  `rmdOtherMethods[]`  
- [in] An array of tokens for other methods associated with the event. The array is terminated with a `mdMethodDefNil` token.  
+ 'ndaki Olayla ilişkili diğer yöntemler için bir belirteç dizisi. Dizi `mdMethodDefNil` belirteciyle sonlandırılır.  
   
  `pmdEvent`  
- [out] The metadata token assigned to the event.  
+ dışı Olaya atanan meta veri belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Generate XML from CSV Files'
+title: 'Nasıl yapılır: CSV dosyalarından XML oluşturma'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
 ms.openlocfilehash: 2e2d76fdae8473e47e397f2559f3051c47a180fd
@@ -9,11 +9,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344602"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>How to: Generate XML from CSV Files (Visual Basic)
-This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.  
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Nasıl yapılır: CSV dosyalarından XML oluşturma (Visual Basic)
+Bu örnek, bir virgülle ayrılmış değer (CSV) dosyasından bir XML dosyası oluşturmak için [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nasıl kullanacağınızı gösterir.  
   
 ## <a name="example"></a>Örnek  
- The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.  
+ Aşağıdaki kod, dizeler dizisinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgusu gerçekleştirir.  
   
 ```vb  
       ' Create the text file.  
@@ -109,4 +109,4 @@ Console.WriteLine(cust)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448334"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>ISymUnmanagedReader::GetDocuments Yöntemi
-Returns an array of all the documents defined in the symbol store.  
+Sembol deposunda tanımlanan tüm belgelerin dizisini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT GetDocuments (
   
 ## <a name="parameters"></a>Parametreler  
  `cDocs`  
- [in] The size of the `pDocs` array.  
+ 'ndaki `pDocs` dizisinin boyutu.  
   
  `pcDocs`  
- [out] A pointer to a variable that receives the array length.  
+ dışı Dizi uzunluğunu alan bir değişkene yönelik işaretçi.  
   
  `pDocs`  
- [out] A pointer to a variable that receives the document array.  
+ dışı Belge dizisini alan bir değişkene yönelik işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

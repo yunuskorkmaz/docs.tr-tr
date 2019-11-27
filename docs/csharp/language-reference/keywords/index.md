@@ -18,20 +18,20 @@ ms.locfileid: "74428475"
 ---
 # <a name="c-keywords"></a>C# Anahtar Sözcükleri
 
-Keywords are predefined, reserved identifiers that have special meanings to the compiler. They cannot be used as identifiers in your program unless they include `@` as a prefix. For example, `@if` is a valid identifier, but `if` is not because `if` is a keyword.  
+Anahtar sözcükler, derleyiciye özel anlamlara sahip olan önceden tanımlanmış, ayrılmış tanımlayıcılardır. Ön ek olarak `@` eklemediğiniz sürece, programınızda tanımlayıcı olarak kullanılamaz. Örneğin, `@if` geçerli bir tanımlayıcıdır, ancak `if` `if` bir anahtar sözcüktür.  
   
- The first table in this topic lists keywords that are reserved identifiers in any part of a C# program. The second table in this topic lists the contextual keywords in C#. Contextual keywords have special meaning only in a limited program context and can be used as identifiers outside that context. Generally, as new keywords are added to the C# language, they are added as contextual keywords in order to avoid breaking programs written in earlier versions.  
+ Bu konudaki ilk tablo, bir programın herhangi bir C# bölümünde ayrılmış tanımlayıcılar olan anahtar sözcükleri listeler. Bu konudaki ikinci tablo, içindeki C#bağlamsal anahtar sözcükleri listeler. Bağlamsal anahtar sözcüklerde yalnızca sınırlı program bağlamında özel anlamı vardır ve bu bağlamın dışında tanımlayıcılar olarak kullanılabilir. Genellikle, C# dile yeni anahtar sözcükler eklendikçe, önceki sürümlerde yazılmış programları bozmamak için bağlamsal anahtar sözcükler olarak eklenirler.  
   
 |||||  
 |---|---|---|---|  
 |[abstract](abstract.md)|[as](../operators/type-testing-and-cast.md#as-operator)|[base](base.md)|[bool](bool.md)|  
-|[break](break.md)|[byte](../builtin-types/integral-numeric-types.md)|[case](switch.md)|[catch](try-catch.md)|  
+|[break](break.md)|[byte](../builtin-types/integral-numeric-types.md)|[case](switch.md)|[yakalaya](try-catch.md)|  
 |[char](../builtin-types/char.md)|[checked](checked.md)|[class](class.md)|[const](const.md)|  
 |[continue](continue.md)|[decimal](../builtin-types/floating-point-numeric-types.md)|[default](default.md)|[delegate](../builtin-types/reference-types.md)|  
-|[do](do.md)|[double](../builtin-types/floating-point-numeric-types.md)|[else](if-else.md)|[enum](enum.md)|  
+|[do](do.md)|[double](../builtin-types/floating-point-numeric-types.md)|[değilse](if-else.md)|[enum](enum.md)|  
 |[event](event.md)|[explicit](../operators/user-defined-conversion-operators.md)|[extern](extern.md)|[false](false-literal.md)|  
-|[finally](try-finally.md)|[fixed](fixed-statement.md)|[float](../builtin-types/floating-point-numeric-types.md)|[for](for.md)|  
-|[foreach](foreach-in.md)|[goto](goto.md)|[if](if-else.md)|[implicit](../operators/user-defined-conversion-operators.md)|  
+|[finally](try-finally.md)|[Düzenle](fixed-statement.md)|[float](../builtin-types/floating-point-numeric-types.md)|[for](for.md)|  
+|[Foreach](foreach-in.md)|[goto](goto.md)|[kullandıysanız](if-else.md)|[implicit](../operators/user-defined-conversion-operators.md)|  
 |[in](in.md)|[int](../builtin-types/integral-numeric-types.md)|[interface](interface.md)|[internal](internal.md)|
 |[is](is.md)|[lock](lock-statement.md)|[long](../builtin-types/integral-numeric-types.md)|[namespace](namespace.md)|
 |[new](../operators/new-operator.md)|[null](null.md)|[object](../builtin-types/reference-types.md)|[operator](../operators/operator-overloading.md)|
@@ -40,29 +40,29 @@ Keywords are predefined, reserved identifiers that have special meanings to the 
 |[return](return.md)|[sbyte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
 [sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[string](../builtin-types/reference-types.md)|
 |[struct](struct.md)|[switch](switch.md)|[this](this.md)|[throw](throw.md)|
-|[true](true-literal.md)|[try](try-catch.md)|[typeof](../operators/type-testing-and-cast.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
+|[true](true-literal.md)|[almaya](try-catch.md)|[typeof](../operators/type-testing-and-cast.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
 |[ulong](../builtin-types/integral-numeric-types.md)|[unchecked](unchecked.md)|[unsafe](unsafe.md)|[ushort](../builtin-types/integral-numeric-types.md)|
-|[using](using.md)|[using static](using-static.md)|[virtual](virtual.md)|[void](void.md)|
+|[using](using.md)|[statik kullanma](using-static.md)|[virtual](virtual.md)|[void](void.md)|
 |[volatile](volatile.md)|[while](while.md)|
 
-## <a name="contextual-keywords"></a>Contextual keywords
+## <a name="contextual-keywords"></a>Bağlamsal anahtar sözcükler
 
- A contextual keyword is used to provide a specific meaning in the code, but it is not a reserved word in C#. Some contextual keywords, such as `partial` and `where`, have special meanings in two or more contexts.  
+ Bağlam anahtar sözcüğü, kodda belirli bir anlamı sağlamak için kullanılır, ancak içinde C#ayrılmış bir sözcük değildir. `partial` ve `where`gibi bazı bağlamsal anahtar sözcükler, iki veya daha fazla bağlamda özel anlamlara sahiptir.  
   
 ||||  
 |---|---|---|  
-|[add](add.md)|[alias](extern-alias.md)|[ascending](ascending.md)|
+|[add](add.md)|[ek](extern-alias.md)|[ascending](ascending.md)|
 |[async](async.md)|[await](../operators/await.md)|[by](by.md)|
 |[descending](descending.md)|[dynamic](../builtin-types/reference-types.md)|[equals](equals.md)|
-|[from](from-clause.md)|[get](get.md)|[global](../operators/namespace-alias-qualifier.md)|
-|[group](group-clause.md)|[into](into.md)|[join](join-clause.md)|
-|[let](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
-|[orderby](orderby-clause.md)|[partial (type)](partial-type.md)|[partial (method)](partial-method.md)|
-|[remove](remove.md)|[select](select-clause.md)|[set](set.md)|
-|[unmanaged (generic type constraint)](where-generic-type-constraint.md)|[value](value.md)|[var](var.md)|
-|[when (filtre koşulu)](when.md)|[where (genel tür kısıtlaması)](where-generic-type-constraint.md)|[where (query clause)](where-clause.md)|
+|[Kaynak](from-clause.md)|[get](get.md)|[global](../operators/namespace-alias-qualifier.md)|
+|[grubu](group-clause.md)|[into](into.md)|[ayrılma](join-clause.md)|
+|[atalım](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
+|[OrderBy](orderby-clause.md)|[Kısmi (tür)](partial-type.md)|[partial (Yöntem)](partial-method.md)|
+|[remove](remove.md)|[seçin](select-clause.md)|[set](set.md)|
+|[yönetilmeyen (genel tür kısıtlaması)](where-generic-type-constraint.md)|[value](value.md)|[var](var.md)|
+|[when (filtre koşulu)](when.md)|[where (genel tür kısıtlaması)](where-generic-type-constraint.md)|[WHERE (sorgu yan tümcesi)](where-clause.md)|
 |[yield](yield.md)| | |
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# reference](../index.md)
+- [C#başvurunun](../index.md)

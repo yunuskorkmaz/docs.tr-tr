@@ -16,29 +16,29 @@ ms.locfileid: "74348848"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Belirli Düzendeki Dosyaları Dizine Kopyalama
 
-The <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> method returns a read-only collection of strings representing the path names for the files. You can use the `wildCards` parameter to specify a specific pattern.  
+<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> yöntemi, dosyaların yol adlarını temsil eden salt okunurdur bir dize koleksiyonu döndürür. Belirli bir kalıbı belirtmek için `wildCards` parametresini kullanabilirsiniz.  
   
- An empty collection is returned if no matching files are found.  
+ Eşleşen dosya bulunmazsa boş bir koleksiyon döndürülür.  
   
- You can use the <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> method to copy the files to a directory.  
+ Dosyaları bir dizine kopyalamak için <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> yöntemini kullanabilirsiniz.  
   
-### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a>To copy files with a specific pattern to a directory  
+### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a>Belirli bir düzene sahip dosyaları dizine kopyalamak için  
   
-1. Use the `GetFiles` method to return the list of files. This example returns all .rtf files in the specified directory.  
+1. Dosya listesini döndürmek için `GetFiles` yöntemini kullanın. Bu örnek, belirtilen dizindeki tüm. rtf dosyalarını döndürür.  
   
      [!code-vb[VbFileIOMisc#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#36)]  
   
-2. Use the `CopyFile` method to copy the files. This example copies the files to the directory named `testdirectory`.  
+2. Dosyaları kopyalamak için `CopyFile` yöntemini kullanın. Bu örnek, dosyaları `testdirectory`adlı dizine kopyalar.  
   
      [!code-vb[VbVbcnMyFileSystem#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#88)]  
   
-3. Close the `For` statement with a `Next` statement.  
+3. `Next` ifadesiyle `For` ifadesini kapatın.  
   
      [!code-vb[VbVbcnMyFileSystem#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#89)]  
   
 ## <a name="example"></a>Örnek  
 
- The following example, which presents the above snippets in complete form, copies all .rtf files in the specified directory to the directory named `testdirectory`.  
+ Aşağıdaki örnek, yukarıdaki kod parçacıklarını tamamlanmış bir biçimde sunar, belirtilen dizindeki tüm. rtf dosyalarını `testdirectory`adlı dizine kopyalar.  
   
  [!code-vb[VbFileIOMisc#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#37)]  
   
@@ -46,19 +46,19 @@ The <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> method r
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).  
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (\\\\.\\) (<xref:System.ArgumentException>) ile başlar.  
   
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).  
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.  
   
-- The directory does not exist (<xref:System.IO.DirectoryNotFoundException>).  
+- Dizin yok (<xref:System.IO.DirectoryNotFoundException>).  
   
-- The directory points to an existing file (<xref:System.IO.IOException>).  
+- Dizin, var olan bir dosyaya (<xref:System.IO.IOException>) işaret eder.  
   
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).  
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
   
-- A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).  
+- Yoldaki bir dosya veya dizin adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
   
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>). The user lacks necessary permissions (<xref:System.UnauthorizedAccessException>).  
+- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>). Kullanıcının gerekli izinleri yok (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -16,36 +16,36 @@ ms.locfileid: "74345569"
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kullanılabilecek Seri Bağlantı Noktalarını Gösterme
 
-This topic describes how to use `My.Computer.Ports` to show the available serial ports of the computer in Visual Basic.  
+Bu konuda, Visual Basic bilgisayarın kullanılabilir seri bağlantı noktalarını göstermek için `My.Computer.Ports` nasıl kullanılacağı açıklanmaktadır.  
   
- To allow a user to select which port to use, the names of the serial ports are placed in a <xref:System.Windows.Forms.ListBox> control.  
+ Bir kullanıcının kullanılacak bağlantı noktasını seçmesine izin vermek için, seri bağlantı noktalarının adları bir <xref:System.Windows.Forms.ListBox> denetimine yerleştirilir.  
   
 ## <a name="example"></a>Örnek  
 
- This example loops over all the strings that the `My.Computer.Ports.SerialPortNames` property returns. These strings are the names of the available serial ports on the computer.  
+ Bu örnek, `My.Computer.Ports.SerialPortNames` özelliğinin döndürdüğü tüm dizelerin üzerinde döngüye geçer. Bu dizeler bilgisayardaki kullanılabilir seri bağlantı noktalarının adlarıdır.  
   
- Typically, a user selects which serial port the application should use from the list of available ports. In this example, the serial port names are stored in a <xref:System.Windows.Forms.ListBox> control. For more information, see [ListBox Control](../../../../framework/winforms/controls/listbox-control-windows-forms.md).  
+ Genellikle, bir kullanıcı uygulamanın kullanılabilir bağlantı noktaları listesinden kullanması gereken seri bağlantı noktasını seçer. Bu örnekte, seri bağlantı noktası adları bir <xref:System.Windows.Forms.ListBox> denetiminde depolanır. Daha fazla bilgi için bkz. [ListBox Control](../../../../framework/winforms/controls/listbox-control-windows-forms.md).  
   
  [!code-vb[VbVbalrMyComputer#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#45)]  
   
- This code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **Connectivity and Networking**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
+ Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide, **bağlantı ve ağ**bölümünde bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
 
- This example requires:  
+ Bu örnek şunları gerektirir:  
   
-- A project reference to System.Windows.Forms.dll.  
+- System. Windows. Forms. dll ' ye bir proje başvurusu.  
   
-- Access to the members of the <xref:System.Windows.Forms> namespace. Add an `Imports` statement if you are not fully qualifying member names in your code. For more information, see [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- <xref:System.Windows.Forms> ad alanının üyelerine erişin. Kodunuzda üye adlarını tam olarak nitedıysanız `Imports` bir ifade ekleyin. Daha fazla bilgi için bkz. [Imports açıklaması (.net ad alanı ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
-- That your form have a <xref:System.Windows.Forms.ListBox> control named `ListBox1`.  
+- Formunuzda `ListBox1`adında bir <xref:System.Windows.Forms.ListBox> denetimi vardır.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- You do not have to use the <xref:System.Windows.Forms.ListBox> control to display the available serial port names. Instead, you can use a <xref:System.Windows.Forms.ComboBox> or other control. If the application does not need a response from the user, you can use a <xref:System.Windows.Forms.TextBox> control to display the information.  
+ Kullanılabilir seri bağlantı noktası adlarını göstermek için <xref:System.Windows.Forms.ListBox> denetimini kullanmak zorunda değilsiniz. Bunun yerine, <xref:System.Windows.Forms.ComboBox> veya başka bir denetim kullanabilirsiniz. Uygulamanın kullanıcıdan bir yanıt ihtiyacı yoksa, bilgileri göstermek için bir <xref:System.Windows.Forms.TextBox> denetimi kullanabilirsiniz.  
   
 > [!NOTE]
-> The port names returned by `My.Computer.Ports.SerialPortNames` may be incorrect when run on Windows 98. To prevent application errors, use exception handling, such as the `Try...Catch...Finally` statement or the `Using` statement, when using the port names to open ports.  
+> `My.Computer.Ports.SerialPortNames` tarafından döndürülen bağlantı noktası adları, Windows 98 üzerinde çalıştırıldığında yanlış olabilir. Uygulama hatalarını engellemek için, bağlantı noktalarını açmak üzere bağlantı noktası adlarını kullanırken `Try...Catch...Finally` veya `Using` bildirimiyle, özel durum işlemeyi kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

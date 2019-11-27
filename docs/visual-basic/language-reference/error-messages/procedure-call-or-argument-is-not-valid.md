@@ -12,11 +12,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346989"
 ---
 # <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a>Yordam çağrısı veya bağımsız değişken geçerli değil (Visual Basic)
-Some part of the call cannot be completed.  
+Çağrının bir bölümü tamamlanamıyor.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.  
+- Hiçbir düzenlemenin izin verilen değerleri aştığından emin olmak için bağımsız değişkenler için izin verilen aralıkları denetleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

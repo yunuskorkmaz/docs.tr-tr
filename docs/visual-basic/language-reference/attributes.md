@@ -13,15 +13,15 @@ ms.locfileid: "74347865"
 ---
 # <a name="attributes-visual-basic"></a>Öznitelikler (Visual Basic)
 
-Visual Basic provides several attributes that allow objects to interoperate with unmanaged code and one attribute that enables module members to be accessed without the module name. The following table lists the attributes used by Visual Basic.  
+Visual Basic, nesnelerin yönetilmeyen kodla ve modül üyelerine modül adı olmadan erişilmesini sağlayan bir özniteliğiyle birlikte çalışabilmesine imkan tanıyan birkaç öznitelik sağlar. Aşağıdaki tablo Visual Basic tarafından kullanılan öznitelikleri listeler.  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|Instructs the compiler to add metadata that allows a class to be exposed as a COM object.|
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Allows the module members to be accessed using only the qualification needed for the module.|
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Indicates that an array in a structure or non-local variable should be treated as a fixed-length array.|
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Indicates that a string should be treated as if it were fixed length.|
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Derleyiciye bir sınıfın COM nesnesi olarak gösterilmesini sağlayan meta veriler eklemesini söyler.|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Modül üyelerine yalnızca modül için gereken nitelik kullanılarak erişilmesine izin verir.|
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Bir yapıdaki veya yerel olmayan değişkendeki bir dizinin sabit uzunluklu dizi olarak değerlendirilmesinin gerektiğini gösterir.|
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Bir dizenin, sabit uzunlukta olduğu gibi değerlendirilmesinin gerektiği anlamına gelir.|
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Attributes overview](../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Özniteliklere genel bakış](../../visual-basic/programming-guide/concepts/attributes/index.md)

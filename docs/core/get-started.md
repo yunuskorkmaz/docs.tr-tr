@@ -1,6 +1,6 @@
 ---
-title: Get started with .NET Core
-description: Find resources to learn how to build .NET Core applications on Windows, Linux and macOS.
+title: .NET Core ile çalışmaya başlama
+description: Windows, Linux ve macOS 'ta .NET Core uygulamaları oluşturmayı öğrenmek için kaynakları bulun.
 author: thraka
 ms.author: adegeo
 ms.date: 09/19/2019
@@ -11,68 +11,68 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428876"
 ---
-# <a name="get-started-with-net-core"></a>Get started with .NET Core
+# <a name="get-started-with-net-core"></a>.NET Core ile çalışmaya başlama
 
-This article provides information on getting started with .NET Core. .NET Core can be installed on Windows, Linux, and macOS. You can code in your favorite text editor and produce cross-platform libraries and applications. 
+Bu makalede, .NET Core ile çalışmaya başlama hakkında bilgi sağlanır. .NET Core, Windows, Linux ve macOS 'a yüklenebilir. En sevdiğiniz metin düzenleyicinizde kod oluşturabilir ve platformlar arası kitaplıklar ve uygulamalar oluşturabilirsiniz. 
 
-If you're unsure what .NET Core is, or how it relates to other .NET technologies, start with the [What is .NET](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet) overview. Put simply, .NET Core is an open-source, cross-platform implementation of .NET.
+.NET Core 'un ne olduğunu veya diğer .NET teknolojileriyle nasıl ilişkili olduğunu bilmiyorsanız, [.net](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet) genel bakış ile başlayın. .NET Core, .NET ' in açık kaynaklı ve platformlar arası bir uygulamasıdır.
 
-## <a name="create-an-application"></a>Create an application
+## <a name="create-an-application"></a>Uygulama oluşturma
 
-First, download and install the [.NET Core SDK](https://dotnet.microsoft.com/download) on your computer.
+İlk olarak, [.NET Core SDK](https://dotnet.microsoft.com/download) bilgisayarınıza indirip yükleyin.
 
-Next, open a terminal such as **PowerShell**, **Command Prompt**, or **bash**. Type the following `dotnet` commands to create and run a C# application:
+Ardından, **PowerShell**, **komut istemi**veya **Bash**gibi bir Terminal açın. Bir C# uygulama oluşturmak ve çalıştırmak için aşağıdaki `dotnet` komutlarını yazın:
 
 ```dotnetcli
 dotnet new console --output sample1
 dotnet run --project sample1
 ```
 
-You should see the following output:
+Aşağıdaki çıktıyı görmeniz gerekir:
 
 ```console
 Hello World!
 ```
 
-Congratulations! You've created a simple .NET Core application. You can also use [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio](tutorials/with-visual-studio.md) (Windows only), or [Visual Studio for Mac](tutorials/using-on-mac-vs.md) (macOS only), to create a .NET Core application.
+Tebrikler! Basit bir .NET Core uygulaması oluşturdunuz. .NET Core uygulaması oluşturmak için [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio](tutorials/with-visual-studio.md) (yalnızca Windows) veya [Mac için Visual Studio](tutorials/using-on-mac-vs.md) (yalnızca MacOS) de kullanabilirsiniz.
 
 ## <a name="tutorials"></a>Öğreticiler
 
-You can get started developing .NET Core applications by following these step-by-step tutorials.
+Bu adım adım öğreticilerini izleyerek .NET Core uygulamaları geliştirmeye başlamanızı sağlayabilirsiniz.
 
 <!-- markdownlint-disable MD025 -->
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-- [Build a C# "Hello World" Application with .NET Core in Visual Studio 2017.](./tutorials/with-visual-studio.md)
-- [Build a C# class library with .NET Core in Visual Studio 2017.](./tutorials/library-with-visual-studio.md)
-- [Build a Visual Basic "Hello World" application with .NET Core in Visual Studio 2017.](./tutorials/vb-with-visual-studio.md)
-- [Build a class library with Visual Basic and .NET Core in Visual Studio 2017.](./tutorials/vb-library-with-visual-studio.md)  
-- Watch a video on [how to install and use Visual Studio Code and .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/).
-- Watch a video on [how to install and use Visual Studio 2017 and .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/).
-- [Getting started with .NET Core using the command-line.](tutorials/using-with-xplat-cli.md)
+- [Visual Studio C# 2017 ' de .NET Core ile bir "Merhaba Dünya" uygulaması oluşturun.](./tutorials/with-visual-studio.md)
+- [Visual Studio C# 2017 ' de .NET Core ile bir sınıf kitaplığı oluşturun.](./tutorials/library-with-visual-studio.md)
+- [Visual Studio 2017 ' de .NET Core ile bir Visual Basic "Merhaba Dünya" uygulaması oluşturun.](./tutorials/vb-with-visual-studio.md)
+- [Visual Studio 2017 ' de Visual Basic ve .NET Core ile bir sınıf kitaplığı oluşturun.](./tutorials/vb-library-with-visual-studio.md)  
+- [Visual Studio Code ve .NET Core 'u yüklemek ve kullanmak için](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/)bir video izleyin.
+- [Visual Studio 2017 ve .NET Core 'u yüklemek ve kullanmak için](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/)bir video izleyin.
+- [Komut satırını kullanarak .NET Core ile çalışmaya başlama.](tutorials/using-with-xplat-cli.md)
 
-See the [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-windows) article for a list of the supported Windows versions.
+Desteklenen Windows sürümlerinin bir listesi için bkz. [.NET Core Dependencies ve Requirements](install/dependencies.md?tabs=netcore30&pivots=os-windows) makalesi.
 
-# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+# <a name="linuxtablinux"></a>['Un](#tab/linux)
 
-You can get started developing .NET Core application by following these step-by-step tutorials:
+Aşağıdaki adım adım öğreticilerden yararlanarak .NET Core uygulaması geliştirmeye başlamanızı sağlayabilirsiniz:
 
-- [Getting started with .NET Core using the command-line.](tutorials/using-with-xplat-cli.md)
-- Watch a video on [getting started with Visual Studio Code using C# and .NET Core on Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
+- [Komut satırını kullanarak .NET Core ile çalışmaya başlama.](tutorials/using-with-xplat-cli.md)
+- [Ubuntu 'da ve .NET Core 'u kullanarak C# Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)kullanmaya başlama hakkında bir video izleyin.
 
-See the [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-linux) article for a list of the supported Linux distros and versions.
+Desteklenen Linux desteklerinin ve sürümlerinin bir listesi için bkz. [.NET Core Dependencies ve gereksinimler](install/dependencies.md?tabs=netcore30&pivots=os-linux) makalesi.
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-You can get started developing .NET Core application by following these step-by-step tutorials:
+Aşağıdaki adım adım öğreticilerden yararlanarak .NET Core uygulaması geliştirmeye başlamanızı sağlayabilirsiniz:
 
-- Watch a video on [Getting started with Visual Studio Code using C# and .NET Core on macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac).
-- [Getting started with .NET Core on macOS, using Visual Studio Code.](tutorials/using-on-macos.md)
-- [Getting started with .NET Core using the command-line.](tutorials/using-with-xplat-cli.md)
-- [Getting started with .NET Core on macOS using Visual Studio for Mac.](tutorials/using-on-mac-vs.md)
-- [Build a complete .NET Core solution on macOS using Visual Studio for Mac.](tutorials/using-on-mac-vs-full-solution.md)
+- [MacOS 'ta .NET Core 'u kullanarak C# Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)kullanmaya başlama hakkında bir video izleyin.
+- [Visual Studio Code kullanarak macOS 'ta .NET Core ile çalışmaya başlama.](tutorials/using-on-macos.md)
+- [Komut satırını kullanarak .NET Core ile çalışmaya başlama.](tutorials/using-with-xplat-cli.md)
+- [Mac için Visual Studio kullanarak macOS 'ta .NET Core ile çalışmaya başlama.](tutorials/using-on-mac-vs.md)
+- [Mac için Visual Studio kullanarak macOS 'ta kapsamlı bir .NET Core çözümü oluşturun.](tutorials/using-on-mac-vs-full-solution.md)
 
-See the [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-macos) article for a list of the supported OS X / macOS versions.
+Desteklenen OS X/macOS sürümlerinin bir listesi için bkz. [.NET Core Dependencies ve Requirements](install/dependencies.md?tabs=netcore30&pivots=os-macos) makalesi.
 
 ---

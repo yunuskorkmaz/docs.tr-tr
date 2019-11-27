@@ -1,5 +1,5 @@
 ---
-title: Value types table - C# reference
+title: Değer türleri tablo- C# başvuru
 ms.custom: seodec18
 ms.date: 11/06/2019
 helpviewer_keywords:
@@ -13,31 +13,31 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428471"
 ---
-# <a name="value-types-table-c-reference"></a>Value types table (C# reference)
+# <a name="value-types-table-c-reference"></a>Değer türleri tablosu (C# başvuru)
 
-The following table shows the C# value types:
+Aşağıdaki tabloda C# değer türleri gösterilmektedir:
 
 |Değer türü|Kategori|
 |----------------|--------------|
 |[bool](bool.md)|Boole değeri|
-|`byte`|Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)|
-|[char](../builtin-types/char.md)|Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)|
-|`decimal`|Numeric, [floating-point](../builtin-types/floating-point-numeric-types.md)|
-|`double`|Numeric, [floating-point](../builtin-types/floating-point-numeric-types.md)|
-|[enum](enum.md)|Sabit Listesi|
-|`float`|Numeric, [floating-point](../builtin-types/floating-point-numeric-types.md)|
-|`int`|Signed, numeric, [integral](../builtin-types/integral-numeric-types.md)|
-|`long`|Signed, numeric, [integral](../builtin-types/integral-numeric-types.md)|
-|`sbyte`|Signed, numeric, [integral](../builtin-types/integral-numeric-types.md)|
-|`short`|Signed, numeric, [integral](../builtin-types/integral-numeric-types.md)|
-|[struct](struct.md)|User-defined structure|
-|`uint`|Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)|
-|`ulong`|Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)|
-|`ushort`|Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)|
+|`byte`|İşaretsiz, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
+|[char](../builtin-types/char.md)|İşaretsiz, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
+|`decimal`|Sayısal, [kayan nokta](../builtin-types/floating-point-numeric-types.md)|
+|`double`|Sayısal, [kayan nokta](../builtin-types/floating-point-numeric-types.md)|
+|[enum](enum.md)|Numaralandırma|
+|`float`|Sayısal, [kayan nokta](../builtin-types/floating-point-numeric-types.md)|
+|`int`|İmzalanan, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
+|`long`|İmzalanan, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
+|`sbyte`|İmzalanan, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
+|`short`|İmzalanan, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
+|[struct](struct.md)|Kullanıcı tanımlı yapı|
+|`uint`|İşaretsiz, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
+|`ulong`|İşaretsiz, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
+|`ushort`|İşaretsiz, sayısal, [integral](../builtin-types/integral-numeric-types.md)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# reference](../index.md)
-- [Default values table](default-values-table.md)
-- [Value types](value-types.md)
-- [Formatting numeric results table](formatting-numeric-results-table.md)
+- [C#başvurunun](../index.md)
+- [Varsayılan değerler tablosu](default-values-table.md)
+- [Değer türleri](value-types.md)
+- [Sayısal sonuçlar tablosunu biçimlendirme](formatting-numeric-results-table.md)

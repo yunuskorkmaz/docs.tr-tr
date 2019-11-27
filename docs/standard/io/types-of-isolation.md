@@ -28,46 +28,46 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74205013"
 ---
 # <a name="types-of-isolation"></a>Yalıtım Türleri
-Access to isolated storage is always restricted to the user who created it. To implement this type of isolation, the common language runtime uses the same notion of user identity that the operating system recognizes, which is the identity associated with the process in which the code is running when the store is opened. This identity is an authenticated user identity, but impersonation can cause the identity of the current user to change dynamically.  
+Yalıtılmış depolamaya erişim, her zaman onu oluşturan kullanıcıyla kısıtlanır. Bu tür yalıtımın uygulanması için ortak dil çalışma zamanı, işletim sisteminin tanıdığı aynı kullanıcı kimliği kavramını kullanır. Bu, mağaza açıldığında kodun çalıştırıldığı işlemle ilişkili kimliktir. Bu kimlik kimliği doğrulanmış bir kullanıcı kimliğidir, ancak kimliğe bürünme geçerli kullanıcının kimliğinin dinamik olarak değişmesine neden olabilir.  
   
- Access to isolated storage is also restricted according to the identity associated with the application's domain and assembly, or with the assembly alone. The runtime obtains these identities in the following ways:  
+ Yalıtılmış depolamaya erişim, uygulamanın etki alanı ve derlemesi ile ilişkili kimliğe veya tek başına derlemeye göre de kısıtlanır. Çalışma zamanı bu kimlikleri aşağıdaki yollarla edinir:  
   
-- Domain identity represents the evidence of the application, which in the case of a web application might be the full URL. For shell-hosted code, the domain identity might be based on the application directory path. For example, if the executable runs from the path C:\Office\MyApp.exe, the domain identity would be C:\Office\MyApp.exe.  
+- Etki alanı kimliği, uygulamanın kanıtını temsil eder. Bu, bir Web uygulaması durumunda tam URL olabilir. Kabukta barındırılan kod için etki alanı kimliği, uygulama dizini yolunu temel alabilir. Örneğin, yürütülebilir C:\Office\MyApp.exe yolundan çalışırsa, etki alanı kimliği C:\Office\MyApp.exeolur.  
   
-- Assembly identity is the evidence of the assembly. This might come from a cryptographic digital signature, which can be the assembly's [strong name](../assembly/strong-named.md), the software publisher of the assembly, or its URL identity. If an assembly has both a strong name and a software publisher identity, then the software publisher identity is used. If the assembly comes from the Internet and is unsigned, the URL identity is used. For more information about assemblies and strong names, see [Programming with Assemblies](../assembly/program.md).  
+- Bütünleştirilmiş kod kimliği derleme kanıtdır. Bu, derlemenin [tanımlayıcı adı](../assembly/strong-named.md), derlemenin yazılım YAYıMCıSı veya URL kimliği olabilen bir şifrelenmiş dijital imzadan gelebilir. Bir derlemede hem tanımlayıcı adı hem de yazılım yayımcısı kimliği varsa, yazılım yayımcısı kimliği kullanılır. Derleme Internet 'ten geliyorsa ve imzasız ise, URL kimliği kullanılır. Derlemeler ve tanımlayıcı adlar hakkında daha fazla bilgi için bkz. [Derlemelerle programlama](../assembly/program.md).  
   
-- Roaming stores move with a user that has a roaming user profile. Files are written to a network directory and are downloaded to any computer the user logs into. For more information about roaming user profiles, see <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
+- Dolaşım depoları, gezici kullanıcı profiline sahip bir kullanıcıyla birlikte taşınır. Dosyalar bir ağ dizinine yazılır ve kullanıcının oturum açtığı herhangi bir bilgisayara indirilir. Gezici Kullanıcı profilleri hakkında daha fazla bilgi için bkz. <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   
- By combining the concepts of user, domain, and assembly identity, isolated storage can isolate data in the following ways, each of which has its own usage scenarios:  
+ Yalıtılmış depolama, Kullanıcı, etki alanı ve derleme kimliği kavramlarını birleştirerek verileri aşağıdaki yollarla yalıtabilir, her biri kendi kullanım senaryolarına sahiptir:  
   
-- [Isolation by user and assembly](#UserAssembly)  
+- [Kullanıcı ve derlemeye göre yalıtım](#UserAssembly)  
   
-- [Isolation by user, domain, and assembly](#UserDomainAssembly)  
+- [Kullanıcı, etki alanı ve derlemeye göre yalıtım](#UserDomainAssembly)  
   
- Either of these isolations can be combined with a roaming user profile. For more information, see the section [Isolated Storage and Roaming](#Roaming).  
+ Bu ısodılardan biri, bir dolaşım kullanıcı profiliyle birleştirilebilir. Daha fazla bilgi için, [yalıtılmış depolama ve dolaşım](#Roaming)bölümüne bakın.  
   
- The following illustration demonstrates how stores are isolated in different scopes:  
+ Aşağıdaki çizimde, mağazaların farklı kapsamlarda nasıl yalıtımlı gösterilmektedir:  
   
- ![Diagram that shows isolation by user and assembly.](./media/types-of-isolation/isolated-storage-types.gif)  
+ ![Kullanıcı ve derlemeye göre yalıtımı gösteren diyagram.](./media/types-of-isolation/isolated-storage-types.gif)  
   
- Note that except for roaming stores, isolated storage is always implicitly isolated by computer because it uses the storage facilities that are local to a given computer.  
+ Dolaşım depoları hariç, belirli bir bilgisayarda yerel olan depolama olanaklarını kullandığından yalıtılmış depolamanın her zaman bilgisayar tarafından örtük olarak yalıtılmış olduğunu unutmayın.  
   
 > [!IMPORTANT]
-> Isolated storage is not available for Windows 8.x Store apps. Instead, use the application data classes in the `Windows.Storage` namespaces included in the Windows Runtime API to store local data and files. For more information, see [Application data](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) in the Windows Dev Center.  
+> Yalıtılmış depolama, Windows 8. x Mağazası uygulamaları için kullanılamaz. Bunun yerine, yerel verileri ve dosyaları depolamak için Windows Çalışma Zamanı API 'sinde bulunan `Windows.Storage` ad alanlarında uygulama veri sınıflarını kullanın. Daha fazla bilgi için bkz. Windows Geliştirme Merkezi 'nde [uygulama verileri](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) .  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>Kullanıcı ve Derlemeye Göre Yalıtım  
- When the assembly that uses the data store needs to be accessible from any application's domain, isolation by user and assembly is appropriate. Typically, in this situation, isolated storage is used to store data that applies across multiple applications and is not tied to any particular application, such as the user's name or license information. To access storage isolated by user and assembly, code must be trusted to transfer information between applications. Typically, isolation by user and assembly is allowed on intranets but not on the Internet. Calling the static <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> method and passing in a user and an assembly <xref:System.IO.IsolatedStorage.IsolatedStorageScope> returns storage with this kind of isolation.  
+ Veri deposunu kullanan derlemeye herhangi bir uygulamanın etki alanından erişilebilir olması gerektiğinde, Kullanıcı ve derlemeye göre yalıtım uygundur. Genellikle, bu durumda, yalıtılmış depolama, birden fazla uygulama için geçerli olan ve kullanıcının adı ya da lisans bilgileri gibi belirli bir uygulamaya bağlı olmayan verileri depolamak için kullanılır. Kullanıcı ve derlemeye göre yalıtılmış depolamaya erişmek için, kodun uygulamalar arasında aktarılmasını sağlamak üzere koda güvenilmesi gerekir. Genellikle, Kullanıcı ve derlemeye göre yalıtım için Internet 'te değil, intranet üzerinde izin verilir. Statik <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> yöntemini çağırmak ve bir Kullanıcı ve derleme <xref:System.IO.IsolatedStorage.IsolatedStorageScope> geçirmek, bu tür yalıtımına sahip depolama döndürür.  
   
- The following code example retrieves a store that is isolated by user and assembly. The store can be accessed through the `isoFile` object.  
+ Aşağıdaki kod örneği, Kullanıcı ve derleme tarafından yalıtılmış bir depo alır. Mağazaya `isoFile` nesnesi üzerinden erişilebilir.  
   
  [!code-cpp[Conceptual.IsolatedStorage#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source11.cpp#17)]
  [!code-csharp[Conceptual.IsolatedStorage#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#17)]
  [!code-vb[Conceptual.IsolatedStorage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source11.vb#17)]  
   
- For an example that uses the evidence parameters, see <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%28System.IO.IsolatedStorage.IsolatedStorageScope%2CSystem.Security.Policy.Evidence%2CSystem.Type%2CSystem.Security.Policy.Evidence%2CSystem.Type%29>.  
+ Kanıt parametrelerini kullanan bir örnek için bkz. <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%28System.IO.IsolatedStorage.IsolatedStorageScope%2CSystem.Security.Policy.Evidence%2CSystem.Type%2CSystem.Security.Policy.Evidence%2CSystem.Type%29>.  
   
- The <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> method is available as a shortcut, as shown in the following code example. This shortcut cannot be used to open stores that are capable of roaming; use <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> in such cases.  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> yöntemi, aşağıdaki kod örneğinde gösterildiği gibi bir kısayol olarak kullanılabilir. Bu kısayol, dolaşım yeteneğine sahip olan mağazaları açmak için kullanılamaz; Bu gibi durumlarda <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> kullanın.  
   
  [!code-cpp[Conceptual.IsolatedStorage#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source11.cpp#18)]
  [!code-csharp[Conceptual.IsolatedStorage#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#18)]
@@ -75,15 +75,15 @@ Access to isolated storage is always restricted to the user who created it. To i
   
 <a name="UserDomainAssembly"></a>   
 ## <a name="isolation-by-user-domain-and-assembly"></a>Kullanıcı, Etki Alanı ve Derlemeye Göre Yalıtım  
- If your application uses a third-party assembly that requires a private data store, you can use isolated storage to store the private data. Isolation by user, domain, and assembly ensures that only code in a given assembly can access the data, and only when the assembly is used by the application that was running when the assembly created the store, and only when the user for whom the store was created runs the application. Isolation by user, domain, and assembly keeps the third-party assembly from leaking data to other applications. This isolation type should be your default choice if you know that you want to use isolated storage but are not sure which type of isolation to use. Calling the static <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> method of <xref:System.IO.IsolatedStorage.IsolatedStorageFile> and passing in a user, domain, and assembly <xref:System.IO.IsolatedStorage.IsolatedStorageScope> returns storage with this kind of isolation.  
+ Uygulamanız özel veri deposu gerektiren bir üçüncü taraf derleme kullanıyorsa, özel verileri depolamak için yalıtılmış depolamayı kullanabilirsiniz. Kullanıcı, etki alanı ve derlemeye göre yalıtım, yalnızca belirli bir derlemedeki kodun verilere erişebilmesini ve yalnızca derlemenin depoyu oluştururken çalışan uygulama tarafından kullanıldığı ve yalnızca deponun oluşturulduğu Kullanıcı tarafından çalıştırıldığı zaman  Uygulamanızı. Kullanıcı, etki alanı ve derlemeye göre yalıtım, üçüncü taraf derlemenin diğer uygulamalara veri sızmasını önler. Yalıtılmış depolama kullanmak istediğinizi bildiğiniz ancak hangi tür yalıtımın kullanılacağı konusunda emin değilseniz, bu yalıtım türü varsayılan seçiminiz olmalıdır. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> statik <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> yöntemini çağırmak ve bir Kullanıcı, etki alanı ve derleme <xref:System.IO.IsolatedStorage.IsolatedStorageScope> geçirmek bu tür yalıtımına sahip depolama döndürür.  
   
- The following code example retrieves a store isolated by user, domain, and assembly. The store can be accessed through the `isoFile` object.  
+ Aşağıdaki kod örneği, Kullanıcı, etki alanı ve derleme tarafından yalıtılmış bir depoyu alır. Mağazaya `isoFile` nesnesi üzerinden erişilebilir.  
   
  [!code-cpp[Conceptual.IsolatedStorage#14](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source10.cpp#14)]
  [!code-csharp[Conceptual.IsolatedStorage#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#14)]
  [!code-vb[Conceptual.IsolatedStorage#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#14)]  
   
- Another method is available as a shortcut, as shown in the following code example. This shortcut cannot be used to open stores that are capable of roaming; use <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> in such cases.  
+ Aşağıdaki kod örneğinde gösterildiği gibi başka bir yöntem kısayol olarak kullanılabilir. Bu kısayol, dolaşım yeteneğine sahip olan mağazaları açmak için kullanılamaz; Bu gibi durumlarda <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> kullanın.  
   
  [!code-cpp[Conceptual.IsolatedStorage#15](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source10.cpp#15)]
  [!code-csharp[Conceptual.IsolatedStorage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#15)]
@@ -91,15 +91,15 @@ Access to isolated storage is always restricted to the user who created it. To i
   
 <a name="Roaming"></a>   
 ## <a name="isolated-storage-and-roaming"></a>Ayrık Depolama ve Dolaşım  
- Roaming user profiles are a Windows feature that enables a user to set up an identity on a network and use that identity to log into any network computer, carrying over all personalized settings. An assembly that uses isolated storage can specify that the user's isolated storage should move with the roaming user profile. Roaming can be used in conjunction with isolation by user and assembly or with isolation by user, domain, and assembly. If a roaming scope is not used, stores will not roam even if a roaming user profile is used.  
+ Gezici Kullanıcı profilleri, bir kullanıcının ağ üzerinde bir kimlik ayarlaması ve bu kimliği herhangi bir ağ bilgisayarında oturum açmak için, tüm kişiselleştirilmiş ayarları yerine getiren bir Windows özelliğidir. Yalıtılmış depolama kullanan bir derleme, kullanıcının yalıtılmış depolamanın gezici kullanıcı profili ile hareket etmesi gerektiğini belirtebilir. Dolaşım, Kullanıcı ve derlemeye göre yalıtım ile veya Kullanıcı, etki alanı ve derlemeye göre yalıtımla birlikte kullanılabilir. Dolaşım kapsamı kullanılmazsa, bir dolaşım Kullanıcı profili kullanılsa bile depolar dolaşımda olmaz.  
   
- The following code example retrieves a roaming store isolated by user and assembly. The store can be accessed through the `isoFile` object.  
+ Aşağıdaki kod örneği, Kullanıcı ve derleme tarafından yalıtılmış bir dolaşım deposu alır. Mağazaya `isoFile` nesnesi üzerinden erişilebilir.  
   
  [!code-cpp[Conceptual.IsolatedStorage#11](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source9.cpp#11)]
  [!code-csharp[Conceptual.IsolatedStorage#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#11)]
  [!code-vb[Conceptual.IsolatedStorage#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#11)]  
   
- A domain scope can be added to create a roaming store isolated by user, domain, and application. The following code example demonstrates this.  
+ Kullanıcı, etki alanı ve uygulama tarafından yalıtılmış bir dolaşım deposu oluşturmak için bir etki alanı kapsamı eklenebilir. Aşağıdaki kod örneği bunu gösterir.  
   
  [!code-cpp[Conceptual.IsolatedStorage#12](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source9.cpp#12)]
  [!code-csharp[Conceptual.IsolatedStorage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#12)]

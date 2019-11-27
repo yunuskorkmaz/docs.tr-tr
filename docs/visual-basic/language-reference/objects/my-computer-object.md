@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332122"
 ---
 # <a name="mycomputer-object"></a>My.Computer Nesnesi
-Provides properties for manipulating computer components such as audio, the clock, the keyboard, the file system, and so on.  
+Ses, saat, klavye, dosya sistemi vb. gibi bilgisayar bileşenlerinin işlenmesine yönelik özellikler sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- For information about the methods and properties of the `My.Computer` object, see <xref:Microsoft.VisualBasic.Devices.Computer>. The base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects.  
+ `My.Computer` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.Devices.Computer>. Temel sınıf <xref:Microsoft.VisualBasic.Devices.ServerComputer> tüm projelerde kullanılabilir olan üyeleri sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
+ **Ad alanı:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Computer> (the base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects).  
+ **Sınıf:** <xref:Microsoft.VisualBasic.Devices.Computer> (temel sınıf <xref:Microsoft.VisualBasic.Devices.ServerComputer> tüm projelerde kullanılabilir olan üyeleri sağlar).  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

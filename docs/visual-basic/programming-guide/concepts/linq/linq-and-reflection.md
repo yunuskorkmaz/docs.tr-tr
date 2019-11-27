@@ -9,13 +9,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347780"
 ---
-# <a name="linq-and-reflection-visual-basic"></a>LINQ and Reflection (Visual Basic)
-The .NET Framework class library reflection APIs can be used to examine the metadata in a .NET assembly and create collections of types, type members, parameters, and so on that are in that assembly. Because these collections support the generic `IEnumerable` interface, they can be queried by using LINQ.  
+# <a name="linq-and-reflection-visual-basic"></a>LINQ ve yansıma (Visual Basic)
+.NET Framework sınıf kitaplığı yansıma API 'Leri, bir .NET derlemesinde meta verileri incelemek ve bu derlemede bulunan tür koleksiyonları, tür üyelerini, parametreleri ve benzerlerini oluşturmak için kullanılabilir. Bu koleksiyonlar genel `IEnumerable` arabirimini desteklediklerinden, LINQ kullanılarak sorgulanırlar.  
   
  Bu bölüm aşağıdaki konular içerir:  
   
- [How to: Query An Assembly's Metadata with Reflection (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
- Shows how to use LINQ with reflection.  
+ [Nasıl yapılır: bir derlemenin meta verilerini yansıma ile sorgulama (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
+ LINQ WITH Reflection 'ın nasıl kullanılacağını gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: AssemblyAttributesGoHereM Class (System.Runtime.CompilerServices)
+title: AssemblyAttributesGoHereM sınıfı (System. Runtime. CompilerServices)
 ms.date: 03/30/2017
 api_name:
 - System.Runtime.CompilerServices.AssemblyAttributesGoHereM
@@ -22,9 +22,9 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446625"
 ---
-# <a name="assemblyattributesgoherem-class"></a>AssemblyAttributesGoHereM Class
+# <a name="assemblyattributesgoherem-class"></a>AssemblyAttributesGoHereM sınıfı
 
-Used by ALink as a placeholder to store information about custom attributes.
+ALink tarafından özel öznitelikler hakkında bilgi depolamak için bir yer tutucu olarak kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,11 +34,11 @@ internal sealed class AssemblyAttributesGoHereM
 
 ## <a name="remarks"></a>Açıklamalar
 
-References to this type might be embedded inside netmodules whose sources contain assembly custom attributes. When building an assembly manifest from one or more netmodules that contain references to these types, ALink uses information attached to these references to emit real custom attributes. As such, this type is never instantiated, and references to it are used only as part of the build process and serve no purpose in the final assembly.
+Bu türe yapılan başvurular, kaynakları derleme özel öznitelikleri içeren netmodule 'ler içine gömülebilir. Bu türlere başvurular içeren bir veya daha fazla netmodule 'ler öğesinden bir derleme bildirimi oluştururken, ALink, gerçek özel öznitelikleri yaymak için bu başvurulara eklenen bilgileri kullanır. Bu nedenle, bu tür hiçbir şekilde örneklenemez ve yalnızca derleme işleminin bir parçası olarak kullanılır ve son derlemede hiçbir amaca uygun değildir.
 
-References to this type indicate custom attributes that are not security related but are multiple-use.
+Bu türe başvurular, güvenlikle ilgili olmayan ancak birden çok kullanımda olan özel öznitelikleri belirtir.
 
-These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
+Bu türler, .NET Framework içinde "iç" olarak işaretlenir ve <xref:System.Runtime.CompilerServices> ad alanında bulunur.
 
 ## <a name="requirements"></a>Gereksinimler
 

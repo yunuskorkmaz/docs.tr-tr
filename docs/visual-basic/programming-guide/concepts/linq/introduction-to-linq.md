@@ -9,30 +9,30 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74338898"
 ---
-# <a name="introduction-to-linq-visual-basic"></a>Introduction to LINQ (Visual Basic)
-Language-Integrated Query (LINQ) is an innovation introduced in the .NET Framework version 3.5 that bridges the gap between the world of objects and the world of data.  
+# <a name="introduction-to-linq-visual-basic"></a>LINQ 'e giriş (Visual Basic)
+Dil ile tümleşik sorgu (LINQ), .NET Framework sürüm 3,5 ' de sunulan ve nesnelerin dünyası ve veri dünyası arasındaki boşluğu bağlayan bir yeniliği.  
   
- Traditionally, queries against data are expressed as simple strings without type checking at compile time or IntelliSense support. Furthermore, you have to learn a different query language for each type of data source: SQL databases, XML documents, various Web services, and so on. LINQ makes a *query* a first-class language construct in Visual Basic. You write queries against strongly typed collections of objects by using language keywords and familiar operators.  
+ Geleneksel olarak, verilere karşı sorgular derleme zamanında veya IntelliSense desteğiyle tür denetlemesi olmadan basit dizeler olarak ifade edilir. Ayrıca, her veri kaynağı türü için farklı bir sorgu dili öğrenirsiniz: SQL veritabanları, XML belgeleri, çeşitli Web Hizmetleri ve benzeri. LINQ, Visual Basic ' de bir *sorgu* birinci sınıf dil yapısı yapar. Dil anahtar sözcükleri ve tanıdık işleçleri kullanarak, türü kesin belirlenmiş nesne koleksiyonlara karşı sorgular yazarsınız.  
   
- You can write LINQ queries in Visual Basic for SQL Server databases, XML documents, ADO.NET Datasets, and any collection of objects that supports <xref:System.Collections.IEnumerable> or the generic <xref:System.Collections.Generic.IEnumerable%601> interface. LINQ support is also provided by third parties for many Web services and other database implementations.  
+ SQL Server veritabanları, XML belgeleri, ADO.NET veri kümeleri ve <xref:System.Collections.IEnumerable> ya da genel <xref:System.Collections.Generic.IEnumerable%601> arabirimini destekleyen herhangi bir nesne koleksiyonu için Visual Basic LINQ sorguları yazabilirsiniz. Ayrıca, LINQ desteği birçok Web hizmeti ve diğer veritabanı uygulamaları için üçüncü taraflar tarafından da sağlanır.  
   
- You can use LINQ queries in new projects, or alongside non-LINQ queries in existing projects. The only requirement is that the project target .NET Framework 3.5 or later.  
+ LINQ sorgularını yeni projelerde veya mevcut projelerde LINQ dışı sorguların yanı sıra kullanabilirsiniz. Tek gereksinim, proje hedefinin 3,5 veya üzeri .NET Framework.  
   
- The following illustration from Visual Studio shows a partially-completed LINQ query against a SQL Server database in both C# and Visual Basic with full type checking and IntelliSense support.  
+ Visual Studio 'dan aşağıdaki çizimde, hem SQL Server hem C# de tam tür denetimi ve ıntellisense desteğiyle Visual Basic bir veritabanına karşı kısmen tamamlanmış bir LINQ sorgusu gösterilmektedir.  
   
- ![Diagram that shows a LINQ query with Intellisense.](./media/introduction-to-linq/linq-query-intellisense.png)  
+ ![IntelliSense ile bir LINQ sorgusu gösteren diyagram.](./media/introduction-to-linq/linq-query-intellisense.png)  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- To learn more details about LINQ, start by becoming familiar with some basic concepts in the Getting Started section [Getting Started with LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md), and then read the documentation for the LINQ technology in which you are interested:  
+ LINQ hakkında daha fazla bilgi edinmek için, Başlangıç bölümündeki [VISUAL BASIC LINQ Ile çalışmaya](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)başlama bölümünde bazı temel kavramlara tanıdık giderek başlayın ve ardından ilgilendiğiniz LINQ teknolojisinin belgelerini okuyun:  
   
-- SQL Server databases: [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
+- SQL Server veritabanları: [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
-- XML documents: [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
+- XML belgeleri: [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
   
-- ADO.NET Datasets: [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+- ADO.NET veri kümeleri: [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
-- .NET collections, files, strings and so on: [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+- .NET koleksiyonları, dosyalar, dizeler ve benzeri: [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)

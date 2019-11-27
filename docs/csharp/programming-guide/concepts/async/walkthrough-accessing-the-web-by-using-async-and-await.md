@@ -26,7 +26,7 @@ Uygulamaları kendiniz derlemek istemiyorsanız, [zaman uyumsuz örneği indireb
 
 1. Visual Studio’yu çalıştırın.
 
-2. Menü çubuğunda, **dosya** > **yeni** > **proje**.
+2. Menü çubuğunda **dosya** > **Yeni** > **Proje**' yi seçin.
 
      **Yeni proje** iletişim kutusu açılır.
 

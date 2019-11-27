@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436497"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags Numaralandırması
-Contains flag values that control metadata behavior upon opening manifest files.  
+Bildirim dosyalarını açtıktan sonra meta veri davranışını denetleyen bayrak değerlerini içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,30 +46,30 @@ typedef enum CorOpenFlags
 } CorOpenFlags;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`ofRead`|Indicates that the file should be opened for reading only.|  
-|`ofWrite`|Indicates that the file should be opened for writing.<br /><br /> If you are using the `ofWrite` flag when opening a .winmd file, you should also pass the `ofNoTransform` flag.|  
-|`ofReadWriteMask`|A mask for reading and writing.|  
-|`ofCopyMemory`|Indicates that the file should be read into memory. Metadata should maintain its own copy.|  
-|`ofCacheImage`|Kullanımdan kalktı. This flag is ignored.|  
-|`ofManifestMetadata`|Kullanımdan kalktı. This flag is ignored.|  
-|`ofReadOnly`|Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.|  
-|`ofTakeOwnership`|Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.|  
-|`ofNoTypeLib`|Kullanımdan kalktı. This flag is ignored.|  
-|`ofNoTransform`|Indicates that automatic transforms of .winmd files should be disabled. In other words, the projection of a Windows Runtime type to a .NET Framework type should be disabled. For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
-|`ofReserved1`|Reserved for internal use.|  
-|`ofReserved2`|Reserved for internal use.|  
-|`ofReserved`|Reserved for internal use.|  
+|`ofRead`|Dosyanın yalnızca okuma için açılması gerektiğini gösterir.|  
+|`ofWrite`|Dosyanın yazma için açılması gerektiğini gösterir.<br /><br /> Bir. winmd dosyasını açarken `ofWrite` bayrağını kullanıyorsanız `ofNoTransform` bayrağını da geçirmeniz gerekir.|  
+|`ofReadWriteMask`|Okuma ve yazma için bir maske.|  
+|`ofCopyMemory`|Dosyanın belleğe okunup okunmayacağını belirtir. Meta veriler kendi kopyasını korumalıdır.|  
+|`ofCacheImage`|Kullanımdan kalktı. Bu bayrak yoksayıldı.|  
+|`ofManifestMetadata`|Kullanımdan kalktı. Bu bayrak yoksayıldı.|  
+|`ofReadOnly`|Dosyanın okuma için açılması gerektiğini ve bir [ımetadatayayma](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) için `QueryInterface` çağrısının yapılamayacağını gösterir.|  
+|`ofTakeOwnership`|Belleğin [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) çağrısı kullanılarak ayrıldığını belirtir ve meta veriler tarafından serbest bırakılır.|  
+|`ofNoTypeLib`|Kullanımdan kalktı. Bu bayrak yoksayıldı.|  
+|`ofNoTransform`|. Winmd dosyalarının otomatik dönüştürmesinin devre dışı bırakılacağını belirtir. Diğer bir deyişle, bir Windows Çalışma Zamanı türünün .NET Framework türüne projeksiyonu devre dışı bırakılmalıdır. Daha fazla bilgi için bkz. [.net ve Windows çalışma zamanı ile birlikte Windows çalışma zamanı ve clr](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
+|`ofReserved1`|İç kullanım için ayrılmış.|  
+|`ofReserved2`|İç kullanım için ayrılmış.|  
+|`ofReserved`|İç kullanım için ayrılmış.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

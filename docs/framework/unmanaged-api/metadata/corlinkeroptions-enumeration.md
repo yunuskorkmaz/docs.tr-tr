@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450264"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions Numaralandırması
-Specifies flags to select options for the metadata linker.  
+Meta veri bağlayıcı seçeneklerinin seçilecek bayrakları belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,19 +33,19 @@ typedef enum CorLinkerOptions {
 } CorLinkerOptions;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`MDAssembly`|The private types and global functions are not preserved.|  
-|`MDNetModule`|The private types and global functions are preserved.|  
+|`MDAssembly`|Özel türler ve genel işlevler korunmaz.|  
+|`MDNetModule`|Özel türler ve genel işlevler korunur.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

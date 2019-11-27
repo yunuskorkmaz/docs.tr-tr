@@ -16,45 +16,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351743"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Visual Basic'de XML'e Erişme
-Visual Basic provides XML axis properties for accessing and navigating [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] structures. These properties use a special syntax to enable you to access elements and attributes by specifying the XML names.  
+Visual Basic, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] yapılarına erişmek ve bunları gezinmek için XML eksen özellikleri sağlar. Bu özellikler, XML adlarını belirterek öğelere ve özniteliklere erişmenizi sağlamak için özel bir sözdizimi kullanır.  
   
- The following table lists the language features that enable you to access XML elements and attributes in Visual Basic.  
+ Aşağıdaki tabloda, Visual Basic XML öğelerine ve özniteliklerine erişmenize olanak tanıyan dil özellikleri listelenmektedir.  
   
 ### <a name="xml-axis-properties"></a>XML Eksen Özellikleri  
   
-|Property description|Örnek|Açıklama|  
+|Özellik açıklaması|Örnek|Açıklama|  
 |--------------------------|-------------|-----------------|  
-|*child axis*|`contact.<phone>`|Gets all `phone` elements that are child elements of the `contact` element.|  
-|*attribute axis*|`phone.@type`|Gets all `type` attributes of the `phone` element.|  
-|*descendant axis*|`contacts...<name>`|Gets all `name` elements of the `contacts` element, regardless of how deep in the hierarchy they occur.|  
-|*extension indexer*|`contacts...<name>(0)`|Gets the first `name` element from the sequence.|  
-|*value*|`contacts...<name>.Value`|Gets the string representation of the first object in the sequence, or `Nothing` if the sequence is empty.|  
+|*alt eksen*|`contact.<phone>`|`contact` öğesinin alt öğesi olan tüm `phone` öğelerini alır.|  
+|*öznitelik ekseni*|`phone.@type`|`phone` öğesinin tüm `type` özniteliklerini alır.|  
+|*alt öğe ekseni*|`contacts...<name>`|`contacts` öğesinin tüm `name` öğelerini alır ve bu hiyerarşide ne kadar derinlikte olursa olsun.|  
+|*Uzantı Dizin Oluşturucu*|`contacts...<name>(0)`|Sıradaki ilk `name` öğeyi alır.|  
+|*value*|`contacts...<name>.Value`|Dizideki ilk nesnenin dize gösterimini alır veya dizi boşsa `Nothing`.|  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: XML Bağımlı Öğelerine Erişme](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
- Shows how to use a descendant axis property to access all XML elements that have a specified name and that are contained under a specified XML element.  
+ Belirtilen bir ada sahip olan ve belirtilen bir XML öğesinin altında bulunan tüm XML öğelerine erişmek için bir alt eksen özelliğinin nasıl kullanılacağını gösterir.  
   
  [Nasıl yapılır: XML Alt Öğelerine Erişme](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-child-elements.md)  
- Shows how to use a child axis property to access all XML child elements that have a specified name in an XML element.  
+ Bir XML öğesinde belirtilen bir ada sahip tüm XML alt öğelerine erişmek için bir alt eksen özelliğinin nasıl kullanılacağını gösterir.  
   
  [Nasıl yapılır: XML Özniteliklerine Erişme](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-attributes.md)  
- Shows how to use an attribute axis property to access all XML attributes that have a specified name in an XML element.  
+ Bir XML öğesinde belirtilen bir ada sahip tüm XML özniteliklerine erişmek için bir öznitelik eksen özelliğinin nasıl kullanılacağını gösterir.  
   
  [Nasıl yapılır: XML Ad Alanı Öneklerini Bildirme ve Kullanma](../../../../visual-basic/programming-guide/language-features/xml/how-to-declare-and-use-xml-namespace-prefixes.md)  
- Shows how to declare an XML namespace prefix and use it to create and access XML elements.  
+ XML ad alanı ön ekinin nasıl bildirilemeyeceğini ve XML öğeleri oluşturmak ve ona erişmek için nasıl kullanılacağını gösterir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [XML Eksen Özellikleri](../../../../visual-basic/language-reference/xml-axis/index.md)  
- Provides links to sections describing the various XML access properties.  
+ Çeşitli XML erişimi özelliklerini açıklayan bölümlerin bağlantılarını sağlar.  
   
- [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Provides an introduction to using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ [Visual Basic LINQ to XML genel bakış](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
+ Visual Basic [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kullanımı için bir giriş sağlar.  
   
- [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- Provides an introduction to using XML literals in Visual Basic.  
+ [Visual Basic XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ Visual Basic XML sabit değerlerini kullanmaya giriş sağlar.  
   
- [Manipulating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
- Provides links to sections about loading and modifying XML in Visual Basic.  
+ [Visual Basic XML 'yi düzenleme](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
+ Visual Basic XML 'yi yükleme ve değiştirme hakkındaki bölümlere bağlantılar sağlar.  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Provides links to sections describing how to use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.
+ Visual Basic [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kullanımını açıklayan bölümlerin bağlantılarını sağlar.

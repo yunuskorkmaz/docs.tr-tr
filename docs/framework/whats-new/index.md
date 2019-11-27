@@ -201,7 +201,7 @@ Karma mod yüksek DPı ölçeklendirme desteğini etkinleştirmek için aşağı
 
 - [Temel sınıflar](#core-472)
 - [ASP.NET](#asp-net472)
-- [Ağ](#net472)
+- [İşlemleri](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -589,7 +589,7 @@ Windows Forms uygulama için, uygulama bildirimi yerine uygulama yapılandırma 
 
 - [Temel sınıflar](#core471)
 - [Ortak dil çalışma zamanı (CLR)](#clr)
-- [Ağ](#net471)
+- [İşlemleri](#net471)
 - [ASP.NET](#asp-net471)
 
 Ayrıca, .NET Framework 4.7.1 ' deki önemli bir odak, bir uygulamanın yardımcı teknoloji kullanıcıları için uygun bir deneyim sağlamasına izin veren gelişmiş erişilebilirliğe sahiptir. .NET Framework 4.7.1 ' deki erişilebilirlik geliştirmeleri hakkında daha fazla bilgi için [.NET Framework erişilebilirlik](whats-new-in-accessibility.md)yenilikleri bölümüne bakın.
@@ -671,7 +671,7 @@ ASP.NET, 23 olay içeren önceden tanımlanmış bir işlem hattındaki istekler
 .NET Framework 4,7, aşağıdaki alanlardaki yeni özellikler içerir:
 
 - [Temel sınıflar](#Core47)
-- [Ağ](#net47)
+- [İşlemleri](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
@@ -792,7 +792,7 @@ WPF 'nin <xref:System.Printing.PrintQueue?displayProperty=nameWithType> sınıf�
 
 - [Windows Presentation Foundation (WPF)](#WPF462)
 
-- {1&gt;Windows Workflow Foundation (WF)&lt;1}
+- [Windows Workflow Foundation (WF)](#WF462)
 
 - [ClickOnce](#clickonce-1)
 
@@ -841,7 +841,7 @@ End Class
 
 Ardından, anahtar hata iletisi dizesi olan ve değeri yerelleştirilmiş hata iletisi olan DataAnnotation. yerelleştirme. fr. resx olan bir kaynak dosyası oluşturabilirsiniz. Dosyanın `App.LocalResources` klasöründe bulunması gerekir. Örneğin, aşağıdaki anahtar ve değeri yerelleştirilmiş Fransızca (fr) dil hata iletisinde verilmiştir:
 
-| Name                                 | Değer                                     |
+| Name                                 | Value                                     |
 | ------------------------------------ | ----------------------------------------- |
 | Derecelendirme 1 ile 10 arasında olmalıdır. | La Note DoIt être, diğer 1 et 10. |
 
@@ -901,7 +901,7 @@ Unicode 6,0 ' den Unicode 7,0 ' e karakter kategorilerindeki değişiklikler iç
 
 <a name="Crypto462" />
 
-### <a name="cryptography"></a>To
+### <a name="cryptography"></a>Şifreleme
 
 **FIPS 186-3 DSA içeren x509 sertifikaları desteği**
 
@@ -1190,7 +1190,7 @@ WPF uygulamaları için yüksek DPı ve hibrit DPı ortamlarının en son kullan
 
 <a name="WF462" />
 
-### <a name="windows-workflow-foundation-wf"></a>Windows Workflow Foundation (WF)
+### <a name="windows-workflow-foundation-wf"></a>{1&gt;Windows Workflow Foundation (WF)&lt;1}
 
 .NET Framework 4.6.2, Windows Workflow Foundation aşağıdaki alanda geliştirilmiştir:
 
@@ -1665,7 +1665,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   - **Farklı HTTP bağlantıları kullanarak ileti gönderme**
 
-    WCF artık kullanıcıların, farklı temel HTTP bağlantıları kullanılarak belirli iletilerin gönderilmesini sağlamasına izin veriyor. Bunu yapmak için iki yol vardır:
+    WCF artık kullanıcıların, farklı temel HTTP bağlantıları kullanılarak belirli iletilerin gönderilmesini sağlamasına izin veriyor. Bunu yapmanın iki yolu vardır:
 
     - **Bağlantı grubu adı ön eki kullanma**
 
@@ -1709,7 +1709,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   Varsayılan değer `false` şeklindedir.
 
-- **Ağ**
+- **İşlemleri**
 
   - **Yuva yeniden kullanımı**
 
@@ -2062,7 +2062,7 @@ Daha fazla bilgi için bkz. [Windows Communication Foundation](https://go.micros
 
 <a name="windows_workflow_foundation" />
 
-### <a name="windows-workflow-foundation-wf"></a>Windows Workflow Foundation (WF)
+### <a name="windows-workflow-foundation-wf"></a>{1&gt;Windows Workflow Foundation (WF)&lt;1}
 
 .NET Framework 4,5 ' de aşağıdakiler de dahil olmak üzere Windows Workflow Foundation (WF) birkaç yeni özellik eklenmiştir:
 
@@ -2128,6 +2128,6 @@ Visual Studio 2012 ' deki (ve sonraki sürümlerde) taşınabilir sınıf kitapl
 
 - [.NET Framework ve Bant Dışı Yayınlar](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [.NET Framework erişilebilirlik yenilikleri](whats-new-in-accessibility.md)
-- [Visual Studio 2017'deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2017)
+- [Visual Studio 2017 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2017)
 - [ASP.NET](/aspnet)
 - [Visual Studio C++ 'daki yenilikler](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

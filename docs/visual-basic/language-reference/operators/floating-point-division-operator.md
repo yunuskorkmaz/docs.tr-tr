@@ -24,7 +24,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331049"
 ---
 # <a name="-operator-visual-basic"></a>/ İşleci (Visual Basic)
-Divides two numbers and returns a floating-point result.  
+İki sayıyı böler ve kayan noktalı bir sonuç döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,58 +34,58 @@ expression1 / expression2
   
 ## <a name="parts"></a>Bölümler  
  `expression1`  
- Gerekli. Any numeric expression.  
+ Gerekli. Herhangi bir sayısal ifade.  
   
  `expression2`  
- Gerekli. Any numeric expression.  
+ Gerekli. Herhangi bir sayısal ifade.  
   
-## <a name="supported-types"></a>Supported Types  
- All numeric types, including the unsigned and floating-point types and `Decimal`.  
+## <a name="supported-types"></a>Desteklenen türler  
+ İşaretsiz ve kayan nokta türleri ve `Decimal`dahil olmak üzere tüm sayısal türler.  
   
 ## <a name="result"></a>Sonuç  
- The result is the full quotient of `expression1` divided by `expression2`, including any remainder.  
+ Sonuç, her geri kalanı da dahil olmak üzere `expression2`tarafından bölünen `expression1` tam bölümü olur.  
   
- The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient, which drops the remainder.  
+ [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) , kalanı döndüren tamsayı bölümünü döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The data type of the result depends on the types of the operands. The following table shows how the data type of the result is determined.  
+ Sonucun veri türü, işlenenlerinin türlerine bağlıdır. Aşağıdaki tabloda, sonucun veri türünün nasıl belirlendiği gösterilmektedir.  
   
-|Operand data types|Result data type|  
+|İşlenen veri türleri|Sonuç veri türü|  
 |------------------------|----------------------|  
-|Both expressions are integral data types ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))|`Double`|  
-|One expression is a [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) data type and the other is not a [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|`Single`|  
-|One expression is a [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) data type and the other is not a [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) or a [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|`Decimal`|  
-|Either expression is a [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) data type|`Double`|  
+|Her iki ifade de İntegral veri türleridir[(SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [ushort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ulong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))|`Double`|  
+|Tek bir ifade [tek](../../../visual-basic/language-reference/data-types/single-data-type.md) bir veri türüdür ve diğeri [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) değildir|`Single`|  
+|Bir ifade [ondalık](../../../visual-basic/language-reference/data-types/decimal-data-type.md) veri türüdür ve diğeri [tek](../../../visual-basic/language-reference/data-types/single-data-type.md) veya [çift](../../../visual-basic/language-reference/data-types/double-data-type.md) değil|`Decimal`|  
+|İki ifade de bir [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) veri türüdür|`Double`|  
   
- Before division is performed, any integral numeric expressions are widened to `Double`. If you assign the result to an integral data type, Visual Basic attempts to convert the result from `Double` to that type. This can throw an exception if the result does not fit in that type. In particular, see "Attempted Division by Zero" on this Help page.  
+ Bölüm gerçekleştirilmeden önce, tüm integral sayısal ifadeler `Double`için iletildiklerinde. Sonucu bir integral veri türüne atarsanız, Visual Basic sonucu `Double` bu türe dönüştürmeye çalışır. Bu, sonuç bu türe uygun değilse bir özel durum oluşturabilir. Özellikle, bu Yardım sayfasında "sıfıra bölme yapılmaya çalışıldı" bölümüne bakın.  
   
- If `expression1` or `expression2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.  
+ `expression1` veya `expression2` [Nothing](../../../visual-basic/language-reference/nothing.md)olarak değerlendirilirse, sıfır olarak değerlendirilir.  
   
-## <a name="attempted-division-by-zero"></a>Attempted Division by Zero  
- If `expression2` evaluates to zero, the `/` operator behaves differently for different operand data types. The following table shows the possible behaviors.  
+## <a name="attempted-division-by-zero"></a>Sıfıra bölme denendi  
+ `expression2` sıfır olarak değerlendirilirse, `/` işleci farklı işlenen veri türleri için farklı şekilde davranır. Aşağıdaki tabloda olası davranışlar gösterilmektedir.  
   
-|Operand data types|Behavior if `expression2` is zero|  
+|İşlenen veri türleri|`expression2` sıfır ise davranış|  
 |------------------------|---------------------------------------|  
-|Floating-point (`Single` or `Double`)|Returns infinity (<xref:System.Double.PositiveInfinity> or <xref:System.Double.NegativeInfinity>), or <xref:System.Double.NaN> (not a number) if `expression1` is also zero|  
-|`Decimal`|Throws <xref:System.DivideByZeroException>|  
-|Integral (signed or unsigned)|Attempted conversion back to integral type throws <xref:System.OverflowException> because integral types cannot accept <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, or <xref:System.Double.NaN>|  
+|Kayan nokta (`Single` veya `Double`)|`expression1` de sıfırsa sonsuz (<xref:System.Double.PositiveInfinity> veya <xref:System.Double.NegativeInfinity>) veya <xref:System.Double.NaN> (sayı değil) döndürür|  
+|`Decimal`|<xref:System.DivideByZeroException> oluşturur|  
+|Integral (işaretli veya imzasız)|İntegral türler <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>veya <xref:System.Double.NaN> kabul edemediği için, tam sayı türüne dönüştürme denendi <xref:System.OverflowException> oluşturur|  
   
 > [!NOTE]
-> The `/` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> `/` işleci *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- This example uses the `/` operator to perform floating-point division. The result is the quotient of the two operands.  
+ Bu örnek, kayan nokta bölme gerçekleştirmek için `/` işlecini kullanır. Sonuç iki işlenenin bir bölümü olur.  
   
  [!code-vb[VbVbalrOperators#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#16)]  
   
- The expressions in the preceding example return values of 2.5 and 3.333333. Note that the result is always floating-point (`Double`), even though both operands are integer constants.  
+ Yukarıdaki örnekteki ifadeler 2,5 ve 3,333333 değerlerini döndürür. Her iki işlenen de tamsayı sabitleri olsa da sonucun her zaman kayan nokta (`Double`) olduğunu unutmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [/= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
-- [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [/= İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
 - [İşleç Sonuçlarının Veri Türleri](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)
 - [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic aritmetik Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

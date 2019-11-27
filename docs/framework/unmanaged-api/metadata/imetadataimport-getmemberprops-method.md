@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437511"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps Metodu
-Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token. This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called. See these other methods for details. 
+Belirtilen meta veri belirtecinin başvurduğu <xref:System.Type> üyesinin adı, ikili imzası ve göreli sanal adresi de dahil olmak üzere, belirtilen üye tanımı için meta verilerde depolanan bilgileri alır. Bu basit bir yardımcı yöntemdir: *MB* bir MethodDef Ise **GetMethodProps** çağrılır; *MB* bir fieldDef Ise, **GetFieldProps** çağırılır. Ayrıntılar için diğer yöntemlere bakın. 
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,52 +47,52 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mb`  
- [in] The token that references the member to get the associated metadata for.  
+ 'ndaki İlişkili meta verileri almak için üyeye başvuran belirteç.  
   
  `pClass`  
- [out] A pointer to the metadata token that represents the class of the member.  
+ dışı Üyenin sınıfını temsil eden meta veri belirtecinin işaretçisi.  
   
  `szMember`  
- [out] The name of the member.  
+ dışı Üyenin adı.  
   
  `cchMember`  
- [in] The size in wide characters of the `szMember` buffer.  
+ 'ndaki `szMember` arabelleğinin geniş karakterdeki boyutu.  
   
  `pchMember`  
- [out] The size in wide characters of the returned name.  
+ dışı Döndürülen adın geniş karakterdeki boyutu.  
   
  `pdwAttr`  
- [out] Any flag values applied to the member.  
+ dışı Üyeye uygulanan bayrak değerleri.  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the member.  
+ dışı Üyenin ikili meta veri imzasına yönelik bir işaretçi.  
   
  `pcbSigBlob`  
- [out] The size in bytes of `ppvSigBlob`.  
+ dışı `ppvSigBlob`bayt cinsinden boyutu.  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the member.  
+ dışı Üyenin göreli sanal adresine yönelik bir işaretçi.  
   
  `pdwImplFlags`  
- [out] Any method implementation flags associated with the member.  
+ dışı Üyeyle ilişkili herhangi bir yöntem uygulama bayrağı.  
   
  `pdwCPlusTypeFlag`  
- [out] A flag that marks a <xref:System.ValueType>. It is one of the `ELEMENT_TYPE_*` values.
+ dışı Bir <xref:System.ValueType>işaretleyen bayrak. `ELEMENT_TYPE_*` değerlerinden biridir.
   
  `ppValue`  
- [out] A constant string value returned by this member.  
+ dışı Bu üye tarafından döndürülen sabit dize değeri.  
   
  `pcchValue`  
- [out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.  
+ dışı `ppValue`karakter cinsinden boyut veya `ppValue` bir dize yoksa sıfır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,14 +14,14 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349143"
 ---
 # <a name="alias-clause-visual-basic"></a>Alias Tümcesi (Visual Basic)
-Indicates that an external procedure has another name in its DLL.  
+Bir dış yordamın DLL 'sinde başka bir ada sahip olduğunu gösterir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `Alias` keyword can be used in this context:  
+ `Alias` anahtar sözcüğü bu bağlamda kullanılabilir:  
   
  [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- In the following example, the `Alias` keyword is used to provide the name of the function in advapi32.dll, `GetUserNameA`, that `getUserName` is used in place of in this example. Function `getUserName` is called in sub `getUser`, which displays the name of the current user.  
+ Aşağıdaki örnekte, `Alias` anahtar sözcüğü, bu örnekte `getUserName` kullanılan Advapi32. dll ' deki işlevin adını sağlamak için kullanılır `GetUserNameA`. `getUserName` işlevi, geçerli kullanıcının adını görüntüleyen Sub `getUser`içinde çağrılır.  
   
  [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]  
   

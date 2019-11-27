@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429744"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize Yöntemi
-Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.  
+Sembol okuyucuyu, bu okuyucunun ilişkilendirildiği meta veri alma arabirimiyle birlikte modülün dosya adı ile başlatır.  
   
 > [!NOTE]
-> This method can be called only once, and must be called before any other reader methods.  
+> Bu yöntem yalnızca bir kez çağrılabilir ve diğer herhangi bir okuyucu yönteminden önce çağrılmalıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,25 +40,25 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>Parametreler  
  `importer`  
- [in] The metadata importer interface with which this reader will be associated.  
+ 'ndaki Bu okuyucunun ilişkilendirileceği meta veri alma arabirimi.  
   
  `filename`  
- [in] The file name of the module. You can use the `pIStream` parameter instead.  
+ 'ndaki Modülün dosya adı. Bunun yerine `pIStream` parametresini kullanabilirsiniz.  
   
  `searchPath`  
- [in] The path to search. This parameter is optional.  
+ 'ndaki Arama yolu. Bu parametre isteğe bağlıdır.  
   
  `pIStream`  
- [in] The file stream, used as an alternative to the filename parameter.  
+ 'ndaki Dosya akışı, filename parametresine alternatif olarak kullanılır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- You need to specify only one of the `filename` or the `pIStream` parameters, not both. The `searchPath` parameter is optional.  
+ `filename` veya `pIStream` parametrelerinden yalnızca birini belirtmeniz gerekir, ikisi birden değil. `searchPath` parametresi isteğe bağlıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

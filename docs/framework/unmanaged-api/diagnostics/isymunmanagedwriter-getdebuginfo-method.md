@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427955"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo Yöntemi
-Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header. The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`. (The compiler is responsible for setting these two fields appropriately.)  
+Bir derleyicinin taşınabilir yürütülebilir (PE) dosya üstbilgisine hata ayıklama dizini girişini yazması için gereken bilgileri döndürür. Sembol yazıcı, `TimeDateStamp` ve `PointerToRawData`hariç tüm alanları doldurur. (Derleyici, bu iki alanı uygun şekilde ayarlamaktan sorumludur.)  
   
- A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file. The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.  
+ Bir derleyici bu yöntemi çağırmalıdır, veri blobunu PE dosyasına yayar, IMAGE_DEBUG_DIRECTORY `PointerToRawData` alanını, yayan verileri gösterecek şekilde ayarlar ve IMAGE_DEBUG_DIRECTORY PE dosyasına yazar. Derleyici Ayrıca `TimeDateStamp` alanını oluşturulan PE dosyasının `TimeDateStamp` eşit olacak şekilde ayarlamış olmalıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,22 +40,22 @@ HRESULT GetDebugInfo(
   
 ## <a name="parameters"></a>Parametreler  
  `pIDD`  
- [in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.  
+ [in, out] Sembol yazıcısının dolduracağı IMAGE_DEBUG_DIRECTORY işaretçisi.  
   
  `cData`  
- [in] A `DWORD` that contains the size of the debug data.  
+ 'ndaki Hata ayıklama verilerinin boyutunu içeren bir `DWORD`.  
   
  `pcData`  
- [out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.  
+ dışı Hata ayıklama verilerini içermesi için gereken arabelleğin boyutunu alan bir `DWORD` işaretçisi.  
   
  `data`  
- [out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.  
+ dışı Simge deposu için hata ayıklama verilerini tutabilecek kadar büyük bir arabellek işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

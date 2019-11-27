@@ -17,21 +17,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344217"
 ---
 # <a name="unicode-visual-basic"></a>Unicode (Visual Basic)
-Specifies that Visual Basic should marshal all strings to Unicode values regardless of the name of the external procedure being declared.  
+Visual Basic, belirtilen dış yordamın adından bağımsız olarak, tüm dizeleri Unicode değerlerine göre sıralayamaz.  
   
- When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it must have in order to call the procedure correctly. This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.  
+ Projenizin dışında tanımlanan bir yordamı çağırdığınızda, Visual Basic derleyicisinin yordamı doğru bir şekilde çağırmak için sahip olması gereken bilgilere erişimi yoktur. Bu bilgiler yordamın nerede bulunduğuna, nasıl tanımlandığınıza, arama sırasının ve dönüş türünün ve kullandığı dize karakter kümesinin nerede olduğunu içerir. [Declare bildirimi](../../../visual-basic/language-reference/statements/declare-statement.md) , bir dış yordama bir başvuru oluşturur ve bu gerekli bilgileri sağlar.  
   
- The `charsetmodifier` part in the `Declare` statement supplies the character set information to marshal strings during a call to the external procedure. It also affects how Visual Basic searches the external file for the external procedure name. The `Unicode` modifier specifies that Visual Basic should marshal all strings to Unicode values and should look up the procedure without modifying its name during the search.  
+ `Declare` deyimindeki `charsetmodifier` bölümü, dış yordama yapılan bir çağrı sırasında dizeleri sıralamak için karakter kümesi bilgilerini sağlar. Ayrıca, dış yordam adı için Visual Basic dış dosyayı nasıl arayacağını da etkiler. `Unicode` değiştiricisi, Visual Basic tüm dizeleri Unicode değerlerine sıralaması gerektiğini ve arama sırasında adını değiştirmeden yordamı arayacağını belirtir.  
   
- If no character set modifier is specified, `Ansi` is the default.  
+ Hiçbir karakter kümesi değiştiricisi belirtilmemişse, varsayılan `Ansi`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `Unicode` modifier can be used in this context:  
+ `Unicode` değiştiricisi Bu bağlamda kullanılabilir:  
   
  [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
 ## <a name="smart-device-developer-notes"></a>Akıllı Cihaz Geliştirici Notları  
- This keyword is not supported.  
+ Bu anahtar sözcük desteklenmiyor.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

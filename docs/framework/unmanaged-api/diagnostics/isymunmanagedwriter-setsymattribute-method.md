@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427849"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute Yöntemi
-Defines a custom attribute based upon its name. These attributes are held in the symbol store, unlike metadata custom attributes.  
+Özel bir özniteliği adına göre tanımlar. Bu öznitelikler, meta veri özel özniteliklerinin aksine sembol deposunda tutulur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>Parametreler  
  `parent`  
- [in] The metadata token for which the attribute is being defined.  
+ 'ndaki Özniteliğin tanımlandığı meta veri belirteci.  
   
  `name`  
- [in] A pointer to a `WCHAR` that contains the attribute name.  
+ 'ndaki Öznitelik adını içeren `WCHAR` işaretçisi.  
   
  `cData`  
- [in] A `ULONG32` that indicates the size of the `data` array.  
+ 'ndaki `data` dizisinin boyutunu belirten `ULONG32`.  
   
  `data`  
- [in] The attribute value.  
+ 'ndaki Öznitelik değeri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

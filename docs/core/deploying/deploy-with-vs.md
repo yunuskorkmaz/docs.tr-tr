@@ -1,6 +1,6 @@
 ---
-title: Deploy .NET Core apps with Visual Studio
-description: Learn to deploy a .NET Core app with Visual Studio.
+title: Visual Studio ile .NET Core uygulamaları dağıtma
+description: Visual Studio ile .NET Core uygulaması dağıtmayı öğrenin.
 ms.date: 09/03/2018
 dev_langs:
 - csharp
@@ -13,116 +13,116 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428899"
 ---
-# <a name="deploy-net-core-apps-with-visual-studio"></a>Deploy .NET Core apps with Visual Studio
+# <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio ile .NET Core uygulamaları dağıtma
 
-You can deploy a .NET Core application either as a *framework-dependent deployment*, which includes your application binaries but depends on the presence of .NET Core on the target system, or as a *self-contained deployment*, which includes both your application and .NET Core binaries. For an overview of .NET Core application deployment, see [.NET Core Application Deployment](index.md).
+Bir .NET Core uygulamasını, uygulama ikililerini içeren, ancak hedef sistemde .NET Core varlığına ya da hem uygulamanızı hem de .NET Core ikililerini içeren bir *bağımsız dağıtım*olarak, *çerçeveye bağlı bir dağıtım*olarak dağıtabilirsiniz. .NET Core uygulama dağıtımına genel bir bakış için bkz. [.NET Core uygulama dağıtımı](index.md).
 
-The following sections show how to use Microsoft Visual Studio to create the following kinds of deployments:
+Aşağıdaki bölümlerde, aşağıdaki dağıtım türlerini oluşturmak için Microsoft Visual Studio nasıl kullanılacağı gösterilmektedir:
 
-- Framework-dependent deployment
-- Framework-dependent deployment with third-party dependencies
-- Self-contained deployment
-- Self-contained deployment with third-party dependencies
+- Framework bağımlı dağıtım
+- Üçüncü taraf bağımlılıklarla çerçeveye bağımlı dağıtım
+- Kendi içinde dağıtım
+- Üçüncü taraf bağımlılıklarla kendi kendine kapsanan dağıtım
 
-For information on using Visual Studio to develop .NET Core applications, see [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
+.NET Core uygulamaları geliştirmek için Visual Studio 'Yu kullanma hakkında bilgi için bkz. [.NET Core Dependencies ve Requirements](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-## <a name="framework-dependent-deployment"></a>Framework-dependent deployment
+## <a name="framework-dependent-deployment"></a>Framework bağımlı dağıtım
 
-Deploying a framework-dependent deployment with no third-party dependencies simply involves building, testing, and publishing the app. A simple example written in C# illustrates the process.  
+Bir üçüncü taraf bağımlılığı olmadan çerçeveye bağlı bir dağıtımı dağıtmak, uygulamayı oluşturma, test etme ve yayımlamayı içerir. İçinde C# yazılmış basit bir örnek işlemi gösterir.  
 
-1. Create the project.
+1. Projeyi oluşturun.
 
-   Select **File** > **New** > **Project**. In the **New Project** dialog, expand your language's (C# or Visual Basic) project categories in the **Installed** project types pane, choose **.NET Core**, and then select the **Console App (.NET Core)** template in the center pane. Enter a project name, such as "FDD", in the **Name** text box. Select the **OK** button.
+   **Dosya** > **Yeni** > **Proje**' yi seçin. **Yeni proje** C# iletişim kutusunda, dil (veya Visual Basic) Proje kategorilerini **yüklü** proje türleri bölmesinde genişletin, **.NET Core**' u seçin ve ardından orta bölmedeki **konsol uygulaması (.NET Core)** şablonunu seçin. **Ad** metin kutusuna "fdd" gibi bir proje adı girin. **Tamam** düğmesini seçin.
 
-1. Add the application's source code.
+1. Uygulamanın kaynak kodunu ekleyin.
 
-   Open the *Program.cs* or *Program.vb* file in the editor and replace the auto-generated code with the following code. It prompts the user to enter text and displays the individual words entered by the user. It uses the regular expression `\w+` to separate the words in the input text.
-
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
-
-1. Create a Debug build of your app.
-
-   Select **Build** > **Build Solution**. You can also compile and run the Debug build of your application by selecting **Debug** > **Start Debugging**.
-
-1. Deploy your app.
-
-   After you've debugged and tested the program, create the files to be deployed with your app. To publish from Visual Studio, do the following:
-
-      1. Change the solution configuration from **Debug** to **Release** on the toolbar to build a Release (rather than a Debug) version of your app.
-
-      1. Right-click on the project (not the solution) in **Solution Explorer** and select **Publish**.
-
-      1. In the **Publish** tab, select **Publish**. Visual Studio writes the files that comprise your application to the local file system.
-
-      1. The **Publish** tab now shows a single profile, **FolderProfile**. The profile's configuration settings are shown in the **Summary** section of the tab.
-
-   The resulting files are placed in a directory named `Publish` on Windows and `publish` on Unix systems that is in a subdirectory of your project's *.\bin\release\netcoreapp2.1* subdirectory.
-
-Along with your application's files, the publishing process emits a program database (.pdb) file that contains debugging information about your app. The file is useful primarily for debugging exceptions. You can choose not to package it with your application's files. You should, however, save it in the event that you want to debug the Release build of your app.
-
-Deploy the complete set of application files in any way you like. For example, you can package them in a Zip file, use a simple `copy` command, or deploy them with any installation package of your choice. Once installed, users can then execute your application by using the `dotnet` command and providing the application filename, such as `dotnet fdd.dll`.
-
-In addition to the application binaries, your installer should also either bundle the shared framework installer or check for it as a prerequisite as part of the application installation.  Installation of the shared framework requires Administrator/root access since it is machine-wide.
-
-## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Framework-dependent deployment with third-party dependencies
-
-Deploying a framework-dependent deployment with one or more third-party dependencies requires that any dependencies be available to your project. The following additional steps are required before you can build your app:
-
-1. Use the **NuGet Package Manager** to add a reference to a NuGet package to your project; and if the package is not already available on your system, install it. To open the package manager, select **Tools** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**.
-
-1. Confirm that your third-party dependencies (for example, `Newtonsoft.Json`) are installed on your system and, if they aren't, install them. The **Installed** tab lists NuGet packages installed on your system. If `Newtonsoft.Json` is not listed there, select the **Browse** tab and enter "Newtonsoft.Json" in the search box. Select `Newtonsoft.Json` and, in the right pane, select your project before selecting **Install**.
-
-1. If `Newtonsoft.Json` is already installed on your system, add it to your project by selecting your project in the right pane of the **Manage Packages for Solution** tab.
-
-Note that a framework-dependent deployment with third-party dependencies is only as portable as its third-party dependencies. For example, if a third-party library only supports macOS, the app isn't portable to Windows systems. This happens if the third-party dependency itself depends on native code. A good example of this is [Kestrel server](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), which requires a native dependency on [libuv](https://github.com/libuv/libuv). When an FDD is created for an application with this kind of third-party dependency, the published output contains a folder for each [Runtime Identifier (RID)](../rid-catalog.md) that the native dependency supports (and that exists in its NuGet package).
-
-## <a name="simpleSelf"></a> Self-contained deployment without third-party dependencies
-
-Deploying a self-contained deployment with no third-party dependencies involves creating the project, modifying the *csproj* file, building, testing, and publishing the app. A simple example written in C# illustrates the process. You begin by creating, coding, and testing your project just as you would a framework-dependent deployment:
-
-1. Create the project.
-
-   Select **File** > **New** > **Project**. In the **New Project** dialog, expand your language's (C# or Visual Basic) project categories in the **Installed** project types pane, choose **.NET Core**, and then select the **Console App (.NET Core)** template in the center pane. Enter a project name, such as "SCD", in the **Name** text box, and select the **OK** button.
-
-1. Add the application's source code.
-
-   Open the *Program.cs* or *Program.vb* file in your editor, and replace the auto-generated code with the following code. It prompts the user to enter text and displays the individual words entered by the user. It uses the regular expression `\w+` to separate the words in the input text.
+   Düzenleyicide *program.cs* veya *program. vb* dosyasını açın ve otomatik oluşturulan kodu aşağıdaki kodla değiştirin. Kullanıcıdan metin girmesini ve Kullanıcı tarafından girilen tek tek kelimeleri görüntülediğini ister. Giriş metnindeki sözcükleri ayırmak için `\w+` normal ifade kullanır.
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
-1. Determine whether you want to use globalization invariant mode.
+1. Uygulamanızın hata ayıklama derlemesini oluşturun.
 
-   Particularly if your app targets Linux, you can reduce the total size of your deployment by taking advantage of [globalization invariant mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). Globalization invariant mode is useful for applications that are not globally aware and that can use the formatting conventions, casing conventions, and string comparison and sort order of the [invariant culture](xref:System.Globalization.CultureInfo.InvariantCulture).
+   **Build** > **Build Solution**öğesini seçin. Ayrıca, hata **ayıklamayı başlat** ** > Hata Ayıkla '** yı seçerek uygulamanızın hata ayıklama derlemesini derleyip çalıştırabilirsiniz.
 
-   To enable invariant mode, right-click on your project (not the solution) in **Solution Explorer**, and select **Edit SCD.csproj** or **Edit SCD.vbproj**. Then add the following highlighted lines to the file:
+1. Uygulamanızı dağıtın.
+
+   Programı hata ayıkladıktan ve test ettikten sonra, uygulamanızla birlikte dağıtılacak dosyaları oluşturun. Visual Studio 'dan yayımlamak için şunları yapın:
+
+      1. Uygulamanızın bir sürümünü (hata ayıklama yerine) oluşturmak için, araç çubuğundaki çözüm yapılandırmasını **Hata Ayıkla** 'dan **Release** olarak değiştirin.
+
+      1. **Çözüm Gezgini** ' de projeye (çözüme değil) sağ tıklayın ve **Yayımla**' yı seçin.
+
+      1. **Yayımla** sekmesinde **Yayımla**' yı seçin. Visual Studio, uygulamanızı oluşturan dosyaları yerel dosya sistemine yazar.
+
+      1. **Yayımla** sekmesinde artık tek bir profil, **folderprofile**gösterilmektedir. Profilin yapılandırma ayarları, sekmesinin **Özet** bölümünde gösterilir.
+
+   Elde edilen dosyalar Windows üzerinde `Publish` adlı bir dizine yerleştirilir ve projenizin *.\bin\release\netcoreapp2.1* alt dizininde bulunan unıx sistemlerinde `publish`.
+
+Yayımlama işlemi, uygulamanızın dosyalarıyla birlikte, uygulamanız hakkındaki hata ayıklama bilgilerini içeren bir program veritabanı (. pdb) dosyası yayar. Dosya öncelikle hata ayıklama özel durumları için yararlıdır. Bunu uygulamanızın dosyalarıyla paketlemeyi seçemezsiniz. Ancak, uygulamanızın yayın derlemesinde hata ayıklamak istediğiniz olaya kaydetmelisiniz.
+
+Tüm uygulama dosyalarını dilediğiniz şekilde dağıtın. Örneğin, bunları bir ZIP dosyasında paketleyebilir, basit bir `copy` komutu kullanabilir veya istediğiniz herhangi bir yükleme paketiyle dağıtabilirsiniz. Kullanıcılar, yüklendikten sonra `dotnet` komutunu kullanarak uygulamanızı yürütebilir ve `dotnet fdd.dll`gibi uygulama dosya adını sağlar.
+
+Uygulama ikililerinin yanı sıra, yükleyicinizin de paylaşılan çerçeve yükleyicisini paketi veya uygulama yüklemesinin bir parçası olarak bir önkoşul olarak denetlemesi gerekir.  Paylaşılan Framework 'ün yüklenmesi, makine genelinde olduğundan yönetici/kök erişimi gerektirir.
+
+## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Üçüncü taraf bağımlılıklarla çerçeveye bağımlı dağıtım
+
+Bir veya daha fazla üçüncü taraf bağımlılığı olan çerçeveye bağlı bir dağıtımı dağıtmak, tüm bağımlılıkların projeniz için kullanılabilir olmasını gerektirir. Uygulamanızı derlemek için aşağıdaki ek adımlar gereklidir:
+
+1. Projenize bir NuGet paketine başvuru eklemek için **NuGet paket yöneticisini** kullanın; paket sisteminizde zaten yoksa, uygulamayı da yükleyemezsiniz. Paket Yöneticisi 'ni açmak için **araçlar** > **nuget Paket Yöneticisi** > **çözüm için NuGet Paketlerini Yönet**' i seçin.
+
+1. Üçüncü taraf bağımlılıklarınızın (örneğin, `Newtonsoft.Json`) sisteminizde yüklü olduğunu ve bu olmadıkları takdirde yüklenmediğini doğrulayın. **Yüklü** sekme, sisteminizde yüklü olan NuGet paketlerini listeler. Orada `Newtonsoft.Json` listede **yoksa, araştır sekmesini seçin** ve arama kutusuna "Newtonsoft. JSON" yazın. `Newtonsoft.Json` ' yi seçin ve sağ bölmedeki **yüklemeyi**seçmeden önce projenizi seçin.
+
+1. `Newtonsoft.Json` sisteminizde zaten yüklüyse, **çözüm Için paketleri Yönet** sekmesinin sağ bölmesinde projenizi seçerek projenize ekleyin.
+
+Üçüncü taraf bağımlılıkları olan çerçeveye bağlı bir dağıtımın yalnızca üçüncü taraf bağımlılıkları olarak taşındığına göz önünde kalabileceğinizi unutmayın. Örneğin, bir üçüncü taraf kitaplığı yalnızca macOS destekliyorsa, uygulama Windows sistemlerine taşınabilir değildir. Bu durum, üçüncü taraf bağımlılığının yerel koda bağlı olması durumunda meydana gelir. Bunun iyi bir örneği, [libuv](https://github.com/libuv/libuv)üzerinde yerel bir bağımlılık gerektiren [Kestrel sunucusudur](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel). Bu tür üçüncü taraf bağımlılığı olan bir uygulama için FDD oluşturulduğunda, yayımlanan çıktı, yerel bağımlılığın desteklediği (ve NuGet paketinde bulunan) her [çalışma zamanı tanımlayıcısı (RID)](../rid-catalog.md) için bir klasör içerir.
+
+## <a name="simpleSelf"></a>Üçüncü taraf bağımlılıkları olmayan kendi kendine kapsanan dağıtım
+
+Bir üçüncü taraf bağımlılığı olmadan kendi içinde bir dağıtımı dağıtmak, projeyi oluşturma, *csproj* dosyasını değiştirme, uygulama oluşturma, test etme ve uygulamayı yayımlamayı kapsar. İçinde C# yazılmış basit bir örnek işlemi gösterir. Yalnızca çerçeveye bağımlı bir dağıtımda olduğu gibi projenizi oluşturarak, kodlayarak ve test etmeye başlayabilirsiniz:
+
+1. Projeyi oluşturun.
+
+   **Dosya** > **Yeni** > **Proje**' yi seçin. **Yeni proje** C# iletişim kutusunda, dil (veya Visual Basic) Proje kategorilerini **yüklü** proje türleri bölmesinde genişletin, **.NET Core**' u seçin ve ardından orta bölmedeki **konsol uygulaması (.NET Core)** şablonunu seçin. **Ad** metin kutusuna "SCD" gibi bir proje adı girin ve **Tamam** düğmesini seçin.
+
+1. Uygulamanın kaynak kodunu ekleyin.
+
+   Düzenleyicinizde *program.cs* veya *program. vb* dosyasını açın ve otomatik oluşturulan kodu aşağıdaki kodla değiştirin. Kullanıcıdan metin girmesini ve Kullanıcı tarafından girilen tek tek kelimeleri görüntülediğini ister. Giriş metnindeki sözcükleri ayırmak için `\w+` normal ifade kullanır.
+
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+
+1. Genelleştirme sabit modunu kullanmak isteyip istemediğinizi belirleme.
+
+   Özellikle uygulamanız Linux hedefliyorsa, [Genelleştirme sabit modundan](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)yararlanarak dağıtımınızın toplam boyutunu azaltabilirsiniz. Genelleştirme sabit modu, genel olarak uyumlu olmayan ve [sabit kültürün](xref:System.Globalization.CultureInfo.InvariantCulture)biçimlendirme kurallarını, büyük/küçük harf kurallarını ve dize karşılaştırmayı ve sıralama düzenini kullanabilen uygulamalar için yararlıdır.
+
+   Sabit modu etkinleştirmek için, **Çözüm Gezgini**' de projenize (çözüm değil) sağ tıklayın ve **scd. csproj Düzenle** ' yi seçin veya **scd. vbproj**' i düzenleyin. Ardından, aşağıdaki vurgulanmış satırları dosyaya ekleyin:
 
    [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj?highlight=6-8)]
 
-1. Create a Debug build of your application.
+1. Uygulamanızın hata ayıklama derlemesini oluşturun.
 
-   Select **Build** > **Build Solution**. You can also compile and run the Debug build of your application by selecting **Debug** > **Start Debugging**. This debugging step lets you identify problems with your application when it's running on your host platform. You still will have to test it on each of your target platforms.
+   **Build** > **Build Solution**öğesini seçin. Ayrıca, hata **ayıklamayı başlat** ** > Hata Ayıkla '** yı seçerek uygulamanızın hata ayıklama derlemesini derleyip çalıştırabilirsiniz. Bu hata ayıklama adımı, ana bilgisayar platformunda çalışırken uygulamanızdaki sorunları belirlemenize olanak sağlar. Yine de hedef Platformlarınızın her birinde test etmeniz gerekir.
 
-   If you've enabled globalization invariant mode, be particularly sure to test whether the absence of culture-sensitive data is suitable for your application.
+   Genelleştirme sabit modunu etkinleştirdiyseniz, özellikle kültüre duyarlı verilerin yokluğunun uygulamanız için uygun olup olmadığını test ettiğinizden emin olun.
 
-Once you've finished debugging, you can publish your self-contained deployment:
+Hata ayıklamayı tamamladıktan sonra, kendi içindeki dağıtımınızı yayımlayabilirsiniz:
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 and earlier](#tab/vs156)
+# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15,6 ve öncesi](#tab/vs156)
 
-After you've debugged and tested the program, create the files to be deployed with your app for each platform that it targets.
+Programı hata ayıkladıktan ve test ettikten sonra, hedeflediği her platform için uygulamanıza dağıtılacak dosyaları oluşturun.
 
-To publish your app from Visual Studio, do the following:
+Uygulamanızı Visual Studio 'dan yayımlamak için şunları yapın:
 
-1. Define the platforms that your app will target.
+1. Uygulamanızın hedeflenecek platformları tanımlayın.
 
-   1. Right-click on your project (not the solution) in **Solution Explorer** and select **Edit SCD.csproj**.
+   1. **Çözüm Gezgini** ' de projenize (çözüm değil) sağ tıklayın ve **scd. csproj öğesini Düzenle**' yi seçin.
 
-   1. Create a `<RuntimeIdentifiers>` tag in the `<PropertyGroup>` section of your *csproj* file that defines the platforms your app targets, and specify the runtime identifier (RID) of each platform that you target. Note that you also need to add a semicolon to separate the RIDs. See [Runtime IDentifier catalog](../rid-catalog.md) for a list of runtime identifiers.
+   1. *Csproj* dosyanızın, uygulamanızın hedeflediği platformları tanımlayan `<PropertyGroup>` bölümünde bir `<RuntimeIdentifiers>` etiketi oluşturun ve hedeflediğiniz her platformun çalışma zamanı tanımlayıcısını (RID) belirtin. Ayrıca, RIDs 'yi ayırmak için noktalı virgül eklemeniz gerektiğini unutmayın. Çalışma zamanı tanımlayıcılarının listesi için bkz. [Runtime Identifier Catalog](../rid-catalog.md) .
 
-   For example, the following example indicates that the app runs on 64-bit Windows 10 operating systems and the 64-bit OS X Version 10.11 operating system.
+   Örneğin, aşağıdaki örnek, uygulamanın 64 bitlik Windows 10 işletim sistemleri ve 64 bit işletim sistemi X sürümü 10,11 işletim sisteminde çalıştığını gösterir.
 
    ```xml
    <PropertyGroup>
@@ -130,41 +130,41 @@ To publish your app from Visual Studio, do the following:
    </PropertyGroup>
    ```
 
-   Note that the `<RuntimeIdentifiers>` element can go into any `<PropertyGroup>` that you have in your *csproj* file. A complete sample *csproj* file appears later in this section.
+   `<RuntimeIdentifiers>` öğesinin *csproj* dosyanızda sahip olduğunuz herhangi bir `<PropertyGroup>` gidebileceğini unutmayın. Bu bölümde daha sonra bir örnek *csproj* dosyası belirir.
 
-1. Publish your app.
+1. Uygulamanızı yayımlayın.
 
-   After you've debugged and tested the program, create the files to be deployed with your app for each platform that it targets.
+   Programı hata ayıkladıktan ve test ettikten sonra, hedeflediği her platform için uygulamanıza dağıtılacak dosyaları oluşturun.
 
-   To publish your app from Visual Studio, do the following:
+   Uygulamanızı Visual Studio 'dan yayımlamak için şunları yapın:
 
-      1. Change the solution configuration from **Debug** to **Release** on the toolbar to build a Release (rather than a Debug) version of your app.
+      1. Uygulamanızın bir sürümünü (hata ayıklama yerine) oluşturmak için, araç çubuğundaki çözüm yapılandırmasını **Hata Ayıkla** 'dan **Release** olarak değiştirin.
 
-      1. Right-click on the project (not the solution) in **Solution Explorer** and select **Publish**.
+      1. **Çözüm Gezgini** ' de projeye (çözüme değil) sağ tıklayın ve **Yayımla**' yı seçin.
 
-      1. In the **Publish** tab, select **Publish**. Visual Studio writes the files that comprise your application to the local file system.
+      1. **Yayımla** sekmesinde **Yayımla**' yı seçin. Visual Studio, uygulamanızı oluşturan dosyaları yerel dosya sistemine yazar.
 
-      1. The **Publish** tab now shows a single profile, **FolderProfile**. The profile's configuration settings are shown in the **Summary** section of the tab. **Target Runtime** identifies which runtime has been published, and **Target Location** identifies where the files for the self-contained deployment were written.
+      1. **Yayımla** sekmesinde artık tek bir profil, **folderprofile**gösterilmektedir. Profilin yapılandırma ayarları, sekmesinin **Özet** bölümünde gösterilir. **hedef çalışma zamanı** hangi çalışma zamanının yayımlandığını tanımlar ve **hedef konum** , kendinden bağımsız dağıtım dosyalarının yazıldığı yeri belirler.
 
-      1. Visual Studio by default writes all published files to a single directory. For convenience, it's best to create separate profiles for each target runtime and to place published files in a platform-specific directory. This involves creating a separate publishing profile for each target platform. So now rebuild the application for each platform by doing the following:
+      1. Visual Studio varsayılan olarak tüm yayımlanan dosyaları tek bir dizine yazar. Kolaylık olması için, her bir hedef çalışma zamanı için ayrı profiller oluşturmak ve yayımlanan dosyaları platforma özgü bir dizine yerleştirmek en iyisidir. Bu, her hedef platform için ayrı bir yayımlama profili oluşturmayı içerir. Bu nedenle, şimdi aşağıdakileri yaparak her platform için uygulamayı yeniden oluşturun:
 
-         1. Select **Create new profile** in the **Publish** dialog.
+         1. **Yayımla** iletişim kutusunda **Yeni Profil oluştur** ' u seçin.
 
-         1. In the **Pick a publish target** dialog, change the **Choose a folder** location to *bin\Release\PublishOutput\win10-x64*. Select **OK**.
+         1. **Bir yayımlama hedefi seç** iletişim kutusunda, **klasör seçin** konumunu *Bin\release\publishoutput\win10-x64*olarak değiştirin. **Tamam ' ı**seçin.
 
-         1. Select the new profile (**FolderProfile1**) in the list of profiles, and make sure that the **Target Runtime** is `win10-x64`. If it isn't, select **Settings**. In the **Profile Settings** dialog, change the **Target Runtime** to `win10-x64` and select **Save**. Otherwise, select **Cancel**.
+         1. Profiller listesinden yeni profili (**FolderProfile1**) seçin ve **hedef çalışma zamanının** `win10-x64`olduğundan emin olun. Değilse, **Ayarlar**' ı seçin. **Profil ayarları** iletişim kutusunda, **hedef çalışma zamanını** `win10-x64` olarak değiştirin ve **Kaydet**' i seçin. Aksi takdirde **iptal**' i seçin.
 
-         1. Select **Publish** to publish your app for 64-bit Windows 10 platforms.
+         1. Uygulamanızı 64 bitlik Windows 10 platformları için yayımlamak üzere **Yayımla** ' yı seçin.
 
-         1. Follow the previous steps again to create a profile for the `osx.10.11-x64` platform. The **Target Location** is *bin\Release\PublishOutput\osx.10.11-x64*, and the **Target Runtime** is `osx.10.11-x64`. The name that Visual Studio assigns to this profile is **FolderProfile2**.
+         1. `osx.10.11-x64` platformu için bir profil oluşturmak üzere önceki adımları tekrar izleyin. **Hedef konum** *Bin\Release\PublishOutput\osx.10.11-x64*ve **hedef çalışma zamanı** `osx.10.11-x64`. Visual Studio 'Nun bu profile atadığı ad **FolderProfile2**' dir.
 
-      Note that each target location contains the complete set of files (both your app files and all .NET Core files) needed to launch your app.
+      Her hedef konumun, uygulamanızı başlatmak için gereken tüm dosya (hem uygulama dosyalarınız hem de tüm .NET Core dosyaları) kümesini içerdiğini unutmayın.
 
-Along with your application's files, the publishing process emits a program database (.pdb) file that contains debugging information about your app. The file is useful primarily for debugging exceptions. You can choose not to package it with your application's files. You should, however, save it in the event that you want to debug the Release build of your app.
+Yayımlama işlemi, uygulamanızın dosyalarıyla birlikte, uygulamanız hakkındaki hata ayıklama bilgilerini içeren bir program veritabanı (. pdb) dosyası yayar. Dosya öncelikle hata ayıklama özel durumları için yararlıdır. Bunu uygulamanızın dosyalarıyla paketlemeyi seçemezsiniz. Ancak, uygulamanızın yayın derlemesinde hata ayıklamak istediğiniz olaya kaydetmelisiniz.
 
-Deploy the published files in any way you like. For example, you can package them in a Zip file, use a simple `copy` command, or deploy them with any installation package of your choice.
+Yayınlanan dosyaları dilediğiniz gibi dağıtın. Örneğin, bunları bir ZIP dosyasında paketleyebilir, basit bir `copy` komutu kullanabilir veya istediğiniz herhangi bir yükleme paketiyle dağıtabilirsiniz.
 
-The following is the complete *csproj* file for this project.
+Bu proje için tüm *csproj* dosyası aşağıda verilmiştir.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -176,59 +176,59 @@ The following is the complete *csproj* file for this project.
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 and later](#tab/vs157)
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15,7 ve üzeri](#tab/vs157)
 
-After you've debugged and tested the program, create the files to be deployed with your app for each platform that it targets. This involves creating a separate profile for each target platform.
+Programı hata ayıkladıktan ve test ettikten sonra, hedeflediği her platform için uygulamanıza dağıtılacak dosyaları oluşturun. Bu, her hedef platform için ayrı bir profil oluşturmayı içerir.
 
-For each platform that your application targets, do the following:
+Uygulamanızın hedeflediği her platform için aşağıdakileri yapın:
 
-1. Create a profile for your target platform.
+1. Hedef platformunuz için bir profil oluşturun.
 
-   If this is the first profile you've created, right-click on the project (not the solution) in **Solution Explorer** and select **Publish**.
+   Oluşturduğunuz ilk profildir, **Çözüm Gezgini** ' de projeye (çözüme değil) sağ tıklayın ve **Yayımla**' yı seçin.
 
-   If you've already created a profile, right-click on the project to open the **Publish** dialog if it isn't already open. Then select **New Profile**.
+   Zaten bir profil oluşturduysanız, zaten açık değilse **Yayımla** iletişim kutusunu açmak için projeye sağ tıklayın. Ardından **Yeni profil**' i seçin.
 
-   The **Pick a Publish Target** dialog box opens.
+   **Bir Yayımla hedefi seç** iletişim kutusu açılır.
   
-1. Select the location where Visual Studio publishes your application.
+1. Visual Studio 'Nun uygulamanızı yayımlayıp konumunu seçin.
 
-   If you're only publishing to a single platform, you can accept the default value in the **Choose a folder** text box; this publishes the framework dependent deployment of your application to the *\<project-directory>\bin\Release\netcoreapp2.1\publish* directory.
+   Yalnızca tek bir platforma yayımlıyorsanız, **klasör seçin** metin kutusunda varsayılan değeri kabul edebilirsiniz; Bu, uygulamanızın çerçeveye bağımlı dağıtımını *\<Project-directory > \Bin\release\netcoreapp2,\publish* dizinine yayımlar.
 
-   If you're publishing to more than one platform, append a string that identifies the target platform. For example, if you append the string "linux" to the file path, Visual Studio publishes the framework dependent deployment of your application to the *\<project-directory>\bin\Release\netcoreapp2.1\publish\linux* directory.
+   Birden fazla platforma yayımlıyorsanız, hedef platformu tanımlayan bir dize ekleyin. Örneğin, "Linux" dizesini dosya yoluna eklerseniz, Visual Studio uygulamanızın çerçeveye bağımlı dağıtımını *\<Project-directory > \Bin\release\netcoreapp2,\publish\linux* dizinine yayımlar.
 
-1. Create the profile by selecting the drop-down list icon next to the **Publish** button and selecting **Create Profile**. Then select the **Create Profile** button to create the profile.
+1. **Yayımla** düğmesinin yanındaki açılan liste simgesini seçerek profili oluşturun ve **Profil oluştur**' a seçin. Sonra profili oluşturmak için **Profil oluştur** düğmesini seçin.
 
-1. Indicate that you are publishing a self-contained deployment and define a platform that your app will target.
+1. Kendinden bağımsız bir dağıtım yayımladığını ve uygulamanızın hedeflenecek bir platform tanımlacağınızı belirtin.
 
-   1. In the **Publish** dialog, select the **Configure** link to open the **Profile Settings** dialog.
+   1. **Yayımla** Iletişim kutusunda **profil ayarları** Iletişim kutusunu açmak için **Yapılandır** bağlantısını seçin.
 
-   1. Select **Self-contained** in the **Deployment Mode** list box.
+   1. **Dağıtım modu** liste kutusunda **kendine ait** ' ı seçin.
 
-   1. In the **Target Runtime** list box, select one of the platforms that your application targets.
+   1. **Hedef çalışma zamanı** liste kutusunda, uygulamanızın hedeflediği platformlardan birini seçin.
 
-   1. Select **Save** to accept your changes and close the dialog.
+   1. Değişikliklerinizi kabul etmek ve iletişim kutusunu kapatmak için **Kaydet** ' i seçin.
 
-1. Name your profile.
+1. Profilinizi adlandırın.
 
-   1. Select **Actions** > **Rename Profile** to name your profile.
+   1. Profilinizi adlandırmak için > **eylemleri** **Yeniden Adlandır** ' ı seçin.
 
-   2. Assign your profile a name that identifies the target platform, then select **Save*.
+   2. Profilinize hedef platformu tanımlayan bir ad atayın ve ardından **Kaydet*' i seçin.
 
-Repeat these steps to define any additional target platforms that your application targets.
+Uygulamanızın hedeflediği ek hedef platformları tanımlamak için bu adımları tekrarlayın.
 
-You've configured your profiles and are now ready to publish your app. Bunu yapmak için:
+Profillerinizi yapılandırdınız ve şimdi uygulamanızı yayımlamaya hazırsınız. Bunu yapmak için:
 
-   1. If the **Publish** window isn't currently open, right-click on the project (not the solution) in **Solution Explorer** and select **Publish**.
+   1. **Yayımla** penceresi açık değilse, **Çözüm Gezgini** ' de projeye (çözüm değil) sağ tıklayın ve **Yayımla**' yı seçin.
 
-   2. Select the profile that you'd like to publish, then select **Publish**. Do this for each profile to be published.
+   2. Yayınlamak istediğiniz profili seçin ve ardından **Yayımla**' yı seçin. Bu, yayımlanacak her profil için bunu yapın.
 
-   Note that each target location (in the case of our example, bin\release\netcoreapp2.1\publish\\*profile-name* contains the complete set of files (both your app files and all .NET Core files) needed to launch your app.
+   Her bir hedef konumun (örneğimizde, bin\release\netcoreapp2,\publish\\*profili-Name* ' in, uygulamanızı başlatmak için gereken tam dosya kümesini (hem uygulama dosyalarınız hem de tüm .NET Core dosyaları) içerdiğini unutmayın.
 
-Along with your application's files, the publishing process emits a program database (.pdb) file that contains debugging information about your app. The file is useful primarily for debugging exceptions. You can choose not to package it with your application's files. You should, however, save it in the event that you want to debug the Release build of your app.
+Yayımlama işlemi, uygulamanızın dosyalarıyla birlikte, uygulamanız hakkındaki hata ayıklama bilgilerini içeren bir program veritabanı (. pdb) dosyası yayar. Dosya öncelikle hata ayıklama özel durumları için yararlıdır. Bunu uygulamanızın dosyalarıyla paketlemeyi seçemezsiniz. Ancak, uygulamanızın yayın derlemesinde hata ayıklamak istediğiniz olaya kaydetmelisiniz.
 
-Deploy the published files in any way you like. For example, you can package them in a Zip file, use a simple `copy` command, or deploy them with any installation package of your choice.
+Yayınlanan dosyaları dilediğiniz gibi dağıtın. Örneğin, bunları bir ZIP dosyasında paketleyebilir, basit bir `copy` komutu kullanabilir veya istediğiniz herhangi bir yükleme paketiyle dağıtabilirsiniz.
 
-The following is the complete *csproj* file for this project.
+Bu proje için tüm *csproj* dosyası aşağıda verilmiştir.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -239,7 +239,7 @@ The following is the complete *csproj* file for this project.
 </Project>
 ```
 
-In addition, Visual Studio creates a separate publishing profile (\*.pubxml) for each platform that you target. For example, the file for our linux profile (linux.pubxml) appears as follows:
+Ayrıca, Visual Studio, hedeflediğiniz her platform için ayrı bir yayımlama profili (\*. pubxml) oluşturur. Örneğin, Linux profilimiz için dosya (Linux. pubxml) aşağıdaki gibi görünür:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -262,19 +262,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 ---
 
-## <a name="self-contained-deployment-with-third-party-dependencies"></a>Self-contained deployment with third-party dependencies
+## <a name="self-contained-deployment-with-third-party-dependencies"></a>Üçüncü taraf bağımlılıklarla kendi kendine kapsanan dağıtım
 
-Deploying a self-contained deployment with one or more third-party dependencies involves adding the dependencies. The following additional steps are required before you can build your app:
+Bir veya daha fazla üçüncü taraf bağımlılığı ile kendi içindeki bir dağıtımı dağıtmak, bağımlılıkların eklenmesini içerir. Uygulamanızı derlemek için aşağıdaki ek adımlar gereklidir:
 
-1. Use the **NuGet Package Manager** to add a reference to a NuGet package to your project; and if the package is not already available on your system, install it. To open the package manager, select **Tools** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**.
+1. Projenize bir NuGet paketine başvuru eklemek için **NuGet paket yöneticisini** kullanın; paket sisteminizde zaten yoksa, uygulamayı da yükleyemezsiniz. Paket Yöneticisi 'ni açmak için **araçlar** > **nuget Paket Yöneticisi** > **çözüm için NuGet Paketlerini Yönet**' i seçin.
 
-1. Confirm that your third-party dependencies (for example, `Newtonsoft.Json`) are installed on your system and, if they aren't, install them. The **Installed** tab lists NuGet packages installed on your system. If `Newtonsoft.Json` is not listed there, select the **Browse** tab and enter "Newtonsoft.Json" in the search box. Select `Newtonsoft.Json` and, in the right pane, select your project before selecting **Install**.
+1. Üçüncü taraf bağımlılıklarınızın (örneğin, `Newtonsoft.Json`) sisteminizde yüklü olduğunu ve bu olmadıkları takdirde yüklenmediğini doğrulayın. **Yüklü** sekme, sisteminizde yüklü olan NuGet paketlerini listeler. Orada `Newtonsoft.Json` listede **yoksa, araştır sekmesini seçin** ve arama kutusuna "Newtonsoft. JSON" yazın. `Newtonsoft.Json` ' yi seçin ve sağ bölmedeki **yüklemeyi**seçmeden önce projenizi seçin.
 
-1. If `Newtonsoft.Json` is already installed on your system, add it to your project by selecting your project in the right pane of the **Manage Packages for Solution** tab.
+1. `Newtonsoft.Json` sisteminizde zaten yüklüyse, **çözüm Için paketleri Yönet** sekmesinin sağ bölmesinde projenizi seçerek projenize ekleyin.
 
-The following is the complete *csproj* file for this project:
+Bu proje için tüm *csproj* dosyası aşağıda verilmiştir:
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 and earlier](#tab/vs156)
+# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15,6 ve öncesi](#tab/vs156)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -289,7 +289,7 @@ The following is the complete *csproj* file for this project:
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 and later](#tab/vs157)
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15,7 ve üzeri](#tab/vs157)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -305,11 +305,11 @@ The following is the complete *csproj* file for this project:
 
 ---
 
-When you deploy your application, any third-party dependencies used in your app are also contained with your application files. Third-party libraries aren't required on the system on which the app is running.
+Uygulamanızı dağıttığınızda, uygulamanızda kullanılan tüm üçüncü taraf bağımlılıkları da uygulama dosyalarınıza dahil edilir. Uygulamanın üzerinde çalıştığı sistemde üçüncü taraf kitaplıkları gerekli değildir.
 
-Note that you can only deploy a self-contained deployment with a third-party library to platforms supported by that library. This is similar to having third-party dependencies with native dependencies in your framework-dependent deployment, where the native dependencies won't exist on the target platform unless they were previously installed there.
+Yalnızca bir üçüncü taraf kitaplığıyla bu kitaplık tarafından desteklenen platformlar için bir bağımsız dağıtım dağıtabileceğinizi unutmayın. Bu, daha önce yüklenmedikleri müddetçe, yerel bağımlılıkların hedef platformda mevcut olmaması durumunda, çerçeveye bağımlı dağıtımda yerel bağımlılıklarla üçüncü taraf bağımlılıklara sahip olmaya benzer.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core Application Deployment](index.md)
-- [.NET Core Runtime IDentifier (RID) catalog](../rid-catalog.md)
+- [.NET Core uygulama dağıtımı](index.md)
+- [.NET Core çalışma zamanı tanımlayıcısı (RID) kataloğu](../rid-catalog.md)

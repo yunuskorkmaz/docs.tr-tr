@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448389"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod Yöntemi
-Gets the documents that this method has lines in.  
+Bu yöntemin içindeki satırları içeren belgeleri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT GetDocumentsForMethod(
   
 ## <a name="parameters"></a>Parametreler  
  `cDocs`  
- [in] The length of the buffer pointed to by `pcDocs`.  
+ 'ndaki `pcDocs`tarafından işaret edilen arabelleğin uzunluğu.  
   
  `pcDocs`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.  
+ dışı Belgeleri içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir `ULONG32` işaretçisi.  
   
  `documents`  
- [in] The buffer that contains the documents.  
+ 'ndaki Belgeleri içeren arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, an error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

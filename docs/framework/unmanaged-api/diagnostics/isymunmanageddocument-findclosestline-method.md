@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449221"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>ISymUnmanagedDocument::FindClosestLine Yöntemi
-Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.  
+Bu belgede bir sıra noktası olabilecek veya olmayan bir satır verildiğinde, bir dizi noktası olan en yakın çizgiyi döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,13 +35,13 @@ HRESULT FindClosestLine(
   
 ## <a name="parameters"></a>Parametreler  
  `line`  
- [in] A line in this document.  
+ 'ndaki Bu belgedeki bir çizgi.  
   
  `pRetVal`  
- [out] A pointer to a variable that receives the line.  
+ dışı Satırı alan bir değişkene yönelik işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, an error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, bir hata kodu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

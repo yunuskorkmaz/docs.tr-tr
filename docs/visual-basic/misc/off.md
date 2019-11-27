@@ -15,10 +15,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331930"
 ---
 # <a name="off-visual-basic"></a>Kapalı (Visual Basic)
-Turns a compiler option off.  
+Bir derleyici seçeneğini kapatır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `Off` keyword can be used in these contexts:  
+ `Off` anahtar sözcüğü şu bağlamlarda kullanılabilir:  
   
  [Option Explicit Deyimi](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   

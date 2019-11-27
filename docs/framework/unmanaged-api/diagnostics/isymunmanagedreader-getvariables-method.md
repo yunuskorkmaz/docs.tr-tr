@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429749"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>ISymUnmanagedReader::GetVariables Yöntemi
-Returns a non-local variable, given its parent and name.  
+Üst ve adı verilen yerel olmayan bir değişken döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,22 +38,22 @@ HRESULT GetVariables (
   
 ## <a name="parameters"></a>Parametreler  
  `parent`  
- [in] The parent of the variable.  
+ 'ndaki Değişkenin üst öğesi.  
   
  `cVars`  
- [in] The size of the `pVars` array.  
+ 'ndaki `pVars` dizisinin boyutu.  
   
  `pcVars`  
- [out] A pointer to the variable that receives the number of variables returned in `pVars`.  
+ dışı `pVars`döndürülen değişken sayısını alan değişkene yönelik bir işaretçi.  
   
  `pVars`  
- [out] A pointer to the variable that receives the variables.  
+ dışı Değişkenleri alan değişkene yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

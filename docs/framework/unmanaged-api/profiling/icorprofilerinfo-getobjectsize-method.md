@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438832"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>ICorProfilerInfo::GetObjectSize Yöntemi
-Gets the size of a specified object.  
+Belirtilen nesnenin boyutunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,32 +35,32 @@ HRESULT GetObjectSize(
   
 ## <a name="parameters"></a>Parametreler  
  `objectId`  
- [in] The ID of the object.  
+ 'ndaki Nesnenin KIMLIĞI.  
   
  `pcSize`  
- [out] A pointer to the object's size, in bytes.  
+ dışı Nesnenin boyutunun bayt cinsinden işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!IMPORTANT]
-> This method is obsolete. It returns COR_E_OVERFLOW for objects greater than 4GB on 64-bit platforms. Use the  [ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) method instead.  
+> Bu yöntem artık kullanılmıyor. 64-bit platformlarda 4.000'DEN büyük nesneler için COR_E_OVERFLOW döndürür. Bunun yerine [ICorProfilerInfo4:: GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) yöntemini kullanın.  
   
- Different objects of the same types often have the same size. However, some types, such as arrays or strings, may have a different size for each object.  
+ Aynı türdeki farklı nesneler genellikle aynı boyutta olur. Ancak, diziler veya dizeler gibi bazı türlerin her nesne için farklı boyutta bir boyutu olabilir.  
   
- The size returned by the `GetObjectSize` method does not include any alignment padding that may appear after the object is on the garbage collection heap. If you use the `GetObjectSize` method to advance from object to object on the garbage collection heap, add alignment padding manually, as necessary.  
+ `GetObjectSize` yöntemi tarafından döndürülen boyut, nesne çöp toplama yığınında olduktan sonra görünebilen herhangi bir hizalama dolgusu içermez. Çöp toplama yığınında nesnesinden nesneye ilerlemek için `GetObjectSize` yöntemini kullanırsanız, gerektiğinde hizalama doldurmayı el ile ekleyin.  
   
-- On 32-bit Windows, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1, and COR_PRF_GC_GEN_2 use 4-byte alignment, and COR_PRF_GC_LARGE_OBJECT_HEAP uses 8-byte alignment.  
+- 32 bit Windows, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1 ve COR_PRF_GC_GEN_2 4 baytlık hizalama kullanın ve COR_PRF_GC_LARGE_OBJECT_HEAP 8 baytlık hizalama kullanır.  
   
-- On 64-bit Windows, the alignment is always 8 bytes.  
+- 64 bit Windows üzerinde hizalama her zaman 8 bayttır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

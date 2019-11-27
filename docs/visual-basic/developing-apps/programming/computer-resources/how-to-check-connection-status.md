@@ -16,17 +16,17 @@ ms.locfileid: "74345888"
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Bağlantı Durumunu Denetleme
 
-The <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> property can be used to determine whether the computer has a working network or Internet connection.  
+<xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> özelliği, bilgisayarın çalışan bir ağa veya Internet bağlantısına sahip olup olmadığını anlamak için kullanılabilir.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-check-whether-a-computer-has-a-working-connection"></a>To check whether a computer has a working connection  
+### <a name="to-check-whether-a-computer-has-a-working-connection"></a>Bilgisayarda çalışan bir bağlantı olup olmadığını denetlemek için  
   
-- Determine whether the `IsAvailable` property is `True` or `False`. The following code checks the property's status and reports it:  
+- `IsAvailable` özelliğinin `True` veya `False`olup olmadığını belirleme. Aşağıdaki kod özelliğin durumunu denetler ve raporlar:  
   
      [!code-vb[VbResourceTasks#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#3)]  
   
-     This code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **Connectivity and Networking**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
+     Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide, **bağlantı ve ağ**bölümünde bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

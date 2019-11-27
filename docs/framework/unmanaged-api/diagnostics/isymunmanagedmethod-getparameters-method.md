@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448960"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters Metodu
-Gets the parameters for this method. The parameters are returned in the order in which they are defined within the method's signature.  
+Bu yöntemin parametrelerini alır. Parametreler, yöntemin imzasında tanımlandıkları sırada döndürülür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT GetParameters(
   
 ## <a name="parameters"></a>Parametreler  
  `cParams`  
- [in] The size of the `params` array.  
+ 'ndaki `params` dizisinin boyutu.  
   
  `pcParams`  
- [in] A pointer to a `ULONG32` that receives the size of the buffer that is required to contain the parameters.  
+ 'ndaki Parametreleri içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.  
   
  `params`  
- [out] A pointer to the buffer that receives the parameters.  
+ dışı Parametreleri alan arabelleğin işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

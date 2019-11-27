@@ -1,5 +1,5 @@
 ---
-title: Compiler Messages
+title: Derleyici Iletileri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - compiler errors
@@ -12,5 +12,5 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353306"
 ---
-# <a name="visual-basic-compiler-messages"></a>Visual Basic Compiler Messages
-This section contains the Visual Basic error messages that occur at compile time.
+# <a name="visual-basic-compiler-messages"></a>Visual Basic derleyici Iletileri
+Bu bölüm, derleme zamanında oluşan Visual Basic hata iletilerini içerir.

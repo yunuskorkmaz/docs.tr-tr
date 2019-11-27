@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434435"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps Yöntemi
-Modifies the specified `ManifestResource` metadata structure.  
+Belirtilen `ManifestResource` meta veri yapısını değiştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,28 +38,28 @@ HRESULT SetManifestResourceProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mr`  
- [in] The token that specifies the `ManifestResource` metadata structure to be modified.  
+ 'ndaki Değiştirilecek `ManifestResource` meta veri yapısını belirten belirteç.  
   
  `tkImplementation`  
- [in] The token, of type `File` or `AssemblyRef`, that maps to the resource provider.  
+ 'ndaki Kaynak sağlayıcısına eşlenen `File` veya `AssemblyRef`türündeki belirteç.  
   
  `dwOffset`  
- [in] The offset to the beginning of the resource within the file.  
+ 'ndaki Dosyanın içindeki kaynağın başlangıcına olan Aralık.  
   
  `dwResourceFlags`  
- [in] A bitwise combination of flag values that specify the attributes of the resource.  
+ 'ndaki Kaynak özniteliklerini belirleyen bayrak değerlerinin bit düzeyinde birleşimi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- To create a `ManifestResource` metadata structure, use the [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) method.  
+ `ManifestResource` meta veri yapısı oluşturmak için [IMetaDataAssemblyEmit::D efineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) metodunu kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

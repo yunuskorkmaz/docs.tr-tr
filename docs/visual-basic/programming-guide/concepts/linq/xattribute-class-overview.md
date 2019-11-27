@@ -9,37 +9,37 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349333"
 ---
-# <a name="xattribute-class-overview-visual-basic"></a>XAttribute Class Overview (Visual Basic)
-Attributes are name/value pairs that are associated with an element. The <xref:System.Xml.Linq.XAttribute> class represents XML attributes.  
+# <a name="xattribute-class-overview-visual-basic"></a>XAttribute sınıfına genel bakış (Visual Basic)
+Öznitelikler, bir öğesiyle ilişkili ad/değer çiftleridir. <xref:System.Xml.Linq.XAttribute> sınıfı XML özniteliklerini temsil eder.  
   
 ## <a name="overview"></a>Genel bakış  
- Working with attributes in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is similar to working with elements. Their constructors are similar. The methods that you use to retrieve collections of them are similar. A [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expression for a collection of attributes looks very similar to a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expression for a collection of elements.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] özniteliklerle çalışma, öğelerle çalışmaya benzer. Oluşturucular benzerdir. Bunların koleksiyonlarını almak için kullandığınız yöntemler benzerdir. Öznitelik koleksiyonu için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadesi bir öğe koleksiyonu için bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadesine çok benzer şekilde görünür.  
   
- The order in which attributes were added to an element is preserved. That is, when you iterate through the attributes, you see them in the same order that they were added.  
+ Öznitelikleri bir öğeye eklenme sırası korunur. Diğer bir deyişle, özniteliklerde yineleme yaparken, bunları eklendiği sırayla görürsünüz.  
   
-## <a name="the-xattribute-constructor"></a>The XAttribute Constructor  
- The following constructor of the <xref:System.Xml.Linq.XAttribute> class is the one that you will most commonly use:  
+## <a name="the-xattribute-constructor"></a>XAttribute Oluşturucusu  
+ <xref:System.Xml.Linq.XAttribute> sınıfının aşağıdaki Oluşturucusu, en sık kullandığınız bir sınıftır:  
   
 |Oluşturucu|Açıklama|  
 |-----------------|-----------------|  
-|`XAttribute(XName name, object content)`|Oluşturur bir <xref:System.Xml.Linq.XAttribute> nesne. The `name` argument specifies the name of the attribute; `content` specifies the content of the attribute.|  
+|`XAttribute(XName name, object content)`|Oluşturur bir <xref:System.Xml.Linq.XAttribute> nesne. `name` bağımsız değişkeni özniteliğin adını belirtir; `content` özniteliğin içeriğini belirtir.|  
   
-### <a name="creating-an-element-with-an-attribute"></a>Creating an Element with an Attribute  
- The following code shows an element that contains an attribute using XML literals in Visual Basic:  
+### <a name="creating-an-element-with-an-attribute"></a>Özniteliği olan bir öğe oluşturma  
+ Aşağıdaki kod, Visual Basic XML sabit değerlerini kullanan bir özniteliği içeren bir öğe gösterir:  
   
 ```vb  
 Dim phone As XElement = <Phone Type="Home">555-555-5555</Phone>  
 Console.WriteLine(phone)  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Phone Type="Home">555-555-5555</Phone>  
 ```  
   
-### <a name="functional-construction-of-attributes"></a>Functional Construction of Attributes  
- You can construct <xref:System.Xml.Linq.XAttribute> objects in-line with the construction of <xref:System.Xml.Linq.XElement> objects, as follows:  
+### <a name="functional-construction-of-attributes"></a>Özniteliklerin işlevsel olarak oluşturulması  
+ <xref:System.Xml.Linq.XElement> nesnelerinin yapımını aşağıdaki gibi <xref:System.Xml.Linq.XAttribute> nesneleri satır içinde oluşturabilirsiniz:  
   
 ```vb  
 Dim c As XElement = _  
@@ -55,7 +55,7 @@ Dim c As XElement = _
 Console.WriteLine(c)  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Customers>  
@@ -69,11 +69,11 @@ Console.WriteLine(c)
 </Customers>  
 ```  
   
-### <a name="attributes-are-not-nodes"></a>Attributes Are Not Nodes  
- There are some differences between attributes and elements. <xref:System.Xml.Linq.XAttribute> objects are not nodes in the XML tree. They are name/value pairs associated with an XML element. In contrast to the Document Object Model (DOM), this more closely reflects the structure of XML. Although <xref:System.Xml.Linq.XAttribute> objects are not actually nodes in the XML tree, working with <xref:System.Xml.Linq.XAttribute> objects is very similar to working with <xref:System.Xml.Linq.XElement> objects.  
+### <a name="attributes-are-not-nodes"></a>Öznitelikler düğüm değil  
+ Öznitelikler ve öğeler arasında bazı farklılıklar vardır. <xref:System.Xml.Linq.XAttribute> nesneler XML ağacındaki düğümler değildir. Bunlar bir XML öğesiyle ilişkili ad/değer çiftleridir. Belge Nesne Modeli (DOM) aksine bu, XML yapısını daha yakından yansıtır. <xref:System.Xml.Linq.XAttribute> nesneler gerçekten XML ağacında düğümler olmasa da, <xref:System.Xml.Linq.XAttribute> nesneleriyle çalışma <xref:System.Xml.Linq.XElement> nesneleriyle çalışmaya çok benzer.  
   
- This distinction is primarily important only to developers who are writing code that works with XML trees at the node level. Many developers will not be concerned with this distinction.  
+ Bu ayrım, birincil olarak yalnızca düğüm düzeyindeki XML ağaçları ile çalışan kod yazan geliştiriciler için önemlidir. Birçok geliştirici bu ayrım ile ilgilenmeyecektir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML programlamaya genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

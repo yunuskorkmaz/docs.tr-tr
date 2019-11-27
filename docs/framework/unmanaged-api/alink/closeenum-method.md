@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446567"
 ---
 # <a name="closeenum-method"></a>CloseEnum Yöntemi
-Closes the indicated enumeration and frees associated resources.  
+Belirtilen numaralandırmayı kapatır ve ilişkili kaynakları serbest bırakır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,13 +35,13 @@ HRESULT CloseEnum(
   
 ## <a name="parameters"></a>Parametreler  
  `hEnum`  
- Handle of enumeration to be closed.  
+ Kapatılacak numaralandırmanın tanıtıcısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,13 +15,13 @@ ms.locfileid: "74348879"
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Metin Dosyalarına Ekleme
 
-The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method can be used to append to a text file by specifying that the `append` parameter is set to `True`.  
+<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> yöntemi, `append` parametresinin `True`olarak ayarlandığını belirterek bir metin dosyasına eklemek için kullanılabilir.  
   
-### <a name="to-append-to-a-text-file"></a>To append to a text file  
+### <a name="to-append-to-a-text-file"></a>Bir metin dosyasına eklemek için  
   
-- Use the `WriteAllText` method, specifying the target file and string to be appended and setting the `append` parameter to `True`.  
+- Eklenecek hedef dosyayı ve dizeyi belirterek `WriteAllText` yöntemini kullanın ve `append` parametresini `True`olarak ayarlamayı yapın.  
   
-     This example writes the string `"This is a test string."` to the file named `Testfile.txt`.  
+     Bu örnek `"This is a test string."` dize `Testfile.txt`adlı dosyaya yazar.  
   
      [!code-vb[VbFileIOWrite#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#6)]  
   
@@ -29,19 +29,19 @@ The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method can be
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).  
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (\\\\.\\) (<xref:System.ArgumentException>) ile başlar.  
   
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).  
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.  
   
-- `File` points to a path that does not exist (<xref:System.IO.FileNotFoundException> or <xref:System.IO.DirectoryNotFoundException>).  
+- `File`, varolmayan bir yola işaret eder (<xref:System.IO.FileNotFoundException> veya <xref:System.IO.DirectoryNotFoundException>).  
   
-- The file is in use by another process, or an I/O error occurs (<xref:System.IO.IOException>).  
+- Dosya başka bir işlem tarafından kullanılıyor veya bir g/ç hatası oluştu (<xref:System.IO.IOException>).  
   
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).  
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
   
-- A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).  
+- Yoldaki bir dosya veya dizin adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
   
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).  
+- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450248"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation Sabit Listesi
-Contains flag values for the treatment of local references.  
+Yerel başvuruların işleme için bayrak değerlerini içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,20 +35,20 @@ typedef enum CorLocalRefPreservation
 } CorLocalRefPreservation;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|Preserve no local references.|  
-|`MDPreserveLocalTypeRef`|Preserve local type references.|  
-|`MDPreserveLocalMemberRef`|Preserve local member references.|  
+|`MDPreserveLocalRefsNone`|Yerel başvuruları koru.|  
+|`MDPreserveLocalTypeRef`|Yerel tür başvurularını koru.|  
+|`MDPreserveLocalMemberRef`|Yerel üye başvurularını koruma.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -59,5 +59,5 @@ public static async Task<int> Main(string[] args) { }
 
 - [csc.exe Kullanarak Komut Satırı Derleme](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [C# Programlama Kılavuzu](../index.md)
-- [Methods](../classes-and-structs/methods.md)
+- [Yöntemler](../classes-and-structs/methods.md)
 - [C# Programı İçinde](../inside-a-program/index.md)

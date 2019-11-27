@@ -16,21 +16,21 @@ ms.locfileid: "74329548"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>Klavyeye Erişme (Visual Basic)
 
-The `My.Computer.Keyboard` object provides properties for accessing the current state of the keyboard, such as what keys are currently pressed, and provides a method to send keystrokes to the active window.  
+`My.Computer.Keyboard` nesnesi, klavyenin geçerli durumuna erişim için özellikler sağlar, örneğin, şu anda basılan anahtarlar ve etkin pencereye tuş vuruşları göndermek için bir yöntem sağlar.  
   
 ## <a name="tasks"></a>Görevler  
 
- This table lists tasks associated with the `My.Computer.Keyboard` object and points to topics demonstrating how to perform each task.  
+ Bu tablo `My.Computer.Keyboard` nesnesiyle ilişkili görevleri listeler ve her görevin nasıl gerçekleştirileceğini gösteren konuların noktalarını gösterir.  
   
 |Bitiş|Bkz.|  
 |--------|---------|  
-|Determine whether CAPS LOCK is on|<xref:Microsoft.VisualBasic.Devices.Keyboard.CapsLock%2A>|  
-|Determine whether the SHIFT key is down|<xref:Microsoft.VisualBasic.Devices.Keyboard.ShiftKeyDown%2A>|  
-|Determine whether the ALT key is down|<xref:Microsoft.VisualBasic.Devices.Keyboard.AltKeyDown%2A>|  
-|Determine whether the CTRL key is down|<xref:Microsoft.VisualBasic.Devices.Keyboard.CtrlKeyDown%2A>|  
-|Determine whether NUM LOCK is on|<xref:Microsoft.VisualBasic.Devices.Keyboard.NumLock%2A>|  
-|Determine whether SCROLL LOCK is on|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
-|Start an application and send it keystrokes|[How to: Start an Application and Send it Keystrokes (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
+|Caps Lock açık olup olmadığını belirleme|<xref:Microsoft.VisualBasic.Devices.Keyboard.CapsLock%2A>|  
+|SHIFT tuşunun aşağı olup olmadığını belirleme|<xref:Microsoft.VisualBasic.Devices.Keyboard.ShiftKeyDown%2A>|  
+|ALT anahtarın aşağı doğru olup olmadığını belirleme|<xref:Microsoft.VisualBasic.Devices.Keyboard.AltKeyDown%2A>|  
+|CTRL tuşunun aşağı doğru olup olmadığını belirleme|<xref:Microsoft.VisualBasic.Devices.Keyboard.CtrlKeyDown%2A>|  
+|NUM LOCK 'ın açık olup olmadığını belirleme|<xref:Microsoft.VisualBasic.Devices.Keyboard.NumLock%2A>|  
+|SCROLL LOCK 'ın açık olup olmadığını belirleme|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
+|Uygulama başlatma ve tuş vuruşu gönderme|[Nasıl yapılır: uygulama başlatma ve tuş vuruşu gönderme (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

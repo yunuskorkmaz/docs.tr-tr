@@ -14,32 +14,32 @@ ms.locfileid: "74349246"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Visual Basic ile Uygulama Geliştirme
 
-This section covers conceptual documentation for the Visual Basic language.  
+Bu bölümde Visual Basic diline yönelik kavramsal belgeler ele alınmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
  [Visual Basic'te Programlama](../../visual-basic/developing-apps/programming/index.md)  
- Covers a variety of programming subjects.  
+ Çeşitli programlama konularını ele alır.  
   
  [My Özelliğiyle Geliştirme](../../visual-basic/developing-apps/development-with-my/index.md)  
- Discusses a new feature called `My`, which provides access to information and default object instances that are related to an application and its run-time environment.  
+ Bir uygulamayla ve onun çalışma zamanı ortamıyla ilgili bilgilere ve varsayılan nesne örneklerine erişim sağlayan `My`adlı yeni bir özelliği açıklar.  
   
- [Accessing Data in Visual Basic Applications](../../visual-basic/developing-apps/accessing-data.md)  
- Contains Help on accessing data in Visual Basic.  
+ [Visual Basic uygulamalarındaki verilere erişme](../../visual-basic/developing-apps/accessing-data.md)  
+ Visual Basic verilere erişme hakkında yardım içerir.  
   
- [Creating and Using Components in Visual Basic](../../visual-basic/developing-apps/creating-and-using-components.md)  
- Defines the term *component* and discusses how and when to create components.  
+ [Visual Basic bileşenleri oluşturma ve kullanma](../../visual-basic/developing-apps/creating-and-using-components.md)  
+ Terimi *bileşeni* tanımlar ve bileşenlerin nasıl ve ne zaman oluşturulacağını açıklar.  
   
  [Windows Forms Uygulaması Temelleri](../../visual-basic/developing-apps/windows-forms/index.md)  
- Provides information about creating Windows Forms applications by using Visual Studio.  
+ Visual Studio kullanarak Windows Forms uygulamaları oluşturma hakkında bilgi sağlar.  
   
- [Customizing Projects and Extending My](../../visual-basic/developing-apps/customizing-extending-my/index.md)  
- Describes how you can customize project templates to provide additional `My` objects.  
+ [Projeleri özelleştirme ve My 'ı genişletme](../../visual-basic/developing-apps/customizing-extending-my/index.md)  
+ Proje şablonlarını ek `My` nesneleri sağlamak üzere nasıl özelleştirebileceğinizi açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 
- [Visual Basic Programming Guide](../../visual-basic/programming-guide/index.md)  
- Walks through the essential elements of programming with Visual Basic.  
+ [Visual Basic programlama kılavuzu](../../visual-basic/programming-guide/index.md)  
+ Visual Basic ile programlama için gereken temel öğeleri açıklar.  
   
  [Visual Basic Dili Başvurusu](../../visual-basic/language-reference/index.md)  
- Contains reference documentation for the Visual Basic language.
+ Visual Basic dili için başvuru belgelerini içerir.

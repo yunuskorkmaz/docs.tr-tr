@@ -1,5 +1,5 @@
 ---
-title: Programming
+title: Program
 ms.date: 07/20/2015
 helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
@@ -14,34 +14,34 @@ ms.locfileid: "74352116"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic'te Programlama
 
-This section discusses programming tasks that you may want to learn more about as you create your Visual Basic application.  
+Bu bölümde, Visual Basic uygulamanızı oluştururken daha fazla bilgi edinmek isteyebileceğiniz programlama görevleri açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu bölümde  
 
  [Bilgisayar Kaynaklarına Erişme](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
- Contains documentation on how to use the `My.Computer` object to access information about the computer on which an application runs and how to control the computer.  
+ Uygulamanın çalıştığı bilgisayar hakkındaki bilgilere erişmek ve bilgisayarı denetlemek için `My.Computer` nesnesinin nasıl kullanılacağına ilişkin belgeler içerir.  
   
  [Uygulamadan Günlüğe Bilgi Kaydetme](../../../visual-basic/developing-apps/programming/log-info/index.md)  
- Contains documentation on how to log information from your application using the `My.Application.Log` and `My.Log` objects, and how to extend the application's logging capabilities.  
+ `My.Application.Log` ve `My.Log` nesneleri kullanarak uygulamanızdaki bilgilerin nasıl günlüğe kaydedilmesine ve uygulamanın günlüğe kaydetme yeteneklerini genişletmenize ilişkin belgeler içerir.  
   
  [Kullanıcı Verilerine Erişme](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
- Contains documentation on tasks that you can accomplish using the `My.User` object.  
+ `My.User` nesnesini kullanarak gerçekleştirebileceğiniz görevlere ilişkin belgeler içerir.  
   
  [Uygulama Formlarına Erişme](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)  
- Contains documentation on accessing an application's forms by using the `My.Forms` and `My.Application` objects.  
+ `My.Forms` ve `My.Application` nesnelerini kullanarak bir uygulamanın formlarına erişme belgelerini içerir.  
   
  [Uygulama Web Hizmetlerine Erişme](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
- Contains documentation on how to access the Web services referenced by the application using the `My.WebServices` object.  
+ `My.WebServices` nesnesi kullanılarak uygulama tarafından başvurulan Web hizmetlerine erişme hakkında belge içerir.  
   
  [Uygulama Ayarlarına Erişme](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
- Contains documentation on accessing an application's settings using the `My.Settings` object.  
+ `My.Settings` nesnesini kullanarak bir uygulamanın ayarlarına erişme belgelerini içerir.  
   
  [Sürücüleri, Dizinleri ve Dosyaları İşleme](drives-directories-files/index.md)  
- Contains documentation on how to access the file system using the `My.Computer.FileSystem` object.  
+ `My.Computer.FileSystem` nesnesini kullanarak dosya sistemine erişme hakkında belge içerir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Language Features](../../../visual-basic/programming-guide/language-features/index.md)
+- [Visual Basic dil özellikleri](../../../visual-basic/programming-guide/language-features/index.md)
 - [Programlama Kavramları](../../../visual-basic/programming-guide/concepts/index.md)
 - [Koleksiyonlar](../../../visual-basic/programming-guide/concepts/collections.md)
-- [Developing Applications with Visual Basic](../../../visual-basic/developing-apps/index.md)
+- [Visual Basic ile uygulama geliştirme](../../../visual-basic/developing-apps/index.md)

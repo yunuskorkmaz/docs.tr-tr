@@ -1,5 +1,5 @@
 ---
-title: 'How to: Retrieve a Single Attribute (LINQ to XML)'
+title: 'Nasıl yapılır: tek bir öznitelik alma (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
 ms.openlocfilehash: 02afbc987cf9f55d16bb56912f3eaf45cd8c9a37
@@ -9,13 +9,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347558"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>How to: Retrieve a Single Attribute (LINQ to XML) (Visual Basic)
-This topic explains how to retrieve a single attribute of an element, given the attribute name. This is useful for writing query expressions where you want to find an element that has a particular attribute.  
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Nasıl yapılır: tek bir öznitelik alma (LINQ to XML) (Visual Basic)
+Bu konu, öznitelik adı verilen bir öğenin tek bir özniteliğinin nasıl alınacağını açıklamaktadır. Bu, belirli bir özniteliğe sahip bir öğeyi bulmak istediğiniz sorgu ifadeleri yazmak için yararlıdır.  
   
- The <xref:System.Xml.Linq.XElement.Attribute%2A> method of the <xref:System.Xml.Linq.XElement> class returns the <xref:System.Xml.Linq.XAttribute> with the specified name.  
+ <xref:System.Xml.Linq.XElement> sınıfının <xref:System.Xml.Linq.XElement.Attribute%2A> yöntemi, belirtilen ada sahip <xref:System.Xml.Linq.XAttribute> döndürür.  
   
 ## <a name="example"></a>Örnek  
- The following example uses the <xref:System.Xml.Linq.XElement.Attribute%2A> method.  
+ Aşağıdaki örnekte <xref:System.Xml.Linq.XElement.Attribute%2A> yöntemi kullanılmaktadır.  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -28,7 +28,7 @@ For Each e As XElement In elList
 Next  
 ```  
   
- This example finds all the descendants in the tree named `Phone`, and then finds the attribute named `type`.  
+ Bu örnek, `Phone`adlı ağaçtaki tüm alt öğeleri bulur ve sonra `type`adlı özniteliği bulur.  
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
@@ -38,7 +38,7 @@ work
 ```  
   
 ## <a name="example"></a>Örnek  
- If you want to retrieve the value of the attribute, you can cast it, just as you do for with <xref:System.Xml.Linq.XElement> objects. The following example demonstrates this.  
+ Özniteliğin değerini almak istiyorsanız, <xref:System.Xml.Linq.XElement> nesneleriyle yaptığınız gibi, bu özniteliği de çevirebilirsiniz. Aşağıdaki örnek bunu gösterir.  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -60,10 +60,10 @@ home
 work  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] provides explicit cast operators for the <xref:System.Xml.Linq.XAttribute> class to `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], <xref:System.Xml.Linq.XAttribute> sınıfının `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`ve `GUID?`için açık atama işleçleri sağlar.  
   
 ## <a name="example"></a>Örnek  
- The following example shows the same code for an attribute that is in a namespace. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ Aşağıdaki örnek, bir ad alanında olan bir özniteliği için aynı kodu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -94,4 +94,4 @@ work
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML Axes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML eksenleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

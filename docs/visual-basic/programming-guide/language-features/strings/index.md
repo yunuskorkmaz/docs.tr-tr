@@ -13,27 +13,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344331"
 ---
 # <a name="strings-in-visual-basic"></a>Visual Basic'de Dizeler
-This section describes the basic concepts behind using strings in Visual Basic.  
+Bu bölümde Visual Basic içindeki dizeler kullanılarak arka planda temel kavramlar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Introduction to Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- Lists topics that describe the basic concepts behind using strings in Visual Basic.  
+ [Visual Basic dizelere giriş](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
+ Visual Basic içindeki dizeleri kullanarak arka plandaki temel kavramları betimleyen konuları listeler.  
   
- [How to: Create Strings Using a StringBuilder in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
- Demonstrates how to efficiently create a long string from many smaller strings.  
+ [Nasıl yapılır: Visual Basic StringBuilder kullanarak dize oluşturma](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
+ Birçok küçük dizeden nasıl verimli bir şekilde uzun bir dize oluşturulacağını gösterir.  
   
  [Nasıl yapılır: Dize İçinde Arama](../../../../visual-basic/programming-guide/language-features/strings/how-to-search-within-a-string.md)  
- Demonstrates how to determine the index of the first occurrence of a substring.  
+ Bir alt dizenin ilk oluşum dizininin nasıl belirleneceğini gösterir.  
   
- [Converting Between Strings and Other Data Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
- Lists topics that describe how to convert strings into other data types.  
+ [Visual Basic dizeler ve diğer veri türleri arasında dönüştürme](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
+ Dizelerin diğer veri türlerine nasıl dönüştürüleceğini betimleyen konuları listeler.  
   
- [Validating Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
- Lists topics that discuss how to validate strings.  
+ [Visual Basic dizeleri doğrulanıyor](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
+ Dizelerin nasıl doğrulandığını tartışan konuları listeler.  
   
- [Walkthrough: Encrypting and Decrypting Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
- Demonstrates how to encrypt and decrypt strings by using the cryptographic service provider version of the Triple Data Encryption Standard algorithm.  
+ [İzlenecek yol: Visual Basic dizeleri şifreleme ve şifre çözme](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
+ Üçlü Veri şifreleme standart algoritmasının şifreleme hizmeti sağlayıcısı sürümünü kullanarak dizelerin nasıl şifrelendiğini ve şifresinin çözülmesini gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Language Features](../../../../visual-basic/programming-guide/language-features/index.md)
+- [Visual Basic dil özellikleri](../../../../visual-basic/programming-guide/language-features/index.md)

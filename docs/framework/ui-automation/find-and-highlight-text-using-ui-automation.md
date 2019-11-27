@@ -21,12 +21,12 @@ ms.locfileid: "74435753"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a>UI Otomasyonunu Kullanarak Metin Bulma ve Vurgulama
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic demonstrates how to sequentially search for and highlight each occurrence of a string within the content of a text control using [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
+ Bu konu başlığı altında, bir metin denetiminin içeriği içindeki her bir dizenin her oluşumunu, [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]kullanarak nasıl sıralı olarak arayacağını ve vurgulayabileceğinizi gösterir.  
   
 ## <a name="example"></a>Örnek  
- The following example obtains a <xref:System.Windows.Automation.TextPattern> object from a text control. A <xref:System.Windows.Automation.Text.TextPatternRange> object, representing the textual content of the entire document, is then created using the <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> property of this <xref:System.Windows.Automation.TextPattern>. Two additional <xref:System.Windows.Automation.Text.TextPatternRange> objects are then created for the sequential search and highlight functionality.  
+ Aşağıdaki örnek bir metin denetiminden bir <xref:System.Windows.Automation.TextPattern> nesnesi edinir. Tüm belgenin metin içeriğini temsil eden bir <xref:System.Windows.Automation.Text.TextPatternRange> nesnesi daha sonra bu <xref:System.Windows.Automation.TextPattern><xref:System.Windows.Automation.TextPattern.DocumentRange%2A> özelliği kullanılarak oluşturulur. Daha sonra sıralı arama ve vurgulama işlevselliği için iki ek <xref:System.Windows.Automation.Text.TextPatternRange> nesnesi oluşturulur.  
   
 [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
 [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439819"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>ICorProfilerCallback2::GarbageCollectionStarted Yöntemi
-Notifies the code profiler that garbage collection has started.  
+Çöp toplamanın başlattığı kod Profilcisi bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,29 +36,29 @@ HRESULT GarbageCollectionStarted(
   
 ## <a name="parameters"></a>Parametreler  
  `cGenerations`  
- [in] The total number of entries in the `generationCollected` array.  
+ 'ndaki `generationCollected` dizisindeki toplam girdi sayısı.  
   
  `generationCollected`  
- [in] An array of Boolean values, which are `true` if the generation that corresponds to the array index is being collected by this garbage collection; otherwise, `false`.  
+ 'ndaki Dizi dizinine karşılık gelen nesil bu çöp toplama tarafından toplanıyorsa `true` Boole değerleri dizisi. Aksi takdirde, `false`.  
   
- The array is indexed by a value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration, which indicates the generation.  
+ Dizi, oluşturmayı gösteren [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) numaralandırması değeri ile dizinlenir.  
   
  `reason`  
- [in] A value of the [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) enumeration that indicates the reason the garbage collection was induced.  
+ 'ndaki Çöp toplamanın oluşturulma nedenini gösteren [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) numaralandırması değeri.  
   
 ## <a name="remarks"></a>Açıklamalar  
- All callbacks that pertain to this garbage collection will occur between the `GarbageCollectionStarted` callback and the corresponding [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback. These callbacks need not occur on the same thread.  
+ Bu çöp toplama ile ilgili tüm geri çağrılar `GarbageCollectionStarted` geri araması ile karşılık gelen [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) geri çağırması arasında gerçekleşmeyecektir. Bu geri aramalar aynı iş parçacığında gerçekleşmemelidir.  
   
- It is safe for the profiler to inspect objects in their original locations during the `GarbageCollectionStarted` callback. The garbage collector will begin moving objects after the return from `GarbageCollectionStarted`. After the profiler has returned from this callback, the profiler should consider all object IDs to be invalid until it receives a `ICorProfilerCallback2::GarbageCollectionFinished` callback.  
+ Profil oluşturucunun, `GarbageCollectionStarted` geri çağırma sırasında özgün konumlarında nesneleri incelemesi güvenlidir. Çöp toplayıcı, `GarbageCollectionStarted`dönüşden sonra nesneleri taşımaya başlayacaktır. Profil Oluşturucu bu geri aramadan çağrıldıktan sonra, profil oluşturucu, bir `ICorProfilerCallback2::GarbageCollectionFinished` geri çağırması alana kadar tüm nesne kimliklerini geçersiz hale getirmelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

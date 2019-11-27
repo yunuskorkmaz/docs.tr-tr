@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448586"
 ---
 # <a name="call_id-structure"></a>CALL_ID Yapısı
-Provides information to a debugger about a function that is being called. See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.  
+Çağrılmakta olan bir işlev hakkında bilgi bir hata ayıklayıcıyla ilgili bilgiler sağlar. Daha fazla bilgi için bkz. [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) arabirimi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +38,19 @@ typedef struct tagCALL_ID
 } CALL_ID;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`szMachine`|Identifies the machine that is making the call.|  
-|`dwPid`|Identifies the machine processor.|  
-|`pUserThread`|Identifies the thread that is executing the call.|  
-|`addrStackPointer`|Specifies the address of the call stack.|  
-|`szEntryPoint`|Specifies the address of the call.|  
-|`szDestinationMachine`|Identifies the machine that will execute the call.|  
+|`szMachine`|Çağrıyı yapan makineyi tanımlar.|  
+|`dwPid`|Makine işlemcisini tanımlar.|  
+|`pUserThread`|Çağrıyı yürüten iş parçacığını tanımlar.|  
+|`addrStackPointer`|Çağrı yığınının adresini belirtir.|  
+|`szEntryPoint`|Çağrının adresini belirtir.|  
+|`szDestinationMachine`|Çağrıyı yürütecek makineyi tanımlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** ProtocolNotify2.idl  
+ **Üst bilgi:** ProtocolNotify2. IDL  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

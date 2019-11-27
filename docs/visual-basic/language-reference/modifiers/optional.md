@@ -17,15 +17,15 @@ ms.locfileid: "74351432"
 ---
 # <a name="optional-visual-basic"></a>İsteğe Bağlı (Visual Basic)
 
-Specifies that a procedure argument can be omitted when the procedure is called.
+Yordam çağrıldığında bir yordam bağımsız değişkeninin atlanabileceğini belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-For each optional parameter, you must specify a constant expression as the default value of that parameter. If the expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the default value of the value data type is used as the default value of the parameter.
+Her isteğe bağlı parametre için, bu parametrenin varsayılan değeri olarak bir sabit ifade belirtmeniz gerekir. İfade [Nothing](../../../visual-basic/language-reference/nothing.md)olarak değerlendirilirse, değer veri türünün varsayılan değeri parametrenin varsayılan değeri olarak kullanılır.
 
-If the parameter list contains an optional parameter, every parameter that follows it must also be optional.
+Parametre listesi isteğe bağlı bir parametre içeriyorsa, izleyen her parametrenin de isteğe bağlı olması gerekir.
 
-The `Optional` modifier can be used in these contexts:
+`Optional` değiştiricisi şu bağlamlarda kullanılabilir:
 
 - [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
 
@@ -36,14 +36,14 @@ The `Optional` modifier can be used in these contexts:
 - [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
 
 > [!NOTE]
-> When calling a procedure with or without optional parameters, you can pass arguments by position or by name. For more information, see [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).
+> İsteğe bağlı parametreleri olan veya içermeyen bir yordamı çağırırken bağımsız değişkenleri konuma veya ada göre geçirebilirsiniz. Daha fazla bilgi için bkz. [bağımsız değişkenleri konuma ve ada göre geçirme](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).
 
 > [!NOTE]
-> You can also define a procedure with optional parameters by using overloading. If you have one optional parameter, you can define two overloaded versions of the procedure, one that accepts the parameter and one that doesn’t. For more information, see [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).
+> Ayrıca, aşırı yükleme kullanarak isteğe bağlı parametrelerle bir yordam tanımlayabilirsiniz. İsteğe bağlı bir parametreye sahipseniz, yordamın parametresini kabul eden bir tane olan biri olan iki aşırı yüklenmiş sürümü tanımlayabilirsiniz. Daha fazla bilgi için bkz. [yordam aşırı yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).
 
 ## <a name="example"></a>Örnek
 
-The following example defines a procedure that has an optional parameter.
+Aşağıdaki örnek, isteğe bağlı parametresine sahip bir yordamı tanımlar.
 
 ```vb
 Public Function FindMatches(ByRef values As List(Of String),
@@ -66,7 +66,7 @@ End Function
 
 ## <a name="example"></a>Örnek
 
-The following example demonstrates how to call a procedure with arguments passed by position and with arguments passed by name. The procedure has two optional parameters.
+Aşağıdaki örnek, konumundan geçirilen bağımsız değişkenlerle ve ad ile geçirilen bağımsız değişkenlerle bir yordamın nasıl çağrılacağını gösterir. Yordamda iki isteğe bağlı parametre vardır.
 
 [!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]
 

@@ -13,13 +13,13 @@ ms.locfileid: "74353910"
 ---
 # <a name="argument-not-optional-visual-basic"></a>Bağımsız değişken isteğe bağlı değil (Visual Basic)
 
-The number and types of arguments must match those expected. Either there is an incorrect number of arguments, or an omitted argument is not optional. An argument can only be omitted from a call to a user-defined procedure if it was declared `Optional` in the procedure definition.  
+Bağımsız değişkenlerin sayısı ve türleri beklenenlerle aynı olmalıdır. Yanlış sayıda bağımsız değişken var veya atlanmış bir bağımsız değişken isteğe bağlı değil. Bir bağımsız değişken, yalnızca yordam tanımında `Optional` bildirilirse, Kullanıcı tanımlı yordama yapılan çağrıdan atlanabilir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Supply all necessary arguments.  
+1. Tüm gerekli bağımsız değişkenleri sağlayın.  
   
-2. Make sure omitted arguments are optional. If they are not, either supply the argument in the call, or declare the parameter `Optional` in the definition.  
+2. Atlanan bağımsız değişkenlerin isteğe bağlı olduğundan emin olun. Aksi takdirde, çağrın bağımsız değişkenini sağlayın ya da `Optional` parametre tanımını tanımlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

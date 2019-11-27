@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436479"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind Numaralandırması
-Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
+[IMetaDataImport2:: GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)çağrısından döndürülen bir taşınabilir YÜRÜTÜLEBILIR (PE) dosyasını tanımlayan değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,26 +39,26 @@ typedef enum CorPEKind {
 } CorPEKind;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`peNot`|Indicates that this is not a PE file.|  
-|`peILOnly`|Indicates that this PE file contains only managed code.|  
-|`pe32BitRequired`|Indicates that this PE file makes Win32 calls.|  
-|`pe32Plus`|Indicates that this PE file runs on a 64-bit platform.|  
-|`pe32Unmanaged`|Indicates that this PE file is native code.|  
-|pe32BitPreferred|Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.|  
+|`peNot`|Bunun bir PE dosyası olmadığını gösterir.|  
+|`peILOnly`|Bu PE dosyasının yalnızca yönetilen kod içerdiğini belirtir.|  
+|`pe32BitRequired`|Bu PE dosyasının Win32 çağrıları yaptığını gösterir.|  
+|`pe32Plus`|Bu PE dosyasının 64 bitlik bir platformda çalıştığını gösterir.|  
+|`pe32Unmanaged`|Bu PE dosyasının yerel kod olduğunu gösterir.|  
+|pe32BitPreferred|Bu PE dosyasının platformdan bağımsız olduğunu ve 32 bitlik bir ortamda yüklenmesinin tercih edildiğini gösterir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- These values can be used in bitwise combinations.  
+ Bu değerler bit düzeyinde kombinasyonlara uygulanabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

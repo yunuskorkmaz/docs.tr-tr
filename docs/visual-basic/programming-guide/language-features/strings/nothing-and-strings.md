@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344303"
 ---
 # <a name="nothing-and-strings-in-visual-basic"></a>Visual Basic'de Dizeler ve Nothing
-The Visual Basic runtime and the .NET Framework evaluate `Nothing` differently when it comes to strings.  
+Visual Basic çalışma zamanı ve .NET Framework, dizelerde `Nothing` farklı şekilde değerlendirilir.  
   
-## <a name="visual-basic-runtime-and-the-net-framework"></a>Visual Basic Runtime and the .NET Framework  
- Consider the following example:  
+## <a name="visual-basic-runtime-and-the-net-framework"></a>Çalışma zamanı ve .NET Framework Visual Basic  
+ Aşağıdaki örnek göz önünde bulundurun:  
   
  [!code-vb[VbVbalrStrings#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#47)]  
   
- The Visual Basic runtime usually evaluates `Nothing` as an empty string (""). The .NET Framework does not, however, and throws an exception whenever an attempt is made to perform a string operation on `Nothing`.  
+ Visual Basic çalışma zamanı genellikle `Nothing` boş bir dize ("") olarak değerlendirir. .NET Framework, ancak `Nothing`bir dize işlemi gerçekleştirmek için bir deneme yapıldığında bir özel durum oluşturur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Introduction to Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Visual Basic dizelere giriş](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

@@ -12,12 +12,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352795"
 ---
 # <a name="then-statement"></a>Then Deyimi
-Introduces a statement block to be compiled or executed if a tested condition is true.  
+Test edilmiş bir koşul doğru ise, derlenebilecek veya yürütülecek bir ifade bloğunu tanıtır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `Then` keyword can be used in these contexts:  
+ `Then` anahtar sözcüğü şu bağlamlarda kullanılabilir:  
   
- [#If...Then...#Else Directive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If... Then... #Else yönergesi](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
  [If...Then...Else Deyimi](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   

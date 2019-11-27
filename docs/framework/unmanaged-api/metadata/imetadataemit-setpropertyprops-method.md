@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440541"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps Yöntemi
-Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+[DefineProperty metoduna](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)önceki bir çağrı tarafından tanımlanan bir özellik için meta verilerde depolanan özellikleri ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,37 +42,37 @@ HRESULT SetPropertyProps (
   
 ## <a name="parameters"></a>Parametreler  
  `pr`  
- [in] The token for the property to be changed  
+ 'ndaki Değiştirilecek özelliğin belirteci  
   
  `dwPropFlags`  
- [in] Property flags.  
+ 'ndaki Özellik bayrakları.  
   
  `dwCPlusTypeFlag`  
- [in] The type of the property's default value.  
+ 'ndaki Özelliğin varsayılan değerinin türü.  
   
  `pValue`  
- [in] The default value for the property.  
+ 'ndaki Özelliğin varsayılan değeri.  
   
  `cchValue`  
- [in] The count of (Unicode) characters in `pValue`.  
+ 'ndaki `pValue`içindeki (Unicode) karakterlerin sayısı.  
   
  `mdSetter`  
- [in] The method that sets the property value.  
+ 'ndaki Özellik değerini ayarlayan yöntem.  
   
  `mdGetter`  
- [in] The method that gets the property value.  
+ 'ndaki Özellik değerini alan yöntem.  
   
  `rmdOtherMethods[]`  
- [in] An array of other methods associated with the property. Terminate this array with an `mdTokenNil` token.  
+ 'ndaki Özelliği ile ilişkili diğer yöntemlerin dizisi. Bu diziyi `mdTokenNil` bir belirteçle sonlandırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,16 +14,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343748"
 ---
 # <a name="else-statement-visual-basic"></a>Else Deyimi (Visual Basic)
-Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.  
+Başka bir koşullu deyim grubu çalıştırılmışsa veya derlenmediği takdirde çalıştırılacak veya derlenen deyimler grubunu tanıtır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `Else` keyword can be used in these contexts:  
+ `Else` anahtar sözcüğü şu bağlamlarda kullanılabilir:  
   
  [If...Then...Else Deyimi](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
  [Select...Case Deyimi](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [#If...Then...#Else Directive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If... Then... #Else yönergesi](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

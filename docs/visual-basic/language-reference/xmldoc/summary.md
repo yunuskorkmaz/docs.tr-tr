@@ -12,8 +12,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352199"
 ---
-# <a name="summary-visual-basic"></a>\<summary> (Visual Basic)
-Specifies the summary of the member.  
+# <a name="summary-visual-basic"></a>\<Özet > (Visual Basic)
+Üyenin özetini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,17 +23,17 @@ Specifies the summary of the member.
   
 ## <a name="parameters"></a>Parametreler  
  `description`  
- A summary of the object.  
+ Nesnenin Özeti.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Use the `<summary>` tag to describe a type or a type member. Use [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md) to add supplemental information to a type description.  
+ Bir tür veya tür üyesini anlatmak için `<summary>` etiketini kullanın. Bir tür açıklamasına ek bilgi eklemek için [\<açıklamaları >](../../../visual-basic/language-reference/xmldoc/remarks.md) kullanın.  
   
- The text for the `<summary>` tag is the only source of information about the type in IntelliSense, and is also displayed in the Object Browser. For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).  
+ `<summary>` etiketinin metni, IntelliSense 'deki türle ilgili tek bilgi kaynağıdır ve ayrıca Nesne Tarayıcısı görüntülenir. Nesne Tarayıcısı hakkında daha fazla bilgi için bkz. [kod yapısını görüntüleme](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- This example uses the `<summary>` tag to describe the `ResetCounter` method and `Counter` property.  
+ Bu örnek, `ResetCounter` yöntemini ve `Counter` özelliğini anlatmak için `<summary>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

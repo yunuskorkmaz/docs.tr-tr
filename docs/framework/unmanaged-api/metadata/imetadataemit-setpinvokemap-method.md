@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440573"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>IMetaDataEmit::SetPinvokeMap Yöntemi
-Sets or changes features of a method's PInvoke signature, as defined by a prior call to [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).  
+Bir yöntemin PInvoke imzasının, [ımetadatayay::D Efinepınvokemap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)'e yönelik önceki bir çağrı tarafından tanımlanan özellikleri ayarlar veya değiştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,25 +38,25 @@ HRESULT SetPinvokeMap (
   
 ## <a name="parameters"></a>Parametreler  
  `tk`  
- [in] The `mdToken` to which mapping information applies.  
+ 'ndaki Eşleme bilgilerinin geçerli olduğu `mdToken`.  
   
  `dwMappingFlags`  
- [in] Flags used by PInvoke to do the mapping. This is a bitmask of `CorPinvokeMap` values.  
+ 'ndaki PInvoke tarafından eşlemeyi yapmak için kullanılan bayraklar. Bu, `CorPinvokeMap` değerlerinin bir bit dır.  
   
  `szImportName`  
- [in] The name of the target export in the native DLL.  
+ 'ndaki Yerel DLL 'de hedef dışarı aktarmanın adı.  
   
  `mrImportDLL`  
- [in] The `mdModuleRef` token for the target unmanaged DLL.  
+ 'ndaki Hedef yönetilmeyen DLL için `mdModuleRef` belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

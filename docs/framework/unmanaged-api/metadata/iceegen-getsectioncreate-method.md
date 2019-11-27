@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448101"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate Yöntemi
-Generates and gets a code section using the specified name and flag values.  
+Belirtilen ad ve bayrak değerlerini kullanarak bir kod bölümü üretir ve alır.  
   
- This method is obsolete and should not be used.  
+ Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +39,25 @@ HRESULT GetSectionCreate (
   
 ## <a name="parameters"></a>Parametreler  
  `name`  
- [in] A pointer to a string that specifies the name of the section to be created.  
+ 'ndaki Oluşturulacak bölümün adını belirten bir dize işaretçisi.  
   
  `flags`  
- [in] Flags that specify options.  
+ 'ndaki Seçenekleri belirten bayraklar.  
   
  `section`  
- [out] A pointer to the newly created code section.  
+ dışı Yeni oluşturulan kod bölümüne yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.  
+ Yalnızca diğer yöntemler tarafından işlenmeyen özel bölüm gereksinimleriniz varsa `GetSectionCreate` çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448909"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset Metodu
-Gets the most enclosing lexical scope within this method that encloses the given offset. This can be used to start local variable searches.  
+Bu yöntem içinde verilen sapmayı kapsayan en kapsamlı sözcük kapsamını alır. Bu, yerel değişken aramalarını başlatmak için kullanılabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,16 +35,16 @@ HRESULT GetScopeFromOffset(
   
 ## <a name="parameters"></a>Parametreler  
  `offset`  
- [in] A `ULONG` that contains the offset.  
+ 'ndaki Sapmayı içeren bir `ULONG`.  
   
  `pRetVal`  
- [out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.  
+ dışı Döndürülen [ıdimunmanagedscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) arabirimine ayarlanmış bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433290"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a>ICorProfilerInfo2::GetCodeInfo2 Yöntemi
-Gets the extents of native code associated with the specified `FunctionID`.  
+Belirtilen `FunctionID`ilişkili yerel kod kapsamlarını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,32 +38,32 @@ HRESULT GetCodeInfo2(
   
 ## <a name="parameters"></a>Parametreler  
  `functionID`  
- [in] The ID of the function with which the native code is associated.  
+ 'ndaki Yerel kodun ilişkilendirildiği işlevin KIMLIĞI.  
   
  `cCodeInfos`  
- [in] The size of the `codeInfos` array.  
+ 'ndaki `codeInfos` dizisinin boyutu.  
   
  `pcCodeInfos`  
- [out] A pointer to the total number of [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structures available.  
+ dışı [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) yapılarının toplam sayısına yönelik bir işaretçi.  
   
  `codeInfos`  
- [out] A caller-provided buffer. After the method returns, it contains an array of `COR_PRF_CODE_INFO` structures, each of which describes a block of native code.  
+ dışı Arayan tarafından sağlanmış arabellek. Yöntemi çağrıldıktan sonra, her biri yerel kod bloğunu açıklayan `COR_PRF_CODE_INFO` yapıları dizisi içerir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The extents are sorted in order of increasing Microsoft intermediate language (MSIL) offset.  
+ Kapsamlar, Microsoft ara dili (MSIL) kaydırmasının artırılması sırasında sıralanır.  
   
- After `GetCodeInfo2` returns, you must verify that the `codeInfos` buffer was large enough to contain all the `COR_PRF_CODE_INFO` structures. To do this, compare the value of `cCodeInfos` with the value of the `cchName` parameter. If `cCodeInfos` divided by the size of a `COR_PRF_CODE_INFO` structure is smaller than `pcCodeInfos`, allocate a larger `codeInfos` buffer, update `cCodeInfos` with the new, larger size, and call `GetCodeInfo2` again.  
+ `GetCodeInfo2` çağrıldıktan sonra, `codeInfos` arabelleğinin tüm `COR_PRF_CODE_INFO` yapılarını içerecek kadar büyük olduğunu doğrulamanız gerekir. Bunu yapmak için `cCodeInfos` değerini `cchName` parametresinin değeri ile karşılaştırın. `COR_PRF_CODE_INFO` yapısına bölünen `cCodeInfos`, `pcCodeInfos`daha küçüktür, daha büyük bir `codeInfos` arabelleği ayırın, yeni, daha büyük boyutlu `cCodeInfos` güncelleştirin ve `GetCodeInfo2` çağırın.  
   
- Alternatively, you can first call `GetCodeInfo2` with a zero-length `codeInfos` buffer to obtain the correct buffer size. You can then set the `codeInfos` buffer size to the value returned in `pcCodeInfos`, multiplied by the size of a `COR_PRF_CODE_INFO` structure, and call `GetCodeInfo2` again.  
+ Alternatif olarak, doğru arabellek boyutunu elde etmek için ilk olarak `GetCodeInfo2` sıfır uzunluklu `codeInfos` arabelleği ile çağırabilirsiniz. Daha sonra `codeInfos` arabellek boyutunu `pcCodeInfos`döndürülen değere ayarlayabilirsiniz, bir `COR_PRF_CODE_INFO` yapısının boyutuyla çarpılır ve `GetCodeInfo2` yeniden çağırabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

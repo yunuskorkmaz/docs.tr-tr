@@ -13,27 +13,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352872"
 ---
 # <a name="reference-visual-basic"></a>Başvuru (Visual Basic)
-This section provides links to reference information about various aspects of Visual Basic programming.  
+Bu bölüm Visual Basic programlamanın çeşitli yönleri hakkında başvuru bilgilerine bağlantılar sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Visual Basic Dili Başvurusu](../../visual-basic/language-reference/index.md)  
- Provides reference information for various aspects of the Visual Basic language.  
+ Visual Basic dilinin çeşitli yönleri için başvuru bilgileri sağlar.  
   
- [Visual Basic Command-Line Compiler](../../visual-basic/reference/command-line-compiler/index.md)  
- Provides links to information about the command-line compiler, which provides an alternative to compiling programs from the Visual Studio IDE.  
+ [Visual Basic komut satırı derleyicisi](../../visual-basic/reference/command-line-compiler/index.md)  
+ Visual Studio IDE 'den program derlemeye bir alternatif sağlayan komut satırı derleyicisi hakkındaki bilgilere bağlantılar sağlar.  
   
  [.NET Framework Başvuru Bilgisi](../../visual-basic/reference/net-framework-reference-information.md)  
- Provides links to information on working with the .NET Framework class library.  
+ .NET Framework sınıf kitaplığıyla çalışma hakkındaki bilgilere bağlantılar sağlar.  
   
  [Visual Basic Dil Belirtimi](../../visual-basic/reference/language-specification/index.md)  
- Provides links to the complete Visual Basic language specification, which contains detailed information on all aspects of the language.  
+ Dilin tüm yönleri hakkında ayrıntılı bilgi içeren, tüm Visual Basic dil belirtiminin bağlantılarını sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Genel Kullanıcı Arabirimi Öğeleri (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- Contains topics for dialog boxes and windows used in Visual Studio.  
+ Visual Studio 'da kullanılan iletişim kutuları ve pencereler için konular içerir.  
   
  [Visual Studio'daki XML Araçları](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- Provides links to topics on various XML tools available in Visual Studio.  
+ Visual Studio 'da kullanılabilen çeşitli XML araçlarıyla ilgili konuların bağlantılarını sağlar.  
   
- [Automation and Extensibility Reference](/visualstudio/extensibility/extensibility-in-visual-studio?view=vs-2015)  
- Provides links to topics covering automation and extensibility in Visual Studio, for both shared and language-specific components.
+ [Otomasyon ve genişletilebilirlik başvurusu](/visualstudio/extensibility/extensibility-in-visual-studio?view=vs-2015)  
+ Hem paylaşılan hem de dile özgü bileşenler için Visual Studio 'daki Otomasyon ve genişletilebilirliği kapsayan konuların bağlantılarını sağlar.

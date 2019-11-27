@@ -21,7 +21,7 @@ ms.locfileid: "74343825"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource Yönergesi
 
-Indicates a mapping between specific lines of source code and text external to the source.  
+Kaynak kodunun belirli satırları ve kaynağın dış metni arasındaki eşlemeyi gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,24 +34,24 @@ Indicates a mapping between specific lines of source code and text external to t
 ## <a name="parts"></a>Bölümler  
 
  `StringLiteral`  
- The path to the external source.  
+ Dış kaynağın yolu.  
   
  `IntLiteral`  
- The line number of the first line of the external source.  
+ Dış kaynağın ilk satırının satır numarası.  
   
  `LogicalLine`  
- The line where the error occurs in the external source.  
+ Dış kaynakta Hatanın gerçekleştiği satır.  
   
  `#End ExternalSource`  
- Terminates the `#ExternalSource` block.  
+ `#ExternalSource` bloğunu sonlandırır.  
   
 ## <a name="remarks"></a>Açıklamalar  
 
- This directive is used only by the compiler and the debugger.  
+ Bu yönerge yalnızca derleyici ve hata ayıklayıcı tarafından kullanılır.  
   
- A source file may include external source directives, which indicate a mapping between specific lines of code in the source file and text external to the source, such as an .aspx file. If errors are encountered in the designated source code during compilation, they are identified as coming from the external source.  
+ Kaynak dosya, kaynak dosyadaki belirli kod satırları ve bir. aspx dosyası gibi, kaynağın harici metni arasındaki eşlemeyi gösteren dış kaynak yönergeleri içerebilir. Derleme sırasında belirlenen kaynak kodunda hatalarla karşılaşılırsa, bunlar dış kaynaktan geldiği şekilde tanımlanır.  
   
- External source directives have no effect on compilation and cannot be nested. They are intended for internal use by the application only.  
+ Dış kaynak yönergelerinin derleme üzerinde hiçbir etkisi yoktur ve iç içe geçirilemez. Bunlar yalnızca uygulama tarafından dahili kullanım için tasarlanmıştır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

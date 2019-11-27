@@ -14,13 +14,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352861"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic Dil Belirtimi
-The Visual Basic Language Specification is the authoritative source for answers to all questions about Visual Basic grammar and syntax. It contains detailed information about the language, including many points not covered in the Visual Basic reference documentation.  
+Visual Basic dil belirtimi, Visual Basic dilbilgisi ve sözdizimi hakkında tüm soruların yanıtları için yetkili kaynağıdır. Visual Basic başvuru belgelerinde kapsanmayan çok sayıda noktası da dahil olmak üzere dille ilgili ayrıntılı bilgiler içerir.  
   
- The specification is available on the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=188623).  
+ Bu belirtim, [Microsoft Indirme merkezi](https://go.microsoft.com/fwlink/?LinkId=188623)' nde kullanılabilir.  
   
-This site contains the [VB 11 specification](../../../../_vblang/spec/introduction.md). It's built from the Markdown files contained in [the dotnet/vblang GitHub repository](https://github.com/dotnet/vblang/blob/master/spec/README.md).
+Bu site [vb 11 belirtimini](../../../../_vblang/spec/introduction.md)içerir. Bu [, DotNet/vblang GitHub deposunda](https://github.com/dotnet/vblang/blob/master/spec/README.md)bulunan Marku dosyalarından oluşturulmuştur.
 
-Issues on the specification should be created in the [dotnet/vblang](https://github.com/dotnet/vblang/issues) repository. Or, if you're interested in fixing any errors you find, you may submit a [Pull Request](https://github.com/dotnet/vblang/pulls) to the same repository.
+Belirtile ilgili sorunların [DotNet/vblang](https://github.com/dotnet/vblang/issues) deposunda oluşturulması gerekir. Ya da bulduğunuz hataları düzeltmeye ilgileniyorsanız, aynı depoya bir [çekme isteği](https://github.com/dotnet/vblang/pulls) gönderebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

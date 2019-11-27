@@ -1,5 +1,5 @@
 ---
-title: 'How to: Serialize Using XmlSerializer'
+title: 'Nasıl yapılır: XmlSerializer kullanarak serileştirme'
 ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
 ms.openlocfilehash: 6d5874d6722fac6deba93de01cb5441e7dbc7503
@@ -9,11 +9,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352363"
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>How to: Serialize Using XmlSerializer (Visual Basic)
-This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.  
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Nasıl yapılır: XmlSerializer kullanarak serileştirme (Visual Basic)
+Bu konuda <xref:System.Xml.Serialization.XmlSerializer>kullanarak seri hale getirilen ve serileştiren bir örnek gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects. It then serializes them to a memory stream, and then deserializes them from the memory stream.  
+ Aşağıdaki örnek <xref:System.Xml.Linq.XElement> nesneleri içeren bir dizi nesne oluşturur. Daha sonra bunları bir bellek akışına serileştirir ve sonra bellek akışından serileştirir.  
   
 ```vb  
 Imports System  
@@ -69,7 +69,7 @@ Public Class XLinqTest
 End Class  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```console  
 Testing for type: XElementNullContainer  
@@ -82,4 +82,4 @@ Testing for type: XElementContainer
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Serializing Object Graphs that Contain XElement Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [XElement nesneleri içeren nesne grafiklerini serileştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

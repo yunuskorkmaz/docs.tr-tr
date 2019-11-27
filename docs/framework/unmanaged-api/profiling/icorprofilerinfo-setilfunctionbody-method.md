@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449875"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>ICorProfilerInfo::SetILFunctionBody Yöntemi
-Replaces the body of the specified function in the specified module.  
+Belirtilen modüldeki belirtilen işlevin gövdesini değiştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,29 +36,29 @@ HRESULT SetILFunctionBody(
   
 ## <a name="parameters"></a>Parametreler  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ 'ndaki İşlevin bulunduğu modülün KIMLIĞI.  
   
  `methodid`  
- [in] The token of the function for which to replace the body.  
+ 'ndaki Gövdesinin yerine geçecek işlevin belirteci.  
   
  `pbNewILMethodHeader`  
- [in] The new header for the function.  
+ 'ndaki İşlevin yeni üstbilgisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.  
+ `SetILFunctionBody` yöntemi, Meta verilerdeki işlevin göreli sanal adresini değiştirir, böylece yeni işlev gövdesine işaret eder ve tüm iç veri yapılarını gerektiği şekilde ayarlar.  
   
- The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.  
+ `SetILFunctionBody` yöntemi, yalnızca bir tam zamanında (JıT) derleyici tarafından derlenmediği işlevlerde çağrılabilir.  
   
- Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.  
+ Arabelleğin uyumlu olduğundan emin olmak için yeni yönteme alan ayırmak üzere [ICorProfilerInfo:: GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) metodunu kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

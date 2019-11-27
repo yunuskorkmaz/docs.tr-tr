@@ -1,5 +1,5 @@
 ---
-title: Using Structs - C# Programming Guide
+title: Yapıları kullanma- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,29 +12,29 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429497"
 ---
-# <a name="using-structs-c-programming-guide"></a>Using structs (C# Programming Guide)
+# <a name="using-structs-c-programming-guide"></a>Yapıları kullanma (C# Programlama Kılavuzu)
 
-The `struct` type is suitable for representing lightweight objects such as `Point`, `Rectangle`, and `Color`. Although it is just as convenient to represent a point as a [class](../../language-reference/keywords/class.md) with [Auto-Implemented Properties](./auto-implemented-properties.md), a [struct](../../language-reference/keywords/struct.md) might be more efficient in some scenarios. For example, if you declare an array of 1000 `Point` objects, you will allocate additional memory for referencing each object; in this case, a struct would be less expensive. Because .NET already contains an object called <xref:System.Drawing.Point>, the struct in this example is named `Coords` instead.
+`struct` türü `Point`, `Rectangle`ve `Color`gibi hafif nesneleri temsil etmek için uygundur. Bir noktayı [Otomatik uygulanmış özelliklerle](./auto-implemented-properties.md)bir [sınıf](../../language-reference/keywords/class.md) olarak temsil etmek uygun olsa da, bazı senaryolarda bir [Yapı](../../language-reference/keywords/struct.md) daha verimli olabilir. Örneğin, 1000 `Point` nesnelerden oluşan bir dizi bildirirseniz, her bir nesneye başvurmak için ek bellek ayırabilirsiniz; Bu durumda, bir yapı daha pahalı olur. .NET zaten <xref:System.Drawing.Point>adlı bir nesne içerdiğinden, bu örnekteki yapı bunun yerine `Coords` olarak adlandırılmıştır.
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-It is an error to define a parameterless constructor for a struct. It is also an error to initialize an instance field in a struct body. You can initialize externally accessible struct members only by using a parameterized constructor, the implicit, parameterless constructor, an [object initializer](object-and-collection-initializers.md), or by accessing the members individually after the struct is declared. Any private or otherwise inaccessible members require the use of constructors exclusively.
+Bir struct için parametresiz bir Oluşturucu tanımlamak hatadır. Bir yapı gövdesinde örnek alanı başlatmak da bir hatadır. Yalnızca parametreli bir oluşturucuyu, örtük, parametresiz oluşturucuyu, [nesne başlatıcısını](object-and-collection-initializers.md)kullanarak veya yapı oluşturulduktan sonra üyelere ayrı ayrı erişerek, dışarıdan erişilebilen yapı üyelerini başlatabilirsiniz. Herhangi bir özel veya başka şekilde erişilemeyen üye, oluşturucuların yalnızca kullanımını gerektirir.
 
-When you create a struct object using the [new](../../language-reference/operators/new-operator.md) operator, it gets created and the appropriate constructor is called according to the [constructor's signature](constructors.md#constructor-syntax). Unlike classes, structs can be instantiated without using the `new` operator. In such a case, there is no constructor call, which makes the allocation more efficient. However, the fields will remain unassigned and the object cannot be used until all of the fields are initialized. This includes the inability to get or set values through properties.
+[New](../../language-reference/operators/new-operator.md) işlecini kullanarak bir struct nesnesi oluşturduğunuzda, oluşturulur ve uygun Oluşturucu [oluşturucunun imzasına](constructors.md#constructor-syntax)göre çağırılır. Sınıfların aksine, yapılar `new` işleci kullanılmadan örneklenebilir. Böyle bir durumda, bir Oluşturucu çağrısı yoktur ve bu da ayırmayı daha verimli hale getirir. Ancak alanlar atanmamış olarak kalır ve tüm alanlar başlatılana kadar nesne kullanılamaz. Bu, özellikler aracılığıyla değerleri almak veya ayarlamak için bir değer içerir.
 
-If you instantiate a struct object using the parameterless constructor, all members are assigned according to their [default values](../../language-reference/keywords/default-values-table.md).
+Parametresiz oluşturucuyu kullanarak bir yapı nesnesi örneği oluşturursanız, tüm Üyeler [varsayılan değerlerine](../../language-reference/keywords/default-values-table.md)göre atanır.
 
-When writing a constructor with parameters for a struct, you must explicitly initialize all members; otherwise one or more members remain unassigned and the struct cannot be used, producing compiler error [CS0171](../../misc/cs0171.md).
+Bir yapı için parametrelere sahip bir Oluşturucu yazarken, tüm üyeleri açık olarak başlatmalısınız; Aksi takdirde bir veya daha fazla üye atanmamış olarak kalır ve yapı birimi [CS0171](../../misc/cs0171.md), derleyici hatası üretirken kullanılamaz.
 
-There is no inheritance for structs as there is for classes. A struct cannot inherit from another struct or class, and it cannot be the base of a class. Structs, however, inherit from the base class <xref:System.Object>. A struct can implement interfaces, and it does that exactly as classes do.
+Sınıflar için olduğu gibi yapılar için devralma yoktur. Yapı, başka bir struct veya sınıftan devralınabilir ve bir sınıfın temeli olamaz. Ancak yapılar, temel sınıftan devralınır <xref:System.Object>. Bir struct, arabirimler uygulayabilir ve tam olarak sınıfların yaptığı şekilde yapılır.
 
-You cannot declare a class using the keyword `struct`. In C#, classes and structs are semantically different. A struct is a value type, while a class is a reference type. For more information, see [Value types](../../language-reference/keywords/value-types.md) and [Reference types](../../language-reference/keywords/reference-types.md).
+Anahtar sözcüğünü kullanarak bir sınıf bildiremezsiniz `struct`. İçinde C#, sınıflar ve yapılar anlamsal olarak farklıdır. Yapı bir değer türüdür, ancak bir sınıf bir başvuru türüdür. Daha fazla bilgi için bkz. [değer türleri](../../language-reference/keywords/value-types.md) ve [başvuru türleri](../../language-reference/keywords/reference-types.md).
 
-Unless you need reference-type semantics, a small class may be more efficiently handled by the system if you declare it as a struct instead.
+Başvuru türü semantiklerine ihtiyacınız yoksa, bunun yerine bir yapı olarak bildirirseniz küçük bir sınıf sistem tarafından daha verimli bir şekilde işlenebilir.
 
 ## <a name="example-1"></a>Örnek 1
 
-This example demonstrates `struct` initialization using both parameterless and parameterized constructors.
+Bu örnekte, hem parametresiz hem de parametreli oluşturucular kullanılarak `struct` başlatma gösterilmektedir.
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
@@ -42,7 +42,7 @@ This example demonstrates `struct` initialization using both parameterless and p
 
 ## <a name="example-2"></a>Örnek 2
 
-This example demonstrates a feature that is unique to structs. It creates a Coords object without using the `new` operator. If you replace the word `struct` with the word `class`, the program will not compile.
+Bu örnek, yapılar için benzersiz olan bir özelliği gösterir. `new` işlecini kullanmadan bir CoOrds nesnesi oluşturur. Word `struct` sözcüğünü `class`Word ile değiştirirseniz, program derlenmez.
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 

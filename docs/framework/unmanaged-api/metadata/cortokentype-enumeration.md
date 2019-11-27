@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436458"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType Numaralandırması
-Indicates the type of a metadata token.  
+Meta veri belirtecinin türünü gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -59,46 +59,46 @@ typedef enum CorTokenType {
 } CorTokenType;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`mdtModule`|An `mdModule` token.|  
-|`mdtTypeRef`|An `mdTypeRef` token.|  
-|`mdtTypeDef`|An `mdTypeDef` token.|  
-|`mdtFieldDef`|An `mdFieldDef` token.|  
-|`mdtMethodDef`|An `mdMethodDef` token.|  
-|`mdtParamDef`|An `mdParamDef` token.|  
-|`mdtInterfaceImpl`|An `mdInterfaceImpl` token.|  
-|`mdtMemberRef`|An `mdMemberRef` token.|  
-|`mdtCustomAttribute`|An `mdCustomAttribute` token.|  
-|`mdtPermission`|An `mdPermission` token.|  
-|`mdtSignature`|An `mdSignature` token.|  
-|`mdtEvent`|An `mdEvent` token.|  
-|`mdtProperty`|An `mdProperty` token.|  
-|`mdtModuleRef`|An `mdModuleRef` token.|  
-|`mdtTypeSpec`|An `mdTypeSpec` token.|  
-|`mdtAssembly`|An `mdAssembly` token.|  
-|`mdtAssemblyRef`|An `mdAssemblyRef` token.|  
-|`mdtFile`|An `mdFile` token.|  
-|`mdtExportedType`|An `mdExportedType` token.|  
-|`mdtManifestResource`|An `mdManifestResource` token.|  
-|`mdtGenericParam`|An `mdGenericParam` token.|  
-|`mdtMethodSpec`|An `mdMethodSpec` token.|  
-|`mdtGenericParamConstraint`|An `mdGenericParamConstraint` token.|  
-|`mdtString`|An `mdString` token.|  
-|`mdtName`|An `mdName` token.|  
-|`mdtBaseType`|Kullanılmadı.|  
+|`mdtModule`|`mdModule` belirteci.|  
+|`mdtTypeRef`|`mdTypeRef` belirteci.|  
+|`mdtTypeDef`|`mdTypeDef` belirteci.|  
+|`mdtFieldDef`|`mdFieldDef` belirteci.|  
+|`mdtMethodDef`|`mdMethodDef` belirteci.|  
+|`mdtParamDef`|`mdParamDef` belirteci.|  
+|`mdtInterfaceImpl`|`mdInterfaceImpl` belirteci.|  
+|`mdtMemberRef`|`mdMemberRef` belirteci.|  
+|`mdtCustomAttribute`|`mdCustomAttribute` belirteci.|  
+|`mdtPermission`|`mdPermission` belirteci.|  
+|`mdtSignature`|`mdSignature` belirteci.|  
+|`mdtEvent`|`mdEvent` belirteci.|  
+|`mdtProperty`|`mdProperty` belirteci.|  
+|`mdtModuleRef`|`mdModuleRef` belirteci.|  
+|`mdtTypeSpec`|`mdTypeSpec` belirteci.|  
+|`mdtAssembly`|`mdAssembly` belirteci.|  
+|`mdtAssemblyRef`|`mdAssemblyRef` belirteci.|  
+|`mdtFile`|`mdFile` belirteci.|  
+|`mdtExportedType`|`mdExportedType` belirteci.|  
+|`mdtManifestResource`|`mdManifestResource` belirteci.|  
+|`mdtGenericParam`|`mdGenericParam` belirteci.|  
+|`mdtMethodSpec`|`mdMethodSpec` belirteci.|  
+|`mdtGenericParamConstraint`|`mdGenericParamConstraint` belirteci.|  
+|`mdtString`|`mdString` belirteci.|  
+|`mdtName`|`mdName` belirteci.|  
+|`mdtBaseType`|Kullanılmıyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Each value is equal to the value of the top byte in the corresponding metadata token.  
+ Her değer, karşılık gelen meta veri belirtecindeki en üstteki baytın değerine eşittir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -16,27 +16,27 @@ ms.locfileid: "74348888"
 ---
 # <a name="file-encodings-visual-basic"></a>Dosya Kodlamaları (Visual Basic)
 
-File encodings, also known as character encodings, specify how to represent characters when text processing. One encoding may be preferable over another in terms of which language characters it can or cannot handle, although Unicode is usually preferred.
+Karakter kodlamaları olarak da bilinen dosya kodlamaları, metin işleme sırasında karakterlerin nasıl temsil edileceğini belirtir. Tek bir kodlama, bir veya işleyemeyen dil karakterleri açısından başka bir şekilde tercih edilebilir, ancak UNICODE genellikle tercih edilir.
 
-When reading from or writing to files, improperly matching file encodings may result in exceptions or incorrect results.
+Dosyadan okuma veya yazma yaparken, dosya kodlamaları yanlış şekilde eşleştirilirken özel durumlar veya hatalı sonuçlar oluşabilir.
 
-## <a name="types-of-encodings"></a>Types of Encodings
+## <a name="types-of-encodings"></a>Kodlamalar türleri
 
-Unicode is the preferred encoding when working with files. Unicode is a worldwide character-encoding standard that uses 16-bit code values to represent all the characters used in modern computing, including technical symbols and special characters used in publishing.
+Unicode, dosyalarla çalışırken tercih edilen kodlanıyor. Unicode, yayımlamak için kullanılan teknik semboller ve özel karakterler de dahil olmak üzere modern bilgi işlem 'da kullanılan tüm karakterleri temsil etmek için 16 bit kod değerlerini kullanan dünya çapındaki bir karakter kodlama standardıdır.
 
-Previous character-encoding standards consisted of traditional character sets, such as the Windows ANSI character set that uses 8-bit code values, or combinations of 8-bit values, to represent the characters used in a specific language or geographical region.
+Önceki karakter kodlama standartları, 8 bit kod değerleri kullanan Windows ANSI karakter kümesi veya belirli bir dilde veya coğrafi bölgede kullanılan karakterleri göstermek için 8 bit değer bileşimleri gibi geleneksel karakter kümelerinden oluşur.
 
-## <a name="encoding-class"></a>Encoding Class
+## <a name="encoding-class"></a>Kodlama sınıfı
 
-The <xref:System.Text.Encoding> class represents a character encoding. This table lists the type of encodings available and describes each.
+<xref:System.Text.Encoding> sınıfı bir karakter kodlamasını temsil eder. Bu tabloda, kullanılabilir kodlamalar türü listelenmekte ve her biri açıklanmaktadır.
 
 |Name|Açıklama|
 |---|---|
-|<xref:System.Text.ASCIIEncoding>|Represents an ASCII character encoding of Unicode characters.|
-|<xref:System.Text.UnicodeEncoding>|Represents a UTF-16 encoding of Unicode characters.|
-|<xref:System.Text.UTF32Encoding>|Represents a UTF-32 encoding of Unicode characters.|
-|<xref:System.Text.UTF7Encoding>|Represents a UTF-7 encoding of Unicode characters.|
-|<xref:System.Text.UTF8Encoding>|Represents a UTF-8 encoding of Unicode characters.|
+|<xref:System.Text.ASCIIEncoding>|Unicode karakterlerinin ASCII karakter kodlamasını temsil eder.|
+|<xref:System.Text.UnicodeEncoding>|Unicode karakterlerinin UTF-16 kodlamasını temsil eder.|
+|<xref:System.Text.UTF32Encoding>|Unicode karakterlerinin UTF-32 kodlamasını temsil eder.|
+|<xref:System.Text.UTF7Encoding>|Unicode karakterlerinin UTF-7 kodlamasını temsil eder.|
+|<xref:System.Text.UTF8Encoding>|Unicode karakterlerinin UTF-8 kodlamasını temsil eder.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

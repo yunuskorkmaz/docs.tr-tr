@@ -13,48 +13,48 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348001"
 ---
 # <a name="com-interop-visual-basic"></a>COM Birlikte Çalışma (Visual Basic)
-The Component Object Model (COM) allows an object to expose its functionality to other components and to host applications. Most of today's software includes COM objects. Although .NET assemblies are the best choice for new applications, you may at times need to employ COM objects. This section covers some of the issues associated with creating and using COM objects with Visual Basic.  
+Bileşen nesne modeli (COM), bir nesnenin işlevselliğini diğer bileşenlere sunma ve uygulamaları barındırmasına olanak tanır. Günümüzün yazılımlarının çoğu COM nesnelerini içerir. .NET derlemeleri yeni uygulamalar için en iyi seçenek olsa da, her zaman COM nesneleri kullanmanız gerekebilir. Bu bölümde, Visual Basic ile COM nesneleri oluşturma ve kullanma ile ilgili bazı sorunlar ele alınmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [COM Birlikte Çalışma'ya Giriş](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
- Provides an overview of COM interoperability.  
+ COM birlikte çalışabilirliğine genel bakış sağlar.  
   
- [How to: Reference COM Objects from Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
- Covers how to add references to COM objects that have type libraries.  
+ [Nasıl yapılır: Visual Basic COM nesnelerine başvurma](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
+ Tür kitaplıkları olan COM nesnelerine başvuruların nasıl ekleneceğini ele alır.  
   
  [Nasıl yapılır: ActiveX Denetimleriyle Çalışma](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Demonstrates how to use existing ActiveX controls to add features to the Visual Studio Toolbox.  
+ Visual Studio araç kutusu 'na özellik eklemek için mevcut ActiveX denetimlerini nasıl kullanacağınızı gösterir.  
   
  [İzlenecek yol: Windows API'lerini Çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
- Steps you through the process of calling the APIs that are part of the Windows operating system.  
+ Windows işletim sisteminin bir parçası olan API 'Leri çağırma sürecinde adım adım adımları uygulayın.  
   
  [Nasıl yapılır: Windows API'lerini Çağırma](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
- Demonstrates how to define and call the `MessageBox` function in User32.dll.  
+ User32. dll içinde `MessageBox` işlevinin nasıl tanımlanacağını ve çağrılacağını gösterir.  
   
  [Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- Demonstrates how to call a Windows function that has a parameter of an unsigned type.  
+ İmzasız bir tür parametresine sahip bir Windows işlevinin nasıl çağrılacağını gösterir.  
   
- [Walkthrough: Creating COM Objects with Visual Basic](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- Steps you through the process of creating COM objects with and without the COM class template.  
+ [İzlenecek yol: Visual Basic ile COM nesneleri oluşturma](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
+ COM sınıf şablonuyla ve olmadan COM nesneleri oluşturma sürecinde size adım adım.  
   
  [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
- Covers some of the problems you may encounter when using COM.  
+ COM kullanırken karşılaşabileceğiniz bazı sorunları ele alır.  
   
  [.NET Framework Uygulamalarında COM Birlikte Çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- Provides an overview of how to use COM objects and .NET Framework objects in the same application.  
+ Aynı uygulamadaki COM nesnelerinin ve .NET Framework nesnelerinin nasıl kullanılacağına ilişkin bir genel bakış sağlar.  
   
  [İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- Describes using existing COM objects as the basis for new objects.  
+ Mevcut COM nesnelerinin yeni nesneler için temel olarak kullanılmasını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Yönetilmeyen Kod ile Birlikte Çalışma](../../../framework/interop/index.md)  
- Describes interoperability services provided by the common language runtime.  
+ Ortak dil çalışma zamanı tarafından sunulan birlikte çalışabilirlik hizmetlerini açıklar.  
   
  [COM Bileşenlerini .NET Framework'te Gösterme](../../../framework/interop/exposing-com-components.md)  
- Describes the process of calling COM types through COM interop.  
+ Com birlikte çalışabilirliğine COM türlerini çağırma işlemini açıklar.  
   
  [.NET Framework Bileşenlerini COM'da Gösterme](../../../framework/interop/exposing-dotnet-components-to-com.md)  
- Describes the preparation and use of managed types from COM.  
+ Yönetilen türlerin COM 'dan hazırlanmasını ve kullanımını açıklar.  
   
  [Birlikte Çalışma Özniteliklerini Uygulama](../../../standard/native-interop/apply-interop-attributes.md)  
- Covers attributes you can use when working with unmanaged code.
+ , Yönetilmeyen kodla çalışırken kullanabileceğiniz öznitelikleri içerir.

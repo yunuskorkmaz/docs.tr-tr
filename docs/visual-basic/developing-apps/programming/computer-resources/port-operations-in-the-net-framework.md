@@ -13,25 +13,25 @@ ms.locfileid: "74345513"
 ---
 # <a name="port-operations-in-the-net-framework-with-visual-basic"></a>Visual Basic ile .NET Framework'te Bağlantı Noktası İşlemleri
 
-You can access your computer's serial ports through the .NET Framework classes in the <xref:System.IO.Ports?displayProperty=nameWithType> namespace. The most important class, <xref:System.IO.Ports.SerialPort>, provides a framework for synchronous and event-driven I/O, access to pin and break states, and access to serial driver properties. It can be wrapped in a <xref:System.IO.Stream> object, accessible through the <xref:System.IO.Ports.SerialPort.BaseStream> property. Wrapping <xref:System.IO.Ports.SerialPort> in a <xref:System.IO.Stream> object allows the serial port to be accessed by classes that use streams. The namespace includes enumerations that simplify the control of serial ports.
+<xref:System.IO.Ports?displayProperty=nameWithType> ad alanındaki .NET Framework sınıfları aracılığıyla bilgisayarınızın seri bağlantı noktalarına erişebilirsiniz. <xref:System.IO.Ports.SerialPort>en önemli sınıfı, zaman uyumlu ve olay odaklı g/ç için bir çerçeve sağlar, PIN ve kesme durumlarına erişebilir ve seri sürücü özelliklerine erişebilir. <xref:System.IO.Ports.SerialPort.BaseStream> özelliği aracılığıyla erişilebilen bir <xref:System.IO.Stream> nesnesine kaydırılmış olabilir. Bir <xref:System.IO.Stream> nesnesinde sarmalama <xref:System.IO.Ports.SerialPort>, akış kullanan sınıflar tarafından seri bağlantı noktasına erişilmesine izin verir. Ad alanı, seri bağlantı noktalarının denetimini kolaylaştıran numaralandırmalar içerir.
 
-The simplest way to create a <xref:System.IO.Ports.SerialPort> object is through the <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A> method.
+<xref:System.IO.Ports.SerialPort> nesne oluşturmanın en kolay yolu <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A> yöntemi kullanmaktır.
 
 > [!NOTE]
-> You cannot use .NET Framework classes to directly access other types of ports, such as parallel ports, USB ports, and so on.
+> Paralel bağlantı noktaları, USB bağlantı noktaları vb. gibi diğer bağlantı noktası türlerine doğrudan erişmek için .NET Framework sınıfları kullanamazsınız.
 
 ## <a name="enumerations"></a>Numaralandırmalar
 
-This table lists and describes the main enumerations used for accessing a serial port:
+Bu tablo, bir seri bağlantı noktasına erişmek için kullanılan ana numaralandırmaları listeler ve açıklar:
 
 |Sabit Listesi|Açıklama|
 |---|---|
-|<xref:System.IO.Ports.Handshake>|Specifies the control protocol used in establishing a serial port communication for a <xref:System.IO.Ports.SerialPort> object.|
-|<xref:System.IO.Ports.Parity>|Specifies the parity bit for a <xref:System.IO.Ports.SerialPort> object.|
-|<xref:System.IO.Ports.SerialData>|Specifies the type of character that was received on the serial port of the <xref:System.IO.Ports.SerialPort> object.|
-|<xref:System.IO.Ports.SerialError>|Specifies errors that occur on the <xref:System.IO.Ports.SerialPort> object|
-|<xref:System.IO.Ports.SerialPinChange>|Specifies the type of change that occurred on the <xref:System.IO.Ports.SerialPort> object.|
-|<xref:System.IO.Ports.StopBits>|Specifies the number of stop bits used on the <xref:System.IO.Ports.SerialPort> object.|
+|<xref:System.IO.Ports.Handshake>|<xref:System.IO.Ports.SerialPort> nesnesi için seri bağlantı noktası iletişimi kurarken kullanılan denetim protokolünü belirtir.|
+|<xref:System.IO.Ports.Parity>|<xref:System.IO.Ports.SerialPort> nesne için eşlik bitini belirtir.|
+|<xref:System.IO.Ports.SerialData>|<xref:System.IO.Ports.SerialPort> nesnesinin seri bağlantı noktasında alınan karakter türünü belirtir.|
+|<xref:System.IO.Ports.SerialError>|<xref:System.IO.Ports.SerialPort> nesnesinde oluşan hataları belirtir|
+|<xref:System.IO.Ports.SerialPinChange>|<xref:System.IO.Ports.SerialPort> nesnesinde gerçekleşen değişikliğin türünü belirtir.|
+|<xref:System.IO.Ports.StopBits>|<xref:System.IO.Ports.SerialPort> nesnesinde kullanılan durdurma bitlerinin sayısını belirtir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -16,23 +16,23 @@ ms.locfileid: "74348789"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosya Silme
 
-The `DeleteFile` method of the `My.Computer.FileSystem` object allows you to delete a file. Among the options it offers are: whether to send the deleted file to the **Recycle Bin**, whether to ask the user to confirm that the file should be deleted, and what to do when the user cancels the operation.  
+`My.Computer.FileSystem` nesnesinin `DeleteFile` yöntemi bir dosyayı silmenizi sağlar. Bunun sunduğu seçenekler arasında: Silinen dosyanın **geri dönüşüm kutusu**'na gönderilmesi, kullanıcıdan dosyanın silinip silinmeyeceğini ve Kullanıcı işlemi iptal ettiğinde ne yapılacağını onaylamasını isteyip istemediğini sorar.  
   
-### <a name="to-delete-a-text-file"></a>To delete a text file  
+### <a name="to-delete-a-text-file"></a>Bir metin dosyasını silmek için  
   
-- Use the `DeleteFile` method to delete the file. The following code demonstrates how to delete the file named `test.txt`.  
+- Dosyayı silmek için `DeleteFile` yöntemini kullanın. Aşağıdaki kod, `test.txt`adlı dosyanın nasıl silineceğini gösterir.  
   
      [!code-vb[VbVbcnMyFileSystem#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#22)]  
   
-### <a name="to-delete-a-text-file-and-ask-the-user-to-confirm-that-the-file-should-be-deleted"></a>To delete a text file and ask the user to confirm that the file should be deleted  
+### <a name="to-delete-a-text-file-and-ask-the-user-to-confirm-that-the-file-should-be-deleted"></a>Bir metin dosyasını silmek ve kullanıcıdan dosyanın silinmesi gerektiğini doğrulamasını istemek için  
   
-- Use the `DeleteFile` method to delete the file, setting `showUI` to `AllDialogs`. The following code demonstrates how to delete the file named `test.txt` and allow the user to confirm that the file should be deleted.  
+- Dosyayı silmek için `DeleteFile` yöntemi kullanın, `showUI` `AllDialogs`olarak ayarlar. Aşağıdaki kod, `test.txt` adlı dosyanın nasıl silineceğini ve kullanıcının dosyanın silinmesi gerektiğini onaylamasını sağlar.  
   
      [!code-vb[VbFileIOMisc#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#9)]  
   
-### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a>To delete a text file and send it to the Recycle Bin  
+### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a>Bir metin dosyasını silmek ve geri dönüşüm kutusu 'na göndermek için  
   
-- Use the `DeleteFile` method to delete the file, specifying `SendToRecycleBin` for the `recycle` parameter. The following code demonstrates how to delete the file named `test.txt` and send it to the **Recycle Bin**.  
+- `recycle` parametresi için `SendToRecycleBin` belirterek dosyayı silmek için `DeleteFile` yöntemi kullanın. Aşağıdaki kod, `test.txt` adlı dosyanın nasıl silineceğini ve **geri dönüşüm kutusu**'na nasıl gönderileceğini gösterir.  
   
      [!code-vb[VbFileIOMisc#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#10)]  
   
@@ -40,25 +40,25 @@ The `DeleteFile` method of the `My.Computer.FileSystem` object allows you to del
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).  
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (\\\\.\\) (<xref:System.ArgumentException>) ile başlar.  
   
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).  
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.  
   
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).  
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
   
-- A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).  
+- Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
   
-- The file is in use (<xref:System.IO.IOException>).  
+- Dosya kullanımda (<xref:System.IO.IOException>).  
   
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).  
+- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
   
-- The file does not exist (<xref:System.IO.FileNotFoundException>).  
+- Dosya yok (<xref:System.IO.FileNotFoundException>).  
   
-- The user does not have permission to delete the file, or the file is read-only (<xref:System.UnauthorizedAccessException>).  
+- Kullanıcının dosyayı silme izni yok veya dosya salt okunurdur (<xref:System.UnauthorizedAccessException>).  
   
-- A partial-trust situation exists in which the user does not have sufficient permissions (<xref:System.Security.SecurityException>).  
+- Kullanıcının yeterli izinlere sahip olmadığı bir kısmi güven durumu (<xref:System.Security.SecurityException>) vardır.  
   
-- The user cancelled the operation and `onUserCancel` is set to `ThrowException` (<xref:System.OperationCanceledException>).  
+- Kullanıcı işlemi iptal etti ve `onUserCancel` `ThrowException` (<xref:System.OperationCanceledException>) olarak ayarlandı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

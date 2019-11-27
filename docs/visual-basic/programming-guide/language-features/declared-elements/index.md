@@ -10,9 +10,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345342"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Visual Basic'de Bildirilen Öğeler
-A *declared element* is a programming element that is defined in a declaration statement. Declared elements include variables, constants, enumerations, classes, structures, modules, interfaces, procedures, procedure parameters, function returns, external procedure references, operators, properties, events, and delegates.  
+Bildirimi *yapılan bir öğe* , bildirim ifadesinde tanımlanan bir programlama öğesidir. Tanımlanan öğeler arasında değişkenler, sabitler, numaralandırmalar, sınıflar, yapılar, modüller, arabirimler, yordamlar, yordam parametreleri, işlev örnekleri, dış yordam başvuruları, işleçler, özellikler, olaylar ve temsilciler bulunur.  
   
- Declaration statements include the following:  
+ Bildirim deyimleri şunları içerir:  
   
 - [Dim Deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)  
   
@@ -44,20 +44,20 @@ A *declared element* is a programming element that is defined in a declaration s
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- Describes how to name elements and use alphabetic case.  
+ Öğelerin nasıl kullanılacağını ve alfabetik büyük/küçük harf kullanımını açıklar.  
   
  [Bildirilen Öğe Özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- Covers characteristics, such as scope, possessed by declared elements.  
+ Tanımlanmış öğeler tarafından sahip olan, kapsam gibi özellikleri içerir.  
   
  [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- Describes how the compiler matches a reference to a declaration and how to qualify a name.  
+ Derleyicinin bildirime yönelik bir başvuruya nasıl eşleştiğini ve bir adı nasıl niteleneceğini açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Program Yapısı ve Kod Kuralları](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Presents guidelines for making your code easier to read, understand, and maintain.  
+ Kodunuzun okunmasını, anlaşılmasını ve bakımını daha kolay hale getirmek için yönergeler sunar.  
   
  [Deyimler](../../../../visual-basic/language-reference/statements/index.md)  
- Describes statements that name and define procedures, variables, arrays, and constants.  
+ Yordamlara, değişkenlere, dizilere ve sabitlere ad veren ve bunları tanımlayan deyimleri açıklar.  
   
  [Bildirim Bağlamları ve Varsayılan Erişim Düzeyleri](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
- Lists the types of declared elements and shows for each one its declaration statement, in what context you can declare it, and its default access level.
+ Tanımlı öğelerin türlerini listeler ve her bir bildirim bildirimi için, hangi bağlamda bildirebileceğiniz ve varsayılan erişim düzeyi için gösterir.

@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343694"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase Deyimi (Visual Basic)
-Used to release array variables and deallocate the memory used for their elements.  
+Dizi değişkenlerini serbest bırakmak ve öğeleri için kullanılan belleği serbest bırakmak için kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -25,15 +25,15 @@ Erase arraylist
   
 ## <a name="parts"></a>Bölümler  
  `arraylist`  
- Gerekli. List of array variables to be erased. Multiple variables are separated by commas.  
+ Gerekli. Silinecek dizi değişkenlerinin listesi. Birden çok değişken virgülle ayrılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `Erase` statement can appear only at procedure level. This means you can release arrays inside a procedure but not at class or module level.  
+ `Erase` deyimleri yalnızca yordam düzeyinde görünebilir. Bu, bir yordam içinde dizileri serbest bırakabilir, ancak sınıf veya modül düzeyinde değil.  
   
- The `Erase` statement is equivalent to assigning `Nothing` to each array variable.  
+ `Erase` deyimin her dizi değişkenine `Nothing` atamaya eşdeğerdir.  
   
 ## <a name="example"></a>Örnek  
- The following example uses the `Erase` statement to clear two arrays and free their memory (1000 and 100 storage elements, respectively). The `ReDim` statement then assigns a new array instance to the three-dimensional array.  
+ Aşağıdaki örnek, iki diziyi temizlemek ve bellek (1000 ve 100 depolama öğelerini sırasıyla) boşaltmak için `Erase` ifadesini kullanır. `ReDim` deyimleri, üç boyutlu diziye yeni bir dizi örneği atar.  
   
  [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   

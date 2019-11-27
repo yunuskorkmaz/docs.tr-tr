@@ -18,27 +18,27 @@ ms.locfileid: "74435644"
 ---
 # <a name="get-supported-ui-automation-control-patterns"></a>Desteklenen UI Otomasyon Denetim Düzenlerini Alma
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic shows how to retrieve control pattern objects from [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements.  
+ Bu konu, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğelerinden denetim deseninin nesnelerinin nasıl alınacağını gösterir.  
   
-### <a name="obtain-all-control-patterns"></a>Obtain All Control Patterns  
+### <a name="obtain-all-control-patterns"></a>Tüm denetim desenlerini al  
   
-1. Get the <xref:System.Windows.Automation.AutomationElement> whose control patterns you are interested in.  
+1. Denetim desenlerini ilgilendiğiniz <xref:System.Windows.Automation.AutomationElement> alın.  
   
-2. Call <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> to get all control patterns from the element.  
+2. Öğeden tüm denetim desenlerini almak için <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> çağırın.  
   
 > [!CAUTION]
-> It is strongly recommended that a client not use <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>. Performance can be severely affected as this method calls <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> internally for each existing control pattern. If possible, a client should call <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> for the key patterns of interest.  
+> İstemcinin <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>kullanmamaları önemle önerilir. Bu yöntem, var olan her denetim deseninin dahili <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> çağırdığı için performans ciddi bir şekilde etkilenebilir. Mümkünse, bir istemci ilgilendiğiniz önemli desenler için <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> çağırmalıdır.  
   
-### <a name="obtain-a-specific-control-pattern"></a>Obtain a Specific Control Pattern  
+### <a name="obtain-a-specific-control-pattern"></a>Belirli bir denetim deseninin elde edileceği  
   
-1. Get the <xref:System.Windows.Automation.AutomationElement> whose control patterns you are interested in.  
+1. Denetim desenlerini ilgilendiğiniz <xref:System.Windows.Automation.AutomationElement> alın.  
   
-2. Call <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> or <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> to query for a specific pattern. These methods are similar, but if the pattern is not found, <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> raises an exception, and <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> returns `false`.  
+2. Belirli bir kalıbı sorgulamak için <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> veya <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> çağırın. Bu yöntemler benzerdir, ancak model bulunmazsa <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> bir özel durum oluşturur ve <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> `false`döndürür.  
   
 ## <a name="example"></a>Örnek  
- The following example retrieves an <xref:System.Windows.Automation.AutomationElement> for a list item and obtains a <xref:System.Windows.Automation.SelectionItemPattern> from that element.  
+ Aşağıdaki örnek, bir liste öğesi için bir <xref:System.Windows.Automation.AutomationElement> alır ve bu öğeden bir <xref:System.Windows.Automation.SelectionItemPattern> edinir.  
   
  [!code-csharp[UIAClient_snip#103](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#103)]
  [!code-vb[UIAClient_snip#103](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#103)]  

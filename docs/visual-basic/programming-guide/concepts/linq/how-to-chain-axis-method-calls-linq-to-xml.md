@@ -1,5 +1,5 @@
 ---
-title: 'How to: Chain Axis Method Calls (LINQ to XML)'
+title: 'Nasıl yapılır: eksen yöntemi çağrıları zinciri (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: e4e22942-39bd-460f-b3c0-9f09e53d3aa9
 ms.openlocfilehash: de6fbec9fa7948c618252415774ff6a2e9289c74
@@ -9,15 +9,15 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346933"
 ---
-# <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>How to: Chain Axis Method Calls (LINQ to XML) (Visual Basic)
-A common pattern that you will use in your code is to call an axis method, then call one of the extension method axes.  
+# <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>Nasıl yapılır: eksen yöntemi çağrıları zinciri (LINQ to XML) (Visual Basic)
+Kodunuzda kullanacağınız ortak bir model, bir eksen yöntemi çağırmak ve sonra uzantı yöntemi eksenlerinden birini çağırmalıdır.  
   
- There are two axes with the name of `Elements` that return a collection of elements: the <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> method and the <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> method. You can combine these two axes to find all elements of a specified name at a given depth in the tree.  
+ Bir öğe koleksiyonu döndüren `Elements` adında iki eksen vardır: <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> yöntemi ve <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> yöntemi. Ağaçta verilen bir derinlikte belirtilen bir adın tüm öğelerini bulmak için bu iki ekseni birleştirebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- This example uses <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> and <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> to find all `Name` elements in all `Address` elements in all `PurchaseOrder` elements.  
+ Bu örnek <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> ve <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> kullanarak tüm `PurchaseOrder` öğelerindeki tüm `Address` öğelerinde tüm `Name` öğelerini bulur.  
   
- This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim purchaseOrders As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -29,7 +29,7 @@ For Each e As XElement In names
 Next  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Name>Ellen Adams</Name>  
@@ -40,10 +40,10 @@ Next
 <Name>Jessica Arnold</Name>  
 ```  
   
- This works because one of the implementations of the `Elements` axis is as an extension method on <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XContainer>. <xref:System.Xml.Linq.XElement> derives from <xref:System.Xml.Linq.XContainer>, so you can call the <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> method on the results of a call to the <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> method.  
+ Bu, `Elements` ekseninin uygulamalarından biri <xref:System.Xml.Linq.XContainer><xref:System.Collections.Generic.IEnumerable%601> bir genişletme yöntemi olduğundan bu işe yarar. <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XContainer>türetilir, böylece <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> yöntemine yapılan çağrının sonuçlarında <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> yöntemini çağırabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Sometimes you want to retrieve all elements at a particular element depth when there might or might not be intervening ancestors. For example, in the following document, you might want to retrieve all the `ConfigParameter` elements that are children of the `Customer` element, but not the `ConfigParameter` that is a child of the `Root` element.  
+ Bazı durumlarda, üst öğelerinden oluşan veya aradaki bir işlem olduğunda, belirli bir öğe derinliğinde tüm öğeleri almak istersiniz. Örneğin, aşağıdaki belgede, `Root` öğesinin bir alt öğesi olan `ConfigParameter` değil, `Customer` öğesinin alt öğesi olan tüm `ConfigParameter` öğelerini almak isteyebilirsiniz.  
   
 ```xml  
 <Root>  
@@ -67,7 +67,7 @@ Next
 </Root>  
 ```  
   
- To do this, you can use the <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> axis, as follows:  
+ Bunu yapmak için <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> eksenini aşağıda gösterildiği gibi kullanabilirsiniz:  
   
 ```vb  
 Dim root As XElement = XElement.Load("Irregular.xml")  
@@ -78,7 +78,7 @@ For Each cp As XElement In configParameters
 Next  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <ConfigParameter>FirstConfigParameter</ConfigParameter>  
@@ -86,9 +86,9 @@ Next
 ```  
   
 ## <a name="example"></a>Örnek  
- The following example shows the same technique for XML that is in a namespace. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ Aşağıdaki örnek, bir ad alanında bulunan XML için aynı tekniği gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- This example uses the following XML document: [Sample XML File: Multiple Purchase Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında birden fazla satın alma siparişi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -106,7 +106,7 @@ Module Module1
 End Module  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Ellen Adams</aw:Name>  
@@ -119,4 +119,4 @@ End Module
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML Axes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML eksenleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

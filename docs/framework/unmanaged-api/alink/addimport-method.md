@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446659"
 ---
 # <a name="addimport-method"></a>AddImport Yöntemi
-Adds imports to the assembly.  
+Derlemeye içeri aktarmalar ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,22 +38,22 @@ HRESULT AddImport(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Unique ID of assembly to be augmented.  
+ Artırılması için derlemenin benzersiz KIMLIĞI.  
   
  `ImportToken`  
- Unique ID, retrieved from [ImportFile Method](importfile-method.md), of file to be imported.  
+ İçeri aktarılacak dosyanın [ImportFile yönteminden](importfile-method.md)ALıNAN benzersiz kimliği.  
   
  `dwFlags`  
- COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
+ `ffContainsNoMetaData` ve `ffWriteable`gibi COM+ Fıledef bayrakları. `dwFlags` [DefineFile yöntemine](../metadata/imetadataassemblyemit-definefile-method.md)geçirilir.  
   
  `pFileToken`  
- Pointer to token that receives the ID for the resulting file.  
+ Elde edilen dosyanın KIMLIĞINI alan belirteç işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

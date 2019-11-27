@@ -17,27 +17,27 @@ ms.locfileid: "74441368"
 ---
 # <a name="ui-automation-properties-for-clients"></a>İstemciler İçin UI Otomasyon Özellikleri
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- This overview introduces you to [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties as they are exposed to UI Automation client applications.  
+ Bu genel bakış, Kullanıcı Arabirimi Otomasyonu istemci uygulamalarına sunulduklarında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri tanıtır.  
   
- Properties on <xref:System.Windows.Automation.AutomationElement> objects contain information about [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements, usually controls. The properties of an <xref:System.Windows.Automation.AutomationElement> are generic; that is, not specific to a control type. Many of these properties are exposed in the <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation> structure.  
+ <xref:System.Windows.Automation.AutomationElement> nesnelerdeki özellikler, genellikle denetimleri olan [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] öğeler hakkında bilgiler içerir. <xref:System.Windows.Automation.AutomationElement> özellikleri geneldir; Yani, bir denetim türüne özgü değildir. Bu özelliklerin birçoğu <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation> yapısında kullanıma sunulur.  
   
- Control patterns also have properties. The properties of control patterns are specific to the pattern. For example, <xref:System.Windows.Automation.ScrollPattern> has properties that enable a client application to discover whether a window is vertically or horizontally scrollable, and what the current view sizes and scroll positions are. Control patterns expose all their properties through a structure; for example, <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>.  
+ Denetim desenleri de özelliklere sahiptir. Denetim desenlerinin özellikleri desenine özgüdür. Örneğin <xref:System.Windows.Automation.ScrollPattern>, bir istemci uygulamanın bir pencerenin dikey veya yatay kaydırılabilir olduğunu ve geçerli görünüm boyutları ile kaydırma konumlarını bulmasını sağlayan özelliklere sahiptir. Denetim desenleri, tüm özelliklerini bir yapı aracılığıyla kullanıma sunar; Örneğin, <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties are read-only. To set properties of a control, you must use the methods of the appropriate control pattern. For example, use <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> to change the position values of a scrolling window.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikler salt okunurdur. Bir denetimin özelliklerini ayarlamak için uygun denetim deseninin yöntemlerini kullanmanız gerekir. Örneğin, bir kayan pencerenin konum değerlerini değiştirmek için <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> kullanın.  
   
- To improve performance, property values of controls and control patterns can be cached when <xref:System.Windows.Automation.AutomationElement> objects are retrieved. For more information, see [Caching in UI Automation Clients](caching-in-ui-automation-clients.md).  
+ Performansı artırmak için, <xref:System.Windows.Automation.AutomationElement> nesneler alındığında denetimlerin ve denetim desenlerinin özellik değerleri önbelleğe alınabilir. Daha fazla bilgi için bkz. [UI Otomasyonu Istemcilerinde önbelleğe alma](caching-in-ui-automation-clients.md).  
   
-## <a name="property-ids"></a>Property IDs  
- Property identifiers (IDs) are unique, constant values that are encapsulated in <xref:System.Windows.Automation.AutomationProperty> objects. UI Automation client applications get these IDs from the <xref:System.Windows.Automation.AutomationElement> class or from the appropriate control pattern class, such as <xref:System.Windows.Automation.ScrollPattern>. UI Automation providers get them from <xref:System.Windows.Automation.AutomationElementIdentifiers> or from one of the control pattern identifiers classes, such as <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
+## <a name="property-ids"></a>Özellik kimlikleri  
+ Özellik tanımlayıcıları (kimlikler), <xref:System.Windows.Automation.AutomationProperty> nesnelerinde kapsüllenmiş benzersiz, sabit değerlerdir. UI Otomasyonu istemci uygulamaları, bu kimlikleri <xref:System.Windows.Automation.AutomationElement> sınıfından veya <xref:System.Windows.Automation.ScrollPattern>gibi uygun denetim deseninin sınıfından alırlar. UI Otomasyon sağlayıcıları, <xref:System.Windows.Automation.ScrollPatternIdentifiers>gibi denetim deseninin tanımlayıcı sınıflarından veya <xref:System.Windows.Automation.AutomationElementIdentifiers> onlardan alırlar.  
   
- The numeric <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> of an <xref:System.Windows.Automation.AutomationProperty> is used by providers to identify properties that are being queried for in the <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> method. In general, client applications do not need to examine the <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>. The <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> is used only for debugging and diagnostic purposes.  
+ Bir <xref:System.Windows.Automation.AutomationProperty> sayısal <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>, sağlayıcılar tarafından <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> yönteminde sorgulanmakta olan özellikleri belirlemek için kullanılır. Genel olarak, istemci uygulamalarının <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>incelemesi gerekmez. <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> yalnızca hata ayıklama ve tanılama amaçları için kullanılır.  
   
-## <a name="property-conditions"></a>Property Conditions  
- The property IDs are used in constructing <xref:System.Windows.Automation.PropertyCondition> objects used to find <xref:System.Windows.Automation.AutomationElement> objects. For example, you might wish to find an <xref:System.Windows.Automation.AutomationElement> that has a certain name, or all controls that are enabled. Each <xref:System.Windows.Automation.PropertyCondition> specifies an <xref:System.Windows.Automation.AutomationProperty> identifier and the value that the property must match.  
+## <a name="property-conditions"></a>Özellik koşulları  
+ Özellik kimlikleri, <xref:System.Windows.Automation.AutomationElement> nesneleri bulmak için kullanılan <xref:System.Windows.Automation.PropertyCondition> nesneleri oluşturmak için kullanılır. Örneğin, belirli bir ada veya etkin olan tüm denetimlere sahip bir <xref:System.Windows.Automation.AutomationElement> bulmak isteyebilirsiniz. Her <xref:System.Windows.Automation.PropertyCondition>, bir <xref:System.Windows.Automation.AutomationProperty> tanımlayıcıyı ve özelliğin eşleşmesi gereken değeri belirtir.  
   
- For more information, see the following reference topics:  
+ Daha fazla bilgi için aşağıdaki başvuru konularına bakın:  
   
 - <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>  
   
@@ -45,57 +45,57 @@ ms.locfileid: "74441368"
   
 - <xref:System.Windows.Automation.TreeWalker.Condition%2A>  
   
-## <a name="retrieving-properties"></a>Retrieving Properties  
- Some properties of <xref:System.Windows.Automation.AutomationElement> and all properties of a control pattern class are exposed as nested properties of the `Current` or `Cached` property of the <xref:System.Windows.Automation.AutomationElement> or control pattern object.  
+## <a name="retrieving-properties"></a>Özellikler alınıyor  
+ <xref:System.Windows.Automation.AutomationElement> özellikleri ve bir denetim deseninin tüm özellikleri, <xref:System.Windows.Automation.AutomationElement> veya denetim deseninin nesnesinin `Current` veya `Cached` özelliğinin iç içe geçmiş özellikleri olarak sunulur.  
   
- In addition, any <xref:System.Windows.Automation.AutomationElement> or control pattern property, including a property that is not available in the <xref:System.Windows.Automation.AutomationElement.Cached%2A> or <xref:System.Windows.Automation.AutomationElement.Current%2A> structure, can be retrieved by using one of the following methods:  
+ Ayrıca, <xref:System.Windows.Automation.AutomationElement.Cached%2A> veya <xref:System.Windows.Automation.AutomationElement.Current%2A> yapısında kullanılamayan bir özellik dahil olmak üzere herhangi bir <xref:System.Windows.Automation.AutomationElement> veya denetim deseninin özelliği aşağıdaki yöntemlerden biri kullanılarak alınabilir:  
   
 - <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
 - <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>  
   
- These methods offer slightly better performance as well as access to the full range of properties.  
+ Bu yöntemler, özelliklerin tam aralığına erişimin yanı sıra biraz daha iyi performans sunar.  
   
- The following code example shows the two ways of retrieving a property on an <xref:System.Windows.Automation.AutomationElement>.  
+ Aşağıdaki kod örneği, <xref:System.Windows.Automation.AutomationElement>bir özelliği almanın iki yolunu gösterir.  
   
  [!code-csharp[UIAClient_snip#121](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#121)]
  [!code-vb[UIAClient_snip#121](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#121)]  
   
- To retrieve properties of control patterns supported by the <xref:System.Windows.Automation.AutomationElement>, you do not need to retrieve the control pattern object. Simply pass one of the pattern property identifiers to the method.  
+ <xref:System.Windows.Automation.AutomationElement>tarafından desteklenen denetim desenlerinin özelliklerini almak için denetim deseni nesnesini almanız gerekmez. Yalnızca bir model özelliği tanımlayıcılarından birini yönteme geçirin.  
   
- The following code example shows the two ways of retrieving a property on a control pattern.  
+ Aşağıdaki kod örneği, bir denetim düzenine bir özelliği almanın iki yolunu gösterir.  
   
  [!code-csharp[UIAClient_snip#122](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#122)]
  [!code-vb[UIAClient_snip#122](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#122)]  
   
- The `Get` methods return an <xref:System.Object>. The application must cast the returned object to the proper type before using the value.  
+ `Get` yöntemleri bir <xref:System.Object>döndürür. Uygulamanın, değeri kullanmadan önce döndürülen nesneyi doğru türe ataması gerekir.  
   
-## <a name="default-property-values"></a>Default Property Values  
- If a UI Automation provider does not implement a property, the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] system is able to supply a default value. For example, if the provider for a control does not support the property identified by <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] returns an empty string. Similarly, if the provider does not support the property identified by <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] returns `false`.  
+## <a name="default-property-values"></a>Varsayılan özellik değerleri  
+ Bir UI Otomasyon sağlayıcısı bir özelliği uygulamadıysanız, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sistem varsayılan bir değer sağlayabilir. Örneğin, bir denetimin sağlayıcısı <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>tarafından tanımlanan özelliği desteklemiyorsa, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] boş bir dize döndürür. Benzer şekilde, sağlayıcı <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>tarafından tanımlanan özelliği desteklemiyorsa, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] `false`döndürür.  
   
- You can change this behavior by using the <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> and <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> method overloads. When you specify `true` as the second parameter, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] does not return a default value, but instead returns the special value <xref:System.Windows.Automation.AutomationElement.NotSupported>.  
+ <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> ve <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> yöntemi aşırı yüklerini kullanarak bu davranışı değiştirebilirsiniz. İkinci parametre olarak `true` belirttiğinizde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] varsayılan bir değer döndürmez, bunun yerine <xref:System.Windows.Automation.AutomationElement.NotSupported>özel değeri döndürür.  
   
- The following example code attempts to retrieve a property from an element, and if the property is not supported, an application-defined value is used instead.  
+ Aşağıdaki örnek kod bir öğesinden bir özelliği almaya çalışır ve özellik desteklenmiyorsa, bunun yerine uygulama tanımlı bir değer kullanılır.  
   
  [!code-csharp[UIAClient_snip#123](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#123)]
  [!code-vb[UIAClient_snip#123](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#123)]  
   
- To discover what properties are supported by an element, use <xref:System.Windows.Automation.AutomationElement.GetSupportedProperties%2A>. This returns an array of <xref:System.Windows.Automation.AutomationProperty> identifiers.  
+ Bir öğe tarafından desteklenen özellikleri saptamak için <xref:System.Windows.Automation.AutomationElement.GetSupportedProperties%2A>kullanın. Bu, <xref:System.Windows.Automation.AutomationProperty> tanımlayıcılarından oluşan bir dizi döndürür.  
   
-## <a name="property-changed-events"></a>Property-changed Events  
- When a property value on an <xref:System.Windows.Automation.AutomationElement> or control pattern changes, an event is raised. An application can subscribe to such events by calling <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>, supplying an array of <xref:System.Windows.Automation.AutomationProperty> identifiers as the last parameter in order to specify the properties of interest.  
+## <a name="property-changed-events"></a>Özellik değiştirme olayları  
+ Bir <xref:System.Windows.Automation.AutomationElement> veya denetim düzenindeki bir özellik değeri değiştiğinde bir olay tetiklenir. Bir uygulama, <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>çağırarak söz konusu olaylara abone olabilir ve ilgilendiğiniz özellikleri belirtmek için son parametre olarak bir dizi <xref:System.Windows.Automation.AutomationProperty> tanımlayıcısı sağlayabilir.  
   
- In the <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>, you can identify the property that has changed by checking the <xref:System.Windows.Automation.AutomationPropertyChangedEventArgs.Property%2A> member of the event arguments. The arguments also contain the old and new values of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property that has changed. These values are of type <xref:System.Object> and must be cast to the correct type before being used.  
+ <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>, olay bağımsız değişkenlerinin <xref:System.Windows.Automation.AutomationPropertyChangedEventArgs.Property%2A> üyesini denetleyerek değiştirilen özelliği belirleyebilirsiniz. Bağımsız değişkenler, değişen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliğinin eski ve yeni değerlerini de içerir. Bu değerler <xref:System.Object> türündedir ve kullanılmadan önce doğru türe yayınlanmalıdır.  
   
-## <a name="additional-automationelement-properties"></a>Additional AutomationElement Properties  
- In addition to the <xref:System.Windows.Automation.AutomationElement.Current%2A> and <xref:System.Windows.Automation.AutomationElement.Cached%2A> property structures, <xref:System.Windows.Automation.AutomationElement> has the following properties, which are retrieved through simple property accessors.  
+## <a name="additional-automationelement-properties"></a>Ek AutomationElement özellikleri  
+ <xref:System.Windows.Automation.AutomationElement.Current%2A> ve <xref:System.Windows.Automation.AutomationElement.Cached%2A> Özellik yapılarına ek olarak, <xref:System.Windows.Automation.AutomationElement> basit özellik erişimcileri aracılığıyla alınan aşağıdaki özelliklere sahiptir.  
   
 |Özellik|Açıklama|  
 |--------------|-----------------|  
-|<xref:System.Windows.Automation.AutomationElement.CachedChildren%2A>|A collection of child <xref:System.Windows.Automation.AutomationElement> objects that are in the cache.|  
-|<xref:System.Windows.Automation.AutomationElement.CachedParent%2A>|An <xref:System.Windows.Automation.AutomationElement> parent object that is in the cache.|  
-|<xref:System.Windows.Automation.AutomationElement.FocusedElement%2A>|(Static property) The <xref:System.Windows.Automation.AutomationElement> that has the input focus.|  
-|<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|(Static property) The root <xref:System.Windows.Automation.AutomationElement>.|  
+|<xref:System.Windows.Automation.AutomationElement.CachedChildren%2A>|Önbellekte olan bir alt <xref:System.Windows.Automation.AutomationElement> nesneleri koleksiyonu.|  
+|<xref:System.Windows.Automation.AutomationElement.CachedParent%2A>|Önbellekte olan bir <xref:System.Windows.Automation.AutomationElement> üst nesnesi.|  
+|<xref:System.Windows.Automation.AutomationElement.FocusedElement%2A>|(Statik özellik) Giriş odaklı <xref:System.Windows.Automation.AutomationElement>.|  
+|<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|(Statik özellik) Kök <xref:System.Windows.Automation.AutomationElement>.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

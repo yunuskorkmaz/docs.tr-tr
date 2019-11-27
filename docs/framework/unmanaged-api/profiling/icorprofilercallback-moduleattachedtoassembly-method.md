@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448077"
 ---
 # <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a>ICorProfilerCallback::ModuleAttachedToAssembly Yöntemi
-Notifies the profiler that a module is being attached to its parent assembly.  
+Profil oluşturucuyu bir modülün üst derlemesine iliştirilmekte olduğunu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,22 +35,22 @@ HRESULT ModuleAttachedToAssembly(
   
 ## <a name="parameters"></a>Parametreler  
  `moduleId`  
- [in] The ID of the module that is being attached.  
+ 'ndaki İliştirilmekte olan modülün KIMLIĞI.  
   
  `AssemblyId`  
- [in] The ID of the parent assembly to which the module is attached.  
+ 'ndaki Modülün eklendiği üst derlemenin KIMLIĞI.  
   
 ## <a name="remarks"></a>Açıklamalar  
- A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference. As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives. Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible. The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.  
+ Bir modül bir içeri aktarma adres tablosu (ıAT) aracılığıyla, `LoadLibrary`çağrısıyla veya meta veri başvurusu aracılığıyla yüklenebilir. Sonuç olarak, ortak dil çalışma zamanı (CLR) yükleyicisinin, bir modülün yaşadığı derlemeyi belirlemek için birden çok kod yolu vardır. Bu nedenle, [ICorProfilerCallback:: ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) çağrıldıktan sonra, modül içinde bulunduğu derlemeyi bilmez ve üst derleme kimliğini elde etmek mümkün değildir. `ModuleAttachedToAssembly` yöntemi, modül üst derlemesine iliştirildiği zaman çağrılır ve üst derleme KIMLIĞI elde edilebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

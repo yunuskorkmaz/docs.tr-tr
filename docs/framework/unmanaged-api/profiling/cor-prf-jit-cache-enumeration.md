@@ -22,10 +22,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447347"
 ---
 # <a name="cor_prf_jit_cache-enumeration"></a>COR_PRF_JIT_CACHE Numaralandırması
-Indicates the result of a cached function search.  
+Önbelleğe alınmış işlev aramasının sonucunu gösterir.  
   
 > [!NOTE]
-> `COR_PRF_CACHED_FUNCTION_FOUND` has a value of zero, so `COR_PRF_JIT_CACHE` cannot be used as a Boolean surrogate.  
+> `COR_PRF_CACHED_FUNCTION_FOUND` sıfır değerine sahiptir, bu nedenle `COR_PRF_JIT_CACHE` Boole yedeği olarak kullanılamaz.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,21 +36,21 @@ typedef enum {
 } COR_PRF_JIT_CACHE;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|The search found the function.|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|The search did not find the function.|  
+|`COR_PRF_FUNCTION_FOUND`|Arama işlevi buldu.|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|Arama işlevi bulamadı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

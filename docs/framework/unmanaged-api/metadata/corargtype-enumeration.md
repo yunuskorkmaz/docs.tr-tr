@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444369"
 ---
 # <a name="corargtype-enumeration"></a>CorArgType Numaralandırması
-Contains values that describe the native type of a runtime handle.  
+Çalışma zamanı tanıtıcısının yerel türünü tanımlayan değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,11 +45,11 @@ typedef enum CorArgType {
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

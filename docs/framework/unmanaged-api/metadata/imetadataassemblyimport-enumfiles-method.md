@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443550"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>IMetaDataAssemblyImport::EnumFiles Yöntemi
-Enumerates the files referenced in the current assembly manifest.  
+Geçerli derleme bildiriminde başvurulan dosyaları numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,32 +38,32 @@ HRESULT EnumFiles (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value for the first call of this method.  
+ [in, out] Numaralandırıcı için bir işaretçi. Bu yöntemin ilk çağrısı için bu bir null değer olmalıdır.  
   
  `rFiles`  
- [out] The array used to store the `mdFile` metadata tokens.  
+ dışı `mdFile` meta veri belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- [in] The maximum number of `mdFile` tokens that can be placed in `rFiles`.  
+ 'ndaki `rFiles`yerleştirilebilecek en fazla `mdFile` belirteci sayısı.  
   
  `pcTokens`  
- [out] The number of `mdFile` tokens actually placed in `rFiles`.  
+ dışı Gerçekte `rFiles`yer `mdFile` belirteçlerin sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumFiles` başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda `pcTokens` sıfır olarak ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

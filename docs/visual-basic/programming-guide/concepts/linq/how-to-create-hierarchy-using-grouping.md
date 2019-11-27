@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create Hierarchy Using Grouping'
+title: 'Nasıl yapılır: gruplandırma kullanarak hiyerarşi oluşturma'
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
 ms.openlocfilehash: 3fea3e008e0bb18ae92f8883d08be4f27929b9fd
@@ -9,13 +9,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341590"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>How to: Create Hierarchy Using Grouping (Visual Basic)
-This example shows how to group data, and then generate XML based on the grouping.  
+# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>Nasıl yapılır: gruplandırma kullanarak hiyerarşi oluşturma (Visual Basic)
+Bu örnek, verilerin nasıl gruplanıp gruplandırılmasının yanı sıra gruplandırma temelli XML oluşturmayı gösterir.  
   
 ## <a name="example"></a>Örnek  
- This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.  
+ Bu örnek öncelikle verileri bir kategoriye göre gruplandırır, ardından XML hiyerarşisinin gruplamayı yansıtan yeni bir XML dosyası oluşturur.  
   
- This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: sayısal veri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim doc As XElement = XElement.Load("Data.xml")  
@@ -40,7 +40,7 @@ Dim newData As XElement = _
 Console.WriteLine(newData)  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  
@@ -81,4 +81,4 @@ Console.WriteLine(newData)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Gelişmiş sorgu teknikleri (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

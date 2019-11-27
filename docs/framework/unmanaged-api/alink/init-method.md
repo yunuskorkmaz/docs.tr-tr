@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445646"
 ---
 # <a name="init-method"></a>Init Yöntemi
-Prepares objects implementing the [IALink Interface](ialink-interface.md) for use.  
+Kullanım için [IALink arabirimini](ialink-interface.md) uygulayan nesneleri hazırlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,16 +35,16 @@ HRESULT Init(
   
 ## <a name="parameters"></a>Parametreler  
  `pDispenser`  
- [IMetaDataDispenserEx Interface](../metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.  
+ Meta veri dağıtıcısının [ımetadatadağıtıserex arabirimi](../metadata/imetadatadispenserex-interface.md) işaretçisi.  
   
  `pErrorHandler`  
- [IMetaDataError Interface](../metadata/imetadataerror-interface.md) pointer to an optional error handling interface.  
+ [IMetaDataError arabirimi](../metadata/imetadataerror-interface.md) işaretçisi isteğe bağlı bir hata işleme arabirimine.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435834"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a>ICorProfilerCallback::ExceptionCLRCatcherFound Yöntemi
-Called when a `catch` block for an exception is found inside the common language runtime (CLR) itself. This method is obsolete in the .NET Framework version 2.0.  
+Ortak dil çalışma zamanı (CLR) içinde bir özel durum `catch` bloğu bulunduğunda çağırılır. Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,13 +32,13 @@ HRESULT ExceptionCLRCatcherFound();
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Version:** 1.0  
+ **.NET Framework sürümü:** 1,0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

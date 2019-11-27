@@ -1,5 +1,5 @@
 ---
-title: Geçersiz Kılınabilir
+title: Overridable
 ms.date: 07/20/2015
 f1_keywords:
 - Overridable
@@ -24,28 +24,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351396"
 ---
 # <a name="overridable-visual-basic"></a>Geçersiz Kılınabilir (Visual Basic)
-Specifies that a property or procedure can be overridden by an identically named property or procedure in a derived class.  
+Bir özellik veya yordamın, türetilmiş bir sınıftaki aynı adlı bir özellik veya yordam tarafından geçersiz kılınabileceğini belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `Overridable` modifier allows a property or method in a class to be overridden in a derived class. The [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) modifier prevents a property or method from being overridden in a derived class.  For more information, see [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+ `Overridable` değiştiricisi, bir sınıftaki özelliğin veya yöntemin türetilmiş bir sınıfta geçersiz kılınmasına izin verir. [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) değiştiricisi bir özelliğin veya yöntemin türetilmiş bir sınıfta geçersiz kılınmasını önler.  Daha fazla bilgi için bkz. [Devralma Temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method. If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.  
+ `Overridable` veya `NotOverridable` değiştiricisi belirtilmemişse, varsayılan ayar, özelliğin veya metodun bir temel sınıf özelliğini veya yöntemini geçersiz kıldığına bağlıdır. Özellik veya yöntem bir temel sınıf özelliğini veya yöntemini geçersiz kılıyorsa, varsayılan ayar `Overridable`; Aksi takdirde, `NotOverridable`.  
   
- You can shadow or override to redefine an inherited element, but there are significant differences between the two approaches. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Devralınan bir öğeyi yeniden tanımlamak için gölge veya geçersiz kılabilirsiniz, ancak iki yaklaşım arasında önemli farklılıklar vardır. Daha fazla bilgi için [Visual Basic 'Da gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)bölümüne bakın.  
   
- An element that can be overridden is sometimes referred to as a *virtual* element. If it can be overridden, but does not have to be, it is sometimes also called a *concrete* element.  
+ Geçersiz kılınabilen bir öğe bazen *sanal* öğe olarak adlandırılır. Geçersiz kılınırsa, ancak olması gerekmez, bazen *somut* öğe olarak da adlandırılır.  
   
- You can use `Overridable` only in a property or procedure declaration statement.  
+ Yalnızca bir özellik veya yordam bildirimi ifadesinde `Overridable` kullanabilirsiniz.  
   
-## <a name="combined-modifiers"></a>Combined Modifiers  
- You cannot specify `Overridable` or `NotOverridable` for a `Private` method.  
+## <a name="combined-modifiers"></a>Birleşik değiştiriciler  
+ `Private` yöntemi için `Overridable` veya `NotOverridable` belirtemezsiniz.  
   
- You cannot specify `Overridable` together with `MustOverride`, `NotOverridable`, or `Shared` in the same declaration.  
+ Aynı bildirimde `MustOverride`, `NotOverridable`veya `Shared` birlikte `Overridable` belirtemezsiniz.  
   
- Because an overriding element is implicitly overridable, you cannot combine `Overridable` with `Overrides`.  
+ Geçersiz kılan bir öğe örtük olarak geçersiz kılınabilir olduğundan, `Overrides``Overridable` birleştiremezsiniz.  
   
 ## <a name="usage"></a>Kullanım  
- The `Overridable` modifier can be used in these contexts:  
+ `Overridable` değiştiricisi şu bağlamlarda kullanılabilir:  
   
  [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
   
@@ -61,4 +61,4 @@ Specifies that a property or procedure can be overridden by an identically named
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

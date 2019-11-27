@@ -14,20 +14,20 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443292"
 ---
 # <a name="metadata-unmanaged-api-reference"></a>Meta Veri (Yönetilmeyen API Başvurusu)
-The metadata API enables a client, such as a compiler, to generate or access a component's metadata without the types being loaded by the common language runtime (CLR).  
+Meta veri API 'SI, derleyici gibi bir istemcinin, ortak dil çalışma zamanı (CLR) tarafından yüklenen türler olmadan bir bileşenin meta verilerini oluşturmasına veya erişmesine olanak sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
- Describes the unmanaged interfaces that provide access to the metadata exposed by the .NET Framework types, methods, fields, and so on.  
+ .NET Framework türler, Yöntemler, alanlar vb. tarafından sunulan meta verilere erişim sağlayan yönetilmeyen arabirimleri açıklar.  
   
  [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
- Describes the unmanaged global static functions that the metadata API uses.  
+ Meta veri API 'sinin kullandığı yönetilmeyen genel statik işlevleri açıklar.  
   
  [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
- Describes the unmanaged enumerations that the metadata API uses.  
+ Meta veri API 'sinin kullandığı yönetilmeyen numaralandırmaları açıklar.  
   
  [Meta Veri Yapıları](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
- Describes the unmanaged structures that the metadata API uses.  
+ Meta veri API 'sinin kullandığı yönetilmeyen yapıları açıklar.  
   
  [Meta Veri Birleşimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)  
- Describes the unmanaged unions that the metadata API uses.
+ Meta veri API 'sinin kullandığı yönetilmeyen birleşimleri açıklar.

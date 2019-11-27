@@ -19,75 +19,75 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204982"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-Görünüm-Görünüm Model ile Taşınabilir Sınıf Kitaplığı Kullanma
-You can use the .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) to implement the Model-View-View Model (MVVM) pattern and share assemblies across multiple platforms.
+Model-görünüm-görünüm modeli (MVVM) modelini uygulamak ve derlemeleri birden çok platformda paylaşmak için .NET Framework [taşınabilir sınıf kitaplığını](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) kullanabilirsiniz.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
- MVVM is an application pattern that isolates the user interface from the underlying business logic. You can implement the model and view model classes in a Portable Class Library project in Visual Studio 2012, and then create views that are customized for different platforms. This approach enables you to write the data model and business logic only once, and use that code from .NET Framework, Silverlight, Windows Phone, and Windows 8.x Store apps, as shown in the following illustration.
+ MVVM, temeldeki iş mantığındaki Kullanıcı arabirimini yalıtan bir uygulama modelidir. Model ve model sınıflarını Visual Studio 2012 ' de taşınabilir bir sınıf kitaplığı projesinde uygulayabilir ve ardından farklı platformlar için özelleştirilmiş görünümler oluşturabilirsiniz. Bu yaklaşım, veri modeli ve iş mantığını yalnızca bir kez yazmanızı ve bu kodu aşağıdaki çizimde gösterildiği gibi .NET Framework, Silverlight, Windows Phone ve Windows 8. x mağaza uygulamalarından kullanmanızı sağlar.
 
- ![Shows the Portable Class Library with MVVM sharing assemblies across platforms.](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
+ ![Platformlar arasında MVVM Sharing derlemelerinin bulunduğu taşınabilir sınıf kitaplığını gösterir.](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
 
- This topic does not provide general information about the MVVM pattern. It only provides information about how to use Portable Class Library to implement MVVM. For more information about MVVM, see the [MVVM Quickstart Using the Prism Library 5.0 for WPF](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40)).
+ Bu konu, MVVM düzeniyle ilgili genel bilgileri sağlamaz. Yalnızca taşınabilir sınıf kitaplığının, MVVM uygulamak için nasıl kullanılacağına ilişkin bilgiler sağlar. MVVM hakkında daha fazla bilgi için bkz. [WPF Için Prronizm kitaplığı 5,0 kullanılarak MVVM hızlı](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))başlangıcı.
 
-## <a name="classes-that-support-mvvm"></a>Classes That Support MVVM
- When you target the .NET Framework 4.5, [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight, or Windows Phone 7.5 for your Portable Class Library project, the following classes are available for implementing the MVVM pattern:
+## <a name="classes-that-support-mvvm"></a>MVVM 'YI destekleyen sınıflar
+ Taşınabilir sınıf kitaplığı projeniz için .NET Framework 4,5, [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight veya Windows Phone 7,5 ' i hedeflediğinizde, MVVM deseninin uygulanması için aşağıdaki sınıflar mevcuttur:
 
-- <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> class
+- <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> sınıfı
 
-- <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> class
+- <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> sınıfı
 
-- <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> class
+- <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> sınıfı
 
-- <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> class
+- <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> sınıfı
 
-- <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> class
+- <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> sınıfı
 
-- <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> class
+- <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> sınıfı
 
-- <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> class
+- <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> sınıfı
 
-- <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> class
+- <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> sınıfı
 
-- <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> class
+- <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> sınıfı
 
-- <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> class
+- <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> sınıfı
 
-- All classes in the <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> namespace
+- <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> ad alanındaki tüm sınıflar
 
-## <a name="implementing-mvvm"></a>Implementing MVVM
- To implement MVVM, you typically create both the model and the view model in a Portable Class Library project, because a Portable Class Library project cannot reference a non-portable project. The model and view model can be in the same project or in separate projects. If you use separate projects, add a reference from the view model project to the model project.
+## <a name="implementing-mvvm"></a>MVVM uygulama
+ MVVM uygulamak için, taşınabilir bir sınıf kitaplığı projesi taşınabilir olmayan bir projeye başvuramadığı için genellikle bir taşınabilir sınıf kitaplığı projesinde hem model hem de görünüm modeli oluşturursunuz. Model ve görünüm modeli aynı projede veya ayrı projelerde olabilir. Ayrı projeler kullanıyorsanız, model projesine görünüm modeli projesinden bir başvuru ekleyin.
 
- After you compile the model and view model projects, you reference those assemblies in the app that contains the view. If the view interacts only with the view model, you only have to reference the assembly that contains the view model.
+ Modeli derleyip, model projelerini görüntülediğinizde, görünümü içeren uygulamadaki bu derlemelere başvurduktan sonra. Görünüm yalnızca görünüm modeliyle etkileşime geçtiğinde, yalnızca görünüm modelini içeren derlemeye başvurmanız gerekir.
 
 ### <a name="model"></a>Model
- The following example shows a simplified model class that could reside in a Portable Class Library project.
+ Aşağıdaki örnek, taşınabilir bir sınıf kitaplığı projesinde bulunabilecek basitleştirilmiş bir model sınıfını göstermektedir.
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
  [!code-vb[PortableClassLibraryMVVM#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customer.vb#1)]
 
- The following example shows a simple way to populate, retrieve, and update the data in a Portable Class Library project. In a real app, you would retrieve the data from a source such as a Windows Communication Foundation (WCF) service.
+ Aşağıdaki örnek, taşınabilir bir sınıf Kitaplığı projesindeki verileri doldurmak, almak ve güncelleştirmek için basit bir yol gösterir. Gerçek bir uygulamada, verileri Windows Communication Foundation (WCF) hizmeti gibi bir kaynaktan elde edersiniz.
 
  [!code-csharp[PortableClassLibraryMVVM#2](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customerrepository.cs#2)]
  [!code-vb[PortableClassLibraryMVVM#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerrepository.vb#2)]
 
-### <a name="view-model"></a>View Model
- A base class for view models is frequently added when implementing the MVVM pattern. The following example shows a base class.
+### <a name="view-model"></a>Modeli görüntüle
+ MVVM deseninin uygulanması sırasında görünüm modelleri için bir temel sınıf sıklıkla eklenir. Aşağıdaki örnekte bir temel sınıf gösterilmektedir.
 
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
  [!code-vb[PortableClassLibraryMVVM#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/viewmodelbase.vb#3)]
 
- An implementation of the <xref:System.Windows.Input.ICommand> interface is frequently used with the MVVM pattern. The following example shows an implementation of the <xref:System.Windows.Input.ICommand> interface.
+ <xref:System.Windows.Input.ICommand> arabiriminin uygulanması, genellikle MVVM düzeniyle birlikte kullanılır. Aşağıdaki örnek, <xref:System.Windows.Input.ICommand> arabiriminin bir uygulamasını gösterir.
 
  [!code-csharp[PortableClassLibraryMVVM#4](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/relaycommand.cs#4)]
  [!code-vb[PortableClassLibraryMVVM#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/relaycommand.vb#4)]
 
- The following example shows a simplified view model.
+ Aşağıdaki örnekte basitleştirilmiş bir görünüm modeli gösterilmektedir.
 
  [!code-csharp[PortableClassLibraryMVVM#5](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainpageviewmodel.cs#5)]
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
-### <a name="view"></a>Görüntüle  
- From a .NET Framework 4.5 app, Windows 8.x Store app, Silverlight-based app, or Windows Phone 7.5 app, you can reference the assembly that contains the model and view model projects.  You then create a view that interacts with the view model. The following example shows a simplified Windows Presentation Foundation (WPF) app that retrieves and updates data from the view model. You could create similar views in Silverlight, Windows Phone, or Windows 8.x Store apps.  
+### <a name="view"></a>Görünüm  
+ .NET Framework 4,5 uygulaması, Windows 8. x Mağazası uygulaması, Silverlight tabanlı uygulama veya Windows Phone 7,5 uygulaması, modeli içeren derlemeye başvurabilirsiniz ve model projelerini görüntüleyin.  Daha sonra Görünüm modeliyle etkileşim kuran bir görünüm oluşturursunuz. Aşağıdaki örnekte, görünüm modelinden verileri alan ve güncelleştiren bir Basitleştirilmiş Windows Presentation Foundation (WPF) uygulaması gösterilmektedir. Silverlight, Windows Phone veya Windows 8. x Mağaza uygulamalarında benzer görünümler oluşturabilirsiniz.  
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   

@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445331"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>ICorProfilerCallback::ExceptionThrown Yöntemi
-Notifies the profiler that an exception has been thrown.  
+Profiler öğesine bir özel durum gerçekleştiğini bildirir.  
   
 > [!NOTE]
-> This function is called only if the exception reaches managed code.  
+> Bu işlev yalnızca özel durum yönetilen koda ulaşırsa çağrılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,21 +37,21 @@ HRESULT ExceptionThrown(
   
 ## <a name="parameters"></a>Parametreler  
  `thrownObjectId`  
- [in] The ID of the object that caused the exception to be thrown.  
+ 'ndaki Özel duruma neden olan nesnenin KIMLIĞI.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ Yığın atık toplamaya izin veren bir durumda olmadığından profil oluşturucu bu yöntemin uygulamasında engellenmemelidir, bu nedenle preemptive çöp toplama etkinleştirilemez. Profil Oluşturucu burada ve çöp toplama denendiğinde, bu geri arama dönene kadar çalışma zamanı engellenir.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ Profil oluşturucunun bu yöntemin uygulanması yönetilen koda veya herhangi bir şekilde bir yönetilen bellek ayırmaya yol açmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

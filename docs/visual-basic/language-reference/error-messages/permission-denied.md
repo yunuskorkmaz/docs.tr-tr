@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346999"
 ---
 # <a name="permission-denied-visual-basic"></a>İzin reddedildi (Visual Basic)
-An attempt was made to write to a write-protected disk or to access a locked file.  
+Yazma korumalı bir diske yazma veya kilitli bir dosyaya erişme girişiminde bulunuldu.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. To open a write-protected file, change the write-protection attribute of the file.  
+1. Yazma korumalı bir dosya açmak için dosyanın yazma koruma özniteliğini değiştirin.  
   
-2. Make sure that another process has not locked the file, and wait to open the file until the other process releases it.  
+2. Başka bir işlemin dosyayı kilitlediği ve diğer işlem tarafından serbest bırakılana kadar dosyayı açmayı bekleyip beklemediğinden emin olun.  
   
-3. To access the registry, check that your user permissions include this type of registry access.  
+3. Kayıt defterine erişmek için, kullanıcı izinlerinizin bu tür bir kayıt defteri erişimi içermesini denetleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

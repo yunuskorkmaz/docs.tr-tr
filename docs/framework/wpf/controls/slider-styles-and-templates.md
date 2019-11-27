@@ -22,7 +22,7 @@ Bu konuda <xref:System.Windows.Controls.Slider> denetimine yönelik stiller ve �
 ## <a name="slider-parts"></a>Kaydırıcı bölümleri  
  Aşağıdaki tabloda <xref:System.Windows.Controls.Slider> denetimi için adlandırılmış bölümler listelenmektedir.  
   
-|Bölümüyle|Type|Açıklama|  
+|Bölümüyle|Tür|Açıklama|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|<xref:System.Windows.Controls.Slider>konumunu gösteren öğe için kapsayıcı.|  
 |PART_SelectionRange|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.Controls.Slider>üzerinde bir seçim aralığı görüntüleyen öğe.  Seçim aralığı yalnızca <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> özelliği `true`görünür.|  

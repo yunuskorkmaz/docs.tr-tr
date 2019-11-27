@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442814"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr Numaralandırması
-Contains values that describe the relationship between a method and an associated property or event.  
+Bir yöntem ile ilişkili bir özellik veya olay arasındaki ilişkiyi tanımlayan değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,23 +39,23 @@ typedef enum CorMethodSemanticsAttr {
 } CorMethodSemanticsAttr;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`msSetter`|Specifies that the method is a `set` accessor for a property.|  
-|`msGetter`|Specifies that the method is a `get` accessor for a property.|  
-|`msOther`|Specifies that the method has a relationship to a property or an event other than those defined here.|  
-|`msAddOn`|Specifies that the method adds handler methods for an event.|  
-|`msRemoveOn`|Specifies that the method removes handler methods for an event.|  
-|`msFire`|Specifies that the method raises an event.|  
+|`msSetter`|Metodun bir özellik için `set` erişimcisi olduğunu belirtir.|  
+|`msGetter`|Metodun bir özellik için `get` erişimcisi olduğunu belirtir.|  
+|`msOther`|Metodun bir özellik veya burada tanımlananlardan farklı bir olayla ilişkisi olduğunu belirtir.|  
+|`msAddOn`|Yöntemin bir olay için işleyici yöntemleri ekleyeceğini belirtir.|  
+|`msRemoveOn`|Metodun bir olay için işleyici yöntemlerini kaldırdığından emin olarak belirtir.|  
+|`msFire`|Yöntemin bir olay harekete geçirmediğini belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -16,24 +16,24 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447670"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Ortak Dil Çalışma Zamanında ETW Olayları
-The common language runtime (CLR) provides useful event tracing for Windows (ETW) diagnostic information through a large variety of debugging and profiling events. CLR ETW events leverage the Windows ETW tracing system to augment the existing profiling and debugging support provided by the common language runtime.  
+Ortak dil çalışma zamanı (CLR), çok çeşitli hata ayıklama ve profil oluşturma olayları aracılığıyla Windows için yararlı olay izleme (ETW) tanılama bilgileri sağlar. CLR ETW olayları, ortak dil çalışma zamanı tarafından sunulan mevcut profil oluşturma ve hata ayıklama desteğini artırmak için Windows ETW izleme sisteminden yararlanır.  
   
- More information about ETW is available in the [Improve Debugging and Performance Tuning with ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw) article. Information about Xperf can be found in the entry [Windows Performance Toolkit - Xperf](https://blogs.msdn.microsoft.com/ntdebugging/2008/04/03/windows-performance-toolkit-xperf/) in the NTDebugging blog.  
+ ETW hakkında daha fazla bilgi için, [ETW Ile hata ayıklamayı ve performansı ayarlamayı geliştirme](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw) makalesini bulabilirsiniz. XPerf hakkında daha fazla bilgi için, NTDebugging blogdaki [Windows performans araç seti-XPerf](https://blogs.msdn.microsoft.com/ntdebugging/2008/04/03/windows-performance-toolkit-xperf/) girdisinde bulabilirsiniz.  
   
- The .NET Framework 4 or later is required for all the events described in the event topics. The Windows Vista operating system is the minimum supported client, and Windows Server 2008 is the minimum supported server.  
+ .NET Framework 4 veya üzeri, olay konularında açıklanan tüm olaylar için gereklidir. Windows Vista işletim sistemi desteklenen en düşük istemcdir ve Windows Server 2008 desteklenen en düşük sunucu.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [.NET Framework Günlük Kaydını Denetleme](controlling-logging.md)  
- Describes the tools and commands for capturing and viewing ETW events.  
+ ETW olaylarını yakalamaya ve görüntülemeye yönelik araçları ve komutları açıklar.  
   
  [CLR ETW Sağlayıcılar](clr-etw-providers.md)  
- Provides information about the runtime and rundown providers, and how you can use them for ETW data collection.  
+ Çalışma zamanı ve Özet sağlayıcılar hakkında bilgi ve bunları ETW veri toplama için nasıl kullanabileceğinizi açıklar.  
   
  [CLR ETW Anahtar Sözcükleri ve Düzeyler](clr-etw-keywords-and-levels.md)  
- Describes the keywords for the Runtime and Rundown providers that enable the filtering of events by category.  
+ Olayların kategoriye göre filtrelenmesini sağlayan çalışma zamanı ve Özet sağlayıcılarının anahtar sözcüklerini açıklar.  
   
  [CLR ETW Olayları](clr-etw-events.md)  
- Provides detailed information about CLR ETW events, their keywords, levels, and event data.  
+ CLR ETW olayları, anahtar kelimeleri, düzeyleri ve olay verileri hakkında ayrıntılı bilgi sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

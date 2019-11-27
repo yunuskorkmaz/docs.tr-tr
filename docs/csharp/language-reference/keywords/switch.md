@@ -1,5 +1,5 @@
 ---
-title: C# switch statement
+title: C#Switch deyimleri
 ms.date: 04/09/2019
 f1_keywords:
 - switch_CSharpKeyword
@@ -19,47 +19,47 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428494"
 ---
-# <a name="switch-c-reference"></a>switch (C# reference)
+# <a name="switch-c-reference"></a>anahtar (C# başvuru)
 
-`switch` is a selection statement that chooses a single *switch section* to execute from a list of candidates based on a pattern match with the *match expression*.
+`switch`, *Match ifadesiyle*bir model eşleşmesi temelinde aday listesinden yürütülecek tek bir *anahtar bölümü* seçen bir seçim deyimidir.
 
 [!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
-The `switch` statement is often used as an alternative to an [if-else](if-else.md) construct if a single expression is tested against three or more conditions. For example, the following `switch` statement determines whether a variable of type `Color` has one of three values:
+Tek bir ifade üç veya daha fazla koşula göre test edildiğinde, `switch` deyimi genellikle [If-Else](if-else.md) yapısına alternatif olarak kullanılır. Örneğin, aşağıdaki `switch` ifade, `Color` türünde bir değişkenin üç değerden birine sahip olup olmadığını belirler:
 
 [!code-csharp[switch#3](~/samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
 
-It's equivalent to the following example that uses an `if`-`else` construct.
+Bir `if`-`else` yapısını kullanan aşağıdaki örneğe eşdeğerdir.
 
 [!code-csharp[switch#3a](~/samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
 
-## <a name="the-match-expression"></a>The match expression
+## <a name="the-match-expression"></a>Match ifadesi
 
-The match expression provides the value to match against the patterns in `case` labels. Its syntax is:
+Match ifadesi `case` etiketlerindeki desenlerle eşleşecek değeri sağlar. Sözdizimi şöyledir:
 
 ```csharp
    switch (expr)
 ```
 
-In C# 6 and earlier, the match expression must be an expression that returns a value of the following types:
+C# 6 ve önceki sürümlerde, Match ifadesi aşağıdaki türlerde bir değer döndüren bir ifade olmalıdır:
 
-- a [char](../builtin-types/char.md).
-- a [string](../builtin-types/reference-types.md).
-- a [bool](bool.md).
-- an [integral](../builtin-types/integral-numeric-types.md) value, such as an `int` or a `long`.
-- an [enum](enum.md) value.
+- bir [char](../builtin-types/char.md).
+- bir [dize](../builtin-types/reference-types.md).
+- bir [bool](bool.md).
+- `int` veya `long`gibi bir [integral](../builtin-types/integral-numeric-types.md) değeri.
+- bir [sabit listesi](enum.md) değeri.
 
-Starting with C# 7.0, the match expression can be any non-null expression.
+7,0 ile C# başlayarak, Match ifadesi null olmayan herhangi bir ifade olabilir.
 
-## <a name="the-switch-section"></a>The switch section
+## <a name="the-switch-section"></a>Anahtar bölümü
 
-A `switch` statement includes one or more switch sections. Each switch section contains one or more *case labels* (either a case or default label) followed by one or more statements. The `switch` statement may include at most one default label placed in any switch section. The following example shows a simple `switch` statement that has three switch sections, each containing two statements. The second switch section contains the `case 2:` and `case 3:` labels.
+`switch` bir ifade bir veya daha fazla anahtar bölümü içerir. Her anahtar bölümü bir veya daha fazla *durum etiketi* (bir Case veya default etiketi) ve ardından bir veya daha fazla deyimi içerir. `switch` deyiminiz, herhangi bir switch bölümüne yerleştirilmiş en çok bir varsayılan etiket içerebilir. Aşağıdaki örnek, her biri iki deyim içeren üç anahtar bölümü olan basit bir `switch` deyimini gösterir. İkinci anahtar bölümü `case 2:` ve `case 3:` etiketlerini içerir.
 
-A `switch` statement can include any number of switch sections, and each section can have one or more case labels, as shown in the following example. However, no two case labels may contain the same expression.
+`switch` bir ifade herhangi bir sayıda anahtar bölümü içerebilir ve aşağıdaki örnekte gösterildiği gibi her bölümde bir veya daha fazla Case etiketi olabilir. Ancak, iki durum etiketi de aynı ifadeyi içeremez.
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Only one switch section in a switch statement executes. C# doesn't allow execution to continue from one switch section to the next. Because of this, the following code generates a compiler error, CS0163: "Control cannot fall through from one case label (\<case label>) to another."
+Switch deyimindeki yalnızca bir switch bölümü yürütülür. C#yürütmenin bir geçiş bölümünden bir sonrakine devam etmesine izin vermez. Bu nedenle, aşağıdaki kod bir derleyici hatası oluşturuyor, CS0163: "Denetim bir case etiketinden (\<Case Label >) başka bir şekilde geçemez."
 
 ```csharp
 switch (caseSwitch)
@@ -74,132 +74,132 @@ switch (caseSwitch)
 }
 ```
 
-This requirement is usually met by explicitly exiting the switch section by using a [break](break.md), [goto](goto.md), or [return](return.md) statement. However, the following code is also valid, because it ensures that program control can't fall through to the `default` switch section.
+Bu gereksinim, genellikle bir [Break](break.md), [goto](goto.md)veya [Return](return.md) ifadesiyle Switch bölümünden açıkça çıkarken karşılanır. Ancak, program denetiminin `default` Switch bölümüne dönememesini sağladığından aşağıdaki kod da geçerlidir.
 
 [!code-csharp[switch#4](~/samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
 
-Execution of the statement list in the switch section with a case label that matches the match expression begins with the first statement and proceeds through the statement list, typically until a jump statement, such as a `break`, `goto case`, `goto label`, `return`, or `throw`, is reached. At that point, control is transferred outside the `switch` statement or to another case label. A `goto` statement, if it's used, must transfer control to a constant label. This restriction is necessary, since attempting to transfer control to a non-constant label can have undesirable side-effects, such transferring control to an unintended location in code or creating an endless loop.
+Eşleştirme ifadesiyle eşleşen bir Case etiketi ile Switch bölümündeki deyim listesinin yürütülmesi ilk deyimle başlar ve genellikle bir `break`, `goto case`, `goto label`, `return`veya `throw`gibi bir sıçrama deyimine ulaşılana kadar deyim listesini ilerler. Bu noktada denetim `switch` deyimin dışına veya başka bir Case etiketine aktarılır. `goto` bir deyimin kullanılması, denetimin bir sabit etikete aktarılmalıdır. Bu kısıtlama gereklidir, çünkü denetimi sabit olmayan bir etikete aktarmaya çalışmak, denetimi kodda istenmeyen bir konuma aktarmak veya sonsuz bir döngü oluşturmak gibi istenmeyen yan etkilere sahip olabilir.
 
-## <a name="case-labels"></a>Case labels
+## <a name="case-labels"></a>Case etiketleri
 
-Each case label specifies a pattern to compare to the match expression (the `caseSwitch` variable in the previous examples). If they match, control is transferred to the switch section that contains the **first** matching case label. If no case label pattern matches the match expression, control is transferred to the section with the `default` case label, if there's one. If there's no `default` case, no statements in any switch section are executed, and control is transferred outside the `switch` statement.
+Her Case etiketi, Match ifadesiyle Karşılaştırılacak bir model belirtir (önceki örneklerde `caseSwitch` değişkeni). Eşleşiyorsa denetim, **ilk** eşleşen Case etiketini içeren Switch bölümüne aktarılır. Hiçbir Case etiket deseninin eşleşme ifadesiyle eşleşmesi halinde, denetim varsa `default` Case etiketiyle birlikte bölümüne aktarılır. `default` bir durum yoksa, herhangi bir anahtar bölümünde hiçbir deyim yürütülmez ve denetim `switch` deyimi dışında aktarılır.
 
-For information on the `switch` statement and pattern matching, see the [Pattern matching with the `switch` statement](#pattern) section.
+`switch` deyimleri ve model eşleştirme hakkında daha fazla bilgi için, [`switch` deyimiyle eşleşen düzende eşleşme](#pattern) bölümüne bakın.
 
-Because C# 6 supports only the constant pattern and doesn't allow the repetition of constant values, case labels define mutually exclusive values, and only one pattern can match the match expression. As a result, the order in which `case` statements appear is unimportant.
+C# 6 yalnızca sabit bir stili desteklediğinden ve sabit değerlerin yinelenmesinde izin vermediğinden, Case etiketleri birbirini dışlayan değerleri tanımlar ve yalnızca bir desenler eşleştirme ifadesiyle eşleştirebilir. Sonuç olarak, `case` deyimlerinin göründüğü sıra önemli değildir.
 
-In C# 7.0, however, because other patterns are supported, case labels need not define mutually exclusive values, and multiple patterns can match the match expression. Because only the statements in the first switch section that contains the matching pattern are executed, the order in which `case` statements appear is now important. If C# detects a switch section whose case statement or statements are equivalent to or are subsets of previous statements, it generates a compiler error, CS8120, "The switch case has already been handled by a previous case."
+Ancak C# 7,0 ' de, diğer desenler desteklendiğinden, büyük/küçük harf etiketlerinin birbirini dışlayan değerler tanımlamamalıdır ve birden çok desen eşleştirme ifadesiyle eşleşemez. Yalnızca eşleşen düzeni içeren ilk anahtar bölümündeki deyimler yürütüldüğü için `case` deyimlerinin göründüğü sıra artık önemlidir. Case C# deyimi veya deyimleri önceki deyimlerin alt kümelerine eşit olan bir switch bölümü algılarsa, "switch case zaten önceki bir durum tarafından işlenmiştir." bir derleyici hatası oluşturur.
 
-The following example illustrates a `switch` statement that uses a variety of non-mutually exclusive patterns. If you move the `case 0:` switch section so that it's no longer the first section in the `switch` statement, C# generates a compiler error because an integer whose value is zero is a subset of all integers, which is the pattern defined by the `case int val` statement.
+Aşağıdaki örnek, birbirini dışlayan farklı desenler kullanan bir `switch` ifadesini gösterir. `case 0:` Switch bölümünü `switch` deyimindeki ilk bölüm olmayacak şekilde taşırsanız, C# değeri sıfır olan bir tamsayı, `case int val` ifadesiyle tanımlanan bir alt küme olan tüm tamsayıların bir alt kümesi olan bir derleyici hatası oluşturur.
 
 [!code-csharp[switch#5](~/samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
 
-You can correct this issue and eliminate the compiler warning in one of two ways:
+Bu sorunu düzeltebilir ve iki şekilde derleyici uyarısını ortadan kaldırabilirsiniz:
 
-- By changing the order of the switch sections.
+- Anahtar bölümlerinin sırasını değiştirerek.
 
-- By using a [when clause](#when) in the `case` label.
+- `case` etiketinde bir [WHERE yan tümcesi](#when) kullanarak.
 
-## <a name="the-default-case"></a>The `default` case
+## <a name="the-default-case"></a>`default` durumu
 
-The `default` case specifies the switch section to execute if the match expression doesn't match any other `case` label. If a `default` case is not present and the match expression doesn't match any other `case` label, program flow falls through the `switch` statement.
+`default` Case, Match ifadesi başka bir `case` etiketiyle eşleşmezse yürütülecek Switch bölümünü belirtir. `default` bir durum yoksa ve eşleştirme ifadesi başka bir `case` etiketiyle eşleşmezse, program akışı `switch` ifadesiyle geçer.
 
-The `default` case can appear in any order in the `switch` statement. Regardless of its order in the source code, it's always evaluated last, after all `case` labels have been evaluated.
+`default` durum, `switch` deyimindeki herhangi bir sırada görünebilir. Kaynak kodundaki sıralarından bağımsız olarak, tüm `case` etiketleri değerlendirildikten sonra her zaman son değerlendirilir.
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Pattern matching with the `switch` statement
+## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a>`switch` ifadesiyle <a name="pattern" /> desenli eşleme
 
-Each `case` statement defines a pattern that, if it matches the match expression, causes its  containing switch section to be executed. All versions of C# support the constant pattern. The remaining patterns are supported beginning with C# 7.0.
+Her `case` deyimi, eşleşme ifadesiyle eşleşiyorsa, kapsayan anahtar bölümünün yürütülmesine neden olan bir model tanımlar. Tüm sürümleri sabit C# düzende desteklenir. Kalan desenler C# 7,0 tarihinden itibaren desteklenmektedir.
 
-### <a name="constant-pattern"></a>Constant pattern
+### <a name="constant-pattern"></a>Sabit model
 
-The constant pattern tests whether the match expression equals a specified constant. Its syntax is:
+Sabit model, eşleşme ifadesinin belirtilen bir sabit değere eşit olup olmadığını sınar. Sözdizimi şöyledir:
 
 ```csharp
    case constant:
 ```
 
-where *constant* is the value to test for. *constant* can be any of the following constant expressions:
+Burada *Constant* , test edilecek değerdir. *sabit* , aşağıdaki sabit ifadelerden herhangi biri olabilir:
 
-- A [bool](bool.md) literal, either `true` or `false`.
-- Any [integral](../builtin-types/integral-numeric-types.md) constant, such as an `int`, a `long`, or a `byte`.
-- The name of a declared `const` variable.
-- An enumeration constant.
-- A [char](../builtin-types/char.md) literal.
-- A [string](../builtin-types/reference-types.md) literal.
+- `true` veya `false`[bool](bool.md) sabit değeri.
+- `int`, `long`veya `byte`gibi herhangi bir [integral](../builtin-types/integral-numeric-types.md) sabiti.
+- Belirtilen bir `const` değişkeninin adı.
+- Bir numaralandırma sabiti.
+- Bir [char](../builtin-types/char.md) sabit değeri.
+- [Dize](../builtin-types/reference-types.md) sabit değeri.
 
-The constant expression is evaluated as follows:
+Sabit ifade aşağıdaki gibi değerlendirilir:
 
-- If *expr* and *constant* are integral types, the C# equality operator determines whether the expression returns `true` (that is, whether `expr == constant`).
+- *Expr* ve *Constant* integral türse, C# eşitlik işleci ifadenin `true` (yani `expr == constant`) döndürüp döndürmeyeceğini belirler.
 
-- Otherwise, the value of the expression is determined by a call to the static [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) method.
+- Aksi takdirde, ifadenin değeri static [Object. Equals (Expr, Constant)](xref:System.Object.Equals(System.Object,System.Object)) yöntemi çağrısıyla belirlenir.
 
-The following example uses the constant pattern to determine whether a particular date is a weekend, the first day of the work week, the last day of the work week, or the middle of the work week. It evaluates the <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> property of the current day against the members of the <xref:System.DayOfWeek> enumeration.
+Aşağıdaki örnek, belirli bir tarihin hafta sonu, çalışma haftasının ilk günü mi, çalışma haftasının son günü mi yoksa çalışma haftasının ortasında mi olduğunu anlamak için sabit bir düzende kullanılır. Geçerli günün <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> özelliğini <xref:System.DayOfWeek> numaralandırmanın üyelerine göre değerlendirir.
 
 [!code-csharp[switch#7](~/samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
-The following example uses the constant pattern to handle user input in a console application that simulates an automatic coffee machine.
+Aşağıdaki örnek, bir otomatik kahve makinesine benzetim yapan bir konsol uygulamasında kullanıcı girişini işlemek için sabit bir model kullanır.
 
 [!code-csharp[switch#6](~/samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]
 
-### <a name="type-pattern"></a>Type pattern
+### <a name="type-pattern"></a>Tür stili
 
-The type pattern enables concise type evaluation and conversion. When used with the `switch` statement to perform pattern matching, it tests whether an expression can be converted to a specified type and, if it can be, casts it to a variable of that type. Its syntax is:
+Tür stili, kısa tür değerlendirmesi ve dönüştürmeyi mümkün bir şekilde sunar. Model eşleştirmeyi gerçekleştirmek için `switch` ifadesiyle birlikte kullanıldığında, bir ifadenin belirtilen bir türe dönüştürülüp dönüştürülmeyeceğini ve olup olmadığını test eder. Sözdizimi şöyledir:
 
 ```csharp
    case type varname
 ```
 
-where *type* is the name of the type to which the result of *expr* is to be converted, and *varname* is the object to which the result of *expr* is converted if the match succeeds. The compile-time type of *expr* may be a generic type parameter, starting with C# 7.1.
+Burada *tür* , *Expr* 'nin sonucunun dönüştürülecek türün adı ve *varname* , eşleşme başarılı olursa *ifadenin* sonucunun dönüştürüldüğü nesnedir. *İfadenin* derleme zamanı türü, 7,1 ile C# başlayan genel bir tür parametresi olabilir.
 
-The `case` expression is `true` if any of the following is true:
+Aşağıdakilerden biri doğruysa `case` ifadesi `true`:
 
-- *expr* is an instance of the same type as *type*.
+- *Expr* , *türü*ile aynı türde bir örneğidir.
 
-- *expr* is an instance of a type that derives from *type*. In other words, the result of *expr* can be upcast to an instance of *type*.
+- *Expr* *türünden*türetilen bir türün örneğidir. Diğer bir deyişle, *ifadenin* sonucu *türünde*bir örneğe eklenebilir.
 
-- *expr* has a compile-time type that is a base class of *type*, and *expr* has a runtime type that is *type* or is derived from *type*. The *compile-time type* of a variable is the variable's type as defined in its type declaration. The *runtime type* of a variable is the type of the instance that is assigned to that variable.
+- *ifadenin* *türünde bir*temel sınıf olan bir derleme zamanı türü vardır ve *Expr* *türü* *veya türünden türetilmiş*bir çalışma zamanı türü vardır. Bir değişkenin *derleme zamanı türü* , tür bildiriminde tanımlanan değişkenin türüdür. Bir değişkenin *çalışma zamanı türü* , bu değişkene atanan örneğin türüdür.
 
-- *expr* is an instance of a type that implements the *type* interface.
+- *Expr* , *tür* arabirimini uygulayan bir türün örneğidir.
 
-If the case expression is true, *varname* is definitely assigned and has local scope within the switch section only.
+Case ifadesi true ise, *varname* kesinlikle atanır ve yalnızca switch bölümü içinde yerel kapsama sahiptir.
 
-Note that `null` doesn't match a type. To match a `null`, you use the following `case` label:
+`null` bir türle eşleşmediğini unutmayın. Bir `null`eşleştirmek için aşağıdaki `case` etiketini kullanın:
 
 ```csharp
 case null:
 ```
 
-The following example uses the type pattern to provide information about various kinds of collection types.
+Aşağıdaki örnek, çeşitli türlerdeki koleksiyon türleri hakkında bilgi sağlamak için tür modelini kullanır.
 
 [!code-csharp[type-pattern#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
-Instead of `object`, you could make a generic method, using the type of the collection as the type parameter, as shown in the following code:
+`object`yerine, aşağıdaki kodda gösterildiği gibi koleksiyonun türünü tür parametresi olarak kullanarak genel bir yöntem yapabilirsiniz:
 
 [!code-csharp[type-pattern#3](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern3.cs#1)]
 
-The generic version is different than the first sample in two ways. First, you can't use the `null` case. You can't use any constant case because the compiler can't convert any arbitrary type `T` to any type other than `object`. What had been the `default` case now tests for a non-null `object`. That means the `default` case tests only for `null`.
+Genel sürüm, ilk örnekten iki şekilde farklıdır. İlk olarak `null` örneğini kullanamazsınız. Derleyici herhangi bir rastgele tür `T` `object`dışında herhangi bir türe dönüştüremediğinden herhangi bir sabit durumu kullanamazsınız. `default` durumu artık null olmayan bir `object`sınar. Diğer bir deyişle, `default` durum testleri yalnızca `null`için geçerlidir.
 
-Without pattern matching, this code might be written as follows. The use of type pattern matching produces more compact, readable code by eliminating the need to test whether the result of a conversion is a `null` or to perform repeated casts.
+Model eşleştirmesi olmadan bu kod aşağıdaki gibi yazılabilir. Tür deseninin kullanımı, bir dönüştürmenin sonucunun `null` olup olmadığını test etme veya yinelenen yayınlar gerçekleştirme gereksinimini ortadan kaldırarak daha kompakt, okunabilir kod üretir.
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> The `case` statement and the `when` clause
+## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a>`case` deyimi ve `when` yan tümcesini <a name="when" />
 
-Starting with C# 7.0, because case statements need not be mutually exclusive, you can add a `when` clause to specify an additional condition that must be satisfied for the case statement to evaluate to true. The `when` clause can be any expression that returns a Boolean value.
+7,0 ' C# den itibaren, Case deyimlerinin birbirini dışlanması gerektiğinden, Case ifadesinin true olarak değerlendirilmesi için karşılanması gereken ek bir koşul belirtmek üzere bir `when` yan tümcesi ekleyebilirsiniz. `when` yan tümcesi, Boolean değer döndüren herhangi bir ifade olabilir.
 
-The following example defines a base `Shape` class, a `Rectangle` class that derives from `Shape`, and a `Square` class that derives from `Rectangle`. It uses the `when` clause to ensure that the `ShowShapeInfo` treats a `Rectangle` object that has been assigned equal lengths and widths as a `Square` even if it hasn't been instantiated as a `Square` object. The method doesn't attempt to display information either about an object that is `null` or a shape whose area is zero.
+Aşağıdaki örnek, bir temel `Shape` sınıfını, `Shape`türetilen bir `Rectangle` sınıfını ve `Rectangle`türetilen bir `Square` sınıfını tanımlar. `ShowShapeInfo`, `Square` bir nesne olarak örneği oluşturulmasa bile, eşit uzunlukta ve genişliklerin `Square` olarak atanmış bir `Rectangle` nesnesine davrandığından emin olmak için `when` yan tümcesini kullanır. Yöntemi, `null` bir nesne veya alanı sıfır olan bir şekil hakkında bilgi görüntülemeyi denemez.
 
 [!code-csharp[when-clause#1](~/samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
 
-Note that the `when` clause in the example that attempts to test whether a `Shape` object is `null` doesn't execute. The correct type pattern to test for a `null` is `case null:`.
+Örnekteki bir `Shape` nesnesinin `null` yürütülüp yürütülmediğini test girişiminde bulunan `when` yan tümcesinin olduğunu unutmayın. `null` için test edilecek doğru tür deseninin `case null:`.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-For more information, see [The switch statement](~/_csharplang/spec/statements.md#the-switch-statement) in the [C# Language Specification](/dotnet/csharp/language-reference/language-specification/introduction). Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için, [ C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Switch ifadesine](~/_csharplang/spec/statements.md#the-switch-statement) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Reference](../index.md)
+- [C#Başvurunun](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [if-else](if-else.md)

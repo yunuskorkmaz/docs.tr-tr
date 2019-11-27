@@ -14,19 +14,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351731"
 ---
 # <a name="creating-xml-in-visual-basic"></a>Visual Basic'de XML Oluşturma
-Visual Basic enables you to use *XML literals* directly in your code. The XML literal syntax represents [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects, and it is similar to the XML 1.0 syntax. This makes it easier to create XML elements, documents, and fragments programmatically because your code has the same structure as the final XML.  
+Visual Basic, *XML sabit* değerlerini doğrudan kodunuzda kullanmanıza olanak sağlar. XML sabit sözdizimi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesneleri temsil eder ve XML 1,0 söz dizimine benzerdir. Bu, kodunuzun son XML ile aynı yapıya sahip olması nedeniyle, programlama yoluyla XML öğeleri, belgeler ve parçalar oluşturmayı kolaylaştırır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Terim|Tanım|  
 |---|---|  
-|[XML Değişmez Değerlerine Genel Bakış](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|Introduction to XML literals and how they relate to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[XML'de Katıştırılmış İfadeler](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|Describes how to use embedded expressions in XML literals.|  
-|[Nasıl yapılır: XML Değişmez Değerleri Oluşturma](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|Describes how to create an XML element in code by using an XML literal.|  
-|[XML Değişmez Değerlerinde Boşluk](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|Describes how Visual Basic treats white space in XML literals.|  
-|[XML Değişmez Değerleri ve XML 1.0 Belirtimi](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|Describes how the XML literal syntax in Visual Basic relates to the XML 1.0 specification.|  
-|[Nasıl yapılır: XML Değişmez Değerlerine İfade Katıştırma](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|Describes how to use embedded expressions in XML literals to create content at run time.|  
-|[Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|Describes guidelines for naming XML elements and attributes.|  
+|[XML Değişmez Değerlerine Genel Bakış](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|XML değişmez değerleri ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]birbirleriyle ilişkilerini giriş.|  
+|[XML'de Katıştırılmış İfadeler](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|XML değişmez değerlerinde gömülü ifadelerin nasıl kullanılacağını açıklar.|  
+|[Nasıl yapılır: XML Değişmez Değerleri Oluşturma](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|XML sabit değeri kullanılarak kodda bir XML öğesinin nasıl oluşturulduğunu açıklar.|  
+|[XML Değişmez Değerlerinde Boşluk](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|Visual Basic, XML değişmez değerlerinde boşluğu nasıl ele aldığını açıklar.|  
+|[XML Değişmez Değerleri ve XML 1.0 Belirtimi](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|Visual Basic XML değişmez sözdiziminin XML 1,0 belirtimiyle nasıl ilişkili olduğunu açıklar.|  
+|[Nasıl yapılır: XML Değişmez Değerlerine İfade Katıştırma](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|Çalışma zamanında içerik oluşturmak için katıştırılmış ifadelerin XML değişmez değerlerinde nasıl kullanılacağını açıklar.|  
+|[Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|XML öğelerini ve özniteliklerini adlandırmaya yönelik yönergeleri açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

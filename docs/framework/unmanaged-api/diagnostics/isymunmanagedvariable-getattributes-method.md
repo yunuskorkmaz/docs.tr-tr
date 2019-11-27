@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446079"
 ---
 # <a name="isymunmanagedvariablegetattributes-method"></a>ISymUnmanagedVariable::GetAttributes Yöntemi
-Gets the attribute flags for this variable.  
+Bu değişken için öznitelik bayraklarını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,13 +34,13 @@ HRESULT GetAttributes(
   
 ## <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the attributes. The returned value will be one of the values defined in the [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) enumeration.  
+ dışı Öznitelikleri alan `ULONG32` için bir işaretçi. Döndürülen değer [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) numaralandırmasında tanımlanan değerlerden biri olacaktır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

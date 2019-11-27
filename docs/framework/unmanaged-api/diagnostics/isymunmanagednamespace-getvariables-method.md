@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448365"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables Metodu
-Returns all variables defined at global scope within this namespace.  
+Bu ad alanı içinde genel kapsamda tanımlanan tüm değişkenleri döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>Parametreler  
  `cVars`  
- [in] A `ULONG32` that indicates the size of the `pVars` array.  
+ 'ndaki `pVars` dizisinin boyutunu belirten `ULONG32`.  
   
  `pcVars`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.  
+ dışı Ad alanlarını içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.  
   
  `pVars`  
- [out] A pointer to a buffer that contains the namespaces.  
+ dışı Ad alanlarını içeren bir arabelleğin işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

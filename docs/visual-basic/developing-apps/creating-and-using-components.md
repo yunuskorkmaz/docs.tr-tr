@@ -13,59 +13,59 @@ ms.locfileid: "74330292"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic'te Bileşenler Oluşturma ve Kullanma
 
-A *component* is a class that implements the <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> interface or that derives directly or indirectly from a class that implements <xref:System.ComponentModel.IComponent>. A .NET Framework component is an object that is reusable, can interact with other objects, and provides control over external resources and design-time support.  
+*Bileşen* <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> arabirimini uygulayan veya <xref:System.ComponentModel.IComponent>uygulayan bir sınıftan doğrudan veya dolaylı olarak türetilen bir sınıftır. .NET Framework bileşen yeniden kullanılabilir olan, diğer nesnelerle etkileşime girebilen ve dış kaynaklar ve tasarım zamanı desteği üzerinde denetim sağlayan bir nesnedir.  
   
- An important feature of components is that they are designable, which means that a class that is a component can be used in the Visual Studio Integrated Development Environment. A component can be added to the Toolbox, dragged and dropped onto a form, and manipulated on a design surface. Notice that base design-time support for components is built into the .NET Framework; a component developer does not have to do any additional work to take advantage of the base design-time functionality.  
+ Bileşenlerin önemli bir özelliği, bir bileşen olan bir sınıfın Visual Studio tümleşik geliştirme ortamında kullanılabileceği anlamına gelir. Araç kutusuna bir bileşen eklenebilir, sürüklenip bir forma bırakılabilir ve tasarım yüzeyinde değiştirilebilir. Bileşenler için temel tasarım zamanı desteğinin .NET Framework yerleşik olduğuna dikkat edin; bir bileşen geliştiricisi, temel tasarım zamanı işlevlerinin avantajlarından yararlanmak için ek bir iş yapmak zorunda değildir.  
   
- A *control* is similar to a component, as both are designable. However, a control provides a user interface, while a component does not. A control must derive from one of the base control classes: <xref:System.Windows.Forms.Control> or <xref:System.Web.UI.Control>.  
+ Bir *Denetim* , bir bileşene benzer, her ikisi de göstergeler olur. Ancak, bir denetim bir kullanıcı arabirimi sağlar, ancak bir bileşen desteklemez. Bir denetim, temel denetim sınıflarından birini türetmelidir: <xref:System.Windows.Forms.Control> veya <xref:System.Web.UI.Control>.  
   
-## <a name="when-to-create-a-component"></a>When to Create a Component  
+## <a name="when-to-create-a-component"></a>Bileşen ne zaman oluşturulur  
 
- If your class will be used on a design surface (such as the Windows Forms or Web Forms Designer) but has no user interface, it should be a component and implement <xref:System.ComponentModel.IComponent>, or derive from a class that directly or indirectly implements <xref:System.ComponentModel.IComponent>.  
+ Sınıfınız bir tasarım yüzeyinde (Windows Forms veya Web Forms Tasarımcısı gibi) kullanılacaksa ancak kullanıcı arabirimine sahip değilse, bir bileşen olmalı ve <xref:System.ComponentModel.IComponent>uygulamalıdır ya da doğrudan veya dolaylı olarak <xref:System.ComponentModel.IComponent>uygulayan bir sınıftan türetirsiniz.  
   
- The <xref:System.ComponentModel.Component> and <xref:System.ComponentModel.MarshalByValueComponent> classes are base implementations of the <xref:System.ComponentModel.IComponent> interface. The main difference between these classes is that the <xref:System.ComponentModel.Component> class is marshaled by reference, while <xref:System.ComponentModel.IComponent> is marshaled by value. The following list provides broad guidelines for implementers.  
+ <xref:System.ComponentModel.Component> ve <xref:System.ComponentModel.MarshalByValueComponent> sınıfları <xref:System.ComponentModel.IComponent> arabiriminin temel uygulamalarıdır. Bu sınıflar arasındaki temel fark, <xref:System.ComponentModel.Component> sınıfının başvuruya göre sıralanmasına karşın <xref:System.ComponentModel.IComponent> değere göre sıralanır. Aşağıdaki liste, ımplemenonun için kapsamlı yönergeler sağlar.  
   
-- If your component needs to be marshaled by reference, derive from <xref:System.ComponentModel.Component>.  
+- Bileşeninizin başvuruya göre sıralanması gerekiyorsa <xref:System.ComponentModel.Component>türetirsiniz.  
   
-- If your component needs to be marshaled by value, derive from <xref:System.ComponentModel.MarshalByValueComponent>.  
+- Bileşeninizin değere göre sıralanması gerekiyorsa <xref:System.ComponentModel.MarshalByValueComponent>türetirsiniz.  
   
-- If your component cannot derive from one of the base implementations due to single inheritance, implement <xref:System.ComponentModel.IComponent>.  
+- Tek devralma nedeniyle bileşeniniz temel uygulamalardan birinden türetilemiyor <xref:System.ComponentModel.IComponent>uygulayın.  
   
 ## <a name="component-classes"></a>Bileşen Sınıfları  
 
- The <xref:System.ComponentModel> namespace provides classes that are used to implement the run-time and design-time behavior of components and controls. This namespace includes the base classes and interfaces for implementing attributes and type converters, binding to data sources, and licensing components.  
+ <xref:System.ComponentModel> ad alanı, bileşenlerin ve denetimlerin çalışma zamanı ve tasarım zamanı davranışını uygulamak için kullanılan sınıfları sağlar. Bu ad alanı, öznitelik ve tür dönüştürücülerini uygulamaya yönelik temel sınıfları ve arabirimleri, veri kaynaklarına bağlamayı ve Lisans bileşenlerini içerir.  
   
- The core component classes are:  
+ Çekirdek bileşen sınıfları şunlardır:  
   
-- <xref:System.ComponentModel.Component>. A base implementation for the <xref:System.ComponentModel.IComponent> interface. This class enables object sharing between applications.  
+- <xref:System.ComponentModel.Component>. <xref:System.ComponentModel.IComponent> arabirimi için temel uygulama. Bu sınıf, uygulamalar arasında nesne paylaşımına izin vermez.  
   
-- <xref:System.ComponentModel.MarshalByValueComponent>. A base implementation for the <xref:System.ComponentModel.IComponent> interface.  
+- <xref:System.ComponentModel.MarshalByValueComponent>. <xref:System.ComponentModel.IComponent> arabirimi için temel uygulama.  
   
-- <xref:System.ComponentModel.Container>. The base implementation for the <xref:System.ComponentModel.IContainer> interface. This class encapsulates zero or more components.  
+- <xref:System.ComponentModel.Container>. <xref:System.ComponentModel.IContainer> arabirimi için temel uygulama. Bu sınıf sıfır veya daha fazla bileşeni kapsüller.  
   
- Some of the classes used for component licensing are:  
+ Bileşen lisanslama için kullanılan sınıflardan bazıları şunlardır:  
   
-- <xref:System.ComponentModel.License>. The abstract base class for all licenses. A license is granted to a specific instance of a component.  
+- <xref:System.ComponentModel.License>. Tüm lisanslar için soyut temel sınıf. Bir bileşenin belirli bir örneğine bir lisans verilir.  
   
-- <xref:System.ComponentModel.LicenseManager>. Provides properties and methods to add a license to a component and to manage a <xref:System.ComponentModel.LicenseProvider>.  
+- <xref:System.ComponentModel.LicenseManager>. Bir bileşene lisans eklemek ve bir <xref:System.ComponentModel.LicenseProvider>yönetmek için özellikler ve yöntemler sağlar.  
   
-- <xref:System.ComponentModel.LicenseProvider>. The abstract base class for implementing a license provider.  
+- <xref:System.ComponentModel.LicenseProvider>. Bir lisans sağlayıcısını uygulamaya yönelik soyut temel sınıf.  
   
-- <xref:System.ComponentModel.LicenseProviderAttribute>. Specifies the <xref:System.ComponentModel.LicenseProvider> class to use with a class.  
+- <xref:System.ComponentModel.LicenseProviderAttribute>. Bir sınıfla kullanılacak <xref:System.ComponentModel.LicenseProvider> sınıfını belirtir.  
   
- Classes commonly used for describing and persisting components.  
+ Yaygın olarak bileşenleri tanımlamak ve sürdürmek için kullanılan sınıflar.  
   
-- <xref:System.ComponentModel.TypeDescriptor>. Provides information about the characteristics for a component, such as its attributes, properties, and events.  
+- <xref:System.ComponentModel.TypeDescriptor>. Bir bileşenin öznitelikleri, özellikleri ve olayları gibi özellikleri hakkında bilgi sağlar.  
   
-- <xref:System.ComponentModel.EventDescriptor>. Provides information about an event.  
+- <xref:System.ComponentModel.EventDescriptor>. Bir olay hakkında bilgi sağlar.  
   
-- <xref:System.ComponentModel.PropertyDescriptor>. Provides information about a property.  
+- <xref:System.ComponentModel.PropertyDescriptor>. Bir özellik hakkında bilgi sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 
  [Denetim ve Bileşen Yazmada Sorun Giderme](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
- Explains how to fix common problems.  
+ Yaygın sorunların nasıl düzeltileceğini açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [How to: Access Design-Time Support in Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [Nasıl yapılır: Windows Forms 'de tasarım zamanı desteğine erişme](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

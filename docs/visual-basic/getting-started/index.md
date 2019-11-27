@@ -1,5 +1,5 @@
 ---
-title: Kullanmaya başlayın
+title: başlarken
 ms.date: 09/10/2018
 helpviewer_keywords:
 - get started, Visual Basic
@@ -12,52 +12,52 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344824"
 ---
-# <a name="get-started-with-visual-basic"></a>Get started with Visual Basic
+# <a name="get-started-with-visual-basic"></a>Visual Basic kullanmaya başlama
 
-This section of the documentation helps you get started with Visual Basic application development.
+Belgelerinin bu bölümü Visual Basic uygulama geliştirmeye başlamanıza yardımcı olur.
 
-## <a name="get-started-with-visual-basic-and-net-core"></a>Get started with Visual Basic and .NET Core
+## <a name="get-started-with-visual-basic-and-net-core"></a>Visual Basic ve .NET Core ile çalışmaya başlama
 
-[Build a Visual Basic Hello World application with .NET Core in Visual Studio 2017](../../core/tutorials/vb-with-visual-studio.md)
+[Visual Studio 2017 ' de .NET Core ile Visual Basic Merhaba Dünya uygulaması derleme](../../core/tutorials/vb-with-visual-studio.md)
 
 [Visual Studio 2017’de Visual Basic ve .NET Core ile bir sınıf kitaplığı derleme](../../core/tutorials/vb-library-with-visual-studio.md)
 
 ## <a name="additional-information"></a>Ek bilgiler
 
-- [What's new for Visual Basic](whats-new.md)\
-Lists new features in each of the versions of Visual Basic .NET.
+- [Visual Basic](whats-new.md) yenilikler\
+Visual Basic .NET sürümlerindeki yeni özellikleri listeler.
 
-- [Visual Basic Breaking Changes in Visual Studio](breaking-changes-in-visual-studio.md)\
-Lists changes in this release that might prevent an application from compiling or change its run-time behavior.
+- [Visual Studio 'da Visual Basic son değişiklikler](breaking-changes-in-visual-studio.md)\
+Bu sürümdeki değişiklikleri, bir uygulamanın derlenmesini veya çalışma zamanı davranışını değiştirmesini engelleyebilen listeler.
 
-- [Additional Resources for Visual Basic Programmers](additional-resources.md)\
+- [Visual Basic programcıları Için ek kaynaklar](additional-resources.md)\
 Sık karşılaşılan sorunların yanıtlarını bulmanıza yardımcı olabilecek Web sitelerinin ve haber gruplarının bir listesini sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Get Visual Basic](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)  
-Provides download links for Visual Studio versions that include Visual Basic support, including free versions.
+- [Visual Basic al](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)  
+Ücretsiz sürümler dahil olmak üzere Visual Basic desteğini içeren Visual Studio sürümleri için indirme bağlantıları sağlar.
 
-- [Object-Oriented Programming](../programming-guide/concepts/object-oriented-programming.md)\
+- [Nesne odaklı programlama](../programming-guide/concepts/object-oriented-programming.md)\
 Nesne yönelimli programlamaya giriş konularını veren, kendi nesnelerinizi nasıl oluşturacağınızı ve kodlamanızı basitleştirmek için nesneleri nasıl kullanacağınızı açıklayan sayfaların bağlantılarını sağlar.
 
-- [Samples](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)\
-Provides links to sample code in Visual Basic.
+- [Örnek](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)\
+Visual Basic 'de örnek koda bağlantılar sağlar.
 
-- [Walkthroughs](../../visual-basic/walkthroughs.md)\
-Provides a list of Help pages that demonstrate aspects of the Visual Basic language.
+- [Izlenecek yollar](../../visual-basic/walkthroughs.md)\
+Visual Basic dilinin yönlerini gösteren yardım sayfalarının bir listesini sağlar.
 
-- [Feedback options for Visual Studio](/visualstudio/ide/feedback-options)\
+- [Visual Studio\ Için geri bildirim seçenekleri](/visualstudio/ide/feedback-options)
 Destek alma ve geri bildirimde bulunma konularını ele alır.
 
 - [Visual Studio](/visualstudio/)\
-Provides links into the Visual Studio documentation.
+Visual Studio belgelerine bağlantılar sağlar.
 
 - [C#](../../csharp/index.yml)\
-Provides links into the documentation on application development with Visual C#.
+Visual C#ile uygulama geliştirme hakkında belgelere bağlantılar sağlar.
 
-- [Visual C++](/cpp/)\
+- [Görsel C++ ](/cpp/)\
 Visual C++ belgelerine ilişkin bağlantıları sağlar.
 
-- [Office and SharePoint Development](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio)\
-Provides information about using Microsoft Office and Visual Studio as part of a business application.
+- [Office ve SharePoint geliştirme](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio)\
+İş uygulamasının bir parçası olarak Microsoft Office ve Visual Studio kullanımı hakkında bilgi sağlar.

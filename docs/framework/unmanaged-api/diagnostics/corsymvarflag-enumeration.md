@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448553"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag Numaralandırması
-Indicates whether a variable is compiler-generated.  
+Bir değişkenin derleyici tarafından oluşturulup oluşturulmayacağını gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,14 +33,14 @@ typedef enum CorSymVarFlag
 } CorSymVarFlag;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|Indicates that the given variable is compiler-generated.|  
+|`VAR_IS_COMP_GEN`|Verilen değişkenin derleyicinin ürettiği olduğunu gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

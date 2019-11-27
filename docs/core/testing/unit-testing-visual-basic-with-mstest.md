@@ -1,6 +1,6 @@
 ---
-title: Unit testing Visual Basic in .NET Core with dotnet test and MSTest
-description: Learn unit test concepts in .NET Core through an interactive experience building a sample Visual Basic solution step-by-step using MSTest.
+title: DotNet test ve MSTest ile .NET Core 'da birim testi Visual Basic
+description: Etkileşimli bir deneyim aracılığıyla .NET Core 'daki birim testi kavramlarını, MSTest kullanarak bir örnek Visual Basic çözüm oluşturma adımını öğrenin.
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
@@ -12,17 +12,17 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428721"
 ---
-# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Unit testing Visual Basic .NET Core libraries using dotnet test and MSTest
+# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>DotNet test ve MSTest kullanarak .NET Core kitaplıkları Visual Basic birim testi
 
-This tutorial takes you through an interactive experience building a sample solution step-by-step to learn unit testing concepts. If you prefer to follow the tutorial using a pre-built solution, [view or download the sample code](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-mstest/) before you begin. For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu öğreticide, birim testi kavramlarını öğrenmek için bir örnek çözüm oluşturma adım adım yönergeler sunarak etkileşimli bir deneyim sağlanır. Önceden oluşturulmuş bir çözüm kullanarak öğreticiyi izlemeyi tercih ediyorsanız, başlamadan önce [örnek kodu görüntüleyin veya indirin](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-mstest/) . İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="creating-the-source-project"></a>Creating the source project
+## <a name="creating-the-source-project"></a>Kaynak proje oluşturma
 
-Open a shell window. Create a directory called *unit-testing-vb-mstest* to hold the solution.
-Inside this new directory, run [`dotnet new sln`](../tools/dotnet-new.md) to create a new solution. This practice makes it easier to manage both the class library and the unit test project.
-Inside the solution directory, create a *PrimeService* directory. You have the following directory and file structure thus far:
+Bir kabuk penceresi açın. Çözümü tutmak için *Unit-Testing-vb-MSTest* adlı bir dizin oluşturun.
+Yeni bir çözüm oluşturmak için bu yeni dizinin içinde [`dotnet new sln`](../tools/dotnet-new.md) çalıştırın. Bu uygulama, hem sınıf kitaplığını hem de birim testi projesini yönetmeyi kolaylaştırır.
+Çözüm dizini içinde bir *Primeservice* dizini oluşturun. Şu ana kadar Şu dizin ve dosya yapısına sahipsiniz:
 
 ```console
 /unit-testing-vb-mstest
@@ -30,7 +30,7 @@ Inside the solution directory, create a *PrimeService* directory. You have the f
     /PrimeService
 ```
 
-Make *PrimeService* the current directory and run [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) to create the source project. Rename *Class1.VB* to *PrimeService.VB*. You create a failing implementation of the `PrimeService` class:
+Kaynak projeyi oluşturmak için *Primeservice* 'i geçerli dizin yapın ve [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) çalıştırın. *Class1. vb* ' i *primeservice. vb*olarak yeniden adlandırın. `PrimeService` sınıfının başarısız bir uygulamasını oluşturursunuz:
 
 ```vb
 Namespace Prime.Services
@@ -42,11 +42,11 @@ Namespace Prime.Services
 End Namespace
 ```
 
-Change the directory back to the *unit-testing-vb-using-mstest* directory. Run [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) to add the class library project to the solution.
+Dizini *birim-test-vb-using-MSTest* dizinine geri çevirin. Çözüme Sınıf Kitaplığı projesini eklemek için [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) çalıştırın.
 
-## <a name="creating-the-test-project"></a>Creating the test project
+## <a name="creating-the-test-project"></a>Test projesi oluşturma
 
-Next, create the *PrimeService.Tests* directory. The following outline shows the directory structure:
+Ardından, *Primeservice. Tests* dizinini oluşturun. Aşağıdaki ana hat dizin yapısını gösterir:
 
 ```console
 /unit-testing-vb-mstest
@@ -57,7 +57,7 @@ Next, create the *PrimeService.Tests* directory. The following outline shows the
     /PrimeService.Tests
 ```
 
-Make the *PrimeService.Tests* directory the current directory and create a new project using [`dotnet new mstest -lang VB`](../tools/dotnet-new.md). This command creates a test project that uses MSTest as the test library. The generated template configures the test runner in the *PrimeServiceTests.vbproj*:
+*Primeservice. test* dizinini geçerli dizini yapın ve [`dotnet new mstest -lang VB`](../tools/dotnet-new.md)kullanarak yeni bir proje oluşturun. Bu komut, test kitaplığı olarak MSTest kullanan bir test projesi oluşturur. Oluşturulan şablon, *Primeservicetests. vbproj*içindeki Test Çalıştırıcısı 'nı yapılandırır:
 
 ```xml
 <ItemGroup>
@@ -67,15 +67,15 @@ Make the *PrimeService.Tests* directory the current directory and create a new p
 </ItemGroup>
 ```
 
-The test project requires other packages to create and run unit tests. `dotnet new` in the previous step added MSTest and the MSTest runner. Now, add the `PrimeService` class library as another dependency to the project. Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:
+Test projesi, birim testlerini oluşturmak ve çalıştırmak için diğer paketlerin kullanılmasını gerektirir. önceki adımda `dotnet new` MSTest ve MSTest Çalıştırıcısı eklendi. Şimdi, `PrimeService` sınıf kitaplığını projeye başka bir bağımlılık olarak ekleyin. [`dotnet add reference`](../tools/dotnet-add-reference.md) komutunu kullanın:
 
 ```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
-You can see the entire file in the [samples repository](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService.Tests.vbproj) on GitHub.
+GitHub 'daki [örnekler deposunda](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService.Tests.vbproj) dosyanın tamamını görebilirsiniz.
 
-You have the following final solution layout:
+Aşağıdaki son çözüm düzenine sahipsiniz:
 
 ```console
 /unit-testing-vb-mstest
@@ -88,11 +88,11 @@ You have the following final solution layout:
         PrimeServiceTests.vbproj
 ```
 
-Execute [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) in the *unit-testing-vb-mstest* directory.
+[`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) , *birim-test-vb-MSTest* dizininde yürütün.
 
-## <a name="creating-the-first-test"></a>Creating the first test
+## <a name="creating-the-first-test"></a>İlk test oluşturma
 
-You write one failing test, make it pass, then repeat the process. Remove *UnitTest1.vb* from the *PrimeService.Tests* directory and create a new Visual Basic file named *PrimeService_IsPrimeShould.VB*. Add the following code:
+Başarısız bir test yazdığınızda, geçişi yapıp işlemi tekrarlayabilirsiniz. *UnitTest1. vb* 'Yi *primeservice. Tests* dizininden KALDıRıN ve *PrimeService_IsPrimeShould. vb*adlı yeni bir Visual Basic dosya oluşturun. Aşağıdaki kodu ekleyin:
 
 ```vb
 Imports Microsoft.VisualStudio.TestTools.UnitTesting
@@ -113,9 +113,9 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-The `<TestClass>` attribute indicates a class that contains tests. The `<TestMethod>` attribute denotes a method that is run by the test runner. From the *unit-testing-vb-mstest*, execute [`dotnet test`](../tools/dotnet-test.md) to build the tests and the class library and then run the tests. The MSTest test runner contains the program entry point to run your tests. `dotnet test` starts the test runner using the unit test project you've created.
+`<TestClass>` özniteliği, testleri içeren bir sınıfı gösterir. `<TestMethod>` özniteliği, Test Çalıştırıcısı tarafından çalıştırılan bir yöntemi gösterir. *-Testing-vb-MSTest*, testleri ve sınıf kitaplığını oluşturmak ve ardından testleri çalıştırmak için [`dotnet test`](../tools/dotnet-test.md) yürütün. MSTest Test Çalıştırıcısı, testlerinizi çalıştırmak için program giriş noktasını içerir. `dotnet test`, oluşturduğunuz birim test projesini kullanarak Test Çalıştırıcısı başlatır.
 
-Your test fails. You haven't created the implementation yet. Make this test pass by writing the simplest code in the `PrimeService` class that works:
+Testiniz başarısız oluyor. Uygulamayı henüz oluşturmadınız. Aşağıdaki `PrimeService` sınıfında en basit kodu yazarak bu test geçişini yapın:
 
 ```vb
 Public Function IsPrime(candidate As Integer) As Boolean
@@ -126,22 +126,22 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-In the *unit-testing-vb-mstest* directory, run `dotnet test` again. The `dotnet test` command runs a build for the `PrimeService` project and then for the `PrimeService.Tests` project. After building both projects, it runs this single test. It passes.
+*Birim-test-vb-MSTest* dizininde `dotnet test` yeniden çalıştırın. `dotnet test` komutu, `PrimeService` projesi için bir derleme ve sonra `PrimeService.Tests` projesi için çalışır. Her iki proje de oluşturulduktan sonra bu tek testi çalıştırır. Geçirir.
 
-## <a name="adding-more-features"></a>Adding more features
+## <a name="adding-more-features"></a>Daha fazla özellik ekleme
 
-Now that you've made one test pass, it's time to write more. There are a few other simple cases for prime numbers: 0, -1. You could add those cases as new tests with the `<TestMethod>` attribute, but that quickly becomes tedious. There are other MSTest attributes that enable you to write a suite of similar tests.  A `<DataTestMethod>` attribute represents a suite of tests that execute the same code but have different input arguments. You can use the `<DataRow>` attribute to specify values for those inputs.
+Artık bir test geçişi yapmış olduğunuza göre daha fazla yazma zamanı vardır. Asal sayıların diğer birkaç basit durumu vardır: 0,-1. Bu servis taleplerini `<TestMethod>` özniteliğiyle yeni testler olarak ekleyebilirsiniz, ancak bu hızlı bir şekilde sıkıcı olur. Benzer testlerin bir paketini yazmanızı sağlayan başka bir MSTest özniteliği vardır.  Bir `<DataTestMethod>` özniteliği, aynı kodu çalıştıran ancak farklı giriş bağımsız değişkenlerine sahip olan bir test paketini temsil eder. Bu girişlerin değerlerini belirtmek için `<DataRow>` özniteliğini kullanabilirsiniz.
 
-Instead of creating new tests, apply these two attributes to create a single theory. The theory is a method that tests several values less than two, which is the lowest prime number:
+Yeni test oluşturmak yerine, tek bir teorisi oluşturmak için bu iki özniteliği uygulayın. Teorisi, en düşük asal sayı olan iki değerden küçük birkaç değeri sınayan bir yöntemdir:
 
 [!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
-Run `dotnet test`, and two of these tests fail. To make all of the tests pass, change the `if` clause at the beginning of the method:
+`dotnet test`çalıştırın, bu testlerin ikisi de başarısız olur. Tüm testlerin geçişini yapmak için, yönteminin başındaki `if` yan tümcesini değiştirin:
 
 ```vb
 if candidate < 2
 ```
 
-Continue to iterate by adding more tests, more theories, and more code in the main library. You have the [finished version of the tests](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb) and the [complete implementation of the library](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-mstest/PrimeService/PrimeService.vb).
+Ana kitaplıkta daha fazla test, daha fazla yer ve daha fazla kod ekleyerek yinelemek için devam edin. [Testlerin tamamlanmış sürümüne](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb) ve [kitaplığın tüm uygulamasına](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-mstest/PrimeService/PrimeService.vb)sahipsiniz.
 
-You've built a small library and a set of unit tests for that library. You've structured the solution so that adding new packages and tests is part of the normal workflow. You've concentrated most of your time and effort on solving the goals of the application.
+Bu kitaplık için küçük bir kitaplık ve birim testleri kümesi oluşturdunuz. Çözümü, yeni paket ve test eklemek normal iş akışının bir parçası olacak şekilde öğrendiniz. Uygulamanın hedeflerini çözme konusunda zaman ve çaba harcamanızı en iyi şekilde gördünüz.

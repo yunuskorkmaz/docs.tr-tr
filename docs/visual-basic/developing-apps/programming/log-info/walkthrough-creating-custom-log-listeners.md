@@ -14,98 +14,98 @@ ms.locfileid: "74353619"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>İzlenecek Yol: Özel Günlük Dinleyicileri Oluşturma (Visual Basic)
 
-This walkthrough demonstrates how to create a custom log listener and configure it to listen to the output of the `My.Application.Log` object.
+Bu izlenecek yol, özel bir günlük dinleyicisi oluşturmayı ve `My.Application.Log` nesnesinin çıkışını dinlemek için yapılandırmayı gösterir.
 
 ## <a name="getting-started"></a>Başlarken
 
-Log listeners must inherit from the <xref:System.Diagnostics.TraceListener> class.
+Günlük dinleyicileri <xref:System.Diagnostics.TraceListener> sınıftan devralması gerekir.
 
-#### <a name="to-create-the-listener"></a>To create the listener
+#### <a name="to-create-the-listener"></a>Dinleyiciyi oluşturmak için
 
-- In your application, create a class named `SimpleListener` that inherits from <xref:System.Diagnostics.TraceListener>.
+- Uygulamanızda, <xref:System.Diagnostics.TraceListener>devralan `SimpleListener` adlı bir sınıf oluşturun.
 
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]
 
-     The <xref:System.Diagnostics.TraceListener.Write%2A> and <xref:System.Diagnostics.TraceListener.WriteLine%2A> methods, required by the base class, call `MsgBox` to display their input.
+     Temel sınıf için gereken <xref:System.Diagnostics.TraceListener.Write%2A> ve <xref:System.Diagnostics.TraceListener.WriteLine%2A> yöntemleri, girişlerini göstermek için `MsgBox` çağırır.
 
-     The <xref:System.Security.Permissions.HostProtectionAttribute> attribute is applied to the <xref:System.Diagnostics.TraceListener.Write%2A> and <xref:System.Diagnostics.TraceListener.WriteLine%2A> methods so that their attributes match the base class methods. The <xref:System.Security.Permissions.HostProtectionAttribute> attribute allows the host that runs the code to determine that the code exposes host-protection synchronization.
+     <xref:System.Security.Permissions.HostProtectionAttribute> özniteliği, özniteliklerinin temel sınıf yöntemleriyle eşleşmesi için <xref:System.Diagnostics.TraceListener.Write%2A> ve <xref:System.Diagnostics.TraceListener.WriteLine%2A> yöntemlerine uygulanır. <xref:System.Security.Permissions.HostProtectionAttribute> özniteliği, kodu çalıştıran konağın, kodun konak koruma eşitlemesini gösterir olduğunu belirlemesini sağlar.
 
     > [!NOTE]
-    > The <xref:System.Security.Permissions.HostProtectionAttribute> attribute is effective only on unmanaged applications that host the common language runtime and that implement host protection, such as SQL Server.
+    > <xref:System.Security.Permissions.HostProtectionAttribute> özniteliği yalnızca ortak dil çalışma zamanını barındıran ve SQL Server gibi konak korumasını uygulayan yönetilmeyen uygulamalarda etkilidir.
 
-To ensure that `My.Application.Log` uses your log listener, you should strongly name the assembly that contains your log listener.
+`My.Application.Log` günlük dinleyicinizi kullandığından emin olmak için, günlük dinleyicinizi içeren derlemeyi kesin bir şekilde adlandırın.
 
-The next procedure provides some simple steps for creating a strongly named log-listener assembly. For more information, see [Creating and Using Strong-Named Assemblies](../../../../standard/assembly/create-use-strong-named.md).
+Sonraki yordam, kesin adlandırılmış bir log-Listener derlemesi oluşturmak için bazı basit adımlar sağlar. Daha fazla bilgi için bkz. [güçlü adlandırılmış derlemeler oluşturma ve kullanma](../../../../standard/assembly/create-use-strong-named.md).
 
-#### <a name="to-strongly-name-the-log-listener-assembly"></a>To strongly name the log-listener assembly
+#### <a name="to-strongly-name-the-log-listener-assembly"></a>Log dinleyicisi derlemesini kesin olarak adlandırmak için
 
-1. Have a project selected in **Solution Explorer**. On the **Project** menu, choose **Properties**.
+1. **Çözüm Gezgini**' de bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' i seçin.
 
-2. Click the **Signing** tab.
+2. **İmzalama** sekmesine tıklayın.
 
-3. Select the **Sign the assembly** box.
+3. **Derlemeyi imzala** kutusunu seçin.
 
-4. Select **\<New>** from the **Choose a strong name key file** drop-down list.
+4. **Tanımlayıcı ad anahtar dosyası seçin** açılır listesinden **Yeni\<>** seçin.
 
-     The **Create Strong Name Key** dialog box opens.
+     **Tanımlayıcı ad anahtarı oluştur** iletişim kutusu açılır.
 
-5. Provide a name for the key file in the **Key file name** box.
+5. Anahtar dosya **adı** kutusuna anahtar dosyası için bir ad girin.
 
-6. Enter a password in the **Enter password** and **Confirm password** boxes.
+6. Parolayı **gir** ve **Parolayı Onayla** kutularına bir parola girin.
 
 7. **Tamam**'a tıklayın.
 
-8. Rebuild the application.
+8. Uygulamayı yeniden derleyin.
 
-## <a name="adding-the-listener"></a>Adding the Listener
+## <a name="adding-the-listener"></a>Dinleyiciyi ekleme
 
-Now that the assembly has a strong name, you need to determine the strong name of the listener so that `My.Application.Log` uses your log listener.
+Artık derlemenin tanımlayıcı bir adı olduğuna göre, `My.Application.Log` günlük dinleyicinizi kullanması için dinleyicinin tanımlayıcı adını belirlemeniz gerekir.
 
-The format of a strongly named type is as follows.
+Kesin adlandırılmış türün biçimi aşağıdaki gibidir.
 
-\<type name>, \<assembly name>, \<version number>, \<culture>, \<strong name>
+\<tür adı >, \<derleme adı >, \<sürüm numarası >, \<Kültür >, \<tanımlayıcı ad >
 
-#### <a name="to-determine-the-strong-name-of-the-listener"></a>To determine the strong name of the listener
+#### <a name="to-determine-the-strong-name-of-the-listener"></a>Dinleyicinin tanımlayıcı adını belirleme
 
-- The following code shows how to determine the strongly named type name for `SimpleListener`.
+- Aşağıdaki kod, `SimpleListener`için kesin adlandırılmış tür adının nasıl belirleneceğini göstermektedir.
 
      [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]
 
-     The strong name of the type depends on your project.
+     Türün tanımlayıcı adı projenize bağlıdır.
 
-With the strong name, you can add the listener to the `My.Application.Log` log-listener collection.
+Tanımlayıcı adıyla, dinleyiciyi `My.Application.Log` log-Listener koleksiyonuna ekleyebilirsiniz.
 
-#### <a name="to-add-the-listener-to-myapplicationlog"></a>To add the listener to My.Application.Log
+#### <a name="to-add-the-listener-to-myapplicationlog"></a>Dinleyiciyi My. Application. log dosyasına eklemek için
 
-1. Right-click on app.config in the **Solution Explorer** and choose **Open**.
+1. **Çözüm Gezgini** App. config dosyasına sağ tıklayın ve **Aç**' ı seçin.
 
      veya
 
-     If there is an app.config file:
+     Bir App. config dosyası varsa:
 
-    1. On the **Project** menu, choose **Add New Item**.
+    1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-    2. From the **Add New Item** dialog box, choose **Application Configuration File**.
+    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası**' nı seçin.
 
     3. **Ekle**'yi tıklatın.
 
-2. Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", located in the `<sources>` section. The `<sources>` section is located in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
+2. `<sources>` bölümünde yer alan "DefaultSource" `name` özniteliğiyle birlikte `<source>` bölümünde `<listeners>` bölümünü bulun. `<sources>` bölümü, üst düzey `<configuration>` bölümünde `<system.diagnostics>` bölümünde bulunur.
 
-3. Add this element to the `<listeners>` section:
+3. Bu öğeyi `<listeners>` bölümüne ekleyin:
 
     ```xml
     <add name="SimpleLog" />
     ```
 
-4. Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
+4. Üst düzey `<configuration>` bölümündeki `<system.diagnostics>` bölümünde `<sharedListeners>` bölümünü bulun.
 
-5. Add this element to that `<sharedListeners>` section:
+5. Bu öğeyi bu `<sharedListeners>` bölümüne ekleyin:
 
     ```xml
     <add name="SimpleLog" type="SimpleLogStrongName" />
     ```
 
-     Change the value of `SimpleLogStrongName` to be the strong name of the listener.
+     `SimpleLogStrongName` değerini, dinleyicinin tanımlayıcı adı olacak şekilde değiştirin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

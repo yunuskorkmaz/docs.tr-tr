@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449207"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum Metodu
-Gets the checksum.  
+Sağlama toplamını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,16 +36,16 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>Parametreler  
  `cData`  
- [in] The length of the buffer provided by the `data` parameter  
+ 'ndaki `data` parametresi tarafından belirtilen arabelleğin uzunluğu  
   
  `pcData`  
- [out] The size and length of the checksum, in bytes.  
+ dışı Sağlama toplamı için bayt cinsinden boyut ve uzunluk.  
   
  `data`  
- [out] The buffer that receives the checksum.  
+ dışı Sağlama toplamını alan arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, an error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, bir hata kodu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

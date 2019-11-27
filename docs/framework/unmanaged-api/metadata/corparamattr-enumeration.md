@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436492"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr Numaralandırması
-Contains values that describe the metadata of a method parameter.  
+Bir yöntem parametresinin meta verilerini tanımlayan değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,24 +42,24 @@ typedef enum CorParamAttr {
 } CorParamAttr;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`pdIn`|Specifies that the parameter is passed into the method call.|  
-|`pdOut`|Specifies that the parameter is passed from the method return.|  
-|`pdOptional`|Specifies that the parameter is optional.|  
-|`pdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`pdHasDefault`|Specifies that the parameter has a default value.|  
-|`pdHasFieldMarshal`|Specifies that the parameter has marshaling information.|  
-|`pdUnused`|Unused.|  
+|`pdIn`|Parametrenin yöntem çağrısına geçtiğini belirtir.|  
+|`pdOut`|Parametrenin dönüş yönteminden geçtiğini belirtir.|  
+|`pdOptional`|Parametrenin isteğe bağlı olduğunu belirtir.|  
+|`pdReservedMask`|Ortak dil çalışma zamanı tarafından iç kullanım için ayrılmıştır.|  
+|`pdHasDefault`|Parametrenin varsayılan bir değere sahip olduğunu belirtir.|  
+|`pdHasFieldMarshal`|Parametrenin sıralama bilgilerine sahip olduğunu belirtir.|  
+|`pdUnused`|Kullanılmayan.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440144"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute Yöntemi
-Gets a custom attribute based upon its name. Unlike metadata custom attributes, these custom attributes are held in the symbol store.  
+Özel bir özniteliği adına göre alır. Meta veri özel özniteliklerinin aksine, bu özel öznitelikler sembol deposunda tutulur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +39,25 @@ HRESULT GetSymAttribute (
   
 ## <a name="parameters"></a>Parametreler  
  `parent`  
- [in] The metadata token for the object for which the attribute is requested.  
+ 'ndaki Özniteliği istenen nesnenin meta veri belirteci.  
   
  `name`  
- [in] A pointer to the variable that indicates the attribute to retrieve.  
+ 'ndaki Alınacak özniteliği belirten değişkene yönelik bir işaretçi.  
   
  `cBuffer`  
- [in] The size of the `buffer` array.  
+ 'ndaki `buffer` dizisinin boyutu.  
   
  `pcBuffer`  
- [out] A pointer to the variable that receives the length of the attribute data.  
+ dışı Öznitelik verilerinin uzunluğunu alan değişkene yönelik bir işaretçi.  
   
  `buffer`  
- [out] A pointer to the variable that receives the attribute data.  
+ dışı Öznitelik verilerini alan değişkene yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

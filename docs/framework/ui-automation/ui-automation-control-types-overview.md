@@ -14,27 +14,27 @@ ms.locfileid: "74442632"
 ---
 # <a name="ui-automation-control-types-overview"></a>UI Otomasyon Denetim Türlerine Genel Bakış
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] control types are well-known identifiers that can be used to indicate what kind of control a particular element represents, such as a combo box or a button.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] denetim türleri, Birleşik giriş kutusu ya da düğme gibi belirli bir öğenin ne tür bir denetimin temsil ettiğini göstermek için kullanılabilecek iyi bilinen tanımlayıcılardır.  
   
- Having a well-known identifier makes it easier for assistive technology devices to determine what types of controls are available in the [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] and how to interact with the controls.  
+ İyi bilinen bir tanımlayıcıya sahip olmak, yardımcı teknoloji cihazlarının [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] hangi tür denetimlerin kullanılabilir olduğunu ve denetimlerle nasıl etkileşime gireceğini belirlemenizi kolaylaştırır.  
   
 <a name="UI_Automation_Control_Type_Requisites"></a>   
-## <a name="ui-automation-control-type-requisites"></a>UI Automation Control Type Requisites  
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] control types provide a set of conditions that providers must meet. When these conditions are met, the control can use the specific control type name. Each control type has conditions for the following:  
+## <a name="ui-automation-control-type-requisites"></a>UI Otomasyonu Denetim türü gereksinimleri  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] denetim türleri, sağlayıcıların karşılaması gereken koşullar kümesini sağlar. Bu koşullar karşılandığında denetim, belirli denetim türü adını kullanabilir. Her denetim türü aşağıdakiler için koşullara sahiptir:  
   
-- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns—which control patterns must be supported, which control patterns are optional, and which control patterns must not be supported by the control.  
+- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Denetim desenleri — hangi denetim desenlerinin desteklenmelidir, hangi Denetim desenleri isteğe bağlıdır ve hangi denetim desenlerinin denetim tarafından desteklenmemelidir.  
   
-- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values—which property values are supported.  
+- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellik değerleri — hangi özellik değerlerini destekler.  
   
-- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure—the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure for the control.  
+- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısı — denetim için gereken [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısı.  
   
- When a control meets the conditions for a particular control type, the <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> property value will indicate that control type.  
+ Bir denetim belirli bir denetim türünün koşullarını karşılıyorsa, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> Özellik değeri bu denetim türünü gösterir.  
   
 <a name="Current_UI_Automation_Control_Types"></a>   
-## <a name="current-ui-automation-control-types"></a>Current UI Automation Control Types  
- The following list contains the current set of [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] control types:  
+## <a name="current-ui-automation-control-types"></a>Geçerli UI Otomasyon Denetim türleri  
+ Aşağıdaki liste, geçerli [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] denetim türleri kümesini içerir:  
   
 - [Button Denetim Türü İçin UI Otomasyonu Desteği](ui-automation-support-for-the-button-control-type.md)  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432085"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef Yöntemi
-Creates an `AssemblyRef` structure containing metadata for the assembly that this assembly references, and returns the associated metadata token.  
+Bu derlemenin başvurduğu derleme için meta verileri içeren bir `AssemblyRef` yapısı oluşturur ve ilişkili meta veri belirtecini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,42 +42,42 @@ HRESULT DefineAssemblyRef (
   
 ## <a name="parameters"></a>Parametreler  
  `pbPublicKeyOrToken`  
- [in] The public key of the publisher of the referenced assembly. The helper function [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) can be used to get the hash of the public key to pass as this parameter.  
+ 'ndaki Başvurulan derlemenin yayımcısının ortak anahtarı. [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) yardımcı işlevi, bu parametre olarak geçirilecek ortak anahtarın karmasını almak için kullanılabilir.  
   
  `cbPublicKeyOrToken`  
- [in] The size in bytes of `pbPublicKeyOrToken`.  
+ 'ndaki `pbPublicKeyOrToken`bayt cinsinden boyutu.  
   
  `szName`  
- [in] The human-readable text name of the assembly. This value must not exceed 1024 characters.  
+ 'ndaki Derlemenin insanların okunabilir metin adı. Bu değerin 1024 karakteri aşmaması gerekir.  
   
  `pMetaData`  
- [in] An ASSEMBLYMETADATA instance that contains the version, platform and locale information of the referenced assembly.  
+ 'ndaki Başvurulan derlemenin sürümünü, platformunu ve yerel ayar bilgilerini içeren bir ASSEMBLYMETADATA örneği.  
   
  `pbHashValue`  
- [in] The hash data associated with the referenced assembly. İsteğe bağlı.  
+ 'ndaki Başvurulan derlemeyle ilişkili karma verileri. İsteğe bağlı.  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ 'ndaki `pbHashValue`bayt cinsinden boyutu.  
   
  `dwAssemblyRefFlags`  
- [in] A bitwise combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that influence the behavior of the execution engine.  
+ 'ndaki Yürütme altyapısının davranışını etkileyen, [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) değerlerinin bit düzeyinde birleşimi.  
   
  `pmdar`  
- [out] A pointer to the returned `AssemblyRef` metadata token.  
+ dışı Döndürülen `AssemblyRef` meta veri belirtecine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- One `AssemblyRef` metadata structure must be defined for each assembly that this assembly references.  
+ Bu derlemenin başvurduğu her derleme için bir `AssemblyRef` meta veri yapısının tanımlanması gerekir.  
   
- At run time, the details of a referenced assembly are passed to the assembly resolver with an indication that they represent the "as built" information. The assembly resolver then applies policy.  
+ Çalışma zamanında, başvurulan bir derlemenin ayrıntıları, derleme çözümleyiciye "yerleşik olarak" bilgi olarak temsil ettikleri bir bildirim ile geçirilir. Derleme çözümleyici ilke uygular.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

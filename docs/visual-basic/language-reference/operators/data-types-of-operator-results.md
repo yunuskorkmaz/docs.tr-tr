@@ -17,172 +17,172 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331464"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>İşleç Sonuçlarının Veri Türleri (Visual Basic)
-Visual Basic determines the result data type of an operation based on the data types of the operands. In some cases this might be a data type with a greater range than that of either operand.  
+Visual Basic, işlenen veri türlerine göre bir işlemin sonuç veri türünü belirler. Bazı durumlarda bu, iki işlenenden daha büyük bir aralığa sahip bir veri türü olabilir.  
   
 ## <a name="data-type-ranges"></a>Veri Türü Aralıkları  
- The ranges of the relevant data types, in order from smallest to largest, are as follows:  
+ En küçükten en büyüğe doğru sırada ilgili veri türlerinin aralıkları şunlardır:  
   
-- [Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md) — two possible values  
+- [Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md) — iki olası değer  
   
-- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) — 256 possible integral values  
+- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) — 256 olası integral değeri  
   
-- [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65,536 (6.5...E+4) possible integral values  
+- [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [ushort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65.536 (6.5... E + 4) olası integral değerleri  
   
-- [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) — 4,294,967,296 (4.2...E+9) possible integral values  
+- [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [uinteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) — 4.294.967.296 (4.2... E + 9) olası integral değerleri  
   
-- [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18,446,744,073,709,551,615 (1.8...E+19) possible integral values  
+- [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ulong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18446744073709551615 (1.8... E + 19) olası integral değerleri  
   
-- [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) — 1.5...E+29 possible integral values, maximum range 7.9...E+28 (absolute value)  
+- [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) — 1,5... E + 29 olası integral değerleri, maksimum Aralık 7.9... E + 28 (mutlak değer)  
   
-- [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) — maximum range 3.4...E+38 (absolute value)  
+- [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) — maksimum Aralık 3.4... E + 38 (mutlak değer)  
   
-- [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) — maximum range 1.7...E+308 (absolute value)  
+- [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) — maksimum Aralık 1.7... E + 308 (mutlak değer)  
   
- For more information on Visual Basic data types, see [Data Types](../../../visual-basic/language-reference/data-types/index.md).  
+ Visual Basic veri türleri hakkında daha fazla bilgi için bkz. [veri türleri](../../../visual-basic/language-reference/data-types/index.md).  
   
- If an operand evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the Visual Basic arithmetic operators treat it as zero.  
+ Bir işlenen [hiçbir şey](../../../visual-basic/language-reference/nothing.md)kabul verirse, Visual Basic aritmetik işleçleri onu sıfır olarak değerlendirir.  
   
-## <a name="decimal-arithmetic"></a>Decimal Arithmetic  
- Note that the [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) data type is neither floating-point nor integer.  
+## <a name="decimal-arithmetic"></a>Ondalık aritmetik  
+ [Ondalık](../../../visual-basic/language-reference/data-types/decimal-data-type.md) veri türünün ne kayan nokta ne de tamsayı olduğunu unutmayın.  
   
- If either operand of a `+`, `–`, `*`, `/`, or `Mod` operation is `Decimal` and the other is not `Single` or `Double`, Visual Basic widens the other operand to `Decimal`. It performs the operation in `Decimal`, and the result data type is `Decimal`.  
+ `+`, `–`, `*`, `/`veya `Mod` işleminin herhangi bir işleneni `Decimal` ve diğeri `Single` veya `Double`değilse, Visual Basic diğer işleneni `Decimal`. `Decimal`işlemi gerçekleştirir ve sonuç veri türü `Decimal`.  
   
-## <a name="floating-point-arithmetic"></a>Floating-Point Arithmetic  
- Visual Basic performs most floating-point arithmetic in [Double](../../../visual-basic/language-reference/data-types/double-data-type.md), which is the most efficient data type for such operations. However, if one operand is [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) and the other is not `Double`, Visual Basic performs the operation in `Single`. It widens each operand as necessary to the appropriate data type before the operation, and the result has that data type.  
+## <a name="floating-point-arithmetic"></a>Kayan nokta aritmetiği  
+ Visual Basic, bu tür işlemler için en verimli veri türü olan [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)'ta çoğu kayan nokta aritmetiği gerçekleştirir. Ancak, bir işlenen [tek](../../../visual-basic/language-reference/data-types/single-data-type.md) ve diğeri `Double`değilse, Visual Basic `Single`işlemini gerçekleştirir. Her işleneni, işlem öncesinde uygun veri türü için gereken şekilde widens ve sonuç bu veri türüne sahip olur.  
   
-### <a name="-and--operators"></a>/ and ^ Operators  
- The `/` operator is defined only for the [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [Single](../../../visual-basic/language-reference/data-types/single-data-type.md), and [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) data types. Visual Basic widens each operand as necessary to the appropriate data type before the operation, and the result has that data type.  
+### <a name="-and--operators"></a>/ve ^ Işleçleri  
+ `/` işleci yalnızca [ondalık](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [tek](../../../visual-basic/language-reference/data-types/single-data-type.md)ve [çift](../../../visual-basic/language-reference/data-types/double-data-type.md) veri türleri için tanımlanır. Her işleneni, işlem öncesinde uygun veri türü için gereken şekilde widens Visual Basic ve sonuç bu veri türüne sahip.  
   
- The following table shows the result data types for the `/` operator. Note that this table is symmetric; for a given combination of operand data types, the result data type is the same regardless of the order of the operands.  
+ Aşağıdaki tabloda `/` işlecinin sonuç veri türleri gösterilmektedir. Bu tablonun simetrik olduğunu unutmayın; belirli bir işlenen veri türleri birleşimi için, sonuç veri türü işlenen sıralarından bağımsız olarak aynıdır.  
   
 ||||||  
 |---|---|---|---|---|  
-||`Decimal`|`Single`|`Double`|Any integer type|  
+||`Decimal`|`Single`|`Double`|Herhangi bir tamsayı türü|  
 |`Decimal`|Ondalık|Tek|Çift|Ondalık|  
 |`Single`|Tek|Tek|Çift|Tek|  
 |`Double`|Çift|Çift|Çift|Çift|  
-|Any integer type|Ondalık|Tek|Çift|Çift|  
+|Herhangi bir tamsayı türü|Ondalık|Tek|Çift|Çift|  
   
- The `^` operator is defined only for the `Double` data type. Visual Basic widens each operand as necessary to `Double` before the operation, and the result data type is always `Double`.  
+ `^` işleci yalnızca `Double` veri türü için tanımlanır. Visual Basic her işleneni, işlem öncesinde `Double` için gereken şekilde `Double`ve sonuç veri türü her zaman.  
   
-## <a name="integer-arithmetic"></a>Integer Arithmetic  
- The result data type of an integer operation depends on the data types of the operands. In general, Visual Basic uses the following policies for determining the result data type:  
+## <a name="integer-arithmetic"></a>Tamsayı aritmetik  
+ Bir tamsayı işleminin sonuç veri türü, işlenenlerinin veri türlerine bağlıdır. Genel olarak, Visual Basic sonuç veri türünü belirlemek için aşağıdaki ilkeleri kullanır:  
   
-- If both operands of a binary operator have the same data type, the result has that data type. An exception is `Boolean`, which is forced to `Short`.  
+- İkili işlecin her iki işleneni de aynı veri türüne sahipse, sonuç bu veri türüne sahiptir. Bir özel durum `Boolean``Short`zorlanır.  
   
-- If an unsigned operand participates with a signed operand, the result has a signed type with at least as large a range as either operand.  
+- İşaretsiz bir işlenen imzalı bir işlenen ile katılıyorsa, sonuç, en azından işlenen olarak en az bir Aralık olan imzalı bir tür içerir.  
   
-- Otherwise, the result usually has the larger of the two operand data types.  
+- Aksi halde, sonuç genellikle iki işlenen veri türünden daha büyük olur.  
   
- Note that the result data type might not be the same as either operand data type.  
+ Sonuç veri türünün işlenen veri türü ile aynı olamayacağını unutmayın.  
   
 > [!NOTE]
-> The result data type is not always large enough to hold all possible values resulting from the operation. An <xref:System.OverflowException> exception can occur if the value is too large for the result data type.  
+> Sonuç veri türü, işlemin sonucu olan tüm olası değerleri tutabilecek kadar her zaman büyük değildir. Değer sonuç veri türü için çok büyükse <xref:System.OverflowException> bir özel durum oluşabilir.  
   
-### <a name="unary--and--operators"></a>Unary + and – Operators  
- The following table shows the result data types for the two unary operators, `+` and `–`.  
-  
-|||||||||||  
-|---|---|---|---|---|---|---|---|---|---|  
-||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|Unary `+`|Short|SByte|Bayt|Short|UShort|Tamsayı|UInteger|Long|ULong|  
-|Unary `–`|Short|SByte|Short|Short|Tamsayı|Tamsayı|Long|Long|Ondalık|  
-  
-### <a name="-and--operators"></a><\< and >> Operators  
- The following table shows the result data types for the two bit-shift operators, `<<` and `>>`. Visual Basic treats each bit-shift operator as a unary operator on its left operand (the bit pattern to be shifted).  
+### <a name="unary--and--operators"></a>Birli + ve – Işleçler  
+ Aşağıdaki tabloda, `+` ve `–`iki birli operatör için sonuç veri türleri gösterilmektedir.  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`<<`, `>>`|Short|SByte|Bayt|Short|UShort|Tamsayı|UInteger|Long|ULong|  
+|Birli `+`|Kısa|SByte|Bayt|Kısa|UShort|Tamsayı|UInteger|Uzun|'Tur|  
+|Birli `–`|Kısa|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Ondalık|  
   
- If the left operand is `Decimal`, `Single`, `Double`, or `String`, Visual Basic attempts to convert it to `Long` before the operation, and the result data type is `Long`. The right operand (the number of bit positions to shift) must be `Integer` or a type that widens to `Integer`.  
-  
-### <a name="binary----and-mod-operators"></a>Binary +, –, \*, and Mod Operators  
- The following table shows the result data types for the binary `+` and `–` operators and the `*` and `Mod` operators. Note that this table is symmetric; for a given combination of operand data types, the result data type is the same regardless of the order of the operands.  
+### <a name="-and--operators"></a><\< ve > > Işleçleri  
+ Aşağıdaki tabloda, `<<` ve `>>`iki bit kaydırma işleci için sonuç veri türleri gösterilmektedir. Visual Basic her bir bit kaydırma işlecini sol işleneninde birli işleç olarak değerlendirir (kaydırılan bit kalıbı).  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Short|SByte|Short|Short|Tamsayı|Tamsayı|Long|Long|Ondalık|  
-|`SByte`|SByte|SByte|Short|Short|Tamsayı|Tamsayı|Long|Long|Ondalık|  
-|`Byte`|Short|Short|Bayt|Short|UShort|Tamsayı|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|Tamsayı|Tamsayı|Long|Long|Ondalık|  
-|`UShort`|Tamsayı|Tamsayı|UShort|Tamsayı|UShort|Tamsayı|UInteger|Long|ULong|  
-|`Integer`|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Long|Long|Ondalık|  
-|`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
-|`Long`|Long|Long|Long|Long|Long|Long|Long|Long|Ondalık|  
-|`ULong`|Ondalık|Ondalık|ULong|Ondalık|ULong|Ondalık|ULong|Ondalık|ULong|  
+|`<<`, `>>`|Kısa|SByte|Bayt|Kısa|UShort|Tamsayı|UInteger|Uzun|'Tur|  
+  
+ Sol işlenen `Decimal`, `Single`, `Double`veya `String`, Visual Basic işlemi işlemden önce `Long` dönüştürmeye çalışır ve sonuç veri türü `Long`olur. Sağ işlenen (kaydırma yapılacak bit konumlarının sayısı) `Integer` veya `Integer`için widens bir tür olmalıdır.  
+  
+### <a name="binary----and-mod-operators"></a>İkili +, –, \*ve mod Işleçleri  
+ Aşağıdaki tabloda, ikili `+` ve `–` işleçleri ve `*` ve `Mod` işleçleri için sonuç veri türleri gösterilmektedir. Bu tablonun simetrik olduğunu unutmayın; belirli bir işlenen veri türleri birleşimi için, sonuç veri türü işlenen sıralarından bağımsız olarak aynıdır.  
+  
+|||||||||||  
+|---|---|---|---|---|---|---|---|---|---|  
+||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
+|`Boolean`|Kısa|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Ondalık|  
+|`SByte`|SByte|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Ondalık|  
+|`Byte`|Kısa|Kısa|Bayt|Kısa|UShort|Tamsayı|UInteger|Uzun|'Tur|  
+|`Short`|Kısa|Kısa|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Ondalık|  
+|`UShort`|Tamsayı|Tamsayı|UShort|Tamsayı|UShort|Tamsayı|UInteger|Uzun|'Tur|  
+|`Integer`|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Uzun|Uzun|Ondalık|  
+|`UInteger`|Uzun|Uzun|UInteger|Uzun|UInteger|Uzun|UInteger|Uzun|'Tur|  
+|`Long`|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Ondalık|  
+|`ULong`|Ondalık|Ondalık|'Tur|Ondalık|'Tur|Ondalık|'Tur|Ondalık|'Tur|  
   
 ### <a name="-operator"></a>\\ İşleci  
- The following table shows the result data types for the `\` operator. Note that this table is symmetric; for a given combination of operand data types, the result data type is the same regardless of the order of the operands.  
+ Aşağıdaki tabloda `\` işlecinin sonuç veri türleri gösterilmektedir. Bu tablonun simetrik olduğunu unutmayın; belirli bir işlenen veri türleri birleşimi için, sonuç veri türü işlenen sıralarından bağımsız olarak aynıdır.  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Short|SByte|Short|Short|Tamsayı|Tamsayı|Long|Long|Long|  
-|`SByte`|SByte|SByte|Short|Short|Tamsayı|Tamsayı|Long|Long|Long|  
-|`Byte`|Short|Short|Bayt|Short|UShort|Tamsayı|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|Tamsayı|Tamsayı|Long|Long|Long|  
-|`UShort`|Tamsayı|Tamsayı|UShort|Tamsayı|UShort|Tamsayı|UInteger|Long|ULong|  
-|`Integer`|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Long|Long|Long|  
-|`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
-|`Long`|Long|Long|Long|Long|Long|Long|Long|Long|Long|  
-|`ULong`|Long|Long|ULong|Long|ULong|Long|ULong|Long|ULong|  
+|`Boolean`|Kısa|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`SByte`|SByte|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`Byte`|Kısa|Kısa|Bayt|Kısa|UShort|Tamsayı|UInteger|Uzun|'Tur|  
+|`Short`|Kısa|Kısa|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`UShort`|Tamsayı|Tamsayı|UShort|Tamsayı|UShort|Tamsayı|UInteger|Uzun|'Tur|  
+|`Integer`|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`UInteger`|Uzun|Uzun|UInteger|Uzun|UInteger|Uzun|UInteger|Uzun|'Tur|  
+|`Long`|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|  
+|`ULong`|Uzun|Uzun|'Tur|Uzun|'Tur|Uzun|'Tur|Uzun|'Tur|  
   
- If either operand of the `\` operator is [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [Single](../../../visual-basic/language-reference/data-types/single-data-type.md), or [Double](../../../visual-basic/language-reference/data-types/double-data-type.md), Visual Basic attempts to convert it to [Long](../../../visual-basic/language-reference/data-types/long-data-type.md) before the operation, and the result data type is `Long`.  
+ `\` işlecinin herhangi bir işleneni [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [Single](../../../visual-basic/language-reference/data-types/single-data-type.md)veya [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)ise, Visual Basic işlemden önce [uzun bir süre](../../../visual-basic/language-reference/data-types/long-data-type.md) dönüştürmeye çalışır ve sonuç veri türü `Long`olur.  
   
-## <a name="relational-and-bitwise-comparisons"></a>Relational and Bitwise Comparisons  
- The result data type of a relational operation (`=`, `<>`, `<`, `>`, `<=`, `>=`) is always `Boolean`[Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md). The same is true for logical operations (`And`, `AndAlso`, `Not`, `Or`, `OrElse`, `Xor`) on `Boolean` operands.  
+## <a name="relational-and-bitwise-comparisons"></a>İlişkisel ve bit düzeyinde karşılaştırmalar  
+ İlişkisel işlemin sonuç veri türü (`=`, `<>`, `<`, `>`, `<=`, `>=`) her zaman `Boolean`[Boole veri türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md). `OrElse`işlenenleri üzerinde mantıksal işlemler (`And`, `AndAlso`, `Not`, `Or`, `Xor`, `Boolean`) için de geçerlidir.  
   
- The result data type of a bitwise logical operation depends on the data types of the operands. Note that `AndAlso` and `OrElse` are defined only for `Boolean`, and Visual Basic converts each operand as necessary to `Boolean` before performing the operation.  
+ Bit düzeyinde mantıksal bir işlemin sonuç veri türü, işlenenlerinin veri türlerine bağlıdır. `AndAlso` ve `OrElse` yalnızca `Boolean`için tanımlandığını ve Visual Basic her işleneni, işlemi gerçekleştirmeden önce `Boolean` gereken şekilde dönüştürdüğüne unutmayın.  
   
-### <a name="-----and--operators"></a>=, <>, \<, >, \<=, and >= Operators  
- If both operands are `Boolean`, Visual Basic considers `True` to be less than `False`. If a numeric type is compared with a `String`, Visual Basic attempts to convert the `String` to `Double` before the operation. A `Char` or `Date` operand can be compared only with another operand of the same data type. The result data type is always `Boolean`.  
+### <a name="-----and--operators"></a>=, < >, \<, >, \<= ve > = Işleçleri  
+ Her iki işlenen de `Boolean`, Visual Basic `False``True` daha küçük olacak şekilde kabul eder. Sayısal tür bir `String`karşılaştırılır, Visual Basic işlemden önce `Double` `String` dönüştürmeye çalışır. Bir `Char` veya `Date` işleneni yalnızca aynı veri türünün başka bir işleneniyle karşılaştırılabilir. Sonuç veri türü her zaman `Boolean`.  
   
-### <a name="bitwise-not-operator"></a>Bitwise Not Operator  
- The following table shows the result data types for the bitwise `Not` operator.  
-  
-|||||||||||  
-|---|---|---|---|---|---|---|---|---|---|  
-||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Not`|Boole değeri|SByte|Bayt|Short|UShort|Tamsayı|UInteger|Long|ULong|  
-  
- If the operand is `Decimal`, `Single`, `Double`, or `String`, Visual Basic attempts to convert it to `Long` before the operation, and the result data type is `Long`.  
-  
-### <a name="bitwise-and-or-and-xor-operators"></a>Bitwise And, Or, and Xor Operators  
- The following table shows the result data types for the bitwise `And`, `Or`, and `Xor` operators. Note that this table is symmetric; for a given combination of operand data types, the result data type is the same regardless of the order of the operands.  
+### <a name="bitwise-not-operator"></a>Bit düzeyinde Not Işleci  
+ Aşağıdaki tabloda, bit düzeyinde `Not` işlecinin sonuç veri türleri gösterilmektedir.  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Boole değeri|SByte|Short|Short|Tamsayı|Tamsayı|Long|Long|Long|  
-|`SByte`|SByte|SByte|Short|Short|Tamsayı|Tamsayı|Long|Long|Long|  
-|`Byte`|Short|Short|Bayt|Short|UShort|Tamsayı|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|Tamsayı|Tamsayı|Long|Long|Long|  
-|`UShort`|Tamsayı|Tamsayı|UShort|Tamsayı|UShort|Tamsayı|UInteger|Long|ULong|  
-|`Integer`|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Long|Long|Long|  
-|`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
-|`Long`|Long|Long|Long|Long|Long|Long|Long|Long|Long|  
-|`ULong`|Long|Long|ULong|Long|ULong|Long|ULong|Long|ULong|  
+|`Not`|Boole değeri|SByte|Bayt|Kısa|UShort|Tamsayı|UInteger|Uzun|'Tur|  
   
- If an operand is `Decimal`, `Single`, `Double`, or `String`, Visual Basic attempts to convert it to `Long` before the operation, and the result data type is the same as if that operand had already been `Long`.  
+ İşlenen `Decimal`, `Single`, `Double`veya `String`, Visual Basic işlemi işlemden önce `Long` dönüştürmeye çalışır ve sonuç veri türü `Long`olur.  
+  
+### <a name="bitwise-and-or-and-xor-operators"></a>Bit düzeyinde and, or ve XOR Işleçleri  
+ Aşağıdaki tabloda, bit düzeyinde `And`, `Or`ve `Xor` işleçleri için sonuç veri türleri gösterilmektedir. Bu tablonun simetrik olduğunu unutmayın; belirli bir işlenen veri türleri birleşimi için, sonuç veri türü işlenen sıralarından bağımsız olarak aynıdır.  
+  
+|||||||||||  
+|---|---|---|---|---|---|---|---|---|---|  
+||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
+|`Boolean`|Boole değeri|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`SByte`|SByte|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`Byte`|Kısa|Kısa|Bayt|Kısa|UShort|Tamsayı|UInteger|Uzun|'Tur|  
+|`Short`|Kısa|Kısa|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`UShort`|Tamsayı|Tamsayı|UShort|Tamsayı|UShort|Tamsayı|UInteger|Uzun|'Tur|  
+|`Integer`|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`UInteger`|Uzun|Uzun|UInteger|Uzun|UInteger|Uzun|UInteger|Uzun|'Tur|  
+|`Long`|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|  
+|`ULong`|Uzun|Uzun|'Tur|Uzun|'Tur|Uzun|'Tur|Uzun|'Tur|  
+  
+ Bir işlenen `Decimal`, `Single`, `Double`veya `String`, Visual Basic işlemi işlemden önce `Long` dönüştürmeye çalışır ve sonuç veri türü, o işlenenin zaten `Long`ile aynı olur.  
   
 ## <a name="miscellaneous-operators"></a>Çeşitli İşleçler  
- The `&` operator is defined only for concatenation of `String` operands. Visual Basic converts each operand as necessary to `String` before the operation, and the result data type is always `String`. For the purposes of the `&` operator, all conversions to `String` are considered to be widening, even if `Option Strict` is `On`.  
+ `&` işleci yalnızca `String` işlenenleri birleştirmek için tanımlanmıştır. Visual Basic, her işleneni işlemden önce `String` için gereken şekilde dönüştürür ve sonuç veri türü her zaman `String`. `&` işlecinin amaçları doğrultusunda, `Option Strict` `On`olsa bile tüm `String` dönüştürmelerin genişleyen olduğu kabul edilir.  
   
- The `Is` and `IsNot` operators require both operands to be of a reference type. The `TypeOf`...`Is` expression requires the first operand to be of a reference type and the second operand to be the name of a data type. In all these cases the result data type is `Boolean`.  
+ `Is` ve `IsNot` işleçleri her iki işlenenin de bir başvuru türü olmasını gerektirir. `TypeOf`...`Is` ifadesi, İlk işlenenin bir başvuru türünde olmasını ve ikinci işlenenin bir veri türünün adı olmasını gerektirir. Tüm bu durumlarda sonuç veri türü `Boolean`.  
   
- The `Like` operator is defined only for pattern matching of `String` operands. Visual Basic attempts to convert each operand as necessary to `String` before the operation. The result data type is always `Boolean`.  
+ `Like` işleci yalnızca `String` işlenenlerinin örüntüsünün eşleşmesi için tanımlanır. Visual Basic, her işleneni işlemden önce `String` gereken şekilde dönüştürmeye çalışır. Sonuç veri türü her zaman `Boolean`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
 - [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic aritmetik Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic karşılaştırma Işleçleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [işleçler](../../../visual-basic/language-reference/operators/index.md)
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Karşılaştırma İşleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)

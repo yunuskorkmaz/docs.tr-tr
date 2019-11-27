@@ -14,39 +14,39 @@ ms.locfileid: "74334548"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosyayı Yeniden Adlandırma
 
-Use the `RenameFile` method of the `My.Computer.FileSystem` object to rename a file by supplying the current location, file name, and the new file name. This method cannot be used to move a file; use the `MoveFile` method to move and rename the file.  
+Geçerli konumu, dosya adını ve yeni dosya adını sağlayarak bir dosyayı yeniden adlandırmak için `My.Computer.FileSystem` nesnesinin `RenameFile` yöntemini kullanın. Bu yöntem bir dosyayı taşımak için kullanılamaz; dosyayı taşımak ve yeniden adlandırmak için `MoveFile` yöntemini kullanın.  
   
-### <a name="to-rename-a-file"></a>To rename a file  
+### <a name="to-rename-a-file"></a>Bir dosyayı yeniden adlandırmak için  
   
-- Use the `My.Computer.FileSystem.RenameFile` method to rename a file. This example renames the file named `Test.txt` to `SecondTest.txt`.  
+- Bir dosyayı yeniden adlandırmak için `My.Computer.FileSystem.RenameFile` yöntemini kullanın. Bu örnek, `SecondTest.txt``Test.txt` adlı dosyayı yeniden adlandırır.  
   
      [!code-vb[VbVbcnMyFileSystem#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#9)]  
   
- This code example is also available as an IntelliSense code snippet. In the code snippet picker, the snippet is located in **File system - Processing Drives, Folders, and Files**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
+ Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide kod parçacığı, **dosya sistemi Işleme sürücülerinde, klasörlerinde ve dosyalarında**bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).  
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (\\\\.\\) (<xref:System.ArgumentException>) ile başlar.  
   
-- `newName` contains path information (<xref:System.ArgumentException>).  
+- `newName` yol bilgilerini içerir (<xref:System.ArgumentException>).  
   
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).  
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.  
   
-- `newName` is `Nothing` or an empty string (<xref:System.ArgumentNullException>).  
+- `newName` `Nothing` veya boş bir dizedir (<xref:System.ArgumentNullException>).  
   
-- The source file is not valid or does not exist (<xref:System.IO.FileNotFoundException>).  
+- Kaynak dosya geçerli değil veya yok (<xref:System.IO.FileNotFoundException>).  
   
-- There is an existing file or directory with the name specified in `newName` (<xref:System.IO.IOException>).  
+- `newName` (<xref:System.IO.IOException>) içinde belirtilen ada sahip bir dosya veya dizin var.  
   
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).  
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
   
-- A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).  
+- Yoldaki bir dosya veya dizin adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
   
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).  
+- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
   
-- The user does not have the required permission (<xref:System.UnauthorizedAccessException>).  
+- Kullanıcı gerekli izne sahip değil (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

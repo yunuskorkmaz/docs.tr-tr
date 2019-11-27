@@ -1,6 +1,6 @@
 ---
-title: Get started with F#
-description: Find out how to get started with the F# programming language.
+title: Kullanmaya başlayınF#
+description: F# Programlama diliyle çalışmaya başlama hakkında bilgi edinin.
 ms.date: 12/08/2018
 ms.openlocfilehash: 2b4baa5c948800389c171a5d9f9cd157a903063e
 ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
@@ -9,25 +9,25 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204897"
 ---
-# <a name="get-started-with-f"></a>Get Started with F\#
+# <a name="get-started-with-f"></a>F\# kullanmaya başlama
 
-You can get started with F# on your machine or online.
+Makinenize veya çevrimiçi çalışmaya F# başlamanızı sağlayabilirsiniz.
 
-## <a name="get-started-on-your-machine"></a>Get started on your machine
+## <a name="get-started-on-your-machine"></a>Makinenizde çalışmaya başlama
 
-There are multiple guides on how to install and use F# for the first time on your machine.  You can use the following table to help in making a decision:
+Makinenizde ilk kez yüklenip kullanılması F# için birden çok kılavuz vardır.  Bir karar verme konusunda yardımcı olması için aşağıdaki tabloyu kullanabilirsiniz:
 
-| OS | Prefer Visual Studio | Prefer Visual Studio Code | Prefer command line |
+| İşletim Sistemi | Visual Studio 'Yu tercih et | Visual Studio Code tercih et | Komut satırını tercih et |
 | -- |------------------------|--------------------------|-----------------------------|-------------------------|
-| Windows | [Get started with Visual Studio](get-started-visual-studio.md) | [Get started with Visual Studio Code](get-started-vscode.md) | [Get started with the .NET Core CLI](get-started-command-line.md) |
-| macOS | [Get started with VS for Mac](get-started-with-visual-studio-for-mac.md) | [Get started with Visual Studio Code](get-started-vscode.md) | [Get started with the .NET Core CLI](get-started-command-line.md) |
-| Linux | Yok | [Get started with Visual Studio Code](get-started-vscode.md) | [Get started with the .NET Core CLI](get-started-command-line.md) |
+| Windows | [Visual Studio 'Yu kullanmaya başlayın](get-started-visual-studio.md) | [Visual Studio Code kullanmaya başlayın](get-started-vscode.md) | [.NET Core CLI kullanmaya başlayın](get-started-command-line.md) |
+| Mac OS | [Mac için VS 'yi kullanmaya başlama](get-started-with-visual-studio-for-mac.md) | [Visual Studio Code kullanmaya başlayın](get-started-vscode.md) | [.NET Core CLI kullanmaya başlayın](get-started-command-line.md) |
+| Linux | Yok | [Visual Studio Code kullanmaya başlayın](get-started-vscode.md) | [.NET Core CLI kullanmaya başlayın](get-started-command-line.md) |
 
-In general, there is no specific that is better than the rest. We recommend trying all ways to use F# on your machine to see what you like the best!
+Genel olarak, geri kalanından daha iyi bir özel yoktur. En iyi şekilde neleri görmek için makinenizde F# kullanmak üzere tüm yolları denemeyi öneririz!
 
-## <a name="get-started-online"></a>Get started online
+## <a name="get-started-online"></a>Çevrimiçi çalışmaya başlayın
 
-If you'd rather not install F# and .NET on your machine, you can also get started with F# in the browser:
+Makinenize yüklemeden ve .NET ' i F# yüklemeden sonra tarayıcıda da kullanmaya F# başlayın:
 
-* [Introduction to F# on Binder](https://mybinder.org/v2/gh/dotnet/try/master?urlpath=lab) is a [Jupyter notebook](https://jupyter.org/) on hosted via the free [Binder](https://mybinder.org/) service. No sign-up needed!
-* [The Fable REPL](https://fable.io/repl/) is an interactive, in-browser REPL that uses [Fable](https://fable.io/) to translate F# code into JavaScript. Check out the numerous samples that range from F# basics to a fully fledged video game all executing in your browser!
+* [Cilde F# giriş](https://mybinder.org/v2/gh/dotnet/try/master?urlpath=lab) , ücretsiz [Ciltçi](https://mybinder.org/) hizmeti aracılığıyla barındırılan bir [Jupyter Not Defterinizdir](https://jupyter.org/) . Kaydolma gerekmez!
+* [FABLE REPL](https://fable.io/repl/) , kodu JavaScript 'e çevirmek F# için [Fable](https://fable.io/) kullanan etkileşimli, tarayıcı içi bir REPL ' dır. Tüm tarayıcılarda yürütülen ve tamamen güvenilir video oyunlarından F# oluşan çok sayıda örnek için göz atın!

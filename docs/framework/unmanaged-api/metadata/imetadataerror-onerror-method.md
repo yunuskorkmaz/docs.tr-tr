@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431226"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError Yöntemi
-Provides notification of errors that occur during the metadata merge.  
+Meta veri birleştirme sırasında oluşan hataların bildirimini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT OnError (
   
 ## <a name="parameters"></a>Parametreler  
  `hrError`  
- [in] The HRESULT error value returned to the calling method.  
+ 'ndaki Çağırma yöntemine döndürülen HRESULT hata değeri.  
   
  `token`  
- [in] The metadata token of the code object that was being merged when the error occurred.  
+ 'ndaki Hata oluştuğunda birleştirilmekte olan kod nesnesinin meta veri belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -31,15 +31,15 @@ ms.locfileid: "74350466"
 ---
 # <a name="cryptographic-signatures"></a>Şifreleme İmzası
 
-Cryptographic digital signatures use public key algorithms to provide data integrity. When you sign data with a digital signature, someone else can verify the signature, and can prove that the data originated from you and was not altered after you signed it. For more information about digital signatures, see [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md).
+Şifreleme dijital imzaları, veri bütünlüğü sağlamak için ortak anahtar algoritmaları kullanır. Verileri dijital imzayla imzaladığınızda, başka biri imzayı doğrulayabilirler ve verilerin sizi imzaladıktan sonra değiştirilmediğini kanıtlayabilirler. Dijital imzalar hakkında daha fazla bilgi için bkz. [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md).
 
-This topic explains how to generate and verify digital signatures using classes in the <xref:System.Security.Cryptography?displayProperty=nameWithType> namespace.
+Bu konu, <xref:System.Security.Cryptography?displayProperty=nameWithType> ad alanındaki sınıfları kullanarak dijital imzaların nasıl oluşturulacağını ve doğrulandığını açıklamaktadır.
 
-## <a name="generating-signatures"></a>Generating Signatures
+## <a name="generating-signatures"></a>Imza oluşturma
 
-Digital signatures are usually applied to hash values that represent larger data. The following example applies a digital signature to a hash value. First, a new instance of the <xref:System.Security.Cryptography.RSACryptoServiceProvider> class is created to generate a public/private key pair. Next, the <xref:System.Security.Cryptography.RSACryptoServiceProvider> is passed to a new instance of the <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> class. This transfers the private key to the <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>, which actually performs the digital signing. Before you can sign the hash code, you must specify a hash algorithm to use. This example uses the SHA1 algorithm. Finally, the <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> method is called to perform the signing.
+Dijital imzalar genellikle daha büyük verileri temsil eden karma değerlere uygulanır. Aşağıdaki örnek bir karma değere dijital imza uygular. İlk olarak, ortak/özel anahtar çifti oluşturmak için <xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfının yeni bir örneği oluşturulur. Sonra <xref:System.Security.Cryptography.RSACryptoServiceProvider>, <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> sınıfının yeni bir örneğine geçirilir. Bu, özel anahtarı, aslında dijital imzalamayı gerçekleştiren <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>aktarır. Karma kodu imzalayabilmeniz için önce kullanmak üzere bir karma algoritması belirtmeniz gerekir. Bu örnek, SHA1 algoritmasını kullanır. Son olarak, imzalamayı gerçekleştirmek için <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> yöntemi çağırılır.
 
-Due to collision problems with SHA1, Microsoft recommends SHA256 or better.
+Microsoft, SHA1 ile ilgili çakışma sorunları nedeniyle SHA256 veya daha iyi bir performans öneriyor.
 
 ```vb
 Imports System.Security.Cryptography
@@ -100,27 +100,27 @@ class Class1
 }
 ```
 
-### <a name="signing-xml-files"></a>Signing XML Files
+### <a name="signing-xml-files"></a>XML dosyalarını imzalama
 
-The .NET Framework provides the <xref:System.Security.Cryptography.Xml> namespace, which enables you sign XML. Signing XML is important when you want to verify that the XML originates from a certain source. For example, if you are using a stock quote service that uses XML, you can verify the source of the XML if it is signed.
+.NET Framework, XML imzalamayı sağlayan <xref:System.Security.Cryptography.Xml> ad alanını sağlar. XML 'nin belirli bir kaynaktan kaynaklandığını doğrulamak istediğinizde XML imzalama önemlidir. Örneğin, XML kullanan bir stok teklif hizmeti kullanıyorsanız, imzalanmışsa XML kaynağını doğrulayabilirsiniz.
 
-The classes in this namespace follow the [XML-Signature Syntax and Processing recommendation](https://www.w3.org/TR/xmldsig-core/) from the World Wide Web Consortium.
+Bu ad alanındaki sınıflar, World Wide Web Konsorsiyumu [XML Imza söz dizimini ve işlem](https://www.w3.org/TR/xmldsig-core/) önerilerini izler.
 
-## <a name="verifying-signatures"></a>Verifying Signatures
+## <a name="verifying-signatures"></a>Imzalar doğrulanıyor
 
-To verify that data was signed by a particular party, you must have the following information:
+Verilerin belirli bir taraflarca imzalandığını doğrulamak için aşağıdaki bilgilere sahip olmanız gerekir:
 
-- The public key of the party that signed the data.
+- Verileri imzalayan tarafın ortak anahtarı.
 
-- The digital signature.
+- Dijital imza.
 
-- The data that was signed.
+- İmzalanmış veriler.
 
-- The hash algorithm used by the signer.
+- İmzalayan tarafından kullanılan karma algoritması.
 
-To verify a signature signed by the <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> class, use the <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> class. The <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> class must be supplied the public key of the signer. You will need the values of the modulus and the exponent to specify the public key. (The party that generated the public/private key pair should provide these values.) First create an <xref:System.Security.Cryptography.RSACryptoServiceProvider> object to hold the public key that will verify the signature, and then initialize an <xref:System.Security.Cryptography.RSAParameters> structure to the modulus and exponent values that specify the public key.
+<xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> sınıfı tarafından imzalanan bir imzayı doğrulamak için <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> sınıfını kullanın. <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> sınıfı, imzalayanın ortak anahtarı sağlanmalıdır. Ortak anahtarı belirtmek için mod ve üs değerlerinin değerlerine ihtiyacınız olacaktır. (Ortak/özel anahtar çiftini oluşturan tarafın bu değerleri sağlaması gerekir.) Önce imzayı doğrulayacak ortak anahtarı tutmak üzere bir <xref:System.Security.Cryptography.RSACryptoServiceProvider> nesnesi oluşturun ve sonra ortak anahtarı belirten mod ve üs değerlerini bir <xref:System.Security.Cryptography.RSAParameters> yapısını başlatın.
 
-The following code shows the creation of an <xref:System.Security.Cryptography.RSAParameters> structure. The `Modulus` property is set to the value of a byte array called `modulusData` and the `Exponent` property is set to the value of a byte array called `exponentData`.
+Aşağıdaki kod <xref:System.Security.Cryptography.RSAParameters> yapısını oluşturmayı gösterir. `Modulus` özelliği, `modulusData` adlı bir bayt dizisinin değerine ayarlanır ve `Exponent` özelliği `exponentData`adlı bir bayt dizisinin değerine ayarlanır.
 
 ```vb
 Dim rsaKeyInfo As RSAParameters
@@ -134,9 +134,9 @@ rsaKeyInfo.Modulus = modulusData;
 rsaKeyInfo.Exponent = exponentData;
 ```
 
-After you have created the <xref:System.Security.Cryptography.RSAParameters> object, you can initialize a new instance of the <xref:System.Security.Cryptography.RSACryptoServiceProvider> class to the values specified in <xref:System.Security.Cryptography.RSAParameters>. The <xref:System.Security.Cryptography.RSACryptoServiceProvider> is, in turn, passed to the constructor of an <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> to transfer the key.
+<xref:System.Security.Cryptography.RSAParameters> nesnesini oluşturduktan sonra, <xref:System.Security.Cryptography.RSAParameters>belirtilen değerlere <xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfının yeni bir örneğini başlatabilirsiniz. <xref:System.Security.Cryptography.RSACryptoServiceProvider>, anahtarı aktarmak için <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> oluşturucusuna geçirilir.
 
-The following example illustrates this process. In this example, `hashValue` and `signedHashValue` are arrays of bytes provided by a remote party. The remote party has signed the `hashValue` using the SHA1 algorithm, producing the digital signature `signedHashValue`. The <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> method verifies that the digital signature is valid and was used to sign the `hashValue`.
+Aşağıdaki örnek bu süreci göstermektedir. Bu örnekte, `hashValue` ve `signedHashValue`, uzak bir tarafın sağladığı bayt dizilerdir. Uzak taraf, dijital imza `signedHashValue`üreten SHA1 algoritmasını kullanarak `hashValue` imzalamıştır. <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> yöntemi, dijital imzanın geçerli olduğunu ve `hashValue`imzalamak için kullanıldığını doğrular.
 
 ```vb
 Dim rsa As New RSACryptoServiceProvider()
@@ -165,7 +165,7 @@ else
 }
 ```
 
-This code fragment will display "`The signature is valid`" if the signature is valid and "`The signature is not valid`" if it is not.
+İmza geçerliyse, bu kod parçası "`The signature is valid`" ve değilse "`The signature is not valid`" görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -10,21 +10,21 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204574"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a>Hizmet: Güvenlik Doğrulama ve Kimlik Doğrulama Hataları
-Counter name: Security Validation and Authentication Failures  
+Sayaç adı: güvenlik doğrulama ve kimlik doğrulama sorunları  
   
 ## <a name="description"></a>Açıklama  
- This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter. Such problems include:  
+ Bu sayaç, "güvenlik çağrıları yetkilendirilmemiş" sayacı kapsamında olmayan bir güvenlik sorunu nedeniyle her ileti reddedildiğinde artırılır. Bu tür sorunlar şunlardır:  
   
-- Client token cannot be read from the message.  
+- İstemci belirteci iletiden okunamıyor.  
   
-- Client token has failed authentication (for example, bad password).  
+- İstemci belirteci kimlik doğrulaması başarısız oldu (örneğin, hatalı parola).  
   
-- Signature verification has failed (for example, the message has been tampered).  
+- İmza doğrulama başarısız oldu (örneğin, ileti değiştirilmiş).  
   
-- The message is a duplicate from a previous one, which can happen during a replay attack.  
+- İleti, bir yeniden yürütme saldırısında meydana gelebilen bir öncekinden yineleniyor.  
   
-- A decryption failure has occurred.  
+- Şifre çözme hatası oluştu.  
   
-- Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.  
+- İletide bazı gerekli öğeler (örneğin, eksik zaman damgası veya şifrelenmiş veri bloğu) eksik.  
   
-- Errors have occurred during TLSNEGO/SPNEGO handshake.
+- TLSNEGO/SPNEGO Handshake sırasında hatalar oluştu.

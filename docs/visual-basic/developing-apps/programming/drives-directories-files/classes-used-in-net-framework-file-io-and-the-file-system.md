@@ -13,56 +13,56 @@ ms.locfileid: "74348925"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Dosya Sistemi ve .NET Framework Dosyası G/Ç'de Kullanılan Sınıflar (Visual Basic)
 
-The following tables list the classes commonly used for .NET Framework file I/O, categorized into file I/O classes, classes used for creating streams, and classes used to read and write to streams.  
+Aşağıdaki tablolarda, .NET Framework dosya g/ç için yaygın olarak kullanılan sınıflar, dosya g/ç sınıfları, akış oluşturmak için kullanılan sınıflar ve akışlarda okuma ve yazma için kullanılan sınıflar listelenmektedir.  
   
-For a more comprehensive listing, see [Class Library Overview](../../../../standard/class-library-overview.md).  
+Daha kapsamlı bir liste için bkz. [sınıf kitaplığına genel bakış](../../../../standard/class-library-overview.md).  
   
-## <a name="basic-io-classes-for-files-drives-and-directories"></a>Basic I/O Classes for Files, Drives, and Directories  
+## <a name="basic-io-classes-for-files-drives-and-directories"></a>Dosyalar, sürücüler ve dizinler için temel g/ç sınıfları  
 
- The following table lists and describes the main classes used for file I/O.  
+ Aşağıdaki tabloda dosya g/ç için kullanılan ana sınıflar listelenmektedir ve açıklanmaktadır.  
   
-|örneği|Açıklama|  
+|Sınıf|Açıklama|  
 |-----------|-----------------|  
-|<xref:System.IO.Directory?displayProperty=nameWithType>|Provides static methods for creating, moving, and enumerating through directories and subdirectories.|  
-|<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Provides instance methods for creating, moving, and enumerating through directories and subdirectories.|  
-|<xref:System.IO.DriveInfo?displayProperty=nameWithType>|Provides instance methods for creating, moving, and enumerating through drives.|  
-|<xref:System.IO.File?displayProperty=nameWithType>|Provides static methods for creating, copying, deleting, moving, and opening files, and aids in the creation of a `FileStream`.|  
-|<xref:System.IO.FileAccess?displayProperty=nameWithType>|Defines constants for read, write, or read/write access to a file.|  
-|<xref:System.IO.FileAttributes?displayProperty=nameWithType>|Provides attributes for files and directories such as `Archive`, `Hidden`, and `ReadOnly`.|  
-|<xref:System.IO.FileInfo?displayProperty=nameWithType>|Provides static methods for creating, copying, deleting, moving, and opening files, and aids in the creation of a `FileStream`.|  
-|<xref:System.IO.FileMode?displayProperty=nameWithType>|Controls how a file is opened. This parameter is specified in many of the constructors for `FileStream` and `IsolatedStorageFileStream`, and for the `Open` methods of <xref:System.IO.File> and <xref:System.IO.FileInfo>.|  
-|<xref:System.IO.FileShare?displayProperty=nameWithType>|Defines constants for controlling the type of access other file streams can have to the same file.|  
-|<xref:System.IO.Path?displayProperty=nameWithType>|Provides methods and properties for processing directory strings.|  
-|<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|Controls the access of files and folders by defining <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> and <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> permissions.|  
+|<xref:System.IO.Directory?displayProperty=nameWithType>|Dizinler ve alt dizinler aracılığıyla oluşturma, taşıma ve sıralama için statik yöntemler sağlar.|  
+|<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Dizinler ve alt dizinler aracılığıyla oluşturma, taşıma ve numaralandırma için örnek yöntemleri sağlar.|  
+|<xref:System.IO.DriveInfo?displayProperty=nameWithType>|Sürücüler arasında oluşturma, taşıma ve numaralandırma için örnek yöntemleri sağlar.|  
+|<xref:System.IO.File?displayProperty=nameWithType>|Dosya oluşturma, kopyalama, silme, taşıma ve açma için statik yöntemler sağlar ve bir `FileStream`oluşturulmasına yardımcı olur.|  
+|<xref:System.IO.FileAccess?displayProperty=nameWithType>|Bir dosyaya okuma, yazma veya okuma/yazma erişimi için sabitleri tanımlar.|  
+|<xref:System.IO.FileAttributes?displayProperty=nameWithType>|`Archive`, `Hidden`ve `ReadOnly`gibi dosyalar ve dizinler için öznitelikler sağlar.|  
+|<xref:System.IO.FileInfo?displayProperty=nameWithType>|Dosya oluşturma, kopyalama, silme, taşıma ve açma için statik yöntemler sağlar ve bir `FileStream`oluşturulmasına yardımcı olur.|  
+|<xref:System.IO.FileMode?displayProperty=nameWithType>|Bir dosyanın nasıl açıldığını denetler. Bu parametre `FileStream` ve `IsolatedStorageFileStream`için oluşturucuların çoğunda ve <xref:System.IO.File> ve <xref:System.IO.FileInfo>`Open` yöntemleri için belirtilir.|  
+|<xref:System.IO.FileShare?displayProperty=nameWithType>|Diğer dosya akışlarının aynı dosyaya sahip olduğu erişimin türünü denetlemek için sabitleri tanımlar.|  
+|<xref:System.IO.Path?displayProperty=nameWithType>|Dizin dizelerini işlemek için yöntemler ve özellikler sağlar.|  
+|<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|<xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> ve <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> izinleri tanımlayarak dosya ve klasörlerin erişimini denetler.|  
   
-## <a name="classes-used-to-create-streams"></a>Classes Used to Create Streams  
+## <a name="classes-used-to-create-streams"></a>Akış oluşturmak için kullanılan sınıflar  
 
- The following table lists and describes the main classes used to create streams.  
+ Aşağıdaki tabloda, akışlar oluşturmak için kullanılan ana sınıflar listelenmektedir ve açıklanmaktadır.  
   
-|örneği|Açıklama|  
+|Sınıf|Açıklama|  
 |-----------|-----------------|  
-|<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Adds a buffering layer to read and write operations on another stream.|  
-|<xref:System.IO.FileStream?displayProperty=nameWithType>|Supports random access to files through its <xref:System.IO.FileStream.Seek%2A> method. <xref:System.IO.FileStream> opens files synchronously by default but also supports asynchronous operation.|  
-|<xref:System.IO.MemoryStream?displayProperty=nameWithType>|Creates a stream whose backing store is memory, rather than a file.|  
-|<xref:System.Net.Sockets.NetworkStream?displayProperty=nameWithType>|Provides the underlying stream of data for network access.|  
-|<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|Defines a stream that links data streams to cryptographic transformations.|  
+|<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Başka bir akışta okuma ve yazma işlemlerine yönelik bir arabelleğe alma katmanı ekler.|  
+|<xref:System.IO.FileStream?displayProperty=nameWithType>|<xref:System.IO.FileStream.Seek%2A> yöntemi aracılığıyla dosyalara rastgele erişimi destekler. <xref:System.IO.FileStream> dosyaları varsayılan olarak eşzamanlı olarak açar, ancak aynı zamanda zaman uyumsuz işlemi destekler.|  
+|<xref:System.IO.MemoryStream?displayProperty=nameWithType>|Yedekleme deposu bir dosya yerine bellek olan bir akış oluşturur.|  
+|<xref:System.Net.Sockets.NetworkStream?displayProperty=nameWithType>|Ağ erişimi için temel alınan veri akışını sağlar.|  
+|<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|Veri akışlarını şifreleme dönüşümlerine bağlayan bir akış tanımlar.|  
   
-## <a name="classes-used-to-read-from-and-write-to-streams"></a>Classes Used to Read from and Write to Streams  
+## <a name="classes-used-to-read-from-and-write-to-streams"></a>Akışları okumak ve akışlara yazmak için kullanılan sınıflar  
 
- The following table shows the specific classes used for reading from and writing to files with streams.  
+ Aşağıdaki tabloda, akışlarla dosyaları okumak ve dosyalara yazmak için kullanılan belirli sınıflar gösterilmektedir.  
   
-|**Class**|**Açıklama**|  
+|**Sınıfı**|**Açıklama**|  
 |---------------|---------------------|  
-|<xref:System.IO.BinaryReader?displayProperty=nameWithType>|Reads encoded strings and primitive data types from a <xref:System.IO.FileStream>.|  
-|<xref:System.IO.BinaryWriter?displayProperty=nameWithType>|Writes encoded strings and primitive data types to a <xref:System.IO.FileStream>.|  
-|<xref:System.IO.StreamReader?displayProperty=nameWithType>|Reads characters from a <xref:System.IO.FileStream>, using <xref:System.IO.StreamReader.CurrentEncoding%2A> to convert characters to and from bytes. <xref:System.IO.StreamReader> has a constructor that attempts to ascertain the correct <xref:System.IO.StreamReader.CurrentEncoding%2A> for a given stream, based on the presence of a <xref:System.IO.StreamReader.CurrentEncoding%2A>-specific preamble, such as a byte order mark.|  
-|<xref:System.IO.StreamWriter?displayProperty=nameWithType>|Writes characters to a `FileStream`, using <xref:System.IO.StreamWriter.Encoding%2A> to convert characters to bytes.|  
-|<xref:System.IO.StringReader?displayProperty=nameWithType>|Reads characters from a `String`. Output can be either a stream in any encoding or a `String`.|  
-|<xref:System.IO.StringWriter?displayProperty=nameWithType>|Writes characters to a `String`. Output can be either a stream in any encoding or a `String`.|  
+|<xref:System.IO.BinaryReader?displayProperty=nameWithType>|<xref:System.IO.FileStream>kodlanmış dizeleri ve temel veri türlerini okur.|  
+|<xref:System.IO.BinaryWriter?displayProperty=nameWithType>|Kodlanmış dizeleri ve temel veri türlerini bir <xref:System.IO.FileStream>yazar.|  
+|<xref:System.IO.StreamReader?displayProperty=nameWithType>|Karakterleri bayt ve bayta dönüştürmek için <xref:System.IO.StreamReader.CurrentEncoding%2A> kullanarak bir <xref:System.IO.FileStream>karakterleri okur. <xref:System.IO.StreamReader>, bir bayt sıra işareti gibi <xref:System.IO.StreamReader.CurrentEncoding%2A>özgü bir girişin varlığına bağlı olarak, belirli bir akış için doğru <xref:System.IO.StreamReader.CurrentEncoding%2A> yokuna deneyen bir oluşturucuya sahiptir.|  
+|<xref:System.IO.StreamWriter?displayProperty=nameWithType>|Karakterleri bayta dönüştürmek için <xref:System.IO.StreamWriter.Encoding%2A> kullanarak bir `FileStream`karakterler yazar.|  
+|<xref:System.IO.StringReader?displayProperty=nameWithType>|`String`karakterleri okur. Çıktı herhangi bir kodlamada veya bir `String`akış olabilir.|  
+|<xref:System.IO.StringWriter?displayProperty=nameWithType>|`String`karakterler yazar. Çıktı herhangi bir kodlamada veya bir `String`akış olabilir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Akışlar Oluşturma](../../../../standard/io/composing-streams.md)
 - [Dosya ve Akış G/Ç'si](../../../../standard/io/index.md)
 - [Zaman Uyumsuz Dosya G/Ç](../../../../standard/io/asynchronous-file-i-o.md)
-- [Basics of .NET Framework File I/O and the File System (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+- [.NET Framework dosya g/ç ve dosya sistemi (Visual Basic) temelleri](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

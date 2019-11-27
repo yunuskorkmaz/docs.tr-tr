@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446212"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData Metodu
-Returns the source server data for the module. The caller must free resources by using `CoTaskMemFree`.  
+Modülün kaynak sunucu verilerini döndürür. Çağıran, `CoTaskMemFree`kullanarak kaynakları serbest vermelidir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,16 +35,16 @@ HRESULT GetSourceServerData(
   
 ## <a name="parameters"></a>Parametreler  
  `pDataByteCount`  
- [out] A pointer to a `ULONG32` that receives the size, in bytes, of the source server data.  
+ dışı Kaynak sunucu verilerinin bayt cinsinden boyutunu alan bir `ULONG32` işaretçisi.  
   
  `ppData`  
- [out] A pointer to the returned `pDataByteCount` value.  
+ dışı Döndürülen `pDataByteCount` değerine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436366"
 ---
 # <a name="iceegengenerateceefile-method"></a>ICeeGen::GenerateCeeFile Yöntemi
-Generates a code-base file that contains the code base currently loaded into this [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
+Şu anda bu [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) arabirimine yüklenmiş kod tabanını içeren bir kod tabanı dosyası oluşturur.  
   
- This method is obsolete and should not be used.  
+ Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,16 +34,16 @@ HRESULT GenerateCeeFile ();
 ```  
   
 ## <a name="parameters"></a>Parametreler  
- `GenerateCeeFile` takes no parameters.  
+ `GenerateCeeFile` hiçbir parametre alır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

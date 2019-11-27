@@ -1,5 +1,5 @@
 ---
-title: Disk full
+title: Disk dolu
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID61
@@ -11,12 +11,12 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351104"
 ---
-# <a name="disk-full-visual-basic"></a>Disk full (Visual Basic)
-There is not enough room on the disk to either complete a `Print`, `Write`, or `FileClose` operation, or to create required files.  
+# <a name="disk-full-visual-basic"></a>Disk dolu (Visual Basic)
+`Print`, `Write`veya `FileClose` işlemini tamamlayacak veya gerekli dosyaları oluşturmak için diskte yeterli alan yok.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Create more room on the disk by either moving some files to another disk or deleting some files.  
+- Bazı dosyaları başka bir diske taşıyarak veya bazı dosyaları silerek diskte daha fazla alan oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

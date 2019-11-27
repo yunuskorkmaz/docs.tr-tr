@@ -20,17 +20,17 @@ ms.locfileid: "74349212"
 ---
 # <a name="accessing-user-data-visual-basic"></a>Kullanıcı Verilerine Erişme (Visual Basic)
 
-This section contains topics dealing with the `My.User` object and tasks that you can accomplish with it.  
+Bu bölümde, `My.User` nesne ve bunlarla ilgili konular yer almaktadır.  
   
- The `My.User` object provides access to information about the logged-on user by returning an object that implements the <xref:System.Security.Principal.IPrincipal> interface.  
+ `My.User` nesnesi, <xref:System.Security.Principal.IPrincipal> arabirimini uygulayan bir nesne döndürerek oturum açan kullanıcı hakkındaki bilgilere erişim sağlar.  
   
 ## <a name="tasks"></a>Görevler  
   
 |Bitiş|Bkz.|  
 |--------|---------|  
-|Get the user's login name|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
-|Get the user's domain name, if the application uses Windows authentication|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
-|Determine the user's role|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
+|Kullanıcının oturum açma adını al|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
+|Uygulamanın Windows kimlik doğrulamasını kullanması durumunda kullanıcının etki alanı adını al|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
+|Kullanıcının rolünü belirleme|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -17,35 +17,35 @@ ms.locfileid: "74345555"
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Karşıya Dosya Yükleme
 
-The <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> method can be used to upload a file and store it to a remote location. If the `ShowUI` parameter is set to `True`, a dialog box is displayed that shows the progress of the upload and allows users to cancel the operation.  
+<xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> yöntemi bir dosyayı karşıya yüklemek ve uzak bir konuma depolamak için kullanılabilir. `ShowUI` parametresi `True`olarak ayarlanırsa, karşıya yüklemenin ilerlemesini gösteren bir iletişim kutusu görüntülenir ve kullanıcıların işlemi iptal etmesine izin verir.  
   
-### <a name="to-upload-a-file"></a>To upload a file  
+### <a name="to-upload-a-file"></a>Bir dosyayı karşıya yüklemek için  
   
-- Use the `UploadFile` method to upload a file, specifying the source file's location and the target directory location as a string or URI (Uniform Resource Identifier).This example uploads the file `Order.txt` to `http://www.cohowinery.com/uploads.aspx`.  
+- Kaynak dosyanın konumunu ve hedef dizin konumunu bir dize veya URI (Tekdüzen Kaynak tanımlayıcısı) olarak belirterek bir dosyayı karşıya yüklemek için `UploadFile` yöntemini kullanın. Bu örnek, `http://www.cohowinery.com/uploads.aspx``Order.txt` dosyayı karşıya yükler.  
   
      [!code-vb[VbResourceTasks#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#6)]  
   
-### <a name="to-upload-a-file-and-show-the-progress-of-the-operation"></a>To upload a file and show the progress of the operation  
+### <a name="to-upload-a-file-and-show-the-progress-of-the-operation"></a>Bir dosyayı karşıya yüklemek ve işlemin ilerlemesini göstermek için  
   
-- Use the `UploadFile` method to upload a file, specifying the source file's location and the target directory location as a string or URI. This example uploads the file `Order.txt` to `http://www.cohowinery.com/uploads.aspx` without supplying a user name or password, shows the progress of the upload, and has a time-out interval of 500 milliseconds.  
+- Kaynak dosyanın konumunu ve hedef dizin konumunu dize veya URI olarak belirterek bir dosyayı karşıya yüklemek için `UploadFile` yöntemini kullanın. Bu örnek, bir Kullanıcı adı veya parola sağlamadan dosya `Order.txt` `http://www.cohowinery.com/uploads.aspx` yükler, karşıya yüklemenin ilerlemesini gösterir ve 500 milisaniyelik zaman aşımı aralığına sahiptir.  
   
      [!code-vb[VbResourceTasks#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#7)]  
   
-### <a name="to-upload-a-file-supplying-a-user-name-and-password"></a>To upload a file, supplying a user name and password  
+### <a name="to-upload-a-file-supplying-a-user-name-and-password"></a>Bir dosyayı karşıya yüklemek için Kullanıcı adı ve parola sağlama  
   
-- Use the `UploadFile` method to upload a file, specifying the source file's location and the target directory location as a string or URI, and specifying the user name and the password. This example uploads the file `Order.txt` to `http://www.cohowinery.com/uploads.aspx`, supplying the user name `anonymous` and a blank password.  
+- Kaynak dosyanın konumunu ve hedef dizin konumunu bir dize veya URI olarak belirterek ve Kullanıcı adını ve parolayı belirterek bir dosyayı karşıya yüklemek için `UploadFile` yöntemini kullanın. Bu örnek, Kullanıcı adı `anonymous` ve boş bir parola sunarak dosya `Order.txt` `http://www.cohowinery.com/uploads.aspx`karşıya yükler.  
   
      [!code-vb[VbResourceTasks#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#8)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- The following conditions may throw an exception:  
+ Aşağıdaki koşullar bir özel durum oluşturabilir:  
   
-- The local file path is not valid (<xref:System.ArgumentException>).  
+- Yerel dosya yolu geçerli değil (<xref:System.ArgumentException>).  
   
-- Authentication failed (<xref:System.Security.SecurityException>).  
+- Kimlik doğrulama başarısız oldu (<xref:System.Security.SecurityException>).  
   
-- The connection timed out (<xref:System.TimeoutException>).  
+- Bağlantı zaman aşımına uğradı (<xref:System.TimeoutException>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

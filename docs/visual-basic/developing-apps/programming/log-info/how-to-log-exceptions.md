@@ -14,55 +14,55 @@ ms.locfileid: "74352081"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Günlük Özel Durumları
 
-You can use the `My.Application.Log` and `My.Log` objects to log information about exceptions that occur in your application. These examples show how to use the `My.Application.Log.WriteException` method to log exceptions that you catch explicitly and exceptions that are unhandled.  
+Uygulamanızda oluşan özel durumlarla ilgili bilgileri günlüğe kaydetmek için `My.Application.Log` ve `My.Log` nesnelerini kullanabilirsiniz. Bu örnekler, açıkça yakalayadığınız özel durumları ve işlenmemiş özel durumları günlüğe kaydetmek için `My.Application.Log.WriteException` yönteminin nasıl kullanılacağını gösterir.  
   
- For logging tracing information, use the `My.Application.Log.WriteEntry` method. For more information, see <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
+ İzleme bilgilerini günlüğe kaydetmek için `My.Application.Log.WriteEntry` yöntemini kullanın. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
   
-### <a name="to-log-a-handled-exception"></a>To log a handled exception  
+### <a name="to-log-a-handled-exception"></a>İşlenmiş bir özel durumu günlüğe kaydetmek için  
   
-1. Create the method that will generate the exception information.  
+1. Özel durum bilgilerini oluşturacak yöntemi oluşturun.  
   
      [!code-vb[VbVbalrMyApplicationLog#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#9)]  
   
-2. Use a `Try...Catch` block to catch the exception.  
+2. Özel durumu yakalamak için `Try...Catch` bloğu kullanın.  
   
      [!code-vb[VbVbalrMyApplicationLog#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#6)]  
   
-3. Put the code that could generate an exception in the `Try` block.  
+3. `Try` bloğunda özel durum üretebilen kodu koyun.  
   
-     Uncomment the `Dim` and `MsgBox` lines to cause a <xref:System.NullReferenceException> exception.  
+     `Dim` ve `MsgBox` satırların açıklamasını <xref:System.NullReferenceException> özel durumuna neden olacak şekilde kaldırın.  
   
      [!code-vb[VbVbalrMyApplicationLog#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#7)]  
   
-4. In the `Catch` block, use the `My.Application.Log.WriteException` method to write the exception information.  
+4. `Catch` bloğunda, özel durum bilgilerini yazmak için `My.Application.Log.WriteException` metodunu kullanın.  
   
      [!code-vb[VbVbalrMyApplicationLog#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#8)]  
   
-     The following example shows the complete code for logging a handled exception.  
+     Aşağıdaki örnek, işlenmiş bir özel durumu günlüğe kaydetmek için tüm kodu gösterir.  
   
      [!code-vb[VbVbalrMyApplicationLog#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#10)]  
   
-### <a name="to-log-an-unhandled-exception"></a>To log an unhandled exception  
+### <a name="to-log-an-unhandled-exception"></a>İşlenmeyen bir özel durumu günlüğe kaydetmek için  
   
-1. Have a project selected in **Solution Explorer**. On the **Project** menu, choose **Properties**.  
+1. **Çözüm Gezgini**' de bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' i seçin.  
   
-2. Click the **Application** tab.  
+2. **Uygulama** sekmesine tıklayın.  
   
-3. Click the **View Application Events** button to open the Code Editor.  
+3. Kod düzenleyicisini açmak için **uygulama olaylarını görüntüle** düğmesine tıklayın.  
   
-     This opens the ApplicationEvents.vb file.  
+     Bu, ApplicationEvents. vb dosyasını açar.  
   
-4. Have the ApplicationEvents.vb file open in the Code Editor. On the **General** menu, choose **MyApplication Events**.  
+4. ApplicationEvents. vb dosyasını kod düzenleyicisinde açın. **Genel** menüsünde **MyApplication olayları**' nı seçin.  
   
-5. On the **Declarations** menu, choose **UnhandledException**.  
+5. **Bildirimler** menüsünde **UnhandledException**öğesini seçin.  
   
-     The application raises the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> event before the main application runs.  
+     Uygulama, ana uygulama çalışmadan önce <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> olayını başlatır.  
   
-6. Add the `My.Application.Log.WriteException` method to the `UnhandledException` event handler.  
+6. `My.Application.Log.WriteException` yöntemini `UnhandledException` olay işleyicisine ekleyin.  
   
      [!code-vb[VbVbalrMyApplicationLog#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#4)]  
   
-     The following example shows the complete code for logging an unhandled exception.  
+     Aşağıdaki örnekte işlenmeyen bir özel durum günlüğe kaydetme için kodun tamamı gösterilmektedir.  
   
      [!code-vb[VbVbalrMyApplicationLog#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#5)]  
   

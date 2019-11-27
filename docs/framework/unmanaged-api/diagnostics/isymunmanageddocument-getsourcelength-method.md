@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449157"
 ---
 # <a name="isymunmanageddocumentgetsourcelength-method"></a>ISymUnmanagedDocument::GetSourceLength Yöntemi
-Gets the length, in bytes, of the embedded source.  
+Gömülü kaynağın uzunluğunu bayt olarak alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,10 +34,10 @@ HRESULT GetSourceLength(
   
 ## <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] A pointer to a variable that indicates the length, in bytes, of the embedded source.  
+ dışı Gömülü kaynağın bayt cinsinden uzunluğunu belirten bir değişken işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

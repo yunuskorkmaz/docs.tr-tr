@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432123"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly Yöntemi
-Creates an `Assembly` structure containing metadata for the specified assembly and returns the associated metadata token.  
+Belirtilen derleme için meta verileri içeren bir `Assembly` yapısı oluşturur ve ilişkili meta veri belirtecini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,37 +41,37 @@ HRESULT DefineAssembly (
   
 ## <a name="parameters"></a>Parametreler  
  `pbPublicKey`  
- [in] The public key that identifies the publisher of the assembly, or NULL if the assembly is not strongly named.  
+ 'ndaki Derlemenin yayımcısını tanımlayan ortak anahtar veya derleme kesin olarak adlandırılmamışsa NULL.  
   
  `cbPublicKey`  
- [in] The size in bytes of `pbPublicKey`.  
+ 'ndaki `pbPublicKey`bayt cinsinden boyutu.  
   
  `uHashAlgId`  
- [in] The identifier of the hashing algorithm to use to encrypt the files in the assembly, or NULL to specify the SHA-1 algorithm.  
+ 'ndaki Derlemedeki dosyaları şifrelemek için kullanılan karma algoritmanın tanımlayıcısı ya da SHA-1 algoritmasını belirtmek için NULL.  
   
  `szName`  
- [in] The human-readable text name of the assembly. This value must not exceed 1024 characters.  
+ 'ndaki Derlemenin insanların okunabilir metin adı. Bu değerin 1024 karakteri aşmaması gerekir.  
   
  `pMetaData`  
- [in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.  
+ 'ndaki Derleme için sürüm, platform ve yerel ayar bilgilerini içeren bir ASSEMBLYMETADATA örneğine yönelik bir işaretçi.  
   
  `dwAssemblyFlags`  
- [in] A combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that describe features of the assembly.  
+ 'ndaki Derlemenin özelliklerini tanımlayan [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) değerlerinin birleşimi.  
   
  `pmda`  
- [out] A pointer to the metadata token.  
+ dışı Meta veri belirtecine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Only one `Assembly` metadata structure can be defined within a manifest.  
+ Bir bildirim içinde yalnızca bir `Assembly` meta veri yapısı tanımlanabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

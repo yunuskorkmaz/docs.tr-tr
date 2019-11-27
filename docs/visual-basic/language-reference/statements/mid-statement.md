@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348033"
 ---
 # <a name="mid-statement"></a>Mid Deyimi
-Replaces a specified number of characters in a `String` variable with characters from another string.  
+Bir `String` değişkeninde belirtilen sayıda karakteri başka bir dizeden karakterlerle değiştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,45 +32,45 @@ Mid( _
   
 ## <a name="parts"></a>Bölümler  
  `Target`  
- Gerekli. Name of the `String` variable to modify.  
+ Gerekli. Değiştirilecek `String` değişkeninin adı.  
   
  `Start`  
- Gerekli. `Integer` expression. Character position in `Target` where the replacement of text begins. `Start` uses a one-based index.  
+ Gerekli. `Integer` ifadesi. Metnin değiştirme işleminin başladığı `Target` karakter konumu. `Start`, tek tabanlı bir dizin kullanır.  
   
  `Length`  
- İsteğe bağlı. `Integer` expression. Number of characters to replace. If omitted, all of `String` is used.  
+ İsteğe bağlı. `Integer` ifadesi. Değiştirilecek karakter sayısı. Atlanırsa, tüm `String` kullanılır.  
   
  `StringExpression`  
- Gerekli. `String` expression that replaces part of `Target`.  
+ Gerekli. `Target`kısmını değiştiren `String` ifadesi.  
   
 ## <a name="exceptions"></a>Özel Durumlar  
   
 |Özel durum türü|Koşul|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start` <= 0 or `Length` < 0.|  
+|<xref:System.ArgumentException>|`Start` < = 0 veya `Length` < 0.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The number of characters replaced is always less than or equal to the number of characters in `Target`.  
+ Değişen karakterlerin sayısı her zaman `Target`karakter sayısından küçüktür veya eşittir.  
   
- Visual Basic has a <xref:Microsoft.VisualBasic.Strings.Mid%2A> function and a `Mid` statement. These elements both operate on a specified number of characters in a string, but the `Mid` function returns the characters while the `Mid` statement replaces the characters. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
+ Visual Basic bir <xref:Microsoft.VisualBasic.Strings.Mid%2A> işlevi ve bir `Mid` deyimidir. Bu öğeler her ikisi de bir dizedeki belirtilen sayıda karakter üzerinde çalışır, ancak `Mid` işlevi, `Mid` ifadesinin karakterleri değiştirdiği sırada karakterleri döndürür. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
   
 > [!NOTE]
-> The `MidB` statement of earlier versions of Visual Basic replaces a substring in bytes, rather than characters. Esas olarak çift baytlı karakter kümesi (DBCS) uygulamalarında dize dönüştürmek için kullanılır. All Visual Basic strings are in Unicode, and `MidB` is no longer supported.  
+> Önceki Visual Basic sürümlerindeki `MidB` deyimleri karakter yerine bayt cinsinden bir alt dizenin yerini alır. Esas olarak çift baytlı karakter kümesi (DBCS) uygulamalarında dize dönüştürmek için kullanılır. Tüm Visual Basic dizeleri Unicode 'Dur ve `MidB` artık desteklenmez.  
   
 ## <a name="example"></a>Örnek  
- This example uses the `Mid` statement to replace a specified number of characters in a string variable with characters from another string.  
+ Bu örnek, bir dize değişkeninde belirtilen sayıda karakteri başka bir dizeden karakterler ile değiştirmek için `Mid` ifadesini kullanır.  
   
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Ad alanı:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Module:** `Strings`  
+ **Modül:** `Strings`  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.Strings.Mid%2A>
 - [Dizeler](../../../visual-basic/programming-guide/language-features/strings/index.md)
-- [Introduction to Strings in Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Visual Basic dizelere giriş](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

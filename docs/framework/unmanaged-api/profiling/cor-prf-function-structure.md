@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428321"
 ---
 # <a name="cor_prf_function-structure"></a>COR_PRF_FUNCTION Yapısı
-Provides a unique representation of a function by combining its ID with the ID of its recompiled version.  
+, KIMLIĞINI yeniden derlenmesi sürümünün KIMLIĞIYLE birleştirerek bir işlevin benzersiz bir gösterimini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -30,23 +30,23 @@ Provides a unique representation of a function by combining its ID with the ID o
 typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJitId;} COR_PRF_FUNCTION;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`functionId`|The ID of the function.|  
-|`reJitId`|The ID of the recompiled function. A value of 0 (zero) represents the original version of the function.|  
+|`functionId`|İşlevin KIMLIĞI.|  
+|`reJitId`|Yeniden derlenen işlevin KIMLIĞI. 0 (sıfır) değeri, işlevin orijinal sürümünü temsil eder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Üst bilgi:** CorProf. IDL  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

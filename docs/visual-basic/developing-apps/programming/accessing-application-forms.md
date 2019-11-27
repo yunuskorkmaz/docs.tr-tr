@@ -17,17 +17,17 @@ ms.locfileid: "74349235"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Uygulama Formlarına Erişme (Visual Basic)
 
-The `My.Forms` object provides an easy way to access an instance of each Windows Form declared in the application's project. You can also use properties of the `My.Application` object to access the application's splash screen and main form, and get a list of the application's open forms.  
+`My.Forms` nesnesi, uygulamanın projesinde belirtilen her bir Windows formunun örneğine erişmenin kolay bir yolunu sağlar. Uygulamanın giriş ekranına ve ana forma erişmek ve uygulamanın açık formlarının bir listesini almak için `My.Application` nesnesinin özelliklerini de kullanabilirsiniz.  
   
 ## <a name="tasks"></a>Görevler  
 
- The following table lists examples showing how to access an application's forms.  
+ Aşağıdaki tabloda, bir uygulamanın formlarına nasıl erişileceğini gösteren örnekler listelenmektedir.  
   
 |Bitiş|Bkz.|  
 |---|---|  
-|Access one form from another form in an application.|[My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
-|Display the titles of all the application's open forms.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
-|Update the splash screen with status information as the application starts.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
+|Bir uygulamadaki başka bir formdan bir forma erişin.|[My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
+|Tüm uygulamanın açık formlarının unvanlarını görüntüleyin.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
+|Uygulama başladıktan sonra giriş ekranını durum bilgileriyle güncelleştirin.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

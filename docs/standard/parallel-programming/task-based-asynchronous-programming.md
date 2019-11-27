@@ -1,5 +1,5 @@
 ---
-title: Task-based asynchronous programming - .NET
+title: Görev tabanlı zaman uyumsuz programlama-.NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,13 +15,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204538"
 ---
-# <a name="task-based-asynchronous-programming"></a>Task-based asynchronous programming
+# <a name="task-based-asynchronous-programming"></a>Görev tabanlı zaman uyumsuz programlama
 
-The Task Parallel Library (TPL) is based on the concept of a *task*, which represents an asynchronous operation. In some ways, a task resembles a thread or <xref:System.Threading.ThreadPool> work item, but at a higher level of abstraction. The term *task parallelism* refers to one or more independent tasks running concurrently. Görevler iki adet birincil avantaj sağlar:
+Görev paralel kitaplığı (TPL), zaman uyumsuz bir işlemi temsil eden bir *görev*kavramını temel alır. Bazı yollarla, bir görev bir iş parçacığına veya <xref:System.Threading.ThreadPool> iş öğesine benzer, ancak daha yüksek bir soyutlama düzeyinde olur. *Görev Paralelliği* terimi aynı anda çalışan bir veya daha fazla bağımsız görevi ifade eder. Görevler iki adet birincil avantaj sağlar:
 
 - Sistem kaynaklarının daha verimli ve daha ölçeklenebilir kullanımı.
 
-     Behind the scenes, tasks are queued to the <xref:System.Threading.ThreadPool>, which has been enhanced with algorithms  that determine and adjust to the number of threads and that provide load balancing to maximize throughput. Bu, görevleri oldukça basit hale getirir ve hassas paralellik sağlamak için bunlardan çok sayıda oluşturabilirsiniz.
+     Arka planda görevler, iş parçacığı sayısını belirleyen ve ayarlanacak ve aktarım hızını en üst düzeye çıkarmak için Yük Dengeleme sağlayan algoritmalarla geliştirilmiş <xref:System.Threading.ThreadPool>sıraya alınır. Bu, görevleri oldukça basit hale getirir ve hassas paralellik sağlamak için bunlardan çok sayıda oluşturabilirsiniz.
 
 - Bir iş parçacığı veya iş öğesi ile mümkün olandan daha programlı denetim.
 
@@ -29,145 +29,145 @@ The Task Parallel Library (TPL) is based on the concept of a *task*, which repre
 
 Bu iki nedenle de TPL, .NET Framework'te çoklu iş parçalı, zaman uyumsuz ve paralel kod yazma için tercih edilen API'dir.
 
-## <a name="creating-and-running-tasks-implicitly"></a>Creating and running tasks implicitly
+## <a name="creating-and-running-tasks-implicitly"></a>Görevleri örtülü olarak oluşturma ve çalıştırma
 
-The <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> method provides a convenient way to run any number of arbitrary statements concurrently. Just pass in an <xref:System.Action> delegate for each item of work. Lambda ifadelerini kullanmak, bu temsilcileri oluşturmanın en kolay yoludur. Lambda ifadesi adlandırılmış bir yöntemi çağırabilir veya satır içi kodu sağlayabilir. The following example shows a basic <xref:System.Threading.Tasks.Parallel.Invoke%2A> call that creates and starts two tasks that run concurrently. The first task is represented by a lambda expression that calls a method named `DoSomeWork`, and the second task is represented by a lambda expression that calls a method named `DoSomeOtherWork`.
+<xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> yöntemi, her türlü rastgele deyimi eşzamanlı olarak çalıştırmak için uygun bir yol sağlar. Her iş öğesi için bir <xref:System.Action> temsilcisini geçirin. Lambda ifadelerini kullanmak, bu temsilcileri oluşturmanın en kolay yoludur. Lambda ifadesi adlandırılmış bir yöntemi çağırabilir veya satır içi kodu sağlayabilir. Aşağıdaki örnek, aynı anda çalışan iki görev oluşturan ve Başlatan temel bir <xref:System.Threading.Tasks.Parallel.Invoke%2A> çağrısını gösterir. İlk görev, `DoSomeWork`adlı bir yöntemi çağıran bir lambda ifadesiyle temsil edilir ve ikinci görev, `DoSomeOtherWork`adlı bir yöntemi çağıran bir lambda ifadesiyle temsil edilir.
 
 > [!NOTE]
-> TPL'de temsilciler tanımlamak için bu belgede lambda ifadeleri kullanılır. If you are not familiar with lambda expressions in C# or Visual Basic, see [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+> TPL'de temsilciler tanımlamak için bu belgede lambda ifadeleri kullanılır. Veya Visual Basic içindeki C# lambda ifadeleriyle ilgili bilgi sahibi değilseniz bkz. [PLıNQ ve TPL içindeki lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
 
 [!code-csharp[TPL#21](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl/cs/tpl.cs#21)]
 [!code-vb[TPL#21](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl/vb/tpl_vb.vb#21)]
 
 > [!NOTE]
-> The number of <xref:System.Threading.Tasks.Task> instances that are created behind the scenes by <xref:System.Threading.Tasks.Parallel.Invoke%2A> is not necessarily equal to the number of delegates that are provided. TPL, özellikle çok sayıda temsilci bulunduğunda, çeşitli iyileştirmeler uygulayabilir.
+> <xref:System.Threading.Tasks.Parallel.Invoke%2A> tarafından arka planda oluşturulan <xref:System.Threading.Tasks.Task> örneklerinin sayısı, belirtilen temsilcilerin sayısına eşit değildir. TPL, özellikle çok sayıda temsilci bulunduğunda, çeşitli iyileştirmeler uygulayabilir.
 
-For more information, see [How to: Use Parallel.Invoke to Execute Parallel Operations](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
+Daha fazla bilgi için bkz. [nasıl yapılır: paralel Işlemleri yürütmek Için Parallel. Invoke kullanma](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
 
-For greater control over task execution or to return a value from the task, you have to work with <xref:System.Threading.Tasks.Task> objects more explicitly.
+Görev yürütme üzerinde daha fazla denetim veya görevden bir değer döndürme için <xref:System.Threading.Tasks.Task> nesneleriyle daha açık şekilde çalışmanız gerekir.
 
-## <a name="creating-and-running-tasks-explicitly"></a>Creating and running tasks explicitly
+## <a name="creating-and-running-tasks-explicitly"></a>Görevleri açıkça oluşturma ve çalıştırma
 
-A task that does not return a value is represented by the <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> class. A task that returns a value is represented by the <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> class, which inherits from <xref:System.Threading.Tasks.Task>. Görev nesnesi altyapı ayrıntılarını işler ve çağrıyı yapan iş parçacığının görevin ömrü boyunca erişebildiği yöntemler ve özellikler sağlar. For example, you can access the <xref:System.Threading.Tasks.Task.Status%2A> property of a task at any time to determine whether it has started running, ran to completion, was canceled, or has thrown an exception. The status is represented by a <xref:System.Threading.Tasks.TaskStatus> enumeration.
+Değer döndürmeyen bir görev <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfı tarafından temsil edilir. Bir değer döndüren bir görev, <xref:System.Threading.Tasks.Task>devralan <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> sınıfı tarafından temsil edilir. Görev nesnesi altyapı ayrıntılarını işler ve çağrıyı yapan iş parçacığının görevin ömrü boyunca erişebildiği yöntemler ve özellikler sağlar. Örneğin, bir görevin <xref:System.Threading.Tasks.Task.Status%2A> özelliğine, çalışmaya başlayıp başlamadığına, tamamlanana kadar çalışıp çalışmadığını, iptal edildiğini veya bir özel durum oluşturdu. Durum <xref:System.Threading.Tasks.TaskStatus> numaralandırması tarafından temsil edilir.
 
-Görev oluşturduğunuzda, görevin yürüteceği kodu kapsülleyen bir kullanıcı temsilcisi verirsiniz. Temsilci adlandırılmış bir temsilci, adsız bir yöntem veya lambda ifadesi olarak ifade edilebilir. Lambda ifadeleri, aşağıdaki örnekte gösterildiği gibi adlandırılmış bir yönteme yapılan çağrıyı içerebilir. Note that the example includes a call to the <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> method to ensure that the task completes execution before the console mode application ends.
+Görev oluşturduğunuzda, görevin yürüteceği kodu kapsülleyen bir kullanıcı temsilcisi verirsiniz. Temsilci adlandırılmış bir temsilci, adsız bir yöntem veya lambda ifadesi olarak ifade edilebilir. Lambda ifadeleri, aşağıdaki örnekte gösterildiği gibi adlandırılmış bir yönteme yapılan çağrıyı içerebilir. Örneğin, konsol modu uygulaması bitmeden önce görevin yürütmeyi tamamlamasını sağlamak için <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemine bir çağrı içerdiğine dikkat edin.
 
 [!code-csharp[TPL_TaskIntro#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/lambda1.cs#1)]
 [!code-vb[TPL_TaskIntro#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/lambda1.vb#1)]
 
-You can also use the <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> methods to create and start a task in one operation. To manage the task, the <xref:System.Threading.Tasks.Task.Run%2A> methods use the default  task scheduler, regardless of which task scheduler is associated with the current thread. The <xref:System.Threading.Tasks.Task.Run%2A> methods are the preferred way to create and start tasks when more control over the creation and scheduling of the task is not needed.
+Tek bir işlemde bir görevi oluşturmak ve başlatmak için <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> yöntemlerini de kullanabilirsiniz. Görevi yönetmek için <xref:System.Threading.Tasks.Task.Run%2A> yöntemleri, geçerli iş parçacığıyla hangi görev çizelgeleyicinin ilişkili olduğuna bakılmaksızın varsayılan görev zamanlayıcısını kullanır. <xref:System.Threading.Tasks.Task.Run%2A> yöntemleri, görevin oluşturulması ve zamanlanması üzerinde daha fazla denetim yapılması gerekmiyorsa, görevleri oluşturmak ve başlatmak için tercih edilen yoldur.
 
 [!code-csharp[TPL_TaskIntro#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/run1.cs#2)]
 [!code-vb[TPL_TaskIntro#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/run1.vb#2)]
 
-You can also use the <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> method to create and start a task in one operation. Use this method when creation and scheduling do not have to be separated and you require additional task creation options or the use of a specific scheduler, or when you need to pass additional state into the task that you can retrieve through its <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> property, as shown in the following example.
+Tek bir işlemde bir görevi oluşturmak ve başlatmak için <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> yöntemini de kullanabilirsiniz. Oluşturma ve zamanlamanın ayrılması gerekmiyorsa ve ek görev oluşturma seçeneklerine veya belirli bir Zamanlayıcı kullanımına ihtiyacınız varsa ya da aşağıdaki örnekte gösterildiği gibi <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> özelliği aracılığıyla alabileceğiniz göreve ek durum iletmeniz gerektiğinde bu yöntemi kullanın.
 
 [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
 [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]
 
-<xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601> each expose a static <xref:System.Threading.Tasks.Task.Factory%2A> property that returns a default instance of <xref:System.Threading.Tasks.TaskFactory>, so that you can call the method as `Task.Factory.StartNew()`. Also, in the following example, because the tasks are of type <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>, they each have a public <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> property that contains the result of the computation. Görevler zaman uyumsuz olarak çalışır ve herhangi bir sırada tamamlanabilir. If the <xref:System.Threading.Tasks.Task%601.Result%2A> property is accessed before the computation finishes, the property blocks the calling thread until the value is available.
+<xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> her biri, bir <xref:System.Threading.Tasks.TaskFactory>varsayılan örneğini döndüren statik bir <xref:System.Threading.Tasks.Task.Factory%2A> özelliği sunar, böylece yöntemi `Task.Factory.StartNew()`olarak çağırabilirsiniz. Ayrıca, aşağıdaki örnekte, görevler <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>türünde olduğundan, her birinin hesaplama sonucunu içeren ortak bir <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> özelliği vardır. Görevler zaman uyumsuz olarak çalışır ve herhangi bir sırada tamamlanabilir. Hesaplama tamamlanmadan önce <xref:System.Threading.Tasks.Task%601.Result%2A> özelliğine erişilirse, özelliği, değer kullanılabilir olana kadar çağıran iş parçacığını engeller.
 
 [!code-csharp[TPL_TaskIntro#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/result1.cs#4)]
 [!code-vb[TPL_TaskIntro#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/result1.vb#4)]
 
-For more information, see [How to: Return a Value from a Task](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).
+Daha fazla bilgi için bkz. [nasıl yapılır: görevden değer döndürme](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).
 
-Temsilci oluşturmak için lambda ifadesini kullandığınızda, kaynak kodunuzun o noktasında görünür durumda olan tüm değişkenlere erişebilirsiniz. Ancak bazı durumlarda, çoğunlukla da döngülerde, bir lambda değişkeni beklenen şekilde yakalamaz. Her yinelemeden sonra oluşturduğu değeri değil, yalnızca son değeri yakalar. Aşağıdaki örnek, sorunu gösterir. It passes a loop counter to a lambda expression that instantiates a `CustomData` object and uses the loop counter as the object's identifier. As the output from the example shows, each `CustomData` object has an identical identifier.
+Temsilci oluşturmak için lambda ifadesini kullandığınızda, kaynak kodunuzun o noktasında görünür durumda olan tüm değişkenlere erişebilirsiniz. Ancak bazı durumlarda, çoğunlukla da döngülerde, bir lambda değişkeni beklenen şekilde yakalamaz. Her yinelemeden sonra oluşturduğu değeri değil, yalnızca son değeri yakalar. Aşağıdaki örnek, sorunu gösterir. Bir `CustomData` nesnesi Başlatan bir lambda ifadesine döngü sayacı geçirir ve nesne tanımlayıcısı olarak döngü sayacını kullanır. Örnekteki Çıktının gösterdiği gibi, her bir `CustomData` nesnesi aynı tanımlayıcıya sahiptir.
 
 [!code-csharp[TPL_TaskIntro#22](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/iteration1b.cs#22)]
 [!code-vb[TPL_TaskIntro#22](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/iteration1b.vb#22)]
 
-Oluşturucusu aracılığıyla göreve durum nesnesi döndürerek her yinelemede değere erişebilirsiniz. The following example modifies the previous example by using the loop counter when creating the `CustomData` object, which, in turn, is passed to the lambda expression.  As the output from the example shows, each `CustomData` object now has a unique identifier based on the value of the loop counter at the time the object was instantiated.
+Oluşturucusu aracılığıyla göreve durum nesnesi döndürerek her yinelemede değere erişebilirsiniz. Aşağıdaki örnek, lambda ifadesine geçirilen `CustomData` nesnesi oluşturulurken döngü sayacını kullanarak önceki örneği değiştirir.  Örnekteki Çıktının gösterdiği gibi, her `CustomData` nesnesi artık nesnenin örneği oluşturulduğunda döngü sayacının değerine göre benzersiz bir tanımlayıcıya sahiptir.
 
 [!code-csharp[TPL_TaskIntro#21](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/iteration1a.cs#21)]
 [!code-vb[TPL_TaskIntro#21](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/iteration1a.vb#21)]
 
-This state is passed as an argument to the task delegate, and it can be accessed from the task object by using the <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> property.  Aşağıdaki örnek, önceki örneğin bir çeşididir. It uses the <xref:System.Threading.Tasks.Task.AsyncState%2A> property to display information about the `CustomData` objects passed to the lambda expression.
+Bu durum, görev temsilcisine bir bağımsız değişken olarak geçirilir ve <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> özelliği kullanılarak görev nesnesinden erişilebilir.  Aşağıdaki örnek, önceki örneğin bir çeşididir. Lambda ifadesine geçirilen `CustomData` nesneleri hakkındaki bilgileri göstermek için <xref:System.Threading.Tasks.Task.AsyncState%2A> özelliğini kullanır.
 
 [!code-csharp[TPL_TaskIntro#23](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
 [!code-vb[TPL_TaskIntro#23](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]
 
 ## <a name="task-id"></a>Görev Kimliği
 
-Every task receives an integer ID that uniquely identifies it in an application domain and can be accessed by using the <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=nameWithType> property. The ID is useful for viewing task information in the Visual Studio debugger **Parallel Stacks** and **Tasks** windows. Kimlik gecikmeli olarak oluşturulur, yani istenene kadar oluşturulmaz; bu nedenle, program her çalıştırıldığında bir görevin farklı bir kimliği olabilir. For more information about how to view task IDs in the debugger, see [Using the Tasks Window](/visualstudio/debugger/using-the-tasks-window) and [Using the Parallel Stacks Window](/visualstudio/debugger/using-the-parallel-stacks-window).
+Her görev kendisini bir uygulama etki alanında benzersiz bir şekilde tanımlayan bir tamsayı KIMLIĞI alır ve <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=nameWithType> özelliği kullanılarak erişilebilir. KIMLIK, Visual Studio hata ayıklayıcısı **paralel yığınları** ve **Görevler** Windows 'da görev bilgilerini görüntülemek için yararlıdır. Kimlik gecikmeli olarak oluşturulur, yani istenene kadar oluşturulmaz; bu nedenle, program her çalıştırıldığında bir görevin farklı bir kimliği olabilir. Görev kimliklerinin hata ayıklayıcıda nasıl görüntüleneceği hakkında daha fazla bilgi için, bkz. [Görevler penceresini kullanma](/visualstudio/debugger/using-the-tasks-window) ve [Paralel Yığınlar penceresini kullanma](/visualstudio/debugger/using-the-parallel-stacks-window).
 
-## <a name="task-creation-options"></a>Task creation options
+## <a name="task-creation-options"></a>Görev oluşturma seçenekleri
 
-Most APIs that create tasks provide overloads that accept a <xref:System.Threading.Tasks.TaskCreationOptions> parameter. Bu seçeneklerden birini belirleyerek görev zamanlayıcıya iş parçacığı havuzundaki görevi nasıl zamanlayacağını söyleyebilirsiniz. Aşağıdaki tabloda, çeşitli görev oluşturma seçenekleri listelenmektedir.
+Görevleri oluşturan çoğu API 'Ler, bir <xref:System.Threading.Tasks.TaskCreationOptions> parametresi kabul eden aşırı yüklemeler sağlar. Bu seçeneklerden birini belirleyerek görev zamanlayıcıya iş parçacığı havuzundaki görevi nasıl zamanlayacağını söyleyebilirsiniz. Aşağıdaki tabloda, çeşitli görev oluşturma seçenekleri listelenmektedir.
 
-|<xref:System.Threading.Tasks.TaskCreationOptions> parameter value|Açıklama|
+|<xref:System.Threading.Tasks.TaskCreationOptions> parametre değeri|Açıklama|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|Hiç seçenek belirtilmemişse varsayılan değerdir. Zamanlayıcı, görevi zamanlamak için varsayılan buluşsal yöntemlerini kullanır.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Daha önce oluşturulmuş görevlerin daha önce çalıştırılabilmesi ve daha sonra oluşturulmuş görevlerin daha sonra çalıştırılabilmesi için görevin zamanlanması gerektiğini belirtir.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.LongRunning>|Görevin uzun süren bir işlemi temsil ettiğini belirtir.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent>|Varsa, geçerli görevin eklenen bir alt görev olarak oluşturulması gerektiğini belirtir. For more information, see [Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).|
-|<xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach>|Specifies that if an inner task specifies the `AttachedToParent` option, that task will not become an attached child task.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.HideScheduler>|Specifies that the task scheduler for tasks created by calling methods like <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> or <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> from within a particular task is the default scheduler instead of the scheduler on which this task is running.|
+|<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent>|Varsa, geçerli görevin eklenen bir alt görev olarak oluşturulması gerektiğini belirtir. Daha fazla bilgi için bkz. [ekli ve ayrılmış alt görevler](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).|
+|<xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach>|Bir iç görev `AttachedToParent` seçeneğini belirtiyorsa, bu görevin iliştirilmiş bir alt görev olmayacaktır.|
+|<xref:System.Threading.Tasks.TaskCreationOptions.HideScheduler>|Belirli bir görevde <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> veya <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> gibi yöntemleri çağırarak oluşturulan görevlerin görev zamanlayıcının, bu görevin çalıştığı Zamanlayıcı yerine varsayılan Zamanlayıcı olduğunu belirtir.|
 
-The options may be combined by using a bitwise **OR** operation. The following example shows a task that has the <xref:System.Threading.Tasks.TaskCreationOptions.LongRunning> and <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness> option.
+Seçenekler bit düzeyinde **or** işlemi kullanılarak birleştirilebilir. Aşağıdaki örnek, <xref:System.Threading.Tasks.TaskCreationOptions.LongRunning> ve <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness> seçeneğine sahip bir görevi gösterir.
 
 [!code-csharp[TPL_TaskIntro#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#03)]
 [!code-vb[TPL_TaskIntro#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#03)]
 
-## <a name="tasks-threads-and-culture"></a>Tasks, threads, and culture
+## <a name="tasks-threads-and-culture"></a>Görevler, iş parçacıkları ve kültür
 
-Each thread has an associated culture and UI culture, which is defined by the <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> and <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> properties, respectively. A thread's culture is used in such operations as formatting, parsing, sorting, and string comparison. A thread's UI culture is used in resource lookup. Ordinarily, unless you specify a default culture for all the threads in an application domain by using the <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> and <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> properties, the default culture and UI culture of a thread is defined by the system culture. If you explicitly set a thread's culture and launch a new thread, the new thread does not inherit the culture of the calling thread; instead, its culture is the default system culture. The task-based programming model for apps that target versions of the .NET Framework prior to .NET Framework 4.6 adhere to this practice.
+Her iş parçacığında, sırasıyla <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> ve <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> özellikleri tarafından tanımlanan ilişkili bir kültür ve UI kültürü vardır. Bir iş parçacığının kültürü, bu gibi işlemlerde biçimlendirme, ayrıştırma, sıralama ve dize karşılaştırması gibi kullanılır. Bir iş parçacığının UI kültürü, kaynak aramasında kullanılır. Genellikle, <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> ve <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> özelliklerini kullanarak bir uygulama etki alanındaki tüm iş parçacıkları için varsayılan bir kültür belirtmediğiniz müddetçe, bir iş parçacığının varsayılan kültürü ve Kullanıcı arabirimi kültürü sistem kültürü tarafından tanımlanır. Bir iş parçacığının kültürünü açık olarak ayarlayıp yeni bir iş parçacığı başlattığınızda, yeni iş parçacığı çağıran iş parçacığının kültürünü almaz; Bunun yerine, kültürü varsayılan sistem kültürüdür. .NET Framework 4,6 ' den önceki .NET Framework sürümlerini hedefleyen uygulamalar için görev tabanlı programlama modeli bu uygulamaya uymuyor.
 
 > [!IMPORTANT]
-> Note that the calling thread's culture as part of a task's context applies to apps that *target* the .NET Framework 4.6, not apps that *run under* the .NET Framework 4.6. You can target a particular version of the .NET Framework when you create your project in Visual Studio by selecting that version from the dropdown list at the top of the **New Project** dialog box, or outside of Visual Studio you can use the <xref:System.Runtime.Versioning.TargetFrameworkAttribute> attribute. For apps that target versions of the .NET Framework prior to the .NET Framework 4.6, or that do not target a specific version of the .NET Framework, a task's culture continues to be determined by the culture of the thread on which it runs.
+> Çağıran iş parçacığının bir görevin bir parçası olarak bir görev bağlamının bir parçası olarak, .NET Framework 4,6 *altında çalışan* uygulamalar değil .NET Framework 4,6 ' i *hedefleyen* uygulamalar için geçerli olduğunu unutmayın. **Yeni proje** iletişim kutusunun en üstündeki veya Visual Studio dışında açılan listeden bu sürümü seçerek, projenizi Visual Studio 'da oluştururken .NET Framework belirli bir sürümünü hedefleyebilirsiniz <xref:System.Runtime.Versioning.TargetFrameworkAttribute> özniteliğini kullanabilirsiniz. .NET Framework 4,6 ' den önceki .NET Framework sürümlerini hedef alan veya .NET Framework belirli bir sürümünü Hedeflemeyin, bir görevin kültürü, çalıştığı iş parçacığının kültürü tarafından belirlenmeye devam eder.
 
-Starting with apps that target the .NET Framework 4.6, the calling thread's culture is inherited by each task, even if the task runs asynchronously on a thread pool thread.
+.NET Framework 4,6 ' i hedefleyen uygulamalarla başlayarak, çağıran iş parçacığının kültürü, görev bir iş parçacığı havuzu iş parçacığında zaman uyumsuz olarak çalıştırılsa bile her bir görev tarafından devralınır.
 
-The following example provides a simple illustration. It uses the <xref:System.Runtime.Versioning.TargetFrameworkAttribute> attribute to target the .NET Framework 4.6 and changes the app's current culture to either French (France) or, if French (France) is already the current culture, English (United States). It then invokes a delegate named `formatDelegate` that returns some numbers formatted as currency values in the new culture. Note that whether the delegate as a task either synchronously or asynchronously, it returns the expected result because the culture of the calling thread is inherited by the asynchronous task.
+Aşağıdaki örnek basit bir çizim sağlar. .NET Framework 4,6 'yi hedeflemek için <xref:System.Runtime.Versioning.TargetFrameworkAttribute> özniteliğini kullanır ve uygulamanın geçerli kültürünü Fransızca (Fransa) ya da Fransızca (Fransa) zaten geçerli kültür (Ingilizce) (Birleşik Devletler) olarak değiştirir. Daha sonra yeni kültürden para birimi değeri olarak biçimlendirilen bazı sayılar döndüren `formatDelegate` adlı bir temsilciyi çağırır. Temsilci bir görev olarak zaman uyumlu veya zaman uyumsuz olarak, çağıran iş parçacığının kültürü zaman uyumsuz görev tarafından devralındığından beklenen sonucu döndürür.
 
 [!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
 [!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]
 
-If you are using Visual Studio, you can omit the <xref:System.Runtime.Versioning.TargetFrameworkAttribute> attribute and instead select the .NET Framework 4.6 as the target when you create the project in the **New Project** dialog.
+Visual Studio kullanıyorsanız, <xref:System.Runtime.Versioning.TargetFrameworkAttribute> özniteliğini atlayabilir ve bunun yerine, **Yeni proje** iletişim kutusunda projeyi oluştururken hedef olarak .NET Framework 4,6 ' u seçebilirsiniz.
 
-For output that reflects the behavior of apps the target versions of the .NET Framework prior to .NET Framework 4.6, remove the <xref:System.Runtime.Versioning.TargetFrameworkAttribute> attribute from the source code. The output will reflect the formatting conventions of the default system culture, not the culture of the calling thread.
+Uygulamaların .NET Framework .NET Framework 4,6 ' den önce hedef sürümlerini yansıtan çıktı için <xref:System.Runtime.Versioning.TargetFrameworkAttribute> özniteliğini kaynak koddan kaldırın. Çıktı, çağıran iş parçacığının kültürüne değil, varsayılan sistem kültürünün biçimlendirme kurallarını yansıtır.
 
-For more information on asynchronous tasks and culture, see the "Culture and asynchronous task-based operations" section in the <xref:System.Globalization.CultureInfo> topic.
+Zaman uyumsuz görevler ve kültür hakkında daha fazla bilgi için, <xref:System.Globalization.CultureInfo> konusunun "Kültür ve zaman uyumsuz görev tabanlı işlemler" bölümüne bakın.
 
-## <a name="creating-task-continuations"></a>Creating task continuations
+## <a name="creating-task-continuations"></a>Görev devamlılıkları oluşturma
 
-The <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> methods let you specify a task to start when the *antecedent task* finishes. The delegate of the continuation task is passed a reference to the antecedent task so that it can examine the antecedent task's status and, by retrieving the value of the <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> property, can use the output of the antecedent as input for the continuation.
+<xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> yöntemleri, *öncül görevi* bittiğinde başlatılacak bir görev belirtmenizi sağlar. Devamlılık görevinin temsilcisi öncül göreve bir başvuru geçirdiğinden, öncül görevin durumunu inceleyebilir ve <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> özelliğinin değerini alarak, Devamlılığın çıkışını devamlılık için giriş olarak kullanabilir.
 
-In the following example, the `getData` task is started by a call to the <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> method. The `processData` task is started automatically when `getData` finishes, and `displayData` is started when `processData` finishes. `getData` produces an integer array, which is accessible to the `processData` task through the `getData` task's <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> property. The `processData` task processes that array and returns a result whose type is inferred from the return type of the lambda expression passed to the <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> method. The `displayData` task executes automatically when `processData` finishes, and the <xref:System.Tuple%603> object returned by the `processData` lambda expression is accessible to the `displayData` task through the `processData` task's <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> property. The `displayData` task takes the result of the `processData` task and produces a result whose type is inferred in a similar manner and which is made available to the program in the <xref:System.Threading.Tasks.Task%601.Result%2A> property.
+Aşağıdaki örnekte, `getData` görevi <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> yöntemine yapılan bir çağrı ile başlatılır. `processData` görevi `getData` bittiğinde otomatik olarak başlatılır ve `processData` tamamlandığında `displayData` başlatılır. `getData`, `getData` görevinin <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> özelliği aracılığıyla `processData` görev tarafından erişilebilen bir tamsayı dizisi üretir. `processData` görev bu diziyi işler ve türü, <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> yöntemine geçirilen lambda ifadesinin dönüş türünden çıkarılan bir sonuç döndürür. `displayData` görev `processData` bittiğinde otomatik olarak yürütülür ve `processData` lambda ifadesinin döndürdüğü <xref:System.Tuple%603> nesnesine `displayData` görevinin `processData` özelliği aracılığıyla <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> görevi erişilebilir. `displayData` görevi `processData` görevinin sonucunu alır ve türü benzer bir şekilde çıkarılan ve <xref:System.Threading.Tasks.Task%601.Result%2A> özelliğindeki program tarafından kullanılabilir hale getirilen bir sonuç üretir.
 
 [!code-csharp[TPL_TaskIntro#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/continuations1.cs#5)]
 [!code-vb[TPL_TaskIntro#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/continuations1.vb#5)]
 
-Because <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> is an instance method, you can chain method calls together instead of instantiating a <xref:System.Threading.Tasks.Task%601> object for each antecedent task. The following example is functionally identical to the previous example, except that it chains together calls to the <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> method. Note that the <xref:System.Threading.Tasks.Task%601> object returned by the chain of method calls is the final continuation task.
+<xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> bir örnek yöntemi olduğundan, her öncül görev için bir <xref:System.Threading.Tasks.Task%601> nesnesini Örneklemek yerine Yöntem çağrılarını birlikte zincirleyebilirsiniz. Aşağıdaki örnek, <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> yöntemine bir araya gelen çağrıları zincirden hariç olmak üzere önceki örnekle aynıdır. Yöntem çağrılarının zinciri tarafından döndürülen <xref:System.Threading.Tasks.Task%601> nesnesinin son devamlılık görevi olduğunu unutmayın.
 
 [!code-csharp[TPL_TaskIntro#24](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/continuations2.cs#24)]
 [!code-vb[TPL_TaskIntro#24](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/continuations2.vb#24)]
 
-The <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> and <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> methods enable you to continue from multiple tasks.
+<xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> ve <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> yöntemleri, birden çok görevden devam edebilmeniz için izin sağlar.
 
-For more information, see [Chaining Tasks by Using Continuation Tasks](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).
+Daha fazla bilgi için bkz. [devamlılık görevlerini kullanarak görevleri zincirleme](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).
 
-## <a name="creating-detached-child-tasks"></a>Creating detached child tasks
+## <a name="creating-detached-child-tasks"></a>Ayrılmış alt görevler oluşturma
 
-When user code that is running in a task creates a new task and does not specify the <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> option, the new task is not synchronized with the parent task in any special way. This type of non-synchronized task is called a *detached nested task* or *detached child task*. Aşağıdaki örnek, bağlantısı kesik bir tane alt görev oluşturan bir üst görevi gösterir.
+Bir görevde çalışan Kullanıcı kodu yeni bir görev oluşturduğunda ve <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> seçeneğini belirtmediği zaman, yeni görev üst görevle herhangi bir özel şekilde eşitlenmez. Eşitlenmemiş bu görev türü, *ayrılmış iç içe görev* veya *ayrılmış alt görev*olarak adlandırılır. Aşağıdaki örnek, bağlantısı kesik bir tane alt görev oluşturan bir üst görevi gösterir.
 
 [!code-csharp[TPL_TaskIntro#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#07)]
 [!code-vb[TPL_TaskIntro#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#07)]
 
 Üst görevin, ayrılmış alt görevin tamamlanmasını beklemediğine dikkat edin.
 
-## <a name="creating-child-tasks"></a>Creating child tasks
+## <a name="creating-child-tasks"></a>Alt görevler oluşturma
 
-When user code that is running in a task creates a task with the <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> option, the new task is known as a *attached child task* of the parent task. You can use the <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> option to express structured task parallelism, because the parent task implicitly waits for all attached child tasks to finish. Aşağıdaki örnek, on tane bağlı alt görev oluşturan bir üst görevi gösterir. Note that although the example calls the <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> method to wait for the parent task to finish, it does not have to explicitly wait for the attached child tasks to complete.
+Bir görevde çalışan Kullanıcı kodu <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> seçeneğiyle bir görev oluşturduğunda, yeni görev üst görevin *iliştirilmiş alt görevi* olarak bilinir. Yapılandırılmış görev paralelliğini ifade etmek için <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> seçeneğini kullanabilirsiniz, çünkü üst görev örtük olarak tüm eklenen alt görevlerin bitmesini bekler. Aşağıdaki örnek, on tane bağlı alt görev oluşturan bir üst görevi gösterir. Örnek, üst görevin bitmesini beklemek için <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemini çağırırsa, eklenen alt görevlerin tamamlanmasını açıkça beklemek zorunda değildir.
 
 [!code-csharp[TPL_TaskIntro#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/child1.cs#8)]
 [!code-vb[TPL_TaskIntro#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/child1.vb#8)]
 
-A parent task can use the <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> option to prevent other tasks from attaching to the parent task. For more information, see [Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).
+Üst görev, diğer görevlerin üst göreve iliştirmesini engellemek için <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> seçeneğini kullanabilir. Daha fazla bilgi için bkz. [ekli ve ayrılmış alt görevler](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).
 
-## <a name="waiting-for-tasks-to-finish"></a>Waiting for tasks to finish
+## <a name="waiting-for-tasks-to-finish"></a>Görevlerin bitmesi bekleniyor
 
-The <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> types provide several overloads of the <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> methods that enable you to wait for a task to finish. In addition, overloads of the static <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType> methods let you wait for any or all of an array of tasks to finish.
+<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> türleri, bir görevin bitmesini beketmenize olanak tanıyan <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemlerinin çeşitli yüklerini sağlar. Ayrıca, statik <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType> yöntemlerinin aşırı yüklemeleri, bir görev dizisinin herhangi birinin veya tümünün bitmesini beketmenize olanak tanır.
 
 Genellikle, aşağıdaki nedenlerden biri için beklemeniz gerekir:
 
@@ -175,100 +175,100 @@ Genellikle, aşağıdaki nedenlerden biri için beklemeniz gerekir:
 
 - Görevden oluşturulan özel durumları işlemeniz gerekir.
 
-- Uygulama, tüm görevlerin yürütmesi tamamlanmadan sonlanabilir. For example, console applications will terminate as soon as all synchronous code in `Main` (the application entry point) has executed.
+- Uygulama, tüm görevlerin yürütmesi tamamlanmadan sonlanabilir. Örneğin, `Main` (uygulama giriş noktası) içindeki tüm zaman uyumlu kodlar yürütüldüğü anda konsol uygulamaları sonlandırılır.
 
 Aşağıdaki örnek, özel durum işleme içermeyen temel düzeni gösterir.
 
 [!code-csharp[TPL_TaskIntro#06](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#06)]
 [!code-vb[TPL_TaskIntro#06](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#06)]
 
-For an example that shows exception handling, see [Exception Handling](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).
+Özel durum işlemeyi gösteren bir örnek için bkz. [özel durum işleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).
 
-Some overloads let you specify a time-out, and others take an additional <xref:System.Threading.CancellationToken> as an input parameter, so that the wait itself can be canceled either programmatically or in response to user input.
+Bazı aşırı yüklemeler bir zaman aşımı belirtmenizi sağlar ve diğer bir deyişle, bir giriş parametresi olarak diğer <xref:System.Threading.CancellationToken> diğer bir deyişle, bekleme süresi programlı bir şekilde veya kullanıcı girdisine yanıt olarak iptal edilebilir.
 
-When you wait for a task, you implicitly wait for all children of that task that were created by using the <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> option. <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> returns immediately if the task has already completed. Any exceptions raised by a task will be thrown by a <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> method, even if the <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> method was called after the task completed.
+Bir görevi beklerken, bu görevin, <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> seçeneği kullanılarak oluşturulan tüm alt öğelerini örtük olarak beklemiş olursunuz. <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>, görev zaten tamamlandıysa hemen döndürür. Bir görev tarafından oluşturulan tüm özel durumlar, <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemi görev tamamlandıktan sonra çağrılsa bile <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemi tarafından oluşturulur.
 
-## <a name="composing-tasks"></a>Composing tasks
+## <a name="composing-tasks"></a>Görevler oluşturuluyor
 
-The <xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601> classes provide several methods that can help you compose multiple tasks to implement common patterns and to better use the asynchronous language features that are provided by C#, Visual Basic, and F#. This section describes the <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A>, and <xref:System.Threading.Tasks.Task.FromResult%2A> methods.
+<xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> sınıfları, sık kullanılan desenleri uygulamak ve Visual Basic tarafından C#sağlanan zaman uyumsuz dil özelliklerini daha iyi kullanmak için birden çok görev oluşturmanıza yardımcı olabilecek çeşitli yöntemler sunar. F# Bu bölümde <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A>ve <xref:System.Threading.Tasks.Task.FromResult%2A> yöntemleri açıklanmaktadır.
 
 ### <a name="taskwhenall"></a>Task.WhenAll
 
-The <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> method asynchronously waits for multiple <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601> objects to finish. Tek düzen olmayan görevler kümesini beklemenize olanak tanıyan aşırı yüklü sürümler sağlar. For example, you can wait for multiple <xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601> objects to complete from one method call.
+<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> yöntemi, birden çok <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> nesnesinin tamamlanmasını zaman uyumsuz olarak bekler. Tek düzen olmayan görevler kümesini beklemenize olanak tanıyan aşırı yüklü sürümler sağlar. Örneğin, birden çok <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> nesnesinin bir yöntem çağrısından tamamlanmasını bekleyebilirsiniz.
 
 ### <a name="taskwhenany"></a>Task.WhenAny
 
-The <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> method asynchronously waits for one of multiple <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601> objects to finish. As in the <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> method, this method provides overloaded versions that enable you to wait for non-uniform sets of tasks. The <xref:System.Threading.Tasks.Task.WhenAny%2A> method is especially useful in the following scenarios.
+<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> yöntemi, birden fazla <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> nesnesinden birinin tamamlanmasını zaman uyumsuz olarak bekler. <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> yönteminde olduğu gibi bu yöntem, Tekdüzen olmayan görev kümelerini bekleme olanağı sağlayan aşırı yüklenmiş sürümler sağlar. <xref:System.Threading.Tasks.Task.WhenAny%2A> yöntemi, aşağıdaki senaryolarda özellikle yararlıdır.
 
-- Yedekli işlemler. Birçok şekilde gerçekleştirilen bir algoritma veya işlem düşünün. You can use the <xref:System.Threading.Tasks.Task.WhenAny%2A> method to select the operation that finishes first and then cancel the remaining operations.
+- Yedekli işlemler. Birçok şekilde gerçekleştirilen bir algoritma veya işlem düşünün. Önce sona erdikten olan işlemi seçmek için <xref:System.Threading.Tasks.Task.WhenAny%2A> yöntemini kullanabilir ve ardından kalan işlemleri iptal edebilirsiniz.
 
-- Dönüşümlü işlemler. You can start multiple operations that must all finish and use the <xref:System.Threading.Tasks.Task.WhenAny%2A> method to process results as each operation finishes. Bir işlem tamamlandıktan sonra bir veya daha fazla ek görev başlatabilirsiniz.
+- Dönüşümlü işlemler. Her işlem tamamlandığında, sonuçları işlemek için <xref:System.Threading.Tasks.Task.WhenAny%2A> yöntemini kullanan birden çok işlem başlatabilirsiniz. Bir işlem tamamlandıktan sonra bir veya daha fazla ek görev başlatabilirsiniz.
 
-- Daraltılmış işlemler. You can use the <xref:System.Threading.Tasks.Task.WhenAny%2A> method to extend the previous scenario by limiting the number of concurrent operations.
+- Daraltılmış işlemler. Eşzamanlı işlemlerin sayısını sınırlayarak önceki senaryoyu genişletmek için <xref:System.Threading.Tasks.Task.WhenAny%2A> yöntemini kullanabilirsiniz.
 
-- Süresi dolan işlemler. You can use the <xref:System.Threading.Tasks.Task.WhenAny%2A> method to select between one or more tasks and a task that finishes after a specific time, such as a task that is returned by the <xref:System.Threading.Tasks.Task.Delay%2A> method. The <xref:System.Threading.Tasks.Task.Delay%2A> method is described in the following section.
+- Süresi dolan işlemler. <xref:System.Threading.Tasks.Task.WhenAny%2A> yöntemini bir veya daha fazla görev arasında seçim yapmak için, <xref:System.Threading.Tasks.Task.Delay%2A> yöntemi tarafından döndürülen bir görev gibi belirli bir zamandan sonra sona ererek geçen bir görevi de kullanabilirsiniz. <xref:System.Threading.Tasks.Task.Delay%2A> yöntemi aşağıdaki bölümde açıklanmıştır.
 
 ### <a name="taskdelay"></a>Task.Delay
 
-The <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> method produces a <xref:System.Threading.Tasks.Task> object that finishes after the specified time. Bazen verileri yoklayan, zaman aşımlarını tanıtan, belirli bir süre boyunca kullanıcı girişinin işlenmesini erteleyen, vb. işlemler yapan döngüler oluşturmak için bu yöntemi kullanabilirsiniz.
+<xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> yöntemi, belirtilen zamandan sonra sona erbir <xref:System.Threading.Tasks.Task> nesnesi oluşturur. Bazen verileri yoklayan, zaman aşımlarını tanıtan, belirli bir süre boyunca kullanıcı girişinin işlenmesini erteleyen, vb. işlemler yapan döngüler oluşturmak için bu yöntemi kullanabilirsiniz.
 
 ### <a name="tasktfromresult"></a>Task(T).FromResult
 
-By using the <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> method, you can create a <xref:System.Threading.Tasks.Task%601> object that holds a pre-computed result. This method is useful when you perform an asynchronous operation that returns a <xref:System.Threading.Tasks.Task%601> object, and the result of that <xref:System.Threading.Tasks.Task%601> object is already computed. For an example that uses <xref:System.Threading.Tasks.Task.FromResult%2A> to retrieve the results of asynchronous download operations that are held in a cache, see [How to: Create Pre-Computed Tasks](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md).
+<xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> yöntemi kullanarak, önceden hesaplanmış sonucu tutan bir <xref:System.Threading.Tasks.Task%601> nesnesi oluşturabilirsiniz. Bu yöntem, bir <xref:System.Threading.Tasks.Task%601> nesnesi döndüren zaman uyumsuz bir işlem gerçekleştirirken ve bu <xref:System.Threading.Tasks.Task%601> nesnesinin sonucu zaten hesaplanmışsa yararlıdır. Bir önbellekte tutulan zaman uyumsuz indirme işlemlerinin sonuçlarını almak için <xref:System.Threading.Tasks.Task.FromResult%2A> kullanan bir örnek için bkz. [nasıl yapılır: önceden hesaplanan görevler oluşturma](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md).
 
-## <a name="handling-exceptions-in-tasks"></a>Handling exceptions in tasks
+## <a name="handling-exceptions-in-tasks"></a>Görevlerde özel durumları işleme
 
-When a task throws one or more exceptions, the exceptions are wrapped in an <xref:System.AggregateException> exception. That exception is propagated back to the thread that joins with the task, which is typically the thread that is waiting for the task to finish or the thread that accesses the <xref:System.Threading.Tasks.Task%601.Result%2A> property. Bu davranış, tüm işlenmemiş özel durumların varsayılan olarak işlemi sonlandırması gerektiğini belirten .NET Framework ilkesini zorlamaya yarar. The calling code can handle the exceptions by using any of the following in a `try`/`catch` block:
+Bir görev bir veya daha fazla özel durum oluşturduğunda, özel durumlar <xref:System.AggregateException> bir özel duruma kaydırılır. Bu özel durum, genellikle görevin bitmesini bekleyen iş parçacığı veya <xref:System.Threading.Tasks.Task%601.Result%2A> özelliğine erişen iş parçacığı olan görevle birleştiren iş parçacığına geri yayılır. Bu davranış, tüm işlenmemiş özel durumların varsayılan olarak işlemi sonlandırması gerektiğini belirten .NET Framework ilkesini zorlamaya yarar. Çağıran kod, bir `try`/`catch` bloğunda aşağıdakilerden birini kullanarak özel durumları işleyebilir:
 
-- The <xref:System.Threading.Tasks.Task.Wait%2A> method
+- <xref:System.Threading.Tasks.Task.Wait%2A> yöntemi
 
-- The <xref:System.Threading.Tasks.Task.WaitAll%2A> method
+- <xref:System.Threading.Tasks.Task.WaitAll%2A> yöntemi
 
-- The <xref:System.Threading.Tasks.Task.WaitAny%2A> method
+- <xref:System.Threading.Tasks.Task.WaitAny%2A> yöntemi
 
-- The <xref:System.Threading.Tasks.Task%601.Result%2A> property
+- <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği
 
-The joining thread can also handle exceptions by accessing the <xref:System.Threading.Tasks.Task.Exception%2A> property before the task is garbage-collected. Bu özelliğe erişerek, işlenmeyen özel durumun, nesne hazırlandığında işlemi sonlandıran özel durum yayma davranışını tetiklemesini engellersiniz.
+Katılım iş parçacığı Ayrıca, görev atık toplanmadan önce <xref:System.Threading.Tasks.Task.Exception%2A> özelliğine erişerek özel durumları işleyebilir. Bu özelliğe erişerek, işlenmeyen özel durumun, nesne hazırlandığında işlemi sonlandıran özel durum yayma davranışını tetiklemesini engellersiniz.
 
-For more information about exceptions and tasks, see [Exception Handling](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).
+Özel durumlar ve görevler hakkında daha fazla bilgi için bkz. [özel durum işleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).
 
-## <a name="canceling-tasks"></a>Canceling tasks
+## <a name="canceling-tasks"></a>Görevleri iptal etme
 
-The <xref:System.Threading.Tasks.Task> class supports cooperative cancellation and is fully integrated with the <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> and <xref:System.Threading.CancellationToken?displayProperty=nameWithType> classes, which were introduced in the .NET Framework 4. Many of the constructors in the <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> class take a <xref:System.Threading.CancellationToken> object as an input parameter. Many of the <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> and <xref:System.Threading.Tasks.Task.Run%2A> overloads also include a <xref:System.Threading.CancellationToken> parameter.
+<xref:System.Threading.Tasks.Task> sınıfı birlikte iptalleri destekler ve .NET Framework 4 ' te tanıtılan <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> ve <xref:System.Threading.CancellationToken?displayProperty=nameWithType> sınıflarıyla tamamen tümleşiktir. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfındaki oluşturucuların birçoğu, giriş parametresi olarak bir <xref:System.Threading.CancellationToken> nesnesi alır. <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> ve <xref:System.Threading.Tasks.Task.Run%2A> aşırı yüklemelerin çoğu ayrıca bir <xref:System.Threading.CancellationToken> parametresi içerir.
 
-You can create the token, and issue the cancellation request at some later time, by using the <xref:System.Threading.CancellationTokenSource> class. Pass the token to the <xref:System.Threading.Tasks.Task> as an argument, and also reference the same token in your user delegate, which does the work of responding to a cancellation request.
+Belirteci oluşturabilir ve daha sonra <xref:System.Threading.CancellationTokenSource> sınıfını kullanarak iptal isteğini daha sonra verebilirsiniz. Belirteci bağımsız değişken olarak <xref:System.Threading.Tasks.Task> geçirin ve Kullanıcı temsilcinizdeki aynı belirtece başvurun ve bu da bir iptal isteğine yanıt vermeyi işler.
 
-For more information, see [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md) and [How to: Cancel a Task and Its Children](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).
+Daha fazla bilgi için bkz. [Görev iptali](../../../docs/standard/parallel-programming/task-cancellation.md) ve [nasıl yapılır: bir görevi ve alt öğelerini iptal etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).
 
-## <a name="the-taskfactory-class"></a>The TaskFactory class
+## <a name="the-taskfactory-class"></a>TaskFactory Sınıfı
 
-The <xref:System.Threading.Tasks.TaskFactory> class provides static methods that encapsulate some common patterns for creating and starting tasks and continuation tasks.
+<xref:System.Threading.Tasks.TaskFactory> sınıfı, görevler ve devamlılık görevleri oluşturmak ve başlatmak için bazı ortak desenleri kapsülleyen statik yöntemler sağlar.
 
-- The most common pattern is <xref:System.Threading.Tasks.TaskFactory.StartNew%2A>, which creates and starts a task in one statement.
+- En yaygın desenler, tek bir bildirimde bir görev oluşturan ve Başlatan <xref:System.Threading.Tasks.TaskFactory.StartNew%2A>.
 
-- When you create continuation tasks from multiple antecedents, use the <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> method or <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> method or their equivalents in the <xref:System.Threading.Tasks.Task%601> class. For more information, see [Chaining Tasks by Using Continuation Tasks](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).
+- Birden çok öncüllerin 'da devamlılık görevleri oluştururken, <xref:System.Threading.Tasks.Task%601> sınıfında <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> yöntemini veya <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> yöntemini veya bunların eşdeğerlerini kullanın. Daha fazla bilgi için bkz. [devamlılık görevlerini kullanarak görevleri zincirleme](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).
 
-- To encapsulate Asynchronous Programming Model `BeginX` and `EndX` methods in a <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601> instance, use the <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> methods. For more information, see [TPL and Traditional .NET Framework Asynchronous Programming](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md).
+- Zaman uyumsuz programlama modelini `BeginX` ve `EndX` yöntemleri bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> örneğinde kapsüllemek için, <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> yöntemlerini kullanın. Daha fazla bilgi için bkz. [TPL ve geleneksel .NET Framework zaman uyumsuz programlama](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md).
 
-The default <xref:System.Threading.Tasks.TaskFactory> can be accessed as a static property on the <xref:System.Threading.Tasks.Task> class or <xref:System.Threading.Tasks.Task%601> class. You can also instantiate a <xref:System.Threading.Tasks.TaskFactory> directly and specify various options that include a <xref:System.Threading.CancellationToken>, a <xref:System.Threading.Tasks.TaskCreationOptions> option, a <xref:System.Threading.Tasks.TaskContinuationOptions> option, or a <xref:System.Threading.Tasks.TaskScheduler>. Whatever options are specified when you create the task factory will be applied to all tasks that it creates, unless the <xref:System.Threading.Tasks.Task> is created by using the <xref:System.Threading.Tasks.TaskCreationOptions> enumeration, in which case the task's options override those of the task factory.
+Varsayılan <xref:System.Threading.Tasks.TaskFactory> <xref:System.Threading.Tasks.Task> sınıfında veya <xref:System.Threading.Tasks.Task%601> sınıfında statik bir özellik olarak erişilebilir. Ayrıca, bir <xref:System.Threading.Tasks.TaskFactory> doğrudan oluşturabilir ve bir <xref:System.Threading.CancellationToken>, <xref:System.Threading.Tasks.TaskCreationOptions> seçeneği, <xref:System.Threading.Tasks.TaskContinuationOptions> seçeneği veya bir <xref:System.Threading.Tasks.TaskScheduler>içeren çeşitli seçenekleri belirtebilirsiniz. Görev fabrikasını oluştururken her türlü seçenek, <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.TaskCreationOptions> numaralandırması kullanılarak oluşturulmadığı müddetçe, bu durumda görev seçenekleri görev fabrikasının üzerine yazar.
 
-## <a name="tasks-without-delegates"></a>Tasks without delegates
+## <a name="tasks-without-delegates"></a>Temsilcileri olmayan görevler
 
-In some cases, you may want to use a <xref:System.Threading.Tasks.Task> to encapsulate some asynchronous operation that is performed by an external component instead of your own user delegate. If the operation is based on the Asynchronous Programming Model Begin/End pattern, you can use the <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> methods. If that is not the case, you can use the <xref:System.Threading.Tasks.TaskCompletionSource%601> object to wrap the operation in a task and thereby gain some of the benefits of <xref:System.Threading.Tasks.Task> programmability, for example, support for exception propagation and continuations. Daha fazla bilgi için bkz. <xref:System.Threading.Tasks.TaskCompletionSource%601>.
+Bazı durumlarda, kendi Kullanıcı temsilciniz yerine bir dış bileşen tarafından gerçekleştirilen bazı zaman uyumsuz işlemleri kapsüllemek için bir <xref:System.Threading.Tasks.Task> kullanmak isteyebilirsiniz. İşlem zaman uyumsuz programlama modeli başlangıç/bitiş düzenine dayanıyorsa, <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> yöntemlerini kullanabilirsiniz. Böyle bir durum söz konusu değilse, işlemi bir görevde kaydırmak için <xref:System.Threading.Tasks.TaskCompletionSource%601> nesnesini kullanabilir ve böylece <xref:System.Threading.Tasks.Task> programlamasına faydaların avantajlarından bazılarını elde edebilirsiniz; Örneğin, özel durum yayma ve devamlılık desteği. Daha fazla bilgi için bkz. <xref:System.Threading.Tasks.TaskCompletionSource%601>.
 
-## <a name="custom-schedulers"></a>Custom schedulers
+## <a name="custom-schedulers"></a>Özel zamanlayıcılar
 
-Most application or library developers do not care which processor the task runs on, how it synchronizes its work with other tasks, or how it is scheduled on the <xref:System.Threading.ThreadPool?displayProperty=nameWithType>. Bunlar yalnızca ana bilgisayarda olabildiğince verimli çalışmasını gerektirir. Zamanlama ayrıntıları üzerinde daha hassas bir denetim gerekiyorsa, Görev Paralel Kitaplığı varsayılan görev zamanlayıcı üzerinde bazı ayarları yapılandırmanıza ve hatta özel bir zamanlayıcı girmenize olanak tanır. Daha fazla bilgi için bkz. <xref:System.Threading.Tasks.TaskScheduler>.
+Çoğu uygulama veya kitaplık geliştiricisi, görevin hangi işlemci üzerinde çalıştığını, çalışmasını diğer görevlerle nasıl eşitleyeceğini veya <xref:System.Threading.ThreadPool?displayProperty=nameWithType>nasıl planlandığını önemsemez. Bunlar yalnızca ana bilgisayarda olabildiğince verimli çalışmasını gerektirir. Zamanlama ayrıntıları üzerinde daha hassas bir denetim gerekiyorsa, Görev Paralel Kitaplığı varsayılan görev zamanlayıcı üzerinde bazı ayarları yapılandırmanıza ve hatta özel bir zamanlayıcı girmenize olanak tanır. Daha fazla bilgi için bkz. <xref:System.Threading.Tasks.TaskScheduler>.
 
-## <a name="related-data-structures"></a>Related data structures
+## <a name="related-data-structures"></a>İlgili veri yapıları
 
-TPL'de, hem paralel hem de sıralı senaryolarda yararlı olan çeşitli, yeni genel türler vardır. These include several thread-safe, fast and scalable collection classes in the <xref:System.Collections.Concurrent?displayProperty=nameWithType> namespace, and several new synchronization types, for example, <xref:System.Threading.Semaphore?displayProperty=nameWithType> and <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>, which are more efficient than their predecessors for specific kinds of workloads. Other new types in the .NET Framework 4, for example, <xref:System.Threading.Barrier?displayProperty=nameWithType> and <xref:System.Threading.SpinLock?displayProperty=nameWithType>, provide functionality that was not available in earlier releases. For more information, see [Data Structures for Parallel Programming](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md).
+TPL'de, hem paralel hem de sıralı senaryolarda yararlı olan çeşitli, yeni genel türler vardır. Bunlar, <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanında çok sayıda iş parçacığı açısından güvenli, hızlı ve ölçeklenebilir koleksiyon sınıfları ve örneğin, <xref:System.Threading.Semaphore?displayProperty=nameWithType> ve <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>belirli iş yükü türleri için öncüllerinden daha verimlidir. .NET Framework 4 ' deki diğer yeni türler, örneğin <xref:System.Threading.Barrier?displayProperty=nameWithType> ve <xref:System.Threading.SpinLock?displayProperty=nameWithType>, önceki sürümlerde kullanılamayan işlevleri sağlar. Daha fazla bilgi için bkz. [paralel programlama Için veri yapıları](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md).
 
-## <a name="custom-task-types"></a>Custom task types
+## <a name="custom-task-types"></a>Özel görev türleri
 
-We recommend that you do not inherit from <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> or <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Instead, we recommend that you use the <xref:System.Threading.Tasks.Task.AsyncState%2A> property to associate additional data or state with a <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601> object. You can also use extension methods to extend the functionality of the <xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601> classes. For more information about extension methods, see [Extension Methods](../../csharp/programming-guide/classes-and-structs/extension-methods.md) and [Extension Methods](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).
+<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> veya <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>devralma yapmanızı öneririz. Bunun yerine, ek verileri veya durumu bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> nesnesiyle ilişkilendirmek için <xref:System.Threading.Tasks.Task.AsyncState%2A> özelliğini kullanmanızı öneririz. Ayrıca, <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> sınıflarının işlevlerini genişletmek için genişletme yöntemlerini de kullanabilirsiniz. Uzantı yöntemleri hakkında daha fazla bilgi için bkz. [Uzantı yöntemleri](../../csharp/programming-guide/classes-and-structs/extension-methods.md) ve [genişletme yöntemleri](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).
 
-If you must inherit from <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>, you cannot use <xref:System.Threading.Tasks.Task.Run%2A>, or the <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>, or <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> classes to create instances of your custom task type because these mechanisms create only <xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601> objects. In addition, you cannot use the task continuation mechanisms that are provided by <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.TaskFactory>, and  <xref:System.Threading.Tasks.TaskFactory%601> to create instances of your custom task type because these mechanisms also create only <xref:System.Threading.Tasks.Task> and  <xref:System.Threading.Tasks.Task%601> objects.
+<xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>öğesinden devralması gerekiyorsa, bu mekanizmalar yalnızca <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>ve <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> nesneleri oluşturduğundan, <xref:System.Threading.Tasks.Task.Run%2A>veya <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> sınıflarını özel görev tipinizdeki örnekleri oluşturmak için kullanamazsınız. Ayrıca, bu mekanizmalar aynı zamanda yalnızca <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> nesneleri oluşturduğundan, <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.TaskFactory>ve <xref:System.Threading.Tasks.TaskFactory%601> tarafından sunulan görev devamlılık mekanizmalarını, özel görev türünün örneklerini oluşturmak için kullanamazsınız.
 
 ## <a name="related-topics"></a>İlgili konular
 
@@ -276,18 +276,18 @@ If you must inherit from <xref:System.Threading.Tasks.Task> or <xref:System.Thre
 |-|-|
 |[Devamlılık Görevlerini Kullanarak Görevleri Birbirine Bağlama](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|Devamlılıkların nasıl çalıştığını açıklar.|
 |[Eklenen ve Ayrılan Alt Görevler](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|Ekli ve ayrılmış alt görevler arasındaki farkı açıklar.|
-|[Görev İptali](../../../docs/standard/parallel-programming/task-cancellation.md)|Describes the cancellation support that is built into the <xref:System.Threading.Tasks.Task> object.|
+|[Görev İptali](../../../docs/standard/parallel-programming/task-cancellation.md)|<xref:System.Threading.Tasks.Task> nesnesinde yerleşik olan iptal desteğini açıklar.|
 |[Özel Durum İşleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)|Eşzamanlı iş parçacıklarındaki özel durumların nasıl işlendiğini açıklar.|
-|[Nasıl yapılır: Paralel İşlemleri Yürütmek için Parallel.Invoke Kullanma](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Describes how to use <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|
+|[Nasıl yapılır: Paralel İşlemleri Yürütmek için Parallel.Invoke Kullanma](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|<xref:System.Threading.Tasks.Parallel.Invoke%2A>nasıl kullanılacağını açıklar.|
 |[Nasıl yapılır: Bir Görevden Değer Döndürme](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|Değerlerin görevlerden nasıl döndürüleceğini açıklar.|
 |[Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|Görevlerin nasıl iptal edildiğini açıklar.|
-|[Nasıl yapılır: Önceden Hesaplanan Görevler Oluşturma](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Describes how to use the <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> method to retrieve the results of asynchronous download operations that are held in a cache.|
+|[Nasıl yapılır: Önceden Hesaplanan Görevler Oluşturma](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Bir önbellekte tutulan zaman uyumsuz indirme işlemlerinin sonuçlarını almak için <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> yönteminin nasıl kullanılacağını açıklar.|
 |[Nasıl yapılır: Paralel Görevler İçeren Bir İkili Ağacı Gezme](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|İkili ağacı geçirmek için görevlerin nasıl kullanılacağını açıklar.|
-|[Nasıl yapılır: İç İçe Geçmiş Bir Görevi Sarmalamadan Çıkarma](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Demonstrates how to use the <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> extension method.|
-|[Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Describes how to use <xref:System.Threading.Tasks.Parallel.For%2A> and <xref:System.Threading.Tasks.Parallel.ForEach%2A> to create parallel loops over data.|
+|[Nasıl yapılır: İç İçe Geçmiş Bir Görevi Sarmalamadan Çıkarma](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|<xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> uzantısı yönteminin nasıl kullanılacağını gösterir.|
+|[Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Verilerin üzerinde paralel döngüler oluşturmak için <xref:System.Threading.Tasks.Parallel.For%2A> ve <xref:System.Threading.Tasks.Parallel.ForEach%2A> kullanımını açıklar.|
 |[Paralel Programlama](../../../docs/standard/parallel-programming/index.md)|.NET Framework paralel programlama için üst düzey düğüm.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)
-- [Samples for Parallel Programming with the .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+- [.NET Framework paralel programlama örnekleri](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

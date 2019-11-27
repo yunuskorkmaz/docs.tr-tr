@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446546"
 ---
 # <a name="createalink-function"></a>CreateALink İşlevi
-Creates an instance of the Assembly Linker and sets a pointer to the specified interface.  
+Derleme bağlayıcının bir örneğini oluşturur ve belirtilen arabirime bir işaretçi ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,11 +38,11 @@ HRESULT CreateALink (
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|`riid`|The physical name of one of the Assembly Linker interfaces.|  
-|`ppInterface`|The location that on successful completion contains a pointer to the `riid` interface.|  
+|`riid`|Bütünleştirilmiş kod bağlayıcı arabirimlerinden birinin fiziksel adı.|  
+|`ppInterface`|Başarılı tamamlamada yer alan konum `riid` arabirimine yönelik bir işaretçi içerir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Library**: alink.dll  
+ **Kitaplık**: ALink. dll  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

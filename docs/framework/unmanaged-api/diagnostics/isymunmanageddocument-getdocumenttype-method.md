@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449193"
 ---
 # <a name="isymunmanageddocumentgetdocumenttype-method"></a>ISymUnmanagedDocument::GetDocumentType Metodu
-Gets the document type of this document.  
+Bu belgenin belge türünü alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,10 +34,10 @@ HRESULT GetDocumentType(
   
 ## <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Pointer to a variable that receives the document type.  
+ dışı Belge türünü alan bir değişkene yönelik işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

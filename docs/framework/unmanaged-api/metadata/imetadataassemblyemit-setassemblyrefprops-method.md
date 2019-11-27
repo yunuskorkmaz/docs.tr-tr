@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440552"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps Yöntemi
-Modifies the specified `AssemblyRef` metadata structure.  
+Belirtilen `AssemblyRef` meta veri yapısını değiştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,40 +42,40 @@ HRESULT SetAssemblyRefProps (
   
 ## <a name="parameters"></a>Parametreler  
  `ar`  
- [in] The metadata token that specifies the `AssemblyRef` metadata structure to be modified.  
+ 'ndaki Değiştirilecek `AssemblyRef` meta veri yapısını belirten meta veri belirteci.  
   
  `pbPublicKeyOrToken`  
- [in] The public key of the publisher of the referenced assembly.  
+ 'ndaki Başvurulan derlemenin yayımcısının ortak anahtarı.  
   
  `cbPublicKeyOrToken`  
- [in] The size in bytes of `pbPublicKeyOrToken`.  
+ 'ndaki `pbPublicKeyOrToken`bayt cinsinden boyutu.  
   
  `szName`  
- [in] The human-readable text name of the assembly.  
+ 'ndaki Derlemenin insanların okunabilir metin adı.  
   
  `pMetaData`  
- [in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.  
+ 'ndaki Derleme için sürüm, platform ve yerel ayar bilgilerini içeren bir ASSEMBLYMETADATA örneğine yönelik bir işaretçi.  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the assembly.  
+ 'ndaki Derlemeyle ilişkili karma verileri işaretçisi.  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ 'ndaki `pbHashValue`bayt cinsinden boyutu.  
   
  `dwAssemblyRefFlags`  
- [in] A bitwise combination of [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) values that specify attributes of the referenced assembly.  
+ 'ndaki Başvurulan derlemenin özniteliklerini belirten, [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) değerlerinin bit düzeyinde birleşimi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- To create an `AssemblyRef` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) method.  
+ `AssemblyRef` meta veri yapısı oluşturmak için [IMetaDataAssemblyEmit::D efineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) metodunu kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

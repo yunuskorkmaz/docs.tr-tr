@@ -17,43 +17,43 @@ ms.locfileid: "74345612"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kayıt Defteri Anahtarından Değer Okuma
 
-The `GetValue` method of the `My.Computer.Registry` object can be used to read values in the Windows registry.  
+`My.Computer.Registry` nesnesinin `GetValue` yöntemi Windows kayıt defterindeki değerleri okumak için kullanılabilir.  
   
- If the key, "Software\MyApp" in the following example, does not exist, an exception is thrown. If the `ValueName`,  "Name" in the following example, does not exist, `Nothing` is returned.  
+ Aşağıdaki örnekteki "Software\MyApp" anahtarı yoksa, bir özel durum oluşturulur. `ValueName`, aşağıdaki örnekteki "Name" yoksa, `Nothing` döndürülür.  
   
- The `GetValue` method can also be used to determine whether a given value exists in a specific registry key.  
+ `GetValue` yöntemi, belirli bir değerin belirli bir kayıt defteri anahtarında bulunup bulunmadığını anlamak için de kullanılabilir.  
   
- When code reads the registry from a Web application, the current user is determined by the authentication and impersonation that is implemented in the Web application.  
+ Kod, bir Web uygulamasından kayıt defterini okuduğunda, geçerli kullanıcı Web uygulamasında uygulanan kimlik doğrulama ve kimliğe bürünme tarafından belirlenir.  
   
-### <a name="to-read-a-value-from-a-registry-key"></a>To read a value from a registry key  
+### <a name="to-read-a-value-from-a-registry-key"></a>Kayıt defteri anahtarından bir değeri okumak için  
   
-- Use the `GetValue` method, specifying the path and name) to read a value from registry key. The following example reads the value `Name` from `HKEY_CURRENT_USER\Software\MyApp` and displays it in a message box.  
+- Kayıt defteri anahtarından bir değeri okumak için yolu ve adı belirterek `GetValue` yöntemi kullanın. Aşağıdaki örnek `Name` değeri `HKEY_CURRENT_USER\Software\MyApp` okur ve bir ileti kutusunda görüntüler.  
   
      [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   
- This code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **Windows Operating System > Registry**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
+ Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide, **Windows Işletim sistemi > kayıt defterinde**bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).  
   
-### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>To determine whether a value exists in a registry key  
+### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>Bir kayıt defteri anahtarında bir değerin bulunup bulunmadığını belirleme  
   
-- Use the `GetValue` method to retrieve the value. The following code checks whether the value exists and returns a message if it does not.  
+- Değeri almak için `GetValue` yöntemini kullanın. Aşağıdaki kod değerin mevcut olup olmadığını denetler ve yoksa bir ileti döndürür.  
   
      [!code-vb[VbResourceTasks#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#12)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- The registry holds top-level, or root, keys that are used to store data. For instance, the HKEY_LOCAL_MACHINE root key is used for storing machine-level settings used by all users, while HKEY_CURRENT_USER is used for storing data specific to an individual user.  
+ Kayıt defteri, verileri depolamak için kullanılan en üst düzey veya kök anahtarlar içerir. Örneğin, HKEY_LOCAL_MACHINE kök anahtarı, tüm kullanıcılar tarafından kullanılan makine düzeyindeki ayarları depolamak için kullanılır, HKEY_CURRENT_USER tek bir kullanıcıya özgü verileri depolamak için kullanılır.  
   
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- The name of the key is `Nothing` (<xref:System.ArgumentNullException>).  
+- Anahtarın adı `Nothing` (<xref:System.ArgumentNullException>).  
   
-- The user does not have permissions to read from registry keys (<xref:System.Security.SecurityException>).  
+- Kullanıcının kayıt defteri anahtarlarından okuma izni yok (<xref:System.Security.SecurityException>).  
   
-- The key name exceeds the 255-character limit (<xref:System.ArgumentException>).  
+- Anahtar adı 255 karakterlik sınırı (<xref:System.ArgumentException>) aşıyor.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
 
- To run this process, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.RegistryPermission> class. If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges. Similarly, the user must have the correct ACLs for creating or writing to settings. For example, a local application that has the code access security permission might not have operating system permission. For more information, see [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md).  
+ Bu işlemi çalıştırmak için, derlemeniz <xref:System.Security.Permissions.RegistryPermission> sınıfı tarafından verilen ayrıcalık düzeyini gerektirir. Kısmi güven bağlamında çalıştırıyorsanız, işlem yetersiz ayrıcalıklar nedeniyle bir özel durum oluşturabilir. Benzer şekilde, Kullanıcı oluşturma veya ayarları yazma için doğru ACL 'Lere sahip olmalıdır. Örneğin, kod erişim güvenliği iznine sahip bir yerel uygulama işletim sistemi iznine sahip olmayabilir. Daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](../../../../framework/misc/code-access-security-basics.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

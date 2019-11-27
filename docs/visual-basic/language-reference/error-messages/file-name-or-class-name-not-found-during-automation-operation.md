@@ -12,11 +12,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353718"
 ---
 # <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a>Otomasyon işlemi sırasında dosya adı veya sınıf adı bulunamadı (Visual Basic)
-The name specified for file name or class in a call to the `GetObject` function could not be found.  
+`GetObject` işlevine yapılan çağrıda dosya adı veya sınıf için belirtilen ad bulunamadı.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Check the names and try again. Make sure the name used for the `class` parameter matches that registered with the system.  
+- Adları denetleyip yeniden deneyin. `class` parametresi için kullanılan adın sistemle birlikte kaydedilmiş şekilde eşleştiğinden emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

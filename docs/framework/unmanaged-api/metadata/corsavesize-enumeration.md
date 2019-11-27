@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450105"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize Numaralandırması
-Contains values indicating the level of precision required when querying for the size of a save operation.  
+Bir kaydetme işleminin boyutunu sorgularken gereken duyarlık düzeyini gösteren değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,22 +34,22 @@ typedef enum CorSaveSize {
 } CorSaveSize;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`cssAccurate`|Specifies that the return value should be exact.|  
-|`cssQuick`|Specifies that the return value should be estimated.|  
-|`cssDiscardTransientCAs`|Specifies that discardable types should be removed.|  
+|`cssAccurate`|Dönüş değerinin tam olarak doğru olması gerektiğini belirtir.|  
+|`cssQuick`|Dönüş değerinin tahmini olması gerektiğini belirtir.|  
+|`cssDiscardTransientCAs`|Discardable türlerinin kaldırılması gerektiğini belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

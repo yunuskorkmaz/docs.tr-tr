@@ -13,22 +13,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332016"
 ---
 # <a name="mycomputerports-object"></a>My.Computer.Ports Nesnesi
-Provides a property and a method for accessing the computer's serial ports.  
+Bilgisayarın seri bağlantı noktalarına erişmek için bir özellik ve bir yöntem sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- For information about the methods and properties of the `My.Computer.Ports` object, see <xref:Microsoft.VisualBasic.Devices.Ports>.  
+ `My.Computer.Ports` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.Devices.Ports>.  
   
- For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
+ Daha fazla bilgi için bkz. [bilgisayarın bağlantı noktalarına erişme](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
   
 > [!NOTE]
-> You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.  
+> Bilgisayarın seri bağlantı noktalarına erişmek için <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> sınıfının özelliklerini ve yöntemlerini de kullanabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
+ **Ad alanı:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Ports>  
+ **Sınıf:** <xref:Microsoft.VisualBasic.Devices.Ports>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

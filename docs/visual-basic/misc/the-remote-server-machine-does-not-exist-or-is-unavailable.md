@@ -1,5 +1,5 @@
 ---
-title: The remote server machine does not exist or is unavailable
+title: Uzak sunucu makinesi yok veya kullanılamıyor
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID462
@@ -11,12 +11,12 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348189"
 ---
-# <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a>The remote server machine does not exist or is unavailable (Visual Basic)
-You are trying to connect to a remote server that is unavailable or does not exist. This error may be caused by your network connection being lost.  
+# <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a>Uzak sunucu makinesi yok veya kullanılamıyor (Visual Basic)
+Kullanılamayan veya mevcut olmayan bir uzak sunucuya bağlanmaya çalışıyorsunuz. Bu hata, ağ bağlantınızın kaybedilmesi nedeniyle oluşmuş olabilir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Reconnect to the network and try again.  
+- Ağa yeniden bağlanın ve yeniden deneyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

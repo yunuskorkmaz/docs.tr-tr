@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427145"
 ---
 # <a name="cor_prf_transition_reason-enumeration"></a>COR_PRF_TRANSITION_REASON Numaralandırması
-Indicates the reason for a transition from managed to unmanaged code, or vice versa.  
+Yönetilmesinin yönetilmeyen koda veya tam tersi bir geçişin sebebini gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,21 +33,21 @@ typedef enum {
 } COR_PRF_TRANSITION_REASON;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`COR_PRF_TRANSITION_CALL`|The transition is due to a call into a function.|  
-|`COR_PRF_TRANSITION_RETURN`|The transition is due to a return from a function.|  
+|`COR_PRF_TRANSITION_CALL`|Geçiş bir işleve yapılan çağrıdır.|  
+|`COR_PRF_TRANSITION_RETURN`|Geçiş, bir işlevden geri dönüş nedeniyle yapılır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- When a transition occurs, the profiler receives an [ICorProfilerCallback::ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) or [ICorProfilerCallback::UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) callback, either of which provides a value of the `COR_PRF_TRANSITION_REASON` enumeration to indicate the reason for the transition.  
+ Bir geçiş gerçekleştiğinde, profil oluşturucu bir [ICorProfilerCallback:: ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) veya [ICorProfilerCallback:: UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) geri çağırması alır, bunlardan biri, geçişin nedenini göstermek için `COR_PRF_TRANSITION_REASON` numaralandırması değeri sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -9,36 +9,36 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347794"
 ---
-# <a name="linq-and-file-directories-visual-basic"></a>LINQ and File Directories (Visual Basic)
-Many file system operations are essentially queries and are therefore well-suited to the LINQ approach.  
+# <a name="linq-and-file-directories-visual-basic"></a>LINQ ve dosya dizinleri (Visual Basic)
+Birçok dosya sistemi işlemi aslında sorgular ve bu nedenle LINQ yaklaşımına uygundur.  
   
- Note that the queries in this section are non-destructive. They are not used to change the contents of the original files or folders. This follows the rule that queries should not cause any side-effects. In general, any code (including queries that perform create / update / delete operators) that modifies source data should be kept separate from the code that just queries the data.  
+ Bu bölümdeki sorguların bozucu olmadığına unutmayın. Özgün dosyaların veya klasörlerin içeriğini değiştirmek için kullanılmaz. Bu, sorguların hiçbir yan etkiye neden olmaması gerektiğine yönelik kuralı izler. Genel olarak, kaynak verileri değiştiren tüm kodlar (oluşturma/güncelleştirme/silme işleçleri de dahil olmak üzere) yalnızca verileri sorgulayan koddan ayrı tutulmalıdır.  
   
  Bu bölüm aşağıdaki konular içerir:  
   
- [How to: Query for Files with a Specified Attribute or Name (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
- Shows how to search for files by examining one or more properties of its <xref:System.IO.FileInfo> object.  
+ [Nasıl yapılır: belirtilen bir özniteliğe veya ada sahip dosyaları sorgulama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
+ <xref:System.IO.FileInfo> nesnesinin bir veya daha fazla özelliğini inceleyerek dosyaların nasıl aranacağını gösterir.  
   
- [How to: Group Files by Extension (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
- Shows how to return groups of <xref:System.IO.FileInfo> object based on their file name extension.  
+ [Nasıl yapılır: dosyaları uzantıya göre gruplama (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+ <xref:System.IO.FileInfo> nesne gruplarının dosya adı uzantısına göre nasıl geri alınacağını gösterir.  
   
- [How to: Query for the Total Number of Bytes in a Set of Folders (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)  
- Shows how to return the total number of bytes in all the files in a specified directory tree.  
+ [Nasıl yapılır: bir klasör kümesindeki toplam bayt sayısını sorgulama (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)  
+ Belirtilen bir dizin ağacındaki tüm dosyalardaki toplam bayt sayısının nasıl geri yükleneceğini gösterir.  
   
- [How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s  
- Shows how to return all the files that are present in two specified folders, and also all the files that are present in one folder but not the other.  
+ [Nasıl yapılır: Iki klasörün Içeriğini karşılaştırma (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s  
+ Belirtilen iki klasörde bulunan tüm dosyaları ve aynı zamanda bir klasörde bulunan ancak diğeri olmayan tüm dosyaları döndürmeyi gösterir.  
   
- [How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
- Shows how to return the largest or smallest file, or a specified number of files, in a directory tree.  
+ [Nasıl yapılır: bir dizin ağacındaki en büyük dosya veya dosyalar için sorgu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
+ Bir dizin ağacında en büyük veya en küçük dosyanın veya belirli bir sayıdaki dosyanın nasıl döndürülmeli olduğunu gösterir.  
   
- [How to: Query for Duplicate Files in a Directory Tree (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
- Shows how to group for all file names that occur in more than one location in a specified directory tree. Also shows how to perform more complex comparisons based on a custom comparer.  
+ [Nasıl yapılır: bir dizin ağacında (LINQ) yinelenen dosyalar için sorgu (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
+ Belirtilen bir dizin ağacındaki birden fazla konumda gerçekleşen tüm dosya adlarının nasıl gruplandıralınacağını gösterir. Ayrıca, özel bir karşılaştırıcıyı temel alan daha karmaşık karşılaştırmalar yapmayı gösterir.  
   
- [How to query the contents of files in a folder (LINQ) (Visual Basic)](how-to-query-the-contents-of-files-in-a-folder-linq.md)  
- Shows how to iterate through folders in a tree, open each file, and query the file's contents.  
+ [Bir klasördeki dosyaların içeriğini sorgulama (LINQ) (Visual Basic)](how-to-query-the-contents-of-files-in-a-folder-linq.md)  
+ Bir ağaçtaki klasörlerin nasıl tekrarlanması, her dosyanın nasıl açılacağı ve dosyanın içeriğini sorgulama işlemlerinin nasıl yapılacağını gösterir.  
   
 ## <a name="comments"></a>Açıklamalar  
- There is some complexity involved in creating a data source that accurately represents the contents of the file system and handles exceptions gracefully. The examples in this section create a snapshot collection of <xref:System.IO.FileInfo> objects that represents all the files under a specified root folder and all its subfolders. The actual state of each <xref:System.IO.FileInfo> may change in the time between when you begin and end executing a query. For example, you can create a list of <xref:System.IO.FileInfo> objects to use as a data source. If you try to access the `Length` property in a query, the <xref:System.IO.FileInfo> object will try to access the file system to update the value of `Length`. If the file no longer exists, you will get a <xref:System.IO.FileNotFoundException> in your query, even though you are not querying the file system directly. Some queries in this section use a separate method that consumes these particular exceptions in certain cases. Another option is to keep your data source updated dynamically by using the <xref:System.IO.FileSystemWatcher>.  
+ Dosya sisteminin içeriğini doğru bir şekilde temsil eden bir veri kaynağı oluşturma konusunda bazı karmaşıklıklar vardır ve özel durumları düzgün bir şekilde işler. Bu bölümdeki örneklerde, belirtilen bir kök klasörü ve tüm alt klasörleri altındaki tüm dosyaları temsil eden <xref:System.IO.FileInfo> nesnelerinin bir anlık görüntü koleksiyonu oluşturulur. Her bir <xref:System.IO.FileInfo> gerçek durumu, bir sorgu yürütme ve sonlandırma arasındaki sürede değişebilir. Örneğin, bir veri kaynağı olarak kullanmak üzere <xref:System.IO.FileInfo> nesnelerinin bir listesini oluşturabilirsiniz. Bir sorgudaki `Length` özelliğine erişmeyi denerseniz, <xref:System.IO.FileInfo> nesnesi `Length`değerini güncelleştirmek için dosya sistemine erişmeye çalışır. Dosya artık yoksa, dosya sistemini doğrudan sorguladığınız halde sorgunuzda bir <xref:System.IO.FileNotFoundException> alırsınız. Bu bölümdeki bazı sorgular belirli durumlarda bu özel durumları tüketen ayrı bir yöntem kullanır. Diğer bir seçenek de <xref:System.IO.FileSystemWatcher>kullanarak veri kaynağınızı dinamik olarak güncel tutkullanmaktır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

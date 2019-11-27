@@ -14,60 +14,60 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204598"
 ---
 # <a name="c-walkthroughs"></a>C# İzlenecek Yolları
-Walkthroughs give step-by-step instructions for common scenarios, which makes them a good place to start learning about the product or a particular feature area.  
+İzlenecek yollar, yaygın senaryolar için adım adım yönergeler sunarak ürün veya belirli bir özellik alanı hakkında öğrenmeye başlamak için iyi bir yer sunar.  
   
- This section contains links to C# programming walkthroughs.  
+ Bu bölüm, C# programlama talimatlara bağlantılar içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
- [Accessing the Web by Using Async and Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- Shows how to create an asynchronous solution by using [async](./language-reference/keywords/async.md) and [await](./language-reference/operators/await.md).  
+ [Async ve await kullanarak Web 'e erişme](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [Async](./language-reference/keywords/async.md) ve [await](./language-reference/operators/await.md)kullanarak zaman uyumsuz bir çözümün nasıl oluşturulacağını gösterir.  
   
- [Creating a Windows Runtime Component in C# or Visual Basic and Calling it from JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Shows how to create a Windows Runtime type, package it in a Windows Runtime component, and then call the component from a Windows 8.x Store app that's built for Windows by using JavaScript.  
+ [Veya Visual Basic içinde C# Windows çalışma zamanı bileşeni oluşturma ve JavaScript 'ten çağırma](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
+ Windows Çalışma Zamanı türünün nasıl oluşturulacağını, bir Windows Çalışma Zamanı bileşende nasıl paketleyip, sonra JavaScript kullanarak Windows için oluşturulan bir Windows 8. x mağaza uygulamasından bileşeni çağırmayı gösterir.  
   
- [Office Programming (C# and Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
- Shows how to create an Excel workbook and a Word document by using C# and Visual Basic.  
+ [Office Programlama (C# ve Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
+ Ve Visual Basic kullanarak C# bir Excel çalışma kitabı ve Word belgesi oluşturmayı gösterir.  
   
- [Creating and Using Dynamic Objects (C# and Visual Basic)](./programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
- Shows how to create a custom object that dynamically exposes the contents of a text file, and how to create a project that uses the `IronPython` library.  
+ [Dinamik nesneler oluşturma ve kullanma (C# ve Visual Basic)](./programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
+ Bir metin dosyasının içeriğini dinamik olarak sunan özel bir nesne oluşturmayı ve `IronPython` kitaplığı kullanan bir projenin nasıl oluşturulacağını gösterir.  
    
- [Authoring a Composite Control with Visual C#](../framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- Demonstrates creating a simple composite control and extending its functionality through inheritance.  
+ [Visual ile bileşik denetim yazmaC#](../framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ Basit bir bileşik denetim oluşturmayı ve kendi işlevlerini devralma yoluyla genişletmeyi gösterir.  
   
- [Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features](../framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
- Illustrates how to create a custom designer for a custom control.  
+ [Visual Studio tasarım zamanı özelliklerinden faydalanan bir Windows Forms denetimi oluşturma](../framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+ Özel bir denetim için özel tasarımcı oluşturmayı gösterir.  
   
- [Inheriting from a Windows Forms Control with Visual C#](../framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
- Demonstrates creating a simple inherited button control. This button inherits functionality from the standard Windows Forms button and exposes a custom member.  
+ [Görsel ile Windows Forms denetiminden devralmaC#](../framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+ Basit bir devralınmış düğme denetimi oluşturmayı gösterir. Bu düğme, standart Windows Forms düğmesinden işlevselliği devralır ve özel bir üye kullanıma sunar.  
   
- [Debugging Custom Windows Forms Controls at Design Time](../framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
- Describes how to debug the design-time behavior of your custom control.
+ [Tasarım zamanında özel Windows Forms Denetimlerinde hata ayıklama](../framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+ Özel denetiminizin tasarım zamanı davranışının nasıl ayıklanacağını açıklar.
 
- [Performing Common Tasks Using Smart Tags on Windows Forms Controls](../framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
- Demonstrates some of the commonly performed tasks such as adding or removing a tab on a `TabControl`, docking a control to its parent, and changing the orientation of a `SplitContainer` control.  
+ [Windows Forms Denetimlerinde akıllı etiketleri kullanarak ortak görevleri gerçekleştirme](../framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+ Bir `TabControl`sekme ekleme veya kaldırma, üst öğesine denetim yerleştirme ve bir `SplitContainer` denetiminin yönünü değiştirme gibi yaygın olarak gerçekleştirilen görevlerden bazılarını gösterir.  
   
- [Writing Queries in C# (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Demonstrates the C# language features that are used to write [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expressions.  
+ [Sorgu yazma C# (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu C# ifadeleri yazmak için kullanılan dil özelliklerini gösterir.  
   
- [Manipulating Data (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
- Describes a [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] scenario for adding, modifying, and deleting data in a database.  
+ [Verileri düzenleme (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
+ Bir veritabanındaki verileri eklemek, değiştirmek ve silmek için bir [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] senaryosunu açıklar.  
   
- [Simple Object Model and Query (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)  
- Demonstrates how to create an entity class and a simple query to filter the entity class.  
+ [Basit nesne modeli ve sorgu (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)  
+ Varlık sınıfını filtrelemek için bir varlık sınıfı ve basit sorgu oluşturmayı gösterir.  
   
- [Using Only Stored Procedures (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
- Demonstrates how to use LINQ to SQL to access data by executing only stored procedures.  
+ [Yalnızca saklı yordamları kullanma (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
+ Yalnızca saklı yordamları yürüterek verilere erişmek için LINQ to SQL nasıl kullanacağınızı gösterir.  
   
- [Querying Across Relationships (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)  
- Demonstrates the use of [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] associations to represent foreign-key relationships in a database.  
+ [Ilişkiler genelinde sorgulama (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)  
+ Bir veritabanındaki yabancı anahtar ilişkilerini göstermek için [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] ilişkilerinin kullanımını gösterir.  
 
- [Writing a Visualizer in C#](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
- Shows how to write a simple visualizer by using C#.  
+ [Görselleştiricisi yazmaC#](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
+ Kullanılarak C#basit Görselleştirici nasıl yazılacağını gösterir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Deployment Samples and Walkthroughs](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
- Provides step-by-step examples of common deployment scenarios.  
+ [Dağıtım örnekleri ve Izlenecek yollar](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
+ Yaygın dağıtım senaryolarına ilişkin adım adım örnekler sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

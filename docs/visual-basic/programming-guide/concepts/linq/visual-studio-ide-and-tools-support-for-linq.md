@@ -9,21 +9,21 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351026"
 ---
-# <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE and Tools Support for LINQ (Visual Basic)
-The Visual Studio integrated development environment (IDE) provides the following features that support LINQ application development:  
+# <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE ve LINQ için Araçlar desteği (Visual Basic)
+Visual Studio tümleşik geliştirme ortamı (IDE), LINQ uygulama geliştirmeyi destekleyen aşağıdaki özellikleri sağlar:  
   
 ## <a name="object-relational-designer"></a>Object Relational Designer  
- The Object Relational Designer is a visual design tool that you can use in [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) applications to generate classes in Visual Basic that represent the relational data in an underlying database. For more information, see [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Nesne İlişkisel Tasarımcısı, temel bir veritabanındaki ilişkisel verileri temsil eden Visual Basic sınıflar oluşturmak için [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) uygulamalarda kullanabileceğiniz bir görsel tasarım aracıdır. Daha fazla bilgi için bkz. [Visual Studio 'da LINQ to SQL araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
-## <a name="sqlmetal-command-line-tool"></a>SQLMetal Command Line Tool  
- SQLMetal is a command-line tool that can be used in build processes to generate classes from existing databases for use in LINQ to SQL  applications. For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../framework/tools/sqlmetal-exe-code-generation-tool.md).  
+## <a name="sqlmetal-command-line-tool"></a>SQLMetal komut satırı aracı  
+ SQLMetal, LINQ to SQL uygulamalarında kullanılmak üzere mevcut veritabanlarından sınıflar oluşturmak için derleme işlemlerinde kullanılabilen bir komut satırı aracıdır. Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
-## <a name="linq-aware-code-editor"></a>LINQ-Aware Code Editor  
- The Visual Basic code editor supports LINQ extensively with IntelliSense and formatting capabilities.  
+## <a name="linq-aware-code-editor"></a>LINQ duyarlı kod Düzenleyicisi  
+ Visual Basic kod Düzenleyicisi, IntelliSense ve biçimlendirme özellikleri ile LINQ 'i destekler.  
   
-## <a name="visual-studio-debugger-support"></a>Visual Studio Debugger Support  
- The Visual Studio debugger supports debugging of query expressions. For more information, see [Debugging LINQ](/visualstudio/debugger/debugging-linq).  
+## <a name="visual-studio-debugger-support"></a>Visual Studio hata ayıklayıcısı desteği  
+ Visual Studio hata ayıklayıcısı sorgu ifadelerinin hatalarını ayıklamayı destekler. Daha fazla bilgi için bkz. [LINQ hata ayıklama](/visualstudio/debugger/debugging-linq).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)

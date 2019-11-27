@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449050"
 ---
 # <a name="isymunmanageddocumentwritersetchecksum-method"></a>ISymUnmanagedDocumentWriter::SetCheckSum Yöntemi
-Sets checksum information.  
+Sağlama toplamı bilgilerini ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT SetCheckSum(
   
 ## <a name="parameters"></a>Parametreler  
  `algorithmId`  
- [in] The GUID that represents the algorithm identifier.  
+ 'ndaki Algoritma tanımlayıcısını temsil eden GUID.  
   
  `checkSumSize`  
- [in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.  
+ 'ndaki `checkSum` arabelleğinin boyutunu bayt cinsinden belirten bir `ULONG32`.  
   
  `checkSum`  
- [in] The buffer that stores the checksum information.  
+ 'ndaki Sağlama toplamı bilgilerini depolayan arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434411"
 ---
 # <a name="endmerge-method"></a>EndMerge Yöntemi
-Indicates that all custom attributes have been merged into the emit scope.  
+Tüm özel özniteliklerin yayma kapsamıyla birleştirildiğini gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,13 +35,13 @@ HRESULT EndMerge(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- ID of the assembly.  
+ Derlemenin KIMLIĞI.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

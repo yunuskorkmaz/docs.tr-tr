@@ -1,5 +1,5 @@
 ---
-title: 'How to: Work with Dictionaries Using LINQ to XML'
+title: 'Nasıl yapılır: LINQ to XML kullanarak sözlüklerle çalışma'
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
 ms.openlocfilehash: 12327be3c9d32d34866691b156f58fd1e8e40240
@@ -9,11 +9,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332361"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>How to: Work with Dictionaries Using LINQ to XML (Visual Basic)
-It is often convenient to convert varieties of data structures to XML, and XML back to other data structures. This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.  
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Nasıl yapılır: LINQ to XML kullanarak sözlüklerle çalışma (Visual Basic)
+Çok sayıda veri yapısını XML 'e ve XML 'e diğer veri yapılarına dönüştürmek genellikle yararlıdır. Bu konu, bir <xref:System.Collections.Generic.Dictionary%602> XML 'e ve geri dönüştürerek bu genel yaklaşımın belirli bir uygulamasını gösterir.  
   
 ## <a name="example"></a>Örnek  
- This example uses XML literals and a query in an embedded expression. The query projects new <xref:System.Xml.Linq.XElement> objects, which then become the new content for the `Root` <xref:System.Xml.Linq.XElement> object.  
+ Bu örnekte, katıştırılmış ifadede XML değişmez değerleri ve bir sorgu kullanılmaktadır. Sorgu projeleri yeni <xref:System.Xml.Linq.XElement> nesneleri `Root` <xref:System.Xml.Linq.XElement> nesnesi için yeni içerik haline gelir.  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -41,7 +41,7 @@ Console.WriteLine(root)
 ```  
   
 ## <a name="example"></a>Örnek  
- The following code creates a dictionary from XML.  
+ Aşağıdaki kod XML 'den bir sözlük oluşturur.  
   
 ```vb  
 Dim root As XElement = _  
@@ -72,4 +72,4 @@ Child4:Value4
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

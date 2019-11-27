@@ -14,25 +14,25 @@ ms.locfileid: "74335345"
 ---
 # <a name="how-to-parse-file-paths-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosya Yollarını Ayrıştırma
 
-The <xref:Microsoft.VisualBasic.FileIO.FileSystem> object offers a number of useful methods when parsing file paths.  
+<xref:Microsoft.VisualBasic.FileIO.FileSystem> nesnesi, dosya yollarını ayrıştırırken bazı yararlı yöntemler sunar.  
   
-- The <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A> method takes two paths and returns a properly formatted combined path.  
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A> yöntemi iki yol alır ve düzgün şekilde biçimlendirilen Birleşik yolu döndürür.  
   
-- The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A> method returns the absolute path of the parent of the provided path.  
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A> yöntemi, belirtilen yolun üst öğesinin mutlak yolunu döndürür.  
   
-- The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> method returns a <xref:System.IO.FileInfo> object that can be queried to determine the file's properties, such as its name and path.  
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> yöntemi, dosyanın adı ve yolu gibi özelliklerini belirleyebilmek için sorgulanabilen bir <xref:System.IO.FileInfo> nesnesi döndürür.  
   
- Do not make decisions about the contents of the file based on the file name extension. For example, the file Form1.vb may not be a Visual Basic source file.  
+ Dosya adı uzantısına bağlı olarak dosyanın içeriğiyle ilgili kararlar vermeyin. Örneğin, Form1. vb dosyası bir Visual Basic kaynak dosyası olmayabilir.  
   
-### <a name="to-determine-a-files-name-and-path"></a>To determine a file's name and path  
+### <a name="to-determine-a-files-name-and-path"></a>Bir dosyanın adını ve yolunu belirleme  
   
-- Use the <xref:System.IO.FileInfo.DirectoryName%2A> and <xref:System.IO.FileInfo.Name%2A> properties of the <xref:System.IO.FileInfo> object to determine a file's name and path. This example determines the name and path and displays them.  
+- Bir dosyanın adını ve yolunu öğrenmek için <xref:System.IO.FileInfo> nesnesinin <xref:System.IO.FileInfo.DirectoryName%2A> ve <xref:System.IO.FileInfo.Name%2A> özelliklerini kullanın. Bu örnek, adı ve yolu belirler ve görüntüler.  
   
      [!code-vb[VbVbcnMyFileSystem#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#54)]  
   
-### <a name="to-combine-a-files-name-and-directory-to-create-the-full-path"></a>To combine a file's name and directory to create the full path  
+### <a name="to-combine-a-files-name-and-directory-to-create-the-full-path"></a>Tam yolu oluşturmak üzere bir dosyanın adını ve dizinini birleştirmek için  
   
-- Use the `CombinePath` method, supplying the directory and name. This example takes the strings `folderPath` and `fileName` created in the previous example, combines them, and displays the result.  
+- Dizin ve adı sağlayarak `CombinePath` yöntemini kullanın. Bu örnek `folderPath` dizeleri alır ve önceki örnekte oluşturulan `fileName`, birleştirir ve sonucu görüntüler.  
   
      [!code-vb[VbVbcnMyFileSystem#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#55)]  
   

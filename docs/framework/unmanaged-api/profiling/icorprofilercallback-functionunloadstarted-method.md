@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448024"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted Yöntemi
-Notifies the profiler that the runtime has started to unload a function.  
+Profil oluşturucuyu, çalışma zamanının bir işlevi kaldırmak için başlatıldığını bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,19 +34,19 @@ HRESULT FunctionUnloadStarted(
   
 ## <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] The ID of the function that is being unloaded.  
+ 'ndaki Kaldırılmakta olan işlevin KIMLIĞI.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The value of the `functionId` parameter is no longer valid after this method returns to the caller.  
+ `functionId` parametresinin değeri, bu yöntem çağırana geri döndüğünde artık geçerli değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

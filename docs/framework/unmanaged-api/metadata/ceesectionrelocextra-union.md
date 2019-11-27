@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444171"
 ---
 # <a name="ceesectionrelocextra-union"></a>CeeSectionRelocExtra Birleşimi
-Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section.  
+Bir bölümün yerini değiştirmek için [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) arabirimi tarafından kullanılan bir adres sapmasını temsil eder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,20 +32,20 @@ typedef union  {
 } CeeSectionRelocExtra;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`highAdj`|The upper address adjustment for the section.|  
+|`highAdj`|Bölüm için üst adres ayarlama.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -16,39 +16,39 @@ ms.locfileid: "74335289"
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te İkili Dosyaları Okuma
 
-The `My.Computer.FileSystem` object provides the `ReadAllBytes` method for reading from binary files.  
+`My.Computer.FileSystem` nesnesi, ikili dosyalardan okumak için `ReadAllBytes` yöntemi sağlar.  
   
-### <a name="to-read-from-a-binary-file"></a>To read from a binary file  
+### <a name="to-read-from-a-binary-file"></a>İkili dosyadan okumak için  
   
-- Use the `ReadAllBytes` method, which returns the contents of a file as a byte array. This example reads from the file `C:/Documents and Settings/selfportrait.jpg`.  
+- Bir dosyanın içeriğini bayt dizisi olarak döndüren `ReadAllBytes` yöntemini kullanın. Bu örnek `C:/Documents and Settings/selfportrait.jpg`dosyadan okur.  
   
      [!code-vb[VbVbcnMyFileSystem#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#78)]  
   
-- For large binary files, you can use the <xref:System.IO.FileStream.Read%2A> method of the <xref:System.IO.FileStream> object to read from the file only a specified amount at a time. You can then limit how much of the file is loaded into memory for each read operation. The following code example copies a file and allows the caller to specify how much of the file is read into memory per read operation.  
+- Büyük ikili dosyalar için, aynı anda yalnızca belirtilen miktarı dosyadan okumak üzere <xref:System.IO.FileStream> nesnesinin <xref:System.IO.FileStream.Read%2A> yöntemini kullanabilirsiniz. Böylece, her okuma işlemi için dosyanın belleğe ne kadarının yüklendiğini sınırlayabilirsiniz. Aşağıdaki kod örneği bir dosyayı kopyalar ve çağıranın okuma işlemi başına ne kadar dosyanın belleğe okunduğunu belirtmesini sağlar.  
   
      [!code-vb[VbVbcnMyFileSystem#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#91)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- The following conditions may cause an exception to be thrown:  
+ Aşağıdaki koşullar bir özel durumun oluşturulmasına neden olabilir:  
   
-- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (<xref:System.ArgumentException>).  
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (<xref:System.ArgumentException>).  
   
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).  
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.  
   
-- The file does not exist (<xref:System.IO.FileNotFoundException>).  
+- Dosya yok (<xref:System.IO.FileNotFoundException>).  
   
-- The file is in use by another process, or an I/O error occurs (<xref:System.IO.IOException>).  
+- Dosya başka bir işlem tarafından kullanılıyor veya bir g/ç hatası oluştu (<xref:System.IO.IOException>).  
   
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).  
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
   
-- A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).  
+- Yoldaki bir dosya veya dizin adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
   
-- There is not enough memory to write the string to buffer (<xref:System.OutOfMemoryException>).  
+- Dizeyi arabelleğe yazmak için yeterli bellek yok (<xref:System.OutOfMemoryException>).  
   
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).  
+- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
   
- Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. For example, the file Form1.vb may not be a Visual Basic source file.  
+ Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, Form1. vb dosyası bir Visual Basic kaynak dosyası olmayabilir.  
   
  Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın. Dosyanın içeriği beklendiği gibi olmayabilir ve dosyadan okuma yöntemleri başarısız olabilir.  
   

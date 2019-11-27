@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446593"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions Numaralandırması
-Enumerates the assembly options.  
+Derleme seçeneklerini numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -56,31 +56,31 @@ typedef enum _AssemblyOptions {
   
 |Alan|Açıklama|  
 |-----------|-----------------|  
-|optAssemTitle|String - Represents the assembly title.|  
-|optAssemDescription|String - Contains the assembly description.|  
-|optAssemConfig|String - Contains the assembly configuration.|  
-|optAssemOS|String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
-|optAssemProcessor|ULONG|  
-|optAssemLocale|String - Contains the assembly locale.|  
-|optAssemVersion|String - Encoded as: "Major.Minor.Build.Revision".|  
-|optAssemCompany|String - Contains the company.|  
-|optAssemProduct|String - Contains the product name.|  
-|optAssemProductVersion|String (also known as InformationalVersion).|  
-|optAssemCopyright|String - Contains the copyright information.|  
-|optAssemTrademark|String - Contains the trademark information.|  
-|optAssemKeyFile|String (file name).|  
-|optAssemKeyName|String (The key name).|  
-|optAssemAlgID|ULONG|  
-|optAssemFlags|ULONG|  
-|optAssemHalfSign|Bool (Also known as DelaySign).|  
-|optAssemFileVersion|String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.|  
-|optAssemSatelliteVer|String - Encoded as "Major.Minor.Build.Revision".|  
-|optLastAssemOption|A counter of the number of elements.|  
+|optAssemTitle|String-derleme başlığını temsil eder.|  
+|optAssemDescription|Dize-derleme açıklamasını Içerir.|  
+|optAssemConfig|Dize-derleme yapılandırmasını Içerir.|  
+|optAssemOS|Dize kodlamalı as: "dwOSPlatformId. dwOSMajorVersion. dwOSMinorVersion".|  
+|optAssemProcessor|'TUR|  
+|optAssemLocale|Dize-derleme yerel ayarını Içerir.|  
+|optAssemVersion|Dize kodlamalı as: "ana. Ikincil. derleme. düzeltme".|  
+|optAssemCompany|Dize-şirketi Içerir.|  
+|optAssemProduct|Dize-ürün adını Içerir.|  
+|optAssemProductVersion|Dize (InformationalVersion olarak da bilinir).|  
+|Optassemtelif hakkı|Dize-telif hakkı bilgilerini Içerir.|  
+|Optassemmarka|Dize-ticari marka bilgilerini Içerir.|  
+|optAssemKeyFile|Dize (dosya adı).|  
+|optAssemKeyName|Dize (anahtar adı).|  
+|Optassemalgıd|'TUR|  
+|optAssemFlags|'TUR|  
+|Optassemyarı simgesi|Bool (DelaySign olarak da bilinir).|  
+|optAssemFileVersion|Dize-kodlanmış "ana. Ikincil. derleme. düzeltme"--ProductVersion ile aynı.|  
+|optAssemSatelliteVer|"Ana. Ikincil. derleme. düzeltme" olarak dize kodlamalı.|  
+|optLastAssemOption|Öğe sayısı sayacı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** alink.h  
+ **Üstbilgi:** ALink. h  
   
- **Library**: alink.dll  
+ **Kitaplık**: ALink. dll  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

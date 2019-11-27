@@ -22,23 +22,23 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448477"
 ---
 # <a name="ibindingdisplay-interface"></a>IBindingDisplay Arabirimi
-Provides methods that display current binding information about the running application.  
+Çalışan uygulamayla ilgili geçerli bağlama bilgilerini görüntüleyen yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetCurrentDisplay Metodu](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|Returns the current binding display information.|  
-|[InitializeForProcess Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|Initializes the `IBindingDisplay` object.|  
+|[GetCurrentDisplay Metodu](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|Geçerli bağlama görüntüleme bilgilerini döndürür.|  
+|[InitializeForProcess Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|`IBindingDisplay` nesnesini başlatır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** BindingDisplay.h  
+ **Üst bilgi:** BindingDisplay. h  
   
- **Library:** BindingDisplay.idl  
+ **Kitaplık:** BindingDisplay. IDL  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

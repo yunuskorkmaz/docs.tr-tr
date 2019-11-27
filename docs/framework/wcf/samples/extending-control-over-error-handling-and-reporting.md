@@ -17,7 +17,7 @@ Bu örnek, <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimini kulla
   
  Hizmetler hataları ele geçirebilir, işleme gerçekleştirebilir ve <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimini kullanarak hataların nasıl raporlanacağı etkisini etkileyebilir. Arabirim, uygulanabilir iki yönteme sahiptir: <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> ve <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>. <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> yöntemi, bir özel duruma yanıt olarak oluşturulan bir hata iletisini eklemenize, değiştirmenize veya gizlemesine olanak sağlar. <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> yöntemi, hata işleme hata durumunda meydana gelmesi ve ek hata işlemenin çalıştırılıp çalıştırılmadığını kontrol etmenizi sağlar.  
   
- Bu örnekte, `CalculatorErrorHandler` türü <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimini uygular. İçinde  
+ Bu örnekte, `CalculatorErrorHandler` türü <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimini uygular. Bu çözümü uygulamanın üst düzey adımları nelerdir?  
   
  <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> Yöntem, `CalculatorErrorHandler` hata günlüğünü c:\logs. içindeki Error. txt metin dosyasına yazar. Örneğin hatayı günlüğe kaydettiğine ve bunu göstermez ve istemciye geri raporlanmasını sağlar.  
   

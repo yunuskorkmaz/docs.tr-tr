@@ -1,5 +1,5 @@
 ---
-title: 'How to: Change User Settings'
+title: 'Nasıl yapılır: Kullanıcı ayarlarını değiştirme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - user settings [Visual Basic], changing in Visual Basic
@@ -16,27 +16,27 @@ ms.locfileid: "74329623"
 ---
 # <a name="how-to-change-user-settings-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kullanıcı Ayarlarını Değiştirme
 
-You can change a user setting by assigning a new value to the setting's property on the `My.Settings` object.  
+`My.Settings` nesnesindeki ayar özelliğine yeni bir değer atayarak, bir kullanıcı ayarını değiştirebilirsiniz.  
   
- The `My.Settings` object exposes each setting as a property. The property name is the same as the setting name, and the property type is the same as the setting type. The setting's **Scope** determines if the property is read-only: The property for an **Application**-scope setting is read-only, while the property for a **User**-scope setting is read-write. For more information, see [My.Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ `My.Settings` nesnesi her ayarı bir özellik olarak kullanıma sunar. Özellik adı, ayar adıyla aynıdır ve özellik türü ayar türüyle aynıdır. Ayarın **kapsamı** özelliğin salt okunurdur olduğunu belirler: bir **uygulama**kapsamı ayarının özelliği salt okunurdur, ancak **Kullanıcı**kapsamı ayarı özelliği okuma-yazma olur. Daha fazla bilgi için bkz [. My. Settings nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 > [!NOTE]
-> Although you can change and save the values of user-scope settings at run time, application-scope settings are read-only and cannot be changed programmatically. You can change application-scope settings when you create the application by using the **Project Designer** or by editing the application's configuration file. For more information, see [Managing Application Settings (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+> Çalışma zamanında kullanıcı kapsamı ayarlarının değerlerini değiştirebilir ve kaydedebilirsiniz, ancak uygulama kapsamı ayarları salt okunurdur ve program aracılığıyla değiştirilemez. Uygulamayı **Proje tasarımcısını** kullanarak oluştururken veya uygulamanın yapılandırma dosyasını düzenleyerek, uygulama kapsamı ayarlarını değiştirebilirsiniz. Daha fazla bilgi için bkz. [uygulama ayarlarını yönetme (.net)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="example"></a>Örnek  
 
- This example changes the value of the `Nickname` user setting.  
+ Bu örnek `Nickname` Kullanıcı ayarının değerini değiştirir.  
   
  [!code-vb[VbVbalrMyResources#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#7)]  
   
- For this example to work, your application must have a `Nickname` user setting, of type `String`.  
+ Bu örneğin çalışması için, uygulamanızın `String`türünde bir `Nickname` Kullanıcı ayarı olması gerekir.  
   
- The application saves the user settings when the application shuts down. To save the settings immediately, call the `My.Settings.Save` method. For more information, see [How to: Persist User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
+ Uygulama kapandığında uygulama kullanıcı ayarlarını kaydeder. Ayarları hemen kaydetmek için `My.Settings.Save` yöntemini çağırın. Daha fazla bilgi için bkz. [nasıl yapılır: Kullanıcı ayarlarını Visual Basic kalıcı hale](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)getirme.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [My.Settings Nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md)
-- [How to: Read Application Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
-- [How to: Persist User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
-- [How to: Create Property Grids for User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [Nasıl yapılır: Visual Basic uygulama ayarlarını okuma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
+- [Nasıl yapılır: Visual Basic 'de Kullanıcı ayarlarını kalıcı hale getirme](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [Nasıl yapılır: Visual Basic Kullanıcı ayarları için özellik kılavuzları oluşturma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
 - [Uygulama Ayarlarını Yönetme](/visualstudio/ide/managing-application-settings-dotnet)

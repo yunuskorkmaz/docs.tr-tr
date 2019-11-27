@@ -12,16 +12,16 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428239"
 ---
 # <a name="networkinformation"></a>NetworkInformation
-The <xref:System.Net.NetworkInformation> namespace enables you to gather information about network events, changes, statistics, and properties. You can also determine whether a remote host is reachable by using the <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> class.  
+<xref:System.Net.NetworkInformation> ad alanı, ağ olayları, değişiklikler, istatistikler ve özellikler hakkında bilgi toplamanıza olanak sağlar. Ayrıca, <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> sınıfını kullanarak uzak bir ana bilgisayarın erişilebilir olup olmadığını da belirleyebilirsiniz.  
   
-## <a name="network-availability-and-events"></a>Network Availability and Events  
- The <xref:System.Net.NetworkInformation.NetworkChange?displayProperty=nameWithType> class enables you to determine whether the network address or availability has changed. To use this class, create an event handler to process the change, and associate it with a <xref:System.Net.NetworkInformation.NetworkAddressChangedEventHandler> or a <xref:System.Net.NetworkInformation.NetworkAvailabilityChangedEventHandler>. For more information, see [How to: Detect Network Availability and Address Changes](how-to-detect-network-availability-and-address-changes.md).  
+## <a name="network-availability-and-events"></a>Ağ kullanılabilirliği ve olayları  
+ <xref:System.Net.NetworkInformation.NetworkChange?displayProperty=nameWithType> sınıfı, ağ adresinin veya kullanılabilirliğinin değiştirilip değiştirilmediğini belirlemenizi sağlar. Bu sınıfı kullanmak için değişikliği işlemek üzere bir olay işleyicisi oluşturun ve bir <xref:System.Net.NetworkInformation.NetworkAddressChangedEventHandler> veya <xref:System.Net.NetworkInformation.NetworkAvailabilityChangedEventHandler>ile ilişkilendirin. Daha fazla bilgi için bkz. [nasıl yapılır: algılama ağ kullanılabilirliği ve adres değişiklikleri](how-to-detect-network-availability-and-address-changes.md).  
   
-## <a name="network-statistics-and-properties"></a>Network Statistics and Properties  
- You can gather network statistics and properties on an interface or protocol basis. The <xref:System.Net.NetworkInformation.NetworkInterface>, <xref:System.Net.NetworkInformation.NetworkInterfaceType>, and <xref:System.Net.NetworkInformation.PhysicalAddress> classes give information about a particular network interface, while the <xref:System.Net.NetworkInformation.IPInterfaceProperties>, <xref:System.Net.NetworkInformation.IPGlobalProperties>, <xref:System.Net.NetworkInformation.IPGlobalStatistics>, <xref:System.Net.NetworkInformation.TcpStatistics>, and <xref:System.Net.NetworkInformation.UdpStatistics> classes give information about layer 3 and layer 4 packets. For more information, see [How to: Get Interface and Protocol Information](how-to-get-interface-and-protocol-information.md).  
+## <a name="network-statistics-and-properties"></a>Ağ Istatistikleri ve özellikleri  
+ Ağ istatistiklerini ve özelliklerini bir arabirim ya da protokol temelinde toplayabilirsiniz. <xref:System.Net.NetworkInformation.NetworkInterface>, <xref:System.Net.NetworkInformation.NetworkInterfaceType>ve <xref:System.Net.NetworkInformation.PhysicalAddress> sınıfları belirli bir ağ arabirimi hakkında bilgi verir; <xref:System.Net.NetworkInformation.IPInterfaceProperties>, <xref:System.Net.NetworkInformation.IPGlobalProperties>, <xref:System.Net.NetworkInformation.IPGlobalStatistics>, <xref:System.Net.NetworkInformation.TcpStatistics>ve <xref:System.Net.NetworkInformation.UdpStatistics> sınıflar katman 3 ve katman 4 paketleri hakkında bilgi verir. Daha fazla bilgi için bkz. [nasıl yapılır: arabirim ve protokol alma bilgileri](how-to-get-interface-and-protocol-information.md).  
   
-## <a name="determine-if-a-remote-host-is-reachable"></a>Determine if a Remote Host is Reachable  
- You can use the <xref:System.Net.NetworkInformation.Ping> class to determine whether a Remote Host is up, on the network, and reachable. For more information, see [How to: Ping a Host](how-to-ping-a-host.md).  
+## <a name="determine-if-a-remote-host-is-reachable"></a>Uzak bir konağın erişilebilir olup olmadığını belirleme  
+ Uzak bir konağın çalışır durumda olup olmadığını, ağda ve erişilebilir olduğunu anlamak için <xref:System.Net.NetworkInformation.Ping> sınıfını kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: ping a Host](how-to-ping-a-host.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

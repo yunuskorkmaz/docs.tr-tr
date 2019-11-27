@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445596"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile Yöntemi
-Assigns the name of the assembly to be built. Not for use when producing unbound modules.  
+Oluşturulacak derlemenin adını atar. İlişkisiz modüller üretilirken kullanılamaz.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT SetAssemblyFile(
   
 ## <a name="parameters"></a>Parametreler  
  `pszFilename`  
- Fully qualified name of the manifest file.  
+ Bildirim dosyasının tam adı.  
   
  `pEmitter`  
- Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.  
+ [Imetadatayayma arabirim](../metadata/imetadataemit-interface.md) arabirimine yönelik işaretçi.  
   
  `afFlags`  
- Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
+ [AssemblyFlags numaralandırmasında](../metadata/assemblyflags-enumeration.md)tanımlanan bayraklar.  
   
  `pAssemblyID`  
- Pointer to ID of resulting assembly.  
+ Elde edilen derlemenin KIMLIĞI işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h.  
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

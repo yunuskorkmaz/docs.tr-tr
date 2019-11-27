@@ -15,35 +15,35 @@ ms.locfileid: "74352068"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Nasıl Yapılır: Olay Bilgilerini Metin Dosyasına Yazma (Visual Basic)
 
-You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application. This example shows how to use the `My.Application.Log.WriteEntry` method to log tracing information to a log file.
+Uygulamanızda oluşan olaylarla ilgili bilgileri günlüğe kaydetmek için `My.Application.Log` ve `My.Log` nesnelerini kullanabilirsiniz. Bu örnek, izleme bilgilerini bir günlük dosyasına kaydetmek için `My.Application.Log.WriteEntry` yönteminin nasıl kullanılacağını gösterir.
 
-### <a name="to-add-and-configure-the-file-log-listener"></a>To add and configure the file log listener
+### <a name="to-add-and-configure-the-file-log-listener"></a>Dosya günlüğü dinleyicisini eklemek ve yapılandırmak için
 
-1. Right-click app.config in **Solution Explorer** and choose **Open**.
+1. **Çözüm Gezgini** içinde App. config öğesine sağ tıklayın ve **Aç**' ı seçin.
 
-     \- or -
+     \- veya-
 
-     If there is no app.config file:
+     App. config dosyası yoksa:
 
-    1. On the **Project** menu, choose **Add New Item**.
+    1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-    2. From the **Add New Item** dialog box, choose **Application Configuration File**.
+    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası**' nı seçin.
 
     3. **Ekle**'yi tıklatın.
 
-2. Locate the `<listeners>` section in the application configuration file.
+2. Uygulama yapılandırma dosyasında `<listeners>` bölümünü bulun.
 
-     You will find the \<listeners> section in the \<source> section with the name attribute "DefaultSource", which is nested under the \<system.diagnostics> section, which is nested under the top-level \<configuration> section.
+     En üst düzey \<Yapılandırma > bölümünde iç içe yerleştirilmiş olan \<System. Diagnostics > bölümünde iç içe yerleştirilmiş olan "DefaultSource" adlı \<kaynak > bölümündeki \<dinleyicileri > bölümünü bulabilirsiniz.
 
-3. Add this element to that `<listeners>` section:
+3. Bu öğeyi bu `<listeners>` bölümüne ekleyin:
 
     ```xml
     <add name="FileLogListener" />
     ```
 
-4. Locate the `<sharedListeners>` section in the `<system.diagnostics>` section, nested under the top-level `<configuration>` section.
+4. Üst düzey `<configuration>` bölümünde iç içe `<system.diagnostics>` bölümündeki `<sharedListeners>` bölümünü bulun.
 
-5. Add this element to that `<sharedListeners>` section:
+5. Bu öğeyi bu `<sharedListeners>` bölümüne ekleyin:
 
     ```xml
     <add name="FileLogListener"
@@ -55,16 +55,16 @@ You can use the `My.Application.Log` and `My.Log` objects to log information abo
         customlocation="c:\temp\" />
     ```
 
-     Change the value of the `customlocation` attribute to the log directory.
+     `customlocation` özniteliğinin değerini günlük dizinine değiştirin.
 
     > [!NOTE]
-    > To set the value of a listener property, use an attribute that has the same name as the property, with all letters in the name lowercase. For example, the `location` and `customlocation` attributes set the values of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> and <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> properties.
+    > Bir dinleyici özelliğinin değerini ayarlamak için, özelliğindeki aynı ada sahip bir özniteliği kullanın, ad küçük harfli tüm harfler. Örneğin, `location` ve `customlocation` öznitelikleri <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> ve <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> özelliklerinin değerlerini ayarlar.
 
-### <a name="to-write-event-information-to-the-file-log"></a>To write event information to the file log
+### <a name="to-write-event-information-to-the-file-log"></a>Olay bilgilerini dosya günlüğüne yazmak için
 
-Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the file log. For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
+Dosya günlüğüne bilgi yazmak için `My.Application.Log.WriteEntry` veya `My.Application.Log.WriteException` metodunu kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: yazma günlüğü iletileri](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) ve [nasıl yapılır: günlüğe kaydetme özel durumları](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
 
-After you configure the file log listener for an assembly, it receives all messages that `My.Application.Log` writes from that assembly.
+Bir bütünleştirilmiş kod için dosya günlüğü dinleyicisini yapılandırdıktan sonra, bu derlemeden yazma `My.Application.Log` tüm iletileri alır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

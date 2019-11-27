@@ -15,33 +15,33 @@ ms.locfileid: "74334427"
 ---
 # <a name="how-to-write-to-binary-files-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te İkili Dosyalara Yazma
 
-The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> method writes data to a binary file. If the `append` parameter is `True`, it will append the data to the file; otherwise data in the file is overwritten.
+<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> yöntemi, verileri bir ikili dosyaya yazar. `append` parametresi `True`, verileri dosyaya ekler; Aksi takdirde, dosyadaki verilerin üzerine yazılır.
 
-If the specified path excluding the file name is not valid, a <xref:System.IO.DirectoryNotFoundException> exception will be thrown. If the path is valid but the file does not exist, the file will be created.
+Dosya adı hariç belirtilen yol geçerli değilse, <xref:System.IO.DirectoryNotFoundException> bir özel durum oluşturulur. Yol geçerliyse ancak dosya yoksa dosya oluşturulur.
 
-## <a name="to-write-to-a-binary-file"></a>To write to a binary file
+## <a name="to-write-to-a-binary-file"></a>İkili bir dosyaya yazmak için
 
-Use the `WriteAllBytes` method, supplying the file path and name and the bytes to be written. This example appends the data array `CustomerData` to the file named `CollectedData.dat`.
+Dosya yolu ve adı ve yazılacak baytları sağlayarak `WriteAllBytes` yöntemini kullanın. Bu örnek `CustomerData` veri dizisini `CollectedData.dat`adlı dosyaya ekler.
 
 [!code-vb[VbVbcnMyFileSystem#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#27)]
 
 ## <a name="robust-programming"></a>Güçlü Programlama
 
-The following conditions may create an exception:
+Aşağıdaki koşullar bir özel durum oluşturabilir:
 
-- The path is not valid for one of the following reasons: it is a zero-length string; it contains only white space; or it contains invalid characters. (<xref:System.ArgumentException>).
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir; yalnızca boşluk içeriyor; veya geçersiz karakterler içeriyor. (<xref:System.ArgumentException>).
 
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.
 
-- `File` points to a path that does not exist (<xref:System.IO.FileNotFoundException> or <xref:System.IO.DirectoryNotFoundException>).
+- `File`, varolmayan bir yola işaret eder (<xref:System.IO.FileNotFoundException> veya <xref:System.IO.DirectoryNotFoundException>).
 
-- The file is in use by another process, or an I/O error occurs (<xref:System.IO.IOException>).
+- Dosya başka bir işlem tarafından kullanılıyor veya bir g/ç hatası oluştu (<xref:System.IO.IOException>).
 
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.
 
-- A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).
+- Yoldaki bir dosya veya dizin adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).
 
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).
+- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

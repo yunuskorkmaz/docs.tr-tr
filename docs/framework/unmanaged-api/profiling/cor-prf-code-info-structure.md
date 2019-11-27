@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428395"
 ---
 # <a name="cor_prf_code_info-structure"></a>COR_PRF_CODE_INFO Yapısı
-Represents one contiguous block of native code stored in memory.  
+Bellekte depolanan yerel kodun bir bitişik bloğunu temsil eder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,21 +33,21 @@ typedef struct _COR_PRF_CODE_INFO {
 } COR_PRF_CODE_INFO;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`startAddress`|The starting address of the contiguous block of code.|  
-|`size`|The size of the block.|  
+|`startAddress`|Ardışık kod bloğunun başlangıç adresi.|  
+|`size`|Bloğun boyutu.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Üst bilgi:** CorProf. IDL  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

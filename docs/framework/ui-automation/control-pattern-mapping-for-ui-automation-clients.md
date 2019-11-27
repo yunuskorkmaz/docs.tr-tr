@@ -14,67 +14,67 @@ ms.locfileid: "74433863"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI Otomasyon İstemcileri İçin Denetim Düzeni Eşleştirmesi
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic lists control types and their associated control patterns.  
+ Bu konuda denetim türleri ve bunlarla ilişkili denetim desenleri listelenmektedir.  
   
- The following table organizes the control patterns into the following categories:  
+ Aşağıdaki tablo Denetim desenlerini aşağıdaki kategorilere göre düzenler:  
   
-- Desteklenen. The control must support this control pattern.  
+- Desteklenen. Denetimde bu denetim deseninin desteklenmesi gerekir.  
   
-- Conditional support. The control may support this control pattern depending on the state of the control.  
+- Koşullu destek. Denetim, denetimin durumuna bağlı olarak bu denetim modelini destekleyebilir.  
   
-- Desteklenmez. The control does not support this control pattern; custom controls may support this control pattern.  
+- Desteklenmez. Denetim bu denetim modelini desteklemiyor; özel denetimler bu denetim modelini destekleyebilir.  
   
 > [!NOTE]
-> Some controls have conditional support for several control patterns depending on the functionality of the control. For example, the menu item control has conditional support for the <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>, or <xref:System.Windows.Automation.SelectionItemPattern> control pattern, depending on its function in the menu control.  
+> Bazı denetimlerin, denetimin işlevselliğine bağlı olarak birkaç denetim deseni için koşullu desteği vardır. Örneğin, menü öğesi denetimi, menü denetimindeki işlevine bağlı olarak <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>veya <xref:System.Windows.Automation.SelectionItemPattern> denetim deseninin koşullu desteğine sahiptir.  
   
 <a name="control_mapping_clients"></a>   
 ## <a name="ui-automation-control-patterns-for-clients"></a>İstemciler İçin UI Otomasyon Denetim Düzenleri  
   
-|Control Type|Desteklenir|Conditional Support|Desteklenmez|  
+|Denetim türü|Desteklenir|Koşullu destek|Desteklenmez|  
 |------------------|---------------|-------------------------|-------------------|  
-|Düğme|Yok.|Invoke, Toggle, Expand Collapse|Yok.|  
-|Takvim|Grid, Table|Selection, Scroll|Değer|  
-|Check Box|İki Durumlu Düğme|Yok.|Yok.|  
-|Birleşik Giriş Kutusu|Expand Collapse|Selection, Value|Kaydırma|  
-|Veri Kılavuzu|Kılavuz|Scroll, Selection, Table|Yok.|  
-|Veri Öğesi|Seçim Öğesi|Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value|Yok.|  
-|Belge|Metin|Scroll, Value|Yok.|  
-|Düzenle|Yok.|Text, Range Value, Value|Yok.|  
-|Grup|Yok.|Expand Collapse|Yok.|  
-|Üstbilgi|Yok.|Dönüştürme|Yok.|  
-|Üstbilgi Öğesi|Yok.|Transform, Invoke|Yok.|  
-|Köprü|Çağır|Değer|Yok.|  
-|Görüntü|Yok.|Grid Item, Table Item|Invoke, Selection Item|  
-|List|Yok.|Grid, Multiple View, Scroll, Selection|Tablo|  
-|List Item|Seçim Öğesi|Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value|Yok.|  
+|Düğme|Yok.|Çağır, aç, Genişlet Daralt|Yok.|  
+|Takvim|Kılavuz, tablo|Seçim, kaydırma|Value|  
+|Onay kutusu|İki Durumlu Düğme|Yok.|Yok.|  
+|Birleşik Giriş Kutusu|Daralt Genişlet|Seçim, değer|Kaydırma|  
+|Veri Kılavuzu|Kılavuz|Kaydırma, seçim, tablo|Yok.|  
+|Veri Öğesi|Seçim Öğesi|Daralt Genişlet, kılavuz öğesi, kaydırma öğesi, tablo, değiştirme, değer|Yok.|  
+|Belge|Metin|Kaydırma, değer|Yok.|  
+|Düzenle|Yok.|Metin, Aralık değeri, değer|Yok.|  
+|Grup|Yok.|Daralt Genişlet|Yok.|  
+|Üst bilgi|Yok.|Dönüştürme|Yok.|  
+|Üstbilgi Öğesi|Yok.|Dönüştürme, çağırma|Yok.|  
+|Köprü|Çağır|Value|Yok.|  
+|Görüntü|Yok.|Grid öğesi, tablo öğesi|Invoke, seçim öğesi|  
+|List|Yok.|Kılavuz, birden çok görünüm, kaydırma, seçim|Tablo|  
+|Liste öğesi|Seçim Öğesi|Genişlet, kılavuz öğesi, çağır, kaydırma öğesi, Iki durumlu, değer|Yok.|  
 |Menü|Yok.|Yok.|Yok.|  
-|Menü Çubuğu|Yok.|Expand Collapse, Dock, Transform|Yok.|  
-|Menü Öğesi|Yok.|Expand Collapse, Invoke, Selection Item, Toggle|Yok.|  
-|Bölme|Yok.|Dock. Scroll, Transform|Pencere|  
-|İlerleme Çubuğu|Yok.|Range Value, Value|Yok.|  
+|Menü Çubuğu|Yok.|Daralt Genişlet, yerleştir, Dönüştür|Yok.|  
+|Menü Öğesi|Yok.|Daralt Genişlet, çağır, seçim öğesi, geçiş yap|Yok.|  
+|Bölme|Yok.|Dock. Kaydır, Dönüştür|Pencere|  
+|İlerleme Çubuğu|Yok.|Aralık değeri, değer|Yok.|  
 |Radyo Düğmesi|Seçim Öğesi|Yok.|İki Durumlu Düğme|  
 |Kaydırma Çubuğu|Yok.|Aralık Değeri|Kaydırma|  
 |Ayırıcı|Yok.|Yok.|Yok.|  
-|Kaydırıcı|Yok.|Range Value, Selection, Value|Yok.|  
-|Değer Değiştirici|Yok.|Range Value, Selection, Value|Yok.|  
-|Bölünmüş Düğme|Invoke, Expand Collapse|Yok.|Yok.|  
+|Kaydırıcı|Yok.|Aralık değeri, seçim, değer|Yok.|  
+|Değer Değiştirici|Yok.|Aralık değeri, seçim, değer|Yok.|  
+|Bölünmüş Düğme|Çağır, Genişlet Daralt|Yok.|Yok.|  
 |Durum Çubuğu|Yok.|Kılavuz|Yok.|  
 |Tab|Seçim|Kaydırma|Yok.|  
 |Sekme Öğesi|Seçim Öğesi|Yok.|Çağır|  
-|Tablo|Grid, Grid Item, Table, Table Item|Yok.|Yok.|  
-|Metin|Yok.|Grid Item, Table Item, Text|Değer|  
+|Tablo|Kılavuz, kılavuz öğesi, tablo, tablo öğesi|Yok.|Yok.|  
+|Metin|Yok.|Grid öğesi, tablo öğesi, metin|Value|  
 |Parmak|Dönüştürme|Yok.|Yok.|  
 |Başlık Çubuğu|Yok.|Yok.|Yok.|  
-|Tool Bar|Yok.|Dock, Expand Collapse, Transform|Yok.|  
-|Tool Tip|Yok.|Text, Window|Yok.|  
-|Ağaç|Yok.|Scroll, Selection|Yok.|  
-|Ağaç Öğesi|Expand Collapse|Invoke, Scroll Item, Selection Item, Toggle|Yok.|  
-|Pencere|Transform, Window|Dock|Yok.|  
+|Araç çubuğu|Yok.|Yerleştir, Genişlet Daralt, Dönüştür|Yok.|  
+|Araç Ipucu|Yok.|Metin, pencere|Yok.|  
+|Ağaç|Yok.|Kaydırma, seçim|Yok.|  
+|Ağaç Öğesi|Daralt Genişlet|Çağırma, kaydırma öğesi, seçim öğesi, değiştirme|Yok.|  
+|Pencere|Dönüştür, pencere|Dock|Yok.|  
   
 > [!NOTE]
-> If a control type has no supported control patterns listed but has one or more conditionally-supported control patterns, then one of those conditional control patterns will be supported at all times.  
+> Denetim türünde desteklenen denetim desenleri yoksa ancak bir veya daha fazla koşullu desteklenen denetim deseni varsa, bu koşullu denetim desenlerinden biri her zaman desteklenecektir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

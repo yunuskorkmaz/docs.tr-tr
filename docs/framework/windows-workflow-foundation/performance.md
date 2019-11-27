@@ -21,7 +21,7 @@ ms.locfileid: "74283230"
 
  Windows Communication Foundation (WCF), Microsoft 'un hizmet odaklı uygulamalar oluşturmaya yönelik Birleşik programlama modelidir. İlk olarak, WF3 ile birlikte .NET 3,0 'nin bir parçası olarak sunulmuştur ve artık .NET Framework temel bileşenlerinden biridir.
 
- Windows Server AppFabric, IIS üzerinde çalışan Web uygulamaları ve bileşik uygulamalar oluşturmayı, ölçeklendirmenizi ve yönetmeyi kolaylaştıran bir tümleşik teknolojiler kümesidir. Hizmetleri ve iş akışlarını izlemek ve yönetmek için araçlar sağlar. Daha fazla bilgi için bkz. [Windows Server AppFabric 1,0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
+ Windows Server AppFabric, IIS ile çalışan Web uygulamaları ile bileşik uygulamaların oluşturulmasını, ölçeklenmesini ve yönetimini kolaylaştıran bir tümleşik teknoloji kümesidir. Hizmetleri ve iş akışlarını izlemek ve yönetmek için araçlar sağlar. Daha fazla bilgi için bkz. [Windows Server AppFabric 1,0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
 
 ## <a name="goals"></a>Hedefleri
  Bu konunun amacı, farklı senaryolar için ölçülen verilerle WF4 'in performans özelliklerini gösterir. Ayrıca, WF4 ve WF3 arasında ayrıntılı karşılaştırmalar sağlar ve bu yeni düzeltmede yapılan harika iyileştirmeleri gösterir. Bu makalede sunulan senaryolar ve veriler, WF4 ve WF3 ' nin farklı yönlerinin temel maliyetini hisize ediyor. Bu veriler, WF4 'in performans özelliklerini anlamak için yararlıdır ve WF3 'e geçiş planlaması veya uygulama geliştirmede WF4 kullanma konusunda yardımcı olabilir. Bununla birlikte, bu makalede sunulan verilerden ekibinizle bir şekilde ele alınması gerekir. Birleşik iş akışı uygulamasının performansı, iş akışının nasıl uygulandüğüne ve farklı bileşenlerin nasıl tümleştirilebilme konusunda oldukça bağımlıdır. Uygulamanın performans özelliklerini öğrenmek için her bir uygulamayı ölçmelidir.
@@ -353,7 +353,7 @@ public class Workflow1 : Activity
 
 ## <a name="workflow-runtime-services"></a>İş akışı çalışma zamanı Hizmetleri
 
-### <a name="persistence"></a>Kalıcılığı
+### <a name="persistence"></a>Kalıcılık
  WF3 ve WF4 her ikisi de bir SQL kalıcılık sağlayıcısıyla birlikte sevk edin.  WF3 SQL kalıcılık sağlayıcısı, iş akışı örneğini seri hale getirilen ve BLOB 'da depolayan basit bir uygulama.  Bu nedenle, bu sağlayıcının performansı büyük ölçüde iş akışı örneğinin boyutuna bağlıdır.  WF3 ' de, bu belgede daha önce anlatıldığı gibi örnek boyutu birçok nedenden dolayı artabilir.  Bir veritabanında seri hale getirilmiş bir örneği depolamak iş akışının durumuyla bir görünürlük olmadığından, birçok müşteri varsayılan SQL kalıcılık sağlayıcısını kullanmamalıdır.  İş akışı kimliğini bilmeden belirli bir iş akışını bulmak için, birinin her kalıcı örnek serisini kaldırmak ve içeriği incelemesi gerekir.  Birçok geliştirici, bu engelleri aşmak için kendi Kalıcılık sağlayıcılarını yazmayı tercih eder.
 
  WF4 SQL kalıcılık sağlayıcısı bu konulardan bazılarını ele geçirmeye çalıştı.  Kalıcılık tabloları, etkin yer işaretleri ve promotable özellikleri gibi belirli bilgileri sunar.  WF4 ' deki yeni içerik tabanlı bağıntı özelliği, kalıcı iş akışı örneği kuruluşunda bazı değişiklikler sunan WF3 SQL kalıcılık yaklaşımını kullanarak iyi gerçekleştirmez.  Bu, kalıcılık sağlayıcısının işini daha karmaşık hale getirir ve veritabanına daha fazla stres koyar.

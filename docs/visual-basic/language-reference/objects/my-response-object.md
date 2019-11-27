@@ -15,15 +15,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350651"
 ---
 # <a name="myresponse-object"></a>My.Response Nesnesi
-Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>. This object allows you to send HTTP response data to a client and contains information about that response.  
+<xref:System.Web.UI.Page>ilişkili <xref:System.Web.HttpResponse> nesnesini alır. Bu nesne bir istemciye HTTP yanıt verileri göndermenizi ve bu yanıt hakkındaki bilgileri eklemenizi sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.  
+ `My.Response` nesnesi sayfayla ilişkili geçerli <xref:System.Web.HttpResponse> nesnesini içerir.  
   
- The `My.Response` object is only available for ASP.NET applications.  
+ `My.Response` nesnesi yalnızca ASP.NET uygulamalarında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.  
+ Aşağıdaki örnek, `My.Request` nesnesinden üst bilgi koleksiyonunu alır ve ASP.NET sayfasına yazmak için `My.Response` nesnesini kullanır.  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   

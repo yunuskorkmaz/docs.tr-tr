@@ -17,49 +17,49 @@ ms.locfileid: "74352132"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Visual Basic'te Dosyalara Yazma
 
-This section explains how to perform tasks that involve writing to files.  
+Bu bölümde, dosyalara yazmayı içeren görevlerin nasıl gerçekleştirileceği açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
  [Nasıl Yapılır: Dosyalara Metin Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
- Demonstrates how to write to text files.  
+ Metin dosyalarının nasıl yazılacağını gösterir.  
   
  [Nasıl Yapılır: Metin Dosyalarına Ekleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
- Demonstrates how to append text to a text file.  
+ Metnin bir metin dosyasına nasıl ekleneceğini gösterir.  
   
  [Nasıl Yapılır: İkili Dosyalara Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
- Demonstrates how to write to a binary file.  
+ İkili bir dosyaya nasıl yazılacağını gösterir.  
   
  [Nasıl Yapılır: Belgelerim Dizinindeki Dosyalara Metin Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
- Demonstrates how to create and write to a new text file in the **My Documents** directory.  
+ **Belgelerim dizininde yeni** bir metin dosyasının nasıl oluşturulacağını ve yazılacağını gösterir.  
   
  [Nasıl Yapılır: StreamWriter ile Dosyalara Metin Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
- Demonstrates how to write to a file with a <xref:System.IO.StreamWriter?displayProperty=nameWithType> object.  
+ <xref:System.IO.StreamWriter?displayProperty=nameWithType> nesnesi olan bir dosyaya nasıl yazılacağını gösterir.  
   
 ## <a name="reference"></a>Başvuru  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- Describes the `My.Computer.FileSystem` object and its methods and properties.  
+ `My.Computer.FileSystem` nesnesini ve yöntemlerini ve özelliklerini açıklar.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>  
- Describes the `OpenTextFileWriter` method.  
+ `OpenTextFileWriter` metodunu açıklar.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>  
- Describes the `WriteAllBytes` method.  
+ `WriteAllBytes` metodunu açıklar.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
- Describes the `WriteAllText` method.  
+ `WriteAllText` metodunu açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 
  [Dosyalardan Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- Explains how to perform tasks that involve reading from files.  
+ Dosyalardan okumayı içeren görevlerin nasıl gerçekleştirileceğini açıklar.  
   
  [Dosya ve Dizin Oluşturma, Silme ve Taşıma](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
- Explains how to perform tasks that involve creating, deleting, moving, and renaming files and directories.  
+ Dosya ve dizinleri oluşturma, silme, taşıma ve yeniden adlandırma ile ilgili görevlerin nasıl gerçekleştirileceğini açıklar.  
   
  [Verileri Panoda Depolama ve Panodan Okuma](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
- Explains how to perform tasks that are associated with `My.Computer.Clipboard`, such as reading data from or writing data to the Clipboard.  
+ Panodan veri okuma veya verileri yazma gibi `My.Computer.Clipboard`ilişkili görevlerin nasıl gerçekleştirileceğini açıklar.  
   
  [Dosya Kodlamaları](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
- Provides an overview of file encodings.
+ Dosya kodlamalarına genel bir bakış sağlar.

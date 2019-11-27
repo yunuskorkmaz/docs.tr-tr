@@ -22,25 +22,25 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441625"
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError Arabirimi
-Provides a callback mechanism for reporting errors during the metadata merge.  
+Meta veri birleştirme sırasında hataları raporlamak için bir geri çağırma mekanizması sağlar.  
   
 > [!NOTE]
-> The `IMetaDataError` interface must be implemented by the client.  
+> `IMetaDataError` arabiriminin istemci tarafından uygulanması gerekir.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[OnError Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Provides notification of errors that occur during the metadata merge.|  
+|[OnError Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Meta veri birleştirme sırasında oluşan hataların bildirimini sağlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

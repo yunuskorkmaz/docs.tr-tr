@@ -1,5 +1,5 @@
 ---
-title: -target:appcontainerexe (C# Compiler Options)
+title: '-target: appcontainerexe (C# derleyici seçenekleri)'
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
 ms.openlocfilehash: 64661e72f9efe190606cadd93558678cb849e8cc
@@ -9,8 +9,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204532"
 ---
-# <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (C# Compiler Options)
-If you use the **-target:appcontainerexe** compiler option, the compiler creates a Windows executable (.exe) file that must be run in an app container. This option is equivalent to [-target:winexe](./target-winexe-compiler-option.md) but is designed for Windows 8.x Store apps.  
+# <a name="-targetappcontainerexe-c-compiler-options"></a>-target: appcontainerexe (C# derleyici seçenekleri)
+**-Target: appcontainerexe** derleyici seçeneğini kullanırsanız, derleyici bir uygulama kapsayıcısında çalıştırılması gereken bir Windows çalıştırılabilir (. exe) dosyası oluşturur. Bu seçenek [-target: winexe](./target-winexe-compiler-option.md) ile eşdeğerdir, ancak Windows 8. x Mağazası uygulamaları için tasarlanmıştır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -19,24 +19,24 @@ If you use the **-target:appcontainerexe** compiler option, the compiler creates
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- To require the app to run in an app container, this option sets a bit in the [Portable Executable](/windows/desktop/Debug/pe-format) (PE) file. When that bit is set, an error occurs if the CreateProcess method tries to launch the executable file outside an app container.  
+ Uygulamanın bir uygulama kapsayıcısında çalışmasını gerektirmek için, bu seçenek [taşınabilir yürütülebilir](/windows/desktop/Debug/pe-format) (PE) dosyasında bir bit ayarlar. Bu bit ayarlandığında, CreateProcess yöntemi bir uygulama kapsayıcısının dışında yürütülebilir dosyayı başlatmaya çalışırsa bir hata oluşur.  
   
- Unless you use the [-out](./out-compiler-option.md) option, the output file name takes the name of the input file that contains the [Main](../../programming-guide/main-and-command-args/index.md) method.  
+ [-Out](./out-compiler-option.md) seçeneğini kullanmadığınız takdirde, çıkış dosyası adı [Main](../../programming-guide/main-and-command-args/index.md) metodunu içeren giriş dosyasının adını alır.  
   
- When you specify this option at a command prompt, all files until the next **-out** or **-target** option are used to create the executable file.  
+ Bu seçeneği bir komut isteminde belirttiğinizde, yürütülebilir dosyayı oluşturmak için bir sonraki **dışarı** veya **-hedef** seçeneğine kadar tüm dosyalar kullanılır.  
   
 ### <a name="to-set-this-compiler-option-in-the-ide"></a>Bu derleyici seçeneğini IDE içinde ayarlamak için  
   
-1. In **Solution Explorer**, open the shortcut menu for your project, and then choose **Properties**.  
+1. **Çözüm Gezgini**' de, projeniz için kısayol menüsünü açın ve ardından **Özellikler**' i seçin.  
   
-2. On the **Application** tab, in the **Output type** list, choose **Windows Store App**.  
+2. **Uygulama** sekmesinde, **Çıkış türü** listesinde, **Windows Mağazası uygulaması**' nı seçin.  
   
-     This option is available only for Windows 8.x Store app templates.  
+     Bu seçenek yalnızca Windows 8. x Mağazası uygulama şablonları için kullanılabilir.  
   
- For information about how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz. <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="example"></a>Örnek  
- The following command compiles `filename.cs` into a Windows executable file that can be run only in an app container.  
+ Aşağıdaki komut `filename.cs`, yalnızca bir uygulama kapsayıcısında çalıştırılabilen bir Windows yürütülebilir dosyasına derler.  
   
 ```console  
 csc -target:appcontainerexe filename.cs  
@@ -44,6 +44,6 @@ csc -target:appcontainerexe filename.cs
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [-target (C# Compiler Options)](./target-compiler-option.md)
-- [-target:winexe (C# Compiler Options)](./target-winexe-compiler-option.md)
+- [-target (C# derleyici seçenekleri)](./target-compiler-option.md)
+- [-target: winexe (C# derleyici seçenekleri)](./target-winexe-compiler-option.md)
 - [C# Derleyici Seçenekleri](./index.md)

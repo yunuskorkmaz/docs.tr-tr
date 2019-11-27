@@ -14,17 +14,17 @@ ms.locfileid: "74335331"
 ---
 # <a name="how-to-get-the-collection-of-files-in-a-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te bir Dizindeki Dosya Koleksiyonunu Alma
 
-The overloads of the <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=nameWithType> method return a read-only collection of strings representing the names of the files within a directory:  
+<xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=nameWithType> yönteminin aşırı yüklemeleri, bir dizindeki dosyaların adlarını temsil eden salt okunurdur bir dize koleksiyonu döndürür:  
   
-- Use the <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%28System.String%29> overload for a simple file search in a specified directory, without searching subdirectories.  
+- Alt dizinleri aramadan, belirtilen dizinde bulunan basit bir dosya araması için <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%28System.String%29> aşırı yüklemeyi kullanın.  
   
-- Use the <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles(System.String,Microsoft.VisualBasic.FileIO.SearchOption,System.String[])> overload to specify additional options for your search. You can use the `wildCards` parameter to specify a search pattern. To include subdirectories in the search, set the `searchType` parameter to <xref:Microsoft.VisualBasic.FileIO.SearchOption.SearchAllSubDirectories?displayProperty=nameWithType>.  
+- Aramanız için ek seçenekler belirtmek üzere <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles(System.String,Microsoft.VisualBasic.FileIO.SearchOption,System.String[])> aşırı yüklemeyi kullanın. Bir arama deseninin belirtilmesi için `wildCards` parametresini kullanabilirsiniz. Aramaya alt dizinleri eklemek için `searchType` parametresini <xref:Microsoft.VisualBasic.FileIO.SearchOption.SearchAllSubDirectories?displayProperty=nameWithType>olarak ayarlayın.  
   
- An empty collection is returned if no files matching the specified pattern are found.  
+ Belirtilen Düzenle eşleşen hiçbir dosya bulunamazsa boş bir koleksiyon döndürülür.  
   
-### <a name="to-list-files-in-a-directory"></a>To list files in a directory  
+### <a name="to-list-files-in-a-directory"></a>Dizindeki dosyaları listelemek için  
   
-- Use one of the <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=nameWithType> method overloads, supplying the name and path of the directory to search in the `directory` parameter. The following example returns all files in the directory and adds them to `ListBox1`.  
+- `directory` parametresinde arama yapılacak dizinin adını ve yolunu sağlayarak <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=nameWithType> yöntemi aşırı yüklemelerinin birini kullanın. Aşağıdaki örnek, dizindeki tüm dosyaları döndürür ve bunları `ListBox1`ekler.  
   
      [!code-vb[VbVbcnMyFileSystem#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#32)]  
   
@@ -32,21 +32,21 @@ The overloads of the <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?d
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).  
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (\\\\.\\) (<xref:System.ArgumentException>) ile başlar.  
   
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).  
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.  
   
-- `directory` does not exist (<xref:System.IO.DirectoryNotFoundException>).  
+- `directory` yok (<xref:System.IO.DirectoryNotFoundException>).  
   
-- `directory` points to an existing file (<xref:System.IO.IOException>).  
+- `directory` var olan bir dosyaya (<xref:System.IO.IOException>) işaret eder.  
   
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).  
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
   
-- A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).  
+- Yoldaki bir dosya veya dizin adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
   
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).  
+- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
   
-- The user lacks necessary permissions (<xref:System.UnauthorizedAccessException>).  
+- Kullanıcının gerekli izinleri yok (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

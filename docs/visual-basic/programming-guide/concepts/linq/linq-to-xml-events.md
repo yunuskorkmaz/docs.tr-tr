@@ -9,32 +9,32 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351933"
 ---
-# <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML Events (Visual Basic)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] events enable you to be notified when an XML tree is altered.  
+# <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML olayları (Visual Basic)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] olaylar, bir XML ağacı değiştiğinde size bildirim gönderilmesini sağlar.  
   
- You can add events to an instance of any <xref:System.Xml.Linq.XObject>. The event handler will then receive events for modifications to that <xref:System.Xml.Linq.XObject> and any of its descendants. For example, you can add an event handler to the root of the tree, and handle all modifications to the tree from that event handler.  
+ Herhangi bir <xref:System.Xml.Linq.XObject>örneğine olay ekleyebilirsiniz. Olay işleyicisi daha sonra bu <xref:System.Xml.Linq.XObject> ve alt öğelerinden herhangi birine değişiklikler için olaylar alır. Örneğin, ağacın köküne bir olay işleyicisi ekleyebilir ve ağaçtaki tüm değişiklikleri bu olay işleyicisinden işleyebilirsiniz.  
   
- For examples of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] events, see <xref:System.Xml.Linq.XObject.Changing> and <xref:System.Xml.Linq.XObject.Changed>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] olayları örnekleri için bkz. <xref:System.Xml.Linq.XObject.Changing> ve <xref:System.Xml.Linq.XObject.Changed>.  
   
-## <a name="types-and-events"></a>Types and Events  
- You use the following types when working with events:  
+## <a name="types-and-events"></a>Türler ve olaylar  
+ Olaylarla çalışırken aşağıdaki türleri kullanın:  
   
 |Tür|Açıklama|  
 |----------|-----------------|  
-|<xref:System.Xml.Linq.XObjectChange>|Specifies the event type when an event is raised for an <xref:System.Xml.Linq.XObject>.|  
-|<xref:System.Xml.Linq.XObjectChangeEventArgs>|Provides data for the <xref:System.Xml.Linq.XObject.Changing> and <xref:System.Xml.Linq.XObject.Changed> events.|  
+|<xref:System.Xml.Linq.XObjectChange>|Bir <xref:System.Xml.Linq.XObject>için bir olay harekete çıktığında olay türünü belirtir.|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|<xref:System.Xml.Linq.XObject.Changing> ve <xref:System.Xml.Linq.XObject.Changed> olayları için veri sağlar.|  
   
- The following events are raised when you modify an XML tree:  
+ Bir XML ağacını değiştirirken aşağıdaki olaylar oluşturulur:  
   
 |Olay|Açıklama|  
 |-----------|-----------------|  
-|<xref:System.Xml.Linq.XObject.Changing>|Occurs just before this <xref:System.Xml.Linq.XObject> or any of its descendants is going to change.|  
-|<xref:System.Xml.Linq.XObject.Changed>|Occurs when an <xref:System.Xml.Linq.XObject> has changed or any of its descendants have changed.|  
+|<xref:System.Xml.Linq.XObject.Changing>|Bu <xref:System.Xml.Linq.XObject> veya alt öğelerinden herhangi birinin değişmesinden hemen önce gerçekleşir.|  
+|<xref:System.Xml.Linq.XObject.Changed>|Bir <xref:System.Xml.Linq.XObject> değiştirildiğinde veya alt öğelerinden herhangi biri değiştiğinde gerçekleşir.|  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Events are useful when you want to maintain some aggregate information in an XML tree. For example, you may want maintain an invoice total that is the sum of the line items of the invoice. This example uses events to maintain the total of all of the child elements under the complex element `Items`.  
+ Olaylar, bir XML ağacındaki bazı toplu bilgileri korumak istediğinizde faydalıdır. Örneğin, faturanın satır öğelerinin toplamı olan bir fatura toplamı korumak isteyebilirsiniz. Bu örnek, karmaşık öğe `Items`altındaki tüm alt öğelerin toplamını korumak için olayları kullanır.  
   
 ### <a name="code"></a>Kod  
   
@@ -116,4 +116,4 @@ Total:308
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Gelişmiş LINQ to XML Programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

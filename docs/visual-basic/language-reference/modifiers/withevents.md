@@ -15,23 +15,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350751"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
-Specifies that one or more declared member variables refer to an instance of a class that can raise events.
+Bir veya daha fazla tanımlanmış üye değişkeninin, olayları tetiklebilecek bir sınıfın örneğine başvurmayacağını belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-When a variable is defined using `WithEvents`, you can declaratively specify that a method handles the variable's events using the `Handles` keyword.
+Bir değişken `WithEvents`kullanılarak tanımlandığında, bir yöntemin, `Handles` anahtar sözcüğünü kullanarak değişkenin olaylarını işlediğini bildirimli olarak belirtebilirsiniz.
 
-You can use `WithEvents` only at class or module level. This means the declaration context for a `WithEvents` variable must be a class or module and cannot be a source file, namespace, structure, or procedure.
+`WithEvents` yalnızca sınıf veya modül düzeyinde kullanabilirsiniz. Bu, bir `WithEvents` değişkeni için bildirim bağlamının bir sınıf veya modül olması ve kaynak dosya, ad alanı, yapı veya yordam olamayacağı anlamına gelir.
 
-You cannot use `WithEvents` on a structure member.
+Yapı üyesi üzerinde `WithEvents` kullanamazsınız.
 
-You can declare only individual variables—not arrays—with `WithEvents`.
+`WithEvents`ile yalnızca bağımsız değişkenleri (diziler değil) bildirebilirsiniz.
 
 ## <a name="rules"></a>Kurallar
 
-**Element Types.** You must declare `WithEvents` variables to be object variables so that they can accept class instances. However, you cannot declare them as `Object`. You must declare them as the specific class that can raise the events.
+**Öğe türleri.** Sınıf örneklerini kabul edebilmeleri için `WithEvents` değişkenlerini nesne değişkenleri olacak şekilde bildirmeniz gerekir. Ancak, bunları `Object`olarak bildiremezsiniz. Bunları, olayları yükseltebilen belirli bir sınıf olarak bildirmeniz gerekir.
 
-The `WithEvents` modifier can be used in this context: [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)
+`WithEvents` değiştiricisi Bu bağlamda kullanılabilir: [Dim ekstresi](../../../visual-basic/language-reference/statements/dim-statement.md)
 
 ## <a name="example"></a>Örnek
 
@@ -41,6 +41,6 @@ Dim WithEvents app As Application
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [İşlendiğini](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
 - [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)

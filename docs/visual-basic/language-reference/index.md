@@ -19,74 +19,74 @@ ms.locfileid: "74349949"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic Dil Başvurusu
 
-This section provides reference information for various aspects of the Visual Basic language.  
+Bu bölüm Visual Basic dilinin çeşitli yönleri için başvuru bilgileri sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
  [Tipografi ve Kod Kuralları](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- Summarizes the way that keywords, placeholders, and other elements of the language are formatted in the Visual Basic documentation.  
+ , Visual Basic belgelerinde anahtar kelimelerin, yer tutucuların ve diğer dilin diğer öğelerinin biçimlendirilme biçimini özetler.  
   
  [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../visual-basic/language-reference/runtime-library-members.md)  
- Lists the classes and modules of the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace, with links to their member functions, methods, properties, constants, and enumerations.  
+ <xref:Microsoft.VisualBasic?displayProperty=nameWithType> ad alanının sınıflarını ve modüllerini, üye işlevlerinin, yöntemlerinin, özelliklerinin, sabitlerin ve Numaralandırmaların bağlantılarıyla birlikte listeler.  
   
  [Anahtar Sözcükler](../../visual-basic/language-reference/keywords/index.md)  
- Lists all Visual Basic keywords and provides links to more information.  
+ Tüm Visual Basic anahtar sözcüklerini listeler ve daha fazla bilgi için bağlantılar sağlar.  
   
- [Attributes (Visual Basic)](../../visual-basic/language-reference/attributes.md)  
- Documents the attributes available in Visual Basic.  
+ [Öznitelikler (Visual Basic)](../../visual-basic/language-reference/attributes.md)  
+ Visual Basic bulunan özniteliklerin belgelerini belgeler.  
   
  [Sabitler ve Sabit Listeleri](../../visual-basic/language-reference/constants-and-enumerations.md)  
- Documents the constants and enumerations available in Visual Basic.  
+ Visual Basic bulunan sabitleri ve numaralandırmaları belgeler.  
   
  [Veri Türleri](../../visual-basic/language-reference/data-types/index.md)  
- Documents the data types available in Visual Basic.  
+ Visual Basic ' de kullanılabilir veri türlerini belgeler.  
   
  [Yönergeler](../../visual-basic/language-reference/directives/index.md)  
- Documents the compiler directives available in Visual Basic.  
+ Visual Basic ' de bulunan derleyici yönergelerini belgeler.  
   
  [İşlevler](../../visual-basic/language-reference/functions/index.md)  
- Documents the run-time functions available in Visual Basic.  
+ Visual Basic içinde kullanılabilir çalışma zamanı işlevlerini belgeler.  
   
  [Değiştiriciler](../../visual-basic/language-reference/modifiers/index.md)  
- Lists the Visual Basic run-time modifiers and provides links to more information.  
+ Visual Basic çalışma zamanı değiştiricilerini listeler ve daha fazla bilgi için bağlantılar sağlar.  
   
  [Modüller](../../visual-basic/language-reference/modules.md)  
- Documents the modules available in Visual Basic and their members.  
+ Visual Basic ve üyelerinde bulunan modülleri belgeler.  
   
  [Nothing](../../visual-basic/language-reference/nothing.md)  
- Describes the default value of any data type.  
+ Herhangi bir veri türünün varsayılan değerini açıklar.  
   
  [Nesneler](../../visual-basic/language-reference/objects/index.md)  
- Documents the objects available in Visual Basic and their members.  
+ Visual Basic ve üyelerinde bulunan nesneleri belgeler.  
   
  [işleçler](../../visual-basic/language-reference/operators/index.md)  
- Documents the operators available in Visual Basic.  
+ Visual Basic ' de kullanılabilen işleçleri belgeler.  
   
- [Veri Erişimi](../../visual-basic/language-reference/properties.md)  
- Documents the properties available in Visual Basic.  
+ [Özellikler](../../visual-basic/language-reference/properties.md)  
+ Visual Basic bulunan özellikleri belgeler.  
   
  [Sorgular](../../visual-basic/language-reference/queries/index.md)  
- Provides reference information about using [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.  
+ Kodunuzda [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ifadeleri kullanma hakkında başvuru bilgileri sağlar.  
   
  [Deyimler](../../visual-basic/language-reference/statements/index.md)  
- Documents the declaration and executable statements available in Visual Basic.  
+ Visual Basic ' de bulunan bildirim ve çalıştırılabilir deyimleri belgeler.  
   
  [XML Açıklama Etiketleri](../../visual-basic/language-reference/xmldoc/index.md)  
- Describes the documentation comments for which IntelliSense is provided in the Visual Basic Code Editor.  
+ Visual Basic kod düzenleyicisinde IntelliSense 'in sağladığı belge açıklamalarını açıklar.  
   
  [XML Eksen Özellikleri](../../visual-basic/language-reference/xml-axis/index.md)  
- Provides links to information about using XML axis properties to access XML directly in your code.  
+ Doğrudan kodunuzda XML 'e erişmek için XML eksen özelliklerini kullanma hakkındaki bilgilere bağlantılar sağlar.  
   
  [XML Değişmez Değerleri](../../visual-basic/language-reference/xml-literals/index.md)  
- Provides links to information about using XML literals to incorporate XML directly in your code.  
+ Doğrudan kodunuzda XML birleştirmek için XML değişmez değerleri kullanma hakkındaki bilgilere bağlantılar sağlar.  
   
  [Hata İletileri](../../visual-basic/language-reference/error-messages/index.md)  
- Provides a listing of Visual Basic compiler and run-time error messages and help on how to handle them.  
+ Visual Basic derleyicisinin ve çalışma zamanı hata iletilerinin bir listesini sağlar ve bunları nasıl işleyeceğinizi öğrenin.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 
  [Visual Basic](../../visual-basic/index.md)  
- Provides comprehensive help on all areas of the Visual Basic language.  
+ Visual Basic dilinin tüm alanlarında kapsamlı yardım sağlar.  
   
- [Visual Basic Command-Line Compiler](../../visual-basic/reference/command-line-compiler/index.md)  
- Describes how to use the command-line compiler as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).
+ [Visual Basic komut satırı derleyicisi](../../visual-basic/reference/command-line-compiler/index.md)  
+ Visual Studio tümleşik geliştirme ortamı (IDE) içinden program derlemek için alternatif olarak komut satırı derleyicisinin nasıl kullanılacağını açıklar.

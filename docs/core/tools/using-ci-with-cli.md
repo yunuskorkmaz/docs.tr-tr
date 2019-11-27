@@ -1,6 +1,6 @@
 ---
-title: Using .NET Core SDK and tools in Continuous Integration (CI)
-description: Information on the usage of the .NET Core SDK and its tools on the build server.
+title: Sürekli tümleştirme (CI) içinde .NET Core SDK ve araçları kullanma
+description: Yapı sunucusunda .NET Core SDK ve araçlarının kullanımıyla ilgili bilgiler.
 author: mairaw
 ms.date: 05/18/2017
 ms.custom: seodec18
@@ -11,42 +11,42 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428601"
 ---
-# <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Using .NET Core SDK and tools in Continuous Integration (CI)
+# <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Sürekli tümleştirme (CI) içinde .NET Core SDK ve araçları kullanma
 
-This document outlines using the .NET Core SDK and its tools on a build server. The .NET Core toolset works both interactively, where a developer types commands at a command prompt, and automatically, where a Continuous Integration (CI) server runs a build script. The commands, options, inputs, and outputs are the same, and the only things you supply are a way to acquire the tooling and a system to build your app. This document focuses on scenarios of tool acquisition for CI with recommendations on how to design and structure your build scripts.
+Bu belge, yapı sunucusunda .NET Core SDK ve araçlarını kullanarak özetlenmektedir. .NET Core araç takımı hem etkileşimli olarak hem de bir geliştirici komut isteminde komutlar yazdığında ve sürekli tümleştirme (CI) sunucusunun bir yapı betiğini çalıştırdığı otomatik olarak çalışır. Komutlar, Seçenekler, girişler ve çıktılar aynıdır ve sağladığınız tek şey, uygulamayı derlemek için araç ve bir sistem elde etmenin bir yoludur. Bu belge, derleme betiklerinizi tasarlamaya ve oluşturmaya yönelik önerilere sahip CI için araç alımı senaryolarına odaklanır.
 
-## <a name="installation-options-for-ci-build-servers"></a>Installation options for CI build servers
+## <a name="installation-options-for-ci-build-servers"></a>CI derleme sunucuları için yükleme seçenekleri
 
-### <a name="using-the-native-installers"></a>Using the native installers
+### <a name="using-the-native-installers"></a>Yerel yükleyicileri kullanma
 
-Native installers are available for macOS, Linux, and Windows. The installers require admin (sudo) access to the build server. The advantage of using a native installer is that it installs all of the native dependencies required for the tooling to run. Native installers also provide a system-wide installation of the SDK.
+Yerel yükleyiciler macOS, Linux ve Windows için kullanılabilir. Yükleyiciler, derleme sunucusuna yönetici (sudo) erişimi gerektirir. Yerel bir yükleyiciyi kullanmanın avantajı, araçları çalıştırmak için gerekli tüm yerel bağımlılıkların yüklenidir. Yerel yükleyiciler Ayrıca SDK 'nın sistem genelinde bir yüklemesini de sağlar.
 
-macOS users should use the PKG installers. On Linux, there's a choice of using a feed-based package manager, such as apt-get for Ubuntu or yum for CentOS, or using the packages themselves, DEB or RPM. On Windows, use the MSI installer.
+macOS kullanıcıları paket yükleyicilerini kullanmalıdır. Linux 'ta, bir akış tabanlı Paket Yöneticisi (örneğin, Ubuntu veya CentOS için apt-get) veya paketlerin kendilerini, DEB veya RPM 'yi kullanmayı tercih eden bir seçim vardır. Windows 'ta, MSI yükleyicisini kullanın.
 
-The latest stable binaries are found at [.NET downloads](https://dotnet.microsoft.com/download). If you wish to use the latest (and potentially unstable) pre-release tooling, use the links provided at the [dotnet/core-sdk GitHub repository](https://github.com/dotnet/core-sdk#installers-and-binaries). For Linux distributions, `tar.gz` archives (also known as `tarballs`) are available; use the installation scripts within the archives to install .NET Core.
+En son kararlı ikili dosyalar [.net indirmelerinde](https://dotnet.microsoft.com/download)bulunur. En son (ve kararsız) yayın öncesi araçları kullanmak istiyorsanız, [DotNet/Core-SDK GitHub deposunda](https://github.com/dotnet/core-sdk#installers-and-binaries)sunulan bağlantıları kullanın. Linux dağıtımları için `tar.gz` arşivleri (`tarballs`olarak da bilinir) kullanılabilir; .NET Core yüklemek için arşivleri içindeki yükleme betiklerini kullanın.
 
-### <a name="using-the-installer-script"></a>Using the installer script
+### <a name="using-the-installer-script"></a>Yükleyici betiğini kullanma
 
-Using the installer script allows for non-administrative installation on your build server and easy automation for obtaining the tooling. The script takes care of downloading the tooling and extracting it into a default or specified location for use. You can also specify a version of the tooling that you wish to install and whether you want to install the entire SDK or only the shared runtime.
+Yükleyici betiğinin kullanılması, yapı sunucunuzda yönetimsel olmayan yüklemeye ve araçları almak için kolay otomatikleştirilmesine izin verir. Betik, araçları indirme ve varsayılan veya belirtilen bir konuma çıkarma işlemini gerçekleştirir. Ayrıca, yüklemek istediğiniz bir araç sürümünü ve tüm SDK 'Yı mı yoksa yalnızca paylaşılan çalışma zamanını mı yüklemek istediğinizi de belirtebilirsiniz.
 
-The installer script is automated to run at the start of the build to fetch and install the desired version of the SDK. The *desired version* is whatever version of the SDK your projects require to build. The script allows you to install the SDK in a local directory on the server, run the tools from the installed location, and then clean up (or let the CI service clean up) after the build. This provides encapsulation and isolation to your entire build process. The installation script reference is found in the [dotnet-install](dotnet-install-script.md) article.
+Yükleyici betiği, SDK 'nın istenen sürümünü getirmek ve yüklemek üzere Yapı başlangıcında çalışmak için otomatikleştirilir. *İstediğiniz sürüm* , projelerinizin derlemek için IHTIYAç duyduğu SDK 'nın herhangi bir sürümüdür. Komut dosyası, SDK 'Yı sunucudaki yerel bir dizine yüklemenize, yüklü konumdan araçları çalıştırmanıza ve sonra da derlemeyi (ya da CI hizmeti temizlemeye izin verir) derlemeden sonra temizleyebilir. Bu, tüm derleme sürecinizi kapsülleme ve yalıtıma sağlar. Yükleme betiği başvurusu [DotNet yükleme](dotnet-install-script.md) makalesinde bulunur.
 
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> When using the installer script, native dependencies aren't installed automatically. You must install the native dependencies if the operating system doesn't have them. For more information, see [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-linux).
+> Yükleyici betiği kullanılırken, yerel bağımlılıklar otomatik olarak yüklenmez. İşletim sisteminde yoksa yerel bağımlılıkları yüklemelisiniz. Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](../install/dependencies.md?tabs=netcore30&pivots=os-linux).
 
-## <a name="ci-setup-examples"></a>CI setup examples
+## <a name="ci-setup-examples"></a>CI kurulum örnekleri
 
-This section describes a manual setup using a PowerShell or bash script, along with a description of several software as a service (SaaS) CI solutions. The SaaS CI solutions covered are [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/), and [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index).
+Bu bölümde, bir PowerShell veya bash betiği kullanılarak el ile yapılan bir kurulum ve hizmet olarak yazılım (SaaS) CI çözümlerinin bir açıklaması açıklanmaktadır. Kapsanan SaaS CI çözümleri, [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/)ve [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index).
 
-### <a name="manual-setup"></a>Manual setup
+### <a name="manual-setup"></a>El ile kurulum
 
-Each SaaS service has its own methods for creating and configuring a build process. If you use different SaaS solution than those listed or require customization beyond the pre-packaged support, you must perform at least some manual configuration.
+Her SaaS hizmeti bir yapı işlemi oluşturmak ve yapılandırmak için kendi yöntemlerine sahiptir. Listelenenlerden farklı SaaS çözümü kullanıyorsanız veya önceden paketlenmiş desteğin ötesinde özelleştirme yapmayı düşünüyorsanız, en az bir el ile yapılandırma gerçekleştirmeniz gerekir.
 
-In general, a manual setup requires you to acquire a version of the tools (or the latest nightly builds of the tools) and run your build script. You can use a PowerShell or bash script to orchestrate the .NET Core commands or use a project file that outlines the build process. The [orchestration section](#orchestrating-the-build) provides more detail on these options.
+Genel olarak, el ile kurulum, araçların bir sürümünü (veya araçların en son gecelik sürümlerini) almanızı ve derleme betiğinizi çalıştırmanızı gerektirir. .NET Core komutlarını düzenlemek veya yapı sürecini özetleyen bir proje dosyası kullanmak için bir PowerShell veya bash betiği kullanabilirsiniz. [Orchestration bölümü](#orchestrating-the-build) , bu seçenekler hakkında daha fazla ayrıntı sağlar.
 
-After you create a script that performs a manual CI build server setup, use it on your dev machine to build your code locally for testing purposes. Once you confirm that the script is running well locally, deploy it to your CI build server. A relatively simple PowerShell script demonstrates how to obtain the .NET Core SDK and install it on a Windows build server:
+El ile CI derleme sunucusu kurulumu gerçekleştiren bir komut dosyası oluşturduktan sonra, test amacıyla kodunuzu yerel olarak derlemek için geliştirme makinenizde kullanın. Betiğin yerel olarak çalıştığını onaylayıp CI Build sunucunuza dağıtın. Görece basit bir PowerShell betiği, .NET Core SDK nasıl alınacağını ve bir Windows Build Server 'a nasıl yükleneceğini göstermektedir:
 
 ```powershell
 $ErrorActionPreference="Stop"
@@ -93,7 +93,7 @@ $LocalDotnet = "$InstallDir/dotnet"
 # Run the build process now. Implement your build script here.
 ```
 
-You provide the implementation for your build process at the end of the script. The script acquires the tools and then executes your build process. For UNIX machines, the following bash script performs the actions described in the PowerShell script in a similar manner:
+Betik sonunda derleme işleminiz için uygulama sağlarsınız. Komut dosyası araçları alır ve yapı işleminizi yürütür. UNIX makineler için aşağıdaki Bash betiği, PowerShell komut dosyasında açıklanan eylemleri benzer bir şekilde gerçekleştirir:
 
 ```bash
 #!/bin/bash
@@ -122,15 +122,15 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 
 ### <a name="travis-ci"></a>Travis CI
 
-You can configure [Travis CI](https://travis-ci.org/) to install the .NET Core SDK using the `csharp` language and the `dotnet` key. For more information, see the official Travis CI docs on [Building a C#, F#, or Visual Basic Project](https://docs.travis-ci.com/user/languages/csharp/). Note as you access the Travis CI information that the community-maintained `language: csharp` language identifier works for all .NET languages, including F#, and Mono.
+`csharp` dilini ve `dotnet` anahtarını kullanarak .NET Core SDK yüklemek için [Travis CI](https://travis-ci.org/) 'yi yapılandırabilirsiniz. Daha fazla bilgi için, bkz., [veya Visual Basic projesi oluşturma C# F#](https://docs.travis-ci.com/user/languages/csharp/)hakkında resmi Travis CI belgeleri. Topluluk tarafından korunan `language: csharp` Dil tanımlayıcısının, ve mono dahil olmak üzere F#tüm .NET dilleri için işe Çalıştığınızdaki TRAVIS CI bilgilerine eriştiğinizde dikkat edin.
 
-Travis CI runs both macOS and Linux jobs in a *build matrix*, where you specify a combination of runtime, environment, and exclusions/inclusions to cover your build combinations for your app. For more information, see the [Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build) article in the Travis CI documentation. The MSBuild-based tools include the LTS (1.0.x) and Current (1.1.x) runtimes in the package; so by installing the SDK, you receive everything you need to build.
+Travis CI hem macOS hem de Linux işlerini, uygulamanızın yapı kombinasyonlarını kapsayacak çalışma zamanı, ortam ve dışlamaları/eklemeleri belirlediğiniz bir *derleme matrisi*içinde çalıştırır. Daha fazla bilgi için bkz. Travis CI belgelerindeki [derlemeyi özelleştirme](https://docs.travis-ci.com/user/customizing-the-build) makalesi. MSBuild tabanlı araçlar, paketteki LTS (1.0. x) ve geçerli (1.1. x) çalışma zamanlarını içerir; Bu nedenle SDK 'yı yükleyerek, oluşturmanız gereken her şeyi alırsınız.
 
 ### <a name="appveyor"></a>AppVeyor
 
-[AppVeyor](https://www.appveyor.com/) installs the .NET Core 1.0.1 SDK with the `Visual Studio 2017` build worker image. Other build images with different versions of the .NET Core SDK are available. For more information, see the [appveyor.yml example](https://github.com/dotnet/docs/blob/master/appveyor.yml) and the [Build worker images](https://www.appveyor.com/docs/build-environment/#build-worker-images) article in the AppVeyor docs.
+[AppVeyor](https://www.appveyor.com/) , `Visual Studio 2017` derlemesi çalışan görüntüsü Ile .NET Core 1.0.1 SDK 'sını yüklüyor. .NET Core SDK farklı sürümlerine sahip diğer derleme görüntüleri mevcuttur. Daha fazla bilgi için AppVeyor docs içindeki [AppVeyor. yıml örneğine](https://github.com/dotnet/docs/blob/master/appveyor.yml) ve [Build Worker Images](https://www.appveyor.com/docs/build-environment/#build-worker-images) makalesine bakın.
 
-The .NET Core SDK binaries are downloaded and unzipped in a subdirectory using the install script, and then they're added to the `PATH` environment variable. Add a build matrix to run integration tests with multiple versions of the .NET Core SDK:
+.NET Core SDK ikililer, install betiği kullanılarak bir alt dizinde indirilir ve sıkıştırılırsınız ve sonra `PATH` ortam değişkenine eklenir. .NET Core SDK birden çok sürümüyle tümleştirme testlerini çalıştırmak için bir derleme matrisi ekleyin:
 
 ```yaml
 environment:
@@ -142,39 +142,39 @@ install:
   # See appveyor.yml example for install script
 ```
 
-### <a name="azure-devops-services"></a>Azure DevOps Services
+### <a name="azure-devops-services"></a>Azure DevOps Hizmetleri
 
-Configure Azure DevOps Services to build .NET Core projects using one of these approaches:
+Aşağıdaki yaklaşımlardan birini kullanarak .NET Core projeleri oluşturmak için Azure DevOps Services yapılandırın:
 
-1. Run the script from the [manual setup step](#manual-setup) using your commands.
-1. Create a build composed of several Azure DevOps Services built-in build tasks that are configured to use .NET Core tools.
+1. Komutlarınızı kullanarak [el ile kurulum adımından](#manual-setup) betiği çalıştırın.
+1. .NET Core araçları kullanmak üzere yapılandırılmış çeşitli Azure DevOps Services yerleşik oluşturma görevlerinden oluşan bir yapı oluşturun.
 
-Both solutions are valid. Using a manual setup script, you control the version of the tools that you receive, since you download them as part of the build. The build is run from a script that you must create. This article only covers the manual option. For more information on composing a build with Azure DevOps Services build tasks, see the [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index) documentation.
+Her iki çözüm de geçerlidir. El ile kurulum betiği kullanarak, bunları yapılandırmanın bir parçası olarak indirdiklerinden, aldığınız araçların sürümünü kontrol edersiniz. Derleme, oluşturmanız gereken bir betikten çalıştırılır. Bu makale yalnızca el ile seçeneği içerir. Azure DevOps Services yapı görevleriyle derleme oluşturma hakkında daha fazla bilgi için [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index) belgelerine bakın.
 
-To use a manual setup script in Azure DevOps Services, create a new build definition and specify the script to run for the build step. This is accomplished using the Azure DevOps Services user interface:
+Azure DevOps Services içinde el ile kurulum betiği kullanmak için yeni bir derleme tanımı oluşturun ve derleme adımı için çalıştırılacak betiği belirtin. Bu, Azure DevOps Services kullanıcı arabirimi kullanılarak gerçekleştirilir:
 
-1. Start by creating a new build definition. Once you reach the screen that provides you an option to define what kind of a build you wish to create, select the **Empty** option.
+1. Yeni bir derleme tanımı oluşturarak başlayın. Oluşturmak istediğiniz bir yapı türünü tanımlama seçeneği sunan ekrana ulaştığınızda **boş** seçeneğini belirleyin.
 
-   ![Selecting an empty build definition](./media/using-ci-with-cli/select-empty-build-definition.png)
+   ![Boş bir derleme tanımı seçme](./media/using-ci-with-cli/select-empty-build-definition.png)
 
-1. After configuring the repository to build, you're directed to the build definitions. Select **Add build step**:
+1. Derlemeyi derlemek için yapılandırdıktan sonra, derleme tanımlarına yönlendirilirsiniz. **Yapı Ekle adımını**seçin:
 
-   ![Adding a build step](./media/using-ci-with-cli/add-build-step.png)
+   ![Derleme adımı ekleme](./media/using-ci-with-cli/add-build-step.png)
 
-1. You're presented with the **Task catalog**. The catalog contains tasks that you use in the build. Since you have a script, select the **Add** button for **PowerShell: Run a PowerShell script**.
+1. **Görev kataloğu**ile karşılaşırsınız. Katalog, derlemede kullandığınız görevleri içerir. Bir betiğinizin olduğundan, PowerShell için **Ekle** düğmesini seçin **: PowerShell betiği çalıştırın**.
 
-   ![Adding a PowerShell script step](./media/using-ci-with-cli/add-powershell-script.png)
+   ![PowerShell betiği ekleme adımı](./media/using-ci-with-cli/add-powershell-script.png)
 
-1. Configure the build step. Add the script from the repository that you're building:
+1. Yapı adımını yapılandırın. Oluşturmakta olduğunuz depodan betiği ekleyin:
 
-   ![Specifying the PowerShell script to run](./media/using-ci-with-cli/powershell-script-path.png)
+   ![Çalıştırılacak PowerShell betiğini belirtme](./media/using-ci-with-cli/powershell-script-path.png)
 
-## <a name="orchestrating-the-build"></a>Orchestrating the build
+## <a name="orchestrating-the-build"></a>Derlemeyi düzenleme
 
-Most of this document describes how to acquire the .NET Core tools and configure various CI services without providing information on how to orchestrate, or *actually build*, your code with .NET Core. The choices on how to structure the build process depend on many factors that can't be covered in a general way here. For more information on orchestrating your builds with each technology, explore the resources and samples provided in the documentation sets of [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/), and [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index).
+Bu belgenin çoğunda, .NET Core ile kodunuzu *düzenleme veya yapılandırma*hakkında bilgi sağlamadan .NET Core araçlarının nasıl elde edileceğini ve çeşitli CI hizmetlerinin nasıl yapılandırılacağı açıklanmaktadır. Yapı işlemini nasıl yapılandıracağınıza ilişkin seçimler burada genel bir şekilde ele alınmayan birçok etkene bağlıdır. Her teknolojiyle derlemelerinizi düzenleme hakkında daha fazla bilgi için, [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/)ve [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index)belge kümelerinde sağlanan kaynakları ve örnekleri inceleyin.
 
-Two general approaches that you take in structuring the build process for .NET Core code using the .NET Core tools are using MSBuild directly or using the .NET Core command-line commands. Which approach you should take is determined by your comfort level with the approaches and trade-offs in complexity. MSBuild provides you the ability to express your build process as tasks and targets, but it comes with the added complexity of learning MSBuild project file syntax. Using the .NET Core command-line tools is perhaps simpler, but it requires you to write orchestration logic in a scripting language like `bash` or PowerShell.
+.NET Core araçları kullanılarak .NET Core kodu için derleme işlemini yapılandırırken uygulamanız gereken iki genel yaklaşım doğrudan MSBuild 'i veya .NET Core komut satırı komutlarını kullanmaktır. Uygulamanız gereken yaklaşım, yaklaşımlar ve yüksek düzeyde karmaşıklığa sahip olan rahatlık düzeyinize göre belirlenir. MSBuild, derleme işleminizi görev ve hedef olarak ifade etme olanağı sağlar, ancak öğrenme MSBuild proje dosyası sözdiziminin ek karmaşıklığı ile birlikte gelir. .NET Core komut satırı araçlarının kullanılması belki de basittir, ancak düzenleme mantığını `bash` veya PowerShell gibi bir betik dilinde yazmanızı gerektirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET downloads - Linux](https://dotnet.microsoft.com/download?initial-os=linux)
+- [.NET İndirmeleri-Linux](https://dotnet.microsoft.com/download?initial-os=linux)

@@ -14,18 +14,18 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441798"
 ---
 # <a name="ialink3-interface"></a>IALink3 Arabirimi
-Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.  
+, Bağlayıcının bir derleme oluşturduğunda kullanacağı bildirim dosyasını belirtmenize veya sıfırlamanıza olanak sağlayan tek bir yöntem sağlar `SetManifestFile`.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [SetManifestFile Yöntemi](setmanifestfile-method.md)  
- Enables you to specify or reset the manifest file that the linker will use when it creates the assembly.  
+ Bağlayıcının derlemeyi oluşturduğunda kullanacağı bildirim dosyasını belirtmenize veya sıfırlamanıza olanak sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [ALink API](index.md)  
- Supports creating .NET Framework assemblies and unbound modules.  
+ .NET Framework derlemeleri ve ilişkisiz modülleri oluşturmayı destekler.  
   
  [IALink Arabirimi](ialink-interface.md)  
- Helps in constructing .NET Framework assemblies.  
+ .NET Framework derlemeleri oluşturulmasına yardımcı olur.  
   
  [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../tools/al-exe-assembly-linker.md)  
- Generates a file that has an assembly manifest from one or more files that are either modules or resource files.
+ Modüller ya da kaynak dosyaları olan bir veya daha fazla dosyadan derleme bildirimine sahip bir dosya oluşturur.

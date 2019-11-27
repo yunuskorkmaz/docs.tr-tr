@@ -16,29 +16,29 @@ ms.locfileid: "74345581"
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Seri Bağlantı Noktalarına Dizeler Gönderme
 
-This topic describes how to use `My.Computer.Ports` to send strings to the computer's serial ports in Visual Basic.  
+Bu konuda, Visual Basic bilgisayarın seri bağlantı noktalarına dizeler göndermek için `My.Computer.Ports` nasıl kullanılacağı açıklanmaktadır.  
   
 ## <a name="example"></a>Örnek  
 
- This example sends a string to the COM1 serial port. You may need to use a different serial port on your computer.  
+ Bu örnekte, COM1 seri bağlantı noktasına bir dize gönderilir. Bilgisayarınızda farklı bir seri bağlantı noktası kullanmanız gerekebilir.  
   
- Use the `My.Computer.Ports.OpenSerialPort` method to obtain a reference to the port. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+ Bağlantı noktasına bir başvuru almak için `My.Computer.Ports.OpenSerialPort` metodunu kullanın. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
- The `Using` block allows the application to close the serial port even if it generates an exception. All code that manipulates the serial port should appear within this block or within a `Try...Catch...Finally` block.  
+ `Using` bloğu, uygulamanın bir özel durum oluşturursa bile seri bağlantı noktasını kapatmasını sağlar. Seri bağlantı noktasını işleyen tüm kodlar bu blok içinde veya `Try...Catch...Finally` bloğu içinde görünmelidir.  
   
- The <xref:System.IO.Ports.SerialPort.WriteLine%2A> method sends the data to the serial port.  
+ <xref:System.IO.Ports.SerialPort.WriteLine%2A> yöntemi, verileri seri bağlantı noktasına gönderir.  
   
  [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
   
-- This example assumes the computer is using `COM1`.  
+- Bu örnek, bilgisayarın `COM1`kullandığını varsayar.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- This example assumes the computer is using `COM1`; for more flexibility, the code should allow the user to select the desired serial port from a list of available ports. For more information, see [How to: Show Available Serial Ports](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
+ Bu örnek, bilgisayarın `COM1`kullandığını varsayar; daha fazla esneklik için, kod kullanıcının kullanılabilir bağlantı noktası listesinden istenen seri bağlantı noktasını seçmesine izin verir. Daha fazla bilgi için bkz. [nasıl yapılır: kullanılabilir seri bağlantı noktalarını gösterme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
   
- This example uses a `Using` block to make sure that the application closes the port even if it throws an exception. For more information, see [Using Statement](../../../../visual-basic/language-reference/statements/using-statement.md).  
+ Bu örnek, bir özel durum oluşturursa bile uygulamanın bağlantı noktasını kapatdığından emin olmak için bir `Using` bloğu kullanır. Daha fazla bilgi için bkz. [using deyimleri](../../../../visual-basic/language-reference/statements/using-statement.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

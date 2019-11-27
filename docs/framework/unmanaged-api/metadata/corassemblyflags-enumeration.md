@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443915"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags Numaralandırması
-Contains values that describe the metadata applied to an assembly compilation.  
+Bir derleme derlemesine uygulanan meta verileri tanımlayan değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -53,35 +53,35 @@ typedef enum CorAssemblyFlags {
 } CorAssemblyFlags;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`afPublicKey`|Indicates that the assembly reference holds the full, unhashed public key.|  
-|`afPA_None`|Indicates that the processor architecture is unspecified.|  
-|`afPA_MSIL`|Indicates that the processor architecture is neutral (PE32).|  
-|`afPA_x86`|Indicates that the processor architecture is x86 (PE32).|  
-|`afPA_IA64`|Indicates that the processor architecture is Itanium (PE32+).|  
-|`afPA_AMD64`|Indicates that the processor architecture is AMD X64 (PE32+).|  
-|`afPA_ARM`|Indicates that the processor architecture is ARM (PE32).|  
-|`afPA_NoPlatform`|Indicates that the assembly is a reference assembly; that is, it applies to any architecture but cannot run on any architecture. Thus, the flag is the same as `afPA_Mask`.|  
-|`afPA_Specified`|Indicates that the processor architecture flags should be propagated to the `AssemblyRef` record.|  
-|`afPA_Mask`|A mask that describes the processor architecture.|  
-|`afPA_FullMask`|Specifies that the processor architecture description is included.|  
-|`afPA_Shift`|Indicates a shift count in the processor architecture flags to and from the index.|  
-|`afEnableJITcompileTracking`|Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afDisableJITcompileOptimizer`|Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afRetargetable`|Indicates that the assembly can be retargeted at run time to an assembly from a different publisher.|  
-|`afContentType_Mask`|A mask that describes the content type.|  
-|`afContentType_Default`|Indicates the default content type.|  
-|`afContentType_WindowsRuntime`|Indicates the Windows Runtime content type.|  
+|`afPublicKey`|Derleme başvurusunun tam, karma olmayan ortak anahtarı tuttuğunda olduğunu gösterir.|  
+|`afPA_None`|İşlemci mimarisinin belirtilmemiş olduğunu gösterir.|  
+|`afPA_MSIL`|İşlemci mimarisinin nötr (PE32) olduğunu gösterir.|  
+|`afPA_x86`|İşlemci mimarisinin x86 (PE32) olduğunu gösterir.|  
+|`afPA_IA64`|İşlemci mimarisinin Itanium (PE32 +) olduğunu gösterir.|  
+|`afPA_AMD64`|İşlemci mimarisinin AMD x64 (PE32 +) olduğunu gösterir.|  
+|`afPA_ARM`|İşlemci mimarisinin ARM (PE32) olduğunu gösterir.|  
+|`afPA_NoPlatform`|Derlemenin bir başvuru derlemesi olduğunu belirtir; diğer bir deyişle, her türlü mimari için geçerlidir, ancak herhangi bir mimaride çalıştırılamaz. Bu nedenle, bayrak `afPA_Mask`ile aynıdır.|  
+|`afPA_Specified`|İşlemci mimarisi bayraklarının `AssemblyRef` kaydına yayıldığını gösterir.|  
+|`afPA_Mask`|İşlemci mimarisini tanımlayan bir maske.|  
+|`afPA_FullMask`|İşlemci mimarisi açıklamasının dahil edildiğini belirtir.|  
+|`afPA_Shift`|Dizin ve dizinden gelen işlemci mimarisi bayraklarının bir kaydırma sayısını gösterir.|  
+|`afEnableJITcompileTracking`|<xref:System.Diagnostics.DebuggableAttribute><xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> karşılık gelen değeri gösterir.|  
+|`afDisableJITcompileOptimizer`|<xref:System.Diagnostics.DebuggableAttribute><xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> karşılık gelen değeri gösterir.|  
+|`afRetargetable`|Derlemenin çalışma zamanında farklı bir yayımcıdan bir derlemeye yeniden hedeflenebileceğini belirtir.|  
+|`afContentType_Mask`|İçerik türünü tanımlayan bir maske.|  
+|`afContentType_Default`|Varsayılan içerik türünü gösterir.|  
+|`afContentType_WindowsRuntime`|Windows Çalışma Zamanı içerik türünü gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

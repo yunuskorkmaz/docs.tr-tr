@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450335"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes Yöntemi
-Enumerates the exported types referenced in the assembly manifest in the current metadata scope.  
+Geçerli meta veri kapsamındaki derleme bildiriminde başvurulan verilen türleri numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,32 +38,32 @@ HRESULT EnumExportedTypes (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value when the `EnumExportedTypes` method is called for the first time.  
+ [in, out] Numaralandırıcı için bir işaretçi. `EnumExportedTypes` yöntemi ilk kez çağrıldığında bu null bir değer olmalıdır.  
   
  `rExportedTypes`  
- [out] The enumeration of `mdExportedType` metadata tokens.  
+ dışı `mdExportedType` meta veri belirteçleri numaralandırması.  
   
  `cMax`  
- [in] The maximum number of `mdExportedType` tokens that can be placed in the `rExportedTypes` array.  
+ 'ndaki `rExportedTypes` dizisine yerleştirilebilecek en fazla `mdExportedType` belirteci sayısı.  
   
  `pcTokens`  
- [out] The number of `mdExportedType` tokens actually placed in `rExportedTypes`.  
+ dışı Gerçekte `rExportedTypes`yer `mdExportedType` belirteçlerin sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumExportedTypes` başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda `pcTokens` sıfır olarak ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434873"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock Metodu
-Gets a section block of the code base.  
+Kod tabanının bir bölüm bloğunu alır.  
   
- This method is obsolete and should not be used.  
+ Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,28 +40,28 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>Parametreler  
  `section`  
- [in] The section from which to retrieve a block of the code base.  
+ 'ndaki Kod tabanı bloğunun alınacağı bölüm.  
   
  `len`  
- [in] The length of the block to be retrieved.  
+ 'ndaki Alınacak bloğun uzunluğu.  
   
  `align`  
- [in] The byte, relative to the beginning of the section, with which to align the first byte of the block. This is the position of the block within the section.  
+ 'ndaki Bloğunun ilk baytını hizalamak için, bölümünün başlangıcına göre bayt. Bu, bloğunun bölüm içindeki konumudur.  
   
  `ppBytes`  
- [out] A pointer to a location that receives the address of the retrieved block.  
+ dışı Alınan bloğun adresini alan konuma yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.  
+ Yalnızca diğer yöntemler tarafından işlenmeyen özel bölüm gereksinimleriniz varsa `GetSectionBlock` çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

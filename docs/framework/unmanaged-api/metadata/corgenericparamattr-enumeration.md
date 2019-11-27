@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450282"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr Numaralandırması
-Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
+[IMetaDataEmit2::D efineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)çağrılarında kullanılan genel türler için <xref:System.Type> parametrelerini tanımlayan değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,26 +43,26 @@ typedef enum CorGenericParamAttr {
 } CorGenericParamAttr;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`gpVarianceMask`|Parameter variance applies only to generic parameters for interfaces and delegates.|  
-|`gpNonVariant`|Indicates the absence of variance.|  
-|`gpCovariant`|Indicates covariance.|  
-|`gpContravariant`|Indicates contravariance.|  
-|`gpSpecialConstraintMask`|Special constraints can apply to any <xref:System.Type> parameter.|  
-|`gpNoSpecialConstraint`|Indicates that no constraint applies to the <xref:System.Type> parameter.|  
-|`gpReferenceTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a reference type.|  
-|`gpNotNullableValueTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.|  
-|`gpDefaultConstructorConstraint`|Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.|  
+|`gpVarianceMask`|Parametre varyansı yalnızca arabirimler ve temsilciler için genel parametreler için geçerlidir.|  
+|`gpNonVariant`|Varyans yokluğunu gösterir.|  
+|`gpCovariant`|Kovaryansı gösterir.|  
+|`gpContravariant`|Değişken varyansı gösterir.|  
+|`gpSpecialConstraintMask`|Özel kısıtlamalar, herhangi bir <xref:System.Type> parametresi için uygulanabilir.|  
+|`gpNoSpecialConstraint`|<xref:System.Type> parametresine hiçbir kısıtlamanın uygulanacağını gösterir.|  
+|`gpReferenceTypeConstraint`|<xref:System.Type> parametresinin bir başvuru türü olması gerektiğini belirtir.|  
+|`gpNotNullableValueTypeConstraint`|<xref:System.Type> parametresinin null değer olmayan bir değer türü olması gerektiğini belirtir.|  
+|`gpDefaultConstructorConstraint`|<xref:System.Type> parametresinin, hiçbir parametre alan bir varsayılan genel oluşturucuya sahip olması gerektiğini belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

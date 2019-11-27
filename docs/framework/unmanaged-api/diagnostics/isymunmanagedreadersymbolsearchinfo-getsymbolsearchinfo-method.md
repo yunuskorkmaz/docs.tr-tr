@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446403"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfo-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo Yöntemi
-Gets symbol search information.  
+Sembol arama bilgilerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT GetSymbolSearchInfo(
   
 ## <a name="parameters"></a>Parametreler  
  `cSearchInfo`  
- [in] A `ULONG32` that indicates the size of `rgpSearchInfo`.  
+ 'ndaki `rgpSearchInfo`boyutunu belirten `ULONG32`.  
   
  `pcSearchInfo`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.  
+ dışı Arama bilgilerini içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.  
   
  `rgpSearchInfo`  
- [out] A pointer that is set to the returned [ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) interface.  
+ dışı Döndürülen [ıdimunmanagedsymbolsearchınfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) arabirimine ayarlanmış bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

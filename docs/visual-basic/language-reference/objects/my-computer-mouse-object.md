@@ -12,19 +12,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347190"
 ---
 # <a name="mycomputermouse-object"></a>My.Computer.Mouse Nesnesi
-Provides properties for getting information about the format and configuration of the mouse installed on the local computer.  
+Yerel bilgisayarda yüklü olan farenin biçimi ve yapılandırması hakkında bilgi almak için özellikler sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- For information about the methods and properties of the `My.Computer.Mouse` object, see <xref:Microsoft.VisualBasic.Devices.Mouse>.  
+ `My.Computer.Mouse` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.Devices.Mouse>.  
   
- For more information, see [Accessing the Mouse](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).  
+ Daha fazla bilgi için bkz. [fareye erişme](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
+ **Ad alanı:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Mouse>  
+ **Sınıf:** <xref:Microsoft.VisualBasic.Devices.Mouse>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -13,32 +13,32 @@ ms.locfileid: "74345492"
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Microsoft.Win32 Ad Alanını Kullanarak Kayıt Defterini Okuma ve Yazma (Visual Basic)
 
-Although `My.Computer.Registry` should cover your basic needs when programming against the registry, you can also use the <xref:Microsoft.Win32.Registry> and <xref:Microsoft.Win32.RegistryKey> classes in the <xref:Microsoft.Win32> namespace of the .NET Framework.  
+Kayıt defterinde programlama yaparken `My.Computer.Registry` temel ihtiyaçlarınızı kapsasa da, .NET Framework <xref:Microsoft.Win32> ad alanındaki <xref:Microsoft.Win32.Registry> ve <xref:Microsoft.Win32.RegistryKey> sınıflarını da kullanabilirsiniz.  
   
-## <a name="keys-in-the-registry-class"></a>Keys in the Registry Class  
+## <a name="keys-in-the-registry-class"></a>Kayıt defteri sınıfındaki anahtarlar  
 
- The <xref:Microsoft.Win32.Registry> class supplies the base registry keys that can be used to access subkeys and their values. The base keys themselves are read-only. The following table lists and describes the seven keys exposed by the <xref:Microsoft.Win32.Registry> class.  
+ <xref:Microsoft.Win32.Registry> sınıfı, alt anahtarlara ve değerlerine erişmek için kullanılabilen temel kayıt defteri anahtarlarını sağlar. Temel anahtarlar salt okunurdur. Aşağıdaki tabloda <xref:Microsoft.Win32.Registry> sınıfı tarafından kullanıma sunulan yedi anahtar listelenmektedir ve açıklanmaktadır.  
   
 |**Key**|**Açıklama**|  
 |-------------|---------------------|  
-|<xref:Microsoft.Win32.Registry.ClassesRoot>|Defines the types of documents and the properties associated with those types.|  
-|<xref:Microsoft.Win32.Registry.CurrentConfig>|Contains hardware configuration information that is not user-specific.|  
-|<xref:Microsoft.Win32.Registry.CurrentUser>|Contains information about the current user preferences, such as environmental variables.|  
-|<xref:Microsoft.Win32.Registry.DynData>|Contains dynamic registry data, such as that used by Virtual Device Drivers.|  
-|<xref:Microsoft.Win32.Registry.LocalMachine>|Contains five subkeys (Hardware, SAM, Security, Software, and System) that hold the configuration data for the local computer.|  
-|<xref:Microsoft.Win32.Registry.PerformanceData>|Contains performance information for software components.|  
-|<xref:Microsoft.Win32.Registry.Users>|Contains information about the default user preferences.|  
+|<xref:Microsoft.Win32.Registry.ClassesRoot>|Belge türlerini ve bu türlerle ilişkili özellikleri tanımlar.|  
+|<xref:Microsoft.Win32.Registry.CurrentConfig>|Kullanıcıya özgü olmayan donanım yapılandırma bilgilerini içerir.|  
+|<xref:Microsoft.Win32.Registry.CurrentUser>|Ortam değişkenleri gibi geçerli kullanıcı tercihleri hakkında bilgiler içerir.|  
+|<xref:Microsoft.Win32.Registry.DynData>|Sanal cihaz sürücüleri tarafından kullanılan gibi dinamik kayıt defteri verileri içerir.|  
+|<xref:Microsoft.Win32.Registry.LocalMachine>|Yerel bilgisayar için yapılandırma verilerini tutan beş alt anahtar (donanım, SAM, güvenlik, yazılım ve sistem) içerir.|  
+|<xref:Microsoft.Win32.Registry.PerformanceData>|Yazılım bileşenleri için performans bilgilerini içerir.|  
+|<xref:Microsoft.Win32.Registry.Users>|Varsayılan Kullanıcı tercihleri hakkında bilgi içerir.|  
   
 > [!IMPORTANT]
-> It is more secure to write data to the current user (<xref:Microsoft.Win32.Registry.CurrentUser>) than to the local computer (<xref:Microsoft.Win32.Registry.LocalMachine>). A condition that's typically referred to as "squatting" occurs when the key you are creating was previously created by another, possibly malicious, process. To prevent this from occurring, use a method, such as <xref:Microsoft.Win32.RegistryKey.GetValue%2A>, that returns `Nothing` if the key does not already exist.  
+> Verileri yerel bilgisayara (<xref:Microsoft.Win32.Registry.LocalMachine>) göre geçerli kullanıcıya (<xref:Microsoft.Win32.Registry.CurrentUser>) yazmak daha güvenlidir. Oluşturmakta olduğunuz anahtar daha önce başka bir kötü amaçlı, büyük olasılıkla kötü amaçlı bir işlem tarafından oluşturulduğu zaman, genellikle "ele geçirme" olarak adlandırılan bir koşul oluşur. Bunun oluşmasını önlemek için, anahtar zaten yoksa `Nothing` döndüren <xref:Microsoft.Win32.RegistryKey.GetValue%2A>gibi bir yöntem kullanın.  
   
-## <a name="reading-a-value-from-the-registry"></a>Reading a Value from the Registry  
+## <a name="reading-a-value-from-the-registry"></a>Kayıt defterinden bir değer okuma  
 
- The following code shows how to read a string from HKEY_CURRENT_USER.  
+ Aşağıdaki kod, HKEY_CURRENT_USER bir dizenin nasıl okunacağını gösterir.  
   
  [!code-vb[VbResourceTasks#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#20)]  
   
- The following code reads, increments, and then writes a string to HKEY_CURRENT_USER.  
+ Aşağıdaki kod, HKEY_CURRENT_USER için bir dize okur, artırır ve yazar.  
   
  [!code-vb[VbResourceTasks#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#21)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438733"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>ICorProfilerInfo::GetTokenAndMetadataFromFunction Metodu
-Gets the metadata token and a metadata interface instance that can be used against the token for the specified function.  
+Belirtilen işlev için belirtece karşı kullanılabilecek meta veri belirtecini ve bir meta veri arabirim örneğini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,25 +37,25 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
 ## <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] The ID of the function for which to get the metadata token and metadata interface.  
+ 'ndaki Meta veri belirtecinin ve meta veri arabiriminin alınacağı işlevin KIMLIĞI.  
   
  `riid`  
- [in] The reference ID of the metadata interface to get the instance of.  
+ 'ndaki Örneğini almak için meta veri arabiriminin başvuru Kımlığı.  
   
  `ppImport`  
- [out] A pointer to the address of the metadata interface instance that can be used against the token for the specified function.  
+ dışı Belirtilen işlev için belirtece karşı kullanılabilecek meta veri arabirimi örneğinin adresine yönelik bir işaretçi.  
   
  `pToken`  
- [out] A pointer to the metadata token for the specified function.  
+ dışı Belirtilen işlev için meta veri belirtecine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

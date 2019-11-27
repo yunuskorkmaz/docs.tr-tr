@@ -1,5 +1,5 @@
 ---
-title: 'Troubleshooting: reading from and writing to text files'
+title: 'Sorun giderme: metin dosyalarını okuma ve yazma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting file I/O
@@ -16,25 +16,25 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333793"
 ---
-# <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>Troubleshooting: reading from and writing to text files (Visual Basic)
+# <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>Sorun giderme: metin dosyalarını okuma ve yazma (Visual Basic)
 
-This topic discusses common problems encountered when working with text files and suggests an approach to each.  
+Bu konuda, metin dosyalarıyla çalışırken karşılaşılan yaygın sorunlar ele alınmaktadır ve her birine bir yaklaşım önerisinde bulunur.  
   
-## <a name="common-problems"></a>Common problems  
+## <a name="common-problems"></a>Yaygın sorunlar  
 
- The most common issues encountered when working with text files include security exceptions, file encodings, or invalid paths.  
+ Metin dosyalarıyla çalışırken karşılaşılan en yaygın sorunlar, güvenlik özel durumları, dosya kodlamaları veya geçersiz yollar içerir.  
   
-### <a name="security-exceptions"></a>Security exceptions  
+### <a name="security-exceptions"></a>Güvenlik özel durumları  
 
- A <xref:System.Security.SecurityException> is thrown when a security error occurs. This is often a result of the user lacking necessary permissions, which may be solved by adding permissions or working with files in isolated storage.  
+ Bir güvenlik hatası oluştuğunda bir <xref:System.Security.SecurityException> oluşturulur. Bu genellikle kullanıcının gerekli izinlere sahip olmadığı bir sonucudur. Bu, izinleri ekleyerek veya yalıtılmış depolamada dosyalarla çalışarak çözülebilen bir sonucudur.  
   
-### <a name="file-encodings"></a>File encodings  
+### <a name="file-encodings"></a>Dosya kodlamaları  
 
- File encodings, also known as character encodings, specify how to represent characters when text processing. Unexpected characters in a text file may result from incorrect encoding. For most files, one encoding may be preferable over another in terms of which language characters it can or cannot handle, although Unicode is usually preferred. For more information, see [File Encodings](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md) and <xref:System.Text.Encoding>.  
+ Karakter kodlamaları olarak da bilinen dosya kodlamaları, metin işleme sırasında karakterlerin nasıl temsil edileceğini belirtir. Metin dosyasında beklenmeyen karakterler yanlış kodlamadan kaynaklanıyor olabilir. Çoğu dosya için, tek bir kodlama bir veya işleyemeyen dil karakterleri açısından tercih edilebilir, ancak UNICODE genellikle tercih edilir. Daha fazla bilgi için bkz. [dosya kodlamaları](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md) ve <xref:System.Text.Encoding>.  
   
-### <a name="incorrect-paths"></a>Incorrect paths  
+### <a name="incorrect-paths"></a>Yanlış yollar  
 
- When parsing file paths, particularly relative paths, it is easy to supply the wrong data. Many problems can be corrected by making sure you are supplying the correct path. For more information, see [How to: Parse File Paths](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md).  
+ Dosya yollarını ayrıştırırken özellikle göreli yollar, yanlış verileri sağlamak kolaydır. Doğru yolu belirttiğinizden emin olmak için birçok sorun düzeltilebilir. Daha fazla bilgi için bkz. [nasıl yapılır: dosya yollarını ayrıştırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
