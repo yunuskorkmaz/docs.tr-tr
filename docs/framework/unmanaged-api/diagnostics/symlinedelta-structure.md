@@ -21,10 +21,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438006"
 ---
-# <a name="symlinedelta-structure"></a><span data-ttu-id="7a222-102">SYMLINEDELTA Yapısı</span><span class="sxs-lookup"><span data-stu-id="7a222-102">SYMLINEDELTA Structure</span></span>
-<span data-ttu-id="7a222-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span><span class="sxs-lookup"><span data-stu-id="7a222-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
+# <a name="symlinedelta-structure"></a><span data-ttu-id="a860c-102">SYMLINEDELTA Yapısı</span><span class="sxs-lookup"><span data-stu-id="a860c-102">SYMLINEDELTA Structure</span></span>
+<span data-ttu-id="a860c-103">Düzenleme sonucu olarak taşınan yöntemler hakkında sembol işleyicisine bilgi sağlar.</span><span class="sxs-lookup"><span data-stu-id="a860c-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7a222-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7a222-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a860c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a860c-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _SYMLINEDELTA  
@@ -34,16 +34,16 @@ typedef struct _SYMLINEDELTA
     } SYMLINEDELTA;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="7a222-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="7a222-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a860c-105">Üyeleri</span><span class="sxs-lookup"><span data-stu-id="a860c-105">Members</span></span>  
   
-|<span data-ttu-id="7a222-106">Üye</span><span class="sxs-lookup"><span data-stu-id="7a222-106">Member</span></span>|<span data-ttu-id="7a222-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7a222-107">Description</span></span>|  
+|<span data-ttu-id="a860c-106">Üyesi</span><span class="sxs-lookup"><span data-stu-id="a860c-106">Member</span></span>|<span data-ttu-id="a860c-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a860c-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdMethod`|<span data-ttu-id="7a222-108">The method's metadata token.</span><span class="sxs-lookup"><span data-stu-id="7a222-108">The method's metadata token.</span></span>|  
-|`delta`|<span data-ttu-id="7a222-109">The number of lines the method was moved.</span><span class="sxs-lookup"><span data-stu-id="7a222-109">The number of lines the method was moved.</span></span>|  
+|`mdMethod`|<span data-ttu-id="a860c-108">Metodun meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="a860c-108">The method's metadata token.</span></span>|  
+|`delta`|<span data-ttu-id="a860c-109">Yöntemin taşındığı satır sayısı.</span><span class="sxs-lookup"><span data-stu-id="a860c-109">The number of lines the method was moved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="7a222-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7a222-110">Requirements</span></span>  
- <span data-ttu-id="7a222-111">**Header:** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="7a222-111">**Header:** CorSym.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a860c-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a860c-110">Requirements</span></span>  
+ <span data-ttu-id="a860c-111">**Üst bilgi:** Corsya. IDL</span><span class="sxs-lookup"><span data-stu-id="a860c-111">**Header:** CorSym.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7a222-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7a222-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a860c-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a860c-112">See also</span></span>
 
-- [<span data-ttu-id="7a222-113">Tanılama Simge Deposu Yapıları</span><span class="sxs-lookup"><span data-stu-id="7a222-113">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [<span data-ttu-id="a860c-113">Tanılama Simge Deposu Yapıları</span><span class="sxs-lookup"><span data-stu-id="a860c-113">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

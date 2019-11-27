@@ -1,5 +1,5 @@
 ---
-title: 'How to: Retrieve a Collection of Attributes (LINQ to XML)'
+title: 'Nasıl yapılır: özniteliklerin koleksiyonunu alma (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: a07e9645-b45b-403b-b698-f652f904c7d2
 ms.openlocfilehash: ff260660057c3b75f4cc92c37c67fca0a0b7f192
@@ -9,11 +9,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347570"
 ---
-# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-visual-basic"></a><span data-ttu-id="67e5a-102">How to: Retrieve a Collection of Attributes (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="67e5a-102">How to: Retrieve a Collection of Attributes (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="67e5a-103">This topic introduces the <xref:System.Xml.Linq.XElement.Attributes%2A> method.</span><span class="sxs-lookup"><span data-stu-id="67e5a-103">This topic introduces the <xref:System.Xml.Linq.XElement.Attributes%2A> method.</span></span> <span data-ttu-id="67e5a-104">This method retrieves the attributes of an element.</span><span class="sxs-lookup"><span data-stu-id="67e5a-104">This method retrieves the attributes of an element.</span></span>  
+# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-visual-basic"></a><span data-ttu-id="1c5dd-102">Nasıl yapılır: özniteliklerin koleksiyonunu alma (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1c5dd-102">How to: Retrieve a Collection of Attributes (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="1c5dd-103">Bu konuda <xref:System.Xml.Linq.XElement.Attributes%2A> yöntemi tanıtılmaktadır.</span><span class="sxs-lookup"><span data-stu-id="1c5dd-103">This topic introduces the <xref:System.Xml.Linq.XElement.Attributes%2A> method.</span></span> <span data-ttu-id="1c5dd-104">Bu yöntem bir öğenin özniteliklerini alır.</span><span class="sxs-lookup"><span data-stu-id="1c5dd-104">This method retrieves the attributes of an element.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="67e5a-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="67e5a-105">Example</span></span>  
- <span data-ttu-id="67e5a-106">The following example shows how to iterate through the collection of attributes of an element.</span><span class="sxs-lookup"><span data-stu-id="67e5a-106">The following example shows how to iterate through the collection of attributes of an element.</span></span>  
+## <a name="example"></a><span data-ttu-id="1c5dd-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="1c5dd-105">Example</span></span>  
+ <span data-ttu-id="1c5dd-106">Aşağıdaki örnek, bir öğenin özniteliklerinin toplanması arasında nasıl yineleme yapılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="1c5dd-106">The following example shows how to iterate through the collection of attributes of an element.</span></span>  
   
 ```vb  
 Dim val = _  
@@ -26,7 +26,7 @@ For Each att As XAttribute In listOfAttributes
 Next  
 ```  
   
- <span data-ttu-id="67e5a-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="67e5a-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="1c5dd-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="1c5dd-107">This code produces the following output:</span></span>  
   
 ```console  
 ID="1243"  
@@ -34,6 +34,6 @@ Type="int"
 ConvertableTo="double"  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="67e5a-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="67e5a-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c5dd-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1c5dd-108">See also</span></span>
 
-- [<span data-ttu-id="67e5a-109">LINQ to XML Axes (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="67e5a-109">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [<span data-ttu-id="1c5dd-109">LINQ to XML eksenleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1c5dd-109">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Pass Procedures to Another Procedure'
+title: 'Nasıl yapılır: başka bir yordama yordam geçirme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
@@ -12,42 +12,42 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345241"
 ---
-# <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a><span data-ttu-id="9b499-102">Nasıl yapılır: Visual Basic'de Başka Bir Yordama Yordam Geçirme</span><span class="sxs-lookup"><span data-stu-id="9b499-102">How to: Pass Procedures to Another Procedure in Visual Basic</span></span>
-<span data-ttu-id="9b499-103">This example shows how to use delegates to pass a procedure to another procedure.</span><span class="sxs-lookup"><span data-stu-id="9b499-103">This example shows how to use delegates to pass a procedure to another procedure.</span></span>  
+# <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a><span data-ttu-id="21167-102">Nasıl yapılır: Visual Basic'de Başka Bir Yordama Yordam Geçirme</span><span class="sxs-lookup"><span data-stu-id="21167-102">How to: Pass Procedures to Another Procedure in Visual Basic</span></span>
+<span data-ttu-id="21167-103">Bu örnek, bir yordamın başka bir yordama iletilmesi için temsilcilerin nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="21167-103">This example shows how to use delegates to pass a procedure to another procedure.</span></span>  
   
- <span data-ttu-id="9b499-104">A delegate is a type that you can use like any other type in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9b499-104">A delegate is a type that you can use like any other type in Visual Basic.</span></span> <span data-ttu-id="9b499-105">The `AddressOf` operator returns a delegate object when applied to a procedure name.</span><span class="sxs-lookup"><span data-stu-id="9b499-105">The `AddressOf` operator returns a delegate object when applied to a procedure name.</span></span>  
+ <span data-ttu-id="21167-104">Temsilci, Visual Basic diğer herhangi bir tür gibi kullanabileceğiniz bir türdür.</span><span class="sxs-lookup"><span data-stu-id="21167-104">A delegate is a type that you can use like any other type in Visual Basic.</span></span> <span data-ttu-id="21167-105">`AddressOf` işleci bir yordam adına uygulandığında bir temsilci nesnesi döndürür.</span><span class="sxs-lookup"><span data-stu-id="21167-105">The `AddressOf` operator returns a delegate object when applied to a procedure name.</span></span>  
   
- <span data-ttu-id="9b499-106">This example has a procedure with a delegate parameter that can take a reference to another procedure, obtained with the `AddressOf` operator.</span><span class="sxs-lookup"><span data-stu-id="9b499-106">This example has a procedure with a delegate parameter that can take a reference to another procedure, obtained with the `AddressOf` operator.</span></span>  
+ <span data-ttu-id="21167-106">Bu örnek, `AddressOf` işleci ile elde edilen başka bir yordama başvuru alan bir temsilci parametresi olan bir yordama sahiptir.</span><span class="sxs-lookup"><span data-stu-id="21167-106">This example has a procedure with a delegate parameter that can take a reference to another procedure, obtained with the `AddressOf` operator.</span></span>  
   
-### <a name="create-the-delegate-and-matching-procedures"></a><span data-ttu-id="9b499-107">Create the delegate and matching procedures</span><span class="sxs-lookup"><span data-stu-id="9b499-107">Create the delegate and matching procedures</span></span>  
+### <a name="create-the-delegate-and-matching-procedures"></a><span data-ttu-id="21167-107">Temsilci ve eşleştirme yordamlarını oluşturma</span><span class="sxs-lookup"><span data-stu-id="21167-107">Create the delegate and matching procedures</span></span>  
   
-1. <span data-ttu-id="9b499-108">Create a delegate named `MathOperator`.</span><span class="sxs-lookup"><span data-stu-id="9b499-108">Create a delegate named `MathOperator`.</span></span>  
+1. <span data-ttu-id="21167-108">`MathOperator`adlı bir temsilci oluşturun.</span><span class="sxs-lookup"><span data-stu-id="21167-108">Create a delegate named `MathOperator`.</span></span>  
   
      [!code-vb[VbVbalrDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#1)]  
   
-2. <span data-ttu-id="9b499-109">Create a procedure named `AddNumbers` with parameters and return value that match those of `MathOperator`, so that the signatures match.</span><span class="sxs-lookup"><span data-stu-id="9b499-109">Create a procedure named `AddNumbers` with parameters and return value that match those of `MathOperator`, so that the signatures match.</span></span>  
+2. <span data-ttu-id="21167-109">İmzaların eşleşmesi için `MathOperator`eşleşen parametrelere ve dönüş değerine sahip `AddNumbers` adlı bir yordam oluşturun.</span><span class="sxs-lookup"><span data-stu-id="21167-109">Create a procedure named `AddNumbers` with parameters and return value that match those of `MathOperator`, so that the signatures match.</span></span>  
   
      [!code-vb[VbVbalrDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#2)]  
   
-3. <span data-ttu-id="9b499-110">Create a procedure named `SubtractNumbers` with a signature that matches `MathOperator`.</span><span class="sxs-lookup"><span data-stu-id="9b499-110">Create a procedure named `SubtractNumbers` with a signature that matches `MathOperator`.</span></span>  
+3. <span data-ttu-id="21167-110">`MathOperator`eşleşen bir imzayla `SubtractNumbers` adlı bir yordam oluşturun.</span><span class="sxs-lookup"><span data-stu-id="21167-110">Create a procedure named `SubtractNumbers` with a signature that matches `MathOperator`.</span></span>  
   
      [!code-vb[VbVbalrDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#3)]  
   
-4. <span data-ttu-id="9b499-111">Create a procedure named `DelegateTest` that takes a delegate as a parameter.</span><span class="sxs-lookup"><span data-stu-id="9b499-111">Create a procedure named `DelegateTest` that takes a delegate as a parameter.</span></span>  
+4. <span data-ttu-id="21167-111">Bir temsilciyi parametre olarak alan `DelegateTest` adlı bir yordam oluşturun.</span><span class="sxs-lookup"><span data-stu-id="21167-111">Create a procedure named `DelegateTest` that takes a delegate as a parameter.</span></span>  
   
-     <span data-ttu-id="9b499-112">This procedure can accept a reference to `AddNumbers` or `SubtractNumbers`, because their signatures match the `MathOperator` signature.</span><span class="sxs-lookup"><span data-stu-id="9b499-112">This procedure can accept a reference to `AddNumbers` or `SubtractNumbers`, because their signatures match the `MathOperator` signature.</span></span>  
+     <span data-ttu-id="21167-112">İmzaları `MathOperator` imzasıyla eşleştiğinden, bu yordam `AddNumbers` veya `SubtractNumbers`bir başvuruyu kabul edebilir.</span><span class="sxs-lookup"><span data-stu-id="21167-112">This procedure can accept a reference to `AddNumbers` or `SubtractNumbers`, because their signatures match the `MathOperator` signature.</span></span>  
   
      [!code-vb[VbVbalrDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#4)]  
   
-5. <span data-ttu-id="9b499-113">Create a procedure named `Test` that calls `DelegateTest` once with the delegate for `AddNumbers` as a parameter, and again with the delegate for `SubtractNumbers` as a parameter.</span><span class="sxs-lookup"><span data-stu-id="9b499-113">Create a procedure named `Test` that calls `DelegateTest` once with the delegate for `AddNumbers` as a parameter, and again with the delegate for `SubtractNumbers` as a parameter.</span></span>  
+5. <span data-ttu-id="21167-113">Bir parametre olarak `AddNumbers` temsilcisinden bir kez `DelegateTest` çağıran `Test` adlı bir yordam oluşturun ve bir parametre olarak `SubtractNumbers` için temsilciyle yeniden.</span><span class="sxs-lookup"><span data-stu-id="21167-113">Create a procedure named `Test` that calls `DelegateTest` once with the delegate for `AddNumbers` as a parameter, and again with the delegate for `SubtractNumbers` as a parameter.</span></span>  
   
      [!code-vb[VbVbalrDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#5)]  
   
-     <span data-ttu-id="9b499-114">When `Test` is called, it first displays the result of `AddNumbers` acting on `5` and `3`, which is 8.</span><span class="sxs-lookup"><span data-stu-id="9b499-114">When `Test` is called, it first displays the result of `AddNumbers` acting on `5` and `3`, which is 8.</span></span> <span data-ttu-id="9b499-115">Then the result of `SubtractNumbers` acting on `9` and `3` is displayed, which is 6.</span><span class="sxs-lookup"><span data-stu-id="9b499-115">Then the result of `SubtractNumbers` acting on `9` and `3` is displayed, which is 6.</span></span>  
+     <span data-ttu-id="21167-114">`Test` çağrıldığında, önce `5` ve `3`üzerinde işlem yapan `AddNumbers` sonucunu görüntüler, bu 8 ' dir.</span><span class="sxs-lookup"><span data-stu-id="21167-114">When `Test` is called, it first displays the result of `AddNumbers` acting on `5` and `3`, which is 8.</span></span> <span data-ttu-id="21167-115">Sonra, `9` ve `3` işlem `SubtractNumbers` sonucu 6 ' da görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="21167-115">Then the result of `SubtractNumbers` acting on `9` and `3` is displayed, which is 6.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9b499-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9b499-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="21167-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="21167-116">See also</span></span>
 
-- [<span data-ttu-id="9b499-117">Temsilciler</span><span class="sxs-lookup"><span data-stu-id="9b499-117">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [<span data-ttu-id="9b499-118">AddressOf İşleci</span><span class="sxs-lookup"><span data-stu-id="9b499-118">AddressOf Operator</span></span>](../../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [<span data-ttu-id="9b499-119">Delegate Deyimi</span><span class="sxs-lookup"><span data-stu-id="9b499-119">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [<span data-ttu-id="9b499-120">Nasıl yapılır: Temsilci Yöntemi Çağırma</span><span class="sxs-lookup"><span data-stu-id="9b499-120">How to: Invoke a Delegate Method</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+- [<span data-ttu-id="21167-117">Temsilciler</span><span class="sxs-lookup"><span data-stu-id="21167-117">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [<span data-ttu-id="21167-118">AddressOf İşleci</span><span class="sxs-lookup"><span data-stu-id="21167-118">AddressOf Operator</span></span>](../../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [<span data-ttu-id="21167-119">Delegate Deyimi</span><span class="sxs-lookup"><span data-stu-id="21167-119">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [<span data-ttu-id="21167-120">Nasıl yapılır: Temsilci Yöntemi Çağırma</span><span class="sxs-lookup"><span data-stu-id="21167-120">How to: Invoke a Delegate Method</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

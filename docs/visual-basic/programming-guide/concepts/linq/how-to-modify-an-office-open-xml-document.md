@@ -1,5 +1,5 @@
 ---
-title: 'How to: Modify an Office Open XML Document'
+title: 'Nasıl yapılır: bir Office Open XML belgesini değiştirme'
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
 ms.openlocfilehash: 623376a68ee2f032fb53d51b61c4c5881b0b9e18
@@ -9,15 +9,15 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336021"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a><span data-ttu-id="2fab3-102">How to: Modify an Office Open XML Document (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2fab3-102">How to: Modify an Office Open XML Document (Visual Basic)</span></span>
-<span data-ttu-id="2fab3-103">This topic presents an example that opens an Office Open XML document, modifies it, and saves it.</span><span class="sxs-lookup"><span data-stu-id="2fab3-103">This topic presents an example that opens an Office Open XML document, modifies it, and saves it.</span></span>  
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a><span data-ttu-id="70f78-102">Nasıl yapılır: bir Office Open XML belgesini değiştirme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="70f78-102">How to: Modify an Office Open XML Document (Visual Basic)</span></span>
+<span data-ttu-id="70f78-103">Bu konu, bir Office Open XML belgesi açan, değiştiren ve kaydeden bir örnek gösterir.</span><span class="sxs-lookup"><span data-stu-id="70f78-103">This topic presents an example that opens an Office Open XML document, modifies it, and saves it.</span></span>  
   
- <span data-ttu-id="2fab3-104">For more information on Office Open XML, see [Eric White's Blog](http://www.ericwhite.com).</span><span class="sxs-lookup"><span data-stu-id="2fab3-104">For more information on Office Open XML, see [Eric White's Blog](http://www.ericwhite.com).</span></span>  
+ <span data-ttu-id="70f78-104">Office Open XML hakkında daha fazla bilgi için bkz. [Eric beyaz blogu](http://www.ericwhite.com).</span><span class="sxs-lookup"><span data-stu-id="70f78-104">For more information on Office Open XML, see [Eric White's Blog](http://www.ericwhite.com).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2fab3-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="2fab3-105">Example</span></span>  
- <span data-ttu-id="2fab3-106">This example finds the first paragraph element in the document.</span><span class="sxs-lookup"><span data-stu-id="2fab3-106">This example finds the first paragraph element in the document.</span></span> <span data-ttu-id="2fab3-107">It retrieves the text from the paragraph, and then deletes all text runs in the paragraph.</span><span class="sxs-lookup"><span data-stu-id="2fab3-107">It retrieves the text from the paragraph, and then deletes all text runs in the paragraph.</span></span> <span data-ttu-id="2fab3-108">It creates a new text run that consists of the first paragraph text that has been converted to upper case.</span><span class="sxs-lookup"><span data-stu-id="2fab3-108">It creates a new text run that consists of the first paragraph text that has been converted to upper case.</span></span> <span data-ttu-id="2fab3-109">It then serializes the changed XML into the Open XML package and closes it.</span><span class="sxs-lookup"><span data-stu-id="2fab3-109">It then serializes the changed XML into the Open XML package and closes it.</span></span>  
+## <a name="example"></a><span data-ttu-id="70f78-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="70f78-105">Example</span></span>  
+ <span data-ttu-id="70f78-106">Bu örnek belgedeki ilk paragraf öğesini bulur.</span><span class="sxs-lookup"><span data-stu-id="70f78-106">This example finds the first paragraph element in the document.</span></span> <span data-ttu-id="70f78-107">Paragraftan metni alır ve ardından paragraftaki tüm metin çalıştırmalarını siler.</span><span class="sxs-lookup"><span data-stu-id="70f78-107">It retrieves the text from the paragraph, and then deletes all text runs in the paragraph.</span></span> <span data-ttu-id="70f78-108">Büyük harfe dönüştürülmüş ilk paragraf metniyle oluşan yeni bir metin çalıştırması oluşturur.</span><span class="sxs-lookup"><span data-stu-id="70f78-108">It creates a new text run that consists of the first paragraph text that has been converted to upper case.</span></span> <span data-ttu-id="70f78-109">Daha sonra değiştirilmiş XML 'i Open XML paketine serileştirir ve kapatır.</span><span class="sxs-lookup"><span data-stu-id="70f78-109">It then serializes the changed XML into the Open XML package and closes it.</span></span>  
   
- <span data-ttu-id="2fab3-110">This example uses classes found in the WindowsBase assembly.</span><span class="sxs-lookup"><span data-stu-id="2fab3-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="2fab3-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span><span class="sxs-lookup"><span data-stu-id="2fab3-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="70f78-110">Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="70f78-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="70f78-111"><xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="70f78-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -135,14 +135,14 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="2fab3-112">If you open `SampleDoc.docx` after running this program, you can see that this program converted the first paragraph in the document to upper case.</span><span class="sxs-lookup"><span data-stu-id="2fab3-112">If you open `SampleDoc.docx` after running this program, you can see that this program converted the first paragraph in the document to upper case.</span></span>  
+ <span data-ttu-id="70f78-112">Bu programı çalıştırdıktan sonra `SampleDoc.docx` açarsanız, bu programın belgedeki ilk paragrafı büyük harflere dönüştürdüğünü görebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="70f78-112">If you open `SampleDoc.docx` after running this program, you can see that this program converted the first paragraph in the document to upper case.</span></span>  
   
- <span data-ttu-id="2fab3-113">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span><span class="sxs-lookup"><span data-stu-id="2fab3-113">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
+ <span data-ttu-id="70f78-113">[Kaynak Office Open XML belgesi (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)bölümünde açıklanan örnek Open XML belgesiyle birlikte çalıştırıldığında, bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="70f78-113">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
   
 ```console  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2fab3-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2fab3-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="70f78-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="70f78-114">See also</span></span>
 
-- [<span data-ttu-id="2fab3-115">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2fab3-115">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [<span data-ttu-id="70f78-115">Gelişmiş sorgu teknikleri (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="70f78-115">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

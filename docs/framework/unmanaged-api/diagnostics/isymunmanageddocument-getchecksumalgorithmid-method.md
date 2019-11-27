@@ -22,23 +22,23 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431070"
 ---
-# <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a><span data-ttu-id="9d5c9-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9d5c9-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Method</span></span>
-<span data-ttu-id="9d5c9-103">Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.</span><span class="sxs-lookup"><span data-stu-id="9d5c9-103">Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.</span></span>  
+# <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a><span data-ttu-id="6e4a6-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6e4a6-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Method</span></span>
+<span data-ttu-id="6e4a6-103">Sağlama toplamı algoritması tanımlayıcısını alır veya hiçbir sağlama toplamı yoksa tüm sıfırları GUID 'leri döndürür.</span><span class="sxs-lookup"><span data-stu-id="6e4a6-103">Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9d5c9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9d5c9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6e4a6-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6e4a6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCheckSumAlgorithmId(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9d5c9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9d5c9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6e4a6-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6e4a6-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="9d5c9-106">[out] A pointer to a variable that receives the checksum algorithm identifier.</span><span class="sxs-lookup"><span data-stu-id="9d5c9-106">[out] A pointer to a variable that receives the checksum algorithm identifier.</span></span>  
+ <span data-ttu-id="6e4a6-106">dışı Sağlama algoritması tanımlayıcısını alan bir değişkene yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="6e4a6-106">[out] A pointer to a variable that receives the checksum algorithm identifier.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9d5c9-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="9d5c9-107">Return Value</span></span>  
- <span data-ttu-id="9d5c9-108">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="9d5c9-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6e4a6-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="6e4a6-107">Return Value</span></span>  
+ <span data-ttu-id="6e4a6-108">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="6e4a6-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d5c9-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9d5c9-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e4a6-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6e4a6-109">See also</span></span>
 
-- [<span data-ttu-id="9d5c9-110">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9d5c9-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="6e4a6-110">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6e4a6-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436322"
 ---
-# <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a><span data-ttu-id="b029e-102">IMetaDataAssemblyImport::GetManifestResourceProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b029e-102">IMetaDataAssemblyImport::GetManifestResourceProps Method</span></span>
-<span data-ttu-id="b029e-103">Gets the set of properties of the manifest resource with the specified metadata signature.</span><span class="sxs-lookup"><span data-stu-id="b029e-103">Gets the set of properties of the manifest resource with the specified metadata signature.</span></span>  
+# <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a><span data-ttu-id="67346-102">IMetaDataAssemblyImport::GetManifestResourceProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="67346-102">IMetaDataAssemblyImport::GetManifestResourceProps Method</span></span>
+<span data-ttu-id="67346-103">Belirtilen meta veri imzasıyla bildirim kaynağının özellik kümesini alır.</span><span class="sxs-lookup"><span data-stu-id="67346-103">Gets the set of properties of the manifest resource with the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b029e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b029e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="67346-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="67346-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetManifestResourceProps (  
@@ -39,37 +39,37 @@ HRESULT GetManifestResourceProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b029e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b029e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="67346-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="67346-105">Parameters</span></span>  
  `mdmr`  
- <span data-ttu-id="b029e-106">[in] An `mdManifestResource` token that represents the resource for which to get the properties.</span><span class="sxs-lookup"><span data-stu-id="b029e-106">[in] An `mdManifestResource` token that represents the resource for which to get the properties.</span></span>  
+ <span data-ttu-id="67346-106">'ndaki Özelliklerinin alınacağı kaynağı temsil eden `mdManifestResource` belirteç.</span><span class="sxs-lookup"><span data-stu-id="67346-106">[in] An `mdManifestResource` token that represents the resource for which to get the properties.</span></span>  
   
  `szName`  
- <span data-ttu-id="b029e-107">[out] The name of the resource.</span><span class="sxs-lookup"><span data-stu-id="b029e-107">[out] The name of the resource.</span></span>  
+ <span data-ttu-id="67346-107">dışı Kaynağın adı.</span><span class="sxs-lookup"><span data-stu-id="67346-107">[out] The name of the resource.</span></span>  
   
  `cchName`  
- <span data-ttu-id="b029e-108">[in] The size, in wide chars, of `szName`.</span><span class="sxs-lookup"><span data-stu-id="b029e-108">[in] The size, in wide chars, of `szName`.</span></span>  
+ <span data-ttu-id="67346-108">'ndaki `szName`geniş karakter cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="67346-108">[in] The size, in wide chars, of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="b029e-109">[out] A pointer to the number of wide chars actually returned in `szName`.</span><span class="sxs-lookup"><span data-stu-id="b029e-109">[out] A pointer to the number of wide chars actually returned in `szName`.</span></span>  
+ <span data-ttu-id="67346-109">dışı `szName`' de döndürülen geniş karakter sayısının bir işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="67346-109">[out] A pointer to the number of wide chars actually returned in `szName`.</span></span>  
   
  `ptkImplementation`  
- <span data-ttu-id="b029e-110">[out] A pointer to an `mdFile` token or an `mdAssemblyRef` token that represents the file or assembly, respectively, that contains the resource.</span><span class="sxs-lookup"><span data-stu-id="b029e-110">[out] A pointer to an `mdFile` token or an `mdAssemblyRef` token that represents the file or assembly, respectively, that contains the resource.</span></span>  
+ <span data-ttu-id="67346-110">dışı Kaynağı içeren, sırasıyla dosyayı veya derlemeyi temsil eden bir `mdFile` belirtecinin veya `mdAssemblyRef` belirtecinin işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="67346-110">[out] A pointer to an `mdFile` token or an `mdAssemblyRef` token that represents the file or assembly, respectively, that contains the resource.</span></span>  
   
  `pdwOffset`  
- <span data-ttu-id="b029e-111">[out] A pointer to a value that specifies the offset to the beginning of the resource within the file.</span><span class="sxs-lookup"><span data-stu-id="b029e-111">[out] A pointer to a value that specifies the offset to the beginning of the resource within the file.</span></span>  
+ <span data-ttu-id="67346-111">dışı Dosyanın içindeki kaynağın başlangıcına olan sapmayı belirten bir değer işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="67346-111">[out] A pointer to a value that specifies the offset to the beginning of the resource within the file.</span></span>  
   
  `pdwResourceFlags`  
- <span data-ttu-id="b029e-112">[out] A pointer to flags that describe the metadata applied to a resource.</span><span class="sxs-lookup"><span data-stu-id="b029e-112">[out] A pointer to flags that describe the metadata applied to a resource.</span></span> <span data-ttu-id="b029e-113">The flags value is a combination of one or more [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) values.</span><span class="sxs-lookup"><span data-stu-id="b029e-113">The flags value is a combination of one or more [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) values.</span></span>  
+ <span data-ttu-id="67346-112">dışı Bir kaynağa uygulanan meta verileri tanımlayan bayrakların işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="67346-112">[out] A pointer to flags that describe the metadata applied to a resource.</span></span> <span data-ttu-id="67346-113">Flags değeri bir veya daha fazla [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) değeri birleşimidir.</span><span class="sxs-lookup"><span data-stu-id="67346-113">The flags value is a combination of one or more [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) values.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b029e-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b029e-114">Requirements</span></span>  
- <span data-ttu-id="b029e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b029e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="67346-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="67346-114">Requirements</span></span>  
+ <span data-ttu-id="67346-115">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="67346-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b029e-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b029e-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="67346-116">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="67346-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b029e-117">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b029e-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="67346-117">**Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="67346-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b029e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b029e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="67346-118">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="67346-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b029e-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b029e-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="67346-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="67346-119">See also</span></span>
 
-- [<span data-ttu-id="b029e-120">IMetaDataAssemblyImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b029e-120">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="67346-120">IMetaDataAssemblyImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="67346-120">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

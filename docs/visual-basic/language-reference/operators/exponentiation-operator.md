@@ -21,73 +21,73 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331100"
 ---
-# <a name="-operator-visual-basic"></a><span data-ttu-id="3f9ab-102">^ İşleci (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f9ab-102">^ Operator (Visual Basic)</span></span>
+# <a name="-operator-visual-basic"></a><span data-ttu-id="f2a1d-102">^ İşleci (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f2a1d-102">^ Operator (Visual Basic)</span></span>
 
-<span data-ttu-id="3f9ab-103">Raises a number to the power of another number.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-103">Raises a number to the power of another number.</span></span>
+<span data-ttu-id="f2a1d-103">Bir sayıyı, başka bir sayının kuvvetine yükseltir.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-103">Raises a number to the power of another number.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="3f9ab-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3f9ab-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="f2a1d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f2a1d-104">Syntax</span></span>
 
 ```vb
 number ^ exponent
 ```
 
-## <a name="parts"></a><span data-ttu-id="3f9ab-105">Bölümler</span><span class="sxs-lookup"><span data-stu-id="3f9ab-105">Parts</span></span>
+## <a name="parts"></a><span data-ttu-id="f2a1d-105">Bölümler</span><span class="sxs-lookup"><span data-stu-id="f2a1d-105">Parts</span></span>
 
 `number`\
-<span data-ttu-id="3f9ab-106">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-106">Required.</span></span> <span data-ttu-id="3f9ab-107">Any numeric expression.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-107">Any numeric expression.</span></span>
+<span data-ttu-id="f2a1d-106">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-106">Required.</span></span> <span data-ttu-id="f2a1d-107">Herhangi bir sayısal ifade.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-107">Any numeric expression.</span></span>
 
 `exponent`\
-<span data-ttu-id="3f9ab-108">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-108">Required.</span></span> <span data-ttu-id="3f9ab-109">Any numeric expression.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-109">Any numeric expression.</span></span>
+<span data-ttu-id="f2a1d-108">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-108">Required.</span></span> <span data-ttu-id="f2a1d-109">Herhangi bir sayısal ifade.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-109">Any numeric expression.</span></span>
 
-## <a name="result"></a><span data-ttu-id="3f9ab-110">Sonuç</span><span class="sxs-lookup"><span data-stu-id="3f9ab-110">Result</span></span>
+## <a name="result"></a><span data-ttu-id="f2a1d-110">Sonuç</span><span class="sxs-lookup"><span data-stu-id="f2a1d-110">Result</span></span>
 
-<span data-ttu-id="3f9ab-111">The result is `number` raised to the power of `exponent`, always as a `Double` value.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-111">The result is `number` raised to the power of `exponent`, always as a `Double` value.</span></span>
+<span data-ttu-id="f2a1d-111">Sonuç, her zaman bir `Double` değeri olarak `exponent`gücü `number` yükseltilir.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-111">The result is `number` raised to the power of `exponent`, always as a `Double` value.</span></span>
 
-## <a name="supported-types"></a><span data-ttu-id="3f9ab-112">Supported Types</span><span class="sxs-lookup"><span data-stu-id="3f9ab-112">Supported Types</span></span>
+## <a name="supported-types"></a><span data-ttu-id="f2a1d-112">Desteklenen türler</span><span class="sxs-lookup"><span data-stu-id="f2a1d-112">Supported Types</span></span>
 
-<span data-ttu-id="3f9ab-113">`Double`.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-113">`Double`.</span></span> <span data-ttu-id="3f9ab-114">Operands of any different type are converted to `Double`.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-114">Operands of any different type are converted to `Double`.</span></span>
+<span data-ttu-id="f2a1d-113">`Double`.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-113">`Double`.</span></span> <span data-ttu-id="f2a1d-114">Farklı türdeki işlenenler `Double`dönüştürülür.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-114">Operands of any different type are converted to `Double`.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="3f9ab-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3f9ab-115">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="f2a1d-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f2a1d-115">Remarks</span></span>
 
-<span data-ttu-id="3f9ab-116">Visual Basic always performs exponentiation in the [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md).</span><span class="sxs-lookup"><span data-stu-id="3f9ab-116">Visual Basic always performs exponentiation in the [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md).</span></span>
+<span data-ttu-id="f2a1d-116">Visual Basic her zaman [Double veri türünde](../../../visual-basic/language-reference/data-types/double-data-type.md)üs gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-116">Visual Basic always performs exponentiation in the [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md).</span></span>
 
-<span data-ttu-id="3f9ab-117">The value of `exponent` can be fractional, negative, or both.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-117">The value of `exponent` can be fractional, negative, or both.</span></span>
+<span data-ttu-id="f2a1d-117">`exponent` değeri kesirli, negatif veya her ikisi olabilir.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-117">The value of `exponent` can be fractional, negative, or both.</span></span>
 
-<span data-ttu-id="3f9ab-118">When more than one exponentiation is performed in a single expression, the `^` operator is evaluated as it is encountered from left to right.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-118">When more than one exponentiation is performed in a single expression, the `^` operator is evaluated as it is encountered from left to right.</span></span>
+<span data-ttu-id="f2a1d-118">Tek bir ifadede birden fazla üs işlemi gerçekleştirildiğinde, soldan sağa ile karşılaşıldığından `^` işleci değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-118">When more than one exponentiation is performed in a single expression, the `^` operator is evaluated as it is encountered from left to right.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="3f9ab-119">The `^` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-119">The `^` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="3f9ab-120">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-120">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="3f9ab-121">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="3f9ab-121">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>
+> <span data-ttu-id="f2a1d-119">`^` işleci *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-119">The `^` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="f2a1d-120">Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-120">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="f2a1d-121">Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="f2a1d-121">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="3f9ab-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="3f9ab-122">Example</span></span>
+## <a name="example"></a><span data-ttu-id="f2a1d-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="f2a1d-122">Example</span></span>
 
-<span data-ttu-id="3f9ab-123">The following example uses the `^` operator to raise a number to the power of an exponent.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-123">The following example uses the `^` operator to raise a number to the power of an exponent.</span></span> <span data-ttu-id="3f9ab-124">The result is the first operand raised to the power of the second.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-124">The result is the first operand raised to the power of the second.</span></span>
+<span data-ttu-id="f2a1d-123">Aşağıdaki örnek, bir sayının üssünü artırmak için `^` işlecini kullanır.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-123">The following example uses the `^` operator to raise a number to the power of an exponent.</span></span> <span data-ttu-id="f2a1d-124">Sonuç ikincinin gücüyle oluşturulan ilk işlenendir.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-124">The result is the first operand raised to the power of the second.</span></span>
 
 [!code-vb[VbVbalrOperators#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#20)]
 
-<span data-ttu-id="3f9ab-125">The preceding example produces the following results:</span><span class="sxs-lookup"><span data-stu-id="3f9ab-125">The preceding example produces the following results:</span></span>
+<span data-ttu-id="f2a1d-125">Yukarıdaki örnek aşağıdaki sonuçları üretir:</span><span class="sxs-lookup"><span data-stu-id="f2a1d-125">The preceding example produces the following results:</span></span>
 
-<span data-ttu-id="3f9ab-126">`exp1` is set to 4 (2 squared).</span><span class="sxs-lookup"><span data-stu-id="3f9ab-126">`exp1` is set to 4 (2 squared).</span></span>
+<span data-ttu-id="f2a1d-126">`exp1` 4 (2 kare) olarak ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-126">`exp1` is set to 4 (2 squared).</span></span>
 
-<span data-ttu-id="3f9ab-127">`exp2` is set to 19683 (3 cubed, then that value cubed).</span><span class="sxs-lookup"><span data-stu-id="3f9ab-127">`exp2` is set to 19683 (3 cubed, then that value cubed).</span></span>
+<span data-ttu-id="f2a1d-127">`exp2`, 19683 (3 odaya, sonra da bu değer) olarak ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-127">`exp2` is set to 19683 (3 cubed, then that value cubed).</span></span>
 
-<span data-ttu-id="3f9ab-128">`exp3` is set to -125 (-5 cubed).</span><span class="sxs-lookup"><span data-stu-id="3f9ab-128">`exp3` is set to -125 (-5 cubed).</span></span>
+<span data-ttu-id="f2a1d-128">`exp3`-125 (-5 odamış) olarak ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-128">`exp3` is set to -125 (-5 cubed).</span></span>
 
-<span data-ttu-id="3f9ab-129">`exp4` is set to 625 (-5 to the fourth power).</span><span class="sxs-lookup"><span data-stu-id="3f9ab-129">`exp4` is set to 625 (-5 to the fourth power).</span></span>
+<span data-ttu-id="f2a1d-129">`exp4`, 625 (-5 dördüncü güce) olarak ayarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-129">`exp4` is set to 625 (-5 to the fourth power).</span></span>
 
-<span data-ttu-id="3f9ab-130">`exp5` is set to 2 (cube root of 8).</span><span class="sxs-lookup"><span data-stu-id="3f9ab-130">`exp5` is set to 2 (cube root of 8).</span></span>
+<span data-ttu-id="f2a1d-130">`exp5` 2 olarak ayarlanır (8. küp kökü).</span><span class="sxs-lookup"><span data-stu-id="f2a1d-130">`exp5` is set to 2 (cube root of 8).</span></span>
 
-<span data-ttu-id="3f9ab-131">`exp6` is set to 0.5 (1.0 divided by the cube root of 8).</span><span class="sxs-lookup"><span data-stu-id="3f9ab-131">`exp6` is set to 0.5 (1.0 divided by the cube root of 8).</span></span>
+<span data-ttu-id="f2a1d-131">`exp6`, 0,5 olarak ayarlanır (1,0, 8 ' in küp köküne bölünür).</span><span class="sxs-lookup"><span data-stu-id="f2a1d-131">`exp6` is set to 0.5 (1.0 divided by the cube root of 8).</span></span>
 
-<span data-ttu-id="3f9ab-132">Note the importance of the parentheses in the expressions in the preceding example.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-132">Note the importance of the parentheses in the expressions in the preceding example.</span></span> <span data-ttu-id="3f9ab-133">Because of *operator precedence*, Visual Basic normally performs the `^` operator before any others, even the unary `–` operator.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-133">Because of *operator precedence*, Visual Basic normally performs the `^` operator before any others, even the unary `–` operator.</span></span> <span data-ttu-id="3f9ab-134">If `exp4` and `exp6` had been calculated without parentheses, they would have produced the following results:</span><span class="sxs-lookup"><span data-stu-id="3f9ab-134">If `exp4` and `exp6` had been calculated without parentheses, they would have produced the following results:</span></span>
+<span data-ttu-id="f2a1d-132">Önceki örnekteki ifadelerde parantezlerin önemini dikkate alın.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-132">Note the importance of the parentheses in the expressions in the preceding example.</span></span> <span data-ttu-id="f2a1d-133">*İşleç önceliği*nedeniyle, Visual Basic normalde, birli `–` işleci bile diğer tüm `^` işlecini uygular.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-133">Because of *operator precedence*, Visual Basic normally performs the `^` operator before any others, even the unary `–` operator.</span></span> <span data-ttu-id="f2a1d-134">`exp4` ve `exp6` parantez olmadan hesaplanmışsa, bunlar aşağıdaki sonuçları üretti:</span><span class="sxs-lookup"><span data-stu-id="f2a1d-134">If `exp4` and `exp6` had been calculated without parentheses, they would have produced the following results:</span></span>
 
-<span data-ttu-id="3f9ab-135">`exp4 = -5 ^ 4` would be calculated as –(5 to the fourth power), which would result in -625.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-135">`exp4 = -5 ^ 4` would be calculated as –(5 to the fourth power), which would result in -625.</span></span>
+<span data-ttu-id="f2a1d-135">`exp4 = -5 ^ 4` – (5 dördüncü güce) olarak hesaplanacak ve bu,-625 ile sonuçlanacaktır.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-135">`exp4 = -5 ^ 4` would be calculated as –(5 to the fourth power), which would result in -625.</span></span>
 
-<span data-ttu-id="3f9ab-136">`exp6 = 8 ^ -1.0 / 3.0` would be calculated as (8 to the –1 power, or 0.125) divided by 3.0, which would result in 0.041666666666666666666666666666667.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-136">`exp6 = 8 ^ -1.0 / 3.0` would be calculated as (8 to the –1 power, or 0.125) divided by 3.0, which would result in 0.041666666666666666666666666666667.</span></span>
+<span data-ttu-id="f2a1d-136">`exp6 = 8 ^ -1.0 / 3.0`, 3,0 ile ayrılmış olan (– 1 güç veya 0,125), 0.041666666666666666666666666666667 ile sonuçlanabilecek şekilde hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-136">`exp6 = 8 ^ -1.0 / 3.0` would be calculated as (8 to the –1 power, or 0.125) divided by 3.0, which would result in 0.041666666666666666666666666666667.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="3f9ab-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3f9ab-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f2a1d-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f2a1d-137">See also</span></span>
 
-- [<span data-ttu-id="3f9ab-138">^= İşleci</span><span class="sxs-lookup"><span data-stu-id="3f9ab-138">^= Operator</span></span>](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
-- [<span data-ttu-id="3f9ab-139">Aritmetik İşleçler</span><span class="sxs-lookup"><span data-stu-id="3f9ab-139">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [<span data-ttu-id="3f9ab-140">Operator Precedence in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3f9ab-140">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="3f9ab-141">İşlevselliğe Göre Listelenmiş İşleçler</span><span class="sxs-lookup"><span data-stu-id="3f9ab-141">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="3f9ab-142">Arithmetic Operators in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3f9ab-142">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [<span data-ttu-id="f2a1d-138">^= İşleci</span><span class="sxs-lookup"><span data-stu-id="f2a1d-138">^= Operator</span></span>](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
+- [<span data-ttu-id="f2a1d-139">Aritmetik İşleçler</span><span class="sxs-lookup"><span data-stu-id="f2a1d-139">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [<span data-ttu-id="f2a1d-140">Visual Basic operatör önceliği</span><span class="sxs-lookup"><span data-stu-id="f2a1d-140">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="f2a1d-141">İşlevselliğe Göre Listelenmiş İşleçler</span><span class="sxs-lookup"><span data-stu-id="f2a1d-141">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="f2a1d-142">Visual Basic aritmetik Işleçler</span><span class="sxs-lookup"><span data-stu-id="f2a1d-142">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
