@@ -1,5 +1,5 @@
 ---
-title: Can't perform requested operation
+title: İstenen işlem gerçekleştirilemiyor
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID17
@@ -11,13 +11,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353317"
 ---
-# <a name="cant-perform-requested-operation-visual-basic"></a><span data-ttu-id="0b30b-102">Can't perform requested operation (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0b30b-102">Can't perform requested operation (Visual Basic)</span></span>
-<span data-ttu-id="0b30b-103">An operation cannot be carried out because it would invalidate the current state of the project.</span><span class="sxs-lookup"><span data-stu-id="0b30b-103">An operation cannot be carried out because it would invalidate the current state of the project.</span></span> <span data-ttu-id="0b30b-104">For example, you may have tried to programmatically modify code that is running.</span><span class="sxs-lookup"><span data-stu-id="0b30b-104">For example, you may have tried to programmatically modify code that is running.</span></span>  
+# <a name="cant-perform-requested-operation-visual-basic"></a><span data-ttu-id="20985-102">İstenen işlem gerçekleştirilemiyor (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="20985-102">Can't perform requested operation (Visual Basic)</span></span>
+<span data-ttu-id="20985-103">İşlemin geçerli durumunu geçersiz kılacağından, işlem yürütülemiyor.</span><span class="sxs-lookup"><span data-stu-id="20985-103">An operation cannot be carried out because it would invalidate the current state of the project.</span></span> <span data-ttu-id="20985-104">Örneğin, çalıştıran bir kodu program aracılığıyla değiştirmeye çalışmış olabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="20985-104">For example, you may have tried to programmatically modify code that is running.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="0b30b-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="0b30b-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="20985-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="20985-105">To correct this error</span></span>  
   
-- <span data-ttu-id="0b30b-106">Stop the code execution, make modifications if necessary, and then retry the operation.</span><span class="sxs-lookup"><span data-stu-id="0b30b-106">Stop the code execution, make modifications if necessary, and then retry the operation.</span></span>  
+- <span data-ttu-id="20985-106">Kod yürütmeyi durdurun, gerekirse değişiklikler yapın ve işlemi yeniden deneyin.</span><span class="sxs-lookup"><span data-stu-id="20985-106">Stop the code execution, make modifications if necessary, and then retry the operation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0b30b-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0b30b-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="20985-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="20985-107">See also</span></span>
 
-- [<span data-ttu-id="0b30b-108">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="0b30b-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="20985-108">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="20985-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

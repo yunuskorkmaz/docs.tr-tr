@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437495"
 ---
-# <a name="imetadataimportgetmemberrefprops-method"></a><span data-ttu-id="8f3b1-102">IMetaDataImport::GetMemberRefProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8f3b1-102">IMetaDataImport::GetMemberRefProps Method</span></span>
-<span data-ttu-id="8f3b1-103">Gets metadata associated with the member referenced by the specified token.</span><span class="sxs-lookup"><span data-stu-id="8f3b1-103">Gets metadata associated with the member referenced by the specified token.</span></span>  
+# <a name="imetadataimportgetmemberrefprops-method"></a><span data-ttu-id="a414f-102">IMetaDataImport::GetMemberRefProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a414f-102">IMetaDataImport::GetMemberRefProps Method</span></span>
+<span data-ttu-id="a414f-103">Belirtilen belirteç tarafından başvurulan üyeyle ilişkili meta verileri alır.</span><span class="sxs-lookup"><span data-stu-id="a414f-103">Gets metadata associated with the member referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8f3b1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8f3b1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a414f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a414f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMemberRefProps (  
@@ -39,38 +39,38 @@ HRESULT GetMemberRefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8f3b1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8f3b1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a414f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a414f-105">Parameters</span></span>  
  `mr`  
- <span data-ttu-id="8f3b1-106">[in] The MemberRef token to return associated metadata for.</span><span class="sxs-lookup"><span data-stu-id="8f3b1-106">[in] The MemberRef token to return associated metadata for.</span></span>  
+ <span data-ttu-id="a414f-106">'ndaki İçin ilişkili meta verileri döndürecek MemberRef belirteci.</span><span class="sxs-lookup"><span data-stu-id="a414f-106">[in] The MemberRef token to return associated metadata for.</span></span>  
   
  `ptk`  
- <span data-ttu-id="8f3b1-107">[out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.</span><span class="sxs-lookup"><span data-stu-id="8f3b1-107">[out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.</span></span>  
+ <span data-ttu-id="a414f-107">dışı Üyeyi bildiren sınıfı temsil eden bir TypeDef veya TypeRef, ya da üyeyi bildiren modül sınıfını temsil eden bir ModuleRef belirteci ya da üyeyi temsil eden bir MethodDef.</span><span class="sxs-lookup"><span data-stu-id="a414f-107">[out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.</span></span>  
   
  `szMember`  
- <span data-ttu-id="8f3b1-108">[out] A string buffer for the member's name.</span><span class="sxs-lookup"><span data-stu-id="8f3b1-108">[out] A string buffer for the member's name.</span></span>  
+ <span data-ttu-id="a414f-108">dışı Üyenin adı için bir dize arabelleği.</span><span class="sxs-lookup"><span data-stu-id="a414f-108">[out] A string buffer for the member's name.</span></span>  
   
  `cchMember`  
- <span data-ttu-id="8f3b1-109">[in] The requested size in wide characters of `szMember`.</span><span class="sxs-lookup"><span data-stu-id="8f3b1-109">[in] The requested size in wide characters of `szMember`.</span></span>  
+ <span data-ttu-id="a414f-109">'ndaki `szMember`geniş karakterdeki istenen boyut.</span><span class="sxs-lookup"><span data-stu-id="a414f-109">[in] The requested size in wide characters of `szMember`.</span></span>  
   
  `pchMember`  
- <span data-ttu-id="8f3b1-110">[out] The returned size in wide characters of `szMember`.</span><span class="sxs-lookup"><span data-stu-id="8f3b1-110">[out] The returned size in wide characters of `szMember`.</span></span>  
+ <span data-ttu-id="a414f-110">dışı `szMember`geniş karakterdeki döndürülen boyut.</span><span class="sxs-lookup"><span data-stu-id="a414f-110">[out] The returned size in wide characters of `szMember`.</span></span>  
   
  `ppvSibBlob`  
- <span data-ttu-id="8f3b1-111">[out] A pointer to the binary metadata signature for the member.</span><span class="sxs-lookup"><span data-stu-id="8f3b1-111">[out] A pointer to the binary metadata signature for the member.</span></span>  
+ <span data-ttu-id="a414f-111">dışı Üyenin ikili meta veri imzasına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a414f-111">[out] A pointer to the binary metadata signature for the member.</span></span>  
   
  `pbSig`  
- <span data-ttu-id="8f3b1-112">[out] The size in bytes of `ppvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="8f3b1-112">[out] The size in bytes of `ppvSigBlob`.</span></span>  
+ <span data-ttu-id="a414f-112">dışı `ppvSigBlob`bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="a414f-112">[out] The size in bytes of `ppvSigBlob`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8f3b1-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8f3b1-113">Requirements</span></span>  
- <span data-ttu-id="8f3b1-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8f3b1-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a414f-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a414f-113">Requirements</span></span>  
+ <span data-ttu-id="a414f-114">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a414f-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8f3b1-115">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8f3b1-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a414f-115">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="a414f-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8f3b1-116">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8f3b1-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a414f-116">**Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir</span><span class="sxs-lookup"><span data-stu-id="a414f-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="8f3b1-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f3b1-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a414f-117">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a414f-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8f3b1-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8f3b1-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a414f-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a414f-118">See also</span></span>
 
-- [<span data-ttu-id="8f3b1-119">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8f3b1-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="8f3b1-120">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8f3b1-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="a414f-119">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a414f-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="a414f-120">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a414f-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

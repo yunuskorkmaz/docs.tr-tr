@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438716"
 ---
-# <a name="icorprofilerinfoisarrayclass-method"></a><span data-ttu-id="9eaf4-102">ICorProfilerInfo::IsArrayClass Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9eaf4-102">ICorProfilerInfo::IsArrayClass Method</span></span>
-<span data-ttu-id="9eaf4-103">Determines whether the specified class is an array class.</span><span class="sxs-lookup"><span data-stu-id="9eaf4-103">Determines whether the specified class is an array class.</span></span>  
+# <a name="icorprofilerinfoisarrayclass-method"></a><span data-ttu-id="ccecb-102">ICorProfilerInfo::IsArrayClass Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ccecb-102">ICorProfilerInfo::IsArrayClass Method</span></span>
+<span data-ttu-id="ccecb-103">Belirtilen sınıfın bir dizi sınıfı olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="ccecb-103">Determines whether the specified class is an array class.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9eaf4-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9eaf4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ccecb-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ccecb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsArrayClass(  
@@ -35,31 +35,31 @@ HRESULT IsArrayClass(
     [out] ULONG          *pcRank);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9eaf4-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9eaf4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ccecb-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ccecb-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="9eaf4-106">[in] The ID of the class to be examined.</span><span class="sxs-lookup"><span data-stu-id="9eaf4-106">[in] The ID of the class to be examined.</span></span>  
+ <span data-ttu-id="ccecb-106">'ndaki İnceedilecek sınıfın KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="ccecb-106">[in] The ID of the class to be examined.</span></span>  
   
  `pBaseElemType`  
- <span data-ttu-id="9eaf4-107">[out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.</span><span class="sxs-lookup"><span data-stu-id="9eaf4-107">[out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.</span></span>  
+ <span data-ttu-id="ccecb-107">dışı Dizi öğelerinin türünü gösteren CorElementType numaralandırması değerine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ccecb-107">[out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.</span></span>  
   
  `pBaseClassId`  
- <span data-ttu-id="9eaf4-108">[out] A pointer to the class ID of the array elements, when available.</span><span class="sxs-lookup"><span data-stu-id="9eaf4-108">[out] A pointer to the class ID of the array elements, when available.</span></span>  
+ <span data-ttu-id="ccecb-108">dışı Kullanılabilir olduğunda dizi öğelerinin sınıf KIMLIĞINE yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ccecb-108">[out] A pointer to the class ID of the array elements, when available.</span></span>  
   
  `pcRank`  
- <span data-ttu-id="9eaf4-109">[out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.</span><span class="sxs-lookup"><span data-stu-id="9eaf4-109">[out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.</span></span>  
+ <span data-ttu-id="ccecb-109">dışı Dizinin derecesini (yani boyut sayısını) gösteren bir tamsayı işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="ccecb-109">[out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9eaf4-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9eaf4-110">Remarks</span></span>  
- <span data-ttu-id="9eaf4-111">If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters.</span><span class="sxs-lookup"><span data-stu-id="9eaf4-111">If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters.</span></span> <span data-ttu-id="9eaf4-112">Otherwise, it returns S_FALSE.</span><span class="sxs-lookup"><span data-stu-id="9eaf4-112">Otherwise, it returns S_FALSE.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ccecb-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ccecb-110">Remarks</span></span>  
+ <span data-ttu-id="ccecb-111">Belirtilen sınıf bir dizi sınıfınse `IsArrayClass` yöntemi, null olmayan herhangi bir çıkış parametresi için bir S_OK HRESULT ve değerleri döndürür.</span><span class="sxs-lookup"><span data-stu-id="ccecb-111">If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters.</span></span> <span data-ttu-id="ccecb-112">Aksi takdirde, S_FALSE döndürür.</span><span class="sxs-lookup"><span data-stu-id="ccecb-112">Otherwise, it returns S_FALSE.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9eaf4-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9eaf4-113">Requirements</span></span>  
- <span data-ttu-id="9eaf4-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9eaf4-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ccecb-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ccecb-113">Requirements</span></span>  
+ <span data-ttu-id="ccecb-114">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ccecb-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9eaf4-115">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9eaf4-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ccecb-115">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="ccecb-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="9eaf4-116">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9eaf4-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ccecb-116">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="ccecb-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9eaf4-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9eaf4-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ccecb-117">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ccecb-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9eaf4-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9eaf4-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ccecb-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ccecb-118">See also</span></span>
 
-- [<span data-ttu-id="9eaf4-119">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9eaf4-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="ccecb-119">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ccecb-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

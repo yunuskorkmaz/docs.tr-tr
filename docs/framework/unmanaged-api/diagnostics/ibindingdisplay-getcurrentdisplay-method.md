@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448497"
 ---
-# <a name="ibindingdisplaygetcurrentdisplay-method"></a><span data-ttu-id="2cb0c-102">IBindingDisplay::GetCurrentDisplay Yöntemi</span><span class="sxs-lookup"><span data-stu-id="2cb0c-102">IBindingDisplay::GetCurrentDisplay Method</span></span>
-<span data-ttu-id="2cb0c-103">Returns the current binding display information.</span><span class="sxs-lookup"><span data-stu-id="2cb0c-103">Returns the current binding display information.</span></span>  
+# <a name="ibindingdisplaygetcurrentdisplay-method"></a><span data-ttu-id="7d089-102">IBindingDisplay::GetCurrentDisplay Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7d089-102">IBindingDisplay::GetCurrentDisplay Method</span></span>
+<span data-ttu-id="7d089-103">Geçerli bağlama görüntüleme bilgilerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="7d089-103">Returns the current binding display information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2cb0c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2cb0c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7d089-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7d089-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCurrentDisplay (  
@@ -33,25 +33,25 @@ HRESULT GetCurrentDisplay (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2cb0c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2cb0c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7d089-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7d089-105">Parameters</span></span>  
  `display`  
- <span data-ttu-id="2cb0c-106">[out, retval] A pointer to a safearray containing the binding display information.</span><span class="sxs-lookup"><span data-stu-id="2cb0c-106">[out, retval] A pointer to a safearray containing the binding display information.</span></span>  
+ <span data-ttu-id="7d089-106">[Out, retval] Bağlama görünen bilgilerini içeren bir SAFEARRAY işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="7d089-106">[out, retval] A pointer to a safearray containing the binding display information.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2cb0c-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2cb0c-107">Remarks</span></span>  
- <span data-ttu-id="2cb0c-108">The [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) method must have previously succeeded, and the program must be stopped by a debugger.</span><span class="sxs-lookup"><span data-stu-id="2cb0c-108">The [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) method must have previously succeeded, and the program must be stopped by a debugger.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7d089-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7d089-107">Remarks</span></span>  
+ <span data-ttu-id="7d089-108">[IBindingDisplay:: InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) yöntemi daha önce başarılı olmalıdır ve program bir hata ayıklayıcı tarafından durdurulmalıdır.</span><span class="sxs-lookup"><span data-stu-id="7d089-108">The [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) method must have previously succeeded, and the program must be stopped by a debugger.</span></span>  
   
- <span data-ttu-id="2cb0c-109">The caller must deallocate the returned `SAFEARRAY` memory by using [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).</span><span class="sxs-lookup"><span data-stu-id="2cb0c-109">The caller must deallocate the returned `SAFEARRAY` memory by using [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).</span></span>  
+ <span data-ttu-id="7d089-109">Çağıranın, [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy)kullanarak döndürülen `SAFEARRAY` belleği serbest bırakma gerekir.</span><span class="sxs-lookup"><span data-stu-id="7d089-109">The caller must deallocate the returned `SAFEARRAY` memory by using [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2cb0c-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2cb0c-110">Requirements</span></span>  
- <span data-ttu-id="2cb0c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2cb0c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7d089-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7d089-110">Requirements</span></span>  
+ <span data-ttu-id="7d089-111">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7d089-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2cb0c-112">**Header:** BindingDisplay.h</span><span class="sxs-lookup"><span data-stu-id="2cb0c-112">**Header:** BindingDisplay.h</span></span>  
+ <span data-ttu-id="7d089-112">**Üst bilgi:** BindingDisplay. h</span><span class="sxs-lookup"><span data-stu-id="7d089-112">**Header:** BindingDisplay.h</span></span>  
   
- <span data-ttu-id="2cb0c-113">**Library:** BindingDisplay.idl</span><span class="sxs-lookup"><span data-stu-id="2cb0c-113">**Library:** BindingDisplay.idl</span></span>  
+ <span data-ttu-id="7d089-113">**Kitaplık:** BindingDisplay. IDL</span><span class="sxs-lookup"><span data-stu-id="7d089-113">**Library:** BindingDisplay.idl</span></span>  
   
- <span data-ttu-id="2cb0c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2cb0c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7d089-114">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7d089-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2cb0c-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2cb0c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d089-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7d089-115">See also</span></span>
 
-- [<span data-ttu-id="2cb0c-116">IBindingDisplay Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2cb0c-116">IBindingDisplay Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)
-- [<span data-ttu-id="2cb0c-117">InitializeForProcess Yöntemi</span><span class="sxs-lookup"><span data-stu-id="2cb0c-117">InitializeForProcess Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)
+- [<span data-ttu-id="7d089-116">IBindingDisplay Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7d089-116">IBindingDisplay Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)
+- [<span data-ttu-id="7d089-117">InitializeForProcess Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7d089-117">InitializeForProcess Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)

@@ -22,12 +22,12 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449364"
 ---
-# <a name="isymunmanagedbindergetreaderforfile-method"></a><span data-ttu-id="0d548-102">ISymUnmanagedBinder::GetReaderForFile Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0d548-102">ISymUnmanagedBinder::GetReaderForFile Method</span></span>
-<span data-ttu-id="0d548-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span><span class="sxs-lookup"><span data-stu-id="0d548-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span>  
+# <a name="isymunmanagedbindergetreaderforfile-method"></a><span data-ttu-id="3f2a9-102">ISymUnmanagedBinder::GetReaderForFile Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3f2a9-102">ISymUnmanagedBinder::GetReaderForFile Method</span></span>
+<span data-ttu-id="3f2a9-103">Meta veri arabirimi ve dosya adı verildiğinde, modülle ilişkili hata ayıklama sembollerini okuyacak doğru [ıdimunmanagedreader](isymunmanagedreader-interface.md) arabirimini döndürür.</span><span class="sxs-lookup"><span data-stu-id="3f2a9-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span>  
   
- <span data-ttu-id="0d548-104">This method will open the program database (PDB) file only if it is next to the executable file.</span><span class="sxs-lookup"><span data-stu-id="0d548-104">This method will open the program database (PDB) file only if it is next to the executable file.</span></span> <span data-ttu-id="0d548-105">This change has been made for security purposes.</span><span class="sxs-lookup"><span data-stu-id="0d548-105">This change has been made for security purposes.</span></span> <span data-ttu-id="0d548-106">If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="0d548-106">If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.</span></span>  
+ <span data-ttu-id="3f2a9-104">Bu yöntem, program veritabanı (PDB) dosyasını yalnızca yürütülebilir dosyanın yanında olduğunda açar.</span><span class="sxs-lookup"><span data-stu-id="3f2a9-104">This method will open the program database (PDB) file only if it is next to the executable file.</span></span> <span data-ttu-id="3f2a9-105">Bu değişiklik güvenlik amacıyla yapılmıştır.</span><span class="sxs-lookup"><span data-stu-id="3f2a9-105">This change has been made for security purposes.</span></span> <span data-ttu-id="3f2a9-106">PDB dosyası için daha kapsamlı bir aramanız gerekiyorsa, [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) yöntemini kullanın.</span><span class="sxs-lookup"><span data-stu-id="3f2a9-106">If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0d548-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0d548-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f2a9-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3f2a9-107">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetReaderForFile(  
@@ -37,26 +37,26 @@ HRESULT GetReaderForFile(
     [out, retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0d548-108">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0d548-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3f2a9-108">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3f2a9-108">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="0d548-109">[in] A pointer to the metadata import interface.</span><span class="sxs-lookup"><span data-stu-id="0d548-109">[in] A pointer to the metadata import interface.</span></span>  
+ <span data-ttu-id="3f2a9-109">'ndaki Meta veri içeri aktarma arabirimine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="3f2a9-109">[in] A pointer to the metadata import interface.</span></span>  
   
  `fileName`  
- <span data-ttu-id="0d548-110">[in] A pointer to the file name.</span><span class="sxs-lookup"><span data-stu-id="0d548-110">[in] A pointer to the file name.</span></span>  
+ <span data-ttu-id="3f2a9-110">'ndaki Dosya adı işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="3f2a9-110">[in] A pointer to the file name.</span></span>  
   
  `searchPath`  
- <span data-ttu-id="0d548-111">[in] A pointer to the search path.</span><span class="sxs-lookup"><span data-stu-id="0d548-111">[in] A pointer to the search path.</span></span>  
+ <span data-ttu-id="3f2a9-111">'ndaki Arama yoluna yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="3f2a9-111">[in] A pointer to the search path.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="0d548-112">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="0d548-112">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
+ <span data-ttu-id="3f2a9-112">dışı Döndürülen [ıdimunmanagedreader](isymunmanagedreader-interface.md) arabirimine ayarlanmış bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="3f2a9-112">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0d548-113">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="0d548-113">Return Value</span></span>  
- <span data-ttu-id="0d548-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="0d548-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3f2a9-113">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="3f2a9-113">Return Value</span></span>  
+ <span data-ttu-id="3f2a9-114">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="3f2a9-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0d548-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0d548-115">Requirements</span></span>  
- <span data-ttu-id="0d548-116">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0d548-116">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f2a9-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3f2a9-115">Requirements</span></span>  
+ <span data-ttu-id="3f2a9-116">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="3f2a9-116">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0d548-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0d548-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f2a9-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3f2a9-117">See also</span></span>
 
-- [<span data-ttu-id="0d548-118">ISymUnmanagedBinder Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0d548-118">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
-- [<span data-ttu-id="0d548-119">GetReaderForFile2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0d548-119">GetReaderForFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)
+- [<span data-ttu-id="3f2a9-118">ISymUnmanagedBinder Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3f2a9-118">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
+- [<span data-ttu-id="3f2a9-119">GetReaderForFile2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3f2a9-119">GetReaderForFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)

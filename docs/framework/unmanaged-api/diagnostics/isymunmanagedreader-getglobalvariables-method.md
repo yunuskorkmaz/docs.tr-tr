@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448321"
 ---
-# <a name="isymunmanagedreadergetglobalvariables-method"></a><span data-ttu-id="edc6b-102">ISymUnmanagedReader::GetGlobalVariables Metodu</span><span class="sxs-lookup"><span data-stu-id="edc6b-102">ISymUnmanagedReader::GetGlobalVariables Method</span></span>
-<span data-ttu-id="edc6b-103">Returns all global variables.</span><span class="sxs-lookup"><span data-stu-id="edc6b-103">Returns all global variables.</span></span>  
+# <a name="isymunmanagedreadergetglobalvariables-method"></a><span data-ttu-id="21c96-102">ISymUnmanagedReader::GetGlobalVariables Metodu</span><span class="sxs-lookup"><span data-stu-id="21c96-102">ISymUnmanagedReader::GetGlobalVariables Method</span></span>
+<span data-ttu-id="21c96-103">Tüm genel değişkenleri döndürür.</span><span class="sxs-lookup"><span data-stu-id="21c96-103">Returns all global variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="edc6b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="edc6b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="21c96-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="21c96-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetGlobalVariables(  
@@ -35,22 +35,22 @@ HRESULT GetGlobalVariables(
         length_is(*pcVars)] ISymUnmanagedVariable *pVars[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="edc6b-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="edc6b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="21c96-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="21c96-105">Parameters</span></span>  
  `cVars`  
- <span data-ttu-id="edc6b-106">[in] The length of the buffer pointed to by `pcVars`.</span><span class="sxs-lookup"><span data-stu-id="edc6b-106">[in] The length of the buffer pointed to by `pcVars`.</span></span>  
+ <span data-ttu-id="21c96-106">'ndaki `pcVars`tarafından işaret edilen arabelleğin uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="21c96-106">[in] The length of the buffer pointed to by `pcVars`.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="edc6b-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the variables.</span><span class="sxs-lookup"><span data-stu-id="edc6b-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the variables.</span></span>  
+ <span data-ttu-id="21c96-107">dışı Değişkenleri içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="21c96-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the variables.</span></span>  
   
  `pVars`  
- <span data-ttu-id="edc6b-108">[out] A buffer that contains the variables.</span><span class="sxs-lookup"><span data-stu-id="edc6b-108">[out] A buffer that contains the variables.</span></span>  
+ <span data-ttu-id="21c96-108">dışı Değişkenleri içeren bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="21c96-108">[out] A buffer that contains the variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="edc6b-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="edc6b-109">Return Value</span></span>  
- <span data-ttu-id="edc6b-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="edc6b-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="21c96-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="21c96-109">Return Value</span></span>  
+ <span data-ttu-id="21c96-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="21c96-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="edc6b-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="edc6b-111">Requirements</span></span>  
- <span data-ttu-id="edc6b-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="edc6b-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="21c96-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="21c96-111">Requirements</span></span>  
+ <span data-ttu-id="21c96-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="21c96-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="edc6b-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="edc6b-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="21c96-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="21c96-113">See also</span></span>
 
-- [<span data-ttu-id="edc6b-114">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="edc6b-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="21c96-114">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="21c96-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

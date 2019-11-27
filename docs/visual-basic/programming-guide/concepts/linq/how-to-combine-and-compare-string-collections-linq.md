@@ -9,13 +9,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348431"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="727c1-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="727c1-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="105e2-102">Nasıl yapılır: dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="105e2-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="727c1-103">This example shows how to merge files that contain lines of text and then sort the results.</span><span class="sxs-lookup"><span data-stu-id="727c1-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="727c1-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span><span class="sxs-lookup"><span data-stu-id="727c1-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>
+<span data-ttu-id="105e2-103">Bu örnekte, metin satırları içeren dosyaların nasıl birleştiriyapılacağı ve sonuçların nasıl sıralanacağını gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="105e2-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="105e2-104">Özellikle, iki metin satırı kümesinde basit bir birleştirme, birleşim ve bir kesişimin nasıl gerçekleştirileceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="105e2-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>
 
-### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="727c1-105">To set up the project and the text files</span><span class="sxs-lookup"><span data-stu-id="727c1-105">To set up the project and the text files</span></span>
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="105e2-105">Projeyi ve metin dosyalarını ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="105e2-105">To set up the project and the text files</span></span>
 
-1. <span data-ttu-id="727c1-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span><span class="sxs-lookup"><span data-stu-id="727c1-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
+1. <span data-ttu-id="105e2-106">Bu adları names1. txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin:</span><span class="sxs-lookup"><span data-stu-id="105e2-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
 
     ```text
     Bankov, Peter
@@ -30,7 +30,7 @@ ms.locfileid: "74348431"
     Garcia, Debra
     ```
 
-2. <span data-ttu-id="727c1-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span><span class="sxs-lookup"><span data-stu-id="727c1-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="727c1-108">Note that the two files have some names in common.</span><span class="sxs-lookup"><span data-stu-id="727c1-108">Note that the two files have some names in common.</span></span>
+2. <span data-ttu-id="105e2-107">Bu adları names2. txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin.</span><span class="sxs-lookup"><span data-stu-id="105e2-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="105e2-108">İki dosyanın bazı adları yaygın olarak olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="105e2-108">Note that the two files have some names in common.</span></span>
 
     ```text
     Liu, Jinghao
@@ -45,7 +45,7 @@ ms.locfileid: "74348431"
     El Yassir, Mehdi
     ```
 
-## <a name="example"></a><span data-ttu-id="727c1-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="727c1-109">Example</span></span>
+## <a name="example"></a><span data-ttu-id="105e2-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="105e2-109">Example</span></span>
 
 ```vb
 Class ConcatenateStrings
@@ -163,11 +163,11 @@ End Class
 ' 2 total names in list
 ```
 
-## <a name="compiling-the-code"></a><span data-ttu-id="727c1-110">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="727c1-110">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="105e2-110">Kod Derleme</span><span class="sxs-lookup"><span data-stu-id="105e2-110">Compiling the Code</span></span>
 
-<span data-ttu-id="727c1-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span><span class="sxs-lookup"><span data-stu-id="727c1-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="105e2-111">System. Linq ad alanı için `Imports` ifadesiyle bir VB.NET konsol uygulaması projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="105e2-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="727c1-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="727c1-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="105e2-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="105e2-112">See also</span></span>
 
-- [<span data-ttu-id="727c1-113">LINQ and Strings (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="727c1-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="727c1-114">LINQ and File Directories (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="727c1-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="105e2-113">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="105e2-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="105e2-114">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="105e2-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448870"
 ---
-# <a name="isymunmanagedmethodgetsourcestartend-method"></a><span data-ttu-id="c4c85-102">ISymUnmanagedMethod::GetSourceStartEnd Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c4c85-102">ISymUnmanagedMethod::GetSourceStartEnd Method</span></span>
-<span data-ttu-id="c4c85-103">Gets the start and end document positions for the source of this method.</span><span class="sxs-lookup"><span data-stu-id="c4c85-103">Gets the start and end document positions for the source of this method.</span></span> <span data-ttu-id="c4c85-104">The first array position is the start, and the second array position is the end.</span><span class="sxs-lookup"><span data-stu-id="c4c85-104">The first array position is the start, and the second array position is the end.</span></span>  
+# <a name="isymunmanagedmethodgetsourcestartend-method"></a><span data-ttu-id="a860a-102">ISymUnmanagedMethod::GetSourceStartEnd Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a860a-102">ISymUnmanagedMethod::GetSourceStartEnd Method</span></span>
+<span data-ttu-id="a860a-103">Bu yöntemin kaynağı için başlangıç ve bitiş belgesi konumlarını alır.</span><span class="sxs-lookup"><span data-stu-id="a860a-103">Gets the start and end document positions for the source of this method.</span></span> <span data-ttu-id="a860a-104">İlk dizi konumu başlangıç ' dir ve ikinci dizi konumu son ' dır.</span><span class="sxs-lookup"><span data-stu-id="a860a-104">The first array position is the start, and the second array position is the end.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c4c85-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c4c85-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a860a-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a860a-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSourceStartEnd(  
@@ -35,25 +35,25 @@ HRESULT GetSourceStartEnd(
     [out] BOOL                   *pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c4c85-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c4c85-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a860a-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a860a-106">Parameters</span></span>  
  `docs`  
- <span data-ttu-id="c4c85-107">[in] The starting and ending source documents.</span><span class="sxs-lookup"><span data-stu-id="c4c85-107">[in] The starting and ending source documents.</span></span>  
+ <span data-ttu-id="a860a-107">'ndaki Başlangıç ve bitiş kaynak belgeleri.</span><span class="sxs-lookup"><span data-stu-id="a860a-107">[in] The starting and ending source documents.</span></span>  
   
  `lines`  
- <span data-ttu-id="c4c85-108">[in] The starting and ending lines in the corresponding source documents.</span><span class="sxs-lookup"><span data-stu-id="c4c85-108">[in] The starting and ending lines in the corresponding source documents.</span></span>  
+ <span data-ttu-id="a860a-108">'ndaki Karşılık gelen kaynak belgelerindeki başlangıç ve bitiş satırları.</span><span class="sxs-lookup"><span data-stu-id="a860a-108">[in] The starting and ending lines in the corresponding source documents.</span></span>  
   
  `columns`  
- <span data-ttu-id="c4c85-109">[in] The starting and ending columns in the corresponding source documents.</span><span class="sxs-lookup"><span data-stu-id="c4c85-109">[in] The starting and ending columns in the corresponding source documents.</span></span>  
+ <span data-ttu-id="a860a-109">'ndaki Karşılık gelen kaynak belgelerindeki başlangıç ve bitiş sütunları.</span><span class="sxs-lookup"><span data-stu-id="a860a-109">[in] The starting and ending columns in the corresponding source documents.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="c4c85-110">[out] `true` if positions were defined; otherwise, `false`.</span><span class="sxs-lookup"><span data-stu-id="c4c85-110">[out] `true` if positions were defined; otherwise, `false`.</span></span>  
+ <span data-ttu-id="a860a-110">[out] pozisyonlar tanımlanmışsa `true`; Aksi takdirde, `false`.</span><span class="sxs-lookup"><span data-stu-id="a860a-110">[out] `true` if positions were defined; otherwise, `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c4c85-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="c4c85-111">Return Value</span></span>  
- <span data-ttu-id="c4c85-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="c4c85-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a860a-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="a860a-111">Return Value</span></span>  
+ <span data-ttu-id="a860a-112">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="a860a-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c4c85-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c4c85-113">Requirements</span></span>  
- <span data-ttu-id="c4c85-114">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c4c85-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a860a-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a860a-113">Requirements</span></span>  
+ <span data-ttu-id="a860a-114">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="a860a-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c4c85-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c4c85-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a860a-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a860a-115">See also</span></span>
 
-- [<span data-ttu-id="c4c85-116">ISymUnmanagedMethod Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c4c85-116">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="a860a-116">ISymUnmanagedMethod Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a860a-116">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

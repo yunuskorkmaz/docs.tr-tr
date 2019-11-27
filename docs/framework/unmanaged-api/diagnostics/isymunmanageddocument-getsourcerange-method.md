@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449138"
 ---
-# <a name="isymunmanageddocumentgetsourcerange-method"></a><span data-ttu-id="6017e-102">ISymUnmanagedDocument::GetSourceRange Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6017e-102">ISymUnmanagedDocument::GetSourceRange Method</span></span>
-<span data-ttu-id="6017e-103">Returns the specified range of the embedded source into the given buffer.</span><span class="sxs-lookup"><span data-stu-id="6017e-103">Returns the specified range of the embedded source into the given buffer.</span></span> <span data-ttu-id="6017e-104">The buffer must be large enough to hold the source.</span><span class="sxs-lookup"><span data-stu-id="6017e-104">The buffer must be large enough to hold the source.</span></span>  
+# <a name="isymunmanageddocumentgetsourcerange-method"></a><span data-ttu-id="e7d4e-102">ISymUnmanagedDocument::GetSourceRange Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e7d4e-102">ISymUnmanagedDocument::GetSourceRange Method</span></span>
+<span data-ttu-id="e7d4e-103">Eklenmiş kaynağın belirtilen aralığını verilen arabelleğe döndürür.</span><span class="sxs-lookup"><span data-stu-id="e7d4e-103">Returns the specified range of the embedded source into the given buffer.</span></span> <span data-ttu-id="e7d4e-104">Arabellek, kaynağı tutabilecek kadar büyük olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="e7d4e-104">The buffer must be large enough to hold the source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6017e-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6017e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e7d4e-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e7d4e-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSourceRange(  
@@ -39,31 +39,31 @@ HRESULT GetSourceRange(
         length_is(*pcSourceBytes)] BYTE source[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6017e-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6017e-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e7d4e-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e7d4e-106">Parameters</span></span>  
  `startLine`  
- <span data-ttu-id="6017e-107">[in] The starting line in the current document.</span><span class="sxs-lookup"><span data-stu-id="6017e-107">[in] The starting line in the current document.</span></span>  
+ <span data-ttu-id="e7d4e-107">'ndaki Geçerli belgedeki başlangıç satırı.</span><span class="sxs-lookup"><span data-stu-id="e7d4e-107">[in] The starting line in the current document.</span></span>  
   
  `startColumn`  
- <span data-ttu-id="6017e-108">[in] The starting column in the current document.</span><span class="sxs-lookup"><span data-stu-id="6017e-108">[in] The starting column in the current document.</span></span>  
+ <span data-ttu-id="e7d4e-108">'ndaki Geçerli belgedeki başlangıç sütunu.</span><span class="sxs-lookup"><span data-stu-id="e7d4e-108">[in] The starting column in the current document.</span></span>  
   
  `endLine`  
- <span data-ttu-id="6017e-109">[in] The final line in the current document.</span><span class="sxs-lookup"><span data-stu-id="6017e-109">[in] The final line in the current document.</span></span>  
+ <span data-ttu-id="e7d4e-109">'ndaki Geçerli belgedeki son satır.</span><span class="sxs-lookup"><span data-stu-id="e7d4e-109">[in] The final line in the current document.</span></span>  
   
  `endColumn`  
- <span data-ttu-id="6017e-110">[in] The final column in the current document.</span><span class="sxs-lookup"><span data-stu-id="6017e-110">[in] The final column in the current document.</span></span>  
+ <span data-ttu-id="e7d4e-110">'ndaki Geçerli belgedeki son sütun.</span><span class="sxs-lookup"><span data-stu-id="e7d4e-110">[in] The final column in the current document.</span></span>  
   
  `cSourceBytes`  
- <span data-ttu-id="6017e-111">[in] The size of the source, in bytes.</span><span class="sxs-lookup"><span data-stu-id="6017e-111">[in] The size of the source, in bytes.</span></span>  
+ <span data-ttu-id="e7d4e-111">'ndaki Kaynağın bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="e7d4e-111">[in] The size of the source, in bytes.</span></span>  
   
  `pcSourceBytes`  
- <span data-ttu-id="6017e-112">[out] A pointer to a variable that receives the source size.</span><span class="sxs-lookup"><span data-stu-id="6017e-112">[out] A pointer to a variable that receives the source size.</span></span>  
+ <span data-ttu-id="e7d4e-112">dışı Kaynak boyutunu alan değişken için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e7d4e-112">[out] A pointer to a variable that receives the source size.</span></span>  
   
  `source`  
- <span data-ttu-id="6017e-113">[out] The size and length of the specified range of the source document, in bytes.</span><span class="sxs-lookup"><span data-stu-id="6017e-113">[out] The size and length of the specified range of the source document, in bytes.</span></span>  
+ <span data-ttu-id="e7d4e-113">dışı Kaynak belge için bayt cinsinden belirtilen aralığın boyutu ve uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="e7d4e-113">[out] The size and length of the specified range of the source document, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6017e-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="6017e-114">Return Value</span></span>  
- <span data-ttu-id="6017e-115">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="6017e-115">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e7d4e-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e7d4e-114">Return Value</span></span>  
+ <span data-ttu-id="e7d4e-115">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="e7d4e-115">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6017e-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6017e-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e7d4e-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e7d4e-116">See also</span></span>
 
-- [<span data-ttu-id="6017e-117">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6017e-117">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="e7d4e-117">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e7d4e-117">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

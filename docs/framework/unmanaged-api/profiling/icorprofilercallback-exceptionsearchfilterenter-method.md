@@ -22,30 +22,30 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445376"
 ---
-# <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a><span data-ttu-id="c30ab-102">ICorProfilerCallback::ExceptionSearchFilterEnter Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c30ab-102">ICorProfilerCallback::ExceptionSearchFilterEnter Method</span></span>
-<span data-ttu-id="c30ab-103">Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.</span><span class="sxs-lookup"><span data-stu-id="c30ab-103">Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.</span></span>  
+# <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a><span data-ttu-id="00ea2-102">ICorProfilerCallback::ExceptionSearchFilterEnter Yöntemi</span><span class="sxs-lookup"><span data-stu-id="00ea2-102">ICorProfilerCallback::ExceptionSearchFilterEnter Method</span></span>
+<span data-ttu-id="00ea2-103">Profil oluşturucuyu, özel durum işlemenin arama aşamasının Kullanıcı tanımlı bir özel durum filtresi yürütmeye başladığını bildirir.</span><span class="sxs-lookup"><span data-stu-id="00ea2-103">Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c30ab-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c30ab-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="00ea2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="00ea2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExceptionSearchFilterEnter(  
     [in] FunctionID functionId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c30ab-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c30ab-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="00ea2-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="00ea2-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="c30ab-106">[in] The ID of the function that contains the filter.</span><span class="sxs-lookup"><span data-stu-id="c30ab-106">[in] The ID of the function that contains the filter.</span></span>  
+ <span data-ttu-id="00ea2-106">'ndaki Filtreyi içeren işlevin KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="00ea2-106">[in] The ID of the function that contains the filter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c30ab-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c30ab-107">Requirements</span></span>  
- <span data-ttu-id="c30ab-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c30ab-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="00ea2-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="00ea2-107">Requirements</span></span>  
+ <span data-ttu-id="00ea2-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="00ea2-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c30ab-109">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c30ab-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="00ea2-109">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="00ea2-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="c30ab-110">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c30ab-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="00ea2-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="00ea2-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c30ab-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c30ab-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="00ea2-111">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="00ea2-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c30ab-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c30ab-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="00ea2-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="00ea2-112">See also</span></span>
 
-- [<span data-ttu-id="c30ab-113">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c30ab-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="c30ab-114">ExceptionSearchFilterLeave Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c30ab-114">ExceptionSearchFilterLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)
+- [<span data-ttu-id="00ea2-113">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="00ea2-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="00ea2-114">ExceptionSearchFilterLeave Yöntemi</span><span class="sxs-lookup"><span data-stu-id="00ea2-114">ExceptionSearchFilterLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)
