@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433196"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>ICorProfilerInfo2::GetContextStaticAddress Yöntemi
-Gets the address for the specified context-static field that is in the scope of the specified context.  
+Belirtilen bağlamın kapsamındaki belirtilen context-static alanı için adresi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,34 +37,34 @@ HRESULT GetContextStaticAddress(
   
 ## <a name="parameters"></a>Parametreler  
  `classId`  
- [in] The ID of the class that contains the requested context-static field.  
+ 'ndaki İstenen bağlam-statik alanını içeren sınıfın KIMLIĞI.  
   
  `fieldToken`  
- [in] The metadata token for the requested context-static field.  
+ 'ndaki İstenen bağlam-statik alanı için meta veri belirteci.  
   
  `contextId`  
- [in] The ID of the context that is the scope for the requested context-static field.  
+ 'ndaki İstenen bağlam-statik alanı için kapsam olan bağlamın KIMLIĞI.  
   
  `ppAddress`  
- [out] A pointer to the address of the static field that is within the specified context.  
+ dışı Belirtilen bağlam içindeki statik alanın adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `GetContextStaticAddress` method may return one of the following:  
+ `GetContextStaticAddress` yöntemi aşağıdakilerden birini döndürebilir:  
   
-- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
+- Belirtilen bağlamda verilen statik alana bir adres atanmadığı takdirde bir CORPROF_E_DATAINCOMPLETE HRESULT.  
   
-- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
+- Çöp toplama yığınında olabilecek nesnelerin adresleri. Bu adresler çöp toplamadan sonra geçersiz hale gelebilmelidir, bu nedenle çöp toplama işleminden sonra profil oluşturucular geçerli olduğunu varsaymamalıdır.  
   
- Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
+ Bir sınıfın sınıf oluşturucusu tamamlanmadan önce, statik alanlardan bazıları zaten başlatılmış ve atık toplama nesnelerini kök halinde kullanıma sunabilse de `GetContextStaticAddress` tüm statik alanları için CORPROF_E_DATAINCOMPLETE döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

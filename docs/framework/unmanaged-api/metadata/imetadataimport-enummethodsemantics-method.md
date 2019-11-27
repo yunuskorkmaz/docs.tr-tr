@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450069"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>IMetaDataImport::EnumMethodSemantics Yöntemi
-Enumerates the properties and the property-change events to which the specified method is related.  
+Belirtilen yöntemin ilişkili olduğu özellikleri ve özellik değiştirme olaylarını sıralar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,38 +39,38 @@ HRESULT EnumMethodSemantics (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Numaralandırıcı için bir işaretçi. Bu yöntemin ilk çağrısı için bu NULL olmalıdır.  
   
  `mb`  
- [in] A MethodDef token that limits the scope of the enumeration.  
+ 'ndaki Sabit listesinin kapsamını sınırlayan bir MethodDef belirteci.  
   
  `rEventProp`  
- [out] The array used to store the events or properties.  
+ dışı Olayları veya özellikleri depolamak için kullanılan dizi.  
   
  `cMax`  
- [in] The maximum size of the `rEventProp` array.  
+ 'ndaki `rEventProp` dizisinin en büyük boyutu.  
   
  `pcEventProp`  
- [out] The number of events or properties returned in `rEventProp`.  
+ dışı `rEventProp`döndürülen olay veya özellik sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSemantics` returned successfully.|  
-|`S_FALSE`|There are no events or properties to enumerate. In that case, `pcEventProp` is zero.|  
+|`S_OK`|`EnumMethodSemantics` başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak hiçbir olay veya özellik yok. Bu durumda `pcEventProp` sıfırdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Many common language runtime types define *Property*`Changed` events and `On`*Property*`Changed` methods related to their properties. For example, the <xref:System.Windows.Forms.Control?displayProperty=nameWithType> type defines a <xref:System.Windows.Forms.Control.Font%2A> property, a <xref:System.Windows.Forms.Control.FontChanged> event, and an <xref:System.Windows.Forms.Control.OnFontChanged%2A> method. The set accessor method of the <xref:System.Windows.Forms.Control.Font%2A> property calls <xref:System.Windows.Forms.Control.OnFontChanged%2A> method, which in turn raises the <xref:System.Windows.Forms.Control.FontChanged> event. You would call `EnumMethodSemantics` using the MethodDef for <xref:System.Windows.Forms.Control.OnFontChanged%2A> to get references to the <xref:System.Windows.Forms.Control.Font%2A> property and the <xref:System.Windows.Forms.Control.FontChanged> event.  
+ Birçok ortak dil çalışma zamanı türü *özellik*`Changed` olaylarını ve özellikleriyle Ilgili `On`*özelliği*`Changed` yöntemlerini tanımlar. Örneğin, <xref:System.Windows.Forms.Control?displayProperty=nameWithType> türü bir <xref:System.Windows.Forms.Control.Font%2A> özelliğini, bir <xref:System.Windows.Forms.Control.FontChanged> olayı ve bir <xref:System.Windows.Forms.Control.OnFontChanged%2A> yöntemini tanımlar. <xref:System.Windows.Forms.Control.Font%2A> özelliğinin set erişimcisi yöntemi <xref:System.Windows.Forms.Control.OnFontChanged%2A> yöntemini çağırır, bu da <xref:System.Windows.Forms.Control.FontChanged> olayını oluşturur. <xref:System.Windows.Forms.Control.Font%2A> özelliğine ve <xref:System.Windows.Forms.Control.FontChanged> olayına başvuru almak için <xref:System.Windows.Forms.Control.OnFontChanged%2A> MethodDef kullanarak `EnumMethodSemantics` çağırırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

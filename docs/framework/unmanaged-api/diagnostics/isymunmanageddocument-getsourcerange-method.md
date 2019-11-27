@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449138"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange Yöntemi
-Returns the specified range of the embedded source into the given buffer. The buffer must be large enough to hold the source.  
+Eklenmiş kaynağın belirtilen aralığını verilen arabelleğe döndürür. Arabellek, kaynağı tutabilecek kadar büyük olmalıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,28 +41,28 @@ HRESULT GetSourceRange(
   
 ## <a name="parameters"></a>Parametreler  
  `startLine`  
- [in] The starting line in the current document.  
+ 'ndaki Geçerli belgedeki başlangıç satırı.  
   
  `startColumn`  
- [in] The starting column in the current document.  
+ 'ndaki Geçerli belgedeki başlangıç sütunu.  
   
  `endLine`  
- [in] The final line in the current document.  
+ 'ndaki Geçerli belgedeki son satır.  
   
  `endColumn`  
- [in] The final column in the current document.  
+ 'ndaki Geçerli belgedeki son sütun.  
   
  `cSourceBytes`  
- [in] The size of the source, in bytes.  
+ 'ndaki Kaynağın bayt cinsinden boyutu.  
   
  `pcSourceBytes`  
- [out] A pointer to a variable that receives the source size.  
+ dışı Kaynak boyutunu alan değişken için bir işaretçi.  
   
  `source`  
- [out] The size and length of the specified range of the source document, in bytes.  
+ dışı Kaynak belge için bayt cinsinden belirtilen aralığın boyutu ve uzunluğu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

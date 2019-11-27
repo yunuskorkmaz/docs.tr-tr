@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437495"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps Yöntemi
-Gets metadata associated with the member referenced by the specified token.  
+Belirtilen belirteç tarafından başvurulan üyeyle ilişkili meta verileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,34 +41,34 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mr`  
- [in] The MemberRef token to return associated metadata for.  
+ 'ndaki İçin ilişkili meta verileri döndürecek MemberRef belirteci.  
   
  `ptk`  
- [out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.  
+ dışı Üyeyi bildiren sınıfı temsil eden bir TypeDef veya TypeRef, ya da üyeyi bildiren modül sınıfını temsil eden bir ModuleRef belirteci ya da üyeyi temsil eden bir MethodDef.  
   
  `szMember`  
- [out] A string buffer for the member's name.  
+ dışı Üyenin adı için bir dize arabelleği.  
   
  `cchMember`  
- [in] The requested size in wide characters of `szMember`.  
+ 'ndaki `szMember`geniş karakterdeki istenen boyut.  
   
  `pchMember`  
- [out] The returned size in wide characters of `szMember`.  
+ dışı `szMember`geniş karakterdeki döndürülen boyut.  
   
  `ppvSibBlob`  
- [out] A pointer to the binary metadata signature for the member.  
+ dışı Üyenin ikili meta veri imzasına yönelik bir işaretçi.  
   
  `pbSig`  
- [out] The size in bytes of `ppvSigBlob`.  
+ dışı `ppvSigBlob`bayt cinsinden boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

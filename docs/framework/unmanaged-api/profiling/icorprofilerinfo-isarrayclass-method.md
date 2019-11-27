@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438716"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass Yöntemi
-Determines whether the specified class is an array class.  
+Belirtilen sınıfın bir dizi sınıfı olup olmadığını belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,28 +37,28 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>Parametreler  
  `classId`  
- [in] The ID of the class to be examined.  
+ 'ndaki İnceedilecek sınıfın KIMLIĞI.  
   
  `pBaseElemType`  
- [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
+ dışı Dizi öğelerinin türünü gösteren CorElementType numaralandırması değerine yönelik bir işaretçi.  
   
  `pBaseClassId`  
- [out] A pointer to the class ID of the array elements, when available.  
+ dışı Kullanılabilir olduğunda dizi öğelerinin sınıf KIMLIĞINE yönelik bir işaretçi.  
   
  `pcRank`  
- [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
+ dışı Dizinin derecesini (yani boyut sayısını) gösteren bir tamsayı işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
+ Belirtilen sınıf bir dizi sınıfınse `IsArrayClass` yöntemi, null olmayan herhangi bir çıkış parametresi için bir S_OK HRESULT ve değerleri döndürür. Aksi takdirde, S_FALSE döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

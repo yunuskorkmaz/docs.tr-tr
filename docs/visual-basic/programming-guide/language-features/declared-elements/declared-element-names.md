@@ -31,28 +31,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345428"
 ---
 # <a name="declared-element-names-visual-basic"></a>Bildirilen Öğe Adları (Visual Basic)
-Every declared element has a name, also called an *identifier*, which is what the code uses to refer to it.  
+Her beyan edilen öğe *tanımlayıcı*olarak da bilinen ve kodun buna başvurmak için kullandığı bir ada sahiptir.  
   
 ## <a name="rules"></a>Kurallar  
- An element name in Visual Basic must observe the following rules:  
+ Visual Basic bir öğe adı aşağıdaki kuralları gözlemlemelidir:  
   
-- It must begin with an alphabetic character or an underscore (`_`).  
+- Alfabetik bir karakter veya alt çizgi (`_`) ile başlamalıdır.  
   
-- It must only contain alphabetic characters, decimal digits, and underscores.  
+- Yalnızca alfabetik karakter, ondalık rakam ve alt çizgi içermelidir.  
   
-- It must contain at least one alphabetic character or decimal digit if it begins with an underscore.  
+- Alt çizgiyle başlıyorsa, en az bir alfabetik karakter veya ondalık basamak içermesi gerekir.  
   
-- It must not be more than 1023 characters long.  
+- En fazla 1023 karakter uzunluğunda olmalıdır.  
   
- The length limit of 1023 characters also applies to the entire string of a fully qualified name, such as `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
+ 1023 karakterlik uzunluk sınırı, `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`gibi tam nitelikli bir ada sahip tüm dize için de geçerlidir.  
   
- The following example shows some valid element names.  
+ Aşağıdaki örnekte bazı geçerli öğe adları gösterilmektedir.  
   
  `aB123__45`  
   
  `_567`  
   
- The following example shows some invalid element names. The first contains only an underscore, the second begins with a decimal digit, and the third contains an invalid character ($).  
+ Aşağıdaki örnekte bazı geçersiz öğe adları gösterilmektedir. Birincisi yalnızca bir alt çizgi içerir, ikincisi ondalık sayıyla başlar ve üçüncüsü geçersiz bir karakter ($) içerir.  
   
  `' Three INVALID element names`  
   
@@ -63,31 +63,31 @@ Every declared element has a name, also called an *identifier*, which is what th
  `xyz$wv`  
   
 > [!CAUTION]
-> Element names starting with an underscore (`_`) are not part of the [Language Independence and Language-Independent Components](../../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot use a component that defines such names. However, an underscore in any other position in an element name is CLS-compliant.  
+> Alt çizgi (`_`) ile başlayan öğe adları, [Dil bağımsızlığı ve dilden bağımsız bileşenlerin](../../../../standard/language-independence-and-language-independent-components.md) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod bu adı tanımlayan bir bileşeni kullanamaz. Ancak, bir öğe adında başka bir konumdaki alt çizgi CLS uyumludur.  
   
-### <a name="name-length-guidelines"></a>Name Length Guidelines  
- As a practical matter, your name should be as short as possible while still clearly identifying the nature of the element. This improves the readability of your code and reduces line length and source-file size.  
+### <a name="name-length-guidelines"></a>Ad uzunluğu yönergeleri  
+ Pratik bir şekilde, sizin de öğenin doğasını açıkça tanımlarken adınızın olabildiğince kısa olması gerekir. Bu, kodunuzun okunabilirliğini artırır ve satır uzunluğunu ve kaynak dosya boyutunu azaltır.  
   
- On the other hand, your name should not be so short that it does not adequately describe what the element represents and how your code uses it. This is important for the readability of your code. If somebody else is trying to understand it, or if you yourself are looking at it a long time after you wrote it, suitable element names can save a considerable amount of time.  
+ Öte yandan, adınız öğenin neyi temsil ettiğini ve kodunuzun onu nasıl kullandığını yeterince tanımlamaz. Bu, kodunuzun okunabilirliğini açısından önemlidir. Başka birisi bunu anlamayı denmişse veya siz onu yazdıktan sonra uzun bir süre arıyorsanız, uygun öğe adları önemli miktarda zaman kazandırabilir.  
   
-## <a name="escaped-names"></a>Escaped Names  
- Generally, an element name must not match any of the keywords reserved by Visual Basic, such as `Case` or `Friend`. However, you can define an *escaped name*, which is enclosed by brackets (`[ ]`). An escaped name can match any Visual Basic keyword, since the brackets remove any ambiguity. You also use the brackets when you refer to the name later in your code.  
+## <a name="escaped-names"></a>Kaçan adlar  
+ Genellikle, öğe adı, `Case` veya `Friend`gibi Visual Basic tarafından ayrılmış anahtar kelimelerle eşleşmemelidir. Ancak, köşeli ayraçlar (`[ ]`) içine alınmış bir *kaçan adı*tanımlayabilirsiniz. Kaçış adı herhangi bir Visual Basic anahtar sözcüğüyle eşleşemez, köşeli ayraçlar herhangi bir belirsizliği ortadan kaldırır. Ayrıca, kodunuzun sonraki kısımlarında bulunan ada başvurduğunuzda de ayraçları kullanırsınız.  
   
- In general, you should use escaped names only when:  
+ Genel olarak, yalnızca şu durumlarda atlanan kaçış adlarını kullanmanız gerekir:  
   
-- Your code has migrated from a previous version of Visual Basic that did not reserve the keyword being used as a name; or  
+- Kodunuz, bir ad olarak kullanılmakta olan anahtar sözcüğü ayırmayan Visual Basic önceki bir sürümünden geçirildi; veya  
   
-- You are working with code written in another language in which the given keyword is not reserved.  
+- Verilen anahtar sözcüğünün ayrılmadığından, başka bir dilde yazılmış kodla çalışıyorsunuz.  
   
- Otherwise, you should consider renaming the element if its name conflicts with a keyword. The integrated development environment (IDE) provides an easy way to do this. For more information, see [Refactoring](/visualstudio/ide/refactoring-in-visual-studio).  
+ Aksi takdirde, adı bir anahtar sözcükle çakışırsa öğesini yeniden adlandırmayı düşünmelisiniz. Tümleşik geliştirme ortamı (IDE) bunu yapmanın kolay bir yolunu sağlar. Daha fazla bilgi için bkz. yeniden [düzenleme](/visualstudio/ide/refactoring-in-visual-studio).  
   
-## <a name="case-sensitivity-in-names"></a>Case Sensitivity in Names  
- Element names in Visual Basic are case-insensitive. This means that when the compiler compares two names that differ in alphabetic case only, it interprets them as the same name. For example, it considers `ABC` and `abc` to refer to the same declared element.  
+## <a name="case-sensitivity-in-names"></a>Adlarda büyük/küçük harf duyarlılığı  
+ Visual Basic öğe adları büyük/küçük harfe duyarlıdır. Bu, derleyici yalnızca alfabetik durumda farklılık gösteren iki adı karşılaştırırken, bunları aynı ad olarak yorumladığı anlamına gelir. Örneğin, `ABC` ve `abc` aynı tanımlanmış öğeye başvuracak şekilde değerlendirir.  
   
- However, the common language runtime (CLR) uses case-sensitive binding. Therefore, when you produce an assembly or a DLL and make it available to other assemblies, your names are no longer case-insensitive. For example, if you define a class with an element called `ABC`, and other assemblies make use of your class through the common language runtime, they must refer to the element as `ABC`. If you subsequently recompile your class and change the element's name to `abc`, the other assemblies using your class could no longer access that element. Therefore, when you release an updated version of an assembly, you should not change the alphabetic case of any public elements.  
+ Ancak, ortak dil çalışma zamanı (CLR) büyük/küçük harfe duyarlı bağlama kullanır. Bu nedenle, bir derleme veya DLL oluşturduğunuzda ve diğer derlemeler için kullanılabilir hale getirmek istediğinizde, adlarınız artık büyük/küçük harf duyarsız değildir. Örneğin, `ABC`adlı bir öğe içeren bir sınıf tanımlarsanız ve diğer derlemeler, ortak dil çalışma zamanı aracılığıyla sınıfınızın kullanımını kullanıyorsa, öğe `ABC`olarak başvurmalıdır. Daha sonra sınıfınızı yeniden derleyerek ve öğenin adını `abc`değiştirirseniz, sınıfınızı kullanan diğer derlemeler artık bu öğeye erişemez. Bu nedenle, bir derlemenin güncelleştirilmiş bir sürümünü serbest bırakırsanız, tüm ortak öğelerin alfabetik durumunu değiştirmemelisiniz.  
   
-## <a name="names-and-locales"></a>Names and Locales  
- Comparison of names is independent of locale. If two names match in one locale, they are guaranteed to match in all locales.  
+## <a name="names-and-locales"></a>Adlar ve yerel ayarlar  
+ Adların karşılaştırılması yerel ayardan bağımsızdır. İki ad bir yerel ayarda eşleşiyorsa, bunların tüm yerel ayarlarda eşleşmesi garanti edilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

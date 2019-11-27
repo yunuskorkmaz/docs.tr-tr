@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449649"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>ICorProfilerInfo3::GetThreadStaticAddress2 Yöntemi
-Gets the address of the specified thread-static field that is in the scope of the specified thread and application domain.  
+Belirtilen iş parçacığının ve uygulama etki alanının kapsamındaki belirtilen thread-static alanının adresini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,39 +38,39 @@ HRESULT GetThreadStaticAddress2(
   
 ## <a name="parameters"></a>Parametreler  
  `classId`  
- [in] The ID of the class that contains the requested thread-static field.  
+ 'ndaki İstenen iş parçacığı-statik alanını içeren sınıfın KIMLIĞI.  
   
  `fieldToken`  
- [in] The metadata token for the requested thread-static field.  
+ 'ndaki İstenen iş parçacığı-statik alanı için meta veri belirteci.  
   
  `appDomainId`  
- [in] The ID of the application domain.  
+ 'ndaki Uygulama etki alanının KIMLIĞI.  
   
  `threadId`  
- [in] The ID of the thread that is the scope for the requested static field.  
+ 'ndaki İstenen statik alan için kapsam olan iş parçacığının KIMLIĞI.  
   
  `ppAddress`  
- [out] A pointer to the address of the static field that is within the specified thread.  
+ dışı Belirtilen iş parçacığı içindeki statik alanın adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `GetThreadStaticAddress2` method may return one of the following:  
+ `GetThreadStaticAddress2` yöntemi aşağıdakilerden birini döndürebilir:  
   
-- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
+- Belirtilen bağlamda verilen statik alana bir adres atanmadığı takdirde bir CORPROF_E_DATAINCOMPLETE HRESULT.  
   
-- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
+- Çöp toplama yığınında olabilecek nesnelerin adresleri. Bu adresler çöp toplamadan sonra geçersiz hale gelebilmelidir, bu nedenle çöp toplama işleminden sonra profil oluşturucular geçerli olduğunu varsaymamalıdır.  
   
- Before a class’s class constructor is completed, `GetThreadStaticAddress2` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
+ Bir sınıfın sınıf oluşturucusu tamamlanmadan önce, statik alanlardan bazıları zaten başlatılmış ve atık toplama nesnelerini kök halinde kullanıma sunabilse de `GetThreadStaticAddress2` tüm statik alanları için CORPROF_E_DATAINCOMPLETE döndürür.  
   
- The [ICorProfilerInfo2::GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) method is similar to the `GetThreadStaticAddress2` method, but does not accept an application domain argument.  
+ [ICorProfilerInfo2:: GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) yöntemi `GetThreadStaticAddress2` yönteme benzerdir, ancak bir uygulama etki alanı bağımsız değişkenini kabul etmez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442003"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>IMetaDataTables::GetColumn Yöntemi
-Gets a pointer to the value contained in the cell of the specified column and row in the given table.  
+Verilen tablodaki belirtilen sütun ve satır hücresinde bulunan değere bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,46 +39,46 @@ HRESULT GetColumn (
 ## <a name="parameters"></a>Parametreler
 
  `ixTbl`  
- [in] The index of the table.  
+ 'ndaki Tablonun dizini.  
   
  `ixCol`  
- [in] The index of the column in the table.  
+ 'ndaki Tablodaki sütunun dizini.  
   
  `rid`  
- [in] The index of the row in the table.  
+ 'ndaki Tablodaki satırın dizini.  
   
  `pVal`  
- [out] A pointer to the value in the cell.  
+ dışı Hücredeki değere yönelik bir işaretçi.  
  
 ## <a name="remarks"></a>Açıklamalar
 
-The interpretion of the value returned through `pVal` depends on the column's type. The column type can be determined by calling [IMetaDataTables.GetColumnInfo](imetadatatables-getcolumninfo-method.md).
+`pVal` üzerinden döndürülen değerin yorumlandığına sütunun türüne bağlıdır. Sütun türü, [IMetaDataTables. GetColumnInfo](imetadatatables-getcolumninfo-method.md)çağırarak belirlenebilir.
 
-- The **GetColumn** method automatically converts columns of type **Rid** or **CodedToken** to full 32-bit `mdToken` values.
-- It also automatically converts 8-bit or 16-bit values to full 32-bit values. 
-- For *heap* type columns, the returned *pVal* will be an index into the corresponding heap.
+- **GetColumn** yöntemi, **RID** veya **codedtoken** türündeki sütunları otomatik olarak tam 32-bit `mdToken` değerlerine dönüştürür.
+- Ayrıca, 8 bit veya 16 bit değerleri otomatik olarak tam 32-bit değerlerine dönüştürür. 
+- *Yığın* türü sütunlarında, döndürülen *Pval* karşılık gelen yığında bir dizin olacaktır.
 
-| Column type              | pVal contains | Yorum                          |
+| Sütun türü              | pVal içerir | Yorum                          |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0..63)  | mdToken     | *pVal* will contain a full Token. The function automatically converts the Rid into a full token. |
-| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | mdToken | Upon return, *pVal* will contain a full Token. The function automatically decompresses the CodedToken into a full token. |
-| `iSHORT` (96)            | Int16         | Automatically sign-extended to 32-bit.  |
-| `iUSHORT` (97)           | UInt16        | Automatically sign-extended to 32-bit.  |
+| `0`..`iRidMax`<br>(0.. 63)  | mdToken     | *Pval* , tam bir belirteç içerir. İşlevi, RID 'yi otomatik olarak tam belirtece dönüştürür. |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | mdToken | Dönüş sonrasında *Pval* bir tam belirteç içerecektir. İşlevi CodedToken 'ı otomatik olarak tam belirtece açar. |
+| `iSHORT` (96)            | Int16         | Otomatik olarak 32 bit olarak oturum açın.  |
+| `iUSHORT` (97)           | UInt16        | Otomatik olarak 32 bit olarak oturum açın.  |
 | `iLONG` (98)             | Int32         |                                        | 
 | `iULONG` (99)            | UInt32        |                                        |
-| `iBYTE` (100)            | Bayt          | Automatically sign-extended to 32-bit.  |
-| `iSTRING` (101)          | String heap index | *pVal* is an index into the String heap. Use [IMetadataTables::GetString](imetadatatables-getstring-method.md) to get the actual column String value. |
-| `iGUID` (102)            | Guid heap index | *pVal* is an index into the Guid heap. Use [IMetadataTables::GetGuid](imetadatatables-getguid-method.md) to get the actual column Guid value. |
-| `iBLOB` (103)            | Blob heap index | *pVal* is an index into the Blob heap. Use [IMetadataTables::GetBlob](imetadatatables-getblob-method.md) to get the actual column Blob value. |
+| `iBYTE` (100)            | Bayt          | Otomatik olarak 32 bit olarak oturum açın.  |
+| `iSTRING` (101)          | Dize yığın dizini | *Pval* , dize yığınında bir dizindir. Gerçek sütun dize değerini almak için [IMetaDataTables:: GetString](imetadatatables-getstring-method.md) kullanın. |
+| `iGUID` (102)            | GUID yığın dizini | *Pval* , GUID yığınının bir dizinidir. Gerçek sütun GUID değerini almak için [IMetaDataTables:: GetGuid](imetadatatables-getguid-method.md) kullanın. |
+| `iBLOB` (103)            | Blob yığın dizini | *Pval* , blob yığınında bir dizindir. Gerçek sütun blobu değerini almak için [IMetaDataTables:: GetBlob](imetadatatables-getblob-method.md) kullanın. |
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümler** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

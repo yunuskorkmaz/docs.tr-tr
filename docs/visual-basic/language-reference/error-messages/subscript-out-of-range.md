@@ -12,11 +12,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350801"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a>Alt simge aralık dışı (Visual Basic)
-An array subscript is not valid because it falls outside the allowable range. The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.  
+Bir dizi alt simge, izin verilen aralığın dışında olduğundan geçerli değil. Bir boyut için en düşük alt simge değeri her zaman 0 ' dır ve en yüksek alt indis değeri bu boyut için `GetUpperBound` yöntemi tarafından döndürülür.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Change the subscript so it falls within the valid range.  
+- Alt indisi geçerli aralık dahilinde olacak şekilde değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

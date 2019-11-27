@@ -14,67 +14,67 @@ ms.locfileid: "74447983"
 ---
 # <a name="ui-automation-providers-overview"></a>UI Otomasyon Sağlayıcılara Genel Bakış
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- UI Automation providers enable controls to communicate with UI Automation client applications. In general, each control or other distinct element in a [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] is represented by a provider. The provider exposes information about the element and optionally implements control patterns that enable the client application to interact with the control.  
+ UI Otomasyon sağlayıcıları, kullanıcıların UI Otomasyonu istemci uygulamalarıyla iletişim kurmasını sağlar. Genel olarak, bir [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] her denetim veya diğer ayrı öğe bir sağlayıcı tarafından temsil edilir. Sağlayıcı, öğesi hakkında bilgi gösterir ve isteğe bağlı olarak, istemci uygulamanın denetimle etkileşime geçmesini sağlayan denetim düzenlerini uygular.  
   
- Client applications do not usually have to work directly with providers. Most of the standard controls in applications that use the [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], or [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] frameworks are automatically exposed to the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] system. Applications that implement custom controls may also implement [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] providers for those controls, and client applications do not have to take any special steps to gain access to them.  
+ İstemci uygulamalarının genellikle doğrudan sağlayıcılarıyla çalışması gerekmez. [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]veya [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] çerçevelerini kullanan uygulamalardaki Standart denetimlerin çoğu, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sistemine otomatik olarak sunulur. Özel denetimleri uygulayan uygulamalar da bu denetimler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcıları uygulayabilir ve istemci uygulamalarının bunlara erişim kazanmak için özel adımlar yapması gerekmez.  
   
- This topic provides an overview of how control developers implement [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] providers, particularly for controls in [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] and [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] windows.  
+ Bu konu, denetim geliştiricilerinin, özellikle [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] ve [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] Windows 'daki denetimler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcıları nasıl uygulayacağından ilgili bir genel bakış sunar.  
   
 <a name="Types_of_Providers"></a>   
-## <a name="types-of-providers"></a>Types of Providers  
- UI Automation providers fall into two categories: client-side providers and server-side providers.  
+## <a name="types-of-providers"></a>Sağlayıcı türleri  
+ UI Otomasyonu sağlayıcıları iki kategoriye ayrılır: istemci tarafı sağlayıcılar ve sunucu tarafı sağlayıcılar.  
   
-### <a name="client-side-providers"></a>Client-side providers  
- Client-side providers are implemented by UI Automation clients to communicate with an application that does not support, or does not fully support, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Client-side providers usually communicate with the server across the process boundary by sending and receiving Windows messages.  
+### <a name="client-side-providers"></a>İstemci tarafı sağlayıcıları  
+ İstemci tarafı sağlayıcılar, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]tarafından desteklenmeyen veya tam olarak desteklenmeyen bir uygulamayla iletişim kurmak için UI Otomasyon istemcileri tarafından uygulanır. İstemci tarafı sağlayıcılar, genellikle Windows iletileri gönderip alarak işlem sınırının tamamında sunucusuyla iletişim kurar.  
   
- Because UI Automation providers for controls in [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, or [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] applications are supplied as part of the operating system, client applications seldom have to implement their own providers, and this overview does not cover them further.  
+ [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms veya [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] uygulamalarında denetimler için UI Otomasyon sağlayıcıları işletim sisteminin bir parçası olarak sağlandığı için, istemci uygulamalarının nadiren kendi sağlayıcılarını uygulaması gerekir ve bu genel bakış bu bilgileri daha fazla kapsamaz.  
   
-### <a name="server-side-providers"></a>Server-side providers  
- Server-side providers are implemented by custom controls or by applications that are based on a UI framework other than [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, or [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+### <a name="server-side-providers"></a>Sunucu tarafı sağlayıcıları  
+ Sunucu tarafı sağlayıcılar, özel denetimler veya [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms veya [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]dışındaki bir UI çerçevesini temel alan uygulamalar tarafından uygulanır.  
   
- Server-side providers communicate with client applications across the process boundary by exposing interfaces to the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core system, which in turn serves requests from clients.  
+ Sunucu tarafı sağlayıcılar, arabirimleri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çekirdek sisteme sunarak işlem sınırları genelinde istemci uygulamalarıyla iletişim kurar ve bu da istemcilerden gelen istekleri üstlenir.  
   
 <a name="AutomationProviderConcepts"></a>   
-## <a name="ui-automation-provider-concepts"></a>UI Automation Provider Concepts  
- This section provides brief explanations of some of the key concepts you need to understand in order to implement UI Automation providers.  
+## <a name="ui-automation-provider-concepts"></a>UI Otomasyon sağlayıcısı kavramları  
+ Bu bölüm, UI Otomasyon sağlayıcılarını uygulamak için anlamanız gereken bazı temel kavramların kısa açıklamalarını sunmaktadır.  
   
 ### <a name="elements"></a>Öğeler  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements are pieces of [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] that are visible to UI Automation clients. Examples include application windows, panes, buttons, tooltips, list boxes, and list items.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğeler, UI Otomasyonu istemcilerinin görebileceği [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] parçalardır. Örnek olarak uygulama pencereleri, bölmeler, düğmeler, araç ipuçları, liste kutuları ve liste öğeleri bulunur.  
   
-### <a name="navigation"></a>Gezinti  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements are exposed to clients as a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] constructs the tree by navigating from one element to another. Navigation is enabled by the providers for each element, each of which may point to a parent, siblings, and children.  
+### <a name="navigation"></a>Gezinme  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğeler, istemcilere bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı olarak sunulur. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bir öğeden diğerine giderek ağacı oluşturur. Gezinti, her biri bir üst, eşdüzey öğe ve alt öğeye işaret eden her öğe için sağlayıcılar tarafından etkinleştirilir.  
   
- For more information on the client view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](ui-automation-tree-overview.md).  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının istemci görünümü hakkında daha fazla bilgi için bkz. [UI Otomasyon ağacına genel bakış](ui-automation-tree-overview.md).  
   
 ### <a name="views"></a>Görünümler  
- A client can see the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree in three principal views, as shown in the following table.  
+ İstemci, aşağıdaki tabloda gösterildiği gibi üç ana görünümde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacını görebilir.  
   
 |||  
 |-|-|  
-|Raw view|Contains all elements.|  
-|Control view|Contains elements that are controls.|  
-|Content view|Contains elements that have content.|  
+|Ham görünüm|Tüm öğeleri içerir.|  
+|Denetim görünümü|Denetimler olan öğeleri içerir.|  
+|İçerik görünümü|İçeriği olan öğeleri içerir.|  
   
- For more information on client views of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](ui-automation-tree-overview.md).  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının istemci görünümleri hakkında daha fazla bilgi için bkz. [UI Otomasyon ağacına genel bakış](ui-automation-tree-overview.md).  
   
- It is the responsibility of the provider implementation to define an element as a content element or a control element. Control elements may or may not also be content elements, but all content elements are control elements.  
+ Bu, bir öğeyi içerik öğesi veya denetim öğesi olarak tanımlamak için sağlayıcı uygulamasının sorumluluğundadır. Denetim öğeleri de içerik öğeleri olabilir veya olmayabilir, ancak tüm içerik öğeleri denetim öğeleridir.  
   
 ### <a name="frameworks"></a>Çerçeveler  
- A framework is a component that manages child controls, hit-testing, and rendering in an area of the screen. For example, a [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] window, often referred to as an HWND, can serve as a framework that contains multiple [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements such as a menu bar, a status bar, and buttons.  
+ Çerçeve, ekranın bir alanında alt denetimleri, isabet sınamasını ve işlemeyi yöneten bir bileşendir. Örneğin, genellikle HWND olarak anılan [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] bir pencere, bir menü çubuğu, bir durum çubuğu ve düğmeler gibi birden çok [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğesi içeren bir çerçeve işlevi görebilir.  
   
- [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] container controls such as list boxes and tree views are considered to be frameworks, because they contain their own code for rendering child items and performing hit-testing on them. By contrast, a [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] list box is not a framework, because the rendering and hit-testing is being handled by the containing [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] window.  
+ liste kutuları ve ağaç görünümleri gibi [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] kapsayıcı denetimleri, alt öğeleri işlemek ve bunlar üzerinde isabet testi gerçekleştirmek için kendi kodlarını içerdiğinden çerçeveler olarak kabul edilir. Bunun aksine, bir [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] liste kutusu çerçeve değildir, çünkü işleme ve isabet testi içeren [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] pencere tarafından işlenir.  
   
- The [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] in an application can be made up of different frameworks. For example, an HWND application window might contain Dynamic HTML (DHTML) which in turn contains a component such as a combo box in an HWND.  
+ Bir uygulamadaki [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] farklı çerçevelerden oluşabilir. Örneğin, bir HWND uygulama penceresi, bir HWND içindeki Birleşik giriş kutusu gibi bir bileşeni içeren dinamik HTML (DHTML) içerebilir.  
   
 ### <a name="fragments"></a>Parçalar  
- A fragment is a complete subtree of elements from a particular framework. The element at the root node of the subtree is called a fragment root. A fragment root does not have a parent, but is hosted within some other framework, usually a [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] window (HWND).  
+ Bir parça, belirli bir çerçeveden öğelerin tüm alt ağaclarından oluşur. Alt ağacın kök düğümündeki öğesine bir parça kökü denir. Bir parça kökünün bir üst öğesi yoktur, ancak genellikle bir [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] pencere (HWND) gibi başka bir çerçeve içinde barındırılır.  
   
-### <a name="hosts"></a>Hosts  
- The root node of every fragment must be hosted in an element, usually a [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] window (HWND). The exception is the desktop, which is not hosted in any other element. The host of a custom control is the HWND of the control itself, not the application window or any other window that might contain groups of top-level controls.  
+### <a name="hosts"></a>Konaklar  
+ Her parçanın kök düğümü, genellikle bir [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] penceresinde (HWND) bir öğede barındırılmalıdır. Özel durum, başka bir öğede barındırılmayan masaüsttür. Özel bir denetimin Konağı, uygulama penceresi veya üst düzey denetim grupları içerebilen herhangi bir pencere değil, denetimin kendisidir.  
   
- The host of a fragment plays an important role in providing [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] services. It enables navigation to the fragment root, and supplies some default properties so that the custom provider does not have to implement them.  
+ Bir parçanın ana bilgisayarı [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] hizmetleri sağlamak için önemli bir rol oynar. Parça köküne gezinmeyi sağlar ve özel sağlayıcının bunları uygulamak zorunda kalmaması için bazı varsayılan özellikleri sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -16,56 +16,56 @@ ms.locfileid: "74350368"
 ---
 # <a name="myforms-object"></a>My.Forms Nesnesi
 
-Provides properties for accessing an instance of each Windows form declared in the current project.
+Geçerli projede belirtilen her bir Windows formunun örneğine erişim için özellikler sağlar.
 
 ## <a name="remarks"></a>Açıklamalar
 
-The `My.Forms` object provides an instance of each form in the current project. The name of the property is the same as the name of the form that the property accesses.
+`My.Forms` nesnesi, geçerli projede her formun bir örneğini sağlar. Özelliğin adı, özelliğin eriştiği form adıyla aynıdır.
 
-You can access the forms provided by the `My.Forms` object by using the name of the form, without qualification. Because the property name is the same as the form's type name, this allows you to access a form as if it had a default instance. For example, `My.Forms.Form1.Show` is equivalent to `Form1.Show`.
+`My.Forms` nesnesi tarafından sunulan formlara, nitelik olmadan formun adını kullanarak erişebilirsiniz. Özellik adı formun tür adıyla aynı olduğundan, bir forma varsayılan bir örnek olsa da erişmenize izin verir. Örneğin, `My.Forms.Form1.Show` `Form1.Show`eşdeğerdir.
 
-The `My.Forms` object exposes only the forms associated with the current project. It does not provide access to forms declared in referenced DLLs. To access a form that a DLL provides, you must use the qualified name of the form, written as *DllName*.*FormName*.
+`My.Forms` nesnesi yalnızca geçerli projeyle ilişkili formları kullanıma sunar. Başvurulan DLL 'lerde belirtilen formlara erişim sağlamaz. Bir DLL 'nin sağladığı bir forma erişmek için, formun adı dll olarak *yazılmış şekilde tam*adını kullanmanız gerekir. *FormName*.
 
-You can use the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> property to get a collection of all the application's open forms.
+Tüm uygulamaların açık formlarının bir koleksiyonunu almak için <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> özelliğini kullanabilirsiniz.
 
-The object and its properties are available only for Windows applications.
+Nesnesi ve özellikleri yalnızca Windows uygulamaları için kullanılabilir.
 
 ## <a name="properties"></a>Özellikler
 
-Each property of the `My.Forms` object provides access to an instance of a form in the current project. The name of the property is the same as the name of the form that the property accesses, and the property type is the same as the form's type.
+`My.Forms` nesnesinin her özelliği, geçerli projedeki bir form örneğine erişim sağlar. Özelliğin adı, özelliğin eriştiği form adı ile aynıdır ve özellik türü formun türü ile aynıdır.
 
 > [!NOTE]
-> If there is a name collision, the property name to access a form is *RootNamespace*_*Namespace*\_*FormName*. For example, consider two forms named `Form1.`If one of these forms is in the root namespace `WindowsApplication1` and in the namespace `Namespace1`, you would access that form through `My.Forms.WindowsApplication1_Namespace1_Form1`.
+> Ad çakışması varsa, bir forma erişmek için özellik adı,\_*FormName*adlı *RootNamespace*_*ad* alanıdır. Örneğin, bu formlardan biri kök ad alanında `WindowsApplication1` ve ad alanı `Namespace1``Form1.`adlı iki formu göz önünde bulundurun. Bu forma `My.Forms.WindowsApplication1_Namespace1_Form1`aracılığıyla erişebilirsiniz.
 
-The `My.Forms` object provides access to the instance of the application's main form that was created on startup. For all other forms, the `My.Forms` object creates a new instance of the form when it is accessed and stores it. Subsequent attempts to access that property return that instance of the form.
+`My.Forms` nesnesi, başlangıçta oluşturulan uygulamanın ana formunun örneğine erişim sağlar. Tüm diğer formlar için `My.Forms` nesnesi, erişildiğinde formun yeni bir örneğini oluşturur ve depolar. Bu özelliğe daha sonra erişme girişimleri, formun bu örneğini döndürür.
 
-You can dispose of a form by assigning `Nothing` to the property for that form. The property setter calls the <xref:System.Windows.Forms.Form.Close%2A> method of the form, and then assigns `Nothing` to the stored value. If you assign any value other than `Nothing` to the property, the setter throws an <xref:System.ArgumentException> exception.
+Bu formun özelliğine `Nothing` atayarak formu atabilirsiniz. Özellik ayarlayıcısı, formun <xref:System.Windows.Forms.Form.Close%2A> yöntemini çağırır ve sonra depolanan değere `Nothing` atar. Özelliğe `Nothing` dışında herhangi bir değer atarsanız, ayarlayıcı bir <xref:System.ArgumentException> özel durumu oluşturur.
 
-You can test whether a property of the `My.Forms` object stores an instance of the form by using the `Is` or `IsNot` operator. You can use those operators to check if the value of the property is `Nothing`.
+`My.Forms` nesnesinin bir özelliğinin, `Is` veya `IsNot` işlecini kullanarak formun bir örneğini depolayıp depoladığını test edebilirsiniz. Bu işleçleri, özelliğin değerinin `Nothing`olup olmadığını denetlemek için kullanabilirsiniz.
 
 > [!NOTE]
-> Typically, the `Is` or `IsNot` operator has to read the value of the property to perform the comparison. However, if the property currently stores `Nothing`, the property creates a new instance of the form and then returns that instance. However, the Visual Basic compiler treats the properties of the `My.Forms` object differently and allows the `Is` or `IsNot` operator to check the status of the property without altering its value.
+> Genellikle, `Is` veya `IsNot` işleci, karşılaştırmayı gerçekleştirmek için özelliğinin değerini okumalı. Ancak, özelliği şu anda `Nothing`depoluyorsa, özelliği formun yeni bir örneğini oluşturur ve sonra bu örneği döndürür. Ancak, Visual Basic derleyici `My.Forms` nesnesinin özelliklerini farklı şekilde değerlendirir ve `Is` ya da `IsNot` işlecinin değeri değiştirmeden özelliğin durumunu denetlemesini sağlar.
 
 ## <a name="example"></a>Örnek
 
-This example changes the title of the default `SidebarMenu` form.
+Bu örnek, varsayılan `SidebarMenu` formun başlığını değiştirir.
 
 [!code-vb[VbVbalrMyForms#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyForms/VB/Class1.vb#2)]
 
-For this example to work, your project must have a form named `SidebarMenu`.
+Bu örneğin çalışması için, projenizin `SidebarMenu`adlı bir formu olması gerekir.
 
-This code will work only in a Windows Application project.
+Bu kod, yalnızca bir Windows uygulama projesinde çalışır.
 
 ## <a name="requirements"></a>Gereksinimler
 
 ### <a name="availability-by-project-type"></a>Proje Türüne Göre Kullanılabilirlik
 
-|Project type|Kullanılabilir|
+|Proje türü|Kullanılabilir|
 |---|---|
-|Windows Application|**Yes**|
+|Windows uygulaması|**Yes**|
 |Sınıf Kitaplığı|Hayır|
 |Konsol Uygulaması|Hayır|
-|Windows Control Library|Hayır|
+|Windows Denetim Kitaplığı|Hayır|
 |Web Denetim Kitaplığı|Hayır|
 |Windows Hizmeti|Hayır|
 |Web Sitesi|Hayır|

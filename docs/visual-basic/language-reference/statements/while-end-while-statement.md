@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352745"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While Deyimi (Visual Basic)
-Runs a series of statements as long as a given condition is `True`.  
+Belirli bir koşul `True`olduğu sürece bir dizi deyim çalıştırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,49 +35,49 @@ End While
   
 |Terim|Tanım|  
 |---|---|  
-|`condition`|Gerekli. `Boolean` expression. If `condition` is `Nothing`, Visual Basic treats it as `False`.|  
-|`statements`|İsteğe bağlı. One or more statements following `While`, which run every time `condition` is `True`.|  
-|`Continue While`|İsteğe bağlı. Transfers control to the next iteration of the `While` block.|  
-|`Exit While`|İsteğe bağlı. Transfers control out of the `While` block.|  
-|`End While`|Gerekli. Terminates the definition of the `While` block.|  
+|`condition`|Gerekli. `Boolean` ifadesi. `condition` `Nothing`, Visual Basic `False`olarak değerlendirir.|  
+|`statements`|İsteğe bağlı. `While`aşağıdaki `condition` her seferinde çalışan bir veya daha fazla deyim `True`.|  
+|`Continue While`|İsteğe bağlı. Denetimi `While` bloğunun bir sonraki yinelemesine aktarır.|  
+|`Exit While`|İsteğe bağlı. `While` bloğunun denetimini aktarır.|  
+|`End While`|Gerekli. `While` bloğunun tanımını sonlandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Use a `While...End While` structure when you want to repeat a set of statements an indefinite number of times, as long as a condition remains `True`. If you want more flexibility with where you test the condition or what result you test it for, you might prefer the [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md). If you want to repeat the statements a set number of times, the [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md) is usually a better choice.  
+ Bir koşulun bir kümesini sınırsız sayıda yinelemek istediğinizde, bir koşul `True`kaldığı sürece bir `While...End While` yapısını kullanın. Koşulu test ettiğiniz veya ne sonuçla test ettiğiniz hakkında daha fazla esneklik istiyorsanız [Do... seçeneğini tercih edebilirsiniz. Loop deyimleri](../../../visual-basic/language-reference/statements/do-loop-statement.md). Deyimlerini bir dizi defa yinelemek istiyorsanız, [için... Sonraki Ifade](../../../visual-basic/language-reference/statements/for-next-statement.md) genellikle daha iyi bir seçimdir.  
   
 > [!NOTE]
-> The `While` keyword is also used in the [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md), the [Skip While Clause](../../../visual-basic/language-reference/queries/skip-while-clause.md) and the [Take While Clause](../../../visual-basic/language-reference/queries/take-while-clause.md).  
+> `While` anahtar sözcüğü de [Do... içinde kullanılır. Loop deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md), [Skip While yan tümcesi](../../../visual-basic/language-reference/queries/skip-while-clause.md) ve [Take While yan tümcesi](../../../visual-basic/language-reference/queries/take-while-clause.md).  
   
- If `condition` is `True`, all of the `statements` run until the `End While` statement is encountered. Control then returns to the `While` statement, and `condition` is again checked. If `condition` is still `True`, the process is repeated. If it’s `False`, control passes to the statement that follows the `End While` statement.  
+ `condition` `True`, `statements` `End While` ifadesiyle karşılaşana kadar çalışır. Sonra Denetim `While` ifadeye döner ve `condition` yeniden denetlenir. `condition` hala `True`, işlem tekrarlanır. `False`, denetim `End While` bildirisini izleyen ifadeye geçer.  
   
- The `While` statement always checks the condition before it starts the loop. Looping continues while the condition remains `True`. If `condition` is `False` when you first enter the loop, it doesn’t run even once.  
+ `While` ifade, döngüyü başlamadan önce her zaman koşulu kontrol eder. Koşul `True`kaldığı sürece döngü devam eder. Döngüyü ilk girdiğinizde `condition` `False` bir kez çalışmaz.  
   
- The `condition` usually results from a comparison of two values, but it can be any expression that evaluates to a [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md) value (`True` or `False`). This expression can include a value of another data type, such as a numeric type, that has been converted to `Boolean`.  
+ `condition` genellikle iki değerin karşılaştırılmasının sonucunu verir, ancak [Boolean veri türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md) değeri (`True` veya `False`) değerlendirilen herhangi bir ifade olabilir. Bu ifade, `Boolean`dönüştürülmüş bir sayısal tür gibi başka bir veri türünün değerini içerebilir.  
   
- You can nest `While` loops by placing one loop within another. You can also nest different kinds of control structures within one another. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
+ Bir döngüyü diğerinin içine yerleştirerek `While` döngüleri iç içe geçirebilirsiniz. Ayrıca, farklı türlerde denetim yapılarını bir diğeri içinde iç içe geçirebilirsiniz. Daha fazla bilgi için bkz. [Iç Içe denetim yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
-## <a name="exit-while"></a>Exit While  
- The [Exit While](../../../visual-basic/language-reference/statements/exit-statement.md) statement can provide another way to exit a `While` loop. `Exit While` immediately transfers control to the statement that follows the `End While` statement.  
+## <a name="exit-while"></a>Çıkış sırasında çıkış  
+ [Exit While](../../../visual-basic/language-reference/statements/exit-statement.md) deyimleri `While` döngüsünden çıkmak için başka bir yol sağlayabilir. `Exit While`, denetimi hemen `End While` bildirisini izleyen deyime aktarır.  
   
- You typically use `Exit While` after some condition is evaluated (for example, in an `If...Then...Else` structure). You might want to exit a loop if you detect a condition that makes it unnecessary or impossible to continue iterating, such as an erroneous value or a termination request. You can use `Exit While` when you test for a condition that could cause an *endless loop*, which is a loop that could run an extremely large or even infinite number of times. You can then use `Exit While` to escape the loop.  
+ Genellikle `Exit While` bir koşul hesaplandıktan sonra (örneğin, bir `If...Then...Else` yapısında) kullanılır. Hatalı bir değer veya sonlandırma isteği gibi yineleme işleminin devam etmesi için gereksiz veya imkansız hale getiren bir koşul tespit ederseniz bir döngüden çıkmak isteyebilirsiniz. Sonsuz *döngüye*neden olabilecek bir durum için test ettiğinizde `Exit While` kullanabilirsiniz. Bu, son derece büyük veya hatta sonsuz bir sayı çalışabilen bir döngüdür. Sonra döngüyü atlamak için `Exit While` kullanabilirsiniz.  
   
- You can place any number of `Exit While` statements anywhere in the `While` loop.  
+ Herhangi bir sayıda `Exit While` deyimi `While` döngüsünde yerleştirebilirsiniz.  
   
- When used within nested `While` loops, `Exit While` transfers control out of the innermost loop and into the next higher level of nesting.  
+ İç içe geçmiş `While` döngüleri içinde kullanıldığında, `Exit While` denetimi en içteki döngüden ve sonraki daha yüksek iç içe geçme düzeyine aktarır.  
   
- The `Continue While` statement immediately transfers control to the next iteration of the loop. For more information, see [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md).  
+ `Continue While` deyimleri, denetimi hemen döngüsünün bir sonraki yinelemesine aktarır. Daha fazla bilgi için bkz. [Continue bildirisi](../../../visual-basic/language-reference/statements/continue-statement.md).  
   
 ## <a name="example"></a>Örnek  
- In the following example, the statements in the loop continue to run until the `index` variable is greater than 10.  
+ Aşağıdaki örnekte, döngü içindeki deyimler `index` değişkeni 10 ' dan büyük olana kadar çalışmaya devam eder.  
   
  [!code-vb[VbVbalrStatements#171](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#171)]  
   
 ## <a name="example"></a>Örnek  
- The following example illustrates the use of the `Continue While` and `Exit While` statements.  
+ Aşağıdaki örnekte `Continue While` ve `Exit While` deyimlerinin kullanımı gösterilmektedir.  
   
  [!code-vb[VbVbalrStatements#172](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#172)]  
   
 ## <a name="example"></a>Örnek  
- The following example reads all lines in a text file. The <xref:System.IO.File.OpenText%2A> method opens the file and returns a <xref:System.IO.StreamReader> that reads the characters. In the `While` condition, the <xref:System.IO.StreamReader.Peek%2A> method of the `StreamReader` determines whether the file contains additional characters.  
+ Aşağıdaki örnek bir metin dosyasındaki tüm satırları okur. <xref:System.IO.File.OpenText%2A> yöntemi dosyayı açar ve karakterleri okuyan bir <xref:System.IO.StreamReader> döndürür. `While` koşulunda, `StreamReader` <xref:System.IO.StreamReader.Peek%2A> yöntemi dosyanın ek karakterler içerip içermediğini belirler.  
   
  [!code-vb[VbVbalrStatements#173](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#173)]  
   

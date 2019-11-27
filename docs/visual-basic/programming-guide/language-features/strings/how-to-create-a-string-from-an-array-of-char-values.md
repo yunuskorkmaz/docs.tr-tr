@@ -13,18 +13,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344394"
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>Nasıl yapılır: Karakter Değerleri Dizisinden Bir Dize Oluşturma (Visual Basic)
-This example creates the string "abcd" from individual characters.  
+Bu örnek, bağımsız karakterlerden "abcd" dizesini oluşturur.  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbVbalrStrings#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#61)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- This method has no special requirements.  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu yöntemin özel gereksinimleri yoktur.  
   
- The syntax `"a"c`, where a single `c` follows a single character in quotation marks, is used to create a character literal.  
+ Tek bir `c` tek bir karakteri tırnak işaretleri içinde izleyen `"a"c`sözdizimi, bir karakter sabit değeri oluşturmak için kullanılır.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Null characters (equivalent to `Chr(0)`) in the string lead to unexpected results when using the string. The null character will be included with the string, but characters following the null character will not be displayed in some situations.  
+ Dizedeki null karakterler (`Chr(0)`eşdeğerdir), dize kullanılırken beklenmeyen sonuçlara yol açabilir. Dize ile null karakter dahil edilecek, ancak null karakteri izleyen karakterler bazı durumlarda görüntülenmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

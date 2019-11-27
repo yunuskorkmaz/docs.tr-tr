@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448487"
 ---
 # <a name="ibindingdisplayinitializeforprocess-method"></a>IBindingDisplay::InitializeForProcess Yöntemi
-Initializes the [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) object.  
+[IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) nesnesini başlatır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,19 +35,19 @@ HRESULT InitializeForProcess (
   
 ## <a name="parameters"></a>Parametreler  
  `pid`  
- [in] The process identifier.  
+ 'ndaki İşlem tanımlayıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The debugger calls the `InitializeForProcess` method at creation time to initialize the binding display. `InitializeForProcess` must be called at creation time before any other method on `IBindingDisplay` is called.  
+ Hata ayıklayıcı, bağlama görüntüsünü başlatmak için oluşturma sırasında `InitializeForProcess` yöntemini çağırır. `InitializeForProcess`, `IBindingDisplay` başka herhangi bir yöntem çağrılmadan önce oluşturulma zamanında çağrılmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** BindingDisplay.h  
+ **Üst bilgi:** BindingDisplay. h  
   
- **Library:** BindingDisplay.idl  
+ **Kitaplık:** BindingDisplay. IDL  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

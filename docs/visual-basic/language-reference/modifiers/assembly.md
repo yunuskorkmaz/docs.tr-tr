@@ -18,16 +18,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351643"
 ---
 # <a name="assembly-visual-basic"></a>Derleme (Visual Basic)
-Specifies that an attribute at the beginning of a source file applies to the entire assembly.  
+Kaynak dosyanın başındaki bir özniteliğin tüm derleme için geçerli olduğunu belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Many attributes pertain to an individual programming element, such as a class or property. You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.  
+ Birçok öznitelik, sınıf veya özellik gibi tek bir programlama öğesiyle ilgilidir. Bu tür bir özniteliği, bir öznitelik bloğunu, açılı ayraç (`< >`) içinde doğrudan bildirim bildirimine ekleyerek uygularsınız.  
   
- If an attribute pertains not only to the following element but to the entire assembly, you place the attribute block at the beginning of the source file and identify the attribute with the `Assembly` keyword. If it applies to the current assembly module, you use the [Module](../../../visual-basic/language-reference/modifiers/module-keyword.md) keyword.  
+ Bir öznitelik yalnızca aşağıdaki öğeye, ancak tüm derlemeye ait değilse, öznitelik bloğunu kaynak dosyanın başlangıcına yerleştirmiş ve özniteliği `Assembly` anahtar sözcüğüyle belirlersiniz. Geçerli derleme modülü için geçerliyse [Modül](../../../visual-basic/language-reference/modifiers/module-keyword.md) anahtar sözcüğünü kullanırsınız.  
   
- You can also apply an attribute to an assembly in the AssemblyInfo.vb file, in which case you do not have to use an attribute block in your main source-code file.  
+ Ayrıca, AssemblyInfo. vb dosyasındaki bir derlemeye bir özniteliği uygulayabilirsiniz, bu durumda ana kaynak kodu dosyanızda bir öznitelik bloğunu kullanmak zorunda değilsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Module \<keyword>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
-- [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Modül \<anahtar sözcüğü >](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+- [Özniteliklere genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)

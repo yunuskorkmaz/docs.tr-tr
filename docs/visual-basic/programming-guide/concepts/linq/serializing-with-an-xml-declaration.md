@@ -9,16 +9,16 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350627"
 ---
-# <a name="serializing-with-an-xml-declaration-visual-basic"></a>Serializing with an XML Declaration (Visual Basic)
-This topic describes how to control whether serialization generates an XML declaration.  
+# <a name="serializing-with-an-xml-declaration-visual-basic"></a>XML bildirimiyle serileştirme (Visual Basic)
+Bu konu, serileştirme 'in bir XML bildirimi oluşturup oluşturmayacağını nasıl denetleneceğini açıklar.  
   
-## <a name="xml-declaration-generation"></a>XML Declaration Generation  
- Serializing to a <xref:System.IO.File> or a <xref:System.IO.TextWriter> using the <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> method or the <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> method generates an XML declaration. When you serialize to an <xref:System.Xml.XmlWriter>, the writer settings (specified in an <xref:System.Xml.XmlWriterSettings> object) determine whether an XML declaration is generated or not.  
+## <a name="xml-declaration-generation"></a>XML bildirimi oluşturma  
+ <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> yöntemi veya <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> yöntemi kullanılarak bir <xref:System.IO.File> veya <xref:System.IO.TextWriter> serileştirilmesi bir XML bildirimi oluşturur. Bir <xref:System.Xml.XmlWriter>seri hale getirmek istediğinizde, yazıcı ayarları (bir <xref:System.Xml.XmlWriterSettings> nesnesinde belirtilen) bir XML bildiriminin oluşturulup oluşturulmayacağını belirtir.  
   
- If you are serializing to a string using the `ToString` method, the resulting XML will not include an XML declaration.  
+ `ToString` yöntemini kullanarak bir dizeye serileştirilirsiniz, sonuçta elde edilen XML bir XML bildirimi içermez.  
   
 ### <a name="serializing-with-an-xml-declaration"></a>XML Bildirimi ile Serileştirme  
- The following example creates an <xref:System.Xml.Linq.XElement>, saves the document to a file, and then prints the file to the console:  
+ Aşağıdaki örnek bir <xref:System.Xml.Linq.XElement>oluşturur, belgeyi bir dosyaya kaydeder ve sonra dosyayı konsola yazdırır:  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -29,7 +29,7 @@ Dim str As String = File.ReadAllText("Root.xml")
 Console.WriteLine(str)  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -38,8 +38,8 @@ Console.WriteLine(str)
 </Root>  
 ```  
   
-### <a name="serializing-without-an-xml-declaration"></a>Serializing without an XML Declaration  
- The following example shows how to save an <xref:System.Xml.Linq.XElement> to an <xref:System.Xml.XmlWriter>.  
+### <a name="serializing-without-an-xml-declaration"></a>XML bildirimi olmadan serileştirme  
+ Aşağıdaki örnekte, bir <xref:System.Xml.Linq.XElement> <xref:System.Xml.XmlWriter>nasıl kaydedileceği gösterilmektedir.  
   
 ```vb  
 Dim sb As StringBuilder = New StringBuilder()  
@@ -55,7 +55,7 @@ End Using
 Console.WriteLine(sb.ToString())  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root><Child>child content</Child></Root>  
@@ -63,4 +63,4 @@ Console.WriteLine(sb.ToString())
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Serializing XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [XML ağaçlarını serileştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

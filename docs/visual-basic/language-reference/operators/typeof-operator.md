@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350887"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf İşleci (Visual Basic)
-Checks whether the runtime type of an expression's result is type-compatible with the specified type.
+Bir ifadenin sonucunun çalışma zamanı türünün belirtilen türle tür uyumlu olup olmadığını denetler.
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,39 +34,39 @@ result = TypeOf objectexpression IsNot typename
   
 ## <a name="parts"></a>Bölümler  
  `result`  
- Returned. A `Boolean` value.  
+ Döndürüldüğünde. Bir `Boolean` değeri.  
   
  `objectexpression`  
- Gerekli. Any expression that evaluates to a reference type.  
+ Gerekli. Bir başvuru türü değerlendirilen herhangi bir ifade.  
   
  `typename`  
- Gerekli. Any data type name.  
+ Gerekli. Herhangi bir veri türü adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `TypeOf` operator determines whether the run-time type of `objectexpression` is compatible with `typename`. The compatibility depends on the type category of `typename`. The following table shows how compatibility is determined.  
+ `TypeOf` işleci, `objectexpression` çalışma zamanı türünün `typename`uyumlu olup olmadığını belirler. Uyumluluk `typename`türü kategorisine bağlıdır. Aşağıdaki tabloda uyumluluğun nasıl belirlendiği gösterilmektedir.  
   
-|Type category of `typename`|Compatibility criterion|  
+|`typename` kategorisi türü|Uyumluluk ölçütü|  
 |---------------------------------|-----------------------------|  
-|örneği|`objectexpression` is of type `typename` or inherits from `typename`|  
-|Yapı|`objectexpression` is of type `typename`|  
-|Arabirim|`objectexpression` implements `typename` or inherits from a class that implements `typename`|  
+|Sınıf|`objectexpression` `typename` veya `typename` devralınıyor|  
+|Yapı|`objectexpression` türü `typename`|  
+|Arabirim|`objectexpression`, `typename` uygular veya `typename` uygulayan bir sınıftan devralır|  
   
- If the run-time type of `objectexpression` satisfies the compatibility criterion, `result` is `True`. Otherwise, `result` is `False`.  If `objectexpression` is null, then `TypeOf`...`Is` returns `False`, and ...`IsNot` returns `True`.  
+ `objectexpression` çalışma zamanı türü uyumluluk ölçütünü karşılıyorsa `result` `True`. Aksi takdirde, `result` `False`.  `objectexpression` null ise, `TypeOf`...`Is` `False`döndürür ve...`IsNot` `True`döndürür.  
   
- `TypeOf` is always used with the `Is` keyword to construct a `TypeOf`...`Is` expression, or with the `IsNot` keyword to construct a `TypeOf`...`IsNot` expression.  
+ `TypeOf` her zaman bir `TypeOf`...`Is` ifadesi oluşturmak için `Is` anahtar sözcüğüyle veya `IsNot`... `TypeOf`ifadesi oluşturmak için`IsNot` anahtar sözcüğüyle birlikte kullanılır.  
   
 ## <a name="example"></a>Örnek  
- The following example uses `TypeOf`...`Is` expressions to test the type compatibility of two object reference variables with various data types.  
+ Aşağıdaki örnek, çeşitli veri türleriyle iki nesne başvuru değişkenlerinin tür uyumluluğunu test etmek için `TypeOf`...`Is` ifadelerini kullanır.  
   
  [!code-vb[VbVbalrOperators#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#39)]  
   
- The variable `refInteger` has a run-time type of `Integer`. It is compatible with `Integer` but not with `Double`. The variable `refForm` has a run-time type of <xref:System.Windows.Forms.Form>. It is compatible with <xref:System.Windows.Forms.Form> because that is its type, with <xref:System.Windows.Forms.Control> because <xref:System.Windows.Forms.Form> inherits from <xref:System.Windows.Forms.Control>, and with <xref:System.ComponentModel.IComponent> because <xref:System.Windows.Forms.Form> inherits from <xref:System.ComponentModel.Component>, which implements <xref:System.ComponentModel.IComponent>. However, `refForm` is not compatible with <xref:System.Windows.Forms.Label>.  
+ `refInteger` değişken `Integer`çalışma zamanı türüne sahiptir. `Integer` ile uyumludur, ancak `Double`değildir. `refForm` değişken <xref:System.Windows.Forms.Form>çalışma zamanı türüne sahiptir. <xref:System.Windows.Forms.Form> ile uyumludur çünkü bu, <xref:System.Windows.Forms.Form> <xref:System.Windows.Forms.Control>devraldığından ve <xref:System.ComponentModel.IComponent> <xref:System.Windows.Forms.Form> uygulayan <xref:System.ComponentModel.Component>devraldığından <xref:System.ComponentModel.IComponent>ile <xref:System.Windows.Forms.Control>. Ancak, `refForm` <xref:System.Windows.Forms.Label>uyumlu değildir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Is İşleci](../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot İşleci](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic karşılaştırma Işleçleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

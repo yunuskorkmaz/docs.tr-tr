@@ -16,15 +16,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352455"
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te Bir Dizeyi Karakter Dizilerine Dönüştürme
-Sometimes it is useful to have data about the characters in your string and the positions of those characters within your string, such as when you are parsing a string. This example shows how you can get an array of the characters in a string by calling the string's <xref:System.String.ToCharArray%2A> method.  
+Bazen dizinizdeki karakterlerle ilgili verilerin ve dizinizdeki karakterlerin (örneğin, bir dizeyi ayrıştırırken) bulunduğu konumlarda olması yararlı olur. Bu örnekte, dizenin <xref:System.String.ToCharArray%2A> yöntemini çağırarak bir dizedeki karakterlerin dizisini nasıl alabileceğiniz gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- This example demonstrates how to split a string into a `Char` array, and how to split a string into a `String` array of its Unicode text characters. The reason for this distinction is that Unicode text characters can be composed of two or more `Char` characters (such as a surrogate pair or a combining character sequence). For more information, see <xref:System.Globalization.TextElementEnumerator> and [The Unicode Standard](https://www.unicode.org/standard/standard.html).  
+ Bu örnek, bir dizenin bir `Char` dizisine nasıl bölüneceği ve bir dizenin Unicode metin karakterlerinin `String` dizisine nasıl bölüneceği gösterir. Bu farkın nedeni, Unicode metin karakterlerinin iki veya daha fazla `Char` karakterden (bir vekil çifti veya Birleşik karakter dizisi gibi) oluşmasının nedenidir. Daha fazla bilgi için bkz. <xref:System.Globalization.TextElementEnumerator> ve [Unicode standart](https://www.unicode.org/standard/standard.html).  
   
  [!code-vb[VbVbalrStrings#75](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class4.vb#75)]  
   
 ## <a name="example"></a>Örnek  
- It is more difficult to split a string into its Unicode text characters, but this is necessary if you need information about the visual representation of a string. This example uses the <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> method to get information about the Unicode text characters that make up a string.  
+ Bir dizeyi Unicode metin karakterlerine bölmek daha zordur, ancak bir dizenin görsel temsili hakkında bilgi gerekirse bu gereklidir. Bu örnek, bir dizeyi oluşturan Unicode metin karakterleri hakkında bilgi almak için <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> yöntemini kullanır.  
   
  [!code-vb[VbVbalrStrings#76](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class4.vb#76)]  
   
@@ -33,5 +33,5 @@ Sometimes it is useful to have data about the characters in your string and the 
 - <xref:System.String.Chars%2A>
 - <xref:System.Globalization.StringInfo?displayProperty=nameWithType>
 - [Nasıl Yapılır: Dizelerdeki Karakterlere Erişme](../../../../visual-basic/programming-guide/language-features/strings/how-to-access-characters-in-strings.md)
-- [Converting Between Strings and Other Data Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
+- [Visual Basic dizeler ve diğer veri türleri arasında dönüştürme](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
 - [Dizeler](../../../../visual-basic/programming-guide/language-features/strings/index.md)

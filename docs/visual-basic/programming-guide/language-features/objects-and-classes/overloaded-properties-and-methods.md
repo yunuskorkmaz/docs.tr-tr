@@ -1,5 +1,5 @@
 ---
-title: Overloaded properties and methods
+title: Aşırı yüklenmiş Özellikler ve Yöntemler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [Visual Basic], overloading
@@ -19,70 +19,70 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346096"
 ---
-# <a name="overloaded-properties-and-methods-visual-basic"></a>Overloaded properties and methods (Visual Basic)
+# <a name="overloaded-properties-and-methods-visual-basic"></a>Aşırı yüklenmiş Özellikler ve Yöntemler (Visual Basic)
 
-Overloading is the creation of more than one procedure, instance constructor, or property in a class with the same name but different argument types.
+Aşırı yükleme, aynı ada ancak farklı bağımsız değişken türlerine sahip bir sınıfta birden fazla yordamın, örnek oluşturucunun veya özelliğin oluşturulması.
 
-## <a name="overloading-usage"></a>Overloading usage
+## <a name="overloading-usage"></a>Kullanımı aşırı yükleme
 
-Overloading is especially useful when your object model dictates that you employ identical names for procedures that operate on different data types. For example, a class that can display several different data types could have `Display` procedures that look like this:
+Aşırı yükleme özellikle, nesne modeliniz farklı veri türlerinde çalışan yordamlar için özdeş adlar kullanmayı belirlemesi durumunda yararlıdır. Örneğin, çeşitli farklı veri türlerini görüntüleyebilen bir sınıf şuna benzer `Display` yordamlarına sahip olabilir:
 
 [!code-vb[VbVbalrOOP#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#64)]
 
-Without overloading, you would need to create distinct names for each procedure, even though they do the same thing, as shown next:
+Aşırı yükleme olmadan, her bir yordam için, daha sonra gösterildiği gibi, aynı şeyi gerçekleştirseler bile ayrı adlar oluşturmanız gerekir:
 
 [!code-vb[VbVbalrOOP#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#65)]
 
-Overloading makes it easier to use properties or methods because it provides a choice of data types that can be used. For example, the overloaded `Display` method discussed previously can be called with any of the following lines of code:
+Aşırı yükleme özelliği, kullanılabilecek bir veri türleri seçimi sağladığından özellikleri veya yöntemleri kullanmayı kolaylaştırır. Örneğin, daha önce açıklanan aşırı yüklenmiş `Display` yöntemi aşağıdaki kod satırlarıyla çağrılabilir:
 
 [!code-vb[VbVbalrOOP#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#66)]
 
-At run time, Visual Basic calls the correct procedure based on the data types of the parameters you specify.
+Çalışma zamanında, Visual Basic belirttiğiniz parametrelerin veri türlerine göre doğru yordamı çağırır.
 
-## <a name="overloading-rules"></a>Overloading rules
+## <a name="overloading-rules"></a>Kuralları aşırı yükleme
 
- You create an overloaded member for a class by adding two or more properties or methods with the same name. Except for overloaded derived members, each overloaded member must have different parameter lists, and the following items cannot be used as a differentiating feature when overloading a property or procedure:
+ Aynı ada sahip iki veya daha fazla özellik ya da yöntem ekleyerek bir sınıf için aşırı yüklenmiş bir üye oluşturursunuz. Aşırı yüklenmiş türetilmiş Üyeler hariç olmak üzere, her aşırı yüklenmiş üye farklı parametre listelerine sahip olmalıdır ve bir özellik veya yordamı aşırı yüklerken bir ayrım özelliği olarak aşağıdaki öğeler kullanılamaz:
 
-- Modifiers, such as `ByVal` or `ByRef`, that apply to a member, or parameters of the member.
+- Bir üyeye veya üyenin parametrelerine uygulanan `ByVal` veya `ByRef`gibi değiştiriciler.
 
-- Names of parameters
+- Parametrelerin adları
 
-- Return types of procedures
+- Yordamların dönüş türleri
 
-The `Overloads` keyword is optional when overloading, but if any overloaded member uses the `Overloads` keyword, then all other overloaded members with the same name must also specify this keyword.
+Aşırı yükleme sırasında `Overloads` anahtar sözcüğü isteğe bağlıdır, ancak herhangi bir aşırı yüklenmiş üye `Overloads` anahtar sözcüğünü kullanıyorsa, aynı ada sahip diğer tüm aşırı yüklenmiş Üyeler de bu anahtar sözcüğü belirtmelidir.
 
-Derived classes can overload inherited members with members that have identical parameters and parameter types, a process known as *shadowing by name and signature*. If the `Overloads` keyword is used when shadowing by name and signature, the derived class's implementation of the member will be used instead of the implementation in the base class, and all other overloads for that member will be available to instances of the derived class.
+Türetilmiş sınıflar, *ad ve imza ile gölgeleme*olarak bilinen bir işlem olan aynı parametrelere ve parametre türlerine sahip üyelere sahip devralınan üyeleri aşırı yükleyebilir. Ad ve imza ile gölgeleme sırasında `Overloads` anahtar sözcüğü kullanılırsa, türetilmiş sınıfın üyenin uygulanması temel sınıftaki uygulama yerine kullanılır ve bu üyenin diğer tüm aşırı yüklemeleri türetilmiş sınıfın örnekleri tarafından kullanılabilir.
 
-If the `Overloads` keyword is omitted when overloading an inherited member with a member that has identical parameters and parameter types, then the overloading is called *shadowing by name*. Shadowing by name replaces the inherited implementation of a member, and it makes all other overloads unavailable to instances of the derived class and its decedents.
+Aynı parametrelere ve parametre türlerine sahip bir üyeyle devralınan bir üyenin aşırı yüklemesi sırasında `Overloads` anahtar sözcüğü atlanırsa aşırı yükleme, *ada göre gölgeleme*olarak adlandırılır. Ada göre gölgeleme bir üyenin devralınmış uygulamasını değiştirir ve diğer tüm aşırı yüklemeleri türetilmiş sınıfın örneklerine ve onun decedents kullanılamaz hale getirir.
 
-The `Overloads` and `Shadows` modifiers cannot both be used with the same property or method.
+`Overloads` ve `Shadows` değiştiricileri her ikisi de aynı özellik veya yöntemle kullanılamaz.
 
 ### <a name="example"></a>Örnek
 
-The following example creates overloaded methods that accept either a `String` or `Decimal` representation of a dollar amount and return a string containing the sales tax.
+Aşağıdaki örnek, bir dolar tutarının `String` veya `Decimal` gösterimini kabul eden aşırı yüklenmiş yöntemler oluşturur ve satış vergisini içeren bir dize döndürür.
 
-#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>To use this example to create an overloaded method
+#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>Daha fazla yüklenmiş bir yöntem oluşturmak için bu örneği kullanın
 
-1. Open a new project and add a class named `TaxClass`.
+1. Yeni bir proje açın ve `TaxClass`adlı bir sınıf ekleyin.
 
-2. Add the following code to the `TaxClass` class.
+2. Aşağıdaki kodu `TaxClass` sınıfına ekleyin.
 
     [!code-vb[VbVbalrOOP#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#67)]
 
-3. Add the following procedure to your form.
+3. Formunuza aşağıdaki yordamı ekleyin.
 
     [!code-vb[VbVbalrOOP#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#68)]
 
-4. Add a button to your form and call the `ShowTax` procedure from the `Button1_Click` event of the button.
+4. Formunuza bir düğme ekleyin ve düğmenin `Button1_Click` olayından `ShowTax` yordamını çağırın.
 
-5. Run the project and click the button on the form to test the overloaded `ShowTax` procedure.
+5. Projeyi çalıştırın ve aşırı yüklenmiş `ShowTax` yordamını sınamak için formdaki düğmeye tıklayın.
 
-At run time, the compiler chooses the appropriate overloaded function that matches the parameters being used. When you click the button, the overloaded method is called first with a `Price` parameter that is a string and the message, "Price is a String. Tax is $5.12" is displayed. `TaxAmount` is called with a `Decimal` value the second time and the message, "Price is a Decimal. Tax is $5.12" is displayed.
+Çalışma zamanında, derleyici kullanılan parametrelerle eşleşen uygun aşırı yüklenmiş işlevi seçer. Düğmeye tıkladığınızda, önce aşırı yüklenmiş yöntemi bir dize ve ileti olan bir `Price` parametresiyle ilk olarak çağrılır, "Price bir dizedir. Vergi $5,12 "görüntülenir. `TaxAmount` ikinci kez bir `Decimal` değeriyle çağrılır, "Price bir Decimal olur. Vergi $5,12 "görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic gölgeleme](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Devralma Temelleri](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)

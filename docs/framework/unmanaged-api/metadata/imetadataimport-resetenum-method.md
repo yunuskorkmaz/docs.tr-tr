@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426772"
 ---
 # <a name="imetadataimportresetenum-method"></a>IMetaDataImport::ResetEnum Yöntemi
-Resets the specified enumerator to the specified position.  
+Belirtilen numaralandırıcısı belirtilen konuma sıfırlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT ResetEnum (
   
 ## <a name="parameters"></a>Parametreler  
  `hEnum`  
- [in] The enumerator to reset.  
+ 'ndaki Sıfırlanacak Numaralandırıcı.  
   
  `ulPos`  
- [in] The new position at which to place the enumerator.  
+ 'ndaki Numaralandırıcının yerleştirileceği yeni konum.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

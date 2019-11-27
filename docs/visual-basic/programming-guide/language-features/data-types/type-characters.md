@@ -43,17 +43,17 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352932"
 ---
-# <a name="type-characters-visual-basic"></a>Type characters (Visual Basic)
+# <a name="type-characters-visual-basic"></a>Tür karakterleri (Visual Basic)
 
-In addition to specifying a data type in a declaration statement, you can force the data type of some programming elements with a *type character*. The type character must immediately follow the element, with no intervening characters of any kind.
+Bir bildirim bildiriminde bir veri türü belirtmenin yanı sıra, bazı programlama öğelerinin veri türünü bir *tür karakteriyle*zorlayabilirsiniz. Tür karakteri, hiçbir türden hiçbir araya girmeden önce öğesini hemen izlemelidir.
 
-The type character is not part of the name of the element. An element defined with a type character can be referenced without the type character.
+Tür karakteri öğenin adının bir parçası değil. Tür karakteriyle tanımlanmış bir öğeye, tür karakteri olmadan başvurulabilir.
 
-## <a name="identifier-type-characters"></a>Identifier type characters
+## <a name="identifier-type-characters"></a>Tanımlayıcı türü karakterleri
 
-Visual Basic supplies a set of *identifier type characters* that you can use in a declaration to specify the data type of a variable or constant. The following table shows the available identifier type characters with examples of usage.
+Visual Basic, bir değişkenin veya sabitin veri türünü belirtmek için bir bildirimde kullanabileceğiniz *tanımlayıcı türü karakterlerinin* bir kümesini sağlar. Aşağıdaki tabloda, kullanılabilir tanımlayıcı türü karakterleri kullanım örnekleri ile gösterilmektedir.
   
-|Identifier type character|Veri türü|Örnek|  
+|Tanımlayıcı türü karakteri|Veri türü|Örnek|  
 |-------------------------------|---------------|-------------|  
 |`%`|`Integer`|`Dim L%`|  
 |`&`|`Long`|`Dim M&`|  
@@ -62,33 +62,33 @@ Visual Basic supplies a set of *identifier type characters* that you can use in 
 |`#`|`Double`|`Dim X#`|  
 |`$`|`String`|`Dim V$ = "Secret"`|  
   
- No identifier type characters exist for the `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, or `UShort` data types, or for any composite data types such as arrays or structures.
+ `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`veya `UShort` veri türleri veya diziler ya da yapılar gibi herhangi bir bileşik veri türü için tanımlayıcı türü karakterler yok.
 
-In some cases, you can append the `$` character to a Visual Basic function, for example `Left$` instead of `Left`, to obtain a returned value of type `String`.
+Bazı durumlarda, `String`türünde döndürülen bir değer elde etmek için `Left`yerine `Left$` `$` karakterini Visual Basic işlevine ekleyebilirsiniz.
 
-In all cases, the identifier type character must immediately follow the identifier name.
+Her durumda, tanımlayıcı türü karakteri tanımlayıcı adını hemen izlemelidir.
 
-## <a name="literal-type-characters"></a>Literal type characters
+## <a name="literal-type-characters"></a>Değişmez değer türü karakterleri
 
-A *literal* is a textual representation of a particular value of a data type.  
+*Değişmez* değer, bir veri türünün belirli bir değerinin metinsel gösterimidir.  
 
-### <a name="default-literal-types"></a>Default literal types
+### <a name="default-literal-types"></a>Varsayılan değişmez değer türleri
 
-The form of a literal as it appears in your code ordinarily determines its data type. The following table shows these default types.  
+Kodunuzda göründüğü gibi bir sabit değerin biçimi normalde veri türünü belirler. Aşağıdaki tabloda bu varsayılan türler gösterilmektedir.  
   
-|Textual form of literal|Default data type|Örnek|  
+|Sabit değerin metin biçimi|Varsayılan veri türü|Örnek|  
 |-----------------------------|-----------------------|-------------|  
-|Numeric, no fractional part|`Integer`|`2147483647`|  
-|Numeric, no fractional part, too large for `Integer`|`Long`|`2147483648`|  
-|Numeric, fractional part|`Double`|`1.2`|  
-|Enclosed in double quotation marks|`String`|`"A"`|  
-|Enclosed within number signs|`Date`|`#5/17/1993 9:32 AM#`|  
+|Sayısal, kesirli bölüm yok|`Integer`|`2147483647`|  
+|Sayısal, kesirli bölüm yok, `Integer` için çok büyük|`Long`|`2147483648`|  
+|Sayısal, kesirli bölüm|`Double`|`1.2`|  
+|Çift tırnak işareti içine alınmış|`String`|`"A"`|  
+|Sayı işaretleri içine alınmış|`Date`|`#5/17/1993 9:32 AM#`|  
 
-### <a name="forced-literal-types"></a>Forced literal types
+### <a name="forced-literal-types"></a>Zorunlu değişmez değer türleri
 
-Visual Basic supplies a set of *literal type characters*, which you can use to force a literal to assume a data type other than the one its form indicates. You do this by appending the character to the end of the literal. The following table shows the available literal type characters with examples of usage.
+Visual Basic değişmez değer *türü karakterleri*sağlar, bu, bir hazır değeri, kendi formu dışında bir veri türünü varsaymaya zorlamak için kullanabilirsiniz. Bu, karakteri sabit değerin sonuna ekleyerek yapabilirsiniz. Aşağıdaki tabloda, kullanılabilir değişmez değer türü karakterleri kullanım örnekleri ile gösterilmektedir.
   
-|Literal type character|Veri türü|Örnek|  
+|Değişmez değer türü karakteri|Veri türü|Örnek|  
 |----------------------------|---------------|-------------|  
 |`S`|`Short`|`I = 347S`|
 |`I`|`Integer`|`J = 347I`|
@@ -101,38 +101,38 @@ Visual Basic supplies a set of *literal type characters*, which you can use to f
 |`UL`|`ULong`|`N = 347UL`|
 |`C`|`Char`|`Q = "."C`|
 
-No literal type characters exist for the `Boolean`, `Byte`, `Date`, `Object`, `SByte`, or `String` data types, or for any composite data types such as arrays or structures.
+`Boolean`, `Byte`, `Date`, `Object`, `SByte`veya `String` veri türleri veya diziler ya da yapılar gibi herhangi bir bileşik veri türü için değişmez değer türü karakterleri yok.
 
-Literals can also use the identifier type characters (`%`, `&`, `@`, `!`, `#`, `$`), as can variables, constants, and expressions. However, the literal type characters (`S`, `I`, `L`, `D`, `F`, `R`, `C`) can be used only with literals.
+Değişmez değerler, değişkenler, sabitler ve ifadeler gibi tanımlayıcı türü karakterlerini (`%`, `&`, `@`, `!`, `#`, `$`) de kullanabilir. Ancak, değişmez değer türü karakterleri (`S`, `I`, `L`, `D`, `F`, `R`, `C`) yalnızca sabit karakterlerle kullanılabilir.
 
-In all cases, the literal type character must immediately follow the literal value.
+Her durumda, değişmez değer türü karakteri hemen sabit değeri izlemelidir.
 
-## <a name="hexadecimal-binary-and-octal-literals"></a>Hexadecimal, binary, and octal literals
+## <a name="hexadecimal-binary-and-octal-literals"></a>Onaltılık, ikili ve sekizlik sabit değerler
 
-The compiler normally interprets an integer literal to be in the decimal (base 10) number system. You can also define an integer literal as a hexadecimal (base 16) number with the `&H` prefix, as a binary (base 2) number with the `&B` prefix, and as an octal (base 8) number with the `&O` prefix. The digits that follow the prefix must be appropriate for the number system. The following table illustrates this.  
+Derleyici normalde bir tamsayı değişmez değerini ondalık (10 tabanında) sayı sisteminde olacak şekilde yorumlar. Ayrıca, bir tamsayı sabit değerini, `&H` önekiyle birlikte onaltılık (taban 16) sayı olarak, `&B` ön ekiyle bir ikili (taban 2) numara olarak ve `&O` ön ekine sahip bir Sekizli (taban 8) numarası olarak tanımlayabilirsiniz. Ön eki izleyen basamakların sayı sistemine uygun olması gerekir. Aşağıdaki tabloda bu gösterilmektedir.  
   
-|Number base|Prefix|Valid digit values|Örnek|
+|Sayı tabanı|Prefix|Geçerli basamak değerleri|Örnek|
 |-----------------|------------|------------------------|-------------|
-|Hexadecimal (base 16)|`&H`|0-9 and A-F|`&HFFFF`|
-|Binary (base 2)|`&B`|0-1|`&B01111100`|
-|Octal (base 8)|`&O`|0-7|`&O77`|
+|Onaltılı (taban 16)|`&H`|0-9 ve A-F|`&HFFFF`|
+|İkili (taban 2)|`&B`|0-1|`&B01111100`|
+|Sekizlik (taban 8)|`&O`|0-7|`&O77`|
 
-Starting in Visual Basic 2017, you can use the underscore character (`_`) as a group separator to enhance the readability of an integral literal. The following example uses the `_` character to group a binary literal into 8-bit groups:
+Visual Basic 2017 ' den başlayarak, bir integral sabit değerinin okunabilirliğini geliştirmek için alt çizgi karakterini (`_`) bir grup ayırıcısı olarak kullanabilirsiniz. Aşağıdaki örnek, bir ikili sabit değeri 8 bitlik gruplar halinde gruplamak için `_` karakterini kullanır:
 
 ```vb
 Dim number As Integer = &B00100010_11000101_11001111_11001101
 ```
 
-You can follow a prefixed literal with a literal type character. The following example shows this.
+Ön ek değişmez değerini, değişmez değer türü karakteriyle izleyebilirsiniz. Aşağıdaki örnek bunu gösterir.
 
 ```vb
 Dim counter As Short = &H8000S
 Dim flags As UShort = &H8000US
 ```
 
-In the previous example, `counter` has the decimal value of -32768, and `flags` has the decimal value of +32768.
+Önceki örnekte, `counter` ondalık değeri-32768 ve `flags` ' nin ondalık değeri + 32768 ' dir.
 
-Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. Örneğin:
+Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini (`_`) ön ek ile onaltılık, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak kullanabilirsiniz. Örneğin:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -145,7 +145,7 @@ Dim number As Integer = &H_C305_F860
 - [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic dönüşümler yazın](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)

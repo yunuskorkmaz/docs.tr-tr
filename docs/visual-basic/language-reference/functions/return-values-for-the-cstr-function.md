@@ -19,19 +19,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349997"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a>CStr İşlevinin Dönüş Değerleri (Visual Basic)
-The following table describes the return values for `CStr` for different data types of `expression`.  
+Aşağıdaki tabloda, `expression`farklı veri türleri için `CStr` için dönüş değerleri açıklanmaktadır.  
   
-|If `expression` type is|`CStr` returns|  
+|`expression` tür|`CStr` döndürür|  
 |-----------------------------|--------------------|  
-|[Boolean Veri Türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|A string containing "True" or "False".|  
-|[Date Veri Türü](../../../visual-basic/language-reference/data-types/date-data-type.md)|A string containing a `Date` value (date and time) in the short date format of your system.|  
-|[Sayısal Veri Türleri](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|A string representing the number.|  
+|[Boolean Veri Türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|"True" veya "false" içeren bir dize.|  
+|[Date Veri Türü](../../../visual-basic/language-reference/data-types/date-data-type.md)|Sisteminizin kısa tarih biçiminde bir `Date` değeri (Tarih ve saat) içeren bir dize.|  
+|[Sayısal Veri Türleri](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|Sayıyı temsil eden bir dize.|  
   
-## <a name="cstr-and-date"></a>CStr and Date  
- The `Date` type always contains both date and time information. For purposes of type conversion, Visual Basic considers 1/1/0001 (January 1 of the year 1) to be a *neutral value* for the date, and 00:00:00 (midnight) to be a neutral value for the time. `CStr` does not include neutral values in the resulting string. For example, if you convert `#January 1, 0001 9:30:00#` to a string, the result is "9:30:00 AM"; the date information is suppressed. However, the date information is still present in the original `Date` value and can be recovered with functions such as <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
+## <a name="cstr-and-date"></a>CStr ve Tarih  
+ `Date` türü her zaman hem tarih hem de saat bilgilerini içerir. Tür dönüştürme amaçları doğrultusunda Visual Basic, 1/1/0001 (yıl 1 ' den 1 ' de) tarih için nötr bir *değer* ve 00:00:00 (gece yarısı) zaman için nötr bir değer olacak şekilde değerlendirir. `CStr`, sonuçta elde edilen dizedeki nötr değerler içermez. Örneğin, `#January 1, 0001 9:30:00#` bir dizeye dönüştürürseniz, sonuç "9:30:00" olur. tarih bilgileri bastırılır. Ancak, tarih bilgileri özgün `Date` değerinde hala vardır ve <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>gibi işlevlerle kurtarılabilir.  
   
 > [!NOTE]
-> The `CStr` function performs its conversion based on the current culture settings for the application. To get the string representation of a number in a particular culture, use the number's `ToString(IFormatProvider)` method. For example, use <xref:System.Double.ToString%2A?displayProperty=nameWithType> when converting a value of type `Double` to a `String`.  
+> `CStr` işlevi, uygulamanın geçerli kültür ayarlarına bağlı olarak dönüşümünü gerçekleştirir. Belirli bir kültürdeki bir sayının dize gösterimini almak için, sayının `ToString(IFormatProvider)` yöntemini kullanın. Örneğin, `Double` türündeki bir değeri bir `String`dönüştürrken <xref:System.Double.ToString%2A?displayProperty=nameWithType> kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

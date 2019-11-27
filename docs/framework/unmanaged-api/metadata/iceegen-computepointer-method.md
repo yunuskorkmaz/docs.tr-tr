@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448748"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer Yöntemi
-Determines the buffer for the specified code section.  
+Belirtilen kod bölümünün arabelleğini belirler.  
   
- This method is obsolete and should not be used.  
+ Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +39,22 @@ HRESULT ComputePointer (
   
 ## <a name="parameters"></a>Parametreler  
  `section`  
- [in] The code section for which to return a buffer.  
+ 'ndaki Arabellek döndürülecek kod bölümü.  
   
  `RVA`  
- [in] The relative virtual address of the method for which to get a pointer.  
+ 'ndaki Bir işaretçinin alınacağı metodun göreli sanal adresi.  
   
  `lpBuffer`  
- [out] A pointer to the returned buffer.  
+ dışı Döndürülen arabelleğin işaretçisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

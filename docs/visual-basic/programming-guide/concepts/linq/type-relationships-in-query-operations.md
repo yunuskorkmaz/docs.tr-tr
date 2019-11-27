@@ -20,46 +20,46 @@ ms.locfileid: "74350560"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>LINQ Sorgu İşlemlerinde Tür İlişkileri (Visual Basic)
 
-Variables used in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query operations are strongly typed and must be compatible with each other. Strong typing is used in the data source, in the query itself, and in the query execution. The following illustration identifies terms used to describe a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. For more information about the parts of a query, see [Basic Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
+[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu işlemlerinde kullanılan değişkenler kesin olarak türdedir ve birbirleriyle uyumlu olmalıdır. Güçlü yazma, veri kaynağında, sorgunun kendisinde ve sorgu yürütmesinde kullanılır. Aşağıdaki çizimde, bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgusunu tanımlamak için kullanılan terimler tanımlanmaktadır. Bir sorgunun kısımları hakkında daha fazla bilgi için bkz. [temel sorgu işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
 
-![Screenshot showing a pseudocode query with elements highlighted.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
+![Öğeleri vurgulanmış bir sözde kod sorgusunu gösteren ekran görüntüsü.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
-The type of the range variable in the query must be compatible with the type of the elements in the data source. The type of the query variable must be compatible with the sequence element defined in the `Select` clause. Finally, the type of the sequence elements also must be compatible with the type of the loop control variable that is used in the `For Each` statement that executes the query. This strong typing facilitates identification of type errors at compile time.
+Sorgudaki aralık değişkeninin türü, veri kaynağındaki öğelerin türüyle uyumlu olmalıdır. Sorgu değişkeninin türü, `Select` yan tümcesinde tanımlanan dizi öğesiyle uyumlu olmalıdır. Son olarak, dizi öğelerinin türü sorguyu yürüten `For Each` bildiriminde kullanılan döngü denetimi değişkeninin türüyle uyumlu olmalıdır. Bu güçlü yazma, derleme zamanında tür hatalarının tanımlanmasını kolaylaştırır.
 
-Visual Basic makes strong typing convenient by implementing local type inference, also known as *implicit typing*. That feature is used in the previous example, and you will see it used throughout the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] samples and documentation. In Visual Basic, local type inference is accomplished simply by using a `Dim` statement without an `As` clause. In the following example, `city` is strongly typed as a string.
+Visual Basic, *örtülü yazma*olarak da bilinen yerel tür çıkarımı uygulayarak güçlü yazma kullanışlı hale getirir. Bu özellik önceki örnekte kullanılır ve [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] örnekleri ve belgeler boyunca bu özelliği kullanır. Visual Basic, yerel tür çıkarımı yalnızca bir `As` yan tümcesi olmadan bir `Dim` deyimi kullanılarak gerçekleştirilir. Aşağıdaki örnekte, `city` kesin bir dize olarak türdedir.
 
 [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]
 
 > [!NOTE]
-> Local type inference works only when `Option Infer` is set to `On`. For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md).
+> Yerel tür çıkarımı yalnızca `Option Infer` `On`olarak ayarlandığında kullanılır. Daha fazla bilgi için bkz. [Option Infer deyimleri](../../../../visual-basic/language-reference/statements/option-infer-statement.md).
 
-However, even if you use local type inference in a query, the same type relationships are present among the variables in the data source, the query variable, and the query execution loop. It is useful to have a basic understanding of these type relationships when you are writing [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries, or working with the samples and code examples in the documentation.
+Ancak, bir sorguda yerel tür çıkarımı kullanıyor olsanız bile, veri kaynağı, sorgu değişkeni ve sorgu yürütme döngüsünde değişkenler arasında aynı tür ilişkileri vardır. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları yazarken veya belgelerde örnek ve kod örnekleriyle çalışırken, bu tür ilişkilerle ilgili temel bilgiye sahip olmanız yararlı olur.
 
-You may need to specify an explicit type for a range variable that does not match the type returned from the data source. You can specify the type of the range variable by using an `As` clause. However, this results in an error if the conversion is a [narrowing conversion](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and `Option Strict` is set to `On`. Therefore, we recommend that you perform the conversion on the values retrieved from the data source. You can convert the values from the data source to the explicit range variable type by using the <xref:System.Linq.Enumerable.Cast%2A> method. You can also cast the values selected in the `Select` clause to an explicit type that is different from the type of the range variable. These points are illustrated in the following code.
+Veri kaynağından döndürülen türle eşleşmeyen bir Aralık değişkeni için açık bir tür belirtmeniz gerekebilir. `As` yan tümcesini kullanarak Aralık değişkeninin türünü belirtebilirsiniz. Ancak, dönüştürme bir [daraltma dönüştürmedir](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) ve `Option Strict` `On`olarak ayarlanırsa bu hata oluşur. Bu nedenle, dönüştürmeyi veri kaynağından alınan değerlerle gerçekleştirmenizi öneririz. <xref:System.Linq.Enumerable.Cast%2A> yöntemini kullanarak veri kaynağındaki değerleri açık Aralık değişkeni türüne dönüştürebilirsiniz. `Select` yan tümcesindeki seçili değerleri, Aralık değişkeninin türünden farklı bir açık türe de çevirebilirsiniz. Bu noktaları aşağıdaki kodda gösterilmiştir.
 
 [!code-vb[VbLINQTypeRels#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#4)]
 
-## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Queries That Return Entire Elements of the Source Data
+## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Kaynak verilerin tüm öğelerini döndüren sorgular
 
-The following example shows a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query operation that returns a sequence of elements selected from the source data. The source, `names`, contains an array of strings, and the query output is a sequence containing strings that start with the letter M.
+Aşağıdaki örnek, kaynak verilerden seçilen bir dizi öğeyi döndüren [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] bir sorgu işlemini gösterir. Kaynak, `names`, bir dize dizisi içerir ve sorgu çıktısı, ı harfiyle başlayan dizeleri içeren bir dizidir.
 
 [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]
 
-This is equivalent to the following code, but is much shorter and easier to write. Reliance on local type inference in queries is the preferred style in Visual Basic.
+Bu, aşağıdaki koda eşdeğerdir, ancak yazılması çok daha kısadır ve kolaydır. Sorgularda yerel tür çıkarımı, Visual Basic içinde tercih edilen stildir.
 
 [!code-vb[VbLINQTypeRels#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#3)]
 
-The following relationships exist in both of the previous code examples, whether the types are determined implicitly or explicitly.
+Aşağıdaki ilişkiler, türlerin örtük olarak mı yoksa açık olarak mı belirlendiği, önceki kod örneklerinde her ikisinde de mevcuttur.
 
-1. The type of the elements in the data source, `names`, is the type of the range variable, `name`, in the query.
+1. `names`veri kaynağındaki öğelerin türü, `name`Aralık değişkeninin türüdür, sorgu.
 
-2. The type of the object that is selected, `name`, determines the type of the query variable, `mNames`. Here `name` is a string, so the query variable is IEnumerable(Of String) in Visual Basic.
+2. `name`, seçili nesnenin türü, `mNames`sorgu değişkeninin türünü belirler. Burada `name` bir dizedir, bu nedenle sorgu değişkeni Visual Basic IEnumerable (dize) olur.
 
-3. The query defined in `mNames` is executed in the `For Each` loop. The loop iterates over the result of executing the query. Because `mNames`, when it is executed, will return a sequence of strings, the loop iteration variable, `nm`, also is a string.
+3. `mNames` ' de tanımlanan sorgu `For Each` döngüsünde yürütülür. Döngü, sorguyu yürütmenin sonucunu yineler. `mNames`, yürütüldüğü zaman bir dize dizisi döndürür, `nm`döngüsü yineleme değişkeni de bir dizedir.
 
-## <a name="queries-that-return-one-field-from-selected-elements"></a>Queries That Return One Field from Selected Elements
+## <a name="queries-that-return-one-field-from-selected-elements"></a>Seçili öğelerden bir alan döndüren sorgular
 
-The following example shows a [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] query operation that returns a sequence containing only one part of each element selected from the data source. The query takes a collection of `Customer` objects as its data source and projects only the `Name` property in the result. Because the customer name is a string, the query produces a sequence of strings as output.
+Aşağıdaki örnek, veri kaynağından seçilen her bir öğenin yalnızca bir kısmını içeren bir dizi döndüren [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] sorgu işlemini gösterir. Sorgu, veri kaynağı olarak bir `Customer` nesneleri koleksiyonu alır ve yalnızca sonuç içindeki `Name` özelliğini projeler. Müşteri adı bir dize olduğundan, sorgu çıktı olarak bir dizi dize üretir.
 
 ```vb
 ' Method GetTable returns a table of Customer objects.
@@ -73,15 +73,15 @@ For Each custName In custNames
 Next
 ```
 
-The relationships between variables are like those in the simpler example.
+Değişkenler arasındaki ilişkiler, daha basit örnekteki gibi bir örnektir.
 
-1. The type of the elements in the data source, `customers`, is the type of the range variable, `cust`, in the query. In this example, that type is `Customer`.
+1. `customers`veri kaynağındaki öğelerin türü, `cust`Aralık değişkeninin türüdür, sorgu. Bu örnekte, bu tür `Customer`.
 
-2. The `Select` statement returns the `Name` property of each `Customer` object instead of the whole object. Because `Name` is a string, the query variable, `custNames`, will again be IEnumerable(Of String), not of `Customer`.
+2. `Select` ifade, tüm nesne yerine her bir `Customer` nesnesinin `Name` özelliğini döndürür. `Name` bir dize olduğundan, `custNames`sorgu değişkeni `Customer`değil IEnumerable (dize) olacaktır.
 
-3. Because `custNames` represents a sequence of strings, the `For Each` loop's iteration variable, `custName`, must be a string.
+3. `custNames` bir dizi dizeyi temsil ettiğinden, `For Each` döngüsünün yineleme değişkeni `custName`, bir dize olmalıdır.
 
-Without local type inference, the previous example would be more cumbersome to write and to understand, as the following example shows.
+Yerel tür çıkarımı olmadan, aşağıdaki örnekte gösterildiği gibi önceki örnek yazmak ve anlamak için daha fazla kullanışsız olacaktır.
 
 ```vb
 ' Method GetTable returns a table of Customer objects.
@@ -96,9 +96,9 @@ Without local type inference, the previous example would be more cumbersome to w
  Next
 ```
 
-## <a name="queries-that-require-anonymous-types"></a>Queries That Require Anonymous Types
+## <a name="queries-that-require-anonymous-types"></a>Anonim türler gerektiren sorgular
 
-The following example shows a more complex situation. In the previous example, it was inconvenient to specify types for all the variables explicitly. In this example, it is impossible. Instead of selecting entire `Customer` elements from the data source, or a single field from each element, the `Select` clause in this query returns two properties of the original `Customer` object: `Name` and `City`. In response to the `Select` clause, the compiler defines an anonymous type that contains those two properties. The result of executing `nameCityQuery` in the `For Each` loop is a collection of instances of the new anonymous type. Because the anonymous type has no usable name, you cannot specify the type of `nameCityQuery` or `custInfo` explicitly. That is, with an anonymous type, you have no type name to use in place of `String` in `IEnumerable(Of String)`. For more information, see [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+Aşağıdaki örnekte daha karmaşık bir durum gösterilmektedir. Önceki örnekte, tüm değişkenler için türleri açıkça belirtmek uygun değildi. Bu örnekte, olanaksızdır. Veri kaynağından tüm `Customer` öğeleri veya her öğeden tek bir alanı seçmek yerine, bu sorgudaki `Select` yan tümce orijinal `Customer` nesnesinin iki özelliğini döndürür: `Name` ve `City`. `Select` yan tümcesine yanıt olarak, derleyici bu iki özelliği içeren anonim bir tür tanımlar. `For Each` döngüsünde `nameCityQuery` yürütmenin sonucu, yeni anonim türün örneklerinin bir koleksiyonudur. Anonim türün kullanılabilir bir adı olmadığından, `nameCityQuery` veya `custInfo` türünü açıkça belirtemezsiniz. Yani, anonim bir tür ile `IEnumerable(Of String)``String` yerine kullanılacak tür adı yoktur. Daha fazla bilgi için bkz. [anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
 ```vb
 ' Method GetTable returns a table of Customer objects.
@@ -112,19 +112,19 @@ For Each custInfo In nameCityQuery
 Next
 ```
 
-Although it is not possible to specify types for all the variables in the previous example, the relationships remain the same.
+Önceki örnekteki tüm değişkenlerin türlerini belirtmek mümkün olmasa da ilişkiler aynı kalır.
 
-1. The type of the elements in the data source is again the type of the range variable in the query. In this example, `cust` is an instance of `Customer`.
+1. Veri kaynağındaki öğelerin türü, sorgudaki aralık değişkeninin türüdür. Bu örnekte, `cust` bir `Customer`örneğidir.
 
-2. Because the `Select` statement produces an anonymous type, the query variable, `nameCityQuery`, must be implicitly typed as an anonymous type. An anonymous type has no usable name, and therefore cannot be specified explicitly.
+2. `Select` deyimin anonim bir tür oluşturduğu için, `nameCityQuery`sorgu değişkeni örtük olarak anonim bir tür olarak yazılmalıdır. Anonim bir türün kullanılabilir adı yok ve bu nedenle açıkça belirtilemez.
 
-3. The type of the iteration variable in the `For Each` loop is the anonymous type created in step 2. Because the type has no usable name, the type of the loop iteration variable must be determined implicitly.
+3. `For Each` döngüsünde yineleme değişkeninin türü, adım 2 ' de oluşturulan anonim türüdür. Türün kullanılabilir bir adı olmadığından, döngü yineleme değişkeninin türü örtük olarak belirtilmelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Getting Started with LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Visual Basic LINQ ile çalışmaya başlama](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Sorgular](../../../../visual-basic/language-reference/queries/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Zero-based vs. One-based String Access
+title: Sıfır tabanlı ve tek tabanlı dize erişimi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
@@ -12,13 +12,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354294"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Visual Basic'de Sıfır Tabanlı ve Bir Tabanlı Dize Erişimi
-This topic compares how Visual Basic and the .NET Framework provide access to the characters in a string. The .NET Framework always provides zero-based access to the characters in a string, whereas Visual Basic provides zero-based and one-based access, depending on the function.  
+Bu konu, Visual Basic ve .NET Framework bir dizedeki karakterlere erişim sağlama şeklini karşılaştırır. .NET Framework her zaman bir dizedeki karakterlere sıfır tabanlı erişim sağlar, ancak Visual Basic, işleve bağlı olarak sıfır tabanlı ve tek tabanlı erişim sağlar.  
   
-## <a name="one-based"></a>One-Based  
- For an example of a one-based Visual Basic function, consider the `Mid` function. It takes an argument that indicates the character position at which the substring will start, starting with position 1. The .NET Framework <xref:System.String.Substring%2A?displayProperty=nameWithType> method takes an index of the character in the string at which the substring is to start, starting with position 0. Thus, if you have a string "ABCDE", the individual characters are numbered 1,2,3,4,5 for use with the `Mid` function, but 0,1,2,3,4 for use with the <xref:System.String.Substring%2A?displayProperty=nameWithType> method.  
+## <a name="one-based"></a>Tek tabanlı  
+ Tek tabanlı Visual Basic işlevinin bir örneği için `Mid` işlevini göz önünde bulundurun. 1\. konumdan başlayarak alt dizenin başlayacağı karakter konumunu gösteren bir bağımsız değişken alır. .NET Framework <xref:System.String.Substring%2A?displayProperty=nameWithType> yöntemi, alt dizenin başlatılacağı dizedeki karakterin bir dizinini alır. konum 0 ' dan başlar. Bu nedenle, "ABCDE" dizeniz varsa, tek tek karakterler `Mid` işlevi ile birlikte kullanılmak üzere 1, 2, 3, 4, 5 ve <xref:System.String.Substring%2A?displayProperty=nameWithType> yöntemiyle birlikte kullanılmak üzere 0, 1, 2, 3, 4 olarak numaralandırılır.  
   
-## <a name="zero-based"></a>Zero-Based  
- For an example of a zero-based Visual Basic function, consider the `Split` function. It splits a string and returns an array containing the substrings. The .NET Framework <xref:System.String.Split%2A?displayProperty=nameWithType> method also splits a string and returns an array containing the substrings. Because the `Split` function and <xref:System.String.Split%2A> method return .NET Framework arrays, they must be zero-based.  
+## <a name="zero-based"></a>Sıfır tabanlı  
+ Sıfır tabanlı Visual Basic işlevinin bir örneği için `Split` işlevini göz önünde bulundurun. Bir dizeyi böler ve alt dizeleri içeren bir dizi döndürür. .NET Framework <xref:System.String.Split%2A?displayProperty=nameWithType> yöntemi bir dizeyi de böler ve alt dizeleri içeren bir dizi döndürür. `Split` işlevi ve <xref:System.String.Split%2A> yöntemi .NET Framework dizileri döndürtiğinden, bunların sıfır tabanlı olması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -26,4 +26,4 @@ This topic compares how Visual Basic and the .NET Framework provide access to th
 - <xref:Microsoft.VisualBasic.Strings.Split%2A>
 - <xref:System.String.Substring%2A>
 - <xref:System.String.Split%2A>
-- [Introduction to Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Visual Basic dizelere giriş](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

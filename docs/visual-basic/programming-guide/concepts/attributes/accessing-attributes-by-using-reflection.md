@@ -9,11 +9,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353550"
 ---
-# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Accessing Attributes by Using Reflection (Visual Basic)
+# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Yansıma kullanarak özniteliklere erişme (Visual Basic)
 
-The fact that you can define custom attributes and place them in your source code would be of little value without some way of retrieving that information and acting on it. By using reflection, you can retrieve the information that was defined with custom attributes. The key method is `GetCustomAttributes`, which returns an array of objects that are the run-time equivalents of the source code attributes. This method has several overloaded versions. Daha fazla bilgi için bkz. <xref:System.Attribute>.
+Özel öznitelikleri tanımlayabilir ve bunları kaynak kodunuza yerleştirebilirsiniz. Bu bilgiler, bu bilgileri alma ve üzerinde işlem yapmaya gerek kalmadan çok az değer elde edebilir. Yansıma kullanarak özel özniteliklerle tanımlanan bilgileri alabilirsiniz. Anahtar yöntemi, kaynak kodu özniteliklerinin çalışma zamanı eşdeğerleri olan nesnelerin bir dizisini döndüren `GetCustomAttributes`. Bu yöntemin birkaç aşırı yüklü sürümü vardır. Daha fazla bilgi için bkz. <xref:System.Attribute>.
 
-An attribute specification such as:
+Şöyle bir öznitelik belirtimi:
 
 ```vb
 <Author("P. Ackerman", Version:=1.1)>
@@ -22,18 +22,18 @@ Class SampleClass
 End Class
 ```
 
- is conceptually equivalent to this:
+ kavramsal olarak eşdeğerdir:
 
 ```vb
 Dim anonymousAuthorObject As Author = New Author("P. Ackerman")
 anonymousAuthorObject.version = 1.1
 ```
 
-However, the code is not executed until `SampleClass` is queried for attributes. Calling `GetCustomAttributes` on `SampleClass` causes an `Author` object to be constructed and initialized as above. If the class has other attributes, other attribute objects are constructed similarly. `GetCustomAttributes` then returns the `Author` object and any other attribute objects in an array. You can then iterate over this array, determine what attributes were applied based on the type of each array element, and extract information from the attribute objects.
+Ancak, `SampleClass` öznitelikler için sorgulanana kadar kod yürütülmez. `SampleClass` `GetCustomAttributes` çağırmak `Author` nesnenin yukarıda olarak oluşturulmasına ve başlatılmasına neden olur. Sınıfın başka öznitelikleri varsa, diğer öznitelik nesneleri benzer şekilde oluşturulur. `GetCustomAttributes` sonra `Author` nesnesini ve dizideki diğer öznitelik nesnelerini döndürür. Daha sonra bu dizinin üzerinde yineleyebilir, her bir dizi öğesinin türüne göre hangi özniteliklerin uygulandığını belirleyebilir ve öznitelik nesnelerinden bilgi ayıklayabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-Here is a complete example. A custom attribute is defined, applied to several entities, and retrieved via reflection.
+Aşağıda bir örnek verilmiştir. Özel bir öznitelik tanımlanır, birkaç varlığa uygulanır ve yansıma aracılığıyla alınır.
 
 ```vb
 ' Multiuse attribute
@@ -105,8 +105,8 @@ End Class
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Visual Basic Programming Guide](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)
 - [Özniteliklerde Depolanan Bilgileri Alma](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
-- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Attributes (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [Yansıma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Öznitelikler (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
+- [Özel öznitelikler oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)

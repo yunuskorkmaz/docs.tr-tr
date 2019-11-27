@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438573"
 ---
 # <a name="exporttype-method"></a>ExportType Yöntemi
-Specifies that a type is exportable.  
+Bir türün verilebilir olduğunu belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +39,28 @@ HRESULT ExportType(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- ID of the assembly to export from.  
+ Dışarı aktarılacak derlemenin KIMLIĞI.  
   
  `FileToken`  
- File token or assembly ID of file that defines the exportable type.  
+ Dışarı aktarılabilir türü tanımlayan dosyanın dosya belirteci veya derleme KIMLIĞI.  
   
  `TypeToken`  
- Token of type to be made exportable.  
+ Dışarı aktarılabilir yapılacak tür belirteci.  
   
  `pszTypename`  
- Fully qualified type name to be made exportable.  
+ Dışarı aktarılabilir hale getirmek için tam tür adı.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This parameter may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `tdPublic` veya `tdNested`gibi bayrakları `ComType`. Bu parametre [DefineExportedType yöntemine](../metadata/imetadataassemblyemit-defineexportedtype-method.md)geçirilebilir.  
   
  `pType`  
- Receives token for exported type.  
+ İçe aktarılmış tür için belirteç alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

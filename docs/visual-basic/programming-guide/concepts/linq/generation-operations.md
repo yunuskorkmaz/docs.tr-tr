@@ -9,21 +9,21 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353404"
 ---
-# <a name="generation-operations-visual-basic"></a>Generation Operations (Visual Basic)
-Generation refers to creating a new sequence of values.  
+# <a name="generation-operations-visual-basic"></a>Oluşturma Işlemleri (Visual Basic)
+Oluşturma, yeni bir değer dizisi oluşturma anlamına gelir.  
   
- The standard query operator methods that perform generation are listed in the following section.  
+ Oluşturma işlemini gerçekleştiren standart sorgu işleci yöntemleri aşağıdaki bölümde listelenmiştir.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Method Name|Açıklama|Visual Basic Query Expression Syntax|Daha fazla bilgi|  
+|Yöntem adı|Açıklama|Sorgu Ifadesi söz dizimini Visual Basic|Daha Fazla Bilgi|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|DefaultIfEmpty|Replaces an empty collection with a default valued singleton collection.|Yok.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
-|Empty|Returns an empty collection.|Yok.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  
-|Aralık|Generates a collection that contains a sequence of numbers.|Yok.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>|  
-|Repeat|Generates a collection that contains one repeated value.|Yok.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=nameWithType>|  
+|Defaultıempty|Boş bir koleksiyonu varsayılan değerli Singleton koleksiyonuyla değiştirir.|Geçerli değildir.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
+|Boş|Boş bir koleksiyon döndürür.|Geçerli değildir.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  
+|Aralık|Sayı dizisi içeren bir koleksiyon oluşturur.|Geçerli değildir.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>|  
+|Yinele|Yinelenen bir değer içeren bir koleksiyon oluşturur.|Geçerli değildir.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

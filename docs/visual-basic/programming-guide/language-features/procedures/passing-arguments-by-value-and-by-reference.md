@@ -17,53 +17,53 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352602"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme (Visual Basic)
-In Visual Basic, you can pass an argument to a procedure *by value* or *by reference*. This is known as the *passing mechanism*, and it determines whether the procedure can modify the programming element underlying the argument in the calling code. The procedure declaration determines the passing mechanism for each parameter by specifying the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword.  
+Visual Basic, bir yordama *değere* veya *başvuruya*göre bir bağımsız değişken geçirebilirsiniz. Bu, *geçirme mekanizması*olarak bilinir ve yordamın çağıran koddaki bağımsız değişkenin temelindeki programlama öğesini değiştirip değiştiremeyeceğini belirler. Yordam bildirimi, [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) anahtar sözcüğü belirtilerek her bir parametre için geçen geçiş mekanizmasını belirler.  
   
-## <a name="distinctions"></a>Distinctions  
- When passing an argument to a procedure, be aware of several different distinctions that interact with each other:  
+## <a name="distinctions"></a>Farklar  
+ Bir yordama bir bağımsız değişken geçirirken, birbirleriyle etkileşime geçen birkaç farklı ayrımın farkında olun:  
   
-- Whether the underlying programming element is modifiable or nonmodifiable  
+- Temeldeki programlama öğesinin değiştirilebilir mi yoksa değiştirilemez mi olduğunu belirtir  
   
-- Whether the argument itself is modifiable or nonmodifiable  
+- Bağımsız değişkenin değiştirilebilir olup olmadığı  
   
-- Whether the argument is being passed by value or by reference  
+- Bağımsız değişkenin değere göre mi yoksa başvuruya göre mi geçtiğini belirtir  
   
-- Whether the argument data type is a value type or a reference type  
+- Bağımsız değişken veri türünün bir değer türü veya bir başvuru türü olup olmadığı  
   
- For more information, see [Differences Between Modifiable and Nonmodifiable Arguments](./differences-between-modifiable-and-nonmodifiable-arguments.md) and [Differences Between Passing an Argument By Value and By Reference](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+ Daha fazla bilgi için bkz. [değiştirilebilir ve değiştirilemeyen bağımsız değişkenler](./differences-between-modifiable-and-nonmodifiable-arguments.md) Ile [bir bağımsız değişkeni değere ve başvuruya göre geçirme arasındaki](./differences-between-passing-an-argument-by-value-and-by-reference.md)farklılıklar.  
   
-## <a name="choice-of-passing-mechanism"></a>Choice of Passing Mechanism  
- You should choose the passing mechanism carefully for each argument.  
+## <a name="choice-of-passing-mechanism"></a>Geçirme mekanizması seçimi  
+ Geçirilen mekanizmayı her bağımsız değişken için dikkatle seçmeniz gerekir.  
   
-- **Protection**. In choosing between the two passing mechanisms, the most important criterion is the exposure of calling variables to change. The advantage of passing an argument `ByRef` is that the procedure can return a value to the calling code through that argument. The advantage of passing an argument `ByVal` is that it protects a variable from being changed by the procedure.  
+- **Koruma**. İki geçiş mekanizması arasında seçim yaparken en önemli ölçüt, değiştirilecek çağrı değişkenlerinin açıklanmesidir. Bağımsız değişken `ByRef` geçirmenin avantajı, yordamın bu bağımsız değişken aracılığıyla çağırma koduna bir değer döndüremesidir. Bağımsız değişken `ByVal` geçirmenin avantajı, bir değişkenin yordam tarafından değiştirilmesini koruabilmesidir.  
   
-- **Performance**. Although the passing mechanism can affect the performance of your code, the difference is usually insignificant. One exception to this is a value type passed `ByVal`. In this case, Visual Basic copies the entire data contents of the argument. Therefore, for a large value type such as a structure, it can be more efficient to pass it `ByRef`.  
+- **Performans**. Geçirme mekanizması kodunuzun performansını etkileyebilse de, fark genellikle önemsizdir. Bu bir özel durum, `ByVal`geçirilen bir değer türüdür. Bu durumda Visual Basic bağımsız değişkenin tüm veri içeriğini kopyalar. Bu nedenle, yapı gibi büyük bir değer türü için `ByRef`geçirmek daha verimli olabilir.  
   
-     For reference types, only the pointer to the data is copied (four bytes on 32-bit platforms, eight bytes on 64-bit platforms). Therefore, you can pass arguments of type `String` or `Object` by value without harming performance.  
+     Başvuru türleri için, yalnızca verilerin işaretçisi kopyalanır (32-bit platformlarda dört bayt, 64 bit platformlarda sekiz bayt). Bu nedenle, `String` veya `Object` bağımsız değişkenleri, performansı en fazla performans olmadan bir değere göre geçirebilirsiniz.  
   
-## <a name="determination-of-the-passing-mechanism"></a>Determination of the Passing Mechanism  
- The procedure declaration specifies the passing mechanism for each parameter. The calling code can't override a `ByVal` mechanism.  
+## <a name="determination-of-the-passing-mechanism"></a>Geçen mekanizmanın belirlenmesi  
+ Yordam bildirimi her parametre için geçen mekanizmayı belirtir. Çağıran kod `ByVal` mekanizmasını geçersiz kılamaz.  
   
- If a parameter is declared with `ByRef`, the calling code can force the mechanism to `ByVal` by enclosing the argument name in parentheses in the call. For more information, see [How to: Force an Argument to Be Passed by Value](./how-to-force-an-argument-to-be-passed-by-value.md).  
+ Bir parametre `ByRef`ile bildirilirse, çağıran kod, bağımsız değişken adını çağrıda parantez içine alarak mekanizmayı `ByVal` zorlayabilir. Daha fazla bilgi için bkz. [nasıl yapılır: bağımsız değişkeni değere göre geçirilmesine zorlama](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
- The default in Visual Basic is to pass arguments by value.  
+ Visual Basic varsayılan değeri, bağımsız değişkenleri değere göre geçirmektir.  
   
-## <a name="when-to-pass-an-argument-by-value"></a>When to Pass an Argument by Value  
+## <a name="when-to-pass-an-argument-by-value"></a>Bir bağımsız değişkenin değere göre ne zaman geçirileceğini  
   
-- If the calling code element underlying the argument is a nonmodifiable element, declare the corresponding parameter [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). No code can change the value of a nonmodifiable element.  
+- Bağımsız değişkeni temel alan çağıran kod öğesi değiştirilemeyen bir öğe ise, karşılık gelen [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)parametresini bildirin. Değiştirilemeyen bir öğenin değerini değiştirmek için kod yok.  
   
-- If the underlying element is modifiable, but you do not want the procedure to be able to change its value, declare the parameter `ByVal`. Only the calling code can change the value of a modifiable element passed by value.  
+- Temeldeki öğe değiştirilebilir, ancak yordamın değerini değiştirebilmesini istemiyorsanız, `ByVal`parametresini bildirin. Yalnızca çağıran kod, değere göre geçirilen değiştirilebilir öğenin değerini değiştirebilir.  
   
-## <a name="when-to-pass-an-argument-by-reference"></a>When to Pass an Argument by Reference  
+## <a name="when-to-pass-an-argument-by-reference"></a>Bir bağımsız değişkenin başvuruya göre ne zaman geçirileceğini  
   
-- If the procedure has a genuine need to change the underlying element in the calling code, declare the corresponding parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
+- Yordamın, çağıran koddaki temel alınan öğeyi değiştirmesi gerekirse, karşılık gelen [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)parametresini bildirin.  
   
-- If the correct execution of the code depends on the procedure changing the underlying element in the calling code, declare the parameter `ByRef`. If you pass it by value, or if the calling code overrides the `ByRef` passing mechanism by enclosing the argument in parentheses, the procedure call might produce unexpected results.  
+- Kodun doğru yürütülmesi, çağıran kodda temeldeki öğeyi değiştirme yordamına bağımlıysa, `ByRef`parametresini bildirin. Bunu değere göre geçirirseniz veya çağırma kodu bağımsız değişkeni parantez içine alarak `ByRef` geçen mekanizmayı geçersiz kılıyorsa, yordam çağrısı beklenmedik sonuçlar üretebilir.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- The following example illustrates when to pass arguments by value and when to pass them by reference. Procedure `Calculate` has both a `ByVal` and a `ByRef` parameter. Given an interest rate, `rate`, and a sum of money, `debt`, the task of the procedure is to calculate a new value for `debt` that is the result of applying the interest rate to the original value of `debt`. Because `debt` is a `ByRef` parameter, the new total is reflected in the value of the argument in the calling code that corresponds to `debt`. Parameter `rate` is a `ByVal` parameter because `Calculate` should not change its value.  
+ Aşağıdaki örnek, bağımsız değişkenlerin değere göre ne zaman geçirileceğini ve başvuruya göre ne zaman geçirileceğini gösterir. Yordam `Calculate` hem `ByVal` hem de `ByRef` parametresine sahiptir. Bir faiz oranı, `rate`ve toplam para `debt`, bu yordamın görevi, `debt`özgün değeri için faiz oranını uygulamanın sonucu olan `debt` için yeni bir değer hesaplayacaktır. `debt` bir `ByRef` parametresi olduğundan, yeni toplam, `debt`karşılık gelen çağıran koddaki bağımsız değişkenin değerine yansıtılır. `ByVal` parametresi, `Calculate` değerini değiştirmediğinden parametre `rate`.  
   
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbcnProcedures#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class2.vb#74)]  

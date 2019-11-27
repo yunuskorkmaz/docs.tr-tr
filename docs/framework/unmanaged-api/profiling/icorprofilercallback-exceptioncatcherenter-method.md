@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445020"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>ICorProfilerCallback::ExceptionCatcherEnter Yöntemi
-Notifies the profiler that control is being passed to the appropriate `catch` block.  
+Profil oluşturucuyu denetimin uygun `catch` bloğuna geçtiğini bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,26 +35,26 @@ HRESULT ExceptionCatcherEnter(
   
 ## <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] The identifier of the function containing the `catch` block.  
+ 'ndaki `catch` bloğunu içeren işlevin tanımlayıcısı.  
   
  `objectId`  
- [in] The identifier of the exception being handled.  
+ 'ndaki İşlenmekte olan özel durumun tanımlayıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler. An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification. The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.  
+ `ExceptionCatcherEnter` yöntemi, yalnızca catch noktası tam zamanında (JıT) derleyici ile derlenmişse çağrılır. Yönetilmeyen kodda veya çalışma zamanının iç kodunda yakalanan bir özel durum, bu bildirimi çağırmaz. Bir çöp toplama işlemi `ExceptionThrown` bildiriminden bu yana nesneyi taşıdığından `objectId` değer tekrar geçirilir.  
   
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ Yığın atık toplamaya izin veren bir durumda olmadığından profil oluşturucu bu yöntemin uygulamasında engellenmemelidir, bu nedenle preemptive çöp toplama etkinleştirilemez. Profil Oluşturucu burada ve çöp toplama denendiğinde, bu geri arama dönene kadar çalışma zamanı engellenir.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ Profil oluşturucunun bu yöntemin uygulanması yönetilen koda veya herhangi bir şekilde bir yönetilen bellek ayırmaya yol açmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

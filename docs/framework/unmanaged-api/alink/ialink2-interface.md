@@ -14,7 +14,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431361"
 ---
 # <a name="ialink2-interface"></a>IALink2 Arabirimi
-Complements the [IALink Interface](ialink-interface.md) by declaring methods that operate on newer metadata interfaces such as [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md). Additionally, IALink2 declares methods that provide additional usage flexibility over the original IALink interfaces.  
+[IMetaDataEmit2 arabirimi](../metadata/imetadataemit2-interface.md)gibi daha yeni meta veri arabirimleri üzerinde çalışan Yöntemler bildirerek [IALink arabirimini](ialink-interface.md) tamamlar. Ayrıca, IALink2, özgün IALink arabirimleri üzerinde ek kullanım esnekliği sağlayan yöntemler bildirir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [AddFile2 Yöntemi](addfile2-method.md)  

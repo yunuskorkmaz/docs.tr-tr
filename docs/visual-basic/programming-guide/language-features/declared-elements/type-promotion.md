@@ -18,51 +18,51 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345270"
 ---
 # <a name="type-promotion-visual-basic"></a>Tür Yükseltme (Visual Basic)
-When you declare a programming element in a module, Visual Basic promotes its scope to the namespace containing the module. This is known as *type promotion*.  
+Bir modülde programlama öğesi bildirdiğinizde Visual Basic kapsamını modülünü içeren ad alanına yükseltir. Bu, *tür yükseltmesi*olarak bilinir.  
   
- The following example shows a skeleton definition of a module and two members of that module.  
+ Aşağıdaki örnek, bir modülün iskelet tanımını ve bu modülün iki üyesini gösterir.  
   
  [!code-vb[VbVbalrDeclaredElements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#1)]  
   
- Within `projModule`, programming elements declared at module level are promoted to `projNamespace`. In the preceding example, `basicEnum` and `innerClass` are promoted, but `numberSub` is not, because it is not declared at module level.  
+ `projModule`içinde, modül düzeyinde belirtilen programlama öğeleri `projNamespace`yükseltilir. Yukarıdaki örnekte `basicEnum` ve `innerClass` yükseltilir, ancak modül düzeyinde bildirilmemiş olduğundan `numberSub` değildir.  
   
-## <a name="effect-of-type-promotion"></a>Effect of Type Promotion  
- The effect of type promotion is that a qualification string does not need to include the module name. The following example makes two calls to the procedure in the preceding example.  
+## <a name="effect-of-type-promotion"></a>Yükseltme türü etkisi  
+ Yükseltme türünün etkisi, bir nitelik dizesinin modül adını içermesi gerekmez. Aşağıdaki örnek, önceki örnekteki yordama iki çağrı yapar.  
   
  [!code-vb[VbVbalrDeclaredElements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#2)]  
   
- In the preceding example, the first call uses complete qualification strings. However, this is not necessary because of type promotion. The second call also accesses the module's members without including `projModule` in the qualification strings.  
+ Yukarıdaki örnekte, ilk çağrı bütün nitelik dizelerini kullanır. Ancak, tür yükseltmesi nedeniyle bu gerekli değildir. İkinci çağrı Ayrıca, nitelik dizelerine `projModule` dahil etmeden modülün üyelerine erişir.  
   
-## <a name="defeat-of-type-promotion"></a>Defeat of Type Promotion  
- If the namespace already has a member with the same name as a module member, type promotion is defeated for that module member. The following example shows a skeleton definition of an enumeration and a module within the same namespace.  
+## <a name="defeat-of-type-promotion"></a>Tür promosyonu  
+ Ad alanı zaten bir modül üyesiyle aynı ada sahip bir üyeye sahipse, bu modül üyesi için yükseltme yapılır yazın. Aşağıdaki örnek, bir numaralandırma ve aynı ad uzayı içindeki bir modülün iskelet tanımını gösterir.  
   
  [!code-vb[VbVbalrDeclaredElements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#3)]  
   
- In the preceding example, Visual Basic cannot promote class `abc` to `thisNameSpace` because there is already an enumeration with the same name at namespace level. To access `abcSub`, you must use the full qualification string `thisNamespace.thisModule.abc.abcSub`. However, class `xyz` is still promoted, and you can access `xyzSub` with the shorter qualification string `thisNamespace.xyz.xyzSub`.  
+ Yukarıdaki örnekte, ad alanı düzeyinde aynı ada sahip bir sabit listesi olduğundan Visual Basic sınıf `abc` `thisNameSpace` olarak yükseltememesini sağlar. `abcSub`erişmek için, tam niteleme dizesi `thisNamespace.thisModule.abc.abcSub`kullanmalısınız. Ancak, sınıf `xyz` hala yükseltilir ve `xyzSub` daha kısa niteleme dizesiyle `thisNamespace.xyz.xyzSub`erişebilirsiniz.  
   
-### <a name="defeat-of-type-promotion-for-partial-types"></a>Defeat of Type Promotion for Partial Types  
- If a class or structure inside a module uses the [Partial](../../../../visual-basic/language-reference/modifiers/partial.md) keyword, type promotion is automatically defeated for that class or structure, whether or not the namespace has a member with the same name. Other elements in the module are still eligible for type promotion.  
+### <a name="defeat-of-type-promotion-for-partial-types"></a>Kısmi türler için tür promosyonu  
+ Modül içindeki bir sınıf veya yapı [kısmi](../../../../visual-basic/language-reference/modifiers/partial.md) anahtar sözcüğünü kullanıyorsa, ad alanının aynı ada sahip bir üyeye sahip olup olmadığına bakılmaksızın, bu sınıf veya yapı için otomatik olarak tür yükseltmesi yapılır. Modüldeki diğer öğeler de tür yükseltme için uygun değildir.  
   
- **Consequences.** Defeat of type promotion of a partial definition can cause unexpected results and even compiler errors. The following example shows skeleton partial definitions of a class, one of which is inside a module.  
+ **Larının.** Kısmi bir tanımın tür promosyonu, beklenmedik sonuçlara ve hatta derleyici hatalarına neden olabilir. Aşağıdaki örnek, bir sınıfının bir modül içinde olan bir sınıfın iskelet kısmi tanımlarını gösterir.  
   
  [!code-vb[VbVbalrDeclaredElements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#4)]  
   
- In the preceding example, the developer might expect the compiler to merge the two partial definitions of `sampleClass`. However, the compiler does not consider promotion for the partial definition inside `sampleModule`. As a result, it attempts to compile two separate and distinct classes, both named `sampleClass` but with different qualification paths.  
+ Yukarıdaki örnekte, geliştirici derleyicinin iki kısmi tanımını `sampleClass`birleştirme işlemini bekleyebilir. Ancak, derleyici `sampleModule`içindeki kısmi Tanım için yükseltmeyi göz önünde bulundurmaz. Sonuç olarak, hem `sampleClass` hem de farklı nitelik yollarıyla iki ayrı ve farklı sınıf derlemeye çalışır.  
   
- The compiler merges partial definitions only when their fully qualified paths are identical.  
+ Derleyici, kısmi tanımları yalnızca kendi tam yolları özdeş olduğunda birleştirir.  
   
-## <a name="recommendations"></a>Recommendations  
- The following recommendations represent good programming practice.  
+## <a name="recommendations"></a>Öneriler  
+ Aşağıdaki öneriler iyi programlama uygulamasını temsil etmektedir.  
   
-- **Unique Names.** When you have full control over the naming of programming elements, it is always a good idea to use unique names everywhere. Identical names require extra qualification and can make your code harder to read. They can also lead to subtle errors and unexpected results.  
+- **Benzersiz adlar.** Programlama öğelerinin adlandırılması üzerinde tam denetime sahip olduğunuzda her yerde benzersiz adların kullanılması her zaman iyi bir fikirdir. Aynı adlar ek nitelik gerektirir ve kodunuzun okunmasını daha zor hale getirir. Ayrıca, hafif hatalara ve beklenmedik sonuçlara yol açabilir.  
   
-- **Full Qualification.** When you are working with modules and other elements in the same namespace, the safest approach is to always use full qualification for all programming elements. If type promotion is defeated for a module member and you do not fully qualify that member, you could inadvertently access a different programming element.  
+- **Tam nitelik.** Aynı ad alanındaki modüller ve diğer öğelerle çalışırken, en güvenli yaklaşım tüm programlama öğeleri için her zaman tam niteliğin kullanılması. Tür promosyonu bir modül üyesi için ertelendirilürse ve bu üyeyi tamamen nitelemeniz durumunda farklı bir programlama öğesine yanlışlıkla erişebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Module Deyimi](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Namespace Deyimi](../../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Nasıl yapılır: Bir Değişkenin Kapsamını Denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
 - [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

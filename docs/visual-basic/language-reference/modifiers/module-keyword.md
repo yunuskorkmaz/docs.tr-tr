@@ -1,5 +1,5 @@
 ---
-title: <keyword> Modülü
+title: Modül <keyword>
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ModuleAttribute
@@ -15,18 +15,18 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351547"
 ---
-# <a name="module-keyword-visual-basic"></a>Module \<keyword> (Visual Basic)
-Specifies that an attribute at the beginning of a source file applies to the current assembly module.  
+# <a name="module-keyword-visual-basic"></a>Modül \<anahtar sözcüğü > (Visual Basic)
+Kaynak dosyanın başındaki bir özniteliğin geçerli derleme modülüne uygulanacağını belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Many attributes pertain to an individual programming element, such as a class or property. You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.  
+ Birçok öznitelik, sınıf veya özellik gibi tek bir programlama öğesiyle ilgilidir. Bu tür bir özniteliği, bir öznitelik bloğunu, açılı ayraç (`< >`) içinde doğrudan bildirim bildirimine ekleyerek uygularsınız.  
   
- If an attribute pertains not only to the following element but to the current assembly module, you place the attribute block at the beginning of the source file and identify the attribute with the `Module` keyword. If it applies to the entire assembly, you use the [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) keyword.  
+ Bir öznitelik yalnızca aşağıdaki öğeye, ancak geçerli derleme modülüne ait değilse, öznitelik bloğunu kaynak dosyanın başlangıcına yerleştirir ve özniteliği `Module` anahtar sözcüğüyle belirlersiniz. Tüm derleme için geçerliyse, [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) anahtar sözcüğünü kullanırsınız.  
   
- The `Module` modifier is not the same as the [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).  
+ `Module` değiştiricisi [module bildirimiyle](../../../visual-basic/language-reference/statements/module-statement.md)aynı değil.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [Derleme](../../../visual-basic/language-reference/modifiers/assembly.md)
 - [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)
-- [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Özniteliklere genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)

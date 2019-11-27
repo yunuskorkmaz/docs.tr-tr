@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448870"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd Yöntemi
-Gets the start and end document positions for the source of this method. The first array position is the start, and the second array position is the end.  
+Bu yöntemin kaynağı için başlangıç ve bitiş belgesi konumlarını alır. İlk dizi konumu başlangıç ' dir ve ikinci dizi konumu son ' dır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT GetSourceStartEnd(
   
 ## <a name="parameters"></a>Parametreler  
  `docs`  
- [in] The starting and ending source documents.  
+ 'ndaki Başlangıç ve bitiş kaynak belgeleri.  
   
  `lines`  
- [in] The starting and ending lines in the corresponding source documents.  
+ 'ndaki Karşılık gelen kaynak belgelerindeki başlangıç ve bitiş satırları.  
   
  `columns`  
- [in] The starting and ending columns in the corresponding source documents.  
+ 'ndaki Karşılık gelen kaynak belgelerindeki başlangıç ve bitiş sütunları.  
   
  `pRetVal`  
- [out] `true` if positions were defined; otherwise, `false`.  
+ [out] pozisyonlar tanımlanmışsa `true`; Aksi takdirde, `false`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

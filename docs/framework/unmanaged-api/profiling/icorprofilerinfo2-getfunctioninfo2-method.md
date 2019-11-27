@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433183"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>ICorProfilerInfo2::GetFunctionInfo2 Yöntemi
-Gets the parent class, the metadata token, and the `ClassID` of each type argument, if present, of a function.  
+Bir işlevin varsa, üst sınıfı, meta veri belirtecini ve her tür bağımsız değişkeninin `ClassID` alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,52 +41,52 @@ HRESULT GetFunctionInfo2(
   
 ## <a name="parameters"></a>Parametreler  
  `funcId`  
- [in] The ID of the function for which to get the parent class and other information.  
+ 'ndaki Üst sınıfı ve diğer bilgileri almak için işlevin KIMLIĞI.  
   
  `frameInfo`  
- [in] A `COR_PRF_FRAME_INFO` value that points to information about a stack frame.  
+ 'ndaki Yığın çerçevesi hakkındaki bilgileri gösteren `COR_PRF_FRAME_INFO` değeri.  
   
  `pClassId`  
- [out] A pointer to the parent class of the function.  
+ dışı İşlevin üst sınıfına yönelik bir işaretçi.  
   
  `pModuleId`  
- [out] A pointer to the module in which the function's parent class is defined.  
+ dışı İşlevin üst sınıfının tanımlandığı modüle yönelik bir işaretçi.  
   
  `pToken`  
- [out] A pointer to the metadata token for the function.  
+ dışı İşlevin meta veri belirtecine yönelik bir işaretçi.  
   
  `cTypeArgs`  
- [in] The size of the `typeArgs` array.  
+ 'ndaki `typeArgs` dizisinin boyutu.  
   
  `pcTypeArgs`  
- [out] A pointer to the total number of `ClassID` values.  
+ dışı `ClassID` değerlerinin toplam sayısına yönelik bir işaretçi.  
   
  `typeArgs`  
- [out] An array of `ClassID` values, each of which is the ID of a type argument of the function. When the method returns, `typeArgs` will contain some or all of the `ClassID` values.  
+ dışı Her biri işlevin tür bağımsız değişkeninin KIMLIĞI olan `ClassID` değerleri dizisi. Yöntemi döndürüldüğünde, `typeArgs` `ClassID` değerlerinin bazılarını veya tümünü içerecektir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../../../../docs/framework/unmanaged-api/metadata/index.md) interface for a given module. The metadata token that is returned to the location referenced by `pToken` can then be used to access the metadata for the function.  
+ Profil Oluşturucu kodu, belirli bir modül için [meta](../../../../docs/framework/unmanaged-api/metadata/index.md) veri arabirimi elde etmek üzere [ICorProfilerInfo:: GetModuleMetaData öğesini](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) çağırabilir. `pToken` tarafından başvurulan konuma döndürülen meta veri belirteci, daha sonra işlevin meta verilerine erişmek için kullanılabilir.  
   
- The class ID and type arguments that are returned through the `pClassId` and `typeArgs` parameters depend on the value that is passed in the `frameInfo` parameter, as shown in the following table.  
+ `pClassId` ve `typeArgs` parametreleri aracılığıyla döndürülen sınıf KIMLIĞI ve tür bağımsız değişkenleri, aşağıdaki tabloda gösterildiği gibi `frameInfo` parametresine geçirilen değere bağlıdır.  
   
-|Value of the `frameInfo` parameter|Sonuç|  
+|`frameInfo` parametresinin değeri|Sonuç|  
 |----------------------------------------|------------|  
-|A `COR_PRF_FRAME_INFO` value that was obtained from a `FunctionEnter2` callback|The `ClassID`, returned in the location referenced by `pClassId`, and all type arguments, returned in the `typeArgs` array, will be exact.|  
-|A `COR_PRF_FRAME_INFO` that was obtained from a source other than a `FunctionEnter2` callback|The exact `ClassID` and type arguments cannot be determined. That is, the `ClassID` might be null and some type arguments might come back as <xref:System.Object>.|  
-|Zero|The exact `ClassID` and type arguments cannot be determined. That is, the `ClassID` might be null and some type arguments might come back as <xref:System.Object>.|  
+|`FunctionEnter2` geri çağrısından alınan `COR_PRF_FRAME_INFO` değeri|`pClassId`tarafından başvurulan konumda döndürülen `ClassID`ve `typeArgs` dizisinde döndürülen tüm tür bağımsız değişkenleri, tam olarak olacaktır.|  
+|`FunctionEnter2` geri çağırma dışında bir kaynaktan alınan `COR_PRF_FRAME_INFO`|Tam `ClassID` ve tür bağımsız değişkenleri belirlenemiyor. Diğer bir deyişle, `ClassID` null olabilir ve bazı tür bağımsız değişkenleri <xref:System.Object>olarak geri gelebilir.|  
+|Sıfırlama|Tam `ClassID` ve tür bağımsız değişkenleri belirlenemiyor. Diğer bir deyişle, `ClassID` null olabilir ve bazı tür bağımsız değişkenleri <xref:System.Object>olarak geri gelebilir.|  
   
- After `GetFunctionInfo2` returns, you must verify that the `typeArgs` buffer was large enough to contain all the `ClassID` values. To do this, compare the value that `pcTypeArgs` points to with the value of the `cTypeArgs` parameter. If `pcTypeArgs` points to a value that is larger than `cTypeArgs` divided by the size of a `ClassID` value, allocate a larger `pcTypeArgs` buffer, update `cTypeArgs` with the new, larger size, and call `GetFunctionInfo2` again.  
+ `GetFunctionInfo2` çağrıldıktan sonra, `typeArgs` arabelleğinin tüm `ClassID` değerlerini içerecek kadar büyük olduğunu doğrulamanız gerekir. Bunu yapmak için `pcTypeArgs` işaret eden değeri `cTypeArgs` parametresinin değeri ile karşılaştırın. `pcTypeArgs`, bir `ClassID` değerin boyutuyla `cTypeArgs` daha büyük bir değere işaret ediyorsa, daha büyük bir `pcTypeArgs` arabelleği ayırın, yeni, daha büyük boyuttaki `cTypeArgs` güncelleştirin ve `GetFunctionInfo2` çağırın.  
   
- Alternatively, you can first call `GetFunctionInfo2` with a zero-length `pcTypeArgs` buffer to obtain the correct buffer size. You can then set the buffer size to the value returned in `pcTypeArgs` divided by the size of a `ClassID` value, and call `GetFunctionInfo2` again.  
+ Alternatif olarak, doğru arabellek boyutunu elde etmek için ilk olarak `GetFunctionInfo2` sıfır uzunluklu `pcTypeArgs` arabelleği ile çağırabilirsiniz. Daha sonra arabellek boyutunu `ClassID` değerinin boyutuna bölünen `pcTypeArgs` içinde döndürülen değere ayarlayabilirsiniz ve `GetFunctionInfo2` yeniden çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

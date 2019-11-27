@@ -19,39 +19,39 @@ ms.locfileid: "74352709"
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>Tipografi ve Kod Kuralları (Visual Basic)
 
-Visual Basic documentation uses the following typographic and code conventions.  
+Visual Basic belgeler aşağıdaki tipografik ve kod kurallarını kullanır.  
   
-## <a name="typographic-conventions"></a>Typographic Conventions  
-  
-|Örnek|Açıklama|  
-|-------------|-----------------|  
-|`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|Language-specific keywords and runtime members have initial uppercase letters and are formatted as shown in this example.|  
-|**SmallProject**, **ButtonCollection**|Words and phrases you are instructed to type are formatted as shown in this example.|  
-|[Module Deyimi](../../visual-basic/language-reference/statements/module-statement.md)|Links you can click to go to another Help page are formatted as shown in this example.|  
-|*object*, *variableName*, `argumentList`|Placeholders for information that you supply are formatted as shown in this example.|  
-|[ Shadows ], [ *expressionList* ]|In syntax, optional items are enclosed in brackets.|  
-|{ `Public` &#124; `Friend` &#124; `Private` }|In syntax, when you must make a choice between two or more items, the items are enclosed in braces and separated by vertical bars.<br /><br /> You must select one, and only one, of the items.|  
-|[ `Protected` &#124; `Friend` ]|In syntax, when you have the option of selecting between two or more items, the items are enclosed in square brackets and separated by vertical bars.<br /><br /> You can select any combination of the items, or no item.|  
-|[{ `ByVal` &#124; `ByRef` }]|In syntax, when you can select no more than one item, but you can also omit the items completely, the items are enclosed in square brackets surrounded by braces and separated by vertical bars.|  
-|*memberName*1, *memberName*2, *memberName*3|Multiple instances of the same placeholder are differentiated by subscripts, as shown in the example.|  
-|*memberName1*<br /><br /> ...<br /><br /> *memberNameN*|In syntax, an ellipsis (...) is used to indicate an indefinite number of items of the kind immediately in front of the ellipsis.<br /><br /> In code, ellipses signify code omitted for the sake of clarity.|  
-|ESC, ENTER|Key names and key sequences on the keyboard appear in all uppercase letters.|  
-|ALT+F1|When plus signs (+) appear between key names, you must hold down one key while pressing the other. For example, ALT+F1 means hold down the ALT key while pressing the F1 key.|  
-  
-## <a name="code-conventions"></a>Code Conventions  
+## <a name="typographic-conventions"></a>Tipografik kurallar  
   
 |Örnek|Açıklama|  
 |-------------|-----------------|  
-|`sampleString = "Hello, world!"`|Code samples appear in a fixed-pitch font and are formatted as shown in this example.|  
-|The previous statement sets the value of `sampleString` to "Hello, world!"|Code elements in explanatory text appear in a fixed-pitch font, as shown in this example.|  
-|`' This is a comment.`<br /><br /> `REM This is also a comment.`|Code comments are introduced by an apostrophe (') or the REM keyword.|  
-|`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|A space followed by an underscore ( _) at the end of a line indicates that the statement continues on the following line.|  
+|`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|Dile özgü anahtar sözcükler ve çalışma zamanı üyeleri ilk büyük harflerdir ve bu örnekte gösterildiği gibi biçimlendirilir.|  
+|**Smallproject**, **buttoncollection**|Yazmak istediğiniz sözcükler ve ifadeler bu örnekte gösterildiği gibi biçimlendirilir.|  
+|[Module Deyimi](../../visual-basic/language-reference/statements/module-statement.md)|Başka bir yardım sayfasına gitmek için tıkladığı bağlantılar, bu örnekte gösterildiği gibi biçimlendirilir.|  
+|*nesne*, *VariableName*, `argumentList`|Sağladığınız bilgilerin yer tutucuları, bu örnekte gösterildiği gibi biçimlendirilir.|  
+|[Gölgeler], [ *expressionlist* ]|Sözdiziminde, isteğe bağlı öğeler köşeli ayraçlar içine alınır.|  
+|{`Public` &#124; `Friend` &#124; `Private`}|Sözdiziminde, iki veya daha fazla öğe arasında seçim yapmanız gerektiğinde, öğeler küme ayraçları içine alınır ve dikey çubuklar ile ayrılır.<br /><br /> Öğelerin birini ve yalnızca birini seçmeniz gerekir.|  
+|[`Protected` &#124; `Friend`]|Sözdiziminde, iki veya daha fazla öğe arasında seçim yapma seçeneğine sahip olduğunuzda, öğeler köşeli parantezler içine alınır ve dikey çubuklar ile ayrılır.<br /><br /> Öğelerin herhangi bir birleşimini seçebilirsiniz veya hiç öğe yoktur.|  
+|[{`ByVal` &#124; `ByRef`}]|Sözdiziminde, birden fazla öğe seçemezsiniz ancak öğeleri tamamen atlayabilirsiniz, öğeler küme ayraçları ile çevrelenmiş ve dikey çubuklar ile ayrılmış köşeli ayraç içine alınır.|  
+|*MemberName*1, *MemberName*2, *MemberName*3|Aynı yer tutucunun birden çok örneği, örnekte gösterildiği gibi, alt simgeler ile ayırt edilir.|  
+|*memberName1*<br /><br /> ...<br /><br /> *Membernamence*|Söz dizimi içinde, üç nokta (...), üç noktanın hemen önünde bulunan türden belirsiz öğe sayısını göstermek için kullanılır.<br /><br /> Kodda, üç nokta, açıklık için Atlanan kodu işaret eder.|  
+|ESC, ENTER|Klavyede anahtar adlar ve anahtar dizileri, tüm büyük harflerle görüntülenir.|  
+|ALT+F1|Anahtar adları arasında artı işaretleri (+) görünüyorsa, bir tuşa basarak bir alt tuşunu basılı tutmanız gerekir. Örneğin, ALT + F1, F1 tuşuna basıldığında ALT tuşunu basılı tutmaktır.|  
+  
+## <a name="code-conventions"></a>Kod kuralları  
+  
+|Örnek|Açıklama|  
+|-------------|-----------------|  
+|`sampleString = "Hello, world!"`|Kod örnekleri sabit aralıklı bir yazı tipinde görüntülenir ve bu örnekte gösterildiği gibi biçimlendirilir.|  
+|Önceki ifade `sampleString` değerini "Hello, World!" olarak ayarlar|Açıklayıcı metindeki kod öğeleri, bu örnekte gösterildiği gibi sabit aralıklı bir yazı tipinde görüntülenir.|  
+|`' This is a comment.`<br /><br /> `REM This is also a comment.`|Kod açıklamaları bir kesme işareti (') veya REM anahtar sözcüğü ile tanıtılmıştır.|  
+|`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|Satırın sonundaki bir alt çizgi (_) izleyen bir boşluk, deyimin aşağıdaki satırda devam ettiğini gösterir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Basic Dili Başvurusu](../../visual-basic/language-reference/index.md)
 - [Anahtar Sözcükler](../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../visual-basic/language-reference/runtime-library-members.md)
-- [Visual Basic Naming Conventions](../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic adlandırma kuralları](../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
-- [Code’daki Açıklamalar](../../visual-basic/programming-guide/program-structure/comments-in-code.md)
+- [Kod Açıklamaları](../../visual-basic/programming-guide/program-structure/comments-in-code.md)

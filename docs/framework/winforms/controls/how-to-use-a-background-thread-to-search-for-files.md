@@ -18,23 +18,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351950"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Nasıl Yapılır: Dosya Aramak için Arka Plan İş Parçacığı Kullanma
-The <xref:System.ComponentModel.BackgroundWorker> component replaces and adds functionality to the <xref:System.Threading> namespace; however, the <xref:System.Threading> namespace is retained for both backward compatibility and future use, if you choose. For more information, see [BackgroundWorker Component Overview](backgroundworker-component-overview.md).
+<xref:System.ComponentModel.BackgroundWorker> bileşeni, ' nin yerini alır ve <xref:System.Threading> ad alanına işlevsellik ekler; Ancak, seçeneğini belirlerseniz, <xref:System.Threading> ad alanı hem geri uyumluluk hem de gelecekte kullanılmak üzere korunur. Daha fazla bilgi için bkz. [BackgroundWorker Component Overview](backgroundworker-component-overview.md).
 
- Windows Forms uses the single-threaded apartment (STA) model because Windows Forms is based on native Win32 windows that are inherently apartment-threaded. The STA model implies that a window can be created on any thread, but it cannot switch threads once created, and all function calls to it must occur on its creation thread. Outside Windows Forms, classes in the .NET Framework use the free threading model. For information about threading in the .NET Framework, see [Threading](../../../standard/threading/index.md).
+ Windows Forms, tek iş parçacıklı Apartment (STA) modelini kullanır çünkü Windows Forms, doğal olarak apartman iş parçacıklı yerel Win32 pencerelerini temel alır. STA modeli, herhangi bir iş parçacığında bir pencerenin oluşturulabileceğini gösterir, ancak oluşturulduktan sonra iş parçacıklarını geçmez ve ona yapılan tüm işlev çağrıları oluşturma iş parçacığında gerçekleşmelidir. Windows Forms dışında, .NET Framework sınıfları serbest iş parçacığı modelini kullanır. .NET Framework iş parçacığı oluşturma hakkında daha fazla bilgi için bkz. [Threading](../../../standard/threading/index.md).
 
- The STA model requires that any methods on a control that need to be called from outside the control's creation thread must be marshaled to (executed on) the control's creation thread. The base class <xref:System.Windows.Forms.Control> provides several methods (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, and <xref:System.Windows.Forms.Control.EndInvoke%2A>) for this purpose. <xref:System.Windows.Forms.Control.Invoke%2A> makes synchronous method calls; <xref:System.Windows.Forms.Control.BeginInvoke%2A> makes asynchronous method calls.
+ STA modeli, denetimin oluşturma iş parçacığının dışından çağrılması gereken denetim üzerindeki yöntemlerin, denetimin oluşturma iş parçacığı (üzerinde yürütülür) olarak sıralanması gerekir. Temel sınıf <xref:System.Windows.Forms.Control>, bu amaçla çeşitli Yöntemler (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>ve <xref:System.Windows.Forms.Control.EndInvoke%2A>) sağlar. <xref:System.Windows.Forms.Control.Invoke%2A>, zaman uyumlu Yöntem çağrıları yapar; <xref:System.Windows.Forms.Control.BeginInvoke%2A> zaman uyumsuz yöntem çağrıları yapar.
 
- If you use multithreading in your control for resource-intensive tasks, the user interface can remain responsive while a resource-intensive computation executes on a background thread.
+ Kaynak yoğunluklu görevler için denetikiş parçacığı kullanıyorsanız, bir arka plan iş parçacığında Kaynak yoğunluklu bir hesaplama yürütüldüğü sırada Kullanıcı Arabirimi yanıt vermeye devam edebilir.
 
- The following sample (`DirectorySearcher`) shows a multithreaded Windows Forms control that uses a background thread to recursively search a directory for files matching a specified search string and then populates a list box with the search result. The key concepts illustrated by the sample are as follows:
+ Aşağıdaki örnek (`DirectorySearcher`), belirli bir arama dizesiyle eşleşen dosyalar için bir dizini yinelemeli olarak aramak üzere bir arka plan iş parçacığı kullanan çok iş parçacıklı Windows Forms denetimini gösterir ve ardından bir liste kutusunu Arama sonucuyla doldurur. Örnek tarafından gösterilen temel kavramlar şunlardır:
 
-- `DirectorySearcher` starts a new thread to perform the search. The thread executes the `ThreadProcedure` method that in turn calls the helper `RecurseDirectory` method to do the actual search and to populate the list box. However, populating the list box requires a cross-thread call, as explained in the next two bulleted items.
+- `DirectorySearcher` aramayı gerçekleştirmek için yeni bir iş parçacığı başlatır. İş parçacığı, gerçek aramayı yapmak ve liste kutusunu doldurmak için yardımcı `RecurseDirectory` yöntemini çağıran `ThreadProcedure` yöntemini yürütür. Ancak, liste kutusunun doldurulması, sonraki iki madde işaretli öğe içinde açıklandığı gibi bir çapraz iş parçacığı çağrısı gerektirir.
 
-- `DirectorySearcher` defines the `AddFiles` method to add files to a list box; however, `RecurseDirectory` cannot directly invoke `AddFiles` because `AddFiles` can execute only in the STA thread that created `DirectorySearcher`.
+- `DirectorySearcher` bir liste kutusuna dosya eklemek için `AddFiles` yöntemini tanımlar; Ancak, `AddFiles` yalnızca `DirectorySearcher`oluşturan STA iş parçacığında yürütebileceğinden, `RecurseDirectory` doğrudan `AddFiles` çağıramıyor.
 
-- The only way `RecurseDirectory` can call `AddFiles` is through a cross-thread call — that is, by calling <xref:System.Windows.Forms.Control.Invoke%2A> or <xref:System.Windows.Forms.Control.BeginInvoke%2A> to marshal `AddFiles` to the creation thread of `DirectorySearcher`. `RecurseDirectory` uses <xref:System.Windows.Forms.Control.BeginInvoke%2A> so that the call can be made asynchronously.
+- `RecurseDirectory` tek yönlü `AddFiles` bir çapraz iş parçacığı çağrıdır, yani `AddFiles` oluşturma iş parçacığına `DirectorySearcher`sıralaması için <xref:System.Windows.Forms.Control.Invoke%2A> veya <xref:System.Windows.Forms.Control.BeginInvoke%2A> çağırarak. `RecurseDirectory`, çağrının zaman uyumsuz olarak yapılabilmesi için <xref:System.Windows.Forms.Control.BeginInvoke%2A> kullanır.
 
-- Marshaling a method requires the equivalent of a function pointer or callback. This is accomplished using delegates in the .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> takes a delegate as an argument. `DirectorySearcher` therefore defines a delegate (`FileListDelegate`), binds `AddFiles` to an instance of `FileListDelegate` in its constructor, and passes this delegate instance to <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` also defines an event delegate that is marshaled when the search is completed.
+- Bir yöntemi sıralama, bir işlev işaretçisinin veya geri çağrısının eşdeğerini gerektirir. Bu, .NET Framework Temsilciler kullanılarak gerçekleştirilir. <xref:System.Windows.Forms.Control.BeginInvoke%2A> bir temsilciyi bir bağımsız değişken olarak alır. `DirectorySearcher`, bir temsilciyi (`FileListDelegate`) tanımlar, `AddFiles` oluşturucudaki bir `FileListDelegate` örneğine bağlar ve bu temsilci örneğini <xref:System.Windows.Forms.Control.BeginInvoke%2A>geçirir. `DirectorySearcher` Ayrıca, arama tamamlandığında sıralanan bir olay temsilcisini tanımlar.
 
 ```vb
 Option Strict
@@ -568,8 +568,8 @@ namespace Microsoft.Samples.DirectorySearcher
 }
 ```
 
-## <a name="using-the-multithreaded-control-on-a-form"></a>Using the Multithreaded Control on a Form
- The following example shows how the multithreaded `DirectorySearcher` control can be used on a form.
+## <a name="using-the-multithreaded-control-on-a-form"></a>Bir formda çok Iş parçacıklı denetim kullanma
+ Aşağıdaki örnek, çok iş parçacıklı `DirectorySearcher` denetiminin bir formda nasıl kullanılabileceğini gösterir.
 
 ```vb
 Option Explicit

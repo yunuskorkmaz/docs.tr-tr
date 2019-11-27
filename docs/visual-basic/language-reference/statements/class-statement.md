@@ -21,7 +21,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354156"
 ---
 # <a name="class-statement-visual-basic"></a>Class Deyimi (Visual Basic)
-Declares the name of a class and introduces the definition of the variables, properties, events, and procedures that the class comprises.  
+Bir sınıfın adını bildirir ve sınıfın içerdiği değişkenlerin, özelliklerin, olayların ve yordamların tanımını tanıtır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,72 +38,72 @@ End Class
   
 |Terim|Tanım|  
 |---|---|  
-|`attributelist`|İsteğe bağlı. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|İsteğe bağlı. Can be one of the following:<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br/><br/> See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|İsteğe bağlı. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`MustInherit`|İsteğe bağlı. See [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
-|`NotInheritable`|İsteğe bağlı. See [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
-|`Partial`|İsteğe bağlı. Indicates a partial definition of the class. See [Partial](../../../visual-basic/language-reference/modifiers/partial.md).|  
-|`name`|Gerekli. Name of this class. See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|İsteğe bağlı. Specifies that this is a generic class.|  
-|`typelist`|Required if you use the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword. List of type parameters for this class. See [Type List](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|İsteğe bağlı. Indicates that this class inherits the members of another class. See [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
-|`classname`|Required if you use the `Inherits` statement. The name of the class from which this class derives.|  
-|`Implements`|İsteğe bağlı. Indicates that this class implements the members of one or more interfaces. See [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).|  
-|`interfacenames`|Required if you use the `Implements` statement. The names of the interfaces this class implements.|  
-|`statements`|İsteğe bağlı. Statements which define the members of this class.|  
-|`End Class`|Gerekli. Terminates the `Class` definition.|  
+|`attributelist`|İsteğe bağlı. Bkz. [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|İsteğe bağlı. Aşağıdakilerden biri olabilir:<br /><br /> -   [genel](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [korumalı](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [özel](../../../visual-basic/language-reference/modifiers/private.md)<br />-   [korumalı arkadaş](../../language-reference/modifiers/protected-friend.md)<br />- [özel korumalı](../../language-reference/modifiers/private-protected.md)<br/><br/> [Visual Basic erişim düzeylerine](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)bakın.|  
+|`Shadows`|İsteğe bağlı. Bkz. [gölgeler](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`MustInherit`|İsteğe bağlı. Bkz. [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
+|`NotInheritable`|İsteğe bağlı. [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)öğesine bakın.|  
+|`Partial`|İsteğe bağlı. Sınıfın kısmi bir tanımını gösterir. [Kısmi](../../../visual-basic/language-reference/modifiers/partial.md)gör.|  
+|`name`|Gerekli. Bu sınıfın adı. Bkz. [tanımlanmış öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`Of`|İsteğe bağlı. Bunun genel bir sınıf olduğunu belirtir.|  
+|`typelist`|[Anahtar sözcüğünü](../../../visual-basic/language-reference/statements/of-clause.md) kullanıyorsanız gereklidir. Bu sınıf için tür parametrelerinin listesi. Bkz. [tür listesi](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Inherits`|İsteğe bağlı. Bu sınıfın başka bir sınıfın üyelerini devraldığını gösterir. Bkz. [Inherits açıklaması](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`classname`|`Inherits` ifadesini kullanıyorsanız gereklidir. Bu sınıfın türetildiği sınıfın adı.|  
+|`Implements`|İsteğe bağlı. Bu sınıfın bir veya daha fazla arabirimin üyelerini uyguladığını gösterir. Bkz. [Implements açıklaması](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`interfacenames`|`Implements` ifadesini kullanıyorsanız gereklidir. Bu sınıfın uyguladığı arabirimlerin adları.|  
+|`statements`|İsteğe bağlı. Bu sınıfın üyelerini tanımlayan deyimler.|  
+|`End Class`|Gerekli. `Class` tanımını sonlandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- A `Class` statement defines a new data type. A *class* is a fundamental building block of object-oriented programming (OOP). For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+ `Class` bir ifade yeni bir veri türünü tanımlar. *Sınıf* , nesne odaklı programlama (OOP) temel yapı taşıdır. Daha fazla bilgi için bkz. [nesneler ve sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
- You can use `Class` only at namespace or module level. This means the *declaration context* for a class must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block. For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Yalnızca ad alanı veya modül düzeyinde `Class` kullanabilirsiniz. Diğer bir deyişle, bir sınıf için *Bildirim bağlamı* bir kaynak dosya, ad alanı, sınıf, yapı, modül veya arabirim olmalıdır ve bir yordam veya blok olamaz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Each instance of a class has a lifetime independent of all other instances. This lifetime begins when it is created by a [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) clause or by a function such as <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>. It ends when all variables pointing to the instance have been set to [Nothing](../../../visual-basic/language-reference/nothing.md) or to instances of other classes.  
+ Bir sınıfın her örneği, diğer tüm örneklerden bağımsız olarak yaşam süresine sahiptir. Bu ömür, [Yeni bir işleç](../../../visual-basic/language-reference/operators/new-operator.md) yan tümcesi veya <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>gibi bir işlev tarafından oluşturulduğunda başlar. Örneğe işaret eden tüm değişkenler [Nothing](../../../visual-basic/language-reference/nothing.md) veya diğer sınıfların örneklerine ayarlandığında sonlanır.  
   
- Classes default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access. You can adjust their access levels with the access modifiers. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Sınıfların varsayılan olarak [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md) erişimi. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz. Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Nesting.** You can define one class within another. The outer class is called the *containing class*, and the inner class is called a *nested class*.  
+- **İç içe geçme.** Bir sınıfı diğeri içinde tanımlayabilirsiniz. Dış sınıfa *kapsayan sınıf*denir ve iç sınıfa *iç içe sınıf*denir.  
   
-- **Inheritance.** If the class uses the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), you can specify only one base class or interface. A class cannot inherit from more than one element.  
+- **Devralmayı.** Sınıf [Inherits ifadesini](../../../visual-basic/language-reference/statements/inherits-statement.md)kullanıyorsa yalnızca bir temel sınıf veya arabirim belirtebilirsiniz. Bir sınıf birden fazla öğeden devralınabilir.  
   
-     A class cannot inherit from another class with a more restrictive access level. For example, a `Public` class cannot inherit from a `Friend` class.  
+     Bir sınıf daha kısıtlayıcı erişim düzeyine sahip başka bir sınıftan devralınabilir. Örneğin, bir `Public` sınıfı `Friend` sınıfından devralınabilir.  
   
-     A class cannot inherit from a class nested within it.  
+     Bir sınıf, içinde iç içe geçmiş bir sınıftan devralınabilir.  
   
-- **Implementation.** If the class uses the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md), you must implement every member defined by every interface you specify in `interfacenames`. An exception to this is reimplementation of a base class member. For more information, see "Reimplementation" in [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).  
+- **Paylaşır.** Sınıf [Implements ifadesini](../../../visual-basic/language-reference/statements/implements-statement.md)kullanıyorsa, `interfacenames`belirttiğiniz her arabirim tarafından tanımlanan her üyeyi uygulamanız gerekir. Bunun bir özel durumu, bir temel sınıf üyesinin yeniden uygulamasıdır. Daha fazla bilgi için, bkz. [uygulamadaki](../../../visual-basic/language-reference/statements/implements-clause.md)"yeniden uygulama".  
   
-- **Default Property.** A class can specify at most one property as its *default property*. For more information, see [Default](../../../visual-basic/language-reference/modifiers/default.md).  
+- **Varsayılan özellik.** Bir sınıf, en az bir özelliği *varsayılan özelliği*olarak belirtebilir. Daha fazla bilgi için bkz. [Default](../../../visual-basic/language-reference/modifiers/default.md).  
   
 ## <a name="behavior"></a>Davranış  
   
-- **Access Level.** Within a class, you can declare each member with its own access level. Class members default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access, except variables and constants, which default to [Private](../../../visual-basic/language-reference/modifiers/private.md) access. When a class has more restricted access than one of its members, the class access level takes precedence.  
+- **Erişim düzeyi.** Bir sınıf içinde, her üyeyi kendi erişim düzeyiyle bildirebilirsiniz. Sınıf üyeleri varsayılan olarak [özel](../../../visual-basic/language-reference/modifiers/private.md) erişim için varsayılan olarak, değişkenler ve sabitler hariç [genel](../../../visual-basic/language-reference/modifiers/public.md) erişime açıktır. Bir sınıf, üyelerinden birine göre daha kısıtlı erişime sahip olduğunda, sınıf erişim düzeyi önceliklidir.  
   
-- **Scope.** A class is in scope throughout its containing namespace, class, structure, or module.  
+- **Kapsam.** Bir sınıf, kapsayan ad alanı, sınıf, yapı veya modül genelinde kapsamdadır.  
   
-     The scope of every class member is the entire class.  
+     Her sınıf üyesinin kapsamı tüm sınıftır.  
   
-     **Lifetime.** Visual Basic does not support static classes. The functional equivalent of a static class is provided by a module. For more information, see [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).  
+     **Süre.** Visual Basic statik sınıfları desteklemez. Statik bir sınıfın işlevsel eşdeğeri bir modül tarafından sağlanır. Daha fazla bilgi için bkz. [module deyimleri](../../../visual-basic/language-reference/statements/module-statement.md).  
   
-     Class members have lifetimes depending on how and where they are declared. For more information, see [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+     Sınıf üyeleri, nasıl ve nerede bildiridiklerine bağlı olarak yaşam süreleri vardır. Daha fazla bilgi için [Visual Basic ömrü](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)' ne bakın.  
   
-- **Qualification.** Code outside a class must qualify a member's name with the name of that class.  
+- **Yeter.** Bir sınıf dışındaki kodun bir üyenin adını bu sınıfın adı ile nitelemeniz gerekir.  
   
-     If code inside a nested class makes an unqualified reference to a programming element, Visual Basic searches for the element first in the nested class, then in its containing class, and so on out to the outermost containing element.  
+     İç içe yerleştirilmiş bir sınıf içindeki kod, bir programlama öğesine nitelenmemiş bir başvuru yaparsa, Visual Basic iç içe geçmiş sınıfta, ardından kapsayan sınıfında ve bu öğeyi en dıştaki içeren en dıştaki öğe için bir kez arar.  
   
-## <a name="classes-and-modules"></a>Classes and Modules  
- These elements have many similarities, but there are some important differences as well.  
+## <a name="classes-and-modules"></a>Sınıflar ve modüller  
+ Bu öğelerin birçok benzerlikleri vardır ancak bazı önemli farklılıklar da vardır.  
   
-- **Terminology.** Previous versions of Visual Basic recognize two types of modules: *class modules* (.cls files) and *standard modules* (.bas files). The current version calls these *classes* and *modules*, respectively.  
+- **Terminolojiyi.** Önceki Visual Basic sürümleri iki tür modül tanır: *sınıf modülleri* (. CLS dosyaları) ve *Standart modüller* (. bas dosyaları). Geçerli sürüm, sırasıyla bu *sınıfları* ve *modülleri*çağırır.  
   
-- **Shared Members.** You can control whether a member of a class is a shared or instance member.  
+- **Paylaşılan Üyeler.** Bir sınıfın bir üyesinin paylaşılan bir veya örnek üye olup olmadığını kontrol edebilirsiniz.  
   
-- **Object Orientation.** Classes are object-oriented, but modules are not. You can create one or more instances of a class. For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+- **Nesne yönü.** Sınıflar nesne yönelimlidir, ancak modüller değildir. Bir sınıfın bir veya daha fazla örneğini oluşturabilirsiniz. Daha fazla bilgi için bkz. [nesneler ve sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="example"></a>Örnek  
- The following example uses a `Class` statement to define a class and several members.  
+ Aşağıdaki örnek, bir sınıfı ve birkaç üyeyi tanımlamak için bir `Class` ifadesini kullanır.  
   
  [!code-vb[VbVbalrStatements#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#62)]  
   
@@ -115,5 +115,5 @@ End Class
 - [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)
 - [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)

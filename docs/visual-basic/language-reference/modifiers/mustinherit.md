@@ -18,32 +18,32 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351504"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
-Specifies that a class can be used only as a base class and that you cannot create an object directly from it.  
+Bir sınıfın sadece temel sınıf olarak kullanılabileceğini ve doğrudan bundan bir nesne oluşturkullanılamayacağını belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The purpose of a *base class* (also known as an *abstract class*) is to define functionality that is common to all the classes derived from it. This saves the derived classes from having to redefine the common elements. In some cases, this common functionality is not complete enough to make a usable object, and each derived class defines the missing functionality. In such a case, you want the consuming code to create objects only from the derived classes. You use `MustInherit` on the base class to enforce this.  
+ *Temel sınıfın* amacı ( *soyut sınıf*olarak da bilinir), bundan türetilmiş tüm sınıflar için ortak olan işlevleri tanımlamaktır. Bu, türetilmiş sınıfları ortak öğeleri yeniden tanımlamak zorunda kalmadan kaydeder. Bazı durumlarda, bu ortak işlevsellik kullanılabilir bir nesne oluşturmak için yeterli değildir ve her türetilmiş sınıf eksik işlevselliği tanımlar. Böyle bir durumda, tüketen kodun yalnızca türetilmiş sınıflardan nesneler oluşturmasını istersiniz. Bunu zorlamak için temel sınıfta `MustInherit` kullanırsınız.  
   
- Another use of a `MustInherit` class is to restrict a variable to a set of related classes. You can define a base class and derive all these related classes from it. The base class does not need to provide any functionality common to all the derived classes, but it can serve as a filter for assigning values to variables. If your consuming code declares a variable as the base class, Visual Basic allows you to assign only an object from one of the derived classes to that variable.  
+ `MustInherit` sınıfının başka bir kullanımı, bir değişkeni ilgili sınıflar kümesiyle kısıtlamadır. Bir temel sınıf tanımlayabilir ve bu ilgili sınıfları bundan türetebilirsiniz. Temel sınıfın tüm türetilmiş sınıflarda ortak bir işlev sağlaması gerekmez, ancak değişkenlere değer atamak için bir filtre işlevi görebilir. Tüketim kodunuz temel sınıf olarak bir değişken bildirirse Visual Basic, yalnızca türetilmiş sınıflardan birindeki bir nesneyi bu değişkene atamanıza izin verir.  
   
- The .NET Framework defines several `MustInherit` classes, among them <xref:System.Array>, <xref:System.Enum>, and <xref:System.ValueType>. <xref:System.ValueType> is an example of a base class that restricts a variable. All value types derive from <xref:System.ValueType>. If you declare a variable as <xref:System.ValueType>, you can assign only value types to that variable.  
+ .NET Framework, <xref:System.Array>, <xref:System.Enum>ve <xref:System.ValueType>arasında çeşitli `MustInherit` sınıfları tanımlar. <xref:System.ValueType>, bir değişkeni kısıtlayan temel sınıfa bir örnektir. Tüm değer türleri <xref:System.ValueType>türetilir. Bir değişkeni <xref:System.ValueType>olarak bildirirseniz, bu değişkene yalnızca değer türlerini atayabilirsiniz.  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Declaration Context.** You can use `MustInherit` only in a `Class` statement.  
+- **Bildirim bağlamı.** Yalnızca bir `Class` bildiriminde `MustInherit` kullanabilirsiniz.  
   
-- **Combined Modifiers.** You cannot specify `MustInherit` together with `NotInheritable` in the same declaration.  
+- **Birleşik değiştiriciler.** Aynı bildirimde `NotInheritable` birlikte `MustInherit` belirtemezsiniz.  
   
 ## <a name="example"></a>Örnek  
- The following example illustrates both forced inheritance and forced overriding. The base class `shape` defines a variable `acrossLine`. The classes `circle` and `square` derive from `shape`. They inherit the definition of `acrossLine`, but they must define the function `area` because that calculation is different for each kind of shape.  
+ Aşağıdaki örnek, hem zorunlu devralmayı hem de geçersiz kılmayı gösterir. Temel sınıf `shape` bir değişken `acrossLine`tanımlar. Sınıflar `circle` ve `square` `shape`türetilir. `acrossLine`tanımını alırlar, ancak bu hesaplama her bir şekil türü için farklı olduğundan, bu, işlevi `area` tanımlamalıdır.  
   
  [!code-vb[VbVbalrKeywords#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#2)]  
   
- You can declare `shape1` and `shape2` to be of type `shape`. However, you cannot create an object from `shape` because it lacks the functionality of the function `area` and is marked `MustInherit`.  
+ `shape1` ve `shape2` `shape`türünde olacak şekilde bildirebilirsiniz. Ancak, `shape` bir nesne oluşturamazsınız çünkü bu, işlev `area` işlevselliğine sahip ve `MustInherit`olarak işaretlenmiş.  
   
- Because they are declared as `shape`, the variables `shape1` and `shape2` are restricted to objects from the derived classes `circle` and `square`. Visual Basic does not allow you to assign any other object to these variables, which gives you a high level of type safety.  
+ `shape`olarak bildirildiği için, `shape1` ve `shape2` değişkenleri türetilmiş sınıflardaki nesnelerle kısıtlıdır `circle` ve `square`. Visual Basic, bu değişkenlere başka herhangi bir nesne atamanıza izin vermez, bu da size yüksek düzeyde güvenlik düzeyi sağlar.  
   
 ## <a name="usage"></a>Kullanım  
- The `MustInherit` modifier can be used in this context:  
+ `MustInherit` değiştiricisi Bu bağlamda kullanılabilir:  
   
  [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   

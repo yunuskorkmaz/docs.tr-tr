@@ -13,8 +13,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352340"
 ---
-# <a name="-platform-visual-basic"></a>-platform (Visual Basic)
-Specifies which platform version of common language runtime (CLR) can run the output file.  
+# <a name="-platform-visual-basic"></a>-Platform (Visual Basic)
+Ortak dil çalışma zamanının (CLR) hangi platform sürümünün çıkış dosyasını çalıştırabileceği belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -22,60 +22,60 @@ Specifies which platform version of common language runtime (CLR) can run the ou
 -platform:{ x86 | x64 | Itanium | arm | anycpu | anycpu32bitpreferred }  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
   
 |Terim|Tanım|  
 |---|---|  
-|`x86`|Compiles your assembly to be run by the 32-bit, x86-compatible CLR.|  
-|`x64`|Compiles your assembly to be run by the 64-bit CLR on a computer that supports the AMD64 or EM64T instruction set.|  
-|`Itanium`|Compiles your assembly to be run by the 64-bit CLR on a computer with an Itanium processor.|  
-|`arm`|Compiles your assembly to be run on a computer with an ARM (Advanced RISC Machine) processor.|  
-|`anycpu`|Compiles your assembly to run on any platform. The application will run as a 32-bit application on 32-bit versions of Windows and as a 64-bit application on 64-bit versions of Windows. This flag is the default value.|  
-|`anycpu32bitpreferred`|Compiles your assembly to run on any platform. The application will run as a 32-bit application on both 32-bit and 64-bit versions of Windows. This flag is valid only for executables (.EXE) and requires .NET Framework 4.5.|  
+|`x86`|Derlemenizi 32 bit, x86 uyumlu CLR tarafından çalıştırılacak şekilde derler.|  
+|`x64`|, Derlemenizi AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayarda 64 bitlik CLR tarafından çalıştırılacak şekilde derler.|  
+|`Itanium`|Derlemenizi, Itanium işlemcisi olan bir bilgisayarda 64 bitlik CLR tarafından çalıştırılacak şekilde derler.|  
+|`arm`|Derlemenizi ARM (Gelişmiş RıSC makinesi) işlemcisi olan bir bilgisayarda çalıştırılacak şekilde derler.|  
+|`anycpu`|Derlemenizi herhangi bir platformda çalışacak şekilde derler. Uygulama Windows 'un 32 bit sürümlerinde 32 bitlik bir uygulama olarak ve Windows 'un 64 bit sürümlerinde bir 64 bit uygulama olarak çalışacaktır. Bu bayrak varsayılan değerdir.|  
+|`anycpu32bitpreferred`|Derlemenizi herhangi bir platformda çalışacak şekilde derler. Uygulama, Windows 'un hem 32 bit hem de 64-bit sürümlerinde 32 bitlik bir uygulama olarak çalışacaktır. Bu bayrak yalnızca yürütülebilir dosyalar için geçerlidir (. EXE) ve .NET Framework 4,5 gerektirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Use the `-platform` option to specify the type of processor targeted by the output file.  
+ Çıkış dosyasının hedeflediği işlemcinin türünü belirtmek için `-platform` seçeneğini kullanın.  
   
- In general, .NET Framework assemblies written in Visual Basic will run the same regardless of the platform. However, there are some cases that behave differently on different platforms. These common cases are:  
+ Genel olarak, Visual Basic yazılan .NET Framework derlemeleri platformdan bağımsız olarak aynı çalışacaktır. Ancak, farklı platformlarda farklı şekilde davranan bazı durumlar vardır. Bu ortak durumlar şunlardır:  
   
-- Structures that contain members that change size depending on the platform, such as any pointer type.  
+- Herhangi bir işaretçi türü gibi, platforma bağlı olarak boyutu değiştiren Üyeler içeren yapılar.  
   
 - Sabit boyutlar içeren işaretçi aritmetiği.  
   
 - Tanıtıcılar için `Integer` yerine <xref:System.IntPtr> kullanan yanlış platform çağrıları veya COM bildirimleri.  
   
-- Casting <xref:System.IntPtr> to `Integer`.  
+- `Integer`<xref:System.IntPtr> atama.  
   
-- Using platform invoke or COM interop with components that do not exist on all platforms.  
+- Tüm platformlarda mevcut olmayan bileşenlerle platform Invoke veya COM birlikte çalışma kullanma.  
   
- The **-platform** option will mitigate some issues if you know you have made assumptions about the architecture your code will run on. Specifically:  
+ Kodunuzun çalışacağı mimariyle ilgili varsayımlar yaptığını biliyorsanız, **-Platform** seçeneği bazı sorunları azaltır. Engelle  
   
-- If you decide to target a 64-bit platform, and the application is run on a 32-bit machine, the error message comes much earlier and is more targeted at the problem than the error that occurs without using this switch.  
+- 64 bitlik bir platformu hedefistemediğinize karar verirseniz ve uygulama 32 bit makinede çalışıyorsa, hata iletisi daha önce gelir ve sorunu bu anahtarı kullanmadan oluşan hatadan daha da hedeflenmiştir.  
   
-- If you set the `x86` flag on the option and the application is subsequently run on a 64-bit machine, the application will run in the WOW subsystem instead of running natively.  
+- Seçeneğinde `x86` bayrağını ayarlarsanız ve uygulama daha sonra bir 64 bit makinede çalışıyorsa, uygulama yerel olarak çalıştırmak yerine WOW alt sisteminde çalışır.  
   
- On a 64-bit Windows operating system:  
+ 64 bitlik bir Windows işletim sisteminde:  
   
-- Assemblies compiled with `-platform:x86` will execute on the 32-bit CLR running under WOW64.  
+- `-platform:x86` ile derlenen derlemeler, WOW64 altında çalışan 32 bitlik CLR üzerinde yürütülür.  
   
-- Executables compiled with the `-platform:anycpu` will execute on the 64-bit CLR.  
+- `-platform:anycpu` ile derlenen çalıştırılabilir dosyalar 64 bitlik CLR üzerinde yürütülür.  
   
-- A DLL compiled with the `-platform:anycpu` will execute on the same CLR as the process into which it loaded.  
+- `-platform:anycpu` ile derlenen bir DLL, yüklendiği işlemle aynı CLR üzerinde yürütülür.  
   
-- Executables that are compiled with `-platform:anycpu32bitpreferred` will execute on the 32-bit CLR.  
+- `-platform:anycpu32bitpreferred` ile derlenen çalıştırılabilir dosyalar 32 bitlik CLR üzerinde yürütülür.  
   
- For more information about how to develop an application to run on a 64-bit version of Windows, see [64-bit Applications](../../../framework/64-bit-apps.md).  
+ Windows 'un 64 bitlik bir sürümünde çalışacak bir uygulama geliştirme hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](../../../framework/64-bit-apps.md).  
   
-### <a name="to-set--platform-in-the-visual-studio-ide"></a>To set -platform in the Visual Studio IDE  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>Visual Studio IDE 'de set-platform  
   
-1. In **Solution Explorer**, choose the project, open the **Project** menu, and then click **Properties**.  
+1. **Çözüm Gezgini**, projeyi seçin, **Proje** menüsünü açın ve ardından **Özellikler**' e tıklayın.  
   
-2. On the **Compile** tab, select or clear the **Prefer 32-bit** check box, or, in the **Target CPU** list, choose a value.  
+2. **Derle** sekmesinde, **32 bit tercih** et onay kutusunu seçin veya temizleyin veya **hedef CPU** listesinden bir değer seçin.  
   
-     For more information, see [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+     Daha fazla bilgi için bkz. [derleme sayfası, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Örnek  
- The following example illustrates how to use the `-platform` compiler option.  
+ Aşağıdaki örnek, `-platform` derleyici seçeneğinin nasıl kullanılacağını göstermektedir.  
   
 ```console
 vbc -platform:x86 myFile.vb  
@@ -84,5 +84,5 @@ vbc -platform:x86 myFile.vb
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [-target (Visual Basic)](target.md)
-- [Visual Basic Command-Line Compiler](index.md)
+- [Visual Basic komut satırı derleyicisi](index.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

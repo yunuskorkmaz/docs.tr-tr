@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349623"
 ---
 # <a name="where-clause-visual-basic"></a>Where Tümcesi (Visual Basic)
-Specifies the filtering condition for a query.  
+Bir sorgu için filtreleme koşulunu belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,28 +26,28 @@ Where condition
   
 ## <a name="parts"></a>Bölümler  
  `condition`  
- Gerekli. An expression that determines whether the values for the current item in the collection are included in the output collection. The expression must evaluate to a `Boolean` value or the equivalent of a `Boolean` value. If the condition evaluates to `True`, the element is included in the query result; otherwise, the element is excluded from the query result.  
+ Gerekli. Koleksiyonda geçerli öğenin değerlerinin çıkış koleksiyonuna dahil edilip edilmeyeceğini belirleyen bir ifade. İfade bir `Boolean` değeri veya bir `Boolean` değerinin eşdeğerini olarak değerlendirilmelidir. Koşul `True`olarak değerlendirilirse, öğe sorgu sonucuna dahil edilir; Aksi takdirde, öğe sorgu sonucundan çıkarılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `Where` clause enables you to filter query data by selecting only elements that meet certain criteria. Elements whose values cause the `Where` clause to evaluate to `True` are included in the query result; other elements are excluded. The expression that is used in a `Where` clause must evaluate to a `Boolean` or the equivalent of a `Boolean`, such as an Integer that evaluates to `False` when its value is zero. You can combine multiple expressions in a `Where` clause by using logical operators such as `And`, `Or`, `AndAlso`, `OrElse`, `Is`, and `IsNot`.  
+ `Where` yan tümcesi yalnızca belirli ölçütlere uyan öğeleri seçerek sorgu verilerini filtrelemenizi sağlar. Değerleri, `Where` yan tümcesinin `True` değerlendirmesine neden olan öğeler sorgu sonucuna dahil edilir; diğer öğeler hariç tutulur. `Where` yan tümcesinde kullanılan ifade, değeri sıfır olduğunda `False` değerlendirilen bir tamsayı gibi bir `Boolean` veya `Boolean`eşdeğerini değerlendirmelidir. `And`, `Or`, `AndAlso`, `OrElse`, `Is`ve `IsNot`gibi mantıksal işleçleri kullanarak bir `Where` yan tümcesinde birden çok ifadeyi birleştirebilirsiniz.  
   
- By default, query expressions are not evaluated until they are accessed—for example, when they are data-bound or iterated through in a `For` loop. As a result, the `Where` clause is not evaluated until the query is accessed. If you have values external to the query that are used in the `Where` clause, ensure that the appropriate value is used in the `Where` clause at the time the query is executed. For more information about query execution, see [Writing Your First LINQ Query](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+ Varsayılan olarak, sorgu ifadeleri erişilene kadar değerlendirilmez — Örneğin, veri bağladığında veya bir `For` döngüsünde yinelendiğinde. Sonuç olarak, `Where` yan tümcesi sorguya erişilene kadar değerlendirilmez. `Where` yan tümcesinde kullanılan sorguya harici değerleriniz varsa, sorgu yürütüldüğü sırada `Where` yan tümcesinde uygun değerin kullanıldığından emin olun. Sorgu yürütme hakkında daha fazla bilgi için, bkz. [Ilk LINQ sorgunuzu yazma](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
   
- You can call functions within a `Where` clause to perform a calculation or operation on a value from the current element in the collection. Calling a function in a `Where` clause can cause the query to be executed immediately when it is defined instead of when it is accessed. For more information about query execution, see [Writing Your First LINQ Query](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+ Koleksiyondaki geçerli öğeden bir değer üzerinde hesaplama veya işlem gerçekleştirmek için, bir `Where` yan tümcesindeki işlevleri çağırabilirsiniz. Bir işlevi `Where` yan tümcesinde çağırmak, sorgunun ne zaman yerine tanımlanmadığında hemen yürütülmesine neden olabilir. Sorgu yürütme hakkında daha fazla bilgi için, bkz. [Ilk LINQ sorgunuzu yazma](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
   
 ## <a name="example"></a>Örnek  
- The following query expression uses a `From` clause to declare a range variable `cust` for each `Customer` object in the `customers` collection. The `Where` clause uses the range variable to restrict the output to customers from the specified region. The `For Each` loop displays the company name for each customer in the query result.  
+ Aşağıdaki sorgu ifadesi, `customers` koleksiyonundaki her bir `Customer` nesnesi için bir Aralık değişkeni `cust` bildirmek üzere bir `From` yan tümcesi kullanır. `Where` yan tümcesi, belirtilen bölgedeki müşterilere çıktıyı kısıtlamak için Aralık değişkenini kullanır. `For Each` döngüsü, sorgu sonucundaki her bir müşteri için şirket adını görüntüler.  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="example"></a>Örnek  
- The following example uses `And` and `Or` logical operators in the `Where` clause.  
+ Aşağıdaki örnek, `Where` yan tümcesindeki `And` ve `Or` mantıksal işleçler kullanır.  
   
  [!code-vb[VbSimpleQuerySamples#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#31)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
 - [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)

@@ -12,25 +12,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74329554"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>DLL yüklenirken hata (Visual Basic)
-A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement. Possible causes for this error include:  
+Dinamik bağlantı kitaplığı (DLL), bir `Declare` deyimin `Lib` yan tümcesinde belirtilen bir kitaplıktır. Bu hatanın olası nedenleri şunlardır:  
   
-- The file is not DLL executable.  
+- Dosya DLL yürütülebilir dosyası değil.  
   
-- The file is not a Microsoft Windows DLL.  
+- Dosya bir Microsoft Windows DLL 'i değil.  
   
-- The DLL references another DLL that is not present.  
+- DLL, mevcut olmayan başka bir DLL 'ye başvuruyor.  
   
-- The DLL or referenced DLL is not in a directory specified in the path.  
+- DLL veya başvurulan DLL, yolda belirtilen bir dizin içinde değil.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- If the file is a source-text file and therefore not DLL executable, it must be compiled and linked to a DLL-executable form.  
+- Dosya bir kaynak-metin dosyasıdır ve bu nedenle DLL yürütülebilir dosyası değilse, derlenmesi ve DLL yürütülebilir bir formla ilişkilendirilmesi gerekir.  
   
-- If the file is not a Microsoft Windows DLL, obtain the Microsoft Windows equivalent.  
+- Dosya bir Microsoft Windows DLL değilse, Microsoft Windows eşdeğerini edinin.  
   
-- If the DLL references another DLL that is not present, obtain the referenced DLL and make it available.  
+- DLL, mevcut olmayan başka bir DLL 'ye başvuruyorsa, başvurulan DLL 'yi edinin ve kullanılabilir hale getirin.  
   
-- If the DLL or referenced DLL is not in a directory specified by the path, move the DLL to a referenced directory.  
+- DLL veya başvurulan DLL, yol tarafından belirtilen bir dizinde değilse, DLL 'yi başvurulan bir dizine taşıyın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

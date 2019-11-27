@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449686"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation Metodu
-Provides version information about the common language runtime (CLR) that is being profiled.  
+Profili oluşturulan ortak dil çalışma zamanı (CLR) hakkında sürüm bilgileri sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,43 +43,43 @@ HRESULT GetRuntimeInformation(
   
 ## <a name="parameters"></a>Parametreler  
  `pClrInstanceId`  
- [out] The representative ID of a running CLR instance in a process. This is the same as the `ClrInstanceID` that the event tracing for Windows (ETW) startup event reports.  
+ dışı İşlemdeki çalışan bir CLR örneğinin temsili KIMLIĞI. Bu, Windows için olay izleme (ETW) başlatma olayı raporlarının `ClrInstanceID` aynıdır.  
   
  `pRuntimeType`  
- [out] The runtime type. This parameter returns `COR_PRF_DESKTOP_CLR` for the desktop version of the CLR, or `COR_PRF_CORE_CLR` for the core version of the CLR used in Silverlight.  
+ dışı Çalışma zamanı türü. Bu parametre, CLR 'nin masaüstü sürümü için `COR_PRF_DESKTOP_CLR` veya Silverlight 'ta kullanılan CLR 'nin çekirdek sürümü için `COR_PRF_CORE_CLR` döndürür.  
   
  `pMajorVersion`  
- [out] The major version number of the CLR.  
+ dışı CLR 'nin ana sürüm numarası.  
   
  `pMinorVersion`  
- [out] The minor version number of the CLR.  
+ dışı CLR 'nin ikincil sürüm numarası.  
   
  `pBuildVersion`  
- [out] The build version number of the CLR.  
+ dışı CLR 'nin derleme sürüm numarası.  
   
  `pQFEVersion`  
- [out] The version number of the CLR that is associated with a software update.  
+ dışı Bir yazılım güncelleştirmesiyle ilişkilendirilen CLR 'nin sürüm numarası.  
   
  `cchVersionString`  
- [in] The length, in characters, of the buffer that `szVersionString` points to.  
+ 'ndaki `szVersionString` arabelleğin gösterdiği uzunluğun uzunluğu (karakter).  
   
  `pcchVersionString`  
- [out] The length, in characters, of `szVersionString`.  
+ dışı `szVersionString`karakter cinsinden uzunluğu.  
   
  `szVersionString`  
- [out] The CLR version string.  
+ dışı CLR sürüm dizesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- You may pass null for any parameter. However, `pcchVersionString` cannot be null unless `szVersionString` is also null.  
+ Herhangi bir parametre için null değeri geçirebilirsiniz. Ancak, `szVersionString` da null olmadığı müddetçe `pcchVersionString` null olamaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

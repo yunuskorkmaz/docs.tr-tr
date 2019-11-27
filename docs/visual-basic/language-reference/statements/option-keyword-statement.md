@@ -13,13 +13,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353771"
 ---
-# <a name="option-keyword-statement"></a>Option \<keyword> Statement
-Introduces a statement that specifies a compiler option that applies to the entire source file.  
+# <a name="option-keyword-statement"></a>Seçenek \<anahtar sözcüğü > deyimleri
+Kaynak dosyanın tamamına uygulanan bir derleyici seçeneğini belirten bir ifade tanıtır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.  
+ Derleyici seçenekleri, tüm değişkenlerin açıkça bildirilmesini, daraltma türü dönüştürmelerin açık olması gerekip gerekmediğini ya da dizelerin metin veya ikili miktarlar olarak karşılaştırılacağını denetleyebilir.  
   
- The `Option` keyword can be used in these contexts:  
+ `Option` anahtar sözcüğü şu bağlamlarda kullanılabilir:  
   
  [Option Compare Deyimi](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
   

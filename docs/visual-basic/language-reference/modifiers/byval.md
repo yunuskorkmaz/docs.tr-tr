@@ -16,13 +16,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351592"
 ---
 # <a name="byval-visual-basic"></a>ByVal (Visual Basic)
-Specifies that an argument is passed [by value](../../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md), so that the called procedure or property cannot change the value of a variable underlying the argument in the calling code. If no modifier is specified, ByVal is the default.
+Çağrılan yordamın veya özelliğin, çağıran koddaki bağımsız değişkeni temel alan bir değişkenin değerini değiştirememesi için bir bağımsız değişkenin [değere göre](../../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)geçtiğini belirtir. Değiştirici belirtilmemişse, ByVal varsayılandır.
 
 > [!NOTE]
-> Because it is the default, you do not have to explicitly specify the `ByVal` keyword in method signatures. It tends to produce noisy code and often leads to the non-default `ByRef` keyword being overlooked.
+> Varsayılan olduğundan, yöntem imzalarında `ByVal` anahtar sözcüğünü açıkça belirtmeniz gerekmez. Gürültülü kod üretme eğilimi gösterir ve genellikle varsayılan olmayan `ByRef` anahtar kelimesine çok daha fazla bakmaktadır.
 
 ## <a name="remarks"></a>Açıklamalar
- The `ByVal` modifier can be used in these contexts:
+ `ByVal` değiştiricisi şu bağlamlarda kullanılabilir:
 
  [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
 
@@ -35,7 +35,7 @@ Specifies that an argument is passed [by value](../../programming-guide/language
  [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
 
 ## <a name="example"></a>Örnek
- The following example demonstrates the use of the `ByVal` parameter passing mechanism with a reference type argument. In the example, the argument is `c1`, an instance of class `Class1`. `ByVal` prevents the code in the procedures from changing the underlying value of the reference argument, `c1`, but does not protect the accessible fields and properties of `c1`.
+ Aşağıdaki örnek, bir başvuru türü bağımsız değişkeniyle `ByVal` parametresi geçen mekanizmanın kullanımını gösterir. Örnekte, bağımsız değişken `c1`, `Class1`sınıfının bir örneğidir. `ByVal` yordamdaki kodun başvuru bağımsız değişkeninin temel alınan değerini değiştirmesini önler, `c1`, ancak `c1`erişilebilir alanları ve özelliklerini korumaz.
 
  [!code-vb[VbVbalrKeywords#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class5.vb#10)]
 

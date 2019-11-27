@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436100"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo Yöntemi
-Gets data about the specified column in the specified table.  
+Belirtilen tabloda belirtilen sütunla ilgili verileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,31 +42,31 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- [in] The index of the desired table.  
+ 'ndaki İstenen tablonun dizini.  
   
  `ixCol`  
- [in] The index of the desired column.  
+ 'ndaki İstenen sütunun dizini.  
   
  `poCol`  
- [out] A pointer to the offset of the column in the row.  
+ dışı Satırdaki sütunun uzaklığa yönelik bir işaretçi.  
   
  `pcbCol`  
- [out] A pointer to the size, in bytes, of the column.  
+ dışı Sütunun bayt cinsinden boyutu için bir işaretçi.  
   
  `pType`  
- [out] A pointer to the type of the values in the column.  
+ dışı Sütundaki değerlerin türüne yönelik bir işaretçi.  
   
  `ppName`  
- [out] A pointer to a pointer to the column name.  
+ dışı Sütun adı işaretçisinin işaretçisi.  
  
 ## <a name="remarks"></a>Açıklamalar
 
-The returned column type falls within a range of values:
+Döndürülen sütun türü bir değer aralığı içinde yer alıyorsa:
 
-| pType                    | Açıklama   | Helper function                   |
+| pType                    | Açıklama   | Yardımcı işlevi                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0..63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
-| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Coded token | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `0`..`iRidMax`<br>(0.. 63)   | Rid           | **Isrbıtype türü**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | Kodlanmış belirteç | **IsCodedTokenType** <br>**IsRidOrToken** |
 | `iSHORT` (96)            | Int16         | **IsFixedType**                   |
 | `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
 | `iLONG` (98)             | Int32         | **IsFixedType**                   |
@@ -76,23 +76,23 @@ The returned column type falls within a range of values:
 | `iGUID` (102)            | Guid          | **IsHeapType**                    |
 | `iBLOB` (103)            | Blob          | **IsHeapType**                    |
 
-Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:
+*Yığında* depolanan değerler (yani, `IsHeapType == true`) kullanılarak okunabilir:
 
-- `iSTRING`: **IMetadataTables.GetString**
-- `iGUID`: **IMetadataTables.GetGUID**
-- `iBLOB`: **IMetadataTables.GetBlob**
+- `iSTRING`: **IMetaDataTables. GetString**
+- `iGUID`: **IMetaDataTables. GetGUID**
+- `iBLOB`: **IMetaDataTables. GetBlob**
 
 > [!IMPORTANT]
-> To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.
+> Yukarıdaki tabloda tanımlanan sabitleri kullanmak için *Cor. h* üstbilgi dosyası tarafından sunulan yönerge `#define _DEFINE_META_DATA_META_CONSTANTS` ekleyin.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

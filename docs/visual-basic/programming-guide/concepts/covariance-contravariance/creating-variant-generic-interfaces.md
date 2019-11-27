@@ -9,23 +9,23 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347063"
 ---
-# <a name="creating-variant-generic-interfaces-visual-basic"></a>Creating Variant Generic Interfaces (Visual Basic)
+# <a name="creating-variant-generic-interfaces-visual-basic"></a>Değişken genel arabirimler oluşturma (Visual Basic)
 
-You can declare generic type parameters in interfaces as covariant or contravariant. *Covariance* allows interface methods to have more derived return types than that defined by the generic type parameters. *Contravariance* allows interface methods to have argument types that are less derived than that specified by the generic parameters. A generic interface that has covariant or contravariant generic type parameters is called *variant*.
+Arabirimlerdeki genel tür parametrelerini birlikte değişken veya değişken karşıtı olarak bildirebilirsiniz. *Kovaryans* , Arabirim yöntemlerinin genel tür parametreleri tarafından tanımlananla daha fazla türetilmiş dönüş türüne sahip olmasına izin verir. *Değişken varyans* , Arabirim yöntemlerinin genel parametreler tarafından belirtilenden daha az türetilmiş bağımsız değişken türlerine sahip olmasına olanak sağlar. Değişkenle birlikte değişken veya değişken karşıtı genel tür parametrelerine sahip genel bir arabirim *değişken*olarak adlandırılır.
 
 > [!NOTE]
-> .NET Framework 4 introduced variance support for several existing generic interfaces. For the list of the variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
+> .NET Framework 4, mevcut birçok genel arabirim için varyans desteği getirmiştir. .NET Framework değişken arabirimlerinin listesi için bkz. [Genel Arabirimlerde Varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
 
-## <a name="declaring-variant-generic-interfaces"></a>Declaring Variant Generic Interfaces
+## <a name="declaring-variant-generic-interfaces"></a>VARIANT genel arabirimlerini bildirme
 
-You can declare variant generic interfaces by using the `in` and `out` keywords for generic type parameters.
+Genel tür parametreleri için `in` ve `out` anahtar sözcüklerini kullanarak VARIANT genel arabirimleri bildirebilirsiniz.
 
 > [!IMPORTANT]
-> `ByRef` parameters in Visual Basic cannot be variant. Value types also do not support variance.
+> Visual Basic `ByRef` parametreler Variant olamaz. Değer türleri de varyansı desteklemez.
 
-You can declare a generic type parameter covariant by using the `out` keyword. The covariant type must satisfy the following conditions:
+`out` anahtar sözcüğünü kullanarak genel tür parametresi ortak değişkeni bildirebilirsiniz. Covaryant türü şu koşulları karşılamalıdır:
 
-- The type is used only as a return type of interface methods and not used as a type of method arguments. This is illustrated in the following example, in which the type `R` is declared covariant.
+- Tür, yalnızca Arabirim yöntemlerinin dönüş türü olarak kullanılır ve Yöntem bağımsız değişkenlerinin türü olarak kullanılmaz. Bu, `R` türünün covaryant olarak bildirildiği aşağıdaki örnekte gösterilmiştir.
 
     ```vb
     Interface ICovariant(Of Out R)
@@ -35,7 +35,7 @@ You can declare a generic type parameter covariant by using the `out` keyword. T
     End Interface
     ```
 
-    There is one exception to this rule. If you have a contravariant generic delegate as a method parameter, you can use the type as a generic type parameter for the delegate. This is illustrated by the type `R` in the following example. For more information, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+    Bu kural için bir özel durum var. Bir yöntem parametresi olarak bir değişken karşıtı genel temsilciniz varsa, türü temsilci için genel bir tür parametresi olarak kullanabilirsiniz. Bu, aşağıdaki örnekte `R` türü tarafından gösterilmiştir. Daha fazla bilgi için bkz. [Temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) ve [Func ve eylem genel temsilcileri için varyans kullanma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
 
     ```vb
     Interface ICovariant(Of Out R)
@@ -43,7 +43,7 @@ You can declare a generic type parameter covariant by using the `out` keyword. T
     End Interface
     ```
 
-- The type is not used as a generic constraint for the interface methods. This is illustrated in the following code.
+- Tür, arabirim yöntemleri için genel bir kısıtlama olarak kullanılmaz. Bu, aşağıdaki kodda gösterilmiştir.
 
     ```vb
     Interface ICovariant(Of Out R)
@@ -54,7 +54,7 @@ You can declare a generic type parameter covariant by using the `out` keyword. T
     End Interface
     ```
 
-You can declare a generic type parameter contravariant by using the `in` keyword. The contravariant type can be used only as a type of method arguments and not as a return type of interface methods. The contravariant type can also be used for generic constraints. The following code shows how to declare a contravariant interface and use a generic constraint for one of its methods.
+`in` anahtar sözcüğünü kullanarak genel tür parametresi değişken karşıtı bildirebilirsiniz. Değişken karşıtı türü, Arabirim yöntemlerinin dönüş türü olarak değil, yalnızca Yöntem bağımsız değişkenlerinin türü olarak kullanılabilir. Değişken karşıtı türü, genel kısıtlamalar için de kullanılabilir. Aşağıdaki kod, bir değişken karşıtı arabirimin nasıl bildirilemeyeceğini ve yöntemlerinden biri için genel bir kısıtlama nasıl kullanıldığını gösterir.
 
 ```vb
 Interface IContravariant(Of In A)
@@ -65,7 +65,7 @@ Interface IContravariant(Of In A)
 End Interface
 ```
 
-It is also possible to support both covariance and contravariance in the same interface, but for different type parameters, as shown in the following code example.
+Ayrıca, aşağıdaki kod örneğinde gösterildiği gibi farklı tür parametreleri için aynı arabirimdeki kovaryansı ve değişken varyansı desteklemek de mümkündür.
 
 ```vb
 Interface IVariant(Of Out R, In A)
@@ -75,7 +75,7 @@ Interface IVariant(Of Out R, In A)
 End Interface
 ```
 
-In Visual Basic, you can't declare events in variant interfaces without specifying the delegate type. Also, a variant interface can't have nested classes, enums, or structures, but it can have nested interfaces. This is illustrated in the following code.
+Visual Basic, temsilci türünü belirtmeden değişken arabirimlerde olayları bildiremezsiniz. Ayrıca, bir değişken arabirimde iç içe sınıflar, numaralandırmalar veya yapılar bulunamaz, ancak iç içe arabirimler olabilir. Bu, aşağıdaki kodda gösterilmiştir.
 
 ```vb
 Interface ICovariant(Of Out R)
@@ -98,9 +98,9 @@ Interface ICovariant(Of Out R)
 End Interface
 ```
 
-## <a name="implementing-variant-generic-interfaces"></a>Implementing Variant Generic Interfaces
+## <a name="implementing-variant-generic-interfaces"></a>VARIANT genel arabirimlerini uygulama
 
-You implement variant generic interfaces in classes by using the same syntax that is used for invariant interfaces. The following code example shows how to implement a covariant interface in a generic class.
+Sabit arabirimler için kullanılan söz dizimini kullanarak sınıflarda VARIANT genel arabirimler uygulayabilirsiniz. Aşağıdaki kod örneği, bir genel sınıfta birlikte değişken arabiriminin nasıl uygulanacağını gösterir.
 
 ```vb
 Interface ICovariant(Of Out R)
@@ -116,7 +116,7 @@ Class SampleImplementation(Of R)
 End Class
 ```
 
-Classes that implement variant interfaces are invariant. For example, consider the following code.
+Varyant arabirimlerini uygulayan sınıflar sabit. Örneğin, aşağıdaki kodu göz önünde bulundurun.
 
 ```vb
  The interface is covariant.
@@ -132,9 +132,9 @@ Dim button As SampleImplementation(Of Button) =
 ' Dim obj As SampleImplementation(Of Object) = button
 ```
 
-## <a name="extending-variant-generic-interfaces"></a>Extending Variant Generic Interfaces
+## <a name="extending-variant-generic-interfaces"></a>VARIANT genel arabirimlerini genişletme
 
-When you extend a variant generic interface, you have to use the `in` and `out` keywords to explicitly specify whether the derived interface supports variance. The compiler does not infer the variance from the interface that is being extended. For example, consider the following interfaces.
+Bir varyant genel arabirimini genişlettiğinizde, türetilmiş arabirimin varyansı destekleyip desteklemediğini açıkça belirtmek için `in` ve `out` anahtar sözcüklerini kullanmanız gerekir. Derleyici, genişletilmekte olan arabirimden varyansı çıkarmıyor. Örneğin, aşağıdaki arabirimleri göz önünde bulundurun.
 
 ```vb
 Interface ICovariant(Of Out T)
@@ -149,9 +149,9 @@ Interface IExtCovariant(Of Out T)
 End Interface
 ```
 
-In the `Invariant(Of T)` interface, the generic type parameter `T` is invariant, whereas in `IExtCovariant (Of Out T)`the type parameter is covariant, although both interfaces extend the same interface. The same rule is applied to contravariant generic type parameters.
+`Invariant(Of T)` arabiriminde, `T` genel tür parametresi değişmez, ancak her iki arabirim de aynı arabirimi genişletse de, tür parametresi birlikte değişken `IExtCovariant (Of Out T)`. Aynı kural, değişken karşıtı genel tür parametrelerine uygulanır.
 
-You can create an interface that extends both the interface where the generic type parameter `T` is covariant and the interface where it is contravariant if in the extending interface the generic type parameter `T` is invariant. This is illustrated in the following code example.
+Hem genel tür parametresi `T` birlikte değişken olduğu arabirimi hem de genişletme arabiriminde `T` genel tür parametresi sabiti olan arabirimi genişleten bir arabirim oluşturabilirsiniz. Bu, aşağıdaki kod örneğinde gösterilmiştir.
 
 ```vb
 Interface ICovariant(Of Out T)
@@ -165,7 +165,7 @@ Interface IInvariant(Of T)
 End Interface
 ```
 
-However, if a generic type parameter `T` is declared covariant in one interface, you cannot declare it contravariant in the extending interface, or vice versa. This is illustrated in the following code example.
+Ancak, bir genel tür parametresi `T` bir arabirimde birlikte değişken olarak bildirilirse, genişletme arabiriminde bu değişken karşıtı olarak bildiremezsiniz veya tam tersi de geçerlidir. Bu, aşağıdaki kod örneğinde gösterilmiştir.
 
 ```vb
 Interface ICovariant(Of Out T)
@@ -177,14 +177,14 @@ End Interface
 ' End Interface
 ```
 
-### <a name="avoiding-ambiguity"></a>Avoiding Ambiguity
+### <a name="avoiding-ambiguity"></a>Belirsizlik önleme
 
-When you implement variant generic interfaces, variance can sometimes lead to ambiguity. This should be avoided.
+VARIANT genel arabirimleri uyguladığınızda, fark bazen belirsizliğe neden olabilir. Bunun kaçınılması gerekir.
 
-For example, if you explicitly implement the same variant generic interface with different generic type parameters in one class, it can create ambiguity. The compiler does not produce an error in this case, but it is not specified which interface implementation will be chosen at runtime. This could lead to subtle bugs in your code. Consider the following code example.
+Örneğin, tek bir sınıfta farklı genel tür parametreleriyle aynı Varyant genel arabirimini açıkça uygularsanız, belirsizlik oluşturabilir. Derleyici bu durumda bir hata oluşturmaz, ancak çalışma zamanında hangi arabirim uygulamasının seçilme belirtilecektir. Bu, kodunuzda hafif hatalara neden olabilir. Aşağıdaki kod örneğini göz önünde bulundurun.
 
 > [!NOTE]
-> With `Option Strict Off`, Visual Basic generates a compiler warning when there is an ambiguous interface implementation. With `Option Strict On`, Visual Basic generates a compiler error.
+> `Option Strict Off`, belirsiz bir arabirim uygulaması olduğunda Visual Basic bir derleyici uyarısı oluşturur. `Option Strict On`, Visual Basic bir derleyici hatası oluşturur.
 
 ```vb
 ' Simple class hierarchy.
@@ -228,9 +228,9 @@ Sub Main()
 End Sub
 ```
 
-In this example, it is unspecified how the `pets.GetEnumerator` method chooses between `Cat` and `Dog`. This could cause problems in your code.
+Bu örnekte, `pets.GetEnumerator` yönteminin `Cat` ve `Dog`arasında nasıl seçtiği belirtilmemiş. Bu, kodunuzda sorun oluşmasına neden olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Genel Arabirimlerde Varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Func ve eylem genel temsilcileri için varyans kullanma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

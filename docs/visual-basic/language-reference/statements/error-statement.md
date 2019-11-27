@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351242"
 ---
 # <a name="error-statement"></a>Error Deyimi
-Simulates the occurrence of an error.  
+Bir hata oluşumunun benzetimini yapar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,29 +28,29 @@ Error errornumber
   
 ## <a name="parts"></a>Bölümler  
  `errornumber`  
- Gerekli. Can be any valid error number.  
+ Gerekli. Herhangi bir geçerli hata numarası olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `Error` statement is supported for backward compatibility. In new code, especially when creating objects, use the `Err` object's `Raise` method to generate run-time errors.  
+ `Error` deyimleri geriye dönük uyumluluk için desteklenir. Yeni kodda, özellikle nesne oluştururken, çalışma zamanı hataları oluşturmak için `Err` nesnenin `Raise` metodunu kullanın.  
   
- If `errornumber` is defined, the `Error` statement calls the error handler after the properties of the `Err` object are assigned the following default values:  
+ `errornumber` tanımlanmışsa, `Error` ifade, `Err` nesnesinin özelliklerine aşağıdaki varsayılan değerler atandıktan sonra hata işleyicisini çağırır:  
   
-|Özellik|Değer|  
+|Özellik|Value|  
 |--------------|-----------|  
-|`Number`|Value specified as argument to `Error` statement. Can be any valid error number.|  
-|`Source`|Name of the current Visual Basic project.|  
-|`Description`|String expression corresponding to the return value of the `Error` function for the specified `Number`, if this string exists. If the string does not exist, `Description` contains a zero-length string ("").|  
-|`HelpFile`|The fully qualified drive, path, and file name of the appropriate Visual Basic Help file.|  
-|`HelpContext`|The appropriate Visual Basic Help file context ID for the error corresponding to the `Number` property.|  
-|`LastDLLError`|Zero.|  
+|`Number`|`Error` deyimin bağımsız değişkeni olarak belirtilen değer. Herhangi bir geçerli hata numarası olabilir.|  
+|`Source`|Geçerli Visual Basic projesinin adı.|  
+|`Description`|Bu dize varsa, belirtilen `Number`için `Error` işlevinin dönüş değerine karşılık gelen dize ifadesi. Dize yoksa, `Description` sıfır uzunluklu bir dize ("") içerir.|  
+|`HelpFile`|Uygun Visual Basic Yardım dosyasının tam sürücü, yol ve dosya adı.|  
+|`HelpContext`|`Number` özelliğine karşılık gelen hata için uygun Visual Basic Yardım dosyası bağlam KIMLIĞI.|  
+|`LastDLLError`|Sıfırlama.|  
   
- If no error handler exists, or if none is enabled, an error message is created and displayed from the `Err` object properties.  
+ Herhangi bir hata işleyicisi yoksa veya hiçbiri etkin değilse, `Err` nesne özelliklerinden bir hata iletisi oluşturulur ve görüntülenir.  
   
 > [!NOTE]
-> Some Visual Basic host applications cannot create objects. See your host application's documentation to determine whether it can create classes and objects.  
+> Bazı Visual Basic ana bilgisayar uygulamaları nesne oluşturamaz. Sınıf ve nesne oluşturup oluşturamayacağını öğrenmek için ana bilgisayar uygulamanızın belgelerine bakın.  
   
 ## <a name="example"></a>Örnek  
- This example uses the `Error` statement to generate error number 11.  
+ Bu örnek, 11 hata numarasını oluşturmak için `Error` ifadesini kullanır.  
   
 ```vb  
 On Error Resume Next   ' Defer error handling.  
@@ -58,9 +58,9 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Ad alanı:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

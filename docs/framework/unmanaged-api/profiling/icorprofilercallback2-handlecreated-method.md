@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439765"
 ---
 # <a name="icorprofilercallback2handlecreated-method"></a>ICorProfilerCallback2::HandleCreated Yöntemi
-Notifies the code profiler that a garbage collection handle has been created.  
+Kod Profilcisi bir çöp toplama tutamacının oluşturulduğunu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,19 +35,19 @@ HRESULT HandleCreated(
   
 ## <a name="parameters"></a>Parametreler  
  `handleId`  
- [in] The ID of the handle for the garbage collection.  
+ 'ndaki Çöp toplama tanıtıcısının KIMLIĞI.  
   
  `initialObjectId`  
- [in] The ID of the object for which the garbage collection handle was created.  
+ 'ndaki Çöp toplama tanıtıcısının oluşturulduğu nesnenin KIMLIĞI.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

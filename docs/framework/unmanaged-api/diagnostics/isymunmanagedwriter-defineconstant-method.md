@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428065"
 ---
 # <a name="isymunmanagedwriterdefineconstant-method"></a>ISymUnmanagedWriter::DefineConstant Yöntemi
-Defines a name for a constant value.  
+Sabit değer için bir ad tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT DefineConstant(
   
 ## <a name="parameters"></a>Parametreler  
  `name`  
- [in] A pointer to a `WCHAR` that defines the constant name.  
+ 'ndaki Sabit adı tanımlayan `WCHAR` için bir işaretçi.  
   
  `value`  
- [in] The value of the constant.  
+ 'ndaki Sabitin değeri.  
   
  `cSig`  
- [in] The size of the `signature` array.  
+ 'ndaki `signature` dizisinin boyutu.  
   
  `signature`  
- [in] The type signature for the constant.  
+ 'ndaki Sabit için tür imzası.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

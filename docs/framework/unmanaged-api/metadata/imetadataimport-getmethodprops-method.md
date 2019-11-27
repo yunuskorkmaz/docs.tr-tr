@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437466"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>IMetaDataImport::GetMethodProps Yöntemi
-Gets the metadata associated with the method referenced by the specified MethodDef token.  
+Belirtilen MethodDef belirtecinin başvurduğu metotla ilişkili meta verileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,43 +44,43 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mb`  
- [in] The MethodDef token that represents the method to return metadata for.  
+ 'ndaki Meta verilerini döndürecek yöntemi temsil eden MethodDef belirteci.  
   
  `pClass`  
- [out] A Pointer to a TypeDef token that represents the type that implements the method.  
+ dışı Yöntemi uygulayan türü temsil eden bir TypeDef belirtecinin Işaretçisi.  
   
  `szMethod`  
- [out] A Pointer to a buffer that has the method's name.  
+ dışı Metodun adına sahip bir arabelleğin Işaretçisi.  
   
  `cchMethod`  
- [in] The requested size of `szMethod`.  
+ 'ndaki İstenen `szMethod`boyutu.  
   
  `pchMethod`  
- [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
+ dışı `szMethod`geniş karakterdeki boyut Işaretçisi veya kesme durumunda, yöntem adındaki geniş karakterlerin gerçek sayısı.  
   
  `pdwAttr`  
- [out] A pointer to any flags associated with the method.  
+ dışı Yöntemiyle ilişkili bayrakların bir işaretçisi.  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the method.  
+ dışı Metodun ikili meta veri imzasına yönelik bir işaretçi.  
   
  `pcbSigBlob`  
- [out] A Pointer to the size in bytes of `ppvSigBlob`.  
+ dışı `ppvSigBlob`bayt cinsinden boyut Işaretçisi.  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the method.  
+ dışı Metodun göreli sanal adresine yönelik bir işaretçi.  
   
  `pdwImplFlags`  
- [out] A pointer to any implementation flags for the method.  
+ dışı Yöntemi için herhangi bir uygulama bayraklarının bir işaretçisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

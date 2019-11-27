@@ -19,7 +19,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353794"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit Deyimi (Visual Basic)
-Forces explicit declaration of all variables in a file, or allows implicit declarations of variables.  
+Bir dosyadaki tüm değişkenlerin açık bildirimini zorlar veya değişken örtülü bildirimlere izin verir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,38 +29,38 @@ Option Explicit { On | Off }
   
 ## <a name="parts"></a>Bölümler  
  `On`  
- İsteğe bağlı. Enables `Option Explicit` checking. If `On` or `Off` is not specified, the default is `On`.  
+ İsteğe bağlı. `Option Explicit` denetlemeye izin vermez. `On` veya `Off` belirtilmemişse, varsayılan olarak `On`.  
   
  `Off`  
- İsteğe bağlı. Disables `Option Explicit` checking.  
+ İsteğe bağlı. `Option Explicit` denetlemesini devre dışı bırakır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- When `Option Explicit On` or `Option Explicit` appears in a file, you must explicitly declare all variables by using the `Dim` or `ReDim` statements. If you try to use an undeclared variable name, an error occurs at compile time. The `Option Explicit Off` statement allows implicit declaration of variables.  
+ Bir dosyada `Option Explicit On` veya `Option Explicit` göründüğünde, `Dim` veya `ReDim` deyimlerini kullanarak tüm değişkenleri açıkça bildirmeniz gerekir. Bildirilmemiş bir değişken adı kullanmaya çalışırsanız, derleme zamanında bir hata oluşur. `Option Explicit Off` bildirimi, değişkenlerin örtük bildirimine izin verir.  
   
- If used, the `Option Explicit` statement must appear in a file before any other source code statements.  
+ Kullanıldıysa, `Option Explicit` deyimi herhangi bir diğer kaynak kodu deyiminden önce bir dosyada yer almalıdır.  
   
 > [!NOTE]
-> Setting `Option Explicit` to `Off` is generally not a good practice. You could misspell a variable name in one or more locations, which would cause unexpected results when the program is run.  
+> `Option Explicit` `Off` ayarı genellikle iyi bir uygulamadır. Bir veya daha fazla konumda değişken adı yanlış yazdığınızda, program çalıştırıldığında beklenmedik sonuçlara neden olabilir.  
   
-## <a name="when-an-option-explicit-statement-is-not-present"></a>When an Option Explicit Statement Is Not Present  
- If the source code does not contain an `Option Explicit` statement, the **Option Explicit** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used. If the command-line compiler is used, the [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) compiler option is used.  
+## <a name="when-an-option-explicit-statement-is-not-present"></a>Açık bir seçenek Ifade yoksa  
+ Kaynak kodu `Option Explicit` bir ifade içermiyorsa, derleme sayfasındaki **Açık ayar seçeneği** , [proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) kullanılır. Komut satırı derleyicisi kullanılırsa [-OptionExplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) derleyici seçeneği kullanılır.  
   
-#### <a name="to-set-option-explicit-in-the-ide"></a>To set Option Explicit in the IDE  
+#### <a name="to-set-option-explicit-in-the-ide"></a>IDE 'de Option Explicit ayarlamak için  
   
-1. In **Solution Explorer**, select a project. On the **Project** menu, click **Properties**.  
+1. **Çözüm Gezgini**bir proje seçin. **Proje** menüsünde **Özellikler**' e tıklayın.  
   
-2. Click the **Compile** tab.  
+2. **Derle** sekmesine tıklayın.  
   
-3. Set the value in the **Option Explicit** box.  
+3. **Açık** kutuda değeri ayarlayın.  
   
- When you create a new project, the **Option Explicit** setting on the **Compile** tab is set to the **Option Explicit** setting in the **VB Defaults** dialog box. To access the **VB Defaults** dialog box, on the **Tools** menu, click **Options**. In the **Options** dialog box, expand **Projects and Solutions**, and then click **VB Defaults**. The initial default setting in **VB Defaults** is `On`.  
+ Yeni bir proje oluşturduğunuzda, **Derle** sekmesindeki **Açık ayar seçeneği** , **vb varsayılanlar** iletişim kutusunda **Açık seçenek** ayarı olarak ayarlanır. **Vb Varsayılanları** iletişim kutusuna erişmek Için, **Araçlar** menüsünde **Seçenekler**' e tıklayın. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler**' i genişletin ve ardından **vb Varsayılanları**' na tıklayın. **Vb Varsayılanları** içindeki ilk varsayılan ayar `On`.  
   
-#### <a name="to-set-option-explicit-on-the-command-line"></a>To set Option Explicit on the command line  
+#### <a name="to-set-option-explicit-on-the-command-line"></a>Komut satırında Explicit seçeneğini ayarlamak için  
   
-- Include the [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) compiler option in the **vbc** command.  
+- **Vbc** komutuna [-OptionExplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) derleyici seçeneğini ekleyin.  
   
 ## <a name="example"></a>Örnek  
- The following example uses the `Option Explicit` statement to force explicit declaration of all variables. Attempting to use an undeclared variable causes an error at compile time.  
+ Aşağıdaki örnek, tüm değişkenlerin açık bildirimini zorlamak için `Option Explicit` bildirimini kullanır. Bildirilmemiş bir değişkeni kullanma girişimi, derleme sırasında hataya neden olur.  
   
  [!code-vb[VbVbalrStatements#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#47)]  
   

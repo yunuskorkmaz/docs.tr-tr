@@ -31,7 +31,7 @@ ms.locfileid: "74351202"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next Deyimi (Visual Basic)
 
-Repeats a group of statements for each element in a collection.
+Bir koleksiyondaki her öğe için bir deyim grubunu yineler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -49,110 +49,110 @@ Next [ element ]
 
 |Terim|Tanım|
 |---|---|
-|`element`|Required in the `For Each` statement. Optional in the `Next` statement. Variable. Used to iterate through the elements of the collection.|
-|`datatype`|Optional if [`Option Infer`](option-infer-statement.md) is on (the default) or `element` is already declared; required if `Option Infer` is off and `element` isn't already declared. The data type of `element`.|
-|`group`|Gerekli. A variable with a type that's a collection type or Object. Refers to the collection over which the `statements` are to be repeated.|
-|`statements`|İsteğe bağlı. One or more statements between `For Each` and `Next` that run on each item in `group`.|
-|`Continue For`|İsteğe bağlı. Transfers control to the start of the `For Each` loop.|
-|`Exit For`|İsteğe bağlı. Transfers control out of the `For Each` loop.|
-|`Next`|Gerekli. Terminates the definition of the `For Each` loop.|
+|`element`|`For Each` bildiriminde gereklidir. `Next` bildiriminde isteğe bağlı. Değişken. Koleksiyonun öğeleri arasında yineleme yapmak için kullanılır.|
+|`datatype`|[`Option Infer`](option-infer-statement.md) açık (varsayılan) veya `element` zaten bildirilirse, isteğe bağlıdır; `Option Infer` kapalıysa ve `element` önceden bildirilmemiş olması gerekir. `element`veri türü.|
+|`group`|Gerekli. Bir koleksiyon türü veya nesne olan türü olan bir değişken. `statements` tekrarlanması gereken koleksiyona başvurur.|
+|`statements`|İsteğe bağlı. `group`içindeki her öğe üzerinde çalışan `For Each` ve `Next` arasında bir veya daha fazla deyim.|
+|`Continue For`|İsteğe bağlı. Denetimi `For Each` döngüsünün başlangıcına aktarır.|
+|`Exit For`|İsteğe bağlı. `For Each` döngüsünün dışına denetimini aktarır.|
+|`Next`|Gerekli. `For Each` döngüsünün tanımını sonlandırır.|
 
-## <a name="simple-example"></a>Simple Example
+## <a name="simple-example"></a>Basit örnek
 
-Use a `For Each`...`Next` loop when you want to repeat a set of statements for each element of a collection or array.
+Bir koleksiyon veya dizinin her öğesi için bir deyim kümesini yinelemek istediğinizde bir `For Each`...`Next` döngüsü kullanın.
 
 > [!TIP]
-> A [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md) works well when you can associate each iteration of a loop with a control variable and determine that variable's initial and final values. However, when you are dealing with a collection, the concept of initial and final values isn't meaningful, and you don't necessarily know how many elements the collection has. In this kind of case, a `For Each`...`Next` loop is often a better choice.
+> [İçin A... Sonraki Ifade](../../../visual-basic/language-reference/statements/for-next-statement.md) , bir döngünün her yinelemesini bir denetim değişkeniyle ilişkilendirebileceğiniz ve değişkenin ilk ve son değerlerini belirleyebileceğiniz zaman iyi şekilde kullanılır. Bununla birlikte, bir koleksiyonla ilgilendiğinizde, ilk ve son değer kavramı anlamlı değildir ve koleksiyonun kaç öğe olduğunu bilmeniz gerekmez. Bu tür bir durumda, bir `For Each`...`Next` döngüsü genellikle daha iyi bir seçimdir.
 
-In the following example, the `For Each`…`Next` statement iterates through all the elements of a List collection.
+Aşağıdaki örnekte `For Each`...`Next` ifade, bir liste koleksiyonunun tüm öğeleri boyunca yinelenir.
 
 [!code-vb[VbVbalrStatements#121](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#121)]
 
-For more examples, see [Collections](../../../standard/collections/index.md) and [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Daha fazla örnek için bkz. [koleksiyonlar](../../../standard/collections/index.md) ve [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).
 
-## <a name="nested-loops"></a>Nested Loops
+## <a name="nested-loops"></a>İç içe döngüler
 
-You can nest `For Each` loops by putting one loop within another.
+Bir döngüyü diğerinin içine yerleştirerek `For Each` döngüleri iç içe geçirebilirsiniz.
 
-The following example demonstrates nested `For Each`…`Next` structures.
+Aşağıdaki örnek iç içe `For Each`gösterir...`Next` Yapıları.
 
 [!code-vb[VbVbalrStatements#122](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#122)]
 
-When you nest loops, each loop must have a unique `element` variable.
+Döngüleri iç içe aktardığınızda her döngünün benzersiz bir `element` değişkeni olmalıdır.
 
-You can also nest different kinds of control structures within each other. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
+Ayrıca, farklı türlerde denetim yapılarını birbirleriyle iç içe geçirebilirsiniz. Daha fazla bilgi için bkz. [Iç Içe denetim yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
 
-## <a name="exit-for-and-continue-for"></a>Exit For and Continue For
+## <a name="exit-for-and-continue-for"></a>İçin çık ve devam et
 
-The [Exit For](../../../visual-basic/language-reference/statements/exit-statement.md) statement causes execution to exit the `For`…`Next` loop and transfers control to the statement that follows the `Next` statement.
+[Exit for](../../../visual-basic/language-reference/statements/exit-statement.md) deyimleri yürütmenin `For`çıkmasına neden olur...`Next` `Next` deyimlerini izleyen deyime döngü ve denetim aktarır.
 
-The `Continue For` statement transfers control immediately to the next iteration of the loop. For more information, see [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md).
+`Continue For` bildiri, denetimi döngünün bir sonraki yinelemesine hemen aktarır. Daha fazla bilgi için bkz. [Continue bildirisi](../../../visual-basic/language-reference/statements/continue-statement.md).
 
-The following example shows how to use the `Continue For` and `Exit For` statements.
+Aşağıdaki örnek, `Continue For` ve `Exit For` deyimlerinin nasıl kullanılacağını gösterir.
 
 [!code-vb[VbVbalrStatements#123](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#123)]
 
-You can put any number of `Exit For` statements in a `For Each` loop. When used within nested `For Each` loops, `Exit For` causes execution to exit the innermost loop and transfers control to the next higher level of nesting.
+Bir `For Each` döngüsünde istediğiniz sayıda `Exit For` deyimi koyabilirsiniz. İç içe geçmiş `For Each` döngüleri içinde kullanıldığında, `Exit For` yürütmenin en içteki döngüden çıkmasına ve denetimi bir sonraki daha yüksek iç içe geçme düzeyine aktarmasına neden olur.
 
-`Exit For` is often used after an evaluation of some condition, for example, in an `If`...`Then`...`Else` structure. You might want to use `Exit For` for the following conditions:
+`Exit For`, örneğin bir `If`...`Then`...`Else` yapısı gibi bazı koşulların değerlendirilmesinden sonra kullanılır. Aşağıdaki koşullarda `Exit For` kullanmak isteyebilirsiniz:
 
-- Continuing to iterate is unnecessary or impossible. This might be caused by an erroneous value or a termination request.
+- Tekrarlamaya devam etmek gereksiz veya imkansız. Bunun nedeni hatalı bir değer veya sonlandırma isteği olabilir.
 
-- An exception is caught in a `Try`...`Catch`...`Finally`. You might use `Exit For` at the end of the `Finally` block.
+- `Try`...`Catch`...`Finally`bir özel durum yakalandı. `Finally` bloğunun sonunda `Exit For` kullanabilirsiniz.
 
-- There an endless loop, which is a loop that could run a large or even infinite number of times. If you detect such a condition, you can use `Exit For` to escape the loop. For more information, see [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md).
+- Sonsuz bir döngü vardır. Bu bir döngü, büyük veya hatta sonsuz bir sayı çalıştırabilir. Böyle bir koşulu tespit ediyorsanız, döngüden çıkmak için `Exit For` kullanabilirsiniz. Daha fazla bilgi için bkz [. do... Loop deyimleri](../../../visual-basic/language-reference/statements/do-loop-statement.md).
 
 ## <a name="iterators"></a>Yineleyiciler
 
-You use an *iterator* to perform a custom iteration over a collection. An iterator can be a function or a `Get` accessor. It uses a `Yield` statement to return each element of the collection one at a time.
+Bir koleksiyon üzerinde özel bir yineleme gerçekleştirmek için bir *Yineleyici* kullanırsınız. Yineleyici bir işlev veya `Get` erişimcisi olabilir. Tek seferde koleksiyonun her bir öğesini döndürmek için bir `Yield` ifadesini kullanır.
 
-You call an iterator by using a `For Each...Next` statement. Each iteration of the `For Each` loop calls the iterator. When a `Yield` statement is reached in the iterator, the expression in the `Yield` statement is returned, and the current location in code is retained. Execution is restarted from that location the next time that the iterator is called.
+Bir `For Each...Next` ifadesini kullanarak bir yineleyici çağırın. `For Each` döngüsünün her yinelemesi yineleyiciyi çağırır. Yineleyiciye bir `Yield` deyimine ulaşıldığında, `Yield` deyimindeki ifade döndürülür ve koddaki geçerli konum korunur. Bu konumdan, yineleyici bir sonraki sefer çağrıldığında yürütme yeniden başlatılır.
 
-The following example uses an iterator function. The iterator function has a `Yield` statement that's inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. In the `ListEvenNumbers` method, each iteration of the `For Each` statement body creates a call to the iterator function, which proceeds to the next `Yield` statement.
+Aşağıdaki örnek bir yineleyici işlevi kullanır. Yineleyici işlevi bir for... içindeki bir `Yield` bildirimine sahiptir [... Sonraki](../../../visual-basic/language-reference/statements/for-next-statement.md) döngü. `ListEvenNumbers` yönteminde, `For Each` deyimin gövdesinin her yinelemesi, bir sonraki `Yield` ifadesine devam eden Yineleyici işlevine bir çağrı oluşturur.
 
 [!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]
 
-For more information, see [Iterators](../../programming-guide/concepts/iterators.md), [Yield Statement](../../../visual-basic/language-reference/statements/yield-statement.md), and [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).
+Daha fazla bilgi için bkz. [yineleyiciler](../../programming-guide/concepts/iterators.md), [yield ekstresi](../../../visual-basic/language-reference/statements/yield-statement.md)ve [Yineleyici](../../../visual-basic/language-reference/modifiers/iterator.md).
 
 ## <a name="technical-implementation"></a>Teknik Uygulama
 
-When a `For Each`…`Next` statement runs, Visual Basic evaluates the collection only one time, before the loop starts. If your statement block changes `element` or `group`, these changes don't affect the iteration of the loop.
+Bir `For Each`...`Next` deyimin çalışması Visual Basic, döngü başlamadan önce koleksiyonu yalnızca bir kez değerlendirir. Deyiminiz `element` veya `group`değişiklikleri engelleriyorsa, bu değişiklikler döngünün yinelemesini etkilemez.
 
-When all the elements in the collection have been successively assigned to `element`, the `For Each` loop stops and control passes to the statement following the `Next` statement.
+Koleksiyondaki tüm öğeler `element`için tamamen atandığında, `For Each` döngüsü duraklar ve `Next` deyimlerinden sonraki deyime geçer.
 
-If [Option Infer](option-infer-statement.md) is on (its default setting), the Visual Basic compiler can infer the data type of `element`. If it is off and `element` hasn't been declared outside the loop, you must declare it in the `For Each` statement. To declare the data type of `element` explicitly, use an `As` clause. Unless the data type of element is defined outside the `For Each`...`Next` construct, its scope is the body of the loop. Note that you cannot declare `element` both outside and inside the loop.
+[Seçenek çıkarımı](option-infer-statement.md) açık ise (varsayılan ayarı) Visual Basic derleyici `element`veri türünü çıkarabilir. Kapalı ve `element` döngü dışında bildirilmediyse, bunu `For Each` bildiriminde bildirmeniz gerekir. `element` veri türünü açıkça bildirmek için bir `As` yan tümcesi kullanın. Öğe veri türü `For Each`...`Next` yapısı dışında tanımlanmamışsa, kapsamı döngünün gövdesidir. Hem döngünün dışında hem de içinde `element` bildiremezsiniz.
 
-You can optionally specify `element` in the `Next` statement. This improves the readability of your program, especially if you have nested `For Each` loops. You must specify the same variable as the one that appears in the corresponding `For Each` statement.
+İsteğe bağlı olarak `Next` bildiriminde `element` belirtebilirsiniz. Bu, özellikle iç içe geçmiş `For Each` döngülerine sahipseniz programınızın okunabilirliğini geliştirir. Karşılık gelen `For Each` ifadesinde görünen değişkenle aynı değişkeni belirtmeniz gerekir.
 
-You might want to avoid changing the value of `element` inside a loop. Doing this can make it more difficult to read and debug your code. Changing the value of `group` doesn't affect the collection or its elements, which were determined when the loop was first entered.
+Bir döngü içindeki `element` değerini değiştirmeyi önlemek isteyebilirsiniz. Bunu yapmak, kodunuzun okunmasını ve hata ayıklamasını daha zor hale getirir. `group` değerini değiştirmek, döngü ilk kez girildiğinde belirlenen koleksiyonu veya öğelerini etkilemez.
 
-When you're nesting loops, if a `Next` statement of an outer nesting level is encountered before the `Next` of an inner level, the compiler signals an error. However, the compiler can detect this overlapping error only if you specify `element` in every `Next` statement.
+Döngüleri iç içe aktardığınızda, iç düzey `Next` önce bir dış iç içe düzeyi `Next` bildirimine karşılaşılırsa, derleyici bir hata bildirir. Ancak, derleyici yalnızca her `Next` bildiriminde `element` belirtirseniz bu çakışan hatayı algılayabilir.
 
-If your code depends on traversing a collection in a particular order, a `For Each`...`Next` loop isn't the best choice, unless you know the characteristics of the enumerator object the collection exposes. The order of traversal isn't determined by Visual Basic, but by the <xref:System.Collections.IEnumerator.MoveNext%2A> method of the enumerator object. Therefore, you might not be able to predict which element of the collection is the first to be returned in `element`, or which is the next to be returned after a given element. You might achieve more reliable results using a different loop structure, such as `For`...`Next` or `Do`...`Loop`.
+Kodunuz belirli bir sırada bir koleksiyonun geçiş yöntemine bağımlıysa, koleksiyonun sunduğu Numaralandırıcı nesnesinin özelliklerini bilmiyorsanız, bir `For Each`...`Next` döngüsü en iyi seçenektir. Çapraz geçiş sırası Visual Basic tarafından belirlenir, ancak Numaralandırıcı nesnesinin <xref:System.Collections.IEnumerator.MoveNext%2A> yöntemi. Bu nedenle, koleksiyonun hangi öğesi `element`döndürüldüğünden veya belirli bir öğeden sonra döndürülecek bir sonraki bir öğe olduğunu tahmin edemeyebilirsiniz. `For`...`Next` veya `Do`...`Loop`gibi farklı bir döngü yapısı kullanarak daha güvenilir sonuçlar elde edebilirsiniz.
 
-The runtime must be able to convert the elements in `group` to `element`. The [`Option Strict`] statement controls whether both widening and narrowing conversions are allowed (`Option Strict` is off, its default value), or whether only widening conversions are allowed (`Option Strict` is on). For more information, see [Narrowing conversions](#narrowing-conversions).
+Çalışma zamanının `group` öğeleri `element`dönüştürebilmelidir. [`Option Strict`] ifadesinde, hem genişletme hem de daraltma dönüştürmelerine izin verilip verilmeyeceğini (`Option Strict` kapalı, varsayılan değeri) veya yalnızca genişletme dönüştürmelerine izin verilip verilmeyeceğini (`Option Strict` açık olduğunu) denetler. Daha fazla bilgi için bkz. [daraltma dönüştürmeleri](#narrowing-conversions).
 
-The data type of `group` must be a reference type that refers to a collection or an array that's enumerable. Most commonly this means that `group` refers to an object that implements the <xref:System.Collections.IEnumerable> interface of the `System.Collections` namespace or the <xref:System.Collections.Generic.IEnumerable%601> interface of the `System.Collections.Generic` namespace. `System.Collections.IEnumerable` defines the <xref:System.Collections.IEnumerable.GetEnumerator%2A> method, which returns an enumerator object for the collection. The enumerator object implements the `System.Collections.IEnumerator` interface of the `System.Collections` namespace and exposes the <xref:System.Collections.IEnumerator.Current%2A> property and the <xref:System.Collections.IEnumerator.Reset%2A> and <xref:System.Collections.IEnumerator.MoveNext%2A> methods. Visual Basic uses these to traverse the collection.
+`group` veri türü, bir koleksiyona veya Numaralandırılabilir bir diziye başvuran bir başvuru türü olmalıdır. En yaygın olarak bu `group`, `System.Collections` ad alanının <xref:System.Collections.IEnumerable> arabirimini veya `System.Collections.Generic` ad alanının <xref:System.Collections.Generic.IEnumerable%601> arabirimini uygulayan bir nesne anlamına gelir. `System.Collections.IEnumerable`, koleksiyon için bir Numaralandırıcı nesnesi döndüren <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemini tanımlar. Numaralandırıcı nesnesi `System.Collections` ad alanının `System.Collections.IEnumerator` arabirimini uygular ve <xref:System.Collections.IEnumerator.Current%2A> özelliğini ve <xref:System.Collections.IEnumerator.Reset%2A> ve <xref:System.Collections.IEnumerator.MoveNext%2A> yöntemlerini gösterir. Visual Basic, koleksiyonu çapraz geçirmek için bunları kullanır.
 
-### <a name="narrowing-conversions"></a>Narrowing Conversions
+### <a name="narrowing-conversions"></a>Daraltma dönüştürmeleri
 
-When `Option Strict` is set to `On`, narrowing conversions ordinarily cause compiler errors. In a `For Each` statement, however, conversions from the elements in `group` to `element` are evaluated and performed at run time, and compiler errors caused by narrowing conversions are suppressed.
+`Option Strict` `On`olarak ayarlandığında, daraltma dönüştürmeleri normalde derleyici hatalarına neden olur. Ancak, bir `For Each` ifadesinde, `group` öğeden `element` 'e dönüştürme işlemleri değerlendirilir ve çalışma zamanında gerçekleştirilir ve daraltma dönüştürmelerinden kaynaklanan derleyici hataları bastırılır.
 
-In the following example, the assignment of `m` as the initial value for `n` doesn't compile when `Option Strict` is on because the conversion of a `Long` to an `Integer` is a narrowing conversion. In the `For Each` statement, however, no compiler error is reported, even though the assignment to `number` requires the same conversion from `Long` to `Integer`. In the `For Each` statement that contains a large number, a run-time error occurs when <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> is applied to the large number.
+Aşağıdaki örnekte, bir `Integer` `Long` dönüştürmesi bir daraltma dönüştürmesi olduğundan, `n` başlangıç değeri olarak `m` atama `Option Strict` açık olduğunda derlenmez. Ancak `For Each` ifadesinde, `number` atama `Long` aynı dönüştürmeyi `Integer`için aynı olsa bile derleyici hatası bildirilmemiştir. Büyük bir sayı içeren `For Each` bildiriminde, <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> büyük sayıya uygulandığında bir çalışma zamanı hatası oluşur.
 
 [!code-vb[VbVbalrStatements#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class3.vb#89)]
 
-### <a name="ienumerator-calls"></a>IEnumerator Calls
+### <a name="ienumerator-calls"></a>IEnumerator çağrıları
 
-When execution of a `For Each`...`Next` loop starts, Visual Basic verifies that `group` refers to a valid collection object. If not, it throws an exception. Otherwise, it calls the <xref:System.Collections.IEnumerator.MoveNext%2A> method and the <xref:System.Collections.IEnumerator.Current%2A> property of the enumerator object to return the first element. If `MoveNext` indicates that there is no next element, that is, if the collection is empty, the `For Each` loop stops and control passes to the statement following the `Next` statement. Otherwise, Visual Basic sets `element` to the first element and runs the statement block.
+`For Each`...`Next` döngüsünün yürütülmesi başladığında Visual Basic `group` geçerli bir koleksiyon nesnesine başvurduğunu doğrular. Aksi takdirde, bir özel durum oluşturur. Aksi takdirde, ilk öğeyi döndürmek için <xref:System.Collections.IEnumerator.MoveNext%2A> yöntemini ve Numaralandırıcı nesnesinin <xref:System.Collections.IEnumerator.Current%2A> özelliğini çağırır. `MoveNext`, Next öğesi olmadığını gösteriyorsa, yani koleksiyon boşsa, `For Each` döngüsü duraklar ve denetim, `Next` deyimlerinden sonraki deyime geçer. Aksi takdirde, Visual Basic `element` ilk öğeye ayarlar ve ekstre bloğunu çalıştırır.
 
-Each time Visual Basic encounters the `Next` statement, it returns to the `For Each` statement. Again it calls `MoveNext` and `Current` to return the next element, and again it either runs the block or stops the loop depending on the result. This process continues until `MoveNext` indicates that there is no next element or an `Exit For` statement is encountered.
+Her Visual Basic `Next` bildirimiyle karşılaştığında `For Each` bildirimine geri döner. Daha sonra, bir sonraki öğeyi döndürmek için `MoveNext` ve `Current` çağırır ve sonra bloğu çalıştırır ya da sonuca bağlı olarak döngüyü sonlandırır. Bu işlem, `MoveNext` sonraki öğe olmadığını veya bir `Exit For` ifadesiyle karşılaşılana kadar devam eder.
 
-**Modifying the Collection.** The enumerator object returned by <xref:System.Collections.IEnumerable.GetEnumerator%2A> normally doesn't let you change the collection by adding, deleting, replacing, or reordering any elements. If you change the collection after you have initiated a `For Each`...`Next` loop, the enumerator object becomes invalid, and the next attempt to access an element causes an <xref:System.InvalidOperationException> exception.
+**Koleksiyonu değiştirme.** <xref:System.Collections.IEnumerable.GetEnumerator%2A> tarafından döndürülen Numaralandırıcı nesnesi, herhangi bir öğeyi ekleyerek, silerek, değiştirerek veya yeniden sıralayarak koleksiyonu değiştirmenize izin vermez. `For Each`...`Next` döngüsünü başlattıktan sonra koleksiyonu değiştirirseniz, Numaralandırıcı nesnesi geçersiz hale gelir ve bir sonraki erişim girişimi bir <xref:System.InvalidOperationException> özel durumuna neden olur.
 
-However, this blocking of modification isn't determined by Visual Basic, but rather by the implementation of the <xref:System.Collections.IEnumerable> interface. It is possible to implement `IEnumerable` in a way that allows for modification during iteration. If you are considering doing such dynamic modification, make sure that you understand the characteristics of the `IEnumerable` implementation on the collection you are using.
+Ancak, bu değişikliğin engellenmesi Visual Basic tarafından belirlenir, ancak <xref:System.Collections.IEnumerable> arabiriminin uygulanması bunun yerine. `IEnumerable`, yineleme sırasında değişikliklere izin verecek şekilde uygulamak mümkündür. Bu tür dinamik değişikliği yapmayı düşünüyorsanız, kullanmakta olduğunuz koleksiyondaki `IEnumerable` uygulamasının özelliklerini anladığınızdan emin olun.
 
-**Modifying Collection Elements.** The <xref:System.Collections.IEnumerator.Current%2A> property of the enumerator object is [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), and it returns a local copy of each collection element. This means that you cannot modify the elements themselves in a `For Each`...`Next` loop. Any modification you make affects only the local copy from `Current` and isn't reflected back into the underlying collection. However, if an element is a reference type, you can modify the members of the instance to which it points. The following example modifies the `BackColor` member of each `thisControl` element. You cannot, however, modify `thisControl` itself.
+**Koleksiyon öğelerini değiştirme.** Numaralandırıcı nesnesinin <xref:System.Collections.IEnumerator.Current%2A> özelliği [salt okunur](../../../visual-basic/language-reference/modifiers/readonly.md)ve her koleksiyon öğesinin yerel bir kopyasını döndürür. Bu, öğeleri bir `For Each`...`Next` döngüsünde değiştiremeyeceğiniz anlamına gelir. Yaptığınız tüm değişiklikler yalnızca `Current` Yerel kopyayı etkiler ve temel alınan koleksiyona yansıtılmaz. Ancak, bir öğe bir başvuru türü ise, gösterdiği örnek üyelerini değiştirebilirsiniz. Aşağıdaki örnek her `thisControl` öğesinin `BackColor` üyesini değiştirir. Ancak, `thisControl` değiştiremezsiniz.
 
 ```vb
 Sub LightBlueBackground(thisForm As System.Windows.Forms.Form)
@@ -162,23 +162,23 @@ Sub LightBlueBackground(thisForm As System.Windows.Forms.Form)
 End Sub
 ```
 
-The previous example can modify the `BackColor` member of each `thisControl` element, although it cannot modify `thisControl` itself.
+Önceki örnek, `thisControl` değiştiremese de, her bir `thisControl` öğesinin `BackColor` üyesini değiştirebilir.
 
-**Traversing Arrays.** Because the <xref:System.Array> class implements the <xref:System.Collections.IEnumerable> interface, all arrays expose the <xref:System.Array.GetEnumerator%2A> method. This means that you can iterate through an array with a `For Each`...`Next` loop. However, you can only read the array elements. You cannot change them.
+**Dizileri geçme.** <xref:System.Array> sınıfı <xref:System.Collections.IEnumerable> arabirimini gerçekleştirdiğinden, tüm diziler <xref:System.Array.GetEnumerator%2A> yöntemini kullanıma sunar. Yani, bir dizi boyunca `For Each`...`Next` döngüsü ile yineleyebilirsiniz. Ancak, yalnızca dizi öğelerini okuyabilirsiniz. Bunları değiştiremezsiniz.
 
 ## <a name="example"></a>Örnek
 
-The following example lists all the folders in the C:\ directory by using the <xref:System.IO.DirectoryInfo> class.
+Aşağıdaki örnek, C:\ içindeki tüm klasörleri listeler. <xref:System.IO.DirectoryInfo> sınıfını kullanarak dizin.
 
 [!code-vb[VbVbalrStatements#124](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#124)]
 
 ## <a name="example"></a>Örnek
 
-The following example illustrates a procedure for sorting a collection. The example sorts instances of a `Car` class that are stored in a <xref:System.Collections.Generic.List%601>. The `Car` class implements the <xref:System.IComparable%601> interface, which requires that the <xref:System.IComparable%601.CompareTo%2A> method be implemented.
+Aşağıdaki örnek bir koleksiyonu sıralamak için bir yordam gösterir. Örnek, bir <xref:System.Collections.Generic.List%601>depolanan `Car` sınıfının örneklerini sıralar. `Car` sınıfı, <xref:System.IComparable%601.CompareTo%2A> yönteminin uygulanması için <xref:System.IComparable%601> arabirimini uygular.
 
-Each call to the <xref:System.IComparable%601.CompareTo%2A> method makes a single comparison that's used for sorting. User-written code in the `CompareTo` method returns a value for each comparison of the current object with another object. The value returned is less than zero if the current object is less than the other object, greater than zero if the current object is greater than the other object, and zero if they are equal. This enables you to define in code the criteria for greater than, less than, and equal.
+<xref:System.IComparable%601.CompareTo%2A> yöntemine yapılan her çağrı, sıralama için kullanılan tek bir karşılaştırma yapar. `CompareTo` yönteminde Kullanıcı tarafından yazılan kod, geçerli nesnenin her karşılaştırması için başka bir nesneyle ilgili bir değer döndürür. Geçerli nesne diğer nesneden daha küçükse döndürülen değer sıfırdan küçük, geçerli nesne diğer nesneden büyükse sıfırdan büyük ve eşitse sıfır. Bu, büyük, küçüktür ve eşittir ölçütlerine göre kod içinde tanımlamanızı sağlar.
 
-In the `ListCars` method, the `cars.Sort()` statement sorts the list. This call to the <xref:System.Collections.Generic.List%601.Sort%2A> method of the <xref:System.Collections.Generic.List%601> causes the `CompareTo` method to be called automatically for the `Car` objects in the `List`.
+`ListCars` yönteminde, `cars.Sort()` ifade listeyi sıralar. <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.List%601.Sort%2A> yöntemine yapılan bu çağrı, `CompareTo` yönteminin `List``Car` nesneler için otomatik olarak çağrılmasına neden olur.
 
 [!code-vb[VbVbalrStatements#125](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#125)]
 

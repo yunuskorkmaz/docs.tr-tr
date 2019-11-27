@@ -23,7 +23,7 @@ ms.locfileid: "74352792"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw Deyimi (Visual Basic)
 
-Throws an exception within a procedure.
+Bir yordam içinde özel durum oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,22 +31,22 @@ Throws an exception within a procedure.
 Throw [ expression ]
 ```
 
-## <a name="part"></a>Part
+## <a name="part"></a>Bölümüyle
 
 `expression`\
-Provides information about the exception to be thrown. Optional when residing in a `Catch` statement, otherwise required.
+Oluşturulacak özel durum hakkında bilgi sağlar. `Catch` bildiriminde bulunduğunda isteğe bağlı, aksi takdirde gereklidir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`). You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.
+`Throw` ifade, yapılandırılmış özel durum işleme kodu (`Try`...`Catch`...`Finally`) veya yapılandırılmamış özel durum işleme kodu (`On Error GoTo`) ile işleyebileceğiniz bir özel durum oluşturur. `Throw` deyiminizi, uygun özel durum işleme kodunu bulana kadar Visual Basic çağrı yığınını taşıdığından, kodunuzun içindeki hataları yakalamak için kullanabilirsiniz.
 
-A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.
+İfadesi olmayan bir `Throw` deyimi yalnızca bir `Catch` deyiminde kullanılabilir, bu durumda deyim `Catch` deyimi tarafından işlenmekte olan özel durumu yeniden oluşturur.
 
-The `Throw` statement resets the call stack for the `expression` exception. If `expression` is not provided, the call stack is left unchanged. You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.
+`Throw` ifade, `expression` özel durumu için çağrı yığınını sıfırlar. `expression` sağlanmazsa, çağrı yığını değişmeden bırakılır. Özel durum için çağrı yığınına <xref:System.Exception.StackTrace%2A> özelliği aracılığıyla erişebilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-The following code uses the `Throw` statement to throw an exception:
+Aşağıdaki kod bir özel durum oluşturmak için `Throw` ifadesini kullanır:
 
 [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
 

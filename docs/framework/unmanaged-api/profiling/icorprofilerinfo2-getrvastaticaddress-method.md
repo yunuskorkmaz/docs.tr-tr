@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433013"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress Metodu
-Gets the address of the specified relative virtual address (RVA) static field.  
+Belirtilen göreli sanal adres (RVA) statik alanının adresini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,31 +36,31 @@ HRESULT GetRVAStaticAddress(
   
 ## <a name="parameters"></a>Parametreler  
  `classId`  
- [in] The ID of the class that contains the requested RVA-static field.  
+ 'ndaki İstenen RVA-statik alanını içeren sınıfın KIMLIĞI.  
   
  `fieldToken`  
- [in] Metadata token for the requested RVA-static field.  
+ 'ndaki İstenen RVA-statik alanı için meta veri belirteci.  
   
  `ppAddress`  
- [out] A pointer to the address of the RVA-static field.  
+ dışı RVA-statik alanının adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `GetRVAStaticAddress` method may return one of the following:  
+ `GetRVAStaticAddress` yöntemi aşağıdakilerden birini döndürebilir:  
   
-- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
+- Belirtilen bağlamda verilen statik alana bir adres atanmadığı takdirde bir CORPROF_E_DATAINCOMPLETE HRESULT.  
   
-- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
+- Çöp toplama yığınında olabilecek nesnelerin adresleri. Bu adresler çöp toplamadan sonra geçersiz hale gelebilmelidir, bu nedenle çöp toplama işleminden sonra profil oluşturucular geçerli olduğunu varsaymamalıdır.  
   
- Before a class’s class constructor is completed, `GetRVAStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and may be rooting garbage collection objects.  
+ Bir sınıfın sınıf oluşturucusu tamamlanmadan önce `GetRVAStaticAddress`, bazı statik alanlar zaten başlatılmış olabilir ve atık toplama nesnelerini kök olarak oluşturabilir, ancak tüm statik alanları için CORPROF_E_DATAINCOMPLETE döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

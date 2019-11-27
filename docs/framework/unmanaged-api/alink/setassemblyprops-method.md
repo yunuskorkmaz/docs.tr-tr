@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445577"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps Yöntemi
-Assigns assembly-level properties.  
+Derleme düzeyi özellikleri atar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT SetAssemblyProps(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- ID of the assembly.  
+ Derlemenin KIMLIĞI.  
   
  `FileToken`  
- File that defines the property. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
+ Özelliği tanımlayan dosya. `AssemblyID` ilişkisiz bir netmodule belirtmezse NULL olabilir.  
   
  `Option`  
- Indicates the option to modify.  
+ Değiştirme seçeneğini belirtir.  
   
  `Value`  
- New value of the option.  
+ Seçeneğin yeni değeri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h.  
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

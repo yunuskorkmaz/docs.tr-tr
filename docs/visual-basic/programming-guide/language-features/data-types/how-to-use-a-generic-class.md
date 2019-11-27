@@ -29,28 +29,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350055"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>Nasıl yapılır: Genel Bir Sınıf Kullanma (Visual Basic)
-A class that takes *type parameters* is called a *generic class*. If you are using a generic class, you can generate a *constructed class* from it by supplying a *type argument* for each of these parameters. You can then declare a variable of the constructed class type, and you can create an instance of the constructed class and assign it to that variable.  
+*Tür parametreleri* alan bir sınıfa *Genel sınıf*denir. Genel bir sınıf kullanıyorsanız, bu parametrelerin her biri için bir *tür bağımsız değişkeni* sağlayarak bundan *oluşturulmuş bir sınıf* oluşturabilirsiniz. Daha sonra, oluşturulan sınıf türünün bir değişkenini bildirebilir ve oluşturulan sınıfın bir örneğini oluşturabilir ve bu değişkene atayabilirsiniz.  
   
- In addition to classes, you can also define and use generic structures, interfaces, procedures, and delegates.  
+ Sınıfların yanı sıra genel yapıları, arabirimleri, yordamları ve temsilcileri de tanımlayabilir ve kullanabilirsiniz.  
   
- The following procedure takes a generic class defined in the .NET Framework and creates an instance from it.  
+ Aşağıdaki yordam .NET Framework tanımlı bir genel sınıf alır ve bundan bir örnek oluşturur.  
   
-### <a name="to-use-a-class-that-takes-a-type-parameter"></a>To use a class that takes a type parameter  
+### <a name="to-use-a-class-that-takes-a-type-parameter"></a>Bir tür parametresi alan bir sınıfı kullanmak için  
   
-1. At the beginning of your source file, include an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to import the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace. This allows you to refer to the <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> class without having to fully qualify it to differentiate it from other queue classes such as <xref:System.Collections.Queue?displayProperty=nameWithType>.  
+1. Kaynak dosyanızın başlangıcında, <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanını içeri aktarmak için bir [Imports (.net ad alanı ve türü) ifadesini](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) ekleyin. Bu, <xref:System.Collections.Queue?displayProperty=nameWithType>gibi diğer sıra sınıflarından ayırt etmek için tam olarak nitelendirmek zorunda kalmadan <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> sınıfına başvurmanıza olanak sağlar.  
   
-2. Create the object in the normal way, but add `(Of type)` immediately after the class name.  
+2. Nesneyi normal şekilde oluşturun, ancak sınıf adından hemen sonra `(Of type)` ekleyin.  
   
-     The following example uses the same class (<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>) to create two queue objects that hold items of different data types. It adds items to the end of each queue and then removes and displays items from the front of each queue.  
+     Aşağıdaki örnek, farklı veri türlerindeki öğeleri tutan iki kuyruk nesnesi oluşturmak için aynı sınıfı (<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>) kullanır. Her kuyruğun sonuna öğeler ekler ve sonra her kuyruğun önüne öğeleri kaldırır ve görüntüler.  
   
      [!code-vb[VbVbalrDataTypes#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](../../../../standard/language-independence-and-language-independent-components.md)
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [Durumunu](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Nasıl yapılır: Farklı Veri Türlerinde Aynı İşlevselliği Sağlayabilen Bir Sınıf Tanımlama](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
 - [Yineleyiciler](../../../../visual-basic/programming-guide/concepts/iterators.md)

@@ -11,12 +11,12 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353865"
 ---
-# <a name="object-doesnt-support-this-property-or-method-visual-basic"></a>Object doesn't support this property or method (Visual Basic)
-You specified a method or property that does not exist for this automation object.  
+# <a name="object-doesnt-support-this-property-or-method-visual-basic"></a>Nesne bu özelliği veya yöntemi desteklemiyor (Visual Basic)
+Bu Otomasyon nesnesi için mevcut olmayan bir yöntem veya özellik belirttiniz.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Read the object's documentation for more information on the object and check the spellings of properties and methods.  
+- Nesne hakkında daha fazla bilgi için nesnenin belgelerini okuyun ve özelliklerin ve yöntemlerin yazılanları denetleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

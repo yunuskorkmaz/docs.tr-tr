@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436518"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType Numaralandırması
-Contains values that describe native unmanaged types.  
+Yerel yönetilmeyen türleri tanımlayan değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -85,64 +85,64 @@ typedef enum CorNativeType {
 } CorNativeType;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|Kullanımdan kalktı.|  
 |`NATIVE_TYPE_VOID`|Kullanımdan kalktı.|  
-|`NATIVE_TYPE_BOOLEAN`|A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.|  
-|`NATIVE_TYPE_I1`|A signed 8-bit integer value.|  
-|`NATIVE_TYPE_U1`|An unsigned 8-bit integer value.|  
-|`NATIVE_TYPE_I2`|A signed 16-bit integer value.|  
-|`NATIVE_TYPE_U2`|An unsigned 16-bit integer value.|  
-|`NATIVE_TYPE_I4`|A signed 32-bit integer value.|  
-|`NATIVE_TYPE_U4`|An unsigned 32-bit integer value.|  
-|`NATIVE_TYPE_I8`|A signed 64-bit integer value.|  
-|`NATIVE_TYPE_U8`|An unsigned 64-bit integer value.|  
-|`NATIVE_TYPE_R4`|A 4-byte floating-point numeric value.|  
-|`NATIVE_TYPE_R8`|An 8-byte floating-point numeric value.|  
+|`NATIVE_TYPE_BOOLEAN`|Bir 4 baytlık Boole değeri, TRUE sıfır değil ve FALSE sıfırdır.|  
+|`NATIVE_TYPE_I1`|İşaretli 8 bit tam sayı değeri.|  
+|`NATIVE_TYPE_U1`|İşaretsiz 8 bit tamsayı değeri.|  
+|`NATIVE_TYPE_I2`|İşaretli 16 bit tamsayı değeri.|  
+|`NATIVE_TYPE_U2`|İşaretsiz 16 bit tamsayı değeri.|  
+|`NATIVE_TYPE_I4`|İmzalı 32 bitlik bir tamsayı değeri.|  
+|`NATIVE_TYPE_U4`|İşaretsiz 32 bitlik bir tamsayı değeri.|  
+|`NATIVE_TYPE_I8`|İmzalı 64 bitlik bir tamsayı değeri.|  
+|`NATIVE_TYPE_U8`|İşaretsiz 64 bitlik bir tamsayı değeri.|  
+|`NATIVE_TYPE_R4`|4 baytlık kayan nokta sayısal değeri.|  
+|`NATIVE_TYPE_R8`|8 baytlık kayan nokta sayısal değeri.|  
 |`NATIVE_TYPE_SYSCHAR`|Kullanımdan kalktı.|  
 |`NATIVE_TYPE_VARIANT`|Kullanımdan kalktı.|  
-|`NATIVE_TYPE_CURRENCY`|A numeric COM type that corresponds to the managed <xref:System.Decimal> type.|  
+|`NATIVE_TYPE_CURRENCY`|Yönetilen <xref:System.Decimal> türüne karşılık gelen sayısal COM türü.|  
 |`NATIVE_TYPE_PTR`|Kullanımdan kalktı.|  
 |`NATIVE_TYPE_DECIMAL`|Kullanımdan kalktı.|  
 |`NATIVE_TYPE_DATE`|Kullanımdan kalktı.|  
-|`NATIVE_TYPE_BSTR`|COM Interop.|  
-|`NATIVE_TYPE_LPSTR`|An LPSTR string value.|  
-|`NATIVE_TYPE_LPWSTR`|An LPWSTR string value.|  
-|`NATIVE_TYPE_LPTSTR`|An LPTSTR string value.|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|A fixed, system-defined string value.|  
+|`NATIVE_TYPE_BSTR`|COM birlikte çalışma.|  
+|`NATIVE_TYPE_LPSTR`|LPSTR dize değeri.|  
+|`NATIVE_TYPE_LPWSTR`|LPWSTR dize değeri.|  
+|`NATIVE_TYPE_LPTSTR`|LPTSTR dize değeri.|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|Sabit, sistem tarafından tanımlanan bir dize değeri.|  
 |`NATIVE_TYPE_OBJECTREF`|Kullanımdan kalktı.|  
-|`NATIVE_TYPE_IUNKNOWN`|COM Interop.|  
-|`NATIVE_TYPE_IDISPATCH`|COM Interop.|  
-|`NATIVE_TYPE_STRUCT`|A native structure value.|  
-|`NATIVE_TYPE_INTF`|COM Interop.|  
-|`NATIVE_TYPE_SAFEARRAY`|COM Interop.|  
-|`NATIVE_TYPE_FIXEDARRAY`|A fixed-length array value.|  
-|`NATIVE_TYPE_INT`|A native 16-bit signed integer value.|  
-|`NATIVE_TYPE_UINT`|A native 16-bit unsigned integer value.|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|Kullanımdan kalktı.<br /><br /> Use NATIVE_TYPE_STRUCT.|  
-|`NATIVE_TYPE_BYVALSTR`|COM Interop.|  
-|`NATIVE_TYPE_ANSIBSTR`|COM Interop.|  
-|`NATIVE_TYPE_TBSTR`|COM Interop.<br /><br /> Select BSTR or ANSIBSTR depending on the platform.|  
-|`NATIVE_TYPE_VARIANTBOOL`|A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.|  
-|`NATIVE_TYPE_FUNC`|A function pointer.|  
-|`NATIVE_TYPE_ASANY`|A reference to any native type.|  
-|`NATIVE_TYPE_ARRAY`|A reference to an array with members of an unspecified type.|  
-|`NATIVE_TYPE_LPSTRUCT`|A 32-bit integer pointer to a structure.|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|A custom marshaler native type.<br /><br /> This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"|  
-|`NATIVE_TYPE_ERROR`|COM Interop.<br /><br /> With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.|  
-|`NATIVE_TYPE_IINSPECTABLE`|A native `IInspectable` type.|  
-|`NATIVE_TYPE_HSTRING`|A native `HString`.|  
-|`NATIVE_TYPE_MAX`|An invalid value.|  
+|`NATIVE_TYPE_IUNKNOWN`|COM birlikte çalışma.|  
+|`NATIVE_TYPE_IDISPATCH`|COM birlikte çalışma.|  
+|`NATIVE_TYPE_STRUCT`|Yerel bir yapı değeri.|  
+|`NATIVE_TYPE_INTF`|COM birlikte çalışma.|  
+|`NATIVE_TYPE_SAFEARRAY`|COM birlikte çalışma.|  
+|`NATIVE_TYPE_FIXEDARRAY`|Sabit uzunluklu bir dizi değeri.|  
+|`NATIVE_TYPE_INT`|Yerel bir 16 bit işaretli tamsayı değeri.|  
+|`NATIVE_TYPE_UINT`|Yerel bir 16 bit işaretsiz tamsayı değeri.|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|Kullanımdan kalktı.<br /><br /> NATIVE_TYPE_STRUCT kullanın.|  
+|`NATIVE_TYPE_BYVALSTR`|COM birlikte çalışma.|  
+|`NATIVE_TYPE_ANSIBSTR`|COM birlikte çalışma.|  
+|`NATIVE_TYPE_TBSTR`|COM birlikte çalışma.<br /><br /> Platforma bağlı olarak BSTR veya ANSIBSTR seçin.|  
+|`NATIVE_TYPE_VARIANTBOOL`|2 baytlık bir Boole değeri; burada TRUE-1 ve FALSE sıfırdır.|  
+|`NATIVE_TYPE_FUNC`|Bir işlev işaretçisi.|  
+|`NATIVE_TYPE_ASANY`|Herhangi bir yerel türe başvuru.|  
+|`NATIVE_TYPE_ARRAY`|Belirtilmemiş bir türün üyeleri olan bir diziye başvuru.|  
+|`NATIVE_TYPE_LPSTRUCT`|Bir yapıya 32 bitlik bir tamsayı işaretçisi.|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|Özel sıralayıcı yerel türü.<br /><br /> Bu, arkasından aşağıdaki biçimdeki bir dize gelmelidir: "Yerel tür adı/0Özel Sıralayıcı türü name/0Optional Cookie/0" veya "{Native Type GUID}/0Özel Sıralayıcı türü ad/0Isteğe bağlı tanımlama bilgisi/0"|  
+|`NATIVE_TYPE_ERROR`|COM birlikte çalışma.<br /><br /> ELEMENT_TYPE_I4 bu tür VT_HRESULT eşlenir.|  
+|`NATIVE_TYPE_IINSPECTABLE`|Yerel bir `IInspectable` türü.|  
+|`NATIVE_TYPE_HSTRING`|Yerel bir `HString`.|  
+|`NATIVE_TYPE_MAX`|Geçersiz bir değer.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

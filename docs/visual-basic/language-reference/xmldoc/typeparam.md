@@ -12,8 +12,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352184"
 ---
-# <a name="typeparam-visual-basic"></a>\<typeparam> (Visual Basic)
-Defines a type parameter name and description.  
+# <a name="typeparam-visual-basic"></a>\<typeparam > (Visual Basic)
+Bir tür parametresi adı ve açıklaması tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,18 +23,18 @@ Defines a type parameter name and description.
   
 ## <a name="parameters"></a>Parametreler  
  `name`  
- The name of the type parameter. Enclose the name in double quotation marks (" ").  
+ Tür parametresinin adı. Adı çift tırnak işareti ("") içine alın.  
   
  `description`  
- A description of the type parameter.  
+ Tür parametresinin açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Use the `<typeparam>` tag in the comment for a generic type or generic member declaration to describe one of the type parameters.  
+ Tür parametrelerinden birini belirtmek için genel bir tür veya genel üye bildirimi açıklamasında `<typeparam>` etiketini kullanın.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- This example uses the `<typeparam>` tag to describe the `id` parameter.  
+ Bu örnek, `id` parametresini anlatmak için `<typeparam>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#8)]  
   

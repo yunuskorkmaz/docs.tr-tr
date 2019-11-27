@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352720"
 ---
 # <a name="yield-statement-visual-basic"></a>Yield Deyimi (Visual Basic)
-Sends the next element of a collection to a `For Each...Next` statement.  
+Bir koleksiyonun Next öğesini bir `For Each...Next` ifadesine gönderir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,43 +28,43 @@ Yield expression
   
 |Terim|Tanım|  
 |---|---|  
-|`expression`|Gerekli. An expression that is implicitly convertible to the type of the iterator function or `Get` accessor that contains the `Yield` statement.|  
+|`expression`|Gerekli. Yineleyici işlevinin türüne örtülü olarak dönüştürülebilir bir ifade veya `Yield` deyimini içeren `Get` erişimcisi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `Yield` statement returns one element of a collection at a time. The `Yield` statement is included in an iterator function or `Get` accessor, which perform custom iterations over a collection.  
+ `Yield` deyimin her seferinde bir koleksiyonun bir öğesi döndürür. `Yield` deyimin bir yineleyici işlevi veya bir koleksiyon üzerinde özel yinelemeler gerçekleştiren `Get` erişimcisi vardır.  
   
- You consume an iterator function by using a [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md) or a LINQ query. Each iteration of the `For Each` loop calls the iterator function. When a `Yield` statement is reached in the iterator function, `expression` is returned, and the current location in code is retained. Yürütme, yineleyici işlevinin bir sonraki çağrılmasında bu konumdan başlar.  
+ For each ile bir yineleyici işlevi kullanıyorsunuz [... Sonraki Ifade](../../../visual-basic/language-reference/statements/for-each-next-statement.md) veya BIR LINQ sorgusu. `For Each` döngüsünün her yinelemesi yineleyici işlevini çağırır. Yineleyici işlevinde bir `Yield` ifadesine ulaşıldığında, `expression` döndürülür ve koddaki geçerli konum korunur. Yürütme, yineleyici işlevinin bir sonraki çağrılmasında bu konumdan başlar.  
   
- An implicit conversion must exist from the type of `expression` in the `Yield` statement to the return type of the iterator.  
+ Örtük bir dönüştürme, `Yield` deyimindeki `expression` türünün, yineleyicinin dönüş türüne sahip olması gerekir.  
   
- You can use an `Exit Function` or `Return` statement to end the iteration.  
+ Yinelemeyi sonlandırmak için bir `Exit Function` veya `Return` ifadesini kullanabilirsiniz.  
   
- "Yield" is not a reserved word and has special meaning only when it is used in an `Iterator` function or `Get` accessor.  
+ "Yield" ayrılmış bir sözcük değildir ve yalnızca bir `Iterator` işlevinde veya `Get` erişimcisinde kullanıldığında özel anlamı vardır.  
   
- For more information about iterator functions and `Get` accessors, see [Iterators](../../programming-guide/concepts/iterators.md).  
+ Yineleyici işlevleri ve `Get` erişimcileri hakkında daha fazla bilgi için bkz. [yineleyiciler](../../programming-guide/concepts/iterators.md).  
   
-## <a name="iterator-functions-and-get-accessors"></a>Iterator Functions and Get Accessors  
- The declaration of an iterator function or `Get` accessor must meet the following requirements:  
+## <a name="iterator-functions-and-get-accessors"></a>Yineleyici Işlevleri ve get erişimcileri  
+ Yineleyici işlev veya `Get` erişimcisinin bildirimi aşağıdaki gereksinimleri karşılamalıdır:  
   
-- It must include an [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md) modifier.  
+- [Yineleyici](../../../visual-basic/language-reference/modifiers/iterator.md) değiştiricisi içermelidir.  
   
-- The return type must be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.  
+- Dönüş türü <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>veya <xref:System.Collections.Generic.IEnumerator%601>olmalıdır.  
   
-- It cannot have any `ByRef` parameters.  
+- `ByRef` parametreye sahip olamaz.  
   
- An iterator function cannot occur in an event, instance constructor, static constructor, or static destructor.  
+ Bir olay, örnek Oluşturucu, statik oluşturucu veya statik yok edicisi içinde Yineleyici işlevi oluşamaz.  
   
- An iterator function can be an anonymous function. For more information, see [Iterators](../../programming-guide/concepts/iterators.md).  
+ Yineleyici işlevi anonim bir işlev olabilir. Daha fazla bilgi için bkz. [yineleyiciler](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="exception-handling"></a>Özel Durum İşleme  
- A `Yield` statement can be inside a `Try` block of a [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). A `Try` block that has a `Yield` statement can have `Catch` blocks, and can have a `Finally` block.  
+ `Yield` bir ifade, TRY `Try` bloğunun içinde olabilir [... Yakala... Finally ekstresi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). `Yield` bildirimine sahip bir `Try` bloğunda `Catch` blokları olabilir ve bir `Finally` bloğuna sahip olabilir.  
   
- A `Yield` statement cannot be inside a `Catch` block or a `Finally` block.  
+ `Yield` bir ifade `Catch` bloğunun veya `Finally` bloğunun içinde olamaz.  
   
- If the `For Each` body (outside of the iterator function) throws an exception, a `Catch` block in the iterator function is not executed, but a `Finally` block in the iterator function is executed. A `Catch` block inside an iterator function catches only exceptions that occur inside the iterator function.  
+ `For Each` gövdesi (Yineleyici işlevi dışında) bir özel durum oluşturursa, yineleyici işlevindeki bir `Catch` bloğu yürütülmez, ancak Yineleyici işlevindeki bir `Finally` bloğu yürütülür. Yineleyici işlevi içindeki bir `Catch` bloğu yalnızca Yineleyici işlevinin içinde oluşan özel durumları yakalar.  
   
 ## <a name="technical-implementation"></a>Teknik Uygulama  
- The following code returns an `IEnumerable (Of String)` from an iterator function and then iterates through the elements of the `IEnumerable (Of String)`.  
+ Aşağıdaki kod bir yineleyici işlevinden `IEnumerable (Of String)` döndürür ve sonra `IEnumerable (Of String)`öğeleri boyunca yinelenir.  
   
 ```vb  
 Dim elements As IEnumerable(Of String) = MyIteratorFunction()  
@@ -73,25 +73,25 @@ For Each element As String In elements
 Next  
 ```  
   
- The call to `MyIteratorFunction` doesn't execute the body of the function. Instead the call returns an `IEnumerable(Of String)` into the `elements` variable.  
+ `MyIteratorFunction` çağrısı işlevin gövdesini yürütmez. Bunun yerine, çağrı `elements` değişkenine bir `IEnumerable(Of String)` döndürür.  
   
- On an iteration of the `For Each` loop, the <xref:System.Collections.IEnumerator.MoveNext%2A> method is called for `elements`. This call executes the body of `MyIteratorFunction` until the next `Yield` statement is reached. The `Yield` statement returns an expression that determines not only the value of the `element` variable for consumption by the loop body but also the <xref:System.Collections.Generic.IEnumerator%601.Current%2A> property of elements, which is an `IEnumerable (Of String)`.  
+ `For Each` döngüsünün bir yinelemesi üzerinde `elements`için <xref:System.Collections.IEnumerator.MoveNext%2A> yöntemi çağırılır. Bu çağrı, sonraki `Yield` ifadesine ulaşılana kadar `MyIteratorFunction` gövdesini yürütür. `Yield` deyimi, yalnızca döngü gövdesine göre tüketim için `element` değişkeninin değerini değil, aynı zamanda bir `IEnumerable (Of String)`olan öğelerin <xref:System.Collections.Generic.IEnumerator%601.Current%2A> özelliğini de belirleyen bir ifade döndürür.  
   
- On each subsequent iteration of the `For Each` loop, the execution of the iterator body continues from where it left off, again stopping when it reaches a `Yield` statement. The `For Each` loop completes when the end of the iterator function or a `Return` or `Exit Function` statement is reached.  
+ `For Each` döngüsünün sonraki tekrarında, yineleyici gövdesinin yürütülmesi kaldığınız yerden devam eder, bir `Yield` bildirimine ulaştığında yeniden durdurulur. Yineleyici işlevinin sonuna veya bir `Return` ya da `Exit Function` ifadeye ulaşıldığında `For Each` döngüsü tamamlanır.  
   
 ## <a name="example"></a>Örnek  
- The following example has a `Yield` statement that is inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. Each iteration of the [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement body in `Main` creates a call to the `Power` iterator function. Each call to the iterator function proceeds to the next execution of the `Yield` statement, which occurs during the next iteration of the `For…Next` loop.  
+ Aşağıdaki örnek, Için içinde olan bir `Yield` ifadeye sahiptir [... Sonraki](../../../visual-basic/language-reference/statements/for-next-statement.md) döngü. `Main` [for each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) deyimlerinin her yinelemesi, `Power` Yineleyici işlevine bir çağrı oluşturur. Yineleyici işlevine yapılan her çağrı, `For…Next` döngüsünün bir sonraki yinelemesi sırasında ortaya çıkan `Yield` deyimin bir sonraki yürütmeye ilerler.  
   
- The return type of the iterator method is <xref:System.Collections.Generic.IEnumerable%601>, an iterator interface type. Yineleyici yöntem çağrıldığında, bir sayının kuvvetlerini içeren sayılabilir bir nesne döndürür.  
+ Yineleyici yönteminin dönüş türü, bir Yineleyici arabirimi türü <xref:System.Collections.Generic.IEnumerable%601>. Yineleyici yöntem çağrıldığında, bir sayının kuvvetlerini içeren sayılabilir bir nesne döndürür.  
   
  [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   
 ## <a name="example"></a>Örnek  
- The following example demonstrates a `Get` accessor that is an iterator. The property declaration includes an `Iterator` modifier.  
+ Aşağıdaki örnek, yineleyici olan bir `Get` erişimcisini gösterir. Özellik bildirimi `Iterator` değiştirici içerir.  
   
  [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
   
- For additional examples, see [Iterators](../../programming-guide/concepts/iterators.md).  
+ Ek örnekler için bkz. [yineleyiciler](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

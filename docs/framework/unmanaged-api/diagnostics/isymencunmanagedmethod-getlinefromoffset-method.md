@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448644"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset Yöntemi
-Gets the line information associated with an offset. If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.  
+Bir uzaklığa ilişkin satır bilgilerini alır. Eğer (`dwOffset`) fark parametresi bir sıra noktası değilse, bu yöntem önceki uzaklığa ilişkin satır bilgilerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +39,28 @@ HRESULT GetLineFromOffset(
   
 ## <a name="parameters"></a>Parametreler  
  `dwOffset`  
- [in] A `ULONG32` that contains the offset.  
+ 'ndaki Sapmayı içeren bir `ULONG32`.  
   
  `pline`  
- [out] A pointer to a `ULONG32` that receives the line.  
+ dışı Satırı alan `ULONG32` işaretçisi.  
   
  `pcolumn`  
- [out] A pointer to a `ULONG32` that receives the column.  
+ dışı Sütunu alan `ULONG32` için bir işaretçi.  
   
  `pendLine`  
- [out] A pointer to a `ULONG32` that receives the end line.  
+ dışı Bitiş satırını alan `ULONG32` işaretçisi.  
   
  `pendColumn`  
- [out] A pointer to a `ULONG32` that receives the end column.  
+ dışı Bitiş sütununu alan `ULONG32` işaretçisi.  
   
  `pdwStartOffset`  
- [out] A pointer to a `ULONG32` that receives the associated sequence point.  
+ dışı İlişkili dizi noktasını alan `ULONG32` işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

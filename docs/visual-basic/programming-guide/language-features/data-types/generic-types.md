@@ -44,118 +44,118 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350117"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic'de Genel Türler (Visual Basic)
-A *generic type* is a single programming element that adapts to perform the same functionality for a variety of data types. When you define a generic class or procedure, you do not have to define a separate version for each data type for which you might want to perform that functionality.  
+*Genel tür* , çeşitli veri türleri için aynı işlevselliği gerçekleştirmeye uyum sağlayan tek bir programlama öğesidir. Genel bir sınıf veya yordam tanımladığınızda, bu işlevi gerçekleştirmek isteyebileceğiniz her bir veri türü için ayrı bir sürüm tanımlamanız gerekmez.  
   
- An analogy is a screwdriver set with removable heads. You inspect the screw you need to turn and select the correct head for that screw (slotted, crossed, starred). Once you insert the correct head in the screwdriver handle, you perform the exact same function with the screwdriver, namely turning the screw.  
+ Benzerleme vurguladı, çıkarılabilir kafaları olan bir screwdriver kümesidir. Vidalı 'yi inceleyerek, bu vidalı için doğru kafa (slosıya, çapraz, starred) açmanız ve seçmeniz gerekir. Screwdriver işleyicisine doğru bir baş ekledikten sonra, vida ' ı etkinleştirerek, Screwdriver ile tam olarak aynı işlevi gerçekleştirirsiniz.  
   
- ![Diagram of a screwdriver set with different heads.](./media/generic-types/generic-screwdriver-set.gif)  
+ ![Farklı kafaları olan bir screwdriver kümesi diyagramı.](./media/generic-types/generic-screwdriver-set.gif)  
   
- When you define a generic type, you parameterize it with one or more data types. This allows the using code to tailor the data types to its requirements. Your code can declare several different programming elements from the generic element, each one acting on a different set of data types. But the declared elements all perform the identical logic, no matter what data types they are using.  
+ Genel bir tür tanımladığınızda, bir veya daha fazla veri türüyle parametreleştirebilirsiniz. Bu, veri türlerini gereksinimlerine uyarlamak için kodun kullanılmasına izin verir. Kodunuz, her biri farklı veri türleri kümesi üzerinde davranan genel öğeden birkaç farklı programlama öğesi bildirebilir. Ancak, görüntülenen öğeler, kullandıkları veri türleri ne olduğuna bakılmaksızın özdeş mantığı gerçekleştirir.  
   
- For example, you might want to create and use a queue class that operates on a specific data type such as `String`. You can declare such a class from <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, as the following example shows.  
+ Örneğin, `String`gibi belirli bir veri türü üzerinde çalışan bir sıra sınıfı oluşturmak ve kullanmak isteyebilirsiniz. Aşağıdaki örnekte gösterildiği gibi, bu tür bir sınıfı <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>bildirebilirsiniz.  
   
  [!code-vb[VbVbalrDataTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#1)]  
   
- You can now use `stringQ` to work exclusively with `String` values. Because `stringQ` is specific for `String` instead of being generalized for `Object` values, you do not have late binding or type conversion. This saves execution time and reduces run-time errors.  
+ Artık, `String` değerlerle özel olarak çalışmak için `stringQ` kullanabilirsiniz. `stringQ`, `Object` değerleri için genelleştirilmesi yerine `String` özgü olduğundan, geç bağlama veya tür dönüştürme izniniz yoktur. Bu, yürütme süresini kaydeder ve çalışma zamanı hatalarını azaltır.  
   
- For more information on using a generic type, see [How to: Use a Generic Class](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
+ Genel bir tür kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: genel bir sınıf kullanma](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
   
-## <a name="example-of-a-generic-class"></a>Example of a Generic Class  
- The following example shows a skeleton definition of a generic class.  
+## <a name="example-of-a-generic-class"></a>Genel sınıf örneği  
+ Aşağıdaki örnek, bir genel sınıfın iskelet tanımını gösterir.  
   
  [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
   
- In the preceding skeleton, `t` is a *type parameter*, that is, a placeholder for a data type that you supply when you declare the class. Elsewhere in your code, you can declare various versions of `classHolder` by supplying various data types for `t`. The following example shows two such declarations.  
+ Önceki iskelet 'de, `t` bir *tür parametresidir*, diğer bir deyişle, sınıfı bildirdiğinizde sağladığınız veri türü için yer tutucudur. Kodunuzun başka bir yerinde, `t`için çeşitli veri türleri sağlayarak `classHolder` çeşitli sürümlerini bildirebilirsiniz. Aşağıdaki örnek, bu iki bildirimi gösterir.  
   
  [!code-vb[VbVbalrDataTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#3)]  
   
- The preceding statements declare *constructed classes*, in which a specific type replaces the type parameter. This replacement is propagated throughout the code within the constructed class. The following example shows what the `processNewItem` procedure looks like in `integerClass`.  
+ Önceki deyimler, belirli bir türün tür parametresinin yerini aldığı *oluşturulan sınıfları*bildirir. Bu değişiklik, oluşturulan sınıf içindeki kod boyunca yayılır. Aşağıdaki örnek, `processNewItem` yordamının `integerClass`nasıl göründüğünü gösterir.  
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- For a more complete example, see [How to: Define a Class That Can Provide Identical Functionality on Different Data Types](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ Daha kapsamlı bir örnek için bkz. [nasıl yapılır: farklı veri türlerinde özdeş Işlevsellik sağlayabilen bir sınıf tanımlama](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
-## <a name="eligible-programming-elements"></a>Eligible Programming Elements  
- You can define and use generic classes, structures, interfaces, procedures, and delegates. Note that the .NET Framework defines several generic classes, structures, and interfaces that represent commonly used generic elements. The <xref:System.Collections.Generic?displayProperty=nameWithType> namespace provides dictionaries, lists, queues, and stacks. Before defining your own generic element, see if it is already available in <xref:System.Collections.Generic?displayProperty=nameWithType>.  
+## <a name="eligible-programming-elements"></a>Uygun programlama öğeleri  
+ Genel sınıfları, yapıları, arabirimleri, yordamları ve temsilcileri tanımlayabilir ve kullanabilirsiniz. .NET Framework, yaygın olarak kullanılan genel öğeleri temsil eden çeşitli genel sınıfları, yapıları ve arabirimleri tanımladığını unutmayın. <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanı sözlükler, listeleri, kuyrukları ve yığınları sağlar. Kendi genel öğesini tanımlamadan önce, <xref:System.Collections.Generic?displayProperty=nameWithType>' de zaten kullanılabilir olup olmadığını görün.  
   
- Procedures are not types, but you can define and use generic procedures. See [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
+ Yordamlar türler değildir, ancak genel yordamları tanımlayabilir ve kullanabilirsiniz. Bkz. [Visual Basic genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
-## <a name="advantages-of-generic-types"></a>Advantages of Generic Types  
- A generic type serves as a basis for declaring several different programming elements, each of which operates on a specific data type. The alternatives to a generic type are:  
+## <a name="advantages-of-generic-types"></a>Genel türlerin avantajları  
+ Genel bir tür, her biri belirli bir veri türü üzerinde çalışan birkaç farklı programlama öğesi bildirmek için temel görevi görür. Genel tür alternatifleri şunlardır:  
   
-1. A single type operating on the `Object` data type.  
+1. `Object` veri türünde çalışan tek bir tür.  
   
-2. A set of *type-specific* versions of the type, each version individually coded and operating on one specific data type such as `String`, `Integer`, or a user-defined type such as `customer`.  
+2. Türün *türüne özgü* bir dizi, her sürüm tek tek kodlanmış ve `String`, `Integer`veya `customer`gibi Kullanıcı tanımlı bir tür.  
   
- A generic type has the following advantages over these alternatives:  
+ Genel bir tür, bu alternatifler üzerinde aşağıdaki avantajlara sahiptir:  
   
-- **Type Safety.** Generic types enforce compile-time type checking. Types based on `Object` accept any data type, and you must write code to check whether an input data type is acceptable. With generic types, the compiler can catch type mismatches before run time.  
+- **Tür güvenliği.** Genel türler derleme zamanı tür denetimini uygular. `Object` temel alan türler, herhangi bir veri türünü kabul eder ve bir giriş veri türünün kabul edilebilir olup olmadığını denetlemek için kod yazmanız gerekir. Genel türlerle, derleyici çalışma zamanından önce tür uyuşmazlıkları yakalayabilir.  
   
-- **Performance.** Generic types do not have to *box* and *unbox* data, because each one is specialized for one data type. Operations based on `Object` must box input data types to convert them to `Object` and unbox data destined for output. Boxing and unboxing reduce performance.  
+- **Mının.** Her biri bir veri türü için *özelleştirilmediği* için genel türler, verileri *Box* ve serbest bırakmak zorunda değildir. `Object` tabanlı işlemler, çıkış için hedeflenen verileri `Object` ve kutudan çıkarmak için giriş veri türleri Box olmalıdır. Kutulama ve kutudan çıkarma performansı azaltır.  
   
-     Types based on `Object` are also late-bound, which means that accessing their members requires extra code at run time. This also reduces performance.  
+     `Object` tabanlı türler de geç bağlı olduğundan, üyelerine erişim çalışma zamanında ek kod gerektirir. Bu ayrıca performansı azaltır.  
   
-- **Code Consolidation.** The code in a generic type has to be defined only once. A set of type-specific versions of a type must replicate the same code in each version, with the only difference being the specific data type for that version. With generic types, the type-specific versions are all generated from the original generic type.  
+- **Kod birleştirme.** Genel bir türdeki kodun yalnızca bir kez tanımlanması yeterlidir. Bir türün tür özgü sürümlerinin bir kümesine, her sürümde aynı kod çoğaltılmalıdır ve bu sürüm için tek fark aynı şekilde geçerlidir. Genel türler ile, türe özgü sürümlerin hepsi özgün genel türden oluşturulmuştur.  
   
-- **Code Reuse.** Code that does not depend on a particular data type can be reused with various data types if it is generic. You can often reuse it even with a data type that you did not originally predict.  
+- **Kod yeniden kullanımı.** Belirli bir veri türüne bağımlı olmayan kod, genel ise çeşitli veri türleriyle yeniden kullanılabilir. Genellikle, ilk olarak tahmin etmemiş olduğunuz bir veri türüyle bile onu yeniden kullanabilirsiniz.  
   
-- **IDE Support.** When you use a constructed type declared from a generic type, the integrated development environment (IDE) can give you more support while you are developing your code. For example, IntelliSense can show you the type-specific options for an argument to a constructor or method.  
+- **IDE desteği.** Genel bir türden belirtilen oluşturulmuş bir tür kullandığınızda tümleşik geliştirme ortamı (IDE), kodunuzu geliştirirken daha fazla destek verebilir. Örneğin, IntelliSense, bir oluşturucuya veya yöntemine bir bağımsız değişken için tür özgü seçenekler gösterebilir.  
   
-- **Generic Algorithms.** Abstract algorithms that are type-independent are good candidates for generic types. For example, a generic procedure that sorts items using the <xref:System.IComparable> interface can be used with any data type that implements <xref:System.IComparable>.  
+- **Genel algoritmalar.** Tür bağımsız olan soyut algoritmalar genel türler için iyi adaylardır. Örneğin, <xref:System.IComparable> arabirimini kullanarak öğeleri sıralayan bir genel yordam, <xref:System.IComparable>uygulayan herhangi bir veri türü ile kullanılabilir.  
   
 ## <a name="constraints"></a>Kısıtlamalar  
- Although the code in a generic type definition should be as type-independent as possible, you might need to require a certain capability of any data type supplied to your generic type. For example, if you want to compare two items for the purpose of sorting or collating, their data type must implement the <xref:System.IComparable> interface. You can enforce this requirement by adding a *constraint* to the type parameter.  
+ Genel tür tanımındaki kodun mümkün olduğunca bağımsız olması gerekir olsa da, genel türündefinizin verilen herhangi bir veri türünün belirli bir özelliğini sağlamanız gerekebilir. Örneğin, iki öğeyi sıralama veya harmanlama amacıyla karşılaştırmak istiyorsanız, veri türleri <xref:System.IComparable> arabirimini gerçekleştirmelidir. Tür parametresine bir *kısıtlama* ekleyerek bu gereksinimi zorunlu kılabilirsiniz.  
   
-### <a name="example-of-a-constraint"></a>Example of a Constraint  
- The following example shows a skeleton definition of a class with a constraint that requires the type argument to implement <xref:System.IComparable>.  
+### <a name="example-of-a-constraint"></a>Kısıtlama örneği  
+ Aşağıdaki örnek, <xref:System.IComparable>uygulamak için tür bağımsız değişkeni gerektiren bir kısıtlamaya sahip bir sınıfın iskelet tanımını gösterir.  
   
  [!code-vb[VbVbalrDataTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#5)]  
   
- If subsequent code attempts to construct a class from `itemManager` supplying a type that does not implement <xref:System.IComparable>, the compiler signals an error.  
+ Sonraki kod, <xref:System.IComparable>gerçekleştirmeyen bir tür sağlayan `itemManager` bir sınıf oluşturmaya çalışırsa, derleyici bir hata bildirir.  
   
-### <a name="types-of-constraints"></a>Types of Constraints  
- Your constraint can specify the following requirements in any combination:  
+### <a name="types-of-constraints"></a>Kısıtlama türleri  
+ Kısıtlamalarınız herhangi bir kombinasyonda aşağıdaki gereksinimleri belirtebilir:  
   
-- The type argument must implement one or more interfaces  
+- Tür bağımsız değişkeni bir veya daha fazla arabirim uygulamalıdır  
   
-- The type argument must be of the type of, or inherit from, at most one class  
+- Tür bağımsız değişkeni, en fazla bir sınıfta bulunan veya ondan devralma türünden olmalıdır  
   
-- The type argument must expose a parameterless constructor accessible to the code that creates objects from it  
+- Tür bağımsız değişkeni, içinden nesneler oluşturan koda erişilebilen parametresiz bir oluşturucuyu kullanıma sunmalıdır  
   
-- The type argument must be a *reference type*, or it must be a *value type*  
+- Tür bağımsız değişkeni bir *başvuru türü*olmalı veya bir *değer türü* olmalıdır  
   
- If you need to impose more than one requirement, you use a comma-separated *constraint list* inside braces (`{ }`). To require an accessible constructor, you include the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword in the list. To require a reference type, you include the `Class` keyword; to require a value type, you include the `Structure` keyword.  
+ Birden fazla gereksinim uygulamanız gerekiyorsa, küme ayraçları içinde virgülle ayrılmış bir *kısıtlama listesi* kullanın (`{ }`). Erişilebilir bir Oluşturucu istemek için, [Yeni işleç](../../../../visual-basic/language-reference/operators/new-operator.md) anahtar sözcüğünü listeye ekleyin. Bir başvuru türü gerektirmek için `Class` anahtar sözcüğünü dahil edersiniz. değer türü gerektirmek için `Structure` anahtar sözcüğünü dahil edersiniz.  
   
- For more information on constraints, see [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
+ Kısıtlamalar hakkında daha fazla bilgi için bkz. [tür listesi](../../../../visual-basic/language-reference/statements/type-list.md).  
   
-### <a name="example-of-multiple-constraints"></a>Example of Multiple Constraints  
- The following example shows a skeleton definition of a generic class with a constraint list on the type parameter. In the code that creates an instance of this class, the type argument must implement both the <xref:System.IComparable> and <xref:System.IDisposable> interfaces, be a reference type, and expose an accessible parameterless constructor.  
+### <a name="example-of-multiple-constraints"></a>Birden çok kısıtlama örneği  
+ Aşağıdaki örnek, tür parametresinde kısıtlama listesi olan bir genel sınıfın iskelet tanımını gösterir. Bu sınıfın bir örneğini oluşturan kodda, tür bağımsız değişkeni hem <xref:System.IComparable> hem de <xref:System.IDisposable> arabirimlerini uygulamalıdır, bir başvuru türü olmalıdır ve erişilebilir parametresiz bir oluşturucuyu kullanıma sunar.  
   
  [!code-vb[VbVbalrDataTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#6)]  
   
-## <a name="important-terms"></a>Important Terms  
- Generic types introduce and use the following terms:  
+## <a name="important-terms"></a>Önemli koşullar  
+ Genel türler aşağıdaki terimleri sunar ve kullanır:  
   
-- *Generic Type*. A definition of a class, structure, interface, procedure, or delegate for which you supply at least one data type when you declare it.  
+- *Genel tür*. Bir sınıf, yapı, arabirim, yordam veya temsilci için en az bir veri türü sağladığınız temsilcinin tanımı.  
   
-- *Type Parameter*. In a generic type definition, a placeholder for a data type you supply when you declare the type.  
+- *Tür parametresi*. Genel tür tanımında, türü bildirdiğinizde sağladığınız veri türü için yer tutucu.  
   
-- *Type Argument*. A specific data type that replaces a type parameter when you declare a constructed type from a generic type.  
+- *Tür bağımsız değişkeni*. Genel bir türden oluşturulmuş bir tür bildirdiğinizde bir tür parametresini değiştiren belirli bir veri türü.  
   
-- *Constraint*. A condition on a type parameter that restricts the type argument you can supply for it. A constraint can require that the type argument must implement a particular interface, be or inherit from a particular class, have an accessible parameterless constructor, or be a reference type or a value type. You can combine these constraints, but you can specify at most one class.  
+- *Kısıtlama*. Bir tür parametresindeki, için sağlayabilmeniz gereken tür bağımsız değişkenini kısıtlayan bir koşul. Bir kısıtlama, tür bağımsız değişkeninin belirli bir arabirim uygulaması, belirli bir sınıftan olması veya devralması, erişilebilir parametresiz bir oluşturucuya sahip olması veya bir başvuru türü ya da bir değer türü olması gerekebilir. Bu kısıtlamaları birleştirebilirsiniz, ancak en fazla bir sınıf belirtebilirsiniz.  
   
-- *Constructed Type*. A class, structure, interface, procedure, or delegate declared from a generic type by supplying type arguments for its type parameters.  
+- *Oluşturulan tür*. Tür parametreleri için tür bağımsız değişkenleri sağlayarak genel bir türden belirtilen bir sınıf, yapı, arabirim, yordam veya temsilci.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic dönüşümler yazın](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [As](../../../../visual-basic/language-reference/statements/as-clause.md)
+- [Durumunu](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [Gerektiği](../../../../visual-basic/language-reference/statements/as-clause.md)
 - [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Kovaryans ve Kontravaryans](../../concepts/covariance-contravariance/index.md)
 - [Yineleyiciler](../../../../visual-basic/programming-guide/concepts/iterators.md)

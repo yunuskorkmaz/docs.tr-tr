@@ -18,7 +18,7 @@ ms.locfileid: "74349415"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML Değeri Özelliği (Visual Basic)
 
-Provides access to the value of the first element of a collection of <xref:System.Xml.Linq.XElement> objects.
+Bir <xref:System.Xml.Linq.XElement> nesneleri koleksiyonunun ilk öğesinin değerine erişim sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,44 +30,44 @@ object.Value
 
 |Terim|Tanım|  
 |---|---|  
-|`object`|Gerekli. Collection of <xref:System.Xml.Linq.XElement> objects.|  
+|`object`|Gerekli. <xref:System.Xml.Linq.XElement> nesneleri koleksiyonu.|  
 
 ## <a name="return-value"></a>Dönüş Değeri
 
- A `String` that contains the value of the first element of the collection, or `Nothing` if the collection is empty.
+ Koleksiyonun ilk öğesinin değerini içeren `String` veya koleksiyon boşsa `Nothing`.
 
 ## <a name="remarks"></a>Açıklamalar
 
- The <xref:System.Xml.Linq.XElement.Value%2A> property makes it easy to access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> objects. This property first checks whether the collection contains at least one object. If the collection is empty, this property returns `Nothing`. Otherwise, this property returns the value of the <xref:System.Xml.Linq.XElement.Value%2A> property of the first element in the collection.
+ <xref:System.Xml.Linq.XElement.Value%2A> özelliği, bir <xref:System.Xml.Linq.XElement> nesneleri koleksiyonundaki ilk öğenin değerine erişmeyi kolaylaştırır. Bu özellik önce koleksiyonun en az bir nesne içerip içermediğini denetler. Koleksiyon boşsa, bu özellik `Nothing`döndürür. Aksi takdirde, bu özellik koleksiyondaki ilk öğenin <xref:System.Xml.Linq.XElement.Value%2A> özelliğinin değerini döndürür.
 
 > [!NOTE]
-> When you access the value of an XML attribute using the '\@' identifier, the attribute value is returned as a `String` and you do not need to explicitly specify the <xref:System.Xml.Linq.XAttribute.Value%2A> property.
+> '\@' tanımlayıcısını kullanarak bir XML özniteliğinin değerine eriştiğinizde, öznitelik değeri bir `String` olarak döndürülür ve <xref:System.Xml.Linq.XAttribute.Value%2A> özelliğini açıkça belirtmeniz gerekmez.
 
- To access other elements in a collection, you can use the XML extension indexer property. For more information, see [Extension Indexer Property](extension-indexer-property.md).
+ Bir koleksiyondaki diğer öğelere erişmek için XML uzantısı Indexer özelliğini kullanabilirsiniz. Daha fazla bilgi için bkz. [uzantı Dizin Oluşturucu özelliği](extension-indexer-property.md).
 
 ## <a name="inheritance"></a>Devralma
 
- Most users will not have to implement <xref:System.Collections.Generic.IEnumerable%601>, and can therefore ignore this section.
+ Çoğu Kullanıcı <xref:System.Collections.Generic.IEnumerable%601>uygulamak zorunda olmaz ve bu nedenle bu bölümü yoksayabilirsiniz.
 
- The <xref:System.Xml.Linq.XElement.Value%2A> property is an extension property for types that implement `IEnumerable(Of XElement)`. The binding of this extension property is like the binding of extension methods: if a type implements one of the interfaces and defines a property that has the name "Value", that property has precedence over the extension property. In other words, this <xref:System.Xml.Linq.XElement.Value%2A> property can be overridden by defining a new property in a class that implements `IEnumerable(Of XElement)`.
+ <xref:System.Xml.Linq.XElement.Value%2A> özelliği, `IEnumerable(Of XElement)`uygulayan türler için bir uzantı özelliğidir. Bu uzantı özelliğinin bağlaması uzantı yöntemlerinin bağlaması gibidir: bir tür arabirimlerden birini uygular ve "Value" adlı bir özellik tanımlıyorsa, bu özellik uzantı özelliğine göre önceliğe sahiptir. Diğer bir deyişle, bu <xref:System.Xml.Linq.XElement.Value%2A> özelliği, `IEnumerable(Of XElement)`uygulayan bir sınıfta yeni bir özellik tanımlayarak geçersiz kılınabilir.
 
 ## <a name="example"></a>Örnek
 
- The following example shows how to use the <xref:System.Xml.Linq.XElement.Value%2A> property to access the first node in a collection of <xref:System.Xml.Linq.XElement> objects. The example uses the child axis property to get the collection of all child nodes named `phone` that are in the `contact` object.
+ Aşağıdaki örnek, <xref:System.Xml.Linq.XElement.Value%2A> özelliğinin bir <xref:System.Xml.Linq.XElement> nesneleri koleksiyonundaki ilk düğüme erişmek için nasıl kullanılacağını gösterir. Örnek, `contact` nesnesindeki `phone` adlı tüm alt düğümlerin koleksiyonunu almak için alt eksen özelliğini kullanır.
 
  [!code-vb[VbXMLSamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#15)]
 
- This code displays the following text:
+ Bu kod aşağıdaki metni görüntüler:
 
  `Phone number: 206-555-0144`
 
 ## <a name="example"></a>Örnek
 
- The following example shows how to get the value of an XML attribute from a collection of <xref:System.Xml.Linq.XAttribute> objects. The example uses the attribute axis property to display the value of the `type` attribute for all of the `phone` elements.
+ Aşağıdaki örnek, bir <xref:System.Xml.Linq.XAttribute> nesneleri koleksiyonundan bir XML özniteliği değerinin nasıl alınacağını gösterir. Örnek, tüm `phone` öğeleri için `type` özniteliğinin değerini göstermek için öznitelik ekseni özelliğini kullanır.
 
  [!code-vb[VbXMLSamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#16)]
 
- This code displays the following text:
+ Bu kod aşağıdaki metni görüntüler:
 
  ```console
  home
@@ -80,7 +80,7 @@ object.Value
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [XML Eksen Özellikleri](index.md)
 - [XML Değişmez Değerleri](../xml-literals/index.md)
-- [Creating XML in Visual Basic](../../programming-guide/language-features/xml/creating-xml.md)
+- [Visual Basic XML oluşturma](../../programming-guide/language-features/xml/creating-xml.md)
 - [Genişletme Yöntemleri](../../programming-guide/language-features/procedures/extension-methods.md)
 - [Extension Indexer Özelliği](extension-indexer-property.md)
 - [XML Alt Axis Özelliği](xml-child-axis-property.md)

@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351147"
 ---
 # <a name="implements-statement"></a>Implements Deyimi
-Specifies one or more interfaces, or interface members, that must be implemented in the class or structure definition in which it appears.  
+Görüntülenen sınıf veya yapı tanımında uygulanması gereken bir veya daha fazla arabirimi veya arabirim üyesini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,34 +29,34 @@ Implements interfacename.interfacemember [, ...]
   
 ## <a name="parts"></a>Bölümler  
  `interfacename`  
- Gerekli. An interface whose properties, procedures, and events are to be implemented by corresponding members in the class or structure.  
+ Gerekli. Özellikleri, yordamları ve olayları sınıf veya yapıda ilgili Üyeler tarafından uygulanacak olan bir arabirim.  
   
  `interfacemember`  
- Gerekli. The member of an interface that is being implemented.  
+ Gerekli. Uygulanan bir arabirimin üyesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- An interface is a collection of prototypes representing the members (properties, procedures, and events) the interface encapsulates. Interfaces contain only the declarations for members; classes and structures implement these members. For more information, see [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ Arabirim, arabirimin sarmalarındaki üyeleri (özellikler, yordamlar ve olaylar) temsil eden prototipli türlerin bir koleksiyonudur. Arabirimler yalnızca üyeler için bildirimleri içerir; sınıflar ve yapılar bu üyeleri uygular. Daha fazla bilgi için bkz. [arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- The `Implements` statement must immediately follow the `Class` or `Structure` statement.  
+ `Implements` deyimin `Class` veya `Structure` deyimden hemen önce izlemesi gerekir.  
   
- When you implement an interface, you must implement all the members declared in the interface. Omitting any member is considered to be a syntax error. To implement an individual member, you specify the [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) keyword (which is separate from the `Implements` statement) when you declare the member in the class or structure. For more information, see [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ Bir arabirim uyguladığınızda, arabiriminde belirtilen tüm üyeleri uygulamanız gerekir. Herhangi bir üyenin atlanması, söz dizimi hatası olarak kabul edilir. Tek bir üyeyi uygulamak için, sınıf veya yapıda üyeyi bildirdiğinizde [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) anahtar sözcüğünü (`Implements` deyimden ayrı) belirtirsiniz. Daha fazla bilgi için bkz. [arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- Classes can use [Private](../../../visual-basic/language-reference/modifiers/private.md) implementations of properties and procedures, but these members are accessible only by casting an instance of the implementing class into a variable declared to be of the type of the interface.  
+ Sınıflar, özelliklerin ve yordamların [özel](../../../visual-basic/language-reference/modifiers/private.md) uygulamalarını kullanabilir, ancak bu üyelere yalnızca uygulama sınıfının bir örneğini arabirimin türü olarak belirtilen bir değişkene atama yoluyla erişilebilir.  
   
 ## <a name="example"></a>Örnek  
- The following example shows how to use the `Implements` statement to implement members of an interface. It defines an interface named `ICustomerInfo` with an event, a property, and a procedure. The class `customerInfo` implements all the members defined in the interface.  
+ Aşağıdaki örnek, bir arabirimin üyelerini uygulamak için `Implements` deyimin nasıl kullanılacağını gösterir. Bir olay, özellik ve yordamla birlikte `ICustomerInfo` adlı bir arabirimi tanımlar. Sınıf `customerInfo`, arabirimde tanımlanan tüm üyeleri uygular.  
   
  [!code-vb[VbVbalrStatements#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#33)]  
   
- Note that the class `customerInfo` uses the `Implements` statement on a separate source code line to indicate that the class implements all the members of the `ICustomerInfo` interface. Then each member in the class uses the `Implements` keyword as part of its member declaration to indicate that it implements that interface member.  
+ Sınıfının `customerInfo`, sınıfın `ICustomerInfo` arabiriminin tüm üyelerini uyguladığını göstermek için `Implements` ifadesini ayrı bir kaynak kodu satırında kullandığını unutmayın. Sonra, sınıftaki her üye, bu arabirim üyesini uyguladığını göstermek için üye bildiriminin bir parçası olarak `Implements` anahtar sözcüğünü kullanır.  
   
 ## <a name="example"></a>Örnek  
- The following two procedures show how you could use the interface implemented in the preceding example. To test the implementation, add these procedures to your project and call the `testImplements` procedure.  
+ Aşağıdaki iki yordamda, önceki örnekte uygulanan arabirimi nasıl kullanabileceğiniz gösterilmektedir. Uygulamayı test etmek için bu yordamları projenize ekleyin ve `testImplements` yordamını çağırın.  
   
  [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)
+- [Uygular](../../../visual-basic/language-reference/statements/implements-clause.md)
 - [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

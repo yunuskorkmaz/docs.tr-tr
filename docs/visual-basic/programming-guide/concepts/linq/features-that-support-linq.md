@@ -1,5 +1,5 @@
 ---
-title: Features That Support LINQ
+title: LINQ 'i destekleyen özellikler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, LINQ features
@@ -13,90 +13,90 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353510"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>LINQ'i Destekleyen Visual Basic Özellikleri
-The name [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] refers to technology in Visual Basic that supports query syntax and other language constructs directly in the language. With [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], you do not have to learn a new language to query against an external data source. You can query against data in relational databases, XML stores, or objects by using Visual Basic. This integration of query capabilities into the language enables compile-time checking for syntax errors and type safety. This integration also ensures that you already know most of what you have to know to write rich, varied queries in Visual Basic.  
+Ad [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)], sorgu söz dizimini ve diğer dil yapılarını doğrudan dilde destekleyen Visual Basic teknolojiden başvurur. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], bir dış veri kaynağında sorgulama yapmak için yeni bir dil öğrenmek zorunda değilsiniz. Visual Basic kullanarak ilişkisel veritabanlarındaki, XML mağazalarındaki veya nesnelerdeki verilere göre sorgulama yapabilirsiniz. Bu dile sorgu yeteneklerini tümleştirme, sözdizimi hataları ve tür güvenliği için derleme zamanı denetimini sunar. Bu tümleştirme Ayrıca, Visual Basic içinde zengin, değişen sorgular yazmak için bilmeniz gerekenleri zaten öğrenmenizi de sağlar.  
   
- The following sections describe the language constructs that support LINQ in enough detail to enable you to get started in reading the introductory documentation, code examples, and sample applications. You can also click the links to find more detailed explanations of how the language features come together to enable language-integrated query. A good place to start is [Walkthrough: Writing Queries in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
+ Aşağıdaki bölümlerde, giriş belgelerini, kod örneklerini ve örnek uygulamaları okumaya başlamanıza olanak tanımak için LINQ 'i destekleyen dil yapıları açıklanır. Ayrıca, dil özelliklerinin, dil ile tümleşik sorguyu etkinleştirmek için nasıl bir araya geldiği hakkında daha ayrıntılı açıklamalar bulmak için bağlantılara tıklayabilirsiniz. Başlamak için iyi bir yer [Izlenecek yol: Visual Basic sorguları yazma](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
 ## <a name="query-expressions"></a>Sorgu İfadeleri  
- Query expressions in Visual Basic can be expressed in a declarative syntax similar to that of SQL or XQuery. At compile time, query syntax is converted into method calls to a LINQ provider's implementation of the standard query operator extension methods. Applications control which standard query operators are in scope by specifying the appropriate namespace with an `Imports` statement. Syntax for a Visual Basic query expression looks like this:  
+ Visual Basic sorgu ifadeleri SQL veya XQuery ile benzer bir bildirime dayalı sözdiziminde ifade edilebilir. Derleme zamanında sorgu sözdizimi, bir LINQ sağlayıcısının standart sorgu işleci genişletme yöntemlerinin uygulamasına yönelik yöntem çağrılarına dönüştürülür. Uygulamalar, bir `Imports` ifadesiyle uygun ad alanını belirterek hangi standart sorgu işleçlerinin kapsamda olduğunu denetler. Visual Basic sorgu ifadesinin sözdizimi şuna benzer:  
   
  [!code-vb[VbLINQVbFeatures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#1)]  
   
- For more information, see [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
+ Daha fazla bilgi için bkz. [VISUAL BASIC LINQ 'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
-## <a name="implicitly-typed-variables"></a>Implicitly Typed Variables  
- Instead of explicitly specifying a type when you declare and initialize a variable, you can enable the compiler to infer and assign the type. This is referred to as *local type inference*.  
+## <a name="implicitly-typed-variables"></a>Örtük olarak yazılan değişkenler  
+ Bir değişkeni bildirdiğinizde ve başlattığınızda açıkça bir tür belirtmek yerine, derleyicinin türü çıkarması ve atamasını sağlayabilirsiniz. Bu, *Yerel tür çıkarımı*olarak adlandırılır.  
   
- Variables whose types are inferred are strongly typed, just like variables whose type you specify explicitly. Local type inference works only when you are defining a local variable inside a method body. For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+ Türleri çıkarılan değişkenler, türü açıkça belirttiğiniz değişkenler gibi kesin şekilde türdedir. Yerel tür çıkarımı yalnızca bir yöntem gövdesi içinde yerel bir değişken tanımladığınızda kullanılır. Daha fazla bilgi için bkz. [Option Infer deyimleri](../../../../visual-basic/language-reference/statements/option-infer-statement.md) ve [Yerel tür çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
- The following example illustrates local type inference. To use this example, you must set `Option Infer` to `On`.  
+ Aşağıdaki örnekte yerel tür çıkarımı gösterilmektedir. Bu örneği kullanmak için `Option Infer` `On`ayarlamanız gerekir.  
   
  [!code-vb[VbLINQVbFeatures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#2)]  
   
- Local type inference also makes it possible to create anonymous types, which are described later in this section and are necessary for LINQ queries.  
+ Yerel tür çıkarımı Ayrıca, bu bölümün ilerleyen kısımlarında açıklanan ve LINQ sorguları için gerekli olan anonim türler oluşturmayı da mümkün kılar.  
   
- In the following LINQ example, type inference occurs if `Option Infer` is either `On` or `Off`. A compile-time error occurs if `Option Infer` is `Off` and `Option Strict` is `On`.  
+ Aşağıdaki LINQ örneğinde, `Option Infer` `On` veya `Off`olduğunda tür çıkarımı oluşur. `Option Infer` `Off` ve `Option Strict` `On`olduğunda bir derleme zamanı hatası oluşur.  
   
  [!code-vb[VbLINQVbFeatures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#3)]  
   
-## <a name="object-initializers"></a>Object Initializers  
- Object initializers are used in query expressions when you have to create an anonymous type to hold the results of a query. They also can be used to initialize objects of named types outside of queries. By using an object initializer, you can initialize an object in a single line without explicitly calling a constructor. Assuming that you have a class named `Customer` that has public `Name` and `Phone` properties, along with other properties, an object initializer can be used in this manner:  
+## <a name="object-initializers"></a>Nesne başlatıcıları  
+ Nesne başlatıcıları, bir sorgunun sonuçlarını tutmak için anonim bir tür oluşturmanız gerektiğinde sorgu ifadelerinde kullanılır. Bunlar ayrıca, adlandırılmış türdeki nesneleri sorgular dışında başlatmak için de kullanılabilir. Bir nesne Başlatıcısı kullanarak, bir oluşturucuyu açıkça çağırmadan tek bir satırdaki nesneyi başlatabilirsiniz. Ortak `Name` ve `Phone` özelliklerine sahip `Customer` adlı bir sınıfınız olduğunu varsayarak, diğer özelliklerle birlikte, bir nesne Başlatıcısı bu şekilde kullanılabilir:  
   
  [!code-vb[VbLINQVbFeatures#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#4)]  
   
- For more information, see [Object Initializers: Named and Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+ Daha fazla bilgi için bkz. [nesne başlatıcıları: adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="anonymous-types"></a>Anonim Türler  
- Anonymous types provide a convenient way to temporarily group a set of properties into an element that you want to include in a query result. This enables you to choose any combination of available fields in the query, in any order, without defining a named data type for the element.  
+ Anonim türler, bir dizi özelliği bir sorgu sonucuna eklemek istediğiniz bir öğeye geçici olarak gruplandırmak için kullanışlı bir yol sağlar. Bu, sorguda bulunan kullanılabilir alanların herhangi bir birleşimini, öğe için adlandırılmış bir veri türü tanımlamadan herhangi bir sırada seçmenizi sağlar.  
   
- An *anonymous type* is constructed dynamically by the compiler. The name of the type is assigned by the compiler, and it might change with each new compilation. Therefore, the name cannot be used directly. Anonymous types are initialized in the following way:  
+ *Anonim bir tür* , derleyici tarafından dinamik olarak oluşturulur. Türün adı derleyici tarafından atanır ve her yeni derleme ile değişebilir. Bu nedenle, ad doğrudan kullanılamaz. Anonim türler aşağıdaki şekilde başlatılır:  
   
  [!code-vb[VbLINQVbFeatures#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#5)]  
   
- For more information, see [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+ Daha fazla bilgi için bkz. [anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
 ## <a name="extension-methods"></a>Genişletme Yöntemleri  
- Extension methods enable you to add methods to a data type or interface from outside the definition. This feature enables you to, in effect, add new methods to an existing type without actually modifying the type. The standard query operators are themselves a set of extension methods that provide [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query functionality for any type that implements <xref:System.Collections.Generic.IEnumerable%601>. Other extensions to <xref:System.Collections.Generic.IEnumerable%601> include <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Intersect%2A>.  
+ Uzantı yöntemleri, tanım dışından bir veri türüne veya arabirime Yöntemler eklemenizi sağlar. Bu özellik, aslında türü değiştirmeden mevcut bir türe yeni yöntemler eklemenizi sağlar. Standart sorgu işleçleri, <xref:System.Collections.Generic.IEnumerable%601>uygulayan herhangi bir tür için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu işlevselliği sağlayan bir genişletme yöntemleri kümesidir. <xref:System.Collections.Generic.IEnumerable%601> diğer uzantılar <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>ve <xref:System.Linq.Enumerable.Intersect%2A>içerir.  
   
- The following extension method adds a print method to the <xref:System.String> class.  
+ Aşağıdaki genişletme yöntemi <xref:System.String> sınıfına bir Print yöntemi ekler.  
   
  [!code-vb[VbLINQVbFeatures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#6)]  
   
- The method is called like an ordinary instance method of <xref:System.String>:  
+ Yöntemi, <xref:System.String>sıradan bir örnek yöntemi gibi çağrılır:  
   
  [!code-vb[VbLINQVbFeatures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#7)]  
   
- For more information, see [Extension Methods](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
+ Daha fazla bilgi için bkz. [Uzantı yöntemleri](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
   
 ## <a name="lambda-expressions"></a>Lambda İfadeleri  
- A lambda expression is a function without a name that calculates and returns a single value. Unlike named functions, a lambda expression can be defined and executed at the same time. The following example displays 4.  
+ Lambda ifadesi tek bir değer hesaplayan ve döndüren adı olmayan bir işlevdir. Adlandırılmış işlevlerin aksine, bir lambda ifadesi aynı anda tanımlanabilir ve çalıştırılabilir. Aşağıdaki örnek 4 ' ü görüntüler.  
   
  [!code-vb[VbLINQVbFeatures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#8)]  
   
- You can assign the lambda expression definition to a variable name and then use the name to call the function. The following example also displays 4.  
+ Lambda ifadesi tanımını bir değişken adına atayabilir ve sonra işlevi çağırmak için adı kullanabilirsiniz. Aşağıdaki örnek ayrıca 4 görüntüler.  
   
  [!code-vb[VbLINQVbFeatures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#12)]  
   
- In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], lambda expressions underlie many of the standard query operators. The compiler creates lambda expressions to capture the calculations that are defined in fundamental query methods such as `Where`, `Select`, `Order By`, `Take While`, and others.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], lambda ifadeleri standart sorgu işleçlerinin birçoğunu daha az bir şekilde ifade ediyor. Derleyici, `Where`, `Select`, `Order By`, `Take While`ve diğerleri gibi temel sorgu yöntemlerinde tanımlanmış hesaplamaları yakalamak için lambda ifadeleri oluşturur.  
   
- For example, the following code defines a query that returns all senior students from a list of students.  
+ Örneğin, aşağıdaki kod, öğrenciler listesinden tüm kıdemli öğrenciler döndüren bir sorgu tanımlar.  
   
  [!code-vb[VbLINQVbFeatures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#9)]  
   
- The query definition is compiled into code that is similar to the following example, which uses two lambda expressions to specify the arguments for `Where` and `Select`.  
+ Sorgu tanımı, `Where` ve `Select`bağımsız değişkenlerini belirtmek için iki lambda ifadesi kullanan aşağıdaki örneğe benzer kodla derlenir.  
   
  [!code-vb[VbLINQVbFeatures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#10)]  
   
- Either version can be run by using a `For Each` loop:  
+ Her iki sürüm de bir `For Each` döngüsü kullanılarak çalıştırılabilir:  
   
  [!code-vb[VbLINQVbFeatures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#11)]  
   
- For more information, see [Lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Daha fazla bilgi için bkz. [lambda ifadeleri](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
-- [Getting Started with LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Visual Basic LINQ ile çalışmaya başlama](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [Option Infer Deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
 - [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

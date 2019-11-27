@@ -13,43 +13,43 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353208"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Birlikte Çalışma'ya Giriş (Visual Basic)
-The Component Object Model (COM) lets an object expose its functionality to other components and to host applications. While COM objects have been fundamental to Windows programming for many years, applications designed for the common language runtime (CLR) offer many advantages.  
+Bileşen nesne modeli (COM), bir nesnenin işlevselliğini diğer bileşenlere sunma ve uygulamaları barındırmasına imkan tanır. COM nesneleri birçok yıl için Windows programlamasında temel alınırken, ortak dil çalışma zamanı (CLR) için tasarlanan uygulamalar birçok avantaj sunar.  
   
- .NET Framework applications will eventually replace those developed with COM. Until then, you may have to use or create COM objects by using Visual Studio. Interoperability with COM, or *COM interop*, enables you to use existing COM objects while transitioning to the .NET Framework at your own pace.  
+ .NET Framework uygulamalar, son olarak COM ile geliştirilen bu bunların yerini alır. Böylece, Visual Studio 'Yu kullanarak COM nesneleri kullanmanız veya oluşturmanız gerekebilir. COM veya *com*birlikte çalışabilirliğiyle birlikte çalışabilirlik, mevcut com nesnelerini kendi hızınızda .NET Framework geçiş yaparken kullanmanıza olanak sağlar.  
   
- By using the .NET Framework to create COM components, you can use registration-free COM interop. This lets you control which DLL version is enabled when more than one version is installed on a computer, and lets end users use XCOPY or FTP to copy your application to an appropriate directory on their computer where it can be run. For more information, see [Registration-Free COM Interop](../../../framework/interop/registration-free-com-interop.md).  
+ COM bileşenleri oluşturmak için .NET Framework kullanarak kayıtsız COM birlikte çalışma kullanabilirsiniz. Bu, bir bilgisayara birden fazla sürüm yüklendiğinde hangi DLL sürümünün etkinleştirildiğini denetlemenize olanak tanır ve son kullanıcıların, bir bilgisayar üzerinde çalıştırılabileceği uygun bir dizine kopyalamak için XCOPY veya FTP kullanmasına izin verir. Daha fazla bilgi için bkz. [KAYıTSıZ com birlikte çalışma](../../../framework/interop/registration-free-com-interop.md).  
   
-## <a name="managed-code-and-data"></a>Managed Code and Data  
- Code developed for the .NET Framework is referred to as *managed code*, and contains metadata that is used by the CLR. Data used by .NET Framework applications is called *managed data* because the runtime manages data-related tasks such as allocating and reclaiming memory and performing type checking. By default, Visual Basic .NET uses managed code and data, but you can access the unmanaged code and data of COM objects using interop assemblies (described later on this page).  
+## <a name="managed-code-and-data"></a>Yönetilen kod ve veriler  
+ .NET Framework için geliştirilen kod, *yönetilen kod*olarak ADLANDıRıLıR ve CLR tarafından kullanılan meta verileri içerir. .NET Framework uygulamalar tarafından kullanılan verilere *yönetilen veriler* denir çünkü çalışma zamanı, bellek ayırma ve geri kazanma ve tür denetimi gerçekleştirme gibi verilerle ilgili görevleri yönetir. Varsayılan olarak, Visual Basic .NET yönetilen kod ve verileri kullanır, ancak birlikte çalışma derlemelerini (Bu sayfada daha sonra açıklanan) kullanarak COM nesnelerinin yönetilmeyen koduna ve verilerine erişebilirsiniz.  
   
-## <a name="assemblies"></a>Bütünleştirilmiş kodlar  
- An assembly is the primary building block of a .NET Framework application. It is a collection of functionality that is built, versioned, and deployed as a single implementation unit containing one or more files. Each assembly contains an assembly manifest.  
+## <a name="assemblies"></a>Derlemeler  
+ Derleme, bir .NET Framework uygulamasının birincil yapı taşıdır. Oluşturulan, sürümlü ve bir veya daha fazla dosya içeren tek bir uygulama birimi olarak dağıtılan işlevlerin bir koleksiyonudur. Her derleme bir derleme bildirimi içerir.  
   
-## <a name="type-libraries-and-assembly-manifests"></a>Type Libraries and Assembly Manifests  
- Type libraries describe characteristics of COM objects, such as member names and data types. Assembly manifests perform the same function for .NET Framework applications. They include information about the following:  
+## <a name="type-libraries-and-assembly-manifests"></a>Tür kitaplıkları ve derleme bildirimleri  
+ Tür kitaplıkları, üye adları ve veri türleri gibi COM nesnelerinin özelliklerini tanımlıyor. Derleme bildirimleri .NET Framework uygulamalar için aynı işlevi gerçekleştirir. Bunlar aşağıdakiler hakkında bilgiler içerir:  
   
-- Assembly identity, version, culture, and digital signature.  
+- Bütünleştirilmiş kod kimliği, sürüm, kültür ve dijital imza.  
   
-- Files that make up the assembly implementation.  
+- Derleme uygulamasını oluşturan dosyalar.  
   
-- Types and resources that make up the assembly. This includes those that are exported from it.  
+- Derlemeyi oluşturan türler ve kaynaklar. Bu, içinden aktarılmış olanları içerir.  
   
-- Compile-time dependencies on other assemblies.  
+- Diğer derlemelerde derleme zamanı bağımlılıkları.  
   
-- Permissions required for the assembly to run correctly.  
+- Derlemenin doğru çalışması için gereken izinler.  
   
- For more information about assemblies and assembly manifests, see [Assemblies in .NET](../../../standard/assembly/index.md).  
+ Derlemeler ve derleme bildirimleri hakkında daha fazla bilgi için bkz. [.net 'Teki derlemeler](../../../standard/assembly/index.md).  
   
-### <a name="importing-and-exporting-type-libraries"></a>Importing and Exporting Type Libraries  
- Visual Studio contains a utility, Tlbimp, that lets you import information from a type library into a .NET Framework application. You can generate type libraries from assemblies by using the Tlbexp utility.  
+### <a name="importing-and-exporting-type-libraries"></a>Tür kitaplıklarını içeri ve dışarı aktarma  
+ Visual Studio, bir tür kitaplığından .NET Framework uygulamasına bilgi aktarmanıza olanak tanıyan bir yardımcı program olan Tlbimp içerir. Tlbexp yardımcı programını kullanarak derlemelerden tür kitaplıkları oluşturabilirsiniz.  
   
- For information about Tlbimp and Tlbexp, see [Tlbimp.exe (Type Library Importer)](../../../framework/tools/tlbimp-exe-type-library-importer.md) and [Tlbexp.exe (Type Library Exporter)](../../../framework/tools/tlbexp-exe-type-library-exporter.md).  
+ Tlbimp ve Tlbexp hakkında daha fazla bilgi için bkz. [Tlbimp. exe (tür kitaplığı Içeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md) ve [Tlbexp. exe (tür kitaplığı verme programı)](../../../framework/tools/tlbexp-exe-type-library-exporter.md).  
   
-## <a name="interop-assemblies"></a>Interop Assemblies  
- Interop assemblies are .NET Framework assemblies that bridge between managed and unmanaged code, mapping COM object members to equivalent .NET Framework managed members. Interop assemblies created by Visual Basic .NET handle many of the details of working with COM objects, such as interoperability marshaling.  
+## <a name="interop-assemblies"></a>Birlikte çalışma derlemeleri  
+ Birlikte çalışma derlemeleri yönetilen ve yönetilmeyen kod arasında köprü oluşturan .NET Framework, COM nesne üyelerini eşit .NET Framework yönetilen üyelere eşliyorlar. Visual Basic .NET tarafından oluşturulan birlikte çalışma derlemeleri, birlikte çalışabilirlik sıralaması gibi COM nesneleriyle çalışma hakkında pek çok ayrıntıyı idare edin.  
   
-## <a name="interoperability-marshaling"></a>Interoperability Marshaling  
- All .NET Framework applications share a set of common types that enable interoperability of objects, regardless of the programming language that is used. The parameters and return values of COM objects sometimes use data types that differ from those used in managed code. *Interoperability marshaling* is the process of packaging parameters and return values into equivalent data types as they move to and from COM objects. For more information, see [Interop Marshaling](../../../framework/interop/interop-marshaling.md).  
+## <a name="interoperability-marshaling"></a>Birlikte çalışabilirlik sıralaması  
+ Tüm .NET Framework uygulamalar, kullanılan programlama dilinden bağımsız olarak, nesnelerin birlikte çalışabilirliğini etkinleştiren ortak türler kümesini paylaşır. COM nesnelerinin parametreleri ve dönüş değerleri bazen yönetilen kodda kullanılanlardan farklı veri türlerini kullanır. *Birlikte çalışabilirlik sıralaması* , com nesnelerinden ve bunlara geçiş yaparken parametreleri paketleme ve eşdeğer veri türlerine döndürme işlemidir. Daha fazla bilgi için bkz. [birlikte çalışma hazırlama](../../../framework/interop/interop-marshaling.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

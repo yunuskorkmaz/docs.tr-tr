@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351704"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
-Causes the compiler to treat the first occurrence of a warning as an error.  
+Derleyicinin bir uyarının ilk oluşumunu hata olarak ele almasına neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -22,40 +22,40 @@ Causes the compiler to treat the first occurrence of a warning as an error.
 -warnaserror[+ | -][:numberList]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
   
 |Terim|Tanım|  
 |---|---|  
-|+ &#124; -|İsteğe bağlı. By default, `-warnaserror-` is in effect; warnings do not prevent the compiler from producing an output file. The `-warnaserror` option, which is the same as `-warnaserror+`, causes warnings to be treated as errors.|  
-|`numberList`|İsteğe bağlı. Comma-delimited list of the warning ID numbers to which the `-warnaserror` option applies. If no warning ID is specified, the `-warnaserror` option applies to all warnings.|  
+|+ &#124; -|İsteğe bağlı. Varsayılan olarak `-warnaserror-` etkindir; Uyarılar derleyicinin bir çıkış dosyası üretmasını engellemez. `-warnaserror+`ile aynı olan `-warnaserror` seçeneği, uyarıların hata olarak işlenmesine neden olur.|  
+|`numberList`|İsteğe bağlı. `-warnaserror` seçeneğinin uygulandığı uyarı KIMLIĞI numaralarının virgülle ayrılmış listesi. Hiçbir uyarı KIMLIĞI belirtilmemişse, `-warnaserror` seçeneği tüm uyarılar için geçerlidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `-warnaserror` option treats all warnings as errors. Any messages that would ordinarily be reported as warnings are instead reported as errors. The compiler reports subsequent occurrences of the same warning as warnings.  
+ `-warnaserror` seçeneği tüm uyarıları hata olarak değerlendirir. Normalde uyarı olarak bildirilen tüm iletiler, bunun yerine hata olarak bildirilir. Derleyici aynı uyarının sonraki tekrarlamalarını uyarılarla bildirir.  
   
- By default, `-warnaserror-` is in effect, which causes the warnings to be informational only. The `-warnaserror` option, which is the same as `-warnaserror+`, causes warnings to be treated as errors.  
+ Varsayılan olarak, `-warnaserror-` etkindir ve bu, uyarıların yalnızca bilgilendirici olmasına neden olur. `-warnaserror+`ile aynı olan `-warnaserror` seçeneği, uyarıların hata olarak işlenmesine neden olur.  
   
- If you want only a few specific warnings to be treated as errors, you may specify a comma-separated list of warning numbers to treat as errors.  
+ Yalnızca birkaç özel uyarının hata olarak değerlendirilmesini istiyorsanız, hata olarak değerlendirilecek uyarı numaralarının virgülle ayrılmış bir listesini belirtebilirsiniz.  
   
 > [!NOTE]
-> The `-warnaserror` option does not control how warnings are displayed. Use the [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) option to disable warnings.  
+> `-warnaserror` seçeneği, uyarıların nasıl görüntülendiğini denetlemez. Uyarıları devre dışı bırakmak için [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) seçeneğini kullanın.  
   
-|To set -warnaserror to treat all warnings as errors in the Visual Studio IDE|  
+|Visual Studio IDE 'de tüm uyarıları hata olarak değerlendirmek için-warnaserror öğesini ayarlamak için|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. On the **Project** menu, click **Properties**. <br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Check the **Treat all warnings as errors** check box.|  
+|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Derle** sekmesine tıklayın.<br />3. **tüm uyarıları devre dışı bırak** onay kutusunun işaretinin kaldırıldığından emin olun.<br />4. **tüm uyarıları hata olarak işle** onay kutusunu işaretleyin.|  
   
-|To set -warnaserror to treat specific warnings as errors in the Visual Studio IDE|  
+|Visual Studio IDE 'de belirli uyarıları hata olarak değerlendirmek için-warnaserror 'yi ayarlamak için|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. On the **Project** menu, click **Properties**.<br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Make sure the **Treat all warnings as errors** check box is unchecked.<br />5.  Select **Error** from the **Notification** column adjacent to the warning that should be treated as an error.|  
+|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın.<br />2. **Derle** sekmesine tıklayın.<br />3. **tüm uyarıları devre dışı bırak** onay kutusunun işaretinin kaldırıldığından emin olun.<br />4. **tüm uyarıları hata olarak işle** onay kutusunun işaretinin kaldırıldığından emin olun.<br />5. hata olarak değerlendirilmesi gereken uyarıya bitişik **bildirim** sütunundan **hata** seçin.|  
   
 ## <a name="example"></a>Örnek  
- The following code compiles `In.vb` and directs the compiler to display an error for the first occurrence of every warning it finds.  
+ Aşağıdaki kod `In.vb` derler ve derleyicinin bulduğu her uyarının ilk oluşumu için bir hata görüntüleyecek şekilde yönlendirir.  
   
 ```console
 vbc -warnaserror in.vb  
 ```  
   
 ## <a name="example"></a>Örnek  
- The following code compiles `T2.vb` and treats only the warning for unused local variables (42024) as an error.  
+ Aşağıdaki kod `T2.vb` derler ve yalnızca kullanılmayan yerel değişkenler (42024) için uyarıyı hata olarak değerlendirir.  
   
 ```console
 vbc -warnaserror:42024 t2.vb  
@@ -63,6 +63,6 @@ vbc -warnaserror:42024 t2.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Visual Basic'teki Uyarıları Yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic)

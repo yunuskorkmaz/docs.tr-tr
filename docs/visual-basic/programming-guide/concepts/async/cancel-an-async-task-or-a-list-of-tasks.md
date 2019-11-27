@@ -9,46 +9,46 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347963"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Cancel an Async Task or a List of Tasks (Visual Basic)
+# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Zaman uyumsuz bir görevi veya görev listesini iptal etme (Visual Basic)
 
-You can set up a button that you can use to cancel an async application if you don't want to wait for it to finish. By following the examples in this topic, you can add a cancellation button to an application that downloads the contents of one website or a list of websites.
+Bir zaman uyumsuz uygulamayı, bitmesini beklemek istemiyorsanız iptal etmek için kullanabileceğiniz bir düğme ayarlayabilirsiniz. Bu konudaki örnekleri izleyerek, bir Web sitesinin veya Web sitesi listesinin içeriğini yükleyen bir uygulamaya iptal düğmesi ekleyebilirsiniz.
 
-The examples use the UI that [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) describes.
+Örnekler, [zaman uyumsuz uygulamanızı (Visual Basic) ayrıntılı olarak ayarlamaya](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) yönelik kullanıcı arabirimini kullanır.
 
 > [!NOTE]
-> To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.
+> Örnekleri çalıştırmak için, bilgisayarınızda Visual Studio 2012 veya daha yeni bir sürümü ve .NET Framework 4,5 ya da daha yeni bir sürümü yüklü olmalıdır.
 
-## <a name="BKMK_CancelaTask"></a> Cancel a Task
+## <a name="BKMK_CancelaTask"></a>Bir görevi iptal etme
 
-The first example associates the **Cancel** button with a single download task. If you choose the button while the application is downloading content, the download is canceled.
+İlk örnek, **iptal** düğmesini tek bir indirme göreviyle ilişkilendirir. Uygulama içerik indirirken düğmeyi seçerseniz, indirme iptal edilir.
 
-### <a name="downloading-the-example"></a>Downloading the Example
+### <a name="downloading-the-example"></a>Örnek indiriliyor
 
-You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.
+Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten indirebilirsiniz: uygulamanızı Ince ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) yapın ve ardından aşağıdaki adımları izleyin.
 
-1. Decompress the file that you downloaded, and then start Visual Studio.
+1. İndirdiğiniz dosyayı sıkıştırmasını açın ve ardından Visual Studio 'Yu başlatın.
 
-2. On the menu bar, choose **File**, **Open**, **Project/Solution**.
+2. Menü çubuğunda **Dosya**, **Aç**, **Proje/çözüm**' ü seçin.
 
-3. In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.
+3. **Proje Aç** iletişim kutusunda, açtığınız örnek kodu tutan klasörü açın ve ardından AsyncFineTuningVB için çözüm (. sln) dosyasını açın.
 
-4. In **Solution Explorer**, open the shortcut menu for the **CancelATask** project, and then choose **Set as StartUp Project**.
+4. **Çözüm Gezgini**' de,,,, Iptal eden **görev** projesi için kısayol menüsünü açın ve ardından **Başlangıç projesi olarak ayarla**' yı seçin.
 
-5. Choose the F5 key to run the project.
+5. Projeyi çalıştırmak için F5 tuşunu seçin.
 
-     Choose the Ctrl+F5 keys to run the project without debugging it.
+     Projeyi hata ayıklamadan çalıştırmak için CTRL + F5 tuşlarını seçin.
 
- If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.
+ Projeyi indirmek istemiyorsanız, bu konunun sonundaki MainWindow. xaml. vb dosyalarını gözden geçirebilirsiniz.
 
-### <a name="building-the-example"></a>Building the Example
+### <a name="building-the-example"></a>Örnek oluşturma
 
-The following changes add a **Cancel** button to an application that downloads a website. If you don't want to download or build the example, you can review the final product in the "Complete Examples" section at the end of this topic. Asterisks mark the changes in the code.
+Aşağıdaki değişiklikler bir Web sitesini indiren uygulamaya bir **iptal** düğmesi ekler. Örneği indirmek veya derlemek istemiyorsanız, bu konunun sonundaki "tüm örnekler" bölümünde son ürünü gözden geçirebilirsiniz. Yıldız işaretleri koddaki değişiklikleri işaretler.
 
-To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **StarterCode** as the **StartUp Project** instead of **CancelATask**.
+Örneği kendiniz oluşturmak için, "örneği Indirme" bölümündeki yönergeleri izleyin, ancak **Başlangıç projesi** olarak, **1. aşama yerine** **startercode** ' u seçin.
 
-Then add the following changes to the MainWindow.xaml.vb file of that project.
+Ardından, bu projenin MainWindow. xaml. vb dosyasına aşağıdaki değişiklikleri ekleyin.
 
-1. Declare a `CancellationTokenSource` variable, `cts`, that’s in scope for all methods that access it.
+1. Kendisine erişen tüm yöntemler için kapsam içinde olan bir `CancellationTokenSource` değişken `cts`bildirin.
 
     ```vb
     Class MainWindow
@@ -57,7 +57,7 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
         Dim cts As CancellationTokenSource
     ```
 
-2. Add the following event handler for the **Cancel** button. The event handler uses the <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> method to notify `cts` when the user requests cancellation.
+2. **İptal** düğmesi için aşağıdaki olay işleyicisini ekleyin. Olay işleyicisi, Kullanıcı iptali istediğinde `cts` bilgilendirmek için <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> yöntemini kullanır.
 
     ```vb
     ' ***Add an event handler for the Cancel button.
@@ -69,16 +69,16 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
     End Sub
     ```
 
-3. Make the following changes in the event handler for the **Start** button, `startButton_Click`.
+3. **Başlat** düğmesi için olay işleyicisinde aşağıdaki değişiklikleri yapın `startButton_Click`.
 
-    - Instantiate the `CancellationTokenSource`, `cts`.
+    - `CancellationTokenSource``cts`örneğini oluşturun.
 
       ```vb
       ' ***Instantiate the CancellationTokenSource.
       cts = New CancellationTokenSource()
       ```
 
-    - In the call to `AccessTheWebAsync`, which downloads the contents of a specified website, send the <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> property of `cts` as an argument. The `Token` property propagates the message if cancellation is requested. Add a catch block that displays a message if the user chooses to cancel the download operation. The following code shows the changes.
+    - Belirtilen bir Web sitesinin içeriğini indiren `AccessTheWebAsync`çağrısında, `cts` <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> özelliğini bağımsız değişken olarak gönderin. `Token` özelliği, iptal isteniyorsa iletiyi yayar. Kullanıcı indirme işlemini iptal etmeyi seçerse bir ileti görüntüleyen bir catch bloğu ekleyin. Aşağıdaki kod değişiklikleri gösterir.
 
       ```vb
       Try
@@ -97,9 +97,9 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
       End Try
       ```
 
-4. In `AccessTheWebAsync`, use the  <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> overload of the `GetAsync` method in the <xref:System.Net.Http.HttpClient> type to download the contents of a website. Pass `ct`, the <xref:System.Threading.CancellationToken> parameter of `AccessTheWebAsync`, as the second argument. The token carries the message if the user chooses the **Cancel** button.
+4. `AccessTheWebAsync`, bir Web sitesinin içeriğini indirmek için <xref:System.Net.Http.HttpClient> türünde `GetAsync` yönteminin <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> aşırı yüklemesini kullanın. İkinci bağımsız değişken olarak `AccessTheWebAsync`<xref:System.Threading.CancellationToken> parametresini `ct`geçirin. Kullanıcı **iptal** düğmesini seçerse, belirteç iletiyi taşır.
 
-    The following code shows the changes in `AccessTheWebAsync`.
+    Aşağıdaki kod `AccessTheWebAsync`değişiklikleri gösterir.
 
     ```vb
     ' ***Provide a parameter for the CancellationToken.
@@ -124,47 +124,47 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
     End Function
     ```
 
-5. If you don’t cancel the program, it produces the following output:
+5. Programı iptal ederseniz aşağıdaki çıktıyı üretir:
 
     ```console
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-    If you choose the **Cancel** button before the program finishes downloading the content, the program produces the following output:
+    Program içeriği indirmeyi bitirmeden **iptal** düğmesini seçerseniz, program aşağıdaki çıktıyı üretir:
 
     ```console
     Ready to download.
     Download canceled.
     ```
 
-## <a name="BKMK_CancelaListofTasks"></a> Cancel a List of Tasks
+## <a name="BKMK_CancelaListofTasks"></a>Görev listesini iptal etme
 
-You can extend the previous example to cancel many tasks by associating the same `CancellationTokenSource` instance with each task. If you choose the **Cancel** button, you cancel all tasks that aren’t yet complete.
+Aynı `CancellationTokenSource` örneğini her görevle ilişkilendirerek, daha fazla görevi iptal etmek için önceki örneği genişletebilirsiniz. **İptal** düğmesini seçerseniz, henüz tamamlanmamış tüm görevleri iptal edersiniz.
 
-### <a name="downloading-the-example"></a>Downloading the Example
+### <a name="downloading-the-example"></a>Örnek indiriliyor
 
-You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.
+Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten indirebilirsiniz: uygulamanızı Ince ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) yapın ve ardından aşağıdaki adımları izleyin.
 
-1. Decompress the file that you downloaded, and then start Visual Studio.
+1. İndirdiğiniz dosyayı sıkıştırmasını açın ve ardından Visual Studio 'Yu başlatın.
 
-2. On the menu bar, choose **File**, **Open**, **Project/Solution**.
+2. Menü çubuğunda **Dosya**, **Aç**, **Proje/çözüm**' ü seçin.
 
-3. In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.
+3. **Proje Aç** iletişim kutusunda, açtığınız örnek kodu tutan klasörü açın ve ardından AsyncFineTuningVB için çözüm (. sln) dosyasını açın.
 
-4. In **Solution Explorer**, open the shortcut menu for the **CancelAListOfTasks** project, and then choose **Set as StartUp Project**.
+4. **Çözüm Gezgini**' de,,,,,,,, iptal eden bir **Proje projesi için** kısayol menüsünü açın ve **Başlangıç projesi olarak ayarla**' yı seçin.
 
-5. Choose the F5 key to run the project.
+5. Projeyi çalıştırmak için F5 tuşunu seçin.
 
-     Choose the Ctrl+F5 keys to run the project without debugging it.
+     Projeyi hata ayıklamadan çalıştırmak için CTRL + F5 tuşlarını seçin.
 
- If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.
+ Projeyi indirmek istemiyorsanız, bu konunun sonundaki MainWindow. xaml. vb dosyalarını gözden geçirebilirsiniz.
 
-### <a name="building-the-example"></a>Building the Example
+### <a name="building-the-example"></a>Örnek oluşturma
 
-To extend the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelATask** as the **StartUp Project**. Add the following changes to that project. Asterisks mark the changes in the program.
+Örneği kendiniz genişletmek için, "örneği Indirme" bölümündeki yönergeleri izleyin, ancak **Başlangıç projesi** **olarak iptal** eden ' i seçin. Aşağıdaki değişiklikleri bu projeye ekleyin. Yıldız işaretleri programdaki değişiklikleri işaretler.
 
-1. Add a method to create a list of web addresses.
+1. Web adreslerinin bir listesini oluşturmak için bir yöntem ekleyin.
 
     ```vb
     ' ***Add a method that creates a list of web addresses.
@@ -184,14 +184,14 @@ To extend the example yourself, step by step, follow the instructions in the "Do
     End Function
     ```
 
-2. Call the method in `AccessTheWebAsync`.
+2. `AccessTheWebAsync`yöntemi çağırın.
 
     ```vb
     ' ***Call SetUpURLList to make a list of web addresses.
     Dim urlList As List(Of String) = SetUpURLList()
     ```
 
-3. Add the following loop in `AccessTheWebAsync` to process each web address in the list.
+3. Listedeki her bir Web adresini işlemek için aşağıdaki döngüyü `AccessTheWebAsync` ekleyin.
 
     ```vb
     ' ***Add a loop to process the list of web addresses.
@@ -209,19 +209,19 @@ To extend the example yourself, step by step, follow the instructions in the "Do
     Next
     ```
 
-4. Because `AccessTheWebAsync` displays the lengths, the method doesn't need to return anything. Remove the return statement, and change the return type of the method to <xref:System.Threading.Tasks.Task> instead of <xref:System.Threading.Tasks.Task%601>.
+4. `AccessTheWebAsync` uzunlukları gösterdiği için yöntemin herhangi bir şey döndürmesi gerekmez. Return ifadesini kaldırın ve yöntemin dönüş türünü <xref:System.Threading.Tasks.Task%601>yerine <xref:System.Threading.Tasks.Task> olarak değiştirin.
 
     ```vb
     Async Function AccessTheWebAsync(ct As CancellationToken) As Task
     ```
 
-    Call the method from `startButton_Click` by using a statement instead of an expression.
+    Bir ifadesi yerine deyimi kullanarak `startButton_Click` yöntemi çağırın.
 
     ```vb
     Await AccessTheWebAsync(cts.Token)
     ```
 
-5. If you don’t cancel the program, it produces the following output:
+5. Programı iptal ederseniz aşağıdaki çıktıyı üretir:
 
     ```console
     Length of the downloaded string: 35939.
@@ -241,7 +241,7 @@ To extend the example yourself, step by step, follow the instructions in the "Do
     Downloads complete.
     ```
 
-    If you choose the **Cancel** button before the downloads are complete, the output contains the lengths of the downloads that completed before the cancellation.
+    İndirmeler tamamlanmadan önce **iptal** düğmesini seçerseniz, çıkış, iptalden önce tamamlanan indirmelerin uzunluklarını içerir.
 
     ```console
     Length of the downloaded string: 35939.
@@ -253,15 +253,15 @@ To extend the example yourself, step by step, follow the instructions in the "Do
     Downloads canceled.
     ```
 
-## <a name="BKMK_CompleteExamples"></a> Complete Examples
+## <a name="BKMK_CompleteExamples"></a>Tüm örnekler
 
-The following sections contain the code for each of the previous examples. Notice that you must add a reference for <xref:System.Net.Http>.
+Aşağıdaki bölümler, önceki örneklerin her birine ilişkin kodu içerir. <xref:System.Net.Http>için bir başvuru eklemeniz gerektiğini unutmayın.
 
-You can download the projects from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
+Projeleri [zaman uyumsuz örnekten indirebilirsiniz: uygulamanızı hassas bir şekilde ayarlama](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
-### <a name="cancel-a-task-example"></a>Cancel a Task Example
+### <a name="cancel-a-task-example"></a>Bir görev örneğini iptal etme
 
-The following code is the complete MainWindow.xaml.vb file for the example that cancels a single task.
+Aşağıdaki kod, tek bir görevi iptal eden örnek için tüm MainWindow. xaml. vb dosyasıdır.
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -344,9 +344,9 @@ End Class
 ' Download canceled.
 ```
 
-### <a name="cancel-a-list-of-tasks-example"></a>Cancel a List of Tasks Example
+### <a name="cancel-a-list-of-tasks-example"></a>Görev listesini iptal etme örneği
 
-The following code is the complete MainWindow.xaml.vb file for the example that cancels a list of tasks.
+Aşağıdaki kod, bir görev listesini iptal eden örnek için tüm MainWindow. xaml. vb dosyasıdır.
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -467,6 +467,6 @@ End Class
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async ve await ile zaman uyumsuz programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Zaman uyumsuz uygulamanızda ince ayar yapma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Zaman uyumsuz örnek: uygulamanıza Ince ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

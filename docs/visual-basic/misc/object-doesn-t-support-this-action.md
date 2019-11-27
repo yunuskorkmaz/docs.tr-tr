@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support this action
+title: Nesne bu eylemi desteklemiyor
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID445
@@ -11,14 +11,14 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353876"
 ---
-# <a name="object-doesnt-support-this-action-visual-basic"></a>Object doesn't support this action (Visual Basic)
-You referenced a method or property that is not supported by this object.  
+# <a name="object-doesnt-support-this-action-visual-basic"></a>Nesne bu eylemi desteklemiyor (Visual Basic)
+Bu nesne tarafından desteklenmeyen bir yönteme veya özelliğe başvurmuş olabilirsiniz.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Read the object's documentation for more information on the object.  
+1. Nesne hakkında daha fazla bilgi için nesnenin belgelerini okuyun.  
   
-2. Ensure that the names of properties and methods are spelled correctly.  
+2. Özelliklerin ve yöntemlerin adlarının doğru yazıldığından emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

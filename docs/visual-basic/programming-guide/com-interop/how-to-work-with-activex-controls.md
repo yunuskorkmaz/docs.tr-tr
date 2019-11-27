@@ -13,22 +13,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353221"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>Nasıl yapılır: ActiveX Denetimleriyle Çalışma (Visual Basic)
-ActiveX controls are COM components or objects you can insert into a Web page or other application to reuse packaged functionality someone else has programmed. You can use ActiveX controls developed for Visual Basic 6.0 and earlier versions to add features to the **Toolbox** of Visual Studio.  
+ActiveX denetimleri, başka birinin programlandığı paketlenmiş işlevselliği yeniden kullanmak üzere bir Web sayfasına veya başka bir uygulamaya ekleyebileceğiniz COM bileşenleri veya nesneleri olabilir. Visual Basic 6,0 ve önceki sürümlerde geliştirilen ActiveX denetimlerini kullanarak Visual Studio 'nun **araç kutusuna** özellikler ekleyebilirsiniz.  
   
-### <a name="to-add-activex-controls-to-the-toolbox"></a>To add ActiveX controls to the toolbox  
+### <a name="to-add-activex-controls-to-the-toolbox"></a>Araç kutusuna ActiveX denetimleri eklemek için  
   
-1. On the **Tools** menu, click **Choose Toolbox Items**.  
+1. **Araçlar** menüsünde **araç kutusu öğelerini Seç**' e tıklayın.  
   
-     The **Choose Toolbox** dialog box appears.  
+     **Araç kutusu Seç** iletişim kutusu görünür.  
   
-2. Click the **COM Components** tab.  
+2. **Com bileşenleri** sekmesine tıklayın.  
   
-3. Select the check box next to the ActiveX control you want to use, and then click **OK**.  
+3. Kullanmak istediğiniz ActiveX denetiminin yanındaki onay kutusunu işaretleyin ve ardından **Tamam**' a tıklayın.  
   
-     The new control appears with the other tools in the **Toolbox**.  
+     Yeni denetim, **araç kutusundaki**diğer araçlarla görüntülenir.  
   
     > [!NOTE]
-    > You can use the Aximp utility to manually create an interop assembly for ActiveX controls. For more information, see [Aximp.exe (Windows Forms ActiveX Control Importer)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
+    > ActiveX denetimleri için birlikte çalışma derlemesini el ile oluşturmak üzere Aximp yardımcı programını kullanabilirsiniz. Daha fazla bilgi için bkz. [Aximp. exe (Windows Forms ActiveX denetim Içeri Aktarıcı)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

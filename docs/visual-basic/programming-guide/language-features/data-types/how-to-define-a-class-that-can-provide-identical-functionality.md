@@ -34,52 +34,52 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350050"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Nasıl yapılır: Farklı Veri Türlerinde Aynı İşlevselliği Sağlayabilen Bir Sınıf Tanımlama (Visual Basic)
-You can define a class from which you can create objects that provide identical functionality on different data types. To do this, you specify one or more *type parameters* in the definition. The class can then serve as a template for objects that use various data types. A class defined in this way is called a *generic class*.  
+Farklı veri türleri üzerinde özdeş işlevsellik sağlayan nesneler oluşturabileceğiniz bir sınıf tanımlayabilirsiniz. Bunu yapmak için tanımda bir veya daha fazla *tür parametresi* belirtirsiniz. Sınıf daha sonra çeşitli veri türlerini kullanan nesneler için bir şablon işlevi görebilir. Bu şekilde tanımlanan bir sınıfa *Genel sınıf*denir.  
   
- The advantage of defining a generic class is that you define it just once, and your code can use it to create many objects that use a wide variety of data types. This results in better performance than defining the class with the `Object` type.  
+ Genel bir sınıf tanımlamanın avantajı bunu yalnızca bir kez tanımlamanız, kodunuzun çok çeşitli veri türlerini kullanan birçok nesne oluşturmak için bunu kullanmasını sağlayabilirsiniz. Bu, `Object` türü ile sınıfının tanımlanmasıyla daha iyi performansa neden olur.  
   
- In addition to classes, you can also define and use generic structures, interfaces, procedures, and delegates.  
+ Sınıfların yanı sıra genel yapıları, arabirimleri, yordamları ve temsilcileri de tanımlayabilir ve kullanabilirsiniz.  
   
-### <a name="to-define-a-class-with-a-type-parameter"></a>To define a class with a type parameter  
+### <a name="to-define-a-class-with-a-type-parameter"></a>Bir tür parametresiyle bir sınıf tanımlamak için  
   
-1. Define the class in the normal way.  
+1. Sınıfı normal şekilde tanımlayın.  
   
-2. Add `(Of` *typeparameter*`)` immediately after the class name to specify a type parameter.  
+2. Bir tür parametresi belirtmek için sınıf adından hemen sonra `(Of` *typeparameter*`)` ekleyin.  
   
-3. If you have more than one type parameter, make a comma-separated list inside the parentheses. Do not repeat the `Of` keyword.  
+3. Birden fazla tür parametreye sahipseniz, parantez içinde virgülle ayrılmış bir liste oluşturun. `Of` anahtar sözcüğünü tekrarlamayın.  
   
-4. If your code performs operations on a type parameter other than simple assignment, follow that type parameter with an `As` clause to add one or more *constraints*. A constraint guarantees that the type supplied for that type parameter satisfies a requirement such as the following:  
+4. Kodunuz basit atama haricinde bir tür parametresinde işlemler gerçekleştiriyorsa, bir veya daha fazla *kısıtlama*eklemek için bu tür parametresini bir `As` yan tümcesiyle izleyin. Bir kısıtlama, bu tür parametresi için sağlanan türün aşağıdakiler gibi bir gereksinime uygun olmasını sağlar:  
   
-    - Supports an operation, such as `>`, that your code performs  
+    - Kodunuzun gerçekleştirdiği `>`gibi bir işlemi destekler  
   
-    - Supports a member, such as a method, that your code accesses  
+    - , Kodunuzun eriştiği, yöntemi gibi bir üyeyi destekler  
   
-    - Exposes a parameterless constructor  
+    - Parametresiz bir Oluşturucu sunar  
   
-     If you do not specify any constraints, the only operations and members your code can use are those supported by the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). For more information, see [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
+     Herhangi bir kısıtlama belirtmezseniz, kodunuzun kullanabileceği tek işlemler ve Üyeler [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)tarafından desteklenenler olabilir. Daha fazla bilgi için bkz. [tür listesi](../../../../visual-basic/language-reference/statements/type-list.md).  
   
-5. Identify every class member that is to be declared with a supplied type, and declare it `As` `typeparameter`. This applies to internal storage, procedure parameters, and return values.  
+5. Sağlanan bir türle bildirildiği her sınıf üyesini tanımlayın ve `typeparameter``As` bildirin. Bu iç depolama, yordam parametreleri ve dönüş değerleri için geçerlidir.  
   
-6. Be sure your code uses only operations and methods that are supported by any data type it can supply to `itemType`.  
+6. Kodunuzun yalnızca `itemType`sağlayabileceğinizden herhangi bir veri türü tarafından desteklenen işlemler ve Yöntemler kullandığından emin olun.  
   
-     The following example defines a class that manages a very simple list. It holds the list in the internal array `items`, and the using code can declare the data type of the list elements. A parameterized constructor allows the using code to set the upper bound of `items`, and the parameterless constructor sets this to 9 (for a total of 10 items).  
+     Aşağıdaki örnek, çok basit bir listeyi yöneten bir sınıfı tanımlar. Bu, listenin iç dizi `items`barındırır ve using kodu, liste öğelerinin veri türünü bildirebilirler. Parametreli bir Oluşturucu, kodun `items`üst sınırı ayarlamasına olanak tanır ve parametresiz Oluşturucu bunu 9 (Toplam 10 öğe için) olarak ayarlar.  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
-     You can declare a class from `simpleList` to hold a list of `Integer` values, another class to hold a list of `String` values, and another to hold `Date` values. Except for the data type of the list members, objects created from all these classes behave identically.  
+     Bir `simpleList` `Integer` değerlerinin listesini, `String` değerlerinin listesini tutacak başka bir sınıfı ve `Date` değerleri tutmak için başka bir sınıf bildirebilirsiniz. Liste üyelerinin veri türü dışında, tüm bu sınıflardan oluşturulan nesneler aynı şekilde davranır.  
   
-     The type argument that the using code supplies to `itemType` can be an intrinsic type such as `Boolean` or `Double`, a structure, an enumeration, or any type of class, including one that your application defines.  
+     `itemType` kullanan tür bağımsız değişkeni `Boolean` veya `Double`, bir yapı, sabit listesi ya da uygulamanızın tanımladığı bir tür sınıf gibi bir iç tür olabilir.  
   
-     You can test the class `simpleList` with the following code.  
+     Sınıfı `simpleList` aşağıdaki kodla test edebilirsiniz.  
   
      [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](../../../../standard/language-independence-and-language-independent-components.md)
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [Durumunu](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [Tür Listesi](../../../../visual-basic/language-reference/statements/type-list.md)
 - [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)

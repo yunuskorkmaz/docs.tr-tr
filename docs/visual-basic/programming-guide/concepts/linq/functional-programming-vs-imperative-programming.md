@@ -1,5 +1,5 @@
 ---
-title: Functional Programming vs. Imperative Programming
+title: Fonksiyonel programlama ve kesinlik temelli programlama karşılaştırması
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
 ms.openlocfilehash: 704beadc29af0de606b8f246360dc6fffca8cfcc
@@ -9,49 +9,49 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353438"
 ---
-# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Functional Programming vs. Imperative Programming (Visual Basic)
-This topic compares and contrasts functional programming with more traditional imperative (procedural) programming.  
+# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Fonksiyonel programlama ile kesinlik temelli programlama (Visual Basic)
+Bu konu, daha geleneksel kesinlik (yordamsal) programlamaya yönelik fonksiyonel programlamayı karşılaştırır ve karşıtın.  
   
-## <a name="functional-programming-vs-imperative-programming"></a>Functional Programming vs. Imperative Programming  
- The *functional programming* paradigm was explicitly created to support a pure functional approach to problem solving. Functional programming is a form of *declarative programming*. In contrast, most mainstream languages, including object-oriented programming (OOP) languages such as C#, Visual Basic, C++, and Java, were designed to primarily support *imperative* (procedural) programming.  
+## <a name="functional-programming-vs-imperative-programming"></a>Fonksiyonel programlama ve kesinlik temelli programlama karşılaştırması  
+ *İşlevsel programlama* paradigması, sorun çözmeye yönelik saf işlevsel bir yaklaşımı desteklemek üzere açıkça oluşturulmuştur. Fonksiyonel programlama bir *bildirim temelli programlama*biçimidir. Buna karşılık, Visual Basic, C# C++ve Java gibi nesne odaklı programlama (OOP) dilleri de dahil olmak üzere çoğu temel dil, öncelikli olarak (yordamsal) programlama desteği sağlayacak şekilde tasarlanmıştır.  
   
- With an imperative approach, a developer writes code that describes in exacting detail the steps that the computer must take to accomplish the goal. This is sometimes referred to as *algorithmic* programming. In contrast, a functional approach involves composing the problem as a set of functions to be executed. You define carefully the input to each function, and what each function returns. The following table describes some of the general differences between these two approaches.  
+ Bir geliştirici, bir zorunlu yaklaşım ile, exacting detaylı olarak, bilgisayarın hedefi başarmak için gerçekleştirmesi gereken adımları yazarak bu kodu yazar. Bu, bazen *algoritmik* programlama olarak adlandırılır. Buna karşılık, işlevsel bir yaklaşım, sorunu yürütülecek bir işlevler kümesi olarak oluşturmayı içerir. Her işleve yönelik girişi dikkatle tanımlarsınız ve her bir işlevin ne getirir. Aşağıdaki tabloda, bu iki yaklaşım arasındaki genel farklılıklar açıklanmaktadır.  
   
-|Characteristic|Imperative approach|Functional approach|  
+|Özellik|Kesinlik temelli yaklaşım|İşlevsel yaklaşım|  
 |--------------------|-------------------------|-------------------------|  
-|Programmer focus|How to perform tasks (algorithms) and how to track changes in state.|What information is desired and what transformations are required.|  
-|Durum değişiklikleri|Important.|Non-existent.|  
-|Order of execution|Important.|Low importance.|  
-|Primary flow control|Loops, conditionals, and function (method) calls.|Function calls, including recursion.|  
-|Primary manipulation unit|Instances of structures or classes.|Functions as first-class objects and data collections.|  
+|Programcı odağı|Görevleri (algoritmalar) gerçekleştirme ve durumu değişiklikleri izleme.|Hangi bilgiler istenir ve hangi dönüşümler gereklidir?|  
+|Durum değişiklikleri|Önemli.|Mevcut değil.|  
+|Yürütme sırası|Önemli.|Düşük önem derecesi.|  
+|Birincil akış denetimi|Döngüler, conditionals ve function (Yöntem) çağrıları.|Özyineleme dahil işlev çağrıları.|  
+|Birincil işleme birimi|Yapıların veya sınıfların örnekleri.|Birinci sınıf nesneler ve veri koleksiyonları olarak işlevler.|  
   
- Although most languages were designed to support a specific programming paradigm, many general languages are flexible enough to support multiple paradigms. For example, most languages that contain function pointers can be used to credibly support functional programming. Furthermore, Visual Basic includes explicit language extensions to support functional programming, including lambda expressions and type inference. LINQ technology is a form of declarative, functional programming.  
+ Çoğu dil belirli bir programlama paradigmasını destekleyecek şekilde tasarlansa da birçok genel dil birden çok paradigmalarına desteklemek için yeterince esnektir. Örneğin, işlev işaretçileri içeren çoğu dil işlevsel programlamayı güvenilir bir şekilde desteklemek için kullanılabilir. Ayrıca, Visual Basic lambda ifadeleri ve tür çıkarımı dahil olmak üzere işlevsel programlamayı desteklemek için açık dil uzantıları içerir. LINQ teknolojisi, bildirime dayalı, işlevsel programlama biçimidir.  
   
-## <a name="functional-programming-using-xslt"></a>Functional Programming Using XSLT  
- Many XSLT developers are familiar with the pure functional approach. The most effective way to develop an XSLT style sheet is to treat each template as an isolated, composable transformation. The order of execution is completely de-emphasized. XSLT does not allow side effects (with the exception that escaping mechanisms for executing procedural code can introduce side effects that result in functional impurity). However, although XSLT is an effective tool, some of its characteristics are not optimal. For example, expressing programming constructs in XML makes code relatively verbose, and therefore difficult to maintain. Also, the heavy reliance on recursion for flow control can result in code that is hard to read. For more information about XSLT, see [XSLT Transformations](../../../../standard/data/xml/xslt-transformations.md).  
+## <a name="functional-programming-using-xslt"></a>XSLT kullanarak işlevsel programlama  
+ Birçok XSLT geliştiricisi, saf işlevsel yaklaşımla tanıdık gelecektir. XSLT stil sayfası geliştirmenin en etkili yolu, her bir şablonu yalıtılmış, birleştirilebilir bir dönüşüm olarak değerlendirmektir. Yürütmenin sırası tamamen vurgulandı. XSLT yan etkilere izin vermez (yordamsal kodu yürütmeye yönelik kaçış mekanizmalarının özel durumu, işlevsel bir sorun oluşmasına neden olan yan etkileri ortaya çıkarabilir). Ancak XSLT etkin bir araç olsa da, bazı özellikleri en uygun değildir. Örneğin, XML 'de programlama yapılarını ifade etmek, kod görece ayrıntılıdır ve bu nedenle devam etmek zordur. Ayrıca, akış denetimi için özyineleme açısından ağır güvenilme, okunması zor olan koda neden olabilir. XSLT hakkında daha fazla bilgi için bkz. [XSLT dönüştürmeleri](../../../../standard/data/xml/xslt-transformations.md).  
   
- However, XSLT has proved the value of using a pure functional approach for transforming XML from one shape to another. Pure functional programming with LINQ to XML is similar in many ways to XSLT. However, the programming constructs introduced by LINQ to XML and Visual Basic allow you to write pure functional transformations that are more readable and maintainable than XSLT.  
+ Ancak XSLT, XML 'yi bir şekilden diğerine dönüştürmek için saf işlevsel bir yaklaşım kullanma değerini uzamıştır. LINQ to XML ile saf işlevsel programlama, XSLT 'nin birçok yolu ile benzerdir. Ancak, LINQ to XML ve Visual Basic tarafından tanıtılan programlama yapıları, XSLT 'den daha okunaklı ve sürdürülebilir saf işlevsel dönüştürmeler yazmanızı sağlar.  
   
-## <a name="advantages-of-pure-functions"></a>Advantages of Pure Functions  
- The primary reason to implement functional transformations as pure functions is that pure functions are composable: that is, self-contained and stateless. These characteristics bring a number of benefits, including the following:  
+## <a name="advantages-of-pure-functions"></a>Saf Işlevlerin avantajları  
+ İşlev dönüştürmelerinin saf işlevler olarak uygulanması için asıl neden, saf işlevlerin birleştirilamasıdır: Yani, kendi içinde ve durumsuz. Bu özellikler, aşağıdakiler de dahil olmak üzere çeşitli avantajlar getirir:  
   
-- Increased readability and maintainability. This is because each function is designed to accomplish a specific task given its arguments. The function does not rely on any external state.  
+- Daha fazla okunabilirlik ve bakımma. Bunun nedeni, her işlevin bağımsız değişkenleri verilen belirli bir görevi gerçekleştirmek için tasarlanmalıdır. İşlev herhangi bir dış duruma bağlı değil.  
   
-- Easier reiterative development. Because the code is easier to refactor, changes to design are often easier to implement. For example, suppose you write a complicated transformation, and then realize that some code is repeated several times in the transformation. If you refactor through a pure method, you can call your pure method at will without worrying about side effects.  
+- Daha kolay yeniden yinelemeli geliştirme. Kodun yeniden düzenlenmesi daha kolay olduğundan, tasarımın değişikliklerinin uygulanması genellikle daha kolay olur. Örneğin, karmaşık bir dönüşüm yazdığınızı ve sonra bazı kodların dönüşümde birkaç kez tekrarlanmış olduğunu fark edelim. Saf bir yöntemde yeniden düzenleme yaparsanız, yan etkileri konusunda endişelenmenize gerek kalmadan saf yönteminizi ' de çağırabilirsiniz.  
   
-- Easier testing and debugging. Because pure functions can more easily be tested in isolation, you can write test code that calls the pure function with typical values, valid edge cases, and invalid edge cases.  
+- Daha kolay test ve hata ayıklama. Saf işlevlerin yalıtımda daha kolay test edileceği için, saf işlevi çağıran test kodunu tipik değerlerle, geçerli kenar çalışmalarından ve geçersiz kenar durumları ile yazabilirsiniz.  
   
-## <a name="transitioning-for-oop-developers"></a>Transitioning for OOP Developers  
- In traditional object-oriented programming (OOP), most developers are accustomed to programming in the imperative/procedural style. To switch to developing in a pure functional style, they have to make a transition in their thinking and their approach to development.  
+## <a name="transitioning-for-oop-developers"></a>OOP geliştiricileri için geçiş  
+ Geleneksel nesne odaklı programlamada (OOP), çoğu geliştirici, zorunlu/yordamsal stilde programlanması için tasarlanmıştır. Saf işlevsel stilde geliştirmeye geçiş yapmak için, düşünmelerde ve geliştirme yaklaşımında bir geçiş yapması gerekir.  
   
- To solve problems, OOP developers design class hierarchies, focus on proper encapsulation, and think in terms of class contracts. The behavior and state of object types are paramount, and language features, such as classes, interfaces, inheritance, and polymorphism, are provided to address these concerns.  
+ Sorunları gidermek için, OOP geliştiricileri sınıf hiyerarşilerini tasarlar, doğru kapsülleme üzerine odaklanmak ve sınıf sözleşmeleri açısından düşünün. Nesne türlerinin davranışı ve durumu Paramount ve sınıflar, arabirimler, devralma ve çok biçimlilik gibi dil özellikleri bu sorunları ele almak için sağlanır.  
   
- In contrast, functional programming approaches computational problems as an exercise in the evaluation of pure functional transformations of data collections. Functional programming avoids state and mutable data, and instead emphasizes the application of functions.  
+ Buna karşılık, fonksiyonel programlama, veri koleksiyonlarının saf işlevsel dönüştürmelerinin değerlendirmesinde bir alıştırma olarak sorun giderme konusunda yaklaşımlar. Fonksiyonel programlama durum ve değişebilir verileri önler ve bunun yerine işlevlerin uygulamasını vurgular.  
   
- Fortunately, Visual Basic doesn't require the full leap to functional programming, because it supports both imperative and functional programming approaches. A developer can choose which approach is most appropriate for a particular scenario. In fact, programs often combine both approaches.  
+ Neyse ki, hem zorunlu hem de işlevsel programlama yaklaşımlarını desteklediğinden Visual Basic işlevsel programlamaya tam olarak gerek yoktur. Geliştirici, belirli bir senaryo için en uygun yaklaşımı seçebilir. Aslında, programlar genellikle her iki yaklaşımı de birleştirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Saf Işlevsel dönüşümlere giriş (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [XSLT Dönüşümleri](../../../../standard/data/xml/xslt-transformations.md)
-- [Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Saf IŞLEVLERE yeniden düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

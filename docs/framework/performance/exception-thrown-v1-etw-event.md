@@ -15,30 +15,30 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447635"
 ---
 # <a name="exception-thrown_v1-etw-event"></a>Özel Durum Thrown_V1 ETW Olayı
-This event captures information about the exceptions that are thrown.  
+Bu olay, oluşturulan özel durumlarla ilgili bilgileri yakalar.  
   
- The following table shows the keyword under which the event is raised, and the level of the event. (For more information, see [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
+ Aşağıdaki tabloda, olayın oluşturulduğu anahtar sözcük ve olay düzeyi gösterilmektedir. (Daha fazla bilgi için bkz. [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md).)  
   
-|Keyword for raising the event|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ExceptionKeyword` (0x8000)|Warning (2)|  
+|`ExceptionKeyword` (0x8000)|Uyarı (2)|  
   
- The following table shows event information.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Raised when|  
+|Olay|Olay Kimliği|Ne zaman oluşturulur|  
 |-----------|--------------|-----------------|  
-|`ExceptionThrown_V1`|80|A managed exception is thrown.|  
+|`ExceptionThrown_V1`|80|Yönetilen bir özel durum oluşturulur.|  
   
- The following table shows event data.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Field name|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Exception Type|win:UnicodeString|Type of the exception; for example, `System.NullReferenceException`.|  
-|Exception Message|win:UnicodeString|Actual exception message.|  
-|EIPCodeThrow|win:Pointer|Instruction pointer where exception occurred.|  
-|ExceptionHR|win:UInt32|Exception [HRESULT](https://docs.microsoft.com/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a).|  
-|ExceptionFlags|win:UInt16|0x01: HasInnerException (see [CLR ETW Events](clr-etw-events.md) in the Visual Basic documentation).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (indicates that the process state is corrupt; see [Handling Corrupted State Exceptions](https://docs.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions)).<br /><br /> 0x10: IsCLSCompliant (an exception that derives from <xref:System.Exception> is CLS-compliant; otherwise, it is not CLS-compliant).|  
-|ClrInstanceID|win:UInt16|Unique ID for the instance of CLR or CoreCLR.|  
+|Özel Durum Türü|Win: UnicodeString|Özel durumun türü; Örneğin, `System.NullReferenceException`.|  
+|Özel durum Iletisi|Win: UnicodeString|Gerçek özel durum iletisi.|  
+|EIPCodeThrow|Win: Işaretçi|Özel durumun oluştuğu yönerge işaretçisi.|  
+|ExceptionHR|Win: UInt32|Özel durum [HRESULT](https://docs.microsoft.com/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a).|  
+|ExceptionFlags|Win: UInt16|0x01: HasInnerException (Visual Basic belgelerinde [CLR ETW olaylarını](clr-etw-events.md) görün).<br /><br /> 0x02: ısnestedexception.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: ıbozulan Tedstateexception (işlem durumunun bozuk olduğunu gösterir; bkz. [bozuk durum özel durumlarını işleme](https://docs.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions)).<br /><br /> 0x10: ısclscompliant (<xref:System.Exception> türetilen bir özel durum CLS uyumludur; Aksi takdirde, CLS uyumlu değildir).|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

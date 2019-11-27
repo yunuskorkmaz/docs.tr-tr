@@ -13,8 +13,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352382"
 ---
-# <a name="-out-visual-basic"></a>-out (Visual Basic)
-Specifies the name of the output file.  
+# <a name="-out-visual-basic"></a>-Out (Visual Basic)
+Çıktı dosyasının adını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -22,23 +22,23 @@ Specifies the name of the output file.
 -out:filename  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
   
 |Terim|Tanım|  
 |---|---|  
-|`filename`|Gerekli. The name of the output file the compiler creates. If the file name contains a space, enclose the name in quotation marks (" ").|  
+|`filename`|Gerekli. Derleyicinin oluşturduğu çıkış dosyasının adı. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Specify the full name and extension of the file to create. If you do not, the .exe file takes its name from the source-code file containing the `Sub Main` procedure, and the .dll file takes its name from the first source-code file.  
+ Oluşturulacak dosyanın tam adını ve uzantısını belirtin. Bunu yapmazsanız,. exe dosyası adını `Sub Main` yordamını içeren kaynak kodu dosyasından alır ve. dll dosyası adı ilk kaynak kodu dosyasından alır.  
   
- If you specify a file name without an .exe or .dll extension, the compiler automatically adds the extension for you, depending on the value specified for the `-target` compiler option.  
+ Bir. exe veya. dll uzantısı olmadan bir dosya adı belirtirseniz, derleyici, `-target` derleyici seçeneği için belirtilen değere bağlı olarak uzantıyı sizin için otomatik olarak ekler.  
   
-|To set -out in the Visual Studio integrated development environment|  
+|Visual Studio tümleşik geliştirme ortamında ayarlamak için|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. On the **Project** menu, click **Properties**. <br />2.  Click the **Application** tab.<br />3.  Modify the value in the **Assembly Name** box.|  
+|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **uygulama** sekmesine tıklayın.<br />3. **derleme adı** kutusundaki değeri değiştirin.|  
   
 ## <a name="example"></a>Örnek  
- The following code compiles `T2.vb` and creates output file `T2.exe`.  
+ Aşağıdaki kod `T2.vb` derler ve `T2.exe`çıktı dosyası oluşturur.  
   
 ```console
 vbc t2.vb -out:t3.exe  
@@ -46,6 +46,6 @@ vbc t2.vb -out:t3.exe
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

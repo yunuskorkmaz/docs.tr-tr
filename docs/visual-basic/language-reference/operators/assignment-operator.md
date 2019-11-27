@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350198"
 ---
 # <a name="-operator-visual-basic"></a>= İşleci (Visual Basic)
-Assigns a value to a variable or property.  
+Bir değişkene veya özelliğe bir değer atar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,22 +26,22 @@ variableorproperty = value
   
 ## <a name="parts"></a>Bölümler  
  `variableorproperty`  
- Any writable variable or any property.  
+ Herhangi bir yazılabilir değişken veya herhangi bir özellik.  
   
  `value`  
- Any literal, constant, or expression.  
+ Herhangi bir sabit değer, sabit veya ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The element on the left side of the equal sign (`=`) can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). The `=` operator assigns the value on its right to the variable or property on its left.  
+ Eşittir işaretinin (`=`) sol tarafındaki öğesi basit bir skaler değişken, bir özellik veya bir dizi öğesi olabilir. Değişken veya özellik [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)olamaz. `=` işleci, solundaki değeri, sol tarafındaki değişkene veya özelliğe atar.  
   
 > [!NOTE]
-> The `=` operator is also used as a comparison operator. For details, see [Comparison Operators](../../../visual-basic/language-reference/operators/comparison-operators.md).  
+> `=` işleci bir karşılaştırma işleci olarak da kullanılır. Ayrıntılar için bkz. [karşılaştırma işleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md).  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- The `=` operator can be overloaded only as a relational comparison operator, not as an assignment operator. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ `=` işleci, atama işleci olarak değil yalnızca ilişkisel karşılaştırma işleci olarak aşırı yüklenebilir. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- The following example demonstrates the assignment operator. The value on the right is assigned to the variable on the left.  
+ Aşağıdaki örnek, atama işlecini gösterir. Sağdaki değer soldaki değişkene atanır.  
   
  [!code-vb[VbVbalrOperators#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#9)]  
   
@@ -50,9 +50,9 @@ variableorproperty = value
 - [&= İşleci](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
 - [*= İşleci](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
 - [+= İşleci](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)
-- [-= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
-- [/= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
-- [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [-= İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [/= İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [\\= Işleci](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [^= İşleci](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
 - [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)
 - [Karşılaştırma İşleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)

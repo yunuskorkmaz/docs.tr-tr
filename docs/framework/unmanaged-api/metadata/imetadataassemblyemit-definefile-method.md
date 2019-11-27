@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440211"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile Yöntemi
-Creates a `File` metadata structure containing metadata for assembly referenced by this assembly, and returns the associated metadata token.  
+Bu derleme tarafından başvurulan derleme için meta verileri içeren bir `File` meta veri yapısı oluşturur ve ilişkili meta veri belirtecini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,31 +39,31 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- [in] The name of the file to be consumed.  
+ 'ndaki Tüketilecek dosyanın adı.  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the assembly.  
+ 'ndaki Derlemeyle ilişkili karma verileri işaretçisi.  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ 'ndaki `pbHashValue`bayt cinsinden boyutu.  
   
  `dwFileFlags`  
- [in] A bitwise combination of `FileFlags` values that specify property settings.  
+ 'ndaki Özellik ayarlarını belirten `FileFlags` değerlerinin bit düzeyinde birleşimi.  
   
  `pmdf`  
- [out] A pointer to the returned `File` token.  
+ dışı Döndürülen `File` belirtecine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.  
+ Bu derlemenin oluşturulduğu zaman, meta verileri içeren dosya hariç olmak üzere, bu derlemenin parçası olan her bir dosya için bir `File` meta veri yapısının tanımlanması gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

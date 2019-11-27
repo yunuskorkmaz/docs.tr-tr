@@ -9,9 +9,9 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350525"
 ---
-# <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>Using XSLT to Transform an XML Tree (Visual Basic)
+# <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>XML ağacını dönüştürmek için XSLT kullanma (Visual Basic)
 
-You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document. Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation. After the transformation successfully completes, the new XML tree is populated with the results of the transform.
+XML ağacı oluşturabilir, XML ağacından bir <xref:System.Xml.XmlReader> oluşturabilir, yeni bir belge oluşturabilir ve yeni belgeye yazılacak bir <xref:System.Xml.XmlWriter> oluşturabilirsiniz. Sonra XSLT dönüşümünü çağırabilirsiniz, <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> dönüştürmeye taşıyabilirsiniz. Dönüştürme başarıyla tamamlandıktan sonra, yeni XML ağacı dönüştürmenin sonuçlarıyla doldurulur.
 
 ## <a name="example"></a>Örnek
 
@@ -52,7 +52,7 @@ End Using
 Console.WriteLine(newTree)
 ```
 
-This example produces the following output:
+Bu örnek aşağıdaki çıktıyı üretir:
 
 ```xml
 <Root>
@@ -65,4 +65,4 @@ This example produces the following output:
 
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Gelişmiş LINQ to XML Programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

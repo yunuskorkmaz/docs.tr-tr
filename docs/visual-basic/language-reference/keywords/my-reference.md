@@ -13,20 +13,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351693"
 ---
 # <a name="my-reference-visual-basic"></a>Başvurum (Visual Basic)
-The `My` feature makes programming faster and easier by giving you intuitive access to commonly used methods, properties, and events. This table lists the objects contained in `My`, and the actions that can be performed with each.  
+`My` özelliği, yaygın olarak kullanılan yöntemlere, özelliklere ve olaylara sezgisel erişim vererek programlama işlemini daha hızlı ve kolay hale getirir. Bu tabloda `My`bulunan nesneler ve her biriyle gerçekleştirilebilecek eylemler listelenmektedir.  
   
-|**Action**|**Object**|  
+|**Ön**|**Nesne**|  
 |----------------|----------------|  
-|Accessing application information and services.|The `My.Application` object consists of the following classes:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> provides members that are available in all projects.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> provides members available in Windows Forms applications.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> provides members available in console applications.|  
-|Accessing the host computer and its resources, services, and data.|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|  
-|Accessing the forms in the current project.|[My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
-|Accessing the application log.|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|  
-|Accessing the current web request.|[My.Request Nesnesi](../../../visual-basic/language-reference/objects/my-request-object.md)|  
-|Accessing resource elements.|[My.Resources Nesnesi](../../../visual-basic/language-reference/objects/my-resources-object.md)|  
-|Accessing the current web response.|[My.Response Nesnesi](../../../visual-basic/language-reference/objects/my-response-object.md)|  
-|Accessing user and application level settings.|[My.Settings Nesnesi](../../../visual-basic/language-reference/objects/my-settings-object.md)|  
-|Accessing the current user's security context.|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|  
-|Accessing XML Web services referenced by the current project.|[My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
+|Uygulama bilgilerine ve hizmetlerine erişme.|`My.Application` nesnesi aşağıdaki sınıflardan oluşur:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> tüm projelerde kullanılabilen üyeleri sağlar.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>, Windows Forms uygulamalarda bulunan üyeleri sağlar.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>, konsol uygulamalarında kullanılabilir üyeleri sağlar.|  
+|Ana bilgisayara ve kaynaklarına, hizmetlerine ve verilerine erişme.|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|  
+|Geçerli projedeki formlara erişme.|[My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
+|Uygulama günlüğüne erişme.|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|  
+|Geçerli Web isteğine erişme.|[My.Request Nesnesi](../../../visual-basic/language-reference/objects/my-request-object.md)|  
+|Kaynak öğelerine erişme.|[My.Resources Nesnesi](../../../visual-basic/language-reference/objects/my-resources-object.md)|  
+|Geçerli Web yanıtına erişme.|[My.Response Nesnesi](../../../visual-basic/language-reference/objects/my-response-object.md)|  
+|Kullanıcı ve uygulama düzeyi ayarlarına erişme.|[My.Settings Nesnesi](../../../visual-basic/language-reference/objects/my-settings-object.md)|  
+|Geçerli kullanıcının güvenlik bağlamına erişme.|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|  
+|Geçerli proje tarafından başvurulan XML Web hizmetlerine erişme.|[My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

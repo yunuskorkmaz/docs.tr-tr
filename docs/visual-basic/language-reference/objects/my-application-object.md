@@ -12,23 +12,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350731"
 ---
 # <a name="myapplication-object"></a>My.Application Nesnesi
-Provides properties, methods, and events related to the current application.  
+Geçerli uygulamayla ilgili özellikler, Yöntemler ve olaylar sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- For information about the methods and properties of the `My.Application` object, see the following resources:  
+ `My.Application` nesnesinin yöntemleri ve özellikleri hakkında daha fazla bilgi için aşağıdaki kaynaklara bakın:  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> for members that are available in all projects.  
+- tüm projelerde kullanılabilen Üyeler için <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>.  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> for members that are available in Windows Forms applications.  
+- Windows Forms uygulamalarda kullanılabilen Üyeler için <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>.  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> for members that are available in console applications.  
+- Konsol uygulamalarında kullanılabilen Üyeler için <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** <xref:Microsoft.VisualBasic.ApplicationServices>  
+ **Ad alanı:** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (the base class <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> provides members available in console applications, and its base class <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> provides the members that are available in all projects)  
+ **Sınıf:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (temel sınıf <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>, konsol uygulamalarında kullanılabilir üyeleri sağlar ve temel sınıfı <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> tüm projelerde kullanılabilir olan üyeleri sağlar)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

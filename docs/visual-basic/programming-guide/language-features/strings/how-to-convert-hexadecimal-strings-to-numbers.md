@@ -17,22 +17,22 @@ ms.locfileid: "74347167"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Nasıl yapılır: Onaltılık Dizeleri Sayılara Dönüştürme (Visual Basic)
 
-This example converts a hexadecimal string to an integer using the <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> method.
+Bu örnek, <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> yöntemini kullanarak onaltılık dizeyi tamsayıya dönüştürür.
 
-## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>To convert a hexadecimal string to a number
+## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Bir onaltılık dizeyi sayıya dönüştürmek için
 
-- Use the <xref:System.Convert.ToInt32(System.String,System.Int32)> method to convert the number expressed in base-16 to an integer.
+- Base-16 ' da ifade edilen sayıyı bir tamsayıya dönüştürmek için <xref:System.Convert.ToInt32(System.String,System.Int32)> yöntemini kullanın.
 
-  The first argument of the <xref:System.Convert.ToInt32(System.String,System.Int32)> method is the string to convert. The second argument describes what base the number is expressed in; hexadecimal is base 16.
+  <xref:System.Convert.ToInt32(System.String,System.Int32)> yönteminin ilk bağımsız değişkeni dönüştürülecek dizedir. İkinci bağımsız değişken, sayının ifade edildiği temeli açıklar; onaltılı tabanı 16 ' dır.
 
   [!code-vb[VbVbalrStrings#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#62)]
 
-- Note that the hexadecimal string has the following restrictions:
+- Onaltılık dizenin aşağıdaki kısıtlamalara sahip olduğunu unutmayın:
 
-  - It cannot include the `&h` prefix.
-  - It cannot include the `_` digit separator.
+  - `&h` önekini içeremez.
+  - `_` basamak ayırıcısını içeremez.
 
-  If the prefix or a digit separator is present, the call to the <xref:System.Convert.ToInt32(System.String,System.Int32)> method throws a <xref:System.FormatException>.
+  Ön ek veya bir rakam ayırıcısı varsa, <xref:System.Convert.ToInt32(System.String,System.Int32)> metoduna yapılan çağrı bir <xref:System.FormatException>oluşturur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

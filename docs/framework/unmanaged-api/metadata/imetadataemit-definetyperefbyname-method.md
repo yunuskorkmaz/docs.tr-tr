@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434388"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName Yöntemi
-Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.  
+Geçerli kapsamın dışında belirtilen kapsamda tanımlı bir tür için meta veri belirteci alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,32 +37,32 @@ HRESULT DefineTypeRefByName (
   
 ## <a name="parameters"></a>Parametreler  
  `tkResolutionScope`  
- [in] The token specifying the resolution scope. The following token types are valid:  
+ 'ndaki Çözümleme kapsamını belirten belirteç. Aşağıdaki belirteç türleri geçerlidir:  
   
-- `mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.  
+- `mdModuleRef`, çağıran tarafından tanımlanan derlemede tanımlanırsa.  
   
-- `mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.  
+- `mdAssemblyRef`, tür arayanın tanımlandığı bir derlemede tanımlıysa.  
   
-- `mdTypeRef`, if the type is a nested type.  
+- tür iç içe bir tür ise `mdTypeRef`.  
   
-- `mdModule`, if the type is defined in the same module in which the caller is defined.  
+- `mdModule`, çağıran tarafından tanımlanan modül içinde tanımlanmışsa.  
   
-- Null, if the type is defined globally.  
+- Tür genel olarak tanımlanmışsa null.  
   
  `szName`  
- [in] The name of the target type in Unicode.  
+ 'ndaki Unicode 'daki hedef türünün adı.  
   
  `ptr`  
- [out] A pointer to the `mdTypeRef` token that is assigned to the type.  
+ dışı Türe atanan `mdTypeRef` belirtecine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

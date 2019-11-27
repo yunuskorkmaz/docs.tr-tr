@@ -9,51 +9,51 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352033"
 ---
-# <a name="linq-to-xml-axes-overview-visual-basic"></a>LINQ to XML Axes Overview (Visual Basic)
-After you have created an XML tree or loaded an XML document into an XML tree, you can query it to find elements and attributes and retrieve their values. You retrieve collections through the *axis methods*, also called *axes*. Some of the axes are methods in the <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XDocument> classes that return <xref:System.Collections.Generic.IEnumerable%601> collections. Some of the axes are extension methods in the <xref:System.Xml.Linq.Extensions> class. The axes that are implemented as extension methods operate on collections, and return collections.  
+# <a name="linq-to-xml-axes-overview-visual-basic"></a>LINQ to XML eksenlerine genel bakış (Visual Basic)
+Bir xml ağacını oluşturduktan veya bir XML ağacına bir XML belgesi yükledikten sonra, öğeleri ve öznitelikleri bulmak ve değerlerini almak için onu sorgulayabilirsiniz. Koleksiyonları, eksen olarak *da adlandırılan* *eksen yöntemleri*aracılığıyla alırsınız. Eksenlerden bazıları, <xref:System.Collections.Generic.IEnumerable%601> koleksiyonları döndüren <xref:System.Xml.Linq.XElement> ve <xref:System.Xml.Linq.XDocument> sınıflarında yöntemlerdir. Eksenlerden bazıları <xref:System.Xml.Linq.Extensions> sınıfında uzantı yöntemleridir. Uzantı yöntemleri olarak uygulanan eksenler koleksiyonlar üzerinde çalışır ve koleksiyonlar döndürülür.  
   
- As described in [XElement Class Overview](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md), an <xref:System.Xml.Linq.XElement> object represents a single element node. The content of an element can be complex (sometimes called structured content), or it can be a simple element. A simple element can be empty or can contain a value. If the node contains structured content, you can use the various axis methods to retrieve enumerations of descendant elements. The most commonly used axis methods are <xref:System.Xml.Linq.XContainer.Elements%2A> and <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
+ [XElement sınıfına genel bakış](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md)bölümünde açıklandığı gibi, bir <xref:System.Xml.Linq.XElement> nesnesi tek bir öğe düğümünü temsil eder. Bir öğenin içeriği karmaşık olabilir (bazen yapılandırılmış içerik olarak adlandırılır) veya basit bir öğe olabilir. Basit bir öğe boş olabilir veya bir değer içerebilir. Düğüm yapısal içerik içeriyorsa, alt öğelerin numaralandırmalar almak için çeşitli eksen yöntemlerini kullanabilirsiniz. En yaygın kullanılan eksen yöntemleri <xref:System.Xml.Linq.XContainer.Elements%2A> ve <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
- In addition to the axis methods, which return collections, there are two more methods that you will commonly use in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries. The <xref:System.Xml.Linq.XContainer.Element%2A> method returns a single <xref:System.Xml.Linq.XElement>. The <xref:System.Xml.Linq.XElement.Attribute%2A> method returns a single <xref:System.Xml.Linq.XAttribute>.  
+ Koleksiyonları döndüren eksen yöntemlerine ek olarak, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgularda yaygın olarak kullanabileceğiniz iki yöntem vardır. <xref:System.Xml.Linq.XContainer.Element%2A> yöntemi tek bir <xref:System.Xml.Linq.XElement>döndürür. <xref:System.Xml.Linq.XElement.Attribute%2A> yöntemi tek bir <xref:System.Xml.Linq.XAttribute>döndürür.  
   
- For many purposes, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries provide the most powerful way to examine a tree, extract data from it, and transform it. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries operate on objects that implement <xref:System.Collections.Generic.IEnumerable%601>, and the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axes return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> collections, and <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XAttribute> collections. You need these collections to perform your queries.  
+ Birçok amaç için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları, bir ağacı incelemek, verileri dosyadan ayıklamak ve dönüştürmek için en güçlü yolu sağlar. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları <xref:System.Collections.Generic.IEnumerable%601>uygulayan nesneler üzerinde çalışır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eksenleri <xref:System.Xml.Linq.XElement> koleksiyonlarının <xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.Collections.Generic.IEnumerable%601> koleksiyonlarının <xref:System.Xml.Linq.XAttribute> döndürür. Sorgularınızı gerçekleştirmek için bu koleksiyonlara ihtiyacınız vardır.  
   
- In addition to the axis methods that retrieve collections of elements and attributes, there are axis methods that allow you to iterate through the tree in great detail. For example, instead of dealing with elements and attributes, you can work with the nodes of the tree. Nodes are a finer level of granularity than elements and attributes. When working with nodes, you can examine XML comments, text nodes, processing instructions, and more. This functionality is important, for example, to someone who is writing a word processor and wants to save documents as XML. However, the majority of XML programmers are primarily concerned with elements, attributes, and their values.  
+ Öğe ve özniteliklerin koleksiyonlarını alan eksen yöntemlerine ek olarak, ağaç üzerinde harika ayrıntılarla yineleme yapmanızı sağlayan eksen yöntemleri vardır. Örneğin, öğeleri ve öznitelikleri kullanmak yerine, ağacın düğümleri ile çalışabilirsiniz. Düğümler, öğe ve özniteliklerin daha ayrıntılı bir düzeyde ayrıntı düzeyidir. Düğümlerle çalışırken, XML açıklamalarını, metin düğümlerini, işleme talimatlarını ve daha fazlasını inceleyebilirsiniz. Bu işlevsellik, örneğin, bir sözcük işlemcisi yazan ve belgeleri XML olarak kaydetmek isteyen bir kişiye önemlidir. Ancak, XML programcılarının çoğunluğu öncelikle öğeler, öznitelikler ve değerleri ile ilgilidir.  
   
-## <a name="methods-for-retrieving-a-collection-of-elements"></a>Methods for Retrieving a Collection of Elements  
- The following is a summary of the methods of the <xref:System.Xml.Linq.XElement> class (or its base classes) that you call on an <xref:System.Xml.Linq.XElement> to return a collection of elements.  
-  
-|Yöntem|Açıklama|  
-|------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|Returns an <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> of the ancestors of this element. An overload returns an <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> of the ancestors that have the specified <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|Returns an <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> of the descendants of this element. An overload returns an <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> of the descendants that have the specified <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>|Returns an <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> of the child elements of this element. An overload returns an <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> of the child elements that have the specified <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=nameWithType>|Returns an <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> of the elements that come after this element. An overload returns an <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> of the elements after this element that have the specified <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>|Returns an <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> of the elements that come before this element. An overload returns an <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> of the elements before this element that have the specified <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=nameWithType>|Returns an <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> of this element and its ancestors. An overload returns an <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> of the elements that have the specified <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=nameWithType>|Returns an <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> of this element and its descendants. An overload returns an <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> of the elements that have the specified <xref:System.Xml.Linq.XName>.|  
-  
-## <a name="method-for-retrieving-a-single-element"></a>Method for Retrieving a Single Element  
- The following method retrieves a single child from an <xref:System.Xml.Linq.XElement> object.  
+## <a name="methods-for-retrieving-a-collection-of-elements"></a>Öğe koleksiyonunu alma yöntemleri  
+ Aşağıda bir öğe koleksiyonu döndürmek için bir <xref:System.Xml.Linq.XElement> çağırdığınız <xref:System.Xml.Linq.XElement> sınıfının (veya temel sınıflarının) yöntemlerinin bir özeti verilmiştir.  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|Returns the first child <xref:System.Xml.Linq.XElement> object that has the specified <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|Bu öğenin üst öğelerinden <xref:System.Xml.Linq.XElement> <xref:System.Collections.Generic.IEnumerable%601> döndürür. Aşırı yükleme, belirtilen <xref:System.Xml.Linq.XName>sahip olan üst öğelerinden <xref:System.Xml.Linq.XElement> <xref:System.Collections.Generic.IEnumerable%601> döndürür.|  
+|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|Bu öğenin alt öğelerinin <xref:System.Xml.Linq.XElement> <xref:System.Collections.Generic.IEnumerable%601> döndürür. Aşırı yükleme, belirtilen <xref:System.Xml.Linq.XName>sahip alt öğelerin <xref:System.Xml.Linq.XElement> <xref:System.Collections.Generic.IEnumerable%601> döndürür.|  
+|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>|Bu öğenin alt öğelerinin <xref:System.Xml.Linq.XElement> <xref:System.Collections.Generic.IEnumerable%601> döndürür. Aşırı yükleme, belirtilen <xref:System.Xml.Linq.XName>sahip alt öğelerin <xref:System.Xml.Linq.XElement> <xref:System.Collections.Generic.IEnumerable%601> döndürür.|  
+|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=nameWithType>|Bu öğeden sonra gelen öğelerin <xref:System.Xml.Linq.XElement> <xref:System.Collections.Generic.IEnumerable%601> döndürür. Aşırı yükleme, belirtilen <xref:System.Xml.Linq.XName>sahip olan bu öğeden sonra gelen öğelerin <xref:System.Xml.Linq.XElement> <xref:System.Collections.Generic.IEnumerable%601> döndürür.|  
+|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>|Bu öğeden önce gelen öğelerin <xref:System.Xml.Linq.XElement> <xref:System.Collections.Generic.IEnumerable%601> döndürür. Aşırı yükleme, belirtilen <xref:System.Xml.Linq.XName>sahip olan bu öğeden önceki öğelerin <xref:System.Xml.Linq.XElement> <xref:System.Collections.Generic.IEnumerable%601> döndürür.|  
+|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=nameWithType>|Bu öğenin ve onun üst öğelerinden <xref:System.Xml.Linq.XElement> <xref:System.Collections.Generic.IEnumerable%601> döndürür. Aşırı yükleme, belirtilen <xref:System.Xml.Linq.XName>sahip öğelerin <xref:System.Xml.Linq.XElement> <xref:System.Collections.Generic.IEnumerable%601> döndürür.|  
+|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=nameWithType>|Bu öğenin ve alt öğelerinin <xref:System.Xml.Linq.XElement> <xref:System.Collections.Generic.IEnumerable%601> döndürür. Aşırı yükleme, belirtilen <xref:System.Xml.Linq.XName>sahip öğelerin <xref:System.Xml.Linq.XElement> <xref:System.Collections.Generic.IEnumerable%601> döndürür.|  
   
-## <a name="method-for-retrieving-a-collection-of-attributes"></a>Method for Retrieving a Collection of Attributes  
- The following method retrieves attributes from an <xref:System.Xml.Linq.XElement> object.  
+## <a name="method-for-retrieving-a-single-element"></a>Tek bir öğe alma yöntemi  
+ Aşağıdaki yöntem <xref:System.Xml.Linq.XElement> nesnesinden tek bir alt öğe alır.  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|Returns an <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XAttribute> of all of the attributes.|  
+|<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|Belirtilen <xref:System.Xml.Linq.XName>sahip olan ilk alt <xref:System.Xml.Linq.XElement> nesnesini döndürür.|  
   
-## <a name="method-for-retrieving-a-single-attribute"></a>Method for Retrieving a Single Attribute  
- The following method retrieves a single attribute from an <xref:System.Xml.Linq.XElement> object.  
+## <a name="method-for-retrieving-a-collection-of-attributes"></a>Özniteliklerin koleksiyonunu alma yöntemi  
+ Aşağıdaki yöntem bir <xref:System.Xml.Linq.XElement> nesnesinden öznitelikleri alır.  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Returns the <xref:System.Xml.Linq.XAttribute> that has the specified <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|Tüm özniteliklerin <xref:System.Xml.Linq.XAttribute> <xref:System.Collections.Generic.IEnumerable%601> döndürür.|  
+  
+## <a name="method-for-retrieving-a-single-attribute"></a>Tek bir özniteliği alma yöntemi  
+ Aşağıdaki yöntem <xref:System.Xml.Linq.XElement> nesnesinden tek bir özniteliği alır.  
+  
+|Yöntem|Açıklama|  
+|------------|-----------------|  
+|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Belirtilen <xref:System.Xml.Linq.XName>sahip <xref:System.Xml.Linq.XAttribute> döndürür.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML Axes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML eksenleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

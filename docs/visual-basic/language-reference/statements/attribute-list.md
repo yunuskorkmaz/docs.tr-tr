@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354055"
 ---
 # <a name="attribute-list-visual-basic"></a>Öznitelik Listesi (Visual Basic)
-Specifies the attributes to be applied to a declared programming element. Multiple attributes are separated by commas. Following is the syntax for one attribute.  
+Belirtilen bir programlama öğesine uygulanacak öznitelikleri belirtir. Birden çok öznitelik virgülle ayrılır. Bir özniteliğin sözdizimi aşağıda verilmiştir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -24,38 +24,38 @@ Specifies the attributes to be applied to a declared programming element. Multip
 ## <a name="parts"></a>Bölümler  
 |||
 |---|---|
-|`attributemodifier`|Required for attributes applied at the beginning of a source file. Can be [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) or [Module](../../../visual-basic/language-reference/modifiers/module-keyword.md).|
-|`attributename`| Gerekli. Name of the attribute.|
-|`attributearguments`|İsteğe bağlı. List of positional arguments for this attribute. Multiple arguments are separated by commas.|
-|`attributeinitializer`|İsteğe bağlı. List of variable or property initializers for this attribute. Multiple initializers are separated by commas.|
+|`attributemodifier`|Kaynak dosyanın başlangıcında uygulanan öznitelikler için gereklidir. [Bütünleştirilmiş kod](../../../visual-basic/language-reference/modifiers/assembly.md) veya [Modül](../../../visual-basic/language-reference/modifiers/module-keyword.md)olabilir.|
+|`attributename`| Gerekli. Özniteliğin adı.|
+|`attributearguments`|İsteğe bağlı. Bu öznitelik için Konumsal bağımsız değişkenlerin listesi. Birden çok bağımsız değişken virgülle ayrılır.|
+|`attributeinitializer`|İsteğe bağlı. Bu öznitelik için değişken veya özellik başlatıcıları listesi. Birden çok Başlatıcı virgülle ayrılır.|
   
 ## <a name="remarks"></a>Açıklamalar  
- You can apply one or more attributes to nearly any programming element (types, procedures, properties, and so forth). Attributes appear in your assembly's metadata, and they can help you annotate your code or specify how to use a particular programming element. You can apply attributes defined by Visual Basic and the .NET Framework, and you can define your own attributes.  
+ Neredeyse tüm programlama öğeleri (türler, yordamlar, özellikler vb.) için bir veya daha fazla öznitelik uygulayabilirsiniz. Öznitelikler, derlemenizin meta verilerinde görünür ve kodunuza açıklama eklemek veya belirli bir programlama öğesinin nasıl kullanılacağını belirtmek için yardımcı olabilirler. Visual Basic ve .NET Framework tarafından tanımlanan öznitelikleri uygulayabilir ve kendi öznitelerinizi tanımlayabilirsiniz.  
 
- For more information on when to use attributes, see [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md). For information on attribute names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Özniteliklerin ne zaman kullanılacağı hakkında daha fazla bilgi için bkz. [özniteliklere genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md). Öznitelik adları hakkında daha fazla bilgi için bkz. [bildirilmemiş öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Placement.** You can apply attributes to most declared programming elements. To apply one or more attributes, you place an *attribute block* at the beginning of the element declaration. Each entry in the attribute list specifies an attribute you wish to apply, and the modifier and arguments you are using for this invocation of the attribute.  
+- **Yerleştirilmesine.** Öznitelikleri, en çok tanımlanmış programlama öğelerine uygulayabilirsiniz. Bir veya daha fazla öznitelik uygulamak için, öğe bildiriminin başlangıcına bir *öznitelik bloğu* yerleştirebilirsiniz. Öznitelik listesindeki her giriş, uygulamak istediğiniz bir özniteliği ve bu özniteliğin çağrılması için kullandığınız değiştirici ve bağımsız değişkenleri belirtir.  
   
-- **Angle Brackets.** If you supply an attribute list, you must enclose it in angle brackets ("`<`" and "`>`").  
+- **Açılı ayraçlar.** Bir öznitelik listesi sağlarsanız, onu açılı ayraç içine almalısınız ("`<`" ve "`>`").  
   
-- **Part of the Declaration.** The attribute must be part of the element declaration, not a separate statement. You can use the line-continuation sequence (" `_`") to extend the declaration statement onto multiple source-code lines.  
+- **Bildirimin bir parçası.** Öznitelik, ayrı bir ifadeye değil, öğe bildiriminin bir parçası olmalıdır. Bildirim ifadesini birden çok kaynak kodu satırı üzerine genişletmek için satır devamlılık sırasını ("`_`") kullanabilirsiniz.  
   
-- **Modifiers.** An attribute modifier (`Assembly` or `Module`) is required on every attribute applied to a programming element at the beginning of a source file. Attribute modifiers are not allowed on attributes applied to elements that are not at the beginning of a source file.  
+- **İlerine.** Bir kaynak dosyasının başındaki bir programlama öğesine uygulanan her öznitelikte bir öznitelik değiştiricisi (`Assembly` veya `Module`) gereklidir. Kaynak dosyanın başlangıcında olmayan öğelere uygulanan özniteliklerde öznitelik değiştiricilerine izin verilmez.  
   
-- **Arguments.** All positional arguments for an attribute must precede any variable or property initializers.  
+- **Değişkenlerinden.** Bir özniteliğin tüm Konumsal bağımsız değişkenleri herhangi bir değişken veya özellik başlatıcıdan önce gelmelidir.  
   
 ## <a name="example"></a>Örnek  
- The following example applies the <xref:System.Runtime.InteropServices.DllImportAttribute> attribute to a skeleton definition of a `Function` procedure.  
+ Aşağıdaki örnek, <xref:System.Runtime.InteropServices.DllImportAttribute> özniteliğini bir `Function` yordamının iskelet tanımına uygular.  
   
  [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute> indicates that the attributed procedure represents an entry point in an unmanaged dynamic-link library (DLL). The attribute supplies the DLL name as a positional argument and the other information as variable initializers.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute>, öznitelikli yordamın yönetilmeyen dinamik bağlantı kitaplığındaki (DLL) bir giriş noktasını temsil ettiğini belirtir. Özniteliği bir konum bağımsız değişkeni olarak DLL adını ve değişken başlatıcıları olarak diğer bilgileri sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
-- [Module \<keyword>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
-- [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Derleme](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [Modül \<anahtar sözcüğü >](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+- [Özniteliklere genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

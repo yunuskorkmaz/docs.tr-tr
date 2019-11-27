@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350878"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate Tümcesi (Visual Basic)
-Applies one or more aggregate functions to a collection.  
+Bir koleksiyona bir veya daha fazla toplama işlevi uygular.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,94 +33,94 @@ Aggregate element [As type] In collection _
   
 |Terim|Tanım|  
 |---|---|  
-|`element`|Gerekli. Variable used to iterate through the elements of the collection.|  
-|`type`|İsteğe bağlı. The type of `element`. If no type is specified, the type of `element` is inferred from `collection`.|  
-|`collection`|Gerekli. Refers to the collection to operate on.|  
-|`clause`|İsteğe bağlı. One or more query clauses, such as a `Where` clause, to refine the query result to apply the aggregate clause or clauses to.|  
-|`expressionList`|Gerekli. One or more comma-delimited expressions that identify an aggregate function to apply to the collection. You can apply an alias to an aggregate function to specify a member name for the query result. If no alias is supplied, the name of the aggregate function is used. For examples, see the section about aggregate functions later in this topic.|  
+|`element`|Gerekli. Koleksiyon öğeleri boyunca yinelemek için kullanılan değişken.|  
+|`type`|İsteğe bağlı. `element` öğesinin türü. Hiçbir tür belirtilmemişse, `element` türü `collection`algılanır.|  
+|`collection`|Gerekli. Üzerinde çalışılacak koleksiyona başvurur.|  
+|`clause`|İsteğe bağlı. Toplama yan tümcesini veya yan tümceleri uygulamak üzere sorgu sonucunu daraltmak için bir `Where` yan tümcesi gibi bir veya daha fazla sorgu yan tümcesi.|  
+|`expressionList`|Gerekli. Koleksiyona uygulanacak bir toplama işlevini tanımlayan bir veya daha fazla virgülle ayrılmış ifade. Sorgu sonucu için bir üye adı belirtmek üzere bir toplama işlevine bir diğer ad uygulayabilirsiniz. Diğer ad sağlanmazsa, toplama işlevinin adı kullanılır. Örnekler için, bu konunun ilerleyen kısımlarında bulunan toplama işlevleri hakkında bölümüne bakın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `Aggregate` clause can be used to include aggregate functions in your queries. Aggregate functions perform checks and computations over a set of values and return a single value. You can access the computed value by using a member of the query result type. The standard aggregate functions that you can use are the `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`, and `Sum` functions. These functions are familiar to developers who are familiar with aggregates in SQL. They are described in the following section of this topic.  
+ `Aggregate` yan tümcesi, Sorgularınızdaki toplama işlevlerini eklemek için kullanılabilir. Toplama işlevleri, bir değerler kümesi üzerinde denetim ve hesaplamalar gerçekleştirir ve tek bir değer döndürür. Sorgu sonuç türünün bir üyesini kullanarak hesaplanan değere erişebilirsiniz. Kullanabileceğiniz standart toplama işlevleri `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`ve `Sum` işlevleridir. Bu işlevler, SQL 'deki toplamalara alışkın olan geliştiricilere tanıdık gelecektir. Bunlar, bu konunun aşağıdaki bölümünde açıklanmaktadır.  
   
- The result of an aggregate function is included in the query result as a field of the query result type. You can supply an alias for the aggregate function result to specify the name of the member of the query result type that will hold the aggregate value. If no alias is supplied, the name of the aggregate function is used.  
+ Toplama işlevinin sonucu sorgu sonuç türünün bir alanı olarak sorgu sonucuna dahil edilir. Toplama işlevi sonucu için, toplam değeri tutacak sorgu sonuç türü üyesinin adını belirtmek üzere bir diğer ad sağlayabilirsiniz. Diğer ad sağlanmazsa, toplama işlevinin adı kullanılır.  
   
- The `Aggregate` clause can begin a query, or it can be included as an additional clause in a query. If the `Aggregate` clause begins a query, the result is a single value that is the result of the aggregate function specified in the `Into` clause. If more than one aggregate function is specified in the `Into` clause, the query returns a single type with a separate property to reference the result of each aggregate function in the `Into` clause. If the `Aggregate` clause is included as an additional clause in a query, the type returned in the query collection will have a separate property to reference the result of each aggregate function in the `Into` clause.  
+ `Aggregate` yan tümcesi bir sorgu başlatabilir veya bir sorguya ek bir yan tümce olarak eklenebilir. `Aggregate` yan tümcesi bir sorgu başlıyorsa, sonuç, `Into` yan tümcesinde belirtilen toplama işlevinin sonucu olan tek bir değerdir. `Into` yan tümcesinde birden fazla toplama işlevi belirtilmişse, sorgu, `Into` yan tümcesindeki her toplama işlevinin sonucuna başvurmak için ayrı bir özelliği olan tek bir tür döndürür. `Aggregate` yan tümcesi bir sorguya ek bir yan tümce olarak dahil edildiğinde, sorgu koleksiyonunda döndürülen türün, `Into` yan tümcesindeki her toplama işlevinin sonucuna başvurması için ayrı bir özelliği olacaktır.  
   
 ## <a name="aggregate-functions"></a>Toplama İşlevleri
 
-The following are the standard aggregate functions that can be used with the `Aggregate` clause.  
+Aşağıdakiler `Aggregate` yan tümcesiyle kullanılabilen standart toplama işlevleridir.  
   
 ### <a name="all"></a>Tümü
 
-Returns `true` if all elements in the collection satisfy a specified condition; otherwise returns `false`. The following is an example:
+Koleksiyondaki tüm öğelerin belirtilen bir koşulu karşılaması durumunda `true` döndürür; Aksi takdirde `false`döndürür. Aşağıda bir örnek verilmiştir:
 
  [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
-### <a name="any"></a>Any
+### <a name="any"></a>Tümü
 
-Returns `true` if any element in the collection satisfies a specified condition; otherwise returns `false`. The following is an example:
+Koleksiyondaki herhangi bir öğe belirtilen koşulu karşılıyorsa `true` döndürür; Aksi takdirde `false`döndürür. Aşağıda bir örnek verilmiştir:
 
  [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
 ### <a name="average"></a>Ortalama
 
-Computes the average of all elements in the collection, or computes a supplied expression for all elements in the collection. The following is an example:
+Koleksiyondaki tüm öğelerin ortalamasını hesaplar veya koleksiyondaki tüm öğeler için sağlanan bir ifadeyi hesaplar. Aşağıda bir örnek verilmiştir:
 
  [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
-### <a name="count"></a>Count
+### <a name="count"></a>Sayı
 
-Counts the number of elements in the collection. You can supply an optional `Boolean` expression to count only the number of elements in the collection that satisfy a condition. The following is an example:
+Koleksiyondaki öğelerin sayısını sayar. Koleksiyonda yalnızca bir koşulu karşılayan öğelerin sayısını saymak için isteğe bağlı bir `Boolean` ifadesi sağlayabilirsiniz. Aşağıda bir örnek verilmiştir:
 
  [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
 ### <a name="group"></a>Grup
 
-Refers to query results that are grouped as a result of a `Group By` or `Group Join` clause. The `Group` function is valid only in the `Into` clause of a `Group By` or `Group Join` clause. For more information and examples, see [Group By Clause](../../../visual-basic/language-reference/queries/group-by-clause.md) and [Group Join Clause](../../../visual-basic/language-reference/queries/group-join-clause.md).
+Bir `Group By` veya `Group Join` yan tümcesinin sonucu olarak gruplandırılan sorgu sonuçlarının başvurduğu anlamına gelir. `Group` işlevi yalnızca bir `Group By` veya `Group Join` yan tümcesinin `Into` yan tümcesinde geçerlidir. Daha fazla bilgi ve örnek için bkz. [Group by yan tümcesi](../../../visual-basic/language-reference/queries/group-by-clause.md) ve [Group JOIN yan tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md).
 
 ### <a name="longcount"></a>LongCount
 
-Counts the number of elements in the collection. You can supply an optional `Boolean` expression to count only the number of elements in the collection that satisfy a condition. Returns the result as a `Long`. For an example, see the `Count` aggregate function.
+Koleksiyondaki öğelerin sayısını sayar. Koleksiyonda yalnızca bir koşulu karşılayan öğelerin sayısını saymak için isteğe bağlı bir `Boolean` ifadesi sağlayabilirsiniz. `Long`sonucunu döndürür. Bir örnek için `Count` toplama işlevine bakın.
 
-### <a name="max"></a>Maks.
+### <a name="max"></a>Maks
 
-Computes the maximum value from the collection, or computes a supplied expression for all elements in the collection. The following is an example:
+Koleksiyondaki maksimum değeri hesaplar veya koleksiyondaki tüm öğeler için sağlanan bir ifadeyi hesaplar. Aşağıda bir örnek verilmiştir:
 
  [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
-### <a name="min"></a>Min.
+### <a name="min"></a>Min
 
-Computes the minimum value from the collection, or computes a supplied expression for all elements in the collection. The following is an example:
+Koleksiyondaki en küçük değeri hesaplar veya koleksiyondaki tüm öğeler için sağlanan bir ifadeyi hesaplar. Aşağıda bir örnek verilmiştir:
 
  [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
-### <a name="sum"></a>Sum
+### <a name="sum"></a>TOPLA
 
-Computes the sum of all elements in the collection, or computes a supplied expression for all elements in the collection. The following is an example:
+Koleksiyondaki tüm öğelerin toplamını hesaplar veya koleksiyondaki tüm öğeler için sağlanan bir ifadeyi hesaplar. Aşağıda bir örnek verilmiştir:
 
  [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 
 ## <a name="example"></a>Örnek  
 
-The following example shows how to use the `Aggregate` clause to apply aggregate functions to a query result.  
+Aşağıdaki örnek, bir sorgu sonucuna toplama işlevleri uygulamak için `Aggregate` yan tümcesinin nasıl kullanılacağını gösterir.  
   
  [!code-vb[VbSimpleQuerySamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#4)]  
   
-## <a name="creating-user-defined-aggregate-functions"></a>Creating User-Defined Aggregate Functions
+## <a name="creating-user-defined-aggregate-functions"></a>Kullanıcı tanımlı toplama Işlevleri oluşturma
 
- You can include your own custom aggregate functions in a query expression by adding extension methods to the <xref:System.Collections.Generic.IEnumerable%601> type. Your custom method can then perform a calculation or operation on the enumerable collection that has referenced your aggregate function. For more information about extension methods, see [Extension Methods](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
+ <xref:System.Collections.Generic.IEnumerable%601> türüne uzantı yöntemleri ekleyerek kendi özel toplama işlevlerinizi bir sorgu ifadesine dahil edebilirsiniz. Özel yönteminiz, toplama işlevinizin başvurduğu sıralanabilir koleksiyonda bir hesaplama veya işlem gerçekleştirebilir. Uzantı yöntemleri hakkında daha fazla bilgi için bkz. [Uzantı yöntemleri](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
   
- For example, the following example shows a custom aggregate function that calculates the median value of a collection of numbers. There are two overloads of the `Median` extension method. The first overload accepts, as input, a collection of type `IEnumerable(Of Double)`. If the `Median` aggregate function is called for a query field of type `Double`, this method will be called. The second overload of the `Median` method can be passed any generic type. The generic overload of the `Median` method takes a second parameter that references the `Func(Of T, Double)` lambda expression to project a value for a type (from a collection) as the corresponding value of type `Double`. It then delegates the calculation of the median value to the other overload of the `Median` method. For more information about lambda expressions, see [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Örneğin, aşağıdaki örnek bir sayı koleksiyonunun ortanca değerini hesaplayan özel bir toplama işlevi gösterir. `Median` uzantısı yönteminin iki aşırı yüklemesi vardır. İlk aşırı yükleme giriş olarak, `IEnumerable(Of Double)`türünde bir koleksiyon kabul eder. `Double`türündeki bir sorgu alanı için `Median` toplama işlevi çağrılırsa, bu yöntem çağrılır. `Median` yönteminin ikinci aşırı yüklemesi herhangi bir genel tür geçirilebilir. `Median` yönteminin genel aşırı yüklemesi, `Func(Of T, Double)` lambda ifadesine başvuran ikinci bir parametre alır (bir koleksiyondan), karşılık gelen `Double`türü olarak bir değer proje. Daha sonra ortanca değer hesaplamasını `Median` yönteminin diğer aşırı yüküne devreder. Lambda ifadeleri hakkında daha fazla bilgi için bkz. [lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbSimpleQuerySamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#18)]  
   
- The following example shows sample queries that call the `Median` aggregate function on a collection of type `Integer`, and a collection of type `Double`. The query that calls the `Median` aggregate function on the collection of type `Double` calls the overload of the `Median` method that accepts, as input, a collection of type `Double`. The query that calls the `Median` aggregate function on the collection of type `Integer` calls the generic overload of the `Median` method.  
+ Aşağıdaki örnek, `Integer`türünde bir koleksiyon üzerinde `Median` toplama işlevini çağıran örnek sorguları ve `Double`türünde bir koleksiyonu gösterir. `Double` türü koleksiyonundaki `Median` toplama işlevini çağıran sorgu, giriş olarak kabul eden `Median` yönteminin `Double`bir koleksiyon olan aşırı yüklemesini çağırır. `Integer` türü koleksiyonundaki `Median` toplama işlevini çağıran sorgu `Median` yönteminin genel aşırı yüklemesini çağırır.  
   
  [!code-vb[VbSimpleQuerySamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#19)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)

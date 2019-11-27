@@ -33,7 +33,7 @@ ms.locfileid: "74352768"
 ---
 # <a name="type-list-visual-basic"></a>Tür Listesi (Visual Basic)
 
-Specifies the *type parameters* for a *generic* programming element. Multiple parameters are separated by commas. Following is the syntax for one type parameter.
+*Genel* programlama öğesi için *tür parametrelerini* belirtir. Birden çok parametre virgülle ayrılır. Bir tür parametresi için sözdizimi aşağıda verilmiştir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,68 +45,68 @@ Specifies the *type parameters* for a *generic* programming element. Multiple pa
 
 |Terim|Tanım|
 |---|---|
-|`genericmodifier`|İsteğe bağlı. Can be used only in generic interfaces and delegates. You can declare a type covariant by using the [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) keyword or contravariant by using the [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) keyword. See [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md).|
-|`typename`|Gerekli. Name of the type parameter. This is a placeholder, to be replaced by a defined type supplied by the corresponding type argument.|
-|`constraintlist`|İsteğe bağlı. List of requirements that constrain the data type that can be supplied for `typename`. If you have multiple constraints, enclose them in curly braces (`{ }`) and separate them with commas. You must introduce the constraint list with the [As](../../../visual-basic/language-reference/statements/as-clause.md) keyword. You use `As` only once, at the beginning of the list.|
+|`genericmodifier`|İsteğe bağlı. Yalnızca Genel arabirimlerde ve temsilcilerde kullanılabilir. [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) anahtar sözcüğünü kullanarak [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) anahtar sözcüğünü veya değişken varyantını kullanarak bir tür covaryant bildirebilirsiniz. Bkz. [Kovaryans ve değişken varyansı](../../programming-guide/concepts/covariance-contravariance/index.md).|
+|`typename`|Gerekli. Tür parametresinin adı. Bu, karşılık gelen tür bağımsız değişkeni tarafından sağlanan tanımlı bir türle değiştirilmesini sağlamak için bir yer tutucudur.|
+|`constraintlist`|İsteğe bağlı. `typename`için sağlanabilecek veri türünü kısıtlayan gereksinimlerin listesi. Birden çok kısıtlamaınız varsa bunları küme ayraçları (`{ }`) içine alın ve bunları virgülle ayırın. Kısıtlama listesini [as](../../../visual-basic/language-reference/statements/as-clause.md) anahtar sözcüğüyle birlikte tanıtmalısınız. `As`, listenin başlangıcında yalnızca bir kez kullanılır.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Every generic programming element must take at least one type parameter. A type parameter is a placeholder for a specific type (a *constructed element*) that client code specifies when it creates an instance of the generic type. You can define a generic class, structure, interface, procedure, or delegate.
+Her genel programlama öğesi en az bir tür parametresi almalıdır. Tür parametresi, bir genel türün örneğini oluşturduğunda istemci kodunun belirttiği belirli bir tür ( *oluşturulmuş bir öğe*) için yer tutucudur. Bir genel sınıf, yapı, arabirim, yordam veya temsilci tanımlayabilirsiniz.
 
-For more information on when to define a generic type, see [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md). For more information on type parameter names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+Genel bir türün ne zaman tanımlanacağı hakkında daha fazla bilgi için, bkz. [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md). Tür parametresi adları hakkında daha fazla bilgi için bkz. [bildirilmemiş öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
 ## <a name="rules"></a>Kurallar
 
-- **Parentheses.** If you supply a type parameter list, you must enclose it in parentheses, and you must introduce the list with the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword. You use `Of` only once, at the beginning of the list.
+- **Ayraçlar.** Bir tür parametre listesi [sağlarsanız, onu](../../../visual-basic/language-reference/statements/of-clause.md) parantez içine almalısınız ve listeyi anahtar kelimesiyle birlikte almalısınız. `Of`, listenin başlangıcında yalnızca bir kez kullanılır.
 
-- **Constraints.** A list of *constraints* on a type parameter can include the following items in any combination:
+- **Kısıtlamaları.** Bir tür parametresindeki *kısıtlamaların* listesi, aşağıdaki öğeleri herhangi bir kombinasyonda içerebilir:
 
-  - Any number of interfaces. The supplied type must implement every interface in this list.
+  - Herhangi bir sayıda arabirim. Sağlanan tür, bu listedeki her arabirimi uygulamalıdır.
 
-  - At most one class. The supplied type must inherit from that class.
+  - En fazla bir sınıf. Sağlanan tür bu sınıftan devralması gerekir.
 
-  - The `New` keyword. The supplied type must expose a parameterless constructor that your generic type can access. This is useful if you constrain a type parameter by one or more interfaces. A type that implements interfaces does not necessarily expose a constructor, and depending on the access level of a constructor, the code within the generic type might not be able to access it.
+  - `New` anahtar sözcüğü. Sağlanan tür, genel türünün erişebileceği parametresiz bir Oluşturucu kullanıma sunmalıdır. Bir tür parametresini bir veya daha fazla arabirim ile sınırlandırdıysanız, bu faydalıdır. Arabirimleri uygulayan bir tür bir oluşturucuyu kullanıma sunmayabilir ve bir oluşturucunun erişim düzeyine bağlı olarak, genel türdeki kod buna erişemeyebilir.
 
-  - Either the `Class` keyword or the `Structure` keyword. The `Class` keyword constrains a generic type parameter to require that any type argument passed to it be a reference type, for example a string, array, or delegate, or an object created from a class. The `Structure` keyword constrains a generic type parameter to require that any type argument passed to it be a value type, for example a structure, enumeration, or elementary data type. You cannot include both `Class` and `Structure` in the same `constraintlist`.
+  - `Class` anahtar sözcüğü ya da `Structure` anahtar sözcüğü. `Class` anahtar sözcüğü, geçirilen her tür bağımsız değişkenin bir başvuru türü olmasını gerektirmek için bir genel tür parametresi kısıtlar, örneğin bir String, array veya Delegate veya bir sınıftan oluşturulmuş bir nesne. `Structure` anahtar sözcüğü, geçirilen her tür bağımsız değişkenin bir değer türü olmasını gerektirmek için bir genel tür parametresi kısıtlar, örneğin bir yapı, sabit listesi veya Öğesel veri türü. `Class` ve `Structure` aynı `constraintlist`dahil edilemez.
 
-  The supplied type must satisfy every requirement you include in `constraintlist`.
+  Sağlanan tür, `constraintlist`eklediğiniz her gereksinimi karşılamalıdır.
 
-  Constraints on each type parameter are independent of constraints on other type parameters.
+  Her tür parametresindeki kısıtlamalar, diğer tür parametrelerinin kısıtlamalarından bağımsızdır.
 
 ## <a name="behavior"></a>Davranış
 
-- **Compile-Time Substitution.** When you create a constructed type from a generic programming element, you supply a defined type for each type parameter. The Visual Basic compiler substitutes that supplied type for every occurrence of `typename` within the generic element.
+- **Derleme zamanı değiştirme.** Genel programlama öğesinden oluşturulmuş bir tür oluşturduğunuzda, her tür parametresi için tanımlı bir tür sağlarsınız. Visual Basic derleyici, genel öğe içindeki her `typename` oluşumu için sağlanan türü kullanır.
 
-- **Absence of Constraints.** If you do not specify any constraints on a type parameter, your code is limited to the operations and members supported by the [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md) for that type parameter.
+- **Kısıtlamaların yokluğu.** Bir tür parametresinde herhangi bir kısıtlama belirtmezseniz, kodunuz bu tür parametresi için [nesne veri türü](../../../visual-basic/language-reference/data-types/object-data-type.md) tarafından desteklenen işlemler ve üyelerle sınırlandırılmıştır.
 
 ## <a name="example"></a>Örnek
 
-The following example shows a skeleton definition of a generic dictionary class, including a skeleton function to add a new entry to the dictionary.
+Aşağıdaki örnek, sözlüğe yeni bir giriş eklemek için bir iskelet işlevi de dahil olmak üzere genel sözlük sınıfının iskelet tanımını gösterir.
 
 [!code-vb[VbVbalrStatements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#3)]
 
 ## <a name="example"></a>Örnek
 
-Because `dictionary` is generic, the code that uses it can create a variety of objects from it, each having the same functionality but acting on a different data type. The following example shows a line of code that creates a `dictionary` object with `String` entries and `Integer` keys.
+`dictionary` genel olduğundan, onu kullanan kod, her biri aynı işlevselliğe sahip ancak farklı bir veri türü üzerinde işlem gören çeşitli nesneler oluşturabilir. Aşağıdaki örnek, `String` girdileri ve `Integer` anahtarlarıyla `dictionary` nesne oluşturan bir kod satırı gösterir.
 
 [!code-vb[VbVbalrStatements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#4)]
 
 ## <a name="example"></a>Örnek
 
-The following example shows the equivalent skeleton definition generated by the preceding example.
+Aşağıdaki örnek, önceki örnek tarafından oluşturulan eşdeğer iskelet tanımını gösterir.
 
 [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Of](../../../visual-basic/language-reference/statements/of-clause.md)
+- [Durumunu](../../../visual-basic/language-reference/statements/of-clause.md)
 - [New İşleci](../../../visual-basic/language-reference/operators/new-operator.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Object Veri Türü](../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Kovaryans ve Kontravaryans](../../programming-guide/concepts/covariance-contravariance/index.md)
-- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
-- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+- ['Ndaki](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Dışı](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

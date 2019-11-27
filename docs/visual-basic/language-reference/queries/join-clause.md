@@ -19,7 +19,7 @@ ms.locfileid: "74353271"
 ---
 # <a name="join-clause-visual-basic"></a>Join Tümcesi (Visual Basic)
 
-Combines two collections into a single collection. The join operation is based on matching keys and uses the `Equals` operator.
+İki koleksiyonu tek bir koleksiyon halinde birleştirir. JOIN işlemi, eşleşen anahtarlara dayalıdır ve `Equals` işlecini kullanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,45 +32,45 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 
 ## <a name="parts"></a>Bölümler
 
-`element` Required. The control variable for the collection being joined.
+`element` gerekiyor. Birleştirilen koleksiyonun denetim değişkeni.
 
 `collection`  
-Gerekli. The collection to combine with the collection identified on the left side of the `Join` operator. A `Join` clause can be nested in another `Join` clause, or in a `Group Join` clause.
+Gerekli. `Join` işlecinin sol tarafında tanımlanan koleksiyonla birleştirilecek koleksiyon. `Join` yan tümcesi, başka bir `Join` yan tümcesinde veya `Group Join` yan tümcesinde iç içe olabilir.
 
 `joinClause`  
-İsteğe bağlı. One or more additional `Join` clauses to further refine the query.
+İsteğe bağlı. Sorguyu daha da belirginleştirmek için bir veya daha fazla ek `Join` yan tümcesi.
 
 `groupJoinClause`  
-İsteğe bağlı. One or more additional `Group Join` clauses to further refine the query.
+İsteğe bağlı. Sorguyu daha da belirginleştirmek için bir veya daha fazla ek `Group Join` yan tümcesi.
 
 `key1` `Equals` `key2`  
-Gerekli. Identifies keys for the collections being joined. You must use the `Equals` operator to compare keys from the collections being joined. You can combine join conditions by using the `And` operator to identify multiple keys. `key1` must be from the collection on the left side of the `Join` operator. `key2` must be from the collection on the right side of the `Join` operator.
+Gerekli. Katılmakta olan koleksiyonlar için anahtarları tanımlar. Birleştirilecek koleksiyonlardan anahtarları karşılaştırmak için `Equals` işlecini kullanmanız gerekir. Birden çok anahtarı belirlemek için `And` işlecini kullanarak Birleştirme koşullarını birleştirebilirsiniz. `key1`, `Join` işlecinin sol tarafındaki koleksiyondan olmalıdır. `key2`, `Join` işlecinin sağ tarafındaki koleksiyondan olmalıdır.
 
-The keys used in the join condition can be expressions that include more than one item from the collection. However, each key expression can contain only items from its respective collection.
+JOIN koşulunda kullanılan anahtarlar, koleksiyondan birden fazla öğe içeren ifadeler olabilir. Ancak, her anahtar ifadesi yalnızca ilgili koleksiyonundan öğe içerebilir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-The `Join` clause combines two collections based on matching key values from the collections being joined. The resulting collection can contain any combination of values from the collection identified on the left side of the `Join` operator and the collection identified in the `Join` clause. The query will return only results for which the condition specified by the `Equals` operator is met. This is equivalent to an `INNER JOIN` in SQL.
+`Join` yan tümcesi, katılmakta olan koleksiyonlardan eşleşen anahtar değerlerini temel alarak iki koleksiyonu birleştirir. Elde edilen koleksiyon, `Join` işlecinin sol tarafında tanımlanan koleksiyondaki değerlerin birleşimini ve `Join` yan tümcesinde tanımlanan koleksiyonu içerebilir. Sorgu yalnızca `Equals` işleci tarafından belirtilen koşulun karşılandığı sonuçları döndürür. Bu, SQL 'deki bir `INNER JOIN` eşdeğerdir.
 
-You can use multiple `Join` clauses in a query to join two or more collections into a single collection.
+İki veya daha fazla koleksiyonu tek bir koleksiyonda birleştirmek için bir sorguda birden çok `Join` yan tümcesini kullanabilirsiniz.
 
-You can perform an implicit join to combine collections without the `Join` clause. To do this, include multiple `In` clauses in your `From` clause and specify a `Where` clause that identifies the keys that you want to use for the join.
+`Join` yan tümcesi olmadan koleksiyonları birleştirmek için örtük bir birleştirme gerçekleştirebilirsiniz. Bunu yapmak için, `From` yan tümcesine birden çok `In` yan tümce ekleyin ve JOIN için kullanmak istediğiniz anahtarları tanımlayan bir `Where` yan tümcesi belirtin.
 
-You can use the `Group Join` clause to combine collections into a single hierarchical collection. This is like a `LEFT OUTER JOIN` in SQL.
+Koleksiyonları tek bir hiyerarşik koleksiyonda birleştirmek için `Group Join` yan tümcesini kullanabilirsiniz. Bu SQL 'de bir `LEFT OUTER JOIN` gibidir.
 
 ## <a name="example"></a>Örnek
 
-The following code example performs an implicit join to combine a list of customers with their orders.
+Aşağıdaki kod örneği, bir müşteri listesini siparişleriyle birlikte birleştirmek için örtük bir birleştirme gerçekleştirir.
 
 [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]
 
 ## <a name="example"></a>Örnek
 
-The following code example joins two collections by using the `Join` clause.
+Aşağıdaki kod örneği, `Join` yan tümcesini kullanarak iki koleksiyonu birleştirir.
 
 [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]
 
-This example will produce output similar to the following:
+Bu örnek aşağıdakine benzer bir çıktı oluşturacaktır:
 
 `winlogon (968), Windows Logon`
 
@@ -80,11 +80,11 @@ This example will produce output similar to the following:
 
 ## <a name="example"></a>Örnek
 
-The following code example joins two collections by using the `Join` clause with two key columns.
+Aşağıdaki kod örneği, `Join` yan tümcesini iki anahtar sütunla kullanarak iki koleksiyonu birleştirir.
 
 [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]
 
-The example will produce output similar to the following:
+Örnek aşağıdakine benzer bir çıktı oluşturacaktır:
 
 `winlogon (968), Windows Logon, Priority = 13`
 
@@ -94,7 +94,7 @@ The example will produce output similar to the following:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)
