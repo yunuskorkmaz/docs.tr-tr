@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431933"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps Yöntemi
-Modifies the specified `ExportedType` metadata structure.  
+Belirtilen `ExportedType` meta veri yapısını değiştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,28 +38,28 @@ HRESULT SetExportedTypeProps (
   
 ## <a name="parameters"></a>Parametreler  
  `ct`  
- [in] The metadata token that specifies the `ExportedType` metadata structure to be modified.  
+ 'ndaki Değiştirilecek `ExportedType` meta veri yapısını belirten meta veri belirteci.  
   
  `tkImplementation`  
- [in] The token, of type `File`, `AssemblyRef`, or `ExportedType`, that specifies how this type is implemented.  
+ 'ndaki Bu türün nasıl uygulandığını belirten `File`, `AssemblyRef`veya `ExportedType`türündeki belirteç.  
   
  `tkTypeDef`  
- [in] The `TypeDef` token referenced in the code file.  
+ 'ndaki Kod dosyasında başvurulan `TypeDef` belirteci.  
   
  `dwExportedTypeFlags`  
- [in] A bitwise combination of values that specify attributes of the type.  
+ 'ndaki Türün özniteliklerini belirten bir bit düzeyinde değer birleşimi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- To create an `ExportedType` metadata structure, use the [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) method.  
+ `ExportedType` meta veri yapısı oluşturmak için [IMetaDataAssemblyEmit::D efineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) metodunu kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432645"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute Yöntemi
-Creates a definition for a custom attribute with the specified metadata signature, to be attached to the specified object, and gets a token to that custom attribute definition.  
+Belirtilen nesneye iliştirililmesi için belirtilen meta veri imzasına sahip özel bir öznitelik için bir tanım oluşturur ve bu özel öznitelik tanımına bir belirteç alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +39,28 @@ HRESULT DefineCustomAttribute (
   
 ## <a name="parameters"></a>Parametreler  
  `tkObj`  
- [in] The token for the owner item.  
+ 'ndaki Sahip öğesi için belirteç.  
   
  `tkType`  
- [in] The token that identifies the custom attribute.  
+ 'ndaki Özel özniteliği tanımlayan belirteç.  
   
  `pCustomAttribute`  
- [in] A pointer to the custom attribute.  
+ 'ndaki Özel özniteliğe yönelik bir işaretçi.  
   
  `cbCustomAttribute`  
- [in] The count of bytes in `pCustomAttribute`.  
+ 'ndaki `pCustomAttribute`bayt sayısı.  
   
  `pcv`  
- [out] The `mdCustomAttribute` token assigned.  
+ dışı `mdCustomAttribute` belirteci atandı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

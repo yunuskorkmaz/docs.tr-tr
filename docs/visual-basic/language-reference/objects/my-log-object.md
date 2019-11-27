@@ -12,16 +12,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350667"
 ---
 # <a name="mylog-object"></a>My.Log Nesnesi
-Provides a property and methods for writing event and exception information to the application's log listeners.  
+Uygulamanın günlük dinleyicilerine olay ve özel durum bilgilerini yazmak için bir özellik ve yöntemler sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- For information about the methods and properties of the `My.Log` object, see <xref:Microsoft.VisualBasic.Logging.AspLog>.  
+ `My.Log` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.Logging.AspLog>.  
   
- The `My.Log` object is available for ASP.NET applications only. For client applications, use [My.Application.Log Object](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
+ `My.Log` nesnesi yalnızca ASP.NET uygulamaları için kullanılabilir. İstemci uygulamaları için [My. Application. log nesnesini](../../../visual-basic/language-reference/objects/my-application-log-object.md)kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** <xref:Microsoft.VisualBasic.Logging>  
+ **Ad alanı:** <xref:Microsoft.VisualBasic.Logging>  
   
- **Class:** <xref:Microsoft.VisualBasic.Logging.AspLog>  
+ **Sınıf:** <xref:Microsoft.VisualBasic.Logging.AspLog>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)

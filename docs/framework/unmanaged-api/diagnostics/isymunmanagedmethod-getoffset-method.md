@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448940"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>ISymUnmanagedMethod::GetOffset Metodu
-Returns the offset within this method that corresponds to a given position within a document.  
+Bu yöntemin içindeki, bir belge içinde verilen konuma karşılık gelen sapmayı döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +37,22 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>Parametreler  
  `document`  
- [in] A pointer to the document for which the offset is requested.  
+ 'ndaki Kaydırın istendiği belge için bir işaretçi.  
   
  `line`  
- [in] The document line for which the offset is requested.  
+ 'ndaki Kaydırın istendiği belge satırı.  
   
  `column`  
- [in] The document column for which the offset is requested.  
+ 'ndaki Kaydırın istendiği belge sütunu.  
   
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the offsets.  
+ dışı Uzaklıkları alan `ULONG32` işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

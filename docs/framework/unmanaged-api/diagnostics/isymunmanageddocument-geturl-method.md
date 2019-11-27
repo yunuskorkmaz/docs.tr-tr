@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449128"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL Yöntemi
-Returns the uniform resource locator (URL) for this document.  
+Bu belge için Tekdüzen Kaynak Konumlandırıcı 'sını (URL) döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,16 +36,16 @@ HRESULT GetURL(
   
 ## <a name="parameters"></a>Parametreler  
  `cchUrl`  
- [in] The size, in characters, of the `szURL` buffer.  
+ 'ndaki `szURL` arabelleğinin karakter cinsinden boyutu.  
   
  `pcchUrl`  
- [out] A pointer to a variable that receives the size of the URL, including the null termination.  
+ dışı Null sonlandırma dahil olmak üzere URL boyutunu alan bir değişkene yönelik bir işaretçi.  
   
  `szUrl`  
- [out] The buffer containing the URL.  
+ dışı URL 'YI içeren arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, an error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, bir hata kodu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

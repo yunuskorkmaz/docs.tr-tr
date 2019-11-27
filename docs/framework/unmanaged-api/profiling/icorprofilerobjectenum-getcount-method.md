@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428265"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>ICorProfilerObjectEnum::GetCount Yöntemi
-Gets the total number of frozen objects in the collection.  
+Koleksiyondaki dondurulmuş nesnelerin toplam sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,18 +35,18 @@ HRESULT GetCount (
   
 ## <a name="parameters"></a>Parametreler  
  `pcelt`  
- [out] A pointer to the number of frozen objects in the collection.  
+ dışı Koleksiyondaki dondurulmuş nesne sayısına yönelik bir işaretçi.  
   
- This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.  
+ Bu yöntem, .NET Framework sürüm 3,5 hizmet paketi 1 (SP1) ve sonraki sürümlerde her zaman sıfır döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

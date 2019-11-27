@@ -16,17 +16,17 @@ ms.locfileid: "74334519"
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Belgelerim Dizinindeki Dosyalara Metin Yazma
 
-The `My.Computer.FileSystem.SpecialDirectories` object allows you to access special directories, such as the **MyDocuments** directory.  
+`My.Computer.FileSystem.SpecialDirectories` nesnesi, **MyDocuments** dizini gibi özel dizinlere erişmenizi sağlar.  
   
 ## <a name="procedure"></a>Yordam  
   
-#### <a name="to-write-new-text-files-in-the-my-documents-directory"></a>To write new text files in the My Documents directory  
+#### <a name="to-write-new-text-files-in-the-my-documents-directory"></a>Yeni metin dosyalarını Belgelerim dizinine yazmak için  
   
-1. Use the `My.Computer.FileSystem.SpecialDirectories.MyDocuments` property to supply the path.  
+1. Yolu sağlamak için `My.Computer.FileSystem.SpecialDirectories.MyDocuments` özelliğini kullanın.  
   
      [!code-vb[VbFileIOWrite#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#1)]  
   
-2. Use the `WriteAllText` method to write text to the specified file.  
+2. Belirtilen dosyaya metin yazmak için `WriteAllText` yöntemini kullanın.  
   
      [!code-vb[VbVbcnMyFileSystem#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#14)]  
   
@@ -36,17 +36,17 @@ The `My.Computer.FileSystem.SpecialDirectories` object allows you to access spec
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
 
- Replace `test.txt` with the name of the file you want to write to.  
+ `test.txt`, yazmak istediğiniz dosyanın adıyla değiştirin.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- This code rethrows all the exceptions that may occur when writing text to the file. You can reduce the likelihood of exceptions by using Windows Forms controls such as the [OpenFileDialog](../../../../framework/winforms/controls/openfiledialog-component-windows-forms.md) and the [SaveFileDialog](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md) components that limit the user choices to valid file names. Using these controls is not foolproof, however. The file system can change between the time the user selects a file and the time that the code executes. Exception handling is therefore nearly always necessary when with working with files.  
+ Bu kod, dosyaya metin yazarken ortaya çıkabilecek tüm özel durumları yeniden oluşturur. Kullanıcı seçimlerini geçerli dosya adlarıyla sınırlayan [OpenFileDialog](../../../../framework/winforms/controls/openfiledialog-component-windows-forms.md) ve [SaveFileDialog](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md) bileşenleri gibi Windows Forms denetimleri kullanarak özel durumların olasılığını azaltabilirsiniz. Ancak, bu denetimlerin kullanılması, örnek değildir. Dosya sistemi, kullanıcının bir dosyayı seçtiği zaman ve kodun yürütüldüğü saat arasında değişebilir. Bu nedenle, dosyalarla çalışırken neredeyse her zaman özel durum işleme gerekir.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
 
- If you are running in a partial-trust context, the code might throw an exception due to insufficient privileges. For more information, see [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md).  
+ Kısmi güven bağlamında çalıştırıyorsanız, yetersiz ayrıcalıklar nedeniyle kod bir özel durum oluşturabilir. Daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](../../../../framework/misc/code-access-security-basics.md).  
   
- This example creates a new file. If an application needs to create a file, that application needs Create permission for the folder. Permissions are set using access control lists. If the file already exists, the application needs only Write permission, a lesser privilege. Where possible, it is more secure to create the file during deployment, and only grant Read privileges to a single file, rather than to grant Create privileges for a folder. Also, it is more secure to write data to user folders than to the root folder or the **Program Files** folder. For more information, see [ACL Technology Overview](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100)).  
+ Bu örnek yeni bir dosya oluşturur. Uygulamanın bir dosya oluşturması gerekiyorsa, bu uygulamanın klasör için oluşturma izni olması gerekir. İzinler, erişim denetim listeleri kullanılarak ayarlanır. Dosya zaten mevcutsa, uygulamanın daha az bir ayrıcalık olmak üzere yalnızca yazma izni olması gerekir. Mümkün olduğunda, dağıtım sırasında dosyanın oluşturulması daha güvenlidir ve bir klasör için oluşturma ayrıcalıkları vermek yerine yalnızca tek bir dosyaya okuma ayrıcalıkları verin. Ayrıca, Kullanıcı klasörlerine veri yazmak, kök klasör veya **Program Files** klasöründen daha güvenlidir. Daha fazla bilgi için bkz. [ACL teknolojisine genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

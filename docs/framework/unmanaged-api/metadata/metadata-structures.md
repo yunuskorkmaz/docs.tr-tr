@@ -14,23 +14,23 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444612"
 ---
 # <a name="metadata-structures"></a>Meta Veri Yapıları
-This section describes the unmanaged structures that the metadata API uses.  
+Bu bölüm, meta veri API 'sinin kullandığı yönetilmeyen yapıları açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  ASSEMBLYMETADATA  
- Stores assembly metadata for later use.  
+ Derleme meta verilerini daha sonra kullanılmak üzere depolar.  
   
  [COR_FIELD_OFFSET Yapısı](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)  
- Stores the offset, within a class, of the specified field.  
+ Belirtilen alanın bir sınıf içindeki sapmasını depolar.  
   
  [COR_NATIVE_LINK Yapısı](../../../../docs/framework/unmanaged-api/metadata/cor-native-link-structure.md)  
- Contains information that is used to link native code.  
+ Yerel kodu bağlamak için kullanılan bilgileri içerir.  
   
  [CVStruct Yapısı](../../../../docs/framework/unmanaged-api/metadata/cvstruct-structure.md)  
- Contains information that is used when installing a module or a composite image.  
+ Bir modül veya bileşik görüntü yüklerken kullanılan bilgileri içerir.  
   
  [OSINFO Yapısı](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)  
- Contains information about the operating system.  
+ İşletim sistemiyle ilgili bilgiler içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

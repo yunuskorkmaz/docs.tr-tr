@@ -12,19 +12,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347191"
 ---
 # <a name="mycomputerkeyboard-object"></a>My.Computer.Keyboard Nesnesi
-Provides properties for accessing the current state of the keyboard, such as what keys are currently pressed, and provides a method to send keystrokes to the active window.  
+Klavyenin geçerli durumuna erişim için özellikler sağlar, örneğin, şu anda basılan anahtarlar ve etkin pencereye tuş vuruşları göndermek için bir yöntem sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- For information about the methods and properties of the `My.Computer.Keyword` object, see <xref:Microsoft.VisualBasic.Devices.Keyboard>.  
+ `My.Computer.Keyword` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.Devices.Keyboard>.  
   
- For more information, see [Accessing the Keyboard](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
+ Daha fazla bilgi için bkz. [klavyeye erişme](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
+ **Ad alanı:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Keyboard>  
+ **Sınıf:** <xref:Microsoft.VisualBasic.Devices.Keyboard>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

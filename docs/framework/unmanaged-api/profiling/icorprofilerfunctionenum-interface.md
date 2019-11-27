@@ -22,31 +22,31 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447801"
 ---
 # <a name="icorprofilerfunctionenum-interface"></a>ICorProfilerFunctionEnum Arabirimi
-Provides methods to sequentially iterate through a collection of functions in the common language runtime.  
+Ortak dil çalışma zamanındaki bir işlevler koleksiyonunu sırayla yinelemek için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Clone Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-clone-method.md)|Gets an interface pointer to a copy of this `ICorProfilerFunctionEnum` interface.|  
-|[GetCount Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-getcount-method.md)|Gets the number of functions that were loaded by the application or forcibly loaded by the profiler.|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-next-method.md)|Gets the specified number of contiguous functions from a sequential collection of functions, starting at the enumerator's current position in the sequence.|  
-|[Reset Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-reset-method.md)|Moves the enumerator's cursor to the starting position of the sequence.|  
-|[Skip Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-skip-method.md)|Advances the enumerator's cursor from its current position so that the specified number of elements are skipped.|  
+|[Clone Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-clone-method.md)|Bu `ICorProfilerFunctionEnum` arabiriminin bir kopyasına bir arabirim işaretçisi alır.|  
+|[GetCount Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-getcount-method.md)|Uygulama tarafından yüklenen veya profil oluşturucu tarafından zorla yüklenen işlevlerin sayısını alır.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-next-method.md)|Numaralandırıcının dizideki geçerli konumundan başlayarak sıralı bir işlevler koleksiyonundan belirtilen sayıda bitişik işlevi alır.|  
+|[Reset Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-reset-method.md)|Numaralandırıcının imlecini sıranın başlangıç konumuna taşımaktır.|  
+|[Skip Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-skip-method.md)|Belirlenen sayıda öğe atlanabilmesi için Numaralandırıcının imlecini geçerli konumundan ilerletir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `ICorProfilerFunctionEnum` interface is an enumerator. It allows the receiver of an array to pull elements from the sender at a rate that is appropriate for the receiver. In other words, the receiver is able to explicitly control the flow of array elements, thereby avoiding the problems associated with passing large arrays as method parameters.  
+ `ICorProfilerFunctionEnum` arabirimi bir Numaralandırıcı. Bir dizinin alıcısından alıcı için uygun bir hızda öğe çekmesini sağlar. Diğer bir deyişle, alıcı, dizi öğelerinin akışını açıkça denetleyebilir ve böylece büyük dizileri Yöntem parametreleri olarak geçirme ile ilişkili sorunlardan kaçınarak.  
   
- `ICorProfilerFunctionEnum` enumerates over functions that have already been JIT-compiled, but does not include functions that are loaded from native images generated with Ngen.exe.  
+ `ICorProfilerFunctionEnum`, zaten JıT olarak derlenen işlevlerin üzerine numaralandırılır, ancak Ngen. exe ile oluşturulan yerel görüntülerden yüklenen işlevleri içermez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

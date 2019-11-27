@@ -17,33 +17,33 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444538"
 ---
 # <a name="net-performance-tips"></a>.NET Performans İpuçları
-The term *performance* generally refers to the execution speed of a program. You can sometimes increase execution speed by following certain basic rules in your source code. In some programs, it is important to examine code closely and use profilers to make sure that it is running as fast as possible. In other programs, you do not have to perform such optimization because the code is running acceptably fast as it is written. This article lists some common areas where performance can suffer and tips for improving it as well as links to additional performance topics. For more information about planning and measuring for performance, see [Performance](index.md)  
+*Performans* terimi genellikle programın yürütme hızına başvurur. Kaynak kodunuzda belirli temel kuralları izleyerek, bazen yürütme hızını artırabilirsiniz. Bazı programlarda, kodu yakından incelemek ve profil oluşturucular kullanarak olabildiğince hızlı çalıştığından emin olmak önemlidir. Diğer programlarda, bu tür iyileştirme gerçekleştirmek zorunda değilsiniz çünkü kod yazıldığı kadar hızlı şekilde çalışıyor. Bu makalede, performansın önyüklenebileceği bazı yaygın bölgeler ve ek performans konularına yönelik bağlantılar yer almaktadır. Performansı planlama ve ölçme hakkında daha fazla bilgi için bkz. [performans](index.md)  
   
 ## <a name="boxing-and-unboxing"></a>Kutulama ve Kutudan Çıkarma  
- It is best to avoid using value types in situations where they must be boxed a high number of times, for example in non-generic collections classes such as <xref:System.Collections.ArrayList?displayProperty=nameWithType>. You can avoid boxing of value types by using generic collections such as <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Boxing and unboxing are computationally expensive processes. When a value type is boxed, an entirely new object must be created. This can take up to 20 times longer than a simple reference assignment. When unboxing, the casting process can take four times as long as an assignment. For more information, see [Boxing and Unboxing](../../csharp/programming-guide/types/boxing-and-unboxing.md).  
+ Örneğin, <xref:System.Collections.ArrayList?displayProperty=nameWithType>gibi genel olmayan koleksiyonlar sınıflarında çok sayıda kutulanmış olmaları gereken durumlarda değer türlerini kullanmaktan kaçınmak en iyisidir. <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>gibi genel Koleksiyonlar kullanarak değer türlerinin kutulamayı önleyebilirsiniz. Kutulama ve kutudan çıkarma, hesaplama açısından pahalı işlemlerdir. Bir değer türü paketlenme olduğunda, tamamen yeni bir nesne oluşturulması gerekir. Bu, basit bir başvuru atamasından 20 kat daha uzun sürebilir. Kutudan çıkarma sırasında, atama işlemi atamanın dört katı zaman alabilir. Daha fazla bilgi için bkz. [kutulama ve kutudan](../../csharp/programming-guide/types/boxing-and-unboxing.md)çıkarma.  
   
 ## <a name="strings"></a>Dizeler  
- When you concatenate a large number of string variables, for example in a tight loop, use <xref:System.Text.StringBuilder?displayProperty=nameWithType> instead of the C# [+ operator](../../csharp/language-reference/operators/addition-operator.md) or the Visual Basic [Concatenation Operators](../../visual-basic/language-reference/operators/concatenation-operators.md). For more information, see [How to concatenate multiple strings](../../csharp/how-to/concatenate-multiple-strings.md) and [Concatenation Operators in Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
+ Çok sayıda dize değişkenini birleştirme sırasında, örneğin sıkı bir döngüde, C# [+ işleci](../../csharp/language-reference/operators/addition-operator.md) veya Visual Basic [birleştirme işleçleri](../../visual-basic/language-reference/operators/concatenation-operators.md)yerine <xref:System.Text.StringBuilder?displayProperty=nameWithType> kullanın. Daha fazla bilgi için bkz. Visual Basic [Çoklu dizeleri](../../csharp/how-to/concatenate-multiple-strings.md) birleştirme ve [birleştirme işleçleri](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
   
 ## <a name="destructors"></a>Yıkıcılar  
- Empty destructors should not be used. When a class contains a destructor, an entry is created in the Finalize queue. When the destructor is called, the garbage collector is invoked to process the queue. If the destructor is empty, this simply results in a loss of performance. For more information, see [Destructors](../../csharp/programming-guide/classes-and-structs/destructors.md) and [Object Lifetime: How Objects Are Created and Destroyed](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+ Boş Yıkıcılar kullanılmamalıdır. Bir sınıf bir yıkıcı içerdiğinde, sonlandırma kuyruğunda bir giriş oluşturulur. Yıkıcı çağrıldığında, atık toplayıcı kuyruğu işlemek için çağrılır. Yok edicisi boşsa, bu yalnızca performans kaybı ile sonuçlanır. Daha fazla bilgi için bkz. [Yıkıcılar](../../csharp/programming-guide/classes-and-structs/destructors.md) ve [nesne ömrü: nesneler nasıl oluşturulur ve yok edilir](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
 ## <a name="other-resources"></a>Diğer Kaynaklar  
   
-- [Writing Faster Managed Code: Know What Things Cost](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973852(v=msdn.10))  
+- [Daha hızlı yönetilen kod yazma: Işlerin maliyetini öğrenin](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973852(v=msdn.10))  
   
-- [Writing High-Performance Managed Applications: A Primer](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973858(v=msdn.10))  
+- [Yüksek performanslı yönetilen uygulamalar yazma: bir öncü](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973858(v=msdn.10))  
   
-- [Garbage Collector Basics and Performance Hints](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973837(v=msdn.10))  
+- [Çöp toplayıcı temelleri ve performans Ipuçları](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973837(v=msdn.10))  
   
-- [Performance Tips and Tricks in .NET Applications](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
+- [.NET uygulamalarındaki performans Ipuçları ve püf noktaları](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
 
-- [Rico Mariani's Performance Tidbits](https://blogs.msdn.microsoft.com/ricom/)  
+- [Riko Mariani performansı tidbits](https://blogs.msdn.microsoft.com/ricom/)  
 
-- [Vance Morrison's Blog](https://blogs.msdn.microsoft.com/vancem/)
+- [Vance Morrison blogu](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Performans](index.md)
-- [Visual Basic Programming Guide](../../visual-basic/programming-guide/index.md)
+- [Visual Basic programlama kılavuzu](../../visual-basic/programming-guide/index.md)
 - [C# Programlama Kılavuzu](../../csharp/programming-guide/index.md)

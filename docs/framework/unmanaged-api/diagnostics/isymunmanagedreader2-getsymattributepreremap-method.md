@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446427"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap Metodu
-Gets a custom attribute based upon its name. Unlike metadata custom attributes, these attributes are held in the symbol store.  
+Özel bir özniteliği adına göre alır. Meta veri özel özniteliklerinin aksine, bu öznitelikler sembol deposunda tutulur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +39,25 @@ HRESULT GetSymAttributePreRemap(
   
 ## <a name="parameters"></a>Parametreler  
  `parent`  
- [in] The metadata token of the parent.  
+ 'ndaki Üst öğenin meta veri belirteci.  
   
  `name`  
- [in] A pointer to a `WCHAR` that contains the name.  
+ 'ndaki Adı içeren `WCHAR` işaretçisi.  
   
  `cBuffer`  
- [in] A `ULONG32` that indicates the size of the `buffer` array.  
+ 'ndaki `buffer` dizisinin boyutunu belirten `ULONG32`.  
   
  `pcBuffer`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the attribute bytes.  
+ dışı Öznitelik baytlarını içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.  
   
  `buffer`  
- [out] A pointer to the buffer that receives the attribute bytes.  
+ dışı Öznitelik baytlarını alan arabelleğin işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

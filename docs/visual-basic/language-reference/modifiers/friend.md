@@ -18,32 +18,32 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351569"
 ---
 # <a name="friend-visual-basic"></a>Arkadaş (Visual Basic)
-Specifies that one or more declared programming elements are accessible only from within the assembly that contains their declaration.  
+Bir veya daha fazla tanımlanmış programlama öğesine, yalnızca bildirimini içeren derlemenin içinden erişilebilir olduğunu belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- In many cases, you want programming elements such as classes and structures to be used by the entire assembly, not only by the component that declares them. However, you might not want them to be accessible by code outside the assembly (for example, if the application is proprietary). If you want to limit access to an element in this way, you can declare it by using the `Friend` modifier.  
+ Çoğu durumda, sınıflar ve yapılar gibi programlama öğelerinin, yalnızca bunları bildiren bileşen tarafından değil, tüm derleme tarafından kullanılmasını istersiniz. Ancak, bunların derleme dışındaki kod tarafından erişilebilmesini istemeyebilirsiniz (örneğin, uygulama özel ise). Bu şekilde bir öğeye erişimi sınırlandırmak istiyorsanız, `Friend` değiştiricisini kullanarak bunu bildirebilirsiniz.  
   
- Code in other classes, structures, and modules that are compiled to the same assembly can access all the `Friend` elements in that assembly.  
+ Aynı derlemeye derlenen diğer sınıf, yapı ve modüllerindeki kod, bu derlemedeki tüm `Friend` öğelerine erişebilir.  
   
- `Friend` access is often the preferred level for an application's programming elements, and `Friend` is the default access level of an interface, a module, a class, or a structure.  
+ `Friend` erişim, genellikle bir uygulamanın programlama öğeleri için tercih edilen düzeydir ve `Friend` bir arabirimin, modülün, sınıfın veya yapının varsayılan erişim düzeyidir.  
   
- You can use `Friend` only at the module, interface, or namespace level. Therefore, the declaration context for a `Friend` element must be a source file, a namespace, an interface, a module, a class, or a structure; it can't be a procedure.  
+ `Friend` yalnızca modül, arabirim veya ad alanı düzeyinde kullanabilirsiniz. Bu nedenle, bir `Friend` öğesi için bildirim bağlamı bir kaynak dosyası, bir ad alanı, arabirim, bir modül, sınıf veya yapı olmalıdır; bir yordam olamaz.  
 
 > [!NOTE]
-> You can also use the [Protected Friend](protected-friend.md) access modifier, which makes a class member accessible from within that class, from derived classes, and from the same assembly in which the class is defined. To restrict access to a member from within its class and from derived classes in the same assembly, you use the [Private Protected](private-protected.md) access modifier.
+> Ayrıca, bir sınıf üyesini bu sınıftan, türetilmiş sınıflardan ve sınıfın tanımlandığı aynı derlemeden erişilebilir hale getiren [Protected Friend](protected-friend.md) erişim değiştiricisini de kullanabilirsiniz. Bir üyenin sınıfından ve aynı derlemede bulunan türetilmiş sınıflardan erişimi kısıtlamak için, [özel korumalı](private-protected.md) erişim değiştiricisini kullanırsınız.
 
- For a comparison of `Friend` and the other access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ `Friend` ve diğer erişim değiştiricilerinden oluşan bir karşılaştırma için bkz. [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
-> You can specify that another assembly is a friend assembly, which allows it to access all types and members that are marked as `Friend`. For more information, see [Friend Assemblies](../../../standard/assembly/friend.md).
+> Başka bir derlemenin, `Friend`olarak işaretlenen tüm türlere ve üyelere erişmesine izin veren bir Friend derlemesi olduğunu belirtebilirsiniz. Daha fazla bilgi için bkz. [arkadaş derlemeler](../../../standard/assembly/friend.md).
 
 ## <a name="example"></a>Örnek  
- The following class uses the `Friend` modifier to allow other programming elements within the same assembly to access certain members.  
+ Aşağıdaki sınıf, aynı derleme içindeki diğer programlama öğelerinin belirli üyelere erişmesine izin vermek için `Friend` değiştiricisini kullanır.  
   
  [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
 ## <a name="usage"></a>Kullanım  
- You can use the `Friend` modifier in these contexts:  
+ `Friend` değiştiricisini şu bağlamlarda kullanabilirsiniz:  
   
  [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -79,7 +79,7 @@ Specifies that one or more declared programming elements are accessible only fro
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](./private-protected.md)
 - [Protected Friend](./protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

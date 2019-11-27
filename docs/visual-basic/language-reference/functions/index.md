@@ -13,10 +13,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348085"
 ---
 # <a name="functions-visual-basic"></a>İşlevler (Visual Basic)
-The topics in this section contain tables of the Visual Basic run-time member functions.  
+Bu bölümdeki konularda Visual Basic çalışma zamanı üye işlevlerinin tabloları bulunur.  
   
 > [!NOTE]
-> You can also create functions and call them. For more information, see [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md) and [How to: Create a Procedure that Returns a Value](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).  
+> Ayrıca, işlevler oluşturup bunları çağırabilirsiniz. Daha fazla bilgi için bkz. [Işlev açıklaması](../../../visual-basic/language-reference/statements/function-statement.md) ve [nasıl yapılır: değer döndüren bir yordam oluşturma](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/conversion-functions.md)  

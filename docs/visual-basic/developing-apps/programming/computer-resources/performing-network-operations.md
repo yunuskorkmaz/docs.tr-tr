@@ -14,32 +14,32 @@ ms.locfileid: "74345546"
 ---
 # <a name="performing-network-operations-visual-basic"></a>Ağ İşlemlerini Gerçekleştirme (Visual Basic)
 
-The following tables list tasks associated with the `My.Computer.Network` object.  
+Aşağıdaki tablolarda `My.Computer.Network` nesnesiyle ilişkili görevler listelenmektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
  [Nasıl Yapılır: Karşıya Dosya Yükleme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
- Demonstrates how to upload a file and store it to a remote location using `My.Computer.Network`.  
+ `My.Computer.Network`kullanarak bir dosyayı karşıya yüklemeyi ve uzak bir konuma depolamayı gösterir.  
   
  [Nasıl Yapılır: Dosya İndirme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
- Demonstrates how to download a file from a remote location using `My.Computer.Network`.  
+ `My.Computer.Network`kullanarak uzak bir konumdan bir dosyanın nasıl indirileceğini gösterir.  
   
  [Nasıl Yapılır: Bağlantı Durumunu Denetleme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
- Shows how to determine whether the computer has a working network connection.  
+ Bilgisayarın çalışan bir ağ bağlantısına sahip olup olmadığını nasıl belirleyeceğini gösterir.  
   
 ## <a name="reference"></a>Başvuru  
 
  <xref:Microsoft.VisualBasic.Devices.Network>  
- Lists methods, properties, and events for working with the network.  
+ Ağ ile çalışmaya yönelik yöntemleri, özellikleri ve olayları listeler.  
   
  <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>  
- Describes the `DownloadFile` method.  
+ `DownloadFile` metodunu açıklar.  
   
  <xref:Microsoft.VisualBasic.Devices.Network.Ping%2A>  
- Describes the `Ping` method.  
+ `Ping` metodunu açıklar.  
   
  <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>  
- Describes the `UploadFile` method.  
+ `UploadFile` metodunu açıklar.  
   
  <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>  
- Describes the `IsAvailable` property.
+ `IsAvailable` özelliğini açıklar.

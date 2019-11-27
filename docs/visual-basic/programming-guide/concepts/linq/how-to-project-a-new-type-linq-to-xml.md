@@ -1,5 +1,5 @@
 ---
-title: 'How to: Project a New Type (LINQ to XML)'
+title: 'Nasıl yapılır: yeni bir tür proje (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 8cfb24f5-89b2-4cfb-b85d-e7963f8f1845
 ms.openlocfilehash: a2486d88af537fb4aa8f34243a5a739d25ee5be1
@@ -9,13 +9,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353330"
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>How to: Project a New Type (LINQ to XML) (Visual Basic)
-Other examples in this section have shown queries that return results as <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> of `string`, and <xref:System.Collections.Generic.IEnumerable%601> of `int`. These are common result types, but they are not appropriate for every scenario. In many cases you will want your queries to return an <xref:System.Collections.Generic.IEnumerable%601> of some other type.  
+# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>Nasıl yapılır: yeni bir tür proje (LINQ to XML) (Visual Basic)
+Bu bölümdeki diğer örneklerde, <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement>, `string`<xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.Collections.Generic.IEnumerable%601> `int`olarak sonuçlar döndüren sorgular gösterilmiştir. Bunlar yaygın sonuç türleridir, ancak her senaryo için uygun değildir. Çoğu durumda, sorgularınızın başka türden bir <xref:System.Collections.Generic.IEnumerable%601> döndürmesini isteyeceksiniz.  
   
 ## <a name="example"></a>Örnek  
- This example shows how to instantiate objects in the `Select` clause. The code first defines a new class with a constructor, and then modifies the `Select` statement so that the expression is a new instance of the new class.  
+ Bu örnek, `Select` yan tümcesindeki nesnelerin örneğini oluşturmayı gösterir. Kod ilk olarak bir Oluşturucu içeren yeni bir sınıf tanımlar ve ardından `Select` deyimini değiştirerek ifade yeni sınıfın yeni bir örneği olur.  
   
- This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: tipik satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Public Class NameQty  
@@ -43,9 +43,9 @@ Public Class Program
 End Class  
 ```  
   
- This example uses the `M:System.Xml.Linq.XElement.Element` method that was introduced in the topic [How to: Retrieve a Single Child Element (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md). It also uses casts to retrieve the values of the elements that are returned by the `M:System.Xml.Linq.XElement.Element` method.  
+ Bu örnekte, [nasıl yapılır: tek alt öğe alma (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)konusunda açıklanan `M:System.Xml.Linq.XElement.Element` yöntemi kullanılmaktadır. Ayrıca, `M:System.Xml.Linq.XElement.Element` yöntemi tarafından döndürülen öğelerin değerlerini almak için yayınları kullanır.  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```console  
 Lawnmower:1  
@@ -54,4 +54,4 @@ Baby Monitor:2
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

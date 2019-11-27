@@ -24,7 +24,7 @@ ms.locfileid: "74448032"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd Yöntemi
 
-Merges into the current scope all the metadata scopes specified by one or more prior calls to [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
+[Imetadatayayma:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)için bir veya daha fazla önceki çağrı tarafından belirtilen tüm meta veri kapsamlarını geçerli kapsama birleştirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,43 +34,43 @@ HRESULT MergeEnd ();
 
 ## <a name="parameters"></a>Parametreler
 
-This method takes no parameters.
+Bu yöntem hiçbir parametre alır.
 
 ## <a name="remarks"></a>Açıklamalar
 
-This routine triggers the actual merge of metadata, of all import scopes specified by preceding calls to `IMetaDataEmit::Merge`, into the current output scope.
+Bu yordam, önceki `IMetaDataEmit::Merge`çağrıları tarafından belirtilen tüm içeri aktarma kapsamlarından geçerli çıkış kapsamına gerçek meta verilerin birleştirilmesini tetikler.
 
-The following special conditions apply to the merge:
+Aşağıdaki özel koşullar birleştirme için geçerlidir:
 
-- A module version identifier (MVID) is never imported, because it is unique to the metadata in the import scope.
+- İçeri aktarma kapsamındaki meta veriler için benzersiz olduğundan, bir modül sürümü tanımlayıcısı (MVıD) hiçbir şekilde içeri aktarılmaz.
 
-- No existing module-wide properties are overwritten.
+- Modül genelinde mevcut özelliklerin üzerine yazılmaz.
 
-  If module properties were already set for the current scope, no module properties are imported. However, if module properties have not been set in the current scope, they are imported only once, when they are first encountered. If those module properties are encountered again, they are duplicates. If the values of all module properties (except MVID) are compared and no duplicates are found, an error is raised.
+  Geçerli kapsam için modül özellikleri zaten ayarlandıysa, hiçbir modül özelliği içeri aktarılmaz. Ancak, geçerli kapsamda modül özellikleri ayarlanmamışsa, ilk kez karşılaşıldığında yalnızca bir kez içeri aktarılır. Bu modül özelliklerine yeniden karşılaşılırsa, bunlar yinelemelerdir. Tüm modül özelliklerinin (MVıD hariç) değerleri karşılaştırılaysa ve yinelenen öğeler bulunmazsa bir hata oluşur.
 
-- For type definitions (`TypeDef`), no duplicates are merged into the current scope. `TypeDef` objects are checked for duplicates against each *fully-qualified object name* + *GUID* + *version number*. If there is a match on either name or GUID, and any of the other two elements is different, an error is raised. Otherwise, if all three items match, `MergeEnd` does a cursory check to ensure the entries are indeed duplicates; if not, an error is raised. This cursory check looks for:
+- Tür tanımları (`TypeDef`) için, geçerli kapsamda birleştirilmemiş bir yineleme yok. `TypeDef` nesneler, *guıd* + *sürüm numarasına* + *tam nitelikli nesne adı* için yinelemeler için denetlenir. Ad veya GUID üzerinde bir eşleşme varsa ve diğer iki öğe farklıysa, bir hata oluşur. Aksi takdirde, üç öğe de eşleşiyorsa, girişlerin gerçekten yinelenen olduğundan emin olmak için `MergeEnd` bir Amna hatlarıyla denetimi yapar; Aksi takdirde bir hata oluşur. Bu Amna hatlarıyla denetimi şuna bakar:
 
-  - The same member declarations, occurring in the same order. Members that are flagged as `mdPrivateScope` (see the [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeration) are not included in this check; they are merged specially.
+  - Aynı sırada oluşan aynı üye bildirimleri. `mdPrivateScope` olarak işaretlenen Üyeler ( [Cormethodadttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) sabit listesine bakın) bu denetimi içermez; Bunlar özellikle birleştirilir.
 
-  - The same class layout.
+  - Aynı sınıf düzeni.
 
-  This means that a `TypeDef` object must always be fully and consistently defined in every metadata scope in which it is declared; if its member implementations (for a class) are spread across multiple compilation units, the full definition is assumed to be present in every scope and not incremental to each scope. For example, if parameter names are relevant to the contract, they must be emitted the same way into every scope; if they are not relevant, they should not be emitted into metadata.
+  Bu, bir `TypeDef` nesnesinin bildirildiği her meta veri kapsamındaki her zaman tam ve tutarlı olarak tanımlanması gereken anlamına gelir; üye uygulamaları (bir sınıf için) birden çok derleme birimine yayıldığında, tam tanımın her kapsamda var olduğu varsayılır ve her bir kapsamda artımlı değildir. Örneğin, parametre adları sözleşmeyle ilgiliyse, her kapsama aynı şekilde yayılmaları gerekir; Bunlar ilgili değilse meta verilere yayılmamalıdır.
 
-  The exception is that a `TypeDef` object can have incremental members flagged as `mdPrivateScope`. On encountering these, `MergeEnd` incrementally adds them to the current scope without regard for duplicates. Because the compiler understands the private scope, the compiler must be responsible for enforcing rules.
+  Özel durum, bir `TypeDef` nesnesi, `mdPrivateScope`olarak işaretlenmiş artımlı üyelere sahip olabilir. Bunlarla karşılaşmadan `MergeEnd` yinelenenleri artırarak geçerli kapsama ekler. Derleyici özel kapsamı anladığından, derleyicinin kuralları zorlarken sorumlu olması gerekir.
 
-- Relative virtual addresses (RVAs) are not imported or merged; the compiler is expected to re-emit this information.
+- Göreli sanal adresler (RVA) içeri aktarılmaz veya birleştirilmez; Derleyicinin bu bilgileri yeniden yayma beklenmektedir.
 
-- Custom attributes are merged only when the item to which they are attached is merged. For example, custom attributes associated with a class are merged when the class is first encountered. If custom attributes are associated with a `TypeDef` or `MemberDef` that is specific to the compilation unit (such as the time stamp of a member compile), they are not merged and it is up to the compiler to remove or update such metadata.
+- Özel öznitelikler yalnızca, eklendiği öğe birleştirildiğinde birleştirilir. Örneğin, bir sınıfla ilişkili özel öznitelikler, sınıf ilk kez karşılaşıldığında birleştirilir. Özel öznitelikler, derleme birimine özgü bir `TypeDef` veya `MemberDef` ilişkili ise (bir üye derlenmesi zaman damgası gibi), bunlar birleştirilmez ve söz konusu meta verileri kaldırmak veya güncelleştirmek için derleyiciye kadar olur.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** Cor.h
+**Üst bilgi:** Cor. h
 
-**Library:** Used as a resource in MSCorEE.dll
+**Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır
 
-**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

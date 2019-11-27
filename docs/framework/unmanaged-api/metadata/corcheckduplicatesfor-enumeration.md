@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443780"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor Numaralandırması
-Specifies the metadata tokens that will be checked for duplicates.  
+Çoğaltılanların denetlenme meta veri belirteçlerini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -64,44 +64,44 @@ typedef enum CorCheckDuplicatesFor {
 } CorCheckDuplicatesFor;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`MDDupAll`|Check all metadata tokens for duplicates.|  
-|`MDDupENC`|Kullanılmadı.|  
-|`MDNoDupChecks`|Do not check metadata tokens for duplicates.|  
-|`MDDupTypeDef`|Check for duplicates of `mdTypeDef` tokens.|  
-|`MDDupInterfaceImpl`|Check for duplicates of `mdInterfaceImpl` tokens.|  
-|`MDDupMethodDef`|Check for duplicates of `mdMethodDef` tokens.|  
-|`MDDupTypeRef`|Check for duplicates of `mdTypeRef` tokens.|  
-|`MDDupMemberRef`|Check for duplicates of `mdMemberRef` tokens.|  
-|`MDDupCustomAttribute`|Check for duplicates of `mdCustomAttribute` tokens.|  
-|`MDDupParamDef`|Check for duplicates of `mdParamDef` tokens.|  
-|`MDDupPermission`|Check for duplicates of `mdPermission` tokens.|  
-|`MDDupProperty`|Check for duplicates of `mdProperty` tokens.|  
-|`MDDupEvent`|Check for duplicates of `mdEvent` tokens.|  
-|`MDDupFieldDef`|Check for duplicates of `mdFieldDef` tokens.|  
-|`MDDupSignature`|Check for duplicates of `mdSignature` tokens.|  
-|`MDDupModuleRef`|Check for duplicates of `mdModuleRef` tokens.|  
-|`MDDupTypeSpec`|Check for duplicates of `mdTypeSpec` tokens.|  
-|`MDDupImplMap`|Check for duplicates of `mdImplMap` tokens.|  
-|`MDDupAssemblyRef`|Check for duplicates of `mdAssemblyRef` tokens.|  
-|`MDDupFile`|Check for duplicates of `mdFile` tokens.|  
-|`MDDupExportedType`|Check for duplicates of `mdExportedType` tokens.|  
-|`MDDupManifestResource`|Check for duplicates of `mdManifestResource` tokens.|  
-|`MDDupGenericParam`|Check for duplicates of `mdGenericParam` tokens.|  
-|`MDDupMethodSpec`|Check for duplicates of `mdMethodSpec` tokens.|  
-|`MDDupGenericParamConstraint`|Check for duplicates of `mdGenericParamConstraint` tokens.|  
-|`MDDupAssembly`|Check for duplicates of `mdAssembly` tokens.|  
-|`MDDupDefault`|Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.|  
+|`MDDupAll`|Yinelenen öğeler için tüm meta veri belirteçlerini denetleyin.|  
+|`MDDupENC`|Kullanılmıyor.|  
+|`MDNoDupChecks`|Yinelemeler için meta veri belirteçlerini denetlemeyin.|  
+|`MDDupTypeDef`|`mdTypeDef` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupInterfaceImpl`|`mdInterfaceImpl` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupMethodDef`|`mdMethodDef` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupTypeRef`|`mdTypeRef` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupMemberRef`|`mdMemberRef` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupCustomAttribute`|`mdCustomAttribute` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupParamDef`|`mdParamDef` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupPermission`|`mdPermission` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupProperty`|`mdProperty` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupEvent`|`mdEvent` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupFieldDef`|`mdFieldDef` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupSignature`|`mdSignature` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupModuleRef`|`mdModuleRef` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupTypeSpec`|`mdTypeSpec` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupImplMap`|`mdImplMap` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupAssemblyRef`|`mdAssemblyRef` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupFile`|`mdFile` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupExportedType`|`mdExportedType` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupManifestResource`|`mdManifestResource` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupGenericParam`|`mdGenericParam` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupMethodSpec`|`mdMethodSpec` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupGenericParamConstraint`|`mdGenericParamConstraint` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupAssembly`|`mdAssembly` belirteçlerinin yinelemelerini denetleyin.|  
+|`MDDupDefault`|`mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`ve `mdMethodSpec` belirteçlerinin yinelemelerini denetleyin.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

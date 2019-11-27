@@ -18,16 +18,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349871"
 ---
 # <a name="dates-and-times-summary-visual-basic"></a>Tarihler ve Saatlere İlişkin Özet (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaca ve kullanıma göre düzenlenir.  
   
 |Eylem|Dil öğesi|  
 |------------|----------------------|  
-|Get the current date or time.|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|  
-|Perform date calculations.|<xref:Microsoft.VisualBasic.DateAndTime.DateAdd%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateDiff%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>|  
-|Return a date.|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A>, <xref:Microsoft.VisualBasic.DateAndTime.MonthName%2A>, <xref:Microsoft.VisualBasic.DateAndTime.WeekdayName%2A>|  
-|Return a time.|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
-|Set the date or time.|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|  
-|Time a process.|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|  
+|Geçerli tarih veya saati alın.|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|  
+|Tarih hesaplamaları gerçekleştirin.|<xref:Microsoft.VisualBasic.DateAndTime.DateAdd%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateDiff%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>|  
+|Bir tarih döndürür.|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A>, <xref:Microsoft.VisualBasic.DateAndTime.MonthName%2A>, <xref:Microsoft.VisualBasic.DateAndTime.WeekdayName%2A>|  
+|Bir saat döndürür.|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
+|Tarihi veya saati ayarlayın.|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|  
+|İşlem zamanı.|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

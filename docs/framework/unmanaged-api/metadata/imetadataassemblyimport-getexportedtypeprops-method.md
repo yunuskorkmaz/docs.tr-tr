@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448211"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps Metodu
-Gets the set of properties of the exported type with the specified metadata signature.  
+Belirtilen meta veri imzasıyla, dışarıya aktarılmış türün özelliklerinin kümesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,34 +41,34 @@ HRESULT GetExportedTypeProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mdct`  
- [in] An `mdExportedType` metadata token that represents the exported type.  
+ 'ndaki Bir `mdExportedType` meta veri belirteci, dışarıya aktarılmış türü temsil eder.  
   
  `szName`  
- [out] The name of the exported type.  
+ dışı İçe aktarılmış türün adı.  
   
  `cchName`  
- [in] The size, in wide characters, of `szName`.  
+ 'ndaki `szName`geniş karakterdeki boyut.  
   
  `pchName`  
- [out] The number of wide characters actually returned in `szName`  
+ dışı `szName` ' de döndürülen geniş karakter sayısı  
   
  `ptkImplementation`  
- [out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.  
+ dışı `mdFile`, `mdAssemblyRef`veya bir `mdExportedType` meta veri belirteci, ancak bu, içe aktarılmış türün özelliklerine erişim izni verir.  
   
  `ptkTypeDef`  
- [out] A pointer to an `mdTypeDef` token that represents a type in the file.  
+ dışı Dosyadaki bir türü temsil eden `mdTypeDef` belirtecine yönelik bir işaretçi.  
   
  `pdwExportedTypeFlags`  
- [out] A pointer to the flags that describe the metadata applied to the exported type. The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.  
+ dışı İçe aktarılmış türe uygulanan meta verileri tanımlayan bayrakların işaretçisi. Bayrak değeri bir veya daha fazla [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) değeri olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

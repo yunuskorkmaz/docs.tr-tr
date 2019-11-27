@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448583"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind Numaralandırması
-Indicates the type of memory address.  
+Bellek adresi türünü gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,23 +42,23 @@ typedef enum CorSymAddrKind
 } CorSymAddrKind;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|Indicates a Microsoft intermediate language (MSIL) local variable or parameter index.|  
-|`ADDR_NATIVE_RVA`|Indicates a relative virtual address into a module.|  
-|`ADDR_NATIVE_REGISTER`|Indicates a CPU register.|  
-|`ADDR_NATIVE_REGREL`|Indicates that the first address is a register and the second address is an offset.|  
-|`ADDR_NATIVE_OFFSET`|Indicates an offset from a base address.|  
-|`ADDR_NATIVE_REGREG`|Indicates that the first address is the low portion of a register, and the second address is the high portion.|  
-|`ADDR_NATIVE_REGSTK`|Indicates that the first address is the low portion of a register, the second is the high portion, and the third is an offset.|  
-|`ADDR_NATIVE_STKREG`|Indicates that the first address is a register, the second is an offset, and the third is the high portion of the register.|  
-|`ADDR_BITFIELD`|Indicates that the first address is the start of a field and the second address is the field length.|  
-|`ADDR_NATIVE_ISECTOFFSET`|Indicates that the first address is the section and the second address is an offset.|  
+|`ADDR_IL_OFFSET`|Bir Microsoft ara dili (MSIL) yerel değişkenini veya parametre dizinini gösterir.|  
+|`ADDR_NATIVE_RVA`|Bir modülün göreli bir sanal adresini gösterir.|  
+|`ADDR_NATIVE_REGISTER`|Bir CPU kaydını gösterir.|  
+|`ADDR_NATIVE_REGREL`|İlk adresin bir kayıt olduğunu ve ikinci adresin bir konum olduğunu gösterir.|  
+|`ADDR_NATIVE_OFFSET`|Temel adresten bir konum gösterir.|  
+|`ADDR_NATIVE_REGREG`|İlk adresin kaydın alt kısmı olduğunu ve ikinci adresin ise yüksek bir kısmını gösterir.|  
+|`ADDR_NATIVE_REGSTK`|İlk adresin bir kaydın alt kısmı olduğunu, ikincinin Yüksek kısmını ve üçüncüsü de bir konum olduğunu gösterir.|  
+|`ADDR_NATIVE_STKREG`|İlk adresin bir yazmaç olduğunu, ikincinin bir konum olduğunu ve üçüncü öğenin, kaydın yüksek kısmıdır olduğunu gösterir.|  
+|`ADDR_BITFIELD`|İlk adresin bir alanın başlangıcı olduğunu ve ikinci adresin alan uzunluğu olduğunu gösterir.|  
+|`ADDR_NATIVE_ISECTOFFSET`|İlk adresin bölüm olduğunu ve ikinci adresin bir konum olduğunu gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

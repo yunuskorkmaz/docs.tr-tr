@@ -16,9 +16,9 @@ ms.locfileid: "74446805"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>Yönetilen Kod Nasıl Yapılır Konuları İçin UI Otomasyonu İstemcileri
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- This section provides detailed information about implementing features of [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in a client application.  
+ Bu bölüm, bir istemci uygulamasındaki [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] özelliklerinin uygulanması hakkında ayrıntılı bilgi sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Özellik Koşulunu Temel Alan UI Otomasyonu Öğesi Bulma](find-a-ui-automation-element-based-on-a-property-condition.md)  

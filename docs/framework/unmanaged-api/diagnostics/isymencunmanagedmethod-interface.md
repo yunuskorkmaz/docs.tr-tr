@@ -22,20 +22,20 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448601"
 ---
 # <a name="isymencunmanagedmethod-interface"></a>ISymENCUnmanagedMethod Arabirimi
-Provides information for the Edit and Continue feature.  
+Düzenle ve devam et özelliği hakkında bilgi sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetDocumentsForMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethod-method.md)|Gets the documents that this method has lines in.|  
-|[GetDocumentsForMethodCount Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethodcount-method.md)|Gets the number of documents that this method has lines in.|  
-|[GetFileNameFromOffset Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getfilenamefromoffset-method.md)|Gets the file name for the line associated with an offset.|  
-|[GetLineFromOffset Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getlinefromoffset-method.md)|Gets the line information associated with an offset.|  
-|[GetSourceExtentInDocument Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getsourceextentindocument-method.md)|Gets the smallest start line and largest end line for the method in a specific document.|  
+|[GetDocumentsForMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethod-method.md)|Bu yöntemin içindeki satırları içeren belgeleri alır.|  
+|[GetDocumentsForMethodCount Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethodcount-method.md)|Bu yöntemin içinde satır bulunan belge sayısını alır.|  
+|[GetFileNameFromOffset Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getfilenamefromoffset-method.md)|Bir uzaklığa ilişkin dosya adını alır.|  
+|[GetLineFromOffset Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getlinefromoffset-method.md)|Bir uzaklığa ilişkin satır bilgilerini alır.|  
+|[GetSourceExtentInDocument Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getsourceextentindocument-method.md)|Belirli bir belgedeki Yöntem için en küçük başlangıç satırını ve en büyük bitiş satırını alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

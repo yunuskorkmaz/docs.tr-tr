@@ -1,5 +1,5 @@
 ---
-title: Functional vs. Procedural Programming (LINQ to XML)
+title: İşlevsel ve yordamsal programlama (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
 ms.openlocfilehash: 3d1e3cf01b30454d29836f176afcd39cb2b55b73
@@ -9,37 +9,37 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353410"
 ---
-# <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>Functional vs. Procedural Programming (LINQ to XML) (Visual Basic)
-There are various types of XML applications:  
+# <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>İşlevsel ve yordamsal programlama (LINQ to XML) (Visual Basic)
+Çeşitli türlerdeki XML uygulamaları vardır:  
   
-- Some applications take source XML documents, and produce new XML documents that are in a different shape than the source documents.  
+- Bazı uygulamalar kaynak XML belgelerini alır ve kaynak belgelerden farklı bir şekilde yeni XML belgeleri oluşturur.  
   
-- Some applications take source XML documents, and produce result documents in an entirely different form, such as HTML or CSV text files.  
+- Bazı uygulamalar kaynak XML belgelerini alır ve sonuç belgelerini HTML veya CSV metin dosyaları gibi tamamen farklı bir biçimde oluşturur.  
   
-- Some applications take source XML documents, and insert records into a database.  
+- Bazı uygulamalar kaynak XML belgelerini alır ve bir veritabanına kayıt ekler.  
   
-- Some applications take data from another source, such as a database, and create XML documents from it.  
+- Bazı uygulamalar, bir veritabanı gibi başka bir kaynaktan veri alır ve bundan XML belgesi oluşturur.  
   
- These are not all of the types of XML applications, but these are a representative set of the types of functionality that an XML programmer has to implement.  
+ Bunlar, XML uygulaması türlerinin hepsi değildir, ancak bunlar bir XML Programlayıcısının uygulamak zorunda olduğu işlevsellik türlerinin temsili bir kümesidir.  
   
- With all of these types of applications, there are two contrasting approaches that a developer can take:  
+ Bu tür uygulamaların tümünde, bir geliştiricinin uygulayabileceğiniz iki yaklaşım vardır:  
   
-- Functional construction using a declarative approach.  
+- Bildirim temelli bir yaklaşım kullanılarak işlevsel oluşturma.  
   
-- In-memory XML tree modification using procedural code.  
+- Yordamsal kodu kullanarak bellek içi XML ağacı değişikliği.  
   
- LINQ to XML supports both approaches.  
+ LINQ to XML her iki yaklaşımı destekler.  
   
- When using the functional approach, you write transformations that take the source documents and generate completely new result documents with the desired shape.  
+ İşlevsel yaklaşımı kullanırken, kaynak belgeleri alan ve istenen şekle sahip tamamen yeni sonuç belgeleri oluşturan dönüşümler yazarsınız.  
   
- When modifying an XML tree in place, you write code that traverses and navigates through nodes in an in-memory XML tree, inserting, deleting, and modifying nodes as necessary.  
+ Bir XML ağacını yerinde değiştirirken, düğüm içi bir XML ağacındaki düğümlerde geçen ve gezinen, düğümleri ekleme, silme ve değiştirme gibi bir kod yazın.  
   
- You can use LINQ to XML with either approach. You use the same classes, and in some cases the same methods. However, the structure and goals of the two approaches are very different. For example, in different situations, one or the other approach will often have better performance, and use more or less memory. In addition, one or the other approach will be easier to write and yield more maintainable code.  
+ LINQ to XML iki yaklaşımla de kullanabilirsiniz. Aynı sınıfları ve bazı durumlarda aynı yöntemleri kullanırsınız. Ancak, iki yaklaşımdan oluşan yapı ve hedefler çok farklıdır. Örneğin, farklı durumlarda, bir veya diğer yaklaşım genellikle daha iyi performansa sahip olur ve daha fazla veya daha az bellek kullanır. Buna ek olarak, bir veya başka bir yaklaşım daha fazla erişilebilir kod yazmak ve sağlamak daha kolay olacaktır.  
   
- To see the two approaches contrasted, see [In-Memory XML Tree Modification vs. Functional Construction (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md).  
+ Bu iki yaklaşımı görmek için bkz. [bellek ıçı XML ağacı değişikliği ve Işlevsel oluşturma (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md).  
   
- For a tutorial on writing functional transformations, see [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ İşlev dönüştürmeleri yazma hakkında bir öğretici için bkz. [XML 'In saf Işlevsel dönüştürmeleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML programlamaya genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

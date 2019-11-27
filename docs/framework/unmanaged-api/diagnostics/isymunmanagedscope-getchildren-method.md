@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446363"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>ISymUnmanagedScope::GetChildren Metodu
-Gets the children of this scope.  
+Bu kapsamın alt öğelerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT GetChildren(
   
 ## <a name="parameters"></a>Parametreler  
  `cChildren`  
- [in] A `ULONG32` that indicates the size of the `children` array.  
+ 'ndaki `children` dizisinin boyutunu belirten `ULONG32`.  
   
  `pcChildren`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the children.  
+ dışı Alt öğeleri içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.  
   
  `children`  
- [out] The returned array of children.  
+ dışı Döndürülen alt öğe dizisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,17 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448509"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>Tanılama Sembol Deposu Yapıları
-This topic describes the unmanaged structures that the diagnostics symbol store API uses.  
+Bu konuda, tanılama sembol deposu API 'sinin kullandığı yönetilmeyen yapılar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [CALL_ID Yapısı](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
- Provides information to a debugger about a function that is being called.  
+ Çağrılmakta olan bir işlev hakkında bilgi bir hata ayıklayıcıyla ilgili bilgiler sağlar.  
   
  [SYMLINEDELTA Yapısı](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
- Provides information to the symbol handler about methods that were moved as a result of edits.  
+ Düzenleme sonucu olarak taşınan yöntemler hakkında sembol işleyicisine bilgi sağlar.  
   
  [USER_THREAD Yapısı](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
- Provides information to a debugger about a thread.  
+ Bir iş parçacığı hakkındaki hata ayıklayıcıyla ilgili bilgi sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

@@ -15,86 +15,86 @@ ms.locfileid: "74353598"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>İzlenecek Yol: My.Application.Log Çıktısını Filtreleme (Visual Basic)
 
-This walkthrough demonstrates how to change the default log filtering for the `My.Application.Log` object, to control what information is passed from the `Log` object to the listeners and what information is written by the listeners. You can change the logging behavior even after building the application, because the configuration information is stored in the application's configuration file.
+Bu izlenecek yol, `Log` nesnesinden dinleyicilerine hangi bilgilerin geçtiğini ve hangi bilgilerin dinleyiciler tarafından yazıldığını denetlemek için `My.Application.Log` nesnesi için varsayılan günlük filtrelemesinin nasıl değiştirileceğini gösterir. Yapılandırma bilgileri uygulamanın yapılandırma dosyasında depolandığından, uygulamayı oluşturduktan sonra bile günlüğe kaydetme davranışını değiştirebilirsiniz.
 
 ## <a name="getting-started"></a>Başlarken
 
-Each message that `My.Application.Log` writes has an associated severity level, which filtering mechanisms use to control the log output. This sample application uses `My.Application.Log` methods to write several log messages with different severity levels.
+`My.Application.Log` yazmaları olan her ileti, bir ilişkili önem düzeyine sahiptir ve bu da filtreleme mekanizmalarının günlük çıkışını denetlemek için kullandığı bir önem derecesi vardır Bu örnek uygulama, farklı önem düzeylerindeki çeşitli günlük iletilerini yazmak için `My.Application.Log` yöntemler kullanır.
 
-#### <a name="to-build-the-sample-application"></a>To build the sample application
+#### <a name="to-build-the-sample-application"></a>Örnek uygulamayı derlemek için
 
-1. Open a new Visual Basic Windows Application project.
+1. Yeni bir Visual Basic Windows uygulaması projesi açın.
 
-2. Add a button named Button1 to Form1.
+2. Form1 adına button1 adlı bir düğme ekleyin.
 
-3. In the <xref:System.Windows.Forms.Control.Click> event handler for Button1, add the following code:
+3. Button1 için <xref:System.Windows.Forms.Control.Click> olay işleyicisinde aşağıdaki kodu ekleyin:
 
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]
 
-4. Run the application in the debugger.
+4. Uygulamayı hata ayıklayıcıda çalıştırın.
 
-5. Press **Button1**.
+5. **Button1**'e basın.
 
-     The application writes the following information to the application's debug output and log file.
+     Uygulama, uygulamanın hata ayıklama çıktısına ve günlük dosyasına aşağıdaki bilgileri yazar.
 
      `DefaultSource Information: 0 : In Button1_Click`
 
      `DefaultSource Error: 2 : Error in the application.`
 
-6. Close the application.
+6. Uygulamayı kapatın.
 
-     For information on how to view the application's debug output window, see [Output Window](/visualstudio/ide/reference/output-window). For information on the location of the application's log file, see [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
+     Uygulamanın hata ayıklama çıkış penceresini görüntüleme hakkında daha fazla bilgi için bkz. [Çıkış penceresi](/visualstudio/ide/reference/output-window). Uygulamanın günlük dosyasının konumu hakkında daha fazla bilgi için bkz [. Walkthrough: My. Application. log bilgisinin nereden yazabileceğini belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
 
     > [!NOTE]
-    > By default, the application flushes the log-file output when the application closes.
+    > Varsayılan olarak uygulama kapandığında günlük dosyası çıkışını temizler.
 
-     In the example above, the second call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> method and the call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> method produces log output, while the first and last calls to the `WriteEntry` method do not. This is because the severity levels of `WriteEntry` and `WriteException` are "Information" and "Error", both of which are allowed by the `My.Application.Log` object's default log filtering. However, events with "Start" and "Stop" severity levels are prevented from producing log output.
+     Yukarıdaki örnekte, <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> yöntemine yapılan ikinci çağrı ve <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> yöntemine yapılan çağrı günlük çıktısını üretir, ancak `WriteEntry` yöntemine yapılan ilk ve son çağrılar değildir. Bunun nedeni, `WriteEntry` ve `WriteException` önem seviyelerinin, her ikisi de `My.Application.Log` nesnenin varsayılan günlük filtrelemesine izin verilen "bilgi" ve "hata" olmasından kaynaklanır. Bununla birlikte, "Başlat" ve "Durdur" önem derecesindeki olaylar günlük çıktısı üretmesinin engellenmektedir.
 
-## <a name="filtering-for-all-myapplicationlog-listeners"></a>Filtering for All My.Application.Log Listeners
+## <a name="filtering-for-all-myapplicationlog-listeners"></a>Tüm My. Application. log dinleyicileri için filtreleme
 
-The `My.Application.Log` object uses a <xref:System.Diagnostics.SourceSwitch> named `DefaultSwitch` to control which messages it passes from the `WriteEntry` and `WriteException` methods to the log listeners. You can configure `DefaultSwitch` in the application's configuration file by setting its value to one of the <xref:System.Diagnostics.SourceLevels> enumeration values. By default, its value is "Information".
+`My.Application.Log` nesnesi, `WriteEntry` ve `WriteException` yöntemlerinden günlük dinleyicilerine hangi iletilerin geçireceğini denetlemek için `DefaultSwitch` adlı bir <xref:System.Diagnostics.SourceSwitch> kullanır. Uygulamanın yapılandırma dosyasında `DefaultSwitch`, değerini <xref:System.Diagnostics.SourceLevels> sabit listesi değerlerinden birine ayarlayarak yapılandırabilirsiniz. Varsayılan olarak, değeri "bilgi" ' dir.
 
-This table shows the severity level required for Log to write a message to the listeners, given a particular `DefaultSwitch` setting.
+Bu tablo, belirli bir `DefaultSwitch` ayarı için, günlüğe kaydedilecek bir ileti yazmak üzere gereken önem derecesini gösterir.
 
-|DefaultSwitch Value|Message severity required for output|
+|DefaultSwitch değeri|Çıkış için gereken ileti önem derecesi|
 |---|---|
 |`Critical`|`Critical`|
-|`Error`|`Critical` or `Error`|
-|`Warning`|`Critical`, `Error`, or `Warning`|
-|`Information`|`Critical`, `Error`, `Warning`, or `Information`|
-|`Verbose`|`Critical`, `Error`, `Warning`, `Information`, or `Verbose`|
-|`ActivityTracing`|`Start`, `Stop`, `Suspend`, `Resume`, or `Transfer`|
-|`All`|All messages are allowed.|
-|`Off`|All messages are blocked.|
+|`Error`|`Critical` veya `Error`|
+|`Warning`|`Critical`, `Error`veya `Warning`|
+|`Information`|`Critical`, `Error`, `Warning`veya `Information`|
+|`Verbose`|`Critical`, `Error`, `Warning`, `Information`veya `Verbose`|
+|`ActivityTracing`|`Start`, `Stop`, `Suspend`, `Resume`veya `Transfer`|
+|`All`|Tüm iletilere izin verilir.|
+|`Off`|Tüm iletiler engellenir.|
 
 > [!NOTE]
-> The `WriteEntry` and `WriteException` methods each have an overload that does not specify a severity level. The implicit severity level for the `WriteEntry` overload is "Information", and the implicit severity level for the `WriteException` overload is "Error".
+> `WriteEntry` ve `WriteException` yöntemlerinin her biri önem düzeyi belirtmeyen bir aşırı yüklemeye sahiptir. `WriteEntry` aşırı yüklemesi için örtük önem düzeyi "bilgi" ve `WriteException` aşırı yüklemesi için örtülü önem düzeyi "hata" dır.
 
-This table explains the log output shown in the previous example: with the default `DefaultSwitch` setting of "Information", only the second call to the `WriteEntry` method and the call to the `WriteException` method produce log output.
+Bu tabloda, önceki örnekte gösterilen günlük çıktısı açıklanmaktadır: "Information" öğesinin varsayılan `DefaultSwitch` ayarı ile, yalnızca `WriteEntry` yöntemine yapılan ikinci çağrı ve `WriteException` yöntemine yapılan çağrı günlük çıktısını üretir.
 
-#### <a name="to-log-only-activity-tracing-events"></a>To log only activity tracing events
+#### <a name="to-log-only-activity-tracing-events"></a>Yalnızca etkinlik izleme olaylarını günlüğe kaydetmek için
 
-1. Right-click app.config in the **Solution Explorer** and select **Open**.
+1. **Çözüm Gezgini** App. config öğesine sağ tıklayın ve **Aç**' ı seçin.
 
      veya
 
-     If there is no app.config file:
+     App. config dosyası yoksa:
 
-    1. On the **Project** menu, choose **Add New Item**.
+    1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-    2. From the **Add New Item** dialog box, choose **Application Configuration File**.
+    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası**' nı seçin.
 
     3. **Ekle**'yi tıklatın.
 
-2. Locate the `<switches>` section, which is in the `<system.diagnostics>` section, which is in the top-level `<configuration>` section.
+2. Üst düzey `<configuration>` bölümünde olan `<system.diagnostics>` bölümündeki `<switches>` bölümünü bulun.
 
-3. Find the element that adds `DefaultSwitch` to the collection of switches. It should look similar to this element:
+3. Anahtarlar koleksiyonuna `DefaultSwitch` ekleyen öğeyi bulun. Bu öğe şuna benzer görünmelidir:
 
      `<add name="DefaultSwitch" value="Information" />`
 
-4. Change the value of the `value` attribute to "ActivityTracing".
+4. `value` özniteliğinin değerini "ActivityTracing" olarak değiştirin.
 
-5. The content of the app.config file should be similar to the following XML:
+5. App. config dosyasının içeriği aşağıdaki XML 'e benzer olmalıdır:
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -123,50 +123,50 @@ This table explains the log output shown in the previous example: with the defau
     </configuration>
     ```
 
-6. Run the application in the debugger.
+6. Uygulamayı hata ayıklayıcıda çalıştırın.
 
-7. Press **Button1**.
+7. **Button1**'e basın.
 
-     The application writes the following information to the application's debug output and log file:
+     Uygulama aşağıdaki bilgileri uygulamanın hata ayıklama çıktısına ve günlük dosyasına yazar:
 
      `DefaultSource Start: 4 : Entering Button1_Click`
 
      `DefaultSource Stop: 5 : Leaving Button1_Click`
 
-8. Close the application.
+8. Uygulamayı kapatın.
 
-9. Change the value of the `value` attribute back to "Information".
+9. `value` özniteliğinin değerini "Information" olarak değiştirin.
 
     > [!NOTE]
-    > The `DefaultSwitch` switch setting controls only `My.Application.Log`. It does not change how the .NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> and <xref:System.Diagnostics.Debug?displayProperty=nameWithType> classes behave.
+    > `DefaultSwitch` Switch ayarı yalnızca `My.Application.Log`denetler. .NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> ve <xref:System.Diagnostics.Debug?displayProperty=nameWithType> sınıflarının nasıl davranacağını değiştirmez.
 
-## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Individual Filtering For My.Application.Log Listeners
+## <a name="individual-filtering-for-myapplicationlog-listeners"></a>My. Application. log dinleyicileri Için bireysel filtreleme
 
-The previous example shows how to change the filtering for all `My.Application.Log` output. This example demonstrates how to filter an individual log listener. By default, an application has two listeners that write to the application's debug output and the log file.
+Önceki örnekte, tüm `My.Application.Log` çıktısının filtrelemesinin nasıl değiştirileceği gösterilmektedir. Bu örnek, tek bir günlük dinleyicisinin nasıl filtreleneceğini gösterir. Varsayılan olarak, uygulamanın, uygulamanın hata ayıklama çıktısına ve günlük dosyasına yazan iki dinleyicisi vardır.
 
-The configuration file controls the behavior of the log listeners by allowing each one to have a filter, which is similar to a switch for `My.Application.Log`. A log listener will output a message only if the message's severity is allowed by both the log's `DefaultSwitch` and the log listener's filter.
+Yapılandırma dosyası, her birinin bir filtreye sahip olmasını sağlayarak, `My.Application.Log`için bir anahtara benzer olan günlük dinleyicilerinin davranışını denetler. Günlük dinleyicisi yalnızca, iletinin önem derecesine yalnızca günlüğün `DefaultSwitch` ve günlük dinleyicinin filtresi tarafından izin veriliyorsa bir ileti çıktı.
 
-This example demonstrates how to configure filtering for a new debug listener and add it to the `Log` object. The default debug listener should be removed from the `Log` object, so it is clear that the debug messages come from the new debug listener.
+Bu örnek, yeni bir hata ayıklama dinleyicisi için filtrelemenin nasıl yapılandırılacağını ve `Log` nesnesine nasıl ekleneceğini gösterir. Varsayılan hata ayıklama dinleyicisi `Log` nesnesinden kaldırılmalıdır, bu nedenle hata ayıklama iletilerinin yeni hata ayıklama dinleyicisinden geldiği temizlenmelidir.
 
-#### <a name="to-log-only-activity-tracing-events"></a>To log only activity-tracing events
+#### <a name="to-log-only-activity-tracing-events"></a>Yalnızca etkinlik izleme olaylarını günlüğe kaydetmek için
 
-1. Right-click app.config in the **Solution Explorer** and choose **Open**.
+1. **Çözüm Gezgini** App. config öğesine sağ tıklayın ve **Aç**' ı seçin.
 
-     \-or-
+     \-veya-
 
-     If there is no app.config file:
+     App. config dosyası yoksa:
 
-    1. On the **Project** menu, choose **Add New Item**.
+    1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-    2. From the **Add New Item** dialog box, choose **Application Configuration File**.
+    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası**' nı seçin.
 
     3. **Ekle**'yi tıklatın.
 
-2. Right-click app.config in **Solution Explorer**. Choose **Open**.
+2. **Çözüm Gezgini**' de App. config öğesine sağ tıklayın. **Aç**' ı seçin.
 
-3. Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", which is under the `<sources>` section. The `<sources>` section is under the `<system.diagnostics>` section, in the top-level `<configuration>` section.
+3. `<source>` bölümündeki `<listeners>` bölümünü, `<sources>` bölümünün altında bulunan "DefaultSource" `name` özniteliğiyle bulun. `<sources>` bölümü, üst düzey `<configuration>` bölümünde `<system.diagnostics>` bölümünün altındadır.
 
-4. Add this element to the `<listeners>` section:
+4. Bu öğeyi `<listeners>` bölümüne ekleyin:
 
     ```xml
     <!-- Remove the default debug listener. -->
@@ -175,9 +175,9 @@ This example demonstrates how to configure filtering for a new debug listener an
     <add name="NewDefault"/>
     ```
 
-5. Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
+5. Üst düzey `<configuration>` bölümündeki `<system.diagnostics>` bölümünde `<sharedListeners>` bölümünü bulun.
 
-6. Add this element to that `<sharedListeners>` section:
+6. Bu öğeyi bu `<sharedListeners>` bölümüne ekleyin:
 
     ```xml
     <add name="NewDefault"
@@ -190,9 +190,9 @@ This example demonstrates how to configure filtering for a new debug listener an
     </add>
     ```
 
-     The <xref:System.Diagnostics.EventTypeFilter> filter takes one of the <xref:System.Diagnostics.SourceLevels> enumeration values as its `initializeData` attribute.
+     <xref:System.Diagnostics.EventTypeFilter> filtresi <xref:System.Diagnostics.SourceLevels> sabit listesi değerlerinden birini `initializeData` özniteliği olarak alır.
 
-7. The content of the app.config file should be similar to the following XML:
+7. App. config dosyasının içeriği aşağıdaki XML 'e benzer olmalıdır:
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -233,23 +233,23 @@ This example demonstrates how to configure filtering for a new debug listener an
     </configuration>
     ```
 
-8. Run the application in the debugger.
+8. Uygulamayı hata ayıklayıcıda çalıştırın.
 
-9. Press **Button1**.
+9. **Button1**'e basın.
 
-     The application writes the following information to the application's log file:
+     Uygulama, uygulamanın günlük dosyasına aşağıdaki bilgileri yazar:
 
      `Default Information: 0 : In Button1_Click`
 
      `Default Error: 2 : Error in the application.`
 
-     The application writes less information to the application's debug output because of the more restrictive filtering.
+     Uygulama daha kısıtlayıcı filtreleme nedeniyle uygulamanın hata ayıklama çıktısına daha az bilgi yazar.
 
      `Default Error   2   Error`
 
-10. Close the application.
+10. Uygulamayı kapatın.
 
-For more information about changing log settings after deployment, see [Working with Application Logs](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
+Dağıtımdan sonra günlük ayarlarını değiştirme hakkında daha fazla bilgi için bkz. [Uygulama Günlükleriyle Çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

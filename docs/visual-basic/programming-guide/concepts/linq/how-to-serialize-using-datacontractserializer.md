@@ -1,5 +1,5 @@
 ---
-title: 'How to: Serialize Using DataContractSerializer'
+title: 'Nasıl yapılır: DataContractSerializer kullanarak serileştirme'
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
 ms.openlocfilehash: 6c4142673cc374fbc6202e5806d1e9016cc81893
@@ -9,11 +9,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352366"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>How to: Serialize Using DataContractSerializer (Visual Basic)
-This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.  
+# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>Nasıl yapılır: DataContractSerializer kullanarak serileştirme (Visual Basic)
+Bu konuda <xref:System.Runtime.Serialization.DataContractSerializer>kullanarak seri hale getirilen ve serileştiren bir örnek gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects. It then serializes them to text files, and then deserializes them from the text files.  
+ Aşağıdaki örnek <xref:System.Xml.Linq.XElement> nesneleri içeren bir dizi nesne oluşturur. Daha sonra bunları metin dosyalarına serileştirir ve metin dosyalarından serileştirir.  
   
 ```vb  
 Imports System  
@@ -72,7 +72,7 @@ Public Class XElementNullContainer
 End Class  
 ```  
   
- This example produces the following output:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```console  
 Testing for type: System.Xml.Linq.XElement  
@@ -85,4 +85,4 @@ Testing for type: XElementNullContainer
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Serializing Object Graphs that Contain XElement Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [XElement nesneleri içeren nesne grafiklerini serileştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

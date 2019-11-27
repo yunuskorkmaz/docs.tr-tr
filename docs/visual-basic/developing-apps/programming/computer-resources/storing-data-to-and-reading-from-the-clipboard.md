@@ -1,5 +1,5 @@
 ---
-title: Storing data to and reading from the Clipboard
+title: Verileri Panoda Depolama ve Panodan Okuma
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)
@@ -16,62 +16,62 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349726"
 ---
-# <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Storing data to and reading from the Clipboard (Visual Basic)
+# <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Verileri Panoda Depolama ve Panodan Okuma (Visual Basic)
 
-The Clipboard can be used to store data, such as text and images. Because the Clipboard is shared by all active processes, it can be used to transfer data between them. The `My.Computer.Clipboard` object allows you to easily access the Clipboard and to read from and write to it.  
+Pano, metin ve görüntü gibi verileri depolamak için kullanılabilir. Pano tüm etkin süreçler tarafından paylaşıldığından, bunlar arasında veri aktarmak için kullanılabilir. `My.Computer.Clipboard` nesnesi, panoya kolayca erişmenizi ve bu dosyayı okuyup yazmanızı sağlar.  
   
-## <a name="reading-from-the-clipboard"></a>Reading from the Clipboard  
+## <a name="reading-from-the-clipboard"></a>Panodan Okuma  
 
- Use the <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A> method to read the text in the Clipboard. The following code reads the text and displays it in a message box. There must be text stored on the Clipboard for the example to run correctly.  
+ Panodaki metni okumak için <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A> yöntemini kullanın. Aşağıdaki kod, metni okur ve bir ileti kutusunda görüntüler. Örneğin doğru şekilde çalışması için Panoda depolanan metin olmalıdır.  
   
  [!code-vb[VbVbcnMyClipboard#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#4)]  
   
- This code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **Windows Forms Applications > Clipboard**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
+ Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide, **pano > Windows Forms uygulamalarda**bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).  
   
- Use the <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> method to retrieve an image from the Clipboard. This example checks to see if there is an image on the Clipboard before retrieving it and assigning it to `PictureBox1`.  
+ Panodan bir görüntü almak için <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> yöntemini kullanın. Bu örnek, yüklemeden önce panoda bir görüntü olup olmadığını ve `PictureBox1`atamaya yönelik olup olmadığını denetler.  
   
  [!code-vb[VbResourceTasks#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#16)]  
   
- This code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **Windows Forms Applications > Clipboard**.For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
+ Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide, **pano > Windows Forms uygulamalarda**bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).  
   
- Items placed on the Clipboard will persist even after the application is shut down.  
+ Pano 'ya yerleştirilmiş öğeler, uygulama kapatıldıktan sonra bile kalır.  
   
-## <a name="determining-the-type-of-file-stored-in-the-clipboard"></a>Determining the type of file stored in the Clipboard  
+## <a name="determining-the-type-of-file-stored-in-the-clipboard"></a>Panoda depolanan dosya türünü belirleme  
 
- Data on the Clipboard may take a number of different forms, such as text, an audio file, or an image. In order to determine what sort of file is on the Clipboard, you can use methods such as <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A>, and <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A>. The <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> method can be used if you have a custom format that you want to check.  
+ Panodaki veriler metin, ses dosyası veya görüntü gibi çeşitli biçimlerde olabilir. Panodaki dosya sıralamasını belirlemek için <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A>ve <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A>gibi yöntemleri kullanabilirsiniz. Denetlemek istediğiniz özel bir biçim varsa <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> yöntemi kullanılabilir.  
   
- Use the `ContainsImage` function to determine whether the data contained on the Clipboard is an image. The following code checks to see whether the data is an image and reports accordingly.  
+ Panoda içerilen verilerin bir görüntü olup olmadığını anlamak için `ContainsImage` işlevini kullanın. Aşağıdaki kod, verilerin bir görüntü ve raporların uygun olup olmadığını denetler.  
   
  [!code-vb[VbResourceTasks#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#13)]  
   
-## <a name="clearing-the-clipboard"></a>Clearing the Clipboard  
+## <a name="clearing-the-clipboard"></a>Panoyu Temizleme  
 
- The <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear%2A> method clears the Clipboard. Because the Clipboard is shared by other processes, clearing it may have an impact on those processes.  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear%2A> yöntemi panoyu temizler. Pano başka süreçler tarafından paylaşıldığından, temizleme işlemi bu işlemlere etkisi olabilir.  
   
- The following code shows how to use the `Clear` method.  
+ Aşağıdaki kod `Clear` yönteminin nasıl kullanılacağını gösterir.  
   
  [!code-vb[VbVbcnMyClipboard#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#3)]  
   
-## <a name="writing-to-the-clipboard"></a>Writing to the Clipboard  
+## <a name="writing-to-the-clipboard"></a>Panoya yazma  
 
- Use the <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText%2A> method to write text to the Clipboard. The following code writes the string "This is a test string" to the Clipboard.  
+ Panoya metin yazmak için <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText%2A> yöntemini kullanın. Aşağıdaki kod, panoya "This bir test dizesidir" dizesini yazar.  
   
  [!code-vb[VbVbcnMyClipboard#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#1)]  
   
- The `SetText` method can accept a format parameter that contains a type of <xref:System.Windows.Forms.TextDataFormat>. The following code writes the string "This is a test string" to the Clipboard as RTF text.  
+ `SetText` yöntemi bir <xref:System.Windows.Forms.TextDataFormat>türü içeren bir biçim parametresi kabul edebilir. Aşağıdaki kod, "Bu bir test dizesi" dizesini RTF metni olarak panoya yazar.  
   
  [!code-vb[VbVbcnMyClipboard#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#2)]  
   
- Use the <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> method to write data to the Clipboard. This example writes the `DataObject` `dataChunk` to the Clipboard in the custom format `specialFormat`.  
+ Panoya veri yazmak için <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> yöntemini kullanın. Bu örnek, `DataObject` `dataChunk` özel biçim `specialFormat`panoya yazar.  
   
  [!code-vb[VbVbcnMyClipboard#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#7)]  
   
- Use the <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetAudio%2A> method to write audio data to the Clipboard. This example creates the byte array `musicReader`, reads the file `cool.wav` into it, and then writes it to the Clipboard.  
+ Pano 'ya ses verileri yazmak için <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetAudio%2A> yöntemini kullanın. Bu örnek, bayt dizisi `musicReader`oluşturur, dosyayı buna `cool.wav` okur ve sonra panoya yazar.  
   
  [!code-vb[VbResourceTasks#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#5)]  
   
 > [!IMPORTANT]
-> Because the Clipboard can be accessed by other users, do not use it to store sensitive information, such as passwords or confidential data.  
+> Panoya diğer kullanıcılar tarafından erişilebildiğinden, parola veya gizli veriler gibi hassas bilgileri depolamak için bu uygulamayı kullanmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

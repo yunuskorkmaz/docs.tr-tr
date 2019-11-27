@@ -14,22 +14,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348520"
 ---
 # <a name="input-and-output-summary-visual-basic"></a>Giriş ve Çıkış Özeti (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaca ve kullanıma göre düzenlenir.  
   
 |Eylem|Dil öğesi|  
 |------------|----------------------|  
-|Access or create a file.|<xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>|  
-|Close files.|<xref:Microsoft.VisualBasic.FileSystem.FileClose%2A>, <xref:Microsoft.VisualBasic.FileSystem.Reset%2A>|  
-|Control output appearance.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.SPC%2A>, <xref:Microsoft.VisualBasic.FileSystem.TAB%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileWidth%2A>|  
-|Copy a file.|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
-|Get information about a file.|<xref:Microsoft.VisualBasic.FileSystem.EOF%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>, <xref:Microsoft.VisualBasic.FileSystem.FreeFile%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.Loc%2A>, <xref:Microsoft.VisualBasic.FileSystem.LOF%2A>, <xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
-|Get or provide information from/to the user by means of a control dialog box.|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
-|Manage files.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>, <xref:Microsoft.VisualBasic.FileSystem.Kill%2A>, <xref:Microsoft.VisualBasic.FileSystem.Lock%2A>, <xref:Microsoft.VisualBasic.FileSystem.Unlock%2A>|  
-|Read from a file.|<xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Input%2A>, <xref:Microsoft.VisualBasic.FileSystem.InputString%2A>, <xref:Microsoft.VisualBasic.FileSystem.LineInput%2A>|  
-|Return length of a file.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
-|Set or get file attributes.|<xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
-|Set read-write position in a file.|<xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
-|Write to a file.|<xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>, <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.Write%2A>, <xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A>|  
+|Dosyaya erişin veya dosya oluşturun.|<xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>|  
+|Dosyaları kapatın.|<xref:Microsoft.VisualBasic.FileSystem.FileClose%2A>, <xref:Microsoft.VisualBasic.FileSystem.Reset%2A>|  
+|Denetim çıkış görünümü.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.SPC%2A>, <xref:Microsoft.VisualBasic.FileSystem.TAB%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileWidth%2A>|  
+|Bir dosyayı kopyalayın.|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
+|Bir dosya hakkında bilgi alın.|<xref:Microsoft.VisualBasic.FileSystem.EOF%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>, <xref:Microsoft.VisualBasic.FileSystem.FreeFile%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.Loc%2A>, <xref:Microsoft.VisualBasic.FileSystem.LOF%2A>, <xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
+|Bir denetim iletişim kutusu aracılığıyla kullanıcıya bilgi alın veya buradan bilgi sağlayın.|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
+|Dosyaları yönetin.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>, <xref:Microsoft.VisualBasic.FileSystem.Kill%2A>, <xref:Microsoft.VisualBasic.FileSystem.Lock%2A>, <xref:Microsoft.VisualBasic.FileSystem.Unlock%2A>|  
+|Dosyadan okuyun.|<xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Input%2A>, <xref:Microsoft.VisualBasic.FileSystem.InputString%2A>, <xref:Microsoft.VisualBasic.FileSystem.LineInput%2A>|  
+|Bir dosyanın dönüş uzunluğu.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
+|Dosya özniteliklerini ayarlayın veya alın.|<xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
+|Dosyada okuma-yazma konumu ayarlayın.|<xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
+|Bir dosyaya yazın.|<xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>, <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.Write%2A>, <xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

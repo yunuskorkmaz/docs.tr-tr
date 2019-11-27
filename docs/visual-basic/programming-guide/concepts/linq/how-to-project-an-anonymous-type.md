@@ -1,5 +1,5 @@
 ---
-title: 'How to: Project an Anonymous Type'
+title: 'Nasıl yapılır: anonim bir tür proje'
 ms.date: 07/20/2015
 ms.assetid: 30b42987-0e0e-4b2b-adb1-5255ddfbcd7b
 ms.openlocfilehash: f60c55b9bc25e4691edd275c6e7417fccf5798ab
@@ -9,10 +9,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347749"
 ---
-# <a name="how-to-project-an-anonymous-type-visual-basic"></a>How to: Project an Anonymous Type (Visual Basic)
-In some cases you might want to project a query to a new type, even though you know you will only use this type for a short while. It is a lot of extra work to create a new type just to use in the projection. A more efficient approach in this case is to project to an anonymous type. Anonymous types allow you to define a class, then declare and initialize an object of that class, without giving the class a name.  
+# <a name="how-to-project-an-anonymous-type-visual-basic"></a>Nasıl yapılır: anonim bir tür proje (Visual Basic)
+Bazı durumlarda, bu türü yalnızca kısa bir süre kullanacağınızı bildiğiniz halde yeni bir türe bir sorgu için proje yapmak isteyebilirsiniz. Projeksiyon içinde kullanmak için yeni bir tür oluşturmaya yönelik çok fazla iş vardır. Bu örnekte daha verimli bir yaklaşım, bir anonim türe projem değildir. Anonim türler sınıfı tanımlamanızı sağlar, sonra sınıfa bir ad vermeden bu sınıfın bir nesnesini bildirip başlatabilir.  
   
- Anonymous types are the C# implementation of the mathematical concept of a *tuple*. The mathematical term tuple originated from the sequence single, double, triple, quadruple, quintuple, n-tuple. It refers to a finite sequence of objects, each of a specific type. Sometimes this is called a list of name/value pairs. For example, the contents of an address in the [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML document could be expressed as follows:  
+ Anonim türler, bir C# *tanımlama*grubunun matematik kavramının uygulamasıdır. Matematiksel terim tanımlama grubu, tek, Çift, Üçlü, dörtlü, quintuple, n-Tuple dizisinden kaynakdır. Belirli bir türün her biri, sınırlı bir nesne dizisine başvurur. Bazen buna ad/değer çiftleri listesi denir. Örneğin, [örnek XML dosyasındaki bir adresin içeriği: tipik satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML belgesi şu şekilde ifade edilebilir:  
   
 ```  
 Name: Ellen Adams  
@@ -23,12 +23,12 @@ Zip: 90952
 Country: USA  
 ```  
   
- When you create an instance of an anonymous type, it is convenient to think of it as creating a tuple of order n. If you write a query that creates a tuple in the `Select` clause, the query returns an `IEnumerable` of the tuple.  
+ Anonim bir türün bir örneğini oluşturduğunuzda, bunu bir sıra n grubu oluşturarak düşünmek kullanışlıdır. `Select` yan tümcesinde bir tanımlama grubu oluşturan bir sorgu yazarsanız sorgu, tanımlama grubunun bir `IEnumerable` döndürür.  
   
 ## <a name="example"></a>Örnek  
- In this example, the `Select` clause projects an anonymous type. The example then uses `Dim` to create the `IEnumerable` object. Within the `For Each` loop, the iteration variable becomes an instance of the anonymous type created in the query expression.  
+ Bu örnekte, `Select` yan tümcesi anonim bir tür. Örnek daha sonra `IEnumerable` nesnesini oluşturmak için `Dim` kullanır. `For Each` döngüsünün içinde, yineleme değişkeni sorgu ifadesinde oluşturulan anonim türün bir örneği haline gelir.  
   
- This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  
@@ -55,4 +55,4 @@ LETSS:Let's Stop N Shop:Jaime Yorres
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

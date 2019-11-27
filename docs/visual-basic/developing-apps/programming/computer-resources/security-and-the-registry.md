@@ -14,32 +14,32 @@ ms.locfileid: "74345478"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>Güvenlik ve Kayıt Defteri (Visual Basic)
 
-This page discusses the security implications of storing data in the registry.  
+Bu sayfada, verileri kayıt defterine depolamanın güvenlik etkileri ele alınmaktadır.  
   
 ## <a name="permissions"></a>İzinler  
 
- It is not secure to store secrets, such as passwords, in the registry as plain text, even if the registry key is protected by ACLs (access control lists).  
+ Kayıt defteri anahtarı ACL 'Ler (erişim denetim listeleri) tarafından korunsa bile, parolalar gibi gizli dizileri, kayıt defterindeki düz metin olarak depolamak güvenli değildir.  
   
- Working with the registry may compromise security by allowing inappropriate access to system resources or protected information. To use these properties, you must have read and write permissions from the <xref:System.Security.Permissions.RegistryPermissionAccess> enumeration, which controls access to registry variables. Any code running with full trust (under the default security policy, this is any code installed on the user's local hard disk) has the necessary permissions to access the registry. For more information, see <xref:System.Security.Permissions.RegistryPermission> class.  
+ Kayıt defteriyle çalışma, sistem kaynaklarına veya korunan bilgilere uygunsuz erişime izin vererek güvenliği tehlikeye atabilir. Bu özellikleri kullanmak için, kayıt defteri değişkenlerine erişimi denetleyen <xref:System.Security.Permissions.RegistryPermissionAccess> numaralandırmasından okuma ve yazma izinlerine sahip olmanız gerekir. Tam güvenle çalışan tüm kodlar (varsayılan güvenlik ilkesi altında, kullanıcının yerel sabit diskinde yüklü olan tüm kodlar), kayıt defterine erişmek için gerekli izinlere sahiptir. Daha fazla bilgi için bkz. <xref:System.Security.Permissions.RegistryPermission> sınıfı.  
   
- Registry variables should not be stored in memory locations where code without <xref:System.Security.Permissions.RegistryPermission> can access them. Similarly, when granting permissions, grant the minimum privileges necessary to get the job done.  
+ Kayıt defteri değişkenleri <xref:System.Security.Permissions.RegistryPermission> olmayan kodun bunlara erişebilmesi için bellek konumlarında depolanmamalıdır. Benzer şekilde, izin verirken işi almak için gereken en düşük ayrıcalıklara izin verin.  
   
- Registry permission access values are defined by the <xref:System.Security.Permissions.RegistryPermissionAccess> enumeration. The following table details its members.  
+ Kayıt defteri izin erişim değerleri <xref:System.Security.Permissions.RegistryPermissionAccess> numaralandırması tarafından tanımlanır. Aşağıdaki tabloda üyelerinin ayrıntıları verilmiştir.  
   
-|Değer|Access to Registry Variables|  
+|Değer|Kayıt defteri değişkenlerine erişim|  
 |-----------|----------------------------------|  
-|`AllAccess`|Create, read, and write|  
+|`AllAccess`|Oluşturma, okuma ve yazma|  
 |`Create`|Create|  
-|`NoAccess`|No access|  
+|`NoAccess`|Erişim yok|  
 |`Read`|Oku|  
 |`Write`|Write|  
   
-## <a name="checking-values-in-registry-keys"></a>Checking Values in Registry Keys  
+## <a name="checking-values-in-registry-keys"></a>Kayıt defteri anahtarlarındaki değerler denetleniyor  
 
- When you create a registry value, you need to decide what to do if that value already exists. Another process, perhaps a malicious one, may have already created the value and have access to it. When you put data in the registry value, the data is available to the other process. To prevent this, use the `GetValue` method. It returns `Nothing` if the key does not already exist.  
+ Bir kayıt defteri değeri oluşturduğunuzda, bu değer zaten varsa ne yapılacağını belirlemeniz gerekir. Belki de kötü amaçlı olan bir işlem, değeri zaten oluşturmuş ve ona erişime sahip olabilir. Verileri kayıt defteri değerine yerleştirdiğinizde, veriler diğer işlem tarafından kullanılabilir. Bunu engellemek için `GetValue` yöntemini kullanın. Anahtar zaten yoksa `Nothing` döndürür.  
   
 > [!IMPORTANT]
-> When reading the registry from a Web application, the identity of current user depends on the authentication and impersonation implemented in the Web application.  
+> Bir Web uygulamasından kayıt defteri okunurken geçerli kullanıcının kimliği, Web uygulamasında uygulanan kimlik doğrulama ve kimliğe bürünme özelliğine bağlıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

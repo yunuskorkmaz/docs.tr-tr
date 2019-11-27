@@ -18,20 +18,20 @@ ms.locfileid: "74447006"
 ---
 # <a name="invoke-a-control-using-ui-automation"></a>UI Otomasyonu Kullanarak Denetim Çağırma
 > [!NOTE]
-> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic demonstrates how to perform the following tasks:  
+ Bu konu başlığı altında, aşağıdaki görevlerin nasıl gerçekleştirileceği gösterilmektedir:  
   
-- Find a control that matches specific property conditions by walking the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree for the target application.  
+- Hedef uygulama için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının denetim görünümünü yürüyerek belirli özellik koşullarıyla eşleşen bir denetim bulun.  
   
-- Create an <xref:System.Windows.Automation.AutomationElement> for each control.  
+- Her denetim için bir <xref:System.Windows.Automation.AutomationElement> oluşturun.  
   
-- Obtain an <xref:System.Windows.Automation.InvokePattern> object from any [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element found that supports the <xref:System.Windows.Automation.InvokePattern> control pattern.  
+- <xref:System.Windows.Automation.InvokePattern> denetim modelini destekleyen, bulunan herhangi bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğesinden bir <xref:System.Windows.Automation.InvokePattern> nesnesi elde edin.  
   
-- Use <xref:System.Windows.Automation.InvokePattern.Invoke%2A> to invoke the control from a client event handler.  
+- Bir istemci olay işleyicisinden denetimi çağırmak için <xref:System.Windows.Automation.InvokePattern.Invoke%2A> kullanın.  
   
 ## <a name="example"></a>Örnek  
- This example uses the <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> method of the <xref:System.Windows.Automation.AutomationElement> class to generate an <xref:System.Windows.Automation.InvokePattern> object and invoke a control by using the <xref:System.Windows.Automation.InvokePattern.Invoke%2A> method.  
+ Bu örnek, bir <xref:System.Windows.Automation.InvokePattern> nesnesi oluşturmak ve <xref:System.Windows.Automation.InvokePattern.Invoke%2A> metodunu kullanarak bir denetimi çağırmak için <xref:System.Windows.Automation.AutomationElement> sınıfının <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> yöntemini kullanır.  
   
  [!code-csharp[InvokePatternApp#1100](../../../samples/snippets/csharp/VS_Snippets_Wpf/InvokePatternApp/CSharp/InvokePatternApp.cs#1100)]
  [!code-vb[InvokePatternApp#1100](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InvokePatternApp/VisualBasic/Client.vb#1100)]  
@@ -40,4 +40,4 @@ ms.locfileid: "74447006"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [InvokePattern, ExpandCollapsePattern, and TogglePattern Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)
+- [Invokemodel, ExpandCollapsePattern ve Togglemodel örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

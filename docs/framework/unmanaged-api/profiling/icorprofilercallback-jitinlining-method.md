@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449905"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>ICorProfilerCallback::JITInlining Yöntemi
-Notifies the profiler that the just-in-time (JIT) compiler is about to insert a function in line with another function.  
+Profil oluşturucuyu, Just-In-Time (JıT) derleyicisinin başka bir işlevle satıra bir işlev eklemek üzere olduğunu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,27 +36,27 @@ HRESULT JITInlining(
   
 ## <a name="parameters"></a>Parametreler  
  `callerId`  
- [in] The ID of the function into which the `calleeId` function will be inserted.  
+ 'ndaki `calleeId` işlevinin ekleneceği işlevin KIMLIĞI.  
   
  `calleeId`  
- [in] The ID of the function to be inserted.  
+ 'ndaki Eklenecek işlevin KIMLIĞI.  
   
  `pfShouldInline`  
- [out] `true` to allow the insertion to occur; otherwise, `false`.  
+ [out] ekleme işleminin oluşmasına izin vermek için `true`; Aksi takdirde, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The profiler can set `pfShouldInline` to `false` to prevent the `calleeId` function from being inserted into the `callerId` function. Also, the profiler can globally disable inline insertion by using the COR_PRF_DISABLE_INLINING value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.  
+ Profil Oluşturucu, `calleeId` işlevinin `callerId` işlevine eklenmesini engellemek için `pfShouldInline` `false` ayarlayabilir. Ayrıca, profil oluşturucu, [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) numaralandırmanın COR_PRF_DISABLE_INLINING değerini kullanarak satır içi ekleme işlemini genel olarak devre dışı bırakabilir.  
   
- Functions inserted inline do not raise events for entering or leaving. Therefore, the profiler must set `pfShouldInline` to `false` in order to produce an accurate callgraph. Setting `pfShouldInline` to `false` will affect performance, because inline insertion typically increases speed and reduces the number of separate JIT compilation events for the inserted method.  
+ Satır içi yerleştirilen işlevler girme veya bırakma için olay oluşturmaz. Bu nedenle, profil oluşturucunun doğru bir callgraph oluşturmak için `false` `pfShouldInline` ayarlaması gerekir. Satır içi ekleme genellikle hızı arttığından ve eklenen metodun ayrı JıT derleme olaylarının sayısını azalttığından `pfShouldInline` `false` olarak ayarlanması performansı etkiler.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

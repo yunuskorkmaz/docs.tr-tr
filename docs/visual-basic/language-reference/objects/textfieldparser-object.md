@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350312"
 ---
 # <a name="textfieldparser-object"></a>TextFieldParser Nesnesi
-Provides methods and properties for parsing structured text files.  
+Yapılandırılmış metin dosyalarını ayrıştırmak için yöntemler ve özellikler sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,13 +23,13 @@ Public Class TextFieldParser
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- For information about the methods and properties of the `TextFieldParser` object, see <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.  
+ `TextFieldParser` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.  
   
- For more information, see [Reading from Files](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).  
+ Daha fazla bilgi için bkz. [Dosyadan okuma](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** <xref:Microsoft.VisualBasic.FileIO>  
+ **Ad alanı:** <xref:Microsoft.VisualBasic.FileIO>  
   
- **Class:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
+ **Sınıf:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)

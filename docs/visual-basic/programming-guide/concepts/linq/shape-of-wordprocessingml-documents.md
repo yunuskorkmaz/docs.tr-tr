@@ -9,18 +9,18 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350601"
 ---
-# <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Shape of WordprocessingML Documents (Visual Basic)
-This topic introduces the XML shape of a WordprocessingML document.  
+# <a name="shape-of-wordprocessingml-documents-visual-basic"></a>WordprocessingML belgelerinin şekli (Visual Basic)
+Bu konu, bir WordprocessingML belgesinin XML şeklini tanıtır.  
   
-## <a name="microsoft-office-formats"></a>Microsoft Office Formats  
- The native file format for the 2007 Microsoft Office system is Office Open XML (commonly called Open XML). Open XML is an XML-based format that an Ecma standard and is currently going through the ISO-IEC standards process. The markup language for word processing files within Open XML is called WordprocessingML. This tutorial uses WordprocessingML source files as input for the examples.  
+## <a name="microsoft-office-formats"></a>Microsoft Office biçimleri  
+ 2007 Microsoft Office sistemi için yerel dosya biçimi Office Open XML 'dir (genellikle Open XML olarak adlandırılır). Open XML, bir ECMA Standard ve şu anda ISO-ıEC standartları sürecinden geçen XML tabanlı bir biçimdir. Open XML içindeki sözcük işleme dosyalarının biçimlendirme dili WordprocessingML olarak adlandırılır. Bu öğretici, örnekler için giriş olarak WordprocessingML kaynak dosyalarını kullanır.  
   
- If you are using Microsoft Office 2003, you can save documents in the Office Open XML format if you have installed the Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats.  
+ Microsoft Office 2003 kullanıyorsanız Word, Excel ve PowerPoint 2007 dosya biçimleri için Microsoft Office Uyumluluk paketini yüklediyseniz Office Open XML biçimindeki belgeleri kaydedebilirsiniz.  
   
-## <a name="the-shape-of-wordprocessingml-documents"></a>The Shape of WordprocessingML Documents  
- The first thing to understand is the shape of WordprocessingML documents. A WordprocessingML document contains a body element (named `w:body`) that contains the paragraphs of the document. Each paragraph contains one or more text runs (named `w:r`). Each text run contains one or more text pieces (named `w:t`).  
+## <a name="the-shape-of-wordprocessingml-documents"></a>WordprocessingML belgelerinin şekli  
+ Anlaşılması gereken ilk şey WordprocessingML belgelerinin şekildir. WordprocessingML belgesi, belgenin paragraflarını içeren bir body öğesi (`w:body`) içerir. Her paragraf bir veya daha fazla metin çalıştırması (`w:r`adlı) içerir. Her metin çalışması bir veya daha fazla metin parçası içerir (`w:t`olarak adlandırılır).  
   
- The following is a very simple WordprocessingML document:  
+ Aşağıda çok basit bir WordprocessingML belgesi verilmiştir:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -51,11 +51,11 @@ xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
 </w:document>  
 ```  
   
- This document contains two paragraphs. They both contain a single text run, and each text run contains a single text piece.  
+ Bu belge iki paragraf içerir. Her ikisi de tek bir metin çalıştırması içerir ve her metin çalışması tek bir metin parçası içerir.  
   
- The easiest way to see the contents of a WordprocessingML document in XML form is to create one using Microsoft Word, save it, and then run the following program that prints the XML to the console.  
+ XML biçiminde bir WordprocessingML belgesinin içeriğini görmenin en kolay yolu Microsoft Word 'Ü kullanarak bir tane oluşturmak, kaydetmeniz ve ardından XML 'i konsola yazdıran aşağıdaki programı çalıştırmalıdır.  
   
- This example uses classes found in the WindowsBase assembly. It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.  
+ Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -88,12 +88,12 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
- [Introducing the Office (2007) Open XML File Formats](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))  
+ [Office (2007) Open XML dosya biçimlerine giriş](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))  
   
- [Overview of WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812(v=office.11))  
+ [WordprocessingML 'ye Genel Bakış](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812(v=office.11))  
   
- [Office 2003: XML Reference Schemas Download page](https://go.microsoft.com/fwlink/?LinkId=98095)  
+ [Office 2003: XML başvuru şemaları Indirme sayfası](https://go.microsoft.com/fwlink/?LinkId=98095)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

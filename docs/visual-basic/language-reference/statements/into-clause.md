@@ -12,10 +12,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348047"
 ---
 # <a name="into-clause-visual-basic"></a>Into Tümcesi (Visual Basic)
-Identifies aggregate functions or groupings to apply to a collection.  
+Bir koleksiyona uygulanacak toplama işlevlerini veya gruplandırmaları tanımlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `Each` keyword is used in the following contexts:  
+ `Each` anahtar sözcüğü aşağıdaki bağlamlarda kullanılır:  
   
  [Aggregate Yan Tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   

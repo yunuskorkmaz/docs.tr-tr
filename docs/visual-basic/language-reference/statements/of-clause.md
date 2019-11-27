@@ -25,10 +25,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353834"
 ---
 # <a name="of-clause-visual-basic"></a>Of Tümcesi (Visual Basic)
-Introduces an `Of` clause, which identifies a *type parameter* on a *generic* class, structure, interface, delegate, or procedure. For information on generic types, see [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+Bir *genel* sınıf, yapı, arabirim, temsilci veya yordamda bir *tür parametresi* tanımlayan bir `Of` yan tümcesi tanıtır. Genel türler hakkında bilgi için bkz. [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
-## <a name="using-the-of-keyword"></a>Using the Of Keyword  
- The following code example uses the `Of` keyword to define the outline of a class that takes two type parameters. It *constrains* the `keyType` parameter by the <xref:System.IComparable> interface, which means the consuming code must supply a type argument that implements <xref:System.IComparable>. This is necessary so that the `add` procedure can call the <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> method. For more information on constraints, see [Type List](../../../visual-basic/language-reference/statements/type-list.md).  
+## <a name="using-the-of-keyword"></a>Anahtar sözcüğünü kullanma  
+ Aşağıdaki kod örneği, iki tür parametresi alan bir sınıfın ana hattını tanımlamak için `Of` anahtar sözcüğünü kullanır. `keyType` parametresini <xref:System.IComparable> arabirimi ile *kısıtlar* ; bu, tüketen kodun <xref:System.IComparable>uygulayan bir tür bağımsız değişkeni sağlaması gerektiği anlamına gelir. Bu, `add` yordamının <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> yöntemini çağırabilmesi için gereklidir. Kısıtlamalar hakkında daha fazla bilgi için bkz. [tür listesi](../../../visual-basic/language-reference/statements/type-list.md).  
   
 ```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
@@ -42,15 +42,15 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- If you complete the preceding class definition, you can construct a variety of `dictionary` classes from it. The types you supply to `entryType` and `keyType` determine what type of entry the class holds and what type of key it associates with each entry. Because of the constraint, you must supply to `keyType` a type that implements <xref:System.IComparable>.  
+ Önceki sınıf tanımını tamamlarınızda, bundan çok çeşitli `dictionary` sınıfları oluşturabilirsiniz. `entryType` ve `keyType` için sağladığınız türler, sınıfın ne tür bir girişi olduğunu ve her bir girdiyle ne tür bir anahtarın ilişkilendirildiğini belirlemektir. Kısıtlama nedeniyle, <xref:System.IComparable>uygulayan bir tür `keyType` sağlamanız gerekir.  
   
- The following code example creates an object that holds `String` entries and associates an `Integer` key with each one. `Integer` implements <xref:System.IComparable> and therefore satisfies the constraint on `keyType`.  
+ Aşağıdaki kod örneği, `String` girdileri tutan ve `Integer` anahtarı her biriyle ilişkilendiren bir nesne oluşturur. `Integer` <xref:System.IComparable> uygular ve bu nedenle `keyType`kısıtlamasını karşılar.  
   
 ```vb  
 Dim d As New dictionary(Of String, Integer)  
 ```  
   
- The `Of` keyword can be used in these contexts:  
+ `Of` anahtar sözcüğü şu bağlamlarda kullanılabilir:  
   
  [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -68,6 +68,6 @@ Dim d As New dictionary(Of String, Integer)
 
 - <xref:System.IComparable>
 - [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
-- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+- [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- ['Ndaki](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Dışı](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

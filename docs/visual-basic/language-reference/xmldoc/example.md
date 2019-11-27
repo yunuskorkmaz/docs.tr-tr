@@ -12,8 +12,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348489"
 ---
-# <a name="example-visual-basic"></a>\<example> (Visual Basic)
-Specifies an example for the member.  
+# <a name="example-visual-basic"></a>\<örnek > (Visual Basic)
+Üye için bir örnek belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,15 +23,15 @@ Specifies an example for the member.
   
 ## <a name="parameters"></a>Parametreler  
  `description`  
- A description of the code sample.  
+ Kod örneğinin açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `<example>` tag lets you specify an example of how to use a method or other library member. This commonly involves using the [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) tag.  
+ `<example>` etiketi, bir yöntemin veya diğer kitaplık üyesinin nasıl kullanılacağına ilişkin bir örnek belirtmenize olanak tanır. Bu genellikle [\<kodu >](../../../visual-basic/language-reference/xmldoc/code.md) etiketinin kullanılmasını içerir.  
   
- Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- This example uses the `<example>` tag to include an example for using the `ID` field.  
+ Bu örnek, `ID` alanı kullanmak için bir örnek eklemek için `<example>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446478"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes Yöntemi
-Retrieves assembly-level custom attributes.  
+Derleme düzeyi özel özniteliklerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +39,25 @@ HRESULT EnumCustomAttributes(
   
 ## <a name="parameters"></a>Parametreler  
  `hEnum`  
- Handle of enumerator.  
+ Numaralandırıcı tanıtıcısı.  
   
  `tkType`  
- Type of attributes to be enumerated. Use `mdTokenNill` for all attributes.  
+ Numaralandırılacak özniteliklerin türü. Tüm öznitelikler için `mdTokenNill` kullanın.  
   
  `rCustomValues`  
- Receives custom attributes tokens.  
+ Özel öznitelik belirteçleri alır.  
   
  `cMax`  
- Specifies size of `rCustomValues` array.  
+ `rCustomValues` dizisinin boyutunu belirtir.  
   
  `pcCustomValues`  
- Optionally receives count of token values.  
+ İsteğe bağlı olarak belirteç değerleri sayısını alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Returns S_OK if the method succeeds.  
+ Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Requires alink.h  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

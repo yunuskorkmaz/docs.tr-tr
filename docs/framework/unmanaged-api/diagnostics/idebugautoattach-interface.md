@@ -22,16 +22,16 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445513"
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach Arabirimi
-Defines the interface for server-invoked debugger auto attach.  
+Sunucu tarafından çağrılan hata ayıklayıcı otomatik iliştirme arabirimini tanımlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[AutoAttach Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Performs server-invoked debugger auto attach.|  
+|[AutoAttach Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Sunucu tarafından çağrılan hata ayıklayıcı otomatik iliştirme işlemini gerçekleştirir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Header:** DbgAutoAttach.idl  
+ **Üst bilgi:** Dbgoto Attach. IDL  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

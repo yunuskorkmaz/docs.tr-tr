@@ -22,40 +22,40 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443226"
 ---
 # <a name="imetadatatables-interface"></a>IMetaDataTables Arabirimi
-Provides methods for the storage and retrieval of metadata information in tables.  
+Tablolarda meta veri bilgilerinin depolanması ve alınması için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetBlob Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblob-method.md)|Gets a pointer to the binary large object (BLOB) at the specified column index.|  
-|[GetBlobHeapSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblobheapsize-method.md)|Gets the size, in bytes, of the BLOB heap.|  
-|[GetCodedTokenInfo Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcodedtokeninfo-method.md)|Gets a pointer to an array of tokens associated with the specified row index.|  
-|[GetColumn Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumn-method.md)|Gets a pointer to the values contained in the column at the specified column index, in the table at the specified table index.|  
-|[GetColumnInfo Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumninfo-method.md)|Gets data about the specified column in the specified table.|  
-|[GetGuid Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguid-method.md)|Gets a GUID from the row at the specified index.|  
-|[GetGuidHeapSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguidheapsize-method.md)|Gets the size, in bytes, of the GUID heap.|  
-|[GetNextBlob Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextblob-method.md)|Gets the index of the next BLOB in the table.|  
-|[GetNextGuid Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextguid-method.md)|Gets the index of the next GUID value in the current table column.|  
-|[GetNextString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextstring-method.md)|Gets the index of the next string in the current table column.|  
-|[GetNextUserString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextuserstring-method.md)|Gets the index of the row that contains the next hard-coded string in the current table column.|  
-|[GetNumTables Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnumtables-method.md)|Gets the number of tables in the scope of the current `IMetaDataTables` instance.|  
-|[GetRow Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getrow-method.md)|Gets the row at the specified row index, in the table at the specified table index.|  
-|[GetString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstring-method.md)|Gets the string at the specified index from the table column in the current reference scope.|  
-|[GetStringHeapSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstringheapsize-method.md)|Gets the size, in bytes, of the string heap.|  
-|[GetTableIndex Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableindex-method.md)|Gets the index for the table referenced by the specified token.|  
-|[GetTableInfo Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableinfo-method.md)|Gets the name, row size, number of rows, number of columns, and key column index of the table at the specified table index.|  
-|[GetUserString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstring-method.md)|Gets the hard-coded string at the specified index in the string column in the current scope.|  
-|[GetUserStringHeapSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstringheapsize-method.md)|Gets the size, in bytes, of the user string heap.|  
+|[GetBlob Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblob-method.md)|Belirtilen sütun dizininde ikili büyük nesne (BLOB) için bir işaretçi alır.|  
+|[GetBlobHeapSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblobheapsize-method.md)|BLOB yığınının boyutunu bayt cinsinden alır.|  
+|[GetCodedTokenInfo Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcodedtokeninfo-method.md)|Belirtilen satır diziniyle ilişkili bir belirteç dizisine yönelik bir işaretçi alır.|  
+|[GetColumn Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumn-method.md)|Belirtilen tablo dizinindeki tabloda belirtilen sütun dizinindeki sütunda bulunan değerlere yönelik bir işaretçi alır.|  
+|[GetColumnInfo Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumninfo-method.md)|Belirtilen tabloda belirtilen sütunla ilgili verileri alır.|  
+|[GetGuid Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguid-method.md)|Belirtilen dizindeki satırdan bir GUID alır.|  
+|[GetGuidHeapSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguidheapsize-method.md)|GUID yığınının boyutunu bayt cinsinden alır.|  
+|[GetNextBlob Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextblob-method.md)|Tablodaki sonraki BLOBUN dizinini alır.|  
+|[GetNextGuid Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextguid-method.md)|Geçerli tablo sütunundaki sonraki GUID değerinin dizinini alır.|  
+|[GetNextString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextstring-method.md)|Geçerli tablo sütunundaki sonraki dizenin dizinini alır.|  
+|[GetNextUserString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextuserstring-method.md)|Geçerli tablo sütunundaki bir sonraki sabit kodlanmış dizeyi içeren satırın dizinini alır.|  
+|[GetNumTables Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnumtables-method.md)|Geçerli `IMetaDataTables` örneğinin kapsamındaki tablo sayısını alır.|  
+|[GetRow Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getrow-method.md)|Belirtilen tablo dizinindeki tabloda belirtilen satır dizinindeki satırı alır.|  
+|[GetString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstring-method.md)|Geçerli başvuru kapsamındaki tablo sütunundan belirtilen dizindeki dizeyi alır.|  
+|[GetStringHeapSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstringheapsize-method.md)|Dize yığınının boyutunu bayt cinsinden alır.|  
+|[GetTableIndex Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableindex-method.md)|Belirtilen belirteç tarafından başvurulan tablonun dizinini alır.|  
+|[GetTableInfo Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableinfo-method.md)|Belirtilen tablo dizinindeki tablonun adını, satır boyutunu, satır sayısını, sütun sayısını ve anahtar sütun dizinini alır.|  
+|[GetUserString Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstring-method.md)|Geçerli kapsamdaki dize sütununda belirtilen dizinde sabit kodlanmış dizeyi alır.|  
+|[GetUserStringHeapSize Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstringheapsize-method.md)|Kullanıcı dizesi yığınının bayt cinsinden boyutunu alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,18 +9,18 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349364"
 ---
-# <a name="serializing-object-graphs-that-contain-xelement-objects-visual-basic"></a>Serializing Object Graphs that Contain XElement Objects (Visual Basic)
-This topic introduces the capability of serializing object graphs that contain references to objects of type <xref:System.Xml.Linq.XElement>. To facility this type of serializing, <xref:System.Xml.Linq.XElement> implements the <xref:System.Xml.Serialization.IXmlSerializable> interface.  
+# <a name="serializing-object-graphs-that-contain-xelement-objects-visual-basic"></a>XElement nesneleri içeren nesne grafiklerini serileştirme (Visual Basic)
+Bu konu, <xref:System.Xml.Linq.XElement>türündeki nesnelere yönelik başvurular içeren nesne grafiklerini serileştirme yeteneğini tanıtır. Bu tür serileştirmek sağlamak için, <xref:System.Xml.Linq.XElement> <xref:System.Xml.Serialization.IXmlSerializable> arabirimini uygular.  
   
- Note that only the <xref:System.Xml.Linq.XElement> class implements serialization.  
+ Yalnızca <xref:System.Xml.Linq.XElement> sınıfının serileştirme uyguladığını unutmayın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[How to: Serialize Using XmlSerializer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)|Demonstrates how to serialize using <xref:System.Xml.Serialization.XmlSerializer>.|  
-|[How to: Serialize Using DataContractSerializer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md)|Demonstrates how to serialize using <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+|[Nasıl yapılır: XmlSerializer kullanarak serileştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)|<xref:System.Xml.Serialization.XmlSerializer>kullanarak serileştirmek gösterir.|  
+|[Nasıl yapılır: DataContractSerializer kullanarak serileştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md)|<xref:System.Runtime.Serialization.DataContractSerializer>kullanarak serileştirmek gösterir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Gelişmiş LINQ to XML Programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

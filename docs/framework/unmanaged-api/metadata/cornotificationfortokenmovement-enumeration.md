@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450153"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement Numaralandırması
-Specifies the notifications that will be sent to the metadata API client when a token remap occurs.  
+Belirteç yeniden eşlemesi gerçekleştiğinde meta veri API istemcisine gönderilecek bildirimleri belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -59,43 +59,43 @@ typedef enum CorNotificationForTokenMovement {
 } CorNotificationForTokenMovement;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`MDNotifyDefault`|Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.|  
-|`MDNotifyAll`|Notify when any token moves.|  
-|`MDNotifyNone`|Do not notify when tokens move.|  
-|`MDNotifyMethodDef`|Notify when an `mdMethodDef` token moves.|  
-|`MDNotifyMemberRef`|Notify when an `mdMemberRef` token moves.|  
-|`MDNotifyFieldDef`|Notify when an `mdFieldDef` token moves.|  
-|`MDNotifyTypeRef`|Notify when an `mdTypeRef` token moves.|  
-|`MDNotifyTypeDef`|Notify when an `mdTypeDef` token moves.|  
-|`MDNotifyParamDef`|Notify when an `mdParamDef` token moves.|  
-|`MDNotifyInterfaceImpl`|Notify when an `mdInterfaceImpl` token moves.|  
-|`MDNotifyProperty`|Notify when an `mdProperty` token moves.|  
-|`MDNotifyEvent`|Notify when an `mdEvent` token moves.|  
-|`MDNotifySignature`|Notify when an `mdSignature` token moves.|  
-|`MDNotifyTypeSpec`|Notify when an `mdTypeSpec` token moves.|  
-|`MDNotifyCustomAttribute`|Notify when an `mdCustomAttribute` token moves.|  
-|`MDNotifySecurityValue`|Notify when an `mdSecurityValue` token moves.|  
-|`MDNotifyPermission`|Notify when an `mdPermission` token moves.|  
-|`MDNotifyModuleRef`|Notify when an `mdModuleRef` token moves.|  
-|`MDNotifyNameSpace`|Notify when an `mdNameSpace` token moves.|  
-|`MDNotifyAssemblyRef`|Notify when an `mdAssemblyRef` token moves.|  
-|`MDNotifyFile`|Notify when an `mdFile` token moves.|  
-|`MDNotifyExportedType`|Notify when an `mdExportedType` token moves.|  
-|`MDNotifyResource`|Notify when an `mdManifestResource` token moves.|  
+|`MDNotifyDefault`|`mdTypeRef`, `mdMethodDef`, `mdMemberRef`veya `mdFieldDef` belirteçleri taşındığında bildir.|  
+|`MDNotifyAll`|Herhangi bir belirteç taşınırsa bildir.|  
+|`MDNotifyNone`|Belirteçler taşındığında bildirim vermeyin.|  
+|`MDNotifyMethodDef`|`mdMethodDef` bir belirteç taşınırsa bildir.|  
+|`MDNotifyMemberRef`|`mdMemberRef` bir belirteç taşınırsa bildir.|  
+|`MDNotifyFieldDef`|`mdFieldDef` bir belirteç taşınırsa bildir.|  
+|`MDNotifyTypeRef`|`mdTypeRef` bir belirteç taşınırsa bildir.|  
+|`MDNotifyTypeDef`|`mdTypeDef` bir belirteç taşınırsa bildir.|  
+|`MDNotifyParamDef`|`mdParamDef` bir belirteç taşınırsa bildir.|  
+|`MDNotifyInterfaceImpl`|`mdInterfaceImpl` bir belirteç taşınırsa bildir.|  
+|`MDNotifyProperty`|`mdProperty` bir belirteç taşınırsa bildir.|  
+|`MDNotifyEvent`|`mdEvent` bir belirteç taşınırsa bildir.|  
+|`MDNotifySignature`|`mdSignature` bir belirteç taşınırsa bildir.|  
+|`MDNotifyTypeSpec`|`mdTypeSpec` bir belirteç taşınırsa bildir.|  
+|`MDNotifyCustomAttribute`|`mdCustomAttribute` bir belirteç taşınırsa bildir.|  
+|`MDNotifySecurityValue`|`mdSecurityValue` bir belirteç taşınırsa bildir.|  
+|`MDNotifyPermission`|`mdPermission` bir belirteç taşınırsa bildir.|  
+|`MDNotifyModuleRef`|`mdModuleRef` bir belirteç taşınırsa bildir.|  
+|`MDNotifyNameSpace`|`mdNameSpace` bir belirteç taşınırsa bildir.|  
+|`MDNotifyAssemblyRef`|`mdAssemblyRef` bir belirteç taşınırsa bildir.|  
+|`MDNotifyFile`|`mdFile` bir belirteç taşınırsa bildir.|  
+|`MDNotifyExportedType`|`mdExportedType` bir belirteç taşınırsa bildir.|  
+|`MDNotifyResource`|`mdManifestResource` bir belirteç taşınırsa bildir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- A token may be re-mapped (that is, moved) during a metadata merge.  
+ Bir belirteç, meta veri birleştirme sırasında yeniden eşlenmiş (yani taşınan) olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

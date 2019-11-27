@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450374"
 ---
 # <a name="cor_prf_runtime_type-enumeration"></a>COR_PRF_RUNTIME_TYPE Numaralandırması
-Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.  
+Silverlight 'ta kullanılan ortak dil çalışma zamanının (CLR) sürümünü (masaüstü veya CoreCLR) gösteren değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,23 +34,23 @@ typedef enum
 } COR_PRF_RUNTIME_TYPE;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`COR_PRF_DESKTOP_CLR`|The desktop version of the CLR.|  
-|`COR_PRF_CORE_CLR`|The core version of the CLR, used in Silverlight.|  
+|`COR_PRF_DESKTOP_CLR`|CLR masaüstü sürümü.|  
+|`COR_PRF_CORE_CLR`|Silverlight 'ta kullanılan CLR 'nin çekirdek sürümü.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

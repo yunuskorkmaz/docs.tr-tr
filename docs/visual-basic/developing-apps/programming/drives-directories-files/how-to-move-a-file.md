@@ -13,17 +13,17 @@ ms.locfileid: "74335367"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosya Taşıma
 
-The `My.Computer.FileSystem.MoveFile` method can be used to move a file to another folder. If the target structure does not exist, it will be created.  
+`My.Computer.FileSystem.MoveFile` yöntemi, bir dosyayı başka bir klasöre taşımak için kullanılabilir. Hedef yapı yoksa, oluşturulur.  
   
-### <a name="to-move-a-file"></a>To move a file  
+### <a name="to-move-a-file"></a>Bir dosyayı taşımak için  
   
-- Use the `MoveFile` method to move the file, specifying the file name and location for both the source file and the target file. This example moves the file named `test.txt` from `TestDir1` to `TestDir2`. Note that the target file name is specified even though it is the same as the source file name.  
+- Kaynak dosya ve hedef dosya için dosya adını ve konumunu belirterek dosyayı taşımak için `MoveFile` yöntemini kullanın. Bu örnek `test.txt` adlı dosyayı `TestDir1` `TestDir2`olarak taşır. Hedef dosya adının, kaynak dosya adıyla aynı olmasına rağmen belirtildiğine unutmayın.  
   
      [!code-vb[VbVbcnMyFileSystem#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#24)]  
   
-### <a name="to-move-a-file-and-rename-it"></a>To move a file and rename it  
+### <a name="to-move-a-file-and-rename-it"></a>Bir dosyayı taşımak ve yeniden adlandırmak için  
   
-- Use the `MoveFile` method to move the file, specifying the source file name and location, the target location, and the new name at the target location. This example moves the file named `test.txt` from `TestDir1` to `TestDir2` and renames it `nexttest.txt`.  
+- Kaynak dosya adını ve konumunu, hedef konumu ve hedef konumdaki yeni adı belirterek dosyayı taşımak için `MoveFile` yöntemini kullanın. Bu örnek, `TestDir1` `test.txt` adlı dosyayı `TestDir2` 'e taşır ve `nexttest.txt`yeniden adlandırır.  
   
      [!code-vb[VbVbcnMyFileSystem#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#25)]  
   
@@ -31,25 +31,25 @@ The `My.Computer.FileSystem.MoveFile` method can be used to move a file to anoth
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).  
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (\\\\.\\) (<xref:System.ArgumentException>) ile başlar.  
   
-- The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).  
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğundan geçerli değil.  
   
-- `destinationFileName` is `Nothing` or an empty string (<xref:System.ArgumentNullException>).  
+- `destinationFileName` `Nothing` veya boş bir dizedir (<xref:System.ArgumentNullException>).  
   
-- The source file is not valid or does not exist (<xref:System.IO.FileNotFoundException>).  
+- Kaynak dosya geçerli değil veya yok (<xref:System.IO.FileNotFoundException>).  
   
-- The combined path points to an existing directory, the destination file exists and `overwrite` is set to `False`, a file in the target directory with the same name is in use, or the user does not have sufficient permissions to access the file (<xref:System.IO.IOException>).  
+- Birleşik yol, var olan bir dizine işaret eder, hedef dosya bulunur ve `overwrite` `False`, hedef dizindeki aynı ada sahip bir dosya kullanımda veya kullanıcı dosyaya erişmek için yeterli izinlere sahip değil (<xref:System.IO.IOException>).  
   
-- A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).  
+- Yoldaki bir dosya veya dizin adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
   
-- `showUI` is set to `True`, `onUserCancel` is set to `ThrowException`, and either the user has cancelled the operation or an unspecified I/O error occurs (<xref:System.OperationCanceledException>).  
+- `showUI` `True`olarak ayarlanır `onUserCancel` `ThrowException`olarak ayarlanır ve Kullanıcı işlemi iptal etti ya da belirtilmeyen g/ç hatası oluşur (<xref:System.OperationCanceledException>).  
   
-- The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).  
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
   
-- The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).  
+- Kullanıcı, yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
   
-- The user does not have required permission (<xref:System.UnauthorizedAccessException>).  
+- Kullanıcı gerekli izne sahip değil (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

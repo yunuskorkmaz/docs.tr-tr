@@ -22,24 +22,24 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440171"
 ---
 # <a name="imetadatafilter-interface"></a>IMetaDataFilter Arabirimi
-Provides methods for marking and filtering metadata tokens to avoid repeating actions that have already been taken.  
+Zaten alınmış olan işlemleri önlemek için meta veri belirteçleri işaretlemek ve filtrelemek için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IsTokenMarked Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-istokenmarked-method.md)|Gets a value indicating whether the specified metadata token has been processed.|  
-|[MarkToken Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-marktoken-method.md)|Sets a value indicating that the specified metadata token has been processed.|  
-|[UnmarkAll Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|Removes the processing marks from all the tokens in the current metadata scope.|  
+|[IsTokenMarked Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-istokenmarked-method.md)|Belirtilen meta veri belirtecinin işlenip işlenmediğini gösteren bir değer alır.|  
+|[MarkToken Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-marktoken-method.md)|Belirtilen meta veri belirtecinin işlendiğini gösteren değeri ayarlar.|  
+|[UnmarkAll Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|Geçerli meta veri kapsamındaki tüm belirteçlerden işlem işaretlerini kaldırır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

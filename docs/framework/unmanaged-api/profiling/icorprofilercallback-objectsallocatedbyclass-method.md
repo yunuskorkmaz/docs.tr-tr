@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445862"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass Yöntemi
-Notifies the profiler about the number of instances of each specified class that have been created since the most recent garbage collection.  
+En son çöp toplamadan bu yana oluşturulan her bir sınıfın örnek sayısı hakkında profil oluşturucuyu bilgilendirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,29 +36,29 @@ HRESULT ObjectsAllocatedByClass(
   
 ## <a name="parameters"></a>Parametreler  
  `cClassCount`  
- [in] The size of the `classIds` and `cObjects` arrays.  
+ 'ndaki `classIds` ve `cObjects` dizilerinin boyutu.  
   
  `classIds`  
- [in] An array of class IDs, where each ID specifies a class with one or more instances.  
+ 'ndaki Her KIMLIğIN bir veya daha fazla örneğe sahip bir sınıfı belirttiği sınıf kimlikleri dizisi.  
   
  `cObjects`  
- [in] An array of integers, where each integer specifies the number of instances for the corresponding class in the `classIds` array.  
+ 'ndaki Her bir tamsayının, `classIds` dizisindeki karşılık gelen sınıf için örnek sayısını belirttiği tamsayılar dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The `classIds` and `cObjects` arrays are parallel arrays. For example, `classIds[i]` and `cObjects[i]` reference the same class. If no instance of a class has been created since the previous garbage collection, the class is omitted. The `ObjectsAllocatedByClass` callback will not report objects allocated in the large object heap.  
+ `classIds` ve `cObjects` dizileri paralel dizilerdir. Örneğin, `classIds[i]` ve `cObjects[i]` aynı sınıfa başvuru. Önceki çöp toplamadan bu yana bir sınıf örneği oluşturulmadıysa, sınıf atlanır. `ObjectsAllocatedByClass` geri çağırması, büyük nesne yığınında ayrılan nesneleri rapor etmez.  
   
- The numbers reported by `ObjectsAllocatedByClass` are only estimates. For exact counts, use [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
+ `ObjectsAllocatedByClass` tarafından bildirilen sayılar yalnızca tahminlerdir. Tam sayımlar için [ICorProfilerCallback:: Objectalkonumlandırılan](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)kullanın.  
   
- The `classIds` array may contain one or more null entries if the corresponding `cObjects` array has types that are unloading.  
+ Karşılık gelen `cObjects` dizisinde kaldırma işlemi olan türler varsa `classIds` dizisi bir veya daha fazla null giriş içerebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

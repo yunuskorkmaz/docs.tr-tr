@@ -14,14 +14,14 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445492"
 ---
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a>Tanılama Sembol Deposu (Yönetilmeyen API Başvurusu)
-The diagnostics symbol store API enables a compiler to generate symbol information for use by a debugger.  
+Tanılama sembol deposu API 'SI, bir derleyicinin bir hata ayıklayıcı tarafından kullanılmak üzere sembol bilgisi oluşturmasını sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- Describes the unmanaged interfaces that the diagnostics symbol store API uses.  
+ Tanılama sembol deposu API 'sinin kullandığı yönetilmeyen arabirimleri açıklar.  
   
  [Tanılama Simge Deposu Sabit Listeleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
- Describes the unmanaged enumerations that the diagnostics symbol store API uses.  
+ Tanılama sembol deposu API 'sinin kullandığı yönetilmeyen numaralandırmaları açıklar.  
   
  [Tanılama Simge Deposu Yapıları](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
- Describes the unmanaged structures that the diagnostics symbol store API uses.
+ Tanılama sembol deposu API 'sinin kullandığı yönetilmeyen yapıları açıklar.

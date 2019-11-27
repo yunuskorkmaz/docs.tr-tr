@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerCallback::AppDomainShutdownStarted Method
+title: 'ICorProfilerCallback:: AppDomainShutdownStarted Yöntemi'
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerCallback.AppDomainShutdownStarted
@@ -22,8 +22,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445186"
 ---
-# <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted Method
-Notifies the profiler that an application domain is being unloaded from a process.  
+# <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback:: AppDomainShutdownStarted Yöntemi
+Profil Oluşturucu bir uygulama etki alanının bir işlemden kaldırılmakta olduğunu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,19 +34,19 @@ HRESULT AppDomainShutdownStarted(
   
 ## <a name="parameters"></a>Parametreler  
  `appDomainId`  
- [in] Identifies the domain in which the application's assemblies are stored.  
+ 'ndaki Uygulamanın derlemelerinin depolandığı etki alanını tanımlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.  
+ `appDomainId` değeri `AppDomainShutdownStarted` yöntemi çağrıldıktan sonra herhangi bir bilgi isteği için geçerli değildir — bu, profil oluşturucunun bu uygulama etki alanı hakkında bilgi almak için son şansınız olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Library:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

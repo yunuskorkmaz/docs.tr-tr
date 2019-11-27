@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444109"
 ---
 # <a name="coinitiee-enumeration"></a>COINITIEE Numaralandırması
-Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.  
+Ortak dil çalışma zamanı başlatılırken [Coınitialeee](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) tarafından kullanılan sabitleri belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,22 +34,22 @@ typedef enum tagCOINITEE {
 } COINITIEE;  
 ```  
   
-## <a name="members"></a>Üyeler  
+## <a name="members"></a>Üyeleri  
   
-|Üye|Açıklama|  
+|Üyesi|Açıklama|  
 |------------|-----------------|  
-|`COINITEE_DEFAULT`|Default initialization mode. This initializes the runtime and creates the default <xref:System.AppDomain>.|  
-|`COINITEE_DLL`|Initializes to run a managed DLL.|  
-|`COINITEE_MAIN`|Initializes to run a managed EXE. This initializes the runtime but does not create the default <xref:System.AppDomain>, which is created after entering the main routine of the EXE.|  
+|`COINITEE_DEFAULT`|Varsayılan başlatma modu. Bu, çalışma zamanını başlatır ve varsayılan <xref:System.AppDomain>oluşturur.|  
+|`COINITEE_DLL`|Yönetilen DLL çalıştırmak için başlatılır.|  
+|`COINITEE_MAIN`|Yönetilen bir EXE çalıştırmak için başlatılır. Bu, çalışma zamanını başlatır, ancak varsayılan <xref:System.AppDomain>oluşturmaz ve bu, EXE 'nin ana yordamına girdikten sonra oluşturulur.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
