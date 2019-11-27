@@ -21,10 +21,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450252"
 ---
-# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="608b7-102">CorManifestResourceFlags Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="608b7-102">CorManifestResourceFlags Enumeration</span></span>
-<span data-ttu-id="608b7-103">Indicates the visibility of resources encoded in an assembly manifest.</span><span class="sxs-lookup"><span data-stu-id="608b7-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
+# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="d6050-102">CorManifestResourceFlags Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="d6050-102">CorManifestResourceFlags Enumeration</span></span>
+<span data-ttu-id="d6050-103">Bir derleme bildiriminde kodlanan kaynakların görünürlüğünü gösterir.</span><span class="sxs-lookup"><span data-stu-id="d6050-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="608b7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="608b7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d6050-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d6050-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorManifestResourceFlags {  
@@ -36,21 +36,21 @@ typedef enum CorManifestResourceFlags {
 } CorManifestResourceFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="608b7-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="608b7-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="d6050-105">Üyeleri</span><span class="sxs-lookup"><span data-stu-id="d6050-105">Members</span></span>  
   
-|<span data-ttu-id="608b7-106">Üye</span><span class="sxs-lookup"><span data-stu-id="608b7-106">Member</span></span>|<span data-ttu-id="608b7-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="608b7-107">Description</span></span>|  
+|<span data-ttu-id="d6050-106">Üyesi</span><span class="sxs-lookup"><span data-stu-id="d6050-106">Member</span></span>|<span data-ttu-id="d6050-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d6050-107">Description</span></span>|  
 |------------|-----------------|  
-|`mrVisibilityMask`|<span data-ttu-id="608b7-108">Reserved.</span><span class="sxs-lookup"><span data-stu-id="608b7-108">Reserved.</span></span>|  
-|`mrPublic`|<span data-ttu-id="608b7-109">The resources are public.</span><span class="sxs-lookup"><span data-stu-id="608b7-109">The resources are public.</span></span>|  
-|`mrPrivate`|<span data-ttu-id="608b7-110">The resources are private.</span><span class="sxs-lookup"><span data-stu-id="608b7-110">The resources are private.</span></span>|  
+|`mrVisibilityMask`|<span data-ttu-id="d6050-108">Ayrılamadı.</span><span class="sxs-lookup"><span data-stu-id="d6050-108">Reserved.</span></span>|  
+|`mrPublic`|<span data-ttu-id="d6050-109">Kaynaklar geneldir.</span><span class="sxs-lookup"><span data-stu-id="d6050-109">The resources are public.</span></span>|  
+|`mrPrivate`|<span data-ttu-id="d6050-110">Kaynaklar özeldir.</span><span class="sxs-lookup"><span data-stu-id="d6050-110">The resources are private.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="608b7-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="608b7-111">Requirements</span></span>  
- <span data-ttu-id="608b7-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="608b7-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d6050-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d6050-111">Requirements</span></span>  
+ <span data-ttu-id="d6050-112">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d6050-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="608b7-113">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="608b7-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="d6050-113">**Üst bilgi:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="d6050-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="608b7-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="608b7-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d6050-114">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d6050-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="608b7-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="608b7-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d6050-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d6050-115">See also</span></span>
 
-- [<span data-ttu-id="608b7-116">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="608b7-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="d6050-116">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="d6050-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

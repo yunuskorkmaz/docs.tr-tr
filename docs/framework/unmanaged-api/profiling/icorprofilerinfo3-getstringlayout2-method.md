@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449660"
 ---
-# <a name="icorprofilerinfo3getstringlayout2-method"></a><span data-ttu-id="7d8af-102">ICorProfilerInfo3::GetStringLayout2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7d8af-102">ICorProfilerInfo3::GetStringLayout2 Method</span></span>
-<span data-ttu-id="7d8af-103">Gets information about the layout of a string object.</span><span class="sxs-lookup"><span data-stu-id="7d8af-103">Gets information about the layout of a string object.</span></span> <span data-ttu-id="7d8af-104">This method supersedes the [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="7d8af-104">This method supersedes the [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) method.</span></span>  
+# <a name="icorprofilerinfo3getstringlayout2-method"></a><span data-ttu-id="f6a80-102">ICorProfilerInfo3::GetStringLayout2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f6a80-102">ICorProfilerInfo3::GetStringLayout2 Method</span></span>
+<span data-ttu-id="f6a80-103">Bir dize nesnesinin yerleşimi hakkında bilgi alır.</span><span class="sxs-lookup"><span data-stu-id="f6a80-103">Gets information about the layout of a string object.</span></span> <span data-ttu-id="f6a80-104">Bu yöntem [ICorProfilerInfo2:: GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) yönteminin yerini alır.</span><span class="sxs-lookup"><span data-stu-id="f6a80-104">This method supersedes the [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7d8af-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7d8af-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6a80-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f6a80-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStringLayout2(  
@@ -33,26 +33,26 @@ HRESULT GetStringLayout2(
     [out] ULONG *pBufferOffset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7d8af-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7d8af-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f6a80-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f6a80-106">Parameters</span></span>  
  `pStringLengthOffset`  
- <span data-ttu-id="7d8af-107">[out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself.</span><span class="sxs-lookup"><span data-stu-id="7d8af-107">[out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself.</span></span> <span data-ttu-id="7d8af-108">The length is stored as a `DWORD`.</span><span class="sxs-lookup"><span data-stu-id="7d8af-108">The length is stored as a `DWORD`.</span></span>  
+ <span data-ttu-id="f6a80-107">dışı Konumun, dizenin uzunluğunu depolayan `ObjectID` işaretçisine göre konum uzaklığına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="f6a80-107">[out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself.</span></span> <span data-ttu-id="f6a80-108">Uzunluk bir `DWORD`olarak depolanır.</span><span class="sxs-lookup"><span data-stu-id="f6a80-108">The length is stored as a `DWORD`.</span></span>  
   
  `pBufferOffset`  
- <span data-ttu-id="7d8af-109">[out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, which stores the string of wide characters.</span><span class="sxs-lookup"><span data-stu-id="7d8af-109">[out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, which stores the string of wide characters.</span></span>  
+ <span data-ttu-id="f6a80-109">dışı Geniş karakter dizesini depolayan `ObjectID` işaretçisine göre arabelleğin uzaklığına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="f6a80-109">[out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, which stores the string of wide characters.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7d8af-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7d8af-110">Remarks</span></span>  
- <span data-ttu-id="7d8af-111">Strings may or may not be null-terminated.</span><span class="sxs-lookup"><span data-stu-id="7d8af-111">Strings may or may not be null-terminated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f6a80-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f6a80-110">Remarks</span></span>  
+ <span data-ttu-id="f6a80-111">Dizeler null ile sonlandırılmış olabilir veya olmayabilir.</span><span class="sxs-lookup"><span data-stu-id="f6a80-111">Strings may or may not be null-terminated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7d8af-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7d8af-112">Requirements</span></span>  
- <span data-ttu-id="7d8af-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7d8af-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f6a80-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f6a80-112">Requirements</span></span>  
+ <span data-ttu-id="f6a80-113">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f6a80-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7d8af-114">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7d8af-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f6a80-114">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="f6a80-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7d8af-115">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7d8af-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f6a80-115">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="f6a80-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7d8af-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7d8af-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="f6a80-116">**.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6a80-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7d8af-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7d8af-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f6a80-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f6a80-117">See also</span></span>
 
-- [<span data-ttu-id="7d8af-118">ICorProfilerInfo3 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7d8af-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="7d8af-119">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="7d8af-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="f6a80-118">ICorProfilerInfo3 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f6a80-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="f6a80-119">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="f6a80-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

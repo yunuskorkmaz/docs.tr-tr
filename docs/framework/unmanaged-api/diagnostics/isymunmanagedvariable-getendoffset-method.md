@@ -22,27 +22,27 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446071"
 ---
-# <a name="isymunmanagedvariablegetendoffset-method"></a><span data-ttu-id="8952f-102">ISymUnmanagedVariable::GetEndOffset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8952f-102">ISymUnmanagedVariable::GetEndOffset Method</span></span>
-<span data-ttu-id="8952f-103">Gets the end offset of this variable within its parent.</span><span class="sxs-lookup"><span data-stu-id="8952f-103">Gets the end offset of this variable within its parent.</span></span> <span data-ttu-id="8952f-104">If this is a local variable within a scope, the end offset will fall within the offsets defined for the scope.</span><span class="sxs-lookup"><span data-stu-id="8952f-104">If this is a local variable within a scope, the end offset will fall within the offsets defined for the scope.</span></span>  
+# <a name="isymunmanagedvariablegetendoffset-method"></a><span data-ttu-id="febb8-102">ISymUnmanagedVariable::GetEndOffset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="febb8-102">ISymUnmanagedVariable::GetEndOffset Method</span></span>
+<span data-ttu-id="febb8-103">Bu değişkenin üst sapmasını üst öğesi içinde alır.</span><span class="sxs-lookup"><span data-stu-id="febb8-103">Gets the end offset of this variable within its parent.</span></span> <span data-ttu-id="febb8-104">Bu bir kapsamdaki yerel değişkense, bitiş boşluğu kapsam için tanımlanan uzaklıklar içinde kalır.</span><span class="sxs-lookup"><span data-stu-id="febb8-104">If this is a local variable within a scope, the end offset will fall within the offsets defined for the scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8952f-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8952f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="febb8-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="febb8-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetEndOffset(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8952f-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8952f-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="febb8-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="febb8-106">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="8952f-107">[out] A pointer to a `ULONG32` that receives the end offset.</span><span class="sxs-lookup"><span data-stu-id="8952f-107">[out] A pointer to a `ULONG32` that receives the end offset.</span></span>  
+ <span data-ttu-id="febb8-107">dışı Bitiş sapmasını alan `ULONG32` işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="febb8-107">[out] A pointer to a `ULONG32` that receives the end offset.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8952f-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="8952f-108">Return Value</span></span>  
- <span data-ttu-id="8952f-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="8952f-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="febb8-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="febb8-108">Return Value</span></span>  
+ <span data-ttu-id="febb8-109">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="febb8-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8952f-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8952f-110">Requirements</span></span>  
- <span data-ttu-id="8952f-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8952f-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="febb8-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="febb8-110">Requirements</span></span>  
+ <span data-ttu-id="febb8-111">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="febb8-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8952f-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8952f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="febb8-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="febb8-112">See also</span></span>
 
-- [<span data-ttu-id="8952f-113">ISymUnmanagedVariable Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8952f-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [<span data-ttu-id="8952f-114">GetStartOffset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8952f-114">GetStartOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getstartoffset-method.md)
+- [<span data-ttu-id="febb8-113">ISymUnmanagedVariable Arabirimi</span><span class="sxs-lookup"><span data-stu-id="febb8-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="febb8-114">GetStartOffset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="febb8-114">GetStartOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getstartoffset-method.md)

@@ -22,25 +22,25 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447593"
 ---
-# <a name="icorprofilerthreadenumreset-method"></a><span data-ttu-id="d4bf3-102">ICorProfilerThreadEnum::Reset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d4bf3-102">ICorProfilerThreadEnum::Reset Method</span></span>
-<span data-ttu-id="d4bf3-103">Moves the enumerator's cursor to the starting position of the sequence.</span><span class="sxs-lookup"><span data-stu-id="d4bf3-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  
+# <a name="icorprofilerthreadenumreset-method"></a><span data-ttu-id="0629d-102">ICorProfilerThreadEnum::Reset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0629d-102">ICorProfilerThreadEnum::Reset Method</span></span>
+<span data-ttu-id="0629d-103">Numaralandırıcının imlecini sıranın başlangıç konumuna taşımaktır.</span><span class="sxs-lookup"><span data-stu-id="0629d-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d4bf3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d4bf3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0629d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0629d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Reset();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="d4bf3-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d4bf3-105">Requirements</span></span>  
- <span data-ttu-id="d4bf3-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4bf3-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0629d-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0629d-105">Requirements</span></span>  
+ <span data-ttu-id="0629d-106">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0629d-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d4bf3-107">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d4bf3-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="0629d-107">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="0629d-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d4bf3-108">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d4bf3-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0629d-108">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="0629d-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d4bf3-109">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4bf3-109">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="0629d-109">**.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0629d-109">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d4bf3-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d4bf3-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0629d-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0629d-110">See also</span></span>
 
-- [<span data-ttu-id="d4bf3-111">ICorProfilerThreadEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d4bf3-111">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [<span data-ttu-id="d4bf3-112">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="d4bf3-112">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="0629d-111">ICorProfilerThreadEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0629d-111">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
+- [<span data-ttu-id="0629d-112">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="0629d-112">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

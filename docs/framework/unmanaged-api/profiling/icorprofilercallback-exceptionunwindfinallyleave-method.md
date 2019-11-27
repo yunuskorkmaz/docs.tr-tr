@@ -22,30 +22,30 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445308"
 ---
-# <a name="icorprofilercallbackexceptionunwindfinallyleave-method"></a><span data-ttu-id="21db6-102">ICorProfilerCallback::ExceptionUnwindFinallyLeave Yöntemi</span><span class="sxs-lookup"><span data-stu-id="21db6-102">ICorProfilerCallback::ExceptionUnwindFinallyLeave Method</span></span>
-<span data-ttu-id="21db6-103">Notifies the profiler that the unwind phase of exception handling has left a `finally` clause.</span><span class="sxs-lookup"><span data-stu-id="21db6-103">Notifies the profiler that the unwind phase of exception handling has left a `finally` clause.</span></span>  
+# <a name="icorprofilercallbackexceptionunwindfinallyleave-method"></a><span data-ttu-id="9fd3d-102">ICorProfilerCallback::ExceptionUnwindFinallyLeave Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9fd3d-102">ICorProfilerCallback::ExceptionUnwindFinallyLeave Method</span></span>
+<span data-ttu-id="9fd3d-103">Profil oluşturucuyu, özel durum işlemenin geriye doğru izleme aşamasının bir `finally` yan tümcesi bıraktı olduğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="9fd3d-103">Notifies the profiler that the unwind phase of exception handling has left a `finally` clause.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="21db6-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="21db6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9fd3d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9fd3d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExceptionUnwindFinallyLeave();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="21db6-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="21db6-105">Remarks</span></span>  
- <span data-ttu-id="21db6-106">The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span><span class="sxs-lookup"><span data-stu-id="21db6-106">The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="21db6-107">If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.</span><span class="sxs-lookup"><span data-stu-id="21db6-107">If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9fd3d-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9fd3d-105">Remarks</span></span>  
+ <span data-ttu-id="9fd3d-106">Yığın atık toplamaya izin veren bir durumda olmadığından profil oluşturucu bu çağrı sırasında engellenmemelidir, bu nedenle preemptive çöp toplama etkinleştirilemez.</span><span class="sxs-lookup"><span data-stu-id="9fd3d-106">The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="9fd3d-107">Profil Oluşturucu burada ve bir çöp toplama denendiğinde, bu geri arama dönene kadar çalışma zamanı engeller.</span><span class="sxs-lookup"><span data-stu-id="9fd3d-107">If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="21db6-108">Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.</span><span class="sxs-lookup"><span data-stu-id="21db6-108">Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="9fd3d-108">Ayrıca, bu çağrı sırasında profil oluşturucunun yönetilen koda çağrı olmaması veya herhangi bir şekilde yönetilen bellek ayırmaya neden olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="9fd3d-108">Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="21db6-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="21db6-109">Requirements</span></span>  
- <span data-ttu-id="21db6-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="21db6-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9fd3d-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9fd3d-109">Requirements</span></span>  
+ <span data-ttu-id="9fd3d-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9fd3d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="21db6-111">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="21db6-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="9fd3d-111">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="9fd3d-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="21db6-112">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="21db6-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9fd3d-112">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="9fd3d-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="21db6-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="21db6-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9fd3d-113">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9fd3d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="21db6-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="21db6-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9fd3d-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9fd3d-114">See also</span></span>
 
-- [<span data-ttu-id="21db6-115">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="21db6-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="21db6-116">ExceptionUnwindFinallyEnter Yöntemi</span><span class="sxs-lookup"><span data-stu-id="21db6-116">ExceptionUnwindFinallyEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)
+- [<span data-ttu-id="9fd3d-115">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9fd3d-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="9fd3d-116">ExceptionUnwindFinallyEnter Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9fd3d-116">ExceptionUnwindFinallyEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)

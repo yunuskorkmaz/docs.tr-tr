@@ -21,10 +21,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442443"
 ---
-# <a name="corunmanagedcallingconvention-enumeration"></a><span data-ttu-id="dd488-102">CorUnmanagedCallingConvention Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="dd488-102">CorUnmanagedCallingConvention Enumeration</span></span>
-<span data-ttu-id="dd488-103">Specifies the calling conventions for unmanaged code.</span><span class="sxs-lookup"><span data-stu-id="dd488-103">Specifies the calling conventions for unmanaged code.</span></span>  
+# <a name="corunmanagedcallingconvention-enumeration"></a><span data-ttu-id="3dc19-102">CorUnmanagedCallingConvention Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="3dc19-102">CorUnmanagedCallingConvention Enumeration</span></span>
+<span data-ttu-id="3dc19-103">Yönetilmeyen kod için çağrı kurallarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="3dc19-103">Specifies the calling conventions for unmanaged code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dd488-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="dd488-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3dc19-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3dc19-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorUnmanagedCallingConvention {  
@@ -42,29 +42,29 @@ typedef enum CorUnmanagedCallingConvention {
 } CorUnmanagedCallingConvention;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="dd488-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="dd488-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="3dc19-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="3dc19-105">Members</span></span>  
   
-|<span data-ttu-id="dd488-106">Üye</span><span class="sxs-lookup"><span data-stu-id="dd488-106">Member</span></span>|<span data-ttu-id="dd488-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="dd488-107">Description</span></span>|  
+|<span data-ttu-id="3dc19-106">Üye</span><span class="sxs-lookup"><span data-stu-id="3dc19-106">Member</span></span>|<span data-ttu-id="3dc19-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3dc19-107">Description</span></span>|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|<span data-ttu-id="dd488-108">The C language calling convention.</span><span class="sxs-lookup"><span data-stu-id="dd488-108">The C language calling convention.</span></span>|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|<span data-ttu-id="dd488-109">The standard calling convention.</span><span class="sxs-lookup"><span data-stu-id="dd488-109">The standard calling convention.</span></span>|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|<span data-ttu-id="dd488-110">The "this" calling convention.</span><span class="sxs-lookup"><span data-stu-id="dd488-110">The "this" calling convention.</span></span>|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|<span data-ttu-id="dd488-111">The "fast" calling convention.</span><span class="sxs-lookup"><span data-stu-id="dd488-111">The "fast" calling convention.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_C`|<span data-ttu-id="dd488-112">Kullanılmadı.</span><span class="sxs-lookup"><span data-stu-id="dd488-112">Not used.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_STDCALL`|<span data-ttu-id="dd488-113">Kullanılmadı.</span><span class="sxs-lookup"><span data-stu-id="dd488-113">Not used.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_THISCALL`|<span data-ttu-id="dd488-114">Kullanılmadı.</span><span class="sxs-lookup"><span data-stu-id="dd488-114">Not used.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_FASTCALL`|<span data-ttu-id="dd488-115">Kullanılmadı.</span><span class="sxs-lookup"><span data-stu-id="dd488-115">Not used.</span></span>|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|<span data-ttu-id="3dc19-108">C dili çağırma kuralı.</span><span class="sxs-lookup"><span data-stu-id="3dc19-108">The C language calling convention.</span></span>|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|<span data-ttu-id="3dc19-109">Standart çağırma kuralı.</span><span class="sxs-lookup"><span data-stu-id="3dc19-109">The standard calling convention.</span></span>|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|<span data-ttu-id="3dc19-110">"This" çağırma kuralı.</span><span class="sxs-lookup"><span data-stu-id="3dc19-110">The "this" calling convention.</span></span>|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|<span data-ttu-id="3dc19-111">"Hızlı" çağırma kuralı.</span><span class="sxs-lookup"><span data-stu-id="3dc19-111">The "fast" calling convention.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_C`|<span data-ttu-id="3dc19-112">Kullanılmadı.</span><span class="sxs-lookup"><span data-stu-id="3dc19-112">Not used.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_STDCALL`|<span data-ttu-id="3dc19-113">Kullanılmadı.</span><span class="sxs-lookup"><span data-stu-id="3dc19-113">Not used.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_THISCALL`|<span data-ttu-id="3dc19-114">Kullanılmadı.</span><span class="sxs-lookup"><span data-stu-id="3dc19-114">Not used.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_FASTCALL`|<span data-ttu-id="3dc19-115">Kullanılmadı.</span><span class="sxs-lookup"><span data-stu-id="3dc19-115">Not used.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="dd488-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="dd488-116">Remarks</span></span>  
- <span data-ttu-id="dd488-117">The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.</span><span class="sxs-lookup"><span data-stu-id="dd488-117">The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3dc19-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3dc19-116">Remarks</span></span>  
+ <span data-ttu-id="3dc19-117">CLR, .NET Framework sürüm 1,0 ' de "hızlı" çağırma kuralını desteklemez.</span><span class="sxs-lookup"><span data-stu-id="3dc19-117">The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dd488-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="dd488-118">Requirements</span></span>  
- <span data-ttu-id="dd488-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dd488-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3dc19-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3dc19-118">Requirements</span></span>  
+ <span data-ttu-id="3dc19-119">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3dc19-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dd488-120">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="dd488-120">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="3dc19-120">**Üst bilgi:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="3dc19-120">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="dd488-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dd488-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3dc19-121">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3dc19-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd488-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dd488-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3dc19-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3dc19-122">See also</span></span>
 
-- [<span data-ttu-id="dd488-123">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="dd488-123">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="3dc19-123">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="3dc19-123">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

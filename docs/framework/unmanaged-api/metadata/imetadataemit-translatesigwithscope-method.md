@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440485"
 ---
-# <a name="imetadataemittranslatesigwithscope-method"></a><span data-ttu-id="fde3f-102">IMetaDataEmit::TranslateSigWithScope Yöntemi</span><span class="sxs-lookup"><span data-stu-id="fde3f-102">IMetaDataEmit::TranslateSigWithScope Method</span></span>
-<span data-ttu-id="fde3f-103">Imports an assembly into the current scope and gets a new metadata signature for the merged scope.</span><span class="sxs-lookup"><span data-stu-id="fde3f-103">Imports an assembly into the current scope and gets a new metadata signature for the merged scope.</span></span>  
+# <a name="imetadataemittranslatesigwithscope-method"></a><span data-ttu-id="6d064-102">IMetaDataEmit::TranslateSigWithScope Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6d064-102">IMetaDataEmit::TranslateSigWithScope Method</span></span>
+<span data-ttu-id="6d064-103">Bir derlemeyi geçerli kapsama aktarır ve birleştirilmiş kapsam için yeni bir meta veri imzası alır.</span><span class="sxs-lookup"><span data-stu-id="6d064-103">Imports an assembly into the current scope and gets a new metadata signature for the merged scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fde3f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fde3f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6d064-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6d064-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT TranslateSigWithScope (   
@@ -43,53 +43,53 @@ HRESULT TranslateSigWithScope (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fde3f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="fde3f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6d064-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6d064-105">Parameters</span></span>  
  `pAssemImport`  
- <span data-ttu-id="fde3f-106">[in] The interface for import assembly (where the signature is defined).</span><span class="sxs-lookup"><span data-stu-id="fde3f-106">[in] The interface for import assembly (where the signature is defined).</span></span>  
+ <span data-ttu-id="6d064-106">'ndaki İçeri aktarma derlemesi için arabirim (imzanın tanımlandığı yer).</span><span class="sxs-lookup"><span data-stu-id="6d064-106">[in] The interface for import assembly (where the signature is defined).</span></span>  
   
  `pbHashValue`  
- <span data-ttu-id="fde3f-107">[in] The hash blob for the assembly.</span><span class="sxs-lookup"><span data-stu-id="fde3f-107">[in] The hash blob for the assembly.</span></span>  
+ <span data-ttu-id="6d064-107">'ndaki Derlemenin karma blobu.</span><span class="sxs-lookup"><span data-stu-id="6d064-107">[in] The hash blob for the assembly.</span></span>  
   
  `cbHashValue`  
- <span data-ttu-id="fde3f-108">[in] The count of bytes in `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="fde3f-108">[in] The count of bytes in `pbHashValue`.</span></span>  
+ <span data-ttu-id="6d064-108">'ndaki `pbHashValue`bayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="6d064-108">[in] The count of bytes in `pbHashValue`.</span></span>  
   
  `import`  
- <span data-ttu-id="fde3f-109">[in] The interface for import metadata scope.</span><span class="sxs-lookup"><span data-stu-id="fde3f-109">[in] The interface for import metadata scope.</span></span>  
+ <span data-ttu-id="6d064-109">'ndaki İçeri aktarma meta veri kapsamı için arabirim.</span><span class="sxs-lookup"><span data-stu-id="6d064-109">[in] The interface for import metadata scope.</span></span>  
   
  `pbSigBlob`  
- <span data-ttu-id="fde3f-110">[in] The signature to be imported.</span><span class="sxs-lookup"><span data-stu-id="fde3f-110">[in] The signature to be imported.</span></span>  
+ <span data-ttu-id="6d064-110">'ndaki İçeri aktarılacak imza.</span><span class="sxs-lookup"><span data-stu-id="6d064-110">[in] The signature to be imported.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="fde3f-111">[in] The size, in bytes, of `pbSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="fde3f-111">[in] The size, in bytes, of `pbSigBlob`.</span></span>  
+ <span data-ttu-id="6d064-111">'ndaki `pbSigBlob`bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="6d064-111">[in] The size, in bytes, of `pbSigBlob`.</span></span>  
   
  `pAssemEmit`  
- <span data-ttu-id="fde3f-112">[in] The interface for export assembly.</span><span class="sxs-lookup"><span data-stu-id="fde3f-112">[in] The interface for export assembly.</span></span>  
+ <span data-ttu-id="6d064-112">'ndaki Dışarı aktarma derlemesi için arabirim.</span><span class="sxs-lookup"><span data-stu-id="6d064-112">[in] The interface for export assembly.</span></span>  
   
  `emit`  
- <span data-ttu-id="fde3f-113">[in] The interface for export metadata scope.</span><span class="sxs-lookup"><span data-stu-id="fde3f-113">[in] The interface for export metadata scope.</span></span>  
+ <span data-ttu-id="6d064-113">'ndaki Dışarı aktarma meta verileri kapsamı için arabirim.</span><span class="sxs-lookup"><span data-stu-id="6d064-113">[in] The interface for export metadata scope.</span></span>  
   
  `pvTranslatedSig`  
- <span data-ttu-id="fde3f-114">[out] The buffer to hold the translated signature blob.</span><span class="sxs-lookup"><span data-stu-id="fde3f-114">[out] The buffer to hold the translated signature blob.</span></span>  
+ <span data-ttu-id="6d064-114">dışı Çevrilen imza blobunu tutan arabellek.</span><span class="sxs-lookup"><span data-stu-id="6d064-114">[out] The buffer to hold the translated signature blob.</span></span>  
   
  `cbTranslatedSigMax`  
- <span data-ttu-id="fde3f-115">[in] The capacity, in bytes, of `pvTranslatedSig`.</span><span class="sxs-lookup"><span data-stu-id="fde3f-115">[in] The capacity, in bytes, of `pvTranslatedSig`.</span></span>  
+ <span data-ttu-id="6d064-115">'ndaki `pvTranslatedSig`kapasitesi (bayt cinsinden).</span><span class="sxs-lookup"><span data-stu-id="6d064-115">[in] The capacity, in bytes, of `pvTranslatedSig`.</span></span>  
   
  `pcbTranslatedSig`  
- <span data-ttu-id="fde3f-116">[out] The number of actual bytes in the translated signature.</span><span class="sxs-lookup"><span data-stu-id="fde3f-116">[out] The number of actual bytes in the translated signature.</span></span>  
+ <span data-ttu-id="6d064-116">dışı Çevrilen İmzadaki gerçek bayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="6d064-116">[out] The number of actual bytes in the translated signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fde3f-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="fde3f-117">Requirements</span></span>  
- <span data-ttu-id="fde3f-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fde3f-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6d064-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6d064-117">Requirements</span></span>  
+ <span data-ttu-id="6d064-118">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6d064-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fde3f-119">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fde3f-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6d064-119">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="6d064-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="fde3f-120">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fde3f-120">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="6d064-120">**Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="6d064-120">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="fde3f-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fde3f-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6d064-121">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d064-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fde3f-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fde3f-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6d064-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6d064-122">See also</span></span>
 
-- [<span data-ttu-id="fde3f-123">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="fde3f-123">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [<span data-ttu-id="fde3f-124">IMetaDataAssemblyImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="fde3f-124">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [<span data-ttu-id="fde3f-125">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="fde3f-125">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="fde3f-126">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="fde3f-126">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="fde3f-127">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="fde3f-127">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="6d064-123">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6d064-123">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="6d064-124">IMetaDataAssemblyImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6d064-124">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="6d064-125">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6d064-125">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="6d064-126">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6d064-126">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="6d064-127">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6d064-127">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

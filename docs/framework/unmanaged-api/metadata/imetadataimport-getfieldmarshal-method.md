@@ -22,10 +22,10 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437571"
 ---
-# <a name="imetadataimportgetfieldmarshal-method"></a><span data-ttu-id="083eb-102">IMetaDataImport::GetFieldMarshal Yöntemi</span><span class="sxs-lookup"><span data-stu-id="083eb-102">IMetaDataImport::GetFieldMarshal Method</span></span>
-<span data-ttu-id="083eb-103">Gets a pointer to the native, unmanaged type of the field represented by the specified field metadata token.</span><span class="sxs-lookup"><span data-stu-id="083eb-103">Gets a pointer to the native, unmanaged type of the field represented by the specified field metadata token.</span></span>  
+# <a name="imetadataimportgetfieldmarshal-method"></a><span data-ttu-id="53247-102">IMetaDataImport::GetFieldMarshal Yöntemi</span><span class="sxs-lookup"><span data-stu-id="53247-102">IMetaDataImport::GetFieldMarshal Method</span></span>
+<span data-ttu-id="53247-103">Belirtilen alan meta veri belirteciyle temsil edilen alanın yerel, yönetilmeyen türüne yönelik bir işaretçi alır.</span><span class="sxs-lookup"><span data-stu-id="53247-103">Gets a pointer to the native, unmanaged type of the field represented by the specified field metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="083eb-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="083eb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="53247-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="53247-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFieldMarshal (  
@@ -35,26 +35,26 @@ HRESULT GetFieldMarshal (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="083eb-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="083eb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="53247-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="53247-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="083eb-106">[in] The metadata token that represents the field to get interop marshaling information for.</span><span class="sxs-lookup"><span data-stu-id="083eb-106">[in] The metadata token that represents the field to get interop marshaling information for.</span></span>  
+ <span data-ttu-id="53247-106">'ndaki İçin birlikte çalışma sıralama bilgilerini almak için alanı temsil eden meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="53247-106">[in] The metadata token that represents the field to get interop marshaling information for.</span></span>  
   
  `ppvNativeType`  
- <span data-ttu-id="083eb-107">[out] A pointer to the metadata signature of the field's native type.</span><span class="sxs-lookup"><span data-stu-id="083eb-107">[out] A pointer to the metadata signature of the field's native type.</span></span>  
+ <span data-ttu-id="53247-107">dışı Alanın yerel türünün meta veri imzasına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="53247-107">[out] A pointer to the metadata signature of the field's native type.</span></span>  
   
  `pcbNativeType`  
- <span data-ttu-id="083eb-108">[out] The size in bytes of `ppvNativeType`.</span><span class="sxs-lookup"><span data-stu-id="083eb-108">[out] The size in bytes of `ppvNativeType`.</span></span>  
+ <span data-ttu-id="53247-108">dışı `ppvNativeType`bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="53247-108">[out] The size in bytes of `ppvNativeType`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="083eb-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="083eb-109">Requirements</span></span>  
- <span data-ttu-id="083eb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="083eb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="53247-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="53247-109">Requirements</span></span>  
+ <span data-ttu-id="53247-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="53247-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="083eb-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="083eb-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="53247-111">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="53247-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="083eb-112">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="083eb-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="53247-112">**Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir</span><span class="sxs-lookup"><span data-stu-id="53247-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="083eb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="083eb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="53247-113">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="53247-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="083eb-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="083eb-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="53247-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="53247-114">See also</span></span>
 
-- [<span data-ttu-id="083eb-115">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="083eb-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="083eb-116">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="083eb-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="53247-115">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="53247-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="53247-116">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="53247-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

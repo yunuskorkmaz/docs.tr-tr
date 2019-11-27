@@ -22,11 +22,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448739"
 ---
-# <a name="enumimporttypes-method"></a><span data-ttu-id="42da7-102">EnumImportTypes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="42da7-102">EnumImportTypes Method</span></span>
+# <a name="enumimporttypes-method"></a><span data-ttu-id="a8624-102">EnumImportTypes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a8624-102">EnumImportTypes Method</span></span>
 
-<span data-ttu-id="42da7-103">Enumerates each type in each scope.</span><span class="sxs-lookup"><span data-stu-id="42da7-103">Enumerates each type in each scope.</span></span>
+<span data-ttu-id="a8624-103">Her kapsamdaki her türü numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="a8624-103">Enumerates each type in each scope.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="42da7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="42da7-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="a8624-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a8624-104">Syntax</span></span>
 
 ```cpp
 HRESULT EnumImportTypes(
@@ -37,30 +37,30 @@ HRESULT EnumImportTypes(
 ) PURE;
 ```
 
-## <a name="parameters"></a><span data-ttu-id="42da7-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="42da7-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="a8624-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a8624-105">Parameters</span></span>
 
 `hEnum`\
-<span data-ttu-id="42da7-106">Handle for enumerator.</span><span class="sxs-lookup"><span data-stu-id="42da7-106">Handle for enumerator.</span></span>
+<span data-ttu-id="a8624-106">Numaralandırıcı için tanıtıcı.</span><span class="sxs-lookup"><span data-stu-id="a8624-106">Handle for enumerator.</span></span>
 
 `dwMax`\
-<span data-ttu-id="42da7-107">Maximum number of types to retrieve.</span><span class="sxs-lookup"><span data-stu-id="42da7-107">Maximum number of types to retrieve.</span></span>
+<span data-ttu-id="a8624-107">Alınacak maksimum tür sayısı.</span><span class="sxs-lookup"><span data-stu-id="a8624-107">Maximum number of types to retrieve.</span></span>
 
 `aTypeDefs`\
-<span data-ttu-id="42da7-108">Receives type tokens, not to exceed `dwMax`.</span><span class="sxs-lookup"><span data-stu-id="42da7-108">Receives type tokens, not to exceed `dwMax`.</span></span>
+<span data-ttu-id="a8624-108">Tür belirteçlerini alır, `dwMax`aşmamak için kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="a8624-108">Receives type tokens, not to exceed `dwMax`.</span></span>
 
 `pdwCount`\
-<span data-ttu-id="42da7-109">Receives actual number of type in `aTypeDefs`.</span><span class="sxs-lookup"><span data-stu-id="42da7-109">Receives actual number of type in `aTypeDefs`.</span></span>
+<span data-ttu-id="a8624-109">`aTypeDefs`gerçek tür sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="a8624-109">Receives actual number of type in `aTypeDefs`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="42da7-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="42da7-110">Return Value</span></span>
+## <a name="return-value"></a><span data-ttu-id="a8624-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="a8624-110">Return Value</span></span>
 
-<span data-ttu-id="42da7-111">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="42da7-111">Returns S_OK if the method succeeds.</span></span>
+<span data-ttu-id="a8624-111">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="a8624-111">Returns S_OK if the method succeeds.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="42da7-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="42da7-112">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="a8624-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a8624-112">Requirements</span></span>
 
-<span data-ttu-id="42da7-113">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="42da7-113">Requires alink.h</span></span>
+<span data-ttu-id="a8624-113">ALink. h gerektirir</span><span class="sxs-lookup"><span data-stu-id="a8624-113">Requires alink.h</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="42da7-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="42da7-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a8624-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a8624-114">See also</span></span>
 
-- [<span data-ttu-id="42da7-115">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="42da7-115">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="42da7-116">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="42da7-116">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="42da7-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="42da7-117">ALink API</span></span>](index.md)
+- [<span data-ttu-id="a8624-115">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a8624-115">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="a8624-116">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a8624-116">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="a8624-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="a8624-117">ALink API</span></span>](index.md)

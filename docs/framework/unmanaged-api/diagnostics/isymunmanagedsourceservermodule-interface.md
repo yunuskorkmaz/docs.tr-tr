@@ -21,18 +21,18 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446201"
 ---
-# <a name="isymunmanagedsourceservermodule-interface"></a><span data-ttu-id="46a49-102">ISymUnmanagedSourceServerModule Arabirimi</span><span class="sxs-lookup"><span data-stu-id="46a49-102">ISymUnmanagedSourceServerModule Interface</span></span>
-<span data-ttu-id="46a49-103">Provides source server data for a module.</span><span class="sxs-lookup"><span data-stu-id="46a49-103">Provides source server data for a module.</span></span> <span data-ttu-id="46a49-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="46a49-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
+# <a name="isymunmanagedsourceservermodule-interface"></a><span data-ttu-id="a99b7-102">ISymUnmanagedSourceServerModule Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a99b7-102">ISymUnmanagedSourceServerModule Interface</span></span>
+<span data-ttu-id="a99b7-103">Bir modül için kaynak sunucu verisi sağlar.</span><span class="sxs-lookup"><span data-stu-id="a99b7-103">Provides source server data for a module.</span></span> <span data-ttu-id="a99b7-104">[Idimunmanagedreader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) arabirimini uygulayan bir nesne üzerinde `QueryInterface` çağırarak bu arabirimi elde edin.</span><span class="sxs-lookup"><span data-stu-id="a99b7-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="46a49-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="46a49-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="a99b7-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="a99b7-105">Methods</span></span>  
   
-|<span data-ttu-id="46a49-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="46a49-106">Method</span></span>|<span data-ttu-id="46a49-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="46a49-107">Description</span></span>|  
+|<span data-ttu-id="a99b7-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="a99b7-106">Method</span></span>|<span data-ttu-id="a99b7-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a99b7-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="46a49-108">GetSourceServerData Yöntemi</span><span class="sxs-lookup"><span data-stu-id="46a49-108">GetSourceServerData Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-getsourceserverdata-method.md)|<span data-ttu-id="46a49-109">Returns the source server data for the module.</span><span class="sxs-lookup"><span data-stu-id="46a49-109">Returns the source server data for the module.</span></span>|  
+|[<span data-ttu-id="a99b7-108">GetSourceServerData Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a99b7-108">GetSourceServerData Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-getsourceserverdata-method.md)|<span data-ttu-id="a99b7-109">Modülün kaynak sunucu verilerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="a99b7-109">Returns the source server data for the module.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="46a49-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="46a49-110">Requirements</span></span>  
- <span data-ttu-id="46a49-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="46a49-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a99b7-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a99b7-110">Requirements</span></span>  
+ <span data-ttu-id="a99b7-111">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="a99b7-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="46a49-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="46a49-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a99b7-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a99b7-112">See also</span></span>
 
-- [<span data-ttu-id="46a49-113">Tanılama Simge Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="46a49-113">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="a99b7-113">Tanılama Simge Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="a99b7-113">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
