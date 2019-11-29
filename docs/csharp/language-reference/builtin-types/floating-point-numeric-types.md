@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771899"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552275"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Kayan nokta sayısal türleri (C# başvuru)
 
@@ -46,14 +46,14 @@ double a = 12.3;
 System.Double b = 12.3;
 ```
 
-Her kayan nokta türünün varsayılan değeri sıfır, `0` ' dır. Kayan nokta türlerinin her biri, bu türün minimum ve maksimum sonlu değerini sağlayan `MinValue` ve `MaxValue` sabitleri vardır. @No__t_0 ve `double` türleri, sayı olmayan ve sonsuz değerleri temsil eden sabitleri de sağlar. Örneğin, `double` türü şu sabitleri sağlar: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> ve <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.
+Her kayan nokta türünün varsayılan değeri sıfırdır `0`. Kayan nokta türlerinin her biri, bu türün minimum ve maksimum sonlu değerini sağlayan `MinValue` ve `MaxValue` sabitlerini içerir. `float` ve `double` türleri, sayı olmayan ve sonsuz değerleri temsil eden sabitleri de sağlar. Örneğin, `double` türü şu sabitleri sağlar: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>ve <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.
 
-@No__t_0 türü daha fazla kesinlik ve `float` ve `double` daha küçük bir aralığa sahip olduğundan, finansal ve parasal hesaplamalar için uygundur.
+`decimal` türü daha fazla kesinlik ve `float` ve `double`daha küçük bir aralığa sahip olduğundan, finansal ve parasal hesaplamalar için uygundur.
 
 Bir ifadede [integral](integral-numeric-types.md) türlerini ve kayan nokta türlerini karıştırabilirsiniz. Bu durumda, integral türler kayan nokta türlerine dönüştürülür. İfadenin değerlendirmesi aşağıdaki kurallara göre gerçekleştirilir:
 
-- Kayan nokta türlerinden biri `double`, ifade `double` veya ilişkisel ve eşitlik karşılaştırmalarında [bool](../keywords/bool.md) olarak değerlendirilir.
-- İfadede `double` tür yoksa, ifade `float` veya ilişkisel ve eşitlik karşılaştırmalarında [bool](../keywords/bool.md) olarak değerlendirilir.
+- Kayan nokta türlerinden biri `double`, ifade `double`veya ilişkisel ve eşitlik karşılaştırmalarında [bool](bool.md) olarak değerlendirilir.
+- İfadede `double` tür yoksa, ifade `float`veya ilişkisel ve eşitlik karşılaştırmalarında [bool](bool.md) olarak değerlendirilir.
 
 Kayan nokta ifadesi aşağıdaki değer kümelerini içerebilir:
 
@@ -71,8 +71,8 @@ Kayan noktalı bir değeri biçimlendirmek için [Standart sayısal biçim dizel
 Gerçek bir sabit değerin türü, soneki tarafından aşağıdaki şekilde belirlenir:
 
 - Sonek olmadan veya `d` ya da `D` sonekine sahip sabit değer `double` türündedir
-- @No__t_0 veya `F` sonekine sahip sabit değer `float` türündedir
-- @No__t_0 veya `M` sonekine sahip sabit değer `decimal` türündedir
+- `f` veya `F` sonekine sahip sabit değer `float` türündedir
+- `m` veya `M` sonekine sahip sabit değer `decimal` türündedir
 
 Aşağıdaki kod, her birine bir örnek gösterir:
 

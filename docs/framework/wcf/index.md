@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF]
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-ms.openlocfilehash: 34c6cb8cbe815e33658f38ee0e6aff581ea0ff74
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 836913dd35d127d181c753341a7c39c453242a8f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961163"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552682"
 ---
 # <a name="develop-service-oriented-applications-with-wcf"></a>WCF ile hizmet odaklı uygulamalar geliştirme
 
@@ -71,9 +71,6 @@ Belgelerinin bu bölümü, hizmet yönelimli uygulamalar oluşturmaya yönelik B
 
  [Genel başvuru](general-reference.md)\
  Bölümü, Windows Communication Foundation istemcileri ve hizmetleri yapılandırmak için kullanılan öğeleri açıklar.
-
- [Geri bildirim ve topluluk](feedback-and-community.md)\
- Windows Communication Foundation hakkında geri bildirim sağlama hakkında bilgi
 
  [Gizlilik bilgileri](privacy-information.md)\
  WCF ve gizlilik hakkında bilgi

@@ -3,15 +3,15 @@ title: 'Öğretici: model Oluşturucu ile sistem durumu ihlallerini sınıfland�
 description: Bu öğreticide, San Francisco 'da Restoran sistem durumu ihlali önem derecesine göre sınıflandırmak için ML.NET model Oluşturucu kullanılarak birden çok Lass sınıflandırma modelinin nasıl oluşturulduğu gösterilmektedir.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/30/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: cbe20183d317ac6fe39a937e1cfa8a5e3df81b74
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 07729e1667f8aa3aba74576943d79eaa3bcd14d8
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977216"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552895"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Öğretici: model Oluşturucu ile Restoran sistem durumu ihlallerinin önem derecesini sınıflandırma
 
@@ -31,7 +31,7 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!NOTE]
 > Model Oluşturucu Şu anda önizleme aşamasındadır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Önkoşul ve Yükleme yönergelerinin bir listesi için [model Oluşturucu Yükleme Kılavuzu](../how-to-guides/install-model-builder.md)' nu ziyaret edin.
 
@@ -41,7 +41,7 @@ Bu örnek, model C# Oluşturucu ile oluşturulmuş bir makine öğrenimi modeli 
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
-1. "Restoran antihlalleri" adlı bir  **C# .NET Core konsol uygulaması** oluşturun.
+1. "Restoran antihlalleri" adlı bir  **C# .NET Core konsol uygulaması** oluşturun. **Çözümün ve projenin aynı dizine yerleştirdiğinizden** emin **olun (vs** 2019) veya **çözüm için dizin oluşturma** **denetlenir** (vs 2017).
 
 ## <a name="prepare-and-understand-the-data"></a>Verileri hazırlama ve anlama
 
@@ -81,7 +81,7 @@ Model Oluşturucu `csv` veya `tsv` biçimindeki bir SQL Server veritabanından v
     1. **Veri Seç** iletişim kutusunda **Microsoft SQL Server veritabanı dosyası**' nı seçin.
     1. **Her zaman bu seçimi kullan** onay kutusunu temizleyin ve **devam**' ı seçin.
     1. **Bağlantı özellikleri** iletişim kutusunda, **Araştır** ' ı seçin ve indirilen *restoranın. mdf* dosyasını seçin.
-    1. Seçin **Tamam**.
+    1. **Tamam ' ı**seçin.
 1. **Tablo adı** açılır listesinden **ihlaller** ' i seçin.
 1. **Tahmin edilecek (etiket)** aşağı açılan sütunda **RiskCategory** öğesini seçin.
 1. Varsayılan sütun seçimlerini, **ınspectiontype** ve **ViolationDescription** **giriş sütunları (Özellikler)** açılır listesine iade edin.
@@ -144,7 +144,7 @@ Eğitim sürecinin bir sonucu olarak iki proje oluşturulur.
 
 Oluşturulan projelere başka bir çözümün içinde daha sonraki bir zamanda başvurmanız gerekirse, bunları `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` dizininde bulabilirsiniz.
 
-Tebrikler! Model Oluşturucu kullanarak sistem durumu ihlallerinin riskini kategorize etmek için bir makine öğrenimi modelini başarıyla oluşturdunuz. Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) GitHub deposunda bulabilirsiniz.
+Mühendisi! Model Oluşturucu kullanarak sistem durumu ihlallerinin riskini kategorize etmek için bir makine öğrenimi modelini başarıyla oluşturdunuz. Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) GitHub deposunda bulabilirsiniz.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

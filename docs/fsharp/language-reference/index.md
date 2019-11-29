@@ -2,12 +2,12 @@
 title: F# Dili Başvurusu
 description: Bu F# başvurudan dil belirteçleri, kavramlar, türler, ifadeler ve derleyicinin desteklediği yapı konularına yönelik dil özelliği bilgilerini bulun.
 ms.date: 05/16/2016
-ms.openlocfilehash: ac7e268b28d6bb654e4443d04695cb15fe756e9f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bd9894176fa736b9eed939d72972e676e2bd2671
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424998"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552901"
 ---
 # <a name="f-language-reference"></a>F# Dili Başvurusu
 
@@ -110,7 +110,3 @@ Aşağıdaki tabloda, derleyicinin desteklediği özel yapıları anlatan konula
 |[Derleyici Seçenekleri](compiler-options.md)|F# Derleyici için komut satırı seçeneklerini açıklar.|
 |[Derleyici Yönergeleri](compiler-directives.md)|İşlemci yönergelerini ve derleyici yönergelerini açıklar.|
 |[Kaynak Satırı, Dosya ve Yol Tanımlayıcıları](source-line-file-path-identifiers.md)|Kodunuzda kaynak satır numarası, dizin ve dosya adına erişmenizi sağlayan yerleşik değerler olan `__LINE__`, `__SOURCE_DIRECTORY__` ve `__SOURCE_FILE__`tanımlayıcılarını açıklar.|
-
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [Visual F#](../index.md)

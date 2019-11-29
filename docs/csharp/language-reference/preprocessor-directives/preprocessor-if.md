@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 561a628c60888a8d4f3c50c8413784e1ed210599
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e467a890e971e6c6f2c681ee503d7c7ead19a1e4
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035999"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552450"
 ---
 # <a name="if-c-reference"></a>#if (C# Başvurusu)
 
@@ -24,7 +24,7 @@ C# Derleyici bir`#if`yönergesi ile karşılaştığında, sonunda bir [#endif](
 #endif
 ```
 
-Yalnızca [true](../keywords/true-literal.md) veya [false değerini](../keywords/false-literal.md)test etmek için [==](../operators/equality-operators.md#equality-operator-) (eşitlik) ve [! =](../operators/equality-operators.md#inequality-operator-) (eşitsizlik) işleçlerini kullanabilirsiniz. Doğru, simgenin tanımlandığı anlamına gelir. Deyimin `#if DEBUG` `#if (DEBUG == true)`ile aynı anlamı vardır. İşleçlerini [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (ve), [ &#124; ](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (veya) ve [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (değil) birden çok sembolün tanımlanıp tanımlanmadığını değerlendirmek için. Simgeleri ve işleçleri parantez ile de gruplandırabilirsiniz.
+[==](../operators/equality-operators.md#equality-operator-) (eşitlik) ve [! =](../operators/equality-operators.md#inequality-operator-) (eşitsizlik) işleçlerini yalnızca [bool](../builtin-types/bool.md) değerleri `true` veya `false`test etmek için kullanabilirsiniz. Doğru, simgenin tanımlandığı anlamına gelir. Deyimin `#if DEBUG` `#if (DEBUG == true)`ile aynı anlamı vardır. İşleçlerini [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (ve), [ &#124; ](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (veya) ve [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (değil) birden çok sembolün tanımlanıp tanımlanmadığını değerlendirmek için. Simgeleri ve işleçleri parantez ile de gruplandırabilirsiniz.
 
 ## <a name="remarks"></a>Açıklamalar
 

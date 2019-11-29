@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: b264be5d2589455562a19ef55b5ddf1a4e74ce15
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c797b1e9a80030ce6a97fccb14da2c51d753a1dc
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428458"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552327"
 ---
 # <a name="value-types-c-reference"></a>Değer türleri (C# başvuru)
 
@@ -42,7 +42,7 @@ Her değer türünün, bu türün varsayılan değerini Başlatan örtük parame
 
 - [Integral türleri](../builtin-types/integral-numeric-types.md): tamsayı sayısal türleri ve [char](../builtin-types/char.md) türü
 - [Kayan nokta türleri](../builtin-types/floating-point-numeric-types.md)
-- [bool](bool.md)
+- [bool](../builtin-types/bool.md)
 
 Basit türler anahtar sözcükler aracılığıyla tanımlanır, ancak bu anahtar sözcükler yalnızca <xref:System> ad alanındaki önceden tanımlanmış yapı türleri için diğer adlardır. Örneğin, [int](../builtin-types/integral-numeric-types.md) bir <xref:System.Int32?displayProperty=nameWithType>diğer adıdır. Diğer adların tam listesi için bkz. [Yerleşik türler tablosu](built-in-types-table.md).
 

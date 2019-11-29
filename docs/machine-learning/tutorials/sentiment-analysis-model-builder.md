@@ -1,17 +1,17 @@
 ---
 title: 'Öğretici: yaklaşım-ikili sınıflandırmayı çözümle'
 description: Bu öğreticide, Web sitesi açıklamalarından yaklaşımı sınıflandırın bir Razor Pages uygulamasının nasıl oluşturulacağı ve uygun eylemin nasıl yapılacağı gösterilmektedir. İkili yaklaşım Sınıflandırıcısı, Visual Studio 'da model Oluşturucu kullanır.
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e919341130c6778207f324dd9eb3b3f54c8a9c68
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974805"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551843"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Öğretici: ML.NET model Oluşturucu kullanarak Web uygulamasındaki Web sitesindeki açıklamaları çözümleme
 
@@ -48,7 +48,7 @@ Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://githu
     1. Yeni proje iletişim kutusunda, **Visual C#**  düğümünü ve ardından **Web** düğümünü seçin.
     1. **ASP.NET Core Web uygulaması** proje şablonunu seçin.
     1. **Ad** metin kutusuna "SentimentRazor" yazın.
-    1. **Çözüm için dizin oluşturma** onay kutusu varsayılan olarak denetlenmelidir. Böyle bir durum söz konusu değilse, kontrol edin.
+    1. **Çözümün ve projenin aynı dizine yerleştirdiğinizden** emin **olun (vs** 2019) veya **çözüm için dizin oluşturma** **denetlenir** (vs 2017).
     1. **Tamam** düğmesini seçin.
     1. Pencerede farklı ASP.NET Core proje türlerini görüntüleyen **Web uygulaması** ' nı seçin ve ardından **Tamam** düğmesini seçin.
 
@@ -58,7 +58,7 @@ Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://githu
 
 *Vivtox-250-Line-Data. tsv* veri kümesindeki her satır, visede bir kullanıcı tarafından bırakılan farklı bir gözden geçirmeyi temsil eder. İlk sütun metnin (0-Toxic, 1 ' in Toxic) yaklaşımını temsil eder ve ikinci sütun Kullanıcı tarafından bırakılan yorumu temsil eder. Sütunlar sekmelerle ayrılır. Veriler aşağıdaki gibi görünür:
 
-| Yaklaşım | Sentimentmetni |
+| yaklaşım | Sentimentmetni |
 | :---: | :---: |
 1\. | = = İşlenmemiş = = dude, o Carl resmini geri yüklemeniz veya başka bir şey yapmanız gerekir.
 1\. | = = TAMAM! = = ıM, DAHA SONRA BIR WIKI 'YI DAHA SONRA!!!

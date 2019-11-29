@@ -2,12 +2,12 @@
 title: .NET Core hakkında
 description: .NET Core hakkında bilgi edinin.
 ms.date: 09/17/2019
-ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4fe16475e18eb88e88fb33d30508f9ef5c9f2cd5
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416740"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552235"
 ---
 # <a name="about-net-core"></a>.NET Core hakkında
 
@@ -29,14 +29,14 @@ C#, Visual Basic ve F# dilleri .NET Core için uygulama ve kitaplıklar yazmak �
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 - Alt lime metni
 - V
- 
+
 Bu tümleştirme, kapsamında, [Omnisharp](https://www.omnisharp.net/) ve [ıonıde](http://ionide.io) projelerinin katkıda bulunanlar tarafından sağlanır.
 
 ## <a name="apis"></a>API'ler
 
 .NET Core pek çok senaryo için API 'Leri kullanıma sunar.
 
-- [Bool](../csharp/language-reference/keywords/bool.md) ve [int](../csharp/language-reference/builtin-types/integral-numeric-types.md)gibi temel türler.
+- <xref:System.Boolean?displayProperty=nameWithType> ve <xref:System.Int32?displayProperty=nameWithType>gibi temel türler.
 - <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>gibi koleksiyonlar.
 - <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>ve <xref:System.IO.FileStream?displayProperty=nameWithType>gibi yardımcı program türleri.
 - <xref:System.Data.DataSet?displayProperty=nameWithType>ve [Dbset](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/)gibi veri türleri.

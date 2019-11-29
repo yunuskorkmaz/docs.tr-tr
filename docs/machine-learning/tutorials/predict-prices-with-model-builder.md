@@ -3,15 +3,15 @@ title: 'Öğretici: model Oluşturucu ile gerileme kullanarak fiyatları tahmin 
 description: Bu öğreticide, özellikle New York City taksi Fares fiyatlarını tahmin etmek için ml.net model Oluşturucu kullanarak bir gerileme modeli oluşturma gösterilmektedir.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ed2afe307492b6d38e7e2f9d8ae02dafbb5ae1f4
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977352"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552922"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Öğretici: model Oluşturucu ile gerileme kullanarak fiyatları tahmin etme
 
@@ -38,7 +38,7 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
-1. "Taxifaretahminini" adlı bir **.NET Core konsol uygulaması** oluşturun.
+1. "Taxifaretahminini" adlı bir  **C# .NET Core konsol uygulaması** oluşturun. **Çözümün ve projenin aynı dizine yerleştirdiğinizden** emin **olun (vs** 2019) veya **çözüm için dizin oluşturma** **denetlenir** (vs 2017).
 
 ## <a name="prepare-and-understand-the-data"></a>Verileri hazırlama ve anlama
 

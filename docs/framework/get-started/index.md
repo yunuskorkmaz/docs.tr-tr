@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: ca2a4e6c44a26889a2fffa5cc5fa2cbba3eab782
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 563416f1ca9ddb9cb9bb7e78b9e13406983bdf9f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281827"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552796"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework kullanmaya başlayın
 
@@ -65,7 +65,7 @@ Geliştiriciyseniz, uygulamalarınızı oluşturmak için .NET Framework destekl
 
 1. İşletim sisteminizde önceden yüklü değilse, uygulamanızın hedefleyecek .NET Framework sürümünü yüklemelisiniz. En son üretim sürümü 4,8 .NET Framework. Windows 10 Mayıs 2019 güncelleştirmesine önceden yüklenmiştir ve Windows işletim sisteminin önceki sürümlerinde indirilebilir. .NET Framework sistem gereksinimleri için bkz. [sistem gereksinimleri](system-requirements.md). .NET Framework diğer sürümlerini yükleme hakkında bilgi için bkz. [Yükleme Kılavuzu](../install/guide-for-developers.md). Ek .NET Framework paketleri bant dışında serbest bırakılır, bu da normal veya zamanlanmış herhangi bir yayın döngüsünün dışında, sıralı olarak yayımlandıkları anlamına gelir. Bu paketler hakkında daha fazla bilgi için bkz. [.NET Framework ve bant dışı yayınlar](the-net-framework-and-out-of-band-releases.md).
 
-2. Uygulamalarınızı geliştirmek için kullanmayı düşündüğünüz .NET Framework tarafından desteklenen dili veya dilleri seçin. Microsoft 'tan [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.yml), [F#](../../fsharp/index.md)ve [ C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) dahil olmak üzere çeşitli diller mevcuttur. (.NET Framework uygulamalar geliştirmenize olanak tanıyan bir programlama dili, [ortak dil altyapısı (CLI) belirtimine](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)uyar.)
+2. Uygulamalarınızı geliştirmek için kullanmayı düşündüğünüz .NET Framework tarafından desteklenen dili veya dilleri seçin. Microsoft 'tan [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.yml), [F#](../../fsharp/index.yml)ve [ C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) dahil olmak üzere çeşitli diller mevcuttur. (.NET Framework uygulamalar geliştirmenize olanak tanıyan bir programlama dili, [ortak dil altyapısı (CLI) belirtimine](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)uyar.)
 
 3. Uygulamalarınızı oluşturmak ve seçtiğiniz programlama dilini veya dillerini desteklemek için kullanmak üzere geliştirme ortamını seçin. .NET Framework uygulamalar için Microsoft tümleşik geliştirme ortamı (IDE), [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Çeşitli sürümlerde kullanılabilir.
 

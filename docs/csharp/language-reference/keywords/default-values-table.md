@@ -6,23 +6,23 @@ ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 2f1ad5cc029b93261153e46d854cd8bf3e31ce92
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 48aa294fa9e37e2e138444e493faa5474011097e
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428529"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551819"
 ---
 # <a name="default-values-table-c-reference"></a>Varsayılan değerler tablosu (C# başvuru)
 
 Aşağıdaki tabloda, C# türlerin varsayılan değerleri gösterilmektedir:
 
-|Type|Varsayılan değer|
+|Tür|Varsayılan değer|
 |---------|------------------|
 |Herhangi bir başvuru türü|`null`|
 |Herhangi bir [yerleşik integral sayısal türü](../builtin-types/integral-numeric-types.md)|0 (sıfır)|
 |Herhangi bir [yerleşik kayan nokta sayısal türü](../builtin-types/floating-point-numeric-types.md)|0 (sıfır)|
-|[bool](bool.md)|`false`|
+|[bool](../builtin-types/bool.md)|`false`|
 |[char](../builtin-types/char.md)|`'\0'` (U + 0000)|
 |[enum](enum.md)|İfade tarafından üretilen değer `(E)0`, burada `E` enum tanımlayıcısıdır.|
 |[struct](struct.md)|Tüm değer türü alanları varsayılan değerlerine ve tüm başvuru türü alanlarına ayarlanarak oluşturulan değer `null`.|

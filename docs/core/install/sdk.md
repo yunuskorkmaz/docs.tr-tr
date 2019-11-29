@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 11/06/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 2f65e9dc39a4cd1076af1a70dfedfa671f20b42d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 6e9af6c84c81b1244e10fa7d5955ab67d34b1f0a
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450879"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552202"
 ---
 # <a name="install-the-net-core-sdk"></a>.NET Core SDK 'i yükler
 
@@ -26,12 +26,16 @@ Bu makalede, .NET Core SDK nasıl yükleneceğini öğreneceksiniz. .NET Core SD
 
 .NET Core 'u Ayrıca, tümleşik bir geliştirme ortamının (IDE) bir parçası olarak, aşağıdaki bölümlerde ayrıntılı olarak yükleyebilirsiniz.
 
+::: zone pivot="os-windows,os-macos"
+
 ## <a name="install-with-an-installer"></a>Bir yükleyici ile yükleme
 
 Hem Windows hem de macOS .NET Core 3,0 SDK 'sını yüklemek için kullanılabilecek tek başına yükleyiciler vardır.
 
 - Windows [x64 cpu](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x64-installer) | [x32 CPU](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x86-installer)
 - macOS [x64 CPU 'ları](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-macos-x64-installer)
+
+::: zone-end
 
 ::: zone pivot="os-linux"
 
@@ -47,11 +51,11 @@ Hem Windows hem de macOS .NET Core 3,0 SDK 'sını yüklemek için kullanılabil
 
 .NET Core uygulamaları geliştirmek için Visual Studio kullanıyorsanız, aşağıdaki tabloda, hedef .NET Core SDK sürümüne göre gerekli olan en düşük Visual Studio sürümü açıklanmaktadır.
 
-| .NET Core SDK sürümü | Visual Studio sürümü                      |
+| .NET Core SDK sürümü | Visual Studio sürüm                      |
 | --------------------- | ------------------------------------------ |
-| 3,0                   | Visual Studio 2019 sürüm 16,3 veya üzeri. |
-| 2.2                   | Visual Studio 2017 sürüm 15,9 veya üzeri. |
-| 2.1                   | Visual Studio 2017 sürüm 15,7 veya üzeri. |
+| 3.0                   | Visual Studio 2019 sürüm 16,3 veya üzeri. |
+| 2,2                   | Visual Studio 2017 sürüm 15,9 veya üzeri. |
+| 2,1                   | Visual Studio 2017 sürüm 15,7 veya üzeri. |
 
 Visual Studio zaten yüklüyse, aşağıdaki adımlarla sürümünüzü kontrol edebilirsiniz.
 

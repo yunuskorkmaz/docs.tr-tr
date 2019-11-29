@@ -3,14 +3,14 @@ title: Model Oluşturucu nasıl yüklenir
 description: ML.NET model Oluşturucu aracını yüklemeyi öğrenin
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/21/2019
+ms.date: 11/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: a1034d294012b8df5ec778fc40602fe52223961d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b87f712ad7a8b2229c1d42db4bad1fe511475ac7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774565"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552935"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>ML.NET model Oluşturucusu nasıl yüklenir
 
@@ -19,10 +19,13 @@ ms.locfileid: "72774565"
 > [!NOTE]
 > Model Oluşturucu Şu anda önizleme aşamasındadır.
 
-## <a name="pre-requisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Prerequisites
 
 - Visual Studio 2017 sürüm 15.9.12 veya üzeri/Visual Studio 2019
-- .NET Core 2,1 veya üzeri SDK
+- .NET Core 2,1 SDK veya üzeri.
+
+> [!NOTE]
+> .NET Core 3,0 SDK Şu anda desteklenmiyor.
 
 ## <a name="limitations"></a>Sınırlamalar
 
@@ -31,7 +34,7 @@ ms.locfileid: "72774565"
 - SQL Server eğitim için 100.000 satırlık bir sınıra sahiptir
 - Visual Studio 2017 için Microsoft SQL Server veri araçları desteklenmez
 
-## <a name="install"></a>Yükleme
+## <a name="install"></a>yükleme
 
 ML.NET model Oluşturucusu Visual Studio Market aracılığıyla veya Visual Studio içinden yüklenebilir.
 
@@ -42,7 +45,7 @@ ML.NET model Oluşturucusu Visual Studio Market aracılığıyla veya Visual Stu
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. Menü çubuğunda **araçlar**  > **Uzantılar ve güncelleştirmeler** ' i seçin.
+1. Menü çubuğunda **araçlar** > **Uzantılar ve güncelleştirmeler** ' i seçin.
 
     ![VS2017 Open Extensions Manager iletişim kutusu](./media/install-model-builder/vs2017-open-extensions-manager.png)
 
@@ -55,7 +58,7 @@ ML.NET model Oluşturucusu Visual Studio Market aracılığıyla veya Visual Stu
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-1. Menü çubuğunda **Uzantılar** ' ı seçin  > **Uzantıları Yönet**
+1. Menü çubuğunda **Uzantılar** ' ı seçin > **Uzantıları Yönet**
 
     ![VS2019 Open Extensions Manager iletişim kutusu](./media/install-model-builder/vs2019-open-extensions-manager.png)
 
@@ -70,7 +73,7 @@ ML.NET model Oluşturucusu Visual Studio Market aracılığıyla veya Visual Stu
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. Menü çubuğunda **araçlar**  > **Uzantılar ve güncelleştirmeler** ' i seçin.
+1. Menü çubuğunda **araçlar** > **Uzantılar ve güncelleştirmeler** ' i seçin.
 
     ![VS2017 Uzantıları Yönet iletişim kutusunu aç](./media/install-model-builder/vs2017-open-extensions-manager.png)
 
@@ -83,7 +86,7 @@ ML.NET model Oluşturucusu Visual Studio Market aracılığıyla veya Visual Stu
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-1. Menü çubuğunda **Uzantılar** ' ı seçin  > **Uzantıları Yönet**
+1. Menü çubuğunda **Uzantılar** ' ı seçin > **Uzantıları Yönet**
 
     ![VS2019 Uzantıları Yönet iletişim kutusunu aç](./media/install-model-builder/vs2019-open-extensions-manager.png)
 

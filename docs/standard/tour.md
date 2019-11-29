@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: e0e35562e2351f9b985c74b60d8769577c3e3f56
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 274fea83c474d4b67aab919b604eda893d8204d7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283891"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552861"
 ---
 # <a name="tour-of-net"></a>.NET Turu
 
@@ -31,7 +31,7 @@ Microsoft, üç .NET dilini etkin bir şekilde geliştirir C#ve F#destekler:, ve
 
 * C#basit, güçlü, tür kullanımı uyumlu ve nesne yönelimlidir. Bu, C stili dillerin ifade ve inceliğini bir kısmını korur. C ve benzer dilleri bilen herkes, ile uyumlu olan bazı sorunlar buluyor C#. Hakkında C#daha fazla bilgi edinmek için [ C# kılavuza](../csharp/index.yml) göz atın.
 
-* F#, geleneksel nesne yönelimli ve kesinlik temelli programlamayı da destekleyen platformlar arası, işlevsel ilk programlama dilidir. Hakkında F#daha fazla bilgi edinmek için [ F# kılavuza](../fsharp/index.md) göz atın.
+* F#, geleneksel nesne yönelimli ve kesinlik temelli programlamayı da destekleyen platformlar arası, işlevsel ilk programlama dilidir. Hakkında F#daha fazla bilgi edinmek için [ F# kılavuza](../fsharp/index.yml) göz atın.
 
 * Visual Basic .NET üzerinde çalışan çeşitli uygulamalar oluşturmak için kullanacağınızı öğrenmek için kolay bir dildir. .NET dilleri arasında, VB 'nin sözdizimi, normal insan diline en yakın bir deyişle, genellikle yazılım geliştirme konusunda yeni kişiler daha kolay hale gelir.
 

@@ -7,20 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 3b2eec4f0e17aa329fe3865fb3ef453ee030c6a7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ab49b8cbddac2569d6063a5f312105bef3033e84
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74451166"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552309"
 ---
 # <a name="char-c-reference"></a>Char (C# başvuru)
 
 `char` Type anahtar sözcüğü, bir Unicode UTF-16 karakteri temsil eden .NET <xref:System.Char?displayProperty=nameWithType> yapı türü için bir diğer addır.
 
-|Type|Aralık|Boyut|.NET türü|
+|Tür|Aralık|Boyut|.NET türü|
 |----------|-----------|----------|-------------------------|
 |`char`|U + 0000-U + FFFF|16 bit|<xref:System.Char?displayProperty=nameWithType>|
+
+`char` türünün varsayılan değeri `\0`, yani U + 0000.
 
 [Dize](reference-types.md#the-string-type) türü, metni `char` değerleri dizisi olarak temsil eder.
 

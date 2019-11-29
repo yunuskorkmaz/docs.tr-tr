@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 33af43a69587ffaadd7fcb42fa1d30ee9fc41989
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: deb057929871ffb50da466e3628c34f336ffd5ee
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429404"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552391"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Sabit Boyutlu Arabellekler (C# Programlama Kılavuzu)
 
@@ -37,7 +37,7 @@ Aşağıdaki `struct` boyutu 8 bayttır. `pathName` dizi bir başvurudur:
 
 Yukarıdaki örnekte, 7,3 ile C# başlayarak kullanılabilir olan sabitleme olmadan `fixed` alanlarına erişim gösterilmektedir.
 
-Diğer bir yaygın sabit boyutlu dizi [bool](../../language-reference/keywords/bool.md) dizidir. Bir `bool` dizisindeki öğeler her zaman boyuttaki bir bayttır. `bool` diziler, bit dizileri veya arabellekleri oluşturmak için uygun değildir.
+Diğer bir yaygın sabit boyutlu dizi [bool](../../language-reference/builtin-types/bool.md) dizidir. Bir `bool` dizisindeki öğeler her zaman boyuttaki bir bayttır. `bool` diziler, bit dizileri veya arabellekleri oluşturmak için uygun değildir.
 
 > [!NOTE]
 > [Stackalloc](../../language-reference/operators/stackalloc.md)kullanılarak oluşturulan bellek dışında, C# derleyici ve ortak DIL çalışma zamanı (CLR) herhangi bir güvenlik arabelleği taşma denetimi gerçekleştirmez. Tüm güvenli olmayan kodlarda olduğu gibi dikkatli olun.
