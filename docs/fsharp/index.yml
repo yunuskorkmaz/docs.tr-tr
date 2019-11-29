@@ -1,0 +1,69 @@
+### YamlMime:Landing
+title: F#belgelerle
+summary: .NET üzerinde F# programlama dilini kullanarak herhangi bir uygulamayı yazmayı öğrenin.
+metadata:
+  title: F#docs-kullanmaya başlayın, Öğreticiler, başvuru.
+  description: Programlama F# hakkında bilgi edinin-yeni F#geliştiriciler ve deneyimli F# /.NET geliştiricileri
+  ms.topic: landing-page
+  author: cartermp
+  ms.author: phcart
+  ms.date: 11/25/2019
+  ms.openlocfilehash: 7aef8012a5ef58c1c0a142dce8baf7ccb73f50fa
+  ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/27/2019
+  ms.locfileid: "74553053"
+landingContent:
+- title: İçindeki programı öğreninF#
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Nedir F#?
+      url: what-is-fsharp.md
+    - text: F# yükleme
+      url: get-started/install-fsharp.md
+    - text: Visual Studio F# 'da kullanmaya başlayın
+      url: get-started/get-started-visual-studio.md
+    - text: Visual Studio Code ile F# çalışmaya başlama
+      url: get-started/get-started-vscode.md
+  - linkListType: download
+    links:
+    - text: .NET Core SDK indirin
+      url: https://dotnet.microsoft.com/download
+- title: F#Temelleri
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: F# Turu
+      url: tour.md
+    - text: 'F # İşlevsel Programlamaya Giriş'
+      url: introduction-to-functional-programming/index.md
+    - text: Birinci sınıf işlevler
+      url: introduction-to-functional-programming/first-class-functions.md
+  - linkListType: concept
+    links:
+    - text: F# stil kılavuzu
+      url: style-guide/index.md
+    - text: F# kod biçimlendirme yönergeleri
+      url: style-guide/formatting.md
+    - text: F# kodlama kuralları
+      url: style-guide/conventions.md
+  - linkListType: tutorial
+    links:
+    - text: İçinde zaman uyumsuz programlamaF#
+      url: tutorials/asynchronous-and-concurrent-programming/async.md
+- title: F#dil başvurusu
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Dil başvurusu
+      url: language-reference/index.md
+    - text: Anahtar sözcük başvurusu
+      url: language-reference/keyword-reference.md
+    - text: Sembol ve işleç başvurusu
+      url: language-reference/symbol-and-operator-reference/index.md
+    - text: İşlevler
+      url: language-reference/functions/index.md
+    - text: F#türü
+      url: language-reference/fsharp-types.md
