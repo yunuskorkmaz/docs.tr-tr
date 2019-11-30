@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: da575c65902ec8751c12482d0c8d0abd523623e4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975130"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568800"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Veri Hizmetleri)
 
@@ -25,7 +25,7 @@ Veri hizmeti, büyük nesne ikili verilerini açığa çıkarır. Bu ikili veril
 
 - Medya bağlantı girişi-ilgili medya kaynağı akışına başvuran bir varlık.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], bir akış veri sağlayıcısı uygulayarak bir ikili kaynak akışı tanımlarsınız. Akış sağlayıcısı uygulamasında, bir <xref:System.IO.Stream> nesnesi olarak belirli bir varlıkla ilişkili medya kaynak akışı ile veri hizmeti sağlanır. Bu uygulama, veri hizmetinin, belirtilen bir MIME türünün ikili veri akışları olarak HTTP üzerinden medya kaynaklarını kabul etmesini ve döndürmesini sağlar.
+WCF Veri Hizmetleri, bir akış veri sağlayıcısı uygulayarak bir ikili kaynak akışı tanımlarsınız. Akış sağlayıcısı uygulamasında, bir <xref:System.IO.Stream> nesnesi olarak belirli bir varlıkla ilişkili medya kaynak akışı ile veri hizmeti sağlanır. Bu uygulama, veri hizmetinin, belirtilen bir MIME türünün ikili veri akışları olarak HTTP üzerinden medya kaynaklarını kabul etmesini ve döndürmesini sağlar.
 
 Bir veri hizmetini ikili verilerin akışını destekleyecek şekilde yapılandırmak için aşağıdaki adımlar gereklidir:
 
@@ -79,7 +79,7 @@ Bir varlığın medya bağlantı girişi olduğunu göstermek için <xref:System
 
 ## <a name="creating-the-streaming-data-service"></a>Akış veri hizmeti oluşturuluyor
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] çalışma zamanını <xref:System.Data.Services.Providers.IDataServiceStreamProvider> uygulamasına erişimi sağlamak için, oluşturduğunuz veri hizmetinin de <xref:System.IServiceProvider> arabirimini uygulaması gerekir. Aşağıdaki örnek, <xref:System.Data.Services.Providers.IDataServiceStreamProvider>uygulayan `PhotoServiceStreamProvider` sınıfının bir örneğini döndürmek için <xref:System.IServiceProvider.GetService%2A> yönteminin nasıl uygulanacağını gösterir.
+WCF Veri Hizmetleri çalışma zamanını <xref:System.Data.Services.Providers.IDataServiceStreamProvider> uygulamasına erişimi sağlamak için, oluşturduğunuz veri hizmetinin de <xref:System.IServiceProvider> arabirimini uygulaması gerekir. Aşağıdaki örnek, <xref:System.Data.Services.Providers.IDataServiceStreamProvider>uygulayan `PhotoServiceStreamProvider` sınıfının bir örneğini döndürmek için <xref:System.IServiceProvider.GetService%2A> yönteminin nasıl uygulanacağını gösterir.
 
 [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
 [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]
@@ -99,7 +99,7 @@ Varsayılan olarak, Internet Information Services (IIS) isteklerin boyutunu 4MB 
 
 ## <a name="using-data-streams-in-a-client-application"></a>Istemci uygulamasında veri akışlarını kullanma
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığı, bu kullanıma sunulan kaynakları istemcide ikili akışlar olarak hem alıp hem de güncelleştirmenizi sağlar. Daha fazla bilgi için bkz. [Ikili verilerle çalışma](working-with-binary-data-wcf-data-services.md).
+WCF Veri Hizmetleri istemci kitaplığı, bu kullanıma sunulan kaynakları istemcide ikili akışlar olarak hem alıp hem de güncelleştirmenizi sağlar. Daha fazla bilgi için bkz. [Ikili verilerle çalışma](working-with-binary-data-wcf-data-services.md).
 
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>Bir akış sağlayıcısıyla çalışmaya yönelik konular
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 605ff7a9acaaa217f0e482579968757dd451aed9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ab75380738064a001b12e79d1481d053622077ef
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974841"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569331"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Denetimlere veri bağlama (WCF Veri Hizmetleri)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], `ComboBox` ve `ListView` denetimleri gibi denetimleri <xref:System.Data.Services.Client.DataServiceCollection%601> sınıfının bir örneğine bağlayabilirsiniz. <xref:System.Collections.ObjectModel.ObservableCollection%601> sınıfından devralan bu koleksiyon, bir açık veri Protokolü (OData) akışından gelen verileri içerir. Bu sınıf, öğeler eklendiğinde veya kaldırıldığında bildirim sağlayan dinamik bir veri koleksiyonunu temsil eder. Veri bağlama için bir <xref:System.Data.Services.Client.DataServiceCollection%601> örneği kullandığınızda, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplıkları, <xref:System.Data.Services.Client.DataServiceContext> tarafından izlenen nesnelerin, ilişkili kullanıcı arabirimi öğesindeki verilerle eşitlenmiş kalmasını sağlamak için bu olayları işler.  
+WCF Veri Hizmetleri, `ComboBox` ve `ListView` denetimleri gibi denetimleri <xref:System.Data.Services.Client.DataServiceCollection%601> sınıfının bir örneğine bağlayabilirsiniz. <xref:System.Collections.ObjectModel.ObservableCollection%601> sınıfından devralan bu koleksiyon, bir açık veri Protokolü (OData) akışından gelen verileri içerir. Bu sınıf, öğeler eklendiğinde veya kaldırıldığında bildirim sağlayan dinamik bir veri koleksiyonunu temsil eder. Veri bağlama için bir <xref:System.Data.Services.Client.DataServiceCollection%601> örneği kullandığınızda, WCF Veri Hizmetleri istemci kitaplıkları, <xref:System.Data.Services.Client.DataServiceContext> tarafından izlenen nesnelerin, ilişkili kullanıcı arabirimi öğesindeki verilerle eşitlenmiş kalmasını sağlamak için bu olayları işler.  
   
  <xref:System.Data.Services.Client.DataServiceCollection%601> sınıfı (dolaylı), nesneleri koleksiyona eklendiğinde veya koleksiyondan kaldırıldığında bağlamı uyarmak için <xref:System.Collections.Specialized.INotifyCollectionChanged> arabirimini uygular. <xref:System.Data.Services.Client.DataServiceCollection%601> ile kullanılan veri hizmeti türü nesneleri, bağlama koleksiyonundaki nesnelerin özellikleri değiştiğinde <xref:System.Data.Services.Client.DataServiceCollection%601> uyarmak için <xref:System.ComponentModel.INotifyPropertyChanged> arabirimini de uygulamalıdır.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "73974841"
 - `entityCollectionChanged`-bağlama koleksiyonuna bir nesne eklendiğinde veya kaldırıldığında çağrılan bir yöntem. Bu <xref:System.Func%602> temsilci bir <xref:System.Data.Services.Client.EntityCollectionChangedParams> nesnesini kabul eder ve bir <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> eylemi için <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> çağırmak için varsayılan davranışın ya da <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> bir <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> eylemi için <xref:System.Data.Services.Client.DataServiceContext>, yine de oluşması gerektiğini belirten bir Boole değeri döndürür.  
   
 > [!NOTE]
-> [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], bu Temsilcilerde uyguladığınız özel davranışlardan herhangi bir doğrulama gerçekleştirmediğini gerçekleştirir.  
+> WCF Veri Hizmetleri, bu Temsilcilerde uyguladığınız özel davranışlardan herhangi bir doğrulama gerçekleştirmediğini gerçekleştirir.  
   
  Aşağıdaki örnekte <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> eylemi, silinen bir `Orders` varlığına ait `Orders_Details` varlıklarını kaldırmak için <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> ve <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> metodunu çağırmak üzere özelleştirilir. Bu özel eylem, üst varlık silindiği zaman bağımlı varlıklar otomatik olarak silinmediği için gerçekleştirilir.  
   

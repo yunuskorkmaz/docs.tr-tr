@@ -9,15 +9,15 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 4792850221da69be79b064313792dcd7ad226788
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 41f1d1f0ca04dff0faa9eb070882f845ef4827d2
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975212"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568956"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ hususları (WCF Veri Hizmetleri)
-Bu konu, LINQ sorgularının nasıl oluşturulduğu ve [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] yürütüldüğü ve açık veri Protokolü 'Nü (OData) uygulayan bir veri hizmetini sorgulamak için LINQ kullanma sınırlamalarını kullanırken oluşan yol hakkında bilgi sağlar. OData tabanlı bir veri hizmetine yönelik sorgu oluşturma ve yürütme hakkında daha fazla bilgi için bkz. [veri hizmetini sorgulama](querying-the-data-service-wcf-data-services.md).  
+Bu konu, LINQ sorgularının nasıl oluşturulduğu ve WCF Veri Hizmetleri yürütüldüğü ve açık veri Protokolü 'Nü (OData) uygulayan bir veri hizmetini sorgulamak için LINQ kullanma sınırlamalarını kullanırken oluşan yol hakkında bilgi sağlar. OData tabanlı bir veri hizmetine yönelik sorgu oluşturma ve yürütme hakkında daha fazla bilgi için bkz. [veri hizmetini sorgulama](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>LINQ sorguları oluşturuluyor  
  LINQ, <xref:System.Collections.Generic.IEnumerable%601>uygulayan bir nesne koleksiyonuna karşı sorgu oluşturma imkanı sağlar. Hem Visual Studio 'daki **hizmet başvurusu Ekle** iletişim kutusu hem de DataSvcUtil. exe aracı, bir OData hizmetinin <xref:System.Data.Services.Client.DataServiceContext>devralan varlık kapsayıcı sınıfı olarak bir temsilini ve akışlarda döndürülen varlıkları temsil eden nesneleri oluşturmak için kullanılır. Bu araçlar, hizmet tarafından akış olarak gösterilen koleksiyonlar için varlık kapsayıcı sınıfında özellikler de oluşturur. Veri hizmetini kapsülleyen sınıfın bu özelliklerinin her biri bir <xref:System.Data.Services.Client.DataServiceQuery%601>döndürür. <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfı LINQ tarafından tanımlanan <xref:System.Linq.IQueryable%601> arabirimini gerçekleştirdiğinden, istemci kitaplığı tarafından, yürütme sırasında veri hizmetine gönderilen bir sorgu isteği URI 'sine çevrilen veri hizmeti tarafından kullanıma sunulan akışlara yönelik bir LINQ sorgusu oluşturabilirsiniz.  
@@ -43,7 +43,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqexpressionspecific)]      
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqexpressionspecific)]    
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemcisi, her iki türdeki sorguyu bir sorgu URI 'sine çevirebilir ve sorgu yöntemlerini sorgu ifadesine ekleyerek bir LINQ sorgusunu genişletebilirsiniz. Bir sorgu ifadesine veya <xref:System.Data.Services.Client.DataServiceQuery%601>metot sözdizimini ekleyerek LINQ sorguları oluşturduğunuzda, işlemler sorgu URI 'sine yöntemlerin çağrıldığı sırada eklenir. Bu, her sorgu seçeneğini sorgu URI 'sine eklemek için <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> yöntemini çağırmaya eşdeğerdir.  
+ WCF Veri Hizmetleri istemcisi, her iki türdeki sorguyu bir sorgu URI 'sine çevirebilir ve sorgu yöntemlerini sorgu ifadesine ekleyerek bir LINQ sorgusunu genişletebilirsiniz. Bir sorgu ifadesine veya <xref:System.Data.Services.Client.DataServiceQuery%601>metot sözdizimini ekleyerek LINQ sorguları oluşturduğunuzda, işlemler sorgu URI 'sine yöntemlerin çağrıldığı sırada eklenir. Bu, her sorgu seçeneğini sorgu URI 'sine eklemek için <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> yöntemini çağırmaya eşdeğerdir.  
   
 ## <a name="executing-linq-queries"></a>LINQ sorguları yürütülüyor  
  Sorguya eklenen <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> veya <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>gibi bazı LINQ sorgu yöntemleri sorgunun yürütülmesine neden olur. Bir sorgu, `foreach` döngüsü sırasında veya sorgu bir `List` koleksiyonuna atandığında olduğu gibi örtük olarak numaralandırıldıktan sonra da yürütülür. Daha fazla bilgi için bkz. [veri hizmetini sorgulama](querying-the-data-service-wcf-data-services.md).  
@@ -135,7 +135,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  Önceki örneklerin her ikisi de sorgu URI 'sine çevrilir: `http://localhost:12345/northwind.svc/Orders()?$orderby=OrderDate desc&$skip=50&$top=25`.  
   
 <a name="expand"></a>   
-### <a name="expand"></a>Genişletin  
+### <a name="expand"></a>Genişlet  
  Bir OData veri hizmetini sorguladığınızda, sorgunun hedeflediği varlıkla ilgili varlıkların döndürülen akışı dahil edilmesini isteyebilirsiniz. <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> yöntemi, LINQ sorgusunun hedeflediği varlık kümesi için <xref:System.Data.Services.Client.DataServiceQuery%601> çağrılır, bu, ilgili varlık kümesi adı `path` parametresi olarak sağlanır. Daha fazla bilgi için bkz. [ertelenmiş Içerik yükleme](loading-deferred-content-wcf-data-services.md).  
   
  Aşağıdaki örneklerde, bir sorgudaki <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> yöntemini kullanmanın eşdeğer yolları gösterilmektedir:  

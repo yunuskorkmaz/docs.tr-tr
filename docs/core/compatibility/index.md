@@ -1,15 +1,15 @@
 ---
-title: Son değişiklikleri değerlendir-.NET Core
-description: .NET Core 'un .NET sürümleri genelinde geliştiriciler için uyumluluğu sürdürme yolları hakkında bilgi edinin.
+title: Son değişiklik türleri-.NET Core
+description: .NET Core 'un .NET sürümlerindeki geliştiriciler için uyumluluk denemelerini ve ne tür bir değişikliğin Son değişiklik olduğunu öğrenin.
 ms.date: 06/10/2019
-ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5624a35a0d71224faf9adc5df2b02a529e650314
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973645"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567712"
 ---
-# <a name="evaluate-breaking-changes-in-net-core"></a>.NET Core 'daki kırılmaya karşı değişiklikleri değerlendir
+# <a name="changes-that-affect-compatibility"></a>Uyumluluğu etkileyen değişiklikler
 
 .NET, geçmişi boyunca sürümden sürüme ve .NET 'in özellikleri arasında yüksek düzeyde uyumluluk tutmaya çalıştı. Bu, .NET Core için doğru olmaya devam eder. .NET Core, .NET Framework bağımsız olan yeni bir teknoloji olarak düşünülebilir, ancak iki ana etken .NET Core 'un .NET Framework arasında sınırsız olmasına izin verebilir:
 
@@ -24,14 +24,14 @@ Bu makalede, uyumluluk değişikliklerinin (veya son değişikliklerin) kategori
 > [!NOTE]
 > İkili uyumluluk ve geri uyumluluk gibi uyumluluk kategorilerinin bir tanımı için bkz. [değişiklik kategorilerini bölme](categories.md).
 
-Aşağıdaki bölümlerde .NET Core API 'Lerinde yapılan değişiklik kategorileri ve bunların uygulama uyumluluğuyla ilgili kategoriler açıklanmaktadır. ✔️ simgesi, belirli bir değişiklik türüne izin verildiğini gösterir, ❌ izin verilmediğini gösterir ve ❓ izin verilmeyen bir değişikliği gösterir. Bu son kategorideki değişiklikler, önceden tahmin edilebilir, belirgin ve tutarlı bir önceki davranışın nasıl olduğunu değerlendirmenizi gerektirir.
+Aşağıdaki bölümlerde .NET Core API 'Lerinde yapılan değişiklik kategorileri ve bunların uygulama uyumluluğuyla ilgili kategoriler açıklanmaktadır. ✔️ simgesi, belirli bir değişiklik türüne izin verildiğini gösterir, ❌ izin verilmediğini gösterir ve ❓ izin verilmeyen bir değişikliği gösterir. Bu son kategorideki değişiklikler, önceden tahmin edilebilir, belirgin ve tutarlı bir önceki davranışın olduğu değerlendirmesi gerektirir.
 
 > [!NOTE]
 > .NET Core kitaplıklarının değişikliklerinin nasıl değerlendirildiğini gösteren bir kılavuz olarak sunabilmesinin yanı sıra, kitaplık geliştiricileri birden çok .NET uygulaması ve sürümünü hedefleyen kitaplıklarında yapılan değişiklikleri değerlendirmek için de bu ölçütleri kullanabilir.
 
 ## <a name="modifications-to-the-public-contract"></a>Ortak Sözleşmede yapılan değişiklikler
 
-Bu kategorideki değişiklikler bir türün genel yüzey alanını *değiştirir* . Bu kategorideki değişikliklerden büyük bir olasılıkla, *geriye dönük uyumluluğu* ihlal etdiklerinden (API 'nin önceki bir sürümü ile geliştirilen bir uygulamanın daha sonraki bir sürümde yeniden derleme olmadan yürütülmesi için geliştirilmiş bir uygulama özelliği) izin verilmez.
+Bu kategorideki değişiklikler bir türün genel yüzey alanını değiştirir. Bu kategorideki değişikliklerden büyük bir olasılıkla, *geriye dönük uyumluluğu* ihlal etdiklerinden (API 'nin önceki bir sürümü ile geliştirilen bir uygulamanın daha sonraki bir sürümde yeniden derleme olmadan yürütülmesi için geliştirilmiş bir uygulama özelliği) izin verilmez.
 
 ### <a name="types"></a>Türler
 
@@ -194,7 +194,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını *değiştirir
 
 ## <a name="behavioral-changes"></a>Davranış değişiklikleri
 
-### <a name="assemblies"></a>Bütünleştirilmiş kodlar
+### <a name="assemblies"></a>Derlemeler
 
 - **aynı platformlar hala desteklenmeden bir derlemeyi taşınabilir hale getirmek ✔️**
 
@@ -260,7 +260,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını *değiştirir
 
 - **Yukarıda listelenmeyen başka bir durumda özel durumu kaldırmak ❌**
 
-### <a name="attributes"></a>Öznitelikler
+### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
 
 - **✔️, observable *olmayan* bir özniteliğin değerini değiştirme**
 

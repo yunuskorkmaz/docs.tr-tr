@@ -2,12 +2,12 @@
 title: Hesaplama İfadeleri
 description: "' De F# denetim akışı yapıları ve bağlamaları kullanılarak sıralanmak ve birleştirilebilecek hesaplamalar yazmak için uygun bir sözdizimi oluşturmayı öğrenin."
 ms.date: 11/04/2019
-ms.openlocfilehash: c9ac0454221782a7ccb3d41850ca6aba4e20a72a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4ff7def0ed3a46acd1b0b83b111f26f5d556071f
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976782"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569452"
 ---
 # <a name="computation-expressions"></a>Hesaplama İfadeleri
 
@@ -209,7 +209,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-4,5 ile F# başlayarak`match!`anahtar sözcüğü, başka bir hesaplama ifadesine bir çağrı ve bunun sonucunda bir model eşleşmesi sağlar:
+`match!` anahtar sözcüğü, başka bir hesaplama ifadesine bir çağrı ve bunun sonucunda kalıp eşleşmesi sağlar:
 
 ```fsharp
 let doThingsAsync url =
@@ -250,7 +250,7 @@ Aşağıdaki tabloda, bir iş akışı Oluşturucu sınıfında kullanılabilece
 |`Zero`|`unit -> M<'T>`|Hesaplama ifadelerinde `if...then` ifadelerinin boş `else` dalları için çağırılır.|
 |`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Hesaplama ifadesinin `Run` üyesine alıntı olarak geçtiğini gösterir. Bir hesaplamanın tüm örneklerini bir teklife çevirir.|
 
-Bir Oluşturucu sınıfındaki yöntemlerin birçoğu kullanır ve bir `M<'T>` yapısı döndürür. Bu, örneğin, zaman uyumsuz iş akışları için `Async<'T>` ve sıra için `Seq<'T>`, genellikle ayrı bir tanımlı tür oluşturur. sürdürülen. Bu yöntemlerin imzaları, bunların birbirleriyle birlikte birleştirilmelerini ve iç içe aktarılmasını sağlar, böylece bir yapıdan döndürülen iş akışı nesnesinin bir sonrakine geçirilmesi gerekir. Derleyici, bir hesaplama ifadesini ayrıştırdığında, önceki tablodaki yöntemleri ve hesaplama ifadesindeki kodu kullanarak, ifadeyi iç içe geçmiş işlev çağrılarının dizisine dönüştürür.
+Bir Oluşturucu sınıfındaki yöntemlerin birçoğu kullanır ve bir `M<'T>` yapısı döndürür. Bu, örneğin, zaman uyumsuz iş akışları için `Async<'T>` ve sıralı iş akışları için `Seq<'T>`. Bu yöntemlerin imzaları, bunların birbirleriyle birlikte birleştirilmelerini ve iç içe aktarılmasını sağlar, böylece bir yapıdan döndürülen iş akışı nesnesinin bir sonrakine geçirilmesi gerekir. Derleyici, bir hesaplama ifadesini ayrıştırdığında, önceki tablodaki yöntemleri ve hesaplama ifadesindeki kodu kullanarak, ifadeyi iç içe geçmiş işlev çağrılarının dizisine dönüştürür.
 
 İç içe geçmiş ifade aşağıdaki biçimdedir:
 
@@ -258,7 +258,7 @@ Bir Oluşturucu sınıfındaki yöntemlerin birçoğu kullanır ve bir `M<'T>` y
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-Yukarıdaki kodda, hesaplama ifadesi Oluşturucu sınıfında tanımlanmamışsa `Run` ve `Delay` çağrıları atlanır. `{| cexpr |}`olarak belirtilen hesaplama ifadesinin gövdesi, aşağıdaki tabloda açıklanan Çeviriler tarafından Oluşturucu sınıfının yöntemlerini içeren çağrılara çevrilir. Hesaplama ifadesi `{| cexpr |}`, `expr` bir F# ifade olduğu ve`cexpr`bir hesaplama ifadesi olduğu bu çevirilerine göre özyinelemeli olarak tanımlanır.
+Yukarıdaki kodda, hesaplama ifadesi Oluşturucu sınıfında tanımlanmamışsa `Run` ve `Delay` çağrıları atlanır. `{| cexpr |}`olarak belirtilen hesaplama ifadesinin gövdesi, aşağıdaki tabloda açıklanan Çeviriler tarafından Oluşturucu sınıfının yöntemlerini içeren çağrılara çevrilir. Hesaplama ifadesi `{| cexpr |}`, `expr` bir F# ifade olduğu ve `cexpr` bir hesaplama ifadesi olduğu bu çevirilerine göre özyinelemeli olarak tanımlanır.
 
 |İfade|İde|
 |----------|-----------|

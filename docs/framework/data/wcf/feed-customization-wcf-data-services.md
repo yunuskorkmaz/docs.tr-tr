@@ -10,22 +10,22 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 56c91fd1e9ea4a2e35bacbebab0f489e337cfec5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 08df16be9df6d55ab9f1426e205e56d9609ce72e
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975295"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569217"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Akış özelleştirmesi (WCF Veri Hizmetleri)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verileri akış olarak göstermek için açık veri Protokolü 'Nü (OData) kullanır. OData, veri akışları için hem atom hem de JavaScript Nesne Gösterimi (JSON) biçimlerini destekler. Atom akışı kullandığınızda OData, varlıkları ve ilişkileri gibi verileri, HTTP iletisinin gövdesine eklenebilecek bir XML biçiminde seri hale getirmek için standart bir yöntem sağlar. OData, varlıklarda ve Atom öğelerinde bulunan veriler arasında varsayılan bir varlık özelliği eşlemesini tanımlar. Daha fazla bilgi için bkz. [OData: Atom biçimi](https://go.microsoft.com/fwlink/?LinkID=185794).  
+WCF Veri Hizmetleri verileri akış olarak göstermek için açık veri Protokolü 'Nü (OData) kullanır. OData, veri akışları için hem atom hem de JavaScript Nesne Gösterimi (JSON) biçimlerini destekler. Atom akışı kullandığınızda OData, varlıkları ve ilişkileri gibi verileri, HTTP iletisinin gövdesine eklenebilecek bir XML biçiminde seri hale getirmek için standart bir yöntem sağlar. OData, varlıklarda ve Atom öğelerinde bulunan veriler arasında varsayılan bir varlık özelliği eşlemesini tanımlar. Daha fazla bilgi için bkz. [OData: Atom biçimi](https://go.microsoft.com/fwlink/?LinkID=185794).  
   
  Veri hizmeti tarafından döndürülen özellik verilerinin standart akış biçimi yerine özelleştirilmiş bir biçimde serileştirilmesi için bir uygulama senaryonuz olabilir. OData ile bir varlık özelliklerinin, bir girdinin kullanılmayan öğelerine ve özniteliklerine ya da akıştaki bir girdinin özel öğelerine eşlenilmesi için bir veri akışında serileştirme ' i özelleştirebilirsiniz.  
   
 > [!NOTE]
 > Akış özelleştirmesi yalnızca Atom akışları için desteklenir. Döndürülen akış için JSON biçimi istendiğinde özel akışlar döndürülmez.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]ile, veri modelindeki varlık türlerine öznitelikleri el ile uygulayarak atom yükünün alternatif varlık özelliği eşlemesini tanımlayabilirsiniz. Veri hizmetinin veri kaynağı sağlayıcısı, bu özniteliklerin nasıl uygulanacağını belirler.  
+ WCF Veri Hizmetleri ile, veri modelindeki varlık türlerine öznitelikleri el ile uygulayarak atom yükünün alternatif varlık özelliği eşlemesini tanımlayabilirsiniz. Veri hizmetinin veri kaynağı sağlayıcısı, bu özniteliklerin nasıl uygulanacağını belirler.  
   
 > [!IMPORTANT]
 > Özel akışlar tanımladığınızda, tanımlanmış özel eşlemeleri olan tüm varlık özelliklerinin projeksiyonda dahil edildiğini garanti etmeniz gerekir. Eşlenen bir varlık özelliği projeksiyonde yer olmadığında veri kaybı oluşabilir. Daha fazla bilgi için bkz. [sorgu tahminleri](query-projections-wcf-data-services.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "73975295"
 |Öznitelik adı|Açıklama|  
 |--------------------|-----------------|  
 |`FC_ContentKind`|İçeriğin türünü gösterir. Aşağıdaki anahtar sözcükler, dağıtım içerik türlerini tanımlar.<br /><br /> `text:` Özellik değeri akışta metin olarak görüntülenir.<br /><br /> `html:` Özellik değeri akışta HTML olarak görüntülenir.<br /><br /> `xhtml:` Özellik değeri akışta XML biçimli HTML olarak görüntülenir.<br /><br /> Bu anahtar sözcükler, yansıma sağlayıcısıyla kullanılan <xref:System.Data.Services.Common.SyndicationTextContentKind> sabit listesi değerlerine eşdeğerdir.<br /><br /> `FC_NsPrefix` ve `FC_NsUri` öznitelikleri kullanıldığında bu öznitelik desteklenmez.<br /><br /> `FC_ContentKind` özniteliği için bir `xhtml` değeri belirttiğinizde, özellik değerinin düzgün biçimlendirildiğinden XML içerdiğinden emin olmanız gerekir. Veri hizmeti herhangi bir dönüştürme yapılmadan değeri döndürür. Ayrıca, döndürülen XML 'deki tüm XML öğesi öneklerinde, eşlenmiş akışta tanımlanmış bir ad alanı URI 'SI ve öneki olduğundan emin olmanız gerekir.|  
-|`FC_KeepInContent`|Başvurulan özellik değerinin hem akışın içerik bölümüne hem de eşlenmiş konuma dahil edileceğini gösterir. Geçerli değerler `true` ve `false`. Elde edilen akışı daha önceki [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]sürümleriyle uyumlu hale getirmek için, değerin akışın içerik bölümüne eklendiğinden emin olmak için bir `true` değeri belirtin.|  
+|`FC_KeepInContent`|Başvurulan özellik değerinin hem akışın içerik bölümüne hem de eşlenmiş konuma dahil edileceğini gösterir. Geçerli değerler `true` ve `false`. Elde edilen akışı daha önceki WCF Veri Hizmetleri sürümleriyle uyumlu hale getirmek için, değerin akışın içerik bölümüne eklendiğinden emin olmak için bir `true` değeri belirtin.|  
 |`FC_NsPrefix`|Bir dağıtım olmayan eşlemede XML öğesinin ad alanı öneki. Bu öznitelik `FC_NsUri` özniteliğiyle birlikte kullanılmalıdır ve `FC_ContentKind` özniteliğiyle birlikte kullanılamaz.|  
 |`FC_NsUri`|Bir dağıtım olmayan eşlemede XML öğesinin ad alanı URI 'SI. Bu öznitelik `FC_NsPrefix` özniteliğiyle birlikte kullanılmalıdır ve `FC_ContentKind` özniteliğiyle birlikte kullanılamaz.|  
 |`FC_SourcePath`|Bu akış eşleme kuralının uygulandığı varlığın özelliğinin yolu. Bu öznitelik yalnızca bir `EntityType` öğesinde kullanıldığında desteklenir.<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> özelliği bir karmaşık türe doğrudan başvuramaz. Karmaşık türler için, özellik adlarının ters eğik çizgi (`/`) karakteriyle ayrıldığı bir yol ifadesi kullanmanız gerekir. Örneğin, bir tamsayı özelliği `Age` ve karmaşık bir özellik ile `Person` varlık türü için aşağıdaki değerlere izin verilir<br /><br /> `Address`:<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> özelliği, bir boşluk veya bir özellik adında geçerli olmayan herhangi bir karakter içeren bir değere ayarlanamaz.|  
@@ -83,7 +83,7 @@ ms.locfileid: "73975295"
 ## <a name="feed-customization-considerations"></a>Akış özelleştirme konuları  
  Özel akış eşlemelerini tanımlarken aşağıdakileri göz önünde bulundurmanız gerekir.  
   
-- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemcisi, bir akışdaki eşlenmiş öğeleri yalnızca boşluk içerdiğinde boş olarak değerlendirir. Bu nedenle, yalnızca beyaz boşluk içeren eşlenmiş öğeler istemcide aynı boşluk ile gerçekleştirilmez. İstemcide bu boşluğu korumak için `KeepInContext` değerini akış eşleme özniteliğinde `true` olarak ayarlamanız gerekir.  
+- WCF Veri Hizmetleri istemcisi, bir akışdaki eşlenmiş öğeleri yalnızca boşluk içerdiğinde boş olarak değerlendirir. Bu nedenle, yalnızca beyaz boşluk içeren eşlenmiş öğeler istemcide aynı boşluk ile gerçekleştirilmez. İstemcide bu boşluğu korumak için `KeepInContext` değerini akış eşleme özniteliğinde `true` olarak ayarlamanız gerekir.  
   
 ## <a name="versioning-requirements"></a>Sürüm oluşturma gereksinimleri  
  Akış özelleştirmesi aşağıdaki OData protokol sürümü oluşturma gereksinimlerine sahiptir:  

@@ -6,25 +6,16 @@ ms.author: adegeo
 ms.date: 11/06/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 6e9af6c84c81b1244e10fa7d5955ab67d34b1f0a
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
-ms.translationtype: HT
+ms.openlocfilehash: 54819b409422e8bda9efe25478aa3424683a380b
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552202"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567467"
 ---
 # <a name="install-the-net-core-sdk"></a>.NET Core SDK 'i yükler
 
 Bu makalede, .NET Core SDK nasıl yükleneceğini öğreneceksiniz. .NET Core SDK .NET Core Uygulamaları ve kitaplıkları oluşturmak için kullanılır. .NET Core çalışma zamanı her zaman SDK ile birlikte yüklenir.
-
-.NET Core ' u aşağıdaki bağlantılardan biriyle doğrudan indirebilir ve yükleyebilirsiniz:
-
-- [.NET Core 3,1 Preview 3 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [.NET Core 3,0 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- [.NET Core 2,2 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.2)
-- [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.1)
-
-.NET Core 'u Ayrıca, tümleşik bir geliştirme ortamının (IDE) bir parçası olarak, aşağıdaki bölümlerde ayrıntılı olarak yükleyebilirsiniz.
 
 ::: zone pivot="os-windows,os-macos"
 
@@ -32,8 +23,8 @@ Bu makalede, .NET Core SDK nasıl yükleneceğini öğreneceksiniz. .NET Core SD
 
 Hem Windows hem de macOS .NET Core 3,0 SDK 'sını yüklemek için kullanılabilecek tek başına yükleyiciler vardır.
 
-- Windows [x64 cpu](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x64-installer) | [x32 CPU](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x86-installer)
-- macOS [x64 CPU 'ları](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-macos-x64-installer)
+- Windows [x64 (64-bit) cpu](https://dotnet.microsoft.com/download/dotnet-core/3.0) | [x86 (32 bit) CPU](https://dotnet.microsoft.com/download/dotnet-core/3.0) 'lar
+- macOS [x64 (64-bit) CPU 'ları](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 
 ::: zone-end
 
@@ -41,7 +32,30 @@ Hem Windows hem de macOS .NET Core 3,0 SDK 'sını yüklemek için kullanılabil
 
 ## <a name="install-with-a-package-manager"></a>Paket Yöneticisi ile yüklemesi
 
-.NET Core SDK birçok ortak Linux Paket Yöneticisi ile yükleyebilirsiniz. Daha fazla bilgi için bkz. [Linux Paket Yöneticisi-.NET Core 'U yükler](linux-package-manager-rhel7.md).
+.NET Core SDK birçok ortak Linux Paket Yöneticisi ile yükleyebilirsiniz. Daha fazla bilgi için bkz. [Linux Paket Yöneticisi-.NET Core 'U yükler](linux-package-managers.md).
+
+## <a name="download-and-manually-install"></a>İndirme ve el ile yükleme
+
+SDK 'Yı ayıklamak ve komutları terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürümü [indirin](#all-net-core-downloads) . Ardından, bir Terminal açın ve aşağıdaki komutları çalıştırın.
+
+```bash
+mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.0.101-linux-musl-x64.tar.gz -C $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
+
+> [!TIP]
+> Yukarıdaki komutlar yalnızca .NET SDK komutlarını çalıştırıldığı terminal oturumu için kullanılabilir hale getirir.
+>
+> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örneğin:
+>
+> - **Bash kabuğu**: *~/. bash_profile*, *~/,bashrc*
+> - **Korn kabuğu**: *~/,KSHRC* veya *. Profile*
+> - **Z kabuğu**: *~/,zshrc* veya *. zprofile*
+> 
+> Kabuğunuz için uygun kaynak dosyayı düzenleyin ve mevcut `PATH` ifadesinin sonuna `:$HOME/dotnet` ekleyin. `PATH` bir ifade dahil yoksa, `export PATH=$PATH:$HOME/dotnet`yeni bir satır ekleyin.
+>
+> Ayrıca, dosyanın sonuna `export DOTNET_ROOT=$HOME/dotnet` ekleyin.
 
 ::: zone-end
 
@@ -53,6 +67,7 @@ Hem Windows hem de macOS .NET Core 3,0 SDK 'sını yüklemek için kullanılabil
 
 | .NET Core SDK sürümü | Visual Studio sürüm                      |
 | --------------------- | ------------------------------------------ |
+| 3,1 Önizleme           | Visual Studio 2019 sürüm 16,4 Önizleme veya üzeri. |
 | 3.0                   | Visual Studio 2019 sürüm 16,3 veya üzeri. |
 | 2,2                   | Visual Studio 2017 sürüm 15,9 veya üzeri. |
 | 2,1                   | Visual Studio 2017 sürüm 15,7 veya üzeri. |
@@ -90,14 +105,14 @@ Visual Studio 'Yu yüklerken veya değiştirirken, oluşturmakta olduğunuz uygu
 
 ::: zone-end
 
-## <a name="install-from-visual-studio-code"></a>Visual Studio Code şuradan yüklensin
+## <a name="install-alongside-visual-studio-code"></a>Visual Studio Code birlikte yüklemeyi
 
 Visual Studio Code, masaüstünüzde çalışan güçlü ve hafif bir kaynak kod düzenleyicisidir. Visual Studio Code Windows, macOS ve Linux için kullanılabilir.
 
-Visual Studio Code .NET Core desteği ile birlikte gelmediğinden, .NET Core desteği eklemek basittir.
+Visual Studio Code, Visual Studio gibi otomatikleştirilmiş bir .NET Core yükleyicisi ile birlikte gelmediğinden, .NET Core desteği eklemek basittir.
 
 01. [Visual Studio Code indirin ve yükleyin](https://code.visualstudio.com/Download).
-01. [.NET Core SDK indirin ve yükleyin](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+01. [.NET Core SDK indirin ve yükleyin](https://dotnet.microsoft.com/download/dotnet-core).
 01. [Uzantıyı Visual Studio Code marketi 'Nden yüklersiniz. C# ](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 
 ::: zone pivot="os-windows"
@@ -127,6 +142,15 @@ Komut dosyası, .NET Core 2,1 olan en son [uzun süreli destek (LTS)](https://do
 ```
 
 ::: zone-end
+
+## <a name="all-net-core-downloads"></a>Tüm .NET Core İndirmeleri
+
+.NET Core ' u aşağıdaki bağlantılardan biriyle doğrudan indirebilir ve yükleyebilirsiniz:
+
+- [.NET Core 3,1 Preview İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 3,0 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [.NET Core 2,2 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 
 ## <a name="docker"></a>Docker
 

@@ -2,16 +2,24 @@
 title: Değişiklik kategorilerini bölme-.NET Core
 description: .NET Core 'da önemli değişiklikler sınıflandırılan yollar hakkında bilgi edinin.
 ms.date: 06/10/2019
-ms.openlocfilehash: 68bc51b6662de070ef901b73fb75ff3aced95726
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739357"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567921"
 ---
 # <a name="breaking-change-categories"></a>Hataya neden olan değişiklik kategorileri
 
-*Uyumluluk* , kodun ilk olarak geliştirildiği bir .NET uygulaması sürümünde kod derleme veya yürütme imkanını ifade eder. Belirli bir değişiklik, altı farklı şekilde uyumluluğu etkileyebilir. Uyumluluk düşüşü ilk beş kategoriye [göre değerlendirilirken dikkate alınan her değişiklik türü](index.md) .
+*Uyumluluk* , kodun ilk olarak geliştirildiği bir .NET uygulaması sürümünde kod derleme veya yürütme imkanını ifade eder. Belirli bir değişiklik, altı farklı şekilde uyumluluğu etkileyebilir. Uyumluluk düşüşü aşağıdaki kategorilere değerlendirirken dikkate alınan [her değişiklik türü](index.md) :
+
+- [davranış değişikliği](#behavioral-change)
+- [ikili uyumluluk](#binary-compatibility)
+- [Kaynak uyumluluğu](#source-compatibility)
+- [Tasarım zamanı uyumluluğu](#design-time-compatibility)
+- [geriye dönük uyumluluk](#backwards-compatibility)
+
+[İleri uyumluluk](#forward-compatibility) .NET Core 'un hedefi değildir.
 
 ## <a name="behavioral-change"></a>Davranış değişikliği
 

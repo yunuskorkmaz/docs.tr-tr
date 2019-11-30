@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 4db0cd1b954b2beb6cc9eb32280fe06845a7385b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 80878c18143eaa603e624c8be63f11af91cfcfb6
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974823"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569298"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Veri hizmetini yapılandırma (WCF Veri Hizmetleri)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], açık veri Protokolü (OData) akışlarını kullanıma sunan veri hizmetleri oluşturabilirsiniz. Bu akışlardaki veriler, çeşitli veri kaynaklarından gelebilir. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], bu verileri OData akışı olarak göstermek için veri sağlayıcılarını kullanır. Bu sağlayıcılar bir Entity Framework sağlayıcısı, bir yansıma sağlayıcısı ve bir dizi özel veri hizmeti sağlayıcısı arabirimlerini içerir. Sağlayıcı uygulama, hizmet için veri modelini tanımlar. Daha fazla bilgi için bkz. [veri hizmetleri sağlayıcıları](data-services-providers-wcf-data-services.md).  
+WCF Veri Hizmetleri, açık veri Protokolü (OData) akışlarını kullanıma sunan veri hizmetleri oluşturabilirsiniz. Bu akışlardaki veriler, çeşitli veri kaynaklarından gelebilir. WCF Veri Hizmetleri, bu verileri OData akışı olarak göstermek için veri sağlayıcılarını kullanır. Bu sağlayıcılar bir Entity Framework sağlayıcısı, bir yansıma sağlayıcısı ve bir dizi özel veri hizmeti sağlayıcısı arabirimlerini içerir. Sağlayıcı uygulama, hizmet için veri modelini tanımlar. Daha fazla bilgi için bkz. [veri hizmetleri sağlayıcıları](data-services-providers-wcf-data-services.md).  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]veri hizmeti, veri hizmetinin türü veri modelinin varlık kapsayıcısı olduğu <xref:System.Data.Services.DataService%601> sınıfından devralan bir sınıftır. Bu varlık kapsayıcısının, veri modelindeki varlık kümelerine erişmek için kullanılan bir <xref:System.Linq.IQueryable%601>döndüren bir veya daha fazla özelliği vardır.  
+ WCF Veri Hizmetleri veri hizmeti, veri hizmetinin türü veri modelinin varlık kapsayıcısı olduğu <xref:System.Data.Services.DataService%601> sınıfından devralan bir sınıftır. Bu varlık kapsayıcısının, veri modelindeki varlık kümelerine erişmek için kullanılan bir <xref:System.Linq.IQueryable%601>döndüren bir veya daha fazla özelliği vardır.  
   
  Veri hizmetinin davranışları, <xref:System.Data.Services.DataServiceConfiguration> sınıfının üyeleri tarafından ve <xref:System.Data.Services.DataServiceConfiguration> sınıfının <xref:System.Data.Services.DataServiceConfiguration.DataServiceBehavior%2A> özelliğinden erişilen <xref:System.Data.Services.DataServiceBehavior> sınıfının üyeleri tarafından tanımlanır. <xref:System.Data.Services.DataServiceConfiguration> sınıfı, Northwind veri hizmeti 'nin aşağıdaki uygulamasında olduğu gibi, veri hizmeti tarafından uygulanan `InitializeService` yöntemine sağlanır:  
   
@@ -39,7 +39,7 @@ ms.locfileid: "73974823"
 |<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|`$expand` sorgu işlecini kullanarak, tek bir istekte yer alan ilgili varlıkların sayısını sınırlayarak bir yanıtın boyutunu sınırlamanıza olanak sağlar. Daha fazla bilgi için bkz. [OData: URI kuralları](https://go.microsoft.com/fwlink/?LinkId=185564) ve [ertelenmiş içerik yükleme](loading-deferred-content-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|`$expand` sorgu işlecini kullanarak, tek bir istekte yer alan ilgili varlıkların grafiğinin derinliğini sınırlayarak bir yanıtın boyutunu sınırlamanıza olanak sağlar. Daha fazla bilgi için bkz. [OData: URI kuralları](https://go.microsoft.com/fwlink/?LinkId=185564) ve [ertelenmiş içerik yükleme](loading-deferred-content-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|, Tek bir POST isteğinde bulunabilecek eklenecek varlık sayısını sınırlamanıza olanak sağlar.|  
-|<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|Veri hizmeti tarafından kullanılan atom protokolünün sürümünü tanımlar. <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> değeri <xref:System.Data.Services.Common.DataServiceProtocolVersion>en büyük değerden daha düşük bir değere ayarlandığında, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] en son işlevselliği veri hizmetine erişen istemciler için kullanılamaz. Daha fazla bilgi için bkz. [veri hizmeti sürümü oluşturma](data-service-versioning-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|Veri hizmeti tarafından kullanılan atom protokolünün sürümünü tanımlar. <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> değeri <xref:System.Data.Services.Common.DataServiceProtocolVersion>en büyük değerden daha düşük bir değere ayarlandığında, WCF Veri Hizmetleri en son işlevselliği veri hizmetine erişen istemciler için kullanılamaz. Daha fazla bilgi için bkz. [veri hizmeti sürümü oluşturma](data-service-versioning-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|Bir veri akışı olarak döndürülen her bir varlık kümesindeki varlık sayısını sınırlayarak bir yanıtın boyutunu sınırlandırmanıza olanak sağlar.|  
 |<xref:System.Data.Services.DataServiceConfiguration.RegisterKnownType%2A>|Veri hizmeti tarafından tanınan türler listesine bir veri türü ekler.|  
 |<xref:System.Data.Services.DataServiceConfiguration.SetEntitySetAccessRule%2A>|Veri hizmetinde kullanılabilir olan varlık kümesi kaynakları için erişim haklarını ayarlar. Ad parametresi için bir yıldız işareti (`*`) değeri, kalan tüm varlık kümelerine yönelik erişimin aynı düzeye ayarlanması sağlanabilir. İstemci uygulamaları için gerekli olan veri hizmeti kaynaklarına en az ayrıcalık erişimi sağlamak için varlık kümelerine erişim ayarlamanızı öneririz. Daha fazla bilgi için bkz. [güvenliği WCF veri Hizmetleri](securing-wcf-data-services.md). Belirli bir URI ve HTTP eylemi için gereken en düşük erişim haklarına örnek olarak, [En düşük kaynak erişim gereksinimleri](configuring-the-data-service-wcf-data-services.md#accessRequirements) bölümünde tablosuna bakın.|  

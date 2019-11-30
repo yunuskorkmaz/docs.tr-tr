@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 313af6046fda8dd8905e8bda4e8c4aec187ef8bf
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040186"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568399"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Nasıl yapılır: Yayımcı İlkesi Oluşturma
 
@@ -74,7 +74,7 @@ Bu komutta:
   > [!NOTE]
   > Belirli bir işlemci mimarisini hedefleme özelliği .NET Framework 2,0 ' den başlayarak kullanılabilir.
 
-Belirli bir işlemci mimarisini hedefleme özelliği .NET Framework 2,0 ' den başlayarak kullanılabilir. Aşağıdaki komut `pub.config`adlı bir yayımcı ilke dosyasından `policy.1.0.myAssembly` adlı bir yayımcı ilke derlemesi oluşturur, `sgKey.snk` dosyasında anahtar çiftini kullanarak derlemeye tanımlayıcı bir ad atar ve derlemenin x86 işlemcisini hedeflediğini belirtir mimarisini.
+Belirli bir işlemci mimarisini hedefleme özelliği .NET Framework 2,0 ' den başlayarak kullanılabilir. Aşağıdaki komut `pub.config`adlı bir yayımcı ilke dosyasından `policy.1.0.myAssembly` adlı bir yayımcı ilke derlemesi oluşturur, `sgKey.snk` dosyasındaki anahtar çiftini kullanarak derlemeye tanımlayıcı bir ad atar ve derlemenin x86 işlemci mimarisini hedeflediğini belirtir.
 
 ```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
@@ -105,7 +105,7 @@ gacutil /i policy.1.0.myAssembly.dll
 ```
 
 > [!IMPORTANT]
-> Yayımcı ilkesi derlemesi, özgün yayımcı ilke dosyası derlemeyle aynı dizinde yer aldığı sürece genel derleme önbelleğine eklenemez.
+> `/link` bağımsız değişkeninde belirtilen özgün yayımcı ilkesi dosyası derlemeyle aynı dizinde yer aldığı sürece Yayımcı ilkesi derlemesi genel derleme önbelleğine eklenemez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

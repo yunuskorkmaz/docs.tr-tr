@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: cf6877dd67ad9e17a43be5eafb84a2ecf21d7190
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7eea23ba3dc5e9cc327d9cdfba10c72af7525c30
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975440"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569400"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Veri hizmeti kaynaklarına erişme (WCF Veri Hizmetleri)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], verilerinizi URI 'Ler tarafından adreslenebilir kaynaklarla bir akış olarak göstermek için açık veri Protokolü 'Nü (OData) destekler. Bu kaynaklar [varlık veri modeli](../adonet/entity-data-model.md)varlık ilişkisi kurallarına göre temsil edilir. Bu modelde, varlıklar, bir uygulama etki alanında bulunan, müşteriler, siparişler, öğeler ve ürünler gibi veri türleri olan işletimsel birimleri temsil eder. Varlık verilerine, temsili durum aktarımı (REST) semantiği kullanılarak erişilir ve değiştirilir, özellikle Al, koy, POST ve DELETE için standart HTTP fiilleri.  
+WCF Veri Hizmetleri, verilerinizi URI 'Ler tarafından adreslenebilir kaynaklarla bir akış olarak göstermek için açık veri Protokolü 'Nü (OData) destekler. Bu kaynaklar [varlık veri modeli](../adonet/entity-data-model.md)varlık ilişkisi kurallarına göre temsil edilir. Bu modelde, varlıklar, bir uygulama etki alanında bulunan, müşteriler, siparişler, öğeler ve ürünler gibi veri türleri olan işletimsel birimleri temsil eder. Varlık verilerine, temsili durum aktarımı (REST) semantiği kullanılarak erişilir ve değiştirilir, özellikle Al, koy, POST ve DELETE için standart HTTP fiilleri.  
   
 ## <a name="addressing-resources"></a>Kaynakları adresleme  
  OData 'de, veri modeli tarafından sunulan tüm verileri bir URI kullanarak adresleyebilirsiniz. Örneğin, aşağıdaki URI, müşteri varlık türünün tüm örneklerinin girişlerini içeren Customers varlık kümesi olan bir akış döndürür:  
@@ -56,7 +56,7 @@ ms.locfileid: "73975440"
   
  Döndürülen akıştaki girişler, siparişlerin ShipCity özelliğinin değeri ile de sıralanır.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], aşağıdaki OData sistem sorgu seçeneklerini destekler:  
+ WCF Veri Hizmetleri, aşağıdaki OData sistem sorgu seçeneklerini destekler:  
   
 |Sorgu seçeneği|Açıklama|  
 |------------------|-----------------|  

@@ -2,34 +2,34 @@
 title: ADO.NET Mimarisi
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 50b8aaf6b07494c44423cf454f667f3bcdce32c6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2692959d5a3e12d503d91b55e19f744bb9abd112
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787015"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568453"
 ---
 # <a name="adonet-architecture"></a>ADO.NET Mimarisi
 Veri işleme, temelde genellikle bağlantı tabanlı, iki katmanlı bir modele bağlıdır. Veri işleme giderek çok katmanlı mimarilerin kullanıldığı için programcılar, uygulamaları için daha iyi ölçeklenebilirlik sağlamak üzere bağlantısı kesilen bir yaklaşıma geçiş yapıyor.  
   
 ## <a name="adonet-components"></a>ADO.NET bileşenleri  
- Verilere erişmek ve veri işlemek için ADO.NET 'in iki ana bileşeni .NET Framework veri sağlayıcılarıdır ve ' <xref:System.Data.DataSet>dir.  
+ Verilere erişmek ve veri işlemek için ADO.NET 'in iki ana bileşeni .NET Framework veri sağlayıcılarıdır ve <xref:System.Data.DataSet>.  
   
 ### <a name="net-framework-data-providers"></a>.NET Framework Veri Sağlayıcıları  
- .NET Framework veri sağlayıcıları doğrudan veri işleme ve hızlı, salt iletme, verilere salt okuma erişimi için tasarlanmış bileşenlerdir. `Connection` Nesnesi bir veri kaynağına bağlantı sağlar. `Command` Nesnesi, veri döndürmek, verileri değiştirmek, saklı yordamları çalıştırmak ve parametre bilgilerini göndermek veya almak için veritabanı komutlarına erişim sağlar. , `DataReader` Veri kaynağından yüksek performanslı veri akışı sağlar. Son olarak, `DataSet` nesnesi ve veri kaynağı arasında köprü sağlar.`DataAdapter` , `DataAdapter` Veri `Command` kaynağındakiSQL`DataSet` komutlarını yürütmek için nesneleri kullanır ve verileri veri kaynağına geri yüklemek veiçindekiverilerdeyapılandeğişikliklerimutabıkkılmakiçinkullanır.`DataSet` Daha fazla bilgi için bkz. [veri sağlayıcıları .NET Framework](data-providers.md) ve [verileri alma ve değiştirme ADO.net](retrieving-and-modifying-data.md).  
+ .NET Framework veri sağlayıcıları doğrudan veri işleme ve hızlı, salt iletme, verilere salt okuma erişimi için tasarlanmış bileşenlerdir. `Connection` nesnesi bir veri kaynağına bağlantı sağlar. `Command` nesnesi, veri döndürmek, verileri değiştirmek, saklı yordamları çalıştırmak ve parametre bilgilerini göndermek veya almak için veritabanı komutlarına erişim sağlar. `DataReader` veri kaynağından yüksek performanslı veri akışı sağlar. Son olarak, `DataAdapter` `DataSet` nesnesi ve veri kaynağı arasında köprü sağlar. `DataAdapter`, veri kaynağındaki SQL komutlarını yürütmek için `Command` nesneleri kullanarak `DataSet` verilerle birlikte yükler ve `DataSet` verilerde yapılan değişiklikleri veri kaynağına geri laştırır. Daha fazla bilgi için bkz. [veri sağlayıcıları .NET Framework](data-providers.md) ve [verileri alma ve değiştirme ADO.net](retrieving-and-modifying-data.md).  
   
 ### <a name="the-dataset"></a>Veri kümesi  
- ADO.net `DataSet` , herhangi bir veri kaynağından bağımsız olarak veri erişimi için özel olarak tasarlanmıştır. Sonuç olarak, birden çok ve farklı veri kaynaklarıyla birlikte kullanılabilir, XML verileriyle birlikte kullanılabilir veya uygulamada yerel verileri yönetmek için kullanılır. , `DataSet` Veri satırlarından ve sütunlarından oluşan bir veya <xref:System.Data.DataTable> daha fazla nesnenin koleksiyonunu ve ayrıca birincil anahtar, yabancı anahtar, kısıtlama ve `DataTable` nesnelerdeki verilerle ilgili ilişki bilgilerini içerir. Daha fazla bilgi için bkz. [veri kümeleri, DataTable ve DataView](./dataset-datatable-dataview/index.md).  
+ ADO.NET `DataSet`, herhangi bir veri kaynağından bağımsız olarak veri erişimi için özel olarak tasarlanmıştır. Sonuç olarak, birden çok ve farklı veri kaynaklarıyla birlikte kullanılabilir, XML verileriyle birlikte kullanılabilir veya uygulamada yerel verileri yönetmek için kullanılır. `DataSet`, veri satırlarından ve sütunlarından ve ayrıca birincil anahtar, yabancı anahtar, kısıtlama ve `DataTable` nesnelerdeki verilerle ilgili ilişki bilgileri içeren bir veya daha fazla <xref:System.Data.DataTable> nesnesinin bir koleksiyonunu içerir. Daha fazla bilgi için bkz. [veri kümeleri, DataTable ve DataView](./dataset-datatable-dataview/index.md).  
   
- Aşağıdaki diyagramda bir .NET Framework veri sağlayıcısı ve ile `DataSet`arasındaki ilişki gösterilmektedir.  
+ Aşağıdaki diyagramda bir .NET Framework veri sağlayıcısı ve bir `DataSet`arasındaki ilişki gösterilmektedir.  
   
- ![ADO.net grafiği](./media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
+ ![ADO.Net grafiği](./media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 ADO.NET mimarisi  
   
 ### <a name="choosing-a-datareader-or-a-dataset"></a>DataReader veya veri kümesi seçme  
- Uygulamanızın bir `DataReader` ( [DataReader kullanarak veri alma](retrieving-data-using-a-datareader.md)) veya bir `DataSet` (bkz. veri [kümeleri, DataTable ve DataView](./dataset-datatable-dataview/index.md)) kullanması gerektiğine karar verirken, uygulamanızın gerektirdiği işlev türünü göz önünde bulundurun. Şunları yapmak `DataSet` için bir kullanın:  
+ Uygulamanızın bir `DataReader` ( [DataReader kullanarak veri alma](retrieving-data-using-a-datareader.md)) veya bir `DataSet` (bkz. veri [kümeleri, DataTable ve DataView](./dataset-datatable-dataview/index.md)'ler) kullanması gerektiğine karar verirken, uygulamanızın gerektirdiği işlev türünü göz önünde bulundurun. Şunları yapmak için bir `DataSet` kullanın:  
   
-- Verileri işleyebilmeniz için uygulamanızdaki yerel olarak önbelleğe alma. Yalnızca bir sorgunun `DataReader` sonuçlarını okumanız gerekiyorsa, daha iyi bir seçenektir.  
+- Verileri işleyebilmeniz için uygulamanızdaki yerel olarak önbelleğe alma. Yalnızca bir sorgunun sonuçlarını okumanız gerekiyorsa `DataReader` daha iyi bir seçenektir.  
   
 - Katmanlar arasında veya bir XML Web hizmetinden uzak veriler.  
   
@@ -37,10 +37,10 @@ ADO.NET mimarisi
   
 - Veri kaynağına açık bir bağlantı gerektirmeden veri üzerinde kapsamlı işlem gerçekleştirerek, bağlantıyı diğer istemciler tarafından kullanılmak üzere serbest bırakır.  
   
- Tarafından `DataSet`sağlanmış işlevselliğe ihtiyacınız yoksa, verilerinizi yalnızca ileri, Salt okunabilir bir şekilde döndürmek `DataReader` için kullanarak uygulamanızın performansını artırabilirsiniz. , `DataAdapter` Öğesininiçeriğini`DataSet` doldurmak `DataReader` [](populating-a-dataset-from-a-dataadapter.md)için (bkz. DataAdapter 'tan bir veri kümesini doldurma) kullanmasına karşın, kullanarak, bu, `DataReader` ve içeriğinin oluşturulması ve doldurulması için gereken işlemden kaçının. `DataSet` `DataSet`  
+ `DataSet`tarafından sunulan işlevselliğe ihtiyacınız yoksa, verilerinizi yalnızca ileri, Salt okunabilir bir şekilde döndürmek için `DataReader` kullanarak uygulamanızın performansını artırabilirsiniz. `DataAdapter`, bir `DataSet` içeriğini doldurmak için `DataReader` kullansa da (bkz. [DataAdapter 'tan bir veri kümesini doldurma](populating-a-dataset-from-a-dataadapter.md)) `DataReader`, `DataSet`tarafından tüketilen belleği kaydedecağından ve `DataSet`içeriğini oluşturmak ve doldurmak için gereken işlemden kaçınmak için performansı artırabilir.  
   
 ## <a name="linq-to-dataset"></a>LINQ - DataSet  
- LINQ to DataSet, veri kümesi nesnesinde önbelleğe alınan veriler üzerinde sorgu özellikleri ve derleme zamanı tür denetimi sağlar. Sorgular, C# veya Visual Basic gibi .NET Framework geliştirme dilinden birine yazmanızı sağlar. Daha fazla bilgi için [LINQ to DataSet](linq-to-dataset.md).  
+ LINQ to DataSet, veri kümesi nesnesinde önbelleğe alınan veriler üzerinde sorgu özellikleri ve derleme zamanı tür denetimi sağlar. Sorgular, C# veya Visual Basic gibi .NET Framework geliştirme dilinden birine yazmanızı sağlar. Daha fazla bilgi için bkz. [LINQ to DataSet](linq-to-dataset.md).  
   
 ## <a name="linq-to-sql"></a>LINQ - SQL  
  LINQ to SQL, bir ara kavramsal model kullanılmadan ilişkisel bir veritabanının veri yapılarına eşlenmiş bir nesne modeline karşı sorguları destekler. Her tablo ayrı bir sınıf tarafından temsil edilir ve nesne modelini ilişkisel veritabanı şemasına sıkı bir şekilde ayırır. LINQ to SQL, nesne modelindeki dil ile tümleşik sorguları Transact-SQL ' e çevirir ve yürütmek üzere veritabanına gönderir. Veritabanı sonuçları döndürdüğünde LINQ to SQL sonuçları nesnelere geri çevirir. Daha fazla bilgi için bkz. [LINQ to SQL](./sql/linq/index.md).  
@@ -49,12 +49,12 @@ ADO.NET mimarisi
  ADO.NET Entity Framework, geliştiricilerin doğrudan ilişkisel bir depolama şemasına karşı programlama yerine kavramsal bir uygulama modeline karşı programlama yaparak veri erişimi uygulamaları oluşturmalarına olanak tanımak üzere tasarlanmıştır. Amaç, veri odaklı uygulamalar için gereken kod ve bakım miktarını azaltmaktır. Daha fazla bilgi için bkz. [ADO.NET Entity Framework](./ef/index.md).  
   
 ## <a name="wcf-data-services"></a>WCF Veri Hizmetleri  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Web veya intranette veri hizmetlerini dağıtmak için kullanılır. Veriler, Varlık Veri Modeli belirtimlerine göre varlıklar ve ilişkiler olarak yapılandırılır. Bu modelde dağıtılan verilere standart HTTP protokolü tarafından adreslenebilir. Daha fazla bilgi için [WCF Veri Hizmetleri 4.5](../wcf/index.md).  
+ WCF Veri Hizmetleri, Web 'de veya intranette veri hizmetlerini dağıtmak için kullanılır. Veriler, Varlık Veri Modeli belirtimlerine göre varlıklar ve ilişkiler olarak yapılandırılır. Bu modelde dağıtılan verilere standart HTTP protokolü tarafından adreslenebilir. Daha fazla bilgi için bkz. [WCF Veri Hizmetleri 4,5](../wcf/index.md).  
   
 ## <a name="xml-and-adonet"></a>XML ve ADO.NET  
  ADO.NET, verilere bağlantısız erişim sağlamak için XML 'nin gücünden yararlanır. ADO.NET, .NET Framework içindeki XML sınıflarıyla birlikte tasarlanmıştır; her ikisi de tek bir mimarinin bileşenleridir.  
   
- ADO.net ve .NET Framework XML sınıfları `DataSet` nesnesine yakınlardır. , `DataSet` Bir XML kaynağından alınan verilerle doldurulabilir ve bunun bir dosya veya XML akışı olması olabilir. , İçindeki verilerin kaynağına bakılmaksızın şemasını xml şeması tanım dili (xsd) şeması olarak içeren World Wide Web Consortium (W3C) uyumlu XML olarak yazılabilir. `DataSet` `DataSet` XML 'nin yerel seri hale getirme biçimi `DataSet` nedeniyle, verileri katmanlar arasında taşımak için mükemmel bir ortamdır; bu, verileri ve şema bağlamını bir XML Web hizmetinden ve bir XML Web hizmetinden uzak hale `DataSet` getirmek için en uygun seçeneği sağlar. Daha fazla bilgi için bkz. [XML belgeleri ve verileri](../../../standard/data/xml/index.md).  
+ ADO.NET ve .NET Framework XML sınıfları `DataSet` nesnesine yakınlardır. `DataSet` bir XML kaynağından alınan verilerle doldurulabilir ve bu dosya veya XML akışı olabilir. `DataSet`, `DataSet`verilerin kaynağından bağımsız olarak şemasını XML şeması tanım dili (XSD) şeması olarak içeren World Wide Web Consortium (W3C) uyumlu XML olarak yazılabilir. `DataSet` yerel seri hale getirme biçimi XML olduğundan, verileri katmanlar arasında taşımak için mükemmel bir ortamdır ve bir XML Web hizmetinden veya bir XML Web hizmetine veri ve şema bağlamı için en uygun seçim yaparak `DataSet`. Daha fazla bilgi için bkz. [XML belgeleri ve verileri](../../../standard/data/xml/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

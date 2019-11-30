@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 9cb2568aa36af9ced0525660962966375d69e35b
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 8c2d586a444412abd67198ad7f295e81cb3101fb
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140673"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567330"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -439,10 +439,10 @@ Ayrıştırma ve biçimlendirme düzeltmeleri şunları içerir:
 
 Yeni <xref:System.Math?displayProperty=nameWithType> API 'Leri şunlardır:
 
-- <xref:System.Math.BitIncrement(System.Double)> ve <xref:System.Math.BitDecrement(System.Double)> \
+- <xref:System.Math.BitIncrement(System.Double)> ve <xref:System.Math.BitDecrement(System.Double)>\
 `nextUp` ve `nextDown` IEEE işlemlerine karşılık gelir. Bunlar, girdiden daha büyük veya daha az (sırasıyla) karşılaştıran en küçük kayan nokta numarasını döndürür. Örneğin, `Math.BitIncrement(0.0)` `double.Epsilon`döndürür.
 
-- <xref:System.Math.MaxMagnitude(System.Double,System.Double)> ve <xref:System.Math.MinMagnitude(System.Double,System.Double)> \
+- <xref:System.Math.MaxMagnitude(System.Double,System.Double)> ve <xref:System.Math.MinMagnitude(System.Double,System.Double)>\
 `maxNumMag` ve `minNumMag` IEEE işlemlerine karşılık gelir, iki girişin (sırasıyla) büyüklüğüne eşit veya daha küçük olan değeri döndürür. Örneğin, `Math.MaxMagnitude(2.0, -3.0)` `-3.0`döndürür.
 
 - <xref:System.Math.ILogB(System.Double)>\
@@ -520,4 +520,4 @@ Uygulama geliştirirken birçok kez şifrelenmemiş bağlantı kullanmak istersi
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [.NET Core 2,2 ve 3,0 arasındaki son değişiklikleri gözden geçirin.](../compatibility/2.2-3.0.md)
-- [.NET Framework ve .NET Core 3,0 arasındaki son değişiklikleri gözden geçirin.](../compatibility/framework-core.md)
+- [Windows Forms uygulamalar için .NET Framework ve .NET Core 3,0 arasındaki son değişiklikleri gözden geçirin.](../porting/winforms-breaking-changes.md)

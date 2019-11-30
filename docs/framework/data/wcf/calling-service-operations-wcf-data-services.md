@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: a64a09195101cd4b1ec3c6f990dd09d54466aea0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bc2338191bbf6922f56c833ebf115c5b21d92b00
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975409"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569309"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Hizmet Işlemlerini çağırma (WCF Veri Hizmetleri)
-Açık Veri Protokolü (OData), bir veri hizmeti için hizmet işlemlerini tanımlar. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], bu işlemleri veri hizmetindeki yöntemler olarak tanımlamanızı sağlar. Diğer veri hizmeti kaynakları gibi bu hizmet işlemleri de URI 'Ler kullanılarak karşılanır. Bir hizmet işlemi varlık türleri, tek varlık türü örnekleri ve tamsayı ve dize gibi basit türler için Koleksiyonlar döndürebilir. Ayrıca, bir hizmet işlemi `null` (`Nothing` Visual Basic) döndürebilir. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığı, HTTP GET isteklerini destekleyen hizmet işlemlerine erişmek için kullanılabilir. Bu tür hizmet işlemleri, <xref:System.ServiceModel.Web.WebGetAttribute> uygulanmış yöntemler olarak tanımlanır. Daha fazla bilgi için bkz. [hizmet işlemleri](service-operations-wcf-data-services.md).  
+Açık Veri Protokolü (OData), bir veri hizmeti için hizmet işlemlerini tanımlar. WCF Veri Hizmetleri, bu işlemleri veri hizmetindeki yöntemler olarak tanımlamanızı sağlar. Diğer veri hizmeti kaynakları gibi bu hizmet işlemleri de URI 'Ler kullanılarak karşılanır. Bir hizmet işlemi varlık türleri, tek varlık türü örnekleri ve tamsayı ve dize gibi basit türler için Koleksiyonlar döndürebilir. Ayrıca, bir hizmet işlemi `null` (`Nothing` Visual Basic) döndürebilir. WCF Veri Hizmetleri istemci kitaplığı, HTTP GET isteklerini destekleyen hizmet işlemlerine erişmek için kullanılabilir. Bu tür hizmet işlemleri, <xref:System.ServiceModel.Web.WebGetAttribute> uygulanmış yöntemler olarak tanımlanır. Daha fazla bilgi için bkz. [hizmet işlemleri](service-operations-wcf-data-services.md).  
   
- Hizmet işlemleri, OData 'i uygulayan bir veri hizmeti tarafından döndürülen meta verilerde gösterilir. Meta verilerde, hizmet işlemleri `FunctionImport` öğesi olarak temsil edilir. Türü kesin belirlenmiş <xref:System.Data.Services.Client.DataServiceContext>oluştururken, Hizmet Başvurusu Ekle ve DataSvcUtil. exe araçları bu öğeyi yoksayar. Bu nedenle, bir hizmet işlemini doğrudan çağırmak için kullanılabilen bağlamda bir yöntem bulamacaksınız. Ancak, bu iki şekilde hizmet işlemlerini çağırmak için [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemcisini kullanmaya devam edebilirsiniz:  
+ Hizmet işlemleri, OData 'i uygulayan bir veri hizmeti tarafından döndürülen meta verilerde gösterilir. Meta verilerde, hizmet işlemleri `FunctionImport` öğesi olarak temsil edilir. Türü kesin belirlenmiş <xref:System.Data.Services.Client.DataServiceContext>oluştururken, Hizmet Başvurusu Ekle ve DataSvcUtil. exe araçları bu öğeyi yoksayar. Bu nedenle, bir hizmet işlemini doğrudan çağırmak için kullanılabilen bağlamda bir yöntem bulamacaksınız. Ancak, bu iki şekilde hizmet işlemlerini çağırmak için WCF Veri Hizmetleri istemcisini kullanmaya devam edebilirsiniz:  
   
 - <xref:System.Data.Services.Client.DataServiceContext><xref:System.Data.Services.Client.DataServiceContext.Execute%2A> yöntemini çağırarak, hizmet işleminin URI 'sini, tüm parametrelerle birlikte sağlayarak. Bu yöntem, tüm hizmet Al işlemlerini çağırmak için kullanılır.  
   
 - <xref:System.Data.Services.Client.DataServiceContext> <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> yöntemi kullanarak bir <xref:System.Data.Services.Client.DataServiceQuery%601> nesnesi oluşturun. <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>çağrılırken, hizmet işleminin adı `entitySetName` parametresine sağlanır. Bu yöntem, <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A> yöntemi çağrıldığında veya oluşturulduğunda hizmet işlemini çağıran bir <xref:System.Data.Services.Client.DataServiceQuery%601> nesnesi döndürür. Bu yöntem, bir koleksiyon döndüren GET hizmeti işlemlerini çağırmak için kullanılır. Tek bir parametre <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> yöntemi kullanılarak sağlanabilir. Bu yöntem tarafından döndürülen <xref:System.Data.Services.Client.DataServiceQuery%601> nesnesi, herhangi bir sorgu nesnesi gibi daha fazla bulunabilir. Daha fazla bilgi için bkz. [veri hizmetini sorgulama](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="considerations-for-calling-service-operations"></a>Hizmet Işlemlerini çağırma konuları  
- Aşağıdaki noktalar, hizmet işlemlerini çağırmak için [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemcisi kullanılırken geçerlidir.  
+ Aşağıdaki noktalar, hizmet işlemlerini çağırmak için WCF Veri Hizmetleri istemcisi kullanılırken geçerlidir.  
   
 - Veri hizmetine zaman uyumsuz olarak erişirken, <xref:System.Data.Services.Client.DataServiceContext> üzerinde <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> yöntemleri veya <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A>/<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> yöntemleri /<xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A>eş zamanlı zaman uyumsuz kullanmanız gerekir.  
   
-- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığı, temel türlerin bir koleksiyonunu döndüren bir hizmet işleminden sonuçları yürütülemiyor.  
+- WCF Veri Hizmetleri istemci kitaplığı, temel türlerin bir koleksiyonunu döndüren bir hizmet işleminden sonuçları yürütülemiyor.  
   
-- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığı, hizmet gönderme işlemlerinin çağrılmasını desteklemez. Bir HTTP POST tarafından çağrılan hizmet işlemleri `Method="POST"` parametresiyle <xref:System.ServiceModel.Web.WebInvokeAttribute> kullanılarak tanımlanır. Bir HTTP POST isteği kullanarak bir hizmet işlemini çağırmak için, bunun yerine bir <xref:System.Net.HttpWebRequest>kullanmanız gerekir.  
+- WCF Veri Hizmetleri istemci kitaplığı, hizmet gönderme işlemlerinin çağrılmasını desteklemez. Bir HTTP POST tarafından çağrılan hizmet işlemleri `Method="POST"` parametresiyle <xref:System.ServiceModel.Web.WebInvokeAttribute> kullanılarak tanımlanır. Bir HTTP POST isteği kullanarak bir hizmet işlemini çağırmak için, bunun yerine bir <xref:System.Net.HttpWebRequest>kullanmanız gerekir.  
   
 - Tek bir sonuç döndüren veya birden fazla giriş parametresi gerektiren bir GET hizmeti işlemini çağırmak için <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> kullanamazsınız. Bunun yerine <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> yöntemini çağırmanız gerekir.  
   
@@ -37,7 +37,7 @@ Açık Veri Protokolü (OData), bir veri hizmeti için hizmet işlemlerini tanı
 - Bir hizmet işlemini çağırmak için <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> kullandığınızda, istemci kitaplığı, ampersan (&) ve dizelerde tek tırnak işareti gibi ayrılmış karakterlerin yüzde kodlaması gerçekleştirerek <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> sağlanan karakterleri otomatik olarak çıkar. Ancak, bir hizmet işlemini çağırmak için *Execute* yöntemlerinden birini çağırdığınızda, Kullanıcı tarafından sağlanan herhangi bir dize değerinin bu kaçışı gerçekleştirmeyi unutmamanız gerekir. URI 'Lerinde tek tırnak işareti, tek tırnak çifti olarak atlardır.  
   
 ## <a name="examples-of-calling-service-operations"></a>Hizmet Işlemlerini çağırma örnekleri  
- Bu bölüm, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığını kullanarak hizmet işlemlerini çağırma hakkında aşağıdaki örnekleri içerir:  
+ Bu bölüm, WCF Veri Hizmetleri istemci kitaplığını kullanarak hizmet işlemlerini çağırma hakkında aşağıdaki örnekleri içerir:  
   
 - [Bir varlık koleksiyonu döndürmek için Execute&lt;T&gt; çağrılıyor](calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
   

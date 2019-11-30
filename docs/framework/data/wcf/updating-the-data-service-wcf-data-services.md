@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 02bcb8f12cd7f230d60c3b3c58174a54405ff955
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 060cdab4f486782e6ad60511fadad95a41255dec
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975107"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568817"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Veri hizmeti güncelleştiriliyor (WCF Veri Hizmetleri)
-Açık Veri Protokolü (OData) akışını kullanmak için [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığını kullandığınızda, kitaplık akıştaki girdileri istemci veri hizmeti sınıflarının örneklerine çevirir. Bu veri hizmeti sınıfları, <xref:System.Data.Services.Client.DataServiceQuery%601> ait olduğu <xref:System.Data.Services.Client.DataServiceContext> kullanılarak izlenir. İstemci, <xref:System.Data.Services.Client.DataServiceContext>yöntemleri kullanarak rapor ettiğiniz varlıklara yapılan değişiklikleri izler. Bu yöntemler, istemcinin eklenen ve silinen varlıkları ve ayrıca özellik değerlerinde yaptığınız değişiklikleri ve varlık örnekleri arasındaki ilişkileri izlemesini sağlar. Bu izlenen değişiklikler, <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> yöntemini çağırdığınızda REST tabanlı işlemler olarak veri hizmetine geri gönderilir.  
+Açık Veri Protokolü (OData) akışını kullanmak için WCF Veri Hizmetleri istemci kitaplığını kullandığınızda, kitaplık akıştaki girdileri istemci veri hizmeti sınıflarının örneklerine çevirir. Bu veri hizmeti sınıfları, <xref:System.Data.Services.Client.DataServiceQuery%601> ait olduğu <xref:System.Data.Services.Client.DataServiceContext> kullanılarak izlenir. İstemci, <xref:System.Data.Services.Client.DataServiceContext>yöntemleri kullanarak rapor ettiğiniz varlıklara yapılan değişiklikleri izler. Bu yöntemler, istemcinin eklenen ve silinen varlıkları ve ayrıca özellik değerlerinde yaptığınız değişiklikleri ve varlık örnekleri arasındaki ilişkileri izlemesini sağlar. Bu izlenen değişiklikler, <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> yöntemini çağırdığınızda REST tabanlı işlemler olarak veri hizmetine geri gönderilir.  
   
 > [!NOTE]
 > Denetimlere veri bağlamak için bir <xref:System.Data.Services.Client.DataServiceCollection%601> örneği kullandığınızda, bağlı denetimdeki verilerde yapılan değişiklikler otomatik olarak <xref:System.Data.Services.Client.DataServiceContext>bildirilir. Daha fazla bilgi için bkz. [verileri denetimlere bağlama](binding-data-to-controls-wcf-data-services.md).  
@@ -67,7 +67,7 @@ Açık Veri Protokolü (OData) akışını kullanmak için [!INCLUDE[ssAstoria](
 ## <a name="creating-and-modifying-relationship-links"></a>Ilişki bağlantıları oluşturma ve değiştirme  
  <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> yöntemini veya **hizmet başvurusu Ekle** iletişim kutusunun oluşturduğu <xref:System.Data.Services.Client.DataServiceContext> sınıfının uygun *AddTo* yöntemini kullanarak yeni bir varlık eklediğinizde, yeni varlık ve ilgili varlıklar arasındaki ilişkiler otomatik olarak tanımlanmamıştır.  
   
- Varlık örnekleri arasında ilişkiler oluşturabilir ve değiştirebilir ve istemci kitaplığının veri hizmetindeki değişiklikleri yansıtmasını sağlayabilirsiniz. Varlıklar arasındaki ilişkiler modelde ilişkilendirmeler olarak tanımlanır ve <xref:System.Data.Services.Client.DataServiceContext> her ilişkiyi bağlamdaki bir bağlantı nesnesi olarak izler. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], bu bağlantıları oluşturmak, değiştirmek ve silmek için <xref:System.Data.Services.Client.DataServiceContext> sınıfında aşağıdaki yöntemleri sağlar:  
+ Varlık örnekleri arasında ilişkiler oluşturabilir ve değiştirebilir ve istemci kitaplığının veri hizmetindeki değişiklikleri yansıtmasını sağlayabilirsiniz. Varlıklar arasındaki ilişkiler modelde ilişkilendirmeler olarak tanımlanır ve <xref:System.Data.Services.Client.DataServiceContext> her ilişkiyi bağlamdaki bir bağlantı nesnesi olarak izler. WCF Veri Hizmetleri, bu bağlantıları oluşturmak, değiştirmek ve silmek için <xref:System.Data.Services.Client.DataServiceContext> sınıfında aşağıdaki yöntemleri sağlar:  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Hizmet Işlemi tanımlama (WCF Veri Hizmetleri)'
+title: 'Nasıl yapılır: hizmet Işlemi tanımlama (WCF Veri Hizmetleri)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,29 +8,29 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: 3154fadeda400440f68a184b430b7ff15a02203d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e9d15698c1e020f5b4179efb3e8492f3754ff02f
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780078"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569135"
 ---
-# <a name="how-to-define-a-service-operation-wcf-data-services"></a>Nasıl yapılır: Hizmet Işlemi tanımlama (WCF Veri Hizmetleri)
+# <a name="how-to-define-a-service-operation-wcf-data-services"></a>Nasıl yapılır: hizmet Işlemi tanımlama (WCF Veri Hizmetleri)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]sunucusunda hizmet işlemleri olarak tanımlanan yöntemleri kullanıma sunun. Hizmet işlemleri bir veri hizmetinin, sunucuda tanımlı bir yönteme URI aracılığıyla erişim sağlamasına izin verir. Bir hizmet işlemi tanımlamak için, [`WebGet]` veya `[WebInvoke]` özniteliğini metoduna uygulayın. Sorgu işleçlerini desteklemek için, hizmet işleminin bir <xref:System.Linq.IQueryable%601> örnek döndürmesi gerekir. Hizmet işlemleri, <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> <xref:System.Data.Services.DataService%601>içindeki özelliği aracılığıyla temel alınan veri kaynağına erişebilir. Daha fazla bilgi için bkz. [hizmet işlemleri](service-operations-wcf-data-services.md).
+WCF Veri Hizmetleri sunucuda hizmet işlemleri olarak tanımlanan yöntemleri kullanıma sunar. Hizmet işlemleri bir veri hizmetinin, sunucuda tanımlı bir yönteme URI aracılığıyla erişim sağlamasına izin verir. Bir hizmet işlemi tanımlamak için yönteme [`WebGet]` veya `[WebInvoke]` özniteliğini uygulayın. Sorgu işleçlerini desteklemek için, hizmet işleminin bir <xref:System.Linq.IQueryable%601> örneği döndürmesi gerekir. Hizmet işlemleri, <xref:System.Data.Services.DataService%601><xref:System.Data.Services.DataService%601.CurrentDataSource%2A> özelliği aracılığıyla temel alınan veri kaynağına erişebilir. Daha fazla bilgi için bkz. [hizmet işlemleri](service-operations-wcf-data-services.md).
 
-Bu `GetOrdersByCity` konudaki örnek, filtrelenmiş <xref:System.Linq.IQueryable%601> bir örneği `Orders` ve ilgili `Order_Details` nesneleri döndüren adlı bir hizmet işlemini tanımlar. Örnek, Northwind örnek <xref:System.Data.Objects.ObjectContext> veri hizmeti için veri kaynağı olan örneğe erişir. Bu hizmet, [WCF veri hizmetleri hızlı](quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur.
+Bu konudaki örnekte, `Orders` ve ilgili `Order_Details` nesnelerinin filtrelenmiş bir <xref:System.Linq.IQueryable%601> örneğini döndüren `GetOrdersByCity` adlı bir hizmet işlemi tanımlanmaktadır. Örnek, Northwind örnek veri hizmeti için veri kaynağı olan <xref:System.Data.Objects.ObjectContext> örneğine erişir. Bu hizmet, [WCF veri hizmetleri hızlı](quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur.
 
 ### <a name="to-define-a-service-operation-in-the-northwind-data-service"></a>Northwind Data Service 'te bir hizmet işlemi tanımlamak için
 
 1. Northwind Data Service projesinde, Northwind. svc dosyasını açın.
 
-2. Sınıfında, aşağıdaki gibi adlı `GetOrdersByCity` bir hizmet işlemi yöntemi tanımlayın: `Northwind`
+2. `Northwind` sınıfında, `GetOrdersByCity` adlı bir hizmet işlemi yöntemini aşağıdaki gibi tanımlayın:
 
      [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
      [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]
 
-3. `Northwind` Sınıfının yönteminde, hizmet işlemine erişimi etkinleştirmek için aşağıdaki kodu ekleyin: `InitializeService`
+3. `Northwind` sınıfının `InitializeService` yönteminde, hizmet işlemine erişimi etkinleştirmek için aşağıdaki kodu ekleyin:
 
      [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationconfig)]
      [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationconfig)]
@@ -47,10 +47,10 @@ Bu `GetOrdersByCity` konudaki örnek, filtrelenmiş <xref:System.Linq.IQueryable
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, Northwind veri hizmetinde adlı `GetOrderByCity` bir hizmet işlemi uygular. Bu işlem, belirtilen şehir adına göre bir dizi `Orders` ve ilgili `Order_Details` nesneleri <xref:System.Linq.IQueryable%601> örnek olarak döndürmek için ADO.NET Entity Framework kullanır.
+Aşağıdaki örnek, Northwind Data Service üzerinde `GetOrderByCity` adlı bir hizmet işlemi uygular. Bu işlem, bir `Orders` kümesini ve ilgili `Order_Details` nesnelerini, belirtilen şehir adına göre <xref:System.Linq.IQueryable%601> örneği olarak döndürmek için ADO.NET Entity Framework kullanır.
 
 > [!NOTE]
-> Yöntem bir <xref:System.Linq.IQueryable%601> örnek döndürdüğünden, bu hizmet işlemi uç noktasında sorgu işleçleri destekleniyor.
+> Yöntem bir <xref:System.Linq.IQueryable%601> örneği döndürdüğünden, bu hizmet işlemi uç noktasında sorgu işleçleri destekleniyor.
 
 [!code-csharp[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperation)]
 [!code-vb[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperation)]

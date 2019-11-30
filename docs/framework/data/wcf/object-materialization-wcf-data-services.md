@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 68b04ac59d1b73d6e66a5a7836ce1bfe30d9c681
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7a2b201e5690c4304e663e9429c54f377e05f556
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975186"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568914"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Nesne materialization (WCF Veri Hizmetleri)
 
 .NET Framework tabanlı bir istemci uygulamasında açık veri Protokolü (OData) akışını tüketmek için **hizmet başvurusu Ekle** iletişim kutusunu kullandığınızda, akış tarafından kullanıma sunulan veri modelindeki her bir varlık türü için eşdeğer veri sınıfları oluşturulur. Daha fazla bilgi için bkz. [veri hizmeti Istemci kitaplığı oluşturma](generating-the-data-service-client-library-wcf-data-services.md). Bir sorgu tarafından döndürülen varlık verileri, bu oluşturulan istemci veri hizmeti sınıflarından birinin bir örneğine getirilir. İzlenen nesneler için birleştirme seçenekleri ve kimlik çözümlemesi hakkında daha fazla bilgi için bkz. [veri hizmeti bağlamını yönetme](managing-the-data-service-context-wcf-data-services.md).
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], araç tarafından oluşturulan veri sınıflarını kullanmak yerine kendi istemci veri hizmeti sınıflarınızı tanımlamanızı da sağlar. Bu, "düz eski CLR nesnesi" (POCO) veri sınıfları olarak da bilinen kendi veri sınıflarınızı kullanmanıza olanak sağlar. Bu tür özel veri sınıflarını kullanırken, veri sınıfını <xref:System.Data.Services.Common.DataServiceKeyAttribute> veya <xref:System.Data.Services.Common.DataServiceEntityAttribute> ile özniteleyebilir ve istemcideki tür adlarının veri hizmetinin veri modelindeki tür adlarıyla eşleştiğinden emin olun.
+WCF Veri Hizmetleri, araç tarafından oluşturulan veri sınıflarını kullanmak yerine kendi istemci veri hizmeti sınıflarınızı tanımlamanızı da sağlar. Bu, "düz eski CLR nesnesi" (POCO) veri sınıfları olarak da bilinen kendi veri sınıflarınızı kullanmanıza olanak sağlar. Bu tür özel veri sınıflarını kullanırken, veri sınıfını <xref:System.Data.Services.Common.DataServiceKeyAttribute> veya <xref:System.Data.Services.Common.DataServiceEntityAttribute> ile özniteleyebilir ve istemcideki tür adlarının veri hizmetinin veri modelindeki tür adlarıyla eşleştiğinden emin olun.
 
 Kitaplık sorgu yanıt iletisini aldıktan sonra, OData akışından döndürülen verileri sorgu türünde olan istemci veri hizmeti sınıflarının örneklerine çıkarır. Bu nesneleri üreten genel süreç aşağıdaki gibidir:
 
