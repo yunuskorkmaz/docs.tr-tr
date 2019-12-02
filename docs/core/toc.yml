@@ -73,7 +73,8 @@
       href: whats-new/dotnet-core-2-1.md
     - name: ​.NET Core 2.0’deki yenilikler
       href: whats-new/dotnet-core-2-0.md
-- name: Uygulama Uyumluluğu
+- name: Yeni değişiklikler
+  displayName: app compatibility
   href: compatibility/
 - name: Öğreticiler
   href: tutorials/index.md
@@ -321,23 +322,27 @@
       href: additional-tools/dotnet-svcutil.xmlserializer-guide.md
     - name: XML Serileştirici Oluşturucusu
       href: additional-tools/xml-serializer-generator.md
-- name: .NET Framework’ten Taşıma
+- name: .NET Framework’ten taşıma
   href: porting/index.md
   items:
     - name: .NET Core’da kullanılamayan .NET Framework teknolojileri
       href: porting/net-framework-tech-unavailable.md
     - name: Üçüncü taraf bağımlılıklarını çözümleme
       href: porting/third-party-deps.md
-    - name: Kitaplıkları taşıma
+    - name: Taşıma kitaplıkları
       href: porting/libraries.md
-    - name: .NET Core için proje düzenleme
+    - name: .NET Core için projeleri düzenleme
       href: porting/project-structure.md
-    - name: .NET Core’a taşıma konusunda yardımcı olabilecek araçlar
+    - name: Araçlar
       href: porting/tools.md
-    - name: Windows Uyumluluk Paketi Kullanma
+    - name: Windows Uyumluluk Paketi’ni kullanma
       href: porting/windows-compat-pack.md
     - name: Windows Forms projelerini bağlama
-      href: porting/winforms.md
+      items:
+        - name: Proje taşıma
+          href: porting/winforms.md
+        - name: Yeni değişiklikler
+          href: porting/winforms-breaking-changes.md
     - name: WPF projelerini bağlama
       href: porting/wpf.md
 - name: Bağımlılık yüklemesi

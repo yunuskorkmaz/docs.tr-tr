@@ -1,5 +1,7 @@
-- name: 'F# kılavuzu'
-  href: index.md
+- name: 'F# belgeleri'
+  href: index.yml
+- name: 'F# nedir?'
+  href: what-is-fsharp.md
 - name: Başlarken
   href: get-started/index.md
   items:
@@ -13,8 +15,6 @@
       href: get-started/get-started-command-line.md
     - name: 'Mac için Visual Studio’da F# Kullanmaya Başlama'
       href: get-started/get-started-with-visual-studio-for-mac.md
-- name: 'F# nedir?'
-  href: what-is-fsharp.md
 - name: 'F# Turu'
   href: tour.md
 - name: Öğreticiler
@@ -39,6 +39,14 @@
           href: tutorials/type-providers/troubleshooting-type-providers.md
     - name: 'F# Etkileşimli'
       href: tutorials/fsharp-interactive/index.md
+- name: 'F# yenilikleri'
+  items:
+    - name: 'F# 4.7'
+      href: whats-new/fsharp-47.md
+    - name: 'F# 4.6'
+      href: whats-new/fsharp-46.md
+    - name: 'F# 4.5'
+      href: whats-new/fsharp-45.md
 - name: 'F# Dili Başvurusu'
   href: language-reference/index.md
   items:
