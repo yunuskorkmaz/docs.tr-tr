@@ -2,12 +2,12 @@
 title: Hizmet kafesleri-WCF geliştiricileri için gRPC
 description: Bir Kubernetes kümesinde gRPC hizmetlerine istekleri yönlendirmek ve dengelemek için bir hizmet ağı kullanma.
 ms.date: 09/02/2019
-ms.openlocfilehash: d20275082973f30bddbb342da90454401d4f019b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: cc4855b1ed27e29076e4f13f5c5d3dffa63a6554
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966965"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711271"
 ---
 # <a name="service-meshes"></a>Hizmet kafesleri
 
@@ -21,7 +21,7 @@ Hizmet ağı, bir ağ içindeki yönlendirme hizmeti isteklerinin denetimini ala
 
 Kubernetes hizmet kafesleri, kafeste bulunan her Pod 'a *sepet proxy 'si*olarak adlandırılan ek bir kapsayıcı ekleyerek çalışır. Ara sunucu tüm gelen ve giden ağ isteklerini işlemeyi, ağ yapılandırma ve yönetiminin önemli bir şekilde uygulama kapsayıcılarından ayrı tutulmasını sağlar ve birçok durumda uygulama kodunda herhangi bir değişiklik yapılmasına gerek kalmadan yapılır.
 
-Web uygulamasındaki gRPC isteklerinin hepsi gRPC hizmetinin tek bir örneğine yönlendirildiği [önceki bölümün örneğini](kubernetes.md#testing-the-application)alın. Bu durum hizmetin ana bilgisayar adının bir IP adresine çözümlenmesi ve IP adresinin `HttpClientHandler` örneğinin kullanım ömrü boyunca önbelleğe alınması nedeniyle oluşur. DNS aramalarını el ile veya birden çok istemci oluşturarak bu sorunu geçici olarak çözmek mümkün olabilir, ancak bu, herhangi bir iş veya müşteri değeri eklemeden uygulama kodunu önemli ölçüde karmaşıklaştırır.
+Web uygulamasındaki gRPC isteklerinin hepsi gRPC hizmetinin tek bir örneğine yönlendirildiği [önceki bölümün örneğini](kubernetes.md#test-the-application)alın. Bu durum hizmetin ana bilgisayar adının bir IP adresine çözümlenmesi ve IP adresinin `HttpClientHandler` örneğinin kullanım ömrü boyunca önbelleğe alınması nedeniyle oluşur. DNS aramalarını el ile veya birden çok istemci oluşturarak bu sorunu geçici olarak çözmek mümkün olabilir, ancak bu, herhangi bir iş veya müşteri değeri eklemeden uygulama kodunu önemli ölçüde karmaşıklaştırır.
 
 Bir hizmet ağı kullanarak, uygulama kapsayıcısından gelen istekler sepet proxy 'sine gönderilir ve bu da bunları diğer hizmetin tüm örneklerine akıllıca dağıtabilen. Kafes de şunları yapabilir:
 

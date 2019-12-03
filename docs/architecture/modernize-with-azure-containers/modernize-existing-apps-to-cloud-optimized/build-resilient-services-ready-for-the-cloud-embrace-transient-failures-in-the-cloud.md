@@ -2,12 +2,12 @@
 title: Bulut için hazırlık dayanıklı Hizmetleri oluşturun. Buluttaki geçici hataları benimseme
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Bulut için hazırlık dayanıklı Hizmetleri oluşturun. Buluttaki geçici hataları benimseme
 ms.date: 04/30/2018
-ms.openlocfilehash: e6fae8140b55cb0308dca9f4b77e961501b41f8f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e516dc675ceb8def25c6d676bced0ea7f253b2d5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73739403"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711264"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Bulut için hazırlayın dayanıklı hizmetler oluşturun: bulutta geçici olmayan sorunları açma
 
@@ -27,7 +27,7 @@ HTTP Hizmetleri kullanan bir uygulamada benzer bir senaryo meydana gelebilir. K�
 
 Şekil 4-9 ' de gösterildiği gibi dayanıklı bir uygulama, uygulamaya kaynakların geçici başarısızlıklarını işleme fırsatı vermek için "üstel geri alma ile yeniden denemeler" gibi teknikler uygulamalıdır. Ayrıca, uygulamalarınızda "devre kesiciler" kullanmanız gerekir. Devre kesici, bir uygulamanın bir kaynağa erişmeye çalışmayı, aslında uzun süreli bir hata oluştuğunda sonlandırır. Uygulama, devre kesici kullanarak bir hizmet reddine izin vermez.
 
-![Üstel geri alma ile yeniden denemeler tarafından işlenen kısmi hataların diyagramı.](./media/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud/retry-partial-failures.png)
+![Üstel geri alma ile yeniden denemeler tarafından işlenen kısmi hataların diyagramı.](./media/retry-partial-failures.png)
 
 **Şekil 4-9.** Üstel geri alma ile yeniden denemeler tarafından işlenen kısmi arızalar
 

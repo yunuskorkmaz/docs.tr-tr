@@ -2,36 +2,34 @@
 title: Arama kimlik bilgileri-WCF geliştiricileri için gRPC
 description: ASP.NET Core 3,0 ' de gRPC çağrı kimlik bilgilerini uygulama ve kullanma.
 ms.date: 09/02/2019
-ms.openlocfilehash: 2588fe3590a63ea6071b85ff29b3685efbfa25db
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 01f21f58ed4235f45509c948c84653cd99d35618
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967992"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711531"
 ---
 # <a name="call-credentials"></a>Çağrı kimlik bilgileri
 
-Çağrı kimlik bilgileri her istekle birlikte meta verilerde geçirilen bazı belirteç türlerini temel alır.
+Çağrı kimlik bilgileri, her istekle birlikte meta verilerde geçirilen bir belirteci temel alır.
 
 ## <a name="ws-federation"></a>WS-Federation
 
-ASP.NET Core, [WSFederation](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.WsFederation) NuGet PAKETINI kullanarak WS-Federation ' i destekler. WS-Federation, Windows kimlik doğrulaması için HTTP/2 üzerinde desteklenmeyen en yakın seçenektir. Kullanıcılar, ASP.NET Core kimlik doğrulaması için kullanılabilecek bir belirteç sağlayan Active Directory Federasyon Hizmetleri (AD FS) (ADFS) kullanılarak doğrulanır.
+ASP.NET Core, [WSFederation](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.WsFederation) NuGet PAKETINI kullanarak WS-Federation ' i destekler. WS-Federation, Windows kimlik doğrulaması için HTTP/2 üzerinde desteklenmeyen en yakın seçenektir. Kullanıcılar, ASP.NET Core kimlik doğrulaması için kullanılabilecek bir belirteç sağlayan Active Directory Federasyon Hizmetleri (AD FS) (AD FS) kullanılarak doğrulanır.
 
-Bu kimlik doğrulama yöntemiyle çalışmaya başlama hakkında daha fazla bilgi için [ASP.NET Core 'de WS-Federation ile kullanıcıların kimliğini doğrulama](https://docs.microsoft.com/aspnet/core/security/authentication/ws-federation?view=aspnetcore-3.0) makalesine bakın.
+Bu kimlik doğrulama yöntemiyle çalışmaya başlama hakkında daha fazla bilgi için bkz. [ASP.NET Core 'de WS-Federation ile kullanıcıların kimliğini doğrulama](/aspnet/core/security/authentication/ws-federation).
 
 ## <a name="jwt-bearer-tokens"></a>JWT taşıyıcı belirteçleri
 
-[JSON Web Token](https://jwt.io) standardı, kodlanmış bir dizedeki bir Kullanıcı ve talepleri hakkında bilgi kodlamak ve bu belirteci, tüketicinin ortak anahtar şifrelemesini kullanarak belirtecin bütünlüğünü doğrulayabilmeleri için bir yol sağlar. Kullanıcıların kimliğini doğrulamak ve gRPC ve HTTP API 'Leri ile kullanılacak OpenID Connect (OıDC) belirteçlerini oluşturmak için ıdentityserver4 gibi çeşitli hizmetleri kullanabilirsiniz.
+[JSON Web Token](https://jwt.io) (JWT) standardı, kodlanmış bir dizedeki bir Kullanıcı ve talepleri hakkında bilgi kodlamak için bir yol sağlar. Ayrıca, tüketicinin ortak anahtar şifrelemesi kullanarak belirtecin bütünlüğünü doğrulayabilmesi için bu belirteci imzalamak için bir yol sağlar. Kullanıcıların kimliğini doğrulamak ve gRPC ve HTTP API 'Leri ile kullanılacak OpenID Connect (OıDC) belirteçlerini oluşturmak için ıdentityserver4 gibi çeşitli hizmetleri kullanabilirsiniz.
 
-ASP.NET Core 3,0, JWT taşıyıcı paketini kullanarak JSON Web belirteçlerini işleyebilir. Yapılandırma, ASP.NET Core MVC uygulaması olarak bir gRPC uygulaması için tam olarak aynıdır.
+3,0 ASP.NET Core, JWT taşıyıcı paketini kullanarak JWTs 'yi işleyebilir. Yapılandırma, ASP.NET Core MVC uygulaması için olduğu gibi bir gRPC uygulaması için tam olarak aynıdır. Burada, WS-Federation ' den daha kolay geliştirileceği için JWT taşıyıcı belirteçlerine odaklanacağız.
 
-Bu bölüm, WS-Federation ' den daha kolay geliştirme yaparken JWT taşıyıcı belirteçlerine odaklanacaktır.
-
-## <a name="adding-authentication-and-authorization-to-the-server"></a>Sunucuya kimlik doğrulaması ve yetkilendirme ekleme
+## <a name="add-authentication-and-authorization-to-the-server"></a>Sunucuya kimlik doğrulaması ve yetkilendirme ekleme
 
 JWT taşıyıcı paketi, varsayılan olarak ASP.NET Core 3,0 ' ye dahil değildir. Uygulamanıza [Microsoft. AspNetCore. Authentication. Jwttaşıyıcı](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) NuGet paketini yükler.
 
-Başlangıç sınıfına kimlik doğrulama hizmetini ekleyin ve JWT taşıyıcı işleyicisini yapılandırın.
+Başlangıç sınıfına kimlik doğrulama hizmetini ekleyin ve JWT taşıyıcı işleyicisini yapılandırın:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -57,9 +55,9 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-`IssuerSigningKey` özelliği, imzalanmış belirteçleri doğrulamak için gereken şifreleme verileriyle `Microsoft.IdentityModels.Tokens.SecurityKey` uygulanmasını gerektirir. Bu belirtecin Azure Keykasası gibi bir *gizli dizi sunucusunda* güvenli bir şekilde depolanması gerekir.
+`IssuerSigningKey` özelliği, imzalanmış belirteçleri doğrulamak için gereken şifreleme verileriyle `Microsoft.IdentityModels.Tokens.SecurityKey` uygulanmasını gerektirir. Bu belirteci, Azure Key Vault gibi bir *gizli dizi sunucusunda*güvenli bir şekilde depolayın.
 
-Ardından, sisteme erişimi denetleyen yetkilendirme hizmetini ekleyin.
+Ardından, sisteme erişimi denetleyen yetkilendirme hizmetini ekleyin:
 
 ```csharp
     services.AddAuthorization(options =>
@@ -74,9 +72,9 @@ Ardından, sisteme erişimi denetleyen yetkilendirme hizmetini ekleyin.
 ```
 
 > [!TIP]
-> Kimlik doğrulama ve yetkilendirme iki ayrı adımdan farklıdır. Kimlik doğrulaması, kullanıcının kimliğini belirlemede kullanılır. Yetkilendirme, kullanıcının sistemin çeşitli bölümlerine erişmesine izin verilip verilmeyeceğini belirler.
+> Kimlik doğrulama ve yetkilendirme iki ayrı adımdan farklıdır. Kullanıcının kimliğini öğrenmek için kimlik doğrulaması kullanın. Kullanıcının sistemin çeşitli bölümlerine erişmesine izin verilip verilmeyeceğini belirlemek için Yetkilendirmeyi kullanırsınız.
 
-Şimdi kimlik doğrulama ve yetkilendirme ara yazılımını `Configure` yönteminde ASP.NET Core işlem hattına ekleyin.
+Şimdi kimlik doğrulama ve yetkilendirme ara yazılımını `Configure` yönteminde ASP.NET Core işlem hattına ekleyin:
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -119,7 +117,7 @@ public override async Task<GetResponse> Get(GetRequest request, ServerCallContex
 }
 ```
 
-## <a name="providing-call-credentials-in-the-client-application"></a>İstemci uygulamasında çağrı kimlik bilgileri sağlama
+## <a name="provide-call-credentials-in-the-client-application"></a>İstemci uygulamasında çağrı kimlik bilgilerini sağlayın
 
 Bir kimlik sunucusundan JWT belirteci aldıktan sonra, bunu, çağrı üzerine bir meta veri üst bilgisi olarak ekleyerek istemciden gRPC çağrılarının kimliğini doğrulamak için kullanabilirsiniz:
 
@@ -141,7 +139,7 @@ public async Task ShowPortfolioAsync(int portfolioId)
 }
 ```
 
-Şimdi, çağrı kimlik bilgileri olarak JWT taşıyıcı belirteçlerini kullanarak gRPC hizmetinizi güvenli hale getirdi. , [Kimlik doğrulaması ve yetkilendirme eklenmiş bir portföyleri örnek gRPC uygulamasının](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/PortfoliosSample/grpc/TraderSysAuth) sürümü GitHub ' dır.
+Artık gRPC hizmetinizi, JWT taşıyıcı belirteçlerini çağrı kimlik bilgileri olarak kullanarak güvenli hale getirdi. , [Kimlik doğrulaması ve yetkilendirme eklenmiş bir portföyleri örnek gRPC uygulamasının](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/PortfoliosSample/grpc/TraderSysAuth) sürümü GitHub ' dır.
 
 >[!div class="step-by-step"]
 >[Önceki](security.md)

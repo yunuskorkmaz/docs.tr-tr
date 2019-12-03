@@ -2,12 +2,12 @@
 title: Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Geliştirme veya test ortamları için tümleştirme olayları için bir olay veri yolu mesajlaşma uygulamak üzere Kbbitmq kullanın.
 ms.date: 10/02/2018
-ms.openlocfilehash: 211348caec3c101435fcdd99bd96fd8e17a6456b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ba1cea9384893955ae0743ac8d6a34c350224cd5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739497"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711192"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
 
@@ -108,6 +108,20 @@ Her olay türünün, kbıbitmq 'dan olayları almak için ilgili bir kanalı var
 
 Subscribe yöntemi, geçerli mikro hizmette geri çağırma yöntemi ve ilgili ıntegrationevent nesnesi gibi bir ııntegrationeventhandler nesnesini kabul eder. Kod daha sonra bu olay işleyicisini her bir tümleştirme olay türünün istemci mikro hizmeti başına sahip olduğu olay işleyicileri listesine ekler. İstemci kodu henüz olaya abone olunmamışsa, kod, olay türü için bir kanal oluşturur, böylece bu olay başka bir hizmetten yayımlandığında, bu olay bir anında iletme stilinde olayları alabilir.
 
+Yukarıda belirtildiği gibi, eShopOnContainers 'da uygulanan olay veri yolu yalnızca ve eğitim amacını içerir, bu nedenle üretim için hazırlanma.
+
+Üretim senaryolarında, aşağıdaki ek kaynakları, Kbbitmq için özel ve [mikro hizmetler arasında olay tabanlı Iletişim uygulama](./integration-event-based-microservice-communications.md#additional-resources) bölümüne bakın.
+
+## <a name="additional-resources"></a>Ek kaynaklar
+
+Kbbitmq desteğiyle üretime hazırlamış çözümler.
+
+- **Easynetq** -Kbıbitmq \ Için açık kaynak .NET API istemcisi
+  <http://easynetq.com/>
+
+- **Masstransıt** \
+  <https://masstransit-project.com/>
+  
 >[!div class="step-by-step"]
 >[Önceki](integration-event-based-microservice-communications.md)
 >[İleri](subscribe-events.md)
