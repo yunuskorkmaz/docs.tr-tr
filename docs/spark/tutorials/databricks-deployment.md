@@ -4,12 +4,12 @@ description: Databricks 'e Apache Spark uygulamasının bir .NET uygulamasını 
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c1c1a57fb2b79826218f8ed94d568b37d4689560
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e79b4c5bf38416cf45776488559bd0b2d5582361
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454267"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716474"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Öğretici: Databricks 'e Apache Spark uygulamasına yönelik bir .NET dağıtımı
 
@@ -50,7 +50,7 @@ Bu bölümde, Azure portal kullanarak bir Azure Databricks çalışma alanı olu
     |---------|---------|
     |**Çalışma alanı adı**     | Databricks çalışma alanınız için bir ad sağlayın.        |
     |**Aboneliğiniz**     | Açılan listeden Azure aboneliğinizi seçin.        |
-    |**Kaynak grubu**     | Yeni bir kaynak grubu oluşturmak mı yoksa mevcut bir kaynak grubu mı kullanmak istediğinizi belirtin. Kaynak grubu, bir Azure çözümü için ilgili kaynakları tutan bir kapsayıcıdır. Daha fazla bilgi için bkz. [Azure Kaynak grubuna genel bakış](/azure/azure-databricks/azure-resource-manager/resource-group-overview). |
+    |**Kaynak grubu**     | Yeni bir kaynak grubu oluşturmak mı yoksa mevcut bir kaynak grubu mı kullanmak istediğinizi belirtin. Kaynak grubu, bir Azure çözümü için ilgili kaynakları tutan bir kapsayıcıdır. Daha fazla bilgi için bkz. [Azure Kaynak grubuna genel bakış](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). |
     |**Konum**     | Tercih ettiğiniz bölgeyi seçin. Kullanılabilir bölgeler hakkında daha fazla bilgi için bkz. [bölgeye göre kullanılabilir Azure hizmetleri](https://azure.microsoft.com/regions/services/).        |
     |**Fiyatlandırma Katmanı**     |  **Standart**, **Premium**veya **deneme**arasında seçim yapın. Bu katmanlar hakkında daha fazla bilgi için bkz. [Databricks fiyatlandırma sayfası](https://azure.microsoft.com/pricing/details/databricks/).       |
     |**Sanal ağ**     |   Hayır       |
