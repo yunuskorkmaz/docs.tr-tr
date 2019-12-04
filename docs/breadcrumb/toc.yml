@@ -6,26 +6,26 @@
       tocHref: /dotnet/
       topicHref: /dotnet/index
       items:
-        - name: .NET API Tarayıcısı
+        - name: .NET API tarayıcısı
           tocHref: /dotnet/api/
           topicHref: /dotnet/api/index
-        - name: .NET Uygulama Mimarisi Kılavuzu
+        - name: .NET uygulama mimarisi kılavuzu
           tocHref: /dotnet/architecture/
           topicHref: /dotnet/architecture/index
           items:
-            - name: Modern ASP.NET Web uygulamaları e-kitabı
+            - name: Modern ASP.NET web uygulamaları e-kitabı
               tocHref: /dotnet/architecture/modern-web-apps-azure/
               topicHref: /dotnet/architecture/modern-web-apps-azure/index
             - name: .NET mikro hizmetleri - Mimari e-kitabı
               tocHref: /dotnet/architecture/microservices/
               topicHref: /dotnet/architecture/microservices/index
-            - name: Yerel Bulut
+            - name: Yerel bulut
               tocHref: /dotnet/architecture/cloud-native/
               topicHref: /dotnet/architecture/cloud-native/index
             - name: .NET uygulamalarını modernleştirme e-kitabı
               tocHref: /dotnet/architecture/modernize-with-azure-containers/
               topicHref: /dotnet/architecture/modernize-with-azure-containers/index
-            - name: .NET Mikro Hizmetleri - DevOps e-kitabı
+            - name: .NET mikro hizmetleri - DevOps e-kitabı
               tocHref: /dotnet/architecture/containerized-lifecycle/
               topicHref: /dotnet/architecture/containerized-lifecycle/index
             - name: Sunucusuz uygulamalar e-kitabı
@@ -34,10 +34,10 @@
             - name: ASP.NET Web Forms geliştiricileri için Blazor e-kitabı
               tocHref: /dotnet/architecture/blazor-for-web-forms-developers/
               topicHref: /dotnet/architecture/blazor-for-web-forms-developers/index
-            - name: WCF Geliştiricileri için ASP.NET Core gRPC
+            - name: WCF geliştiricileri için ASP.NET Core gRPC
               tocHref: /dotnet/architecture/grpc-for-wcf-developers/
               topicHref: /dotnet/architecture/grpc-for-wcf-developers/index
-        - name: .NET Kılavuzu
+        - name: .NET kılavuzu
           tocHref: /dotnet/standard/
           topicHref: /dotnet/standard/index
           items:
@@ -47,50 +47,50 @@
             - name: Açık kaynak kitaplık kılavuzu
               tocHref: /dotnet/standard/library-guidance/
               topicHref: /dotnet/standard/library-guidance/index
-            - name: Zaman Uyumsuz Programlama Desenleri
+            - name: Asenkron programlama desenleri
               tocHref: /dotnet/standard/asynchronous-programming-patterns/
               topicHref: /dotnet/standard/asynchronous-programming-patterns/index
-            - name: Öznitelikleri Kullanarak Meta Verileri Genişletme
+            - name: Öznitelikleri kullanarak meta verileri genişletme
               tocHref: /dotnet/standard/attributes/
               topicHref: /dotnet/standard/attributes/index
-            - name: .NET içinde Temel Türlerle Çalışma
+            - name: .NET içinde temel türlerle çalışma
               tocHref: /dotnet/standard/base-types/
               topicHref: /dotnet/standard/base-types/index
-            - name: Koleksiyonlar ve Veri Yapıları
+            - name: Koleksiyonlar ve veri yapıları
               tocHref: /dotnet/standard/collections/
               topicHref: /dotnet/standard/collections/index
               items:
-                - name: İş Parçacığı Koleksiyonları
+                - name: İş parçacığı güvenli koleksiyonlar
                   tocHref: /dotnet/standard/collections/thread-safe/
                   topicHref: /dotnet/standard/collections/thread-safe/index
-            - name: .NET ile Birden Çok Platform için Geliştirme
+            - name: .NET ile birden çok platform için geliştirme
               tocHref: /dotnet/standard/cross-platform/
               topicHref: /dotnet/standard/cross-platform/index
-            - name: XML Belgeleri ve Verileri
+            - name: XML belgeleri ve verileri
               tocHref: /dotnet/standard/data/xml/
               topicHref: /dotnet/standard/data/xml/index
-            - name: 'Tarihler, Saatler ve Saat Dilimleri'
+            - name: 'Tarihler, saatler ve saat dilimleri'
               tocHref: /dotnet/standard/datetime/
               topicHref: /dotnet/standard/datetime/index
-            - name: Çerçeve Tasarım Yönergeleri
+            - name: Çerçeve tasarım yönergeleri
               tocHref: /dotnet/standard/design-guidelines/
               topicHref: /dotnet/standard/design-guidelines/index
-            - name: Olaylar Oluşturma ve İşleme
+            - name: Olayları işleme ve tetikleme
               tocHref: /dotnet/standard/events/
               topicHref: /dotnet/standard/events/index
-            - name: Özel Durumları İşleme ve Atma
+            - name: Özel durumları işleme ve oluşturma
               tocHref: /dotnet/standard/exceptions/
               topicHref: /dotnet/standard/exceptions/index
-            - name: Çöp Toplama
+            - name: Atık toplama
               tocHref: /dotnet/standard/garbage-collection/
               topicHref: /dotnet/standard/garbage-collection/index
             - name: .NET içindeki Genel Türler
               tocHref: /dotnet/standard/generics/
               topicHref: /dotnet/standard/generics/index
-            - name: Genelleştirme ve Yerelleştirme
+            - name: Genelleştirme ve yerelleştirme
               tocHref: /dotnet/standard/globalization-localization/
               topicHref: /dotnet/standard/globalization-localization/index
-            - name: Dosya ve Akış G/Ç
+            - name: Dosya ve akış G/Ç
               tocHref: /dotnet/standard/io/
               topicHref: /dotnet/standard/io/index
             - name: Bellek ve aralıkla ilgili türler
@@ -99,7 +99,7 @@
             - name: Native ile birlikte çalışma
               tocHref: /dotnet/standard/native-interop/
               topicHref: /dotnet/standard/native-interop/index
-            - name: .NET içinde Paralel Programlama
+            - name: .NET içinde paralel programlama
               tocHref: /dotnet/standard/parallel-programming/
               topicHref: /dotnet/standard/parallel-programming/index
             - name: .NET içinde güvenlik
@@ -108,83 +108,122 @@
             - name: .NET içinde serileştirme
               tocHref: /dotnet/standard/serialization/
               topicHref: /dotnet/standard/serialization/index
-            - name: Yönetilen İş Parçacığı Oluşturma
+            - name: Yönetilen iş parçacığı oluşturma
               tocHref: /dotnet/standard/threading/
               topicHref: /dotnet/standard/threading/index
-        - name: .NET Core Kılavuzu
+        - name: .NET Core kılavuzu
           tocHref: /dotnet/core/
           topicHref: /dotnet/core/index
           items:
-            - name: Yeni değişiklikler
-              tocHref: /dotnet/core/compatibility/
-              topicHref: /dotnet/core/compatibility/index
-            - name: Çalışma zamanı yapılandırması
-              tocHref: /dotnet/core/run-time-config/
-              topicHref: /dotnet/core/run-time-config/index
-            - name: Araçlar
-              tocHref: /dotnet/core/tools/
-              topicHref: /dotnet/core/tools/index
             - name: Yükleme kılavuzu
               tocHref: /dotnet/core/install/
               topicHref: /dotnet/core/install/index
+            - name: Yenilikler
+              tocHref: /dotnet/core/whats-new/
+              topicHref: /dotnet/core/whats-new/dotnet-core-3-0
+            - name: Yeni değişiklikler
+              tocHref: /dotnet/core/compatibility/
+              topicHref: /dotnet/core/compatibility/index
+            - name: Öğreticiler
+              tocHref: /dotnet/core/tutorials/
+              topicHref: /dotnet/core/tutorials/index
+            - name: Çalışma zamanı yapılandırması
+              tocHref: /dotnet/core/run-time-config/
+              topicHref: /dotnet/core/run-time-config/index
+            - name: Native ile birlikte çalışma
+              tocHref: /dotnet/core/native-interop/
+              topicHref: /dotnet/core/native-interop/expose-components-to-com
+            - name: Geçiş
+              tocHref: /dotnet/core/migration/
+              topicHref: /dotnet/core/migration/index
+            - name: Dağıtım
+              tocHref: /dotnet/core/deploying/
+              topicHref: /dotnet/core/deploying/index
+            - name: Docker
+              tocHref: /dotnet/core/docker/
+              topicHref: /dotnet/core/docker/introduction
+            - name: Tanılama araçları
+              tocHref: /dotnet/core/diagnostics/
+              topicHref: /dotnet/core/diagnostics/index
+            - name: Birim testi
+              tocHref: /dotnet/core/testing/
+              topicHref: /dotnet/core/testing/index
+            - name: Sürüm Oluşturma
+              tocHref: /dotnet/core/versions/
+              topicHref: /dotnet/core/versions/index
+            - name: Araçlar
+              tocHref: /dotnet/core/tools/
+              topicHref: /dotnet/core/tools/index
+            - name: Ek araçlar
+              tocHref: /dotnet/core/additional-tools/
+              topicHref: /dotnet/core/additional-tools/index
+            - name: Taşıma
+              tocHref: /dotnet/core/porting/
+              topicHref: /dotnet/core/porting/index
+            - name: Bağımlılık yüklemesi
+              tocHref: /dotnet/core/dependency-loading/
+              topicHref: /dotnet/core/dependency-loading/overview
+            - name: .NET Core derlemesi
+              tocHref: /dotnet/core/build/
+              topicHref: /dotnet/core/build/index
         - name: .NET Framework
           tocHref: /dotnet/framework/
           topicHref: /dotnet/framework/index
           items:
-            - name: Eklentiler ve Genişletilebilirlik
+            - name: Eklentiler ve genişletilebilirlik
               tocHref: /dotnet/framework/add-ins/
               topicHref: /dotnet/framework/add-ins/index
             - name: Ek API’ler
               tocHref: /dotnet/framework/additional-apis/
               topicHref: /dotnet/framework/additional-apis/index
-            - name: Uygulama Etki Alanları ve Derlemeler
+            - name: Uygulama Etki Alanları ve derlemeler
               tocHref: /dotnet/framework/app-domains/
               topicHref: /dotnet/framework/app-domains/index
-            - name: Yapılandırma Dosyalarını Kullanarak Uygulamaları Yapılandırma
+            - name: Yapılandırma dosyalarını kullanarak uygulamaları yapılandırma
               tocHref: /dotnet/framework/configure-apps/
               topicHref: /dotnet/framework/configure-apps/index
               items:
-                - name: Yapılandırma Dosyası Şeması
+                - name: Yapılandırma dosyası şeması
                   tocHref: /dotnet/framework/configure-apps/file-schema/
                   topicHref: /dotnet/framework/configure-apps/file-schema/index
                   items:
-                    - name: Derleyici ve Dil Sağlayıcısı Ayarları Şeması
+                    - name: Derleyici ve dil sağlayıcısı ayarları şeması
                       tocHref: /dotnet/framework/configure-apps/file-schema/compiler/
                       topicHref: /dotnet/framework/configure-apps/file-schema/compiler/index
-                    - name: Şifreleme Ayarları Şeması
+                    - name: Şifreleme ayarları şeması
                       tocHref: /dotnet/framework/configure-apps/file-schema/cryptography/
                       topicHref: /dotnet/framework/configure-apps/file-schema/cryptography/index
-                    - name: Ağ Ayarları Şeması
+                    - name: Ağ ayarları şeması
                       tocHref: /dotnet/framework/configure-apps/file-schema/network/
                       topicHref: /dotnet/framework/configure-apps/file-schema/network/index
-                    - name: Çalışma Zamanı Ayarları Şeması
+                    - name: Çalışma zamanı ayarları şeması
                       tocHref: /dotnet/framework/configure-apps/file-schema/runtime/
                       topicHref: /dotnet/framework/configure-apps/file-schema/runtime/index
-                    - name: Başlangıç Ayarları Şeması
+                    - name: Başlangıç ayarları şeması
                       tocHref: /dotnet/framework/configure-apps/file-schema/startup/
                       topicHref: /dotnet/framework/configure-apps/file-schema/startup/index
-                    - name: İzleme ve Hata Ayıklama Ayarları Şeması
+                    - name: İzleme ve hata ayıklama ayarları şeması
                       tocHref: /dotnet/framework/configure-apps/file-schema/trace-debug/
                       topicHref: /dotnet/framework/configure-apps/file-schema/trace-debug/index
-                    - name: WCF Yapılandırma Şeması
+                    - name: WCF yapılandırma şeması
                       tocHref: /dotnet/framework/configure-apps/file-schema/wcf/
                       topicHref: /dotnet/framework/configure-apps/file-schema/wcf/index
-                    - name: WCF Yönerge Söz Dizimi
+                    - name: WCF yönerge söz dizimi
                       tocHref: /dotnet/framework/configure-apps/file-schema/wcf-directive/
                       topicHref: /dotnet/framework/configure-apps/file-schema/wcf-directive/index
-                    - name: Web Ayarları Şeması
+                    - name: Web ayarları şeması
                       tocHref: /dotnet/framework/configure-apps/file-schema/web/
                       topicHref: /dotnet/framework/configure-apps/file-schema/web/index
-                    - name: Windows Identity Foundation Yapılandırma Şeması
+                    - name: Windows Identity Foundation yapılandırma şeması
                       tocHref: /dotnet/framework/configure-apps/file-schema/windows-identity-foundation/
                       topicHref: /dotnet/framework/configure-apps/file-schema/windows-identity-foundation/index
-                    - name: Windows Workflow Foundation Yapılandırma Şeması
+                    - name: Windows Workflow Foundation yapılandırma şeması
                       tocHref: /dotnet/framework/configure-apps/file-schema/windows-workflow-foundation
                       topicHref: /dotnet/framework/configure-apps/file-schema/windows-workflow-foundation/index
-                    - name: Windows Forms Yapılandırma Bölümü
+                    - name: Windows Forms yapılandırma bölümü
                       tocHref: /dotnet/framework/configure-apps/file-schema/winforms/
                       topicHref: /dotnet/framework/configure-apps/file-schema/winforms/index
-            - name: .NET Framework'te Veri ve Modelleme
+            - name: .NET Framework’te veri ve modelleme
               tocHref: /dotnet/framework/data/
               topicHref: /dotnet/framework/data/index
               items:
@@ -199,7 +238,7 @@
                       tocHref: /dotnet/framework/data/adonet/ef/
                       topicHref: /dotnet/framework/data/adonet/ef/index
                       items:
-                        - name: Entity SQL Dil Başvurusu
+                        - name: Entity SQL dil başvurusu
                           tocHref: /dotnet/framework/data/adonet/ef/language-reference/
                           topicHref: /dotnet/framework/data/adonet/ef/language-reference/index
                     - name: SQL Server ve ADO.NET
@@ -209,49 +248,49 @@
                         - name: LINQ - SQL
                           tocHref: /dotnet/framework/data/adonet/sql/linq/
                           topicHref: /dotnet/framework/data/adonet/sql/linq/index
-                - name: İşlem Gerçekleştirme
+                - name: İşlem gerçekleştirme
                   tocHref: /dotnet/framework/data/transactions/
                   topicHref: /dotnet/framework/data/transactions/index
                 - name: WCF Veri Hizmetleri
                   tocHref: /dotnet/framework/data/wcf/
                   topicHref: /dotnet/framework/data/wcf/index
-            - name: 'Hata Ayıklama, İzleme ve Profil Oluşturma'
+            - name: 'Hata ayıklama, izleme ve profil oluşturma'
               tocHref: /dotnet/framework/debug-trace-profile/
               topicHref: /dotnet/framework/debug-trace-profile/index
-            - name: .NET Framework'ü dağıtma
+            - name: .NET Framework’ü dağıtma
               tocHref: /dotnet/framework/deployment/
               topicHref: /dotnet/framework/deployment/index
-            - name: Docker ile .NET Framework uygulamalarını dağıtma
+            - name: Docker ile .NET Framework uygulamaları dağıtma
               tocHref: /dotnet/framework/docker/
               topicHref: /dotnet/framework/docker/index
-            - name: Başlarken
+            - name: Kullanmaya başlayın
               tocHref: /dotnet/framework/get-started/
               topicHref: /dotnet/framework/get-started/index
             - name: Yükleme kılavuzu
               tocHref: /dotnet/framework/install/
               topicHref: /dotnet/framework/install/index
-            - name: Yönetilmeyen Kod ile Birlikte Çalışma
+            - name: Yönetilmeyen kod ile birlikte çalışma
               tocHref: /dotnet/framework/interop/
               topicHref: /dotnet/framework/interop/index
             - name: Managed Extensibility Framework (MEF)
               tocHref: /dotnet/framework/mef/
               topicHref: /dotnet/framework/mef/index
-            - name: Geçiş Kılavuzu
+            - name: Geçiş kılavuzu
               tocHref: /dotnet/framework/migration-guide/
               topicHref: /dotnet/framework/migration-guide/index
-            - name: .NET Yerel ile Uygulama Derleme
+            - name: .NET Native ile uygulama derleme
               tocHref: /dotnet/framework/net-native/
               topicHref: /dotnet/framework/net-native/index
-            - name: .NET Framework'te Ağ Programlaması
+            - name: .NET Framework’te ağ programlaması
               tocHref: /dotnet/framework/network-programming/
               topicHref: /dotnet/framework/network-programming/index
-            - name: .NET Framework Performansı
+            - name: .NET Framework performansı
               tocHref: /dotnet/framework/performance/
               topicHref: /dotnet/framework/performance/index
-            - name: .NET Framework'te Dinamik Programlama
+            - name: .NET Framework’te dinamik programlama
               tocHref: /dotnet/framework/reflection-and-codedom/
               topicHref: /dotnet/framework/reflection-and-codedom/index
-            - name: Masaüstü Uygulamalarındaki Kaynaklar
+            - name: Masaüstü uygulamalarındaki kaynaklar
               tocHref: /dotnet/framework/resources/
               topicHref: /dotnet/framework/resources/index
             - name: .NET Framework'te Güvenlik
@@ -260,109 +299,109 @@
             - name: .NET Framework Araçları
               tocHref: /dotnet/framework/tools/
               topicHref: /dotnet/framework/tools/index
-            - name: UI Otomasyon Temelleri
+            - name: UI otomasyon temelleri
               tocHref: /dotnet/framework/ui-automation/
               topicHref: /dotnet/framework/ui-automation/index
-            - name: Yönetilmeyen API Başvurusu
+            - name: Yönetilmeyen API başvurusu
               tocHref: /dotnet/framework/unmanaged-api/
               topicHref: /dotnet/framework/unmanaged-api/index
               items:
-                - name: ALink API (Yönetilmeyen API Başvurusu)
+                - name: ALink API (Yönetilmeyen API başvurusu)
                   tocHref: /dotnet/framework/unmanaged-api/alink/
                   topicHref: /dotnet/framework/unmanaged-api/alink/index
-                - name: Authenticode (Yönetilmeyen API Başvurusu)
+                - name: Authenticode (Yönetilmeyen API başvurusu)
                   tocHref: /dotnet/framework/unmanaged-api/authenticode/
                   topicHref: /dotnet/framework/unmanaged-api/authenticode/index
-                - name: Hata Ayıklama (Yönetilmeyen API Başvurusu)
+                - name: Hata ayıklama (Yönetilmeyen API başvurusu)
                   tocHref: /dotnet/framework/unmanaged-api/debugging/
                   topicHref: /dotnet/framework/unmanaged-api/debugging/index
-                - name: Tanılama Sembol Deposu (Yönetilmeyen API Başvurusu)
+                - name: Tanılama sembol deposu (Yönetilmeyen API başvurusu)
                   tocHref: /dotnet/framework/unmanaged-api/diagnostics/
                   topicHref: /dotnet/framework/unmanaged-api/diagnostics/index
-                - name: Fusion (Yönetilmeyen API Başvurusu)
+                - name: Fusion (Yönetilmeyen API başvurusu)
                   tocHref: /dotnet/framework/unmanaged-api/fusion/
                   topicHref: /dotnet/framework/unmanaged-api/fusion/index
-                - name: Barındırma (Yönetilmeyen API Başvurusu)
+                - name: Barındırma (Yönetilmeyen API başvurusu)
                   tocHref: /dotnet/framework/unmanaged-api/hosting/
                   topicHref: /dotnet/framework/unmanaged-api/hosting/index
-                - name: Meta Veri (Yönetilmeyen API Başvurusu)
+                - name: Meta veriler (Yönetilmeyen API başvurusu)
                   tocHref: /dotnet/framework/unmanaged-api/metadata/
                   topicHref: /dotnet/framework/unmanaged-api/metadata/index
-                - name: Profil Oluşturma (Yönetilmeyen API Başvurusu)
+                - name: Profil oluşturma (Yönetilmeyen API başvurusu)
                   tocHref: /dotnet/framework/unmanaged-api/profiling/
                   topicHref: /dotnet/framework/unmanaged-api/profiling/index
-                - name: Tanımlayıcı Ad Oluşturma (Yönetilmeyen API Başvurusu)
+                - name: Tanımlayıcı ad oluşturma (Yönetilmeyen API başvurusu)
                   tocHref: /dotnet/framework/unmanaged-api/strong-naming/
                   topicHref: /dotnet/framework/unmanaged-api/strong-naming/index
-                - name: Tlbexp Yardımcı İşlevleri (Yönetilmeyen API Başvurusu)
+                - name: Tlbexp yardımcı işlevleri (Yönetilmeyen API başvurusu)
                   tocHref: /dotnet/framework/unmanaged-api/tlbexp/
                   topicHref: /dotnet/framework/unmanaged-api/tlbexp/index
             - name: Windows Communication Foundation
               tocHref: /dotnet/framework/wcf/
               topicHref: /dotnet/framework/wcf/index
               items:
-                - name: Yönetim ve Tanılama
+                - name: Yönetim ve tanılama
                   tocHref: /dotnet/framework/wcf/diagnostics/
                   topicHref: /dotnet/framework/wcf/diagnostics/index
                   items:
-                    - name: ETW ile Çözümleme İzleme
+                    - name: ETW ile analitik izleme
                       tocHref: /dotnet/framework/wcf/diagnostics/etw/
                       topicHref: /dotnet/framework/wcf/diagnostics/etw/index
-                    - name: WCF'de Etkinlikleri Günlüğe Kaydetme
+                    - name: WCF’de olay günlüğü kaydı
                       tocHref: /dotnet/framework/wcf/diagnostics/event-logging/
                       topicHref: /dotnet/framework/wcf/diagnostics/event-logging/index
-                    - name: Özel Durum Başvurusu
+                    - name: Özel durum başvurusu
                       tocHref: /dotnet/framework/wcf/diagnostics/exceptions-reference/
                       topicHref: /dotnet/framework/wcf/diagnostics/exceptions-reference/index
-                    - name: WCF Performans Sayaçları
+                    - name: WCF performans sayaçları
                       tocHref: /dotnet/framework/wcf/diagnostics/performance-counters/
                       topicHref: /dotnet/framework/wcf/diagnostics/performance-counters/index
                     - name: İzleme
                       tocHref: /dotnet/framework/wcf/diagnostics/tracing/
                       topicHref: /dotnet/framework/wcf/diagnostics/tracing/index
-                    - name: Tanılama için Windows Yönetim İzlemesini Kullanma
+                    - name: Tanılama için Windows Yönetim Araçları’nı kullanma
                       tocHref: /dotnet/framework/wcf/diagnostics/wmi/
                       topicHref: /dotnet/framework/wcf/diagnostics/wmi/index
-                - name: WCF'yi Genişletme
+                - name: WCF’yi genişletme
                   tocHref: /dotnet/framework/wcf/extending/
                   topicHref: /dotnet/framework/wcf/extending/index
-                - name: WCF Özellik Ayrıntıları
+                - name: WCF özellik ayrıntıları
                   tocHref: /dotnet/framework/wcf/feature-details/
                   topicHref: /dotnet/framework/wcf/feature-details/index
-                - name: Windows Communication Foundation (WCF) Örnekleri
+                - name: Windows Communication Foundation (WCF) örnekleri
                   tocHref: /dotnet/framework/wcf/samples/
                   topicHref: /dotnet/framework/wcf/samples/index
-            - name: .NET Framework’teki Yenilikler
+            - name: .NET Framework’teki yenilikler
               tocHref: /dotnet/framework/whats-new/
               topicHref: /dotnet/framework/whats-new/index
-            - name: Windows Hizmet Uygulamaları Geliştirme
+            - name: Windows hizmet uygulamaları geliştirme
               tocHref: /dotnet/framework/windows-services/
               topicHref: /dotnet/framework/windows-services/index
             - name: Windows Workflow Foundation
               tocHref: /dotnet/framework/windows-workflow-foundation/
               topicHref: /dotnet/framework/windows-workflow-foundation/index
               items:
-                - name: Windows Workflow (WF) Örnekleri
+                - name: Windows Workflow (WF) örnekleri
                   tocHref: /dotnet/framework/windows-workflow-foundation/samples/
                   topicHref: /dotnet/framework/windows-workflow-foundation/samples/index
             - name: Windows Forms
               tocHref: /dotnet/framework/winforms/
               topicHref: /dotnet/framework/winforms/index
               items:
-                - name: Windows Forms Uygulamalarını Geliştirme
+                - name: Windows Forms uygulamalarını geliştirme
                   tocHref: /dotnet/framework/winforms/advanced/
                   topicHref: /dotnet/framework/winforms/advanced/index
-                - name: Windows Forms Denetimleri
+                - name: Windows Forms denetimleri
                   tocHref: /dotnet/framework/winforms/controls/
                   topicHref: /dotnet/framework/winforms/controls/index
             - name: Windows Presentation Foundation
               tocHref: /dotnet/framework/wpf/
               topicHref: /dotnet/framework/wpf/index
               items:
-                - name: Gelişmiş (Windows Presentation Foundation)
+                - name: Gelişmiş
                   tocHref: /dotnet/framework/wpf/advanced/
                   topicHref: /dotnet/framework/wpf/advanced/index
-                - name: Uygulama Geliştirme
+                - name: Uygulama geliştirme
                   tocHref: /dotnet/framework/wpf/app-development/
                   topicHref: /dotnet/framework/wpf/app-development/index
                 - name: Denetimler
@@ -371,36 +410,36 @@
                 - name: Veri
                   tocHref: /dotnet/framework/wpf/data/
                   topicHref: /dotnet/framework/wpf/data/index
-                - name: Başlarken (WPF)
+                - name: Kullanmaya başlama (WPF)
                   tocHref: /dotnet/framework/wpf/getting-started/
                   topicHref: /dotnet/framework/wpf/getting-started/index
-                - name: Grafikler ve Multimedya
+                - name: Grafikler ve multimedya
                   tocHref: /dotnet/framework/wpf/graphics-multimedia/
                   topicHref: /dotnet/framework/wpf/graphics-multimedia/index
-            - name: XAML Hizmetleri
+            - name: XAML hizmetleri
               tocHref: /dotnet/framework/xaml-services/
               topicHref: /dotnet/framework/xaml-services/index
-        - name: Masaüstü Kılavuzu - WPF
+        - name: Masaüstü kılavuzu - WPF
           tocHref: /dotnet/desktop-wpf/
           topicHref: /dotnet/desktop-wpf/index
           items:
-            - name: Başlarken
+            - name: Kullanmaya başlayın
               tocHref: /visualstudio/get-started/csharp/tutorial-wpf
               topicHref: /dotnet/desktop-wpf/getting-started/index
             - name: Geçiş
               tocHref: /dotnet/desktop-wpf/migration
               topicHref: /dotnet/desktop-wpf/migration/index
-            - name: Veri Bağlama
+            - name: Veri bağlama
               tocHref: /dotnet/desktop-wpf/data
               topicHref: /dotnet/desktop-wpf/data/index
-        - name: 'C# Kılavuzu'
+        - name: 'C# kılavuzu'
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index
           items:
             - name: 'C# diline giriş'
               tocHref: /dotnet/csharp/tutorials/intro-to-csharp/
               topicHref: /dotnet/csharp/tutorials/intro-to-csharp/index
-            - name: Başlarken
+            - name: Kullanmaya başlayın
               tocHref: /dotnet/csharp/getting-started/
               topicHref: /dotnet/csharp/getting-started/index
             - name: Öğreticiler
@@ -550,10 +589,10 @@
                 - name: 'C# 8.0 dil teklifleri'
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-8.0/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-8.0/index
-        - name: 'F# Kılavuzu'
+        - name: 'F# kılavuzu'
           tocHref: /dotnet/fsharp/
           topicHref: /dotnet/fsharp/index
-        - name: Visual Basic Kılavuzu
+        - name: Visual Basic kılavuzu
           tocHref: /dotnet/visual-basic/
           topicHref: /dotnet/visual-basic/index
           items:
@@ -598,13 +637,13 @@
                 - name: Koleksiyon başlatıcıları
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/collection-initializers/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/collection-initializers/index
-                - name: Sabitler ve Numaralandırmalar
+                - name: Sabitler ve sabit listeleri
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/constants-enums/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/constants-enums/index
-                - name: Denetim Akışı
+                - name: Denetim akışı
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/control-flow/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/control-flow/index
-                - name: Veri Türleri
+                - name: Veri türleri
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/data-types/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/data-types/index
                 - name: Bildirilen öğeler
@@ -640,7 +679,7 @@
                 - name: XML
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/xml/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/xml/index
-            - name: COM Birlikte Çalışma
+            - name: COM birlikte çalışma
               tocHref: /dotnet/visual-basic/programming-guide/com-interop/
               topicHref: /dotnet/visual-basic/programming-guide/com-interop/index
             - name: Dil başvurusu
@@ -649,7 +688,7 @@
             - name: Başvuru
               tocHref: /dotnet/visual-basic/reference/
               topicHref: /dotnet/visual-basic/reference/index
-        - name: ML.NET Kılavuzu
+        - name: ML.NET kılavuzu
           tocHref: /dotnet/machine-learning/
           topicHref: /dotnet/machine-learning/index
           items:
@@ -662,6 +701,6 @@
             - name: Öğreticiler
               tocHref: /dotnet/machine-learning/tutorials/
               topicHref: /dotnet/machine-learning/tutorials/index
-        - name: Apache Spark için .NET Kılavuzu
+        - name: Apache Spark için .NET kılavuzu
           tocHref: /dotnet/spark/
           topicHref: /dotnet/spark/index
