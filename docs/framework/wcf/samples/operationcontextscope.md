@@ -2,12 +2,12 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 08f712167b502885486be3ce4398603339623415
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 581f75ece1a601b3baf590c1923a17a353de1ff1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039018"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714616"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
 OperationContextScope örneği, üst bilgiler kullanılarak Windows Communication Foundation (WCF) çağrısıyla nasıl ek bilgi gönderileceğini gösterir. Bu örnekte, hem sunucu hem de istemci konsol uygulamalardır.  
@@ -15,10 +15,10 @@ OperationContextScope örneği, üst bilgiler kullanılarak Windows Communicatio
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Örnek, bir istemcinin <xref:System.ServiceModel.Channels.MessageHeader> kullanarak <xref:System.ServiceModel.OperationContextScope>nasıl ek bilgi gönderebileceğinizi gösterir. Bir <xref:System.ServiceModel.OperationContextScope> nesne, bir kanalda tanımlayarak oluşturulur. Uzak hizmete çevrilmesi gereken üstbilgiler <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> koleksiyona eklenebilir. Bu koleksiyona eklenen üst bilgiler, hizmetine erişerek <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>hizmetten alınabilir. Çağrıları birden çok kanalda yapılır ve ardından istemciye eklenen üstbilgiler yalnızca oluşturmak <xref:System.ServiceModel.OperationContextScope>için kullanılan kanala uygulanır.  
+ Örnek, bir istemcinin <xref:System.ServiceModel.OperationContextScope>kullanarak <xref:System.ServiceModel.Channels.MessageHeader> nasıl ek bilgi gönderebileceğinizi gösterir. Bir <xref:System.ServiceModel.OperationContextScope> nesnesi, bir kanalda tanımlayarak oluşturulur. Uzak hizmete çevrilmesi gereken üstbilgiler <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> koleksiyonuna eklenebilir. Bu koleksiyona eklenen üstbilgiler, <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>erişerek hizmette alınabilir. Çağrıları birden çok kanalda yapılır ve ardından istemciye eklenen üstbilgiler yalnızca <xref:System.ServiceModel.OperationContextScope>oluşturmak için kullanılan kanala uygulanır.  
   
 ## <a name="messageheaderreader"></a>MessageHeaderReader  
- Bu, istemciden bir ileti alan ve <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> koleksiyondaki üstbilgiyi aramaya çalışan örnek hizmettir. İstemci, üst bilgiyle gönderilen GUID 'YI geçirir ve hizmet özel üstbilgiyi alır ve varsa, bunu istemci tarafından bağımsız değişken olarak geçirilen GUID ile karşılaştırır.  
+ Bu, istemciden bir ileti alan ve <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> koleksiyonundaki üstbilgiyi aramaya çalışan örnek hizmettir. İstemci, üst bilgiyle gönderilen GUID 'YI geçirir ve hizmet özel üstbilgiyi alır ve varsa, bunu istemci tarafından bağımsız değişken olarak geçirilen GUID ile karşılaştırır.  
   
 ```csharp
 public bool RetrieveHeader(string guid)  
@@ -63,7 +63,7 @@ MessageHeaderReaderClient client1 = new MessageHeaderReaderClient();
 MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();  
 ```  
   
- İstemci daha sonra bir OperationContextScope oluşturur ve bunu ile `client1`kapsamlar. Her iki istemcide <xref:System.ServiceModel.Channels.MessageHeader> bir <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> çağrı ekler ve çağırır. Çağrının dönüş değeri `client1` `client2` denetleyerek, üstbilginin yalnızca üzerinde gönderilmesini sağlar. `RetrieveHeader`  
+ İstemci daha sonra `client1`için bir OperationContextScope ve kapsamları oluşturur. <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> bir <xref:System.ServiceModel.Channels.MessageHeader> ekler ve her iki istemcide bir çağrıyı çağırır. Bu, `RetrieveHeader` çağrısından döndürülen değeri denetleyerek, üstbilginin yalnızca `client1` gönderilmesini ve `client2` olmamasını sağlar.  
   
 ```csharp
 using (new OperationContextScope(client1.InnerChannel))  
@@ -126,6 +126,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  

@@ -2,12 +2,12 @@
 title: Tasarımcı yeniden barındırma
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: ecbea5822825cca5f3f5cf40e20d5d249b17b07c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f98b1823c74471c96f6d4b67ec47637bb0785d8f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038190"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715245"
 ---
 # <a name="designer-rehosting"></a>Tasarımcıyı Yeniden Barındırma
 Tasarımcı yeniden barındırma, iş akışı tasarım tuvalinin özel bir uygulamanın içinde barındırılmasına işaret eden yaygın bir senaryodur. Çoğu kişinin en çok öğrenme uygulaması Visual Studio, ancak bir uygulamada iş akışı tasarımcısının gösterildiği birçok senaryo vardır:  
@@ -40,7 +40,7 @@ Tasarımcı yeniden barındırma, iş akışı tasarım tuvalinin özel bir uygu
 </Grid>  
 ```  
   
- Örnek, tasarımcı oluşturur ve birincil <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> öğesini ve <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> Kullanıcı arabirimindeki uygun kapsayıcıyla ilişkilendirir. Aşağıdaki örnekte, biraz açıklama olan bazı ek kod satırları vardır. .NET Framework ile gönderilen etkinlikler için varsayılan etkinlik tasarımcılarını ilişkilendirmek için çağrıgerekir.<xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A>, düzenlenecek WF öğesini geçirmek için çağırılır. Son olarak, <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (birincil tuval) ve <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (Özellik Kılavuzu) Kullanıcı arabirimi yüzeyine yerleştirilir.  
+ Örnek, tasarımcı oluşturur ve birincil <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> ve <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> Kullanıcı arabirimindeki uygun kapsayıcıyla ilişkilendirir. Aşağıdaki örnekte, biraz açıklama olan bazı ek kod satırları vardır. <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> çağrısı, .NET Framework ile gönderilen etkinliklerin varsayılan etkinlik tasarımcılarını ilişkilendirmek için gereklidir. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A>, düzenlenecek WF öğesini geçirmek için çağrılır. Son olarak, <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (birincil tuval) ve <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (Özellik Kılavuzu) Kullanıcı arabirimi yüzeyine yerleştirilir.  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -58,7 +58,7 @@ protected override void OnInitialized(EventArgs e)
 ```  
   
 ## <a name="using-the-rehosted-toolbox"></a>Yeniden barındırılan araç kutusunu kullanma  
- Bu örnekte, yeniden barındırılan araç kutusu denetimi XAML 'de bildirimli olarak kullanılmaktadır. Kodda bir türün <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper> oluşturucuya bir tür geçirebileceğini unutmayın.  
+ Bu örnekte, yeniden barındırılan araç kutusu denetimi XAML 'de bildirimli olarak kullanılmaktadır. Kodda, bir türü <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper> oluşturucusuna geçirebileceğini unutmayın.  
   
 ```xaml  
 <!-- Copyright (c) Microsoft Corporation. All rights reserved-->  
@@ -125,6 +125,6 @@ protected override void OnInitialized(EventArgs e)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`

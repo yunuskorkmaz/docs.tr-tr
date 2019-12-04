@@ -2,15 +2,15 @@
 title: Şirket Satın Alma İşlemi
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: d019c1915e691fcba00fa8f1b0884a898ce02fab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 95fa421ed44cf2d930fb4b80979d1b8bd9fda5ed
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951521"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715217"
 ---
 # <a name="corporate-purchase-process"></a>Şirket Satın Alma İşlemi
-Bu örnek, otomatik en iyi teklif seçimine sahip teklifler (RFP) tabanlı satın alma süreci için çok temel bir Istek oluşturmayı gösterir. İşlemi temsil <xref:System.Activities.Statements.Parallel>eden <xref:System.Activities.Statements.ParallelForEach%601>bir iş <xref:System.Activities.Statements.ForEach%601> akışı oluşturmak için, ve ve özel bir etkinliği birleştirir.
+Bu örnek, otomatik en iyi teklif seçimine sahip teklifler (RFP) tabanlı satın alma süreci için çok temel bir Istek oluşturmayı gösterir. İşlemi temsil eden bir iş akışı oluşturmak için <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>ve <xref:System.Activities.Statements.ForEach%601> ve özel bir etkinliği birleştirir.
 
  Bu örnek, işlem ile farklı katılımcılar (özgün istek sahibi veya belirli bir satıcı olarak) ile etkileşime izin veren bir ASP.NET istemci uygulaması içerir.
 
@@ -20,7 +20,7 @@ Bu örnek, otomatik en iyi teklif seçimine sahip teklifler (RFP) tabanlı satı
 
 - [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
-## <a name="demonstrates"></a>Gösteriler
+## <a name="demonstrates"></a>Gösterir
 
 - Özel etkinlikler.
 
@@ -36,14 +36,14 @@ Bu örnek, otomatik en iyi teklif seçimine sahip teklifler (RFP) tabanlı satı
 
 - İzlerken.
 
-- Farklı [!INCLUDE[wf1](../../../../includes/wf1-md.md)] istemcilerde barındırma (ASP.NET Web uygulamaları ve WinForms uygulamaları).
+- Farklı istemcilerde [!INCLUDE[wf1](../../../../includes/wf1-md.md)] barındırma (ASP.NET Web uygulamaları ve WinForms uygulamaları).
 
 > [!IMPORTANT]
 > Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
@@ -71,17 +71,17 @@ Bu örnek, otomatik en iyi teklif seçimine sahip teklifler (RFP) tabanlı satı
 4. Özgün istek sahibi gönderilen tüm teklifleri görebilir. En iyi teklif, raporun özel bir bölümünde sunulur.  
   
 ## <a name="process-definition"></a>İşlem tanımı  
- Örneğin Çekirdek mantığı her bir satıcının tekliflerini bekleyen <xref:System.Activities.Statements.ParallelForEach%601> bir etkinlik kullanır (bir yer işareti oluşturan özel bir etkinlik kullanarak) ve satıcı teklifini bir RFP ( <xref:System.Activities.Statements.InvokeMethod> etkinlik kullanarak) olarak kaydeder.  
+ Örneğin Çekirdek mantığı her bir satıcıdan teklifleri bekleyen bir <xref:System.Activities.Statements.ParallelForEach%601> etkinlik kullanır (bir yer işareti oluşturan özel bir etkinlik kullanarak) ve satıcı teklifini bir RFP (<xref:System.Activities.Statements.InvokeMethod> etkinliği kullanarak) olarak kaydeder.  
   
- Örnek daha sonra içinde `RfpRepository`depolanan tüm alınan tekliflerle yinelenir, düzeltilen değeri (bir <xref:System.Activities.Statements.Assign> etkinlik ve <xref:System.Activities.Expressions> etkinlikleri kullanarak) hesaplıyor ve ayarlanmış değer önceki en iyi tekliften daha iyidir, Yeni değeri en iyi teklif (kullanarak <xref:System.Activities.Statements.If> ve <xref:System.Activities.Statements.Assign> etkinlikler) olarak atar.  
+ Örnek daha sonra, `RfpRepository`depolanan alınan tekliflerin tümünde yinelenir, düzeltilen değeri (bir <xref:System.Activities.Statements.Assign> etkinliği ve <xref:System.Activities.Expressions> etkinliklerini kullanarak) hesaplıyor ve ayarlanmış değer önceki en iyi tekliften daha iyidir, yeni değeri en iyi teklif olarak atar (<xref:System.Activities.Statements.If> ve <xref:System.Activities.Statements.Assign> etkinliklerini kullanarak).  
   
 ## <a name="projects-in-this-sample"></a>Bu örnekteki projeler  
  Bu örnek aşağıdaki projeleri içerir.  
   
-|Project|Açıklama|  
+|{1&gt;Proje (Project)&lt;1}|Açıklama|  
 |-------------|-----------------|  
-|Common|İşlem içinde kullanılan varlık nesneleri (teklif talebi, satıcı ve satıcı teklifi).|  
-|WfDefinition|Satın alma işlemi iş akışının örneklerini oluşturmak ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] kullanmak için istemci uygulamaları tarafından`PurchaseProcessHost`kullanılan işlemin tanımı (program olarak) ve ana bilgisayar ().|  
+|Birçok|İşlem içinde kullanılan varlık nesneleri (teklif talebi, satıcı ve satıcı teklifi).|  
+|WfDefinition|Satın alma işlemi iş akışının örneklerini oluşturmak ve kullanmak için istemci uygulamaları tarafından kullanılan işlemin tanımı ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] program olarak) ve ana bilgisayar (`PurchaseProcessHost`).|  
 |WebClient|Kullanıcıların satın alma sürecinin örneklerini oluşturmalarına ve bu örneklere katılmasına izin veren bir ASP.NET istemci uygulaması. İş akışı altyapısıyla etkileşim kurmak için özel oluşturulmuş bir konak kullanır.|  
 |WinFormsClient|Kullanıcıların satın alma sürecinin örneklerini oluşturmalarına ve bu örneklere katılmasına izin veren bir Windows Forms istemci uygulaması. İş akışı altyapısıyla etkileşim kurmak için özel oluşturulmuş bir konak kullanır.|  
   
@@ -91,18 +91,18 @@ Bu örnek, otomatik en iyi teklif seçimine sahip teklifler (RFP) tabanlı satı
 |Dosya|Açıklama|  
 |----------|-----------------|  
 |IPurchaseProcessHost.cs|İş akışının ana bilgisayarı için arabirim.|  
-|PurchaseProcessHost.cs|İş akışı için bir konak uygulama. Konak, iş akışı örneklerini yüklemek, çalıştırmak ve bunlarla `PurchaseProcess` etkileşim kurmak için tüm istemci uygulamalarında kullanılır.|  
-|PurchaseProcessWorkflow.cs|Satın alma Işlemi iş akışının tanımını içeren bir etkinlik (türetiliyor <xref:System.Activities.Activity>).<br /><br /> Etkinlik kitaplığından var olan <xref:System.Activities.Activity> özel etkinlikleri ve etkinlikleri derleyerek oluşturma işlevlerinden türeten etkinlikler. [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Bu etkinlikleri montaj, özel işlevler oluşturmanın en temel yoludur.|  
-|WaitForVendorProposal.cs|Bu özel etkinlik öğesinden <xref:System.Activities.NativeActivity> türetilir ve teklif gönderilirken daha sonra bir satıcı tarafından sürdürülmesi gereken adlandırılmış bir yer işareti oluşturur.<br /><br /> Öğesinden türeten türetilmiş olanlar gibi, öğesinden <xref:System.Activities.ActivityContext> türetilen <xref:System.Activities.NativeActivity.Execute%2A> <xref:System.Activities.CodeActivity>etkinlikler, geçersiz kılan ve iş akışı çalışma zamanının tüm işlevlerine erişime sahip olan <xref:System.Activities.NativeActivity> `Execute` yöntemine geçirilir. Bu bağlam, alt etkinlikleri zamanlama ve iptal etme desteği içerir. kalıcı olmayan bölgeleri (çalışma zamanının Atomik işlemler gibi iş akışının verilerini kalıcı olmadığı yürütme blokları) ve <xref:System.Activities.Bookmark> nesneleri ( duraklatılmış iş akışları sürdürülüyor).|  
-|TrackingParticipant.cs|<xref:System.Activities.Tracking.TrackingParticipant> Tüm izleme olaylarını alır ve bunları bir metin dosyasına kaydeder.<br /><br /> İzleme katılımcıları, iş akışı örneğine uzantı olarak eklenir.|  
-|XmlWorkflowInstanceStore.cs|İş akışı <xref:System.Runtime.DurableInstancing.InstanceStore> uygulamalarını xml dosyalarına kaydeden özel.|  
-|XmlPersistenceParticipant.cs|Bir XML <xref:System.Activities.Persistence.PersistenceParticipant> dosyasına teklif için bir istek örneği kaydeden özel.|  
+|PurchaseProcessHost.cs|İş akışı için bir konak uygulama. Konak, iş akışı çalışma zamanının ayrıntılarını soyutlar ve `PurchaseProcess` iş akışı örnekleri yüklemek, çalıştırmak ve bunlarla etkileşim kurmak için tüm istemci uygulamalarında kullanılır.|  
+|PurchaseProcessWorkflow.cs|Satın alma Işlemi iş akışının tanımını içeren bir etkinlik (<xref:System.Activities.Activity>türetilir).<br /><br /> [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] etkinlik kitaplığından var olan özel etkinlikleri ve etkinlikleri derleyerek <xref:System.Activities.Activity> oluşturma işlevlerinden türeten etkinlikler. Bu etkinlikleri montaj, özel işlevler oluşturmanın en temel yoludur.|  
+|WaitForVendorProposal.cs|Bu özel etkinlik <xref:System.Activities.NativeActivity> türetilir ve teklif gönderilirken daha sonra bir satıcı tarafından sürdürülmesi gereken adlandırılmış bir yer işareti oluşturur.<br /><br /> <xref:System.Activities.CodeActivity>türeten türetilmiş olanlar gibi <xref:System.Activities.NativeActivity>' den türetilen etkinlikler, <xref:System.Activities.NativeActivity.Execute%2A>geçersiz kılarak zorunlu işlevler oluşturur, ancak aynı zamanda `Execute` yöntemine geçirilen <xref:System.Activities.ActivityContext> aracılığıyla iş akışı çalışma zamanının tüm işlevlerine erişime sahip olur. Bu bağlam, alt etkinlikleri zamanlama ve iptal etme desteği içerir. kalıcı olmayan bölgeler (çalışma zamanının Atomik işlemler içinde olduğu gibi iş akışının verilerini kalıcı olmadığı yürütme blokları) ve <xref:System.Activities.Bookmark> nesneleri (duraklatılmış iş akışlarına devam ettirmek için tutamaçlar).|  
+|TrackingParticipant.cs|Tüm izleme olaylarını alan ve bunları bir metin dosyasına kaydeden bir <xref:System.Activities.Tracking.TrackingParticipant>.<br /><br /> İzleme katılımcıları, iş akışı örneğine uzantı olarak eklenir.|  
+|XmlWorkflowInstanceStore.cs|İş akışı uygulamalarını XML dosyalarına kaydeden özel bir <xref:System.Runtime.DurableInstancing.InstanceStore>.|  
+|XmlPersistenceParticipant.cs|Teklif için bir istek örneğini bir XML dosyasına kaydeden özel bir <xref:System.Activities.Persistence.PersistenceParticipant>.|  
 |AsyncResult.cs/CompletedAsyncResult.cs|Kalıcılık bileşenlerinde zaman uyumsuz model uygulama yardımcı sınıfları.|  
   
-### <a name="common"></a>Common  
+### <a name="common"></a>Birçok  
  Aşağıdaki tabloda ortak projedeki en önemli sınıfların açıklaması yer almaktadır.  
   
-|örneği|Açıklama|  
+|Sınıf|Açıklama|  
 |-----------|-----------------|  
 |Satıcı|Teklifler için bir Istek için teklifleri gönderen bir satıcı.|  
 |Requestforteklifle|Teklifler için bir istek (RFP), satıcıların belirli bir emtia veya hizmete teklif göndermesine yönelik bir davetdir.|  
@@ -116,7 +116,7 @@ Bu örnek, otomatik en iyi teklif seçimine sahip teklifler (RFP) tabanlı satı
   
 |Dosya|Açıklama|  
 |-|-|  
-|CreateRfp.aspx|Teklifler için yeni bir Istek oluşturur ve gönderir.|  
+|CreateRfp. aspx|Teklifler için yeni bir Istek oluşturur ve gönderir.|  
 |Default. aspx|Teklifler için tüm etkin ve tamamlanmış Istekleri gösterir.|  
 |Getvendorteklife. aspx|Teklifler için somut bir Istekteki bir satıcıdan teklif alır. Bu sayfa yalnızca satıcılar tarafından kullanılır.|  
 |ShowRfp. aspx|Teklifler için bir Istek (alınan teklifler, tarihler, değerler ve diğer bilgiler) hakkındaki tüm bilgileri gösterir. Bu sayfa yalnızca teklif Isteği Oluşturucu tarafından kullanılır.|  
@@ -127,12 +127,12 @@ Bu örnek, otomatik en iyi teklif seçimine sahip teklifler (RFP) tabanlı satı
 |Form|Açıklama|  
 |-|-|  
 |NewRfp|Teklifler için yeni bir Istek oluşturur ve gönderir.|  
-|Showtekliflerin|Teklifler için tüm etkin ve tamamlanmış Istekleri gösterin. **Not:**  Teklif talebi oluşturduktan veya değiştirdikten sonra bu ekrandaki değişiklikleri görmek için Kullanıcı arabirimindeki **Yenile** düğmesine tıklamanız gerekebilir.|  
+|Showtekliflerin|Teklifler için tüm etkin ve tamamlanmış Istekleri gösterin. **Note:**  Teklif talebi oluşturduktan veya değiştirdikten sonra bu ekrandaki değişiklikleri görmek için Kullanıcı arabirimindeki **Yenile** düğmesine tıklamanız gerekebilir.|  
 |Submitteklifle|Teklifler için somut bir Istekteki bir satıcıdan teklif alın. Bu pencere yalnızca satıcılar tarafından kullanılır.|  
 |ViewRfp|Teklifler için bir Istek (alınan teklifler, tarihler, değerler ve diğer bilgiler) hakkındaki tüm bilgileri gösterir. Bu pencere yalnızca tekliflerin Isteği için Oluşturucu tarafından kullanılır.|  
   
 ### <a name="persistence-files"></a>Kalıcılık dosyaları  
- Aşağıdaki tabloda, kalıcılık sağlayıcısı (`XmlPersistenceProvider`) tarafından oluşturulan dosyaların geçerli sistemin geçici klasörünün yolunda (kullanılarak <xref:System.IO.Path.GetTempPath%2A>) bulunduğu gösterilmektedir. İzleme dosyası geçerli yürütme yolunda oluşturulur.  
+ Aşağıdaki tabloda, kalıcılık sağlayıcısı tarafından oluşturulan dosyaların (`XmlPersistenceProvider`) geçerli sistemin geçici klasörünün yolunda (<xref:System.IO.Path.GetTempPath%2A>kullanılarak) bulunduğu gösterilmektedir. İzleme dosyası geçerli yürütme yolunda oluşturulur.  
   
 |Dosya Adı|Açıklama|Yol|  
 |-|-|-|  
@@ -155,20 +155,20 @@ Bu örnek, otomatik en iyi teklif seçimine sahip teklifler (RFP) tabanlı satı
   
 ### <a name="web-client-options"></a>Web Istemcisi seçenekleri  
   
-- **Yeni BIR RFP oluşturun**: Teklifler (RFP) için yeni bir Istek oluşturur ve bir satın alma Işlemi iş akışı başlatır.  
+- **Yeni BIR RFP oluştur**: Teklifler (RFP) için yeni bir istek oluşturur ve bir satın alma işlemi iş akışı başlatır.  
   
 - **Yenile**: Ana penceredeki etkin ve tamamlanmış RFPs listesini yeniler.  
   
-- **Görüntüle**: Var olan bir RFP içeriğini gösterir. Satıcılar, tekliflerini (davet edilen veya RFP bitmez) gönderebilir.  
+- **Görüntüle**: var olan bir RFP içeriğini gösterir. Satıcılar, tekliflerini (davet edilen veya RFP bitmez) gönderebilir.  
   
-- Farklı görüntüle: Kullanıcı, etkin RFPs kılavuzundaki açılan kutu **olarak görüntüle** kutusunda istediğiniz katılımcıyı seçerek farklı kimlikler kullanarak RFP 'ye erişebilir.  
+- Farklı görüntüle: Kullanıcı, etkin RFPs **kılavuzundaki Birleşik giriş** kutusunda bulunan istediğiniz katılımcıyı seçerek, farklı kimlikler kullanarak RFP 'ye erişebilir.  
   
 ### <a name="winforms-client-options"></a>WinForms Istemci seçenekleri  
   
-- **RFP oluştur**: Teklifler (RFP) için yeni bir Istek oluşturur ve bir satın alma Işlemi iş akışı başlatır.  
+- **Oluşturma RFP**: Teklifler (RFP) için yeni bir istek oluşturur ve bir satın alma işlemi iş akışı başlatır.  
   
 - **Yenile**: Ana penceredeki etkin ve tamamlanmış RFPs listesini yeniler.  
   
-- **RFP 'Yi görüntüle**: Var olan bir RFP içeriğini gösterir. Satıcılar, tekliflerini (davet edilen veya RFP bitmez) gönderebilir  
+- **Görünümü RFP**: var olan bir RFP içeriğini gösterir. Satıcılar, tekliflerini (davet edilen veya RFP bitmez) gönderebilir  
   
-- **Farklı Bağlan**: Kullanıcı, etkin RFPs kılavuzundaki açılan kutu **olarak görüntüle** kutusunda istediğiniz katılımcıyı seçerek farklı kimlikler kullanarak RFP 'ye erişebilir.
+- **Farklı Bağlan**: Kullanıcı, etkin RFPs **kılavuzundaki Birleşik giriş** kutusunda bulunan istediğiniz katılımcıyı seçerek, farklı kimlikler kullanarak RFP 'ye erişebilir.

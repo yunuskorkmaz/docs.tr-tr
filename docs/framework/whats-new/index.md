@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ffcb288995975433bdd915362fccca03f345b5f5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c651f5c02bd49acc593c585395bc52e9ee64f870
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281662"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714503"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework yenilikler
 
@@ -350,7 +350,7 @@ Windows API 'Leri kullanarak açma desteği, .NET Framework 4.7.2 ' i hedefleyen
 
 **Ek koleksiyon API 'Leri**
 
-.NET Framework 4.7.2, <xref:System.Collections.Generic.SortedSet%601> ve <xref:System.Collections.Generic.HashSet%601> türlerine bir dizi yeni API ekler. Bunlar:
+.NET Framework 4.7.2, <xref:System.Collections.Generic.SortedSet%601> ve <xref:System.Collections.Generic.HashSet%601> türlerine bir dizi yeni API ekler. Bu güncelleştirmeler şunlardır:
 
 - diğer koleksiyon türlerinde kullanılan try modelini bu iki türe genişleten `TryGetValue` yöntemleri. Yöntemler şunlardır:
 
@@ -434,7 +434,7 @@ Web yapılandırma dosyasını değiştirerek <xref:System.Web.Security.FormsAut
 
 <a name="net472" />
 
-#### <a name="networking"></a>Ağ
+#### <a name="networking"></a>Ağ Oluşturma
 
 **HttpClientHandler özelliklerinin uygulanması**
 
@@ -630,7 +630,7 @@ Yapılandırma üreticileri, geliştiricilerin uygulamalar için yapılandırma 
 
 <a name="net471"/>
 
-#### <a name="networking"></a>Ağ
+#### <a name="networking"></a>Ağ Oluşturma
 
 **Message. HashAlgorithm için SHA-2 desteği**
 
@@ -699,7 +699,7 @@ GitHub 'da [4,7 .NET Framework şifreleme geliştirmesi örneği](https://gist.g
 
 <a name="net47" />
 
-#### <a name="networking"></a>Ağ
+#### <a name="networking"></a>Ağ Oluşturma
 
 .NET Framework 4,7, ağla ilgili aşağıdaki özelliği ekler:
 
@@ -741,7 +741,7 @@ WCF, .NET Framework 4,7 ' den itibaren, varsayılan ileti güvenlik protokolü o
 
 **WCF uygulamalarının ve WCF serileştirmenin güvenilirliği geliştirildi**
 
-WCF, yarış koşullarını ortadan kaldıran bir dizi kod değişikliği içerir, böylece performansı ve serileştirme seçeneklerinin güvenilirliğini geliştirir. Bunlar:
+WCF, yarış koşullarını ortadan kaldıran bir dizi kod değişikliği içerir, böylece performansı ve serileştirme seçeneklerinin güvenilirliğini geliştirir. Bu güncelleştirmeler şunlardır:
 
 - **SocketConnection. BeginRead** ve **SocketConnection. Read**çağrılarına zaman uyumsuz ve zaman uyumlu kod karıştırma için daha iyi destek.
 - **Sharedconnectionlistener** ve **DuplexChannelBinder**ile bağlantı iptal edildiğinde iyileştirilmiş güvenilirlik.
@@ -841,7 +841,7 @@ End Class
 
 Ardından, anahtar hata iletisi dizesi olan ve değeri yerelleştirilmiş hata iletisi olan DataAnnotation. yerelleştirme. fr. resx olan bir kaynak dosyası oluşturabilirsiniz. Dosyanın `App.LocalResources` klasöründe bulunması gerekir. Örneğin, aşağıdaki anahtar ve değeri yerelleştirilmiş Fransızca (fr) dil hata iletisinde verilmiştir:
 
-| Name                                 | Value                                     |
+| Name                                 | Değer                                     |
 | ------------------------------------ | ----------------------------------------- |
 | Derecelendirme 1 ile 10 arasında olmalıdır. | La Note DoIt être, diğer 1 et 10. |
 
@@ -1039,13 +1039,13 @@ Yeni `PoolBlockingPeriod` anahtar sözcüğünün eklenmesi, uygulamanız için 
 
 Azure SQL veritabanına bağlanan bir uygulama için bağlantı havuzu engelleme süresi devre dışıdır ve başka bir SQL Server örneğine bağlanan bir uygulama için bağlantı havuzu engelleme süresi etkindir. Varsayılan değer budur. Sunucu uç noktası adı aşağıdakilerden biriyle sonlanıyorsa, Azure SQL veritabanı olarak kabul edilir:
 
-- .database.windows.net
+- . database.windows.net
 
-- .database.chinacloudapi.cn
+- . database.chinacloudapi.cn
 
-- .database.usgovcloudapi.net
+- . database.usgovcloudapi.net
 
-- .database.cloudapi.de
+- . database.cloudapi.de
 
 <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock>
 
@@ -1665,7 +1665,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   - **Farklı HTTP bağlantıları kullanarak ileti gönderme**
 
-    WCF artık kullanıcıların, farklı temel HTTP bağlantıları kullanılarak belirli iletilerin gönderilmesini sağlamasına izin veriyor. Bunu yapmanın iki yolu vardır:
+    WCF artık kullanıcıların, farklı temel HTTP bağlantıları kullanılarak belirli iletilerin gönderilmesini sağlamasına izin veriyor. Bunu yapmak için iki yol vardır:
 
     - **Bağlantı grubu adı ön eki kullanma**
 
@@ -1900,7 +1900,7 @@ ASP.NET 4.5.1 içindeki yeni özellikler için bkz. [Visual Studio 2013 Sürüm 
 
 <a name="v45" />
 
-## <a name="whats-new-in-net-framework-45"></a>.NET Framework 4,5 ' deki yenilikler
+## <a name="whats-new-in-net-framework-45"></a>{1&gt;{2&gt;.NET Framework 4.5'teki Yenilikler&lt;2}&lt;1}
 
 ### <a name="base-classes"></a>Temel sınıflar
 
@@ -1954,7 +1954,7 @@ Daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)](../mef/index
 
 <a name="tools" />
 
-### <a name="tools"></a>Araçlar
+### <a name="tools"></a>Araçları
 
 .NET Framework 4,5, kaynak dosya Oluşturucu (Resgen. exe), bir. resources .NET Framework dosyasındaki Windows 8. x Mağaza uygulamalarında kullanılmak üzere bir. resw dosyası oluşturmanıza olanak sağlar. Daha fazla bilgi için bkz. [Resgen. exe (kaynak dosya Oluşturucu)](../tools/resgen-exe-resource-file-generator.md).
 
@@ -2116,13 +2116,13 @@ Daha fazla bilgi için bkz. [Windows Workflow Foundation](https://go.microsoft.c
 
 <a name="tailored" />
 
-### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
+### <a name="net-for-windows-8x-store-apps"></a>Windows 8.x Mağazası uygulamaları için .NET
 
-Windows 8. x Mağazası uygulamaları belirli form faktörleri için tasarlanmıştır ve Windows işletim sisteminin gücünden yararlanır. Veya Visual Basic kullanarak C# Windows için Windows 8. x Mağazası uygulamaları oluşturmak üzere 4,5 veya 4.5.1 .NET Framework bir alt kümesi mevcuttur. Bu alt küme [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] olarak adlandırılır ve Windows Geliştirme Merkezi 'nde bir [genel bakışta](https://go.microsoft.com/fwlink/?LinkId=228491) ele alınmıştır.
+Windows 8. x Mağazası uygulamaları belirli form faktörleri için tasarlanmıştır ve Windows işletim sisteminin gücünden yararlanır. Veya Visual Basic kullanarak C# Windows için Windows 8. x Mağazası uygulamaları oluşturmak üzere 4,5 veya 4.5.1 .NET Framework bir alt kümesi mevcuttur. Bu alt küme, Windows 8. x Mağazası uygulamaları için .NET olarak adlandırılır ve Windows Geliştirme Merkezi 'nde bir [genel bakışta](https://go.microsoft.com/fwlink/?LinkId=228491) ele alınmıştır.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Taşınabilir sınıf kitaplıkları <a name="portable" />
 
-Visual Studio 2012 ' deki (ve sonraki sürümlerde) taşınabilir sınıf kitaplığı projesi, birden çok .NET Framework platformda çalışan yönetilen derlemeler yazmanızı ve oluşturmanızı sağlar. Taşınabilir bir sınıf kitaplığı projesi kullanarak, hedeflenecek platformları (Windows Phone ve [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]gibi) seçersiniz. Projenizdeki kullanılabilir türler ve Üyeler, bu platformlar genelinde ortak türler ve üyelerle otomatik olarak kısıtlıdır. Daha fazla bilgi için bkz. [taşınabilir sınıf kitaplığı](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+Visual Studio 2012 ' deki (ve sonraki sürümlerde) taşınabilir sınıf kitaplığı projesi, birden çok .NET Framework platformda çalışan yönetilen derlemeler yazmanızı ve oluşturmanızı sağlar. Taşınabilir bir sınıf kitaplığı projesi kullanarak, hedeflenecek platformları (Windows Phone ve Windows 8. x Mağazası uygulamaları için .NET) seçersiniz. Projenizdeki kullanılabilir türler ve Üyeler, bu platformlar genelinde ortak türler ve üyelerle otomatik olarak kısıtlıdır. Daha fazla bilgi için bkz. [taşınabilir sınıf kitaplığı](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

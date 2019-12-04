@@ -2,16 +2,16 @@
 title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-ms.openlocfilehash: e98b1254710ebac2305fd7dd5d39a146d749ff44
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: ddbe3e505028acf3abbadc9a741f66fdceca3784
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990146"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716054"
 ---
 # <a name="basicbinding"></a>BasicBinding
 
-Bu örnek, ilk ve ikinci `basicHttpBinding` nesil Web Hizmetleri ile HTTP iletişimi ve en fazla birlikte çalışabilirlik sağlayan öğesinin kullanımını gösterir.
+Bu örnek, ilk ve ikinci nesil Web Hizmetleri ile HTTP iletişimi ve en fazla birlikte çalışabilirlik sağlayan `basicHttpBinding` kullanımını gösterir.
 
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
@@ -21,7 +21,7 @@ Bu örnek, ilk ve ikinci `basicHttpBinding` nesil Web Hizmetleri ile HTTP ileti�
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\Http`
 
@@ -29,7 +29,7 @@ Bu örnek, ilk ve ikinci `basicHttpBinding` nesil Web Hizmetleri ile HTTP ileti�
 
 Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır.
 
-Temel bağlamayı varsayılan davranışla kullanmak için yalnızca bağlama bölümünün adı gereklidir. Temel bağlamayı yapılandırmak ve bazı ayarlarını değiştirmek istiyorsanız, bir bağlama yapılandırması tanımlamanız gerekir. Uç noktanın, aşağıdaki örnek kodda gösterildiği gibi < `bindingConfiguration` `endpoint`> öğesinin özniteliğini kullanarak bağlama yapılandırmasına adı ile başvurması gerekir.
+Temel bağlamayı varsayılan davranışla kullanmak için yalnızca bağlama bölümünün adı gereklidir. Temel bağlamayı yapılandırmak ve bazı ayarlarını değiştirmek istiyorsanız, bir bağlama yapılandırması tanımlamanız gerekir. Uç nokta, aşağıdaki örnek kodda gösterildiği gibi <`endpoint`> öğesinin `bindingConfiguration` özniteliğini kullanarak bağlama yapılandırmasına ad ile başvurmalıdır.
 
 ```xml
 <services>
@@ -44,7 +44,7 @@ Temel bağlamayı varsayılan davranışla kullanmak için yalnızca bağlama b�
 </services>
 ```
 
-Bu örnekte, bağlama yapılandırması adlandırılır `"Binding1"` ve aşağıdaki kod örneğinde gösterildiği gibi tanımlanmıştır.
+Bu örnekte, bağlama yapılandırması `"Binding1"` olarak adlandırılır ve aşağıdaki kod örneğinde gösterildiği gibi tanımlanmıştır.
 
 ```xml
 <bindings>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: c2389ff0c94afc2156e594f5d93535d1ed0107a8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e0c617ce32f80bdde1bcfda31da40ae610e07452
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336261"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712358"
 ---
 # <a name="await-operator-visual-basic"></a>Await İşleci (Visual Basic)
 
@@ -23,7 +23,7 @@ ms.locfileid: "74336261"
 > [!NOTE]
 > `Async` ve `Await` anahtar sözcükleri Visual Studio 2012 ' de tanıtılmıştı. Zaman uyumsuz programlamaya giriş için bkz. [Async ve await Ile zaman uyumsuz programlama](../../../visual-basic/programming-guide/concepts/async/index.md).
 
-Genellikle, `Await` işlecini uyguladığınız görev, [görev tabanlı zaman uyumsuz model](https://go.microsoft.com/fwlink/?LinkId=204847), yani bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>uygulayan bir yönteme yapılan çağrıdan dönüş değeridir.
+Genellikle, `Await` işlecini uyguladığınız görev, [görev tabanlı zaman uyumsuz model](https://www.microsoft.com/download/details.aspx?id=19957), yani bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>uygulayan bir yönteme yapılan çağrıdan dönüş değeridir.
 
 Aşağıdaki kodda, <xref:System.Net.Http.HttpClient> yöntemi <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>, `getContentsTask`, bir `Task(Of Byte())` döndürür. Görev, işlem tamamlandığında gerçek bayt dizisini üretmek için bir vaattir. `Await` işleci, `getContentsTask` tamamlanana kadar `SumPageSizesAsync` yürütmeyi askıya almak için `getContentsTask` uygulanır. Bu sırada denetim, `SumPageSizesAsync`çağıranına döndürülür. `getContentsTask` tamamlandığında, `Await` ifadesi bir bayt dizisi olarak değerlendirilir.
 

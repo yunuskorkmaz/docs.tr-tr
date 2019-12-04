@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 99f522181232d16b9913ba3c55f34274b75d8966
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7d09e1283be8ec75df89957e91f0d8411c125b3b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449405"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714455"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)
 
-MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windows tabanlı kullanıcı arabirimi (UI) ile destekler. Bu araçla, dağıtım ve uygulama bildirimleri oluşturabilir, düzenleyebilir ve imzalayabilirsiniz. MageUI. exe ile oluşturulan yeni bildirimler [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]hedefleyin. Önceki .NET Framework sürümlerini hedeflemek için MageUI.exe'nin önceki sürümleri kullanılmalıdır. Bir bildirimden derleme ekleme veya kaldırma ya da varolan bildirimleri yeniden imzalama sırasında, MageUI. exe bildirimi hedef [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]olarak güncelleştirmez. Daha fazla bilgi için bkz. [Mage. exe (bildirim oluşturma ve düzenleme aracı)](mage-exe-manifest-generation-and-editing-tool.md).
+MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windows tabanlı kullanıcı arabirimi (UI) ile destekler. Bu araçla, dağıtım ve uygulama bildirimleri oluşturabilir, düzenleyebilir ve imzalayabilirsiniz. MageUI. exe ile oluşturulan yeni bildirimler .NET Framework 4 Istemci profilini hedeflemelidir. Önceki .NET Framework sürümlerini hedeflemek için MageUI.exe'nin önceki sürümleri kullanılmalıdır. Bir bildirimden derleme ekleme veya kaldırma ya da var olan bildirimleri yeniden imzalama sırasında, MageUI. exe bildirimi .NET Framework 4 Istemci profilini hedef olacak şekilde güncelleştirmez. Daha fazla bilgi için bkz. [Mage. exe (bildirim oluşturma ve düzenleme aracı)](mage-exe-manifest-generation-and-editing-tool.md).
 
  Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
 
@@ -40,7 +40,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |**Kesildiğinde**|**Düzenle**|CTRL+X|Seçili durumdaki metni uygulamadan kaldırır ve sistem Pano'suna taşır.|  
 |**Kopyala**|**Düzenle**|CTRL+C|Seçili durumdaki metni sistem Pano'suna kopyalar.|  
 |**Masına**|**Düzenle**|CTRL+V|Sistem Pano'sundaki metni etkin durumdaki metin öğesinin içine yapıştırır.|  
-|**Sil**|**Düzenle**||Bir listede seçili olan bir öğeyi, **dağıtım bildirimi** sekmesindeki güven lisansı gibi siler.|  
+|**Delete**|**Düzenle**||Bir listede seçili olan bir öğeyi, **dağıtım bildirimi** sekmesindeki güven lisansı gibi siler.|  
 |**Tümünü Kapat**|**Penceresine**||MageUI.exe'de açık durumdaki tüm dosyaları kapatır. Bir veya daha fazla dosyanın kaydedilmesi gerekiyorsa, gereksinimi MageUI.exe sizden onları kaydetmenizi ister. MageUI.exe ayrıca imzalanmamış veya değiştirilmiş her dosya için bir imzalama anahtarı seçmenizi de ister.|  
 |**Bilgi**|**Yardım**||MageUI.exe'nin sürüm ve telif hakkı bilgilerini görüntüler.|  
   

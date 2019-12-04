@@ -2,24 +2,24 @@
 title: İş Akışı Tasarımcısını Yeniden Barındırma
 ms.date: 03/30/2017
 ms.assetid: bec1fc28-f902-4edb-86c5-436cec802c2b
-ms.openlocfilehash: 98048ca58bf635f4e87241befa083dc240deaecf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b89c84d6761fa1e16bc17794885f64086a920f8
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968187"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716717"
 ---
 # <a name="rehosting-the-workflow-designer"></a>İş Akışı Tasarımcısını Yeniden Barındırma
-[!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Visual Studio 2012 dışında ortamlarda oluşturma, değiştirme ve izleme amacıyla rehosted.
+İş akışlarını oluşturma, değiştirme ve izleme amacıyla, Windows İş Akışı Tasarımcısı Visual Studio 2012 dışındaki ortamlarda yeniden barındırılabilir.
 
- <xref:System.Activities.Presentation.WorkflowDesigner> Türü tuval, özellik Kılavuzu ve diğer öğeleri bir sarmalayıcı olan ve tasarımcıyı yeniden senaryoları çoğunu işlemek için basit bir programlama modeli sunar. Barındırma <xref:System.Activities.Presentation.WorkflowDesigner> rehosting yaygın bir senaryo için bir Windows Presentation Foundation (WPF) içinde uygulamasıdır [!INCLUDE[wfd2](../../../includes/wfd2-md.md)].
+ <xref:System.Activities.Presentation.WorkflowDesigner> türü, tuval, özellik Kılavuzu ve diğer öğelerin sarmalayıcısıdır ve tasarımcı yeniden barındırma senaryolarının çoğunu işlemek için temel bir programlama modeli sunar. <xref:System.Activities.Presentation.WorkflowDesigner> bir Windows Presentation Foundation (WPF) uygulaması içinde barındırmak, İş Akışı Tasarımcısı için ortak bir yeniden barındırma senaryosudur.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [1. Görev: Yeni bir Windows Presentation Foundation uygulaması oluşturma](task-1-create-a-new-wpf-app.md)
+ [Görev 1: Yeni Bir Windows Presentation Foundation Uygulaması Oluşturma](task-1-create-a-new-wpf-app.md)
 
- [2. Görev: İş akışı tasarımcısını barındırma](task-2-host-the-workflow-designer.md)
+ [Görev 2: İş Akışı Tasarımcısını Barındırma](task-2-host-the-workflow-designer.md)
 
- [3. Görev: Araç kutusu ve PropertyGrid bölmeleri oluşturma](task-3-create-the-toolbox-and-propertygrid-panes.md)
+ [Görev 3: Araç Kutusu ve PropertyGrid Bölmeleri Oluşturma](task-3-create-the-toolbox-and-propertygrid-panes.md)
 
  [Yeniden Barındırılan İş Akışı Tasarımcısında Yeni Workflow Foundation 4.5 Özellikleri Desteği](wf-features-in-the-rehosted-workflow-designer.md)
 

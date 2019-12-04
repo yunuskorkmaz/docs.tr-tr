@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 9f215bb5f6d2ec480022af477d93d9411fe190cd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: db23c250014006655fa51ee5a2e5b54e15e4f964
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424491"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714593"
 ---
 # <a name="ws-transaction-flow"></a>WS İşlem Akışı
-Bu örnek, WS-Atomik Işlem veya OleTransactions protokolünü kullanarak, istemci ile eşgüdümlü bir işlemin ve işlem akışı için istemci ve sunucu seçeneklerinin kullanımını gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır, ancak işlem akışının ne derece olduğunu belirlemek için Işlemler, **TransactionFlowOption** numaralandırması ile `TransactionFlowAttribute` kullanımını göstermeye yönelik olarak belirlenir. etkindir. Akışlı işlemin kapsamı içinde, istenen işlemlerin bir günlüğü veritabanına yazılır ve istemci ile Eşgüdümlü işlem tamamlanana kadar devam etmez-istemci işlemi tamamlanmazsa, Web hizmeti işlemi veritabanına yönelik uygun güncelleştirmeler yürütülmedi.  
+Bu örnek, WS-Atomik Işlem veya OleTransactions protokolünü kullanarak, istemci ile eşgüdümlü bir işlemin ve işlem akışı için istemci ve sunucu seçeneklerinin kullanımını gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hizmetini temel alır ancak işlemler, işlem akışının ne derece etkin olduğunu belirlemek için **TransactionFlowOption** numaralandırmasıyla `TransactionFlowAttribute` kullanımını göstermeye yönelik olarak belirlenir. Akışlı işlemin kapsamı içinde, istenen işlemlerin bir günlüğü veritabanına yazılır ve istemci ile Eşgüdümlü işlem tamamlanana kadar devam etmez-istemci işlemi tamamlanmazsa, Web hizmeti işlemi veritabanına yönelik uygun güncelleştirmeler yürütülmedi.  
   
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
@@ -285,6 +285,6 @@ Press <ENTER> to terminate the service.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`

@@ -2,12 +2,12 @@
 title: Güvenilir Güvenlik Profili
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: d7cfc028c5cf1ba5cfba009cd29c89f07c64fd9c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044823"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716497"
 ---
 # <a name="reliable-secure-profile"></a>Güvenilir Güvenlik Profili
 Bu örnek, WCF ve [güvenilir güvenli profilin](https://go.microsoft.com/fwlink/?LinkId=178140) (rsp) nasıl oluşturulacağını gösterir. Bu örnek, güvenilir mesajlaşma ile birlikte oluşturabileceğiniz bir [bağlantı oluşturma](https://go.microsoft.com/fwlink/?LinkId=178141) kanalının uygulanmasını ve isteğe bağlı olarak RSP belirtimine dayalı güvenilir bir güvenli bağlama oluşturmak için güvenli bir kanal oluşturmayı gösterir.  
@@ -17,7 +17,7 @@ Bu örnek, WCF ve [güvenilir güvenli profilin](https://go.microsoft.com/fwlink
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   

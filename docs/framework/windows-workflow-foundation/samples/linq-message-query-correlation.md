@@ -2,21 +2,21 @@
 title: LINQ İleti Kuyruğu Bağıntısı
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: 202d65914d32245952f308d3115ec93231f95f15
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: a4b0ed058cfe8d3d487342c9feefdf1b1efe07c8
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989333"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715592"
 ---
 # <a name="linq-message-query-correlation"></a>LINQ İleti Kuyruğu Bağıntısı
-Bu örnek, sistem tarafından sağlanın <xref:System.ServiceModel.Dispatcher.MessageQuery> <xref:System.ServiceModel.XPathMessageQuery>aksine özel bir uygulama kullanarak içerik tabanlı bağıntı oluşturmayı gösterir.  
+Bu örnek, sistem tarafından sağlanmış <xref:System.ServiceModel.XPathMessageQuery>aksine özel bir <xref:System.ServiceModel.Dispatcher.MessageQuery> uygulamasını kullanarak içerik tabanlı bağıntı oluşturmayı gösterir.  
   
-## <a name="demonstrates"></a>Gösteriler  
- Özel <xref:System.ServiceModel.Dispatcher.MessageQuery>, içerik tabanlı bağıntı.  
+## <a name="demonstrates"></a>Gösterir  
+ Özel <xref:System.ServiceModel.Dispatcher.MessageQuery>, Içerik tabanlı bağıntı.  
   
 ## <a name="discussion"></a>Tartışma  
- Bu örnek, bağıntı amaçları doğrultusunda <xref:System.ServiceModel.Dispatcher.MessageQuery> temel sınıftan genişletmeyi gösterir. Özel uygulama `LinqMessageQuery`, kullanıcıların xlınq kullanarak ileti içinde bulmak için bir XName sağlamasına izin verir. Sorgu tarafından alınan veriler, uygun iş akışı örneğine ileti göndermek için bağıntı anahtarını oluşturmak üzere kullanılır.  
+ Bu örnek, bağıntı amaçları doğrultusunda <xref:System.ServiceModel.Dispatcher.MessageQuery> temel sınıftan genişletmeyi gösterir. `LinqMessageQuery`özel uygulama, kullanıcıların Xlınq kullanarak ileti içinde bulmak için bir XName sağlamasına izin verir. Sorgu tarafından alınan veriler, uygun iş akışı örneğine ileti göndermek için bağıntı anahtarını oluşturmak üzere kullanılır.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
@@ -39,6 +39,6 @@ Bu örnek, sistem tarafından sağlanın <xref:System.ServiceModel.Dispatcher.Me
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\LinqMessageQueryCorrelation`

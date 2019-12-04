@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: f2dee85f3d84d840b33d81277419ab22e88e8556
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dc417300eb6f62b89a1c07a4f2291b7366e410b1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928588"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716557"
 ---
 # <a name="default-nettcpbinding"></a>Varsayılan NetTcpBinding
-Bu örnek, <xref:System.ServiceModel.NetTcpBinding> bağlamanın kullanımını gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır. Bu örnekte, hizmet kendiliğinden barındırılır. Hem istemci hem de hizmet konsol uygulamalardır.  
+Bu örnek <xref:System.ServiceModel.NetTcpBinding> bağlamanın kullanımını gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır. Bu örnekte, hizmet kendiliğinden barındırılır. Hem istemci hem de hizmet konsol uygulamalardır.  
   
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
@@ -22,11 +22,11 @@ Bu örnek, <xref:System.ServiceModel.NetTcpBinding> bağlamanın kullanımını 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- Bağlama, istemci ve hizmet için yapılandırma dosyalarında belirtilir. Bağlama türü, aşağıdaki örnek yapılandırmada gösterildiği `binding` gibi [ \<Endpoint >](../../configure-apps/file-schema/wcf/endpoint-element.md) öğesinin özniteliğinde belirtilir.  
+ Bağlama, istemci ve hizmet için yapılandırma dosyalarında belirtilir. Bağlama türü, aşağıdaki örnek yapılandırmada gösterildiği gibi [\<endpoint >](../../configure-apps/file-schema/wcf/endpoint-element.md) öğesinin `binding` özniteliğinde belirtilir.  
   
 ```xml  
 <endpoint address=""  
@@ -34,7 +34,7 @@ Bu örnek, <xref:System.ServiceModel.NetTcpBinding> bağlamanın kullanımını 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Önceki örnekte, varsayılan ayarlarla `netTcpBinding` bağlamayı kullanmak için bir uç noktanın nasıl yapılandırılacağı gösterilmektedir. `netTcpBinding` Bağlamayı yapılandırmak ve bazı ayarlarını değiştirmek istiyorsanız, bir bağlama yapılandırması tanımlamanız gerekir. Uç nokta, bağlama yapılandırmasına ada göre bir `bindingConfiguration` özniteliği ile başvurmalıdır. Bu örnekte, bağlama yapılandırması adlandırılır `Binding1` ve aşağıdaki örnek yapılandırmada gösterildiği gibi tanımlanmıştır.  
+ Önceki örnek, `netTcpBinding` bağlamayı varsayılan ayarlarla kullanmak için bir uç noktanın nasıl yapılandırılacağını gösterir. `netTcpBinding` bağlamasını yapılandırmak ve bazı ayarlarını değiştirmek istiyorsanız, bir bağlama yapılandırması tanımlamanız gerekir. Uç noktanın bağlama yapılandırmasına bir `bindingConfiguration` özniteliğiyle ad ile başvurması gerekir. Bu örnekte, bağlama yapılandırması `Binding1` olarak adlandırılır ve aşağıdaki örnek yapılandırmada gösterildiği gibi tanımlanmıştır.  
   
 ```xml  
 <services>  

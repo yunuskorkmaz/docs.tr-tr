@@ -2,12 +2,12 @@
 title: .NET Core hakkında
 description: .NET Core hakkında bilgi edinin.
 ms.date: 09/17/2019
-ms.openlocfilehash: 4fe16475e18eb88e88fb33d30508f9ef5c9f2cd5
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: b3cdc8d4aeaf85765b51543069a5f279e84f8623
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552235"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711215"
 ---
 # <a name="about-net-core"></a>.NET Core hakkında
 
@@ -40,7 +40,7 @@ Bu tümleştirme, kapsamında, [Omnisharp](https://www.omnisharp.net/) ve [ıon�
 - <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>gibi koleksiyonlar.
 - <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>ve <xref:System.IO.FileStream?displayProperty=nameWithType>gibi yardımcı program türleri.
 - <xref:System.Data.DataSet?displayProperty=nameWithType>ve [Dbset](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/)gibi veri türleri.
-- <xref:System.Numerics.Vector?displayProperty=nameWithType> ve işlem [hatları](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/)gibi yüksek performanslı türler.
+- <xref:System.Numerics.Vector?displayProperty=nameWithType> ve işlem [hatları](../standard/io/pipelines.md)gibi yüksek performanslı türler.
 
 .NET Core, [.NET Standard](../standard/net-standard.md) belirtimini uygulayarak .NET Framework ve mono API 'leri ile uyumluluk sağlar.
 

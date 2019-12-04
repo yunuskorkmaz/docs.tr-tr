@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 5a911e0ae49955c5b089bb231f94e4afc0c05c97
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6e3708fb386760ae067de0e86e4315114c85113c
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039538"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714897"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 Bu örnek, serileştirme ve seri kaldırma işlemlerinin <xref:System.Runtime.Serialization.DataContractResolver> sınıfı kullanılarak nasıl özelleştirilebileceğini gösterir. Bu örnek, serileştirme ve seri durumundan çıkarma sırasında bilinen türlerin dinamik olarak nasıl ekleneceğini gösterir.  
@@ -189,9 +189,9 @@ public interface IDataContractCalculator
   
  Hizmet sözleşmesinin tanımı `KnownAssembly` özniteliğiyle işaretlenir. Bu öznitelik, her ikisi de hem hizmet hem de istemci tarafından çalışma zamanında bilinecek bir tür kitaplığının adını içerir.  
   
- Özniteliği `KnownAssembly` , işlem `IContractBehavior` davranışlarının her biri için `DataContractSerializer` `DataContractResolver` tanımlanmış bir ile tanımlamak için uygular. , `DataContractResolver` Oluşturulduğunda derleme üzerinde yansıtıyor ve farklı türleri serileştirilirken ve serisini kaldırırken kullanılacak türler ve adlar arasındaki eşlemeyle birlikte sözlük oluşturur. Bu şekilde, `ResolveType` ve `ResolveName` türleri sözlükte gereken verileri aramak zorundadır.  
+ `KnownAssembly` özniteliği, işlem davranışlarının her biri için tanımlanan `DataContractResolver` bir `DataContractSerializer` tanımlamak için `IContractBehavior` uygular. `DataContractResolver`, oluşturulduğu sırada derleme üzerinde yansıtıyor ve farklı türleri serileştirilirken ve seri durumdan çıkarılırken kullanılacak türler ve adlar arasındaki eşlemeyle birlikte sözlük oluşturur. Bu şekilde, `ResolveType` ve `ResolveName` türlerinin sözlükte gereken verileri araması gerekir.  
   
- Bu `DataContractResolver` örnek için tanımlanan, aşağıdaki örnekte gösterilmiştir.  
+ Bu örnek için tanımlanan `DataContractResolver` aşağıdaki örnekte gösterilmiştir.  
   
 ```csharp
 public class MyDataContractResolver : DataContractResolver  
@@ -320,7 +320,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- Çalışma zamanında bilineceğinden, `ComplexNumberWithMagnitude` türü statik olarak bilmesinin gerekli olmadığını unutmayın. `ComplexNumber`  
+ `ComplexNumber`, çalışma zamanında bilineceğinden, `ComplexNumberWithMagnitude` türünü statik olarak bilmelidir.  
   
  Örnek oluşturulup yürütüldüğünde, bu, istemcisinde elde edilen beklenen çıktıdır:  
   
@@ -367,6 +367,6 @@ Lists combined:
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  

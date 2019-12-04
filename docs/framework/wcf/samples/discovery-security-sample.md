@@ -2,12 +2,12 @@
 title: Keşif Güvenliği Örneği
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: dfc0dfcd3b4d814a158b328ef202d5438e583a8c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8469b69baabcd2ba9185956c276554b4bb929d85
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039810"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712049"
 ---
 # <a name="discovery-security-sample"></a>Keşif Güvenliği Örneği
 Bulma belirtimi, bulma işlemine katılan uç noktaların güvenli olmasını gerektirmez. Bulma iletilerini güvenlikle birlikte geliştirmek, çeşitli saldırı türlerini azaltır (ileti değişikliği, hizmet reddi, yeniden kimlik sahtekarlığı). Bu örnek, sıkıştırılmış imza biçimini kullanarak ileti imzalarını hesapladığı ve doğrulayan özel kanallar uygular (WS-Discovery belirtiminin 8,2 bölümünde açıklanmıştır). Örnek, hem [2005 bulma belirtimini](https://go.microsoft.com/fwlink/?LinkId=177912) hem de [1,1 sürümünü](https://go.microsoft.com/fwlink/?LinkId=179677)destekler.  
@@ -35,25 +35,25 @@ Bulma belirtimi, bulma işlemine katılan uç noktaların güvenli olmasını ge
 ```  
   
 > [!NOTE]
-> , `PrefixList` 2008 bulma sürümü protokolüne eklenmiştir.  
+> `PrefixList`, 2008 bulma sürümü protokolüne eklenmiştir.  
   
- İmzayı hesaplamak için, örnek genişletilmiş imza öğelerini belirler. WS-Discovery belirtiminin`SignedInfo`gerektirdiği şekilde `ds` ad alanı öneki kullanılarak bir XML imzası () oluşturulur. Bulma ve adresleme ad alanlarındaki gövdeye ve tüm üst bilgilere imza içinde başvuruluyor, bu nedenle üzerinde değişiklik yapılamaz. Başvurulan her öğe, dışlamalı kurallı kullanım (http://www.w3.org/2001/10/xml-exc-c14n# ) kullanılarak dönüştürülür ve ardından bir SHA-1 Özet değeri hesaplanır (http://www.w3.org/2000/09/xmldsig#sha1 ). Başvurulan tüm öğelere ve bunların Özet değerlerine göre imza değeri, RSA algoritması (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ) kullanılarak hesaplanır.  
+ İmzayı hesaplamak için, örnek genişletilmiş imza öğelerini belirler. WS-Discovery belirtiminin gerektirdiği şekilde `ds` ad alanı öneki kullanılarak bir XML imzası (`SignedInfo`) oluşturulur. Bulma ve adresleme ad alanlarındaki gövdeye ve tüm üst bilgilere imza içinde başvuruluyor, bu nedenle üzerinde değişiklik yapılamaz. Başvurulan her öğe, dışlamalı kurallı kullanım (http://www.w3.org/2001/10/xml-exc-c14n# ) kullanılarak dönüştürülür ve ardından bir SHA-1 Özet değeri hesaplanır (http://www.w3.org/2000/09/xmldsig#sha1 ). Başvurulan tüm öğelere ve bunların Özet değerlerine göre imza değeri, RSA algoritması (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ) kullanılarak hesaplanır.  
   
- İletiler, istemci tarafından belirtilen sertifikayla imzalanır. Bağlama öğesi oluşturulduğunda depo konumu, ad ve sertifika konu adı belirtilmelidir. Sıkıştırma `KeyId` imzasında, imzalama belirtecinin anahtar tanımlayıcısını temsil eder ve imzalama belirtecinin konu anahtar tanımlayıcısı (kayak) veya imza belirtecinin ortak anahtarının bir SHA-1 karması vardır.  
+ İletiler, istemci tarafından belirtilen sertifikayla imzalanır. Bağlama öğesi oluşturulduğunda depo konumu, ad ve sertifika konu adı belirtilmelidir. Sıkıştırılmış İmzadaki `KeyId`, imzalama belirtecinin anahtar tanımlayıcısını temsil eder ve imzalama belirtecinin konu anahtar tanımlayıcısı (kayak) veya imza belirtecinin ortak anahtarının bir SHA-1 karmasını vardır.  
   
 ## <a name="secure-channel-listener"></a>Güvenli kanal dinleyicisi  
- Güvenli kanal dinleyicisi, alınan iletilerde sıkıştırılmış imzayı doğrulayan giriş veya çift yönlü kanallar oluşturur. İmzayı doğrulamak için, `KeyId` iletiye iliştirilmiş, belirtilen depodan bir sertifika seçmek için kullanılan sıkıştır imzasında belirtilen. İletinin imzası yoksa veya imza denetimi başarısız olursa iletiler bırakılır. Güvenli bağlamayı kullanmak için örnek, eklenen bulma güvenli bağlama öğesi ile özel <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ve <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> oluşturan bir fabrika tanımlar. Bu güvenli uç noktalar, bulma duyurusu dinleyicileri ve keşfedilebilir hizmetlerde kullanılabilir.  
+ Güvenli kanal dinleyicisi, alınan iletilerde sıkıştırılmış imzayı doğrulayan giriş veya çift yönlü kanallar oluşturur. İmzayı doğrulamak için, iletiye eklenen sıkıştırılmış İmzada belirtilen `KeyId`, belirtilen mağazadan bir sertifika seçmek için kullanılır. İletinin imzası yoksa veya imza denetimi başarısız olursa iletiler bırakılır. Güvenli bağlamayı kullanmak için örnek, eklenen bulgu güvenli bağlama öğesiyle özel <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ve <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> oluşturan bir fabrika tanımlar. Bu güvenli uç noktalar, bulma duyurusu dinleyicileri ve keşfedilebilir hizmetlerde kullanılabilir.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntılar  
  Örnek, bir kitaplık ve 4 konsol uygulaması içerir:  
   
-- **DiscoverySecurityChannels**: Güvenli bağlamayı kullanıma sunan bir kitaplık. Kitaplık, giden/gelen iletiler için sıkıştırılmış imzayı hesaplar ve doğrular.  
+- **DiscoverySecurityChannels**: güvenli bağlamayı kullanıma sunan bir kitaplık. Kitaplık, giden/gelen iletiler için sıkıştırılmış imzayı hesaplar ve doğrular.  
   
-- **Hizmet**: Kendi kendine barındırılan bir hizmet olan Icalbir hizmet sözleşmesini kullanıma sunma. Hizmet bulunabilir olarak işaretlendi. Kullanıcı, sertifika için depolama konumunu ve adı ve konu adını ya da diğer benzersiz tanımlayıcıyı ve istemci sertifikalarının bulunduğu mağazayı (için kullanılan sertifikalar) belirterek iletileri imzalamak için kullanılan sertifikanın ayrıntılarını belirtir. gelen iletiler için imzayı denetleyin). Bu ayrıntılara dayanarak, ek güvenlik içeren bir UdpDiscoveryEndpoint oluşturulur ve kullanılır.  
+- **Hizmet**: kendi kendine barındırılan bir hizmet olan icalbir hizmet sözleşmesi 'ni kullanıma sunma. Hizmet bulunabilir olarak işaretlendi. Kullanıcı, sertifika için depolama konumunu ve adı ve konu adını ya da diğer benzersiz tanımlayıcıyı ve istemci sertifikalarının bulunduğu mağazayı (için kullanılan sertifikalar) belirterek iletileri imzalamak için kullanılan sertifikanın ayrıntılarını belirtir. gelen iletiler için imzayı denetleyin). Bu ayrıntılara dayanarak, ek güvenlik içeren bir UdpDiscoveryEndpoint oluşturulur ve kullanılır.  
   
-- **İstemci**: Bu sınıf bir Icalbir Torservice bulmaya çalışır ve hizmette Yöntemler çağırabilir. Yine, eklenen <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> güvenliği olan bir, iletileri imzalamak ve doğrulamak için oluşturulur ve kullanılır.  
+- **İstemci**: Bu sınıf bir Icalbir torservice bulmaya çalışır ve hizmette yöntemleri çağırabilir. Yeniden, ek güvenlik özellikli bir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> oluşturulur ve iletileri imzalamak ve doğrulamak için kullanılır.  
   
-- **Announcementlistener**: Çevrimiçi ve çevrimdışı duyuruları dinleyen ve güvenli duyuru uç noktasını kullanan, şirket içinde barındırılan bir hizmet.  
+- **Announcementlistener**: çevrimiçi ve çevrimdışı duyuruları dinleyen ve güvenli duyuru uç noktasını kullanan kendiliğinden konak bir hizmet.  
   
 > [!NOTE]
 > Setup. bat birden çok kez çalışıyorsa, Sertifika Yöneticisi yinelenen sertifikalar olduğu için eklemek üzere bir sertifika seçmenizi ister. Bu durumda, yinelemeleri zaten oluşturulduğundan Setup. bat durdurulmalı ve Cleanup. bat çağrılmalıdır. Cleanup. bat Ayrıca, silinecek sertifikayı seçmenizi ister. Listeden bir sertifika seçin ve hiçbir sertifika geri alınana kadar Cleanup. bat çalıştırmaya devam edin.  
@@ -71,6 +71,6 @@ Bulma belirtimi, bulma işlemine katılan uç noktaların güvenli olmasını ge
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  

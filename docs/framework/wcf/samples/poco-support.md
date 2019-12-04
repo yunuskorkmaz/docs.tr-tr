@@ -2,15 +2,15 @@
 title: POCO Desteği
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-ms.openlocfilehash: 6796d7948bd3ebe0a8b96a861c628b30b7540912
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2962fa8a9eb824bbfbbb2f1e9347f8988b50ddcd
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044776"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716539"
 ---
 # <a name="poco-support"></a>POCO Desteği
-Bu örnek, işaretsiz türler için serileştirme desteğini gösterir; diğer bir deyişle, bazı durumlarda düz eski CLR nesne (POCO) türleri olarak da adlandırılan serileştirme özniteliklerinin uygulanmadığı türler. , <xref:System.Runtime.Serialization.DataContractSerializer> Parametresiz oluşturucusu olan tüm genel işaretsiz türler için bir veri sözleşmesi olduğunu anlar. Veri sözleşmeleri, yapılandırılmış verileri hizmetlere ve hizmetlerden geçirmenize olanak sağlar. İşaretsiz türler hakkında daha fazla bilgi için bkz. [serileştirilebilir türler](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+Bu örnek, işaretsiz türler için serileştirme desteğini gösterir; diğer bir deyişle, bazı durumlarda düz eski CLR nesne (POCO) türleri olarak da adlandırılan serileştirme özniteliklerinin uygulanmadığı türler. <xref:System.Runtime.Serialization.DataContractSerializer>, parametresiz oluşturucusu olan tüm genel işaretsiz türler için bir veri sözleşmesi. Veri sözleşmeleri, yapılandırılmış verileri hizmetlere ve hizmetlerden geçirmenize olanak sağlar. İşaretsiz türler hakkında daha fazla bilgi için bkz. [serileştirilebilir türler](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   
  Bu örnek [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır, ancak basit sayısal türler yerine karmaşık sayılar kullanır. Ayrıca, <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliklerinin kullanılmadığı durumlar dışında [temel veri sözleşmesi](../../../../docs/framework/wcf/samples/basic-data-contract.md) örneğine de benzer.  
   
@@ -19,7 +19,7 @@ Bu örnek, işaretsiz türler için serileştirme desteğini gösterir; diğer b
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Sınıfı ' de kullanılır. `ServiceContract` `ComplexNumber` Türü, aşağıdaki örnek kodda gösterildiği <xref:System.Runtime.Serialization.DataContractAttribute> gibi <xref:System.Runtime.Serialization.DataMemberAttribute> , ve özniteliklerine sahip değildir. `ComplexNumber` Varsayılan olarak, tüm ortak özellikler ve alanlar serileştirilir.  
+ `ComplexNumber` sınıfı `ServiceContract`kullanılır. `ComplexNumber` türü, aşağıdaki örnek kodda gösterildiği gibi <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliklerine sahip değildir. Varsayılan olarak, tüm ortak özellikler ve alanlar serileştirilir.  
   
 ```csharp
 public class ComplexNumber  
@@ -52,7 +52,7 @@ public class ComplexNumber
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\POCO`  
   

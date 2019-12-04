@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15d6262fb5e7dfb99759f0f85c9a197157713300
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204951"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714484"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği
 
@@ -30,9 +30,9 @@ ms.locfileid: "74204951"
 
 Bu konuda, .NET Framework üç kategori için sağladığı destek özetlenmektedir ve Windows Çalışma Zamanı bileşenlere yönelik senaryolar açıklanmaktadır. İlk bölüm, .NET Framework ve Windows Çalışma Zamanı arasındaki ilişki hakkında temel bilgileri içerir ve yardım sisteminde ve IDE 'de karşılaşabileceğiniz bazı odlıtıes 'leri açıklar. [İkinci bölümde](#WindowsRuntimeComponents) Windows çalışma zamanı bileşenleri geliştirmeye yönelik senaryolar açıklanmaktadır.
 
-## <a name="the-basics"></a>Temel bilgileri
+## <a name="the-basics"></a>Temeller
 
-.NET Framework, [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]sağlayarak ve Windows Çalışma Zamanı kendisini destekleyerek daha önce listelenen üç geliştirme senaryosunu destekler.
+.NET Framework, Windows 8. x Mağazası uygulamaları için .NET sağlayarak ve Windows Çalışma Zamanı kendisini destekleyerek daha önce listelenen üç geliştirme senaryosunu destekler.
 
 - [.NET Framework ve Windows çalışma zamanı ad alanları](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) , .NET Framework sınıf kitaplıklarının kolaylaştırılmış bir görünümünü sağlar ve yalnızca Windows 8. x Mağaza uygulamaları ve Windows çalışma zamanı bileşenleri oluşturmak için kullanabileceğiniz türleri ve üyeleri içerir.
 
@@ -42,7 +42,7 @@ Bu konuda, .NET Framework üç kategori için sağladığı destek özetlenmekte
 
   - Yalnızca işletim sistemi API 'sini sardığı özellikler de kaldırılır, çünkü Windows Çalışma Zamanı yönetilen koddan kolayca çağrı yapılır.
 
-  [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]hakkında daha fazla bilgi edinmek için bkz. [Windows Mağazası uygulamalarına yönelik .NET genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). API seçim işlemi hakkında bilgi edinmek için .NET blogdaki [Metro stili uygulamalar için .net](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) başlığına bakın.
+  Windows 8. x Mağazası uygulamaları için .NET hakkında daha fazla bilgi edinmek için bkz. [Windows Mağazası uygulamalarına genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). API seçim işlemi hakkında bilgi edinmek için .NET blogdaki [Metro stili uygulamalar için .net](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) başlığına bakın.
 
 - [Windows çalışma zamanı](/uwp/api/) , Windows 8. x Mağazası uygulamaları oluşturmaya yönelik kullanıcı arabirimi öğelerini sağlar ve işletim sistemi özelliklerine erişim sağlar. .NET Framework gibi Windows Çalışma Zamanı, C# ve Visual Basic derleyicilerinin .NET Framework sınıf kitaplıklarını kullandıkları gibi Windows çalışma zamanı kullanmasını sağlayan meta verilere sahiptir. .NET Framework, bazı farkları gizleyerek Windows Çalışma Zamanı kullanmayı kolaylaştırır:
 
@@ -88,7 +88,7 @@ JavaScript kullanarak Windows için oluşturulan bir Windows 8. x Mağazası uyg
 
 Windows Çalışma Zamanı, `IMap<K, V>` ve `IMapView<K, V>` `IKeyValuePair`kullanılarak tekrarlandırılır. Bunları yönetilen koda geçirdiğinizde `IDictionary<TKey, TValue>` ve `IReadOnlyDictionary<TKey, TValue>` olarak görünürler, bu nedenle doğal olarak bunları numaralandırmak için `System.Collections.Generic.KeyValuePair<TKey, TValue>`'i kullanın.
 
-Arabirimlerin yönetilen kodda görüntülenme şekli, bu arabirimlerin uygulanma şeklini etkiler. Örneğin, `PropertySet` sınıfı, yönetilen kodda `IMap<K, V>` olarak görünen `IDictionary<TKey, TValue>`'i uygular. `PropertySet`, `IMap<K, V>`yerine `IDictionary<TKey, TValue>` uygulamış gibi görünür, bu nedenle yönetilen kodda `Add` sözlüklerdeki .NET Framework yöntemi gibi davranan bir `Add` yöntemi vardır. Bir `Insert` yöntemine sahipmiş gibi görünmez.
+Arabirimlerin yönetilen kodda görüntülenme şekli, bu arabirimlerin uygulanma şeklini etkiler. Örneğin, `PropertySet` sınıfı, yönetilen kodda `IMap<K, V>` olarak görünen `IDictionary<TKey, TValue>`'i uygular. `PropertySet`, `IDictionary<TKey, TValue>` yerine `IMap<K, V>`'i uyguluyormuş gibi görünür, bu nedenle yönetilen kodda, .NET Framework sözlüklerinde `Add` yöntemi gibi davranan bir `Add` yöntemine sahipmiş gibi görünür. Bir `Insert` yöntemine sahipmiş gibi görünmez.
 
 Windows Çalışma Zamanı bileşeni oluşturmak için .NET Framework kullanma hakkında daha fazla bilgi ve JavaScript ile böyle bir bileşeni nasıl kullanacağınızı gösteren bir anlatım için, bkz. [ve Visual Basic üzerinde C# Windows çalışma zamanı bileşenleri oluşturma](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 

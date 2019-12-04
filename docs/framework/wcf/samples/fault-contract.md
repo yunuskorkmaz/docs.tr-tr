@@ -2,12 +2,12 @@
 title: Hatalı Sözleşme
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 907497101c13e1f62ff2abb5da563178c9643c6c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d8ea7010bef389b49f68c811565a641a580e230a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039653"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716954"
 ---
 # <a name="fault-contract"></a>Hatalı Sözleşme
 Hata sözleşmesi örneği, bir hizmetten istemciye hata bilgilerini nasıl ileteceğinizi gösterir. Örnek, bir iç özel durumu hataya dönüştürmek için hizmete eklenen bazı ek kodlar ile [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır. İstemci, hizmette bir hata koşulunu zorlamak için bölme işlemini sıfıra gerçekleştirmeye çalışır.  
@@ -15,7 +15,7 @@ Hata sözleşmesi örneği, bir hizmetten istemciye hata bilgilerini nasıl ilet
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Hesap makinesi sözleşmesi, aşağıdaki örnek kodda gösterildiği <xref:System.ServiceModel.FaultContractAttribute> gibi öğesini içerecek şekilde değiştirilmiştir.  
+ Hesap makinesi sözleşmesi aşağıdaki örnek kodda gösterildiği gibi bir <xref:System.ServiceModel.FaultContractAttribute> içerecek şekilde değiştirilmiştir.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -33,7 +33,7 @@ public interface ICalculator
 }  
 ```  
   
- Özniteliği, `Divide` işlemin türünde`MathFault`bir hata döndürebileceğini belirtir. <xref:System.ServiceModel.FaultContractAttribute> Bir hata, serileştirilemeyebilir herhangi bir türde olabilir. Bu durumda `MathFault` , aşağıdaki gibi bir veri sözleşmeniz:  
+ <xref:System.ServiceModel.FaultContractAttribute> özniteliği, `Divide` işleminin `MathFault`türünde bir hata döndürebileceğini belirtir. Bir hata, serileştirilemeyebilir herhangi bir türde olabilir. Bu durumda `MathFault`, aşağıdaki gibi bir veri sözleşmeniz:  
   
 ```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -58,7 +58,7 @@ public class MathFault
 }  
 ```  
   
- Aşağıdaki `Divide` örnek kodda gösterildiği <xref:System.ServiceModel.FaultException%601> gibi, sıfıra bölme özel durumu oluştuğunda yöntemi bir özel durum oluşturur. Bu özel durum istemciye bir hata gönderilmesine neden olur.  
+ Aşağıdaki örnek kodda gösterildiği gibi, sıfıra bölme özel durumu oluştuğunda `Divide` yöntemi bir <xref:System.ServiceModel.FaultException%601> özel durumu oluşturur. Bu özel durum istemciye bir hata gönderilmesine neden olur.  
   
 ```csharp
 public int Divide(int n1, int n2)  
@@ -88,7 +88,7 @@ FaultException<MathFault>: Math fault while doing division. Problem: divide by z
 Press <ENTER> to terminate client.  
 ```  
   
- İstemci bunu uygun `FaultException<MathFault>` özel durumu inceleyerek yapar:  
+ İstemci bunu uygun `FaultException<MathFault>` özel durumunu ayırarak yapar:  
   
 ```csharp
 catch (FaultException<MathFault> e)  
@@ -98,9 +98,9 @@ catch (FaultException<MathFault> e)
 }  
 ```  
   
- Varsayılan olarak, hizmet uygulamasının ayrıntılarının hizmetin güvenli sınırını aşmasını engellemek için beklenmeyen özel durumların ayrıntıları istemciye gönderilmez. `FaultContract`bir sözleşmede hataları açıklamanıza ve istemciye iletilmek üzere uygun özel durum türlerini işaretleyecek bir yol sağlar. `FaultException<T>`tüketicilere hata göndermek için çalışma zamanı mekanizmasını sağlar.  
+ Varsayılan olarak, hizmet uygulamasının ayrıntılarının hizmetin güvenli sınırını aşmasını engellemek için beklenmeyen özel durumların ayrıntıları istemciye gönderilmez. `FaultContract`, bir sözleşmede hataları açıklamanıza ve istemciye iletilmek için uygun olan belirli özel durum türlerini işaretleyecek bir yol sağlar. `FaultException<T>` tüketicilere hata göndermek için çalışma zamanı mekanizmasını sağlar.  
   
- Ancak, hata ayıklama sırasında bir hizmet hatasının iç ayrıntılarını görmek faydalı olur. Daha önce açıklanan Güvenli davranışı devre dışı bırakmak için, sunucuda işlenmeyen her özel durumun ayrıntılarının istemciye gönderilen hataya dahil edileceğini belirtebilirsiniz. Bu, ayarına <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> `true`göre yapılır. Aşağıdaki örnekte gösterildiği gibi kodda ya da yapılandırmada ayarlayabilirsiniz.  
+ Ancak, hata ayıklama sırasında bir hizmet hatasının iç ayrıntılarını görmek faydalı olur. Daha önce açıklanan Güvenli davranışı devre dışı bırakmak için, sunucuda işlenmeyen her özel durumun ayrıntılarının istemciye gönderilen hataya dahil edileceğini belirtebilirsiniz. Bu, <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> `true`ayarlanarak gerçekleştirilir. Aşağıdaki örnekte gösterildiği gibi kodda ya da yapılandırmada ayarlayabilirsiniz.  
   
 ```xml  
 <behaviors>  
@@ -113,9 +113,9 @@ catch (FaultException<MathFault> e)
 </behaviors>  
 ```  
   
- Ayrıca, yapılandırma dosyasındaki hizmetin `behaviorConfiguration` özniteliğini "hesaplatorservicebehavior" olarak ayarlayarak, davranışın hizmetle ilişkilendirilmesi gerekir.  
+ Ayrıca, yapılandırma dosyasındaki hizmetin `behaviorConfiguration` özniteliği "Hesaplatorservicebehavior" olarak ayarlanarak, davranışın hizmetle ilişkilendirilmesi gerekir.  
   
- İstemcide bu tür hataları yakalamak için genel <xref:System.ServiceModel.FaultException> olmayan ' ın yakalanmalıdır.  
+ İstemcide bu tür hataları yakalamak için genel olmayan <xref:System.ServiceModel.FaultException> yakalanmalıdır.  
   
  Bu davranış yalnızca hata ayıklama amacıyla kullanılmalıdır ve üretimde hiçbir şekilde etkinleştirilmemelidir.  
   
@@ -132,6 +132,6 @@ catch (FaultException<MathFault> e)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  

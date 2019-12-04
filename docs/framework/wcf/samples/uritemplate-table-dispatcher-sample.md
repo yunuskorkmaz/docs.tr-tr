@@ -2,21 +2,21 @@
 title: UriTemplate Tablosu Dağıtıcı Örneği
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
-ms.openlocfilehash: 724a13504cea2672aef7ff155fbbff055aac34e6
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e2ec85027274f302c59673a3d937be8f03d0b43b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044583"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715360"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>UriTemplate Tablosu Dağıtıcı Örneği
-Sınıfı <xref:System.UriTemplateTable> , bir <xref:System.UriTemplate> örnek kümesiyle çalışmak için sözlük benzeri ilişkilendirilebilir tablo yapısı sağlar. Bu örnek, `UriTemplateTable` sınıfı için ortak bir kullanım senaryosu `UriTemplateTable`kullanılarak oluşturulan temel bir gönderme altyapısını gösterir.  
+<xref:System.UriTemplateTable> sınıfı, bir <xref:System.UriTemplate> örnekleri kümesiyle çalışmak için sözlük benzeri ilişkilendirilebilir tablo yapısı sağlar. Bu örnek, `UriTemplateTable` sınıfı için ortak bir kullanım senaryosu olan `UriTemplateTable`kullanılarak oluşturulan temel bir gönderme altyapısını gösterir.  
   
- Bu örnek, `UriTemplateTable` sınıfı için aşağıdaki temel kavramları gösterir:  
+ Bu örnek `UriTemplateTable` sınıfı için aşağıdaki temel kavramları gösterir:  
   
-- Temsilcileri bir `UriTemplates` `UriTemplateTable`ile ilişkilendirme.  
+- Temsilcileri bir `UriTemplateTable``UriTemplates` ile ilişkilendirme.  
   
-- Belirli <xref:System.UriTemplateTable.MatchSingle%2A> bir URI için doğru işleyici temsilcisini almak için kullanma.  
+- Belirli bir URI için doğru işleyici temsilcisini almak üzere <xref:System.UriTemplateTable.MatchSingle%2A> kullanma.  
   
 - İsteği işlemek için işleyici temsilcisi çağrılıyor.  
   
@@ -31,7 +31,7 @@ Sınıfı <xref:System.UriTemplateTable> , bir <xref:System.UriTemplate> örnek 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplateDispatcher`  
   

@@ -2,12 +2,12 @@
 title: Zayıf yazılmış JSON Seri Hale Getirme Örneği
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 1450a0e46ade615769d7ffdc1006102772dbc977
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8893c466b347b97a7845234a8182af7ca7feba83
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424536"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715041"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Zayıf yazılmış JSON Seri Hale Getirme Örneği
 Kullanıcı tanımlı bir türü belirli bir hat biçiminde serileştirilirken veya bir tel biçiminin Kullanıcı tanımlı bir türe geri serisi kaldırılırken, belirtilen kullanıcı tanımlı tür hem hizmette hem de istemcide kullanılabilir olmalıdır. Genellikle bunu gerçekleştirmek için, <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği bu kullanıcı tanımlı türlere uygulanır ve <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği üyelerine uygulanır. Bu mekanizma Ayrıca JavaScript Nesne Gösterimi (JSON) nesneleriyle çalışırken, [JSON verilerini serileştirme ve serisini kaldırma](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)konusunda açıklandığı şekilde geçerlidir.  
@@ -136,6 +136,6 @@ My favorite bands are Band ABC and Band XYZ.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  

@@ -2,12 +2,12 @@
 title: WS İkili Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 44fdf6f0b27e15c486afa32f67668e9fd6eeac10
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 1f1592598c0ed148f06c0a99ccdb8a8347175d8f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138682"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716782"
 ---
 # <a name="ws-dual-http"></a>WS İkili Http
 
@@ -21,7 +21,7 @@ ms.locfileid: "74138682"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`
 
@@ -88,7 +88,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 4. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
 
     > [!IMPORTANT]
-    > İstemciyi bir çapraz makine yapılandırmasında çalıştırırken, localhost 'u [\<client > öğesinin\<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) `address` özniteliğinde ve `clientBaseAddress` bağlamasının\<özniteliği ile değiştirdiğinizden emin olun [>](../../configure-apps/file-schema/wcf/bindings.md) [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) öğesinin öğesi, aşağıda gösterildiği gibi uygun makinenin adı ile.
+    > İstemciyi bir siteler arası yapılandırmada çalıştırırken, [WSDualHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) [uç noktası > hem \<client > öğesinin\<](../../configure-apps/file-schema/wcf/endpoint-of-client.md) `address` hem de `clientBaseAddress` [bağlama\<](../../configure-apps/file-schema/wcf/bindings.md) öğesinin > özniteliği ve aşağıda gösterildiği gibi uygun makine adı ile birlikte localhost 'u değiştirdiğinizden emin olun:
 
     ```xml
     <client>

@@ -2,12 +2,12 @@
 title: Hata İşleme ve Bildirme Denetimini Genişletme
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: abb747a0deecb7e07776d9cd6ef5bc3775b1be9d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b7a3e0fa9b0799d98ea3df8df760e26851febf90
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281699"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716407"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Hata İşleme ve Bildirme Denetimini Genişletme
 Bu örnek, <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimini kullanarak Windows Communication Foundation (WCF) hizmetinde hata işleme ve hata raporlama üzerinde denetimin nasıl genişletileceğini gösterir. Örnek, hataları işlemek için hizmete eklenen bazı ek kod ile [çalışmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) başlama konusunda temel alır. İstemci birkaç hata koşulu zorlar. Hizmet hataları karşılar ve bunları bir dosyada günlüğe kaydeder.  
@@ -154,6 +154,6 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  

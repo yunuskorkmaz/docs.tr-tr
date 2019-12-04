@@ -5,20 +5,20 @@ helpviewer_keywords:
 - Self hosted service
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
-ms.openlocfilehash: a1fecb0ade00604d9a6e019ec50ceca04abeb545
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9077f2b00c97ae2a2106a50780cfd2cd9596c1ec
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044759"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716315"
 ---
 # <a name="self-host"></a>Kendini Barındırma
-Bu örnek, bir konsol uygulamasında kendi kendine barındırılan bir hizmetin nasıl uygulanacağını gösterir. Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır. Hizmet yapılandırma dosyası, Web. config 'den App. config olarak yeniden adlandırıldı ve konağın kullandığı bir temel adres yapılandırmak üzere değiştirildi. Hizmet kaynak kodu, yapılandırılmış temel adresi sağlayan bir hizmet ana `Main` bilgisayarı oluşturup açan bir statik işlevi uygulayacak şekilde değiştirilmiştir. Hizmet uygulamasının her işlem için konsola çıkış yazacak şekilde değiştirilmiştir. Hizmetin doğru uç nokta adresini yapılandırma dışında, istemci değiştirilmemiş.  
+Bu örnek, bir konsol uygulamasında kendi kendine barındırılan bir hizmetin nasıl uygulanacağını gösterir. Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır. Hizmet yapılandırma dosyası, Web. config 'den App. config olarak yeniden adlandırıldı ve konağın kullandığı bir temel adres yapılandırmak üzere değiştirildi. Hizmet kaynak kodu, yapılandırılmış temel adresi sağlayan bir hizmet ana bilgisayarı oluşturan ve açan bir statik `Main` işlevi uygulayacak şekilde değiştirilmiştir. Hizmet uygulamasının her işlem için konsola çıkış yazacak şekilde değiştirilmiştir. Hizmetin doğru uç nokta adresini yapılandırma dışında, istemci değiştirilmemiş.  
   
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Örnek, aşağıdaki örnek kodda gösterildiği gibi, verilen <xref:System.ServiceModel.ServiceHost> `CalculatorService` tür için oluşturmak üzere bir statik Main işlevi uygular.  
+ Örnek, aşağıdaki örnek kodda gösterildiği gibi, verilen `CalculatorService` türü için <xref:System.ServiceModel.ServiceHost> oluşturmak üzere statik Main işlevi uygular.  
   
 ```csharp
 // Host the service within this EXE console application.  
@@ -41,7 +41,7 @@ public static void Main()
 }  
 ```  
   
- Bir hizmet Internet Information Services (IIS) veya Windows Işlem etkinleştirme hizmeti (WAS) içinde barındırılıyorsa, hizmetin temel adresi barındırma ortamı tarafından sağlanır. Şirket içinde barındırılan durumda, temel adresi kendiniz belirtmeniz gerekir. Bu, aşağıdaki örnek yapılandırmada `add` gösterildiği gibi, [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)BaseAddresses alt öğesi >, ana bilgisayar > [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) alt öğesi, hizmet > alt öğesi kullanılarak yapılır.  
+ Bir hizmet Internet Information Services (IIS) veya Windows Işlem etkinleştirme hizmeti (WAS) içinde barındırılıyorsa, hizmetin temel adresi barındırma ortamı tarafından sağlanır. Şirket içinde barındırılan durumda, temel adresi kendiniz belirtmeniz gerekir. Bu, aşağıdaki örnek yapılandırmada gösterildiği gibi `add` öğesi, [\<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md), [>](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) [\<ana bilgisayar](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)\<alt öğesi kullanılarak yapılır.  
   
 ```xml  
 <service   
@@ -71,7 +71,7 @@ public static void Main()
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\SelfHost`  
   

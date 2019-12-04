@@ -2,15 +2,15 @@
 title: Görsel İş Akışı İzleme
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: 4ce9b06ede2c24839859e4b1f2c2f9c829f3380c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 05f8fcf4c765998fc4e101d9dbef026d85b8b2fb
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045345"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715516"
 ---
 # <a name="visual-workflow-tracking"></a>Görsel İş Akışı İzleme
-Bu örnek, [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]ile kullanılabilen hata ayıklama işlevini kullanarak bir görsel iş akışı izleme uygulamasının nasıl yazılacağını gösterir.
+Bu örnek, [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]aracılığıyla kullanılabilen hata ayıklama işlevini kullanarak bir görsel iş akışı izleme uygulamasının nasıl yazılacağını gösterir.
 
 ## <a name="sample-details"></a>Örnek Ayrıntılar
  Uygulama, bir basit akış çizelgesi iş akışı yürütür (Workflow. xaml içinde tanımlanır) ve şu anda yürütülmekte olan iş akışını göstermek için iş akışı tasarımcısını yeniden barındırır. İş akışı yürütüldüğü sırada yürütülmekte olan etkinlik sarı bir ana hat ve hata ayıklama okuna sahip olarak gösterilir. Ayrıca, iş akışı tarafından oluşturulan izleme kayıtları da uygulama penceresinde görüntülenir. İş akışı izleme hakkında daha fazla bilgi için bkz. [Iş akışı izleme ve izleme](../workflow-tracking-and-tracing.md). İş akışı tasarımcısını yeniden barındırma hakkında daha fazla bilgi için bkz. [iş akışı Tasarımcısı yeniden barındırma](../rehosting-the-workflow-designer.md).
@@ -36,6 +36,6 @@ Bu örnek, [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-sho
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\VisualWorkflowTracking`

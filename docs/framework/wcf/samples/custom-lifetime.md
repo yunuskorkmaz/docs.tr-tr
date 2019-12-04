@@ -1,24 +1,24 @@
 ---
-title: Özel yaşam süresi
+title: Özel ömür
 ms.date: 08/20/2018
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: be6013d568e3625c5eac7e0c145db7df1c6917e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8625877d9b4d05d5cf06af2c9f8ef10f701e98db
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003172"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715472"
 ---
-# <a name="custom-lifetime"></a>Özel yaşam süresi
+# <a name="custom-lifetime"></a>Özel ömür
 
-Bu örnek nasıl paylaşılan WCF hizmet örneklerine yönelik özel yaşam süresi hizmetleri sağlamak için bir Windows Communication Foundation (WCF) uzantısı yazılacağını gösterir.
+Bu örnek, paylaşılan WCF hizmet örnekleri için özel ömür hizmetleri sağlamak üzere bir Windows Communication Foundation (WCF) uzantısının nasıl yazılacağını gösterir.
 
 > [!NOTE]
-> Bu örnek için Kurulum yordamı ve derleme yönergeleri bu makalenin sonunda yer alır.
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri Bu makalenin sonunda bulunur.
 
 ## <a name="shared-instancing"></a>Paylaşılan örnek oluşturma
 
-WCF hizmet örnekleriniz için birden çok örneklemesini modları sunar. Bu makalede ele alınan paylaşılan örneklemesini modu, bir hizmet örneği birden çok kanalda arasında paylaşmak için bir yol sağlar. İstemciler, bir Üreteç yöntemi hizmetinde başvurun ve iletişim başlatmak için yeni bir kanal oluşturmak. Aşağıdaki kod parçacığı bir istemci uygulamanın yeni bir kanal var olan bir hizmet örneğine nasıl oluşturduğunu gösterir:
+WCF, hizmet örneklerinizin çeşitli örnek oluşturma modlarını sunar. Bu makalede ele alınan paylaşılan örnek oluşturma modu, bir hizmet örneğini birden çok kanal arasında paylaşmak için bir yol sağlar. İstemciler, hizmette bir fabrika yöntemiyle iletişim kurabilirler ve iletişim başlatmak için yeni bir kanal oluşturabilir. Aşağıdaki kod parçacığı, bir istemci uygulamanın var olan bir hizmet örneğine nasıl yeni bir kanal oluşturduğunu gösterir:
 
 ```csharp
 // Create a header for the shared instance id
@@ -54,21 +54,21 @@ using (new OperationContextScope((IClientChannel)proxy2))
 }
 ```
 
-Örneklemesini modlardan, paylaşılan örneklemesini modu hizmet örnekleri serbest benzersiz bir yolu yoktur. İçin tüm kanalları kapatıldığında varsayılan olarak bir <xref:System.ServiceModel.InstanceContext>, WCF Hizmeti çalışma zamanı olup olmadığını denetler. hizmet <xref:System.ServiceModel.InstanceContextMode> yapılandırılır <xref:System.ServiceModel.InstanceContextMode.PerCall> veya <xref:System.ServiceModel.InstanceContextMode.PerSession>ve bu nedenle örneği serbest bırakır ve kaynak talepleri. Özel durumunda <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> olan kullanılan, WCF çağırır <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> örneği serbest önce sağlayıcıyı uygulama yöntemi. Varsa <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> döndürür `true` örneği, aksi takdirde serbest <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> uygulamasıdır bildirmek için sorumlu `Dispatcher` boşta durumuna geri çağırma yöntemi kullanarak. Bu çağrılarak gerçekleştirilir <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A> sağlayıcısının yöntemi.
+Diğer örnek oluşturma modlarının aksine, paylaşılan örnek oluşturma modunun hizmet örneklerini serbest bırakma yöntemine özgü bir yolu vardır. Varsayılan olarak, tüm kanallar bir <xref:System.ServiceModel.InstanceContext>için kapatıldığında, WCF hizmeti çalışma zamanı, hizmet <xref:System.ServiceModel.InstanceContextMode> <xref:System.ServiceModel.InstanceContextMode.PerCall> veya <xref:System.ServiceModel.InstanceContextMode.PerSession>olarak yapılandırılıp yapılandırılmadığını denetler ve bu durumda örneği serbest bırakır ve kaynakları talep eder. Özel bir <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> kullanılıyorsa, WCF örneği serbest bırakmadan önce sağlayıcı uygulamasının <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> yöntemini çağırır. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>, örnek `true` döndürürse <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> uygulama, bir geri çağırma yöntemi kullanarak boşta durumunun `Dispatcher` bildirilmekten sorumludur. Bu, sağlayıcının <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A> yöntemi çağırarak yapılır.
 
-Bu örnek nasıl serbest erteleyebilirsiniz gösterir <xref:System.ServiceModel.InstanceContext> 20 saniyelik bir boşta zaman aşımı ile.
+Bu örnek, boşta kalma zaman aşımı olan 20 saniyelik <xref:System.ServiceModel.InstanceContext> serbest bırakmayı nasıl erteleyebileceğinizi gösterir.
 
-## <a name="extending-the-instancecontext"></a>InstanceContext genişletme
+## <a name="extending-the-instancecontext"></a>InstanceContext 'i genişletme
 
-Wcf'de, <xref:System.ServiceModel.InstanceContext> hizmet örneği arasında bağlantı ve `Dispatcher`. WCF yeni durum ya da davranışı, Genişletilebilir nesne düzeni'ni kullanarak ekleyerek bu çalışma zamanı bileşeni genişletmenizi sağlar. Genişletilebilir nesne düzeni WCF'de ya da var olan çalışma zamanı sınıflar yeni işlevlerle genişletmek veya bir nesne için yeni durum özellikler eklemek için kullanılır. Genişletilebilir nesne modelinde üç arabirimi vardır: <xref:System.ServiceModel.IExtensibleObject%601>, <xref:System.ServiceModel.IExtension%601>, ve <xref:System.ServiceModel.IExtensionCollection%601>.
+WCF 'de, <xref:System.ServiceModel.InstanceContext> hizmet örneği ve `Dispatcher`arasındaki bağlantıdır. WCF, genişletilebilir nesne düzenlerini kullanarak bu çalışma zamanı bileşenini yeni durum veya davranış ekleyerek genişletmenizi sağlar. Genişletilebilir nesne stili, mevcut çalışma zamanı sınıflarını yeni işlevlerle genişletmek ya da bir nesneye yeni durum özellikleri eklemek için WCF 'de kullanılır. Genişletilebilir nesne deseninin üç arabirimi vardır: <xref:System.ServiceModel.IExtensibleObject%601>, <xref:System.ServiceModel.IExtension%601>ve <xref:System.ServiceModel.IExtensionCollection%601>.
 
-<xref:System.ServiceModel.IExtensibleObject%601> Arabirimi işlevleriyle özelleştirme uzantılarına izin vermek için nesneler tarafından uygulanır.
+<xref:System.ServiceModel.IExtensibleObject%601> arabirimi, işlevlerini özelleştiren uzantılara izin vermek için nesneleri tarafından uygulanır.
 
-<xref:System.ServiceModel.IExtension%601> Arabirimi sınıf türü uzantıları olabilir nesneleri tarafından uygulanan `T`.
+<xref:System.ServiceModel.IExtension%601> arabirimi, `T`türündeki sınıfların uzantıları olabilecek nesneler tarafından uygulanır.
 
-Son olarak, <xref:System.ServiceModel.IExtensionCollection%601> arabirimidir koleksiyonu <xref:System.ServiceModel.IExtension%601> uygulaması almak için izin veren uygulamaları <xref:System.ServiceModel.IExtension%601> türüne göre.
+Son olarak <xref:System.ServiceModel.IExtensionCollection%601> arabirimi, bir <xref:System.ServiceModel.IExtension%601> uygulamasını türlerine göre almaya izin veren <xref:System.ServiceModel.IExtension%601> uygulamalarının bir koleksiyonudur.
 
-Bu nedenle, genişletebilmek için <xref:System.ServiceModel.InstanceContext>, uygulamanız gereken <xref:System.ServiceModel.IExtension%601> arabirimi. Bu örnek projesinde `CustomLeaseExtension` sınıfı uygulaması içerir.
+Bu nedenle, <xref:System.ServiceModel.InstanceContext>genişletmek için <xref:System.ServiceModel.IExtension%601> arabirimini uygulamanız gerekir. Bu örnek projede, `CustomLeaseExtension` sınıfı bu uygulamayı içerir.
 
 ```csharp
 class CustomLeaseExtension : IExtension<InstanceContext>
@@ -76,7 +76,7 @@ class CustomLeaseExtension : IExtension<InstanceContext>
 }
 ```
 
-<xref:System.ServiceModel.IExtension%601> Arabirimi iki yöntem vardır <xref:System.ServiceModel.IExtension%601.Attach%2A> ve <xref:System.ServiceModel.IExtension%601.Detach%2A>. Adlarını da ifade ettiği şekilde çalışma zamanı ekler ve uzantısı örneğine ayırır bu iki yöntem de çağrıldığında <xref:System.ServiceModel.InstanceContext> sınıfı. Bu örnekte `Attach` yöntemi izlemek için kullanılan <xref:System.ServiceModel.InstanceContext> uzantı geçerli örneğine ait nesne.
+<xref:System.ServiceModel.IExtension%601> arabiriminin iki yöntemi vardır <xref:System.ServiceModel.IExtension%601.Attach%2A> ve <xref:System.ServiceModel.IExtension%601.Detach%2A>. Adları da bu iki yöntem, çalışma zamanı tarafından <xref:System.ServiceModel.InstanceContext> sınıfının bir örneğine ekler ve uzantıyı ayırır. Bu örnekte, uzantısının geçerli örneğine ait olan <xref:System.ServiceModel.InstanceContext> nesnesini izlemek için `Attach` yöntemi kullanılır.
 
 ```csharp
 InstanceContext owner;
@@ -87,7 +87,7 @@ public void Attach(InstanceContext owner)
 }
 ```
 
-Ayrıca, gerekli uygulama genişletilmiş ömrü desteği sağlamak için uzantıya eklemeniz gerekir. Bu nedenle, `ICustomLease` arabirimi istenen yöntemleri ile bildirilir ve uygulanan `CustomLeaseExtension` sınıfı.
+Ayrıca, genişletilmiş yaşam süresi desteğini sağlamak için gerekli uygulamayı uzantıya eklemeniz gerekir. Bu nedenle `ICustomLease` arabirimi istenen yöntemlerle bildirilmiştir ve `CustomLeaseExtension` sınıfında uygulanır.
 
 ```csharp
 interface ICustomLease
@@ -101,7 +101,7 @@ class CustomLeaseExtension : IExtension<InstanceContext>, ICustomLease
 }
 ```
 
-Ne zaman WCF çağırır <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> yönteminde <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> uygulaması, bu çağrı için yönlendirilir <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> yöntemi `CustomLeaseExtension`. Ardından, `CustomLeaseExtension` özel durumunu görmek için denetler olmadığını <xref:System.ServiceModel.InstanceContext> boştadır. Eğer boş ise, döndürür `true`. Aksi takdirde, genişletilmiş yaşam süresi belirtilen bir miktarı için bir süreölçer başlatır.
+WCF, <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> uygulamasında <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> yöntemini çağırdığında, bu çağrı `CustomLeaseExtension`<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> yöntemine yönlendirilir. Sonra, `CustomLeaseExtension` <xref:System.ServiceModel.InstanceContext> boşta olup olmadığını görmek için kendi özel durumunu denetler. Boşta ise `true`döndürür. Aksi halde, belirtilen miktarda genişletilmiş ömür için bir Zamanlayıcı başlatır.
 
 ```csharp
 public bool IsIdle
@@ -124,7 +124,7 @@ public bool IsIdle
 }
 ```
 
-Zamanlayıcının içinde `Elapsed` olay dağıtıcısı içindeki geri arama işlevi başka bir temizleme döngüsü başlatmak için çağrılır.
+Zamanlayıcının `Elapsed` olayında, başka bir Temizleme döngüsünü başlatmak için dağıtıcıdaki geri çağırma işlevi çağırılır.
 
 ```csharp
 void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
@@ -140,14 +140,14 @@ void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
 }
 ```
 
-Boşta durumuna taşınan örneği için yeni bir ileti geldiğinde çalışan Zamanlayıcı yenilemek için hiçbir yolu yoktur.
+Boşta durumuna taşınan örnek için yeni bir ileti geldiğinde çalışan süreölçeri yenilemenin bir yolu yoktur.
 
-Örnek uygulayan <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> çağrıları izlemesine <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> yöntemi ve rota onları `CustomLeaseExtension`. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> Uygulama kapsanıyorsa `CustomLifetimeLease` sınıfı. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> WCF hizmet örneği hakkında yayımlamayı olduğunda yöntemi çağrılır. Ancak, belirli bir yalnızca bir örneğini yoktur `ISharedSessionInstance` ServiceBehavior'ın uygulamasında <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> koleksiyonu. Bu biri olduğunu bilerek bir yolu yoktur anlamına gelir <xref:System.ServiceModel.InstanceContext> WCF denetler zaman kapalı <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> yöntemi. Bu nedenle, bu örnek isteklerine seri hale getirmek için iş parçacığı kullanan <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> yöntemi.
+Örnek, <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> yöntemine yapılan çağrıları kesmeye ve bunları `CustomLeaseExtension`yönlendirmeye yönelik <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> uygular. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> uygulama `CustomLifetimeLease` sınıfında bulunur. WCF hizmet örneğini serbest bırakmak üzere olduğunda <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> yöntemi çağrılır. Ancak, bu `ISharedSessionInstance` bir uygulamanın yalnızca bir örneği, ServiceBehavior 'in <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> koleksiyonunda bulunur. Bu, <xref:System.ServiceModel.InstanceContext> WCF 'nin <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> yöntemini denetleyip kapatmadığını bilmenin bir yolu olmadığı anlamına gelir. Bu nedenle, bu örnek <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> metoduna istekleri seri hale getirmek için iş parçacığı kilitleme kullanır.
 
 > [!IMPORTANT]
-> Serileştirme uygulamanızın performansını önemli ölçüde etkileyebilir çünkü iş parçacığı kilitleme kullanmak önerilen bir yaklaşım değildir.
+> Serileştirme uygulamanızın performansını ciddi bir şekilde etkileyebileceğinden, iş parçacığı kilitleme kullanılması önerilen bir yaklaşım değildir.
 
-Özel üye alanı kullanılır `CustomLifetimeLease` boşta durumunu izlemek için sınıf ve tarafından döndürülen <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> yöntemi. Her zaman <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> yöntemi çağrıldığında `isIdle` alan döndürdü ve sıfırlama `false`.  Bu değeri ayarlamak için gerekli `false` dağıtıcı çağrıları emin olmak için <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A> yöntemi.
+Bir özel üye alanı, Boşta durumunu izlemek için `CustomLifetimeLease` sınıfında kullanılır ve <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> yöntemi tarafından döndürülür. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> yöntemi her çağrıldığında, `isIdle` alanı `false`olarak döndürülür ve sıfırlanır.  Dağıtıcıda <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A> yöntemini çağırdığından emin olmak için bu değerin `false` ayarlanması önemlidir.
 
 ```csharp
 public bool IsIdle(InstanceContext instanceContext)
@@ -165,7 +165,7 @@ public bool IsIdle(InstanceContext instanceContext)
 }
 ```
 
-Varsa <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType> yöntemi döndürür `false`, dağıtıcı kullanarak bir geri çağırma işlevini kaydeder <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A> yöntemi. Bu yöntem bir başvuru alır <xref:System.ServiceModel.InstanceContext> serbest bırakılıyor. Bu nedenle, örnek kod sorgulayabilirsiniz `ICustomLease` uzantısı yazın ve kontrol `ICustomLease.IsIdle` Genişletilmiş durum özelliğini.
+<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType> yöntemi `false`döndürürse, dağıtıcı <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A> yöntemini kullanarak bir geri çağırma işlevi kaydeder. Bu yöntem, serbest bırakılmakta olan <xref:System.ServiceModel.InstanceContext> bir başvuru alır. Bu nedenle, örnek kod `ICustomLease` türü uzantısını sorgulayabilir ve genişletilmiş durumdaki `ICustomLease.IsIdle` özelliğini denetleyebilir.
 
 ```csharp
 public void NotifyIdle(InstanceContextIdleCallback callback,
@@ -185,9 +185,9 @@ public void NotifyIdle(InstanceContextIdleCallback callback,
 }
 ```
 
-Önce `ICustomLease.IsIdle` işaretli özelliği, geri çağırma özelliği için gerekli olduğundan ayarlanması gerekir `CustomLeaseExtension` boşta kaldığında göndereni bilgilendirmek için. Varsa `ICustomLease.IsIdle` döndürür `true`, `isIdle` özel üye ayarlamanız yeterlidir `CustomLifetimeLease` için `true` ve geri çağırma yöntemini çağırır. Kod bir kilit tuttuğunda olduğundan, diğer iş parçacıkları bu özel üye değerini değiştiremezsiniz. Ve dağıtıcı arar sonraki açışınızda <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType>, döndürür `true` ve dağıtıcı örneği serbest olanak tanır.
+`ICustomLease.IsIdle` özelliği denetlenmadan önce, `CustomLeaseExtension` bir süre boşta kaldığında dağıtıcıya bildirmesini sağlamak için gerekli olduğu için geri çağırma özelliğinin ayarlanması gerekir. `ICustomLease.IsIdle` `true`döndürürse `isIdle` özel üye `CustomLifetimeLease` yalnızca `true` olarak ayarlanır ve geri çağırma yöntemini çağırır. Kod bir kilit içerdiğinden, diğer iş parçacıkları bu özel üyenin değerini değiştiremezler. Dağıtıcı <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType>bir sonraki sefer çağırdığında, `true` döndürür ve dağıtıcıda örneği serbest bırakmasına olanak tanır.
 
-Özel uzantı kavuşacak tamamlandı, hizmet modeli ölçekledikçe gerekmez. Bağlama için `CustomLeaseExtension` uygulamasına <xref:System.ServiceModel.InstanceContext>, WCF sağlar <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer> , önyükleme gerçekleştirmek için arabirimi <xref:System.ServiceModel.InstanceContext>. Örnekte, `CustomLeaseInitializer` sınıfı bu arabirimi uygulayan ve bir örneğini ekler `CustomLeaseExtension` için <xref:System.ServiceModel.InstanceContext.Extensions%2A> koleksiyondan tek yöntemi başlatma. Bu yöntem tarafından dağıtıcısı başlatılırken çağrılır <xref:System.ServiceModel.InstanceContext>.
+Artık özel uzantı için groundçalışmadığına göre, hizmet modeline bağlanmalıdır. `CustomLeaseExtension` uygulamasını <xref:System.ServiceModel.InstanceContext>bağlamak için WCF, <xref:System.ServiceModel.InstanceContext>önkurulumunu gerçekleştirmek için <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer> arabirimi sağlar. Örnekte, `CustomLeaseInitializer` sınıfı bu arabirimi uygular ve tek yöntem başlatmasıyla <xref:System.ServiceModel.InstanceContext.Extensions%2A> koleksiyonuna bir `CustomLeaseExtension` örneği ekler. Bu yöntem, <xref:System.ServiceModel.InstanceContext>başlatılırken dağıtıcı tarafından çağırılır.
 
 ```csharp
 public void InitializeInstanceContext(InstanceContext instanceContext,
@@ -201,7 +201,7 @@ public void InitializeInstanceContext(InstanceContext instanceContext,
 }
 ```
 
- Son olarak <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> uygulaması ölçekledikçe hizmet modeli kullanarak <xref:System.ServiceModel.Description.IServiceBehavior> uygulaması. Bu uygulama yerleştirilir `CustomLeaseTimeAttribute` sınıfı ve ayrıca türetilen <xref:System.Attribute> temel sınıfı, bu davranışı bir öznitelik olarak kullanıma sunmak için.
+ Son olarak <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> uygulama, <xref:System.ServiceModel.Description.IServiceBehavior> uygulamasını kullanarak hizmet modeline bağlanır. Bu uygulama `CustomLeaseTimeAttribute` sınıfına yerleştirilir ve ayrıca bu davranışı bir öznitelik olarak göstermek için <xref:System.Attribute> temel sınıfından türetilir.
 
 ```csharp
 public void ApplyDispatchBehavior(ServiceDescription description,
@@ -224,7 +224,7 @@ public void ApplyDispatchBehavior(ServiceDescription description,
 }
 ```
 
-Bu davranışı için örnek bir hizmet sınıfı ile açıklama eklenebilir `CustomLeaseTime` özniteliği.
+Bu davranış örnek bir hizmet sınıfına, `CustomLeaseTime` özniteliğiyle birlikte ek olarak eklenebilir.
 
 ```csharp
 [CustomLeaseTime(Timeout = 20000)]
@@ -234,21 +234,21 @@ public class EchoService : IEchoService
 }
 ```
 
-Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını hem hizmet hem de istemci konsol pencerelerinde görüntülenir. Her konsol penceresi hizmet ve istemci kapatmak için ENTER tuşuna basın.
+Örneği çalıştırdığınızda, işlem istekleri ve yanıtları hem hizmet hem de istemci konsol penceresinde görüntülenir. Hizmeti ve istemciyi kapatmak için her bir konsol penceresinde ENTER tuşuna basın.
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
 
-1. Gerçekleştirdiğiniz emin olun [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](one-time-setup-procedure-for-the-wcf-samples.md).
+1. [Windows Communication Foundation Örnekleri Için bir kerelik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](building-the-samples.md).
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.
 
-3. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](running-the-samples.md).
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.
 
 > [!IMPORTANT]
-> Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Lifetime`

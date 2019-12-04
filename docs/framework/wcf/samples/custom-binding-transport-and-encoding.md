@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
-ms.openlocfilehash: f5a5add36d0d93785a8f63793ff4bc296ffebc8b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1bb7b227c3b46133616ff7cb3f59e2005c0fa340
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040018"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715482"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>Özel Bağlama Taşıma ve Kodlama
 Özel bağlama, farklı bağlama öğelerinin sıralı bir listesi tarafından tanımlanır. Bu örnek, çeşitli taşıma ve ileti kodlama öğeleriyle özel bağlamanın nasıl yapılandırılacağını gösterir.  
@@ -20,7 +20,7 @@ ms.locfileid: "70040018"
   
  Bu örnek, [kendi kendine ana bilgisayar](../../../../docs/framework/wcf/samples/self-host.md)tabanlıdır ve özel BAĞLAMALARLA http, TCP ve NamedPipe aktarımlarını desteklemek üzere üç uç nokta yapılandırmak üzere değiştirilmiştir. İstemci yapılandırması benzer şekilde değiştirilmiştir ve istemci kodu üç uç noktanın her biriyle iletişim kuracak şekilde değiştirilmiştir.  
   
- Örnek, belirli bir aktarımı ve ileti kodlamasını destekleyen bir özel bağlamanın nasıl yapılandırılacağını gösterir. Bu, `binding` bir taşıma ve öğe için ileti kodlaması yapılandırılarak gerçekleştirilir. Bağlama öğelerinin sıralaması, her biri kanal yığınındaki bir katmanı temsil ettiğinden (bkz. [Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)) özel bir bağlama tanımlamak açısından önemlidir. Bu örnek üç özel bağlamayı yapılandırır: metin kodlamalı HTTP taşıması, metin kodlamalı bir TCP taşıması ve ikili kodlamalı bir NamedPipe taşıması.  
+ Örnek, belirli bir aktarımı ve ileti kodlamasını destekleyen bir özel bağlamanın nasıl yapılandırılacağını gösterir. Bu, `binding` öğesi için bir taşıma ve ileti kodlaması yapılandırılarak gerçekleştirilir. Bağlama öğelerinin sıralaması, her biri kanal yığınındaki bir katmanı temsil ettiğinden (bkz. [Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)) özel bir bağlama tanımlamak açısından önemlidir. Bu örnek üç özel bağlamayı yapılandırır: metin kodlamalı HTTP taşıması, metin kodlamalı bir TCP taşıması ve ikili kodlamalı bir NamedPipe taşıması.  
   
  Hizmet yapılandırması özel bağlamaları aşağıdaki gibi tanımlar:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "70040018"
   
  Örneği çalıştırdığınızda, işlem istekleri ve yanıtları hem hizmet hem de istemci konsolu penceresinde görüntülenir. İstemci, birinci HTTP, ardından TCP ve son olarak NamedPipe 'a erişerek üç uç noktanın her biriyle iletişim kurar. Hizmeti ve istemciyi kapatmak için her bir konsol penceresinde ENTER tuşuna basın.  
   
- Bağlama `namedPipeTransport` , makineden makineye işlemleri desteklemiyor. Yalnızca aynı makine üzerindeki iletişim için kullanılır. Bu nedenle, örneği bir çapraz makine senaryosunda çalıştırırken, istemci kod dosyasında aşağıdaki satırları açıklama olarak kodlayın:  
+ `namedPipeTransport` bağlama, makineden makineye işlemleri desteklemez. Yalnızca aynı makine üzerindeki iletişim için kullanılır. Bu nedenle, örneği bir çapraz makine senaryosunda çalıştırırken, istemci kod dosyasında aşağıdaki satırları açıklama olarak kodlayın:  
   
 ```csharp  
 CalculatorClient client = new CalculatorClient("default");  
@@ -82,6 +82,6 @@ client.Close()
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\Transport`  

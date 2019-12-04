@@ -1,25 +1,25 @@
 ---
-title: Bir XAML dosyasına - WF ekler Tasarımcı görünüm durumunu kaldırma
+title: Tasarımcı bir XAML dosyasına eklediği görünüm durumunu kaldırma-WF
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-ms.openlocfilehash: af57f838ea12d7199268988bf01baa0b61447650
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f431275140e821aa5ec4d2235322f06be87d5ee2
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637855"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715616"
 ---
-# <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Tasarımcı görünüm durumunu kaldırma bir XAML dosyasına eklediği
+# <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Tasarımcı bir XAML dosyasına eklediği görünüm durumunu kaldırma
 
-Bu örnek, türetilen bir sınıf oluşturmak nasıl gösterir <xref:System.Xaml.XamlWriter> ve kaldırır bir XAML dosyası durumunu görüntüleyin. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] Görünüm durumu bilinen XAML belgesine bilgilerini yazar. Görünüm durumu çalışma zamanında gerekli değildir yerleşim konumlandırma gibi tasarım zamanında gerekli olan bilgileri ifade eder. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] Bu bilgiler düzenlemiş XAML belgeye ekler. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] Görünüm durumu ile XAML dosyasına yazar `mc:Ignorable` özniteliği için çalışma zamanı XAML dosya yüklendiğinde bu bilgileri yüklü değil. Bu örnek, Görünüm durumu bilgilerinin XAML düğümleri işlenirken kaldıran bir sınıf oluşturmak nasıl gösterir.
+Bu örnek, <xref:System.Xaml.XamlWriter> türetilen ve bir XAML dosyasından görünüm durumunu kaldıran bir sınıfın nasıl oluşturulacağını gösterir. Windows İş Akışı Tasarımcısı, görüntüleme durumu olarak bilinen XAML belgesine bilgi yazar. Görünüm durumu, çalışma zamanında gerekli olmayan, tasarım zamanında (düzen konumlandırma gibi) gerekli olan bilgilere başvurur. İş Akışı Tasarımcısı, bu bilgileri XAML belgesine düzenlendiğinden ekler. İş Akışı Tasarımcısı, görünüm durumunu XAML dosyasına `mc:Ignorable` özniteliğiyle yazar, bu nedenle çalışma zamanı XAML dosyasını yüklediğinde bu bilgiler yüklenmez. Bu örnek, XAML düğümlerini işlerken görünüm durumu bilgisini kaldıran bir sınıfın nasıl oluşturulacağını gösterir.
 
 ## <a name="discussion"></a>Tartışma
 
-Bu örnek, özel bir yazıcı oluşturma işlemini gösterir.
+Bu örnek, özel bir yazıcı oluşturmayı gösterir.
 
-Özel bir XAML yazıcısı oluşturmak için devralınan bir sınıf oluşturma <xref:System.Xaml.XamlWriter>. XAML yazıcılar genellikle iç içe gibi "İç" bir XAML yazıcı izlemek için tipik bir durumdur. Bu "İç ' yazıcılar düşünülebilir çalışmak ve sonra işleme yığını geri kalanı için temsilci seçmek için birden çok giriş noktası olmasını sağlayarak, XAML yazıcılar kalan yığın başvuru olarak.
+Özel bir XAML yazıcısı oluşturmak için <xref:System.Xaml.XamlWriter>devralan bir sınıf oluşturun. XAML yazarları genellikle iç içe geçmişse, "iç" XAML yazıcısının izlenmesi tipik bir davranıştır. Bu "iç" yazarlar, diğer XAML yazıcı yığınına başvuru olarak düşünülebilir. böylece, iş yapmak için birden çok giriş noktasına sahip olabilirsiniz ve sonra yığının geri kalanına işleme atayabilirsiniz.
 
-Bu örnekte, ilgilenilen birkaç öğe yok. Yazılmakta olan öğe bir tasarımcı ad alanından olup olmadığını görmek için onay biridir. Bu da bir iş akışında Tasarımcı ad alanı diğer türlerden kullanımını göz şeritler olduğunu unutmayın.
+Bu örnekte, ilgilendiğiniz birkaç öğe vardır. Bunlardan biri, yazılan öğenin tasarımcı ad alanından olup olmadığını görmekte olan bir denetim olur. Bu Ayrıca, bir iş akışındaki tasarımcı ad alanından diğer türlerin kullanımını da kaldırır.
 
 ```csharp
 static Boolean IsDesignerAttachedProperty(XamlMember xamlMember)
@@ -41,7 +41,7 @@ XamlWriter InnerWriter {get; set; }
 Stack<XamlMember> MemberStack {get; set; }
 ```
 
-Bu aynı zamanda bir yığın düğümü akışı geçişi sırasında kullanılan XAML üyelerinin oluşturur. Bu örnek, kalan iş büyük ölçüde bulunan `WriteStartMember` yöntemi.
+Bu, düğüm akışından geçiş sırasında kullanılan XAML üyeleri yığınını da oluşturur. Bu örneğin kalan işi büyük ölçüde `WriteStartMember` yönteminde bulunur.
 
 ```csharp
 public override void WriteStartMember(XamlMember xamlMember)
@@ -62,7 +62,7 @@ public override void WriteStartMember(XamlMember xamlMember)
 }
 ```
 
-Sonraki yöntem sonra bunlar yine de bir görünüm durumu kapsayıcıda bulunan olup olmadığını denetleyin ve bu durumda, dönüş ve yazıcı yığın düğüm geçirmeyin.
+Sonraki Yöntemler bundan sonra bir görünüm durumu kapsayıcısında içerilip içerilmediğini kontrol eder ve istiyorsanız düğümü yazıcı yığınına geri geçirmez.
 
 ```csharp
 public override void WriteValue(Object value)
@@ -76,7 +76,7 @@ public override void WriteValue(Object value)
 }
 ```
 
-Özel bir XAML yazıcı kullanmak için bu XAML yazıcılar yığında zincir gerekir. Aşağıdaki kod bunu nasıl kullanılabileceğini gösterir.
+Özel bir XAML yazıcısını kullanmak için, XAML yazıcılarının bir yığınında birlikte zincirlemesi gerekir. Aşağıdaki kod, bunun nasıl kullanılabileceğini gösterir.
 
 ```csharp
 XmlWriterSettings writerSettings = new XmlWriterSettings {  Indent = true };
@@ -87,40 +87,40 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 
 ## <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1. Visual Studio 2010 kullanarak ViewStateCleaningWriter.sln çözüm dosyasını açın.
+1. Visual Studio 2010 kullanarak, ViewStateCleaningWriter. sln çözüm dosyasını açın.
 
-2. Bir komut istemi açın ve burada ViewStageCleaningWriter.exe oluşturulmuştur dizine gidin.
+2. Bir komut istemi açın ve Viewstagectaaningwriter. exe ' nin oluşturulduğu dizine gidin.
 
-3. ViewStateCleaningWriter.exe Workflow1.xaml dosya üzerinde çalıştırın.
+3. Workflow1. xaml dosyasında ViewStateCleaningWriter. exe ' yi çalıştırın.
 
-   Yürütülebilir dosya için söz dizimi aşağıdaki örnekte gösterilmiştir.
+   Yürütülebilir dosya için sözdizimi aşağıdaki örnekte gösterilmiştir.
 
    ```console
    ViewStateCleaningWriter.exe [input file] [output file]
    ```
 
-   Bu bir XAML dosyasına çıkarır \[outfile], sahip olduğu tüm görünüm durumu bilgilerini kaldırıldı.
+   Bu, tüm görünüm durumu bilgilerini kaldıran \[çıkışdosyası] öğesine bir XAML dosyası verir.
 
 > [!NOTE]
-> İçin bir <xref:System.Activities.Statements.Sequence> iş akışı, bir dizi sanallaştırma ipuçları kaldırılır. Bu, sonraki yüklendiğinde düzenini yeniden hesapla Tasarımcı neden olur. Bu örnek için kullandığınızda bir <xref:System.Activities.Statements.Flowchart>, tüm konumlandırma ve yönlendirme bilgilerini satır kaldırılır ve ekranın sol tarafında yığılma Tasarımcı içinde sonraki yüklemeyi, tüm etkinlikler.
+> <xref:System.Activities.Statements.Sequence> bir iş akışı için bir dizi sanallaştırma ipucu kaldırılır. Bu, tasarımcının bir sonraki yüklenilişinde düzeni yeniden hesaplamasını sağlar. Bu örneği bir <xref:System.Activities.Statements.Flowchart>için kullandığınızda, tüm konumlandırma ve çizgi yönlendirme bilgileri kaldırılır ve tasarımcı 'ya sonraki yükleme sırasında tüm etkinlikler ekranın sol tarafında yığılır.
 
-## <a name="to-create-a-sample-xaml-file-for-use-with-this-sample"></a>Bu örnek ile kullanmak için örnek bir XAML dosyası oluşturmak için
+## <a name="to-create-a-sample-xaml-file-for-use-with-this-sample"></a>Bu örnekle kullanılacak örnek bir XAML dosyası oluşturmak için
 
-1. Visual Studio 2010'u açın.
+1. Visual Studio 2010 ' i açın.
 
-2. Yeni bir iş akışı konsol uygulaması oluşturun.
+2. Yeni bir Iş akışı konsol uygulaması oluşturun.
 
-3. Sürükle ve bırak tuvale birkaç etkinlikleri
+3. Birkaç etkinliği tuval üzerine sürükleyip bırakın
 
 4. İş akışı XAML dosyasını kaydedin.
 
-5. Ekli özellikler durumunu görmek için XAML dosyasını inceleyin.
+5. Görünüm durumu ekli özelliklerini görmek için XAML dosyasını inceleyin.
 
 > [!IMPORTANT]
-> Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

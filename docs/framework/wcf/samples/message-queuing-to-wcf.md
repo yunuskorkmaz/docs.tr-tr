@@ -2,19 +2,19 @@
 title: Windows Communication Foundation'a İleti Kuyruğa Alma
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: aa2034ceece92c0f873b5a20860df36999b114b3
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 4daa3694287f93aa42a139ed701578e26433bc44
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044883"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714833"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Windows Communication Foundation'a İleti Kuyruğa Alma
 Bu örnek, bir Message Queuing (MSMQ) uygulamasının bir Windows Communication Foundation (WCF) hizmetine nasıl MSMQ iletisi gönderebileceğinizi gösterir. Hizmet, sıraya alınan iletileri alma hizmetini gözlemlemeye olanak sağlayan, kendinden konak bir konsol uygulamasıdır.  
   
- Hizmet sözleşmesi `IOrderProcessor`, kuyruklarla birlikte kullanılmak üzere uygun tek yönlü bir hizmeti tanımlar. Bir MSMQ iletisinde eylem üst bilgisi yok, bu nedenle farklı MSMQ iletilerini işlem sözleşmelerine otomatik olarak eşlemek mümkün değildir. Bu nedenle, yalnızca bir işlem sözleşmesi olabilir. Hizmet için birden fazla işlem sözleşmesi tanımlamak istiyorsanız, uygulamanın hangi işlem sözleşmesinin gönderileceğine karar vermek için MSMQ iletisindeki (örneğin, etiket veya correlationID) hangi üstbilginin kullanılabileceğini belirlemek üzere bilgi sağlaması gerekir.
+ Hizmet sözleşmesi, kuyruklarla birlikte kullanılmak üzere uygun tek yönlü bir hizmeti tanımlayan `IOrderProcessor`. Bir MSMQ iletisinde eylem üst bilgisi yok, bu nedenle farklı MSMQ iletilerini işlem sözleşmelerine otomatik olarak eşlemek mümkün değildir. Bu nedenle, yalnızca bir işlem sözleşmesi olabilir. Hizmet için birden fazla işlem sözleşmesi tanımlamak istiyorsanız, uygulamanın hangi işlem sözleşmesinin gönderileceğine karar vermek için MSMQ iletisindeki (örneğin, etiket veya correlationID) hangi üstbilginin kullanılabileceğini belirlemek üzere bilgi sağlaması gerekir.
   
- MSMQ iletisi, hangi üst bilgilerin işlem sözleşmesinin farklı parametreleriyle eşlendiği bilgisini içermez. Parametresi, temeldeki MSMQ iletisini <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>içeren`MsmqMessage<T>`türündedir (). <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) Sınıfındaki "T" türü, MSMQ ileti gövdesinde seri hale getirilen verileri temsil eder. Bu örnekte, `PurchaseOrder` tür MSMQ ileti gövdesinde serileştirilir.  
+ MSMQ iletisi, hangi üst bilgilerin işlem sözleşmesinin farklı parametreleriyle eşlendiği bilgisini içermez. Parametresi, temeldeki MSMQ iletisini içeren <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) türündedir. <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) sınıfındaki "T" türü, MSMQ ileti gövdesinde seri hale getirilen verileri temsil eder. Bu örnekte, `PurchaseOrder` türü MSMQ ileti gövdesinde serileştirilir.  
   
  Aşağıdaki örnek kod, sipariş işleme hizmetinin hizmet sözleşmesini gösterir.  
 
@@ -44,7 +44,7 @@ public static void Main()
 }
 ```
 
- Hizmeti, aşağıdaki örnek kodda gösterildiği <xref:System.ServiceModel.ServiceHost> gibi, `OrderProcessorService`için bir için oluşturur ve açar.
+ Hizmet, aşağıdaki örnek kodda gösterildiği gibi, `OrderProcessorService`için bir <xref:System.ServiceModel.ServiceHost> oluşturur ve açar.
 
 ```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
@@ -68,7 +68,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 </appSettings>
 ```
 
- İstemci uygulaması, aşağıdaki örnek kodda gösterildiği gibi, sıraya <xref:System.Messaging.MessageQueue.Send%2A> dayanıklı ve işlemsel bir ileti göndermek için yöntemini kullanan bir MSMQ uygulamasıdır.
+ İstemci uygulaması, aşağıdaki örnek kodda gösterildiği gibi, sıraya dayanıklı ve işlemsel bir ileti göndermek için <xref:System.Messaging.MessageQueue.Send%2A> yöntemini kullanan bir MSMQ uygulamasıdır.
 
 ```csharp
 //Connect to the queue.
@@ -126,7 +126,7 @@ Console.ReadLine();
 
     4. **İşlem** kutusunu işaretleyin.
 
-    5. Yeni `ServiceModelSamplesTransacted` kuyruğun adı olarak girin.
+    5. Yeni kuyruğun adı olarak `ServiceModelSamplesTransacted` girin.
 
 3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
 
@@ -149,12 +149,12 @@ Console.ReadLine();
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WCF'de Kuyruklar](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
-- [Nasıl yapılır: WCF uç noktaları ve Message Queuing uygulamalarla Exchange Iletileri](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94968)

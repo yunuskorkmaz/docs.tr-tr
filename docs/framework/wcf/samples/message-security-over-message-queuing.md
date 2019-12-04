@@ -2,12 +2,12 @@
 title: İleti Kuyruğa Alma ile İleti Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: d27ee01636e37ac8f09c4f7dc497f14bfac1b0f1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 03f4bd3f580163868920622a74ae4f34d7a1a97a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424120"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714796"
 ---
 # <a name="message-security-over-message-queuing"></a>İleti Kuyruğa Alma ile İleti Güvenliği
 Bu örnek, istemci için X. 509v3 sertifika kimlik doğrulamasıyla WS-Security kullanan bir uygulamanın nasıl uygulanacağını gösterir ve sunucunun X. 509v3 sertifikasını MSMQ üzerinden kullanarak sunucu kimlik doğrulaması gerektirir. İleti güvenliği bazen MSMQ deposundaki iletilerin şifrelenmesinin ve uygulamanın kendi ileti kimlik doğrulamasını gerçekleştirebileceği durumlarda daha da tercih edilir.
@@ -85,7 +85,7 @@ Bu örnek, istemci için X. 509v3 sertifika kimlik doğrulamasıyla WS-Security 
 ## <a name="requirements"></a>Gereksinimler
  Bu örnek, MSMQ 'nun yüklü ve çalışıyor olmasını gerektirir.
 
-## <a name="demonstrates"></a>Gösteriler
+## <a name="demonstrates"></a>Gösterir
  İstemci, hizmetin ortak anahtarını kullanarak iletiyi şifreler ve kendi sertifikasını kullanarak iletiyi imzalar. Sıradan iletiyi okuyan hizmet, güvenilen kişiler deposundaki sertifikayla istemci sertifikasının kimliğini doğrular. Daha sonra iletinin şifresini çözer ve iletiyi hizmet işlemine gönderir.
 
  Windows Communication Foundation (WCF) iletisi MSMQ iletisinin gövdesinde bir yük olarak yapıldığından, gövde MSMQ deposunda şifreli olarak kalır. Bu, iletinin istenmeyen açıklanmasını sağlar. MSMQ 'nun, taşıma işlemi yaptığı İletinin şifrelenip şifrelenmediğini unutmayın.
@@ -323,7 +323,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-     % SERVER_NAME% değişkeni sunucu adını belirtiyor. Sertifika, LocalMachine deposunda depolanır. Kurulum Batch dosyası bir hizmet bağımsız değişkeniyle (örneğin, `setup.bat service`) çalışıyorsa% SUNUCU_ADı% bilgisayarın tam etki alanı adını içerir. Aksi takdirde, varsayılan olarak localhost olur
+     % SERVER_NAME% değişkeni sunucu adını belirtiyor. Sertifika, LocalMachine deposunda depolanır. Kurulum Batch dosyası bir hizmet bağımsız değişkeniyle (örneğin, `setup.bat service`) çalışıyorsa% SERVER_NAME% bilgisayarın tam etki alanı adını içerir. Aksi takdirde, varsayılan olarak localhost olur
 
 - Sunucu sertifikası istemcinin güvenilen sertifika deposuna yükleniyor.
 
@@ -341,6 +341,6 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  

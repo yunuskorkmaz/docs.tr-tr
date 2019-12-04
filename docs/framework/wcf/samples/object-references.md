@@ -2,15 +2,15 @@
 title: Nesne Başvuruları
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: f82ebe741c2deaccb3bd6593c7b4f53a646582dd
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bc9c318fc0e05f384a00df7cd1436a138315d880
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039145"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714675"
 ---
 # <a name="object-references"></a>Nesne Başvuruları
-Bu örnek, nesneleri sunucu ve istemci arasında başvuruya göre nasıl geçileceğini gösterir. Örnek, sanal *sosyal ağları*kullanır. Sosyal ağ, her arkadaşın `Person` kendi arkadaş listesi ile `Person` sınıfın bir örneği olduğu arkadaş listesini içeren bir sınıftan oluşur. Bu, nesnelerin bir grafiğini oluşturur. Hizmet, bu sosyal ağlarda işlemleri kullanıma sunar.  
+Bu örnek, nesneleri sunucu ve istemci arasında başvuruya göre nasıl geçileceğini gösterir. Örnek, sanal *sosyal ağları*kullanır. Sosyal ağ, her arkadaşın kendi arkadaş listesi ile `Person` sınıfının bir örneği olduğu arkadaş listesini içeren `Person` sınıfından oluşur. Bu, nesnelerin bir grafiğini oluşturur. Hizmet, bu sosyal ağlarda işlemleri kullanıma sunar.  
   
  Bu örnekte, hizmet Internet Information Services (IIS) tarafından barındırılır ve istemci bir konsol uygulaması (. exe).  
   
@@ -18,7 +18,7 @@ Bu örnek, nesneleri sunucu ve istemci arasında başvuruya göre nasıl geçile
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
 ## <a name="service"></a>Hizmet  
- Sınıfı, öğesini bir başvuru türü olarak bildirmek `true` üzere <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> ayarlanmış olan özniteliğiilebirlikteuygulandı.<xref:System.Runtime.Serialization.DataContractAttribute> `Person` Tüm özellikler uygulanmış <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği vardır.  
+ `Person` sınıfında, <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> alanı bir başvuru türü olarak bildirmek için `true` olarak ayarlanmış <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği uygulanır. Tüm özelliklerde <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği uygulandı.  
   
 ```csharp
 [DataContract(IsReference=true)]  
@@ -51,7 +51,7 @@ public class Person
 }  
 ```  
   
- İşlem, türünde `Person` bir parametre alır ve ağdaki tüm kişileri döndürür; diğer bir deyişle, `friends` listedeki tüm kişiler, arkadaşınızın arkadaşları, vb., yinelemeler olmadan. `GetPeopleInNetwork`  
+ `GetPeopleInNetwork` işlemi, `Person` türünde bir parametre alır ve ağdaki tüm kişileri döndürür; diğer bir deyişle, `friends` listesindeki tüm kişiler, arkadaşınızın arkadaşları, vb., yinelemeler olmadan.  
   
 ```csharp
 public List<Person> GetPeopleInNetwork(Person p)  
@@ -63,7 +63,7 @@ public List<Person> GetPeopleInNetwork(Person p)
 }  
 ```  
   
- İşlem türünde `Person` bir parametre alır ve listede bu kişinin `friends` da bulunduğu tüm arkadaşlarınızı döndürür. `GetMutualFriends`  
+ `GetMutualFriends` işlem, `Person` türünde bir parametre alır ve bu kişinin `friends` listesinde de bulunan tüm arkadaşlarınızı geri döndürür.  
   
 ```csharp
 public List<Person> GetMutualFriends(Person p)  
@@ -78,7 +78,7 @@ public List<Person> GetMutualFriends(Person p)
 }  
 ```  
   
- İşlem `GetCommonFriends` , türün `Person`bir listesini alır. Listede iki `Person` nesne olması beklenir. İşlem, giriş listesindeki her iki `Person` `Person` nesnenin `friends` listelerinde bulunan nesnelerin listesini döndürür.  
+ `GetCommonFriends` işlem `Person`türünün bir listesini alır. Listenin içinde iki `Person` nesne olması beklenir. İşlem, giriş listesindeki `Person` nesnelerinin `friends` listelerinde bulunan `Person` nesnelerinin bir listesini döndürür.  
   
 ```csharp
 public List<Person> GetCommonFriends(List<Person> people)  
@@ -94,7 +94,7 @@ public List<Person> GetCommonFriends(List<Person> people)
 ## <a name="client"></a>İstemci  
  İstemci proxy 'si, Visual Studio 'nun **hizmet başvurusu Ekle** özelliği kullanılarak oluşturulur.  
   
- Beş `Person` nesneden oluşan bir sosyal ağ oluşturulur. İstemci, hizmette üç yöntemin her birini çağırır.  
+ Beş `Person` nesnesinden oluşan bir sosyal ağ oluşturulur. İstemci, hizmette üç yöntemin her birini çağırır.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
@@ -109,7 +109,7 @@ public List<Person> GetCommonFriends(List<Person> people)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   

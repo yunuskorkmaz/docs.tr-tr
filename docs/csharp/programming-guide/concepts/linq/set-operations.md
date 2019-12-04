@@ -2,12 +2,12 @@
 title: Işlemleri ayarla (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 7fd61e17c37c3d9056159cf4ec3ccfafa2ceb871
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 22079b1d41533803f694af210f98bc9fb8a5b322
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140922"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711876"
 ---
 # <a name="set-operations-c"></a>Işlemleri ayarla (C#)
 LINQ 'teki işlemleri, aynı veya ayrı Koleksiyonlar (veya kümeler) içindeki eşdeğer öğelerin varlığına veya yokluğuna dayalı bir sonuç kümesi üreten sorgu işlemlerine yönelik olarak ayarlayın.  
@@ -26,24 +26,33 @@ LINQ 'teki işlemleri, aynı veya ayrı Koleksiyonlar (veya kümeler) içindeki 
 ## <a name="comparison-of-set-operations"></a>Ayarlama Işlemlerinin karşılaştırması  
   
 ### <a name="distinct"></a>Distinct  
- Aşağıdaki çizimde, <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> yönteminin bir karakter dizisinde davranışı gösterilmektedir. Döndürülen dizi, Giriş dizisinden benzersiz öğeleri içerir.  
+ Aşağıdaki örnek, <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> yönteminin bir karakter dizisinde davranışını gösterir. Döndürülen dizi, Giriş dizisinden benzersiz öğeleri içerir.  
   
  ![DISTINCT&#40;&#41;davranışını gösteren grafik.](./media/set-operations/distinct-method-behavior.png)  
+ 
+ [!code-csharp-interactive[Distinct](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQSetOperation/CS/SetOperation.cs#1)]
   
 ### <a name="except"></a>Dışlama  
- Aşağıdaki çizimde <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>davranışı gösterilmektedir. Döndürülen dizi yalnızca ilk giriş dizisinin ikinci giriş dizisinde olmayan öğelerini içerir.  
+ Aşağıdaki örnek <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>davranışını gösterir. Döndürülen dizi yalnızca ilk giriş dizisinin ikinci giriş dizisinde olmayan öğelerini içerir.  
   
  ![Haricinde&#40;&#41;eylemini gösteren grafik.](./media/set-operations/except-behavior-graphic.png "Haricinde davranışını gösterir.")  
   
+[!code-csharp-interactive[Except](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQSetOperation/CS/SetOperation.cs#2)]
+
 ### <a name="intersect"></a>Kesiştir  
- Aşağıdaki çizimde <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>davranışı gösterilmektedir. Döndürülen dizi, her iki giriş dizisinde da ortak olan öğeleri içerir.  
+ Aşağıdaki örnek <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>davranışını gösterir. Döndürülen dizi, her iki giriş dizisinde da ortak olan öğeleri içerir.  
   
  ![İki sıranın kesişimini gösteren grafik.](./media/set-operations/intersection-two-sequences.png)  
  
+[!code-csharp-interactive[Intersect](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQSetOperation/CS/SetOperation.cs#3)]
+
 ### <a name="union"></a>UNION  
- Aşağıdaki çizimde iki karakter dizisi üzerinde bir bileşim işlemi gösterilmektedir. Döndürülen dizi, her iki giriş dizisinden benzersiz öğeleri içerir.  
+ Aşağıdaki örnek iki karakter dizisi üzerinde bir bileşim işlemini gösterir. Döndürülen dizi, her iki giriş dizisinden benzersiz öğeleri içerir.  
   
  ![İki sıranın birleşimini gösteren grafik.](./media/set-operations/union-operation-two-sequences.png)  
+
+[!code-csharp-interactive[Union](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQSetOperation/CS/SetOperation.cs#4)]
+ 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq>

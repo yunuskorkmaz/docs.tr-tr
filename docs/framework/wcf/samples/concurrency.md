@@ -5,15 +5,15 @@ helpviewer_keywords:
 - service behaviors, concurency sample
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
-ms.openlocfilehash: 3a78612f679218711a81278184c16b04d6d6f802
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1342e50a5dca56260f832f5e0d684f4f79d355e2
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045671"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715996"
 ---
 # <a name="concurrency"></a>Eşzamanlılık
-Eşzamanlılık örneği, <xref:System.ServiceModel.ServiceBehaviorAttribute> bir hizmet örneğinin iletileri sıralı <xref:System.ServiceModel.ConcurrencyMode> olarak veya aynı anda işleme gerekmediğini denetleyen, numaralandırma ile kullanımını gösterir. Örnek, `ICalculator` hizmet sözleşmesini uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md)Başlarken ' i temel alır. Bu örnek, `ICalculatorConcurrency`' den `ICalculator`devralan yeni bir sözleşme tanımlar ve hizmet eşzamanlılık durumunu incelemek için iki ek işlem sağlar. Eşzamanlılık ayarını değiştirerek, istemcisini çalıştırarak davranış değişikliğini gözlemleyebilirsiniz.  
+Eşzamanlılık örneği, bir hizmet örneğinin iletileri sıralı veya eşzamanlı olarak işleme gerekmediğini denetleyen <xref:System.ServiceModel.ConcurrencyMode> numaralandırmada <xref:System.ServiceModel.ServiceBehaviorAttribute> kullanımını gösterir. Örnek, `ICalculator` hizmet sözleşmesini uygulayan [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır. Bu örnek, `ICalculator`devralan `ICalculatorConcurrency`yeni bir sözleşme tanımlar ve hizmetin eşzamanlılık durumunu incelemek için iki ek işlem sağlar. Eşzamanlılık ayarını değiştirerek, istemcisini çalıştırarak davranış değişikliğini gözlemleyebilirsiniz.  
   
  Bu örnekte, istemci bir konsol uygulaması (. exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
   
@@ -22,15 +22,15 @@ Eşzamanlılık örneği, <xref:System.ServiceModel.ServiceBehaviorAttribute> bi
   
  Kullanılabilir üç eşzamanlılık modu vardır:  
   
-- `Single`: Her hizmet örneği tek seferde bir ileti işler. Bu, varsayılan eşzamanlılık modudur.  
+- `Single`: her hizmet örneği tek seferde bir ileti işler. Bu, varsayılan eşzamanlılık modudur.  
   
-- `Multiple`: Her hizmet örneği aynı anda birden çok iletiyi işler. Bu eşzamanlılık modunu kullanabilmek için hizmet uygulamasının iş parçacığı açısından güvenli olması gerekir.  
+- `Multiple`: her hizmet örneği aynı anda birden çok iletiyi işler. Bu eşzamanlılık modunu kullanabilmek için hizmet uygulamasının iş parçacığı açısından güvenli olması gerekir.  
   
-- `Reentrant`: Her hizmet örneği tek seferde bir ileti işler, ancak yeniden geçen çağrıları kabul eder. Hizmet, bu çağrıyı yalnızca aradığında kabul eder. Yer, [ConcurrencyMode.](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) bir örnek örneğinde gösterilmiştir.  
+- `Reentrant`: her hizmet örneği tek seferde bir ileti işler, ancak yeniden geçen çağrıları kabul eder. Hizmet, bu çağrıyı yalnızca aradığında kabul eder. Yer, [ConcurrencyMode.](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) bir örnek örneğinde gösterilmiştir.  
   
- Eşzamanlılık kullanımı, örnek oluşturma moduyla ilgilidir. <xref:System.ServiceModel.InstanceContextMode.PerCall> Örnek olarak, her ileti yeni bir hizmet örneği tarafından işlendiği için eşzamanlılık ilgili değildir. Örnek olarak, tek <xref:System.ServiceModel.ConcurrencyMode.Single> örneğin <xref:System.ServiceModel.ConcurrencyMode.Multiple> iletileri sıralı veya eşzamanlı olarak işleme sunuluna bağlı olarak, ya da eşzamanlılık geçerlidir. <xref:System.ServiceModel.InstanceContextMode.Single> Örnek <xref:System.ServiceModel.InstanceContextMode.PerSession> olarak, herhangi bir eşzamanlılık modu ilgili olabilir.  
+ Eşzamanlılık kullanımı, örnek oluşturma moduyla ilgilidir. <xref:System.ServiceModel.InstanceContextMode.PerCall> örnek oluşturma, her ileti yeni bir hizmet örneği tarafından işlendiği için eşzamanlılık ilgili değildir. <xref:System.ServiceModel.InstanceContextMode.Single> örnek oluşturma bölümünde, tek örneğin iletileri sıralı veya eşzamanlı olarak işleme sunuluna bağlı olarak, <xref:System.ServiceModel.ConcurrencyMode.Single> veya <xref:System.ServiceModel.ConcurrencyMode.Multiple> eşzamanlılık geçerlidir. <xref:System.ServiceModel.InstanceContextMode.PerSession> örnek oluşturma bölümünde eşzamanlılık modlarından herhangi biri ilgili olabilir.  
   
- Service sınıfı, aşağıdaki kod örneğinde gösterildiği gibi `[ServiceBehavior(ConcurrencyMode=<setting>)]` özniteliğiyle eşzamanlılık davranışını belirtir. Hangi satırların açıklama olarak değiştirilerek, `Single` ve `Multiple` eşzamanlılık modlarıyla denemeler yapabilirsiniz. Eşzamanlılık modunu değiştirdikten sonra hizmeti yeniden oluşturmayı unutmayın.  
+ Service sınıfı, aşağıdaki kod örneğinde gösterildiği gibi `[ServiceBehavior(ConcurrencyMode=<setting>)]` özniteliğiyle eşzamanlılık davranışını belirtir. Hangi satırların açıklama olarak değiştirilerek `Single` ve `Multiple` eşzamanlılık modlarını deneyebilirsiniz. Eşzamanlılık modunu değiştirdikten sonra hizmeti yeniden oluşturmayı unutmayın.  
   
 ```csharp
 // Single allows a single message to be processed sequentially by each service instance.  
@@ -89,9 +89,9 @@ public class CalculatorService : ICalculatorConcurrency
 }  
 ```  
   
- Örnek, varsayılan <xref:System.ServiceModel.ConcurrencyMode.Multiple> olarak örnek <xref:System.ServiceModel.InstanceContextMode.Single> oluşturma ile eşzamanlılık kullanır. İstemci kodu, zaman uyumsuz bir ara sunucu kullanacak şekilde değiştirilmiştir. Bu, istemcinin her bir çağrı arasında yanıt beklemeden hizmete birden çok çağrı yapmasına olanak sağlar. Hizmet eşzamanlılık modunun davranışındaki farkı gözlemleyebilirsiniz.  
+ Örnek, varsayılan olarak <xref:System.ServiceModel.InstanceContextMode.Single> örnekleyerek <xref:System.ServiceModel.ConcurrencyMode.Multiple> eşzamanlılık kullanır. İstemci kodu, zaman uyumsuz bir ara sunucu kullanacak şekilde değiştirilmiştir. Bu, istemcinin her bir çağrı arasında yanıt beklemeden hizmete birden çok çağrı yapmasına olanak sağlar. Hizmet eşzamanlılık modunun davranışındaki farkı gözlemleyebilirsiniz.  
   
- Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. Hizmetin altında çalıştığı eşzamanlılık modu görüntülenir, her bir işlem çağrılır ve sonra işlem sayısı görüntülenir. Eşzamanlılık modu `Multiple`olduğunda, hizmet birden çok iletiyi eşzamanlı olarak işlediği için sonuçların nasıl çağrıldıklarından farklı bir sırada döndürüldiğine dikkat edin. Eşzamanlılık modunu olarak `Single`değiştirerek, hizmet her iletiyi sırayla işleyerek sonuçlar çağrıldıkları sırada döndürülür. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. Hizmetin altında çalıştığı eşzamanlılık modu görüntülenir, her bir işlem çağrılır ve sonra işlem sayısı görüntülenir. Eşzamanlılık modu `Multiple`olduğunda, hizmet birden çok iletiyi eşzamanlı olarak işlediği için sonuçların nasıl çağrıldıklarından farklı bir sırada döndürüldiğine dikkat edin. Eşzamanlılık modunu `Single`olarak değiştirerek, hizmet her iletiyi sırayla işleyerek sonuçlar çağrıldıkları sırada döndürülür. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
@@ -108,6 +108,6 @@ public class CalculatorService : ICalculatorConcurrency
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Concurrency`  

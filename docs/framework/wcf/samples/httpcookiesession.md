@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: af624305e4ab4678938b7f63c4e4056404de0bc9
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 9e47959314ba161ff07a37f3d45088d038557c9e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393129"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711599"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 Bu örnek, oturum yönetimi için HTTP tanımlama bilgilerini kullanmak üzere özel bir protokol kanalının nasıl oluşturulacağını gösterir. Bu kanal, Windows Communication Foundation (WCF) Hizmetleri ile ASMX istemcileri veya WCF istemcileri ile ASMX hizmetleri arasında iletişime izin verebilir.  
@@ -29,15 +29,15 @@ Bu örnek, oturum yönetimi için HTTP tanımlama bilgilerini kullanmak üzere �
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
 ## <a name="httpcookiesession-channel-message-exchange-pattern"></a>Httppişiriesession kanal Iletisi değişim stili  
- Bu örnek, ASMX benzeri senaryolar için oturumları mümkün bir şekilde sunar. Kanal yığınımızın en altında, ve <xref:System.ServiceModel.Channels.IRequestChannel> <xref:System.ServiceModel.Channels.IReplyChannel>' yi destekleyen http taşıdık. Kanal yığınının daha yüksek düzeylerine oturumlar sağlamak için kanal işdir. Örnek, oturumları destekleyen iki kanal (<xref:System.ServiceModel.Channels.IRequestSessionChannel> ve <xref:System.ServiceModel.Channels.IReplySessionChannel>) uygular.  
+ Bu örnek, ASMX benzeri senaryolar için oturumları mümkün bir şekilde sunar. Kanal yığınımızın en altında, <xref:System.ServiceModel.Channels.IRequestChannel> ve <xref:System.ServiceModel.Channels.IReplyChannel>destekleyen HTTP taşıdık. Kanal yığınının daha yüksek düzeylerine oturumlar sağlamak için kanal işdir. Örnek, oturumları destekleyen iki kanal (<xref:System.ServiceModel.Channels.IRequestSessionChannel> ve <xref:System.ServiceModel.Channels.IReplySessionChannel>) uygular.  
   
 ## <a name="service-channel"></a>Hizmet kanalı  
- Örnek, `HttpCookieReplySessionChannelListener` sınıfında bir hizmet kanalı sağlar. Bu sınıf, <xref:System.ServiceModel.Channels.IChannelListener> arabirimini uygular ve kanalı kanal <xref:System.ServiceModel.Channels.IReplyChannel> yığınında daha düşük bir <xref:System.ServiceModel.Channels.IReplySessionChannel>değerine dönüştürür. Bu işlem aşağıdaki bölümlere ayrılabilir:  
+ Örnek, `HttpCookieReplySessionChannelListener` sınıfında bir hizmet kanalı sağlar. Bu sınıf <xref:System.ServiceModel.Channels.IChannelListener> arabirimini uygular ve <xref:System.ServiceModel.Channels.IReplyChannel> kanalını kanal yığınında daha düşük bir <xref:System.ServiceModel.Channels.IReplySessionChannel>dönüştürür. Bu işlem aşağıdaki bölümlere ayrılabilir:  
   
 - Kanal dinleyicisi açıldığında, iç dinleyicisinden bir iç kanalı kabul eder. İç dinleyici bir veri birimi dinleyicisi olduğundan ve kabul edilen bir kanalın ömrü, dinleyicinin yaşam süresinden ayrıldığından, iç dinleyiciyi kapatabilir ve yalnızca iç kanala sahip olabilir  
   
@@ -66,23 +66,23 @@ Bu örnek, oturum yönetimi için HTTP tanımlama bilgilerini kullanmak üzere �
     Dictionary<string, IReplySessionChannel> channelMapping;  
     ```  
   
- `HttpCookieReplySessionChannel` Sınıfı uygular<xref:System.ServiceModel.Channels.IReplySessionChannel>. Kanal yığınının daha yüksek düzeyleri, <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> bu oturum için istekleri okumak üzere yöntemini çağırır. Her oturum kanalının, hizmet kanalı tarafından doldurulan bir özel ileti kuyruğu vardır.  
+ `HttpCookieReplySessionChannel` sınıfı <xref:System.ServiceModel.Channels.IReplySessionChannel>uygular. Kanal yığınının daha yüksek düzeyleri, bu oturum için istekleri okumak için <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> yöntemini çağırır. Her oturum kanalının, hizmet kanalı tarafından doldurulan bir özel ileti kuyruğu vardır.  
   
 ```csharp  
 InputQueue<RequestContext> requestQueue;  
 ```  
   
- Birisi <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> yöntemi çağırdığında ve ileti kuyruğunda hiç ileti olmadığında kanal, kendisini kapatmadan önce belirtilen miktarda süre bekler. Bu, WCF olmayan istemciler için oluşturulan oturum kanallarını temizler.  
+ Birisi <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> yöntemini çağırdığında ve ileti kuyruğunda hiç ileti olmadığında kanal, kendisini kapatmadan önce belirli bir süre bekler. Bu, WCF olmayan istemciler için oluşturulan oturum kanallarını temizler.  
   
- Öğesini izlemek için`channelMapping` kullanıyoruz, kabul edilen tüm kanallar kapanana kadar temeldeki `innerChannel` sistemimizi kapatmıyoruz. `ReplySessionChannels` Bu şekilde `HttpCookieReplySessionChannel` ömür süresinin ötesinde yer `HttpCookieReplySessionChannelListener`alabilir. Ayrıca, kabul edilen kanallar `OnClosed` geri çağırma aracılığıyla dinleyiciye bir başvuru tutacağından, atık toplama işlemi konusunda endişelenmenize gerek kalmaz.  
+ `ReplySessionChannels`izlemek için `channelMapping` kullanıyoruz ve tüm kabul edilen kanallar kapanana kadar temeldeki `innerChannel` kapatmuyoruz. Bu şekilde `HttpCookieReplySessionChannel` `HttpCookieReplySessionChannelListener`yaşam süresinin ötesinde bulunabilir. Ayrıca, kabul edilen kanallar `OnClosed` geri çağırma aracılığıyla dinleyiciye bir başvuru tutacağından, atık toplama işlemi konusunda endişelenmenize gerek kalmaz.  
   
 ## <a name="client-channel"></a>İstemci kanalı  
- Karşılık gelen istemci kanalı `HttpCookieSessionChannelFactory` sınıfındır. Kanal oluşturma sırasında kanal fabrikası, iç istek kanalını bir `HttpCookieRequestSessionChannel`ile sarmalanmış. `HttpCookieRequestSessionChannel` Sınıfı, çağrıları temel alınan istek kanalına iletir. İstemci proxy 'yi kapattığında, `HttpCookieRequestSessionChannel` kanalın kapatıldığını belirten bir ileti gönderir. Bu nedenle, hizmet kanalı yığını kullanımda olan oturum kanalını düzgün şekilde kapatır.  
+ Karşılık gelen istemci kanalı `HttpCookieSessionChannelFactory` sınıftır. Kanal oluşturma sırasında kanal fabrikası, iç istek kanalını bir `HttpCookieRequestSessionChannel`kaydırır. `HttpCookieRequestSessionChannel` sınıfı, çağrıları temel alınan istek kanalına iletir. İstemci proxy 'yi kapattığında, `HttpCookieRequestSessionChannel` hizmetin kanalın kapatıldığını belirten bir ileti gönderir. Bu nedenle, hizmet kanalı yığını kullanımda olan oturum kanalını düzgün şekilde kapatır.  
   
 ## <a name="binding-and-binding-element"></a>Bağlama ve bağlama öğesi  
- Hizmet ve istemci kanallarını oluşturduktan sonra, bir sonraki adım bunları WCF çalışma zamanına tümleştirmelidir. Kanallar, bağlamalar ve bağlama öğeleri aracılığıyla WCF 'ye sunulur. Bağlama bir veya daha fazla bağlama öğelerinden oluşur. WCF, sistem tarafından tanımlanan birkaç bağlama sunar; Örneğin, BasicHttpBinding veya WSHttpBinding. `HttpCookieSessionBindingElement` Sınıfı, bağlama öğesinin uygulamasını içerir. Gerekli kanal dinleyicisini veya kanal fabrikası örneklemesini yapmak için kanal dinleyicisini ve kanal fabrikası oluşturma yöntemlerini geçersiz kılar.  
+ Hizmet ve istemci kanallarını oluşturduktan sonra, bir sonraki adım bunları WCF çalışma zamanına tümleştirmelidir. Kanallar, bağlamalar ve bağlama öğeleri aracılığıyla WCF 'ye sunulur. Bağlama bir veya daha fazla bağlama öğelerinden oluşur. WCF, sistem tarafından tanımlanan birkaç bağlama sunar; Örneğin, BasicHttpBinding veya WSHttpBinding. `HttpCookieSessionBindingElement` sınıfı bağlama öğesi için uygulamayı içerir. Gerekli kanal dinleyicisini veya kanal fabrikası örneklemesini yapmak için kanal dinleyicisini ve kanal fabrikası oluşturma yöntemlerini geçersiz kılar.  
   
- Örnek, hizmet açıklaması için ilke onayları kullanır. Bu, örneğin kanal gereksinimlerini hizmeti kullanabilen diğer istemcilere yayımlamasına olanak sağlar. Örneğin, bu bağlama öğesi, olası istemcilerin oturumları desteklediğini bilmesini sağlamak için ilke onayları yayımlar. Örnek, bağlama öğesi yapılandırmasındaki `ExchangeTerminateMessage` özelliği sağladığından, hizmetin oturum iletişimini sonlandırmak için ek bir ileti değişimi işlemini desteklediğini göstermek için gerekli onayları ekler. İstemciler daha sonra bu eylemi kullanabilir. Aşağıdaki WSDL kodunda, `HttpCookieSessionBindingElement`öğesinden oluşturulan ilke onayları gösterilmektedir.  
+ Örnek, hizmet açıklaması için ilke onayları kullanır. Bu, örneğin kanal gereksinimlerini hizmeti kullanabilen diğer istemcilere yayımlamasına olanak sağlar. Örneğin, bu bağlama öğesi, olası istemcilerin oturumları desteklediğini bilmesini sağlamak için ilke onayları yayımlar. Örnek, bağlama öğesi yapılandırmasındaki `ExchangeTerminateMessage` özelliğini sağladığından, hizmetin oturum iletişimini sonlandırmak için ek bir ileti değişimi işlemini desteklediğini göstermek için gerekli onayları ekler. İstemciler daha sonra bu eylemi kullanabilir. Aşağıdaki WSDL kodunda, `HttpCookieSessionBindingElement`oluşturulan ilke onayları gösterilmektedir.  
   
 ```xml  
 <wsp:Policy wsu:Id="HttpCookieSessionBinding_IWcfCookieSessionService_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">  
@@ -95,13 +95,13 @@ InputQueue<RequestContext> requestQueue;
 </wsp:Policy>  
 ```  
   
- `HttpCookieSessionBinding` Sınıfı, daha önce açıklanan bağlama öğesini kullanan sistem tarafından sağlanmış bir bağlamadır.  
+ `HttpCookieSessionBinding` sınıfı, daha önce açıklanan bağlama öğesini kullanan sistem tarafından sağlanmış bir bağlamadır.  
   
 ## <a name="adding-the-channel-to-the-configuration-system"></a>Kanal yapılandırma sistemine ekleniyor  
- Örnek, yapılandırma aracılığıyla örnek kanalı kullanıma sunan iki sınıf sağlar. Birincisi, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> `HttpCookieSessionBindingElement`için bir. Uygulamanın toplu işlemi, `HttpCookieSessionBindingConfigurationElement`' den <xref:System.ServiceModel.Configuration.StandardBindingElement>türetilen öğesine Temsilcili. , `HttpCookieSessionBindingConfigurationElement` Üzerindeki`HttpCookieSessionBindingElement`özelliklerine karşılık gelen özelliklere sahiptir.  
+ Örnek, yapılandırma aracılığıyla örnek kanalı kullanıma sunan iki sınıf sağlar. Birincisi, `HttpCookieSessionBindingElement`için bir <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Uygulamanın toplu işlemi, <xref:System.ServiceModel.Configuration.StandardBindingElement>türetilen `HttpCookieSessionBindingConfigurationElement`için temsilci olarak oluşturulur. `HttpCookieSessionBindingConfigurationElement`, `HttpCookieSessionBindingElement`özelliklere karşılık gelen özelliklere sahiptir.  
   
 ### <a name="binding-element-extension-section"></a>Bağlama öğesi uzantı bölümü  
- Bu `HttpCookieSessionBindingElementSection` bölüm,<xref:System.ServiceModel.Configuration.BindingElementExtensionElement> yapılandırma sistemine yönelikbir'dır.`HttpCookieSessionBindingElement` Yapılandırma bölümünün adı birkaç geçersiz kılındığında, bağlama öğesinin türü ve bağlama öğesinin nasıl oluşturulacağı tanımlanır. Daha sonra uzantı bölümünü bir yapılandırma dosyasına şu şekilde kaydedebiliriz:  
+ `HttpCookieSessionBindingElementSection` bölüm, yapılandırma sistemine `HttpCookieSessionBindingElement` sunan bir <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Yapılandırma bölümünün adı birkaç geçersiz kılındığında, bağlama öğesinin türü ve bağlama öğesinin nasıl oluşturulacağı tanımlanır. Daha sonra uzantı bölümünü bir yapılandırma dosyasına şu şekilde kaydedebiliriz:  
   
 ```xml  
 <configuration>        
@@ -130,7 +130,7 @@ InputQueue<RequestContext> requestQueue;
 ```  
   
 ## <a name="test-code"></a>Test kodu  
- Bu örnek taşımanın kullanılması için test kodu Istemci ve hizmet dizinlerinde kullanılabilir. İki testten oluşur; bir test, istemci üzerinde olarak `allowCookies` `true` ayarlanmış bir bağlama kullanır. İkinci test, bağlama üzerinde açık kapanmaya (sonlandırma iletisi değişimi kullanılarak) izin vermez.  
+ Bu örnek taşımanın kullanılması için test kodu Istemci ve hizmet dizinlerinde kullanılabilir. İki testten oluşur; bir test, `allowCookies` istemci üzerinde `true` olarak ayarlanmış bir bağlama kullanır. İkinci test, bağlama üzerinde açık kapanmaya (sonlandırma iletisi değişimi kullanılarak) izin vermez.  
   
  Örneği çalıştırdığınızda aşağıdaki çıktıyı görmeniz gerekir:  
   

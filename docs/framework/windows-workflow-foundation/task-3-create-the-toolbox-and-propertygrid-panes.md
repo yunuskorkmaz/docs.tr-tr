@@ -2,16 +2,16 @@
 title: '3\. görev: araç kutusu ve PropertyGrid bölmelerini oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 402a25c1cb82c245afa94f58cefc180515622ea9
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 29e50b24135cd3d6a02052d846e1781b0d9fa325
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275868"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716225"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>3\. görev: araç kutusu ve PropertyGrid bölmelerini oluşturma
 
-Bu görevde, **araç kutusu** ve **PropertyGrid** bölmelerini oluşturacak ve bunları yeniden barındırılan [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] ' ye ekleyecek.
+Bu görevde, **araç kutusu** ve **PropertyGrid** bölmelerini oluşturacak ve bunları yeniden barındırılan Windows iş akışı Tasarımcısı ekleyeceksiniz.
 
 Başvuru için, İş Akışı Tasarımcısı dizi konunun [yeniden barındırmada](rehosting-the-workflow-designer.md) yer alan üç görevi tamamladıktan sonra MainWindow.xaml.cs dosyasında olması gereken kod bu konunun sonunda verilmiştir.
 
@@ -21,7 +21,7 @@ Başvuru için, İş Akışı Tasarımcısı dizi konunun [yeniden barındırmad
 
 2. **Çözüm Gezgini** bölmesinde, *MainWindow. xaml* dosyasına sağ tıklayın ve **kodu görüntüle**' yi seçin.
 
-3. @No__t-2 oluşturan `MainWindow` sınıfına `GetToolboxControl` yöntemi ekleyin, **araç kutusuna**yeni bir **araç kutusu** kategorisi ekler ve <xref:System.Activities.Statements.Assign> ve <xref:System.Activities.Statements.Sequence> etkinlik türlerini bu kategoriye atar.
+3. <xref:System.Activities.Presentation.Toolbox.ToolboxControl>oluşturan `MainWindow` sınıfına bir `GetToolboxControl` yöntemi ekleyin, **araç kutusuna**yeni bir **araç kutusu** kategorisi ekler ve <xref:System.Activities.Statements.Assign> ve <xref:System.Activities.Statements.Sequence> etkinlik türlerini bu kategoriye atar.
 
     ```csharp
     private ToolboxControl GetToolboxControl()
@@ -74,13 +74,13 @@ Başvuru için, İş Akışı Tasarımcısı dizi konunun [yeniden barındırmad
     }
     ```
 
-6. Çözümünüzü derlemek ve çalıştırmak için <kbd>F5</kbd> tuşuna basın. @No__t-1 ve <xref:System.Activities.Statements.Sequence> etkinliklerinin bulunduğu **araç kutusu** görüntülenmelidir.
+6. Çözümünüzü derlemek ve çalıştırmak için <kbd>F5</kbd> tuşuna basın. <xref:System.Activities.Statements.Assign> ve <xref:System.Activities.Statements.Sequence> etkinliklerini içeren **araç kutusu** görüntülenmelidir.
 
 ## <a name="to-create-the-propertygrid"></a>PropertyGrid oluşturmak için
 
 1. **Çözüm Gezgini** bölmesinde, *MainWindow. xaml* dosyasına sağ tıklayın ve **kodu görüntüle**' yi seçin.
 
-2. **PropertyGrid** bölmesini kılavuzun en sağdaki sütununa yerleştirmek için `AddPropertyInspector` yöntemini `MainWindow` sınıfına ekleyin:
+2. **PropertyGrid** bölmesini kılavuzun en sağdaki sütununa yerleştirmek için `MainWindow` sınıfına `AddPropertyInspector` yöntemi ekleyin:
 
     ```csharp
     private void AddPropertyInspector()
@@ -104,7 +104,7 @@ Başvuru için, İş Akışı Tasarımcısı dizi konunun [yeniden barındırmad
     }
     ```
 
-4. Çözümü derlemek ve çalıştırmak için <kbd>F5</kbd> tuşuna basın. **Araç kutusu**, iş akışı tasarım tuvali ve **PropertyGrid** bölmeleri hepsi görüntülenmelidir ve tasarım tuvaline bir <xref:System.Activities.Statements.Assign> etkinliği veya <xref:System.Activities.Statements.Sequence> etkinliği sürüklediğinizde, özellik kılavuzunun, vurgulanan etkinliğe bağlı olarak güncelleştirilmesi gerekir.
+4. Çözümü derlemek ve çalıştırmak için <kbd>F5</kbd> tuşuna basın. **Araç kutusu**, iş akışı tasarım tuvali ve **PropertyGrid** bölmeleri tümünün gösterilmesi gerekir ve tasarım tuvaline bir <xref:System.Activities.Statements.Assign> etkinliği veya bir <xref:System.Activities.Statements.Sequence> etkinliği sürüklediğinizde, özellik kılavuzunun vurgulanan etkinliğe bağlı olarak güncelleştirilmesi gerekir.
 
 ## <a name="example"></a>Örnek
 
@@ -216,6 +216,6 @@ namespace HostingApplication
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İş Akışı Tasarımcısı yeniden barındırma](rehosting-the-workflow-designer.md)
-- [Görev 1: yeni bir Windows Presentation Foundation uygulaması oluşturma](task-1-create-a-new-wpf-app.md)
-- [Görev 2: İş Akışı Tasarımcısı barındırın](task-2-host-the-workflow-designer.md)
+- [İş Akışı Tasarımcısını Yeniden Barındırma](rehosting-the-workflow-designer.md)
+- [Görev 1: Yeni Bir Windows Presentation Foundation Uygulaması Oluşturma](task-1-create-a-new-wpf-app.md)
+- [Görev 2: İş Akışı Tasarımcısını Barındırma](task-2-host-the-workflow-designer.md)

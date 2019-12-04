@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: 675b6b8a177fe5851c2abd1f785ac617de2cf37d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 59bbeb4091c101efeac4e0562f0e3cbd5a8b5f79
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045065"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716360"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer Örneği
-DataContractSerializer örneği, veri sözleşmesi <xref:System.Runtime.Serialization.DataContractSerializer>sınıfları için genel serileştirme ve seri durumdan çıkarma hizmetlerini gerçekleştiren öğesini gösterir. Örnek, bir `Record` nesnesi oluşturur, bunu bir bellek akışına serileştirir ve ' nin kullanımını <xref:System.Runtime.Serialization.DataContractSerializer>göstermek için bellek akışını başka bir `Record` nesneye geri çıkarır. Örnek daha sonra, yazıcının Serileştirmeyi nasıl etkilediğini göstermek için bir ikili yazıcı kullanarak `Record` nesneyi serileştirir.  
+DataContractSerializer örneği, veri sözleşmesi sınıfları için genel serileştirme ve seri durumdan çıkarma hizmetlerini gerçekleştiren <xref:System.Runtime.Serialization.DataContractSerializer>gösterir. Örnek, bir `Record` nesnesi oluşturur, bunu bir bellek akışına serileştirir ve <xref:System.Runtime.Serialization.DataContractSerializer>kullanımını göstermek için bellek akışını başka bir `Record` nesnesine yeniden serileştirir. Örnek daha sonra, yazıcının Serileştirmeyi nasıl etkilediğini göstermek için bir ikili yazıcı kullanarak `Record` nesnesini serileştirir.  
   
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- İçin `Record` veri sözleşmesi aşağıdaki örnek kodda gösterilmiştir.  
+ `Record` için veri sözleşmesi aşağıdaki örnek kodda gösterilmiştir.  
   
 ```csharp  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -71,14 +71,14 @@ internal class Record
 }  
 ```  
   
- Örnek kod, daha sonra `Record` nesnesini görüntüleyen `record1` adlı bir nesne oluşturur.  
+ Örnek kod, `record1` adlı bir `Record` nesnesi oluşturur ve sonra nesneyi görüntüler.  
   
 ```csharp
 Record record1 = new Record(1, 2, "+", 3);  
 Console.WriteLine("Original record: {0}", record1.ToString());  
 ```  
   
- Örnek daha sonra bir bellek <xref:System.Runtime.Serialization.DataContractSerializer> akışına seri `record1` hale getirmek için öğesini kullanır.  
+ Örnek daha sonra `record1` bir bellek akışına seri hale getirmek için <xref:System.Runtime.Serialization.DataContractSerializer> kullanır.  
   
 ```csharp  
 MemoryStream stream1 = new MemoryStream();  
@@ -88,7 +88,7 @@ DataContractSerializer serializer = new DataContractSerializer(typeof(Record));
 serializer.WriteObject(stream1, record1);  
 ```  
   
- Ardından örnek, bellek akışını yeni <xref:System.Runtime.Serialization.DataContractSerializer> `Record` bir nesneye geri çıkarmak için öğesini kullanır ve görüntüler.  
+ Ardından örnek, bellek akışının serisini yeni bir `Record` nesnesine geri yüklemek için <xref:System.Runtime.Serialization.DataContractSerializer> kullanır ve onu görüntüler.  
   
 ```csharp  
 stream1.Position = 0;  
@@ -99,7 +99,7 @@ Record record2 = (Record)serializer.ReadObject(stream1);
 Console.WriteLine("Deserialized record: {0}", record2.ToString());  
 ```  
   
- Varsayılan olarak, nesneleri `DataContractSerializer` XML 'nin metinsel gösterimini kullanarak bir akışa kodluyor. Ancak, XML 'nin kodlamasını farklı bir yazıcıya geçirerek de etkileyebilirsiniz. Örnek, çağırarak <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>bir ikili yazıcı oluşturur. Daha sonra, aradığında <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>, yazıcı ve kayıt nesnesini serileştiriciye geçirir. Son olarak, örnek, yazıcıyı ve akış uzunlularındaki raporları temizler.  
+ Varsayılan olarak `DataContractSerializer`, XML 'nin metinsel gösterimini kullanarak nesneleri bir akışa kodluyor. Ancak, XML 'nin kodlamasını farklı bir yazıcıya geçirerek de etkileyebilirsiniz. Örnek, <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>çağırarak bir ikili yazıcı oluşturur. Daha sonra, <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>çağırdığında yazıcı ve kayıt nesnesini serileştiriciye geçirir. Son olarak, örnek, yazıcıyı ve akış uzunlularındaki raporları temizler.  
   
 ```csharp  
 MemoryStream stream2 = new MemoryStream();  
@@ -137,6 +137,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractSerializer`  

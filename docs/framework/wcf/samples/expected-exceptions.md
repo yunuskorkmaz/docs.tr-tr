@@ -2,12 +2,12 @@
 title: Beklenen Özel Durumlar
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: a874b291202cb8c3c8752c13b357679c7fd5a556
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 24bb9b483a3f26241f895d68b763a1974b02151b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989971"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716449"
 ---
 # <a name="expected-exceptions"></a>Beklenen Özel Durumlar
 Bu örnek, yazılan bir istemci kullanılırken beklenen özel durumların nasıl yakalanacağını gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır. Bu örnekte, istemci bir konsol uygulaması (. exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
@@ -15,15 +15,15 @@ Bu örnek, yazılan bir istemci kullanılırken beklenen özel durumların nası
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Bu örnek, doğru programların işlemesi gereken iki beklenen özel durum türünü yakalama ve işlemeyi gösterir: `TimeoutException` ve `CommunicationException`.  
+ Bu örnek, doğru programların işlenmesi gereken iki beklenen özel durum türünü yakalama ve işlemeyi gösterir: `TimeoutException` ve `CommunicationException`.  
   
- Windows Communication Foundation (WCF) istemcisinde iletişim yöntemlerinden oluşturulan özel durumlar bekleniyor veya beklenmiyor. Beklenmeyen özel durumlar, veya `OutOfMemoryException` `InvalidOperationException`gibi `ArgumentNullException` programlama hataları gibi çok zararlı hatalar içerir. Genellikle beklenmeyen hataları işlemenin yararlı bir yolu yoktur, bu nedenle genellikle WCF istemci iletişim yöntemini çağırırken bunları yakalamayın.  
+ Windows Communication Foundation (WCF) istemcisinde iletişim yöntemlerinden oluşturulan özel durumlar bekleniyor veya beklenmiyor. Beklenmeyen özel durumlar, `OutOfMemoryException` ve `ArgumentNullException` veya `InvalidOperationException`gibi programlama hataları gibi çok zararlı hatalara sahiptir. Genellikle beklenmeyen hataları işlemenin yararlı bir yolu yoktur, bu nedenle genellikle WCF istemci iletişim yöntemini çağırırken bunları yakalamayın.  
   
- Bir WCF istemcisinde iletişim yöntemlerinden beklenen özel durumlar, `TimeoutException` `CommunicationException` `CommunicationException`ve tüm türetilmiş sınıflarını içerir. Bu, WCF istemcisini iptal ederek ve bir iletişim hatası bildirerek güvenli bir şekilde işlenebilen iletişim sırasında bir sorun olduğunu gösterir. Dış faktörler herhangi bir uygulamada bu hatalara neden olabileceğinden, doğru uygulamalar bu özel durumları yakalamalı ve oluştuğunda kurtarmalıdır.  
+ Bir WCF istemcisinde iletişim yöntemlerinden beklenen özel durumlar, `TimeoutException`, `CommunicationException`ve `CommunicationException`türetilmiş tüm sınıflarını içerir. Bu, WCF istemcisini iptal ederek ve bir iletişim hatası bildirerek güvenli bir şekilde işlenebilen iletişim sırasında bir sorun olduğunu gösterir. Dış faktörler herhangi bir uygulamada bu hatalara neden olabileceğinden, doğru uygulamalar bu özel durumları yakalamalı ve oluştuğunda kurtarmalıdır.  
   
- Bir istemcinin oluşturbileceği birkaç türetilmiş `CommunicationException` sınıf vardır. Bazı durumlarda, uygulamalar özel işlem yapmak için bunlardan bazılarını da yakalar, ancak diğerlerinin bir `CommunicationException`olarak işlenmesine izin verir. Bu, önce daha özel bir özel durum türü yakalayıp daha sonra `CommunicationException` bir catch yan tümcesinde yakalanarak gerçekleştirilebilir.  
+ Bir istemcinin oluşturbileceği birkaç türetilmiş `CommunicationException` sınıfı vardır. Bazı durumlarda, uygulamalar özel işlem yapmak için bunlardan bazılarını da yakalar, ancak diğerlerinin `CommunicationException`olarak işlenmesine izin verir. Bu, önce daha özel bir özel durum türü yakalayıp sonra `CommunicationException` daha sonra bir catch yan tümcesinde yakalanarak gerçekleştirilebilir.  
   
- İstemci iletişim yöntemini çağıran kodun `TimeoutException` ve ' i `CommunicationException`yakalamalı olması gerekir. Bu tür hataları işlemenin bir yolu, istemciyi durdurmak ve iletişim başarısızlığını raporlamak olur.  
+ İstemci iletişim yöntemini çağıran kodun `TimeoutException` ve `CommunicationException`yakalamalı olması gerekir. Bu tür hataları işlemenin bir yolu, istemciyi durdurmak ve iletişim başarısızlığını raporlamak olur.  
   
 ```csharp   
 try  
@@ -45,14 +45,14 @@ catch (CommunicationException exception)
 }  
 ```  
   
- Beklenen bir özel durum oluşursa, istemci daha sonra kullanılabilir olmayabilir veya olmayabilir. İstemcinin hala kullanılabilir olup olmadığını anlamak için, `State` özelliğinin olduğunu `CommunicationState`kontrol edin. Makta. Hala açılırsa, hala kullanılabilir olur. Aksi takdirde, istemciyi iptal etmeniz ve tüm başvurularını serbest bırakmanız gerekir.  
+ Beklenen bir özel durum oluşursa, istemci daha sonra kullanılabilir olmayabilir veya olmayabilir. İstemcinin hala kullanılabilir olup olmadığını anlamak için `State` özelliğinin `CommunicationState`olup olmadığını kontrol edin. Makta. Hala açılırsa, hala kullanılabilir olur. Aksi takdirde, istemciyi iptal etmeniz ve tüm başvurularını serbest bırakmanız gerekir.  
   
 > [!CAUTION]
-> Bir oturumun bulunduğu istemciler genellikle özel bir durum sonrasında artık kullanılamaz ve bir oturumu olmayan istemciler genellikle bir özel durumla sonra hala kullanılabilir. Ancak, bunlardan hiçbiri garanti edilmez, bu nedenle istemciyi kullanmaya devam etmeyi denemek istiyorsanız, uygulamanızın hala açık olduğunu doğrulamak için `State` özelliği denetlemesi gerekir.  
+> Bir oturumun bulunduğu istemciler genellikle özel bir durum sonrasında artık kullanılamaz ve bir oturumu olmayan istemciler genellikle bir özel durumla sonra hala kullanılabilir. Ancak, bunlardan hiçbiri garanti edilmez, bu nedenle istemciyi kullanmaya devam etmeyi denemek istiyorsanız, uygulamanızın hala açık olduğunu doğrulamak için `State` özelliğini denetlemesi gerekir.  
   
  Örneği çalıştırdığınızda, işlem yanıtları ve özel durumlar istemci konsol penceresinde görüntülenir.  
   
- İstemci süreci iki senaryo çalıştırır, her biri ' ın her birini çağırma `Add` `Divide`girişiminde bulunur. İlk senaryo, çağrısını `Divide`yapmadan önce istemciyi iptal ederek bir ağ sorununun benzetimini yapar. İkinci senaryo, yöntemin tamamlanabilmesi için çok kısa süre sonu ayarlayarak zaman aşımı koşuluna neden olur. İstemci işlemindeki beklenen çıkış:  
+ İstemci işlemi, her biri `Add` ve ardından `Divide`tarafından her bir çağrı girişiminde bulunan iki senaryo çalıştırır. İlk senaryo, `Divide`çağrısı yapmadan önce istemciyi iptal ederek bir ağ sorununun benzetimini yapar. İkinci senaryo, yöntemin tamamlanabilmesi için çok kısa süre sonu ayarlayarak zaman aşımı koşuluna neden olur. İstemci işlemindeki beklenen çıkış:  
   
 ```output
 Add(100,15.99) = 115.99  
@@ -76,6 +76,6 @@ Got System.TimeoutException
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  

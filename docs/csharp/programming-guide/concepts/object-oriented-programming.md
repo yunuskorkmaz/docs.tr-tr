@@ -2,12 +2,12 @@
 title: Nesne odaklı programlama (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 121d2e43f6896179756067e661be6d7960a1ee64
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1de150f6eb4be893ca1afce6bd16afde5752c986
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418042"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711816"
 ---
 # <a name="object-oriented-programming-c"></a>Nesne odaklı programlama (C#)
 
@@ -77,7 +77,7 @@ struct SampleStruct
 }
 ```
 
-Daha fazla bilgi için bkz.:
+Daha fazla bilgi için bkz.
 
 - [class](../../language-reference/keywords/class.md)
 
@@ -131,7 +131,7 @@ class SampleClass
 
 Çoğu özelliğin, özellik değerini ayarlamak ve almak için yöntemleri ya da yordamları vardır. Ancak, bunları değiştirilmesini veya okumayı kısıtlamak için salt okunurdur veya salt yazılır özellikler oluşturabilirsiniz. İçinde C#, `get` veya `set` özellik yöntemini atlayabilirsiniz. Ancak otomatik olarak uygulanan özellikler salt okunurdur veya salt yazılır olamaz.
 
-Daha fazla bilgi için bkz.:
+Daha fazla bilgi için bkz.
 
 - [get](../../language-reference/keywords/get.md)
 
@@ -158,13 +158,13 @@ Bir sınıf, parametrelerin veya parametre türlerinin sayısında farklı olan 
 Bir yöntemi aşırı yüklemek için:
 
 ```csharp
-public int sampleMethod(string sampleParam) {};
+public int sampleMethod(string sampleParam) {}
 public int sampleMethod(int sampleParam) {}
 ```
 
 Çoğu durumda, bir sınıf tanımı içinde bir yöntemi bildirirsiniz. Ancak, C# sınıfının gerçek tanımının dışında mevcut bir sınıfa Yöntemler eklemenize olanak tanıyan *genişletme yöntemlerini* de destekler.
 
-Daha fazla bilgi için bkz.:
+Daha fazla bilgi için bkz.
 
 - [Yöntemler](../classes-and-structs/methods.md)
 
@@ -186,9 +186,7 @@ public class SampleClass
 }
 ```
 
-Daha fazla bilgi için bkz.:
-
-[Oluşturucular](../classes-and-structs/constructors.md).
+Daha fazla bilgi için bkz. [oluşturucular](../classes-and-structs/constructors.md).
 
 #### <a name="Finalizers"></a>Sonlandırıcılar
 
@@ -268,7 +266,7 @@ SampleClass sampleObject = new SampleClass
     { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-Daha fazla bilgi için bkz.:
+Daha fazla bilgi için bkz.
 
 - [new İşleci](../../language-reference/operators/new-operator.md)
 
@@ -338,7 +336,7 @@ Bir sınıfın yalnızca temel sınıf olarak kullanılabileceğini ve örneklen
 public abstract class B { }
 ```
 
-Daha fazla bilgi için bkz.:
+Daha fazla bilgi için bkz.
 
 - [sealed](../../language-reference/keywords/sealed.md)
 
@@ -382,7 +380,7 @@ class SampleClass : ISampleInterface
 }
 ```
 
-Daha fazla bilgi için bkz.:
+Daha fazla bilgi için bkz.
 
 [Arabirimler](../interfaces/index.md)
 
@@ -408,7 +406,7 @@ SampleGeneric<string> sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
-Daha fazla bilgi için bkz.:
+Daha fazla bilgi için bkz.
 
 - [Genel Türler](../../../standard/generics/index.md)
 
@@ -446,7 +444,7 @@ class SampleClass
 }
 ```
 
-Daha fazla bilgi için bkz.:
+Daha fazla bilgi için bkz.
 
 - [Temsilciler](../delegates/index.md)
 

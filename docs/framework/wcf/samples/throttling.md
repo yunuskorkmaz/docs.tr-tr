@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, throttling sample
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
-ms.openlocfilehash: b19e58222248e7ce5abddb118ec00ff3e17e9963
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 14d16a644aa89d5da9ec1adcbdef48367ddc1205
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044666"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715688"
 ---
 # <a name="throttling"></a>Sınırlama
 Daraltma örneği, azaltma denetimlerinin kullanımını gösterir. Azaltma denetimleri, kaynakların aşırı kullanımını önlemeye yönelik eşzamanlı çağrı, örnek veya oturum sayısına yönelik sınırlar yerleştirir. Daraltma davranışı hizmet yapılandırma dosyası ayarları ' nda belirtilmiştir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır.  
@@ -20,7 +20,7 @@ Daraltma örneği, azaltma denetimlerinin kullanımını gösterir. Azaltma dene
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Hizmet yapılandırma dosyası, aşağıdaki örnek yapılandırmada gösterildiği gibi, bir [ \<serviceazaltma >](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)içindeki azaltma denetimlerini belirtir.  
+ Hizmet yapılandırma dosyası, aşağıdaki örnek yapılandırmada gösterildiği gibi [\<Serviceazaltma >](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)azaltma denetimlerini belirtir.  
   
 ```xml  
 <behaviors>  
@@ -78,6 +78,6 @@ Press any key to continue . . .
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Throttling`  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 445cf4178b90719f923b66a7778f60c1bc846766
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 87e756445255f1bd2417a06dfa611eba23208575
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204982"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716746"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-Görünüm-Görünüm Model ile Taşınabilir Sınıf Kitaplığı Kullanma
 Model-görünüm-görünüm modeli (MVVM) modelini uygulamak ve derlemeleri birden çok platformda paylaşmak için .NET Framework [taşınabilir sınıf kitaplığını](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) kullanabilirsiniz.
@@ -30,7 +30,7 @@ Model-görünüm-görünüm modeli (MVVM) modelini uygulamak ve derlemeleri bird
  Bu konu, MVVM düzeniyle ilgili genel bilgileri sağlamaz. Yalnızca taşınabilir sınıf kitaplığının, MVVM uygulamak için nasıl kullanılacağına ilişkin bilgiler sağlar. MVVM hakkında daha fazla bilgi için bkz. [WPF Için Prronizm kitaplığı 5,0 kullanılarak MVVM hızlı](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))başlangıcı.
 
 ## <a name="classes-that-support-mvvm"></a>MVVM 'YI destekleyen sınıflar
- Taşınabilir sınıf kitaplığı projeniz için .NET Framework 4,5, [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight veya Windows Phone 7,5 ' i hedeflediğinizde, MVVM deseninin uygulanması için aşağıdaki sınıflar mevcuttur:
+ .NET Framework 4,5, Windows 8. x Mağazası uygulamaları, Silverlight veya Windows Phone 7,5 için, taşınabilir sınıf kitaplığı projeniz için .NET ' i hedeflediğinizde, MVVM deseninin uygulanması için aşağıdaki sınıflar mevcuttur:
 
 - <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> sınıfı
 

@@ -2,12 +2,12 @@
 title: Windows için WCF Hizmetleri ve Etkinlik İzleme
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: e1ee7154e2ad5b22ff0debcdd15d5809fc55df13
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 93663cbc33b6fab9b34bb02187e5b04192f5c13d
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044526"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715259"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Windows için WCF Hizmetleri ve Etkinlik İzleme
 Bu örnek, Windows için olay Izleme (ETW) içindeki olayları göstermek için Windows Communication Foundation (WCF) ' de analitik izlemenin nasıl kullanılacağını gösterir. Analitik izlemeler, WCF yığınında, üretim ortamındaki WCF hizmetlerinde sorun gidermeye izin veren önemli noktalara yayılan olaylardır.
@@ -26,17 +26,17 @@ Bu örnek, Windows için olay Izleme (ETW) içindeki olayları göstermek için 
 
      Web tarayıcısında, **Hesaplayıcı. svc**' ye tıklayın. Hizmet için WSDL belgesinin URI 'SI tarayıcıda görünmelidir. Bu URI 'yi kopyalayın.
 
-     Varsayılan olarak, hizmet bağlantı noktası 1378 `http://localhost:1378/Calculator.svc`' deki istekleri dinlemeye başlar.
+     Hizmet, varsayılan olarak 1378 numaralı bağlantı noktasında istekleri dinlemeye başlar `http://localhost:1378/Calculator.svc`.
 
 4. WCF test istemcisini (WcfTestClient. exe) çalıştırın.
 
-     WCF Test istemcisi (WcfTestClient. exe) konumunda `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`bulunur.  Varsayılan Visual Studio 2012 install dir `C:\Program Files\Microsoft Visual Studio 10.0`.
+     WCF Test istemcisi (WcfTestClient. exe) `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`konumunda bulunur.  Varsayılan Visual Studio 2012 Install dir `C:\Program Files\Microsoft Visual Studio 10.0`.
 
 5. WCF Test istemcisi içinde **Dosya**' yı ve ardından **Hizmet Ekle**' yi seçerek hizmeti ekleyin.
 
      Giriş kutusuna uç nokta adresini ekleyin. Varsayılan, `http://localhost:1378/Calculator.svc` değeridir.
 
-6. Olay Görüntüleyici uygulamasını açın.
+6. Olay Görüntüleyicisi uygulamasını açın.
 
      Hizmeti çağırmadan önce Olay Görüntüleyicisi başlatın ve olay günlüğünün WCF hizmetinden yayılan izleme olaylarını dinlediğinden emin olun.
 
@@ -52,7 +52,7 @@ Bu örnek, Windows için olay Izleme (ETW) içindeki olayları göstermek için 
 
 #### <a name="to-test-the-service"></a>Hizmeti test etmek için
 
-1. WCF test istemcisine geri dönün ve çift tıklayın `Divide` ve 0 paydasını belirten varsayılan değerleri tutun.
+1. WCF test istemcisine geri dönün ve `Divide` çift tıklayın ve 0 paydasını belirten varsayılan değerleri tutun.
 
      Payda 0 ise, hizmet bir hata oluşturur.
 
@@ -62,7 +62,7 @@ Bu örnek, Windows için olay Izleme (ETW) içindeki olayları göstermek için 
 
      WCF analitik izleme olayları Olay Görüntüleyicisi 'nde görüntülenir. Olay görüntüleyicisindeki bir hata izleme olayı tarafından bir hata oluşturulduğuna dikkat edin.
 
-3. 1 ve 2. adımları, ancak geçerli girişlerle tekrarlayın. `N2` Parametresinin değeri 0 dışında herhangi bir sayı olabilir.
+3. 1 ve 2. adımları, ancak geçerli girişlerle tekrarlayın. `N2` parametresinin değeri 0 dışında herhangi bir sayı olabilir.
 
      WCF olaylarını görüntülemek için analitik kanalı yenileme herhangi bir hata olayı içermez.
 
@@ -70,7 +70,7 @@ Bu örnek, Windows için olay Izleme (ETW) içindeki olayları göstermek için 
 
 #### <a name="to-cleanup-optional"></a>Temizlemek için (Isteğe bağlı)
 
-1. Olay Görüntüleyicisi açın.
+1. Olay Görüntüleyicisi'ni açın.
 
 2. **Olay Görüntüleyicisi**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**ve sonra **uygulama-sunucu uygulamaları**' na gidin. **Analitik** öğesine sağ tıklayın ve **günlüğü devre dışı bırak**' ı seçin.
 
@@ -83,7 +83,7 @@ Bu örnek, Windows için olay Izleme (ETW) içindeki olayları göstermek için 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   

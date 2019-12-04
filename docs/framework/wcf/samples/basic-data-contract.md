@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
-ms.openlocfilehash: a1599afa184fe4b4228305051018e6a8cb9efed9
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: fbcc93826ebe2857345823176ddc0054b7e62eea
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045749"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716114"
 ---
 # <a name="basic-data-contract"></a>Temel Veri Sözleşmesi
 
@@ -38,7 +38,7 @@ public interface ICalculator
 }
 ```
 
- Ve öznitelikleri, aşağıdaki örnek kodda gösterildiği gibi, sınıfının hangi `ComplexNumber` alanların istemci ve hizmet arasındaki kablo üzerinden geçirilebileceğini göstermek üzere sınıfının tanımına uygulandı. <xref:System.Runtime.Serialization.DataMemberAttribute> <xref:System.Runtime.Serialization.DataContractAttribute>
+ <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelikleri, aşağıdaki örnek kodda gösterildiği gibi, sınıfın hangi alanlarının istemci ve hizmet arasındaki hatta geçirilebileceğini göstermek için `ComplexNumber` sınıfının tanımına uygulandı.
 
 ```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -57,7 +57,7 @@ public class ComplexNumber
 }
 ```
 
-Hizmet uygulama, `ComplexNumber` türü kabul eden ve döndüren uygun sonucu hesaplar ve döndürür.
+Hizmet uygulama, `ComplexNumber` türünün numaralarını kabul eden ve döndüren uygun sonucu hesaplar ve döndürür.
 
 ```csharp
 // This is the service class that implements the service contract.
@@ -144,6 +144,6 @@ Press <ENTER> to terminate client.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\Basic`

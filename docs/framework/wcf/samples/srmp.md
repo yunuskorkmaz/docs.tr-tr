@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 51b0e0513ba20bf7aeae461dee6ac864f1d55897
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 0ee11b67dcd9c7251df17dc7523dc20765e157c5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417092"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716699"
 ---
 # <a name="srmp"></a>SRMP
 Bu örnek, HTTP üzerinden Message Queuing (MSMQ) kullanılarak işlenen sıraya alınmış iletişimin nasıl gerçekleştirileceğini gösterir.  
@@ -37,7 +37,7 @@ Bu örnek, HTTP üzerinden Message Queuing (MSMQ) kullanılarak işlenen sıraya
 ## <a name="requirements"></a>Gereksinimler  
  Bu örneği çalıştırmak için, MSMQ 'ya ek olarak hem hizmette hem de istemci makinelerde IIS yüklü olmalıdır.  
   
-## <a name="demonstrates"></a>Gösteriler  
+## <a name="demonstrates"></a>Gösterir  
  Örnek, HTTP üzerinden MSMQ kullanarak WCF sıraya alınan iletileri göndermeyi gösterir. Bu, SRMP mesajlaşma olarak da adlandırılır. Sıraya alınan bir ileti gönderildiğinde, Gönderen makinedeki MSMQ iletileri TCP veya HTTP taşıması üzerinden alma kuyruğu Yöneticisi 'ne aktarır. SRMP ' i seçerek Kullanıcı, kuyruk aktarımı için bir taşıma olarak HTTP seçeneğini belirtir. SRMP Secure, HTTPS kullanımını sunar.  
   
 ## <a name="example"></a>Örnek  
@@ -92,6 +92,6 @@ OrderDetails
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  

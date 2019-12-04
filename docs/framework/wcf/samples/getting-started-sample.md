@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 5f5418da63b2bc5fc9b20f5c262890b7a06ce5dd
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 3282daff166a8fe56841a41bfe8bd9dd69f9d4c8
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989919"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716936"
 ---
 # <a name="getting-started-sample"></a>Başlarken Örneği
 
@@ -26,7 +26,7 @@ Başlarken örneği, Windows Communication Foundation (WCF) kullanılarak tipik 
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted`
 
@@ -34,7 +34,7 @@ Hizmet, bir hizmet sözleşmesinde gerçekleştirdiği işlemleri, genel olarak 
 
 İstemci, hizmet sözleşmesinin bir tanımını ve hizmete erişmek için bir proxy sınıfı içerir. Proxy kodu, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)kullanılarak hizmet meta verilerinden oluşturulur.
 
-Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)], hizmet Windows etkinleştirme hizmeti 'nde (was) barındırılır. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Ve[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]üzerinde, Internet Information Services (IIS) ve ASP.NET tarafından barındırılır. Bir hizmetin IIS 'de barındırılması, ilk kez erişildiğinde hizmetin otomatik olarak etkinleştirilmesini sağlar.
+[!INCLUDE[wv](../../../../includes/wv-md.md)], hizmet Windows etkinleştirme hizmeti 'nde (WAS) barındırılır. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Internet Information Services (IIS) ve ASP.NET tarafından barındırılır. Bir hizmetin IIS 'de barındırılması, ilk kez erişildiğinde hizmetin otomatik olarak etkinleştirilmesini sağlar.
 
 > [!NOTE]
 > Hizmeti IIS yerine bir konsol uygulamasında barındıran bir örnekle çalışmaya başlamak isterseniz, [self-Host](../../../../docs/framework/wcf/samples/self-host.md) örneğine bakın.
@@ -43,7 +43,7 @@ Hizmet ve istemci, dağıtım sırasında esneklik sağlayan yapılandırma dosy
 
 Hizmet, meta verilerini yayımlamak için bir çalışma zamanı davranışı yapılandırır.
 
-Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, matematik işlemlerini (ekleme `ICalculator` , çıkarma, çarpma ve bölme) sunan arabirim tarafından tanımlanır. İstemci belirli bir matematik işlemine istek yapar ve hizmet sonuçla yanıt verir. Hizmet, aşağıdaki kodda `ICalculator` tanımlı bir sözleşme uygular.
+Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) sunan `ICalculator` arabirimi tarafından tanımlanır. İstemci belirli bir matematik işlemine istek yapar ve hizmet sonuçla yanıt verir. Hizmet aşağıdaki kodda tanımlanan bir `ICalculator` sözleşme uygular.
 
 ```vb
 ' Define a service contract.
@@ -140,11 +140,11 @@ Hizmet, aşağıdaki örnek yapılandırmada gösterildiği gibi, bir yapıland�
 </services>
 ```
 
-Hizmet, uç noktayı IIS veya WAS ana bilgisayar tarafından belirtilen temel adreste kullanıma sunar. Bağlama, adresleme ve güvenlik için http <xref:System.ServiceModel.WSHttpBinding>iletişimi ve standart Web hizmeti protokolleri sağlayan bir standart ile yapılandırılır. Sözleşme, hizmet tarafından `ICalculator` uygulanır.
+Hizmet, uç noktayı IIS veya WAS ana bilgisayar tarafından belirtilen temel adreste kullanıma sunar. Bağlama, adresleme ve güvenlik için HTTP iletişimi ve standart Web hizmeti protokolleri sağlayan bir standart <xref:System.ServiceModel.WSHttpBinding>ile yapılandırılır. Sözleşme, hizmet tarafından uygulanan `ICalculator`.
 
-Yapılandırıldığı gibi, hizmete aynı bilgisayardaki bir istemci `http://localhost/servicemodelsamples/service.svc` tarafından erişilebilir. Uzak bilgisayarlardaki istemcilerin hizmete erişmesi için localhost yerine tam etki alanı adı belirtilmelidir.
+Yapılandırıldığı gibi, hizmete aynı bilgisayardaki bir istemci tarafından `http://localhost/servicemodelsamples/service.svc` erişilebilir. Uzak bilgisayarlardaki istemcilerin hizmete erişmesi için localhost yerine tam etki alanı adı belirtilmelidir.
 
-Çerçeve varsayılan olarak meta verileri kullanıma sunmaz. Bu nedenle hizmet, <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ve ' ı açar ve bir meta veri değişimi (MEX) `http://localhost/servicemodelsamples/service.svc/mex`uç noktasını kullanıma sunar. Aşağıdaki yapılandırma bunu gösterir.
+Çerçeve varsayılan olarak meta verileri kullanıma sunmaz. Bu nedenle hizmet, <xref:System.ServiceModel.Description.ServiceMetadataBehavior> açar ve `http://localhost/servicemodelsamples/service.svc/mex`bir meta veri değişimi (MEX) uç noktasını kullanıma sunar. Aşağıdaki yapılandırma bunu gösterir.
 
 ```xaml
 <system.serviceModel>
@@ -285,5 +285,5 @@ Başlarken örneği, bir hizmet ve istemci oluşturmanın standart yolunu göste
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Yönetilen bir uygulamada bir WCF hizmeti barındırma](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [Nasıl yapılır: IIS 'de WCF hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Nasıl yapılır: Yönetilen Bir Uygulamada Bir WCF Hizmeti Barındırma](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Nasıl yapılır: IIS'de WCF Hizmeti Barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

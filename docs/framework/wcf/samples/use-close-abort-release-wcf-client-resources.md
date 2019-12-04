@@ -3,12 +3,12 @@ title: Kapat ve Durdur seçeneklerini kullanarak WCF istemci kaynaklarını serb
 description: Dispose başarısız olabilir ve ağ başarısız olduğunda özel durum oluşturabilir. Bu, istenmeyen davranışa neden olabilir. Bunun yerine, ağ başarısız olduğunda istemci kaynaklarını serbest bırakmak için Kapat ve Iptal ' i kullanın.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: afb52e89c5f159e7866ebc8f30fcfae7dd5be93a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 38861252a470f71a6fa88554e289344e2918d710
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424167"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715328"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Ağ bağlantıları kesildiğinde yayın kaynaklarını güvenli bir şekilde kapat ve Iptal et
 
@@ -116,6 +116,6 @@ Press <ENTER> to terminate client.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\UsingUsing`

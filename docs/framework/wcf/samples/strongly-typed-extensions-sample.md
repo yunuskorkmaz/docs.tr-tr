@@ -2,12 +2,12 @@
 title: Güçlü Yazılmış Uzantılar Örneği
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 8dc6bca87989b1ee8e1ee440b0d64e2c196cc28f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4ad0a8e10ecbcb5e3ddf9106dbbaa55356314020
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978234"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716615"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Güçlü Yazılmış Uzantılar Örneği
 Örnek, örnek amaçları için <xref:System.ServiceModel.Syndication.SyndicationFeed> sınıfını kullanır. Ancak, bu örnekte gösterilen desenler uzantı verilerini destekleyen tüm dağıtım sınıflarıyla birlikte kullanılabilir.  
@@ -144,7 +144,7 @@ public void ReadXml(System.Xml.XmlReader reader)
 }  
 ```  
   
- `WriteXml`, `InReplyToElement` yöntemi önce `Ref`, `HRef`, `Source`ve `MediaType` özelliklerinin değerlerini XML öznitelikleri olarak yazar (`WriteXml` gerçek dış öğenin kendisini yazmadan sorumludur `WriteXml`) çağıranı tarafından yapıldığı gibi). Ayrıca, aşağıdaki kodda gösterildiği gibi <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> içeriğini ve yazıcı <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> yazar.  
+ `WriteXml`, `InReplyToElement` yöntemi önce `Ref`, `HRef`, `Source`ve `MediaType` özelliklerinin değerlerini XML öznitelikleri olarak yazar (`WriteXml`, `WriteXml`çağıranı tarafından yapıldığı gibi gerçek dış öğenin kendisini yazmadan sorumludur). Ayrıca, aşağıdaki kodda gösterildiği gibi <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> içeriğini ve yazıcı <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> yazar.  
   
 ```csharp
 public void WriteXml(System.Xml.XmlWriter writer)  
@@ -283,6 +283,6 @@ public class ThreadedItem : SyndicationItem
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  

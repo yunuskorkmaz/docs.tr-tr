@@ -2,12 +2,12 @@
 title: Temel HTTP Hizmeti
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: ec716b41efb3dde6e5afdb386d797e402d924b56
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8dfcd5a751bcef6aa24b5cb4a200c8820c43fe81
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045154"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716099"
 ---
 # <a name="basic-http-service"></a>Temel HTTP Hizmeti
 
@@ -15,15 +15,15 @@ Bu örnek, Windows Communication Foundation (WCF) REST programlama modelini kull
 
 ## <a name="sample-details"></a>Örnek Ayrıntılar
 
-WCF hizmeti, giriş olarak geçirilmiş olan `EchoWithGet` dizeyi `EchoWithPost`döndüren 2 işlem sunar.
+WCF hizmeti, giriş olarak geçirilmiş dizeyi döndüren 2 işlem, `EchoWithGet` ve `EchoWithPost`sunar.
 
-İşlem, ile birlikte <xref:System.ServiceModel.Web.WebGetAttribute>açıklanmış ve bu işlem, işlemin http `GET` isteklerini işleyeceği anlamına gelir. `EchoWithGet` Açıkça bir <xref:System.ServiceModel.Web.WebGetAttribute> <xref:System.UriTemplate>olarak belirtmediği için, işlem giriş dizesinin adı `s`olan bir sorgu dizesi parametresi kullanılarak geçirilmesini bekler. Hizmetin beklediği URI biçiminin <xref:System.ServiceModel.Web.WebGetAttribute.UriTemplate%2A> özelliği kullanılarak özelleştirildiğini unutmayın.
+`EchoWithGet` işlemine, işlemin HTTP `GET` isteklerini işlediğini gösteren <xref:System.ServiceModel.Web.WebGetAttribute>ile açıklama eklenir. <xref:System.ServiceModel.Web.WebGetAttribute> açıkça bir <xref:System.UriTemplate>belirtmediğinden, işlem giriş dizesinin `s`adında bir sorgu dizesi parametresi kullanılarak geçirilmesini bekler. Hizmetin beklediği URI biçiminin <xref:System.ServiceModel.Web.WebGetAttribute.UriTemplate%2A> özelliği kullanılarak özelleştirildiğini unutmayın.
 
-İşlem, <xref:System.ServiceModel.Web.WebInvokeAttribute> bir`GET` işlem olmadığını (yan etkilere sahiptir) gösteren ile birlikte açıklanmış. `EchoWithPost` Açıkça bir <xref:System.ServiceModel.Web.WebInvokeAttribute> `Method`olarak belirtmediği için işlem, istek gövdesinde dize içeren `POST` http isteklerini işler (örneğin, XML biçiminde). İstek için http yönteminin ve URI biçiminin, sırasıyla <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> ve <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate> özellikleri kullanılarak özelleştirilemeyeceğini unutmayın.
+`EchoWithPost` işlemine <xref:System.ServiceModel.Web.WebInvokeAttribute>açıklanmış ve bu bir `GET` işlemi olmadığını (yan etkilere sahiptir) gösterir. <xref:System.ServiceModel.Web.WebInvokeAttribute> açıkça bir `Method`belirtmediğinden, işlem, istek gövdesinde dize içeren HTTP `POST` isteklerini (örneğin, XML biçiminde) işler. HTTP yönteminin ve isteğin URI 'sinin biçiminin sırasıyla <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> ve <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate> özellikleri kullanılarak özelleştirildiğini unutmayın.
 
-App. config dosyası, WCF hizmetini <xref:System.ServiceModel.Description.WebHttpEndpoint> <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> özelliği olarak `true`ayarlanmış bir varsayılan ile yapılandırır. Sonuç olarak, WCF altyapısı, hizmetinde http isteklerinin nasıl oluşturulacağı ve hizmetin HTTP yanıtının `http://localhost:8000/Customers/help` nasıl kullanılacağı hakkında bilgi sağlayan bir otomatik HTML tabanlı yardım sayfası oluşturur.
+App. config dosyası, WCF hizmetini <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> özelliği `true`olarak ayarlanmış bir varsayılan <xref:System.ServiceModel.Description.WebHttpEndpoint> ile yapılandırır. Sonuç olarak, WCF altyapısı, hizmete HTTP isteklerinin nasıl oluşturulacağı ve hizmetin HTTP yanıtının nasıl kullanılacağı hakkında bilgi sağlayan `http://localhost:8000/Customers/help` adresinde otomatik bir HTML tabanlı yardım sayfası oluşturur.
 
-Program.cs, bir WCF kanal fabrikasının hizmete çağrı yapmak ve yanıtları işlemek için nasıl kullanılabileceğini gösterir. Bu, bir WCF hizmetine erişmenin yalnızca bir yoludur. Ayrıca, ve <xref:System.Net.HttpWebRequest> <xref:System.Net.WebClient>gibi diğer .NET Framework sınıfları kullanılarak hizmete erişmek da mümkündür.
+Program.cs, bir WCF kanal fabrikasının hizmete çağrı yapmak ve yanıtları işlemek için nasıl kullanılabileceğini gösterir. Bu, bir WCF hizmetine erişmenin yalnızca bir yoludur. Ayrıca, <xref:System.Net.HttpWebRequest> ve <xref:System.Net.WebClient>gibi diğer .NET Framework sınıfları kullanılarak hizmete erişmek da mümkündür.
 
 Örnek, kendi kendine barındırılan bir hizmet ve her ikisinin de bir konsol uygulaması içinde çalıştırdığı bir istemcisinden oluşur. Konsol uygulaması çalışırken, istemci hizmete istekler yapar ve ilgili bilgileri, yanıtlardan konsol penceresine yazar.
 
@@ -40,6 +40,6 @@ Program.cs, bir WCF kanal fabrikasının hizmete çağrı yapmak ve yanıtları 
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`

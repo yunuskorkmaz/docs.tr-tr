@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: d59ff7f66076fc56ebb27841105fad07a7c7fee1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204794"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716263"
 ---
 # <a name="file-and-stream-io"></a>Dosya ve Akış G/Ç
 
@@ -143,11 +143,11 @@ Bkz. [yalıtılmış depolama](isolated-storage.md).
 
 ## <a name="io-operations-in-windows-store-apps"></a>Windows Mağazası uygulamalarında g/ç işlemleri
 
-[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], akışlardan okuma ve akışlara yazma için birçok tür içerir; Ancak, bu küme tüm .NET Framework g/ç türlerini içermez.
+Windows 8. x Mağazası uygulamaları için .NET, akışları okuma ve akışlara yazma için birçok tür içerir; Ancak, bu küme tüm .NET Framework g/ç türlerini içermez.
 
 Windows 8. x Mağaza uygulamalarında g/ç işlemlerini kullanırken dikkat edilmesi için bazı önemli farklılıklar:
 
-- <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> ve <xref:System.IO.DirectoryInfo>gibi dosya işlemleriyle özellikle ilgili türler [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]dahil edilmez. Bunun yerine, <xref:Windows.Storage.StorageFile> ve <xref:Windows.Storage.StorageFolder>gibi Windows Çalışma Zamanı <xref:Windows.Storage?displayProperty=nameWithType> ad alanındaki türleri kullanın.
+- <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> ve <xref:System.IO.DirectoryInfo>gibi dosya işlemleriyle özellikle ilgili türler, Windows 8. x Mağazası uygulamaları için .NET 'e dahil edilmez. Bunun yerine, <xref:Windows.Storage.StorageFile> ve <xref:Windows.Storage.StorageFolder>gibi Windows Çalışma Zamanı <xref:Windows.Storage?displayProperty=nameWithType> ad alanındaki türleri kullanın.
 
 - Yalıtılmış depolama kullanılamıyor; Bunun yerine, [uygulama verilerini](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))kullanın.
 

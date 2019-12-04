@@ -2,22 +2,22 @@
 title: Hizmet Açıklaması
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-ms.openlocfilehash: 430079cab91c61fe28db3f0a9d6c0797c7b0278a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a087b595a426e1485e9990a5fa38e49ae940ffcb
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038846"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716288"
 ---
 # <a name="service-description"></a>Hizmet Açıklaması
-Hizmet açıklaması örneği, bir hizmetin çalışma zamanında hizmet açıklaması bilgilerini nasıl alabileceğinizi gösterir. Örnek, hizmet hakkında açıklayıcı bilgiler döndürmek için tanımlanmış ek bir hizmet işlemi ile [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır. Döndürülen bilgiler, hizmetin temel adreslerini ve uç noktalarını listeler. Hizmet <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost>, ve<xref:System.ServiceModel.Description.ServiceDescription> sınıflarını kullanarak bu bilgileri sağlar.  
+Hizmet açıklaması örneği, bir hizmetin çalışma zamanında hizmet açıklaması bilgilerini nasıl alabileceğinizi gösterir. Örnek, hizmet hakkında açıklayıcı bilgiler döndürmek için tanımlanmış ek bir hizmet işlemi ile [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır. Döndürülen bilgiler, hizmetin temel adreslerini ve uç noktalarını listeler. Hizmet, bu bilgileri <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost>ve <xref:System.ServiceModel.Description.ServiceDescription> sınıflarını kullanarak sağlar.  
   
  Bu örnekte, istemci bir konsol uygulaması (. exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
   
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Bu örnek, adlı `IServiceDescriptionCalculator`Hesaplayıcı sözleşmesinin değiştirilmiş bir sürümüne sahiptir. Sözleşme, istemciye yönelik temel adresi veya adresleri `GetServiceDescriptionInfo` , hizmet uç noktasını veya bitiş noktalarını tanımlayan, istemciye çok satırlı bir dize döndüren adlı ek bir hizmet işlemi tanımlar.  
+ Bu örnek, `IServiceDescriptionCalculator`adlı Hesaplayıcı sözleşmesinin değiştirilmiş bir sürümüne sahiptir. Sözleşme, istemciye yönelik temel adresi veya adresleri, hizmet uç noktasını veya bitiş noktalarını tanımlayan, istemciye çok satırlı bir dize döndüren `GetServiceDescriptionInfo` adlı ek bir hizmet işlemi tanımlar.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -36,7 +36,7 @@ public interface IServiceDescriptionCalculator
 }  
 ```  
   
- İçin `GetServiceDescriptionInfo` uygulama kodu, hizmet uç <xref:System.ServiceModel.Description.ServiceDescription> noktalarını listelemek için öğesini kullanır. Hizmet uç noktalarında göreli adresler olabileceğinden, önce hizmetin temel adreslerini listeler. Bu bilgilerin tümünü almak için kod, kullanarak <xref:System.ServiceModel.OperationContext.Current%2A>işlem bağlamını edinir. <xref:System.ServiceModel.ServiceHost> Venesnesi<xref:System.ServiceModel.Description.ServiceDescription> , işlem bağlamından alınır. Hizmetin temel uç noktalarını listelemek için, kod hizmet ana bilgisayarının <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> koleksiyonu üzerinden yinelenir. Hizmetin hizmet uç noktalarını listelemek için, kod hizmet açıklamasının uç noktalar koleksiyonu üzerinden yinelenir.  
+ `GetServiceDescriptionInfo` için uygulama kodu, hizmet uç noktalarını listelemek için <xref:System.ServiceModel.Description.ServiceDescription> kullanır. Hizmet uç noktalarında göreli adresler olabileceğinden, önce hizmetin temel adreslerini listeler. Bu bilgilerin tümünü almak için, kod <xref:System.ServiceModel.OperationContext.Current%2A>kullanarak işlem bağlamını edinir. <xref:System.ServiceModel.ServiceHost> ve <xref:System.ServiceModel.Description.ServiceDescription> nesnesi işlem bağlamından alınır. Hizmetin temel uç noktalarını listelemek için, kod hizmet ana bilgisayarının <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> koleksiyonu üzerinden yinelenir. Hizmetin hizmet uç noktalarını listelemek için, kod hizmet açıklamasının uç noktalar koleksiyonu üzerinden yinelenir.  
   
 ```csharp
 public string GetServiceDescriptionInfo()  
@@ -63,7 +63,7 @@ public string GetServiceDescriptionInfo()
 }  
 ```  
   
- Örneği çalıştırdığınızda, hesap makinesi işlemlerini ve sonra `GetServiceDescriptionInfo` işlemin döndürdüğü hizmet bilgilerini görürsünüz. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, hesaplayıcı işlemlerini ve sonra `GetServiceDescriptionInfo` işlemi tarafından döndürülen hizmet bilgilerini görürsünüz. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
 ```console  
 Add(15,3) = 18  
@@ -98,6 +98,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ServiceDescription`  

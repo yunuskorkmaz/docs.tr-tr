@@ -2,12 +2,12 @@
 title: Türsüz Istek-yanıt
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: 132ae05236b23ff5bb0cce67d66d26d308cce305
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ba1caddd8f37a37df63e2710883f3096e0989fcd
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038677"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715858"
 ---
 # <a name="untyped-requestreply"></a>Yazılmamış İstek/Yanıt
 Bu örnek, Ileti sınıfını kullanan işlem sözleşmelerinin nasıl tanımlanacağını gösterir.  
@@ -43,7 +43,7 @@ public Message ComputeSum(Message request)
 }  
 ```  
   
- İstemci, uzak hizmete bir ara sunucu oluşturmak için [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan kodu kullanır. İstek iletisi göndermek için, istemci, temeldeki kanala bağlı olan ileti sürümüne sahip olmalıdır. Bu nedenle, <xref:System.ServiceModel.OperationContextScope> `OutgoingMessageHeaders.MessageVersion` özelliği içinde doldurulmuş doğru ileti sürümü <xref:System.ServiceModel.OperationContext> ile oluşturulan, oluşturduğu proxy kanalında yeni bir kapsam oluşturur. İstemci, istek iletisine gövde olarak bir giriş dizisi geçirir ve sonra proxy `ComputeSum` üzerinde çağırır. İstemci daha sonra yanıt iletisindeki `GetBody<T>` yöntemine erişerek, geçirildiği girişlerin toplamını alır. Aşağıdaki örnek kod bunu gösterir.  
+ İstemci, uzak hizmete bir ara sunucu oluşturmak için [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan kodu kullanır. İstek iletisi göndermek için, istemci, temeldeki kanala bağlı olan ileti sürümüne sahip olmalıdır. Bu nedenle, `OutgoingMessageHeaders.MessageVersion` özelliğinde doldurulmuş doğru ileti sürümü ile bir <xref:System.ServiceModel.OperationContext> oluşturan, oluşturduğu proxy kanalında kapsamlı yeni bir <xref:System.ServiceModel.OperationContextScope> oluşturur. İstemci, istek iletisine gövde olarak bir giriş dizisi geçirir ve sonra proxy üzerinde `ComputeSum` çağırır. İstemci daha sonra yanıt iletisindeki `GetBody<T>` yöntemine erişerek, geçirildiği girişlerin toplamını alır. Aşağıdaki örnek kod bunu gösterir.  
   
 ```csharp
 using (new OperationContextScope(client.InnerChannel))  
@@ -85,6 +85,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Untyped`  

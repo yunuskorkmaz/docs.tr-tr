@@ -2,21 +2,21 @@
 title: UriTemplate Örneği
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
-ms.openlocfilehash: 15799c1aaf3ed7df5f7721368dea426665dcf335
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c9dd8bdd21a075dca590c9446808860c006c18f8
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044593"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715417"
 ---
 # <a name="uritemplate-sample"></a>UriTemplate Örneği
-Sınıfı <xref:System.UriTemplate> , ortak bir yapıyı paylaşan URI kümeleriyle çalışmak için yöntemler sağlar. Bu örnek, ile ilgili `UriTemplate`aşağıdaki temel kavramları göstermektedir:  
+<xref:System.UriTemplate> sınıfı, ortak bir yapıyı paylaşan URI kümeleriyle çalışmak için yöntemler sağlar. Bu örnek `UriTemplate`ilgili aşağıdaki temel kavramları gösterir:  
   
 - Şablon oluşturma sözdizimi.  
   
-- Bir `UriTemplate` using <xref:System.UriTemplate.BindByName%2A> ve<xref:System.UriTemplate.BindByPosition%2A>kullanarak URI 'leri örnekleme.  
+- <xref:System.UriTemplate.BindByName%2A> ve <xref:System.UriTemplate.BindByPosition%2A>kullanarak bir `UriTemplate` URI 'Leri örnekleme.  
   
-- <xref:System.UriTemplateTable.Match%2A>, ve `BindByName` `BindByPosition`' nin ters işlemidir.  
+- `BindByName` ve `BindByPosition`ters işlemi olan <xref:System.UriTemplateTable.Match%2A>.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
@@ -29,7 +29,7 @@ Sınıfı <xref:System.UriTemplate> , ortak bir yapıyı paylaşan URI kümeleri
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplate`  
   

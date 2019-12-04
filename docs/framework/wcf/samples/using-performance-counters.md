@@ -2,12 +2,12 @@
 title: Performans Sayaçlarını Kullanma
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 724580c1725cf6513e1d85f03b0abfdefb4d040a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3e0a0199e93abe1218f7d9c052807cb94e911140
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044539"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716708"
 ---
 # <a name="using-performance-counters"></a>Performans Sayaçlarını Kullanma
 Bu örnek, Windows Communication Foundation (WCF) performans sayaçlarına nasıl erişileceğini ve Kullanıcı tanımlı performans sayaçlarının nasıl oluşturulacağını gösterir. Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır.  
@@ -15,7 +15,7 @@ Bu örnek, Windows Communication Foundation (WCF) performans sayaçlarına nası
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Bu örnekte istemci, `ICalculator` hizmetin dört yöntemini çağırır. İstemci, Kullanıcı tarafından kesintiye gelinceye kadar bunu yapmaya devam eder. Hizmet değişmeden kalır.  
+ Bu örnekte istemci, `ICalculator` hizmetinin dört yöntemini çağırır. İstemci, Kullanıcı tarafından kesintiye gelinceye kadar bunu yapmaya devam eder. Hizmet değişmeden kalır.  
   
  Aşağıdaki örnek yapılandırmada gösterildiği gibi, hizmetinin Web. config dosyasının Tanılama bölümünde performans sayaçları etkinleştirilir.  
   
@@ -41,7 +41,7 @@ Bu örnek, Windows Communication Foundation (WCF) performans sayaçlarına nası
   
 ### <a name="to-view-performance-data"></a>Performans verilerini görüntülemek için  
   
-1. Sırasıyla **Başlat**, **Çalıştır..** `perfmon` . ' a tıklayarak Performans İzleyicisi aracını başlatın, Tamam ' a tıklayın, **Tamam** ' a tıklayın veya denetim masasından, **Yönetim Araçları** ' nı seçin ve **performans**' ı çift  
+1. Sırasıyla **Başlat**, **Çalıştır..** . ' a tıklayın, `perfmon` girin ve **Tamam** ' a ve Denetim Masası ' ndan **Yönetim Araçları** ' nı seçin ve **performans**' ı çift tıklatın.  
   
     > [!NOTE]
     > Örnek kod çalışmadığı sürece sayaç ekleyemezsiniz.  
@@ -72,7 +72,7 @@ Bu örnek, Windows Communication Foundation (WCF) performans sayaçlarına nası
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   

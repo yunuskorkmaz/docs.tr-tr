@@ -2,17 +2,17 @@
 title: Genişletilmiş Koruma İlkesi
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: c7c2e85872c158facb2de91a7413ac5a04491d7f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1cb6d44e8f6ee8f54f776453e5a1783ab0cfa4f0
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044992"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716416"
 ---
 # <a name="extended-protection-policy"></a>Genişletilmiş Koruma İlkesi
 Genişletilmiş koruma, ortadaki adam (MITD) saldırılarına karşı koruma için bir güvenlik girişimidir. Bir mitd saldırısı, bir MITD 'nin istemcinin kimlik bilgilerini aldığı ve sunucuya ileten bir güvenlik tehdidi olur.  
   
-## <a name="demonstrates"></a>Gösteriler  
+## <a name="demonstrates"></a>Gösterir  
  Genişletilmiş koruma  
   
 ## <a name="discussion"></a>Tartışma  
@@ -50,7 +50,7 @@ Genişletilmiş koruma, ortadaki adam (MITD) saldırılarına karşı koruma iç
   
 10. Bir tarayıcı penceresinden (tam etki alanı adı sağlayın) HTTPS URL 'sine erişerek hizmeti test edebilirsiniz. Bu URL 'YI uzak bir makineden erişmek istiyorsanız, tüm gelen HTTP ve HTTPS bağlantıları için güvenlik duvarının açık olduğundan emin olun.  
   
-11. İstemci yapılandırma dosyasını açın ve ' nin yerine `<<full_machine_name>>`geçen istemci veya uç nokta adresi özniteliği için tam etki alanı adı sağlayın.  
+11. İstemci yapılandırma dosyasını açın ve `<<full_machine_name>>`yerine geçen istemci veya uç nokta adresi özniteliği için tam etki alanı adı sağlayın.  
   
 12. İstemcisini çalıştırın. İstemci, güvenli bir kanal kuran ve genişletilmiş koruma kullanan hizmetle iletişim kurar.  
   
@@ -59,6 +59,6 @@ Genişletilmiş koruma, ortadaki adam (MITD) saldırılarına karşı koruma iç
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Security\ExtendedProtection`

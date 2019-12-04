@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: a58541b7d50d83d1e39d7c9dd9c58be4111ec494
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f6f2fd0bbbc191d466ac600bd9639c8955d5b7fe
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038735"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715686"
 ---
 # <a name="tracing-and-message-logging"></a>İleti İzleme ve Kaydetme
 Bu örnek, izleme ve ileti günlüğe kaydetmenin nasıl etkinleştirileceğini gösterir. Ortaya çıkan izlemeler ve ileti günlükleri, [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)kullanılarak görüntülenir. Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır.  
@@ -18,7 +18,7 @@ Bu örnek, izleme ve ileti günlüğe kaydetmenin nasıl etkinleştirileceğini 
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
 ## <a name="tracing"></a>İzleme  
- Windows Communication Foundation (WCF), <xref:System.Diagnostics> ad alanında tanımlanan izleme mekanizmasını kullanır. Bu izleme modelinde, izleme verileri uygulamaların uygulayan izleme kaynakları tarafından üretilir. Her kaynak bir ad ile tanımlanır. İzleme tüketicileri, bilgi almak istedikleri izleme kaynakları için izleme dinleyicileri oluşturur. İzleme verileri almak için izleme kaynağı için bir dinleyici oluşturmanız gerekir. WCF 'de, hizmet modeli izleme kaynağı `switchValue`ayarlanarak hizmetin veya istemcinin yapılandırma dosyasına aşağıdaki kod eklenerek bu yapılabilir:  
+ Windows Communication Foundation (WCF), <xref:System.Diagnostics> ad alanında tanımlanan izleme mekanizmasını kullanır. Bu izleme modelinde, izleme verileri uygulamaların uygulayan izleme kaynakları tarafından üretilir. Her kaynak bir ad ile tanımlanır. İzleme tüketicileri, bilgi almak istedikleri izleme kaynakları için izleme dinleyicileri oluşturur. İzleme verileri almak için izleme kaynağı için bir dinleyici oluşturmanız gerekir. WCF 'de, bu, hizmet modeli izleme kaynağı `switchValue`ayarlanarak hizmetin veya istemcinin yapılandırma dosyasına aşağıdaki kodu ekleyerek yapılabilir:  
   
 ```xml  
 <system.diagnostics>  
@@ -46,7 +46,7 @@ Bu örnek, izleme ve ileti günlüğe kaydetmenin nasıl etkinleştirileceğini 
  İzleme kaynakları hakkında daha fazla bilgi için [Izlemeyi yapılandırma](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) konusunun Kaynak izleme bölümüne bakın.  
   
 ## <a name="activity-tracing-and-propagation"></a>Etkinlik Izleme ve yayma  
- Hem `ActivityTracing` istemci hem `propagateActivity` de hizmet `true` için `system.ServiceModel` izleme kaynaklarında etkinleştirilmiş ve olarak ayarlanmış olması, uç noktalar içindeki etkinliklerde (etkinlikler) mantıksal işleme (etkinlik) içindeki izlemelerin bağıntısını sağlar ( etkinlik aktarımları aracılığıyla) ve birden çok uç noktayı kapsayan etkinlikler arasında (etkinlik KIMLIĞI yayma aracılığıyla).  
+ `ActivityTracing` etkinleştirilmiş ve `propagateActivity`, hem istemci hem de hizmet için `system.ServiceModel` izleme kaynaklarında `true` olarak ayarlanmış olması, mantıksal işlem (etkinlik) birimlerindeki izlemelerin (etkinlik aktarımları aracılığıyla) ve birden çok uç noktayı kapsayan etkinliklerin (etkinlik KIMLIĞI yayması aracılığıyla) arasında bağıntı sağlamasına olanak sağlar.  
   
  Bu üç mekanizma (Etkinlikler, aktarımlar ve yayma), hizmet Izleme Görüntüleyicisi aracını kullanarak bir hatanın kök nedenini daha hızlı bulmanıza yardımcı olabilir. Daha fazla bilgi için bkz. [bağıntılı izlemeleri ve sorun gidermeyi görüntülemek Için hizmet Izleme görüntüleyicisini kullanma](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
@@ -81,7 +81,7 @@ Bu örnek, izleme ve ileti günlüğe kaydetmenin nasıl etkinleştirileceğini 
   
  İleti kaydedildiğinde, izleme türü istemcide mi yoksa sunucuda mı izlenmekte olduğuna bağlıdır. Örneğin, bir istemciye gönderilen "Ekle" iletisi, istemcideki "TransportWrite" kategorisinin altında izleniyorsa, hizmette "TransportRead" kategorisinin altında aynı ileti de izlenmektedir.  
   
- Aşağıdaki kodu <xref:System.Diagnostics> istemcinin App. config dosyasının veya hizmetin Web. config dosyasının bölümüne ekleyerek izleme dinleyicisini yapılandırın:  
+ Aşağıdaki kodu istemcinin App. config dosyasının <xref:System.Diagnostics> bölümüne veya hizmetin Web. config dosyasına ekleyerek izleme dinleyicisini yapılandırın:  
   
 ```xml  
 <system.diagnostics>  
@@ -128,7 +128,7 @@ Bu örnek, izleme ve ileti günlüğe kaydetmenin nasıl etkinleştirileceğini 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   

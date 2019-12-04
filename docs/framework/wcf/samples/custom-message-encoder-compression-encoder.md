@@ -1,15 +1,15 @@
 ---
-title: 'Özel İleti Kodlayıcısı: Sıkıştırma Kodlayıcısı'
+title: 'Özel İleti Kodlayıcı: Sıkıştırma Kodlayıcısı'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 4fc6cd4b28d35971e5e2da2559d258055adf9252
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 80dd29569897be501d76024a081f38ec5add4ff7
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928743"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716856"
 ---
-# <a name="custom-message-encoder-compression-encoder"></a>Özel İleti Kodlayıcısı: Sıkıştırma Kodlayıcısı
+# <a name="custom-message-encoder-compression-encoder"></a>Özel İleti Kodlayıcı: Sıkıştırma Kodlayıcısı
 
 Bu örnek, Windows Communication Foundation (WCF) platformunu kullanarak nasıl özel bir kodlayıcı uygulanacağını gösterir.
 
@@ -18,13 +18,13 @@ Bu örnek, Windows Communication Foundation (WCF) platformunu kullanarak nasıl 
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`
 
 ## <a name="sample-details"></a>Örnek Ayrıntılar
 
-Bu örnek, bir istemci konsolu programından (. exe), şirket içinde barındırılan bir hizmet konsolu programından (. exe) ve bir sıkıştırma ileti Kodlayıcısı kitaplığından (. dll) oluşur. Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, temel dize yankılanma `ISampleServer` işlemlerini (`Echo` ve `BigEcho`) kullanıma sunan arabirim tarafından tanımlanır. İstemci, iletiyi istemciye geri tekrarlayarak, belirli bir işleme ve hizmet yanıtlarını zaman uyumlu istekler yapar. İstemci ve hizmet etkinliği konsol penceresinde görünür. Bu örneğin amacı, bir özel kodlayıcının nasıl yazılacağını ve bir iletinin kabloda sıkıştırılma etkisini gösterir. İleti boyutunu, işlem süresini veya her ikisini de hesaplamak için, sıkıştırma iletisi kodlayıcıya izleme ekleyebilirsiniz.
+Bu örnek, bir istemci konsolu programından (. exe), şirket içinde barındırılan bir hizmet konsolu programından (. exe) ve bir sıkıştırma ileti Kodlayıcısı kitaplığından (. dll) oluşur. Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, temel dize yankı işlemlerini (`Echo` ve `BigEcho`) sunan `ISampleServer` arabirimi tarafından tanımlanır. İstemci, iletiyi istemciye geri tekrarlayarak, belirli bir işleme ve hizmet yanıtlarını zaman uyumlu istekler yapar. İstemci ve hizmet etkinliği konsol penceresinde görünür. Bu örneğin amacı, bir özel kodlayıcının nasıl yazılacağını ve bir iletinin kabloda sıkıştırılma etkisini gösterir. İleti boyutunu, işlem süresini veya her ikisini de hesaplamak için, sıkıştırma iletisi kodlayıcıya izleme ekleyebilirsiniz.
 
 > [!NOTE]
 > .NET Framework 4 ' te, sunucu sıkıştırılmış bir yanıt gönderiyorsa (GZip veya söndür gibi bir algoritmayla oluşturulmuş) WCF istemcisinde otomatik açma özelliği etkinleştirilmiştir. Hizmet, Internet Information Server 'da (IIS) Web 'de barındırılıyorsa, hizmetin sıkıştırılmış bir yanıt gönderebilmesi için IIS yapılandırılabilir. Bu örnek, gereksinim hem istemcide hem de hizmette sıkıştırma yapmak ve sıkıştırmayı açmak ya da hizmetin şirket içinde barındırılması durumunda kullanılabilir.
@@ -59,15 +59,15 @@ Daha önce belirtildiği gibi, özel bir kodlayıcıda uygulanan birkaç katman 
 
 5. Kodlayıcı katmanı bir sınıf fabrikası olarak uygulanır. Özel Kodlayıcı için yalnızca kodlayıcı sınıf fabrikası genel kullanıma açık olmalıdır. Factory nesnesi, <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory%601> nesnesi oluşturulduğunda Binding öğesi tarafından döndürülür. İleti kodlayıcıları, ara belleğe alınmış veya akış modunda çalışabilir. Bu örnek, hem arabellekli modu hem de akış modunu gösterir.
 
-Her mod için soyut `ReadMessage` `MessageEncoder` sınıfta bir eşlik eden `WriteMessage` ve yöntemi vardır. Bu yöntemlerde kodlama işinin çoğu gerçekleşir. Örnek, varolan metni ve ikili ileti kodlayıcıları ' nı sarmalar. Bu, örneğin, iletilerin tel gösterimini okuma ve yazma yetkisini iç kodlayıcıya devredebilir ve sıkıştırma kodlayıcının sonuçları sıkıştırmak veya sıkıştırmasını açmasına olanak sağlar. İleti kodlama için bir işlem hattı olmadığından, bu, WCF 'de birden çok kodlayıcıda kullanılmasına yönelik tek modeldir. İleti açıldıktan sonra, ortaya çıkan ileti, işlemek için kanal yığınının yığınını iletilir. Sıkıştırma sırasında, elde edilen sıkıştırılmış ileti doğrudan verilen akışa yazılır.
+Her mod için soyut `MessageEncoder` sınıfında eşlik eden bir `ReadMessage` ve `WriteMessage` yöntemi vardır. Bu yöntemlerde kodlama işinin çoğu gerçekleşir. Örnek, varolan metni ve ikili ileti kodlayıcıları ' nı sarmalar. Bu, örneğin, iletilerin tel gösterimini okuma ve yazma yetkisini iç kodlayıcıya devredebilir ve sıkıştırma kodlayıcının sonuçları sıkıştırmak veya sıkıştırmasını açmasına olanak sağlar. İleti kodlama için bir işlem hattı olmadığından, bu, WCF 'de birden çok kodlayıcıda kullanılmasına yönelik tek modeldir. İleti açıldıktan sonra, ortaya çıkan ileti, işlemek için kanal yığınının yığınını iletilir. Sıkıştırma sırasında, elde edilen sıkıştırılmış ileti doğrudan verilen akışa yazılır.
 
-Bu örnek,`CompressBuffer` `DecompressBuffer` sınıfınıkullanmaküzerearabelleklerdenakışlaradönüştürmegerçekleştirmekiçinyardımcıyöntemleri(`GZipStream` ve) kullanır.
+Bu örnek, `GZipStream` sınıfını kullanmak üzere arabelleklerden akışlara dönüştürme gerçekleştirmek için yardımcı yöntemleri (`CompressBuffer` ve `DecompressBuffer`) kullanır.
 
-Arabelleğe alınmış `ReadMessage` ve `WriteMessage` sınıflarsınıfınıkullanır.`BufferManager` Kodlayıcı yalnızca kodlayıcı fabrikası aracılığıyla erişilebilir. Soyut `MessageEncoderFactory` sınıf, geçerli kodlayıcıya ve `Encoder` oturumları destekleyen bir kodlayıcı oluşturmak için adlı `CreateSessionEncoder` bir yönteme erişim için adlı bir özellik sağlar. Bu tür bir kodlayıcı, kanalın oturumları desteklediği, sıralandığı ve güvenilir olduğu senaryolarda kullanılabilir. Bu senaryo, hatta yazılı verilerin her oturumunda iyileştirmeye olanak tanır. Bu istenmiyorsa, temel yöntemin aşırı yüklenmiş olması gerekir. Özelliği, oturum-daha az kodlayıcıya erişim mekanizması sağlar ve `CreateSessionEncoder` yöntemin varsayılan uygulanması özelliğin değerini döndürür. `Encoder` Örnek, sıkıştırma sağlamak için mevcut bir Kodlayıcısı sarmaladığı için, `MessageEncoderFactory` uygulama iç Kodlayıcı `MessageEncoderFactory` fabrikasını temsil eden bir öğesini kabul eder.
+Arabelleğe alınan `ReadMessage` ve `WriteMessage` sınıfları `BufferManager` sınıfını kullanır. Kodlayıcı yalnızca kodlayıcı fabrikası aracılığıyla erişilebilir. Soyut `MessageEncoderFactory` sınıfı, geçerli kodlayıcıya erişmek için `Encoder` adlı bir özellik ve oturumları destekleyen bir kodlayıcı oluşturmak için `CreateSessionEncoder` adlı bir yöntem sağlar. Bu tür bir kodlayıcı, kanalın oturumları desteklediği, sıralandığı ve güvenilir olduğu senaryolarda kullanılabilir. Bu senaryo, hatta yazılı verilerin her oturumunda iyileştirmeye olanak tanır. Bu istenmiyorsa, temel yöntemin aşırı yüklenmiş olması gerekir. `Encoder` özelliği, oturum-daha az kodlayıcıya erişim mekanizması sağlar ve `CreateSessionEncoder` yönteminin varsayılan uygulamasında özelliğin değeri döndürülür. Örnek, sıkıştırma sağlamak için mevcut bir Kodlayıcısı sarmaladığı için `MessageEncoderFactory` uygulama, iç Kodlayıcı fabrikasını temsil eden bir `MessageEncoderFactory` kabul eder.
 
-Kodlayıcı ve kodlayıcı fabrikası tanımlandığına göre, bunlar bir WCF istemcisi ve hizmeti ile birlikte kullanılabilir. Ancak, bu kodlayıcılara kanal yığınına eklenmeleri gerekir. <xref:System.ServiceModel.ServiceHost> `OnInitialize` Ve sınıflarındansınıflarıtüretebilirsinizvebukodlayıcıfabrikasınıelileeklemekiçinyöntemlerigeçersizkılabilirsiniz.<xref:System.ServiceModel.ChannelFactory%601> Ayrıca, özel bağlama öğesi aracılığıyla Kodlayıcı fabrikasını kullanıma sunabilirsiniz.
+Kodlayıcı ve kodlayıcı fabrikası tanımlandığına göre, bunlar bir WCF istemcisi ve hizmeti ile birlikte kullanılabilir. Ancak, bu kodlayıcılara kanal yığınına eklenmeleri gerekir. <xref:System.ServiceModel.ServiceHost> ve <xref:System.ServiceModel.ChannelFactory%601> sınıflarından sınıfları türetebilir ve bu kodlayıcı fabrikasını el ile eklemek için `OnInitialize` yöntemlerini geçersiz kılabilirsiniz. Ayrıca, özel bağlama öğesi aracılığıyla Kodlayıcı fabrikasını kullanıma sunabilirsiniz.
 
-Yeni bir özel bağlama öğesi oluşturmak için <xref:System.ServiceModel.Channels.BindingElement> sınıfından bir sınıf türetebilirsiniz. Ancak birkaç tür bağlama öğesi vardır. Özel bağlama öğesinin bir ileti kodlama bağlama öğesi olarak tanındığından emin olmak için, öğesini de uygulamanız <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>gerekir. , <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> Eşleşen ileti Kodlayıcısı fabrikasının bir örneğini döndürmek için uygulanan yeni`CreateMessageEncoderFactory`bir ileti Kodlayıcısı Fabrikası () oluşturmak için bir yöntem sunar. Ek olarak, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> , adresleme sürümünü belirten bir özelliğine sahiptir. Bu örnek varolan kodlayıcıları sarmaladığı için, örnek uygulama aynı zamanda var olan Kodlayıcı bağlama öğelerini sarmalanmış ve bir iç Kodlayıcı bağlama öğesini bir parametre olarak oluşturucuya alır ve bunu bir özellik aracılığıyla gösterir. Aşağıdaki örnek kod, `GZipMessageEncodingBindingElement` sınıfının uygulamasını gösterir.
+Yeni bir özel bağlama öğesi oluşturmak için <xref:System.ServiceModel.Channels.BindingElement> sınıfından bir sınıf türetebilirsiniz. Ancak birkaç tür bağlama öğesi vardır. Özel bağlama öğesinin bir ileti kodlama bağlama öğesi olarak tanındığından emin olmak için, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>de uygulamanız gerekir. <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>, eşleşen ileti Kodlayıcısı fabrikasının bir örneğini döndürmek için uygulanan yeni bir ileti Kodlayıcısı Fabrikası (`CreateMessageEncoderFactory`) oluşturmak için bir yöntem sunar. Ayrıca, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> adresleme sürümünü belirten bir özelliğine sahiptir. Bu örnek varolan kodlayıcıları sarmaladığı için, örnek uygulama aynı zamanda var olan Kodlayıcı bağlama öğelerini sarmalanmış ve bir iç Kodlayıcı bağlama öğesini bir parametre olarak oluşturucuya alır ve bunu bir özellik aracılığıyla gösterir. Aşağıdaki örnek kod `GZipMessageEncodingBindingElement` sınıfının uygulamasını gösterir.
 
 ```csharp
 public sealed class GZipMessageEncodingBindingElement
@@ -169,7 +169,7 @@ GZipMessageEncoderFactory(innerBindingElement.CreateMessageEncoderFactory());
 }
 ```
 
-Bu bağlama öğesinin, aşağıdaki `IPolicyExportExtension` örnekte gösterildiği gibi, meta verilerde bir ilke olarak verilebilmesi için, sınıfınarabiriminiuyguladığınıunutmayın.`GZipMessageEncodingBindingElement`
+Bu bağlama öğesinin, aşağıdaki örnekte gösterildiği gibi, meta verilerde bir ilke olarak verilebilmesi için `GZipMessageEncodingBindingElement` sınıfının `IPolicyExportExtension` arabirimini uyguladığını unutmayın.
 
 ```xml
 <wsp:Policy wsu:Id="BufferedHttpSampleServer_ISampleServer_policy">
@@ -183,7 +183,7 @@ Bu bağlama öğesinin, aşağıdaki `IPolicyExportExtension` örnekte gösteril
 </wsp:Policy>
 ```
 
-Sınıfı arabirimini uygular, bu sınıf için `GZipMessageEncodingBindingElement`ilkeyi içeri aktarır. `IPolicyImportExtension` `GZipMessageEncodingBindingElementImporter` Svcutil. exe aracı, ilkeleri yapılandırma dosyasına aktarmak için kullanılabilir, işlemek `GZipMessageEncodingBindingElement`için aşağıdaki, Svcutil. exe. config dosyasına eklenmelidir.
+`GZipMessageEncodingBindingElementImporter` sınıfı `IPolicyImportExtension` arabirimini uygular, bu sınıf `GZipMessageEncodingBindingElement`için ilkeyi içeri aktarır. Svcutil. exe aracı, ilkeleri yapılandırma dosyasına aktarmak, `GZipMessageEncodingBindingElement`işlemek için kullanılabilir, aşağıdaki, Svcutil. exe. config dosyasına eklenmelidir.
 
 ```xml
 <configuration>
@@ -224,9 +224,9 @@ binding.Namespace = "http://tempuri.org/bindings";
 
 Bu, Kullanıcı senaryolarının çoğunluğu için yeterli olabileceğinden, bir hizmetin Web 'de barındırılması durumunda dosya yapılandırmasını desteklemek kritik öneme sahiptir. Web 'de barındırılan senaryoyu desteklemek için, bir özel bağlama öğesinin bir dosyada yapılandırılabilir olmasını sağlamak üzere özel bir yapılandırma işleyicisi geliştirmeniz gerekir.
 
-Yapılandırma sisteminin en üstünde bağlama öğesi için bir yapılandırma işleyicisi oluşturabilirsiniz. Binding öğesi için yapılandırma işleyicisi <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> sınıfından türetilmelidir. , <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> Bu bölüm için oluşturulacak bağlama öğesi türünün yapılandırma sistemine bildirir. Öğesinin `BindingElement` ayarlanbileceği tüm yönleri <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> türetilmiş sınıfta özellikler olarak kullanıma sunulmalıdır. Yapılandırma öğesi özniteliklerinin özelliklerle eşlenmesiyle ve özniteliklerin eksik olması halinde varsayılan değerlerin ayarlanmasına yardımcıolur.<xref:System.Configuration.ConfigurationPropertyAttribute> Yapılandırma değerleri yüklenip özelliklerine uygulandıktan sonra, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> özelliği bir bağlama öğesinin somut örneğine dönüştüren yöntemi çağırılır. Yöntemi, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> türetilmiş sınıftaki özellikleri yeni oluşturulan bağlama öğesinde ayarlanacak değerlere dönüştürmek için kullanılır. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType>
+Yapılandırma sisteminin en üstünde bağlama öğesi için bir yapılandırma işleyicisi oluşturabilirsiniz. Binding öğesi için yapılandırma işleyicisi <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> sınıfından türetilmelidir. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType>, bu bölüm için oluşturulacak bağlama öğesi türünün yapılandırma sistemine bildirir. `BindingElement` ayarlanmayan tüm yönleri <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> türetilmiş sınıfta özellikler olarak kullanıma sunulmalıdır. <xref:System.Configuration.ConfigurationPropertyAttribute>, yapılandırma öğesi özniteliklerinin özelliklerle eşlenmesiyle ve özniteliklerin eksik olması halinde varsayılan değerlerin ayarlanmasına yardımcı olur. Yapılandırma değerleri yüklendikten ve özelliklere uygulandıktan sonra, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> metodu çağrılır, bu da özellikleri bağlama öğesinin somut bir örneğine dönüştürür. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> yöntemi, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> türetilmiş sınıftaki özellikleri yeni oluşturulan bağlama öğesinde ayarlanacak değerlere dönüştürmek için kullanılır.
 
-Aşağıdaki örnek kod, uygulamasının uygulamasını `GZipMessageEncodingElement`gösterir.
+Aşağıdaki örnek kod `GZipMessageEncodingElement`uygulamasını gösterir.
 
 ```csharp
 public class GZipMessageEncodingElement : BindingElementExtensionElement
@@ -295,7 +295,7 @@ Bu yapılandırma işleyicisi, hizmet veya istemcinin App. config veya Web. conf
 <gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />
 ```
 
-Bu yapılandırma işleyicisini kullanmak için, aşağıdaki örnek yapılandırmada gösterildiği gibi [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) öğesi içinde kayıtlı olmalıdır.
+Bu yapılandırma işleyicisini kullanmak için, aşağıdaki örnek yapılandırmada gösterildiği gibi [\<System. serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) öğesi içinde kayıtlı olmalıdır.
 
 ```xml
 <extensions>
@@ -353,6 +353,6 @@ Press <ENTER> to terminate client.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`

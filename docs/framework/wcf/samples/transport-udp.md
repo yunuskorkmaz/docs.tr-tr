@@ -2,12 +2,12 @@
 title: 'Taşıma: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: fab15b1d4dab61de37f4b609a6e43c5f4a32fb75
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f7dea8a95490377226acd09a3463b102d42834d6
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138694"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711920"
 ---
 # <a name="transport-udp"></a>Taşıma: UDP
 UDP taşıma örneği, UDP tek noktaya yayın ve çok noktaya yayının özel bir Windows Communication Foundation (WCF) taşıması olarak nasıl uygulanacağını gösterir. Örnek, kanal çerçevesini ve aşağıdaki WCF en iyi yöntemlerini kullanarak WCF 'de özel bir aktarım oluşturmak için önerilen yordamı açıklar. Özel bir aktarım oluşturma adımları aşağıdaki gibidir:  
@@ -81,7 +81,7 @@ UDP taşıma örneği, UDP tek noktaya yayın ve çok noktaya yayının özel bi
  Bu örnekte, fabrika uygulamasının UdpChannelFactory.cs içinde yer aldığı ve dinleyici uygulamasının UdpChannelListener.cs içinde yer aldığı. <xref:System.ServiceModel.Channels.IChannel> uygulamalar UdpOutputChannel.cs ve UdpInputChannel.cs ' dir.  
   
 ### <a name="the-udp-channel-factory"></a>UDP kanal fabrikası  
- `UdpChannelFactory` <xref:System.ServiceModel.Channels.ChannelFactoryBase>türetilir. Örnek, ileti kodlayıcının ileti sürümüne erişim sağlamak için <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> geçersiz kılar. Örnek, durum makinesi geçişi sırasında <xref:System.ServiceModel.Channels.BufferManager> örneğimizi bir şekilde belirleyebilmemiz için <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> de geçersiz kılar.  
+ `UdpChannelFactory` öğesi <xref:System.ServiceModel.Channels.ChannelFactoryBase> öğesinden türer. Örnek, ileti kodlayıcının ileti sürümüne erişim sağlamak için <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> geçersiz kılar. Örnek, durum makinesi geçişi sırasında <xref:System.ServiceModel.Channels.BufferManager> örneğimizi bir şekilde belirleyebilmemiz için <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> de geçersiz kılar.  
   
 #### <a name="the-udp-output-channel"></a>UDP çıkış kanalı  
  `UdpOutputChannel` <xref:System.ServiceModel.Channels.IOutputChannel>uygular. Oluşturucu bağımsız değişkenleri doğrular ve geçirilen <xref:System.ServiceModel.EndpointAddress> temel alarak bir hedef <xref:System.Net.EndPoint> nesnesi oluşturur.  
@@ -477,6 +477,6 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTranspor
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`

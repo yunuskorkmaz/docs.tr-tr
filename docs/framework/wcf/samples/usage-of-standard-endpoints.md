@@ -1,23 +1,23 @@
 ---
-title: Standart uç noktaları
+title: Standart Uç Noktaları Kullanma
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: a2af1ae793166d1ed3742782b911ded30d0b9d35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2b210bfe683669aeebf54a1701f07d492e6abdb4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662383"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715340"
 ---
-# <a name="usage-of-standard-endpoints"></a>Standart uç noktaları
+# <a name="usage-of-standard-endpoints"></a>Standart Uç Noktaları Kullanma
 
-Bu örnek, hizmet yapılandırma dosyalarında standart uç noktaları kullanma işlemini gösterir. Standart uç nokta, uç nokta tanımları ile ilişkili ek özellikleri bir adres, bağlama ve sözleşme birleşimi açıklamak için tek bir özellik kullanarak basitleştirmek kullanıcı sağlar. Bu örnek nasıl tanımlaması ve özel bir standart uç noktası ve bitiş noktasını belirli özelliklerini tanımlamak nasıl gösterir.
+Bu örnek, hizmet yapılandırma dosyalarında standart uç noktaların nasıl kullanılacağını gösterir. Standart bir uç nokta, bir adres, bağlama ve sözleşme birleşimini onunla ilişkili ek özelliklerle birlikte belirtmek için tek bir özellik kullanarak Endpoint tanımlarını basitleştirmesini sağlar. Bu örnek, özel bir standart uç noktanın nasıl tanımlanacağını ve uygulanacağını ve uç noktada belirli özelliklerin nasıl tanımlanacağını gösterir.
 
-## <a name="sample-details"></a>Örnek Ayrıntıları
+## <a name="sample-details"></a>Örnek Ayrıntılar
 
-Hizmet uç noktaları, üç parametre sağlanarak belirtilebilir: adres, bağlama ve sözleşme. Sağlanabilir diğer parametreler davranışı yapılandırmasına, üst bilgiler, dinleme URI vb. içerir. Bazı durumlarda, tüm veya tüm adresler, bağlamalar ve sözleşmeler değiştiremezsiniz değerlere sahipsiniz. Bu nedenle, standart uç noktaları kullanmak da mümkündür. Bu uç noktaları bazı örnekleri, meta veri değişimi uç noktaları ve bulma uç noktaları içerir. Standart uç noktaları da sabit yapısı bilgileri sağlamak ya da makul bir varsayılan kümesini sağlayarak kullanılabilirliği iyileştirmek, örneğin standart, kendi uç noktalar oluşturmak için gerek kalmadan hizmet uç noktaları yapılandırılmasını sağlayarak artırmamıza değerleri ve bu nedenle, yapılandırma dosyalarının ayrıntı düzeyini azaltır.
+Hizmet uç noktaları üç parametre sunarak belirtilebilir: adres, bağlama ve anlaşma. Sağlanabilecek diğer parametreler, davranış yapılandırması, üst bilgiler, dinleme URI 'SI vb. içerir. Bazı durumlarda, adreslerin, bağlamaların ve sözleşmelerin tümünün veya tümünün değiştirebir değer vardır. Bu nedenle, standart uç noktaları kullanmak mümkündür. Bu uç noktalara bazı örnekler, meta veri değişim uç noktaları ve bulma uç noktaları içerir. Standart uç noktalar Ayrıca, sabit bir doğası hakkında bilgi sağlamak veya kendi standart uç noktalarını oluşturmak zorunda kalmadan hizmet uç noktalarının yapılandırılmasına izin vererek kullanılabilirliği artırır. Örneğin, makul bir varsayılan kümesi sağlayarak kullanılabilirliği artırmak için değerler ve bu sayede yapılandırma dosyalarının ayrıntı düzeyini azaltır.
 
-Bu örnek iki projeden oluşan: iki standart uç nokta tanımlayan hizmet ve hizmeti ile iletişim kuran istemci. Standart uç noktaları için hizmet yapılandırma dosyasında tanımlanan aşağıdaki örnekte show yoludur.
+Bu örnek iki projeden oluşur: iki standart uç noktayı ve hizmetle iletişim kuran istemciyi tanımlayan hizmet. Yapılandırma dosyasında hizmet için standart uç noktaların tanımlandığı şekilde aşağıdaki örnekte gösterilmektedir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -50,9 +50,9 @@ Bu örnek iki projeden oluşan: iki standart uç nokta tanımlayan hizmet ve hiz
 </configuration>
 ```
 
-Hizmet türü için tanımlanan ilk uç nokta `customEndpoint`, tanımları görülebilir `<standardEndpoints>` bölümünde, özellik `property` değerin `true`. Yeni bir özellik ile özelleştirilmiş bir uç nokta durum budur. İkinci uç nokta adresi, bağlama ve sözleşme değerlerini düzeltilen bir meta veri uç noktasına karşılık gelir.
+Hizmet için tanımlanan ilk uç nokta `customEndpoint`türüdür. Bu, tanımı `property` `true`değeri verilen `<standardEndpoints>` bölümünde görülebilir. Bu, yeni bir özellikle özelleştirilmiş bir uç noktanın durumdur. İkinci uç nokta, adres, bağlama ve anlaşma değerlerinin düzeltildiği bir meta veri uç noktasına karşılık gelir.
 
-Standart uç nokta öğenin türetildiği bir sınıf tanımlamak için `StandardEndpointElement` oluşturulması gerekir. Bu örnek, söz konusu olduğunda `CustomEndpointElement` aşağıdaki örnekte gösterildiği gibi sınıfı tanımlanmış.
+Standart uç nokta öğesini tanımlamak için, `StandardEndpointElement` türetilen bir sınıfın oluşturulması gerekir. Bu örnek söz konusu olduğunda, `CustomEndpointElement` sınıfı aşağıdaki örnekte gösterildiği gibi tanımlanmıştır.
 
 ```csharp
 public class CustomEndpointElement : StandardEndpointElement
@@ -105,7 +105,7 @@ public class CustomEndpointElement : StandardEndpointElement
 }
 ```
 
-İçinde `CreateServiceEndpoint` işlevi, bir `CustomEndpoint` nesnesi oluşturulur. Tanımı aşağıdaki örnekte gösterilmiştir:
+`CreateServiceEndpoint` işlevinde, bir `CustomEndpoint` nesnesi oluşturulur. Tanımı aşağıdaki örnekte gösterilmiştir:
 
 ```csharp
 public class CustomEndpoint : ServiceEndpoint
@@ -135,38 +135,38 @@ public class CustomEndpoint : ServiceEndpoint
 }
 ```
 
- Hizmet ve istemci arasındaki iletişimin gerçekleştirmek için bir hizmet başvurusu hizmeti istemcisi oluşturulur. Örneği oluşturulan ve yürütülen hizmeti yürütür ve istemci ile iletişim kurar. Var. her zaman bazı değişiklik hizmetinde hizmet başvurusunu güncelleştirilmesi gerektiğini unutmayın.
+ Hizmet ile istemci arasındaki iletişimi gerçekleştirmek için istemcide hizmet başvurusu oluşturulur. Örnek oluşturulup yürütüldüğünde, hizmet yürütülür ve istemci onunla iletişim kurar. Hizmette her değişiklik olduğunda hizmet başvurusunun güncelleştirilmesini gerekeceğini unutmayın.
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1. Visual Studio 2012 kullanarak, StandardEndpoints.sln dosyasını açın.
+1. Visual Studio 2012 kullanarak StandardEndpoints. sln dosyasını açın.
 
-2. Başlamak birden çok proje etkinleştirin.
+2. Birden çok projenin başlatılmasını etkinleştirin.
 
-    1. İçinde **Çözüm Gezgini**, standart uç noktaları çözüme sağ tıklayın ve ardından **özellikleri**.
+    1. **Çözüm Gezgini**, standart uç noktalar çözümüne sağ tıklayın ve ardından **Özellikler**' i seçin.
 
-    2. İçinde **ortak özellikler**seçin **başlangıç projesi**ve ardından **birden fazla başlangıç projesi**.
+    2. **Ortak özellikler**' de **Başlangıç projesi**' ni seçin ve ardından **birden fazla başlangıç**projesi ' ne tıklayın.
 
-    3. Hizmet projesi ile listenin başına taşı **eylem** kümesine **Başlat**.
+    3. **Eylem** **Başlangıç**olarak ayarlanmış şekilde, hizmet projesini listenin başına taşıyın.
 
-    4. İstemci projesi hizmet projesi sonra da WITH move **eylem** kümesine **Başlat**.
+    4. Istemci projesini, **eylem** olarak ayarlanmış şekilde, hizmet projesinden sonra da **taşıyın.**
 
-         Bu, istemci projesinin sonra hizmet projesi yürütüldüğünü belirtir.
+         Bu, Istemci projesinin hizmet projesinden sonra yürütüleceğini belirtir.
 
-3. Çözümü çalıştırmak için F5 tuşuna basın.
+3. Çözümü çalıştırmak için F5 'e basın.
 
 > [!NOTE]
-> Adımları işe yaramazsa, ortamınızı düzgün bir şekilde, aşağıdaki adımları kullanarak ayarlandığından emin olun:
+> Bu adımlar işe yoksa, aşağıdaki adımları kullanarak ortamınızın düzgün şekilde ayarlandığından emin olun:
 >
-> 1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](one-time-setup-procedure-for-the-wcf-samples.md).
-> 2. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](building-the-samples.md).
-> 3. Tek bir veya birden çok bilgisayar yapılandırmalarını örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](running-the-samples.md).
+> 1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
+> 2. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümündeki yönergeleri izleyin.
+> 3. Örneği tek veya birden çok bilgisayar yapılandırmasında çalıştırmak için, [Windows Communication Foundation örneklerini çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.
 
 > [!IMPORTANT]
-> Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\StandardEndpoints`

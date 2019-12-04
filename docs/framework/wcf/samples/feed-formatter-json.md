@@ -2,21 +2,21 @@
 title: Akış Biçimlendirici (JSON)
 ms.date: 03/30/2017
 ms.assetid: f9c0b295-55e7-48ea-b308-ba51c7d31143
-ms.openlocfilehash: 516a114ee577597611c14ce10ad838d85d6a0fb1
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: dfdcd0920980e7e5cc1fe1c8910ee7cfbe59b5a0
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989899"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715836"
 ---
 # <a name="feed-formatter-json"></a>Akış Biçimlendirici (JSON)
-Bu örnek, <xref:System.ServiceModel.Syndication.SyndicationFeed> <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> JavaScriptnesnegösterimi(JSON)biçimindebirsınıfınörneğiniözelveilekullanarak<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>serileştirmek gösterilmektedir.  
+Bu örnek, özel bir <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>kullanılarak JavaScript Nesne Gösterimi (JSON) biçiminde bir <xref:System.ServiceModel.Syndication.SyndicationFeed> sınıfının örneğinin serileştirilme şeklini gösterir.  
   
 ## <a name="architecture-of-the-sample"></a>Örneğin mimarisi  
- Örnek, öğesinden `JsonFeedFormatter` <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>devralan adlı bir sınıfı uygular. `JsonFeedFormatter` Sınıfı ,<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> verileri JSON biçiminde okumak ve yazmak için öğesine bağımlıdır. Dahili olarak, biçimlendirici, seri hale getirici tarafından üretilen JSON verilerinin biçimini `JsonSyndicationFeed` denetlemek `JsonSyndicationItem` için ve adlı özel bir veri anlaşması türü kümesi kullanır. Bu uygulama ayrıntıları, son kullanıcıdan gizlenir ve standart <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem> sınıflara karşı çağrılara izin verir.  
+ Örnek, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>devralan `JsonFeedFormatter` adlı bir sınıfı uygular. `JsonFeedFormatter` sınıfı, verileri JSON biçiminde okumak ve yazmak için <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> kullanır. Dahili olarak, biçimlendirici, serileştirici tarafından üretilen JSON verilerinin biçimini denetlemek için `JsonSyndicationFeed` ve `JsonSyndicationItem` adlı özel bir veri anlaşması kümesi kullanır. Bu uygulama ayrıntıları, son kullanıcıdan gizlenir ve standart <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem> sınıflarına yönelik çağrılara izin verir.  
   
 ## <a name="writing-json-feeds"></a>JSON akışlarını yazma  
- JSON akışı yazmak, `JsonFeedFormatter` <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> aşağıdaki örnek kodda gösterildiği gibi ile (Bu örnekte uygulanan) kullanılarak gerçekleştirilebilir.  
+ JSON akışı yazmak, aşağıdaki örnek kodda gösterildiği gibi <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> `JsonFeedFormatter` (Bu örnekte uygulanan) kullanılarak gerçekleştirilebilir.  
   
 ```csharp  
 //Basic feed with sample data  
@@ -34,7 +34,7 @@ writeSerializer.WriteObject(stream, new JsonFeedFormatter(feed));
 ```  
   
 ## <a name="reading-a-json-feed"></a>JSON akışını okuma  
- JSON biçimli verilerin akışından alma, `JsonFeedFormatter` aşağıdaki kodda gösterildiği gibi ile gerçekleştirilebilir. <xref:System.ServiceModel.Syndication.SyndicationFeed>  
+ JSON biçimli verilerin akışından bir <xref:System.ServiceModel.Syndication.SyndicationFeed> alma, aşağıdaki kodda göster olarak `JsonFeedFormatter` ile gerçekleştirilebilir.  
   
  `//Read in the feed using the DataContractJsonSerializer`  
   
@@ -57,6 +57,6 @@ writeSerializer.WriteObject(stream, new JsonFeedFormatter(feed));
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\JsonFeeds`  

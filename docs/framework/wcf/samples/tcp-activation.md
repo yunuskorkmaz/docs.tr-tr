@@ -2,32 +2,32 @@
 title: TCP Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: e3bfbe9d7e7a6efafc8bf1e281e1f7a99c9c5fbe
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: c1a2c0de5fbb666ec3b68ec3da31cc27f8234cbd
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487524"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716603"
 ---
 # <a name="tcp-activation"></a>TCP Etkinleştirme
 
-Bu örnek net.tcp protokolü üzerinden iletişim kuran bir hizmeti etkinleştirmek için Windows İşlem Etkinleştirme Hizmetleri (WAS) kullanan bir hizmet barındırma gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).
+Bu örnekte, net. TCP protokolü üzerinden iletişim kuran bir hizmeti etkinleştirmek için Windows Işlem etkinleştirme Hizmetleri 'ni (WAS) kullanan bir hizmetin barındırılması gösterilmektedir. Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır.
 
 > [!NOTE]
-> Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
 
 > [!IMPORTANT]
-> Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.
+> Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`
 
-Örnek bir istemci konsol program (.exe) ve WAS tarafından etkinleştirilen bir çalışan işleminin barındırılan hizmet kitaplığı (.dll) oluşur. İstemci etkinliği konsol penceresinde görünür.
+Örnek, bir istemci konsol programından (. exe) ve tarafından etkinleştirilen bir çalışan işlemde barındırılan bir hizmet kitaplığından (. dll) oluşur. İstemci etkinliği konsol penceresinde görünür.
 
-Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular. Anlaşma tarafından tanımlanan `ICalculator` matematik işlemlerinden sunan arabirimi (ekleme, çıkarma, çarpma ve bölme), aşağıdaki örnek kodda gösterildiği gibi:
+Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, aşağıdaki örnek kodda gösterildiği gibi matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) sunan `ICalculator` arabirimi tarafından tanımlanır:
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -44,7 +44,7 @@ public interface ICalculator
 }
 ```
 
-Hizmet uygulaması, hesaplar ve uygun sonucunu döndürür:
+Hizmet uygulama, uygun sonucu hesaplar ve döndürür:
 
 ```csharp
 // Service class that implements the service contract.
@@ -69,9 +69,9 @@ public class CalculatorService : ICalculator
 }
 ```
 
-Örnek bir TCP bağlantı noktası paylaşımı etkin ve devre dışı güvenlikle bağlama net.tcp çeşidini kullanır. Güvenli bir TCP bağlaması kullanmak istiyorsanız, sunucunun güvenlik modu istediğiniz ayara değiştirin ve Svcutil.exe bir güncelleştirme istemci yapılandırma dosyası oluşturmak için istemcide yeniden çalıştırın.
+Örnek, TCP bağlantı noktası Paylaşımı etkin ve güvenlik kapatılmış olan net. TCP bağlamasının bir türevini kullanır. Güvenli bir TCP bağlaması kullanmak istiyorsanız, sunucunun güvenlik modunu istenen ayarla değiştirin ve istemci üzerinde bir güncelleştirme istemci yapılandırma dosyası oluşturmak için Svcutil. exe dosyasını yeniden çalıştırın.
 
-Aşağıdaki örnek, hizmet yapılandırmasını gösterir:
+Aşağıdaki örnekte hizmetin yapılandırması gösterilmektedir:
 
 ```xml
 <system.serviceModel>
@@ -109,7 +109,7 @@ Aşağıdaki örnek, hizmet yapılandırmasını gösterir:
   </system.serviceModel>
 ```
 
-Aşağıdaki örnek kodda gösterildiği gibi istemcinin uç nokta yapılandırılır:
+İstemcinin uç noktası aşağıdaki örnek kodda gösterildiği gibi yapılandırılır:
 
 ```xml
 <system.serviceModel>
@@ -128,7 +128,7 @@ Aşağıdaki örnek kodda gösterildiği gibi istemcinin uç nokta yapılandır�
 </system.serviceModel>
 ```
 
-Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.
+Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.
 
 ```console
 Add(100,15.99) = 115.99
@@ -139,36 +139,36 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.
 ```
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
 
-1. IIS 7. 0'ın yüklü olduğundan emin olun. WAS etkinleştirme için IIS 7.0 gereklidir.
+1. IIS 7,0 'nin yüklü olduğundan emin olun. WAS etkinleştirmesi için IIS 7,0 gereklidir.
 
-2. Gerçekleştirilen mutlaka [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
     Ayrıca, WCF HTTP olmayan etkinleştirme bileşenlerini yüklemelisiniz:
 
-    1. Gelen **Başlat** menüsünde seçin **Denetim Masası**.
+    1. **Başlat** menüsünde, **Denetim Masası**' nı seçin.
 
-    2. Seçin **programlar ve Özellikler**.
+    2. **Programlar ve Özellikler '** i seçin.
 
-    3. Tıklayın **Aç veya kapat Windows bileşenleri**.
+    3. **Windows bileşenlerini aç veya kapat**' a tıklayın.
 
-    4. Genişletin **Microsoft .NET Framework 3.0** düğüm ve onay **Windows Communication Foundation HTTP olmayan etkinleştirme** özelliği.
+    4. **Microsoft .NET Framework 3,0** düğümünü genişletin ve **Windows Communication Foundation HTTP olmayan etkinleştirme** özelliğini denetleyin.
 
-3. WAS TCP etkinleştirilmesini destekleyecek şekilde yapılandırın.
+3. TCP etkinleştirmesini destekleyecek şekilde yapılandırın.
 
-    Bir kolaylık olarak örnek dizinde yer AddNetTcpSiteBinding.cmd adlı bir toplu iş dosyasında aşağıdaki iki adımı uygulanır.
+    Kolaylık olması halinde, örnek dizinde bulunan AddNetTcpSiteBinding. cmd adlı bir toplu iş dosyasında aşağıdaki iki adım uygulanır.
 
-    1. NET.TCP etkinleştirmeyi desteklemek için varsayılan Web sitesi ilk net.tcp bağlantı noktasına bağlı olmalıdır. Bu yapılabilir, Internet Information Services 7.0 (IIS) Yönetimi araç takımıyla yüklenmeyen Appcmd.exe kullanarak. Bir düzey yönetici komut isteminden aşağıdaki komutu çalıştırın:
+    1. Net. TCP etkinleştirmesini desteklemek için, önce varsayılan Web sitesinin bir net. TCP bağlantı noktasına bağlanması gerekir. Bu işlem, Internet Information Services 7,0 (IIS) yönetim araç takımı ile yüklenen appcmd. exe kullanılarak yapılabilir. Yönetici düzeyindeki bir komut isteminden aşağıdaki komutu çalıştırın:
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']
         ```
 
         > [!TIP]
-        > Tek metin satırı komutudur. Bu komut, varsayılan Web sitesine 808 tüm ana bilgisayar adına sahip numaralı TCP bağlantı noktasını dinleyen bir net.tcp site bağlaması ekler.
+        > Bu komut, tek satırlık bir metin. Bu komut, TCP bağlantı noktası 808 üzerinde dinleme yapan varsayılan Web sitesine bir net. TCP site bağlamayı herhangi bir ana bilgisayar adı ile ekler.
 
-    2. Bir sitedeki tüm uygulamaları genel net.tcp bağlama paylaşsa da her uygulama net.tcp destek ayrı ayrı etkinleştirebilirsiniz. NET.TCP /servicemodelsamples uygulamanın etkinleştirmek için bir yönetici düzeyinde komut isteminden aşağıdaki komutu çalıştırın:
+    2. Bir sitedeki tüm uygulamalar ortak bir net. TCP bağlamasını paylaşır, ancak her uygulama net. TCP desteğini tek tek etkinleştirebilir. /Servicemodelsamples uygulaması için net. TCP 'yi etkinleştirmek üzere yönetici düzeyinde bir komut isteminden aşağıdaki komutu çalıştırın:
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set app
@@ -176,17 +176,17 @@ Press <ENTER> to terminate client.
         ```
 
         > [!NOTE]
-        > Tek metin satırı komutudur. Bu komut, her ikisi de kullanılarak erişilecektir /servicemodelsamples uygulama etkinleştirir `http://localhost/servicemodelsamples` ve `net.tcp://localhost/servicemodelsamples`.
+        > Bu komut, tek satırlık bir metin. Bu komut,/servicemodelsamples uygulamasına hem `http://localhost/servicemodelsamples` hem de `net.tcp://localhost/servicemodelsamples`kullanılarak erişilmesini sağlar.
 
-4. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
+4. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
 
-5. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).
+5. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
 
-    Eklediğiniz net.tcp site bağlaması için bu örnek kaldırın.
+    Bu örnek için eklemiş olduğunuz net. TCP site bağlamasını kaldırın.
 
-    Bir kolaylık olarak örnek dizinde yer RemoveNetTcpSiteBinding.cmd adlı bir toplu iş dosyasında aşağıdaki iki adımı uygulanır.
+    Kolaylık olması halinde, örnek dizinde bulunan RemoveNetTcpSiteBinding. cmd adlı bir toplu iş dosyasında aşağıdaki iki adım uygulanır.
 
-    1. NET.TCP, bir yönetici düzeyinde komut isteminden aşağıdaki komutu çalıştırarak etkin protokoller listesinden kaldırın:
+    1. Yönetici düzeyinde bir komut isteminden aşağıdaki komutu çalıştırarak, etkin protokoller listesinden net. TCP ' i kaldırın:
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set app
@@ -194,9 +194,9 @@ Press <ENTER> to terminate client.
         ```
 
         > [!NOTE]
-        > Bu komut, tek satırlık bir metin girilmelidir.
+        > Bu komut tek satırlık bir metin olarak girilmelidir.
 
-    2. Net.tcp site bağlaması, bir yönetici düzeyinde komut isteminden aşağıdaki komutu çalıştırarak kaldırın:
+    2. Yönetici düzeyinde bir komut isteminden aşağıdaki komutu çalıştırarak net. TCP site bağlamasını kaldırın:
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
@@ -204,8 +204,8 @@ Press <ENTER> to terminate client.
         ```
 
         > [!NOTE]
-        > Bu komut, tek satırlık bir metin yazılmalıdır.
+        > Bu komutun tek satırlık bir metin olarak yazılması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric barındırma ve Kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric barındırma ve kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkId=193961)

@@ -2,12 +2,12 @@
 title: ASMX Web Hizmetleri ile Birlikte Çalışma
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: 2ef4e34de76c046ba21dd7a3c50ea6ba782d459e
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 6d8be3fe6daa19a842dcaa92d05ec89ebef9fa5f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989806"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715744"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>ASMX Web Hizmetleri ile Birlikte Çalışma
 Bu örnek, bir Windows Communication Foundation (WCF) istemci uygulamasının mevcut bir ASMX Web hizmetiyle nasıl tümleştirileceğini gösterir.  
@@ -15,7 +15,7 @@ Bu örnek, bir Windows Communication Foundation (WCF) istemci uygulamasının me
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Bu örnek, Internet Information Services (IIS) tarafından barındırılan bir istemci konsol programından (. exe) ve hizmet kitaplığından (. dll) oluşur. Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşmeyi uygulayan bir ASMX Web hizmetidir. `Add`Hizmet matematik işlemlerini ( `Subtract`,, `Multiply`, ve `Divide`) kullanıma sunar. İstemci, zaman uyumlu istekleri bir matematik işlemine yapar ve hizmet sonuçla yanıt verir. İstemci etkinliği konsol penceresinde görünür.  
+ Bu örnek, Internet Information Services (IIS) tarafından barındırılan bir istemci konsol programından (. exe) ve hizmet kitaplığından (. dll) oluşur. Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşmeyi uygulayan bir ASMX Web hizmetidir. Hizmet matematik işlemlerini (`Add`, `Subtract`, `Multiply`ve `Divide`) kullanıma sunar. İstemci, zaman uyumlu istekleri bir matematik işlemine yapar ve hizmet sonuçla yanıt verir. İstemci etkinliği konsol penceresinde görünür.  
   
  Aşağıdaki örnek kodda gösterilen ASMX Web hizmeti uygulama, uygun sonucu hesaplar ve döndürür.  
   
@@ -46,7 +46,7 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- Yapılandırıldığı gibi, hizmete aynı makinede bulunan bir istemci `http://localhost/servicemodelsamples/service.asmx` tarafından erişilebilir. Uzak makinelerdeki istemciler hizmete erişmek için, localhost yerine tam etki alanı adı belirtilmelidir.  
+ Yapılandırıldığı gibi, hizmete aynı makinede bulunan bir istemci tarafından `http://localhost/servicemodelsamples/service.asmx` erişilebilir. Uzak makinelerdeki istemciler hizmete erişmek için, localhost yerine tam etki alanı adı belirtilmelidir.  
   
  İletişim, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan bir istemci aracılığıyla yapılır. İstemci generatedClient.cs dosyasında bulunur. Güncelleştirilmiş meta verileri almak için kullanıldığından, ASMX hizmeti proxy kodunu oluşturmak için kullanılabilir olmalıdır. Yazılan proxy 'yi oluşturmak için istemci dizinindeki bir komut isteminden aşağıdaki komutu çalıştırın.  
   
@@ -127,6 +127,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  

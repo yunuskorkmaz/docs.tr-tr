@@ -2,32 +2,32 @@
 title: Genel olmayan ParallelForEach
 ms.date: 03/30/2017
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
-ms.openlocfilehash: 52b851686ea2fdc8c573a0622fe91ca5e205edeb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 33e0c8ef8c04b7d58815760ae1152f63891fdfd5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637748"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715638"
 ---
 # <a name="non-generic-parallelforeach"></a>Genel olmayan ParallelForEach
 
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] kendi araç kutusunda etkinlikler, akış denetimi dahil olmak üzere bir dizi birlikte gelen <xref:System.Activities.Statements.ParallelForEach%601>, üzerinden yineleme olanak tanıyan <xref:System.Collections.Generic.IEnumerable%601> koleksiyonları.
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], <xref:System.Collections.Generic.IEnumerable%601> koleksiyonları arasında yineleme sağlayan <xref:System.Activities.Statements.ParallelForEach%601>de dahil olmak üzere bir denetim akışı etkinliği kümesi araç kutusuna gönderilir.
 
-<xref:System.Activities.Statements.ParallelForEach%601> gerektirir, <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> türü özelliğini <xref:System.Collections.Generic.IEnumerable%601>. Bu kullanıcılar, uygulama veri yapıları üzerinde yineleme gelen ışığının <xref:System.Collections.Generic.IEnumerable%601> arabirimi (örneğin, <xref:System.Collections.ArrayList>). Genel olmayan sürümü <xref:System.Activities.Statements.ParallelForEach%601> koleksiyonundaki değerleri türlerinin uyumluluğu sağlamaya yönelik daha fazla çalışma zamanı karmaşıklığı çoğaltamaz bu gereksinimi ortadan kaldırır.
+<xref:System.Activities.Statements.ParallelForEach%601>, <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> özelliğinin <xref:System.Collections.Generic.IEnumerable%601>türünde olmasını gerektirir. Bu, kullanıcıların <xref:System.Collections.Generic.IEnumerable%601> arabirimi (örneğin, <xref:System.Collections.ArrayList>) uygulayan veri yapıları üzerinde yinelenmesine neden olacak. <xref:System.Activities.Statements.ParallelForEach%601> genel olmayan sürümü bu gereksinimi, koleksiyondaki değer türlerinin uyumluluğunu sağlamaya yönelik daha fazla çalışma zamanı karmaşıklığı masrafına göre daha fazla gelir.
 
-Bu örnek, genel olmayan bir uygulama gösterilmektedir <xref:System.Activities.Statements.ParallelForEach%601> etkinlik ve iş Tasarımcısı. Bu etkinlik yinelemek için kullanılabilir <xref:System.Collections.ArrayList>.
+Bu örnek, genel olmayan <xref:System.Activities.Statements.ParallelForEach%601> etkinliğinin ve tasarımcısının nasıl uygulanacağını gösterir. Bu etkinlik <xref:System.Collections.ArrayList>üzerinden yinelemek için kullanılabilir.
 
 ## <a name="parallelforeach-activity"></a>ParallelForEach etkinliği
 
-C# /VB `foreach` deyimi koleksiyonundaki her öğe için bir katıştırılmış deyim yürütülürken, bir koleksiyonun öğeleri sıralar. [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Eşdeğer etkinlikler <xref:System.Activities.Statements.ForEach%601> ve <xref:System.Activities.Statements.ParallelForEach%601>. <xref:System.Activities.Statements.ForEach%601> Etkinlik değerleri ve gövde listesini içerir. Çalışma zamanında, listenin yinelenir ve listedeki her değerin gövdesi yürütülür.
+C#/Vb `foreach` ifade, bir koleksiyonun öğelerini numaralandırır ve koleksiyonun her öğesi için gömülü bir ifade yürütüyordur. [!INCLUDE[wf1](../../../../includes/wf1-md.md)] denk etkinlikler <xref:System.Activities.Statements.ForEach%601> ve <xref:System.Activities.Statements.ParallelForEach%601>. <xref:System.Activities.Statements.ForEach%601> etkinliği bir değer ve gövde listesi içerir. Çalışma zamanında, liste tekrarlandırılır ve listedeki her bir değer için gövde yürütülür.
 
-<xref:System.Activities.Statements.ParallelForEach%601> sahip bir <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>, böylece <xref:System.Activities.Statements.ParallelForEach%601> etkinliği tamamlamak erken varsa değerlendirmesi <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> döndürür `true`. <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> Her yineleme tamamlandıktan sonra değerlendirilir.
+<xref:System.Activities.Statements.ParallelForEach%601>, <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> değerlendirmesi `true`döndürürse <xref:System.Activities.Statements.ParallelForEach%601> etkinliğinin erken tamamlanabilmesi için bir <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>vardır. <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> her yineleme tamamlandıktan sonra değerlendirilir.
 
-Burada kullanılır ve derleme zamanında tür sağlar senaryoları çoğunu kapsar için çoğu durumda, tercih edilen bir çözüm etkinliğin genel sürüm olmamalıdır. Genel olmayan sürümü, genel olmayan uygulayan türler yineleme için kullanılabilir <xref:System.Collections.IEnumerable> arabirimi.
+Çoğu durumda, etkinliğin genel sürümü tercih edilen çözüm olmalıdır, çünkü kullanıldığı senaryoların çoğunu kapsamakta ve derleme zamanında tür denetimi sağlar. Genel olmayan sürüm, genel olmayan <xref:System.Collections.IEnumerable> arabirimini uygulayan türler arasında yineleme yapmak için kullanılabilir.
 
 ## <a name="class-definition"></a>Sınıf tanımı
 
-Aşağıdaki kod örneği, genel olmayan bir tanımı gösterilmektedir `ParallelForEach` etkinliktir.
+Aşağıdaki kod örneği, genel olmayan `ParallelForEach` etkinliğinin tanımını gösterir.
 
 ```csharp
 [ContentProperty("Body")]
@@ -47,17 +47,17 @@ public class ParallelForEach : NativeActivity
 ```
 
 Gövde (isteğe bağlı) \
-<xref:System.Activities.ActivityAction> Türü <xref:System.Object>, koleksiyondaki her öğe için gerçekleştirilir. Her bağımsız öğede gövdesine, bağımsız değişken özelliği üzerinden geçirilir.
+Koleksiyondaki her öğe için yürütülen <xref:System.Object>türü <xref:System.Activities.ActivityAction>. Bağımsız değişken özelliği aracılığıyla her bir öğe gövdeye iletilir.
 
-Değer (isteğe bağlı) \
-Üzerinden yinelenir öğeleri koleksiyonu. Tüm koleksiyon öğelerini uyumlu bir tür olduğundan emin olmak için çalışma zamanında gerçekleştirilir.
+Değerler (isteğe bağlı) \
+Tekrarlandırılmış öğelerin koleksiyonu. Koleksiyondaki tüm öğelerin uyumlu türlerde olduğundan emin olmak, çalışma zamanında yapılır.
 
-(İsteğe bağlı) CompletionCondition \
-<xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> Özelliği, tüm yineleme tamamlandıktan sonra değerlendirilir. Değerlendirilirse `true`, sonra zamanlanan yinelemeler iptal edilir. Bu özellik ayarlanmamışsa, dallar koleksiyondaki tüm etkinlikleri işlem tamamlanana kadar yürütün.
+CompletionCondition (isteğe bağlı) \
+<xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> özelliği herhangi bir yineleme tamamlandıktan sonra değerlendirilir. `true`değerlendirilirse, zamanlanan bekleyen yinelemeler iptal edilir. Bu özellik ayarlanmamışsa, dallar koleksiyonundaki tüm etkinlikler tamamlanana kadar yürütülür.
 
 ## <a name="example-of-using-parallelforeach"></a>ParallelForEach kullanma örneği
 
-Aşağıdaki kod bir uygulamada ParallelForEach etkinlik kullanmayı gösterir.
+Aşağıdaki kod, bir uygulamada ParallelForEach etkinliğinin nasıl kullanılacağını göstermektedir.
 
 ```csharp
 string[] names = { "bill", "steve", "ray" };
@@ -81,7 +81,7 @@ Activity sampleUsage =
 
 ## <a name="parallelforeach-designer"></a>ParallelForEach Tasarımcısı
 
-Örnek etkinlik Tasarımcısı için yerleşik sağlanan Tasarımcı görünümü benzer <xref:System.Activities.Statements.ParallelForEach%601> etkinlik. Tasarımcı araç kutusunda görünür **örnekleri**, **genel olmayan etkinlikler** kategorisi. Tasarımcı adlı **ParallelForEachWithBodyFactory** Araç Kutusu'nda, etkinlik kullanıma sunduğundan bir <xref:System.Activities.Presentation.IActivityTemplateFactory> etkinliği bir düzgün bir şekilde yapılandırılmış oluşturan araç kutusunda <xref:System.Activities.ActivityAction>.
+Örnek için etkinlik Tasarımcısı, yerleşik <xref:System.Activities.Statements.ParallelForEach%601> etkinliği için sunulan tasarımcı görünümünde benzerdir. Tasarımcı, **örnekler**, **genel olmayan etkinlikler** kategorisindeki araç kutusunda görünür. Tasarımcı araç kutusunda **ParallelForEachWithBodyFactory** olarak adlandırılır, çünkü etkinlik, uygun şekilde yapılandırılmış bir <xref:System.Activities.ActivityAction>etkinlik oluşturan araç kutusunda bir <xref:System.Activities.Presentation.IActivityTemplateFactory> kullanıma sunar.
 
 ```csharp
 public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
@@ -104,19 +104,19 @@ public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
 
 ## <a name="to-run-the-sample"></a>Örnek çalıştırmak için
 
-1. Seçtiğiniz proje, çözümün başlangıç projesi olarak ayarlayın.
+1. Tercih ettiğiniz projeyi çözümün başlangıç projesi olarak ayarlayın.
 
-    1. **CodeTestClient** kod kullanarak etkinliğini kullanma işlemini gösterir.
+    1. **Codetekstclient** , kodu kullanarak etkinliğin nasıl kullanılacağını gösterir.
 
-    2. **DesignerTestClient** etkinlik Tasarımcısı içinde kullanmayı gösterir.
+    2. **DesignerTestClient** , etkinliğin tasarımcı içinde nasıl kullanılacağını gösterir.
 
-2. Derleme ve projeyi çalıştırın.
+2. Projeyi derleyin ve çalıştırın.
 
 > [!IMPORTANT]
-> Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericParallelForEach`

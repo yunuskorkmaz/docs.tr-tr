@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: 95007a323bd71b89d2037896129c6be1b19ac377
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5904a5b61c0cc472c40eb2b4967815d5e6add195
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039159"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714666"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
-Bu örnek, aynı `netNamedPipeBinding` makinede çapraz işlem iletişimi sağlayan bağlamayı gösterir. Adlandırılmış kanallar makineler arasında çalışmaz. Bu örnek, başlangıç Hesaplayıcı [](../../../../docs/framework/wcf/samples/getting-started-sample.md) hizmetini temel alır.  
+Bu örnekte, aynı makinede çapraz işlem iletişimi sağlayan `netNamedPipeBinding` bağlama gösterilmektedir. Adlandırılmış kanallar makineler arasında çalışmaz. Bu [örnek, başlangıç Hesaplayıcı](../../../../docs/framework/wcf/samples/getting-started-sample.md) hizmetini temel alır.  
   
  Bu örnekte, hizmet kendiliğinden barındırılır. Hem istemci hem de hizmet konsol uygulamalardır.  
   
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Bağlama, istemci ve hizmet için yapılandırma dosyalarında belirtilir. Bağlama türü, aşağıdaki örnek yapılandırmada gösterildiği `binding` gibi, [ \< \<istemci >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) öğesinin uç [ \<nokta >](../../configure-apps/file-schema/wcf/endpoint-element.md) veya uç nokta > özniteliğinde belirtilir:  
+ Bağlama, istemci ve hizmet için yapılandırma dosyalarında belirtilir. Bağlama türü, aşağıdaki örnek yapılandırmada gösterildiği gibi, [\<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-element.md) `binding` özniteliğinde veya [> client \<öğesinin\<uç nokta >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) ' nde belirtilir:  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
@@ -27,7 +27,7 @@ Bu örnek, aynı `netNamedPipeBinding` makinede çapraz işlem iletişimi sağla
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Önceki örnekte, varsayılan ayarlarla `netNamedPipeBinding` bağlamayı kullanmak için bir uç noktanın nasıl yapılandırılacağı gösterilmektedir. `netNamedPipeBinding` Bağlamayı yapılandırmak ve ayarlarını değiştirmek istiyorsanız, bir bağlama yapılandırması tanımlamanız gerekir. Uç nokta, bağlama yapılandırmasına ada göre bir `bindingConfiguration` özniteliği ile başvurmalıdır.  
+ Önceki örnek, `netNamedPipeBinding` bağlamayı varsayılan ayarlarla kullanmak için bir uç noktanın nasıl yapılandırılacağını gösterir. `netNamedPipeBinding` bağlamasını yapılandırmak ve ayarlarını değiştirmek istiyorsanız, bir bağlama yapılandırması tanımlamanız gerekir. Uç noktanın bağlama yapılandırmasına bir `bindingConfiguration` özniteliğiyle ad ile başvurması gerekir.  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
@@ -36,7 +36,7 @@ Bu örnek, aynı `netNamedPipeBinding` makinede çapraz işlem iletişimi sağla
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Bu örnekte, bağlama yapılandırması adlandırılır `Binding1` ve aşağıdaki tanıma sahiptir:  
+ Bu örnekte, bağlama yapılandırması `Binding1` olarak adlandırılır ve aşağıdaki tanıma sahiptir:  
   
 ```xml  
 <bindings>  
@@ -90,6 +90,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\NamedPipe`  

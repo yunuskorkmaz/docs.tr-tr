@@ -2,17 +2,17 @@
 title: Geniş Yazılmış Uzantılar Örneği
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 6cfdef1d083a25999f62c23667c9c6ea00326dca
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f3beed9b9ca1dd6b1d4bb32078e6cd35a636501c
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989787"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714876"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Geniş Yazılmış Uzantılar Örneği
-Dağıtım nesnesi modeli, uzantı verileriyle çalışma için zengin destek sağlar — bir dağıtım akışının xml gösteriminde bulunan ancak <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem>gibi sınıflar tarafından açıkça gösterilmeyen bilgiler. Bu örnek, uzantı verileriyle çalışmaya yönelik temel teknikleri gösterir.  
+Dağıtım nesnesi modeli, uzantı verileriyle çalışma için zengin destek sağlar — bir dağıtım akışının XML gösteriminde bulunan ancak <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem>gibi sınıflar tarafından açıkça gösterilmeyen bilgiler. Bu örnek, uzantı verileriyle çalışmaya yönelik temel teknikleri gösterir.  
   
- Örnek, örnek amacıyla <xref:System.ServiceModel.Syndication.SyndicationFeed> sınıfını kullanır. Ancak, bu örnekte gösterilen desenler uzantı verilerini destekleyen tüm dağıtım sınıflarıyla birlikte kullanılabilir:  
+ Örnek, örnek amaçları için <xref:System.ServiceModel.Syndication.SyndicationFeed> sınıfını kullanır. Ancak, bu örnekte gösterilen desenler uzantı verilerini destekleyen tüm dağıtım sınıflarıyla birlikte kullanılabilir:  
   
  <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -54,18 +54,18 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
  Bu belge aşağıdaki uzantı verisi parçalarını içerir:  
   
-- `<feed>` Öğesinin `myAttribute` özniteliği.  
+- `<feed>` öğesinin `myAttribute` özniteliği.  
   
-- `<simpleString>`dosyalarında.  
+- `<simpleString>` öğesi.  
   
-- `<DataContractExtension>`dosyalarında.  
+- `<DataContractExtension>` öğesi.  
   
-- `<XmlSerializerExtension>`dosyalarında.  
+- `<XmlSerializerExtension>` öğesi.  
   
-- `<xElementExtension>`dosyalarında.  
+- `<xElementExtension>` öğesi.  
   
 ## <a name="writing-extension-data"></a>Uzantı verileri yazma  
- Öznitelik uzantıları, aşağıdaki örnek kodda gösterildiği gibi <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> koleksiyona giriş eklenerek oluşturulur.  
+ Öznitelik uzantıları, aşağıdaki örnek kodda gösterildiği gibi <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> koleksiyonuna girdi eklenerek oluşturulur.  
   
 ```csharp  
 //Attribute extensions are stored in a dictionary indexed by   
@@ -73,9 +73,9 @@ w.w3.org/2001/XMLSchema" xmlns="">
 feed.AttributeExtensions.Add(new XmlQualifiedName("myAttribute", ""), "someValue");  
 ```  
   
- Öğe uzantıları, <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> koleksiyona girdi eklenerek oluşturulur. Bu uzantılar, dizeler gibi temel değerler, .NET Framework nesnelerin XML serileştirmeleri veya el ile kodlanmış XML düğümleri olabilir.  
+ Öğe uzantıları, <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> koleksiyonuna girdi eklenerek oluşturulur. Bu uzantılar, dizeler gibi temel değerler, .NET Framework nesnelerin XML serileştirmeleri veya el ile kodlanmış XML düğümleri olabilir.  
   
- Aşağıdaki örnek kod adlı `simpleString`bir uzantı öğesi oluşturur.  
+ Aşağıdaki örnek kod, `simpleString`adlı bir uzantı öğesi oluşturur.  
   
 ```csharp  
 feed.ElementExtensions.Add("simpleString", "", "hello, world!");  
@@ -83,16 +83,16 @@ feed.ElementExtensions.Add("simpleString", "", "hello, world!");
   
  Bu öğenin XML ad alanı boş ("") ad alanıdır ve değeri "Hello, World!" dizesini içeren bir metin düğümüdür.  
   
- Birçok iç içe öğeden oluşan karmaşık öğe uzantıları oluşturmanın bir yolu, aşağıdaki örneklerde gösterildiği gibi serileştirme için .NET Framework API 'leri kullanmaktır (hem <xref:System.Runtime.Serialization.DataContractSerializer> hem de <xref:System.Xml.Serialization.XmlSerializer> desteklenir).  
+ Birçok iç içe öğeden oluşan karmaşık öğe uzantıları oluşturmanın bir yolu, aşağıdaki örneklerde gösterildiği gibi, serileştirme için .NET Framework API 'Leri (<xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Xml.Serialization.XmlSerializer> desteklenir) kullanmaktır.  
   
 ```csharp  
 feed.ElementExtensions.Add( new DataContractExtension() { Key = "X", Value = 4 } );  
 feed.ElementExtensions.Add( new XmlSerializerExtension { Key = "Y", Value = 8 }, new XmlSerializer( typeof( XmlSerializerExtension ) ) );  
 ```  
   
- Bu örnekte, ve `DataContractExtension` `XmlSerializerExtension` , serileştirici ile kullanılmak üzere yazılmış özel türlerdir.  
+ Bu örnekte `DataContractExtension` ve `XmlSerializerExtension`, serileştirici ile kullanılmak üzere yazılmış özel türlerdir.  
   
- <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> Sınıfı bir<xref:System.Xml.XmlReader> örnekten öğe uzantıları oluşturmak için de kullanılabilir. Bu, aşağıdaki örnek kodda gösterildiği gibi XML işleme API 'leriyle <xref:System.Xml.Linq.XElement> kolay tümleştirme sağlar.  
+ <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> sınıfı, bir <xref:System.Xml.XmlReader> örneğinden öğe uzantıları oluşturmak için de kullanılabilir. Bu, aşağıdaki örnek kodda gösterildiği gibi, <xref:System.Xml.Linq.XElement> gibi XML işleme API 'Leriyle kolay tümleştirme sağlar.  
   
 ```csharp  
 feed.ElementExtensions.Add(new XElement("xElementExtension",  
@@ -102,7 +102,7 @@ feed.ElementExtensions.Add(new XElement("xElementExtension",
 ```  
   
 ## <a name="reading-extension-data"></a>Uzantı verilerini okuma  
- Öznitelik uzantılarının değerleri, aşağıdaki örnek kodda gösterildiği <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> <xref:System.Xml.XmlQualifiedName> gibi, koleksiyonundaki özniteliğe bakılarak elde edilebilir.  
+ Öznitelik uzantılarının değerleri, aşağıdaki örnek kodda gösterildiği gibi, <xref:System.Xml.XmlQualifiedName> tarafından <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> koleksiyonundaki özniteliğe bakılarak elde edilebilir.  
   
 ```csharp  
 Console.WriteLine( feed.AttributeExtensions[ new XmlQualifiedName( "myAttribute", "" )]);  
@@ -128,7 +128,7 @@ foreach (XmlSerializerExtension xse in feed2.ElementExtensions.ReadElementExtens
 }  
 ```  
   
- Yöntemi kullanılarak tek tek öğe uzantıları elde `XmlReader` etmek de mümkündür. <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader>  
+ Ayrıca, <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader> yöntemi kullanılarak tekil öğe uzantılarında `XmlReader` elde etmek de mümkündür.  
   
 ```csharp  
 foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<SyndicationElementExtension>(x => x.OuterName == "xElementExtension"))  
@@ -151,7 +151,7 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   

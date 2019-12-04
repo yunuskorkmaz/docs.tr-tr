@@ -2,20 +2,20 @@
 title: Meta Verileri Alma
 ms.date: 03/30/2017
 ms.assetid: e8a6ef8c-a195-495a-a15e-7d92bdf0b28c
-ms.openlocfilehash: 83db86ff46d4d1e5d8382c2bd11bce85360d2ff1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c5512ab2c1aea573feb1515aa220fd00bcb82c02
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038956"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716485"
 ---
 # <a name="retrieve-metadata"></a>Meta Verileri Alma
-Bu örnek, iletişim kuracak bir uç nokta seçmek üzere bir hizmetten meta verileri dinamik olarak alan bir istemcinin nasıl uygulanacağını gösterir. Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır. Hizmet iki uç nokta sergilemek üzere değiştirilmiştir — `basicHttpBinding` bağlamayı kullanarak temel adresteki bir uç nokta ve `wsHttpBinding` bağlamayı kullanarak {*BaseAddress*}/Secure konumundaki güvenli bir uç nokta. İstemci, uç nokta adresleriyle ve bağlamalarıyla yapılandırmak yerine, <xref:System.ServiceModel.Description.MetadataExchangeClient> sınıfını kullanarak hizmetin meta verilerini dinamik olarak alır ve ardından meta verileri <xref:System.ServiceModel.Description.WsdlImporter> sınıfını kullanarak bir <xref:System.ServiceModel.Description.ServiceEndpointCollection> olarak içeri aktarır.  
+Bu örnek, iletişim kuracak bir uç nokta seçmek üzere bir hizmetten meta verileri dinamik olarak alan bir istemcinin nasıl uygulanacağını gösterir. Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır. Hizmet, `basicHttpBinding` bağlamasını kullanarak temel adresteki bir uç nokta ve `wsHttpBinding` bağlamayı kullanarak {*BaseAddress*}/Secure konumundaki güvenli bir uç nokta sunmak üzere değiştirilmiştir. İstemci, uç nokta adresleriyle ve bağlamalarıyla yapılandırmak yerine, <xref:System.ServiceModel.Description.MetadataExchangeClient> sınıfını kullanarak hizmetin meta verilerini dinamik olarak alır ve ardından meta verileri <xref:System.ServiceModel.Description.WsdlImporter> sınıfını kullanarak bir <xref:System.ServiceModel.Description.ServiceEndpointCollection> olarak içeri aktarır.  
   
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- İstemci uygulaması, hizmet ile iletişim <xref:System.ServiceModel.Description.ServiceEndpointCollection> kurmak için istemcileri oluşturmak üzere içeri aktarılan öğesini kullanır. İstemci uygulaması, alınan her bir uç nokta boyunca yinelenir ve `ICalculator` sözleşmeyi uygulayan her bir uç nokta ile iletişim kurar. Aşağıdaki örnek kodda gösterildiği gibi, istemcinin her bir uç noktayla iletişim kuracak şekilde yapılandırılması için, alınan bitiş noktasıyla ilgili adres ve bağlama birlikte sağlanır.  
+ İstemci uygulaması, hizmetle iletişim kurmak üzere istemciler oluşturmak için içeri aktarılan <xref:System.ServiceModel.Description.ServiceEndpointCollection> kullanır. İstemci uygulaması, alınan her bir uç nokta boyunca yinelenir ve `ICalculator` sözleşmesini uygulayan her bir uç nokta ile iletişim kurar. Aşağıdaki örnek kodda gösterildiği gibi, istemcinin her bir uç noktayla iletişim kuracak şekilde yapılandırılması için, alınan bitiş noktasıyla ilgili adres ve bağlama birlikte sağlanır.  
   
 ```csharp   
 // Create a MetadataExchangeClient for retrieving metadata.  
@@ -65,6 +65,6 @@ foreach (ServiceEndpoint ep in endpoints)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\RetrieveMetadata`  

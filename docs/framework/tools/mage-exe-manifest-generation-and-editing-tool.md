@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: aa2ad9222460f8732397f8b1c72e36085bbe4a21
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3752ac7108a9fcd55b61b32b889a717ef7c0faff
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449426"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714470"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Bildirim Üretme ve Düzenleme Aracı)
 
@@ -35,7 +35,7 @@ Aşağıdaki tabloda *Mage. exe*tarafından desteklenen komutlar gösterilmekted
 |Komut|Açıklama|
 |-------------|-----------------|
 |**-CC, ClearApplicationCache**|Tüm yalnızca çevrimiçi uygulamalar için indirilen uygulama önbelleğini temizler.|
-|**-n,-yeni** *filetype [newoptions]*|Belirtilen türde yeni bir dosya oluşturur. Geçerli türler şunlardır:<br /><br /> -   `Deployment`: yeni bir dağıtım bildirimi oluşturur.<br />-   `Application`: yeni bir uygulama bildirimi oluşturur.<br /><br /> Eğer bu komutla birlikte hiçbir ek parametre belirtmezseniz, uygun türde ve uygun varsayılan etiketlere ve öznitelik değerlerine sahip bir dosya oluşturur.<br /><br /> Yeni dosyanın dosya adını ve yolunu belirtmek için **-ToFile** seçeneğini (aşağıdaki tabloda bakın) kullanın.<br /><br /> Bildirimin \<bağımlılık > bölümüne eklenen bir uygulamanın tüm Derlemeleriyle bir uygulama bildirimi oluşturmak için **-FromDirectory** seçeneğini kullanın (aşağıdaki tabloda bulunan).|
+|**-n,-yeni** *filetype [newoptions]*|Belirtilen türde yeni bir dosya oluşturur. Geçerli türler:<br /><br /> -   `Deployment`: yeni bir dağıtım bildirimi oluşturur.<br />-   `Application`: yeni bir uygulama bildirimi oluşturur.<br /><br /> Eğer bu komutla birlikte hiçbir ek parametre belirtmezseniz, uygun türde ve uygun varsayılan etiketlere ve öznitelik değerlerine sahip bir dosya oluşturur.<br /><br /> Yeni dosyanın dosya adını ve yolunu belirtmek için **-ToFile** seçeneğini (aşağıdaki tabloda bakın) kullanın.<br /><br /> Bildirimin \<bağımlılık > bölümüne eklenen bir uygulamanın tüm Derlemeleriyle bir uygulama bildirimi oluşturmak için **-FromDirectory** seçeneğini kullanın (aşağıdaki tabloda bulunan).|
 |**-u,-Update** *[filepath] [UpdateOptions]*|Bir bildirim dosyasına bir veya daha fazla değişiklik yapar. Düzenlediğiniz dosya türünü belirtmeniz gerekli değildir. Mage.exe, bir buluşsal yöntem kümesi kullanarak dosyayı inceler ve bir dağıtım bildirimi ya da uygulama bildirimi olup olmadığını belirler.<br /><br /> Zaten bir sertifikayı olan bir dosyayı imzaladıysanız **-güncelleştirme** , anahtar imza bloğunu kaldırır. Bunun nedeni, anahtar imzasının dosyasının bir karmasını içermesi ve dosyayı değiştirmenin karmayı geçersiz kılmasıdır.<br /><br /> Mevcut dosyanın üzerine yazmak yerine yeni bir dosya adı ve yolu belirtmek için **-ToFile** seçeneğini (aşağıdaki tabloda bakın) kullanın.|
 |**-s,-Sign** `[signOptions]`|Bir dosyayı imzalamak için bir anahtar çifti veya X509 sertifikası kullanır. İmzalar, dosyaların içine XML öğeleri olarak eklenir.<br /><br /> Bir **-timestampuri** değeri belirten bir bildirimi imzalarken Internet 'e bağlı olmanız gerekir.|
 |**-ver,-Doğrula** *[bildirim-dosya adı]*|Bildirimin doğru şekilde imzalandığını doğrular. Diğer komutlarla birleştirilemez. <br/><br/>**.NET Framework 4,7 ve sonraki sürümlerde kullanılabilir.**|
@@ -45,7 +45,7 @@ Aşağıdaki tabloda *Mage. exe*tarafından desteklenen komutlar gösterilmekted
 
 Aşağıdaki tabloda `-New` ve `-Update` komutlarının desteklediği seçenekler gösterilmektedir:
 
-|Seçenekler|Varsayılan Değer|Uygulanan Öğe|Açıklama|
+|Seçenekler|Varsayılan Değer|Uygulama Hedefi|Açıklama|
 |-------------|-------------------|----------------|-----------------|
 |**-a,-algoritması**|sha1RSA|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bağımlılık özetlerinin oluşturması için kullanılan algoritmayı belirtir. Değer "sha256RSA" veya "sha1RSA" olmalıdır.<br /><br /> "-Update" seçeneğiyle kullanın. Bu seçenek "-Sign" seçeneğini kullanırken yok sayılır.|
 |**-APPC,-AppCodeBase** `manifestReference`||Dağıtım bildirimleri.|Uygulama bildirim dosyasına bir URL veya dosya yolu başvurusu ekler. Bu değer, uygulama bildiriminin tam yolu olmalıdır.|
@@ -59,7 +59,7 @@ Aşağıdaki tabloda `-New` ve `-Update` komutlarının desteklediği seçenekle
 |**-i,-ınstall** `willInstall`|true|Dağıtım bildirimleri.|ClickOnce uygulamasının yerel bilgisayara yüklenip yüklenmeyeceğini veya Web'den çalışıp çalışmayacağını belirtir. Bir uygulamayı yüklemek, bu uygulamaya Windows **Başlat** menüsünde bir varlık sağlar. Geçerli değerler "true" veya "t" ve "false" veya "f" değerleridir.<br /><br /> **-MinVersion** seçeneğini belirtirseniz ve bir kullanıcının sürümü **-MinVersion** ' dan daha az yüklüyse, **yüklemeyi**geçirdiğiniz değere bakılmaksızın uygulamayı yüklemeye zorlayacaktır.<br /><br /> Bu seçenek **-BrowserHosted** seçeneğiyle birlikte kullanılamaz. Aynı bildirimde ikisini de belirtmeyi denemek hata oluşturur.|
 |**-KC,-KeyContainer** `name`||Tüm dosya türleri.|Özel anahtarın adını içeren anahtar kapsayıcısını belirtir. Bu seçenek **CryptoProvider** seçeneğini gerektirir.<br/><br/>Bu seçenek .NET Framework 4,7 ' den başlayarak kullanılabilir.|
 |**-MV,-MinVersion**`[version]`|**-Version** bayrağı tarafından belirtilen şekilde ClickOnce dağıtım bildiriminde listelenen sürüm.|Dağıtım bildirimleri.|Bir kullanıcının çalıştırabileceği bu uygulamanın en düşük sürümü. Bu bayrak uygulamanızın adlandırılmış sürümünü gereken bir güncelleştirme yapar. Eğer ürününüzün bir sürümünü bozucu bir değişiklik veya kritik bir güvenlik açığı için güncelleştirirseniz, bu bayrağı kullanarak bu güncelleştirmenin yüklenmesi gerektiğini ve kullanıcının önceki sürümleri kullanamayacağını belirtebilirsiniz.<br /><br /> `version`, **-Version** bayrağıyla bağımsız değişkenle aynı semantiğe sahip.|
-|**-n,-adı** `nameString`|Dağıt|Tüm dosya türleri.|Uygulamayı tanımlamak için kullanılan ad. ClickOnce **Başlangıç** menüsünde uygulamayı tanımlamak için bu adı kullanır (uygulama kendisi yüklenmek üzere yapılandırılmışsa) ve izin yükseltme iletişim kutularında. **Note:**  Var olan bir bildirimi güncelleştiriyorsanız ve bu seçenekle bir yayımcı adı belirtmezseniz, *Mage. exe* bildirimi bilgisayarda tanımlanan kuruluş adıyla güncelleştirir. Farklı bir ad kullanmak için, bu seçeneği kullanmayı ve istediğiniz yayımcı adını belirtmeyi unutmayın.|
+|**-n,-adı** `nameString`|dağıtımı|Tüm dosya türleri.|Uygulamayı tanımlamak için kullanılan ad. ClickOnce **Başlangıç** menüsünde uygulamayı tanımlamak için bu adı kullanır (uygulama kendisi yüklenmek üzere yapılandırılmışsa) ve izin yükseltme iletişim kutularında. **Note:**  Var olan bir bildirimi güncelleştiriyorsanız ve bu seçenekle bir yayımcı adı belirtmezseniz, *Mage. exe* bildirimi bilgisayarda tanımlanan kuruluş adıyla güncelleştirir. Farklı bir ad kullanmak için, bu seçeneği kullanmayı ve istediğiniz yayımcı adını belirtmeyi unutmayın.|
 |**-PWD,-Password** `passwd`||Tüm dosya türleri.|Bir bildirimi dijital sertifika ile imzalamak için kullanılan şifre. **-SertifikaDosyası** seçeneğiyle birlikte kullanılmalıdır.|
 |**-p, işlemci** `processorValue`|Msil|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bu dağıtımın çalışabileceği mikro işlemci mimarisi. Eğer derlemeleri belirli bir mikro işlemci için önceden derlenmiş olan bir veya daha fazla yükleme için hazırlanıyorsanız bu değer gereklidir. Geçerli değerler şunlardır `msil`, `x86`, `ia64`ve `amd64`. `msil`, tüm derlemelerinizin platformdan bağımsız olduğu ve ortak dil çalışma zamanı (CLR), uygulamanız ilk çalıştırıldığında onları tek bir kez derleyeceği anlamına gelen Microsoft ara dilidir.|
 |**-PU,** **-providerUrl** `url`||Dağıtım bildirimleri.|ClickOnce'ın uygulama güncelleştirmeleri için inceleyeceği URL'yi belirtir.|
@@ -70,7 +70,7 @@ Aşağıdaki tabloda `-New` ve `-Update` komutlarının desteklediği seçenekle
 |**-tr,-TrustLevel** `level`|Uygulama URL'sinin bulunduğu bölgeyi temel alır.|Uygulama bildirimleri.|İstemci bilgisayarlarda uygulamaya sağlanacak güven düzeyi. Değerler "Internet", "Intranet" ve "FullTrust" değerlerini içerir.|
 |**-um,-UseManifestForTrust** `willUseForTrust`|False|Uygulama bildirimleri.|Uygulama bildiriminin dijital imzasının, uygulama istemcide çalışırken güven kararları için kullanılıp kullanılmayacağını belirtir. "true" veya "t" belirtmek uygulama bildiriminin güven kararları için kullanılacağını belirtir. "false" veya "f" belirtmek dağıtım bildiriminin imzasının kullanılacağını belirtir.|
 |**-v,-sürüm** `versionNumber`|1.0.0.0|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Dağıtımın sürümü. Bağımsız değişken, "*n. n. n. n*" biçiminde geçerli bir sürüm dizesi olmalıdır; burada "*n*" işaretsiz 32 bitlik bir tamsayıdır.|
-|**-WPF,-WPFBrowserApp**`isWPFApp`|false|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bu bayrağı yalnızca, uygulama Internet Explorer içinde barındırılacak bir Windows Presentation Foundation (WPF) uygulaması ise ve tek başına yürütülebilir dosya değil ise kullanın. Geçerli değerler "true" veya "t" ve "false" veya "f" değerleridir.<br /><br /> Uygulama bildirimleri için, uygulama bildiriminin `entryPoint` öğesinin altına `hostInBrowser` özniteliğini ekler.<br /><br /> Dağıtım bildirimleri için, `deployment` öğesindeki `install` özniteliğini false olarak ayarlar ve dağıtım bildirimini bir. xbap uzantısıyla kaydeder. Bu bağımsız değişkeni **-Install** bağımsız değişkeniyle birlikte belirtmek bir hata oluşturur, çünkü tarayıcıda barındırılan bir uygulama yüklü, çevrimdışı bir uygulama olamaz.|
+|**-WPF,-WPFBrowserApp**`isWPFApp`|{1&gt;false&lt;1}|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bu bayrağı yalnızca, uygulama Internet Explorer içinde barındırılacak bir Windows Presentation Foundation (WPF) uygulaması ise ve tek başına yürütülebilir dosya değil ise kullanın. Geçerli değerler "true" veya "t" ve "false" veya "f" değerleridir.<br /><br /> Uygulama bildirimleri için, uygulama bildiriminin `entryPoint` öğesinin altına `hostInBrowser` özniteliğini ekler.<br /><br /> Dağıtım bildirimleri için, `deployment` öğesindeki `install` özniteliğini false olarak ayarlar ve dağıtım bildirimini bir. xbap uzantısıyla kaydeder. Bu bağımsız değişkeni **-Install** bağımsız değişkeniyle birlikte belirtmek bir hata oluşturur, çünkü tarayıcıda barındırılan bir uygulama yüklü, çevrimdışı bir uygulama olamaz.|
 
 ## <a name="sign-command-options"></a>İmza komut seçenekleri
 
@@ -139,9 +139,9 @@ Aşağıdaki tablolarda bu özellikler ve kısıtlamalar gösterilmektedir:
 ||Bir derleme ekle|Desteklenmez|Tamam|
 ||Bir derlemeyi kaldır|Desteklenmez|Tamam|
 
- Mage. exe [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]hedefleyen yeni bildirimler oluşturur. [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] hedefleyen ClickOnce uygulamaları hem [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] hem de .NET Framework 4 ' ün tam sürümünde çalıştırılabilir. Uygulamanız .NET Framework 4 ' ün tam sürümünü hedefliyorsa ve [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]üzerinde çalıştıralemezse, bir metin düzenleyicisi kullanarak istemci `<framework>` öğesini kaldırın ve bildirimi yeniden imzalayın.
+ Mage. exe, .NET Framework 4 Istemci profilini hedefleyen yeni bildirimler oluşturur. .NET Framework 4 Istemci profilini hedefleyen ClickOnce uygulamaları hem .NET Framework 4 Istemci profilinde hem de .NET Framework 4 ' ün tam sürümünde çalıştırılabilir. Uygulamanız .NET Framework 4 ' ün tam sürümünü hedefliyorsa ve .NET Framework 4 Istemci profilinde çalıştırıdıysanız, bir metin düzenleyicisi kullanarak istemci `<framework>` öğesini kaldırın ve bildirimi yeniden imzalayın.
 
-Aşağıda, [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]hedefleyen bir örnek `<framework>` öğesi verilmiştir:
+Aşağıda, .NET Framework 4 Istemci profilini hedefleyen bir örnek `<framework>` öğesi verilmiştir:
 
 ```xml
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />

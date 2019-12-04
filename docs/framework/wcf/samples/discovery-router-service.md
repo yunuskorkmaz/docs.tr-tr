@@ -2,17 +2,17 @@
 title: Keşif Yönlendirme Hizmeti
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 9434c26fb12b73ea4f1c185658b03cb95a3a2310
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 09309b23d2a3cc672811c2f617e6fb81a2b4e021
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039825"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712282"
 ---
 # <a name="discovery-router-service"></a>Keşif Yönlendirme Hizmeti
 Bu örnek, bulma iletilerinin başka bir uç noktaya nasıl iletileceğini gösterir.  
   
-## <a name="demonstrates"></a>Gösteriler  
+## <a name="demonstrates"></a>Gösterir  
  Bulma yönlendirmesi  
   
 ## <a name="discussion"></a>Tartışma  
@@ -35,6 +35,6 @@ Bu örnek, bulma iletilerinin başka bir uç noktaya nasıl iletileceğini göst
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryRouter`

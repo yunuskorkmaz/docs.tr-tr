@@ -2,21 +2,21 @@
 title: Zaman Uyumsuz İletişim
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: b5cf788ce4587dacb5a7642e25cb1b5b1e6f3e3c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 28b325a6bd870282577a2989b616628d52262deb
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044360"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711855"
 ---
 # <a name="asynchronous-communication"></a>Zaman Uyumsuz İletişim
 Bu örnek, iki farklı Windows Workflow Foundation (WF) hizmeti arasındaki iletişimin zaman uyumsuz olarak varsayılan olarak nasıl yapıldığını gösterir.  
   
-## <a name="demonstrates"></a>Gösteriler  
- Hizmetler arasında [!INCLUDE[wf1](../../../../includes/wf1-md.md)] zaman uyumsuz iletişim.  
+## <a name="demonstrates"></a>Gösterir  
+ [!INCLUDE[wf1](../../../../includes/wf1-md.md)] hizmetleri arasında zaman uyumsuz iletişim.  
   
 ## <a name="discussion"></a>Tartışma  
- Bu örnek, .NET Framework tarafından sunulan mesajlaşma [!INCLUDE[wf1](../../../../includes/wf1-md.md)] etkinliklerini kullanarak uygulamalar arasındaki iletişimin zaman uyumsuz olarak nasıl yapılacağını gösterir.  
+ Bu örnek, [!INCLUDE[wf1](../../../../includes/wf1-md.md)] uygulamalar arasındaki iletişimin, .NET Framework tarafından sunulan mesajlaşma etkinliklerini kullanarak zaman uyumsuz olarak nasıl yapılacağını gösterir.  
   
  Bu örnek, aşağıdaki üç projeden oluşur.  
   
@@ -24,10 +24,10 @@ Bu örnek, iki farklı Windows Workflow Foundation (WF) hizmeti arasındaki ilet
  Bu hizmet belirli bir kişinin kredi Puanını veya alınacak öğenin değerini alır ve ardından kredinin kişiye verilip verilmeyeceğine karar verir.  
   
  RentalApprovalService  
- Bu hizmet, bazı kredilerin olması gereken bir kişiden uygulama alır. Bu hizmet, `CreditCheckService` kredi uygulamasının geçerli olup olmadığına karar vermek için ile zaman uyumsuz olarak iletişim kurar.  
+ Bu hizmet, bazı kredilerin olması gereken bir kişiden uygulama alır. Bu hizmet, kredi uygulamasının geçerli olup olmadığına karar vermek için `CreditCheckService` ile zaman uyumsuz olarak iletişim kurar.  
   
  İstemci  
- İstemci, `RentalApprovalService` kredinin onaylanıp onaylanmadığını bildirmek için ile eşzamanlı olarak iletişim kurar.  
+ İstemci, kredinin onaylanıp onaylanmadığını bildirmek için `RentalApprovalService` ile eşzamanlı olarak iletişim kurar.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
@@ -44,6 +44,6 @@ Bu örnek, iki farklı Windows Workflow Foundation (WF) hizmeti arasındaki ilet
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\AsynchronousCommunication`

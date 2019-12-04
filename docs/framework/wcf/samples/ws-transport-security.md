@@ -2,12 +2,12 @@
 title: WS Taşıma Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 33a20358-5e1b-458a-a6a9-15753bc7b99b
-ms.openlocfilehash: 444d743271820d4b8590eef954561200345540a9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2b83dba2912e65ec78536b9a7051759be573b3ab
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424467"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714571"
 ---
 # <a name="ws-transport-security"></a>WS Taşıma Güvenliği
 Bu örnek, <xref:System.ServiceModel.WSHttpBinding> bağlamasıyla SSL taşıma güvenliği kullanımını gösterir. `wsHttpBinding` bağlama, varsayılan olarak HTTP iletişimi sağlar. Aktarım güvenliği için yapılandırıldığında bağlama, HTTPS iletişimini destekler. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır. `wsHttpBinding` belirtilir ve istemci ve hizmet için uygulama yapılandırma dosyalarında yapılandırılır.  
@@ -20,7 +20,7 @@ Bu örnek, <xref:System.ServiceModel.WSHttpBinding> bağlamasıyla SSL taşıma 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsTransportSecurity`  
   

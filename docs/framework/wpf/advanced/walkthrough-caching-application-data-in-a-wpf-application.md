@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: f0082bd99b154f87ab90bee7a89afdb8405f6623
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920312"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715885"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma
 Önbelleğe alma, verileri hızlı erişim için bellekte depolamanıza olanak sağlar. Verilere yeniden erişildiğinde, uygulamalar verileri özgün kaynaktan almak yerine önbellekten alabilir. Bu, performansı ve ölçeklenebilirliği iyileştirebilir. Ayrıca, veri kaynağı geçici olarak kullanılamadığında önbelleğe alma verilerin kullanılabilir olmasını sağlar.
@@ -78,7 +78,7 @@ ms.locfileid: "72920312"
      WPF Tasarımcısı **Tasarım** görünümünde açılır ve MainWindow. xaml dosyasını görüntüler. Visual Studio **My projem** klasörünü, Application. xaml dosyasını ve MainWindow. xaml dosyasını oluşturur.
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>.NET Framework hedefleme ve önbelleğe alma derlemelerine başvuru ekleme
- WPF uygulamaları varsayılan olarak [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]hedefleyin. Bir WPF uygulamasında <xref:System.Runtime.Caching> ad alanını kullanmak için, uygulamanın .NET Framework 4 ' ü ([!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]değil) hedeflemesi ve ad alanına bir başvuru içermesi gerekir.
+ WPF uygulamaları varsayılan olarak .NET Framework 4 Istemci profilini hedefler. Bir WPF uygulamasında <xref:System.Runtime.Caching> ad alanını kullanmak için, uygulamanın .NET Framework 4 ' ü (.NET Framework 4 Istemci profilini değil) hedeflemesi ve ad alanına bir başvuru içermesi gerekir.
 
  Bu nedenle, sonraki adım .NET Framework hedefini değiştirmek ve <xref:System.Runtime.Caching> ad alanına bir başvuru eklemektir.
 
@@ -97,7 +97,7 @@ ms.locfileid: "72920312"
 
      **Gelişmiş derleyici ayarları** iletişim kutusu görüntülenir.
 
-4. **Hedef Framework (tüm konfigürasyonlar)** listesinde .NET Framework 4 ' ü seçin. ([!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]seçmeyin.)
+4. **Hedef Framework (tüm konfigürasyonlar)** listesinde .NET Framework 4 ' ü seçin. (.NET Framework 4 Istemci profili seçmeyin.)
 
 5. **Tamam**'a tıklayın.
 

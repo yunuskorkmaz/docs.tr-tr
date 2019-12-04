@@ -2,12 +2,12 @@
 title: Özel Kanal Dağıtıcı
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-ms.openlocfilehash: 0bd83e068de7cfa9cc531ee6b46b9b51c44c1b1d
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 00caa5eda37e5da9462286e71bbdbc2ff50d5081
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291546"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716864"
 ---
 # <a name="custom-channel-dispatcher"></a>Özel Kanal Dağıtıcı
 Bu örnek, doğrudan <xref:System.ServiceModel.ServiceHostBase> uygulayarak ve Web ana bilgisayarı ortamında özel bir kanal dağıtıcısı oluşturmak yoluyla kanal yığınının özel bir şekilde nasıl oluşturulacağını gösterir. Kanal dağıtıcısı, kanalları kabul etmek ve kanal yığınından iletileri almak için <xref:System.ServiceModel.Channels.IChannelListener> ile etkileşime girer. Bu örnek ayrıca, <xref:System.ServiceModel.Activation.VirtualPathExtension>kullanarak bir Web ana bilgisayarı ortamında bir kanal yığınının nasıl oluşturulacağını göstermek için temel bir örnek de sağlar.  
@@ -51,6 +51,6 @@ Server replied: You said: Howdy. Message id: 5
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - service behaviors, instancing sample
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-ms.openlocfilehash: 1e755a28ff4ce6450db4189783fa688002ebe8eb
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 868d88cff1c398009f136fe50f6cc3fe8c62d8e1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045566"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715755"
 ---
 # <a name="instancing"></a>Örnek Oluşturma
-Örnek oluşturma örneği, bir hizmet sınıfı örneklerinin istemci isteklerine yanıt olarak nasıl oluşturulduğunu denetleyen örnek oluşturma davranış ayarını gösterir. Örnek, `ICalculator` hizmet sözleşmesini uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md)Başlarken ' i temel alır. Bu örnek `ICalculatorInstance`, öğesinden `ICalculator`devralan yeni bir sözleşme tanımlar. Tarafından `ICalculatorInstance` belirtilen sözleşme, hizmet örneğinin durumunu incelemek için üç ek işlem sağlar. Örnek ayarını değiştirerek, istemcisini çalıştırarak değişiklik davranışını gözlemleyebilirsiniz.  
+Örnek oluşturma örneği, bir hizmet sınıfı örneklerinin istemci isteklerine yanıt olarak nasıl oluşturulduğunu denetleyen örnek oluşturma davranış ayarını gösterir. Örnek, `ICalculator` hizmet sözleşmesini uygulayan [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır. Bu örnek, `ICalculator`devralan yeni bir sözleşme `ICalculatorInstance`tanımlar. `ICalculatorInstance` tarafından belirtilen sözleşme, hizmet örneğinin durumunu incelemek için üç ek işlem sağlar. Örnek ayarını değiştirerek, istemcisini çalıştırarak değişiklik davranışını gözlemleyebilirsiniz.  
   
  Bu örnekte, istemci bir konsol uygulaması (. exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
   
@@ -22,13 +22,13 @@ ms.locfileid: "70045566"
   
  Aşağıdaki örnek oluşturma modları kullanılabilir:  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Her istemci isteği için yeni bir hizmet örneği oluşturulur.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: her istemci isteği için yeni bir hizmet örneği oluşturulur.  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Her yeni istemci oturumu için yeni bir örnek oluşturulur ve bu oturumun kullanım ömrü boyunca korunur (oturumu destekleyen bir bağlama gerekir).  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: her yeni istemci oturumu için yeni bir örnek oluşturulur ve bu oturumun kullanım ömrü boyunca korunur (oturumu destekleyen bir bağlama gerekir).  
   
-- <xref:System.ServiceModel.InstanceContextMode.Single>: Hizmet sınıfının tek bir örneği, uygulamanın kullanım ömrü boyunca tüm istemci isteklerini işler.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: bir hizmet sınıfının tek bir örneği, uygulamanın kullanım ömrü boyunca tüm istemci isteklerini işler.  
   
- Service sınıfı, aşağıdaki kod örneğinde gösterildiği gibi `[ServiceBehavior(InstanceContextMode=<setting>)]` özniteliği ile örnek oluşturma davranışını belirtir. Hangi satırların açıklama olarak değiştirildiğini değiştirerek, her örnek modunun davranışını gözlemleyebilirsiniz. Örnek oluşturma modunu değiştirdikten sonra hizmeti yeniden oluşturmayı unutmayın. İstemcide belirtmek için örnek oluşturma ile ilgili ayarlar yoktur.  
+ Service sınıfı, aşağıdaki kod örneğinde gösterildiği gibi `[ServiceBehavior(InstanceContextMode=<setting>)]` özniteliğiyle örnek oluşturma davranışını belirtir. Hangi satırların açıklama olarak değiştirildiğini değiştirerek, her örnek modunun davranışını gözlemleyebilirsiniz. Örnek oluşturma modunu değiştirdikten sonra hizmeti yeniden oluşturmayı unutmayın. İstemcide belirtmek için örnek oluşturma ile ilgili ayarlar yoktur.  
   
 ```csharp
 // Enable one of the following instance modes to compare instancing behaviors.  
@@ -135,6 +135,6 @@ static void Main()
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Instancing`  

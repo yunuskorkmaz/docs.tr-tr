@@ -2,18 +2,18 @@
 title: Federasyon Örneği
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: d3a326f08e78edb79908485361f161c1b6da6625
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 271790e08476533fc1d83e22c5a0daf2f1eaa42a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044971"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716934"
 ---
 # <a name="federation-sample"></a>Federasyon Örneği
 Bu örnekte, Federasyon güvenliği gösterilmektedir.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntılar  
- Windows Communication Foundation (WCF), `wsFederationHttpBinding`aracılığıyla Federe güvenlik mimarileri dağıtmaya yönelik destek sağlar. , `wsFederationHttpBinding` İstek/yanıt iletişimi için temel alınan aktarım mekanizması olarak http kullanımını ve kodlama için Tel biçimi olarak Text/XML ' i içeren, güvenli, güvenilir ve birlikte çalışabilen bir bağlama sağlar. WCF 'de Federasyon hakkında daha fazla bilgi için bkz. [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Windows Communication Foundation (WCF) `wsFederationHttpBinding`aracılığıyla Federal Güvenlik mimarilerini dağıtmaya yönelik destek sağlar. `wsFederationHttpBinding`, istek/yanıt iletişimi için temel alınan aktarım mekanizması olarak HTTP kullanımını ve kodlama için Tel biçimi olarak metin/XML kullanımını içeren güvenli, güvenilir ve birlikte çalışabilen bir bağlama sağlar. WCF 'de Federasyon hakkında daha fazla bilgi için bkz. [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).  
   
  Senaryo 4 parçadan oluşur:  
   
@@ -25,7 +25,7 @@ Bu örnekte, Federasyon güvenliği gösterilmektedir.
   
 - Kitaplığı Istemcisi  
   
- Kitaplığı hizmeti iki işlemi `BrowseBooks` `BuyBook`destekler. `BrowseBooks` İşlem için anonim erişime izin verir, ancak `BuyBooks` işleme erişmek için kimliği doğrulanmış erişim gerektirir. Kimlik doğrulaması, kitaplığı STS tarafından verilen belirtecin biçimini alır. Kitaplığı hizmeti için yapılandırma dosyası, `wsFederationHttpBinding`ISTEMCILERI ile kitaplığı STS 'ye yönlendirir.  
+ Kitaplığı hizmeti, `BrowseBooks` ve `BuyBook`iki işlemi destekler. `BrowseBooks` işleme anonim erişimine izin verir, ancak `BuyBooks` işlemine erişmek için kimliği doğrulanmış erişim gerektirir. Kimlik doğrulaması, kitaplığı STS tarafından verilen belirtecin biçimini alır. Kitaplığı hizmeti için yapılandırma dosyası, istemcileri `wsFederationHttpBinding`kullanarak kitaplara yönlendirir.  
   
 ```xml  
 <wsFederationHttpBinding>  
@@ -45,7 +45,7 @@ Bu örnekte, Federasyon güvenliği gösterilmektedir.
 </wsFederationHttpBinding>  
 ```  
   
- Bu durumda, daha sonra, istemcilerin HomeRealm STS tarafından verilen bir belirteç kullanarak kimlik doğrulaması yapması gerekir. Yine, kitaplığı STS 'nin yapılandırma dosyası, `wsFederationHttpBinding`Istemcileri Ile HomeRealm STS 'ye işaret eder.  
+ Bu durumda, daha sonra, istemcilerin HomeRealm STS tarafından verilen bir belirteç kullanarak kimlik doğrulaması yapması gerekir. Yine, kitaplığı STS için yapılandırma dosyası, istemcileri `wsFederationHttpBinding`kullanarak HomeRealm STS 'ye yönlendirir.  
   
 ```xml  
 <wsFederationHttpBinding>  
@@ -65,7 +65,7 @@ Bu örnekte, Federasyon güvenliği gösterilmektedir.
 </wsFederationHttpBinding>  
 ```  
   
- `BuyBook` İşleme erişirken olay sırası aşağıdaki gibidir:  
+ `BuyBook` işlemine erişirken olayların sırası aşağıdaki gibidir:  
   
 1. İstemci, Windows kimlik bilgilerini kullanarak HomeRealm STS 'nin kimliğini doğrular.  
   
@@ -77,7 +77,7 @@ Bu örnekte, Federasyon güvenliği gösterilmektedir.
   
 5. İstemci, kitaplığı STS tarafından verilen belirteci kullanarak Kitaplığı hizmeti için kimlik doğrulaması yapar.  
   
-6. İstemci `BuyBook` işleme erişir.  
+6. İstemci `BuyBook` işlemine erişir.  
   
  Bu örneği ayarlama ve çalıştırma hakkında aşağıdaki yönergelere bakın.  
   
@@ -89,7 +89,7 @@ Bu örnekte, Federasyon güvenliği gösterilmektedir.
 1. SDK komut penceresini açın. Örnek yolda Setup. bat dosyasını çalıştırın. Bu, örnek için gereken sanal dizinleri oluşturur ve uygun izinlere sahip gerekli sertifikaları kurar.  
   
     > [!NOTE]
-    > Setup. bat toplu iş dosyası bir Windows SDK komut Isteminden çalıştırılmak üzere tasarlanmıştır. MSSDK ortam değişkeninin, SDK 'nın yüklü olduğu dizine işaret olmasını gerektirir. Bu ortam değişkeni bir Windows SDK komut Istemi içinde otomatik olarak ayarlanır. Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)], kurulum IIS Yönetici betikleri kullandığından, IIS 6,0 yönetim uyumluluğuna emin olmanız gerekir. Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)] kurulum betiğini çalıştırmak için yönetici ayrıcalıkları gerekir.  
+    > Setup. bat toplu iş dosyası bir Windows SDK komut Isteminden çalıştırılmak üzere tasarlanmıştır. MSSDK ortam değişkeninin, SDK 'nın yüklü olduğu dizine işaret olmasını gerektirir. Bu ortam değişkeni bir Windows SDK komut Istemi içinde otomatik olarak ayarlanır. [!INCLUDE[wv](../../../../includes/wv-md.md)], kurulum 'un IIS Yönetici betikleri kullandığından, IIS 6,0 yönetim uyumluluğuna emin olmanız gerekir. [!INCLUDE[wv](../../../../includes/wv-md.md)] kurulum betiğini çalıştırmak için yönetici ayrıcalıkları gerekir.  
   
 2. Visual Studio 'da FederationSample. sln ' yi açın ve **derleme** menüsünden **çözüm oluştur** ' u seçin. Bu, ortak proje dosyalarını, kitaplığı hizmeti, kitaplığı STS, HomeRealm STS 'yi oluşturur ve bunları IIS 'de dağıtır. Bu Ayrıca, kitaplığı istemci uygulamasını oluşturur ve Boosample\bookstoreclient\bin\debug klasörüne yürütülebilir BookStoreClient. exe ' yi koyar.  
   
@@ -113,6 +113,6 @@ Bu örnekte, Federasyon güvenliği gösterilmektedir.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  

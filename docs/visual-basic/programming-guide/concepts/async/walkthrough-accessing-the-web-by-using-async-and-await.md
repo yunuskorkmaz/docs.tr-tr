@@ -2,12 +2,12 @@
 title: "İzlenecek yol: Async ve Await Kullanarak Web'e Erişme"
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: c13e592eb155d14c2e7cb2388a96925a7f1fa413
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7f649f1f16da545c4587f0ed76b8f1a443ee8744
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349092"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715848"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>İzlenecek yol: Async ve await kullanarak Web 'e erişme (Visual Basic)
 
@@ -37,13 +37,13 @@ Bu kılavuzda, aşağıdaki görevleri tamamlayadınız:
 
 Tüm zaman uyumsuz örnek için [örnek](#example) bölümüne bakın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazla bilgi için bkz. Visual Studio [İndirmeleri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) sayfası.
 
 ## <a name="create-a-wpf-application"></a>WPF uygulaması oluşturma
 
-1. Visual Studio’yu çalıştırın.
+1. Visual Studio 'Yu başlatın.
 
 2. Menü çubuğunda **Dosya**, **Yeni**, **Proje**' yi seçin.
 
@@ -661,10 +661,10 @@ End Class
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Zaman uyumsuz örnek: Web Walkthrough 'A erişmeC# (ve Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
-- [Await İşleci](../../../../visual-basic/language-reference/operators/await-operator.md)
-- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
-- [Async ve await ile zaman uyumsuz programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Zaman uyumsuz dönüş türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [Görev tabanlı zaman uyumsuz programlama (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)
-- [Nasıl yapılır: Task. WhenAll kullanarak zaman uyumsuz Izlenecek yolu genişletme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [Nasıl yapılır: Async ve await kullanarak birden çok Web Isteğini paralel hale getirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [Await İşleci](../../../language-reference/operators/await-operator.md)
+- [Async](../../../language-reference/modifiers/async.md)
+- [Async ve await ile zaman uyumsuz programlama (Visual Basic)](index.md)
+- [Zaman uyumsuz dönüş türleri (Visual Basic)](async-return-types.md)
+- [Görev tabanlı zaman uyumsuz programlama (TAP)](https://www.microsoft.com/download/details.aspx?id=19957)
+- [Nasıl yapılır: Task. WhenAll kullanarak zaman uyumsuz Izlenecek yolu genişletme (Visual Basic)](how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Nasıl yapılır: Async ve await kullanarak birden çok Web Isteğini paralel hale getirme (Visual Basic)](how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

@@ -2,21 +2,21 @@
 title: WS 2007 Federasyon HTTP Bağlama
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: ad56665b5b6648fb93a9f31f18167a964b4cba92
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2f924bdcbf9082d9d43e02d82c9d00c32ebcaacf
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834650"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714982"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 Federasyon HTTP Bağlama
 
-Bu örnek, WS-Trust belirtiminin 1,3 sürümünü destekleyen federe senaryolar oluşturmak için kullanabileceğiniz standart bir bağlama olan <xref:System.ServiceModel.WS2007FederationHttpBinding> ' ın kullanımını gösterir.
+Bu örnek, WS-Trust belirtiminin 1,3 sürümünü destekleyen federe senaryolar oluşturmak için kullanabileceğiniz standart bir bağlama olan <xref:System.ServiceModel.WS2007FederationHttpBinding>kullanımını gösterir.
 
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
 
-Örnek, konsol tabanlı bir istemci programından (*Client. exe*), konsol tabanlı bir güvenlik belirteci hizmeti programından (*SecurityTokenService. exe*) ve konsol tabanlı bir hizmet programından (*Service. exe*) oluşur. Hizmet, istek/yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, matematik işlemlerini (`Add`, `Subtract`, `Multiply` ve `Divide`) sunan `ICalculator` arabirimi tarafından tanımlanır. İstemci, güvenlik belirteci hizmetinden (STS) bir güvenlik belirteci alır ve belirli bir matematik işlemi için hizmete zaman uyumlu istekler sağlar. Hizmet daha sonra sonuçla yanıt verir. İstemci etkinliği konsol penceresinde görünür.
+Örnek, konsol tabanlı bir istemci programından (*Client. exe*), konsol tabanlı bir güvenlik belirteci hizmeti programından (*SecurityTokenService. exe*) ve konsol tabanlı bir hizmet programından (*Service. exe*) oluşur. Hizmet, istek/yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, matematik işlemlerini (`Add`, `Subtract`, `Multiply`ve `Divide`) sunan `ICalculator` arabirimi tarafından tanımlanır. İstemci, güvenlik belirteci hizmetinden (STS) bir güvenlik belirteci alır ve belirli bir matematik işlemi için hizmete zaman uyumlu istekler sağlar. Hizmet daha sonra sonuçla yanıt verir. İstemci etkinliği konsol penceresinde görünür.
 
 Örnek, `ICalculator` sözleşmesinin `ws2007FederationHttpBinding` öğesini kullanarak kullanılabilir hale getirir. İstemci üzerindeki bu bağlamanın yapılandırması aşağıdaki kodda gösterilmiştir:
 
@@ -37,7 +37,7 @@ Bu örnek, WS-Trust belirtiminin 1,3 sürümünü destekleyen federe senaryolar 
 </bindings>
 ```
 
-[@No__t-1güvenlik >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md), `security` değeri hangi güvenlik modunun kullanılması gerektiğini belirtir. Bu örnekte, [\<message >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) [\<güvenlik >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)içinde belirtildiğinde `message` güvenliği kullanılır. [@No__t-3message >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) içindeki [\<ıssuer >](../../configure-apps/file-schema/wcf/issuer.md) öğesi, istemcinin `ICalculator` hizmetinde kimlik doğrulaması yapabilmesi için istemciye BIR güvenlik belirteci veren STS 'nin adresini ve bağlamasını belirtir.
+[\<güvenlik >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)`security` değeri hangi güvenlik modunun kullanılması gerektiğini belirtir. Bu örnekte, `message` güvenlik, bu neden [\<güvenlik >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)içinde [\<iletisinin >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) belirtilmesinin kullanıldığı anlamına gelir. [\<iletisinde](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) [\<veren >](../../configure-apps/file-schema/wcf/issuer.md) öğesi >, istemcinin `ICalculator` hizmetinde kimlik doğrulaması yapabilmesi için istemciye BIR güvenlik belirteci veren STS 'nin adresini ve bağlamasını belirtir.
   
 Hizmette Bu bağlamanın yapılandırması aşağıdaki kodda gösterilmiştir:
 
@@ -64,7 +64,7 @@ Hizmette Bu bağlamanın yapılandırması aşağıdaki kodda gösterilmiştir:
 </bindings>
 ```
 
-[@No__t-1güvenlik >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md), `security` değeri hangi güvenlik modunun kullanılması gerektiğini belirtir. Bu örnekte, [\<message >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) [\<güvenlik >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)içinde belirtildiğinde `message` güvenliği kullanılır. [@No__t-4message >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) içindeki `ws2007FederationHttpBinding` ' nin [\<ıssuermetadata >](../../configure-apps/file-schema/wcf/issuermetadata.md) öğesi, STS için meta verileri almak üzere kullanılabilecek bir uç noktanın adresini ve kimliğini belirtir.
+[\<güvenlik >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)`security` değeri hangi güvenlik modunun kullanılması gerektiğini belirtir. Bu örnekte, `message` güvenlik, bu neden [\<güvenlik >](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)içinde [\<iletisinin >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) belirtilmesinin kullanıldığı anlamına gelir. [\<iletisinin](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) Içindeki `ws2007FederationHttpBinding` [ıssuermetadata > Öğesı\<](../../configure-apps/file-schema/wcf/issuermetadata.md) > STS için meta verileri almak üzere kullanılabilecek bir uç noktanın adresini ve kimliğini belirtir.
 
 Hizmetin davranışı aşağıdaki kodda gösterilmiştir:
 
@@ -93,9 +93,9 @@ Hizmetin davranışı aşağıdaki kodda gösterilmiştir:
 </behaviors>
 ```
   
-[@No__t-1ıssuedtokenauthentication >](../../configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)>, hizmetin kimlik doğrulaması sırasında istemcilerin sunmalarına izin verdiği belirteçlerde kısıtlamalar belirlemesine izin verir. Bu yapılandırma, konu adı CN = STS olan bir sertifika tarafından imzalanmış belirteçlerin hizmet tarafından kabul edildiğini belirtir.
+[\<IssuedTokenAuthentication >](../../configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)>, hizmetin kimlik doğrulaması sırasında istemcilerin sunmalarına izin verdiği belirteçlerde kısıtlamalar belirlemesine izin verir. Bu yapılandırma, konu adı CN = STS olan bir sertifika tarafından imzalanmış belirteçlerin hizmet tarafından kabul edildiğini belirtir.
 
-STS, standart <xref:System.ServiceModel.WS2007HttpBinding> kullanarak tek bir uç noktanın kullanılabilir olmasını sağlar. Hizmet, istemcilerden belirteç isteklerine yanıt verir. İstemcinin kimliği bir Windows hesabı kullanılarak doğrulandıysa, hizmet istemcinin kullanıcı adını bir talep olarak içeren bir belirteç yayınlar. Belirteç oluşturmanın bir parçası olarak STS, CN = STS sertifikasıyla ilişkili özel anahtarı kullanarak belirteci imzalar. Ayrıca, bir simetrik anahtar oluşturur ve CN = localhost sertifikasıyla ilişkili ortak anahtarı kullanarak şifreler. Belirteci istemciye döndürmekte sonra STS simetrik anahtarı da döndürür. İstemci, verilen belirteci `ICalculator` hizmetine sunar ve iletiyi bu anahtarla imzalayarak simetrik anahtarı biliyor olduğunu kanıtlar.
+STS, standart <xref:System.ServiceModel.WS2007HttpBinding>kullanarak tek bir uç noktanın kullanılabilmesini sağlar. Hizmet, istemcilerden belirteç isteklerine yanıt verir. İstemcinin kimliği bir Windows hesabı kullanılarak doğrulandıysa, hizmet istemcinin kullanıcı adını bir talep olarak içeren bir belirteç yayınlar. Belirteç oluşturmanın bir parçası olarak STS, CN = STS sertifikasıyla ilişkili özel anahtarı kullanarak belirteci imzalar. Ayrıca, bir simetrik anahtar oluşturur ve CN = localhost sertifikasıyla ilişkili ortak anahtarı kullanarak şifreler. Belirteci istemciye döndürmekte sonra STS simetrik anahtarı da döndürür. İstemci, verilen belirteci `ICalculator` hizmetine sunar ve iletiyi bu anahtarla imzalayarak simetrik anahtarı bilir olduğunu kanıtlar.
 
 Örneği çalıştırdığınızda, güvenlik belirteci isteği STS konsol penceresinde gösterilir. İşlemin istekleri ve yanıtları istemci ve hizmet konsolu pencereleri içinde görüntülenir. Uygulamayı kapatmak için konsol pencerelerinin herhangi birinde ENTER tuşuna basın.
 
@@ -119,13 +119,13 @@ Bu örneğe eklenen *Setup. bat* dosyası, şirket içinde barındırılan bir u
 
 1. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.
 
-2. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin. @No__t-0 kullanıyorsanız, *Service. exe*, *Client. exe*ve *SecurityTokenService. exe* ' yi yükseltilmiş ayrıcalıklarla çalıştırmanız gerekir (dosyalara sağ tıklayıp **yönetici olarak çalıştır**' a tıklayın).
+2. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin. [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]kullanıyorsanız, *Service. exe*, *Client. exe*ve *SecurityTokenService. exe* ' yi yükseltilmiş ayrıcalıklarla çalıştırmanız gerekir (dosyalara sağ tıklayıp **yönetici olarak çalıştır**' a tıklayın).
 
 > [!IMPORTANT]
 > Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin:
 > 
 > `<InstallDrive>:\WF_WCF_Samples`
 > 
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek aşağıdaki dizinde bulunur:
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde bulunur:
 > 
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\WS2007FederationHttp`

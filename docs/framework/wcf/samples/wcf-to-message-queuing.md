@@ -2,12 +2,12 @@
 title: Windows Communication Foundation'dan İleti Kuyruğuna
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 34ac2dd8b6e01e2d7ae6f7978e1b09af174b71dd
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1cbc1251a8e4eaaaf4b47357851dd681ae326f25
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038637"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715054"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation'dan İleti Kuyruğuna
 Bu örnek, bir Windows Communication Foundation (WCF) uygulamasının bir Message Queuing (MSMQ) uygulamasına nasıl ileti gönderebileceğinizi gösterir. Hizmet, sıraya alınan iletileri alma hizmetini gözlemlemeye olanak sağlayan, kendinden konak bir konsol uygulamasıdır. Hizmetin ve istemcinin aynı anda çalışıyor olması gerekmez.
@@ -32,7 +32,7 @@ static void Main(string[] args)
 }
 ```
 
- Kuyrukta bir ileti alındığında ileti işleyicisi `ProcessOrder` çağrılır.
+ Kuyrukta bir ileti alındığında, ileti işleyicisi `ProcessOrder` çağrılır.
 
 ```csharp
 public static void ProcessOrder(Object source,
@@ -61,7 +61,7 @@ public static void ProcessOrder(Object source,
 }
 ```
 
- Hizmet MSMQ ileti gövdesinden ayıklar `ProcessOrder` ve siparişi işler.
+ Hizmet, MSMQ ileti gövdesinden `ProcessOrder` ayıklar ve siparişi işler.
 
  MSMQ kuyruğu adı, aşağıdaki örnek yapılandırmada gösterildiği gibi, yapılandırma dosyasının bir appSettings bölümünde belirtilmiştir.
 
@@ -98,7 +98,7 @@ client.Close();
 
  İstemci, MSMQ iletisini sıraya göndermek için özel bir istemci sırayla kullanır. İletiyi alan ve işleyen uygulama bir WCF uygulaması değil bir MSMQ uygulaması olduğundan, iki uygulama arasında örtük bir hizmet sözleşmesi yoktur. Bu nedenle, bu senaryoda Svcutil. exe aracını kullanarak bir ara sunucu oluşturmuyoruz.
 
- Özel istemci temelde, ileti göndermek için `MsmqIntegration` bağlamayı kullanan tüm WCF uygulamaları için aynıdır. Diğer istemcilerin aksine, bir dizi hizmet işlemi içermez. Yalnızca bir ileti gönder işlemidir.
+ Özel istemci temelde, ileti göndermek için `MsmqIntegration` bağlamasını kullanan tüm WCF uygulamaları için aynıdır. Diğer istemcilerin aksine, bir dizi hizmet işlemi içermez. Yalnızca bir ileti gönder işlemidir.
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -146,7 +146,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
     4. **İşlem** kutusunu işaretleyin.  
   
-    5. Yeni `ServiceModelSamplesTransacted` kuyruğun adı olarak girin.  
+    5. Yeni kuyruğun adı olarak `ServiceModelSamplesTransacted` girin.  
   
 3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
@@ -169,11 +169,11 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: WCF uç noktaları ve Message Queuing uygulamalarla Exchange Iletileri](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94968)

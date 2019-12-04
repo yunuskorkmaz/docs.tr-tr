@@ -2,12 +2,12 @@
 title: 'Özel Ileti Kodlayıcısı: özel metin Kodlayıcısı-WCF'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 3d421aa40488deac487418b5ecc83c5dd420fdf4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 17ad1f2ab557c470a39ab5fff6c1c52d5e41a2a5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281677"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716834"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Özel İleti Kodlayıcı: Özel Metin Kodlayıcı
 
@@ -18,7 +18,7 @@ Bu örnek, Windows Communication Foundation (WCF) kullanarak özel metin iletisi
 > 
 > `<InstallDrive>:\WF_WCF_Samples`
 > 
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 > 
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`
 
