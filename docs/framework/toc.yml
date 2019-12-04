@@ -42,8 +42,6 @@
       href: configure-apps/
     - name: .NET Yerel ile Uygulama Derleme
       href: net-native/
-    - name: Windows Identity Foundation
-      href: security/
     - name: 'Hata Ayıklama, İzleme ve Profil Oluşturma'
       href: debug-trace-profile/
     - name: Dağıtım
