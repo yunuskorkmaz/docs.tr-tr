@@ -1,24 +1,24 @@
 - name: Hoş Geldiniz
   href: welcome.md
-- name: .NET Kılavuzu
+- name: .NET kılavuzu
   href: standard/
-- name: .NET Core Kılavuzu
+- name: .NET Core kılavuzu
   href: core/
-- name: .NET Framework Kılavuzu
+- name: .NET Framework kılavuzu
   href: framework/
-- name: .NET Masaüstü Kılavuzu - WPF
+- name: .NET masaüstü kılavuzu - WPF
   href: desktop-wpf/
-- name: 'C# Kılavuzu'
+- name: 'C# kılavuzu'
   href: csharp/index.yml
-- name: 'F# Kılavuzu'
+- name: 'F# kılavuzu'
   href: fsharp/
-- name: Visual Basic Kılavuzu
+- name: Visual Basic kılavuzu
   href: visual-basic/
-- name: ML.NET Kılavuzu
+- name: ML.NET kılavuzu
   href: machine-learning/index.yml
-- name: Apache Spark için .NET Kılavuzu
+- name: Apache Spark için .NET kılavuzu
   href: spark/index.yml
-- name: .NET Uygulama Mimarisi Kılavuzu
+- name: .NET uygulama mimarisi kılavuzu
   href: architecture/index.yml
-- name: Örnekler ve Öğreticiler
+- name: Örnekler ve öğreticiler
   href: samples-and-tutorials/index.md

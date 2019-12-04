@@ -1,4 +1,4 @@
-- name: .NET Core Kılavuzu
+- name: .NET Core kılavuzu
   href: index.md
 - name: .NET Core hakkında
   href: about.md
@@ -47,21 +47,21 @@
   items:
     - name: 'C# ve Visual Studio Code kullanmaya başlama'
       href: tutorials/with-visual-studio-code.md
-    - name: 'Visual Studio 2017’de .NET Core ile bir C# Merhaba Dünya uygulaması derleme'
+    - name: 'Visual Studio’da C# Merhaba Dünya uygulaması oluşturma'
       href: tutorials/with-visual-studio.md
-    - name: Visual Studio 2017’de .NET Core ile bir Visual Basic Merhaba Dünya uygulaması derleme
+    - name: Visual Studio’da Visual Basic Merhaba Dünya uygulaması oluşturma
       href: tutorials/vb-with-visual-studio.md
-    - name: 'Visual Studio 2017’yi kullanarak C# veya Visual Basic .NET Core Merhaba Dünya uygulamanızda hata ayıklama'
+    - name: Visual Studio kullanarak uygulamada hata ayıklama
       href: tutorials/debugging-with-visual-studio.md
-    - name: Visual Studio 2017 ile Merhaba Dünya uygulamanızı yayımlama
+    - name: Visual Studio kullanarak uygulamayı yayımlama
       href: tutorials/publishing-with-visual-studio.md
-    - name: 'Visual Studio 2017’de C# ve .NET Core ile bir .NET Standard kitaplığı derleme'
+    - name: 'Visual Studio’da C# kullanarak .NET Standard kitaplığı oluşturma'
       href: tutorials/library-with-visual-studio.md
-    - name: Visual Studio 2017’de Visual Basic ve .NET Core ile bir .NET Standard kitaplığı derleme
+    - name: Visual Studio’da Visual Basic kullanarak .NET Standard kitaplığı oluşturma
       href: tutorials/vb-library-with-visual-studio.md
-    - name: Visual Studio 2017’de NET Core ile bir .NET Standard kitaplığını test etme
+    - name: Visual Studio’da bir .NET Standard kitaplığını test etme
       href: tutorials/testing-library-with-visual-studio.md
-    - name: Visual Studio 2017’de bir .NET Standard kitaplığı kullanma
+    - name: Visual Studio’da bir .NET Standard kitaplığını kullanma
       href: tutorials/consuming-library-with-visual-studio.md
 - name: ​.NET Core’daki yenilikler
   items:
@@ -115,7 +115,7 @@
   items:
     - name: .NET Core bileşenlerini COM’da kullanıma sunma
       href: native-interop/expose-components-to-com.md
-- name: 'Paketler, Meta Paketler ve Çerçeveler'
+- name: 'Paketler, meta paketler ve çerçeveler'
   href: packages.md
 - name: CLI’daki değişikliklere genel bakış
   href: tools/cli-msbuild-architecture.md
@@ -134,14 +134,14 @@
       href: tools/project-json-to-csproj.md
     - name: DNX’ten geçiş
       href: migration/from-dnx.md
-- name: Uygulama Dağıtımı
+- name: Uygulama dağıtımı
   href: deploying/index.md
   items:
     - name: CLI araçlarıyla uygulama dağıtma
       href: deploying/deploy-with-cli.md
     - name: Visual Studio ile uygulama dağıtma
       href: deploying/deploy-with-vs.md
-    - name: Platformlar Arası Araçlarla NuGet Paketi Oluşturma
+    - name: Platformlar arası araçlarla NuGet paketi oluşturma
       href: deploying/creating-nuget-packages.md
     - name: Kendi içinde dağıtım çalışma zamanını ileri sarma
       href: deploying/runtime-patch-selection.md
@@ -153,7 +153,7 @@
       href: docker/introduction.md
     - name: .NET Core uygulamasını kapsayıcılı hale getirme
       href: docker/build-container.md
-    - name: Visual Studio’da Kapsayıcı Araçları
+    - name: Visual Studio’da kapsayıcı araçları
       href: /visualstudio/containers/overview
 - name: Tanılama araçları
   items:
@@ -171,7 +171,7 @@
           href: diagnostics/dotnet-dump.md
         - name: dotnet-trace
           href: diagnostics/dotnet-trace.md
-- name: Birim Testi
+- name: Birim testi
   href: testing/index.md
   items:
     - name: Birim testi en iyi deneyimler
@@ -200,7 +200,7 @@
       href: testing/unit-testing-published-output.md
     - name: Visual Studio ile .NET Core projelerinde canlı birim testi
       href: /visualstudio/test/live-unit-testing-start
-- name: Sürekli Tümleştirme
+- name: Sürekli tümleştirme
   href: tools/using-ci-with-cli.md
 - name: Sürüm Oluşturma
   href: versions/index.md
@@ -211,7 +211,7 @@
       href: versions/remove-runtime-sdk-versions.md
 - name: Çalışma Zamanı Tanımlayıcısı (RID) kataloğu
   href: rid-catalog.md
-- name: .NET Core SDK’sına Genel Bakış
+- name: .NET Core SDK’sına genel bakış
   href: sdk.md
 - name: .NET Core CLI
   items:
@@ -220,18 +220,18 @@
     - name: Araçlar
       expanded: true
       items:
-        - name: Genel Araçlar
+        - name: Genel araçlar
           expanded: true
           items:
             - name: Genel Bakış
               href: tools/global-tools.md
-            - name: Genel Araç Oluşturma
+            - name: Genel araç oluşturma
               href: tools/global-tools-how-to-create.md
         - name: Araç kullanım sorunlarını giderme
           href: tools/troubleshoot-usage-issues.md
     - name: Yükseltilmiş erişim
       href: tools/elevated-access.md
-    - name: Genişletilebilirlik Modeli
+    - name: Genişletilebilirlik modeli
       href: tools/extensibility.md
     - name: Özel şablonlar
       href: tools/custom-templates.md
@@ -311,7 +311,7 @@
               href: tools/dotnet-list-package.md
             - name: dotnet remove package
               href: tools/dotnet-remove-package.md
-- name: .NET Core Ek Araçlar
+- name: .NET Core ek araçlar
   href: additional-tools/index.md
   items:
     - name: WCF Web Service Reference Provider
@@ -357,7 +357,7 @@
           href: dependency-loading/default-probing.md
         - name: Yönetilen derlemeleri yükleme
           href: dependency-loading/loading-managed.md
-        - name: Uydu derlemelerini yükleme
+        - name: Uydu derlemeleri yükleme
           href: dependency-loading/loading-resources.md
         - name: Yönetilmeyen kitaplıkları yükleme
           href: dependency-loading/loading-unmanaged.md
