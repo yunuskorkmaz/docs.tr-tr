@@ -2,12 +2,12 @@
 title: HTTPS Üzerinden Özel Bağlama Güvenli Oturum
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: d4845a1058f42dab35919eb7bb83b16b45e42ff3
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: b83f7af2cd4d0518454a5147904c21c9ffbbbf21
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990024"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710971"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>HTTPS Üzerinden Özel Bağlama Güvenli Oturum
 Bu örnek, SSL Aktarım güvenliği 'nin güvenilir oturumlarla kullanımını gösterir. Güvenilir Oturumlar, WS-güvenilir mesajlaşma protokolünü uygular. Güvenilir Oturumlar üzerinde WS-Security oluşturarak güvenli bir güvenilir oturumunuz olabilir. Ancak bazen, SSL ile HTTP Transport Security kullanmayı tercih edebilirsiniz.  
@@ -17,14 +17,14 @@ Bu örnek, SSL Aktarım güvenliği 'nin güvenilir oturumlarla kullanımını g
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSessionOverHttps`  
   
 ## <a name="sample-details"></a>Örnek Ayrıntılar  
  SSL, paketlerin kendilerine güvenmesini sağlar. Bu, WS-Secure konuşması kullanılarak güvenilir oturumu güvenli hale getirmenin farklı olduğunu unutmamak önemlidir.  
   
- HTTPS üzerinden güvenilir oturum kullanmak için özel bir bağlama oluşturmanız gerekir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır. Güvenilir oturum bağlama öğesi ve [ \<httpsTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md)kullanılarak özel bir bağlama oluşturulur. Aşağıdaki yapılandırma özel bağlamadır.  
+ HTTPS üzerinden güvenilir oturum kullanmak için özel bir bağlama oluşturmanız gerekir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır. Güvenilir oturum bağlama öğesi ve [\<httpsTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md)kullanılarak özel bir bağlama oluşturulur. Aşağıdaki yapılandırma özel bağlamadır.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -102,7 +102,7 @@ Bu örnek, SSL Aktarım güvenliği 'nin güvenilir oturumlarla kullanımını g
   
  Belirtilen adres https://düzenini kullanır.  
   
- Bu örnekte kullanılan sertifika, MakeCert. exe ile oluşturulmuş bir test sertifikasıdır çünkü, tarayıcınızla, gibi bir https: adresine https://localhost/servicemodelsamples/service.svc erişmeye çalıştığınızda bir güvenlik uyarısı görünür. Windows Communication Foundation (WCF) istemcisinin bir test sertifikasıyla çalışmasına izin vermek için, güvenlik uyarısını bastırmak üzere istemciye bazı ek kodlar eklenmiştir. Üretim sertifikaları kullanılırken bu kod ve eşlik eden sınıf gerekli değildir.  
+ Bu örnekte kullanılan sertifika, MakeCert. exe ile oluşturulmuş bir test sertifikası olduğundan, https://localhost/servicemodelsamples/service.svc gibi bir https: adresine erişmeye çalıştığınızda bir güvenlik uyarısı görüntülenir. Windows Communication Foundation (WCF) istemcisinin bir test sertifikasıyla çalışmasına izin vermek için, güvenlik uyarısını bastırmak üzere istemciye bazı ek kodlar eklenmiştir. Üretim sertifikaları kullanılırken bu kod ve eşlik eden sınıf gerekli değildir.  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  

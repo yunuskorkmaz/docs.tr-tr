@@ -2,12 +2,12 @@
 title: Belge Onay İşlemi
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 20167cd1c06c2ae57dfe48fd07ab3a0e2adf9927
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: cee43aff991f9482de7b3172174eb0e786ec1fe6
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038234"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710844"
 ---
 # <a name="document-approval-process"></a>Belge Onay İşlemi
 
@@ -18,7 +18,7 @@ Bu örnek, birçok Windows Workflow Foundation (WF) ve Windows Communication Fou
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`
 
@@ -90,7 +90,7 @@ Onay Yöneticisi uygulamasının görünüm noktasından, onay işlemi aşağıd
 
 2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
 
-3. Çözümü çalıştırmak için **Çözüm Gezgini** ApprovalManager projesine sağ tıklayıp sağ tıklama menüsünden **Hata Ayıkla**->yeni örnek**Başlat** ' a tıklayarak onay Yöneticisi uygulamasını başlatın.
+3. Çözümü çalıştırmak için **Çözüm Gezgini** onay Yöneticisi uygulamasını başlatın ve sağ tıklama menüsünden **Hata Ayıkla**->yeni örnek **Başlat** ' a tıklayın.
 
     Yöneticinin çıkışının, olduğunu bilmenizi sağlamak için bekleyin.
 
@@ -104,11 +104,11 @@ Onay Yöneticisi uygulamasının görünüm noktasından, onay işlemi aşağıd
 
 4. **Keşfet**' e tıklayın, **abone ol** düğmesi etkin olana kadar bekleyin.
 
-5. Herhangi bir Kullanıcı adı yazın ve **abone ol**' a tıklayın. Bir istemci için ve diğer `UserType1` türü `UserType2`kullanın.
+5. Herhangi bir Kullanıcı adı yazın ve **abone ol**' a tıklayın. Bir istemci için `UserType1` ve diğer tür `UserType2`kullanın.
 
-6. `UserType1` İstemcide, açılan menüden tek onay türünü seçin ve bir belge adı ve içerik yazın. **Onay iste**' ye tıklayın.
+6. `UserType1` istemcisinde, açılan menüden tek onay türünü seçin ve bir belge adı ve içerik yazın. **Onay iste**' ye tıklayın.
 
-7. `UserType2` İstemcide onay bekleyen bir belge görüntülenir. Seçin ve **Onayla** veya **Reddet**' e basın. Sonuçların `UserType1` istemcide gösterilmesi gerekir.
+7. `UserType2` istemcisinde onay bekleyen bir belge görüntülenir. Seçin ve **Onayla** veya **Reddet**' e basın. Sonuçların `UserType1` istemcisinde gösterilmesi gerekir.
 
 ##### <a name="to-run-the-quorum-approval-scenario"></a>Çekirdek onay senaryosunu çalıştırmak için
 
@@ -120,11 +120,11 @@ Onay Yöneticisi uygulamasının görünüm noktasından, onay işlemi aşağıd
 
 4. **Keşfet**' e tıklayın, **abone ol** düğmesi etkin olana kadar bekleyin.
 
-5. Herhangi bir Kullanıcı adı yazın ve **abone ol**' a tıklayın. Bir istemci kullanımı `UserType1` ve diğer iki tür `UserType2`için.
+5. Herhangi bir Kullanıcı adı yazın ve **abone ol**' a tıklayın. Tek bir istemci için `UserType1` ve diğer iki tür `UserType2`.
 
-6. `UserType1` İstemcide, açılan menüden çekirdek onay türünü seçin ve bir belge adı ve içerik yazın. **Onay iste**' ye tıklayın. Bu, iki `UserType2` istemcinin belgeyi onaylamasını veya reddetmesini ister. Her iki `UserType2` istemcinin da yanıt vermesi gerekir, ancak belgeyi onaylanacak şekilde yalnızca bir istemci onaylaması gerekir.
+6. `UserType1` istemcisinde, açılan menüden çekirdek onay türünü seçin ve bir belge adı ve içerik yazın. **Onay iste**' ye tıklayın. Bu, iki `UserType2` istemcisinin belgeyi onaylamasını veya reddetmesini ister. `UserType2` istemcilerinin her ikisi de yanıt vermesi gerekir, ancak belgeyi onaylanacak şekilde yalnızca bir istemci onaylaması gerekir.
 
-7. `UserType2` İstemcilerde onay bekleyen bir belge görüntülenir. Seçin ve **Onayla** veya **Reddet**' e basın. Sonuçların `UserType1` istemcide gösterilmesi gerekir.
+7. `UserType2` istemcilerde, onay bekleyen bir belge görüntülenir. Seçin ve **Onayla** veya **Reddet**' e basın. Sonuçların `UserType1` istemcisinde gösterilmesi gerekir.
 
 ##### <a name="to-run-the-complex-approval-scenario"></a>Karmaşık onay senaryosunu çalıştırmak için
 
@@ -136,15 +136,15 @@ Onay Yöneticisi uygulamasının görünüm noktasından, onay işlemi aşağıd
 
 4. **Keşfet**' e tıklayın, **abone ol** düğmesi etkin olana kadar bekleyin.
 
-5. Herhangi bir Kullanıcı adı yazın ve **abone ol**' a tıklayın. Bir istemci kullanımı `UserType1`için, iki kullanım türü `UserType2`ve son kullanımda `UserType3`.
+5. Herhangi bir Kullanıcı adı yazın ve **abone ol**' a tıklayın. Tek bir istemci için `UserType1`, iki kullanım türü `UserType2`ve son kullanımda `UserType3`.
 
-6. `UserType1` İstemcide, açılan menüden tek onay türünü seçin ve bir belge adı ve içerik yazın. **Onay iste**' ye tıklayın.
+6. `UserType1` istemcisinde, açılan menüden tek onay türünü seçin ve bir belge adı ve içerik yazın. **Onay iste**' ye tıklayın.
 
-7. `UserType2` İstemcilerde onay bekleyen bir belge görüntülenir. Seçin ve **Onayla**' ya basın, belge `UserType3` istemciye geçirilir.
+7. `UserType2` istemcilerde, onay bekleyen bir belge görüntülenir. Seçin ve **Onayla**' ya basın, belge `UserType3` istemcisine geçirilir.
 
-    Belge ilk `UserType2` çekirdek tarafından onaylanırsa, belge `UserType3` istemciye geçirilir.
+    Belge ilk `UserType2` çekirdeği tarafından onaylanırsa, belge `UserType3` istemcisine geçirilir.
 
-8. Belgeyi `UserType3` istemciden onaylayın veya reddedin. Sonuçların `UserType1` istemcide gösterilmesi gerekir.
+8. `UserType3` istemcisinden belgeyi onaylayın veya reddedin. Sonuçların `UserType1` istemcisinde gösterilmesi gerekir.
 
 ##### <a name="to-clean-up"></a>Temizlemek için
 

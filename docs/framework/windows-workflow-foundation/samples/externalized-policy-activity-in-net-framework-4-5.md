@@ -2,12 +2,12 @@
 title: .NET Framework 4.5’te Dış İlke Etkinliği
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: efc8b8169a6b984e003444c4669122ce6fa7f9d0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9184386751bb44e89dfdcedd34ab0ab84a27323e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283159"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710922"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5’te Dış İlke Etkinliği
 
@@ -48,7 +48,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 |RuleSetName|. Rules dosyası içinde kullanılacak <xref:System.Workflow.Activities.Rules.RuleSet> adı.|
 |TargetObject|<xref:System.Workflow.Activities.Rules.RuleSet> <xref:System.Workflow.Activities.Rules.Rule> nesnelerinin üzerinde değerlendirildiği nesne.|
 |ResultObject|Kurallar uygulandıktan sonra elde edilen nesne (örneğin, kurallar giriş bağımsız değişkenine göre uygulanır ve sonuç sonuç bağımsız değişkeninde saklanır.)|
-|ValidationError|Yürütmeden önce hedef nesneye karşı <xref:System.Workflow.Activities.Rules.RuleSet> doğrulanırken WF 3,5 kural altyapısının döndürdüğü doğrulama hatalarının listesi.|
+|Doğrulama hatası|Yürütmeden önce hedef nesneye karşı <xref:System.Workflow.Activities.Rules.RuleSet> doğrulanırken WF 3,5 kural altyapısının döndürdüğü doğrulama hatalarının listesi.|
 
 ## <a name="externalizedpolicy4-activity-designer"></a>ExternalizedPolicy4 Etkinlik Tasarımcısı
 
@@ -87,7 +87,7 @@ Bu örnek iki istemci uygulaması içerir: ImperativeCodeClientSample ve Designe
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin.
 >
 > Bu örnek aşağıdaki dizinde bulunur:
 >

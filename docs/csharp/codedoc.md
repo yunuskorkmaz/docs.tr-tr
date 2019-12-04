@@ -4,12 +4,12 @@ description: Kodunuzu XML belge açıklamalarıyla belgeleme ve derleme zamanın
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: c858a92309710a0ac6b68e9194f2d7ef4c9577a0
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 92a64a8f7a652f8b957013fc05f426e6b983655d
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140671"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710984"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Kodunuzu XML açıklamalarıyla belgeleme
 
@@ -43,7 +43,7 @@ XML belge açıklamaları Üçlü eğik çizgi (`///`) ve XML biçimli bir açı
 
 ## <a name="walkthrough"></a>Gidiş
 
-Yeni geliştiricilerin, üçüncü taraf geliştiricilerin kullanması için ve katkıda bulunmak amacıyla çok basit bir matematik kitaplığını belgeleme konusunda bilgi verlim.
+Yeni geliştiricilerin, üçüncü taraf geliştiricilerin kullanması için ve katkıda bulunmak üzere çok basit bir matematik kitaplığını belgeleme konusunda bilgi vereceğiz.
 
 Basit matematik kitaplığı için kod aşağıda verilmiştir:
 
@@ -51,7 +51,7 @@ Basit matematik kitaplığı için kod aşağıda verilmiştir:
 
 Örnek kitaplık, `int` ve `double` veri türlerinde `add`, `subtract`, `multiply` ve `divide` dört önemli aritmetik işlemi destekler.
 
-Şimdi, kitaplığınızı kullanan ancak kaynak koda erişiminiz olmayan üçüncü taraf geliştiriciler için kodınızdan bir API başvuru belgesi oluşturabiliyor olmanız istiyorsunuz.
+Şimdi kitaplığınızı kullanan üçüncü taraf geliştiriciler için kodunuzda bir API başvuru belgesi oluşturabilmek, ancak kaynak koda erişiminiz yok.
 Daha önce bahsedilen XML belge etiketleri bunu elde etmek için kullanılabilir. Artık C# derleyicinin DESTEKLEDIĞI standart XML etiketlerine tanıtılıcaksınız.
 
 ## <a name="summary"></a>\<summary>
@@ -59,45 +59,45 @@ Daha önce bahsedilen XML belge etiketleri bunu elde etmek için kullanılabilir
 `<summary>` etiketi, bir tür veya üye hakkında kısa bilgiler ekler.
 `Math` sınıf tanımına ve ilk `Add` yöntemine ekleyerek kullanımını göstereceğim. Kodunuzu geri kalanına uygulamayı ücretsiz olarak hissetmekten çekinmeyin.
 
-[!code-csharp[Summary Tag](../../samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
+[!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
 `<summary>` etiketi çok önemlidir ve içeriği, IntelliSense 'de veya bir API başvuru belgesinde bulunan içerik veya üye bilgilerinin birincil kaynağı olduğundan, bunu dahil etmenizi öneririz.
 
-## <a name="remarks"></a>\<remarks >
+## <a name="remarks"></a>\<açıklamalar >
 
 `<remarks>` etiketi, `<summary>` etiketinin sağladığı türler veya Üyeler hakkındaki bilgileri tamamlar. Bu örnekte, bunu yalnızca sınıfına eklersiniz.
 
-[!code-csharp[Remarks Tag](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
+[!code-csharp[Remarks Tag](~/samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
 ## <a name="returns"></a>\<returns>
 
 `<returns>` etiketi bir yöntem bildiriminin dönüş değerini açıklar.
 Daha önce olduğu gibi, aşağıdaki örnek ilk `Add` yönteminde `<returns>` etiketini gösterir. Diğer yöntemlerle aynı şekilde yapabilirsiniz.
 
-[!code-csharp[Returns Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
+[!code-csharp[Returns Tag](~/samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
 ## <a name="value"></a>\<value>
 
 `<value>` etiketi, özellikler için kullanmanız dışında `<returns>` etiketine benzerdir.
 `Math` kitaplığınızın `PI`adında bir statik özelliği olduğunu varsayarsak, bu etiketi nasıl kullanacağınızı aşağıda bulabilirsiniz:
 
-[!code-csharp[Value Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
+[!code-csharp[Value Tag](~/samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
-## <a name="example"></a>\<example >
+## <a name="example"></a>\<örnek >
 
 XML belgelerinize bir örnek eklemek için `<example>` etiketini kullanın.
 Bu, alt `<code>` etiketinin kullanılmasını içerir.
 
-[!code-csharp[Example Tag](../../samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
+[!code-csharp[Example Tag](~/samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
 
 `code` etiketi, daha uzun örnekler için satır sonlarını ve girintiyi korur.
 
-## <a name="para"></a>\<para >
+## <a name="para"></a>\<paragraf >
 
-İçeriği üst etiketi içinde biçimlendirmek için `<para>` etiketini kullanın. `<para>`, genellikle metni paragraflarına bölmek için `<remarks>` veya `<returns>` gibi bir etiket içinde kullanılır.
+İçeriği üst etiketi içinde biçimlendirmek için `<para>` etiketini kullanın. `<para>`, genellikle metni paragraflarına bölmek için `<remarks>` veya `<returns>`gibi bir etiket içinde kullanılır.
 Sınıf tanımınız için `<remarks>` etiketinin içeriğini biçimlendirebilirsiniz.
 
-[!code-csharp[Para Tag](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
+[!code-csharp[Para Tag](~/samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
 ## <a name="c"></a>\<c >
 
@@ -105,32 +105,32 @@ Biçimlendirme konusunda hala, metnin bir kısmını kod olarak işaretlemek iç
 `<code>` etiketi, ancak satır içi gibi. Bir etiketin içeriğinin bir parçası olarak hızlı bir kod örneği göstermek istediğinizde yararlı olur.
 `Math` sınıfının belgelerini güncelleştirelim.
 
-[!code-csharp[C Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
+[!code-csharp[C Tag](~/samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
-## <a name="exception"></a>\<exception >
+## <a name="exception"></a>\<özel durum >
 
 `<exception>` etiketini kullanarak, geliştiricilerinizin bir yöntemin belirli özel durumları oluşturduğunu bilmesini sağlayabilirsiniz.
 `Math` kitaplığınıza baktığınızda, her iki `Add` yönteminin da belirli bir koşul karşılanırsa bir özel durum oluşturmasını sağlayabilirsiniz. Öyle değildir, ancak `b` parametresi sıfır ise tamsayı `Divide` yöntemi de oluşturulur. Şimdi bu yönteme özel durum belgeleri ekleyin.
 
-[!code-csharp[Exception Tag](../../samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
+[!code-csharp[Exception Tag](~/samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
 
 `cref` özniteliği geçerli derleme ortamında kullanılabilir bir özel duruma bir başvuruyu temsil eder.
 Bu, projede veya başvurulan bir derlemede tanımlanmış herhangi bir tür olabilir. Değeri çözülemezse, derleyici bir uyarı verebilir.
 
-## <a name="see"></a>\<see >
+## <a name="see"></a>\<bkz. >
 
 `<see>` etiketi, başka bir kod öğesi için bir belge sayfasına tıklatılabilir bir bağlantı oluşturmanıza olanak sağlar. Sonraki örnekte, iki `Add` yöntemi arasında tıklatılabilir bir bağlantı oluşturacağız.
 
-[!code-csharp[See Tag](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
+[!code-csharp[See Tag](~/samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
 `cref`, geçerli derleme ortamında kullanılabilir olan bir türe veya üyesine başvuruyu temsil eden **gerekli** bir özniteliktir.
 Bu, projede veya başvurulan bir derlemede tanımlanmış herhangi bir tür olabilir.
 
-## <a name="seealso"></a>\<seealso >
+## <a name="seealso"></a>\<seede >
 
 `<seealso>` etiketini `<see>` etiketiyle aynı şekilde kullanırsınız. Tek fark, içeriğinin genellikle bir "Ayrıca bkz." bölümüne yerleştirilme nedendir. Burada, tamsayı parametrelerini kabul eden sınıftaki diğer yöntemlere başvurmak için tamsayı `Add` yöntemine bir `seealso` etiketi ekleyeceğiz:
 
-[!code-csharp[Seealso Tag](../../samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
+[!code-csharp[Seealso Tag](~/samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
 
 `cref` özniteliği, geçerli derleme ortamında kullanılabilir olan bir türe veya üyesine başvuruyu temsil eder.
 Bu, projede veya başvurulan bir derlemede tanımlanmış herhangi bir tür olabilir.
@@ -139,34 +139,34 @@ Bu, projede veya başvurulan bir derlemede tanımlanmış herhangi bir tür olab
 
 Metodun parametrelerini anlatmak için `<param>` etiketini kullanın. Double `Add` yöntemine bir örnek aşağıda verilmiştir: etiketin açıkladığı parametre, **gerekli** `name` özniteliğinde belirtilir.
 
-[!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
+[!code-csharp[Param Tag](~/samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
 ## <a name="typeparam"></a>\<typeparam >
 
 `<typeparam>` etiketini `<param>` etiketi gibi kullanırsınız, ancak genel tür veya yöntem bildirimlerinde genel bir parametreyi betimleyelim.
 Bir miktarın diğerinden daha büyük olup olmadığını denetlemek için `Math` sınıfınıza hızlı genel bir yöntem ekleyin.
 
-[!code-csharp[Typeparam Tag](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
+[!code-csharp[Typeparam Tag](~/samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
 ## <a name="paramref"></a>\<paramref >
 
 Bazen, bir yöntemin `<summary>` bir etiketle ne olduğunu açıklayan ortasında olabilirsiniz ve bir parametreye başvuru yapmak isteyebilirsiniz. `<paramref>` etiketi yalnızca bunun için harika. Double tabanlı `Add` yönteminizin özetini güncelleştirelim. `<param>` etiketi gibi, **gerekli** `name` özniteliğinde parametre adı belirtilir.
 
-[!code-csharp[Paramref Tag](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
+[!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
 ## <a name="typeparamref"></a>\<typeparamref >
 
 `<typeparamref>` etiketini `<paramref>` etiketi gibi kullanırsınız, ancak genel tür veya yöntem bildirimlerinde genel bir parametreyi betimleyelim.
 Daha önce oluşturduğunuz genel yöntemi kullanabilirsiniz.
 
-[!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
+[!code-csharp[Typeparamref Tag](~/samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
-## <a name="list"></a>\<list >
+## <a name="list"></a>\<listesi >
 
 Belge bilgilerini sıralı liste, sırasız liste veya tablo olarak biçimlendirmek için `<list>` etiketini kullanırsınız.
 `Math` kitaplığınızın desteklediği her matematik işleminin sıralanmamış bir listesini oluşturun.
 
-[!code-csharp[List Tag](../../samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
+[!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
 `type` özniteliğini sırasıyla `number` veya `table`olarak değiştirerek sıralı bir liste veya tablo yapabilirsiniz.
 
@@ -174,24 +174,24 @@ Belge bilgilerini sıralı liste, sırasız liste veya tablo olarak biçimlendir
 
 Bu öğreticiyi takip ediyorsanız ve gereken yere etiketleri kodunuza uyguladıysanız, kodunuzun aşağıdakine benzer şekilde görünmesi gerekir:
 
-[!code-csharp[Tagged Library](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
+[!code-csharp[Tagged Library](~/samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
 
 Kodınızdan, tıklatılabilir çapraz başvurularla ayrıntılı bir belge Web sitesi oluşturabilirsiniz. Ancak başka bir sorunla karşılaşıyoruz: kodunuzun okunması zor oldu.
 Bu koda katkıda bulunmak isteyen herhangi bir geliştirici için bu bir gece olacak şekilde, bu kadar çok bilgi vardır.
 Bu konuda size yardımcı olabilecek bir XML etiketi vardı:
 
-## <a name="include"></a>\<include >
+## <a name="include"></a>\<içerme >
 
 `<include>` etiketi, belge açıklamalarını doğrudan kaynak kodu dosyanıza yerleştirmeyi tersine, kaynak kodunuzda türleri ve üyeleri tanımlayan ayrı bir XML dosyasındaki açıklamalara başvurmanıza olanak sağlar.
 
-Artık tüm XML etiketlerinizi `docs.xml` adlı ayrı bir XML dosyasına taşıyacağız. Dosyayı istediğiniz şekilde adlandırabilirsiniz.
+Artık tüm XML etiketlerinizi `docs.xml`adlı ayrı bir XML dosyasına taşıyacağız. Dosyayı istediğiniz şekilde adlandırabilirsiniz.
 
-[!code-xml[Sample XML](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
+[!code-xml[Sample XML](~/samples/snippets/csharp/concepts/codedoc/include.xml)]
 
 Yukarıdaki XML 'de, her üyenin belge yorumu, ne yapacaklarıyla doğrudan adlı bir etiketin içinde görünür. Kendi stratejinizi seçebilirsiniz.
 XML yorumlarınıza artık ayrı bir dosyada sahip olduğunuza göre, kodunuzun `<include>` etiketi kullanılarak nasıl daha okunaklı hale getirildikimi görelim:
 
-[!code-csharp[Include Tag](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
+[!code-csharp[Include Tag](~/samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
 
 Bu durumda: kodunuz okunabilir hale getirilir ve belge bilgisi kaybedilmiyor.
 

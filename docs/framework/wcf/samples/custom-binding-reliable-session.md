@@ -2,12 +2,12 @@
 title: Özel Bağlama Güvenilir Oturum
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: b2679ad4c6e8595a7b6d6bc9818880da56781e38
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: c39dc9c57332800628012e88e1b274296556e756
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990001"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710955"
 ---
 # <a name="custom-binding-reliable-session"></a>Özel Bağlama Güvenilir Oturum
 
@@ -18,7 +18,7 @@ ms.locfileid: "70990001"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSession`
 
@@ -116,7 +116,7 @@ Press <ENTER> to terminate client.
 4. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
 
     > [!IMPORTANT]
-    > İstemciyi bir çapraz makine yapılandırmasında çalıştırırken, "localhost" öğesini hem `address` [ \<uç nokta >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) öğesinin `clientBaseAddress` hem de [ \<CompositeDuplex özniteliğinin özniteliği içinde değiştirdiğinizden emin olun ](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)aşağıdaki örnekte gösterildiği gibi, uygun makinenin adıyla >.
+    > İstemciyi bir çapraz makine yapılandırmasında çalıştırırken, aşağıdaki örnekte gösterildiği gibi, [\<uç noktası >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) öğesinin `address` özniteliğinde hem de [\<compositeduplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) `clientBaseAddress` özniteliği, uygun makinenin adıyla birlikte "localhost" öğesini değiştirdiğinizden emin olun.
 
     ```xml
     <endpoint name = ""

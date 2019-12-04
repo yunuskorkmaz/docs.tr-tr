@@ -2,12 +2,12 @@
 title: Özel İzleme
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 5b6bcee2e889a7f7e64eb83155a92e5b4c27d719
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 0d9bd9262c6fc13a36fb7736245fa244ee61d8c3
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141960"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710866"
 ---
 # <a name="custom-tracking"></a>Özel İzleme
 Bu örnek, bir özel izleme katılımcısının nasıl oluşturulacağını ve izleme verilerinin içeriğini konsola nasıl yazılacağını gösterir. Buna ek olarak, örnek, Kullanıcı tanımlı verilerle doldurulmuş <xref:System.Activities.Tracking.CustomTrackingRecord> nesnelerinin nasıl yayılacağını gösterir. Konsol tabanlı izleme katılımcısı, kod içinde oluşturulan bir izleme profili nesnesi kullanılarak iş akışı tarafından yayılan <xref:System.Activities.Tracking.TrackingRecord> nesnelerini filtreler.
@@ -144,7 +144,7 @@ context.Track(customRecord);
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://go.microsoft.com/fwlink/?LinkId=150780) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
