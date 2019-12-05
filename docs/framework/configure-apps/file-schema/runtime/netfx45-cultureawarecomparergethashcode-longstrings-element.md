@@ -7,19 +7,19 @@ helpviewer_keywords:
 - GetHashCode method
 - hash codes, calculating
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
-ms.openlocfilehash: 193f9a15768e4060d977063117c07558bbb1d766
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 413eb6c6e61b509135601c65cf045eabd849e8b3
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116139"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802117"
 ---
 # <a name="netfx45_cultureawarecomparergethashcode_longstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings > öğesi
 
 Çalışma zamanının <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> yöntemi için karma kodları hesaplamak üzere sabit miktarda bellek kullanıp kullanmadığını belirtir.
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+[ **\<yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<çalışma zamanı >** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx45_CultureAwareComparerGetHashCode_LongStrings >**  
 
 ## <a name="syntax"></a>Sözdizimi
@@ -32,7 +32,7 @@ ms.locfileid: "73116139"
 
 Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
-### <a name="attributes"></a>Öznitelikler
+### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
@@ -61,7 +61,7 @@ Yok.
 Varsayılan olarak, ortak dil çalışma zamanı <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> yöntemi için değişken miktarda bellek ayırır ve yöntem çok büyük dizelerin karma kodunu (birkaç milyon karakter uzunluğunda) hesaplamaya çalıştığında bir <xref:System.ArgumentException> oluşturulabilir. Bu öğeyi bir uygulama yapılandırma dosyasına ekleyip `enabled` özniteliğini "1" olarak ayarlayarak, <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> yönteminin karma kodların hesaplaması için sabit miktarda bellek ayıran alternatif bir algoritma kullanmasını belirtebilirsiniz.
 
 > [!IMPORTANT]
-> `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` öğesi [!INCLUDE[win8](../../../../../includes/win8-md.md)] ve sonraki sürümlerde kullanılmaz.
+> `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` öğesi Windows 8 ve sonraki sürümlerde kullanılmaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

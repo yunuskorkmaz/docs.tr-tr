@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: 0d569d12b5bc555a07e94fa89c5a19f52f4a6b6c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 9ddb3fe637cd0402f0ce850bc523ae8cb0c5dc37
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318396"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801966"
 ---
 # <a name="designing-and-implementing-services"></a>Hizmetleri Tasarlama ve Uygulama
 Bu bölümde, WCF sözleşmelerini tanımlama ve uygulama işlemlerinin nasıl yapılacağı gösterilir. Bir hizmet sözleşmesi, bir uç noktanın dış dünyaya ne iletişim kuracağını belirtir. Daha somut bir düzeyde, istek/yanıt, tek yönlü ve çift yönlü gibi temel ileti değişimi desenleri (MEPs) halinde düzenlenmiş belirli bir ileti kümesinin bir ifadesidir. Bir hizmet sözleşmesi mantıksal olarak ilişkili bir ileti değişimi kümesi ise, bir hizmet işlemi tek bir ileti alışverişi olur. Örneğin, bir `Hello` işlem, tek bir iletiyi kabul etmelidir (çağıranın selamlamayı duyurabilmesi) ve bir ileti döndürmeyebilir (işlemin ne olduğuna bağlı olarak).  
@@ -46,7 +46,7 @@ Bu bölümde, WCF sözleşmelerini tanımlama ve uygulama işlemlerinin nasıl y
   
 4. İletileri başarıyla işlemek için gereken iletişim altyapısına ilişkin kategorik deyimler. Örneğin, bu ayrıntılar başarılı bir iletişim kurmak için hangi güvenlik biçimlerinin gerekli olup olmayacağını ve bu ayrıntıları içerir.  
   
- Bu tür bilgileri pek çok platformda diğer uygulamalarla (Microsoft dışı platformlar dahil) iletmek için, XML hizmeti sözleşmeleri, diğer kullanıcıların yanı sıra [Web Hizmetleri Açıklama Dili](https://go.microsoft.com/fwlink/?LinkId=94952) (wsdl) ve [XML şeması](https://go.microsoft.com/fwlink/?LinkId=94953) (xsd) gibi standart XML biçimlerinde ifade edilir. Birçok platforma yönelik geliştiriciler, bu ortak sözleşme bilgilerini, her ikisi de belirtim dilini anladığından ve bu dillerin birlikte çalışabilirliği etkinleştirmek üzere tasarlandıkları için hizmetle iletişim kurabilen uygulamalar oluşturmak için kullanabilir. Hizmetin desteklediği ortak formları, biçimleri ve protokolleri açıklayarak. WCF 'nin bu tür bilgileri nasıl ele aldığı hakkında daha fazla bilgi için bkz. [metadata](./feature-details/metadata.md).  
+ Bu tür bilgileri pek çok platformda diğer uygulamalarla (Microsoft dışı platformlar dahil) iletmek için, XML hizmeti sözleşmeleri, diğer kullanıcıların yanı sıra [Web Hizmetleri Açıklama Dili](https://www.w3.org/TR/2001/NOTE-wsdl-20010315) (wsdl) ve [XML şeması](https://www.w3.org/XML/Schema) (xsd) gibi standart XML biçimlerinde ifade edilir. Birçok platforma yönelik geliştiriciler, bu ortak sözleşme bilgilerini, her ikisi de belirtim dilini anladığından ve bu dillerin birlikte çalışabilirliği etkinleştirmek üzere tasarlandıkları için hizmetle iletişim kurabilen uygulamalar oluşturmak için kullanabilir. Hizmetin desteklediği ortak formları, biçimleri ve protokolleri açıklayarak. WCF 'nin bu tür bilgileri nasıl ele aldığı hakkında daha fazla bilgi için bkz. [metadata](./feature-details/metadata.md).  
   
  Sözleşmeler birçok yoldan ifade edilebilir, ancak WSDL ve XSD hizmetleri erişilebilir bir şekilde tanımlamaya yönelik harika diller olsa da, doğrudan kullanılması zor dillerdir ve hizmet sözleşmesi uygulamalarının sadece bir hizmet açıklamalarıdır. Bu nedenle, WCF uygulamaları bir hizmetin yapısını tanımlamak ve uygulamayı uygulamak için hem yönetilen öznitelikleri, arabirimleri hem de sınıfları kullanır.  
   

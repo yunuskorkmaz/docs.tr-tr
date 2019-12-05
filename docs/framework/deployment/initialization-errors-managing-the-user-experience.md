@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3cd881044d45a276ec361d24097b59b8ce76b7e4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: cadcb5c2e85f046b5c1c561c17663b7c94829f4f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975694"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802247"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework başlatma hataları: Kullanıcı deneyimini yönetme
 
@@ -80,14 +80,14 @@ CLR çeşitli senaryolar için bir dizi ana bilgisayar içerir ve bu konaklar, �
 
 ## <a name="windows-8-behavior-and-ui"></a>Windows 8 davranışı ve Kullanıcı arabirimi
 
-CLR etkinleştirme sistemi, CLR 2,0 yükleme sorunlarından karşılaşması dışında, Windows işletim sisteminin diğer sürümlerinde olduğu gibi [!INCLUDE[win8](../../../includes/win8-md.md)] aynı davranışı ve Kullanıcı arabirimini sağlar. [!INCLUDE[win8](../../../includes/win8-md.md)], CLR 4,5 kullanan .NET Framework 4,5 içerir. Ancak [!INCLUDE[win8](../../../includes/win8-md.md)], tümü CLR 2,0 kullanan 2,0, 3,0 veya 3,5 .NET Framework içermez. Sonuç olarak, CLR 2,0 ' ye bağımlı uygulamalar varsayılan olarak [!INCLUDE[win8](../../../includes/win8-md.md)] üzerinde çalışmaz. Bunun yerine, kullanıcıların 3,5 .NET Framework yüklemesine olanak tanımak için aşağıdaki iletişim kutusunu görüntüler. Kullanıcılar ayrıca Denetim Masası 'nda .NET Framework 3,5 ' i etkinleştirebilir. Her iki seçenek de, [Windows 10, Windows 8.1 ve Windows 8 ' de .NET Framework 3,5 ' i yüklein](../install/dotnet-35-windows-10.md)makalesinde açıklanmaktadır.
+CLR etkinleştirme sistemi, Windows 8 ' de aynı davranışı ve Kullanıcı arabirimini, Windows işletim sisteminin diğer sürümlerinde olduğu gibi, CLR 2,0 yükleme sorunlarıyla karşılaştığında de sağlar. Windows 8, CLR 4,5 kullanan .NET Framework 4,5 ' i içerir. Ancak, Windows 8, tüm CLR 2,0 kullanan 2,0, 3,0 veya 3,5 .NET Framework içermez. Sonuç olarak, CLR 2,0 ' ye bağımlı uygulamalar varsayılan olarak Windows 8 üzerinde çalışmaz. Bunun yerine, kullanıcıların 3,5 .NET Framework yüklemesine olanak tanımak için aşağıdaki iletişim kutusunu görüntüler. Kullanıcılar ayrıca Denetim Masası 'nda .NET Framework 3,5 ' i etkinleştirebilir. Her iki seçenek de, [Windows 10, Windows 8.1 ve Windows 8 ' de .NET Framework 3,5 ' i yüklein](../install/dotnet-35-windows-10.md)makalesinde açıklanmaktadır.
 
-![Windows 8 ' de 3,5 yüklemesi için iletişim kutusu](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "İsteğe bağlı .NET Framework 3,5 yükleme istemi")
+![Windows 8 ' de 3,5 yüklemesi için iletişim kutusu](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "İstek üzerine .NET Framework 3.5'i yükleme istemi")
 
 > [!NOTE]
-> .NET Framework 4,5, kullanıcının bilgisayarındaki .NET Framework 4 ' ün (CLR 4) yerini almıştır. Bu nedenle, .NET Framework 4 uygulama, bu iletişim kutusunu görüntülemeden sorunsuz bir şekilde çalışır [!INCLUDE[win8](../../../includes/win8-md.md)].
+> .NET Framework 4,5, kullanıcının bilgisayarındaki .NET Framework 4 ' ün (CLR 4) yerini almıştır. Bu nedenle, Windows 8 ' de bu iletişim kutusunu görüntülemeden .NET Framework 4 uygulama sorunsuz bir şekilde çalışır.
 
-.NET Framework 3,5 yüklendiğinde, kullanıcılar [!INCLUDE[win8](../../../includes/win8-md.md)] bilgisayarlarda 2,0, 3,0 veya 3,5 .NET Framework bağlı olan uygulamaları çalıştırabilir. Ayrıca, bu uygulamaların yalnızca .NET Framework 1,0 veya 1,1 üzerinde çalışmak üzere açıkça yapılandırılmaları kaydıyla, .NET Framework 1,0 ve 1,1 uygulamalarını da çalıştırabilirler. Bkz. [.NET Framework 1,1 ' den geçiş](../migration-guide/migrating-from-the-net-framework-1-1.md).
+.NET Framework 3,5 yüklendiğinde, kullanıcılar Windows 8 bilgisayarlarında 2,0, 3,0 veya 3,5 .NET Framework bağlı olan uygulamaları çalıştırabilir. Ayrıca, bu uygulamaların yalnızca .NET Framework 1,0 veya 1,1 üzerinde çalışmak üzere açıkça yapılandırılmaları kaydıyla, .NET Framework 1,0 ve 1,1 uygulamalarını da çalıştırabilirler. Bkz. [.NET Framework 1,1 ' den geçiş](../migration-guide/migrating-from-the-net-framework-1-1.md).
 
 .NET Framework 4,5 ' den başlayarak, CLR etkinleştirme günlüğü, başlatma hatası iletisinin ne zaman ve neden görüntüleneceğini kaydeden günlük girdilerini içerecek şekilde geliştirilmiştir. Daha fazla bilgi için bkz. [nasıl yapılır: CLR etkinleştirme sorunlarını ayıklama](how-to-debug-clr-activation-issues.md).
 

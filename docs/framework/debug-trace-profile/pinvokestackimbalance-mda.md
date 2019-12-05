@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc4a48c79fc39b12f8231bd913b4ca8970c0f46f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 117e0838f78d43bf9ffa555947bf8749830c9840
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052361"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802003"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
-Yönetilen hata ayıklama Yardımcısı (MDA), clr çağırma çağrısından sonra yığın derinliğini algıladığında etkinleştirilir ve bu, <xref:System.Runtime.InteropServices.DllImportAttribute> özniteliğinde belirtilen çağırma kuralı ve `PInvokeStackImbalance` yönetilen İmzadaki parametrelerin bildirimi.
+`PInvokeStackImbalance` yönetilen hata ayıklama Yardımcısı (MDA), CLR çağırma çağrısından sonra yığın derinliğini algıladığında, <xref:System.Runtime.InteropServices.DllImportAttribute> özniteliğinde belirtilen çağırma kuralı ve yönetilen İmzadaki parametrelerin bildirimi verildiğinde, beklenen yığın derinliğiyle eşleşmez.
 
 `PInvokeStackImbalance` MDA yalnızca 32 bit x86 platformları için uygulanır.
 
 > [!NOTE]
-> MDA `PInvokeStackImbalance` , varsayılan olarak devre dışıdır. Visual Studio 2017 ' de, `PInvokeStackImbalance` MDA, **özel durum ayarları** iletişim kutusundaki **yönetilen hata ayıklama yardımcıları** listesinde görüntülenir ( **hata ayıklama** > **pencerelerini**  >   **seçtiğinizde görüntülenir Özel durum ayarları**). Ancak, **oluşturulduğunda kesmeyi** seçme veya temizleme onay kutusu, MDA ' ı etkinleştirmez veya devre dışı bırakır. Bu yalnızca, MDA etkinleştirildiğinde Visual Studio 'Nun bir özel durum oluşturulup oluşturulmayacağını denetler.
+> `PInvokeStackImbalance` MDA, varsayılan olarak devre dışıdır. Visual Studio 2017 ve sonraki sürümlerinde, `PInvokeStackImbalance` MDA, **özel durum ayarları** Iletişim kutusundaki **yönetilen hata ayıklama yardımcıları** listesinde görüntülenir ( **Windows** > **özel durum ayarları** > **Hata Ayıkla** ' yı seçtiğinizde görüntülenir). Ancak, **oluşturulduğunda kesmeyi** seçme veya temizleme onay kutusu, MDA ' ı etkinleştirmez veya devre dışı bırakır. Bu yalnızca, MDA etkinleştirildiğinde Visual Studio 'Nun bir özel durum oluşturulup oluşturulmayacağını denetler.
 
 ## <a name="symptoms"></a>Belirtiler
 
@@ -40,13 +40,13 @@ Platform çağırma çağrısının yönetilen imzası, çağrılan metodun yön
 
 Yönetilen platform çağırma imzasını ve çağırma kuralını inceleyerek yerel hedefin imza ve çağırma kuralına uyduğundan emin olun.  Hem yönetilen hem de yönetilmeyen tarafta çağırma kuralını açıkça belirtmeyi deneyin. Yönetilmeyen işlevin, yönetilmeyen derleyicide oluşan bir hata gibi başka bir nedenle yığına dengesiz olması mümkün olmasa da mümkündür.
 
-## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki
+## <a name="effect-on-the-runtime"></a>Çalışma Zamanı üzerindeki etkisi
 
 Tüm platform çağırma çağrılarını CLR 'de iyileştirilmemiş olmayan yolu alacak şekilde zorlar.
 
 ## <a name="output"></a>Çıkış
 
-MDA iletisi, yığın dengesizlenmesi için yol açan platform çağırma yöntemi çağrısının adını verir. Bir platform çağırma çağrısında `SampleMethod` bir örnek ileti:
+MDA iletisi, yığın dengesizlenmesi için yol açan platform çağırma yöntemi çağrısının adını verir. Yöntem `SampleMethod` bir platform çağırma çağrısının örnek iletisi:
 
 **PInvoke işlevi ' SampleMethod ' çağrısı yığına dengesiz. Bu, yönetilen PInvoke imzasının yönetilmeyen hedef imzasıyla eşleşmemesi nedeniyle olasıdır. PInvoke imzasının çağırma kuralı ve parametrelerinin hedef yönetilmeyen imzayla eşleşip eşleştiğinden emin olun.**
 

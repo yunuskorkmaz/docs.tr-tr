@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation Özellik Ayrıntıları
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 0c312eed1a5ba064771e7cc4c260b43d97b16315
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141875"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802602"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation Özellik Ayrıntıları
 
@@ -95,15 +95,15 @@ WCF yapılandırma şeması karmaşıktır ve kullanıcılara birçok özellik b
 
 ### <a name="getting-started"></a>Başlarken
 
-- [Bir geliştiricinin WCF 4,0 Kılavuzu](https://go.microsoft.com/fwlink/?LinkId=204940)
+- [Bir geliştiricinin WCF 4,0 Kılavuzu](https://docs.microsoft.com/previous-versions/dotnet/articles/ee354381(v=msdn.10))
 
-- [Yapılandırma Kanal Fabrikası](https://go.microsoft.com/fwlink/?LinkId=204941)
+- [Yapılandırma Kanal Fabrikası](xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601)
 
-- [Standart uç nokta öğesi](https://go.microsoft.com/fwlink/?LinkId=204942)
+- [Standart uç nokta öğesi](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [.NET Framework 4 ' te hizmet yapılandırması geliştirmeleri](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [.NET Framework 4 ' te hizmet yapılandırması geliştirmeleri](https://blogs.msdn.microsoft.com/endpoint/2009/06/30/service-configuration-improvements-in-net-4/)
 
-- [.NET 4 ' te yaygın kullanıcı hatası: WF/WCF hizmeti yapılandırma adını yanlış yazma](https://go.microsoft.com/fwlink/?LinkId=204944)
+- [.NET 4 ' te yaygın kullanıcı hatası: WF/WCF hizmeti yapılandırma adını yanlış yazma](https://blogs.msdn.microsoft.com/endpoint/2009/11/09/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name/)
 
 ### <a name="simplified-configuration-scenarios"></a>Basitleştirilmiş yapılandırma senaryoları
 
@@ -125,9 +125,9 @@ WCF yapılandırma şeması karmaşıktır ve kullanıcılara birçok özellik b
 
 ### <a name="getting-started"></a>Başlarken
 
-- [Veri sözleşme Çözümleyicisi API 'SI belgeleri](https://go.microsoft.com/fwlink/?LinkId=204946)
+- [Veri sözleşme Çözümleyicisi API 'SI belgeleri](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [Veri sözleşmesi çözümleyicisine giriş](https://go.microsoft.com/fwlink/?LinkId=204947)
+- [Veri sözleşmesi çözümleyicisine giriş](https://blogs.msdn.microsoft.com/youssefm/2009/06/05/configuring-known-types-dynamically-introducing-the-datacontractresolver/)
 
 - Lerinizi
 
@@ -287,7 +287,7 @@ Yönlendirme hizmeti, WCF iletilerinin istemcileriniz ve hizmetleriniz arasında
 
 2. Örnekler: [Yönlendirme Hizmetleri &#91;WCF örnekleri&#93; ](../wcf/samples/routing-services.md)
 
-3. Blog: [yönlendirme kuralları!](https://go.microsoft.com/fwlink/?LinkId=204956)
+3. Blog: [yönlendirme kuralları!](https://blogs.msdn.microsoft.com/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>Yönlendirme Senaryoları
 

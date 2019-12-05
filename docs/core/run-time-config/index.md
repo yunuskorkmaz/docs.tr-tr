@@ -2,12 +2,12 @@
 title: Çalışma zamanı yapılandırması
 description: Çalışma zamanı yapılandırma ayarlarını kullanarak .NET Core uygulamalarını nasıl yapılandıracağınızı öğrenin.
 ms.date: 11/13/2019
-ms.openlocfilehash: e3922f6df81198b5e122f16d5cfc4b6d15cbb4ae
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 2665026347e94d26026821beb2bfcf8441f755f6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567384"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801922"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core çalışma zamanı yapılandırma ayarları
 
@@ -26,11 +26,11 @@ ms.locfileid: "74567384"
 
 - [Ortam değişkenleri](#environment-variables)
 
-Belgelerin bu bölümündeki makaleler, örneğin, hata ayıklama ve çöp toplama gibi kategoriye göre düzenlenmiştir. Kullanılabilir yapılandırma seçenekleri, *runtimeconfig. JSON* (yalnızca .NET Core), *app. config* (yalnızca .NET Framework) ve ortam değişkenleri için gösterilir.
+Belgelerin bu bölümündeki makaleler, örneğin, hata ayıklama ve çöp toplama gibi kategoriye göre düzenlenmiştir. Uygun olduğunda, *runtimeconfig. JSON* (yalnızca .NET Core), *app. config* (yalnızca .NET Framework) ve ortam değişkenleri için yapılandırma seçenekleri gösterilir.
 
 ## <a name="runtimeconfigjson"></a>runtimeconfig. JSON
 
-*Runtimeconfig. JSON* dosyasının **ConfigProperties** bölümünde çalışma zamanı yapılandırma seçeneklerini belirtin. Bu bölüm şu biçimdedir:
+Uygulamanın *runtimeconfig. JSON* dosyasının **ConfigProperties** bölümünde çalışma zamanı yapılandırma seçeneklerini belirtin. Bu bölüm şu biçimdedir:
 
 ```json
 {

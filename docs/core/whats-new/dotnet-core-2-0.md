@@ -2,12 +2,12 @@
 title: ​.NET Core 2.0’deki yenilikler
 description: .NET Core 'da bulunan yeni özellikler hakkında bilgi edinin.
 ms.date: 08/13/2017
-ms.openlocfilehash: fcac4255e7370f31ea6c26771fdd7d341bafe38b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100837"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801899"
 ---
 # <a name="whats-new-in-net-core-20"></a>​.NET Core 2.0’deki yenilikler
 
@@ -104,7 +104,7 @@ MacOS üzerinde .NET Core 1. x, OpenSSL araç setinin şifreleme kitaplığını
 
 ### <a name="support-for-net-standard-20"></a>.NET Standard 2,0 desteği
 
-.NET Standard, Standard 'ın bu sürümüyle uyumlu .NET uygulamalarında kullanılabilmesi gereken sürümlenmiş bir API kümesini tanımlar. .NET Standard, kitaplık geliştiricileri 'ne yöneliktir. Her bir .NET uygulamasındaki .NET Standard bir sürümünü hedefleyen bir kitaplık için kullanılabilen işlevselliği garanti etmek için kullanılır. .NET Core 1. x .NET Standard sürüm 1,6 ' ü destekler; .NET Core 2,0, en son sürümü .NET Standard 2,0. Daha fazla bilgi için bkz. [.NET Standard](../../standard/net-standard.md).
+.NET Standard, Standard 'ın bu sürümüyle uyumlu .NET uygulamalarında kullanılabilmesi gereken sürümlenmiş bir API kümesini tanımlar. .NET Standard, kitaplık geliştiricileri 'ne yöneliktir. Her bir .NET uygulamasındaki .NET Standard bir sürümünü hedefleyen bir kitaplık için kullanılabilen işlevselliği garanti etmek için kullanılır. .NET Core 1. x .NET Standard sürüm 1,6 ' ü destekler; .NET Core 2,0, en son sürümü .NET Standard 2,0. Daha fazla bilgi için [.NET Standard](../../standard/net-standard.md).
 
 .NET Standard 2,0, .NET Standard 1,6 ' de kullanılabilir olandan daha fazla 20.000 API 'ye sahiptir. Bu genişletilmiş yüzey alanının büyük bölümü, .NET Framework ve Xamarin için ortak olan API 'Leri .NET Standard ' ye ekleme sonucu oluşur.
 
@@ -136,7 +136,7 @@ Projenizi Visual Studio 'da yeniden hedeflemek için projenin Özellikler ileti�
 
 Kodunuzu her değiştirdiğinizde Live Unit Testing otomatik olarak etkilenen birim testlerini arka planda çalıştırır ve Visual Studio ortamında sonuçları ve kod kapsamını canlı olarak görüntüler. .NET Core 2,0 artık Live Unit Testing desteklemektedir. Daha önce Live Unit Testing yalnızca .NET Framework uygulamalar için kullanılabilir.
 
-Daha fazla bilgi için bkz. [Visual Studio 2017 ile Live Unit Testing](/visualstudio/test/live-unit-testing) ve [Live Unit Testing SSS](/visualstudio/test/live-unit-testing-faq).
+Daha fazla bilgi için bkz. [Visual Studio ile Live Unit Testing](/visualstudio/test/live-unit-testing) ve [Live Unit Testing SSS](/visualstudio/test/live-unit-testing-faq).
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>Birden çok hedef çerçeve için daha iyi destek
 

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 5ce98a7908470a402779436db43333d46f5101fc
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: b43c3f6fd8ca56aaa99fffd40317920ee7600a2c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180151"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802719"
 ---
 # <a name="json-serialization-in-net---overview"></a>.NET 'te JSON serileştirme-genel bakış
 
-@No__t-0 ad alanı, JavaScript Nesne Gösterimi (JSON) ' den serileştirmek ve seri durumdan çıkarmak için işlevsellik sağlar.
+`System.Text.Json` ad alanı, JavaScript Nesne Gösterimi (JSON) ' den serileştirmek ve seri durumdan çıkarmak için işlevsellik sağlar.
 
 Kitaplık tasarımı, kapsamlı bir özellik kümesi üzerinden yüksek performans ve düşük bellek ayırmayı vurgular. Yerleşik UTF-8 desteği, UTF-8 olarak kodlanmış JSON metnini okuma ve yazma sürecini en iyi duruma getirir. Bu, Web ve disk üzerindeki dosyalardaki veriler için en yaygın kodlama olur.
 
@@ -35,10 +35,10 @@ Kitaplık Ayrıca, bellek içi belge nesne modeli (DOM) ile çalışmak için s�
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 * [Kitaplığı kullanma](system-text-json-how-to.md)
-* [Kaynak kod](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json)
+* [Kaynak kod](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Text.Json)
 * [API başvurusu](xref:System.Text.Json)
-* [Yol Haritası](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/roadmap/README.md)
+* [Yol Haritası](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Text.Json/roadmap/README.md)
 * DotNet/corefx deposundaki GitHub sorunları
-  * [System. Text. JSON geliştirmesi hakkında tartışma](https://github.com/dotnet/corefx/issues/33115)
-  * [Tüm System. Text. JSON sorunları](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
-  * [JSON işlevi etiketli System. Text. JSON sorunları-doc](https://github.com/dotnet/corefx/labels/json-functionality-doc)
+  * [System. Text. JSON geliştirmesi hakkında tartışma](https://github.com/dotnet/corefx/issues/33115) <!-- TODO: Issues are still not moved to the new repo-->
+  * [Tüm System. Text. JSON sorunları](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
+  * [JSON işlevi etiketli System. Text. JSON sorunları-doc](https://github.com/dotnet/runtime/labels/json-functionality-doc)

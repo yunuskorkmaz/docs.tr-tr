@@ -2,17 +2,17 @@
 title: Windows Mağazası uygulamaları için .NET için MEF
 ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
-ms.openlocfilehash: 6c1d4be7e2596446d4d3195d3c80207cfb3db400
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3a4c2a2f7f6096794f9ea723eec56aa74f5c44c5
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74713933"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802184"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>Windows Mağazası uygulamaları için .NET için MEF
-<xref:System.Composition?displayProperty=nameWithType> ve alt ad alanları, Genişletilebilir Windows 8. x mağaza uygulamalarını Managed Extensibility Framework (MEF) ile geliştirmeye yönelik türler içerir. Bu ad alanları, [!INCLUDE[win8](../../../includes/win8-md.md)] işletim sistemi için Windows 8. x Mağazası uygulamaları alt kümesinin bir parçasıdır.  
+<xref:System.Composition?displayProperty=nameWithType> ve alt ad alanları, Genişletilebilir Windows 8. x mağaza uygulamalarını Managed Extensibility Framework (MEF) ile geliştirmeye yönelik türler içerir. Bu ad alanları, Windows 8 işletim sistemi için Windows 8. x Mağaza uygulamaları alt kümesinin .NET bölümüdür.  
   
- Bu ad alanları, .NET Framework dağıtılan çekirdek sınıf kitaplığının bir parçası değildir. Bu ad alanlarını yüklemek için projenizi Visual Studio 'da açın, **Proje** menüsünden **NuGet Paketlerini Yönet** ' i seçin ve Microsoft. Composition paketini çevrimiçi olarak arayın.  
+ Bu ad alanları .NET Framework ile dağıtılan çekirdek sınıf kitaplığının bir parçası değildir. Bu ad alanlarını yüklemek için projenizi Visual Studio 'da açın, **Proje** menüsünden **NuGet Paketlerini Yönet** ' i seçin ve Microsoft. Composition paketini çevrimiçi olarak arayın.  
   
 - <xref:System.Composition?displayProperty=nameWithType>, Windows 8. x Mağazası uygulamaları için Core MEF 'i oluşturan sınıflar sağlar.  
   

@@ -2,12 +2,12 @@
 title: Kalıcılık Veritabanı Şeması
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 65d8b2f7a6283d65823e1a186239d398ee4a530a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 025e04acb0d9cf75ea54814274c1875f8661eb88
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038329"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802511"
 ---
 # <a name="persistence-database-schema"></a>Kalıcılık Veritabanı Şeması
 Bu konuda, SQL Iş akışı örnek deposu tarafından desteklenen genel görünümler açıklanmaktadır.  
@@ -15,7 +15,7 @@ Bu konuda, SQL Iş akışı örnek deposu tarafından desteklenen genel görün�
 ## <a name="instances-view"></a>Örnek görünümü  
  **Örnekler** görünümü veritabanındaki tüm Iş akışı örnekleri hakkında genel bilgiler içerir.  
   
-|Sütun adı|Sütun türü|Açıklama|  
+|Sütun Adı|Sütun türü|Açıklama|  
 |-----------------|-----------------|-----------------|  
 |InstanceId|Benzersiz tanımlayıcı|Bir iş akışı örneğinin KIMLIĞI.|  
 |PendingTimer|DateTime|Bir gecikme etkinliğinde iş akışının engellenip engellenmediğini ve Zamanlayıcının süresi dolduktan sonra devam edecek olduğunu gösterir. İş akışı, bir zamanlayıcının süre sonu beklenememesi durumunda bu değer null olabilir.|  
@@ -25,12 +25,12 @@ Bu konuda, SQL Iş akışı örnek deposu tarafından desteklenen genel görün�
 |SuspensionExceptionName|Nvarchar (450)|İş akışının askıya alınmasına neden olan özel durumun türünü (örn. InvalidOperationException) belirtir.|  
 |SuspensionReason|Nvarchar (max)|Iş akışı örneğinin neden askıya alındığını gösterir. Bir özel durum örneğin askıya alınmasına neden olursa, bu sütun özel durumla ilişkili iletiyi içerir.<br /><br /> Örnek el ile askıya alınmışsa, bu sütun örneği askıya almak için Kullanıcı tarafından belirtilen nedeni içerir.|  
 |Activeyer Işaretleri|Nvarchar (max)|İş akışı örneği boşta ise, bu özellik örneğin hangi yer işaretlerinin engellendiğini gösterir. Örnek boşta değilse, bu sütun NULL olur.|  
-|CurrentMachine|Nvarchar (128)|Bilgisayar adının şu anda bellekte yüklü iş akışı örneği olduğunu gösterir.|  
+|CurrentMachine|nvarchar (128)|Bilgisayar adının şu anda bellekte yüklü iş akışı örneği olduğunu gösterir.|  
 |LastMachine|Nvarchar (450)|İş akışı örneğini yükleyen son bilgisayarı gösterir.|  
 |ExecutionStatus|Nvarchar (450)|Iş akışının geçerli yürütme durumunu gösterir. Olası durumlar **yürütme**, **Boşta**ve **kapalı**durumlarını içerir.|  
 |IsInitialized|bit|İş akışı örneğinin başlatılmış olup olmadığını gösterir. Başlatılmış bir iş akışı örneği, en az bir kez kalıcı olan bir iş akışı örneğidir.|  
 |Isaskıya alındı|bit|İş akışı örneğinin askıya alınıp alınmadığını gösterir.|  
-|IsCompleted|bit|Iş akışı örneğinin yürütülmesinin tamamlanıp bitmediğini belirtir. **Not:**  IIF, **InstanceCompletionAction** özelliği **DeleteAll**olarak ayarlanmış, örnekler tamamlandıktan sonra görünümden kaldırılır.|  
+|IsCompleted|bit|Iş akışı örneğinin yürütülmesinin tamamlanıp bitmediğini belirtir. **Note:**  IIF, **InstanceCompletionAction** özelliği **DeleteAll**olarak ayarlanmış, örnekler tamamlandıktan sonra görünümden kaldırılır.|  
 |EncodingOption|Iç|Veri özelliklerini seri hale getirmek için kullanılan kodlamayı açıklar.<br /><br /> -0 – kodlama yok<br />-1 – GzipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary (max)|Örnek yüklendiğinde iş akışı çalışma zamanına geri sağlanacak serileştirilmiş örnek veri özelliklerini içerir.<br /><br /> Her ilkel özellik yerel bir CLR türüdür ve bu, Blobun serisini kaldırmak için özel derlemeler gerekmediği anlamına gelir.|  
 |WriteOnlyPrimitiveDataProperties|Varbinary (max)|Örnek yüklendiğinde iş akışı çalışma zamanına geri sağlanmayan serileştirilmiş örnek veri özelliklerini içerir.<br /><br /> Her ilkel özellik yerel bir CLR türüdür ve bu, Blobun serisini kaldırmak için özel derlemeler gerekmediği anlamına gelir.|  
@@ -38,9 +38,9 @@ Bu konuda, SQL Iş akışı örnek deposu tarafından desteklenen genel görün�
 |WriteOnlyComplexDataProperties|Varbinary (max)|Örnek yüklendiğinde iş akışı çalışma zamanına geri sağlanmayan serileştirilmiş örnek veri özelliklerini içerir.<br /><br /> Seri hale getirici, bu bloba depolanan tüm nesne türleri hakkında bilgi gerektirir.|  
 |IdentityName|Nvarchar (max)|İş akışı tanımının adı.|  
 |IdentityPackage|Nvarchar (max)|İş akışı oluşturulduğunda verilen paket bilgileri (örneğin, derleme adı).|  
-|Yapı|BigInt|İş akışı sürümünün yapı numarası.|  
-|Ana|BigInt|İş akışı sürümünün ana numarası.|  
-|İkincil|BigInt|İş akışı sürümünün küçük sayısı.|  
+|{1&gt;Yapı (Build)&lt;1}|BigInt|İş akışı sürümünün yapı numarası.|  
+|düzeltme sınıfı,|BigInt|İş akışı sürümünün ana numarası.|  
+|düzeltme sınıfı,|BigInt|İş akışı sürümünün küçük sayısı.|  
 |Gözden geçirme|BigInt|İş akışı sürümünün düzeltme numarası.|  
   
 > [!CAUTION]
@@ -49,7 +49,7 @@ Bu konuda, SQL Iş akışı örnek deposu tarafından desteklenen genel görün�
 ## <a name="servicedeployments-view"></a>Servicedağıtımlar görünümü  
  **Servicedağıtımlar** görünümü tüm Web (IIS/WAS) barındırılan iş akışı hizmetleri için dağıtım bilgilerini içerir. Web 'de barındırılan her iş akışı örneği, bu görünümdeki bir satıra başvuran bir **ServiceDeploymentId** içerir.  
   
-|Sütun adı|Sütun türü|Açıklama|  
+|Sütun Adı|Sütun türü|Açıklama|  
 |-----------------|-----------------|-----------------|  
 |ServiceDeploymentId|BigInt|Bu görünüm için birincil anahtar.|  
 |Site adı|Nvarchar (max)|İş akışı hizmetini içeren sitenin adını temsil eder (örneğin, **varsayılan Web sitesi**).|  
@@ -78,4 +78,4 @@ Bu konuda, SQL Iş akışı örnek deposu tarafından desteklenen genel görün�
  InstancePromotedProperties Görünümü şemaya bağlıdır, bu da kullanıcıların bu görünüme yönelik sorguları iyileştirmek için bir veya daha fazla sütuna dizinler ekleyebileceği anlamına gelir.  
   
 > [!NOTE]
-> Dizinli bir görünüm daha fazla depolama alanı gerektirir ve ek işleme yükü ekler. Daha fazla bilgi için lütfen [SQL Server 2008 dizinli görünümlerle performansı artırma](https://go.microsoft.com/fwlink/?LinkId=179529) bölümüne bakın.
+> Dizinli bir görünüm daha fazla depolama alanı gerektirir ve ek işleme yükü ekler. Daha fazla bilgi için lütfen [SQL Server 2008 dizinli görünümlerle performansı artırma](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd171921(v=sql.100)) bölümüne bakın.

@@ -2,12 +2,12 @@
 title: Kurulum Sorunlarını Giderme
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 586defea0f761f8b6dea691b778d221cff62c7cf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: becf2576528dc0011a77597b3665d77f6907a3cc
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281602"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802433"
 ---
 # <a name="troubleshooting-setup-issues"></a>Kurulum Sorunlarını Giderme
 Bu konuda, Windows Communication Foundation (WCF) kurma sorunlarını nasıl giderebileceğiniz açıklanır.  
@@ -52,7 +52,7 @@ Bu konuda, Windows Communication Foundation (WCF) kurma sorunlarını nasıl gid
   
  Daha önce açıklanan sorunu çözmek için aşağıdaki adımlar izlenmelidir.  
   
-1. WMI hizmetini onarmak için [WMI diagnosis Utility sürüm 2,0 ' i](https://go.microsoft.com/fwlink/?LinkId=94685) çalıştırın. Bu aracı kullanma hakkında daha fazla bilgi için [WMI diagnosis Utility](https://go.microsoft.com/fwlink/?LinkId=94686) konusuna bakın.  
+1. WMI hizmetini onarmak için [WMI diagnosis Utility sürüm 2,0 ' i](https://go.microsoft.com/fwlink/?LinkId=94685) çalıştırın. Bu aracı kullanma hakkında daha fazla bilgi için [WMI diagnosis Utility](https://docs.microsoft.com/previous-versions/tn-archive/ff404265(v%3dmsdn.10)) makalesine bakın.  
   
  **Denetim Masası**'Nda bulunan **Program Ekle/kaldır** uygulamasını kullanarak .NET Framework 3,0 yüklemesini onarın veya .NET Framework 3,0 ' i kaldırın/yeniden yükleyin.  
   

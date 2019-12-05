@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: a977bc4cff822de551bf82d0f31707e9b2b6ea41
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e8607f8254783b5486b02ccc4c7e4081da506fae
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348531"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802156"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 
@@ -44,9 +44,9 @@ Aşağıdaki tabloda, Windows 'un ortak alt sistem sürümleri listelenmektedir.
 |Windows XP|5.01|
 |Windows Server 2003|5.02|
 |Windows Vista|6.00|
-|Windows 7|6.01|
+|Windows 7|6.01|
 |Windows Server 2008|6.01|
-|[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|
+|Windows 8|6.02|
 
 ## <a name="default-values"></a>Varsayılan değerler
 
@@ -58,7 +58,7 @@ Aşağıdaki tabloda, Windows 'un ortak alt sistem sürümleri listelenmektedir.
 
   - [-target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)
 
-  - [-Platform: ARM](../../../visual-basic/reference/command-line-compiler/platform.md)
+  - [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)
 
 - MSBuild kullanıyorsanız varsayılan değer 6,00 ' dir. .NET Framework 4,5 ' i hedefliyorsanız ve bu listede daha önce belirtilen derleyici seçeneklerinden hiçbirini belirlemediniz.
 

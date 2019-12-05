@@ -3,13 +3,13 @@ title: Linux RHEL 7 Paket Yöneticisi 'ne .NET Core 'u yükler-.NET Core
 description: .NET Core SDK ve çalışma zamanını RHEL 7 ' ye yüklemek için bir paket Yöneticisi kullanın.
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
-ms.openlocfilehash: 4893271ebd32036d8ec09e6b718c12b11acb8d59
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/03/2019
+ms.openlocfilehash: cc7865727927eda1406da26e64b89325fd5665a4
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450984"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801963"
 ---
 # <a name="rhel-7-package-manager---install-net-core"></a>RHEL 7 Paket Yöneticisi-.NET Core 'u yükler
 
@@ -38,7 +38,7 @@ Abonelik Yöneticisi ile kaydolduktan sonra, ASP.NET Core çalışma zamanını 
 <!-- TODO: is this the correct value? Taken from the webpage but it doesn't have aspnet in the name -->
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-yum install rh-dotnet30-dotnet-runtime-3.0 -y
+yum install rh-dotnet30-aspnetcore-runtime-3.0 -y
 scl enable rh-dotnet30 bash
 ```
 
@@ -51,3 +51,7 @@ subscription-manager repos --enable=rhel-7-server-dotnet-rpms
 yum install rh-dotnet30-dotnet-runtime-3.0 -y
 scl enable rh-dotnet30 bash
 ```
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Red Hat Enterprise Linux 7 ' de .NET Core 3,0 kullanma](https://access.redhat.com/documentation/en-us/net_core/3.0/html/getting_started_guide/gs_install_dotnet)

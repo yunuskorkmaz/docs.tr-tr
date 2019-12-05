@@ -2,20 +2,20 @@
 title: WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: a4efa0d5a46eb0d8e6eef08fd17c38f7db3e7e9e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c855fe7cc804fac14348990b7a6f5f84a0956b0c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423833"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802416"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)
 
 Windows Communication Foundation (WCF) hizmet ana bilgisayarı (WcfSvcHost. exe), uyguladık bir hizmeti otomatik olarak barındırmak ve test etmek için Visual Studio hata ayıklayıcısını (F5) başlatmanıza olanak tanır. Olası hataları bulmak ve onarmak için WCF test Istemcisi (WcfTestClient. exe) veya kendi istemcinizi kullanarak hizmeti test edebilirsiniz.
 
-## <a name="wcf-service-host"></a>WCF hizmet ana bilgisayarı
+## <a name="wcf-service-host"></a>WCF hizmet konağı
 
-WCF hizmeti ana bilgisayarı bir WCF hizmeti projesindeki Hizmetleri numaralandırır, projenin yapılandırmasını yükler ve bulduğu her hizmet için bir konak başlatır. Araç, WCF hizmeti şablonu aracılığıyla Visual Studio ile tümleşiktir ve projenizde hata ayıklamaya başladığınızda çağrılır.
+WCF hizmet konağı bir WCF Hizmeti projesini Hizmetleri'nde numaralandırır, projenin yapılandırması yükler ve bulduğu her hizmet için bir ana bilgisayar örneği oluşturur. Araç, WCF hizmeti şablonu aracılığıyla Visual Studio ile tümleşiktir ve projenizde hata ayıklamaya başladığınızda çağrılır.
 
 WCF hizmet ana bilgisayarını kullanarak, ek kod yazmadan veya geliştirme sırasında belirli bir konağa işlemeden bir WCF hizmetini (bir WCF hizmet kitaplığı projesinde) barındırabilirsiniz.
 
@@ -33,7 +33,7 @@ Ancak, aracın bir konağı yapılandırmanıza yardımcı olamayacağını unut
 
 ## <a name="scenarios-for-using-wcf-service-host-inside-visual-studio"></a>Visual Studio içinde WCF hizmeti ana bilgisayarını kullanmaya yönelik senaryolar
 
-Aşağıdaki tabloda, Visual Studio 'daki **Çözüm Gezgini** ' nde projenize sağ tıklayıp **Özellikler**' i seçip Hata Ayıkla ' yı seçerek bulunan **komut satırı bağımsız değişkenleri** iletişim kutusundaki tüm parametreler listelenmektedir.sekmesine tıklayıp **projeyi Başlat**' a tıklayın. Bu parametreler, WCF hizmeti ana bilgisayarını yapılandırmada yararlıdır.
+Aşağıdaki tabloda, Visual Studio 'daki **Çözüm Gezgini** ' nde projenize sağ tıklanarak **Özellikler**' i seçip, ardından **Hata Ayıkla** sekmesini seçip **projeyi Başlat**' a tıklayarak bulunan **komut satırı bağımsız değişkenleri** iletişim kutusundaki tüm parametreler listelenmektedir. Bu parametreler, WCF hizmeti ana bilgisayarını yapılandırmada yararlıdır.
 
 |Parametre|Açıklama|
 |---------------|-------------|
@@ -45,13 +45,13 @@ Aşağıdaki tabloda, Visual Studio 'daki **Çözüm Gezgini** ' nde projenize s
 
 Yeni bir WCF hizmeti projesi oluşturduktan ve hata ayıklayıcıyı başlatmak için F5 'e bastıktan sonra, WCF hizmet ana bilgisayarı projenizde bulduğu tüm hizmetleri barındırmaya başlar. WCF test Istemcisi otomatik olarak açılır ve yapılandırma dosyasında tanımlanan hizmet uç noktalarının listesini görüntüler. Ana pencereden, parametreleri test edebilir ve hizmetinizi çağırabilirsiniz.
 
-WCF test Istemcisinin kullanıldığından emin olmak için, Visual Studio 'da **Çözüm Gezgini** ' nde projenize sağ tıklayın, **Özellikler**' i seçin ve ardından **Hata Ayıkla** sekmesini seçin. **projeyi Başlat** ' a tıklayın ve aşağıdaki gibi göründüğünden **emin olun Komut satırı bağımsız değişkenleri** iletişim kutusu.
+WCF test Istemcisinin kullanıldığından emin olmak için, Visual Studio 'da **Çözüm Gezgini** ' nde projenize sağ tıklayın, **Özellikler**' i seçin ve ardından **Hata Ayıkla** sekmesini seçin. **projeyi Başlat** ' a tıklayın ve **komut satırı bağımsız değişkenleri** iletişim kutusunda aşağıdakilerin göründüğünden emin olun.
 
 `/client:WcfTestClient.exe`
 
 #### <a name="using-a-custom-client"></a>Özel Istemci kullanma
 
-Özel bir istemci kullanmak için, Visual Studio 'da **Çözüm Gezgini** ' nde projenize sağ tıklayın, **Özellikler**' i seçin ve ardından **Hata Ayıkla** sekmesini seçin. **projeyi Başlat** ' a tıklayın ve **komut satırı bağımsız değişkenlerinde `/client` parametresini düzenleyin** aşağıdaki örnekte gösterildiği gibi, özel istemcinizi işaret eden iletişim kutusu.
+Özel bir istemci kullanmak için, Visual Studio 'da **Çözüm Gezgini** ' nde projenize sağ tıklayın, **Özellikler**' i seçin ve ardından **Hata Ayıkla** sekmesini seçin. **projeyi Başlat** ' a tıklayın ve **komut satırı bağımsız değişkenleri** iletişim kutusunda `/client` parametresini düzenleyerek aşağıdaki örnekte gösterildiği gibi özel istemcinizi işaret edin.
 
 `/client:"path/CustomClient.exe"`
 
@@ -67,7 +67,7 @@ Aşağıdaki örnekte gösterildiği gibi, özel istemci uygulamasına geçirile
 
 #### <a name="specifying-no-client"></a>Istemci belirtme
 
-WCF hizmeti barındırma sonrasında hiçbir istemci kullanılmayacağını belirtmek için, Visual Studio 'da **Çözüm Gezgini** ' nde projenize sağ tıklayın, **Özellikler**' i seçin ve ardından **Hata Ayıkla** sekmesini seçin. **projeyi Başlat** ' a tıklayın ve komutu bırakın  **satır bağımsız değişkenleri** iletişim kutusu boş.
+WCF hizmeti barındırma sonrasında hiçbir istemci kullanılmayacağını belirtmek için, Visual Studio 'da **Çözüm Gezgini** ' nde projenize sağ tıklayın, **Özellikler**' i seçin ve ardından **Hata Ayıkla** sekmesini seçin. **projeyi Başlat** ' a tıklayın ve **komut satırı bağımsız değişkenleri** iletişim kutusunu boş bırakın.
 
 #### <a name="using-a-custom-host"></a>Özel ana bilgisayar kullanma
 
@@ -119,7 +119,7 @@ Erişimi, yükseltilmiş yönetici hesabı altındaki [!INCLUDE[wv](../../../inc
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 
-Netsh. exe hakkında daha fazla bilgi için "[netsh. exe aracını ve komut satırı anahtarlarını kullanma](https://go.microsoft.com/fwlink/?LinkId=97877)" konusuna bakın.
+Netsh. exe hakkında daha fazla bilgi için "[netsh. exe aracını ve komut satırı anahtarlarını kullanma](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))" konusuna bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

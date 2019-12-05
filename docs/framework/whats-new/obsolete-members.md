@@ -7,12 +7,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: 2231552f9c3353890963a4ad5388194036fa27bf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 063d7b5cfddace89efa636327c71a214ee01fdd0
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134094"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802732"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework eski Üyeler
 
@@ -20,13 +20,13 @@ Bu makaledeki tablolarda, derleme tarafından düzenlenen .NET Framework 4,5 ve 
 
 - [Sistem derlemelerindeki eski Üyeler](#SystemMembers)
 
-  - [mscorlib. dll](#mscorlib)
+  - [mscorlib.dll](#mscorlib)
 
-  - [PresentationCore. dll](#PresentationCore)
+  - [PresentationCore.dll](#PresentationCore)
 
   - [PresentationFramework. dll](#PresFW)
 
-  - [System. Activities. dll](#Act)
+  - [System.Activities.dll](#Act)
 
   - [System. Activities. Presentation. dll](#ActPres)
 
@@ -34,19 +34,19 @@ Bu makaledeki tablolarda, derleme tarafından düzenlenen .NET Framework 4,5 ve 
 
   - [System. Data. dll](#data)
 
-  - [System. Data. Entity. dll](#entity)
+  - [System.Data.Entity.dll](#entity)
 
-  - [System. Data. OracleClient. dll](#oracleclient)
+  - [System.Data.OracleClient.dll](#oracleclient)
 
   - [System. Design. dll](#design)
 
-  - [System. dll](#system)
+  - [System.dll](#system)
 
   - [System. Drawing. dll](#drawing)
 
-  - [System. Messaging. dll](#messaging)
+  - [System.Messaging.dll](#messaging)
 
-  - [System. ServiceModel. dll](#servicemodel)
+  - [System.ServiceModel.dll](#servicemodel)
 
   - [System. ServiceModel. Discovery. dll](#smDisc)
 
@@ -62,27 +62,27 @@ Bu makaledeki tablolarda, derleme tarafından düzenlenen .NET Framework 4,5 ve 
 
   - [System. Windows. Forms. dll](#forms)
 
-  - [System. xaml. dll](#xaml)
+  - [System.Xaml.dll](#xaml)
 
-  - [System. xml. dll](#xml)
+  - [System.Xml.dll](#xml)
 
 - [Microsoft Derlemelerindeki Eski Üyeler](#MicrosoftMembers)
 
   - [IEHost. dll ve IEExec. exe](#IEHost)
 
-  - [Iyımıwrapper. dll](#isymwrapper)
+  - [ISymWrapper.dll](#isymwrapper)
 
-  - [Microsoft. Build. Conversion. v 4.0. dll](#conversion)
+  - [Microsoft.Build.Conversion.v4.0.dll](#conversion)
 
-  - [Microsoft. Build. Engine. dll](#engine)
+  - [Microsoft.Build.Engine.dll](#engine)
 
-  - [Microsoft. Build. Framework. dll](#BuildFW)
+  - [Microsoft.Build.Framework.dll](#BuildFW)
 
   - [Microsoft. Build. Utilities. v 4.0. dll](#BuildUtil4)
 
   - [Microsoft. Data. Entity. Build. Tasks. dll](#data_entity_tasks)
 
-  - [Microsoft. VisualBasic. dll](#visualbasic)
+  - [Microsoft.VisualBasic.dll](#visualbasic)
 
 <a name="SystemMembers"></a>
 
@@ -646,8 +646,8 @@ Aşağıdaki tablolarda sistem derlemelerindeki eski Üyeler listelenmiştir. Bu
 |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetConfig%2A>|Önerilen alternatif, System. Web. dll ' de <xref:System.Web.HttpContext.GetSection%2A?displayProperty=nameWithType>.|
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicode%2A>|.NET Framework 4,5 ' de ilk kullanım dışı.<br /><br /> Bu yöntem, uyumlu çıkış\-ve birlikte çalışabilirlik sorunlarıyla\-olmayan standartlar üretir. Tercih edilen alternatif <xref:System.Web.HttpUtility.UrlEncode%28System.String%29>.|
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicodeToBytes%2A>|.NET Framework 4,5 ' de ilk kullanım dışı.<br /><br /> Bu yöntem, uyumlu çıkış\-ve birlikte çalışabilirlik sorunlarıyla\-olmayan standartlar üretir. Tercih edilen alternatif <xref:System.Web.HttpUtility.UrlEncodeToBytes%28System.String%29>.|
-|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|Bu alan artık kullanılmıyor. Passport kimlik doğrulama ürünü artık desteklenmemektedir ve [Microsoft hesabı](https://go.microsoft.com/fwlink/?LinkId=733413)'nın yerini almıştır.|
-|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|Bu özellik artık kullanılmıyor. Passport kimlik doğrulama ürünü artık desteklenmemektedir ve [Microsoft hesabı](https://go.microsoft.com/fwlink/?LinkId=733413)'nın yerini almıştır.|
+|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|Bu alan artık kullanılmıyor. Passport kimlik doğrulama ürünü artık desteklenmemektedir ve [Microsoft hesabı](https://account.microsoft.com/account/Account?destrt=home-index)'nın yerini almıştır.|
+|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|Bu özellik artık kullanılmıyor. Passport kimlik doğrulama ürünü artık desteklenmemektedir ve [Microsoft hesabı](https://account.microsoft.com/account/Account?destrt=home-index)'nın yerini almıştır.|
 |<xref:System.Web.Configuration.HttpCapabilitiesBase?displayProperty=nameWithType>|<xref:System.Web.Configuration.HttpCapabilitiesBase.JavaScript%2A>|Önerilen alternatif <xref:System.Web.Configuration.HttpCapabilitiesBase.EcmaScriptVersion%2A?displayProperty=nameWithType> özelliğidir. 1 ' den büyük veya buna eşit bir <xref:System.Version.Major%2A?displayProperty=nameWithType> sürüm değeri JavaScript desteği gerektirir.|
 |<xref:System.Web.Configuration.SystemWebSectionGroup?displayProperty=nameWithType>|<xref:System.Web.Configuration.SystemWebSectionGroup.MobileControls%2A>|System. Web. Mobile. dll artık kullanılmıyor.|
 |<xref:System.Web.Routing.UrlRoutingModule?displayProperty=nameWithType>|<xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A>|Bu yöntem artık kullanılmıyor. <xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A> olayını kullanmak için <xref:System.Web.Routing.UrlRoutingModule.Init%2A> yöntemini geçersiz kılın.|
@@ -710,8 +710,8 @@ Aşağıdaki tablolarda sistem derlemelerindeki eski Üyeler listelenmiştir. Bu
 
 |Tür|Üye|İleti|
 |----------|------------|-------------|
-|<xref:System.Windows.Forms.AccessibleStates?displayProperty=nameWithType>|<xref:System.Windows.Forms.AccessibleStates.Valid>|Bu numaralandırma değeri kullanım dışı bırakıldı. Değişiklik yok.|
-|<xref:System.Windows.Forms.ComboBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ComboBox.AddItemsCore%2A>|Bu yöntem kullanım dışı bırakıldı. Değişiklik yok.|
+|<xref:System.Windows.Forms.AccessibleStates?displayProperty=nameWithType>|<xref:System.Windows.Forms.AccessibleStates.Valid>|Bu numaralandırma değeri kullanım dışı bırakıldı. Yerini alacak bir şey eklenmemiştir.|
+|<xref:System.Windows.Forms.ComboBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ComboBox.AddItemsCore%2A>|Bu yöntem kullanım dışı bırakıldı. Yerini alacak bir şey eklenmemiştir.|
 |<xref:System.Windows.Forms.Control?displayProperty=nameWithType>|<xref:System.Windows.Forms.Control.RenderRightToLeft%2A>|Bu özellik kullanımdan kaldırılmıştır. Bunun yerine <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=nameWithType> kullanın.|
 |<xref:System.Windows.Forms.Control?displayProperty=nameWithType>|<xref:System.Windows.Forms.Control.Scale%28System.Single%29>|Bu yöntem kullanım dışı bırakıldı. Bunun yerine <xref:System.Windows.Forms.Control.Scale%28System.Drawing.SizeF%29?displayProperty=nameWithType> yöntemini kullanın.|
 |<xref:System.Windows.Forms.Control?displayProperty=nameWithType>|<xref:System.Windows.Forms.Control.Scale%28System.Single%2CSystem.Single%29>|Bu yöntem kullanım dışı bırakıldı. Bunun yerine <xref:System.Windows.Forms.Control.Scale%28System.Drawing.SizeF%29?displayProperty=nameWithType> yöntemini kullanın.|
@@ -719,7 +719,7 @@ Aşağıdaki tablolarda sistem derlemelerindeki eski Üyeler listelenmiştir. Bu
 |<xref:System.Windows.Forms.Form?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.AutoScale%2A>|Bu özellik kullanımdan kaldırılmıştır. Bunun yerine <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A?displayProperty=nameWithType> özelliğini kullanın.|
 |<xref:System.Windows.Forms.Form?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.GetAutoScaleSize%2A>|Bu yöntem kullanım dışı bırakıldı. Bunun yerine <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=nameWithType> özelliğini kullanın.|
 |<xref:System.Windows.Forms.Label?displayProperty=nameWithType>|<xref:System.Windows.Forms.Label.RenderTransparent%2A>|Bu özellik kullanımdan kaldırılmıştır. Bunun yerine <xref:System.Windows.Forms.Control.BackColor%2A> kullanın.|
-|<xref:System.Windows.Forms.ListBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ListBox.AddItemsCore%2A>|Bu yöntem kullanım dışı bırakıldı. Değişiklik yok.|
+|<xref:System.Windows.Forms.ListBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ListBox.AddItemsCore%2A>|Bu yöntem kullanım dışı bırakıldı. Yerini alacak bir şey eklenmemiştir.|
 |<xref:System.Windows.Forms.PrintPreviewDialog?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>|Bu özellik kullanımdan kaldırılmıştır. Bunun yerine <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=nameWithType> özelliğini kullanın.|
 
 <a name="xaml"></a>

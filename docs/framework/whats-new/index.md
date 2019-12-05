@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c651f5c02bd49acc593c585395bc52e9ee64f870
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 82a2c1780c6e0e1d94a206b9b959d8e1944fd0a9
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714503"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802327"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework yenilikler
 
@@ -30,7 +30,7 @@ Bu makalede, .NET Framework aşağıdaki sürümlerindeki temel yeni özellikler
 - [.NET Framework 4.5.1](#v451)
 - [.NET Framework 4.5](#v45)
 
-Bu makale, her yeni özellik hakkında kapsamlı bilgi sağlamaz ve değişikliğe tabidir. .NET Framework hakkında genel bilgi için [bkz. Başlarken](../get-started/index.md). Desteklenen platformlar için bkz. [sistem gereksinimleri](../get-started/system-requirements.md). İndirme bağlantıları ve yükleme yönergeleri için bkz. [Yükleme Kılavuzu](../install/guide-for-developers.md).
+Bu makale, her yeni özellik hakkında kapsamlı bilgi sağlamaz ve gelecekte değişebilir. .NET Framework hakkında genel bilgi için [bkz. Başlarken](../get-started/index.md). Desteklenen platformlar için bkz. [sistem gereksinimleri](../get-started/system-requirements.md). İndirme bağlantıları ve yükleme yönergeleri için bkz. [Yükleme Kılavuzu](../install/guide-for-developers.md).
 
 > [!NOTE]
 > .NET Framework ekibi, platform desteğini genişletmek ve sabit koleksiyonlar ve SıMD özellikli vektör türleri gibi yeni işlevsellik tanıtmak için NuGet ile bant dışı özellikleri de serbest bırakır. Daha fazla bilgi için bkz. [Ek sınıf kitaplıkları ve API 'ler](../additional-apis/index.md) ve [.NET Framework ve bant dışı yayınlar](../get-started/the-net-framework-and-out-of-band-releases.md).
@@ -201,7 +201,7 @@ Karma mod yüksek DPı ölçeklendirme desteğini etkinleştirmek için aşağı
 
 - [Temel sınıflar](#core-472)
 - [ASP.NET](#asp-net472)
-- [İşlemleri](#net472)
+- [Ağ](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -589,7 +589,7 @@ Windows Forms uygulama için, uygulama bildirimi yerine uygulama yapılandırma 
 
 - [Temel sınıflar](#core471)
 - [Ortak dil çalışma zamanı (CLR)](#clr)
-- [İşlemleri](#net471)
+- [Ağ](#net471)
 - [ASP.NET](#asp-net471)
 
 Ayrıca, .NET Framework 4.7.1 ' deki önemli bir odak, bir uygulamanın yardımcı teknoloji kullanıcıları için uygun bir deneyim sağlamasına izin veren gelişmiş erişilebilirliğe sahiptir. .NET Framework 4.7.1 ' deki erişilebilirlik geliştirmeleri hakkında daha fazla bilgi için [.NET Framework erişilebilirlik](whats-new-in-accessibility.md)yenilikleri bölümüne bakın.
@@ -671,7 +671,7 @@ ASP.NET, 23 olay içeren önceden tanımlanmış bir işlem hattındaki istekler
 .NET Framework 4,7, aşağıdaki alanlardaki yeni özellikler içerir:
 
 - [Temel sınıflar](#Core47)
-- [İşlemleri](#net47)
+- [Ağ](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
@@ -784,7 +784,7 @@ WPF 'nin <xref:System.Printing.PrintQueue?displayProperty=nameWithType> sınıf�
 
 - [Karakter kategorileri](#Strings)
 
-- [To](#Crypto462)
+- [Şifreleme](#Crypto462)
 
 - [SqlClient](#SQLClient)
 
@@ -800,7 +800,7 @@ WPF 'nin <xref:System.Printing.PrintQueue?displayProperty=nameWithType> sınıf�
 
 - [Hata ayıklama geliştirmeleri](#Debug462)
 
-.NET Framework 4.6.2 'e eklenen yeni API 'lerin bir listesi için bkz. GitHub 'da [.NET Framework 4.6.2 API değişiklikleri](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) . .NET Framework 4.6.2 ' deki Özellik geliştirmeleri ve hata düzeltmeleri listesi için bkz. GitHub 'da [değişiklikler listesi .NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=708778) .  Daha fazla bilgi için bkz. .NET blogda [.NET Framework 4.6.2 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/) .
+.NET Framework 4.6.2 'e eklenen yeni API 'lerin bir listesi için bkz. GitHub 'da [.NET Framework 4.6.2 API değişiklikleri](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) . .NET Framework 4.6.2 ' deki Özellik geliştirmeleri ve hata düzeltmeleri listesi için bkz. GitHub 'da [değişiklikler listesi .NET Framework 4.6.2](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-changes.md) . Daha fazla bilgi için bkz. .NET blogda [.NET Framework 4.6.2 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/) .
 
 <a name="ASPNET462" />
 
@@ -1033,19 +1033,19 @@ Bağlantı havuzu etkinleştirildiğinde ve bir zaman aşımı ya da başka bir 
 
 Bağlantı girişimleri genellikle hızla kurtarılan geçici hatalarla başarısız olduğundan, bu davranış Azure SQL veritabanlarına bağlanırken istenmez. Bağlantı yeniden deneme deneyimini daha iyi en iyi hale getirebilmesi için, Azure SQL veritabanlarına bağlantı başarısız olduğunda bağlantı havuzu engelleme süresi davranışı kaldırılır.
 
-Yeni `PoolBlockingPeriod` anahtar sözcüğünün eklenmesi, uygulamanız için en uygun engelleme dönemini seçmenize olanak sağlar. Değerler şunlardır:
+Yeni `PoolBlockingPeriod` anahtar sözcüğünün eklenmesi, uygulamanız için en uygun engelleme dönemini seçmenize olanak sağlar. Değerlere şunlar dahildir:
 
 <xref:System.Data.SqlClient.PoolBlockingPeriod.Auto>
 
 Azure SQL veritabanına bağlanan bir uygulama için bağlantı havuzu engelleme süresi devre dışıdır ve başka bir SQL Server örneğine bağlanan bir uygulama için bağlantı havuzu engelleme süresi etkindir. Varsayılan değer budur. Sunucu uç noktası adı aşağıdakilerden biriyle sonlanıyorsa, Azure SQL veritabanı olarak kabul edilir:
 
-- . database.windows.net
+- .database.windows.net
 
-- . database.chinacloudapi.cn
+- .database.chinacloudapi.cn
 
-- . database.usgovcloudapi.net
+- .database.usgovcloudapi.net
 
-- . database.cloudapi.de
+- .database.cloudapi.de
 
 <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock>
 
@@ -1095,7 +1095,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 **DataContractJsonSerializer sınıfına göre birden çok gün ışığından yararlanma zaman ayarlama kuralı için daha iyi destek**
 
-Müşteriler, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sınıfının tek bir saat dilimi için birden çok ayarlama kuralını destekleyip desteklemediğini tespit etmek için bir uygulama yapılandırma ayarı kullanabilir. Bu bir katılım özelliğidir. Etkinleştirmek için App. config dosyanıza aşağıdaki ayarı ekleyin:
+Müşteriler, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sınıfının tek bir saat dilimi için birden çok ayarlama kuralını destekleyip desteklemediğini tespit etmek için bir uygulama yapılandırma ayarı kullanabilir. Bu onaya bağlı bir özelliktir. Etkinleştirmek için App. config dosyanıza aşağıdaki ayarı ekleyin:
 
 ```xml
 <runtime>
@@ -1196,7 +1196,7 @@ WPF uygulamaları için yüksek DPı ve hibrit DPı ortamlarının en son kullan
 
 **Yeniden barındırılan C# WF tasarımcısında Ifadeler ve IntelliSense desteği**
 
-WF, 4,5 .NET Framework başlayarak hem Visual Studio C# tasarımcısında hem de kod iş akışlarında ifadeleri destekler. Yeniden barındırılan İş Akışı Tasarımcısı, bir WF 'nin Visual Studio dışında bir uygulamada olmasını İş Akışı Tasarımcısı sağlayan bir temel özelliktir (örneğin, WPF).  Windows Workflow Foundation, yeniden barındırılan İş Akışı Tasarımcısı ifadeleri C# ve IntelliSense 'i destekleme yeteneği sağlar. Daha fazla bilgi için [Windows Workflow Foundation bloguna](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409)bakın.
+WF, 4,5 .NET Framework başlayarak hem Visual Studio C# tasarımcısında hem de kod iş akışlarında ifadeleri destekler. Yeniden barındırılan İş Akışı Tasarımcısı, bir WF 'nin Visual Studio dışında bir uygulamada olmasını İş Akışı Tasarımcısı sağlayan bir temel özelliktir (örneğin, WPF).  Windows Workflow Foundation, yeniden barındırılan İş Akışı Tasarımcısı ifadeleri C# ve IntelliSense 'i destekleme yeteneği sağlar. Daha fazla bilgi için [Windows Workflow Foundation bloguna](https://blogs.msdn.microsoft.com/workflowteam/2016/07/20/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer/)bakın.
 
 .NET Framework 4.6.2 ' den önceki .NET Framework sürümlerindeki `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`, bir müşteri, Visual Studio 'dan bir iş akışı projesi yeniden oluştururken WF Tasarımcısı IntelliSense bozulur. Proje derlemesi başarılı olsa da, iş akışı türleri tasarımcıda bulunmadı ve eksik iş akışı türleri için IntelliSense uyarıları **hata listesi** penceresinde görünür. .NET Framework 4.6.2 Bu sorunu giderir ve IntelliSense 'i kullanılabilir hale getirir.
 
@@ -1248,7 +1248,7 @@ Dönüştürülmüş masaüstü uygulamaları, UWP API 'Lerinin, canlı kutucuk 
 
 .NET Framework 4.6.1, aşağıdaki alanlardaki yeni özellikler içerir:
 
-- [To](#Crypto)
+- [Şifreleme](#Crypto)
 
 - [ADO.NET](#ADO.NET461)
 
@@ -1262,11 +1262,11 @@ Dönüştürülmüş masaüstü uygulamaları, UWP API 'Lerinin, canlı kutucuk 
 
 .NET Framework 4.6.1 hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
-- [.NET Framework 4.6.1 listesi](https://go.microsoft.com/fwlink/?LinkId=622964)
+- [.NET Framework 4.6.1 listesi](https://github.com/Microsoft/dotnet/blob/master/releases/net461/dotnet461-changes.md)
 
 - [4.6.1 'de uygulama uyumluluğu](../migration-guide/application-compatibility.md)
 
-- [.NET Framework API farkı](https://go.microsoft.com/fwlink/?LinkId=622989) (GitHub üzerinde)
+- [.NET Framework API farkı](https://github.com/Microsoft/dotnet/blob/master/releases/net461/dotnet461-api-changes.md) (GitHub üzerinde)
 
 <a name="Crypto" />
 
@@ -1324,7 +1324,7 @@ WPF 'deki yazım denetleyicisi, Windows 8.1 ve sonraki sürümlerinde, yazım de
 
 - Geçerli iş parçacığı kültürü.
 
-WPF dil desteği hakkında daha fazla bilgi için, [.NET Framework 4.6.1 özellikleri hakkında WPF blog](https://go.microsoft.com/fwlink/?LinkID=691819)gönderisi bölümüne bakın.
+WPF dil desteği hakkında daha fazla bilgi için, [.NET Framework 4.6.1 özellikleri hakkında WPF blog](https://devblogs.microsoft.com/wpf/wpf-in-net-4-6-1/)gönderisi bölümüne bakın.
 
 **Kullanıcı başına özel sözlükler için ek destek**
 
@@ -1349,7 +1349,7 @@ WPF 'nin önceki sürümlerinde özel sözlükler dışlanan kelimeleri ve otoma
 
 **DirectX uzantıları**
 
-WPF, DX10 ve DX11 içeriğiyle birlikte çalışabilmeyi kolaylaştıran yeni <xref:System.Windows.Interop.D3DImage> uygulamaları sağlayan bir [NuGet paketi](https://go.microsoft.com/fwlink/?LinkID=691342) içerir. Bu paketin kodu açık kaynaklıdır ve [GitHub 'da](https://github.com/Microsoft/WPFDXInterop)kullanılabilir.
+WPF, DX10 ve DX11 içeriğiyle birlikte çalışabilmeyi kolaylaştıran yeni <xref:System.Windows.Interop.D3DImage> uygulamaları sağlayan bir [NuGet paketi](https://www.nuget.org/packages/Microsoft.Wpf.Interop.DirectX-x86/) içerir. Bu paketin kodu açık kaynaklıdır ve [GitHub 'da](https://github.com/Microsoft/WPFDXInterop)kullanılabilir.
 
 <a name="WWF461" />
 
@@ -1468,7 +1468,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
 - **Derleme yükleyici geliştirmeleri**
 
-  Derleme yükleyicisi artık, ilgili bir NGEN görüntüsü yüklendikten sonra Il derlemelerini kaldırarak belleği daha verimli bir şekilde kullanmaktadır. Bu değişiklik, özellikle büyük 32 bitlik uygulamalar (Visual Studio gibi) için yararlı olan sanal belleği azaltır ve fiziksel belleği da kaydeder.
+  Derleme yükleyici artık, ilgili NGEN resmi yüklendikten sonra IL derlemeleri yüklemelerini kaldırarak belleği daha verimli bir şekilde kullanıyor. Bu değişiklik, başta büyük 32 bit uygulamalar (Visual Studio gibi) için faydalı olan sanal belleği azaltır ve fiziksel bellek alanından tasarruf eder.
 
 - **Temel sınıf kitaplığı değişiklikleri**
 
@@ -1709,7 +1709,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   Varsayılan değer `false` şeklindedir.
 
-- **İşlemleri**
+- **Ağ**
 
   - **Yuva yeniden kullanımı**
 
@@ -1733,7 +1733,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   Bu özellik .NET Framework 4,6 ' de <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> ve <xref:System.Windows.Forms.ToolStripSplitButton> türlerini ve bir <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> çizerken kullanılan <xref:System.Drawing.Design.UITypeEditor>özelliği tarafından belirtilen dikdörtgeni içerecek şekilde genişletildi.
 
-  Bu bir katılım özelliğidir. Etkinleştirmek için, uygulama yapılandırma (App. config) dosyasında `EnableWindowsFormsHighDpiAutoResizing` öğesini `true` olarak ayarlayın:
+  Bu onaya bağlı bir özelliktir. Etkinleştirmek için, uygulama yapılandırma (App. config) dosyasında `EnableWindowsFormsHighDpiAutoResizing` öğesini `true` olarak ayarlayın:
 
   ```xml
   <appSettings>
@@ -1755,7 +1755,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
 - **Açık kaynaklı .NET Framework paketleri**
 
-  Sabit koleksiyonlar, [SIMD API 'leri](https://go.microsoft.com/fwlink/?LinkID=518639)ve <xref:System.Net.Http> ad alanında bulunan gibi ağ API 'leri gibi .NET Core paketleri artık [GitHub](https://github.com/)'da açık kaynak paketleri olarak kullanılabilir. Koda erişmek için bkz. [GitHub üzerinde Corefx](https://github.com/dotnet/corefx). Daha fazla bilgi ve bu paketlere katkıda bulunma hakkında daha fazla bilgi için bkz. GitHub 'da [.NET Core ve açık kaynak](../get-started/net-core-and-open-source.md), [.net giriş sayfası](https://github.com/dotnet/home).
+  Sabit koleksiyonlar, [SIMD API 'leri](https://www.nuget.org/packages/Microsoft.Bcl.Simd)ve <xref:System.Net.Http> ad alanında bulunan gibi ağ API 'leri gibi .NET Core paketleri artık [GitHub](https://github.com/)'da açık kaynak paketleri olarak kullanılabilir. Koda erişmek için bkz. [GitHub üzerinde Corefx](https://github.com/dotnet/corefx). Daha fazla bilgi ve bu paketlere katkıda bulunma hakkında daha fazla bilgi için bkz. GitHub 'da [.NET Core ve açık kaynak](../get-started/net-core-and-open-source.md), [.net giriş sayfası](https://github.com/dotnet/home).
 
 <a name="v452" />
 
@@ -1776,7 +1776,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
   - <xref:System.Windows.Forms.DataGridView>
   - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 
-  Bu bir katılım özelliğidir. Etkinleştirmek için, uygulama yapılandırma (App. config) dosyasında `EnableWindowsFormsHighDpiAutoResizing` öğesini `true` olarak ayarlayın:
+  Bu onaya bağlı bir özelliktir. Etkinleştirmek için, uygulama yapılandırma (App. config) dosyasında `EnableWindowsFormsHighDpiAutoResizing` öğesini `true` olarak ayarlayın:
 
   ```xml
   <appSettings>
@@ -1860,13 +1860,13 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
 .NET Framework 4.5.1 ' deki temel sınıflardaki yeni özellikler ve geliştirmeler şunları içerir:
 
-- Derlemeler için otomatik bağlama yeniden yönlendirme. Visual Studio 2013 başlayarak, .NET Framework 4.5.1 hedefleyen bir uygulama derlerken, uygulamanız veya bileşenleri aynı derlemenin birden çok sürümüne başvurduğu zaman bağlama yeniden yönlendirmeleri uygulama yapılandırma dosyasına eklenebilir. Ayrıca, .NET Framework eski sürümlerini hedefleyen projeler için bu özelliği etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: otomatik bağlama yeniden yönlendirmeyi etkinleştirme ve devre dışı bırakma](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Derlemeler için otomatik bağlama yeniden yönlendirme. Visual Studio 2013 başlayarak, .NET Framework 4.5.1 hedefleyen bir uygulama derlerken, uygulamanız veya bileşenleri aynı derlemenin birden çok sürümüne başvurduğu zaman bağlama yeniden yönlendirmeleri uygulama yapılandırma dosyasına eklenebilir. Ayrıca, .NET Framework'ün daha eski sürümlerini hedefleyen projeler için bu özelliği etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: otomatik bağlama yeniden yönlendirmeyi etkinleştirme ve devre dışı bırakma](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
-- Geliştiricilerin sunucu ve bulut uygulamalarının performansını geliştirmesine yardımcı olmak için tanılama bilgilerini toplama özelliği. Daha fazla bilgi için <xref:System.Diagnostics.Tracing.EventSource> sınıfındaki <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> ve <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> yöntemlerine bakın.
+- Geliştiricilerin sunucu ve bulut uygulamalarının performansını geliştirmesine yardımcı olacak tanılama bilgilerini toplama yeteneği. Daha fazla bilgi için <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> sınıfındaki <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> ve <xref:System.Diagnostics.Tracing.EventSource> yöntemlerine bakın.
 
-- Çöp toplama sırasında büyük nesne yığınını (LOH) açık bir şekilde sıkıştırabilme. Daha fazla bilgi için <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> özelliğine bakın.
+- Büyük nesne yığınını (LOH) çöğ toplama sırasında biriktirme yeteneği. Daha fazla bilgi için <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> özelliğine bakın.
 
-- .NET Framework güncelleştirmesinden sonra ASP.NET uygulama askıya alma, çok çekirdekli JıT geliştirmeleri ve daha hızlı uygulama başlatma gibi ek performans geliştirmeleri. Ayrıntılar için bkz. [.NET Framework 4.5.1 ilanı](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/) ve [ASP.net App Suspend](https://devblogs.microsoft.com/dotnet/asp-net-app-suspend-responsive-shared-net-web-hosting/) blog gönderisi.
+- .NET Framework güncelleştirmelerinden sonra daha hızlı uygulama başlatma, çok çekirdekli JIT geliştirmeleri ve ASP.NET uygulama askıya alma gibi ek performans artışları. Ayrıntılar için bkz. [.NET Framework 4.5.1 ilanı](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/) ve [ASP.net App Suspend](https://devblogs.microsoft.com/dotnet/asp-net-app-suspend-responsive-shared-net-web-hosting/) blog gönderisi.
 
 Windows Forms iyileştirmeleri şunlardır:
 
@@ -1886,13 +1886,13 @@ Windows Forms iyileştirmeleri şunlardır:
 
 Visual Studio 2013 .NET Framework uygulamalarınızın hata ayıklaması sırasında iyileştirmeler şunlardır:
 
-- Visual Studio hata ayıklayıcısındaki değerleri döndürün. Visual Studio 2013 yönetilen bir uygulamada hata ayıklarken, oto 'Lar penceresi yöntemlerin dönüş türlerini ve değerlerini görüntüler. Bu bilgiler Masaüstü, Windows Mağazası ve Windows Phone uygulamaları için kullanılabilir. Daha fazla bilgi için bkz. [Yöntem çağrılarının dönüş değerlerini inceleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120)).
+- Değerleri Visual Studio hata ayıklayıcıya döndürür. Visual Studio 2013 yönetilen bir uygulamada hata ayıklarken, oto 'Lar penceresi yöntemlerin dönüş türlerini ve değerlerini görüntüler. Bu bilgiler masaüstü, Windows Mağazası ve Windows Phone uygulamaları için mevcuttur. Daha fazla bilgi için bkz. [Yöntem çağrılarının dönüş değerlerini inceleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120)).
 
-- 64 bit uygulamalar için Düzenle ve devam et. Visual Studio 2013 Masaüstü, Windows Mağazası ve Windows Phone 64 bitlik yönetilen uygulamalar için Düzenle ve devam et özelliğini destekler. Mevcut sınırlamalar hem 32-bit hem de 64-bit uygulamalar için geçerli kalır ( [desteklenen kod değişikliklerininC#](/visualstudio/debugger/supported-code-changes-csharp) son bölümüne bakın () makalesinin).
+- 64 bit uygulamalar için Düzenle ve Devam Et. Visual Studio 2013 Masaüstü, Windows Mağazası ve Windows Phone 64 bitlik yönetilen uygulamalar için Düzenle ve devam et özelliğini destekler. Mevcut sınırlamalar hem 32-bit hem de 64-bit uygulamalar için geçerli kalır ( [desteklenen kod değişikliklerininC#](/visualstudio/debugger/supported-code-changes-csharp) son bölümüne bakın () makalesinin).
 
-- Zaman uyumsuz olarak algılayan hata ayıklama. Visual Studio 2013, zaman uyumsuz uygulamalarda hata ayıklamayı kolaylaştırmak için, çağrı yığını zaman uyumsuz programlamayı desteklemek için derleyiciler tarafından belirtilen altyapı kodunu gizler ve ayrıca mantıksal program yürütmeyi daha fazla takip edebilmeniz için mantıksal üst çerçevelerde zincirler NET. Bir Görevler penceresi, paralel görevler penceresinin yerini alır ve belirli bir kesme noktasıyla ilgili görevleri görüntüler ve ayrıca, şu anda etkin olan veya uygulamada zamanlanan diğer görevleri görüntüler. Bu özellik hakkında bilgi edinmek için, [.NET Framework 4.5.1 duyurusunun](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)"zaman uyumsuz algılayan hata ayıklama" bölümünde bulabilirsiniz.
+- Zaman uyumsuz yönteme duyarlı hata ayıklama. Visual Studio 2013, zaman uyumsuz uygulamalarda hata ayıklamayı kolaylaştırmak için, çağrı yığını zaman uyumsuz programlamayı desteklemek için derleyiciler tarafından belirtilen altyapı kodunu gizler ve ayrıca mantıksal program yürütmeyi daha fazla takip edebilmeniz için mantıksal üst çerçevelerde zincirler NET. Görevler penceresi Paralel Görevler penceresinin yerine geçer ve belirli bir kesme noktasıyla ilgili görevleri görüntüler, ayrıca şu anda uygulamada zamanlanmış veya etkin olan diğer görevleri de görüntüler. Bu özellik hakkında bilgi edinmek için, [.NET Framework 4.5.1 duyurusunun](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)"zaman uyumsuz algılayan hata ayıklama" bölümünde bulabilirsiniz.
 
-- Windows Çalışma Zamanı bileşenleri için daha iyi özel durum desteği. [!INCLUDE[win81](../../../includes/win81-md.md)], Windows Mağazası uygulamalarından kaynaklanan özel durumlar, özel duruma neden olan hata hakkındaki bilgileri, dil sınırları boyunca korur. Bu özellik hakkında bilgi edinmek için [.NET Framework 4.5.1 duyurusunun](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)"Windows Mağazası uygulama geliştirme" bölümünde bulabilirsiniz.
+- Windows Çalışma Zamanı bileşenleri için daha iyi özel durum desteği. Windows 8.1, Windows Mağazası uygulamalarından kaynaklanan özel durumlar, özel duruma neden olan hata hakkındaki bilgileri, dil sınırları boyunca korur. Bu özellik hakkında bilgi edinmek için [.NET Framework 4.5.1 duyurusunun](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)"Windows Mağazası uygulama geliştirme" bölümünde bulabilirsiniz.
 
 Visual Studio 2013 başlayarak, Windows 8. x mağaza uygulamalarını ve masaüstü uygulamalarını en iyi duruma getirmek için [yönetilen profil temelli Iyileştirme aracı 'nı (Mpgo. exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) kullanabilirsiniz.
 
@@ -1904,35 +1904,35 @@ ASP.NET 4.5.1 içindeki yeni özellikler için bkz. [Visual Studio 2013 Sürüm 
 
 ### <a name="base-classes"></a>Temel sınıflar
 
-- Dağıtım sırasında .NET Framework 4 uygulamalarını algılayıp kapatarak sistem yeniden başlatmaları azaltma özelliği. Bkz. [.NET Framework 4,5 yüklemeleri sırasında sistem yeniden başlatmaları azaltma](../deployment/reducing-system-restarts.md).
+- Dağıtım sırasında .NET Framework 4 uygulamalarını algılayarak ve kapatarak sistem yeniden başlatmalarını azaltma yeteneği. Bkz. [.NET Framework 4,5 yüklemeleri sırasında sistem yeniden başlatmaları azaltma](../deployment/reducing-system-restarts.md).
 
-- 64-bit platformlarda 2 gigabayttan (GB) daha büyük diziler için destek. Bu özellik uygulama yapılandırma dosyasında etkinleştirilebilir. Nesne boyutu ve dizi boyutu üzerindeki diğer kısıtlamaları da listeleyen [\<gcAllowVeryLargeObjects > öğesine](../configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)bakın.
+- 64-bit platformlarda 2 gigabayt'tan (GB) büyük diziler için destek. Bu özellik, uygulama yapılandırma dosyasından etkinleştirilebilir. Nesne boyutu ve dizi boyutu üzerindeki diğer kısıtlamaları da listeleyen [\<gcAllowVeryLargeObjects > öğesine](../configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)bakın.
 
-- Sunucular için arka plan atık toplama ile daha iyi performans. .NET Framework 4,5 ' de sunucu çöp toplama kullandığınızda, arka plan atık toplama otomatik olarak etkinleştirilir. [Çöp toplama temelleri](../../standard/garbage-collection/fundamentals.md) konusunun arka plan sunucusu çöp toplama bölümüne bakın.
+- Sunucularda arka plan çöp toplama işlemi ile daha iyi performans. .NET Framework 4,5 ' de sunucu çöp toplama kullandığınızda, arka plan atık toplama otomatik olarak etkinleştirilir. [Çöp toplama temelleri](../../standard/garbage-collection/fundamentals.md) konusunun arka plan sunucusu çöp toplama bölümüne bakın.
 
-- Arka plan tam zamanında (JıT) derleme, isteğe bağlı olarak, uygulama performansını artırmak için çok çekirdekli işlemcilerde kullanılabilir. Bkz. <xref:System.Runtime.ProfileOptimization>.
+- Uygulama performansını artırmak için çok çekirdekli işlemcilerde isteğe bağlı olarak kullanılabilir olan arka plan just-in-time (JIT) (tam zamanında) derlemesi. Bkz. <xref:System.Runtime.ProfileOptimization>.
 
 - Normal ifade altyapısının zaman aşımına uğramadan önce normal ifadeyi çözmeyi ne kadar süreyle deneyeceğini sınırlayabilme olanağı. <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=nameWithType> özelliğine bakın.
 
-- Bir uygulama etki alanı için varsayılan kültürü tanımlama özelliği. <xref:System.Globalization.CultureInfo> sınıfına bakın.
+- Uygulama etki alanı için varsayılan kültürü tanımlama yeteneği. <xref:System.Globalization.CultureInfo> sınıfına bakın.
 
 - Unicode (UTF-16) kodlaması için konsol desteği. <xref:System.Console> sınıfına bakın.
 
-- Kültürel dize sıralaması ve karşılaştırma verilerinin sürümü oluşturma desteği. <xref:System.Globalization.SortVersion> sınıfına bakın.
+- Kültürel dize sıralama ve karşılaştırma verilerinin sürümünü oluşturma desteği. <xref:System.Globalization.SortVersion> sınıfına bakın.
 
-- Kaynakları alırken daha iyi performans. Bkz. [kaynakları paketleme ve dağıtma](../resources/packaging-and-deploying-resources-in-desktop-apps.md).
+- Kaynaklar alınırken daha iyi performans. Bkz. [kaynakları paketleme ve dağıtma](../resources/packaging-and-deploying-resources-in-desktop-apps.md).
 
-- Sıkıştırılmış bir dosyanın boyutunu azaltmak için ZIP sıkıştırma geliştirmeleri. Bkz. <xref:System.IO.Compression?displayProperty=nameWithType> ad alanı.
+- Sıkıştırılmış dosyaların boyutunu azaltmak için Zip sıkıştırma işlevinde geliştirmeler. <xref:System.IO.Compression?displayProperty=nameWithType> ad alanına bakınız.
 
-- <xref:System.Reflection.Context.CustomReflectionContext> sınıfı aracılığıyla varsayılan yansıma davranışını geçersiz kılmak için yansıma bağlamını özelleştirme özelliği.
+- <xref:System.Reflection.Context.CustomReflectionContext> sınıfı aracılığıyla varsayılan yansıtma davranışını devre dışı bırakmak için yansıtmalı bir bağlamı özelleştirme yeteneği.
 
-- <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> sınıfı [!INCLUDE[win8](../../../includes/win8-md.md)]kullanıldığında, uygulamalar (ıDNA) standardında uluslararası etki alanı adlarının 2008 sürümü için destek.
+- Windows 8 ' de <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> sınıfı kullanıldığında, uygulamalar (ıDNA) standardında uluslararası etki alanı adlarının 2008 sürümü için destek.
 
-- .NET Framework [!INCLUDE[win8](../../../includes/win8-md.md)]kullanıldığında, Unicode 6,0 uygulayan işletim sistemine dize karşılaştırması temsili. Diğer platformlarda çalışırken .NET Framework, Unicode 5. x uygulayan kendi dize karşılaştırma verilerini içerir. <xref:System.Globalization.SortVersion> sınıfının <xref:System.String> sınıfına ve açıklamalar bölümüne bakın.
+- Windows 8 ' de .NET Framework kullanıldığında, Unicode 6,0 uygulayan işletim sistemine dize karşılaştırması temsili. Başka platformlarda çalışırken, .NET Framework Unicode 5.x uygulayan kendi dize karşılaştırma verilerini içerir. <xref:System.String> sınıfının Açıklamalar bölümüne ve <xref:System.Globalization.SortVersion> sınıfına bakın.
 
-- Her uygulama etki alanı temelinde dizeler için karma kodları hesaplama özelliği. Bkz. [\<UseRandomizedStringHashAlgorithm > öğesi](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md).
+- Her bir uygulama etki alanı temelinde dizeler için karma kodları hesaplama yeteneği. Bkz. [\<UseRandomizedStringHashAlgorithm > öğesi](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md).
 
-- <xref:System.Type> ve <xref:System.Reflection.TypeInfo> sınıfları arasında bölünmüş tür yansıtma desteği. Bkz. [Windows Mağazası uygulamaları için .NET Framework yansıtma](../reflection-and-codedom/reflection-for-windows-store-apps.md).
+- Tür yansıtma desteği <xref:System.Type> ve <xref:System.Reflection.TypeInfo> sınıfları arasında bölünür. Bkz. [Windows Mağazası uygulamaları için .NET Framework yansıtma](../reflection-and-codedom/reflection-for-windows-store-apps.md).
 
 ### <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -1940,17 +1940,17 @@ ASP.NET 4.5.1 içindeki yeni özellikler için bkz. [Visual Studio 2013 Sürüm 
 
 - Genel türler için destek.
 
-- Öznitelikler yerine adlandırma kurallarına göre parçalar oluşturmanıza olanak sağlayan kural tabanlı programlama modeli.
+- Nitelikler yerine adlandırma kurallarına göre bölümleri oluşturmanıza olanak sağlayan kurala dayalı programlama modeli.
 
 - Birden çok kapsam.
 
-- Windows 8. x Mağazası uygulamaları oluştururken kullanabileceğiniz MEF alt kümesi. Bu alt küme NuGet galerisinden [indirilebilir bir paket](https://go.microsoft.com/fwlink/?LinkId=256238) olarak kullanılabilir. Paketi yüklemek için, projenizi Visual Studio 'da açın, **Proje** menüsünden **NuGet Paketlerini Yönet** ' i seçin ve `Microsoft.Composition` paketini çevrimiçi olarak arayın.
+- Windows 8. x Mağazası uygulamaları oluştururken kullanabileceğiniz MEF alt kümesi. Bu alt küme NuGet galerisinden [indirilebilir bir paket](https://www.nuget.org/packages/Microsoft.Composition) olarak kullanılabilir. Paketi yüklemek için, projenizi Visual Studio 'da açın, **Proje** menüsünden **NuGet Paketlerini Yönet** ' i seçin ve `Microsoft.Composition` paketini çevrimiçi olarak arayın.
 
 Daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)](../mef/index.md).
 
 ### <a name="asynchronous-file-operations"></a>Zaman uyumsuz dosya işlemleri
 
-.NET Framework 4,5 ' de, C# ve Visual Basic dillerine yeni zaman uyumsuz özellikler eklenmiştir. Bu özellikler, zaman uyumsuz işlemleri gerçekleştirmek için görev tabanlı bir model ekler. Bu yeni modeli kullanmak için g/ç sınıflarında zaman uyumsuz yöntemleri kullanın. Bkz. [zaman uyumsuz dosya g/ç](../../standard/io/asynchronous-file-i-o.md).
+.NET Framework 4,5 ' de, C# ve Visual Basic dillerine yeni zaman uyumsuz özellikler eklenmiştir. Bu özellikler, zaman uyumsuz işlemleri gerçekleştirmek için görev tabanlı bir model ekler. Bu yeni modeli kullanmak için, G/Ç sınıflarında zaman uyumsuz yöntemleri kullanın. Bkz. [zaman uyumsuz dosya g/ç](../../standard/io/asynchronous-file-i-o.md).
 
 <a name="tools" />
 
@@ -1958,19 +1958,19 @@ Daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)](../mef/index
 
 .NET Framework 4,5, kaynak dosya Oluşturucu (Resgen. exe), bir. resources .NET Framework dosyasındaki Windows 8. x Mağaza uygulamalarında kullanılmak üzere bir. resw dosyası oluşturmanıza olanak sağlar. Daha fazla bilgi için bkz. [Resgen. exe (kaynak dosya Oluşturucu)](../tools/resgen-exe-resource-file-generator.md).
 
-Yönetilen profil temelli Iyileştirme (Mpgo. exe), yerel görüntü derlemelerini iyileştirerek uygulama başlangıç süresini, bellek kullanımını (çalışma kümesi boyutu) ve aktarım hızını iyileştirmenize olanak sağlar. Komut satırı aracı, yerel görüntü uygulama derlemeleri için profil verileri oluşturur. Bkz. [Mpgo. exe (yönetilen profil temelli Iyileştirme aracı)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Visual Studio 2013 başlayarak, Mpgo. exe ' yi kullanarak Windows 8. x mağaza uygulamalarını ve masaüstü uygulamalarını en iyi duruma getirebilirsiniz.
+Yönetilen Profil Temelli İyileştirme (Mpgo.exe); yerel görüntü derlemelerini en iyi hale getirerek, uygulamanın başlangıç zamanını, bellek kullanımını (çalışma kümesi boyutu) ve verimini artırmanıza olanak tanır. Komut satırı aracı yerel görüntü uygulama derlemeleri için profil verileri oluşturur. Bkz. [Mpgo. exe (yönetilen profil temelli Iyileştirme aracı)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Visual Studio 2013 başlayarak, Mpgo. exe ' yi kullanarak Windows 8. x mağaza uygulamalarını ve masaüstü uygulamalarını en iyi duruma getirebilirsiniz.
 
 <a name="parallel" />
 
 ### <a name="parallel-computing"></a>Paralel bilgi işlem
 
-.NET Framework 4,5, paralel bilgi işlem için çeşitli yeni özellikler ve iyileştirmeler sağlar. Bunlar, geliştirilmiş performans, artırılmış denetim, zaman uyumsuz programlama için geliştirilmiş destek, yeni bir veri akışı kitaplığı ve paralel hata ayıklama ve performans analizi için geliştirilmiş destek içerir. .Net blogu ile paralel programlamada [.net 4,5 ' de paralellik Için nasıl yeni](https://go.microsoft.com/fwlink/?LinkId=235061) bir giriş olduğuna bakın.
+.NET Framework 4,5, paralel bilgi işlem için çeşitli yeni özellikler ve iyileştirmeler sağlar. Bunlar; gelişmiş performans, artırılmış denetim, zaman uyumsuz programlama için gelişmiş destek, yeni bir veri akışı kitaplığı ve paralel hata ayıklama için gelişmiş destek ve performans analizini içerir. .Net blogu ile paralel programlamada [.net 4,5 ' de paralellik Için nasıl yeni](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/) bir giriş olduğuna bakın.
 
 <a name="web" />
 
 ### <a name="web"></a>Web
 
-Web Forms, WebSocket desteği, zaman uyumsuz işleyiciler, performans geliştirmeleri ve diğer birçok özellik için ASP.NET 4,5 ve 4.5.1 model bağlama ekleyin. Daha fazla bilgi için aşağıdaki kaynaklara bakın:
+ASP.NET 4.5 ve 4.5.1 Web Formları, WebSocket desteği, zaman uyumsuz işleyiciler, performans geliştirmeleri ve birçok başka özellik için bağlama modeli ekler. Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
 - [ASP.NET 4,5 ve Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 
@@ -1978,19 +1978,19 @@ Web Forms, WebSocket desteği, zaman uyumsuz işleyiciler, performans geliştirm
 
 ### <a name="networking-a-namenetworking-"></a>Ağ <a name="networking" />
 
-.NET Framework 4,5, HTTP uygulamaları için yeni bir programlama arabirimi sağlar. Daha fazla bilgi için bkz. yeni <xref:System.Net.Http?displayProperty=nameWithType> ve <xref:System.Net.Http.Headers?displayProperty=nameWithType> ad alanları.
+.NET Framework 4,5, HTTP uygulamaları için yeni bir programlama arabirimi sağlar. Daha fazla bilgi için yeni <xref:System.Net.Http?displayProperty=nameWithType> ve <xref:System.Net.Http.Headers?displayProperty=nameWithType> ad alanlarına bakınız.
 
-Ayrıca, mevcut <xref:System.Net.HttpListener> ve ilgili sınıfları kullanarak bir WebSocket bağlantısı kabul etmek ve bunlarla etkileşim kurmak için yeni bir programlama arabirimi de mevcuttur. Daha fazla bilgi için bkz. yeni <xref:System.Net.WebSockets> ad alanı ve <xref:System.Net.HttpListener> sınıfı.
+Ayrıca var olan <xref:System.Net.HttpListener> ve ilgili sınıflar kullanılarak bir WebSocket bağlantısının kabul edilmesi ve bu bağlantıyla etkileşim kurulması için yeni programlama arabirimi için de destek eklenmiştir. Daha fazla bilgi için yeni <xref:System.Net.WebSockets> ad alanına ve <xref:System.Net.HttpListener> sınıfına bakın.
 
 Ayrıca, 4,5 .NET Framework aşağıdaki ağ geliştirmelerini içerir:
 
-- RFC uyumlu URI desteği. Daha fazla bilgi için bkz. <xref:System.Uri> ve ilgili sınıflar.
+- RFC uyumlu URI desteği. Daha fazla bilgi için <xref:System.Uri> ve ilgili sınıflara bakınız.
 
-- Uluslararası etki alanı adı (ıDN) ayrıştırma desteği. Daha fazla bilgi için bkz. <xref:System.Uri> ve ilgili sınıflar.
+- Uluslararası Duruma Getirilmiş Etki Alanı Adı (IDN) ayrıştırma desteği. Daha fazla bilgi için <xref:System.Uri> ve ilgili sınıflara bakınız.
 
-- E-posta adresi uluslararası duruma getirme (EAı) desteği. Daha fazla bilgi için <xref:System.Net.Mail> ad alanına bakın.
+- E-posta Adresi Uluslararası Duruma Getirme (EAI) desteği. Daha fazla bilgi için <xref:System.Net.Mail> ad alanına bakın.
 
-- Geliştirilmiş IPv6 desteği. Daha fazla bilgi için <xref:System.Net.NetworkInformation> ad alanına bakın.
+- Gelişmiş IPv6 desteği. Daha fazla bilgi için <xref:System.Net.NetworkInformation> ad alanına bakın.
 
 - Çift modlu yuva desteği. Daha fazla bilgi için bkz. <xref:System.Net.Sockets.Socket> ve <xref:System.Net.Sockets.TcpListener> sınıfları.
 
@@ -2000,23 +2000,23 @@ Ayrıca, 4,5 .NET Framework aşağıdaki ağ geliştirmelerini içerir:
 
 .NET Framework 4,5 ' de, Windows Presentation Foundation (WPF) aşağıdaki alanlarda değişiklikler ve iyileştirmeler içerir:
 
-- Hızlı erişim araç çubuğu, uygulama menüsü ve sekmeler barındıran bir şerit kullanıcı arabirimi uygulamanıza olanak sağlayan yeni <xref:System.Windows.Controls.Ribbon.Ribbon> denetimi.
+- Hızlı Erişim Araç Çubuğu, Uygulama Menüsü ve sekmeler barındıran şerit kullanıcı arabirimini uygulamanızı sağlayan <xref:System.Windows.Controls.Ribbon.Ribbon> denetimi.
 
-- Zaman uyumlu ve zaman uyumsuz veri doğrulamayı destekleyen yeni <xref:System.ComponentModel.INotifyDataErrorInfo> arabirimi.
+- Zaman uyumlu ve zaman uyumsuz veri doğrulamasını destekleyen <xref:System.ComponentModel.INotifyDataErrorInfo>arabirimi.
 
-- <xref:System.Windows.Controls.VirtualizingPanel> ve <xref:System.Windows.Threading.Dispatcher> sınıflarına yönelik yeni özellikler.
+- <xref:System.Windows.Controls.VirtualizingPanel> ve <xref:System.Windows.Threading.Dispatcher> sınıfları için yeni özellikler.
 
-- Büyük düzeyde gruplandırılmış verilerin görüntülenirken ve Kullanıcı arabirimi olmayan iş parçacıklarında koleksiyonlara erişerek gelişmiş performans.
+- Gruplandırılmış büyük veri kümelerini görüntülerken ve UI olmayan iş parçacıklarında koleksiyonlara erişerek geliştirilmiş performans.
 
-- Statik özelliklere veri bağlama, <xref:System.Reflection.ICustomTypeProvider> arabirimini uygulayan özel türlere veri bağlama ve veri bağlama bilgilerinin bir bağlama ifadesinden alınması.
+- Statik özelliklere veri bağlama, <xref:System.Reflection.ICustomTypeProvider> arabirimini uygulayan özel türlere veri bağlama ve bir bağlama ifadesinden veri bağlama bilgisi alımı.
 
-- Değerler değiştiğinde verileri yeniden konumlandırma (canlı şekillendirme).
+- Değerler değiştikçe verileri yeniden konumlandırma (canlı şekillendirme)
 
-- Bir öğe kapsayıcısının veri bağlamının bağlantısının kesilmesi olup olmadığını denetleme özelliği.
+- Öğe kapsayıcı için veri bağlamının bağlantısının kesilip kesilmediğini kontrol yeteneği.
 
-- Özellik değişiklikleri ve veri kaynağı güncelleştirmeleri arasında geçmesi gereken süre miktarını ayarlama yeteneği.
+- Özellik değişiklikleri ve veri kaynağı güncelleştirmeleri arasında geçmesi gereken sürenin miktarını ayarlama yeteneği.
 
-- Zayıf olay desenleri uygulama desteği geliştirildi. Ayrıca, olaylar artık işaretleme uzantılarını kabul edebilir.
+- Zayıf olay desenlerini uygulamak için gelişmiş destek. Ayrıca, olaylar şu anda biçimlendirme uzantılarını kabul edebilir.
 
 <a name="windows_communication_foundation" />
 
@@ -2024,41 +2024,41 @@ Ayrıca, 4,5 .NET Framework aşağıdaki ağ geliştirmelerini içerir:
 
 .NET Framework 4,5 ' de, Windows Communication Foundation (WCF) uygulamaları yazmayı ve bakımını daha kolay hale getirmek için aşağıdaki özellikler eklenmiştir:
 
-- Oluşturulan yapılandırma dosyalarının basitleştirmesi.
+- Üretilen yapılandırma dosyalarını basitleştirme.
 
-- Sözleşmenin ilk geliştirmesi için destek.
+- Sözleşme ilk geliştirmesi için destek.
 
-- ASP.NET uyumluluk modunu daha kolay bir şekilde yapılandırma özelliği.
+- Daha kolay bir şekilde ASP.NET uyumlu mod yapılandırma yeteneği.
 
-- Varsayılan taşıma özelliği değerlerindeki değişiklikler, bunları ayarlamak için sahip olma olasılığını azaltır.
+- Varsayılan aktarım özelliklerinde ayarlama olasılığınızı düşürme amaçlı değişiklikler.
 
-- XML sözlüğü okuyucuları için kotaları el ile yapılandırmak zorunda olma olasılığını azaltmak için <xref:System.Xml.XmlDictionaryReaderQuotas> sınıfına yönelik güncelleştirmeler.
+- XML sözlük okuyucularına yönelik kotaları el ile yapılandırmanız gerekmesi zorunluluğunu azaltmak için <xref:System.Xml.XmlDictionaryReaderQuotas> sınıfı üzerindeki güncelleştirmeler.
 
-- Visual Studio tarafından derleme sürecinin bir parçası olarak WCF yapılandırma dosyalarının doğrulanması, böylece uygulamanızı çalıştırmadan önce yapılandırma hatalarını tespit edebilirsiniz.
+- Uygulamanızı çalıştırmadan önce yapılandırma hatalarını algılayabilmeniz için, oluşturma işleminin parçası olarak WCF yapılandırma dosyalarının Visual Studio tarafından doğrulanması.
 
 - Yeni zaman uyumsuz akış desteği.
 
-- Internet Information Services (IIS) ile HTTPS üzerinden bir uç nokta açığa çıkarmak daha kolay hale getirmek için yeni HTTPS protokol eşlemesi.
+- Internet Information Services (IIS) üzerinden bir son noktayı göstermeyi daha kolay hale getirmek için yeni HTTPS protokolü eşlemesi.
 
-- Hizmet URL 'sine `?singleWSDL` ekleyerek tek bir WSDL belgesinde meta veri oluşturma yeteneği.
+- Tek bir WSDL belgesinde hizmet URL'sine `?singleWSDL` ekleyerek meta veriler oluşturma yeteneği.
 
-- TCP aktarımına benzer performans özellikleriyle 80 ve 443 bağlantı noktaları üzerinden doğru çift yönlü iletişimi etkinleştirmek için WebSockets desteği.
+- Web soketi 80 ve 443 bağlantı noktaları üzerinde doğru çift yönlü iletişimi TCP aktarımına benzer performans özellikleriyle destekler.
 
-- Kodda hizmetleri yapılandırmaya yönelik destek.
+- Kodda hizmetlerin yapılandırılması için destek.
 
-- XML Düzenleyici araç ipuçları.
+- XML Düzenleyicisi araç ipuçları.
 
-- önbelleğe alma desteği <xref:System.ServiceModel.ChannelFactory>.
+- <xref:System.ServiceModel.ChannelFactory> önbelleğe alma desteği.
 
 - İkili kodlayıcı sıkıştırma desteği.
 
-- Geliştiricilerin "yangın ve unut" iletilerini kullanan hizmetler yazmasını sağlayan bir UDP taşıması desteği. İstemci, hizmete bir ileti gönderir ve hizmetten yanıt vermez.
+- Geliştiricilerin "at ve unut" ileti sistemini kullanan hizmetler yazmasına olanak sağlayan bir UDP taşıma desteği. İstemci bir hizmete ileti gönderir ve hizmetten yanıt beklemez.
 
-- HTTP taşıma ve aktarım güvenliği kullanılırken, tek bir WCF uç noktasında birden çok kimlik doğrulama modunu destekleme özelliği.
+- HTTP taşıma ve taşım güvenliği kullanıldığında tek bir WCF ucunda çoklu kimlik doğrulama modlarını destekleme yeteneği.
 
-- Uluslararası etki alanı adları (IDNs) kullanan WCF Hizmetleri için destek.
+- Uluslararası duruma getirilmiş etki alanı adları (IDN'ler) kullanan WCF hizmetleri için destek.
 
-Daha fazla bilgi için bkz. [Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=228173)yenilikleri.
+Daha fazla bilgi için bkz. [Windows Communication Foundation](../wcf/whats-new.md)yenilikleri.
 
 <a name="windows_workflow_foundation" />
 
@@ -2066,68 +2066,69 @@ Daha fazla bilgi için bkz. [Windows Communication Foundation](https://go.micros
 
 .NET Framework 4,5 ' de aşağıdakiler de dahil olmak üzere Windows Workflow Foundation (WF) birkaç yeni özellik eklenmiştir:
 
-- İlk olarak .NET Framework 4.0.1 ([.NET Framework 4 platformu güncelleştirme 1](https://go.microsoft.com/fwlink/?LinkID=215092)) bir parçası olarak sunulan durum makinesi iş akışları. Bu güncelleştirme, geliştiricilerin durum makinesi iş akışları oluşturmalarına olanak tanıyan birkaç yeni sınıf ve etkinlik içeriyordu. Bu sınıflar ve Etkinlikler 4,5 .NET Framework şunlar için güncelleştirildi:
+- İlk olarak .NET Framework 4.0.1 ([.NET Framework 4 platformu güncelleştirme 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)) bir parçası olarak sunulan durum makinesi iş akışları. Bu güncelleştirme, geliştiricilerin durum makine iş akışları oluşturmasına olanak sağlayan birkaç yeni sınıfı ve etkinliği kapsamıştır. Bu sınıflar ve Etkinlikler 4,5 .NET Framework şunlar için güncelleştirildi:
 
   - Durumlar üzerinde kesme noktaları ayarlama yeteneği.
 
-  - İş akışı tasarımcısında geçişleri kopyalama ve yapıştırma özelliği.
+  - İş akışı tasarımcısında geçişleri kopyalayıp yapıştırma yeteneği.
 
-  - Paylaşılan tetikleyici geçişi oluşturma için tasarımcı desteği.
+  - Paylaşılan tetikleyici geçişi oluşumu için tasarımcı desteği.
 
-  - <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>ve <xref:System.Activities.Statements.Transition>dahil olmak üzere durum makine iş akışları oluşturma etkinlikleri.
+  - Durum makine iş akışları oluşturma için şunları da içeren etkinlikler: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> ve <xref:System.Activities.Statements.Transition>.
 
-- Aşağıdakiler gibi gelişmiş İş Akışı Tasarımcısı Özellikler:
+- Aşağıdaki gibi artırılmış İş Akışı Tasarımcısı özellikleri:
 
   - Visual Studio 'da **hızlı bul** ve **dosyalardaki bul**dahil olmak üzere gelişmiş iş akışı arama özellikleri.
 
-  - Bir kapsayıcı etkinliğine ikinci bir alt etkinlik eklendiğinde ve her iki etkinliği de sıralı etkinliğe dahil etmek için otomatik olarak bir dizi etkinliği oluşturma özelliği.
+  - Kapsayıcı etkinliğe ikinci bir alt etkinlik eklendiğinde otomatik olarak bir Sıralama etkinliği oluşturma ve her iki etkinliği de Sıralama etkinliğine dahil etme yeteneği.
 
-  - Kaydırma çubukları kullanılmadan bir iş akışının görünür bölümünün değiştirilmesini sağlayan kaydırma desteği.
+  - Bir iş akışının görünür bölümünün, kaydırma çubukları kullanılmadan değiştirilmesine olanak sağlayan kaydırma desteği.
 
   - Bir ağaç stili ana hat görünümündeki bir iş akışının bileşenlerini gösteren ve **Belge anahat** görünümünde bir bileşen seçmenize olanak sağlayan yeni bir **Belge anahat** görünümü.
 
-  - Etkinliklere ek açıklamalar ekleme özelliği.
+  - Faaliyetlere ek açıklamalar ekleme yeteneği.
 
-  - İş akışı tasarımcısını kullanarak etkinlik temsilcilerini tanımlama ve kullanma yeteneği.
+  - İş Akışı Tasarımcısı kullanarak etkinlik temsilcilerini tanımlama ve tüketme yeteneği.
 
-  - Durum makinesi ve akış çizelgesi iş akışlarında etkinlikler ve geçişler için otomatik bağlan ve otomatik ekle.
+  - Etkinlikler için otomatik bağlanma ve otomatik ekleme, durum makinesinde geçişler, akış çizelgeleri iş akışları.
 
-- Bir iş akışı için Görünüm durumu bilgilerini XAML dosyasındaki tek bir öğede depolamak için, Görünüm durumu bilgisini kolayca bulup düzenleyebilmenizi sağlayabilirsiniz.
+- Görünüm durumu bilgilerini kolayca bulabilmeniz ve düzenleyebilmeniz için, bir iş akışına ilişkin görünüm durumu bilgilerinin XAML dosyasında tek bir öğede depolanması.
 
-- Alt etkinliklerin kalıcı olmasını önleyen bir NoPersistScope kapsayıcı etkinliği.
+- NoPersistScope, çocuk etkinliklerinin kalıcı olmasını önlemek için kapsayıcı etkinlik.
 
-- İfadeler için C# destek:
+- C# ifadeleri için destek:
 
-  - Visual Basic kullanan iş akışı projeleri Visual Basic ifadelerini kullanır ve C# iş akışı projeleri ifadeleri kullanır. C#
+  - Visual Basic kullanan iş akışı projeleri Visual Basic deyimleri kullanacak ve C# iş akışı projeleri C# ifadeleri kullanacaktır.
 
-  - C#Visual Studio 2010 ' de oluşturulan ve Visual Basic ifadelerine sahip iş akışı projeleri, ifadeler kullanan C# C# iş akışı projeleriyle uyumludur.
+  - Visual Studio 2010'da oluşturulmuş C# ifadelerini kullanan C# iş akışı projeleri ile uyumlu Visual Basic deyimleri içeren C# iş akışı projeleri.
 
-- Sürüm oluşturma geliştirmeleri:
+- Sürüm oluşturma ile ilgili geliştirmeler:
 
-  - Kalıcı bir iş akışı örneği ve onun iş akışı tanımı arasında eşleme sağlayan yeni <xref:System.Activities.WorkflowIdentity> sınıfı.
+  - Sürekli iş akışı örneğiyle buna ilişkin iş akışı tanımı arasında bir eşleme sağlayan yeni <xref:System.Activities.WorkflowIdentity> sınıfı.
 
-  - <xref:System.ServiceModel.Activities.WorkflowServiceHost>dahil olmak üzere aynı ana bilgisayarda birden çok iş akışı sürümünün yan yana yürütülmesi.
+  - <xref:System.ServiceModel.Activities.WorkflowServiceHost> öğesi de dahil olmak üzere, aynı ana bilgisayarda birden çok iş akışı sürümünün yan yana yürütülmesi.
 
-  - Dinamik güncelleştirmede, kalıcı bir iş akışı örneğinin tanımını değiştirme özelliği.
+  - Dinamik Güncelleştirme'de kalıcı iş akışı örneğinin tanımını değiştirebilme.
 
-- Sözleşme-ilk iş akışı hizmeti geliştirme, mevcut bir hizmet sözleşmesiyle eşleşecek şekilde otomatik olarak etkinlik oluşturma desteği sağlar.
+- Sözleşme öncelikli iş akışı hizmet geliştirme otomatik olarak oluşturulmuş etkinliklerin bir servis sözleşmesi ile eşleşmesi için destek sağlar.
 
-Daha fazla bilgi için bkz. [Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=228176)yenilikleri.
+Daha fazla bilgi için bkz. [Windows Workflow Foundation](../windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)yenilikleri.
 
 <a name="tailored" />
 
 ### <a name="net-for-windows-8x-store-apps"></a>Windows 8.x Mağazası uygulamaları için .NET
 
-Windows 8. x Mağazası uygulamaları belirli form faktörleri için tasarlanmıştır ve Windows işletim sisteminin gücünden yararlanır. Veya Visual Basic kullanarak C# Windows için Windows 8. x Mağazası uygulamaları oluşturmak üzere 4,5 veya 4.5.1 .NET Framework bir alt kümesi mevcuttur. Bu alt küme, Windows 8. x Mağazası uygulamaları için .NET olarak adlandırılır ve Windows Geliştirme Merkezi 'nde bir [genel bakışta](https://go.microsoft.com/fwlink/?LinkId=228491) ele alınmıştır.
+Windows 8. x Mağazası uygulamaları belirli form faktörleri için tasarlanmıştır ve Windows işletim sisteminin gücünden yararlanır. Veya Visual Basic kullanarak C# Windows için Windows 8. x Mağazası uygulamaları oluşturmak üzere 4,5 veya 4.5.1 .NET Framework bir alt kümesi mevcuttur. Bu alt küme, Windows 8. x Mağazası uygulamaları için .NET olarak adlandırılır ve [genel bakışta](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))ele alınmıştır.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Taşınabilir sınıf kitaplıkları <a name="portable" />
 
-Visual Studio 2012 ' deki (ve sonraki sürümlerde) taşınabilir sınıf kitaplığı projesi, birden çok .NET Framework platformda çalışan yönetilen derlemeler yazmanızı ve oluşturmanızı sağlar. Taşınabilir bir sınıf kitaplığı projesi kullanarak, hedeflenecek platformları (Windows Phone ve Windows 8. x Mağazası uygulamaları için .NET) seçersiniz. Projenizdeki kullanılabilir türler ve Üyeler, bu platformlar genelinde ortak türler ve üyelerle otomatik olarak kısıtlıdır. Daha fazla bilgi için bkz. [taşınabilir sınıf kitaplığı](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+Visual Studio 2012 ' deki (ve sonraki sürümlerde) taşınabilir sınıf kitaplığı projesi, birden çok .NET Framework platformda çalışan yönetilen derlemeler yazmanızı ve oluşturmanızı sağlar. Taşınabilir bir sınıf kitaplığı projesi kullanarak, hedeflenecek platformları (Windows Phone ve Windows 8. x Mağazası uygulamaları için .NET) seçersiniz. Projenizdeki kullanılabilir türler ve üyeler otomatik olarak bu platformlardaki ortak türler ve üyeler ile kısıtlanır. Daha fazla bilgi için bkz. [taşınabilir sınıf kitaplığı](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET Framework ve Bant Dışı Yayınlar](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [.NET Framework erişilebilirlik yenilikleri](whats-new-in-accessibility.md)
-- [Visual Studio 2017 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2017)
+- [Visual Studio 2017'deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2017)
+- [Visual Studio 2019 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio C++ 'daki yenilikler](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

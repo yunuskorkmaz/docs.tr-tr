@@ -2,12 +2,12 @@
 title: .NET Core hakkında
 description: .NET Core hakkında bilgi edinin.
 ms.date: 09/17/2019
-ms.openlocfilehash: b3cdc8d4aeaf85765b51543069a5f279e84f8623
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711215"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801954"
 ---
 # <a name="about-net-core"></a>.NET Core hakkında
 
@@ -52,11 +52,11 @@ Bu tümleştirme, kapsamında, [Omnisharp](https://www.omnisharp.net/) ve [ıon�
 - [Windows 10 Evrensel Windows Platformu (UWP)](https://developer.microsoft.com/windows)
 - [Tizen](https://developer.tizen.org/development/training/.net-application)
 
-## <a name="composition"></a>Birleştirme
+## <a name="composition"></a>Birleşim
 
 .NET Core aşağıdaki bölümlerden oluşur:
 
-- Bir tür sistemi, derleme yükleme, çöp toplayıcı, yerel birlikte çalışma ve diğer temel hizmetler sağlayan [.NET Core çalışma zamanı](https://github.com/dotnet/coreclr). [.NET Core Framework kitaplıkları](https://github.com/dotnet/corefx) temel veri türleri, uygulama bileşim türleri ve temel yardımcı programları sağlar.
+- Bir tür sistemi, derleme yükleme, çöp toplayıcı, yerel birlikte çalışma ve diğer temel hizmetler sağlayan [.NET Core çalışma zamanı](https://github.com/dotnet/runtime/tree/master/src/coreclr). [.NET Core Framework kitaplıkları](https://github.com/dotnet/runtime/tree/master/src/libraries) temel veri türleri, uygulama bileşim türleri ve temel yardımcı programları sağlar.
 - Web uygulamaları, IoT uygulamaları ve mobil arka uçlar gibi modern bulut tabanlı Internet 'e bağlı uygulamalar oluşturmaya yönelik bir çerçeve sağlayan [ASP.NET çalışma zamanı](https://github.com/aspnet/home).
 - .NET Core geliştirici deneyimini etkinleştiren [.NET Core CLI araçları](https://github.com/dotnet/cli) ve dil derleyicileri ( [F#](https://github.com/microsoft/visualfsharp)[Roslyn](https://github.com/dotnet/roslyn) ve).
 - .NET Core Uygulamaları ve CLı araçları 'nı başlatmak için kullanılan [DotNet aracı](https://github.com/dotnet/core-setup). Çalışma zamanını seçer ve çalışma zamanını barındırır, bir derleme yükleme ilkesi sağlar ve uygulamaları ve araçları başlatır.
@@ -79,17 +79,17 @@ Bu bileşenler aşağıdaki yollarla dağıtılır:
 
 Çok sayıda işletim sistemini desteklemek için insanlar .NET Core 'un nasıl uygulandığını sorar. Bunlar genellikle ayrı uygulamalar olup olmadığını veya [Koşullu derlemenin](https://en.wikipedia.org/wiki/Conditional_compilation) kullanıldığını sorar. Koşullu derlemeye yönelik güçlü bir sapmanın her ikisi de vardır.
 
-Aşağıdaki grafikte [Corefx](https://github.com/dotnet/corefx) 'in büyük çoğunluğunun tüm platformlarda paylaşılan platformdan bağımsız kod olduğunu görebilirsiniz. Platformdan bağımsız kod, tüm platformlarda kullanılan tek bir taşınabilir derleme olarak uygulanabilir.
+Aşağıdaki grafikte, [.NET Core kitaplıklarının](https://github.com/dotnet/runtime/tree/master/src/libraries) büyük çoğunluğunun tüm platformlar genelinde paylaşılan platformdan bağımsız kod olduğunu görebilirsiniz. Platformdan bağımsız kod, tüm platformlarda kullanılan tek bir taşınabilir derleme olarak uygulanabilir.
 
 ![CoreFX: platform başına kod satırları](../images/corefx-platforms-loc.png)
 
-Windows ve UNIX uygulamaları boyutuyla benzerdir. CoreFX, [Microsoft. Win32. Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry) gibi bazı Windows özelliklerini uyguladığından ve henüz yalnızca birçok UNIX kavramı uygulamadıklarından, Windows daha büyük bir uygulamaya sahiptir. Ayrıca, Linux ve macOS uygulamalarının çoğunluğunun UNIX uygulamasında paylaşıldığını ve Linux ve macOS 'a özgü uygulamaların kabaca boyutunun kabaca benzer olduğunu görürsünüz.
+Windows ve UNIX uygulamaları boyutuyla benzerdir. .NET Core kitaplıkları, [Microsoft. Win32. Registry](https://github.com/dotnet/runtime/tree/master/src/libraries/Microsoft.Win32.Registry) gibi bazı Windows özelliklerini uyguladığından, ancak henüz yalnızca birçok UNIX kavramı uygulamadığından, Windows daha büyük bir uygulamaya sahiptir. Ayrıca, Linux ve macOS uygulamalarının çoğunluğunun UNIX uygulamasında paylaşıldığını ve Linux ve macOS 'a özgü uygulamaların kabaca boyutunun kabaca benzer olduğunu görürsünüz.
 
 .NET Core 'da platforma özgü ve platformdan bağımsız kitaplıkların bir karışımı vardır. Bir örneği birkaç örnekte görebilirsiniz:
 
-- [CoreCLR](https://github.com/dotnet/coreclr) platforma özgüdür. Bellek Yöneticisi ve iş parçacığı zamanlayıcısı gibi işletim sistemi alt sistemleri üzerinde oluşturulur.
-- [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) ve [System. Security. Cryptography. algoritmaları](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) , depolama ve şifreleme API 'lerinin her bir işletim sisteminde farklı olduğu verili platforma özgüdür.
-- [System. Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) ve [System. LINQ](https://github.com/dotnet/corefx/tree/master/src/System.Linq) , veri yapılarını oluşturup üzerinde işledikleri için platformdan bağımsız bir seçenektir.
+- [CoreCLR](https://github.com/dotnet/runtime/tree/master/src/coreclr) platforma özgüdür. Bellek Yöneticisi ve iş parçacığı zamanlayıcısı gibi işletim sistemi alt sistemleri üzerinde oluşturulur.
+- [System.IO](https://github.com/dotnet/runtime/tree/master/src/libraries/System.IO) ve [System. Security. Cryptography. algoritmaları](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Security.Cryptography.Algorithms) , depolama ve şifreleme API 'lerinin her bir işletim sisteminde farklı olduğu verili platforma özgüdür.
+- [System. Collections](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Collections) ve [System. LINQ](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Linq) , veri yapılarını oluşturup üzerinde işledikleri için platformdan bağımsız bir seçenektir.
 
 ## <a name="comparisons-to-other-net-implementations"></a>Diğer .NET uygulamalarıyla karşılaştırmalar
 

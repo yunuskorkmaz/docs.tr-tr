@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: c88f4e5407e550047eaf0f5c8d0d2924da611e93
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9783844ff0fe719b0581c1c9e1fb96eb31933b89
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699219"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801863"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > öğesi (Web ayarları)
 Bir ASP.NET uygulaması IIS 7,0 veya sonraki bir sürümde tümleşik modda çalışırken, işlem genelinde davranışı yönetmek için ASP.NET tarafından kullanılan yapılandırma ayarlarını belirtir.  
@@ -35,7 +35,7 @@ Bir ASP.NET uygulaması IIS 7,0 veya sonraki bir sürümde tümleşik modda çal
 
 Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
-### <a name="attributes"></a>Öznitelikler  
+### <a name="attributes"></a>{1&gt;{2&gt;Öznitelikler&lt;2}&lt;1}  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
@@ -59,7 +59,7 @@ IIS 7,0 veya sonraki bir sürümü tümleşik modda çalıştırdığınızda, b
 `applicationPool` ayarları, .NET Framework belirli bir sürümünde çalışan tüm uygulama havuzları için geçerlidir. Ayarlar, ASPNET. config dosyasında bulunur. .NET Framework 2,0 ve 4,0 sürümleri için bu dosyanın bir sürümü vardır. (.NET Framework sürümleri ve 3,5 3,0 sürümleri, ASPNET. config dosyasını sürüm 2,0 ile paylaşır.)  
   
 > [!IMPORTANT]
-> [!INCLUDE[win7](../../../../../includes/win7-md.md)]üzerinde IIS 7,0 çalıştırırsanız, her uygulama havuzu için ayrı bir Aspnet. config dosyası yapılandırabilirsiniz. Bu, her uygulama havuzu için iş parçacıklarının performansını uyarlamanızı sağlar.  
+> IIS 7,0 'yi Windows 7 üzerinde çalıştırırsanız, her uygulama havuzu için ayrı bir Aspnet. config dosyası yapılandırabilirsiniz. Bu, her uygulama havuzu için iş parçacıklarının performansını uyarlamanızı sağlar.  
   
 `maxConcurrentRequestsPerCPU` ayarı için, "5000 .NET Framework" varsayılan ayarı, ASP.NET tarafından denetlenen istek azaltmasını etkin bir şekilde devre dışı bırakır, ancak CPU başına 5000 veya daha fazla istek yoksa Varsayılan ayar, CLR iş parçacığı havuzuna CPU başına otomatik olarak yönetilecek şekilde değişir. Zaman uyumsuz istek işlemenin çok fazla kullanımını veya ağ g/ç 'de engellenen çok uzun süreli istekleri olan uygulamalar, .NET Framework 4 ' te artan varsayılan sınırdan faydalanır. `maxConcurrentRequestsPerCPU` sıfıra ayarlamak, ASP.NET isteklerini işlemek için yönetilen iş parçacıklarının kullanımını devre dışı bırakır. Bir uygulama bir IIS uygulama havuzunda çalıştığında, istekler IIS g/ç iş parçacığında kalır ve bu nedenle eşzamanlılık IIS iş parçacığı ayarları tarafından kısıtlanır.  
   
@@ -93,8 +93,8 @@ Aşağıdaki örnekte, aşağıdaki durumlarda Aspnet. config dosyasında ASP.NE
 |||  
 |-|-|  
 |Ad alanı||  
-|Şema adı||  
-|Doğrulama dosyası||  
+|Şema Adı||  
+|Doğrulama Dosyası||  
 |Boş olabilir||  
   
 ## <a name="see-also"></a>Ayrıca bkz.

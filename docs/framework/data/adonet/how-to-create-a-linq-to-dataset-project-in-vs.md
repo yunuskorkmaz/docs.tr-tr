@@ -1,19 +1,19 @@
 ---
-title: Visual Studio 'Da LINQ to DataSet projesi oluşturma
+title: Visual Studio 'da LINQ to DataSet projesi oluşturma
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-ms.openlocfilehash: 8b905c65575c3c567459d843b2a5d1606bc63228
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 91032766248b11e51b90aa788b1c64c140347c25
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783768"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802020"
 ---
-# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Nasıl yapılır: Visual Studio 'Da LINQ to DataSet projesi oluşturma
+# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Nasıl yapılır: Visual Studio 'da LINQ to DataSet projesi oluşturma
 
-Farklı LINQ Projesi türleri arasında bazı derleme başvuruları ve içeri aktarılan ad alanları (Visual Basic) veya [](../../../csharp/language-reference/keywords/using-directive.md) yönergeleri (C#) kullanılması gerekir. LINQ için en düşük gereksinim *System. Core. dll* ve için `using` <xref:System.Linq>bir yönergedir.
+Farklı LINQ Projesi türleri arasında bazı derleme başvuruları ve içeri aktarılan ad alanları (Visual Basic) veya [](../../../csharp/language-reference/keywords/using-directive.md) yönergeleri (C#) kullanılması gerekir. LINQ için en düşük gereksinim, *System. Core. dll* ve <xref:System.Linq>için bir `using` yönergesine başvurudur.
 
-Bu gereksinimler, Visual Studio 2017 ' de yeni C# bir konsol uygulama projesi oluşturursanız varsayılan olarak sağlanır. Bir projeyi Visual Studio 'nun önceki bir sürümünden yükseltiyorsanız, bu LINQ ile ilgili başvuruları el ile sağlamanız gerekebilir.
+Bu gereksinimler, Visual Studio 2017 veya sonraki bir sürümde yeni C# bir konsol uygulama projesi oluşturursanız varsayılan olarak sağlanır. Bir projeyi Visual Studio 'nun önceki bir sürümünden yükseltiyorsanız, bu LINQ ile ilgili başvuruları el ile sağlamanız gerekebilir.
 
 LINQ to DataSet, *System. Data. dll* ve *System. Data. Datase, sions. dll*' ye iki ek başvuru gerektirir.
 
@@ -26,7 +26,7 @@ Mevcut bir projede LINQ to DataSet işlevselliği etkinleştirmek için bu adım
 
 1. **System. Core**, **System. Data**ve **System. Data. datasecımsions**'e başvurular ekleyin.
 
-   **Çözüm Gezgini**, **Başvurular** düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin. **Başvuru Yöneticisi** iletişim kutusunda, **System. Core**, **System. Data**ve **System. Data. Datasecccccdentitysions öğelerini**seçin. **Tamam**’ı seçin.
+   **Çözüm Gezgini**, **Başvurular** düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin. **Başvuru Yöneticisi** iletişim kutusunda, **System. Core**, **System. Data**ve **System. Data. Datasecccccdentitysions öğelerini**seçin. Seçin **Tamam**.
 
 1. **System. Data** ve **System. LINQ**için [using](../../../csharp/language-reference/keywords/using-directive.md) yönergelerini (veya Visual Basic [deyimlerini içeri aktarır](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) ) ekleyin.
 
@@ -35,7 +35,7 @@ Mevcut bir projede LINQ to DataSet işlevselliği etkinleştirmek için bu adım
    using System.Linq;
    ```
 
-1. İsteğe bağlı olarak, `using` veritabanına nasıl bağlandığınıza bağlı olarak **System. Data. Common** veya **System. Data. SqlClient**için bir yönerge (veya `Imports` bildiri) ekleyin.
+1. İsteğe bağlı olarak, veritabanına nasıl bağlandığınıza bağlı olarak **System. Data. Common** veya **System. Data. SqlClient**için `using` yönergesini (veya `Imports` bildirisini) ekleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

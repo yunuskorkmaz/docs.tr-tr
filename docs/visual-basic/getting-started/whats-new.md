@@ -8,18 +8,18 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 1efcee0ac3bdba1b7e1379a0ac072ea714add756
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 45763504c2d25596b0adfb4b8a0236b332d89e8c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423911"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802052"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic yenilikler
 
 Bu konu, dilin en son sürümlerindeki yeni ve geliştirilmiş özelliklerin ayrıntılı açıklamaları ile her bir Visual Basic sürümü için temel özellik adlarını listeler.
 
-## <a name="current-version"></a>Güncel sürüm
+## <a name="current-version"></a>Geçerli sürüm
 
 Visual Basic 16,0/Visual Studio 2019 sürüm 16,0 \
 Yeni özellikler için bkz. [Visual Basic 16,0](#visual-basic-160).
@@ -84,7 +84,7 @@ End Sub
 
 **En iyileştirilmiş kayan noktalı tamsayı dönüştürme**
 
-Visual Basic önceki sürümlerinde, [çift](../language-reference/data-types/double-data-type.md) ve [tek](../language-reference/data-types/single-data-type.md) değerlerin tamsayılara, görece düşük performansa göre dönüştürülmesi gerekir. Visual Basic 15,8, aşağıdaki yöntemlerden herhangi biri tarafından döndürülen değeri [iç Visual Basic tamsayı dönüştürme işlevlerinden](../language-reference/functions/type-conversion-functions.md) birine geçirdiğinizde (CByte, CShort, CInt,) kayan nokta dönüştürmelerinden oluşan performansı önemli ölçüde artırır. CLng, CSByte, CUShort, CUInt, Külng) ya da aşağıdaki yöntemlerin herhangi biri tarafından döndürülen değer, [kesin seçenek](../language-reference/statements/option-strict-statement.md) `Off` olarak ayarlandığında tam sayı türüne dolaylı olarak dönüştürülebilir:
+Visual Basic önceki sürümlerinde, [çift](../language-reference/data-types/double-data-type.md) ve [tek](../language-reference/data-types/single-data-type.md) değerlerin tamsayılara, görece düşük performansa göre dönüştürülmesi gerekir. Visual Basic 15,8, aşağıdaki yöntemlerin herhangi biriyle döndürülen değeri [iç Visual Basic tamsayı dönüştürme işlevlerinden](../language-reference/functions/type-conversion-functions.md) birine (CByte,) geçirdiğinizde, kayan nokta dönüştürmelerinden sayıların performansını önemli ölçüde artırır. CShort, CInt, CLng, CSByte, CUShort, CUInt, külng) veya aşağıdaki yöntemlerden herhangi biri tarafından döndürülen değer, [kesin seçenek](../language-reference/statements/option-strict-statement.md) `Off`olarak ayarlandığında tam sayı türüne dolaylı olarak dönüştürülebilir:
 
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
@@ -148,7 +148,7 @@ Alt çizgi karakterini baştaki ayırıcı olarak kullanmak için, Visual Basic 
 
 [**Adlandırılmış demet çıkarımı**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
-Kayıt düzeni öğelerinin değerini değişkenlerden atadığınızda, Visual Basic demet öğelerinin adını karşılık gelen değişken adlarından anlar. bir demet öğesini açıkça adlandırmak zorunda değilsiniz. Aşağıdaki örnek, üç adlandırılmış öğe, `state`, `stateName` ve `capital` içeren bir tanımlama grubu oluşturmak için çıkarımı kullanır.
+Kayıt düzeni öğelerinin değerini değişkenlerden atadığınızda, Visual Basic demet öğelerinin adını karşılık gelen değişken adlarından anlar. bir demet öğesini açıkça adlandırmak zorunda değilsiniz. Aşağıdaki örnek, üç adlandırılmış öğe, `state`, `stateName`ve `capital`içeren bir tanımlama grubu oluşturmak için çıkarımı kullanır.
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
@@ -228,7 +228,7 @@ Dize sabit değerleri, yeni satır dizileri içerebilir.  Artık `<xml><![CDATA[
 
 **Daha akıllı tam ad çözümlemesi**
 
-"Threading" ad alanını aramak için kullanılan Visual Basic `Threading.Thread.Sleep(1000)` gibi bilinen kod, System. Threading ve System. Windows. Threading arasında belirsizliğe sahip olup bir hata bildirin.  Visual Basic artık olası ad alanlarını birlikte kabul eder.  Tamamlanma listesini gösterdiğinizde, Visual Studio Düzenleyicisi tamamlama listesindeki her iki türden üyeleri listeler.
+"Threading" ad alanını aramak için kullanılan Visual Basic `Threading.Thread.Sleep(1000)`gibi bilinen kod, System. Threading ve System. Windows. Threading arasında belirsizliğe sahip olup bir hata bildirin.  Visual Basic artık olası ad alanlarını birlikte kabul eder.  Tamamlanma listesini gösterdiğinizde, Visual Studio Düzenleyicisi tamamlama listesindeki her iki türden üyeleri listeler.
 
 **Yıl-ilk tarih sabit değerleri**
 
@@ -238,11 +238,11 @@ Tarih sabit değerlerini YYYY-AA-GG biçiminde (`#2015-03-17 16:10 PM#`) kullana
 
 Salt okunur Arabirim özelliklerini bir ReadWrite özelliğini kullanarak uygulayabilirsiniz. Arabirim minimum işlevselliği garanti eder ve bir uygulama sınıfının ayarlanmasının izin vermesini durdurmaz.
 
-[TypeOf \<expr > IsNot \<type >](../../visual-basic/language-reference/operators/typeof-operator.md)
+[TypeOf \<Expr > IsNot \<türü >](../../visual-basic/language-reference/operators/typeof-operator.md)
 
-Kodunuzun daha okunaklı olması için artık `IsNot` `TypeOf` kullanabilirsiniz.
+Kodunuzun daha okunaklı olması için artık `IsNot``TypeOf` kullanabilirsiniz.
 
-[#Disable uyarı \<ID > ve #Enable uyarı \<ID >](../../visual-basic/language-reference/directives/index.md)
+[#Disable uyarı \<KIMLIK > ve #Enable uyarı \<KIMLIĞI >](../../visual-basic/language-reference/directives/index.md)
 
 Kaynak dosya içindeki bölgeler için belirli uyarıları devre dışı bırakabilir ve etkinleştirebilirsiniz.
 
@@ -291,4 +291,5 @@ Artık derleyici, çağrı yapılacak en uygun `GetDetails` seçmek için normal
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 2017 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2017)
+- [Visual Studio 2017'deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2017)
+- [Visual Studio 2019 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2019)

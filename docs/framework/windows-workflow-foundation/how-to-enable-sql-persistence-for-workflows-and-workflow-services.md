@@ -2,18 +2,18 @@
 title: 'Nasıl yapılır: Iş akışları ve Iş akışı hizmetleri için SQL kalıcılığını etkinleştirme'
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 4dc5648d748372828c5b9a36441bfb02eef045e1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: bef95dbeaaa96678a66ba94494a0207c7314c326
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460882"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802589"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Nasıl yapılır: Iş akışları ve Iş akışı hizmetleri için SQL kalıcılığını etkinleştirme
 
 Bu konuda, hem programlama yoluyla hem de bir yapılandırma dosyası kullanarak, iş akışlarınız ve iş akışı hizmetlerinize yönelik kalıcılığı etkinleştirmek için SQL Iş akışı örnek deposu özelliğinin nasıl yapılandırılacağı açıklanmaktadır.
 
-Windows Server App Fabric, kalıcılığı yapılandırma sürecini basitleştirir. Daha fazla bilgi için bkz. [App Fabric Kalıcılık Yapılandırması](https://go.microsoft.com/fwlink/?LinkId=201204).
+Windows Server App Fabric, kalıcılığı yapılandırma sürecini basitleştirir. Daha fazla bilgi için bkz. [App Fabric Kalıcılık Yapılandırması](https://docs.microsoft.com/previous-versions/appfabric/ee790848(v=azure.10)).
 
 SQL Iş akışı örneği deposu özelliğini kullanmadan önce, özelliğin iş akışı örneklerini kalıcı hale getirmek için kullandığı bir veritabanı oluşturun. [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Kurulum programı SQL Iş akışı örneği deposu özelliğiyle ilişkili SQL komut dosyalarını%WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN klasörüne kopyalar. Bu betik dosyalarını, SQL Workflow örnek deposunun iş akışı örneklerini kalıcı hale getirmek için kullanmasını istediğiniz bir SQL Server 2005 veya SQL Server 2008 veritabanında çalıştırın. Önce SqlWorkflowInstanceStoreSchema. SQL dosyasını çalıştırın ve ardından Sqlworkflowcestorelogic. SQL dosyasını çalıştırın.
 
@@ -152,7 +152,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> Web. config dosyasında kullanıcı adları ve parolalar gibi hassas bilgileri saklamayın olmanız önerilir. Gizli bilgileri Web. config dosyasında depolarsanız, dosya sistemi Access Control listeleri (ACL 'Ler) kullanarak Web. config dosyasına erişimi güvenli hale getirin. Ayrıca, bir yapılandırma dosyası içindeki yapılandırma değerlerini, [korunan yapılandırma kullanarak yapılandırma bilgilerini şifreleme](https://go.microsoft.com/fwlink/?LinkId=178419)bölümünde belirtildiği gibi da güvenli hale getirebilirsiniz.
+> Web. config dosyasında kullanıcı adları ve parolalar gibi hassas bilgileri saklamayın olmanız önerilir. Gizli bilgileri Web. config dosyasında depolarsanız, dosya sistemi Access Control listeleri (ACL 'Ler) kullanarak Web. config dosyasına erişimi güvenli hale getirin. Ayrıca, bir yapılandırma dosyası içindeki yapılandırma değerlerini, [korunan yapılandırma kullanarak yapılandırma bilgilerini şifreleme](https://docs.microsoft.com/en-us/previous-versions/aspnet/53tyfkaw(v=vs.100))bölümünde belirtildiği gibi da güvenli hale getirebilirsiniz.
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>SQL Iş akışı örnek deposu özelliğiyle Ilgili Machine. config öğeleri
 

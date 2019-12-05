@@ -2,12 +2,12 @@
 title: İş Akışı için İzlemeyi Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 97b25873e9f20d5d390b7a59531b3a5af32296df
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458905"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802680"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>İş Akışı için İzlemeyi Yapılandırma
 
@@ -50,7 +50,7 @@ instance.Extensions.Add(trackingParticipant);
 
 ### <a name="configuring-workflow-service-tracking"></a>Iş akışı hizmeti Izlemeyi yapılandırma
 
-Bir iş akışı, <xref:System.ServiceModel.Activities.WorkflowServiceHost> hizmeti konağında barındırıldığında bir WCF hizmeti olarak gösterilebilir. <xref:System.ServiceModel.Activities.WorkflowServiceHost>, iş akışı tabanlı hizmet için özelleşmiş bir .NET ServiceHost uygulamasıdır. Bu bölümde, <xref:System.ServiceModel.Activities.WorkflowServiceHost>çalıştıran bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı hizmeti için izlemenin nasıl yapılandırılacağı açıklanmaktadır. Bir Web. config dosyası (Web 'de barındırılan bir hizmet için) veya bir App. config dosyası aracılığıyla, bir hizmet davranışı belirterek veya ' ye izlemeye özgü bir davranış ekleyerek kod aracılığıyla bir uygulama. config dosyası (konsol uygulaması gibi tek başına bir uygulamada barındırılan bir hizmet için) ile yapılandırılır. hizmet ana bilgisayarı için <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> koleksiyonu.
+Bir iş akışı, <xref:System.ServiceModel.Activities.WorkflowServiceHost> hizmeti konağında barındırıldığında bir WCF hizmeti olarak gösterilebilir. <xref:System.ServiceModel.Activities.WorkflowServiceHost>, iş akışı tabanlı hizmet için özelleşmiş bir .NET ServiceHost uygulamasıdır. Bu bölümde, <xref:System.ServiceModel.Activities.WorkflowServiceHost>çalıştıran bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı hizmeti için izlemenin nasıl yapılandırılacağı açıklanmaktadır. Bir Web. config dosyası (Web 'de barındırılan bir hizmet için) veya bir App. config dosyası aracılığıyla veya hizmet ana bilgisayarı için <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> koleksiyonuna izlemeye özgü bir davranış ekleyerek bir hizmet davranışı belirterek veya kod aracılığıyla (konsol uygulaması gibi tek başına bir uygulamada barındırılan bir hizmet için) ile yapılandırılır.
 
 <xref:System.ServiceModel.WorkflowServiceHost>barındırılan bir iş akışı hizmeti için, aşağıdaki örnekte gösterildiği gibi, bir yapılandırma dosyasındaki <`behavior`> öğesini kullanarak <xref:System.Activities.Tracking.EtwTrackingParticipant> ekleyebilirsiniz.
 
@@ -134,7 +134,7 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> İzleme profilleri hakkında daha fazla bilgi için bkz. [Izleme profilleri](https://go.microsoft.com/fwlink/?LinkId=201310).
+> İzleme profilleri hakkında daha fazla bilgi için bkz. [Izleme profilleri](tracking-profiles.md).
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Workflowwınvoker kullanarak izlemeyi yapılandırma
 
@@ -196,7 +196,7 @@ Olayların belirli bir uygulama günlüğüne yazılması gerekiyorsa, yeni sağ
     </system.serviceModel>
     ```
 
-2. Bildirim dosyasını%windir%\Microsoft.NET\Framework\\\<en son [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man sürümünden geçici bir konuma kopyalayın ve şu şekilde yeniden adlandırın Microsoft. Windows. ApplicationServer. Applications_Provider1. Man
+2. Bildirim dosyasını%windir%\Microsoft.NET\Framework\\\<en son [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man sürümünden geçici bir konuma kopyalayın ve Microsoft. Windows. ApplicationServer. Applications_Provider1. man olarak yeniden adlandırın
 
 3. Bildirim dosyasındaki GUID 'yi yeni GUID ile değiştirin.
 
@@ -222,7 +222,7 @@ Olayların belirli bir uygulama günlüğüne yazılması gerekiyorsa, yeni sağ
 
 6. Aşağıdaki adımları izleyerek kaynak DLL 'sini oluşturun.
 
-    1. Windows SDK 'i yükler. Windows SDK, ileti derleyicisini ([mc. exe](https://go.microsoft.com/fwlink/?LinkId=184606)) ve kaynak derleyicisini ([rc. exe](https://go.microsoft.com/fwlink/?LinkId=184605)) içerir.
+    1. Windows SDK 'i yükler. Windows SDK, ileti derleyicisini ([mc. exe](/windows/win32/wes/message-compiler--mc-exe-)) ve kaynak derleyicisini ([rc. exe](/windows/win32/menurc/using-rc-the-rc-command-line-)) içerir.
 
     2. Windows SDK komut isteminde, yeni bildirim dosyasında Mc. exe ' yi çalıştırın.
 
@@ -250,7 +250,7 @@ Olayların belirli bir uygulama günlüğüne yazılması gerekiyorsa, yeni sağ
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
         ```
 
-    7. Bildirimi kaydetmek için [wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) kullanın.
+    7. Bildirimi kaydetmek için [wevtutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10)) kullanın.
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
@@ -258,5 +258,5 @@ Olayların belirli bir uygulama günlüğüne yazılması gerekiyorsa, yeni sağ
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Server App Fabric Izleme](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [App Fabric ile uygulamaları izleme](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Windows Server App Fabric Izleme](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [App Fabric ile uygulamaları izleme](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

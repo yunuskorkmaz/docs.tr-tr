@@ -6,16 +6,16 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: a22474d943212e35310a0e8bcf6643c4a99c0389
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2da0f994e809ff0ea9cd3165cd788ac467a87aef
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039409"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800789"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Otomatik Test İçin UI Otomasyonunu Kullanma
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
  Bu genel bakışta, [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] otomatikleştirilmiş test senaryolarında programlı erişim için bir çerçeve olarak nasıl yararlı olacağı açıklanmaktadır.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73039409"
 > Diğer erişilebilirlik modelleriyle, geliştiricilerin doğrudan ayrı düğmeler, menüler veya diğer denetimlerden bilgi toplaması gerekir. Ne yazık ki her denetim türü düzinelerce küçük çeşitliliğe gelir. Diğer bir deyişle, bir basma düğmeli on çeşitlerinin hepsi aynı şekilde çalışabilir ve aynı işlevi gerçekleştirse de, bunların hepsi benzersiz denetimler olarak değerlendirilmelidir. Bu denetimlerin işlevsel olarak eşdeğer olduğu bilinmenin bir yolu yoktur. Denetim desenleri, bu ortak denetim davranışlarını temsil edecek şekilde geliştirilmiştir. Daha fazla bilgi için bkz. [UI Otomasyonu Denetim düzenlerine genel bakış](ui-automation-control-patterns-overview.md).  
   
 ### <a name="implementing-ui-automation"></a>UI Otomasyonu uygulama  
- Daha önce belirtildiği gibi, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]tarafından sunulan birleştirilmiş model olmadan test araçları ve geliştiricileri, bu çerçevede denetimlerin özelliklerini ve davranışlarını göstermek için çerçeveye özgü bilgileri bilmek için gereklidir. [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]ve Windows Presentation Foundation (WPF) dahil olmak üzere Windows işletim sistemleri içinde herhangi bir anda çeşitli farklı kullanıcı arabirimi çerçeveleri mevcut olduğundan, birden çok uygulamayı benzer görünüyor. Örneğin, aşağıdaki tablo, bir düğme denetimiyle ilişkilendirilen adı (veya metni) almak için gereken çerçeveye özgü özellik adlarını özetler ve tek eşdeğer [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliğini gösterir.  
+ Daha önce belirtildiği gibi, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]tarafından sunulan birleştirilmiş model olmadan test araçları ve geliştiricileri, bu çerçevede denetimlerin özelliklerini ve davranışlarını göstermek için çerçeveye özgü bilgileri bilmek için gereklidir. [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]ve Windows Presentation Foundation (WPF) dahil olmak üzere Windows işletim sistemleri içinde herhangi bir anda çeşitli farklı kullanıcı arabirimi çerçeveleri mevcut olduğundan, benzer denetimlerle birden çok uygulamayı test etmek için zaman korkdırıcı bir görev olabilir. Örneğin, aşağıdaki tablo, bir düğme denetimiyle ilişkilendirilen adı (veya metni) almak için gereken çerçeveye özgü özellik adlarını özetler ve tek eşdeğer [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliğini gösterir.  
   
 |UI Otomasyonu Denetim türü|UI çerçevesi|Çerçeveye özgü özellik|UI Otomasyon özelliği|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "73039409"
   
  Otomatikleştirilmiş uygulamalardan oluşan karmaşıkma, bir testi dinamik hedefle eşitlerken zorluk ortaya çıkar. Örneğin, şu anda çalışan uygulamaların bir listesini görüntüleyen Windows Görev Yöneticisi 'nde yer alan bir liste kutusu denetimi. Liste kutusundaki öğeler test uygulaması denetimi dışında dinamik olarak güncelleştirildiğinden, liste kutusunda belirli bir öğe seçimini herhangi bir tutarlılık ile tekrarlamaya çalışmak imkansız olur. Ayrıca, test uygulamasının denetimi dışında bir [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] basit odak değişikliklerini tekrarlamaya çalışırken de benzer sorunlar ortaya çıkabilir.  
   
-### <a name="programmatic-access"></a>Programlı erişim  
+### <a name="programmatic-access"></a>Programlı Erişim  
  Programlı erişim, geleneksel fare ve klavye girişi tarafından sunulan herhangi bir etkileşimi ve deneyimi kod aracılığıyla taklit etme yeteneği sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] beş bileşen aracılığıyla programlı erişime izin verebilir:  
   
 - [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]yapısına gezinmeyi kolaylaştırır. Ağaç, hWnd 'nin koleksiyonundan oluşturulmuştur. Daha fazla bilgi için bkz. [UI Otomasyon ağacına genel bakış](ui-automation-tree-overview.md)  

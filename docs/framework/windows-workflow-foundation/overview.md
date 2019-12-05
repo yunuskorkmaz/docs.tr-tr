@@ -2,45 +2,45 @@
 title: Windows Workflow’a Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: 285ab75f7f67bbb9ffa18367eff126c04227f193
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: ada5ec75d130c9c518c5129db6c12b61c3acbf45
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876150"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802537"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow’a Genel Bakış
-Bir iş akışı olarak adlandırılan elemental birimler kümesidir *etkinlikleri* gerçek hayattaki bir işleme açıklayan model olarak depolanır. İş akışları yürütme düzenini ve kısa veya uzun süren iş parçaları arasındaki bağımlı ilişkileri açıklamak için bir yol sağlar. Bu iş modeliyle baştan geçirir ve etkinlikleri sistem işlevlerini veya kişiler tarafından yürütülmesi gerekir.  
+İş akışı, gerçek dünyada bir işlemi açıklayan bir model olarak depolanan *Etkinlikler* adlı bir dizi eleme birimi kümesidir. İş akışları, kısa veya uzun süreli iş parçaları arasında yürütme sırasını ve bağımlı ilişkileri açıklayan bir yol sağlar. Bu iş, başlangıçtan sona kadar modelden geçer ve Etkinlikler kişiler veya sistem işlevleri tarafından yürütülebilir.  
   
 ## <a name="workflow-run-time-engine"></a>İş akışı çalışma zamanı altyapısı  
- Çalışan her iş akışı örneği oluşturulur ve ana bilgisayar işlemi aşağıdakilerden biri etkileşim, bir işlem çalışma zamanı altyapısı tarafından korunur:  
+ Çalışan her iş akışı örneği, ana bilgisayar işleminin aşağıdakilerden biri aracılığıyla etkileşimde bulunduğu işlem içi çalışma zamanı altyapısı tarafından oluşturulur ve sürdürülür:  
   
-- A <xref:System.Activities.WorkflowInvoker>, iş akışı gibi bir yöntem çağırır.  
+- Bir yöntemi gibi iş akışını çağıran <xref:System.Activities.WorkflowInvoker>.  
   
-- A <xref:System.Activities.WorkflowApplication> yürütme tek bir iş akışı örneğinin üzerinde kesin denetim.  
+- Tek bir iş akışı örneğinin yürütülmesi üzerinde açık denetim için bir <xref:System.Activities.WorkflowApplication>.  
   
-- A <xref:System.ServiceModel.WorkflowServiceHost> ileti tabanlı etkileşimler çok örnekli senaryolarda için.  
+- Çok örnekli senaryolarda ileti tabanlı etkileşimler için bir <xref:System.ServiceModel.WorkflowServiceHost>.  
   
- Bu sınıfların her birini olarak temsil edilen temel etkinlik çalışma zamanı saran bir <xref:System.Activities.ActivityInstance> Etkinlik yürütme sorumludur. Birkaç da olabilir <xref:System.Activities.ActivityInstance> eşzamanlı olarak çalışan bir uygulama etki alanı içindeki nesneleri.  
+ Bu sınıfların her biri, etkinlik yürütmeden sorumlu bir <xref:System.Activities.ActivityInstance> olarak temsil edilen çekirdek etkinlik çalışma zamanını sarmalanmış olarak kaydırır. Aynı anda çalışan bir uygulama etki alanı içinde birkaç <xref:System.Activities.ActivityInstance> nesne bulunabilir.  
   
- Önceki üç konak etkileşimi nesnelerin her biri, bir iş akışı program olarak başvurulan etkinliklerin ağacından oluşturulur. Bu tür veya sarmalayan bir özel konak kullanarak <xref:System.Activities.ActivityInstance>, iş akışı konsol uygulamaları, form tabanlı uygulamalar, Windows Hizmetleri, ASP.NET Web siteleri ve Windows Communication Foundation (WCF) dahil olmak üzere herhangi bir Windows işlem içinde yürütülebilir Hizmetler.  
+ Önceki üç ana bilgisayar etkileşimi nesnesinin her biri, iş akışı programı olarak adlandırılan bir etkinlik ağacından oluşturulur. Bu türleri veya <xref:System.Activities.ActivityInstance>sarmalayan özel bir ana bilgisayarı kullanarak, iş akışları konsol uygulamaları, Forms tabanlı uygulamalar, Windows Hizmetleri, ASP.NET Web siteleri ve Windows Communication Foundation (WCF) hizmetleri dahil olmak üzere herhangi bir Windows işlemi içinde yürütülebilir.  
   
- ![İş akışı ana bilgisayarı işlemi bileşenlerde](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
-Ana bilgisayar işlemdeki iş akışı bileşenleri  
+ ![Konak işlemindeki iş akışı bileşenleri](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178B-4487-87ED-3e33015a3842")  
+Konak işlemindeki iş akışı bileşenleri  
   
-## <a name="interaction-between-workflow-components"></a>İş akışı bileşenleri arasındaki etkileşimi  
- Aşağıdaki diyagramda, iş akışı bileşenlerinin birbirleriyle nasıl etkileşim kurduklarını gösterir.  
+## <a name="interaction-between-workflow-components"></a>Iş akışı bileşenleri arasındaki etkileşim  
+ Aşağıdaki diyagramda, iş akışı bileşenlerinin birbirleriyle nasıl etkileşim kurduğu gösterilmektedir.  
   
- ![İş akışı bileşenlerinin nasıl etkileştiğini gösteren diyagram.](./media/overview/workflow-component-interatction.gif)  
+ ![İş akışı bileşenlerinin nasıl etkileşime gireceğini gösteren diyagram.](./media/overview/workflow-component-interatction.gif)  
   
- Yukarıdaki diyagramda <xref:System.Activities.WorkflowInvoker.Invoke%2A> yöntemi <xref:System.Activities.WorkflowInvoker> sınıfı, birden çok iş akışı örnekleri çağırmak için kullanılır. <xref:System.Activities.WorkflowInvoker> ana bilgisayardan yönetim gerektirmeyen basit iş akışları için kullanılır; ana bilgisayardan yönetim gereken iş akışları (gibi <xref:System.Activities.Bookmark> sürdürme) kullanarak yürütülmelidir <xref:System.Activities.WorkflowApplication.Run%2A> yerine. Bir iş akışı örneği başka çağırmadan önce tamamlanmasını beklemeniz gerekmez; çalışma zamanı altyapısı, birden çok iş akışı örneği eşzamanlı olarak çalıştırılmasını destekler.  Çağrılan iş akışı aşağıdaki gibidir:  
+ Önceki diyagramda, <xref:System.Activities.WorkflowInvoker> sınıfının <xref:System.Activities.WorkflowInvoker.Invoke%2A> yöntemi birkaç iş akışı örneğini çağırmak için kullanılır. <xref:System.Activities.WorkflowInvoker>, konaktan yönetim gerektirmeyen hafif iş akışları için kullanılır; ana bilgisayardan (örneğin, <xref:System.Activities.Bookmark> sürdürme) yönetilmesi gereken iş akışlarının, bunun yerine <xref:System.Activities.WorkflowApplication.Run%2A> kullanılarak yürütülmesi gerekir. Bir iş akışı örneğinin başka bir çağırmadan önce tamamlanmasını beklemek gerekmez; çalışma zamanı altyapısı birden çok iş akışı örneğinin aynı anda çalıştırılmasını destekler.  Çağrılan iş akışları aşağıdaki gibidir:  
   
-- A <xref:System.Activities.Statements.Sequence> içeren etkinlik bir <xref:System.Activities.Statements.WriteLine> alt etkinlik. A <xref:System.Activities.Variable> etkinliğin üst öğesinin bağlı olduğu bir <xref:System.Activities.InArgument> alt etkinlik. Hakkında değişkenleri, bağımsız değişkenleri ve bağlama hakkında daha fazla bilgi için bkz. [değişkenleri ve bağımsız değişkenler](variables-and-arguments.md).  
+- Bir <xref:System.Activities.Statements.WriteLine> alt etkinliği içeren <xref:System.Activities.Statements.Sequence> etkinliği. Üst etkinliğin bir <xref:System.Activities.Variable> alt etkinliğin bir <xref:System.Activities.InArgument> bağlanır. Değişkenler, bağımsız değişkenler ve bağlama hakkında daha fazla bilgi için bkz. [değişkenler ve bağımsız değişkenler](variables-and-arguments.md).  
   
-- Özel bir etkinlik olarak adlandırılan `ReadLine`. Bir <xref:System.Activities.OutArgument> , `ReadLine` etkinlik çağırmak için döndürülen <xref:System.Activities.WorkflowInvoker.Invoke%2A> yöntemi.  
+- `ReadLine`adlı özel bir etkinlik. `ReadLine` etkinliğinin <xref:System.Activities.OutArgument> çağıran <xref:System.Activities.WorkflowInvoker.Invoke%2A> metoduna döndürülür.  
   
-- Öğesinden türetilen özel bir etkinlik <xref:System.Activities.CodeActivity> soyut sınıf. <xref:System.Activities.CodeActivity> Çalışma zamanı özelliklerine (örneğin, izleme ve Özellikler) erişebilirsiniz kullanarak <xref:System.Activities.CodeActivityContext> bir parametresi olarak kullanılabilen <xref:System.Activities.CodeActivity.Execute%2A> yöntemi. Bu çalışma zamanı özellikleri hakkında daha fazla bilgi için bkz: [takip ve izleme iş akışı](workflow-tracking-and-tracing.md) ve [iş akışı yürütme özellikleri](workflow-execution-properties.md).  
+- <xref:System.Activities.CodeActivity> soyut sınıfından türetilen özel bir etkinlik. <xref:System.Activities.CodeActivity>, <xref:System.Activities.CodeActivity.Execute%2A> yönteminin bir parametresi olarak kullanılabilir <xref:System.Activities.CodeActivityContext> kullanarak çalışma zamanı özelliklerine (izleme ve özellikler gibi) erişebilir. Bu çalışma zamanı özellikleri hakkında daha fazla bilgi için bkz. [Iş akışı izleme ve izleme](workflow-tracking-and-tracing.md) ve [Iş akışı yürütme özellikleri](workflow-execution-properties.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [BizTalk Server 2006 veya WF? Projeniz için doğru iş akışı aracı seçme](https://go.microsoft.com/fwlink/?LinkId=154901)
+- [2006 veya WF BizTalk Server? Projeniz için doğru Iş akışı aracını seçme](https://docs.microsoft.com/previous-versions/dotnet/articles/cc303238(v=msdn.10))

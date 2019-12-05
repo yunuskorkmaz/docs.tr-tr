@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 0a065676d81b36f32729bb08c23025825e94d3bc
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: e01b3a39a004e963e5bb66c5fa71433cb4e7204a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320452"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802381"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5'teki Yenilikler
 
@@ -78,7 +78,7 @@ WebSockets, TCP 'ye benzer performans özellikleriyle 80 ve 443 bağlantı nokta
 
 Aşağıdaki tablo, değişen ayarları ve ek bilgilerin nerede bulunacağını açıklar.
 
-|Özellik|Açık|Yeni varsayılan|Daha fazla bilgi için bkz.|
+|Özellik|Açık|Yeni varsayılan|Daha fazla bilgi için, bkz.|
 |--------------|--------|-----------------|------------------------------|
 |ChannelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 saniye|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * işlemci sayısı|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
@@ -114,7 +114,7 @@ WCF ikili Kodlayıcısı 4,5 ile başlayarak sıkıştırma için destek ekler. 
 
 ## <a name="udp"></a>UDP
 
-, Geliştiricilerin "yangın ve unut" iletilerini kullanan hizmetler yazmasına olanak tanıyan bir UDP taşıması için destek eklenmiştir. İstemci, hizmete bir ileti gönderir ve hizmetten yanıt vermez.
+, Geliştiricilerin "yangın ve unut" iletilerini kullanan hizmetler yazmasına olanak tanıyan bir UDP taşıması için destek eklenmiştir. İstemci bir hizmete ileti gönderir ve hizmetten yanıt beklemez.
 
 ## <a name="multiple-authentication-support"></a>Çoklu kimlik doğrulama desteği
 
@@ -126,7 +126,7 @@ Uluslararası etki alanı adlarıyla WCF hizmetlerine izin vermek için destek e
 
 ## <a name="httpclient"></a>HttpClient
 
-HTTP istekleriyle çalışmayı çok daha kolay hale getirmek için <xref:System.Net.Http.HttpClient> adlı yeni bir sınıf eklenmiştir. Daha fazla bilgi için bkz. [Uygulamaları Sosyal ve HTTP Hizmetleri ile bağlantılı hale getirme](https://go.microsoft.com/fwlink/?LinkId=231886) ve [http istemci örneği](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664).
+HTTP istekleriyle çalışmayı çok daha kolay hale getirmek için <xref:System.Net.Http.HttpClient> adlı yeni bir sınıf eklenmiştir. Daha fazla bilgi için bkz. [Uygulamaları Sosyal ve HTTP Hizmetleri ile bağlantılı hale getirme](https://channel9.msdn.com/Events/BUILD/BUILD2011/PLAT-581T) ve [http istemci örneği](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664).
 
 ## <a name="configuration-intellisense"></a>Yapılandırma IntelliSense
 

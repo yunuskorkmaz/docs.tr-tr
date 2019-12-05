@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714484"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802758"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği
 
@@ -137,7 +137,7 @@ Yönetilen Windows Çalışma Zamanı bileşenleri için desteklenen senaryolar 
 - Bileşeninizdeki türler Windows Çalışma Zamanı türlerinden türetilebilir. Denetimler <xref:Windows.UI.Xaml.Controls.Primitives> ad alanındaki temel denetim türlerinden veya <xref:Windows.UI.Xaml.Controls.Button>gibi daha fazla tamamlanmış denetimden türetilebilir.
 
   > [!IMPORTANT]
-  > [!INCLUDE[win8](../../../includes/win8-md.md)] ve .NET Framework 4,5 ' den başlayarak, bir yönetilen Windows Çalışma Zamanı bileşenindeki tüm ortak türler mühürlenmelidir. Başka bir Windows Çalışma Zamanı bileşenindeki bir tür onlardan türetilemez. Eğer bileşeninizde polimorfik davranış sağlamak istiyorsanız, bir arabirim oluşturabilir ve bu arabirimi polimorfik türlere uygulayabilirsiniz.
+  > Windows 8 ve .NET Framework 4,5 ' den başlayarak, yönetilen bir Windows Çalışma Zamanı bileşenindeki tüm ortak türler mühürlenmelidir. Başka bir Windows Çalışma Zamanı bileşenindeki bir tür onlardan türetilemez. Eğer bileşeninizde polimorfik davranış sağlamak istiyorsanız, bir arabirim oluşturabilir ve bu arabirimi polimorfik türlere uygulayabilirsiniz.
 
 - Bileşeninizdeki ortak türlerin tüm parametreleri ve dönüş türleri Windows Çalışma Zamanı türler olmalıdır (bileşeninizin tanımladığı Windows Çalışma Zamanı türler dahil).
 

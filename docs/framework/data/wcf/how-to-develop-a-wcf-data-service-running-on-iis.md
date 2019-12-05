@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: IIS üzerinde çalışan bir WCF Veri Hizmeti Geliştirme'
+title: "Nasıl yapılır: IIS 'de çalışan bir WCF veri hizmeti geliştirme"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 89be7aa8339a4edf6d6ab9c0c243e4320d2fdfa8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 684361dbb97e70296a3061f71102662023f88d9a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052969"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800518"
 ---
-# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Nasıl yapılır: IIS üzerinde çalışan bir WCF veri hizmeti geliştirme
+# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Nasıl yapılır: IIS 'de çalışan bir WCF veri hizmeti geliştirme
 
 Bu konu, Internet Information Services (IIS) üzerinde çalışan bir ASP.NET Web uygulaması tarafından barındırılan Northwind örnek veritabanına dayalı bir veri hizmeti oluşturmak için WCF Veri Hizmetleri nasıl kullanacağınızı gösterir. ASP.NET geliştirme sunucusunda çalışan bir ASP.NET Web uygulaması olarak aynı Northwind Data Service 'in nasıl oluşturulacağı hakkında bir örnek için [WCF veri hizmetleri hızlı başlangıç](quickstart-wcf-data-services.md)bölümüne bakın.
 
@@ -25,19 +25,19 @@ Bu konu, Internet Information Services (IIS) üzerinde çalışan bir ASP.NET We
 
 Bu konuda, Entity Framework sağlayıcısı kullanılarak bir veri hizmetinin nasıl oluşturulacağı gösterilmektedir. Diğer veri hizmetleri sağlayıcıları kullanılabilir. Daha fazla bilgi için bkz. [veri hizmetleri sağlayıcıları](data-services-providers-wcf-data-services.md).
 
-Hizmeti oluşturduktan sonra, veri hizmeti kaynaklarına açıkça erişim sağlamanız gerekir. Daha fazla bilgi için [nasıl yapılır: Veri hizmetine](how-to-enable-access-to-the-data-service-wcf-data-services.md)erişimi etkinleştirin.
+Hizmeti oluşturduktan sonra, veri hizmeti kaynaklarına açıkça erişim sağlamanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: veri hizmetine erişimi etkinleştirme](how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>IIS üzerinde çalışan ASP.NET Web uygulaması oluşturma
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni** > **Proje**' yi seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni** > **projesi**' ni seçin.
 
 2. **Yeni proje** iletişim kutusunda, **yüklü** > [ **C# Visual** veya **Visual Basic**] > **Web** kategorisini seçin.
 
 3. **ASP.NET Web uygulaması** şablonunu seçin.
 
-4. Projenin `NorthwindService` adı olarak girin.
+4. Projenin adı olarak `NorthwindService` girin.
 
-5. **Tamam**'ı tıklatın.
+5. **Tamam**'a tıklayın.
 
 6. **Proje** menüsünde, **NorthwindService özellikleri**' ni seçin.
 
@@ -122,17 +122,17 @@ Hizmeti oluşturduktan sonra, veri hizmeti kaynaklarına açıkça erişim sağl
 
 ## <a name="define-the-data-model"></a>Veri modelini tanımlama
 
-1. **Çözüm Gezgini**, ASP.net projesinin adına sağ tıklayın ve ardından**Yeni öğe** **Ekle** > ' ye tıklayın.
+1. **Çözüm Gezgini**, ASP.net projesinin adına sağ tıklayın ve ardından > **Yeni öğe** **Ekle** ' ye tıklayın.
 
 2. **Yeni öğe Ekle** iletişim kutusunda **ADO.net varlık veri modeli**' yi seçin.
 
-3. Veri modeli adı için, yazın `Northwind.edmx`.
+3. Veri modeli adı için `Northwind.edmx`yazın.
 
 4. Varlık Veri Modeli sihirbazında, **veritabanından oluştur**' u seçin ve ardından **İleri**' ye tıklayın.
 
 5. Aşağıdaki adımlardan birini gerçekleştirerek veri modelini veritabanına bağlayın ve ardından **İleri**' ye tıklayın:
 
-    - Zaten yapılandırılmış bir veritabanı bağlantınız yoksa **Yeni bağlantı** ' ya tıklayın ve yeni bir bağlantı oluşturun. Daha fazla bilgi için [nasıl yapılır: SQL Server veritabanlarına](https://go.microsoft.com/fwlink/?LinkId=123631)bağlantı oluşturun. Bu SQL Server örneğine Northwind örnek veritabanının eklenmiş olması gerekir.
+    - Zaten yapılandırılmış bir veritabanı bağlantınız yoksa **Yeni bağlantı** ' ya tıklayın ve yeni bir bağlantı oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: SQL Server veritabanlarına bağlantı oluşturma](https://go.microsoft.com/fwlink/?LinkId=123631). Bu SQL Server örneğine Northwind örnek veritabanının eklenmiş olması gerekir.
 
          \- veya -
 
@@ -144,20 +144,20 @@ Hizmeti oluşturduktan sonra, veri hizmeti kaynaklarına açıkça erişim sağl
 
 ## <a name="create-the-data-service"></a>Veri hizmetini oluşturma
 
-1. **Çözüm Gezgini**, ASP.net projenizin adına sağ tıklayın ve ardından**Yeni öğe** **Ekle** > ' ye tıklayın.
+1. **Çözüm Gezgini**, ASP.net projenizin adına sağ tıklayın ve ardından > **Yeni öğe** **Ekle** ' ye tıklayın.
 
 2. **Yeni öğe Ekle** iletişim kutusunda, **WCF veri hizmeti**' ni seçin.
 
    ![Visual Studio 2015 ' de WCF veri hizmeti öğe şablonu](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > **WCF veri hizmeti** şablonu visual Studio 2015 'de kullanılabilir, ancak visual Studio 2017 ' de kullanılamaz.
+   > **WCF veri hizmeti** şablonu visual Studio 2015 'de kullanılabilir, ancak visual Studio 2017 veya üzeri sürümlerde kullanılabilir.
 
-3. Hizmetin adı için girin `Northwind`.
+3. Hizmetin adı için `Northwind`girin.
 
      Visual Studio, yeni hizmet için XML işaretlemesini ve kod dosyalarını oluşturur. Varsayılan olarak, kod Düzenleyicisi penceresi açılır. **Çözüm Gezgini**, hizmetin adı, Northwind ve uzantısı. svc.cs veya. svc. vb ' dir.
 
-4. Veri Hizmeti kodunda, veri hizmetini tanımlayan sınıfın tanımındaki, bu `/* TODO: put your data source class name here */` örnekte olduğu `NorthwindEntities`gibi veri modelinin varlık kapsayıcısı olan türde olan açıklamayı değiştirin. Sınıf tanımı aşağıdaki gibi görünmelidir:
+4. Veri Hizmeti kodunda, veri hizmetinin varlık kapsayıcısı olan tür ile veri hizmetini tanımlayan sınıfın tanımındaki açıklama `/* TODO: put your data source class name here */` değiştirin. Bu durumda, `NorthwindEntities`. Sınıf tanımı aşağıdaki gibi görünmelidir:
 
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]

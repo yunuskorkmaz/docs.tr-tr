@@ -2,12 +2,12 @@
 title: Kaynak Tüketimini Denetleme ve Performansı Geliştirme
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: 976eb1e4a507d3c09bbc6e030985cbc3143b5946
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 16d6f29235455ff30e115b7aff3425412bc7ba6a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320612"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802263"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kaynak Tüketimini Denetleme ve Performansı Geliştirme
 Bu konuda, kaynak tüketimini denetlemek ve performans ölçümlerini etkilemek için çalışan Windows Communication Foundation (WCF) mimarisinin farklı alanlarındaki çeşitli özellikler açıklanmaktadır.
@@ -44,7 +44,8 @@ Bu konuda, kaynak tüketimini denetlemek ve performans ölçümlerini etkilemek 
  [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) , uygulama için derlenmiş derlemelerden gerekli serileştirme kodunu oluşturarak bu uygulamalar için başlangıç performansını iyileştirebilir. Daha fazla bilgi için bkz. [nasıl yapılır: XmlSerializer kullanarak WCF Istemci uygulamalarının başlangıç zamanını geliştirme](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).
 
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>WCF hizmetlerini ASP.NET altında barındırırken performans sorunları
- Bir WCF hizmeti IIS ve ASP.NET altında barındırıldığı zaman IIS ve ASP.NET yapılandırma ayarları, WCF hizmetinin aktarım hızını ve bellek parmak izini etkileyebilir.  ASP.NET performansı hakkında daha fazla bilgi için bkz. [ASP.net performansını geliştirme](https://go.microsoft.com/fwlink/?LinkId=186462).  İstem dışı sonuçlara sahip olabilecek bir ayar, <xref:System.Web.Configuration.ProcessModelSection>özelliği olan <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>. Uygulamanızda sabit veya az sayıda istemci varsa, <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 2 olarak ayarlamak, CPU kullanımı %100 ' a yakın olan çok işlemcili bir makineye bir verimlilik artışı sağlayabilir. Bu performans artışı bir maliyetle birlikte gelir: Ayrıca, bellek kullanımında artışa neden olur ve bu da ölçeklenebilirliği azaltabilir.
+
+Bir WCF hizmeti IIS ve ASP.NET altında barındırıldığı zaman IIS ve ASP.NET yapılandırma ayarları, WCF hizmetinin aktarım hızını ve bellek parmak izini etkileyebilir.  ASP.NET performansı hakkında daha fazla bilgi için bkz. [ASP.net performansını geliştirme](https://docs.microsoft.com/previous-versions/msp-n-p/ff647787(v=pandp.10)). İstem dışı sonuçlara sahip olabilecek bir ayar, <xref:System.Web.Configuration.ProcessModelSection>özelliği olan <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>. Uygulamanızda sabit veya az sayıda istemci varsa, <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 2 olarak ayarlamak, CPU kullanımı %100 ' a yakın olan çok işlemcili bir makineye bir verimlilik artışı sağlayabilir. Bu performans artışı bir maliyetle birlikte gelir: Ayrıca, bellek kullanımında artışa neden olur ve bu da ölçeklenebilirliği azaltabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

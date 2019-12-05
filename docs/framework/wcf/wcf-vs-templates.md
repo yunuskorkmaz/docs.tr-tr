@@ -2,12 +2,12 @@
 title: WCF Visual Studio Şablonları
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 1b4a600e4ed19b967bcaeb6d880ea181b7c2d61f
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: ec73036921632bc855e79239f1fc578587de7ca3
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197196"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802352"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio Şablonları
 Windows Communication Foundation (WCF) Visual Studio şablonları, Visual Studio 'da kolayca WCF Hizmetleri ve çevreleyen uygulamalar oluşturmak için kullanabileceğiniz, önceden tanımlanmış proje ve öğe şablonlarıdır.  
@@ -72,7 +72,7 @@ Windows Communication Foundation (WCF) Visual Studio şablonları, Visual Studio
  Akışlarınızın adresini değiştirirseniz, **Hata Ayıkla** sekmesindeki adresi de değiştirmelisiniz. Bunu yapmazsanız, Internet Explorer akışı varsayılan adreste açmaya çalışır ve başarısız olur.  
   
 ### <a name="ajax-enabled-wcf-service-item-template"></a>AJAX etkin WCF hizmeti öğe şablonu  
- Bu şablon, bir AJAX denetimini WCF hizmeti olarak kullanıma sunar. AJAX denetimleri hakkında daha fazla bilgi için bkz. [AJAX denetim belgeleri](https://go.microsoft.com/fwlink/?LinkId=96717).  
+ Bu şablon, bir AJAX denetimini WCF hizmeti olarak kullanıma sunar. AJAX denetimleri hakkında daha fazla bilgi için bkz. [AJAX denetim belgeleri](https://docs.microsoft.com/aspnet/ajax/).  
   
 ### <a name="silverlight-enabled-wcf-service-item-template"></a>Silverlight etkin WCF hizmeti öğe şablonu  
  Bu şablon, bir Silverlight istemcisine veya ön uca veri sağlayan bir Web hizmeti oluşturur. Şablon bir Web sitesine veya Web uygulaması projesine, bir Silverlight istemcisiyle iletişim kuran hizmet kodu ve yapılandırmasını içeren bir WCF hizmeti oluşturmak için eklenebilir. Daha sonra **hizmet başvurusu Ekle** kullanarak istemciye hizmetin istemci proxy 'sini ekleyebilir ve Silverlight Istemcisi ile SILVERLIGHT özellikli WCF hizmeti arasında veri alışverişi yapabilirsiniz.  

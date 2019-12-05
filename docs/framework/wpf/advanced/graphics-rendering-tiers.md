@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: c6856002288a46e78d1e1373201cf149407a814f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4c9acc3ef806eabea05d1b64080275293c83e895
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974009"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802146"
 ---
 # <a name="graphics-rendering-tiers"></a>Grafik İşleme Katmanları
 Bir işleme katmanı, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulaması çalıştıran bir cihaz için grafik donanım yeteneği ve performansının düzeyini tanımlar.  
@@ -78,7 +78,7 @@ Bir işleme katmanı, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
   
 |Özellik|Notlar|  
 |-------------|-----------|  
-|3B kenar yumuşatma|3B düzgünleştirme, yalnızca Windows Vista ve [!INCLUDE[win7](../../../../includes/win7-md.md)]gibi Windows görüntü sürücü modelini (WDDM) destekleyen işletim sistemlerinde desteklenir.|  
+|3B kenar yumuşatma|3B düzgünleştirme, yalnızca Windows Vista ve Windows 7 gibi Windows görüntü sürücü modelini (WDDM) destekleyen işletim sistemlerinde desteklenir.|  
   
  Aşağıdaki özellikler ve yetenekler donanım hızlandırılmamış **değildir** :  
   
@@ -89,7 +89,7 @@ Bir işleme katmanı, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
 |<xref:System.Windows.Media.TileBrush> kullanan döşeli içerik|<xref:System.Windows.Media.TileBrush> <xref:System.Windows.Media.TileBrush.TileMode%2A> özelliğinin <xref:System.Windows.Media.TileMode.Tile>olarak ayarlandığı döşeli içerik.|  
 |Grafik donanımının en büyük doku boyutunu aşan yüzeyler|Çoğu grafik donanımında, büyük yüzeyler 20 48x2048 veya 4096x4096 piksel boyutlardır.|  
 |Video RAM gereksinimi grafik donanımının belleğini aşan tüm işlemler|Uygulama video RAM kullanımını, Windows SDK [WPF Performans paketine](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) dahil olan Perforator aracını kullanarak izleyebilirsiniz.|  
-|Katmanlı pencereler|Katmanlı pencereler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaların dikdörtgen olmayan bir pencerede ekran üzerinde içerik işlemesine izin verir. Windows Vista ve [!INCLUDE[win7](../../../../includes/win7-md.md)]gibi Windows görüntü sürücü modeli 'ni (WDDM) destekleyen işletim sistemlerinde, katmanlı pencereler donanım hızlandırılır. [!INCLUDE[winxp](../../../../includes/winxp-md.md)]gibi diğer sistemlerde katmanlı pencereler, donanım hızlandırma olmadan yazılım tarafından işlenir.<br /><br /> Aşağıdaki <xref:System.Windows.Window> özelliklerini ayarlayarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] katmanlı pencereleri etkinleştirebilirsiniz:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|Katmanlı pencereler|Katmanlı pencereler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaların dikdörtgen olmayan bir pencerede ekran üzerinde içerik işlemesine izin verir. Windows Vista ve Windows 7 gibi Windows görüntü sürücü modelini (WDDM) destekleyen işletim sistemlerinde, katmanlı pencereler donanım hızlandırılır. [!INCLUDE[winxp](../../../../includes/winxp-md.md)]gibi diğer sistemlerde katmanlı pencereler, donanım hızlandırma olmadan yazılım tarafından işlenir.<br /><br /> Aşağıdaki <xref:System.Windows.Window> özelliklerini ayarlayarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] katmanlı pencereleri etkinleştirebilirsiniz:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
 ## <a name="other-resources"></a>Diğer Kaynaklar  
@@ -117,7 +117,7 @@ Bir işleme katmanı, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
   
  WPF performans paketi, performans verilerinin zengin ve grafik bir görünümünü sağlar. WPF Performans araçları hakkında daha fazla bilgi için bkz. [WPF performans paketi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)).  
   
-### <a name="directx-diagnostic-tool"></a>DirectX Tanılama Aracı  
+### <a name="directx-diagnostic-tool"></a>DirectX Tanılama Aracı'nda  
  DirectX ile ilgili sorunları gidermenize yardımcı olmak üzere dxdiag. exe ' nin DirectX Tanılama aracı. DirectX Tanılama aracı için varsayılan yükleme klasörü:  
   
  `~\Windows\System32`  

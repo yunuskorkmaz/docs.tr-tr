@@ -2,12 +2,12 @@
 title: WCF Kolaylaştırma Özellikleri
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: 85c50e5939a5e63202d57bca08393b9b79308f57
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: dd944ad2963e29fd3aa9254f3a37f2c2b98ce70d
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321223"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802394"
 ---
 # <a name="wcf-simplification-features"></a>WCF Kolaylaştırma Özellikleri
 
@@ -88,13 +88,13 @@ WCF, geliştiricilere WCF Hizmetleri yazarken ASP.NET HTTP işlem hattının öz
 
 - WCF 'ye, zaman uyumsuz akış için yeni destek eklenmiştir. Zaman uyumsuz akışı etkinleştirmek için, hizmet ana bilgisayarına <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> uç noktası davranışını ekleyin ve <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> özelliğini `true`olarak ayarlayın. Bu, bir hizmet, yavaş okuyan birden çok istemciye akış iletileri gönderirken ölçeklenebilirlik sağlayabilir. WCF artık istemci başına bir iş parçacığını engellemez ve başka bir istemciye hizmet vermek için iş parçacığını boşaltacaktır.
 
-- Bir hizmetin IIS 'de barındırıldığı durumlarda iletilerin arabelleğe alınması ile ilgili sınırlamalar kaldırılmıştır. Önceki WCF sürümlerinde, akış ileti aktarımı kullanan IIS tarafından barındırılan bir hizmet için ileti alırken, ASP.NET, WCF 'ye göndermeden önce tüm iletiyi arabelleğe alabilir. Bu, büyük bellek tüketimine neden olur. Bu arabelleğe alma, .NET 4,5 ' de kaldırılmıştır ve artık IIS tarafından barındırılan WCF Hizmetleri, tüm ileti alınmadan önce gelen akışı işlemeye başlayabilir ve böylece gerçek akış de mümkün değildir. Bu, WCF 'nin iletilere anında yanıt vermesini ve gelişmiş performansa izin vermesini sağlar. Ayrıca, artık `maxRequestLength`için bir değer belirtmeniz gerekmez, gelen isteklerde ASP.NET boyut sınırı. Bu özellik ayarlandıysa, yok sayılır. `maxRequestLength` hakkında daha fazla bilgi için bkz. [\<httpRuntime > yapılandırma öğesi](https://go.microsoft.com/fwlink/?LinkId=223344). MaxAllowedContentLength 'ı yapılandırmanız hala gerekir, daha fazla bilgi Için bkz. [IIS Istek sınırları](https://go.microsoft.com/fwlink/?LinkId=225908).
+- Bir hizmetin IIS 'de barındırıldığı durumlarda iletilerin arabelleğe alınması ile ilgili sınırlamalar kaldırılmıştır. Önceki WCF sürümlerinde, akış ileti aktarımı kullanan IIS tarafından barındırılan bir hizmet için ileti alırken, ASP.NET, WCF 'ye göndermeden önce tüm iletiyi arabelleğe alabilir. Bu, büyük bellek tüketimine neden olur. Bu arabelleğe alma, .NET 4,5 ' de kaldırılmıştır ve artık IIS tarafından barındırılan WCF Hizmetleri, tüm ileti alınmadan önce gelen akışı işlemeye başlayabilir ve böylece gerçek akış de mümkün değildir. Bu, WCF 'nin iletilere anında yanıt vermesini ve gelişmiş performansa izin vermesini sağlar. Ayrıca, artık `maxRequestLength`için bir değer belirtmeniz gerekmez, gelen isteklerde ASP.NET boyut sınırı. Bu özellik ayarlandıysa, yok sayılır. `maxRequestLength` hakkında daha fazla bilgi için bkz. [\<httpRuntime > yapılandırma öğesi](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71)). MaxAllowedContentLength 'ı yapılandırmanız hala gerekir, daha fazla bilgi Için bkz. [IIS Istek sınırları](https://docs.microsoft.com/previous-versions/iis/settings-schema/ms689462(v=vs.90)).
 
 ## <a name="new-transport-default-values"></a>Yeni aktarım varsayılan değerleri
 
 Aşağıdaki tablo, değişen ayarları ve ek bilgilerin nerede bulunacağını açıklar.
 
-|Özellik|Açık|Yeni varsayılan|Daha Fazla Bilgi|
+|Özellik|Açık|Yeni varsayılan|Daha fazla bilgi|
 |--------------|--------|-----------------|----------------------|
 |ChannelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 saniye|Bu özellik, bir TCP bağlantısının, .NET çerçeveleme protokolünü kullanarak kimliğini doğrulamak için ne kadar süreyle işlem yapabileceğini belirler. Sunucunun kimlik doğrulamasını gerçekleştirmek için yeterli bilgi olmadan önce bir istemcinin bazı ilk verileri gönderebilmesi gerekir. Bu zaman aşımı, ReceiveTimeout (10 dak) olarak daha küçük hale getirilir ve böylece kötü kimliği doğrulanmamış istemcilerin bağlantıları uzun süredir sunucuya bağlı tutmaması sağlanır. Varsayılan değer 30 saniyedir. <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A> hakkında daha fazla bilgi için|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * işlemci sayısı|Bu yuva düzeyi özelliği, sıraya eklenecek "bekleyen kabul etme" isteklerinin sayısını açıklar. Dinleme biriktirme listesi sırası dolarsa, yeni yuva istekleri reddedilir. <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A> hakkında daha fazla bilgi için|

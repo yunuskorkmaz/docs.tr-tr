@@ -1,14 +1,14 @@
 ---
 title: Çöp toplayıcı yapılandırma ayarları
-description: Çöp toplayıcısının belleği nasıl yönettiğini yapılandırmak için çalışma zamanı ayarları hakkında bilgi edinin.
+description: Çöp toplayıcının .NET Core uygulamaları için belleği nasıl yönettiğini yapılandırmak üzere çalışma zamanı ayarları hakkında bilgi edinin.
 ms.date: 11/13/2019
 ms.topic: reference
-ms.openlocfilehash: 220b94e92f61fd44d2ab13291e41b8007a287cc7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e7f6877a3cbc7f28776a93b9126f4b64026487fa
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428704"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800629"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Çöp toplama için çalışma zamanı yapılandırma seçenekleri
 
@@ -38,7 +38,7 @@ Ayarlar bu sayfadaki gruplar halinde düzenlenir. Her grup içindeki ayarlar, be
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.Server` | `false`-iş istasyonu<br/>`true`-sunucu | .NET Core 1,0 |
-| **Ortam değişkeni** | `COMPlus_gcServer` | 0-iş istasyonu<br/>1-sunucu | .NET Core 1,0 |
+| **Ortam değişkeni** | `COMPlus_gcServer` | `0`-iş istasyonu<br/>`1`-sunucu | .NET Core 1,0 |
 | **.NET Framework için App. config** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false`-iş istasyonu<br/>`true`-sunucu |  |
 
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System. GC. eşzamanlı/COMPlus_gcConcurrent
@@ -110,13 +110,13 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
   64 bitlik bir Windows bilgisayarında birden çok CPU grubu olduğunda, diğer bir deyişle, 64 ' den fazla işlemci varsa, bu öğenin tüm CPU gruplarında çöp toplamayı genişletmelerini etkinleştirir. Çöp toplayıcı, Heap 'ler oluşturmak ve dengelemek için tüm çekirdekleri kullanır.
 
 - Yalnızca 64-bit Windows işletim sistemlerinde sunucu çöp toplama (GC) için geçerlidir.
-- Varsayılan: devre dışı (0).
+- Varsayılan: devre dışı (`0`).
 - Daha fazla bilgi için bkz. Maoni Stephens ' blogu üzerinde [> 64 CPU 'su olan MAKINELERDE GC için daha Iyi hale getirme](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) .
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
 | **runtimeconfig. JSON** | YOK | YOK | YOK |
-| **Ortam değişkeni** | `COMPlus_GCCpuGroup` | 0-devre dışı<br/>1-etkin | .NET Core 1,0 |
+| **Ortam değişkeni** | `COMPlus_GCCpuGroup` | `0`-devre dışı<br/>`1` etkin | .NET Core 1,0 |
 | **.NET Framework için App. config** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false`-devre dışı<br/>`true` etkin |  |
 
 > [!NOTE]
@@ -131,7 +131,7 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.NoAffinitize` | `false`-afze<br/>`true`-yok etme | .NET Core 3.0 |
-| **Ortam değişkeni** | `COMPlus_GCNoAffinitize` | 0-herhangi bir afze<br/>1-yok etme | .NET Core 3.0 |
+| **Ortam değişkeni** | `COMPlus_GCNoAffinitize` | `0`-afze<br/>`1`-yok etme | .NET Core 3.0 |
 | **.NET Framework için App. config** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false`-afze<br/>`true`-yok etme | 4.6.2 |
 
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System. GC. HeapHardLimit/COMPlus_GCHeapHardLimit
@@ -166,34 +166,34 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.RetainVM` | `false`-işletim sistemine yayın<br/>`true`-bekleme üzerine koy| .NET Core 1,0 |
-| **Ortam değişkeni** | `COMPlus_GCRetainVM` | 0-işletim sistemine yayın<br/>1-bekleme durumuna koy | .NET Core 1,0 |
+| **Ortam değişkeni** | `COMPlus_GCRetainVM` | `0`-işletim sistemine yayın<br/>`1`-bekleme üzerine koy | .NET Core 1,0 |
 
 ## <a name="large-pages"></a>Büyük sayfalar
 
 ### <a name="complus_gclargepages"></a>COMPlus_GCLargePages
 
 - Bir yığın sabit sınırı ayarlandığında büyük sayfaların kullanılıp kullanılmayacağını belirtir.
-- Varsayılan: devre dışı (0).
+- Varsayılan: devre dışı (`0`).
 - Bu bir deneysel ayardır.
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
 | **runtimeconfig. JSON** | YOK | YOK | YOK |
-| **Ortam değişkeni** | `COMPlus_GCLargePages` | 0-devre dışı<br/>1-etkin | .NET Core 3.0 |
+| **Ortam değişkeni** | `COMPlus_GCLargePages` | `0`-devre dışı<br/>`1` etkin | .NET Core 3.0 |
 
 ## <a name="large-objects"></a>Büyük nesneler
 
 ### <a name="complus_gcallowverylargeobjects"></a>COMPlus_gcAllowVeryLargeObjects
 
 - Toplam boyuttaki 2 gigabayttan (GB) büyük olan diziler için 64 bitlik platformlarda çöp toplayıcı desteğini yapılandırır.
-- Varsayılan: etkin (1).
+- Varsayılan: etkin (`1`).
 - Bu seçenek, .NET 'in gelecek bir sürümünde kullanımdan kalkabilir.
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
 | **runtimeconfig. JSON** | YOK | YOK | YOK |
-| **Ortam değişkeni** | `COMPlus_gcAllowVeryLargeObjects` | 1-etkin<br/> 0-devre dışı | .NET Core 1,0 |
-| **.NET Framework için App. config** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | 1-etkin<br/> 0-devre dışı | .NET Framework 4.5 |
+| **Ortam değişkeni** | `COMPlus_gcAllowVeryLargeObjects` | `1` etkin<br/> `0`-devre dışı | .NET Core 1,0 |
+| **.NET Framework için App. config** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | `1` etkin<br/> `0`-devre dışı | .NET Framework 4.5 |
 
 ## <a name="large-object-heap-threshold"></a>Büyük nesne yığın eşiği
 
@@ -222,4 +222,4 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
 | **runtimeconfig. JSON** | YOK | YOK | YOK |
-| **Ortam değişkeni** | `COMPlus_GCName` | *string_path* | .NET Core 2,0 |
+| **Ortam değişkeni** | `COMPlus_GCName` | *string_path* | .NET Core 2.0 |

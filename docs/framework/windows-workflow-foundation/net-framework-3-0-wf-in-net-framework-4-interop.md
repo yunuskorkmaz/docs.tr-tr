@@ -2,12 +2,12 @@
 title: .NET Framework 4’te Birlikte Çalışma Etkinliği ile .NET Framework 3.0 WF Etkinlikleri Kullanma
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: de0a0474f0a996ce8c781064f56c03b483ca1bb9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fb9536d5ee7a31039d77deffc3c0b0c7a6263b66
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283187"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802576"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>.NET Framework 4’te Birlikte Çalışma Etkinliği ile .NET Framework 3.0 WF Etkinlikleri Kullanma
 <xref:System.Activities.Statements.Interop> etkinliği, [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] bir iş akışı içinde .NET Framework 3,5 (WF 3,5) etkinliğini sarmalayan bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4,5) etkinliğidir. WF 3 etkinliği tek bir yaprak etkinlik veya bir etkinlik ağacının tamamına ait olabilir. Yürütme (iptal ve özel durum işleme dahil) ve .NET Framework 3,5 etkinliğinin kalıcılığı, yürüten [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı örneği bağlamında oluşur.  
@@ -24,7 +24,7 @@ ms.locfileid: "74283187"
   
 - WF 3 etkinliğinin ortak parametresiz bir oluşturucusu olmalıdır.  
   
-- <xref:System.Activities.Statements.Interop> etkinliğinin destekleyebileceği arabirim türlerindeki sınırlamalar nedeniyle, <xref:System.Workflow.Activities.HandleExternalEventActivity> ve <xref:System.Workflow.Activities.CallExternalMethodActivity> doğrudan kullanılamaz, ancak Iş akışı Iletişimi etkinlik aracı (WCA. exe) kullanılarak oluşturulan türev etkinlikler kullanılabilir. Ayrıntılar için bkz. [Windows Workflow Foundation araçları](https://go.microsoft.com/fwlink/?LinkId=178889) .  
+- <xref:System.Activities.Statements.Interop> etkinliğinin destekleyebileceği arabirim türlerindeki sınırlamalar nedeniyle, <xref:System.Workflow.Activities.HandleExternalEventActivity> ve <xref:System.Workflow.Activities.CallExternalMethodActivity> doğrudan kullanılamaz, ancak Iş akışı Iletişimi etkinlik aracı (WCA. exe) kullanılarak oluşturulan türev etkinlikler kullanılabilir. Ayrıntılar için bkz. [Windows Workflow Foundation araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734408(v=vs.90)) .  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>Birlikte çalışabilirlik etkinliğinde WF 3 etkinliğini yapılandırma  
  Bir WF 3 etkinliğinin içine ve dışına veri yapılandırmak ve bu etkinliği kapatmak için, WF 3 etkinliğinin özellikleri ve meta verileri özellikleri <xref:System.Activities.Statements.Interop> etkinliği tarafından gösterilir. WF 3 etkinliğinin meta veri özellikleri (örneğin, <xref:System.Workflow.ComponentModel.Activity.Name%2A>) <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A> koleksiyonu aracılığıyla gösterilir. Bu, WF 3 etkinliğinin meta veri özelliklerine ilişkin değerleri tanımlamak için kullanılan ad-değer çiftleri koleksiyonudur. Meta veri özelliği, <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata> bayrağının ayarlandığı Dependency özelliği tarafından desteklenen bir özelliktir.  

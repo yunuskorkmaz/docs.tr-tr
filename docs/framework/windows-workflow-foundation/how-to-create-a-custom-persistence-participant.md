@@ -1,20 +1,20 @@
 ---
-title: 'Nasıl yapılır: Özel Kalıcılık Katılımcısı Oluşturma'
+title: 'Nasıl yapılır: özel bir Kalıcılık Katılımcısı oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-ms.openlocfilehash: 47283375b618422d91a6279ee9049fae469f540a
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0e61395cb59a7d162668445d23241e3ff562d67b
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989678"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802550"
 ---
-# <a name="how-to-create-a-custom-persistence-participant"></a>Nasıl yapılır: Özel Kalıcılık Katılımcısı Oluşturma
-Aşağıdaki yordamda bir Kalıcılık Katılımcısı oluşturma adımları vardır. Kalıcılık katılımcılarının örnek uygulamaları için [Kalıcılık örneğine katılma](https://go.microsoft.com/fwlink/?LinkID=177735) ve [depolama genişletilebilirliği](store-extensibility.md) konusuna bakın.  
+# <a name="how-to-create-a-custom-persistence-participant"></a>Nasıl yapılır: özel bir Kalıcılık Katılımcısı oluşturma
+Aşağıdaki yordamda bir Kalıcılık Katılımcısı oluşturma adımları vardır. Kalıcılık katılımcılarının örnek uygulamaları için [Kalıcılık örneğine katılma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd699769(v=vs.100)) ve [depolama genişletilebilirliği](store-extensibility.md) konusuna bakın.  
   
-1. <xref:System.Activities.Persistence.PersistenceParticipant> Veya sınıfındantüretenbirsınıfoluşturun.<xref:System.Activities.Persistence.PersistenceIOParticipant> Persistenceıopmakalenipant sınıfı, g/ç işlemlerine katılabilmenin yanı sıra, Persistencekatılımcı sınıfıyla aynı genişletilebilirlik noktalarını sunar. Aşağıdaki adımlardan birini veya birkaçını izleyin.  
+1. <xref:System.Activities.Persistence.PersistenceParticipant> veya <xref:System.Activities.Persistence.PersistenceIOParticipant> sınıfından türeten bir sınıf oluşturun. Persistenceıopmakalenipant sınıfı, g/ç işlemlerine katılabilmenin yanı sıra, Persistencekatılımcı sınıfıyla aynı genişletilebilirlik noktalarını sunar. Aşağıdaki adımlardan birini veya birkaçını izleyin.  
   
-2. <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> Yöntemini uygulayın. **CollectValues** yönteminde, biri okuma/yazma değerlerini depolamak için ve diğeri salt yazılır değerlerini depolamak için bir tane olmak üzere iki sözlük parametresi vardır (daha sonra sorgularda kullanılır). Bu yöntemde, bu sözlükleri bir kalıcılık katılımcısına özgü verilerle doldurmanız gerekir. Her sözlük, anahtar olarak değerin adını ve değerini bir <xref:System.Runtime.DurableInstancing.InstanceValue> nesne olarak içerir.  
+2. <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> yöntemini uygulayın. **CollectValues** yönteminde, biri okuma/yazma değerlerini depolamak için ve diğeri salt yazılır değerlerini depolamak için bir tane olmak üzere iki sözlük parametresi vardır (daha sonra sorgularda kullanılır). Bu yöntemde, bu sözlükleri bir kalıcılık katılımcısına özgü verilerle doldurmanız gerekir. Her sözlük, anahtar olarak değerin adını ve değerini bir <xref:System.Runtime.DurableInstancing.InstanceValue> nesnesi olarak içerir.  
   
     ReadWriteValues sözlüğündeki değerler **InstanceValue** nesneleri olarak paketlenmiştir. Salt yazılır sözlükte bulunan değerler InstanceValueOptions. optional ve InstanceValueOption. WriteOnly kümesi ile **InstanceValue** nesneleri olarak paketlenir. Tüm Kalıcılık katılımcılarının üzerinde **CollectValues** uygulamaları tarafından belirtilen her **InstanceValue** benzersiz bir ada sahip olmalıdır.
   
@@ -24,7 +24,7 @@ Aşağıdaki yordamda bir Kalıcılık Katılımcısı oluşturma adımları var
     }
     ```  
   
-3. <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> Yöntemini uygulayın. **MapValues** yöntemi, **CollectValues** yönteminin aldığı parametrelere benzer iki parametre alır. **CollectValues** aşamasında toplanan tüm değerler bu sözlük parametreleri aracılığıyla geçirilir. **MapValues** aşamasına göre eklenen yeni değerler salt yazılır değerlere eklenir.  Salt yazılır sözlük, örnek değerleriyle doğrudan ilişkili olmayan bir dış kaynağa veri sağlamak için kullanılır. Tüm Kalıcılık katılımcılarının içindeki **MapValues** yönteminin uygulamaları tarafından sunulan her bir değer benzersiz bir ada sahip olmalıdır.  
+3. <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> yöntemini uygulayın. **MapValues** yöntemi, **CollectValues** yönteminin aldığı parametrelere benzer iki parametre alır. **CollectValues** aşamasında toplanan tüm değerler bu sözlük parametreleri aracılığıyla geçirilir. **MapValues** aşamasına göre eklenen yeni değerler salt yazılır değerlere eklenir.  Salt yazılır sözlük, örnek değerleriyle doğrudan ilişkili olmayan bir dış kaynağa veri sağlamak için kullanılır. Tüm Kalıcılık katılımcılarının içindeki **MapValues** yönteminin uygulamaları tarafından sunulan her bir değer benzersiz bir ada sahip olmalıdır.  
   
     ```csharp  
     protected virtual IDictionary<XName,Object> MapValues(IDictionary<XName,Object> readWriteValues,IDictionary<XName,Object> writeOnlyValues)
@@ -32,7 +32,7 @@ Aşağıdaki yordamda bir Kalıcılık Katılımcısı oluşturma adımları var
     }
     ```  
   
-     Yöntemi, henüz işlenmemiş olan başka bir Kalıcılık Katılımcısı tarafından sağlanan başka bir değer üzerinde bir bağımlılığa izin verdiğinden, olmayan <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> işlevler sağlar. <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A>  
+     <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> yöntemi, daha önce <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> tarafından işlenmemiş başka bir Kalıcılık Katılımcısı tarafından sağlanan başka bir değer üzerinde bir bağımlılık yapılmasına izin verdiğinden <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> bir işlevsellik sağlar.  
   
 4. **PublishValues** yöntemini uygulayın. **PublishValues** yöntemi, kalıcılık deposundan yüklenen tüm değerleri içeren bir sözlük alır.  
   
