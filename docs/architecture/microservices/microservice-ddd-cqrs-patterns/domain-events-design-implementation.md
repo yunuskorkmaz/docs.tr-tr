@@ -2,12 +2,12 @@
 title: Etki alanı olayları. Tasarım ve uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Toplamalar arasında iletişim kurmak için önemli bir kavram olan etki alanı olaylarının derinlemesine bir görünümünü alın.
 ms.date: 10/08/2018
-ms.openlocfilehash: f0dbd6b0e70d825122d319611a327438df065588
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f427ed5216af11b90c5a8cede15806a11aedc76d
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739902"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835552"
 ---
 # <a name="domain-events-design-and-implementation"></a>Etki alanı olayları: tasarım ve uygulama
 
@@ -341,6 +341,8 @@ Son olarak, bazı durumlarda olayları birden fazla mikro hizmette yaymaya istey
 ## <a name="conclusions-on-domain-events"></a>Etki alanı olaylarında ekibinizle
 
 Belirtildiği gibi, etki alanınız içindeki değişikliklerin yan etkilerini açıkça uygulamak için etki alanı olaylarını kullanın. DDD terminolojisini kullanmak için etki alanı olaylarını kullanarak bir veya birden çok toplama arasında yan etkileri açıkça uygulayın. Ayrıca, daha iyi ölçeklenebilirlik ve veritabanı kilitleri üzerinde daha az etki sağlamak için aynı etki alanı içindeki toplamalar arasında nihai tutarlılığı kullanın.
+
+Başvuru uygulaması, etki alanı olaylarını, tek bir işlem içindeki toplamalar arasında karşılıklı olarak yaymak için [mediaTR](https://github.com/jbogard/MediatR) kullanır. Ancak, son tutarlılığı kullanarak etki alanı olaylarını zaman uyumsuz olarak yaymak için [Kbbitmq](https://www.rabbitmq.com/) veya [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) gibi bazı AMQP uygulamasını da kullanabilirsiniz, ancak Yukarıda bahsedildiği gibi, bir başarısızlık durumunda telafi eylemlerine yönelik ihtiyacı göz önünde bulundurmanız gerekir.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
