@@ -109,8 +109,18 @@
   items:
     - name: Ayarlar
       href: run-time-config/index.md
+    - name: Derleme ayarları
+      href: run-time-config/compilation.md
+    - name: Hata ayıklama ve profil oluşturma ayarları
+      href: run-time-config/debugging-profiling.md
     - name: Atık toplayıcı ayarları
       href: run-time-config/garbage-collector.md
+    - name: Genelleştirme ayarları
+      href: run-time-config/globalization.md
+    - name: Ağ ayarları
+      href: run-time-config/networking.md
+    - name: İş parçacığı oluşturma ayarları
+      href: run-time-config/threading.md
 - name: Native ile birlikte çalışma
   items:
     - name: .NET Core bileşenlerini COM’da kullanıma sunma
