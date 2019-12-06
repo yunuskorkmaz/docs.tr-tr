@@ -10,15 +10,15 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: 5daff0567c1b1415fe994f6e39b4079cb2ab7346
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a24277a4d5fbc4870157b6c8ba00ba71ba61e656
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053814"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837239"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier Yönergesi
-Ayrıca sağlandığında xaml derleme davranışını `x:Class` değiştirir. Özellikle, `Public` erişim düzeyine sahip bir kısmi `class` oluşturmak yerine (varsayılan), `NotPublic` belirtilen `x:Class` bir erişim düzeyiyle oluşturulur. Bu davranış, oluşturulan derlemelerdeki sınıfın erişim düzeyini etkiler.  
+`x:Class` de sağlandığında XAML derleme davranışını değiştirir. Özellikle, `Public` erişim düzeyine sahip (varsayılan) bir kısmi `class` oluşturmak yerine, belirtilen `x:Class` `NotPublic` erişim düzeyiyle oluşturulur. Bu davranış, oluşturulan derlemelerdeki sınıfın erişim düzeyini etkiler.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -32,26 +32,26 @@ Ayrıca sağlandığında xaml derleme davranışını `x:Class` değiştirir. �
   
 |||  
 |-|-|  
-|*NotPublic*|<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> Belirtmek<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> için geçirilecek tam dize, kullandığınız arka plan kod programlama diline bağlı olarak farklılık gösterir. Bkz. açıklamalar.|  
+|*NotPublic*|<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> ve <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> belirtmek için geçirilecek tam dize, kullandığınız kod arkasındaki programlama diline bağlı olarak değişir. Bkz. açıklamalar.|  
   
 ## <a name="dependencies"></a>Bağımlılıklar  
- [X:Class](x-class-directive.md) aynı öğe üzerinde de sağlanmalıdır ve bu öğenin bir sayfada kök öğe olması gerekir. Daha fazla bilgi için bkz [ \[. MS-\] xaml Section 4.3.1.8](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ [X:Class](x-class-directive.md) aynı öğe üzerinde de sağlanmalıdır ve bu öğenin bir sayfada kök öğe olması gerekir. Daha fazla bilgi için bkz. [\[MS-XAML\] Bölüm 4.3.1.8](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework xaml Hizmetleri `x:ClassModifier` kullanımındaki değeri programlama diline göre değişir. Kullanılacak dize, her dilin ve <xref:System.CodeDom.Compiler.CodeDomProvider> <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>için <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> anlamlarını ve bu dilin büyük/küçük harfe duyarlı olup olmadığını tanımlamak için döndürdüğü tür Dönüştürücülerine bağlıdır.  
+ .NET Framework XAML Hizmetleri kullanımındaki `x:ClassModifier` değeri programlama diline göre farklılık gösterir. Kullanılacak dize, her dilin <xref:System.CodeDom.Compiler.CodeDomProvider> nasıl uyguladığı ve <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ve <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>anlamlarını ve bu dilin büyük/küçük harfe duyarlı olup olmadığını tanımlamak için döndürdüğü tür Dönüştürücülerine bağlıdır.  
   
-- İçin C#, atamak <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> için geçirilecek dize olur `internal`.  
+- İçin C#, <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> belirlemek için geçirilecek dize `internal`.  
   
-- Microsoft Visual Basic .NET için, atamak <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> için geçirilecek dize olur. `Friend`  
+- Microsoft Visual Basic .NET için, <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> belirlemek için geçirilecek dize `Friend`.  
   
 - /CLI C++için XAML derlemeyi destekleyen bir hedef yok; Bu nedenle, geçirilecek değer belirtilmemiş.  
   
- Ayrıca, (`public` içinde <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> C# <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> , `Public` Visual Basic ' de) belirtebilirsiniz; ancak, varsayılan davranış zaten olduğu için, ' de <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>  
+ Ayrıca C#, <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> de belirtebilirsiniz (`public`, Visual Basic içinde `Public`); Ancak, <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> zaten varsayılan davranış olduğu için <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> belirtme işlemi seyrek yapılır.  
   
- `private` C#İçindeki gibi eşdeğer Kullanıcı kodu erişim düzeyi kısıtlamalarına sahip diğer değerler, iç içe geçmiş sınıf başvuruları xaml 'de `x:ClassModifier` desteklenmediğinden ve bu nedenle, değiştiricinin aynı etkiye sahip olduğu için ilgili değildir <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> . .  
+ İçinde C#`private` gibi eşdeğer Kullanıcı kodu erişim düzeyi kısıtlamalarına sahip diğer değerler, XAML 'de iç içe geçmiş sınıf başvuruları desteklenmediğinden `x:ClassModifier` için uygun değildir ve bu nedenle <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> değiştiricisi aynı etkiye sahiptir.  
   
 ## <a name="security-notes"></a>Güvenlik notları  
- İçinde `x:ClassModifier` bildirildiği gibi erişim düzeyi, hala belirli çerçeveler ve bunların özelliklerine göre yoruma tabidir. WPF, bir paket URI başvurusu aracılığıyla bir WPF `x:ClassModifier` kaynağından `internal`başvuruluyorsa, türü yükleme ve örnek oluşturma özelliklerini içerir. Bu durumun bir sonucu ve diğer çerçeveler tarafından uygulandığı gibi diğerleri, olası tüm örnek oluşturma girişimlerini engellemek için özel olarak `x:ClassModifier` açık değildir.  
+ `x:ClassModifier` içinde bildirildiği gibi erişim düzeyi, hala belirli çerçeveler ve bunların özelliklerine göre yoruma tabidir. WPF, bir paket URI başvurusu aracılığıyla bir WPF kaynağından başvuruluyorsa, `x:ClassModifier` `internal`olan türleri yükleme ve oluşturma özelliklerini içerir. Bu durumun bir sonucu ve diğer çerçeveler tarafından uygulandığı gibi diğerleri, olası tüm örnek oluşturma girişimlerini engellemek için yalnızca `x:ClassModifier` güvenmeyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

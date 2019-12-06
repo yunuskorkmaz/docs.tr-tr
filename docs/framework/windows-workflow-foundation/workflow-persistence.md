@@ -4,42 +4,42 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: afe47975a393db3074222ebf0461f5b73fb6442d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c49e287c6132103d4bb85a8ae892a76f9b582274
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655802"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837538"
 ---
 # <a name="workflow-persistence"></a>İş Akışı Kalıcılığı
-İş akışı kalıcılığı dayanıklı yakalama bir iş akışı örneği durumu, işlem veya bilgisayar bilgilerinin bağımsız olur. Bu sistem hatası durumunda iş akışı örneği için bilinen bir kurtarma noktası sağlamak veya etkin bir şekilde iş yapmamanın kaldırma iş akışı örnekleri tarafından bellek korumak için veya iş akışı örneği durumu bir düğümden diğerine taşımak için gerçekleştirilir bir sunucu grubundaki düğümü.  
+İş akışı kalıcılığı, işlem veya bilgisayar bilgilerini bağımsız bir iş akışı örneğinin durumunun dayanıklı yakalamasıdır. Bu işlem, sistem hatası durumunda iş akışı örneği için iyi bilinen bir kurtarma noktası sağlamak ya da etkin bir şekilde iş yapmakta olmayan iş akışı örneklerini kaldırarak belleği korumak veya iş akışı örneğinin durumunu bir düğümden diğerine taşımak için yapılır bir sunucu grubundaki düğüm.  
   
- Kalıcılık işlemin çeviklik, ölçeklenebilirlik, Kurtarma hata ile karşılaşıldığında ve belleği daha verimli bir şekilde yönetme olanağı sağlar. Kalıcılık işlem Kalıcılık noktası, veri toplamayı ve son olarak verilerin kalıcı bir sağlayıcı gerçek depolama alanlarının kimliğini içerir.  
+ Kalıcılık, işlem çevikliği, ölçeklenebilirlik, hata durumunda kurtarma ve belleği daha verimli bir şekilde yönetme olanağı sağlar. Kalıcılık süreci, kalıcılık noktası tanımlamayı, kaydedilecek verilerin toplanması ve son olarak verilerin gerçek depolamanın bir kalıcılık sağlayıcısına devredilmesi içerir.  
   
- Bir iş akışı kalıcılığını etkinleştirmek için bir örnek deposuna ile ilişkilendirmeniz gerekir **WorkflowApplication** veya **WorkflowServiceHost** belirtildiği gibi [nasıl yapılır: İş akışları ve iş akışı hizmetleri için kalıcılığı etkinleştir](how-to-enable-persistence-for-workflows-and-workflow-services.md). **WorkflowApplication** ve **WorkflowServiceHost** ilişkili örnek deposuna sürdürme deposundan ve iş akışı örneği yükleniyor kalıcı hale getirme iş akışı örnekleri etkinleştirmek için kullanın İş akışı örneği verileri sürdürme deposunda saklanan bağlı bellek.  
+ Bir iş akışı için kalıcılığı etkinleştirmek üzere, [nasıl yapılır: Iş akışları ve Iş akışı hizmetleri Için kalıcılığı etkinleştirme](how-to-enable-persistence-for-workflows-and-workflow-services.md)bölümünde bahsedilen bir örnek depoyu **WorkflowApplication** veya **WorkflowServiceHost** ile ilişkilendirmeniz gerekir. **WorkflowApplication** ve **WorkflowServiceHost** , kalıcı iş akışı örneklerinin bir kalıcılık deposuna etkinleştirilmesi ve iş akışı örneklerinin kalıcılık deposunda depolanan iş akışı örneği verilerine göre belleğe yüklenmesi için kendileriyle ilişkili örnek deposunu kullanır.  
   
- [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Birlikte **SqlWorkflowInstanceStore** Kalıcılık verileri ve SQL Server 2005 veya SQL Server 2008 veritabanına iş akışı örnekleri hakkında meta veriler sağlayan sınıf. Bkz: [SQL iş akışı örneği Store](sql-workflow-instance-store.md) daha fazla ayrıntı için.  
+ [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)], iş akışı örnekleri hakkında SQL Server 2005 veya SQL Server 2008 veritabanına verilerin ve meta verilerin kalıcılığını sağlayan **SqlWorkflowInstanceStore** sınıfıyla birlikte gelir. Daha fazla bilgi için bkz. [SQL Workflow örnek deposu](sql-workflow-instance-store.md) .  
   
- Depolayın ve iş akışı örneği ile ilgili bilgilerin yanı sıra, uygulamaya özgü verileri yüklemek için genişletme Kalıcılık katılımcıları oluşturabilirsiniz <xref:System.Activities.Persistence.PersistenceParticipant> sınıfı. Kalıcı depoya belleğe örneği Mağazası'ndan veri yüklemeye ve herhangi ek bir mantık Kalıcılık işlem altında gerçekleştirmek için özel seri hale getirilebilir veri kaydetmek için Kalıcılık işleminde bir Kalıcılık Katılımcısı katılır. Daha fazla bilgi için [Kalıcılık katılımcıları](persistence-participants.md).  
+ İş akışı örneğiyle ilgili bilgilerle birlikte, uygulamaya özgü verilerinizi depolamak ve yüklemek için <xref:System.Activities.Persistence.PersistenceParticipant> sınıfını genişleten Kalıcılık katılımcıları oluşturabilirsiniz. Kalıcılık Katılımcısı, özel seri hale getirilebilir verileri kalıcılık deposuna kaydetmek, örnek deposundan verileri belleğe yüklemek ve bir kalıcılık işlemi altında ek mantık gerçekleştirmek için kalıcılık sürecine katılıyorsa. Daha fazla bilgi için bkz. [Kalıcılık katılımcıları](persistence-participants.md).  
   
- Windows Server App Fabric kalıcılığını yapılandırma işlemini basitleştirir. Daha fazla bilgi için [Windows Server App Fabric ile Kalıcılık kavramları](https://go.microsoft.com/fwlink/?LinkId=201200)  
+ Windows Server App Fabric, kalıcılığı yapılandırma sürecini basitleştirir. Daha fazla bilgi için bkz. [Windows Server App Fabric Ile Kalıcılık kavramları](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))  
   
 ## <a name="implicit-persistence-points"></a>Örtük Kalıcılık noktaları  
- Aşağıdaki liste, bir örnek deposuna bir iş akışı ile ilişkili olduğunda, bir akışı kalıcı koşullar örnekleri içerir.  
+ Aşağıdaki liste, bir örnek depo bir iş akışıyla ilişkilendirildiğinde bir iş akışının kalıcı hale geçtiği koşulların örneklerini içerir.  
   
-- Olduğunda bir **TransactionScope** etkinliği tamamlandıktan veya **TransactedReceiveScope** etkinliği tamamlar.  
+- Bir **TransactionScope** etkinliği tamamlandığında veya bir **TransactedReceiveScope** etkinliği tamamlandığında.  
   
-- Bir iş akışı örneği olduğunda boşta ve **WorkflowIdleBehavior** iş akışı konakta ayarlanır. Bu, örneğin, Mesajlaşma etkinlikleri kullandığınızda veya oluşur **gecikme** etkinlik.  
+- Bir iş akışı örneği boşta kaldığında ve **WorkflowIdleBehavior** iş akışı konağında ayarlandığında. Bu durum örneğin, mesajlaşma etkinlikleri veya bir **gecikme** etkinliği kullandığınızda oluşur.  
   
-- Bir WorkflowApplication olduğunda boşta ve **PersistableIdle** uygulamanın özelliği **PersistableIdleAction.Persist**.  
+- Bir WorkflowApplication boş kaldığında ve uygulamanın **PersistableIdle** özelliği **Persistableıdıdle Action. Persist**olarak ayarlandığında.  
   
-- Ne zaman bir ana bilgisayar uygulaması kalıcı veya bir iş akışı örneği kaldırmak için talimat verilmiştir.  
+- Bir konak uygulamasına bir iş akışı örneğini kalıcı hale getirmek veya kaldırmak için talimat verilir.  
   
-- Ne zaman bir iş akışı örneği sonlandırıldı veya tamamlanır.  
+- Bir iş akışı örneği sonlandırıldığında veya tamamlandığında.  
   
-- Olduğunda bir **kalan** etkinliği yürütür.  
+- **Kalıcı** bir etkinlik yürütüldüğünde.  
   
-- Ne zaman Windows Workflow Foundation'ın önceki bir sürümü kullanılarak geliştirilen bir iş akışı örneği birlikte çalışabilen yürütme sırasında bir Kalıcılık noktası karşılaşır.  
+- Windows Workflow Foundation önceki bir sürümü kullanılarak geliştirilen bir iş akışı örneği, birlikte çalışabilen yürütme sırasında bir kalıcılık noktasıyla karşılaştığında.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   

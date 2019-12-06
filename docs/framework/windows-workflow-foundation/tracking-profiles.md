@@ -2,22 +2,22 @@
 title: İzleme Profilleri
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: a643cf37bbb3e72baefb434249aa54b386060627
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 9217f25ba4499e7ff75020642be387aa79ba27bf
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660924"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837629"
 ---
 # <a name="tracking-profiles"></a>İzleme Profilleri
 
-İzleme profilleri bir iş akışı örneğinin durumunu çalışma zamanında değiştiğinde yayılan iş akışı olayları abone olmak için izleme katılımcı izin izleme sorguları içerir.
+İzleme profilleri, bir iş akışı örneğinin durumu çalışma zamanında değiştiğinde yayınlanan iş akışı olaylarına abone olmak için izleme katılımcısına izin veren izleme sorguları içerir.
 
 ## <a name="tracking-profiles"></a>İzleme Profilleri
 
-İzleme profilleri, bir iş akışı örneği için izleme bilgileri yayıldığını belirtmek için kullanılır. Ardından profil belirtilmezse, tüm izleme olaylar gönderilir. Bir profili belirtilirse, profilde belirtilen izleme olaylarını yayılan. Çok genel bir profili yazabilirsiniz izleme gereksinimlerinize bağlı olarak, bir iş akışı üzerinde üst düzey durum değişikliklerini küçük bir kümesi için abone olur. Buna karşılık, elde edilen ayarlanmış olayları ayrıntılı yürütme akışı daha sonra yeniden oluşturmak için zengin bir çok ayrıntılı profili oluşturabilirsiniz.
+İzleme profilleri, bir iş akışı örneği için hangi izleme bilgilerinin yayınlandığını belirtmek için kullanılır. Hiçbir profil belirtilmemişse, tüm izleme olayları yayınlanır. Bir profil belirtilmişse, profilde belirtilen izleme olayları yayınlanır. İzleme gereksinimlerinize bağlı olarak, çok genel olan bir profil yazabilirsiniz, bu, bir iş akışındaki küçük bir üst düzey durum değişikliği kümesine abone olabilir. Buna karşılık, daha sonra ayrıntılı bir yürütme akışını yeniden oluşturmak için yeterince zengin olan çok ayrıntılı bir profil oluşturabilirsiniz.
 
-İzleme profilleri, bir standart .NET Framework yapılandırma dosyası içinde XML öğeleri olarak kendilerini bildirim veya kodda belirtilen. Aşağıdaki örnek, bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] abone olmak izleme katılımcı izin veren bir yapılandırma dosyası profilinde izleme `Started` ve `Completed` iş akışı olayları.
+Profiller bildirimi, standart bir .NET Framework yapılandırma dosyası içinde veya kodda belirtilen XML öğeleri olarak kendini takip ediyor. Aşağıdaki örnek bir yapılandırma dosyasındaki bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] izleme profilidir. Bu, izleme katılımcısının `Started` abone olmasına ve iş akışı olaylarına `Completed` izin verir.
 
 ```xml
 <system.serviceModel>
@@ -41,7 +41,7 @@ ms.locfileid: "67660924"
 </system.serviceModel>
 ```
 
-Aşağıdaki örnek kod kullanılarak oluşturulan profil izleme eşdeğer gösterir.
+Aşağıdaki örnek, kod kullanılarak oluşturulan eşdeğer izleme profilini gösterir.
 
 ```csharp
 TrackingProfile profile = new TrackingProfile()
@@ -59,15 +59,15 @@ TrackingProfile profile = new TrackingProfile()
 };
 ```
 
-İzleme kayıtları filtre uygulanır aracılığıyla bir izleme profili içinde görünürlük modunu kullanarak <xref:System.Activities.Tracking.ImplementationVisibility> özniteliği. Bileşik bir etkinlik uygulaması oluşturan diğer etkinlikler içeren üst düzey bir etkinliktir. Uygulama oluşturan etkinlikler izlenen varsa belirtmek için bir iş akışı etkinlik içinde bileşik etkinliklerden yayılan izleme kayıtları görünürlük modunu belirtir. İzleme sırasında görünürlük modunu geçerli profil düzeyi. Bir iş akışındaki etkinliklere tek tek kayıtları izleme filtreleme, sorguları izleme profilinde tarafından denetlenir. Daha fazla bilgi için **izleme profili sorgu türleri** bu belgenin bölüm.
+İzleme kayıtları, <xref:System.Activities.Tracking.ImplementationVisibility> özniteliği kullanılarak izleme profili içindeki görünürlük modu aracılığıyla filtrelenir. Bileşik etkinlik, uygulamasını oluşturan diğer etkinlikleri içeren en üst düzey bir etkinliktir. Görünürlük modu, uygulamayı oluşturan etkinliklerin izlendiğini belirtmek için bir iş akışı etkinliği içinde bileşik etkinliklerden yayılan izleme kayıtlarını belirtir. Görünürlük modu, izleme profili düzeyinde geçerlidir. Bir iş akışı içindeki bireysel etkinliklerin izleme kayıtlarının filtrelenmesi, izleme profili içindeki sorgular tarafından denetlenir. Daha fazla bilgi için bu belgedeki **profil sorgu türlerini izleme** bölümüne bakın.
 
-Belirtilen iki görünürlük modları `implementationVisibility` izleme profilinde özniteliğinin `RootScope` ve `All`. Kullanarak `RootScope` modu, bileşik bir etkinlik olduğu bir iş akışının kök durumda bir etkinlik uygulaması oluşturan etkinlikler için izleme kayıtları bastırır. Bir iş akışı için diğer etkinlikleri kullanılarak uygulanan bir etkinlik eklendiğinde bu, gelir ve `implementationVisibility` için RootScope ayarlayın, yalnızca üst düzey faaliyet, bileşik bir etkinlik içinde takip edilir. Bir etkinlik iş akışı köküdür. sonra iş akışı uygulamasıdır etkinliğin kendisi ve kayıtları izleme uygulaması oluşturan etkinlikler için gönderilir. Tüm modu kullanılarak, tüm izleme kayıtları için Kök etkinlik yayılan ve tüm bileşik etkinlikleri izin verir.
+İzleme profilindeki `implementationVisibility` özniteliği tarafından belirtilen iki görünürlük modu `RootScope` ve `All`. `RootScope` modunu kullanmak, bileşik etkinliğin bir iş akışının kökü olmadığı durumda bir etkinliğin uygulanmasını oluşturan etkinliklerin izleme kayıtlarını bastırır. Bu, diğer etkinlikleri kullanarak uygulanan bir etkinlik bir iş akışına eklendiğinde ve `implementationVisibility` RootScope olarak ayarlandığında, yalnızca bu bileşik etkinliğin içindeki en üst düzey etkinlik izlendiğine ilişkin anlamına gelir. Bir etkinlik iş akışının köküdür, etkinliğin uygulanması iş akışının kendisidir ve izleme kayıtları, uygulamayı oluşturan etkinlikler için yayınlanır. All modunun kullanılması, tüm izleme kayıtlarının kök etkinlik ve tüm bileşik etkinlikleri için oluşturulmasına izin verir.
 
-Örneğin, varsayalım *MyActivity* uygulaması içeren iki etkinlik, bileşik bir etkinlik *Activity1* ve *Activity2*. Ne zaman bu etkinlik bir iş akışına eklenir ve izleme bir izleme profili ile etkinleştirilmiş `implementationVisibility` kümesine `RootScope`, izleme kayıtları yayılan yalnızca *MyActivity*. Ancak, etkinlikler için hiçbir kayıtları yayılan *Activity1* ve *Activity2*.
+Örneğin, *MyActivity* , uygulamasında iki etkinlik ( *Activity1* ve *Activity2*) içeren bir bileşik etkinlik olduğunu varsayalım. Bu etkinlik bir iş akışına eklendiğinde ve izleme `implementationVisibility` `RootScope`olarak ayarlanmış bir izleme profiliyle etkinleştirildiğinde, izleme kayıtları yalnızca *MyActivity*için yayılır. Ancak, *Activity1* ve *Activity2*etkinlikleri için hiçbir kayıt yayınlanmadı.
 
-Ancak, varsa `implementationVisibility` izleme profili kümesine özniteliği `All`, yalnızca için izleme kayıtları yayılan sonra *MyActivity*, ancak etkinlikler için de *Activity1* ve  *Activity2*.
+Ancak, izleme profili için `implementationVisibility` özniteliği `All`olarak ayarlanırsa, izleme kayıtları yalnızca *MyActivity*için değil, *Activity1* ve *Activity2*etkinlikleri için de geçerlidir.
 
-`implementationVisibility` Bayrağı takip izleme kayıt türleri için geçerlidir:
+`implementationVisibility` bayrağı aşağıdaki izleme kayıt türleri için geçerlidir:
 
 - ActivityStateRecord
 
@@ -78,9 +78,9 @@ Ancak, varsa `implementationVisibility` izleme profili kümesine özniteliği `A
 - ActivityScheduledRecord
 
 > [!NOTE]
-> Etkinlik uygulamasından yayılan CustomTrackingRecords implementationVisibility ayarı tarafından filtrelenir değil.
+> Etkinlik uygulamasından yayılan CustomTrackingRecords, ImplementationVisibility ayarı tarafından filtrelenmez.
 
-`implementationVisibility` İşlevi olarak belirtilen <xref:System.Activities.Tracking.ImplementationVisibility.RootScope> izlemeyi kodda gibi profil:
+`implementationVisibility` işlevselliği, aşağıdaki gibi koddaki izleme profilinde <xref:System.Activities.Tracking.ImplementationVisibility.RootScope> olarak belirtilir:
 
 ```csharp
 TrackingProfile sampleTrackingProfile = new TrackingProfile()
@@ -90,7 +90,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 };
 ```
 
-`implementationVisibility` İşlevi olarak belirtilen <xref:System.Activities.Tracking.ImplementationVisibility.All> izleme profili bir yapılandırma dosyasında aşağıdaki gibi:
+`implementationVisibility` işlevi bir yapılandırma dosyasındaki izleme profilinde aşağıdaki gibi <xref:System.Activities.Tracking.ImplementationVisibility.All> olarak belirtilir:
 
 ```xml
 <tracking>
@@ -104,13 +104,13 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 </tracking>
 ```
 
-`ImplementationVisibility` İzleme profili ayarı, isteğe bağlıdır. Varsayılan olarak, değeri ayarlamak `RootScope`. Bu öznitelik değerlerini ayrıca büyük/küçük harf duyarlıdır.
+İzleme profilindeki `ImplementationVisibility` ayarı isteğe bağlıdır. Varsayılan olarak, değeri `RootScope`olarak ayarlanır. Bu özniteliğin değerleri de büyük/küçük harfe duyarlıdır.
 
 ### <a name="tracking-profile-query-types"></a>İzleme profili sorgu türleri
 
-İzleme profilleri belirli izleme kayıtları için iş akışı çalışma zamanı sorgulamaya izin kayıtları izleme için bildirim abonelikleri olarak yapılandırılmıştır. Birkaç farklı sınıfları için abone izin sorgu türleri vardır <xref:System.Activities.Tracking.TrackingRecord> nesneleri. İzleme profilleri yapılandırmasında veya kod aracılığıyla belirtilebilir. En sık kullanılan sorgu türleri şunlardır:
+İzleme profilleri, belirli izleme kayıtları için iş akışı çalışma zamanını sorgulamanızı sağlayan kayıtları izlemek için bildirim temelli abonelikler olarak yapılandırılır. Farklı <xref:System.Activities.Tracking.TrackingRecord> nesneleri sınıflarına abone olmanızı sağlayan birkaç sorgu türü vardır. İzleme profilleri, yapılandırma veya kod aracılığıyla belirtilebilir. En yaygın sorgu türleri şunlardır:
 
-- <xref:System.Activities.Tracking.WorkflowInstanceQuery> -Daha önce gösterildiği gibi iş akışı örneği yaşam döngüsü değişiklikleri izlemek için bunu kullanın `Started` ve `Completed`. <xref:System.Activities.Tracking.WorkflowInstanceQuery> Aşağıdaki abone olmak için kullanılan <xref:System.Activities.Tracking.TrackingRecord> nesneleri:
+- <xref:System.Activities.Tracking.WorkflowInstanceQuery>-bunu, daha önce gösterilen `Started` ve `Completed`gibi iş akışı örneği yaşam döngüsü değişikliklerini izlemek için kullanın. <xref:System.Activities.Tracking.WorkflowInstanceQuery> Aşağıdaki abone olmak için kullanılan <xref:System.Activities.Tracking.TrackingRecord> nesneleri:
 
   - <xref:System.Activities.Tracking.WorkflowInstanceRecord>
 
@@ -122,9 +122,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 
   - <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>
 
-  İçin abone durumları belirtilen <xref:System.Activities.Tracking.WorkflowInstanceStates> sınıfı.
+  Abone olunmasına izin veren durumlar <xref:System.Activities.Tracking.WorkflowInstanceStates> sınıfında belirtilmiştir.
 
-  Yapılandırma veya iş akışı örnek düzeyi kayıtları için izleme abone olmak için kullanılan kod `Started` durumu örneği kullanarak <xref:System.Activities.Tracking.WorkflowInstanceQuery> aşağıdaki örnekte gösterilmiştir.
+  <xref:System.Activities.Tracking.WorkflowInstanceQuery> kullanılarak `Started` örneği durumu için iş akışı örnek düzeyi izleme kayıtlarına abone olmak için kullanılan yapılandırma veya kod aşağıdaki örnekte gösterilmiştir.
 
   ```xml
   <workflowInstanceQueries>
@@ -150,9 +150,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   };
   ```
 
-- <xref:System.Activities.Tracking.ActivityStateQuery> -Yaşam döngüsü değişiklikleri bir iş akışı örneği oluşturan etkinliklerinin izlemek için bunu kullanın. Örneğin, "E-posta Gönder" etkinlik içinde bir iş akışı örneği tamamlanan her zaman izlemek isteyebilirsiniz. Bu sorgu için gerekli bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.ActivityStateRecord> nesneleri. Abone olmak için kullanılabilir durumları belirtilen <xref:System.Activities.Tracking.ActivityStates>.
+- <xref:System.Activities.Tracking.ActivityStateQuery>-bir iş akışı örneği oluşturan etkinliklerin yaşam döngüsü değişikliklerini izlemek için bunu kullanın. Örneğin, bir iş akışı örneği içinde "e-posta gönder" etkinliğinin tamamlandığı her seferinde izlemek isteyebilirsiniz. Bu sorgu, bir <xref:System.Activities.Tracking.TrackingParticipant> <xref:System.Activities.Tracking.ActivityStateRecord> nesnelerine abone olmak için gereklidir. Abone olunacak durumlar <xref:System.Activities.Tracking.ActivityStates>olarak belirtilir.
 
-  Yapılandırma ve kullanma etkinlik durumu izleme kayıtları abone olmak için kullanılan kod <xref:System.Activities.Tracking.ActivityStateQuery> için `SendEmailActivity` etkinlik, aşağıdaki örnekte gösterilmiştir.
+  `SendEmailActivity` etkinliği için <xref:System.Activities.Tracking.ActivityStateQuery> kullanan etkinlik durumu izleme kayıtlarına abone olmak için kullanılan yapılandırma ve kod aşağıdaki örnekte gösterilmiştir.
 
   ```xml
   <activityStateQueries>
@@ -180,11 +180,11 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   ```
 
   > [!NOTE]
-  > Birden çok activityStateQuery öğeleri aynı ada sahipse, yalnızca son öğesinde durumları izleme profili kullanılır.
+  > Birden çok activityStateQuery öğesi aynı ada sahip ise, izleme profilinde yalnızca son öğedeki durumlar kullanılır.
 
-- <xref:System.Activities.Tracking.ActivityScheduledQuery> -Bu sorgu yürütme için zamanlanan bir etkinlik üst etkinliği tarafından izlemenize olanak tanır. Sorgu için gerekli bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.ActivityScheduledRecord> nesneleri.
+- <xref:System.Activities.Tracking.ActivityScheduledQuery>-bu sorgu, bir üst etkinliğin yürütülmesi için zamanlanmış bir etkinliği izlemenize olanak sağlar. Sorgu, bir <xref:System.Activities.Tracking.TrackingParticipant> <xref:System.Activities.Tracking.ActivityScheduledRecord> nesnelerine abone olmak için gereklidir.
 
-  Kayıtları abone olmak için kullanılan kod ve yapılandırmayı ilgili `SendEmailActivity` alt etkinlik kullanarak zamanlanmasını <xref:System.Activities.Tracking.ActivityScheduledQuery> aşağıdaki örnekte gösterilen.
+  <xref:System.Activities.Tracking.ActivityScheduledQuery> kullanılarak zamanlanmakta olan `SendEmailActivity` alt etkinliği ile ilgili kayıtlara abone olmak için kullanılan yapılandırma ve kod aşağıdaki örnekte gösterilmiştir.
 
   ```xml
   <activityScheduledQueries>
@@ -207,9 +207,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   };
   ```
 
-- <xref:System.Activities.Tracking.FaultPropagationQuery> -Bir etkinlik içinde oluşan hataların işlenmesi izlemek için bunu kullanın. Sorgu için gerekli bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.FaultPropagationRecord> nesneleri.
+- <xref:System.Activities.Tracking.FaultPropagationQuery> bir etkinlik içinde oluşan hataların işlenmesini izlemek için bunu kullanın. Sorgu, bir <xref:System.Activities.Tracking.TrackingParticipant> <xref:System.Activities.Tracking.FaultPropagationRecord> nesnelerine abone olmak için gereklidir.
 
-  Kayıtları abone olmak için kullanılan kod ve yapılandırmayı ilgili hata yayma kullanarak <xref:System.Activities.Tracking.FaultPropagationQuery> aşağıdaki örnekte gösterilmiştir.
+  <xref:System.Activities.Tracking.FaultPropagationQuery> kullanılarak oluşan hata yayılmaya ilişkin kayıtlara abone olmak için kullanılan yapılandırma ve kod aşağıdaki örnekte gösterilmiştir.
 
   ```xml
   <faultPropagationQueries>
@@ -232,9 +232,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   };
   ```
 
-- <xref:System.Activities.Tracking.CancelRequestedQuery> -Bir alt etkinlik üst etkinliği tarafından iptal etmek için istekleri izlemek için bunu kullanın. Sorgu için gerekli bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.CancelRequestedRecord> nesneleri.
+- <xref:System.Activities.Tracking.CancelRequestedQuery>-üst etkinlik tarafından bir alt etkinliği iptal etmek için istekleri izlemek üzere bunu kullanın. Sorgu, bir <xref:System.Activities.Tracking.TrackingParticipant> <xref:System.Activities.Tracking.CancelRequestedRecord> nesnelerine abone olmak için gereklidir.
 
-  Kayıtları abone olmak için kullanılan kod ve yapılandırmayı ilgili etkinlik iptal kullanarak <xref:System.Activities.Tracking.CancelRequestedQuery> aşağıdaki örnekte gösterilmiştir.
+  <xref:System.Activities.Tracking.CancelRequestedQuery> kullanılarak etkinlik iptalle ilgili kayıtlara abone olmak için kullanılan yapılandırma ve kod aşağıdaki örnekte gösterilmiştir.
 
   ```xml
   <cancelRequestedQueries>
@@ -257,9 +257,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   };
   ```
 
-- <xref:System.Activities.Tracking.CustomTrackingQuery> -Kod etkinlikleriniz tanımlayan olayları izlemek için bunu kullanın. Sorgu için gerekli bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.CustomTrackingRecord> nesneleri.
+- <xref:System.Activities.Tracking.CustomTrackingQuery>-bunu, kod etkinliklerinizde tanımladığınız olayları izlemek için kullanın. Sorgu, bir <xref:System.Activities.Tracking.TrackingParticipant> <xref:System.Activities.Tracking.CustomTrackingRecord> nesnelerine abone olmak için gereklidir.
 
-  Kayıtları abone olmak için kullanılan kod ve yapılandırmayı kullanarak özel izleme kayıtları için ilgili <xref:System.Activities.Tracking.CustomTrackingQuery> aşağıdaki örnekte gösterilmiştir.
+  <xref:System.Activities.Tracking.CustomTrackingQuery> kullanarak özel izleme kayıtlarıyla ilgili kayıtlara abone olmak için kullanılan yapılandırma ve kod aşağıdaki örnekte gösterilmiştir.
 
   ```xml
   <customTrackingQueries>
@@ -282,9 +282,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   };
   ```
 
-- <xref:System.Activities.Tracking.BookmarkResumptionQuery> -İş akışı örneği içinde yer işaretinin sürdürme izlemek için bunu kullanın. Bu sorgu için gerekli bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.BookmarkResumptionRecord> nesneleri.
+- <xref:System.Activities.Tracking.BookmarkResumptionQuery>-bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için bunu kullanın. Bu sorgu, bir <xref:System.Activities.Tracking.TrackingParticipant> <xref:System.Activities.Tracking.BookmarkResumptionRecord> nesnelerine abone olmak için gereklidir.
 
-  İlgili kayıtlara abone olmak için kullanılan kod ve yapılandırmayı sürdürme yer işareti kullanarak <xref:System.Activities.Tracking.BookmarkResumptionQuery> aşağıdaki örnekte gösterilmiştir.
+  <xref:System.Activities.Tracking.BookmarkResumptionQuery> kullanılarak yer işareti sürdürme ilgili kayıtlara abone olmak için kullanılan yapılandırma ve kod aşağıdaki örnekte gösterilmiştir.
 
   ```xml
   <bookmarkResumptionQueries>
@@ -308,9 +308,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 
 ### <a name="annotations"></a>Ek Açıklamalar
 
-Ek açıklamaları, rasgele yapı saatinden yapılandırılabilir bir değerle kayıtları izleme etiket izin verir. Örneğin, "Posta sunucusu ile" etiketlemek için birkaç iş akışları arasında birkaç izleme kayıtları isteyebilirsiniz "Posta Sunucu1" ==. Bu etikete sahip tüm kayıtları izleme kayıtları daha sonra sorgulanırken bulma kolaylaştırır.
+Ek açıklamalar, derleme zamanından sonra yapılandırılabilecek bir değer ile izleme kayıtlarını rastgele etiketlemenize olanak tanır. Örneğin, "posta sunucusu" = = "mail Sunucu1" ile etiketlenecek birkaç iş akışı arasında birkaç izleme kaydının olmasını isteyebilirsiniz. Bu, izleme kayıtlarını daha sonra sorgularken bu etikete sahip tüm kayıtları bulmayı kolaylaştırır.
 
-Bunu gerçekleştirmek için bir ek açıklama bir izleme sorguya aşağıdaki örnekte gösterildiği gibi eklenir.
+Bunu gerçekleştirmek için aşağıdaki örnekte gösterildiği gibi bir izleme sorgusuna ek açıklama eklenir.
 
 ```xml
 <activityStateQuery activityName="SendEmailActivity">
@@ -323,9 +323,9 @@ Bunu gerçekleştirmek için bir ek açıklama bir izleme sorguya aşağıdaki �
 </activityStateQuery>
 ```
 
-### <a name="how-to-create-a-tracking-profile"></a>Bir izleme profili oluşturma
+### <a name="how-to-create-a-tracking-profile"></a>Izleme profili oluşturma
 
-Sorgu öğeleri izleme bir izleme profili kullanarak bir XML yapılandırma dosyasını oluşturmak için kullanılan veya [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]kod. Bir yapılandırma dosyası kullanılarak oluşturulan bir izleme profili bir örneği aşağıda verilmiştir.
+İzleme sorgusu öğeleri, bir XML yapılandırma dosyası veya [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]kodu kullanarak bir izleme profili oluşturmak için kullanılır. Bir yapılandırma dosyası kullanılarak oluşturulan izleme profiline bir örnek aşağıda verilmiştir.
 
 ```xml
 <system.serviceModel>
@@ -342,15 +342,15 @@ Sorgu öğeleri izleme bir izleme profili kullanarak bir XML yapılandırma dosy
 ```
 
 > [!WARNING]
-> İş akışı hizmeti konağı kullanarak WF izleme profili genellikle bir yapılandırma dosyası kullanılarak oluşturulur. İzleme profili kullanarak ve sorgu API'si izleme kodu ile bir izleme profili oluşturmak mümkündür.
+> Iş akışı hizmet ana bilgisayarını kullanan bir WF için, izleme profili genellikle bir yapılandırma dosyası kullanılarak oluşturulur. İzleme profilini ve izleme sorgusu API 'sini kullanarak kodla bir izleme profili oluşturmak da mümkündür.
 
-Bir XML yapılandırma dosyası olarak yapılandırılan bir profili bir davranış uzantısı kullanarak bir izleme katılımcı uygulanır. Bu sonraki bölümde açıklandığı gibi bir WorkflowServiceHost eklenir [yapılandırma izleme için bir iş akışı](configuring-tracking-for-a-workflow.md).
+XML yapılandırma dosyası olarak yapılandırılmış bir profil, bir davranış uzantısı kullanılarak bir izleme katılımcısına uygulanır. Bu, [bir Iş akışı Için Izlemeyi yapılandırırken](configuring-tracking-for-a-workflow.md)sonraki bölümde açıklandığı şekilde bir WorkflowServiceHost 'a eklenir.
 
-Ayrıntı düzeyini ana bilgisayar tarafından yayılan izleme kayıtları izleme profili yapılandırma ayarlarında belirlenir. İzleme katılımcı, sorgular için bir izleme profili ekleyerek kayıtları izleme için abone olur. Tüm izleme kayıtları abone olmak izleme profili kullanarak tüm izleme sorguları belirtilmesi gerekiyor "\*" her bir sorgu ad alanları.
+Konak tarafından yayılan izleme kayıtlarının ayrıntı düzeyi, izleme profili içindeki yapılandırma ayarları tarafından belirlenir. İzleme katılımcısı bir izleme profiline sorgular ekleyerek kayıtları izlemeye abone olur. Tüm izleme kayıtlarına abone olmak için, izleme profilinin her sorgu içindeki ad alanlarında "\*" kullanarak tüm izleme sorgularını belirtmesi gerekir.
 
-İzleme profilleri, sık karşılaşılan örneklerden bazıları aşağıda verilmiştir.
+Aşağıda, izleme profillerinin bazı yaygın örnekleri verilmiştir.
 
-- İş akışı örneği kayıtlarını ve hataları elde etmek için bir izleme profili.
+- İş akışı örneği kayıtlarını ve hatalarını almak için bir izleme profili.
 
   ```xml
   <trackingProfile name="Instance and Fault Records">
@@ -373,7 +373,7 @@ Ayrıntı düzeyini ana bilgisayar tarafından yayılan izleme kayıtları izlem
   </trackingProfile>
   ```
 
-- Tüm özel izleme kayıtları almak için bir izleme profili.
+- Tüm özel izleme kayıtlarını elde etmek için bir izleme profili.
 
   ```xml
   <trackingProfile name="Instance_And_Custom_Records">
@@ -388,5 +388,5 @@ Ayrıntı düzeyini ana bilgisayar tarafından yayılan izleme kayıtları izlem
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [SQL İzleme](./samples/sql-tracking.md)
-- [Windows Server App Fabric izleme](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [App Fabric ile uygulamaları izleme](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Windows Server App Fabric Izleme](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [App Fabric ile uygulamaları izleme](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

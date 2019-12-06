@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 563416f1ca9ddb9cb9bb7e78b9e13406983bdf9f
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d210d31f38af5c6cc21bf9b743ac4e1320db081f
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552796"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837044"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework kullanmaya başlayın
 
@@ -24,28 +24,28 @@ ms.locfileid: "74552796"
 
 .NET Framework, çalışan uygulamalarına çeşitli hizmetler sağlayan Windows için yönetilen bir yürütme ortamıdır. İki ana bileşenden oluşur: çalışan uygulamaları işleyen yürütme altyapısı olan ortak dil çalışma zamanı (CLR) ve geliştiricilerin kendi uygulamalarından çağırabileceği, test edilmiş ve yeniden kullanılabilir bir kitaplık sağlayan .NET Framework sınıf kitaplığı. .NET Framework uygulamaları çalıştırmak için sağladığı hizmetler şunlardır:
 
-- Bellek yönetimi. Birçok programlama dilinde, programcılar bellek ayırmayı ve serbest bırakmayı ve nesne ömrünü işlemeyi sorumludur. .NET Framework uygulamalarda, CLR bu Hizmetleri uygulama adına sağlar.
+- Bellek yönetimi. Birçok programlama dilinde, programcılar belleği tahsis etme ve serbest bırakmadan ve nesne kullanım ömrü işlemesinden sorumludur. .NET Framework uygulamalarda, CLR bu Hizmetleri uygulama adına sağlar.
 
-- Ortak bir tür sistemi. Geleneksel programlama dillerinde temel türler derleyici tarafından tanımlanır, bu da çapraz dil birlikte çalışabilirliği karmaşıklaştırır. .NET Framework, temel türler .NET Framework tür sistemi tarafından tanımlanır ve .NET Framework hedefleyen tüm diller için ortaktır.
+- Ortak tür sistemi. Geleneksel programlama dillerinde, temel türler diller arası çalışabilirliği karmaşıklaştıran bir derleyici tarafından tanımlanır. .NET Framework'de, temel türler .net Framework tür sistemi tarafından tanımlanır ve .NET Framework'ü hedefleyen tüm diller için ortaktır.
 
 - Kapsamlı bir sınıf kitaplığı. Programcılar, sık kullanılan alt düzey programlama işlemlerini işlemek için çok miktarda kod yazmak yerine, .NET Framework sınıf kitaplığından bir tür ve üyeleri olan kolay erişilebilir bir kitaplık kullanır.
 
 - Geliştirme çerçeveleri ve teknolojileri. .NET Framework, Web uygulamaları için ASP.NET, veri erişimi için ADO.NET, hizmet odaklı uygulamalar için Windows Communication Foundation ve Windows Masaüstü uygulamaları için Windows Presentation Foundation gibi belirli uygulama geliştirme alanlarının kitaplıklarını içerir.
 
-- Dil birlikte çalışabilirliği. .NET Framework hedefleyen dil derleyicileri ortak ara dil (CıL) adlı bir ara kod yayarak ortak dil çalışma zamanı ile çalışma zamanında derlenir. Bu özellik ile, bir dilde yazılan yordamların diğer diller tarafından erişilebilir olması ve programcılar tercih ettiğiniz dillerde uygulama oluşturmaya odaklanmaktadır.
+- Diller arası çalışabilirlik. .NET Framework hedefleyen dil derleyicileri ortak ara dil (CıL) adlı bir ara kod yayarak ortak dil çalışma zamanı ile çalışma zamanında derlenir. Bu özellik ile, bir dilde yazılan yordamların diğer diller tarafından erişilebilir olması ve programcılar tercih ettiğiniz dillerde uygulama oluşturmaya odaklanmaktadır.
 
 - Sürüm uyumluluğu. Nadir özel durumlar sayesinde, .NET Framework belirli bir sürümü kullanılarak geliştirilen uygulamalar, daha sonraki bir sürümde değişiklik yapılmadan çalışır.
 
-- Yan yana yürütme. .NET Framework, aynı bilgisayarda ortak dil çalışma zamanının birden çok sürümünün var olmasına izin vererek sürüm çakışmalarını çözmeye yardımcı olur. Bu, birden çok uygulama sürümünün ve bir uygulamanın oluşturulduğu .NET Framework sürümünde çalışabileceği anlamına gelir. Yan yana yürütme, 1.0/1.1, 2.0/3.0/3.5 ve 4/4.5. x/4.6. x/4.7. x/4.8 sürüm grupları .NET Framework için geçerlidir.
+- Yan yana yürütme. .NET Framework, ortak dil çalışma zamanının birden çok sürümünün aynı bilgisayarda bulunmasına izin vererek sürüm çakışmalarının çözümlenmesine yardımcı olur. Bu, birden çok uygulama sürümünün ve bir uygulamanın oluşturulduğu .NET Framework sürümünde çalışabileceği anlamına gelir. Yan yana yürütme, 1.0/1.1, 2.0/3.0/3.5 ve 4/4.5. x/4.6. x/4.7. x/4.8 sürüm grupları .NET Framework için geçerlidir.
 
-- Çoklu sürüm desteği. [.NET Standard](../../standard/net-standard.md)hedefleyerek, geliştiriciler standart bu sürümü tarafından desteklenen birden çok .NET Framework platformda çalışan sınıf kitaplıkları oluşturur. Örneğin, 2,0 .NET Standard hedefleyen kitaplıklar .NET Framework 4.6.1, .NET Core 2,0 ve UWP 10.0.16299 ' yi hedefleyen uygulamalar tarafından kullanılabilir. 
+- Çoklu Sürüm Desteği. [.NET Standard](../../standard/net-standard.md)hedefleyerek, geliştiriciler standart bu sürümü tarafından desteklenen birden çok .NET Framework platformda çalışan sınıf kitaplıkları oluşturur. Örneğin, 2,0 .NET Standard hedefleyen kitaplıklar .NET Framework 4.6.1, .NET Core 2,0 ve UWP 10.0.16299 ' yi hedefleyen uygulamalar tarafından kullanılabilir. 
 
 <a name="ForUsers"></a>
 ## <a name="the-net-framework-for-users"></a>Kullanıcılar için .NET Framework
 
-.NET Framework uygulamalar geliştirmezseniz ancak bunları kullanıyorsanız, .NET Framework veya işlemi hakkında belirli bilgilere sahip olmanız gerekmez. Çoğu bölüm için .NET Framework kullanıcılara tamamen saydamdır.
+.NET Framework uygulamalar geliştirmezseniz ancak bunları kullanıyorsanız, .NET Framework veya işlemi hakkında belirli bilgilere sahip olmanız gerekmez. Çoğunlukla, .NET Framework kullanıcılara tamamen saydamdır.
 
-Windows işletim sistemi kullanıyorsanız, .NET Framework bilgisayarınızda zaten yüklü olabilir. Ayrıca, .NET Framework gerektiren bir uygulama yüklerseniz, uygulamanın kurulum programı bilgisayarınıza .NET Framework belirli bir sürümünü kurabilir. Bazı durumlarda, .NET Framework yüklemenizi isteyen bir iletişim kutusu görebilirsiniz. Bu iletişim kutusu göründüğünde bir uygulamayı çalıştırmaya çalıştıysanız ve bilgisayarınızda Internet erişimi varsa, .NET Framework eksik sürümünü yüklemenize izin veren bir Web sayfasına gidebilirsiniz. Daha fazla bilgi için bkz. [Yükleme Kılavuzu](../install/index.md).
+Windows işletim sistemi kullanıyorsanız, .NET Framework bilgisayarınızda zaten yüklü olabilir. Ayrıca, .NET Framework gerektiren bir uygulama yüklerseniz, uygulamanın kurulum programı bilgisayarınıza .NET Framework belirli bir sürümünü kurabilir. Bazı durumlarda, .NET Framework'ü yüklemenizi isteyen bir iletişim kutusu görebilirsiniz. Bu iletişim kutusu göründüğünde bir uygulamayı çalıştırmaya çalıştıysanız ve bilgisayarınızda Internet erişimi varsa, .NET Framework eksik sürümünü yüklemenize izin veren bir Web sayfasına gidebilirsiniz. Daha fazla bilgi için bkz. [Yükleme Kılavuzu](../install/index.md).
 
 Genel olarak, bilgisayarınızda yüklü olan .NET Framework sürümlerini kaldırmamanız gerekir. Bunun iki nedeni vardır:
 
@@ -65,7 +65,7 @@ Geliştiriciyseniz, uygulamalarınızı oluşturmak için .NET Framework destekl
 
 1. İşletim sisteminizde önceden yüklü değilse, uygulamanızın hedefleyecek .NET Framework sürümünü yüklemelisiniz. En son üretim sürümü 4,8 .NET Framework. Windows 10 Mayıs 2019 güncelleştirmesine önceden yüklenmiştir ve Windows işletim sisteminin önceki sürümlerinde indirilebilir. .NET Framework sistem gereksinimleri için bkz. [sistem gereksinimleri](system-requirements.md). .NET Framework diğer sürümlerini yükleme hakkında bilgi için bkz. [Yükleme Kılavuzu](../install/guide-for-developers.md). Ek .NET Framework paketleri bant dışında serbest bırakılır, bu da normal veya zamanlanmış herhangi bir yayın döngüsünün dışında, sıralı olarak yayımlandıkları anlamına gelir. Bu paketler hakkında daha fazla bilgi için bkz. [.NET Framework ve bant dışı yayınlar](the-net-framework-and-out-of-band-releases.md).
 
-2. Uygulamalarınızı geliştirmek için kullanmayı düşündüğünüz .NET Framework tarafından desteklenen dili veya dilleri seçin. Microsoft 'tan [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.yml), [F#](../../fsharp/index.yml)ve [ C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) dahil olmak üzere çeşitli diller mevcuttur. (.NET Framework uygulamalar geliştirmenize olanak tanıyan bir programlama dili, [ortak dil altyapısı (CLI) belirtimine](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)uyar.)
+2. Uygulamalarınızı geliştirmek için kullanmayı düşündüğünüz .NET Framework tarafından desteklenen dili veya dilleri seçin. Microsoft 'tan [Visual Basic](../../visual-basic/index.yml), [C#](../../csharp/index.yml), [F#](../../fsharp/index.yml)ve [ C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) dahil olmak üzere çeşitli diller mevcuttur. (.NET Framework uygulamalar geliştirmenize olanak tanıyan bir programlama dili, [ortak dil altyapısı (CLI) belirtimine](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)uyar.)
 
 3. Uygulamalarınızı oluşturmak ve seçtiğiniz programlama dilini veya dillerini desteklemek için kullanmak üzere geliştirme ortamını seçin. .NET Framework uygulamalar için Microsoft tümleşik geliştirme ortamı (IDE), [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Çeşitli sürümlerde kullanılabilir.
 
@@ -87,5 +87,5 @@ Geliştiriciyseniz, uygulamalarınızı oluşturmak için .NET Framework destekl
 
 - [.NET Framework Kılavuzu](../index.md)
 - [Yenilikler](../whats-new/index.md)
-- [.NET API tarayıcısı](../../../api/index.md)
+- [.NET API Tarayıcısı](../../../api/index.md)
 - [Geliştirme Kılavuzu](../development-guide.md)

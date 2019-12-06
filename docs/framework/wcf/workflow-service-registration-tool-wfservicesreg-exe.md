@@ -2,12 +2,12 @@
 title: WorkFlow Hizmet Kayıt Aracı (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 6b1a0b990b1657e724f527b5beccce0e8a6391a6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cf5ea345c900dec0e4859d81fcb272c1ba3d3df6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281666"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837759"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>WorkFlow Hizmet Kayıt Aracı (WFServicesReg.exe)
 Workflow Services kayıt aracı (WFServicesReg. exe), Windows Workflow Foundation (WF) Hizmetleri için yapılandırma öğelerini eklemek, kaldırmak veya onarmak üzere kullanılabilecek tek başına bir araçtır.  
@@ -60,7 +60,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  64 bitlik makinelerde araç, `Enable32BitAppOnWin64` anahtarı etkinse WOW modu komut dosyası eşleştirmelerini veya `Enable32BitAppOnWin64` anahtarı devre dışıysa yerel 64 bit komut dosyası eşleştirmelerini kaydeder.  
   
- [!INCLUDE[wv](../../../includes/wv-md.md)] ve Windows Server 2008 (IIS 7,0 ve üzeri) makinelerinde, iki. xoml ve. Rules işleyicisi kümesi kaydedilir: biri tümleşik mod ve bir klasik mod için.  
+ Windows Vista ve Windows Server 2008 (IIS 7,0 ve üzeri) makinelerinde, iki. xoml ve. Rules işleyicisi kümesi kaydedilir: biri tümleşik mod ve bir klasik mod için.  
   
  64 bit makinelerde, üç işleyici kümesi (`Enable32BitAppOnWin64` anahtarın durumundan bağımsız olarak) kaydedilir: bir adet, bir tane, WOW klasik mod ve diğeri yerel 64 bit klasik mod için bir adet tümleşik mod için.  
   

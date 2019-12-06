@@ -2,12 +2,12 @@
 title: WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: c855fe7cc804fac14348990b7a6f5f84a0956b0c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b8fb32111a80178f5eb92411eb4990decb645bb6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802416"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837746"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)
 
@@ -113,7 +113,7 @@ Aşağıdaki dört şekilde WCF hizmet konağını kapatabilirsiniz:
 
 Yönetici ayrıcalıkları olmayan kullanıcıların WCF Hizmetleri geliştirmesine olanak tanımak için, Visual Studio yüklemesi sırasında "http://+:8731/Design_Time_Addresses" ad alanı için bir ACL (Access Control listesi) oluşturulur. ACL, makinede oturum açmış tüm etkileşimli kullanıcıları içeren (UI) olarak ayarlanır. Yöneticiler bu ACL 'ye kullanıcı ekleyebilir veya kaldırabilir veya ek bağlantı noktaları açabilir. Bu ACL, kullanıcıların, yönetici ayrıcalıkları vermeden WCF hizmeti otomatik ana bilgisayarını (wcfSvcHost. exe) kullanmasına olanak sağlar.
 
-Erişimi, yükseltilmiş yönetici hesabı altındaki [!INCLUDE[wv](../../../includes/wv-md.md)] Netsh. exe aracını kullanarak değiştirebilirsiniz. Netsh. exe ' nin kullanılmasına bir örnek aşağıda verilmiştir.
+Erişimi, yükseltilmiş yönetici hesabı altında Windows Vista 'da Netsh. exe aracını kullanarak değiştirebilirsiniz. Netsh. exe ' nin kullanılmasına bir örnek aşağıda verilmiştir.
 
 ```console
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>

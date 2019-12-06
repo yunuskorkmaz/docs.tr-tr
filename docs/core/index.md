@@ -2,14 +2,14 @@
 title: .NET Core Kılavuzu
 description: .NET Core, Windows, Linux ve Mac uygulamaları oluşturmaya yönelik modüler ve yüksek performanslı bir uygulamasıdır. Başlamak için .NET Core hakkında bilgi edinin.
 author: richlander
-ms.date: 09/23/2019
+ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 95f18ca09852ce139a4b99ed7aef4802d4883e13
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b2622dba53d64c9dcf58e852d57de117fe79eb2e
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216213"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837018"
 ---
 # <a name="net-core-guide"></a>.NET Core Kılavuzu
 
@@ -25,20 +25,20 @@ Windows, macOS veya Linux makinenizde .NET Core 'u denemek için [.NET Core SDK]
 
 Başka bir .NET Core sürümü arıyorsanız, tüm .NET Core sürümleri [.NET Core İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core) ile kullanılabilir.
 
-## <a name="net-core-30"></a>.NET Core 3.0
+## <a name="net-core-31"></a>.NET Core 3,1
 
-En son sürüm .NET Core 3,0 ' dir. Yeni özellikler Windows Presentation Foundation (WPF) ve Windows Forms ile Windows masaüstü desteği, Blazor ile tam C# yığın Web geliştirme, SignalR ve Azure SignalR hizmetine yapılan yeni geliştirmeler, 8 ile C# C# yeni dil özellikleri içerir ve çok daha fazlası. .NET Core 3,0 ' deki yeni özelliklerin tam listesi için bkz. [.net core 3,0 ' deki](./whats-new/dotnet-core-3-0.md)yenilikler.
+En son sürüm .NET Core 3,1 ' dir. .NET Core 3,0 üzerinde küçük iyileştirmeler içerir. Ancak .NET Core 3,1, uzun süreli desteklenen bir sürümdür. .NET Core 3,1 sürümü hakkında daha fazla bilgi için bkz. [.net core 3,1 ' deki](./whats-new/dotnet-core-3-1.md)yenilikler.
 
-## <a name="create-your-first-application"></a>İlk uygulamanızı oluşturma
+## <a name="create-your-first-application"></a>İlk uygulamanızı oluşturun
 
-.NET Core SDK yükledikten sonra bir komut istemi açın. Bir C# uygulama oluşturmak `dotnet` ve çalıştırmak için aşağıdaki komutları yazın:
+.NET Core SDK yükledikten sonra bir komut istemi açın. Bir C# uygulama oluşturmak ve çalıştırmak için aşağıdaki `dotnet` komutlarını yazın:
 
 ```dotnetcli
 dotnet new console
 dotnet run
 ```
 
-Aşağıdaki çıktıyı görmeniz gerekir:
+Aşağıdaki çıkışı görmeniz gerekir:
 
 ```output
 Hello World!

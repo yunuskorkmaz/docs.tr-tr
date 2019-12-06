@@ -3,14 +3,14 @@ title: .NET 'e hoş geldiniz
 description: .NET teknolojileri ailesine Başlarken.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/23/2019
+ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: ccff6256b56daccdf8105fd5ad31e81bb892c2a8
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 15daaafed02ab1132a3c82c12efa6fad0e0a6db2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552958"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838136"
 ---
 # <a name="welcome-to-net"></a>.NET 'e hoş geldiniz
 
@@ -29,9 +29,9 @@ Bulut, IoT ve ücretsiz platformlar arası araçlar kullanan oyunlar gibi .NET i
 
 Ayrıca, en son .NET olaylarını izleyin:
 
+- [Microsoft Ignite](https://www.microsoft.com/ignite)
 - [Microsoft derleme](https://www.microsoft.com/build)
 - [.NET conf](https://www.dotnetconf.net/)
-- [Microsoft Connect ()](https://www.microsoft.com/connectevent)
 
 .NET uygulamalarına ve desteklenen dillere eklenen en son özellikler hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
@@ -49,7 +49,7 @@ Bu belge platformlar ve diller genelinde .NET 'in kapsamını içerir. Aşağıd
 - [.NET Framework Kılavuzu](framework/index.md)
 - [C# Kılavuzu](csharp/index.yml)
 - [F# Kılavuzu](fsharp/index.yml)
-- [Visual Basic Kılavuzu](visual-basic/index.md)
+- [Visual Basic Kılavuzu](visual-basic/index.yml)
 - [ML.NET Kılavuzu](machine-learning/index.yml)
 - [Apache Spark için .NET](spark/index.yml)
 - [.NET uygulama mimarisi](architecture/index.yml)
@@ -67,11 +67,10 @@ Web, mobil, Masaüstü, C#makine öğrenimi, kapsayıcılar/Docker, veri erişim
 Bu belge tamamen [açık kaynaktır](https://github.com/dotnet/docs). Belge yazma sorunlarıyla karşılaşmanız, istediğiniz herhangi bir şekilde katkıda bulunabilir. Ayrıca, .NET 'in çoğu da açık kaynaktır. Aşağıdaki listede, ana .NET GitHub depoları gösterilmektedir:
 
 - [.NET Core giriş sayfası](https://github.com/dotnet/core)
-- [.NET kitaplıkları](https://github.com/dotnet/corefx)
-- [.NET Core çalışma zamanı](https://github.com/dotnet/coreclr)
-- [.NET Core CLI](https://github.com/dotnet/cli)
+- [.NET Core çalışma zamanı](https://github.com/dotnet/runtime)
+- [.NET Core SDK](https://github.com/dotnet/sdk)
 - [Roslyn (C# ve Visual Basic) derleyicisi platformu ve IDE araçları](https://github.com/dotnet/roslyn)
-- [F#Derleyici ve IDE araçları](https://github.com/microsoft/visualfsharp)
+- [F#Derleyici ve IDE araçları](https://github.com/dotnet/fsharp)
 - [Windows Forms](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 

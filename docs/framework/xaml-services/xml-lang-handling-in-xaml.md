@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 98bfabba96e5805b96c63eb02233b15eae233cc0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b3f236b2378d6af78f034856e3ba0f7a9e17993c
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740567"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837148"
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML'de xml:lang İşleme
 `xml:lang` özniteliği, XML içindeki bir öğe için dil ve kültür bilgilerini bildiren XML tanımlı bir özniteliktir. Özniteliğin bu anlamı XAML 'de devam ediyor; Ancak bazı ek konular geçerlidir.  
@@ -27,7 +27,7 @@ ms.locfileid: "73740567"
   
 |||  
 |-|-|  
-|*rfc3066lang*|[RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454) standbundan türetilmiş ve bir dil ya da dil bölgesi tanımlayan bir dize. İkinci olduğunda, dil ve bölge tek bir tire ile ayrılır. Değerler ve biçim hakkında daha fazla bilgi için bkz. <xref:System.Windows.Markup.XmlLanguage>.|  
+|*rfc3066lang*|[RFC 3066](https://www.ietf.org/rfc/rfc3066.txt) standbundan türetilmiş ve bir dil ya da dil bölgesi tanımlayan bir dize. İkinci olduğunda, dil ve bölge tek bir tire ile ayrılır. Değerler ve biçim hakkında daha fazla bilgi için bkz. <xref:System.Windows.Markup.XmlLanguage>.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] `xml:lang` özniteliğinin tanımı, XML için World Wide Web Konsorsiyumu (W3C) tarafından bir "özel öznitelik" olarak tanımlanan `xml:lang` türetilir. Dil ve kültür bilgileri, uygulamalarına bağlı olarak, öğelere göre farklı yollarla işlenir; Ancak, `xml:lang` özniteliğinde varsayılan [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] işleme yoktur.  

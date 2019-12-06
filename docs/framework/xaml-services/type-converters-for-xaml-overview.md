@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: b54731cc1aba1a47ed6b11f2bff5c596a53fd4b5
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 65210d8224b145ab23c7bc9ed76997c0892a5f59
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458514"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837265"
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML Tür Dönüştürücülerine Genel Bakış
 Tür dönüştürücüler, XAML biçimlendirme içindeki bir dizeden bir nesne grafiğinde belirli nesnelere dönüştüren bir nesne yazıcı için arz mantığı sağlar. .NET Framework XAML hizmetlerinde, tür dönüştürücüsü <xref:System.ComponentModel.TypeConverter>türeten bir sınıf olmalıdır. Bazı dönüştürücüler XAML kayıt yolunu da destekler ve serileştirme biçimlendirmesinde bir nesneyi dize biçiminde seri hale getirmek için kullanılabilir. Bu konu, XAML 'deki tür dönüştürücülerinin nasıl ve ne zaman çağrılacağını açıklar ve <xref:System.ComponentModel.TypeConverter>metot geçersiz kılmaları için uygulama önerisi sağlar.  
@@ -60,7 +60,7 @@ Tür dönüştürücüler, XAML biçimlendirme içindeki bir dizeden bir nesne g
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> ve <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>, bir hizmet <xref:System.ComponentModel.TypeConverter> uygulamasının yeteneklerini sorguladığında kullanılan destek yöntemleridir. Bu yöntemleri, dönüştürücünün eşit dönüştürme yöntemlerinin desteklediği türe özgü durumlar için `true` döndürmek üzere uygulamanız gerekir. XAML amaçları için bu genellikle <xref:System.String> türü anlamına gelir.  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>XAML için kültür bilgileri ve tür dönüştürücüler  
- Her bir <xref:System.ComponentModel.TypeConverter> uygulama, dönüştürme için geçerli bir dize olduğunu benzersiz bir şekilde yorumlayabilir ve ayrıca parametre olarak geçirilen tür açıklamasını kullanabilir veya yoksayabilir. Kültür ve XAML türü dönüştürme için önemli bir göz önünde bulundurmanız gerekenler şunlardır: öznitelik değerleri olarak yerelleştirilebilir dizeler kullanılması XAML tarafından desteklenmekle birlikte, bu yerelleştirilebilir dizeleri belirli kültür gereksinimlerine sahip tür dönüştürücüsü girişi olarak kullanamazsınız. Bu sınırlama, XAML öznitelik değerleri için tür dönüştürücülerinin, `en-US` kültür kullanan sabit dil XAML işleme davranışına sahip olması gerektiğini içerir. Bu kısıtlamanın tasarım nedenleri hakkında daha fazla bilgi için bkz. XAML dil belirtimi ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) veya [WPF Genelleştirme ve yerelleştirme genel bakış](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
+ Her bir <xref:System.ComponentModel.TypeConverter> uygulama, dönüştürme için geçerli bir dize olduğunu benzersiz bir şekilde yorumlayabilir ve ayrıca parametre olarak geçirilen tür açıklamasını kullanabilir veya yoksayabilir. Kültür ve XAML türü dönüştürme için önemli bir göz önünde bulundurmanız gerekenler şunlardır: öznitelik değerleri olarak yerelleştirilebilir dizeler kullanılması XAML tarafından desteklenmekle birlikte, bu yerelleştirilebilir dizeleri belirli kültür gereksinimlerine sahip tür dönüştürücüsü girişi olarak kullanamazsınız. Bu sınırlama, XAML öznitelik değerleri için tür dönüştürücülerinin, `en-US` kültür kullanan sabit dil XAML işleme davranışına sahip olması gerektiğini içerir. Bu kısıtlamanın tasarım nedenleri hakkında daha fazla bilgi için bkz. XAML dil belirtimi ([\[MS-XAML\]](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))) veya [WPF Genelleştirme ve yerelleştirme genel bakış](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
   
  Kültüre bir sorun olabilecek bir örnek olarak, bazı kültürler dize biçimindeki sayılar için ondalık nokta sınırlayıcısı olarak bir nokta yerine virgül kullanır. Bu kullanım, çok sayıda mevcut tür dönüştürücülerinin sahip olduğu ve sınırlayıcı olarak virgül kullanmanın olduğu davranış ile çakışıyor. Bir kültürü çevreleyen XAML 'de `xml:lang` aracılığıyla geçirmek sorunu çözmez.  
   

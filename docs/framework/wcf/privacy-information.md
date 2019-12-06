@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 0b277728d2f2c224d5e45e3990ab2fd588bc81d3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c5500b8fd8b35081e83e2e9279dc4f236ef3c7b0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318690"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837941"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation Gizlilik Bilgileri
 Microsoft, son kullanıcıların gizliliğini korumayı taahhüt etmektedir. Windows Communication Foundation (WCF), sürüm 3,0 kullanarak bir uygulama oluşturduğunuzda, uygulamanız son kullanıcılarınızın gizliliğini etkileyebilir. Örneğin, uygulamanız kullanıcı iletişim bilgilerini açıkça toplayabilir veya Internet üzerinden Web sitenize bilgi talep edebilir veya gönderebilir. Uygulamanıza Microsoft teknolojisi eklerseniz, bu teknolojinin gizliliği etkileyebilecek kendi davranışı olabilir. WCF, siz veya son kullanıcı tarafından bize göndermek için seçim yapmadıkça Microsoft 'a herhangi bir bilgi göndermez.  
@@ -54,7 +54,7 @@ Microsoft, son kullanıcıların gizliliğini korumayı taahhüt etmektedir. Win
 ## <a name="auditing"></a>Denetim  
  Denetim, kimlik doğrulama ve yetkilendirme olaylarının başarısını ve başarısızlığını kaydeder. Denetim kayıtları şu verileri içerir: hizmet URI 'SI, eylem URI 'SI ve arayanın kimliği.  
   
- Ayrıca Denetim, yönetici ileti günlüğe kaydetme yapılandırmasını değiştirdiğinde (açık veya kapalı), ileti günlüğü, uygulamaya özgü verileri üst bilgilerde ve gövdelerde günlüğe kaydeder. [!INCLUDE[wxp](../../../includes/wxp-md.md)]için, uygulama olay günlüğüne bir kayıt kaydedilir. [!INCLUDE[wv](../../../includes/wv-md.md)] ve [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]için, güvenlik olay günlüğüne bir kayıt kaydedilir.  
+ Ayrıca Denetim, yönetici ileti günlüğe kaydetme yapılandırmasını değiştirdiğinde (açık veya kapalı), ileti günlüğü, uygulamaya özgü verileri üst bilgilerde ve gövdelerde günlüğe kaydeder. [!INCLUDE[wxp](../../../includes/wxp-md.md)]için, uygulama olay günlüğüne bir kayıt kaydedilir. Windows Vista ve [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]için güvenlik olay günlüğüne bir kayıt kaydedilir.  
   
 ## <a name="transactions"></a>İşlemler  
  İşlemler özelliği bir WCF uygulamasına işlem hizmetleri sağlar.  
@@ -404,4 +404,4 @@ Microsoft, son kullanıcıların gizliliğini korumayı taahhüt etmektedir. Win
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows Communication Foundation](index.md)
-- [Güvenlik](./feature-details/security.md)
+- [Security](./feature-details/security.md)

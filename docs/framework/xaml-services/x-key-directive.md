@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: 8321a09db31c9f6d2103a252a195fcdbf8da3e66
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4ffd7a2922c7f3ba35ccb9ac7ce29a6a00cd99af
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283849"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837213"
 ---
 # <a name="xkey-directive"></a>x:Key Yönergesi
-, XAML tanımlı bir sözlükte oluşturulan ve başvurulan öğeleri benzersiz şekilde tanımlar. Bir XAML nesne öğesine `x:Key` değeri eklemek, kaynak sözlüğünde bir kaynağı (örneğin, WPF <xref:System.Windows.ResourceDictionary>) belirlemenin en yaygın yoludur.  
+Oluşturulan ve XAML tanımlı bir sözlükte başvurulan öğeleri benzersiz olarak tanımlar. `x:Key` değerini XAML nesnesi öğesine eklemek kaynak sözlüğünde bir kaynağı tanımlamanın en yaygın yoludur. Örneğin, WPF <xref:System.Windows.ResourceDictionary> öğesinde.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -28,7 +28,7 @@ ms.locfileid: "74283849"
 <object x:Key="{markupExtensionUsage}".../>  
 ```  
   
-## <a name="xaml-attribute-usage-wpf-specific"></a>XAML öznitelik kullanımı (WPF 'e özgü)  
+## <a name="xaml-attribute-usage-wpf-specific"></a>XAML Öznitelik Kullanımı (WPF'ye özgü)  
   
 ```xaml  
 <object.Resources>  
@@ -44,38 +44,38 @@ ms.locfileid: "74283849"
   
 |||  
 |-|-|  
-|`stringKeyValue`|Anahtar olarak kullanılacak bir metin dizesi. Metin dizesi [XamlName dilbilgisinde](xamlname-grammar.md)uyumlu olmalıdır.|  
+|`stringKeyValue`|Anahtar olarak kullanmak için metin dizesi. Metin dizesi [XamlName dilbilgisinde](xamlname-grammar.md)uyumlu olmalıdır.|  
 |`markupExtensionUsage`|Biçimlendirme Uzantısı sınırlayıcıları {}, anahtar olarak kullanılacak bir nesne sağlayan bir biçimlendirme uzantısı kullanımı. Bkz. açıklamalar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `x:Key` XAML kaynak sözlüğü kavramını destekler. Dil olarak XAML, belirli kullanıcı arabirimi çerçevelerine kalan bir kaynak sözlüğü uygulamasını tanımlamaz. XAML kaynak sözlüklerinin WPF 'de nasıl uygulandığı hakkında daha fazla bilgi edinmek için bkz. [xaml kaynakları](../../desktop-wpf/fundamentals/xaml-resources-define.md).  
+ `x:Key` XAML kaynak sözlüğü kavramını destekler. XAML dil olarak kaynak sözlük uygulamasını desteklemez; başka bir deyişle UI framework'lerinde kalır. XAML kaynak sözlüklerinin WPF 'de nasıl uygulandığı hakkında daha fazla bilgi edinmek için bkz. [xaml kaynakları](../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
- XAML 2006 ve WPF 'de `x:Key` bir öznitelik olarak sağlanmalıdır. Dize olmayan anahtarlar kullanmaya devam edebilirsiniz, ancak öznitelik biçiminde dize olmayan değer sağlamak için bu bir biçimlendirme uzantısı kullanımı gerektirir. XAML 2009 kullanıyorsanız, bir işaretleme uzantısı ara alanı gerektirmeden dizeler dışındaki nesne türlerine göre anahtarlı sözlükleri açıkça desteklemek için `x:Key` bir öğe olarak belirtilebilir. Bu konudaki "XAML 2009" bölümüne bakın. Açıklamalar bölümünün geri kalanı XAML 2006 uygulamasına özel olarak uygulanır.  
+ XAML 2006 ve WPF 'de `x:Key` bir öznitelik olarak sağlanmalıdır. Dize olmayan anahtarlar kullanmaya devam edebilirsiniz, ancak bu öznitelik formunda dize olmayan değer sağlamak için bir biçimlendirme uzantısı kullanımı gerekir. XAML 2009 kullanıyorsanız, bir işaretleme uzantısı ara alanı gerektirmeden dizeler dışındaki nesne türlerine göre anahtarlı sözlükleri açıkça desteklemek için `x:Key` bir öğe olarak belirtilebilir. Bu konudaki "XAML 2009" bölümüne bakın. Açıklamalar bölümünün geri kalanı XAML 2006 uygulamasına özel olarak uygulanır.  
   
- `x:Key` öznitelik değeri [XamlName dilbilgisinde](xamlname-grammar.md) tanımlanmış herhangi bir dize olabilir veya bir işaretleme uzantısı aracılığıyla değerlendirilen bir nesne olabilir. WPF örneği için bkz. "WPF kullanım notları".  
+ `x:Key` öznitelik değeri [XamlName dilbilgisinde](xamlname-grammar.md) tanımlanmış herhangi bir dize olabilir veya bir işaretleme uzantısı aracılığıyla değerlendirilen bir nesne olabilir. WPF'den bir örnek için, bkz: "WPF Kullanım Notları".  
   
- Bir <xref:System.Collections.IDictionary> uygulama olan üst öğenin alt öğeleri genellikle bu sözlük içinde benzersiz bir anahtar değeri belirten bir `x:Key` özniteliği içermelidir. Çerçeveler, belirli türlerde `x:Key` yerine koymak için diğer ad anahtar özellikleri uygulayabilir; Bu tür özellikleri tanımlayan türler <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>özniteliğine sahip olmalıdır.  
+ <xref:System.Collections.IDictionary> uygulaması olan üst öğenin alt öğeleri genellikle bu sözlük dahilinde benzersiz anahtar değer belirten `x:Key` özniteliği içermelidir. Çerçeveler, özel türlerde `x:Key` için yedek olarak takma adlı anahtar özellikleri uygulayabilir; bu gibi özellikleri tanımlayan türler <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute> ile oluşturulmalıdır.  
   
- `x:Key` belirtmenin kod eşdeğeri, temel alınan <xref:System.Collections.IDictionary>kullanılan anahtardır. Örneğin, WPF içindeki bir kaynak için biçimlendirmede uygulanan `x:Key`, kaynağı bir WPF <xref:System.Windows.ResourceDictionary> bir WPF 'e eklediğinizde <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> `key` parametresinin değerine eşdeğerdir.  
+ `x:Key` öğesini belirten kod eşdeğeri temel <xref:System.Collections.IDictionary> için kullanılan ana unsurdur. Örneğin WPF içindeki bir kaynak için işaretlemede uygulanan bir `x:Key`, kaynağı kod içindeki ,WPF <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> öğesine eklediğinizde <xref:System.Windows.ResourceDictionary> öğesinin `key` parametresinin değerine eşittir.  
   
 ## <a name="wpf-usage-notes"></a>WPF kullanım notları  
- WPF <xref:System.Windows.ResourceDictionary>gibi <xref:System.Collections.IDictionary> bir uygulama olan üst nesnenin alt nesneleri, genellikle bir `x:Key` özniteliği içermelidir ve anahtar değeri bu sözlük içinde benzersiz olmalıdır. İki önemli özel durumu vardır:  
+ WPF <xref:System.Collections.IDictionary> gibi, <xref:System.Windows.ResourceDictionary> uygulaması olan üst nesnenin alt nesneleri genellikle `x:Key` özniteliğini içermelidir ve anahtar değer bu sözlük dahilinde benzersiz olmalıdır. Dikkat çekici iki tür özel durum vardır:  
   
-- Bazı WPF türleri sözlük kullanımı için örtük bir anahtar bildirir. Örneğin, <xref:System.Windows.Style.TargetType%2A><xref:System.Windows.Style> veya <xref:System.Windows.DataTemplate.DataType%2A>olan bir <xref:System.Windows.DataTemplate>, bir <xref:System.Windows.ResourceDictionary> olabilir ve örtük anahtarı kullanabilir.  
+- Bazı WPF türleri sözlük kullanımı için bir örtülü anahtar bildirir. Örneğin  <xref:System.Windows.Style> ile bir <xref:System.Windows.Style.TargetType%2A> ya da  <xref:System.Windows.DataTemplate> ile bir <xref:System.Windows.DataTemplate.DataType%2A>, bir <xref:System.Windows.ResourceDictionary> içinde olabilir ve örtük anahtarı kullanabilir.  
   
-- WPF, birleştirilmiş bir kaynak sözlüğü kavramını destekler. Anahtarlar birleştirilmiş sözlükler arasında paylaşılabilir ve <xref:System.Windows.FrameworkContentElement.FindResource%2A>kullanarak paylaşılan anahtar davranışına erişilebilir. Daha fazla bilgi için bkz. [birleştirilmiş kaynak sözlükleri](../wpf/advanced/merged-resource-dictionaries.md).  
+- WPF birleştirilmiş bir kaynak sözcük kavramını destekler. Anahtarlar birleştirilmiş sözlükler arasında paylaşılabilir ve paylaşılan anahtar davranışına <xref:System.Windows.FrameworkContentElement.FindResource%2A> kullanılarak erişilebilir. Daha fazla bilgi için bkz. [birleştirilmiş kaynak sözlükleri](../wpf/advanced/merged-resource-dictionaries.md).  
   
- Genel WPF XAML uygulamasında ve uygulama modelinde, anahtar benzersizliği XAML biçimlendirme derleyicisi tarafından denetlenmez. Bunun yerine, eksik veya benzersiz olmayan `x:Key` değerleri yükleme zamanı XAML ayrıştırıcı hatalarına neden olur. Bununla birlikte, WPF sözlüklerinin Visual Studio tarafından işlenmesi genellikle tasarım aşamasında bu tür hataları da belirtebilir.  
+ Genel WPF XAML uygulama ve uygulama modelinde, anahtar benzersizlik XAML biçimlendirme derleyici tarafından denetlenmez. Bunun yerine, eksik veya benzersiz olmayan `x:Key` değerleri yükleme zamanı XAML ayrıştırıcı hatalarına neden olur. Bununla birlikte, WPF sözlüklerinin Visual Studio tarafından işlenmesi genellikle tasarım aşamasında bu tür hataları da belirtebilir.  
   
- Gösterilen sözdiziminde <xref:System.Windows.ResourceDictionary> nesnesinin, WPF XAML işlemcisinin bir <xref:System.Windows.FrameworkElement.Resources%2A> koleksiyonunu doldurmak için bir koleksiyon nasıl oluşturduğu ile örtük olduğunu unutmayın. <xref:System.Windows.ResourceDictionary>, genellikle biçimlendirme içindeki bir öğe olarak açıkça sağlanmaz, ancak bazı durumlarda (örneğin, <xref:System.Windows.FrameworkElement.Resources%2A> Özellik öğesi ve sözlüğün dolduruldığı öğeler arasında bir koleksiyon nesnesi öğesi olur) olabilir. Bir koleksiyon nesnesinin biçimlendirme sırasında neredeyse her zaman örtük bir öğe olduğu hakkında bilgi için bkz. [XAML sözdizimi ayrıntılı](../wpf/advanced/xaml-syntax-in-detail.md).  
+ Gösterilen sözdiziminde, <xref:System.Windows.ResourceDictionary> nesnesinin, WPF XAML işlemcisinin <xref:System.Windows.FrameworkElement.Resources%2A> koleksiyonu doldurmak için bir koleksiyonu nasıl ürettiğinin örtülü olduğunu unutmayın. Bazı durumlarda Açıklık için istenirse bile <xref:System.Windows.ResourceDictionary> öğesi genellikle biçimlendirmede açık bir öğe olarak sağlanmaz (<xref:System.Windows.FrameworkElement.Resources%2A> özellik öğesi ve sözlüğü oluşturan öğeler arasında koleksiyon nesne öğesi olabilir). Bir koleksiyon nesnesinin biçimlendirme sırasında neredeyse her zaman örtük bir öğe olduğu hakkında bilgi için bkz. [XAML sözdizimi ayrıntılı](../wpf/advanced/xaml-syntax-in-detail.md).  
   
- WPF XAML uygulamasında kaynak sözlüğü anahtarları için işleme, <xref:System.Windows.ResourceKey> soyut sınıfı tarafından tanımlanır. Ancak WPF XAML işlemcisi, kullanımlarına göre anahtarlar için farklı temel uzantı türleri üretir. Örneğin, bir <xref:System.Windows.DataTemplate> veya türetilmiş herhangi bir sınıfın anahtarı ayrı olarak işlenir ve ayrı bir <xref:System.Windows.DataTemplateKey> nesnesi oluşturur.  
+ WPF XAML uygulamasında kaynak sözlük anahtarlarını işleme anahtarları <xref:System.Windows.ResourceKey> soyut sınıfı tarafından tanımlanır. Ancak WPF XAML işlemcisi tuşlar için kendi kullanımları temelinde altta farklı uzantı türleri üretir. Örneğin bir <xref:System.Windows.DataTemplate> ya da herhangi bir türetilmiş sınıfı anahtarı ayrı olarak yönetilir ve ayrı bir <xref:System.Windows.DataTemplateKey> nesnesi oluşturur.  
   
- Anahtarlar ve adlar, temel XAML tanımında farklı yönergeler ve dil öğeleri (`x:Key` karşılık `x:Name`) kullanır. Anahtarlar ve adlar Ayrıca, WPF tanımına ve bu kavramların uygulamasına göre farklı durumlarda kullanılır. Ayrıntılar için bkz. [WPF xaml namescopes](../wpf/advanced/wpf-xaml-namescopes.md).  
+ Anahtarlar ve adlar, XAML tanımında farklı yönergeler ve dil öğelerini (`x:Key` ve `x:Name`) kullanır. Ayrıca anahtarlar ve adlar, farklı durumlarda bu kavramların WPF tanımı ve uygulaması tarafından kullanılır. Ayrıntılar için bkz. [WPF xaml namescopes](../wpf/advanced/wpf-xaml-namescopes.md).  
   
- Daha önce belirtildiği gibi, bir anahtarın değeri bir işaretleme uzantısı aracılığıyla sağlanabilir ve bir dize değerinden başka olabilir. Örnek WPF senaryosu, `x:Key` değerinin bir [ComponentResourceKey](../wpf/advanced/componentresourcekey-markup-extension.md)olması olabilir. Belirli denetimler, stili tamamen değiştirmeden bu denetimin görünümünü ve davranışını etkileyen özel bir stil kaynağı için bu türün bir stil anahtarını kullanıma sunar. Bu tür bir anahtara örnek <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
+ Yukarıda belirtildiği gibi, bir anahtarın değeri, biçimlendirme uzantısı ile sağlanabilir ve dize değerinden farklı olabilir. Örnek WPF senaryosu, `x:Key` değerinin bir [ComponentResourceKey](../wpf/advanced/componentresourcekey-markup-extension.md)olması olabilir. Belirli denetimler, tamamen stili değiştirmeden bu kontrolün görünümünün ve davranışının bir parçasını etkileyen özel stil kaynağı için o türde stil anahtarını gösterir. Böyle bir anahtarın örneği şudur: <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
   
- WPF birleştirilmiş sözlük özelliği, anahtar benzersizliği ve anahtar arama davranışına ilişkin ek konular sunar. Daha fazla bilgi için bkz. [birleştirilmiş kaynak sözlükleri](../wpf/advanced/merged-resource-dictionaries.md).  
+ WPF birleştirilmiş sözlük özelliği, anahtar benzersizlik ve anahtar arama çalışma biçimine ilişkin ek konuları tanıtır. Daha fazla bilgi için bkz. [birleştirilmiş kaynak sözlükleri](../wpf/advanced/merged-resource-dictionaries.md).  
   
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009, `x:Key` her zaman öznitelik biçiminde sağlanacak kısıtlamayı gevyordu.  
@@ -84,7 +84,7 @@ ms.locfileid: "74283849"
   
  XAML 2009 altında, aşağıdaki kullanım aracılığıyla `x:Key` öğeleri belirtebilirsiniz:  
   
-### <a name="xaml-element-usage-xaml-2009-only"></a>XAML öğesi kullanımı (yalnızca XAML 2009)  
+### <a name="xaml-element-usage-xaml-2009-only"></a>XAML Öğesi Kullanımı (yalnızca XAML 2009)  
   
 ```xaml  
 <object>  
@@ -99,16 +99,16 @@ keyObject
   
 |||  
 |-|-|  
-|`keyObject`|Özel bir sözlükte verilen bir `object` için anahtar olarak kullanılan nesnenin nesne öğesi.|  
+|`keyObject`|Bir özel sözlükte verilen `object` için anahtar olarak kullanılan bir nesne için nesne öğesi.|  
   
-- Bu tür kullanım için kapsayıcı/üst öğe burada gösterilmez. `object`, özelleşmiş bir sözlük uygulamasını temsil eden bir nesne öğesinin alt öğesi olması beklenir. `keyObject`, belirli bir özelleştirilmiş sözlük uygulamasının anahtarı olarak uygun bir nesne örneği (veya bir değer türünün değeri) olması beklenir.  
+- Bu tür bir kullanım için kapsayıcı/üst burada gösterilmez. `object` özel sözlük uygulamasını temsil eden bir nesne öğesinin alt öğesi olması beklenir. `keyObject` bir nesne örneğinin (veya değer türünün bir değerinin) belirli özel sözlük uygulaması için anahtar olarak uygun olması beklenir.  
   
-- WPF bu kullanımı gerektiren sözlükler uygulamaz. Nesne anahtarları XAML dilinin genel bir özelliğidir, ancak XAML 'de sözlük oluşturmanın tercih edildiği belirli özel sözlük senaryoları için faydalı olabilir. Kaynaklar için dize olmayan anahtarlar kullanan örtük stiller gibi WPF özellikleri için, anahtarları oluşturmaya veya belirtmeye yönelik diğer teknikler mevcut değildir, bu nedenle bir nesne anahtarı kullanılması gerekli değildir.  
+- WPF bu kullanımı gerektiren sözlükler uygulamaz. Nesne anahtarları, XAML dilinin daha genel bir özelliğidir ve XAML'de sözlük oluşturmanın arzu edildiği bazı özel sözlük senaryoları için belki yararlı olur. Dize olmayan kaynaklar, anahtarları oluşturmak ve belirtmek için diğer teknikler kullanan örtük stilleri gibi WFP özellikleri vardır, bu yüzden bir nesne anahtarı kullanılması gerekli değildir.  
   
 - *keyObject* , doğrudan nesne örneği yerine nesne öğesi formunda biçimlendirme uzantısı kullanımı da olabilir.  
   
-## <a name="silverlight-usage-notes"></a>Silverlight kullanım notları  
- Silverlight için `x:Key` ayrı olarak belgelenmiştir. Daha fazla bilgi için bkz. [xaml ad alanı (x:) Dil özellikleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
+## <a name="silverlight-usage-notes"></a>Silverlight Kullanım Notları  
+ `x:Key` Silverlight için ayrı olarak belgelenmiştir. Daha fazla bilgi için bkz. [xaml ad alanı (x:) Dil özellikleri (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc188995(v=vs.95)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

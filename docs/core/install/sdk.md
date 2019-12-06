@@ -3,15 +3,15 @@ title: Windows, Linux ve macOS-.NET Core 'a .NET Core SDK yüklemesi
 description: Windows, Linux ve macOS 'ta .NET Core 'u yüklemeyi öğrenin. .NET Core uygulamaları geliştirmek için gereken bağımlılıkları bulun.
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
+ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 290bdfb05b328bb311e6ff5ef493048b05985899
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5ac2d7897ee4c6707669e4f9104317aeb2e1f473
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801943"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835684"
 ---
 # <a name="install-the-net-core-sdk"></a>.NET Core SDK 'i yükler
 
@@ -21,10 +21,10 @@ Bu makalede, .NET Core SDK nasıl yükleneceğini öğreneceksiniz. .NET Core SD
 
 ## <a name="install-with-an-installer"></a>Bir yükleyici ile yükleme
 
-Windows, .NET Core 3,0 SDK 'sını yüklemek için kullanılabilecek tek başına yükleyicilere sahiptir:
+Windows, .NET Core 3,1 SDK 'sını yüklemek için kullanılabilecek tek başına yükleyicilere sahiptir:
 
-- [x64 (64-bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.0) 
-- [x86 (32 bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [x64 (64-bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [x86 (32 bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ::: zone-end
 
@@ -32,9 +32,9 @@ Windows, .NET Core 3,0 SDK 'sını yüklemek için kullanılabilecek tek başın
 
 ## <a name="install-with-an-installer"></a>Bir yükleyici ile yükleme
 
-macOS, .NET Core 3,0 SDK 'sını yüklemek için kullanılabilecek tek başına yükleyicilere sahiptir:
+macOS, .NET Core 3,1 SDK 'sını yüklemek için kullanılabilecek tek başına yükleyicilere sahiptir:
 
-- [x64 (64-bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [x64 (64-bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ::: zone-end
 
@@ -49,7 +49,7 @@ macOS, .NET Core 3,0 SDK 'sını yüklemek için kullanılabilecek tek başına 
 SDK 'Yı ayıklamak ve komutları terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürümü [indirin](#all-net-core-downloads) . Ardından, bir Terminal açın ve aşağıdaki komutları çalıştırın.
 
 ```bash
-mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.0.101-linux-musl-x64.tar.gz -C $HOME/dotnet
+mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.101-linux-musl-x64.tar.gz -C $HOME/dotnet
 export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
 ```
@@ -77,7 +77,7 @@ export PATH=$PATH:$HOME/dotnet
 
 | .NET Core SDK sürümü | Visual Studio sürüm                      |
 | --------------------- | ------------------------------------------ |
-| 3,1 Önizleme           | Visual Studio 2019 sürüm 16,4 Önizleme veya üzeri. |
+| 3.1                   | Visual Studio 2019 sürüm 16,4 veya üzeri. |
 | 3.0                   | Visual Studio 2019 sürüm 16,3 veya üzeri. |
 | 2.2                   | Visual Studio 2017 sürüm 15,9 veya üzeri. |
 | 2.1                   | Visual Studio 2017 sürüm 15,7 veya üzeri. |
@@ -109,7 +109,7 @@ Visual Studio 'Yu yüklerken veya değiştirirken, oluşturmakta olduğunuz uygu
 
 ## <a name="install-with-visual-studio-for-mac"></a>Mac için Visual Studio ile yüklensin
 
-**.NET Core** iş yükü seçiliyken Mac için Visual Studio .NET Core SDK yüklenir. MacOS 'ta .NET Core geliştirme ile çalışmaya başlamak için bkz. [Mac Için Visual Studio 2019 'Yi yüklemek](/visualstudio/mac/installation).
+**.NET Core** iş yükü seçiliyken Mac için Visual Studio .NET Core SDK yüklenir. MacOS 'ta .NET Core geliştirme ile çalışmaya başlamak için bkz. [Mac Için Visual Studio 2019 'Yi yüklemek](/visualstudio/mac/installation). En son sürüm olan .NET Core 3,1 için Mac için Visual Studio 8,4 Preview ' i kullanmanız gerekir.
 
 [.NET Core iş yükü özelliği ile Mac için macOS Visual Studio 2019 ![](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
 
@@ -178,7 +178,7 @@ Bir Docker kapsayıcısında .NET Core kullanma hakkında daha fazla bilgi için
 
 - [Öğretici: C# Merhaba Dünya öğreticisi](../tutorials/with-visual-studio.md).
 - [Öğretici: Visual Basic Merhaba Dünya öğreticisi](../tutorials/vb-with-visual-studio.md).
-- [Öğretici: Visual Studio Code yeni bir uygulama oluşturun](https://code.visualstudio.com/docs/languages/dotnet).
+- [Öğretici: Visual Studio Code yeni bir uygulama oluşturun](../tutorials/with-visual-studio-code.md).
 - [Öğretici: bir .NET Core uygulamasını Kapsayıize](../docker/build-container.md)edin.
 
 ::: zone-end
@@ -186,7 +186,14 @@ Bir Docker kapsayıcısında .NET Core kullanma hakkında daha fazla bilgi için
 ::: zone pivot="os-macos"
 
 - [Öğretici: macOS 'u kullanmaya](../tutorials/using-on-mac-vs.md)başlayın.
-- [Öğretici: Visual Studio Code yeni bir uygulama oluşturun](https://code.visualstudio.com/docs/languages/dotnet).
+- [Öğretici: Visual Studio Code yeni bir uygulama oluşturun](../tutorials/with-visual-studio-code.md).
+- [Öğretici: bir .NET Core uygulamasını Kapsayıize](../docker/build-container.md)edin.
+
+::: zone-end
+
+::: zone pivot="os-linux"
+
+- [Öğretici: Visual Studio Code yeni bir uygulama oluşturun](../tutorials/with-visual-studio-code.md).
 - [Öğretici: bir .NET Core uygulamasını Kapsayıize](../docker/build-container.md)edin.
 
 ::: zone-end

@@ -3,15 +3,15 @@ title: SDK stilindeki projelerde hedef çerçeveler-.NET
 description: .NET Core Uygulamaları ve kitaplıkları için hedef çerçeveler hakkında bilgi edinin.
 author: mairaw
 ms.author: mairaw
-ms.date: 10/27/2019
+ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: d528201d1420b171e3a75919269e1c7a714f86e8
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 957671644ae333180b0c1ba4aae6d6e17ae6478b
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040992"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838227"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK stilindeki projelerde hedef çerçeveler
 
@@ -31,9 +31,9 @@ Aşağıdaki tablo, en yaygın hedef çerçeveleri, nasıl başvurulduğunu ve [
 
 | Hedef Çerçeve      | En son <br/> Kararlı sürüm | Hedef çerçeve bilinen adı (tfd) | Uygulanan <br/> .NET Standard sürümü |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2,1                         | Netstandard 2.1                 | Yok                                     |
-| .NET Core             | 3.0                         | netcoreapp 3.0                  | 2,1                                     |
-| .NET Framework        | 4,8                         | net48                          | 2,0                                     |
+| .NET Standard         | 2.1                         | Netstandard 2.1                 | YOK                                     |
+| .NET Core             | 3.1                         | netcoreapp 3.1                  | 2.1                                     |
+| .NET Framework        | 4.8                         | net48                          | 2,0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Desteklenen hedef Framework sürümleri
 
@@ -42,7 +42,7 @@ Bir hedef çerçeveye genellikle tfd tarafından başvurulur. Aşağıdaki tablo
 | Hedef Çerçeve           | TFM |
 | -------------------------- | --- |
 | .NET Standard              | Netstandard 1.0<br>Netstandard 1.1<br>Netstandard 1.2<br>Netstandard 1.3<br>Netstandard 1.4<br>Netstandard 1.5<br>Netstandard 1.6<br>Netstandard 2.0<br>Netstandard 2.1 |
-| .NET Core                  | netcoreapp 1.0<br>netcoreapp 1.1<br>netcoreapp 2.0<br>netcoreapp 2.1<br>netcoreapp 2.2<br>netcoreapp 3.0 |
+| .NET Core                  | netcoreapp 1.0<br>netcoreapp 1.1<br>netcoreapp2.0<br>netcoreapp 2.1<br>netcoreapp 2.2<br>netcoreapp 3.0<br>netcoreapp 3.1 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Windows Mağazası              | netcore [netcore45]<br>netcore45 [Win] [Win8]<br>netcore451 [win81] |
 | .NET mikro Framework       | netmf |
@@ -118,7 +118,7 @@ Yapı sistemi, SDK stili projeler kullanırken [desteklenen hedef Framework sür
 
 Aşağıdaki hedef çerçeveler kullanım dışıdır. Bu hedef çerçeveleri hedefleyen paketlerin belirtilen değişikliklere geçirilmesi gerekir.
 
-| Kullanımdan kaldırılan TFA                                                                             | Başka |
+| Kullanımdan kaldırılan TFA                                                                             | Değiştirme |
 | ------------------------------------------------------------------------------------------ | ----------- |
 | aspnet50<br>aspnetcore50<br>adlar<br>DNX<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
 | dotnet<br>dotnet50<br>dotnet51<br>dotnet52<br>dotnet53<br>dotnet54<br>dotnet55<br>dotnet56 | Netstandard |

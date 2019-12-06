@@ -2,29 +2,29 @@
 title: SQL İş Akışı Örnek Deposu
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: 7cdd852795283660b8077e14686ad7ce4af76673
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1764017369e82cfbed38be06b4a36847576b5fc0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626207"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837642"
 ---
 # <a name="sql-workflow-instance-store"></a>SQL İş Akışı Örnek Deposu
-[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Bir SQL Server 2005 veya SQL Server 2008 veritabanına iş akışı durumlarda hakkındaki durum bilgilerini kalıcı hale getirmek iş akışlarını tanır SQL iş akışı örneği Store ile birlikte gelir. Bu özellik öncelikle biçiminde uygulanan <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Özet türetilen sınıfı <xref:System.Runtime.DurableInstancing.InstanceStore> Kalıcılık framework'ün sınıfı. SQL iş akışı örneği Store özelliği bir somut sürekliliğin uygulanmasını Kalıcılık komutları depoya göndermek için bir ana bilgisayar kullanan bir SQL Kalıcılık sağlayıcısı oluşturur.  
+[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], iş akışlarının bir SQL Server 2005 veya SQL Server 2008 veritabanındaki iş akışı örnekleri hakkındaki durum bilgilerini kalıcı hale getirebileceği SQL Iş akışı örneği deposuyla birlikte gelir. Bu özellik birincil olarak, kalıcılık çerçevesinin soyut <xref:System.Runtime.DurableInstancing.InstanceStore> sınıfından türetilen <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> sınıfı biçiminde uygulanır. SQL Iş akışı örneği deposu özelliği, bir konağın kalıcı komutları depoya göndermek için kullandığı Kalıcılık API 'si için somut bir uygulama olan bir SQL kalıcılık sağlayıcısı oluşturur.  
   
- SQL iş akışı örneği Store hem şirket içinde barındırılan iş akışları veya kullanan iş akışı hizmetleri destekleyen <xref:System.Activities.WorkflowApplication> veya <xref:System.ServiceModel.WorkflowServiceHost> barındırılan hizmetleri yanı sıra kullanarak <xref:System.ServiceModel.WorkflowServiceHost>. Özelliği tarafından sunulan nesne modelini kullanarak, şirket içinde barındırılan hizmetleri için SQL iş akışı örneği Store özelliği programlı bir şekilde yapılandırabilirsiniz. Bu özellik tarafından barındırılan hizmetler için yapılandırabileceğiniz <xref:System.ServiceModel.WorkflowServiceHost> nesne modelini kullanarak program aracılığıyla hem de bir XML yapılandırma dosyasını kullanarak.  
+ SQL Iş akışı örneği deposu hem şirket içinde barındırılan iş akışlarını hem de <xref:System.Activities.WorkflowApplication> veya <xref:System.ServiceModel.WorkflowServiceHost> kullanan iş akışı hizmetlerini ve ' de barındırılan Hizmetleri destekler <xref:System.ServiceModel.WorkflowServiceHost>kullanıyor. Şirket içinde barındırılan hizmetler için SQL Iş akışı örnek deposu özelliğini, özelliği tarafından sunulan nesne modelini kullanarak programlı bir şekilde yapılandırabilirsiniz. Bu özelliği, nesne modelini kullanarak ve ayrıca bir XML yapılandırma dosyası kullanarak <xref:System.ServiceModel.WorkflowServiceHost> tarafından barındırılan hizmetler için yapılandırabilirsiniz.  
   
- SQL iş akışı örneği Store özelliği (**SqlWorkflowInstanceStore** sınıfı) uygulamıyor <xref:System.ServiceModel.Persistence.PersistenceProviderFactory> ve bu nedenle kalıcı olmayan iş akışı WCF hizmetleri için kalıcılığı desteği sunmamaktadır. Bu ayrıca uygulamıyor <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService> ve bu nedenle 3.x iş akışları için Kalıcılık desteği sunmamaktadır. Özelliği, yalnızca WF 4.0 (ve üzeri) Kalıcılık iş akışları ve iş akışı hizmetleri destekler. Bu özellik SQL Server 2005 ve SQL Server 2008 dışındaki herhangi bir veritabanına da desteklemez.  
+ SQL Iş akışı örnek deposu özelliği (**SqlWorkflowInstanceStore** sınıfı) <xref:System.ServiceModel.Persistence.PersistenceProviderFactory> uygulamaz ve bu nedenle dayanıklı iş akışı olmayan WCF Hizmetleri için kalıcılık desteği sunmaz. Ayrıca, <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService> uygulamaz ve bu nedenle 3. x iş akışları için kalıcılık desteği sunmaz. Özelliği yalnızca WF 4,0 (ve üzeri) iş akışları ve iş akışı hizmetleri için kalıcılığı destekler. Özelliği ayrıca SQL Server 2005 ve SQL Server 2008 dışındaki veritabanlarını desteklemez.  
   
- Bu bölümdeki konular, özellikleri ve SQL iş akışı örneği Store özelliklerini açıklar ve mağazası yapılandırma ayrıntıları sağlar.  
+ Bu bölümdeki konular, SQL Iş akışı örnek deposunun özelliklerini ve özelliklerini anlatmaktadır ve mağazayı yapılandırma hakkında ayrıntılı bilgi sağlar.  
   
- Windows Server App Fabric kendi örnek deposuna ve yapılandırma ve örnek depolama kullanımını kolaylaştırmak için araçlar sağlar. Daha fazla bilgi için [Windows Server App Fabric örneği Store](https://go.microsoft.com/fwlink/?LinkId=201201). App Fabric SQL Server Kalıcılık veritabanı bakın hakkında daha fazla bilgi için [App Fabric SQL Server Kalıcılık veritabanı](https://go.microsoft.com/fwlink/?LinkId=201202)  
+ Windows Server App Fabric, örnek deposunun yapılandırmasını ve kullanımını basitleştirmek için kendi örnek deposunu ve araçları sağlar. Daha fazla bilgi için bkz. [Windows Server App Fabric örnek deposu](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10)). App Fabric SQL Server kalıcılık veritabanı hakkında daha fazla bilgi için bkz. [App fabric SQL Server kalıcılık veritabanı](https://docs.microsoft.com/previous-versions/appfabric/ee790819(v=azure.10))  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 - [SQL İş Akışı Örnek Deposunun Özellikleri](properties-of-sql-workflow-instance-store.md)  
   
-- [Nasıl yapılır: İş akışları ve iş akışı hizmetleri için SQL kalıcılığını etkinleştirme](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+- [Nasıl yapılır: İş Akışları ve İş Akışı Hizmetleri için SQL Kalıcılığını Etkinleştirme](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
 - [Örnek Etkinleştirme](instance-activation.md)  
   
@@ -32,10 +32,10 @@ ms.locfileid: "64626207"
   
 - [Depo Genişletilebilirliği](store-extensibility.md)  
   
-- [Güvenlik](security.md)  
+- [Security](security.md)  
   
 - [SQL Server Kalıcılık Veritabanı](sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkID=177735)
+- [Kalıcılık örnekleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd699769(v=vs.100))

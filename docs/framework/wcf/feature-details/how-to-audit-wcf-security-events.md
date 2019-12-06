@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Communication Foundation güvenlik olaylarını denetleme'
+title: 'Nasıl yapılır: Windows Communication Foundation Güvenlik Olaylarını Denetleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,45 +7,45 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 634489ced9b437d7b273eb5fa1092165cc6a935f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b96c68c06099db2f396d16772cfaa8aee37390fe
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047977"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838019"
 ---
-# <a name="how-to-audit-windows-communication-foundation-security-events"></a>Nasıl yapılır: Windows Communication Foundation güvenlik olaylarını denetleme
-Windows Communication Foundation (WCF), güvenlik olaylarını Windows olay, Windows Olay Görüntüleyicisi'ni kullanarak görüntüleyebileceğiniz, günlüğüne olanak tanır. Bu konu başlığı altında güvenlik olayları kaydeder, böylece uygulama ayarlama açıklanmaktadır. WCF denetimi hakkında daha fazla bilgi için bkz. [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+# <a name="how-to-audit-windows-communication-foundation-security-events"></a>Nasıl yapılır: Windows Communication Foundation Güvenlik Olaylarını Denetleme
+Windows Communication Foundation (WCF), Windows Olay Görüntüleyicisi kullanılarak görüntülenebilen Windows olay günlüğü 'nde güvenlik olaylarını günlüğe kaydetmenize izin verir. Bu konuda, güvenlik olaylarını günlüğe kaydetmeleri için bir uygulamanın nasıl ayarlanacağı açıklanmaktadır. WCF denetimi hakkında daha fazla bilgi için bkz. [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
-### <a name="to-audit-security-events-in-code"></a>Kod içindeki güvenlik olaylarını denetleme  
+### <a name="to-audit-security-events-in-code"></a>Koddaki güvenlik olaylarını denetlemek için  
   
-1. Denetim günlüğü konumu belirtin. Bunu yapmak için ayarlanmış <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A> özelliği <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> sınıfı birine <xref:System.ServiceModel.AuditLogLocation> numaralandırma değerlerinin, aşağıdaki kodda gösterildiği gibi.  
+1. Denetim günlüğü konumunu belirtin. Bunu yapmak için, aşağıdaki kodda gösterildiği gibi, <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> sınıfının <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A> özelliğini <xref:System.ServiceModel.AuditLogLocation> sabit listesi değerlerinden biri olarak ayarlayın.  
   
      [!code-csharp[AuditingSecurityEvents#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#2)]
      [!code-vb[AuditingSecurityEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#2)]  
   
-     <xref:System.ServiceModel.AuditLogLocation> Numaralandırması üç değer vardır: `Application`, `Security`, veya `Default`. Değer günlükleri Olay Görüntüleyicisi'nde görünür birini ya da güvenlik günlüğü veya Uygulama günlüğünü belirtir. Kullanırsanız `Default` değeri, gerçek günlük bağımlı üzerinde uygulamayı çalıştırdığınız işletim sistemi. Etkin denetim ve günlük konumu belirtilmezse, varsayılan değer `Security` günlük yazma desteği sunan platformlar için güvenlik günlüğü için; Aksi takdirde, Yazar `Application` günlük. Yalnızca [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wv](../../../../includes/wv-md.md)] varsayılan olarak güvenlik günlüğüne yazma desteği.  
+     <xref:System.ServiceModel.AuditLogLocation> numaralandırması üç değere sahiptir: `Application`, `Security`veya `Default`. Değer Olay Görüntüleyicisi, güvenlik günlüğü veya uygulama günlüğü ' nde görünür olan günlüklardan birini belirtir. `Default` değerini kullanırsanız, gerçek günlük uygulamanın üzerinde çalıştığı işletim sistemine bağlıdır. Denetim etkinse ve günlük konumu belirtilmemişse, varsayılan olarak güvenlik günlüğüne yazmayı destekleyen platformlar için `Security` günlüğü vardır; Aksi takdirde, `Application` günlüğüne yazılır. Yalnızca [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve Windows Vista, varsayılan olarak güvenlik günlüğüne yazmayı destekler.  
   
-2. Denetlenecek olay türlerini ayarlayın. Aynı anda hizmet düzeyi olayları veya ileti düzeyinde yetkilendirme olayları da denetleyebilirsiniz. Bunu yapmak için ayarlanmış <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> özelliği veya <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> özelliğini birine <xref:System.ServiceModel.AuditLevel> numaralandırma değerlerinin, aşağıdaki kodda gösterildiği gibi.  
+2. Denetlenecek olay türlerini ayarlayın. Hizmet düzeyi olaylarını veya ileti düzeyi yetkilendirme olaylarını eşzamanlı olarak denetleyebilirsiniz. Bunu yapmak için, aşağıdaki kodda gösterildiği gibi <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> özelliğini veya <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> özelliğini <xref:System.ServiceModel.AuditLevel> sabit listesi değerlerinden birine ayarlayın.  
   
      [!code-csharp[AuditingSecurityEvents#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#3)]
      [!code-vb[AuditingSecurityEvents#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#3)]  
   
-3. Uygulama günlüğü denetim olaylarını ile ilgili hataları kullanıma sunmak bu seçeneği belirtin. Ayarlama <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> ya da özellik `true` veya `false`aşağıdaki kodda gösterildiği gibi.  
+3. Günlük denetim olayları ile ilgili olarak uygulamanın başarısızlıklarını bastırıp göstermeyeceğinizi belirtin. <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğini aşağıdaki kodda gösterildiği gibi `true` ya da `false`olarak ayarlayın.  
   
      [!code-csharp[AuditingSecurityEvents#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#4)]
      [!code-vb[AuditingSecurityEvents#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#4)]  
   
-     Varsayılan `SuppressAuditFailure` özelliği `true`, böylece denetleme hatası uygulamayı etkilemez. Aksi takdirde, bir özel durum oluşturulur. Başarılı bir denetim için bir ayrıntılı izleme yazılır. Denetim herhangi bir hata için izleme hata düzeyinde yazılır.  
+     Varsayılan `SuppressAuditFailure` özelliği `true`, bu sayede denetim hatası uygulamayı etkilemez. Aksi takdirde, bir özel durum oluşturulur. Başarılı bir denetim için, ayrıntılı bir izleme yazılır. Denetlenecek herhangi bir hata için, izleme hata düzeyine yazılır.  
   
-4. Var olanı Sil <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> davranışları açıklamada bulunan koleksiyonundan bir <xref:System.ServiceModel.ServiceHost>. Davranış koleksiyon tarafından erişilen <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> karşılık gelen erişilen özelliği <xref:System.ServiceModel.ServiceHostBase.Description%2A> özelliği. Ardından yeni ekleyin <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> aşağıdaki kodda gösterildiği gibi aynı koleksiyonuna.  
+4. Mevcut <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>, bir <xref:System.ServiceModel.ServiceHost>açıklamasında bulunan davranışlar koleksiyonundan silin. Davranış koleksiyonuna, <xref:System.ServiceModel.ServiceHostBase.Description%2A> özelliğinden erişilen <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> özelliği tarafından erişilir. Ardından, aşağıdaki kodda gösterildiği gibi yeni <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> aynı koleksiyona ekleyin.  
   
      [!code-csharp[AuditingSecurityEvents#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#5)]
      [!code-vb[AuditingSecurityEvents#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#5)]  
   
-### <a name="to-set-up-auditing-in-configuration"></a>Yapılandırmada denetimini ayarlamak için  
+### <a name="to-set-up-auditing-in-configuration"></a>Yapılandırmada denetim ayarlamak için  
   
-1. Yapılandırmada denetimini ayarlamak için eklemek bir [ \<davranışı >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) öğesine [ \<davranışları >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) web.config dosyasının bölümü. Ardından Ekle bir [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) öğesi ve çeşitli öznitelikler, aşağıdaki örnekte gösterildiği gibi kümesi.  
+1. Yapılandırmada denetim ayarlamak için, Web. config dosyasının [\<davranışları >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) bölümüne [\<Behavior >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) öğesi ekleyin. Sonra bir [\<Servicesecurityaudıt >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) öğesi ekleyin ve aşağıdaki örnekte gösterildiği gibi çeşitli öznitelikleri ayarlayın.  
   
     ```xml  
     <behaviors>  
@@ -58,7 +58,7 @@ Windows Communication Foundation (WCF), güvenlik olaylarını Windows olay, Win
     </behaviors>  
     ```  
   
-2. Aşağıdaki örnekte gösterildiği gibi hizmet davranışı belirtmeniz gerekir.  
+2. Aşağıdaki örnekte gösterildiği gibi, hizmet için davranışı belirtmeniz gerekir.  
   
     ```xml  
     <services>  
@@ -73,19 +73,19 @@ Windows Communication Foundation (WCF), güvenlik olaylarını Windows olay, Win
     ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği oluşturur <xref:System.ServiceModel.ServiceHost> sınıfı ve yeni bir ekler <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> davranışları kendi koleksiyonuna.  
+ Aşağıdaki kod <xref:System.ServiceModel.ServiceHost> sınıfının bir örneğini oluşturur ve davranışları koleksiyonuna yeni bir <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> ekler.  
   
  [!code-csharp[AuditingSecurityEvents#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#1)]
  [!code-vb[AuditingSecurityEvents#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#1)]  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Ayarı <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğini `true`, güvenlik denetimleri üretmek için herhangi bir hata bastırır (varsa kümesine `false`, bir özel durum). Ancak, aşağıdaki Windows etkinleştirirseniz **yerel güvenlik ayarları** özelliği, denetim olayları oluşturmak için bir hata neden hemen kapatmak Windows:  
+ <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğini `true`olarak ayarlama, güvenlik denetimleri üretme başarısızlığını göstermez (`false`olarak ayarlanırsa, bir özel durum oluşturulur). Ancak, aşağıdaki Windows **yerel güvenlik ayarı** özelliğini etkinleştirirseniz, denetim olayları oluşturma hatası Windows 'un hemen kapatılmasına neden olur:  
   
- **Denetleme: Güvenlik günlüğü için denetimleri sistemi hemen kapat**  
+ **Denetim: güvenlik denetimleri günlüğe kaydedilemezse sistemi hemen kapat**  
   
- Özellik ayarlamak için açık **yerel güvenlik ayarları** iletişim kutusu. Altında **güvenlik ayarları**, tıklayın **yerel ilkeler**. Ardından **güvenlik seçenekleri**.  
+ Özelliği ayarlamak için **yerel güvenlik ayarları** iletişim kutusunu açın. **Güvenlik ayarları**altında **Yerel ilkeler**' e tıklayın. Ardından **güvenlik seçenekleri**' ne tıklayın.  
   
- Varsa <xref:System.ServiceModel.AuditLogLocation> özelliği <xref:System.ServiceModel.AuditLogLocation.Security> ve **Nesne erişimini denetle** ayarlanmadı **yerel güvenlik ilkesi**, denetim olayları güvenlik günlüğüne değil yazılır. Hiçbir hata döndürdü, ancak denetim girişleri güvenlik günlüğüne yazılmaz unutmayın.  
+ <xref:System.ServiceModel.AuditLogLocation> Özellik <xref:System.ServiceModel.AuditLogLocation.Security> olarak ayarlanırsa ve **denetim nesnesi erişimi** **yerel güvenlik ilkesinde**ayarlanmamışsa, denetim olayları güvenlik günlüğüne yazılmaz. Hiçbir hata döndürülmediğini, ancak denetim girişlerinin güvenlik günlüğüne yazılmadığını unutmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

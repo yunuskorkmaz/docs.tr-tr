@@ -4,55 +4,55 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: b14dd600526612b6af8b9fad15f65a748eb0b368
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 36d03a2fca8f143b98338050fc9da4490960bda9
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637531"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837525"
 ---
 # <a name="workflow-security"></a>İş Akışı Güvenliği
-Windows Workflow Foundation (WF), Microsoft SQL Server ve Windows Communication Foundation (WCF) gibi birçok farklı teknoloji ile tümleşiktir. Bu teknolojiler ile etkileşim güvenlik sorunları yanlış yapıldığında, iş akışınıza neden olabilir.
+Windows Workflow Foundation (WF), Microsoft SQL Server ve Windows Communication Foundation (WCF) gibi birkaç farklı teknolojiyle tümleşiktir. Bu teknolojilerle etkileşim kurmak, doğru şekilde yapıldıysa iş akışınıza güvenlik sorunları ortaya çıkarabilir.
 
-## <a name="persistence-security-concerns"></a>Kalıcılık güvenlik konuları
+## <a name="persistence-security-concerns"></a>Kalıcı güvenlik sorunları
 
-1. İş akışı bir <xref:System.Activities.Statements.Delay> etkinliği ve kalıcı bir hizmet tarafından etkinleştirilmesi gerekir. Windows AppFabric, süresi dolmuş zamanlayıcılar ile iş akışlarını yeniden etkinleştirmek için iş akışı yönetimi hizmeti (WMS) kullanır. WMS oluşturur bir <xref:System.ServiceModel.WorkflowServiceHost> yeniden etkinleştirilen iş akışı barındırma için. WMS hizmeti durdurulursa, zamanlayıcılar sona erdiğinde kalıcı iş akışlarını yeniden etkinleştirilmedi.
+1. Bir <xref:System.Activities.Statements.Delay> etkinlik ve kalıcılık kullanan iş akışlarının bir hizmet tarafından yeniden etkinleştirilmesi gerekir. Windows AppFabric, zaman aşımına uğradı zamanlayıcıları olan iş akışlarını yeniden etkinleştirmek için Iş akışı yönetim hizmeti 'ni (WMS WMS, yeniden etkinleştirilen iş akışını barındırmak için bir <xref:System.ServiceModel.WorkflowServiceHost> oluşturur. WMS hizmeti durdurulmuşsa, zamanlayıcılar süreleri dolduğunda kalıcı iş akışları yeniden etkinleştirilmeyecektir.
 
-2. Dayanıklı örnek oluşturma erişimi, kötü amaçlı varlıkları dış uygulama etki alanına karşı korunmalıdır. Ayrıca, geliştiriciler kötü amaçlı kod dayanıklı örneklemesini kod aynı uygulama etki alanında çalıştırılamayacağından emin olmalısınız.
+2. Dayanıklı örnek oluşturma erişimi, uygulama etki alanına harici olan kötü amaçlı varlıklara karşı korunmalıdır. Ayrıca, geliştiriciler kötü amaçlı kodun dayanıklı örnek oluşturma kodu ile aynı uygulama etki alanında yürütülemeyecek şekilde emin olmalıdır.
 
-3. Dayanıklı örnek oluşturma, yükseltilmiş (Yönetici) izinlerle çalıştırılmamalıdır.
+3. Dayanıklı örnek oluşturma yükseltilmiş (yönetici) izinlerle çalıştırılmamalıdır.
 
-4. Uygulama etki alanı işlenmekte olan verinin korunmalıdır.
+4. Uygulama etki alanı dışında işlenen verilerin korunması gerekir.
 
-5. Güvenlik yalıtımı gerektiren uygulamalar için şema Özeti'nın aynı örneğine paylaşmamalıdır. Bu tür uygulamalar farklı depolama sağlayıcıları kullanın veya farklı depolama örneklemeleri kullanacak şekilde yapılandırılmış sağlayıcıları depolamak gerekir.
+5. Güvenlik yalıtımı gerektiren uygulamalar, şema soyutlama örneğini paylaşmamalıdır. Bu tür uygulamalar farklı depo örneklemeleri kullanmak üzere yapılandırılmış farklı mağaza sağlayıcıları veya mağaza sağlayıcıları kullanmalıdır.
 
-## <a name="sql-server-security-concerns"></a>SQL Server güvenlik konuları
+## <a name="sql-server-security-concerns"></a>SQL Server güvenlik sorunları
 
-- Çok sayıda alt etkinlikleri, konumları, yer işaretleri, konak uzantıları veya kapsamları kullanıldığında veya çok büyük yükleri yer işaretleriyle kullanıldığında, bellek tükendi veya Kalıcılık sırasında veritabanı boş alanı aşırı miktarda ayrılabilir. Bu, nesne düzeyinde ve veritabanı düzeyinde güvenlik kullanarak azaltılabilir.
+- Çok sayıda alt etkinlik, konum, yer işareti, konak uzantısı ya da kapsam kullanıldığında ya da çok büyük yükleri olan yer işaretleri kullanıldığında, bellek tükenebilir veya süreklilik sırasında yetersiz miktarda veritabanı alanı ayrılabilir. Bu, nesne düzeyi ve veritabanı düzeyinde güvenlik kullanılarak azaltılabilir.
 
-- Kullanırken <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, örnek deposuna güvenli hale getirilmelidir. Daha fazla bilgi için [SQL Server en iyi uygulamaları](https://go.microsoft.com/fwlink/?LinkId=164972).
+- <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>kullanırken, örnek deposu güvenli olmalıdır.
 
-- Örnek deposunda hassas verilerin şifrelenmesi. Daha fazla bilgi için [SQL güvenlik şifrelemesi](https://go.microsoft.com/fwlink/?LinkId=164976).
+- Örnek deposundaki hassas veriler şifrelenmelidir. Daha fazla bilgi için bkz. [SQL Server şifreleme](/sql/relational-databases/security/encryption/sql-server-encryption).
 
-- Yapılandırma dosyasında (Web.Config genellikle) güvenlidir ve bulunan oturum açma ve parola bilgisi olmadığından emin olmak için veritabanı bağlantı dizesi genellikle bir yapılandırma dosyasına dahil olduğundan, windows düzeyi güvenlik (ACL) kullanılmalıdır bağlantı dizesi. Windows kimlik doğrulaması web sunucusu ve veritabanı arasında yerine kullanılmalıdır.
+- Veritabanı bağlantı dizesi genellikle bir yapılandırma dosyasına dahil edildiğinden, yapılandırma dosyasının (genellikle Web. config) güvenli olduğundan ve bu oturum açma ve parola bilgilerinin ' de yer aldığından emin olmak için Windows düzeyi güvenlik (ACL) kullanılmalıdır. bağlantı dizesi. Bunun yerine, veritabanı ile Web sunucusu arasında Windows kimlik doğrulaması kullanılmalıdır.
 
-## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost dikkate alınacak noktalar
+## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost ile ilgili konular
 
-- İş akışlarında kullanılan bir Windows Communication Foundation (WCF) uç noktalarını güvenli hale getirilmelidir. Daha fazla bilgi için [WCF güvenliğine genel bakış](https://go.microsoft.com/fwlink/?LinkID=164975).
+- İş akışlarında kullanılan Windows Communication Foundation (WCF) uç noktaları güvenli olmalıdır. Daha fazla bilgi için bkz. [WCF güvenliğine genel bakış](../wcf/feature-details/security-overview.md).
 
-- Konak düzeyinde yetkilendirme kullanarak uygulanabilir <xref:System.ServiceModel.ServiceAuthorizationManager>. Bkz: [nasıl yapılır: Bir hizmet için özel Yetkilendirme Yöneticisi oluşturma](https://go.microsoft.com/fwlink/?LinkId=192228) Ayrıntılar için.
+- Ana bilgisayar düzeyinde yetkilendirme, <xref:System.ServiceModel.ServiceAuthorizationManager>kullanılarak uygulanabilir. Ayrıntılar için bkz. [nasıl yapılır: bir hizmet Için özel Yetkilendirme Yöneticisi oluşturma](../wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md) .
 
-- Gelen iletinin ServiceSecurityContext ayrıca OperationContext erişimi tarafından iş akışı içinde kullanılabilir.
+- Gelen ileti için ServiceSecurityContext, OperationContext öğesine erişerek iş akışı içinden de kullanılabilir.
 
-## <a name="wf-security-pack-ctp"></a>WF güvenlik paketi CTP
- İlk topluluk teknoloji Önizleme (CTP) sürümü bir dizi etkinlikleri ve kendi uygulama temel Microsoft WF güvenlik paketi CTP 1. [Windows Workflow Foundation](index.md) içinde [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF (4) ve [Windows Identity Foundation (WIF)](../security/index.md).  Microsoft WF güvenlik paketi CTP 1 etkinlikleri ve hangi kolayca iş akışı kullanarak güvenlikle ilgili çeşitli senaryoları etkinleştirmek nasıl çalışılacağını, tasarımcılar içerir dahil olmak üzere:
+## <a name="wf-security-pack-ctp"></a>WF Güvenlik Paketi CTP
+ Microsoft WF Güvenlik Paketi CTP 1, bir dizi etkinliğin ve bunların uygulamalarının, [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF 4) ve [Windows Identity Foundation (wıf)](../security/index.md) [Windows Workflow Foundation](index.md) temel ALıNARAK birinci topluluk teknoloji önizleme (CTP) sürümüdür.  Microsoft WF Güvenlik Paketi CTP 1 hem etkinlikleri hem de bu iş akışını kullanarak güvenlikle ilgili çeşitli senaryoları nasıl kolayca etkinleştirebileceğinizi gösteren tasarımcılarını içerir:
 
-1. Bir istemci kimliği iş akışında kimliğine bürünme
+1. İş akışındaki istemci kimliğini taklit etme
 
-2. PrincipalPermission ve talep doğrulama gibi iş akışı içinde yetkilendirme
+2. PrincipalPermission ve talepler doğrulaması gibi iş akışı yetkilendirmesi
 
-3. Bir güvenlik belirteci hizmeti (STS) öğesinden alınan ileti kimliği doğrulanmış kullanıcı adı/parola veya belirteci gibi iş akışı içinde belirtilen ClientCredentials kullanma
+3. Kullanıcı adı/parola veya bir güvenlik belirteci hizmetinden (STS) alınan bir belirteç gibi, iş akışında belirtilen ClientCredentials kullanılarak kimliği doğrulanmış mesajlaşma
 
-4. WS-Trust ActAs kullanarak arka uç hizmeti (talep tabanlı temsilci) için bir istemci güvenlik belirteci akan
+4. WS-Trust ActAs kullanarak bir arka uç hizmetine istemci güvenlik belirteci akışı (talepler tabanlı temsili)
 
-Daha fazla bilgi ve WF güvenlik paketi CTP indirmek için bkz: [WF güvenlik paketi CTP](https://archive.codeplex.com/?p=wf)
+Daha fazla bilgi edinmek ve WF Güvenlik Paketi CTP 'yi indirmek için, bkz. [WF Güvenlik PAKETI CTP](https://archive.codeplex.com/?p=wf)

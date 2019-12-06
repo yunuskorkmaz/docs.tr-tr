@@ -6,18 +6,18 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: a99b9f3cb8c008f72eaac7ee1b8790d63c547a8d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8e1e8dc9a1410d05c19e4dd1bccb30c65d7c5e66
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453962"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837291"
 ---
 # <a name="xaml-services"></a>XAML Hizmetleri
 Bu konu, .NET Framework XAML Hizmetleri olarak bilinen bir teknoloji kümesinin yeteneklerini açıklamaktadır. Açıklanan hizmetlerin ve API 'lerin çoğunluğu, .NET Core Derlemeleriyle .NET Framework 4 ' te tanıtılan bir derleme olan System. xaml derlemesinde bulunur. Hizmetler okuyucuları ve yazarları, şema sınıflarını ve şema desteğini, fabrikaları, Attributing of sınıfları, XAML dil iç desteğini ve diğer XAML dil özelliklerini içerir.  
   
 ## <a name="about-this-documentation"></a>Bu belge hakkında  
- .NET Framework XAML Hizmetleri için kavramsal belgeler, XAML dili ile önceki deneyiminizin olduğunu ve bu özelliğin belirli bir çerçeveye nasıl uygulanacağını (örneğin, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] veya Windows Workflow Foundation ya da belirli bir teknoloji özellik alanı) kabul eder. Örneğin <xref:Microsoft.Build.Framework.XamlTypes>yapı özelleştirme özellikleri. Bu belge, XAML temel bilgilerini biçimlendirme dili, XAML sözdizimi terimleri veya diğer tanıtım malzemeleri olarak açıklamaya çalışır. Bunun yerine, bu belgeler özel olarak System. xaml derleme kitaplığı 'nda etkinleştirilen .NET Framework XAML hizmetlerini kullanarak odaklanır. Bu API 'lerin çoğu XAML dil tümleştirmesi ve genişletilebilirlik senaryoları içindir. Bu, aşağıdakilerden herhangi birini içerebilir:  
+ .NET Framework XAML Hizmetleri için kavramsal belgeler, XAML dili ile önceki deneyiminizin olduğunu ve örneğin, örneğin [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] veya Windows Workflow Foundation ya da belirli bir teknoloji özellik alanı gibi belirli bir Framework için nasıl uygulanabileceğini varsayar. Örneğin, <xref:Microsoft.Build.Framework.XamlTypes>yapı özelleştirme özellikleri. Bu belge, XAML temel bilgilerini biçimlendirme dili, XAML sözdizimi terimleri veya diğer tanıtım malzemeleri olarak açıklamaya çalışır. Bunun yerine, bu belgeler özel olarak System. xaml derleme kitaplığı 'nda etkinleştirilen .NET Framework XAML hizmetlerini kullanarak odaklanır. Bu API 'lerin çoğu XAML dil tümleştirmesi ve genişletilebilirlik senaryoları içindir. Bu, aşağıdakilerden herhangi birini içerebilir:  
   
 - Temel XAML okuyucuları veya XAML yazıcılarının yeteneklerini genişletme (XAML düğüm akışını doğrudan işleme; kendi XAML okuyucunuzu veya XAML yazıcınızı türeten türetme).  
   
@@ -27,16 +27,16 @@ Bu konu, .NET Framework XAML Hizmetleri olarak bilinen bir teknoloji kümesinin 
   
 - XAML değer dönüştürücüleri yazma (biçimlendirme uzantıları; özel türler için tür dönüştürücüler).  
   
-- Özel bir XAML şeması bağlamı tanımlama (tür kaynaklarını yedeklemek için alternatif derleme yükleme teknikleri kullanarak) her zaman derlemeleri yansıtma yerine bilinen türler arama tekniklerini kullanarak, CLR `AppDomain` ve onun ilişkili güvenlik modeli).  
+- Özel bir XAML şeması bağlamı tanımlama (tür kaynaklarını yedeklemek için alternatif derleme yükleme teknikleri kullanarak) her zaman derlemeleri yansıtma yerine bilinen türler arama tekniklerini kullanarak, CLR `AppDomain` ve ilişkili güvenlik modelini kullanmayan yüklü derleme kavramlarını kullanın).  
   
 - Temel XAML tür sistemini genişletme.  
   
 - XAML tür sistemini ve tür geri ayarlarını etkilemek için `Lookup` veya `Invoker` tekniklerini kullanma.  
   
- XAML 'de bir dil olarak tanıtım malzemesini arıyorsanız [xaml 'ye Genel Bakış (WPF)](../../desktop-wpf/fundamentals/xaml.md)deneyebilirsiniz. Bu konu, hem [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] hem de XAML biçimlendirme ve XAML dil özelliklerini kullanmak için yeni olan bir hedef kitle için XAML 'yi açıklamaktadır. Başka bir faydalı belge, [xaml dili belirtiminde](https://go.microsoft.com/fwlink/?LinkId=114525)tanıtım malzemeleridir.  
+ XAML 'de bir dil olarak tanıtım malzemesini arıyorsanız [xaml 'ye Genel Bakış (WPF)](../../desktop-wpf/fundamentals/xaml.md)deneyebilirsiniz. Bu konu, hem [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] hem de XAML biçimlendirme ve XAML dil özelliklerini kullanmak için yeni olan bir hedef kitle için XAML 'yi açıklamaktadır. Başka bir faydalı belge, [xaml dili belirtiminde](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))tanıtım malzemeleridir.  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET mimarisinde XAML Hizmetleri ve System. xaml .NET Framework  
- Microsoft .NET Framework 'ün önceki sürümlerinde XAML dil özellikleri desteği, Microsoft .NET Framework ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation ve Windows Communication Foundation (WCF)) üzerinde oluşturulmuş çerçeveler tarafından uygulanmıştır ve bu nedenle davranışında ve kullandığınız belirli çerçeveye bağlı olarak kullanılan API. Bu, XAML ayrıştırıcısının ve nesne grafiği oluşturma mekanizmasına, XAML dil iç bilgileri, serileştirme desteğiyle vb. dahil edilmiştir.  
+ Microsoft .NET Framework 'ün önceki sürümlerinde, XAML dil özellikleri desteği, Microsoft .NET Framework ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation ve Windows Communication Foundation (WCF)) üzerinde oluşturulmuş çerçeveler tarafından uygulanmıştır ve bu nedenle, kullanmakta olduğunuz özel çerçeveye bağlı olarak, davranışını ve API 'yi kullanır. Bu, XAML ayrıştırıcısının ve nesne grafiği oluşturma mekanizmasına, XAML dil iç bilgileri, serileştirme desteğiyle vb. dahil edilmiştir.  
   
  .NET Framework 4 ' te .NET Framework XAML Hizmetleri ve System. Xaml derlemesi XAML dil özelliklerini desteklemek için gerekli olan kadarını tanımlar. Bu, XAML okuyucuları ve XAML yazarları için temel sınıflar içerir. Çerçeveye özgü XAML uygulamalarında mevcut olmayan .NET Framework XAML hizmetlerine eklenen en önemli özellik, XAML için bir tür sistemi gösterimidir. Tür sistemi temsili, XAML 'nin belirli özellikleri üzerinde bağımlılıklar almadan XAML özelliklerini ortalar.  
   

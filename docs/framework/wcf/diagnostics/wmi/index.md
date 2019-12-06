@@ -2,12 +2,12 @@
 title: Tanılama için Windows Yönetim İzlemesini Kullanma
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 0b67f06b9a99d7e9001c8415d0e94adef8436a3d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 26758c8a4f537f9522d5ab650ae6b3cd8f044db2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855809"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837447"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Tanılama için Windows Yönetim İzlemesini Kullanma
 Windows Communication Foundation (WCF) bir WCF Windows Yönetim Araçları (WMI) sağlayıcısı aracılığıyla çalışma zamanında bir hizmetin İnceleme verilerini gösterir.  
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) bir WCF Windows Yönetim Araçları (WMI)
   
  WMI sağlayıcısı, çalışma zamanında WBEM ile uyumlu bir arabirim aracılığıyla izleme sunan bir bileşendir. Öznitelik/değer çiftlerine sahip bir WMI nesneleri kümesinden oluşur. Çiftler bir dizi basit türden olabilir. Yönetim Araçları, çalışma zamanında arabirim aracılığıyla hizmetlere bağlanabilir. WCF, adresler, bağlamalar, davranışlar ve dinleyicileri gibi hizmetlerin özniteliklerini gösterir.  
   
- Yerleşik WMI sağlayıcısı, uygulamanın yapılandırma dosyasında etkinleştirilebilir. Bu, aşağıdaki örnek yapılandırmada `wmiProviderEnabled` gösterildiği gibi [ \<System. ServiceModel >](../../../configure-apps/file-schema/wcf/system-servicemodel.md) bölümündeki [ \<Tanılama >](../../../configure-apps/file-schema/wcf/diagnostics.md) özniteliği aracılığıyla yapılır.  
+ Yerleşik WMI sağlayıcısı, uygulamanın yapılandırma dosyasında etkinleştirilebilir. Bu, aşağıdaki örnek yapılandırmada gösterildiği gibi [\<System. serviceModel >](../../../configure-apps/file-schema/wcf/system-servicemodel.md) bölümünde [\<Tanılama >](../../../configure-apps/file-schema/wcf/diagnostics.md) `wmiProviderEnabled` özniteliği aracılığıyla yapılır.  
   
 ```xml  
 <system.serviceModel>  
@@ -33,24 +33,24 @@ Windows Communication Foundation (WCF) bir WCF Windows Yönetim Araçları (WMI)
  WMI verilerine birçok farklı yolla erişilebilir. Microsoft, betikler, Visual Basic uygulamalar, C++ uygulamalar ve .NET Framework Için WMI API 'leri sağlar. Daha fazla bilgi için bkz. [WMI kullanma](https://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
-> WMI verilerine programlı olarak erişmek için .NET Framework sağlanan yöntemleri kullanırsanız, bu tür yöntemlerin bağlantı kurulurken özel durumlar oluşturduğunu bilmelisiniz. Bu bağlantı, <xref:System.Management.ManagementObject> örneğin oluşturulması sırasında, ancak gerçek veri değişimini içeren ilk istekte kurulmaz. Bu nedenle, olası özel durumları `try..catch` yakalamak için bir blok kullanmanız gerekir.  
+> WMI verilerine programlı olarak erişmek için .NET Framework sağlanan yöntemleri kullanırsanız, bu tür yöntemlerin bağlantı kurulurken özel durumlar oluşturduğunu bilmelisiniz. <xref:System.Management.ManagementObject> örneğinin oluşturulması sırasında bağlantı kurulmadı, ancak gerçek veri değişimini içeren ilk istek. Bu nedenle, olası özel durumları yakalamak için bir `try..catch` bloğu kullanmanız gerekir.  
   
- İzleme ve mesaj günlüğü düzeyini, WMI 'daki `System.ServiceModel` izleme kaynağı için de ileti günlüğe kaydetme seçeneklerini değiştirebilirsiniz. Bu, bu Boole özelliklerini sunan [AppDomainInfo](appdomaininfo.md) örneğine erişerek yapılabilir `LogMessagesAtServiceLevel`:, `LogMessagesAtTransportLevel`, `LogMalformedMessages`ve `TraceLevel`. Bu nedenle, ileti günlüğe kaydetme için bir izleme dinleyicisi yapılandırırsanız, ancak bu seçenekleri `false` yapılandırma bölümünde ayarlarsanız, daha sonra uygulamanın çalıştığı zaman olarak `true` değiştirebilirsiniz. Bu işlem, çalışma zamanında ileti günlüğe kaydetmeyi etkin bir şekilde etkinleştirir. Benzer şekilde, yapılandırma dosyanızda ileti günlüğünü etkinleştirirseniz, WMI kullanarak çalışma zamanında devre dışı bırakabilirsiniz.  
+ İzleme ve mesaj günlüğü düzeyini ve WMI 'daki `System.ServiceModel` izleme kaynağı için ileti günlüğe kaydetme seçeneklerini değiştirebilirsiniz. Bu, bu Boole özelliklerini sunan [AppDomainInfo](appdomaininfo.md) örneğine erişerek yapılabilir: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, `LogMalformedMessages`ve `TraceLevel`. Bu nedenle, ileti günlüğe kaydetme için bir izleme dinleyicisi yapılandırırsanız, ancak bu seçenekleri yapılandırmada `false` ayarlarsanız, uygulama çalışırken `true` daha sonra değiştirebilirsiniz. Bu işlem, çalışma zamanında ileti günlüğe kaydetmeyi etkin bir şekilde etkinleştirir. Benzer şekilde, yapılandırma dosyanızda ileti günlüğünü etkinleştirirseniz, WMI kullanarak çalışma zamanında devre dışı bırakabilirsiniz.  
   
- İleti günlüğe kaydetme için hiçbir ileti günlüğe kaydetme veya `System.ServiceModel` yapılandırma dosyasında izleme dinleyicilerinin belirtilmediği durumlarda, değişiklikler WMI tarafından kabul edilse de, değişikliklerinizin etkin olmadığı farkında olmalısınız. İlgili dinleyicileri doğru şekilde ayarlama hakkında daha fazla bilgi için bkz. [Ileti günlüğe kaydetmeyi yapılandırma](../configuring-message-logging.md) ve [izlemeyi yapılandırma](../tracing/configuring-tracing.md). Yapılandırma tarafından belirtilen diğer tüm izleme kaynaklarının izleme düzeyi uygulama başlatıldığında etkilidir ve değiştirilemez.  
+ İleti günlüğe kaydetme için bir ileti günlüğe kaydetme `System.ServiceModel` veya izleme dinleyicilerinin yapılandırma dosyasında belirtilmediği durumlarda, değişiklikler WMI tarafından kabul edilse bile değişikliklerden hiçbiri geçerli değildir. İlgili dinleyicileri doğru şekilde ayarlama hakkında daha fazla bilgi için bkz. [Ileti günlüğe kaydetmeyi yapılandırma](../configuring-message-logging.md) ve [izlemeyi yapılandırma](../tracing/configuring-tracing.md). Yapılandırma tarafından belirtilen diğer tüm izleme kaynaklarının izleme düzeyi uygulama başlatıldığında etkilidir ve değiştirilemez.  
   
- WCF, komut `GetOperationCounterInstanceName` dosyası oluşturmak için bir yöntem sunar. Bu yöntem, bir işlem adı ile sağlarsanız bir performans sayacı örnek adı döndürür. Ancak, girişinizi doğrulamaz. Bu nedenle, yanlış bir işlem adı sağlarsanız, yanlış bir sayaç adı döndürülür.  
+ WCF, betik oluşturma için bir `GetOperationCounterInstanceName` yöntemi sunar. Bu yöntem, bir işlem adı ile sağlarsanız bir performans sayacı örnek adı döndürür. Ancak, girişinizi doğrulamaz. Bu nedenle, yanlış bir işlem adı sağlarsanız, yanlış bir sayaç adı döndürülür.  
   
- Örneğin özelliği, hedef hizmete yönelik WCF istemcisi `Service` yönteminde oluşturulmadıysa başka bir hizmete bağlanmak için bir hizmet tarafından açılan kanalları saymaz. `OutgoingChannel` `Service`  
+ `Service` örneğinin `OutgoingChannel` özelliği, başka bir hizmete bağlanmak için bir hizmet tarafından açılan kanalları saymaz (hedef hizmete yönelik WCF istemcisi, `Service` yönteminde oluşturulmadıysa).  
   
- **Dikkat** edin WMI yalnızca 3 ondalık <xref:System.TimeSpan> noktaya kadar bir değeri destekler. Örneğin, hizmetiniz özelliklerinden birini olarak <xref:System.TimeSpan.MaxValue>ayarlarsa, WMI üzerinden görüntülendiğinde 3 ondalık noktadan sonra değeri kesilir.  
+ **Dikkat** edin WMI yalnızca 3 ondalık noktaya kadar <xref:System.TimeSpan> bir değeri destekler. Örneğin, hizmetiniz özelliklerinden birini <xref:System.TimeSpan.MaxValue>olarak ayarladıysanız, WMI üzerinden görüntülendiğinde 3 ondalık noktadan sonra değeri kesilir.  
   
 ## <a name="security"></a>Güvenlik  
  WCF WMI sağlayıcısı bir ortamdaki hizmetlerin bulunmasına izin verdiğinden, buna erişim vermek için çok dikkatli olmanız gerekir. Varsayılan yalnızca yönetici erişimini rahatladıysanız, ortamınızda hassas verilere daha az güvenilir taraflar erişebilmeye izin verebilirsiniz. Özellikle, uzak WMI erişimiyle ilgili izinleri gevbir şekilde bırakırsanız, taşması saldırıları meydana gelebilir. Bir işlem aşırı sayıda WMI isteği ile taştığında, performansı düşebilir.  
   
  Ayrıca, MOF dosyası için erişim izinlerine güveniyorsanız, daha az güvenilir taraflar WMI davranışını değiştirebilir ve WMI şemasında yüklenen nesneleri değiştirebilir. Örneğin, kritik verilerin yöneticiden kaldırılması veya bir özel durum doldurulmayan veya neden olmayan alanlar dosyaya eklenebileceği için alanlar kaldırılabilir.  
   
- Varsayılan olarak, WCF WMI sağlayıcısı yönetici için "yürütme yöntemi", "sağlayıcı yazma" ve "hesabı etkinleştir" iznini ve ASP.NET, yerel hizmet ve ağ hizmeti için "hesabı etkinleştir" iznini verir. Özellikle,[!INCLUDE[wv](../../../../../includes/wv-md.md)] platformlarda olmayan ASP.NET hesabı, WMI ServiceModel ad alanına okuma erişimine sahiptir. Bu ayrıcalıkları belirli bir kullanıcı grubuna vermek istemiyorsanız, WMI sağlayıcısını devre dışı bırakmanız gerekir (varsayılan olarak devre dışıdır) ya da belirli kullanıcı grubu için erişimi devre dışı bırakmanız gerekir.  
+ Varsayılan olarak, WCF WMI sağlayıcısı yönetici için "yürütme yöntemi", "sağlayıcı yazma" ve "hesabı etkinleştir" iznini ve ASP.NET, yerel hizmet ve ağ hizmeti için "hesabı etkinleştir" iznini verir. Özellikle, Windows dışı Vista platformlarında, ASP.NET hesabının WMI ServiceModel ad alanına okuma erişimi vardır. Bu ayrıcalıkları belirli bir kullanıcı grubuna vermek istemiyorsanız, WMI sağlayıcısını devre dışı bırakmanız gerekir (varsayılan olarak devre dışıdır) ya da belirli kullanıcı grubu için erişimi devre dışı bırakmanız gerekir.  
   
  Ayrıca, WMI 'yi yapılandırma yoluyla etkinleştirmeye çalıştığınızda, yetersiz kullanıcı ayrıcalıkları nedeniyle WMI etkinleştirilmemiş olabilir. Ancak, bu hatayı kaydetmek için olay günlüğüne hiçbir olay yazılmaz.  
   
@@ -169,7 +169,7 @@ Whoami /user
 2. Yeni pencerede, **ad alanı** alanı için **Root\servicemodel** yazın ve **kimlik doğrulama düzeyi**için **paket gizliliği** ' ni seçin. **Bağlan**'a tıklayın.  
   
 ### <a name="using-managed-code"></a>Yönetilen kodu kullanma  
- Ayrıca, <xref:System.Management> ad alanı tarafından sunulan sınıfları kullanarak uzak WMI örneklerine programlı bir şekilde erişebilirsiniz. Aşağıdaki kod örneği bunun nasıl yapılacağını göstermektedir.  
+ Ayrıca, <xref:System.Management> ad alanı tarafından sunulan sınıfları kullanarak uzak WMI örneklerine da erişebilirsiniz. Aşağıdaki kod örneği bunun nasıl yapılacağını göstermektedir.  
   
 ```csharp
 String wcfNamespace = $@"\\{this.serviceMachineName}\Root\ServiceModel");

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 20ca8f049298f75412da4c8a7e58975954f67741
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 52e968706ef4ca703a26e613e681cff3c30ba181
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968855"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838032"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows Kimlik Doğrulama Hatalarını Ayıklama
 Windows kimlik doğrulamasını bir güvenlik mekanizması olarak kullanırken, güvenlik desteği sağlayıcısı arabirimi (SSPI) güvenlik süreçlerini işler. SSPI katmanında güvenlik hataları oluştuğunda, bunlar Windows Communication Foundation (WCF) ile ortaya çıkar. Bu konu, hataları tanılamanıza yardımcı olmak için bir çerçeve ve soru kümesi sağlar.  
@@ -38,23 +38,23 @@ Windows kimlik doğrulamasını bir güvenlik mekanizması olarak kullanırken, 
   
 ||Yerel Kullanıcı|Yerel Sistem|Etki alanı kullanıcısı|Etki alanı makinesi|  
 |-|----------------|------------------|-----------------|--------------------|  
-|Yerel Kullanıcı|NT|NT|NT|NT|  
+|Yerel Kullanıcı|NTLM|NTLM|NTLM|NTLM|  
 |Yerel Sistem|Anonim NTLM|Anonim NTLM|Anonim NTLM|Anonim NTLM|  
-|Etki alanı kullanıcısı|NT|NT|Kerberos|Kerberos|  
-|Etki alanı makinesi|NT|NT|Kerberos|Kerberos|  
+|Etki alanı kullanıcısı|NTLM|NTLM|Kerberos|Kerberos|  
+|Etki alanı makinesi|NTLM|NTLM|Kerberos|Kerberos|  
   
  Özellikle, dört hesap türü şunları içerir:  
   
-- Yerel Kullanıcı: Yalnızca makine Kullanıcı profili. Örneğin: `MachineName\Administrator` veya `MachineName\ProfileName`.  
+- Yerel Kullanıcı: yalnızca makine Kullanıcı profili. Örneğin: `MachineName\Administrator` veya `MachineName\ProfileName`.  
   
-- Yerel Sistem: Bir etki alanına katılmamış bir makinedeki yerleşik hesap SISTEMI.  
+- Yerel Sistem: bir etki alanına katılmamış bir makinedeki yerleşik hesap SISTEMI.  
   
-- Etki alanı kullanıcısı: Windows etki alanındaki bir kullanıcı hesabı. Örneğin: `DomainName\ProfileName`  
+- Etki alanı kullanıcısı: Windows etki alanındaki bir kullanıcı hesabı. Örneğin: `DomainName\ProfileName`.  
   
-- Etki alanı makinesi: Bir Windows etki alanına katılmış bir makinede çalışan makine kimliğine sahip bir işlem. Örneğin: `MachineName\Network Service`  
+- Etki alanı makinesi: bir Windows etki alanına katılmış bir makinede çalışan makine kimliğine sahip bir işlem. Örneğin: `MachineName\Network Service`.  
   
 > [!NOTE]
-> Hizmet kimlik bilgisi, <xref:System.ServiceModel.ICommunicationObject.Open%2A> <xref:System.ServiceModel.ServiceHost> sınıfının yöntemi çağrıldığında yakalanır. İstemci bir ileti gönderdiğinde istemci kimlik bilgileri okundu.  
+> <xref:System.ServiceModel.ServiceHost> sınıfının <xref:System.ServiceModel.ICommunicationObject.Open%2A> yöntemi çağrıldığında hizmet kimlik bilgisi yakalanır. İstemci bir ileti gönderdiğinde istemci kimlik bilgileri okundu.  
   
 ## <a name="common-windows-authentication-problems"></a>Yaygın Windows kimlik doğrulama sorunları  
  Bu bölümde bazı yaygın Windows kimlik doğrulama sorunları ve olası düzeltmeler açıklanmaktadır.  
@@ -69,7 +69,7 @@ Windows kimlik doğrulamasını bir güvenlik mekanizması olarak kullanırken, 
  Hizmetinizin hesabı için bir SPN elde etmek üzere bir Active Directory etki alanı yöneticisi olmanız gerekir. Daha fazla bilgi için bkz. [Windows Için Kerberos teknik eki](https://go.microsoft.com/fwlink/?LinkID=88330).  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Kerberos protokolü doğrudan, hizmetin bir etki alanı makine hesabı altında çalışmasını gerektirir  
- Bu, `ClientCredentialType` özelliği olarak `Windows` ayarlandığında ve <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> özelliği `false`, aşağıdaki kodda gösterildiği gibi olarak ayarlandığında oluşur.  
+ Bu, `ClientCredentialType` özelliği `Windows` olarak ayarlandığında ve <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> özelliği aşağıdaki kodda gösterildiği gibi `false`olarak ayarlandığında oluşur.  
   
  [!code-csharp[C_DebuggingWindowsAuth#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#1)]
  [!code-vb[C_DebuggingWindowsAuth#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#1)]  
@@ -81,24 +81,24 @@ Windows kimlik doğrulamasını bir güvenlik mekanizması olarak kullanırken, 
   
  Kimlik bilgisi anlaşmasına sahip Kerberos uygulamak için aşağıdaki adımları uygulayın:  
   
-1. ' İ ayarlayarak <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>temsilciyi uygulayın.  
+1. <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>olarak ayarlayarak temsilciyi uygulayın.  
   
 2. SSPI anlaşması gerektir:  
   
-    1. Standart bağlamalar kullanıyorsanız, `NegotiateServiceCredential` özelliğini olarak `true`ayarlayın.  
+    1. Standart bağlamalar kullanıyorsanız, `NegotiateServiceCredential` özelliğini `true`olarak ayarlayın.  
   
-    2. Özel Bağlamalar kullanıyorsanız, `AuthenticationMode` `Security` öğesinin özniteliğini olarak `SspiNegotiated`ayarlayın.  
+    2. Özel Bağlamalar kullanıyorsanız, `Security` öğesinin `AuthenticationMode` özniteliğini `SspiNegotiated`olarak ayarlayın.  
   
 3. NTLM kullanımını engelleyerek SSPI anlaşmasının Kerberos kullanması gerekir:  
   
-    1. Aşağıdaki ifadesiyle kodda bunu yapın:`ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1. Aşağıdaki ifadesiyle kodda bunu yapın: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
-    2. Ya da bunu yapılandırma dosyasında `allowNtlm` özniteliğini olarak `false`ayarlayarak yapabilirsiniz. Bu öznitelik [ \<Windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)içindedir.  
+    2. Ya da bunu yapılandırma dosyasında `allowNtlm` özniteliğini `false`olarak ayarlayarak yapabilirsiniz. Bu öznitelik [\<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)bulunur.  
   
 ### <a name="ntlm-protocol"></a>NTLM protokolü  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>Negotiate SSP, NTLM 'ye geri döner, ancak NTLM devre dışı bırakılır  
- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> Özelliği olarak`false`ayarlanır ve bu, NTLM kullanılıyorsa Windows Communication Foundation (WCF) bir özel durum oluşturmak için en iyi çaba oluşturulmasına neden olur. Bu özelliği olarak `false` ayarlamanın, NTLM kimlik bilgilerinin tel üzerinden gönderilmesini engelleyemeyeceğini unutmayın.  
+ <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliği, NTLM kullanılıyorsa, Windows Communication Foundation (WCF) bir özel durum oluşturmak için en iyi çaba oluşturulmasına neden olan `false`olarak ayarlanır. Bu özelliği `false` olarak ayarlamanın, NTLM kimlik bilgilerinin tel üzerinden gönderilmesini engelleyemeyeceğini unutmayın.  
   
  Aşağıda, NTLM 'ye geri dönüşü devre dışı bırakma gösterilmektedir.  
   
@@ -109,9 +109,9 @@ Windows kimlik doğrulamasını bir güvenlik mekanizması olarak kullanırken, 
  İstemci kimlik bilgileri hizmette geçerli değil. Kullanıcı adının ve parolanın doğru şekilde ayarlandığından ve hizmetin çalıştığı bilgisayar tarafından bilinen bir hesaba karşılık geldiğinden emin olun. NTLM, hizmetin bilgisayarında oturum açmak için belirtilen kimlik bilgilerini kullanır. Kimlik bilgileri, istemcinin çalıştırıldığı bilgisayarda geçerli olabilir, ancak kimlik bilgileri hizmetin bilgisayarında geçerli değilse bu oturum açma işlemi başarısız olur.  
   
 #### <a name="anonymous-ntlm-logon-occurs-but-anonymous-logons-are-disabled-by-default"></a>Anonim NTLM oturum açma oluşur, ancak anonim oturum açma Işlemleri varsayılan olarak devre dışıdır  
- Bir istemci <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> oluştururken, özelliği aşağıdaki örnekte gösterildiği gibi olarak <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>ayarlanır, ancak varsayılan olarak, sunucu anonim oturum açma işlemlerine izin vermez. Bu, <xref:System.ServiceModel.Security.WindowsServiceCredential.AllowAnonymousLogons%2A> <xref:System.ServiceModel.Security.WindowsServiceCredential> sınıfının özelliğinin varsayılan değeri olduğu `false`için oluşur.  
+ İstemci oluştururken, aşağıdaki örnekte gösterildiği gibi <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> özelliği <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>olarak ayarlanır, ancak varsayılan olarak sunucu anonim oturum açma işlemlerine izin vermez. Bu, <xref:System.ServiceModel.Security.WindowsServiceCredential> sınıfının <xref:System.ServiceModel.Security.WindowsServiceCredential.AllowAnonymousLogons%2A> özelliğinin varsayılan değeri `false`olduğu için oluşur.  
   
- Aşağıdaki istemci kodu anonim oturum açmaları etkinleştirmeye çalışır (varsayılan özelliğin olduğunu `Identification`unutmayın).  
+ Aşağıdaki istemci kodu anonim oturum açmaları etkinleştirmeye çalışır (varsayılan özelliğin `Identification`).  
   
  [!code-csharp[C_DebuggingWindowsAuth#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#5)]
  [!code-vb[C_DebuggingWindowsAuth#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#5)]  
@@ -125,10 +125,10 @@ Windows kimlik doğrulamasını bir güvenlik mekanizması olarak kullanırken, 
   
  Alternatif olarak, istemci yerleşik hesap SISTEMINI kullanarak bir Windows hizmeti olarak çalışır.  
   
-### <a name="other-problems"></a>Diğer sorunlar  
+### <a name="other-problems"></a>Diğer Sorunlar  
   
 #### <a name="client-credentials-are-not-set-correctly"></a>İstemci kimlik bilgileri doğru ayarlanmadı  
- Windows kimlik doğrulaması, <xref:System.ServiceModel.Security.WindowsClientCredential> <xref:System.ServiceModel.ClientBase%601> sınıfının <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> özelliğitarafındandöndürülenörneğinikullanır.<xref:System.ServiceModel.Security.UserNamePasswordClientCredential> Aşağıda yanlış bir örnek gösterilmektedir.  
+ Windows kimlik doğrulaması, <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>değil <xref:System.ServiceModel.ClientBase%601> sınıfının <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> özelliği tarafından döndürülen <xref:System.ServiceModel.Security.WindowsClientCredential> örneğini kullanır. Aşağıda yanlış bir örnek gösterilmektedir.  
   
  [!code-csharp[C_DebuggingWindowsAuth#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#2)]
  [!code-vb[C_DebuggingWindowsAuth#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#2)]  
@@ -139,10 +139,10 @@ Windows kimlik doğrulamasını bir güvenlik mekanizması olarak kullanırken, 
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>SSPI kullanılamıyor  
- Aşağıdaki işletim sistemleri, sunucu olarak kullanıldığında Windows kimlik doğrulamasını desteklemez: [!INCLUDE[wxp](../../../../includes/wxp-md.md)]Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition ve [!INCLUDE[wv](../../../../includes/wv-md.md)]Home sürümleri.  
+ Aşağıdaki işletim sistemleri, sunucu olarak kullanıldığında Windows kimlik doğrulamasını desteklemez: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition ve Windows Vista Home sürümleri.  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>Farklı kimliklerle geliştirme ve dağıtma  
- Uygulamanızı tek bir makinede geliştirir ve başka bir makineye dağıtırsanız ve her makinede kimlik doğrulamak için farklı hesap türleri kullanırsanız, farklı davranışlar yaşayabilirsiniz. Örneğin, bir Windows XP Pro makinesinde `SSPI Negotiated` kimlik doğrulama modunu kullanarak uygulamanızı geliştirdiğinizi varsayalım. Kimlik doğrulaması için yerel bir kullanıcı hesabı kullanıyorsanız, NTLM protokolü kullanılacaktır. Uygulama geliştirildikten sonra, hizmeti bir etki alanı hesabı altında çalıştığı bir Windows Server 2003 makinesine dağıtırsınız. Bu noktada, istemci Kerberos ve bir etki alanı denetleyicisi kullandığından hizmetin kimliğini doğrulayamayacak.  
+ Uygulamanızı tek bir makinede geliştirir ve başka bir makineye dağıtırsanız ve her makinede kimlik doğrulamak için farklı hesap türleri kullanırsanız, farklı davranışlar yaşayabilirsiniz. Örneğin, `SSPI Negotiated` kimlik doğrulama modunu kullanarak uygulamanızı bir Windows XP Pro makinesi üzerinde geliştirdiğinizi varsayalım. Kimlik doğrulaması için yerel bir kullanıcı hesabı kullanıyorsanız, NTLM protokolü kullanılacaktır. Uygulama geliştirildikten sonra, hizmeti bir etki alanı hesabı altında çalıştığı bir Windows Server 2003 makinesine dağıtırsınız. Bu noktada, istemci Kerberos ve bir etki alanı denetleyicisi kullandığından hizmetin kimliğini doğrulayamayacak.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

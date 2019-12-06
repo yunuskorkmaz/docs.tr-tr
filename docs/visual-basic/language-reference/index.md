@@ -10,12 +10,12 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: 7e1838fe6c9d563358757700d74cbf27228812a9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ba611be8e63380f2bff958e37b72ffe8e0f90d9a
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349949"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837096"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic Dil Başvurusu
 
@@ -62,7 +62,7 @@ Bu bölüm Visual Basic dilinin çeşitli yönleri için başvuru bilgileri sağ
  [işleçler](../../visual-basic/language-reference/operators/index.md)  
  Visual Basic ' de kullanılabilen işleçleri belgeler.  
   
- [Özellikler](../../visual-basic/language-reference/properties.md)  
+ [Veri Erişimi](../../visual-basic/language-reference/properties.md)  
  Visual Basic bulunan özellikleri belgeler.  
   
  [Sorgular](../../visual-basic/language-reference/queries/index.md)  
@@ -85,8 +85,5 @@ Bu bölüm Visual Basic dilinin çeşitli yönleri için başvuru bilgileri sağ
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 
- [Visual Basic](../../visual-basic/index.md)  
- Visual Basic dilinin tüm alanlarında kapsamlı yardım sağlar.  
-  
  [Visual Basic komut satırı derleyicisi](../../visual-basic/reference/command-line-compiler/index.md)  
  Visual Studio tümleşik geliştirme ortamı (IDE) içinden program derlemek için alternatif olarak komut satırı derleyicisinin nasıl kullanılacağını açıklar.

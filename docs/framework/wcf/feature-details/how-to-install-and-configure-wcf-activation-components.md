@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 70eab39e4bb24dfd1cdd6abc5216e50126ef1f4c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 0a7be97ec157638db3eb2d656fe263b37b8d676c
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972189"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837421"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma
 
-Bu konuda, http ağ protokolleri üzerinden iletişim kurmayan Windows Communication Foundation (WCF) hizmetlerini barındırmak [!INCLUDE[wv](../../../../includes/wv-md.md)] için Windows işlem etkinleştirme hizmeti 'ni (was olarak da bilinir) ayarlamak için gereken adımlar açıklanmaktadır. Aşağıdaki bölümlerde bu yapılandırma için adımlar ana hatlarıyla verilmiştir:
+Bu konuda, Windows Vista 'da HTTP ağ protokolleri üzerinden iletişim kurmayan Windows Communication Foundation (WCF) hizmetlerini barındırmak için Windows Işlem etkinleştirme hizmeti 'ni (WAS olarak da bilinir) ayarlamak için gereken adımlar açıklanmaktadır. Aşağıdaki bölümlerde bu yapılandırma için adımlar ana hatlarıyla verilmiştir:
 
 - WCF etkinleştirme bileşenlerini yükleme (veya yüklemesini onaylama).
 
-- ' İ HTTP olmayan bir protokolü destekleyecek şekilde yapılandırın. Aşağıdaki yordam TCP Etkinleştirmesi [!INCLUDE[wv](../../../../includes/wv-md.md)] için yapılandırır.
+- ' İ HTTP olmayan bir protokolü destekleyecek şekilde yapılandırın. Aşağıdaki yordam, TCP Etkinleştirmesi için Windows Vista 'Yı yapılandırır.
 
-WAS yükledikten ve yapılandırdıktan sonra bkz [. nasıl yapılır: ' De bir WCF hizmeti barındırın, was kullanan HTTP olmayan bir uç noktasını kullanıma sunan bir WCF hizmeti oluşturma yordamlarına was idi](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) .
+WAS 'yi yükledikten ve yapılandırdıktan sonra, ile ilgili HTTP olmayan bir uç nokta sunan bir WCF hizmeti oluşturma yordamları için bkz. [nasıl yapılır: ' de BIR WCF hizmetini barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) .
 
 ## <a name="to-install-the-wcf-non-http-activation-components"></a>WCF HTTP olmayan etkinleştirme bileşenlerini yüklemek için
 
@@ -52,7 +52,7 @@ WAS yükledikten ve yapılandırdıktan sonra bkz [. nasıl yapılır: ' De bir 
     ```
 
     > [!NOTE]
-    > Bu komut, tek satırlık bir metin. Bu\<komut/*WCF uygulama*> uygulamasına hem hem `http://localhost/<WCF Application>` `net.tcp://localhost/<WCF Application>`de kullanılarak erişilmesini sağlar.
+    > Bu komut, tek satırlık bir metin. Bu komut/\<*WCF uygulaması*> uygulamasına hem `http://localhost/<WCF Application>` hem de `net.tcp://localhost/<WCF Application>`kullanılarak erişilmesine izin vermez.
 
      Bu örnek için eklemiş olduğunuz net. TCP site bağlamasını kaldırın.
 

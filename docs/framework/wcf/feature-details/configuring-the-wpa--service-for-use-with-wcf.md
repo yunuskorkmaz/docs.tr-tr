@@ -2,36 +2,36 @@
 title: Windows Süreç Etkinleştirme Hizmetini Windows Communication Foundation ile Kullanmak için Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 7ab62bda5e579bcd80a7403d9af3a7e7f9836647
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 768674a5cc4b0710e03de8ef1c9fdb2c40a8f314
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486998"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838045"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Windows Süreç Etkinleştirme Hizmetini Windows Communication Foundation ile Kullanmak için Yapılandırma
-Bu konu, Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) ' için gerekli adımları açıklar. [!INCLUDE[wv](../../../../includes/wv-md.md)] Windows Communication Foundation (WCF) barındırmak için HTTP üzerinden iletişim kurmazlar Hizmetleri protokolleri ağ. Aşağıdaki bölümlerde, bu yapılandırmanın adımları özetlemektedir:  
+Bu konuda, Windows Vista 'da HTTP ağ protokolleri üzerinden iletişim kurmayan Windows Communication Foundation (WCF) hizmetlerini barındırmak için Windows Işlem etkinleştirme hizmeti 'ni (WAS olarak da bilinir) ayarlamak için gereken adımlar açıklanmaktadır. Aşağıdaki bölümlerde bu yapılandırma için adımlar ana hatlarıyla verilmiştir:  
   
-- Yükleme (veya yüklenmesini onaylayın) gerekli WCF etkinleştirme bileşenlerini.  
+- WCF etkinleştirme bileşenleri 'ni yükleme (veya yüklemesini onaylama) gereklidir.  
   
-- Kullanmak istediğiniz ağ protokolü bağlamaları ile WAS site oluşturma veya mevcut bir site için yeni bir protokol bağlama ekleyin.  
+- Kullanmak istediğiniz ağ protokol bağlamalarıyla bir WAS sitesi oluşturun veya var olan bir siteye yeni bir protokol bağlaması ekleyin.  
   
-- Hizmetlerinizi barındırmak ve bu uygulamayı gerekli ağ protokolleri kullanmak üzere etkinleştirmek için bir uygulama oluşturun.  
+- Hizmetlerinizi barındırmak için bir uygulama oluşturun ve gerekli ağ protokollerini kullanmak için bu uygulamayı etkinleştirin.  
   
-- HTTP olmayan uç noktasını kullanıma sunar bir WCF Hizmeti oluşturun.  
+- HTTP olmayan bir uç nokta sunan bir WCF hizmeti oluşturun.  
   
-## <a name="configuring-a-site-with-non-http-bindings"></a>Bir Site ile HTTP olmayan bağlamaları yapılandırma  
- Bir HTTP olmayan bağlama WAS ile kullanmak için bir site bağlaması için WAS yapılandırma eklenmesi gerekir. WAS yapılandırma mağazada %windir%\system32\inetsrv\config dizininde bulunan applicationHost.config dosyasıdır. Bu yapılandırma deposu WAS ve IIS 7.0 tarafından paylaşılır.  
+## <a name="configuring-a-site-with-non-http-bindings"></a>HTTP olmayan bağlamalarla bir siteyi yapılandırma  
+ WAS ile HTTP olmayan bir bağlama kullanmak için, site bağlamasının WAS yapılandırmasına eklenmesi gerekir. İçin yapılandırma deposu,%windir%\system32\inetsrv\config dizininde bulunan applicationHost. config dosyasıdır. Bu yapılandırma deposu hem WAS hem de IIS 7,0 tarafından paylaşılır.  
   
- applicationHost.config standart bir metin düzenleyicisinde (Not Defteri gibi) ile açılmış bir XML metin dosyasıdır. Bununla birlikte, IIS 7.0 yapılandırma komut satırı aracı (appcmd.exe) HTTP olmayan site bağlamaları eklemek için tercih edilen yoludur.  
+ applicationHost. config, herhangi bir standart metin Düzenleyicisi (Notepad gibi) ile açılabilen bir XML metin dosyasıdır. Ancak, IIS 7,0 komut satırı yapılandırma aracı (Appcmd. exe), HTTP olmayan site bağlamaları eklemenin tercih edilen yoludur.  
   
- Aşağıdaki komutu (Bu komut, tek bir satır olarak girilir) appcmd.exe kullanarak varsayılan Web sitesi net.tcp site bağlaması ekler.  
+ Aşağıdaki komut, Appcmd. exe kullanarak varsayılan Web sitesine bir net. TCP site bağlaması ekler (Bu komut tek bir satır olarak girilir).  
   
 ```console  
 appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
 ```  
   
- Bu komut, yeni net.tcp bağlama applicationHost.config dosyasına aşağıda belirtilen satır ekleyerek varsayılan Web sitesine ekler.  
+ Bu komut, aşağıda belirtilen satırı applicationHost. config dosyasına ekleyerek varsayılan Web sitesine yeni net. TCP bağlamasını ekler.  
   
 ```xml  
 <sites>  
@@ -45,16 +45,16 @@ appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInf
 </sites>  
 ```  
   
-## <a name="enabling-an-application-to-use-non-http-protocols"></a>HTTP olmayan protokolleri kullanmak üzere bir uygulama etkinleştirme  
- Etkinleştirmek veya tek tek ağ protocolsat uygulama düzeyinde devre dışı bırakabilirsiniz. Aşağıdaki komutu çalışan bir uygulama için hem HTTP hem de net.tcp protokolleri etkinleştirme gösterir `Default Web Site`.  
+## <a name="enabling-an-application-to-use-non-http-protocols"></a>Uygulamanın HTTP olmayan protokolleri kullanmasını sağlama  
+ Uygulama düzeyini tek tek ağ protokolağını etkinleştirebilir veya devre dışı bırakabilirsiniz. Aşağıdaki komutta, `Default Web Site`çalıştıran bir uygulama için hem HTTP hem de net. TCP protokollerinin nasıl etkinleştirileceği gösterilmektedir.  
   
 ```console  
 appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp  
 ```  
   
- Etkin protokoller listesinde de ayarlanabilir \<applicationDefaults > ApplicationHost.config dosyasında depolanan sitenin XML yapılandırma öğesi.  
+ Etkinleştirilmiş protokollerin listesi, ApplicationHost. config dosyasında depolanan sitenin XML yapılandırmasının \<applicationDefaults > öğesinde de ayarlanabilir.  
   
- Aşağıdaki XML kodunu applicationHost.config'den hem HTTP hem de HTTP olmayan protokolleri için ilişkili bir site gösterilmektedir. HTTP olmayan protokolleri desteklemek için gereken ek yapılandırma yorumlarla çağırılır.  
+ ApplicationHost. config ' deki aşağıdaki XML kodu, hem HTTP hem de HTTP olmayan protokollere yönelik bir site gösterir. HTTP olmayan protokolleri desteklemek için gereken ek yapılandırmaya açıklamalarla birlikte denir.  
   
 ```xml  
 <sites>  
@@ -83,18 +83,18 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
 </sites>  
 ```  
   
- HTTP olmayan etkinleştirme için WAS'ı kullanarak hizmeti etkinleştirin dener ve yüklenmediğinde veya WAS yapılandırılmış şu hatayı görebilirsiniz:  
+ HTTP olmayan etkinleştirme için WAS kullanarak bir hizmeti etkinleştirmeye çalışırsanız ve yüklemediyseniz ve yapılandırmadıysanız, şu hatayı görebilirsiniz:  
   
 ```output  
 [InvalidOperationException: The protocol 'net.tcp' does not have an implementation of HostedTransportConfiguration type registered.]   System.ServiceModel.AsyncResult.End(IAsyncResult result) +15778592   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.End(IAsyncResult result) +15698937   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.ExecuteSynchronous(HttpApplication context, Boolean flowContext) +265   System.ServiceModel.Activation.HttpModule.ProcessRequest(Object sender, EventArgs e) +227   System.Web.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +80   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +171  
 ```  
   
- WAS için emin olun. Bu hatayı görürseniz, HTTP olmayan etkinleştirme yüklü ve düzgün yapılandırılmış. Daha fazla bilgi için [nasıl yapılır: WCF etkinleştirme bileşenlerini yükleme ve yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ Bu hatayı görürseniz, HTTP olmayan etkinleştirme için WAS 'nin yüklü ve düzgün şekilde yapılandırıldığından emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: WCF etkinleştirme bileşenlerini yüklemek ve yapılandırmak](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
-## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>Bir WCF hizmeti, kullanan olan HTTP olmayan etkinleştirme için oluşturma  
- Yükleme ve WAS'ta yapılandırma adımlarını gerçekleştirdikten sonra (bkz [nasıl yapılır: Yükleme ve yapılandırma WCF etkinleştirme bileşenlerini](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)), bir hizmetin WAS etkinleştirme IIS'de barındırılan bir hizmet yapılandırmaya benzer için yapılandırma.  
+## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>HTTP olmayan etkinleştirme için WAS kullanan bir WCF hizmeti oluşturma  
+ Uygulamasını yüklemek ve yapılandırmak için gereken adımları gerçekleştirdikten sonra (bkz [. nasıl yapılır: WCF etkinleştirme bileşenlerini yüklemek ve yapılandırmak](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)), kullanmak üzere bir hizmetin ETKINLEŞTIRILMESI, IIS 'de barındırılan bir hizmeti yapılandırmaya benzer.  
   
- WAS etkinleştirilmiş WCF hizmeti oluşturma hakkında ayrıntılı yönergeler için bkz: [nasıl yapılır: Was'ta WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ WAS etkinleştirilmiş bir WCF hizmeti oluşturma hakkında ayrıntılı yönergeler için, bkz. [nasıl yapılır: BIR WCF hizmetini BARıNDıRMA was](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

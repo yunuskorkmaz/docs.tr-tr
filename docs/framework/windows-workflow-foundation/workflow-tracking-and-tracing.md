@@ -4,52 +4,52 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: eaf38bad246b1f02449c1a3b99c7fb844c09a4bd
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 9f887babec5c070eed2fb3c7e4d8d35cdfb3f488
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959714"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837486"
 ---
 # <a name="workflow-tracking-and-tracing"></a>İş Akışı Takip ve İzleme
-Windows iş akışı izleme bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] özelliği iş akışının yürütülmesini görünürlük sağlayacak şekilde tasarlanmıştır. Bu, bir iş akışı örneği yürütülmesini izlemek için izleme altyapısı sağlar. İzleme WF altyapısının şeffaf bir şekilde yürütme sırasında anahtar olayları yansıtan kayıtları yaymak için bir iş akışı Instruments. Bu işlev varsayılan olarak tüm kullanılabilir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı. Herhangi bir değişiklik için yapılması gereken bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] gerçekleşmesi izleme iş akışını. Bu, almak istediğiniz izleme veri miktarını karar adımlarından oluşur. Bir iş akışı örneği başlatıldığında veya izleme işleme tamamlandıktan kayıtları yayılan. İzleme, iş akışı değişkenleri ile ilişkili iş ilgili verileri de ayıklayabilirsiniz. İş akışı sistem işleme bir sırayı temsil ediyorsa, örneğin, sipariş kimliği ile birlikte ayıklanabileceği <xref:System.Activities.Tracking.TrackingRecord> nesne. Genel olarak, izleme WF etkinleştirme Tanılama veya İş analizi verilerini bir iş akışı yürütülmesini erişilecek kolaylaştırır.  
+Windows Iş akışı izleme, iş akışı yürütmeye görünürlük sağlamak için tasarlanan bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] özelliğidir. Bir iş akışı örneğinin yürütülmesini izlemek için bir izleme altyapısı sağlar. WF izleme altyapısı, yürütme sırasında önemli olayları yansıtan kayıtları göstermek için bir iş akışını saydam olarak araçlar. Bu işlevsellik, tüm [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışları için varsayılan olarak kullanılabilir. İzleme işleminin gerçekleşmesi için [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] bir iş akışında değişiklik yapılması gerekmez. Bu, ne kadar izleme verisi almak istediğinize karar vermenize oldukça önemlidir. Bir iş akışı örneği başlatıldığında veya tamamlandığında, işlem izleme kayıtları yayınlanır. İzleme, iş akışı değişkenleriyle ilişkili işle ilgili verileri de ayıklayabilir. Örneğin, iş akışı bir sipariş işleme sistemini temsil ediyorsa, Order ID <xref:System.Activities.Tracking.TrackingRecord> nesnesiyle birlikte ayıklanabilir. Genel olarak, WF izlemeyi etkinleştirmek, tanılama veya iş analizi verilerine bir iş akışı yürütmeden erişilmesine olanak tanır.  
   
- Bu izleme bileşenler WinFX izleme hizmetine eşdeğerdir. İçinde [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]programlama modeli WF izleme özelliği için Basitleştirilmiş ve performansı İyileştirildi. İzleme çalışma zamanı iş akışı yaşam döngüsü, iş akışı etkinlikleri ve özel olaylar ile ilgili olayları yaymak için bir iş akışı örneği kullanır.  
+ Bu izleme bileşenleri, WinFX içindeki izleme hizmetiyle eşdeğerdir. [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], performans geliştirilmiştir ve WF izleme özelliği için Basitleştirilmiş programlama modeli. İzleme çalışma zamanı, iş akışı yaşam döngüsü, iş akışı etkinlikleri ve özel olaylarla ilgili olayları göstermek için bir iş akışı örneğini araçlar.  
   
- Windows Server App Fabric iş akışını ve WCF hizmetleri yürütülmesini izleme olanağı da sağlar. Daha fazla bilgi için [Windows Server App Fabric izleme](https://go.microsoft.com/fwlink/?LinkId=201273) ve [Windows Server AppFabric ile uygulamaları izleme](https://go.microsoft.com/fwlink/?LinkId=201287)  
+ Windows Server App Fabric Ayrıca bir WCF ve iş akışı hizmetlerinin yürütülmesini izleme olanağı sağlar. Daha fazla bilgi için bkz. Windows Server [uygulama yapısı izleme](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10)) ve [Windows Server AppFabric ile izleme uygulamaları](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))  
   
- İş akışı çalışma zamanı sorunlarını gidermek için tanılama iş akışı izlemeyi etkinleştirebilirsiniz. Daha fazla bilgi için [iş akışı izleme](workflow-tracing.md).  
+ İş akışı çalışma zamanı sorunlarını gidermek için tanılama iş akışı izlemeyi açabilirsiniz. Daha fazla bilgi için bkz. [Iş akışı izleme](workflow-tracing.md).  
   
- İzleme altyapısının birincil bileşenlerini programlama modelini anlamak için bu konuda ele alınmıştır:  
+ Programlama modelini anlamak için, izleme altyapısının birincil bileşenleri bu konuda ele alınmıştır:  
   
-- <xref:System.Activities.Tracking.TrackingRecord> İş akışı çalışma zamanını şuradan yayılan nesneleri. Daha fazla bilgi için [izleme kayıtları](tracking-records.md).  
+- iş akışı çalışma zamanından yayılan nesneleri <xref:System.Activities.Tracking.TrackingRecord>. Daha fazla bilgi için bkz. [kayıtları izleme](tracking-records.md).  
   
-- <xref:System.Activities.Tracking.TrackingParticipant> nesneleri abone <xref:System.Activities.Tracking.TrackingRecord> nesneleri. İzleme katılımcıları yükü işlemek için mantığı içeren <xref:System.Activities.Tracking.TrackingRecord> nesneleri (örneğin, bunlar bir dosyaya yazmak seçebilir). Daha fazla bilgi için [izleme katılımcıları](tracking-participants.md).  
+- <xref:System.Activities.Tracking.TrackingParticipant> nesneler <xref:System.Activities.Tracking.TrackingRecord> nesnelerine abone olur. İzleme katılımcıları, <xref:System.Activities.Tracking.TrackingRecord> nesnelerden yükü işlemek için mantığı içerir (örneğin, bir dosyaya yazmayı seçebilirler). Daha fazla bilgi için bkz. [katılımcıları izleme](tracking-participants.md).  
   
-- <xref:System.Activities.Tracking.TrackingProfile> nesneleri bir iş akışı örneğinden yayılan filtre izleme kayıtları. Daha fazla bilgi için [izleme profilleri](tracking-profiles.md).  
+- <xref:System.Activities.Tracking.TrackingProfile> nesneleri, bir iş akışı örneğinden yayılan izleme kayıtlarını filtreler. Daha fazla bilgi için bkz. [Izleme profilleri](tracking-profiles.md).  
   
-## <a name="workflow-tracking-infrastructure"></a>İş akışı izleme altyapısı  
- İş akışı izleme altyapısı bir Yayımla ve abone ol paradigma izler. İş akışı örneğinin uzantıları iş akışına olarak kayıtlı aboneleri kayıtları izleme kayıtları izleme listesinin yayımcısıdır. Abone bu uzantılar <xref:System.Activities.Tracking.TrackingRecord> nesneleri izleme katılımcıları çağrılır. İzleme katılımcıları erişim genişletilebilirlik noktaları olan <xref:System.Activities.Tracking.TrackingRecord> nesneleri ve bunları hangi şekilde Bunu yapmak için yazılır, işlem. Bir kayıt alt kümesi için abone olmak için bir katılımcı izin vermek için giden izleme kayıtları bir filtre uygulamayı izleme altyapısı sağlar. Bu filtreleme mekanizması aracılığıyla bir izleme gerçekleştirilir profili dosyası.  
+## <a name="workflow-tracking-infrastructure"></a>İş akışı Izleme altyapısı  
+ İş akışı izleme altyapısı bir Yayımla ve abone ol paradigmasını izler. İş akışı örneği kayıtları izlemenin yayımcısıdır, izleme kayıtlarının aboneleri iş akışına uzantı olarak kaydedilir. <xref:System.Activities.Tracking.TrackingRecord> nesnelerine abone olan bu uzantılar katılımcıları izleme olarak adlandırılır. Katılımcıları izlemek, nesneleri <xref:System.Activities.Tracking.TrackingRecord> erişen ve bunları yapmak için yazıldığı şekilde işleyen genişletilebilirlik noktalarıdır. İzleme altyapısı, bir katılımcının kayıtların bir alt kümesine abone olmasına izin vermek için giden izleme kayıtlarında bir filtrenin uygulamasına izin verir. Bu filtreleme mekanizması, bir izleme profili dosyası aracılığıyla gerçekleştirilir.  
   
- İzleme altyapısının yüksek düzeyde bir görünümü aşağıda gösterilmiştir:  
+ İzleme altyapısının yüksek düzey görünümü aşağıdaki çizimde gösterilmiştir:  
   
- ![İş akışı izleme altyapısı gösteren ekran görüntüsü. ](./media/workflow-tracking-and-tracing/workflow-tracking-infrastructure.gif "WV")  
+ ![İş akışı izleme altyapısını gösteren ekran görüntüsü.](./media/workflow-tracking-and-tracing/workflow-tracking-infrastructure.gif "WV")  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [İzleme Kayıtları](tracking-records.md)  
- İş akışı çalışma zamanı yayan izleme kayıtları açıklar.  
+ İş akışı çalışma zamanının yaydığı izleme kayıtlarını açıklar.  
   
  [İzleme Profilleri](tracking-profiles.md)  
- İzleme profilleri nasıl kullanıldığı açıklanır.  
+ İzleme profillerinin nasıl kullanıldığını açıklar.  
   
  [İzleme Katılımcıları](tracking-participants.md)  
- Sistem tarafından sağlanan izleme katılımcı kullanma veya özel izleme katılımcıları oluşturulacağını açıklar.  
+ Sistem tarafından belirtilen izleme katılımcısının nasıl kullanılacağını veya özel izleme katılımcıları nasıl oluşturulacağını açıklar.  
   
  [İş Akışı için İzlemeyi Yapılandırma](configuring-tracking-for-a-workflow.md)  
- Bir iş akışı için izlemeyi yapılandırma açıklar.  
+ Bir iş akışı için izlemenin nasıl yapılandırılacağını açıklar.  
   
  [İş Akışı İzleme](workflow-tracing.md)  
- Bir iş akışı hata ayıklama izlemeyi etkinleştirmek için iki şekilde açıklar.  
+ Bir iş akışı için hata ayıklama izlemeyi etkinleştirmenin iki yolunu açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

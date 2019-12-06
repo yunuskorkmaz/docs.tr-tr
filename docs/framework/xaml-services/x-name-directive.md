@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Name attribute
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
-ms.openlocfilehash: 8a790ea964ffe399136a82ea298e1c7600f48366
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d17d977384962980839fbe2b2c0a4708412d403d
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459970"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837226"
 ---
 # <a name="xname-directive"></a>x:Name Yönergesi
 Xaml namescope 'da XAML tanımlı öğeleri benzersiz şekilde tanımlar. Çerçeveler API 'ler sağlar veya çalışma zamanında XAML tarafından oluşturulan nesne grafiğine erişen davranışlar uygularsa, xaml ad kapsamları ve bunların benzersizlik modelleri örneklenmiş nesnelere uygulanabilir.  
@@ -39,16 +39,16 @@ Xaml namescope 'da XAML tanımlı öğeleri benzersiz şekilde tanımlar. Çerç
   
  Genel olarak, `x:Name` `x:Key`da kullanan durumlara uygulanmamalıdır. Mevcut çerçevelere göre XAML uygulamaları `x:Key` ve `x:Name`arasında değiştirme kavramları sunmuştur, ancak bu önerilen bir uygulamadır. .NET Framework XAML Hizmetleri, <xref:System.Windows.Markup.INameScope> veya <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>gibi ad/anahtar bilgilerini işlerken böyle bir değiştirme kavramlarını desteklemez.  
   
- Ad benzersizlik zorlamasının, büyük olasılıkla belirli uygulama çerçeveleri tarafından tanımlanan `x:Name` permittans kuralları. Ancak, .NET Framework XAML hizmetleriyle kullanılabilir olması için XAML namescope benzersizlerinin çerçeve tanımları bu belgelerde <xref:System.Windows.Markup.INameScope> bilgilerinin tanımıyla tutarlı olmalıdır ve bilgilerin nerede olduğu ile ilgili kuralların kullanılması gerekir uygulandı. Örneğin [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] uygulama, çeşitli biçimlendirme öğelerini kaynak sözlükleri, sayfa düzeyi XAML tarafından oluşturulan mantıksal ağaç, şablonlar ve diğer ertelenmiş içerik gibi ayrı <xref:System.Windows.NameScope> aralıklarına böler ve ardından XAML adını uygular Bu XAML ad copes değerlerinin her biri içinde benzersizlik.  
+ Ad benzersizlik zorlamasının, büyük olasılıkla belirli uygulama çerçeveleri tarafından tanımlanan `x:Name` permittans kuralları. Ancak, .NET Framework XAML hizmetleriyle kullanılabilir olması için XAML namescope benzersizlerinin çerçeve tanımları bu belgelerde <xref:System.Windows.Markup.INameScope> bilgilerinin tanımıyla tutarlı olmalıdır ve bilgilerin uygulandığı ilgili kuralların aynısını kullanmalıdır. Örneğin [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] uygulama, çeşitli biçimlendirme öğelerini kaynak sözlükleri, sayfa düzeyi XAML tarafından oluşturulan mantıksal ağaç, şablonlar ve diğer ertelenmiş içerik gibi ayrı <xref:System.Windows.NameScope> aralıklarına böler ve ardından bu XAML nameslerinin her birinde XAML ad benzersizliği uygular.  
   
  .NET Framework XAML Hizmetleri XAML nesne yazıcılarını kullanan özel türler için, bir tür üzerinde `x:Name` eşleyen bir özellik oluşturulabilir veya değiştirilebilir. Bu davranışı, tür tanımı kodundaki <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> eşlenecek özelliğin adına başvurarak tanımlarsınız.  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>, tür düzeyi bir özniteliktir.  
   
  Using.NET Framework XAML Hizmetleri, XAML namescope desteği için yedekleme mantığı, <xref:System.Windows.Markup.INameScope> arabirimini uygulayarak çerçeve nötr bir şekilde tanımlanabilir.  
   
 ## <a name="wpf-usage-notes"></a>WPF kullanım notları  
- XAML, kısmi sınıflar ve arka plan kod kullanan bir [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] uygulaması için standart derleme yapılandırması altında, belirtilen `x:Name`, [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] bir işaretleme derleme derlemesi tarafından işlendiğinde temeldeki kodda oluşturulan alanın adı olur görev ve bu alan, nesnesine bir başvuru içerir. Varsayılan olarak, oluşturulan alan dahili olur. [X:FieldModifier özniteliğini](x-fieldmodifier-directive.md)belirterek alan erişimini değiştirebilirsiniz. WPF ve Silverlight 'ta sıra, biçimlendirme derlemesi tarafından tanımlanmakta ve kısmi bir sınıfta alanı isimlemedir, ancak değer başlangıçta boştur. Daha sonra, `InitializeComponent` adlı üretilmiş bir yöntem sınıf oluşturucusunun içinden çağırılır. `InitializeComponent`, giriş dizeleri olarak kısmi sınıfın XAML tarafından tanımlanan bölümünde bulunan `x:Name` değerlerinin her birini kullanarak `FindName` çağrılarından oluşur. Dönüş değerleri, alan değerlerini XAML ayrıştırmasından oluşturulan nesnelerle birlikte dolduracak şekilde, benzer adlı alan başvurusuna atanır. `InitializeComponent` yürütülmesi, XAML tanımlı bir nesneye başvurmanız gerektiğinde `FindName` açıkça çağırmak zorunda kalmadan, `x:Name`/alan adını kullanarak çalışma zamanı nesne grafiğine başvuruda bulunmak mümkün hale getirir.  
+ XAML, kısmi sınıflar ve arka plan kod kullanan bir [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] uygulaması için standart derleme yapılandırması altında, belirtilen `x:Name`, [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] bir biçimlendirme derleme oluşturma görevi tarafından işlendiğinde ve bu alan nesneye bir başvuru tuttuğunda temeldeki kodda oluşturulan alanın adı olur. Varsayılan olarak, oluşturulan alan dahili olur. [X:FieldModifier özniteliğini](x-fieldmodifier-directive.md)belirterek alan erişimini değiştirebilirsiniz. WPF ve Silverlight 'ta sıra, biçimlendirme derlemesi tarafından tanımlanmakta ve kısmi bir sınıfta alanı isimlemedir, ancak değer başlangıçta boştur. Daha sonra, `InitializeComponent` adlı üretilmiş bir yöntem sınıf oluşturucusunun içinden çağırılır. `InitializeComponent`, giriş dizeleri olarak kısmi sınıfın XAML tarafından tanımlanan bölümünde bulunan `x:Name` değerlerinin her birini kullanarak `FindName` çağrılarından oluşur. Dönüş değerleri, alan değerlerini XAML ayrıştırmasından oluşturulan nesnelerle birlikte dolduracak şekilde, benzer adlı alan başvurusuna atanır. `InitializeComponent` yürütülmesi, XAML tanımlı bir nesneye başvurmanız gerektiğinde `FindName` açıkça çağırmak zorunda kalmadan, `x:Name`/alan adını kullanarak çalışma zamanı nesne grafiğine başvuruda bulunmak mümkün hale getirir.  
   
- Microsoft Visual Basic hedeflerini kullanan ve `Page` derleme eylemiyle XAML dosyaları içeren bir WPF uygulaması için, `WithEvents` anahtar sözcüğünü bir `x:Name`olan tüm öğelere ekleyen derleme sırasında ayrı bir başvuru özelliği oluşturulur @no olay işleyicisi temsilcileri için __t_3_ sözdizimi. Bu özellik her zaman geneldir. Daha fazla bilgi için bkz. [Visual Basic ve WPF olay işleme](../wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+ Microsoft Visual Basic hedeflerini kullanan ve `Page` derleme eylemiyle XAML dosyaları içeren bir WPF uygulaması için, olay işleyici temsilcileri için `Handles` sözdizimini desteklemek amacıyla, bir `x:Name`olan tüm öğelere `WithEvents` anahtar sözcüğünü ekleyen derleme sırasında ayrı bir başvuru özelliği oluşturulur. Bu özellik her zaman geneldir. Daha fazla bilgi için bkz. [Visual Basic ve WPF olay işleme](../wpf/advanced/visual-basic-and-wpf-event-handling.md).  
   
  `x:Name`, WPF XAML işlemcisi tarafından, sayfanın derleme eylemleri (örneğin, bir kaynak sözlüğünün gevşek XAML gibi) ile derlenmediği durumlarda bile, yükleme zamanında XAML namescope 'a bir ad kaydetmek için kullanılır. Bu davranışın bir nedeni, `x:Name` <xref:System.Windows.Data.Binding.ElementName%2A> bağlama için gerekli olma nedenidir. Ayrıntılar için bkz. [veri bağlamaya genel bakış](../../desktop-wpf/data/data-binding-overview.md).  
   
@@ -63,8 +63,8 @@ Xaml namescope 'da XAML tanımlı öğeleri benzersiz şekilde tanımlar. Çerç
   
  <xref:System.Windows.FrameworkElement.Name%2A> Ayrıca, iç metinle birlikte Özellik öğesi söz dizimi kullanılarak ayarlanabilir, ancak bu sık görülen bir durumdur. Buna karşılık `x:Name` XAML özellik öğesi sözdiziminde veya <xref:System.Windows.DependencyObject.SetValue%2A>kullanılarak kodda ayarlanamaz; yalnızca bir yönerge olduğu için nesneler üzerinde öznitelik söz dizimi kullanılarak ayarlanabilir.  
   
-## <a name="silverlight-usage-notes"></a>Silverlight kullanım notları  
- Silverlight için `x:Name` ayrı olarak belgelenmiştir. Daha fazla bilgi için bkz. [xaml ad alanı (x:) Dil özellikleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
+## <a name="silverlight-usage-notes"></a>Silverlight Kullanım Notları  
+ `x:Name` Silverlight için ayrı olarak belgelenmiştir. Daha fazla bilgi için bkz. [xaml ad alanı (x:) Dil özellikleri (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc188995(v=vs.95)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

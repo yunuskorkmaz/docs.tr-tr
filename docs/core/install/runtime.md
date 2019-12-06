@@ -3,28 +3,38 @@ title: Windows, Linux ve macOS-.NET Core 'a .NET Core çalışma zamanı 'nı y�
 description: Windows, Linux ve macOS 'ta .NET Core 'u yüklemeyi öğrenin. .NET Core uygulamalarını çalıştırmak için gereken bağımlılıkları bulur.
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
+ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: fbe9b9e12dc53d9ab6570299e03f2b0a8868fb53
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8f4a895ad66dea3063a32f785e4c521196266978
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567267"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835730"
 ---
 # <a name="install-the-net-core-runtime"></a>.NET Core çalışma zamanını yükler
 
 Bu makalede, .NET Core çalışma zamanının nasıl indirileceği ve kurulacağı hakkında bilgi edineceksiniz. .NET Core çalışma zamanı .NET Core ile oluşturulan uygulamaları çalıştırmak için kullanılır.
 
-::: zone pivot="os-windows,os-macos"
+::: zone pivot="os-windows"
 
 ## <a name="install-with-an-installer"></a>Bir yükleyici ile yükleme
 
-Hem Windows hem de macOS .NET Core 3,0 çalışma zamanını yüklemek için kullanılabilecek tek başına yükleyiciler vardır.
+Windows, .NET Core 3,1 çalışma zamanını yüklemek için kullanılabilecek tek başına yükleyicilere sahiptir:
 
-- Windows [x64 (64-bit) cpu](https://dotnet.microsoft.com/download/dotnet-core/3.0) | [x86 (32 bit) CPU](https://dotnet.microsoft.com/download/dotnet-core/3.0) 'lar
-- macOS [x64 (64-bit) CPU 'ları](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [x64 (64-bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [x86 (32 bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+::: zone-end
+
+::: zone pivot="os-macos"
+
+## <a name="install-with-an-installer"></a>Bir yükleyici ile yükleme
+
+macOS, .NET Core 3,1 çalışma zamanını yüklemek için kullanılabilecek tek başına yükleyicilere sahiptir:
+
+- [x64 (64-bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ::: zone-end
 
@@ -42,11 +52,14 @@ Hem Windows hem de macOS .NET Core 3,0 çalışma zamanını yüklemek için kul
 
 [DotNet yükleme betikleri](../tools/dotnet-install-script.md) , çalışma zamanının Otomasyon ve yönetici olmayan yüklemeleri için kullanılır. Betiği, [DotNet yükleme betiği başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
 
-Komut dosyası, .NET Core 2,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Geçerli .NET Core sürümünü (3,0) yüklemek için betiği aşağıdaki anahtarla çalıştırın:
+Komut dosyası, .NET Core 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. `Channel` anahtarını belirterek belirli bir yayını seçebilirsiniz. Çalışma zamanı yüklemek için `Runtime` anahtarını ekleyin. Aksi halde, komut dosyası [SDK 'yı](sdk.md)yüklüyor.
 
 ```powershell
-dotnet-install.ps1 -Channel 3.0
+dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
 ```
+
+> [!NOTE]
+> Yukarıdaki komut, ASP.NET Core çalışma zamanını maksimum uyumluluk için yüklerse. ASP.NET Core çalışma zamanı, standart .NET Core çalışma zamanını da içerir.
 
 ::: zone-end
 
@@ -56,11 +69,14 @@ dotnet-install.ps1 -Channel 3.0
 
 [DotNet yükleme betikleri](../tools/dotnet-install-script.md) , çalışma zamanının Otomasyon ve yönetici olmayan yüklemeleri için kullanılır. Betiği, [DotNet yükleme betiği başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
 
-Komut dosyası, .NET Core 2,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Geçerli .NET Core sürümünü (3,0) yüklemek için betiği aşağıdaki anahtarla çalıştırın:
+Komut dosyası, .NET Core 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. `current` anahtarını belirterek belirli bir yayını seçebilirsiniz. Çalışma zamanı yüklemek için `runtime` anahtarını ekleyin. Aksi halde, komut dosyası [SDK 'yı](sdk.md)yüklüyor.
 
 ```bash
-./dotnet-install.sh -c Current
+./dotnet-install.sh --current 3.1 --runtime aspnetcore
 ```
+
+> [!NOTE]
+> Yukarıdaki komut, ASP.NET Core çalışma zamanını maksimum uyumluluk için yüklerse. ASP.NET Core çalışma zamanı, standart .NET Core çalışma zamanını da içerir.
 
 ::: zone-end
 
@@ -68,7 +84,7 @@ Komut dosyası, .NET Core 2,1 olan en son [uzun süreli destek (LTS)](https://do
 
 .NET Core ' u aşağıdaki bağlantılardan biriyle doğrudan indirebilir ve yükleyebilirsiniz:
 
-- [.NET Core 3,1 Preview İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 3,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 - [.NET Core 3,0 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 - [.NET Core 2,2 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.2)
 - [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.1)

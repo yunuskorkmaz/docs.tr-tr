@@ -2,12 +2,12 @@
 title: .NET 4.5 içinde Windows Workflow Foundation’daki Yenilikler
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: 0244457a051740f37c11c48f41d98bdb2d741aec
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 80919dd7a726cbac5fa13680e0c79292745a7bca
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142026"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837590"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 içinde Windows Workflow Foundation’daki Yenilikler
 
@@ -76,7 +76,7 @@ Akış çizelgeleri .NET Framework 4,5 için güncelleştirilir ve aşağıdaki 
 
 5. Türler, serileştirme için <xref:System.Runtime.Serialization.ISerializable> veya <xref:System.SerializableAttribute> kullanmaz; seri hale getirilecek türler <xref:System.Runtime.Serialization.DataContractSerializer>desteklemelidir.
 
-6. <xref:System.Activities.Expressions.LambdaValue%601> kullanan ifadeler <xref:System.Security.Permissions.ReflectionPermissionAttribute.RestrictedMemberAccess%2A>gerektirir ve bu nedenle kısmi güven altında çalışmayacaktır. <xref:System.Activities.Expressions.LambdaValue%601> kullanan iş akışları, bu ifadelerin <xref:System.Activities.CodeActivity%601>türetilen etkinliklerle değiştirilmesini sağlamalıdır. biçimindeki telefon numarasıdır.
+6. <xref:System.Activities.Expressions.LambdaValue%601> kullanan ifadeler <xref:System.Security.Permissions.ReflectionPermissionAttribute.RestrictedMemberAccess%2A>gerektirir ve bu nedenle kısmi güven altında çalışmayacaktır. <xref:System.Activities.Expressions.LambdaValue%601> kullanan iş akışları, bu ifadelerin <xref:System.Activities.CodeActivity%601>türetilen etkinliklerle değiştirilmesini sağlamalıdır. .
 
 7. İfadeler <xref:System.Activities.XamlIntegration.TextExpressionCompiler> veya kısmi güvende Visual Basic barındırılan derleyici kullanılarak derlenemez, ancak önceden derlenen ifadeler çalıştırılabilir.
 
@@ -104,7 +104,7 @@ Değiştirme 'nin desteklenmediğini unutmayın.
 
 - Arguments
 
-- İfadeler
+- {1&gt;İfadeler&lt;1}
 
 Hızlı bul, tasarımcının <xref:System.Activities.Presentation.Model.ModelItem> ağacında gerçekleştirilir. Hızlı bul, iş akışı tanımına içeri aktarılan ad alanlarını bulamaz.
 
@@ -220,7 +220,7 @@ Akış çizelgesi ve sıralı iş akışı geliştirme modellerine ek olarak, bu
 
 ### <a name="BKMK_StateMachine"></a>Durum makinesi iş akışları
 
-Durum makinesi iş akışları, [Microsoft .NET Framework 4 platformu güncelleştirme 1](https://go.microsoft.com/fwlink/?LinkID=215092)' de .NET Framework 4, sürüm 4.0.1 bir parçası olarak sunulmuştur. Bu güncelleştirme, geliştiricilerin durum makinesi iş akışları oluşturmalarına izin veren birkaç yeni sınıf ve etkinlik içeriyordu. Bu sınıflar ve Etkinlikler 4,5 .NET Framework güncelleştirilmiştir. Güncelleştirmeler şunları içerir:
+Durum makinesi iş akışları, [Microsoft .NET Framework 4 platformu güncelleştirme 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)' de .NET Framework 4, sürüm 4.0.1 bir parçası olarak sunulmuştur. Bu güncelleştirme, geliştiricilerin durum makinesi iş akışları oluşturmalarına izin veren birkaç yeni sınıf ve etkinlik içeriyordu. Bu sınıflar ve Etkinlikler 4,5 .NET Framework güncelleştirilmiştir. Güncelleştirmeler şunları içerir:
 
 1. Durumlar üzerinde kesme noktaları ayarlama yeteneği
 

@@ -4,36 +4,36 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: 694d7af8e6e869a7a21a3414be6c69cf9f5e7c8f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77491981bdef7d02da6894cbbee93c779972d803
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626992"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837434"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista, Windows Server 2003 ve Windows XP'de Kuyruğa Alma Özelliği Arasındaki Farklar
-Bu konuda, Windows Communication Foundation (WCF) kuyrukları özelliği farklar özetlenmektedir [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+Bu konu, Windows Vista, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]arasındaki Windows Communication Foundation (WCF) kuyrukları özelliğindeki farklılıkları özetler.  
   
-## <a name="application-specific-dead-letter-queue"></a>Uygulamaya özgü eski ileti sırası  
- Alıcı uygulama bunları vakitli şekilde okumaz, kuyruğa alınmış iletiler kuyrukta süresiz olarak kalır. Bu davranış, iletileri zamana duyarlı olması durumunda önerilmez. Zamana duyarlı iletileriniz bir `TimeToLive` sıraya alınan bağlamasında özelliği. Bu özellik, süresi dolmadan önce ne kadar süreyle iletiler kuyrukta olabilir gösterir. Süresi dolan iletileri eski ileti sırası adı verilen özel bir kuyruğa gönderilir. Bir ileti ayrıca bir kuyruk kotasını veya bir kimlik doğrulama hatasının oluştuğu gibi başka nedenlerle edilemeyen kuyrukta kalabilirsiniz.  
+## <a name="application-specific-dead-letter-queue"></a>Uygulamaya özgü atılacak mektup kuyruğu  
+ Alıcı uygulama bunları zamanında okuyacaksa, sıradaki iletiler süresiz olarak kuyrukta kalabilir. İletiler zamana duyarlı ise bu davranış önerilmez. Zamana duyarlı iletilerde sıraya alınmış bağlamada ayarlanmış bir `TimeToLive` özelliği vardır. Bu özellik, iletilerin süreleri dolmadan önce kuyrukta ne kadar süreyle kalabileceğini gösterir. Süre dolmayan iletiler, teslim edilemeyen ileti sırası adlı özel bir kuyruğa gönderilir. Bir ileti ayrıca, bir kuyruk kotasının aşılması veya bir kimlik doğrulama hatası yaşaması gibi diğer nedenlerden dolayı atılacak bir sıraya göre de sona çıkabilir.  
   
- Genellikle, bir kuyruk Yöneticisi paylaşan tüm kuyruğa alınan uygulamalar için tek bir sistem genelinde eski ileti sırası mevcut. Atılacak her uygulama için bir kuyruk Yöneticisi kendi uygulamaya özgü sahipsiz sırayı belirtmek bu uygulamaların vererek paylaşan kuyruğa alınmış uygulamalar arasında daha iyi yalıtım sağlar. Diğer uygulamalarla eski ileti sırası paylaşan bir uygulama için geçerli olan iletileri bulmak için kuyruk göz atmak vardır. Bir uygulamaya özgü eski ileti sırası, uygulama kendi edilemeyen kuyruğundaki tüm iletileri için geçerli olduğundan emin olabilirsiniz.  
+ Genellikle, bir kuyruk yöneticisini paylaşan tüm sıraya alınmış uygulamalar için sistem genelinde tek bir atılacak ileti sırası vardır. Her uygulama için atılacak bir sıra, bu uygulamaların uygulamaya özel atılacak ileti kuyruğunu belirtmesini sağlayarak bir kuyruk yöneticisini paylaşan sıraya alınmış uygulamalar arasında daha iyi yalıtımı sağlar. Diğer uygulamalarla teslim edilemeyen bir ileti sırasını paylaşan bir uygulamanın, kendisine uygulanabilen iletileri bulmak için kuyruğa gözatmaları vardır. Uygulamaya özel bir atılacak ileti kuyruğu ile uygulama, atılacak ileti sırasındaki tüm iletilerin uygulanabilir olduğundan emin olabilir.  
   
- [!INCLUDE[wv](../../../../includes/wv-md.md)] uygulamaya özgü edilemeyen için sağlar. Uygulamaya özgü edilemeyen kullanılabilir olmayan [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)], ve uygulamaları, sistem genelinde eski ileti sırası kullanması gerekir.  
+ Windows Vista uygulamaya özel atılacak ileti sıraları sağlar. Uygulamaya özel atılacak ileti sıraları [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]' de kullanılamaz ve uygulamalar sistem genelinde atılacak ileti sırasını kullanmalıdır.  
   
-## <a name="poison-message-handling"></a>Poison ileti işleme  
- Zehirli ileti alıcı uygulamasına teslim denemesi üst sınırını aşan bir iletidir. İşlem kuyruktan bir ileti yazan bir uygulama iletisi hemen hataları nedeniyle işleyemiyor olduğunda bu durum ortaya çıkabilir. Kuyruğa Alınan iletinin alındığı işlem uygulamayı durdurur, kuyruğa bir ileti döndürür. Uygulama, yeni bir işlemde iletisi almayı dener. Hataya neden olan sorun düzeltilmezse alıcı uygulama alma ve aynı iletiyi teslim denemesi üst sınırını aşıyor ve zehirli ileti sonuçları kadar durduruluyor bir döngüde takılı.  
+## <a name="poison-message-handling"></a>Zehirli Ileti Işleme  
+ Zararlı bir ileti, alıcı uygulamaya yönelik en fazla teslim deneme sayısını aşmış bir iletidir. Bu durum, bir işlem sırasından ileti okuyan bir uygulama, hata nedeniyle iletiyi hemen işleyemediği zaman ortaya çıkabilir. Uygulama, sıraya alınan iletinin alındığı işlemi iptal ettiğinde, iletiyi kuyruğa döndürür. Uygulama daha sonra iletiyi yeni bir işlemde yeniden almaya çalışır. Hataya neden olan Sorun düzeltilmemişse, alıcı uygulama, en fazla teslim girişimi sayısını ve bir zarar iletisi sonucunu aşana kadar aynı iletiyi alıp iptal eden bir döngüde yer alabilir.  
   
- Temel farklılıklar arasında Message Queuing (MSMQ) üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)] zehirli işleme için uygun olan şunları içerir:  
+ Windows Vista, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ile ilgili Message Queuing (MSMQ) arasındaki temel farklılıklar, zarar işleme ile ilgilidir. şunları içerir:  
   
-- MSMQ [!INCLUDE[wv](../../../../includes/wv-md.md)] sıralar, destekler ancak [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)] sıralar desteklemez. Poison ileti işlemede kullanılan sıralar. Yeniden deneme kuyrukları ve zehirli kuyruk zarar ileti işleme ayarlara göre oluşturulan uygulama kuyruğa sıralar var. `MaxRetryCycles` Kaç yeniden oluşturmak için sıralar belirler. Bu nedenle, çalışırken [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` göz ardı edilir ve `ReceiveErrorHandling.Move` izin verilmiyor.  
+- Windows Vista 'da MSMQ alt sıraları destekler, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)] alt sıraları desteklemez. Alt sıralar, zehirli ileti işlemede kullanılır. Yeniden deneme kuyrukları ve zarar sırası, zarar iletisi işleme ayarlarına göre oluşturulan uygulama kuyruğu için alt çizglardır. `MaxRetryCycles`, kaç yeniden deneme alt için oluşturulacağını belirler. Bu nedenle, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]çalışırken `MaxRetryCycles` yok sayılır ve `ReceiveErrorHandling.Move` izin verilmez.  
   
-- MSMQ [!INCLUDE[wv](../../../../includes/wv-md.md)] destekler bildirimi, negatif sırada [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)] değildir. Alıcı sırası Yöneticisi'nden negatif bildirim edilemeyen kuyrukta reddedilen ileti yerleştirmek gönderme sıra yöneticisini neden olur. Bu nedenle, `ReceiveErrorHandling.Reject` ile izin verilmiyor [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- Windows Vista 'da MSMQ negatif bildirimi destekler, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)] değildir. Alma kuyruğu yöneticisinin olumsuz bir bildirimi, gönderme kuyruğu yöneticisinin reddedilen iletiyi atılacak ileti kuyruğuna yerleştirmesini sağlar. Bu nedenle, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]`ReceiveErrorHandling.Reject` izin verilmez.  
   
-- MSMQ [!INCLUDE[wv](../../../../includes/wv-md.md)] ileti teslimi sürelerini sayısını tutan bir ileti özelliği denenir destekler. Bu durdurma sayısı özelliği kullanılabilir değil [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Onu aynı message Web çiftliğindeki birden WCF servis okunduğunda buözellik doğru bir değer içeremeyeceğini mümkündür WCF abort count bellekteyse tutar.  
+- Windows Vista 'da MSMQ, ileti tesliminin denenme sayısı sayısını tutan bir ileti özelliğini destekler. Bu Abort Count özelliği [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]üzerinde kullanılamaz. WCF, iptal sayısını bellekte tutar, bu nedenle aynı ileti bir Web grubunda birden fazla WCF hizmeti tarafından okunabildiği zaman bu özelliğin doğru bir değer içermemesi olasıdır.  
   
-## <a name="remote-transactional-read"></a>Uzak işlem okuma  
- MSMQ üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)] uzak işlem okuma destekler. Bu sıranın barındıran bilgisayardan farklı bir bilgisayar üzerinde barındırılması için bir kuyruktan okuyan bir uygulama sağlar. Bu, sistemin genel performansını artıran bir merkezi kuyruktan okuma Hizmetleri grubu kabiliyeti sağlar. Ayrıca, okuma ve iletiyi işlerken bir hata oluşması, geri işlem yapar ve daha sonra işlenmek sırasındaki ileti kalır sağlar.  
+## <a name="remote-transactional-read"></a>Uzaktan Işlem okuma  
+ Windows Vista 'da MSMQ, uzaktan işlem okumaları destekler. Bu, bir kuyruktan okuyan bir uygulamanın, sıranın barındırıldığı bilgisayardan farklı bir bilgisayarda barındırılmasına olanak sağlar. Bu, sistemin genel verimini artıran merkezi bir kuyruktan okuma hizmetleri grubuna sahip olmanızı sağlar. Ayrıca iletiyi okurken ve işlerken bir hata oluşursa, işlem geri kaydedilir ve ileti daha sonra işlenmek üzere kuyrukta kalır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

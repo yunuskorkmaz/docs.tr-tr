@@ -2,12 +2,12 @@
 title: İçinde zaman uyumsuz programlamaF#
 description: Temel fonksiyonel F# programlama kavramlarından türetilmiş bir dil düzeyi programlama modeline göre zaman uyumsuzluğu için nasıl temiz destek sağladığını öğrenin.
 ms.date: 12/17/2018
-ms.openlocfilehash: 1ede4a5c1e26df271ac94f9b2c216ac84fb38f59
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 583b0f5154e6ad8875b21503cfb78f70a069ff7b
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395786"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837109"
 ---
 # <a name="async-programming-in-f"></a>F\# 'da zaman uyumsuz programlama
 
@@ -127,6 +127,7 @@ let main argv =
     argv
     |> Array.map printTotalFileBytes
     |> Async.Sequential
+    |> Async.Ignore
     |> Async.RunSynchronously
     |> ignore
 ```
@@ -149,7 +150,7 @@ Bir zaman uyumsuz hesaplama içinde bir alt hesaplama başlatır. Bu, birden ço
 computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
 ```
 
-Ne zaman kullanılır:
+Kullanılması gereken durumlar:
 
 - Aynı anda birden çok zaman uyumsuz hesaplamalar çalıştırmak istediğinizde, ancak paralel olarak zamanlanamaz.
 - Bir alt hesaplamanın ömrünü bir üst hesaplamadan bağlamak istediğinizde.
@@ -161,7 +162,7 @@ Ne zaman kullanılır:
 
 ### <a name="asyncstartimmediate"></a>Async. StartImmediate
 
-Geçerli işletim sistemi iş parçacığında hemen başlayarak bir zaman uyumsuz hesaplama çalıştırır. Bu, hesaplama sırasında çağıran iş parçacığında bir şeyi güncelleştirmeniz gerekiyorsa yararlıdır. Örneğin, bir zaman uyumsuz hesaplamanın bir kullanıcı arabirimini güncelleştirmesi gerekiyorsa (bir ilerleme çubuğunu güncelleştirme gibi), `Async.StartImmediate` kullanılmalıdır.
+Geçerli işletim sistemi iş parçacığı üzerinde hemen başlayarak zaman uyumsuz bir hesaplama çalıştırır. Bu, hesaplama sırasında çağıran iş parçacığında bir şeyi güncelleştirmeniz gerekiyorsa yararlıdır. Örneğin, bir zaman uyumsuz hesaplamanın bir kullanıcı arabirimini güncelleştirmesi gerekiyorsa (bir ilerleme çubuğunu güncelleştirme gibi), `Async.StartImmediate` kullanılmalıdır.
 
 İmza:
 
@@ -169,7 +170,7 @@ Geçerli işletim sistemi iş parçacığında hemen başlayarak bir zaman uyums
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 ```
 
-Ne zaman kullanılır:
+Kullanılması gereken durumlar:
 
 - Bir zaman uyumsuz hesaplamanın ortasında çağıran iş parçacığında bir şeyi güncelleştirmeniz gerektiğinde.
 
@@ -179,7 +180,7 @@ Ne zaman kullanılır:
 
 ### <a name="asyncstartastask"></a>Async. StartAsTask
 
-İş parçacığı havuzunda bir hesaplama yürütür. Hesaplama sonlandırıldığında karşılık gelen durumda tamamlanacak bir <xref:System.Threading.Tasks.Task%601> döndürür (sonucu üretir, özel durum oluşturur veya iptal edilir). İptal belirteci sağlanmazsa, varsayılan iptal belirteci kullanılır.
+İş parçacığı havuzundan bir hesaplama yürütür. Hesaplama sonlandırıldığında karşılık gelen durumda tamamlanacak bir <xref:System.Threading.Tasks.Task%601> döndürür (sonucu üretir, özel durum oluşturur veya iptal edilir). İptal belirteci sağlanmazsa, varsayılan iptal belirteci kullanılır.
 
 İmza:
 
@@ -187,7 +188,7 @@ Ne zaman kullanılır:
 computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
 ```
 
-Ne zaman kullanılır:
+Kullanılması gereken durumlar:
 
 - Bir <xref:System.Threading.Tasks.Task%601> zaman uyumsuz bir hesaplamanın sonucunu göstermesini bekleyen bir .NET API 'sine çağrı yapmanız gerektiğinde.
 
@@ -244,7 +245,7 @@ Verilen <xref:System.Threading.Tasks.Task%601> tamamlanmasını bekleyen bir zam
 task: Task<'T>  -> Async<'T>
 ```
 
-Ne zaman kullanılır:
+Kullanılması gereken durumlar:
 
 - F# Zaman uyumsuz bir hesaplama içinde <xref:System.Threading.Tasks.Task%601> döndüren bir .NET API 'si kullanıyorsanız.
 
@@ -262,7 +263,7 @@ Verilen bir `Async<'T>`yürüten zaman uyumsuz bir hesaplama oluşturur ve bir `
 computation: Async<'T> -> Async<Choice<'T, exn>>
 ```
 
-Ne zaman kullanılır:
+Kullanılması gereken durumlar:
 
 - Bir özel durumla başarısız olabilecek ve çağıranın bu özel durumu işlemek istediğiniz zaman uyumsuz iş yaparken.
 
@@ -280,7 +281,7 @@ Verilen hesaplamayı çalıştıran ve sonucunu yoksayan zaman uyumsuz bir hesap
 computation: Async<'T> -> Async<unit>
 ```
 
-Ne zaman kullanılır:
+Kullanılması gereken durumlar:
 
 - Zaman uyumsuz bir hesaplamanız olduğunda, sonucu gerekli değildir. Bu, zaman uyumsuz kod için `ignore` koduna benzerdir.
 

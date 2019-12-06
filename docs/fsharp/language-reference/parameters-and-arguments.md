@@ -1,13 +1,13 @@
 ---
 title: Parametreler ve Bağımsız Değişkenler
 description: Parametreleri tanımlama F# ve işlevlere, yöntemlere ve özelliklere bağımsız değişkenleri geçirme için dil desteği hakkında bilgi edinin.
-ms.date: 05/16/2016
-ms.openlocfilehash: e8094ffbc55870b5de75acb740aa2736ec6590a5
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.date: 12/04/2019
+ms.openlocfilehash: b234ef939128e7cf09d35f9580d4d5010d7dc639
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216831"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837135"
 ---
 # <a name="parameters-and-arguments"></a>Parametreler ve Bağımsız Değişkenler
 
@@ -25,7 +25,7 @@ Parametreler demet veya curried formunda ya da ikisinin bir birleşimi içinde b
 
 Yöntemler genellikle bağımsız değişkenlerin geçirilerek demet biçimini kullanır. Bu, diğer .NET dillerinin perspektifinden daha net bir sonuca ulaşır çünkü demet formu, bağımsız değişkenlerin .NET yöntemlerine geçirilmesi ile eşleşir.
 
-Curried form, genellikle bağlamalar kullanılarak `let` oluşturulan işlevlerle kullanılır.
+Curried form çoğunlukla `let` bağlamaları kullanılarak oluşturulan işlevlerle kullanılır.
 
 Aşağıdaki sözde kod, kayıt düzeni ve curried bağımsız değişkenlerinin örneklerini gösterir.
 
@@ -42,7 +42,7 @@ Bazı bağımsız değişkenler diziler halinde olduğunda ve bazıları olmadı
 let function2 param1 (param2a, param2b) param3 = ...
 ```
 
-Diğer desenler de parametre listelerinde kullanılabilir, ancak parametre deseni tüm olası girişlerle eşleşmezse, çalışma zamanında tamamlanmamış bir eşleşme olabilir. Bir bağımsız `MatchFailureException` değişkenin değeri, parametre listesinde belirtilen desenlerle eşleşmezse, bu özel durum oluşturulur. Bir parametre deseninin tamamlanmamış eşleştirmelere izin verdiği durumlarda derleyici bir uyarı verir. En az bir diğer model genellikle parametre listeleri için yararlıdır ve bu, joker karakter örüntü. Yalnızca sağlanan bağımsız değişkenleri yoksaymak istediğinizde joker karakter modelini bir parametre listesinde kullanırsınız. Aşağıdaki kod, bir bağımsız değişken listesinde joker karakter deseninin kullanımını gösterir.
+Diğer desenler de parametre listelerinde kullanılabilir, ancak parametre deseni tüm olası girişlerle eşleşmezse, çalışma zamanında tamamlanmamış bir eşleşme olabilir. Bir bağımsız değişkenin değeri parametre listesinde belirtilen desenlerle eşleşmediği zaman özel durum `MatchFailureException` oluşturulur. Bir parametre deseninin tamamlanmamış eşleştirmelere izin verdiği durumlarda derleyici bir uyarı verir. En az bir diğer model genellikle parametre listeleri için yararlıdır ve bu, joker karakter örüntü. Yalnızca sağlanan bağımsız değişkenleri yoksaymak istediğinizde joker karakter modelini bir parametre listesinde kullanırsınız. Aşağıdaki kod, bir bağımsız değişken listesinde joker karakter deseninin kullanımını gösterir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3801.fs)]
 
@@ -50,7 +50,7 @@ Joker karakter düzeni, aşağıdaki kodda olduğu gibi, normalde bir dize dizis
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3802.fs)]
 
-Bazen bağımsız değişkenlerde kullanılan diğer desenler, `as` düzen ve ayrılmış birleşimler ve etkin desenlerle ilişkili tanımlayıcı desenlerdir. Tek durum ayrılmış birleşim modelini aşağıdaki gibi kullanabilirsiniz.
+Bazen bağımsız değişkenlerde kullanılan diğer desenler, `as` desendir ve ayırt edici birleşimler ve etkin desenlerle ilişkili tanımlayıcı desenlerdir. Tek durum ayrılmış birleşim modelini aşağıdaki gibi kullanabilirsiniz.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3803.fs)]
 
@@ -73,7 +73,7 @@ let radius (Polar(r, _)) = r
 let angle (Polar(_, theta)) = theta
 ```
 
-Aşağıdaki kod satırında gösterildiği `as` gibi, eşleşen bir değeri yerel bir değer olarak depolamak için, bu kalıbı kullanabilirsiniz.
+Aşağıdaki kod satırında gösterildiği gibi, eşleşen bir değeri yerel bir değer olarak depolamak için `as` modelini kullanabilirsiniz.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3805.fs)]
 
@@ -81,7 +81,7 @@ Bazen kullanılan başka bir model, işlevin gövdesi olarak, örtük bağımsı
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3804.fs)]
 
-Bu kod, genel liste alan ve liste boşsa ve `true` `false` Aksi takdirde döndüren bir işlevi tanımlar. Bu tür tekniklerin kullanımı, kodun okunmasını zorlaştırabilir.
+Bu kod, genel liste alan ve liste boşsa `true` döndüren ve aksi durumda `false` döndüren bir işlevi tanımlar. Bu tür tekniklerin kullanımı, kodun okunmasını zorlaştırabilir.
 
 Bazen, tamamlanmamış eşleşmeleri içeren desenler yararlı olur, örneğin, programınızdaki listelerin yalnızca üç öğesi olduğunu biliyorsanız, aşağıdaki gibi bir deseni parametre listesinde kullanabilirsiniz.
 
@@ -95,7 +95,7 @@ Yöntemler için bağımsız değişkenler, virgülle ayrılmış bir bağımsı
 
 Adlandırılmış bağımsız değişkenler, API 'de yöntem parametrelerinin yeniden sıralanması gibi belirli değişiklik türlerine kod daha okunabilir ve daha uyumlu hale getirebilirsiniz.
 
-Adlandırılmış bağımsız değişkenlere yalnızca, for `let`-bağlanmadı işlevleri, işlev değerleri veya lambda ifadeleri için izin verilir.
+Adlandırılmış bağımsız değişkenlere yalnızca metotlar için izin verilir, `let`bağlantılı işlevler, işlev değerleri veya lambda ifadeleri için kullanılamaz.
 
 Aşağıdaki kod örneği adlandırılmış bağımsız değişkenlerin kullanımını gösterir.
 
@@ -109,11 +109,11 @@ Daha fazla bilgi için bkz. [oluşturucularF#()](https://msdn.microsoft.com/libr
 
 ## <a name="optional-parameters"></a>İsteğe Bağlı Parametreler
 
-Parametre adının önünde bir soru işareti kullanarak, bir yöntem için isteğe bağlı bir parametre belirtebilirsiniz. F# İsteğe bağlı parametreler seçenek türü olarak yorumlanır. bu nedenle, `match` ve `None`ile `Some` bir ifade kullanarak bunları seçenek türlerinin sorgulandığı düzenli bir şekilde sorgulayabilirsiniz. İsteğe bağlı parametrelere, bağlamalar kullanılarak `let` oluşturulan işlevlerde değil, yalnızca üyelerde izin verilir.
+Parametre adının önünde bir soru işareti kullanarak, bir yöntem için isteğe bağlı bir parametre belirtebilirsiniz. İsteğe bağlı parametreler F# seçenek türü olarak yorumlanır. bu nedenle, `Some` ve `None`ile bir `match` ifadesi kullanarak bunları seçenek türlerinin sorgulandığı düzenli şekilde sorgulayabilirsiniz. İsteğe bağlı parametrelere, `let` bağlamaları kullanılarak oluşturulan işlevlerde değil, yalnızca üyelerde izin verilir.
 
-İsteğe bağlı değerleri, `?arg=None` `?arg=Some(3)` veya gibi parametre adına göre yönteme geçirebilirsiniz. `?arg=arg` Bu, isteğe bağlı bağımsız değişkenleri başka bir yönteme geçiren bir yöntem oluştururken yararlı olabilir.
+`?arg=None` veya `?arg=Some(3)` veya `?arg=arg`gibi parametre adına göre isteğe bağlı değerleri yönteme geçirebilirsiniz. Bu, isteğe bağlı bağımsız değişkenleri başka bir yönteme geçiren bir yöntem oluştururken yararlı olabilir.
 
-İsteğe bağlı bir bağımsız değişkenin varsayılan `defaultArg`değerini ayarlayan bir işlevi de kullanabilirsiniz. `defaultArg` İşlevi, isteğe bağlı parametreyi ilk bağımsız değişken olarak ve varsayılan değeri ikinci olarak alır.
+İsteğe bağlı bir bağımsız değişkenin varsayılan değerini ayarlayan bir `defaultArg`işlevi de kullanabilirsiniz. `defaultArg` işlevi, isteğe bağlı parametreyi ilk bağımsız değişken olarak ve varsayılan değeri ikinci olarak alır.
 
 Aşağıdaki örnek, isteğe bağlı parametrelerin kullanımını gösterir.
 
@@ -130,7 +130,7 @@ Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 ```
 
-Ve Visual Basic birlikte çalışabilirliğine sahip olmak için, içindeki C# `[<Optional; DefaultParameterValue<(...)>]` F#özniteliklerini kullanarak çağıranların isteğe bağlı olarak bir bağımsız değişken görmesini sağlayabilirsiniz. Bu, bağımsız değişkeninin ' de C# `MyMethod(int i = 3)`olduğu gibi isteğe bağlı olarak tanımlanması ile eşdeğerdir.
+Ve Visual Basic birlikte çalışabilirliğine sahip olmak için, içindeki C# F#`[<Optional; DefaultParameterValue<(...)>]` özniteliklerini kullanarak, çağıranların bir bağımsız değişkeni isteğe bağlı olarak görmesini sağlayabilirsiniz. Bu, bağımsız değişkeni `MyMethod(int i = 3)`C# gibi isteğe bağlı olarak tanımlamaya eşdeğerdir.
 
 ```fsharp
 open System
@@ -140,7 +140,7 @@ type C =
         printfn "%s" message
 ```
 
-Ayrıca, varsayılan parametre değeri olarak yeni bir nesne belirtebilirsiniz. Örneğin, `Foo` üyenin bunun yerine giriş olarak isteğe bağlı `CancellationToken` olması olabilir:
+Ayrıca, varsayılan parametre değeri olarak yeni bir nesne belirtebilirsiniz. Örneğin, `Foo` üyesi giriş olarak isteğe bağlı `CancellationToken` olabilir:
 
 ```fsharp
 open System.Threading
@@ -150,22 +150,22 @@ type C =
         printfn "%A" ct
 ```
 
-Bağımsız değişkeni `DefaultParameterValue` olarak verilen değerin parametrenin türüyle eşleşmesi gerekir. Örneğin, aşağıdakilere izin verilmez:
+`DefaultParameterValue` bağımsız değişkeni olarak verilen değer parametrenin türüyle eşleşmelidir. Örneğin, aşağıdakilere izin verilmez:
 
 ```fsharp
 type C =
     static member Wrong([<Optional; DefaultParameterValue("string")>] i:int) = ()
 ```
 
-Bu durumda, derleyici bir uyarı oluşturur ve iki özniteliği de tamamen yoksayar. Diğer bir deyişle, derleyici `null` yanlış türü (ör. `[<Optional; DefaultParameterValue(null:obj)>] o:obj`), aksi takdirde, varsayılan değerin tür-açıklama olması gerektiğini unutmayın.
+Bu durumda, derleyici bir uyarı oluşturur ve iki özniteliği de tamamen yoksayar. Varsayılan değer `null` tür açıklanmalıdır; Aksi durumda, derleyici yanlış türde (örneğin, `[<Optional; DefaultParameterValue(null:obj)>] o:obj`).
 
 ## <a name="passing-by-reference"></a>Başvuruya göre geçirme
 
 Bir F# değerin başvuruya göre geçirilmesi, yönetilen işaretçi türleri olan [ByRef 'ler](byrefs.md)içerir. Kullanılacak tür ile ilgili kılavuz aşağıdaki gibidir:
 
-- Yalnızca `inref<'T>` işaretçiyi okumanız gerekiyorsa kullanın.
-- Yalnızca `outref<'T>` işaretçiye yazmanız gerekiyorsa kullanın.
-- Hem `byref<'T>` okuma hem de işaretçiye yazma gerekiyorsa kullanın.
+- Yalnızca işaretçiyi okumanız gerekiyorsa `inref<'T>` kullanın.
+- Yalnızca işaretçiye yazmanız gerekiyorsa `outref<'T>` kullanın.
+- Hem okuma hem de işaretçiye yazma gerekiyorsa `byref<'T>` kullanın.
 
 ```fsharp
 let example1 (x: inref<int>) = printfn "It's %d" x
@@ -176,29 +176,30 @@ let example3 (x: byref<int>) =
     printfn "It'd %d" x
     x <- x + 1
 
-// No need to make it mutable, since it's read-only
-let x = 1
-example1 &x
+let test () =
+    // No need to make it mutable, since it's read-only
+    let x = 1
+    example1 &x
 
-// Needs to be mutable, since we write to it
-let mutable y = 2
-example2 &y
-example3 &y // Now 'y' is 3
+    // Needs to be mutable, since we write to it
+    let mutable y = 2
+    example2 &y
+    example3 &y // Now 'y' is 3
 ```
 
 Parametresi bir işaretçi olduğundan ve değer değişebilir olduğundan, değer üzerinde yapılan tüm değişiklikler işlevin yürütülmesinden sonra tutulur.
 
-.NET kitaplığı yöntemlerinde herhangi `out` bir parametreyi depolamak için bir kayıt düzeni değerini dönüş değeri olarak kullanabilirsiniz. Alternatif olarak, `out` parametresini bir `byref` parametre olarak kabul edebilirsiniz. Aşağıdaki kod örneğinde her iki yol da gösterilmektedir.
+.NET kitaplığı yöntemlerinde `out` parametrelerini depolamak için bir kayıt düzeni dönüş değeri olarak kullanabilirsiniz. Alternatif olarak, `out` parametresini bir `byref` parametresi olarak kabul edebilirsiniz. Aşağıdaki kod örneğinde her iki yol da gösterilmektedir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
 
 ## <a name="parameter-arrays"></a>Parametre Dizileri
 
-Bazen heterojen türden rastgele sayıda parametre alan bir işlev tanımlanması gerekir. Tüm olası aşırı yüklenmiş yöntemlerin, kullanılabilecek tüm türlere yönelik olarak oluşturulması pratik değildir. .NET uygulamaları, parametre dizisi özelliği aracılığıyla bu tür yöntemler için destek sağlar. İmzasında parametre dizisi alan bir yöntem, rastgele sayıda parametre ile birlikte etkinleştirilebilir. Parametreler bir diziye konur. Dizi öğelerinin türü, işleve geçirilebilecek parametre türlerini belirler. Parametre dizisini `System.Object` öğesi türü olarak tanımlarsanız, istemci kodu herhangi bir türdeki değerleri geçirebilir.
+Bazen heterojen türden rastgele sayıda parametre alan bir işlev tanımlanması gerekir. Tüm olası aşırı yüklenmiş yöntemlerin, kullanılabilecek tüm türlere yönelik olarak oluşturulması pratik değildir. .NET uygulamaları, parametre dizisi özelliği aracılığıyla bu tür yöntemler için destek sağlar. İmzasında parametre dizisi alan bir yöntem, rastgele sayıda parametre ile birlikte etkinleştirilebilir. Parametreler bir diziye konur. Dizi öğelerinin türü, işleve geçirilebilecek parametre türlerini belirler. Parametre dizisini öğe türü olarak `System.Object` tanımlarsanız, istemci kodu herhangi bir türdeki değerleri geçirebilir.
 
 İçinde F#, parametre dizileri yalnızca yöntemlerde tanımlanabilir. Bunlar tek başına işlevlerde veya modüllerde tanımlanmış işlevlerde kullanılamaz.
 
-`ParamArray` Özniteliğini kullanarak bir parametre dizisi tanımlarsınız. `ParamArray` Özniteliği yalnızca son parametreye uygulanabilir.
+Bir parametre dizisini `ParamArray` özniteliği kullanarak tanımlarsınız. `ParamArray` özniteliği yalnızca son parametreye uygulanabilir.
 
 Aşağıdaki kod, her ikisi de bir parametre dizisi alan ve içindeki F# bir tür tanımı bir parametre dizisi alan bir .net yönteminin çağrılmasını göstermektedir.
 

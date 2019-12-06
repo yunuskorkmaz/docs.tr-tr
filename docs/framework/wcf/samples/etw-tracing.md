@@ -2,12 +2,12 @@
 title: ETW İzleme
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: c9f2b3019ee30ded59a7549a4d3be834c9ab9811
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 25a4281cbf5a9ad81a63eee13d768715eebedfb6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716440"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837902"
 ---
 # <a name="etw-tracing"></a>ETW İzleme
 Bu örnek, Windows için olay Izleme (ETW) ve bu örnekle birlikte sunulan `ETWTraceListener` kullanarak uçtan uca (E2E) izlemenin nasıl uygulanacağını gösterir. Örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ' i temel alır ve ETW izleme içerir.  
@@ -85,7 +85,7 @@ logman stop Wcf
 2. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.  
   
     > [!NOTE]
-    > RegisterProvider. bat, SetupETW. bat ve CleanupETW. bat komutlarını kullanmak için bir yerel yönetici hesabı altında çalıştırmanız gerekir. [!INCLUDE[wv](../../../../includes/wv-md.md)] veya sonraki bir sürümünü kullanıyorsanız, komut istemi ' ni yükseltilmiş ayrıcalıklarla çalıştırmanız gerekir. Bunu yapmak için, komut istemi simgesine sağ tıklayın ve ardından **yönetici olarak çalıştır**' a tıklayın.  
+    > RegisterProvider. bat, SetupETW. bat ve CleanupETW. bat komutlarını kullanmak için bir yerel yönetici hesabı altında çalıştırmanız gerekir. Windows Vista veya sonraki bir sürümü kullanıyorsanız, komut istemi ' ni yükseltilmiş ayrıcalıklarla da çalıştırmanız gerekir. Bunu yapmak için, komut istemi simgesine sağ tıklayın ve ardından **yönetici olarak çalıştır**' a tıklayın.  
   
 3. Örneği çalıştırmadan önce, istemci ve sunucuda RegisterProvider. bat dosyasını çalıştırın. Bu, hizmet Izleme Görüntüleyicisi tarafından okunabilen izlemeler üretmek için elde edilen ETWTracingSampleLog. etl dosyasını ayarlar. Bu dosya C:\logs klasöründe bulunabilir. Bu klasör yoksa, oluşturulması veya bir izleme üretilmemelidir. Ardından, ETW Izleme oturumunu başlatmak için istemci ve sunucu bilgisayarlarında SetupETW. bat dosyasını çalıştırın. SetupETW. bat dosyası CS\Client klasörü altında bulunabilir.  
   

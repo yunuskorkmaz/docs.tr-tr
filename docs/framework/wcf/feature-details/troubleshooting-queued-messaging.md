@@ -2,12 +2,12 @@
 title: Kuyruğa Alınan İletilerde Sorun Giderme
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: dcff128a7718245fa765c57d3af80665699f4891
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2999d1ab4129c72c231b6dc80480d8bfef5186fa
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976045"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837317"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Kuyruğa Alınan İletilerde Sorun Giderme
 
@@ -17,7 +17,7 @@ Bu bölüm, Windows Communication Foundation (WCF) içinde kuyrukları kullanmay
 
 **S:** WCF Beta 1 ' i kullandım ve MSMQ düzeltmesini yükledim. Düzeltmeyi kaldırdım mıyım?
 
-Y **:** Yes. Bu düzeltme artık desteklenmiyor. WCF artık bir düzeltme gereksinimi olmadan MSMQ üzerinde çalışmaktadır.
+**Y:** Evet. Bu düzeltme artık desteklenmiyor. WCF artık bir düzeltme gereksinimi olmadan MSMQ üzerinde çalışmaktadır.
 
 **S:** MSMQ: <xref:System.ServiceModel.NetMsmqBinding> ve <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>için iki bağlama vardır. Ne zaman kullanmalıyım?
 
@@ -25,7 +25,7 @@ Y **:** İki WCF uygulaması arasındaki sıraya alınmış iletişim için MSMQ
 
 **S:** <xref:System.ServiceModel.NetMsmqBinding> ve `MsmqIntegration` bağlamalarını kullanmak için MSMQ 'YU yükseltmem gerekiyor mu?
 
-**C:** Hayır. Her iki bağlama de [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]üzerinde MSMQ 3,0 ile çalışır. [!INCLUDE[wv](../../../../includes/wv-md.md)]'de MSMQ 4,0 sürümüne yükselttiğinizde bağlamaların belirli özellikleri kullanılabilir hale gelir.
+**C:** Hayır. Her iki bağlama de [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]üzerinde MSMQ 3,0 ile çalışır. Windows Vista 'da MSMQ 4,0 sürümüne yükselttiğinizde bağlamaların bazı özellikleri kullanılabilir hale gelir.
 
 **S:** MSMQ 3,0 4,0 ' de <xref:System.ServiceModel.NetMsmqBinding> ve <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> bağlamalarının hangi özellikleri mevcuttur?
 
@@ -41,7 +41,7 @@ Daha fazla bilgi için bkz. [Windows Vista, Windows Server 2003 ve WINDOWS XP 'd
 
 **S:** MSMQ 3,0 ' I kuyruğa alınmış iletişimin bir tarafında ve diğer tarafta MSMQ 4,0 kullanabilir miyim?
 
-Y **:** Yes.
+**Y:** Evet.
 
 **S:** Mevcut MSMQ uygulamalarını yeni WCF istemcileri veya sunucularıyla bütünleştirmek istiyorum. MSMQ altyapımın her iki tarafını da yükseltmem gerekiyor mu?
 
@@ -89,7 +89,7 @@ Eğer (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) yoks
 
 **S:** Hizmetim SvcHost üzerinde oluşturulur. "EndpointListener Requirements ListenerFactory tarafından karşılanamıyor" iletisiyle birlikte aç. Neden?
 
-A. Hizmet sözleşmenizi denetleyin. Tüm hizmet işlemlerine "IsOneWay =`true`" yerleştirmeye unutulmuş olabilirsiniz. Kuyruklar yalnızca tek yönlü hizmet işlemlerini destekler.
+BİR. Hizmet sözleşmenizi denetleyin. Tüm hizmet işlemlerine "IsOneWay =`true`" yerleştirmeye unutulmuş olabilirsiniz. Kuyruklar yalnızca tek yönlü hizmet işlemlerini destekler.
 
 **S:** Kuyrukta ileti var, ancak hiçbir hizmet işlemi çağrılmayacak. Sorun nedir?
 
@@ -134,9 +134,9 @@ Bir uygulama aynı bilgisayardan hem sıraya alınmış oturum iletileri hem de 
 
 Y **:** MSMQ tümleştirme bağlamasını kullandığınızda, MSMQ. formatname şemasını kullanmanız gerekir. Örneğin, MSMQ. FormatName: DIRECT = OS: .\Private $ \OrdersQueue. Ancak özel atılacak ileti sırasını belirttiğinizde net. MSMQ şemasını kullanmanız gerekir.
 
-**S:** Ortak veya özel biçim adı kullandığımda ve hizmet ana bilgisayarını [!INCLUDE[wv](../../../../includes/wv-md.md)]açışınızda bir hata alıyorum. Neden?
+**S:** Ortak veya özel biçim adı kullandığımda ve hizmet ana bilgisayarını Windows Vista 'da açtığınızda bir hata alıyorum. Neden?
 
-Y **:** [!INCLUDE[wv](../../../../includes/wv-md.md)] WCF tümleştirme kanalı, zarar iletilerini işlemek için ana uygulama kuyruğu için bir alt sıranın açılıp açılmadığını denetler. Alt kuyruk adı, dinleyiciye geçirilen bir MSMQ. formatname URI 'sinden türetilir. MSMQ 'daki alt sıra adı yalnızca bir doğrudan biçim adı olabilir. Bu nedenle hatayı görürsünüz. Sıra URI 'sini doğrudan biçim adıyla değiştirin.
+Y **:** Windows Vista 'daki WCF tümleştirme kanalı, zarar iletilerini işlemek için ana uygulama kuyruğu için bir alt sıranın açılıp açılmadığını denetler. Alt kuyruk adı, dinleyiciye geçirilen bir MSMQ. formatname URI 'sinden türetilir. MSMQ 'daki alt sıra adı yalnızca bir doğrudan biçim adı olabilir. Bu nedenle hatayı görürsünüz. Sıra URI 'sini doğrudan biçim adıyla değiştirin.
 
 **S:** MSMQ uygulamasından bir ileti alırken ileti kuyrukta bulunur ve alan WCF uygulaması tarafından okunamaz. Neden?
 
@@ -154,11 +154,11 @@ Başka bir çözüm, <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A> öz
 
 Ancak başka bir geçici çözüm de Active Directory tümleştirmeyle MSMQ yüklemektir.
 
-**S:** Bir sıraya Active Directory için varsayılan bağlama (taşıma güvenliği açık) ile bir ileti gönderdiğimde, "iç sertifika bulunamadı" iletisini alıyorum. Bu Nasıl yaparım? düzeltilsin mi?
+**S:** Bir sıraya Active Directory için varsayılan bağlama (taşıma güvenliği açık) ile bir ileti gönderdiğimde, "iç sertifika bulunamadı" iletisini alıyorum. Bunu nasıl düzeltirim?
 
 Y **:** Bu, gönderenin Active Directory sertifikanın yenilenmesi gerektiği anlamına gelir. Bunu yapmak için, **Denetim Masası**, **Yönetim Araçları**, **Bilgisayar Yönetimi**' ni açın, **MSMQ**' ya sağ tıklayın ve **Özellikler**' i seçin. **Kullanıcı sertifikası** sekmesini seçin ve **Yenile** düğmesine tıklayın.
 
-**S:** <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> kullanarak bir ileti gönderdiğimde ve kullanılacak sertifikayı belirttiğinizde, "geçersiz sertifika" iletisi alıyorum. Bu Nasıl yaparım? düzeltilsin mi?
+**S:** <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> kullanarak bir ileti gönderdiğimde ve kullanılacak sertifikayı belirttiğinizde, "geçersiz sertifika" iletisi alıyorum. Bunu nasıl düzeltirim?
 
 Y **:** Sertifika modunda yerel makine sertifika deposu kullanamazsınız. Sertifika ek bileşenini kullanarak sertifikayı makine sertifika deposundan geçerli kullanıcı deposuna kopyalamanız gerekir. Sertifika ek bileşenini almak için:
 
@@ -180,13 +180,13 @@ Y **:** Sertifika modunda yerel makine sertifika deposu kullanamazsınız. Serti
 
 Y **:** Çalışma grubu modunda, uzak bir uygulamanın sıraya erişim kazanması için, uygulamanın sıraya erişim izni olması gerekir. Kuyruğun erişim denetim listesine (ACL) "anonim oturum açma" ekleyin ve okuma izni verin.
 
-**S:** Bir ağ hizmeti istemcisi (veya etki alanı hesabı olmayan herhangi bir istemci) sıraya alınmış bir ileti gönderdiğinde, gönderme işlemi geçersiz bir sertifika ile başarısız olur. Bu Nasıl yaparım? düzeltilsin mi?
+**S:** Bir ağ hizmeti istemcisi (veya etki alanı hesabı olmayan herhangi bir istemci) sıraya alınmış bir ileti gönderdiğinde, gönderme işlemi geçersiz bir sertifika ile başarısız olur. Bunu nasıl düzeltirim?
 
 Y **:** Bağlama yapılandırmasını denetleyin. İletiyi imzalamak için varsayılan bağlamada MSMQ aktarım güvenliği açıktır. Kapatın.
 
 ### <a name="remote-transacted-receives"></a>Uzaktan Işlem temelli alır
 
-**S:** A makinesinde bir kuyruk olduğunda ve B makinesindeki bir sıradan iletileri okuyan bir WCF hizmeti (uzaktan işlem temelli alma senaryosu) olduğunda İletiler kuyruktan okunmaz. İzleme bilgileri, alma Işleminin "Işlem içeri aktarılamıyor" iletisiyle başarısız olduğunu gösterir. Bunu onarmak için ne yapabilirim?
+**S:** A makinesinde bir kuyruk olduğunda ve B makinesindeki bir sıradan iletileri okuyan bir WCF hizmeti (uzaktan işlem temelli alma senaryosu) olduğunda İletiler kuyruktan okunmaz. İzleme bilgileri, alma Işleminin "Işlem içeri aktarılamıyor" iletisiyle başarısız olduğunu gösterir. Bu sorunu gidermek için ne yapabilirim?
 
 Y **:** Bunun üç olası nedeni vardır:
 
@@ -200,7 +200,7 @@ Y **:** Bunun üç olası nedeni vardır:
 
 - MSDTC 'nin **Internet bağlantısı güvenlik duvarı** ayarları 'ndaki özel durumlar listesinde olduğundan emin olun.
 
-- [!INCLUDE[wv](../../../../includes/wv-md.md)]kullandığınızdan emin olun. MSMQ [!INCLUDE[wv](../../../../includes/wv-md.md)], uzaktan işlenen okumayı destekler. Önceki Windows sürümlerindeki MSMQ, uzaktan işlenen okumayı desteklemez.
+- Windows Vista kullandığınızdan emin olun. Windows Vista 'da MSMQ, uzaktan işlenen okumayı destekler. Önceki Windows sürümlerindeki MSMQ, uzaktan işlenen okumayı desteklemez.
 
 **S:** Kuyruktan okuma hizmeti bir ağ hizmeti olduğunda (örneğin, bir Web ana bilgisayarında), kuyruktan okurken neden bir erişim reddedildi özel durumu ortaya aldım?
 
@@ -208,7 +208,7 @@ Y **:** Ağ hizmetinin kuyruktan okuyabağlanabildiğinden emin olmak için kuyr
 
 **S:** MSMQ etkinleştirme hizmetini, uzak bir makinedeki bir kuyruktaki iletilere göre uygulamaları etkinleştirmek için kullanabilir miyim?
 
-Y **:** Yes. Bunu yapmak için MSMQ etkinleştirme hizmetini bir ağ hizmeti olarak çalışacak şekilde yapılandırmanız ve uzak makinedeki sıraya ağ hizmeti erişimi eklemeniz gerekir.
+**Y:** Evet. Bunu yapmak için MSMQ etkinleştirme hizmetini bir ağ hizmeti olarak çalışacak şekilde yapılandırmanız ve uzak makinedeki sıraya ağ hizmeti erişimi eklemeniz gerekir.
 
 ## <a name="using-custom-msmq-bindings-with-receivecontext-enabled"></a>ReceiveContext etkin özel MSMQ bağlamaları kullanma
 

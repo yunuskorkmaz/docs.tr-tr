@@ -4,18 +4,18 @@ description: .NET Core SDK ve çalışma zamanını RHEL 7 ' ye yüklemek için 
 author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
-ms.openlocfilehash: cc7865727927eda1406da26e64b89325fd5665a4
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: f17a410ccea1ef4dec32de1d80ef6aac889aa6f3
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801963"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74836957"
 ---
 # <a name="rhel-7-package-manager---install-net-core"></a>RHEL 7 Paket Yöneticisi-.NET Core 'u yükler
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
-Bu makalede, RHEL 7 üzerinde .NET Core yüklemek için bir paket yöneticisi 'nin nasıl kullanılacağı açıklanır.
+Bu makalede, RHEL 7 üzerinde .NET Core yüklemek için bir paket yöneticisi 'nin nasıl kullanılacağı açıklanır. .NET Core 3,1, RHEL 7 için henüz kullanılamıyor.
 
 ## <a name="register-your-red-hat-subscription"></a>Red Hat aboneliğinizi kaydetme
 

@@ -3,13 +3,13 @@ title: Ubuntu 19,04 paket yöneticisi 'ne .NET Core 'u yükler-.NET Core
 description: Ubuntu 19,04 ' de .NET Core SDK ve çalışma zamanı yüklemek için bir paket Yöneticisi kullanın.
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
-ms.openlocfilehash: 76bdc40252dee711414268e306243fb34dcc578c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/04/2019
+ms.openlocfilehash: 98ceb0ae7f3fbd99c4be412fd1e19928793c348f
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450893"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74836894"
 ---
 # <a name="ubuntu-1904-package-manager---install-net-core"></a>Ubuntu 19,04 paket yöneticisi-.NET Core 'ı yükler
 
@@ -17,7 +17,7 @@ ms.locfileid: "74450893"
 
 Bu makalede, Ubuntu 19,04 ' de .NET Core yüklemek için bir paket yöneticisi 'nin nasıl kullanılacağı açıklanır. Çalışma zamanını yüklüyorsanız, hem .NET Core 'u hem de ASP.NET Core çalışma zamanlarını içerdiğinden [ASP.NET Core çalışma zamanını](#install-the-aspnet-core-runtime)yüklemenizi öneririz.
 
-## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtar ve akışını Kaydet
+## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtarını ve akışını kaydetme
 
 .NET yüklemeden önce şunları yapmanız gerekir:
 
@@ -25,7 +25,7 @@ Bu makalede, Ubuntu 19,04 ' de .NET Core yüklemek için bir paket yöneticisi '
 - Ürün deposunu kaydetme
 - Gerekli bağımlılıkları yükler
 
-Bu, makine başına yalnızca bir kez yapılmalıdır.
+Bu işlemin makine başına bir kez yapılması yeterlidir.
 
 Bir Terminal açın ve aşağıdaki komutları çalıştırın.
 
@@ -42,11 +42,11 @@ Yükleme için kullanılabilen ürünleri güncelleştirin, ardından .NET Core 
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install dotnet-sdk-3.0
+sudo apt-get install dotnet-sdk-3.1
 ```
 
 > [!IMPORTANT]
-> **DotNet-SDK-3,0**' i bulamıyor gibi bir hata iletisi alırsanız, bkz. [Paket Yöneticisi sorunlarını giderme](#troubleshoot-the-package-manager) bölümü.
+> **DotNet-SDK-3,1**' i bulamıyor gibi bir hata iletisi alırsanız, bkz. [Paket Yöneticisi sorunlarını giderme](#troubleshoot-the-package-manager) bölümü.
 
 ## <a name="install-the-aspnet-core-runtime"></a>ASP.NET Core çalışma zamanını yükler
 
@@ -56,11 +56,11 @@ Yükleme için kullanılabilen ürünleri güncelleştirin, ardından ASP.NET Co
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install aspnetcore-runtime-3.0
+sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> Bir hata iletisi alırsanız, **aspnetcore-Runtime-3,0 paketini bulamazsanız**, bkz. [Package Manager sorunlarını giderme](#troubleshoot-the-package-manager) bölümü.
+> Bir hata iletisi alırsanız, **aspnetcore-Runtime-3,1 paketini bulamazsanız**, bkz. [Package Manager sorunlarını giderme](#troubleshoot-the-package-manager) bölümü.
 
 ## <a name="install-the-net-core-runtime"></a>.NET Core çalışma zamanını yükler
 
@@ -70,11 +70,11 @@ Yükleme için kullanılabilen ürünleri güncelleştirin ve ardından .NET Cor
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install dotnet-runtime-3.0
+sudo apt-get install dotnet-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> **DotNet-Runtime-3,0 bulunamadı**hatasıyla benzer bir hata iletisi alırsanız, [Paket Yöneticisi sorunlarını giderme](#troubleshoot-the-package-manager) bölümüne bakın.
+> **DotNet-Runtime-3,1 bulunamadı**hatasıyla benzer bir hata iletisi alırsanız, [Paket Yöneticisi sorunlarını giderme](#troubleshoot-the-package-manager) bölümüne bakın.
 
 ## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
 

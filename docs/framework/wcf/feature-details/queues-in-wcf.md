@@ -4,62 +4,62 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 6990d2b08f0ff729f0c0138c091c728a5ba59605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e921084ed28cb4e846cb269e57e58a194e9437a5
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643550"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837343"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation'da Kuyruklar
-Bu bölümdeki konular, kuyruklar için Windows Communication Foundation (WCF) desteği açıklanmaktadır. WCF yararlanarak Microsoft Message (daha önce MSMQ da bilinir) Queuing tarafından bir aktarım olarak queuing için destek sağlar ve aşağıdaki senaryolara olanak tanır:  
+Bu bölümdeki konular, kuyruklar için Windows Communication Foundation (WCF) desteğini tartışır. WCF, bir taşıma olarak Microsoft Message Queuing (daha önce MSMQ olarak bilinir) kullanarak sıraya alma desteği sağlar ve aşağıdaki senaryoları sağlar:  
   
-- Gevşek bağlantılı uygulamalar. Gönderen uygulamaların, kuyruklara alıcı uygulamanın iletiyi işlemek kullanılabilir olup olmadığını bilmek gerek kalmadan iletileri gönderebilir. Kuyruğa alma uygulamaları iletileri ne kadar hızlı işleyebilir bağlı olmayan bir hızda kuyruğa ileti göndermek bir gönderme uygulaması sağlayan işleme bağımsızlığı sağlar. Bir kuyruğa ileti göndermek için ileti işleme sıkıca değil, genel sistem kullanılabilirliği artırır.  
+- Gevşek olarak bağlanmış uygulamalar. Uygulamaları göndermek, alıcı uygulamanın iletiyi işlemek için kullanılabilir olup olmadığını bilmeleri gerekmeden iletileri sıralara gönderebilir. Sıra, gönderen uygulamanın iletileri işlemeye ne kadar hızlı bir şekilde işleyebildiğini bağlı olmayan bir hızda sıraya ileti göndermesini sağlayan işleme bağımsızlık sağlar. Bir kuyruğa ileti gönderilirken genel sistem kullanılabilirliği artar ve ileti işlemeye sıkı bir şekilde bağlı değildir.  
   
-- Hata Yalıtımı. Gönderme ve ileti kuyruğa alma uygulamaları birbirini etkilemeden başarısız olabilir. Örneğin, alıcı uygulama başarısız olursa, kuyruğa ileti göndermek uygulama göndermeye devam edebilirsiniz. Alıcı yeniden sakınca yoktur, bu kuyruktan iletileri işleyebilir. Hata yalıtımı, genel sistem güvenilirliğini ve kullanılabilirliğini artırır.  
+- Hata yalıtımı. Bir kuyruğa ileti gönderen veya alan uygulamalar birbirini etkilemeden başarısız olabilir. Örneğin, alıcı uygulama başarısız olursa, gönderen uygulama iletileri kuyruğa göndermeye devam edebilir. Alıcı tekrar çalışır duruma geldiğinde iletileri kuyruktan işleyebilir. Hata yalıtımı genel sistem güvenilirliğini ve kullanılabilirliğini artırır.  
   
-- Yük Dengeleme. Gönderen uygulamaların alma uygulamaları ile ileti sık zora sokar. Bir alıcı kısası olmaması eşleşmeyen ileti üretim ve tüketim ücretleri kuyruklar yönetebilirsiniz.  
+- Yük dengeleme. Uygulamaları göndermek, iletilerle birlikte uygulamaları alabilir. Kuyruklar, uyumsuz ileti üretimini ve tüketim hızlarını yönetebilir ve böylece bir alıcı aşırı olmaz.  
   
-- Bağlantısı kesilmiş işlemler. Gönderme, alma ve işleme gibi yüksek Gecikmeli ağlar veya sınırlı kullanılabilirlik ağlar üzerinden mobil cihazlar söz konusu olduğunda iletişim kaybedebilir. Kuyruklar, bu işlemler devam etmek bile uç noktaları ne zaman kesilir izin verin. Bağlantı kurulduğunda, alıcı uygulamasına iletileri kuyruğa gönderir.  
+- Bağlantısı kesilen işlemler. Mobil cihazlarda olduğu gibi, yüksek gecikmeli ağlar veya sınırlı kullanılabilirlik ağları üzerinden iletişim kurulurken, gönderme, alma ve işleme işlemleri kesilebilir. Kuyruklar, uç noktaların bağlantısı kesildiğinde bile bu işlemlerin devam etmesine izin verir. Bağlantı yeniden kurulduğunda, kuyruk iletileri alıcı uygulamaya iletir.  
   
- WCF uygulaması kuyrukları özelliği kullanmak için standart bağlamaları birini kullanabilirsiniz veya standart bağlamaları birini gereksinimlerinize uygun değil, özel bir bağlama oluşturabilirsiniz. İlgili standart bağlamaları ve bir seçim yapma hakkında daha fazla bilgi için bkz: [nasıl yapılır: WCF uç noktaları ile mesaj alışverişi ve ileti kuyruğa alma uygulamaları](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Özel bağlamalar oluşturma hakkında daha fazla bilgi için bkz. [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Bir WCF uygulamasında kuyruklar özelliğini kullanmak için standart bağlamalardan birini kullanabilir veya standart bağlamalardan biri gereksinimlerinizi karşılamadığı takdirde özel bir bağlama oluşturabilirsiniz. İlgili standart bağlamalar ve bir tane seçme hakkında daha fazla bilgi için bkz. [nasıl yapılır: WCF uç noktaları ve Message Queuing uygulamaları Ile Exchange iletileri](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Özel Bağlamalar Oluşturma hakkında daha fazla bilgi için bkz. [Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- Message queuing kavramları genel bakış.  
+ Message Queuing kavramlarına genel bakış.  
   
  [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- WCF kuyruk desteğine genel bakış.  
+ WCF kuyruğu desteğine genel bakış.  
   
- [Nasıl yapılır: WCF uç noktaları ile kuyruğa alınmış iletiler gönderip alır](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- Nasıl kullanılacağını açıklar <xref:System.ServiceModel.NetMsmqBinding> bir WCF istemcisi ve WCF hizmeti arasında iletişim kurmak için sınıf.  
+ [Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ WCF istemcisi ve WCF hizmeti arasında iletişim kurmak için <xref:System.ServiceModel.NetMsmqBinding> sınıfının nasıl kullanılacağını açıklar.  
   
- [Nasıl yapılır: WCF uç noktaları ve ileti uygulamaları ile Exchange ileti](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- Nasıl kullanılacağını açıklar <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> WCF ve Message Queuing uygulamalar arasında iletişim kurmak için.  
+ [Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ WCF ve Message Queuing uygulamalar arasında iletişim kurmak için <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> nasıl kullanılacağını açıklar.  
   
  [Oturumda Kuyruğa Alınmış İletileri Gruplandırma](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
- Tek bir alıcı uygulamayla ilişkili ileti işleme kolaylaştırmak için sıradaki iletilerin Grup açıklanmaktadır.  
+ Tek bir alan uygulama tarafından bağıntılı ileti işlemeyi kolaylaştırmak için bir kuyruktaki iletilerin nasıl gruplandırılacağını açıklar.  
   
  [Bir İşlemde Toplu İleti İşleme](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
- Toplu işlem iletileri açıklanmaktadır.  
+ Bir işlemdeki toplu iletileri nasıl kullanacağınızı açıklar.  
   
  [İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- Teslim edilemeyen kullanarak ileti aktarım ve teslim hatalarını işlemek nasıl ve geçerliliğini yitirmiş kuyruk gelen iletileri işlemek nasıl açıklar.  
+ İleti aktarımı ve teslim hatalarının, atılacak ileti kuyruklarını kullanarak nasıl işleneceğini ve atılacak ileti sırasından iletilerin nasıl işleneceğini açıklar.  
   
  [Zehirli İleti İşleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- Zehirli iletileri (alıcı uygulamasına teslim denemesi üst sınırını aştınız iletileri) ele alınacağını açıklar.  
+ Zarar iletilerinin nasıl işleneceğini açıklar (alıcı uygulamaya en fazla teslim girişimi sayısını aşmış olan mesajlar).  
   
  [Windows Vista, Windows Server 2003 ve Windows XP'de Kuyruğa Alma Özelliği Arasındaki Farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- WCF kuyrukları özelliği farklar özetlenmektedir [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+ Windows Vista, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]arasındaki WCF kuyrukları özelliğindeki farklılıkları özetler.  
   
  [Aktarım Güvenliği Kullanarak İletileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- Sıraya alınan iletileri güvenli hale getirmek için Aktarım güvenliği kullanmayı açıklar.  
+ Sıraya alınan iletileri güvenli hale getirmek için Transport Security 'nin nasıl kullanılacağını açıklar.  
   
  [İleti Güveliği Kullanarak İletileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
- Sıraya alınan iletileri güvenli hale getirmek için ileti güvenliği kullanmayı açıklar.  
+ Sıraya alınan iletileri güvenli hale getirmek için ileti güvenliğinin nasıl kullanılacağını açıklar.  
   
  [Kuyruğa Alınan İletilerde Sorun Giderme](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)  
- Ortak kuyruk sorunları gidermek nasıl açıklar.  
+ Genel sıraya alma sorunlarını nasıl giderebileceğinizi açıklar.  
   
  [Kuyruğa Alınan İletişim için En İyi Uygulamalar](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
- Kuyruğa alınmış iletişim WCF kullanmak için en iyi uygulamalar açıklanmaktadır.  
+ WCF sıraya alınmış iletişimi kullanmak için en iyi yöntemleri açıklar.  

@@ -4,18 +4,21 @@ description: RHEL 8,1 üzerinde .NET Core SDK ve çalışma zamanı yüklemek i�
 author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
-ms.openlocfilehash: 20fb3e9e517858b9cc5d6e9c1bd97bf949558843
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 3ef639d5b76e81856ec8370d10e098c455ca8b3d
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800736"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74836929"
 ---
 # <a name="rhel-81-package-manager---install-net-core"></a>RHEL 8,1 Paket Yöneticisi-.NET Core 'u yükler
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
-Bu makalede, RHEL 8,1 üzerinde .NET Core yüklemek için bir paket yöneticisi 'nin nasıl kullanılacağı açıklanır.
+Bu makalede, RHEL 8,1 üzerinde .NET Core yüklemek için bir paket yöneticisi 'nin nasıl kullanılacağı açıklanır. .NET Core 3,1, henüz RHEL 8,1 için kullanılabilir değil.
+
+> [!NOTE]
+> RHEL 8,0, .NET Core 3,0 içermez. RHEL 8,1 ' ye güncelleştirmek için komut `yum upgrade` kullanın.
 
 > [!NOTE]
 > RHEL 8,0, .NET Core 3,0 içermez. RHEL 8,1 ' ye güncelleştirmek için komut `yum upgrade` kullanın.

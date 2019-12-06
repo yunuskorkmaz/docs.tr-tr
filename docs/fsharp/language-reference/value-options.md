@@ -1,13 +1,13 @@
 ---
 title: Değer Seçenekleri
 description: Seçenek türünün bir F# struct sürümü olan değer seçenek türü hakkında bilgi edinin.
-ms.date: 02/06/2019
-ms.openlocfilehash: 4dc3f7217943345b7aaf1165fd648ab2e01bd727
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 12/04/2019
+ms.openlocfilehash: 0e9882ab4acdf2757705ef6022516d3572d87ef2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424015"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837122"
 ---
 # <a name="value-options"></a>Değer Seçenekleri
 
@@ -63,15 +63,13 @@ match (result1, result2) with
 
 ## <a name="value-option-functions"></a>Değer seçeneği işlevleri
 
-Şu anda değer seçenekleri için bir modüle bağlı işlev var, `defaultValueArg`:
+FSharp. Core 'daki `ValueOption` modülü, `Option` modülüne denk işlevsellik içerir. Adında birkaç fark vardır, örneğin `defaultValueArg`:
 
 ```fsharp
 val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T
 ```
 
-`defaultArg` işlevinde olduğu gibi `defaultValueArg`, varsa verilen değer seçeneğinin temel alınan değerini döndürür; Aksi halde, belirtilen varsayılan değeri döndürür.
-
-Şu anda değer seçenekleri için modüle özgü başka işlevler yoktur.
+Bu, `Option` modülündeki `defaultArg` gibi davranır, ancak bunun yerine bir değer seçeneği üzerinde çalışır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

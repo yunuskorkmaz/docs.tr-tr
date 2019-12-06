@@ -2,12 +2,12 @@
 title: Teslim Edilemeyen İletiler Sırası
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 70007289e457588e94128a573ced4b28e238acf4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 244920eb9a0cdb33f4d5d83b939fe1166f4f5fcd
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710883"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837915"
 ---
 # <a name="dead-letter-queues"></a>Teslim Edilemeyen İletiler Sırası
 Bu örnek, teslimin başarısız olduğu iletileri nasıl işleyeceğinizi ve işleyeceğini gösterir. Bu [işlem, IŞLENEN MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) örneğini temel alır. Bu örnek `netMsmqBinding` bağlamasını kullanır. Hizmet, sıraya alınan iletileri alma hizmetini gözlemlemeye olanak sağlayan, kendinden konak bir konsol uygulamasıdır.
@@ -16,7 +16,7 @@ Bu örnek, teslimin başarısız olduğu iletileri nasıl işleyeceğinizi ve i�
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
 
 > [!NOTE]
-> Bu örnek, yalnızca [!INCLUDE[wv](../../../../includes/wv-md.md)]kullanılabilir olan her bir uygulama atılacak ileti sırasını gösterir. Örnek, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]üzerinde MSMQ 3,0 için varsayılan sistem genelinde kuyrukları kullanacak şekilde değiştirilebilir.
+> Bu örnek, yalnızca Windows Vista 'da bulunan tüm uygulama atılacak ileti sırasını gösterir. Örnek, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]üzerinde MSMQ 3,0 için varsayılan sistem genelinde kuyrukları kullanacak şekilde değiştirilebilir.
 
  Sıraya alınmış iletişimde istemci, hizmet ile bir kuyruk kullanarak iletişim kurar. Daha kesin olarak, istemci iletileri bir kuyruğa gönderir. Hizmet kuyruktaki iletileri alır. Bu nedenle, hizmet ve istemci, bir kuyruk kullanarak iletişim kurmak için aynı anda çalışıyor olması gerekmez.
 
@@ -30,9 +30,9 @@ Bu örnek, teslimin başarısız olduğu iletileri nasıl işleyeceğinizi ve i�
 
 - `System`: sistem atılacak ileti sırası, ölü iletileri depolamak için kullanılır. Sistem atılacak ileti kuyruğu, bilgisayarda çalışan tüm uygulamalar tarafından paylaşılır.
 
-- `Custom`: <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> özelliği kullanılarak belirtilen özel bir atılacak mektup kuyruğu, ölü iletileri depolamak için kullanılır. Bu özellik yalnızca [!INCLUDE[wv](../../../../includes/wv-md.md)]kullanılabilir. Bu, uygulamanın aynı bilgisayar üzerinde çalışan diğer uygulamalarla paylaşılması yerine kendi atılacak bir sıra kullanması gerektiğinde kullanılır.
+- `Custom`: <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> özelliği kullanılarak belirtilen özel bir atılacak mektup kuyruğu, ölü iletileri depolamak için kullanılır. Bu özellik yalnızca Windows Vista 'da kullanılabilir. Bu, uygulamanın aynı bilgisayar üzerinde çalışan diğer uygulamalarla paylaşılması yerine kendi atılacak bir sıra kullanması gerektiğinde kullanılır.
 
-- belirli bir kuyruğu, atılacak ileti sırası olarak kullanılacak şekilde ifade etmek için <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> özelliği. Bu yalnızca [!INCLUDE[wv](../../../../includes/wv-md.md)]kullanılabilir.
+- belirli bir kuyruğu, atılacak ileti sırası olarak kullanılacak şekilde ifade etmek için <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> özelliği. Bu yalnızca Windows Vista 'da kullanılabilir.
 
  Bu örnekte, istemci, bir işlemin kapsamı içinde hizmete toplu bir ileti gönderir ve bu iletiler için "yaşam süresi" (yaklaşık 2 saniye) için rastgele bir düşük değer belirtir. İstemci Ayrıca, kullanım dışı olan iletileri sıraya almak için kullanılacak özel bir atılacak mektup kuyruğu belirtir.
 

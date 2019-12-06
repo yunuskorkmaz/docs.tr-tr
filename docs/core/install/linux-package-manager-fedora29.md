@@ -3,13 +3,13 @@ title: Fedora 29-Package Manager-.NET Core 'a .NET Core 'u yükler
 description: .NET Core SDK ve çalışma zamanını Fedora 29 ' a yüklemek için bir paket Yöneticisi kullanın.
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
-ms.openlocfilehash: 1507687359adaca41465c82541a079f8eac465df
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/04/2019
+ms.openlocfilehash: 1cd761e323467ef34fdad58de7385c1ca7b2c14a
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74451005"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74836964"
 ---
 # <a name="fedora-29-package-manager---install-net-core"></a>Fedora 29 Paket Yöneticisi-.NET Core 'ı yükler
 
@@ -17,7 +17,7 @@ ms.locfileid: "74451005"
 
 Bu makalede, Fedora 29 ' da .NET Core yüklemek için bir paket yöneticisi 'nin nasıl kullanılacağı açıklanır. Çalışma zamanını yüklüyorsanız, hem .NET Core 'u hem de ASP.NET Core çalışma zamanlarını içerdiğinden [ASP.NET Core çalışma zamanını](#install-the-aspnet-core-runtime)yüklemenizi öneririz.
 
-## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtar ve akışını Kaydet
+## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtarını ve akışını kaydetme
 
 .NET yüklemeden önce şunları yapmanız gerekir:
 
@@ -25,7 +25,7 @@ Bu makalede, Fedora 29 ' da .NET Core yüklemek için bir paket yöneticisi 'nin
 - Ürün deposunu kaydetme
 - Gerekli bağımlılıkları yükler
 
-Bu, makine başına yalnızca bir kez yapılmalıdır.
+Bu işlemin makine başına bir kez yapılması yeterlidir.
 
 Bir Terminal açın ve aşağıdaki komutları çalıştırın.
 
@@ -39,7 +39,7 @@ sudo wget -q -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.
 Yükleme için kullanılabilen ürünleri güncelleştirin, ardından .NET Core SDK yükleme. Terminalinizde aşağıdaki komutu çalıştırın.
 
 ```bash
-sudo dnf install dotnet-sdk-3.0
+sudo dnf install dotnet-sdk-3.1
 ```
 
 ## <a name="install-the-aspnet-core-runtime"></a>ASP.NET Core çalışma zamanını yükler
@@ -47,7 +47,7 @@ sudo dnf install dotnet-sdk-3.0
 Yükleme için kullanılabilen ürünleri güncelleştirin, sonra ASP.NET çalışma zamanını yükleme. Terminalinizde aşağıdaki komutu çalıştırın.
 
 ```bash
-sudo dnf install aspnetcore-runtime-3.0
+sudo dnf install aspnetcore-runtime-3.1
 ```
 
 ## <a name="install-the-net-core-runtime"></a>.NET Core çalışma zamanını yükler
@@ -55,7 +55,7 @@ sudo dnf install aspnetcore-runtime-3.0
 Yükleme için kullanılabilen ürünleri güncelleştirin ve ardından .NET Core çalışma zamanı 'nı yükleme. Terminalinizde aşağıdaki komutu çalıştırın.
 
 ```bash
-sudo dnf install dotnet-runtime-3.0
+sudo dnf install dotnet-runtime-3.1
 ```
 
 ## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir

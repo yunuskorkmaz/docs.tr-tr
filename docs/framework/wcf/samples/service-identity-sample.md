@@ -2,12 +2,12 @@
 title: Hizmet Kimliği Örneği
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 0d5fce313200cdfdb8007ceffe9ff97b033d9f82
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: eb2dd3c6392164905cf755075856608ec5fcaf30
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045517"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837798"
 ---
 # <a name="service-identity-sample"></a>Hizmet Kimliği Örneği
 Bu hizmet kimliği örneği, bir hizmetin kimliğini nasıl ayarlayabileceğinizi gösterir. Tasarım zamanında, istemci, hizmetin meta verilerini kullanarak kimliği alabilir ve çalışma zamanında istemci hizmetin kimliğini doğrulayabilir. Hizmet kimliği kavramı, bir istemcinin işlemlerini çağırmadan önce bir hizmetin kimliğini doğrulamasına izin ver, böylelikle de istemciyi kimliği doğrulanmamış çağrılardan koruyor. Güvenli bir bağlantıda hizmet, erişim izni vermeden önce bir istemcinin kimlik bilgilerini doğrular, ancak bu, bu örneğin odağı değildir. [İstemcide](../../../../docs/framework/wcf/samples/client.md) sunucu kimlik doğrulamasını gösteren örneklere bakın.
@@ -54,7 +54,7 @@ ep.Address = epa;
 </endpoint>
 ```
 
- Özel bir kimlik, <xref:System.ServiceModel.EndpointIdentity> <xref:System.ServiceModel.Security.IdentityVerifier> ve sınıflarından türeterek istemci üzerinde ayarlanabilir. Kavramsal olarak <xref:System.ServiceModel.Security.IdentityVerifier> sınıf, `AuthorizationManager` hizmetin sınıfının istemci eşdeğeri olarak düşünülebilir. Aşağıdaki kod örneğinde `OrgEndpointIdentity`, bir kuruluş adını, sunucu sertifikasının konu adı ile eşleşecek şekilde depolayan bir uygulamasını gösterilmektedir. Kuruluş adı için yetkilendirme denetimi, `CheckAccess` `CustomIdentityVerifier` sınıfındaki yönteminde oluşur.
+ <xref:System.ServiceModel.EndpointIdentity> ve <xref:System.ServiceModel.Security.IdentityVerifier> sınıflarından türeterek, istemci üzerinde özel bir kimlik ayarlanabilir. Kavramsal olarak <xref:System.ServiceModel.Security.IdentityVerifier> sınıfı, hizmetin `AuthorizationManager` sınıfının istemci eşdeğeri olarak kabul edilebilir. Aşağıdaki kod örneği, bir kuruluş adını sunucu sertifikasının konu adı ile eşleşecek şekilde depolayan `OrgEndpointIdentity`bir uygulamasını gösterir. Kuruluş adı için yetkilendirme denetimi, `CustomIdentityVerifier` sınıfındaki `CheckAccess` yönteminde oluşur.
 
 ```csharp
 // This custom EndpointIdentity stores an organization name
@@ -115,14 +115,14 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için
 
-1. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Veya[!INCLUDE[wv](../../../../includes/wv-md.md)]üzerinde, kimlik çözüm klasöründeki Identity. pfx sertifika dosyasını, MMC ek bileşeni aracını kullanarak LocalMachine/My (Personal) sertifika deposuna aktarın. Bu dosya parola korumalıdır. İçeri aktarma sırasında sizden bir parola istenir. Parola `xyz` kutusuna yazın. Daha fazla bilgi için bkz [. nasıl yapılır: MMC ek bileşeni](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) ile sertifikaları görüntüleyin. Bu işlem tamamlandıktan sonra, bu sertifikayı istemcide kullanılmak üzere geçerli kullanıcı/güvenilir kişiler deposuna kopyalayan yönetici ayrıcalıklarına sahip Visual Studio için Geliştirici Komut İstemi Setup. bat dosyasını çalıştırın.
+1. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] veya Windows Vista 'da, kimlik çözüm klasöründeki Identity. pfx sertifika dosyasını, MMC ek bileşeni aracını kullanarak LocalMachine/My (Personal) sertifika deposuna aktarın. Bu dosya parola korumalıdır. İçeri aktarma sırasında sizden bir parola istenir. Parola kutusuna `xyz` yazın. Daha fazla bilgi için bkz. [nasıl yapılır: MMC ek bileşeni Ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) konusuna bakın. Bu işlem tamamlandıktan sonra, bu sertifikayı istemcide kullanılmak üzere geçerli kullanıcı/güvenilir kişiler deposuna kopyalayan yönetici ayrıcalıklarına sahip Visual Studio için Geliştirici Komut İstemi Setup. bat dosyasını çalıştırın.
 
-2. Üzerinde [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], yönetici ayrıcalıklarıyla bir Visual Studio 2012 komut istemi içindeki örnek yükleme klasöründen Setup. bat dosyasını çalıştırın. Bu, örneği çalıştırmak için gereken tüm sertifikaları kurar.
+2. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], yönetici ayrıcalıklarıyla bir Visual Studio 2012 komut istemi içindeki örnek yükleme klasöründen Setup. bat dosyasını çalıştırın. Bu, örneği çalıştırmak için gereken tüm sertifikaları kurar.
 
     > [!NOTE]
     > Setup. bat toplu iş dosyası bir Visual Studio 2012 komut Isteminden çalıştırılmak üzere tasarlanmıştır. Visual Studio 2012 komut Isteminde ayarlanan PATH ortam değişkeni Setup. bat betiği için gereken yürütülebilir dosyaları içeren dizine işaret eder. Örnek ile işiniz bittiğinde Cleanup. bat dosyasını çalıştırarak sertifikaları kaldırtığınızdan emin olun. Diğer güvenlik örnekleri aynı sertifikaları kullanır.  
   
-3. \Service\bin dizininden Service. exe ' yi başlatın. Hizmetin hazırlandığını belirttiğinden emin olun ve hizmeti sonlandırmak için > Enter tuşuna basarak \<bir istem görüntüler.  
+3. \Service\bin dizininden Service. exe ' yi başlatın. Hizmetin hazırlandığını belirttiğinden emin olun ve hizmeti sonlandırmak için > \<ENTER tuşuna basarak bir istem görüntüler.  
   
 4. Oluşturmak ve çalıştırmak için, \client\bin dizininden veya Visual Studio 'daki F5 tuşuna basarak Client. exe ' yi başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
@@ -130,7 +130,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 ### <a name="to-run-the-sample-across-computers"></a>Örneği bilgisayarlar arasında çalıştırmak için  
   
-1. Örneğin istemci bölümünü oluşturmadan önce, `CallServiceCustomClientIdentity` yöntemin Client.cs dosyasındaki hizmetin uç nokta adresinin değerini değiştirdiğinizden emin olun. Ardından örnek oluşturun.  
+1. Örneğin istemci bölümünü oluşturmadan önce, `CallServiceCustomClientIdentity` yöntemindeki Client.cs dosyasında hizmetin uç nokta adresinin değerini değiştirdiğinizden emin olun. Ardından örnek oluşturun.  
   
 2. Hizmet bilgisayarında bir dizin oluşturun.  
   
@@ -140,7 +140,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 5. İstemci programı dosyalarını istemci bilgisayardaki istemci dizinine kopyalayın. Ayrıca Setup. bat, Cleanup. bat ve ImportServiceCert. bat dosyalarını istemciye kopyalayın.  
   
-6. Hizmette, yönetici ayrıcalıklarıyla açılan `setup.bat service` bir Visual Studio için geliştirici komut istemi çalıştırın. Bağımsız`service` değişkeniyle birlikte çalıştırmak `setup.bat` , bilgisayarın tam etki alanı adına sahip bir hizmet sertifikası oluşturur ve hizmet sertifikasını Service. cer adlı bir dosyaya aktarır.  
+6. Hizmette, yönetici ayrıcalıklarıyla açılmış bir Visual Studio Geliştirici Komut İstemi `setup.bat service` çalıştırın. `setup.bat` `service` bağımsız değişkeniyle çalıştırmak, bilgisayarın tam etki alanı adına sahip bir hizmet sertifikası oluşturur ve hizmet sertifikasını Service. cer adlı bir dosyaya aktarır.  
   
 7. Service. cer dosyasını hizmet dizininden istemci bilgisayarındaki istemci dizinine kopyalayın.  
   
@@ -157,4 +157,4 @@ class CustomIdentityVerifier : IdentityVerifier
 - Örneği çalıştırmayı bitirdikten sonra Samples klasöründe Cleanup. bat dosyasını çalıştırın.  
   
     > [!NOTE]
-    > Bu betik, bilgisayarlar arasında bu örneği çalıştırırken bir istemcideki hizmet sertifikalarını kaldırmaz. Bilgisayarlar arasında sertifika kullanan Windows Communication Foundation (WCF) örneklerini çalıştırırsanız, CurrentUser-Trustedkişiler deposuna yüklenmiş olan hizmet sertifikalarını temizlediğinizden emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+    > Bu betik, bilgisayarlar arasında bu örneği çalıştırırken bir istemcideki hizmet sertifikalarını kaldırmaz. Bilgisayarlar arasında sertifika kullanan Windows Communication Foundation (WCF) örneklerini çalıştırırsanız, CurrentUser-Trustedkişiler deposuna yüklenmiş olan hizmet sertifikalarını temizlediğinizden emin olun. Bunu yapmak için şu komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

@@ -2,12 +2,12 @@
 title: Federasyon Örneği
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 271790e08476533fc1d83e22c5a0daf2f1eaa42a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c143ad9315df94a2d836a2c2c742ffa9a7728511
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716934"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837889"
 ---
 # <a name="federation-sample"></a>Federasyon Örneği
 Bu örnekte, Federasyon güvenliği gösterilmektedir.  
@@ -89,7 +89,7 @@ Bu örnekte, Federasyon güvenliği gösterilmektedir.
 1. SDK komut penceresini açın. Örnek yolda Setup. bat dosyasını çalıştırın. Bu, örnek için gereken sanal dizinleri oluşturur ve uygun izinlere sahip gerekli sertifikaları kurar.  
   
     > [!NOTE]
-    > Setup. bat toplu iş dosyası bir Windows SDK komut Isteminden çalıştırılmak üzere tasarlanmıştır. MSSDK ortam değişkeninin, SDK 'nın yüklü olduğu dizine işaret olmasını gerektirir. Bu ortam değişkeni bir Windows SDK komut Istemi içinde otomatik olarak ayarlanır. [!INCLUDE[wv](../../../../includes/wv-md.md)], kurulum 'un IIS Yönetici betikleri kullandığından, IIS 6,0 yönetim uyumluluğuna emin olmanız gerekir. [!INCLUDE[wv](../../../../includes/wv-md.md)] kurulum betiğini çalıştırmak için yönetici ayrıcalıkları gerekir.  
+    > Setup. bat toplu iş dosyası bir Windows SDK komut Isteminden çalıştırılmak üzere tasarlanmıştır. MSSDK ortam değişkeninin, SDK 'nın yüklü olduğu dizine işaret olmasını gerektirir. Bu ortam değişkeni bir Windows SDK komut Istemi içinde otomatik olarak ayarlanır. Windows Vista 'da, kurulum IIS Yönetici betikleri kullandığından, IIS 6,0 yönetim uyumluluğuna emin olmanız gerekir. Windows Vista 'da kurulum betiğini çalıştırmak için yönetici ayrıcalıkları gerekir.  
   
 2. Visual Studio 'da FederationSample. sln ' yi açın ve **derleme** menüsünden **çözüm oluştur** ' u seçin. Bu, ortak proje dosyalarını, kitaplığı hizmeti, kitaplığı STS, HomeRealm STS 'yi oluşturur ve bunları IIS 'de dağıtır. Bu Ayrıca, kitaplığı istemci uygulamasını oluşturur ve Boosample\bookstoreclient\bin\debug klasörüne yürütülebilir BookStoreClient. exe ' yi koyar.  
   

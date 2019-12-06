@@ -2,107 +2,107 @@
 title: Hizmet Uç Noktaları ve Kuyruk İşleme
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: b31c000fa15b2651a965deff0b4deecf681b992b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6bdd3b0966f85ff456e0e2ed0b6da773046201dc
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586174"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837993"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Hizmet Uç Noktaları ve Kuyruk İşleme
-Bu konuda, istemciler sıralarından okuyun hizmetleri nasıl karşılayabileceği ve hizmet uç noktaları sıralara nasıl eşleştiği anlatılmaktadır. Aşağıdaki çizimde, bir anımsatıcı Klasik Windows Communication Foundation (WCF) uygulama dağıtımı kuyruğa gösterir.  
+Bu konuda, istemcilerin kuyruklardan okuyan hizmetleri nasıl ele aldığı ve hizmet uç noktalarının kuyrukların nasıl eşlenme açıklanmaktadır. Bir anımsatıcı olarak, aşağıdaki çizimde, klasik Windows Communication Foundation (WCF) sıraya alınmış uygulama dağıtımı gösterilmektedir.  
   
- ![Uygulama diyagramı kuyruğa](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "dağıtılmış-kuyruk-Şekil")  
+ ![Kuyruğa alınmış uygulama diyagramı](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Dağıtılmış kuyruk-şekil")  
   
- İstemci hizmete ileti göndermek istemci, iletinin hedef sıraya yöneliktir. Hizmet iletileri kuyruktan okunmak hedef kuyruğa dinleme adresini ayarlar. Message Queuing (MSMQ) kuyruk adları URI tabanlı değildir; ancak WCF'de adresleme Tekdüzen Kaynak Tanımlayıcısı URI tabanlıdır. Bu nedenle, MSMQ WCF kullanarak oluşturulan kuyruklar adres anlamak için önemlidir.  
+ İstemcinin iletiyi hizmete gönderebilmesi için istemci, hedef sıraya iletiyi adresleyen. Hizmetin kuyruktaki iletileri okuyabilmesi için dinleme adresini hedef sıraya ayarlar. WCF 'de adresleme Tekdüzen Kaynak tanımlayıcısı (URI) tabanlı, Message Queuing (MSMQ) sıra adları URI tabanlı değil. Bu nedenle, WCF kullanarak MSMQ 'da oluşturulan sıraların nasıl ele alınacağını anlamak önemlidir.  
   
 ## <a name="msmq-addressing"></a>MSMQ adresleme  
- MSMQ yollarını ve biçim adlarının bir sırayı tanımlamak için kullanır. Yolları, konak adı belirtin ve `QueueName`. İsteğe bağlı olarak olabilir bir `Private$` ana bilgisayar adı arasında ve `QueueName` Active Directory dizin hizmetinde yayınlanmamış özel bir sıra belirtmek için.  
+ MSMQ, bir kuyruğu tanımlamak için yollar ve biçim adları kullanır. Yollar bir ana bilgisayar adı ve bir `QueueName`belirtir. İsteğe bağlı olarak, Active Directory dizin hizmetinde yayımlanmamış bir özel sırayı göstermek için ana bilgisayar adı ve `QueueName` arasında bir `Private$` olabilir.  
   
- Yol adları "Yönlendirme ve Kuyruk yöneticisi Aktarımı Protokolü dahil olmak üzere adresini, ek yönlerini belirlemek için FormatNames" için eşlenir. Sıra yöneticisini iki aktarım protokollerini destekler: yerel MSMQ protokol ve SOAP Güvenilir Mesajlaşma Protokolü (SRMP).  
+ Yol adları, Yönlendirme ve kuyruk yöneticisi Aktarım Protokolü dahil olmak üzere adresin ek yönlerini belirleyebilmek için "FormatNames" ile eşleştirilir. Kuyruk Yöneticisi iki aktarım protokolünü destekler: yerel MSMQ Protokolü ve SOAP Güvenilir Mesajlaşma Protokolü (SRMP).  
   
- MSMQ yolu ve biçim adları hakkında daha fazla bilgi için bkz. [hakkında Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94837).  
+ MSMQ yolu ve biçim adları hakkında daha fazla bilgi için bkz. [about Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94837).  
   
-## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding ve adresleme hizmeti  
- Bir hizmete bir ileti adresleme, URI düzeni iletişim için kullanılan aktarım göre seçilir. Wcf'de her Aktarım, benzersiz bir düzene sahiptir. Düzeni iletişim için kullanılan aktarım doğasını yansıtmalıdır. Örneğin, net.tcp net.pipe, HTTP ve benzeri.  
+## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding ve hizmet adresleme  
+ Bir hizmete bir ileti adreslenirken, URI 'deki şema, iletişim için kullanılan ulaşım 'e göre seçilir. WCF 'deki her bir taşımanın benzersiz bir şeması vardır. Düzenin, iletişim için kullanılan taşımanın yapısını yansıtması gerekir. Örneğin, net. TCP, net. pipe, HTTP ve benzeri.  
   
- MSMQ taşıma WCF kullanıma sunan içinde net.msmq şeması kuyruğa alındı. Net.msmq Şeması kullanılarak gönderilen iletiler kullanılarak gönderilen `NetMsmqBinding` MSMQ sıraya alınan aktarım kanalı üzerinden.  
+ WCF 'de MSMQ sıraya alınan aktarım bir net. MSMQ şeması gösterir. Net. MSMQ şeması kullanılarak ele alınan herhangi bir ileti, MSMQ sıraya alınmış aktarım kanalı üzerinden `NetMsmqBinding` kullanılarak gönderilir.  
   
- Şu desen tabanlı WCF kuyrukta adresleme:  
+ WCF 'deki bir sıranın adreslenmesi aşağıdaki düzene dayanır:  
   
- NET.MSMQ: / / \< *ana bilgisayar adı*> / [özel /] \< *kuyruk adı*>  
+ net. MSMQ://\<*ana bilgisayar-adı*>/[private/] \<*kuyruk-adı*>  
   
  burada:  
   
-- \<*ana bilgisayar adı*> hedef sıra barındıran bilgisayarın adıdır.  
+- \<*konak adı*>, hedef kuyruğu barındıran makinenin adıdır.  
   
-- [özel] isteğe bağlıdır. Özel bir kuyruk bir hedef kuyruk işleme olduğunda kullanılır. Bir genel sıra gidermek için özel belirtmemelidir. MSMQ yolları, "$" hiçbir WCF URI biçiminde dikkat edin.  
+- [private] isteğe bağlıdır. Özel bir kuyruk olan hedef kuyruğu adreslemek için kullanılır. Genel bir kuyruğu ele almak için özel ' i belirtmemelidir. MSMQ yollarından farklı olarak, WCF URI formunda "$" olmadığını unutmayın.  
   
-- \<*Kuyruk adı*> Kuyruğun adı. Kuyruk adı için bir alt kuyruk de başvurabilir. Thus, \<*queue-name*> = \<*name-of-queue*>[;*sub-queue-name*].  
+- \<*kuyruğu-adı*> kuyruğun adıdır. Sıra adı ayrıca bir alt sıraya de başvurabilir. Bu nedenle \<*kuyruk adı*> = \<*sıra adı*> [; *alt kuyruk-adı*].  
   
- Örnek1: Özel bir sıra bilgisayar abc atadatum.com üzerinde barındırılan PurchaseOrders adreslemek için URI net.msmq://abc.adatum.com/private/PurchaseOrders şeklinde olacaktır.  
+ Example1: PurchaseOrders, abc atadatum.com bilgisayarında barındırılan özel bir sıra Için adreslenebilir, URI net. MSMQ://abc.adatum.com/private/PurchaseOrders.  
   
- Örnek2: Bir genel sıra bilgisayar def atadatum.com üzerinde barındırılan AccountsPayable ele almak için URI net.msmq://def.adatum.com/AccountsPayable şeklinde olacaktır.  
+ Example2: Computer def atadatum.com üzerinde barındırılan ortak bir sıra Accountspayrılabilir öğesine adreslenebilir, URI net. MSMQ://def.adatum.com/AccountsPayable.  
   
- Kuyruk adresi dinleme URI olarak gelen iletileri okumak için dinleyici tarafından kullanılır. Diğer bir deyişle, kuyruk adresi için dinleme bağlantı noktası TCP yuvası eşdeğerdir.  
+ Kuyruk adresi, iletileri okumak için dinleyici tarafından dinleme URI 'SI olarak kullanılır. Diğer bir deyişle, kuyruk adresi TCP yuvasının dinleme bağlantı noktasına eşdeğerdir.  
   
- Kuyruktan okuyan bir uç nokta ServiceHost açılırken daha önce belirtilen aynı düzeni kullanarak sıraya adresini belirtmeniz gerekir. Örnekler için bkz [ağ MSMQ bağlama](../../../../docs/framework/wcf/samples/net-msmq-binding.md).  
+ Sıradan okuyan bir uç nokta, ServiceHost açılırken daha önce belirtilen düzeni kullanarak sıranın adresini belirtmelidir. Örnekler için bkz. [net MSMQ bağlama](../../../../docs/framework/wcf/samples/net-msmq-binding.md).  
   
-### <a name="multiple-contracts-in-a-queue"></a>Kuyruktaki birden fazla anlaşma  
- Sıradaki iletilerin farklı sözleşmeler uygulayabilirsiniz. Bu durumda, aşağıdakilerden birini başarıyla okumak ve tüm iletileri işlemek için doğru olduğunu gereklidir:  
+### <a name="multiple-contracts-in-a-queue"></a>Kuyruktaki birden çok sözleşme  
+ Kuyruktaki mesajlar farklı sözleşmeler uygulayabilir. Bu durumda, tüm iletileri başarıyla okumak ve işlemek için aşağıdakilerden birinin doğru olması önemlidir:  
   
-- Tüm anlaşmalar uygulayan bir hizmette bir uç noktasını belirtin. Bu önerilen bir yaklaşımdır.  
+- Tüm sözleşmeleri uygulayan bir hizmet için uç nokta belirtin. Bu, önerilen yaklaşımdır.  
   
-- Farklı sözleşmeler ile birden fazla uç nokta belirtin, ancak tüm uç noktalar aynı kullandığınızdan emin olun `NetMsmqBinding` nesne. ServiceModel dispatching mantık sonunda farklı uç noktalar sözleşmeye dayalı iletileri XML'deki bağlantıları çoğaltır gönderisi için taşıma kanalı iletileri okuyan bir ileti pompası kullanır. Bir ileti pompası, bir dinleme URI/bağlama çifti oluşturulur. Kuyruk adresi dinleme URI olarak sıraya alınan dinleyici tarafından kullanılır. Aynı bağlama nesnesi bir tek ileti pompası ileti okumak ve ilgili Uç noktalara çoğullamasını için kullanılmasını sağlar, tüm uç noktaları kullanmak zorunda sözleşme temel.  
+- Farklı sözleşmelerle birden fazla uç nokta belirtin, ancak tüm uç noktaların aynı `NetMsmqBinding` nesnesini kullandığından emin olun. ServiceModel dağıtım mantığı, gönderimi için taşıma kanalının dışına iletileri okuyan bir ileti göndericisi kullanır ve bu da, sözleşmeye bağlı olarak iletileri farklı uç noktalara göre serbest parçalar. Dinleme URI 'SI/bağlama çifti için bir ileti göndericisi oluşturulur. Sıra adresi, kuyruğa alınan dinleyici tarafından dinleme URI 'SI olarak kullanılır. Tüm uç noktaların aynı bağlama nesnesini kullanmasını sağlamak, iletiyi okumak için tek bir ileti göndericisinin kullanılmasını ve sözleşmeye göre ilgili uç noktalara eşit bir şekilde sahip olmasını sağlar.  
   
-### <a name="srmp-messaging"></a>SRMP Mesajlaşma  
- Daha önce bahsedildiği gibi SRMP Protokolü kuyruk sırası aktarımları için kullanabilirsiniz. Bir HTTP aktarımı iletileri iletim sırası hedef sıra arasındaki ilettiğinde yaygın olarak kullanılır.  
+### <a name="srmp-messaging"></a>SRMP mesajlaşma  
+ Daha önce anlatıldığı gibi, kuyruk-kuyruk aktarımları için SRMP protokolünü kullanabilirsiniz. Bu genellikle bir HTTP taşıması Iletim kuyruğu ve hedef sıra arasında ileti ilettiğinden kullanılır.  
   
- SRMP aktarım protokolünü kullanmak için daha önce belirtildiği gibi adres net.msmq URI şeması kullanarak ileti ve seçtiğiniz SRMP veya güvenli SRMP içinde belirtin `QueueTransferProtocol` özelliği `NetMsmqBinding`.  
+ SRMP aktarma protokolünü kullanmak için, daha önce belirtildiği gibi net. MSMQ URI şemasını kullanarak iletileri adresedin ve `NetMsmqBinding``QueueTransferProtocol` özelliğinde SRMP veya güvenli SRMP seçimini belirtin.  
   
- Belirtme `QueueTransferProtocol` yalnızca gönderme özelliği özelliğidir. Bu kuyruk hangi tür Aktarım Protokolü kullanmak için istemci tarafından göstergesidir.  
+ `QueueTransferProtocol` özelliğinin belirtilmesi, salt gönder özelliğidir. Bu, istemci tarafından kullanılacak sıra Aktarım protokolünün türünü belirten bir göstergesidir.  
   
-### <a name="using-active-directory"></a>Active Directory kullanarak  
- MSMQ Active Directory Tümleştirme desteği ile birlikte gelir. MSMQ Active Directory Tümleştirmesi ile yüklendiğinde makine bir Windows etki alanının parçası olmalıdır. Active Directory bulma için kuyruklar yayımlamak için kullanılır; Bu tür sıralar adlı *genel sıralar*. Bir kuyruk işleme, kuyruk, Active Directory kullanarak çözülebilir. Bu, etki alanı adı sistemi (DNS) bir ağ adıyla IP adresini çözümlemek için nasıl kullanıldığı için benzer. `UseActiveDirectory` Özelliğinde `NetMsmqBinding` sıranın URI çözmek için kuyruğa alınmış kanalı Active Directory kullanan olup olmadığını gösteren bir Boole değeri. Varsayılan olarak ayarlanmış `false`. Varsa `UseActiveDirectory` özelliği `true`, kuyruğa alınmış kanal URI net.msmq:// biçim adına dönüştürmek için Active Directory kullanıyorsa.  
+### <a name="using-active-directory"></a>Active Directory kullanma  
+ MSMQ, Active Directory tümleştirme desteğiyle birlikte gelir. MSMQ Active Directory tümleştirme ile yüklendiğinde, makinenin bir Windows etki alanının parçası olması gerekir. Active Directory, bulma kuyruklarını yayımlamak için kullanılır; Bu sıralara *genel kuyruklar*denir. Bir kuyruğun adreslenmesi sırasında, kuyruk Active Directory kullanılarak çözülebilir. Bu, bir ağ adının IP adresini çözümlemek için etki alanı adı sistemi 'nin (DNS) kullanılmasına benzer. `NetMsmqBinding` `UseActiveDirectory` özelliği, sıraya alınmış kanalın sıra URI 'sini çözümlemek için Active Directory kullanması gerekip gerekmediğini belirten bir Boole değeri. Varsayılan olarak, `false`olarak ayarlanır. `UseActiveDirectory` özelliği `true`olarak ayarlanırsa, sıraya alınan kanal net. MSMQ://URI 'sini biçim adına dönüştürmek için Active Directory kullanır.  
   
- `UseActiveDirectory` İletileri gönderirken kuyruğun adresini çözümlemek için kullanıldığından, ileti gönderirken yalnızca istemci için anlamlı özelliği.  
+ `UseActiveDirectory` özelliği, ileti gönderilirken sıranın adresini çözümlemek için kullanıldığından, yalnızca iletiyi gönderen istemci için anlamlıdır.  
   
-### <a name="mapping-netmsmq-uri-to-message-queuing-format-names"></a>Message Queuing biçim adlarından net.msmq URI eşleme  
- Sıraya alınan kanal MSMQ biçim adlarından kanala sağlanan net.msmq URI adı eşleme işler. Aşağıdaki tabloda, aralarında eşlemek için kullanılan kuralları özetlenmektedir.  
+### <a name="mapping-netmsmq-uri-to-message-queuing-format-names"></a>Net. MSMQ URI 'sini Message Queuing biçim adlarına eşleme  
+ Sıraya alınan kanal, belirtilen net. MSMQ URI adını kanala, MSMQ biçim adlarına eşlemeyi yönetir. Aşağıdaki tabloda aralarında eşleme yapmak için kullanılan kurallar özetlenmektedir.  
   
-|WCF URI tabanlı sıra adresi|Active Directory özelliğini kullanın|Kuyruk Aktarım Protokolü özelliği|Sonuçta elde edilen MSMQ biçim adları|  
+|WCF URI tabanlı sıra adresi|Active Directory özelliğini kullan|Sıra Aktarım Protokolü özelliği|Sonuçta elde edilen MSMQ biçim adları|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|Net.msmq://\<machine-name>/private/abc|False (varsayılan)|Yerel (varsayılan)|DOĞRUDAN OS:machine =-name\private$ \abc|  
-|Net.msmq://\<machine-name>/private/abc|False|SRMP|DOĞRUDAN =http://machine/msmq/private$/ abc|  
-|Net.msmq://\<machine-name>/private/abc|Doğru|Yerel|Genel GUID bazı (kuyruk GUID) =|  
+|Net. MSMQ://\<makine-adı >/Private/ABC|False (varsayılan)|Yerel (varsayılan)|DIRECT = OS: Machine-name\private $ \abc|  
+|Net. MSMQ://\<makine-adı >/Private/ABC|False|SRMP|DIRECT =http://machine/msmq/private $/ABC|  
+|Net. MSMQ://\<makine-adı >/Private/ABC|Doğru|Yerel|PUBLIC = bazı-GUID (kuyruğun GUID 'SI)|  
   
-### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Eski ileti sırası veya Poison ileti kuyruktan iletileri okuma  
- Hedef sıra sırasına olan poison ileti kuyruktan iletileri okumak için açık `ServiceHost` subqueue adresi.  
+### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Iletileri atılacak ileti sırasından veya Poison-Message sırasından okuma  
+ Hedef sıranın alt sırası olan bir zarar iletisi kuyruğundan iletileri okumak için, alt sıranın adresine sahip `ServiceHost` açın.  
   
- Örnek: Yerel makineden PurchaseOrders özel sıranın poison ileti kuyruktan okuyan bir hizmet net.msmq://localhost/private/PurchaseOrders;poison adresi.  
+ Örnek: yerel makineden PurchaseOrders özel sırasının zarar iletisi kuyruğundan okuyan bir hizmet net. MSMQ://localhost/private/PurchaseOrders; poison adresine sahip olur.  
   
- Bir sistem işlem eski ileti sırası iletileri okumak için URI biçiminde olmalıdır: net.msmq://localhost/system$; DeadXact.  
+ Sistem işlem dışı ileti sırasından iletileri okumak için URI şu biçimde olmalıdır: net. MSMQ://localhost/System $;D Eadxyasası.  
   
- Sistem işlem eski ileti kuyruktan iletileri okumak için URI biçiminde olmalıdır: net.msmq://localhost/system$; teslim edilemeyen iletiler.  
+ Bir sistem işlem dışı atılacak ileti sırasından iletileri okumak için URI şu biçimde olmalıdır: net. MSMQ://localhost/System $;D eadLetter.  
   
- Özel bir eski ileti sırası kullanırken, eski ileti sırası yerel bilgisayarda olması gerektiğini unutmayın. Bu nedenle, eski ileti sırası için URI forma sınırlıdır:  
+ Özel bir atılacak mektup sırası kullanırken, atılacak ileti sırasının yerel bilgisayarda bulunması gerektiğini unutmayın. Bu nedenle, atılacak ileti sırası için URI şu formla kısıtlıdır:  
   
- NET.MSMQ: //localhost/ [özel /] \< *özel-eski-harf-kuyruk-name*>.  
+ net. MSMQ://localhost/[private/] \<*özel-atılacak-harf kuyruğu-adı*>.  
   
- Bir WCF hizmeti, aldığı tüm iletileri dinleme yaptığı belirli kuyruğa ele alınan doğrular. İletinin hedef sıraya sıranın içinde bulunan eşleşmiyorsa, hizmet iletiyi işlemez. Bu eski ileti sırası herhangi bir ileti başka bir yerde teslim gerektiği içerdiği Hizmetleri atılacak için dinleme çözülmesi gereken bir sorundur. Eski ileti sırası veya zararlı bir kuyruktan iletileri okumak için bir `ServiceBehavior` ile <xref:System.ServiceModel.AddressFilterMode.Any> parametre kullanılmalıdır. Bir örnek için bkz. [teslim edilemeyen](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
+ Bir WCF hizmeti, aldığı tüm iletilerin dinlediği belirli bir kuyruğa geldiğini doğrular. İletinin hedef kuyruğu içinde bulunduğu kuyrukla eşleşmiyorsa, hizmet iletiyi işlemez. Bu, atılacak ileti sırasındaki herhangi bir iletinin başka bir yere teslim edileceği için, atılacak bir sırayı dinleyen hizmetlerin adreslenmesi gereken bir sorundur. İletileri atılacak ileti sırasından veya bir zarar sırasından okumak için <xref:System.ServiceModel.AddressFilterMode.Any> parametresine sahip bir `ServiceBehavior` kullanılması gerekir. Bir örnek için bkz. [atılacak Ileti sıraları](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
   
-## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding ve adresleme hizmeti  
- `MsmqIntegrationBinding` Geleneksel MSMQ uygulamaları ile iletişim için kullanılır. Varolan bir MSMQ uygulama ile birlikte çalışma kolaylaştırmak için yalnızca biçim adı adresleme WCF destekler. Bu nedenle, bu bağlama kullanılarak gönderilen iletiler için URI şeması uyması gerekir:  
+## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding ve hizmet adresleme  
+ `MsmqIntegrationBinding` geleneksel MSMQ uygulamalarıyla iletişim için kullanılır. Mevcut bir MSMQ uygulamasıyla birlikte çalışabilirliği kolaylaştırmak için, WCF yalnızca biçim adı adreslemeyi destekler. Bu nedenle, bu bağlama kullanılarak gönderilen iletilerin URI şemasına uygun olması gerekir:  
   
- MSMQ.FormatName:\<*MSMQ biçim adı*>>  
+ MSMQ. FormatName:\<*MSMQ-biçim-adı*>>  
   
- MSMQ tarafından belirtilen biçim MSMQ biçim adı olduğu [hakkında Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94837).  
+ MSMQ biçimindeki adı, hakkında MSMQ tarafından belirtilen biçimde belirtilir [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94837).  
   
- Yalnızca ortak ve özel biçim adlarının yanı sıra doğrudan biçim adlarından kullanabileceğinizi unutmayın (Active Directory ile tümleştirme gerektirir) kullanarak bir kuyruk iletileri alırken `MsmqIntegrationBinding`. Ancak, doğrudan biçim adlarından kullanmanız önerilir. Örneğin, [!INCLUDE[wv](../../../../includes/wv-md.md)], herhangi bir biçim adını kullanarak bir hataya neden olur çünkü sistem ile doğrudan biçim adlarından yalnızca açılabilir bir alt kuyruk açmayı dener.  
+ `MsmqIntegrationBinding`kullanarak bir kuyruktan ileti alırken yalnızca doğrudan biçim adlarını ve ortak ve özel biçim adlarını (Active Directory tümleştirme gerektirir) kullanabileceğinizi unutmayın. Ancak, doğrudan biçim adları kullanmanız önerilir. Örneğin, Windows Vista 'da, başka bir biçim adı kullanılması, sistem bir alt sıra açmaya çalıştığı ve yalnızca doğrudan biçim adlarıyla açılabilen bir hataya neden olur.  
   
- SRMP kullanarak belirtirken `MsmqIntegrationBinding`, Internet Information Services (IIS) gönderme ile yardımcı olmak için doğrudan biçim adını /msmq/ eklemek için bir gereksinimi yoktur. Örneğin: Abc SRMP kullanarak protokolü, yerine doğrudan bir kuyruk işleme olduğunda =http://adatum.com/msmq/private$/ abc kullanmanız gerektiğini doğrudan =http://adatum.com/private$/ abc.  
+ `MsmqIntegrationBinding`kullanarak SRMP 'nin adreslenmesi sırasında, doğrudan biçim Internet Information Services adında/MSMQ/eklemek için bir gereksinim yoktur. Örneğin: doğrudan =http://adatum.com/msmq/private $/ABC yerine SRMP protokolünü kullanarak ABC kuyruğunu adreslendirirken doğrudan =http://adatum.com/private $/abckullanmanız gerekir.  
   
- Net.msmq:// adresleme kullanamayacağınızı unutmayın `MsmqIntegrationBinding`. Çünkü `MsmqIntegrationBinding` serbest biçimli MSMQ adı biçimi adresleme, destekleyen MSMQ çok noktaya yayın ve dağıtım listesi özellikleri kullanmak için bu bağlamayı kullanan bir WCF hizmeti kullanabilirsiniz. Bir özel durum belirten `CustomDeadLetterQueue` kullanırken `MsmqIntegrationBinding`. Bunun nasıl olduğu için benzer form net.msmq:// olmalıdır kullanarak belirtilen `NetMsmqBinding`.  
+ `MsmqIntegrationBinding`ile net. MSMQ://adreslemeyi kullanmayacağınızı unutmayın. `MsmqIntegrationBinding`, serbest biçimli MSMQ biçimi adı adresini desteklediğinden, MSMQ 'daki çok noktaya yayın ve dağıtım listesi özelliklerini kullanmak için bu bağlamayı kullanan bir WCF hizmeti kullanabilirsiniz. Bir özel durum, `MsmqIntegrationBinding`kullanılırken `CustomDeadLetterQueue` belirtmektir. Bu, `NetMsmqBinding`kullanarak nasıl belirtime benzer şekilde net. MSMQ://biçiminde olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 634e34eceeb3d3b8828a6d5ed85b6194bcf8586c
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: b914d5d9f578c5ce13dfc1c520f1b26f8af1fa76
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961146"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837928"
 ---
 # <a name="hosting-services"></a>Barındırma hizmetleri
 
@@ -35,14 +35,14 @@ Bu barındırma seçenekleri bir konsol uygulamasının içinde, Internet Inform
  IIS tarafından barındırılan hizmetlerin yalnızca HTTP taşımasını kullanabileceğini unutmayın. IIS 5,1 ' de uygulanması [!INCLUDE[wxp](../../../includes/wxp-md.md)]bazı sınırlamalar sunmuştur. [!INCLUDE[wxp](../../../includes/wxp-md.md)] üzerinde IIS 5,1 tarafından bir WCF hizmeti için sunulan ileti tabanlı etkinleştirme, aynı bilgisayardaki diğer şirket içinde barındırılan WCF hizmetini, iletişim kurmak için 80 bağlantı noktasını kullanarak engeller. WCF Hizmetleri, [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]üzerinde IIS 6,0 tarafından barındırılan diğer uygulamalarla aynı AppDomain/uygulama havuzunda/çalışan Işleminde çalıştırılabilir. Ancak, WCF ve IIS 6,0 her ikisi de çekirdek modu HTTP yığınını (HTTP. sys) kullandığından, IIS 6,0, bağlantı noktası 80 ' nı aynı makinede çalışan diğer şirket içinde barındırılan WCF hizmetleriyle paylaşabilir ve IIS 5,1 ' den farklı olabilir.
 
 ### <a name="windows-process-activation-service-was"></a>Windows Işlem etkinleştirme hizmeti (WAS)
- Windows Işlem etkinleştirme hizmeti (WAS), [!INCLUDE[wv](../../../includes/wv-md.md)]da kullanılabilir [!INCLUDE[lserver](../../../includes/lserver-md.md)] için yeni işlem etkinleştirme mekanizmasıdır. Tanıdık IIS 6,0 işlem modelini (uygulama havuzları ve ileti tabanlı işlem etkinleştirme) ve barındırma özelliklerini (hızlı hata koruması, sistem durumu izleme ve geri dönüşüm gibi) korur, ancak etkinleştirme işleminden HTTP bağımlılığını kaldırır mimarisini. IIS 7,0, HTTP üzerinden ileti tabanlı etkinleştirme gerçekleştirmeyi başarmıştı. Ek WCF bileşenleri Ayrıca, WCF tarafından desteklenen TCP, MSMQ ve adlandırılmış kanallar gibi diğer protokoller üzerinde ileti tabanlı etkinleştirme sağlamaktır. Bu, iletişim protokolleri kullanan uygulamaların işlem geri dönüştürme, hızlı hata koruması ve yalnızca HTTP tabanlı uygulamalarda kullanılabilen ortak yapılandırma sistemi gibi IIS özelliklerini kullanmasına olanak sağlar.
+ Windows Işlem etkinleştirme hizmeti (WAS), Windows Vista 'da da bulunan [!INCLUDE[lserver](../../../includes/lserver-md.md)] için yeni işlem etkinleştirme mekanizmasıdır. Tanıdık IIS 6,0 işlem modelini (uygulama havuzları ve ileti tabanlı işlem etkinleştirme) ve barındırma özelliklerini (hızlı hata koruması, sistem durumu izleme ve geri dönüşüm gibi) korur, ancak etkinleştirme işleminden HTTP bağımlılığını kaldırır mimarisini. IIS 7,0, HTTP üzerinden ileti tabanlı etkinleştirme gerçekleştirmeyi başarmıştı. Ek WCF bileşenleri Ayrıca, WCF tarafından desteklenen TCP, MSMQ ve adlandırılmış kanallar gibi diğer protokoller üzerinde ileti tabanlı etkinleştirme sağlamaktır. Bu, iletişim protokolleri kullanan uygulamaların işlem geri dönüştürme, hızlı hata koruması ve yalnızca HTTP tabanlı uygulamalarda kullanılabilen ortak yapılandırma sistemi gibi IIS özelliklerini kullanmasına olanak sağlar.
 
  Bu barındırma seçeneği, doğru şekilde yapılandırılmasını gerektirir, ancak uygulamanın bir parçası olarak herhangi bir barındırma kodu yazmanızı gerektirmez. WAS barındırmanın nasıl yapılandırılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: BIR WCF hizmetini BARıNDıRMA was](./feature-details/how-to-host-a-wcf-service-in-was.md).
 
 ## <a name="choose-a-hosting-environment"></a>Barındırma ortamı seçin
  Aşağıdaki tabloda, barındırma seçeneklerinin her biriyle ilişkili bazı önemli avantajlar ve senaryolar özetlenmektedir.
 
-|Barındırma ortamı|Yaygın senaryolar|Önemli avantajlar ve sınırlamalar|
+|Barındırma ortamı|Yaygın Senaryolar|Önemli avantajlar ve sınırlamalar|
 |-------------------------|----------------------|----------------------------------|
 |Yönetilen uygulama ("kendiliğinden konak")|-Geliştirme sırasında kullanılan konsol uygulamaları.<br />-Hizmetlere erişen zengin WinForm ve WPF istemci uygulamaları.|Esnek.<br />-Kolay dağıtım.<br />-Hizmetler için kurumsal bir çözüm değildir.|
 |Windows Hizmetleri (eski adıyla NT Hizmetleri olarak biliniyordu)|-IIS dışında barındırılan uzun süredir çalışan bir WCF hizmeti.|-Hizmet işlem ömrü, ileti etkin değil işletim sistemi tarafından denetlenir.<br />-Tüm Windows sürümleri tarafından desteklenir.<br />-Güvenli ortam.|
@@ -54,13 +54,13 @@ Bu barındırma seçenekleri bir konsol uygulamasının içinde, Internet Inform
 
 |Barındırma ortamı|Platform kullanılabilirliği|Desteklenen aktarımlar|İşlem ve AppDomain geri dönüştürme|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|Yönetilen uygulamalar ("kendiliğinden konak")|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net. MSMQ|Hayır|
-|Windows Hizmetleri (eski adıyla NT Hizmetleri olarak biliniyordu)|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net. MSMQ|Hayır|
+|Yönetilen uygulamalar ("kendiliğinden konak")|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], Windows Vista,<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net.msmq|Hayır|
+|Windows Hizmetleri (eski adıyla NT Hizmetleri olarak biliniyordu)|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], Windows Vista,<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net.msmq|Hayır|
 |IıS 5,1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|Evet|
 |IIS 6.0|[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]|HTTP|Evet|
-|Windows Işlem etkinleştirme hizmeti (WAS)|[!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net. MSMQ|Evet|
+|Windows Işlem etkinleştirme hizmeti (WAS)|Windows Vista, [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net.msmq|Evet|
 
- Güvenilir olmayan ana bilgisayar güvenlik güvenliği 'nden bir hizmet veya herhangi bir uzantıyı çalıştırmanın gerektiğini unutmayın. Ayrıca, kimliğe bürünme altında <xref:System.ServiceModel.ServiceHost> ' ı açarken, uygulamanın kullanıcının oturumu kapatmadığından emin olun, örneğin kullanıcının <xref:System.Security.Principal.WindowsIdentity> ' i önbelleğe alın.
+ Güvenilir olmayan ana bilgisayar güvenlik güvenliği 'nden bir hizmet veya herhangi bir uzantıyı çalıştırmanın gerektiğini unutmayın. Ayrıca, kimliğe bürünme altında bir <xref:System.ServiceModel.ServiceHost> açılırken, bir uygulamanın kullanıcının oturumu kapatmadığından emin olun; Örneğin, Kullanıcı <xref:System.Security.Principal.WindowsIdentity> önbelleğe alın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

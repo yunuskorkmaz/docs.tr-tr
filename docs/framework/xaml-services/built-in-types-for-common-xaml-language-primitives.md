@@ -15,19 +15,19 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: 85fd0c04a40b9de64979e4da1459dbf8953a93bf
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c6af46fe2ea21d081e693ee83949651bd388a045
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053887"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837278"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>XAML Dili Ortak Temelleri İçin Yerleşik Türler
-XAML 2009, ortak dil çalışma zamanında (CLR) ve diğer programlama dillerinde sık kullanılan temel elemanlar olan çeşitli veri türleri için XAML dil düzeyinde destek sunar. XAML 2009, bu temel öğeler için destek `x:Object`ekler `x:Boolean`: `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`,,, `x:TimeSpan`, `x:Uri`, ve`x:Byte``x:Array`  
+XAML 2009, ortak dil çalışma zamanında (CLR) ve diğer programlama dillerinde sık kullanılan temel elemanlar olan çeşitli veri türleri için XAML dil düzeyinde destek sunar. XAML 2009, bu temel öğeler için destek ekler: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`ve `x:Array`  
   
 <a name="previous_techniques_for_language_primitives_in_xaml_markup"></a>   
-## <a name="previous-techniques-for-language-primitives-in-xaml-markup"></a>XAML biçimlendirmesinde dil temelleri için önceki teknikler  
- Önceki WPF sürümleri için XAML 'de, .NET Framework için bir CLR ilkel tanım sınıfı içeren derlemeyi ve ad alanını eşleyerek CLR dil temel temellerine başvurabilirsiniz. Bunların çoğu mscorlib derlemesinde ve <xref:System> ad alanında bulunur. Örneğin, kullanmak <xref:System.Int32>için aşağıdaki eşlemeyi bildirebilirsiniz (bundan sonra bir örnek kullanım ile gösterilir):  
+## <a name="previous-techniques-for-language-primitives-in-xaml-markup"></a>XAML Biçimlendirmede Dil Temelleri için Önceki Teknikler  
+ WPF önceki sürümleri için XAML içinde .NET Framework için CLR temel tanım sınıfı içeren bir derlemeyi ve ad boşluğunu eşleyerek CLR dil temellerine başvurabilirsiniz. Bunların çoğu mscorlib derlemesi ve <xref:System> ad alanı içindedir. Örneğin, <xref:System.Int32> kullanmak için aşağıdaki eşlemeyi (bundan sonra örnek kullanım ile gösterilen) bildirebilirsiniz:  
   
 ```xaml  
 <Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
@@ -40,97 +40,97 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ```  
   
 <a name="xaml_2009_language_primitives"></a>   
-## <a name="xaml-2009-language-primitives"></a>XAML 2009 dil temelleri  
- Kurala göre, XAML için dil temelleri ve diğer xaml dil öğeleri, `x:` ön ek dahil gösterilir. XAML dil öğeleri genellikle gerçek zamanlı biçimlendirmede kullanılır. Bu kural, WPF 'de XAML için kavramsal belgelerde ve ayrıca XAML belirtiminde izlenir.  
+## <a name="xaml-2009-language-primitives"></a>XAML 2009 Dil Temelleri  
+ Kural gereği, XAML dil temelleri ve diğer tüm XAML dil öğeleri `x:` öneki ile birlikte gösterilir. XAML dil öğeleri genellikle gerçek biçimlendirme içinde bu şekilde kullanılır. WPF'de XAML için kavramsal belgelerde ve ayrıca XAML belirtiminde bu kural izlenir.  
   
-### <a name="xobject"></a>x:Object  
- CLR yedeklemesi için, `x:Object` ilkel öğesine <xref:System.Object>karşılık gelir.  
+### <a name="xobject"></a>x:Nesne  
+ CLR desteklemesi için `x:Object` temel öğesi <xref:System.Object> öğesine karşılık gelir.  
   
- Bu ilkel genellikle uygulama biçimlendirmesinde kullanılmaz, ancak bir XAML tür sisteminde atananlıya bilirlik gibi bazı senaryolarda yararlı olabilir.  
+ Bu temel eleman uygulama biçimlendirme içinde genellikle kullanılmaz, ancak XAML türü bir sistemde atanabilirliği denetleme gibi bazı senaryolarda yararlı olabilir.  
   
-### <a name="xboolean"></a>x:Boolean  
- CLR yedeklemesi için, `x:Boolean` ilkel öğesine <xref:System.Boolean>karşılık gelir.  
+### <a name="xboolean"></a>x:Boole  
+ CLR desteklemesi için `x:Boolean` temel öğesi <xref:System.Boolean> öğesine karşılık gelir.  
   
- XAML, büyük/ `x:Boolean` küçük harfe duyarsız değerleri ayrıştırır. `x:Bool` Kabul edilen bir alternatif değildir. XAML dil belirtimi tanımı için bkz [ \[. ms-xaml\] sections 5.2.17 ve 5.4.11](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ XAML, değerleri `x:Boolean` için ayrıştırır; büyük/küçük harf duyarlıdır. `x:Bool` kabul edilen bir alternatif olmadığına dikkat edin. XAML dil belirtimi tanımı için bkz. [\[MS-XAML\] sections 5.2.17 ve 5.4.11](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xchar"></a>x:Char  
- CLR yedeklemesi için, `x:Char` ilkel öğesine <xref:System.Char>karşılık gelir.  
+ CLR desteklemesi için `x:Char` temel öğesi <xref:System.Char> öğesine karşılık gelir.  
   
- Dize ve karakter türlerinin, XML düzeyinde dosyanın genel kodlamasıyla etkileşimi vardır. XAML dil belirtimi tanımı için bkz [ \[. ms-xaml\] sections 5.2.7 ve 5.4.1](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Dize ve karakter türlerinin, XML düzeyinde dosyanın genel kodlamasıyla etkileşimi vardır. XAML dil belirtimi tanımı için bkz. [\[MS-XAML\] sections 5.2.7 ve 5.4.1](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
-### <a name="xstring"></a>x:String  
- CLR yedeklemesi için, `x:String` ilkel öğesine <xref:System.String>karşılık gelir.  
+### <a name="xstring"></a>x:Dize  
+ CLR desteklemesi için `x:String` temel öğesi <xref:System.String> öğesine karşılık gelir.  
   
- Dize ve karakter türlerinin, XML düzeyinde dosyanın genel kodlamasıyla etkileşimi vardır. XAML dil belirtimi tanımı için bkz [ \[. MS-\] xaml sections 5.2.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Dize ve karakter türlerinin, XML düzeyinde dosyanın genel kodlamasıyla etkileşimi vardır. XAML dil belirtimi tanımı için bkz. [\[MS-XAML\] sections 5.2.6](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
-### <a name="xdecimal"></a>x:Decimal  
- CLR yedeklemesi için, `x:Decimal` ilkel öğesine <xref:System.Decimal>karşılık gelir.  
+### <a name="xdecimal"></a>x:Ondalık  
+ CLR desteklemesi için `x:Decimal` temel öğesi <xref:System.Decimal> öğesine karşılık gelir.  
   
- XAML ayrıştırma 'nın kültür altında `en-US` kendiliğinden yapıldığını unutmayın. Kültür `en-US` altında, bir Decimal bileşenleri için doğru ayırıcı, geliştirme ortamının kültür ayarlarından ya da xaml`.`'nin çalışma zamanında yüklendiği son istemci hedefinde bağımsız olarak her zaman bir nokta () olur.  
+ XAML ayrıştırmanın `en-US` kültürü altında kendiliğinden yapıldığına dikkat edin. `en-US` kültürü altında, ondalık sayı bileşenleri için doğru ayırıcı her zaman, geliştirme ortamının veya XAML'nin çalışma zamanında yüklendiği asıl son istemcinin kültür ayarları göz ardı edilerek her zaman bir noktadır (`.`) .  
   
- XAML dil belirtimi tanımı için bkz [ \[. ms-xaml\] sections 5.2.14 ve 5.4.8](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ XAML dil belirtimi tanımı için bkz. [\[MS-XAML\] sections 5.2.14 ve 5.4.8](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
-### <a name="xsingle"></a>x:Single  
- CLR yedeklemesi için, `x:Single` ilkel öğesine <xref:System.Single>karşılık gelir.  
+### <a name="xsingle"></a>x:Tek  
+ CLR desteklemesi için `x:Single` temel öğesi <xref:System.Single> öğesine karşılık gelir.  
   
- Sayısal değerlere ek `x:Single` olarak, için de metin sözdizimi, ve `Infinity` `-Infinity` `NaN`belirteçlerine izin verir. Bu belirteçler büyük/küçük harfe duyarlı olarak değerlendirilir.  
+ Sayısal değerlere ek olarak `x:Single` için metin sözdizimi `Infinity`, `-Infinity` ve `NaN` belirteçlerine izin verir. Bu belirteçlerin büyük/küçük harfe duyarlı olduğu kabul edilir.  
   
- `x:Single`metin sözdiziminde ilk karakter veya `e` `E`ise, bilimsel gösterim biçimindeki değerleri destekleyebilir.  
+ `x:Single` metin sözdiziminin ilk karakteri `e` veya `E` ise değerleri bilimsel gösterim biçiminde destekleyebilir.  
   
- XAML dil belirtimi tanımı için bkz [ \[. ms-xaml\] sections 5.2.8 ve 5.4.2](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ XAML dil belirtimi tanımı için bkz. [\[MS-XAML\] sections 5.2.8 ve 5.4.2](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
-### <a name="xdouble"></a>x:Double  
- CLR yedeklemesi için, `x:Double` ilkel öğesine <xref:System.Double>karşılık gelir.  
+### <a name="xdouble"></a>x:Çift  
+ CLR desteklemesi için `x:Double` temel öğesi <xref:System.Double> öğesine karşılık gelir.  
   
- Sayısal değerlere ek olarak, `x:Double` için metin sözdizimi, ve `Infinity` `-Infinity` `NaN`belirteçlerine izin verir. Bu belirteçler büyük/küçük harfe duyarlı olarak değerlendirilir.  
+ Sayısal değerlere ek olarak `x:Double` için metin sözdizimi `Infinity`, `-Infinity` ve `NaN` belirteçlerine izin verir. Bu belirteçlerin büyük/küçük harfe duyarlı olduğu kabul edilir.  
   
- `x:Double`, bilimsel gösterim biçimindeki değerleri destekleyebilir. Üs kısmını tanıtmak `e` için `E` veya karakterini kullanın.  
+ `x:Double` değerleri bilimsel gösterim biçiminde destekleyebilir. Üs bölümü tanıtmak için `e` veya `E` karakterini kullanın.  
   
- XAML dil belirtimi tanımı için bkz [ \[. ms-xaml\] sections 5.2.9 ve 5.4.3](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ XAML dil belirtimi tanımı için bkz. [\[MS-XAML\] sections 5.2.9 ve 5.4.3](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xint16"></a>x:Int16  
- CLR yedeklemesi için, `x:Int16` ilkel öğesine <xref:System.Int16> karşılık gelir ve `x:Int16` imzalı olarak kabul edilir. XAML 'de, artı (`+`) işareti metin sözdiziminde devamsızlık pozitif bir işaretli değer olarak kapsanır.  
+ CLR yedekleme için `x:Int16` karşılık gelen temel <xref:System.Int16> ve `x:Int16` imzalı olarak kabul edilir. XAML içinde metin sözdiziminde artı (`+`) işaretinin olmaması pozitif imzalı değer olarak belirtilir.  
   
- XAML dil belirtimi tanımı için bkz [ \[. ms-xaml\] sections 5.2.11 ve 5.4.5](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ XAML dil belirtimi tanımı için bkz. [\[MS-XAML\] sections 5.2.11 ve 5.4.5](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xint32"></a>x:Int32  
- CLR yedeklemesi için, `x:Int32` ilkel öğesine <xref:System.Int32>karşılık gelir. `x:Int32`imzalı olarak kabul edilir. XAML 'de, artı (`+`) işareti metin sözdiziminde devamsızlık pozitif bir işaretli değer olarak kapsanır.  
+ CLR desteklemesi için `x:Int32` temel öğesi <xref:System.Int32> öğesine karşılık gelir. `x:Int32` işaretlenmiş olarak kabul edilir. XAML içinde metin sözdiziminde artı (`+`) işaretinin olmaması pozitif imzalı değer olarak belirtilir.  
   
- XAML dil belirtimi tanımı için bkz [ \[. ms-xaml\] sections 5.2.12 ve 5.4.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ XAML dil belirtimi tanımı için bkz. [\[MS-XAML\] sections 5.2.12 ve 5.4.6](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xint64"></a>x:Int64  
- CLR yedeklemesi için, `x:Int64` ilkel öğesine <xref:System.Int64>karşılık gelir. `x:Int64`imzalı olarak kabul edilir. XAML 'de, artı (`+`) işareti metin sözdiziminde devamsızlık pozitif bir işaretli değer olarak kapsanır.  
+ CLR desteklemesi için `x:Int64` temel öğesi <xref:System.Int64> öğesine karşılık gelir. `x:Int64` işaretlenmiş olarak kabul edilir. XAML içinde metin sözdiziminde artı (`+`) işaretinin olmaması pozitif imzalı değer olarak belirtilir.  
   
- XAML dil belirtimi tanımı için bkz [ \[. ms-xaml\] sections 5.2.13 ve 5.4.7](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ XAML dil belirtimi tanımı için bkz. [\[MS-XAML\] sections 5.2.13 ve 5.4.7](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xtimespan"></a>x:TimeSpan  
- CLR yedeklemesi için, `x:TimeSpan` ilkel öğesine <xref:System.TimeSpan>karşılık gelir.  
+ CLR desteklemesi için `x:TimeSpan` temel öğesi <xref:System.TimeSpan> öğesine karşılık gelir.  
   
- Zaman tarih biçimi için XAML ayrıştırma 'nın, kültür altında `en-US` kendiliğinden yapıldığını unutmayın.  
+ Saat tarih biçimi için XAML ayrıştırmanın `en-US` kültürü altında kendiliğinden yapıldığına dikkat edin.  
   
- XAML dil belirtimi tanımı için bkz [ \[. ms-xaml\] sections 5.2.16 ve 5.4.10](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ XAML dil belirtimi tanımı için bkz. [\[MS-XAML\] sections 5.2.16 ve 5.4.10](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xuri"></a>x:Uri  
- CLR yedeklemesi için, `x:Uri` ilkel öğesine <xref:System.Uri>karşılık gelir.  
+ CLR desteklemesi için `x:Uri` temel öğesi <xref:System.Uri> öğesine karşılık gelir.  
   
- Protokollerin denetlenmesi için `x:Uri`xaml tanımının bir parçası değildir.  
+ Protokollerin denetimi, `x:Uri` için XAML tanımının bir parçası değildir.  
   
- XAML dil belirtimi tanımı için bkz [ \[. ms-xaml\] sections 5.2.15 ve 5.4.9](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ XAML dil belirtimi tanımı için bkz. [\[MS-XAML\] sections 5.2.15 ve 5.4.9](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xbyte"></a>x:Byte  
- CLR yedeklemesi için, `x:Byte` ilkel öğesine <xref:System.Byte>karşılık gelir. ,İmzasızolarakkabul<xref:System.Byte>edilir.  /  `x:Byte`  
+ CLR desteklemesi için `x:Byte` temel öğesi <xref:System.Byte> öğesine karşılık gelir. <xref:System.Byte> / `x:Byte` imzasız olarak kabul edilir.  
   
- XAML dil belirtimi tanımı için bkz [ \[. ms-xaml\] sections 5.2.10 ve 5.4.4](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ XAML dil belirtimi tanımı için bkz. [\[MS-XAML\] sections 5.2.10 ve 5.4.4](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
-### <a name="xarray"></a>x:Array  
- CLR yedeklemesi için, `x:Array` ilkel öğesine <xref:System.Array>karşılık gelir.  
+### <a name="xarray"></a>x:Dizi  
+ CLR desteklemesi için `x:Array` temel öğesi <xref:System.Array> öğesine karşılık gelir.  
   
  Bir diziyi, biçimlendirme uzantısı söz dizimini kullanarak XAML 2006 ' de tanımlayabilirsiniz; Ancak XAML 2009 sözdizimi, biçimlendirme uzantısına erişmeyi gerektirmeyen dil tanımlı bir temel dildir. XAML 2006 desteği hakkında daha fazla bilgi için bkz. [X:Array Işaretleme uzantısı](x-array-markup-extension.md).  
   
- XAML dil belirtimi tanımı için bkz [ \[. MS-\] xaml sections 5.2.18](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ XAML dil belirtimi tanımı için bkz. [\[MS-XAML\] sections 5.2.18](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 <a name="wpf_support"></a>   
-## <a name="wpf-support"></a>WPF desteği  
+## <a name="wpf-support"></a>WPF Desteği  
  WPF 'de XAML 2009 özelliklerini, ancak yalnızca işaretleme ile derlenen XAML için kullanabilirsiniz. WPF için biçimlendirme derlenmiş XAML ve XAML 'nin BAML formu şu anda XAML 2009 anahtar sözcüklerini ve özelliklerini desteklememektedir.  
   
- XAML 2009 özelliklerini WPF ile birlikte kullanabileceğiniz bir senaryo, gevşek XAML yazarsa ve bu XAML 'yi ile <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>bir WPF çalışma zamanına ve nesne grafiğine yüklerseniz. <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> WPF<xref:System.Windows.Markup.XamlReader.Load%2A> ve, XAML 2009 dil anahtar sözcüklerini ve özelliklerini geçerli bir nesne grafiği temsiline işleyebilir.
+ XAML 2009 özelliklerini WPF ile birlikte kullanabileceğiniz bir senaryo, gevşek XAML yazarsa ve bu XAML 'yi <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>bir WPF çalışma zamanına ve nesne grafiğine yüklerseniz. WPF <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> ve <xref:System.Windows.Markup.XamlReader.Load%2A>, XAML 2009 dil anahtar sözcüklerini ve özelliklerini geçerli bir nesne grafiği temsiline işleyebilir.

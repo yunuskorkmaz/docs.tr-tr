@@ -2,12 +2,12 @@
 title: WCF Bilinen Adını COM İstemcileri ile Kullanma
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: faaf8e80402ddaef85dcf8d7bfe9b1da202227c9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: bcac9e344e2d981f9f165480cb84ac37c99fa5b0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715296"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837785"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF Bilinen Adını COM İstemcileri ile Kullanma
 Bu örnek, Web hizmetlerini Microsoft Office Visual Basic for Applications (Office VBA) veya Visual Basic 6,0 gibi COM tabanlı geliştirme ortamlarında bütünleştirmek için Windows Communication Foundation (WCF) hizmet bilinen adının nasıl kullanılacağını gösterir. Bu örnek, bir Windows betik ana istemcisi (. vbs), destekleyici istemci kitaplığı (. dll) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (. dll) içerir. Hizmet bir Hesaplayıcı hizmetidir ve COM istemcisi, hizmet üzerinde matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) çağırır. İstemci etkinliği ileti kutusu penceresinde görünür.  
@@ -191,7 +191,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
 3. Visual Studio için Geliştirici Komut İstemi, dile özgü klasör altında \client\bin klasörünü açın.  
   
     > [!NOTE]
-    > [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 veya Windows Server 2008 R2 kullanıyorsanız, komut istemi 'ni yönetici ayrıcalıklarıyla çalıştırdığınızdan emin olun.  
+    > Windows Vista, [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 veya Windows Server 2008 R2 kullanıyorsanız, komut istemi 'ni yönetici ayrıcalıklarıyla çalıştırdığınızdan emin olun.  
   
 4. Dll 'yi bir TLB dosyasına aktarmak için `tlbexp.exe client.dll /out:CalcProxy.tlb` yazın. Bir "tür kitaplığı verme programı Uyarısı" beklenmektedir, ancak genel tür gerekli olmadığından bir sorun değil.  
   
@@ -221,7 +221,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 6. Client. dll kitaplığını dile özgü klasörün altındaki \client\bin klasöründen istemci bilgisayardaki bir dizine kopyalayın.  
   
-7. Bir komut isteminden, istemci bilgisayardaki bu hedef dizine gidin. [!INCLUDE[wv](../../../../includes/wv-md.md)] veya [!INCLUDE[lserver](../../../../includes/lserver-md.md)]kullanıyorsanız, komut istemi ' ni yönetici olarak çalıştırdığınızdan emin olun.  
+7. Bir komut isteminden, istemci bilgisayardaki bu hedef dizine gidin. Windows Vista veya [!INCLUDE[lserver](../../../../includes/lserver-md.md)]kullanıyorsanız, komut istemi ' ni yönetici olarak çalıştırdığınızdan emin olun.  
   
 8. Dll 'yi bir TLB dosyasına aktarmak için `tlbexp.exe client.dll /out:CalcProxy.tlb` yazın. Bir "tür kitaplığı verme programı Uyarısı" beklenmektedir, ancak genel tür gerekli olmadığından bir sorun değil.  
   

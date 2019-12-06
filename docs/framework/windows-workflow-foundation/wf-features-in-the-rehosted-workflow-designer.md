@@ -2,12 +2,12 @@
 title: Yeniden Barındırılan İş Akışı Tasarımcısında Yeni Workflow Foundation 4.5 Özellikleri Desteği
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 2b893fede30606789c82a64a19fa368e3fd74c4d
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: bf5c12fe7892bf81fda9714ba02870a9c8ab8b4e
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142074"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837603"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Yeniden Barındırılan İş Akışı Tasarımcısında Yeni Workflow Foundation 4.5 Özellikleri Desteği
 .NET Framework 4,5 ' de Windows Workflow Foundation (WF), iş akışı Tasarımcısı deneyimine yönelik çeşitli geliştirmeler de dahil olmak üzere birçok yeni özellik sunmuştur. Bu konu başlığı altında, yeniden barındırılan Tasarımcıda Bu özelliklerden hangilerinin desteklendiği ve hangilerinin Şu anda desteklenmeyen ayrıntıları verilmektedir.
@@ -122,7 +122,7 @@ ms.locfileid: "74142074"
  Akış çizelgesi ve sıralı iş akışı geliştirme modellerine ek olarak, bu sürüm durum makinesi iş akışlarını ve sözleşme ilk iş akışı hizmetlerini içerir.  
   
 ### <a name="state-machine-workflows"></a>Durum makinesi iş akışları  
- Durum makinesi iş akışları, [Microsoft .NET Framework 4 Platform Güncelleştirme 1](https://go.microsoft.com/fwlink/?LinkID=215092)' de .NET Framework 4.0.1 bir parçası olarak sunulmuştur. Bu güncelleştirme, geliştiricilerin durum makinesi iş akışları oluşturmalarına izin veren birkaç yeni sınıf ve etkinlik içeriyordu. Bu sınıflar ve Etkinlikler 4,5 .NET Framework güncelleştirilmiştir. Güncelleştirmeler şunları içerir:  
+ Durum makinesi iş akışları, [Microsoft .NET Framework 4 Platform Güncelleştirme 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)' de .NET Framework 4.0.1 bir parçası olarak sunulmuştur. Bu güncelleştirme, geliştiricilerin durum makinesi iş akışları oluşturmalarına izin veren birkaç yeni sınıf ve etkinlik içeriyordu. Bu sınıflar ve Etkinlikler 4,5 .NET Framework güncelleştirilmiştir. Güncelleştirmeler şunları içerir:  
   
 1. Durumlar üzerinde kesme noktaları ayarlama yeteneği  
   

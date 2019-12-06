@@ -25,6 +25,8 @@
       href: how-to-guides/debug.md
     - name: İşleri HDInsight’a gönderme
       href: how-to-guides/hdinsight-deploy-methods.md
+    - name: İşleri Databricks’e gönderme
+      href: how-to-guides/databricks-deploy-methods.md
 - name: Başvuru
   items:
     - name: API Başvurusu

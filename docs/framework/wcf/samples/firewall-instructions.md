@@ -2,21 +2,21 @@
 title: Güvenlik Duvarı Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 2c07d17ebb6bbefa78d12bb128e354112311891a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3c94f0edbb244b6c378cc32f05c34fd029d253ff
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044945"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837850"
 ---
 # <a name="firewall-instructions"></a>Güvenlik Duvarı Yönergeleri
 Windows Communication Foundation (WCF) örneklerinin çalışabilmesi için güvenlik duvarındaki çeşitli bağlantı noktalarını veya programları etkinleştirmeniz gerekir. Örneklerin birçoğu 8000-8003 aralığındaki bağlantı noktalarını ve bağlantı noktası 9000 ' yi kullanarak iletişim kurar. Güvenlik Duvarı varsayılan olarak açıktır ve bu bağlantı noktalarına erişimi engeller. Örneklere yönelik güvenlik duvarını etkinleştirmek için, gereksinimlerinize ve güvenlik ortamınıza bağlı olarak aşağıdaki yordamlardan birini yapın:  
   
-- Seçenek 1: Çalıştırırken örnekleri etkileşimli olarak etkinleştirin. Güvenlik Duvarı yapılandırmanızda hiçbir değişiklik yapmayın ve örnekleri oluşturmaya ve çalıştırmaya devam edin. Bir örnek çalıştırıldığında, bir **Windows Güvenlik Uyarısı** iletişim kutusu görüntülenir. Söz konusu örnek program, engeli kaldırılmış bir listeye etkileşimli olarak eklenebilir. Bu yordamla, örneği yeniden başlatmanız gerekebilir.  
+- Seçenek 1: çalışırken örnekleri etkileşimli olarak etkinleştirin. Güvenlik Duvarı yapılandırmanızda hiçbir değişiklik yapmayın ve örnekleri oluşturmaya ve çalıştırmaya devam edin. Bir örnek çalıştırıldığında, bir **Windows Güvenlik Uyarısı** iletişim kutusu görüntülenir. Söz konusu örnek program, engeli kaldırılmış bir listeye etkileşimli olarak eklenebilir. Bu yordamla, örneği yeniden başlatmanız gerekebilir.  
   
-- Seçenek 2: Örnek programları önceden etkinleştirin. **Windows Güvenlik Duvarı Denetim Masası** uygulamasını başlatın ve çalıştırmayı planladığınız örnek programları etkinleştirin. Yürütülebilir dosyaların mevcut olması için önce programları derlemeniz gerekir. Daha ayrıntılı yönergeleri aşağıdaki yordamda bulabilirsiniz.  
+- 2\. seçenek: örnek programları önceden etkinleştirin. **Windows Güvenlik Duvarı Denetim Masası** uygulamasını başlatın ve çalıştırmayı planladığınız örnek programları etkinleştirin. Yürütülebilir dosyaların mevcut olması için önce programları derlemeniz gerekir. Daha ayrıntılı yönergeleri aşağıdaki yordamda bulabilirsiniz.  
   
-- Seçenek 3: Bir bağlantı noktası aralığını önceden etkinleştirin. **Windows Güvenlik Duvarı** **Denetim Masası** uygulamasını başlatın ve örnekler tarafından kullanılan 80, 443, 8000-8003 ve 9000 bağlantı noktalarını etkinleştirin. Daha ayrıntılı yönergeleri aşağıdaki yordamda bulabilirsiniz. Bu seçenek, yalnızca örnekleri değil, herhangi bir programın bu bağlantı noktalarını kullanmasına izin verdiğinden, diğerlerinden daha az güvenlidir.  
+- Seçenek 3: bir bağlantı noktası aralığını önceden etkinleştirin. **Windows Güvenlik Duvarı** **Denetim Masası** uygulamasını başlatın ve örnekler tarafından kullanılan 80, 443, 8000-8003 ve 9000 bağlantı noktalarını etkinleştirin. Daha ayrıntılı yönergeleri aşağıdaki yordamda bulabilirsiniz. Bu seçenek, yalnızca örnekleri değil, herhangi bir programın bu bağlantı noktalarını kullanmasına izin verdiğinden, diğerlerinden daha az güvenlidir.  
   
  Hangi yordamın kullanılacağı konusunda emin değilseniz, ilk seçeneği belirleyin. Başka bir satıcıdan güvenlik duvarı çalıştırıyorsanız, benzer değişiklikler yapmanız gerekebilir.  
   
@@ -25,9 +25,9 @@ Windows Communication Foundation (WCF) örneklerinin çalışabilmesi için güv
   
 ### <a name="to-enable-samples-programs-in-advance"></a>Örnek programları önceden etkinleştirmek için  
   
-1. Örneği oluşturun.  
+1. Örneği derleyin.  
   
-2. **Başlat**' a tıklayın, **Çalıştır**' a `firewall.cpl`tıklayın ve yazın. Bu, **Windows Güvenlik Duvarı Denetim Masası** uygulamasını açar.  
+2. **Başlat**' a tıklayın, **Çalıştır**' a tıklayın ve `firewall.cpl`yazın. Bu, **Windows Güvenlik Duvarı Denetim Masası** uygulamasını açar.  
   
     > [!NOTE]
     > Windows Güvenlik Duvarı üzerinden iletişim kurmayı gerektiren örnekleri çalıştırmak için güvenlik duvarı ayarlarını değiştirme izninizin olması gerekir. Bazı güvenlik duvarı ayarları kullanılamaz durumdaysa ve bilgisayarınız bir etki alanına bağlıysa, sistem yöneticiniz bu ayarları grup ilkesi aracılığıyla denetliyor olabilir.  
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) örneklerinin çalışabilmesi için güv
   
     - Windows 7 veya Windows Server 2008 R2 'de **Windows Güvenlik Duvarı üzerinden programa veya özelliğe Izin ver**' e tıklayın. **Ayarları Değiştir**' e tıklayın, **başka bir programa izin verin...** .  
   
-    - Veya [!INCLUDE[wv](../../../../includes/wv-md.md)] üzerinde[!INCLUDE[lserver](../../../../includes/lserver-md.md)] **Windows Güvenlik Duvarı üzerinden programa izin ver**' e tıklayın.  
+    - Windows Vista veya [!INCLUDE[lserver](../../../../includes/lserver-md.md)], **Windows Güvenlik Duvarı üzerinden programa Izin ver**' e tıklayın.  
   
 4. **Özel durumlar** sekmesinde **Program Ekle**' ye tıklayın.  
   
@@ -48,7 +48,7 @@ Windows Communication Foundation (WCF) örneklerinin çalışabilmesi için güv
   
 ### <a name="to-enable-a-port-range-in-advance"></a>Bir bağlantı noktası aralığını önceden etkinleştirmek için  
   
-1. **Başlat**' a tıklayın, **Çalıştır**' a `firewall.cpl`tıklayın ve yazın. Bu, **Windows Güvenlik Duvarı Denetim Masası** uygulamasını açar.  
+1. **Başlat**' a tıklayın, **Çalıştır**' a tıklayın ve `firewall.cpl`yazın. Bu, **Windows Güvenlik Duvarı Denetim Masası** uygulamasını açar.  
   
 2. Windows 7 veya Windows Server 2008 R2 'de, aşağıdaki adımları izleyin.  
   
@@ -60,7 +60,7 @@ Windows Communication Foundation (WCF) örneklerinin çalışabilmesi için güv
   
     4. **Bağlantı noktasını** seçin ve **İleri**' ye tıklayın.  
   
-    5. **TCP** ' yi seçin `8000, 8001, 8002, 8003, 9000, 80, 443` ve **belirli yerel bağlantı noktaları** alanına girin.  
+    5. **TCP** ' yi seçin ve **belirli yerel bağlantı noktaları** alanına `8000, 8001, 8002, 8003, 9000, 80, 443` girin.  
   
     6. **İleri**'ye tıklayın.  
   
@@ -72,7 +72,7 @@ Windows Communication Foundation (WCF) örneklerinin çalışabilmesi için güv
   
     10. **Giden kuralları** ' na tıklayın ve adımları c-h olarak tekrarlayın.  
   
-3. [!INCLUDE[wv](../../../../includes/wv-md.md)] Veya[!INCLUDE[lserver](../../../../includes/lserver-md.md)]üzerinde bu adımları izleyin.  
+3. Windows Vista veya [!INCLUDE[lserver](../../../../includes/lserver-md.md)]'de, aşağıdaki adımları izleyin.  
   
     1. **Windows Güvenlik Duvarı üzerinden programa Izin ver**' e tıklayın.  
   
