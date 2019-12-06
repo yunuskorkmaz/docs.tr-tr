@@ -96,7 +96,7 @@
     - name: macOS üzerinde kapsamlı bir .NET Core çözümü oluşturma
       href: tutorials/using-on-mac-vs-full-solution.md
     - name: CLI araçları ile .NET Core kullanmaya başlama
-      href: tutorials/using-with-xplat-cli.md
+      href: tutorials/cli-create-console-app.md
     - name: .NET Core CLI ile projeleri düzenleme ve test etme
       href: tutorials/testing-with-cli.md
     - name: Platformlar arası araçlarla kitaplık geliştirme
