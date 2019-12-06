@@ -3,12 +3,12 @@ title: C#Program yapısı- C# dilin turu
 description: Bir C# programın temel yapı taşlarını öğrenin
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 5102c72d68108f698a0456b9c14e6713778f4325
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 5e095e71549ed3eec6c73e6a134fdb5a64fb63c0
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834165"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884390"
 ---
 # <a name="program-structure"></a>Program Yapısı
 
@@ -27,7 +27,7 @@ csc /t:library acme.cs
 örneği bir kitaplık (`Main` giriş noktası olmayan kod) olarak derler ve `acme.dll`adlı bir derleme oluşturur.
 
 > [!IMPORTANT]
-> Yukarıdaki örnekler, komut satırı C# derleyicisi olarak `csc` kullanır. Bu derleyici bir Windows yürütülebiliridir. Diğer platformlarda C# kullanmak Için .NET Core araçlarını kullanmanız gerekir. .NET Core ekosistemi, komut satırı yapılarını yönetmek için `dotnet` CLı kullanır. Buna bağımlılıkları yönetme ve C# derleyicinin çağrılması dahildir. .NET Core tarafından desteklenen platformlarda bu araçların tam açıklaması için [Bu öğreticiye](../../core/tutorials/using-with-xplat-cli.md) bakın.
+> Yukarıdaki örnekler, komut satırı C# derleyicisi olarak `csc` kullanır. Bu derleyici bir Windows yürütülebiliridir. Diğer platformlarda C# kullanmak Için .NET Core araçlarını kullanmanız gerekir. .NET Core ekosistemi, komut satırı yapılarını yönetmek için `dotnet` CLı kullanır. Buna bağımlılıkları yönetme ve C# derleyicinin çağrılması dahildir. .NET Core tarafından desteklenen platformlarda bu araçların tam açıklaması için [Bu öğreticiye](../../core/tutorials/cli-create-console-app.md) bakın.
 
 Derlemeler, ara dil (IL) yönergeleri biçiminde çalıştırılabilir kodu ve meta veri biçimindeki sembolik bilgileri içerir. Yürütülmeden önce, bir derlemedeki IL kodu, .NET ortak dil çalışma zamanının tam zamanında (JıT) derleyicisi tarafından otomatik olarak işlemciye özgü koda dönüştürülür.
 

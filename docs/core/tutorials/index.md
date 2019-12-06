@@ -5,12 +5,12 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 7b6265cb652e6f3db702584295fac948d06ad5fc
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1355b3b0fa72a13263229848b3de2c6b9ccb3392
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420834"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884208"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Bu öğreticileri inceleyerek .NET Core ve .NET Core SDK araçları hakkında bilgi edinin
 
@@ -39,7 +39,7 @@ ms.locfileid: "73420834"
 
 ## <a name="building-applications-with-the-net-core-cli-tools"></a>.NET Core CLI araçlarıyla uygulama oluşturma
 
-- [.NET Core CLI araçlarını kullanarak Windows/Linux/macOS 'ta .NET Core ile çalışmaya başlama](using-with-xplat-cli.md)
+- [.NET Core CLI araçlarını kullanarak Windows/Linux/macOS 'ta .NET Core ile çalışmaya başlama](cli-create-console-app.md)
 - [.NET Core CLI araçlarıyla projeleri düzenleme ve test etme](testing-with-cli.md)
 - [Kullanmaya başlayınF#](../../fsharp/get-started/get-started-command-line.md)
 

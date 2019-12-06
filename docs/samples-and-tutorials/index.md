@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core ve .NET hakkında bilgi edinmenize yardımc
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5132415a6be03787111aaed8d027d436bb6820fe
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423565"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884442"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET örnekleri ve öğreticiler
 
@@ -25,7 +25,7 @@ Bu kılavuzda, bir ASP.NET Core Web uygulaması ve ilişkili birim testlerini na
 
 ### <a name="tutorials"></a>Öğreticiler
 
-**[CLı araçlarını kullanarak .NET Core konsol uygulamaları yazma: adım adım kılavuz](../core/tutorials/using-with-xplat-cli.md)**
+**[CLı araçlarını kullanarak .NET Core konsol uygulamaları yazma: adım adım kılavuz](../core/tutorials/cli-create-console-app.md)**
 
 Bu kılavuzda, platformlar arası konsol uygulamaları oluşturmak için .NET Core CLI araçları 'nın nasıl kullanılacağı gösterilmektedir. Temel konsol uygulamasıyla başlar ve sonuçta test dahil birden çok projeye yayılır. Adım adım özellikleri, siz gittiğiniz bilgilerinizi ekleyerek öğreneceksiniz. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/core/console-apps) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
@@ -112,6 +112,6 @@ Birçok konuda, GitHub 'dan görüntülenmek veya indirmek için kullanılabilen
 1. Deponun klasörlerinde örnek konumuna gidin. Örnek konumunun göreli yolu, örneğin bağlantısını izlediğinizde tarayıcınızın adres çubuğunda görüntülenir.
 1. Örnek çalıştırmak için birkaç seçeneğiniz vardır:
    * [DotNet CLI araçlarını](../core/tools/index.md)kullanın: bir konsol penceresinde, örnek klasörüne gidin ve DotNet CLI komutlarını kullanın.
-   * [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) veya [Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)kullanın: menü çubuğundan **Dosya > > proje/çözüm aç** ' ı seçerek örneği açın, örnek proje klasörüne gidin ve proje dosyasını ( *. csproj* veya *. fsproj* ) seçin. ).
+   * [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) veya [Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)kullanın: menü çubuğundan **Dosya > > proje/çözüm aç** ' ı seçerek örneği açın, örnek proje klasörüne gidin ve proje dosyasını ( *. csproj* veya *. fsproj*) seçin.
    * [Visual Studio Code](https://code.visualstudio.com/)kullan: menü çubuğundan **Dosya > klasörü aç** ' a tıklayarak ve örneğin proje klasörünü seçerek örneği açın.
    * .NET Core projelerini destekleyen farklı bir IDE kullanın.

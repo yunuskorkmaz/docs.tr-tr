@@ -4,12 +4,12 @@ description: Windows, Linux ve macOS 'ta .NET Core uygulamaları oluşturmayı �
 author: thraka
 ms.author: adegeo
 ms.date: 09/19/2019
-ms.openlocfilehash: 78066f2904f6a874b71165e4fe1769b6b778ae41
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 89db6d79336c01315983133d9041904d88cba301
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428876"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884260"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core ile çalışmaya başlama
 
@@ -28,7 +28,7 @@ dotnet new console --output sample1
 dotnet run --project sample1
 ```
 
-Aşağıdaki çıktıyı görmeniz gerekir:
+Aşağıdaki çıkışı görmeniz gerekir:
 
 ```console
 Hello World!
@@ -50,15 +50,15 @@ Bu adım adım öğreticilerini izleyerek .NET Core uygulamaları geliştirmeye 
 - [Visual Studio 2017 ' de Visual Basic ve .NET Core ile bir sınıf kitaplığı oluşturun.](./tutorials/vb-library-with-visual-studio.md)  
 - [Visual Studio Code ve .NET Core 'u yüklemek ve kullanmak için](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/)bir video izleyin.
 - [Visual Studio 2017 ve .NET Core 'u yüklemek ve kullanmak için](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/)bir video izleyin.
-- [Komut satırını kullanarak .NET Core ile çalışmaya başlama.](tutorials/using-with-xplat-cli.md)
+- [Komut satırını kullanarak .NET Core ile çalışmaya başlama.](tutorials/cli-create-console-app.md)
 
 Desteklenen Windows sürümlerinin bir listesi için bkz. [.NET Core Dependencies ve Requirements](install/dependencies.md?tabs=netcore30&pivots=os-windows) makalesi.
 
-# <a name="linuxtablinux"></a>['Un](#tab/linux)
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 Aşağıdaki adım adım öğreticilerden yararlanarak .NET Core uygulaması geliştirmeye başlamanızı sağlayabilirsiniz:
 
-- [Komut satırını kullanarak .NET Core ile çalışmaya başlama.](tutorials/using-with-xplat-cli.md)
+- [Komut satırını kullanarak .NET Core ile çalışmaya başlama.](tutorials/cli-create-console-app.md)
 - [Ubuntu 'da ve .NET Core 'u kullanarak C# Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)kullanmaya başlama hakkında bir video izleyin.
 
 Desteklenen Linux desteklerinin ve sürümlerinin bir listesi için bkz. [.NET Core Dependencies ve gereksinimler](install/dependencies.md?tabs=netcore30&pivots=os-linux) makalesi.
@@ -69,7 +69,7 @@ Aşağıdaki adım adım öğreticilerden yararlanarak .NET Core uygulaması gel
 
 - [MacOS 'ta .NET Core 'u kullanarak C# Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)kullanmaya başlama hakkında bir video izleyin.
 - [Visual Studio Code kullanarak macOS 'ta .NET Core ile çalışmaya başlama.](tutorials/using-on-macos.md)
-- [Komut satırını kullanarak .NET Core ile çalışmaya başlama.](tutorials/using-with-xplat-cli.md)
+- [Komut satırını kullanarak .NET Core ile çalışmaya başlama.](tutorials/cli-create-console-app.md)
 - [Mac için Visual Studio kullanarak macOS 'ta .NET Core ile çalışmaya başlama.](tutorials/using-on-mac-vs.md)
 - [Mac için Visual Studio kullanarak macOS 'ta kapsamlı bir .NET Core çözümü oluşturun.](tutorials/using-on-mac-vs-full-solution.md)
 
