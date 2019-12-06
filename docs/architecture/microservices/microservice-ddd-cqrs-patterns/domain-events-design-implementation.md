@@ -2,12 +2,12 @@
 title: Etki alanı olayları. Tasarım ve uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Toplamalar arasında iletişim kurmak için önemli bir kavram olan etki alanı olaylarının derinlemesine bir görünümünü alın.
 ms.date: 10/08/2018
-ms.openlocfilehash: f427ed5216af11b90c5a8cede15806a11aedc76d
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 3bba18d4a77b47abee55c16bae8a64ed27ac9aba
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835552"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884234"
 ---
 # <a name="domain-events-design-and-implementation"></a>Etki alanı olayları: tasarım ve uygulama
 
@@ -342,7 +342,7 @@ Son olarak, bazı durumlarda olayları birden fazla mikro hizmette yaymaya istey
 
 Belirtildiği gibi, etki alanınız içindeki değişikliklerin yan etkilerini açıkça uygulamak için etki alanı olaylarını kullanın. DDD terminolojisini kullanmak için etki alanı olaylarını kullanarak bir veya birden çok toplama arasında yan etkileri açıkça uygulayın. Ayrıca, daha iyi ölçeklenebilirlik ve veritabanı kilitleri üzerinde daha az etki sağlamak için aynı etki alanı içindeki toplamalar arasında nihai tutarlılığı kullanın.
 
-Başvuru uygulaması, etki alanı olaylarını, tek bir işlem içindeki toplamalar arasında karşılıklı olarak yaymak için [mediaTR](https://github.com/jbogard/MediatR) kullanır. Ancak, son tutarlılığı kullanarak etki alanı olaylarını zaman uyumsuz olarak yaymak için [Kbbitmq](https://www.rabbitmq.com/) veya [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) gibi bazı AMQP uygulamasını da kullanabilirsiniz, ancak Yukarıda bahsedildiği gibi, bir başarısızlık durumunda telafi eylemlerine yönelik ihtiyacı göz önünde bulundurmanız gerekir.
+Başvuru uygulaması, tek bir işlem içinde etki alanı olaylarını, toplamalar arasında zaman uyumlu olarak yaymak için [mediaTR](https://github.com/jbogard/MediatR) kullanır. Ancak, son tutarlılığı kullanarak etki alanı olaylarını zaman uyumsuz olarak yaymak için [Kbbitmq](https://www.rabbitmq.com/) veya [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) gibi bazı AMQP uygulamasını da kullanabilirsiniz, ancak Yukarıda bahsedildiği gibi, bir başarısızlık durumunda telafi eylemlerine yönelik ihtiyacı göz önünde bulundurmanız gerekir.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

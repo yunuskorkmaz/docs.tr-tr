@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Orta
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: b376f8b38749f242f4e78a10808532989e0ac834
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6a4e971c1cb19a12710ad7893378a49758b4016e
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972140"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884247"
 ---
 # <a name="common-web-application-architectures"></a>Ortak web uygulaması mimarileri
 
@@ -38,7 +38,7 @@ Basit olsa da, tek projem tek parçalı çözüm, bazı dezavantajlara sahiptir.
 
 Uygulamalar, bu sorunları çözmek için genellikle her projenin uygulamanın belirli bir _katmanında_ yer aldığı kabul edildiği çoklu proje çözümlerinde gelişmektedir.
 
-## <a name="what-are-layers"></a>Katmanlar nelerdir?
+## <a name="what-are-layers"></a>Mantıksal katman nedir?
 
 Uygulamalar karmaşıklıkla büyüdükçe, bu karmaşıklığı yönetmenin bir yolu, uygulamayı sorumluluklara veya kaygılarına göre kesmeniz gerekir. Bu, endişeleri ayırmayı izler ve geliştiricilerin belirli işlevlerin uygulandığı yeri kolayca bulabilmeleri için büyüyen bir kod temelinin düzenlenmesine devam etmenize yardımcı olabilir. Katmanlı mimari, yalnızca kod kuruluşunun ötesinde çok sayıda avantaj sunar, ancak.
 
@@ -173,7 +173,7 @@ ASP.NET Core MVC uygulamasındaki kullanıcı arabirimi katmanı, uygulamanın g
 - FilTReleri
 - Görünümler
 - ViewModel 'lar
-- Başlangıç
+- Başlat
 
 Başlangıç sınıfı, uygulamayı yapılandırmadan ve uygulama türlerini arabirimlere bağlamak için, bağımlılık ekleme işleminin çalışma zamanında düzgün çalışmasına izin verir.
 
@@ -302,6 +302,8 @@ Visual Studio kullanarak uygulamanıza Docker desteği eklemek istiyorsanız, bu
   <https://github.com/ardalis/cleanarchitecture>
 - **Mikro hizmetler e-kitabı mimarisi**  
   <https://aka.ms/MicroservicesEbook>
+- **DDD (etki alanı odaklı tasarım)**  
+  <https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/>
 
 >[!div class="step-by-step"]
 >[Önceki](architectural-principles.md)
