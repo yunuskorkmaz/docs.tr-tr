@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: 01a34289b4845048438a3d3fd9263d1dcd1028c1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 36d99753503d9ba4b1bde4143c86ba184674e53e
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138856"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960402"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Nasıl yapılır: Tarih ve Saat Değerlerinde Milisaniyeleri Görüntüleme
 <xref:System.DateTime.ToString?displayProperty=nameWithType> gibi varsayılan tarih ve saat biçimlendirme yöntemleri, bir zaman değerinin saatlerini, dakikalarını ve saniyelerini içerir ancak milisaniye bileşenini içermez. Bu konu, biçimlendirilen tarih ve saat dizelerine bir tarihin ve saatin milisaniye bileşeninin nasıl eklendiğini gösterir.  
@@ -47,7 +47,7 @@ ms.locfileid: "73138856"
  [!code-vb[Formatting.HowTo.Millisecond#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Millisecond/vb/Millisecond.vb#3)]  
   
 > [!NOTE]
-> Bir saniyenin on binde biri veya yüz binde biri gibi çok küçük kesirli birimlerini görüntülemek mümkündür. Ancak, bu değerler anlamlı olmayabilir. Tarih ve saat değerlerinin duyarlığı, sistem saatinin çözünürlüğüne bağlıdır. Windows NT 3.5 ve üzeri sürümlerde ve [!INCLUDE[windowsver](../../../includes/windowsver-md.md)] işletim sistemlerinde saatin çözünürlüğü yaklaşık olarak 10-15 milisaniyedir.  
+> Bir saniyenin on binde biri veya yüz binde biri gibi çok küçük kesirli birimlerini görüntülemek mümkündür. Ancak, bu değerler anlamlı olmayabilir. Tarih ve saat değerlerinin duyarlığı, sistem saatinin çözünürlüğüne bağlıdır. Windows NT 3,5 ve üzeri ve Windows Vista işletim sistemlerinde, saatin çözünürlüğü yaklaşık 10-15 milisaniyedir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

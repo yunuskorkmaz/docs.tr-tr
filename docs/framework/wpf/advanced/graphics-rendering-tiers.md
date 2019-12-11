@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 4c9acc3ef806eabea05d1b64080275293c83e895
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c7859ab610f5eae54eeb31833cb370b694df6553
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802146"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959793"
 ---
 # <a name="graphics-rendering-tiers"></a>Grafik İşleme Katmanları
 Bir işleme katmanı, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulaması çalıştıran bir cihaz için grafik donanım yeteneği ve performansının düzeyini tanımlar.  
@@ -89,7 +89,7 @@ Bir işleme katmanı, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
 |<xref:System.Windows.Media.TileBrush> kullanan döşeli içerik|<xref:System.Windows.Media.TileBrush> <xref:System.Windows.Media.TileBrush.TileMode%2A> özelliğinin <xref:System.Windows.Media.TileMode.Tile>olarak ayarlandığı döşeli içerik.|  
 |Grafik donanımının en büyük doku boyutunu aşan yüzeyler|Çoğu grafik donanımında, büyük yüzeyler 20 48x2048 veya 4096x4096 piksel boyutlardır.|  
 |Video RAM gereksinimi grafik donanımının belleğini aşan tüm işlemler|Uygulama video RAM kullanımını, Windows SDK [WPF Performans paketine](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) dahil olan Perforator aracını kullanarak izleyebilirsiniz.|  
-|Katmanlı pencereler|Katmanlı pencereler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaların dikdörtgen olmayan bir pencerede ekran üzerinde içerik işlemesine izin verir. Windows Vista ve Windows 7 gibi Windows görüntü sürücü modelini (WDDM) destekleyen işletim sistemlerinde, katmanlı pencereler donanım hızlandırılır. [!INCLUDE[winxp](../../../../includes/winxp-md.md)]gibi diğer sistemlerde katmanlı pencereler, donanım hızlandırma olmadan yazılım tarafından işlenir.<br /><br /> Aşağıdaki <xref:System.Windows.Window> özelliklerini ayarlayarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] katmanlı pencereleri etkinleştirebilirsiniz:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|Katmanlı pencereler|Katmanlı pencereler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaların dikdörtgen olmayan bir pencerede ekran üzerinde içerik işlemesine izin verir. Windows Vista ve Windows 7 gibi Windows görüntü sürücü modelini (WDDM) destekleyen işletim sistemlerinde, katmanlı pencereler donanım hızlandırılır. Windows XP gibi diğer sistemlerde katmanlı pencereler, donanım hızlandırma olmadan yazılım tarafından işlenir.<br /><br /> Aşağıdaki <xref:System.Windows.Window> özelliklerini ayarlayarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] katmanlı pencereleri etkinleştirebilirsiniz:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
 ## <a name="other-resources"></a>Diğer Kaynaklar  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 62777356dae6e2dce9753b832f08ab2fa2cb5881
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 1b7fccc673f82986a53dcb3dfcb68e8575b99dfd
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801880"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959992"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET Framework dağıtım kılavuzu
 Bu konu, .NET Framework 4,5 ' den .NET Framework herhangi bir sürümünü uygulamalarıyla [!INCLUDE[net_current](../../../includes/net-current-version.md)] yüklemek isteyen geliştiriciler için bilgi sağlamaktadır.
@@ -51,7 +51,7 @@ Bu konu, .NET Framework 4,5 ' den .NET Framework herhangi bir sürümünü uygul
 
 - .NET Framework 4,5 ve noktası sürümlerini yüklemek için yönetici ayrıcalıklarına sahip olmanız gerekir.
 
-- .NET Framework 4,5, Windows 8 ve [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]dahil edilmiştir. bu nedenle, uygulamayı bu işletim sistemlerine dağıtmanız gerekmez. Benzer şekilde, .NET Framework 4.5.1 Windows 8.1 ve Windows Server 2012 R2 'ye dahildir. .NET Framework 4.5.2 hiçbir işletim sistemine dahil değildir. .NET Framework 4,6, Windows 10 ' a dahil edilmiştir, .NET Framework 4.6.1 Windows 10 Kasım güncelleştirmesine dahildir ve .NET Framework 4.6.2 Windows 10 yıldönümü güncelleştirmesine dahildir.  .NET Framework 4,7, Windows 10 Creators Update 'e dahildir, .NET Framework 4.7.1 Windows 10 Fall Creators Update 'e dahildir ve .NET Framework 4.7.2 Windows 10 Ekim 2018 güncelleştirmesi ve Windows 10 Nisan 2018 güncelleştirmesine dahildir. .NET Framework 4,8, Windows 10 Mayıs 2019 güncelleştirme ' ye eklenmiştir. Donanım ve yazılım gereksinimlerinin tam listesi için bkz. [sistem gereksinimleri](../get-started/system-requirements.md).
+- .NET Framework 4,5, Windows 8 ve Windows Server 2012 ' de bulunur, bu nedenle uygulamayı bu işletim sistemlerine dağıtmanız gerekmez. Benzer şekilde, .NET Framework 4.5.1 Windows 8.1 ve Windows Server 2012 R2 'ye dahildir. .NET Framework 4.5.2 hiçbir işletim sistemine dahil değildir. .NET Framework 4,6, Windows 10 ' a dahil edilmiştir, .NET Framework 4.6.1 Windows 10 Kasım güncelleştirmesine dahildir ve .NET Framework 4.6.2 Windows 10 yıldönümü güncelleştirmesine dahildir.  .NET Framework 4,7, Windows 10 Creators Update 'e dahildir, .NET Framework 4.7.1 Windows 10 Fall Creators Update 'e dahildir ve .NET Framework 4.7.2 Windows 10 Ekim 2018 güncelleştirmesi ve Windows 10 Nisan 2018 güncelleştirmesine dahildir. .NET Framework 4,8, Windows 10 Mayıs 2019 güncelleştirme ' ye eklenmiştir. Donanım ve yazılım gereksinimlerinin tam listesi için bkz. [sistem gereksinimleri](../get-started/system-requirements.md).
 
 - Kullanıcılarınız .NET Framework 4,5 ' den başlayarak, kurulum sırasında çalışan .NET Framework uygulamalarının bir listesini görüntüleyebilir ve kolayca kapatabilir. Bu, .NET Framework kurulumlarının neden olduğu sistem yeniden başlatmalarını önlemenize yardımcı. Bkz. [sistem yeniden başlatmaları azaltma](reducing-system-restarts.md).
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: d171a1aafe2d7e69dfbc9b16577b2d56672fdd3f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 0137066b3a351d60bf1cc2e06640030ba1216d03
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802211"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960066"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework sistem gereksinimleri
 
@@ -96,7 +96,7 @@ Bu konudaki tablolar, aşağıdaki .NET Framework sürümleri için donanım, i�
 
  **Notlar:**
 
-- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] .NET Framework 4,5 ' i içerir, bu yüzden ayrı olarak yüklemek zorunda kalmazsınız. Benzer şekilde, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] .NET Framework 4.5.1 içerir.
+- Windows Server 2012 .NET Framework 4,5 içerir, bu yüzden ayrı olarak yüklemek zorunda kalmazsınız. Benzer şekilde, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] .NET Framework 4.5.1 içerir.
 
 - .NET Framework, Windows Server 2008 R2 SP1 veya sonraki sürümleri ile sunucu çekirdeği rolü için sınırlı desteğe sahiptir. Desteklenmeyen API 'lerin listesi için bkz. [sunucu çekirdeği .net işlevleri](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)) .
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 9fac74aacf6b902a25438151db247a1a4aee1f4c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 52f89df8d7f28f0e00c3becd9005b46e52b5532c
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802485"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960209"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Nasıl yapılır: Kodda Fare ve Klavye Olaylarının Benzetimini Yapma
 
@@ -72,7 +72,7 @@ Fare girişi için yukarıda açıklanan stratejileri kullanarak klavye girişin
 1. Tuş vuruşlarını alacak uygulama penceresini etkinleştirin ve sonra <xref:System.Windows.Forms.SendKeys.Send%2A> veya <xref:System.Windows.Forms.SendKeys.SendWait%2A> yöntemini çağırın. Başka bir uygulamayı etkinleştirmek için yönetilen bir yöntem olmadığından, başka uygulamalara odaklanmak için yerel Windows yöntemlerini kullanmanız gerekir. Aşağıdaki kod örneği, hesaplayıcı uygulama penceresini etkinleştirmek üzere `FindWindow` ve `SetForegroundWindow` yöntemlerini çağırmak için platform Invoke kullanır ve ardından hesaplayıcı uygulamasına bir dizi hesaplama vermek için <xref:System.Windows.Forms.SendKeys.SendWait%2A> çağırır.
 
     > [!NOTE]
-    > Hesap makinesi uygulamasını bulan `FindWindow` çağrısının doğru parametreleri, Windows sürümünüze bağlı olarak değişiklik gösterir.  Aşağıdaki kod, Windows 7 ' de Hesaplayıcı uygulamasını bulur. [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], ilk parametreyi "SciCalc" olarak değiştirin. Doğru parametreleri öğrenmek için Visual Studio ile birlikte bulunan Spy + + aracını kullanabilirsiniz.
+    > Hesap makinesi uygulamasını bulan `FindWindow` çağrısının doğru parametreleri, Windows sürümünüze bağlı olarak değişiklik gösterir.  Aşağıdaki kod, Windows 7 ' de Hesaplayıcı uygulamasını bulur. Windows Vista 'da, ilk parametreyi "SciCalc" olarak değiştirin. Doğru parametreleri öğrenmek için Visual Studio ile birlikte bulunan Spy + + aracını kullanabilirsiniz.
 
     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]

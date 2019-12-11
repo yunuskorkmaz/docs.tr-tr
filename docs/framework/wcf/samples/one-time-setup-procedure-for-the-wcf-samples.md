@@ -2,12 +2,12 @@
 title: Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: cfe50cb2bb017292b69f578bfff2bf84bf6ba8f0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 95bba89546e6667cc36fa06a0090aa8e9570fc7e
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837837"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960144"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 
@@ -16,7 +16,7 @@ Windows Communication Foundation (WCF) örneklerinin çoğu Internet Information
 **Servicemodelsamples** sanal DIZINI, IIS tarafından barındırılan bir hizmeti kullanan tüm örnekleri oluşturmak ve çalıştırmak için kullanılır. Bu, örnekleri çalıştırmak için gereken tek sanal dizindir. Örnek oluşturmak, bu sanal dizinde önceden dağıtılan tüm hizmetleri değiştirecek; Bu sanal dizinde yalnızca en son oluşturulan örnek dağıtılır ve kullanılabilir.
 
 > [!NOTE]
-> Tüm komutları bir yerel yönetici hesabı altında çalıştırmalısınız. Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]veya Windows Server 2008 R2 kullanıyorsanız, komut istemi ' ni yükseltilmiş ayrıcalıklarla da çalıştırmanız gerekir. Bunu yapmak için, komut istemi simgesine sağ tıklayın ve ardından **yönetici olarak çalıştır**' a tıklayın. Bu konudaki tüm komutların, uygun yol ayarlarına sahip bir komut isteminde çalıştırılması gerekir.  Bunu sağlamanın en kolay yolu Visual Studio komut Istemi ' ni kullanmaktır. Bu istemi açmak için **Başlat**' a tıklayın, **tüm programlar**' ı seçin, **Visual Studio 2010**' ye kaydırın, **Visual Studio Araçları**' yi seçin, **Visual Studio komut istemi (2010)** öğesini sağ tıklatın ve ardından **yönetici olarak çalıştır**' ı tıklatın. Visual Studio Express sürümlerinden biri yüklüyse, bu komut istemi kullanılamaz ve sistem yoluna "C:\Windows\Microsoft.Net\Framework\v4.0" eklemeniz gerekir.
+> Tüm komutları bir yerel yönetici hesabı altında çalıştırmalısınız. Windows 7, Windows Vista veya Windows Server 2008 R2 kullanıyorsanız, komut istemi ' ni yükseltilmiş ayrıcalıklarla da çalıştırmanız gerekir. Bunu yapmak için, komut istemi simgesine sağ tıklayın ve ardından **yönetici olarak çalıştır**' a tıklayın. Bu konudaki tüm komutların, uygun yol ayarlarına sahip bir komut isteminde çalıştırılması gerekir.  Bunu sağlamanın en kolay yolu Visual Studio komut Istemi ' ni kullanmaktır. Bu istemi açmak için **Başlat**' a tıklayın, **tüm programlar**' ı seçin, **Visual Studio 2010**' ye kaydırın, **Visual Studio Araçları**' yi seçin, **Visual Studio komut istemi (2010)** öğesini sağ tıklatın ve ardından **yönetici olarak çalıştır**' ı tıklatın. Visual Studio Express sürümlerinden biri yüklüyse, bu komut istemi kullanılamaz ve sistem yoluna "C:\Windows\Microsoft.Net\Framework\v4.0" eklemeniz gerekir.
 
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF örnekleri için bir kerelik Kurulum yordamı
 

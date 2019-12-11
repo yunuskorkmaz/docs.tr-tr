@@ -2,12 +2,12 @@
 title: WS 2007 Federasyon HTTP Bağlama
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 2f924bdcbf9082d9d43e02d82c9d00c32ebcaacf
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 74f21494c08f33a61eb1e1b0a102638cff59a970
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714982"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960197"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 Federasyon HTTP Bağlama
 
@@ -119,7 +119,7 @@ Bu örneğe eklenen *Setup. bat* dosyası, şirket içinde barındırılan bir u
 
 1. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.
 
-2. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin. [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]kullanıyorsanız, *Service. exe*, *Client. exe*ve *SecurityTokenService. exe* ' yi yükseltilmiş ayrıcalıklarla çalıştırmanız gerekir (dosyalara sağ tıklayıp **yönetici olarak çalıştır**' a tıklayın).
+2. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin. Windows Vista kullanıyorsanız, *Service. exe*, *Client. exe*ve *SecurityTokenService. exe* ' yi yükseltilmiş ayrıcalıklarla çalıştırmanız gerekir (dosyalara sağ tıklayıp **yönetici olarak çalıştır**' a tıklayın).
 
 > [!IMPORTANT]
 > Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin:

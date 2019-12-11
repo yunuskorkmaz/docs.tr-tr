@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: a7a11029c4e896b0486311bc3caf42fab53d1ea6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: adb4848e844ff091c45ec9a8a2e6d36f01c3cf91
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802106"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960153"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Grafik İşleme Kayıt Defteri Ayarları
 Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalarını etkileyen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik işleme kayıt defteri ayarlarına genel bir bakış sağlar.  
@@ -24,7 +24,7 @@ Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclie
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>XPDM ve WDDM nedir?  
- Grafik işleme kayıt defteri ayarlarından bazıları, video kartınızın bir XPDM veya WDDM Sürücüsü kullanıp kullanmadığına bağlı olarak farklı varsayılan değerlere sahiptir. XPDM, [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] görüntü sürücüsü modeli ve WDDM Windows görüntüleme sürücüsü modelidir. WDDM, Windows Vista ve Windows 7 çalıştıran bilgisayarlarda kullanılabilir. XPDM, Windows Vista, [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]ve [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]çalıştıran bilgisayarlarda kullanılabilir. WDDM hakkında daha fazla bilgi için bkz. [Windows Vista görüntü sürücüsü modeli tasarım kılavuzu](https://go.microsoft.com/fwlink/?LinkId=178394).  
+ Grafik işleme kayıt defteri ayarlarından bazıları, video kartınızın bir XPDM veya WDDM Sürücüsü kullanıp kullanmadığına bağlı olarak farklı varsayılan değerlere sahiptir. XPDM, Microsoft Windows XP görüntü sürücüsü modeli ve WDDM Windows görüntüleme sürücüsü modelidir. WDDM, Windows Vista ve Windows 7 çalıştıran bilgisayarlarda kullanılabilir. XPDM, Windows Vista, Microsoft Windows XP ve [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]çalıştıran bilgisayarlarda kullanılabilir. WDDM hakkında daha fazla bilgi için bkz. [Windows Vista görüntü sürücüsü modeli tasarım kılavuzu](https://go.microsoft.com/fwlink/?LinkId=178394).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Kayıt Defteri Ayarları  
@@ -57,7 +57,7 @@ Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclie
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- **En fazla çoklu örnek değeri** , 3-b içeriğin en yüksek düzgünleştirme miktarını ayarlamanıza olanak sağlar. Windows Vista 'da 3-b düzgünleştirmenin devre dışı bırakılması veya [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]içinde etkinleştirilmesi için bu düzeyi kullanın.  
+ **En fazla çoklu örnek değeri** , 3-b içeriğin en yüksek düzgünleştirme miktarını ayarlamanıza olanak sağlar. Windows Vista 'da 3-b düzgünleştirmenin devre dışı bırakılması için bu düzeyi kullanın.  
   
  **En fazla MultiSample değeri** , 0 ile 16 arasında DEĞIŞEN bir DWORD değeridir. 0 değeri, 3-b içeriğin çok örnekli düzgünleştirmesinin devre dışı bırakılacağını ve 16 değerinin, video kartı tarafından destekleniyorsa, en çok 16X çoklu örnek düzgünleştirme kullanmayı deneyeceği belirtir. XPDM sürücülerini kullanan bilgisayarlarda bu kayıt defteri anahtarı değerini ayarlamanın, uygulamaların büyük miktarda ek video belleği kullanmasına, 3-b işleme performansını azaltmasına ve işleme hatalarının ve kararlığın tanıtılmasına neden olacağını unutmayın sorunlarının.  
   

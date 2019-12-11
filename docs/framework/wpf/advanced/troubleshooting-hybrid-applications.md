@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: f3cddcd6cd90e7e43ea6af67725e709673f7650f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46d8f00f9328e9c0a4df596b709195ae42d651bf
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978348"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960122"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Karma Uygulama Sorunlarını Giderme
 <a name="introduction"></a>Bu konuda, hem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hem de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] teknolojilerini kullanan karma uygulamalar yazarken oluşabilecek bazı yaygın sorunlar listelenmektedir.  
@@ -32,7 +32,7 @@ ms.locfileid: "73978348"
  <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve <xref:System.Windows.Forms.Integration.ElementHost> sınıfları yalnızca tek bir alt denetim veya öğe barındırabilir. Birden fazla denetimi veya öğeyi barındırmak için alt içerik olarak bir kapsayıcı kullanmanız gerekir. Örneğin, bir <xref:System.Windows.Forms.Panel?displayProperty=nameWithType> denetimine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] düğme ve onay kutusu denetimleri ekleyebilir ve sonra paneli bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetiminin <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> özelliğine atayabilirsiniz. Ancak, düğme ve onay kutusu denetimlerini aynı <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetimine ayrı olarak ekleyemezsiniz.  
   
 <a name="scaling"></a>   
-## <a name="scaling"></a>Lemeyle  
+## <a name="scaling"></a>Ölçeklendirme  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] farklı ölçekleme modellerine sahiptir. Bazı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ölçeklendirme dönüştürmeleri [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimlerine göre anlamlıdır, ancak diğerleri değildir. Örneğin, bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimini 0 olarak ölçeklendirmeye çalışır, ancak aynı denetimi sıfır olmayan bir değere ölçeklendirmeye çalışırsanız, denetimin boyutu 0 kalır. Daha fazla bilgi için bkz. [WindowsFormsHost öğesi Için düzen konuları](layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="adapter"></a>   
@@ -40,17 +40,17 @@ ms.locfileid: "73978348"
  Gizli bir kapsayıcı içerdiğinden <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve <xref:System.Windows.Forms.Integration.ElementHost> sınıfları çalışırken karışıklığa neden olabilir. <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve <xref:System.Windows.Forms.Integration.ElementHost> sınıflarının her ikisi de, içerik barındırmak için kullandıkları *Bağdaştırıcı*olarak adlandırılan gizli bir kapsayıcıya sahiptir. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi için, bağdaştırıcı <xref:System.Windows.Forms.ContainerControl?displayProperty=nameWithType> sınıfından türetilir. <xref:System.Windows.Forms.Integration.ElementHost> denetimi için, bağdaştırıcı <xref:System.Windows.Controls.DockPanel> öğesinden türetilir. Diğer birlikte çalışabilirlik konularında bağdaştırıcıya yönelik başvuruları gördüğünüzde, bu kapsayıcı ele alınmıştır.  
   
 <a name="nesting"></a>   
-## <a name="nesting"></a>İç içe geçme  
+## <a name="nesting"></a>İç içe geçirme  
  Bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinin <xref:System.Windows.Forms.Integration.ElementHost> denetimi içinde iç içe geçirilmesi desteklenmez. <xref:System.Windows.Forms.Integration.WindowsFormsHost> bir öğe içinde <xref:System.Windows.Forms.Integration.ElementHost> denetiminin iç içe geçirilmesi de desteklenmez.  
   
 <a name="focus"></a>   
-## <a name="focus"></a>Çı  
+## <a name="focus"></a>Odaklanma  
  Odak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]farklı çalışır ve bu da odak sorunlarının karma bir uygulamada gerçekleşebileceği anlamına gelir. Örneğin, bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinin içine odaklandıysanız ve sayfayı en aza indirip geri yükledikten veya kalıcı iletişim kutusunu gösterdiğinizde, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinin içine odak kaybolabilir. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi hala odağa sahiptir ancak içindeki denetim bu olmayabilir.  
   
  Veri doğrulama de odaklanarak etkilenir. Doğrulama bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinde çalışır, ancak <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğenin dışına veya iki farklı <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi arasında sekme olarak çalışmaz.  
   
 <a name="property_mapping"></a>   
-## <a name="property-mapping"></a>Özellik eşleme  
+## <a name="property-mapping"></a>Özellik Eşleme  
  Bazı özellik eşlemeleri, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] teknolojileri arasında benzer uygulamaları köprülemek için kapsamlı bir yorum gerektirir. Özellik eşlemeleri, kodunuzun yazı tiplerinde, renklerde ve diğer özelliklerde yapılan değişikliklere tepki vermesini sağlar. Genel olarak özellik eşlemeleri, *özellik*değişmiş olayları ya da*özellik*değişmiş çağrıları dinleyerek ve alt denetimde veya bağdaştırıcısında uygun özellikleri ayarlayarak çalışır. Daha fazla bilgi için bkz. [Windows Forms ve WPF özellik eşleme](windows-forms-and-wpf-property-mapping.md).  
   
 <a name="layoutrelated_properties_on_hosted_content"></a>   
@@ -86,7 +86,7 @@ ms.locfileid: "73978348"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Görsel stilleri etkinleştirme  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetiminde [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] görsel stilleri etkinleştirilmemiş olabilir. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] bir uygulama için şablonunda çağırılır. Bu yöntem varsayılan olarak çağrılmasa da, bir proje oluşturmak için Visual Studio kullanıyorsanız, Comctl32. dll 6,0 sürümü varsa, denetimler için [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] görsel stilleri alacaksınız. İş parçacığında tanıtıcıların oluşturulabilmesi için <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> yöntemini çağırmanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: karma uygulamada görsel stilleri etkinleştirme](how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimindeki Microsoft Windows XP görsel stilleri etkinleştirilmemiş olabilir. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] bir uygulama için şablonunda çağırılır. Bu yöntem varsayılan olarak çağrılmasa da, bir proje oluşturmak için Visual Studio kullanıyorsanız, Comctl32. dll 6,0 sürümü varsa, denetimler için Microsoft Windows XP görsel stilleri alırsınız. İş parçacığında tanıtıcıların oluşturulabilmesi için <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> yöntemini çağırmanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: karma uygulamada görsel stilleri etkinleştirme](how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Lisanslı denetimler  

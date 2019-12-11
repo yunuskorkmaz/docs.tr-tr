@@ -2,12 +2,12 @@
 title: SQL Server’da Kimlik Doğrulaması
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 09f7825fd6b4f852b24142ea297c078bd8a1e221
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 0fb92f9e854e2a7a800335390d0195243a749b33
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040263"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959976"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server’da Kimlik Doğrulaması
 SQL Server, Windows kimlik doğrulama modu ve karma mod olmak üzere iki kimlik doğrulama modunu destekler.  
@@ -66,7 +66,7 @@ SQL Server, Windows kimlik doğrulama modu ve karma mod olmak üzere iki kimlik 
 > [!IMPORTANT]
 > SQL Server, `sa` ("Sistem Yöneticisi" kısaltması) adlı SQL Server bir oturum açma ile yüklenir. `sa` oturum açma için güçlü bir parola atayın ve uygulamanızda `sa` oturum açma kullanmayın. `sa` oturum açma, tüm sunucuda yönetici kimlik bilgilerini geri alınamaz olan `sysadmin` sabit sunucu rolüne eşlenir. Bir saldırgan sistem yöneticisi olarak erişim kazanırsa olası hasara yönelik bir sınır yoktur. Windows `BUILTIN\Administrators` grubunun tüm üyeleri (yerel yönetici grubu) varsayılan olarak `sysadmin` rolünün üyeleridir, ancak bu rolden kaldırılabilir.  
   
- SQL Server, [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] veya sonraki sürümlerde çalışırken SQL Server oturum açma işlemleri için Windows parola ilkesi mekanizmaları sağlar. Parola karmaşıklığı ilkeleri, olası parola sayısını artırarak deneme yanılma saldırılarını ortadan kaldırır. SQL Server, SQL Server içinde kullanılan parolalara [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] için kullanılan karmaşıklık ve süre sonu ilkelerini uygulayabilir.  
+ SQL Server, SQL Server oturum açma işlemleri için Windows parola ilke mekanizmaları sağlar. Parola karmaşıklığı ilkeleri, olası parola sayısını artırarak deneme yanılma saldırılarını ortadan kaldırır. SQL Server, SQL Server içinde kullanılan parolalara aynı karmaşıklık ve süre sonu ilkelerini uygulayabilir.  
   
 > [!IMPORTANT]
 > Bağlantı dizelerini Kullanıcı girişinden bitiştirme, bağlantı dizesi ekleme saldırısına karşı savunmasız bırakabilir. Çalışma zamanında sözdizimsel olarak geçerli bağlantı dizeleri oluşturmak için <xref:System.Data.SqlClient.SqlConnectionStringBuilder> kullanın. Daha fazla bilgi için bkz. [bağlantı dizesi oluşturucuları](../connection-string-builders.md).  

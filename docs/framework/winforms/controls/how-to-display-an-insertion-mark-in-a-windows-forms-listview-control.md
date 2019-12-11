@@ -11,18 +11,15 @@ helpviewer_keywords:
 - drop and drag [Windows Forms], insertion marks
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
-ms.openlocfilehash: f5de00fd41b24fc1a7f1ff4484c3a126e98952a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 62d105dc3c0b9aabc3699c12259e1624ac31a3a0
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967828"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960433"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Nasıl yapılır: Windows Forms ListView Denetiminde Ekleme İşareti Görüntüleme
-<xref:System.Windows.Forms.ListView> Denetimdeki ekleme işareti kullanıcılara sürüklenen öğelerin ekleneceği noktayı gösterir. Bir Kullanıcı bir öğeyi diğer iki öğe arasındaki bir noktaya sürüklendiğinde, ekleme işareti öğenin beklenen yeni konumunu gösterir.  
-  
-> [!NOTE]
-> Ekleme işareti özelliği yalnızca [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] uygulamanız <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi çağırdığında kullanılabilir. Önceki işletim sistemlerinde, ekleme işaretiyle ilgili tüm kodlar etkisizdir ve ekleme işareti görünmez. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.ListViewInsertionMark>.  
+<xref:System.Windows.Forms.ListView> denetimindeki ekleme işareti kullanıcılara sürüklenen öğelerin ekleneceği noktayı gösterir. Bir Kullanıcı bir öğeyi diğer iki öğe arasındaki bir noktaya sürüklendiğinde, ekleme işareti öğenin beklenen yeni konumunu gösterir.  
   
  Aşağıdaki görüntüde bir ekleme işareti gösterilmektedir:  
   
@@ -35,7 +32,7 @@ ms.locfileid: "69967828"
  [!code-csharp[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CS/listviewinsertionmarkexample.cs#1)]
  [!code-vb[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/VB/listviewinsertionmarkexample.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
  Bu örnek şunları gerektirir:  
   
 - System ve System. Windows. Forms derlemelerine başvurular.  
@@ -47,4 +44,4 @@ ms.locfileid: "69967828"
 - <xref:System.Windows.Forms.ListViewInsertionMark>
 - [ListView Denetimi](listview-control-windows-forms.md)
 - [ListView Denetimine Genel Bakış](listview-control-overview-windows-forms.md)
-- [İzlenecek yol: Windows Forms bir sürükle ve bırak Işlemi gerçekleştirme](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+- [İzlenecek yol: Windows Forms'ta Sürükle ve Bırak İşlemi Gerçekleştirme](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

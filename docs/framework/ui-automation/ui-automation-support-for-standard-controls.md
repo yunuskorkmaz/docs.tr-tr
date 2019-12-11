@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: c59352f908c5f4a1fd2ca6dd631d26bb5d69f09a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 314526c1164f70e6b261df1a6f11ddce2b5fa240
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441216"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960069"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Standart Denetimler İçin UI Otomasyon Desteği
 > [!NOTE]
@@ -26,11 +26,11 @@ ms.locfileid: "74441216"
 ## <a name="win32-controls"></a>Win32 denetimleri  
  [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] denetimlerinin çoğu, UIAutomationClientsideProviders. dll içindeki istemci tarafı sağlayıcılar aracılığıyla [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] kullanıma sunulur. Bu derleme, UI Otomasyonu istemci uygulamalarıyla kullanılmak üzere otomatik olarak kaydedilir.  
   
- Tam destek yalnızca ComCtrl32. dll sürüm 6 ' dan ([!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)] ve üzeri sürümlerde kullanılabilir) denetimler için sağlanır.  
+ Tam destek yalnızca *ComCtrl32. dll*sürüm 6 ' dan denetimler için sağlanır.  
   
  Aşağıdaki denetimler desteklenir.  
   
-|Sınıf adı|Denetim türü|  
+|Sınıf adı|Kontrol Türü|  
 |----------------|------------------|  
 |Düğme|Düğme|  
 |Düğme|RadioButton|  
@@ -55,7 +55,7 @@ ms.locfileid: "74441216"
 |#32768|Menü|  
 |#32768|MenuItem|  
 |msctls_progress32|ProgressBar|  
-|RichEdit|belgedeki. Bkz. Note.|  
+|RichEdit|Belgedeki. Bkz. Note.|  
 |RichEdit20A|Belge|  
 |RichEdit20W|Belge|  
 |RichEdit50W|Belge|  
@@ -87,8 +87,8 @@ ms.locfileid: "74441216"
 |SysPager|Değer Değiştirici|  
 |SysDateTimePick32|Özel|  
 |SysMonthCal32|Takvim|  
-|MS_WINNOTE|ipucuna|  
-|Vbkabarcık|ipucuna|  
+|MS_WINNOTE|Araç ipucu|  
+|Vbkabarcık|Araç ipucu|  
 |Kaydırma çubuğu (tek başına denetim olarak kullanıldığında)|Kaydırıcı|  
 |SuperGrid|Özel|  
   
@@ -138,7 +138,7 @@ ms.locfileid: "74441216"
   
  Aşağıdaki denetimler yalnızca Microsoft Etkin Erişilebilirlik desteğiyle [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] açıktır. Bazı işlevler kullanılamayabilir.  
   
-|Denetim adı|  
+|Denetim Adı|  
 |------------------|  
 |BindingSource|  
 |DataGrid|  
@@ -163,7 +163,7 @@ ms.locfileid: "74441216"
 |ToolStrip|  
 |Ekleyecek|  
 |SplitContainer/SplitterPanel|  
-|Bölücü|  
+|Bölümlendirici|  
 |RaftingContainer|  
 |StatusStrip|  
   

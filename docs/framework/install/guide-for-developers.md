@@ -8,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 6098c2b855e692eef198e388ba9b29a4e8cc8de1
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 407c9a3fd5057a8e1d68707c9e475d76b3f266e2
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802217"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960051"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Geliştiriciler için .NET Framework yüklemesi
 
@@ -43,8 +43,8 @@ Hızlı bağlantılar için aşağıdaki tabloyu kullanın veya ayrıntılar iç
 |**4.6.1**|[NET Framework 4.6.1 Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=690706)|[4.6.1 Web Yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [4.6.1 çevrimdışı yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/?LinkId=671744)|**Şunları yükleyebilirsiniz:**<br /><br/> Windows 10 <br /> Windows 8.1 ve önceki sürümler<br /> Windows Server 2012 R2 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
 |**4.6**|Visual Studio 2015 ' ye dahildir.<br /><br /> [Microsoft .NET Framework 4,6 hedefleme paketi](https://go.microsoft.com/fwlink/?LinkId=528261)|[4,6 Web Yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [4,6 çevrimdışı yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/?LinkId=528233)|**Dahil edilen:** <br/><br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **Ayrıca, üzerine yükleyebilirsiniz:**<br /><br/> Windows 8.1 ve önceki sürümler<br /> Windows Server 2012 R2 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
 |**4.5.2**|[Microsoft .NET Framework 4.5.2 Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> Visual Studio 2013, Visual Studio 2012 veya diğer Ides ile kullanım için|[4.5.2 Web Yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [4.5.2 çevrimdışı yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/p/?LinkId=397706)|**Şunları yükleyebilirsiniz:**<br /><br/> Windows 8.1 ve önceki sürümler<br /> Windows Server 2012 R2 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
-|**4.5.1**|[Microsoft .NET Framework 4.5.1 Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Visual Studio 2013, Visual Studio 2012 veya diğer Ides ile kullanım için|[4.5.1 Web Yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [4.5.1 çevrimdışı yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**Dahil edilen:**<br /> <br/>Windows 8.1<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **Ayrıca, üzerine yükleyebilirsiniz:**<br /><br/> Windows 8 ve önceki sürümler<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] ve önceki sürümleri<br />(tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
-|**4.5**|Visual Studio 2012 'e dahildir<br /><br /> Windows 8 SDK 'sının bir parçası olarak da kullanılabilir|[4,5 Web Yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Dahil edilen:** <br/><br /> Windows 8<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Ayrıca, üzerine yükleyebilirsiniz:**<br/><br /> Windows 7 ve daha önceki sürümleri<br /> Windows Server 2008 SP2 ve daha önceki sürümleri<br />(tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
+|**4.5.1**|[Microsoft .NET Framework 4.5.1 Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Visual Studio 2013, Visual Studio 2012 veya diğer Ides ile kullanım için|[4.5.1 Web Yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [4.5.1 çevrimdışı yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**Dahil edilen:**<br /> <br/>Windows 8.1<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **Ayrıca, üzerine yükleyebilirsiniz:**<br /><br/> Windows 8 ve önceki sürümler<br /> Windows Server 2012 ve öncesi<br />(tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
+|**4.5**|Visual Studio 2012 'e dahildir<br /><br /> Windows 8 SDK 'sının bir parçası olarak da kullanılabilir|[4,5 Web Yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Dahil edilen:** <br/><br /> Windows 8<br /> Windows Server 2012<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Ayrıca, üzerine yükleyebilirsiniz:**<br/><br /> Windows 7 ve daha önceki sürümleri<br /> Windows Server 2008 SP2 ve daha önceki sürümleri<br />(tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
 
 Desteklenen tüm platformlarda, varsa .NET Framework belirli bir sürümü için **Geliştirici paketini** yükleyebilirsiniz.
 

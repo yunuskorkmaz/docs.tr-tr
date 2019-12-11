@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 4a1eb818dfd8fb48b003ca184dd533f73d342662
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 15ea77d13a93d88bd996a22b6fe1aaad81df572d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973100"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959708"
 ---
 # <a name="how-to-search-strings"></a>Dizeleri arama
 
@@ -43,22 +43,22 @@ Aşağıdaki kod örneği, bir tümcede "The" veya "onların" sözcüğünü ara
 
 Arama deseninin aranacağı metin açıklanır. Aşağıdaki tabloda, arama deseninin her bir öğesi açıklanmaktadır. (Aşağıdaki tablo, bir C# dizede `\\` olarak kaçılması gereken tek `\` kullanır).
 
-| Kalıp  | Açıklama     |
+| kalıp  | Açıklama     |
 | -------- |-------------|
-| için      | "The" metni Eşleştir |
+| the      | "The" metni Eşleştir |
 | (EIR)?   | 0 veya 1 "EIR" tekrarını Eşleştir |
 | \s       | boşluk karakteriyle Eşleştir    |
   
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
   
 > [!TIP]
-> Tam bir dizeyi ararken `string` yöntemler genellikle daha iyi seçimlerdir. Normal ifadeler, bazı desenler aranırken bir kaynak dizeniz daha iyidir.
+> Tam bir dizeyi ararken `string` yöntemler genellikle daha iyi seçimlerdir. Normal ifadeler, bir kaynak dizesindeki bazı desenler aranırken daha iyidir.
 
 ## <a name="does-a-string-follow-a-pattern"></a>Bir dize bir düzene uyar mi?
 
 Aşağıdaki kod, dizideki her bir dizenin biçimini doğrulamak için normal ifadeleri kullanır. Doğrulama, her bir dizenin üç basamaklı rakam ile ayrıldığı bir telefon numarası biçimine sahip olmasını gerektirir, ilk iki grup üç basamak içerir ve üçüncü grup dört basamak içerir. Arama deseninin `^\\d{3}-\\d{3}-\\d{4}$`normal ifadesi kullanılır. Daha fazla bilgi için bkz. [normal Ifade dili-hızlı başvuru](../../standard/base-types/regular-expression-language-quick-reference.md).
 
-| Kalıp  | Açıklama                             |
+| kalıp  | Açıklama                             |
 | -------- |-------------------------------------|
 | ^        | dizenin başlangıcını eşleştirir |
 | \d{3}    | tam 3 basamaklı karakterle eşleşir  |
