@@ -2,18 +2,18 @@
 title: 'Taşıma: UDP üzerinden Özel İşlemler Örneği'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: 09ce715da4cf4d4fb4c959f63af3bb2c8c68b841
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 00e6d593e185cd09ea66e88f38cf1d8e71785704
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711999"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960414"
 ---
-# <a name="transport-custom-transactions-over-udp-sample"></a><span data-ttu-id="d3f62-102">Taşıma: UDP üzerinden Özel İşlemler Örneği</span><span class="sxs-lookup"><span data-stu-id="d3f62-102">Transport: Custom Transactions over UDP Sample</span></span>
-<span data-ttu-id="d3f62-103">Bu örnek, Windows Communication Foundation (WCF)[taşıma genişletilebilirliğine](../../../../docs/framework/wcf/samples/transport-extensibility.md) [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneğini temel alır.</span><span class="sxs-lookup"><span data-stu-id="d3f62-103">This sample is based on the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample in the Windows Communication Foundation (WCF)[Transport Extensibility](../../../../docs/framework/wcf/samples/transport-extensibility.md).</span></span> <span data-ttu-id="d3f62-104">Özel işlem akışını desteklemek için UDP aktarım örneğini genişletir ve <xref:System.ServiceModel.Channels.TransactionMessageProperty> özelliğinin kullanımını gösterir.</span><span class="sxs-lookup"><span data-stu-id="d3f62-104">It extends the UDP Transport sample to support custom transaction flow and demonstrates the use of the <xref:System.ServiceModel.Channels.TransactionMessageProperty> property.</span></span>  
+# <a name="transport-custom-transactions-over-udp-sample"></a><span data-ttu-id="95336-102">Taşıma: UDP üzerinden Özel İşlemler Örneği</span><span class="sxs-lookup"><span data-stu-id="95336-102">Transport: Custom Transactions over UDP Sample</span></span>
+<span data-ttu-id="95336-103">Bu örnek, Windows Communication Foundation (WCF)[taşıma genişletilebilirliğine](../../../../docs/framework/wcf/samples/transport-extensibility.md) [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneğini temel alır.</span><span class="sxs-lookup"><span data-stu-id="95336-103">This sample is based on the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample in the Windows Communication Foundation (WCF)[Transport Extensibility](../../../../docs/framework/wcf/samples/transport-extensibility.md).</span></span> <span data-ttu-id="95336-104">Özel işlem akışını desteklemek için UDP aktarım örneğini genişletir ve <xref:System.ServiceModel.Channels.TransactionMessageProperty> özelliğinin kullanımını gösterir.</span><span class="sxs-lookup"><span data-stu-id="95336-104">It extends the UDP Transport sample to support custom transaction flow and demonstrates the use of the <xref:System.ServiceModel.Channels.TransactionMessageProperty> property.</span></span>  
   
-## <a name="code-changes-in-the-udp-transport-sample"></a><span data-ttu-id="d3f62-105">UDP aktarım örneğindeki kod değişiklikleri</span><span class="sxs-lookup"><span data-stu-id="d3f62-105">Code Changes in the UDP Transport Sample</span></span>  
- <span data-ttu-id="d3f62-106">İşlem akışını göstermek için örnek, `ICalculatorContract` için hizmet sözleşmesini `CalculatorService.Add()`için bir işlem kapsamı gerektirecek şekilde değiştirir.</span><span class="sxs-lookup"><span data-stu-id="d3f62-106">To demonstrate transaction flow, the sample changes the service contract for `ICalculatorContract` to require a transaction scope for `CalculatorService.Add()`.</span></span> <span data-ttu-id="d3f62-107">Örnek ayrıca, `Add` işleminin sözleşmesine ek bir `System.Guid` parametresi ekler.</span><span class="sxs-lookup"><span data-stu-id="d3f62-107">The sample also adds an extra `System.Guid` parameter to the contract of the `Add` operation.</span></span> <span data-ttu-id="d3f62-108">Bu parametre, istemci işleminin tanımlayıcısını hizmete geçirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="d3f62-108">This parameter is used to pass the identifier of the client transaction to the service.</span></span>  
+## <a name="code-changes-in-the-udp-transport-sample"></a><span data-ttu-id="95336-105">UDP aktarım örneğindeki kod değişiklikleri</span><span class="sxs-lookup"><span data-stu-id="95336-105">Code Changes in the UDP Transport Sample</span></span>  
+ <span data-ttu-id="95336-106">İşlem akışını göstermek için örnek, `ICalculatorContract` için hizmet sözleşmesini `CalculatorService.Add()`için bir işlem kapsamı gerektirecek şekilde değiştirir.</span><span class="sxs-lookup"><span data-stu-id="95336-106">To demonstrate transaction flow, the sample changes the service contract for `ICalculatorContract` to require a transaction scope for `CalculatorService.Add()`.</span></span> <span data-ttu-id="95336-107">Örnek ayrıca, `Add` işleminin sözleşmesine ek bir `System.Guid` parametresi ekler.</span><span class="sxs-lookup"><span data-stu-id="95336-107">The sample also adds an extra `System.Guid` parameter to the contract of the `Add` operation.</span></span> <span data-ttu-id="95336-108">Bu parametre, istemci işleminin tanımlayıcısını hizmete geçirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="95336-108">This parameter is used to pass the identifier of the client transaction to the service.</span></span>  
   
 ```csharp  
 class CalculatorService : IDatagramContract, ICalculatorContract  
@@ -38,7 +38,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- <span data-ttu-id="d3f62-109">[Taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneği, iletileri bir istemci ve hizmet arasında GEÇIRMEK için UDP paketlerini kullanır.</span><span class="sxs-lookup"><span data-stu-id="d3f62-109">The [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample uses UDP packets to pass messages between a client and a service.</span></span> <span data-ttu-id="d3f62-110">[Taşıma: özel aktarım örneği](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) , iletileri aktarmak için aynı mekanizmayı kullanır, ancak bir işlem akışlı olduğunda, kodlanmış ILETIYLE birlikte UDP paketine eklenir.</span><span class="sxs-lookup"><span data-stu-id="d3f62-110">The [Transport: Custom Transport Sample](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) uses the same mechanism to transport messages, but when a transaction is flowed, it is inserted into the UDP packet along with the encoded message.</span></span>  
+ <span data-ttu-id="95336-109">[Taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneği, iletileri bir istemci ve hizmet arasında GEÇIRMEK için UDP paketlerini kullanır.</span><span class="sxs-lookup"><span data-stu-id="95336-109">The [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample uses UDP packets to pass messages between a client and a service.</span></span> <span data-ttu-id="95336-110">[Taşıma: özel aktarım örneği](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) , iletileri aktarmak için aynı mekanizmayı kullanır, ancak bir işlem akışlı olduğunda, kodlanmış ILETIYLE birlikte UDP paketine eklenir.</span><span class="sxs-lookup"><span data-stu-id="95336-110">The [Transport: Custom Transport Sample](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) uses the same mechanism to transport messages, but when a transaction is flowed, it is inserted into the UDP packet along with the encoded message.</span></span>  
   
 ```csharp  
 byte[] txmsgBuffer = TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
@@ -46,13 +46,13 @@ byte[] txmsgBuffer = TransactionMessageBuffer.WriteTransactionMessageBuffer(txPr
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- <span data-ttu-id="d3f62-111">`TransactionMessageBuffer.WriteTransactionMessageBuffer`, ileti varlığıyla geçerli işlemin yayma belirtecini birleştirmek ve bir arabelleğe yerleştirmek için yeni işlevsellik içeren bir yardımcı yöntemdir.</span><span class="sxs-lookup"><span data-stu-id="d3f62-111">`TransactionMessageBuffer.WriteTransactionMessageBuffer` is a helper method that contains new functionality to merge the propagation token for the current transaction with the message entity and place it into a buffer.</span></span>  
+ <span data-ttu-id="95336-111">`TransactionMessageBuffer.WriteTransactionMessageBuffer`, ileti varlığıyla geçerli işlemin yayma belirtecini birleştirmek ve bir arabelleğe yerleştirmek için yeni işlevsellik içeren bir yardımcı yöntemdir.</span><span class="sxs-lookup"><span data-stu-id="95336-111">`TransactionMessageBuffer.WriteTransactionMessageBuffer` is a helper method that contains new functionality to merge the propagation token for the current transaction with the message entity and place it into a buffer.</span></span>  
   
- <span data-ttu-id="d3f62-112">Özel işlem akışı taşıması için, istemci uygulamasının işlem akışı gerektirdiğini ve bu bilgileri WCF 'ye hangi hizmet işlemlerini iletmesini bilmelidir.</span><span class="sxs-lookup"><span data-stu-id="d3f62-112">For custom transaction flow transport, the client implementation must know what service operations require transaction flow and to pass this information to WCF.</span></span> <span data-ttu-id="d3f62-113">Ayrıca, Kullanıcı işleminin Aktarım katmanına iletilmesi için bir mekanizma olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="d3f62-113">There should also be a mechanism for transmitting the user transaction to the transport layer.</span></span> <span data-ttu-id="d3f62-114">Bu örnek, bu bilgileri almak için "WCF ileti denetçiler" kullanır.</span><span class="sxs-lookup"><span data-stu-id="d3f62-114">This sample uses "WCF message inspectors" to obtain this information.</span></span> <span data-ttu-id="d3f62-115">Burada uygulanan istemci ileti denetçisi, `TransactionFlowInspector`olarak adlandırılan aşağıdaki görevleri gerçekleştirir:</span><span class="sxs-lookup"><span data-stu-id="d3f62-115">The client message inspector implemented here, which is called `TransactionFlowInspector`, performs the following tasks:</span></span>  
+ <span data-ttu-id="95336-112">Özel işlem akışı taşıması için, istemci uygulamasının işlem akışı gerektirdiğini ve bu bilgileri WCF 'ye hangi hizmet işlemlerini iletmesini bilmelidir.</span><span class="sxs-lookup"><span data-stu-id="95336-112">For custom transaction flow transport, the client implementation must know what service operations require transaction flow and to pass this information to WCF.</span></span> <span data-ttu-id="95336-113">Ayrıca, Kullanıcı işleminin Aktarım katmanına iletilmesi için bir mekanizma olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="95336-113">There should also be a mechanism for transmitting the user transaction to the transport layer.</span></span> <span data-ttu-id="95336-114">Bu örnek, bu bilgileri almak için "WCF ileti denetçiler" kullanır.</span><span class="sxs-lookup"><span data-stu-id="95336-114">This sample uses "WCF message inspectors" to obtain this information.</span></span> <span data-ttu-id="95336-115">Burada uygulanan istemci ileti denetçisi, `TransactionFlowInspector`olarak adlandırılan aşağıdaki görevleri gerçekleştirir:</span><span class="sxs-lookup"><span data-stu-id="95336-115">The client message inspector implemented here, which is called `TransactionFlowInspector`, performs the following tasks:</span></span>  
   
-- <span data-ttu-id="d3f62-116">Belirli bir ileti eylemi için bir işlemin akışını mı yoksa (Bu `IsTxFlowRequiredForThisOperation()`gerçekleşir) belirler.</span><span class="sxs-lookup"><span data-stu-id="d3f62-116">Determines whether a transaction must be flowed for a given message action (this takes place in `IsTxFlowRequiredForThisOperation()`).</span></span>  
+- <span data-ttu-id="95336-116">Belirli bir ileti eylemi için bir işlemin akışını mı yoksa (Bu `IsTxFlowRequiredForThisOperation()`gerçekleşir) belirler.</span><span class="sxs-lookup"><span data-stu-id="95336-116">Determines whether a transaction must be flowed for a given message action (this takes place in `IsTxFlowRequiredForThisOperation()`).</span></span>  
   
-- <span data-ttu-id="d3f62-117">`TransactionFlowProperty`kullanarak geçerli ortam hareketini iletiye ekler (Bu işlem, `BeforeSendRequest()`için yapılır).</span><span class="sxs-lookup"><span data-stu-id="d3f62-117">Attaches the current ambient transaction to the message using `TransactionFlowProperty`, if a transaction is required to be flowed (this is done in `BeforeSendRequest()`).</span></span>  
+- <span data-ttu-id="95336-117">`TransactionFlowProperty`kullanarak geçerli ortam hareketini iletiye ekler (Bu işlem, `BeforeSendRequest()`için yapılır).</span><span class="sxs-lookup"><span data-stu-id="95336-117">Attaches the current ambient transaction to the message using `TransactionFlowProperty`, if a transaction is required to be flowed (this is done in `BeforeSendRequest()`).</span></span>  
   
 ```csharp  
 public class TransactionFlowInspector : IClientMessageInspector  
@@ -92,7 +92,7 @@ public class TransactionFlowInspector : IClientMessageInspector
 }  
 ```  
   
- <span data-ttu-id="d3f62-118">`TransactionFlowInspector` kendisine özel bir davranış kullanılarak çerçeveye geçirilir: `TransactionFlowBehavior`.</span><span class="sxs-lookup"><span data-stu-id="d3f62-118">The `TransactionFlowInspector` itself is passed to the framework using a custom behavior: the `TransactionFlowBehavior`.</span></span>  
+ <span data-ttu-id="95336-118">`TransactionFlowInspector` kendisine özel bir davranış kullanılarak çerçeveye geçirilir: `TransactionFlowBehavior`.</span><span class="sxs-lookup"><span data-stu-id="95336-118">The `TransactionFlowInspector` itself is passed to the framework using a custom behavior: the `TransactionFlowBehavior`.</span></span>  
   
 ```csharp  
 public class TransactionFlowBehavior : IEndpointBehavior  
@@ -117,7 +117,7 @@ public class TransactionFlowBehavior : IEndpointBehavior
 }  
 ```  
   
- <span data-ttu-id="d3f62-119">Önceki mekanizmaya sahip olan Kullanıcı kodu, hizmet işlemini çağırmadan önce bir `TransactionScope` oluşturur.</span><span class="sxs-lookup"><span data-stu-id="d3f62-119">With the preceding mechanism in place, the user code creates a `TransactionScope` before calling the service operation.</span></span> <span data-ttu-id="d3f62-120">İleti denetçisi, hizmet işlemine taşınmasının gerekli olması durumunda işlemin aktarıma geçirilmesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="d3f62-120">The message inspector ensures that the transaction is passed to the transport in case it is required to be flowed to the service operation.</span></span>  
+ <span data-ttu-id="95336-119">Önceki mekanizmaya sahip olan Kullanıcı kodu, hizmet işlemini çağırmadan önce bir `TransactionScope` oluşturur.</span><span class="sxs-lookup"><span data-stu-id="95336-119">With the preceding mechanism in place, the user code creates a `TransactionScope` before calling the service operation.</span></span> <span data-ttu-id="95336-120">İleti denetçisi, hizmet işlemine taşınmasının gerekli olması durumunda işlemin aktarıma geçirilmesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="95336-120">The message inspector ensures that the transaction is passed to the transport in case it is required to be flowed to the service operation.</span></span>  
   
 ```csharp  
 CalculatorContractClient calculatorClient = new CalculatorContractClient("SampleProfileUdpBinding_ICalculatorContract");  
@@ -151,7 +151,7 @@ catch (Exception)
 }  
 ```  
   
- <span data-ttu-id="d3f62-121">İstemciden bir UDP paketi aldıktan sonra, hizmet iletiyi ayıklayarak iletiyi ve muhtemelen bir işlemi geri alır.</span><span class="sxs-lookup"><span data-stu-id="d3f62-121">Upon receiving a UDP packet from the client, the service deserializes it to extract the message and possibly a transaction.</span></span>  
+ <span data-ttu-id="95336-121">İstemciden bir UDP paketi aldıktan sonra, hizmet iletiyi ayıklayarak iletiyi ve muhtemelen bir işlemi geri alır.</span><span class="sxs-lookup"><span data-stu-id="95336-121">Upon receiving a UDP packet from the client, the service deserializes it to extract the message and possibly a transaction.</span></span>  
   
 ```csharp  
 count = listenSocket.EndReceiveFrom(result, ref dummy);  
@@ -159,9 +159,9 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
 ```  
   
- <span data-ttu-id="d3f62-122">`TransactionMessageBuffer.ReadTransactionMessageBuffer()`, `TransactionMessageBuffer.WriteTransactionMessageBuffer()`tarafından gerçekleştirilen serileştirme sürecini ters yükleyen yardımcı yöntemdir.</span><span class="sxs-lookup"><span data-stu-id="d3f62-122">`TransactionMessageBuffer.ReadTransactionMessageBuffer()` is the helper method that reverses the serialization process performed by `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.</span></span>  
+ <span data-ttu-id="95336-122">`TransactionMessageBuffer.ReadTransactionMessageBuffer()`, `TransactionMessageBuffer.WriteTransactionMessageBuffer()`tarafından gerçekleştirilen serileştirme sürecini ters yükleyen yardımcı yöntemdir.</span><span class="sxs-lookup"><span data-stu-id="95336-122">`TransactionMessageBuffer.ReadTransactionMessageBuffer()` is the helper method that reverses the serialization process performed by `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.</span></span>  
   
- <span data-ttu-id="d3f62-123">Bir işlem içinde akıtıdıysa, `TransactionMessageProperty`iletiye eklenir.</span><span class="sxs-lookup"><span data-stu-id="d3f62-123">If a transaction was flowed in, it is appended to the message in the `TransactionMessageProperty`.</span></span>  
+ <span data-ttu-id="95336-123">Bir işlem içinde akıtıdıysa, `TransactionMessageProperty`iletiye eklenir.</span><span class="sxs-lookup"><span data-stu-id="95336-123">If a transaction was flowed in, it is appended to the message in the `TransactionMessageProperty`.</span></span>  
   
 ```csharp  
 message = MessageEncoderFactory.Encoder.ReadMessage(msg, bufferManager);  
@@ -172,15 +172,15 @@ if (transaction != null)
 }  
 ```  
   
- <span data-ttu-id="d3f62-124">Bu, Dispatcher 'ın işlemi dağıtım zamanında almasını sağlar ve ileti tarafından belirtilen hizmet işlemini çağırırken onu kullanır.</span><span class="sxs-lookup"><span data-stu-id="d3f62-124">This ensures that the dispatcher picks up the transaction at dispatch time and uses it when calling the service operation addressed by the message.</span></span>  
+ <span data-ttu-id="95336-124">Bu, Dispatcher 'ın işlemi dağıtım zamanında almasını sağlar ve ileti tarafından belirtilen hizmet işlemini çağırırken onu kullanır.</span><span class="sxs-lookup"><span data-stu-id="95336-124">This ensures that the dispatcher picks up the transaction at dispatch time and uses it when calling the service operation addressed by the message.</span></span>  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="d3f62-125">Örneği ayarlamak, derlemek ve çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="d3f62-125">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="95336-125">Örneği ayarlamak, derlemek ve çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="95336-125">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="d3f62-126">Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="d3f62-126">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+1. <span data-ttu-id="95336-126">Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="95336-126">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2. <span data-ttu-id="d3f62-127">Geçerli örnek, [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneğine benzer şekilde çalıştırılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="d3f62-127">The current sample should be run similarly to the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span> <span data-ttu-id="d3f62-128">Çalıştırmak için, hizmeti UdpTestService. exe ile başlatın.</span><span class="sxs-lookup"><span data-stu-id="d3f62-128">To run it, start the service with UdpTestService.exe.</span></span> <span data-ttu-id="d3f62-129">[!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]çalıştırıyorsanız, hizmeti yükseltilmiş ayrıcalıklarla başlatmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="d3f62-129">If you are running [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], you must start the service with elevated privileges.</span></span> <span data-ttu-id="d3f62-130">Bunu yapmak için dosya Gezgini 'nde UdpTestService. exe ' ye sağ tıklayın ve **yönetici olarak çalıştır**' a tıklayın.</span><span class="sxs-lookup"><span data-stu-id="d3f62-130">To do so, right-click UdpTestService.exe in File Explorer and click **Run as administrator**.</span></span>  
+2. <span data-ttu-id="95336-127">Geçerli örnek, [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneğine benzer şekilde çalıştırılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="95336-127">The current sample should be run similarly to the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span> <span data-ttu-id="95336-128">Çalıştırmak için, hizmeti UdpTestService. exe ile başlatın.</span><span class="sxs-lookup"><span data-stu-id="95336-128">To run it, start the service with UdpTestService.exe.</span></span> <span data-ttu-id="95336-129">Windows Vista çalıştırıyorsanız, hizmeti yükseltilmiş ayrıcalıklarla başlatmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="95336-129">If you are running Windows Vista, you must start the service with elevated privileges.</span></span> <span data-ttu-id="95336-130">Bunu yapmak için dosya Gezgini 'nde UdpTestService. exe ' ye sağ tıklayın ve **yönetici olarak çalıştır**' a tıklayın.</span><span class="sxs-lookup"><span data-stu-id="95336-130">To do so, right-click UdpTestService.exe in File Explorer and click **Run as administrator**.</span></span>  
   
-3. <span data-ttu-id="d3f62-131">Bu, aşağıdaki çıktıyı üretir.</span><span class="sxs-lookup"><span data-stu-id="d3f62-131">This produces the following output.</span></span>  
+3. <span data-ttu-id="95336-131">Bu, aşağıdaki çıktıyı üretir.</span><span class="sxs-lookup"><span data-stu-id="95336-131">This produces the following output.</span></span>  
   
     ```console  
     Testing Udp From Code.  
@@ -188,7 +188,7 @@ if (transaction != null)
     Press <ENTER> to terminate the service and start service from config...  
     ```  
   
-4. <span data-ttu-id="d3f62-132">Şu anda, istemcisini UdpTestClient. exe ' yi çalıştırarak başlatabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d3f62-132">At this time, you can start the client by running UdpTestClient.exe.</span></span> <span data-ttu-id="d3f62-133">İstemci tarafından üretilen çıkış aşağıdaki gibidir.</span><span class="sxs-lookup"><span data-stu-id="d3f62-133">The output produced by the client is as follows.</span></span>  
+4. <span data-ttu-id="95336-132">Şu anda, istemcisini UdpTestClient. exe ' yi çalıştırarak başlatabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="95336-132">At this time, you can start the client by running UdpTestClient.exe.</span></span> <span data-ttu-id="95336-133">İstemci tarafından üretilen çıkış aşağıdaki gibidir.</span><span class="sxs-lookup"><span data-stu-id="95336-133">The output produced by the client is as follows.</span></span>  
   
     ```console 
     0  
@@ -199,7 +199,7 @@ if (transaction != null)
     Press <ENTER> to complete test.  
     ```  
   
-5. <span data-ttu-id="d3f62-134">Hizmet çıktısı aşağıdaki gibidir.</span><span class="sxs-lookup"><span data-stu-id="d3f62-134">The service output is as follows.</span></span>  
+5. <span data-ttu-id="95336-134">Hizmet çıktısı aşağıdaki gibidir.</span><span class="sxs-lookup"><span data-stu-id="95336-134">The service output is as follows.</span></span>  
   
     ```console 
     Hello, world!  
@@ -219,9 +219,9 @@ if (transaction != null)
        adding 4 + 8  
     ```  
   
-6. <span data-ttu-id="d3f62-135">Hizmet uygulaması, `CalculatorService.Add()` işleminin `clientTransactionId` parametresinde, hizmet işleminin tanımlayıcısına kadar, istemci tarafından gönderilen işlem tanımlayıcısıyla eşleşiyorsa `The client transaction has flowed to the service` iletiyi görüntüler.</span><span class="sxs-lookup"><span data-stu-id="d3f62-135">The service application displays the message `The client transaction has flowed to the service` if it can match the transaction identifier sent by the client, in the `clientTransactionId` parameter of the `CalculatorService.Add()` operation, to the identifier of the service transaction.</span></span> <span data-ttu-id="d3f62-136">Bir eşleşme yalnızca istemci işlemi hizmete akan ise elde edilir.</span><span class="sxs-lookup"><span data-stu-id="d3f62-136">A match is obtained only if the client transaction has flowed to the service.</span></span>  
+6. <span data-ttu-id="95336-135">Hizmet uygulaması, `CalculatorService.Add()` işleminin `clientTransactionId` parametresinde, hizmet işleminin tanımlayıcısına kadar, istemci tarafından gönderilen işlem tanımlayıcısıyla eşleşiyorsa `The client transaction has flowed to the service` iletiyi görüntüler.</span><span class="sxs-lookup"><span data-stu-id="95336-135">The service application displays the message `The client transaction has flowed to the service` if it can match the transaction identifier sent by the client, in the `clientTransactionId` parameter of the `CalculatorService.Add()` operation, to the identifier of the service transaction.</span></span> <span data-ttu-id="95336-136">Bir eşleşme yalnızca istemci işlemi hizmete akan ise elde edilir.</span><span class="sxs-lookup"><span data-stu-id="95336-136">A match is obtained only if the client transaction has flowed to the service.</span></span>  
   
-7. <span data-ttu-id="d3f62-137">İstemci uygulamasını yapılandırma kullanılarak yayınlanan uç noktalara karşı çalıştırmak için, hizmet uygulaması penceresinde ENTER tuşuna basın ve ardından test istemcisini yeniden çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="d3f62-137">To run the client application against endpoints published using configuration, press ENTER on the service application window and then run the test client again.</span></span> <span data-ttu-id="d3f62-138">Hizmette aşağıdaki çıktıyı görmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="d3f62-138">You should see the following output on the service.</span></span>  
+7. <span data-ttu-id="95336-137">İstemci uygulamasını yapılandırma kullanılarak yayınlanan uç noktalara karşı çalıştırmak için, hizmet uygulaması penceresinde ENTER tuşuna basın ve ardından test istemcisini yeniden çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="95336-137">To run the client application against endpoints published using configuration, press ENTER on the service application window and then run the test client again.</span></span> <span data-ttu-id="95336-138">Hizmette aşağıdaki çıktıyı görmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="95336-138">You should see the following output on the service.</span></span>  
   
     ```console  
     Testing Udp From Config.  
@@ -229,15 +229,15 @@ if (transaction != null)
     Press <ENTER> to terminate the service and exit...  
     ```  
   
-8. <span data-ttu-id="d3f62-139">İstemcisini hizmete karşı çalıştırmak daha önce olduğu gibi benzer bir çıktı üretir.</span><span class="sxs-lookup"><span data-stu-id="d3f62-139">Running the client against the service now produces similar output as before.</span></span>  
+8. <span data-ttu-id="95336-139">İstemcisini hizmete karşı çalıştırmak daha önce olduğu gibi benzer bir çıktı üretir.</span><span class="sxs-lookup"><span data-stu-id="95336-139">Running the client against the service now produces similar output as before.</span></span>  
   
-9. <span data-ttu-id="d3f62-140">Svcutil. exe kullanarak istemci kodunu ve yapılandırmayı yeniden oluşturmak için, hizmet uygulamasını başlatın ve örnek kök dizininden aşağıdaki Svcutil. exe komutunu çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="d3f62-140">To regenerate the client code and configuration using Svcutil.exe, start the service application and then run the following Svcutil.exe command from the root directory of the sample.</span></span>  
+9. <span data-ttu-id="95336-140">Svcutil. exe kullanarak istemci kodunu ve yapılandırmayı yeniden oluşturmak için, hizmet uygulamasını başlatın ve örnek kök dizininden aşağıdaki Svcutil. exe komutunu çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="95336-140">To regenerate the client code and configuration using Svcutil.exe, start the service application and then run the following Svcutil.exe command from the root directory of the sample.</span></span>  
   
     ```console  
     svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
     ```  
   
-10. <span data-ttu-id="d3f62-141">Svcutil. exe ' nin `sampleProfileUdpBinding`için bağlama uzantısı yapılandırması üretmediğini unutmayın; el ile eklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="d3f62-141">Note that Svcutil.exe does not generate the binding extension configuration for the `sampleProfileUdpBinding`; you must add it manually.</span></span>  
+10. <span data-ttu-id="95336-141">Svcutil. exe ' nin `sampleProfileUdpBinding`için bağlama uzantısı yapılandırması üretmediğini unutmayın; el ile eklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="95336-141">Note that Svcutil.exe does not generate the binding extension configuration for the `sampleProfileUdpBinding`; you must add it manually.</span></span>  
   
     ```xml  
     <configuration>  
@@ -254,14 +254,14 @@ if (transaction != null)
     ```  
   
 > [!IMPORTANT]
-> <span data-ttu-id="d3f62-142">Örnekler makinenizde zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="d3f62-142">The samples may already be installed on your machine.</span></span> <span data-ttu-id="d3f62-143">Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.</span><span class="sxs-lookup"><span data-stu-id="d3f62-143">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="95336-142">Örnekler makinenizde zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="95336-142">The samples may already be installed on your machine.</span></span> <span data-ttu-id="95336-143">Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.</span><span class="sxs-lookup"><span data-stu-id="95336-143">Check for the following (default) directory before continuing.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> <span data-ttu-id="d3f62-144">Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin.</span><span class="sxs-lookup"><span data-stu-id="d3f62-144">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="d3f62-145">Bu örnek, aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="d3f62-145">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="95336-144">Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin.</span><span class="sxs-lookup"><span data-stu-id="95336-144">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="95336-145">Bu örnek, aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="95336-145">This sample is located in the following directory.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
-## <a name="see-also"></a><span data-ttu-id="d3f62-146">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d3f62-146">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="95336-146">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="95336-146">See also</span></span>
 
-- [<span data-ttu-id="d3f62-147">Taşıma: UDP</span><span class="sxs-lookup"><span data-stu-id="d3f62-147">Transport: UDP</span></span>](../../../../docs/framework/wcf/samples/transport-udp.md)
+- [<span data-ttu-id="95336-147">Taşıma: UDP</span><span class="sxs-lookup"><span data-stu-id="95336-147">Transport: UDP</span></span>](../../../../docs/framework/wcf/samples/transport-udp.md)
