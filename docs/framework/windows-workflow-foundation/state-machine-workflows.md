@@ -21,7 +21,7 @@ Durum makinesi, program geliştirmeye yönelik iyi bilinen bir paradigma sahipti
   
 - <xref:System.Activities.Statements.Transition>  
   
- Bir durum makinesi iş akışı oluşturmak için, durumlar <xref:System.Activities.Statements.StateMachine> etkinliğe eklenir ve geçişler, durumlar arasındaki akışı denetler. Aşağıdaki ekran görüntüsünde, kullanmaya başlama [öğreticisinde](getting-started-tutorial.md) [nasıl yapılır: durum makinesi iş akışı oluşturma](how-to-create-a-state-machine-workflow.md), üç durumlu ve üç geçiş içeren bir durum makinesi iş akışını gösterir. **Başlatma hedefi** başlangıç durumudur ve iş akışındaki ilk durumu temsil eder. Bu, **Başlangıç** düğümünden bu satıra satır başına atanır. İş akışındaki son durum **FinalState**olarak adlandırılır ve iş akışının tamamlandığı noktayı temsil eder.  
+ Bir durum makinesi iş akışı oluşturmak için, durumlar <xref:System.Activities.Statements.StateMachine> etkinliğe eklenir ve geçişler, durumlar arasındaki akışı denetler. Aşağıdaki ekran görüntüsünde, kullanmaya başlama [öğreticisinde](getting-started-tutorial.md) [nasıl yapılır: Bir durum makinesi Iş akışı oluşturun](how-to-create-a-state-machine-workflow.md), üç durumlu ve üç geçiş içeren bir durum makinesi iş akışını gösterir. **Başlatma hedefi** başlangıç durumudur ve iş akışındaki ilk durumu temsil eder. Bu, **Başlangıç** düğümünden bu satıra satır başına atanır. İş akışındaki son durum **FinalState**olarak adlandırılır ve iş akışının tamamlandığı noktayı temsil eder.  
   
  ![Tamamlanan durum makinesi iş akışını gösteren çizim.](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
@@ -59,12 +59,12 @@ Durum makinesi, program geliştirmeye yönelik iyi bilinen bir paradigma sahipti
 > [!NOTE]
 > Bir geçişin <xref:System.Activities.Statements.Transition.Condition%2A>, `False` (veya paylaşılan bir tetikleyici geçişinin tüm koşullarına `False`) değerlendirilirse, geçişin gerçekleşmeyeceğini ve durumdan tüm geçişlerin tüm tetikleyicilerinin yeniden planlanacağını unutmayın.  
   
- Durum makinesi iş akışları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: durum makinesi Iş akışı](how-to-create-a-state-machine-workflow.md), [StateMachine etkinlik Tasarımcısı](/visualstudio/workflow-designer/statemachine-activity-designer), [durum etkinlik Tasarımcısı](/visualstudio/workflow-designer/state-activity-designer), [FinalState etkinlik Tasarımcısı](/visualstudio/workflow-designer/finalstate-activity-designer)ve [geçiş etkinlik Tasarımcısı](/visualstudio/workflow-designer/transition-activity-designer).  
+ Durum makinesi iş akışları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir durum makinesi Iş akışı](how-to-create-a-state-machine-workflow.md), [StateMachine etkinlik Tasarımcısı](/visualstudio/workflow-designer/statemachine-activity-designer), [durum etkinlik Tasarımcısı](/visualstudio/workflow-designer/state-activity-designer), [FinalState etkinlik Tasarımcısı](/visualstudio/workflow-designer/finalstate-activity-designer)ve [geçiş etkinlik Tasarımcısı](/visualstudio/workflow-designer/transition-activity-designer)oluşturun.  
   
 ## <a name="state-machine-terminology"></a>Durum makinesi terminolojisi  
  Bu bölüm, bu konu başlığı altında kullanılan durum makinesi sözlüğünü tanımlar.  
   
- Durum  
+ State  
  Bir durum makinesini oluşturan temel birim. Bir durum makinesi belirli bir zamanda tek bir durumda olabilir.  
   
  Giriş eylemi  
@@ -79,7 +79,7 @@ Durum makinesi, program geliştirmeye yönelik iyi bilinen bir paradigma sahipti
  Paylaşılan geçiş  
  Kaynak durumunu paylaşan ve bir veya daha fazla geçişle tetikleyen, ancak benzersiz bir koşul ve eyleme sahip olan bir geçiş.  
   
- Tetikleyicinin  
+ Tetikleyici  
  Bir geçişin oluşmasına neden olan tetikleme etkinliği.  
   
  Koşul  
@@ -102,7 +102,7 @@ Durum makinesi, program geliştirmeye yönelik iyi bilinen bir paradigma sahipti
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Durum Makinesi İş Akışı Oluşturma](how-to-create-a-state-machine-workflow.md)
+- [Nasıl yapılır: Durum makinesi Iş akışı oluşturma](how-to-create-a-state-machine-workflow.md)
 - [StateMachine Etkinlik Tasarımcısı](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [State Etkinlik Tasarımcısı](/visualstudio/workflow-designer/state-activity-designer)
 - [FinalState Etkinlik Tasarımcısı](/visualstudio/workflow-designer/finalstate-activity-designer)
