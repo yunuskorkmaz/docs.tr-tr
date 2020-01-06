@@ -5,8 +5,6 @@
 - name: Başlarken
   href: getting-started/index.md
   items:
-    - name: Visual Studio'daki Önemli Visual Basic Değişiklikleri
-      href: getting-started/breaking-changes-in-visual-studio.md
     - name: Visual Basic Programcıları için Ek Kaynaklar
       href: getting-started/additional-resources.md
 - name: Uygulama Geliştirme
@@ -256,7 +254,7 @@
       href: language-reference/typographic-and-code-conventions.md
     - name: Visual Basic Çalışma Süresi Kitaplık Üyeleri
       href: language-reference/runtime-library-members.md
-    - name: Anahtar sözcükler
+    - name: Anahtar Sözcükler
       href: language-reference/keywords/index.md
       items:
         - name: Dizi Özeti
@@ -401,7 +399,7 @@
           href: language-reference/modifiers/notinheritable.md
         - name: NotOverridable
           href: language-reference/modifiers/notoverridable.md
-        - name: İsteğe bağlı
+        - name: İsteğe Bağlı
           href: language-reference/modifiers/optional.md
         - name: Out (Genel Değiştirici)
           href: language-reference/modifiers/out-generic-modifier.md

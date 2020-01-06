@@ -57,7 +57,7 @@
     - name: Yönetilmeyen API Başvurusu
       href: unmanaged-api/
     - name: XAML Hizmetleri
-      href: xaml-services/
+      href: ../desktop-wpf/xaml-services/
 - name: Araçlar
   href: tools/
 - name: Ek Sınıf Kitaplıkları ve API'ler
