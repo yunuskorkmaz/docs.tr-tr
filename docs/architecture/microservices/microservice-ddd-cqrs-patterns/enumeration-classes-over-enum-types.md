@@ -2,24 +2,24 @@
 title: Sabit listesi türleri yerine Sabit Listesi sınıfları kullanma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | İkinci öğesinin bazı sınırlamalarını çözmenin bir yolu olarak, numaralandırmalar yerine numaralandırma sınıflarını nasıl kullanabileceğinizi ortadan kaldırabilirsiniz.
 ms.date: 10/08/2018
-ms.openlocfilehash: 255bccab0e1fe71e00c0d0b47c8af05f80cb760b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6752adb28b1bd0982c66fa2d021b04b999447c6e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093871"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337687"
 ---
-# <a name="use-enumeration-classes-instead-of-enum-types"></a><span data-ttu-id="7681e-103">Sabit listesi türleri yerine numaralandırma sınıfları kullanın</span><span class="sxs-lookup"><span data-stu-id="7681e-103">Use enumeration classes instead of enum types</span></span>
+# <a name="use-enumeration-classes-instead-of-enum-types"></a><span data-ttu-id="fab97-103">Sabit listesi türleri yerine numaralandırma sınıfları kullanın</span><span class="sxs-lookup"><span data-stu-id="fab97-103">Use enumeration classes instead of enum types</span></span>
 
-<span data-ttu-id="7681e-104">[Numaralandırmalar](../../../csharp/language-reference/keywords/enum.md) (veya Short için *sabit listesi türleri* ), bir integral türü etrafında ince bir dil sarmalayıcısıdır.</span><span class="sxs-lookup"><span data-stu-id="7681e-104">[Enumerations](../../../csharp/language-reference/keywords/enum.md) (or *enum types* for short) are a thin language wrapper around an integral type.</span></span> <span data-ttu-id="7681e-105">Kapalı bir değer kümesinden bir değeri depolarken, kullanımlarını sınırlamak isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7681e-105">You might want to limit their use to when you are storing one value from a closed set of values.</span></span> <span data-ttu-id="7681e-106">Boyutlara göre sınıflandırma (küçük, orta, büyük) iyi bir örnektir.</span><span class="sxs-lookup"><span data-stu-id="7681e-106">Classification based on sizes (small, medium, large) is a good example.</span></span> <span data-ttu-id="7681e-107">Denetim akışı veya daha güçlü soyutlamalar için Numaralandırmaların kullanılması [kod kokusu](https://deviq.com/code-smells/)olabilir.</span><span class="sxs-lookup"><span data-stu-id="7681e-107">Using enums for control flow or more robust abstractions can be a [code smell](https://deviq.com/code-smells/).</span></span> <span data-ttu-id="7681e-108">Bu kullanım türü, numaralandırmanın değerlerini denetleyen birçok denetim akışı deyimi ile fragla kodu doğurur.</span><span class="sxs-lookup"><span data-stu-id="7681e-108">This type of usage leads to fragile code with many control flow statements checking values of the enum.</span></span>
+<span data-ttu-id="fab97-104">[Numaralandırmalar](../../../csharp/language-reference/builtin-types/enum.md) (veya Short için *sabit listesi türleri* ), bir integral türü etrafında ince bir dil sarmalayıcısıdır.</span><span class="sxs-lookup"><span data-stu-id="fab97-104">[Enumerations](../../../csharp/language-reference/builtin-types/enum.md) (or *enum types* for short) are a thin language wrapper around an integral type.</span></span> <span data-ttu-id="fab97-105">Kapalı bir değer kümesinden bir değeri depolarken, kullanımlarını sınırlamak isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="fab97-105">You might want to limit their use to when you are storing one value from a closed set of values.</span></span> <span data-ttu-id="fab97-106">Boyutlara göre sınıflandırma (küçük, orta, büyük) iyi bir örnektir.</span><span class="sxs-lookup"><span data-stu-id="fab97-106">Classification based on sizes (small, medium, large) is a good example.</span></span> <span data-ttu-id="fab97-107">Denetim akışı veya daha güçlü soyutlamalar için Numaralandırmaların kullanılması [kod kokusu](https://deviq.com/code-smells/)olabilir.</span><span class="sxs-lookup"><span data-stu-id="fab97-107">Using enums for control flow or more robust abstractions can be a [code smell](https://deviq.com/code-smells/).</span></span> <span data-ttu-id="fab97-108">Bu kullanım türü, numaralandırmanın değerlerini denetleyen birçok denetim akışı deyimi ile fragla kodu doğurur.</span><span class="sxs-lookup"><span data-stu-id="fab97-108">This type of usage leads to fragile code with many control flow statements checking values of the enum.</span></span>
 
-<span data-ttu-id="7681e-109">Bunun yerine, nesne yönelimli bir dilin tüm zengin özelliklerini etkinleştiren numaralandırma sınıfları oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7681e-109">Instead, you can create Enumeration classes that enable all the rich features of an object-oriented language.</span></span>
+<span data-ttu-id="fab97-109">Bunun yerine, nesne yönelimli bir dilin tüm zengin özelliklerini etkinleştiren numaralandırma sınıfları oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="fab97-109">Instead, you can create Enumeration classes that enable all the rich features of an object-oriented language.</span></span>
 
-<span data-ttu-id="7681e-110">Ancak, bu önemli bir konu değildir ve birçok durumda kolaylık sağlaması için, tercih ettiğiniz takdirde normal [numaralandırma türlerini](../../../csharp/language-reference/keywords/enum.md) kullanmaya devam edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7681e-110">However, this isn't a critical topic and in many cases, for simplicity, you can still use regular [enum types](../../../csharp/language-reference/keywords/enum.md) if that's your preference.</span></span> <span data-ttu-id="7681e-111">Yine de, sabit listesi sınıflarının kullanımı işle ilgili kavramlarla ilgilidir.</span><span class="sxs-lookup"><span data-stu-id="7681e-111">Anyway, the use of enumeration classes is more related to business-related concepts.</span></span>
+<span data-ttu-id="fab97-110">Ancak, bu önemli bir konu değildir ve birçok durumda kolaylık sağlaması için, tercih ettiğiniz takdirde normal [numaralandırma türlerini](../../../csharp/language-reference/builtin-types/enum.md) kullanmaya devam edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="fab97-110">However, this isn't a critical topic and in many cases, for simplicity, you can still use regular [enum types](../../../csharp/language-reference/builtin-types/enum.md) if that's your preference.</span></span> <span data-ttu-id="fab97-111">Yine de, sabit listesi sınıflarının kullanımı işle ilgili kavramlarla ilgilidir.</span><span class="sxs-lookup"><span data-stu-id="fab97-111">Anyway, the use of enumeration classes is more related to business-related concepts.</span></span>
 
-## <a name="implement-an-enumeration-base-class"></a><span data-ttu-id="7681e-112">Numaralandırma temel sınıfı uygulama</span><span class="sxs-lookup"><span data-stu-id="7681e-112">Implement an Enumeration base class</span></span>
+## <a name="implement-an-enumeration-base-class"></a><span data-ttu-id="fab97-112">Numaralandırma temel sınıfı uygulama</span><span class="sxs-lookup"><span data-stu-id="fab97-112">Implement an Enumeration base class</span></span>
 
-<span data-ttu-id="7681e-113">EShopOnContainers 'daki sıralama mikro hizmeti, aşağıdaki örnekte gösterildiği gibi bir örnek numaralandırma temel sınıf uygulamasını sağlar:</span><span class="sxs-lookup"><span data-stu-id="7681e-113">The ordering microservice in eShopOnContainers provides a sample Enumeration base class implementation, as shown in the following example:</span></span>
+<span data-ttu-id="fab97-113">EShopOnContainers 'daki sıralama mikro hizmeti, aşağıdaki örnekte gösterildiği gibi bir örnek numaralandırma temel sınıf uygulamasını sağlar:</span><span class="sxs-lookup"><span data-stu-id="fab97-113">The ordering microservice in eShopOnContainers provides a sample Enumeration base class implementation, as shown in the following example:</span></span>
 
 ```csharp
 public abstract class Enumeration : IComparable
@@ -64,7 +64,7 @@ public abstract class Enumeration : IComparable
 }
 ```
 
-<span data-ttu-id="7681e-114">Bu sınıfı, aşağıdaki `CardType` gibi, herhangi bir varlık veya değer nesnesinde bir tür olarak kullanabilirsiniz: `Enumeration` Sınıfı:</span><span class="sxs-lookup"><span data-stu-id="7681e-114">You can use this class as a type in any entity or value object, as for the following `CardType` : `Enumeration` class:</span></span>
+<span data-ttu-id="fab97-114">Bu sınıfı, aşağıdaki `CardType` gibi, herhangi bir varlık veya değer nesnesinde bir tür olarak kullanabilirsiniz: `Enumeration` Sınıfı:</span><span class="sxs-lookup"><span data-stu-id="fab97-114">You can use this class as a type in any entity or value object, as for the following `CardType` : `Enumeration` class:</span></span>
 
 ```csharp
 public class CardType : Enumeration
@@ -80,30 +80,30 @@ public class CardType : Enumeration
 }
 ```
 
-## <a name="additional-resources"></a><span data-ttu-id="7681e-115">Ek kaynaklar</span><span class="sxs-lookup"><span data-stu-id="7681e-115">Additional resources</span></span>
+## <a name="additional-resources"></a><span data-ttu-id="fab97-115">Ek kaynaklar</span><span class="sxs-lookup"><span data-stu-id="fab97-115">Additional resources</span></span>
 
-- <span data-ttu-id="7681e-116">**Sabit listesinin Evil olması — güncelleştirme** </span><span class="sxs-lookup"><span data-stu-id="7681e-116">**Enum’s are evil—update** </span></span>\
+- <span data-ttu-id="fab97-116">**Sabit listesinin Evil olması — güncelleştirme** </span><span class="sxs-lookup"><span data-stu-id="fab97-116">**Enum’s are evil—update** </span></span>\
   <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
 
-- <span data-ttu-id="7681e-117">**Daniel Hardman. Numaralandırmaların nasıl dağılacağı ve nasıl** edinileceği </span><span class="sxs-lookup"><span data-stu-id="7681e-117">**Daniel Hardman. How Enums Spread Disease — And How To Cure It** </span></span>\
+- <span data-ttu-id="fab97-117">**Daniel Hardman. Numaralandırmaların nasıl dağılacağı ve nasıl** edinileceği </span><span class="sxs-lookup"><span data-stu-id="fab97-117">**Daniel Hardman. How Enums Spread Disease — And How To Cure It** </span></span>\
   <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
-- <span data-ttu-id="7681e-118">**Jimmy Bogard. Numaralandırma sınıfları** </span><span class="sxs-lookup"><span data-stu-id="7681e-118">**Jimmy Bogard. Enumeration classes** </span></span>\
+- <span data-ttu-id="fab97-118">**Jimmy Bogard. Numaralandırma sınıfları** </span><span class="sxs-lookup"><span data-stu-id="fab97-118">**Jimmy Bogard. Enumeration classes** </span></span>\
   <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
-- <span data-ttu-id="7681e-119">**Steve Smith. \ sabit listesi C# alternatifleri**</span><span class="sxs-lookup"><span data-stu-id="7681e-119">**Steve Smith. Enum Alternatives in C#** \</span></span>
+- <span data-ttu-id="fab97-119">**Steve Smith. \ sabit listesi C# alternatifleri**</span><span class="sxs-lookup"><span data-stu-id="fab97-119">**Steve Smith. Enum Alternatives in C#** \</span></span>
   <https://ardalis.com/enum-alternatives-in-c>
 
-- <span data-ttu-id="7681e-120">**Enumeration.cs.**</span><span class="sxs-lookup"><span data-stu-id="7681e-120">**Enumeration.cs.**</span></span> <span data-ttu-id="7681e-121">EShopOnContainers içindeki temel numaralandırma sınıfı </span><span class="sxs-lookup"><span data-stu-id="7681e-121">Base Enumeration class in eShopOnContainers </span></span>\
+- <span data-ttu-id="fab97-120">**Enumeration.cs.**</span><span class="sxs-lookup"><span data-stu-id="fab97-120">**Enumeration.cs.**</span></span> <span data-ttu-id="fab97-121">EShopOnContainers içindeki temel numaralandırma sınıfı </span><span class="sxs-lookup"><span data-stu-id="fab97-121">Base Enumeration class in eShopOnContainers </span></span>\
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs>
 
-- <span data-ttu-id="7681e-122">**CardType.cs**.</span><span class="sxs-lookup"><span data-stu-id="7681e-122">**CardType.cs**.</span></span> <span data-ttu-id="7681e-123">EShopOnContainers içinde örnek numaralandırma sınıfı.</span><span class="sxs-lookup"><span data-stu-id="7681e-123">Sample Enumeration class in eShopOnContainers.</span></span> \
+- <span data-ttu-id="fab97-122">**CardType.cs**.</span><span class="sxs-lookup"><span data-stu-id="fab97-122">**CardType.cs**.</span></span> <span data-ttu-id="fab97-123">EShopOnContainers içinde örnek numaralandırma sınıfı.</span><span class="sxs-lookup"><span data-stu-id="fab97-123">Sample Enumeration class in eShopOnContainers.</span></span> \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs>
 
-- <span data-ttu-id="7681e-124">**Smartenum**.</span><span class="sxs-lookup"><span data-stu-id="7681e-124">**SmartEnum**.</span></span> <span data-ttu-id="7681e-125">.NET ' te kesin olarak belirlenmiş daha akıllı numaralandırmalar üretmeye yardımcı olmak için ardın sınıfları.</span><span class="sxs-lookup"><span data-stu-id="7681e-125">Ardalis - Classes to help produce strongly typed smarter enums in .NET.</span></span> \
+- <span data-ttu-id="fab97-124">**Smartenum**.</span><span class="sxs-lookup"><span data-stu-id="fab97-124">**SmartEnum**.</span></span> <span data-ttu-id="fab97-125">.NET ' te kesin olarak belirlenmiş daha akıllı numaralandırmalar üretmeye yardımcı olmak için ardın sınıfları.</span><span class="sxs-lookup"><span data-stu-id="fab97-125">Ardalis - Classes to help produce strongly typed smarter enums in .NET.</span></span> \
   <https://www.nuget.org/packages/Ardalis.SmartEnum/>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="7681e-126">[Önceki](implement-value-objects.md)
->[İleri](domain-model-layer-validations.md)</span><span class="sxs-lookup"><span data-stu-id="7681e-126">[Previous](implement-value-objects.md)
+><span data-ttu-id="fab97-126">[Önceki](implement-value-objects.md)
+>[İleri](domain-model-layer-validations.md)</span><span class="sxs-lookup"><span data-stu-id="fab97-126">[Previous](implement-value-objects.md)
 [Next](domain-model-layer-validations.md)</span></span>
