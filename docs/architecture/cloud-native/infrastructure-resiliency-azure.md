@@ -2,12 +2,12 @@
 title: Azure platformu dayanıklılığı
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Azure ile bulut altyapısı dayanıklılığı
 ms.date: 06/30/2019
-ms.openlocfilehash: 02d661952c860da25442b0fa9fed0d5f93abe023
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 8b33c1cec1633c9fb25ae2b02e51f8be01c22941
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520766"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337385"
 ---
 # <a name="azure-platform-resiliency"></a>Azure platformu dayanıklılığı
 
@@ -26,7 +26,7 @@ Bu özelliklerin birlikte nasıl çalıştığını ve güvenilir bir bulutta ye
 
 Sorunlar, etki kapsamında farklılık gösterir. Hatalı disk gibi bir donanım arızası, kümedeki tek bir düğümü etkileyebilir. Başarısız bir ağ anahtarı sunucu rafından tamamını etkileyebilir. Güç kaybı gibi yaygın olarak karşılaşılan sorunlar, tüm veri merkezini kesintiye uğratabilir. Nadiren, bir bölgenin tamamı kullanılamaz hale gelir.
 
-[Artıklık](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) , uygulama esnekliği sağlamanın bir yoludur. Gereken artıklık düzeyi, iş gereksinimlerinize bağlıdır ve sisteminizin maliyetini ve karmaşıklığını etkiler. Örneğin, çok bölgeli bir dağıtım, tek bölgeli bir dağıtıma göre yönetilmesi daha pahalıdır ve daha karmaşıktır. Yük devretme ve yeniden çalışma işlemlerini yönetmek için işlemsel yordamlara ihtiyacınız olacak. Ek maliyet ve karmaşıklık, bazı iş senaryoları için başka bir şekilde hizalı olabilir.
+[Artıklık](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) , uygulama esnekliği sağlamanın bir yoludur. Gereken artıklık düzeyi, iş gereksinimlerinize bağlıdır ve sisteminizin maliyetini ve karmaşıklığını etkiler. Örneğin, çok bölgeli bir dağıtım, tek bölgeli bir dağıtıma göre yönetilmesi daha pahalıdır ve daha karmaşıktır. Yük devretme ve yeniden çalışma işlemlerini yönetmek için işlemsel yordamlara ihtiyacınız olacak. Ek maliyet ve karmaşıklık bazı iş senaryoları için zorunluyken bazıları için gereksizdir.
 
 Yedekliliği mimARDA uygulamak için uygulamanızdaki kritik yolları belirlemeniz ve sonra yoldaki her bir noktada artıklık olup olmadığını belirlemeniz gerekir mi? Bir alt sistem başarısız olursa, uygulama başka bir şeye devredilecek mi? Son olarak, Azure bulut platformunda yerleşik olarak bulunan ve artıklık gereksinimlerinizi karşılamak için kullanabileceğiniz özellikleri net bir şekilde kavramanız gerekir. Yedeklilik mimarisi için öneriler aşağıda verilmiştir:
 
@@ -78,9 +78,9 @@ Daha önceki bir bölümde programlı yeniden deneme işlemleri uygulamak için 
 
 - *Azure Redis Cache.* Redsıs StackExchange istemcisi, başarısız denemelerde yeniden denemeler içeren bir bağlantı Yöneticisi sınıfı kullanır. Yeniden deneme sayısı, belirli bir yeniden deneme ilkesi ve bekleme süresi yapılandırılabilir.
 
-- *Azure Service Bus.* Service Bus istemcisi bir geri alma aralığı, yeniden deneme sayısı ve <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>bir işlemin ne zaman sürebileceği maksimum süreyi belirten bir [Retrypolicy sınıfı](xref:Microsoft.ServiceBus.RetryPolicy) kullanıma sunar. Varsayılan ilke, denemeler arasında 30 saniyelik geri alma süresi olan dokuz en fazla yeniden deneme girişimdir.
+- *Azure Service Bus.* Service Bus istemcisi bir geri alma aralığı, yeniden deneme sayısı ve <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer%2A>bir işlemin ne zaman sürebileceği maksimum süreyi belirten bir [Retrypolicy sınıfı](xref:Microsoft.ServiceBus.RetryPolicy) kullanıma sunar. Varsayılan ilke, denemeler arasında 30 saniyelik geri alma süresi olan dokuz en fazla yeniden deneme girişimdir.
 
-- *Azure SQL veritabanı.* [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) kitaplığı kullanılırken yeniden deneme desteği sağlanır.
+- *Azure SQL Veritabanı* [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) kitaplığı kullanılırken yeniden deneme desteği sağlanır.
 
 - *Azure depolama.* Depolama istemci kitaplığı, yeniden deneme işlemlerini destekler. Stratejiler, Azure depolama tabloları, blob 'lar ve kuyruklar arasında farklılık gösterir. Ayrıca, coğrafi artıklık özelliği etkinken, alternatif yeniden denemeler birincil ve ikincil depolama hizmetleri konumları arasında geçiş yapar.
 

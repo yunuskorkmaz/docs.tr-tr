@@ -4,12 +4,12 @@ description: Blazor ile yeniden kullanılabilir kullanıcı arabirimi bileşenle
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 79919b183a4eb759f0b27c97500ee71c9378770b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088099"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337396"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Blazor ile yeniden kullanılabilir kullanıcı arabirimi bileşenleri oluşturun
 
@@ -67,7 +67,7 @@ ASP.NET Web Forms içindeki yönergeler gibi Razor yönergeleri, Razor bileşeni
 - Uygulanan arabirimler
 - Genel parametreler
 - İçeri aktarılan ad alanları
-- Yolların
+- Yollar
 
 Razor yönergeleri `@` karakteriyle başlar ve genellikle dosyanın başlangıcında yeni bir satırın başlangıcında kullanılır. Örneğin, `@namespace` yönergesi bileşenin ad alanını tanımlar:
 
@@ -131,7 +131,7 @@ Razor bileşen sınıfına üye eklemek için `@code` yönergesini kullanın. Bu
 }
 ```
 
-Razor temel aldığı için C#, bir C# proje ( *. csproj*) içinden derlenmesi gerekir. VB projesinden *. Razor* dosyalarını derlenemez ( *. vbproj*). Blazor projenizden VB projelerine yine de başvurabilirsiniz. Tersi de geçerlidir.
+Razor temel aldığı için C#, bir C# proje ( *. csproj*) içinden derlenmesi gerekir. Visual Basic projesinden *. Razor* dosyalarını derlenemez ( *. vbproj*). Blazor projenizden Visual Basic projelerine yine de başvurabilirsiniz. Tersi de geçerlidir.
 
 Tam Razor söz dizimi başvuru için bkz. [ASP.NET Core için Razor söz dizimi başvurusu](/aspnet/core/mvc/views/razor).
 

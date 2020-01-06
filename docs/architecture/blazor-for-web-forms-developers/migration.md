@@ -4,12 +4,12 @@ description: Mevcut bir ASP.NET Web Forms uygulamasını Blazor 'e geçirmeye na
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b6604e000eaf79bcd8da15d72a3d85713c620851
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 52f463c66c2980d59a93f3210b3cfd825bec33da
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191938"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337446"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>ASP.NET Web Forms 'den Blazor 'ye geçiş
 
@@ -38,7 +38,7 @@ Bu veya diğer yeni özellikler yeterince etkileyici ise, uygulamayı geçirmede
 
 Yazma sırasında, sunucu tarafı modeli Web Forms daha yakından benzerdir. Bu bölümün çoğu, üretime hazırsa da sunucu tarafı barındırma modeline odaklanır.
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni bir proje oluşturun
 
 Bu ilk geçiş adımı yeni bir proje oluşturmaktır. Bu proje türü, .NET Core SDK stili projelerine dayalıdır ve önceki proje biçimlerinde kullanılan ortak alanının çoğunu basitleştirir. Daha fazla ayrıntı için lütfen [Proje yapısındaki](project-structure.md)bölüme bakın.
 
@@ -252,7 +252,7 @@ Uygulama başlatma hakkında daha fazla bilgi için bkz. [uygulama başlatma](ap
 
 ## <a name="migrate-http-modules-and-handlers-to-middleware"></a>HTTP modüllerini ve işleyicileri ara yazılıma geçirme
 
-Http modülleri ve işleyicileri, HTTP isteği ardışık düzenini denetlemek için Web Forms içindeki yaygın desenlerdir. `IHttpModule` veya `IHttpHandler` uygulayan sınıflar kaydedilebilir ve gelen istekleri işleyebilir. Web Forms, *Web. config* dosyasındaki modülleri ve işleyicileri yapılandırır. Web Forms Ayrıca uygulama yaşam döngüsü olay işlemeye bağlıdır. ASP.NET Core bunun yerine ara yazılım kullanır. Middlewares, `Startup` sınıfının `Configure` metoduna kaydedilir. Ara yazılım yürütme sırası, kayıt sırasına göre belirlenir.
+Http modülleri ve işleyicileri, HTTP isteği ardışık düzenini denetlemek için Web Forms içindeki yaygın desenlerdir. `IHttpModule` veya `IHttpHandler` uygulayan sınıflar kaydedilebilir ve gelen istekleri işleyebilir. Web Forms, *Web. config* dosyasındaki modülleri ve işleyicileri yapılandırır. Web Forms Ayrıca uygulama yaşam döngüsü olay işlemeye bağlıdır. ASP.NET Core bunun yerine ara yazılım kullanır. Ara yazılım, `Startup` sınıfının `Configure` metoduna kaydedilir. Ara yazılım yürütme sırası, kayıt sırasına göre belirlenir.
 
 [Başlangıç Işlemini etkinleştir](#enable-startup-process) bölümünde, `Application_BeginRequest` yöntemi olarak Web Forms bir yaşam döngüsü olayı tetiklendi. Bu olay ASP.NET Core ' de kullanılamaz. Bu davranışı gerçekleştirmenin bir yolu, ara yazılımı *Startup.cs* File örneğinde görüldüğü gibi uygulamaktır. Bu ara yazılım aynı mantığı yapar ve denetimi, ara yazılım ardışık düzeninde bir sonraki işleyiciye aktarır.
 
@@ -277,7 +277,7 @@ EShop projesi, temel statik dosya erişimine izin vermez. Statik dosya erişimi 
 
 ## <a name="migrate-runtime-bundling-and-minification-setup"></a>Çalışma zamanı paketleme ve küçültmeye yönelik kurulumu geçirme
 
-Paketleme ve en iyi duruma getirme, belirli dosya türlerini almak üzere sunucu isteklerinin sayısını ve boyutunu azaltmak için performans iyileştirme tekniklerdir. JavaScript ve CSS genellikle istemciye gönderilmeden önce bir dizi paketleme veya küçültmeye göre daha fazla gider. ASP.NET Web Forms içinde, bu iyileştirmeler çalışma zamanında işlenir. Optimizasyon kuralları bir *App_Start/paketleme Liconfig. cs* dosyası olarak tanımlanır. ASP.NET Core, daha açıklayıcı bir yaklaşım benimsemiştir. Bir dosya, Mini olarak kullanılacak dosyaları ve belirli bir küçültmeye yönelik ayarları listeler.
+Paketleme ve en iyi duruma getirme, belirli dosya türlerini almak üzere sunucu isteklerinin sayısını ve boyutunu azaltmak için performans iyileştirme tekniklerdir. JavaScript ve CSS genellikle istemciye gönderilmeden önce bir dizi paketleme veya küçültmeye göre daha fazla gider. ASP.NET Web Forms içinde, bu iyileştirmeler çalışma zamanında işlenir. En iyi duruma getirme kuralları bir *App_Start/paketlemeli bir config.cs* dosyası tanımladı. ASP.NET Core, daha açıklayıcı bir yaklaşım benimsemiştir. Bir dosya, Mini olarak kullanılacak dosyaları ve belirli bir küçültmeye yönelik ayarları listeler.
 
 Paketleme ve küçültmeye yönelik daha fazla bilgi için, bkz. [ASP.NET Core statik varlıkları paketleme ve](/aspnet/core/client-side/bundling-and-minification)azaltma.
 
@@ -565,7 +565,7 @@ Blazor ' de, eşdeğer biçimlendirme bir *Create. Razor* dosyasında verilmişt
 
 ## <a name="migrate-configuration"></a>Yapılandırmayı geçir
 
-Web Forms bir projede, yapılandırma verileri genellikle *Web. config* dosyasında depolanır. Yapılandırma verilerine `ConfigurationManager` ile erişilir. Hizmetler genellikle nesneleri ayrıştırmak için gereklidir. .NET Framework 4.7.2 ile, `ConfigurationBuilders` aracılığıyla yapılandırma için bileşim eklenmiştir. Bu oluşturucular, geliştiricilerin gerekli değerleri almak için çalışma zamanında oluşturulan yapılandırma için çeşitli kaynaklar eklemesine izin verilir.
+Web Forms bir projede, yapılandırma verileri genellikle *Web. config* dosyasında depolanır. Yapılandırma verilerine `ConfigurationManager`ile erişilir. Hizmetler genellikle nesneleri ayrıştırmak için gereklidir. .NET Framework 4.7.2 ile, `ConfigurationBuilders`aracılığıyla yapılandırma için bileşim eklenmiştir. Bu oluşturucular, geliştiricilerin gerekli değerleri almak için çalışma zamanında oluşturulan yapılandırma için çeşitli kaynaklar eklemesine izin verilir.
 
 ASP.NET Core, uygulamanız ve dağıtımınız tarafından kullanılan yapılandırma kaynağını veya kaynaklarını tanımlamanızı sağlayan esnek bir yapılandırma sistemi sunmuştur. Web Forms uygulamanızda kullandığınız `ConfigurationBuilder` altyapısı, ASP.NET Core yapılandırma sisteminde kullanılan kavramlardan sonra modellenmiştir.
 
@@ -646,11 +646,11 @@ ASP.NET Core, ASP.NET 'in yeniden oluşturulmuş bir sürümüdür ve başlangı
 - Gölge kopyalama yok
 - İstek kuyruğu yok
 
-ASP.NET Core çok sayıda işlem zaman uyumsuzdur ve g/ç bağlantılı görevlerin daha kolay bir şekilde yüklenmesini sağlar. İş parçacığı havuzu kaynaklarını hızlıca tüketebilen `Task.Wait()` veya `Task.GetResult()` kullanarak hiçbir şekilde engellenmemek önemlidir.
+ASP.NET Core çok sayıda işlem zaman uyumsuzdur ve g/ç bağlantılı görevlerin daha kolay bir şekilde yüklenmesini sağlar. İş parçacığı havuzu kaynaklarını hızlıca tüketebilen `Task.Wait()` veya `Task.GetResult()`kullanarak hiçbir şekilde engellenmemek önemlidir.
 
 ## <a name="migration-conclusion"></a>Geçiş sonucu
 
 Bu noktada, bir Web Forms projesinin Blazor 'e taşınması hakkında birçok örnek gördünüz. Tam bir örnek için bkz. [eShopOnBlazor](https://github.com/dotnet-architecture/eShopOnBlazor) projesi.
 
 >[!div class="step-by-step"]
->[Öncekini](security-authentication-authorization.md)
+>[Önceki](security-authentication-authorization.md)

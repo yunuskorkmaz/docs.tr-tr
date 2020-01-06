@@ -2,12 +2,12 @@
 title: Cloud Native DevOps
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Cloud Native DevOps
 ms.date: 06/30/2019
-ms.openlocfilehash: 2b3dd47eeeb69d63f5ae39705abb9d1d51295645
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d152989061964d78c8be97b69df413b975058319
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087546"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337407"
 ---
 # <a name="cloud-native-devops"></a>Cloud Native DevOps
 
@@ -27,7 +27,7 @@ Daha hızlı ve iş için değer sunmaya yönelik daha güvenilir yayınları et
 
 DevOps, mikro hizmetlerden önce ortaya çıktı ve büyük olasılıkla daha küçük bir hareket haline gelir, ancak üretim aşamasındaki çok sayıda uygulama daha kolay hale getirmek ve çalıştırmak için DevOps 'a daha fazla uyum sağlamaktır.
 
-![Şekil 11-0 arama eğilimleri, mikro hizmetlerdeki büyümenin, DevOps oldukça iyi bir fikir olana kadar başlamadığını gösterir.](./media/microservices-vs-devops.png)
+![Şekil 11-0 arama eğilimleri, mikro hizmetlerdeki büyümenin, DevOps oldukça iyi belirlenen bir fikir olana kadar başlamadığını gösterir.](./media/microservices-vs-devops.png)
 
 İyi DevOps uygulamaları sayesinde, uygulamaları gerçekten test eden bir dağ 'ın altında yeterli olara sahip olmayan bulut Yerel uygulamalarının avantajlarından yararlanmak mümkündür.
 
@@ -59,7 +59,7 @@ Bu bileşenlerin her biri, bulutta yerel uygulamalar için bazı avantajlar sağ
 
 Bulutu yerel bir uygulama için kodu düzenleme zor olabilir. Tek bir çok büyük paketlerini uygulaması yerine, bulutta yerel uygulamalar birbirleriyle iletişim kuran küçük uygulamalardan oluşan bir Web 'den oluşmuştur. Bilgi işlem ile ilgili tüm işlemler sayesinde kodun en iyi düzenlenmesi açık bir soru kalır. Farklı tür düzenleri kullanan başarılı uygulamalara örnekler vardır, ancak iki çeşit en popülerliği olan şekilde görünür.
 
-Gerçek kaynak denetimini açmadan önce, büyük olasılıkla kaç projenin uygun olduğuna karar verdik. Tek bir proje içinde birden çok depo için destek ve işlem hatları oluşturma. Panolar biraz daha karmaşıktır ancak tek bir projede birden çok takıma kolayca atanabilir. Tek bir Azure DevOps projesi dışında yüzlerce, hatta binlerce geliştiricisi desteklemek kesinlikle mümkündür. Bunun yapılması, tüm geliştiricilerin dışında çalışması için tek bir yer sağladığı ve geliştiricilerin hangi projede bulunduğu konusunda emin olduğu durumlarda bir uygulamayı bulmanın karışmasını azaltan en iyi yaklaşım olabilir.
+Gerçek kaynak denetimini açmadan önce, büyük olasılıkla kaç projenin uygun olduğuna karar verdik. Tek bir proje içinde birden çok depo için destek ve işlem hatları oluşturma. Panolar biraz daha karmaşıktır, ancak başka bir deyişle, görevler tek bir proje içinde birden çok takıma kolayca atanabilir. Tek bir Azure DevOps projesi dışında yüzlerce, hatta binlerce geliştiricisi desteklemek kesinlikle mümkündür. Bunun yapılması, tüm geliştiricilerin dışında çalışması için tek bir yer sağladığı ve geliştiricilerin hangi projede bulunduğu konusunda emin olduğu durumlarda bir uygulamayı bulmanın karışmasını azaltan en iyi yaklaşım olabilir.
 
 Azure DevOps projesi içindeki mikro hizmetler için kod bölmek biraz daha zor olabilir.
 
@@ -238,11 +238,11 @@ Yapının nihai sonucu, derleme yapıtları olarak bilinen bir dosya koleksiyonu
 
 ### <a name="azure-devops-releases"></a>Azure DevOps yayınları
 
-Yapılar, yazılımın teslim edilebilir bir pakette derlenmesinden, ancak sürekli teslimi tamamlamaya yönelik yapıların hala bir test ortamına gönderilmesi gerekir. Azure DevOps bu şekilde yayınlar adlı ayrı bir araç kullanır. Yayınlar, derleme için kullanılabilir olan ancak "aşamalar" kavramı sunan aynı görevler kitaplığını kullanır. Aşama, paketin yüklendiği yalıtılmış bir ortamdır. Örneğin, bir ürün bir geliştirme, QA ve bir üretim ortamı kullanabilir. Kod, otomatik testlerin üzerinde çalıştırılabileceği geliştirme ortamına sürekli olarak dağıtılır. Bu testler, Yayını başarılı olduktan sonra el ile test etmek için QA ortamına geçer. Son olarak, kod, herkes tarafından görünür olduğu üretime gönderilir.
+Yapılar, yazılımın teslim edilebilir bir pakette derlenmesinden, ancak sürekli teslimi tamamlamaya yönelik yapıların hala bir test ortamına gönderilmesi gerekir. Azure DevOps bu şekilde yayınlar adlı ayrı bir araç kullanır. Yayınlar Aracı, derleme için kullanılabilir olan ancak "aşamalar" kavramı sunan aynı görevlerin kitaplığını kullanır. Aşama, paketin yüklendiği yalıtılmış bir ortamdır. Örneğin, bir ürün bir geliştirme, QA ve bir üretim ortamı kullanabilir. Kod, otomatik testlerin üzerinde çalıştırılabileceği geliştirme ortamına sürekli olarak dağıtılır. Bu testler, Yayını başarılı olduktan sonra el ile test etmek için QA ortamına geçer. Son olarak, kod, herkes tarafından görünür olduğu üretime gönderilir.
 
 ![Şekil 11-9 geliştirme, QA ve üretim aşamalarıyla örnek bir yayın işlem hattı](./media/release-pipeline.png)
 
-Derlemedeki her aşama, önceki aşamanın tamamlanmasına göre otomatik olarak tetiklenebilir. Ancak çoğu durumda bu istenmez. Kodu üretime taşımak, birisinin onayını gerektirebilir. Yayınlar, yayın işlem hattının her adımında onaylayanlara izin vererek bunu destekler. Kurallar, belirli bir kişi veya kişi grubunun üretime başlamadan önce bir yayında oturumu kapatması gereken şekilde ayarlanabilir. Bu kapıları el ile kalite denetimleri ve ayrıca üretime neyin gireceğini denetleme ile ilgili herhangi bir düzenleme gereksinimiyle uyumluluk sağlar.
+Derlemedeki her aşama, önceki aşamanın tamamlanmasına göre otomatik olarak tetiklenebilir. Ancak çoğu durumda bu istenmez. Kodu üretime taşımak, birisinin onayını gerektirebilir. Yayınlar Aracı, yayın işlem hattının her adımında onaylayanlara izin vererek bunu destekler. Kurallar, belirli bir kişi veya kişi grubunun üretime başlamadan önce bir yayında oturumu kapatması gereken şekilde ayarlanabilir. Bu kapıları el ile kalite denetimleri ve ayrıca üretime neyin gireceğini denetleme ile ilgili herhangi bir düzenleme gereksinimiyle uyumluluk sağlar.
 
 ### <a name="everybody-gets-a-build-pipeline"></a>Herkes gövdesi bir derleme işlem hattı alır
 

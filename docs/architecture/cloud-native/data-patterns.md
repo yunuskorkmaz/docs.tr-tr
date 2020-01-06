@@ -2,12 +2,12 @@
 title: Bulutta yerel veri desenleri
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Bulutta yerel veri desenleri
 ms.date: 06/30/2019
-ms.openlocfilehash: 0d251f3046fcd3f3a2f5d856a123a35d3f7ecff2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9e90409b0b633796b452cfcfecb3896e79002d4d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087697"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337419"
 ---
 # <a name="cloud-native-data-patterns"></a>Bulutta yerel veri desenleri
 
@@ -63,13 +63,13 @@ Mikro hizmetler genelinde sorgular zorlayıcı olsa da, mikro hizmetler genelind
 
 **Şekil 5-8**. Mikro hizmetler genelinde işlem uygulama
 
-Önceki şekilde beş bağımsız mikro hizmetin her türlü dağıtılmış bir *Sipariş oluşturma* işlemine nasıl katıldığına göz önünde. Ancak, her bir beş tek mikro hizmetin işlemi başarılı olmalıdır veya tümü iptal ve işlemi geri alma olmalıdır. Mikro hizmetlerin her birinde yerleşik işlem desteği kullanılabilir olsa da, beş hizmetin tümünde dağıtılmış işlem desteklenmez.
+Önceki şekilde beş bağımsız mikro hizmetin her türlü dağıtılmış bir *Sipariş oluşturma* işlemine nasıl katıldığına göz önünde. Ancak, her bir beş tek mikro hizmetin işleminin başarılı olması veya tümünün işlemi iptal etmek ve geri toplaması gerekir. Mikro hizmetlerin her birinde yerleşik işlem desteği kullanılabilir olsa da, beş hizmetin tümünde dağıtılmış işlem desteklenmez.
 
 Bu işlem için işlem desteği, verileri mikro hizmetlerde her birinde tutarlı tutmak için gerekli olduğundan, programlı bir şekilde dağıtılmış işlem oluşturmanız gerekir.
 
 İşlem desteğini programlı olarak eklemeye yönelik popüler bir model, [Saga örüntü](https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/). Yerel işlemler birlikte gruplanarak ve her biri sırayla çağırılırken uygulanır. Yerel bir işlem başarısız olursa, Saga işlemi iptal eder ve önceki yerel işlemler tarafından yapılan değişiklikleri geri almak için bir [dengeleyici](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction) işlem kümesi çağırır. Şekil 5-9, Saga düzeniyle başarısız olan bir işlemi gösterir.
 
-![Saga düzeninde geri alma](./media/saga-rollback-operation.png)
+![Saga düzenine geri alma](./media/saga-rollback-operation.png)
 
 **Şekil 5-9**. Bir işlem geri alınıyor
 

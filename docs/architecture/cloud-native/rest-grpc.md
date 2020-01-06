@@ -3,12 +3,12 @@ title: REST ve gRPC
 description: Bkz. The The The The The The The The the Cloud-Native Applications ve HTTP REST 'den farklı
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: 80960a9042b1514fb78e7a8c993a1854067407e8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c77343e7a594d34cbd2c00ce11281bd6bf4000c1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417131"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337067"
 ---
 # <a name="rest-and-grpc"></a>REST ve gRPC
 
@@ -26,7 +26,7 @@ gRPC, hafif ve yüksek performanslı bir modern RPC çerçevesidir. Aktarım Pro
 - HTTP 1,1 tek seferde bir gidiş dönüş isteği/yanıtı işlemeyle sınırlı olsa da, HTTP/2 aynı bağlantı üzerinden çoğullama veya birden çok paralel isteği destekler.
 - HTTP/2, hem istemci hem de sunucu ile aynı anda iletişim kurabildiği tam çift yönlü veya çift yönlü iletişimi destekler. İstemci, istek verilerini sunucu tarafından yanıt verileri gönderilirken aynı anda karşıya yükleyebilir.
 - Akış, HTTP/2 ' de yerleşik olarak bulunur ve isteklerin ve yanıtların zaman uyumsuz olarak büyük veri kümeleri akışını sağlayabilir.
-- GRPC ve HTTP/2 birleştirme performansı önemli ölçüde artar. [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) Pari 'de, GRPC performansı, [NetTcp bağlamalarının](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)hızını ve verimliliğini karşılar ve bunları aşar. Ancak, NetTCP 'nin aksine gRPC, C# veya vb.NET gibi Microsoft dilleri ile sınırlı değildir.
+- GRPC ve HTTP/2 birleştirme performansı önemli ölçüde artar. [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) Pari 'de, GRPC performansı, [NetTcp bağlamalarının](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)hızını ve verimliliğini karşılar ve bunları aşar. Ancak, NetTCP 'nin aksine gRPC, C# veya Visual Basic gibi Microsoft dilleri ile sınırlı değildir.
 
 gRPC, Java, C#, golang ve NodeJS dahil olmak üzere en popüler platformlar arasında desteklenir.
 

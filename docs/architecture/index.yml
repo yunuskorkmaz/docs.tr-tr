@@ -2,7 +2,6 @@
 documentType: LandingData
 title: .NET uygulama mimarisi Kılavuzu
 metadata:
-  document_id: na
   title: .NET uygulama mimarisi Kılavuzu
   meta.description: 'Learn about recommended practices for architecting, designing and building .NET software.'
   ms.topic: landing-page
@@ -21,7 +20,7 @@ sections:
       - html: <ul><li><p><a href="modern-web-apps-azure/index">ASP.NET Core ve Azure ile modern web uygulamalarını mimarın</a></p>
       - html: '<p>Bu kılavuz, ASP.NET ve ASP.NET Core uygulamalar oluşturmak ve bu uygulamaları Azure ''da barındırmak için kullanacağınız önerilen mimari, tasarım ve dağıtım işlemlerine giriş niteliğindedir.</p></li></ul>'
       - html: <ul><li><p><a href="microservices/index">Kapsayıcı ve mikro hizmet tabanlı uygulamaları tasarlama</a></p>
-      - html: '<p>Bu kılavuz, mikro hizmet tabanlı uygulamalar geliştirmeye ve kapsayıcıları kullanarak bunları yönetmeye yönelik bir giriş niteliğindedir. .NET Core ve Docker Kapsayıcıları kullanılarak mimari tasarımı ve uygulama yaklaşımlarını ele alır.</p></li></ul>'
+      - html: '<p>Bu kılavuz, mikro hizmet tabanlı uygulamalar geliştirmeye ve kapsayıcıları kullanarak bunları yönetmeye yönelik bir giriş niteliğindedir. .NET Core ve Docker kapsayıcıları kullanılarak benimsenebilecek mimari tasarım ve uygulama yaklaşımlarını ele alır.</p></li></ul>'
       - html: '<ul><li><p><a href="serverless/index">Sunucusuz uygulamalar: Mimari, desenler ve Azure''u uygulama</a></p>'
       - html: '<p>Bu, Azure kullanarak örnekleri olan sunucusuz uygulamalar oluşturmaya yönelik bir kılavuzdur. Çeşitli mimari ve tasarım yaklaşımları, sunucusuz ile gelen avantajlar ve güçlükler ele alınmaktadır ve sunucusuz uygulamalar için senaryolar ve kullanım örnekleri sunar.</p></li></ul>'
   - title: E-kitapların önizlemesini görüntüleme

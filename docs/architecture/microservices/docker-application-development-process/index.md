@@ -1,13 +1,13 @@
 ---
-title: Docker Tabanlı Uygulamalar için Geliştirme İşlemi
-description: Docker tabanlı uygulamalar geliştirmeye yönelik seçeneklere yönelik yüksek düzeyde bir genel bakış alın. Çoklu platform desteği (Windows, Mac ve Linux) için Windows, Mac için Visual Studio veya Visual Studio Code için istediğiniz Visual Studio 'Yu kullanma.
+title: Docker tabanlı uygulamalar için geliştirme süreci
+description: Docker tabanlı uygulamalar geliştirmeye yönelik seçeneklere yönelik üst düzey bir genel bakış alın. Çoklu platform desteği (Windows, macOS ve Linux) için Windows, Mac için Visual Studio veya Visual Studio Code için istediğiniz Visual Studio 'Yu kullanma.
 ms.date: 09/27/2018
-ms.openlocfilehash: 6299d67299948dce1081a211b350e657b2c1b951
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 95e940371f4dbef3b3a8f327c13acbbc55ff29ef
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770133"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337694"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker tabanlı uygulamalar için geliştirme süreci
 
@@ -21,9 +21,9 @@ Tam ve güçlü bir IDE veya hafif ve çevik bir düzenleyiciyi tercih etmeksizi
 
 **Visual Studio (Windows için).** Visual Studio ile Docker tabanlı uygulamalar geliştirirken, zaten yerleşik olan Docker Araçları ile birlikte sunulan Visual Studio 2017 sürüm 15,7 veya sonraki bir sürümünü kullanmanız önerilir. Docker Araçları, uygulamalarınızı doğrudan hedef Docker ortamında geliştirmenize, çalıştırmanıza ve doğrulamanıza olanak sağlar. F5 tuşuna basarak uygulamanızı (tek bir kapsayıcı veya birden çok kapsayıcı) doğrudan bir Docker konağına kaydedebilir ve hata ayıklamanızı sağlar veya kapsayıcıyı yeniden oluşturmak zorunda kalmadan uygulamanızı düzenlemek ve yenilemek için CTRL + F5 ' e basabilirsiniz. Bu, Docker tabanlı uygulamalar için en güçlü geliştirme seçimdir.
 
-**Mac için Visual Studio.** Bu, macOS 'ta çalışan Xamarin Studio bir IDE, ve m2017 ' den beri Docker destekler. Bu, güçlü bir IDE kullanmak isteyen Mac makinelerde çalışan geliştiriciler için tercih edilen seçim olmalıdır.
+**Mac için Visual Studio.** Bu, macOS 'ta çalışan Xamarin Studio bir IDE, ve m2017 ' den beri Docker destekler. Bu, güçlü bir IDE kullanmak isteyen macOS makinelerinde çalışan geliştiriciler için tercih edilen seçim olmalıdır.
 
-**Visual Studio Code ve Docker CLI**. Herhangi bir geliştirme dilini destekleyen hafif ve platformlar arası bir düzenleyiciyi tercih ediyorsanız, Microsoft Visual Studio kodu (VS Code) ve Docker CLı kullanabilirsiniz. Bu, Mac, Linux ve Windows için platformlar arası bir geliştirme yaklaşımıdır. Ayrıca, Visual Studio Code Dockerfiles için IntelliSense ve düzenleyiciden Docker komutlarını çalıştırmak için kısayol görevleri gibi Docker için uzantıları destekler.
+**Visual Studio Code ve Docker CLI**. Herhangi bir geliştirme dilini destekleyen hafif ve platformlar arası bir düzenleyiciyi tercih ediyorsanız, Microsoft Visual Studio kodu (VS Code) ve Docker CLı kullanabilirsiniz. Bu, macOS, Linux ve Windows için platformlar arası bir geliştirme yaklaşımıdır. Ayrıca, Visual Studio Code Dockerfiles için IntelliSense ve düzenleyiciden Docker komutlarını çalıştırmak için kısayol görevleri gibi Docker için uzantıları destekler.
 
 [Docker Desktop Community Edition 'ı (CE)](https://hub.docker.com/search/?type=edition&offering=community)yükleyerek, tek bir DOCKER CLI kullanarak hem Windows hem de Linux için uygulama oluşturabilirsiniz.
 

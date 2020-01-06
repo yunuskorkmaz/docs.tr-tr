@@ -4,24 +4,24 @@ description: Modüller, işleyiciler ve ara yazılım ile HTTP isteklerini işle
 author: danroth27
 ms.author: daroth
 ms.date: 10/11/2019
-ms.openlocfilehash: b0be6109b9226bddbb9cbe4cebf114fd2b2a6114
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 3ecc109c54f88b5b06a1474f7c6e262d426a78a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291156"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337471"
 ---
 # <a name="modules-handlers-and-middleware"></a>Modüller, işleyiciler ve ara yazılım
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-ASP.NET Core bir uygulama, bir dizi ara yazılım üzerine kurulmuştur. Middlewares, istekleri ve yanıtları işlemek için bir işlem hattına düzenlenmiş işleyicileridir. Web Forms uygulamasında HTTP işleyicileri ve modülleri benzer sorunları çözecektir. ASP.NET Core, modüller, işleyiciler, *Global.asax.cs*ve uygulama yaşam döngüsü, ara yazılım ile değiştirilmiştir. Bu bölümde, bir Blazor uygulaması bağlamında hangi ara yazılımı öğreneceksiniz.
+ASP.NET Core bir uygulama, bir dizi *Ara yazılım*üzerine kurulmuştur. Ara yazılım, istekleri ve yanıtları işlemek için bir işlem hattına düzenlenmiş işleyicileridir. Web Forms uygulamasında HTTP işleyicileri ve modülleri benzer sorunları çözecektir. ASP.NET Core, modüller, işleyiciler, *Global.asax.cs*ve uygulama yaşam döngüsü, ara yazılım ile değiştirilmiştir. Bu bölümde, bir Blazor uygulaması bağlamında hangi ara yazılımı öğreneceksiniz.
 
 ## <a name="overview"></a>Genel bakış
 
 ASP.NET Core isteği ardışık düzeni, bir dizi istekten oluşur ve bunlardan sonra çağırılır. Aşağıdaki diyagramda kavram gösterilmektedir. Yürütmenin iş parçacığı siyah okları izler.
 
-![Konfigüre](media/middleware/request-delegate-pipeline.png)
+![konfigüre](media/middleware/request-delegate-pipeline.png)
 
 Önceki diyagramda yaşam döngüsü olaylarının bir kavramı yoktur. Bu kavram, ASP.NET Web Forms isteklerinin nasıl işlendiği konusunda temel bir deneyimdir. Bu sistem, hangi işlemin gerçekleşmekte olduğunu ve ara yazılımın herhangi bir noktaya eklenmesine olanak sağlar. Ara yazılım, istek ardışık düzenine eklendiği sırayla yürütülür. Bunlar, genellikle *Startup.cs*içinde yapılandırma dosyaları yerine kodda de eklenirler.
 
@@ -35,7 +35,7 @@ ASP.NET 4. x birçok modül içerir. Benzer bir biçimde, ASP.NET Core birçok a
 
 Aşağıdaki tabloda, ASP.NET Core ' deki değiştirme ara yazılımı ve bileşenleri listelenmektedir.
 
-|Modül                 |ASP.NET 4. x modülü           |ASP.NET Core seçeneği|
+|Modülü                 |ASP.NET 4. x modülü           |ASP.NET Core seçeneği|
 |-----------------------|-----------------------------|-------------------|
 |HTTP hataları            |`CustomErrorModule`          |[Durum kodu sayfaları ara yazılımı](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |Varsayılan belge       |`DefaultDocumentModule`      |[Varsayılan dosyalar ara yazılımı](/aspnet/core/fundamentals/static-files#serve-a-default-document)|

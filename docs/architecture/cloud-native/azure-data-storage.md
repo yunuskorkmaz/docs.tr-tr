@@ -2,12 +2,12 @@
 title: Azure 'da veri depolama
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Azure 'da veri depolama
 ms.date: 06/30/2019
-ms.openlocfilehash: 1a86cecf005c6dbdfda5cf4cacfafaad4711c076
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5ba05f53faf65334f6269af8ae2c54d81e6b0779
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087763"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337464"
 ---
 # <a name="data-storage-in-azure"></a>Azure 'da veri depolama
 
@@ -63,7 +63,7 @@ Azure, geleneksel Microsoft SQL Server yığınına ek olarak, çeşitli popüle
 
 - Saniyeler içinde gereken şekilde [ölçeklendirin](https://docs.microsoft.com/azure/mysql/concepts-high-availability) .
 
-- REST ve hareket halindeyken hassas verileri korumaya yönelik güvenli hale getirilir.
+- Bekleyen ve hareket halindeki hassas verileri korumaya yönelik güvenlik.
 
 - [Otomatik yedeklemeler](https://docs.microsoft.com/azure/mysql/concepts-backup) ve [zaman içindeki süre-geri yükleme](https://docs.microsoft.com/azure/mysql/concepts-backup) 35 güne kadar.
 
@@ -75,7 +75,7 @@ Ayrıca, [Azure veri geçiş hizmeti](https://azure.microsoft.com/services/datab
 
 Yönetilen [Azure MySQL sunucusu](https://docs.microsoft.com/azure/mysql/concepts-servers) , hizmet için merkezi yönetim noktasıdır. Bu, şirket içi dağıtımlar için kullanılan aynı MySQL Server altyapısıdır. Bununla birlikte, kaynakları paylaşmak için tüm kaynakları kullanmak veya sunucu başına birden çok veritabanı oluşturmak üzere sunucu başına tek bir veritabanı oluşturabilirsiniz. Takımınız, yeni beceriler öğrenmek veya sanal makineleri ve altyapıyı yönetmek zorunda kalmadan açık kaynaklı araçlar ve tercih ettiğiniz platformla uygulama geliştirmeye devam edebilir.
 
-## <a name="azure-database-for-mariadb"></a>MariaDB için Azure veritabanı
+## <a name="azure-database-for-mariadb"></a>MariaDB için Azure Veritabanı
 
 [MariaDB](https://mariadb.com/) Sunucu, başka bir popüler açık kaynaklı veritabanı sunucusudur. Bu, MySQL 'in kendine ait olan Sun Microsystems 'e sahip olduğu zaman, MySQL 'in özgün geliştiriciler tarafından MySQL 'in bir çatalı olarak oluşturulmuştur. Amaç, MariaDB 'nin açık kaynaklı olmasını sağlamaktır.
 
@@ -141,7 +141,7 @@ Cosmos DB çok girişli [API 'ler](https://docs.microsoft.com/azure/cosmos-db/di
 
 ### <a name="multi-model-support"></a>Çoklu model desteği
 
-Cosmos DB, belgeler, anahtar-değer çiftleri, geniş sütun ve grafik gösterimleri dahil olmak üzere birçok desteklenen NoSQL modeli kullanarak verilerinizle etkileşim kurmanıza olanak sağlayan *çok modelli bir veri platformudur* . Dahili olarak, veriler dizeler, bota ve sayılar dahil olmak üzere temel veri türlerinden oluşan basit bir [Yapı](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs) biçiminde depolanır. Her istek için veritabanı altyapısı, verileri seçtiğiniz model gösterimine çevirir. SQL tabanlı Cosmos DB özel bir API veya şekil 5-14 ' de gösterilen herhangi bir [Uyumluluk API](https://www.wikiwand.com/en/Cosmos_DB) 'sinden seçim yapabilirsiniz.
+Cosmos DB, belgeler, anahtar-değer çiftleri, geniş sütun ve grafik temsilleri dahil olmak üzere birçok desteklenen NoSQL modeli kullanarak verilerinizle etkileşim kurmanıza olanak sağlayan *çok modelli bir veri platformudur* . Dahili olarak, veriler dizeler, Boole değerleri ve sayılar dahil olmak üzere temel veri türlerinden oluşan basit bir [Yapı](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs) biçiminde depolanır. Her istek için veritabanı altyapısı, verileri seçtiğiniz model gösterimine çevirir. SQL tabanlı Cosmos DB özel bir API veya şekil 5-14 ' de gösterilen herhangi bir [Uyumluluk API](https://www.wikiwand.com/en/Cosmos_DB) 'sinden seçim yapabilirsiniz.
 
 ![Cosmos DB sağlayıcıları](./media/cosmos-db-providers.png)
 
@@ -191,7 +191,7 @@ Kapsayıcıyı bölümlemek için öğeler [mantıksal bölümler](https://docs
 
 Dahili olarak, Cosmos DB kapsayıcının ölçeklenebilirlik ve performans ihtiyaçlarını etkili bir şekilde karşılamak üzere [fiziksel bölümlerin](https://docs.microsoft.com/azure/cosmos-db/partition-data) [mantıksal bölümlerinin](https://docs.microsoft.com/azure/cosmos-db/partition-data) yerleşimini otomatik olarak yönetir. Bir uygulamanın aktarım hızı ve depolama gereksinimleri arttıkça Azure Cosmos DB, yükü daha fazla sayıda sunucuda yeniden dağıtmak için mantıksal bölümleri taşıtır. Bu yeniden dağıtım işlemleri Cosmos DB tarafından yönetilir ve herhangi bir kesinti veya kesinti olmadan gerçekleştirilir.
 
-## <a name="azure-redis-cache"></a>Azure Redis Cache
+## <a name="azure-redis-cache"></a>Azure Redis Önbelleği
 
 Performansı ve ölçeklenebilirliği artırmak için önbelleğe almanın avantajları iyi anlaşılmıştır.
 
