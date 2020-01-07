@@ -3,10 +3,10 @@ title: Kapsayıcı uygulamaları için Microsoft platformu ve araçlarına giri�
 description: Microsoft 'un Docker uygulamalarının yaşam döngüsünü desteklemeye yönelik tekliflerini öğrenin.
 ms.date: 02/15/2019
 ms.openlocfilehash: 9c8c0f5688bf226351abfc7bf52d4ace05f8c6d8
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/06/2020
 ms.locfileid: "73738095"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Kapsayıcılı uygulamalar için Microsoft platformu ve araçlarına giriş
@@ -39,7 +39,7 @@ Kapsayıcılı Docker uygulamalarına yönelik Microsoft platformu ve araçları
 
 - **Docker uygulamaları Için DevOps** Docker uygulamaları oluşturan geliştiriciler, kapsamlı bir otomatik uygulama yaşam döngüsü yönetimi (ALM) oluşturmak için Jenkins gibi [Azure DevOps Services](https://azure.microsoft.com/services/devops/) veya başka bir üçüncü taraf ürünü kullanabilir.
 
-  Azure DevOps Services, geliştiriciler, kaynak kodu denetimini her yerden (Azure DevOps Services-git, GitHub, herhangi bir uzak Git deposu veya alt sürüm), sürekli tümleştirme (CI) içeren hızlı ve yinelemeli bir işlem için kapsayıcı odaklı DevOps oluşturabilir. , iç birim testleri, kapsayıcı/hizmet tümleştirme testleri, sürekli teslim (CD) ve Release Management (RM). Geliştiriciler ayrıca, Azure Kubernetes Service (AKS) ile Docker uygulama sürümlerini, geliştirmeden hazırlama ve üretim ortamlarına otomatik hale getirebilir.
+  Azure DevOps Services, geliştiriciler, kaynak kodu denetimini her yerden (Azure DevOps Services-git, GitHub, herhangi bir uzak Git deposu veya alt sürüm), sürekli tümleştirme (CI), iç birim testleri, kapsayıcı/hizmet tümleştirme testleri, sürekli teslim (CD) ve Release Management (RM) içeren hızlı ve yinelemeli bir işlem için kapsayıcı odaklı DevOps oluşturabilir. Geliştiriciler ayrıca, Azure Kubernetes Service (AKS) ile Docker uygulama sürümlerini, geliştirmeden hazırlama ve üretim ortamlarına otomatik hale getirebilir.
 
 - **Yönetim ve izleme** Üretim uygulamalarını ve hizmetlerini çeşitli yollarla yönetebilir ve izleyebilir ve her iki perspektifi birleştirilmiş bir deneyimde tümleştirirler.
 

@@ -2,12 +2,12 @@
 title: Self-hosted gRPC uygulamaları-WCF geliştiricileri için gRPC
 description: ASP.NET Core gRPC uygulamalarını self-hosted Hizmetleri olarak dağıtma.
 ms.date: 09/02/2019
-ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 00b4ad50eae629b5b36a890d1eecf7119386c74c
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967221"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545073"
 ---
 # <a name="self-hosted-grpc-applications"></a>Şirket içinde barındırılan gRPC uygulamaları
 
@@ -34,7 +34,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 Şimdi, Visual Studio 'dan projeye sağ tıklayıp bağlam menüsünden *Yayımla* ' yı seçerek veya .NET Core CLI uygulamanızı yayımlayın.
 
-Bir .NET Core uygulaması yayımladığınızda, *çerçeveye bağımlı* bir dağıtım veya *kendi kendine dahil* edilen bir dağıtım oluşturmayı tercih edebilirsiniz. Çerçeveye bağımlı dağıtımlar, çalıştırıldıkları konakta .NET Core paylaşılan çalışma zamanının yüklenmesini gerektirir. Kendi içindeki dağıtımlar, .NET Core çalışma zamanının ve çerçevesinin tam kopyasıyla yayımlanır ve herhangi bir konakta çalıştırılabilir. Her yaklaşımın avantajları ve dezavantajları dahil daha fazla bilgi için [.NET Core uygulama dağıtım](https://docs.microsoft.com/dotnet/core/deploying/) belgelerine bakın.
+Bir .NET Core uygulaması yayımladığınızda, *çerçeveye bağımlı* bir dağıtım veya *kendi kendine dahil* edilen bir dağıtım oluşturmayı tercih edebilirsiniz. Çerçeveye bağımlı dağıtımlar, çalıştırıldıkları konakta .NET Core paylaşılan çalışma zamanının yüklenmesini gerektirir. Kendi içindeki dağıtımlar, .NET Core çalışma zamanının ve çerçevesinin tam kopyasıyla yayımlanır ve herhangi bir konakta çalıştırılabilir. Her yaklaşımın avantajları ve dezavantajları dahil daha fazla bilgi için [.NET Core uygulama dağıtım](../../core/deploying/index.md) belgelerine bakın.
 
 .NET Core 3,0 çalışma zamanının konakta yüklü olmasını gerektirmeyen uygulamanın kendi içindeki bir derlemesini yayımlamak için `-r` (veya `--runtime`) bayrağını kullanarak uygulamaya dahil edilecek çalışma zamanını belirtin.
 
@@ -77,13 +77,13 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 > [!NOTE]
 > Uygulama bir Linux hizmeti olarak çalışmıyorsa `UseSystemd` yöntemi hiçbir şey yapmaz.
 
-Şimdi, Visual Studio 'dan projeye sağ tıklayıp bağlam .NET Core CLI menüsünden *Yayımla* ' yı seçerek ve aşağıdaki komutu kullanarak, uygulamayı (örneğin, Framework 'e bağımlı veya ilgili Linux çalışma zamanı için kendi içinde) yayımlayın (örn. `linux-x64`).
+Şimdi, Visual Studio 'dan projeye sağ tıklayıp bağlam menüsünden *Yayımla* ' yı seçerek .NET Core CLI veya aşağıdaki komutu kullanarak, uygulamayı (örneğin, ilgili Linux çalışma zamanı için Framework 'e bağımlı veya şirket içinde `linux-x64`) yayımlayın.
 
 ```console
 dotnet publish -c Release -r linux-x64 -o ./publish
 ```
 
-`publish` dizininin tüm içeriğini Linux ana bilgisayarındaki bir yükleme klasörüne kopyalayın. Hizmeti kaydetmek için, `/etc/systemd/system` dizinine eklenmek üzere "birim dosyası" olarak adlandırılan özel bir dosya gerekir. Bu klasörde bir dosya oluşturmak için kök izninizin olması gerekir. `systemd` kullanmak istediğiniz tanımlayıcıyı ve `.service` uzantısını adlandırın. Örneğin: `/etc/systemd/system/myapp.service`
+`publish` dizininin tüm içeriğini Linux ana bilgisayarındaki bir yükleme klasörüne kopyalayın. Hizmeti kaydetmek için, `/etc/systemd/system` dizinine eklenmek üzere "birim dosyası" olarak adlandırılan özel bir dosya gerekir. Bu klasörde bir dosya oluşturmak için kök izninizin olması gerekir. `systemd` kullanmak istediğiniz tanımlayıcıyı ve `.service` uzantısını adlandırın. Örneğin: `/etc/systemd/system/myapp.service`.
 
 Hizmet dosyası, bu örnekte gösterildiği gibi ıNı biçimini kullanır.
 
@@ -150,7 +150,7 @@ Komut satırından `journalctl`systemd günlüğünü sorgulama hakkında daha f
 
 Bir gRPC uygulamasını üretimde çalıştırırken, güvenilir bir sertifika yetkilisinden (CA) bir TLS sertifikası kullanmanız gerekir. Bu CA, genel bir CA veya kuruluşunuz için bir dahili olabilir.
 
-Windows konakları üzerinde, sertifika, [X509Store sınıfı](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.0)kullanılarak güvenli bir [sertifika deposundan](https://docs.microsoft.com/windows/win32/seccrypto/managing-certificates-with-certificate-stores) yüklenebilir. `X509Store` sınıfı, bazı Linux konaklarındaki OpenSSL anahtar deposu ile de kullanılabilir.
+Windows konakları üzerinde, sertifika <xref:System.Security.Cryptography.X509Certificates.X509Store> sınıfı kullanılarak güvenli bir [sertifika deposundan](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) yüklenebilir. `X509Store` sınıfı, bazı Linux konaklarındaki OpenSSL anahtar deposu ile de kullanılabilir.
 
 Sertifikalar, bir dosyadan ( [Örneğin, güçlü](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0)bir parolayla korunan `.pfx` bir dosya) veya [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)gibi güvenli bir depolama hizmetinden alınan ikili verilerden biri kullanılarak da oluşturulabilir.
 

@@ -3,10 +3,10 @@ title: Seedwork (etki alanı modeliniz için yeniden kullanılabilir kök sını
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD tabanlı bir etki alanı modeline yönelik uygulamayı başlatmak için başlangıç noktası olarak seedwork kavramını kullanın.
 ms.date: 10/08/2018
 ms.openlocfilehash: f53988b92a05fb54f3f05d9f463450d1a11a0843
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 12/25/2019
 ms.locfileid: "73737228"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (etki alanı modeliniz için yeniden kullanılabilir kök sınıflar ve arabirimler)
@@ -115,7 +115,7 @@ Depoların kendisi, EF Core kodla veya başka herhangi bir altyapı bağımlıl�
 
 Bu yöntemle ilgili bir örüntü (depo arabirimlerini etki alanı model katmanına yerleştirme), ayrılmış arabirim deseninin bir sıdır. Marwler tarafından [açıklandığı](https://www.martinfowler.com/eaaCatalog/separatedInterface.html) gibi, "bir pakette arabirim tanımlamak, ancak başka bir pakette uygulamak Için ayrılmış arabirim kullanın. Bu şekilde, arabirime bağımlılığı gerektiren bir istemci, uygulamanın tamamen farkında olabilir. "
 
-Ayrılmış arabirim deseninin ardından uygulama katmanının (Bu durumda, mikro hizmet için Web API Projesi) etki alanı modelinde tanımlanan gereksinimlere bağımlılığı olması, ancak altyapıya/kalıcılığı doğrudan bağımlılığı yoktur katmanı. Buna ek olarak, havuzları kullanarak altyapı/Kalıcılık katmanında uygulanan uygulamayı yalıtmak için bağımlılık ekleme 'yi de kullanabilirsiniz.
+Ayrılmış arabirim deseninin ardından uygulama katmanının (Bu durumda, mikro hizmet için Web API Projesi) etki alanı modelinde tanımlanan gereksinimlere bağımlılığı vardır, ancak altyapı/Kalıcılık katmanına doğrudan bağımlılığı yoktur. Buna ek olarak, havuzları kullanarak altyapı/Kalıcılık katmanında uygulanan uygulamayı yalıtmak için bağımlılık ekleme 'yi de kullanabilirsiniz.
 
 Örneğin, ıorderrepository arabirimine sahip aşağıdaki örnek, OrderRepository sınıfının altyapı katmanında uygulamanız gereken işlemleri tanımlar. Uygulamanın geçerli uygulamasında, sorgular Basitleştirilmiş CQRS yaklaşımını takip altına göre bölündüğü için, bu kodun yalnızca veritabanına sipariş eklemesi veya güncelleştirilmesi gerekir.
 
