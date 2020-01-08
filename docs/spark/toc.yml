@@ -17,6 +17,8 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Databricks’e dağıtma
       href: tutorials/databricks-deployment.md
+    - name: Toplu işleme
+      href: tutorials/batch-processing.md
     - name: Yapılandırılmış akış
       href: tutorials/streaming.md
 - name: Nasıl yapılır kılavuzları

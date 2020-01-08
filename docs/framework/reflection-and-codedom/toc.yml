@@ -1,4 +1,4 @@
-- name: Dinamik Programlama
+- name: Dinamik programlama
   href: index.md
   items:
     - name: Yansıma
@@ -26,7 +26,7 @@
           href: how-to-hook-up-a-delegate-using-reflection.md
         - name: Windows Mağazası Uygulamaları için .NET Framework'te Yansıma
           href: reflection-for-windows-store-apps.md
-    - name: Dinamik Yöntemleri ve Derlemeleri Yayma
+    - name: Dinamik metotları ve bütünleştirilmiş kodları yayma
       href: emitting-dynamic-methods-and-assemblies.md
       items:
         - name: Yansıma Yaymadaki Güvenlik Sorunları
@@ -41,16 +41,17 @@
           href: how-to-define-a-generic-method-with-reflection-emit.md
         - name: Dinamik tür oluşturma için toplanabilir derlemeler
           href: collectible-assemblies.md
-    - name: Dinamik Dil Çalışma Zamanına Genel Bakış
+    - name: Dinamik dil çalışma zamanına genel bakış
       href: dynamic-language-runtime-overview.md
-    - name: Dinamik Kaynak Kodu Oluşturma ve Derleme
-      href: dynamic-source-code-generation-and-compilation.md
+    - name: Dinamik kaynak kodu oluşturma ve derleme
       items:
-        - name: CodeDOM'yi Kullanma
+        - name: Genel Bakış
+          href: dynamic-source-code-generation-and-compilation.md
+        - name: CodeDOM’yi kullanma
           href: using-the-codedom.md
-        - name: CodeDOM Grafiğinden Kaynak Kodu Oluşturma ve Derleme
+        - name: Bir CodeDOM grafından kaynak kodu oluşturma ve derleme
           href: generating-and-compiling-source-code-from-a-codedom-graph.md
-        - name: 'Nasıl yapılır: CodeDOM Kullanarak XML Belge Dosyası Oluşturma'
+        - name: CodeDOM kullanarak XML belge dosyası oluşturma
           href: how-to-create-an-xml-documentation-file-using-codedom.md
-        - name: 'Nasıl yapılır: CodeDOM Kullanarak Sınıf Oluşturma'
+        - name: CodeDOM kullanarak sınıf oluşturma
           href: how-to-create-a-class-using-codedom.md
