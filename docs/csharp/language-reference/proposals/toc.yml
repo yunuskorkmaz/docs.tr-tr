@@ -78,3 +78,5 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
         - name: Salt okunur örnek üyeleri
           href: ../../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
+        - name: İç içe stackalloc
+          href: ../../../../_csharplang/proposals/csharp-8.0/nested-stackalloc.md

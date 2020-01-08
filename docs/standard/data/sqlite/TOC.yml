@@ -1,0 +1,59 @@
+- name: Genel Bakış
+  href: index.md
+- name: Bağlantı dizeleri
+  href: connection-strings.md
+- name: Veri türleri
+  href: types.md
+- name: Parametreler
+  href: parameters.md
+- name: Veritabanı hataları
+  displayName: 'Busy, locked, retries, timeouts'
+  href: database-errors.md
+- name: İşlemler
+  href: transactions.md
+- name: Toplu İşleme
+  href: batching.md
+- name: Meta Veriler
+  href: metadata.md
+- name: SQLite özellikleri
+  items:
+    - name: Bellek içi veritabanları
+      href: in-memory-databases.md
+    - name: Şifreleme
+      href: encryption.md
+    - name: Çevrimiçi yedekleme
+      href: backup.md
+    - name: Kullanıcı tanımlı işlevler
+      displayName: UDFs
+      href: user-defined-functions.md
+    - name: Özel SQLite sürümleri
+      href: custom-versions.md
+    - name: Harmanlama
+      href: collation.md
+    - name: Blob G/Ç
+      displayName: Streams
+      href: blob-io.md
+    - name: Birlikte Çalışabilirlik
+      href: interop.md
+    - name: Uzantıları
+      href: extensions.md
+- name: Sınırlamalar
+  items:
+    - name: ADO.NET
+      href: adonet-limitations.md
+    - name: Zaman Uyumsuz
+      href: async.md
+    - name: Toplu ekleme
+      href: bulk-insert.md
+    - name: Entity Framework Core
+      href: /ef/core/providers/sqlite/limitations
+    - name: Dapper
+      href: dapper-limitations.md
+    - name: System.Data.SQLite
+      href: compare.md
+    - name: Xamarin
+      href: xamarin.md
+- name: API başvurusu >>
+  href: /dotnet/api/?view=msdata-sqlite-3.0.0
+- name: SQL söz dizimi >>
+  href: 'https://www.sqlite.org/lang.html'

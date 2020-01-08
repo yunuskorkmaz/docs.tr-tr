@@ -42,23 +42,23 @@
           href: install/linux-package-manager-sles12.md
         - name: SLES 15
           href: install/linux-package-manager-sles15.md
+    - name: Yerelleştirilmiş IntelliSense’i yükleme
+      href: install/localized-intellisense.md
 - name: Kullanmaya başlayın
   href: get-started.md
   items:
     - name: 'C# ve Visual Studio Code kullanmaya başlama'
       href: tutorials/with-visual-studio-code.md
-    - name: 'Visual Studio’da C# Merhaba Dünya uygulaması oluşturma'
+    - name: Visual Studio Code kullanarak macOS üzerinde .NET Core kullanmaya başlama
+      href: tutorials/using-on-macos.md
+    - name: Visual Studio’da ilk konsol uygulamanızı oluşturma
       href: tutorials/with-visual-studio.md
-    - name: Visual Studio’da Visual Basic Merhaba Dünya uygulaması oluşturma
-      href: tutorials/vb-with-visual-studio.md
     - name: Visual Studio kullanarak uygulamada hata ayıklama
       href: tutorials/debugging-with-visual-studio.md
     - name: Visual Studio kullanarak uygulamayı yayımlama
       href: tutorials/publishing-with-visual-studio.md
-    - name: 'Visual Studio’da C# kullanarak .NET Standard kitaplığı oluşturma'
+    - name: Visual Studio’da bir .NET Standard kitaplığı oluşturma
       href: tutorials/library-with-visual-studio.md
-    - name: Visual Studio’da Visual Basic kullanarak .NET Standard kitaplığı oluşturma
-      href: tutorials/vb-library-with-visual-studio.md
     - name: Visual Studio’da bir .NET Standard kitaplığını test etme
       href: tutorials/testing-library-with-visual-studio.md
     - name: Visual Studio’da bir .NET Standard kitaplığını kullanma
@@ -89,8 +89,6 @@
           href: tutorials/cli-templates-create-project-template.md
         - name: 3 - Şablon paketi oluşturma
           href: tutorials/cli-templates-create-template-pack.md
-    - name: MacOS üzerinde .NET Core kullanmaya başlama
-      href: tutorials/using-on-macos.md
     - name: Mac için Visual Studio kullanarak .NET Core kullanmaya başlama
       href: tutorials/using-on-mac-vs.md
     - name: macOS üzerinde kapsamlı bir .NET Core çözümü oluşturma
@@ -183,7 +181,11 @@
           href: diagnostics/dotnet-dump.md
         - name: dotnet-trace
           href: diagnostics/dotnet-trace.md
-- name: Birim testi
+    - name: .NET Core tanılama öğreticileri
+      items:
+        - name: Bellek sızıntısında hata ayıklama
+          href: diagnostics/debug-memory-leak.md
+- name: Birim Testi
   href: testing/index.md
   items:
     - name: Birim testi en iyi deneyimler
@@ -326,6 +328,8 @@
 - name: .NET Core ek araçlar
   href: additional-tools/index.md
   items:
+    - name: .NET Core Kaldırma Aracı
+      href: additional-tools/uninstall-tool.md
     - name: WCF Web Service Reference Provider
       href: additional-tools/wcf-web-service-reference-guide.md
     - name: dotnet-svcutil

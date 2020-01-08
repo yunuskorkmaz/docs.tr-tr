@@ -1,5 +1,7 @@
 - name: Hoş Geldiniz
   href: welcome.md
+- name: ​.NET belgelerindeki yenilikler
+  href: whats-new/index.yml
 - name: .NET kılavuzu
   href: standard/
 - name: .NET Core kılavuzu
