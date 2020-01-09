@@ -1,29 +1,29 @@
 ---
-title: 'Nasıl yapılır: Bir dizin ağacındaki en büyük dosya veya dosyalar için sorgu (LINQ) (C#)'
+title: Bir dizin ağacındaki en büyük dosya veya dosyalar için sorgu (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: 966138795dca53db99a0752b9bb7b85cc4601ee3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: dee501dc8d0cabd718307b45c99ca049ae4250aa
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592759"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344561"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Nasıl yapılır: Bir dizin ağacındaki en büyük dosya veya dosyalar için sorgu (LINQ) (C#)
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Bir dizin ağacındaki en büyük dosya veya dosyalar için sorgu (LINQ) (C#)
 Bu örnekte, bayt cinsinden dosya boyutuyla ilgili beş sorgu gösterilmektedir:  
   
 - En büyük dosyanın bayt cinsinden boyutunu alma.  
   
 - En küçük dosyanın bayt cinsinden boyutunu alma.  
   
-- Belirtilen kök klasörü altındaki <xref:System.IO.FileInfo> bir veya daha fazla klasörden en büyük veya en küçük dosyayı alma.  
+- Belirtilen kök klasörü altındaki bir veya daha fazla klasörden en büyük veya en küçük dosya <xref:System.IO.FileInfo> nesne.  
   
 - 10 en büyük dosya gibi bir sıra alma.  
   
 - Dosyaları, belirli bir boyuttan daha az olan dosyaları yoksayarak, dosya boyutlarına göre gruplar halinde sıralama.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, dosya boyutlarına bağlı olarak dosyaların nasıl sorgulandığına ve gruplandıralınacağını gösteren beş ayrı sorgu içerir. Bu örnekleri, sorgunun diğer bir özelliğindeki <xref:System.IO.FileInfo> sorgu temel alınarak kolayca değiştirebilirsiniz.  
+ Aşağıdaki örnek, dosya boyutlarına bağlı olarak dosyaların nasıl sorgulandığına ve gruplandıralınacağını gösteren beş ayrı sorgu içerir. Sorguyu temel alarak <xref:System.IO.FileInfo> nesnesinin diğer bir özelliğinde bu örnekleri kolayca değiştirebilirsiniz.  
   
 ```csharp  
 class QueryBySize  
@@ -138,12 +138,12 @@ class QueryBySize
 }  
 ```  
   
- Bir veya daha fazla tamamlanmış <xref:System.IO.FileInfo> nesne döndürmek için, sorgunun her birini veri kaynağında incelemesi gerekir ve sonra bunları length özelliğinin değerine göre sıralayın. Ardından, en büyük uzunluklara sahip tek bir veya sırası döndürebilir. Bir <xref:System.Linq.Enumerable.First%2A> listedeki ilk öğeyi döndürmek için kullanın. İlk <xref:System.Linq.Enumerable.Take%2A> n öğe sayısını döndürmek için kullanın. Listenin başlangıcında en küçük öğeleri yerleştirmek için azalan bir sıralama düzeni belirtin.  
+ Bir veya daha fazla <xref:System.IO.FileInfo> nesnesi döndürmek için, sorgunun her bir veri kaynağında her birini incelemesi gerekir ve sonra bunları length özelliğinin değerine göre sıralayın. Ardından, en büyük uzunluklara sahip tek bir veya sırası döndürebilir. Bir listedeki ilk öğeyi döndürmek için <xref:System.Linq.Enumerable.First%2A> kullanın. İlk n öğe sayısını döndürmek için <xref:System.Linq.Enumerable.Take%2A> kullanın. Listenin başlangıcında en küçük öğeleri yerleştirmek için azalan bir sıralama düzeni belirtin.  
   
- Burada bir dosya silindi başka bir iş parçacığında bu yana zaman dönemi içindeki durumda gerçekleştirilecektir olası özel kullanmak bayt cinsinden boyutunu almak için ayrı bir yöntem için sorguyu çağırır <xref:System.IO.FileInfo> nesne oluşturulduğu çağrısında`GetFiles`. Nesne zaten oluşturulsa da, bir <xref:System.IO.FileInfo> nesne, özelliğin ilk kez en güncel boyutunu bayt olarak yenilemeyi <xref:System.IO.FileInfo.Length%2A> deneyeceğinden, özel durum oluşabilir. <xref:System.IO.FileInfo> Bu işlemi sorgu dışında bir try-catch bloğuna yerleştirerek, sorguların içindeki işlemleri, yan etkilere neden olabilecek şekilde önleme kuralını izliyoruz. Genel olarak, bir uygulamanın bilinmeyen bir durumda ayrılmadığından emin olmak için özel durumlar tüketirken harika bir dikkatli olunması gerekir.  
+ Burada bir dosya silindi başka bir iş parçacığında bu yana zaman dönemi içindeki durumda gerçekleştirilecektir olası özel kullanmak bayt cinsinden boyutunu almak için ayrı bir yöntem için sorguyu çağırır <xref:System.IO.FileInfo> nesne oluşturulduğu çağrısında`GetFiles`. <xref:System.IO.FileInfo> nesne zaten oluşturulsa da, bir <xref:System.IO.FileInfo> nesnesi, özelliğin ilk kez eriştiği en güncel boyutu bayt cinsinden <xref:System.IO.FileInfo.Length%2A> yenilemeyi deneyeceğinden, özel durum ortaya çıkabilir. Bu işlemi sorgu dışında bir try-catch bloğuna yerleştirerek, sorguların içindeki işlemleri, yan etkilere neden olabilecek şekilde önleme kuralını izliyoruz. Genel olarak, bir uygulamanın bilinmeyen bir durumda ayrılmadığından emin olmak için özel durumlar tüketirken harika bir dikkatli olunması gerekir.  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
-System. C# LINQ ve System.IO ad alanları `using` için yönergeler içeren bir konsol uygulaması projesi oluşturun.
+## <a name="compiling-the-code"></a>Kod Derleme  
+System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.
  
 ## <a name="see-also"></a>Ayrıca bkz.
 

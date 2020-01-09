@@ -1,53 +1,53 @@
 ---
-title: HTTP ve HTTPS - WCF yapılandırma
+title: HTTP ve HTTPS Yapılandırma
 ms.date: 04/08/2019
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 4bfdbbc19bb9ed72bc50ebeeac114241ccd47c25
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: f7fd2bad6ced09b638cc1bb5d539fab1b9ce7d25
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053408"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336695"
 ---
 # <a name="configuring-http-and-https"></a>HTTP ve HTTPS Yapılandırma
 
-WCF hizmetleri ve istemcilerin HTTP ve HTTPS üzerinden iletişim kurabilir. HTTP/HTTPS ayarları, Internet Information Services (IIS) kullanarak veya bir komut satırı aracı kullanılarak yapılandırılır. Bir WCF Hizmeti IIS HTTP veya HTTPS ayarlarında zaman barındırılan (inetmgr.exe aracını kullanarak) IIS içinde yapılandırılabilir. Şirket içinde barındırılan bir WCF Hizmeti ise, bir komut satırı aracını kullanarak HTTP veya HTTPS ayarları yapılandırılır.
+WCF Hizmetleri ve istemcileri HTTP ve HTTPS üzerinden iletişim kurabilir. HTTP/HTTPS ayarları, Internet Information Services (IIS) kullanılarak veya bir komut satırı aracının kullanımı aracılığıyla yapılandırılır. Bir WCF hizmeti IIS HTTP altında barındırılıyorsa veya HTTPS ayarları IIS içinde (inetmgr. exe aracı kullanılarak) yapılandırılabilir. Bir WCF hizmeti kendinden barındırılıyorsa, HTTP veya HTTPS ayarları bir komut satırı aracı kullanılarak yapılandırılır.
 
-En az bir URL kaydını yapılandırma ve hizmetinizi kullanarak URL için bir güvenlik duvarı istisnasının eklemek istiyor. Netsh.exe aracı, bu ayarları yapılandırabilirsiniz.
+En azından, bir URL kaydı yapılandırmak ve hizmetinizin kullanacağı URL için bir güvenlik duvarı özel durumu eklemek istersiniz. Bu ayarları Netsh. exe aracıyla yapılandırabilirsiniz.
 
-## <a name="configuring-namespace-reservations"></a>Ad alanı ayırmaları yapılandırma
+## <a name="configuring-namespace-reservations"></a>Ad alanı ayırmalarını yapılandırma
 
-Namespace ayırma HTTP URL ad alanını bir kısmını haklarını belirli bir kullanıcı grubuna atar. Rezervasyon kullanıcılarla ad alanı kısmı üzerinde dinleme hizmetleri oluşturma hakkı verir. Ayırmaları URL ön ekleri, rezervasyon ayırma yolun tüm alt kapsayan anlamı olan. Namespace ayırmaları joker karakter kullanmanın iki yolu izin verir. HTTP sunucu API belgelerde [joker karakterler içeren ad alanı talep arasındaki çözümleme sırasını](/windows/desktop/Http/routing-incoming-requests).
+Ad alanı ayırma, HTTP URL ad alanının bir bölümü için belirli bir kullanıcı grubuna haklar atar. Ayırma, bu kullanıcılara ad alanının o bölümünü dinleyen hizmetler oluşturma hakkını verir. Ayırmalar, rezervasyon yolunun tüm alt yollarını kapsamakta olduğu anlamına gelen URL öneklerdir. Ad alanı ayırmaları, joker karakterleri kullanmanın iki yolunu sağlar. HTTP Sunucusu API 'SI belgeleri, [joker karakterleri içeren ad alanı talepleri arasındaki çözümlemenin sırasını](/windows/desktop/Http/routing-incoming-requests)açıklar.
 
-Ad alanı kayıtları eklemek için benzer bir istek, çalışan bir uygulama oluşturabilirsiniz. Kayıtları ve ayırmaları ad alanının bölümleri için yarışın. Rezervasyon çözümleme verilen sırasına göre bir kayıt üzerinde önceliğe sahip [joker karakterler içeren ad alanı talep arasındaki çözümleme sırasını](/windows/desktop/Http/routing-incoming-requests). Bu durumda, rezervasyon çalışan uygulama isteklerini almasını engeller.
+Çalışan bir uygulama, ad alanı kayıtları eklemek için benzer bir istek oluşturabilir. Kayıt ve rezervasyonlar ad alanının bölümleri için rekabet. Bir ayırma, [joker karakterleri içeren ad alanı talepleri arasındaki çözümleme sırasında](/windows/desktop/Http/routing-incoming-requests)verilen çözümleme sırasına göre kayıt üzerinde önceliğe sahip olabilir. Bu durumda, ayırma çalışan uygulamanın istekleri almasını engeller.
 
-Aşağıdaki örnek, Netsh.exe aracını kullanır:
+Aşağıdaki örnek Netsh. exe aracını kullanır:
 
 ```console
 netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
 ```
 
-Bu komut, etki alanı\kullanıcı hesabı için belirtilen URL ad alanı için bir URL ayırmasını ekler. Netsh komutunu kullanma hakkında daha fazla bilgi için türü `netsh http add urlacl /?` bir komut istemi ve Enter tuşuna basın.
+Bu komut, etkialanı \ Kullanıcı hesabı için belirtilen URL ad alanı için bir URL ayırması ekler. Netsh komutunu kullanma hakkında daha fazla bilgi için komut istemine `netsh http add urlacl /?` yazın ve ENTER tuşuna basın.
 
-## <a name="configuring-a-firewall-exception"></a>Bir güvenlik duvarı özel durum yapılandırma
+## <a name="configuring-a-firewall-exception"></a>Güvenlik Duvarı özel durumu yapılandırma
 
-Bir özel durum kendi kendine HTTP üzerinden iletişim kuran bir WCF Hizmeti barındırma, belirli bir URL kullanarak gelen bağlantılara izin vermek için güvenlik duvarı yapılandırması eklenmesi gerekir.
+HTTP üzerinden iletişim kuran bir WCF hizmetini kendinden barındırdığında, belirli bir URL 'YI kullanarak gelen bağlantılara izin vermek için Güvenlik Duvarı yapılandırmasına bir özel durum eklenmelidir.
 
-## <a name="configuring-ssl-certificates"></a>SSL sertifikaları yapılandırma
+## <a name="configuring-ssl-certificates"></a>SSL sertifikalarını yapılandırma
 
-Güvenli Yuva Katmanı (SSL) protokolü şifreleme anahtarlarını depolamak için istemci ve sunucu sertifikaları kullanır. İstemci, sunucu kimliğini doğrulayabilir bir bağlantı yapıldığında sunucu SSL sertifikasını sağlar. Sunucu, istemciden bağlantının her iki tarafının karşılıklı kimlik doğrulaması sağlamak için ayrıca bir sertifika isteyebilir.
+Güvenli Yuva Katmanı (SSL) protokolü, şifreleme anahtarlarını depolamak için istemci ve sunucu üzerindeki sertifikaları kullanır. İstemcinin sunucu kimliğini doğrulayabilmesi için bir bağlantı yapıldığında sunucu, SSL sertifikasını sağlar. Sunucu Ayrıca, bağlantının her iki tarafında da karşılıklı kimlik doğrulaması sağlamak üzere istemciden bir sertifika isteyebilir.
 
-Sertifikaları Merkezi bir depolama bağlantı IP adresi ve bağlantı noktası numarasını göre depolanır. Özel IP adresi 0.0.0.0 yerel makine için herhangi bir IP adresi ile eşleşir. Sertifika deposu URL'leri yola göre ayırt etmez unutmayın. Hizmetler için URL yolu farklı olsa bile aynı IP adresi ve bağlantı noktası bileşimi ile hizmet sertifikaları paylaşmanız gerekir.
+Sertifikalar, bağlantının IP adresine ve bağlantı noktası numarasına göre merkezi bir depoda depolanır. 0\.0.0.0 özel IP adresi, yerel makinenin herhangi bir IP adresiyle eşleşir. Sertifika deposunun URL 'Leri yola göre ayıramadığını unutmayın. Hizmetler URL 'sindeki yol farklı olsa da, aynı IP adresi ve bağlantı noktası birleşimine sahip hizmetler sertifikaları paylaşmalıdır.
 
-Adım adım yönergeler için bkz: [nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md).
+Adım adım yönergeler için bkz. [nasıl yapılır: SSL sertifikası Ile bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md).
 
 ## <a name="configuring-the-ip-listen-list"></a>IP dinleme listesini yapılandırma
 
-Bir kullanıcı bir URL kaydeder sonra HTTP Sunucusu API yalnızca bir IP adresi ve bağlantı noktası bağlar. Varsayılan olarak, tüm IP adreslerini makinenin URL'si bağlantı noktası HTTP Sunucusu API bağlar. HTTP sunucu API kullanmayan bir uygulama daha önce bu IP adresi ve bağlantı noktası bileşimi için bağlıysa bir çakışma ortaya çıkar. Dinleme IP listesi ile makine IP adreslerini bazıları için bağlantı noktası kullanan uygulamalar bulunabilmesi WCF hizmetleri sağlar. Dinleme IP listesi herhangi bir giriş içeriyorsa, HTTP sunucu API yalnızca listesini belirtir. Bu IP adresine bağlar. Dinleme IP listesini değiştirme yönetimsel ayrıcalıklar gerekiyor.
+HTTP Sunucusu API 'si, bir Kullanıcı bir URL 'yi kaydettiğinde bir IP adresine ve bağlantı noktasına bağlanır. Varsayılan olarak, HTTP Sunucusu API 'SI, makinenin tüm IP adresleri için URL 'deki bağlantı noktasına bağlanır. HTTP sunucu API 'sini kullanmayan bir uygulama daha önce bu IP adresi ve bağlantı noktası birleşimine bağlanmışsa bir çakışma ortaya çıkar. IP dinleme listesi, WCF hizmetlerinin, makinenin bazı IP adresleri için bir bağlantı noktası kullanan uygulamalarla birlikte çalışmasına izin verir. IP dinleme listesi herhangi bir giriş içeriyorsa, HTTP Sunucusu API yalnızca listenin belirttiği IP adreslerine bağlanır. IP dinleme listesini değiştirmek için yönetici ayrıcalıkları gerekir.
 
-Aşağıdaki örnekte gösterildiği gibi IP dinleme listesini değiştirmek için netsh aracını kullanın:
+Aşağıdaki örnekte gösterildiği gibi, IP dinleme listesini değiştirmek için Netsh aracını kullanın:
 
 ```console
 netsh http add iplisten ipaddress=0.0.0.0:8000
@@ -55,11 +55,11 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 
 ## <a name="other-configuration-settings"></a>Diğer yapılandırma ayarları
 
-Kullanırken <xref:System.ServiceModel.WSDualHttpBinding>, ad alanı ayırmaları ve Windows Güvenlik Duvarı ile uyumlu olan varsayılan istemci bağlantı kullanır. Bir çift bağlantı istemci temel adresini özelleştirmek seçerseniz, ardından bu HTTP ayarları yeni adresiyle eşleşecek şekilde istemcide yapılandırmanız da gerekir.
+<xref:System.ServiceModel.WSDualHttpBinding>kullanırken, istemci bağlantısı ad alanı ayırmaları ve Windows Güvenlik Duvarı ile uyumlu olan Varsayılanları kullanır. İkili bir bağlantının istemci temel adresini özelleştirmeyi seçerseniz, bu HTTP ayarlarını, yeni adresle eşleşecek şekilde istemci üzerinde de yapılandırmanız gerekir.
 
-HTTP sunucu API HttpCfg kullanılamayan bazı gelişmiş yapılandırma ayarları vardır. Bu ayarlar kayıt defterinde saklanır ve HTTP sunucusu API'lerini kullanan sistemlerde çalışan tüm uygulamalar için geçerlidir. Bu ayarlar hakkında daha fazla bilgi için bkz: [IIS için Http.sys kayıt defteri ayarları](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows). Çoğu kullanıcı bu ayarları değiştirmek gerekmez.
+HTTP Sunucusu API 'sinde, HttpCfg aracılığıyla kullanılamayan bazı gelişmiş yapılandırma ayarları vardır. Bu ayarlar kayıt defterinde tutulur ve HTTP sunucu API 'Lerini kullanan sistemlerde çalışan tüm uygulamalara uygulanır. Bu ayarlar hakkında daha fazla bilgi için bkz. [IIS Için http. sys kayıt defteri ayarları](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows). Çoğu kullanıcının bu ayarları değiştirmesi gerekmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
-- [Nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md)

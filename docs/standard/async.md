@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: 2f76eb7d2b769b59809bec81aefacb7cec90a450
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 1570909b7b416eff81dd90a936ff5ed10aad94f1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106695"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346080"
 ---
 # <a name="async-overview"></a>Zaman uyumsuz genel bakış
 
@@ -20,7 +20,7 @@ Bu kadar uzun bir süre önce, uygulamalar daha yeni bir BILGISAYAR veya sunucu 
 - İstemci uygulamalarının her zaman açık, her zaman bağlı ve sürekli olarak kullanıcı etkileşimine (örneğin, Touch) yüksek uygulama mağazası derecelendirmelerine sahip olması beklenir!
 - Hizmetin, trafiği yukarı ve aşağı doğru şekilde ölçeklendirerek, trafikte ani artışları işlemesi beklenir. 
 
-Zaman uyumsuz programlama, birden çok çekirdekte g/ç ve eş zamanlı işlemleri engellemeyi doğrudan işlemesini sağlayan temel bir tekniktir. .NET, uygulamasındaki C#kullanımı kolay, dil düzeyi zaman uyumsuz programlama modelleriyle uygulamalar ve hizmetler için uygulama ve hizmet yeteneği sağlar F#.
+Zaman uyumsuz programlama, birden çok çekirdekte g/ç ve eş zamanlı işlemleri engellemeyi doğrudan işlemesini sağlayan temel bir tekniktir. .NET,, Visual Basic ve C# F#' de kullanımı kolay, dil düzeyi zaman uyumsuz programlama modelleriyle uygulamalar ve hizmetler için yanıt verme ve elastik hale getirir.
 
 ## <a name="why-write-async-code"></a>Zaman uyumsuz kod neden yazılır?
 
@@ -39,9 +39,9 @@ Daha fazla bilgi için bkz. [zaman uyumsuz ayrıntılı](async-in-depth.md) konu
 
 [Zaman uyumsuz programlama desenleri](asynchronous-programming-patterns/index.md) konusu, .net 'te desteklenen üç zaman uyumsuz programlama desenlerine genel bakış sağlar:  
   
-- [Zaman uyumsuz programlama modeli (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) bileşen  
+- [Zaman uyumsuz programlama modeli (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (eski)  
   
-- [Olay tabanlı zaman uyumsuz model (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) bileşen  
+- [Olay tabanlı zaman uyumsuz model (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (eski)  
   
 - [Görev tabanlı zaman uyumsuz model (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (yeni geliştirme için önerilir)  
 

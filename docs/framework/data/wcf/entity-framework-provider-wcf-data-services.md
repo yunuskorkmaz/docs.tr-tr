@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-ms.openlocfilehash: 0b75e9645f05e5e83ff76cc138ee37e90600769a
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b6d49f20f72282ac2ce51c26fc4eb941b7ef6734
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569260"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346092"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Entity Framework sağlayıcısı (WCF Veri Hizmetleri)
-WCF Veri Hizmetleri gibi, ADO.NET Entity Framework bir varlık ilişkisi modelinin türü olan Varlık Veri Modeli temel alır. Entity Framework, işlemleri *kavramsal model*olarak adlandırılan varlık veri modeli uygulamasına karşı, bir veri kaynağına karşı eşdeğer işlemlere dönüştürür. Bu, Entity Framework ilişkisel verileri temel alan veri Hizmetleri için ideal bir sağlayıcı ve Entity Framework destekleyen bir veri sağlayıcısına sahip tüm veritabanları WCF Veri Hizmetleri ile kullanılabilir. Entity Framework şu anda destekleyen veri kaynaklarının listesi için bkz. [Entity Framework Için üçüncü taraf sağlayıcıları](https://go.microsoft.com/fwlink/?LinkId=143699).  
+WCF Veri Hizmetleri gibi, ADO.NET Entity Framework bir varlık ilişkisi modelinin türü olan Varlık Veri Modeli temel alır. Entity Framework, işlemleri *kavramsal model*olarak adlandırılan varlık veri modeli uygulamasına karşı, bir veri kaynağına karşı eşdeğer işlemlere dönüştürür. Bu, Entity Framework ilişkisel verileri temel alan veri Hizmetleri için ideal bir sağlayıcı ve Entity Framework destekleyen bir veri sağlayıcısına sahip tüm veritabanları WCF Veri Hizmetleri ile kullanılabilir. Entity Framework desteklemekte olan veri kaynaklarının bir listesi için, bkz. [Entity Framework Providers](/ef/ef6/fundamentals/providers/).
   
  Kavramsal modelde, varlık kapsayıcısı hizmetin köküdür. Verilerin bir veri hizmeti tarafından sunukullanabilmesi için önce Entity Framework bir kavramsal model tanımlamanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: ADO.NET Entity Framework veri kaynağı kullanarak veri hizmeti oluşturma](create-a-data-service-using-an-adonet-ef-data-wcf.md).  
   

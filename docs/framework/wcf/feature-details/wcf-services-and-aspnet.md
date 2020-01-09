@@ -1,75 +1,75 @@
 ---
-title: WCF hizmetleri ve ASP.NET
+title: WCF Hizmetleri ve ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: d42787492b00b8e0a5a732d641947fec61b5ff96
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0a64e277d3465b77a2553d6b9c3901f09a6e1a52
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663677"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544744"
 ---
-# <a name="wcf-services-and-aspnet"></a>WCF hizmetleri ve ASP.NET
+# <a name="wcf-services-and-aspnet"></a>WCF Hizmetleri ve ASP.NET
 
-Bu konuda, barındırma Windows Communication Foundation (WCF) Hizmetleri yan yana ASP.NET ve ASP.NET uyumluluk modunda bunları barındırma anlatılmaktadır.
+Bu konuda, ASP.NET ile yan yana Windows Communication Foundation (WCF) hizmetlerinin barındırılması ve ASP.NET uyumluluk modunda barındırılması ele alınmaktadır.
 
-## <a name="hosting-wcf-side-by-side-with-aspnet"></a>WCF yan yana ASP.NET ile barındırma
+## <a name="hosting-wcf-side-by-side-with-aspnet"></a>ASP.NET ile WCF yan yana barındırma
 
-Internet Information Services (IIS) barındırılan WCF hizmetleri ile yer alabilir. ASPX sayfaları ve tek, ortak bir uygulama etki içinde ASMX Web Hizmetleri. ASP.NET uygulama etki alanı yönetimi ve hem WCF ve ASP.NET HTTP çalışma zamanı için dinamik derleme gibi genel altyapı hizmetleri sağlar. WCF için varsayılan yapılandırma yan yana ASP.NET ile.
+Internet Information Services (IIS) içinde barındırılan WCF Hizmetleri ile bulunabilir. Tek, ortak bir uygulama etki alanının içindeki ASPX sayfaları ve ASMX Web Hizmetleri. ASP.NET, hem WCF hem de ASP.NET HTTP çalışma zamanı için AppDomain yönetimi ve dinamik derleme gibi ortak altyapı hizmetleri sağlar. WCF için varsayılan yapılandırma, ASP.NET ile yan yana olur.
 
-![WCF hizmetleri ve ASP .NET gösteren ekran görüntüsü: durum paylaşımı.](./media/wcf-services-and-aspnet/windows-communication-foundation-services-asp-dotnet-configuration.gif)
+![WCF hizmetlerini gösteren ekran görüntüsü ve ASP .NET: paylaşım durumu.](./media/wcf-services-and-aspnet/windows-communication-foundation-services-asp-dotnet-configuration.gif)
 
-ASP.NET HTTP çalışma zamanı ASP.NET istek işleme ancak rağmen ASP.NET içerik olduğu gibi bu hizmetler aynı AppDomain içinde barındırılan WCF hizmetleri için hedefleyen isteklerin işlenmesini içinde yer almaz. Bunun yerine, WCF hizmet modeli, WCF hizmetlerine gönderilen iletiler gelmeyecek durdurur ve bunları WCF aktarma kanala yığınından yönlendirir.
+ASP.NET HTTP Runtime, ASP.NET isteklerini işler, ancak bu hizmetler ASP.NET içeriğiyle aynı AppDomain 'de barındırıldığında bile, WCF Hizmetleri için hedeflenen isteklerin işlenmesine katılmaz. Bunun yerine, WCF hizmeti modeli WCF hizmetlerine yönelik iletileri keser ve bunları WCF taşıma/kanal yığını aracılığıyla yönlendirir.
 
-Yan yana modeli sonuçları aşağıdaki gibidir:
+Yan yana modelin sonuçları aşağıdaki gibidir:
 
-- ASP.NET ve WCF hizmetlerini AppDomain durumu paylaşabilirsiniz. İki çerçeveleri aynı AppDomain içinde olabildiğinden WCF (statik değişkenler, olayları vb. dahil) ile ASP.NET AppDomain durumu da paylaşabilirsiniz.
+- ASP.NET ve WCF Hizmetleri AppDomain durumunu paylaşabilir. İki çerçeve aynı AppDomain içinde bulunabilir, çünkü WCF Ayrıca AppDomain durumunu ASP.NET ile paylaşabilir (statik değişkenler, olaylar vb. dahil).
 
-- WCF hizmetleri tutarlı olarak bağımsız barındırma ortamı ve aktarım olarak davranır. ASP.NET HTTP çalışma zamanı barındırma ortamı ve HTTP iletişimi IIS/ASP.NET kasıtlı olarak birleştirilmiştir. Buna karşılık, WCF barındırma ortamları arasında tutarlı olarak davranacak şekilde tasarlanmıştır (WCF davranışını tutarlı bir şekilde hem içindeki ve dışındaki IIS) ve aktarım arasında (barındırılan IIS 7.0 ve üzeri bir hizmet kullanıma sunduğu, tüm uç noktalar genelinde tutarlı bir davranış sahip olsa bile Bu uç noktalara bazıları HTTP dışındaki protokollerin kullanın).
+- WCF Hizmetleri, barındırma ortamından ve aktarımından bağımsız olarak tutarlı bir şekilde davranır. ASP.NET HTTP çalışma zamanı, IIS/ASP. NET barındırma ortamına ve HTTP iletişimine kasıtlı olarak bağlanmış. Buna karşılık, WCF, barındırma ortamlarında tutarlı bir şekilde davranması için tasarlanmıştır (WCF hem IIS 'nin içinde hem de dışında bir şekilde davranır) ve aktarım sırasında (IIS 7,0 ' de barındırılan bir hizmet ve daha sonra, üzerinde Bu uç noktaların bazıları HTTP dışındaki protokolleri kullanır.
 
-- Bir AppDomain içinde ASP.NET içeriği, ancak WCF HTTP çalışma zamanı tarafından uygulanan özellikleri geçerlidir. HTTP özel ASP.NET uygulama platformu özelliklerinin çoğu, ASP.NET içeriği içeren bir AppDomain içinde barındırılan WCF hizmetlerine uygulanmaz. Bu özelliklerin örnekler aşağıdakileri içerir:
+- Bir AppDomain içinde, HTTP çalışma zamanı tarafından uygulanan özellikler ASP.NET içerik için geçerlidir ancak WCF 'ye uygulanmaz. ASP.NET uygulama platformunun HTTP 'e özgü birçok özelliği, ASP.NET içeriği içeren bir AppDomain içinde barındırılan WCF Hizmetleri için uygulanmaz. Bu özelliklere örnek olarak şunlar verilebilir:
 
-  - HttpContext: <xref:System.Web.HttpContext.Current%2A> her zaman `null` bir WCF hizmetinde erişildiğinde. Bunun yerine <xref:System.ServiceModel.Channels.RequestContext> kullanın.
+  - Bir WCF hizmeti içinden erişildiğinde HttpContext: <xref:System.Web.HttpContext.Current%2A> her zaman `null`. Bunun yerine <xref:System.ServiceModel.Channels.RequestContext> kullanın.
 
-  - Dosya tabanlı yetkilendirme: WCF güvenlik modeli, bir hizmet isteğinin yetkilendirilip yetkilendirilmediğini verirken hizmet .svc dosyaya uygulanan erişim için Denetim listesi (ACL) izin vermez.
+  - Dosya tabanlı yetkilendirme: WCF güvenlik modeli, bir hizmet isteğinin yetkilendirilip yetkilendirilmeyeceğine karar verirken hizmetin. svc dosyasına uygulanan erişim denetim listesi 'ne (ACL) izin vermez.
 
-  - Yapılandırma temelli URL yetkilendirmesi: Benzer şekilde, WCF güvenlik modeli System.Web kullanıcının belirtilen tüm URL tabanlı yetkilendirme kuralları kalmıyor \<yetkilendirme > yapılandırma öğesi. Bir hizmet tarafından ASP güvenli bir URL alanında bulunuyorsa WCF istekleri için bu ayarları göz ardı edilir. NET URL yetkilendirme kuralları.
+  - Yapılandırma tabanlı URL yetkilendirmesi: benzer şekilde, WCF güvenlik modeli System. Web 'in \<Authorization > yapılandırma öğesinde belirtilen herhangi bir URL tabanlı yetkilendirme kuralına bağlı değildir. Bu ayarlar, bir hizmetin ASP tarafından güvenliği sağlanmış bir URL alanında yer alıyorsa WCF istekleri için yoksayılır. NET 'in URL Yetkilendirme kuralları.
 
-  - HttpModule genişletilebilirlik: WCF barındırma altyapısını WCF karşılar ne zaman istekleri <xref:System.Web.HttpApplication.PostAuthenticateRequest> olay tetiklenir ve ASP.NET HTTP işlem hattına işleme döndürmez. İşlem hattının sonraki aşamalarda isteklerin kesilmesi için kodlanmış modülleri WCF istekleri kesmenize değil.
+  - HttpModule genişletilebilirliği: WCF barındırma altyapısı, <xref:System.Web.HttpApplication.PostAuthenticateRequest> olayı başlatıldığında WCF isteklerini karşılar ve ASP.NET HTTP ardışık düzenine işlem döndürmez. İşlem hattının sonraki aşamalarında istekleri ele almak için kodlanmış modüller WCF isteklerini ele vermez.
 
-  - ASP.NET kimliğe bürünme: Kimlik, IIS'nin işlediği gibi ASP.NET kimliğe bürünme System.Web'ın kullanarak etkinleştirmek için ayarlanmış olsa bile varsayılan olarak, WCF çalışmaları her zaman ister. \<Kimliğe bürün = "true" / > yapılandırma seçeneği.
+  - ASP.NET Kimliğe bürünme: varsayılan olarak, ASP.NET, System. Web 'in \<Identity impersonate = "true"/> yapılandırma seçeneği kullanılarak kimliğe bürünme özelliğini etkinleştirmek üzere ayarlanmış olsa bile, WCF istekleri her zaman IIS işlem kimliği olarak çalışır.
 
-Bu kısıtlama, uygulama IIS barındırılan WCF hizmetleri için uygulanır. ASP.NET içeriği davranışını varlığını WCF tarafından etkilenmez.
+Bu kısıtlamalar yalnızca IIS uygulamasında barındırılan WCF Hizmetleri için geçerlidir. ASP.NET içeriğinin davranışı WCF 'nin varlığından etkilenmez.
 
-Geleneksel olarak HTTP ardışık düzen tarafından sağlanan işlevselliği gerektiren WCF uygulamalar, konak ve bağımsız aktarım WCF eşdeğerleri kullanmayı düşünmelisiniz:
+HTTP işlem hattı tarafından geleneksel işlevselliği gerektiren WCF uygulamaları, ana bilgisayar ve aktarımdan bağımsız olan WCF eşdeğerlerini kullanmayı göz önünde bulundurmalıdır:
 
-- <xref:System.ServiceModel.OperationContext> yerine <xref:System.Web.HttpContext>.
+- <xref:System.Web.HttpContext>yerine <xref:System.ServiceModel.OperationContext>.
 
-- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> ASP yerine. NET dosya/URL yetkilendirme.
+- ASP yerine <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. NET 'in dosya/URL yetkilendirmesi.
 
-- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> veya özel kanallar HTTP modülleri yerine katmanlı.
+- HTTP modülleri yerine <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> veya özel katmanlı kanallar.
 
-- System.Web kimliğe bürünme yerine WCF kullanarak her bir işlem için kimliğe bürünme.
+- System. Web kimliğe bürünme yerine WCF kullanarak her işlem için kimliğe bürünme.
 
-Alternatif olarak, hizmetlerinizi WCF'ın ASP.NET uyumluluk modunda çalışan düşünebilirsiniz.
+Alternatif olarak, hizmetlerinizi WCF 'nin ASP.NET uyumluluk modunda çalıştırmayı düşünebilirsiniz.
 
-## <a name="hosting-wcf-services-in-aspnet-compatibility-mode"></a>ASP.NET uyumluluk modunda WCF hizmetlerini barındırma
+## <a name="hosting-wcf-services-in-aspnet-compatibility-mode"></a>WCF hizmetlerini ASP.NET uyumluluk modunda barındırma
 
-WCF modeli barındırma ortamları ve taşımalar arasında tutarlı olarak davranacak şekilde tasarlanmış olsa da genellikle burada bir uygulama bu ölçüde esneklik gerektirmeyen senaryolar vardır. WCF'ın ASP.NET uyumluluk modunun konak IIS dışında veya HTTP dışındaki protokoller üzerinden iletişim kurmak için yeteneği gerektirmez, ancak tüm ASP.NET Web uygulaması platformu özelliklerini kullanan senaryolar için uygundur.
+WCF modeli, barındırma ortamları ve aktarımları arasında tutarlı bir şekilde davranması için tasarlansa da, genellikle bir uygulamanın bu düzeyde esneklik gerektirmemesine neden olan senaryolar vardır. WCF 'nin ASP.NET uyumluluk modu, IIS dışında bir şekilde barındırmanıza veya HTTP dışındaki protokoller üzerinden iletişim kurmaya gerek olmayan, ancak ASP.NET Web uygulaması platformunun tüm özelliklerini kullanan senaryolar için uygundur.
 
-Burada WCF barındırma altyapısını, WCF iletileri durdurur ve bunları HTTP ardışık düzen dışında yönlendirir, varsayılan yan yana yapılandırmada ASP.NET uyumluluk modunda çalışan WCF hizmetleri HTTP ASP.NET isteği yaşam döngüsünde tam olarak katılın. Uyumluluk modunda, WCF hizmetleri HTTP ardışık düzen üzerinden kullanın. bir <xref:System.Web.IHttpHandler> uygulama, ASPX sayfaları ve ASMX Web Hizmetleri işlenme biçimini isteklerine benzer. Sonuç olarak, WCF ile ilgili aşağıdaki ASP.NET özellikleri için ASMX aynı şekilde davranır:
+WCF barındırma altyapısının WCF iletilerini aldığı ve HTTP ardışık düzeninde yönlendirdiğini varsayılan yan yana yapılandırmanın aksine, ASP.NET uyumluluk modunda çalışan WCF Hizmetleri, ASP.NET HTTP istek yaşam döngüsüne tam olarak katılır. Uyumluluk modunda, WCF Hizmetleri, ASPX sayfaları ve ASMX Web hizmetleri isteklerinin işlenme yöntemiyle benzer bir <xref:System.Web.IHttpHandler> uygulama aracılığıyla HTTP işlem hattını kullanır. Sonuç olarak, WCF aşağıdaki ASP.NET özelliklerine göre de ASMX ile aynı şekilde davranır:
 
-- <xref:System.Web.HttpContext>: ASP.NET uyumluluk modunda çalışan WCF hizmetleri erişim <xref:System.Web.HttpContext.Current%2A> ve ilişkili durumu.
+- <xref:System.Web.HttpContext>: ASP.NET uyumluluk modunda çalışan WCF Hizmetleri, <xref:System.Web.HttpContext.Current%2A> ve onunla ilişkili durumuna erişebilir.
 
-- Dosya tabanlı yetkilendirme: WCF hizmetleri ASP.NET uyumluluk modunda çalışan dosya sistemi erişim denetim listeleri (ACL) hizmetin .svc dosyasına ekleyerek güvenli olabilir.
+- Dosya tabanlı yetkilendirme: ASP.NET uyumluluk modunda çalışan WCF Hizmetleri, hizmet. svc dosyasına dosya sistemi erişim denetim listeleri (ACL 'Ler) eklenerek güvenli olabilir.
 
-- URL yetkilendirmesi yapılandırılabilir: ASP. WCF hizmetini ASP.NET uyumluluk modunda çalışırken NET'in URL yetkilendirme kuralları için WCF istekleri uygulanır.
+- Yapılandırılabilir URL yetkilendirmesi: ASP. WCF hizmeti ASP.NET uyumluluk modunda çalışırken, ağ URL 'SI yetkilendirme kuralları WCF istekleri için zorlanır.
 
-- <xref:System.Web.HttpModuleCollection> Genişletilebilirlik: ASP.NET uyumluluk modunda çalışan WCF hizmetleri HTTP ASP.NET isteği yaşam döngüsünde tam olarak katılmak için HTTP işlem hattı, yapılandırılmış herhangi bir HTTP modülü WCF isteklerinde önce ve sonra hizmet başlatma çalışabilir.
+- <xref:System.Web.HttpModuleCollection> genişletilebilirlik: ASP.NET uyumluluk modunda çalışan WCF Hizmetleri, ASP.NET HTTP istek yaşam döngüsüne tam olarak katıldığından, HTTP işlem hattında yapılandırılan HTTP modülleri, hizmet çağrısından önce ve sonra hem WCF istekleri üzerinde işleyebilir.
 
-- ASP.NET kimliğe bürünme: WCF hizmetleri ASP.NET geçerli kimliğini kullanarak çalışan ASP.NET kimliğe bürünme uygulama için etkinleştirilmişse, IIS işlem kimliği farklı olabilecek iş parçacığı, hesabın kimliğine büründü. ASP.NET kimliğe bürünme ve WCF kimliğe bürünme hem de bir hizmet işlemi için etkinleştirilip etkinleştirilmediğini hizmet uygulaması WCF alınan kimlik kullanarak nihai olarak çalışır.
+- ASP.NET Kimliğe bürünme: WCF Hizmetleri, uygulama için ASP.NET Kimliğe bürünme etkinleştirilmişse, IIS işlem kimliğinden farklı olabilecek ASP.NET Kimliğine bürünülen iş parçacığının geçerli kimliğini kullanarak çalışır. ASP.NET Kimliğe bürünme ve WCF kimliğe bürünme her ikisi de belirli bir hizmet işlemi için etkinleştirildiyse, hizmet uygulamasının sonunda WCF 'den elde edilen kimlik kullanılarak çalışır.
 
-WCF'ın ASP.NET uyumluluk modunun (uygulamanın Web.config dosyasında bulunur) aşağıdaki yapılandırma yoluyla uygulama düzeyinde etkinleştirilir:
+WCF 'nin ASP.NET uyumluluk modu, uygulama düzeyinde aşağıdaki yapılandırma (uygulamanın Web. config dosyasında bulunur) aracılığıyla etkinleştirilir:
 
 ```xml
 <system.serviceModel>
@@ -77,9 +77,9 @@ WCF'ın ASP.NET uyumluluk modunun (uygulamanın Web.config dosyasında bulunur) 
 </system.serviceModel>
 ```
 
-Bu değeri varsayılan olarak "`true`" belirtilmezse. Bu değeri ayarlamak "`false`" uygulama içinde çalışan tüm WCF hizmetleri ASP.NET uyumluluk modunda çalışmayacaktır gösterir.
+Belirtilmemişse bu değer varsayılan olarak `false`. `false` değeri, uygulamada çalışan tüm WCF hizmetlerinin ASP.NET uyumluluk modunda çalıştırılmayacağını gösterir.
 
-ASP.NET uyumluluk modunun tamamen WCF varsayılandan farklı istek işleme semantikler gösterdiğinden, hangi ASP.NET için bir uygulama içinde çalıştıkları olup olmadığını bireysel hizmet uygulamaları denetleme olanağı vardır Uyumluluk modu etkinleştirildi. Hizmetleri kullanma <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> ASP.NET uyumluluk modunun destek belirtmek için. Bu öznitelik için varsayılan değer <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>.
+ASP.NET uyumluluk modu, WCF varsayılanlarından temelde farklı olan istek işleme semantiğini gösterdiği için, tek tek hizmet uygulamaları, ASP.NET için bir uygulamanın içinde çalıştırılıp çalıştırılmadığını denetleme olanağına sahiptir Uyumluluk modu etkinleştirildi. Hizmetler, ASP.NET uyumluluk modunu destekleyip desteklemediğini göstermek için <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> kullanabilir. <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>, bu öznitelik için varsayılan değerdir.
 
 ```csharp
 [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
@@ -87,21 +87,21 @@ public class CalculatorService : ICalculatorSession
 {//Implement calculator service methods.}
 ```
 
-Aşağıdaki tabloda, uygulama genelinde uyumluluk modu ayarının bireysel hizmet ile destek düzeyini belirtilen etkileşim nasıl gösterilmektedir:
+Aşağıdaki tabloda, uygulama genelinde uyumluluk modu ayarının, tek tek hizmetin belirtilen destek düzeyiyle nasıl etkileşimde bulunduğu gösterilmektedir:
 
-|Birçok farklı uygulama uyumluluk modu ayarı|[AspNetCompatibilityRequirementsMode]<br /><br /> Ayar|Gözlemlenen sonucu|
+|Uygulama genelinde uyumluluk modu ayarı|[AspNetCompatibilityRequirementsMode]<br /><br /> Ayar|Gözlemlenen sonuç|
 |--------------------------------------------------|---------------------------------------------------------|---------------------|
-|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|Hizmet başarıyla etkinleştirir.|
-|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|Hizmet başarıyla etkinleştirir.|
-|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|Hizmetin bir ileti aldığında, bir etkinleştirme hatası oluşur.|
-|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|Hizmetin bir ileti aldığında, bir etkinleştirme hatası oluşur.|
-|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|Hizmet başarıyla etkinleştirir.|
-|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|Hizmet başarıyla etkinleştirir.|
+|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|Hizmet başarıyla etkinleştirilir.|
+|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|Hizmet başarıyla etkinleştirilir.|
+|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|Hizmet bir ileti aldığında bir etkinleştirme hatası oluşur.|
+|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|Hizmet bir ileti aldığında bir etkinleştirme hatası oluşur.|
+|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|Hizmet başarıyla etkinleştirilir.|
+|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|Hizmet başarıyla etkinleştirilir.|
 
 > [!NOTE]
-> IIS 7.0 ve WAS'ta WCF hizmetleri HTTP dışındaki protokoller üzerinden iletişim kurmasına izin verir. Ancak, ASP.NET uyumluluk modunun etkin uygulamalarda çalışan WCF hizmetleri HTTP olmayan uç noktalarını kullanıma sunmak için izin verilmez. Hizmeti, ilk ileti aldığında, bu tür bir yapılandırma etkinleştirme özel durum oluşturur.
+> IIS 7,0 ve, WCF hizmetlerinin HTTP dışındaki protokoller üzerinden iletişim kurmasına izin verir. Ancak, ASP.NET uyumluluk modu etkinleştirilmiş uygulamalarda çalışan WCF Hizmetleri, HTTP olmayan uç noktaları kullanıma sunmasına izin verilmez. Bu tür bir yapılandırma, hizmet ilk iletisini aldığında bir etkinleştirme özel durumu oluşturur.
 
-WCF hizmetleri için ASP.NET uyumluluk modunun etkinleştirme hakkında daha fazla bilgi için bkz. <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> ve [ASP.NET Uyumluluk](../samples/aspnet-compatibility.md) örnek.
+WCF Hizmetleri için ASP.NET uyumluluk modunu etkinleştirme hakkında daha fazla bilgi için, <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> ve [ASP.NET uyumluluk](../samples/aspnet-compatibility.md) örneği ' ne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

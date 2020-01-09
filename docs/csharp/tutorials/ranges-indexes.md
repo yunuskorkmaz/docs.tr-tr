@@ -4,18 +4,18 @@ description: Bu gelişmiş öğreticide, sıralı bir veri kümesinin dilimlerin
 ms.date: 09/20/2019
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3d4c022ff8d6e7f260632e34d6f28277014c85c8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039669"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345626"
 ---
 # <a name="indices-and-ranges"></a>Dizinler ve aralıklar
 
 Aralıklar ve dizinler, bir dizideki tek öğe veya aralıklara erişmek için bir kısa sözdizimi sağlar.
 
-Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -27,12 +27,12 @@ Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
 Bu dil desteği iki yeni türe ve iki yeni işleçlere dayanır:
 
-- <xref:System.Index?displayProperty=nameWithType> bir dizinin bir dizinini temsil eder.
+- <xref:System.Index?displayProperty=nameWithType> bir dizini bir diziye temsil eder.
 - Bitiş işlecinden Dizin `^`, bir dizinin bir dizinin sonuna göre olduğunu belirtir.
 - <xref:System.Range?displayProperty=nameWithType> bir dizinin alt aralığını temsil eder.
-- Aralık işleci `..`, bir aralığın işlenenleri olarak başlangıcını ve sonunu belirtir.
+- Aralık işleci, bir aralığın işlenenlerinin başlangıcını ve sonunu belirten `..`.
 
-Dizin kurallarıyla başlayalım. Dizi `sequence` değerlendirin. `0` Dizin `sequence[0]`ile aynıdır. `^0` Dizin `sequence[sequence.Length]`ile aynıdır. `sequence[^0]`, `sequence[sequence.Length]` olduğu gibi bir özel durum oluşturur. Herhangi bir sayı `n`için Dizin `^n` `sequence[sequence.Length - n]`ile aynıdır.
+Dizin kurallarıyla başlayalım. Dizi `sequence`değerlendirin. `0` Dizin `sequence[0]`ile aynıdır. `^0` Dizin `sequence[sequence.Length]`ile aynıdır. `sequence[^0]`, `sequence[sequence.Length]` olduğu gibi bir özel durum oluşturur. Herhangi bir sayı `n`için Dizin `^n` `sequence[sequence.Length - n]`ile aynıdır.
 
 ```csharp
 string[] words = new string[]
@@ -56,11 +56,11 @@ Son kelimeyi `^1` diziniyle alabilirsiniz. Başlatmanın altına aşağıdaki ko
 
 Aralık, bir aralığın *başlangıcını* ve *sonunu* belirtir. Aralıklar dışlamalı, yani *bitiş* aralığa dahil değildir. Aralık `[0..^0]`, tüm aralığı temsil eden `[0..sequence.Length]` aralığını temsil eder. 
 
-Aşağıdaki kod, "hızlı", "kahverengi" ve "Fox" sözcüklerinin bulunduğu bir alt Aralık oluşturur. `words[3]`üzerinden `words[1]` içerir. Öğe `words[4]` Aralık içinde değil. Aşağıdaki kodu aynı yönteme ekleyin. Etkileşimli pencerenin alt kısmına kopyalayıp yapıştırın.
+Aşağıdaki kod, "quick", "brown" ve "fox" sözcüklerinin bulunduğu bir alt aralık oluşturur. `words[1]` ile `words[3]` aralığını içerir. Öğe `words[4]` Aralık içinde değil. Aşağıdaki kodu aynı yönteme ekleyin. Etkileşimli pencerenin alt kısmına kopyalayıp yapıştırın.
 
 [!code-csharp[Range](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Range)]
 
-Aşağıdaki kod, "Lazy" ve "köpek" ile bir alt Aralık oluşturur. `words[^2]` ve `words[^1]`içerir. Son dizin `words[^0]` dahil değildir. Aşağıdaki kodu da ekleyin:
+Aşağıdaki kod, "lazy" ve "dog" sözcüklerini içeren bir alt aralık oluşturur. `words[^2]` ile `words[^1]` aralığını içerir. Son dizin `words[^0]` dahil değildir. Aşağıdaki kodu da ekleyin:
 
 [!code-csharp[LastRange](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastRange)]
 
@@ -78,9 +78,11 @@ Aşağıdaki örnekte, bu seçimlerin pek çok nedeni gösterilmektedir. Farklı
 
 ## <a name="type-support-for-indices-and-ranges"></a>Dizinler ve aralıklar için tür desteği
 
-Bir tür bir <xref:System.Index> veya <xref:System.Range> parametresi olan bir [Dizin Oluşturucu](../programming-guide/indexers/index.md) sağlıyorsa, sırasıyla dizinleri veya aralıkları açıkça destekler.
+Dizinler ve aralıklar, tek bir öğeye veya bir dizideki alt öğe aralığına erişmek için net, kısa sözdizimi sağlar. Bir dizin ifadesi genellikle bir dizinin öğelerinin türünü döndürür. Bir Aralık ifadesi genellikle kaynak dizisiyle aynı sıra türünü döndürür.
 
-Bir tür, erişilebilir bir alıcı ve `int`dönüş türü `Length` veya `Count` adlı bir **özelliğe sahipse bir** tür oluşturulabilir. Dizinleri veya aralıkları açıkça desteklemeyen bir sayılabilir türü, bunlar için örtülü bir destek sağlayabilir. Daha fazla bilgi için, [özellik teklifi notunun](~/_csharplang/proposals/csharp-8.0/ranges.md) [örtük Dizin desteği](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) ve [örtük Aralık desteği](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) bölümlerine bakın.
+Bir tür bir <xref:System.Index> veya <xref:System.Range> parametresi olan bir [Dizin Oluşturucu](../programming-guide/indexers/index.md) sağlıyorsa, sırasıyla dizinleri veya aralıkları açıkça destekler. Tür, tek bir <xref:System.Range> parametresi alan bir Dizin Oluşturucu sağlıyorsa, <xref:System.Span%601?displayProperty=nameWithType>gibi farklı bir dizi türü döndürmeyi tercih edebilir.
+
+Bir tür, erişilebilir bir alıcı ve `int`dönüş türü `Length` veya `Count` adlı bir **özelliğe sahipse bir** tür oluşturulabilir. Dizinleri veya aralıkları açıkça desteklemeyen bir sayılabilir türü, bunlar için örtülü bir destek sağlayabilir. Daha fazla bilgi için, [özellik teklifi notunun](~/_csharplang/proposals/csharp-8.0/ranges.md) [örtük Dizin desteği](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) ve [örtük Aralık desteği](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) bölümlerine bakın. Örtük Aralık desteği kullanan aralıklar, kaynak dizisiyle aynı sıra türünü döndürür.
 
 Örneğin, aşağıdaki .NET türleri hem dizinleri hem de aralıkları destekler: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601>ve <xref:System.ReadOnlySpan%601>. <xref:System.Collections.Generic.List%601> dizinleri destekler ancak aralıkları desteklemez.
 

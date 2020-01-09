@@ -2,22 +2,22 @@
 title: WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 04380a2a30aba85efb98ee8f9e24d0a6223a18a3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 04f9a014c3cb3ffd127ccc82fdda731e20136c52
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320321"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544637"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni
 WS-AtomicTransaction Yapılandırması MMC ek bileşeni, hem yerel hem de uzak makinelerde WS-AtomicTransaction ayarlarının bir bölümünü yapılandırmak için kullanılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 veya [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] çalıştırıyorsanız, MMC ek bileşeni **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri/** **, Bilgisayarım ' a sağ tıklayıp** **Özellikler**' i seçerek bulunabilir. Bu, MSDTC 'yi yapılandırabileceğiniz konumdur. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.  
+ [!INCLUDE[wxp](../../../includes/wxp-md.md)] veya Windows Server 2003 çalıştırıyorsanız, MMC ek bileşeni **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri/** **, Bilgisayarım ' a sağ tıklayıp** **Özellikler**' i seçerek bulunabilir. Bu, MSDTC 'yi yapılandırabileceğiniz konumdur. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.  
   
- Windows Vista veya [!INCLUDE[lserver](../../../includes/lserver-md.md)] çalıştırıyorsanız, MMC ek bileşeni **Başlat** düğmesine tıklayıp **arama** kutusuna `dcomcnfg.exe` yazarak bulunabilir. MMC açıldığında, **bilgisayar \ dağıtılmış işlem Koordinatlıklasör** düğümü ' ne gidin, sağ tıklayın ve **Özellikler**' i seçin. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.  
+ Windows Vista veya Windows Server 2008 çalıştırıyorsanız, MMC ek bileşeni **Başlat** düğmesine tıklayıp **arama** kutusuna `dcomcnfg.exe` yazarak bulunabilir. MMC açıldığında, **bilgisayar \ dağıtılmış işlem Koordinatlıklasör** düğümü ' ne gidin, sağ tıklayın ve **Özellikler**' i seçin. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.  
   
- Önceki adımlar, yerel bir makineyi yapılandırmak için ek bileşeni başlatmak üzere kullanılır. Uzak bir makineyi yapılandırmak istiyorsanız, uzak makinenin adını **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri/** olarak bulmanız ve [!INCLUDE[wxp](../../../includes/wxp-md.md)] veya [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] ' yi çalıştırıyorsanız benzer adımları gerçekleştirmeniz gerekir. Windows Vista veya [!INCLUDE[lserver](../../../includes/lserver-md.md)] çalıştırıyorsanız, Vista ve [!INCLUDE[lserver](../../../includes/lserver-md.md)] için önceki adımları izleyin, ancak uzak bilgisayarın düğümü altındaki **Dağıtılmış işlem Koordinatı\local DTC** düğümünü kullanın.  
+ Önceki adımlar, yerel bir makineyi yapılandırmak için ek bileşeni başlatmak üzere kullanılır. Uzak bir makineyi yapılandırmak istiyorsanız, uzak makinenin adını **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri**/olarak bulmanız ve [!INCLUDE[wxp](../../../includes/wxp-md.md)] veya Windows Server 2003 çalıştırıyorsanız benzer adımları gerçekleştirmeniz gerekir. Windows Vista veya Windows Server 2008 çalıştırıyorsanız, Vista ve Windows Server 2008 için önceki adımları izleyin, ancak uzak bilgisayarın düğümü altındaki **Dağıtılmış işlem Koordinatı\local DTC** düğümünü kullanın.  
   
  Araç tarafından sunulan kullanıcı arabirimini kullanmak için, aşağıdaki yolda bulunan WsatUI. dll dosyasını kaydetmeniz gerekir.  
   
@@ -63,7 +63,7 @@ regasm.exe /codebase WsatUI.dll
   
  **Yetkili hesaplar**  
   
- **Seç** düğmesine tıkladığınızda, **katıldaki** **izin verme** veya **reddetme** kutusunu işaretleyerek WS Atomik işlemlere katılabilen kullanıcı veya grubu belirtebileceğiniz Windows Access Control liste Düzenleyicisi çağrılır. izin grubu.  
+ **Seç** düğmesine tıkladığınızda Windows Access Control liste Düzenleyicisi çağrılır. buradan, **katıl** izin grubundaki **izin verme** veya **reddetme** kutusunu işaretleyerek WS Atomik işlemlere katılabilen kullanıcıyı veya grubu belirtebilirsiniz.  
   
  **Yetkili sertifikalar**  
   
@@ -77,7 +77,7 @@ regasm.exe /codebase WsatUI.dll
   
  **Seçenekler** düğmesine tıkladığınızda, ek ayarları belirtebileceğiniz bir sayfa çağırılır.  
   
- **Izleme düzeyi** birleşimi kutusu, <xref:System.Diagnostics.TraceLevel> Numaralandırmadaki geçerli bir değer arasından seçim yapmanıza olanak tanır. Ayrıca, Etkinlik izlemeyi, etkinlik yaymayı gerçekleştirmek veya kişisel olarak tanımlanabilir bilgileri toplamak istediğinizi belirtmek için onay kutularını da kullanabilirsiniz.  
+ **Izleme düzeyi** birleşimi kutusu, <xref:System.Diagnostics.TraceLevel> numaralandırmanın geçerli bir değeri arasından seçim yapmanıza olanak tanır. Ayrıca, Etkinlik izlemeyi, etkinlik yaymayı gerçekleştirmek veya kişisel olarak tanımlanabilir bilgileri toplamak istediğinizi belirtmek için onay kutularını da kullanabilirsiniz.  
   
  Günlüğe kaydetme **oturum** grubu kutusunda günlük oturumlarını da belirtebilirsiniz.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: 3e8d3ec46362751ea8bbfe5120e35a050d0e7a6c
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 5191f3d03facaafc64f6df494ff90cd0ce1c1988
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569368"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346189"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Zaman uyumsuz Işlemler (WCF Veri Hizmetleri)
 Web uygulamaları, istemci ve sunucu arasında iç ağların içinde çalışan uygulamalardan daha yüksek gecikme süresine sahip olmalıdır. Uygulamanızın performans ve Kullanıcı deneyimini iyileştirmek için, Web üzerinden WCF Veri Hizmetleri sunuculara erişirken <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601> sınıflarının zaman uyumsuz yöntemlerini kullanmanızı öneririz.  
@@ -21,7 +21,7 @@ Web uygulamaları, istemci ve sunucu arasında iç ağların içinde çalışan 
  <xref:System.Data.Services.Client.DataServiceContext> <xref:System.Data.Services.Client.DataServiceQuery%601> ve sırasıyla *BEGIN* ve *End* ile başlayan sınıflar arasında bir yöntem çifti kullanarak zaman uyumsuz işlemler gerçekleştirebilirsiniz. *Begin* yöntemleri, işlem tamamlandığında hizmetin çağırdığı bir temsilciyi kaydeder. *Bitiş* yöntemleri, tamamlanan işlemlerden geri çağırma işlemini işlemek için kayıtlı olan temsilde çağrılmalıdır. Zaman uyumsuz bir işlemi gerçekleştirmek için *End* metodunu çağırdığınızda, işlemi başlatmak için kullandığınız <xref:System.Data.Services.Client.DataServiceQuery%601> veya <xref:System.Data.Services.Client.DataServiceContext> örneğinden bunu yapmanız gerekir. Her *BEGIN* yöntemi bir durum nesnesini geri aramaya geçirebileceğiniz bir `state` parametresi alır. Bu durum nesnesi, geri çağırma ile sağlanan <xref:System.IAsyncResult> alınır ve zaman uyumsuz işlemi tamamlamaya yönelik karşılık gelen *bitiş* yöntemini çağırmak için kullanılır. Örneğin, örnekte <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> yöntemini çağırdığınızda `state` parametresi olarak <xref:System.Data.Services.Client.DataServiceQuery%601> örneğini sağlarsanız, <xref:System.IAsyncResult>tarafından aynı <xref:System.Data.Services.Client.DataServiceQuery%601> örneği döndürülür. Bu <xref:System.Data.Services.Client.DataServiceQuery%601> örneği daha sonra sorgu işlemini tamamlamaya yönelik <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> yöntemini çağırmak için kullanılır. Daha fazla bilgi için bkz. [nasıl yapılır: zaman uyumsuz veri hizmeti sorguları yürütme](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md).  
   
 > [!NOTE]
-> Yalnızca zaman uyumsuz işlemler, Silverlight için .NET Framework belirtilen istemci kitaplıkları tarafından desteklenir. Daha fazla bilgi için bkz. [WCF veri Hizmetleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149).  
+> Yalnızca zaman uyumsuz işlemler, Silverlight için .NET Framework belirtilen istemci kitaplıkları tarafından desteklenir. Daha fazla bilgi için bkz. [WCF veri Hizmetleri (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)).  
   
  .NET Framework istemci kitaplıkları aşağıdaki zaman uyumsuz işlemleri destekler:  
   

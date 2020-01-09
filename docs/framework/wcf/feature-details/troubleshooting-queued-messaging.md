@@ -2,12 +2,12 @@
 title: Kuyruğa Alınan İletilerde Sorun Giderme
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 2999d1ab4129c72c231b6dc80480d8bfef5186fa
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837317"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345586"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Kuyruğa Alınan İletilerde Sorun Giderme
 
@@ -25,7 +25,7 @@ Y **:** İki WCF uygulaması arasındaki sıraya alınmış iletişim için MSMQ
 
 **S:** <xref:System.ServiceModel.NetMsmqBinding> ve `MsmqIntegration` bağlamalarını kullanmak için MSMQ 'YU yükseltmem gerekiyor mu?
 
-**C:** Hayır. Her iki bağlama de [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]üzerinde MSMQ 3,0 ile çalışır. Windows Vista 'da MSMQ 4,0 sürümüne yükselttiğinizde bağlamaların bazı özellikleri kullanılabilir hale gelir.
+**C:** Hayır. Her iki bağlama de [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve Windows Server 2003 üzerinde MSMQ 3,0 ile çalışır. Windows Vista 'da MSMQ 4,0 sürümüne yükselttiğinizde bağlamaların bazı özellikleri kullanılabilir hale gelir.
 
 **S:** MSMQ 3,0 4,0 ' de <xref:System.ServiceModel.NetMsmqBinding> ve <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> bağlamalarının hangi özellikleri mevcuttur?
 

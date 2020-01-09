@@ -2,12 +2,12 @@
 title: 'Nasıl Yapılır: İfade Ağaçlarını Yürütme'
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: 82801728596449869e5124c3fc92c9c0673f5dd9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2a2749eaed5279d04b72eb77b066c83de9722fa9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332994"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346000"
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>Nasıl yapılır: Ifade ağaçlarını yürütme (Visual Basic)
 Bu konu başlığı altında, bir ifade ağacının nasıl yürütüleceği gösterilmektedir. Bir ifade ağacının yürütülmesi bir değer döndürebilir veya bir yöntemi çağırmak gibi yalnızca bir eylem gerçekleştirebilir.  
@@ -42,7 +42,7 @@ MsgBox(result)
 ' 8  
 ```  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compile-the-code"></a>Kod derleme  
   
 - System. Linq. Ifadeler ad alanını ekleyin.  
   

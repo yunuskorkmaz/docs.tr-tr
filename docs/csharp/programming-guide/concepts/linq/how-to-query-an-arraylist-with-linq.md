@@ -1,28 +1,28 @@
 ---
-title: "Nasıl yapılır: LINQ (C#) ile ArrayList 'i sorgulama"
+title: LINQ (C#) ile ArrayList 'i sorgulama
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: c22cd6ef22b5ca182266c1e8db10151e07567fc6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b8edb90d33c92324d4f76c7e6977641fe4499d9d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969819"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345702"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-c"></a>Nasıl yapılır: LINQ (C#) ile ArrayList 'i sorgulama
-LINQ to <xref:System.Collections.ArrayList> gibi genel olmayan <xref:System.Collections.IEnumerable> koleksiyonlarını sorgulamak için kullandığınızda, koleksiyondaki nesne türlerini yansıtacak şekilde Aralık değişkeninin türünü açıkça bildirmeniz gerekir. Örneğin, `Student` nesneleri <xref:System.Collections.ArrayList> varsa, [from yan tümcesinden](../../../language-reference/keywords/from-clause.md) aşağıdaki gibi görünmelidir:  
+# <a name="how-to-query-an-arraylist-with-linq-c"></a>LINQ (C#) ile ArrayList 'i sorgulama
+<xref:System.Collections.ArrayList>gibi genel olmayan <xref:System.Collections.IEnumerable> koleksiyonlarını sorgulamak için LINQ kullanılırken, koleksiyondaki nesne türlerini yansıtacak şekilde Aralık değişkeninin türünü açıkça bildirmeniz gerekir. Örneğin, `Student` nesneleri <xref:System.Collections.ArrayList> varsa, [from yan tümcesinden](../../../language-reference/keywords/from-clause.md) aşağıdaki gibi görünmelidir:  
   
 ```csharp
 var query = from Student s in arrList  
 //...
 ```  
   
- Aralık değişkeninin türünü belirterek, <xref:System.Collections.ArrayList> ' daki her öğeyi bir `Student` ' e dönüştürmektir.  
+ Aralık değişkeninin türünü belirterek, <xref:System.Collections.ArrayList> her öğeyi bir `Student`olarak vurun.  
   
  Bir sorgu ifadesinde açıkça yazılmış bir aralık değişkeninin kullanılması <xref:System.Linq.Enumerable.Cast%2A> yöntemini çağırmaya eşdeğerdir. Belirtilen tür dönüştürme gerçekleştirilemiyorsa <xref:System.Linq.Enumerable.Cast%2A> bir özel durum oluşturur. <xref:System.Linq.Enumerable.Cast%2A> ve <xref:System.Linq.Enumerable.OfType%2A>, genel olmayan <xref:System.Collections.IEnumerable> türlerinde çalışan iki standart sorgu Işleci yöntemleridir. Daha fazla bilgi için bkz. [LINQ sorgu Işlemlerinde tür ilişkileri](./type-relationships-in-linq-query-operations.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, <xref:System.Collections.ArrayList> üzerinde basit bir sorgu gösterir. Bu örnek, kod <xref:System.Collections.ArrayList.Add%2A> yöntemini çağırdığında nesne başlatıcıları kullanır, ancak bu bir gereklilik değildir.  
+ Aşağıdaki örnek, <xref:System.Collections.ArrayList>üzerinde basit bir sorgu gösterir. Bu örnek, kod <xref:System.Collections.ArrayList.Add%2A> yöntemini çağırdığında nesne başlatıcıları kullanır, ancak bu bir gereklilik değildir.  
   
 ```csharp  
 using System;  

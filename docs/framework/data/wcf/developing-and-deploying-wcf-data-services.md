@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d6d0f6f357feba903e8345fc45251c146c5406db
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d3a3539904c5d8b5db23b99ca6128bf5860a1917
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975324"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346105"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Geliştirme ve dağıtma WCF Veri Hizmetleri
 
@@ -70,7 +70,7 @@ Visual Studio 2015 kullanarak bir ASP.NET uygulaması veya ASP.NET Web sitesi ol
 
 3. **Windows Azure geliştirme ortamı**
 
-     Visual Studio için Microsoft Azure Araçları, Visual Studio 'da Windows Azure hizmetleri geliştirmeye yönelik tümleşik bir araç kümesi içerir. Bu araçlarla, Microsoft Azure'a dağıtılabilen bir veri hizmeti geliştirebilir ve veri hizmetini dağıtımdan önce yerel bilgisayarda test edebilirsiniz. Windows Azure platformunda çalışan bir veri hizmeti geliştirmek için Visual Studio 'Yu kullanırken bu araçları kullanın. Visual Studio için Windows Azure Araçları 'nı [Microsoft Indirme merkezi](https://go.microsoft.com/fwlink/?LinkID=201848)' nden indirebilirsiniz. Windows Azure üzerinde çalışan bir veri hizmeti geliştirme hakkında daha fazla bilgi için bkz. [Windows Azure 'Da OData hizmetini dağıtma](https://go.microsoft.com/fwlink/?LinkId=201847).
+     Visual Studio için Microsoft Azure Araçları, Visual Studio 'da Windows Azure hizmetleri geliştirmeye yönelik tümleşik bir araç kümesi içerir. Bu araçlarla, Microsoft Azure'a dağıtılabilen bir veri hizmeti geliştirebilir ve veri hizmetini dağıtımdan önce yerel bilgisayarda test edebilirsiniz. Windows Azure platformunda çalışan bir veri hizmeti geliştirmek için Visual Studio 'Yu kullanırken bu araçları kullanın. Visual Studio için Windows Azure Araçları 'nı [Microsoft Indirme merkezi](https://go.microsoft.com/fwlink/?LinkID=201848)' nden indirebilirsiniz. Windows Azure üzerinde çalışan bir veri hizmeti geliştirme hakkında daha fazla bilgi için bkz. [Windows Azure 'Da OData hizmetini dağıtma](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/).
 
 ### <a name="development-tips"></a>Geliştirme İpuçları
 
@@ -80,7 +80,7 @@ Bir veri hizmeti geliştirirken, aşağıdakileri dikkate almanız gerekir:
 
 - HTTP inceleme programı, istek ve yanıt iletilerinin içeriğini denetlemenizi sağlayarak veri hizmetinde hata ayıklarken size epey yardımcı olabilir. Veri hizmetine yapılan HTTP isteklerini ve veri hizmetinden alınan yanıtları denetlemek için ham paketleri görüntüleyebilen herhangi bir ağ paketi çözümleyicisi kullanılabilir.
 
-- Veri hizmetinde hata ayıklarken, normal işlem sırasında veri hizmetinden bir hata hakkında daha fazla bilgi edinmek isteyebilirsiniz. <xref:System.Data.Services.DataServiceConfiguration> <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> özelliğini `true` ve veri hizmeti sınıfındaki <xref:System.ServiceModel.Description.ServiceDebugBehavior> özniteliğinin <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> özelliğini `true`olarak ayarlayarak veri hizmetinden ek hata bilgileri alabilirsiniz. Daha fazla bilgi için bkz. Post [hata ayıklama WCF veri Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=201868). Ayrıca, HTTP mesajlaşma katmanında oluşturulan özel durumları görüntülemek için WCF 'de izlemeyi etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [Izlemeyi yapılandırma](../../wcf/diagnostics/tracing/configuring-tracing.md).
+- Veri hizmetinde hata ayıklarken, normal işlem sırasında veri hizmetinden bir hata hakkında daha fazla bilgi edinmek isteyebilirsiniz. <xref:System.Data.Services.DataServiceConfiguration> <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> özelliğini `true` ve veri hizmeti sınıfındaki <xref:System.ServiceModel.Description.ServiceDebugBehavior> özniteliğinin <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> özelliğini `true`olarak ayarlayarak veri hizmetinden ek hata bilgileri alabilirsiniz. Daha fazla bilgi için bkz. Post [hata ayıklama WCF veri Hizmetleri](https://blogs.msdn.microsoft.com/phaniraj/?m=20086). Ayrıca, HTTP mesajlaşma katmanında oluşturulan özel durumları görüntülemek için WCF 'de izlemeyi etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [Izlemeyi yapılandırma](../../wcf/diagnostics/tracing/configuring-tracing.md).
 
 - Bir veri hizmeti genellikle bir ASP.NET uygulama projesi olarak geliştirilir, ancak Visual Studio 'da da bir ASP.NET Web sitesi projesi olarak veri hizmeti oluşturabilirsiniz. İki tür proje arasındaki farklar hakkında daha fazla bilgi için bkz. [Web uygulaması projeleri ve Visual Studio 'Da Web sitesi projelerine karşı](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
@@ -113,9 +113,9 @@ WCF Veri Hizmeti, veri hizmetini barındıran işlemi seçmede esneklik sağlar.
     > [!TIP]
     > Veri hizmetini IIS'ye dağıtmayı denemeden önce, IIS çalıştıran Web sunucusuna dağıtımı test ettiğinizden emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: IIS 'de çalışan BIR WCF veri hizmeti geliştirme](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
-- **Microsoft Azure**
+- **Windows Azure**
 
-     Visual Studio için Microsoft Azure Araçları 'nı kullanarak bir veri hizmetini Microsoft Azure 'a dağıtabilirsiniz. Visual Studio için Windows Azure Araçları 'nı [Microsoft Indirme merkezi](https://go.microsoft.com/fwlink/?LinkID=201848)' nden indirebilirsiniz. Windows Azure 'a bir veri hizmeti dağıtma hakkında daha fazla bilgi için bkz. [Windows Azure 'Da OData hizmetini dağıtma](https://go.microsoft.com/fwlink/?LinkId=201847).
+     Visual Studio için Microsoft Azure Araçları 'nı kullanarak bir veri hizmetini Microsoft Azure 'a dağıtabilirsiniz. Visual Studio için Windows Azure Araçları 'nı [Microsoft Indirme merkezi](https://go.microsoft.com/fwlink/?LinkID=201848)' nden indirebilirsiniz. Windows Azure 'a bir veri hizmeti dağıtma hakkında daha fazla bilgi için bkz. [Windows Azure 'Da OData hizmetini dağıtma](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/).
 
 ### <a name="deployment-considerations"></a>Dağıtım Hakkında Önemli Noktalar
 
@@ -123,7 +123,7 @@ Bir veri hizmetini dağıtırken, aşağıdakileri dikkate almanız gerekir:
 
 - Bir SQL Server veritabanına erişmek için Entity Framework sağlayıcıyı kullanan bir veri hizmetini dağıttığınızda veri yapıları, verileri veya her ikisini de veri hizmeti dağıtımınızla yayabilirsiniz. Visual Studio, bunu hedef veritabanında yapmak için otomatik olarak komut dosyaları (. SQL dosyaları) oluşturabilir ve bu betikler bir ASP.NET uygulamasının Web dağıtım paketine dahil edilebilir. Daha fazla bilgi için bkz. [nasıl yapılır: bir Web uygulaması projesiyle veritabanı dağıtma](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). Bir ASP.NET Web sitesi için, Visual Studio 'da **veritabanı Yayımlama Sihirbazı** 'nı kullanarak bunu yapabilirsiniz. Daha fazla bilgi için bkz. [SQL veritabanı yayımlama](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
-- WCF Veri Hizmetleri temel bir WCF uygulamasını içerdiğinden, Windows Server 'da çalışan IIS 'e dağıtılan bir veri hizmetini izlemek için Windows Server AppFabric 'i kullanabilirsiniz. Veri hizmetini izlemek üzere Windows Server AppFabric kullanma hakkında daha fazla bilgi için bkz. [Windows Server AppFabric ile post Tracking WCF veri Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=202005).
+- WCF Veri Hizmetleri temel bir WCF uygulamasını içerdiğinden, Windows Server 'da çalışan IIS 'e dağıtılan bir veri hizmetini izlemek için Windows Server AppFabric 'i kullanabilirsiniz. Veri hizmetini izlemek üzere Windows Server AppFabric kullanma hakkında daha fazla bilgi için bkz. [Windows Server AppFabric ile post Tracking WCF veri Hizmetleri](https://blogs.msdn.microsoft.com/rjacobs/2010/06/09/tracking-wcf-data-services-with-windows-server-appfabric/).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

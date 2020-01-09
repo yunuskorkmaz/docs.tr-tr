@@ -1,16 +1,16 @@
 ---
-title: Güvenliğe genel bakış-WCF
+title: Güvenlik Genel Bakış
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: ae03684449e902c0d05744a19671169f2e0b8be2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 58057709e2d5c5e34d0aa37158ea9b033840f840
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949350"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344699"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Windows Communication Foundation güvenliğe genel bakış
 Windows Communication Foundation (WCF), bir SOAP ileti tabanlı dağıtılmış programlama platformudur ve istemciler ve hizmetler arasındaki iletilerin güvenliğini korumak için gereklidir. WCF, hem mevcut güvenlik altyapısına hem de SOAP iletileri için tanınan güvenlik standartlarına dayalı olarak güvenli iletiler değiş tokuş eden, çok yönlü ve birlikte çalışabilen bir platform sağlar.  
@@ -68,9 +68,9 @@ Windows Communication Foundation (WCF), bir SOAP ileti tabanlı dağıtılmış 
 ### <a name="standards-and-interoperability"></a>Standartlar ve birlikte çalışabilirlik  
  Mevcut büyük dağıtımlara sahip bir dünyada, hogenelik nadir bir durumdur. Dağıtılmış bilgi işlem/iletişim platformları, farklı satıcıların sunduğu teknolojiyle birlikte çalışmalıdır. Benzer şekilde, güvenliğin de birlikte kullanılabilmelidir.  
   
- Birlikte çalışabilen güvenlik sistemlerini etkinleştirmek için, Web hizmetleri sektöründe etkin olan şirketler çeşitli standartlar yazdı. Güvenlikle ilgili olarak, bazı önemli standartlar önerilmiştir: WS-güvenlik: SOAP Iletisi güvenliği (OASSıS standartları gövdesi tarafından kabul edilir ve eski adıyla WS-Security), WS-Trust, WS-SecureConversation ve WS-SecurityPolicy.  
+ Birlikte çalışabilen güvenlik sistemlerini etkinleştirmek için, Web hizmetleri sektöründe etkin olan şirketler çeşitli standartlar yazdı. Özellikle güvenlikle ilgili olarak, bazı önemli standartlar önerilmiştir: WS-Security: SOAP Iletisi güvenliği (OASSıS standartları gövdesi tarafından kabul edilir ve eski adıyla WS-Security), WS-Trust, WS-SecureConversation ve WS-SecurityPolicy.  
   
- WCF, çok sayıda birlikte çalışabilirlik senaryosunu destekler. Sınıfı temel güvenlik profiline (BSP) yöneliktir <xref:System.ServiceModel.WSHttpBinding> ve sınıfı WS-Security 1,1 ve ws-SecureConversation gibi en son güvenlik standartlarına yöneliktir. <xref:System.ServiceModel.BasicHttpBinding> WCF güvenliği, bu standartlara uygun olarak, Microsoft Windows dışındaki işletim sistemlerinde ve platformlarda barındırılan Web Hizmetleri ile birlikte çalışabilir ve tümleştirilebilir.  
+ WCF, çok sayıda birlikte çalışabilirlik senaryosunu destekler. <xref:System.ServiceModel.BasicHttpBinding> sınıfı temel güvenlik profiline (BSP) yöneliktir ve <xref:System.ServiceModel.WSHttpBinding> sınıfı WS-Security 1,1 ve WS-SecureConversation gibi en son güvenlik standartlarına yöneliktir. WCF güvenliği, bu standartlara uygun olarak, Microsoft Windows dışındaki işletim sistemlerinde ve platformlarda barındırılan Web Hizmetleri ile birlikte çalışabilir ve tümleştirilebilir.  
   
 ## <a name="wcf-security-functional-areas"></a>WCF güvenlik Işlevsel bölgeleri  
  WCF güvenliği üç işlevsel alana ayrılmıştır: aktarım güvenliği, erişim denetimi ve denetim. Aşağıdaki bölümler, bu bölümleri kısaca ele alır ve daha fazla bilgi için bağlantılar sağlar.  
@@ -87,15 +87,15 @@ Windows Communication Foundation (WCF), bir SOAP ileti tabanlı dağıtılmış 
   
  Bu farklılıklar hakkında daha fazla bilgi için bkz. [Hizmetleri ve Istemcileri güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   
- Üçüncü bir güvenlik modu, önceki modlarını kullanır ve her ikisinin de avantajını getirir. Bu mod çağrılır `TransportWithMessageCredential`. Bu modda, istemci kimliğini doğrulamak için ileti güvenliği kullanılır ve sunucunun kimliğini doğrulamak ve ileti gizliliği ve bütünlüğü sağlamak için aktarım güvenliği kullanılır. Bu şekilde, `TransportWithMessageCredential` güvenlik modu, aktarım güvenliği modu kadar hızlı bir şekilde ve istemci kimlik doğrulaması genişletilebilirliği ile ileti güvenliği gibi aynı şekilde sağlanır. Ancak, ileti güvenliği modunun aksine, uçtan uca tam güvenlik sağlamaz.  
+ Üçüncü bir güvenlik modu, önceki modlarını kullanır ve her ikisinin de avantajını getirir. Bu moda `TransportWithMessageCredential`denir. Bu modda, istemci kimliğini doğrulamak için ileti güvenliği kullanılır ve sunucunun kimliğini doğrulamak ve ileti gizliliği ve bütünlüğü sağlamak için aktarım güvenliği kullanılır. Bunun için, `TransportWithMessageCredential` güvenlik modu neredeyse aktarım güvenliği modu kadar hızlıdır ve ileti güvenliği ile aynı şekilde istemci kimlik doğrulaması genişletilebilirliği sağlar. Ancak, ileti güvenliği modunun aksine, uçtan uca tam güvenlik sağlamaz.  
   
 ### <a name="access-control"></a>Erişim Denetimi  
  *Erişim denetimi* de yetkilendirme olarak bilinir. *Yetkilendirme* , farklı kullanıcıların verileri görüntülemek için farklı ayrıcalıklara sahip olmasına izin verir. Örneğin, bir şirketin insan kaynakları dosyaları gizli çalışan verileri içerdiğinden, yalnızca yöneticilerin çalışan verilerini görüntülemesine izin verilir. Ayrıca, Yöneticiler yalnızca kendi raporlarının verilerini görüntüleyebilir. Bu durumda, erişim denetimi hem role ("Manager") hem de yöneticinin özel kimliğini (bir yöneticinin başka bir yöneticinin çalışan kayıtlarına bakmasını engellemek için) temel alır.  
   
- WCF 'de, erişim denetimi özellikleri, ortak dil çalışma zamanı (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> ile tümleştirme yoluyla ve *kimlik modeli*olarak bilinen bir API kümesi aracılığıyla sağlanır. Erişim denetimi ve talep tabanlı yetkilendirme hakkında daha fazla bilgi için bkz. [güvenliği genişletme](../../../../docs/framework/wcf/extending/extending-security.md).  
+ WCF 'de, erişim denetimi özellikleri, ortak dil çalışma zamanı (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> ve *kimlik modeli*olarak bilinen bir API kümesi ile tümleştirme yoluyla sağlanır. Erişim denetimi ve talep tabanlı yetkilendirme hakkında daha fazla bilgi için bkz. [güvenliği genişletme](../../../../docs/framework/wcf/extending/extending-security.md).  
   
 ### <a name="auditing"></a>Denetim  
- *Denetim* , güvenlik olaylarının Windows olay günlüğüne kaydedilmesini sağlar. Kimlik doğrulama arızaları (veya başarıları) gibi güvenlikle ilgili olayları günlüğe kaydedebilirsiniz. Daha fazla bilgi için bkz. [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Programlama ayrıntıları için bkz [. nasıl yapılır: Güvenlik olaylarını](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)denetleyin.  
+ *Denetim* , güvenlik olaylarının Windows olay günlüğüne kaydedilmesini sağlar. Kimlik doğrulama arızaları (veya başarıları) gibi güvenlikle ilgili olayları günlüğe kaydedebilirsiniz. Daha fazla bilgi için bkz. [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Programlama ayrıntıları için bkz. [nasıl yapılır: güvenlik olaylarını denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

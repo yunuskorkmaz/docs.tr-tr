@@ -2,12 +2,12 @@
 title: MSMQ Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: be33e3d9377c30058c7a2ee06543c11f10251ebd
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2afcfbee69f8257e4ed0b1c352ef29e4af9ddb84
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714766"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544710"
 ---
 # <a name="msmq-activation"></a>MSMQ Etkinleştirme
 
@@ -25,7 +25,7 @@ Bu örnek, Windows Işlem etkinleştirme hizmeti 'nde (WAS) bir ileti sırasınd
 >
 > InstallDrive > \<: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
 
-[!INCLUDE[lserver](../../../../includes/lserver-md.md)]için yeni işlem etkinleştirme mekanizması olan Windows Işlem etkinleştirme hizmeti (WAS), daha önce yalnızca HTTP tabanlı uygulamalar tarafından HTTP tabanlı olmayan protokolleri kullanan uygulamalara sunulan IIS benzeri özellikler sağlar. Windows Communication Foundation (WCF), TCP, adlandırılmış kanallar ve MSMQ gibi WCF tarafından desteklenen HTTP olmayan protokoller üzerinden alınan etkinleştirme isteklerini iletmek için dinleyici bağdaştırıcısı arabirimini kullanır. HTTP olmayan protokoller üzerinden istek alma işlevselliği, SMSvcHost. exe ' de çalışan yönetilen Windows Hizmetleri tarafından barındırılır.
+Windows Server 2008 için yeni işlem etkinleştirme mekanizması olan Windows Işlem etkinleştirme hizmeti (WAS), daha önce yalnızca HTTP tabanlı uygulamalar tarafından HTTP tabanlı olmayan protokolleri kullanan uygulamalara sunulan IIS benzeri özellikler sağlar. Windows Communication Foundation (WCF), TCP, adlandırılmış kanallar ve MSMQ gibi WCF tarafından desteklenen HTTP olmayan protokoller üzerinden alınan etkinleştirme isteklerini iletmek için dinleyici bağdaştırıcısı arabirimini kullanır. HTTP olmayan protokoller üzerinden istek alma işlevselliği, SMSvcHost. exe ' de çalışan yönetilen Windows Hizmetleri tarafından barındırılır.
 
 Net. MSMQ dinleyicisi bağdaştırıcısı hizmeti (Netmsmqetkinleştirici) kuyruktaki iletileri temel alarak sıraya alınmış uygulamaları etkinleştirir.
 

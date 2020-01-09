@@ -5,14 +5,14 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 5183781d6a131aa395cf7c1fd8a09e05ed0bd71d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926145"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340379"
 ---
-# <a name="tutorial-create-an-item-template"></a>Öğretici: Öğe şablonu oluşturma
+# <a name="tutorial-create-an-item-template"></a>Öğretici: öğe şablonu oluşturma
 
 .NET Core ile projeler, dosyalar, hatta kaynaklar üreten şablonlar oluşturabilir ve dağıtabilirsiniz. Bu öğretici, `dotnet new` komutuyla kullanılmak üzere şablonlar oluşturmayı, yüklemeyi ve kaldırmayı öğretir.
 
@@ -26,14 +26,14 @@ Serinin bu bölümünde şunları yapmayı öğreneceksiniz:
 > * Bir öğe şablonunu test etme
 > * Öğe şablonunu kaldırma
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 * [.NET Core 2,2 SDK](https://dotnet.microsoft.com/download) veya sonraki sürümleri.
 * [DotNet New Için özel şablonlar](../tools/custom-templates.md)başvuru makalesine okuyun.
 
   Başvuru makalesinde şablonlar ve bunların nasıl birlikte yerleştirildikleri hakkında temel bilgiler açıklanmaktadır. Bu bilgilerden bazıları burada yeniden tekrarlandırılır.
 
-* Bir Terminal açın ve _working\templates\\_  klasörüne gidin.
+* Bir Terminal açın ve _working\templates_ klasörüne gidin.
 
 ## <a name="create-the-required-folders"></a>Gerekli klasörleri oluşturma
 
@@ -54,7 +54,7 @@ parent_folder
 
 Öğe şablonu, bir veya daha fazla dosya içeren belirli bir şablon türüdür. Bu tür şablonlar, bir yapılandırma, kod veya çözüm dosyası gibi bir şey oluşturmak istediğinizde faydalıdır. Bu örnekte, dize türüne bir genişletme yöntemi ekleyen bir sınıf oluşturacaksınız.
 
-Terminalinizde, _working\templates\\_  klasörüne gidin ve _Uzantılar_adlı yeni bir alt klasör oluşturun. Klasörü girin.
+Terminalinizde, _working\templates_ klasörüne gidin ve _Uzantılar_adlı yeni bir alt klasör oluşturun. Klasörü girin.
 
 ```console
 working
@@ -85,7 +85,7 @@ Artık oluşturulan şablonun içeriğine sahip olduğunuza göre, şablonun kö
 
 ## <a name="create-the-template-config"></a>Şablon yapılandırması oluşturma
 
-Şablonlar, .NET Core 'da şablonunuzun kökünde bulunan özel bir klasör ve yapılandırma dosyası tarafından tanınır. Bu öğreticide, şablon klasörünüz _working\templates\extensions\\_ konumunda bulunur.
+Şablonlar, .NET Core 'da şablonunuzun kökünde bulunan özel bir klasör ve yapılandırma dosyası tarafından tanınır. Bu öğreticide, şablon klasörünüz _working\templates\extensions_konumunda bulunur.
 
 Bir şablon oluşturduğunuzda, şablon klasöründeki tüm dosyalar ve klasörler, özel yapılandırma klasörü hariç, şablonun bir parçası olarak dahil edilir. Bu yapılandırma klasörü _. Template. config_olarak adlandırılır.
 
@@ -116,14 +116,14 @@ En sevdiğiniz metin düzenleyicinizle _Template. JSON_ ' i açın ve aşağıda
 }
 ```
 
-Bu yapılandırma dosyası, şablonunuz için tüm ayarları içerir. Ve `name` `tags/type` `item`gibi temel ayarları görebilirsiniz, ancak, olarak ayarlanmış bir değer de vardır. `shortName` Bu, şablonunuzu bir öğe şablonu olarak sınıflandırır. Oluşturduğunuz şablon türü üzerinde hiçbir kısıtlama yoktur. `item` Ve`project` değerleri, .NET Core 'un arama yapmakta olduğu şablon türünü kolayca filtreleyebilmesi için .NET Core 'un önerdiği yaygın adlardır.
+Bu yapılandırma dosyası, şablonunuz için tüm ayarları içerir. `name` ve `shortName`gibi temel ayarları görebilirsiniz, ancak `item`olarak ayarlanmış bir `tags/type` değeri de vardır. Bu, şablonunuzu bir öğe şablonu olarak sınıflandırır. Oluşturduğunuz şablon türü üzerinde hiçbir kısıtlama yoktur. `item` ve `project` değerleri, .NET Core 'un arama yapmakta oldukları şablonun türünü kolayca filtreleyebilmesi için .NET Core 'un önerdiği yaygın adlardır.
 
-Öğe, çalıştırdığınız`dotnet new` ve bir şablon listesi alırken gördüğünüz Etiketler sütununu temsil eder. `classifications` Kullanıcılar ayrıca sınıflandırma etiketlerine göre arama yapabilir. . JSON dosyasındaki `tags` özelliği Etiketlerlistesiylekarıştırmayın.`classifications` \* Benzer şekilde adlandırılan iki farklı şey vardır. *Template. JSON* dosyasının tam şeması [JSON Şema deposunda](http://json.schemastore.org/template)bulunur. *Template. JSON* dosyası hakkında daha fazla bilgi için bkz. [DotNet şablon oluşturma wiki](https://github.com/dotnet/templating/wiki).
+`classifications` öğesi, `dotnet new` çalıştırdığınız ve şablonların bir listesini alacağınız zaman gördüğünüz **Etiketler** sütununu temsil eder. Kullanıcılar ayrıca sınıflandırma etiketlerine göre arama yapabilir. \*. JSON dosyasındaki `tags` özelliğini `classifications` Etiketler listesiyle karıştırmayın. Benzer şekilde adlandırılan iki farklı şey vardır. *Template. JSON* dosyasının tam şeması [JSON Şema deposunda](http://json.schemastore.org/template)bulunur. *Template. JSON* dosyası hakkında daha fazla bilgi için bkz. [DotNet şablon oluşturma wiki](https://github.com/dotnet/templating/wiki).
 
 Artık geçerli bir _. Template. config/Template. JSON_ dosyanız olduğuna göre, şablonunuz yüklenmeye hazırdır. Terminalinizde, _Uzantılar_ klasörüne gidin ve geçerli klasörde bulunan şablonu yüklemek için şu komutu çalıştırın:
 
-* **Windows 'da**:`dotnet new -i .\`
-* **Linux veya macOS 'ta**:`dotnet new -i ./`
+* **Windows üzerinde**: `dotnet new -i .\`
+* **Linux veya macOS 'ta**: `dotnet new -i ./`
 
 Bu komut, yüklenmiş şablonların listesini verir ve bunları içermelidir.
 
@@ -149,7 +149,7 @@ Worker Service                                    worker                [C#]    
 
 ## <a name="test-the-item-template"></a>Öğe şablonunu test etme
 
-Artık bir öğe şablonu yükleolduğunuza göre, test edin. _Test/_ klasöre gidin ve ile `dotnet new console`yeni bir konsol uygulaması oluşturun. Bu, `dotnet run` komutla kolayca test edebileceğiniz bir çalışan proje oluşturur.
+Artık bir öğe şablonu yükleolduğunuza göre, test edin. _Teste/_ klasöre gidin ve `dotnet new console`yeni bir konsol uygulaması oluşturun. Bu, `dotnet run` komutuyla kolayca test edebileceğiniz bir çalışan proje oluşturur.
 
 ```console
 C:\test> dotnet new console
@@ -167,14 +167,14 @@ C:\test> dotnet run
 Hello World!
 ```
 
-Sonra, şablondan `dotnet new stringext` _CommonExtensions.cs_ oluşturmak için öğesini çalıştırın.
+Sonra, şablondan _CommonExtensions.cs_ oluşturmak için `dotnet new stringext` çalıştırın.
 
 ```console
 C:\test> dotnet new stringext
 The template "Example templates: string extensions" was created successfully.
 ```
 
-_Program.cs_ 'deki kodu değiştirerek, `"Hello World"` dizeyi, şablon tarafından sağlanmış uzantı yöntemiyle ters çevirin.
+`"Hello World"` dizesini, şablon tarafından sağlanmış uzantı yöntemiyle tersine çevirmek için _program.cs_ içindeki kodu değiştirin.
 
 ```csharp
 Console.WriteLine("Hello World!".Reverse());
@@ -191,7 +191,7 @@ Tebrikler! .NET Core ile bir öğe şablonu oluşturup dağıttıysanız. Bu ö�
 
 ## <a name="uninstall-the-template"></a>Şablonu kaldırma
 
-Şablonu dosya yoluna göre yükletiğinden, **mutlak** dosya yolu ile kaldırmanız gerekir. `dotnet new -u` Komutunu çalıştırarak, yüklenmiş şablonların bir listesini görebilirsiniz. Şablonunuzun son listelenmesi gerekir. `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` Komut ile şablonunuzu kaldırmak için listelenen yolu kullanın.
+Şablonu dosya yoluna göre yükletiğinden, **mutlak** dosya yolu ile kaldırmanız gerekir. `dotnet new -u` komutunu çalıştırarak, yüklenmiş şablonların listesini görebilirsiniz. Şablonunuzun son listelenmesi gerekir. `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` komutuyla şablonunuzu kaldırmak için listelenen yolu kullanın.
 
 ```console
 C:\working> dotnet new -u

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
-ms.custom: vs-dotnet
+ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d45932f6a8822ec2aaa40cd52431d9981ab8fa1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453753"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336816"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Öğretici: Visual Studio 'da ilk WPF uygulamanızı oluşturma 2019
 
@@ -161,7 +161,7 @@ Bu bölümde, uygulamaya iki sayfa ve bir görüntü ekleyeceksiniz.
 
     [!code-xaml[ExpenseIt#7_A](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml#7_a)]
 
-    Ve içinde C#:
+    C# ve:
 
     [!code-xaml[ExpenseIt#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/MainWindow.xaml#7)]
 
@@ -214,7 +214,7 @@ Bu bölümde, uygulamaya iki sayfa ve bir görüntü ekleyeceksiniz.
 
     2. **Varolan öğe Ekle** iletişim kutusunda, dosya filtresini **tüm dosyalar** veya **görüntü dosyaları**olarak ayarlayın, kullanmak istediğiniz görüntü dosyasına gidin ve **Ekle**' yi seçin.
 
-## <a name="build-and-run-the-application"></a>Uygulamayı derleyin ve çalıştırın
+## <a name="build-and-run-the-application"></a>Uygulamayı derleme ve çalıştırma
 
 1. Uygulamayı derlemek ve çalıştırmak için **F5** tuşuna basın veya **Hata Ayıkla** menüsünden **hata ayıklamayı Başlat** ' ı seçin.
 

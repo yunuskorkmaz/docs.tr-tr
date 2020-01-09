@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Dosya sisteminden bir XML ağacı doldurma (C#)'
+title: Dosya sisteminden bir XML ağacını doldurma (C#)
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: dc3850c943ebac8980abbff0933413538823d21d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: beb44be1a787fa09b091aa48022dbb5b10c4632b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485163"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345779"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Nasıl yapılır: Dosya sisteminden bir XML ağacı doldurma (C#)
-Bir ortak ve kullanışlı XML ağaçlarını hiyerarşik ad/değer veri deposu olarak uygulamasıdır. Hiyerarşik veriler ile XML ağacı doldurma ve ardından, sorgulama yapabilir, dönüştürmek ve gerekirse, seri hale. Bu kullanım senaryosunda, ad alanları ve boşluk davranışını gibi XML belirli semantikler birçok önemli değildir. Bunun yerine, bellek, hiyerarşik veritabanı tek kullanıcı küçük bir olarak XML ağacı kullanıyor.  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Dosya sisteminden bir XML ağacını doldurma (C#)
+XML ağaçlarının ortak ve yararlı bir uygulaması, hiyerarşik ad/değer veri deposu olarak kullanılır. Bir XML ağacını hiyerarşik verilerle doldurabilir ve sonra sorgulayabilir, dönüştürebilir ve gerekirse serileştirin. Bu kullanım senaryosunda, ad alanları ve boşluk davranışı gibi XML 'e özgü semantik birçoğu önemli değildir. Bunun yerine, XML ağacını küçük, bellekte, tek bir Kullanıcı hiyerarşik veritabanı olarak kullanıyorsunuz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, özyineleme kullanarak yerel dosya sisteminden bir XML ağacı doldurur. Ardından, toplam ağacındaki tüm dosyaların boyutunu hesaplama ağaç sorgular.  
+ Aşağıdaki örnek, özyineleme kullanarak bir XML ağacını yerel dosya sisteminden doldurur. Ardından ağacı sorgular ve ağaçtaki tüm dosyaların boyutlarının toplamını hesaplıyor.  
   
 ```csharp  
 class Program  
@@ -46,7 +46,7 @@ class Program
 }  
 ```  
   
- Bu örnekte aşağıdakine benzer bir çıktı oluşturulur:  
+ Bu örnek aşağıdakine benzer bir çıktı üretir:  
   
 ```xml  
 <Dir Name="Tmp">  

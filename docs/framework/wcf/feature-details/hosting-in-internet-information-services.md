@@ -4,58 +4,63 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 8ea7602e82d13425bb678555dde1f44ccbbf5a0f
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: b8e8bbe35ec3091816a4a943662f93f1b4581663
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837473"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544676"
 ---
-# <a name="hosting-in-internet-information-services"></a>Internet Information Services'te Barındırma
-Windows Communication Foundation (WCF) hizmetlerini barındırmak için bir seçenek Internet Information Services (IIS) uygulamasının içindedir. Bu barındırma modeli, ASP.NET ve ASP.NET Web Hizmetleri (ASMX) Web Hizmetleri tarafından kullanılan modele benzerdir.  
-  
-## <a name="versions-of-iis"></a>IIS sürümleri  
- WCF aşağıdaki işletim sistemlerinde IIS 'nin aşağıdaki sürümlerinde barındırılabilir:  
-  
-- [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]'de IIS 5,1. Bu ortam, daha sonra [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]gibi bir sunucu işletim sisteminde dağıtılan IIS tarafından barındırılan uygulamaların tasarımı ve geliştirmesi için yararlıdır.  
-  
-- [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]'de IIS 6,0. IIS 6,0, geliştirilmiş ölçeklenebilirlik, güvenilirlik ve uygulama yalıtımı sunan gelişmiş bir işlem modeli sağlar. Bu ortam, yalnızca HTTP iletişimini kullanan WCF hizmetlerinin üretim dağıtımı için uygundur.  
-  
-- Windows Vista ve [!INCLUDE[lserver](../../../../includes/lserver-md.md)]'de IIS 7,0. IIS 7,0, IIS 6,0 ile aynı gelişmiş işlem modelini sağlar, ancak Windows Işlem etkinleştirme hizmeti 'ni (WAS) HTTP dışındaki protokollerde etkinleştirme ve ağ iletişimine olanak tanımak için kullanır. Bu ortam, WCF tarafından desteklenen herhangi bir ağ protokolü üzerinden iletişim kuran WCF Hizmetleri geliştirmesi için uygundur (HTTP, net. TCP, net. pipe ve net. MSMQ dahil). WAS hakkında daha fazla bilgi için bkz. [Windows Işlem etkinleştirme hizmetinde barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
-  
-- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) , NET4 WCF ve WF hizmetleri için zengin bir uygulama barındırma ortamı sağlamak üzere IIS 7,0 ve Windows Işlem etkinleştirme HIZMETI (was) ile birlikte çalışarak. Bu avantajlar arasında işlem yaşam döngüsü yönetimi, işlem geri dönüşümü, paylaşılan barındırma, hızlı hata koruması, işlem orphaning, isteğe bağlı etkinleştirme ve sistem durumu izleme sayılabilir. Ayrıntılı bilgi için bkz. [AppFabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=196494) ve [AppFabric barındırma kavramları](https://go.microsoft.com/fwlink/?LinkId=196495).  
-  
-## <a name="benefits-of-iis-hosting"></a>IIS barındırma 'nın avantajları  
- WCF hizmetlerinin IIS 'de barındırılması birkaç avantaj sunar:  
-  
-- IIS 'de barındırılan WCF Hizmetleri, ASP.NET uygulamaları ve ASMX dahil olmak üzere başka bir IIS uygulaması türü gibi dağıtılır ve yönetilir.  
-  
-- IIS, barındırılan uygulamaların güvenilirliğini artırmak için işlem etkinleştirme, sistem durumu yönetimi ve geri dönüşüm özellikleri sağlar.  
-  
-- ASP.NET gibi, ASP.NET 'de barındırılan WCF Hizmetleri, geliştirilmiş sunucu yoğunluğu ve ölçeklenebilirlik için ortak bir çalışan işlemde birden fazla uygulamanın bulunduğu ASP.NET paylaşılan barındırma modelinden faydalanabilir.  
-  
-- IIS 'de barındırılan WCF Hizmetleri, barındırılan hizmetlerin geliştirilmesini ve dağıtılmasını kolaylaştıran ASP.NET 2,0 ile aynı dinamik derleme modelini kullanır.  
-  
- IIS 'de WCF Hizmetleri barındırmaya karar verirken IIS 5,1 ve IIS 6,0 ' nin yalnızca HTTP iletişimi ile sınırlı olduğunu unutmamak önemlidir. Barındırma ortamı seçme hakkında daha fazla bilgi için bkz. [barındırma hizmetleri](../../../../docs/framework/wcf/hosting-services.md).  
-  
-## <a name="deploying-an-iis-hosted-wcf-service"></a>IIS tarafından barındırılan bir WCF hizmeti dağıtma  
- IIS tarafından barındırılan bir WCF hizmetini geliştirme ve dağıtma aşağıdaki görevlerden oluşur:  
-  
-- IIS, ASP.NET, WCF ve WCF HTTP Etkinleştirme bileşeninin doğru bir şekilde yüklendiğinden ve kaydedildiğinden emin olun.  
-  
-- Yeni bir IIS uygulaması oluşturun veya var olan bir ASP.NET uygulamasını yeniden kullanın.  
-  
-- WCF hizmeti için bir. svc dosyası oluşturun.  
-  
-- Hizmet uygulamasını IIS uygulamasına dağıtın.  
-  
-- WCF hizmetini yapılandırın.  
-  
- Bu görevlerin her biri hakkında bir tartışma için bkz. [Internet Information Services barındırılan BIR WCF hizmetini dağıtma](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
-  
-## <a name="wcf-services-and-aspnet"></a>WCF Hizmetleri ve ASP.NET  
- WCF Hizmetleri, ASP.NET ile yan yana veya ASP.NET uyumluluk modunda, hizmetlerin ASP.NET Web uygulaması platformu tarafından sunulan özelliklerden tam olarak yararlanabilme biçiminde barındırılabilir. Bu özelliklerin bir açıklaması için bkz. [WCF Hizmetleri ve ASP.net](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
-  
+# <a name="host-in-internet-information-services"></a>Internet Information Services 'de barındırma
+
+Windows Communication Foundation (WCF) hizmetlerini barındırmak için bir seçenek Internet Information Services (IIS) uygulamasının içindedir. Bu barındırma modeli, ASP.NET ve ASP.NET Web Hizmetleri (ASMX) Web Hizmetleri tarafından kullanılan modele benzerdir.
+
+## <a name="versions-of-iis"></a>IIS sürümleri
+
+WCF aşağıdaki işletim sistemlerinde IIS 'nin aşağıdaki sürümlerinde barındırılabilir:
+
+- [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]'de IIS 5,1. Bu ortam, daha sonra Windows Server 2003 gibi bir sunucu işletim sisteminde dağıtılan IIS tarafından barındırılan uygulamaların tasarımı ve geliştirilmesi için yararlıdır.
+
+- Windows Server 2003 üzerinde IIS 6,0. IIS 6,0, geliştirilmiş ölçeklenebilirlik, güvenilirlik ve uygulama yalıtımı sunan gelişmiş bir işlem modeli sağlar. Bu ortam, yalnızca HTTP iletişimini kullanan WCF hizmetlerinin üretim dağıtımı için uygundur.
+
+- Windows Vista ve Windows Server 2008 üzerinde IIS 7,0. IIS 7,0, IIS 6,0 ile aynı gelişmiş işlem modelini sağlar, ancak Windows Işlem etkinleştirme hizmeti 'ni (WAS) HTTP dışındaki protokollerde etkinleştirme ve ağ iletişimine olanak tanımak için kullanır. Bu ortam, WCF tarafından desteklenen herhangi bir ağ protokolü üzerinden iletişim kuran WCF Hizmetleri geliştirmesi için uygundur (HTTP, net. TCP, net. pipe ve net. MSMQ dahil). WAS hakkında daha fazla bilgi için bkz. [Windows Işlem etkinleştirme hizmetinde barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).
+
+- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) , NET4 WCF ve WF hizmetleri için zengin bir uygulama barındırma ortamı sağlamak üzere IIS 7,0 ve Windows Işlem etkinleştirme HIZMETI (was) ile birlikte çalışarak. Bu avantajlar arasında işlem yaşam döngüsü yönetimi, işlem geri dönüşümü, paylaşılan barındırma, hızlı hata koruması, işlem orphaning, isteğe bağlı etkinleştirme ve sistem durumu izleme sayılabilir. Ayrıntılı bilgi için bkz. [AppFabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=196494) ve [AppFabric barındırma kavramları](https://go.microsoft.com/fwlink/?LinkId=196495).
+
+## <a name="benefits-of-iis-hosting"></a>IIS barındırma 'nın avantajları
+
+WCF hizmetlerinin IIS 'de barındırılması birkaç avantaj sunar:
+
+- IIS 'de barındırılan WCF Hizmetleri, ASP.NET uygulamaları ve ASMX dahil olmak üzere başka bir IIS uygulaması türü gibi dağıtılır ve yönetilir.
+
+- IIS, barındırılan uygulamaların güvenilirliğini artırmak için işlem etkinleştirme, sistem durumu yönetimi ve geri dönüşüm özellikleri sağlar.
+
+- ASP.NET gibi, ASP.NET 'de barındırılan WCF Hizmetleri, geliştirilmiş sunucu yoğunluğu ve ölçeklenebilirlik için ortak bir çalışan işlemde birden fazla uygulamanın bulunduğu ASP.NET paylaşılan barındırma modelinden faydalanabilir.
+
+- IIS 'de barındırılan WCF Hizmetleri, barındırılan hizmetlerin geliştirilmesini ve dağıtılmasını kolaylaştıran ASP.NET 2,0 ile aynı dinamik derleme modelini kullanır.
+
+IIS 'de WCF Hizmetleri barındırmaya karar verirken IIS 5,1 ve IIS 6,0 ' nin yalnızca HTTP iletişimi ile sınırlı olduğunu unutmamak önemlidir. Barındırma ortamı seçme hakkında daha fazla bilgi için bkz. [barındırma hizmetleri](../../../../docs/framework/wcf/hosting-services.md).
+
+## <a name="deploy-an-iis-hosted-wcf-service"></a>IIS tarafından barındırılan bir WCF hizmeti dağıtma
+
+IIS tarafından barındırılan bir WCF hizmetini geliştirme ve dağıtma aşağıdaki görevlerden oluşur:
+
+- IIS, ASP.NET, WCF ve WCF HTTP Etkinleştirme bileşeninin doğru bir şekilde yüklendiğinden ve kaydedildiğinden emin olun.
+
+- Yeni bir IIS uygulaması oluşturun veya var olan bir ASP.NET uygulamasını yeniden kullanın.
+
+- WCF hizmeti için bir. svc dosyası oluşturun.
+
+- Hizmet uygulamasını IIS uygulamasına dağıtın.
+
+- WCF hizmetini yapılandırın.
+
+Bu görevlerin her biri hakkında bir tartışma için bkz. [Internet Information Services barındırılan BIR WCF hizmetini dağıtma](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).
+
+## <a name="wcf-services-and-aspnet"></a>WCF Hizmetleri ve ASP.NET
+
+WCF Hizmetleri, ASP.NET ile yan yana veya ASP.NET uyumluluk modunda, hizmetlerin ASP.NET Web uygulaması platformu tarafından sunulan özelliklerden tam olarak yararlanabilme biçiminde barındırılabilir. Bu özelliklerin bir açıklaması için bkz. [WCF Hizmetleri ve ASP.net](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ServiceHostFactory Kullanarak Barındırmayı Genişletme](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)

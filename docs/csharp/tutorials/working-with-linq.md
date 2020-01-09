@@ -4,34 +4,34 @@ description: Bu öğreticide LINQ, LINQ sorgularında kullanılmak üzere yazma 
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: b25cd1763511f460537bccaf6011a3d23390ea72
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039166"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345618"
 ---
-# <a name="working-with-linq"></a>LINQ ile Çalışma
+# <a name="work-with-language-integrated-query-linq"></a>Dil ile tümleşik sorgu (LINQ) ile çalışma
 
 ## <a name="introduction"></a>Giriş
 
 Bu öğretici, .NET Core ve C# dil özelliklerini size öğretir. Şunları öğreneceksiniz:
 
-- LINQ ile diziler oluşturma.
-- LINQ sorgularında kolayca kullanılabilecek yöntemler yazma.
-- Eager ve geç değerlendirme arasında ayrım yapma.
+- LINQ ile sıralar oluşturun.
+- LINQ sorgularında kolay bir şekilde kullanılabilecek yazma yöntemleri.
+- Eager ve geç değerlendirme arasında ayrım yapın.
 
 Herhangi bir Magician temel becerilerinden birini gösteren bir uygulama oluşturarak bu teknikleri öğrenirsiniz: [Faro karışık](https://en.wikipedia.org/wiki/Faro_shuffle). Kısaca, bir kağıt destesi yarısını tamamen yarıya böldüğünüz bir tekniktir, sonra da orijinal destesi yeniden derlemek için her bir yarısını her bir karmadan karıştırın.
 
 Magicians bu tekniği, her kart her karıştırmadan sonra bilinen bir konumda olduğundan ve sipariş yinelenen bir düzen olduğundan kullanın.
 
-Amacınıza uygun olarak, veri dizilerini işlemek için bir hafif göz atın. Oluşturacağınız uygulama bir kart destesi oluşturacak ve sonra her seferinde sırayı yazarak bir dizi karışık olarak bir sıra gerçekleştirecek. Ayrıca, güncelleştirilmiş siparişi orijinal siparişle karşılaştırırsınız.
+Amacınıza uygun olarak, veri dizilerini işlemek için bir hafif göz atın. Oluşturacağınız uygulama bir kart destesi oluşturur ve sonra sıra sonuna kadar her seferinde bir sıra yazarak bir dizi karışık izler. Ayrıca, güncelleştirilmiş siparişi orijinal siparişle karşılaştırırsınız.
 
 Bu öğreticide birden çok adım vardır. Her adımdan sonra, uygulamayı çalıştırabilir ve ilerleme durumunu görebilirsiniz. Ayrıca, DotNet/Samples GitHub deposunda [Tamamlanan örneği](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) görebilirsiniz. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="prerequisites"></a>Prerequisites
 
-.NET Core 'u çalıştırmak için makinenizi ayarlamanız gerekir. Yükleme yönergelerini [.NET Core indirme](https://dotnet.microsoft.com/download) sayfasında bulabilirsiniz. Bu uygulamayı Windows, Ubuntu Linux, OS X veya bir Docker kapsayıcısında çalıştırabilirsiniz. En sevdiğiniz kod düzenleyicinizi yüklemeniz gerekir. Aşağıdaki açıklamalar açık kaynaklı, platformlar arası düzenleyici olan [Visual Studio Code](https://code.visualstudio.com/) kullanır. Bununla birlikte, rahat olan her türlü aracı kullanabilirsiniz.
+Makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. Yükleme yönergelerini [.NET Core indirme](https://dotnet.microsoft.com/download) sayfasında bulabilirsiniz. Bu uygulamayı Windows, Ubuntu Linux veya OS X 'te veya bir Docker kapsayıcısında çalıştırabilirsiniz. En sevdiğiniz kod düzenleyicinizi yüklemeniz gerekir. Aşağıdaki açıklamalar açık kaynaklı, platformlar arası bir düzenleyici olan [Visual Studio Code](https://code.visualstudio.com/) kullanır. Bununla birlikte, rahat olan her türlü aracı kullanabilirsiniz.
 
 ## <a name="create-the-application"></a>Uygulamayı oluşturma
 
@@ -39,7 +39,7 @@ Bu öğreticide birden çok adım vardır. Her adımdan sonra, uygulamayı çal�
 
 Daha önce hiç kullanmadıysanız C# , [Bu öğretici](console-teleprompter.md) bir C# programın yapısını açıklar. Bunu okuyabilir ve sonra LINQ hakkında daha fazla bilgi edinmek için buraya dönebilirsiniz.
 
-## <a name="creating-the-data-set"></a>Veri kümesi oluşturma
+## <a name="create-the-data-set"></a>Veri kümesi oluşturma
 
 Başlamadan önce, aşağıdaki satırların `dotnet new console`tarafından oluşturulan `Program.cs` dosyanın en üstünde olduğundan emin olun:
 
@@ -118,7 +118,7 @@ Devam edin ve bu noktada derlediğiniz örneği çalıştırın. Bu, destedeki t
 
 ![52 kart yazan uygulamayı gösteren bir konsol penceresi.](./media/working-with-linq/console-52-card-application.png)
 
-## <a name="manipulating-the-order"></a>Siparişi düzenleme
+## <a name="manipulate-the-order"></a>Siparişi değiştirme
 
 Ardından, destedeki kartları nasıl karıştığınıza odaklanın. Her iyi karışmaya yönelik ilk adım, desteyi ikiye bölmenizde yarar vardır. LINQ API 'lerinin parçası olan <xref:System.Linq.Enumerable.Take%2A> ve <xref:System.Linq.Enumerable.Skip%2A> yöntemleri bu özelliği sizin için sağlar. `foreach` döngüsünün altına yerleştirin:
 
@@ -249,7 +249,7 @@ static void Main(string[] args)
 
 Şimdiye kadar aldığınız kodu çalıştırın ve her bir karıştırmadan destesi nasıl yeniden bir şekilde yeniden düzenler. 8 karışık (do-while döngüsünün yinelemesi) sonrasında, deste başlangıç LINQ sorgusundan ilk kez oluşturduğunuz sırada bulunduğu özgün yapılandırmaya geri döner.
 
-## <a name="optimizations"></a>İyileştirmeleri
+## <a name="optimizations"></a>İyileştirmeler
 
 Şimdiye kadar derlediğiniz örnek, üst ve alt kartların her çalıştırmada aynı kalacağı *karışık*bir şekilde yürütülür. Tek bir değişiklik yapabiliriz: bunun yerine, tüm 52 kartlar konum değiştiren bir *karışık olarak* kullanacağız. Bir karışık olarak, alt yarısı ilk kartın destedeki ilk kart haline gelmesi için destesi bir kez ayırmada kullanırsınız. Bu, üstteki yarısında son kartın alt kart haline geldiği anlamına gelir. Bu, tekil kod satırında basit bir değişiklik. <xref:System.Linq.Enumerable.Take%2A> ve <xref:System.Linq.Enumerable.Skip%2A>konumlarını değiştirerek geçerli karıştırma sorgusunu güncelleştirin. Bu, deste 'nın üst ve alt kilitlenme sırasını değiştirir:
 
@@ -351,8 +351,8 @@ LINQ 'ten itibaren, kart püf noktaları için bir teknik Magicians kullanımı 
 LINQ hakkında daha fazla bilgi için bkz.
 
 - [Dil ile Tümleşik Sorgu (LINQ)](../programming-guide/concepts/linq/index.md)
-  - [LINQ'e Giriş](../programming-guide/concepts/linq/index.md)
-  - [Temel LINQ sorgu Işlemleri (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-  - [LINQ (C#) Ile veri dönüştürmeleri](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-  - [LINQ (C#) Içinde sorgu sözdizimi ve Yöntem sözdizimi](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-  - [LINQ'i Destekleyen C# Özellikleri](../programming-guide/concepts/linq/features-that-support-linq.md)
+- [LINQ'ye Giriş](../programming-guide/concepts/linq/index.md)
+- [Temel LINQ sorgu Işlemleri (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+- [LINQ (C#) Ile veri dönüştürmeleri](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+- [LINQ (C#) Içinde sorgu sözdizimi ve Yöntem sözdizimi](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+- [LINQ'i Destekleyen C# Özellikleri](../programming-guide/concepts/linq/features-that-support-linq.md)

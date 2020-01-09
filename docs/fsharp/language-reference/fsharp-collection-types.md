@@ -1,148 +1,148 @@
 ---
-title: F# Koleksiyon Türleri
-description: Hakkında bilgi edinin F# koleksiyon türlerini ve nasıl, .NET Framework koleksiyon türleri farklı.
+title: Koleksiyon türleri
+description: Koleksiyon türleri F# ve bunların .NET Framework koleksiyon türlerinden farklı oldukları hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: b370d850deaacc961dff9515ffa8c20634af4ed6
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.openlocfilehash: e5735efbffb1010f3886f3b32800a61e2d3b0d36
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041718"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344579"
 ---
 # <a name="f-collection-types"></a>F# Koleksiyon Türleri
 
-Bu konuyu gözden geçirerek hangi belirleyebilirsiniz F# koleksiyon türü en iyi uyan belirli bir gereksinimi karşılamak. Bu koleksiyon türleri olanlar gibi .NET Framework koleksiyon türlerini farklı `System.Collections.Generic` uygulamasındaki isim uzayı F# koleksiyon türleri, işlevsel programlama perspektif yerine nesne yönelimli tasarlanmıştır Perspektif. Özellikle, yalnızca dizi koleksiyon değişebilir öğelere sahiptir. Bu nedenle, bir koleksiyon değiştirdiğinizde, özgün koleksiyon değiştirme yerine değiştirilen koleksiyonu bir örneğini oluşturun.
+Bu konuyu inceleyerek, hangi F# koleksiyon türünün belirli bir gereksinim için en uygun olduğunu belirleyebilirsiniz. Bu koleksiyon türleri, F# koleksiyon türlerinin nesne odaklı bir perspektif yerine işlevsel programlama perspektifinden tasarlandıkları `System.Collections.Generic` ad alanındaki koleksiyon türlerinden farklı .NET Framework. Daha belirgin olarak, yalnızca dizi koleksiyonunda kesilebilir öğeler vardır. Bu nedenle, bir koleksiyonu değiştirdiğinizde orijinal koleksiyonu değiştirmek yerine değiştirilmiş koleksiyonun bir örneğini oluşturursunuz.
 
-Koleksiyon türleri, nesneleri depolandığı veri yapısı türü ayrıca farklı. Karma tabloları, bağlantılı liste ve diziler gibi veri yapıları farklı performans özellikleri ve kullanılabilir işlemleri farklı bir dizi var.
+Koleksiyon türleri, nesnelerin depolandığı veri yapısı türüne de göre farklılık gösterir. Karma tablolar, bağlantılı listeler ve diziler gibi veri yapıları farklı performans özelliklerine ve farklı bir kullanılabilir işlemler kümesine sahiptir.
 
 ## <a name="f-collection-types"></a>F# Koleksiyon Türleri
 
-Aşağıdaki tabloda F# koleksiyon türleri.
+Aşağıdaki tabloda koleksiyon türleri F# gösterilmektedir.
 
 |Tür|Açıklama|İlgili bağlantılar|
 |----|-----------|-------------|
-|[Liste](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|Bir sıralı, sabit dizi öğeleri aynı türde. Bağlı bir liste uygulanır.|[Listeler](lists.md)<br /><br />[List Modülü](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
-|[Dizi](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Tümü aynı türde olan ardışık veri öğelerinin sabit boyutlu, sıfır tabanlı, değişebilir bir koleksiyonu.|[Diziler](arrays.md)<br /><br />[Array Modülü](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D Modülü](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D Modülü](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
-|[Seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Tümü tek öğeleri mantıksal bir dizi. Veri koleksiyonu sıralı bir büyük, varsa, ancak tüm öğeleri kullanmak mutlaka beklemiyoruz dizileri özellikle yararlı olur. Tek tek sırası öğeleri yalnızca'olarak hesaplanır, yoksa bir dizisi listesini daha iyi gerçekleştirebilir, böylece tüm öğeleri kullanılan gerekmez. Dizileri olarak temsil edilir `seq<'T>` bir diğer ad türü için `IEnumerable<T>`. Bu nedenle, uygulayan bir .NET Framework tür `System.Collections.Generic.IEnumerable<'T>` dizisi olarak kullanılabilir.|[Diziler](sequences.md)<br /><br />[Seq Modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
-|[Harita](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Öğe değişmez bir sözlük. Öğeleri anahtar tarafından erişilir.|[Map Modülü](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[Ayarlayın](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Burada karşılaştırma, ikili ağaçları temel alan bir sabit kümesi F# olabilecek uygulamaları kullanan Yapısal karşılaştırma işlevi, `System.IComparable` anahtar değerler üzerinden arabirimi.|[Set Modülü](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[Liste](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|Aynı türdeki sıralı, sabit bir öğe dizisi. Bağlantılı liste olarak uygulanır.|[Listeler](lists.md)<br /><br />[Modül Listele](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
+|[Dizi](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Aynı türde olan ardışık veri öğelerinin sabit boyutlu, sıfır tabanlı, kesilebilir bir koleksiyonu.|[Diziler](arrays.md)<br /><br />[Dizi modülü](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D modülü](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D modülü](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
+|[sıra](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Tek bir türden oluşan mantıksal dizi öğeleri. Diziler özellikle büyük, sıralı bir veri koleksiyonunuz olduğunda ancak tüm öğeleri kullanmak zorunda olmadığınız durumlarda faydalıdır. Tek tek dizi öğeleri yalnızca gerekli olduğu gibi hesaplanır. bu nedenle, tüm öğeler kullanılmazsa bir sıra bir listeden daha iyi çalışabilir. Diziler, `IEnumerable<T>`için bir diğer ad olan `seq<'T>` türü tarafından temsil edilir. Bu nedenle, `System.Collections.Generic.IEnumerable<'T>` uygulayan .NET Framework her türlü tür bir sıra olarak kullanılabilir.|[Diziler](sequences.md)<br /><br />[Seq modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
+|[Harita](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Öğelerin sabit bir sözlüğü. Öğelere anahtar tarafından erişilir.|[Eşleme Modülü](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
+|[Kurmak](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Anahtar değerlerinde `System.IComparable` arabiriminin uygulamalarını kullanan, büyük olasılıkla karşılaştırma F# yapısal karşılaştırma işlevi olduğu, ikili ağaçları temel alan sabit bir küme.|[Modül ayarla](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
-### <a name="table-of-functions"></a>Tablo işlevleri
+### <a name="table-of-functions"></a>Işlev tablosu
 
-Bu bölümde, kullanılabilir olan işlevlerin karşılaştırır F# koleksiyon türleri. Burada N birinci koleksiyon boyutudur ve M ikinci koleksiyon boyutu varsa işlevi hesaplama karmaşıklığını verilir. Bir tire (-) Bu işlev koleksiyonu üzerinde kullanılabilir olmadığını gösterir. Dizileri gevşek değerlendirildiği için hemen döndürüldüğünden rağmen yine de numaralandırıldığı zaman dizisi performansını etkiler Seq.distinct gibi bir işlevi O(1) olabilir.
+Bu bölüm, F# koleksiyon türlerinde kullanılabilir olan işlevleri karşılaştırır. İşlevin hesaplama karmaşıklığı verilir, burada N ilk koleksiyonun boyutudur ve d ise ikinci koleksiyonun boyutudur. Kısa çizgi (-) bu işlevin koleksiyonda kullanılabilir olmadığını gösterir. Diziler geç olarak değerlendirildiğinden, Seq. Distinct gibi bir işlev hemen döndürdüğü için O (1) olabilir, ancak numaralandırıldıktan sonra sıranın performansını etkilese de
 
-|İşlev|Dizi|List|Sequence|Eşleme|Ayarlayın|Açıklama|
+|İşlev|Array|List|Sequence|Eşleme|Set|Açıklama|
 |--------|-----|----|--------|---|---|-----------|
-|Ekleme|O(M)|O(N)|O(N)|-|-|İlk koleksiyonun ikinci koleksiyon öğelerini tarafından izlenen öğeleri içeren yeni bir koleksiyon döndürür.|
-|add|-|-|-|O (log N)|O (log N)|Eklenen öğeyi yeni bir koleksiyon döndürür.|
-|ortalama|O(N)|O(N)|O(N)|-|-|Koleksiyondaki öğelerin ortalamasını döndürür.|
-|averageBy|O(N)|O(N)|O(N)|-|-|Her öğeye uygulanan sağlanan işlev sonuçlarının ortalamasını döndürür.|
-|blit|O(N)|-|-|-|-|Bir dizinin bir bölümünü kopyalar.|
-|önbellek|-|-|O(N)|-|-|Hesaplar ve bir dizi öğelerini depolar.|
-|atama|-|-|O(N)|-|-|Öğeleri belirtilen türe dönüştürür.|
-|Seçin|O(N)|O(N)|O(N)|-|-|Verilen işlevi uygular `f` her öğeye `x` listesi. İşlevin döndüğü her öğe için sonuçları içeren listesini döndürür `Some(f(x))`.|
-|TOPLA|O(N)|O(N)|O(N)|-|-|Koleksiyonun her öğesine verilen işlevi uygular, tüm sonuçları art arda ekler ve birleşik listeyi döndürür.|
-|compareWith|-|-|O(N)|-|-|İki diziyi öğe öğe verilen karşılaştırma işlevini kullanarak karşılaştırır.|
-|concat|O(N)|O(N)|O(N)|-|-|Belirtilen numaralandırma-,-sabit listeleri tek bir birleştirilmiş sabit listesi olarak birleştirir.|
-|içerir|-|-|-|-|O (log N)|Küme belirtilen öğeyi içeriyorsa true döndürür.|
-|containsKey|-|-|-|O (log N)|-|Bir öğenin bir harita etki alanında olup olmadığını test eder.|
-|count|-|-|-|-|O(N)|Kümedeki öğelerin sayısını döndürür.|
-|countBy|-|-|O(N)|-|-|Bir dizinin her öğesi için bir anahtar oluşturuluyor işlevi uygulanır ve benzersiz anahtarları ve kendi özgün dizideki yinelenme sayısını verir bir dizisini döndürür.|
-|copy|O(N)|-|O(N)|-|-|Koleksiyon kopyalar.|
-|oluşturma|O(N)|-|-|-|-|Tüm başlangıçta belirtilen değere eşit olan tüm öğeleri bir dizi oluşturur.|
-|delay|-|-|O(1)|-|-|Oluşturulan bir sıralı bir dizi belirli gecikmeli belirtiminden döndürür.|
-|difference|-|-|-|-|O (M &#42; log N)|İlk kümeden kaldırılmış ikinci kümenin öğeleri ile yeni bir küme döndürür.|
-|Farklı|||O(1)&AMP;#42;|||Genel karma ve eşitlik karşılaştırmaları girişlere göre yinelenen giriş olmadığından içeren bir dizi döndürür. Bir öğe sırasını birden çok kez oluşursa, sonraki örnekleri atılır.|
-|distinctBy|||O(1)&AMP;#42;|||Belirtilen anahtar oluşturuluyor işlevinin döndürdüğü anahtarlar genel karma ve eşitlik karşılaştırmaları göre yinelenen giriş olmadığından içeren bir dizi döndürür. Bir öğe sırasını birden çok kez oluşursa, sonraki örnekleri atılır.|
-|empty|O(1)|O(1)|O(1)|O(1)|O(1)|Boş bir koleksiyon oluşturur.|
-|Var.|O(N)|O(N)|O(N)|O (log N)|O (log N)|Herhangi bir öğe dizisi belirtilen koşulu karşılayıp karşılamadığını test eder.|
-|exists2|O(Min(N,M))|-|O(Min(N,M))|||Herhangi bir karşılık gelen öğe giriş dizilerinin çiftinin belirtilen koşulu karşılayıp karşılamadığını test eder.|
-|fill|O(N)|||||Dizideki öğe aralığını belirtilen değere ayarlar.|
-|filtre|O(N)|O(N)|O(N)|O(N)|O(N)|Yalnızca belirli bir koşul döndüğü koleksiyonun öğeleri içeren yeni bir koleksiyon döndürür `true`.|
-|find|O(N)|O(N)|O(N)|O (log N)|-|Verilen işlevin döndüğü ilk öğeyi döndürür `true`. Döndürür `System.Collections.Generic.KeyNotFoundException` böyle bir öğe varsa.|
-|findIndex|O(N)|O(N)|O(N)|-|-|Belirli bir koşulu karşılayan dizideki ilk öğenin dizinini döndürür. Başlatır `System.Collections.Generic.KeyNotFoundException` herhangi bir öğe koşulu karşılıyorsa.|
-|findKey|-|-|-|O (log N)|-|Koleksiyondaki her eşleme işlev değerlendirir ve işlevin döndüğü ilk eşleme anahtarını döndürür `true`. Böyle bir öğe varsa, bu işlev başlatır `System.Collections.Generic.KeyNotFoundException`.|
-|Katlama|O(N)|O(N)|O(N)|O(N)|O(N)|İşlevi, iş parçacığı hesaplama accumulator bağımsız değişken, koleksiyonun her öğesine uygular. F Giriş işlevi ise ve i0... içindeki öğelerin çoğu, bu işlev, f (...) hesaplar. (f s i0)...) .|
-|fold2|O(N)|O(N)|-|-|-|Bir işlev hesaplama accumulator bağımsız değişken iş parçacığı, iki koleksiyon karşılık gelen öğelere uygulanır. Koleksiyonları aynı boyutlarına sahip olmalıdır. Giriş işlevi f ve öğeler içinde i0... ve j0... jN, bu işlev, f (...) hesaplar. (f s i0 j0)...) İçinde jN.|
-|foldBack|O(N)|O(N)|-|O(N)|O(N)|İşlevi, iş parçacığı hesaplama accumulator bağımsız değişken, koleksiyonun her öğesine uygular. F Giriş işlevi ise ve i0... içindeki öğelerin çoğu, bu işleve f i0 hesaplar (...) (f s)).|
-|foldBack2|O(N)|O(N)|-|-|-|Bir işlev hesaplama accumulator bağımsız değişken iş parçacığı, iki koleksiyon karşılık gelen öğelere uygulanır. Koleksiyonları aynı boyutlarına sahip olmalıdır. Giriş işlevi f ve öğeler içinde i0... ve j0... jN, bu işleve f i0 j0 hesaplar (...) (f jN s)).|
-|forall|O(N)|O(N)|O(N)|O(N)|O(N)|Tüm koleksiyon öğelerini belirli bir koşul karşılamak olup olmadığını sınar.|
-|forall2|O(N)|O(N)|O(N)|-|-|Karşılık gelen tüm koleksiyon öğelerini belirli bir koşul ikili karşılamak olup olmadığını sınar.|
-|Alma / n.|O(1)|O(N)|O(N)|-|-|Bir öğenin dizinini verilen koleksiyondan döndürür.|
-|HEAD|-|O(1)|O(1)|-|-|Koleksiyonun ilk öğesine döndürür.|
-|init|O(N)|O(N)|O(1)|-|-|Boyutu ve öğeleri hesaplamak için oluşturucu işlevi verilen bir koleksiyon oluşturur.|
-|initInfinite|-|-|O(1)|-|-|Bir sıra üretir, yinelendiğinde ardışık öğeleri verilen işlevin çağırarak döndürür.|
-|INTERSECT|-|-|-|-|O (log N &#42; günlük M)|İki kümenin kesişimini hesaplar.|
-|intersectMany|-|-|-|-|O (N1 &AMP;#42; N2...)|Bir dizi kümenin kesişimini hesaplar. Sıra boş olmamalıdır.|
-|IsEmpty|O(1)|O(1)|O(1)|O(1)|-|Döndürür `true` koleksiyonu boş ise.|
-|isProperSubset|-|-|-|-|O (M &#42; log N)|Döndürür `true` ilk kümenin tüm öğeleri ikinci küme içindedir ve ikinci kümenin en az bir öğesi olmayan ilk ayarlayın.|
-|isProperSuperset|-|-|-|-|O (M &#42; log N)|Döndürür `true` ikinci kümenin tüm öğeleri ilk küme içindedir ve ikinci kümede ilk kümenin en az bir öğe değil.|
-|isSubset|-|-|-|-|O (M &#42; log N)|Döndürür `true` ilk kümenin tüm öğeleri ikinci kümede ise.|
-|isSuperset|-|-|-|-|O (M &#42; log N)|Döndürür `true` ise ikinci kümenin tüm öğeleri ilk ayarlayın.|
-|Iter|O(N)|O(N)|O(N)|O(N)|O(N)|Koleksiyonun her öğesine verilen işlevi uygular.|
-|iteri|O(N)|O(N)|O(N)|-|-|Koleksiyonun her öğesine verilen işlevi uygular. İşleve geçirilen tamsayı, öğenin dizinini gösterir.|
-|iteri2|O(N)|O(N)|-|-|-|Dizinleri iki dizideki eşleşen dizinden çekilen bir öğe çiftine verilen işlevi uygular. İşleve geçirilen tamsayı elementler dizinini gösterir. İki dizi aynı uzunlukta olmalıdır.|
-|iter2|O(N)|O(N)|O(N)|-|-|Dizinleri iki dizideki eşleşen dizinden çekilen bir öğe çiftine verilen işlevi uygular. İki dizi aynı uzunlukta olmalıdır.|
-|Son|O(1)|O(N)|O(N)|-|-|Geçerli koleksiyon içinde son öğeyi döndürür.|
-|length|O(1)|O(N)|O(N)|-|-|Koleksiyondaki öğe sayısını döndürür.|
-|map|O(N)|O(N)|O(1)|-|-|Öğeleri verilen işlevin dizinin her öğesine uygulanması sonucu olan bir koleksiyon oluşturur.|
-|map2|O(N)|O(N)|O(1)|-|-|Öğeleri verilen işlevin iki koleksiyon karşılık gelen öğelerle için ikili uygulanması sonucu olan bir koleksiyon oluşturur. Giriş iki dizi aynı uzunlukta olmalıdır.|
-|map3|-|O(N)|-|-|-|Öğeleri verilen işlevin koleksiyonların karşılık gelen öğelerle için aynı anda uygulanması sonucu olan bir koleksiyon oluşturur.|
-|MAPI|O(N)|O(N)|O(N)|-|-|Öğeleri verilen işlevin dizinin her öğesine uygulanması sonucu olan bir dizi oluşturur. İşleve geçirilen tamsayı dizini dönüştürülmekte olan öğenin dizinini gösterir.|
-|mapi2|O(N)|O(N)|-|-|-|Öğeleri verilen işlevi öğelerin dizinini geçirerek ikili iki koleksiyon karşılık gelen öğelerle için uygulanması sonucu olan bir koleksiyon oluşturur. Giriş iki dizi aynı uzunlukta olmalıdır.|
-|max|O(N)|O(N)|O(N)|-|-|Koleksiyondaki kullanarak karşılaştırıldığında en büyük öğeyi döndürür [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) işleci.|
-|maxBy|O(N)|O(N)|O(N)|-|-|Koleksiyondaki kullanarak karşılaştırıldığında en büyük öğeyi döndürür [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) üzerinde işlev sonucu.|
-|maxElement|-|-|-|-|O (log N)|Küme için kullanılan sıralamaya göre kümedeki en büyük öğeyi döndürür.|
-|min|O(N)|O(N)|O(N)|-|-|Koleksiyondaki kullanarak karşılaştırıldığında en düşük öğeyi döndürür [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) işleci.|
-|minBy|O(N)|O(N)|O(N)|-|-|Koleksiyondaki kullanarak karşılaştırıldığında en düşük öğeyi döndürür [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) işlecinin işlev sonucu.|
-|minElement|-|-|-|-|O (log N)|Küme için kullanılan sıralamaya göre kümedeki en düşük öğeyi döndürür.|
-|ofArray|-|O(N)|O(1)|O(N)|O(N)|Belirtilen dizinin aynı öğeleri içeren bir koleksiyon oluşturur.|
-|ofList|O(N)|-|O(1)|O(N)|O(N)|Belirtilen liste aynı öğeleri içeren bir koleksiyon oluşturur.|
-|ofSeq|O(N)|O(N)|-|O(N)|O(N)|Belirli bir dizi aynı öğeleri içeren bir koleksiyon oluşturur.|
-|ikili|-|-|O(N)|-|-|Giriş dizisi ve onun önceli öncül yalnızca ikinci öğe döndürülen ilk öğe dışında her öğesinin bir dizisi döndürür.|
-|partition|O(N)|O(N)|-|O(N)|O(N)|Koleksiyonu iki koleksiyona ayırır. Birinci koleksiyon için belirli bir koşul döndüren öğeleri içeren `true`, ve ikinci koleksiyon için belirli bir koşul dönen öğeleri içeren `false`.|
-|permute|O(N)|O(N)|-|-|-|Tüm öğeleri dizilmiş permütasyon göre bir dizi döndürür.|
-|Çekme|O(N)|O(N)|O(N)|O (log N)|-|İşlevin bazı döndüğü ilk sonucu döndürerek ardışık öğeleri için verilen işlevi uygular. İşlev hiçbir zaman bazıları döndürürse `System.Collections.Generic.KeyNotFoundException` tetiklenir.|
-|readonly|-|-|O(N)|-|-|Belirli bir dizi nesnesini temsil eden bir dizi nesnesi oluşturur. Bu işlem, bir cast türünü yeniden Bul olamaz ve orijinal sıranın bulunmamalıdır sağlar. Örneğin, bir dizi varsa, döndürülen dizi dizinin öğeleri döndürür, ancak döndürülen dizi nesnesi bir dizi türüne dönüştürülemiyor.|
-|azaltın|O(N)|O(N)|O(N)|-|-|İşlevi, iş parçacığı hesaplama accumulator bağımsız değişken, koleksiyonun her öğesine uygular. Bu işlev ilk iki öğelerine işlevi uygulayarak başlatır, bu sonuç üçüncü öğe ve benzeri birlikte işleve geçirir. İşlev sonucunu döndürür.|
-|reduceBack|O(N)|O(N)|-|-|-|İşlevi, iş parçacığı hesaplama accumulator bağımsız değişken, koleksiyonun her öğesine uygular. F Giriş işlevi ise ve i0... içindeki öğelerin çoğu, bu işleve f i0 hesaplar (...) (f,-1'de)).|
-|remove|-|-|-|O (log N)|O (log N)|Bir öğeyi harita etki alanından kaldırır. Öğe yoksa hiçbir özel durum oluşturulur.|
-|Çoğaltma|-|O(N)|-|-|-|Her öğeyi belirtilen değere ayarlar ile belirtilen uzunluktaki bir liste oluşturur.|
-|Rev|O(N)|O(N)|-|-|-|Yeni liste öğeleri ters sırada döndürür.|
-|Tarama|O(N)|O(N)|O(N)|-|-|İşlevi, iş parçacığı hesaplama accumulator bağımsız değişken, koleksiyonun her öğesine uygular. Bu işlem, ikinci bağımsız değişkeni ve listedeki ilk öğe işlevi uygulanır. İşleminin ardından bu sonuç ikinci öğe birlikte işleve vb. geçirir. Son olarak, işlem Ara sonuçlar ve nihai sonucu listesini döndürür.|
-|scanBack|O(N)|O(N)|-|-|-|FoldBack işlemi benzer, ancak ara ve son sonuçları döndürür.|
-|singleton|-|-|O(1)|-|O(1)|Yalnızca bir öğe verir bir dizisini döndürür.|
-|set|O(1)|-|-|-|-|Bir dizideki bir öğe için belirtilen değere ayarlar.|
-|Atla|-|-|O(N)|-|-|Temel alınan dizi N öğesini atlayan ve ardından kalan öğeleri dizisi üretir bir dizisini döndürür.|
-|SkipWhile|-|-|O(N)|-|-|Yinelendiğinde temel alınan dizi öğelerini belirtilen koşul döndürür çalışırken, dizisi döndürür `true` ve ardından dizinin kalan öğeleri verir.|
-|sort|Ortalama O (log N N)<br /><br />O(N^2) en kötü durumda|O (log N N)|O (log N N)|-|-|Koleksiyon öğesi değere göre sıralar. Öğeleri kullanılarak karşılaştırılır [karşılaştırma](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c).|
-|sortBy|Ortalama O (log N N)<br /><br />O(N^2) en kötü durumda|O (log N N)|O (log N N)|-|-|Verilen projeksiyon sağlayan tuşlarını kullanarak verilen listeyi sıralar. Anahtarları kullanarak karşılaştırılır [karşılaştırma](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c).|
-|Sortınplace|Ortalama O (log N N)<br /><br />O(N^2) en kötü durumda|-|-|-|-|Yerinde diziyi ve verilen karşılaştırma işlevini kullanarak bir dizinin öğeleri sıralar. Öğeleri kullanılarak karşılaştırılır [karşılaştırma](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c).|
-|sortInPlaceBy|Ortalama O (log N N)<br /><br />O(N^2) en kötü durumda|-|-|-|-|Yerinde diziyi ve verilen projeksiyon anahtarlarını kullanarak bir dizinin öğeleri sıralar. Öğeleri kullanılarak karşılaştırılır [karşılaştırma](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c).|
-|sortInPlaceWith|Ortalama O (log N N)<br /><br />O(N^2) en kötü durumda|-|-|-|-|Yerinde diziyi ve siparişi olarak verilen karşılaştırma işlevini kullanarak bir dizinin öğeleri sıralar.|
-|sortWith|Ortalama O (log N N)<br /><br />O(N^2) en kötü durumda|O (log N N)|-|-|-|Sırada verilen karşılaştırma işlevini kullanarak ve yeni bir koleksiyon döndüren bir koleksiyonun öğeleri sıralar.|
-|sub|O(N)|-|-|-|-|İNDİS ve uzunluk başlatarak belirtilen belirli alt aralığı içeren bir dizi oluşturur.|
-|TOPLA|O(N)|O(N)|O(N)|-|-|Koleksiyondaki öğelerin toplamını döndürür.|
-|sumBy|O(N)|O(N)|O(N)|-|-|Koleksiyonun her öğesine işlevi uygulayarak oluşturulan sonuçları toplamını döndürür.|
-|Tail|-|O(1)|-|-|-|İlk öğesi olmayan listesi döndürür.|
-|sınav zamanı|-|-|O(N)|-|-|Belirtilen sayı kadar dizisinin döndürür.|
-|TakeWhile|-|-|O(1)|-|-|Yinelendiğinde temel alınan dizi öğelerini sayıları belirtilen koşul döndürür çalışırken, dizisi döndürür `true` ve daha fazla öğe döndürür.|
-|ToArray|-|O(N)|O(N)|O(N)|O(N)|Sağlanan koleksiyondan bir dizi oluşturur.|
-|ToList|O(N)|-|O(N)|O(N)|O(N)|Sağlanan koleksiyondan bir liste oluşturur.|
-|toSeq|O(1)|O(1)|-|O(1)|O(1)|Sağlanan koleksiyondan bir dizi oluşturur.|
-|Kes|-|-|O(1)|-|-|Bir dizi, numaralandırılan en fazla N öğeleri döndürür döner.|
-|tryFind|O(N)|O(N)|O(N)|O (log N)|-|Belirli bir koşulu karşılayan bir öğe arar.|
-|tryFindIndex|O(N)|O(N)|O(N)|-|-|Belirli bir koşulu karşılayan ve eşleşen öğenin dizinini döndüren ilk öğeyi arar veya `None` böyle bir öğe varsa.|
-|tryFindKey|-|-|-|O (log N)|-|Belirli bir koşulu karşılayan ya da döndürür koleksiyonda ilk eşleme anahtarını döndürür `None` böyle bir öğe varsa.|
-|tryPick|O(N)|O(N)|O(N)|O (log N)|-|İşlevin döndüğü ilk sonucu döndürerek ardışık öğeleri için verilen işlevi uygular `Some` bazı değeri. Böyle bir öğe var olup olmadığını döndürür işlemi `None`.|
-|düzleştirme|-|-|O(N)|-|-|Verilen hesaplamayı oluşturan öğeleri içeren bir dizi döndürür.|
-|birleşim|-|-|-|-|O (M &#42; log N)|İki kümenin birleşimini hesaplar.|
-|unionMany|-|-|-|-|O (N1 &AMP;#42; N2...)|Bir dizi kümenin birleşimini hesaplar.|
-|sıkıştırmasını açın|O(N)|O(N)|O(N)|-|-|Çiftlerinin listesini iki liste halinde ayırır.|
-|unzip3|O(N)|O(N)|O(N)|-|-|Bir liste Üçlü dizisini üç listeye böler.|
-|Pencereli|-|-|O(N)|-|-|Girdi dizisinden çizilen öğeleri içeren kayan pencere ortaya çıkarır bir dizisini döndürür. Her pencere, yeni bir dizi olarak döndürülür.|
-|zip|O(N)|O(N)|O(N)|-|-|Listeye iki koleksiyon çifti birleştirir. İki liste eşit uzunlukta olmalıdır.|
-|zip3|O(N)|O(N)|O(N)|-|-|Koleksiyonların bir listesi halinde Üçlü birleştirir. Listeleri eşit uzunlukta olmalıdır.|
+|ýna|O (M)|O (N)|O (N)|-|-|İkinci koleksiyonun öğeleri tarafından izlenen ilk koleksiyonun öğelerini içeren yeni bir koleksiyon döndürür.|
+|add|-|-|-|O (log N)|O (log N)|Eklenen öğe ile yeni bir koleksiyon döndürür.|
+|ortalama|O (N)|O (N)|O (N)|-|-|Koleksiyondaki öğelerin ortalamasını döndürür.|
+|averageBy|O (N)|O (N)|O (N)|-|-|Her bir öğeye uygulanan, belirtilen işlevin sonuçlarının ortalamasını döndürür.|
+|blit|O (N)|-|-|-|-|Dizinin bir bölümünü kopyalar.|
+|önbellek|-|-|O (N)|-|-|Bir dizinin öğelerini hesaplar ve depolar.|
+|atama|-|-|O (N)|-|-|Öğeleri belirtilen türe dönüştürür.|
+|Güvenlik bilgisi ekleyin'i|O (N)|O (N)|O (N)|-|-|Verilen işlevi `f` listedeki her öğe `x` uygular. İşlevin `Some(f(x))`döndürdüğü her öğe için sonuçları içeren listeyi döndürür.|
+|Topla|O (N)|O (N)|O (N)|-|-|Verilen işlevi koleksiyonun her öğesine uygular, tüm sonuçları birleştirir ve Birleşik listeyi döndürür.|
+|compareWith|-|-|O (N)|-|-|Verilen karşılaştırma işlevini, öğe by öğesi kullanarak iki diziyi karşılaştırır.|
+|concat|O (N)|O (N)|O (N)|-|-|Verilen numaralandırmalar numaralandırmayı tek bir birleştirilmiş sabit listesi olarak birleştirir.|
+|içerir|-|-|-|-|O (log N)|Küme belirtilen öğeyi içeriyorsa true değerini döndürür.|
+|containsKey|-|-|-|O (log N)|-|Bir öğenin bir haritanın etki alanında olup olmadığını test eder.|
+|{1&gt;count&lt;1}|-|-|-|-|O (N)|Kümedeki öğelerin sayısını döndürür.|
+|countBy|-|-|O (N)|-|-|Bir dizinin her öğesine anahtar oluşturma işlevi uygular ve özgün dizideki benzersiz anahtarlar ve oluşum sayısını veren bir sıra döndürür.|
+|copy|O (N)|-|O (N)|-|-|Koleksiyonu kopyalar.|
+|oluşturma|O (N)|-|-|-|-|Başlangıçta verilen değerin tamamı olan tüm öğelerin bir dizisini oluşturur.|
+|delay|-|-|O (1)|-|-|Bir sıranın verilen gecikmeli belirtiminden oluşturulan bir diziyi döndürür.|
+|difference|-|-|-|-|O (M &#42; günlüğü N)|İkinci küme, ilk kümeden kaldırılan öğeleri içeren yeni bir küme döndürür.|
+|distinct|||O (1)&#42;|||Girdilerde genel karma ve eşitlik karşılaştırmalarına göre yinelenen giriş içermeyen bir dizi döndürür. Bir öğe dizide birden çok kez oluşursa, sonraki oluşumlar atılır.|
+|distinctBy|||O (1)&#42;|||Verilen anahtar oluşturma işlevinin döndürdüğü anahtarlarda genel karma ve eşitlik karşılaştırmalarına göre yinelenen giriş içermeyen bir dizi döndürür. Bir öğe dizide birden çok kez oluşursa, sonraki oluşumlar atılır.|
+|boş|O (1)|O (1)|O (1)|O (1)|O (1)|Boş bir koleksiyon oluşturur.|
+|bulunur|O (N)|O (N)|O (N)|O (log N)|O (log N)|Dizideki herhangi bir öğenin verilen koşulu karşılayıp karşılamadığını sınar.|
+|exists2|O (dk (N, M))|-|O (dk (N, M))|||Giriş sıralarının karşılık gelen herhangi bir çiftinin verilen koşulu karşılayıp karşılamadığını sınar.|
+|fill|O (N)|||||Dizinin öğe aralığını verilen değere ayarlar.|
+|filtre|O (N)|O (N)|O (N)|O (N)|O (N)|Yalnızca verilen koşulun `true`döndürdüğü koleksiyonun öğelerini içeren yeni bir koleksiyon döndürür.|
+|find|O (N)|O (N)|O (N)|O (log N)|-|Verilen işlevin `true`döndürdüğü ilk öğeyi döndürür. Böyle bir öğe yoksa `System.Collections.Generic.KeyNotFoundException` döndürür.|
+|FindIndex|O (N)|O (N)|O (N)|-|-|Dizideki verilen koşulu karşılayan ilk öğenin dizinini döndürür. Koşula uyan hiçbir öğe yoksa `System.Collections.Generic.KeyNotFoundException` başlatır.|
+|findKey|-|-|-|O (log N)|-|Koleksiyondaki her eşlemede işlevi değerlendirir ve işlevin `true`döndürdüğü ilk eşlemenin anahtarını döndürür. Böyle bir öğe yoksa, bu işlev `System.Collections.Generic.KeyNotFoundException`başlatır.|
+|kat|O (N)|O (N)|O (N)|O (N)|O (N)|Koleksiyonun her öğesine bir işlev uygular ve hesaplama aracılığıyla bir biriktiricidir bağımsız değişkenini akıtma. Giriş işlevi f ise ve öğeler i0... ' de, bu işlev f 'yi hesaplar (... (f s i0)...) 'ndaki.|
+|fold2|O (N)|O (N)|-|-|-|İki koleksiyonun karşılık gelen öğelerine bir işlev uygular ve hesaplama aracılığıyla bir Biriktiricinin bağımsız değişkenini akıtma. Koleksiyonlar aynı boyutlarda olmalıdır. Giriş işlevi f ise ve öğeler i0... ve Içinde j0... jN, bu işlev f 'yi hesaplar (... (f s i0 j0)...) jN.|
+|foldBack|O (N)|O (N)|-|O (N)|O (N)|Koleksiyonun her öğesine bir işlev uygular ve hesaplama aracılığıyla bir biriktiricidir bağımsız değişkenini akıtma. Giriş işlevi f ise ve öğeler i0... Içinde, bu işlev f i0 (...) hesaplar. (s 'de f)).|
+|foldBack2|O (N)|O (N)|-|-|-|İki koleksiyonun karşılık gelen öğelerine bir işlev uygular ve hesaplama aracılığıyla bir Biriktiricinin bağımsız değişkenini akıtma. Koleksiyonlar aynı boyutlarda olmalıdır. Giriş işlevi f ise ve öğeler i0... ve Içinde j0... jN, bu işlev f i0 j0 (...) hesaplar. (jN 'de f)).|
+|ForAll|O (N)|O (N)|O (N)|O (N)|O (N)|Koleksiyondaki tüm öğelerin verilen koşulu karşılayıp karşılamadığını sınar.|
+|forall2|O (N)|O (N)|O (N)|-|-|Koleksiyonda karşılık gelen tüm öğelerin belirtilen koşulu ikili olarak karşılayıp karşılamadığını sınar.|
+|al/n|O (1)|O (N)|O (N)|-|-|Koleksiyondan dizinini verilen bir öğeyi döndürür.|
+|başlı|-|O (1)|O (1)|-|-|Koleksiyonun ilk öğesini döndürür.|
+|init|O (N)|O (N)|O (1)|-|-|Öğeleri hesaplamak için boyut ve Oluşturucu işlevi verilen bir koleksiyon oluşturur.|
+|Initınfinite|-|-|O (1)|-|-|Yinelendiğinde, verilen işlevi çağırarak birbirini izleyen öğeleri döndüren bir dizi oluşturur.|
+|kesiş|-|-|-|-|O (günlük N &#42; günlük M)|İki kümenin kesişimini hesaplar.|
+|intersectMany|-|-|-|-|O (N1 &#42; N2...)|Bir küme dizisinin kesişimini hesaplar. Dizi boş olmamalıdır.|
+|IsEmpty|O (1)|O (1)|O (1)|O (1)|-|Koleksiyon boşsa `true` döndürür.|
+|isProperSubset|-|-|-|-|O (M &#42; günlüğü N)|İlk küme tüm öğeleri ikinci küme içinde ise ve ikinci küme en az bir öğesi ilk küme içinde değilse `true` döndürür.|
+|isProperSuperset|-|-|-|-|O (M &#42; günlüğü N)|İkinci küme tüm öğeleri ilk küme içinde ise ve ilk küme en az bir öğesi ikinci küme içinde değilse `true` döndürür.|
+|isSubset|-|-|-|-|O (M &#42; günlüğü N)|İlk küme tüm öğeleri ikinci küme içinde ise `true` döndürür.|
+|isSuperset|-|-|-|-|O (M &#42; günlüğü N)|İkinci küme tüm öğeleri ilk küme içinde ise `true` döndürür.|
+|Pi|O (N)|O (N)|O (N)|O (N)|O (N)|Verilen işlevi koleksiyonun her öğesine uygular.|
+|iteri|O (N)|O (N)|O (N)|-|-|Verilen işlevi koleksiyonun her öğesine uygular. İşleve geçirilen tamsayı, öğenin dizinini gösterir.|
+|iteri2|O (N)|O (N)|-|-|-|Verilen işlevi, iki dizide eşleşen indekslerden çizilmiş bir öğe çiftine uygular. İşleve geçirilen tamsayı, öğelerin dizinini gösterir. İki dizi aynı uzunlukta olmalıdır.|
+|iter2|O (N)|O (N)|O (N)|-|-|Verilen işlevi, iki dizide eşleşen indekslerden çizilmiş bir öğe çiftine uygular. İki dizi aynı uzunlukta olmalıdır.|
+|Son|O (1)|O (N)|O (N)|-|-|Geçerli koleksiyondaki son öğeyi döndürür.|
+|{1&gt;length&lt;1}|O (1)|O (N)|O (N)|-|-|Koleksiyondaki öğe sayısını döndürür.|
+|map|O (N)|O (N)|O (1)|-|-|Öğeleri verilen işlevin dizinin her öğesine uygulanması sonucu olan bir koleksiyon oluşturur.|
+|MAP2|O (N)|O (N)|O (1)|-|-|Öğeleri verilen işlevi iki koleksiyonun karşılık gelen öğelerine ikili olarak uygulamanın sonuçları olan bir koleksiyon oluşturur. İki giriş dizisi aynı uzunlukta olmalıdır.|
+|map3|-|O (N)|-|-|-|Öğeleri verilen işlevi üç koleksiyonun karşılık gelen öğelerine aynı anda uygulama sonuçları olan bir koleksiyon oluşturur.|
+|hatası|O (N)|O (N)|O (N)|-|-|Öğeleri verilen işlevin dizinin her öğesine uygulanması sonucu olan bir dizi oluşturur. İşleve geçirilen tamsayı dizin, dönüştürülmekte olan öğenin dizinini gösterir.|
+|mapi2|O (N)|O (N)|-|-|-|Öğeleri, bu iki koleksiyonun karşılık gelen öğelerine, öğelerin dizinini geçirerek verilen işlevi uygulamanın sonuçları olan bir koleksiyon oluşturur. İki giriş dizisi aynı uzunlukta olmalıdır.|
+|en büyük|O (N)|O (N)|O (N)|-|-|[En büyük](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) işleç kullanılarak karşılaştırılan koleksiyondaki en büyük öğeyi döndürür.|
+|maxBy|O (N)|O (N)|O (N)|-|-|İşlev sonucu üzerinde [Max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) kullanılarak karşılaştırıldığında koleksiyondaki en büyük öğeyi döndürür.|
+|maxElement|-|-|-|-|O (log N)|Küme için kullanılan sıralamaya göre küme içindeki en büyük öğeyi döndürür.|
+|en küçük|O (N)|O (N)|O (N)|-|-|[Min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) işleci kullanılarak karşılaştırılan koleksiyonda en az öğeyi döndürür.|
+|minBy|O (N)|O (N)|O (N)|-|-|İşlev sonucunda [Min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) işleci kullanılarak karşılaştırılan koleksiyondaki en az öğeyi döndürür.|
+|minElement|-|-|-|-|O (log N)|Küme için kullanılan sıralamaya göre küme içindeki en düşük öğeyi döndürür.|
+|ofArray|-|O (N)|O (1)|O (N)|O (N)|Verilen dizi ile aynı öğeleri içeren bir koleksiyon oluşturur.|
+|ofList|O (N)|-|O (1)|O (N)|O (N)|Verilen liste ile aynı öğeleri içeren bir koleksiyon oluşturur.|
+|ofSeq|O (N)|O (N)|-|O (N)|O (N)|Verilen sırayla aynı öğeleri içeren bir koleksiyon oluşturur.|
+|yapılandırdı|-|-|O (N)|-|-|Giriş dizisindeki her öğenin bir dizisini ve yalnızca ikinci öğenin öncülü olarak döndürülen ilk öğesi hariç öncülü döndürür.|
+|partition|O (N)|O (N)|-|O (N)|O (N)|Koleksiyonu iki koleksiyona böler. İlk koleksiyon, verilen koşulun `true`döndürdüğü öğeleri içerir ve ikinci koleksiyon, verilen koşulun `false`döndürdüğü öğeleri içerir.|
+|permute|O (N)|O (N)|-|-|-|Belirtilen PERMÜTASYONA göre tüm öğeleri içeren bir dizi döndürür.|
+|seçin|O (N)|O (N)|O (N)|O (log N)|-|İşlevin bazılarını döndürdüğü ilk sonucu döndüren ardışık öğelere verilen işlevi uygular. İşlev hiçbir şekilde hiç bir değer döndürmüyorsa `System.Collections.Generic.KeyNotFoundException` tetiklenir.|
+|readonly|-|-|O (N)|-|-|Verilen dizi nesnesini temsil eden bir dizi nesnesi oluşturur. Bu işlem, bir tür dönüştürme işleminin özgün sırayı yeniden bulamamasını ve mukutabilmesini sağlar. Örneğin, bir dizi verildiyse, döndürülen dizi dizinin öğelerini döndürür, ancak döndürülen dizi nesnesini bir diziye çevirebilirsiniz.|
+|azal|O (N)|O (N)|O (N)|-|-|Koleksiyonun her öğesine bir işlev uygular ve hesaplama aracılığıyla bir biriktiricidir bağımsız değişkenini akıtma. Bu işlev, işlevi ilk iki öğeye uygulayarak başlar, bu sonucu, üçüncü öğesiyle birlikte işlevine geçirir ve bu şekilde devam eder. İşlev, nihai sonucu döndürür.|
+|reduceBack|O (N)|O (N)|-|-|-|Koleksiyonun her öğesine bir işlev uygular ve hesaplama aracılığıyla bir biriktiricidir bağımsız değişkenini akıtma. Giriş işlevi f ise ve öğeler i0... Içinde, bu işlev f i0 (...) hesaplar. (-1 içinde f)).|
+|remove|-|-|-|O (log N)|O (log N)|Haritanın etki alanından bir öğeyi kaldırır. Öğe yoksa, hiçbir özel durum harekete geçirilir.|
+|çoğaltmak|-|O (N)|-|-|-|Verilen değere ayarlanan her öğe için belirtilen uzunluğun bir listesini oluşturur.|
+|düzenleme|O (N)|O (N)|-|-|-|Öğeleri ters sırada olan yeni bir liste döndürür.|
+|tarama|O (N)|O (N)|O (N)|-|-|Koleksiyonun her öğesine bir işlev uygular ve hesaplama aracılığıyla bir biriktiricidir bağımsız değişkenini akıtma. Bu işlem, işlevi ikinci bağımsız değişkene ve listenin ilk öğesine uygular. İşlem daha sonra bu sonucu ikinci öğesiyle birlikte işleve geçirir ve bu şekilde devam eder. Son olarak, işlem ara sonuçların ve nihai sonucun listesini döndürür.|
+|scanBack|O (N)|O (N)|-|-|-|FoldBack işlemine benzer, ancak hem ara hem de nihai sonuçları döndürür.|
+|Adet|-|-|O (1)|-|O (1)|Yalnızca bir öğe veren bir sıra döndürür.|
+|set|O (1)|-|-|-|-|Bir dizinin bir öğesini belirtilen değere ayarlar.|
+|Atla|-|-|O (N)|-|-|Temel alınan sıranın N öğelerini atlayan bir sıra döndürür ve sonra sıranın kalan öğelerini verir.|
+|skipWhile|-|-|O (N)|-|-|Yinelendiğinde, belirtilen koşulun `true` döndürdüğü sırada temeldeki sıranın öğelerini atlayan, sonra da sıranın kalan öğelerini verdiği bir dizi döndürür.|
+|sort|O (N günlük N) Ortalama<br /><br />O (N ^ 2) en kötü durum|O (N günlük N)|O (N günlük N)|-|-|Koleksiyonu öğe değerine göre sıralar. Öğeler [karşılaştırma](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)kullanılarak karşılaştırılır.|
+|sortBy|O (N günlük N) Ortalama<br /><br />O (N ^ 2) en kötü durum|O (N günlük N)|O (N günlük N)|-|-|Verilen projeksiyonun sağladığı anahtarları kullanarak verilen listeyi sıralar. Anahtarlar [Compare](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)kullanılarak karşılaştırılır.|
+|sortInPlace|O (N günlük N) Ortalama<br /><br />O (N ^ 2) en kötü durum|-|-|-|-|Bir dizinin öğelerini yerinde değiştirerek ve verilen karşılaştırma işlevini kullanarak sıralar. Öğeler [Compare](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)kullanılarak karşılaştırılır.|
+|sortInPlaceBy|O (N günlük N) Ortalama<br /><br />O (N ^ 2) en kötü durum|-|-|-|-|Bir dizinin öğelerini yerinde değiştirerek ve anahtarlar için verilen projeksiyonları kullanarak sıralar. Öğeler [Compare](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)kullanılarak karşılaştırılır.|
+|sortInPlaceWith|O (N günlük N) Ortalama<br /><br />O (N ^ 2) en kötü durum|-|-|-|-|Bir dizinin öğelerini yerinde değiştirerek ve sıralama olarak verilen karşılaştırma işlevini kullanarak sıralar.|
+|sortWith|O (N günlük N) Ortalama<br /><br />O (N ^ 2) en kötü durum|O (N günlük N)|-|-|-|Sıralama olarak verilen karşılaştırma işlevini kullanarak bir koleksiyonun öğelerini sıralar ve yeni bir koleksiyon döndürür.|
+|sub|O (N)|-|-|-|-|Dizin ve uzunluk başlangıcı tarafından belirtilen verilen alt aralığı içeren bir dizi oluşturur.|
+|TOPLA|O (N)|O (N)|O (N)|-|-|Koleksiyondaki öğelerin toplamını döndürür.|
+|sumBy|O (N)|O (N)|O (N)|-|-|Koleksiyonun her öğesine işlev uygulanarak oluşturulan sonuçların toplamını döndürür.|
+|Connect|-|O (1)|-|-|-|Listeyi ilk öğesi olmadan döndürür.|
+|take|-|-|O (N)|-|-|Sıranın belirtilen sayıya kadar olan öğelerini döndürür.|
+|takeWhile|-|-|O (1)|-|-|Yinelendiğinde, belirtilen koşulun `true` döndürdüğü sırada temel alınan sıranın öğelerini veren bir dizi döndürür ve daha fazla öğe döndürmez.|
+|toArray|-|O (N)|O (N)|O (N)|O (N)|Verilen koleksiyondan bir dizi oluşturur.|
+|toList|O (N)|-|O (N)|O (N)|O (N)|Verilen koleksiyondan bir liste oluşturur.|
+|toSeq|O (1)|O (1)|-|O (1)|O (1)|Verilen koleksiyondan bir dizi oluşturur.|
+|kesilemedi|-|-|O (1)|-|-|Numaralandırıldıktan sonra N öğesinden fazla öğe döndürdüğünü belirten bir dizi döndürür.|
+|tryFind|O (N)|O (N)|O (N)|O (log N)|-|Belirli bir koşulu karşılayan bir öğe arar.|
+|tryFindIndex|O (N)|O (N)|O (N)|-|-|Verilen bir koşulu karşılayan ilk öğeyi arar ve eşleşen öğenin dizinini döndürür veya böyle bir öğe yoksa `None`.|
+|tryFindKey|-|-|-|O (log N)|-|Koleksiyonda verilen koşulu karşılayan ilk eşlemenin anahtarını döndürür veya böyle bir öğe yoksa `None` döndürür.|
+|tryPick|O (N)|O (N)|O (N)|O (log N)|-|İşlevin bazı değerler için `Some` döndürdüğü ilk sonucu döndüren ardışık öğelere verilen işlevi uygular. Böyle bir öğe yoksa, işlem `None`döndürür.|
+|unfold|-|-|O (N)|-|-|Verilen hesaplamanın oluşturduğu öğeleri içeren bir dizi döndürür.|
+|birleşim|-|-|-|-|O (M &#42; günlüğü N)|İki kümenin birleşimini hesaplar.|
+|unionMany|-|-|-|-|O (N1 &#42; N2...)|Bir küme dizisinin birleşimini hesaplar.|
+|sıkıştırmasını açın|O (N)|O (N)|O (N)|-|-|Çiftler listesini iki listeye böler.|
+|unzip3|O (N)|O (N)|O (N)|-|-|Üçlü listesini üç listeye böler.|
+|e|-|-|O (N)|-|-|Giriş dizisinden çizilen öğeleri içeren kayan pencereler veren bir dizi döndürür. Her pencere yeni bir dizi olarak döndürülür.|
+|sıkıştırma|O (N)|O (N)|O (N)|-|-|İki koleksiyonu çiftler listesi halinde birleştirir. İki liste eşit uzunlukta olmalıdır.|
+|zip3|O (N)|O (N)|O (N)|-|-|Üç koleksiyonu üçlü bir liste halinde birleştirir. Listelerin uzunlukları eşit olmalıdır.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

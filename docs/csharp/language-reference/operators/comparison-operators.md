@@ -19,21 +19,21 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: bb28e2adba896ae85b189858283376fbe3250dce
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 86f557d0575b440455fd6363f0d0d6783a9e7acc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039064"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345325"
 ---
 # <a name="comparison-operators-c-reference"></a>Karşılaştırma işleçleri (C# başvuru)
 
 İlişkisel olarak da bilinen [`<` (küçüktür)](#less-than-operator-), [`>` (büyüktür)](#greater-than-operator-), [`<=` (küçüktür veya eşittir](#less-than-or-equal-operator-)) ve [`>=` (büyüktür veya eşittir)](#greater-than-or-equal-operator-) karşılaştırması. Bu işleçler tüm [integral](../builtin-types/integral-numeric-types.md) ve [kayan nokta](../builtin-types/floating-point-numeric-types.md) sayısal türleri tarafından desteklenir.
 
 > [!NOTE]
-> `==`, `<`, `>`, `<=`ve `>=` işleçleri için, işlenenlerin herhangi biri bir sayı değilse (<xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType>), işlemin sonucu `false`olur. Diğer bir deyişle, `NaN` değeri, `NaN` dahil diğer `double` (veya `float`) bir değere eşit, bundan küçüktür veya eşit değildir. Daha fazla bilgi ve örnek için <xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType> başvuru makalesine bakın.
+> `==`, `<`, `>`, `<=`ve `>=` işleçleri için, işlenenlerin herhangi biri bir sayı değilse (<xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType>), işlemin sonucu `false`olur. Diğer bir deyişle, `NaN` değeri, `NaN`dahil herhangi bir `double` (veya `float`) değerinden daha fazla, daha küçüktür veya eşit değildir. Daha fazla bilgi ve örnek için bkz. <xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType> başvuru makalesi.
 
-Numaralandırma türleri de karşılaştırma işleçlerini destekler. Aynı [sabit listesi](../keywords/enum.md) türünün işlenenleri için, temeldeki integral türünün karşılık gelen değerleri karşılaştırılır.
+Numaralandırma türleri de karşılaştırma işleçlerini destekler. Aynı [sabit listesi](../builtin-types/enum.md) türünün işlenenleri için, temeldeki integral türünün karşılık gelen değerleri karşılaştırılır.
 
 [`==` ve `!=` işleçleri](equality-operators.md) işlenenlerinin eşit olup olmadığını denetler.
 

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: d2fe9a73f79408db08ef48d380940fcf6bb831c0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: d56da60f174933af789a6abd7d8aa90f3f29d9c1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838006"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344621"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma
 Aktarım güvenliği kullanan <xref:System.ServiceModel.WSHttpBinding> sınıfıyla şirket içinde barındırılan bir Windows Communication Foundation (WCF) hizmeti oluştururken, bir X. 509.440 sertifikası ile bir bağlantı noktası da yapılandırmanız gerekir. Kendi kendine barındırılan bir hizmet oluşturmadıysanız, hizmetinizi Internet Information Services (IIS) üzerinde barındırabilirsiniz. Daha fazla bilgi için bkz. [http aktarım güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Bir bağlantı noktasını yapılandırmak için, kullandığınız araç makinenizde çalışan işletim sistemine bağlıdır.  
   
- [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]çalıştırıyorsanız, HttpCfg. exe aracını kullanın. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] Bu araç yüklüdür. [!INCLUDE[wxp](../../../../includes/wxp-md.md)], aracı [WINDOWS XP Service Pack 2 destek araçları](https://go.microsoft.com/fwlink/?LinkId=88606)' na yükleyebilirsiniz. Daha fazla bilgi için bkz. [Httpcfg Overview](https://go.microsoft.com/fwlink/?LinkId=88605). [Windows Destek Araçları belgeleri](https://go.microsoft.com/fwlink/?LinkId=94840) , Httpcfg. exe aracının sözdizimini açıklar.  
+ Windows Server 2003 veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]çalıştırıyorsanız, HttpCfg. exe aracını kullanın. Windows Server 2003 ile bu araç yüklüdür. [!INCLUDE[wxp](../../../../includes/wxp-md.md)], aracı [WINDOWS XP Service Pack 2 destek araçları](https://go.microsoft.com/fwlink/?LinkId=88606)' na yükleyebilirsiniz. Daha fazla bilgi için bkz. [Httpcfg Overview](https://go.microsoft.com/fwlink/?LinkId=88605). [Windows Destek Araçları belgeleri](https://go.microsoft.com/fwlink/?LinkId=94840) , Httpcfg. exe aracının sözdizimini açıklar.  
   
  Windows Vista çalıştırıyorsanız, zaten yüklü olan Netsh. exe aracını kullanın.  
   
@@ -41,7 +41,7 @@ Aktarım güvenliği kullanan <xref:System.ServiceModel.WSHttpBinding> sınıfı
   
 ### <a name="to-determine-how-ports-are-configured"></a>Bağlantı noktalarının nasıl yapılandırıldığını belirleme  
   
-1. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]' de, aşağıdaki örnekte gösterildiği gibi, **sorgu** ve **SSL** anahtarlarını kullanarak geçerli bağlantı noktası yapılandırmasını görüntülemek için Httpcfg. exe aracını kullanın.  
+1. Windows Server 2003 veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]'de, aşağıdaki örnekte gösterildiği gibi, **sorgu** ve **SSL** anahtarlarını kullanarak geçerli bağlantı noktası yapılandırmasını görüntülemek için Httpcfg. exe aracını kullanın.  
   
     ```console
     httpcfg query ssl  
@@ -65,7 +65,7 @@ Aktarım güvenliği kullanan <xref:System.ServiceModel.WSHttpBinding> sınıfı
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>Bir SSL sertifikasını bir bağlantı noktası numarasına bağlamak için  
   
-1. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]' de, sertifikayı bir bağlantı noktası numarasına bağlamak için Güvenli Yuva Katmanı (SSL) deposundaki "küme" modunda HttpCfg. exe aracını kullanın. Araç, aşağıdaki örnekte gösterildiği gibi sertifikayı tanımlamak için parmak izini kullanır.  
+1. Windows Server 2003 veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]'de, sertifikayı bir bağlantı noktası numarasına bağlamak için Güvenli Yuva Katmanı (SSL) deposundaki "küme" modunda HttpCfg. exe aracını kullanın. Araç, aşağıdaki örnekte gösterildiği gibi sertifikayı tanımlamak için parmak izini kullanır.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -89,7 +89,7 @@ Aktarım güvenliği kullanan <xref:System.ServiceModel.WSHttpBinding> sınıfı
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Bir bağlantı noktası numarasına bir SSL sertifikası bağlamak ve istemci sertifikalarını desteklemek için  
   
-1. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]' de, aktarım katmanında X. 509.952 sertifikalarıyla kimlik doğrulayan istemcileri desteklemek için yukarıdaki yordamı izleyin, ancak aşağıdaki örnekte gösterildiği gibi, HttpCfg. exe ' ye ek bir komut satırı parametresi geçirin.  
+1. Windows Server 2003 veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]' de, aktarım katmanında X. 509.440 sertifikalarıyla kimlik doğrulayan istemcileri desteklemek için, önceki yordamı izleyin, ancak aşağıdaki örnekte gösterildiği gibi, HttpCfg. exe ' ye ek bir komut satırı parametresi geçirin.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
@@ -111,7 +111,7 @@ Aktarım güvenliği kullanan <xref:System.ServiceModel.WSHttpBinding> sınıfı
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]içinde, **Delete** ve **SSL** anahtar sözcükleriyle Httpcfg. exe aracını kullanın. Parmak izini belirtmek için `IP`:`port` Number ve **-h** anahtarını belirtmek için **-ı** anahtarını kullanın.  
+2. Windows Server 2003 veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)]'de, **Delete** ve **SSL** anahtar sözcükleriyle Httpcfg. exe aracını kullanın. Parmak izini belirtmek için `IP`:`port` Number ve **-h** anahtarını belirtmek için **-ı** anahtarını kullanın.  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  

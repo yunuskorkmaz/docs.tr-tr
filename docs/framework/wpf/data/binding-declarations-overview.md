@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: bc3a139db80066c9cad5199c7734fe66a8639400
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8fea61c463928ee69ef5dd0dfbf107f89c5384ff
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460035"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544473"
 ---
 # <a name="binding-declarations-overview"></a>Bağlama Bildirimlerine Genel Bakış
 
@@ -110,9 +110,9 @@ Bağlamak istediğiniz kaynak değeri belirtmek için <xref:System.Windows.Data.
 
 - XAML 'de <xref:System.Windows.Data.Binding.Path%2A> ayarlarsanız, XML dil tanımına özel olan belirli karakterler de (XML varlıkları kullanarak) kaçış yapmanız gerekir:
 
-  - "&" Karakterinden kaçınmak için `&` kullanın.
+  - "&" Karakterinden kaçınmak için `&amp;` kullanın.
 
-  - ">" Bitiş etiketini atlamak için `>` kullanın.
+  - ">" Bitiş etiketini atlamak için `&gt;` kullanın.
 
 - Ayrıca, biçimlendirme uzantısı söz dizimini kullanarak bir öznitelikte tüm bağlamayı açıklamanız durumunda, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işaretleme uzantısı ayrıştırıcısına özel olan (ters eğik çizgi \\) karakterler kullanmanız gerekir:
 
@@ -134,7 +134,7 @@ Bildirimde belirtilmemişse varsayılan davranış aşağıdaki gibidir.
 
 - <xref:System.Windows.Data.Binding.ConverterCulture%2A>ayarlanmamışsa, bağlama altyapısı bağlama hedef nesnesinin `Language` özelliğini kullanır. XAML 'de, bu varsayılan olarak "en-US" ya da bir değer açıkça ayarlandıysa, sayfanın kök öğesinden (veya herhangi bir öğeden) değeri devralır.
 
-- Bağlama zaten bir veri bağlamına sahip olduğu sürece (örneğin, bir üst öğeden gelen devralınan veri bağlamı) ve bu bağlam tarafından döndürülen herhangi bir öğe veya koleksiyon, daha fazla yol değişikliği gerekmeden bağlama için uygundur bağlama bildiriminde hiçbir yan tümce bulunamaz: `{Binding}` bu genellikle bağlamanın bir koleksiyon üzerinde çalıştığı veri stili için bir bağlamanın belirtilme yoludur. Daha fazla bilgi için [bağlama kaynaklarına genel bakış](binding-sources-overview.md)konusunun "bağlama kaynağı olarak kullanılan tüm nesneler" bölümüne bakın.
+- Bağlama zaten bir veri bağlamına sahip olduğu sürece (örneğin, bir üst öğeden gelen devralınan veri bağlamı) ve bu bağlam tarafından döndürülen herhangi bir öğe veya koleksiyon, daha fazla yol değişikliği gerektirmeden bağlama için uygun olduğunda, bağlama bildiriminde hiçbir yan tümce bulunamaz: `{Binding}` bu genellikle bağlamanın bir koleksiyon üzerinde çalıştığı, veri stili için bir bağlamanın belirtilme yoludur. Daha fazla bilgi için [bağlama kaynaklarına genel bakış](binding-sources-overview.md)konusunun "bağlama kaynağı olarak kullanılan tüm nesneler" bölümüne bakın.
 
 - Varsayılan <xref:System.Windows.Data.Binding.Mode%2A>, bağlanmakta olan bağımlılık özelliğine bağlı olarak tek yönlü ve iki yönlü farklılık gösterir. Bağlamalarınızın istenen davranışa sahip olduğundan emin olmak için bağlama modunu her zaman açıkça bildirebilirsiniz. Genel olarak, <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> ve <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>gibi kullanıcı tarafından düzenlenebilir denetim özellikleri varsayılan olarak iki yönlü bağlamalara, diğer özelliklerin çoğu tek yönlü bağlamalara varsayılan olarak.
 

@@ -1,13 +1,13 @@
 ---
-title: XML Belgeleri (F#)
+title: XML Belgeleri
 description: Açıklamalardan belge oluşturmak F# için içindeki destek hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: b89ab4117f4dd71126f8e203f4a5271ab3c30021
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0a87915c361fc88f0c05264e1c17278fd656a167
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630826"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344686"
 ---
 # <a name="xml-documentation"></a>XML Belgeleri
 
@@ -25,16 +25,16 @@ XML belgesi açıklamalarını yazmanın iki yolu vardır. Bunlardan biri, XML e
 
 |Etiket sözdizimi|Açıklama|
 |----------|-----------|
-|**cmetni\>/c \<** **\<\>**|*Metnin* kod olduğunu belirtir. Bu etiket, kod için uygun bir yazı tipinde metin göstermek üzere belge üreticileri tarafından kullanılabilir.|
-| **Özet\<metni\>** **/Özet\<\>**|*Metnin* program öğesinin kısa bir açıklaması olduğunu belirtir. Açıklama genellikle bir veya iki cümle olur.|
-| **açıklamalar\<metni\>** **/açıklamalar\<\>**|*Metnin* program öğesiyle ilgili ek bilgileri içerdiğini belirtir.|
-|**\>** **paramName\> = "ad"Açıklama\</param**  **\<**|Bir işlev veya yöntem parametresi için ad ve açıklama belirtir.|
-|**\>** **\> typeparamName\<** = "ad" Açıklama/typeparam  **\<**|Bir tür parametresi için ad ve açıklama belirtir.|
-|**/döndürüyormetnini\> döndürür\<**  **\<\>**|*Metnin* bir işlevin veya yöntemin dönüş değerini açıklamakta olduğunu belirtir.|
-|**\>** **\> Exception cref=\<** "tür" açıklama/özel durum  **\<**|Üretilene özel durum türünü ve bunun altında oluşturulduğu koşulları belirtir.|
-|**\>** **\<bkz.cref\>**  = "başvuru" metni/See  **\<**|Başka bir program öğesinin satır içi bağlantısını belirtir. *Başvuru* , XML belge dosyasında göründüğü şekliyle addır. *Metin* , bağlantıda gösterilen metindir.|
-|**\>**   **\<SeeAlso cref = "** başvuru"/|Ayrıca bkz. başka bir tür için belgelere bağlantı bağlantısı. *Başvuru* , XML belge dosyasında göründüğü şekliyle addır. Ayrıca bkz. bağlantılar genellikle belge sayfasının alt kısmında görünür.|
-| **paragraf\<metni\>** **/para\<\>**|Metnin paragrafını belirtir. Bu, **açıklamalar** etiketinin içindeki metni ayırmak için kullanılır.|
+|**\<c\>** _text_ **\</c\>**|*Metnin* kod olduğunu belirtir. Bu etiket, kod için uygun bir yazı tipinde metin göstermek üzere belge üreticileri tarafından kullanılabilir.|
+|**\<özet\>** _metin_ **\</Summary\>**|*Metnin* program öğesinin kısa bir açıklaması olduğunu belirtir. Açıklama genellikle bir veya iki cümle olur.|
+|**\<açıklamalar\>** _metin_ **\</açıklamalar\>**|*Metnin* program öğesiyle ilgili ek bilgileri içerdiğini belirtir.|
+|**\<param Name = "** _ad_ **"\>** _Description_ **\</param\>**|Bir işlev veya yöntem parametresi için ad ve açıklama belirtir.|
+|**\<typeparam Name = "** _ad_ **"\>** _Description_ **\</typeparam\>**|Bir tür parametresi için ad ve açıklama belirtir.|
+|**\<\>** _metin_ döndürür **\</dönüşler\>**|*Metnin* bir işlevin veya yöntemin dönüş değerini açıklamakta olduğunu belirtir.|
+|**\<Exception cref = "** _tür_ **"\>** _Description_ **\</Exception\>**|Üretilene özel durum türünü ve bunun altında oluşturulduğu koşulları belirtir.|
+|**\<bkz. cref = "** _Reference_ **"\>** _metin_ **\</See\>**|Başka bir program öğesinin satır içi bağlantısını belirtir. *Başvuru* , XML belge dosyasında göründüğü şekliyle addır. *Metin* , bağlantıda gösterilen metindir.|
+|**\<seede cref = "** _başvuru_ **"/\>**|Ayrıca bkz. başka bir tür için belgelere bağlantı bağlantısı. *Başvuru* , XML belge dosyasında göründüğü şekliyle addır. Ayrıca bkz. bağlantılar genellikle belge sayfasının alt kısmında görünür.|
+|**\<paragraf\>** _metin_ **\</para\>**|Metnin paragrafını belirtir. Bu, **açıklamalar** etiketinin içindeki metni ayırmak için kullanılır.|
 
 ## <a name="example"></a>Örnek
 

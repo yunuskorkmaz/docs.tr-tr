@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: bir dizedeki karakterleri sorgulama (LINQ) (C#)'
+title: Dizedeki karakterleri sorgulama (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: bc72c4370ff408a60f48aa020a16dae7f48f702a
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: d85e488a38a6167505732103b4c540cade6ea9bc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140967"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345675"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Nasıl yapılır: bir dizedeki karakterleri sorgulama (LINQ) (C#)
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Dizedeki karakterleri sorgulama (LINQ) (C#)
 <xref:System.String> sınıfı genel <xref:System.Collections.Generic.IEnumerable%601> arabirimini gerçekleştirdiğinden, herhangi bir dize bir karakter dizisi olarak sorgulanabilir. Ancak bu, LINQ 'in yaygın bir kullanımı değildir. Karmaşık kalıp eşleştirme işlemleri için <xref:System.Text.RegularExpressions.Regex> sınıfını kullanın.  
   
 ## <a name="example"></a>Örnek  
@@ -54,7 +54,7 @@ class QueryAString
 */  
 ```  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
  System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -1,13 +1,13 @@
 ---
-title: Bir klasördeki dosyaların içeriğini sorgulama (LINQ)
+title: Bir klasördeki dosyaların içeriklerini sorgulama (LINQ)
 ms.date: 07/20/2015
 ms.assetid: edacbcd3-f3e4-4429-a8be-28a58dc0dd70
-ms.openlocfilehash: 02ffa398c495ca5af77685d62299c59cfc3b9d9c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3ad5fd6c893d590d46be67e6320ac5b915829f4b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347607"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346042"
 ---
 # <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>Bir klasördeki dosyaların içeriğini sorgulama (LINQ) (Visual Basic)
 
@@ -73,9 +73,9 @@ Module Module1
 End Module
 ```
 
-## <a name="compiling-the-code"></a>Kodu derleme
+## <a name="compile-the-code"></a>Kod derleme
 
-VB.NET konsol uygulaması projesi oluşturun, kod örneğini kopyalayıp yapıştırın ve proje özelliklerindeki başlangıç nesnesi değerini ayarlayın.
+Visual Basic konsol uygulaması projesi oluşturun, kod örneğini kopyalayıp yapıştırın ve proje özelliklerindeki başlangıç nesnesi değerini ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

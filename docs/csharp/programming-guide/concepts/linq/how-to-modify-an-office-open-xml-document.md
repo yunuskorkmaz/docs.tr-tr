@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Office Open XML belgesini değiştirme (C#)'
+title: Office Open XML belgesini değiştirme (C#)
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: cb80a450de104760f64c84e11829f6609d8ee177
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 620530b14513356dc9bb5d942e8db7691a03880d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253535"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345852"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-c"></a>Nasıl yapılır: Office Open XML belgesini değiştirme (C#)
+# <a name="how-to-modify-an-office-open-xml-document-c"></a>Office Open XML belgesini değiştirme (C#)
 Bu konu, bir Office Open XML belgesi açan, değiştiren ve kaydeden bir örnek gösterir.  
   
  Office Open XML hakkında daha fazla bilgi için bkz. [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) ve [www.ericwhite.com](http://ericwhite.com/).  
@@ -17,7 +17,7 @@ Bu konu, bir Office Open XML belgesi açan, değiştiren ve kaydeden bir örnek 
 ## <a name="example"></a>Örnek  
  Bu örnek belgedeki ilk paragraf öğesini bulur. Paragraftan metni alır ve ardından paragraftaki tüm metin çalıştırmalarını siler. Büyük harfe dönüştürülmüş ilk paragraf metniyle oluşan yeni bir metin çalıştırması oluşturur. Daha sonra değiştirilmiş XML 'i Open XML paketine serileştirir ve kapatır.  
   
- Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> Ad alanındaki türleri kullanır.  
+ Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -139,7 +139,7 @@ class Program
 }  
 ```  
   
- Bu programı çalıştırdıktan `SampleDoc.docx` sonra açarsanız, bu programın belgedeki ilk paragrafı büyük harflere dönüştürdüğünü görebilirsiniz.  
+ Bu programı çalıştırdıktan sonra `SampleDoc.docx` açarsanız, bu programın belgedeki ilk paragrafı büyük harflere dönüştürdüğünü görebilirsiniz.  
   
  [Kaynak Office Open XML belgesi (C#) oluşturma](./creating-the-source-office-open-xml-document.md)bölümünde açıklanan örnek Open XML belgesiyle birlikte çalıştırıldığında, bu örnek aşağıdaki çıktıyı üretir:  
   

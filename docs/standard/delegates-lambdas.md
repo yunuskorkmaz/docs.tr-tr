@@ -1,21 +1,21 @@
 ---
 title: Temsilciler ve lambda ifadeleri
-description: Nasıl doğrudan veya başka bir yönteme ve adlı bir özel yöntem imzası belirtmek Temsilciler, tür tanımlama hakkında bilgi edinin.
+description: Temsilcilerin, doğrudan çağrılabilen veya başka bir yönteme geçirilebilen ya da çağrılan belirli bir yöntem imzasını belirten bir türü nasıl tanımladığını öğrenin.
 author: richlander
 ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: e392f6b2e57bebf1ab916bc6142aebbc8f341db2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0abcc73e31eab89c422513acf778bc8bd092e788
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615311"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345546"
 ---
 # <a name="delegates-and-lambdas"></a>Temsilciler ve lambda ifadeleri
 
-Temsilciler belirli yöntem imzası belirtmek tanımlayan bir tür. Bir yöntem (statik veya örnek) Bu imza Bu türden bir değişkene atanabilir sonra doğrudan (uygun bağımsız değişkenlerle) olarak adlandırılan veya bağımsız değişken olarak kendisini başka bir yönteme geçirilen ve ardından adlı karşılar. Aşağıdaki örnekte, temsilci kullanımını gösterir.
+Temsilciler, belirli bir yöntem imzasını belirten bir tür tanımlar. Bu imzayı karşılayan bir Yöntem (statik veya örnek), bu tür bir değişkene atanabilir, daha sonra doğrudan (uygun bağımsız değişkenlerle) veya bağımsız değişken olarak başka bir yönteme geçirilir ve ardından çağırılır. Aşağıdaki örnek, temsilci kullanımını gösterir.
 
 ```csharp
 using System;
@@ -39,18 +39,18 @@ public class Program
 }
 ```
 
-* `public delegate string Reverse(string s);` Satırı bu durumda bir temsilci türü belirli imzası, bir dize parametresi alan ve sonra bir dize parametresi döndüren bir yöntem oluşturur.
-* `static string ReverseString(string s)` Tanımlı temsilci türüyle tam aynı imzaya sahip yöntemi temsilci uygular.
-* `Reverse rev = ReverseString;` Satır gösterir bir yöntemi karşılık gelen temsilci türünün bir değişkene atayabilirsiniz.
-* `Console.WriteLine(rev("a string"));` Satırı bir temsilci türünde bir değişken temsilci çağırmak için nasıl kullanılacağını gösterir.
+* `public delegate string Reverse(string s);` satırı belirli bir imzanın temsilci türünü oluşturur, bu durumda bir dize parametresi alan ve sonra bir dize parametresi döndüren bir yöntem.
+* Tanımlı temsilci türüyle tam olarak aynı imzaya sahip `static string ReverseString(string s)` yöntemi, temsilciyi uygular.
+* `Reverse rev = ReverseString;` satırı, karşılık gelen temsilci türünün bir değişkenine bir yöntem atayacağınızı gösterir.
+* `Console.WriteLine(rev("a string"));` satırı, temsilciyi çağırmak için bir temsilci türü değişkeninin nasıl kullanılacağını gösterir.
 
-Geliştirme işlemi kolaylaştırmak için .NET programcıları yeniden ve yeni türler oluşturmak için olmaması temsilci türleri kümesi içerir. Bunlar `Func<>`, `Action<>` ve `Predicate<>`, ve bunlar gerek kalmadan .NET API'lerini çeşitli yerlerde yeni temsilci türleri tanımlamak için kullanılabilir. Elbette, kullanılacak düşünülen işlemleriyle yapmak için çoğunlukla sahip imzaları içindeki göreceğiniz gibi üç arasında bazı farklar vardır:
+Geliştirme sürecini kolaylaştırmak için, .NET, programcıların yeniden kullanılabilen ve yeni türler oluşturmak zorunda olmayan bir temsilci türleri kümesi içerir. Bunlar `Func<>`, `Action<>` ve `Predicate<>`ve yeni temsilci türleri tanımlamaya gerek kalmadan .NET API 'Lerinde çeşitli yerlerde kullanılabilirler. Kuşkusuz, her ikisi arasında, genellikle kullanılması amaçlanan gibi olması gereken üç farklı bir farklılık vardır:
 
-* `Action<>` temsilcinin bağımsız değişkenleri kullanarak bir eylem gerçekleştirmek için ihtiyaç olduğunda kullanılır.
-* `Func<>` genellikle bir dönüştürme taraftan, varsa, kullanılan diğer bir deyişle, temsilcinin bağımsız değişkenleri farklı bir sonuç biçimine dönüştürmeniz gerekir. Tahminler, bu birinci bir örnektir.
-* `Predicate<>` bağımsız değişken, temsilci koşulu karşılayıp karşılamadığını belirlemek gerektiğinde kullanılır. Olarak da yazılabilir bir `Func<T, bool>`.
+* `Action<>`, temsilcinin bağımsız değişkenlerini kullanarak bir eylem gerçekleştirmeniz gerektiğinde kullanılır.
+* `Func<>`, genellikle bir dönüşüme sahip olduğunuzda kullanılır, diğer bir deyişle, temsilcinin bağımsız değişkenlerini farklı bir sonuca dönüştürmeniz gerekir. Tahminler bunun ana örneğidir.
+* `Predicate<>`, bağımsız değişkenin temsilci koşulunu karşılayıp karşılamadığını belirlemeniz gerektiğinde kullanılır. Ayrıca, bir `Func<T, bool>`olarak yazılabilir.
 
-Biz artık yukarıdaki örneğimizde alabilir ve kullanarak yeniden `Func<>` temsilci yerine özel bir tür. Program, tam olarak aynı çalışmaya devam edecek.
+Şimdi örneğimizi alıp özel bir tür yerine `Func<>` temsilcisini kullanarak yeniden yazabilirsiniz. Program tamamen aynı çalışmaya devam edecektir.
 
 ```csharp
 using System;
@@ -72,9 +72,9 @@ public class Program
 }
 ```
 
-Bu basit örnekte, olması dışında tanımlanmış bir yöntem `Main` yöntemi biraz gereksiz görünüyor. .NET Framework 2.0 sunulan kavramı, bu nedenle olan **anonim Temsilciler**. Destek ile herhangi bir ek türü veya yöntemini belirtmek zorunda kalmadan "satır içi" temsilci oluşturmak kullanabilirsiniz. Yalnızca satır gerek duyduğunuz, temsilci tanımı.
+Bu basit örnek için `Main` yöntemi dışında tanımlanan bir yöntemin olması biraz daha fazla görünüyor. Bunun nedeni 2,0 .NET Framework **anonim temsilciler**kavramını sunmuştur. Desteğiyle, ek bir tür veya yöntem belirtmek zorunda kalmadan "satır içi" Temsilciler oluşturabilirsiniz. İhtiyaç duyduğunuz temsilcinin tanımını yalnızca satır içi olarak alırsınız.
 
-Örneğin, yedekleme geçin ve yalnızca çift sayıların bir listeyi filtreleyin ve ardından bunları konsola yazdırır bizim anonim temsilci kullanmak için kullanacağız.
+Bir örnek için, bu anahtarı değiştirmek ve anonim temsilcimizi kullanarak tek hatta sayıların bir listesini filtreleyeceğiz ve ardından konsola yazdıracağız.
 
 ```csharp
 using System;
@@ -106,13 +106,13 @@ public class Program
 }
 ```
 
-Gördüğünüz gibi temsilci yalnızca bir dizi ifadeleri, herhangi bir temsilci gövdesidir. Ancak bunun yerine ayrı bir tanımı olan, onu tanıttık _geçici_ bizim çağrıda <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> yöntemi.
+Gördüğünüz gibi, temsilcinin gövdesi, diğer tüm temsilciler gibi yalnızca bir ifade kümesidir. Ancak, ayrı bir tanım olmak yerine, <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> metoduna yapılan Çağrımızda BT _geçici_ olarak tanıtıldık.
 
-Ancak, bile bu yaklaşımda, yine de biz hemen oluşturabilecek kadar kodu yok. Burada **lambda ifadeleri** oyuna gelir.
+Ancak, bu yaklaşımda bile, fırladığımız çok fazla kod vardır. Bu, **lambda ifadelerinin** oynatma içine geldiği yerdir.
 
-Lambda ifadeleri veya kısaca, yalnızca "lambdalar" de kullanıma sunulmuştur ilk C# 3.0, temel yapı taşlarını, dil tümleşik sorgu (LINQ) biri olarak. Temsilcileri kullanma için yalnızca bir daha kullanışlı söz dizimi değildirler. Bir imza ve bir yöntem gövdesi bildirmek, ancak bir temsilciye atanmış oldukları sürece, kendi, biçimsel bir kimlik yok. Temsilciler, bunlar doğrudan sol tarafı olay kaydı veya çeşitli LINQ yan tümceleri ve yöntemler olarak atanabilir.
+Lambda ifadeleri veya Short için yalnızca "Lambdalar", dil ile tümleşik sorgu C# (LINQ) temel yapı taşlarından biri olarak 3,0 ' de ilk sunulmuştur. Temsilciler kullanmanın yalnızca daha uygun bir sözdizimi vardır. Bir temsilciye atanmadıkları takdirde, bir imza ve Yöntem gövdesi bildirir, ancak kendi biçimsel kimliği yoktur. Temsilcilerden farklı olarak, doğrudan olay kaydının sol tarafı olarak veya çeşitli LINQ yan tümceleri ve yöntemleri olarak atanabilir.
 
-Bir lambda ifadesi bir temsilci belirtmenin başka bir yol olduğundan, biz bir anonim temsilci yerine bir lambda ifadesi kullanmak için yukarıdaki örnek yeniden mümkün olması gerekir.
+Lambda ifadesi bir temsilci belirtmenin yalnızca başka bir yolu olduğundan, yukarıdaki örneği anonim bir temsilci yerine bir lambda ifadesi kullanacak şekilde yeniden yazamayacak.
 
 ```csharp
 using System;
@@ -139,9 +139,9 @@ public class Program
 }
 ```
 
-Önceki örnekte kullanılan lambda ifadesidir `i => i % 2 == 0`. Yeniden yalnızca olduğu bir **çok** ne olacağını perde anonim temsilci ile neler için benzer şekilde, temsilciler kullanılarak için kullanışlı bir söz dizimi.
+Yukarıdaki örnekte, kullanılan lambda ifadesi `i => i % 2 == 0`. Bu, temsilcileri kullanmak için **oldukça** kullanışlı bir sözdizimidir, bu nedenle, kapsamaları altında olduğu gibi, anonim temsilciyle ne gibi bir durumla benzerdir.
 
-Yine, lambda ifadeleri, aşağıdaki kod parçacığında gösterildiği gibi herhangi bir sorun olmadan bir olay işleyicisi olarak kullanılabilir anlamına gelir yalnızca temsilcileri.
+Daha sonra Lambdalar yalnızca temsilcidir. Bu, aşağıdaki kod parçacığında gösterildiği gibi herhangi bir sorun olmadan bir olay işleyicisi olarak kullanılabilecekleri anlamına gelir.
 
 ```csharp
 public MainWindow()
@@ -155,9 +155,9 @@ public MainWindow()
 }
 ```
 
-`+=` İşleci bu bağlamda abone olmak için kullanılan bir [olay](../../docs/csharp/language-reference/keywords/event.md). Daha fazla bilgi için [nasıl yapılır: Abone olma ve aboneliği olaylardan](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+Bu bağlamdaki `+=` işleci bir [olaya](../../docs/csharp/language-reference/keywords/event.md)abone olmak için kullanılır. Daha fazla bilgi için bkz. [olaylara abone olma ve olayları kaldırma](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
-## <a name="further-reading-and-resources"></a>Daha fazla bilgi ve kaynaklar
+## <a name="further-reading-and-resources"></a>Daha fazla okuma ve kaynak
 
 * [Temsilciler](../../docs/csharp/programming-guide/delegates/index.md)
 * [Anonim İşlevler](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)

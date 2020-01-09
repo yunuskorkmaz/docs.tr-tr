@@ -1,23 +1,23 @@
 ---
-title: .NET Core 3,1 ' deki yenilikler
+title: ​.NET Core 3.1’deki yenilikler
 description: .NET Core 3,1 ' de bulunan yeni özellikler hakkında bilgi edinin.
 dev_langs:
 - csharp
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 08ae824b79ba6a1ff5a92a0b4306eabe5ccadfd2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a9f47c2909375251460b45792822e491d56fb242
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838325"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342857"
 ---
-# <a name="whats-new-in-net-core-31"></a>.NET Core 3,1 ' deki yenilikler
+# <a name="whats-new-in-net-core-31"></a>​.NET Core 3.1’deki yenilikler
 
 Bu makalede .NET Core 3,1 ' deki yenilikler açıklanır. Bu sürüm, .NET Core 3,0 ' de küçük, küçük, ancak önemli düzeltmeleri içeren küçük iyileştirmeler içerir. .NET Core 3,1 hakkındaki en önemli özellik, [uzun süreli destek (LTS)](#long-term-support) sürümüdür.
 
-Visual Studio 2019 kullanıyorsanız, .NET Core 3,1 projeleriyle çalışmak için [Visual studio 2019 16,4](https://visualstudio.microsoft.com/downloads/) ' e güncelleştirmeniz gerekir. Visual Studio 'daki yenilikler hakkında daha fazla bilgi için [Visual Studio bloguna](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/)bakın.
+Visual Studio 2019 kullanıyorsanız, .NET Core 3,1 projeleriyle çalışmak için [Visual studio 2019 sürüm 16,4](https://visualstudio.microsoft.com/downloads/) ' e güncelleştirmeniz gerekir. Visual Studio 'daki yenilikler hakkında daha fazla bilgi için [Visual Studio bloguna](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/)bakın.
 
 Mac için Visual Studio Ayrıca, Mac için Visual Studio 8,4 Önizleme kanalında .NET Core 3,1 'i de destekler. .NET Core 3,1 ' i kullanmak için Önizleme kanalını kabul etmeniz gerekir.
 

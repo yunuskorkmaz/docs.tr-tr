@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 04e0e3c613b194ac85241d50d3bc5fd5dc0b6e54
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 8198359e2c54c4ed098703fbcc070f7469b3362a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977323"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344648"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json üzerinde DateTime ve DateTimeOffset desteği
 
@@ -74,7 +74,7 @@ Seri hale getiricinin özel ayrıştırma veya biçimlendirme gerçekleştirmesi
 
 Giriş <xref:System.DateTime> veya <xref:System.DateTimeOffset> metin temsillerinizin biçimlerini belirleyemiyoruz, dönüştürücünün okuma mantığınızdaki `DateTime(Offset).Parse` yöntemini kullanabilirsiniz. Bu, kullanmanıza olanak sağlar. ISO 8601 dizeleri ve genişletilmiş ISO 8601-1:2019 profiliyle uyumlu olmayan ISO 8601 biçimleri dahil olmak üzere çeşitli <xref:System.DateTime> ve <xref:System.DateTimeOffset> metin biçimlerini ayrıştırmak için NET kapsamlı destek. Bu yaklaşım, seri hale getiricinin yerel uygulamasını kullanmaktan önemli ölçüde daha az performansız.
 
-Serileştirme için, dönüştürücü yazma mantığınızdaki `DateTime(Offset).ToString` yöntemini kullanabilirsiniz. Bu, herhangi bir [Standart Tarih ve saat biçiminden](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings)ve [özel tarih ve saat biçimlerinden](https://docs.microsoft.com/dotnet/standard/base-types/custom-date-and-time-format-strings)birini kullanarak <xref:System.DateTime> ve <xref:System.DateTimeOffset> değerleri yazmanızı sağlar.
+Serileştirme için, dönüştürücü yazma mantığınızdaki `DateTime(Offset).ToString` yöntemini kullanabilirsiniz. Bu, herhangi bir [Standart Tarih ve saat biçiminden](../base-types/standard-date-and-time-format-strings.md)ve [özel tarih ve saat biçimlerinden](../base-types/custom-date-and-time-format-strings.md)birini kullanarak <xref:System.DateTime> ve <xref:System.DateTimeOffset> değerleri yazmanızı sağlar.
 Bu, serileştiricinin yerel uygulamasını kullanmaktan çok önemli ölçüde daha düşüktür.
 
 [!code-csharp[example-showing-datetime-parse](~/samples/snippets/standard/datetime/json/csharp/datetime-converter-examples/example1/Program.cs)]
@@ -85,9 +85,9 @@ Parametresi, çok biçimli durumları işlemek için ve çok yönlü bir şekild
 
 #### <a name="using-xrefsystembufferstextutf8parser-and-xrefsystembufferstextutf8formatter"></a><xref:System.Buffers.Text.Utf8Parser> ve <xref:System.Buffers.Text.Utf8Formatter> kullanma
 
-Giriş <xref:System.DateTime> veya <xref:System.DateTimeOffset> metin TEMSİLLERİNİZ "R", "l", "O" veya "G" [Standart Tarih ve saat biçimi dizelerinden](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings)biriyle uyumluysa veya bu biçimlerden birine göre yazmak istiyorsanız dönüştürücü MANTıĞıNıZDAKI hızlı UTF-8 tabanlı ayrıştırma ve biçimlendirme yöntemlerini kullanabilirsiniz. Bu, `DateTime(Offset).Parse` ve `DateTime(Offset).ToString`kullanmaktan çok daha hızlıdır.
+Giriş <xref:System.DateTime> veya <xref:System.DateTimeOffset> metin TEMSİLLERİNİZ "R", "l", "O" veya "G" [Standart Tarih ve saat biçimi dizelerinden](../base-types/standard-date-and-time-format-strings.md)biriyle uyumluysa veya bu biçimlerden birine göre yazmak istiyorsanız dönüştürücü MANTıĞıNıZDAKI hızlı UTF-8 tabanlı ayrıştırma ve biçimlendirme yöntemlerini kullanabilirsiniz. Bu, `DateTime(Offset).Parse` ve `DateTime(Offset).ToString`kullanmaktan çok daha hızlıdır.
 
-Bu örnek [, değerleri "R" standart biçimine](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings#the-rfc1123-r-r-format-specifier)göre seri hale getirip <xref:System.DateTime> serileştirtiren özel bir dönüştürücüyü gösterir:
+Bu örnek [, değerleri "R" standart biçimine](../base-types/standard-date-and-time-format-strings.md#the-rfc1123-r-r-format-specifier)göre seri hale getirip <xref:System.DateTime> serileştirtiren özel bir dönüştürücüyü gösterir:
 
 [!code-csharp[example-showing-utf8-parser-and-formatter](~/samples/snippets/standard/datetime/json/csharp/datetime-converter-examples/example2/Program.cs)]
 
@@ -103,7 +103,7 @@ Bu örnek, <xref:System.Text.Json.Utf8JsonReader.TryGetDateTime(System.DateTime@
 
 ### <a name="when-writing-with-xrefsystemtextjsonutf8jsonwriter"></a><xref:System.Text.Json.Utf8JsonWriter> yazma sırasında
 
-<xref:System.Text.Json.Utf8JsonWriter>ile özel bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> metin temsili yazmak isterseniz, özel gösteriminizi <xref:System.String>, `ReadOnlySpan<Byte>`, `ReadOnlySpan<Char>`veya <xref:System.Text.Json.JsonEncodedText>olarak biçimlendirebilir, ardından bunu karşılık gelen [Utf8JsonWriter. WriteStringValue](https://docs.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter.writestringvalue?view=netcore-3.0) veya [Utf8JsonWriter. WriteString](https://docs.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter.writestring?view=netcore-3.0) metoduna geçirebilirsiniz.
+<xref:System.Text.Json.Utf8JsonWriter>ile özel bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> metin temsili yazmak isterseniz, özel gösteriminizi <xref:System.String>, `ReadOnlySpan<Byte>`, `ReadOnlySpan<Char>`veya <xref:System.Text.Json.JsonEncodedText>olarak biçimlendirebilir, ardından bunu karşılık gelen <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue%2A?displayProperty=nameWithType> veya <xref:System.Text.Json.Utf8JsonWriter.WriteString%2A?displayProperty=nameWithType> yöntemine geçirebilirsiniz.
 
 Aşağıdaki örnek, <xref:System.DateTime.ToString(System.String,System.IFormatProvider)>bir özel <xref:System.DateTime> biçiminin nasıl oluşturulabileceğini gösterir ve <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue(System.String)> yöntemiyle yazılır:
 
@@ -126,7 +126,7 @@ Aşağıdaki örnek, bir özel <xref:System.DateTimeOffset> metin gösteriminin 
 | Bileşen       | Biçimi                      | Açıklama                                                                     |
 |-----------------|-----------------------------|---------------------------------------------------------------------------------|
 | Yıl            | "yyyy"                      | 0001-9999                                                                       |
-| Başından           | "AA"                        | 01-12                                                                           |
+| Ay           | "AA"                        | 01-12                                                                           |
 | Gün             | "dd"                        | 01-28, 01-29, 01-30, 01-31, ay/yıl temelinde                                  |
 | Saat            | "HH"                        | 00-23                                                                           |
 | Dakika          | "mm"                        | 00-59                                                                           |
@@ -149,7 +149,7 @@ Aşağıdaki ayrıntı düzeyi, ayrıştırma için tanımlanmıştır:
     1. "yyyy'-'MM'-'dd'T'HH ': ' mm"
 
 3. "' Tam tarih ' 'T ' ' kısmi zaman '"
-    1. "yyyy'-'MM'-'dd'T'HH ': ' mm ': ' ss" ([sıralanabilir ("s") Biçim belirleyicisi](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings#the-sortable-s-format-specifier))
+    1. "yyyy'-'MM'-'dd'T'HH ': ' mm ': ' ss" ([sıralanabilir ("s") Biçim belirleyicisi](../base-types/standard-date-and-time-format-strings.md#the-sortable-s-format-specifier))
     2. "yyyy'-'MM'-'dd'T'HH ': ' mm ': ' ss '. ' FFFFFFF
 
 4. "' Tam tarih ' 'T ' ' saat saat ' ': ' ' dakika ' ' zaman boşluğu '"
@@ -174,7 +174,7 @@ Artık saniyeler desteklenmez.
 Biçimlendirme için aşağıdaki ayrıntı düzeyi düzeyleri tanımlanmıştır:
 
 1. "' Tam tarih ' 'T ' ' kısmi zaman '"
-    1. "yyyy'-'MM'-'dd'T'HH ': ' mm ': ' ss" ([sıralanabilir ("s") Biçim belirleyicisi](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings#the-sortable-s-format-specifier))
+    1. "yyyy'-'MM'-'dd'T'HH ': ' mm ': ' ss" ([sıralanabilir ("s") Biçim belirleyicisi](../base-types/standard-date-and-time-format-strings.md#the-sortable-s-format-specifier))
 
         Kesirli saniye olmadan ve hiçbir konum bilgisi olmadan bir <xref:System.DateTime> biçimlendirmek için kullanılır.
 

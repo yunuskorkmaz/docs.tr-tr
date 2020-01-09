@@ -2,17 +2,17 @@
 title: DotNet New için bir şablon paketi oluşturma
 description: DotNet yeni komut için bir şablon paketi oluşturacak bir csproj dosyası oluşturmayı öğrenin.
 author: thraka
-ms.date: 06/25/2019
+ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 520af5022e061236c0cfe80379679d9c7b5896b2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117409"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340168"
 ---
-# <a name="tutorial-create-a-template-pack"></a>Öğretici: Şablon paketi oluşturma
+# <a name="tutorial-create-a-template-pack"></a>Öğretici: şablon paketi oluşturma
 
 .NET Core ile projeler, dosyalar, hatta kaynaklar üreten şablonlar oluşturabilir ve dağıtabilirsiniz. Bu öğretici, `dotnet new` komutuyla kullanılmak üzere şablonlar oluşturmayı, yüklemeyi ve kaldırmayı öğretir.
 
@@ -20,28 +20,28 @@ Serinin bu bölümünde şunları nasıl yapacağınızı öğreneceksiniz:
 
 > [!div class="checklist"]
 >
-> * Bir şablon \*paketi oluşturmak için bir. csproj projesi oluşturma
+> * Bir şablon paketi derlemek için \*. csproj projesi oluşturma
 > * Paketleme için proje dosyasını yapılandırma
 > * NuGet paket dosyasından şablon yükler
 > * Bir şablonu paket KIMLIĞIYLE kaldır
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 * Bu öğretici serisinin [1](cli-templates-create-item-template.md) . ve [2. bölümünü](cli-templates-create-project-template.md) doldurun.
 
-  Bu öğretici, Bu öğreticinin ilk iki bölümünde oluşturulan iki şablonu kullanır. Şablonu, bir klasör olarak _working\templates\\_  klasörüne kopyaladığınız sürece, farklı bir şablon kullanabilirsiniz.
+  Bu öğretici, Bu öğreticinin ilk iki bölümünde oluşturulan iki şablonu kullanır. Şablonu, klasör olarak _working\templates\\_ klasörüne kopyaladığınız sürece farklı bir şablon kullanabilirsiniz.
 
-* Bir Terminal açın ve _working\templates\\_  klasörüne gidin.
+* Bir Terminal açın ve _çalışma\\_ klasörüne gidin.
 
 ## <a name="create-a-template-pack-project"></a>Şablon paketi projesi oluşturma
 
 Bir şablon paketi, bir dosyada paketlenmiş bir veya daha fazla şablondur. Bir paketi yüklediğinizde veya kaldırdığınızda, paketin içerdiği tüm şablonlar sırasıyla eklenir veya kaldırılır. Bu öğretici serisinin önceki kısımları yalnızca bireysel şablonlarla birlikte çalışmıştır. Paketlenmiş olmayan bir şablonu paylaşmak için, şablon klasörünü kopyalamanız ve bu klasör aracılığıyla kurmanız gerekir. Bir şablon paketi içinde birden fazla şablon olabileceğinden ve tek bir dosya olduğundan, paylaşma daha kolay olur.
 
-Şablon paketleri, bir NuGet paketi ( _. nupkg_) dosyası tarafından temsil edilir. Tüm NuGet paketleri gibi, şablon paketini bir NuGet akışına de yükleyebilirsiniz. Komut `dotnet new -i` , bir NuGet paketi akışından şablon paketi yüklemeyi destekler. Ayrıca, bir _. nupkg_ dosyasından doğrudan bir şablon paketi de yükleyebilirsiniz.
+Şablon paketleri, bir NuGet paketi ( _. nupkg_) dosyası tarafından temsil edilir. Tüm NuGet paketleri gibi, şablon paketini bir NuGet akışına de yükleyebilirsiniz. `dotnet new -i` komutu, bir NuGet paketi akışından şablon paketi yüklemeyi destekler. Ayrıca, bir _. nupkg_ dosyasından doğrudan bir şablon paketi de yükleyebilirsiniz.
 
 Normalde, kod derlemek C# ve bir ikili oluşturmak için bir proje dosyası kullanırsınız. Ancak, proje bir şablon paketi oluşturmak için de kullanılabilir. _. Csproj_ayarlarını değiştirerek, bu kodun herhangi bir kodu derlemesine engel olabilir ve bunun yerine şablonlarınızın tüm varlıklarını kaynak olarak dahil edebilirsiniz. Bu proje oluşturulduğunda, bir şablon paketi NuGet paketi oluşturur.
 
-Oluşturacağınız paket, daha önce oluşturulan [öğe şablonunu](cli-templates-create-item-template.md) ve [paket şablonunu](cli-templates-create-project-template.md) içerir. İki şablonu _working\templates\\_  klasörüne grupladığımızda, _. csproj_ dosyası için _çalışma_ klasörünü kullanabiliriz.
+Oluşturacağınız paket, daha önce oluşturulan [öğe şablonunu](cli-templates-create-item-template.md) ve [paket şablonunu](cli-templates-create-project-template.md) içerir. İki şablonu _working\templates\\_ klasörüne grupladığımızda, _. csproj_ dosyası için _çalışma_ klasörünü kullanabiliriz.
 
 Terminalinizde _çalışma_ klasörüne gidin. Yeni bir proje oluşturun ve adı `templatepack` ve çıkış klasörünü geçerli klasöre ayarlayın.
 
@@ -49,7 +49,7 @@ Terminalinizde _çalışma_ klasörüne gidin. Yeni bir proje oluşturun ve adı
 dotnet new console -n templatepack -o .
 ```
 
-Parametresi. _csproj_ dosya adını `-o` _templatepack. csproj_ olarak ayarlar ve parametreler geçerli dizinde dosyaları oluşturur. `-n` Aşağıdaki çıktıya benzer bir sonuç görmeniz gerekir.
+`-n` parametresi _. csproj_ dosya adını _templatepack. csproj_ olarak ayarlar ve `-o` parametreleri geçerli dizindeki dosyaları oluşturur. Aşağıdaki çıktıya benzer bir sonuç görmeniz gerekir.
 
 ```console
 C:\working> dotnet new console -n templatepack -o .
@@ -91,13 +91,13 @@ Ardından, en sevdiğiniz düzenleyicide _templatepack. csproj_ dosyasını aç�
 </Project>
 ```
 
-Yukarıdaki XML 'deki ayarlar üç gruba bölünmüştür. `<PropertyGroup>` İlk grup, bir NuGet paketi için gereken özelliklerle ilgilidir. Bu üç `<Package` ayar, bir NuGet akışında paketinizi tanımlamak için NuGet paket özellikleriyle birlikte olmalıdır. Özellikle değer `<PacakgeId>` , şablon paketini dizin yolu yerine tek bir adla kaldırmak için kullanılır. Ayrıca, bir NuGet akışından şablon paketini yüklemek için de kullanılabilir. `<Title>` Ve`<Tags>` gibi geri kalan ayarlar, NuGet akışında görüntülenecek meta verilerle birlikte olmalıdır. NuGet ayarları hakkında daha fazla bilgi için bkz. [NuGet ve MSBuild özellikleri](/nuget/reference/msbuild-targets).
+Yukarıdaki XML 'deki `<PropertyGroup>` ayarları üç gruba bölünmüştür. İlk grup, bir NuGet paketi için gereken özelliklerle ilgilidir. Üç `<Package` ayarlarının, bir NuGet akışında paketinizi tanımlamak için NuGet paket özellikleriyle olması gerekir. Özellikle `<PacakgeId>` değeri, şablon paketini dizin yolu yerine tek bir adla kaldırmak için kullanılır. Ayrıca, bir NuGet akışından şablon paketini yüklemek için de kullanılabilir. `<Title>` ve `<Tags>` gibi kalan ayarların, NuGet akışında görüntülenecek meta verilerle olması gerekir. NuGet ayarları hakkında daha fazla bilgi için bkz. [NuGet ve MSBuild özellikleri](/nuget/reference/msbuild-targets).
 
-Projeyi derlemek ve paketetmek için paket komutunu çalıştırdığınızda MSBuild 'in düzgün çalışması için ayarayarlanmalıdır.`<TargetFramework>`
+Projeyi derlemek ve paketetmek için paket komutunu çalıştırdığınızda MSBuild 'in düzgün çalışması için `<TargetFramework>` ayar ayarlanmalıdır.
 
 Son üç ayar, projeyi, oluşturulduğu zaman NuGet paketindeki uygun klasöre dahil etmek için doğru şekilde yapılandırmaya sahip olmalıdır.
 
-İki `<ItemGroup>` ayar içerir. İlk olarak, `<Content>` ayar _Şablonlar_ klasöründeki her şeyi içerik olarak içerir. Ayrıca, derlenmiş kodların (şablonlarınızı test etmeniz ve derlediğiniz) dahil edilmesini engellemek için herhangi bir _bin_ klasörünü veya _obj_ klasörünü dışarıda bırakmak üzere ayarlanır. İkincisi, `<Compile>` ayar tüm kod dosyalarını nerede bulunduklarında bağımsız olarak derlemeden dışlar. Bu ayar, şablon paketi oluşturmak için kullanılan projenin _Şablonlar_ klasörü hiyerarşisindeki kodu derlemeye çalışmamasını engeller.
+`<ItemGroup>` iki ayar içerir. İlk olarak, `<Content>` ayarı _Şablonlar_ klasöründeki her şeyi içerik olarak içerir. Ayrıca, derlenmiş kodların (şablonlarınızı test etmeniz ve derlediğiniz) dahil edilmesini engellemek için herhangi bir _bin_ klasörünü veya _obj_ klasörünü dışarıda bırakmak üzere ayarlanır. İkincisi, `<Compile>` ayarı, tüm kod dosyalarını nerede bulunduklarında bağımsız olarak derlemeden dışlar. Bu ayar, şablon paketi oluşturmak için kullanılan projenin _Şablonlar_ klasörü hiyerarşisindeki kodu derlemeye çalışmamasını engeller.
 
 ## <a name="build-and-install"></a>Oluşturma ve yüklemeyi
 
@@ -140,11 +140,11 @@ Example templates: async project                  consoleasync          [C#]    
 Class library                                     classlib              [C#], F#, VB      Common/Library
 ```
 
-NuGet paketini bir NuGet `dotnet new -i PACKAGEID` akışına yüklediyseniz, _. csproj_ dosyasındaki `<PackageId>` ayarla aynı `PACKAGEID` olan komutunu kullanabilirsiniz. Bu paket KIMLIĞI, NuGet paket tanımlayıcısı ile aynıdır.
+NuGet paketini bir NuGet akışına yüklediyseniz, `PACKAGEID` _. csproj_ dosyasındaki `<PackageId>` ayarıyla aynı olduğu `dotnet new -i PACKAGEID` komutunu kullanabilirsiniz. Bu paket KIMLIĞI, NuGet paket tanımlayıcısı ile aynıdır.
 
 ## <a name="uninstall-the-template-pack"></a>Şablon paketini kaldırma
 
-Şablon paketini, _. nupkg_ dosyasıyla doğrudan veya NuGet akışı ile nasıl yükletiğinize bakılmaksızın, bir şablon paketinin kaldırılması aynı olur. `<PackageId>` Kaldırmak istediğiniz şablonun öğesini kullanın. `dotnet new -u` Komutunu çalıştırarak yüklenen şablonların bir listesini alabilirsiniz.
+Şablon paketini, _. nupkg_ dosyasıyla doğrudan veya NuGet akışı ile nasıl yükletiğinize bakılmaksızın, bir şablon paketinin kaldırılması aynı olur. Kaldırmak istediğiniz şablonun `<PackageId>` kullanın. `dotnet new -u` komutu çalıştırılarak yüklenen şablonların bir listesini alabilirsiniz.
 
 ```console
 C:\working> dotnet new -u
@@ -176,7 +176,7 @@ Currently installed items:
       Example templates: string extensions (stringext) C#
 ```
 
-Şablonu `dotnet new -u AdatumCorporation.Utility.Templates` kaldırmak için ' i çalıştırın. Komutu `dotnet new` , daha önce yüklediğiniz şablonları atlamanızı gerektiren yardım bilgilerini çıktı olarak alırsınız.
+Şablonu kaldırmak için `dotnet new -u AdatumCorporation.Utility.Templates` çalıştırın. `dotnet new` komutu, daha önce yüklediğiniz şablonları atlamanızı gerektiren yardım bilgilerini çıktı olarak alırsınız.
 
 Tebrikler! bir şablon paketi yüklediniz ve kaldırdık. 
 

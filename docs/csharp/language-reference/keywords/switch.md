@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 6f0a2cfd5a6de9c8c05bc3daea1e242183ebf03e
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552346"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345388"
 ---
 # <a name="switch-c-reference"></a>anahtar (C# başvuru)
 
@@ -47,7 +47,7 @@ C# 6 ve önceki sürümlerde, Match ifadesi aşağıdaki türlerde bir değer d�
 - bir [dize](../builtin-types/reference-types.md).
 - bir [bool](../builtin-types/bool.md).
 - `int` veya `long`gibi bir [integral](../builtin-types/integral-numeric-types.md) değeri.
-- bir [sabit listesi](enum.md) değeri.
+- bir [sabit listesi](../builtin-types/enum.md) değeri.
 
 7,0 ile C# başlayarak, Match ifadesi null olmayan herhangi bir ifade olabilir.
 
@@ -78,7 +78,7 @@ Bu gereksinim, genellikle bir [Break](break.md), [goto](goto.md)veya [Return](re
 
 [!code-csharp[switch#4](~/samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
 
-Eşleştirme ifadesiyle eşleşen bir Case etiketi ile Switch bölümündeki deyim listesinin yürütülmesi ilk deyimle başlar ve genellikle bir `break`, `goto case``goto label`gibi bir geç deyim olarak deyim listesini ilerler. , `return`veya `throw`ulaşılmıştır. Bu noktada denetim `switch` deyimin dışına veya başka bir Case etiketine aktarılır. `goto` bir deyimin kullanılması, denetimin bir sabit etikete aktarılmalıdır. Bu kısıtlama gereklidir, çünkü denetimi sabit olmayan bir etikete aktarmaya çalışmak, denetimi kodda istenmeyen bir konuma aktarmak veya sonsuz bir döngü oluşturmak gibi istenmeyen yan etkilere sahip olabilir.
+Eşleştirme ifadesiyle eşleşen bir Case etiketi ile Switch bölümündeki deyim listesinin yürütülmesi ilk deyimle başlar ve genellikle bir `break`, `goto case`, `goto label`, `return`veya `throw`gibi bir sıçrama deyimine ulaşılana kadar deyim listesini ilerler. Bu noktada denetim `switch` deyimin dışına veya başka bir Case etiketine aktarılır. `goto` bir deyimin kullanılması, denetimin bir sabit etikete aktarılmalıdır. Bu kısıtlama gereklidir, çünkü denetimi sabit olmayan bir etikete aktarmaya çalışmak, denetimi kodda istenmeyen bir konuma aktarmak veya sonsuz bir döngü oluşturmak gibi istenmeyen yan etkilere sahip olabilir.
 
 ## <a name="case-labels"></a>Case etiketleri
 
@@ -90,7 +90,7 @@ C# 6 yalnızca sabit bir stili desteklediğinden ve sabit değerlerin yinelenmes
 
 Ancak C# 7,0 ' de, diğer desenler desteklendiğinden, büyük/küçük harf etiketlerinin birbirini dışlayan değerler tanımlamamalıdır ve birden çok desen eşleştirme ifadesiyle eşleşemez. Yalnızca eşleşen düzeni içeren ilk anahtar bölümündeki deyimler yürütüldüğü için `case` deyimlerinin göründüğü sıra artık önemlidir. Case C# deyimi veya deyimleri önceki deyimlerin alt kümelerine eşit olan bir switch bölümü algılarsa, "switch case zaten önceki bir durum tarafından işlenmiştir." bir derleyici hatası oluşturur.
 
-Aşağıdaki örnek, birbirini dışlayan farklı desenler kullanan bir `switch` ifadesini gösterir. `case 0:` Switch bölümünü `switch` deyimindeki ilk bölüm olmayacak şekilde taşırsanız, C# değeri sıfır olan bir tamsayı, `case int val` ifadesiyle tanımlanan bir alt küme olan tüm tamsayıların bir alt kümesi olduğundan bir derleyici hatası oluşturur. .
+Aşağıdaki örnek, birbirini dışlayan farklı desenler kullanan bir `switch` ifadesini gösterir. `case 0:` Switch bölümünü `switch` deyimindeki ilk bölüm olmayacak şekilde taşırsanız, C# değeri sıfır olan bir tamsayı, `case int val` ifadesiyle tanımlanan bir alt küme olan tüm tamsayıların bir alt kümesi olan bir derleyici hatası oluşturur.
 
 [!code-csharp[switch#5](~/samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
 

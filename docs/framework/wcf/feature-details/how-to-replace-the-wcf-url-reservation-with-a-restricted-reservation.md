@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: WCF URL Ayırmayı Kısıtlı Ayırma ile Değiştirme'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 900b258a1119b069e5ef0a6ff66078281bb06f1b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 3d14d76334b15bdb490184a48da11ba48b84deea
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837395"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544653"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Nasıl yapılır: WCF URL Ayırmayı Kısıtlı Ayırma ile Değiştirme
 URL ayırması, URL 'lerden veya URL kümesinden ileti alabilen kişileri kısıtlayabilmeniz için izin verir. Bir ayırma, bir URL şablonundan, erişim denetim listesinden (ACL) ve bir bayrak kümesinden oluşur. URL şablonu, rezervasyonun etkilediği URL 'Leri tanımlar. URL şablonlarının nasıl işlendiği hakkında daha fazla bilgi için bkz. [gelen Istekleri yönlendirme](https://go.microsoft.com/fwlink/?LinkId=136764). ACL, hangi kullanıcı veya Kullanıcı grubunun belirtilen URL 'lerden ileti almasına izin verileceğini denetler. Bayraklar, rezervasyonun bir kullanıcıya veya gruba doğrudan URL 'yi dinlemek için ya da başka bir işlemi dinlemek için izin vermek için izin verip vermeyeceğinizi belirtir.  
   
  Varsayılan işletim sistemi yapılandırması kapsamında, Windows Communication Foundation (WCF), tüm kullanıcıların çift yönlü iletişim için çift HTTP bağlaması kullanan uygulamaları çalıştırmasını sağlamak üzere 80 numaralı bağlantı noktası için genel olarak erişilebilen bir ayırma oluşturur. Bu ayırmayla ilgili ACL herkes için olduğundan, yöneticiler bir URL 'yi veya URL kümesini dinlemek için açıkça izin vermeyebilir veya izin vermez. Bu konu, bu ayırmayı silmenin yanı sıra kısıtlı ACL ile ayırmayı yeniden oluşturmayı açıklar.  
   
- Windows Vista veya [!INCLUDE[lserver](../../../../includes/lserver-md.md)], yükseltilmiş bir komut isteminden tüm HTTP URL ayırmalarını `netsh http show urlacl`yazarak görüntüleyebilirsiniz.  Aşağıdaki örnek, WCF URL rezervasyonunun neye benzemesi gerektiğini gösterir.  
+Windows Vista veya Windows Server 2008 ' de, `netsh http show urlacl`girerek yükseltilmiş bir komut isteminden HTTP URL ayırmalarını görüntüleyebilirsiniz. Aşağıdaki örnek, bir WCF URL ayırmasını şuna benzemesi gerektiğini gösterir:
 
 ```
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  

@@ -2,12 +2,12 @@
 title: Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 95bba89546e6667cc36fa06a0090aa8e9570fc7e
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: b0f452ba7aabcaa5ea995acba1873029c67f0f5d
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960144"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544659"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 
@@ -63,7 +63,7 @@ Windows Communication Foundation (WCF) örneklerinin çoğu Internet Information
     > [!NOTE]
     > Bu adım tamamlanmazsa, derleme sırasında IIS 'de barındırılan tüm örnekler başarısız olur. İzinleri doğru şekilde ayarlamış olduğunuzdan emin olun veya hem SDK komut istemi 'ni hem de Visual Studio komut Istemi 'ni (2012) yönetici olarak çalıştırın.
 
-11. Bilgisayarda C:\logs dizini oluşturun; bazı örnekler bekleniyor olabilir. Uygun hesabın bu klasöre verilen yazma erişimi olduğundan emin olun. Windows 7, Windows Vista ve Windows Server 2008 R2 için bu hesap, **ağ hizmetidir**. [!INCLUDE[lserver](../../../../includes/lserver-md.md)]için, hesap NT Authority\Network Service ' dir. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]için, hesap ASPNET ' dir.
+11. Bilgisayarda C:\logs dizini oluşturun; bazı örnekler bekleniyor olabilir. Uygun hesabın bu klasöre verilen yazma erişimi olduğundan emin olun. Windows 7, Windows Vista ve Windows Server 2008 R2 için bu hesap, **ağ hizmetidir**. Windows Server 2008 için, hesap NT Authority\Network Service ' dir. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve Windows Server 2003 için, bu hesap ASPNET ' dir.
 
 12. Setupcerttool. bat dosyasını çalıştırın. Bu dosya \<InstallPath > \ WF_WCF_Samples \WCF\Setup\ klasöründe bulunur.  Bu betik aşağıdaki görevleri gerçekleştirir:
 

@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318283"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340359"
 ---
 # <a name="tutorial-create-a-project-template"></a>Öğretici: proje şablonu oluşturma
 
@@ -26,16 +26,16 @@ Serinin bu bölümünde şunları nasıl yapacağınızı öğreneceksiniz:
 > * Bir öğe şablonunu test etme
 > * Öğe şablonunu kaldırma
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 * Bu öğretici serisinin [1. bölümünü](cli-templates-create-item-template.md) doldurun.
-* Bir Terminal açın ve _working\templates\\_ klasörüne gidin.
+* Bir Terminal açın ve _working\templates_ klasörüne gidin.
 
 ## <a name="create-a-project-template"></a>Proje şablonu oluşturma
 
 Proje şablonları, kullanıcıların çalışan bir kod kümesiyle başlamasını kolaylaştıran, çalıştırmaya yönelik olarak çalışan projeler oluşturur. .NET Core, konsol uygulaması veya sınıf kitaplığı gibi bazı proje şablonları içerir. Bu örnekte, 8,0 sağlayan C# ve bir `async main` giriş noktası üreten yeni bir konsol projesi oluşturacaksınız.
 
-Terminalinizde, _working\templates\\_ klasörüne gidin ve _consoleasync_adlı yeni bir alt klasör oluşturun. Standart konsol uygulamasını oluşturmak için alt klasörü girin ve `dotnet new console` çalıştırın. Bu şablon tarafından oluşturulan dosyaları düzenleyerek yeni bir şablon oluşturabilirsiniz.
+Terminalinizde, _working\templates_ klasörüne gidin ve _consoleasync_adlı yeni bir alt klasör oluşturun. Standart konsol uygulamasını oluşturmak için alt klasörü girin ve `dotnet new console` çalıştırın. Bu şablon tarafından oluşturulan dosyaları düzenleyerek yeni bir şablon oluşturabilirsiniz.
 
 ```console
 working
@@ -98,7 +98,7 @@ Artık oluşturulan şablonun içeriğine sahip olduğunuza göre, şablonun kö
 
 ## <a name="create-the-template-config"></a>Şablon yapılandırması oluşturma
 
-Şablonlar, .NET Core 'da şablonunuzun kökünde bulunan özel bir klasör ve yapılandırma dosyası tarafından tanınır. Bu öğreticide, şablon klasörünüz _working\templates\consoleasync\\_ konumunda bulunur.
+Şablonlar, .NET Core 'da şablonunuzun kökünde bulunan özel bir klasör ve yapılandırma dosyası tarafından tanınır. Bu öğreticide, şablon klasörünüz _working\templates\consoleasync_adresinde bulunur.
 
 Bir şablon oluşturduğunuzda, şablon klasöründeki tüm dosyalar ve klasörler, özel yapılandırma klasörü hariç, şablonun bir parçası olarak dahil edilir. Bu yapılandırma klasörü _. Template. config_olarak adlandırılır.
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ca2513a0f865fd7da728f7d3247bdb7b50a2f48a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8701991542f1e950914d5b4275ae8dcd68ad83a1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036421"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345361"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Aritmetik işleçler (C# başvuru)
 
@@ -47,7 +47,7 @@ Bu işleçler tüm [integral](../builtin-types/integral-numeric-types.md) ve [ka
 
 Birli artış işleci `++` işlenenini 1 artırır. İşlenen bir değişken, [özellik](../../programming-guide/classes-and-structs/properties.md) erişimi veya [Dizin Oluşturucu](../../programming-guide/indexers/index.md) erişimi olmalıdır.
 
-Artırma işleci iki biçimde desteklenir: sonek artırma işleci, `x++` ve önek artışı işleci, `++x`.
+Artırma işleci iki biçimde desteklenir: sonek artırma işleci, `x++`ve önek artışı işleci, `++x`.
 
 ### <a name="postfix-increment-operator"></a>Sonek artırma işleci
 
@@ -65,7 +65,7 @@ Aşağıdaki örnekte gösterildiği gibi, `++x` sonucu işlemden *sonra* `x` de
 
 Birli azaltma işleci `--` işlenenini 1 azaltır. İşlenen bir değişken, [özellik](../../programming-guide/classes-and-structs/properties.md) erişimi veya [Dizin Oluşturucu](../../programming-guide/indexers/index.md) erişimi olmalıdır.
 
-Azaltma işleci iki formda desteklenir: sonek azaltma işleci, `x--` ve ön ek azaltma işleci, `--x`.
+Azaltma işleci iki formda desteklenir: sonek azaltma işleci, `x--`ve ön ek azaltma işleci, `--x`.
 
 ### <a name="postfix-decrement-operator"></a>Sonek azaltma işleci
 
@@ -105,7 +105,7 @@ Tamsayı türlerinin işlenenleri için, `/` işlecinin sonucu bir tamsayı tür
 
 [!code-csharp-interactive[integer division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerDivision)]
 
-İki işlenenin bir kayan noktalı sayı olarak bölümünü almak için `float`, `double` veya `decimal` türünü kullanın:
+İki işlenenin bir kayan noktalı sayı olarak bölümünü almak için `float`, `double`veya `decimal` türünü kullanın:
 
 [!code-csharp-interactive[integer as floating-point division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerAsFloatingPointDivision)]
 
@@ -115,7 +115,7 @@ Tamsayı türlerinin işlenenleri için, `/` işlecinin sonucu bir tamsayı tür
 
 [!code-csharp-interactive[floating-point division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointDivision)]
 
-İşlenenlerden biri `decimal`, başka bir işlenen `float` veya `double` olamaz, çünkü hiçbir `float` veya `double` örtük olarak `decimal` dönüştürülebilir. `float` veya `double` işlenenini `decimal` türüne açıkça dönüştürmeniz gerekir. Sayısal türler arasındaki dönüşümler hakkında daha fazla bilgi için bkz. [yerleşik sayısal dönüşümler](../builtin-types/numeric-conversions.md).
+İşlenenlerden biri `decimal`, başka bir işlenen `float` veya `double`olamaz, çünkü hiçbir `float` veya `double` örtük olarak `decimal`dönüştürülebilir. `float` veya `double` işlenenini `decimal` türüne açıkça dönüştürmeniz gerekir. Sayısal türler arasındaki dönüşümler hakkında daha fazla bilgi için bkz. [yerleşik sayısal dönüşümler](../builtin-types/numeric-conversions.md).
 
 ## <a name="remainder-operator-"></a>Kalan işleç yüzdesi
 
@@ -133,8 +133,8 @@ Hem tamsayı bölme hem de kalan sonuçları hesaplamak için <xref:System.Math.
 
 `float` ve `double` işlenenleri için `x % y` sonucu sınırlı `x` ve `y` için `z` değer
 
-- Sıfır olmayan `z` işareti, `x` işaretiyle aynıdır.
-- `z` mutlak değeri, `n` `|x| / |y|` ve `|x|` sıfırdan küçük veya buna eşit olan en büyük olası tamsayıdır ve `|y|` `x` ve `y`değerlerinin mutlak değerleri olduğundan, `|x| - n * |y|` tarafından oluşturulan değerdir. anı.
+- Sıfır olmayan `z`işareti, `x`işaretiyle aynıdır.
+- `z` mutlak değeri, `n` `|x| - n * |y|` tarafından üretilen en büyük tamsayı olan `|x| / |y|` ve `|x|` `|y|` ve `x` mutlak değerleri sırasıyla `y`ve.
 
 > [!NOTE]
 > Bu geri kalanı hesaplama yöntemi, tamsayı işlenenleri için kullanılan, ancak IEEE 754 belirtiminden farklı olacak şekilde benzerdir. IEEE 754 belirtimine uyan geri kalan işleme ihtiyacınız varsa <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> yöntemini kullanın.
@@ -165,7 +165,7 @@ Temsilci kaldırma için `-` işlecini de kullanabilirsiniz. Daha fazla bilgi i�
 
 ## <a name="compound-assignment"></a>Bileşik atama
 
-Bir ikili işleci için `op`, formun bileşik atama ifadesi
+Bir ikili işleç `op`için, formun bileşik atama ifadesi
 
 ```csharp
 x op= y
@@ -177,17 +177,17 @@ eşdeğerdir
 x = x op y
 ```
 
-`x` yalnızca bir kez değerlendirilir.
+`x` hariç, yalnızca bir kez değerlendirilir.
 
 Aşağıdaki örnek, aritmetik bir atama kullanımını Aritmetik işleçlerle gösterir:
 
 [!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
-[Sayısal yükseltmeler](~/_csharplang/spec/expressions.md#numeric-promotions)nedeniyle `op` işleminin sonucu `x` `T` türüne örtülü olarak dönüştürülebilir olmayabilir. Böyle bir durumda, `op` önceden tanımlanmış bir işleçse ve işlemin sonucu `x` `T` türüne açıkça dönüştürülesiyse, formun bileşik atama ifadesi `x op= y` eşdeğerdir `x = (T)(x op y)` `x` hariç, yalnızca bir kez değerlendirilir. Aşağıdaki örnekte bu davranış gösterilmektedir:
+[Sayısal yükseltmeler](~/_csharplang/spec/expressions.md#numeric-promotions)nedeniyle `op` işleminin sonucu `x``T` türüne örtülü olarak dönüştürülebilir olmayabilir. Böyle bir durumda, `op` önceden tanımlanmış bir işleçse ve işlemin sonucu `x``T` türüne açıkça dönüştürülesiyse, `x = (T)(x op y)`yalnızca bir kez değerlendirilmemesi dışında, form `x op= y` bir bileşik atama ifadesi `x` değerine eşdeğerdir. Aşağıdaki örnekte bu davranış gösterilmektedir:
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
-Ayrıca, sırasıyla bir [olaya](../keywords/event.md)abone olmak ve aboneliği kaldırmak için `+=` ve `-=` işleçlerini da kullanırsınız. Daha fazla bilgi için bkz. [nasıl yapılır: olaylara abone olma ve aboneliği kaldırma](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+Ayrıca, sırasıyla bir [olaya](../keywords/event.md)abone olmak ve aboneliği kaldırmak için `+=` ve `-=` işleçlerini da kullanırsınız. Daha fazla bilgi için bkz. [olaylara abone olma ve olayları kaldırma](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
 ## <a name="operator-precedence-and-associativity"></a>İşleç önceliği ve ilişkilendirilebilirlik
 
@@ -200,7 +200,7 @@ Aşağıdaki liste, en yüksek öncelikten en düşüğe başlayarak aritmetik i
 
 İkili aritmetik işleçler sola ilişkilendirilebilir. Diğer bir deyişle, aynı öncelik düzeyine sahip işleçler soldan sağa değerlendirilir.
 
-İşleç önceliği ve ilişkilendirilebilirliği tarafından uygulanan değerlendirmenin sırasını değiştirmek için parantez, `()` kullanın.
+İşleç önceliği ve ilişkilendirilebilirliği tarafından uygulanan değerlendirmenin sırasını değiştirmek için parantez, `()`kullanın.
 
 [!code-csharp-interactive[precedence and associativity](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
 
@@ -212,7 +212,7 @@ Bir aritmetik işlemin sonucu, ilgili sayısal türün olası sonlu değerler ar
 
 ### <a name="integer-arithmetic-overflow"></a>Tamsayı aritmetik taşması
 
-Sayı sıfıra bölme her zaman bir <xref:System.DivideByZeroException> oluşturur.
+Sayı sıfıra bölme her zaman bir <xref:System.DivideByZeroException>oluşturur.
 
 Tamsayı aritmetik taşması olması durumunda, [denetlenen veya işaretlenmemiş](../keywords/checked-and-unchecked.md)bir taşma Denetim bağlamı ortaya çıkan davranışı denetler:
 

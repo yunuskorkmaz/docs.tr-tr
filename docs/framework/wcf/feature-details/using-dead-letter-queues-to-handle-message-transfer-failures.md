@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: 268f14bc7294a4cbe6f7253dc7f3c71d89985133
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 0be22fa1e81c85d82494bc4b93468a18f05d6423
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837967"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345567"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma
 Sıraya alınan iletiler teslim başarısız olabilir. Bu başarısız iletiler, teslim edilemeyen bir sıraya kaydedilir. Başarısız teslimat, ağ hataları, silinen bir kuyruk, tam sıra, kimlik doğrulama hatası veya zaman içinde teslim etme hatası gibi nedenlerle neden olabilir.  
@@ -23,7 +23,7 @@ Sıraya alınan iletiler teslim başarısız olabilir. Bu başarısız iletiler,
   
  Özel atılacak mektup kuyruğu, iletileri göndermek için aynı MSMQ hizmetini paylaşan istemciler arasında yalıtım sağlar.  
   
- [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]Windows Communication Foundation (WCF), tüm sıraya alınmış istemci uygulamaları için sistem genelinde bir atılacak ileti sırası sağlar. Windows Vista 'da WCF, her kuyruğa alınan istemci uygulaması için atılacak bir sıra sağlar.  
+ Windows Server 2003 ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]Windows Communication Foundation (WCF), tüm sıraya alınmış istemci uygulamaları için sistem genelinde bir atılacak ileti sırası sağlar. Windows Vista 'da WCF, her kuyruğa alınan istemci uygulaması için atılacak bir sıra sağlar.  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>Atılacak Ileti sırasının kullanımını belirtme  
  Teslim edilemeyen bir sıra, gönderen uygulamanın kuyruk yöneticisidir. Bu, zaman aşımına uğradı veya başarısız aktarım ya da teslim olan iletileri depolar.  

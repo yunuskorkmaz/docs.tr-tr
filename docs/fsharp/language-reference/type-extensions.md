@@ -2,12 +2,12 @@
 title: Tür Genişletmeleri
 description: Tür uzantılarının F# daha önce tanımlanmış bir nesne türüne yeni üyeler eklemenize nasıl izin vereceğinizi öğrenin.
 ms.date: 11/04/2019
-ms.openlocfilehash: d26d7b2b507f04e9cb68ade4c0409403643f74ba
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3e2c6971156bd562ed5d5428e6b7ffdc520c4cf5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978257"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341565"
 ---
 # <a name="type-extensions"></a>Tür uzantıları
 
@@ -98,7 +98,7 @@ Artık `RepeatElements`, `Extensions` modülü üzerinde çalıştığınız kap
 
 İsteğe bağlı uzantı üyeleri, nesne örneğinin örtük olarak ilk parametre olarak geçirildiği statik üyelere derlenir. Ancak bunlar, nasıl bildirilenler doğrultusunda örnek üye veya statik üyeler gibi davranır.
 
-İsteğe bağlı uzantı üyeleri, C# veya vb tüketicilerine de görünmez. Yalnızca başka F# bir kodda tüketilebilir.
+İsteğe bağlı uzantı üyeleri, tüketicilerle de C# görünmez veya Visual Basic. Yalnızca başka F# bir kodda tüketilebilir.
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>İç ve isteğe bağlı tür uzantılarının genel sınırlaması
 

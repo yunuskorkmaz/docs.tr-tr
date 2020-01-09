@@ -1,15 +1,15 @@
 ---
-title: FindPrivateKey örneği-WCF
+title: FindPrivateKey örneği
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: 4ba4316489c1494da9421bea5c513e44c6eb50a7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0ed1e5e81a5d2f7f3586e5dce306e8244b5ebd48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989880"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346011"
 ---
 # <a name="findprivatekey-sample"></a>FindPrivateKey örneği
 
@@ -46,13 +46,13 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 Projeyi indirmek için [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerini](https://www.microsoft.com/download/details.aspx?id=21459)ziyaret edin.
 
-1. Dosya Gezgini 'ni açın ve örneği yüklediğiniz dizin konumunun altındaki *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* klasörüne gidin.
+1. Dosya Gezgini 'ni açın ve örneği yüklediğiniz dizin konumunda *WF_WCF_Samples \wcf\setup\findprivatekey\cs* klasörüne gidin.
 
 2. Visual Studio 'da dosyayı açmak için. sln dosya simgesine çift tıklayın.
 
 3. **Derle** menüsünde **çözümü yeniden derle**' yi seçin.
 
-4. Çözümü oluşturmak dosyayı oluşturur: FindPrivateKey. exe.
+4. Çözümün oluşturulması şu dosyayı oluşturur: FindPrivateKey. exe.
 
 ## <a name="conventionscommand-line-entries"></a>Kurallar — komut satırı girdileri
 
@@ -62,7 +62,7 @@ Projeyi indirmek için [.NET Framework 4 için Windows Communication Foundation 
 
  "*Seçenek1* &#124; *Seçenek2*" seçenek kümeleri arasında bir seçimi temsil eder.
 
- "\<*değer*>" girilecek bir parametre değeri temsil eder.
+ "\<>" *değeri*, girilecek bir parametre değeri temsil eder.
 
 ## <a name="usage"></a>Kullanım
 

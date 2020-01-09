@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: f6ffed3d9f0bf5e3dc5698d51276eb1db276993c
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: f1a24e34375e98d4bfb48c1e2fd84290e08f6eea
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837499"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544754"
 ---
 # <a name="analytic-tracing-overview"></a>Çözümleme İzleme Genel Bakış
 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] çözümleme izlemesi, Windows için olay Izleme 'nin (ETW) üzerinde yüksek performanslı ve düşük bir ayrıntı izleme özelliği kümesidir. ETW, izleme işlemlerinin yükünü büyük ölçüde azaltmak için çekirdek düzeyinde çalışır. Kullanıcı ve çekirdek modu olaylarını etkin bir şekilde arabelleğe alır ve hizmetin yeniden başlatılmasına gerek kalmadan günlük kaydının dinamik olarak etkinleştirilmesini sağlar. İzleme verileri, oluşturulduktan ve alındıktan sonra olay günlüklerinde kullanılabilir.  
   
  ETW hakkında daha fazla bilgi için bkz. [ETW Ile hata ayıklamayı ve performans ayarlamayı geliştirme](https://go.microsoft.com/fwlink/?LinkId=164781).  
   
- Windows Vista ve [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] uygulamayı çözümlemek için Windows sistem, güvenlik ve uygulama olay günlüklerini kullanmanın yanı sıra, uygulama ve hizmet günlükleri üst düzey düğümü altında ek Günlükler sunmuştur. Bu yeni günlüklerin amacı, belirli bir uygulama için olayları veya sistem genelinde etkileri olan (güvenlik olay günlüğünün kaydedebileceği olayların türü gibi) genel olaylar yerine belirli bir bileşeni depolar. [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], WCF Izleme olaylarının, WCF Ileti günlüklerinin ve [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] Izleme kayıtlarının uygulama ve hizmet günlüklerine kaydedilmesini sağlar ve birleştirir.  
+ Windows Vista ve Windows Server 2008, uygulamayı çözümlemek için Windows sistem, güvenlik ve uygulama olay günlüklerini kullanmanın yanı sıra, uygulamalar ve hizmetler günlükleri üst düzey düğümü altında ek Günlükler sunmuştur. Bu yeni günlüklerin amacı, belirli bir uygulama için olayları veya sistem genelinde etkileri olan (güvenlik olay günlüğünün kaydedebileceği olayların türü gibi) genel olaylar yerine belirli bir bileşeni depolar. [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], WCF Izleme olaylarının, WCF Ileti günlüklerinin ve [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] Izleme kayıtlarının uygulama ve hizmet günlüklerine kaydedilmesini sağlar ve birleştirir.  
   
 ## <a name="concepts-and-capabilities"></a>Kavramlar ve yetenekler  
  Aşağıdaki kavramlar ve yetenekler WCF analitik Izleme için geçerlidir.  

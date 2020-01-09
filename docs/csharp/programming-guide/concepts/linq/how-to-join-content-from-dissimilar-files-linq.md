@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Benzer olmayan dosyalardaki (LINQ) (C#) içerik birleştirin'
+title: Benzer olmayan dosyalardaki (LINQ) (C#) içerik ekleme
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: eb2e5d8e598b7b671afe9271e6e591c5ce0ada2b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 49b70c15b3be2efea5cf6a9e7d85df944a67c730
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253545"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345883"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Nasıl yapılır: Benzer olmayan dosyalardaki (LINQ) (C#) içerik birleştirin
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Benzer olmayan dosyalardaki (LINQ) (C#) içerik ekleme
 
 Bu örnek, eşleşen anahtar olarak kullanılan ortak bir değeri paylaşan, virgülle ayrılmış iki dosyadan verilerin nasıl birleştirileceğini gösterir. Bu teknik, iki elektronik tablodan veya bir elektronik tabloda ve başka bir biçime sahip bir dosyadan yeni bir dosyaya veri birleştirmek istiyorsanız yararlı olabilir. Örneği herhangi bir tür yapılandırılmış metinle çalışacak şekilde değiştirebilirsiniz.  
   

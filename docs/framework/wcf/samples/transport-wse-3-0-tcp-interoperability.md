@@ -2,12 +2,12 @@
 title: 'Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 6541ddf322a2084601daf2f1271ac5c888073f8f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8166e1c378bc745eb8c9f37d6982642e754813cb
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423868"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544629"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik
 WVA3,0 TCP birlikte çalışabilirlik aktarım örneği, bir TCP çift yönlü oturumunun özel Windows Communication Foundation (WCF) taşıması olarak nasıl uygulanacağını gösterir. Ayrıca, mevcut dağıtılan sistemlerle kablo üzerinde arabirim sağlamak için kanal katmanının genişletilebilirliğini nasıl kullanabileceğinizi gösterir. Aşağıdaki adımlarda, bu özel WCF taşımanın nasıl oluşturulacağı gösterilmektedir:  
@@ -79,7 +79,7 @@ WVA3,0 TCP birlikte çalışabilirlik aktarım örneği, bir TCP çift yönlü o
 ## <a name="channel-listener"></a>Kanal dinleyicisi  
  TCP aktarımını yazarken bir sonraki adım, sunucu kanallarını kabul etmek için <xref:System.ServiceModel.Channels.IChannelListener> bir uygulama oluşturmaktır.  
   
-- `WseTcpChannelListener`, dinleme yuvasının ömrünü denetlemek için <xref:System.ServiceModel.Channels.ChannelListenerBase>\<IDuplexSessionChannel > ve [Begin] açık ve [BEGIN] Close üzerinde geçersiz kılmalarla türetilir. OnOpen 'de, IP_ANY üzerinde dinlemek için bir yuva oluşturulur. Daha gelişmiş uygulamalar, IPv6 'yı da dinlemek için ikinci bir yuva oluşturabilir. Ayrıca, IP adresinin ana bilgisayar adı 'nda belirtilmesine izin verebilir.  
+- `WseTcpChannelListener`, dinleme yuvasının ömrünü denetlemek için <xref:System.ServiceModel.Channels.ChannelListenerBase>\<IDuplexSessionChannel > ve [Begin] açık ve [BEGIN] Close üzerinde geçersiz kılmalarla türetilir. OnOpen 'de IP_ANY dinlemek için bir yuva oluşturulur. Daha gelişmiş uygulamalar, IPv6 'yı da dinlemek için ikinci bir yuva oluşturabilir. Ayrıca, IP adresinin ana bilgisayar adı 'nda belirtilmesine izin verebilir.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -157,7 +157,7 @@ Received Body: to me.
 Press enter.  
 ```  
   
- Server  
+ Sunucu:  
   
 ```console  
 Listening for messages at soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
@@ -175,7 +175,7 @@ Symbols:
 1. Bu örneği çalıştırmak için, wva3,0 ve wva`TcpSyncStockService` örneğinin yüklü olması gerekir. [Wo 3,0 ' i MSDN 'den](https://go.microsoft.com/fwlink/?LinkId=95000)indirebilirsiniz.  
   
 > [!NOTE]
-> WVA3,0 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]desteklenmediğinden, bu işletim sistemine `TcpSyncStockService` örneğini yükleyemez veya çalıştıramazsınız.  
+> WVA3,0, Windows Server 2008 ' de desteklenmediğinden, bu işletim sistemine `TcpSyncStockService` örneğini yükleyemez veya çalıştıramazsınız.  
   
 1. `TcpSyncStockService` örneğini yükledikten sonra şunları yapın:  
   

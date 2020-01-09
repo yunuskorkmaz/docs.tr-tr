@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: ad4e953941e189e6ed9baefb6cb07e7955000c7f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: de40369a661c347a2125075e820420af4eb71cac
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283109"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337251"
 ---
 # <a name="c-programming-guide"></a>C#Programlama Kılavuzu
 
@@ -40,15 +40,13 @@ Bu bölüm .NET Framework C# C# aracılığıyla erişilebilen temel dil özelli
   
  [Arabirimler](./interfaces/index.md)  
 
- [Sabit Listesi Türleri](./enumeration-types.md)  
-  
  [Temsilciler](./delegates/index.md)  
 
  [Diziler](./arrays/index.md)  
   
  [Dizeler](./strings/index.md)  
   
- [Özellikler](./classes-and-structs/properties.md)  
+ [Veri Erişimi](./classes-and-structs/properties.md)  
   
  [Dizin Oluşturucular](./indexers/index.md)  
   

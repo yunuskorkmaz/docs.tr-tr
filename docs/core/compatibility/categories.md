@@ -2,12 +2,12 @@
 title: Değişiklik kategorilerini bölme-.NET Core
 description: .NET Core 'da önemli değişiklikler sınıflandırılan yollar hakkında bilgi edinin.
 ms.date: 06/10/2019
-ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 32cf55dc3ba0b16bae8cfe6179211150b2c90e2c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567921"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343594"
 ---
 # <a name="breaking-change-categories"></a>Hataya neden olan değişiklik kategorileri
 
@@ -18,8 +18,7 @@ ms.locfileid: "74567921"
 - [Kaynak uyumluluğu](#source-compatibility)
 - [Tasarım zamanı uyumluluğu](#design-time-compatibility)
 - [geriye dönük uyumluluk](#backwards-compatibility)
-
-[İleri uyumluluk](#forward-compatibility) .NET Core 'un hedefi değildir.
+- [ileriye dönük uyumluluk](#forward-compatibility) (.NET Core 'un hedefi değil)
 
 ## <a name="behavioral-change"></a>Davranış değişikliği
 
@@ -43,7 +42,7 @@ Tasarım zamanı uyumluluğu, Visual Studio ve diğer tasarım zamanı ortamlar�
 
 Geriye dönük uyumluluk, bir API 'nin mevcut bir tüketicisinin aynı şekilde davranırken yeni bir sürüme karşı çalışmasına karşılık gelmektedir. Hem davranış değişiklikleri hem de ikili uyumlulukta yapılan değişiklikler geriye dönük uyumluluğu etkiler. Bir tüketici, API 'nin daha yeni bir sürümüne karşı çalışırken farklı şekilde çalışmayabilir veya davranmayabilir, API geri *uyumsuzdur*.
 
-Geliştiricilerin varsayılan olarak bir API 'nin daha yeni sürümlerinde geriye dönük uyumluluğu beklediği için geriye dönük uyumluluğu etkileyen değişiklikler kesinlikle önerilmez.
+Geliştiriciler bir API 'nin daha yeni sürümlerinde geriye dönük uyumluluğu beklediği için geriye dönük uyumluluğu etkileyen değişiklikler önerilmez.
 
 ## <a name="forward-compatibility"></a>İleriye dönük uyumluluk
 
