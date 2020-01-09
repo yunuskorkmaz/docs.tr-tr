@@ -2,32 +2,32 @@
 title: 2026 - CompileVbExpressionStart
 ms.date: 03/30/2017
 ms.assetid: daad57eb-8198-49b5-9920-aa0e7428ccf1
-ms.openlocfilehash: a80cc9c6c7768626d65c3a31570d5342a395edf2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f8fc79a6b56b85bb55569420ca7511fa7e41d7a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755720"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344596"
 ---
-# <a name="2026---compilevbexpressionstart"></a><span data-ttu-id="56ffc-102">2026 - CompileVbExpressionStart</span><span class="sxs-lookup"><span data-stu-id="56ffc-102">2026 - CompileVbExpressionStart</span></span>
-## <a name="properties"></a><span data-ttu-id="56ffc-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="56ffc-103">Properties</span></span>  
+# <a name="2026---compilevbexpressionstart"></a><span data-ttu-id="1428b-102">2026 - CompileVbExpressionStart</span><span class="sxs-lookup"><span data-stu-id="1428b-102">2026 - CompileVbExpressionStart</span></span>
+## <a name="properties"></a><span data-ttu-id="1428b-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="1428b-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="56ffc-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="56ffc-104">ID</span></span>|<span data-ttu-id="56ffc-105">2026</span><span class="sxs-lookup"><span data-stu-id="56ffc-105">2026</span></span>|  
-|<span data-ttu-id="56ffc-106">anahtar sözcükler</span><span class="sxs-lookup"><span data-stu-id="56ffc-106">Keywords</span></span>|<span data-ttu-id="56ffc-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="56ffc-107">WFRuntime</span></span>|  
-|<span data-ttu-id="56ffc-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="56ffc-108">Level</span></span>|<span data-ttu-id="56ffc-109">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="56ffc-109">Verbose</span></span>|  
-|<span data-ttu-id="56ffc-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="56ffc-110">Channel</span></span>|<span data-ttu-id="56ffc-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="56ffc-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="1428b-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="1428b-104">ID</span></span>|<span data-ttu-id="1428b-105">2026</span><span class="sxs-lookup"><span data-stu-id="1428b-105">2026</span></span>|  
+|<span data-ttu-id="1428b-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="1428b-106">Keywords</span></span>|<span data-ttu-id="1428b-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="1428b-107">WFRuntime</span></span>|  
+|<span data-ttu-id="1428b-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="1428b-108">Level</span></span>|<span data-ttu-id="1428b-109">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="1428b-109">Verbose</span></span>|  
+|<span data-ttu-id="1428b-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="1428b-110">Channel</span></span>|<span data-ttu-id="1428b-111">Microsoft-Windows-Application Server-uygulamalar/hata ayıkla</span><span class="sxs-lookup"><span data-stu-id="1428b-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="56ffc-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="56ffc-112">Description</span></span>  
- <span data-ttu-id="56ffc-113">Bir VB ifade derlemesinin başlangıcını gösterir.</span><span class="sxs-lookup"><span data-stu-id="56ffc-113">Indicates the start of a VB expression compilation.</span></span>  
+## <a name="description"></a><span data-ttu-id="1428b-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1428b-112">Description</span></span>  
+ <span data-ttu-id="1428b-113">Visual Basic ifade derlemesinin başlangıcını gösterir.</span><span class="sxs-lookup"><span data-stu-id="1428b-113">Indicates the start of a Visual Basic expression compilation.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="56ffc-114">İleti</span><span class="sxs-lookup"><span data-stu-id="56ffc-114">Message</span></span>  
- <span data-ttu-id="56ffc-115">VB ifade '%1'</span><span class="sxs-lookup"><span data-stu-id="56ffc-115">Compiling VB expression '%1'</span></span>  
+## <a name="message"></a><span data-ttu-id="1428b-114">İleti</span><span class="sxs-lookup"><span data-stu-id="1428b-114">Message</span></span>  
+ <span data-ttu-id="1428b-115">' %1 ' Visual Basic ifadesi derleniyor</span><span class="sxs-lookup"><span data-stu-id="1428b-115">Compiling Visual Basic expression '%1'</span></span>  
   
-## <a name="details"></a><span data-ttu-id="56ffc-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="56ffc-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="1428b-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="1428b-116">Details</span></span>  
   
-|<span data-ttu-id="56ffc-117">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="56ffc-117">Data Item Name</span></span>|<span data-ttu-id="56ffc-118">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="56ffc-118">Data Item Type</span></span>|<span data-ttu-id="56ffc-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="56ffc-119">Description</span></span>|  
+|<span data-ttu-id="1428b-117">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="1428b-117">Data Item Name</span></span>|<span data-ttu-id="1428b-118">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="1428b-118">Data Item Type</span></span>|<span data-ttu-id="1428b-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1428b-119">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="56ffc-120">İfade</span><span class="sxs-lookup"><span data-stu-id="56ffc-120">Expression</span></span>|<span data-ttu-id="56ffc-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="56ffc-121">xs:string</span></span>|<span data-ttu-id="56ffc-122">Derlenecek VisualBasic ifade.</span><span class="sxs-lookup"><span data-stu-id="56ffc-122">The VisualBasic expression to compile.</span></span>|  
-|<span data-ttu-id="56ffc-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="56ffc-123">AppDomain</span></span>|<span data-ttu-id="56ffc-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="56ffc-124">xs:string</span></span>|<span data-ttu-id="56ffc-125">AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="56ffc-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="1428b-120">İfade</span><span class="sxs-lookup"><span data-stu-id="1428b-120">Expression</span></span>|<span data-ttu-id="1428b-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="1428b-121">xs:string</span></span>|<span data-ttu-id="1428b-122">Derlenecek VisualBasic ifadesi.</span><span class="sxs-lookup"><span data-stu-id="1428b-122">The VisualBasic expression to compile.</span></span>|  
+|<span data-ttu-id="1428b-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="1428b-123">AppDomain</span></span>|<span data-ttu-id="1428b-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="1428b-124">xs:string</span></span>|<span data-ttu-id="1428b-125">AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="1428b-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

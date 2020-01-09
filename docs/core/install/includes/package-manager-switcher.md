@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cadb17d9d273d4b204efc93ef527857f30c28cf7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 42c97278b1a1f488396b158f84c169d050d33e0a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450872"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341181"
 ---
 
 > [!div class="op_single_selector"]
@@ -22,3 +22,5 @@ ms.locfileid: "74450872"
 > - [OpenSUSE 15-x64](../linux-package-manager-opensuse15.md)
 > - [SLES 12-x64](../linux-package-manager-sles12.md)
 > - [SLES 15-x64](../linux-package-manager-sles15.md)
+
+<span data-ttu-id="c9a0f-114">_Paket Yöneticisi yüklemeleri yalnızca **x64** mimarisinde desteklenir_.</span><span class="sxs-lookup"><span data-stu-id="c9a0f-114">_Package manager installs are only supported on the **x64** architecture_.</span></span> <span data-ttu-id="c9a0f-115">**ARM**gibi diğer mimarilerin [.NET Core SDK el ile yüklemesi](../sdk.md?pivots=os-linux#download-and-manually-install) veya [.NET Core çalışma zamanını el ile yüklemesi](../runtime.md?pivots=os-linux#download-and-manually-install)gerekir.</span><span class="sxs-lookup"><span data-stu-id="c9a0f-115">Other architectures, such as **ARM**, must [manually install the .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install) or [manually install the .NET Core Runtime](../runtime.md?pivots=os-linux#download-and-manually-install).</span></span> <span data-ttu-id="c9a0f-116">Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](../dependencies.md).</span><span class="sxs-lookup"><span data-stu-id="c9a0f-116">For more information, see [.NET Core dependencies and requirements](../dependencies.md).</span></span>

@@ -1,21 +1,21 @@
 ---
-title: "Nasıl yapılır: XML 'den metin dosyaları oluşturma (C#)"
+title: XML 'den metin dosyaları oluşturma (C#)
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 8e36bbda60bea207707dcf869afc059e645ec8ad
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9ca76cf955e07bdcc8e095b30f6fadc74edba739
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418299"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345923"
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a><span data-ttu-id="461a7-102">Nasıl yapılır: XML 'den metin dosyaları oluşturma (C#)</span><span class="sxs-lookup"><span data-stu-id="461a7-102">How to: Generate Text Files from XML (C#)</span></span>
-<span data-ttu-id="461a7-103">Bu örnek, bir XML dosyasından bir virgülle ayrılmış değerler (CSV) dosyasının nasıl oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="461a7-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
+# <a name="how-to-generate-text-files-from-xml-c"></a><span data-ttu-id="5fdeb-102">XML 'den metin dosyaları oluşturma (C#)</span><span class="sxs-lookup"><span data-stu-id="5fdeb-102">How to generate text files from XML (C#)</span></span>
+<span data-ttu-id="5fdeb-103">Bu örnek, bir XML dosyasından bir virgülle ayrılmış değerler (CSV) dosyasının nasıl oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="5fdeb-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="461a7-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="461a7-104">Example</span></span>  
- <span data-ttu-id="461a7-105">Bu C# örneğin sürümü, tek bir IFADEDE bir XML belgesinden CSV dosyası oluşturmak için yöntem sözdizimini ve `Aggregate` işlecini kullanır.</span><span class="sxs-lookup"><span data-stu-id="461a7-105">The C# version of this example uses method syntax and the `Aggregate` operator to generate a CSV file from an XML document in a single expression.</span></span> <span data-ttu-id="461a7-106">Daha fazla bilgi için bkz. [LINQ 'Te sorgu sözdizimi ve Yöntem sözdizimi](./query-syntax-and-method-syntax-in-linq.md).</span><span class="sxs-lookup"><span data-stu-id="461a7-106">For more information, see [Query Syntax and Method Syntax in LINQ](./query-syntax-and-method-syntax-in-linq.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="5fdeb-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="5fdeb-104">Example</span></span>  
+ <span data-ttu-id="5fdeb-105">Bu C# örneğin sürümü, tek bir IFADEDE bir XML belgesinden CSV dosyası oluşturmak için yöntem sözdizimini ve `Aggregate` işlecini kullanır.</span><span class="sxs-lookup"><span data-stu-id="5fdeb-105">The C# version of this example uses method syntax and the `Aggregate` operator to generate a CSV file from an XML document in a single expression.</span></span> <span data-ttu-id="5fdeb-106">Daha fazla bilgi için bkz. [LINQ 'Te sorgu sözdizimi ve Yöntem sözdizimi](./query-syntax-and-method-syntax-in-linq.md).</span><span class="sxs-lookup"><span data-stu-id="5fdeb-106">For more information, see [Query Syntax and Method Syntax in LINQ](./query-syntax-and-method-syntax-in-linq.md).</span></span>  
   
- <span data-ttu-id="461a7-107">Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="461a7-107">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
+ <span data-ttu-id="5fdeb-107">Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="5fdeb-107">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -44,7 +44,7 @@ string csv =
 Console.WriteLine(csv);  
 ```  
   
- <span data-ttu-id="461a7-108">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="461a7-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="5fdeb-108">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="5fdeb-108">This code produces the following output:</span></span>  
   
 ```output  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  
@@ -53,6 +53,6 @@ LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orches
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="461a7-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="461a7-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5fdeb-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5fdeb-109">See also</span></span>
 
-- [<span data-ttu-id="461a7-110">Projeksiyonlar ve dönüşümler (LINQ to XMLC#) ()</span><span class="sxs-lookup"><span data-stu-id="461a7-110">Projections and Transformations (LINQ to XML) (C#)</span></span>](how-to-work-with-dictionaries-using-linq-to-xml.md)
+- [<span data-ttu-id="5fdeb-110">Projeksiyonlar ve dönüşümler (LINQ to XMLC#) ()</span><span class="sxs-lookup"><span data-stu-id="5fdeb-110">Projections and Transformations (LINQ to XML) (C#)</span></span>](how-to-work-with-dictionaries-using-linq-to-xml.md)

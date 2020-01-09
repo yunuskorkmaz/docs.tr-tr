@@ -1,28 +1,28 @@
 ---
-title: 'Nasıl yapılır: Birden çok kaynaktan nesne koleksiyonları doldurma (LINQ) (C#)'
+title: Birden çok kaynaktan nesne koleksiyonları doldurma (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: c00257db7f3c06cab55cd48f7472f07dd7b2a664
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3d841e5ca25afde94674af0fedc9a824c382be5b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593058"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345752"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a><span data-ttu-id="11981-102">Nasıl yapılır: Birden çok kaynaktan nesne koleksiyonları doldurma (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="11981-102">How to: Populate Object Collections from Multiple Sources (LINQ) (C#)</span></span>
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a><span data-ttu-id="19a6f-102">Birden çok kaynaktan nesne koleksiyonları doldurma (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="19a6f-102">How to populate object collections from multiple sources (LINQ) (C#)</span></span>
 
-<span data-ttu-id="11981-103">Bu örnekte, farklı kaynaklardaki verilerin yeni türler dizisine nasıl birleştiriyapılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="11981-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>
+<span data-ttu-id="19a6f-103">Bu örnekte, farklı kaynaklardaki verilerin yeni türler dizisine nasıl birleştiriyapılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="19a6f-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="11981-104">Dosya sistemindeki bellek içi verileri veya verileri, hala veritabanında bulunan verilerle birleştirmeyi denemeyin.</span><span class="sxs-lookup"><span data-stu-id="11981-104">Don't try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="11981-105">Bu tür etki alanları arası birleştirmeler, birleştirme işlemlerinin veritabanı sorguları ve diğer kaynak türleri için tanımlanabileceğinden farklı yollarla tanımsız sonuçlar verebilir.</span><span class="sxs-lookup"><span data-stu-id="11981-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="11981-106">Ayrıca, veritabanındaki veri miktarı yeterince büyükse, bu tür bir işlemin bellek dışı bir özel duruma neden olabileceği bir risk vardır.</span><span class="sxs-lookup"><span data-stu-id="11981-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="11981-107">Verileri bir veritabanından bellek içi verilere katmak için, önce veritabanı sorgusuna çağrı `ToList` `ToArray` yapın ve ardından döndürülen koleksiyonda JOIN işlemini gerçekleştirin.</span><span class="sxs-lookup"><span data-stu-id="11981-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>
+> <span data-ttu-id="19a6f-104">Dosya sistemindeki bellek içi verileri veya verileri, hala veritabanında bulunan verilerle birleştirmeyi denemeyin.</span><span class="sxs-lookup"><span data-stu-id="19a6f-104">Don't try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="19a6f-105">Bu tür etki alanları arası birleştirmeler, birleştirme işlemlerinin veritabanı sorguları ve diğer kaynak türleri için tanımlanabileceğinden farklı yollarla tanımsız sonuçlar verebilir.</span><span class="sxs-lookup"><span data-stu-id="19a6f-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="19a6f-106">Ayrıca, veritabanındaki veri miktarı yeterince büyükse, bu tür bir işlemin bellek dışı bir özel duruma neden olabileceği bir risk vardır.</span><span class="sxs-lookup"><span data-stu-id="19a6f-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="19a6f-107">Bir veritabanındaki verileri bellek içi verilere katmak için, önce veritabanı sorgusunda `ToList` veya `ToArray` çağırın ve ardından döndürülen koleksiyonda birleştirmeyi gerçekleştirin.</span><span class="sxs-lookup"><span data-stu-id="19a6f-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>
 
-## <a name="to-create-the-data-file"></a><span data-ttu-id="11981-108">Veri dosyası oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="11981-108">To create the data file</span></span>
+## <a name="to-create-the-data-file"></a><span data-ttu-id="19a6f-108">Veri dosyası oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="19a6f-108">To create the data file</span></span>
 
-<span data-ttu-id="11981-109">Names. csv ve puanlarını. csv dosyalarını proje klasörünüze kopyalayın, örneğin [: Benzer olmayan dosyalardaki (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)içerik birleştirin.</span><span class="sxs-lookup"><span data-stu-id="11981-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md).</span></span>
+<span data-ttu-id="19a6f-109">Names. csv ve puanlarını. csv dosyalarını, [benzer olmayan dosyalardaki (LINQ) (C#) içerik ekleme](./how-to-join-content-from-dissimilar-files-linq.md)bölümünde açıklandığı gibi proje klasörünüze kopyalayın.</span><span class="sxs-lookup"><span data-stu-id="19a6f-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to join content from dissimilar files (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="11981-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="11981-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="19a6f-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="19a6f-110">Example</span></span>
 
-<span data-ttu-id="11981-111">Aşağıdaki örnek,. csv biçiminde elektronik tablo verilerinin benzetimini `Student` yapan iki bellekteki iki bellek koleksiyonundan birleştirilmiş verileri depolamak için adlandırılmış bir türün nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="11981-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="11981-112">İlk dize koleksiyonu, öğrenci adlarını ve kimliklerini temsil eder ve ikinci koleksiyon öğrenci KIMLIĞINI (ilk sütunda) ve dört sınav puanlarını temsil eder.</span><span class="sxs-lookup"><span data-stu-id="11981-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="11981-113">KIMLIK yabancı anahtar olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="11981-113">The ID is used as the foreign key.</span></span>
+<span data-ttu-id="19a6f-111">Aşağıdaki örnek,. csv biçiminde elektronik tablo verilerinin benzetimini yapan iki bellekteki iki bellek koleksiyonundan birleştirilmiş verileri depolamak için adlandırılmış bir tür `Student` nasıl kullanacağınızı gösterir.</span><span class="sxs-lookup"><span data-stu-id="19a6f-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="19a6f-112">İlk dize koleksiyonu, öğrenci adlarını ve kimliklerini temsil eder ve ikinci koleksiyon öğrenci KIMLIĞINI (ilk sütunda) ve dört sınav puanlarını temsil eder.</span><span class="sxs-lookup"><span data-stu-id="19a6f-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="19a6f-113">KIMLIK yabancı anahtar olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="19a6f-113">The ID is used as the foreign key.</span></span>
 
 ```csharp
 using System;
@@ -41,8 +41,8 @@ class PopulateCollection
 {
     static void Main()
     {
-        // These data files are defined in How to: Join Content from
-        // Dissimilar Files (LINQ).
+        // These data files are defined in How to join content from
+        // dissimilar files (LINQ).
 
         // Each line of names.csv consists of a last name, a first name, and an
         // ID number, separated by commas. For example, Omelchenko,Svetlana,111
@@ -107,9 +107,9 @@ class PopulateCollection
  */
 ```
 
-<span data-ttu-id="11981-114">[Select](../../../language-reference/keywords/select-clause.md) yan tümcesinde bir nesne Başlatıcısı, iki kaynaktaki verileri kullanarak her yeni `Student` nesnenin örneğini oluşturmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="11981-114">In the [select](../../../language-reference/keywords/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>
+<span data-ttu-id="19a6f-114">[Select](../../../language-reference/keywords/select-clause.md) yan tümcesinde bir nesne Başlatıcısı, her yeni `Student` nesnesini iki kaynaktaki verileri kullanarak oluşturmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="19a6f-114">In the [select](../../../language-reference/keywords/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>
 
-<span data-ttu-id="11981-115">Bir sorgunun sonuçlarını depolamanız gerekmiyorsa, anonim türler adlandırılmış türlerden daha kullanışlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="11981-115">If you don't have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="11981-116">Sorgu sonuçlarını sorgunun yürütüldüğü yöntemin dışına geçirirseniz adlandırılmış türler gereklidir.</span><span class="sxs-lookup"><span data-stu-id="11981-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="11981-117">Aşağıdaki örnek, önceki örnekle aynı görevi yürütür, ancak adlandırılmış türler yerine anonim türler kullanır:</span><span class="sxs-lookup"><span data-stu-id="11981-117">The following example executes the same task as the previous example, but uses anonymous types instead of named types:</span></span>
+<span data-ttu-id="19a6f-115">Bir sorgunun sonuçlarını depolamanız gerekmiyorsa, anonim türler adlandırılmış türlerden daha kullanışlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="19a6f-115">If you don't have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="19a6f-116">Sorgu sonuçlarını sorgunun yürütüldüğü yöntemin dışına geçirirseniz adlandırılmış türler gereklidir.</span><span class="sxs-lookup"><span data-stu-id="19a6f-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="19a6f-117">Aşağıdaki örnek, önceki örnekle aynı görevi yürütür, ancak adlandırılmış türler yerine anonim türler kullanır:</span><span class="sxs-lookup"><span data-stu-id="19a6f-117">The following example executes the same task as the previous example, but uses anonymous types instead of named types:</span></span>
 
 ```csharp
 // Merge the data sources by using an anonymous type.
@@ -139,8 +139,8 @@ foreach (var student in queryNamesScores2)
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="11981-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="11981-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19a6f-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="19a6f-118">See also</span></span>
 
-- [<span data-ttu-id="11981-119">LINQ ve dizeler (C#)</span><span class="sxs-lookup"><span data-stu-id="11981-119">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="11981-120">Nesne ve Koleksiyon Başlatıcıları</span><span class="sxs-lookup"><span data-stu-id="11981-120">Object and Collection Initializers</span></span>](../../classes-and-structs/object-and-collection-initializers.md)
-- [<span data-ttu-id="11981-121">Anonim Tipler</span><span class="sxs-lookup"><span data-stu-id="11981-121">Anonymous Types</span></span>](../../classes-and-structs/anonymous-types.md)
+- [<span data-ttu-id="19a6f-119">LINQ ve dizeler (C#)</span><span class="sxs-lookup"><span data-stu-id="19a6f-119">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="19a6f-120">Nesne ve Koleksiyon Başlatıcıları</span><span class="sxs-lookup"><span data-stu-id="19a6f-120">Object and Collection Initializers</span></span>](../../classes-and-structs/object-and-collection-initializers.md)
+- [<span data-ttu-id="19a6f-121">Anonim Tipler</span><span class="sxs-lookup"><span data-stu-id="19a6f-121">Anonymous Types</span></span>](../../classes-and-structs/anonymous-types.md)
