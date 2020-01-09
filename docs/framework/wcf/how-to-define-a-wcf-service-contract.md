@@ -7,22 +7,22 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: ba88fc6ba4cba8d46ed1b43080d471b1b7c4bd75
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 49526808a65b68c6df734bd7f3e76eff1e4a6bc5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928881"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338290"
 ---
 # <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Öğretici: Windows Communication Foundation hizmet sözleşmesi tanımlama
 
-Bu öğreticide, temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken beş görevden ilki açıklanmaktadır. Öğreticilere genel bakış için bkz [. Öğretici: Windows Communication Foundation uygulamaları](getting-started-tutorial.md)ile çalışmaya başlayın.
+Bu öğreticide, temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken beş görevden ilki açıklanmaktadır. Öğreticilere genel bakış için bkz. [öğretici: Windows Communication Foundation uygulamalarla çalışmaya başlama](getting-started-tutorial.md).
 
-Bir WCF hizmeti oluşturduğunuzda, ilk göreviniz bir hizmet sözleşmesini tanımlamaktır. Hizmet sözleşmesi, hizmetin desteklediği işlemleri belirtir. Bir işlem, bir Web hizmeti yöntemi olarak düşünülebilir. Bir görsel C# veya VISUAL BASIC (vb) arabirimi tanımlayarak hizmet sözleşmeleri oluşturursunuz. Bir arabirim aşağıdaki özelliklere sahiptir:
+Bir WCF hizmeti oluşturduğunuzda, ilk göreviniz bir hizmet sözleşmesini tanımlamaktır. Hizmet sözleşmesi, hizmetin desteklediği işlemleri belirtir. Bir işlem, bir Web hizmeti yöntemi olarak düşünülebilir. Hizmet sözleşmelerini bir C# veya Visual Basic arabirimi tanımlayarak oluşturursunuz. Bir arabirim aşağıdaki özelliklere sahiptir:
 
 - Arabirimdeki her yöntem belirli bir hizmet işlemine karşılık gelir. 
-- Her arabirim için <xref:System.ServiceModel.ServiceContractAttribute> özniteliği uygulamanız gerekir.
-- Her işlem/yöntem için <xref:System.ServiceModel.OperationContractAttribute> özniteliği uygulamanız gerekir. 
+- Her arabirim için <xref:System.ServiceModel.ServiceContractAttribute> özniteliğini uygulamanız gerekir.
+- Her işlem/yöntem için <xref:System.ServiceModel.OperationContractAttribute> özniteliğini uygulamanız gerekir. 
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
@@ -32,7 +32,7 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
 ## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>Bir WCF hizmet kitaplığı projesi oluşturma ve bir hizmet sözleşmesi arabirimi tanımlama
 
-1. Visual Studio 'Yu yönetici olarak açın. Bunu yapmak için **Başlat** menüsünde Visual Studio programını seçin ve ardından kısayol menüsünde**yönetici olarak çalıştır** ' **ı seçin.**  > 
+1. Visual Studio 'Yu yönetici olarak açın. Bunu yapmak için **Başlat** menüsünde Visual Studio programını seçin ve ardından kısayol menüsünde **yönetici olarak çalıştır** > **daha fazla** ' yı seçin.
 
 2. Bir **WCF hizmet kitaplığı** projesi oluşturun.
 
@@ -45,15 +45,15 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
    3. Pencerenin alt bölümünde, **ad** Için *GettingStartedLib* ve **çözüm adı**olarak *gettingstarted* girin. 
 
-   4. **Tamam**’ı seçin.
+   4. Seçin **Tamam**.
 
-      Visual Studio, üç dosya içeren projeyi oluşturur: Bir Visual Basic projesi için *IService1.cs* (veya *IService1. vb* ), *Service1.cs* (veya *Service1. Visual Basic vb* ) ve *app. config*. Visual Studio bu dosyaları aşağıdaki gibi tanımlar: 
+      Visual Studio, üç dosya içeren projeyi oluşturur: *IService1.cs* (veya *IService1. vb.* Visual Basic projesi için), *Service1.cs* (veya *Service1. Visual Basic vb* ) ve *app. config*. Visual Studio bu dosyaları aşağıdaki gibi tanımlar: 
       - *IService1* dosyası, hizmet sözleşmesinin varsayılan tanımını içerir. 
       - *Service1* dosyası, hizmet sözleşmesinin varsayılan uygulamasını içerir. 
       - *App. config* dosyası, VISUAL Studio WCF hizmeti ana bilgisayar aracı ile varsayılan hizmeti yüklemek için gereken yapılandırma bilgilerini içerir. WCF hizmeti ana bilgisayar aracı hakkında daha fazla bilgi için bkz. [WCF hizmet Konağı (WcfSvcHost. exe)](wcf-service-host-wcfsvchost-exe.md).
 
       > [!NOTE]
-      > Visual Studio 'Yu Visual Basic Geliştirici ortamı ayarları ile yüklediyseniz, çözüm gizlenmiş olabilir. Bu durumda, **Araçlar** menüsünden **Seçenekler** ' i seçin ve ardından **Seçenekler** penceresinde **Projeler ve çözümler** > **genel** ' i seçin. **Çözümü her zaman göster**' i seçin. Ayrıca, **oluşturulduğunda yeni projeleri kaydet** ' in seçili olduğunu doğrulayın.
+      > Visual Studio 'Yu Visual Basic Geliştirici ortamı ayarları ile yüklediyseniz, çözüm gizlenmiş olabilir. Bu durumda, **Araçlar** menüsünden **Seçenekler** ' i seçin ve ardından **seçenekler** penceresinde **Projeler ve çözümler** ** > '** ni seçin. **Çözümü her zaman göster**' i seçin. Ayrıca, **oluşturulduğunda yeni projeleri kaydet** ' in seçili olduğunu doğrulayın.
 
 3. **Çözüm Gezgini**, **IService1.cs** veya **IService1. vb** dosyasını açın ve kodunu aşağıdaki kodla değiştirin:
 
@@ -98,7 +98,7 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
     End Namespace
     ```
 
-     Bu sözleşme, çevrimiçi bir Hesaplayıcı tanımlar. Arabirimin özniteliğiyle (Basitleştirilmiş olarak `ServiceContract`) işaretlendiğini görürsünüz. <xref:System.ServiceModel.ServiceContractAttribute> `ICalculator` Bu öznitelik, anlaşma adının belirsizliğini ortadan kaldırmak için bir ad alanını tanımlar. Kod, her Hesaplayıcı işlemini <xref:System.ServiceModel.OperationContractAttribute> özniteliğiyle (Basitleştirilmiş olarak `OperationContract`) işaretler.
+     Bu sözleşme, çevrimiçi bir Hesaplayıcı tanımlar. `ICalculator` arabiriminin <xref:System.ServiceModel.ServiceContractAttribute> özniteliğiyle (Basitleştirilmiş `ServiceContract`olarak) işaretlendiğini görürsünüz. Bu öznitelik, anlaşma adının belirsizliğini ortadan kaldırmak için bir ad alanını tanımlar. Kod, her Hesaplayıcı işlemini <xref:System.ServiceModel.OperationContractAttribute> özniteliğiyle işaretler (`OperationContract`olarak basitleştik).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

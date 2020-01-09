@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 968154908bc6cb62bb221d42a1f71b329aa7096f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 728c17cd2ed8661e0a5f1f2b8e929059713a1edf
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349464"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545123"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>XML Alt Axis Özelliği (Visual Basic)
 Aşağıdakilerden birinin alt öğelerine erişim sağlar: <xref:System.Xml.Linq.XElement> nesnesi, <xref:System.Xml.Linq.XDocument> nesnesi, <xref:System.Xml.Linq.XElement> nesneleri koleksiyonu veya <xref:System.Xml.Linq.XDocument> nesneleri koleksiyonu.  
@@ -32,11 +32,11 @@ object.<child>
 |---|---|  
 |`object`|Gerekli. <xref:System.Xml.Linq.XElement> nesnesi, <xref:System.Xml.Linq.XDocument> nesnesi, <xref:System.Xml.Linq.XElement> nesneleri koleksiyonu veya <xref:System.Xml.Linq.XDocument> nesneleri koleksiyonu.|  
 |.<|Gerekli. Bir alt eksen özelliğinin başlangıcını gösterir.|  
-|`child`|Gerekli. [`prefix:]name`biçiminde erişmek için alt düğümlerin adı.<br /><br /> -   `Prefix`-Isteğe bağlı. Alt düğüm için XML ad alanı ön eki. Bir `Imports` ifadesiyle tanımlanmış bir genel XML ad alanı olmalıdır.<br />-   `Name`-gerekli. Yerel alt düğüm adı. [BELIRTILEN XML öğelerinin ve özniteliklerin adlarına](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)bakın.|  
+|`child`|Gerekli. Erişim için kullanılacak alt düğümlerin adı, form `[prefix:]name`.<br /><br /> -   `Prefix`-Isteğe bağlı. Alt düğüm için XML ad alanı ön eki. Bir `Imports` ifadesiyle tanımlanmış bir genel XML ad alanı olmalıdır.<br />-   `Name`-gerekli. Yerel alt düğüm adı. [BELIRTILEN XML öğelerinin ve özniteliklerin adlarına](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)bakın.|  
 |>|Gerekli. Alt eksen özelliğinin sonunu belirtir.|  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- <xref:System.Xml.Linq.XElement> nesneleri koleksiyonu.  
+ <xref:System.Xml.Linq.XElement> nesneleri topluluğu.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Alt düğümlere bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument> nesnesinden veya <xref:System.Xml.Linq.XElement> ya da <xref:System.Xml.Linq.XDocument> nesnelerinden oluşan bir koleksiyondan ad ile erişmek için bir XML alt eksen özelliği kullanabilirsiniz. Döndürülen koleksiyondaki ilk alt düğümün değerine erişmek için XML `Value` özelliğini kullanın. Daha fazla bilgi için bkz. [XML Value özelliği](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  

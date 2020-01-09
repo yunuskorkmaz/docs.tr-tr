@@ -2,12 +2,12 @@
 title: Genel Olmayan ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: a4bbc594ec0bf2d387e700508c7d92685216accc
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 93a6b1d815ef6478974ceadf8ad935be2a3bdea5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715649"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338653"
 ---
 # <a name="non-generic-foreach"></a>Genel Olmayan ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], <xref:System.Collections.Generic.IEnumerable%601> koleksiyonları arasında yineleme sağlayan <xref:System.Activities.Statements.ForEach%601>de dahil olmak üzere bir denetim akışı etkinliği kümesi araç kutusuna gönderilir.  
@@ -17,7 +17,7 @@ ms.locfileid: "74715649"
  Bu örnek, genel olmayan <xref:System.Activities.Statements.ForEach%601> etkinliğinin ve tasarımcısının nasıl uygulanacağını gösterir. Bu etkinlik <xref:System.Collections.ArrayList>üzerinden yinelemek için kullanılabilir.  
   
 ## <a name="foreach-activity"></a>ForEach etkinliği  
- C#/Vb `foreach` ifade, bir koleksiyonun öğelerini numaralandırır ve koleksiyonun her öğesi için gömülü bir ifade yürütüyordur. `foreach` [!INCLUDE[wf1](../../../../includes/wf1-md.md)] denk etkinlikler <xref:System.Activities.Statements.ForEach%601> ve <xref:System.Activities.Statements.ParallelForEach%601>. <xref:System.Activities.Statements.ForEach%601> etkinliği bir değer ve gövde listesi içerir. Çalışma zamanında, liste tekrarlandırılır ve listedeki her bir değer için gövde yürütülür.  
+ C#/Visual Basic `foreach` ifade, bir koleksiyonun öğelerini numaralandırır ve koleksiyonun her öğesi için gömülü bir ifade yürütüyordur. `foreach` [!INCLUDE[wf1](../../../../includes/wf1-md.md)] denk etkinlikler <xref:System.Activities.Statements.ForEach%601> ve <xref:System.Activities.Statements.ParallelForEach%601>. <xref:System.Activities.Statements.ForEach%601> etkinliği bir değer ve gövde listesi içerir. Çalışma zamanında, liste tekrarlandırılır ve listedeki her bir değer için gövde yürütülür.  
   
  Çoğu durumda, etkinliğin genel sürümünün tercih edilen çözüm olması gerekir, çünkü bu, kullanılacağı senaryoların çoğunu kapsamakta ve derleme zamanında tür denetimi sağlar. Genel olmayan sürüm, genel olmayan <xref:System.Collections.IEnumerable> arabirimini uygulayan türler arasında yineleme yapmak için kullanılabilir.  
   
@@ -67,7 +67,7 @@ Activity sampleUsage =
    };  
 ```  
   
-|Koşul|İleti|Önem Derecesi|Özel durum türü|  
+|Koşul|İleti|Önem Derecesi|Özel Durum Türü|  
 |---------------|-------------|--------------|--------------------|  
 |Değerler `null`|Gerekli etkinlik bağımsız değişkeni ' Values ' değeri sağlanmadı.|Hata|<xref:System.InvalidOperationException>|  
   
@@ -101,7 +101,7 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
     2. **DesignerTestClient** , etkinliğin tasarımcı içinde nasıl kullanılacağını gösterir.  
   
-2. Projeyi derleyin ve çalıştırın.  
+2. Derleme ve projeyi çalıştırın.  
   
 > [!IMPORTANT]
 > Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  

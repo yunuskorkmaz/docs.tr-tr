@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: fec23439236fccb23964c0feb22691a973c787b1
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 62b218a7259d824930a2eb2c7f810b480034e2b6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838097"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338026"
 ---
 # <a name="auditing-security-events"></a>Güvenlik Etkinliklerini Denetleme
 Windows Communication Foundation (WCF) ile oluşturulan uygulamalar, denetim özelliğiyle güvenlik olaylarını (başarı, hata veya her ikisi de) günlüğe kaydedebilir. Olaylar Windows sistem olay günlüğüne yazılır ve Olay Görüntüleyicisi kullanılarak incelenebilir.  
@@ -73,7 +73,7 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar, denetim öz
 </configuration>  
 ```  
   
- Denetim etkinse ve bir `auditLogLocation` belirtilmemişse, varsayılan günlük adı, güvenlik günlüğüne yazmayı destekleyen platformun "güvenlik" günlüğü olur; Aksi halde, "uygulama" günlüğü. Yalnızca [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve Windows Vista işletim sistemleri güvenlik günlüğüne yazmayı destekler. Daha fazla bilgi için bu konunun ilerleyen bölümlerindeki "Işletim sistemi" bölümüne bakın.  
+ Denetim etkinse ve bir `auditLogLocation` belirtilmemişse, varsayılan günlük adı, güvenlik günlüğüne yazmayı destekleyen platformun "güvenlik" günlüğü olur; Aksi halde, "uygulama" günlüğü. Yalnızca Windows Server 2003 ve Windows Vista işletim sistemleri güvenlik günlüğüne yazmayı destekler. Daha fazla bilgi için bu konunun ilerleyen bölümlerindeki "Işletim sistemi" bölümüne bakın.  
   
 ## <a name="security-considerations"></a>Güvenlik Konuları  
  Kötü amaçlı bir kullanıcı denetimin etkinleştirildiğini biliyorsa, bu saldırgan denetim girişlerinin yazılmasına neden olan geçersiz iletiler gönderebilir. Denetim günlüğü bu şekilde doldurulmuşsa, denetim sistemi başarısız olur. Bunu azaltmak için <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğini `true` olarak ayarlayın ve Denetim davranışını denetlemek için Olay Görüntüleyicisi özelliklerini kullanın. Daha fazla bilgi için, [WINDOWS XP 'de Olay Görüntüleyicisi olay günlüklerini görüntüleme ve yönetme konusunda](https://go.microsoft.com/fwlink/?LinkId=89150)bulunan Windows xp 'de Olay Görüntüleyicisi kullanarak olay günlüklerini görüntüleme ve yönetme hakkında Microsoft desteği makalesine bakın.  
@@ -88,7 +88,7 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar, denetim öz
 |Sistem|Uygulama günlüğü|Güvenlik günlüğü|  
 |------------|---------------------|------------------|  
 |[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] veya üzeri|Desteklenir|Desteklenmez|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] ve Windows Vista|Desteklenir|İş parçacığı bağlamı `SeAuditPrivilege` sahip olmalıdır|  
+|Windows Server 2003 SP1 ve Windows Vista|Desteklenir|İş parçacığı bağlamı `SeAuditPrivilege` sahip olmalıdır|  
   
 #### <a name="other-factors"></a>Diğer faktörler  
  İşletim sistemine ek olarak, aşağıdaki tabloda günlüğe kaydetme işleminin etkinleştirilmesi kontrol eden diğer ayarlar açıklanmaktadır.  

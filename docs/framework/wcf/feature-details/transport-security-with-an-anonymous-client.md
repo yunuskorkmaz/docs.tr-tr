@@ -1,55 +1,55 @@
 ---
-title: Anonim istemci - WCF ile Aktarım güvenliği
+title: Anonim bir istemciyle aktarım güvenliği
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: aac3b2ac6cfcca137bddaefafd290e744ee991eb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c3e44c87dfa70ac3a7acc5a83ac596efc22b6155
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637435"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344753"
 ---
-# <a name="transport-security-with-an-anonymous-client"></a>Anonim istemci ile Aktarım güvenliği
+# <a name="transport-security-with-an-anonymous-client"></a>Anonim bir istemciyle aktarım güvenliği
 
-Windows Communication Foundation (WCF) Bu senaryo, gizliliği ve bütünlüğü sağlamak için Aktarım güvenliği (HTTPS) kullanır. Sunucu bir Güvenli Yuva Katmanı (SSL) sertifikası ile doğrulanması gerekir ve istemcilerin sunucu sertifikasına güvenmelidir. İstemci tarafından herhangi bir mekanizma doğrulanmaz ve, bu nedenle, anonimdir.
+Bu Windows Communication Foundation (WCF) senaryosu gizlilik ve bütünlük sağlamak için taşıma güvenliği (HTTPS) kullanır. Sunucunun kimlik doğrulamasının Güvenli Yuva Katmanı (SSL) sertifikasıyla doğrulanması ve istemcilerin sunucunun sertifikasına güvenmesi gerekir. İstemcinin kimliği herhangi bir mekanizma tarafından doğrulanır ve bu nedenle anonimdir.
 
-Örnek bir uygulama için bkz: [WS aktarım güvenliği](../samples/ws-transport-security.md). Aktarım güvenliği hakkında daha fazla bilgi için bkz: [aktarım güvenliğine genel bakış](transport-security-overview.md).
+Örnek bir uygulama için bkz. [WS Transport Security](../samples/ws-transport-security.md). Taşıma güvenliği hakkında daha fazla bilgi için bkz. [Aktarım güvenliğine genel bakış](transport-security-overview.md).
 
-Bir sertifika bir hizmetle kullanma hakkında daha fazla bilgi için bkz. [Working with Certificates](working-with-certificates.md) ve [nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md).
+Hizmeti olan bir sertifika kullanma hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](working-with-certificates.md) ve bir [SSL sertifikası Ile bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md).
 
-![Anonim istemci ile Aktarım güvenliği kullanarak](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
+![Anonim bir istemciyle taşıma güvenliğini kullanma](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
 
-|Özelliği|Açıklama|
+|Özellikler|Açıklama|
 |--------------------|-----------------|
-|Güvenlik modu|Taşıma|
-|Birlikte Çalışabilirlik|Mevcut Web Hizmetleri ve istemcileri ile|
-|Kimlik doğrulaması (sunucu)<br /><br /> Kimlik doğrulaması (istemci)|Evet<br /><br /> Uygulama düzeyinde (WCF desteği)|
-|Bütünlüğü|Evet|
-|Gizliliği|Evet|
-|Taşıma|HTTPS|
+|Güvenlik modu|Aktarma|
+|Birlikte Çalışabilirlik|Mevcut Web Hizmetleri ve istemcilerle|
+|Kimlik doğrulaması (sunucu)<br /><br /> Kimlik doğrulaması (Istemci)|Evet<br /><br /> Uygulama düzeyi (WCF desteği yok)|
+|Bütünlük|Evet|
+|Gizlilik|Evet|
+|Aktarma|HTTPS|
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|
 
 ## <a name="service"></a>Hizmet
 
-Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:
+Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:
 
-- Kod ile yapılandırma kullanarak tek başına bir hizmet oluşturun.
+- Yapılandırma olmadan kodu kullanarak tek başına bir hizmet oluşturun.
 
-- Sağlanan Yapılandırması'nı kullanarak bir hizmet oluşturma, ancak tüm uç noktalar tanımlamaz.
+- Sağlanan yapılandırmayı kullanarak bir hizmet oluşturun, ancak herhangi bir uç nokta tanımlamaz.
 
 ### <a name="code"></a>Kod
 
-Aşağıdaki kod, aktarım güvenliği kullanarak bir uç nokta oluşturma işlemi gösterilmektedir:
+Aşağıdaki kod, taşıma güvenliği kullanarak bir uç noktanın nasıl oluşturulacağını gösterir:
 
 [!code-csharp[c_SecurityScenarios#5](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
 [!code-vb[c_SecurityScenarios#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]
 
 ### <a name="configuration"></a>Yapılandırma
 
-Aşağıdaki kod, yapılandırma kullanarak aynı uç noktasını ayarlar. İstemci, herhangi bir mekanizma tarafından doğrulanmaz ve bu nedenle anonimdir.
+Aşağıdaki kod, yapılandırma kullanarak aynı uç noktayı ayarlar. İstemcinin kimliği herhangi bir mekanizma tarafından doğrulanır ve bu nedenle anonimdir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -80,11 +80,11 @@ Aşağıdaki kod, yapılandırma kullanarak aynı uç noktasını ayarlar. İste
 
 ## <a name="client"></a>İstemci
 
-Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:
+Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:
 
-- Bir tek başına istemci kodu (ve istemci kodu) kullanarak oluşturun.
+- Kodu kullanarak tek başına istemci oluşturun (ve istemci kodu).
 
-- Herhangi bir uç nokta adresi tanımlamıyor bir istemci oluşturun. Bunun yerine, yapılandırma adı bağımsız değişkeni olarak alan İstemci Oluşturucu kullanın. Örneğin:
+- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucusunu kullanın. Örneğin:
 
      [!code-csharp[C_SecurityScenarios#0](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
@@ -96,7 +96,7 @@ Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir.
 
 ### <a name="configuration"></a>Yapılandırma
 
-Aşağıdaki yapılandırmayı kod yerine barındırılan hizmeti kurmak için kullanılabilir.
+Hizmeti ayarlamak için aşağıdaki yapılandırma kod yerine kullanılabilir.
 
 ```xml
 <configuration>
@@ -126,4 +126,4 @@ Aşağıdaki yapılandırmayı kod yerine barındırılan hizmeti kurmak için k
 - [Güvenliğe Genel Bakış](security-overview.md)
 - [WS Aktarım Güvenliği](../samples/ws-transport-security.md)
 - [Aktarım Güvenliğine Genel Bakış](transport-security-overview.md)
-- [Windows Server AppFabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

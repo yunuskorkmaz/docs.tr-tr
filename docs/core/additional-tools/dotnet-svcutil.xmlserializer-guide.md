@@ -1,31 +1,31 @@
 ---
-title: .NET Core 'da DotNet-Svcutil. XmlSerializer kullanma
-description: .NET Core projeleri için bir serileştirme `dotnet-svcutil.xmlserializer` derlemesini önceden oluşturmak üzere NuGet paketini nasıl kullanabileceğinizi öğrenin.
+title: DotNet-Svcutil. XmlSerializer kullanma
+description: .NET Core projeleri için bir serileştirme derlemesini önceden oluşturmak üzere `dotnet-svcutil.xmlserializer` NuGet paketini nasıl kullanabileceğinizi öğrenin.
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: f1eebeb70206ce883a8e4e4bbd5216ae0ba5507c
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 4811647c294118cb160d25805e7d3ada97f071f9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117272"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344894"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>.NET Core 'da DotNet-Svcutil. XmlSerializer kullanma
 
 `dotnet-svcutil.xmlserializer` NuGet paketi .NET Core projeleri için bir serileştirme derlemesini önceden oluşturabilir. WCF hizmet sözleşmesi tarafından C# kullanılan ve XmlSerializer tarafından seri hale getirilebilen istemci uygulamasındaki türler için serileştirme kodu önceden oluşturulur. Bu, bu türlerin nesneleri serileştirilirken veya seri durumdan çıkarılırken XML serileştirmesinin başlangıç performansını geliştirir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 * [.NET Core 2,1 SDK](https://dotnet.microsoft.com/download) veya üzeri
 * En sevdiğiniz kod düzenleyiciniz
 
-.NET Core SDK ve çalışma zamanının hangi `dotnet --info` sürümlerinin yüklü olduğunu denetlemek için komutunu kullanabilirsiniz.
+`dotnet --info` .NET Core SDK ve çalışma zamanının hangi sürümlerinin yüklü olduğunu denetlemek için komutunu kullanabilirsiniz.
 
 ## <a name="getting-started"></a>Başlarken
 
-Bir .net `dotnet-svcutil.xmlserializer` Core konsol uygulamasında kullanmak için:
+Bir .NET Core konsol uygulamasında `dotnet-svcutil.xmlserializer` kullanmak için:
 
-1. .NET Framework ' de varsayılan ' WCF hizmet uygulaması ' şablonunu kullanarak ' MyWCFService ' adlı bir WCF hizmeti oluşturun. Aşağıdaki `[XmlSerializerFormat]` gibi hizmet yöntemine öznitelik ekleyin:
+1. .NET Framework ' de varsayılan ' WCF hizmet uygulaması ' şablonunu kullanarak ' MyWCFService ' adlı bir WCF hizmeti oluşturun. Hizmet yöntemine aşağıdakiler gibi `[XmlSerializerFormat]` özniteliği ekleyin:
 
    ```csharp
     [ServiceContract]
@@ -43,13 +43,13 @@ Bir .net `dotnet-svcutil.xmlserializer` Core konsol uygulamasında kullanmak iç
     dotnet new console --name MyWCFClient
     ```
 
-    Projenizin .NET Core 2,1 veya sonraki bir sürümü hedeflediğinden emin olmak için, `TargetFramework` proje dosyanızdaki XML öğesini inceleyin:
+    Projenizin .NET Core 2,1 veya sonraki bir sürümünü hedeflediğinden emin olmak için, proje dosyanızdaki `TargetFramework` XML öğesini inceleyin:
 
     ```xml
     <TargetFramework>netcoreapp2.1</TargetFramework>
     ```
 
-3. Aşağıdaki komutu çalıştırarak öğesine `System.ServiceModel.Http` bir paket başvurusu ekleyin:
+3. Aşağıdaki komutu çalıştırarak `System.ServiceModel.Http` bir paket başvurusu ekleyin:
 
     ```dotnetcli
     dotnet add package System.ServiceModel.Http
@@ -82,7 +82,7 @@ Bir .net `dotnet-svcutil.xmlserializer` Core konsol uygulamasında kullanmak iç
     }
     ```
 
-5. Aşağıdaki komutu çalıştırarak `dotnet-svcutil.xmlserializer` pakete bir başvuru ekleyin:
+5. Aşağıdaki komutu çalıştırarak `dotnet-svcutil.xmlserializer` paketine bir başvuru ekleyin:
   
     ```dotnetcli
     dotnet add package dotnet-svcutil.xmlserializer
@@ -96,6 +96,6 @@ Bir .net `dotnet-svcutil.xmlserializer` Core konsol uygulamasında kullanmak iç
     </ItemGroup>
     ```
 
-6. Çalıştırarak `dotnet build`uygulamayı oluşturun. Her şey başarılı olursa, çıkış klasöründe *Mywcfclient. Xmlserileştiriciler. dll* adlı bir derleme oluşturulur. Araç derlemeyi üretbir şekilde başarısız olursa, derleme çıkışında uyarılar görürsünüz.
+6. `dotnet build`çalıştırarak uygulamayı derleyin. Her şey başarılı olursa, çıkış klasöründe *Mywcfclient. Xmlserileştiriciler. dll* adlı bir derleme oluşturulur. Araç derlemeyi üretbir şekilde başarısız olursa, derleme çıkışında uyarılar görürsünüz.
 
-7. WCF hizmetini, örneğin, tarayıcıda çalışan `http://localhost:2561/Service1.svc` bir şekilde başlatın. Ardından istemci uygulamasını başlatın ve çalışma zamanında önceden oluşturulmuş serileştiriciler ' ı otomatik olarak yükler ve kullanır.
+7. WCF hizmetini, örneğin, tarayıcıda `http://localhost:2561/Service1.svc` çalıştırarak başlatın. Ardından istemci uygulamasını başlatın ve çalışma zamanında önceden oluşturulmuş serileştiriciler ' ı otomatik olarak yükler ve kullanır.

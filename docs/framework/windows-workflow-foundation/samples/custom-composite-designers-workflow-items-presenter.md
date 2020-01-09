@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 542440d6bf9d6809abee1ec37c85c44ce72fd132
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 081dce85946fab85cff474508c46770c762b9e76
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715166"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338719"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Özel Bileşik Tasarımcılar - İş Akışı Öğeleri Sunucu
 
@@ -24,11 +24,13 @@ Bu örnek şunları gösterir:
 
 - Yeniden barındırılan bir uygulamada varsayılan tasarımcıyı geçersiz kılma.
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
+## <a name="set-up-build-and-run-the-sample"></a>Örneği kurma, oluşturma ve çalıştırma
 
-1. Visual Studio 2010 ' de VB için veya için C# **Usingworkflowwitemspresenter. sln** örnek çözümünü açın.
+1. Visual Studio 2010 ' de Visual Basic için C# veya Için **Usingworkflowwitemspresenter. sln** örnek çözümünü açın.
 
-2. Çözümü derleyin ve çalıştırın. Yeniden barındırılan bir iş akışı Tasarımcısı uygulamasının açılması gerekir ve etkinlikleri tuvalde sürükleyebilirsiniz.
+2. Çözümü derleyin ve çalıştırın.
+
+   Yeniden barındırılan bir iş akışı Tasarımcısı uygulaması açılır ve etkinlikleri tuvalde sürükleyebilirsiniz.
 
 ## <a name="sample-highlights"></a>Örnek vurgular
 

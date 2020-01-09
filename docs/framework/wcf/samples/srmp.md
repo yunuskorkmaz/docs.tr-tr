@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 0ee11b67dcd9c7251df17dc7523dc20765e157c5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 1e0290a4df688d39f84086dc4c1b41712f81076a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716699"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345141"
 ---
 # <a name="srmp"></a>SRMP
 Bu örnek, HTTP üzerinden Message Queuing (MSMQ) kullanılarak işlenen sıraya alınmış iletişimin nasıl gerçekleştirileceğini gösterir.  
@@ -28,7 +28,7 @@ Bu örnek, HTTP üzerinden Message Queuing (MSMQ) kullanılarak işlenen sıraya
   
 5. İletişim için HTTP 'nin kullanıldığından emin olmak istiyorsanız, MSMQ 'YU güçlendirilmiş modda çalışacak şekilde etkinleştirebilirsiniz. Bu, makinede barındırılan herhangi bir sıraya hiçbir iletinin HTTP olmayan herhangi bir aktarımı kullanarak gelebilmesini sağlar.  
   
-6. Sıkı modda çalıştırmak için MSMQ ' yı seçtikten sonra, makinenin [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]yeniden önyüklemesi gerekir.  
+6. Sağlamlaştırılmış modda çalıştırmak için MSMQ ' yı seçtikten sonra, makine Windows Server 2003 ' de yeniden önyükleme gerektirir.  
   
 7. Hizmeti çalıştırın.  
   

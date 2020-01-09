@@ -1,6 +1,6 @@
 ---
 title: -nostdlib (C# derleyici seçenekleri)
-ms.date: 07/20/2015
+ms.date: 12/20/2019
 f1_keywords:
 - /nostdlib
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: 486539d7abdc3e65847a0bc0e228b1b20a2b2c37
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ad8a2b5fc87dd7beee86d96331cf3961315be533
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602693"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345084"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (C# derleyici seçenekleri)
 
@@ -34,7 +34,7 @@ Kendi sistem ad alanınızı ve nesnelerinizi tanımlamak veya oluşturmak istiy
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Visual Studio 'da Bu derleyici seçeneğini ayarlamak için
 
 > [!NOTE]
-> Aşağıdaki yönergeler yalnızca Visual Studio 2015 (ve önceki sürümler) için geçerlidir. Visual Studio 2017 ' de **mscorlib. dll** derlemesi oluşturma özelliği yok.
+> Aşağıdaki yönergeler yalnızca Visual Studio 2015 (ve önceki sürümler) için geçerlidir. **Mscorlib. dll derleme özelliğine başvurulmayın** , Visual Studio 'nun daha yeni sürümlerinde bulunmaz.
 
 1. Projenin **Özellikler** sayfasını açın.
 
@@ -46,7 +46,7 @@ Kendi sistem ad alanınızı ve nesnelerinizi tanımlamak veya oluşturmak istiy
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Bu derleyici seçeneğini program üzerinden ayarlamak için
 
-Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>.
+Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz. <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

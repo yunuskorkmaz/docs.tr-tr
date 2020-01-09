@@ -2,12 +2,12 @@
 title: ByRef’ler
 description: İçindeki F#ByRef ve ByRef benzeri türler hakkında bilgi edinin ve bu, alt düzey programlama için kullanılır.
 ms.date: 11/04/2019
-ms.openlocfilehash: 2c46cea2329b6817dd753e67c6702fb163ce2193
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a6d3d69c4a163be9ecef7e33c284c4a73e800405
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976824"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545134"
 ---
 # <a name="byrefs"></a>ByRef’ler
 
@@ -82,7 +82,7 @@ Yalnızca işaretçiyi okumak yerine yazıyorsanız, `byref<'T>`yerine `outref<'
 
 ### <a name="inref-semantics"></a>Inref semantiği
 
-Aşağıdaki kodu göz önünde bulundurun:
+Aşağıdaki kodu inceleyin:
 
 ```fsharp
 let f (x: inref<SomeStruct>) = x.SomeField
@@ -104,7 +104,7 @@ Tüm bu kuralların birlikte bir `inref` işaretçisinin sahibi, işaret edilen 
 
 ### <a name="outref-semantics"></a>Outref semantiği
 
-`outref<'T>` amacı, işaretçinin yalnızca okunacağını belirtsağlamaktır. Beklenmedik şekilde, `outref<'T>` ada rağmen temel alınan değerin okunmasına izin verir. Bu uyumluluk amaçlıdır. Anlamsal, `outref<'T>` `byref<'T>`farklı değildir.
+`outref<'T>` amacı, işaretçinin yalnızca yazılması gerektiğini gösterir. Beklenmedik şekilde, `outref<'T>` ada rağmen temel alınan değerin okunmasına izin verir. Bu uyumluluk amaçlıdır. Anlamsal, `outref<'T>` `byref<'T>`farklı değildir.
 
 ### <a name="interop-with-c"></a>C\# ile birlikte çalışma
 

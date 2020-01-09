@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Ad alanlarında XML üzerinde sorgu yazma (C#)'
+title: Ad alanlarında XML üzerinde sorgu yazma (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: 1ded47ced44bebfda92b96f4dc908f1c1b2bbf6b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a8b8d55daaad1ae00e43fed897080ed7a62fafab
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253181"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337369"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Nasıl yapılır: Ad alanlarında XML üzerinde sorgu yazma (C#)
+# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Ad alanlarında XML üzerinde sorgu yazma (C#)
 Bir ad alanında olan XML üzerinde bir sorgu yazmak için, doğru ad alanına sahip <xref:System.Xml.Linq.XName> nesneleri kullanmanız gerekir.  
   
- İçin C#en yaygın yaklaşım, URI 'yi içeren bir dize <xref:System.Xml.Linq.XNamespace> kullanarak başlatmak, ardından ad alanını yerel adla birleştirmek için ek işleç aşırı yüklemesi kullanmaktır.  
+ İçin C#en yaygın YAKLAŞıM, URI 'yi içeren bir dize kullanarak bir <xref:System.Xml.Linq.XNamespace> başlatmaktır ve sonra ad alanını yerel adla birleştirmek için ek işleç aşırı yüklemesi kullanır.  
   
  Bu konudaki ilk örnek kümesi, varsayılan bir ad alanında bir XML ağacının nasıl oluşturulacağını gösterir. İkinci küme, öneki olan bir ad alanında bir XML ağacının nasıl oluşturulacağını gösterir.  
   

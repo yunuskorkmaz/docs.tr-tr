@@ -2,12 +2,12 @@
 title: Güvenlik Duvarı Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 3c94f0edbb244b6c378cc32f05c34fd029d253ff
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: e2c4dd8e784599a5e110e7454d9d0e709cbc5776
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837850"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544784"
 ---
 # <a name="firewall-instructions"></a>Güvenlik Duvarı Yönergeleri
 Windows Communication Foundation (WCF) örneklerinin çalışabilmesi için güvenlik duvarındaki çeşitli bağlantı noktalarını veya programları etkinleştirmeniz gerekir. Örneklerin birçoğu 8000-8003 aralığındaki bağlantı noktalarını ve bağlantı noktası 9000 ' yi kullanarak iletişim kurar. Güvenlik Duvarı varsayılan olarak açıktır ve bu bağlantı noktalarına erişimi engeller. Örneklere yönelik güvenlik duvarını etkinleştirmek için, gereksinimlerinize ve güvenlik ortamınıza bağlı olarak aşağıdaki yordamlardan birini yapın:  
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) örneklerinin çalışabilmesi için güv
   
     - Windows 7 veya Windows Server 2008 R2 'de **Windows Güvenlik Duvarı üzerinden programa veya özelliğe Izin ver**' e tıklayın. **Ayarları Değiştir**' e tıklayın, **başka bir programa izin verin...** .  
   
-    - Windows Vista veya [!INCLUDE[lserver](../../../../includes/lserver-md.md)], **Windows Güvenlik Duvarı üzerinden programa Izin ver**' e tıklayın.  
+    - Windows Vista veya Windows Server 2008 ' de, **Windows Güvenlik Duvarı üzerinden programa Izin ver**' e tıklayın.  
   
 4. **Özel durumlar** sekmesinde **Program Ekle**' ye tıklayın.  
   
@@ -72,7 +72,7 @@ Windows Communication Foundation (WCF) örneklerinin çalışabilmesi için güv
   
     10. **Giden kuralları** ' na tıklayın ve adımları c-h olarak tekrarlayın.  
   
-3. Windows Vista veya [!INCLUDE[lserver](../../../../includes/lserver-md.md)]'de, aşağıdaki adımları izleyin.  
+3. Windows Vista veya Windows Server 2008 ' de, aşağıdaki adımları izleyin.  
   
     1. **Windows Güvenlik Duvarı üzerinden programa Izin ver**' e tıklayın.  
   

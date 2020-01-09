@@ -2,18 +2,18 @@
 title: İleti Kuyruğa Alma Yükleme (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 118143f2d434e9f4399c3e9141743fc0254b61ab
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e6d6a3a2e1bc0a0c936e4b8594eab836b559e5a7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039620"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344743"
 ---
 # <a name="installing-message-queuing-msmq"></a>İleti Kuyruğa Alma Yükleme (MSMQ)
 Aşağıdaki yordamlarda Message Queuing 4,0 ve Message Queuing 3,0 ' nin nasıl yükleneceği gösterilmektedir.  
   
 > [!NOTE]
-> Message Queuing 4,0, ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)] [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]' de kullanılamaz.  
+> Message Queuing 4,0 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve Windows Server 2003 ' de kullanılamaz.  
   
 #### <a name="to-install-message-queuing-40-on-windows-server-2008-or-windows-server-2008-r2"></a>Message Queuing 4,0 ' i Windows Server 2008 veya Windows Server 2008 R2 'ye yüklemek için  
   
@@ -54,7 +54,7 @@ Aşağıdaki yordamlarda Message Queuing 4,0 ve Message Queuing 3,0 ' nin nasıl
 3. Message Queuing seçin ve **Ayrıntılar**' a tıklayın.  
   
     > [!NOTE]
-    > Çalıştırıyorsanız [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Message Queuing erişmek için uygulama sunucusu ' nu seçin.  
+    > Windows Server 2003 çalıştırıyorsanız, Message Queuing erişmek için uygulama sunucusu ' nu seçin.  
   
 4. Ayrıntılar sayfasında MSMQ HTTP desteği seçeneğinin seçildiğinden emin olun.  
   

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 274fea83c474d4b67aab919b604eda893d8204d7
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552861"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337575"
 ---
 # <a name="tour-of-net"></a>.NET Turu
 
@@ -27,13 +27,13 @@ Kod örneklerini çalıştırmak için bir geliştirme ortamı ayarlamayı öğr
 
 .NET birden çok programlama dilini destekler. .NET uygulamaları, diğer şeyler arasında dilden bağımsız çalışma zamanı ve dil birlikte çalışabilirliği belirten [ortak dil altyapısını (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)uygular. Bu, .NET üzerinde uygulama ve hizmet oluşturmak için herhangi bir .NET dilini seçtiğiniz anlamına gelir.
 
-Microsoft, üç .NET dilini etkin bir şekilde geliştirir C#ve F#destekler:, ve Visual Basic (vb). 
+Microsoft, üç .NET dilini etkin bir şekilde geliştirir C#ve F#destekler:, ve Visual Basic. 
 
 * C#basit, güçlü, tür kullanımı uyumlu ve nesne yönelimlidir. Bu, C stili dillerin ifade ve inceliğini bir kısmını korur. C ve benzer dilleri bilen herkes, ile uyumlu olan bazı sorunlar buluyor C#. Hakkında C#daha fazla bilgi edinmek için [ C# kılavuza](../csharp/index.yml) göz atın.
 
 * F#, geleneksel nesne yönelimli ve kesinlik temelli programlamayı da destekleyen platformlar arası, işlevsel ilk programlama dilidir. Hakkında F#daha fazla bilgi edinmek için [ F# kılavuza](../fsharp/index.yml) göz atın.
 
-* Visual Basic .NET üzerinde çalışan çeşitli uygulamalar oluşturmak için kullanacağınızı öğrenmek için kolay bir dildir. .NET dilleri arasında, VB 'nin sözdizimi, normal insan diline en yakın bir deyişle, genellikle yazılım geliştirme konusunda yeni kişiler daha kolay hale gelir.
+* Visual Basic .NET üzerinde çalışan çeşitli uygulamalar oluşturmak için kullanacağınızı öğrenmek için kolay bir dildir. .NET dilleri arasında Visual Basic sözdizimi, normal insan diline en yakın bir deyişle, çoğu zaman yazılım geliştirme konusunda yeni kişiler daha kolay hale gelir.
 
 ## <a name="automatic-memory-management"></a>Otomatik bellek yönetimi
 
@@ -47,7 +47,7 @@ Bellek ayırmayı serbest bırakmak için benzer bir anahtar sözcük yoktur, ç
 
 Çöp toplayıcı, *bellek güvenliğini*sağlamaya yardımcı olan hizmetlerden biridir. Bir program, yalnızca ayrılmış belleğe eriştiğinde bellek güvende olur. Örneğin, çalışma zamanı, bir uygulamanın ayrılmamış belleğe bir dizi sınırlarının ötesinde erişmesini sağlar.
 
-Aşağıdaki örnekte, çalışma zamanı bellek güvenliğini zorlamak için bir `InvalidIndexException` özel durumu oluşturur:
+Aşağıdaki örnekte, çalışma zamanı bellek güvenliğini zorlamak için bir <xref:System.IndexOutOfRangeException> özel durumu oluşturur:
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
@@ -65,7 +65,7 @@ Daha fazla bilgi için aşağıdaki konulara bakın:
 
 * İçin C#, [using deyimleri (C# başvuru)](../csharp/language-reference/keywords/using-statement.md) konusuna bakın.
 * İçin F#bkz. [kaynak yönetimi: Use anahtar sözcüğü](../fsharp/language-reference/resource-management-the-use-keyword.md).
-* VB için [using deyimlerinin (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) konusuna bakın.
+* Visual Basic için bkz. [using deyimin (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) konusu.
 
 ## <a name="type-safety"></a>Tür güvenliği
 
@@ -79,11 +79,11 @@ Tür güvenliği, erişimci anahtar sözcüklerinin aslına uygunluğunu garanti
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#, VB ve F# desteği yerel *tür çıkarımı*. Tür çıkarımı, derleyicinin sağ taraftaki ifadeden sol taraftaki ifadenin türünü akmasıdır. Bu, tür güvenliği kopmuş veya kaçınılmış değildir. Elde edilen türün, her şeyi ifade eden güçlü bir türü vardır. Önceki örnekte, tür çıkarımı tanıtmak için `dog` yeniden yazılır ve örneğin geri kalanı değiştirilmez:
+C#, Visual Basic ve F# desteği yerel *tür çıkarımı*. Tür çıkarımı, derleyicinin sağ taraftaki ifadeden sol taraftaki ifadenin türünü akmasıdır. Bu, tür güvenliği kopmuş veya kaçınılmış değildir. Elde edilen türün, her şeyi ifade eden güçlü bir türü vardır. Önceki örnekte, tür çıkarımı tanıtmak için `dog` yeniden yazılır ve örneğin geri kalanı değiştirilmez:
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
-F#, ve VB 'de C# bulunan yöntem yerel tür çıkarımı dışında daha fazla tür çıkarımı özelliğine sahiptir. Daha fazla bilgi için bkz. [tür çıkarımı](../fsharp/language-reference/type-inference.md).
+F#, ve Visual Basic ' de C# bulunan yöntem yerel tür çıkarımı dışında daha fazla tür çıkarımı özelliğine sahiptir. Daha fazla bilgi için bkz. [tür çıkarımı](../fsharp/language-reference/type-inference.md).
 
 ## <a name="delegates-and-lambdas"></a>Temsilciler ve lambda ifadeleri
 
@@ -97,7 +97,7 @@ Temsilciler tür kullanımı C++ güvenli olduklarından hariç işlev işaretç
 
 Genel türler, programcı 'nin, istemci kodunun (tür kullanıcıları) tür parametresi yerine kullanılacak tam türü belirtmesini sağlayan sınıflarını tasarlarken bir *tür parametresi* almasına izin verir.
 
-Yardım geliştirenler genel veri yapıları uygulayan genel türler eklenmiştir. `List` türü gibi bir türün genel olması için alınmadan önce, `object`türünde olan öğelerle çalışması gerekir. Bu, olası hafif çalışma zamanı hatalarıyla birlikte çeşitli performans ve anlam sorunları içeriyordu. İkinci öğesinin en fazla bir veri yapısı, örneğin, hem tamsayılar hem de dizeler ve listenin üyeleriyle birlikte çalışarak bir `InvalidCastException` oluşur.
+Yardım geliştirenler genel veri yapıları uygulayan genel türler eklenmiştir. Gelişinden önce, `List` türü gibi bir türün genel olması için, `object`türünde olan öğelerle çalışması gerekir. Bu, olası hafif çalışma zamanı hatalarıyla birlikte çeşitli performans ve anlam sorunları içeriyordu. Ortak bir çalışma zamanı hatası, bir veri yapısının, örneğin hem tamsayılar hem de dizeler ve listenin üyeleri işlenirken bir <xref:System.InvalidCastException> oluşturulması durumunda oluşur.
 
 Aşağıdaki örnek, bir <xref:System.Collections.Generic.List%601> türleri örneği kullanılarak çalışan temel bir programı göstermektedir:
 
@@ -113,7 +113,7 @@ Zaman uyumsuz programlama, .NET içinde çalışma zamanı, çerçeve kitaplıkl
 
 ## <a name="language-integrated-query-linq"></a>Dil ile Tümleşik Sorgu (LINQ)
 
-LINQ, C# ve vb 'nin veri üzerinde çalışma için basit ve bildirim temelli kod yazmanıza olanak tanıyan güçlü bir özellikler kümesidir. Veriler birçok biçimde (örneğin, bellek içi nesneler, bir SQL veritabanı veya bir XML belgesi) olabilir, ancak yazdığınız LINQ kodu genellikle veri kaynağı tarafından farklılık gösterir.
+LINQ, C# ve veri üzerinde çalışma için basit ve bildirime dayalı kod yazmanıza olanak tanıyan güçlü bir özellikler kümesidir Visual Basic. Veriler birçok biçimde (örneğin, bellek içi nesneler, bir SQL veritabanı veya bir XML belgesi) olabilir, ancak yazdığınız LINQ kodu genellikle veri kaynağı tarafından farklılık gösterir.
 
 Daha fazla bilgi edinmek ve bazı örneklere bakmak için bkz. [LINQ (dil Ile tümleşik sorgu)](using-linq.md) konusu.
 

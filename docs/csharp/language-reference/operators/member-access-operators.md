@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: ba2a8cd4995b9baab2071d3fb3c7980e45565692
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e69cc5a9634f0b5232562782557645894f94ce2e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039007"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345299"
 ---
 # <a name="member-access-operators-c-reference"></a>Üye erişim işleçleri (C# başvuru)
 
@@ -109,7 +109,13 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Null koşullu işleçler?. '? []
 
-C# 6 ve sonrasında kullanılabilir, null koşullu bir operatör, yalnızca bu işlenen null olmayan bir değer olarak değerlendiriliyorsa, bir üye erişimi,`?.`veya öğe erişimi,`?[]`işlemi uygular. İşlenen `null`değerlendirilirse, işleci uygulamanın sonucu `null`. Null koşullu üye erişim işleci `?.` ELVIS işleci olarak da bilinir.
+C# 6 ve sonrasında kullanılabilir, null koşullu bir operatör, yalnızca bu işlenen null olmayan bir değer olarak değerlendiriliyorsa, bir [üye erişimi](#member-access-operator-), `?.`ya da [öğe erişimi](#indexer-operator-), `?[]`, işlem için uygular. Aksi takdirde, `null`döndürür. Yani
+
+- `a` `null`değerlendirilirse, `a?.x` veya `a?[x]` sonucu `null`.
+- `a` null olmayan olarak değerlendirilirse, `a?.x` veya `a?[x]` sonucu sırasıyla `a.x` veya `a[x]`sonucuyla aynıdır.
+
+  > [!NOTE]
+  > `a.x` veya `a[x]` bir özel durum oluşturursa, `a?.x` veya `a?[x]` null olmayan `a`için aynı özel durumu oluşturur. Örneğin, `a` null olmayan bir dizi örneğidir ve `x` `a`sınırlarının dışındaysa `a?[x]` <xref:System.IndexOutOfRangeException>oluşturur.
 
 Null koşullu işleçler kısa devre dışı. Diğer bir deyişle, bir koşullu üye veya öğe erişim işlemleri zincirindeki bir işlem `null`döndürürse, zincirin geri kalanı yürütülmez. Aşağıdaki örnekte, `A` `null` değerlendirilirse `B` değerlendirilmez ve `A` veya `B` `null`olarak değerlendirilirse `C` değerlendirilmez:
 
@@ -123,6 +129,8 @@ Aşağıdaki örnek, `?.` ve `?[]` işleçlerinin kullanımını gösterir:
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
 Yukarıdaki örnek ayrıca null [birleşim işlecini `??`](null-coalescing-operator.md) , null koşullu bir işlemin sonucu `null`sonucunu değerlendirmek üzere alternatif bir ifade belirtmek için kullanır.
+
+Null koşullu üye erişim işleci `?.` ELVIS işleci olarak da bilinir.
 
 ### <a name="thread-safe-delegate-invocation"></a>İş parçacığı açısından güvenli temsilci çağırma
 
@@ -160,7 +168,7 @@ Açık tür dönüştürmeleri gerçekleştiren [atama ifadeleri](type-testing-a
 
 ## <a name="index-from-end-operator-"></a>Bitiş işlecinden Dizin ^
 
-C# 8,0 ve sonraki sürümlerde kullanılabilen`^`işleci, öğe konumunun sıranın sonundan itibaren olduğunu gösterir. `length`bir dizi Uzunluk için, `^n` bir sıranın başından itibaren `length - n` olan öğeye işaret eder. Örneğin `^1`, sıranın son öğesine işaret eder ve `^length` bir dizinin ilk öğesine işaret eder.
+C# 8,0 ve sonraki sürümlerde kullanılabilen `^` işleci, öğe konumunun sıranın sonundan itibaren olduğunu gösterir. `length`bir dizi Uzunluk için, `^n` bir sıranın başından itibaren `length - n` olan öğeye işaret eder. Örneğin `^1`, sıranın son öğesine işaret eder ve `^length` bir dizinin ilk öğesine işaret eder.
 
 [!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
 
@@ -170,7 +178,7 @@ Ayrıca, dizin aralığı oluşturmak için `^` işlecini [Aralık işleciyle](#
 
 ## <a name="range-operator-"></a>Aralık işleci..
 
-C# 8,0 ve sonraki sürümlerde kullanılabilen`..`işleci, işlenen bir dizin aralığının başlangıcını ve sonunu belirtir. Sol işlenen bir aralığın *kapsamlı* bir başlangıcı olur. Sağ işlenen bir aralığın *dışlamalı* bir sonu. Her iki işlenen de, aşağıdaki örnekte gösterildiği gibi, bir sıranın başından veya sonundan bir dizin olabilir:
+C# 8,0 ve sonraki sürümlerde kullanılabilen `..` işleci, işlenen bir dizin aralığının başlangıcını ve sonunu belirtir. Sol işlenen bir aralığın *kapsamlı* bir başlangıcı olur. Sağ işlenen bir aralığın *dışlamalı* bir sonu. Her iki işlenen de, aşağıdaki örnekte gösterildiği gibi, bir sıranın başından veya sonundan bir dizin olabilir:
 
 [!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
 

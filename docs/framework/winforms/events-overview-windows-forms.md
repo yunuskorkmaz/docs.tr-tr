@@ -9,22 +9,22 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 92942066b5f08ada0154781ae54b5d8494944ca1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4abcf20b851f349a2b5df78c1fe1d15f729a5462
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963471"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344998"
 ---
 # <a name="events-overview-windows-forms"></a>Olaylara Genel Bakış (Windows Forms)
 Bir olay, kod içinde "tanıtıcı" veya "işleme" için yanıt verebildiği bir eylemdir. Olaylar, fareyi tıklatmak veya bir tuşa basmak gibi bir kullanıcı eylemiyle oluşturulabilir; program koduna göre; veya sistem.
 
  Olay odaklı uygulamalar, bir olaya yanıt olarak kod yürütür. Her form ve denetim, programlama yoluyla programlayabilirsiniz, önceden tanımlanmış bir olay kümesi sunar. Bu olaylardan biri gerçekleşirse ve ilişkili olay işleyicisinde kod varsa, bu kod çağrılır.
 
- Bir nesne tarafından gerçekleştirilen olay türleri farklılık gösterir, ancak çoğu denetim için çok sayıda tür vardır. Örneğin, çoğu nesne bir <xref:System.Windows.Forms.Control.Click> olayı işleymeyecektir. Kullanıcı bir formu tıklarsa, formun <xref:System.Windows.Forms.Control.Click> olay işleyicisindeki kod yürütülür.
+ Bir nesne tarafından gerçekleştirilen olay türleri farklılık gösterir, ancak çoğu denetim için çok sayıda tür vardır. Örneğin, çoğu nesne <xref:System.Windows.Forms.Control.Click> olayını işler. Kullanıcı bir formu tıklarsa, formun <xref:System.Windows.Forms.Control.Click> olay işleyicisindeki kod yürütülür.
 
 > [!NOTE]
-> Birçok olay diğer olaylarla birlikte oluşur. Örneğin <xref:System.Windows.Forms.Control.DoubleClick> , olay gerçekleşme <xref:System.Windows.Forms.Control.MouseDown> <xref:System.Windows.Forms.Control.MouseUp>sırasında,, ve <xref:System.Windows.Forms.Control.Click> olayları oluşur.
+> Birçok olay diğer olaylarla birlikte oluşur. Örneğin, <xref:System.Windows.Forms.Control.DoubleClick> olayın meydana geldiğini <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseUp>ve <xref:System.Windows.Forms.Control.Click> olayları meydana gelir.
 
  Bir olayı yükseltme ve kullanma hakkında daha fazla bilgi için bkz. [Olaylar](../../standard/events/index.md).
 
@@ -33,9 +33,9 @@ Bir olay, kod içinde "tanıtıcı" veya "işleme" için yanıt verebildiği bir
 
  Bu olay modeli, olayları işlemek için kullanılan yöntemlere bağlamak için *temsilcileri* kullanır. Temsilci, diğer sınıfların bir işleyici yöntemi belirterek olay bildirimine kaydolmalarını sağlar. Olay gerçekleştiğinde, temsilci, bağlantılı yöntemi çağırır. Temsilcilerin nasıl tanımlanacağı hakkında daha fazla bilgi için bkz. [Olaylar](../../standard/events/index.md).
 
- Temsilciler tek bir yönteme veya çok noktaya yayın olarak adlandırılan birden fazla yönteme bağlanabilir. Bir olay için temsilci oluştururken, sizin (veya Windows) genellikle bir çok noktaya yayın olayı oluşturur. Nadir bir özel durum, her olay için birden çok kez mantıksal olarak tekrarlanacak belirli bir yordam (iletişim kutusu görüntüleme gibi) ile sonuçlanan bir olay olabilir. Çok noktaya yayın temsilcisi oluşturma hakkında daha fazla bilgi için bkz [. nasıl yapılır: Temsilcileri birleştirin (çok noktaya yayın](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)temsilcileri).
+Temsilciler tek bir yönteme veya çok noktaya yayın olarak adlandırılan birden fazla yönteme bağlanabilir. Bir olay için temsilci oluştururken, sizin (veya Windows) genellikle bir çok noktaya yayın olayı oluşturur. Nadir bir özel durum, her olay için birden çok kez mantıksal olarak tekrarlanacak belirli bir yordam (iletişim kutusu görüntüleme gibi) ile sonuçlanan bir olay olabilir. Çok noktaya yayın temsilcisi oluşturma hakkında daha fazla bilgi için bkz. [temsilcileri birleştirme (çok noktaya yayın temsilcileri)](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).
 
- Çok noktaya yayın temsilcisi, bağlandığı yöntemlerin çağırma listesini tutar. Çok noktaya yayın temsilcisi, <xref:System.Delegate.Combine%2A> çağırma listesine bir yöntem ekleme <xref:System.Delegate.Remove%2A> ve bunu kaldırma yöntemine yönelik bir yöntemi destekler.
+ Çok noktaya yayın temsilcisi, bağlandığı yöntemlerin çağırma listesini tutar. Çok noktaya yayın temsilcisi, çağırma listesine bir yöntem eklemek için bir <xref:System.Delegate.Combine%2A> yöntemini ve bunu kaldırmak için bir <xref:System.Delegate.Remove%2A> yöntemini destekler.
 
  Uygulama tarafından bir olay kaydedildiğinde denetim, olayı bu olay için temsilciyi çağırarak başlatır. İçindeki temsilci, sırasıyla, bağlantılı yöntemi çağırır. En yaygın durumda (çok noktaya yayın temsilcisi), temsilci, tek-çok bildirimi sağlayan çağrı listesindeki her bir bağlantılı yöntemi çağırır. Bu strateji, denetimin olay bildirimi için hedef nesnelerin bir listesini tutması gerekmediği anlamına gelir; temsilci tüm kaydı ve bildirimleri işler.
 

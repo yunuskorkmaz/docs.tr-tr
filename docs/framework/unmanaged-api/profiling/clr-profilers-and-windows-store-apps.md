@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: da5942f9a2138a536d158f75a6977d20bf31b41c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a3e60f715c4c61e671980e4f36813e864469d28e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140391"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344764"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR Profil Oluşturucular ve Microsoft Store Uygulamaları
 
@@ -53,7 +53,7 @@ Bu, profil oluşturucunun analiz olduğu uygulamadır. Genellikle, bu uygulaman�
 
 **Profil oluşturucu DLL 'SI**
 
-Bu, çözümlenmekte olan uygulamanın işlem alanına yüklenen bileşendir. Profiler "Agent" olarak da bilinen bu bileşen [ICorProfilerCallback](icorprofilercallback-interface.md)[ICorProfilerCallback arabirimi](icorprofilercallback-interface.md)(2, 3, vb.) arabirimlerini uygular ve ile Ilgili verileri toplamak Için [ICorProfilerInfo](icorprofilerinfo-interface.md)(2, 3, vb.) arabirimlerini kullanır. analiz edilen uygulama ve potansiyel olarak uygulamanın davranışının özellikleri.
+Bu, çözümlenmekte olan uygulamanın işlem alanına yüklenen bileşendir. Profiler "Agent" olarak da bilinen bu bileşen [ICorProfilerCallback](icorprofilercallback-interface.md)[ICorProfilerCallback arabirimi](icorprofilercallback-interface.md)(2, 3, vb.) arabirimlerini uygular ve çözümlenen uygulamayla ilgili verileri toplamak ve uygulamanın davranışının potansiyel olarak değiştirilmesi Için [ICorProfilerInfo](icorprofilerinfo-interface.md)(2, 3, vb.) arabirimlerini kullanır.
 
 **Profiler kullanıcı arabirimi**
 
@@ -112,7 +112,7 @@ Genellikle, Windows Mağazası uygulamalarının diskte yalnızca sınırlı bir
 
 ### <a name="startup-load"></a>Başlangıç yükü
 
-Genellikle, bir masaüstü uygulamasında, profil oluşturucu UI, gerekli CLR profil oluşturma API 'SI ortam değişkenlerini (örneğin, `COR_PROFILER`, `COR_ENABLE_PROFILING`ve `COR_PROFILER_PATH`) içeren bir ortam bloğu başlatarak profil oluşturucu DLL 'nizin başlangıç yüküne sorar ve sonra yeni bir Bu ortam bloğuyla işleme. Aynı durum Windows Mağazası uygulamaları için de geçerlidir, ancak mekanizmalar farklıdır.
+Genellikle, bir masaüstü uygulamasında, profil oluşturucu Kullanıcı arabiriminiz, gerekli CLR profil oluşturma API 'SI ortam değişkenlerini (yani, `COR_PROFILER`, `COR_ENABLE_PROFILING`ve `COR_PROFILER_PATH`) içeren bir ortam bloğunu başlatarak profil oluşturucu DLL 'nizin başlangıç yüküne sorar ve sonra bu ortam bloğu ile yeni bir işlem oluşturur. Aynı durum Windows Mağazası uygulamaları için de geçerlidir, ancak mekanizmalar farklıdır.
 
 **Yükseltilmiş ayrıcalıklarla çalıştırma**
 
@@ -147,7 +147,7 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
 
 Sağ almanız gereken birkaç öğe vardır:
 
-- `packageFullName`, paketler üzerinde yineleirken ve yakalayıp `package.Id.FullName` olarak belirlenebilir.
+- `packageFullName`, paketler ve yakalayıp `package.Id.FullName`üzerinde yineleme sırasında belirlenebilir.
 
 - `debuggerCommandLine` biraz daha ilginç. Özel ortam bloğunu Windows Mağazası uygulamasına geçirmek için, kendi uyarlaması kukla hata ayıklayıcıyı yazmanız gerekir. Windows Mağazası uygulaması askıya alındı ve bu örnekte olduğu gibi bir komut satırı ile hata ayıklayıcıyı başlatarak hata ayıklayıcıyı iliştirir:
 
@@ -155,7 +155,7 @@ Sağ almanız gereken birkaç öğe vardır:
     MyDummyDebugger.exe -p 1336 -tid 1424
     ```
 
-     `-p 1336`, Windows Mağazası uygulamasının 1336 Işlem KIMLIĞI olduğu ve `-tid 1424` olduğu anlamına gelir. Iş parçacığı KIMLIĞI 1424, askıya alınan iş parçacığıdır. Kukla hata ayıklayıcı, komut satırından ThreadID öğesini ayrıştırır, bu iş parçacığını sürdürür ve sonra çıkın.
+     `-p 1336`, Windows Mağazası uygulamasının 1336 Işlem KIMLIĞI olduğu ve `-tid 1424`, Iş parçacığı KIMLIĞI 1424 ' nin askıya alındığı iş parçacığı olduğu anlamına gelir. Kukla hata ayıklayıcı, komut satırından ThreadID öğesini ayrıştırır, bu iş parçacığını sürdürür ve sonra çıkın.
 
      Bunu yapmak için örnek C++ kod aşağıda verilmiştir (hata denetimi eklediğinizden emin olun!):
 
@@ -251,7 +251,7 @@ Bu nedenle, Windows Mağazası uygulaması son olarak profil oluşturucu DLL 'ni
 
 Windows API 'sine göz atarken, her API 'nin masaüstü uygulamaları, Windows Mağazası uygulamaları veya her ikisi için de geçerli olduğunu fark edeceksiniz. Örneğin, [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) Işlevi belgelerinin **gereksinimler** bölümü, işlevin yalnızca masaüstü uygulamaları için geçerli olduğunu gösterir. Buna karşılık, [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) işlevi hem masaüstü uygulamaları hem de Windows Mağazası uygulamaları için kullanılabilir.
 
-Profil oluşturucu DLL 'nizi geliştirirken, bunu bir Windows Mağazası uygulaması gibi değerlendirin ve yalnızca Windows Mağazası uygulamaları için kullanılabilir olarak belgelenen API 'Leri kullanın. Bağımlılıklarınızı çözümleyin (örneğin, profil oluşturucu DLL 'niz denetlemek için `link /dump /imports` ' ı çalıştırabilir) ve sonra bağımlılıklarınızın hangilerinin tamam olduğunu ve ne olmadığını görmek için docs ' ı arayın. Çoğu durumda, ihlal, güvenli olarak belgelenen API 'nin daha yeni bir biçimiyle değiştirilerek (örneğin, [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) , [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)ile değiştiriliyor) düzeltilebilir.
+Profil oluşturucu DLL 'nizi geliştirirken, bunu bir Windows Mağazası uygulaması gibi değerlendirin ve yalnızca Windows Mağazası uygulamaları için kullanılabilir olarak belgelenen API 'Leri kullanın. Bağımlılıklarınızı çözümleyin (örneğin, profil oluşturucu DLL 'niz denetlemek için `link /dump /imports` çalıştırabilir) ve sonra bağımlılıklarınızın hangilerinin tamam olduğunu ve ne olmadığını görmek için docs ' ı arayın. Çoğu durumda, ihlal, güvenli olarak belgelenen API 'nin daha yeni bir biçimiyle değiştirilerek (örneğin, [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) , [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)ile değiştiriliyor) düzeltilebilir.
 
 Profil oluşturucu DLL 'nizin yalnızca masaüstü uygulamaları için uygulanan bazı API 'Leri çağırırsa ve profil oluşturucu DLL 'niz bir Windows Mağazası uygulaması içine yüklendiğinde bile çalışmaya çalışabileceğini fark edebilirsiniz. Bir Windows Mağazası uygulama işlemine yüklendiğinde profil oluşturucu DLL 'inizdeki Windows Mağazası uygulamalarıyla birlikte kullanılmak üzere belgelenmemiş API kullanmanın riskli olduğunu unutmayın:
 
@@ -285,7 +285,7 @@ Ancak, dosyalar hala yerinde, daha sınırlı bir biçimde albederdir. Olaylar d
 
 Verilerinizin büyük olasılıkla profil oluşturucu DLL ve Profil Oluşturucu kullanıcı arabirimi arasında dosyalar aracılığıyla geçiş yapılır. Anahtar profil oluşturucu DLL 'nizin (bir Windows Mağazası uygulaması bağlamında) ve Profil Oluşturucu kullanıcı arabiriminin okuma ve yazma erişimine sahip olduğu bir dosya konumu seçmeniz gerekir. Örneğin, geçici klasör yolu, hem profil oluşturucu DLL 'SI hem de profil oluşturucu Kullanıcı arabirimlerinizin erişebileceği, ancak başka bir Windows Mağazası uygulama paketinin erişebileceği bir konumdur (Bu nedenle, diğer Windows Mağazası uygulama paketlerinden oturum açmak için tüm bilgileri koruma).
 
-Profil Oluşturucu UI ve Profiler DLL 'niz bu yolu bağımsız olarak belirleyebilir. Profil Oluşturucu kullanıcı arabiriminize, geçerli kullanıcı için yüklenen tüm paketler arasında yineleme yapıldığında (daha önce örnek koda bakın), geçici klasör yolunun bu kod parçacığına benzer kodla türetilebilecek `PackageId` sınıfına erişimi alır. (Her zaman olduğu gibi, kısaltma için hata denetimi atlanır.)
+Profil Oluşturucu UI ve Profiler DLL 'niz bu yolu bağımsız olarak belirleyebilir. Profil Oluşturucu kullanıcı arabiriminize, geçerli kullanıcı için yüklenen tüm paketler arasında yineleme yapıldığında (daha önce örnek koda bakın), geçici klasör yolunun bu kod parçacığına benzer kodla türetilebilecek `PackageId` sınıfına erişim elde edin. (Her zaman olduğu gibi, kısaltma için hata denetimi atlanır.)
 
 ```csharp
 // C# code for the Profiler UI.
@@ -317,7 +317,7 @@ Profil Oluşturucu kullanıcı arabiriminizdeki bu adlandırılmış olayı Wind
 
 `AppContainerNamedObjects\<acSid>\MyNamedEvent`
 
-`<acSid>`, Windows Mağazası uygulamasının AppContainer SID 'sidir. Bu konunun önceki bir bölümünde, geçerli kullanıcı için yüklenmiş paketlerin nasıl yineleneceği gösterilmektedir. Bu örnek koddan PackageID ' yi elde edebilirsiniz. PackageID 'den, `<acSid>` ' ı aşağıdakine benzer kodla elde edebilirsiniz:
+`<acSid>`, Windows Mağazası uygulamasının AppContainer SID 'sidir. Bu konunun önceki bir bölümünde, geçerli kullanıcı için yüklenmiş paketlerin nasıl yineleneceği gösterilmektedir. Bu örnek koddan PackageID ' yi elde edebilirsiniz. PackageID 'den, aşağıdakine benzer kodla `<acSid>` elde edebilirsiniz:
 
 ```csharp
 IntPtr acPSID;
@@ -342,7 +342,7 @@ Windows Çalışma Zamanı meta veri (WinMD) dosyalarının ne olduğu hakkında
 
 ### <a name="managed-and-non-managed-winmds"></a>Yönetilen ve yönetilmeyen Wınmds
 
-Bir geliştirici yeni bir Windows Çalışma Zamanı bileşen projesi oluşturmak için Visual Studio kullanıyorsa, bu projenin bir derlemesi, geliştirici tarafından yazılan meta verileri (sınıfların tür açıklamaları, arabirimler vb.) açıklayan bir WinMD dosyası üretir. Bu proje, C# veya vb dilinde yazılmış bir yönetilen dil projem Ise aynı winmd dosyası bu türlerin uygulamasını da içerir (yani, geliştiricinin kaynak kodundan derlenen tüm Il 'yi içerir). Bu tür dosyalar yönetilen WinMD dosyaları olarak bilinir. Windows Çalışma Zamanı meta verileri ve temel alınan uygulamayı içerdikleri her ikisi de ilginç hale getiriyoruz.
+Bir geliştirici yeni bir Windows Çalışma Zamanı bileşen projesi oluşturmak için Visual Studio kullanıyorsa, bu projenin bir derlemesi, geliştirici tarafından yazılan meta verileri (sınıfların tür açıklamaları, arabirimler vb.) açıklayan bir WinMD dosyası üretir. Bu proje, C# veya Visual Basic yazılmış bir yönetilen dil projem Ise aynı winmd dosyası bu türlerin uygulamasını da içerir (yani, geliştiricinin kaynak kodundan derlenen tüm Il 'yi içerir). Bu tür dosyalar yönetilen WinMD dosyaları olarak bilinir. Windows Çalışma Zamanı meta verileri ve temel alınan uygulamayı içerdikleri her ikisi de ilginç hale getiriyoruz.
 
 Buna karşılık, bir geliştirici için C++Windows çalışma zamanı bileşen projesi oluşturursa, söz konusu projenin derlemesi yalnızca meta verileri Içeren bir WinMD dosyası üretir ve uygulama ayrı bır yerel dll 'de derlenir. Benzer şekilde, Windows SDK teslim eden WinMD dosyaları, Windows 'un bir parçası olarak gelen ayrı yerel dll 'Lere derlenen uygulamayla yalnızca meta veriler içerir.
 
@@ -352,7 +352,7 @@ Aşağıdaki bilgiler, meta veri ve uygulama içeren hem yönetilen WinMDs için
 
 CLR 'nin düşünüldüğünde, tüm WinMD dosyaları modüllerdir. Bu nedenle, CLR profil oluşturma API 'si, WinMD dosyaları yüklenirken profil oluşturucu DLL 'nize ve moduleIds oldukları diğer yönetilen modüllerle aynı şekilde bildirir.
 
-Profil oluşturucu DLL 'niz, [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) yöntemini çağırarak ve [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) bayrağı için `pdwModuleFlags` output parametresini inceleyerek winmd dosyalarını diğer modüllerden ayırt edebilir. (Ve yalnızca ModuleID bir WinMD temsil ediyorsa ayarlanır.)
+Profil oluşturucu DLL 'niz, [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) yöntemini çağırarak ve [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) bayrağı için `pdwModuleFlags` çıktı parametresini inceleyerek winmd dosyalarını diğer modüllerden ayırt edebilir. (Ve yalnızca ModuleID bir WinMD temsil ediyorsa ayarlanır.)
 
 ### <a name="reading-metadata-from-winmds"></a>Wınmds 'den meta veriler okunuyor
 
@@ -360,11 +360,11 @@ Normal modüller gibi WinMD dosyaları, [meta veri API 'leri](../../../../docs/f
 
 Bu nedenle, Profil oluşturucunuz, meta veri API 'Lerini kullandığında hangi görünümde alınır: ham Windows Çalışma Zamanı görünümü veya eşlenmiş .NET Framework görünümü?  Yanıt: size ait.
 
-Bir WinMD üzerinde [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) yöntemini [çağırdığınızda, bu](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)eşlemeyi kapatmak için `dwOpenFlags` parametresinde [ofnotransform](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) ' ı ayarlamayı tercih edebilirsiniz. Aksi takdirde, varsayılan olarak eşleme etkin olur. Genellikle, profil oluşturucu DLL 'nin WinMD meta verilerinden elde ettiği dizelerin (örneğin, türlerin adları), profil oluşturucu kullanıcısına tanıdık ve doğal olarak görünmesi için bir profil oluşturucu eşlemeyi etkin tutacaktır.
+Bir WinMD üzerinde [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) yöntemini [çağırdığınızda, bu](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)eşlemeyi kapatmak Için `dwOpenFlags` parametresinde [ofnotransform](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) ayarlamayı seçebilirsiniz. Aksi takdirde, varsayılan olarak eşleme etkin olur. Genellikle, profil oluşturucu DLL 'nin WinMD meta verilerinden elde ettiği dizelerin (örneğin, türlerin adları), profil oluşturucu kullanıcısına tanıdık ve doğal olarak görünmesi için bir profil oluşturucu eşlemeyi etkin tutacaktır.
 
 ### <a name="modifying-metadata-from-winmds"></a>Wınmds 'den meta verileri değiştirme
 
-WinMDs 'de meta verileri değiştirme desteklenmiyor. Bir WinMD dosyası için [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) metodunu çağırıp `dwOpenFlags` parametresinde [ofWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) belirtirseniz veya [ımetadatayay](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)gibi yazılabilir bir meta veri arabirimine sorun yaparsanız [GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) başarısız olur. Bu, kendi araçlarını destekleyecek meta verileri (örneğin, AssemblyRefs veya yeni yöntemler eklemek için) değiştirmesi gereken, Il yeniden yazma profil oluşturucular önemli bir öneme sahiptir. Bu nedenle, [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) for First (önceki bölümde anlatıldığı gibi) öğesini denetlemeniz ve bu tür modüller üzerinde yazılabilir meta veri arabirimleri isteyip istemediğinizi sormaktan kaçının.
+WinMDs 'de meta verileri değiştirme desteklenmiyor. Bir WinMD dosyası için [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) yöntemini çağırırsanız ve `dwOpenFlags` parametresinde [ofWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) belirtirseniz veya [ımetadatayay](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)gibi yazılabilir bir meta veri arabirimine danışmanız durumunda [GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) başarısız olur. Bu, kendi araçlarını destekleyecek meta verileri (örneğin, AssemblyRefs veya yeni yöntemler eklemek için) değiştirmesi gereken, Il yeniden yazma profil oluşturucular önemli bir öneme sahiptir. Bu nedenle önce [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) denetlemeniz gerekir (önceki bölümde anlatıldığı gibi) ve bu tür modüller üzerinde yazılabilir meta veri arabirimleri sorulmaktan kaçının.
 
 ### <a name="resolving-assembly-references-with-winmds"></a>WinMDs ile derleme başvurularını çözme
 
@@ -378,11 +378,11 @@ WinMDs 'de meta verileri değiştirme desteklenmiyor. Bir WinMD dosyası için [
 
 Bellek profili oluşturma sırasında, profil oluşturucu DLL 'niz genellikle [ForceGC yöntemi](icorprofilerinfo-forcegc-method.md) yönteminin çağrılabileceği ayrı bir iş parçacığı oluşturur. Bu yeni bir şey değildir. Ancak, bir Windows Mağazası uygulamasının içinde çöp toplama işlemi yapma işleminin iş parçacığını yönetilen bir iş parçacığına dönüştürebileceği (örneğin, bu iş parçacığı için bir profil oluşturma API 'SI tehdit oluşturulacak).
 
-Bunun sonuçlarını anlamak için, CLR profil oluşturma API 'SI tarafından tanımlanan, zaman uyumlu ve zaman uyumsuz çağrılar arasındaki farklılıkları anlamak önemlidir. Bu, Windows Mağazası uygulamalarındaki zaman uyumsuz çağrılar kavramından çok farklı olduğunu unutmayın. Daha fazla bilgi için [corprof_e_unsupported_call_sequence sahip olduğumuz](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) blog gönderisine bakın.
+Bunun sonuçlarını anlamak için, CLR profil oluşturma API 'SI tarafından tanımlanan, zaman uyumlu ve zaman uyumsuz çağrılar arasındaki farklılıkları anlamak önemlidir. Bu, Windows Mağazası uygulamalarındaki zaman uyumsuz çağrılar kavramından çok farklı olduğunu unutmayın. Daha fazla bilgi için [corprof_e_unsupported_call_sequence neden yaptığımız](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) blog gönderisine bakın.
 
 İlgili nokta, Profil oluşturucunuz tarafından oluşturulan iş parçacıklarında yapılan çağrıların, profil oluşturucu DLL 'inin [ICorProfilerCallback](icorprofilercallback-interface.md) metotlarından birinin bir uygulamasının dışından yapılsa bile her zaman zaman uyumlu olarak kabul edilir. En azından, bu durum olarak kullanılır. [ForceGC yöntemine](icorprofilerinfo-forcegc-method.md)yapılan ÇAĞRıLARıNıZ nedeniyle CLR 'nin Profiler iş parçacığını yönetilen bir iş parçacığına kapatmış olduğuna göre, bu iş parçacığı artık profil oluşturucunun iş parçacığını kabul edilmiyor. Bu nedenle, CLR, bu iş parçacığı için zaman uyumlu olarak niteleyen nelerin daha sıkı bir tanımını uygular — yani bir çağrı, zaman uyumlu olarak nitelendirmek için profil oluşturucu DLL 'inin [ICorProfilerCallback](icorprofilercallback-interface.md) yöntemlerinden birinin içinden kaynaklanmalıdır.
 
-Bu uygulamada ne anlama geliyor? Çoğu [ICorProfilerInfo](icorprofilerinfo-interface.md) yöntemlerinin yalnızca zaman uyumlu olarak çağrılması güvenlidir ve aksi halde, daha sonra başarısız olur. Profil oluşturucu DLL 'niz, genellikle profil oluşturucu tarafından oluşturulan iş parçacıklarında (örneğin, [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)veya [requestdönmesi](icorprofilerinfo4-requestrevert-method.md)Için) gerçekleştirilen diğer çağrılar için [ForceGC yöntemi](icorprofilerinfo-forcegc-method.md) iş parçacığını yeniden kullanıyorsa, sorun yaşayacağız . [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) gibi zaman uyumsuz güvenli bir işlev, yönetilen iş parçacıklarında çağrıldığında özel kurallara sahiptir. (Daha fazla bilgi için bkz. Profiler Stack for the blog gönderisi [: temel bilgiler ve](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) daha fazlası.)
+Bu uygulamada ne anlama geliyor? Çoğu [ICorProfilerInfo](icorprofilerinfo-interface.md) yöntemlerinin yalnızca zaman uyumlu olarak çağrılması güvenlidir ve aksi halde, daha sonra başarısız olur. Profil oluşturucu DLL 'niz, genellikle profil oluşturucu tarafından oluşturulan iş parçacıklarında (örneğin, [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)veya [requestdönmesi](icorprofilerinfo4-requestrevert-method.md)Için) gerçekleştirilen diğer çağrılar için [ForceGC yöntemi](icorprofilerinfo-forcegc-method.md) iş parçacığını yeniden kullanıyorsa, sorun yaşamaya devam edersiniz. [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) gibi zaman uyumsuz güvenli bir işlev, yönetilen iş parçacıklarında çağrıldığında özel kurallara sahiptir. (Daha fazla bilgi için bkz. Profiler Stack for the blog gönderisi [: temel bilgiler ve](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) daha fazlası.)
 
 Bu nedenle, profil oluşturucu DLL 'nizin [ForceGC yöntemini](icorprofilerinfo-forcegc-method.md) çağırmak için oluşturduğu tüm iş parçacıklarının *yalnızca* GCS 'yi TETIKLEMENIN ve sonra GC geri çağırmaları için kullanılması önerilir. Yığın örnekleme veya ayırma gibi diğer görevleri gerçekleştirmek için profil oluşturma API 'sine çağrı gerçekleştirmemelidir.
 

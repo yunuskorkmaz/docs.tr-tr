@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation Özellik Ayrıntıları
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c534575fcf70035bc728642dbb65b05db1fd4686
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802602"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345102"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation Özellik Ayrıntıları
 
@@ -189,7 +189,7 @@ Bir akış çizelgesi etkinliği tahmin eden bir oyun uygulamak için kullanıla
 
 ## <a name="procedural-activities-sequence-if-foreach-switch-assign-dowhile-while"></a>Yordamsal Etkinlikler (sequence, IF, ForEach, Switch, Assign, DoWhile, while)
 
-Yordamsal etkinlikler, programcılara tanıdık olan kavramları kullanarak sıralı denetim akışını modellemek için bir mekanizma sağlar. Bu etkinlikler geleneksel olarak C#yapılandırılmış programlama dili yapılarını etkinleştirir ve uygun olduğunda,/vbgibi ortak yordamsal dillerle dil eşliği sağlar.
+Yordamsal etkinlikler, programcılara tanıdık olan kavramları kullanarak sıralı denetim akışını modellemek için bir mekanizma sağlar. Bu etkinlikler geleneksel olarak C# yapılandırılmış programlama dili yapılarını etkinleştirir ve uygun olduğunda, ve Visual Basic gibi ortak yordamsal dillerle dil eşliği sağlar.
 
 ### <a name="getting-started"></a>Başlarken
 
@@ -231,7 +231,7 @@ Yordamsal etkinlikler, programcılara tanıdık olan kavramları kullanarak sır
 
 ## <a name="error-handling-activities"></a>Etkinlikler işlenirken hata oluştu
 
-<xref:System.Activities.Statements.TryCatch> etkinliği, İçerilen etkinliklerin bir kümesinin yürütülmesi sırasında oluşan özel durumları yakalamak için bir mekanizma sağlar (/vb 'de C#try/catch yapısına benzer). <xref:System.Activities.Statements.TryCatch> iş akışı düzeyinde özel durum işleme sağlar. İşlenmeyen bir özel durum oluştuğunda, iş akışı iptal edilir ve finally bloğu yürütülmez. Bu davranış ile C#tutarlıdır.
+<xref:System.Activities.Statements.TryCatch> etkinliği, İçerilen etkinliklerin bir kümesinin yürütülmesi sırasında oluşan özel durumları yakalamak için bir mekanizma sağlar (ve Visual Basic ' de C# try/catch yapısına benzer). <xref:System.Activities.Statements.TryCatch> iş akışı düzeyinde özel durum işleme sağlar. İşlenmeyen bir özel durum oluştuğunda, iş akışı iptal edilir ve finally bloğu yürütülmez. Bu davranış ile C#tutarlıdır.
 
 ### <a name="getting-started"></a>Başlarken
 

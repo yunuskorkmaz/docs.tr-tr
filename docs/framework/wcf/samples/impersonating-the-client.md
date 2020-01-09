@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 40bde7d9bd2735dfd6f1a18f9359533db0e11724
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0c262d8b5460f236ef0429154ae337c7adf96714
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989833"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338708"
 ---
 # <a name="impersonating-the-client"></a>İstemci Kimliğine Bürünme
 Kimliğe bürünme örneği, hizmetin çağıran adına sistem kaynaklarına erişebilmesi için çağıran uygulamanın nasıl taklit edilebilir olduğunu gösterir.  
@@ -21,7 +21,7 @@ Kimliğe bürünme örneği, hizmetin çağıran adına sistem kaynaklarına eri
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Hizmet kodu, hizmette `Add` yöntemi aşağıdaki örnek kodda gösterildiği <xref:System.ServiceModel.OperationBehaviorAttribute> gibi kullanarak çağıran tarafından taklit edilecek şekilde değiştirilmiştir.  
+ Hizmet kodu, hizmet üzerindeki `Add` yöntemi, aşağıdaki örnek kodda gösterildiği gibi <xref:System.ServiceModel.OperationBehaviorAttribute> kullanarak çağıranı kimliğine bürünür gibi değiştirilmiştir.  
   
 ```csharp
 [OperationBehavior(Impersonation = ImpersonationOption.Required)]  
@@ -35,9 +35,9 @@ public double Add(double n1, double n2)
 }  
 ```  
   
- Sonuç olarak, çalışan iş parçacığının güvenlik bağlamı, `Add` yöntemi girmeden ve yönteminden çıkmadan geri döndürülmeden önce çağıranın kimliğine bürünülecek.  
+ Sonuç olarak, yürütülen iş parçacığının güvenlik bağlamı, `Add` yöntemine girmeden önce çağıranın kimliğine bürünmek ve yöntemden çıkmadan geri döndürülmek üzere çağrılır.  
   
- Aşağıdaki örnek kodda gösterilen yöntemi,arayanınkimliğinigösterenbiryardımcıprogramdır.`DisplayIdentityInformation`  
+ Aşağıdaki örnek kodda gösterilen `DisplayIdentityInformation` yöntemi, arayanın kimliğini görüntüleyen bir yardımcı programdır.  
   
 ```csharp
 static void DisplayIdentityInformation()  
@@ -90,7 +90,7 @@ public double Subtract(double n1, double n2)
   
  Diğer yöntemler çağıranın kimliğine bürünemez.  
   
- İstemci kodu, kimliğe bürünme düzeyini olarak <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>ayarlanacak şekilde değiştirilmiştir. İstemci, <xref:System.Security.Principal.TokenImpersonationLevel> sabit listesini kullanarak hizmet tarafından kullanılacak kimliğe bürünme düzeyini belirtir. Sabit listesi şu değerleri destekler: <xref:System.Security.Principal.TokenImpersonationLevel.None>, <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>, <xref:System.Security.Principal.TokenImpersonationLevel.Identification> <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> ve <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. Windows ACL 'leri kullanılarak korunan yerel makinedeki bir sistem kaynağına erişirken erişim denetimi gerçekleştirmek için, aşağıdaki örnek kodda gösterildiği gibi kimliğe bürünme düzeyi olarak <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>ayarlanmalıdır.  
+ İstemci kodu, kimliğe bürünme düzeyini <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>olarak ayarlanacak şekilde değiştirilmiştir. İstemci, <xref:System.Security.Principal.TokenImpersonationLevel> numaralandırması kullanarak hizmet tarafından kullanılacak kimliğe bürünme düzeyini belirtir. Sabit listesi şu değerleri destekler: <xref:System.Security.Principal.TokenImpersonationLevel.None>, <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>, <xref:System.Security.Principal.TokenImpersonationLevel.Identification>, <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> ve <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. Windows ACL 'Leri kullanılarak korunan yerel makinedeki bir sistem kaynağına erişirken erişim denetimi gerçekleştirmek için, aşağıdaki örnek kodda gösterildiği gibi kimliğe bürünme düzeyi <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>olarak ayarlanmalıdır.  
   
 ```csharp
 // Create a client with given client endpoint configuration  
@@ -102,10 +102,10 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Örneği çalıştırdığınızda, işlem istekleri ve yanıtları hem hizmet hem de istemci konsol penceresinde görüntülenir. Hizmeti ve istemciyi kapatmak için her bir konsol penceresinde ENTER tuşuna basın.  
   
 > [!NOTE]
-> Hizmetin bir yönetim hesabı altında çalışması veya altında çalıştığı hesaba, `http://localhost:8000/ServiceModelSamples` URI 'yi http katmanıyla kaydetmek için haklar verilmelidir. Bu tür haklar, [Httpcfg. exe aracı](https://go.microsoft.com/fwlink/?LinkId=95010)kullanılarak bir [ad alanı ayırması](https://go.microsoft.com/fwlink/?LinkId=95012) ayarlanarak verilebilir.  
+> Hizmet bir yönetici hesabı altında çalışmalıdır veya altında çalıştığı hesaba HTTP katmanıyla `http://localhost:8000/ServiceModelSamples` URI 'sini kaydetmek için haklar verilmelidir. Bu tür haklar, [Httpcfg. exe aracı](https://go.microsoft.com/fwlink/?LinkId=95010)kullanılarak bir [ad alanı ayırması](https://go.microsoft.com/fwlink/?LinkId=95012) ayarlanarak verilebilir.  
   
 > [!NOTE]
-> Çalıştıran [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]bilgisayarlarda, kimliğe bürünme yalnızca Host. exe uygulamasının kimliğe bürünme ayrıcalığına sahip olması durumunda desteklenir. (Varsayılan olarak, yalnızca Yöneticiler bu izne sahiptir.) Bu ayrıcalığı hizmetin çalıştığı bir hesaba eklemek için, **Yönetimsel Araçlar**' a gidin, **yerel güvenlik ilkesi**' ni açın, **Yerel Ilkeler**' i açın, **Kullanıcı hakları ataması**' nı seçin ve **sonra istemcinin özelliklerini Al ' ı seçin.** Kullanıcı veya grup eklemek için kimlik doğrulaması ve çift tıklama **özellikleri** .  
+> Windows Server 2003 çalıştıran bilgisayarlarda, kimliğe bürünme yalnızca Host. exe uygulamasının kimliğe bürünme ayrıcalığına sahip olması durumunda desteklenir. (Varsayılan olarak, yalnızca Yöneticiler bu izne sahiptir.) Bu ayrıcalığı hizmetin çalıştığı bir hesaba eklemek için, **Yönetimsel Araçlar**' a gidin, **yerel güvenlik ilkesi**' ni açın, **Yerel Ilkeler**' i açın, **Kullanıcı hakları ataması**' nı seçin ve **kimlik doğrulamasından sonra istemcinin özelliklerini al** ' ı seçin ve **Özellikler** ' i çift tıklatarak bir kullanıcı veya grup ekleyin.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   

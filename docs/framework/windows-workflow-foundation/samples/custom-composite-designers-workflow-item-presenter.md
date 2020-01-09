@@ -2,19 +2,18 @@
 title: Özel Bileşik Tasarımcılar - İş Akışı Öğesi Sunucu
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 31dfae70a8b95bdfd457efe7a20ce44c2ba9c61f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: d1047b8be35545e83eaa8788b53751b6b0056984
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715191"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338049"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Özel Bileşik Tasarımcılar - İş Akışı Öğesi Sunucu
+
 <xref:System.Activities.Presentation.WorkflowItemPresenter>, WF Tasarımcısı programlama modelinde, rastgele bir etkinliğin yerleştirilebileceği bir "bırakma bölgesi" oluşturulmasına izin veren bir anahtar türüdür. Bu örnek, "bırakma bölgesi" gibi yüzeylere sahip bir etkinlik tasarımcısının nasıl oluşturulacağını gösterir.
 
- Bu örnek şunları gösterir:
-
-## <a name="demonstrates"></a>Gösterir
+Bu örnek şunları gösterir:
 
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>ile özel etkinlik Tasarımcısı oluşturma.
 
@@ -23,7 +22,8 @@ ms.locfileid: "74715191"
 - Yeniden barındırılan araç kutusunu bildirimli ve imperatively olarak programlama.
 
 ## <a name="sample-details"></a>Örnek Ayrıntılar
- Bu örnek için kod şunu gösterir:
+
+Bu örnek için kod şunu gösterir:
 
 - Özel etkinlik Tasarımcısı `SimpleNativeActivity` sınıfı için oluşturulmuştur.
 
@@ -65,21 +65,21 @@ ms.locfileid: "74715191"
 
  `ModelItem.Body`bağlamak için WPF veri bağlamasının kullanımını göz önünde edin. `ModelItem`, tasarımcı 'nın, bu örnekte **SimpleNativeActivity**' de kullanılan temel nesneye başvuran <xref:System.Activities.Presentation.ActivityDesigner> özelliğidir.
 
-#### <a name="to-setup-build-and-run-the-sample"></a>Örneği kurmak, derlemek ve çalıştırmak için
+## <a name="set-up-build-and-run-the-sample"></a>Örneği kurma, oluşturma ve çalıştırma
 
-1. Visual Studio 2010 ' de çözümü açın.
+1. Visual Studio içinde çözümü açın.
 
-2. Uygulamayı derlemek ve çalıştırmak için F5 tuşuna basın.
+2. Uygulamayı derlemek ve çalıştırmak için **F5** tuşuna basın.
 
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
-> `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
-> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
-  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>

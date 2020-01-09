@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: 4c819bff50e6644a733374e9863d670d3323ee68
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ef7057ad19fd34750bd15d358e9c1ebb1289cd44
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449528"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338059"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls Yöntemi
 Belirtilen `TypeDef`tarafından uygulanan tüm arabirimleri numaralandırır. 
@@ -48,7 +48,7 @@ HRESULT EnumInterfaceImpls (
  dışı MethodDef belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- 'ndaki `rImpls` dizisinin en büyük boyutu.  
+ 'ndaki `rImpls` dizisinin uzunluk üst sınırı.  
   
  `pcImpls`  
  dışı `rImpls`' de döndürülen gerçek belirteç sayısı.  

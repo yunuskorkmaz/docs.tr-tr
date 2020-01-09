@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: İki Klasörün İçeriğini Karşılaştırma (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: d11299e3e36f4b6a8b837af59b1c27bb1c7aaf41
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 05031466eeafae2dc63db36e9380034ddf9cbf15
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348406"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337538"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Nasıl yapılır: Iki klasörün Içeriğini karşılaştırma (LINQ) (Visual Basic)
 
@@ -114,9 +114,9 @@ Module CompareDirs
 End Module
 ```
 
-## <a name="compiling-the-code"></a>Kod Derleme
+## <a name="compile-the-code"></a>Kod derleme
 
-System. Linq ad alanı için `Imports` ifadesiyle bir VB.NET konsol uygulaması projesi oluşturun.
+System. Linq ad alanı için `Imports` bildirimiyle bir Visual Basic konsol uygulaması projesi oluşturun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

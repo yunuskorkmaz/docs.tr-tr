@@ -1,64 +1,64 @@
 ---
-title: Örnekleri - WCF hizmetleri
+title: Hizmet örnekleri
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: 9c4c6c0083a685f2f85b01ed3a5bed377708dd13
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: afc4d20034730421d0b72659be62a64048a4c77e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425460"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345117"
 ---
 # <a name="services"></a>Hizmetler
 
-Bu bölüm, Windows Communication Foundation (WCF) hizmetlerini gösteren örnekler içerir.
+Bu bölüm Windows Communication Foundation (WCF) hizmetlerini gösteren örnekleri içerir.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
 - [Barındırma](../../../../docs/framework/wcf/feature-details/hosting.md)\
-Barındırma WCF hizmetleri gösterir.
+WCF hizmetleri barındırma gösterir.
 
 - [Hizmet birlikte çalışabilirliği](service-interoperability.md)\
-WCF ve diğer hizmet teknolojiler arasındaki etkileşim gösterilmektedir.
+WCF ve diğer hizmet teknolojileri arasındaki etkileşimi gösterir.
 
 - [Davranışlar](behaviors.md)\
-WCF hizmet davranışları gösterir.
+WCF hizmeti davranışlarını gösterir.
 
 - [Hizmet güvenliği](service-security.md)\
-WCF Hizmeti Güvenlik gösterir.
+WCF hizmeti güvenliğini gösterir.
 
-- [WCF hizmetleri için Basitleştirilmiş yapılandırma](simplified-configuration-for-wcf-services.md)\
-Uygulama ve tipik hizmeti ve WCF kullanarak istemci yapılandırma gösterilmektedir.
+- [WCF Hizmetleri Için Basitleştirilmiş yapılandırma](simplified-configuration-for-wcf-services.md)\
+WCF kullanarak tipik bir hizmetin ve istemcinin nasıl uygulanacağını ve yapılandırılacağını gösterir.
 
-- [Standart uç noktaları](usage-of-standard-endpoints.md)\
-Standart uç noktaları hizmet yapılandırma dosyalarında nasıl yapılacağı açıklanır.
+- [Standart uç noktaların kullanımı](usage-of-standard-endpoints.md)\
+Hizmet yapılandırma dosyalarında standart uç noktaların nasıl kullanılacağını gösterir.
 
-- [Genişletilmiş Koruma İlkesi](extended-protection-policy.md)\
-Genişletilmiş koruma, ADAM-de-adam (MITM) saldırılarına karşı korumaya yönelik güvenlik girişimi gösterir.
+- [Genişletilmiş koruma ilkesi](extended-protection-policy.md)\
+Orta noktadan adam (MITı) saldırılarına karşı koruma için bir güvenlik girişimi olan genişletilmiş korumayı gösterir.
 
-- [Yapılandırma kanal fabrikası](configuration-channel-factory.md)\
-Kullanımını gösteren <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>.
+- [Yapılandırma kanalı fabrikası](configuration-channel-factory.md)\
+<xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>kullanımını gösterir.
 
 - [Adresleme](addressing.md)\
-Çeşitli yönleri ve uç nokta adresleri özelliklerini gösterir.
+Uç nokta adreslerinin çeşitli yönlerini ve özelliklerini gösterir.
 
-- [Kesinliği](imperative.md)\
-Nasıl tanımlanacağını gösterir bir <xref:System.ServiceModel.WSHttpBinding> tanımlamak yerine kod kullanarak bir hizmet için `wsHttpBinding` yapılandırmasında bağlama.
+- [Kesinlik](imperative.md)\
+Yapılandırmada `wsHttpBinding` bağlamayı tanımlamak yerine kod kullanarak bir hizmet için <xref:System.ServiceModel.WSHttpBinding> tanımlamayı gösterir.
 
-- [Birden fazla anlaşma](multiple-contracts.md)\
-Bir hizmet birden fazla sözleşme gerçekleştirme ve her uygulanan sözleşmelerin ile iletişim kurmak için uç noktaları yapılandırmak nasıl gösterir.
+- [Birden çok sözleşme](multiple-contracts.md)\
+Bir hizmette birden fazla sözleşmenin nasıl uygulanacağını ve uygulanan sözleşmelerin her biriyle iletişim kurmak için uç noktaların nasıl yapılandırılacağını gösterir.
 
-- [Birden fazla uç noktası](multiple-endpoints.md)\
-Bir hizmet birden fazla uç nokta yapılandırma ve bir istemciden alınan her bir uç noktası ile iletişim kurmak nasıl gösterir.
+- [Birden çok uç nokta](multiple-endpoints.md)\
+Bir hizmette birden çok uç noktanın nasıl yapılandırılacağını ve bir istemciden gelen her uç noktayla nasıl iletişim kuracağını gösterir.
 
-- [Tek listenuri'de birden fazla uç noktası](multiple-endpoints-at-a-single-listenuri.md)\
-Birden çok uç tek bir noktada barındıran bir hizmeti gösterir `ListenUri`.
+- [Tek bir ListenUri\ birden fazla uç nokta](multiple-endpoints-at-a-single-listenuri.md)
+Tek bir `ListenUri`birden çok uç noktayı barındıran bir hizmeti gösterir.
 
-- [OperationContextScope, bozuk](operationcontextscope.md)\
-Üst bilgileri kullanarak bir WCF arama hakkında ek bilgi gönderme işlemini gösterir.
+- [OperationContextScope](operationcontextscope.md)\
+Üst bilgileri kullanarak bir WCF çağrısıyla nasıl ek bilgi gönderileceğini gösterir.
 
 - [Hizmet açıklaması](service-description.md)\
-Bir hizmet, hizmet açıklaması bilgilerini, çalışma zamanında nasıl alabileceğiniz gösterilir.
+Hizmetin çalışma zamanında hizmet açıklaması bilgilerini nasıl alabileceğinizi gösterir.
 
-- [ConcurrencyMode.Reentrant](concurrencymode-reentrant.md)\
-Yeniden girilen eşzamanlılık modu bir hizmet uygulamasına nasıl yapılacağı açıklanır.
+- [ConcurrencyMode.](concurrencymode-reentrant.md) yer\
+Bir hizmet uygulamasında yer alan eşzamanlılık modunun nasıl kullanılacağını gösterir.

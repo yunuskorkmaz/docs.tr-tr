@@ -1,5 +1,5 @@
 ---
-title: Bileşik Biçimlendirme
+title: Bileşik biçimlendirme
 ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 12666ca5ad8f223f2fba4a63a7cc7525601367a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ae0ba0bf15b6a02df5130d34d277322897826697
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091567"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338519"
 ---
-# <a name="composite-formatting"></a>Bileşik Biçimlendirme
+# <a name="composite-formatting"></a>Bileşik biçimlendirme
 
 .NET Composite biçimlendirme özelliği, giriş olarak bir nesne listesi ve bileşik biçim dizesi alır. Bir bileşik biçimlendirme dizesi, sabit metinle karışık bir şekilde listedeki nesnelere karşılık gelen, biçim öğeleri adı verilen dizinli yer tutuculardan oluşur. Biçimlendirme işlemi sonuç olarak, orijinal sabit metin ve listedeki nesnelerin dize temsillerinin karışımından oluşan bir dize oluşturur.  
   
 > [!IMPORTANT]
-> Kullandığınız dil ve dil sürümü bunları destekliyorsa, bileşik biçim dizeleri kullanmak yerine, *enterpolasyonlu dizeler* kullanabilirsiniz. Enterpolasyonlu dize, *enterpolasyonlu ifadeler*içeren bir dizedir. Her bir enterpolasyonlu ifade, ifadenin değeri ile çözümlenir ve dize atandığında sonuç dizesine dahil edilir. Daha fazla bilgi için bkz. [dize ilişkilendirmeC# (başvuru)](../../csharp/language-reference/tokens/interpolated.md) ve [enterpolasyonlu dizeler (Visual Basic Başvurusu)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+> Kullandığınız dil ve dil sürümü bunları destekliyorsa, bileşik biçim dizeleri kullanmak yerine, *enterpolasyonlu dizeler* kullanabilirsiniz. İlişkilendirilmiş dize içeren bir dizedir *ilişkilendirilmiş ifade*. Her ilişkilendirilmiş ifade ifadenin değerinin ile çözümlendi ve dize atandığında sonuç dizesinde dahil. Daha fazla bilgi için bkz. [dize ilişkilendirmeC# (başvuru)](../../csharp/language-reference/tokens/interpolated.md) ve [enterpolasyonlu dizeler (Visual Basic Başvurusu)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
 
 Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından desteklenir:  
   
@@ -81,7 +81,7 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Biçim Dizesi Bileşeni  
- İsteğe bağlı *FormatString* bileşeni, biçimlendirilen nesne türüne uygun bir biçim dizesidir. Karşılık gelen nesne bir sayısal değer ise standart veya özel bir sayısal biçim dizesi, karşılık gelen nesne bir <xref:System.DateTime> nesne ise standart veya özel tarih ve saat [biçimi dizesi ya](../../../docs/standard/base-types/enumeration-format-strings.md) da karşılık gelen nesne bir sabit listesi değeridir. *FormatString* belirtilmemişse, bir sayısal, tarih ve saat veya numaralandırma türü için genel ("G") Biçim belirleyicisi kullanılır. *FormatString* belirtilmişse, iki nokta üst üste gereklidir.  
+ İsteğe bağlı *FormatString* bileşeni, biçimlendirilen nesne türüne uygun bir biçim dizesidir. Karşılık gelen nesne bir sayısal değer ise standart veya özel sayısal biçim dizesi, karşılık gelen nesne bir <xref:System.DateTime> nesne ise standart veya özel tarih ve saat biçimi dizesi ya da karşılık gelen nesne bir numaralandırma değeri ise bir [numaralandırma biçim dizesi](../../../docs/standard/base-types/enumeration-format-strings.md) belirtin. *FormatString* belirtilmemişse, bir sayısal, tarih ve saat veya numaralandırma türü için genel ("G") Biçim belirleyicisi kullanılır. *FormatString* belirtilmişse, iki nokta üst üste gereklidir.  
   
  Aşağıdaki tablo, .NET Framework içinde bulunan, önceden tanımlanmış bir biçimlendirme dizesi kümesini destekleyen türleri ve kategorileri listeler, ve desteklenen biçimlendirme dizelerini listeleyen konulara bağlantılar sağlar. Dize biçimlendirmenin, tüm varolan türler için yeni biçimlendirme dizeleri tanımlanabilmesini mümkün kılmanın yanı sıra uygulamada tanımlanmış bir tür tarafından desteklenen bir biçimlendirme dizesi kümesinin tanımlanabilmesine olanak veren genişletilebilir bir mekanizma olduğuna dikkat edin. Daha fazla bilgi için <xref:System.IFormattable> ve <xref:System.ICustomFormatter> arabirimi konularına bakın.  
   

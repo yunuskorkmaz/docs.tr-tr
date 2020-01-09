@@ -2,12 +2,12 @@
 title: Nasıl yapılır makaleleri (C# kılavuz)
 description: Hızlı ipuçları ve kısa, odaklanmış kod örnekleri koleksiyonu
 ms.date: 12/20/2017
-ms.openlocfilehash: 855ea90d22174c2b7c0b53a526c47a5edbe5496d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736882"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339215"
 ---
 # <a name="how-to-c"></a>Nasıl yapılır (C#)
 
@@ -15,13 +15,13 @@ C# Kılavuzun nasıl yapılır bölümünde yaygın soruların hızlı yanıtlar
 
 ## <a name="general-c-concepts"></a>Genel C# kavramlar
 
-Yaygın C# geliştirici uygulamaları olan çeşitli ipuçları ve püf noktaları vardır.
+Yaygın C# geliştirici uygulamaları olan çeşitli ipuçları ve püf noktaları vardır:
 
 - [Nesne Başlatıcısı kullanarak nesneleri başlatın](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - Bir [Yapı ve sınıfı bir yönteme geçirme arasındaki farkları öğrenin](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [İşleç aşırı yüklemesi kullanın](../language-reference/operators/operator-overloading.md).
 - [Özel bir genişletme yöntemi uygulayın ve çağırın](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
-- Programcılar C# de [`My` ad alanını vb. kullanmak](../programming-guide/namespaces/how-to-use-the-my-namespace.md)isteyebilir.
+- Programcılar C# bile [Visual Basic `My` ad alanını kullanmak](../programming-guide/namespaces/how-to-use-the-my-namespace.md)isteyebilir.
 - [Uzantı yöntemlerini kullanarak `enum` türü için yeni bir yöntem oluşturun](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ### <a name="class-and-struct-members"></a>Sınıf ve yapı üyeleri

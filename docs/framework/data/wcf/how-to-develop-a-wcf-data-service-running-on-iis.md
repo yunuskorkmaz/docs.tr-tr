@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 684361dbb97e70296a3061f71102662023f88d9a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5c75425783d3468ac42ef7cb32cd9c93e812192a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800518"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338343"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Nasıl yapılır: IIS 'de çalışan bir WCF veri hizmeti geliştirme
 
@@ -37,7 +37,7 @@ Hizmeti oluşturduktan sonra, veri hizmeti kaynaklarına açıkça erişim sağl
 
 4. Projenin adı olarak `NorthwindService` girin.
 
-5. **Tamam**'a tıklayın.
+5. **Tamam**'ı tıklatın.
 
 6. **Proje** menüsünde, **NorthwindService özellikleri**' ni seçin.
 
@@ -132,7 +132,7 @@ Hizmeti oluşturduktan sonra, veri hizmeti kaynaklarına açıkça erişim sağl
 
 5. Aşağıdaki adımlardan birini gerçekleştirerek veri modelini veritabanına bağlayın ve ardından **İleri**' ye tıklayın:
 
-    - Zaten yapılandırılmış bir veritabanı bağlantınız yoksa **Yeni bağlantı** ' ya tıklayın ve yeni bir bağlantı oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: SQL Server veritabanlarına bağlantı oluşturma](https://go.microsoft.com/fwlink/?LinkId=123631). Bu SQL Server örneğine Northwind örnek veritabanının eklenmiş olması gerekir.
+    - Zaten yapılandırılmış bir veritabanı bağlantınız yoksa **Yeni bağlantı** ' ya tıklayın ve yeni bir bağlantı oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: SQL Server veritabanlarına bağlantı oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Bu SQL Server örneğine Northwind örnek veritabanının eklenmiş olması gerekir.
 
          \- veya -
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 0137066b3a351d60bf1cc2e06640030ba1216d03
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: f853663bef4dd0de7ac61e706dedf8c6a19b5b51
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960066"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545017"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework sistem gereksinimleri
 
@@ -43,7 +43,7 @@ Bu konudaki tablolar, aşağıdaki .NET Framework sürümleri için donanım, i�
 | **İşlemci**            | 1 GHz  |
 | **KOÇ**                  | 512 MB |
 | **Disk alanı (minimum)** |        |
-| 32 bit:                   | 4,5 GB |
+| 32 bit                   | 4,5 GB |
 | 64 bit                   | 4,5 GB |
 
 ## <a name="installation-requirements"></a>Yükleme gereksinimleri
@@ -72,13 +72,13 @@ Bu konudaki tablolar, aşağıdaki .NET Framework sürümleri için donanım, i�
 
 - Windows 7 sistemlerinde, .NET Framework Windows 7 SP1 gerektirir. Windows 7 ' de çalışıyorsanız ve henüz Service Pack 1 ' i yüklemediyseniz, .NET Framework yüklemeden önce bunu yapmanız gerekir.
 
-- .NET Framework 4,5, Windows Önyükleme Ortamı (Windows PE) üzerinde desteklenir. Tüm özellikler Windows PE'de desteklenmez.
+- .NET Framework 4,5, Windows Önyükleme Ortamı (Windows PE) üzerinde desteklenir. Tüm özellikler Windows PE 'de desteklenmez.
 
 - .NET Framework 4 Ayrıca ıA64 platformunu destekler.
 
 - Tüm platformlar için en son Windows hizmet paketine yükseltmenizi ve en iyi uyumluluk ve güvenliği sağlamak üzere [Windows Update](https://support.microsoft.com/help/12373/windows-update-faq) ' dan kullanılabilen kritik güncelleştirmeleri yüklemenizi öneririz.
 
-- 64 bit işletim sistemlerinde .NET Framework, hem WOW64 'Ü (64 bit makinede 32 bit işleme) ve | Yerel 64 bit işleme.
+- 64 bit işletim sistemlerinde .NET Framework, hem WOW64 'Ü (64 bit makinede 32 bit işleme) hem de yerel 64-bit işleme destekler.
 
 ## <a name="supported-server-operating-systems"></a>Desteklenen sunucu işletim sistemleri
 
@@ -96,7 +96,7 @@ Bu konudaki tablolar, aşağıdaki .NET Framework sürümleri için donanım, i�
 
  **Notlar:**
 
-- Windows Server 2012 .NET Framework 4,5 içerir, bu yüzden ayrı olarak yüklemek zorunda kalmazsınız. Benzer şekilde, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] .NET Framework 4.5.1 içerir.
+- Windows Server 2012 .NET Framework 4,5 içerir, bu yüzden ayrı olarak yüklemek zorunda kalmazsınız. Benzer şekilde, Windows Server 2012 R2 .NET Framework 4.5.1 içerir.
 
 - .NET Framework, Windows Server 2008 R2 SP1 veya sonraki sürümleri ile sunucu çekirdeği rolü için sınırlı desteğe sahiptir. Desteklenmeyen API 'lerin listesi için bkz. [sunucu çekirdeği .net işlevleri](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)) .
 
@@ -104,9 +104,9 @@ Bu konudaki tablolar, aşağıdaki .NET Framework sürümleri için donanım, i�
 
 - Windows Server 2008 SP2 'de, .NET Framework sunucu çekirdeği rolünde desteklenmez.
 
-- Tüm platformlar için en iyi uyumluluk ve güvenliği sağlamak üzere [Windows Update](https://support.microsoft.com/help/12373/windows-update-faq) ' de bulunan en son Windows hizmet paketine ve kritik güncelleştirmelere yükseltmenizi öneririz. Bazı işletim sistemlerinde en son Windows Hizmet Paketi'nin yüklenmesi gerekebilir.
+- Tüm platformlar için en iyi uyumluluk ve güvenliği sağlamak üzere [Windows Update](https://support.microsoft.com/help/12373/windows-update-faq) ' de bulunan en son Windows hizmet paketine ve kritik güncelleştirmelere yükseltmenizi öneririz. Bazı işletim sistemlerinde en son Windows hizmet paketi yüklemesi gerekebilir.
 
-- 64-bit işletim sistemlerinde .NET Framework, WOW64'ü (64-bit makinede 32-bit işleme) ve yerel 64-bit işlemeyi destekler.
+- 64 bit işletim sistemlerinde .NET Framework, hem WOW64 'Ü (64 bit makinede 32 bit işleme) hem de yerel 64-bit işleme destekler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

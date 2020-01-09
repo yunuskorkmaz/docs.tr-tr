@@ -1,17 +1,17 @@
 ---
-title: Dilimler (F#)
-description: Mevcut F# veri türleri için dilimleri kullanma ve diğer veri türleri için kendi dilimlerinizi tanımlama hakkında bilgi edinin.
-ms.date: 01/22/2019
-ms.openlocfilehash: 2f7b87cda87aad1fdac05b4e14b16f454f8c0461
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+title: Dilimler
+description: Mevcut F# veri türleri için dilimleri kullanmayı ve diğer veri türleri için kendi dilimlerinizi nasıl tanımlayacağınızı öğrenin.
+ms.date: 12/23/2019
+ms.openlocfilehash: 3911139c7ce656043817eb23d30f3686555b6efe
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733381"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545107"
 ---
 # <a name="slices"></a>Dilimler
 
-' F#De, bir dilim veri türünün bir alt kümesidir. Veri türünün bir dilimini alabilmesi için, veri türü bir `GetSlice` yöntemi ya da kapsam içinde olan bir [tür uzantısı](type-extensions.md) içinde tanımlanmalıdır. Bu makalede, mevcut F# türlerden dilimlerin nasıl alınacağını ve kendinizinkini nasıl tanımlayabileceğiniz açıklanır.
+' F#De, bir dilim, tanımında veya kapsam içi [tür uzantısında](type-extensions.md)`GetSlice` yöntemi olan herhangi bir veri türünün alt kümesidir. En yaygın olarak F# diziler ve listelerle kullanılır. Bu makalede, mevcut F# türlerden dilimlerin nasıl yapılacağı ve kendi dilimlerinizi nasıl tanımlayabileceğiniz açıklanır.
 
 Dilimler, [Dizin oluşturuculardan](./members/indexed-properties.md)benzerdir, ancak temel alınan veri yapısından tek bir değer vermek yerine birden çok tane oluşur.
 
@@ -89,7 +89,7 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-Çekirdek F# kitaplık, 3B diziler için`GetSlice`tanımlamaz. Daha fazla boyut için bu veya diğer dizileri dilimlemek istiyorsanız `GetSlice` üyesini kendiniz tanımlamanız gerekir.
+F# Çekirdek kitaplık Şu anda 3B diziler için `GetSlice` tanımlamıyor. 3B dizilerini veya daha fazla boyutun diğer dizilerini dilimlemek isterseniz, `GetSlice` üyesini kendiniz tanımlayın.
 
 ## <a name="defining-slices-for-other-data-structures"></a>Diğer veri yapıları için dilimleri tanımlama
 
@@ -140,6 +140,17 @@ printSpan sp.[0..] // [|1; 2; 3; 4; 5|]
 printSpan sp.[..5] // [|1; 2; 3; 4; 5|]
 printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..2] // |2; 3|]
+```
+
+## <a name="built-in-f-slices-are-end-inclusive"></a>Yerleşik F# dilimler son kapsamlı
+
+İçindeki F# tüm iç dilimler uçtan uca; diğer bir deyişle, üst sınır dilimde yer alır. Dizin `x` başlayan ve Dizin `y`biten belirli bir dilim için, sonuçta elde edilen dilim *Bu değeri içerir* .
+
+```fsharp
+// Define a new list
+let xs = [1 .. 10]
+
+printfn "%A" xs.[2..5] // Includes the 5th index
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.

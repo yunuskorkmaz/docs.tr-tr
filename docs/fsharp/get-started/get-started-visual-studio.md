@@ -1,69 +1,75 @@
 ---
 title: Visual Studio F# 'da kullanmaya başlayın
 description: Visual Studio ile nasıl F# kullanacağınızı öğrenin.
-ms.date: 07/03/2018
-ms.openlocfilehash: 80b4fc5b7631eace719832fe32003cad578ead27
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.date: 12/20/2019
+ms.openlocfilehash: 9bf47fb08ea3df0aa0d5064043d94f030d45d568
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552829"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337343"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Visual Studio F# 'da kullanmaya başlayın
 
-F#Visual Studio IDE F# 'de de görsel araç desteklenir.
+F#Visual Studio tümleşik F# geliştirme ORTAMıNDA (IDE) Visual araçları desteklenir.
 
-Başlamak için [Visual Studio 'nun F#ile yüklü ](install-fsharp.md#install-f-with-visual-studio)olduğundan emin olun.
+Başlamak için, [Visual Studio 'nun destek F# ile yüklü](install-fsharp.md#install-f-with-visual-studio)olduğundan emin olun.
 
-## <a name="creating-a-console-application"></a>Konsol uygulaması oluşturma
+## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
-Visual Studio 'daki en temel projelerden biri konsol uygulamasıdır.  Bunun nasıl yapılacağını aşağıda bulabilirsiniz.  Visual Studio açık olduğunda:
+Visual Studio 'daki en temel projelerden biri konsol uygulamasıdır. Bunun nasıl oluşturulacağı aşağıda verilmiştir:
 
-1. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' yi seçin.
+1. Visual Studio 2019 ' i açın.
 
-2. Yeni proje iletişim kutusunda, **Şablonlar**altında, **görsel F#** ' i görmeniz gerekir.  F# Şablonları göstermek için bunu seçin.
+2. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
 
-3. **.NET Core konsol uygulaması** ya da **konsol uygulaması**' nı seçin.
+3. **Yeni proje oluştur** sayfasında, dil listesinden öğesini seçin **F#** .
 
-4. Projeyi oluşturmak için Tamam düğmesini seçin! F#  Artık Çözüm Gezgini bir F# proje görmeniz gerekir.
+4. **Konsol uygulaması (.NET Core)** şablonunu seçin ve ardından **İleri**' yi seçin.
 
-## <a name="writing-your-code"></a>Kodunuzu yazma
+5. **Yeni projenizi yapılandırın** sayfasında, **Proje adı** kutusuna bir ad girin. Ardından **Oluştur**' u seçin.
 
-Önce bazı kodları yazmaya başlayın.  `Program.fs` dosyasının açık olduğundan emin olun ve ardından içeriğini aşağıdakiler ile değiştirin:
+   Visual Studio yeni F# projeyi oluşturur. Çözüm Gezgini penceresinde görebilirsiniz.
+
+## <a name="write-the-code"></a>Kodu yazma
+
+Biraz kod yazarak başlayalım. `Program.fs` dosyasının açık olduğundan emin olun ve ardından içeriğini aşağıdakiler ile değiştirin:
 
 [!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-Önceki kod örneğinde, `x` adlı bir girişi alan ve kendisini kendisi ile çarparak `square` bir işlev tanımlanmıştır.  F# [Tür çıkarımı](../language-reference/type-inference.md)kullandığından `x` türünün belirtilmesi gerekmez.  F# Derleyici, çarpma 'nın geçerli olduğu türleri anlamıştır ve `square` nasıl çağrıldığını temel alarak `x` bir tür atayacaktır.  `square`üzerine geldiğinizde, aşağıdakileri görmeniz gerekir:
+Önceki kod örneği, `x` adlı bir girişi alan `square` adlı bir işlevi tanımlar ve kendisiyle çarpar. F# [Tür çıkarımı](../language-reference/type-inference.md)kullandığından `x` türünün belirtilmesi gerekmez. F# Derleyici, çarpma 'nın geçerli olduğu türleri anlamıştır ve `square` nasıl çağrıldığını temel alarak `x` bir tür atar. `square`üzerine geldiğinizde, aşağıdakileri görmeniz gerekir:
 
 ```fsharp
 val square: x:int -> int
 ```
 
-İşlevin tür imzası olarak bilinen budur.  Şu şekilde okunabilir: "kare x adlı bir tamsayı alan ve tamsayı üreten bir işlevdir".  Derleyicinin şu an için `int` türü `square` olduğunu unutmayın. bunun nedeni, çarpma işlemi *Tüm* türler genelinde geneldir, ancak bunun yerine kapalı bir tür kümesinde geneldir.  F# Derleyici bu noktada `int` çekildi, ancak `square` `float`gibi farklı bir giriş türüyle çağırırsanız tür imzasını ayarlar.
+İşlevin tür imzası olarak bilinen budur. Şu şekilde okunabilir: "kare x adlı bir tamsayı alan ve tamsayı üreten bir işlevdir". Derleyici, `int` türü `square` verdi; Bunun nedeni, çarpma 'nın *Tüm* türler genelinde genel olmaması, ancak kapalı bir tür kümesidir. `float`F# gibi farklı bir giriş türüyle `square` çağırırsanız derleyici tür imzasını ayarlar.
 
-`main`başka bir işlev, `EntryPoint` özniteliğiyle birlikte düzenlenmiş ve bu, F# derleyicinin program yürütmesinin burada başlaması gerektiğini söylemelidir.  Komut satırı bağımsız değişkenlerinin bu işleve geçirilebileceği ve bir tamsayı kodunun döndürüldüğü (genellikle `0`) diğer [C stili programlama dilleri](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B)ile aynı kuralı izler.
+`main`, `EntryPoint` özniteliğiyle donatılmış başka bir işlev tanımlanmış. Bu öznitelik, F# derleyicinin program yürütmesinin burada başlaması gerektiğini söyler. Komut satırı bağımsız değişkenlerinin bu işleve geçirilebileceği ve bir tamsayı kodunun döndürüldüğü (genellikle `0`) diğer [C stili programlama dilleri](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B)ile aynı kuralı izler.
 
-Bu işlev, `square` işlevini `12`bir bağımsız değişkeniyle çağıracağız.  F# Derleyici daha sonra `int -> int` (bir `int` alan ve bir `int`üreten bir işlev) `square` türünü atar.  `printfn` çağrısı, C stili programlama dillerine benzer bir biçim dizesi, biçim dizesinde belirtilen parametrelere karşılık gelen parametreler ve sonra sonucu ve yeni bir satırı yazdıran biçimli bir yazdırma işlevidir.
+Bir `12`bağımsız değişkeniyle `square` işlevini çağırdığınız `main`giriş noktası işlevidir. F# Derleyici daha sonra `int -> int` (bir `int` alan ve bir `int`üreten bir işlev) `square` türünü atar. `printfn` çağrısı, biçim dizesi kullanan ve sonucu yazdıran (ve yeni bir satır) biçimli bir yazdırma işlevidir. C stili programlama dillerine benzer biçim dizesinde, kendisine geçirilen bağımsız değişkenlere karşılık gelen parametreler (`%d`) bulunur, bu durumda `12` ve `(square 12)`.
 
-## <a name="running-your-code"></a>Kodunuzu çalıştırma
+## <a name="run-the-code"></a>Kodu çalıştırma
 
-Kodu çalıştırabilir ve **Ctrl**+**F5**tuşlarına basarak sonuçları görebilirsiniz.  Bu, programı hata ayıklamadan çalıştırır ve sonuçları görmenizi sağlar.  Alternatif olarak, Visual Studio 'da **hata ayıklama** üst düzey menü öğesini seçebilir ve **hata ayıklama olmadan Başlat**' ı seçebilirsiniz.
+Kodu çalıştırabilir ve **Ctrl**+**F5**tuşlarına basarak sonuçları görebilirsiniz. Alternatif olarak, üst düzey menü çubuğundan hata **ayıklama** > **Başlat** ' ı seçebilirsiniz. Bu, programı hata ayıklama olmadan çalıştırır.
 
-Artık, Visual Studio 'nun bir sonraki konsol penceresinde yazdırılmış olduğunu görmeniz gerekir:
+Aşağıdaki çıktı, Visual Studio 'nun açtığı konsol penceresine yazdırır:
 
 ```console
-12 squared is 144!
+12 squared is: 144!
 ```
 
-Mühendisi!  Visual Studio 'da ilk F# projenizi oluşturdunuz, bu işlevi çağıran sonuçları yazdırılmış F# bir işlev yazdı ve bazı sonuçları görmek için projeyi çalıştırdık.
+Tebrikler! Visual Studio 'da ilk F# projenizi oluşturdunuz, bir değeri hesaplayan ve yazdıran F# bir işlev yazdı ve sonuçları görmek için projeyi çalıştırdık.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Henüz yapmadıysanız, F# dilin bazı temel özelliklerini kapsayan [turuna F# ](../tour.md)göz atın.  Size bazı özelliklerine F#ilişkin bir genel bakış sunar ve Visual Studio 'ya kopyalayabilir ve çalıştırmak için örnek kod örnekleri sağlarsınız.  Ayrıca belgeler F# [ F# giriş sayfasında](../index.yml)belgeler hakkında daha fazla bilgi edinebilirsiniz.
+Henüz yapmadıysanız, F# dilin bazı temel özelliklerini kapsayan [turuna F# ](../tour.md)göz atın. Visual Studio 'ya kopyalayabileceğiniz ve çalıştırmak için kullanabileceğiniz bazı yetenekler F# ve örnek kod örnekleri hakkında genel bir bakış sunar.
+
+> [!div class="nextstepaction"]
+> [F# Turu](../tour.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [F# Turu](../tour.md)
 - [F#dil başvurusu](../language-reference/index.md)
 - [Tür çıkarımı](../language-reference/type-inference.md)
 - [Sembol ve işleç başvurusu](../language-reference/symbol-and-operator-reference/index.md)
