@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 543f05cd52e62166b8a5ee318a588dee1e8ef76a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 4f52a89179e241dcfce5c888e03518d878009175
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838201"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348054"
 ---
 # <a name="net-architectural-components"></a>.NET mimari bileşenleri
 
@@ -49,7 +49,7 @@ The.NET Framework, 2002 sonrasında var olan özgün .NET uygulamasıdır. Bu, m
 
 ### <a name="mono"></a>Mono
 
-Mono, genellikle küçük bir çalışma zamanı gerektiğinde kullanılan bir .NET uygulamasıdır. Bu, Android, Mac, iOS, tvOS ve watchOS üzerinde Xamarin uygulamalarını güçlendirir ve öncelikle küçük bir parmak izine odaklanılmıştır. Mono Ayrıca Unity altyapısı kullanılarak oluşturulan oyunları güçlendirir.
+Mono, genellikle küçük bir çalışma zamanı gerektiğinde kullanılan bir .NET uygulamasıdır. Android, macOS, iOS, tvOS ve watchOS üzerinde Xamarin uygulamalarını güçlendirir ve öncelikle küçük bir parmak izine odaklanılmıştır. Mono Ayrıca Unity altyapısı kullanılarak oluşturulan oyunları güçlendirir.
 
 Şu anda yayımlanmış .NET Standard sürümlerinin tümünü destekler.
 
@@ -61,7 +61,7 @@ Mono hakkında daha fazla bilgi edinmek için [mono belgelerine](https://www.mon
 
 ### <a name="universal-windows-platform-uwp"></a>Evrensel Windows Platformu (UWP)
 
-UWP, Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows Uygulamaları ve yazılımları oluşturmak için kullanılan bir .NET uygulamasıdır. Bilgisayar, tabletler, phabizin, telefon ve hatta Xbox dahil olmak üzere hedeflemek isteyebileceğiniz farklı cihaz türlerini birleştirmeleri için tasarlanmıştır. UWP, merkezi bir App Store, bir yürütme ortamı (AppContainer) ve Win32 (WinRT) yerine kullanılacak bir dizi Windows API 'si gibi birçok hizmeti sağlar. Uygulamalar, C#, vb.net ve C++JavaScript 'te yazılabilir. C# Ve vb.net kullanıldığında .NET API 'Leri .NET Core tarafından sağlanır.
+UWP, Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows Uygulamaları ve yazılımları oluşturmak için kullanılan bir .NET uygulamasıdır. Bilgisayar, tabletler, phabizin, telefon ve hatta Xbox dahil olmak üzere hedeflemek isteyebileceğiniz farklı cihaz türlerini birleştirmeleri için tasarlanmıştır. UWP, merkezi bir App Store, bir yürütme ortamı (AppContainer) ve Win32 (WinRT) yerine kullanılacak bir dizi Windows API 'si gibi birçok hizmeti sağlar. Uygulamalar, C#, Visual Basic ve C++JavaScript 'te yazılabilir. C# Ve Visual Basic kullanıldığında .NET API 'Leri .NET Core tarafından sağlanır.
 
 UWP hakkında daha fazla bilgi edinmek için bkz. [Evrensel Windows platformu giriş](/windows/uwp/get-started/universal-application-platform-guide).
 
@@ -112,4 +112,4 @@ Resmi ISO/ıEC belgeleri ISO/ıEC [genel kullanıma açık standartlar](https://
 - [.NET Framework Kılavuzu](../framework/index.md)
 - [C# Kılavuzu](../csharp/index.yml)
 - [F# Kılavuzu](../fsharp/index.yml)
-- [VB.NET kılavuzu](../visual-basic/index.yml)
+- [Visual Basic Kılavuzu](../visual-basic/index.yml)

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: İki Liste Arasında Ayarlanmış Farkı Bulma (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: cd33c08416cce5afb6cf7507335f753160b8c6ff
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 42c5b5ee8a6af1323cb5eee12694fb94063eb877
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344578"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347508"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Nasıl yapılır: Iki liste arasındaki küme farkını bulma (LINQ) (Visual Basic)
 Bu örnek, iki dize listesini karşılaştırmak ve names1. txt içinde olan ancak names2. txt içinde olmayan satırları çıkarmak için LINQ 'ın nasıl kullanılacağını gösterir.  
@@ -53,8 +53,8 @@ End Class
   
  Visual Basic <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>ve <xref:System.Linq.Enumerable.Concat%2A>gibi bazı sorgu işlemleri türleri yalnızca Yöntem tabanlı sözdiziminde ifade edilebilir.  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
-System. Linq ad alanı için `Imports` ifadesiyle bir VB.NET konsol uygulaması projesi oluşturun.
+## <a name="compile-the-code"></a>Kod derleme  
+System. Linq ad alanı için `Imports` bildirimiyle bir Visual Basic konsol uygulaması projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

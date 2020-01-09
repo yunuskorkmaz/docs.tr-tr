@@ -9,12 +9,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: abd074701ca667abe4590f4f17a044b34325e874
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7f24966f06730e62ea7a8967c3930f05ca78f50e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837408"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347078"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Nasıl yapılır: X.509 Sertifikalarını WCF için Erişilebilir Hale Getirme
 X. 509.440 sertifikasını Windows Communication Foundation (WCF) erişilebilir hale getirmek için, uygulama kodunun sertifika depolama adını ve konumunu belirtmesi gerekir. Bazı durumlarda, işlem kimliğinin X. 509.952 sertifikasıyla ilişkili özel anahtarı içeren dosyaya erişimi olmalıdır. Bir sertifika deposundaki bir X. 509.440 sertifikasıyla ilişkili özel anahtarı almak için, WCF 'nin bunu yapması için izni olmalıdır. Varsayılan olarak, yalnızca sahip ve sistem hesabı bir sertifikanın özel anahtarına erişebilir.  
@@ -59,7 +59,7 @@ X. 509.440 sertifikasını Windows Communication Foundation (WCF) erişilebilir 
         |--------------|----------------------|  
         |İstemci (konsol veya WinForms uygulaması).|Şu anda oturum açmış olan kullanıcı.|  
         |Kendi kendine barındırılan hizmet.|Şu anda oturum açmış olan kullanıcı.|  
-        |IIS 6,0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) veya IIS 7,0 (Windows Vista) içinde barındırılan hizmet.|AĞ HIZMETI|  
+        |IIS 6,0 (Windows Server 2003) veya IIS 7,0 (Windows Vista) içinde barındırılan hizmet.|AĞ HIZMETI|  
         |IIS 5. X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]) içinde barındırılan hizmet.|Machine. config dosyasındaki `<processModel>` öğesi tarafından denetlenir. Varsayılan hesap ASPNET ' dir.|  
   
     5. Icacls. exe gibi bir araç kullanarak WCF 'nin altında çalıştığı hesaba özel anahtarı içeren dosyaya okuma erişimi verin.  

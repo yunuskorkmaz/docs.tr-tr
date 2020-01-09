@@ -1,20 +1,20 @@
 ---
-title: 'Nasıl yapılır: Her kelime veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (C#)'
+title: Her kelime veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: e6c0cbf523095122be4227bebee8d7a234eba2d0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e869d57c413d175c092cdc15a6fe54cab94e04b8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592398"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347358"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Nasıl yapılır: Her kelime veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (C#)
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Her kelime veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (C#)
 Aşağıdaki örnek, virgülle ayrılmış değerler gibi yapılandırılmış metnin çizgilerinin satırdaki herhangi bir alana göre nasıl sıralanacağını gösterir. Alan, çalışma zamanında dinamik olarak belirtilmiş olabilir. Puanlar. csv içindeki alanların, bir öğrencinin KIMLIK numarasını temsil ettiğini ve ardından bir dizi dört test puandığını varsayın.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Veri içeren bir dosya oluşturmak için  
   
-1. Bu konudaki puanlarını. csv verilerini şu konudan [kopyalayın: Benzer olmayan dosyalardaki (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) içeriği birleştirin ve çözüm klasörünüze kaydedin.  
+1. [Farklı dosyalardaki (LINQ) (C#) içerik ekleme](./how-to-join-content-from-dissimilar-files-linq.md) ve çözüm klasörünüze kaydetme konusundaki skorlar. csv verilerini kopyalayın.  
   
 ## <a name="example"></a>Örnek  
   
@@ -74,9 +74,9 @@ public class SortLines
   
  Bu örnek ayrıca bir yöntemden nasıl sorgu değişkeni dönebileceğinizi gösterir.  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
 
-System. C# LINQ ve System.IO ad alanları `using` için yönergeler içeren bir konsol uygulaması projesi oluşturun.
+System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

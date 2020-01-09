@@ -1,43 +1,43 @@
 ---
-title: C#Arabirimleri - Turu C# dil
-description: Sözleşmeler türleri tarafından uygulanan arabirimler tanımlarC#
+title: C#Arabirimler- C# dilin turu
+description: İçindeki türler tarafından uygulanan sözleşmeleri tanımlayan arabirimlerC#
 ms.date: 08/10/2016
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.openlocfilehash: 240ddfb321c5a89c8aada4353845915d0e242ae0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d10d9f69cebe9a05cdff9b9ff5d817237bf8c56f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634551"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346835"
 ---
 # <a name="interfaces"></a>Arabirimler
 
-Bir ***arabirimi*** sınıfları ve yapıları tarafından uygulanan bir sözleşmeyi tanımlar. Bir arabirim yöntemleri, özellikleri, olayları ve dizin oluşturucular içerebilir. Bir arabirim tanımlar üyelerinin uygulamalarını sağlamaz; yalnızca bir sınıf ya da arabirimi uygulayan yapının tarafından sağlanması gereken üyeleri belirtir.
+***Arabirim*** , sınıflar ve yapılar tarafından uygulanabilecek bir sözleşmeyi tanımlar. Arabirim, Yöntemler, özellikler, olaylar ve Dizin oluşturucular içerebilir. Arabirim, tanımladığı üyelerin uygulamalarını sağlamaz; yalnızca arabirimini uygulayan sınıflar veya yapılar tarafından sağlanması gereken üyeleri belirtir.
 
-, Arabirimleri görevlendirmek ***birden çok devralma***. Aşağıdaki örnekte, arabirim `IComboBox` hem de devralan `ITextBox` ve `IListBox`.
+Arabirimler ***birden fazla devralma***kullanabilir. Aşağıdaki örnekte, arabirimi `IComboBox` `ITextBox` ve `IListBox`devralır.
 
 [!code-csharp[InterfacesOne](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L5-L17)]
 
-Sınıflar ve yapı birimleri birden fazla arabirim uygulayabilir. Aşağıdaki örnekte, sınıf `EditBox` hem `IControl` ve `IDataBound`.
+Sınıflar ve yapılar birden çok arabirim uygulayabilir. Aşağıdaki örnekte, sınıfı `EditBox` hem `IControl` hem de `IDataBound`uygular.
 
 [!code-csharp[InterfacesTwo](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L19-L27)]
 
-Bir sınıf veya yapı, belirli bir arabirim uygular, bu sınıfın veya yapının örneği, bir arabirim türüne örtük olarak dönüştürülebilir. Örneğin:
+Bir sınıf veya yapı belirli bir arabirimi uygularsa, bu sınıfın veya yapının örnekleri örtülü olarak bu arabirim türüne dönüştürülebilir. Örneğin:
 
 [!code-csharp[InterfacesThree](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L33-L35)]
 
-Dinamik tür atamaları, burada bir örnek statik olarak belirli bir arabirim uygulamak için bilinmiyor durumlarda kullanılabilir. Örneğin, bir nesnenin elde etmek için dinamik tür atamaları aşağıdaki deyimleri kullanın `IControl` ve `IDataBound` arabirimi uygulamaları. Nesnenin çalışma zamanı gerçek türü olduğundan `EditBox`, yayınları başarılı.
+Bir örneğin belirli bir arabirimi uygulamak üzere statik olarak bilinmediği durumlarda dinamik tür atamaları kullanılabilir. Örneğin, aşağıdaki deyimler bir nesnenin `IControl` ve `IDataBound` arabirim uygulamalarını almak için dinamik tür yayınları kullanır. Nesnenin çalışma zamanı gerçek türü `EditBox`olduğundan, yayınlar başarılı olur.
 
 [!code-csharp[InterfacesFour](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L40-L42)]
 
-Önceki `EditBox` sınıfı `Paint` yönteminden `IControl` arabirimi ve `Bind` yönteminden `IDataBound` arabirimi Genel üyeler kullanılarak uygulanır. C#aynı zamanda açık destekler ***arabirim üyesi uygulamaları***, sınıfın veya yapının üyeleri genel yapmaktan kaçınmak için etkinleştiriliyor. Açık arabirim üyesi uygulaması, tam bir arabirim üye adını kullanarak yazılır. Örneğin, `EditBox` sınıf uygulama `IControl.Paint` ve `IDataBound.Bind` yöntemlerini kullanarak açık arabirim üyesi uygulamaları gibi.
+Önceki `EditBox` sınıfında, `IControl` arabiriminden `Paint` yöntemi ve `IDataBound` arabirimindeki `Bind` yöntemi ortak Üyeler kullanılarak uygulanır. C#Ayrıca, açık ***arabirim üye uygulamalarını***destekler, bu sayede, üyeleri genel hale getirmeyi önlemek için sınıfı veya yapıyı etkinleştirir. Açık arabirim üyesi uygulama, tam nitelikli arabirim üye adı kullanılarak yazılır. Örneğin `EditBox` sınıfı, aşağıdaki gibi açık arabirim üye uygulamalarını kullanarak `IControl.Paint` ve `IDataBound.Bind` yöntemlerini uygulayabilir.
 
 [!code-csharp[InterfacesFive](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L60-L64)]
 
-Açık arabirim üyeleri yalnızca arabirim türü erişilebilir. Örneğin, uygulanması `IControl.Paint` tarafından önceki EditBox sınıfı yalnızca ilk dönüştürerek çağrılabilir sağlanan `EditBox` başvurusu `IControl` arabirim türü.
+Açık arabirim üyelerine yalnızca arabirim türü aracılığıyla erişilebilir. Örneğin, önceki EditBox sınıfı tarafından sunulan `IControl.Paint` uygulanması yalnızca `IControl` arabirimi türüne `EditBox` başvurusu dönüştürülürken çağrılabilir.
 
 [!code-csharp[InterfacesFive](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L71-L74)]
 
 >[!div class="step-by-step"]
 >[Önceki](arrays.md)
->[İleri](enums.md)
+>[İleri](delegates.md)

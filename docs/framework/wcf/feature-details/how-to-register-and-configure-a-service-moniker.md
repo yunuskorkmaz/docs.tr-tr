@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 47e11ff2bc5b1c3eca152ba1fa429b5785c2f01b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a73f6333a91cd8018fe8e0c34d44db87938b8058
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976120"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347091"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma
 Türü belirlenmiş bir sözleşmeyle bir COM uygulaması içinde Windows Communication Foundation (WCF) hizmet bilinen adını kullanmadan önce, gerekli öznitelikli türleri COM 'a kaydetmeniz ve COM uygulamasını ve bilinen bağlamayı gerekli bağlamaya göre yapılandırmanız gerekir yapılandırmada.  
@@ -87,7 +87,7 @@ Türü belirlenmiş bir sözleşmeyle bir COM uygulaması içinde Windows Commun
     > [!NOTE]
     > : Bilinen ad hatalı ise veya hizmet kullanılamıyorsa, `GetObject` çağrısı "geçersiz sözdizimi" hatası döndürür. Bu hatayı alırsanız, kullanmakta olduğunuz bilinen adın doğru olduğundan ve hizmetin kullanılabilir olduğundan emin olun.  
   
-     Bu konu, VB 6,0 kodundaki hizmet bilinen adını kullanmaya odaklansa da diğer dillerden bir hizmet bilinen adı kullanabilirsiniz. Koddan bilinen bir ad kullanırken C++ , Svcutil. exe tarafından oluşturulan derleme aşağıdaki kodda gösterildiği gibi "no_namespace named_guids raw_interfaces_only" ile içeri aktarılmalıdır.  
+     Bu konu, Visual Basic 6,0 kodundan hizmet bilinen adını kullanmaya odaklansa da, diğer dillerden bir hizmet bilinen adı kullanabilirsiniz. Koddan bilinen bir ad kullanırken C++ , Svcutil. exe tarafından oluşturulan derleme aşağıdaki kodda gösterildiği gibi "no_namespace named_guids raw_interfaces_only" ile içeri aktarılmalıdır.  
   
     ```cpp
     #import "ComTestProxy.tlb" no_namespace named_guids  

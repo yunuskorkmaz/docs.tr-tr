@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Dosyadan XML yükle (C#)'
+title: Dosyadan XML yükleme (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ed38487-8028-4209-9872-c8dce0ed4dfe
-ms.openlocfilehash: d3e7cdbb0691fafcfcfc684f4495f4785b4ea3e7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f57d7a8375d04d1d7eda6d09aef81f42dd3e4b51
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593168"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345833"
 ---
-# <a name="how-to-load-xml-from-a-file-c"></a>Nasıl yapılır: Dosyadan XML yükle (C#)
-Bu konuda, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> yöntemi kullanılarak bir URI 'den XML yükleme gösterilmektedir.  
+# <a name="how-to-load-xml-from-a-file-c"></a>Dosyadan XML yükleme (C#)
+Bu konuda <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> yöntemi kullanılarak bir URI 'den XML yükleme gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir dosyadan bir XML belgesinin nasıl yükleneceğini gösterir. Aşağıdaki örnek, Books. xml ' i yükler ve XML ağacını konsola çıkarır.  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Kitaplar (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: kitaplar (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XElement booksFromFile = XElement.Load(@"books.xml");  

@@ -1,22 +1,22 @@
 ---
-title: 'Nasıl yapılır: Kodlanmış bir belgeyi okuma ve yazma (C#)'
+title: Kodlanmış bir belgeyi okuma ve yazma (C#)
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: a611fe064401c0da80d76ef8c64cd58d9b0fb5d6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: fa28c26845a0c6019943e0532ea0692a6dffd5a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253468"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347672"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-c"></a>Nasıl yapılır: Kodlanmış bir belgeyi okuma ve yazma (C#)
+# <a name="how-to-read-and-write-an-encoded-document-c"></a>Kodlanmış bir belgeyi okuma ve yazma (C#)
 Kodlanmış bir XML belgesi oluşturmak için, XML ağacına bir <xref:System.Xml.Linq.XDeclaration> ekler ve kodlamayı istenen kod sayfası adına ayarlar.  
   
- Tarafından <xref:System.Text.Encoding.WebName%2A> döndürülen herhangi bir değer geçerli bir değerdir.  
+ <xref:System.Text.Encoding.WebName%2A> tarafından döndürülen herhangi bir değer geçerli bir değerdir.  
   
  Kodlanmış bir belgeyi okuduğunuzda, <xref:System.Xml.Linq.XDeclaration.Encoding%2A> özelliği kod sayfası adına ayarlanır.  
   
- Geçerli bir kod <xref:System.Xml.Linq.XDeclaration.Encoding%2A> sayfası adı olarak ayarlarsanız, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belirtilen kodlamayla serileştirilir.  
+ <xref:System.Xml.Linq.XDeclaration.Encoding%2A> geçerli bir kod sayfası adına ayarlarsanız, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belirtilen kodlamayla serileştirilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, biri UTF-8 kodlaması ve diğeri UTF-16 kodlaması ile iki belge oluşturur. Daha sonra belgeleri yükler ve kodlamayı konsola yazdırır.  

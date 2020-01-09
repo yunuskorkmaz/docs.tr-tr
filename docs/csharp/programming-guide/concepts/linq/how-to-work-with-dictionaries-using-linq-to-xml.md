@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: LINQ to XML (C#) kullanarak sözlüklerle çalışma'
+title: LINQ to XML (C#) kullanarak sözlüklerle çalışma
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: 55512e6039010d74d390c805c119935c436f9834
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 1a98293f208e80e969362fca27014ecd2e5c4183
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253234"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347219"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Nasıl yapılır: LINQ to XML (C#) kullanarak sözlüklerle çalışma
-Çok sayıda veri yapısını XML 'e ve XML 'e diğer veri yapılarına dönüştürmek genellikle yararlıdır. Bu konu, bir <xref:System.Collections.Generic.Dictionary%602> XML ve geri dönüştürerek bu genel yaklaşımın belirli bir uygulamasını gösterir.  
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>LINQ to XML (C#) kullanarak sözlüklerle çalışma
+Çok sayıda veri yapısını XML 'e ve XML 'e diğer veri yapılarına dönüştürmek genellikle yararlıdır. Bu konu, bir <xref:System.Collections.Generic.Dictionary%602> XML 'e ve geri dönüştürerek bu genel yaklaşımın belirli bir uygulamasını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir sorgu projelerinin yeni <xref:System.Xml.Linq.XElement> nesne ve elde edilen koleksiyonun bir bağımsız değişken olarak kök <xref:System.Xml.Linq.XElement> nesnenin oluşturucusuna geçirildiği işlevsel oluşturma formunu kullanır.  
+ Bu örnek, bir sorgu projelerinin yeni <xref:System.Xml.Linq.XElement> nesneleri ve elde edilen koleksiyonun, kök <xref:System.Xml.Linq.XElement> nesnesinin oluşturucusuna bir bağımsız değişken olarak geçirildiği işlevsel oluşturma formunu kullanır.  
   
 ```csharp  
 Dictionary<string, string> dict = new Dictionary<string, string>();  

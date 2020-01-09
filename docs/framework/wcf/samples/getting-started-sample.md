@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 59f9edf67c03fb7d8670058eca8ea672a6f64c02
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 12568b2bb86257ed7075f2dc83b8077714a1318e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837876"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347049"
 ---
 # <a name="getting-started-sample"></a>Başlarken Örneği
 
@@ -34,7 +34,7 @@ Hizmet, bir hizmet sözleşmesinde gerçekleştirdiği işlemleri, genel olarak 
 
 İstemci, hizmet sözleşmesinin bir tanımını ve hizmete erişmek için bir proxy sınıfı içerir. Proxy kodu, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)kullanılarak hizmet meta verilerinden oluşturulur.
 
-Windows Vista 'da, hizmet Windows etkinleştirme hizmeti 'nde (WAS) barındırılır. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Internet Information Services (IIS) ve ASP.NET tarafından barındırılır. Bir hizmetin IIS 'de barındırılması, ilk kez erişildiğinde hizmetin otomatik olarak etkinleştirilmesini sağlar.
+Windows Vista 'da, hizmet Windows etkinleştirme hizmeti 'nde (WAS) barındırılır. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve Windows Server 2003 ' de, Internet Information Services (IIS) ve ASP.NET tarafından barındırılır. Bir hizmetin IIS 'de barındırılması, ilk kez erişildiğinde hizmetin otomatik olarak etkinleştirilmesini sağlar.
 
 > [!NOTE]
 > Hizmeti IIS yerine bir konsol uygulamasında barındıran bir örnekle çalışmaya başlamak isterseniz, [self-Host](../../../../docs/framework/wcf/samples/self-host.md) örneğine bakın.

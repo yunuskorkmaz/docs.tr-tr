@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
-ms.openlocfilehash: c8b20fc16b75b0d5267079db19ed55ae08604ff0
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: af158fa525f1f83c081ab293bfdbfb4177caf5a6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568992"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348386"
 ---
 # <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Nasıl yapılır: Istemci Isteğinde üst bilgileri ayarlama (WCF Veri Hizmetleri)
 Açık Veri Protokolü 'Nü (OData) destekleyen bir veri hizmetine erişmek için WCF Veri Hizmetleri istemci kitaplığını kullandığınızda, istemci kitaplığı, veri hizmetine gönderilen istek iletilerinde gerekli HTTP üstbilgilerini otomatik olarak ayarlar. Ancak, istemci kitaplığı, veri hizmeti talep tabanlı kimlik doğrulaması veya tanımlama bilgileri gerektirdiğinde olduğu gibi belirli durumlarda gerekli olan ileti üst bilgilerini ayarlamayı bilmez. Daha fazla bilgi için bkz. [güvenliği WCF veri Hizmetleri](securing-wcf-data-services.md#clientAuthentication). Bu durumlarda, istek iletisindeki ileti üstbilgilerini, gönderilmeden önce el ile ayarlamanız gerekir. Bu konudaki örnekte, veri hizmetine gönderilmeden önce istek iletisine yeni bir üst bilgi eklemek için <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> olayının nasıl işleneceği gösterilmektedir.  
   
- Bu konudaki örnek, Northwind örnek veri hizmeti ve otomatik olarak istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları, [WCF veri hizmetleri hızlı](quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur. OData web sitesinde yayımlanan [Northwind örnek veri hizmetini](https://go.microsoft.com/fwlink/?LinkId=187426) de kullanabilirsiniz; Bu örnek veri hizmeti salt okunurdur ve değişiklikler kaydedilmeye çalışıldığında bir hata döndürülür. OData web sitesindeki örnek veri hizmetleri anonim kimlik doğrulamasına izin verir.  
+ Bu konudaki örnek, Northwind örnek veri hizmeti ve otomatik olarak istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları, [WCF veri hizmetleri hızlı](quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur. OData web sitesinde yayımlanan [Northwind örnek veri hizmetini](https://services.odata.org/Northwind/Northwind.svc/) de kullanabilirsiniz; Bu örnek veri hizmeti salt okunurdur ve değişiklikler kaydedilmeye çalışıldığında bir hata döndürülür. OData web sitesindeki örnek veri hizmetleri anonim kimlik doğrulamasına izin verir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> olayı için bir işleyici kaydeder ve sonra veri hizmetinde bir sorgu yürütür.  

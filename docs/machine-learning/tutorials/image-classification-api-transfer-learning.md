@@ -3,21 +3,21 @@ title: 'Öğretici: aktarım öğrenimi kullanarak otomatikleştirilmiş görsel
 description: Bu öğreticide, somut yüzeylerin görüntülerini kırçıkarılan veya Kırçıkmıyor olarak sınıflandırmak için görüntü algılama API 'sini kullanarak ML.NET ' deki bir TensorFlow derin öğrenme modelini nasıl eğitecağın nasıl kullanılacağı gösterilmektedir.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 11/14/2019
+ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 443f9e9a83ebf31bb6c62323015af4a554323b67
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 4781e39a0c8827adb6ab0155d5215645242208a5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74205049"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348177"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Öğretici: ML.NET görüntü sınıflandırma API 'SI ile aktarım öğrenimini kullanarak otomatikleştirilmiş görsel inceleme
 
 Özel derin öğrenme modelini, aktarım öğrenimi, önceden eğitilen bir TensorFlow modeli ve ML.NET görüntü sınıflandırma API 'sini kullanarak, somut yüzeylerin görüntülerini kırıllanmış veya kırılk olarak sınıflandırmasına nasıl eğeceğinizi öğrenin.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > - Sorunu anlama
@@ -26,7 +26,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > - Özel bir TensorFlow görüntü sınıflandırma modelini eğitme için aktarım öğrenimi kullanma
 > - Özel model ile görüntüleri sınıflandır
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio 2017 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
@@ -84,7 +84,7 @@ Aktarım öğrenimine ve görüntü sınıflandırma API 'sine ilişkin genel bi
 1. **Microsoft.ml** Version **1.4.0** NuGet paketini yükler:
     1. Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
     1. Paket kaynağı olarak "nuget.org" öğesini seçin.
-    1. **Tarayıcı** sekmesini seçin.
+    1. **Gözat** sekmesini seçin.
     1. **Ön sürümü dahil et** onay kutusunu işaretleyin.
     1. **Microsoft.ml**için arama yapın.
     1. **Install** düğmesini seçin.
@@ -343,7 +343,7 @@ Modelinize eğitim sahibi olduğunuza göre, görüntüleri sınıflandırmak i�
 
     [!code-csharp [ClassifyImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L66)]
 
-## <a name="run-the-application"></a>Uygulamayı çalıştırma
+## <a name="run-the-application"></a>Uygulamayı çalıştırın
 
 Konsol uygulamanızı çalıştırın. Çıktının aşağıdakine benzer olması gerekir. Uyarıları veya işlem iletilerini görebilirsiniz, ancak bu iletiler netme için aşağıdaki sonuçlardan kaldırılmıştır. Breçekimi için çıkış yoğunlaştırılmış.
 

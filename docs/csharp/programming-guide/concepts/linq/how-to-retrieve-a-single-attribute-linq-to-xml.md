@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Tek bir öznitelik al (LINQ to XML) (C#)'
+title: Tek bir öznitelik alma (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: d8c8d0e3a99f94c4404f0ab23a5edf082be77952
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 31b34bddc9e748b473641235402847991d444c39
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253404"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347501"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Nasıl yapılır: Tek bir öznitelik al (LINQ to XML) (C#)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Tek bir öznitelik alma (LINQ to XML) (C#)
 Bu konu, öznitelik adı verilen bir öğenin tek bir özniteliğinin nasıl alınacağını açıklamaktadır. Bu, belirli bir özniteliğe sahip bir öğeyi bulmak istediğiniz sorgu ifadeleri yazmak için yararlıdır.  
   
- Sınıfının yöntemi ,<xref:System.Xml.Linq.XAttribute>belirtilen ada <xref:System.Xml.Linq.XElement.Attribute%2A>sahipöğesinidöndürür. <xref:System.Xml.Linq.XElement>  
+ <xref:System.Xml.Linq.XElement> sınıfının <xref:System.Xml.Linq.XElement.Attribute%2A> yöntemi, belirtilen ada sahip <xref:System.Xml.Linq.XAttribute> döndürür.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek <xref:System.Xml.Linq.XElement.Attribute%2A> yöntemini kullanır.  
+ Aşağıdaki örnekte <xref:System.Xml.Linq.XElement.Attribute%2A> yöntemi kullanılmaktadır.  
   
 ```csharp  
 XElement cust = new XElement("PhoneNumbers",  
@@ -33,7 +33,7 @@ foreach (XElement el in elList)
     Console.WriteLine((string)el.Attribute("type"));  
 ```  
   
- Bu örnek adlı `Phone`ağaçtaki tüm alt öğeleri bulur ve sonra adlı `type`özniteliği bulur.  
+ Bu örnek, `Phone`adlı ağaçtaki tüm alt öğeleri bulur ve sonra `type`adlı özniteliği bulur.  
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
@@ -43,7 +43,7 @@ work
 ```  
   
 ## <a name="example"></a>Örnek  
- Özniteliğin değerini almak istiyorsanız, nesneleri ile <xref:System.Xml.Linq.XElement> yaptığınız gibi, bu özniteliği de çevirebilirsiniz. Aşağıdaki örnek bunu gösterir.  
+ Özniteliğin değerini almak istiyorsanız, <xref:System.Xml.Linq.XElement> nesneleriyle yaptığınız gibi, bu özniteliği de çevirebilirsiniz. Aşağıdaki örnek bunu gösterir.  
   
 ```csharp  
 XElement cust = new XElement("PhoneNumbers",  
@@ -68,7 +68,7 @@ home
 work  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.Linq.XAttribute> sınıfına`bool?`, ,,`uint?`,,,,, ,,,,,,,,,,,,`long?` `bool` `string` `int` `int?` `uint` `long` `ulong` ,,,`double?` ,`TimeSpan`,, ,`decimal` ,`GUID`,,, ,`TimeSpan?`, ve `DateTime` `decimal?` `float?` `double` `ulong?` `float` `DateTime?`  `GUID?`.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], <xref:System.Xml.Linq.XAttribute> sınıfının `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`ve `GUID?`için açık atama işleçleri sağlar.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir ad alanında olan bir özniteliği için aynı kodu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  

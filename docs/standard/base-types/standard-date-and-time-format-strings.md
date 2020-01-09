@@ -1,5 +1,5 @@
 ---
-title: Standart Tarih ve Saat Biçim Dizeleri
+title: Standart Tarih ve saat biçim dizeleri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: b67b00fdb4a5c484c112cc2f3321ce2268d4dad7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 883902142a91e275ab64ad5d12c197c665bd9b36
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121716"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346659"
 ---
-# <a name="standard-date-and-time-format-strings"></a>Standart Tarih ve Saat Biçim Dizeleri
+# <a name="standard-date-and-time-format-strings"></a>Standart Tarih ve saat biçim dizeleri
 
 Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat değerinin metin gösterimini tanımlamak için kullanır. Boşluk da dahil olmak üzere birden fazla karakter içeren herhangi bir tarih ve saat biçim dizesi, özel bir tarih ve saat biçimi dizesi olarak yorumlanır; daha fazla bilgi için bkz. [özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Standart veya özel bir biçim dizesi iki şekilde kullanılabilir:
 
@@ -42,8 +42,8 @@ Standart Tarih ve saat biçim dizeleri, hem <xref:System.DateTime> hem de <xref:
 |----------------------|-----------------|--------------|
 |"d"|Kısa Tarih Modeli<br /><br /> Daha fazla bilgi:[kısa tarih ("d") Biçim belirleyicisi](#ShortDate).|2009-06-15T13:45:30-> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30-> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30-> 2009/06/15 (ja-JP)|
 |"D"|Uzun tarih deseni.<br /><br /> Daha fazla bilgi:[uzun tarih ("D") Biçim belirleyicisi](#LongDate).|2009-06-15T13:45:30-> Pazartesi, 15 Haziran 2009 (en-US)<br /><br /> 2009-06-15T13:45:30-> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30-> Montag, 15. Juni 2009 (de-DE)|
-|"f"|Tam tarih veya saat deseni (süre).<br /><br /> Daha fazla bilgi: [tam tarih kısa saat ("f") Biçim belirleyicisi](#FullDateShortTime).|2009-06-15T13:45:30-> Pazartesi, 15 Haziran 2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30-> den 15 junı 2009 13:45 (ZF-o)<br /><br /> 2009-06-15T13:45:30-> Δευτέρα, 15 Ιουνίου 2009 1:45 μμ (el-GR)|
-|"F"|Tam tarih veya saat deseni (uzun süre).<br /><br /> Daha fazla bilgi: [tam tarih uzun saat ("F") Biçim belirleyicisi](#FullDateLongTime).|2009-06-15T13:45:30-> Pazartesi, 15 Haziran 2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30-> den 15 junı 2009 13:45:30 (ZF-o)<br /><br /> 2009-06-15T13:45:30-> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)|
+|"f"|Tam tarih veya saat deseni (süre).<br /><br /> Daha fazla bilgi: [tam tarih kısa saat ("f") Biçim belirleyicisi](#FullDateShortTime).|2009-06-15T13:45:30-> Pazartesi, 15 Haziran 2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30-> den 15 junı 2009 13:45 (ZF-o)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45 μμ (el-GR)|
+|"F"|Tam tarih veya saat deseni (uzun süre).<br /><br /> Daha fazla bilgi: [tam tarih uzun saat ("F") Biçim belirleyicisi](#FullDateLongTime).|2009-06-15T13:45:30-> Pazartesi, 15 Haziran 2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30-> den 15 junı 2009 13:45:30 (ZF-o)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)|
 |"g"|Genel tarih veya saat deseni (süre).<br /><br /> Daha fazla bilgi: [Genel Tarih kısa saat ("g") Biçim belirleyicisi](#GeneralDateShortTime).|2009-06-15T13:45:30-> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30-> 15/06/2009 13:45 (ES-ES)<br /><br /> 2009-06-15T13:45:30-> 2009/6/15 13:45 (zh-CN)|
 |"G"|Genel tarih veya saat deseni (uzun süre).<br /><br /> Daha fazla bilgi: [Genel Tarih uzun saat ("G") Biçim belirleyicisi](#GeneralDateLongTime).|2009-06-15T13:45:30-> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30-> 15/06/2009 13:45:30 (ES-ES)<br /><br /> 2009-06-15T13:45:30-> 2009/6/15 13:45:30 (zh-CN)|
 |"M", "m"|Ay/gün deseni.<br /><br /> Daha fazla bilgi: [ay ("ı", "d") Biçim belirleyicisi](#MonthDay).|2009-06-15T13:45:30-> 15 Haziran (en-US)<br /><br /> 2009-06-15T13:45:30-> 15. junı (da-DK)<br /><br /> 2009-06-15T13:45:30-> 15 Junı (kimlik KIMLIĞI)|
@@ -53,7 +53,7 @@ Standart Tarih ve saat biçim dizeleri, hem <xref:System.DateTime> hem de <xref:
 |"t"|Kısa bir süre deseni.<br /><br /> Daha fazla bilgi: [kısa saat ("t") Biçim belirleyicisi](#ShortTime).|2009-06-15T13:45:30-> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30-> 13:45 (HR-HR)<br /><br /> 2009-06-15T13:45:30-> 01:45 م (ar-EG)|
 |"T"|Uzun süre deseni.<br /><br /> Daha fazla bilgi: [uzun saat ("T") Biçim belirleyicisi](#LongTime).|2009-06-15T13:45:30-> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30-> 13:45:30 (HR-HR)<br /><br /> 2009-06-15T13:45:30-> 01:45:30 م (ar-EG)|
 |"u"|Evrensel sıralanabilir tarih/saat deseni.<br /><br /> Daha fazla bilgi: [evrensel sıralanabilir ("u") Biçim belirleyicisi](#UniversalSortable).|<xref:System.DateTime> değeriyle: 2009-06-15T13:45:30-> 2009-06-15 13:45:30Z<br /><br /> <xref:System.DateTimeOffset> değeriyle: 2009-06-15T13:45:30-> 2009-06-15 20:45:30Z|
-|"U"|Evrensel tam tarih/saat deseni.<br /><br /> Daha fazla bilgi: [Evrensel tam ("U") Biçim belirleyicisi](#UniversalFull).|2009-06-15T13:45:30-> Pazartesi, 15 Haziran 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30-> den 15 junı 2009 20:45:30 (ZF-o)<br /><br /> 2009-06-15T13:45:30-> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|
+|"U"|Evrensel tam tarih/saat deseni.<br /><br /> Daha fazla bilgi: [Evrensel tam ("U") Biçim belirleyicisi](#UniversalFull).|2009-06-15T13:45:30-> Pazartesi, 15 Haziran 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30-> den 15 junı 2009 20:45:30 (ZF-o)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|
 |"Y", "y"|Yıl ay deseni.<br /><br /> Daha fazla bilgi: [yıl ay ("Y") Biçim belirleyicisi](#YearMonth).|2009-06-15T13:45:30-> Haziran 2009 (en-US)<br /><br /> 2009-06-15T13:45:30-> junı 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30-> Junı 2009 (kimlik KIMLIĞI)|
 |Başka bir tek karakter|Bilinmeyen tanımlayıcı.|Bir çalışma zamanı <xref:System.FormatException>oluşturur.|
 
@@ -316,7 +316,7 @@ Aşağıdaki örnek ABD Pasifik saati dilimindeki bir sistemde <xref:System.Date
 
 "S" Standart Biçim belirleyicisi <xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A?displayProperty=nameWithType> özelliği tarafından tanımlanan özel bir tarih ve saat biçim dizesini temsil eder. Desen tanımlı bir standardı (ISO 8601) yansıtır ve özellik salt okunurdur. Bu nedenle, kullanılan kültür veya sağlanan biçim sağlayıcısından bağımsız olarak her zaman aynıdır. Özel biçim dizesi "yyyy'-'MM'-'dd'T'HH':'mm':'ss" değeridir.
 
-"S" Biçim belirticisinin amacı, tarih ve saat değerlerine göre düzenli olarak artan veya azalan düzende sıralayan sonuç dizelerini üretmeniz sağlamaktır. Sonuç olarak, "s" Standart Biçim belirleyicisi bir tarih ve saat değerini tutarlı biçimde temsil ediyorsa, biçimlendirme işlemi <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliğini veya <xref:System.DateTimeOffset.Offset%2A?displayProperty=nameWithType> yansıtacak şekilde biçimlendirilmekte olan tarih ve saat nesnesinin değerini değiştirmez deeri. Örneğin, 2014-11-15T18:32:17 + 00:00 ve 2014-11-15T18:32:17 + 08:00 gibi tarih ve saat değerlerini biçimlendirirken oluşturulan sonuç dizeleri aynıdır.
+"S" Biçim belirticisinin amacı, tarih ve saat değerlerine göre düzenli olarak artan veya azalan düzende sıralayan sonuç dizelerini üretmeniz sağlamaktır. Sonuç olarak, "s" Standart Biçim belirleyicisi bir tarih ve saat değerini tutarlı biçimde temsil etse de biçimlendirme işlemi, <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliğini veya <xref:System.DateTimeOffset.Offset%2A?displayProperty=nameWithType> değerini yansıtacak şekilde biçimlendirilmekte olan tarih ve saat nesnesinin değerini değiştirmez. Örneğin, 2014-11-15T18:32:17 + 00:00 ve 2014-11-15T18:32:17 + 08:00 gibi tarih ve saat değerlerini biçimlendirirken oluşturulan sonuç dizeleri aynıdır.
 
 Bu standart biçim tanımlayıcısı kullanıldığında biçimlendirme ve ayrıştırma işlemi her zaman sabit kültürü kullanır.
 
@@ -440,7 +440,7 @@ Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "y" biçim
 
 Denetim Masası 'ndaki **bölge ve dil seçenekleri** öğesindeki ayarlar, bir biçimlendirme işlemi tarafından üretilen sonuç dizesini etkiler. Bu ayarlar, biçimlendirmeyi yönetmek için kullanılan değerleri sağlayan geçerli iş parçacığı kültürüyle ilişkili <xref:System.Globalization.DateTimeFormatInfo> nesnesini başlatmak için kullanılır. Farklı ayarları kullanan bilgisayarlar farklı sonuç dizeleri üretir.
 
-Ayrıca, geçerli sistem kültürüyle aynı kültürü temsil eden yeni bir <xref:System.Globalization.CultureInfo> nesnesini başlatmak için <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> oluşturucusunu kullanırsanız, Denetim Masası 'ndaki **bölge ve dil seçenekleri** öğesi tarafından belirlenen tüm özelleştirmeler şu şekilde olur Yeni <xref:System.Globalization.CultureInfo> nesnesine uygulandı. Bir sistemin özelleştirmelerini yansıtmayan bir <xref:System.Globalization.CultureInfo> nesnesi oluşturmak için <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> oluşturucusunu kullanabilirsiniz.
+Ayrıca, geçerli sistem kültürüyle aynı kültürü temsil eden yeni bir <xref:System.Globalization.CultureInfo> nesnesini başlatmak için <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> oluşturucusunu kullanırsanız, Denetim Masası 'ndaki **bölge ve dil seçenekleri** öğesi tarafından belirlenen tüm özelleştirmeler yeni <xref:System.Globalization.CultureInfo> nesnesine uygulanır. Bir sistemin özelleştirmelerini yansıtmayan bir <xref:System.Globalization.CultureInfo> nesnesi oluşturmak için <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> oluşturucusunu kullanabilirsiniz.
 
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo Özellikleri
 

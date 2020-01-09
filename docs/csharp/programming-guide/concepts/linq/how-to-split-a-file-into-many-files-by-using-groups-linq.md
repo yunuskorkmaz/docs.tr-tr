@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Grupları (LINQ) kullanarak bir dosyayı çok sayıda dosyaya bölme (LINQC#) ()'
+title: Grupları (LINQ) kullanarak bir dosyayı birden çok dosyaya bölme (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 5f2ae7657162ba5a2c88e5378119eaad4cb1e288
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 934b6385a8634c23a4e29098367c9aaa7355f11c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253272"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347314"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Nasıl yapılır: Grupları (LINQ) kullanarak bir dosyayı çok sayıda dosyaya bölme (LINQC#) ()
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Grupları (LINQ) kullanarak bir dosyayı birden çok dosyaya bölme (LINQ) (C#)
 Bu örnek, iki dosyanın içeriğini birleştirmenin bir yolunu gösterir ve ardından verileri yeni bir şekilde düzenleyen yeni bir dosya kümesi oluşturur.  
   
 ### <a name="to-create-the-data-files"></a>Veri dosyalarını oluşturmak için  
@@ -29,7 +29,7 @@ Bu örnek, iki dosyanın içeriğini birleştirmenin bir yolunu gösterir ve ard
     Garcia, Debra  
     ```  
   
-2. Bu adları names2. txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin: İki dosyanın bazı adları yaygın olarak olduğunu unutmayın.  
+2. Bu adları names2. txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin: iki dosyanın ortak olarak bazı adlara sahip olduğunu unutmayın.  
   
     ```text  
     Liu, Jinghao  
@@ -124,9 +124,9 @@ class SplitWithGroups
   
  Program, veri dosyalarıyla aynı klasöre her bir grup için ayrı bir dosya yazar.  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor
+## <a name="compiling-the-code"></a>Kod Derleme
 
-System. C# LINQ ve System.IO ad alanları `using` için yönergeler içeren bir konsol uygulaması projesi oluşturun.
+System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

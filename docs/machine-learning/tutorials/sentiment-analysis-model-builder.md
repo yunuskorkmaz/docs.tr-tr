@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e919341130c6778207f324dd9eb3b3f54c8a9c68
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 670c4dd1ac9da496f59d12d2e880cf269d64f309
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74551843"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344963"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Öğretici: ML.NET model Oluşturucu kullanarak Web uygulamasındaki Web sitesindeki açıklamaları çözümleme
 
@@ -58,7 +58,7 @@ Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://githu
 
 *Vivtox-250-Line-Data. tsv* veri kümesindeki her satır, visede bir kullanıcı tarafından bırakılan farklı bir gözden geçirmeyi temsil eder. İlk sütun metnin (0-Toxic, 1 ' in Toxic) yaklaşımını temsil eder ve ikinci sütun Kullanıcı tarafından bırakılan yorumu temsil eder. Sütunlar sekmelerle ayrılır. Veriler aşağıdaki gibi görünür:
 
-| yaklaşım | Sentimentmetni |
+| Yaklaşım | Sentimentmetni |
 | :---: | :---: |
 1\. | = = İşlenmemiş = = dude, o Carl resmini geri yüklemeniz veya başka bir şey yapmanız gerekir.
 1\. | = = TAMAM! = = ıM, DAHA SONRA BIR WIKI 'YI DAHA SONRA!!!
@@ -275,7 +275,7 @@ Tahmine dayalı, uygulamanın ana sayfasında yapılır. Bu nedenle, Kullanıcı
 
         [!code-javascript [UpdateSentimentEvtHandler](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L36)]
 
-## <a name="run-the-application"></a>Uygulamayı çalıştırma
+## <a name="run-the-application"></a>Uygulamayı çalıştırın
 
 Uygulamanız ayarlandığına göre, tarayıcınızda başlatması gereken uygulamayı çalıştırın.
 
@@ -287,7 +287,7 @@ Model Oluşturucu tarafından oluşturulan projelere daha sonra başka bir çöz
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, nasıl yapılacağını öğrendiniz:
+Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
 >
 > - ASP.NET Core Razor Pages uygulaması oluşturma
@@ -304,4 +304,4 @@ Bu öğreticide bahsedilen konular hakkında daha fazla bilgi edinmek için aşa
 
 - [Model Oluşturucu senaryoları](../automate-training-with-model-builder.md#scenarios)
 - [İkili sınıflandırma](../resources/glossary.md#binary-classification)
-- [İkili sınıflandırma modeli ölçümleri](../resources/metrics.md#metrics-for-binary-classification)
+- [İkili sınıflandırma modeli ölçümleri](../resources/metrics.md#evaluation-metrics-for-binary-classification)

@@ -2,21 +2,22 @@
 title: İleti Bağıntısı
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 0f5124b8172a7a4d553d19e08309affb48e7468c
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: adabf02cb8ec232a887bd4720ea9552a7d870fe3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714858"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348327"
 ---
 # <a name="message-correlation"></a>İleti Bağıntısı
-Bu örnek, bir Message Queuing (MSMQ) uygulamasının bir Windows Communication Foundation (WCF) hizmetine nasıl MSMQ iletisi gönderebileceğinizi ve iletilerin istek/yanıt senaryosunda gönderici ve alıcı uygulamaları arasında nasıl bağıntılı olduğunu gösterir. Bu örnek MsmqIntegrationBinding bağlamasını kullanır. Bu durumda hizmet, sıraya alınan iletileri alan hizmeti gözlemlemeye olanak sağlayan, kendinden konak bir konsol uygulamasıdır. ek  
-  
- Hizmet gönderenden alınan iletiyi işler ve gönderene bir yanıt iletisi gönderir. Gönderen yanıtı, aldığı isteği ilk gönderdiği istek ile ilişkilendirir. İletinin `MessageID` ve `CorrelationID` özellikleri, istek ve yanıt iletilerini ilişkilendirmek için kullanılır.  
-  
- `IOrderProcessor` hizmet sözleşmesi, sıraya alma ile kullanım için uygun tek yönlü bir hizmet işlemi tanımlar. Bir MSMQ iletisinde eylem üst bilgisi yok, bu nedenle farklı MSMQ iletilerini işlem sözleşmelerine otomatik olarak eşlemek mümkün değildir. Bu nedenle, bu durumda yalnızca bir işlem sözleşmesi olabilir. Hizmette daha fazla işlem sözleşmesi tanımlamak istiyorsanız, uygulamanın hangi işlem sözleşmesinin gönderileceğine karar vermek için MSMQ iletisindeki hangi üstbilginin (örneğin, etiket veya correlationID) kullanılabileceği bilgisini sağlaması gerekir. 
-  
- MSMQ iletisi ayrıca, hangi üst bilgilerin işlem sözleşmesinin farklı parametreleriyle eşlendiği bilgisini içermez. Bu nedenle, işlem sözleşmesinde yalnızca bir parametre olabilir. Parametresi, temeldeki MSMQ iletisini içeren <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>türüdür. `MsmqMessage<T>` sınıfında "T" türü, MSMQ ileti gövdesinde seri hale getirilen verileri temsil eder. Bu örnekte, `PurchaseOrder` türü MSMQ ileti gövdesinde serileştirilir.  
+
+Bu örnek, bir Message Queuing (MSMQ) uygulamasının bir Windows Communication Foundation (WCF) hizmetine nasıl MSMQ iletisi gönderebileceğinizi ve iletilerin istek/yanıt senaryosunda gönderici ve alıcı uygulamaları arasında nasıl bağıntılı olduğunu gösterir. Bu örnek MsmqIntegrationBinding bağlamasını kullanır. Bu durumda hizmet, sıraya alınan iletileri alan hizmeti gözlemlemeye olanak sağlayan, kendinden konak bir konsol uygulamasıdır. k
+
+ Hizmet gönderenden alınan iletiyi işler ve gönderene bir yanıt iletisi gönderir. Gönderen yanıtı, aldığı isteği ilk gönderdiği istek ile ilişkilendirir. İletinin `MessageID` ve `CorrelationID` özellikleri, istek ve yanıt iletilerini ilişkilendirmek için kullanılır.
+
+ `IOrderProcessor` hizmet sözleşmesi, sıraya alma ile kullanım için uygun tek yönlü bir hizmet işlemi tanımlar. Bir MSMQ iletisinde eylem üst bilgisi yok, bu nedenle farklı MSMQ iletilerini işlem sözleşmelerine otomatik olarak eşlemek mümkün değildir. Bu nedenle, bu durumda yalnızca bir işlem sözleşmesi olabilir. Hizmette daha fazla işlem sözleşmesi tanımlamak istiyorsanız, uygulamanın hangi işlem sözleşmesinin gönderileceğine karar vermek için MSMQ iletisindeki hangi üstbilginin (örneğin, etiket veya correlationID) kullanılabileceği bilgisini sağlaması gerekir.
+
+ MSMQ iletisi ayrıca, hangi üst bilgilerin işlem sözleşmesinin farklı parametreleriyle eşlendiği bilgisini içermez. Bu nedenle, işlem sözleşmesinde yalnızca bir parametre olabilir. Parametresi, temeldeki MSMQ iletisini içeren <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>türüdür. `MsmqMessage<T>` sınıfında "T" türü, MSMQ ileti gövdesinde seri hale getirilen verileri temsil eder. Bu örnekte, `PurchaseOrder` türü MSMQ ileti gövdesinde serileştirilir.
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -269,7 +270,7 @@ static void DisplayOrderStatus()
 > [!NOTE]
 > Bu örnek Message Queuing (MSMQ) yüklemesini gerektirir. Ayrıca bkz. bölümünde MSMQ yükleme yönergelerine bakın.
 
-### <a name="to-setup-build-and-run-the-sample"></a>Örneği kurmak, derlemek ve çalıştırmak için
+## <a name="set-up-build-and-run-the-sample"></a>Örneği kurma, oluşturma ve çalıştırma
 
 1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
@@ -289,7 +290,7 @@ static void DisplayOrderStatus()
 
 4. Örneği tek bilgisayarlı bir yapılandırmada çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
 
-### <a name="to-run-the-sample-across-computers"></a>Örneği bilgisayarlar arasında çalıştırmak için
+## <a name="run-the-sample-across-computers"></a>Örneği bilgisayarlar arasında çalıştırma
 
 1. Hizmet programı dosyalarını dile özgü klasörün altındaki \service\bin\ klasöründen hizmet bilgisayarına kopyalayın.
 
@@ -304,14 +305,14 @@ static void DisplayOrderStatus()
 6. İstemci bilgisayarda, bir komut isteminden Client. exe ' yi başlatın.
 
 > [!IMPORTANT]
-> Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
->   
-> `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.  
->   
-> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
-  
+> Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: Office Open XML belgesinden paragrafları alma (C#)'
+title: Office Open XML belgesinden paragrafları alma (C#)
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: bfac597e0c36f41216821947928babd471fd61b3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 241bacc730f205bf501c1ab1ab47f6fda4c15d64
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253400"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347454"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Nasıl yapılır: Office Open XML belgesinden paragrafları alma (C#)
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Office Open XML belgesinden paragrafları alma (C#)
 Bu konuda, bir Office Open XML belgesi açan ve belgedeki tüm paragrafların bir koleksiyonunu alan bir örnek sunulmaktadır.  
   
  Office Open XML hakkında daha fazla bilgi için bkz. [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) ve [www.ericwhite.com](http://ericwhite.com/).  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir Office Open XML paketi açar, belgeyi ve stil parçalarını bulmak için Open XML paketi içindeki ilişkileri kullanır. Ardından, paragraf <xref:System.Xml.Linq.XElement> düğümünü, her bir paragrafın stil adını ve her bir paragrafın metnini içeren anonim bir türün koleksiyonunu yansıtırken belgeyi sorgular.  
+ Bu örnek, bir Office Open XML paketi açar, belgeyi ve stil parçalarını bulmak için Open XML paketi içindeki ilişkileri kullanır. Ardından, paragraf <xref:System.Xml.Linq.XElement> düğümü, her bir paragrafın stil adı ve her bir paragrafın metni içeren anonim bir türün koleksiyonunu yansıtırken belgeyi sorgular.  
   
- Örnek, örneğinde de verilen adlı `StringConcatenate`bir genişletme yöntemi kullanır.  
+ Örnek, örnekte de sağlanan `StringConcatenate`adlı bir genişletme yöntemi kullanır.  
   
  Bu örneğin nasıl çalıştığını açıklayan ayrıntılı bir öğretici için bkz. [XML (C#) saf işlevsel dönüştürmeleri](./introduction-to-pure-functional-transformations.md).  
   
- Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> Ad alanındaki türleri kullanır.  
+ Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.  
   
 ```csharp  
 public static class LocalExtensions  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 5600744aeca79a54f51a1f9ecd0ef00fed4b00fd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0c855c4e08b365b4cb75ab062d2ec304a79612ab
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351327"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347912"
 ---
 # <a name="private-visual-basic"></a>Özel (Visual Basic)
 Bir ya da daha fazla bildirilmemiş programlama öğesine, içerilen türlerin dahil olduğu gibi yalnızca kendi bildirim bağlamlarından erişilebilir olduğunu belirtir.  
@@ -65,7 +65,8 @@ Bir ya da daha fazla bildirilmemiş programlama öğesine, içerilen türlerin d
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private Protected](./private-protected.md)
-- Visual Basic 'de [korumalı arkadaş](./protected-friend.md)[erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Protected Friend](./protected-friend.md)
+- [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

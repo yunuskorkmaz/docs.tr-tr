@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Belirli bir Sözcükler Kümesini İçeren Cümleleri Sorgulama (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-ms.openlocfilehash: 4a068f4f5500da5fd26e3dea753ec9591b6c7f5f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6595932fae9737a0ac482c952b29bfde429de76f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347683"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344157"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>Nasıl yapılır: belirli bir sözcükler kümesini içeren cümleleri sorgulama (LINQ) (Visual Basic)
 
@@ -63,9 +63,9 @@ Sorgu önce metni cümlelere bölerek ve sonra cümleleri her bir sözcüğü tu
 
 <xref:System.String.Split%2A>çağrısında noktalama işaretleri, dizeden kaldırmak için ayırıcılar olarak kullanılır. Bunu yapmadıysanız, örneğin, `wordsToMatch` dizide "tarihsel" olarak eşleşmeyen "tarihsel" bir dizeye sahip olabilirsiniz. Kaynak metinde bulunan noktalama türlerine bağlı olarak ek ayırıcılar kullanmanız gerekebilir.
 
-## <a name="compiling-the-code"></a>Kod Derleniyor
+## <a name="compile-the-code"></a>Kod derleme
 
-System. Linq ad alanı için `Imports` ifadesiyle bir VB.NET konsol uygulaması projesi oluşturun.
+System. Linq ad alanı için `Imports` bildirimiyle bir Visual Basic konsol uygulaması projesi oluşturun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

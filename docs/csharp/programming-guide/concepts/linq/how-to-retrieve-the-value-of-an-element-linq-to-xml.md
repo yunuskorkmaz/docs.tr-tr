@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Bir öğenin değerini Al (LINQ to XML) (C#)'
+title: Bir öğenin değerini alma (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: a7b36ea7bb602c241593da356b87d35baee8163f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 775e7282408910cc06b7d660d84cb6f80ef47949
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253360"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347425"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Nasıl yapılır: Bir öğenin değerini Al (LINQ to XML) (C#)
-Bu konu, öğelerin değerinin nasıl alınacağını gösterir. Bunu iki ana şekilde yapabilirsiniz. Tek yönlü bir <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XAttribute> veya öğesini istenen türe atama yöntemidir. Daha sonra açık dönüştürme işleci, öğe veya özniteliğin içeriğini belirtilen türe dönüştürür ve değişkenine atar. Alternatif olarak, <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliğini <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> veya özelliğini de kullanabilirsiniz.  
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Bir öğenin değerini alma (LINQ to XML) (C#)
+Bu konu, öğelerin değerinin nasıl alınacağını gösterir. Bunu iki ana şekilde yapabilirsiniz. Tek yönlü bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XAttribute> istenen türe atamalısınız. Daha sonra açık dönüştürme işleci, öğe veya özniteliğin içeriğini belirtilen türe dönüştürür ve değişkenine atar. Alternatif olarak, <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliğini veya <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> özelliğini de kullanabilirsiniz.  
   
- C#Ancak, atama genellikle daha iyi bir yaklaşımdır. Öğesi veya özniteliğini null yapılabilir bir türe ayarlarsanız, kod, var olabilen veya varolmayan bir öğenin (veya özniteliğin) değeri alınırken yazmak daha basittir. Bu konudaki son örnekte bu gösterilmektedir. Ancak, özelliğini kullanarak <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> bir öğenin içeriğini atama aracılığıyla ayarlayamazsınız.  
+ C#Ancak, atama genellikle daha iyi bir yaklaşımdır. Öğesi veya özniteliğini null yapılabilir bir türe ayarlarsanız, kod, var olabilen veya varolmayan bir öğenin (veya özniteliğin) değeri alınırken yazmak daha basittir. Bu konudaki son örnekte bu gösterilmektedir. Ancak, <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özellik ile yaptığınız gibi, bir öğenin içeriğini atama aracılığıyla ayarlayamazsınız.  
   
 ## <a name="example"></a>Örnek  
- Bir öğenin değerini almak için, <xref:System.Xml.Linq.XElement> nesneyi istediğiniz türe atamalısınız. Bir öğeyi aşağıdaki gibi her zaman bir dizeye çevirebilirsiniz:  
+ Bir öğenin değerini almak için <xref:System.Xml.Linq.XElement> nesnesini istediğiniz türe atamalısınız. Bir öğeyi aşağıdaki gibi her zaman bir dizeye çevirebilirsiniz:  
   
 ```csharp  
 XElement e = new XElement("StringElement", "abcde");  
@@ -31,7 +31,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Örnek  
- Ayrıca, öğeleri dize dışındaki türlere de çevirebilirsiniz. Örneğin, bir tamsayı içeren bir öğeye sahipseniz, aşağıdaki kodda gösterildiği gibi, öğesini öğesine `int`çevirebilirsiniz:  
+ Ayrıca, öğeleri dize dışındaki türlere de çevirebilirsiniz. Örneğin, bir tamsayı içeren bir öğeye sahipseniz, aşağıdaki kodda gösterildiği gibi onu `int`çevirebilirsiniz:  
   
 ```csharp  
 XElement e = new XElement("Age", "44");  
@@ -46,12 +46,12 @@ Console.WriteLine("Value of e:" + (int)e);
 Value of e:44  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Şu veri türleri `string`için açık atama işleçleri sağlar:, `uint?` `int?` `int` `bool`, `bool?`,,, `uint`,, `long`, `long?`,, `ulong` `ulong?` ,,,`DateTime?`, ,`double?` ,`GUID`, ,`DateTime`, ,`TimeSpan`, ,`TimeSpan?`ve `float` `float?` `double` `decimal` `decimal?` `GUID?`.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], aşağıdaki veri türleri için açık atama işleçleri sağlar: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`ve `GUID?`.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]nesneler için <xref:System.Xml.Linq.XAttribute> aynı atama işleçlerini sağlar.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], <xref:System.Xml.Linq.XAttribute> nesneleri için aynı atama işleçlerini sağlar.  
   
 ## <a name="example"></a>Örnek  
- Bir öğenin içeriğini almak <xref:System.Xml.Linq.XElement.Value%2A> için özelliğini kullanabilirsiniz:  
+ Bir öğenin içeriğini almak için <xref:System.Xml.Linq.XElement.Value%2A> özelliğini kullanabilirsiniz:  
   
 ```csharp  
 XElement e = new XElement("StringElement", "abcde");   
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Örnek  
- Bazen, var olmadığından emin olmasanız da bir öğenin değerini almaya çalışırsınız. Bu durumda, bulunan öğeyi null olabilen bir türe (ya da `string` .NET Framework null yapılabilir türlerden biri) atadığınızda, öğe yoksa atanan değişken olarak `null`ayarlanır. Aşağıdaki kod, öğe ne zaman olabileceği veya mevcut olmadığında, <xref:System.Xml.Linq.XElement.Value%2A> özelliği kullanmak için, atama kullanmanın daha kolay olduğunu gösterir.  
+ Bazen, var olmadığından emin olmasanız da bir öğenin değerini almaya çalışırsınız. Bu durumda, bulunan öğeyi null olabilen bir türe (`string` veya .NET Framework null yapılabilir türlerden biri) atadığınızda, öğe yoksa atanan değişken yalnızca `null`olarak ayarlanır. Aşağıdaki kod, öğe ne zaman olabileceği veya mevcut olmadığında, <xref:System.Xml.Linq.XElement.Value%2A> özelliğini kullanmak için atama kullanmanın daha kolay olduğunu gösterir.  
   
 ```csharp  
 XElement root = new XElement("Root",  

@@ -1,13 +1,13 @@
 ---
-title: F# Etkileşimli Seçenekleri
+title: Etkileşimli Seçenekler
 description: Etkileşimli, fsi. exe tarafından F# desteklenen komut satırı seçenekleri hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: e4ce0f3f76a7be803942e4b403e5fa6543a09e54
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: cceb8fb50434f3525ebb2ede16e84720d10d320c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425314"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348230"
 ---
 # <a name="f-interactive-options"></a>F# Etkileşimli Seçenekleri
 
@@ -35,13 +35,13 @@ F# Etkileşimli seçenek bağımsız değişkenlerinde listelerin göründüğü
 |Seçenek|Açıklama|
 |------|-----------|
 |**--**|F# Etkileşimli olarak kalan bağımsız değişkenleri F# program veya betiğe komut satırı bağımsız değişkenleri olarak değerlendirmek için kullanılır. Bu, **fsi. Commandbir**listesini kullanarak koda erişebilirsiniz.|
-|**--Checked**[ **+** &#124; **-** ]|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--checked**[ **+** &#124; **-** ]|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
 |**--CodePage:&lt;int&gt;**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
 |**--consolecolors**[ **+** &#124; **-** ]|Uyarı ve hata iletilerini renkli olarak verir.|
 |**--çapraz iyileştirme**[ **+** &#124; **-** ]|Modüller arası iyileştirmeleri etkinleştirin veya devre dışı bırakın.|
-|**--Debug**[ **+** &#124; **-** ]<br /><br />**--Debug:** [**tam**&#124;**pdbportable**&#124;&#124;**Embedded**]<br /><br />**-g**[ **+** &#124; **-** ]<br /><br />**-g:** [**tam**&#124;&#124;**pdbportable**&#124;**Embedded**]|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--debug**[ **+** &#124; **-** ]<br /><br />**--Debug:** [**tam**&#124;**pdbportable**&#124;&#124;**Embedded**]<br /><br />**-g**[ **+** &#124; **-** ]<br /><br />**-g:** [**tam**&#124;&#124;**pdbportable**&#124;**Embedded**]|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
 |**--define:&lt;dize&gt;**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
-|**--belirleyici**[ **+** &#124; **-** ]|Belirleyici derleme üretir (Modül sürümü GUID 'i ve zaman damgası dahil).|
+|**--deterministic**[ **+** &#124; **-** ]|Belirleyici derleme üretir (Modül sürümü GUID 'i ve zaman damgası dahil).|
 |**--Exec**|Dosyaları F# yükledikten veya komut satırında verilen betik dosyasını çalıştırdıktan sonra etkileşimli olarak çıkış ister.|
 |**--fullpaths**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
 |**--GUI**[ **+** &#124; **-** ]|Windows Forms olay döngüsünü etkinleştirilir veya devre dışı bırakır. Varsayılan değer etkindir.|
@@ -66,7 +66,7 @@ F# Etkileşimli seçenek bağımsız değişkenlerinde listelerin göründüğü
 |**--utf8output**|FSC. exe derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
 |**--warn:&lt;uyarı düzeyi&gt;**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
 |**--warnaserror**[ **+** &#124; **-** ]|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
-|**--warnaserror**[ **+** &#124; **-** ]: **&lt;int-List&gt;**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--warnaserror**[ **+** &#124; **-** ]: **&lt;int-list&gt;**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
 
 ## <a name="related-topics"></a>İlgili Konular
 

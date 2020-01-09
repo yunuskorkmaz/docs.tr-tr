@@ -3,12 +3,12 @@ title: 'Öğretici: ilk çözümleyicinizi ve kod düzeltmesini yazma'
 description: Bu öğretici, .NET derleyici SDK 'sını (Roslyn API 'Ler) kullanarak bir çözümleyici ve kod düzeltmesini oluşturmak için adım adım yönergeler sağlar.
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 7bd0fda9fb717a48c09aafde47f9b7f4f360c357
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 99401e74588088d56b3fbd916e050f5d468722a1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837057"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346934"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Öğretici: ilk çözümleyicinizi ve kod düzeltmesini yazma
 
@@ -216,7 +216,7 @@ private async Task<Document> MakeConstAsync(Document document,
 
 Yeni `MakeConstAsync` yönteminiz, kullanıcının kaynak dosyasını temsil eden <xref:Microsoft.CodeAnalysis.Document>, artık `const` bildirimi içeren yeni bir <xref:Microsoft.CodeAnalysis.Document> dönüştürür.
 
-Bildirim ifadesinin önüne eklemek için yeni bir `const` anahtar sözcük belirteci oluşturursunuz. Önce bildirim bildiriminin ilk belirtecinden önde gelen her türlü boşluğu kaldırmayı ve `const` belirtecine eklemeyi dikkatli olun. Aşağıdaki kodu `MakeConstAsync` yöntemine ekleyin:
+Bildirim ifadesinin önüne eklemek için yeni bir `const` anahtar sözcük belirteci oluşturursunuz. Önce bildirim bildiriminin ilk belirtecinden önde gelen her türlü boşluğu kaldırmayı ve `const` belirtecine eklemeyi dikkatli olun. `MakeConstAsync` yöntemine aşağıdaki kodu ekleyin:
 
 [!code-csharp[Create a new const keyword token](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#CreateConstToken  "Create the new const keyword token")]
 
@@ -520,7 +520,7 @@ int k = i + j;
 
 Bu değişikliklerden sonra, yalnızca ilk iki değişkene kırmızı dalgalı çizgiler alırsınız. `i` ve `j``const` ekleyin ve artık `const`olabileceğinden `k` yeni bir uyarı alırsınız.
 
-Tebrikler! Bir sorunu tespit etmek ve düzeltmek için hızlı bir düzeltme sağlamak üzere anında çalıştırılan kod analizini gerçekleştiren ilk .NET Compiler Platform uzantınızı oluşturdunuz. Bu şekilde, .NET Compiler Platform SDK 'nın (Roslyn API 'Ler) parçası olan kod API 'lerinin birçoğunu öğrendiniz. Çalışmalarımızı örnek GitHub deponuzdaki [tamamlanmış örnekle](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst) karşı denetleyebilirsiniz. Ya da [tamamlanmış projenin ZIP dosyasını](https://github.com/dotnet/samples/blob/master/csharp/roslyn-sdk/Tutorials/MakeConst.zip) indirebilirsiniz
+Tebrikler! Bir sorunu tespit etmek ve düzeltmek için hızlı bir düzeltme sağlamak üzere anında çalıştırılan kod analizini gerçekleştiren ilk .NET Compiler Platform uzantınızı oluşturdunuz. Bu şekilde, .NET Compiler Platform SDK 'nın (Roslyn API 'Ler) parçası olan kod API 'lerinin birçoğunu öğrendiniz. Çalışmalarımızı örnek GitHub deponuzdaki [tamamlanmış örnekle](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst) karşı denetleyebilirsiniz.
 
 ## <a name="other-resources"></a>Diğer kaynaklar
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - examples [Visual Basic], arrays
 - examples [Visual Basic], Char data type
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
-ms.openlocfilehash: 03138a851afc55f735cc66edeb345817428a0452
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bf37ceba901e712df10ad4b39f9ad74194843136
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344394"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346765"
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>Nasıl yapılır: Karakter Değerleri Dizisinden Bir Dize Oluşturma (Visual Basic)
 Bu örnek, bağımsız karakterlerden "abcd" dizesini oluşturur.  
@@ -18,7 +18,7 @@ Bu örnek, bağımsız karakterlerden "abcd" dizesini oluşturur.
 ## <a name="example"></a>Örnek  
  [!code-vb[VbVbalrStrings#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#61)]  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compile-the-code"></a>Kod derleme  
  Bu yöntemin özel gereksinimleri yoktur.  
   
  Tek bir `c` tek bir karakteri tırnak işaretleri içinde izleyen `"a"c`sözdizimi, bir karakter sabit değeri oluşturmak için kullanılır.  

@@ -2,12 +2,12 @@
 title: WorkFlow Hizmet Kayıt Aracı (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: cf5ea345c900dec0e4859d81fcb272c1ba3d3df6
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 182bef75bff1785905d77d3bc497e0701e297912
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837759"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346586"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>WorkFlow Hizmet Kayıt Aracı (WFServicesReg.exe)
 Workflow Services kayıt aracı (WFServicesReg. exe), Windows Workflow Foundation (WF) Hizmetleri için yapılandırma öğelerini eklemek, kaldırmak veya onarmak üzere kullanılabilecek tek başına bir araçtır.  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  Araç ayrıca. xoml ve. Rules komut dosyası eşleştirmelerini ve işleyicileri IIS metatabanında kaydeder.  
   
- [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../includes/wxp-md.md)] makinelerde (IIS 5,1 ve IIS 6,0), bir. xoml ve. Rules komut dosyası kümesinin bir kümesi kaydedilir.  
+ Windows Server 2003 ve [!INCLUDE[wxp](../../../includes/wxp-md.md)] makinelerde (IIS 5,1 ve IIS 6,0), tek bir. xoml ve. Rules komut dosyası kümesi kaydedilir.  
   
  64 bitlik makinelerde araç, `Enable32BitAppOnWin64` anahtarı etkinse WOW modu komut dosyası eşleştirmelerini veya `Enable32BitAppOnWin64` anahtarı devre dışıysa yerel 64 bit komut dosyası eşleştirmelerini kaydeder.  
   
@@ -70,17 +70,17 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="usage-scenarios"></a>Kullanım senaryoları  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>.NET Framework 3,5 yüklendikten sonra IIS yükleme  
- [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] bir makinede .NET Framework 3,5, IIS yüklemesinden önce yüklenir. IIS metatabanının KULLANILAMAMASINDAN dolayı, .NET Framework 3,5 yüklemesi. xoml ve. Rules komut dosyası yüklemeleri olmadan başarılı olur.  
+ Windows Server 2003 makinesinde, IIS yüklemesinden önce .NET Framework 3,5 yüklenir. IIS metatabanının KULLANILAMAMASINDAN dolayı, .NET Framework 3,5 yüklemesi. xoml ve. Rules komut dosyası yüklemeleri olmadan başarılı olur.  
   
  IIS yüklendikten sonra, bu özel komut dosyası eşleştirmelerini yüklemek için `/c` anahtarıyla WFServicesReg. exe aracını kullanabilirsiniz.  
   
 ### <a name="repairing-the-scriptmaps"></a>Kod haritalarını onarma  
   
 #### <a name="scriptmap-deleted-under-web-sites-node"></a>ScriptMap Web siteleri düğümü altında silindi  
- Bir [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] makinesinde. xoml veya. Rules, yanlışlıkla Web siteleri düğümünden silinir. Bu, WFServicesReg. exe aracı `/c` anahtarıyla çalıştırılarak onarılabilir.  
+ Bir Windows Server 2003 makinesinde,. xoml veya. Rules, yanlışlıkla Web siteleri düğümünden silinir. Bu, WFServicesReg. exe aracı `/c` anahtarıyla çalıştırılarak onarılabilir.  
   
 #### <a name="scriptmap-deleted-under-a-particular-web-site"></a>ScriptMap belirli bir Web sitesi altında silindi  
- Bir [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] makinesinde. xoml veya. Rules, Web siteleri düğümünden değil, belirli bir Web sitesinden (örneğin, varsayılan Web sitesi) yanlışlıkla silinir.  
+ Bir Windows Server 2003 makinesinde,. xoml veya. Rules, Web siteleri düğümünden değil, belirli bir Web sitesinden (örneğin, varsayılan Web sitesi) yanlışlıkla silinir.  
   
  Belirli bir Web sitesi için silinen işleyicileri onarmak üzere, tüm Web sitelerinden işleyicileri kaldırmak için "WFServicesReg. exe/r" komutunu çalıştırmanız ve sonra tüm Web siteleri için uygun işleyicileri oluşturmak üzere "WFServicesReg. exe/c" komutunu çalıştırmanız gerekir.  
   

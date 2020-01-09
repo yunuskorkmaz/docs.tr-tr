@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Ayrılmış bir dosyanın alanlarını yeniden sıralama (LINQ) (C#)'
+title: Ayrılmış bir dosyanın (LINQ) alanlarını yeniden sıralama (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 31cb7b936f58653e6223501f3b03cd9472b92453
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6bc502ff12a908edf43f9ff7f5f63f98c3ff29c4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253454"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347649"
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Nasıl yapılır: Ayrılmış bir dosyanın alanlarını yeniden sıralama (LINQ) (C#)
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Ayrılmış bir dosyanın (LINQ) alanlarını yeniden sıralama (LINQ) (C#)
 Virgülle ayrılmış değer (CSV) dosyası, elektronik tablo verilerini veya satırlar ve sütunlar tarafından temsil edilen diğer tablo verilerini depolamak için genellikle kullanılan bir metin dosyasıdır. Alanları ayırmak için <xref:System.String.Split%2A> yöntemini kullanarak, LINQ kullanarak CSV dosyalarını sorgulamak ve işlemek çok kolaydır. Aslında, yapılandırılmış herhangi bir metin satırının parçalarını yeniden sıralamak için aynı teknik de kullanılabilir; CSV dosyalarıyla sınırlı değildir.  
   
  Aşağıdaki örnekte, üç sütunun öğrencileri ' "soyadı," "First Name" ve "ID" temsil ettiğini varsayın. Alanlar, öğrencilerin son adlarına göre alfabetik sıralardır. Sorgu önce KIMLIK sütununun ilk göründüğü yeni bir dizi oluşturur, ardından öğrencinin adı ve soyadı birleştiren ikinci bir sütun gelir. Satırlar KIMLIK alanına göre yeniden sıralanabilir. Sonuçlar yeni bir dosyaya kaydedilir ve özgün veriler değiştirilmez.  
@@ -75,11 +75,11 @@ class CSVFiles
  */  
 ```  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
-System. C# LINQ ve System.IO ad alanları `using` için yönergeler içeren bir konsol uygulaması projesi oluşturun.
+## <a name="compiling-the-code"></a>Kod Derleme  
+System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ ve dizeler (C#)](./linq-and-strings.md)
 - [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)
-- [Nasıl yapılır: CSV dosyalarından XML oluştur (C#)](./how-to-generate-xml-from-csv-files.md)
+- [CSV dosyalarından XML oluşturma (C#)](./how-to-generate-xml-from-csv-files.md)

@@ -2,12 +2,12 @@
 title: Işlemleri ayarla (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 22079b1d41533803f694af210f98bc9fb8a5b322
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 170316b36705eaed51a9a17f8f79333a29e8c315
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711876"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346508"
 ---
 # <a name="set-operations-c"></a>Işlemleri ayarla (C#)
 LINQ 'teki işlemleri, aynı veya ayrı Koleksiyonlar (veya kümeler) içindeki eşdeğer öğelerin varlığına veya yokluğuna dayalı bir sonuç kümesi üreten sorgu işlemlerine yönelik olarak ayarlayın.  
@@ -58,4 +58,4 @@ LINQ 'teki işlemleri, aynı veya ayrı Koleksiyonlar (veya kümeler) içindeki 
 - <xref:System.Linq>
 - [Standart sorgu Işleçlerine genelC#bakış ()](./standard-query-operators-overview.md)
 - [Dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)
-- [Nasıl yapılır: Iki liste arasında küme farkını bulma (LINQ) (C#)](./how-to-find-the-set-difference-between-two-lists-linq.md)
+- [İki liste arasında küme farkını bulma (LINQ) (C#)](./how-to-find-the-set-difference-between-two-lists-linq.md)

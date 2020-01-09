@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 7e907f234afd0fc5e81d586ed456279f684c29de
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: bfbff63c8c2cdb76d5f6d84424a9b03233744dae
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837954"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347114"
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT ve Güvenlik Duvarlarıyla Çalışma
 Bir ağ bağlantısının istemci ve sunucusunun genellikle iletişim için doğrudan ve açık bir yolu yoktur. Paketler, hem uç nokta makinelerinde hem de ağdaki ara makinelerde filtrelenir, yönlendirilir, çözümlenir ve dönüştürülür. Ağ adresi çevirileri (NAT) ve güvenlik duvarları, ağ iletişimine katılabileceğiniz ara uygulamaların yaygın örnekleridir.  
@@ -32,7 +32,7 @@ Bir ağ bağlantısının istemci ve sunucusunun genellikle iletişim için doğ
  Ana Kullanıcı güvenlik duvarı için ortak bir yapılandırma, daha önce o makineye giden bir bağlantı yapılmadığı takdirde gelen bağlantıları yasaklayabilmelidir. Bir iş kullanıcısı güvenlik duvarı için ortak bir yapılandırma, özel olarak tanımlanmış bir grup hariç tüm bağlantı noktalarında gelen bağlantıları yasaklayadır. HTTP ve HTTPS hizmeti sağlamak için 80 ve 443 bağlantı noktaları dışındaki tüm bağlantı noktalarında bağlantıları yasaklayasaklayan bir güvenlik duvarıdır. Yönetilen güvenlik duvarları, hem ev hem de iş kullanıcıları için, makinede güvenilir bir kullanıcıya veya işleme izin veren güvenlik duvarı yapılandırmasını değiştirebilir. Yönetilen güvenlik duvarları, ağ kullanımını denetleyen kurumsal bir ilke olmadığı ev kullanıcıları için daha yaygındır.  
   
 ## <a name="using-teredo"></a>Teredo 'Yu kullanma  
- Teredo, bir NAT arkasındaki makinelerin doğrudan adreslenebilirliğini sağlayan bir IPv6 geçiş teknolojisidir. Teredo, olası bağlantıları tanıtmak için herkese açık ve genel olarak yönlendirilemeyen bir sunucu kullanımına dayanır. Teredo sunucusu, uygulama istemcisine ve sunucusuna, bağlantı bilgilerini değiş tokuş ettikleri ortak bir toplantı noktası sağlar. Daha sonra makineler geçici bir Teredo adresi ister ve paketler mevcut ağ üzerinden tünellenmiş. WCF 'de Teredo desteği, işletim sisteminde IPv6 ve Teredo desteğinin etkinleştirilmesini gerektirir. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve üzeri işletim sistemleri Teredo 'Yu destekler. Windows Vista ve sonraki işletim sistemleri IPv6 'Yı varsayılan olarak destekler ve yalnızca kullanıcının Teredo 'Yu etkinleştirmesini gerektirir. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] ve [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], kullanıcının hem IPv6 hem de Teredo 'Yu etkinleştirmesini gerektirir. Daha fazla bilgi için bkz. [Teredo 'Ya genel bakış](https://go.microsoft.com/fwlink/?LinkId=87571).  
+ Teredo, bir NAT arkasındaki makinelerin doğrudan adreslenebilirliğini sağlayan bir IPv6 geçiş teknolojisidir. Teredo, olası bağlantıları tanıtmak için herkese açık ve genel olarak yönlendirilemeyen bir sunucu kullanımına dayanır. Teredo sunucusu, uygulama istemcisine ve sunucusuna, bağlantı bilgilerini değiş tokuş ettikleri ortak bir toplantı noktası sağlar. Daha sonra makineler geçici bir Teredo adresi ister ve paketler mevcut ağ üzerinden tünellenmiş. WCF 'de Teredo desteği, işletim sisteminde IPv6 ve Teredo desteğinin etkinleştirilmesini gerektirir. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve üzeri işletim sistemleri Teredo 'Yu destekler. Windows Vista ve sonraki işletim sistemleri IPv6 'Yı varsayılan olarak destekler ve yalnızca kullanıcının Teredo 'Yu etkinleştirmesini gerektirir. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] ve Windows Server 2003, kullanıcının hem IPv6 hem de Teredo 'Yu etkinleştirmesini gerektirir. Daha fazla bilgi için bkz. [Teredo 'Ya genel bakış](https://go.microsoft.com/fwlink/?LinkId=87571).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Aktarım ve Ileti değişim modelini seçme  
  Bir taşımanın ve MEP 'nin seçilmesi üç adımlı bir işlemdir:  

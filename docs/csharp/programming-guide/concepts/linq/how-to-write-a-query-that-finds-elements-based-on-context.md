@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Bağlam (C#) temelinde öğeleri bulan bir sorgu yazın'
+title: Bağlam (C#) temelinde öğeleri bulan bir sorgu yazma
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: e3ac8fc965132521b85cce6391908634cdb17127
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3fc131fdeb8dbf8871bfa455bc54eab0eeca7022
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253212"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348375"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Nasıl yapılır: Bağlam (C#) temelinde öğeleri bulan bir sorgu yazın
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Bağlam (C#) temelinde öğeleri bulan bir sorgu yazma
 Bazen, bağlamlarına göre öğeleri seçen bir sorgu yazmanız gerekebilir. Önceki veya sonraki eşdüzey öğelere göre filtrelemek isteyebilirsiniz. Alt veya üst öğe öğelerine göre filtrelemek isteyebilirsiniz.  
   
- Bunu, `where` bir sorgu yazarak ve yan tümcesindeki sorgunun sonuçlarını kullanarak yapabilirsiniz. İlk olarak null ile test etmeniz ve sonra değeri test etmeniz gerekiyorsa, bir `let` yan tümce içinde sorgu yapmak daha uygundur ve sonra sonuçları `where` yan tümce içinde kullanın.  
+ Bunu bir sorgu yazarak ve `where` yan tümcesindeki sorgunun sonuçlarını kullanarak yapabilirsiniz. İlk olarak null ile test etmeniz ve sonra değeri test etmeniz gerekiyorsa, sorguyu bir `let` yan tümcesinde yapmak daha uygundur ve sonra sonuçları `where` yan tümcesinde kullanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, hemen arkasından `p` bir `ul` öğesi olan tüm öğeleri seçer.  
+ Aşağıdaki örnek, bir `ul` öğesi tarafından hemen izlenen tüm `p` öğelerini seçer.  
   
 ```csharp  
 XElement doc = XElement.Parse(@"<Root>  

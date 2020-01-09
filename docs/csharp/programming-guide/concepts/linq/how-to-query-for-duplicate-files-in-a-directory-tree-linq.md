@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Bir dizin ağacında (LINQ) (C#) yinelenen dosyalar için sorgu'
+title: Bir dizin ağacında (LINQ) yinelenen dosyaları sorgulama (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 3e7d1ee779f6e584bfc636963e038e31332bfca8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 7c84dba3e87077077f28bc2e665ea3774cf44d3b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216610"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347872"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Nasıl yapılır: Bir dizin ağacında (LINQ) (C#) yinelenen dosyalar için sorgu
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Bir dizin ağacında (LINQ) yinelenen dosyaları sorgulama (LINQ) (C#)
 Bazen aynı ada sahip dosyalar birden fazla klasörde bulunabilir. Örneğin, Visual Studio yükleme klasörü altında, birkaç klasör Readme. htm dosyasına sahiptir. Bu örnek, belirtilen bir kök klasör altında bu tür yinelenen dosya adlarının nasıl sorgulanalınacağını gösterir. İkinci örnek, boyutu ve LastWrite süreleri de aynı olan dosyaların nasıl sorgulanacağı gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
@@ -167,10 +167,10 @@ class QueryDuplicateFileNames
 }  
 ```  
   
- İlk sorgu, bir eşleşmeyi tespit etmek için basit bir anahtar kullanır; Bu, aynı ada sahip ancak içeriği farklı olabilecek olan dosyaları bulur. İkinci sorgu, <xref:System.IO.FileInfo> nesnenin üç özellikleriyle eşleşmesi için bir bileşik anahtar kullanır. Bu sorgu, aynı ada ve benzer veya özdeş içeriğe sahip dosyaları bulmak çok daha olasıdır.  
+ İlk sorgu, bir eşleşmeyi tespit etmek için basit bir anahtar kullanır; Bu, aynı ada sahip ancak içeriği farklı olabilecek olan dosyaları bulur. İkinci sorgu <xref:System.IO.FileInfo> nesnesinin üç özellikleriyle eşleştirmek için bir bileşik anahtar kullanır. Bu sorgu, aynı ada ve benzer veya özdeş içeriğe sahip dosyaları bulmak çok daha olasıdır.  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- System. C# LINQ ve System.IO ad alanları `using` için yönergeler içeren bir konsol uygulaması projesi oluşturun.  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

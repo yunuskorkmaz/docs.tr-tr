@@ -1,43 +1,43 @@
 ---
-title: .NET derleyici Platformu SDK'sı çalışma modeli ile çalışma
-description: Bu genel bakışta çalışma alanını ve kodunuzu projelerde sorgulama ve düzenleme kullandığınız türünün bir anlayış sağlar.
+title: .NET Compiler Platform SDK çalışma alanı modeliyle çalışma
+description: Bu genel bakışta, kodunuzun çalışma alanını ve projelerini sorgulamak ve işlemek için kullandığınız tür hakkında bilgi sağlanır.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 7d450b31cbf2c83c79552d1ace3a1ae692bfdd88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2e69129a869707eaec3516310a72f1fc918ca26
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706510"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346918"
 ---
 # <a name="work-with-a-workspace"></a>Bir çalışma alanı ile çalışma
 
-**Çalışma alanları** katman tüm çözümleri yeniden düzenleme ve kod analizi yapmak için başlangıç noktasıdır. Bu katman içinde çalışma API, bir çözüm içindeki projeleri hakkındaki tüm bilgileri tek nesne modeline, düzenleme kaynak metni, söz dizimi ağacı, anlam modelleri gibi derleyici katman nesnesi modellerini doğrudan erişim sunan yardımcı olur ve dosyaları ayrıştırma gerek olmadan derleme seçenekleri yapılandırın veya Projeler arası bağımlılıkları yönetin. 
+**Çalışma alanları** katmanı, Kod analizini yapmak ve çözümlerin tamamında yeniden düzenleme yapmak için başlangıç noktasıdır. Bu katman içinde, çalışma alanı API 'SI bir çözümdeki projelerle ilgili tüm bilgileri tek bir nesne modelinde organize ediyor ve böylece kaynak metin, sözdizimi ağaçları, anlam modelleri gibi derleyici katmanı nesne modellerine doğrudan erişim imkanı sunar. dosyaları ayrıştırmaya, seçenekleri yapılandırmaya veya proje dışı bağımlılıkları yönetmeye gerek kalmadan derlemeler. 
 
-Bir IDE gibi konak ortamlarından, açık olan çözüme karşılık gelen bir çalışma alanı sağlayın. Bu model bir IDE dışında bir çözüm dosyası yükleyerek kullanmak mümkündür.
+IDE gibi ana bilgisayar ortamları, açık çözüme karşılık gelen sizin için bir çalışma alanı sağlar. Ayrıca, bir çözüm dosyası yükleyerek bu modelin IDE dışında kullanılması da mümkündür.
 
 ## <a name="workspace"></a>Çalışma alanı
 
-Çözümünüzün proje koleksiyonu, her bir belge koleksiyonu olarak etkin bir temsili bir çalışma alanıdır. Bir çalışma alanı, genellikle bir kullanıcı türleri olarak sürekli değişen veya özellikleri işleyen bir ana bilgisayar ortamına bağlıdır. 
+Çalışma alanı, çözümünüzün bir proje koleksiyonu olarak, her biri bir belge koleksiyonu olarak etkin bir gösterimidir. Çalışma alanı, genellikle kullanıcı türleri olarak değişen veya özellikleri işleyen bir konak ortamına bağlıdır. 
 
-<xref:Microsoft.CodeAnalysis.Workspace> Geçerli çözüm modeline erişim sağlar. Konak ortamında değişiklik olduğunda, ilgili olaylar, çalışma alanı tetikler ve <xref:Microsoft.CodeAnalysis.Workspace.CurrentSolution?displayProperty=nameWithType> özellik güncelleştirilir. Örneğin, kullanıcı türleri kaynak belgeleri birine karşılık gelen bir metin düzenleyicisinde çalışma çözümünün Genel modeli değiştiğini göstermek için bir olay ve hangi belge değiştirildiği kullandığında. Ardından, yeni modelin doğruluğunu çözümleme, alanlarını anlam vurgulama veya bir öneri bir kod değişikliği yapmadan bu değişiklikleri tepki verebilir. 
+<xref:Microsoft.CodeAnalysis.Workspace> çözümün geçerli modeline erişim sağlar. Konak ortamında değişiklik yapıldığında, çalışma alanı ilgili olayları harekete geçirilir ve <xref:Microsoft.CodeAnalysis.Workspace.CurrentSolution?displayProperty=nameWithType> özelliği güncellenir. Örneğin, Kullanıcı, kaynak belgelerden birine karşılık gelen bir metin düzenleyicisinde yazdığında, çalışma alanı, çözümün genel modelinin değiştiğini ve hangi belgenin değiştirildiğini işaret etmek için bir olay kullanır. Daha sonra bu değişikliklere, yeni modeli doğru şekilde çözümleyerek, anlamlı alanların vurgulanmasını veya bir kod değişikliği önerisi yapmayı sağlayabilirsiniz. 
 
-Ayrıca, konak ortam bir uygulamada kullanılan veya ana bilgisayar ortamına bağlı olmayan tek başına çalışma alanları oluşturabilirsiniz.
+Konak ortamından bağlantısı kesilen veya konak ortamı olmayan bir uygulamada kullanılan tek başına çalışma alanları da oluşturabilirsiniz.
 
-## <a name="solutions-projects-documents"></a>Çözümler, projeler, belgeleri
+## <a name="solutions-projects-documents"></a>Çözümler, projeler, belgeler
 
-Bir çalışma alanında bir tuşa basıldığında her zaman değişebilir olsa da, yalıtım çözümde modelini çalışabilirsiniz. 
+Bir anahtara her basıldığında bir çalışma alanı değişebilir, ancak çözüm modeliyle, yalıtım halinde çalışabilirsiniz. 
 
-Bir çözümü, projeleri ve belgeleri değişmez bir modeldir. Bu model çoğaltma kilitlenmesi veya paylaşılabilir anlamına gelir. Bir çözüm örneğinden edindikten sonra <xref:Microsoft.CodeAnalysis.Workspace.CurrentSolution?displayProperty=nameWithType> özelliği, bu örneği hiçbir zaman değiştirir. Ancak, gibi söz dizimi ağacı ve derlemeleri, ile çözümlerini mevcut çözümleri ve belirli değişiklikleri dayalı yeni örneklerini oluşturarak değiştirebilirsiniz. Yaptığınız değişiklikleri yansıtacak şekilde çalışma almak için açıkça değiştirilen çözümü çalışma alanına uygulamanız gerekir.
+Çözüm, proje ve belgelerin sabit bir modelidir. Bu, modelin kilitleme veya çoğaltma olmadan paylaşılabilecek anlamına gelir. <xref:Microsoft.CodeAnalysis.Workspace.CurrentSolution?displayProperty=nameWithType> özelliğinden bir çözüm örneği elde ettikten sonra, bu örnek hiçbir şekilde değişmeyecektir. Ancak, söz dizimi ağaçları ve derlemeler gibi, mevcut çözümlere ve belirli değişikliklere göre yeni örnekler oluşturarak çözümleri değiştirebilirsiniz. Çalışma alanını değişikliklerinizi yansıtacak şekilde almak için, değiştirilen çözümü çalışma alanına geri uygulamanız gerekir.
 
-Bir proje, genel sabit çözüm modelin bir parçasıdır. Tüm kaynak kod belgelerini, ayrıştırma ve derleme seçeneklerini ve hem derleme ve projeden projeye başvurular temsil eder. Bir projeden karşılık gelen derleme proje bağımlılıkları belirlemeniz veya tüm kaynak dosyalarını ayrıştırmak gerek kalmadan erişebilir.
+Proje, genel olarak sabit çözüm modelinin bir parçasıdır. Tüm kaynak kodu belgelerini, ayrıştırmasını ve derleme seçeneklerini ve hem derleme hem de projeden projeye başvuruları temsil eder. Bir projeden, Proje bağımlılıklarını belirleme veya herhangi bir kaynak dosyayı ayrıştırmaya gerek kalmadan ilgili derlemeye erişebilirsiniz.
 
-Bir belge ayrıca genel sabit çözüm modelin bir parçasıdır. Bir belge metin dosyası, söz dizimi ağacı ve anlam modeli erişim bir tek bir kaynak dosyasını temsil eder.
+Belge ayrıca, genel sabit çözüm modelinin bir parçasıdır. Belge, dosyanın metnine, sözdizimi ağacına ve anlam modeline erişebileceğiniz tek bir kaynak dosyayı temsil eder.
 
-Aşağıdaki şemada çalışma konağa ilişkisini temsilidir ortamı, araçları ve düzenlemeleri nasıl yapılır.
+Aşağıdaki diyagram, çalışma alanının ana bilgisayar ortamı, araçları ve düzenlemelerle nasıl ilişkili olduğunu gösteren bir gösterimidir.
 
-![projeleri ve kaynak dosyaları içeren bir çalışma alanının farklı öğeler arasındaki ilişkileri](media/work-with-workspace/workspace-obj-relations.png)
+![projeleri ve kaynak dosyaları içeren bir çalışma alanının farklı öğeleri arasındaki ilişkiler](media/work-with-workspace/workspace-obj-relations.png)
 
 ## <a name="summary"></a>Özet
 
-Roslyn derleyici API'leri ve çalışma alanları tam uygunlukta sahip olan ve kaynak kodunuz hakkında zengin bilgiler sağlayan API kümesi sunan C# ve Visual Basic dillerini.  .NET derleyici Platformu SDK'sı, kod odaklı bir araç ve uygulamalar oluşturmak için giriş engel önemli ölçüde azaltır. C# ve VB dil ve C# ve VB etki alanına özgü diller katıştırma meta programlama kod oluşturma ve dönüştürme, etkileşimli kullanmak gibi alanlarda yenilik için birçok fırsat oluşturur.  
+Roslyn, C# kaynak kodunuz hakkında zengin bilgi sağlayan ve ve Visual Basic dilleri ile tam uygunluğa sahip olan bir derleyici API 'Si ve çalışma alanı API 'leri kümesi sunar.  .NET Compiler Platform SDK, kod odaklı araçları ve uygulamaları oluşturmak için engel önemli ölçüde düşürür. Meta programlama, kod oluşturma ve dönüştürme, C# ve Visual Basic dillerin etkileşimli kullanımı ve etki alanına özgü dillerde ekleme C# ve Visual Basic gibi alanlarda yenilik için birçok fırsat oluşturur.  

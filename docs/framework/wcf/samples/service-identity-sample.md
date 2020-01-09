@@ -2,12 +2,12 @@
 title: Hizmet Kimliği Örneği
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: eb2dd3c6392164905cf755075856608ec5fcaf30
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 375246127b6b39440360f48fc7b24bd0388a35e5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837798"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347933"
 ---
 # <a name="service-identity-sample"></a>Hizmet Kimliği Örneği
 Bu hizmet kimliği örneği, bir hizmetin kimliğini nasıl ayarlayabileceğinizi gösterir. Tasarım zamanında, istemci, hizmetin meta verilerini kullanarak kimliği alabilir ve çalışma zamanında istemci hizmetin kimliğini doğrulayabilir. Hizmet kimliği kavramı, bir istemcinin işlemlerini çağırmadan önce bir hizmetin kimliğini doğrulamasına izin ver, böylelikle de istemciyi kimliği doğrulanmamış çağrılardan koruyor. Güvenli bir bağlantıda hizmet, erişim izni vermeden önce bir istemcinin kimlik bilgilerini doğrular, ancak bu, bu örneğin odağı değildir. [İstemcide](../../../../docs/framework/wcf/samples/client.md) sunucu kimlik doğrulamasını gösteren örneklere bakın.
@@ -117,7 +117,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 1. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] veya Windows Vista 'da, kimlik çözüm klasöründeki Identity. pfx sertifika dosyasını, MMC ek bileşeni aracını kullanarak LocalMachine/My (Personal) sertifika deposuna aktarın. Bu dosya parola korumalıdır. İçeri aktarma sırasında sizden bir parola istenir. Parola kutusuna `xyz` yazın. Daha fazla bilgi için bkz. [nasıl yapılır: MMC ek bileşeni Ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) konusuna bakın. Bu işlem tamamlandıktan sonra, bu sertifikayı istemcide kullanılmak üzere geçerli kullanıcı/güvenilir kişiler deposuna kopyalayan yönetici ayrıcalıklarına sahip Visual Studio için Geliştirici Komut İstemi Setup. bat dosyasını çalıştırın.
 
-2. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], yönetici ayrıcalıklarıyla bir Visual Studio 2012 komut istemi içindeki örnek yükleme klasöründen Setup. bat dosyasını çalıştırın. Bu, örneği çalıştırmak için gereken tüm sertifikaları kurar.
+2. Windows Server 2003 ' de, yönetici ayrıcalıklarıyla bir Visual Studio 2012 komut istemi içindeki örnek yükleme klasöründen Setup. bat dosyasını çalıştırın. Bu, örneği çalıştırmak için gereken tüm sertifikaları kurar.
 
     > [!NOTE]
     > Setup. bat toplu iş dosyası bir Visual Studio 2012 komut Isteminden çalıştırılmak üzere tasarlanmıştır. Visual Studio 2012 komut Isteminde ayarlanan PATH ortam değişkeni Setup. bat betiği için gereken yürütülebilir dosyaları içeren dizine işaret eder. Örnek ile işiniz bittiğinde Cleanup. bat dosyasını çalıştırarak sertifikaları kaldırtığınızdan emin olun. Diğer güvenlik örnekleri aynı sertifikaları kullanır.  

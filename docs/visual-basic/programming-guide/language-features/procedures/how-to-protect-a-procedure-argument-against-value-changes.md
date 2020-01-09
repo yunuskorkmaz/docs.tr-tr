@@ -14,12 +14,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: 36092eb597b5b20e1da42cd9d15ab8633636cfb1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 75c718c83f36e2f0b2c4cfb5504c2d740eaa3520
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344855"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347897"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Nasıl yapılır: Bir Yordam Bağımsız Değişkenini Değer Değişikliklerine Karşı Koruma (Visual Basic)
 Bir yordam bir parametreyi [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)olarak bildiriyorsa Visual Basic, yordam kodunu çağıran koddaki bağımsız değişkeni temel alan programlama öğesine doğrudan başvuru olarak verir. Bu yordam, çağıran koddaki bağımsız değişkenin temelindeki değeri değiştirmesine izin verir. Bazı durumlarda, çağıran kod bu tür bir değişikliğe karşı korumak isteyebilir.  
@@ -39,7 +39,7 @@ Bir yordam bir parametreyi [ByRef](../../../../visual-basic/language-reference/m
   
  İkinci `MsgBox` çağrısı "yenisiyle değiştirildikten sonra (n): 11, 21, 31, 41" olarak görüntülenir. `n` `ByVal`geçirildiğinden `replace`, çağıran koddaki `n` değişkeni kendisine yeni bir dizi atayarak değiştiremez. `replace` yeni dizi örneği `k` oluşturduğunda ve yerel değişkene `a`atarken, çağıran kod tarafından geçirilen `n` başvurusunu kaybeder. `a`üyelerini değiştirdiğinde, yalnızca yerel dizi `k` etkilenir. Bu nedenle `replace`, çağıran koddaki dizi `n` değerlerini artırmaz.  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compile-the-code"></a>Kod derleme  
  Visual Basic varsayılan değeri, bağımsız değişkenleri değere göre geçirmektir. Ancak, her bir belirtilen parametreye ilişkin [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) anahtar sözcüğünü eklemek iyi bir programlama uygulamasıdır. Bu, kodunuzun okunmasını kolaylaştırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

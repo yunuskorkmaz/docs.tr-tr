@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: LINQ to XML Axis yöntemi (C#) yazın'
+title: LINQ to XML Axis yöntemi yazma (C#)
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 74105ff9d08479a4fc702b02e6929130272b237b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: fc602f91dc6da16c4a019bb42ff178ae3de4ea03
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253230"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348351"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Nasıl yapılır: LINQ to XML Axis yöntemi (C#) yazın
+# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>LINQ to XML Axis yöntemi yazma (C#)
 Bir XML ağacından koleksiyonları almak için kendi eksen yöntemlerinizi yazabilirsiniz. Bunu gerçekleştirmenin en iyi yöntemlerinden biri, öğe veya özniteliklerin bir koleksiyonunu döndüren bir genişletme yöntemi yazmaktır. Uygulamanızın gereksinimlerine bağlı olarak, öğelerin veya özniteliklerin belirli alt kümelerini döndürmek için uzantı yönteminizi yazabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte iki genişletme yöntemi kullanılmaktadır. İlk genişletme yöntemi `GetXPath`,, üzerinde <xref:System.Xml.Linq.XObject>çalışır ve değerlendirilen bir XPath ifadesi döndürür ve değerlendirildiğinde düğüm veya öznitelik döndürülür. İkinci uzantı yöntemi `Find`üzerinde <xref:System.Xml.Linq.XElement>çalışır. Belirli bir metni içeren <xref:System.Xml.Linq.XAttribute> nesne ve <xref:System.Xml.Linq.XElement> nesnelerin bir koleksiyonunu döndürür.  
+ Aşağıdaki örnekte iki genişletme yöntemi kullanılmaktadır. İlk genişletme yöntemi, `GetXPath`, <xref:System.Xml.Linq.XObject>üzerinde çalışır ve değerlendirilen bir XPath ifadesi döndürür ve değerlendirildiğinde düğüm veya öznitelik döndürülür. İkinci genişletme yöntemi, `Find`, <xref:System.Xml.Linq.XElement>üzerinde çalışır. <xref:System.Xml.Linq.XAttribute> nesne koleksiyonunu ve belirli bir metni içeren nesneleri <xref:System.Xml.Linq.XElement> döndürür.  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Birden çok satın alma siparişi (](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)LINQ to XML).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 public static class MyExtensions  

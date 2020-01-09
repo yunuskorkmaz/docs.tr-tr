@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: DataContractSerializer (C#) kullanarak serileştirme'
+title: DataContractSerializer (C#) kullanarak seri hale getirme
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 2b4800e2c6d210d62ab3093b673898a147c1f92d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c75455ce7c7943194ab43ac0150f5b9392f92e16
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253336"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347405"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-c"></a>Nasıl yapılır: DataContractSerializer (C#) kullanarak serileştirme
-Bu konuda, kullanarak <xref:System.Runtime.Serialization.DataContractSerializer>seri hale getirilen ve seri hale getirilen bir örnek gösterilmektedir.  
+# <a name="how-to-serialize-using-datacontractserializer-c"></a>DataContractSerializer (C#) kullanarak seri hale getirme
+Bu konuda <xref:System.Runtime.Serialization.DataContractSerializer>kullanarak seri hale getirilen ve serileştiren bir örnek gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, <xref:System.Xml.Linq.XElement> nesneleri içeren bir dizi nesne oluşturur. Daha sonra bunları metin dosyalarına serileştirir ve metin dosyalarından serileştirir.  
+ Aşağıdaki örnek <xref:System.Xml.Linq.XElement> nesneleri içeren bir dizi nesne oluşturur. Daha sonra bunları metin dosyalarına serileştirir ve metin dosyalarından serileştirir.  
   
 ```csharp  
 using System;  

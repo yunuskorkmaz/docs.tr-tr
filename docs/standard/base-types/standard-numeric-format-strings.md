@@ -1,5 +1,5 @@
 ---
-title: Standart Sayısal Biçim Dizeleri
+title: Standart sayısal biçim dizeleri
 ms.date: 06/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: c654ff2856891331f5680c673ac52f64ee2be141
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04ac99c6b5100c3749eefc219e51b4d0084bef06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121750"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346636"
 ---
-# <a name="standard-numeric-format-strings"></a>Standart Sayısal Biçim Dizeleri
+# <a name="standard-numeric-format-strings"></a>Standart sayısal biçim dizeleri
 
 Standart sayısal biçim dizeleri, genel sayısal türleri biçimlendirmek için kullanılır. Standart bir sayısal biçim dizesi, form `Axx`alır, burada:
 
@@ -322,7 +322,7 @@ Aşağıdaki örnek, bir <xref:System.Numerics.BigInteger> değerini gidiş dön
 > [!IMPORTANT]
 > Bazı durumlarda, `/platform:x64` veya `/platform:anycpu` anahtarlar kullanılarak derlenirse ve 64 bitlik sistemlerde çalıştırıldığında, "R" standart sayısal biçim dizesiyle biçimlendirilen <xref:System.Double> değerleri başarıyla geri dönmez. Daha fazla bilgi için aşağıdaki paragrafa bakın.
 
-`/platform:x64` veya `/platform:anycpu` anahtarlar kullanılarak derlenirse ve 64 bitlik sistemlerde çalıştırıldığında, "R" standart sayısal biçim dizesiyle biçimlendirilen <xref:System.Double> değerleri sorununu çözmek için başarıyla yuvarlamaz. "G17" kullanarak <xref:System.Double> değerlerini biçimlendirebilirsiniz Standart sayısal biçim dizesi. Aşağıdaki örnek, başarılı bir şekilde gidiş dönüş olmayan bir <xref:System.Double> değeri olan "R" biçim dizesini kullanır ve ayrıca özgün değeri başarıyla yuvarlamak için "G17" biçim dizesini kullanır:
+"R" standart sayısal biçim dizesiyle biçimlendirilen <xref:System.Double> değerleri sorununu çözmek için, `/platform:x64` veya `/platform:anycpu` anahtarlar kullanılarak derlenirse ve 64 bitlik sistemlerde çalıştırıldığında, başarıyla yuvarlanmaz. "G17" standart sayısal biçim dizesini kullanarak <xref:System.Double> değerlerini biçimlendirebilirsiniz. Aşağıdaki örnek, başarılı bir şekilde gidiş dönüş olmayan bir <xref:System.Double> değeri olan "R" biçim dizesini kullanır ve ayrıca özgün değeri başarıyla yuvarlamak için "G17" biçim dizesini kullanır:
 
 [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
 [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]
@@ -355,7 +355,7 @@ Aşağıdaki örnek, <xref:System.Int32> değerleri onaltılık biçim belirleyi
 
 Denetim Masası 'ndaki **bölge ve dil seçenekleri** öğesindeki ayarlar, bir biçimlendirme işlemi tarafından üretilen sonuç dizesini etkiler. Bu ayarlar, biçimlendirmeyi yönetmek için kullanılan değerleri sağlayan geçerli iş parçacığı kültürüyle ilişkili <xref:System.Globalization.NumberFormatInfo> nesnesini başlatmak için kullanılır. Farklı ayarları kullanan bilgisayarlar farklı sonuç dizeleri üretir.
 
-Ayrıca, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> Oluşturucu geçerli sistem kültürüyle aynı kültürü temsil eden yeni bir <xref:System.Globalization.CultureInfo> nesnesinin örneğini oluşturmak için kullanılıyorsa, Denetim Masası 'ndaki **bölge ve dil seçenekleri** öğesi tarafından belirlenen tüm özelleştirmeler şu şekilde olur Yeni <xref:System.Globalization.CultureInfo> nesnesine uygulandı. Bir sistemin özelleştirmelerini yansıtmayan bir <xref:System.Globalization.CultureInfo> nesnesi oluşturmak için <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> oluşturucusunu kullanabilirsiniz.
+Ayrıca, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> Oluşturucu geçerli sistem kültürüyle aynı kültürü temsil eden yeni bir <xref:System.Globalization.CultureInfo> nesnesinin örneğini oluşturmak için kullanılıyorsa, Denetim Masası 'ndaki **bölge ve dil seçenekleri** öğesi tarafından belirlenen tüm özelleştirmeler yeni <xref:System.Globalization.CultureInfo> nesnesine de uygulanır. Bir sistemin özelleştirmelerini yansıtmayan bir <xref:System.Globalization.CultureInfo> nesnesi oluşturmak için <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> oluşturucusunu kullanabilirsiniz.
 
 ### <a name="numberformatinfo-properties"></a>NumberFormatInfo Özellikleri
 
@@ -370,13 +370,13 @@ Bazı standart sayısal biçim belirticilerinin açıklamaları, ayrılmaz veya 
 
 ### <a name="floating-point-infinities-and-nan"></a>Kayan Nokta Sonsuz ve NaN
 
-Biçim dizesinden bağımsız olarak, bir <xref:System.Single> veya <xref:System.Double> kayan nokta türünün değeri pozitif sonsuzluk, negatif sonsuzluk veya sayı değil (NaN), biçimlendirilen dize ilgili <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>veya <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> özelliğinin değeridir geçerli geçerli <xref:System.Globalization.NumberFormatInfo> nesnesi tarafından belirtilen.
+Biçim dizesinden bağımsız olarak, bir <xref:System.Single> veya <xref:System.Double> kayan nokta türünün değeri pozitif sonsuzluk, negatif sonsuzluk veya sayı değil (NaN), biçimlendirilen dize geçerli geçerli <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> nesnesi tarafından belirtilen ilgili <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>veya <xref:System.Globalization.NumberFormatInfo> özelliğinin değeridir.
 
 ## <a name="example"></a>Örnek
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-partial-note.md)]
 
-Aşağıdaki örnek, bir tamsayı ve kayan nokta sayısal değerini ing-ABD kültürü ve tüm standart sayısal biçim tanımlayıcılarını kullanarak biçimlendirir. Bu örnek, iki özel sayısal türü (<xref:System.Double> ve <xref:System.Int32>) kullanır, ancak diğer sayısal temel türlerin (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>) her biri için benzer sonuçlar verir. , <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal>ve <xref:System.Single>).
+Aşağıdaki örnek, bir tamsayı ve kayan nokta sayısal değerini ing-ABD kültürü ve tüm standart sayısal biçim tanımlayıcılarını kullanarak biçimlendirir. Bu örnek iki özel sayısal türü (<xref:System.Double> ve <xref:System.Int32>) kullanır, ancak diğer sayısal temel türlerin (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal>ve <xref:System.Single>) herhangi biri için benzer sonuçlar verir.
 
 [!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
 [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]

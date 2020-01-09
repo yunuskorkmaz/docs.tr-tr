@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 9f9b89e2fea0bd69cba6d50fa1d1fb9cc3927685
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b3778a170759f685db78e7dcde219138196f9eca
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348614"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344195"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Nasıl yapılır: Bir Nesne Değişkeninin Hangi Türe Başvurduğunu Belirleme (Visual Basic)
 
@@ -50,7 +50,7 @@ Bir nesne değişkeni, başka bir yerde depolanan veriler için bir işaretçi i
 
     Uyumluluk ölçütü, belirtilen türün bir sınıf, yapı veya arabirim olmasına bağlıdır. Genel olarak, nesne aynı türde ise, öğesinden devralır veya belirtilen türü uygularsa türler uyumlu olur. Daha fazla bilgi için bkz. [typeof işleci](../../../../visual-basic/language-reference/operators/typeof-operator.md).
 
-## <a name="compiling-the-code"></a>Kod Derleme
+## <a name="compile-the-code"></a>Kod derleme
 
 Belirtilen türün bir değişken veya ifade olamayacağını unutmayın. Sınıf, yapı veya arabirim gibi tanımlı bir türün adı olmalıdır. Bu, `Integer` ve `String`gibi iç türleri içerir.
 

@@ -1,13 +1,13 @@
 ---
-title: F# Türleri
+title: Türler
 description: "' De F# kullanılan türler ve F# türlerin adlandırılması ve açıklaması hakkında bilgi edinin."
 ms.date: 05/16/2016
-ms.openlocfilehash: 8f2526dce46d53a92c01c9347e1ed97681a45ecc
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 70d79525318c8d2eb0711d6a1b50be1ac0cf0226
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425302"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348211"
 ---
 # <a name="f-types"></a>F# Türleri
 
@@ -35,14 +35,14 @@ Aşağıdaki tabloda türler için F# tür sözdiziminin yönleri gösterilmekte
 
 |Tür|Tür sözdizimi|Örnekler|
 |----|-----------|--------|
-|ilkel tür|*tür adı*|`int`<br /><br />`float`<br /><br />`string`|
+|İlkel tür|*tür adı*|`int`<br /><br />`float`<br /><br />`string`|
 |Toplam türü (sınıf, yapı, birleşim, kayıt, Enum, vb.)|*tür adı*|`System.DateTime`<br /><br />`Color`|
 |tür kısaltması|*tür kısaltması-adı*|`bigint`|
 |tam nitelikli tür|*ad alanları. tür-adı*<br /><br />veya<br /><br />*modüller. tür-adı*<br /><br />veya<br /><br />*Namespaces. modüller. Type-Name*|`System.IO.StreamWriter`|
 |dizi|*tür adı*[] veya<br /><br />*tür adı* dizisi|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
 |iki boyutlu dizi|*tür adı*[,]|`int[,]`<br /><br />`float[,]`|
 |üç boyutlu dizi|*tür adı*[,,]|`float[,,]`|
-|Le|*tür-name1* &#42; *Type-AD2* ...|Örneğin, `(1,'b',3)` türü `int * char * int`|
+|tuple|*tür-name1* &#42; *Type-AD2* ...|Örneğin, `(1,'b',3)` türü `int * char * int`|
 |Genel tür|*tür-parametre* *genel-tür-adı*<br /><br />veya<br /><br />*genel tür adı*&lt;*türü-parametre-listesi*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
 |oluşturulmuş tür (belirli bir tür bağımsız değişkenine sahip olan genel bir tür)|*tür-bağımsız değişken* *genel-tür-adı*<br /><br />veya<br /><br />*genel tür adı*&lt;*türü-bağımsız değişken listesi*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
 |tek parametreye sahip işlev türü|*Parameter-type1* -&gt; *dönüş türü*|Bir `int` alan ve `string` türü döndüren bir işlev `int -> string`|

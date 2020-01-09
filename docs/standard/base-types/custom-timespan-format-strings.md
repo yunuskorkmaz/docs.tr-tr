@@ -1,5 +1,5 @@
 ---
-title: Özel TimeSpan Biçim dizeleri-.NET
+title: Özel TimeSpan Biçim dizeleri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-ms.openlocfilehash: f38ea3a1e2d687044f862e5d6c0a78c6c12965d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5963f9afe422206627a1baea47339ecb81becf0
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126564"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348315"
 ---
 # <a name="custom-timespan-format-strings"></a>Özel TimeSpan Biçim dizeleri
 
@@ -43,31 +43,31 @@ ms.locfileid: "73126564"
 
 | Biçim belirteci | Açıklama | Örnek |
 |----------------------|-----------------|-------------|
-|"d", "% d"|Zaman aralığındaki tüm gün sayısı.<br /><br /> Daha fazla bilgi: ["d" Özel Biçim belirleyicisi](#dSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d`--> "6"<br /><br /> `d\.hh\:mm`--> "6.14:32"|
-|"gg"-"dddddddd"|Zaman aralığındaki tüm gün sayısı, gerektiği şekilde önde sıfır ile doldurulmuştur.<br /><br /> Daha fazla bilgi: ["gg"-"dddddddd" özel biçim belirticileri](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd`--> "006"<br /><br /> `dd\.hh\:mm`--> "06.14:32"|
-|"h", "% h"|Zaman aralığındaki, günlerin bir parçası olarak sayılmayan tüm saatlerin sayısı. Tek basamaklı saatlerin önünde sıfır yok.<br /><br /> Daha fazla bilgi: ["h" Özel Biçim belirleyicisi](#hSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%h`--> "14"<br /><br /> `hh\:mm`--> "14:32"|
-|"hh"|Zaman aralığındaki, günlerin bir parçası olarak sayılmayan tüm saatlerin sayısı. Tek basamaklı saatlerin önünde sıfır vardır.<br /><br /> Daha fazla bilgi: ["hh" Özel Biçim belirleyicisi](#hhSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `hh`--> "14"<br /><br /> `new TimeSpan(6, 8, 32, 17, 685):`<br /><br /> `hh`--> 08|
-|"a", "% d"|Zaman aralığındaki saatlerin veya günlerin bir parçası olarak dahil olmayan tam dakika sayısı. Tek basamaklı dakikalar önünde sıfır yok.<br /><br /> Daha fazla bilgi: ["d" Özel Biçim belirleyicisi](#mSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `%m`--> "8"<br /><br /> `h\:m`--> "14:8"|
-|"mm"|Zaman aralığındaki saatlerin veya günlerin bir parçası olarak dahil olmayan tam dakika sayısı. Tek basamaklı dakikalar önünde sıfır vardır.<br /><br /> Daha fazla bilgi: ["mm" Özel Biçim belirleyicisi](#mmSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `mm`--> "08"<br /><br /> `new TimeSpan(6, 8, 5, 17, 685):`<br /><br /> `d\.hh\:mm\:ss`--> 6.08:05:17|
-|"s", "% s"|Zaman aralığındaki saat, gün veya dakika parçası olarak dahil olmayan tüm saniye sayısı. Tek basamaklı saniyeler önünde sıfır yok.<br /><br /> Daha fazla bilgi: ["s" Özel Biçim belirleyicisi](#sSpecifier).|`TimeSpan.FromSeconds(12.965)`:<br /><br /> `%s`--> 12<br /><br /> `s\.fff`--> 12,965|
-|"ss"|Zaman aralığındaki saat, gün veya dakika parçası olarak dahil olmayan tüm saniye sayısı.  Tek basamaklı saniyeler önünde sıfır vardır.<br /><br /> Daha fazla bilgi: ["ss" Özel Biçim belirleyicisi](#ssSpecifier).|`TimeSpan.FromSeconds(6.965)`:<br /><br /> `ss`--> 06<br /><br /> `ss\.fff`--> 06,965|
-|"f", "% f"|Bir zaman aralığında saniyenin onda biri.<br /><br /> Daha fazla bilgi: ["f" Özel Biçim belirleyicisi](#fSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `f`--> 8<br /><br /> `ss\.f`--> 06,8|
-|"ff"|Bir zaman aralığında saniyenin yüzde biri.<br /><br /> Daha fazla bilgi: ["FF" Özel Biçim belirleyicisi](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff`--> 89<br /><br /> `ss\.ff`--> 06,89|
-|"fff"|Bir zaman aralığındaki milisaniyedir.<br /><br /> Daha fazla bilgi: ["fff" Özel Biçim belirleyicisi](#f3Specifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `fff`--> 895<br /><br /> `ss\.fff`--> 06,895|
-|"ffff"|İkinci bir zaman aralığında on-binde.<br /><br /> Daha fazla bilgi: ["ffff" Özel Biçim belirleyicisi](#f4Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffff`--> 8954<br /><br /> `ss\.ffff`--> 06,8954|
-|"fffff"|Bir zaman aralığı içinde saniyenin yüz binde.<br /><br /> Daha fazla bilgi: ["fffff" Özel Biçim belirleyicisi](#f5Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffff`--> 89543<br /><br /> `ss\.fffff`--> 06,89543|
-|"ffffff"|Saniyenin bir zaman aralığı içinde milionaltı.<br /><br /> Daha fazla bilgi: ["FFFFFF" Özel Biçim belirleyicisi](#f6Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffffff`--> 895432<br /><br /> `ss\.ffffff`--> 06,895432|
-|"fffffff"|Bir saniye (veya kesirli Ticks) bir zaman aralığında On milimetre onda.<br /><br /> Daha fazla bilgi: ["fffffff" Özel Biçim belirleyicisi](#f7Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffffff`--> 8954321<br /><br /> `ss\.fffffff`--> 06,8954321|
+|"d", "% d"|Zaman aralığındaki tüm gün sayısı.<br /><br /> Daha fazla bilgi: ["d" Özel Biçim belirleyicisi](#dSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` --> "6"<br /><br /> `d\.hh\:mm` --> "6.14:32"|
+|"gg"-"dddddddd"|Zaman aralığındaki tüm gün sayısı, gerektiği şekilde önde sıfır ile doldurulmuştur.<br /><br /> Daha fazla bilgi: ["gg"-"dddddddd" özel biçim belirticileri](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --> "06.14:32"|
+|"h", "% h"|Zaman aralığındaki, günlerin bir parçası olarak sayılmayan tüm saatlerin sayısı. Tek basamaklı saatlerin önünde sıfır yok.<br /><br /> Daha fazla bilgi: ["h" Özel Biçim belirleyicisi](#hSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%h` --> "14"<br /><br /> `hh\:mm` --> "14:32"|
+|"hh"|Zaman aralığındaki, günlerin bir parçası olarak sayılmayan tüm saatlerin sayısı. Tek basamaklı saatlerin önünde sıfır vardır.<br /><br /> Daha fazla bilgi: ["hh" Özel Biçim belirleyicisi](#hhSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `hh` --> "14"<br /><br /> `new TimeSpan(6, 8, 32, 17, 685):`<br /><br /> `hh` --> 08|
+|"a", "% d"|Zaman aralığındaki saatlerin veya günlerin bir parçası olarak dahil olmayan tam dakika sayısı. Tek basamaklı dakikalar önünde sıfır yok.<br /><br /> Daha fazla bilgi: ["d" Özel Biçim belirleyicisi](#mSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `%m` --> "8"<br /><br /> `h\:m` --> "14:8"|
+|"mm"|Zaman aralığındaki saatlerin veya günlerin bir parçası olarak dahil olmayan tam dakika sayısı. Tek basamaklı dakikalar önünde sıfır vardır.<br /><br /> Daha fazla bilgi: ["mm" Özel Biçim belirleyicisi](#mmSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `mm` --> "08"<br /><br /> `new TimeSpan(6, 8, 5, 17, 685):`<br /><br /> `d\.hh\:mm\:ss` --> 6.08:05:17|
+|"s", "% s"|Zaman aralığındaki saat, gün veya dakika parçası olarak dahil olmayan tüm saniye sayısı. Tek basamaklı saniyeler önünde sıfır yok.<br /><br /> Daha fazla bilgi: ["s" Özel Biçim belirleyicisi](#sSpecifier).|`TimeSpan.FromSeconds(12.965)`:<br /><br /> `%s` --> 12<br /><br /> `s\.fff` --> 12.965|
+|"ss"|Zaman aralığındaki saat, gün veya dakika parçası olarak dahil olmayan tüm saniye sayısı.  Tek basamaklı saniyeler önünde sıfır vardır.<br /><br /> Daha fazla bilgi: ["ss" Özel Biçim belirleyicisi](#ssSpecifier).|`TimeSpan.FromSeconds(6.965)`:<br /><br /> `ss` --> 06<br /><br /> `ss\.fff` --> 06.965|
+|"f", "% f"|Bir zaman aralığında saniyenin onda biri.<br /><br /> Daha fazla bilgi: ["f" Özel Biçim belirleyicisi](#fSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `f` --> 8<br /><br /> `ss\.f` --> 06.8|
+|"ff"|Bir zaman aralığında saniyenin yüzde biri.<br /><br /> Daha fazla bilgi: ["FF" Özel Biçim belirleyicisi](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|
+|"fff"|Bir zaman aralığındaki milisaniyedir.<br /><br /> Daha fazla bilgi: ["fff" Özel Biçim belirleyicisi](#f3Specifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `fff` --> 895<br /><br /> `ss\.fff` --> 06.895|
+|"ffff"|İkinci bir zaman aralığında on-binde.<br /><br /> Daha fazla bilgi: ["ffff" Özel Biçim belirleyicisi](#f4Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffff` --> 8954<br /><br /> `ss\.ffff` --> 06.8954|
+|"fffff"|Bir zaman aralığı içinde saniyenin yüz binde.<br /><br /> Daha fazla bilgi: ["fffff" Özel Biçim belirleyicisi](#f5Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffff` --> 89543<br /><br /> `ss\.fffff` --> 06.89543|
+|"ffffff"|Saniyenin bir zaman aralığı içinde milionaltı.<br /><br /> Daha fazla bilgi: ["FFFFFF" Özel Biçim belirleyicisi](#f6Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffffff` --> 895432<br /><br /> `ss\.ffffff` --> 06.895432|
+|"fffffff"|Bir saniye (veya kesirli Ticks) bir zaman aralığında On milimetre onda.<br /><br /> Daha fazla bilgi: ["fffffff" Özel Biçim belirleyicisi](#f7Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffffff` --> 8954321<br /><br /> `ss\.fffffff` --> 06.8954321|
 |"F", "% F"|Bir zaman aralığında saniyenin onda biri. Basamak sıfırsa hiçbir şey görüntülenmez.<br /><br /> Daha fazla bilgi: ["F" Özel Biçim belirleyicisi](#F_Specifier).|`TimeSpan.Parse("00:00:06.32")`:<br /><br /> `%F`: 3<br /><br /> `TimeSpan.Parse("0:0:3.091")`:<br /><br /> `ss\.F`: 03.|
-|"FF"|Bir zaman aralığında saniyenin yüzde biri. Tüm kesirli sondaki sıfırlar veya iki sıfır basamak dahil değildir.<br /><br /> Daha fazla bilgi: ["FF" Özel Biçim belirleyicisi](#FF_Specifier).|`TimeSpan.Parse("00:00:06.329")`:<br /><br /> `FF`: 32<br /><br /> `TimeSpan.Parse("0:0:3.101")`:<br /><br /> `ss\.FF`: 03,1|
-|"FFF"|Bir zaman aralığındaki milisaniyedir. Tüm kesirli sondaki sıfırlar dahil edilmez.<br /><br /> Daha fazla bilgi:|`TimeSpan.Parse("00:00:06.3291")`:<br /><br /> `FFF`: 329<br /><br /> `TimeSpan.Parse("0:0:3.1009")`:<br /><br /> `ss\.FFF`: 03,1|
-|"FFFF"|İkinci bir zaman aralığında on-binde. Tüm kesirli sondaki sıfırlar dahil edilmez.<br /><br /> Daha fazla bilgi: ["ffff" Özel Biçim belirleyicisi](#F4_Specifier).|`TimeSpan.Parse("00:00:06.32917")`:<br /><br /> `FFFFF`: 3291<br /><br /> `TimeSpan.Parse("0:0:3.10009")`:<br /><br /> `ss\.FFFF`: 03,1|
-|"FFFFF"|Bir zaman aralığı içinde saniyenin yüz binde. Tüm kesirli sondaki sıfırlar dahil edilmez.<br /><br /> Daha fazla bilgi: ["FFFFF" Özel Biçim belirleyicisi](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03,1|
-|"FFFFFF"|Saniyenin bir zaman aralığı içinde milionaltı. Tüm kesirli sondaki sıfırlar gösterilmez.<br /><br /> Daha fazla bilgi: ["FFFFFF" Özel Biçim belirleyicisi](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03,1|
-|"FFFFFFF"|Bir zaman aralığında on milyonlarca bir saniye. Tüm kesirli sondaki sıfırlar veya yedi sıfır gösterilmez.<br /><br /> Daha fazla bilgi: ["fffffff" Özel Biçim belirleyicisi](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03,19|
-|'*String*'|Değişmez dize sınırlayıcısı.<br /><br /> Daha fazla bilgi: [diğer karakterler](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss`--> "14:32:17"|
-|&#92;|"\" çıkış karakteri.<br /><br /> Daha fazla bilgi: [diğer karakterler](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss`--> "14:32:17"|
-|Başka bir karakter|Atlamayan herhangi bir karakter, Özel Biçim belirleyicisi olarak yorumlanır.<br /><br /> Daha fazla bilgi: [diğer karakterler](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss`--> "14:32:17"|
+|"FF"|Bir zaman aralığında saniyenin yüzde biri. Tüm kesirli sondaki sıfırlar veya iki sıfır basamak dahil değildir.<br /><br /> Daha fazla bilgi: ["FF" Özel Biçim belirleyicisi](#FF_Specifier).|`TimeSpan.Parse("00:00:06.329")`:<br /><br /> `FF`: 32<br /><br /> `TimeSpan.Parse("0:0:3.101")`:<br /><br /> `ss\.FF`: 03.1|
+|"FFF"|Bir zaman aralığındaki milisaniyedir. Tüm kesirli sondaki sıfırlar dahil edilmez.<br /><br /> Ek bilgi:|`TimeSpan.Parse("00:00:06.3291")`:<br /><br /> `FFF`: 329<br /><br /> `TimeSpan.Parse("0:0:3.1009")`:<br /><br /> `ss\.FFF`: 03.1|
+|"FFFF"|İkinci bir zaman aralığında on-binde. Tüm kesirli sondaki sıfırlar dahil edilmez.<br /><br /> Daha fazla bilgi: ["ffff" Özel Biçim belirleyicisi](#F4_Specifier).|`TimeSpan.Parse("00:00:06.32917")`:<br /><br /> `FFFFF`: 3291<br /><br /> `TimeSpan.Parse("0:0:3.10009")`:<br /><br /> `ss\.FFFF`: 03.1|
+|"FFFFF"|Bir zaman aralığı içinde saniyenin yüz binde. Tüm kesirli sondaki sıfırlar dahil edilmez.<br /><br /> Daha fazla bilgi: ["FFFFF" Özel Biçim belirleyicisi](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03.1|
+|"FFFFFF"|Saniyenin bir zaman aralığı içinde milionaltı. Tüm kesirli sondaki sıfırlar gösterilmez.<br /><br /> Daha fazla bilgi: ["FFFFFF" Özel Biçim belirleyicisi](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
+|"FFFFFFF"|Bir zaman aralığında on milyonlarca bir saniye. Tüm kesirli sondaki sıfırlar veya yedi sıfır gösterilmez.<br /><br /> Daha fazla bilgi: ["fffffff" Özel Biçim belirleyicisi](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|
+|'*String*'|Değişmez dize sınırlayıcısı.<br /><br /> Daha fazla bilgi: [diğer karakterler](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|&#92;|"\" çıkış karakteri.<br /><br /> Daha fazla bilgi: [diğer karakterler](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
+|Başka bir karakter|Atlamayan herhangi bir karakter, Özel Biçim belirleyicisi olarak yorumlanır.<br /><br /> Daha fazla bilgi: [diğer karakterler](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
 ## <a name="dSpecifier"></a>"D" Özel Biçim belirleyicisi
 

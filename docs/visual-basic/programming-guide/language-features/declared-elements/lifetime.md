@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 05a39388e8aa9681af60cf86a3df8346d744b69e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 293537ad33c8e751d49d820fc57ea525e68bc203
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345307"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347772"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic'de Ömür
 Belirtilen bir öğenin *yaşam süresi* , kullanım için kullanılabilir olduğu süredir. Değişkenler ömrü olan tek öğelerdir. Bu amaçla, derleyici yordam parametreleri ve işlev döndürenleri değişkenlerin özel durumları olarak değerlendirir. Bir değişkenin ömrü, bir değeri tutabileceği süreyi temsil eder. Değeri ömrü boyunca değişebilir, ancak her zaman bir değer tutar.  
@@ -65,7 +65,7 @@ Belirtilen bir öğenin *yaşam süresi* , kullanım için kullanılabilir oldu�
   
  `applesSold` `Static`kullanılmadan bildirilirse, önceki birikmiş değerler `runningTotal`çağrıları arasında korunmaz. `runningTotal` bir sonraki çağrılışında, `applesSold` yeniden oluşturulup 0 olarak başlatılır ve `runningTotal` yalnızca çağrıldığı değeri döndürür.  
   
-### <a name="compiling-the-code"></a>Kod Derleme  
+### <a name="compile-the-code"></a>Kod derleme  
  Bir statik yerel değişkenin değerini, bildiriminin bir parçası olarak başlatabilirsiniz. Bir diziyi `Static`olarak bildirirseniz, derecesini (boyut sayısı), her boyutun uzunluğunu ve bireysel öğelerin değerlerini başlatabilirsiniz.  
   
 ### <a name="security"></a>Güvenlik  

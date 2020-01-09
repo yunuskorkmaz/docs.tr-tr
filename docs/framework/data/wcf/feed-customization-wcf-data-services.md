@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 08df16be9df6d55ab9f1426e205e56d9609ce72e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: f34ee198ba49a168ed8b56785bea68beee2eb214
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569217"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348123"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Akış özelleştirmesi (WCF Veri Hizmetleri)
-WCF Veri Hizmetleri verileri akış olarak göstermek için açık veri Protokolü 'Nü (OData) kullanır. OData, veri akışları için hem atom hem de JavaScript Nesne Gösterimi (JSON) biçimlerini destekler. Atom akışı kullandığınızda OData, varlıkları ve ilişkileri gibi verileri, HTTP iletisinin gövdesine eklenebilecek bir XML biçiminde seri hale getirmek için standart bir yöntem sağlar. OData, varlıklarda ve Atom öğelerinde bulunan veriler arasında varsayılan bir varlık özelliği eşlemesini tanımlar. Daha fazla bilgi için bkz. [OData: Atom biçimi](https://go.microsoft.com/fwlink/?LinkID=185794).  
+WCF Veri Hizmetleri verileri akış olarak göstermek için açık veri Protokolü 'Nü (OData) kullanır. OData, veri akışları için hem atom hem de JavaScript Nesne Gösterimi (JSON) biçimlerini destekler. Atom akışı kullandığınızda OData, varlıkları ve ilişkileri gibi verileri, HTTP iletisinin gövdesine eklenebilecek bir XML biçiminde seri hale getirmek için standart bir yöntem sağlar. OData, varlıklarda ve Atom öğelerinde bulunan veriler arasında varsayılan bir varlık özelliği eşlemesini tanımlar. Daha fazla bilgi için bkz. [OData: Atom biçimi](https://www.odata.org/documentation/odata-version-2-0/atom-format/).  
   
  Veri hizmeti tarafından döndürülen özellik verilerinin standart akış biçimi yerine özelleştirilmiş bir biçimde serileştirilmesi için bir uygulama senaryonuz olabilir. OData ile bir varlık özelliklerinin, bir girdinin kullanılmayan öğelerine ve özniteliklerine ya da akıştaki bir girdinin özel öğelerine eşlenilmesi için bir veri akışında serileştirme ' i özelleştirebilirsiniz.  
   
@@ -31,7 +31,7 @@ WCF Veri Hizmetleri verileri akış olarak göstermek için açık veri Protokol
 > Özel akışlar tanımladığınızda, tanımlanmış özel eşlemeleri olan tüm varlık özelliklerinin projeksiyonda dahil edildiğini garanti etmeniz gerekir. Eşlenen bir varlık özelliği projeksiyonde yer olmadığında veri kaybı oluşabilir. Daha fazla bilgi için bkz. [sorgu tahminleri](query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Entity Framework sağlayıcı ile akışları özelleştirme  
- Entity Framework sağlayıcısıyla kullanılan veri modeli. edmx dosyasında XML olarak temsil edilir. Bu durumda, özel akışları tanımlayan öznitelikler, veri modelindeki varlık türlerini ve özelliklerini temsil eden `EntityType` ve `Property` öğelerine eklenir. Bu akış özelleştirme öznitelikleri [\[mc-CSDL\]: kavramsal şema tanımı dosya biçiminde](https://go.microsoft.com/fwlink/?LinkId=159072)tanımlanmamıştır, bu biçim Entity Framework sağlayıcının veri modelini tanımlamak için kullandığı biçimdir. Bu nedenle, akış özelleştirme özniteliklerini, `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`olarak tanımlanan belirli bir şema ad alanında bildirmeniz gerekir. Aşağıdaki XML parçası `ProductName`, `ReorderLevel`ve `UnitsInStock` özelliklerini tanımlayan `Products` varlık türünün `Property` öğelerine uygulanan akış özelleştirme özniteliklerini gösterir.  
+ Entity Framework sağlayıcısıyla kullanılan veri modeli. edmx dosyasında XML olarak temsil edilir. Bu durumda, özel akışları tanımlayan öznitelikler, veri modelindeki varlık türlerini ve özelliklerini temsil eden `EntityType` ve `Property` öğelerine eklenir. Bu akış özelleştirme öznitelikleri [\[mc-CSDL\]: kavramsal şema tanımı dosya biçiminde](https://docs.microsoft.com/openspecs/windows_protocols/mc-csdl/c03ad8c3-e8b7-4306-af96-a9e52bb3df12)tanımlanmamıştır, bu biçim Entity Framework sağlayıcının veri modelini tanımlamak için kullandığı biçimdir. Bu nedenle, akış özelleştirme özniteliklerini, `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`olarak tanımlanan belirli bir şema ad alanında bildirmeniz gerekir. Aşağıdaki XML parçası `ProductName`, `ReorderLevel`ve `UnitsInStock` özelliklerini tanımlayan `Products` varlık türünün `Property` öğelerine uygulanan akış özelleştirme özniteliklerini gösterir.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   

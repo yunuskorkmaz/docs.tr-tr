@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-ms.openlocfilehash: 63fb3d627364810fac5ddb0bfd3adc3c0421c9cc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6b1093d2e821a55cc5513b077a270748a780b71
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126381"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347623"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Öznitelikli Programlama Modeline Genel Bakış (MEF)
 
@@ -789,7 +789,7 @@ public class MyAttribute : ExportAttribute
 }
 ```
 
-Bu sınıf, sözleşme türü `IMyData` `MyAttribute` adlı özel bir özniteliği ve `MyMetadata`adlı bazı meta verileri tanımlar. `MetadataAttribute` özniteliğiyle işaretlenmiş bir sınıftaki tüm özellikler özel özniteliğinde tanımlanmış meta veriler olarak değerlendirilir. Aşağıdaki iki bildirim eşdeğerdir.
+Bu sınıf, sözleşme türü `IMyAddin` `MyAttribute` adlı özel bir özniteliği ve `MyMetadata`adlı bazı meta verileri tanımlar. `MetadataAttribute` özniteliğiyle işaretlenmiş bir sınıftaki tüm özellikler özel özniteliğinde tanımlanmış meta veriler olarak değerlendirilir. Aşağıdaki iki bildirim eşdeğerdir.
 
 ```vb
 <Export(GetType(IMyAddin))>

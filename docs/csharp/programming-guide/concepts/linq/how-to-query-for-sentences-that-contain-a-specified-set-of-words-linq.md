@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Belirli bir sözcük kümesini (LINQ) içeren cümleleri sorgulama (LINQ) (C#)'
+title: Belirli bir sözcük kümesini (LINQ) içeren cümleleri sorgulama (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: e478364f07c08a334692ba54ae1a95880b95519e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: efb0eb60a9695c19e16b507d29ef6994e904cff9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592772"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347690"
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Nasıl yapılır: Belirli bir sözcük kümesini (LINQ) içeren cümleleri sorgulama (LINQ) (C#)
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Belirli bir sözcük kümesini (LINQ) içeren cümleleri sorgulama (LINQ) (C#)
 Bu örnek, belirli bir sözcük kümesinin her biri için eşleşmeler içeren bir metin dosyasında Tümcelerin nasıl bulunacağını gösterir. Bu örnekte, arama terimleri dizisi sabit kodlanmış olsa da, çalışma zamanında dinamik olarak doldurulabilir. Bu örnekte sorgu, "tarihsel olarak", "Data" ve "Integrated" sözcüklerini içeren cümleleri döndürür.  
   
 ## <a name="example"></a>Örnek  
@@ -62,12 +62,12 @@ Historically, the world of data and the world of objects have not been well inte
 */  
 ```  
   
- Sorgu önce metni cümlelere bölerek ve sonra cümleleri her bir sözcüğü tutan dizeler dizisine bölerek işe yarar. Bu dizilerin <xref:System.Linq.Enumerable.Distinct%2A> her biri için yöntem, tüm yinelenen sözcükleri kaldırır ve sonra sorgu, Word dizisi ve `wordsToMatch` dizi <xref:System.Linq.Enumerable.Intersect%2A> üzerinde bir işlem gerçekleştirir. Kesişimin sayısı `wordsToMatch` dizinin sayısıyla aynıysa, sözcüklerde tüm sözcükler bulunur ve özgün tümce döndürülür.  
+ Sorgu önce metni cümlelere bölerek ve sonra cümleleri her bir sözcüğü tutan dizeler dizisine bölerek işe yarar. Bu dizilerin her biri için <xref:System.Linq.Enumerable.Distinct%2A> yöntemi tüm yinelenen sözcükleri kaldırır ve sonra sorgu, Word dizisinde ve `wordsToMatch` dizisinde bir <xref:System.Linq.Enumerable.Intersect%2A> işlemi gerçekleştirir. Kesişimin sayısı `wordsToMatch` dizisinin sayısıyla aynıysa, sözcüklerde tüm sözcükler bulunur ve özgün tümce döndürülür.  
   
- Çağrısında <xref:System.String.Split%2A>, noktalama işaretleri dizeden kaldırmak için ayırıcılar olarak kullanılır. Bunu yapmadıysanız, örneğin, `wordsToMatch` dizide "tarihsel" olarak eşleşmeyen "tarihsel" bir dizeye sahip olabilirsiniz. Kaynak metinde bulunan noktalama türlerine bağlı olarak ek ayırıcılar kullanmanız gerekebilir.  
+ <xref:System.String.Split%2A>çağrısında noktalama işaretleri, dizeden kaldırmak için ayırıcılar olarak kullanılır. Bunu yapmadıysanız, örneğin, `wordsToMatch` dizide "tarihsel" olarak eşleşmeyen "tarihsel" bir dizeye sahip olabilirsiniz. Kaynak metinde bulunan noktalama türlerine bağlı olarak ek ayırıcılar kullanmanız gerekebilir.  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
-System. C# LINQ ve System.IO ad alanları `using` için yönergeler içeren bir konsol uygulaması projesi oluşturun.
+## <a name="compiling-the-code"></a>Kod Derleme  
+System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

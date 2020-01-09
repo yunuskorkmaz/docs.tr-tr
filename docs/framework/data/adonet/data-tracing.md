@@ -2,12 +2,12 @@
 title: ADO.NET’te Veri İzleme
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: e27f1f30ab8626b21421d6d4a7808f8ffef5c26f
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: be82500920ce9d5f8bc7ee979cf8ec5006f4f12b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088770"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347797"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET’te Veri İzleme
 
@@ -33,7 +33,7 @@ ADO.NET ' de yönetilen izlemeyi ayarlama ve yapılandırma hakkında daha fazla
 
 SQL Server için .NET Framework Veri Sağlayıcısı, veri erişimi izleme ([veri erişimi izleme](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))), istemci olaylarının bağlantı hatalarıyla, sunucunun bağlantı halkası arabelleği ve genişletilmiş olaylar günlüğündeki uygulama performansı bilgileri gibi tanılama bilgileriyle ilişkilendirilmesi daha kolay hale getirmek için güncelleştirilmiştir. Genişletilmiş olaylar günlüğünü okuma hakkında daha fazla bilgi için bkz. [olay oturumu verilerini görüntüleme](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
 
-Bağlantı işlemleri için, ADO.NET bir istemci bağlantı KIMLIĞI gönderir. Bağlantı başarısız olursa, bağlantı halkası arabelleğine (bağlantı[sorunlarını SQL Server 2008 ' de bağlantı sorunlarını giderme](https://go.microsoft.com/fwlink/?LinkId=207752)) erişebilir ve `ClientConnectionID` alanını bulabilir ve bağlantı hatası hakkında tanılama bilgileri alabilirsiniz. İstemci bağlantı kimlikleri, yalnızca bir hata oluşursa halka arabelleğine kaydedilir. (Ön oturum açma paketini göndermeden önce bir bağlantı başarısız olursa, bir istemci bağlantı KIMLIĞI oluşturulmaz.) İstemci bağlantı KIMLIĞI, 16 baytlık bir GUID 'dir. Ayrıca, genişletilmiş olaylar oturumunda `client_connection_id` eylemi olaylara eklenirse, istemci bağlantı KIMLIĞINI genişletilmiş olaylar hedef çıktısında bulabilirsiniz. Veri erişimi izlemeyi etkinleştirebilir ve bağlantı komutunu yeniden çalıştırabilir ve daha fazla istemci sürücü tanılama yardımına ihtiyacınız varsa, veri erişim izleme içindeki `ClientConnectionID` alanını gözlemleyebilirsiniz.
+Bağlantı işlemleri için, ADO.NET bir istemci bağlantı KIMLIĞI gönderir. Bağlantı başarısız olursa, bağlantı halkası arabelleğine (bağlantı[sorunlarını SQL Server 2008 ' de bağlantı sorunlarını giderme](https://blogs.msdn.microsoft.com/sql_protocols/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer/)) erişebilir ve `ClientConnectionID` alanını bulabilir ve bağlantı hatası hakkında tanılama bilgileri alabilirsiniz. İstemci bağlantı kimlikleri, yalnızca bir hata oluşursa halka arabelleğine kaydedilir. (Ön oturum açma paketini göndermeden önce bir bağlantı başarısız olursa, bir istemci bağlantı KIMLIĞI oluşturulmaz.) İstemci bağlantı KIMLIĞI, 16 baytlık bir GUID 'dir. Ayrıca, genişletilmiş olaylar oturumunda `client_connection_id` eylemi olaylara eklenirse, istemci bağlantı KIMLIĞINI genişletilmiş olaylar hedef çıktısında bulabilirsiniz. Veri erişimi izlemeyi etkinleştirebilir ve bağlantı komutunu yeniden çalıştırabilir ve daha fazla istemci sürücü tanılama yardımına ihtiyacınız varsa, veri erişim izleme içindeki `ClientConnectionID` alanını gözlemleyebilirsiniz.
 
 İstemci bağlantı KIMLIĞINI `SqlConnection.ClientConnectionID` özelliğini kullanarak programlı bir şekilde alabilirsiniz.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 8261d126f988bdcf05b4a2af3106b38717e46bc8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 047738a2cbadc6b7d72f41aade22bbeff16d1bac
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344523"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347608"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Nasıl yapılır: Bağımsız Değişkeni Değere Göre Geçirilecek Şekilde Zorlama (Visual Basic)
 Yordam bildirimi, geçen mekanizmayı belirler. Bir parametre [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)olarak bildirilirse, Visual Basic karşılık gelen bağımsız değişkeni başvuruya göre geçmesini bekler. Bu yordam, çağıran koddaki bağımsız değişkenin temelindeki programlama öğesinin değerini değiştirmesine olanak sağlar. Temel öğeyi bu değişikliğe karşı korumak istiyorsanız, bağımsız değişken adını parantez içine alarak yordam çağrısındaki `ByRef` geçen mekanizmayı geçersiz kılabilirsiniz. Bu parantezler, çağrısındaki bağımsız değişken listesini çevreleyen parantezler için de ek olarak kullanılır.  
@@ -41,7 +41,7 @@ Yordam bildirimi, geçen mekanizmayı belirler. Bir parametre [ByRef](../../../.
   
  `str`, bağımsız değişken listesi içinde fazladan parantez içine alınmışsa, `setNewString` yordamı çağıran koddaki değerini değiştiremez ve "bir ByVal geçirildiğinde değiştirilemez" `MsgBox` görüntülenir. `str` ek parantezler içine alınmadığından, yordamı değiştirebilir `MsgBox` ve "ınString bağımsız değişkeni için yeni bir değer" görüntülenir.  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compile-the-code"></a>Kod derleme  
  Bir değişkeni başvuruya göre geçirdiğinizde, bu mekanizmayı belirtmek için `ByRef` anahtar sözcüğünü kullanmanız gerekir.  
   
  Visual Basic varsayılan değeri, bağımsız değişkenleri değere göre geçirmektir. Ancak, her bir belirtilen parametreye ilişkin [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) anahtar sözcüğünü eklemek iyi bir programlama uygulamasıdır. Bu, kodunuzun okunmasını kolaylaştırır.  

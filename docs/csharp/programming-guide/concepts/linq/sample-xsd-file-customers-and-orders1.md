@@ -1,18 +1,18 @@
 ---
-title: 'Örnek XSD Dosyası: Müşteriler ve Siparişler'
+title: 'Örnek XSD dosyası: müşteriler ve siparişler'
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
-ms.openlocfilehash: 15c510e8c450f0952de14f9eb2272143e4ae0b2d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ff893053e5ed29b95a0ede1f172915df2e83ffa2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591140"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346483"
 ---
-# <a name="sample-xsd-file-customers-and-orders"></a>Örnek XSD Dosyası: Müşteriler ve Siparişler
-Aşağıdaki xsd dosyası [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgelerindeki çeşitli örneklerde kullanılır. Bu dosya, [örnek xml dosyası için bir şema tanımı içerir: Müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md). Şema `xs:key` , `CustomerID` `xs:keyref` öğeözniteliğininbiranahtar`CustomerID` olduğunu ve her`Order` bir öğedeki öğe arasında bir ilişki kurmayı oluşturmak için xsd 'nin ve özelliklerini kullanır ve `Customer` `CustomerID` her`Customer` öğe için özniteliği.  
+# <a name="sample-xsd-file-customers-and-orders"></a>Örnek XSD dosyası: müşteriler ve siparişler
+Aşağıdaki XSD dosyası [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgelerindeki çeşitli örneklerde kullanılır. Bu dosya, örnek XML dosyası için bir şema tanımı içerir [: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md). Şema, `Customer` öğesinin `CustomerID` özniteliğinin bir anahtar olduğunu belirlemek için XSD 'nin `xs:key` ve `xs:keyref` özelliklerini kullanır ve her bir `CustomerID` öğesinde `Order` öğesi ile her `CustomerID` öğesinde `Customer` özniteliği arasında bir ilişki kurar.  
   
- `Join` Yan tümcesini kullanarak bu ilişkiden faydalanan LINQ sorguları yazma örneği için bkz [. nasıl yapılır: Iki koleksiyona (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md)birleştirin.  
+ `Join` yan tümcesini kullanarak bu ilişkiden faydalanan LINQ sorguları yazma örneği için, bkz. [nasıl birleştirileceği iki koleksiyon (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).  
   
 ## <a name="customersordersxsd"></a>Müştermicders. xsd  
   

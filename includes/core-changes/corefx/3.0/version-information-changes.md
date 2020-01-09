@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 2a751acc129ebd1c917b87f8083ffef72c7d8c17
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 5612ebce67946e22aaeeba861115ce4f8967e1f5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568159"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344442"
 ---
 ### <a name="apis-that-report-version-now-report-product-and-not-file-version"></a>Sürümü şimdi rapor eden API 'Ler rapor ürünü ve dosya sürümü değil
 
-.NET Core sürümlerini döndüren API 'lerin birçoğu, artık dosya sürümü yerine ürün sürümünü döndürdü.
+.NET Core sürümlerini döndüren API 'lerin birçoğu, artık dosya sürümü yerine ürün sürümünü döndürüyor.
 
 #### <a name="change-description"></a>Açıklamayı Değiştir
 

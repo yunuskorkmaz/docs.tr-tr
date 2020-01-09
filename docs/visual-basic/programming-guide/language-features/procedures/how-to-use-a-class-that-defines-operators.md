@@ -11,12 +11,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: 9ec4b4c07910100dd02cc86e882b44aa7dbd2ced
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 455c839702b90738ec5aea37c1b09d72eba42ff4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346044"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347886"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Nasıl yapılır: İşleçleri Tanımlayan Bir Sınıf Kullanma (Visual Basic)
 Kendi işleçlerini tanımlayan bir sınıf veya yapı kullanıyorsanız, bu işleçlere Visual Basic erişebilirsiniz.  
@@ -32,7 +32,7 @@ Kendi işleçlerini tanımlayan bir sınıf veya yapı kullanıyorsanız, bu iş
   
  <xref:System.Data.SqlTypes.SqlString> yapısı, `String` bir dönüştürme işlecini ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md)) <xref:System.Data.SqlTypes.SqlString> ve <xref:System.Data.SqlTypes.SqlString> arasında bir `String`tanımlar. `jobTitle` `title` atayan ifade, ilk işleci kullanır ve <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> işlev çağrısı ikincisini kullanır.  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compile-the-code"></a>Kod derleme  
  Kullandığınız sınıf veya yapının kullanmak istediğiniz işleci tanımladığından emin olun. Sınıf veya yapının, aşırı yükleme için kullanılabilen her işleci tanımladığını varsayın. Kullanılabilir operatörlerin bir listesi için bkz. [operator deyimleri](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
  Kaynak dosyanızın başlangıcında SQL dizesi için uygun `Imports` ifadesini ekleyin (Bu durumda <xref:System.Data.SqlTypes>).  

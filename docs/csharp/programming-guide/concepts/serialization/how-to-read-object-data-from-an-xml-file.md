@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: XML dosyasından (C#) nesne verilerini okuma'
+title: XML dosyasından nesne verilerini okuma (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 1d6ec71b9e408e1536063fc3d8f1badc0f38551e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2da5919c11ed2d6e43f4f9fc406f43e3ed48060f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590746"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346430"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Nasıl yapılır: XML dosyasından (C#) nesne verilerini okuma
-Bu örnek, <xref:System.Xml.Serialization.XmlSerializer> daha önce sınıfını kullanarak bir XML dosyasına yazılmış nesne verilerini okur.  
+# <a name="how-to-read-object-data-from-an-xml-file-c"></a>XML dosyasından nesne verilerini okuma (C#)
+Bu örnek, daha önce <xref:System.Xml.Serialization.XmlSerializer> sınıfını kullanarak bir XML dosyasına yazılmış nesne verilerini okur.  
   
 ## <a name="example"></a>Örnek  
   
@@ -42,8 +42,8 @@ public void ReadXML()
 }  
 ```  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- "C:\temp\SerializationOverview.xml" dosya adını seri hale getirilen verileri içeren dosyanın adıyla değiştirin. Verileri seri hale getirme hakkında daha fazla bilgi [için bkz. nasıl yapılır: Nesne verilerini bir XML dosyasına (C#)](./how-to-write-object-data-to-an-xml-file.md)yazın.  
+## <a name="compiling-the-code"></a>Kod Derleme  
+"C:\temp\SerializationOverview.xml" dosya adını seri hale getirilen verileri içeren dosyanın adıyla değiştirin. Verileri serileştirme hakkında daha fazla bilgi için bkz. [BIR XML dosyasına nesne verileri yazmaC#()](./how-to-write-object-data-to-an-xml-file.md).
   
  Sınıfın parametresiz ortak bir oluşturucusu olmalıdır.  
   
@@ -64,6 +64,6 @@ public void ReadXML()
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IO.StreamWriter>
-- [Nasıl yapılır: Nesne verilerini bir XML dosyasına yazma (C#)](./how-to-write-object-data-to-an-xml-file.md)
+- [Nesne verilerini bir XML dosyasına yazma (C#)](./how-to-write-object-data-to-an-xml-file.md)
 - [Serileştirme (C#)](./index.md)
 - [C# Programlama Kılavuzu](../../index.md)

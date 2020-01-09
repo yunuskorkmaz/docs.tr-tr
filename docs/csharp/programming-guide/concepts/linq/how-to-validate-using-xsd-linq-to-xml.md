@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: XSD kullanarak doğrula (LINQ to XML) (C#)'
+title: XSD kullanarak doğrulama (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: 0e35e12efa9530fd5bbcf7a21e86ed03c1325bc4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 29830457b63f36dd401a412364060339344f35cb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253250"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347247"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Nasıl yapılır: XSD kullanarak doğrula (LINQ to XML) (C#)
-Ad <xref:System.Xml.Schema> alanı, bir xml ağacının bir XML şeması tanım dili (xsd) dosyasına göre doğrulanmasını kolaylaştıran uzantı yöntemleri içerir. Daha fazla bilgi için <xref:System.Xml.Schema.Extensions.Validate%2A> yöntem belgelerine bakın.  
+# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>XSD kullanarak doğrulama (LINQ to XML) (C#)
+<xref:System.Xml.Schema> ad alanı, bir xml ağacının bir XML şeması tanım dili (XSD) dosyasına göre doğrulanmasını kolaylaştıran uzantı yöntemleri içerir. Daha fazla bilgi için <xref:System.Xml.Schema.Extensions.Validate%2A> yöntemi belgelerine bakın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir <xref:System.Xml.Schema.XmlSchemaSet>oluşturur, sonra şema kümesinde iki <xref:System.Xml.Linq.XDocument> nesneyi doğrular. Belgelerden biri geçerli, diğeri değildir.  
+ Aşağıdaki örnek bir <xref:System.Xml.Schema.XmlSchemaSet>oluşturur ve sonra iki <xref:System.Xml.Linq.XDocument> nesnesini şema kümesine göre doğrular. Belgelerden biri geçerli, diğeri değildir.  
   
 ```csharp  
 string xsdMarkup =  
@@ -76,11 +76,11 @@ doc2 did not validate
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, XML belgesinin [örnek XML dosyasından bulunduğunu doğrular: Müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) [örnek xsd dosyasından şema başına geçerlidir: Müşteriler ve siparişler](./sample-xsd-file-customers-and-orders1.md). Sonra kaynak XML belgesini değiştirir. İlk Müşterideki `CustomerID` özniteliği değiştirir. Değişiklik sonrasında, siparişler var olmayan bir müşteriye başvuracaktır, bu nedenle XML belgesi artık doğrulanmaz.  
+ Aşağıdaki örnek, XML belgesinin [örnek XML dosyasından bulunduğunu doğrular: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) [örnek xsd dosyasından şema başına geçerlidir: müşteriler ve siparişler](./sample-xsd-file-customers-and-orders1.md). Sonra kaynak XML belgesini değiştirir. İlk müşterinin `CustomerID` özniteliğini değiştirir. Değişiklik sonrasında, siparişler var olmayan bir müşteriye başvuracaktır, bu nedenle XML belgesi artık doğrulanmaz.  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
- Bu örnek, aşağıdaki XSD şemasını kullanır: [Örnek XSD Dosyası: Müşteriler ve siparişler](./sample-xsd-file-customers-and-orders1.md).  
+ Bu örnek şu XSD şemasını kullanır: [örnek xsd dosyası: müşteriler ve siparişler](./sample-xsd-file-customers-and-orders1.md).  
   
 ```csharp  
 XmlSchemaSet schemas = new XmlSchemaSet();  

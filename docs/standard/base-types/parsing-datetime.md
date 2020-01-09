@@ -14,12 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 9957c38ad625a27395a3bcc3ddd9ce0b4797b93d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 16daa0ef3133b6cd04dc48b7f79fd365098e4bdf
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127611"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348066"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>.NET 'teki tarih ve saat dizelerini ayrıştırma
 
@@ -48,7 +48,7 @@ Bir tarih ve saat bileşenine ek olarak, bir tarih ve saatin dize gösterimi, za
   
 Biçim sağlayıcısı, belirsiz bir sayısal tarihi yorumlamak için de kullanılır. "02/03/04" dizesi ile temsil edilen tarihin hangi bileşenlerinin ay, gün ve yıl olduğunu net değildir. Bileşenler, biçim sağlayıcısındaki benzer Tarih biçimlerinin sırasına göre yorumlanır.
 
-## <a name="parse"></a>MAZ
+## <a name="parse"></a>Ayrıştır
 
 Aşağıdaki örnek, bir `string` <xref:System.DateTime>dönüştürmek için <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> yönteminin kullanımını gösterir. Bu örnek, geçerli iş parçacığıyla ilişkili kültürü kullanır. Geçerli kültür ile ilişkili <xref:System.Globalization.CultureInfo> giriş dizesini ayrıştıramaz, bir <xref:System.FormatException> oluşturulur.
 
@@ -56,7 +56,7 @@ Aşağıdaki örnek, bir `string` <xref:System.DateTime>dönüştürmek için <x
 > Bu makaledeki C# tüm örnekler tarayıcınızda çalışır. Çıktıyı görmek için **Çalıştır** düğmesine basın. Ayrıca, kendinizi denemek için de düzenleyebilirsiniz.
 
 > [!NOTE]
-> Bu örnekler, hem hem de [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) [vb](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions). için GitHub docs deposunda mevcuttur. Ya da projeyi bir veya [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) [vb](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip)için bir ZipFile olarak indirebilirsiniz.
+> Bu örnekler, hem hem de [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions)için GitHub docs deposunda mevcuttur. Ya da, projeyi veya [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) [Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip)için bir zip dosyası olarak indirebilirsiniz.
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]

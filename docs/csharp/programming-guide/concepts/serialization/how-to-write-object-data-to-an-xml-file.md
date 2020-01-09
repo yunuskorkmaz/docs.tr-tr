@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Nesne verilerini bir XML dosyasına yazma (C#)'
+title: Nesne verilerini bir XML dosyasına yazma (C#)
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 5da79d68bf7e1c955cb6edededb3914bd9c898e5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 475e9398f20a2a4db9fb537d0b8d44f0273e980b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590692"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346444"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-c"></a>Nasıl yapılır: Nesne verilerini bir XML dosyasına yazma (C#)
+# <a name="how-to-write-object-data-to-an-xml-file-c"></a>Nesne verilerini bir XML dosyasına yazma (C#)
 Bu örnek, <xref:System.Xml.Serialization.XmlSerializer> sınıfını kullanarak bir sınıftan bir XML dosyasına nesne yazar.  
   
 ## <a name="example"></a>Örnek  
@@ -44,7 +44,7 @@ public class XMLWrite
 }  
 ```  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
  Seri hale getirilen sınıfın parametre içermeyen bir ortak Oluşturucusu olmalıdır.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
@@ -59,10 +59,10 @@ public class XMLWrite
 - Disk dolu (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Bu örnek, dosya zaten yoksa yeni bir dosya oluşturur. Uygulamanın bir dosya oluşturması gerekiyorsa, bu uygulamanın klasöre erişmesi gerekir `Create` . Dosya zaten mevcutsa, uygulamanın yalnızca `Write` daha az bir ayrıcalığa erişmesi gerekir. Mümkün olduğunda, dağıtım sırasında dosyanın oluşturulması daha güvenlidir ve bir klasör için `Read` `Create` erişim yerine yalnızca tek bir dosyaya erişim izni verir.  
+ Bu örnek, dosya zaten yoksa yeni bir dosya oluşturur. Bir uygulamanın bir dosya oluşturması gerekiyorsa, bu uygulamanın klasör için `Create` erişimi olması gerekir. Dosya zaten mevcutsa, uygulamanın daha az bir ayrıcalığa yalnızca `Write` erişimi olması gerekir. Mümkün olduğunda, dağıtım sırasında dosyanın oluşturulması ve bir klasör için `Create` erişimi yerine yalnızca tek bir dosyaya `Read` erişim izni verilmesi daha güvenlidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IO.StreamWriter>
-- [Nasıl yapılır: XML dosyasından (C#) nesne verilerini okuma](./how-to-read-object-data-from-an-xml-file.md)
+- [XML dosyasından nesne verilerini okuma (C#)](./how-to-read-object-data-from-an-xml-file.md)
 - [Serileştirme (C#)](./index.md)

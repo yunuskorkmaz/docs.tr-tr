@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Belirtilen bir özniteliğe veya ada (C#) sahip dosyaları sorgula'
+title: Belirtilen bir özniteliğe veya ada (C#) sahip dosyaları sorgulama
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: c1ecaad7e4fb4538331ba8f8076c9795acc52877
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8ecf3263dcee9b54d01dd0b577ba8bec2a199da9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592904"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346724"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Nasıl yapılır: Belirtilen bir özniteliğe veya ada (C#) sahip dosyaları sorgula
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Belirtilen bir özniteliğe veya ada (C#) sahip dosyaları sorgulama
 Bu örnek, belirtilen bir dizin ağacında belirtilen dosya adı uzantısına (örneğin ". txt") sahip tüm dosyaların nasıl bulunacağını gösterir. Ayrıca, oluşturma zamanına göre ağaçta en yeni veya en eski dosyanın nasıl dönegösterdiğini gösterir.  
   
 ## <a name="example"></a>Örnek  
@@ -63,8 +63,8 @@ class FindFileByExtension
 }  
 ```  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
-  System. C# LINQ ve System.IO ad alanları `using` için yönergeler içeren bir konsol uygulaması projesi oluşturun.
+## <a name="compiling-the-code"></a>Kod Derleme  
+  System. C# lınq ve System.IO ad alanları için `using` yönergeler içeren bir konsol uygulaması projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

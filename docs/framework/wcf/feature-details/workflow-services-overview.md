@@ -1,27 +1,27 @@
 ---
-title: İş akışı hizmetlerine genel bakış - WCF
+title: İş akışı hizmetlerine genel bakış
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: 757a55363a8cb92fc547750183d1261f51f8f682
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cb013dd419d09af61eaff290709164427b1b655f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639235"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347857"
 ---
 # <a name="workflow-services-overview"></a>İş akışı hizmetlerine genel bakış
 
-İş akışı, iş akışları kullanılarak uygulanır ve WCF tabanlı Hizmetleri hizmetleridir. İş akışı, Windows Communication Foundation (WCF) ileti göndermek ve almak için ileti etkinlikleri kullanan iş akışları hizmetleridir. .NET framework 4.5 birkaç iş akışı içinden gelen iletiler gönderip izin Mesajlaşma etkinlikleri sunar. Etkinlikleri ve nasıl farklı ileti exchange desenleri uygulamak için kullanılabilmesi için Mesajlaşma hakkında daha fazla bilgi için bkz. [Mesajlaşma etkinlikleri](messaging-activities.md).
+İş akışı hizmetleri, iş akışları kullanılarak uygulanan WCF tabanlı hizmetlerdir. İş akışı hizmetleri, Windows Communication Foundation (WCF) iletileri göndermek ve almak için mesajlaşma etkinliklerini kullanan iş akışlarıdır. .NET Framework 4,5, bir iş akışı içinden ileti göndermenizi ve almanızı sağlayan bir dizi mesajlaşma etkinliği sunmaktadır. İleti oluşturma etkinlikleri ve farklı ileti değişimi desenleri uygulamak için nasıl kullanılabilecekleri hakkında daha fazla bilgi için bkz. [mesajlaşma etkinlikleri](messaging-activities.md).
 
 ## <a name="benefits-of-using-workflow-services"></a>İş akışı hizmetleri kullanmanın avantajları
 
-Gittikçe artan dağıtılmış uygulamalar duruma gibi tek başına hizmetlerinden işinin bir kısmını boşaltmak için diğer hizmetleri çağırmak için sorumlu olur. Bu çağrılar zaman uyumsuz işlemler olarak uygulama koduna bazı daha karmaşık hâle getirir. Hata işleme süreci daha karmaşık özel durumları işleme ve ayrıntılı izleme bilgilerini sağlayarak biçiminde ekler. Bazı hizmetler, genellikle uzun süre çalışan olur ve önemli sistem kaynakları için giriş beklerken alabilir. Bu sorunları nedeniyle dağıtılmış uygulamaların çoğunlukla çok karmaşık ve yazmanız ve korumanız zor olur. İş akışları, zaman uyumsuz işler, özellikle çağrıları dış hizmetlerle eşgüdümüyle ifade etmek için doğal bir yoludur. İş akışları da uzun süre çalışan iş süreçleri temsil eden en etkili olur. Bu iş akışı hizmetleri dağıtılmış bir ortamda oluşturmak için harika bir varlık olun. Bu kalitelerini olur.
+Uygulamalar giderek daha fazla dağıtıldığı için, her bir hizmet, çalışmanın bazılarının yükünü devretmek için diğer hizmetleri çağırmanın sorumluluğundadır. Bu çağrıların zaman uyumsuz işlemler olarak uygulanması, kodun içinde bazı karmaşıklıklar sağlar. Hata işleme özel durum işleme ve ayrıntılı izleme bilgileri sağlama biçiminde ek karmaşıklık ekler. Bazı hizmetler genellikle uzun süredir çalışıyor ve giriş beklerken değerli sistem kaynakları alabilir. Bu sorunlar nedeniyle, dağıtılmış uygulamalar genellikle çok karmaşıktır ve yazma ve bakımını zorlaştırır. İş akışları, zaman uyumsuz çalışmanın koordinasyonu için doğal bir yoldur, özellikle de harici hizmetlere çağrı yapılır. İş akışları, uzun süreli iş süreçlerini temsil eden de etkilidir. Bu, iş akışını dağıtılmış bir ortamda hizmet oluşturmaya yönelik harika bir varlık oluşturan bu kalitedir.
 
-## <a name="implementing-a-workflow-service"></a>Bir iş akışı hizmeti uygulama
+## <a name="implementing-a-workflow-service"></a>İş akışı hizmeti uygulama
 
-Bir WCF Hizmeti uygularken, bir dizi hizmet ve veri gönderen ve alan açıklayan sözleşme tanımlayın. Verileri veri sözleşmeleri ve ileti sözleşmeleri temsil edilir. WCF hem iş akışı Hizmetleri, veri sözleşme ve ileti anlaşması tanımlarını hizmet açıklamaları bir parçası olarak kullanın. Hizmet, hizmet işlemleri tanımlamak için meta verileri (WSDL biçiminde) kullanıma sunar. WCF'de, hizmet sözleşmeleri ve işlem sözleşmeleri hizmeti ve desteklediği işlemleri tanımlayın. Ancak bir iş akışı hizmetinde, bu sözleşme iş süreci parçasıdır. Bunlar, meta verilerde sözleşme çıkarımı olarak adlandırılan bir işlem tarafından sunulur. Bir iş akışı hizmeti kullanarak barındırıldığında <xref:System.ServiceModel.Activities.WorkflowServiceHost>, iş akışı tanımı incelenir ve sözleşme Mesajlaşma etkinlikleriyle iş akışında bulunan kümesi temel alınarak oluşturulur. Özellikle, aşağıdaki etkinlikleri ve özellikleri sözleşme oluşturmak için kullanılır:
+Bir WCF hizmetini uygularken, hizmeti ve gönderdiği ve aldığı verileri tanımlayan bir dizi sözleşme tanımlarsınız. Veriler, veri sözleşmeleri ve ileti sözleşmeleri olarak gösterilir. WCF ve Workflow Hizmetleri, hizmet açıklamalarının parçası olarak veri sözleşmesi ve ileti sözleşmesi tanımlarını kullanır. Hizmet, hizmetin işlemlerini anlatmak için meta verileri (WSDL biçiminde) kullanıma sunar. WCF 'de hizmet sözleşmeleri ve işlem sözleşmeleri, hizmeti ve desteklediği işlemleri tanımlar. Ancak, bir iş akışı hizmetinde, bu sözleşmeler iş sürecinin bir parçasıdır. Bunlar, anlaşma çıkarımı adlı bir işlem tarafından meta verilerde kullanıma sunulur. Bir iş akışı hizmeti <xref:System.ServiceModel.Activities.WorkflowServiceHost>kullanılarak barındırılıyorsa, iş akışı tanımı incelenir ve iş akışında bulunan mesajlaşma etkinlikleri kümesine göre bir sözleşme oluşturulur. Özellikle, aşağıdaki etkinlikler ve Özellikler sözleşmeyi oluşturmak için kullanılır:
 
-<xref:System.ServiceModel.Activities.Receive> Etkinlik
+<xref:System.ServiceModel.Activities.Receive> etkinliği
 
 - <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>
 
@@ -29,36 +29,36 @@ Bir WCF Hizmeti uygularken, bir dizi hizmet ve veri gönderen ve alan açıklaya
 
 - <xref:System.ServiceModel.Activities.Receive.Action%2A>
 
-<xref:System.ServiceModel.Activities.SendReply> Etkinlik
+<xref:System.ServiceModel.Activities.SendReply> etkinliği
 
 - <xref:System.ServiceModel.Activities.SendReply.Action%2A>
 
-<xref:System.ServiceModel.Activities.TransactedReceiveScope> Etkinlik
+<xref:System.ServiceModel.Activities.TransactedReceiveScope> etkinliği
 
-Sözleşme çıkarımı nihai sonucu, WCF hizmetleri ve işlem sözleşmeleri aynı veri yapılarını kullanarak hizmeti açıklamasıdır. Bu bilgiler, sonra iş akışı hizmeti için WSDL göstermek için kullanılır.
+Sözleşme çıkarımı nihai sonucu, WCF Hizmetleri ve işlem sözleşmeleri ile aynı veri yapılarını kullanan hizmetin bir açıklamasıdır. Bu bilgiler daha sonra iş akışı hizmeti için WSDL 'yi göstermek üzere kullanılır.
 
 > [!NOTE]
-> [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] Bazı ek araç desteği olmadan var olan bir sözleşme tanımı kullanarak iş akışı hizmetleri yazmanıza izin vermez. İş akışı Hizmet sözleşmeleri, yukarıda bahsedilen sözleşme çıkarımı işlem tarafından oluşturulur. İleti sözleşmeleri ve veri sözleşmeleri tam, ancak desteklenir.
+> [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], ek araç desteği olmadan, mevcut bir sözleşme tanımını kullanarak iş akışı hizmetleri yazmanıza izin vermez. İş akışı hizmeti sözleşmeleri, daha önce ele alınan sözleşme çıkarım işlemi tarafından oluşturulur. Ancak, ileti sözleşmeleri ve veri sözleşmeleri tam olarak desteklenir, ancak.
 
 ## <a name="workflow-services-and-msmq-based-bindings"></a>İş akışı hizmetleri ve MSMQ tabanlı bağlamalar
 
-WCF tanımlayan iki MSMQ tabanlı bağlamalar <xref:System.ServiceModel.NetMsmqBinding> ve <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.  MSMQ tabanlı bağlamalar, genellikle bu hizmetler uzun süre çalışan yapısı nedeniyle iş akışı Hizmetleri ile kullanılır. MSMQ tabanlı bağlamalar sahip bir `ValidityDuration` MSMQ iletileri geçerli olması için ne kadar süreyle varsayabilirsiniz belirten özelliği. Uzun süre çalışan iş akışı hizmetleri yapısı nedeniyle iş akışı hizmeti onu işlemeden önce bir MSMQ iletisinin geçerlilik süresini geçmesini mümkündür. Bu nedenle uygun bir değere bir MSMQ bağlama geçerlilik süresini ayarlamak çok önemlidir. Bu değer, iş akışı ve iletileri işlediğinden nasıl göre seçilmelidir. Örneğin bir iş akışıyla varsa bir <xref:System.ServiceModel.Activities.Receive> etkinliği çalıştırmak için 10 dakika sürer özel bir etkinlik tarafından izlenen bir başkası tarafından izlenen <xref:System.ServiceModel.Activities.Receive> etkinliği, doğru değeri `ValidityDuration` 10 dakikadan uzun olacaktır.
+WCF <xref:System.ServiceModel.NetMsmqBinding> ve <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>iki MSMQ tabanlı bağlama tanımlar.  MSMQ tabanlı bağlamalar, genellikle bu tür hizmetlerin uzun süre çalışan doğası nedeniyle iş akışı hizmetleriyle birlikte kullanılır. MSMQ tabanlı bağlamalar, MSMQ iletilerinin ne kadar süreyle geçerli olduğunu belirten bir `ValidityDuration` özelliğine sahiptir. İş akışı hizmetlerinin uzun süre çalışan doğası nedeniyle, bir MSMQ iletisinin geçerlilik süresinin, iş akışı hizmeti tarafından işlem yapılmadan önce geçmesi mümkündür. Bu nedenle, MSMQ bağlamasının geçerlilik süresini uygun bir değere ayarlamak çok önemlidir. Bu değer, iş akışına göre seçilmelidir ve iletileri nasıl işler. Örneğin, bir <xref:System.ServiceModel.Activities.Receive> etkinliği olan bir iş akışınız varsa, bunu çalıştırmak için 10 dakika geçen özel bir etkinlik ve sonra başka bir <xref:System.ServiceModel.Activities.Receive> etkinliği, `ValidityDuration` için doğru değer 10 dakikadan fazla olur.
 
 ## <a name="hosting-a-workflow-service"></a>Bir iş akışı hizmeti barındırma
 
-WCF hizmetlerinde olduğu gibi iş akışı hizmetleri barındırılması gerekir. WCF hizmetleri kullanma <xref:System.ServiceModel.ServiceHost> sınıfı hizmetlerini barındırmak ve iş akışı hizmetleri kullanım <xref:System.ServiceModel.Activities.WorkflowServiceHost> hizmetlerini barındırmak için. WCF hizmetlerinde olduğu gibi çeşitli şekillerde örneğin iş akışı hizmetleri barındırılabilir:
+WCF Hizmetleri gibi iş akışı hizmetleri de barındırılmalıdır. WCF Hizmetleri, hizmetleri ve iş akışı hizmetlerini barındırmak için <xref:System.ServiceModel.ServiceHost> sınıfını kullanır ve Hizmetleri barındırmak için <xref:System.ServiceModel.Activities.WorkflowServiceHost> kullanır. WCF Hizmetleri gibi, iş akışı hizmetleri çeşitli yollarla barındırılabilir, örneğin:
 
-- Yönetilen bir .NET Framework uygulamasında.
+- Bir yönetilen .NET Framework uygulamasında.
 
-- Internet Information Services (IIS).
+- Internet Information Services (IIS) içinde.
 
-- Windows İşlem Etkinleştirme Hizmeti (WAS).
+- Windows Işlem etkinleştirme hizmeti 'nde (WAS).
 
 - Yönetilen bir Windows hizmetinde.
 
-Yönetilen bir .NET Framework uygulamasında barındırılan iş akışı hizmetleri veya yönetilen bir Windows hizmet örneği oluşturma <xref:System.ServiceModel.Activities.WorkflowServiceHost> sınıfı ve bir örneğini geçirin <xref:System.ServiceModel.Activities.WorkflowService> içinde iş akışı tanımını içeren <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> özelliği. Mesajlaşma etkinlikleri içeren bir iş akışı tanımı, bir iş akışı hizmeti kullanıma sunulur.
+Yönetilen bir .NET Framework uygulamasında veya yönetilen bir Windows hizmetinde barındırılan iş akışı hizmetleri, <xref:System.ServiceModel.Activities.WorkflowServiceHost> sınıfının bir örneğini oluşturur ve onu <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> özelliği içinde iş akışı tanımını içeren bir <xref:System.ServiceModel.Activities.WorkflowService> örneğine iletir. Mesajlaşma etkinliklerini içeren bir iş akışı tanımı, bir iş akışı hizmeti olarak sunulur.
 
-Bir iş akışı hizmetinde IIS ya da WAS barındırmak için sanal bir dizine iş akışı hizmet tanımını içeren .xamlx dosyası yerleştirin. Varsayılan uç nokta (kullanarak <xref:System.ServiceModel.BasicHttpBinding>) olan otomatik olarak oluşturulan daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md). Bir Web.config dosyası, ayrıca kendi uç noktalarınız belirtmek için sanal dizin yerleştirebilirsiniz. İş akışı tanımınızı bir derlemede ise sanal dizin ve iş akışı derleme App_Code dizinindeki .svc dosya yerleştirebilirsiniz. .Svc dosyası, hizmet barındırma ortamı fabrikası ve iş akışı hizmeti uygulayan sınıf belirtmeniz gerekir. Aşağıdaki örnek, hizmet barındırma ortamı fabrikası belirtin ve iş akışı hizmeti uygulayan bir sınıf belirtmek gösterilmektedir.
+Bir iş akışı hizmetini IIS 'de veya WAS 'de barındırmak için, iş akışı hizmeti tanımını içeren. xamlx dosyasını bir sanal dizine yerleştirin. Varsayılan uç nokta (<xref:System.ServiceModel.BasicHttpBinding>kullanarak), daha fazla bilgi Için otomatik olarak oluşturulur, bkz. [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md). Ayrıca, kendi uç noktalarınızı belirtmek için sanal dizine bir Web. config dosyası yerleştirebilirsiniz. İş akışı tanımınızda bir derlemede yer alıyorsa, bir. svc dosyasını sanal dizine ve App_Code dizinindeki iş akışı derlemesine yerleştirebilirsiniz. . Svc dosyası, hizmet ana bilgisayarı fabrikası ve iş akışı hizmetini uygulayan sınıfı belirtmelidir. Aşağıdaki örnek, hizmet ana bilgisayar fabrikasının nasıl ekleneceğini ve iş akışı hizmetini uygulayan sınıfın nasıl kullanılacağını gösterir.
 
 ```
 <%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory

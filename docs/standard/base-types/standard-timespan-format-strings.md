@@ -1,5 +1,5 @@
 ---
-title: Standart TimeSpan Biçim Dizeleri
+title: Standart TimeSpan Biçim dizeleri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: c699ed68606293b1a49a540e00636cf7f56bdf2f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ec06edc16829c6d4caf8c760922aac1471e365c2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972101"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346624"
 ---
-# <a name="standard-timespan-format-strings"></a>Standart TimeSpan Biçim Dizeleri
+# <a name="standard-timespan-format-strings"></a>Standart TimeSpan Biçim dizeleri
 
 Standart <xref:System.TimeSpan> biçim dizesi, biçimlendirme işleminden kaynaklanan bir <xref:System.TimeSpan> değerinin metin temsilini tanımlamak için tek bir biçim belirticisi kullanır. Boşluk da dahil olmak üzere birden fazla karakter içeren herhangi bir biçim dizesi, özel bir <xref:System.TimeSpan> biçim dizesi olarak yorumlanır. Daha fazla bilgi için bkz. [Özel TimeSpan Biçim dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  
   
@@ -42,7 +42,7 @@ Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmekt
   
 |Biçim belirteci|Name|Açıklama|Örnekler|  
 |----------------------|----------|-----------------|--------------|  
-|,|Sabit (Sabit) biçim|Bu tanımlayıcı kültüre duyarlı değildir. `[-][d'.']hh':'mm':'ss['.'fffffff]`formu alır.<br /><br /> ("T" ve "T" biçim dizeleri aynı sonuçları üretir.)<br /><br /> Daha fazla bilgi: [sabit ("c") Biçim belirleyicisi](#the-constant-c-format-specifier).|`TimeSpan.Zero`-> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)`-> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)`-> 3.17:25:30.5000000|  
+|,|Sabit (Sabit) biçim|Bu tanımlayıcı kültüre duyarlı değildir. `[-][d'.']hh':'mm':'ss['.'fffffff]`formu alır.<br /><br /> ("T" ve "T" biçim dizeleri aynı sonuçları üretir.)<br /><br /> Daha fazla bilgi: [sabit ("c") Biçim belirleyicisi](#the-constant-c-format-specifier).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|Genel kısa biçim|Bu belirtici yalnızca gerekli olanları verir. Kültüre duyarlıdır ve `[-][d':']h':'mm':'ss[.FFFFFFF]`formu alır.<br /><br /> Daha fazla bilgi: [genel kısa ("g") Biçim belirleyicisi](#the-general-short-g-format-specifier).|`New TimeSpan(1, 3, 16, 50, 500)`-> 1:3: 16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)`-> 1:3: 16:50, 5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)`-> 1:3: 16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)`-> 1:3: 16:50599 (fr-FR)|  
 |"G"|Genel uzun biçim|Bu belirtici her zaman gün ve yedi kesirli basamak verir. Kültüre duyarlıdır ve `[-]d':'hh':'mm':'ss.fffffff`formu alır.<br /><br /> Daha fazla bilgi: [genel uzun ("G") Biçim belirleyicisi](#the-general-long-g-format-specifier).|`New TimeSpan(18, 30, 0)`-> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)`-> 0:18:30:00, 0000000 (fr-FR)|  
 
@@ -56,9 +56,9 @@ Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmekt
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |*-*|Negatif bir zaman aralığını belirten isteğe bağlı bir eksi işareti.|  
-|*TID*|Önünde sıfır olmayan, isteğe bağlı gün sayısı.|  
-|*ss*|"00" ile "23" arasında değişen saat sayısı.|  
-|*d*|"00" ile "59" arasında değişen dakika sayısı.|  
+|*d*|Önünde sıfır olmayan, isteğe bağlı gün sayısı.|  
+|*hh*|"00" ile "23" arasında değişen saat sayısı.|  
+|*mm*|"00" ile "59" arasında değişen dakika sayısı.|  
 |*ss*|"0" ile "59" arasında değişen saniye sayısı.|  
 |*fffffff*|Saniyenin isteğe bağlı kesirli kısmı.  Değeri "0000001" (bir Tick veya saniyenin 1 10-milimetre Onth) arasında "9999999" (9.999.999 10-milionon saniyenin veya bir saniyeden daha az bir değer) arasında değişebilir.|  
   
@@ -82,9 +82,9 @@ Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmekt
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |*-*|Negatif bir zaman aralığını belirten isteğe bağlı bir eksi işareti.|  
-|*TID*|Önünde sıfır olmayan, isteğe bağlı gün sayısı.|  
-|*olsun*|"0" ile "23" arasında, önünde sıfır olmadan değişen saat sayısı.|  
-|*d*|"00" ile "59" arasında değişen dakika sayısı..|  
+|*d*|Önünde sıfır olmayan, isteğe bağlı gün sayısı.|  
+|*h*|"0" ile "23" arasında, önünde sıfır olmadan değişen saat sayısı.|  
+|*mm*|"00" ile "59" arasında değişen dakika sayısı..|  
 |*ss*|"00" ile "59" arasında değişen saniye sayısı..|  
 |*.*|Kesirli saniye ayırıcısı. Kullanıcı geçersiz kılmaları olmadan belirtilen kültürün <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> özelliğine eşdeğerdir.|  
 |*FFFFFFF*|Kesirli saniyeler. Olabildiğince az basamak görüntülenir.|  
@@ -106,9 +106,9 @@ Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmekt
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |*-*|Negatif bir zaman aralığını belirten isteğe bağlı bir eksi işareti.|  
-|*TID*|Önünde sıfır olmayan gün sayısı.|  
-|*ss*|"00" ile "23" arasında değişen saat sayısı.|  
-|*d*|"00" ile "59" arasında değişen dakika sayısı.|  
+|*d*|Önünde sıfır olmayan gün sayısı.|  
+|*hh*|"00" ile "23" arasında değişen saat sayısı.|  
+|*mm*|"00" ile "59" arasında değişen dakika sayısı.|  
 |*ss*|"00" ile "59" arasında değişen saniye sayısı.|  
 |*.*|Kesirli saniye ayırıcısı. Kullanıcı geçersiz kılmaları olmadan belirtilen kültürün <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> özelliğine eşdeğerdir.|  
 |*fffffff*|Kesirli saniyeler.|  

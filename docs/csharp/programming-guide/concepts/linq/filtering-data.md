@@ -2,12 +2,12 @@
 title: Verileri filtreleme (C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: eb448c1c2ea6d9b3fcf0120043cafebc01cd3805
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 74399244990f8ff2deaa1d10576ea94a57c16bee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418469"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346987"
 ---
 # <a name="filtering-data-c"></a>Verileri filtreleme (C#)
 Filtreleme, sonuç kümesini yalnızca belirtilen bir koşulu karşılayan öğeleri içerecek şekilde kısıtlama işlemini ifade eder. Seçim olarak da bilinir.  
@@ -50,7 +50,7 @@ foreach (string str in query)
 - <xref:System.Linq>
 - [Standart sorgu Işleçlerine genelC#bakış ()](./standard-query-operators-overview.md)
 - [where yan tümcesi](../../../language-reference/keywords/where-clause.md)
-- [Nasıl yapılır: çalışma zamanında koşul filtrelerini dinamik olarak belirtme](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
-- [Nasıl yapılır: bir derlemenin meta verilerini yansıma ile sorgulama (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [Nasıl yapılır: belirtilen bir özniteliğe veya ada (C#) sahip dosyaları sorgulama](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [Nasıl yapılır: herhangi bir sözcük veya alana göre metin verilerini sıralama veya filtreleme (LINQ)C#()](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Çalışma zamanında koşul filtrelerini dinamik olarak belirtme](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
+- [Bir derlemenin meta verilerini yansıma ile sorgulama (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [Belirtilen bir özniteliğe veya ada (C#) sahip dosyaları sorgulama](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [Her kelime veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

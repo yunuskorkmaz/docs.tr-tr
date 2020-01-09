@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 27f7cf46bd3e344503f74527df34506d38ad4545
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428441"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345338"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bit düzeyinde ve kaydırma işleçleriC# (başvuru)
 
@@ -172,9 +172,9 @@ Aşağıdaki örnekte bu davranış gösterilmektedir:
 
 ## <a name="enumeration-logical-operators"></a>Sabit listesi mantıksal işleçleri
 
-`~`, `&`, `|`ve `^` işleçleri her bir [numaralandırma](../keywords/enum.md) türü tarafından da desteklenir. Aynı numaralandırma türünün işlenenleri için, temel alınan integral türünün karşılık gelen değerlerinde bir mantıksal işlem gerçekleştirilir. Örneğin, herhangi bir `x` ve `y` bir numaralandırma türü `T` temel alınan bir tür `U`için, `x & y` ifadesi `(T)((U)x & (U)y)` ifadesiyle aynı sonucu üretir.
+`~`, `&`, `|`ve `^` işleçleri her bir [numaralandırma](../builtin-types/enum.md) türü tarafından da desteklenir. Aynı numaralandırma türünün işlenenleri için, temel alınan integral türünün karşılık gelen değerlerinde bir mantıksal işlem gerçekleştirilir. Örneğin, herhangi bir `x` ve `y` bir numaralandırma türü `T` temel alınan bir tür `U`için, `x & y` ifadesi `(T)((U)x & (U)y)` ifadesiyle aynı sonucu üretir.
 
-Genellikle, [Flags](xref:System.FlagsAttribute) özniteliğiyle tanımlanan bir numaralandırma türü ile bit düzeyinde mantıksal işleçler kullanırsınız. Daha fazla bilgi için [Listeleme türleri](../../programming-guide/enumeration-types.md) makalesinin [numaralandırma türleri bit bayrakları](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags) bölümüne bakın.
+Genellikle, [Flags](xref:System.FlagsAttribute) özniteliğiyle tanımlanan bir numaralandırma türü ile bit düzeyinde mantıksal işleçler kullanırsınız. Daha fazla bilgi için [Listeleme türleri](../builtin-types/enum.md) makalesinin [numaralandırma türleri bit bayrakları](../builtin-types/enum.md#enumeration-types-as-bit-flags) bölümüne bakın.
 
 ## <a name="operator-overloadability"></a>Operatör overloadability
 

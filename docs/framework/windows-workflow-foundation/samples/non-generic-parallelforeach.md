@@ -2,12 +2,12 @@
 title: Genel olmayan ParallelForEach
 ms.date: 03/30/2017
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
-ms.openlocfilehash: 33e0c8ef8c04b7d58815760ae1152f63891fdfd5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ea7f57b8812dca3dfcb4908730dd788182d50c5c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715638"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347613"
 ---
 # <a name="non-generic-parallelforeach"></a>Genel olmayan ParallelForEach
 
@@ -19,7 +19,7 @@ Bu örnek, genel olmayan <xref:System.Activities.Statements.ParallelForEach%601>
 
 ## <a name="parallelforeach-activity"></a>ParallelForEach etkinliği
 
-C#/Vb `foreach` ifade, bir koleksiyonun öğelerini numaralandırır ve koleksiyonun her öğesi için gömülü bir ifade yürütüyordur. [!INCLUDE[wf1](../../../../includes/wf1-md.md)] denk etkinlikler <xref:System.Activities.Statements.ForEach%601> ve <xref:System.Activities.Statements.ParallelForEach%601>. <xref:System.Activities.Statements.ForEach%601> etkinliği bir değer ve gövde listesi içerir. Çalışma zamanında, liste tekrarlandırılır ve listedeki her bir değer için gövde yürütülür.
+C#/Visual Basic `foreach` ifade, bir koleksiyonun öğelerini numaralandırır ve koleksiyonun her öğesi için gömülü bir ifade yürütüyordur. [!INCLUDE[wf1](../../../../includes/wf1-md.md)] denk etkinlikler <xref:System.Activities.Statements.ForEach%601> ve <xref:System.Activities.Statements.ParallelForEach%601>. <xref:System.Activities.Statements.ForEach%601> etkinliği bir değer ve gövde listesi içerir. Çalışma zamanında, liste tekrarlandırılır ve listedeki her bir değer için gövde yürütülür.
 
 <xref:System.Activities.Statements.ParallelForEach%601>, <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> değerlendirmesi `true`döndürürse <xref:System.Activities.Statements.ParallelForEach%601> etkinliğinin erken tamamlanabilmesi için bir <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>vardır. <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> her yineleme tamamlandıktan sonra değerlendirilir.
 
@@ -110,7 +110,7 @@ public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
 
     2. **DesignerTestClient** , etkinliğin tasarımcı içinde nasıl kullanılacağını gösterir.
 
-2. Projeyi derleyin ve çalıştırın.
+2. Derleme ve projeyi çalıştırın.
 
 > [!IMPORTANT]
 > Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.

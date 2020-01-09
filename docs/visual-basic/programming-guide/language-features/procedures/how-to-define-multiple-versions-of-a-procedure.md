@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: 83e96e271f6613aa325d59a0ca2fce9fc69fe059
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e8ed9a6356b7177b2c029a9280d0790a93676653
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350481"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347594"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Nasıl yapılır: Bir Yordamın Birden Fazla Sürümünü Tanımlama (Visual Basic)
 Aynı adı ancak her sürüm için farklı bir parametre listesini kullanarak, onu *aşırı* yükleyerek birden çok sürümde bir yordam tanımlayabilirsiniz. Aşırı yükleme amacı, bir yordamın adına göre ayrım yapmadan daha yakından ilgili birkaç sürümünü tanımlamaktır.  
@@ -39,7 +39,7 @@ Aynı adı ancak her sürüm için farklı bir parametre listesini kullanarak, o
   
  `post` yordamının bu sürümlerini çağırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: çağrı aşırı yüklenmiş bir yordam](./how-to-call-an-overloaded-procedure.md).  
   
-## <a name="compiling-the-code"></a>Kod Derleme  
+## <a name="compile-the-code"></a>Kod derleme  
  Aşırı yüklenmiş sürümlerden her birinin aynı yordam adına, ancak farklı bir parametre listesine sahip olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

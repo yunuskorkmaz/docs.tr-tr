@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: e921084ed28cb4e846cb269e57e58a194e9437a5
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: fbe3a546fd431beb5ddf1d71153d38580a19ecc9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837343"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348347"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation'da Kuyruklar
 Bu bölümdeki konular, kuyruklar için Windows Communication Foundation (WCF) desteğini tartışır. WCF, bir taşıma olarak Microsoft Message Queuing (daha önce MSMQ olarak bilinir) kullanarak sıraya alma desteği sağlar ve aşağıdaki senaryoları sağlar:  
@@ -50,7 +50,7 @@ Bu bölümdeki konular, kuyruklar için Windows Communication Foundation (WCF) d
  Zarar iletilerinin nasıl işleneceğini açıklar (alıcı uygulamaya en fazla teslim girişimi sayısını aşmış olan mesajlar).  
   
  [Windows Vista, Windows Server 2003 ve Windows XP'de Kuyruğa Alma Özelliği Arasındaki Farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- Windows Vista, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]arasındaki WCF kuyrukları özelliğindeki farklılıkları özetler.  
+ Windows Vista, Windows Server 2003 ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]arasındaki WCF kuyrukları özelliğindeki farklılıkları özetler.  
   
  [Aktarım Güvenliği Kullanarak İletileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  Sıraya alınan iletileri güvenli hale getirmek için Transport Security 'nin nasıl kullanılacağını açıklar.  

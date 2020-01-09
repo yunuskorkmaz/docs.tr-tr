@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: b96c68c06099db2f396d16772cfaa8aee37390fe
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7071aaf88346ee217226632501ebd6c82cfc1cb8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838019"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346752"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Nasıl yapılır: Windows Communication Foundation Güvenlik Olaylarını Denetleme
 Windows Communication Foundation (WCF), Windows Olay Görüntüleyicisi kullanılarak görüntülenebilen Windows olay günlüğü 'nde güvenlik olaylarını günlüğe kaydetmenize izin verir. Bu konuda, güvenlik olaylarını günlüğe kaydetmeleri için bir uygulamanın nasıl ayarlanacağı açıklanmaktadır. WCF denetimi hakkında daha fazla bilgi için bkz. [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF), Windows Olay Görüntüleyicisi kullanı
      [!code-csharp[AuditingSecurityEvents#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#2)]
      [!code-vb[AuditingSecurityEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#2)]  
   
-     <xref:System.ServiceModel.AuditLogLocation> numaralandırması üç değere sahiptir: `Application`, `Security`veya `Default`. Değer Olay Görüntüleyicisi, güvenlik günlüğü veya uygulama günlüğü ' nde görünür olan günlüklardan birini belirtir. `Default` değerini kullanırsanız, gerçek günlük uygulamanın üzerinde çalıştığı işletim sistemine bağlıdır. Denetim etkinse ve günlük konumu belirtilmemişse, varsayılan olarak güvenlik günlüğüne yazmayı destekleyen platformlar için `Security` günlüğü vardır; Aksi takdirde, `Application` günlüğüne yazılır. Yalnızca [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve Windows Vista, varsayılan olarak güvenlik günlüğüne yazmayı destekler.  
+     <xref:System.ServiceModel.AuditLogLocation> numaralandırması üç değere sahiptir: `Application`, `Security`veya `Default`. Değer Olay Görüntüleyicisi, güvenlik günlüğü veya uygulama günlüğü ' nde görünür olan günlüklardan birini belirtir. `Default` değerini kullanırsanız, gerçek günlük uygulamanın üzerinde çalıştığı işletim sistemine bağlıdır. Denetim etkinse ve günlük konumu belirtilmemişse, varsayılan olarak güvenlik günlüğüne yazmayı destekleyen platformlar için `Security` günlüğü vardır; Aksi takdirde, `Application` günlüğüne yazılır. Yalnızca Windows Server 2003 ve Windows Vista, varsayılan olarak güvenlik günlüğüne yazmayı destekler.  
   
 2. Denetlenecek olay türlerini ayarlayın. Hizmet düzeyi olaylarını veya ileti düzeyi yetkilendirme olaylarını eşzamanlı olarak denetleyebilirsiniz. Bunu yapmak için, aşağıdaki kodda gösterildiği gibi <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> özelliğini veya <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> özelliğini <xref:System.ServiceModel.AuditLevel> sabit listesi değerlerinden birine ayarlayın.  
   
