@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: DataContractSerializer (C#) kullanarak serileştirme'
+title: DataContractSerializer (C#) kullanarak seri hale getirme
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 2b4800e2c6d210d62ab3093b673898a147c1f92d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c75455ce7c7943194ab43ac0150f5b9392f92e16
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253336"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347405"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="ddcba-102">Nasıl yapılır: DataContractSerializer (C#) kullanarak serileştirme</span><span class="sxs-lookup"><span data-stu-id="ddcba-102">How to: Serialize Using DataContractSerializer (C#)</span></span>
-<span data-ttu-id="ddcba-103">Bu konuda, kullanarak <xref:System.Runtime.Serialization.DataContractSerializer>seri hale getirilen ve seri hale getirilen bir örnek gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="ddcba-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="505c2-102">DataContractSerializer (C#) kullanarak seri hale getirme</span><span class="sxs-lookup"><span data-stu-id="505c2-102">How to serialize using DataContractSerializer (C#)</span></span>
+<span data-ttu-id="505c2-103">Bu konuda <xref:System.Runtime.Serialization.DataContractSerializer>kullanarak seri hale getirilen ve serileştiren bir örnek gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="505c2-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ddcba-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="ddcba-104">Example</span></span>  
- <span data-ttu-id="ddcba-105">Aşağıdaki örnek, <xref:System.Xml.Linq.XElement> nesneleri içeren bir dizi nesne oluşturur.</span><span class="sxs-lookup"><span data-stu-id="ddcba-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="ddcba-106">Daha sonra bunları metin dosyalarına serileştirir ve metin dosyalarından serileştirir.</span><span class="sxs-lookup"><span data-stu-id="ddcba-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
+## <a name="example"></a><span data-ttu-id="505c2-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="505c2-104">Example</span></span>  
+ <span data-ttu-id="505c2-105">Aşağıdaki örnek <xref:System.Xml.Linq.XElement> nesneleri içeren bir dizi nesne oluşturur.</span><span class="sxs-lookup"><span data-stu-id="505c2-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="505c2-106">Daha sonra bunları metin dosyalarına serileştirir ve metin dosyalarından serileştirir.</span><span class="sxs-lookup"><span data-stu-id="505c2-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
   
 ```csharp  
 using System;  
@@ -80,7 +80,7 @@ public class XElementNullContainer
 }  
 ```  
   
- <span data-ttu-id="ddcba-107">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="ddcba-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="505c2-107">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="505c2-107">This example produces the following output:</span></span>  
   
 ```output  
 Testing for type: System.Xml.Linq.XElement  
