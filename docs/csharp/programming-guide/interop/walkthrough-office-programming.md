@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: d4a2562324259bda0bab523849449d584736b2ae
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6c27442cb5c0c4172f503c945849e47560c2b33d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423191"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635359"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office Programlama (C# ve Visual Basic)
 
-Visual Studio, C# ve Visual Basic Microsoft Office programlamayı geliştiren özellikler sunar. Yardımcı C# özellikler, adlandırılmış ve isteğe bağlı bağımsız değişkenleri ve `dynamic` türünde dönüş değerlerini içerir. COM programlamada `ref` anahtar sözcüğünü atlayabilir ve dizinli özelliklere erişim elde edebilirsiniz. Visual Basic Özellikler otomatik olarak uygulanan özellikler, Lambda ifadelerinde deyimler ve koleksiyon başlatıcıları içerir.
+Visual Studio, C# ve Visual Basic Microsoft Office programlamayı geliştiren özellikler sunar. Yardımcı C# özellikler, adlandırılmış ve isteğe bağlı bağımsız değişkenleri ve `dynamic`türünde dönüş değerlerini içerir. COM programlamada `ref` anahtar sözcüğünü atlayabilir ve dizinli özelliklere erişim elde edebilirsiniz. Visual Basic Özellikler otomatik olarak uygulanan özellikler, Lambda ifadelerinde deyimler ve koleksiyon başlatıcıları içerir.
 
 Her iki dil de, birincil birlikte çalışma derlemelerini (PIA 'lar) kullanıcının bilgisayarına dağıtmaksızın COM bileşenleriyle etkileşen derlemelerin dağıtımına izin veren tür bilgilerinin gömülmesini sağlar. Daha fazla bilgi için bkz. [Izlenecek yol: yönetilen derlemelerden tür ekleme](../../../standard/assembly/embed-types-visual-studio.md).
 
@@ -32,19 +32,19 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 
 ### <a name="to-set-up-an-excel-add-in-application"></a>Excel eklenti uygulaması ayarlamak için
 
-1. Visual Studio 'Yu başlatın.
+1. Visual Studio’yu çalıştırın.
 
 2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 
 3. **Yüklü şablonlar** bölmesinde, **Visual Basic** veya **Visual C#** ' i genişletin, **Office**' i genişletin ve ardından Office ürününün sürüm yılına tıklayın.
 
-4. **Şablonlar** bölmesinde, **Excel \<version > eklentisi**' ne tıklayın.
+4. **Şablonlar** bölmesinde, **Excel \<sürüm > eklentisi**' ne tıklayın.
 
 5. **.NET Framework 4**veya sonraki bir sürümün **hedef Framework** kutusunda göründüğünden emin olmak için **Şablonlar** bölmesinin en üstüne bakın.
 
 6. İsterseniz, **ad** kutusuna projeniz için bir ad yazın.
 
-7. **Tamam**'a tıklayın.
+7. **Tamam**'ı tıklatın.
 
 8. Yeni proje **Çözüm Gezgini**görüntülenir.
 
@@ -52,9 +52,9 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 
 1. **Çözüm Gezgini**, projenizin adına sağ tıklayın ve ardından **Başvuru Ekle**' ye tıklayın. **Başvuru Ekle** iletişim kutusu görüntülenir.
 
-2. **Derlemeler** sekmesinde, **Microsoft. Office. Interop. Excel**, sürüm `<version>.0.0.0` (Office ürün sürüm numaralarına bir anahtar Için, bkz. [Microsoft sürümleri](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), **bileşen adı** listesinde, ve ardından CTRL tuşunu basılı tutun ve **Microsoft. Office. Interop. Word**, `version <version>.0.0.0` seçin. Derlemeleri görmüyorsanız bunların yüklendiğinden ve görüntülendiklerinden emin olmanız gerekebilir (bkz. [nasıl yapılır: Office birincil birlikte çalışma derlemelerini yükleme](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).
+2. **Derlemeler** sekmesinde **Microsoft. Office. Interop. Excel**, sürüm `<version>.0.0.0` (Office ürün sürüm numaralarına bir anahtar Için, bkz. [Microsoft sürümleri](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), **bileşen adı** listesinde, ve ardından CTRL tuşunu basılı tutarak **Microsoft. Office. Interop. Word**, `version <version>.0.0.0`seçeneğini belirleyin. Derlemeleri görmüyorsanız bunların yüklendiğinden ve görüntülendiklerinden emin olmanız gerekebilir (bkz. [nasıl yapılır: Office birincil birlikte çalışma derlemelerini yükleme](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).
 
-3. **Tamam**'a tıklayın.
+3. **Tamam**'ı tıklatın.
 
 ### <a name="to-add-necessary-imports-statements-or-using-directives"></a>Gerekli Içeri aktarmalar deyimlerini eklemek veya yönergeleri kullanmak için
 
@@ -106,7 +106,7 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 
          Kendinizinkini dizinli Özellikler oluşturamazsınız. Özelliği yalnızca var olan dizinli özelliklerin kullanımını destekler.
 
-         Daha fazla bilgi için bkz. [nasıl yapılır: com birlikte çalışma programlamada dizinli özellikleri kullanma](./how-to-use-indexed-properties-in-com-interop-rogramming.md).
+         Daha fazla bilgi için bkz. [com birlikte çalışma programlamada dizinli özellikleri kullanma](./how-to-use-indexed-properties-in-com-interop-rogramming.md).
 
 2. Sütun genişliklerini içeriğe uyacak şekilde ayarlamak için `DisplayInExcel` sonuna aşağıdaki kodu ekleyin.
 
@@ -114,7 +114,7 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     Bu eklemeler, ' deki başka C#bir özelliği gösterir. Bu, OFFICE gibi com konaklarından döndürülen `Object` değerlerini [dinamik](../../language-reference/builtin-types/reference-types.md)tür olarak kabul ediyor. Bu, derleme [-bağlantı](../../language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği tarafından başvuruluyorsa, **birlikte çalışma türleri ekle** , `True` veya equivalently gibi varsayılan değere ayarlandığında bu otomatik olarak gerçekleşir. Tür `dynamic`, geç bağlamaya izin verir, Visual Basic zaten kullanılabilir ve C# 3,0 ve önceki dil sürümlerinde gerekli olan açık dönüştürmeyi önler.
+     Bu eklemeler, ' deki başka C#bir özelliği gösterir. Bu, OFFICE gibi com konaklarından döndürülen `Object` değerlerini [dinamik](../../language-reference/builtin-types/reference-types.md)tür olarak kabul ediyor. Bu, derleme [-bağlantı](../../language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği tarafından başvuruluyorsa, **birlikte çalışma türleri ekle** , `True`veya equivalently gibi varsayılan değere ayarlandığında bu otomatik olarak gerçekleşir. Tür `dynamic`, geç bağlamaya izin verir, Visual Basic zaten kullanılabilir ve C# 3,0 ve önceki dil sürümlerinde gerekli olan açık dönüştürmeyi önler.
 
      Örneğin, `excelApp.Columns[1]` bir `Object`döndürür ve `AutoFit` bir Excel [Range](<xref:Microsoft.Office.Interop.Excel.Range>) yöntemidir. `dynamic`olmadan, yöntem `AutoFit`çağrılmadan önce `excelApp.Columns[1]` tarafından `Range` örneği olarak döndürülen nesneyi atamalısınız.
 
@@ -144,7 +144,7 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 
 ### <a name="to-run-the-application"></a>Uygulamayı çalıştırmak için
 
-1. Uygulamayı çalıştırmak için F5 tuşuna basın. Excel başlatılır ve `bankAccounts` iki hesaptan bilgileri içeren bir tablo görüntüler. Daha sonra Excel tablosuna bir bağlantı içeren bir Word belgesi görüntülenir.
+1. Uygulamayı çalıştırmak için F5'e basın. Excel başlatılır ve `bankAccounts`iki hesaptan bilgileri içeren bir tablo görüntüler. Daha sonra Excel tablosuna bir bağlantı içeren bir Word belgesi görüntülenir.
 
 ### <a name="to-clean-up-the-completed-project"></a>Tamamlanmış projeyi temizlemek için
 
@@ -154,11 +154,11 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 
 1. Uygulamayı yeniden çalıştırın, ancak **Çözümü Temizle**' yi tıklamayın.
 
-2. **Başlat**' ı seçin. **Microsoft Visual Studio \<version >** bulun ve bir geliştirici komut istemi açın.
+2. **Başlat**' ı seçin. **Microsoft Visual Studio \<sürüm >** bulun ve bir geliştirici komut istemi açın.
 
 3. Visual Studio için Geliştirici Komut İstemi penceresine `ildasm` yazın ve ardından ENTER tuşuna basın. Il DADSM penceresi görüntülenir.
 
-4. Il DAVSM penceresindeki **Dosya** menüsünde **Dosya**  > **Aç**' ı seçin. **Visual Studio \<version >** çift tıklayın ve ardından **Projeler**' e çift tıklayın. Projeniz için klasörü açın ve *Proje adı*. dll 'niz için bin/Debug klasörüne bakın. *Proje adı*. dll ' ye çift tıklayın. Yeni bir pencere, diğer modüller ve derlemelere başvurulara ek olarak projenizin özniteliklerini görüntüler. Ad alanlarının `Microsoft.Office.Interop.Excel` ve `Microsoft.Office.Interop.Word` derlemeye dahil edildiğini unutmayın. Visual Studio 'da varsayılan olarak, derleyici başvurulan bir PIA 'ten sizin için gerekli olan türleri derlemenizin içine aktarır.
+4. Il DAVSM penceresindeki **Dosya** menüsünde **Dosya** > **Aç**' ı seçin. **Visual Studio \<sürüm >** çift tıklayın ve ardından **Projeler**' e çift tıklayın. Projeniz için klasörü açın ve *Proje adı*. dll 'niz için bin/Debug klasörüne bakın. *Proje adı*. dll ' ye çift tıklayın. Yeni bir pencere, diğer modüller ve derlemelere başvurulara ek olarak projenizin özniteliklerini görüntüler. Ad alanlarının `Microsoft.Office.Interop.Excel` ve `Microsoft.Office.Interop.Word` derlemeye dahil edildiğini unutmayın. Visual Studio 'da varsayılan olarak, derleyici başvurulan bir PIA 'ten sizin için gerekli olan türleri derlemenizin içine aktarır.
 
      Daha fazla bilgi için bkz. [nasıl yapılır: derleme Içeriğini görüntüleme](../../../standard/assembly/view-contents.md).
 
@@ -203,7 +203,7 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 - [Tür dinamiği kullanma](../types/using-type-dynamic.md)
 - [Lambda Ifadeleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Lambda Ifadeleri (C#)](../statements-expressions-operators/lambda-expressions.md)
-- [Nasıl yapılır: COM Birlikte Çalışma Programlamada Dizin Oluşturulmuş Özellikleri Kullanma](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [COM birlikte çalışma programlamada dizinli özellikleri kullanma](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [İzlenecek yol: Visual Studio’da Microsoft Office Bütünleştirilmiş Kodlarından Tür Bilgilerini Katıştırma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
 - [İzlenecek yol: Yönetilen Bütünleştirilmiş Kodlardan Türler Katıştırma](../../../standard/assembly/embed-types-visual-studio.md)
 - [İnceleme: Excel için İlk VSTO Eklentinizi Oluşturma](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)

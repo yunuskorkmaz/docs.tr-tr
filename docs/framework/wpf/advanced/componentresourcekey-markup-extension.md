@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 85e6862d59284df1b51bf5ea7fbba786fe0492d7
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ccc4f3154996a4e442a4092833f5c9ed9c8938a
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458960"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559467"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey Biçimlendirme Uzantısı
 Dış derlemelerden yüklenen kaynaklar için anahtarlar tanımlar ve başvurur. Bu, bir derlemede veya bir sınıftaki açık kaynak sözlüğü yerine bir derlemede hedef türü belirtmesini sağlar.  
@@ -47,7 +47,7 @@ Dış derlemelerden yüklenen kaynaklar için anahtarlar tanımlar ve başvurur.
 |||  
 |-|-|  
 |`targetTypeName`|Kaynak derlemesinde tanımlanan ortak ortak dil çalışma zamanı (CLR) türünün adı.|  
-|`targetID`|Kaynak için anahtar. Kaynaklar arandığında, `targetID` kaynağın [X:Key yönergesine](../../xaml-services/x-key-directive.md) benzer.|  
+|`targetID`|Kaynak için anahtar. Kaynaklar arandığında, `targetID` kaynağın [X:Key yönergesine](../../../desktop-wpf/xaml-services/xkey-directive.md) benzer.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Yukarıdaki kullanımlar bölümünde görüldüğü gibi, iki yerde bir {`ComponentResourceKey`} biçimlendirme uzantısı kullanımı bulunur:  
@@ -66,7 +66,7 @@ Dış derlemelerden yüklenen kaynaklar için anahtarlar tanımlar ve başvurur.
   
  Gösterilen Compact sözdizimi, bir işaretleme uzantısının <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> Oluşturucu imzasını ve Konumsal parametre kullanımını temel alır. `targetTypeName` ve `targetID` verilen sıra önemlidir. Ayrıntılı sözdizimi, <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> parametresiz oluşturucuya dayanır ve sonra <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> ve <xref:System.Windows.ComponentResourceKey.ResourceId%2A> bir nesne öğesindeki doğru bir öznitelik sözdizimine benzer şekilde ayarlar. Ayrıntılı sözdiziminde, özelliklerin ayarlandığı sıra önemli değildir. Bu iki alternatifin (Compact ve verbose) ilişkisi ve mekanizmaları, konu [Biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)'de daha ayrıntılı olarak açıklanmıştır.  
   
- Teknik olarak, `targetID` değeri herhangi bir nesne olabilir, bir dize olması gerekmez. Ancak WPF 'nin en yaygın kullanımları, `targetID` değerini dizeler olan formlarla ve bu tür dizelerin [XamlName dilbilgisinde](../../xaml-services/xamlname-grammar.md)geçerli olduğu şekilde hizalanacaktır.  
+ Teknik olarak, `targetID` değeri herhangi bir nesne olabilir, bir dize olması gerekmez. Ancak WPF 'nin en yaygın kullanımları, `targetID` değerini dizeler olan formlarla ve bu tür dizelerin [XamlName dilbilgisinde](../../../desktop-wpf/xaml-services/xamlname-grammar.md)geçerli olduğu şekilde hizalanacaktır.  
   
  `ComponentResourceKey`, nesne öğesi sözdiziminde kullanılabilir. Bu durumda, uzantıyı doğru şekilde başlatmak için hem <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> hem de <xref:System.Windows.ComponentResourceKey.ResourceId%2A> özelliklerinin değerinin belirtilmesi gerekir.  
   

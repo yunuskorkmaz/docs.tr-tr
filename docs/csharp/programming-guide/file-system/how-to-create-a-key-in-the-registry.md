@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Kayıt Defterinde Anahtar Oluşturma (Visual C#)'
+title: Kayıt defteri- C# programlama kılavuzunda anahtar oluşturma
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: e67a80fa8f9a088f0eefe2dd2eeaa983e0a5a2c3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 16974db950a3a460416cfb917147439707e1d007
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590044"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635450"
 ---
-# <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Nasıl yapılır: Kayıt Defterinde Anahtar Oluşturma (Visual C#)
+# <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>Kayıt defterinde anahtar oluşturma (C# Programlama Kılavuzu)
 Bu örnek, "ad" ve "Isabella" değer çiftini geçerli kullanıcının kayıt defterine, "adlar" anahtarı altında ekler.  
   
 ## <a name="example"></a>Örnek  
@@ -25,13 +25,13 @@ key.SetValue("Name", "Isabella");
 key.Close();  
 ```  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
   
-- Kodu kopyalayın ve konsol uygulamasının `Main` yöntemine yapıştırın.  
+- Kodu kopyalayın ve bir konsol uygulamasının `Main` yöntemine yapıştırın.  
   
-- Parametresini, `Names` doğrudan kayıt defterinin HKEY_CURRENT_USER düğümünün altında bulunan bir anahtarın adıyla değiştirin.  
+- `Names` parametresini, doğrudan kayıt defterinin HKEY_CURRENT_USER düğümünün altında bulunan bir anahtarın adıyla değiştirin.  
   
-- `Name` Parametresini doğrudan Names düğümünün altında bulunan bir değerin adıyla değiştirin.  
+- `Name` parametresini doğrudan adlar düğümünün altında bulunan bir değerin adıyla değiştirin.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Anahtarınız için uygun bir konum bulmak üzere kayıt defteri yapısını inceleyin. Örneğin, geçerli kullanıcının yazılım anahtarını açmak ve şirketinizin adıyla bir anahtar oluşturmak isteyebilirsiniz. Ardından kayıt defteri değerlerini şirketinizin anahtarına ekleyin.  
@@ -49,7 +49,7 @@ key.Close();
 - Kayıt defteri anahtarı salt okunurdur.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- `Microsoft.Win32.Registry.CurrentUser` Yerel`Microsoft.Win32.Registry.LocalMachine`bilgisayar yerine, Kullanıcı klasörüne veri yazmak daha güvenlidir —.  
+ Kullanıcı klasörüne veri yazmak daha güvenlidir — yerel bilgisayar yerine `Microsoft.Win32.Registry.CurrentUser` (`Microsoft.Win32.Registry.LocalMachine`.  
   
  Bir kayıt defteri değeri oluşturduğunuzda, bu değer zaten varsa ne yapılacağını belirlemeniz gerekir. Belki de kötü amaçlı olan bir işlem, değeri zaten oluşturmuş ve ona erişime sahip olabilir. Verileri kayıt defteri değerine yerleştirdiğinizde, veriler diğer işlem tarafından kullanılabilir. Bunu engellemek için kullanın.`Overload:Microsoft.Win32.RegistryKey.GetValue` yöntemidir. Anahtar zaten mevcut değilse null değerini döndürür.  
   

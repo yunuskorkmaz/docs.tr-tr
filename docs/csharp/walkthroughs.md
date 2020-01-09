@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 11a58ddf246c77cf4372e940b184413054b10778
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204598"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634930"
 ---
 # <a name="c-walkthroughs"></a>C# İzlenecek Yolları
 İzlenecek yollar, yaygın senaryolar için adım adım yönergeler sunarak ürün veya belirli bir özellik alanı hakkında öğrenmeye başlamak için iyi bir yer sunar.  
@@ -48,7 +48,7 @@ ms.locfileid: "74204598"
  Bir `TabControl`sekme ekleme veya kaldırma, üst öğesine denetim yerleştirme ve bir `SplitContainer` denetiminin yönünü değiştirme gibi yaygın olarak gerçekleştirilen görevlerden bazılarını gösterir.  
   
  [Sorgu yazma C# (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu C# ifadeleri yazmak için kullanılan dil özelliklerini gösterir.  
+ LINQ sorgu C# ifadeleri yazmak için kullanılan dil özelliklerini gösterir.  
   
  [Verileri düzenleme (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  Bir veritabanındaki verileri eklemek, değiştirmek ve silmek için bir [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] senaryosunu açıklar.  

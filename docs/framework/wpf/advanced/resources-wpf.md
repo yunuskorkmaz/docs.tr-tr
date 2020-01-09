@@ -8,12 +8,12 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: 8f3ab7a11757ba1936aae6e63ace28c4b336292b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 50e21f2d23054e58079f97466aea5d2d7d9f659e
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458700"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559735"
 ---
 # <a name="resources-wpf"></a>Kaynaklar (WPF)
 Kaynak, uygulamanızdaki farklı yerlerde yeniden kullanılabilen bir nesnedir. WPF farklı kaynak türlerini destekler. Bu kaynaklar birincil olarak iki kaynak türüdür: XAML Kaynakları ve kaynak veri dosyaları. XAML kaynaklarına örnek olarak fırçalar ve stiller verilebilir. Kaynak veri dosyaları, bir uygulamanın ihtiyacı olan yürütülebilir olmayan veri dosyalarıdır.  
@@ -30,7 +30,7 @@ Kaynak, uygulamanızdaki farklı yerlerde yeniden kullanılabilen bir nesnedir. 
   
  [DynamicResource İşaretleme Uzantısı](dynamicresource-markup-extension.md)  
   
- [x:Key Yönergesi](../../xaml-services/x-key-directive.md)  
+ [x:Key Yönergesi](../../../desktop-wpf/xaml-services/xkey-directive.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [WPF'de XAML](xaml-in-wpf.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1d6430ba5969d8a05db47baf9521d2409e596c23
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 769afe4d301a7b0fafd26018255f98b6faa29887
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740857"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559441"
 ---
 # <a name="globalization-for-wpf"></a>WPF için Genelleştirme
 Bu konu başlığı altında, küresel pazara yönelik [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar yazarken bilmeniz gereken sorunlar açıklanır. Genelleştirme programlama öğeleri <xref:System.Globalization> ad alanında .NET içinde tanımlanmıştır.
@@ -36,7 +36,7 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>Şifreleme
+### <a name="encoding"></a>Encoding
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tarafından desteklenen kodlama ASCII, Unicode UTF-16 ve UTF-8 ' dir. Encoding deyimleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] belgenin başlangıcında bulunur. Kodlama özniteliği yoksa ve hiçbir bayt sırası yoksa, ayrıştırıcı varsayılan olarak UTF-8 ' i belirler. UTF-8 ve UTF-16, tercih edilen kodlamalardır. UTF-7 desteklenmez. Aşağıdaki örnekte, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyasında UTF-8 kodlamasının nasıl belirtileceği gösterilmektedir.
 
 ```xaml
@@ -45,7 +45,7 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>Language özniteliği
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bir öğenin Language özniteliğini temsil etmek için [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) kullanır.  <xref:System.Globalization.CultureInfo> sınıfından yararlanmak için dil özniteliği değeri, <xref:System.Globalization.CultureInfo>tarafından önceden tanımlanan kültür adlarından biri olmalıdır. [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) , öğe ağacında (bağımlılık özelliği devralımı nedeniyle DEĞIL, XML kuralları tarafından) devralınabilir ve açıkça atanmamışsa boş bir dize olur.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bir öğenin Language özniteliğini temsil etmek için [XML: lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) kullanır.  <xref:System.Globalization.CultureInfo> sınıfından yararlanmak için dil özniteliği değeri, <xref:System.Globalization.CultureInfo>tarafından önceden tanımlanan kültür adlarından biri olmalıdır. [XML: lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) , öğe ağacında (bağımlılık özelliği devralımı nedeniyle DEĞIL, XML kuralları tarafından) devralınabilir ve açıkça atanmamışsa boş bir dize olur.
 
  Language özniteliği, dialarcts 'yi belirtmek için çok yararlıdır. Örneğin, Fransızca Fransa, Quebec, Belçika ve Isviçre 'de farklı yazım, sözlük ve telaffuz vardır. Ayrıca Çince, Japonca ve Korece kod noktalarını Unicode olarak paylaşır, ancak İdeografik biçimleri farklıdır ve tamamen farklı yazı tiplerini kullanır.
 
@@ -115,13 +115,13 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
 
  Şu betikler Şu anda desteklenmemektedir:
 
-- Khmer
+- Khmer dili
 
 - Kore dili Eski Hangul
 
 - Myanmar
 
-- Sinhali
+- Sinhali dili
 
  Tüm yazma sistemi motorları OpenType yazı tiplerini destekler. OpenType yazı tipleri, yazı tipi oluşturucularının daha iyi uluslararası ve yüksek kaliteli tipografik yazı tiplerini tasarlamasını sağlayan OpenType Düzen tablolarını içerebilir. OpenType yazı tipi düzen tabloları, metin düzenini geliştirmek için metin işleme uygulamalarını etkinleştiren glif değiştirmeleri, glif konumlandırma, gerekçe ve temel konumlandırma hakkında bilgiler içerir.
 

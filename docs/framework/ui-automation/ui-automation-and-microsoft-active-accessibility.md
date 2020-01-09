@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 96998b2e625c7e395dd61d6905bc437ef1ca697d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f9fc7e2e1a6d5ee26f04b239723c6b7d4283dbce
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436642"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632330"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI Otomasyonu ve Microsoft Active Accessibility
 > [!NOTE]
@@ -28,7 +28,7 @@ Etkin Erişilebilirlik <, çift arabirimler desteğiyle bileşen nesne modeli (C
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Windows Presentation Foundation desteği  
- Windows Presentation Foundation (WPF), Kullanıcı arabirimleri oluşturmak için yeni bir modeldir. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] öğeler, etkin erişilebilirlik için yerel destek içermez; Ancak, Etkin Erişilebilirlik istemcileri için köprü oluşturma desteğini içeren [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]destekler. Yalnızca [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] için özel olarak yazılan istemciler, metin için zengin destek gibi [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]erişilebilirlik özelliklerinden tam olarak yararlanabilmenizi sağlayabilir.  
+ Windows Presentation Foundation (WPF), Kullanıcı arabirimleri oluşturmak için yeni bir modeldir. WPF öğeleri, etkin erişilebilirlik için yerel destek içermez; Ancak, Etkin Erişilebilirlik istemcileri için köprü oluşturma desteğini içeren [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]destekler. Yalnızca [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] için özel olarak yazılan istemciler, zengin metin desteği gibi WPF 'nin erişilebilirlik özelliklerinden tam olarak yararlanabilmenizi sağlayabilir.  
   
 <a name="Servers_and_Clients_compare"></a>   
 ## <a name="servers-and-clients"></a>Sunucular ve Istemciler  
@@ -73,14 +73,14 @@ Etkin Erişilebilirlik <, çift arabirimler desteğiyle bileşen nesne modeli (C
 |ROLE_SYSTEM_PUSHBUTTON|Düğme|  
 |ROLE_SYSTEM_CLIENT|Takvim|  
 |ROLE_SYSTEM_CHECKBUTTON|Onay kutusu|  
-|ROLE_SYSTEM_COMBOBOX|Birleşik giriş kutusu|  
+|ROLE_SYSTEM_COMBOBOX|Açılan kutu|  
 |ROLE_SYSTEM_CLIENT|Özel|  
 |ROLE_SYSTEM_LIST|Veri kılavuzu|  
 |ROLE_SYSTEM_LISTITEM|Veri öğesi|  
 |ROLE_SYSTEM_DOCUMENT|Belge|  
 |ROLE_SYSTEM_TEXT|Düzenle|  
 |ROLE_SYSTEM_GROUPING|Grup|  
-|ROLE_SYSTEM_LIST|Üst bilgi|  
+|ROLE_SYSTEM_LIST|Üstbilgi|  
 |ROLE_SYSTEM_COLUMNHEADER|Üstbilgi öğesi|  
 |ROLE_SYSTEM_LINK|Köprü|  
 |ROLE_SYSTEM_GRAPHIC|Görüntü|  
@@ -139,9 +139,9 @@ Etkin Erişilebilirlik <, çift arabirimler desteğiyle bileşen nesne modeli (C
   
 |Etkin Erişilebilirlik durumu|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliği|Tetikleyiciler durum değişikliği mi?|  
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------|  
-|STATE_SYSTEM_CHECKED|Onay kutusu için <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Radyo düğmesi için <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|E|  
-|STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|E|  
-|STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded> veya <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|E|  
+|STATE_SYSTEM_CHECKED|Onay kutusu için <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Radyo düğmesi için <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|Y|  
+|STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|Y|  
+|STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded> veya <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|Y|  
 |STATE_SYSTEM_FOCUSABLE|<xref:System.Windows.Automation.AutomationElement.IsKeyboardFocusableProperty>|N|  
 |STATE_SYSTEM_FOCUSED|<xref:System.Windows.Automation.AutomationElement.HasKeyboardFocusProperty>|N|  
 |STATE_SYSTEM_HASPOPUP|menü öğeleri için <xref:System.Windows.Automation.ExpandCollapsePattern>|N|  
@@ -156,7 +156,7 @@ Etkin Erişilebilirlik <, çift arabirimler desteğiyle bileşen nesne modeli (C
 |STATE_SYSTEM_SELECTABLE|<xref:System.Windows.Automation.SelectionItemPattern> destekleniyor|N|  
 |STATE_SYSTEM_SELECTED|<xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|N|  
 |STATE_SYSTEM_SIZEABLE|<xref:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize%2A>|N|  
-|STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|E|  
+|STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|Y|  
   
  Aşağıdaki durumlar, çoğu Etkin Erişilebilirlik denetimi sunucusu tarafından uygulanmadı veya [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]eşdeğer değildir.  
   

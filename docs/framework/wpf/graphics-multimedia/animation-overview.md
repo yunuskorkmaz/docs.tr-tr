@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 870fc1d1f02dca7d4488a27385fcfeaec8098ced
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039181"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559722"
 ---
 # <a name="animation-overview"></a>Animasyona Genel bakış
 
@@ -292,7 +292,7 @@ Bir <xref:System.Windows.FrameworkElement> ad atamak <xref:System.Windows.Freeza
 
 - Bir animasyon hedefi <xref:System.Windows.FrameworkElement> yapmak için, <xref:System.Windows.FrameworkElement.Name%2A> özelliğini ayarlayarak buna bir ad verirsiniz. Kod içinde, öğe adını ait olduğu sayfayla birlikte kaydetmek için <xref:System.Windows.FrameworkElement.RegisterName%2A> yöntemini de kullanmanız gerekir.
 
-- <xref:System.Windows.Freezable> nesnesini [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]animasyon hedefi yapmak için, [X:Name yönergesini](../../xaml-services/x-name-directive.md) bir ad atamak için kullanırsınız. Kodda, nesne ait olduğu sayfaya kaydetmek için <xref:System.Windows.FrameworkElement.RegisterName%2A> yöntemini kullanırsınız.
+- <xref:System.Windows.Freezable> nesnesini [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]animasyon hedefi yapmak için, [X:Name yönergesini](../../../desktop-wpf/xaml-services/xname-directive.md) bir ad atamak için kullanırsınız. Kodda, nesne ait olduğu sayfaya kaydetmek için <xref:System.Windows.FrameworkElement.RegisterName%2A> yöntemini kullanırsınız.
 
 Aşağıdaki bölümler, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve koddaki bir öğe adlandırmayla ilgili bir örnek sağlar. Adlandırma ve hedefleme hakkında daha ayrıntılı bilgi için bkz. görsel taslaklara [genel bakış](storyboards-overview.md).
 

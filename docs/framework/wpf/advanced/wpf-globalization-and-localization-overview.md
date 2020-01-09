@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: b8777e1402bef1708136a5f81a641beb8c761905
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: c2b78b990969fb5bc9814ebda8ffcf38efa458b1
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740701"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559930"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
 
@@ -42,7 +42,7 @@ Bu bölümün sağladığı Kullanıcı arabirimi tasarımını ve Yerelleştirm
 
 - Kırpılmasını önlemek için <xref:System.Windows.Controls.TextBlock> <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> etkinleştirin.
 
-- `xml:lang` özniteliğini ayarlayın. Bu öznitelik, belirli bir öğenin ve alt öğelerinin kültürünü açıklar. Bu özelliğin değeri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]içindeki çeşitli özelliklerin davranışını değiştirir. Örneğin, heceleme, yazım denetimi, sayı değiştirme, karmaşık betik şekillendirme ve yazı tipi geri dönüş davranışını değiştirir. [Xaml 'de XML: lang işlemeyi](../../xaml-services/xml-lang-handling-in-xaml.md)ayarlama hakkında daha fazla bilgi için bkz. [WPF için Genelleştirme](globalization-for-wpf.md) .
+- `xml:lang` özniteliğini ayarlayın. Bu öznitelik, belirli bir öğenin ve alt öğelerinin kültürünü açıklar. Bu özelliğin değeri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]içindeki çeşitli özelliklerin davranışını değiştirir. Örneğin, heceleme, yazım denetimi, sayı değiştirme, karmaşık betik şekillendirme ve yazı tipi geri dönüş davranışını değiştirir. [Xaml 'de XML: lang işlemeyi](../../../desktop-wpf/xaml-services/xml-language-handling.md)ayarlama hakkında daha fazla bilgi için bkz. [WPF için Genelleştirme](globalization-for-wpf.md) .
 
 - Farklı diller için kullanılan yazı tiplerinin daha iyi denetimini elde etmek için özelleştirilmiş bir bileşik yazı tipi oluşturun. Varsayılan olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows\Fonts dizininizde GlobalUserInterface. Composite yazı tipini kullanır.
 
@@ -148,7 +148,7 @@ Bunlar, [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]gelişt
 
 `xml:lang="en-US"`
 
-[Xaml 'de XML: lang işleme](../../xaml-services/xml-lang-handling-in-xaml.md) [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]kök öğesine yerleştirilmiş olduğunu fark edin. Bu özellik, belirli bir öğenin ve alt öğelerinin kültürünü açıklar. Bu değer, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çeşitli özellikler tarafından kullanılır ve yerelleştirme sırasında uygun şekilde değiştirilmelidir. Bu değer, heceleme ve yazım denetimi kelimeleri için kullanılacak dil sözlüğünü değiştirir. Ayrıca, basamakların görüntülenmesini ve yazı tipi geri dönüş sisteminin hangi yazı tipinin kullanılacağını nasıl seçeceğine de etkileri vardır. Son olarak, özellik sayıların görüntülenme şeklini etkiler ve karmaşık betiklerdeki metinlerin yazıldığı şekilde şekillendirilir. Varsayılan değer "en-US" dir.
+[Xaml 'de XML: lang işleme](../../../desktop-wpf/xaml-services/xml-language-handling.md) [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]kök öğesine yerleştirilmiş olduğunu fark edin. Bu özellik, belirli bir öğenin ve alt öğelerinin kültürünü açıklar. Bu değer, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çeşitli özellikler tarafından kullanılır ve yerelleştirme sırasında uygun şekilde değiştirilmelidir. Bu değer, heceleme ve yazım denetimi kelimeleri için kullanılacak dil sözlüğünü değiştirir. Ayrıca, basamakların görüntülenmesini ve yazı tipi geri dönüş sisteminin hangi yazı tipinin kullanılacağını nasıl seçeceğine de etkileri vardır. Son olarak, özellik sayıların görüntülenme şeklini etkiler ve karmaşık betiklerdeki metinlerin yazıldığı şekilde şekillendirilir. Varsayılan değer "en-US" dir.
 
 **Uydu kaynak derlemesi oluşturma**
 
@@ -182,10 +182,10 @@ Bu dosyayı düzenlemek için Unicode 'U destekleyen en sevdiğiniz CSV düzenle
 |-|-|-|
 |Button_1: System. Windows. Controls. Button. $Content|Düğme|Tamam|
 |Button_2: System. Windows. Controls. Button. $Content|Düğme|İptal|
-|Button_3: System. Windows. Controls. Button. $Content|Düğme|Gözatmaya...|
+|Button_3: System. Windows. Controls. Button. $Content|Düğme|Gözat...|
 |ComboBox_1: System. Windows. Controls. ComboBox. $Content|ComboBox||
-|TextBlock_1: System. Windows. Controls. TextBlock. $Content|Metin|Bir program, klasör, belge veya Internet kaynağı adı yazın ve Windows bunu sizin için açar.|
-|TextBlock_2: System. Windows. Controls. TextBlock. $Content|Metin|Açın|
+|TextBlock_1: System. Windows. Controls. TextBlock. $Content|Metin|Bir program, klasör, belge veya İnternet kaynağının adını girdiğinizde Windows tarafından açılır.|
+|TextBlock_2: System. Windows. Controls. TextBlock. $Content|Metin|Açık:|
 |Window_1: System. Windows. Window. title|Başlık|Çalıştır|
 
 Uygulamayı Almanca olarak yerelleştirirken aşağıdaki Çeviriler gereklidir:
@@ -247,11 +247,11 @@ Microsoft Suudi Arabistan Web sitesinin bu şekilde sahte olması, RightToLeft d
 
 Kök <xref:System.Windows.FrameworkElement.FlowDirection%2A> değiştirildiğinde arka plan gradyan fırçaları doğru şekilde çevrildiğini de gözlemleyin:
 
-**FlowDirection = "Solttoright"**
+**FlowDirection="LeftToRight"**
 
 ![Soldan sağa gradyan akışını gösteren ekran görüntüsü.](./media/wpf-globalization-and-localization-overview/gradient-flow-left-right.png)
 
-**FlowDirection = "RightToLeft"**
+**FlowDirection="RightToLeft"**
 
 ![Sağdan sola gradyan akışını gösteren ekran görüntüsü.](./media/wpf-globalization-and-localization-overview/gradient-flow-right-left.png)
 
@@ -265,7 +265,7 @@ Giriş sayfası. xaml 'ye göz atın, en üstteki <xref:System.Windows.Controls.
 
 [!code-xaml[GlobalizationHomepage#LocalizationComment](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcomment)]
 
-Bu yorum TextBlock_1's içeriğiyle ilişkili olur ve LocBaml aracı söz konusu olduğunda (bkz. [bir uygulamayı yerelleştirin](how-to-localize-an-application.md)), output. csv dosyasındaki TextBlock_1 satırının 6. sütununda görülebilir:
+Bu yorum, TextBlock_1 içeriğiyle ve LocBaml aracı durumunda (bkz. [bir uygulamayı yerelleştirin](how-to-localize-an-application.md)) ilişkili hale gelir. Bu, output. csv dosyasındaki TextBlock_1 satırının 6 sütununda görülebilir:
 
 |Kaynak anahtarı|Kategori|Ama|Düzenlenerek|Yorum|Değer|
 |-|-|-|-|-|-|

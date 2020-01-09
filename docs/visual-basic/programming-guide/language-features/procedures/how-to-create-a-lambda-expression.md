@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: bb0bdb3c10a7df2ca954fbdb9382a25bf805068d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1c65841e4c124252cfa41bcd4d0c305a426687ee
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349751"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632356"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Nasıl yapılır: Lambda İfadesi Oluşturma (Visual Basic)
 *Lambda ifadesi* , adı olmayan bir işlev veya alt yordam. Bir lambda ifadesi, bir temsilci türünün geçerli olduğu her yerde kullanılabilir.  
@@ -100,7 +100,7 @@ ms.locfileid: "74349751"
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
   
- Önceki örnek, [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sözdiziminde yazılan aşağıdaki koda eşdeğerdir:  
+ Önceki örnek, dil ile tümleşik sorgu (LINQ) sözdiziminde yazılan aşağıdaki koda eşdeğerdir:  
   
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   

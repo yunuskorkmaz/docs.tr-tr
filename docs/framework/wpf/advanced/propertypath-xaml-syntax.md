@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 17c8982a66960626a5d049fa2da90f5f2d995d14
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740787"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559774"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML Sözdizimi
 
@@ -192,7 +192,7 @@ Zaten dondurulmuş olan bir <xref:System.Windows.Freezable> hareketlendirmek iç
 
 `propertyName2`, `propertyName`değeri olan nesnede bulunan Dependency özelliğinin adı olmalıdır. Diğer bir deyişle, `propertyName2` `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>tür üzerinde bir bağımlılık özelliği olarak bulunmalıdır.
 
-Uygulanan stiller ve şablonlar nedeniyle animasyonların dolaylı olarak hedeflenmesi gerekir. Bir animasyonu hedeflemek için, hedef nesnede bir <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> gerekir ve bu ad [x:Name](../../xaml-services/x-name-directive.md) veya <xref:System.Windows.FrameworkElement.Name%2A>tarafından oluşturulur. Şablon ve stil öğelerinin adları da olabilir, ancak bu adlar yalnızca stilin ve şablonun namescope içinde geçerlidir. (Şablonlar ve stiller, uygulama biçimlendirmesi ile ad kapsamları 'yi paylaşıyorsa, adlar benzersiz olamaz. Stiller ve şablonlar, örnekler arasında tam olarak paylaşılır ve yinelenen adları yeniden işlenir.) Bu nedenle, hareketlendirmek isteyebileceğiniz bir öğenin tek tek özellikleri bir stil veya şablondan geldiyse, bir stil şablonundan olmayan adlandırılmış bir öğe örneğiyle başlamanız ve sonra özelliğe ulaşmak için stil veya şablon görsel ağacını hedeflemek gerekir animasyon uygulamak istiyorsunuz.
+Uygulanan stiller ve şablonlar nedeniyle animasyonların dolaylı olarak hedeflenmesi gerekir. Bir animasyonu hedeflemek için, hedef nesnede bir <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> gerekir ve bu ad [x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) veya <xref:System.Windows.FrameworkElement.Name%2A>tarafından oluşturulur. Şablon ve stil öğelerinin adları da olabilir, ancak bu adlar yalnızca stilin ve şablonun namescope içinde geçerlidir. (Şablonlar ve stiller, uygulama biçimlendirmesi ile ad kapsamları 'yi paylaşıyorsa, adlar benzersiz olamaz. Stiller ve şablonlar, örnekler arasında tam olarak paylaşılır ve yinelenen adları yeniden işlenir.) Bu nedenle, hareketlendirmek isteyebileceğiniz bir öğenin tek tek özellikleri bir stil veya şablondan geldiyse, bir stil şablonundan olmayan adlandırılmış bir öğe örneğiyle başlamanız ve sonra özelliğe ulaşmak için stil veya şablon görsel ağacını hedeflemek gerekir animasyon uygulamak istiyorsunuz.
 
 Örneğin, bir <xref:System.Windows.Controls.Panel> <xref:System.Windows.Controls.Panel.Background%2A> özelliği, bir tema şablonundan gelen tamamen bir <xref:System.Windows.Media.Brush> (aslında bir <xref:System.Windows.Media.SolidColorBrush>). Bir <xref:System.Windows.Media.Brush> tamamen hareketlendirmek için, bir BrushAnimation olması gerekir (büyük olasılıkla her <xref:System.Windows.Media.Brush> türü için bir tane) ve böyle bir tür yoktur. Fırçaya animasyon uygulamak için, bunun yerine belirli bir <xref:System.Windows.Media.Brush> türünün özelliklerine animasyon uygulayabilirsiniz. Bir <xref:System.Windows.Media.Animation.ColorAnimation> uygulamak için <xref:System.Windows.Media.SolidColorBrush> <xref:System.Windows.Media.SolidColorBrush.Color%2A> ' den almanız gerekir. Bu örnek için özellik yolu `Background.Color`olacaktır.
 

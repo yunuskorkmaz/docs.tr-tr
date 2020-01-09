@@ -7,15 +7,15 @@ helpviewer_keywords:
 - localization [WPF], features
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
-ms.openlocfilehash: a2ab04f40a3299bc0cd5a17c0f31e4f4ee0433ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98368a54fad095337038236d7bfdc2123edb6be2
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010299"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559415"
 ---
 # <a name="globalization-and-localization-how-to-topics"></a>Genelleştirme ve Yerelleştirme ile İlgili Nasıl Yapılır Konuları
-Bu bölümdeki konular, dünya çapında kullanılmaya hazır uygulamalar geliştirmek nasıl açıklar.  
+Bu bölümdeki konularda, dünya çapında hazırlanma uygulamalarının nasıl geliştirileceği açıklanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Bir Uygulamayı Yerelleştirme](how-to-localize-an-application.md)  
@@ -31,6 +31,6 @@ Bu bölümdeki konular, dünya çapında kullanılmaya hazır uygulamalar geliş
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [XAML'de xml:lang İşleme](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [XAML'de xml:lang İşleme](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler

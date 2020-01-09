@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 35754d49bf223e7afcdec32e8b24cfb749f48aa6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25f22d5e8caacc69643f6d79e109ebaa94159d80
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446856"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632325"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama
 
@@ -20,7 +20,7 @@ ms.locfileid: "74446856"
 
 Bu bölümde, özel bir denetim için sunucu tarafı UI Otomasyon sağlayıcısının nasıl uygulanacağı açıklanmaktadır.
 
-Windows Presentation Foundation (WPF) öğeleri ve[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] olmayan öğeler ([!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]için tasarlanan gibi) için uygulama temelde farklıdır. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] öğeleri <xref:System.Windows.Automation.Peers.AutomationPeer>türetilen bir sınıf aracılığıyla [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] desteği sağlar. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] olmayan öğeler, sağlayıcı arabirimlerinin uygulamaları aracılığıyla destek sağlar.
+Windows Presentation Foundation (WPF) öğeleri ve WPF olmayan öğeler ([!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]için tasarlanan gibi) için uygulama temelde farklıdır. WPF öğeleri, <xref:System.Windows.Automation.Peers.AutomationPeer>türetilmiş bir sınıf aracılığıyla [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] için destek sağlar. WPF olmayan öğeler, sağlayıcı arabirimlerinin uygulamaları aracılığıyla destek sağlar.
 
 <a name="Security_Considerations"></a>
 
@@ -40,7 +40,7 @@ Bu konu hakkında daha fazla bilgi için lütfen [WPF özel denetiminin UI Otoma
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>WPF olmayan öğelere göre sağlayıcı uygulama
 
-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] çerçevesinin parçası olmayan, ancak yönetilen kodda yazılan özel denetimler (çoğunlukla bunlar [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] denetimleridir), arabirimleri uygulayarak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] için destek sağlar. Her öğe, sonraki bölümde ilk tabloda listelenen arabirimlerden en az birini uygulamalıdır. Ayrıca, öğe bir veya daha fazla denetim desenini destekliyorsa, her denetim deseni için uygun arabirimi uygulamalıdır.
+WPF çerçevesinin parçası olmayan, ancak yönetilen kodda yazılan özel denetimler (çoğunlukla bunlar [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] denetimlerdir), arabirimleri uygulayarak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] için destek sağlar. Her öğe, sonraki bölümde ilk tabloda listelenen arabirimlerden en az birini uygulamalıdır. Ayrıca, öğe bir veya daha fazla denetim desenini destekliyorsa, her denetim deseni için uygun arabirimi uygulamalıdır.
 
 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcısı projenizin aşağıdaki derlemelere başvurması gerekir:
 
@@ -77,7 +77,7 @@ Aşağıdaki arabirimler ek işlevsellik sağlar, ancak uygulanması gerekmez.
 
 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ile iletişim kurmak için denetiminizin aşağıdaki ana işlevleri uygulaması gerekir:
 
-|İşlev|Uygulama|
+|İşlevi|Uygulama|
 |-------------------|--------------------|
 |Sağlayıcıyı [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] için kullanıma sunun|Denetim penceresine gönderilen bir WM_GETOBJECT iletisine yanıt olarak, <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> uygulayan nesneyi (veya türetilmiş bir arabirimi) döndürün. Parçalar için bu, parça kökünün sağlayıcısı olmalıdır.|
 |Özellik değerlerini sağla|Değerleri sağlamak veya geçersiz kılmak için <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A> uygulayın.|

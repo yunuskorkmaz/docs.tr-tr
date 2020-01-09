@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-ms.openlocfilehash: b15e2c0bac5610c6f1b10a640254236987c0bcf5
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: aa7f69e8871295006c3c5a9c7d0a70d0ecbd6d7e
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458727"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559826"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource Biçimlendirme Uzantısı
-Önceden tanımlanmış bir kaynağa başvuru arayarak herhangi bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Özellik özniteliği için bir değer sağlar. Bu kaynağın arama davranışı, daha önce geçerli [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfasının ve diğer uygulama kaynaklarının biçimlendirmesine göre yüklenen kaynakları arayan yükleme zamanı aramasına benzer ve bu kaynak değerini özellik olarak oluşturur çalışma zamanı nesnelerindeki değer.  
+Önceden tanımlanmış bir kaynağa başvuru arayarak herhangi bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Özellik özniteliği için bir değer sağlar. Bu kaynağın arama davranışı, daha önce geçerli [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfasının ve diğer uygulama kaynaklarının biçimlendirmesine göre yüklenen kaynakları ve çalışma zamanı nesnelerinde Özellik değeri olarak bu kaynak değerini oluşturacak olan yükleme zamanı aramasına benzer.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -38,16 +38,16 @@ ms.locfileid: "73458727"
   
 |||  
 |-|-|  
-|`key`|İstenen kaynak için anahtar. Bu anahtar başlangıçta [X:Key yönergesi](../../xaml-services/x-key-directive.md) tarafından, bir kaynak biçimlendirme içinde oluşturulduysa veya kaynak kodda oluşturulduysa <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> çağrılırken `key` parametresi olarak sağlanmışsa.|  
+|`key`|İstenen kaynak için anahtar. Bu anahtar başlangıçta [X:Key yönergesi](../../../desktop-wpf/xaml-services/xkey-directive.md) tarafından, bir kaynak biçimlendirme içinde oluşturulduysa veya kaynak kodda oluşturulduysa <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> çağrılırken `key` parametresi olarak sağlanmışsa.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!IMPORTANT]
 > `StaticResource`, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyasında sözcüksel olarak tanımlanmış bir kaynağa ileri bir başvuru yapmayı denememelidir. Bunun denenmemesi desteklenmez, ancak böyle bir başvuru başarısız olmasa bile, bir <xref:System.Windows.ResourceDictionary> temsil eden iç karma tabloları arandığı zaman, ileri başvurunun denenmesine yönelik bir yükleme süresi performans cezası olur. En iyi sonuçları elde etmek için, kaynak sözlüklerinizin, ileri başvuruların önlenebilir şekilde ayarlanmasını sağlayabilirsiniz. İleri başvuruyu önlememeniz durumunda, bunun yerine [DynamicResource Biçimlendirme Uzantısı](dynamicresource-markup-extension.md) kullanın.  
   
- Belirtilen <xref:System.Windows.StaticResourceExtension.ResourceKey%2A>, sayfa, uygulama, kullanılabilir denetim temaları ve dış kaynaklar ya da sistem kaynakları için bir [X:Key yönergesi](../../xaml-services/x-key-directive.md) ile tanımlanmış mevcut bir kaynağa karşılık gelmelidir. Kaynak arama bu sırada oluşur. Statik ve dinamik kaynaklar için kaynak arama davranışı hakkında daha fazla bilgi için bkz. [xaml kaynakları](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
+ Belirtilen <xref:System.Windows.StaticResourceExtension.ResourceKey%2A>, sayfa, uygulama, kullanılabilir denetim temaları ve dış kaynaklar ya da sistem kaynakları için bir [X:Key yönergesi](../../../desktop-wpf/xaml-services/xkey-directive.md) ile tanımlanmış mevcut bir kaynağa karşılık gelmelidir. Kaynak arama bu sırada oluşur. Statik ve dinamik kaynaklar için kaynak arama davranışı hakkında daha fazla bilgi için bkz. [xaml kaynakları](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
- Kaynak anahtarı [XamlName dilbilgisinde](../../xaml-services/xamlname-grammar.md)tanımlanmış herhangi bir dize olabilir. Kaynak anahtarı, <xref:System.Type>gibi diğer nesne türleri de olabilir. <xref:System.Type> anahtar, denetimlerin temalar tarafından nasıl Stillenebilir ve örtülü bir stil anahtarıyla bir temel değer. Daha fazla bilgi için bkz. [Denetim yazma genel bakış](../controls/control-authoring-overview.md).  
+ Kaynak anahtarı [XamlName dilbilgisinde](../../../desktop-wpf/xaml-services/xamlname-grammar.md)tanımlanmış herhangi bir dize olabilir. Kaynak anahtarı, <xref:System.Type>gibi diğer nesne türleri de olabilir. <xref:System.Type> anahtar, denetimlerin temalar tarafından nasıl Stillenebilir ve örtülü bir stil anahtarıyla bir temel değer. Daha fazla bilgi için bkz. [Denetim yazma genel bakış](../controls/control-authoring-overview.md).  
   
  Bir kaynağa başvuran alternatif bildirime dayalı yol, [DynamicResource Biçimlendirme Uzantısı](dynamicresource-markup-extension.md)olarak belirlenir.  
   

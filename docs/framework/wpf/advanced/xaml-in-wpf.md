@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: cea6809ebf9a4ae516d59bd99bf8126d2e874788
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: b43da2723fb618bc44a14e8102c8d59e6ecc0c11
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459568"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559853"
 ---
 # <a name="xaml-in-wpf"></a>WPF'de XAML
 
@@ -28,10 +28,10 @@ ms.locfileid: "73459568"
 [WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
 [WPF XAML Ad Kapsamları](wpf-xaml-namescopes.md)  
 [Satır İçi Stil ve Şablonları](inline-styles-and-templates.md)  
-[XAML 'de boşluk Işleme](../../xaml-services/whitespace-processing-in-xaml.md)  
+[XAML 'de boşluk Işleme](../../../desktop-wpf/xaml-services/white-space-processing.md)  
 [TypeConverters ve XAML](typeconverters-and-xaml.md)  
-[XML Karakter Varlıkları ve XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
-[XAML Ad Alanı (x:) Dil Özellikleri](../../xaml-services/xaml-namespace-x-language-features.md)  
+[XML Karakter Varlıkları ve XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md)  
+[XAML Ad Alanı (x:) Dil Özellikleri](../../../desktop-wpf/xaml-services/namespace-language-features.md)  
 [WPF XAML Uzantıları](wpf-xaml-extensions.md)  
 [İşaretleme Uyumluluğu (mc:) Dil Özellikleri](markup-compatibility-mc-language-features.md)  
   

@@ -2,17 +2,17 @@
 title: Veri kümelerini sorgulama (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: bb68d2e4-623d-4d60-85e3-965254f6fee7
-ms.openlocfilehash: 79a9b320fbdbfecc3f7d531d992b1529873871a5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bb64abcffdbbcd46dfb11b2564619c565e461436
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783043"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634787"
 ---
 # <a name="querying-datasets-linq-to-dataset"></a>Veri kümelerini sorgulama (LINQ to DataSet)
-Bir <xref:System.Data.DataSet> nesne verilerle doldurulduktan sonra sorgulama işlemine başlayabilirsiniz. Sorguları LINQ to DataSet ile formül, diğer [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]etkin veri kaynaklarında kullanılmasına benzer. Ancak, bir [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] <xref:System.Data.DataSet> nesne üzerinde sorgu kullandığınızda, bir özel türün numaralandırması yerine, <xref:System.Data.DataRow> nesneleri bir numaralandırma sorgulamakta olduğunuz durumlarda unutmayın. Bu, Sorgularınızdaki <xref:System.Data.DataRow> [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sınıfının herhangi bir üyesini kullanabileceğiniz anlamına gelir. Bu, zengin, karmaşık sorgular oluşturmanızı sağlar.  
+<xref:System.Data.DataSet> nesne verilerle doldurulduktan sonra, sorgulama işlemine başlayabilirsiniz. Sorguları LINQ to DataSet ile formül, diğer LINQ özellikli veri kaynaklarına karşı dil ile tümleşik sorgu (LINQ) kullanılmasına benzer. Ancak, <xref:System.Data.DataSet> nesnesi üzerinde LINQ sorguları kullandığınızda, özel bir türün numaralandırılması yerine <xref:System.Data.DataRow> nesnelerinin bir listesini sorgulamakta olduğunuzu unutmayın. Bu, LINQ sorgularınızda <xref:System.Data.DataRow> sınıfının herhangi bir üyesini kullanabileceğiniz anlamına gelir. Bu, zengin, karmaşık sorgular oluşturmanızı sağlar.  
   
- Diğer uygulamalarında [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]olduğu gibi, iki farklı biçimde LINQ to DataSet sorguları oluşturabilirsiniz: sorgu ifadesi sözdizimi ve Yöntem tabanlı sorgu söz dizimi. Sorgu ifadesi söz dizimini veya Yöntem tabanlı sorgu söz dizimini kullanarak <xref:System.Data.DataSet>, bir içindeki birden çok tabloya <xref:System.Data.DataSet>karşı veya bir tür <xref:System.Data.DataSet>içindeki tablolarda tek tek tablolara karşı sorgular gerçekleştirebilirsiniz.  
+ Diğer LINQ uygulamalarında olduğu gibi, iki farklı biçimde LINQ to DataSet sorguları oluşturabilirsiniz: sorgu ifadesi sözdizimi ve Yöntem tabanlı sorgu söz dizimi. Sorgu ifadesi söz dizimini veya Yöntem tabanlı sorgu söz dizimini kullanarak bir <xref:System.Data.DataSet>tek tablolara karşı sorgular gerçekleştirebilir, bir <xref:System.Data.DataSet>birden çok tabloya karşı veya yazılan <xref:System.Data.DataSet>tablolardaki tablolara karşı sorgu sözdizimini kullanabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Tek Tablolu Sorgular](single-table-queries-linq-to-dataset.md)  
@@ -22,7 +22,7 @@ Bir <xref:System.Data.DataSet> nesne verilerle doldurulduktan sonra sorgulama i�
  Çapraz tablo sorgularının nasıl gerçekleştirileceğini açıklar.  
   
  [Türü Belirtilmiş DataSet’leri Sorgulama](querying-typed-datasets.md)  
- Yazılan <xref:System.Data.DataSet> nesnelerin nasıl sorgulanılacağını açıklar.  
+ Yazılan <xref:System.Data.DataSet> nesnelerinin nasıl sorgulanılacağını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

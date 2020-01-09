@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: b573137b8d96565776d4b31f7ae8e5cc0b203a21
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: aa2dd7a5c30894f85ed1d4aae0228b76ece3c005
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459462"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559878"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF için XAML ve Özel Sınıflar
 Ortak dil çalışma zamanı (CLR) çerçeveleri içinde uygulanan XAML, herhangi bir ortak dil çalışma zamanı (CLR) dilinde özel bir sınıf veya yapı tanımlama özelliğini destekler ve sonra XAML işaretlemesini kullanarak bu sınıfa erişebilir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]tanımlı türlerin ve özel türlerinizin bir karışımını, genellikle özel türleri bir XAML ad alanı öneki ile eşleyerek aynı biçimlendirme dosyasında kullanabilirsiniz. Bu konu, bir özel sınıfın XAML öğesi olarak kullanılabilmesi için karşılaması gereken gereksinimleri tartışır.  
@@ -57,7 +57,7 @@ Ortak dil çalışma zamanı (CLR) çerçeveleri içinde uygulanan XAML, herhang
  Öznitelik sözdizimine izin verilen özelliklerin örnekleri, ancak XAML aracılığıyla nesne öğesi içeren özellik öğesi sözdizimine izin verilmez <xref:System.Windows.Input.Cursor> türü alan çeşitli özelliklerdir. <xref:System.Windows.Input.Cursor> sınıfı, <xref:System.Windows.Input.CursorConverter>özel bir tür dönüştürücüye sahiptir, ancak parametresiz bir Oluşturucu sunmaz, bu nedenle <xref:System.Windows.FrameworkElement.Cursor%2A> özelliği yalnızca gerçek <xref:System.Windows.Input.Cursor> türü bir başvuru türü olsa bile öznitelik sözdizimi aracılığıyla ayarlanabilir.  
   
 ### <a name="per-property-type-converters"></a>Özellik başına tür dönüştürücüler  
- Alternatif olarak, özelliğinin kendisi de özellik düzeyinde bir tür dönüştürücüsü bildirebilir. Bu, özelliğin gelen dize değerlerini, uygun türe göre <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> bir işlem için girdi olarak işleyerek bir "Mini dil" özelliği sunar. Genellikle bu bir kullanışlı erişimci sağlamak için yapılır ve XAML 'de bir özelliği ayarlamayı etkinleştirmek için tek bir yöntem olarak değildir. Ancak, parametresiz bir Oluşturucu ya da öznitelikli tür dönüştürücüsü içermeyen mevcut CLR türlerini kullanmak istediğiniz öznitelikler için tür dönüştürücülerinin kullanılması da mümkündür. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API örnekleri, <xref:System.Globalization.CultureInfo> türünü alan bazı özelliklerdir. Bu durumda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], Framework 'ün önceki sürümlerinde kullanılan uyumluluk ve geçiş senaryolarına daha iyi adres sağlamak için var olan Microsoft .NET Framework <xref:System.Globalization.CultureInfo> türünü kullandı, ancak <xref:System.Globalization.CultureInfo> türü gerekli oluşturucuları desteklemiyor veya doğrudan XAML özellik değeri olarak kullanılabilmesi için tür düzeyinde tür dönüştürme.  
+ Alternatif olarak, özelliğinin kendisi de özellik düzeyinde bir tür dönüştürücüsü bildirebilir. Bu, özelliğin gelen dize değerlerini, uygun türe göre <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> bir işlem için girdi olarak işleyerek bir "Mini dil" özelliği sunar. Genellikle bu bir kullanışlı erişimci sağlamak için yapılır ve XAML 'de bir özelliği ayarlamayı etkinleştirmek için tek bir yöntem olarak değildir. Ancak, parametresiz bir Oluşturucu ya da öznitelikli tür dönüştürücüsü içermeyen mevcut CLR türlerini kullanmak istediğiniz öznitelikler için tür dönüştürücülerinin kullanılması da mümkündür. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API örnekleri, <xref:System.Globalization.CultureInfo> türünü alan bazı özelliklerdir. Bu durumda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], Framework 'ün önceki sürümlerinde kullanılan uyumluluk ve geçiş senaryolarına daha iyi adres sağlamak için mevcut Microsoft .NET Framework <xref:System.Globalization.CultureInfo> türünü kullandı, ancak <xref:System.Globalization.CultureInfo> türü, doğrudan XAML özellik değeri olarak kullanılabilmesi için gerekli oluşturucuları veya tür düzeyi tür dönüştürmeyi desteklemez.  
   
  XAML kullanımına sahip bir özelliği kullanıma sunışınızda, özellikle bir denetim yazarlýşınızda, bu özelliği bir bağımlılık özelliği ile yedeklemeyi kesin bir şekilde dikkate almanız gerekir. Bu özellikle, XAML işlemcisinin mevcut [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamasını kullandığınızda geçerlidir çünkü <xref:System.Windows.DependencyProperty> Yedekleme kullanarak performansı geliştirebilirsiniz. Bağımlılık özelliği, özelliği için kullanıcıların XAML erişilebilir bir özelliği bekleecek şekilde özellik sistem özelliklerini kullanıma sunar. Bu, animasyon, veri bağlama ve stil desteği gibi özellikleri içerir. Daha fazla bilgi için bkz. [Özel bağımlılık özellikleri](custom-dependency-properties.md) ve [XAML yükleme ve bağımlılık özellikleri](xaml-loading-and-dependency-properties.md).  
   
@@ -77,7 +77,7 @@ Ortak dil çalışma zamanı (CLR) çerçeveleri içinde uygulanan XAML, herhang
   
 - Koleksiyon nesnesi olan nesnenin nesne öğesi sözdiziminde belirtilmesi gerekmez. Bir koleksiyon türü alan XAML 'de bir özellik belirttiğinizde, bu koleksiyon türünün varlığı örtük bir şekilde gerçekleşir.  
   
-- Biçimlendirme içindeki koleksiyon özelliğinin alt öğeleri, koleksiyonun üyesi olacak şekilde işlenir. Genellikle, bir koleksiyonun üyelerine yönelik kod erişimi, `Add`gibi liste/sözlük yöntemleri veya bir dizin oluşturucu aracılığıyla gerçekleştirilir. Ancak XAML sözdizimi yöntemleri veya dizin oluşturucuyu desteklemez (özel durum: XAML 2009 yöntemleri destekleyebilir, ancak XAML 2009 kullanmak olası WPF kullanımlarını kısıtlar; [xaml 2009 dil özelliklerine](../../xaml-services/xaml-2009-language-features.md)bakın). Koleksiyonlar bir öğe ağacı oluşturmak için çok yaygın bir gereksinimdir ve bu koleksiyonları bildirime dayalı XAML 'de doldurmanız için bir yol gerekir. Bu nedenle, bir koleksiyon özelliğinin alt öğeleri, koleksiyon özelliği tür değeri olan koleksiyona eklenerek işlenir.  
+- Biçimlendirme içindeki koleksiyon özelliğinin alt öğeleri, koleksiyonun üyesi olacak şekilde işlenir. Genellikle, bir koleksiyonun üyelerine yönelik kod erişimi, `Add`gibi liste/sözlük yöntemleri veya bir dizin oluşturucu aracılığıyla gerçekleştirilir. Ancak XAML sözdizimi yöntemleri veya dizin oluşturucuyu desteklemez (özel durum: XAML 2009 yöntemleri destekleyebilir, ancak XAML 2009 kullanmak olası WPF kullanımlarını kısıtlar; [xaml 2009 dil özelliklerine](../../../desktop-wpf/xaml-services/xaml-2009-language-features.md)bakın). Koleksiyonlar bir öğe ağacı oluşturmak için çok yaygın bir gereksinimdir ve bu koleksiyonları bildirime dayalı XAML 'de doldurmanız için bir yol gerekir. Bu nedenle, bir koleksiyon özelliğinin alt öğeleri, koleksiyon özelliği tür değeri olan koleksiyona eklenerek işlenir.  
   
  .NET Framework XAML Hizmetleri uygulamasını ve böylece WPF XAML işlemcisi, bir koleksiyon özelliğini oluşturan için aşağıdaki tanımı kullanır. Özelliğin özellik türü aşağıdakilerden birini gerçekleştirmelidir:  
   
@@ -85,7 +85,7 @@ Ortak dil çalışma zamanı (CLR) çerçeveleri içinde uygulanan XAML, herhang
   
 - <xref:System.Collections.IDictionary> veya genel eşdeğerini uygular (<xref:System.Collections.Generic.IDictionary%602>).  
   
-- <xref:System.Array> türetilir (XAML içindeki diziler hakkında daha fazla bilgi için bkz. [X:Array Markup Extension](../../xaml-services/x-array-markup-extension.md).)  
+- <xref:System.Array> türetilir (XAML içindeki diziler hakkında daha fazla bilgi için bkz. [X:Array Markup Extension](../../../desktop-wpf/xaml-services/xarray-markup-extension.md).)  
   
 - <xref:System.Windows.Markup.IAddChild> uygular ([!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]tarafından tanımlanan bir arabirim).  
   
@@ -104,7 +104,7 @@ Ortak dil çalışma zamanı (CLR) çerçeveleri içinde uygulanan XAML, herhang
   
  XAML içerik özelliği olarak bir koleksiyon özelliği belirtebilirsiniz. Bu, nesne öğesinin bir veya daha fazla alt öğesine sahip olması ve herhangi bir araya eklenen koleksiyon nesnesi öğesi ya da Özellik öğesi etiketleri olmadan bu özelliğin kullanılmasına neden olur. Bu öğeler daha sonra XAML içerik özelliği için değer olarak değerlendirilir ve yedekleme koleksiyonu örneğine eklenir.  
   
- Bazı var olan XAML içerik özellikleri `Object`Özellik türünü kullanır. Bu, <xref:System.String> gibi temel değerleri ve tek bir başvuru nesnesi değeri almayı sağlayan bir XAML içerik özelliği sunar. Bu modeli izlerseniz, tipiniz tür belirlemekten ve olası türlerin işlenmesinden sorumludur. <xref:System.Object> içerik türünün tipik nedeni, nesne içeriğini bir dize olarak (varsayılan bir sunu işlemi alır) veya varsayılan olmayan bir sunuyu belirten nesne içeriği eklemenin gelişmiş bir yolu veya ek veriler.  
+ Bazı var olan XAML içerik özellikleri `Object`Özellik türünü kullanır. Bu, <xref:System.String> gibi temel değerleri ve tek bir başvuru nesnesi değeri almayı sağlayan bir XAML içerik özelliği sunar. Bu modeli izlerseniz, tipiniz tür belirlemekten ve olası türlerin işlenmesinden sorumludur. <xref:System.Object> bir içerik türünün tipik nedeni, nesne içeriğini bir dize olarak (varsayılan bir sunum işlemi alır) veya varsayılan olmayan bir sunuyu veya ek verileri belirten gelişmiş nesne içeriği ekleme gibi basit bir şekilde desteklemek içindir.  
   
 <a name="Serializing"></a>   
 ## <a name="serializing-xaml"></a>XAML serileştirme  

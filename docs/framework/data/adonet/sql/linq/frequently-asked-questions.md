@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: ed9149eb5b88d648c02863e0fb0101e5503e1c73
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3cc879e97438138554f1d39cf588e01bfbba28a6
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782149"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634709"
 ---
 # <a name="frequently-asked-questions"></a>Sıkça Sorulan Sorular
 
-Aşağıdaki bölümlerde, uyguladığınızda [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]karşılaşabileceğiniz bazı yaygın sorunlar yanıtlanır.
+Aşağıdaki bölümlerde, LINQ uyguladığınızda karşılaşabileceğiniz bazı yaygın sorunlar yanıtlanacaktır.
 
 [Sorun gidermede](troubleshooting.md)ek sorunlar ele alınır.
 
@@ -22,23 +22,23 @@ Aşağıdaki bölümlerde, uyguladığınızda [!INCLUDE[vbteclinq](../../../../
 
 S. Veritabanıma bağlanamıyorum.
 
-A. Bağlantı dizeniz doğru olduğundan ve SQL Server örneğinizin çalıştığından emin olun. Ayrıca adlandırılmış kanallar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] protokolünün etkinleştirilmesini gerektirir. Daha fazla bilgi için bkz. [Izlenecek yollara göre öğrenme](learning-by-walkthroughs.md).
+BİR. Bağlantı dizeniz doğru olduğundan ve SQL Server örneğinizin çalıştığından emin olun. Ayrıca, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] adlandırılmış kanallar protokolünün etkinleştirilmesini gerektirir. Daha fazla bilgi için bkz. [Izlenecek yollara göre öğrenme](learning-by-walkthroughs.md).
 
 ## <a name="changes-to-database-lost"></a>Veritabanında yapılan değişiklikler kayboldu
 
 S. Veritabanında verilerde bir değişiklik yaptık, ancak uygulamamı yeniden kaydederken değişiklik artık orada yoktu.
 
-A. Sonuçları veritabanına kaydetmek için çağırdığınızdan <xref:System.Data.Linq.DataContext.SubmitChanges%2A> emin olun.
+BİR. Sonuçları veritabanına kaydetmek için <xref:System.Data.Linq.DataContext.SubmitChanges%2A> çağırdığınızdan emin olun.
 
-## <a name="database-connection-open-how-long"></a>Veritabanı bağlantısı: Ne kadar süreyle açık?
+## <a name="database-connection-open-how-long"></a>Veritabanı bağlantısı: ne kadar süreyle açık?
 
 S. Veritabanı bağlantısı ne kadar süreyle açık kalır?
 
-A. Sorgu sonuçlarını tüketene kadar bağlantı genellikle açık kalır. Tüm sonuçları işlemek için zaman almayı beklediğinizi ve sonuçların önbelleğe alınmasını istemiyorsanız, sorguya uygulayın <xref:System.Linq.Enumerable.ToList%2A> . Her nesnenin yalnızca bir kez işlendiği yaygın senaryolarda, akış modeli hem `DataReader` [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]hem de ' de üst düzeydir.
+BİR. Sorgu sonuçlarını tüketene kadar bağlantı genellikle açık kalır. Tüm sonuçları işlemek için zaman almayı beklemeniz ve sonuçların önbelleğe alınmasına izin vermek istiyorsanız sorguya <xref:System.Linq.Enumerable.ToList%2A> uygulayın. Her nesnenin yalnızca bir kez işlendiği yaygın senaryolarda, akış modeli hem `DataReader` hem de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]üst düzeydir.
 
 Bağlantı kullanımının tam ayrıntıları aşağıdakilere bağlıdır:
 
-- Bir bağlantı nesnesi ile <xref:System.Data.Linq.DataContext> oluşturulursa bağlantı durumu.
+- <xref:System.Data.Linq.DataContext> bağlantı nesnesi ile oluşturulursa bağlantı durumu.
 
 - Bağlantı dizesi ayarları (örneğin, birden çok etkin sonuç kümesi (MARS) etkinleştiriliyor. Daha fazla bilgi için bkz. [birden çok etkin sonuç kümesi (mars)](../multiple-active-result-sets-mars.md).
 
@@ -46,29 +46,29 @@ Bağlantı kullanımının tam ayrıntıları aşağıdakilere bağlıdır:
 
 S. Veritabanını sorgulamadan tablo verilerini güncelleştirebilir miyim?
 
-A. , [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Küme tabanlı güncelleştirme komutlarına sahip olmasa da, ilk sorgulanmadan güncelleştirmek için aşağıdaki tekniklerden birini kullanabilirsiniz:
+BİR. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], ayarlanan tabanlı güncelleştirme komutlarına sahip olmasa da, öncelikle güncelleştirme yapmak için aşağıdaki tekniklerden birini kullanabilirsiniz:
 
-- SQL <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> kodu göndermek için kullanın.
+- SQL kodu göndermek için <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> kullanın.
 
-- Nesnenin yeni bir örneğini oluşturun ve güncelleştirmeyi etkileyen tüm geçerli değerleri (alanlar) başlatın. Sonra öğesini kullanarak <xref:System.Data.Linq.DataContext> <xref:System.Data.Linq.Table%601.Attach%2A> nesnesini öğesine ekleyin ve değiştirmek istediğiniz alanı değiştirin.
+- Nesnenin yeni bir örneğini oluşturun ve güncelleştirmeyi etkileyen tüm geçerli değerleri (alanlar) başlatın. Sonra, <xref:System.Data.Linq.Table%601.Attach%2A> kullanarak nesneyi <xref:System.Data.Linq.DataContext> ekleyin ve değiştirmek istediğiniz alanı değiştirin.
 
 ## <a name="unexpected-query-results"></a>Beklenmeyen sorgu sonuçları
 
 S. Sorgum beklenmeyen sonuçlar döndürüyor. Ne olduğunu nasıl giderebilirim?
 
-A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]oluşturduğu SQL kodunu incelemek için çeşitli araçlar sağlar. En önemlileri <xref:System.Data.Linq.DataContext.Log%2A>bunlardan biridir. Daha fazla bilgi için bkz. [hata ayıklama desteği](debugging-support.md).
+BİR. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], oluşturduğu SQL kodunu incelemek için çeşitli araçlar sağlar. En önemlileri bunlardan biri <xref:System.Data.Linq.DataContext.Log%2A>. Daha fazla bilgi için bkz. [hata ayıklama desteği](debugging-support.md).
 
 ## <a name="unexpected-stored-procedure-results"></a>Beklenmeyen saklı yordam sonuçları
 
-S. Dönüş değeri tarafından `MAX()`hesaplanan bir saklı yordamım var. Saklı yordamı O/R Designer yüzeyine sürükledikten sonra, dönüş değeri doğru değil.
+S. Dönüş değeri `MAX()`tarafından hesaplanan bir saklı yordamım var. Saklı yordamı O/R Designer yüzeyine sürükledikten sonra, dönüş değeri doğru değil.
 
-A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], saklı yordamlar yoluyla veritabanı tarafından oluşturulan değerleri döndürmek için iki yol sunar:
+BİR. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], saklı yordamlar yoluyla veritabanı tarafından oluşturulan değerleri döndürmek için iki yol sunar:
 
 - Çıkış sonucunu adlandırarak.
 
 - Açıkça bir çıkış parametresi belirterek.
 
-Aşağıda yanlış çıktının bir örneği verilmiştir. Sonuçları [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eşlemediğinden, her zaman 0 değerini döndürür:
+Aşağıda yanlış çıktının bir örneği verilmiştir. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sonuçları eşlemediğinden, her zaman 0 değerini döndürür:
 
 ```sql
 create procedure proc2
@@ -114,27 +114,27 @@ Daha fazla bilgi için bkz. [saklı yordamları kullanarak Işlemleri özelleşt
 
 ## <a name="serialization-errors"></a>Serileştirme hataları
 
-S. Seri hale getirme yapmayı denediğimde aşağıdaki hatayı alıyorum: "' System. Data. LINQ. ChangeTracker + StandardChangeTracker ' yazın... seri hale getirilebilir olarak işaretlenmemiş. "
+S. Seri hale getirme yapmayı denediğimde şu hatayı alıyorum: "System. Data. LINQ. ChangeTracker + StandardChangeTracker ' yazın... seri hale getirilebilir olarak işaretlenmemiş. "
 
-A. İçindeki [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kod üretimi serileştirme <xref:System.Runtime.Serialization.DataContractSerializer> destekler. <xref:System.Xml.Serialization.XmlSerializer> Veya<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>desteklemez. Daha fazla bilgi için bkz. [serileştirme](serialization.md).
+BİR. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kod üretimi <xref:System.Runtime.Serialization.DataContractSerializer> Serileştirmeyi destekler. <xref:System.Xml.Serialization.XmlSerializer> veya <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>desteklemez. Daha fazla bilgi için bkz. [serileştirme](serialization.md).
 
 ## <a name="multiple-dbml-files"></a>Birden çok DBML dosyası
 
 S. Ortak olarak bazı tabloları paylaşan birden çok DBML dosyası olduğunda bir derleyici hatası alıyorum.
 
-A. **Bağlam ad alanını** ve **varlık ad alanı** özelliklerini nesne ilişkisel Tasarımcısı her dbml dosyası için ayrı bir değere ayarlayın. Bu yaklaşım ad/ad alanı çarpışmasını ortadan kaldırır.
+BİR. **Bağlam ad alanını** ve **varlık ad alanı** özelliklerini nesne ilişkisel Tasarımcısı her dbml dosyası için ayrı bir değere ayarlayın. Bu yaklaşım ad/ad alanı çarpışmasını ortadan kaldırır.
 
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>INSERT veya Update üzerinde veritabanı tarafından oluşturulan değerlerin açık ayarından kaçınma
 
-S. `DateCreated` SQL`Getdate()`için varsayılan olarak bir sütun içeren bir veritabanı tablom var. Kullanarak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]yeni bir kayıt eklemeye çalıştığımda, değer olarak `NULL`ayarlanır. Veritabanının varsayılan olarak ayarlanmış olmasını bekler.
+S. SQL `Getdate()`varsayılan olarak `DateCreated` sütunu olan bir veritabanı tablom var. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]kullanarak yeni bir kayıt eklemeye çalıştığımda, değer `NULL`olarak ayarlanır. Veritabanının varsayılan olarak ayarlanmış olmasını bekler.
 
-A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]kimlik (otomatik artış) ve ROWGUIDCOL (veritabanı tarafından üretilen GUID) ve zaman damgası sütunları için bu durumu otomatik olarak işler. Diğer durumlarda, ve <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> özellikleriniel= ile ayarlamanız `true` = gerekir. <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>
+BİR. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kimlik (otomatik artış) ve ROWGUIDCOL (veritabanı tarafından üretilen GUID) ve zaman damgası sütunları için bu durumu otomatik olarak işler. Diğer durumlarda, <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>=`true` ve <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>=<xref:System.Data.Linq.Mapping.AutoSync.Always>/<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>/özelliklerini el ile ayarlamanız gerekir.
 
 ## <a name="multiple-dataloadoptions"></a>Çoklu dataloadoçen
 
 S. İlk üzerine yazmadan ek yükleme seçenekleri belirtebilir miyim?
 
-A. Evet. Aşağıdaki örnekte olduğu gibi ilki üzerine yazılmaz:
+BİR. Evet. Aşağıdaki örnekte olduğu gibi ilki üzerine yazılmaz:
 
 ```vb
 Dim dlo As New DataLoadOptions()
@@ -152,37 +152,37 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 
 S. SQL Server Compact 3,5 veritabanından tablo sürüklediğiniz zaman bir hata alıyorum.
 
-A. Nesne İlişkisel Tasarımcısı, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çalışma zamanı olsa da, SQL Server Compact 3,5 'yi desteklemez. Bu durumda, kendi varlık sınıflarınızı oluşturmanız ve uygun öznitelikleri eklemeniz gerekir.
+BİR. Nesne İlişkisel Tasarımcısı, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çalışma zamanı olsa da SQL Server Compact 3,5 ' i desteklemez. Bu durumda, kendi varlık sınıflarınızı oluşturmanız ve uygun öznitelikleri eklemeniz gerekir.
 
 ## <a name="errors-in-inheritance-relationships"></a>Devralma Ilişkilerinde hatalar
 
 S. İki varlığa bağlanmak için Nesne İlişkisel Tasarımcısı araç kutusu devralma şeklini kullandım, ancak hata alıyorum.
 
-A. İlişki oluşturma yeterli değildir. Ayrıştırıcı sütunu, taban sınıf ayrıştırıcı değeri ve türetilmiş sınıf ayrıştırıcı değeri gibi bilgileri sağlamanız gerekir.
+BİR. İlişki oluşturma yeterli değildir. Ayrıştırıcı sütunu, taban sınıf ayrıştırıcı değeri ve türetilmiş sınıf ayrıştırıcı değeri gibi bilgileri sağlamanız gerekir.
 
 ## <a name="provider-model"></a>Sağlayıcı modeli
 
 S. Ortak bir sağlayıcı modeli kullanılabilir mi?
 
-A. Kullanılabilir ortak sağlayıcı modeli yok. Şu anda yalnızca SQL Server [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ve SQL Server Compact 3,5 destekler.
+BİR. Kullanılabilir ortak sağlayıcı modeli yok. Şu anda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL Server ve yalnızca 3,5 SQL Server Compact destekler.
 
 ## <a name="sql-injection-attacks"></a>SQL ekleme saldırıları
 
-S. SQL ekleme saldırılarından nasıl korunur?[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]
+S. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL ekleme saldırılarından nasıl korunur?
 
-A. SQL ekleme, Kullanıcı girişini birleştirerek oluşturulan geleneksel SQL sorguları için önemli bir risk oldu. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]sorgularda kullanarak <xref:System.Data.SqlClient.SqlParameter> bu tür ekleme işlemini önler. Kullanıcı girişi parametre değerlerine açıktır. Bu yaklaşım, kötü amaçlı komutların müşteri girişinden kullanılmasını önler.
+BİR. SQL ekleme, Kullanıcı girişini birleştirerek oluşturulan geleneksel SQL sorguları için önemli bir risk oldu. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], sorgularda <xref:System.Data.SqlClient.SqlParameter> kullanarak bu tür ekleme işlemini önler. Kullanıcı girişi parametre değerlerine açıktır. Bu yaklaşım, kötü amaçlı komutların müşteri girişinden kullanılmasını önler.
 
 ## <a name="changing-read-only-flag-in-dbml-files"></a>DBML dosyalarındaki salt okunurdur bayrağını değiştirme
 
 S. DBML dosyasından bir nesne modeli oluştururken bazı özelliklerden ayarlayıcıları ortadan kaldırmak Nasıl yaparım??
 
-A. Bu gelişmiş senaryo için aşağıdaki adımları uygulayın:
+BİR. Bu gelişmiş senaryo için aşağıdaki adımları uygulayın:
 
-1. . Dbml dosyasında, <xref:System.Data.Linq.ITable.IsReadOnly%2A> bayrağını olarak `True`değiştirerek özelliği değiştirin.
+1. . Dbml dosyasında, <xref:System.Data.Linq.ITable.IsReadOnly%2A> bayrağını `True`değiştirerek özelliği değiştirin.
 
 2. Kısmi bir sınıf ekleyin. Salt okunurdur üyeleri için parametrelere sahip bir Oluşturucu oluşturun.
 
-3. Uygulamanızın doğru değeri <xref:System.Data.Linq.Mapping.UpdateCheck> olup olmadığını<xref:System.Data.Linq.Mapping.UpdateCheck.Never>anlamak için varsayılan değeri () gözden geçirin.
+3. Uygulamanızın doğru değeri olup olmadığını öğrenmek için varsayılan <xref:System.Data.Linq.Mapping.UpdateCheck> değerini (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) gözden geçirin.
 
     > [!CAUTION]
     > Visual Studio 'da Nesne İlişkisel Tasarımcısı kullanıyorsanız değişikliklerinizin üzerine yazılabilir.
@@ -191,40 +191,40 @@ A. Bu gelişmiş senaryo için aşağıdaki adımları uygulayın:
 
 S. System. Data. Linq kısmen güvenilen kod tarafından kullanılmak üzere işaretlendi mi?
 
-A. Evet, System. Data. LINQ. dll derlemesi, <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliğiyle işaretlenmiş .NET Framework derlemeleri arasındadır. Bu işaret olmadan, .NET Framework derlemeler yalnızca tam olarak güvenilen kod tarafından kullanılmaya yöneliktir.
+BİR. Evet, System. Data. LINQ. dll derlemesi, <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliğiyle işaretlenmiş .NET Framework derlemeleri arasındadır. Bu işaret olmadan, .NET Framework derlemeler yalnızca tam olarak güvenilen kod tarafından kullanılmaya yöneliktir.
 
-Kısmen güvenilen çağıranlara [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] izin vermek için içindeki asıl senaryo, *güven* yapılandırmasının [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Orta olduğu Web uygulamalarından erişilmesine imkan tanımalıdır.
+Kısmi güvenilir arayanlara izin vermek için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ' deki asıl senaryo, *güven* yapılandırmasının Orta olduğu Web uygulamalarından [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] derlemeye erişilmesine imkan tanımalıdır.
 
 ## <a name="mapping-data-from-multiple-tables"></a>Birden çok tablodan veri eşleme
 
 S. Varlığındaki veriler birden çok tablodan geliyor. Nasıl yaparım? eşleme yapılsın mı?
 
-A. Veritabanında bir görünüm oluşturabilir ve varlığı görünüme eşleyebilirsiniz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]görünümler için aynı SQL 'i tablolar için yaptığı gibi oluşturur.
+BİR. Veritabanında bir görünüm oluşturabilir ve varlığı görünüme eşleyebilirsiniz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], görünümler için aynı SQL 'i tablolar için yaptığı gibi oluşturur.
 
 > [!NOTE]
-> Bu senaryodaki görünümlerin kullanımı sınırlamaları vardır. Bu yaklaşım, üzerinde <xref:System.Data.Linq.Table%601> gerçekleştirilen işlemler temel alınan görünüm tarafından desteklense de en güvenli şekilde gerçekleşir. Yalnızca hangi işlemlerin hedeflendiklerini bilirsiniz. Örneğin, çoğu uygulama salt okunurdur ve diğer bir boyutlandırılabilir sayı yalnızca görünümlerde uygulanan saklı yordamları `Create` kullanarak işlemleri gerçekleştirir `Delete` /. `Update` /
+> Bu senaryodaki görünümlerin kullanımı sınırlamaları vardır. Bu yaklaşım, <xref:System.Data.Linq.Table%601> üzerinde gerçekleştirilen işlemler temel alınan görünüm tarafından desteklense de en güvenli şekilde gerçekleşir. Yalnızca hangi işlemlerin hedeflendiklerini bilirsiniz. Örneğin, çoğu uygulama salt okunurdur ve başka bir boyutlandırılabilir sayı, yalnızca görünümlerde yapılan saklı yordamları kullanarak /`Delete` işlemleri `Update``Create`/.
 
 ## <a name="connection-pooling"></a>Bağlantı Havuzu
 
-S. <xref:System.Data.Linq.DataContext> Havuzda yardımcı olabilecek bir yapı var mı?
+S. <xref:System.Data.Linq.DataContext> havuzda yardımcı olabilecek bir yapı var mı?
 
-A. Örneklerini yeniden kullanmayı denemeyin <xref:System.Data.Linq.DataContext>. Her <xref:System.Data.Linq.DataContext> biri belirli bir düzenleme/sorgu oturumu için durumu (kimlik önbelleği dahil) korur. Veritabanının geçerli durumuna göre yeni örnekler almak için yeni <xref:System.Data.Linq.DataContext>bir kullanın.
+BİR. <xref:System.Data.Linq.DataContext>örneklerini yeniden kullanmayı denemeyin. Her <xref:System.Data.Linq.DataContext>, belirli bir düzenleme/sorgu oturumu için durumu (kimlik önbelleği dahil) korur. Veritabanının geçerli durumuna göre yeni örnekler almak için yeni bir <xref:System.Data.Linq.DataContext>kullanın.
 
 Temel ADO.NET bağlantı havuzunu kullanmaya devam edebilirsiniz. Daha fazla bilgi için bkz. [SQL Server bağlantı havuzu (ADO.net)](../../sql-server-connection-pooling.md).
 
 ## <a name="second-datacontext-is-not-updated"></a>İkinci DataContext güncelleştirilmedi
 
-S. Değerlerini veritabanında depolamak <xref:System.Data.Linq.DataContext> için bir örneğini kullandım. Ancak, aynı veritabanında <xref:System.Data.Linq.DataContext> ikinci bir saniye güncelleştirilmiş değerleri yansıtmamaktadır. İkinci <xref:System.Data.Linq.DataContext> örnek, önbelleğe alınmış değerleri döndürüyor gibi görünüyor.
+S. Değerleri veritabanında depolamak için bir <xref:System.Data.Linq.DataContext> örneği kullandım. Ancak, aynı veritabanındaki ikinci bir <xref:System.Data.Linq.DataContext> güncelleştirilmiş değerleri yansıtmamaktadır. İkinci <xref:System.Data.Linq.DataContext> örnek, önbelleğe alınmış değerler döndürüyor gibi görünüyor.
 
-A. Bu davranış tasarıma göre yapılır. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]İlk örnekte gördüğünüz örneklerin/değerlerin aynısını döndürmeye devam eder. Güncelleştirmeler yaptığınızda iyimser eşzamanlılık kullanırsınız. Özgün veriler, gerçekten de değişmeden olduğunu doğrulamak üzere geçerli veritabanı durumunu denetlemek için kullanılır. Değiştirildiyse, bir çakışma oluşur ve uygulamanız bunu çözmelidir. Uygulamanızın bir seçeneği, özgün durumu geçerli veritabanı durumuna sıfırlamadır ve güncelleştirmeyi yeniden dener. Daha fazla bilgi için [nasıl yapılır: Değişiklik çakışmalarını](how-to-manage-change-conflicts.md)yönetin.
+BİR. Bu davranış tasarım gereğidir. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], ilk örnekte gördüğünüz örnekleri/değerleri döndürmeye devam eder. Güncelleştirmeler yaptığınızda iyimser eşzamanlılık kullanırsınız. Özgün veriler, gerçekten de değişmeden olduğunu doğrulamak üzere geçerli veritabanı durumunu denetlemek için kullanılır. Değiştirildiyse, bir çakışma oluşur ve uygulamanız bunu çözmelidir. Uygulamanızın bir seçeneği, özgün durumu geçerli veritabanı durumuna sıfırlamadır ve güncelleştirmeyi yeniden dener. Daha fazla bilgi için bkz. [nasıl yapılır: değişiklik çakışmalarını yönetme](how-to-manage-change-conflicts.md).
 
-Ayrıca, önbelleğe alma <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> ve değişiklik izlemeyi kapatan yanlış olarak ayarlayabilirsiniz. Daha sonra, her sorgumanızda en son değerleri alabilirsiniz.
+Ayrıca, önbelleğe alma ve değişiklik izlemeyi kapatan <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> false olarak ayarlayabilirsiniz. Daha sonra, her sorgumanızda en son değerleri alabilirsiniz.
 
 ## <a name="cannot-call-submitchanges-in-read-only-mode"></a>Salt okuma modunda SubmitChanges çağrılamaz
 
-S. Salt okuma modunda çağrı <xref:System.Data.Linq.DataContext.SubmitChanges%2A> yapmayı denediğimde bir hata alıyorum.
+S. <xref:System.Data.Linq.DataContext.SubmitChanges%2A> salt okunurdur modda çağırmaya çalıştığımda bir hata alıyorum.
 
-A. Salt okuma modu, içeriğin değişiklikleri izleme özelliğini devre dışı bırakır.
+BİR. Salt okuma modu, içeriğin değişiklikleri izleme özelliğini devre dışı bırakır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -3,12 +3,12 @@ title: Sınıflar ve nesneler- C# öğreticiye giriş
 description: İlk C# programınızı oluşturun ve nesne yönelimli kavramları gezin
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: e4cf7912de69946289c0594944b8ac3a8c252ac2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 06d1a30abc0d031badcba4ec60f7deb3c670a3ae
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736834"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634956"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Sınıflar ve nesneler ile nesne odaklı programlamayı keşfet
 
@@ -16,7 +16,7 @@ Bu öğreticide, geliştirme için kullanabileceğiniz bir makineniz olması bek
 
 ## <a name="create-your-application"></a>Uygulamanızı oluşturma
 
-Bir Terminal penceresi kullanarak, *sınıflar*adlı bir dizin oluşturun. Uygulamanızı burada oluşturacaksınız. Bu dizine geçin ve konsol penceresinde `dotnet new console` yazın. Bu komut uygulamanızı oluşturur. *Program.cs*'i açın. Şöyle görünmelidir:
+Bir Terminal penceresi kullanarak, *sınıflar*adlı bir dizin oluşturun. Uygulamanızı burada oluşturacaksınız. Bu dizine geçin ve konsol penceresinde `dotnet new console` yazın. Bu komut uygulamanızı oluşturur. *Program.cs*'i açın. Şu şekilde görünmelidir:
 
 ```csharp
 using System;
@@ -73,7 +73,7 @@ namespace classes
 
 Başlamadan önce, derleydiklerinize göz atalım.  `namespace` bildirimi, kodunuzu mantıksal olarak düzenlemek için bir yol sağlar. Bu öğretici nispeten küçüktür, bu nedenle tüm kodu bir ad alanına yerleştirebilirsiniz. 
 
-`public class BankAccount` oluşturduğunuz sınıfı veya türü tanımlar. Sınıf bildirimini izleyen `{` ve `}` içindeki her şey, sınıfının davranışını tanımlar. `BankAccount` sınıfının beş ***üyesi*** vardır. İlk üçü ***özelliklerdir***. Özellikler veri öğeleridir ve doğrulamayı veya diğer kuralları zorlayan koda sahip olabilir. Son ikisi ***metodlardır***. Yöntemler, tek bir işlevi gerçekleştiren kod bloklarıdır. Her üyenin adını okumak, siz veya başka bir geliştirici tarafından sınıfın ne yaptığını anlamak için yeterli bilgi sağlamalıdır.
+`public class BankAccount` oluşturduğunuz sınıfı veya türü tanımlar. Sınıf bildirimini izleyen `{` ve `}` içindeki her şey, sınıfının durumunu ve davranışını tanımlar. `BankAccount` sınıfının beş ***üyesi*** vardır. İlk üçü ***özelliklerdir***. Özellikler veri öğeleridir ve doğrulamayı veya diğer kuralları zorlayan koda sahip olabilir. Son ikisi ***metodlardır***. Yöntemler, tek bir işlevi gerçekleştiren kod bloklarıdır. Her üyenin adını okumak, siz veya başka bir geliştirici tarafından sınıfın ne yaptığını anlamak için yeterli bilgi sağlamalıdır.
 
 ## <a name="open-a-new-account"></a>Yeni bir hesap açın
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-Oluşturucular, [`new`](../../language-reference/operators/new-operator.md)kullanarak bir nesne oluşturduğunuzda çağrılır. *Program.cs* içindeki satır `Console.WriteLine("Hello World!");` aşağıdaki satırla değiştirin (`<name>` adını adınızla değiştirin):
+Oluşturucular, [`new`](../../language-reference/operators/new-operator.md)kullanarak bir nesne oluşturduğunuzda çağrılır. *Program.cs* içindeki satır `Console.WriteLine("Hello World!");` aşağıdaki kodla değiştirin (`<name>` adını adınızla değiştirin):
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -119,7 +119,7 @@ Sonuçları görmek için `dotnet run` yazın.
 
 Banka hesabı sınıfınızın, doğru şekilde çalışması için mevdular ve çekme alları kabul etmesi gerekir. Hesap için her bir işlemin günlüğünü oluşturarak mevduları ve çekme bilgilerini uygulayalim. Bu, her bir işlemin bakiyesini güncelleştirmek için birkaç avantaj sunar. Geçmiş, tüm işlemleri denetlemek ve günlük bakiyeleri yönetmek için kullanılabilir. Gerektiğinde, tüm işlemlerin geçmişinden gelen dengeyi hesaplarken, düzeltilen tek bir işlemdeki tüm hatalar, sonraki hesaplamanın bakiyesine doğru şekilde yansıtılır.
 
-Bir işlemi temsil etmek için yeni bir tür oluşturarak başlayalım. Bu, herhangi bir sorumluluğu bulunmayan basit bir türdür. Birkaç özelliğe ihtiyaç duyuyor. *Transaction.cs*adlı yeni bir dosya oluşturun. Aşağıdaki kodu buna ekleyin:
+Bir işlemi temsil etmek için yeni bir tür oluşturarak başlayalım. Bu, herhangi bir sorumluluğu bulunmayan basit bir türdür. Birkaç özelliğe ihtiyaç duyuyor. *Transaction.cs*adlı yeni bir dosya oluşturun. Buna aşağıdaki kodu ekleyin:
 
 [!code-csharp[Transaction](~/samples/csharp/classes-quickstart/Transaction.cs)]
 

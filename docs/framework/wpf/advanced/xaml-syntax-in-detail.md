@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 10bd924664a469be26174fadf3892ee56aa33856
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 2c6a8662236b614545e7fb8545b7b60e1b08b6bd
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740643"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559839"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ayrıntılı XAML Sözdizimi
 Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanımlanmaktadır. Bu terimler, hem WPF belgeleri için hem de XAML kullanan diğer çerçeveler veya System. xaml düzeyinde XAML dil desteği tarafından etkinleştirilen temel XAML kavramlarını için bu belgenin geri kalanında sık kullanılır. Bu konu, [xaml genel bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md)konu başlığında sunulan temel terminoloji üzerinde genişletilir.  
@@ -86,7 +86,7 @@ Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanı
  Öznitelik sözdizimi, varolan bir nesne öğesinde bir özniteliği bildirerek bir özellik için değer ayarlayan XAML biçimlendirme sözdizimidir. Öznitelik adı, ilgili nesne öğesini yedekleyen sınıfın özelliğinin CLR üye adı ile aynı olmalıdır. Öznitelik adının ardından bir atama işleci (=) gelir. Öznitelik değeri tırnak içine alınmış bir dize olmalıdır.  
   
 > [!NOTE]
-> Bir özniteliğe sabit bir tırnak işareti koymak için alternatif tırnakları kullanabilirsiniz. Örneğin, içinde çift tırnak karakteri içeren bir dize bildirmek için tek tırnakları bir yol olarak kullanabilirsiniz. Tek veya çift tırnak işareti kullanıp kullanmayacağınızı, öznitelik değer dizesini açmak ve kapatmak için eşleşen bir çift kullanmanız gerekir. Ayrıca, belirli XAML söz dizimi tarafından uygulanan karakter kısıtlamaları etrafında çalışan kaçış dizileri veya diğer teknikler de mevcuttur. Bkz. [XML karakter varlıkları ve xaml](../../xaml-services/xml-character-entities-and-xaml.md).  
+> Bir özniteliğe sabit bir tırnak işareti koymak için alternatif tırnakları kullanabilirsiniz. Örneğin, içinde çift tırnak karakteri içeren bir dize bildirmek için tek tırnakları bir yol olarak kullanabilirsiniz. Tek veya çift tırnak işareti kullanıp kullanmayacağınızı, öznitelik değer dizesini açmak ve kapatmak için eşleşen bir çift kullanmanız gerekir. Ayrıca, belirli XAML söz dizimi tarafından uygulanan karakter kısıtlamaları etrafında çalışan kaçış dizileri veya diğer teknikler de mevcuttur. Bkz. [XML karakter varlıkları ve xaml](../../../desktop-wpf/xaml-services/xml-character-entities.md).  
   
  Öznitelik sözdizimi ile ayarlanbilmek için bir özelliğin ortak olması ve yazılabilir olması gerekir. Yedekleme türü sistemindeki özelliğinin değeri bir değer türü olmalıdır veya ilgili yedekleme türüne erişirken bir XAML işlemcisi tarafından örneklenmiş veya başvurulabilen bir başvuru türü olmalıdır.  
   
@@ -101,7 +101,7 @@ Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanı
   
 1. XAML işlemcisi bir küme ayracı veya <xref:System.Windows.Markup.MarkupExtension>türetilen bir nesne öğesi ile karşılaştığında, başvurulan biçimlendirme uzantısı değeri bir dize olarak işlemek yerine önce değerlendirilir ve biçimlendirme uzantısı tarafından döndürülen nesne değer olarak kullanılır. Birçok durumda, bir işaretleme uzantısı tarafından döndürülen nesne varolan bir nesneye ya da çalışma zamanına kadar değerlendirmeyi yapan bir ifadeye veya yeni bir örneklenmiş nesne değil.  
   
-2. Özellik öznitelikli bir <xref:System.ComponentModel.TypeConverter>ile bildirilirse veya özelliğin değer türü öznitelikli bir <xref:System.ComponentModel.TypeConverter>ile bildirilirse, özniteliğin dize değeri bir dönüştürme girişi olarak tür dönüştürücüsüne gönderilir ve dönüştürücü yeni bir nesne döndürür Instance.  
+2. Özelliği öznitelikli bir <xref:System.ComponentModel.TypeConverter>ile bildirilirse veya özelliğin değer türü öznitelikli bir <xref:System.ComponentModel.TypeConverter>ile bildirilirse, özniteliğin dize değeri bir dönüştürme girişi olarak tür dönüştürücüsüne gönderilir ve dönüştürücü yeni bir nesne örneği döndürür.  
   
 3. <xref:System.ComponentModel.TypeConverter>yoksa, özellik türüne doğrudan dönüştürme denenir. Bu son düzey, XAML dil temel türleri arasındaki ayrıştırıcının yerel değerindeki doğrudan dönüştürmedir veya bir Numaralandırmadaki adlandırılmış sabitlerin adlarını denetler (ayrıştırıcı daha sonra eşleşen değerlere erişir).  
   
@@ -144,7 +144,7 @@ Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanı
   
  [!code-xaml[XAMLOvwSupport#ContextMenu](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#contextmenu)]  
   
- Bir özellik öğesi içindeki değer ayrıca iç metin olarak verilebilir, çünkü belirtilen özellik türü, <xref:System.String>gibi bir temel değer türüdür veya bir adın belirtildiği bir sabit değerdir. Bu iki kullanım çok nadir bir durumdur, çünkü bu durumların her biri daha basit bir öznitelik sözdizimi de kullanabilir. Bir dize ile bir özellik öğesinin doldurulmasıyla ilgili bir senaryo XAML içerik özelliği olmayan, ancak UI metninin temsili için hala kullanılan özellikler içindir ve bu kullanıcı arabirimi metninde satır akışları gibi belirli boşluk öğelerinin görünmesi gerekir. Öznitelik sözdizimi, satır beslemelerini koruyamaz, ancak özellik öğesi söz dizimi, önemli beyaz alan koruması etkin olduğu sürece (Ayrıntılar için bkz. [xaml 'de beyaz boşluk işleme](../../xaml-services/whitespace-processing-in-xaml.md)). Başka bir senaryo ise, [X:Uid yönergesinin](../../xaml-services/x-uid-directive.md) Özellik öğesine uygulanabilmesi ve bu sayede değeri WPF çıkış BAML 'de veya başka teknikler için yerelleştirilmesi gereken bir değer olarak işaretlemenize olanak sağlar.  
+ Bir özellik öğesi içindeki değer ayrıca iç metin olarak verilebilir, çünkü belirtilen özellik türü, <xref:System.String>gibi bir temel değer türüdür veya bir adın belirtildiği bir sabit değerdir. Bu iki kullanım çok nadir bir durumdur, çünkü bu durumların her biri daha basit bir öznitelik sözdizimi de kullanabilir. Bir dize ile bir özellik öğesinin doldurulmasıyla ilgili bir senaryo XAML içerik özelliği olmayan, ancak UI metninin temsili için hala kullanılan özellikler içindir ve bu kullanıcı arabirimi metninde satır akışları gibi belirli boşluk öğelerinin görünmesi gerekir. Öznitelik sözdizimi, satır beslemelerini koruyamaz, ancak özellik öğesi söz dizimi, önemli beyaz alan koruması etkin olduğu sürece (Ayrıntılar için bkz. [xaml 'de beyaz boşluk işleme](../../../desktop-wpf/xaml-services/white-space-processing.md)). Başka bir senaryo ise, [X:Uid yönergesinin](../../../desktop-wpf/xaml-services/xuid-directive.md) Özellik öğesine uygulanabilmesi ve bu sayede değeri WPF çıkış BAML 'de veya başka teknikler için yerelleştirilmesi gereken bir değer olarak işaretlemenize olanak sağlar.  
   
  Bir özellik öğesi WPF mantıksal ağacında temsil edilmez. Özellik öğesi, bir özelliği ayarlamaya yönelik yalnızca belirli bir sözdizimidir ve bir örnek veya nesne çalıştıran bir öğe değildir. (Mantıksal ağaç kavramıyla ilgili ayrıntılar için bkz. [WPF 'de ağaçlar](trees-in-wpf.md).)  
   
@@ -158,7 +158,7 @@ Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanı
   
 - Tür <xref:System.Collections.IDictionary>uygular.  
   
-- Türü <xref:System.Array> türetiliyor (XAML içindeki diziler hakkında daha fazla bilgi için bkz. [X:Array Markup Extension](../../xaml-services/x-array-markup-extension.md).)  
+- Türü <xref:System.Array> türetiliyor (XAML içindeki diziler hakkında daha fazla bilgi için bkz. [X:Array Markup Extension](../../../desktop-wpf/xaml-services/xarray-markup-extension.md).)  
   
  Bir özelliğin türü bir koleksiyon ise, gösterilen koleksiyon türünün bir nesne öğesi olarak İşaretlemede belirtilmesi gerekmez. Bunun yerine, koleksiyonda öğeler haline gelmesi amaçlanan öğeler, Property öğesinin bir veya daha fazla alt öğesi olarak belirtilir. Bu tür öğeler, yükleme sırasında bir nesne olarak değerlendirilir ve kapsanan koleksiyonun `Add` yöntemi çağırarak koleksiyona eklenir. Örneğin, <xref:System.Windows.Style> <xref:System.Windows.Style.Triggers%2A> özelliği, <xref:System.Collections.IList>uygulayan <xref:System.Windows.TriggerCollection>özel koleksiyon türünü alır. İşaretlemede <xref:System.Windows.TriggerCollection> nesne öğesi örneği oluşturmak gerekli değildir. Bunun yerine, <xref:System.Windows.Trigger> (veya türetilmiş bir sınıf) türü kesin belirlenmiş ve örtük <xref:System.Windows.TriggerCollection>için öğe türü olarak beklenen tür olan `Style.Triggers` Özellik öğesi içinde öğe olarak bir veya daha fazla <xref:System.Windows.Trigger> öğesi belirtirsiniz.  
   
@@ -231,7 +231,7 @@ Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanı
   
  [!code-xaml[XAMLOvwSupport#SyntaxContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
   
- Biçimlendirme içinde <xref:System.Windows.Controls.UIElementCollection> için <xref:System.Windows.Controls.Panel.Children%2A> veya öğesi için özellik öğesi gerekmediği unutulmamalıdır. Bu, XAML 'in tasarım özelliğidir, bu sayede bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] tanımlayan öğeler, doğrudan üst-alt öğe ilişkilerle, iç içe geçmiş öğelerin ağaç olarak temsil edilen, özellik öğesi etiketlerini girmeden veya koleksiyon nesneleri. Aslında <xref:System.Windows.Controls.UIElementCollection>, tasarıma göre bir nesne öğesi olarak biçimlendirme içinde açıkça belirtilemez. Yalnızca amaçlanan kullanım örtük bir koleksiyon olduğundan <xref:System.Windows.Controls.UIElementCollection> Ortak parametresiz bir Oluşturucu sunmaz ve bu nedenle bir nesne öğesi olarak başlatılamaz.  
+ Biçimlendirme içinde <xref:System.Windows.Controls.UIElementCollection> için <xref:System.Windows.Controls.Panel.Children%2A> veya öğesi için özellik öğesi gerekmediği unutulmamalıdır. Bu, XAML 'in tasarım özelliğidir ve bu sayede, bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] tanımlayan öğeler, doğrudan üst-alt öğe ilişkilerinden oluşan iç içe geçmiş öğelerin bir ağacı olarak temsil edilir ve özellik öğesi etiketleri veya koleksiyon nesneleri dahil değildir. Aslında <xref:System.Windows.Controls.UIElementCollection>, tasarıma göre bir nesne öğesi olarak biçimlendirme içinde açıkça belirtilemez. Yalnızca amaçlanan kullanım örtük bir koleksiyon olduğundan <xref:System.Windows.Controls.UIElementCollection> Ortak parametresiz bir Oluşturucu sunmaz ve bu nedenle bir nesne öğesi olarak başlatılamaz.  
   
 ### <a name="mixing-property-elements-and-object-elements-in-an-object-with-a-content-property"></a>Içerik özelliği ile nesne içindeki özellik öğelerini ve nesne öğelerini karıştırma  
  XAML belirtimi, bir XAML işlemcisinin bir nesne öğesi içindeki XAML içerik özelliğini doldurmakta kullanılan nesne öğelerinin bitişik olması ve karışık olmaması gerektiğini bildirir. Özellik öğelerini ve içeriği karıştırmaya yönelik bu kısıtlama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML işlemcileri tarafından zorlanır.  
@@ -242,7 +242,7 @@ Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanı
   
 <a name="xaml_namespaces"></a>   
 ## <a name="xaml-namespaces"></a>XAML Ad Uzayları  
- Önceki söz dizimi örneklerinden hiçbiri varsayılan XAML ad alanı dışında bir XAML ad alanı belirtbelirtti. Tipik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalarda, varsayılan XAML ad alanı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ad alanı olarak belirtilir. Varsayılan XAML ad alanı dışında XAML ad alanları belirtebilir ve yine de benzer sözdizimini kullanabilirsiniz. Ancak, varsayılan XAML ad alanı içinde erişilebilir olmayan bir sınıfın adlandırıldığını her yerde, bu sınıf adı, karşılık gelen CLR ad alanına eşlenmiş şekilde XAML ad alanının öneki olmalıdır. Örneğin, `<custom:Example/>`, bir `Example` sınıfının örneğini oluşturmak için nesne öğesi sözdizimidir; burada, bu sınıfı içeren CLR ad alanı (ve muhtemelen Yedekleme türlerini içeren dış derleme bilgileri), daha önce `custom` eşlenir koy.  
+ Önceki söz dizimi örneklerinden hiçbiri varsayılan XAML ad alanı dışında bir XAML ad alanı belirtbelirtti. Tipik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalarda, varsayılan XAML ad alanı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ad alanı olarak belirtilir. Varsayılan XAML ad alanı dışında XAML ad alanları belirtebilir ve yine de benzer sözdizimini kullanabilirsiniz. Ancak, varsayılan XAML ad alanı içinde erişilebilir olmayan bir sınıfın adlandırıldığını her yerde, bu sınıf adı, karşılık gelen CLR ad alanına eşlenmiş şekilde XAML ad alanının öneki olmalıdır. Örneğin, `<custom:Example/>`, bu sınıfı içeren CLR ad alanı (ve muhtemelen Yedekleme türlerini içeren dış derleme bilgileri), daha önce `custom` ön ekine eşlendiği `Example` sınıfının bir örneğini başlatmak için nesne öğesi sözdizimidir.  
   
  XAML ad alanları hakkında daha fazla bilgi için bkz. [WPF XAML Için xaml ad alanları ve ad alanı eşlemesi](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
@@ -254,9 +254,9 @@ Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanı
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- Burada, `StaticResource` biçimlendirme uzantısı uygulamasını sağlayan <xref:System.Windows.StaticResourceExtension> sınıfını tanımlar. Sonraki dize `MyStyle`, uzantı dizesinden alınan parametrenin istenen <xref:System.Windows.ResourceKey>bildirdiği varsayılan olmayan <xref:System.Windows.StaticResourceExtension> Oluşturucu için giriş olarak kullanılır. `MyStyle`, kaynak olarak tanımlanan bir <xref:System.Windows.Style> [X:Key](../../xaml-services/x-key-directive.md) değeri olması beklenir. [StaticResource biçimlendirme uzantısı](staticresource-markup-extension.md) kullanımı, kaynağın, yükleme zamanında statik kaynak arama mantığı aracılığıyla <xref:System.Windows.Style> özellik değerini sağlamak için kullanılmasını ister.  
+ Burada, `StaticResource` biçimlendirme uzantısı uygulamasını sağlayan <xref:System.Windows.StaticResourceExtension> sınıfını tanımlar. Sonraki dize `MyStyle`, uzantı dizesinden alınan parametrenin istenen <xref:System.Windows.ResourceKey>bildirdiği varsayılan olmayan <xref:System.Windows.StaticResourceExtension> Oluşturucu için giriş olarak kullanılır. `MyStyle`, kaynak olarak tanımlanan bir <xref:System.Windows.Style> [X:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) değeri olması beklenir. [StaticResource biçimlendirme uzantısı](staticresource-markup-extension.md) kullanımı, kaynağın, yükleme zamanında statik kaynak arama mantığı aracılığıyla <xref:System.Windows.Style> özellik değerini sağlamak için kullanılmasını ister.  
   
- Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz. [Biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md). Biçimlendirme uzantıları ve genel .NET XAML uygulamasında etkin olan diğer XAML programlama özellikleri başvurusu için bkz. [xaml ad alanı (x:) Dil özellikleri](../../xaml-services/xaml-namespace-x-language-features.md). WPF 'e özgü biçimlendirme uzantıları için bkz. [WPF XAML uzantıları](wpf-xaml-extensions.md).  
+ Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz. [Biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md). Biçimlendirme uzantıları ve genel .NET XAML uygulamasında etkin olan diğer XAML programlama özellikleri başvurusu için bkz. [xaml ad alanı (x:) Dil özellikleri](../../../desktop-wpf/xaml-services/namespace-language-features.md). WPF 'e özgü biçimlendirme uzantıları için bkz. [WPF XAML uzantıları](wpf-xaml-extensions.md).  
   
 <a name="attached_properties"></a>   
 ## <a name="attached-properties"></a>Ekli Özellikler  
@@ -289,7 +289,7 @@ Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanı
  Aşağıdaki bölümlerde, xaml işlemciler tarafından Teknik olarak desteklenen XAML kullanımları açıklanır, ancak XAML kaynakları içeren uygulamalar geliştirirken, daha fazla ayrıntı veya diğer Aesthetic Characteristics sorunları yaşabilir.  
   
 ### <a name="optional-property-element-usages"></a>İsteğe bağlı özellik öğesi kullanımları  
- İsteğe bağlı özellik öğesi kullanımları, XAML işlemcisinin örtük olarak niteledüğü öğe içeriği özelliklerinin açıkça yazılmasını içerir. Örneğin, bir <xref:System.Windows.Controls.Menu>içeriğini bildirdiğinizde, <xref:System.Windows.Controls.Menu> <xref:System.Windows.Controls.ItemsControl.Items%2A> koleksiyonunu açıkça bir `<Menu.Items>` Özellik öğesi etiketi olarak bildirmeyi ve her bir <xref:System.Windows.Controls.MenuItem> `<Menu.Items>`içinde yerleştirmeyi seçebilirsiniz. örtük XAML işlemci davranışını kullanmak yerine, bir <xref:System.Windows.Controls.Menu> tüm alt öğelerinin bir <xref:System.Windows.Controls.MenuItem> olması ve <xref:System.Windows.Controls.ItemsControl.Items%2A> koleksiyonuna yerleştirilmesi gerekir. Bazen isteğe bağlı kullanımlar, biçimlendirme içinde temsil edildiği şekilde nesne yapısını görsel açıdan açıklığa kavuşturmanıza yardımcı olabilir. Ya da bazen bir açık özellik öğesi kullanımı, bir öznitelik değeri içinde iç içe geçmiş biçimlendirme uzantıları gibi teknik olarak işlev gösteren ancak görsel açıdan karmaşık olan işaretlemeleri önleyebilir.  
+ İsteğe bağlı özellik öğesi kullanımları, XAML işlemcisinin örtük olarak niteledüğü öğe içeriği özelliklerinin açıkça yazılmasını içerir. Örneğin, bir <xref:System.Windows.Controls.Menu>içeriğini bildirdiğinizde, bir <xref:System.Windows.Controls.MenuItem> öğesinin tüm alt öğelerinin bir `<Menu.Items>`olması ve <xref:System.Windows.Controls.Menu> koleksiyonuna yerleştirilmesi gereken örtük XAML işlemci davranışını kullanmak yerine, <xref:System.Windows.Controls.Menu> <xref:System.Windows.Controls.ItemsControl.Items%2A> koleksiyonunu bir `<Menu.Items>` Özellik öğesi etiketi olarak açıkça bildirmeyi ve her bir <xref:System.Windows.Controls.MenuItem> <xref:System.Windows.Controls.ItemsControl.Items%2A> içine yerleştirmeyi seçebilirsiniz. Bazen isteğe bağlı kullanımlar, biçimlendirme içinde temsil edildiği şekilde nesne yapısını görsel açıdan açıklığa kavuşturmanıza yardımcı olabilir. Ya da bazen bir açık özellik öğesi kullanımı, bir öznitelik değeri içinde iç içe geçmiş biçimlendirme uzantıları gibi teknik olarak işlev gösteren ancak görsel açıdan karmaşık olan işaretlemeleri önleyebilir.  
   
 ### <a name="full-typenamemembername-qualified-attributes"></a>Tam typeName. memberName nitelenmiş öznitelikler  
  *TypeName*. bir öznitelik için *ÜyeForm* aslında yalnızca yönlendirilmiş olay durumundan daha fazla evrensel olarak çalışmaktadır. Ancak, formun gereksiz olduğu ve yalnızca biçimlendirme stili ve okunabilirlik nedenleriyle bu durumda kaçınmalısınız. Aşağıdaki örnekte, <xref:System.Windows.Controls.Control.Background%2A> özniteliğine yapılan üç başvuru tamamen eşdeğerdir:  
@@ -316,7 +316,7 @@ Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanı
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [XAML'ye Genel Bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [XAML Ad Alanı (x:) Dil Özellikleri](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML Ad Alanı (x:) Dil Özellikleri](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [WPF XAML Uzantıları](wpf-xaml-extensions.md)
 - [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
 - [TypeConverters ve XAML](typeconverters-and-xaml.md)

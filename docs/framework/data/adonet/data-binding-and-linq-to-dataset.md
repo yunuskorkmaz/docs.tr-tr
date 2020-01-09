@@ -2,38 +2,38 @@
 title: Veri Bağlama ve LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
-ms.openlocfilehash: 563d57249daa3aa720da1d9654866727f770afb3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2b49e2a3ff0d95dcbceff8099f51993c0f08d64e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786695"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634878"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>Veri Bağlama ve LINQ to DataSet
-*Veri bağlama* , uygulama kullanıcı arabirimi ve iş mantığı arasında bağlantı kuran işlemdir. Bağlamanın doğru ayarları varsa ve veriler doğru bildirimleri sağlıyorsa, veriler değerini değiştirdiğinde veriye bağlanan öğeler otomatik olarak değişiklikleri yansıtır. , <xref:System.Data.DataSet> İçerdiği verilerin kaynağından bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlayan verilerin bellek içi gösterimidir. ADO.NET 2,0 <xref:System.Data.DataView> , <xref:System.Data.DataTable>içinde depolanan verileri sıralamanıza ve filtrelemenize olanak sağlar. Bu işlevsellik genellikle veri bağlama uygulamalarında kullanılır. Bir <xref:System.Data.DataView>kullanarak, verileri farklı sıralama siparişleriyle bir tabloda kullanıma sunabilirsiniz ve verileri satır durumuna göre veya bir filtre ifadesine göre filtreleyebilirsiniz. <xref:System.Data.DataView> Nesnesi hakkında daha fazla bilgi için bkz. [DataView](./dataset-datatable-dataview/dataviews.md).  
+*Veri bağlama* , uygulama kullanıcı arabirimi ve iş mantığı arasında bağlantı kuran işlemdir. Bağlamanın doğru ayarları varsa ve veriler doğru bildirimleri sağlıyorsa, veriler değerini değiştirdiğinde veriye bağlanan öğeler otomatik olarak değişiklikleri yansıtır. <xref:System.Data.DataSet>, içerdiği verilerin kaynağından bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlayan verilerin bellek içi bir gösterimidir. ADO.NET 2,0 <xref:System.Data.DataView>, bir <xref:System.Data.DataTable>depolanan verileri sıralamanıza ve filtrelemenize olanak sağlar. Bu işlevsellik genellikle veri bağlama uygulamalarında kullanılır. <xref:System.Data.DataView>kullanarak verileri farklı sıralama siparişleriyle bir tabloda kullanıma sunabilirsiniz ve verileri satır durumuna göre veya bir filtre ifadesine göre filtreleyebilirsiniz. <xref:System.Data.DataView> nesnesi hakkında daha fazla bilgi için bkz. [DataView](./dataset-datatable-dataview/dataviews.md).  
   
- LINQ to DataSet, geliştiricilerin kullanarak <xref:System.Data.DataSet> [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]üzerinde karmaşık ve güçlü sorgular oluşturmalarına olanak tanır. Ancak, bir LINQ to DataSet sorgusu, bir bağlama senaryosunda <xref:System.Data.DataRow> kolayca kullanılmayan nesnelerin bir listesini döndürür. Bağlama daha kolay hale getirmek için bir LINQ to DataSet sorgusundan <xref:System.Data.DataView> bir oluşturabilirsiniz. Bu <xref:System.Data.DataView> , sorguda belirtilen filtreleme ve sıralamayı kullanır, ancak veri bağlama için daha uygundur. LINQ to DataSet, <xref:System.Data.DataView> dize tabanlı filtrelemeye ve sıralamaya [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] kıyasla çok daha karmaşık ve güçlü filtreleme ve sıralama işlemlerine izin veren ifade tabanlı filtreleme ve sıralama sağlayarak işlevselliğini genişletir.  
+ LINQ to DataSet, geliştiricilerin dil ile tümleşik sorgu (LINQ) kullanarak bir <xref:System.Data.DataSet> üzerinde karmaşık ve güçlü sorgular oluşturmalarına olanak tanır. Ancak, bir LINQ to DataSet sorgusu, bir bağlama senaryosunda kolayca kullanılmayan <xref:System.Data.DataRow> nesnelerinin bir listesini döndürür. Bağlamayı kolaylaştırmak için bir LINQ to DataSet sorgusundan <xref:System.Data.DataView> oluşturabilirsiniz. Bu <xref:System.Data.DataView> sorguda belirtilen filtreleme ve sıralamayı kullanır, ancak veri bağlama için daha uygundur. LINQ to DataSet, LINQ ifade tabanlı filtreleme ve sıralama sağlayarak <xref:System.Data.DataView> işlevselliğini genişleterek, dize tabanlı filtreleme ve sıralamaya kıyasla çok daha karmaşık ve güçlü filtreleme ve sıralama işlemlerine olanak tanır.  
   
- Öğesinin sorgunun kendisini temsil ettiğini ve sorgunun üstünde bir görünüm olduğunu unutmayın. <xref:System.Data.DataView> , Bir <xref:System.Windows.Forms.DataGrid> veya<xref:System.Windows.Forms.DataGridView>gibi bir UI denetimine bağlanır ve basit veri bağlama modeli sağlar. <xref:System.Data.DataView> Ayrıca, bu tablo <xref:System.Data.DataTable> içinvarsayılanbirgörünümsağlayanbir'dandaoluşturulabilir.<xref:System.Data.DataView>  
+ <xref:System.Data.DataView> sorgunun kendisini temsil ettiğini ve sorgunun üzerine bir görünüm olamayacağını unutmayın. <xref:System.Data.DataView>, bir <xref:System.Windows.Forms.DataGrid> veya <xref:System.Windows.Forms.DataGridView>gibi bir kullanıcı arabirimi denetimine (basit veri bağlama modeli sağlar) bağlanır. Bir <xref:System.Data.DataView> Ayrıca, bu tablo için varsayılan bir görünüm sağlayarak bir <xref:System.Data.DataTable>oluşturulabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [DataView Nesnesi Oluşturma](creating-a-dataview-object-linq-to-dataset.md)  
- Oluşturma hakkında bilgi sağlar <xref:System.Data.DataView>.  
+ <xref:System.Data.DataView>oluşturma hakkında bilgi sağlar.  
   
  [DataView ile Filtreleme](filtering-with-dataview-linq-to-dataset.md)  
- İle nasıl filtreleneceğini açıklar <xref:System.Data.DataView>.  
+ <xref:System.Data.DataView>nasıl filtreleneceğini açıklar.  
   
  [DataView ile Sıralama](sorting-with-dataview-linq-to-dataset.md)  
- İle nasıl sıralanacağını açıklar <xref:System.Data.DataView>.  
+ <xref:System.Data.DataView>ile nasıl sıralanacağını açıklar.  
   
  [DataView’da DataRowView Koleksiyonunu Sorgulama](querying-the-datarowview-collection-in-a-dataview.md)  
- <xref:System.Data.DataRowView> Tarafından<xref:System.Data.DataView>sunulan koleksiyonu sorgulama hakkında bilgi sağlar.  
+ <xref:System.Data.DataView>tarafından sunulan <xref:System.Data.DataRowView> koleksiyonunu sorgulama hakkında bilgi sağlar.  
   
  [DataView Performansı](dataview-performance.md)  
- Ve performansı hakkında <xref:System.Data.DataView> bilgi sağlar.  
+ <xref:System.Data.DataView> ve performans hakkında bilgi sağlar.  
   
- [Nasıl yapılır: Bir DataView nesnesini Windows Forms DataGridView denetimine bağlama](how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
- Bir <xref:System.Data.DataView> nesnesinin bir <xref:System.Windows.Forms.DataGridView>öğesine nasıl bağlanacağını açıklar.  
+ [Nasıl yapılır: Windows Forms DataGridView Denetimine DataView Nesnesi Bağlama](how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
+ Bir <xref:System.Data.DataView> nesnesinin bir <xref:System.Windows.Forms.DataGridView>nasıl bağlanacağını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

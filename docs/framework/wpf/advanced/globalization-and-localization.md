@@ -11,15 +11,15 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: 0d01f7536c120f51372961d944804cfe0063fb9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80e0bf641c46eb1461769f5a85950982258c78f5
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010286"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559428"
 ---
 # <a name="globalization-and-localization"></a>Genelleştirme ve Yerelleştirme
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Dünya çapında kullanılmaya hazır uygulamalar geliştirme için kapsamlı destek sağlar.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], dünya çapında sunulan uygulamaların geliştirilmesi için kapsamlı destek sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış](wpf-globalization-and-localization-overview.md)  
@@ -36,6 +36,6 @@ ms.locfileid: "62010286"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [XAML'de xml:lang İşleme](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [XAML'de xml:lang İşleme](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler

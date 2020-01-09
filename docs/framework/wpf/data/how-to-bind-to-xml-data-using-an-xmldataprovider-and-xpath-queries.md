@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: f075d646539de5d68e1c9c75d9664451125e9919
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a5ad7d8bce9bc0a760868e483278d1836f9472af
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733555"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559709"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Nasıl yapılır: XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama
 Bu örnek, bir <xref:System.Windows.Data.XmlDataProvider>kullanarak XML verilerinin nasıl bağlanacağını gösterir.  
@@ -26,7 +26,7 @@ Bu örnek, bir <xref:System.Windows.Data.XmlDataProvider>kullanarak XML verileri
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
- Bu örnekte gösterildiği gibi, öznitelik sözdiziminde aynı bağlama bildirimini oluşturmak için özel karakterleri düzgün bir şekilde atlamanız gerekir. Daha fazla bilgi için bkz. [XML karakter varlıkları ve xaml](../../xaml-services/xml-character-entities-and-xaml.md).  
+ Bu örnekte gösterildiği gibi, öznitelik sözdiziminde aynı bağlama bildirimini oluşturmak için özel karakterleri düzgün bir şekilde atlamanız gerekir. Daha fazla bilgi için bkz. [XML karakter varlıkları ve xaml](../../../desktop-wpf/xaml-services/xml-character-entities.md).  
   
  <xref:System.Windows.Controls.ListBox>, bu örnek çalıştırıldığında aşağıdaki öğeleri gösterir. Bunlar, *hisse senedi* değeri "*Out*" veya *sayı* değeri 3 veya daha büyük ya da 8 ' e eşit olan *kitaplar* altındaki tüm öğelerin *unvanına ait başlıktır*. <xref:System.Windows.Data.XmlDataProvider> ayarlanan <xref:System.Windows.Data.XmlDataProvider.XPath%2A> değeri yalnızca *Books* öğelerinin gösterilmesini (temelde bir filtre ayarlaması) gerektiğini gösterdiği için, hiçbir *CD* öğesi döndürülmediğine dikkat edin.  
   

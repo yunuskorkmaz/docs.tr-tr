@@ -1,17 +1,17 @@
 ---
-title: İşlev İfadesi
+title: Function İfadesi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Function expression [Visual Basic]
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: d14d7c9bc701b5e06c51202c07c3b79832aba7cc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 454c4e3d926640934a8edc4fcb16e4308a89dd50
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331077"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632343"
 ---
 # <a name="function-expression-visual-basic"></a>İşlev İfadesi (Visual Basic)
 Bir işlev lambda ifadesi tanımlayan parametreleri ve kodu bildirir.  
@@ -72,7 +72,7 @@ End Function
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Örnek  
- Lambda ifadeleri [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]içindeki sorgu işleçlerinin birçoğunu daha fazla kullanır ve Yöntem tabanlı sorgularda açık bir şekilde kullanılabilir. Aşağıdaki örnek tipik bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguyu ve ardından sorgunun yöntem biçimine çevirisini gösterir.  
+ Lambda ifadeleri, dil ile tümleşik sorgu (LINQ) içinde sorgu işleçlerinin birçoğunu daha fazla kullanır ve Yöntem tabanlı sorgularda açık bir şekilde kullanılabilir. Aşağıdaki örnek tipik bir LINQ sorgusunu ve ardından sorgunun yöntem biçimine çevirisini gösterir.  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  

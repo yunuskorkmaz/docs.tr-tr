@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5625b63f2a2162f8f188476bfd61bde4c717f1dd
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458306"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559865"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic ve WPF Olay İşleme
 Özellikle Microsoft Visual Basic .NET dili için, <xref:System.Windows.UIElement.AddHandler%2A> özniteliklerle olay işleyicileri eklemek yerine, olay işleyicilerini örneklerle ilişkilendirmek için dile özgü `Handles` anahtar sözcüğünü kullanabilirsiniz. Ancak, örnekleri örneklere eklemek için `Handles` tekniği bazı sınırlamalara sahiptir, çünkü `Handles` sözdizimi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay sisteminin bazı belirli yönlendirilmiş olay özelliklerini destekleyemez.  
   
 ## <a name="using-handles-in-a-wpf-application"></a>WPF uygulamasında "Handles" kullanma  
- `Handles` olan örneklere ve olaylara bağlı olay işleyicileri, örneğin, öğelerdeki öznitelik değerleri aracılığıyla atanan olay işleyicileri için de bir gereksinim olan Örneğin kısmi sınıf bildiriminde tanımlanmalıdır. Sayfada yalnızca bir <xref:System.Windows.FrameworkContentElement.Name%2A> Özellik değeri (veya [X:Name yönergesinin](../../xaml-services/x-name-directive.md) bildirildiği) içeren bir öğe için `Handles` belirtebilirsiniz. Bunun nedeni, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.FrameworkContentElement.Name%2A>, `Handles` sözdizimi için gereken *örneği. Event* başvuru biçimini desteklemek için gereken örnek başvurusunu oluşturmasıdır. <xref:System.Windows.FrameworkContentElement.Name%2A> başvurusu olmadan `Handles` için kullanılabilen tek öğe, kısmi sınıfı tanımlayan kök öğe örneğidir.  
+ `Handles` olan örneklere ve olaylara bağlı olay işleyicileri, örneğin, öğelerdeki öznitelik değerleri aracılığıyla atanan olay işleyicileri için de bir gereksinim olan Örneğin kısmi sınıf bildiriminde tanımlanmalıdır. Sayfada yalnızca bir <xref:System.Windows.FrameworkContentElement.Name%2A> Özellik değeri (veya [X:Name yönergesinin](../../../desktop-wpf/xaml-services/xname-directive.md) bildirildiği) içeren bir öğe için `Handles` belirtebilirsiniz. Bunun nedeni, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.FrameworkContentElement.Name%2A>, `Handles` sözdizimi için gereken *örneği. Event* başvuru biçimini desteklemek için gereken örnek başvurusunu oluşturmasıdır. <xref:System.Windows.FrameworkContentElement.Name%2A> başvurusu olmadan `Handles` için kullanılabilen tek öğe, kısmi sınıfı tanımlayan kök öğe örneğidir.  
   
  Aynı işleyiciyi birden çok öğeye atayabilirsiniz. `Handles` sonra *örnek. olay* başvurularını virgülle ayırın.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73458306"
 > XAML 'de aynı olay için bir olay işleyicisi belirttiğinizde, Visual Basic kodda `Handles` sözdizimini kullanmayın. Bu durumda, olay işleyicisi iki kez çağırılır.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>WPF "Handles" Işlevselliğini nasıl uygular  
- Bir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sayfası derlendiğinde, ara dosya <xref:System.Windows.FrameworkContentElement.Name%2A> özellik kümesi (veya [X:Name yönergesinin](../../xaml-services/x-name-directive.md) bildirildiği) sayfadaki her öğeye `Friend` `WithEvents` başvurularını bildirir. Her adlandırılmış örnek potansiyel olarak `Handles`aracılığıyla bir işleyiciye atanabilecek bir öğedir.  
+ Bir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sayfası derlendiğinde, ara dosya <xref:System.Windows.FrameworkContentElement.Name%2A> özellik kümesi (veya [X:Name yönergesinin](../../../desktop-wpf/xaml-services/xname-directive.md) bildirildiği) sayfadaki her öğeye `Friend` `WithEvents` başvurularını bildirir. Her adlandırılmış örnek potansiyel olarak `Handles`aracılığıyla bir işleyiciye atanabilecek bir öğedir.  
   
 > [!NOTE]
 > IntelliSense, Visual Studio 'da sayfada bir `Handles` başvurusu için hangi öğelerin kullanılabildiği hakkında tamamlanmasını gösterebilir. Ancak, bu, ara dosyanın tüm `Friends` başvurularını doldurabilmesi için bir derleme geçişi alabilir.  

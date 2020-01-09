@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: 3d504467c137c1e3f494e120217957661f4e75a3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 11903a9bae25b0646d944fb11038e07434996015
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458761"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559761"
 ---
 # <a name="resources-and-code"></a>Kaynaklar ve Kod
 Bu genel bakış, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kaynaklarına [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] söz dizimi yerine kod kullanarak nasıl erişilebileceğini veya oluşturulandığına yoğunlaşır. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sözdizimi perspektifinden genel kaynak kullanımı ve kaynakları hakkında daha fazla bilgi için bkz. [xaml kaynakları](xaml-resources.md).  
@@ -42,7 +42,7 @@ Bu genel bakış, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-
   
 <a name="objectaskey"></a>   
 ## <a name="using-objects-as-keys"></a>Nesneleri anahtar olarak kullanma  
- Çoğu kaynak kullanımları, kaynağın anahtarını bir dize olacak şekilde ayarlar. Ancak, çeşitli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellikleri, anahtarları belirtmek için bir dize türü kullanmaz, bunun yerine bu parametre bir nesnedir. Kaynağı bir nesne tarafından anahtarlaştırma özelliği, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stili ve tema desteği tarafından kullanılır. Diğer bir biçimde stilli olmayan bir denetim için varsayılan stil olan temalardaki stiller, her biri için uygulanmaları gereken denetimin <xref:System.Type> anahtarlanır. Türüne göre anahtarlan, her denetim türünün varsayılan örneklerinde çalışacak güvenilir bir arama mekanizması sağlar ve tür, yansıma tarafından algılanır ve türetilmiş türün varsayılan stili olmasa bile, türetilmiş sınıfların stillendirilmesini için kullanılabilir. [X:Type Işaretleme uzantısını](../../xaml-services/x-type-markup-extension.md)kullanarak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tanımlanan bir kaynak için <xref:System.Type> anahtarı belirtebilirsiniz. [ComponentResourceKey Biçimlendirme Uzantısı](componentresourcekey-markup-extension.md)gibi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliklerini destekleyen diğer dize olmayan anahtar kullanımları için de benzer uzantılar vardır.  
+ Çoğu kaynak kullanımları, kaynağın anahtarını bir dize olacak şekilde ayarlar. Ancak, çeşitli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellikleri, anahtarları belirtmek için bir dize türü kullanmaz, bunun yerine bu parametre bir nesnedir. Kaynağı bir nesne tarafından anahtarlaştırma özelliği, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stili ve tema desteği tarafından kullanılır. Diğer bir biçimde stilli olmayan bir denetim için varsayılan stil olan temalardaki stiller, her biri için uygulanmaları gereken denetimin <xref:System.Type> anahtarlanır. Türüne göre anahtarlan, her denetim türünün varsayılan örneklerinde çalışacak güvenilir bir arama mekanizması sağlar ve tür, yansıma tarafından algılanır ve türetilmiş türün varsayılan stili olmasa bile, türetilmiş sınıfların stillendirilmesini için kullanılabilir. [X:Type Işaretleme uzantısını](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)kullanarak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tanımlanan bir kaynak için <xref:System.Type> anahtarı belirtebilirsiniz. [ComponentResourceKey Biçimlendirme Uzantısı](componentresourcekey-markup-extension.md)gibi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliklerini destekleyen diğer dize olmayan anahtar kullanımları için de benzer uzantılar vardır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
