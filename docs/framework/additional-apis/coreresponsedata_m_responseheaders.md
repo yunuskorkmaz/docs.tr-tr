@@ -1,5 +1,5 @@
 ---
-title: CoreResponseData.m_ResponseHeaders alan
+title: CoreResponseData. m_ResponseHeaders alanı
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: ea93b70ae8e1a710b4208050d7ec823a28b218b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df0b592a5f85d4c99dee4ecb60963f4abb560a13
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705980"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741011"
 ---
-# <a name="coreresponsedatamresponseheaders-field"></a>CoreResponseData.m\_ResponseHeaders alan
+# <a name="coreresponsedatam_responseheaders-field"></a>CoreResponseData. d\_ResponseHeaders alanı
 
-`CoreResponseData.m_ResponseHeaders` olan bir <xref:System.Net.WebHeaderCollection> , sunucu Yanıtla ilişkili üstbilgiler.
+`CoreResponseData.m_ResponseHeaders`, sunucu yanıtıyla ilişkili üst bilgilerin bir <xref:System.Net.WebHeaderCollection>.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -28,14 +28,14 @@ public WebHeaderCollection m_ResponseHeaders
 ```
 
 > [!WARNING]
-> Bu API, kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır. Bunun yerine, kullanmanız bir <xref:System.Diagnostics.DiagnosticSource> ağ kod yeteneklerinizi. Bkz: [DiagnosticSource Kullanıcı Kılavuzu](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Bu API 'nin doğrudan kodunuzda kullanılması amaçlıyordu. Bunun yerine, ağ kodunu bağlamak için bir <xref:System.Diagnostics.DiagnosticSource> kullanmanız gerekir. Bkz. [Diagnosticsource Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu sınıfın kullanımını desteklemez.
+> Microsoft, bu sınıfın herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Net>
+**Ad alanı:** <xref:System.Net>
 
-**Derleme:** Sistemde (System.dll)
+**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
 
-**.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

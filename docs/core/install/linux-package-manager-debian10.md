@@ -4,12 +4,12 @@ description: .NET Core SDK ve çalışma zamanını de, 10 ' da yüklemek için 
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 2c24a02423f5aa8f011cfb4705efb51d97cfaf1e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 2f3f04ef67115b28b1be91909e88c7ae714260db
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74836950"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740727"
 ---
 # <a name="debian-10-package-manager---install-net-core"></a>Detem 10 Package Manager-.NET Core 'ı yükler
 
@@ -21,11 +21,11 @@ Bu makalede, bir paket yöneticisinin .NET Core 'u de, 10 ' da yüklemek için n
 
 .NET yüklemeden önce şunları yapmanız gerekir:
 
-- Microsoft anahtarını kaydetme
-- Ürün deposunu kaydetme
-- Gerekli bağımlılıkları yükler
+- Microsoft anahtarını kaydettirin.
+- Ürün deposunu kaydedin.
+- Gerekli bağımlılıkları yükler.
 
-Bu işlemin makine başına bir kez yapılması yeterlidir.
+Bu işlemin makine başına tek bir kez yapılması yeterlidir.
 
 Bir Terminal açın ve aşağıdaki komutları çalıştırın.
 

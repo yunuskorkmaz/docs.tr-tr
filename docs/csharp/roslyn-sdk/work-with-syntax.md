@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK sözdizimi modelini kullanın
 description: Bu genel bakışta, söz dizimi düğümlerini anlamak ve işlemek için kullandığınız türlerin anlaşılması sağlanır.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 940d2756ef7735ee96d38d0286f99fadf7b81dc6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: fc1b1f5ae5ec985425c8d6aec49ef7f830ea9162
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774094"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740479"
 ---
 # <a name="work-with-syntax"></a>Söz dizimi ile çalışma
 
@@ -61,15 +61,15 @@ Bir belirtecin <xref:Microsoft.CodeAnalysis.SyntaxToken.LeadingTrivia?displayPro
 
 Söz dizimi düğümleri ve belirteçlerden farklı olarak söz dizimi bilgi üst öğeleri yoktur. Henüz, ağacın bir parçası olduklarından ve her biri tek bir belirteçle ilişkilendirildiği için, <xref:Microsoft.CodeAnalysis.SyntaxTrivia.Token?displayProperty=nameWithType> özelliğini kullanarak ilişkili olan belirtece erişebilirsiniz.
 
-## <a name="spans"></a>Maları
+## <a name="spans"></a>Yayılma
 
 Her düğüm, belirteç veya bilgi, kaynak metni içindeki konumunu ve içerdiği karakter sayısını bilir. Bir metin konumu, sıfır tabanlı `char` dizin olan 32 bitlik bir tamsayı olarak temsil edilir. <xref:Microsoft.CodeAnalysis.Text.TextSpan> nesnesi, her ikisi de tamsayılar olarak gösterilen başlangıç konumu ve karakter sayısıdır. <xref:Microsoft.CodeAnalysis.Text.TextSpan> sıfır uzunluğa sahipse, iki karakter arasındaki bir konuma başvurur.
 
-Her düğüm iki <xref:Microsoft.CodeAnalysis.Text.TextSpan> özelliğe sahiptir: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> ve <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>.
+Her düğüm iki <xref:Microsoft.CodeAnalysis.Text.TextSpan> özelliğe sahiptir: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> ve <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A>.
 
-<xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> özelliği, düğümün alt ağacındaki ilk belirtecin başından son belirtecin sonuna kadar olan metindir. Bu yayılma, başında veya sonunda bir boşluk içermez.
+<xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> özelliği, düğümün alt ağacındaki ilk belirtecin başından son belirtecin sonuna kadar olan metindir. Bu yayılma, başında veya sonunda bir boşluk içermez.
 
-<xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> özelliği, düğümün normal yayılımını ve önünde ya da sondaki üç nokta yayılmasını içeren metin yaydır.
+<xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> özelliği, düğümün normal yayılımını ve önünde ya da sondaki üç nokta yayılmasını içeren metin yaydır.
 
 Örneğin:
 
@@ -85,11 +85,11 @@ Bloğun içindeki deyimin düğümü, tek dikey çubuklar (|) ile belirtilen bir
 
 ## <a name="kinds"></a>Farklı
 
-Her düğüm, belirteç veya bilgi, temsil edilen tam sözdizimi öğesini tanımlayan <xref:System.Int32?displayProperty=nameWithType>türünde bir <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> özelliğine sahiptir. Bu değer dile özgü bir numaralandırmaya atanabilir; Her dil C# veya vb, tüm olası düğümleri, belirteçleri ve dilbilgisinde bilgi öğelerini listeleyen tek bir`SyntaxKind`numaralandırması (sırasıyla<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType>ve<xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>) vardır. Bu dönüştürme <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> veya <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> uzantısı yöntemlerine erişerek otomatik olarak yapılabilir.
+Her düğüm, belirteç veya bilgi, temsil edilen tam sözdizimi öğesini tanımlayan <xref:System.Int32?displayProperty=nameWithType>türünde bir <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> özelliğine sahiptir. Bu değer dile özgü bir numaralandırmaya atanabilir. Her dil C# veya Visual Basic, tüm olası düğümleri, belirteçleri ve dilbilgisinde bilgi öğelerini listeleyen tek bir `SyntaxKind` numaralandırması (sırasıyla<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> ve <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>) vardır. Bu dönüştürme <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A?displayProperty=nameWithType> veya <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind%2A?displayProperty=nameWithType> uzantısı yöntemlerine erişerek otomatik olarak yapılabilir.
 
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> özelliği, aynı düğüm sınıfını paylaşan sözdizimi düğümü türlerinin kolay bir şekilde kesinleştirilmesine olanak sağlar. Belirteçler ve trivia için, bu özellik bir öğe türünü diğerinden ayırt etmenin tek yoludur.
 
-Örneğin, tek bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> sınıfı alt öğe olarak <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken>ve <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> sahiptir. <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> özelliği, bunun <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression>veya <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> tür bir sözdizimi düğümü olduğunu ayırt eder.
+Örneğin, tek bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> sınıfı alt öğe olarak <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken>ve <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> sahiptir. <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A> özelliği, bunun <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression>veya <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> tür bir sözdizimi düğümü olduğunu ayırt eder.
 
 ## <a name="errors"></a>Hatalar
 

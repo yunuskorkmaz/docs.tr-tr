@@ -2,16 +2,16 @@
 title: dotnet-install scripts
 description: .NET Core CLI araçlarını ve paylaşılan çalışma zamanını yüklemek için DotNet-install betikleri hakkında bilgi edinin.
 ms.date: 01/16/2019
-ms.openlocfilehash: 867be93b5a4c66258df438ce718dabbd4ef2891c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f72e12fc415824a9c69eba6f52e3c01717cf654c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849567"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740524"
 ---
 # <a name="dotnet-install-scripts-reference"></a>DotNet-betiklerin başvurusunu yüklemeyi
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
 `dotnet-install.ps1` | `dotnet-install.sh`-.NET Core CLI araçları ve paylaşılan çalışma zamanını yüklemek için kullanılan betik.
 
@@ -27,22 +27,22 @@ macOS/Linux:
 
 ## <a name="description"></a>Açıklama
 
-`dotnet-install` Betikler, .NET Core CLI araçlarını ve paylaşılan çalışma zamanını içeren .NET Core SDK yönetici olmayan yüklemesini gerçekleştirmek için kullanılır.
+`dotnet-install` betikler, .NET Core CLI araçlarını ve paylaşılan çalışma zamanını içeren .NET Core SDK yönetici olmayan yüklemesini gerçekleştirmek için kullanılır.
 
 [.NET Core ana web sitesinde](https://dot.net)barındırılan kararlı sürümü kullanmanızı öneririz. Betiklerin doğrudan yolları şunlardır:
 
-- <https://dot.net/v1/dotnet-install.sh>(Bash, UNIX)
-- <https://dot.net/v1/dotnet-install.ps1>(PowerShell, Windows)
+- <https://dot.net/v1/dotnet-install.sh> (Bash, UNIX)
+- <https://dot.net/v1/dotnet-install.ps1> (PowerShell, Windows)
 
 Bu betiklerin temel kullanışlılığı Otomasyon senaryolarında ve yönetici olmayan yüklemelerde bulunur. İki komut dosyası vardır: biri Windows üzerinde çalışan bir PowerShell betiğtir ve diğeri de Linux/macOS üzerinde çalışan bir bash komut dosyasıdır. Her iki komut dosyası da aynı davranışa sahiptir. Bash betiği Ayrıca PowerShell anahtarlarını okur, bu sayede PowerShell anahtarlarını Linux/macOS sistemlerinde betiği ile birlikte kullanabilirsiniz.
 
-Yükleme betikleri, ZIP/tarbol dosyasını CLı derleme bırakmalarından indirir ve varsayılan konuma ya da tarafından `-InstallDir|--install-dir`belirtilen bir konuma yüklemeye devam edebilir. Varsayılan olarak, yükleme betikleri SDK 'Yı indirir ve yükler. Yalnızca paylaşılan çalışma zamanını elde etmek istiyorsanız, `--runtime` bağımsız değişkenini belirtin.
+Yükleme betikleri, ZIP/tarbol dosyasını CLı derleme bırakmalarından indirir ve varsayılan konuma veya `-InstallDir|--install-dir`tarafından belirtilen bir konuma yüklemeye devam edebilir. Varsayılan olarak, yükleme betikleri SDK 'Yı indirir ve yükler. Yalnızca paylaşılan çalışma zamanını almak istiyorsanız `--runtime` bağımsız değişkenini belirtin.
 
-Komut dosyası varsayılan olarak, geçerli oturum için $PATH yüklemesi konumunu ekler. `--no-path` Bağımsız değişkenini belirterek bu varsayılan davranışı geçersiz kılın.
+Komut dosyası varsayılan olarak, geçerli oturum için $PATH yüklemesi konumunu ekler. `--no-path` bağımsız değişkenini belirterek bu varsayılan davranışı geçersiz kılın.
 
 Betiği çalıştırmadan önce gerekli [bağımlılıkları](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)yükler.
 
-`--version` Bağımsız değişkenini kullanarak belirli bir sürümü yükleyebilirsiniz. Sürüm üç bölümlü bir sürüm olarak belirtilmelidir (örneğin, 1.0.0-13232). Sağlanmazsa, `latest` sürümünü kullanır.
+`--version` bağımsız değişkenini kullanarak belirli bir sürümü yükleyebilirsiniz. Sürüm üç bölümlü bir sürüm olarak belirtilmelidir (örneğin, 1.0.0-13232). Sağlanmazsa, `latest` sürümünü kullanır.
 
 ## <a name="options"></a>Seçenekler
 
@@ -50,10 +50,10 @@ Betiği çalıştırmadan önce gerekli [bağımlılıkları](https://github.com
 
   Yükleme için kaynak kanalını belirtir. Olası değerler şunlardır:
 
-  - `Current`-En güncel sürüm.
-  - `LTS`-Uzun süreli destek kanalı (desteklenen en güncel sürüm).
-  - Belirli bir yayını temsil eden X. Y biçimindeki iki bölümlü sürüm (örneğin, `2.0` veya `1.0`).
-  - Dal adı. Örneğin `release/2.0.0` `master` ,, veya (gecelik yayınlar için). `release/2.0.0-preview2`
+  - `Current`-en güncel sürüm.
+  - `LTS`-uzun süreli destek kanalı (desteklenen en güncel sürüm).
+  - Belirli bir yayını temsil eden X. Y biçimindeki iki bölümden oluşan sürüm (örneğin, `2.0` veya `1.0`).
+  - Dal adı. Örneğin, `release/2.0.0`, `release/2.0.0-preview2`veya `master` (gecelik yayınlar için).
 
   Varsayılan değer `LTS` şeklindedir. .NET destek kanalları hakkında daha fazla bilgi için bkz. [.net destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sayfası.
 
@@ -61,11 +61,11 @@ Betiği çalıştırmadan önce gerekli [bağımlılıkları](https://github.com
 
   Belirli bir derleme sürümünü temsil eder. Olası değerler şunlardır:
 
-  - `latest`-Kanalda en son derleme ( `-Channel` seçeneğiyle kullanılır).
-  - `coherent`-Kanalda en son tutarlı derleme; en son kararlı paket birleşimini kullanır (dal adı `-Channel` seçenekleriyle kullanılır).
-  - Belirli bir derleme sürümünü temsil eden X. Y. Z biçimindeki üç bölümden oluşan sürüm; `-Channel` seçeneğinin yerini alır. Örneğin: `2.0.0-preview2-006120`
+  - `latest`-kanalda en son derleme (`-Channel` seçeneğiyle kullanılır).
+  - `coherent`-kanalda en son tutarlı derleme; en son kararlı paket birleşimini kullanır (dal adı `-Channel` seçenekleriyle kullanılır).
+  - Belirli bir derleme sürümünü temsil eden X. Y. Z biçimindeki üç bölümden oluşan sürüm; `-Channel` seçeneğinin yerini alır. Örneğin: `2.0.0-preview2-006120`.
 
-  Belirtilmemişse, `-Version` varsayılan olarak `latest`olur.
+  Belirtilmemişse, varsayılan olarak `latest``-Version`.
 
 - **`-InstallDir <DIRECTORY>`**
 
@@ -73,25 +73,25 @@ Betiği çalıştırmadan önce gerekli [bağımlılıkları](https://github.com
 
 - **`-Architecture <ARCHITECTURE>`**
 
-  Yüklenecek .NET Core ikililerinin mimarisi. Olası değerler şunlardır `<auto>` `amd64` ,,`x64`,, ve .`arm` `x86` `arm64` Varsayılan değer `<auto>`, çalışmakta olan işletim sistemi mimarisini temsil eder.
+  Yüklenecek .NET Core ikililerinin mimarisi. Olası değerler şunlardır `<auto>`, `amd64`, `x64`, `x86`, `arm64`ve `arm`. Varsayılan değer, çalışmakta olan işletim sistemi mimarisini temsil eden `<auto>`.
 
 - **`-SharedRuntime`**
 
   > [!NOTE]
-  > Bu parametre artık kullanılmıyor ve betiğin gelecekteki bir sürümünde kaldırılabilir. Önerilen alternatif `Runtime` , seçenektir.
+  > Bu parametre artık kullanılmıyor ve betiğin gelecekteki bir sürümünde kaldırılabilir. Önerilen alternatif `Runtime` seçenektir.
 
-  Tüm SDK 'Yı değil yalnızca paylaşılan çalışma zamanı bitlerini kurar. Bu, belirtmeye `-Runtime dotnet`eşdeğerdir.
+  Tüm SDK 'Yı değil yalnızca paylaşılan çalışma zamanı bitlerini kurar. Bu, `-Runtime dotnet`belirtmeye eşdeğerdir.
 
 - **`-Runtime <RUNTIME>`**
 
   Tüm SDK 'Yı değil yalnızca paylaşılan çalışma zamanını kurar. Olası değerler şunlardır:
 
-  - `dotnet``Microsoft.NETCore.App` -paylaşılan çalışma zamanı.
-  - `aspnetcore``Microsoft.AspNetCore.App` -paylaşılan çalışma zamanı.
+  - `dotnet`-`Microsoft.NETCore.App` paylaşılan çalışma zamanı.
+  - `aspnetcore`-`Microsoft.AspNetCore.App` paylaşılan çalışma zamanı.
 
 - **`-DryRun`**
 
-  Ayarlanırsa, betik yüklemeyi gerçekleştirmez. Bunun yerine, .NET Core CLI Şu anda istenen sürümünü tutarlı bir şekilde yüklemek için kullanılacak komut satırını görüntüler. Örneğin, sürümünü `latest`belirtirseniz, bu komutun bir yapı betiğine göre belirleyici olarak kullanılabilmesi için belirli bir sürümle birlikte bir bağlantı görüntüler. Ayrıca, kendiniz yüklemeyi veya indirmeyi tercih ediyorsanız ikilinin konumunu da görüntüler.
+  Ayarlanırsa, betik yüklemeyi gerçekleştirmez. Bunun yerine, .NET Core CLI Şu anda istenen sürümünü tutarlı bir şekilde yüklemek için kullanılacak komut satırını görüntüler. Örneğin, sürüm `latest`belirtirseniz, bu komutun bir yapı betiğine göre belirlenebilir şekilde kullanılabilmesi için belirli bir sürümle birlikte bir bağlantı görüntüler. Ayrıca, kendiniz yüklemeyi veya indirmeyi tercih ediyorsanız ikilinin konumunu da görüntüler.
 
 - **`-NoPath`**
 
@@ -195,7 +195,7 @@ Betiği çalıştırmadan önce gerekli [bağımlılıkları](https://github.com
   macOS/Linux:
 
   ```bash
-  curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
+  curl -ssl https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
 ## <a name="see-also"></a>Ayrıca bkz.

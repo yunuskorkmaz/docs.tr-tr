@@ -4,14 +4,12 @@ description: ML.NET, çevrimiçi veya çevrimdışı senaryolarda .NET uygulamal
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.author: nakersha
-author: natke
-ms.openlocfilehash: 5d8093c77799a55f4bc13e82c06c856dbb8d85cd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976734"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740085"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET nedir ve nasıl çalışır?
 
@@ -29,10 +27,10 @@ ML.NET ile yapabileceğiniz tahmin türlerine örnek olarak şunlar verilebilir:
 |-|-|
 |Sınıflandırma/kategori oluşturma|Müşteri geri bildirimini otomatik olarak pozitif ve negatif kategorilere bölün|
 |Gerileme/sürekli değerleri tahmin etme|Boyut ve konuma göre barındırıldığı fiyatlarını tahmin etme|
-|Anomali algılama|Sahte bankacılık işlemlerini Algıla |
-|Öneri|Çevrimiçi alışverişçilerin, önceki satın alımlarına göre satın almasını isteyebileceğiniz ürünleri önerin|
+|Anomali Algılama|Sahte bankacılık işlemlerini Algıla |
+|Öneriler|Çevrimiçi alışverişçilerin, önceki satın alımlarına göre satın almasını isteyebileceğiniz ürünleri önerin|
 |Zaman serisi/sıralı veriler|Hava durumu/ürün satışları tahminini yapın|
-|Görüntü sınıflandırması|Tıbbi görüntülerde pathologies kategorilere ayırma|
+|Görüntü sınıflandırma|Tıbbi görüntülerde pathologies kategorilere ayırma|
 
 ## <a name="hello-mlnet-world"></a>Merhaba ML.NET dünya
 
@@ -127,15 +125,15 @@ Hem ev fiyat modeli hem de metin sınıflandırma modeli **Doğrusal** modellerd
 
 ## <a name="data-preparation"></a>Veri hazırlama
 
-Çoğu durumda, kullanılabilir olan veriler makine öğrenimi modelini eğitmek için doğrudan kullanılmaya uygun değildir. Ham verilerin, modelinizin parametrelerini bulmak için kullanılmadan önce hazırlanması veya önceden işlenmesi gerekir. Verilerinizin dize değerlerinden sayısal bir gösterimine dönüştürülmesi gerekebilir. Giriş verilerinizde gereksiz bilgilere sahip olabilirsiniz. Giriş verilerinizin boyutlarını azaltmanız veya genişletmeniz gerekebilir. Verilerinizin normalleştirilmesi veya ölçeklendirilmesi gerekebilir.
+Çoğu durumda, kullanılabilir olan veriler makine öğrenimi modelini eğitmek için doğrudan kullanılmaya uygun değildir. Kuruluşunuzun parametrelerini bulmak için kullanılmadan önce ham verilerin hazırlanması veya önceden işlenmesi gerekir. Verilerinizin dize değerlerinden sayısal bir gösterimine dönüştürülmesi gerekebilir. Giriş verilerinizde gereksiz bilgilere sahip olabilirsiniz. Giriş verilerinizin boyutlarını azaltmanız veya genişletmeniz gerekebilir. Verilerinizin normalleştirilmesi veya ölçeklendirilmesi gerekebilir.
 
 [Ml.net öğreticileri](./tutorials/index.md) , belirli makine öğrenimi görevleri için kullanılan metin, görüntü, sayısal ve zaman serisi verileri için farklı veri işleme işlem hatları hakkında bilgi öğretin.
 
-Verilerinizi [hazırlamak](./how-to-guides/prepare-data-ml-net.md) , veri hazırlığının daha genel olarak nasıl uygulanacağını gösterir.
+Verilerinizi [hazırlamak](./how-to-guides/prepare-data-ml-net.md) , veri hazırlığını daha genel olarak nasıl uygulayacağınızı gösterir.
 
 Kaynaklar bölümünde tüm [kullanılabilir dönüşümlerinin](./resources/transforms.md) bir özetini bulabilirsiniz.
 
-## <a name="model-evaluation"></a>Model değerlendirmesi
+## <a name="model-evaluation"></a>Modeli değerlendirme
 
 Modelinizi eğittikten sonra, gelecekteki tahminleri ne kadar iyi hale getirmek istediğinizi nasıl anlarsınız? ML.NET ile modelinizi bazı yeni test verileri için değerlendirebilirsiniz.
 
@@ -176,13 +174,13 @@ Bir ML.NET uygulaması <xref:Microsoft.ML.MLContext> nesnesiyle başlar. Bu teki
 |-|-|-|-|
 |Veri yükleme ve kaydetme||<xref:Microsoft.ML.DataOperationsCatalog>||
 |Veri hazırlama||<xref:Microsoft.ML.TransformsCatalog>||
-|Eğitim algoritmaları|ikili sınıflandırma|<xref:Microsoft.ML.BinaryClassificationCatalog>||
+|Eğitim algoritmaları|İkili sınıflandırma|<xref:Microsoft.ML.BinaryClassificationCatalog>||
 ||birden çok Lass sınıflandırması|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||Anomali algılama|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
-||Lenmesi|<xref:Microsoft.ML.ClusteringCatalog>||
-||Tahminine|<xref:Microsoft.ML.ForecastingCatalog>||
+||Kümeleme|<xref:Microsoft.ML.ClusteringCatalog>||
+||Tahmin etme|<xref:Microsoft.ML.ForecastingCatalog>||
 ||Sıralamasına|<xref:Microsoft.ML.RankingCatalog>||
-||regresyon|<xref:Microsoft.ML.RegressionCatalog>||
+||Regresyon|<xref:Microsoft.ML.RegressionCatalog>||
 ||Öneri|<xref:Microsoft.ML.RecommendationCatalog>|`Microsoft.ML.Recommender` NuGet paketini ekleyin|
 ||Zaman serisi|<xref:Microsoft.ML.TimeSeriesCatalog>|`Microsoft.ML.TimeSeries` NuGet paketini ekleyin|
 |Model kullanımı ||<xref:Microsoft.ML.ModelOperationsCatalog>||
@@ -214,7 +212,7 @@ Bu noktada, nesneler yalnızca oluşturulur. Yürütme yapılmadı.
 
 `Fit()` çağırmak, modelin parametrelerini tahmin etmek için giriş eğitim verilerini kullanır. Bu, modeli eğitme olarak bilinir. Yukarıdaki doğrusal regresyon modelinin iki model parametresi olduğunu unutmayın: **sapma** ve **Ağırlık**. `Fit()` çağrısından sonra parametrelerin değerleri bilinmektedir. Çoğu modelde bundan çok daha fazla parametre olacaktır.
 
-[Modelinizi eğitme](./how-to-guides/train-machine-learning-model-ml-net.md) hakkında daha fazla bilgi için model eğitimi hakkında daha fazla bilgi edinebilirsiniz
+[Modelinizi eğitme](./how-to-guides/train-machine-learning-model-ml-net.md)hakkında daha fazla bilgi için model eğitimi hakkında daha fazla bilgi edinebilirsiniz.
 
 Elde edilen model nesnesi <xref:Microsoft.ML.ITransformer> arabirimini uygular. Diğer bir deyişle, model giriş verilerini tahmine göre dönüştürür.
 
@@ -242,7 +240,7 @@ Bir ML.NET Machine Learning işlem hattının Core 'da [DataView](xref:Microsoft
 
 İşlem hattındaki bir dönüşümden çıkış şeması, sonraki dönüşümün giriş şemasıyla eşleşmiyorsa, ML.NET bir özel durum oluşturur.
 
-Veri görünümü nesnesinin sütunları ve satırları vardır. Her sütunun bir adı ve bir türü ve uzunluğu vardır. Örneğin: ev fiyatı örnekteki giriş sütunları **Boyut** ve **fiyattır**. Bunlar her ikisi de aynıdır ve vektörler yerine skaler miktarlardır.
+Veri görünümü nesnesinin sütunları ve satırları vardır. Her sütunun bir adı ve bir türü ve uzunluğu vardır. Örneğin, ev fiyatı örnekteki giriş sütunları **Boyut** ve **fiyattır**. Bunlar her ikisi de aynıdır ve vektörler yerine skaler miktarlardır.
 
    ![ML.NET veri görünümü örneği, ev fiyatı tahmin verileri](./media/ml-net-dataview.png)
 
@@ -272,7 +270,7 @@ DataView nesnelerinin önemli bir özelliği, **geç**değerlendirilmesinden kay
 
 Hata ayıklayıcıda `debug` değişkenini izleyebilir ve içeriğini inceleyebilirsiniz. Performansı önemli ölçüde düşürür, üretim kodunda önizleme yöntemini kullanmayın.
 
-### <a name="model-deployment"></a>Model dağıtımı
+### <a name="model-deployment"></a>Dağıtım Modeli
 
 Gerçek yaşam uygulamalarında, model eğitimi ve değerlendirme kodunuz tahmininizden ayrı olacaktır. Aslında, bu iki etkinlik genellikle ayrı takımlar tarafından gerçekleştirilir. Model geliştirme ekibiniz, modeli tahmin uygulamasında kullanım için kaydedebilir.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - elements, finding for list items
 - UI Automation, finding elements for List items
 ms.assetid: c326ad2b-2144-4f64-ae4c-d850c74f95c5
-ms.openlocfilehash: 63181de26f7d8efda99d5b5d71b006cde44823a3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2474edf95bf598ba9284b5f6ac36a9e0af1317a1
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433553"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741761"
 ---
 # <a name="find-a-ui-automation-element-for-a-list-item"></a>Liste Öğesi İçin UI Otomasyon Öğesi Bulma
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "74433553"
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir listeden belirtilen öğeyi almanın iki yolunu gösterir, biri <xref:System.Windows.Automation.TreeWalker> ve diğeri <xref:System.Windows.Automation.AutomationElement.FindAll%2A>kullanarak.  
   
- İlk yöntem [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] denetimleri için daha hızlı bir şekilde eğilimindedir, ancak İkincisi Windows Presentation Foundation (WPF) denetimleri için daha hızlıdır.  
+ İlk teknik, Win32 denetimleri için daha hızlı bir şekilde eğilimindedir, ancak İkincisi Windows Presentation Foundation (WPF) denetimleri için daha hızlıdır.  
   
  [!code-csharp[UIAClient_snip#184](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#184)]
  [!code-vb[UIAClient_snip#184](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#184)]  

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 1f7efaedaa1a0be90f7b619f954bdf78eecafa07
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959830"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740573"
 ---
 # <a name="install-the-net-core-sdk"></a>.NET Core SDK 'i yükler
 
@@ -44,9 +44,11 @@ macOS, .NET Core 3,1 SDK 'sını yüklemek için kullanılabilecek tek başına 
 
 .NET Core SDK birçok ortak Linux Paket Yöneticisi ile yükleyebilirsiniz. Daha fazla bilgi için bkz. [Linux Paket Yöneticisi-.NET Core 'U yükler](linux-package-managers.md).
 
+Paket Yöneticisi ile yükleme yalnızca x64 mimarisinde desteklenir. ARM gibi farklı bir mimariye sahip .NET Core SDK yüklüyorsanız, aşağıdaki [indirme ve el ile yükleme](#download-and-manually-install) yönergelerini izleyin. Desteklenen mimariler hakkında daha fazla bilgi için bkz. [.NET Core Dependencies ve Requirements](dependencies.md).
+
 ## <a name="download-and-manually-install"></a>İndirme ve el ile yükleme
 
-SDK 'Yı ayıklamak ve komutları terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürümü [indirin](#all-net-core-downloads) . Ardından, bir Terminal açın ve aşağıdaki komutları çalıştırın.
+SDK 'Yı ayıklamak ve .NET Core CLI komutlarının terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürümü [indirin](#all-net-core-downloads) . Ardından, bir Terminal açın ve aşağıdaki komutları çalıştırın.
 
 ```bash
 mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.100-linux-x64.tar.gz -C $HOME/dotnet
@@ -55,14 +57,14 @@ export PATH=$PATH:$HOME/dotnet
 ```
 
 > [!TIP]
-> Yukarıdaki komutlar yalnızca .NET SDK komutlarını çalıştırıldığı terminal oturumu için kullanılabilir hale getirir.
+> Yukarıdaki `export` komutları yalnızca .NET Core CLI komutlarını çalıştırıldığı terminal oturumu için kullanılabilir hale getirir.
 >
 > Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örneğin:
 >
 > - **Bash kabuğu**: *~/. bash_profile*, *~/,bashrc*
 > - **Korn kabuğu**: *~/,KSHRC* veya *. Profile*
 > - **Z kabuğu**: *~/,zshrc* veya *. zprofile*
-> 
+>
 > Kabuğunuz için uygun kaynak dosyayı düzenleyin ve mevcut `PATH` ifadesinin sonuna `:$HOME/dotnet` ekleyin. `PATH` bir ifade dahil yoksa, `export PATH=$PATH:$HOME/dotnet`yeni bir satır ekleyin.
 >
 > Ayrıca, dosyanın sonuna `export DOTNET_ROOT=$HOME/dotnet` ekleyin.
@@ -94,7 +96,7 @@ Visual Studio, en son .NET Core SDK ve çalışma zamanını yükleyebilir.
 
 ### <a name="select-a-workload"></a>İş yükü seçin
 
-Visual Studio 'Yu yüklerken veya değiştirirken, oluşturmakta olduğunuz uygulamanın türüne bağlı olarak aşağıdaki iş yüklerinden birini seçin:
+Visual Studio 'Yu yüklerken veya değiştirirken, oluşturmakta olduğunuz uygulamanın türüne bağlı olarak aşağıdaki iş yüklerinden birini veya daha fazlasını seçin:
 
 - **Diğer Toolsets** bölümünde yer alan **.NET Core platformlar arası geliştirme** iş yükü.
 - **Web & bulut** bölümündeki **ASP.net ve Web geliştirme** iş yükü.
@@ -131,7 +133,7 @@ Visual Studio Code, Visual Studio gibi otomatikleştirilmiş bir .NET Core yükl
 
 [DotNet yükleme betikleri](../tools/dotnet-install-script.md) , SDK 'nın Otomasyon ve yönetici olmayan yüklemeleri için kullanılır. Betiği, [DotNet yükleme betiği başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
 
-Komut dosyası, .NET Core 2,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Geçerli .NET Core sürümünü yüklemek için betiği aşağıdaki anahtarla çalıştırın.
+Komut dosyası, .NET Core 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Geçerli .NET Core sürümünü yüklemek için betiği aşağıdaki anahtarla çalıştırın.
 
 ```powershell
 dotnet-install.ps1 -Channel Current
@@ -145,7 +147,7 @@ dotnet-install.ps1 -Channel Current
 
 [DotNet yükleme betikleri](../tools/dotnet-install-script.md) , SDK 'nın Otomasyon ve yönetici olmayan yüklemeleri için kullanılır. Betiği, [DotNet yükleme betiği başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
 
-Komut dosyası, .NET Core 2,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Geçerli .NET Core sürümünü yüklemek için betiği aşağıdaki anahtarla çalıştırın.
+Komut dosyası, .NET Core 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Geçerli .NET Core sürümünü yüklemek için betiği aşağıdaki anahtarla çalıştırın.
 
 ```bash
 ./dotnet-install.sh -c Current
@@ -176,8 +178,7 @@ Bir Docker kapsayıcısında .NET Core kullanma hakkında daha fazla bilgi için
 
 ::: zone pivot="os-windows"
 
-- [Öğretici: C# Merhaba Dünya öğreticisi](../tutorials/with-visual-studio.md).
-- [Öğretici: Visual Basic Merhaba Dünya öğreticisi](../tutorials/vb-with-visual-studio.md).
+- [Öğretici: Merhaba Dünya öğreticisi](../tutorials/with-visual-studio.md).
 - [Öğretici: Visual Studio Code yeni bir uygulama oluşturun](../tutorials/with-visual-studio-code.md).
 - [Öğretici: bir .NET Core uygulamasını Kapsayıize](../docker/build-container.md)edin.
 

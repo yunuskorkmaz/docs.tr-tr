@@ -4,12 +4,12 @@ description: Ubuntu 18,04 ' de .NET Core SDK ve çalışma zamanı yüklemek iç
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 38568b31bf9cd02a19a15addfe4926e8857a87b5
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a8e92cab30302c5636d23f098eb60637141545ca
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959802"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740613"
 ---
 # <a name="ubuntu-1804-package-manager---install-net-core"></a>Ubuntu 18,04 paket yöneticisi-.NET Core 'ı yükler
 
@@ -21,11 +21,11 @@ Bu makalede, Ubuntu 18,04 ' de .NET Core yüklemek için bir paket yöneticisi '
 
 .NET yüklemeden önce şunları yapmanız gerekir:
 
-- Microsoft anahtarını kaydetme
-- Ürün deposunu kaydetme
-- Gerekli bağımlılıkları yükler
+- Microsoft anahtarını kaydettirin.
+- Ürün deposunu kaydedin.
+- Gerekli bağımlılıkları yükler.
 
-Bu işlemin makine başına bir kez yapılması yeterlidir.
+Bu işlemin makine başına tek bir kez yapılması yeterlidir.
 
 Bir Terminal açın ve aşağıdaki komutları çalıştırın.
 

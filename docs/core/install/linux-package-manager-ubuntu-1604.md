@@ -4,12 +4,12 @@ description: Ubuntu 16,04 ' de .NET Core SDK ve çalışma zamanı yüklemek iç
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 77033e327349e7543148dab27f7229c69de4aa1c
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: eae847232f5f89e81acfb90027c555d8ccd1a0b8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959741"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740636"
 ---
 # <a name="ubuntu-1604-package-manager---install-net-core"></a>Ubuntu 16,04 paket yöneticisi-.NET Core 'ı yükler
 
@@ -21,11 +21,11 @@ Bu makalede, Ubuntu 16,04 ' de .NET Core yüklemek için bir paket yöneticisi '
 
 .NET yüklemeden önce şunları yapmanız gerekir:
 
-- Microsoft anahtarını kaydetme
-- Ürün deposunu kaydetme
-- Gerekli bağımlılıkları yükler
+- Microsoft anahtarını kaydettirin.
+- Ürün deposunu kaydedin.
+- Gerekli bağımlılıkları yükler.
 
-Bu işlemin makine başına bir kez yapılması yeterlidir.
+Bu işlemin makine başına tek bir kez yapılması yeterlidir.
 
 Bir Terminal açın ve aşağıdaki komutları çalıştırın.
 

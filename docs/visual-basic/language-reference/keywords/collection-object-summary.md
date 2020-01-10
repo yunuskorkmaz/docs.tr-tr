@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Collection object, summary
 ms.assetid: c4586369-d817-4453-9cb0-1a272fc66737
-ms.openlocfilehash: 92247c55fb247864b25670a2ca25d867e5b22d15
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 061999d7b46f04838e9740330f22f14733a9306b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349926"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741037"
 ---
 # <a name="collection-object-summary-visual-basic"></a>Koleksiyon Nesnesi Özeti (Visual Basic)
 Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaca ve kullanıma göre düzenlenir.  
@@ -17,9 +17,9 @@ Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeler
 |Eylem|Dil öğesi|  
 |------------|----------------------|  
 |`Collection` nesnesi oluşturun.|<xref:Microsoft.VisualBasic.Collection>|  
-|Koleksiyona bir öğe ekleyin.|<xref:Microsoft.VisualBasic.Collection.Add*>|  
-|Bir koleksiyondan nesne kaldırma.|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
-|Koleksiyondaki bir öğeye başvuru.|<xref:Microsoft.VisualBasic.Collection.Item*>|  
+|Koleksiyona bir öğe ekleyin.|<xref:Microsoft.VisualBasic.Collection.Add%2A>|  
+|Bir koleksiyondan nesne kaldırma.|<xref:Microsoft.VisualBasic.Collection.Remove%2A>|  
+|Koleksiyondaki bir öğeye başvuru.|<xref:Microsoft.VisualBasic.Collection.Item%2A>|  
 |<xref:System.Collections.IEnumerator> arabirimine bir başvuru döndürün.|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.

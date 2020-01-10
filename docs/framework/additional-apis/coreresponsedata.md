@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 640a925c3aec86b4743b1b2b62eb3793af1cc0bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd0ffb982c22b0a8b6cb5dd677faafb9921bf5d9
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675423"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741027"
 ---
 # <a name="coreresponsedata-class"></a>CoreResponseData Sınıfı
 
-`CoreResponseData` Sınıfı, yanıt gövdesi ile HTTP üstbilgileri ve ayrıştırma temsil eder.
+`CoreResponseData` sınıfı, HTTP üst bilgilerinin ve yanıt gövdesinin ayrıştırılmasını temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -28,14 +28,14 @@ internal class CoreResponseData
 ```
 
 > [!WARNING]
-> Bu API dahili kullanım içindir ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır. Bunun yerine, kullanmanız bir <xref:System.Diagnostics.DiagnosticSource> ağ kod yeteneklerinizi. Bkz: [DiagnosticSource Kullanıcı Kılavuzu](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Bu API iç ve doğrudan kodunuzda kullanılması amaçlıyordu. Bunun yerine, ağ kodunu bağlamak için bir <xref:System.Diagnostics.DiagnosticSource> kullanmanız gerekir. Bkz. [Diagnosticsource Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu sınıfın kullanımını desteklemez.
+> Microsoft, bu sınıfın herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Net>
+**Ad alanı:** <xref:System.Net>
 
-**Derleme:** Sistemde (System.dll)
+**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
 
-**.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

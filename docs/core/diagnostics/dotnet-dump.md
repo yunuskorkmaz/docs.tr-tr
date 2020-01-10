@@ -1,15 +1,13 @@
 ---
 title: DotNet-dump-.NET Core
 description: DotNet-dump komut satırı aracını yükleme ve kullanma.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: dcd5dd42620010c1a9b6dffd3365fc1b777c0eeb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973450"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740780"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Döküm toplama ve çözümleme yardımcı programı (`dotnet-dump`)
 
@@ -18,7 +16,7 @@ ms.locfileid: "73973450"
 > [!NOTE]
 > macOS 'ta `dotnet-dump` desteklenmez.
 
-## <a name="installing-dotnet-dump"></a>`dotnet-dump` yükleniyor
+## <a name="installing-dotnet-dump"></a>`dotnet-dump` yükleme
 
 `dotnet-dump` [NuGet paketinin](https://www.nuget.org/packages/dotnet-dump)en son sürümünü yüklemek için [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın:
 
@@ -34,7 +32,7 @@ dotnet-dump [-h|--help] [--version] <command>
 
 ## <a name="description"></a>Açıklama
 
-`dotnet-dump` genel Aracı, Linux üzerinde `lldb` gibi yerel bir hata ayıklayıcı olmadan Windows ve Linux dökümlerinin toplanması ve çözümlenmesi için bir yoldur. Bu araç, tam olarak çalışan `lldb` olmadığı alp Linux gibi platformlarda önemlidir. `dotnet-dump` Aracı, çökmeleri ve çöp toplayıcıyı (GC) çözümlemek için SOS komutları çalıştırmanızı sağlar, ancak yerel yığın çerçevelerini görüntüleme gibi şeyler desteklenmez.
+`dotnet-dump` genel Aracı, Linux üzerinde `lldb` gibi yerel bir hata ayıklayıcı olmadan Windows ve Linux dökümlerinin toplanması ve çözümlenmesi için bir yoldur. Bu araç, tam olarak çalışan `lldb` kullanılamadığından alp Linux gibi platformlarda önemlidir. `dotnet-dump` Aracı, çökmeleri ve çöp toplayıcıyı (GC) çözümlemek için SOS komutları çalıştırmanızı sağlar, ancak yerel yığın çerçevelerini görüntüleme gibi şeyler desteklenmez.
 
 ## <a name="options"></a>Seçenekler
 
@@ -80,7 +78,7 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
   - `Heap`-modül listelerini, iş parçacığı listelerini, tüm yığınları, özel durum bilgilerini, tanıtıcı bilgilerini ve eşlenmiş görüntüler hariç tüm belleği içeren büyük ve görece kapsamlı bir döküm.
   - `Mini`-modül listelerini, iş parçacığı listelerini, özel durum bilgilerini ve tüm yığınları içeren küçük bir döküm.
 
-  Belirtilmemişse, varsayılan değer `Heap` ' dır.
+  Belirtilmemişse, varsayılan değer `Heap`.
 
 - **`-o|--output <output_dump_path>`**
 
@@ -160,7 +158,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 ## <a name="using-dotnet-dump"></a>`dotnet-dump` kullanma
 
-İlk adım bir döküm toplamaktır. Bir temel döküm oluşturulmuşsa bu adım atlanabilir. İşletim sistemi veya .NET Core çalışma zamanının yerleşik [döküm oluşturma özelliği](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/xplat-minidump-generation.md#configurationpolicy) , her biri çekirdek dökümler oluşturabilir.
+İlk adım bir döküm toplamaktır. Bir temel döküm oluşturulmuşsa bu adım atlanabilir. İşletim sistemi veya .NET Core çalışma zamanının yerleşik [döküm oluşturma özelliği](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) , her biri çekirdek dökümler oluşturabilir.
 
 ```console
 $ dotnet-dump collect --process-id 1902
@@ -220,7 +218,7 @@ HResult: 80131604
 
 Docker altında çalışıyorsanız, döküm toplama `SYS_PTRACE` yetenekler (`--cap-add=SYS_PTRACE` veya `--privileged`) gerektirir.
 
-Microsoft .NET Core SDK Linux Docker görüntülerinde, bazı `dotnet-dump` komutları aşağıdaki özel durumu oluşturabilir:
+Microsoft .NET Core SDK Linux Docker görüntülerinde, bazı `dotnet-dump` komutlar aşağıdaki özel durumu oluşturabilir:
 
 > İşlenmeyen özel durum: System. DllNotFoundException: paylaşılan ' libdl.so ' kitaplığı veya bağımlılıklarından biri ' özel durumu yüklenemiyor.
 

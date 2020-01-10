@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Radio Button control type
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
-ms.openlocfilehash: b5a64c987fd8d7816e2327e048b90ce20fa61c53
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 416d6d6b9d8e7fbd3b3bb5483ddd8dc22380166c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800321"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741566"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>RadioButton Denetim Türü için UI Otomasyon Desteği
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74800321"
   
  Radyo düğmesi, bir yuvarlak düğme ve uygulama tanımlı metin (bir etiket), simge veya kullanıcının düğmeyi seçerek yapabileceğini belirten bir bit eşlemden oluşur. Bir uygulama genellikle bir grup kutusunda radyo düğmelerini kullanarak kullanıcının ilgili, birbirini dışlayan seçenekler kümesinden seçim almasına izin verir. Örneğin, uygulama, kullanıcının istemci alanında seçilen metin için bir biçim tercihi seçebileceğiniz bir radyo düğmeleri grubu sunabilir. Kullanıcı, ilgili radyo düğmesini seçerek sola hizalı, sağa hizalı veya ortalanmış bir biçim seçebilir. Genellikle, Kullanıcı bir radyo düğmesi kümesinden tek seferde yalnızca bir seçenek seçebilir.  
   
- Aşağıdaki bölümler, RadioButton denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısını, özellikleri, denetim desenlerini ve olayları tanımlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimler, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]veya [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]bakılmaksızın tüm liste denetimleri için geçerlidir.  
+ Aşağıdaki bölümler, RadioButton denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısını, özellikleri, denetim desenlerini ve olayları tanımlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimleri, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 veya [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]bakılmaksızın tüm liste denetimlerine uygulanır.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyonu ağaç yapısı  
@@ -57,7 +57,7 @@ ms.locfileid: "74800321"
 |Denetim deseninin/denetim deseninin özelliği|Destek/değer|Notlar|  
 |-----------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Evet|Tüm radyo düğmesi denetimleri, kendileri seçilebilir hale etkinleşmesini sağlamak için seçim öğesi deseninin desteklenmesi gerekir.|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|Notlara bakın.|UI Otomasyonu istemcisinin, belirli bir bağlam içindeki diğer radyo düğmelerinin birbirleriyle ilişkisini belirleyebilmesi için `SelectionContainerProperty` her zaman tamamlanmalıdır.  Radyo düğmesinin [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] sürümü için bu özellik, eski çerçevesinden bu bilgileri almak mümkün olmadığından desteklenmez.|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|Notlara bakın.|UI Otomasyonu istemcisinin, belirli bir bağlam içindeki diğer radyo düğmelerinin birbirleriyle ilişkisini belirleyebilmesi için `SelectionContainerProperty` her zaman tamamlanmalıdır.  Radyo düğmesinin Win32 sürümü için bu özellik, eski çerçevesinden bu bilgileri almak mümkün olmadığından desteklenmez.|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|hiçbir zaman|Radyo düğmesi, ayarlandıktan sonra durumunda geçiş yapılamaz.  Bu düzenin radyo düğmesinde hiçbir şekilde desteklenmemesi gerekir.|  
   
 <a name="Required_UI_Automation_Events"></a>   

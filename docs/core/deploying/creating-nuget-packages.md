@@ -1,16 +1,15 @@
 ---
-title: .NET Core komut satırı arabirimi (CLı) araçlarıyla bir NuGet paketi oluşturma
+title: .NET Core CLI bir NuGet paketi oluşturma
 description: "' DotNet Pack ' komutuyla bir NuGet paketi oluşturmayı öğrenin."
 author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.custom: seodec18
-ms.openlocfilehash: 2d876f921d079972e2a638788195aa69a2423c49
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ddc19faa7547637036686146f8600f40713541a8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771939"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740868"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>.NET Core komut satırı arabirimi (CLı) araçlarıyla bir NuGet paketi oluşturma
 
@@ -19,9 +18,9 @@ ms.locfileid: "72771939"
 
 .NET Standard ve .NET Core kitaplıklarının NuGet paketleri olarak dağıtılması beklenmektedir. Bu, tüm .NET Standard kitaplıklarının dağıtılma ve tüketilme olgusuna sahiptir. Bu, `dotnet pack` komutuyla kolayca yapılır.
 
-NuGet üzerinden dağıtmak istediğiniz harika yeni bir kitaplığı yazdığınız hakkında düşünün. Tek yapmanız gereken, platformlar arası araçlarla bir NuGet paketi oluşturabilirsiniz! Aşağıdaki örnek, `netstandard1.0` hedefleyen **Superawesomelibrary** adlı bir kitaplık olduğunu varsayar.
+NuGet üzerinden dağıtmak istediğiniz harika yeni bir kitaplığı yazdığınız hakkında düşünün. Tek yapmanız gereken, platformlar arası araçlarla bir NuGet paketi oluşturabilirsiniz! Aşağıdaki örnek, `netstandard1.0`hedefleyen **Superawesomelibrary** adlı bir kitaplık olduğunu varsayar.
 
-Geçişli bağımlılıklarınız varsa; diğer bir deyişle, başka bir pakete bağımlı olan bir proje, bir NuGet paketi oluşturmadan önce `dotnet restore` komutuyla tüm çözümünüze yönelik paketleri geri yüklediğinizden emin olmanız gerekir. Bunun başarısız olması, `dotnet pack` komutunun düzgün şekilde çalışmamasını sağlar.
+Başka bir pakete bağlı bir proje olan geçişli bağımlılıklarınız varsa, bir NuGet paketi oluşturmadan önce `dotnet restore` komutuyla tüm çözüme yönelik paketleri geri yüklediğinizden emin olun. Bunun başarısız olması, `dotnet pack` komutunun düzgün şekilde çalışmamasını sağlar.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -46,7 +45,7 @@ SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ```
 
-Bu, hata ayıklama yapabilen bir paket üretebileceğini unutmayın. Yayın ikilileriyle bir NuGet paketi oluşturmak istiyorsanız, tüm yapmanız gereken `--configuration` (veya `-c`) anahtarını ekleyip bağımsız değişken olarak `release` kullanmaktır.
+Bu, hata ayıklama yapabilen bir paket oluşturur. Yayın ikilileriyle bir NuGet paketi oluşturmak istiyorsanız, tüm yapmanız gereken `--configuration` (veya `-c`) anahtarını ekleyip bağımsız değişken olarak `release` kullanmaktır.
 
 ```dotnetcli
 dotnet pack --configuration release
@@ -63,9 +62,9 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 Artık bir NuGet paketi yayımlamak için gerekli dosyalara sahipsiniz!
 
-## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>@No__t_0 `dotnet publish` karıştırmayın
+## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>`dotnet pack` `dotnet publish` karıştırmayın
 
-Dahil edilen `dotnet publish` komut olmadığı unutulmamalıdır. @No__t_0 komutu, aynı paket içindeki tüm bağımlılıklarıyla uygulama dağıtmaya yöneliktir; NuGet ile dağıtılacak ve tüketilecek bir NuGet paketi oluşturmak için değildir.
+Dahil edilen `dotnet publish` komut olmadığı unutulmamalıdır. `dotnet publish` komutu, aynı paket içindeki tüm bağımlılıklarıyla uygulama dağıtmaya yöneliktir; NuGet ile dağıtılacak ve tüketilecek bir NuGet paketi oluşturmak için değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

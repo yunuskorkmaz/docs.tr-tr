@@ -3,17 +3,16 @@ title: CLı ile .NET Core uygulamaları yayımlayın
 description: .NET Core SDK komut satırı arabirimi (CLı) araçlarıyla .NET Core uygulaması yayımlamayı öğrenin.
 author: thraka
 ms.author: adegeo
-ms.date: 01/16/2019
+ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.custom: seodec18
-ms.openlocfilehash: 41af1c708a264833f1f7217529b5c0206d405449
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 98f1e96ac087727e711f9ebf3d3eaf86c4d4eec9
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428904"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740849"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>CLı ile .NET Core uygulamaları yayımlayın
 
@@ -23,15 +22,15 @@ Bu yayımlama modlarına genel bakış için bkz. [.NET Core uygulama dağıtım
 
 CLı kullanımıyla ilgili bazı hızlı yardım mı arıyorsunuz? Aşağıdaki tabloda, uygulamanızı nasıl yayımlayacağınız hakkında bazı örnekler gösterilmektedir. Hedef çerçeveyi `-f <TFM>` parametresi ile veya proje dosyasını düzenleyerek belirtebilirsiniz. Daha fazla bilgi için bkz. [Yayımlama temelleri](#publishing-basics).
 
-| Yayımlama modu | SDK sürümü | Komut |
+| Yayımlama modu | SDK Sürümü | Komut |
 | ------------ | ----------- | ------- |
 | Framework bağımlı dağıtım | 2.x | `dotnet publish -c Release` |
 | Çerçeveye bağımlı yürütülebilir dosya | 2.2 | `dotnet publish -c Release -r <RID> --self-contained false` |
-|                                | 3,0 | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained false` |
 |                                | 3,0 * | `dotnet publish -c Release` |
 | Kendi içinde dağıtım      | 2.1 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
-|                                | 3,0 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
 \* SDK sürüm 3,0 kullanılırken, temel `dotnet publish` komutu çalıştırılırken çerçeveye bağlı yürütülebilir dosya varsayılan yayımlama modudur. Bu, yalnızca proje **.net core 2,1** veya **.NET Core 3,0**' i hedefliyorsa geçerlidir.
 
@@ -43,9 +42,9 @@ Birden fazla çerçeveyi hedeflemek istiyorsanız, `<TargetFrameworks>` ayarın�
 
 Aksi belirtilmedikçe, [`dotnet publish`](../tools/dotnet-publish.md) komutunun çıktı dizini `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Varsayılan **derleme yapılandırma** modu, `-c` parametresiyle değiştirilmediği takdirde **hata ayıklaması** olur. Örneğin, `dotnet publish -c Release -f netcoreapp2.1` `myfolder/bin/Release/netcoreapp2.1/publish/`yayınlar.
 
-.NET Core SDK 3,0 kullanırsanız, .NET Core sürümlerini 2,1, 2,2 veya 3,0 ' i hedefleyen uygulamalar için varsayılan yayımlama modu, çerçeveye bağlı yürütülebilir dosyadır.
+.NET Core SDK 3,0 veya sonraki bir sürümü kullanırsanız, .NET Core sürümleri 2,1, 2,2, 3,0 veya sonraki bir sürümünü hedefleyen uygulamalar için varsayılan yayımlama modu, çerçeveye bağlı yürütülebilir dosyadır.
 
-.NET Core SDK 2,1 kullanırsanız, .NET Core sürümleri 2,1 ' i hedefleyen uygulamalar için varsayılan yayımlama modu, 2,2 çerçeveye bağımlı dağıtımdır.
+.NET Core SDK 2,1 kullanırsanız, .NET Core sürümleri 2,1 ve 2,2 ' i hedefleyen uygulamalar için varsayılan yayımlama modu, çerçeveye bağımlı dağıtımdır.
 
 ### <a name="native-dependencies"></a>Yerel bağımlılıklar
 
@@ -110,7 +109,7 @@ Uygulamayı çalıştırdığınızda, ([`dotnet run`](../tools/dotnet-run.md)) 
 
 Uygulamanızı FDD olarak yayımladığınızda, `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` klasöründe bir `<PROJECT-NAME>.dll` dosyası oluşturulur. Uygulamanızı çalıştırmak için çıkış klasörüne gidin ve `dotnet <PROJECT-NAME>.dll` komutunu kullanın.
 
-Uygulamanız .NET Core 'un belirli bir sürümünü hedefleyecek şekilde yapılandırılmıştır. Uygulamanızı çalıştırmak istediğiniz makinede bu hedeflenen .NET Core çalışma zamanının olması gerekir. Örneğin, uygulamanız .NET Core 2,2 hedefliyorsa, uygulamanızın üzerinde çalıştığı tüm makineler .NET Core 2,2 çalışma zamanının yüklü olması gerekir. [Yayımlama temelleri](#publishing-basics) bölümünde belirtildiği gibi, varsayılan hedef Framework 'ü değiştirmek veya birden fazla çerçeveyi hedeflemek için proje dosyanızı düzenleyebilirsiniz.
+Uygulamanız .NET Core 'un belirli bir sürümünü hedefleyecek şekilde yapılandırılmıştır. Bu hedeflenen .NET Core çalışma zamanının, uygulamanızın çalıştırıldığı herhangi bir makinede olması gerekir. Örneğin, uygulamanız .NET Core 2,2 hedefliyorsa, uygulamanızın üzerinde çalıştığı tüm makineler .NET Core 2,2 çalışma zamanının yüklü olması gerekir. [Yayımlama temelleri](#publishing-basics) bölümünde belirtildiği gibi, varsayılan hedef Framework 'ü değiştirmek veya birden fazla çerçeveyi hedeflemek için proje dosyanızı düzenleyebilirsiniz.
 
 FDD yayımlama, uygulamayı çalıştıran sistemde kullanılabilir olan en son .NET Core güvenlik düzeltme ekine otomatik olarak bağlanan bir uygulama oluşturur. Derleme zamanında sürüm bağlama hakkında daha fazla bilgi için bkz. [kullanılacak .NET Core sürümünü seçme](../versions/selection.md#framework-dependent-apps-roll-forward).
 
@@ -118,13 +117,13 @@ FDD yayımlama, uygulamayı çalıştıran sistemde kullanılabilir olan en son 
 
 .NET Core SDK 3. x CLı için, çerçeveye bağımlı yürütülebilir dosya (FDE), temel `dotnet publish` komutu için varsayılan moddur. Geçerli işletim sistemini hedeflemek istediğiniz sürece herhangi bir parametreyi belirtmeniz gerekmez.
 
-Bu modda, platformlar arası uygulamanızı barındırmak için platforma özgü bir yürütülebilir ana bilgisayar oluşturulur. FDD, `dotnet` komutu biçiminde bir konak gerektirdiğinden, bu mod FDD ile benzerdir. Ana bilgisayar yürütülebilir dosya adı, platforma göre farklılık gösterir ve `<PROJECT-FILE>.exe`benzer bir şey olarak adlandırılır. Bu yürütülebilir dosyayı, uygulamayı çalıştırmak için yine de kabul edilebilir `dotnet <PROJECT-FILE>.dll` çağırmak yerine doğrudan çalıştırabilirsiniz.
+Bu modda, platformlar arası uygulamanızı barındırmak için platforma özgü bir yürütülebilir ana bilgisayar oluşturulur. FDD, `dotnet` komutu biçiminde bir konak gerektirdiğinden, bu mod FDD ile benzerdir. Ana bilgisayar yürütülebilir dosya adı, platforma göre farklılık gösterir ve `<PROJECT-FILE>.exe`benzer bir şey olarak adlandırılır. Bu yürütülebiliri `dotnet <PROJECT-FILE>.dll`çağırmak yerine doğrudan çalıştırabilirsiniz, bu da uygulamayı çalıştırmak için yine de kabul edilebilir bir yoldur.
 
-Uygulamanız .NET Core 'un belirli bir sürümünü hedefleyecek şekilde yapılandırılmıştır. Uygulamanızı çalıştırmak istediğiniz makinede bu hedeflenen .NET Core çalışma zamanının olması gerekir. Örneğin, uygulamanız .NET Core 2,2 hedefliyorsa, uygulamanızın üzerinde çalıştığı tüm makineler .NET Core 2,2 çalışma zamanının yüklü olması gerekir. [Yayımlama temelleri](#publishing-basics) bölümünde belirtildiği gibi, varsayılan hedef Framework 'ü değiştirmek veya birden fazla çerçeveyi hedeflemek için proje dosyanızı düzenleyebilirsiniz.
+Uygulamanız .NET Core 'un belirli bir sürümünü hedefleyecek şekilde yapılandırılmıştır. Bu hedeflenen .NET Core çalışma zamanının, uygulamanızın çalıştırıldığı herhangi bir makinede olması gerekir. Örneğin, uygulamanız .NET Core 2,2 hedefliyorsa, uygulamanızın üzerinde çalıştığı tüm makineler .NET Core 2,2 çalışma zamanının yüklü olması gerekir. [Yayımlama temelleri](#publishing-basics) bölümünde belirtildiği gibi, varsayılan hedef Framework 'ü değiştirmek veya birden fazla çerçeveyi hedeflemek için proje dosyanızı düzenleyebilirsiniz.
 
 Bir FDE yayımlamak, uygulamayı çalıştıran sistemde kullanılabilir en son .NET Core güvenlik düzeltme ekine otomatik olarak bağlanan bir uygulama oluşturur. Derleme zamanında sürüm bağlama hakkında daha fazla bilgi için bkz. [kullanılacak .NET Core sürümünü seçme](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-(Geçerli platformu hedeflediğinizde .NET Core 3. x hariç) yapmanız gerekir. bir FDE yayımlamak için aşağıdaki anahtarları `dotnet publish` komutuyla kullanın:
+.NET Core 2,2 ve önceki sürümlerde, bir FDE yayımlamak için aşağıdaki anahtarları `dotnet publish` komutuyla kullanmanız gerekir:
 
 - Bu anahtar `-r <RID>` hedef platformu belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının listesi için bkz. [Runtime Identifier (RID) Catalog](../rid-catalog.md).
 
@@ -135,13 +134,13 @@ Bir FDE yayımlamak, uygulamayı çalıştıran sistemde kullanılabilir en son 
 [Örnek uygulamayı](#sample-app)kullanıyorsanız, `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`çalıştırın. Bu komut şu yürütülebiliri oluşturur: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
-> **Genelleştirme sabit modunu**etkinleştirerek, dağıtımınızın toplam boyutunu azaltabilirsiniz. Bu mod, genel olarak kullanmayan ve [sabit kültürün](xref:System.Globalization.CultureInfo.InvariantCulture)biçimlendirme kurallarını, büyük/küçük harf kurallarını ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için yararlıdır. **Genelleştirme sabit modu** ve nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+> **Genelleştirme sabit modunu**etkinleştirerek, dağıtımınızın toplam boyutunu azaltabilirsiniz. Bu mod, genel olarak kullanmayan ve [sabit kültürün](xref:System.Globalization.CultureInfo.InvariantCulture)biçimlendirme kurallarını, büyük/küçük harf kurallarını ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için yararlıdır. **Genelleştirme sabit modu** ve nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
 ## <a name="self-contained-deployment"></a>Kendi içinde dağıtım
 
 Kendi içinde bir dağıtımı yayımladığınızda (SCD), .NET Core SDK platforma özgü bir yürütülebilir dosya oluşturur. Bir SCD yayımlamak, uygulamanızı çalıştırmak için gerekli tüm .NET Core dosyalarını içerir [, ancak .NET Core 'un yerel bağımlılıklarını](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)içermez. Uygulamanın çalışması için önce bu bağımlılıkların sistemde mevcut olması gerekir.
 
-Bir SCD yayımlandığında, en son kullanılabilir .NET Core güvenlik düzeltme ekine iletmeyen bir uygulama oluşturulur. Derleme zamanında sürüm bağlama hakkında daha fazla bilgi için bkz. [kullanılacak .NET Core sürümünü seçme](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
+Bir SCD yayımlamak, en son kullanılabilir .NET Core güvenlik düzeltme ekine geri dönerek bir uygulama oluşturur. Derleme zamanında sürüm bağlama hakkında daha fazla bilgi için bkz. [kullanılacak .NET Core sürümünü seçme](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
 
 Bir SCD yayımlamak için aşağıdaki anahtarları `dotnet publish` komutuyla kullanmanız gerekir:
 
@@ -150,7 +149,7 @@ Bir SCD yayımlamak için aşağıdaki anahtarları `dotnet publish` komutuyla k
 - Bu anahtar `--self-contained true` .NET Core SDK bir yürütülebilir dosya oluşturmasını söyler.
 
 > [!NOTE]
-> **Genelleştirme sabit modunu**etkinleştirerek, dağıtımınızın toplam boyutunu azaltabilirsiniz. Bu mod, genel olarak kullanmayan ve [sabit kültürün](xref:System.Globalization.CultureInfo.InvariantCulture)biçimlendirme kurallarını, büyük/küçük harf kurallarını ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için yararlıdır. **Genelleştirme sabit modu** ve nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+> **Genelleştirme sabit modunu**etkinleştirerek, dağıtımınızın toplam boyutunu azaltabilirsiniz. Bu mod, genel olarak kullanmayan ve [sabit kültürün](xref:System.Globalization.CultureInfo.InvariantCulture)biçimlendirme kurallarını, büyük/küçük harf kurallarını ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için yararlıdır. **Genelleştirme sabit modu** ve nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

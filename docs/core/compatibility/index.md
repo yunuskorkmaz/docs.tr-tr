@@ -2,12 +2,12 @@
 title: Son değişiklik türleri-.NET Core
 description: .NET Core 'un .NET sürümlerindeki geliştiriciler için uyumluluk denemelerini ve ne tür bir değişikliğin Son değişiklik olduğunu öğrenin.
 ms.date: 06/10/2019
-ms.openlocfilehash: 5624a35a0d71224faf9adc5df2b02a529e650314
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: a84468c0c0e04f367dc7e89ce806ac01b2b49b48
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567712"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740888"
 ---
 # <a name="changes-that-affect-compatibility"></a>Uyumluluğu etkileyen değişiklikler
 
@@ -19,7 +19,7 @@ ms.locfileid: "74567712"
 
 Geliştiriciler .NET uygulamaları genelinde uyumlulukla birlikte .NET Core sürümleri arasında yüksek düzeyde uyumluluk bekler. Özellikle .NET Core 'un önceki bir sürümü için yazılan kod, daha sonraki bir .NET Core sürümünde sorunsuz çalışmalıdır. Aslında birçok geliştirici, .NET Core 'un yeni yayımlanmış sürümlerinde bulunan yeni API 'Lerin, bu API 'Lerin tanıtıldıkları yayın öncesi sürümlerle de uyumlu olmasını bekler.
 
-Bu makalede, uyumluluk değişikliklerinin (veya son değişikliklerin) kategorileri ve .NET ekibinin bu kategorilerin her birinde değişiklikleri değerlendirme yöntemi özetlenmektedir. .NET ekibinin olası önemli değişikliklere nasıl yaklaşılacağını anlamak, var olan API 'lerin davranışını değiştiren [DotNet/corefx](https://github.com/dotnet/corefx) GitHub deposundaki çekme isteklerini açan geliştiriciler için özellikle yararlıdır.
+Bu makalede, uyumluluk değişikliklerinin (veya son değişikliklerin) kategorileri ve .NET ekibinin bu kategorilerin her birinde değişiklikleri değerlendirme yöntemi özetlenmektedir. .NET ekibinin olası önemli değişikliklere nasıl yaklaşılacağını anlamak, var olan API 'lerin davranışını değiştiren [DotNet/Runtime](https://github.com/dotnet/runtime) GitHub deposundaki çekme isteklerini açan geliştiriciler için özellikle yararlıdır.
 
 > [!NOTE]
 > İkili uyumluluk ve geri uyumluluk gibi uyumluluk kategorilerinin bir tanımı için bkz. [değişiklik kategorilerini bölme](categories.md).
@@ -151,7 +151,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını değiştirir.
 
 - **bir üyenin [sanal](../../csharp/language-reference/keywords/virtual.md) anahtar sözcüğünü kaldırma ❌**
 
-  C# Derleyici, sanal olmayan yöntemleri çağırmak için [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) ara dil (IL) yönergelerini yayma eğilimi yaptığından (`callvirt` bir null denetimi gerçekleştirir, normal çağrı olmadığında) Bu durum genellikle Bazı nedenlerle ınvariable:
+  C# Derleyici, sanal olmayan yöntemleri çağırmak için [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) ara dil (IL) yönergelerini yayma eğilimi gösterse de (`callvirt` bir null denetimi gerçekleştirir, normal bir çağrı olmadığında), bu davranış çeşitli nedenlerle ınvariable değildir:
   - C#, .NET 'in hedeflediği tek dil değildir.
 
   - C# Derleyici, hedef yöntem sanal olmayan ve muhtemelen null olmadığında ( [?. null yayma operatörü](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-)aracılığıyla erişilen bir yöntem gibi) normal bir çağrıya `callvirt` iyileştirmenize çalışır.

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: d1edbb82e0d5d6a6275c09646fbf8e54b4ff90df
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: f541aab7ed5aae48b943ba5699366fe6a3f21a4c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800286"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741395"
 ---
 # <a name="ui-automation-tree-overview"></a>UI Otomasyon Ağacına Genel Bakış
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "74800286"
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>Ham görünüm  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının ham görünümü, masaüstünün kök olduğu <xref:System.Windows.Automation.AutomationElement> nesnelerinin tam ağacıdır. Ham görünüm, bir uygulamanın yerel programlama yapısına yakından uyar ve bu nedenle, en ayrıntılı görünüm kullanılabilir. Ayrıca, ağacın diğer görünümlerinin oluşturulduğu temeldir. Bu görünüm temeldeki [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] çerçevesine bağlı olduğundan, bir [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] düğmesinin ham görünümü [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] düğmeden farklı bir ham görünüme sahip olur.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının ham görünümü, masaüstünün kök olduğu <xref:System.Windows.Automation.AutomationElement> nesnelerinin tam ağacıdır. Ham görünüm, bir uygulamanın yerel programlama yapısına yakından uyar ve bu nedenle, en ayrıntılı görünüm kullanılabilir. Ayrıca, ağacın diğer görünümlerinin oluşturulduğu temeldir. Bu görünüm temeldeki [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] çerçevesine bağlı olduğundan, bir [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] düğmesinin ham görünümü bir Win32 düğmesine göre farklı bir ham görünüme sahip olur.  
   
  Ham görünüm, Özellikler belirtilmeden veya ağaçta gezinmek için <xref:System.Windows.Automation.TreeWalker.RawViewWalker> kullanarak öğeleri arayarak elde edilir.  
   

@@ -7,59 +7,59 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 31efc6e514682502e91487565869285dad22cab0
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 5c1d75ab9598196e9cffc78a2f116993e722fd38
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860017"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740320"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Win32 ve WPF Arasında İleti Döngüleri Paylaşma
-Bu konu ile birlikte çalışabilirlik için bir ileti döngüsü uygulanacağını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], varolan kullanılarak ileti döngüsü <xref:System.Windows.Threading.Dispatcher> veya üzerinde ayrı bir ileti döngüsü oluşturarak [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodunuzun tarafında.  
+Bu konu, birlikte [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]çalışabilirlik için bir ileti döngüsünün nasıl uygulanacağını, <xref:System.Windows.Threading.Dispatcher> ' de var olan ileti döngüsü kullanımını kullanarak ya da birlikte çalışma kodunuzun Win32 tarafında ayrı bir ileti döngüsü oluşturarak açıklar.  
   
-## <a name="componentdispatcher-and-the-message-loop"></a>ComponentDispatcher ve ileti döngüsü  
- Birlikte çalışabilirlik ve klavye olay desteği için normal bir senaryo uygulamaktır <xref:System.Windows.Interop.IKeyboardInputSink>, veya alt Sınıflama zaten uygulayan sınıflardan <xref:System.Windows.Interop.IKeyboardInputSink>, gibi <xref:System.Windows.Interop.HwndSource> veya <xref:System.Windows.Interop.HwndHost>. Ancak, tüm olası ileti döngüsü gereksinimleriniz arasında birlikte çalışabilirlik sınırlarınız ileti alma ve gönderme olabilir klavye havuz desteği adres değil. Bir uygulama ileti döngüsü mimarisinin resmileştirin yardımcı olmak için [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sağlar <xref:System.Windows.Interop.ComponentDispatcher> izlemek bir ileti döngüsü için basit bir protokol tanımlayan sınıf.  
+## <a name="componentdispatcher-and-the-message-loop"></a>ComponentDispatcher ve Ileti döngüsü  
+ Birlikte çalışabilirlik ve klavye olay desteği için normal bir senaryo, <xref:System.Windows.Interop.IKeyboardInputSink>veya <xref:System.Windows.Interop.HwndSource> ya da <xref:System.Windows.Interop.HwndHost>gibi <xref:System.Windows.Interop.IKeyboardInputSink>daha önceden uygulayan sınıflardan alt sınıflara uygular. Ancak, klavye havuzu desteği, birlikte çalışma sınırlarınız genelinde ileti gönderirken ve alırken sahip olabileceğiniz tüm olası ileti döngüsü gereksinimlerini gidermez. Bir uygulama iletisi döngüsü mimarisini şekillendirmaya yardımcı olmak için [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], bir ileti döngüsünün izlenecek basit bir protokolü tanımlayan <xref:System.Windows.Interop.ComponentDispatcher> sınıfını sağlar.  
   
- <xref:System.Windows.Interop.ComponentDispatcher> bazı üyeleri ortaya koyar statik bir sınıftır. Her yöntem kapsamını örtük olarak çağıran iş parçacığına bağlıdır. İleti döngüsü (sonraki bölümde tanımlanan) bu API'lerden bazılarını kritik zamanlarda çağırmalıdır.  
+ <xref:System.Windows.Interop.ComponentDispatcher>, birkaç üye sunan statik bir sınıftır. Her yöntemin kapsamı, çağıran iş parçacığına örtülü olarak bağlanır. Bir ileti döngüsü, bu API 'lerden bazılarını kritik zamanlarda çağırmalıdır (bir sonraki bölümde tanımlandığı gibi).  
   
- <xref:System.Windows.Interop.ComponentDispatcher> diğer bileşenleri (örneğin, klavye havuz) dinlemek olayları sağlar. <xref:System.Windows.Threading.Dispatcher> Çağrıları tüm uygun sınıf <xref:System.Windows.Interop.ComponentDispatcher> uygun bir dizide yöntemleri. Kendi ileti döngüsü uyguluyorsanız, kodunuzu çağırmadan sorumludur <xref:System.Windows.Interop.ComponentDispatcher> benzer bir biçimde yöntemleri.  
+ <xref:System.Windows.Interop.ComponentDispatcher>, diğer bileşenlerin (klavye havuzu gibi) dinleyebileceği olayları sağlar. <xref:System.Windows.Threading.Dispatcher> sınıfı uygun bir sırayla tüm uygun <xref:System.Windows.Interop.ComponentDispatcher> yöntemlerini çağırır. Kendi ileti döngünüzü uyguıyorsanız, kodunuz benzer bir şekilde <xref:System.Windows.Interop.ComponentDispatcher> Yöntemler çağrılmadan sorumludur.  
   
- Çağırma <xref:System.Windows.Interop.ComponentDispatcher> bir iş parçacığı üzerinde yöntemleri yalnızca o iş parçacığı üzerinde kayıtlı olan olay işleyicilerini çağırma.  
+ <xref:System.Windows.Interop.ComponentDispatcher> yöntemlerinin bir iş parçacığında çağrılması, yalnızca o iş parçacığında kayıtlı olan olay işleyicilerini çağırır.  
   
-## <a name="writing-message-loops"></a>İleti döngüsü yazma  
- Bir denetim listesi aşağıdadır <xref:System.Windows.Interop.ComponentDispatcher> üyeleri kendi ileti döngüsü yazarsanız kullanırsınız:  
+## <a name="writing-message-loops"></a>Ileti döngüleri yazma  
+ Aşağıda, kendi ileti döngünüzü yazarsanız kullanacağınız <xref:System.Windows.Interop.ComponentDispatcher> üyelerinin bir denetim listesi verilmiştir:  
   
-- <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>: iş parçacığı kalıcı olduğunu belirtmek için bu ileti döngünüz çağırmalıdır.  
+- <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>: ileti döngünüz, iş parçacığının kalıcı olduğunu göstermek için bunu çağırmalıdır.  
   
-- <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>: iş parçacığı kalıcı döndürüldü belirtmek için ileti döngüsü çağırmalıdır.  
+- <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>: ileti döngünüz, iş parçacığının kalıcı olmayan olarak döndürüldüğünü göstermek için bunu çağırmalıdır.  
   
-- <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>:, ileti döngüsü olduğunu belirten çağırmalıdır <xref:System.Windows.Interop.ComponentDispatcher> tetiklemelidir <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> olay. <xref:System.Windows.Interop.ComponentDispatcher> oluşturmaz <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> varsa <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A> olduğu `true`, ancak ileti döngüleri çağırmayı seçebilir <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A> bile <xref:System.Windows.Interop.ComponentDispatcher> kalıcı durumundayken içinde yanıt veremez.  
+- <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>: ileti döngünüz, <xref:System.Windows.Interop.ComponentDispatcher> <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> olayını oluşturması gerektiğini belirtmek için bunu çağırmalıdır. <xref:System.Windows.Interop.ComponentDispatcher>, <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A> `true`ise <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> yükseltmeyecektir, ancak ileti döngüleri, kalıcı durumundayken <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A> yanıt veremese bile, <xref:System.Windows.Interop.ComponentDispatcher> çağırmayı tercih edebilir.  
   
-- <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>: yeni bir ileti kullanılabilir olduğunu belirtmek için ileti döngüsü çağırmalıdır. Dönüş değeri belirten bir dinleyici için olup olmadığını bir <xref:System.Windows.Interop.ComponentDispatcher> olay işlenen ileti. Varsa <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A> döndürür `true` (işlenmiş) dağıtıcısı daha fazla ileti ile hiçbir işlem yapmamanız. Dönüş değeri ise `false`, dağıtıcı çağırmak için beklenen [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] işlevi `TranslateMessage`, ardından çağırın `DispatchMessage`.  
+- <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>: ileti döngünüz, yeni bir iletinin kullanılabilir olduğunu göstermek için bunu çağırmalıdır. Dönüş değeri, <xref:System.Windows.Interop.ComponentDispatcher> olayına yönelik bir dinleyicinin iletiyi işlemediğini belirtir. <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A> `true` (işlenmiş) döndürürse, dağıtıcı iletiyle birlikte hiçbir şey yapmaz. Dönüş değeri `false`ise, Dispatcher 'ın Win32 işlev `TranslateMessage`çağırması beklenir ve ardından `DispatchMessage`çağırır.  
   
-## <a name="using-componentdispatcher-and-existing-message-handling"></a>ComponentDispatcher kullanarak ve var olan ileti işleme  
- Bir denetim listesi aşağıdadır <xref:System.Windows.Interop.ComponentDispatcher> üyeleri devralınan güveniyorsanız kullanacağınız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ileti döngüsü.  
+## <a name="using-componentdispatcher-and-existing-message-handling"></a>ComponentDispatcher ve mevcut Ileti Işlemeyi kullanma  
+ Aşağıda, devralınan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ileti döngüsüne güveniyorsanız kullanacağınız <xref:System.Windows.Interop.ComponentDispatcher> üyelerinin bir denetim listesi verilmiştir.  
   
-- <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>: uygulama kalıcı olup olmadığını döndürür (örneğin, kalıcı ileti döngüsü itilmiş). <xref:System.Windows.Interop.ComponentDispatcher> sınıf sayısını sürdüren nedeniyle bu durumu izleyebilir <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A> ve <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A> ileti döngüsünden gelen çağrıları.  
+- <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>: uygulamanın kalıcı olup olmadığını döndürür (örneğin, bir kalıcı ileti döngüsü itilmiş). <xref:System.Windows.Interop.ComponentDispatcher> bu durumu izleyebilir, çünkü sınıfı ileti döngüsünden bir <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A> ve <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A> çağrıları tutar.  
   
-- <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> ve <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> olayları temsilci çağrılarını standart kurallarını izler. Temsilciler, belirtilmemiş sırayla çağrılır ve ilk iletiyi işlenmiş olarak işaretler bile tüm temsilciler çağrılır.  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> ve <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> olayları, temsilci etkinleştirmeleri için standart kuralları izler. Temsilciler belirtilmemiş bir düzende çağrılır ve ilki iletiyi işlenmiş olarak işaretlese bile tüm temsilciler çağrılır.  
   
-- <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>: boşta işlem için uygun ve etkili bir zamanı belirtir (iş parçacığı için bekleyen diğer ileti vardır). <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> iş parçacığı kalıcı ise oluşturulmaz.  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>: boşta işleme (iş parçacığı için başka bir bekleyen ileti yoktur) için uygun ve verimli bir zaman gösterir. iş parçacığı kalıcı ise <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> oluşturulmaz.  
   
-- <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>: ileti pompası işler tüm iletiler için oluşturulur.  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>: ileti göndericisinin işlediği tüm iletiler için oluşturuldu.  
   
-- <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>: sırasında işlenmemiş olan tüm iletiler için yükseltilmiş <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>.  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>: <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>sırasında işlenmemiş tüm iletiler için oluşturuldu.  
   
- Bir iletiyi kabul işlenmiş IF <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> olay veya <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> olay `handled` olay verilerini başvuruya göre geçirilen parametre `true`. Olay işleyicileri varsa iletisini Yoksay `handled` olduğu `true`, farklı bir işleyici işlenen ileti ilk anlamına gelir. Her iki olayları için olay işleyicileri, ileti değiştirebilir. Dağıtıcı değiştirilmiş ileti ve değil değişmeden orijinal mesajın dağıtmalıdır. <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> Tüm dinleyici, ancak mimari amaç için teslim yalnızca HWND, hedeflenen iletileri çağırmak iletisine yanıt kodunu içeren üst düzey pencere olmasıdır.  
+ <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> olayı veya <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> olayından sonra, olay verilerinde başvuruya göre geçirilen `handled` parametresi `true`olduğunda bir ileti işlenir. `handled` `true`olduğunda olay işleyicileri iletiyi yoksaymalıdır çünkü bu, önce farklı işleyicinin iletiyi işlediği anlamına gelir. Her iki olaya yönelik olay işleyicileri iletiyi değiştirebilir. Dağıtıcı değiştirilmiş iletiyi göndermeli ve özgün değiştirilmemiş iletiyi almalıdır. <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> tüm dinleyicilerine teslim edilir, ancak mimari amaç yalnızca, hedeflenen iletilerin iletiye yanıt olarak kodu çağırması gereken HWND 'yi içeren en üst düzey pencere olur.  
   
-## <a name="how-hwndsource-treats-componentdispatcher-events"></a>HwndSource ComponentDispatcher olayları nasıl işler?  
- Varsa <xref:System.Windows.Interop.HwndSource> (üst HWND), bir üst düzey pencere ile kaydolacak <xref:System.Windows.Interop.ComponentDispatcher>. Varsa <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> oluşturulur, ve eğer ileti için <xref:System.Windows.Interop.HwndSource> veya alt pencereler <xref:System.Windows.Interop.HwndSource> çağrıları kendi <xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TranslateAccelerator%2A>, <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A>, <xref:System.Windows.Interop.IKeyboardInputSink.OnMnemonic%2A> klavye havuz dizisi.  
+## <a name="how-hwndsource-treats-componentdispatcher-events"></a>HwndSource ComponentDispatcher olaylarını nasıl değerlendirir  
+ <xref:System.Windows.Interop.HwndSource> üst düzey bir pencere (üst HWND olmadan) ise, <xref:System.Windows.Interop.ComponentDispatcher>kaydedilir. <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> harekete geçirilir ve ileti <xref:System.Windows.Interop.HwndSource> veya alt pencereler için tasarlanıyorsa, <xref:System.Windows.Interop.HwndSource> <xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TranslateAccelerator%2A>, <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A><xref:System.Windows.Interop.IKeyboardInputSink.OnMnemonic%2A> klavye havuz sırasını çağırır.  
   
- Varsa <xref:System.Windows.Interop.HwndSource> hiçbir işleme olacaktır (sahip bir üst HWND) bir üst düzey pencere değil. Yalnızca üst düzey pencere işleme yapmak için beklenen bir durumdur ve yok üst düzey pencere klavye havuz desteği ile birlikte çalışabilirlik her senaryo bir parçası olarak olması beklenir.  
+ <xref:System.Windows.Interop.HwndSource> en üst düzey bir pencere (üst HWND) değilse, hiçbir işleme uygulanmaz. Yalnızca üst düzey pencerenin işleme yapması beklenir ve birlikte çalışabilirlik senaryosunun parçası olarak klavye havuzu desteğiyle bir üst düzey pencere olması beklenir.  
   
- Varsa <xref:System.Windows.Interop.HwndHost.WndProc%2A> üzerinde bir <xref:System.Windows.Interop.HwndSource> çağrılır ilk çağrılan bir uygun klavye havuz yöntemi, uygulamanızın daha yüksek düzey klavye olaylarını gibi alacak <xref:System.Windows.UIElement.KeyDown>. Ancak, istenen klavye girişi model özelliklerini erişim anahtarı desteği gibi bozar hiçbir klavye havuzu yöntemi çağrılır. İleti döngüsünden düzgün ilgili iş parçacığı üzerinde bildirim değil çünkü bu gerçekleşebilir <xref:System.Windows.Interop.ComponentDispatcher>, veya üst HWND uygun klavye havuz yanıtları çağırmadı.  
+ Bir <xref:System.Windows.Interop.HwndSource> üzerinde <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ilk Çağrılmakta olan uygun bir klavye havuzu yöntemi olmadan çağrılırsa, uygulamanız <xref:System.Windows.UIElement.KeyDown>gibi daha üst düzey klavye olaylarını alır. Ancak, erişim anahtarı desteği gibi istenen klavye giriş modeli özelliklerini atladan klavye havuzu yöntemleri çağrılmaz. Bu durum ileti döngüsünün <xref:System.Windows.Interop.ComponentDispatcher>ilgili iş parçacığını doğru bir şekilde bilgilendirmediği veya üst HWND doğru klavye havuzu yanıtlarını çağırmadığı için meydana gelebilir.  
   
- Kullanarak kancaları eklediyseniz klavye havuzuna giden bir ileti için HWND gönderilmeyebilir <xref:System.Windows.Interop.HwndSource.AddHook%2A> yöntemi. İletiyi doğrudan gönderilen ileti pompası düzeyinde işlenen `DispatchMessage` işlevi.  
+ <xref:System.Windows.Interop.HwndSource.AddHook%2A> yöntemi kullanılarak bu ileti için kancalar eklediyseniz, klavye havuzuna giden bir ileti HWND 'ye gönderilmeyebilir. İleti, ileti göndericisi düzeyinde doğrudan işlenmiş ve `DispatchMessage` işlevine gönderilmemiş olabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

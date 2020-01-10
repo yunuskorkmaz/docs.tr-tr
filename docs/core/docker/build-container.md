@@ -3,13 +3,13 @@ title: Docker öğreticisi ile uygulama Kapsayıcılı hale getirme
 description: Bu öğreticide, Docker ile bir .NET Core uygulamasını kapsayıya kapsayıtabilecek öğreneceksiniz.
 ms.date: 06/26/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: b344731c7d356f3705d9909b6901234f91ec7d6d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.custom: mvc
+ms.openlocfilehash: e012fcf78c88e7f64f6ee205cd69b69683bed9c3
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521881"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740765"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Öğretici: bir .NET Core uygulamasını Kapsayıize edin
 
@@ -30,7 +30,7 @@ Docker kapsayıcısının bir .NET Core uygulaması için görevleri oluşturup 
 
 Aşağıdaki önkoşulları yükler:
 
-- [.NET Core 2,2 SDK](https://dotnet.microsoft.com/download) \
+- [.NET Core 2,2 SDK](https://dotnet.microsoft.com/download)\
 .NET Core yüklüyse, kullanmakta olduğunuz SDK 'yı öğrenmek için `dotnet --info` komutunu kullanın.
 
 - [Docker Community sürümü](https://www.docker.com/products/docker-desktop)
@@ -76,7 +76,7 @@ docker-working
             project.assets.json
 ```
 
-@No__t_0 komutu, *uygulama* adlı yeni bir klasör oluşturur ve bir "Merhaba Dünya" uygulaması oluşturur. *Uygulama* klasörünü girin ve `dotnet run` komutu çalıştırın. Aşağıdaki çıktıyı görürsünüz:
+`dotnet new` komutu, *uygulama* adlı yeni bir klasör oluşturur ve bir "Merhaba Dünya" uygulaması oluşturur. *Uygulama* klasörünü girin ve `dotnet run`komutu çalıştırın. Aşağıdaki çıktıyı görürsünüz:
 
 ```console
 > dotnet run
@@ -124,7 +124,7 @@ namespace myapp
 }
 ```
 
-Dosyayı kaydedin ve `dotnet run` programı yeniden test edin. Bu uygulamanın süresiz olarak çalıştığını unutmayın. Durdurmak için <kbd>CTRL</kbd> +, Cancel<kbd></kbd> komutunu kullanın. Aşağıdaki çıktıyı görürsünüz:
+Dosyayı kaydedin ve `dotnet run`programı yeniden test edin. Bu uygulamanın süresiz olarak çalıştığını unutmayın. Durdurmak için <kbd>CTRL</kbd>+, Cancel <kbd></kbd> komutunu kullanın. Aşağıdaki çıktıyı görürsünüz:
 
 ```console
 > dotnet run
@@ -138,7 +138,7 @@ Counter: 4
 Uygulama için komut satırına bir sayı geçirirseniz, bu miktarı yalnızca bu miktara göre sayılır ve ardından çıkış olur. Beş ile saymak için `dotnet run -- 5` deneyin.
 
 > [!NOTE]
-> @No__t_0 sonraki parametreler `dotnet run` komutuna geçirilmez ve bunun yerine uygulamanıza geçirilir.
+> `--` sonraki parametreler `dotnet run` komutuna geçirilmez ve bunun yerine uygulamanıza geçirilir.
 
 ## <a name="publish-net-core-app"></a>.NET Core uygulaması Yayımla
 
@@ -181,7 +181,7 @@ Terminalinizde, başlangıçta oluşturduğunuz çalışma klasörünün dizinin
 FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 ```
 
-@No__t_0 komutu, Docker 'ın **MCR.Microsoft.com/DotNet/Core/Runtime** deposundan etiketli **2,2** görüntüsünü çekmesini söyler. SDK 'nizin hedeflediği çalışma zamanına uyan .NET Core çalışma zamanını çekdiğinizden emin olun. Örneğin, önceki bölümde oluşturulan uygulama .NET Core 2,2 SDK 'sını kullandı ve .NET Core 2,2 ' yi hedefleyen bir uygulama oluşturdu. Bu nedenle, *Dockerfile* dosyasında başvurulan temel görüntü **2,2**ile etiketlenir.
+`FROM` komutu, Docker 'ın **MCR.Microsoft.com/DotNet/Core/Runtime** deposundan etiketli **2,2** görüntüsünü çekmesini söyler. SDK 'nizin hedeflediği çalışma zamanına uyan .NET Core çalışma zamanını çekdiğinizden emin olun. Örneğin, önceki bölümde oluşturulan uygulama .NET Core 2,2 SDK 'sını kullandı ve .NET Core 2,2 ' yi hedefleyen bir uygulama oluşturdu. Bu nedenle, *Dockerfile* dosyasında başvurulan temel görüntü **2,2**ile etiketlenir.
 
 *Dockerfile* dosyasını kaydedin. Çalışma klasörünün dizin yapısı aşağıdaki gibi görünmelidir. Daha derin düzey dosya ve klasörlerin bazıları, makalede yer kazanmak için kesildi:
 
@@ -212,7 +212,7 @@ Terminalinizden aşağıdaki komutu çalıştırın:
 docker build -t myimage -f Dockerfile .
 ```
 
-Docker, *Dockerfile*dosyasındaki her satırı işleyecek. @No__t_1 komutundaki `.`, Docker 'ın bir *Dockerfile*bulmak için geçerli klasörü kullanmasını söyler. Bu komut, görüntüyü oluşturur ve bu görüntüyü işaret eden **MyImage** adlı bir yerel depo oluşturur. Bu komut bittikten sonra, yüklenen görüntülerin listesini görmek için `docker images` çalıştırın:
+Docker, *Dockerfile*dosyasındaki her satırı işleyecek. `docker build` komutundaki `.`, Docker 'ın bir *Dockerfile*bulmak için geçerli klasörü kullanmasını söyler. Bu komut, görüntüyü oluşturur ve bu görüntüyü işaret eden **MyImage** adlı bir yerel depo oluşturur. Bu komut bittikten sonra, yüklenen görüntülerin listesini görmek için `docker images` çalıştırın:
 
 ```console
 > docker images
@@ -229,11 +229,11 @@ COPY app/bin/Release/netcoreapp2.2/publish/ app/
 ENTRYPOINT ["dotnet", "app/myapp.dll"]
 ```
 
-@No__t_0 komutu, Docker 'a bilgisayarınızdaki belirtilen klasörü kapsayıcıda bir klasöre kopyalamasını söyler. Bu örnekte, *Publish* klasörü kapsayıcıda *uygulama* adlı bir klasöre kopyalanır.
+`COPY` komutu, Docker 'a bilgisayarınızdaki belirtilen klasörü kapsayıcıda bir klasöre kopyalamasını söyler. Bu örnekte, *Publish* klasörü kapsayıcıda *uygulama* adlı bir klasöre kopyalanır.
 
-@No__t_0 sonraki komut, Docker 'ın kapsayıcıyı yürütülebilir olarak çalışacak şekilde yapılandırmasını söyler. Kapsayıcı başladığında `ENTRYPOINT` komutu çalışır. Bu komut sona erdiğinde kapsayıcı otomatik olarak durur.
+`ENTRYPOINT`sonraki komut, Docker 'ın kapsayıcıyı yürütülebilir olarak çalışacak şekilde yapılandırmasını söyler. Kapsayıcı başladığında `ENTRYPOINT` komutu çalışır. Bu komut sona erdiğinde kapsayıcı otomatik olarak durur.
 
-Terminalinizden `docker build -t myimage -f Dockerfile .` çalıştırın ve bu komutun ne zaman tamamlanerdiğinde `docker images` çalıştırın.
+Terminalinizden `docker build -t myimage -f Dockerfile .` çalıştırın ve bu komutun ne zaman tamamlanerdiğinde `docker images`çalıştırın.
 
 ```console
 > docker build -t myimage -f Dockerfile .
@@ -276,7 +276,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### <a name="manage-the-container"></a>Kapsayıcıyı yönetme
 
-Her kapsayıcıya, bu kapsayıcı örneğine başvurmak için kullanabileceğiniz bir rastgele ad atanır. Örneğin, otomatik olarak oluşturulan kapsayıcı **boring_matsumoto** adını (sizinki farklı olur) seçti ve bu ad kapsayıcıyı başlatmak için kullanılabilir. Otomatik adı, `docker create --name` parametresini kullanarak belirli bir adla geçersiz kılabilirsiniz.
+Her kapsayıcıya, bu kapsayıcı örneğine başvurmak için kullanabileceğiniz bir rastgele ad atanır. Örneğin, otomatik olarak oluşturulan kapsayıcı **boring_matsumoto** adı (sizinki farklı olacaktır) seçti ve bu ad kapsayıcıyı başlatmak için kullanılabilir. Otomatik adı, `docker create --name` parametresini kullanarak belirli bir adla geçersiz kılabilirsiniz.
 
 Aşağıdaki örnek, kapsayıcıyı başlatmak için `docker start` komutunu kullanır ve sonra yalnızca çalıştıran kapsayıcıları göstermek için `docker ps` komutunu kullanır:
 
@@ -301,7 +301,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 ### <a name="connect-to-a-container"></a>Bir kapsayıcıya bağlanma
 
-Bir kapsayıcı çalışmaya başladıktan sonra çıktıyı görmek için bu sunucuya bağlanabilirsiniz. Kapsayıcıyı başlatmak ve çıkış akışına gözatmak için `docker start` ve `docker attach` komutlarını kullanın. Bu örnekte, <kbd>CTRL + C</kbd> komutu, çalışan kapsayıcıyı ayırmak için kullanılır. Bu işlem, kapsayıcıyı durduran kapsayıcıyı gerçekten sonlandıracaktır. @No__t_0 parametresi, <kbd>CTRL + C</kbd> 'nin kapsayıcıdaki işlemi durdurmamasını sağlar.
+Bir kapsayıcı çalışmaya başladıktan sonra çıktıyı görmek için bu sunucuya bağlanabilirsiniz. Kapsayıcıyı başlatmak ve çıkış akışına gözatmak için `docker start` ve `docker attach` komutlarını kullanın. Bu örnekte, <kbd>CTRL + C</kbd> komutu, çalışan kapsayıcıyı ayırmak için kullanılır. Bu işlem, kapsayıcıyı durduran kapsayıcıyı gerçekten sonlandıracaktır. `--sig-proxy=false` parametresi, <kbd>CTRL + C</kbd> 'nin kapsayıcıdaki işlemi durdurmamasını sağlar.
 
 Kapsayıcıdan ayrıldıktan sonra, hala çalıştığını ve saymakta olduğunu doğrulamak için yeniden bağlayın.
 
@@ -322,7 +322,7 @@ Counter: 19
 ^C
 ```
 
-### <a name="delete-a-container"></a>Kapsayıcıyı silme
+### <a name="delete-a-container"></a>Kapsayıcı silme
 
 Bu makalenin amaçları doğrultusunda, kapsayıcıların hiçbir şey yapmadan asılı istememeniz gerekmez. Daha önce oluşturduğunuz kapsayıcıyı silin. Kapsayıcı çalışıyorsa durdurun.
 
@@ -358,7 +358,7 @@ Counter: 5
 ^C
 ```
 
-@No__t_0, <kbd>CTRL + C</kbd> komutu kapsayıcıda çalışan işlemi durdurur, bu da kapsayıcıyı durdurur. @No__t_0 parametresi sağlandığından, işlem durdurulduğunda kapsayıcı otomatik olarak silinir. Mevcut olmadığını doğrulayın:
+`docker run -it`, <kbd>CTRL + C</kbd> komutu kapsayıcıda çalışan işlemi durdurur, bu da kapsayıcıyı durdurur. `--rm` parametresi sağlandığından, işlem durdurulduğunda kapsayıcı otomatik olarak silinir. Mevcut olmadığını doğrulayın:
 
 ```console
 > docker ps -a
@@ -367,11 +367,11 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### <a name="change-the-entrypoint"></a>GIRIŞ noktasını değiştirme
 
-@No__t_0 komutu aynı zamanda *Dockerfile* içindeki `ENTRYPOINT` komutunu değiştirmenize ve yalnızca bu kapsayıcı için başka bir şey çalıştırmanıza imkan tanır. Örneğin, `bash` veya `cmd.exe` çalıştırmak için aşağıdaki komutu kullanın. Komutu gereken şekilde düzenleyin.
+`docker run` komutu aynı zamanda *Dockerfile* içindeki `ENTRYPOINT` komutunu değiştirmenize ve yalnızca bu kapsayıcı için başka bir şey çalıştırmanıza imkan tanır. Örneğin, `bash` veya `cmd.exe`çalıştırmak için aşağıdaki komutu kullanın. Komutu gereken şekilde düzenleyin.
 
 #### <a name="windows"></a>Windows
 
-Bu örnekte, `ENTRYPOINT` `cmd.exe` olarak değiştirilir. İşlemi sonlandırmak ve kapsayıcıyı durdurmak için <kbd>CTRL</kbd> +<kbd>C</kbd> 'ye basıldığında.
+Bu örnekte, `ENTRYPOINT` `cmd.exe`olarak değiştirilir. İşlemi sonlandırmak ve kapsayıcıyı durdurmak için <kbd>CTRL</kbd>+<kbd>C</kbd> 'ye basıldığında.
 
 ```console
 > docker run -it --rm --entrypoint "cmd.exe" myimage
@@ -398,7 +398,7 @@ C:\>^C
 
 #### <a name="linux"></a>Linux
 
-Bu örnekte, `ENTRYPOINT` `bash` olarak değiştirilir. @No__t_0 komutu işlemi sonlandırır ve kapsayıcıyı durdurur.
+Bu örnekte, `ENTRYPOINT` `bash`olarak değiştirilir. `quit` komutu işlemi sonlandırır ve kapsayıcıyı durdurur.
 
 ```bash
 root@user:~# docker run -it --rm --entrypoint "bash" myimage
@@ -420,7 +420,7 @@ Docker, kapsayıcınıza ve görüntülerinize ne yapmak istediğinizi kapsayan 
 - [Docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)
 - [Docker görüntüsü](https://docs.docker.com/engine/reference/commandline/image/)
 
-## <a name="clean-up-resources"></a>Kaynakları Temizleme
+## <a name="clean-up-resources"></a>Kaynakları temizleme
 
 Bu öğreticide kapsayıcılar ve görüntüler oluşturdunuz. İsterseniz, bu kaynakları silin. İçin aşağıdaki komutları kullanın
 
@@ -430,13 +430,13 @@ Bu öğreticide kapsayıcılar ve görüntüler oluşturdunuz. İsterseniz, bu k
     > docker ps -a
     ```
 
-02. Çalıştıran kapsayıcıları durdurun. @No__t_0, kapsayıcıya otomatik olarak atanan adı temsil eder.
+02. Çalıştıran kapsayıcıları durdurun. `CONTAINER_NAME`, kapsayıcıya otomatik olarak atanan adı temsil eder.
 
     ```console
     > docker stop CONTAINER_NAME
     ```
 
-03. Kapsayıcıyı sil
+03. Kapsayıcıyı silme
 
     ```console
     > docker rm CONTAINER_NAME

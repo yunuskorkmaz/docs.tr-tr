@@ -1,47 +1,46 @@
 ---
-title: Project.json ile Paket bağımlılıklarını azaltma
-description: Project.json tabanlı kitaplıkları yazma Paket bağımlılıklarını azaltın.
+title: Project. JSON ile paket bağımlılıklarını azaltma
+description: Project. JSON tabanlı kitaplıklar yazarken paket bağımlılıklarını azaltın.
 author: cartermp
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 9d4f9d7f6e7a736b7d07062f3cd31d6f45176cb1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48ba3ef578388fd98fe7cb830df313512d359483
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61615347"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740831"
 ---
-# <a name="reducing-package-dependencies-with-projectjson"></a>Project.json ile Paket bağımlılıklarını azaltma
+# <a name="reducing-package-dependencies-with-projectjson"></a>Project. JSON ile paket bağımlılıklarını azaltma
 
-Bu makale yazarken paket bağımlılıklarınızı azaltma hakkında bilmeniz gerekenler kapsar `project.json` kitaplıkları. Bu makalenin sonunda, yalnızca gerekli bağımlılıkları kullanır, kitaplığınıza compose öğreneceksiniz.
+Bu makalede, `project.json` kitaplıklarını yazarken paket bağımlılıklarınızı azaltma hakkında bilmeniz gereken özellikler ele alınmaktadır. Bu makalenin sonuna kadar, kitaplığınızı yalnızca ihtiyaç duyduğunuz bağımlılıkları kullanacak şekilde oluşturmayı öğreneceksiniz.
 
-## <a name="why-its-important"></a>Neden önemli olduğu
+## <a name="why-its-important"></a>Neden önemli
 
-.NET core NuGet paketlerini oluşan bir üründür.  Temel bir pakettir [. NETStandard.Library metapackage](https://www.nuget.org/packages/NETStandard.Library), bir NuGet paketi diğer paketleri oluşur.  .NET Framework, .NET Core ve Xamarin/Mono gibi birden çok .NET uygulamaları üzerinde çalışacağı garanti paketleri kümesini sağlar.
+.NET Core, NuGet paketlerinden oluşan bir üründür.  Temel bir paket [. ](https://www.nuget.org/packages/NETStandard.Library)Diğer paketlerden oluşan bir NuGet paketi olan Netstandart. Library meta paketi. Bu, .NET Framework, .NET Core ve Xamarin/Mono gibi birden çok .NET uygulamasında çalışmak için garanti edilen paket kümesini sağlar.
 
-Ancak, içerdiği her tek bir paket kitaplığınızı kullanmayacaksa şansı yoktur.  Bir kitaplığı yazma ve NuGet dağıtma, "yalnızca paketler aşağı bağımlılıklarınızı kırpmak için" en iyi yöntem olduğunda, gerçekten kullanın.  NuGet paketleri için daha küçük bütün kapladığı alanı sonuçlanır.
+Ancak, kitaplığınızın içerdiği her bir paketi kullanması iyi bir şansınız vardır.  Bir kitaplığı yazarken ve NuGet üzerinden dağıtırken, bağımlılıklarınızı yalnızca gerçekten kullandığınız paketlere göre "kırpmak" en iyi uygulamadır.  Bu, NuGet paketleri için daha küçük bir genel parmak izine neden olur.
 
 ## <a name="how-to-do-it"></a>Nasıl yapılır
 
-Şu anda, resmi yoktur `dotnet` paket başvuruları kırpar komutu.  Bunun yerine, el ile yapmanız gerekir.  Genel süreç aşağıdaki gibi görünür:
+Şu anda paket başvurularını kırpan resmi bir `dotnet` komutu yoktur.  Bunun yerine, el ile yapmanız gerekir.  Genel işlem aşağıdaki gibi görünür:
 
-1. Başvuru `NETStandard.Library` sürüm `1.6.0` içinde bir `dependencies` bölümünü, `project.json`.
-2. Paketleri geri `dotnet restore` ([bkz. Not](#dotnet-restore-note)) komut satırı.
-3. İnceleme `project.lock.json` dosya ve bulma `NETStandard.Library` bölümü.  Bu, dosyanın başına yakın olur.
-4. Tüm altında listelenen paketlerin bir bölümünü kopyalayın `dependencies`.
-5. Kaldırma `.NETStandard.Library` başvuru ve kopyalanan paketleri ile değiştirin.
-6. İhtiyacınız olmayan paketleri başvuruları kaldırın.
+1. `project.json`bir `dependencies` bölümünde sürüm `1.6.0` başvuru `NETStandard.Library`.
+2. Paketleri, komut satırından `dotnet restore` ([bkz. nota](#dotnet-restore-note)) geri yükleyin.
+3. `project.lock.json` dosyasını inceleyin ve `NETStandard.Library` bölümünü bulun.  Bu, dosyanın başlangıcına yakıntı.
+4. Listelenen tüm paketleri `dependencies`altına kopyalayın.
+5. `.NETStandard.Library` başvurusunu kaldırın ve kopyalanmış paketlerle değiştirin.
+6. İhtiyacınız olmayan paketlere yönelik başvuruları kaldırın.
 
-Aşağıdaki yöntemlerden birini kullanarak ihtiyacınız olmayan paketler bulabilirsiniz:
+Aşağıdaki yollarla ihtiyacınız olmayan paketleri öğrenebilirsiniz:
 
-1. Deneme yanılma.  Bu paketi kaldırma, geri yükleme, kitaplığınıza derlenmeye devam eder, görme ve bu süreci tekrarlayarak içerir.
-2. Gibi bir araç kullanarak [yetenek](https://github.com/icsharpcode/ILSpy#ilspy-------) veya [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) ne kodunuzun gerçekte kullanmakta olduğunu görmenizi sağlayan başvurular göz atmak için.  Ardından, kullanmakta olduğunuz türlerine karşılık gelen paketler kaldırabilirsiniz.
+1. Deneme ve hata. Bu, bir paketi kaldırmayı, geri yüklemeyi, kitaplığınızın hala derlendiğini görmenizi ve bu işlemi tekrarlamayı içerir.
+2. Kodunuzun gerçekten kullandığını görmek için başvurularda göz atmayı sağlamak üzere [ılspy](https://github.com/icsharpcode/ILSpy#ilspy-------) veya [.net yansıtıcısı](https://www.red-gate.com/products/dotnet-development/reflector) gibi bir araç kullanma. Daha sonra, kullanmakta olduğunuz türlere karşılık gelen paketleri kaldırabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-Genel koleksiyon türleri için ek işlevler sağlanan kitaplık yazdığınız varsayalım.  Bir tür kitaplığı paketleri gibi bağımlı gerek `System.Collections`, ancak hiç paketleri gibi değişebilir `System.Net.Http`.  Bu nedenle, yalnızca ne bu kitaplığı gerekli aşağı Paket bağımlılıklarını trim yararlı olabilir!
+Genel koleksiyon türlerine ek işlevsellik sağlayan bir kitaplık yazdığınızı düşünelim. Bu tür bir kitaplığın `System.Collections`gibi paketlere bağlı olması gerekir, ancak tümü `System.Net.Http`gibi paketlere bağlı olmayabilir. Bu nedenle, paket bağımlılıklarını yalnızca bu kitaplıkta gerekli olacak şekilde kırpmak iyi olacaktır!
 
-Bu kitaplık kırpmak için ile başlamanız `project.json` bir başvuru ekleyin ve dosya `NETStandard.Library` sürüm `1.6.0`.
+Bu kitaplığı kırpmak için `project.json` dosyası ile başlar ve `NETStandard.Library` sürümü `1.6.0`başvurusunu ekleyin.
 
 ```json
 {
@@ -55,9 +54,9 @@ Bu kitaplık kırpmak için ile başlamanız `project.json` bir başvuru ekleyin
 }
 ```
 
-Ardından, paketleri geri `dotnet restore` ([bkz. Not](#dotnet-restore-note)), inceleme `project.lock.json` dosyasını ve tüm paketleri için geri `NETStandard.Library`.
+Ardından, paketleri `dotnet restore` ([bkz. nota](#dotnet-restore-note)) geri yükler, `project.lock.json` dosyasını inceleyin ve `NETStandard.Library`için geri yüklenen tüm paketleri bulabilirsiniz.
 
-İlgili bölüme işte `project.lock.json` dosya göründüğüne hedeflenirken `netstandard1.0`:
+`project.lock.json` dosyadaki ilgili bölüm, `netstandard1.0`hedefleme sırasında şöyle görünür:
 
 ```json
 "NETStandard.Library/1.6.0":{
@@ -90,7 +89,7 @@ Ardından, paketleri geri `dotnet restore` ([bkz. Not](#dotnet-restore-note)), i
 }
 ```
 
-Ardından, paket başvuruları kopyalayabilirsiniz `dependencies` kitaplığın bölümünü `project.json` değiştirerek, dosya `NETStandard.Library` başvurusu:
+Sonra, `NETStandard.Library` başvurusunu değiştirerek kitaplığın `project.json` dosyasının `dependencies` bölümüne paket başvurularını kopyalayın:
 
 ```json
 {
@@ -126,9 +125,9 @@ Ardından, paket başvuruları kopyalayabilirsiniz `dependencies` kitaplığın 
 }
 ```
 
-Birçok paketleri, çoğu kesinlikle koleksiyon türlerini genişletmek için gerekli olmayan olmasıdır.  Paketleri el ile kaldırmanız veya gibi bir araç kullanın [yetenek](https://github.com/icsharpcode/ILSpy#ilspy-------) veya [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector/) , kodunuzun gerçekte paketleri tanımlamak için kullanır.
+Bu çok sayıda paket, büyük ölçüde koleksiyon türlerini genişletmek için gerekli değildir.  Kodlarınızın gerçekten hangi paketleri kullandığını belirlemek için paketleri el ile kaldırabilir veya [ılspy](https://github.com/icsharpcode/ILSpy#ilspy-------) veya [.net yansıtıcısı](https://www.red-gate.com/products/dotnet-development/reflector/) gibi bir araç kullanabilirsiniz.
 
-İşte kırpılmış paket aşağıdaki gibi görünebilir:
+Kırpılmış bir paket şöyle görünebilir:
 
 ```json
 {
@@ -150,7 +149,7 @@ Birçok paketleri, çoğu kesinlikle koleksiyon türlerini genişletmek için ge
 }
 ```
 
-Şimdi, bağımlı, daha küçük ayak izine sahip üzerinde `NETStandard.Library` metapackage.
+Şimdi, `NETStandard.Library` metapackage 'e bağımlı olsa da daha küçük bir ayak izine sahiptir.
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

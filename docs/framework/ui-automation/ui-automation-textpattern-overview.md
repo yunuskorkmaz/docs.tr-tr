@@ -6,19 +6,19 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: b7e378d79109d33859a38ea398cffd2193044abd
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 22966c8ed80be99497e7d05b56455c3057fdd81a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800203"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741423"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI Otomasyon TextPattern Öğesine Genel Bakış
 
 > [!NOTE]
 > Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).
 
-Bu genel bakışta, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]tarafından desteklenen platformlarda metin denetimlerinin biçim ve stil öznitelikleri dahil olmak üzere metin içeriğini göstermek için [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] nasıl kullanılacağı açıklanmaktadır. Bu denetimler, Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> ve [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] <xref:System.Windows.Controls.RichTextBox> ile bunlarla sınırlı değildir.
+Bu genel bakışta, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]tarafından desteklenen platformlarda metin denetimlerinin biçim ve stil öznitelikleri dahil olmak üzere metin içeriğini göstermek için [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] nasıl kullanılacağı açıklanmaktadır. Bu denetimler, Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.RichTextBox> ile bunlarla sınırlı değildir.
 
 Bir denetimin metinsel içeriğini göstermek, metin kapsayıcısının içeriğini bir metin akışı olarak temsil eden <xref:System.Windows.Automation.TextPattern> denetim deseninin kullanımı aracılığıyla gerçekleştirilir. <xref:System.Windows.Automation.TextPattern>, biçim ve stil özniteliklerini göstermek için <xref:System.Windows.Automation.Text.TextPatternRange> sınıfının desteğini gerektirir. <xref:System.Windows.Automation.Text.TextPatternRange>, <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ve <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> uç noktaları koleksiyonuyla bir metin kapsayıcısında bitişik veya birden çok, ayrık metin yayılmalarını temsil eden <xref:System.Windows.Automation.TextPattern> destekler. <xref:System.Windows.Automation.Text.TextPatternRange> seçim, karşılaştırma, alma ve çapraz geçiş gibi işlevleri destekler.
 

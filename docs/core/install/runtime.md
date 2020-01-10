@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 8f4a895ad66dea3063a32f785e4c521196266978
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: d36909e06bd9a3de0940c4c1b2b9eacbf9cafe7f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835730"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740599"
 ---
 # <a name="install-the-net-core-runtime"></a>.NET Core çalışma zamanını yükler
 
@@ -42,7 +42,32 @@ macOS, .NET Core 3,1 çalışma zamanını yüklemek için kullanılabilecek tek
 
 ## <a name="install-with-a-package-manager"></a>Paket Yöneticisi ile yüklemesi
 
-.NET Core çalışma zamanını birçok ortak Linux Paket Yöneticisi ile yükleyebilirsiniz. Daha fazla bilgi için bkz. [Linux Paket Yöneticisi-.NET Core 'U yükler](linux-package-manager-rhel7.md).
+.NET Core çalışma zamanını birçok ortak Linux Paket Yöneticisi ile yükleyebilirsiniz. Daha fazla bilgi için bkz. [Linux Paket Yöneticisi-.NET Core 'U yükler](linux-package-managers.md).
+
+Paketi bir paket yöneticisi ile yüklemek yalnızca x64 mimarisinde desteklenir. .NET Core çalışma zamanını ARM gibi farklı bir mimariye yüklüyorsanız, [indir ve el ile yükle](#download-and-manually-install) bölümündeki yönergeleri izleyin. Desteklenen mimariler hakkında daha fazla bilgi için bkz. [.NET Core Dependencies ve Requirements](dependencies.md).
+
+## <a name="download-and-manually-install"></a>İndirme ve el ile yükleme
+
+Çalışma zamanını ayıklamak ve .NET Core CLI komutlarının terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürümü [indirin](#all-net-core-downloads) . Ardından, bir Terminal açın ve aşağıdaki komutları çalıştırın.
+
+```bash
+mkdir -p $HOME/dotnet && tar zxf aspnetcore-runtime-3.1.0-linux-x64.tar.gz -C $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
+
+> [!TIP]
+> Yukarıdaki `export` komutları yalnızca .NET Core CLI komutlarını çalıştırıldığı terminal oturumu için kullanılabilir hale getirir.
+>
+> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örneğin:
+>
+> - **Bash kabuğu**: *~/. bash_profile*, *~/,bashrc*
+> - **Korn kabuğu**: *~/,KSHRC* veya *. Profile*
+> - **Z kabuğu**: *~/,zshrc* veya *. zprofile*
+> 
+> Kabuğunuz için uygun kaynak dosyayı düzenleyin ve mevcut `PATH` ifadesinin sonuna `:$HOME/dotnet` ekleyin. `PATH` bir ifade dahil yoksa, `export PATH=$PATH:$HOME/dotnet`yeni bir satır ekleyin.
+>
+> Ayrıca, dosyanın sonuna `export DOTNET_ROOT=$HOME/dotnet` ekleyin.
 
 ::: zone-end
 
@@ -72,7 +97,7 @@ dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
 Komut dosyası, .NET Core 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. `current` anahtarını belirterek belirli bir yayını seçebilirsiniz. Çalışma zamanı yüklemek için `runtime` anahtarını ekleyin. Aksi halde, komut dosyası [SDK 'yı](sdk.md)yüklüyor.
 
 ```bash
-./dotnet-install.sh --current 3.1 --runtime aspnetcore
+./dotnet-install.sh --channel 3.1 --runtime aspnetcore
 ```
 
 > [!NOTE]

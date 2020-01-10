@@ -7,16 +7,16 @@ ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 4fa0153cfa9dd52f4d80301d228dde3f16225bfd
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6a4406775056b76dfa789911b8bb14e84dbc8eea
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582033"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738662"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard) , tüm .NET uygulamalarında kullanılabilmesi amaçlanan .NET API 'lerinin resmi bir belirtimidir. .NET Standard arkasındaki mosyon, .NET ekosisteminde daha büyük bir birlik oluşturur. [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) , .NET uygulama davranışı için birlik özelliği oluşturmaya devam etmektedir, ancak .NET kitaplığı uygulamalarına yönelik .net temel sınıf KITAPLıKLARı (BCL) için benzer bir belirtim yoktur.
+[.NET Standard](https://github.com/dotnet/standard) , tüm .NET uygulamalarında kullanılabilmesi amaçlanan .NET API 'lerinin resmi bir belirtimidir. .NET Standard arkasındaki mosyon, .NET ekosisteminde daha büyük bir uyumluluk oluşturur. [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) , .NET uygulama davranışı için birlik özelliği oluşturmaya devam etmektedir, ancak .NET kitaplığı uygulamalarına yönelik .net temel sınıf KITAPLıKLARı (BCL) için benzer bir belirtim yoktur.
 
 .NET Standard aşağıdaki temel senaryolara izin vermez:
 
@@ -24,7 +24,7 @@ ms.locfileid: "72582033"
 - Geliştiricilerin aynı API kümesi kullanılarak .NET uygulamalarında kullanılabilir olan taşınabilir kitaplıklar oluşturmasını sağlar.
 - .NET API 'leri, yalnızca OS API 'Leri için, paylaşılan kaynağın koşullu derlemesini azaltır veya ortadan kaldırır.
 
-Çeşitli .NET uygulamaları .NET Standard belirli sürümlerini hedefleyin. Her .NET uygulama sürümü, desteklediği en yüksek .NET Standard sürümünü tanıtır, yani önceki sürümleri de destekler. Örneğin .NET Framework 4,6, .NET Standard 1,3 ' i uygular, yani .NET Standard sürümler 1,0 içinde tanımlanan tüm API 'Leri 1,3 aracılığıyla gösterir. Benzer şekilde, .NET Framework 4.6.1 .NET Standard 1,4 uygular, ancak .NET Core 1,0 .NET Standard 1,6 uygular.
+Çeşitli .NET uygulamaları .NET Standard belirli sürümlerini hedefleyin. Her .NET uygulama sürümü, desteklediği en yüksek .NET Standard sürümünü tanıtır, yani önceki sürümleri de destekler. Örneğin, .NET Framework 4,6 .NET Standard 1,3 ' i uygular, yani .NET Standard sürümler 1,0 içinde tanımlanan tüm API 'Leri 1,3 aracılığıyla gösterir. Benzer şekilde, .NET Framework 4.6.1 .NET Standard 1,4 uygular, ancak .NET Core 1,0 .NET Standard 1,6 uygular.
 
 ## <a name="net-implementation-support"></a>.NET uygulama desteği
 
@@ -60,7 +60,7 @@ Ancak, daha düşük .NET Standard sürümleri hedeflemek çok sayıda destek ba
 - Eklenebilir: .NET Standard sürümler mantıksal olarak eşmerkezli daireler: daha yüksek sürümler önceki sürümlerden tüm API 'Leri dahil. Sürümler arasında hiç Son değişiklik yok.
 - Sabit: sevk edildiğinde .NET Standard sürümler dondurulur. Yeni API 'Ler öncelikle .NET Core gibi belirli .NET uygulamalarında kullanılabilir hale gelir. .NET Standard gözden geçirme panosu, tüm .NET uygulamalarında yeni API 'Lerin kullanılabilir olması gerektiğini düşünürsa, yeni bir .NET Standard sürümüne eklenir.
 
-## <a name="specification"></a>Min
+## <a name="specification"></a>Belirtim
 
 .NET Standard belirtimi, standartlaştırılmış bir API kümesidir. Belirtim .NET uygulayıcılar tarafından, özellikle Microsoft (.NET Framework, .NET Core ve mono dahil) ve Unity tarafından korunur. [GitHub](https://github.com/dotnet/standard)aracılığıyla yeni .NET Standard sürümlerini oluşturma işleminin parçası olarak genel geri bildirim işlemi kullanılır.
 
@@ -70,7 +70,7 @@ Resmi belirtimi, standart bir parçası olan API 'Leri tanımlayan bir. cs dosya
 
 [Netstandard. Library](https://www.nuget.org/packages/NETStandard.Library) meta paketi ([kaynak](https://github.com/dotnet/standard/blob/master/src/netstandard/pkg/NETStandard.Library.dependencies.props)) bir veya daha fazla .NET Standard sürümünde tanımlayan kitaplıklar kümesini açıklar.
 
-@No__t_0 gibi belirli bir bileşen şunları açıklar:
+`System.Runtime`gibi belirli bir bileşen şunları açıklar:
 
 - .NET Standard (yalnızca kapsamı) bir parçasıdır.
 - Bu kapsam için birden çok .NET Standard sürümü.
@@ -86,7 +86,7 @@ Türetilmiş yapıtlar, daha kolay okunması ve belirli geliştirici senaryolar�
 
 NuGet paketleri bir [veya daha fazla](frameworks.md)çerçeveyi hedeflemelidir. .NET Standard paketleri ".NET Standard" çerçevesini hedefleyin. .NET Standard çerçevesini `netstandard` [Compact TFI](frameworks.md) kullanarak hedefleyebilirsiniz (örneğin, `netstandard1.4`). Birden çok çalışma zamanında çalıştırılması amaçlanan kitaplıkların bu çerçeveyi hedeflemesi gerekir. En geniş API kümesi için, `netstandard2.0` .NET Standard 1,6 ve 2,0 arasında iki katına çıkartan daha fazla sayıda API 'yi hedefleyin.
 
-[@No__t_1](https://www.nuget.org/packages/NETStandard.Library/) metapackage, .NET Standard tanımlayan tüm NuGet paketleri kümesine başvurur.  @No__t_0 hedeflemek için en yaygın yol, bu metapackage 'e başvurarak yapılır. Bu, .NET Standard tanımlayan ~ 40 .NET kitaplıklarına ve ilişkili API 'lere erişim sağlar. Ek API 'lere erişim sağlamak için, `netstandard` hedef olan ek paketlere başvurabilirsiniz.
+[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) metapackage, .NET Standard tanımlayan tüm NuGet paketleri kümesine başvurur.  `netstandard` hedeflemek için en yaygın yol, bu metapackage 'e başvurarak yapılır. Bu, .NET Standard tanımlayan ~ 40 .NET kitaplıklarına ve ilişkili API 'lere erişim sağlar. Ek API 'lere erişim sağlamak için, `netstandard` hedef olan ek paketlere başvurabilirsiniz.
 
 ### <a name="versioning"></a>Sürüm Oluşturma
 
@@ -104,7 +104,7 @@ Kullanım için .NET Standard sürümü oluşturma önemlidir. .NET Standard sü
 
 ## <a name="targeting-net-standard"></a>Hedefleme .NET Standard
 
-@No__t_1 Framework ve NETStandard. Library metapackage birleşimini kullanarak [.NET Standard kitaplıkları](../core/tutorials/libraries.md) oluşturabilirsiniz. [.NET Core araçları ile .NET Standard hedefleme](../core/packages.md)örneklerini görebilirsiniz.
+`netstandard` Framework ve NETStandard. Library metapackage birleşimini kullanarak [.NET Standard kitaplıkları](../core/tutorials/libraries.md) oluşturabilirsiniz. [.NET Core araçları ile .NET Standard hedefleme](../core/packages.md)örneklerini görebilirsiniz.
 
 ## <a name="net-framework-compatibility-mode"></a>Uyumluluk modu .NET Framework
 
@@ -143,7 +143,7 @@ Fark
 
 Profil tabanlı PCL uyumluluğu, [Microsoft. NETCore. Portable. Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) NuGet paketi tarafından sağlanır. Profil tabanlı PCLs 'Leri içeren NuGet paketlerine başvururken bu bağımlılık gereklidir.
 
-@No__t_0 olarak paketlenmiş profil tabanlı PCLs 'ler, genellikle paketlenmiş profil tabanlı PCLs 'dan daha kolay bir şekilde tüketilecektir. `netstandard` paketleme mevcut kullanıcılarla uyumludur.
+`netstandard` olarak paketlenmiş profil tabanlı PCLs 'ler, genellikle paketlenmiş profil tabanlı PCLs 'dan daha kolay bir şekilde tüketilecektir. `netstandard` paketleme mevcut kullanıcılarla uyumludur.
 
 .NET Standard uyumlu olan PCL profillerinin kümesini görebilirsiniz:
 
@@ -151,13 +151,13 @@ Profil tabanlı PCL uyumluluğu, [Microsoft. NETCore. Portable. Compatibility](h
 |:-----------:|:-------------:|------------------------------------------------------------------------------
 | Profile7    | 1.1           | .NET Framework 4,5, Windows 8
 | Profile31   | 1.0           | Windows 8.1 Windows Phone Silverlight 8,1
-| Profile32   | 1,2           | Windows 8.1, Windows Phone 8,1
-| Profile44   | 1,2           | .NET Framework 4.5.1, Windows 8.1
+| Profile32   | 1.2           | Windows 8.1, Windows Phone 8,1
+| Profile44   | 1.2           | .NET Framework 4.5.1, Windows 8.1
 | Profile49   | 1.0           | .NET Framework 4,5, Windows Phone Silverlight 8
 | Profile78   | 1.0           | .NET Framework 4,5, Windows 8 Windows Phone Silverlight 8
 | Profile84   | 1.0           | Windows Phone 8,1, Windows Phone Silverlight 8,1
 | Profile111  | 1.1           | .NET Framework 4,5, Windows 8, Windows Phone 8,1
-| Profile151  | 1,2           | .NET Framework 4.5.1, Windows 8.1, Windows Phone 8,1
+| Profile151  | 1.2           | .NET Framework 4.5.1, Windows 8.1, Windows Phone 8,1
 | Profile157  | 1.0           | Windows 8.1, Windows Phone 8,1, Windows Phone Silverlight 8,1
 | Profile259  | 1.0           | .NET Framework 4,5, Windows 8, Windows Phone 8,1, Windows Phone Silverlight 8
 

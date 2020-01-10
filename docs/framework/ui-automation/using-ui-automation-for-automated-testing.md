@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 2da0f994e809ff0ea9cd3165cd788ac467a87aef
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 59c4076712823faa1602448653680a31b8cd8c69
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800789"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741075"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Otomatik Test İçin UI Otomasyonunu Kullanma
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.locfileid: "74800789"
 > Diğer erişilebilirlik modelleriyle, geliştiricilerin doğrudan ayrı düğmeler, menüler veya diğer denetimlerden bilgi toplaması gerekir. Ne yazık ki her denetim türü düzinelerce küçük çeşitliliğe gelir. Diğer bir deyişle, bir basma düğmeli on çeşitlerinin hepsi aynı şekilde çalışabilir ve aynı işlevi gerçekleştirse de, bunların hepsi benzersiz denetimler olarak değerlendirilmelidir. Bu denetimlerin işlevsel olarak eşdeğer olduğu bilinmenin bir yolu yoktur. Denetim desenleri, bu ortak denetim davranışlarını temsil edecek şekilde geliştirilmiştir. Daha fazla bilgi için bkz. [UI Otomasyonu Denetim düzenlerine genel bakış](ui-automation-control-patterns-overview.md).  
   
 ### <a name="implementing-ui-automation"></a>UI Otomasyonu uygulama  
- Daha önce belirtildiği gibi, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]tarafından sunulan birleştirilmiş model olmadan test araçları ve geliştiricileri, bu çerçevede denetimlerin özelliklerini ve davranışlarını göstermek için çerçeveye özgü bilgileri bilmek için gereklidir. [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]ve Windows Presentation Foundation (WPF) dahil olmak üzere Windows işletim sistemleri içinde herhangi bir anda çeşitli farklı kullanıcı arabirimi çerçeveleri mevcut olduğundan, benzer denetimlerle birden çok uygulamayı test etmek için zaman korkdırıcı bir görev olabilir. Örneğin, aşağıdaki tablo, bir düğme denetimiyle ilişkilendirilen adı (veya metni) almak için gereken çerçeveye özgü özellik adlarını özetler ve tek eşdeğer [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliğini gösterir.  
+ Daha önce belirtildiği gibi, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]tarafından sunulan birleştirilmiş model olmadan test araçları ve geliştiricileri, bu çerçevede denetimlerin özelliklerini ve davranışlarını göstermek için çerçeveye özgü bilgileri bilmek için gereklidir. Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]ve Windows Presentation Foundation (WPF) dahil olmak üzere Windows işletim sistemleri içinde herhangi bir anda çeşitli farklı kullanıcı arabirimi çerçeveleri mevcut olduğundan, benzer denetimlerle birden çok uygulamayı test etmek için zaman korkdırıcı bir görev olabilir. Örneğin, aşağıdaki tablo, bir düğme denetimiyle ilişkilendirilen adı (veya metni) almak için gereken çerçeveye özgü özellik adlarını özetler ve tek eşdeğer [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliğini gösterir.  
   
 |UI Otomasyonu Denetim türü|UI çerçevesi|Çerçeveye özgü özellik|UI Otomasyon özelliği|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  
@@ -86,7 +86,7 @@ ms.locfileid: "74800789"
   
 |||  
 |-|-|  
-|UI Otomasyon başvurularını ekleyin.|UI Otomasyon istemcileri için gereken [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dll 'si burada listelenmiştir.<br /><br /> -UIAutomationClient. dll [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] istemci tarafı API 'Lerine erişim sağlar.<br />-UIAutomationClientSideProvider. dll [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] denetimlerini otomatikleştirebilme olanağı sağlar. Bkz. [standart denetimler Için UI Otomasyon desteği](ui-automation-support-for-standard-controls.md).<br />-UIAutomationTypes. dll [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]tanımlı belirli türlere erişim sağlar.|  
+|UI Otomasyon başvurularını ekleyin.|UI Otomasyon istemcileri için gereken [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dll 'si burada listelenmiştir.<br /><br /> -UIAutomationClient. dll [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] istemci tarafı API 'Lerine erişim sağlar.<br />-UIAutomationClientSideProvider. dll Win32 denetimlerini otomatikleştirebilme olanağı sağlar. Bkz. [standart denetimler Için UI Otomasyon desteği](ui-automation-support-for-standard-controls.md).<br />-UIAutomationTypes. dll [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]tanımlı belirli türlere erişim sağlar.|  
 |<xref:System.Windows.Automation> ad alanını ekleyin.|Bu ad alanı, Kullanıcı Arabirimi Otomasyonu istemcilerinin, metin işleme hariç [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] yeteneklerini kullanması gereken her şeyi içerir.|  
 |<xref:System.Windows.Automation.Text> ad alanını ekleyin.|Bu ad alanı, Kullanıcı Arabirimi Otomasyonu istemcilerinin [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] metin işleme yeteneklerini kullanması gereken her şeyi içerir.|  
 |İlgilendiğiniz denetimleri bulun|Otomatikleştirilmiş test betikleri, Otomasyon ağacı içinde ilgilendiğiniz denetimleri temsil eden UI Otomasyon öğelerini bulur.<br /><br /> Kodlu UI Otomasyon öğelerini almanın birden çok yolu vardır.<br /><br /> -[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] bir <xref:System.Windows.Automation.Condition> ifadesini kullanarak sorgulayın. Bu, genellikle dilden bağımsız <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> kullanıldığı yerdir. **Note:**  Bir <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>, bir denetimin [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliklerini seçebilecek Inceleme. exe gibi bir araç kullanılarak elde edilebilir. <br /><br /> -Tüm [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı veya alt kümele çapraz geçiş yapmak için <xref:System.Windows.Automation.TreeWalker> sınıfını kullanın.<br />-Odağı izleyin.<br />-Denetimin hWnd 'sini kullanın.<br />-Fare imlecinin konumu gibi ekran konumunu kullanın.<br /><br /> Bkz. [UI Otomasyonu öğelerini alma](obtaining-ui-automation-elements.md)|  

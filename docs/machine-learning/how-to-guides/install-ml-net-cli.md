@@ -1,18 +1,19 @@
 ---
 title: ML.NET komut satırı arabirimi (CLı) aracını yüklemek
-description: ML.NET komut satırı arabirimi (CLı) aracının genel bakış ve yükleme.
-ms.date: 04/16/2019
-ms.custom: ''
-ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+description: ML.NET komut satırı arabirimi (CLı) aracını yükleme, yükseltme, düşürme ve kaldırma hakkında bilgi edinin.
+ms.date: 12/18/2019
+ms.openlocfilehash: 350122f2d2d2f03484ab6e272b482adf2094495c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977078"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739972"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET komut satırı arabirimi (CLı) aracını yüklemek
 
-ML.NET CLı (komut satırı arabirimi), sağladığınız eğitim veri kümelerine göre iyi kalitede ML.NET modelleri ve kaynak kodu oluşturmak için herhangi bir komut isteminde (Windows, Mac veya Linux) çalıştırabileceğiniz bir araçtır.
+Windows, Mac veya Linux 'a ML.NET CLı (komut satırı arabirimi) yüklemeyi öğrenin.
+
+ML.NET CLı, otomatik makine öğrenimi (Otomatikml) ve bir eğitim veri kümesini kullanarak iyi kalitede ML.NET modelleri ve kaynak kodu oluşturur.
 
 > [!NOTE]
 > Bu konu, şu anda önizleme aşamasında olan ML.NET CLı ve ML.NET oto ml 'ye başvurur ve malzemeler değişebilir.
@@ -23,11 +24,11 @@ ML.NET CLı (komut satırı arabirimi), sağladığınız eğitim veri kümeleri
 
 - Seçim [Visual Studio 2017 veya 2019](https://visualstudio.microsoft.com/vs/)
 
-Oluşturulan C# kod projelerini Visual Studio F5 ile veya `dotnet run` (.NET Core CLI) ile çalıştırabilirsiniz.
+Oluşturulan C# kod projelerini `F5` tuşuna basarak veya `dotnet run` (.NET Core CLI) Ile Visual Studio ile çalıştırabilirsiniz.
 
 Not: [.NET Core 2,2 SDK 'yı](https://dotnet.microsoft.com/download/dotnet-core/2.2) yükledikten sonra `dotnet tool` komutu çalışmıyor, Windows oturumunu kapatıp tekrar oturum açın.
 
-## <a name="install"></a>Yükleme
+## <a name="install"></a>yükleme
 
 ML.NET CLı, diğer DotNet genel aracı gibi yüklenir. `dotnet tool install` .NET Core CLI komutunu kullanın.
 
@@ -120,7 +121,7 @@ Tamamlamayı etkinleştirmek istediğiniz makinede iki şey yapmanız gerekir.
 
 ML.NET CLı varsayılan dizine veya belirli bir konuma yüklenebilir. Varsayılan dizinler şunlardır:
 
-| ATAYAMADı          | Yol                          |
+| İşletim Sistemi          | Yol                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -134,7 +135,7 @@ Bu durumda .NET Core CLI, bu konumu otomatik olarak PATH ortam değişkenine ekl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [' ML.NET CLı aracıyla çalışmaya başlama ' öğreticisi](../tutorials/mlnet-cli.md)
-- [ML.NET CLı aracı ile modelleri otomatik olarak eğitme](../automate-training-with-cli.md)
+- [ML.NET CLı genel bakış](../automate-training-with-cli.md)
+- [Öğretici: ML.NET CLı ile yaklaşımı çözümleme](../tutorials/sentiment-analysis-cli.md)
 - [ML.NET CLı otomatik eğitme komut başvuru kılavuzu](../reference/ml-net-cli-reference.md)
 - [ML.NET CLı 'de telemetri](../resources/ml-net-cli-telemetry.md)

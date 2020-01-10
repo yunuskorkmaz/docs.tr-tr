@@ -4,12 +4,12 @@ description: Bir paket Yöneticisi kullanarak .NET Core SDK ve çalışma zaman�
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: b8b6a3039efcc2fbd15e0c3948984086c619bd44
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7a9d4524661e1230af7d1d50a4d8a60ad7774a68
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74836936"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740712"
 ---
 # <a name="debian-9-package-manager---install-net-core"></a>Detem 9 Paket Yöneticisi-.NET Core 'ı yükler
 
@@ -21,11 +21,11 @@ Bu makalede, bir paket yöneticisinin .NET Core 'u debir 9 ' a yüklemek için n
 
 .NET yüklemeden önce şunları yapmanız gerekir:
 
-- Microsoft anahtarını kaydetme
-- Ürün deposunu kaydetme
-- Gerekli bağımlılıkları yükler
+- Microsoft anahtarını kaydettirin.
+- Ürün deposunu kaydedin.
+- Gerekli bağımlılıkları yükler.
 
-Bu işlemin makine başına bir kez yapılması yeterlidir.
+Bu işlemin makine başına tek bir kez yapılması yeterlidir.
 
 Bir Terminal açın ve aşağıdaki komutları çalıştırın.
 

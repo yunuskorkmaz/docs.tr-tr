@@ -18,19 +18,19 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: e6c4baae854e5997b153e1363ca8ed4204e10e2b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 297bc3f9182e76523eda4d4be3112f4d1d7e3fee
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085202"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741798"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 
 Yerel Görüntü Oluşturucusu (Ngen.exe), yönetilen uygulamaların performansını artıran bir araçtır. Ngen.exe, işlemciye özel derlenmiş makine kodu içeren dosyalar olan yerel görüntüler oluşturur ve bunları yerel bilgisayarın yerel görüntü önbelleğine yükler. Çalışma zamanı orijinal derlemeyi derlemek için anlık (JIT) derleyiciyi kullanmak yerine önbellekteki yerel görüntüleri kullanabilir.
 
 > [!NOTE]
-> Ngen. exe yalnızca .NET Framework hedefleyen derlemeler için yerel görüntüleri derler. .NET Core için eşdeğer yerel görüntü Oluşturucu, [çapraz genel](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md)' tir. 
+> Ngen. exe yalnızca .NET Framework hedefleyen derlemeler için yerel görüntüleri derler. .NET Core için eşdeğer yerel görüntü Oluşturucu, [çapraz genel](https://github.com/dotnet/runtime/blob/master/docs/workflow/building/coreclr/crossgen.md)' tir.
 
 .NET Framework 4 ' te Ngen. exe ' ye yapılan değişiklikler:
 
@@ -90,7 +90,7 @@ Aşağıdaki tabloda her `action`söz dizimi gösterilmektedir. Bir `action`bire
 
 |Bağımsız Değişken|Açıklama|
 |--------------|-----------------|
-|`assemblyName`|Derlemenin tam görünen adı. Örneğin, `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Note:**  `display` ve `uninstall` eylemleri için `myAssembly`gibi kısmi bir derleme adı sağlayabilirsiniz. <br /><br /> Her Ngen.exe komut satırında yalnızca bir derleme belirtilebilir.|
+|`assemblyName`|Derlemenin tam görünen adı. Örneğin: `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Note:**  `display` ve `uninstall` eylemleri için `myAssembly`gibi kısmi bir derleme adı sağlayabilirsiniz. <br /><br /> Her Ngen.exe komut satırında yalnızca bir derleme belirtilebilir.|
 |`assemblyPath`|Derlemenin açık yolu. Tam veya göreli bir yol belirtebilirsiniz.<br /><br /> Eğer bir yol belirtmeden dosya adı belirtilseniz, derleme geçerli dizinde bulunmalıdır.<br /><br /> Her Ngen.exe komut satırında yalnızca bir derleme belirtilebilir.|
 
 <a name="PriorityTable"></a>
@@ -115,12 +115,12 @@ Aşağıdaki tabloda her `action`söz dizimi gösterilmektedir. Bir `action`bire
 
 <a name="ConfigTable"></a>
 
-## <a name="config"></a>Config
+## <a name="config"></a>Yapılandırma
 
 |Yapılandırma|Açıklama|
 |-------------------|-----------------|
-|`/ExeConfig:``exePath`|Belirtilen çalıştırılabilir derlemesinin yapılandırmasını kullan.<br /><br /> Ngen.exe, bağımlılıklara bağlarken yükleyici ile aynı kararları almalıdır. Çalışma zamanında paylaşılan bir bileşen yüklendiğinde <xref:System.Reflection.Assembly.Load%2A> yöntemi kullanılarak, uygulamanın yapılandırma dosyası paylaşılan bileşen için yüklenen bağımlılıkları belirler — örneğin, yüklenen bir bağımlılığın sürümü. `/ExeConfig` anahtarı, çalışma zamanında hangi bağımlılıkların yüklenebileceğine ilişkin Ngen. exe kılavuzu sağlar.|
-|`/AppBase:``directoryPath`|Bağımlılıkları bulurken, uygulama tabanı olarak belirtilen dizini kullan.|
+|`/ExeConfig:` `exePath`|Belirtilen çalıştırılabilir derlemesinin yapılandırmasını kullan.<br /><br /> Ngen.exe, bağımlılıklara bağlarken yükleyici ile aynı kararları almalıdır. Çalışma zamanında paylaşılan bir bileşen yüklendiğinde <xref:System.Reflection.Assembly.Load%2A> yöntemi kullanılarak, uygulamanın yapılandırma dosyası paylaşılan bileşen için yüklenen bağımlılıkları belirler — örneğin, yüklenen bir bağımlılığın sürümü. `/ExeConfig` anahtarı, çalışma zamanında hangi bağımlılıkların yüklenebileceğine ilişkin Ngen. exe kılavuzu sağlar.|
+|`/AppBase:` `directoryPath`|Bağımlılıkları bulurken, uygulama tabanı olarak belirtilen dizini kullan.|
 
 <a name="OptionTable"></a>
 
@@ -586,7 +586,7 @@ Normal olarak, yerel görüntü hizmeti bir uygulama veya güncelleştirme için
 Hizmet el ile Ngen. exe komutuyla da etkileşime girer. El ile gerçekleştirilen komutların arka plan etkinliğine göre önceliği vardır.
 
 > [!NOTE]
-> Windows Vista 'da, yerel görüntü hizmeti için görünen ad "Microsoft.NET Framework NGEN v 2.0.50727 _X86" veya "Microsoft.NET Framework NGEN v 2.0.50727 _X64" olur. Microsoft Windows 'un önceki tüm sürümlerinde, ad ".NET Runtime Optimization Service v 2.0.50727 _X86" veya ".NET Runtime Optimization Service v 2.0.50727 _X64" olur.
+> Windows Vista 'da, yerel görüntü hizmeti için görünen ad "Microsoft.NET Framework NGEN v 2.0.50727_X86" veya "Microsoft.NET Framework NGEN v 2.0.50727_X64" olur. Microsoft Windows 'un önceki tüm sürümlerinde, ad ".NET Runtime Optimization Service v 2.0.50727_X86" veya ".NET Runtime Optimizasyon hizmeti v 2.0.50727_X64" olur.
 
 ### <a name="launching-deferred-operations"></a>Ertelenmiş Işlemler başlatılıyor
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Menu Item control type
 - UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
-ms.openlocfilehash: c65e30ffea64a9b577cfee7535fd92e489bc7632
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6e8755292d97e88ff97e039fa2fbafc60ebc4eae
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446710"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741569"
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>MenuItem Denetim Türü için UI Otomasyon Desteği
 
@@ -22,7 +22,7 @@ Bu konu, MenuItem denetim türü için [!INCLUDE[TLA#tla_uiautomation](../../../
 
 Bir menü denetimi, komutlarla ve olay işleyicileriyle ilişkili öğelerin hiyerarşik kuruluşunun oluşturulmasına olanak sağlar. Tipik bir Microsoft Windows uygulamasında, bir menü çubuğu birçok menü öğesi (örneğin, **Dosya**, **düzenleme**ve **pencere**) içerir ve her menü öğesi bir menü görüntüler. Bir menü, ek menü öğelerini göstermek veya tıklandığında belirli bir eylem gerçekleştirmek üzere genişletilebilen bir menü öğeleri ( **New**, **Open**ve **Close**gibi) koleksiyonunu içerir. Bir menü öğesi bir menü, menü çubuğu veya araç çubuğunda barındırılabilir.
 
-Aşağıdaki bölümler, MenuItem denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısını, özellikleri, denetim desenlerini ve olayları tanımlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimler, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]veya [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]bakılmaksızın tüm liste denetimleri için geçerlidir.
+Aşağıdaki bölümler, MenuItem denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısını, özellikleri, denetim desenlerini ve olayları tanımlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimleri, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 veya [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]bakılmaksızın tüm liste denetimlerine uygulanır.
 
 <a name="Required_UI_Automation_Tree_Structure"></a>
 
@@ -44,7 +44,7 @@ Menü öğesi denetiminin denetim görünümü yukarıda gösterilen [!INCLUDE[T
 
 Aşağıdaki tabloda, değeri veya tanımı özellikle menü öğesi denetimleriyle ilgili olan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri listelenmektedir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri hakkında daha fazla bilgi için bkz. [istemciler Için UI Otomasyon özellikleri](ui-automation-properties-for-clients.md).
 
-|Özellik|Value|Açıklama|
+|Özellik|Değer|Açıklama|
 |--------------|-----------|-----------------|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Notlara bakın.|Bu özelliğin değerinin bir uygulamadaki tüm denetimlerde benzersiz olması gerekir.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Notlara bakın.|Tüm denetimi içeren en dıştaki dikdörtgen.|
@@ -54,8 +54,8 @@ Aşağıdaki tabloda, değeri veya tanımı özellikle menü öğesi denetimleri
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Etiket yok.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|MenuItem|Bu değer tüm UI çerçeveleri için aynıdır.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"menü öğesi"|MenuItem denetim türüne karşılık gelen yerelleştirilmiş dize.|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Menü öğesi denetimi, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının içerik görünümüne hiçbir şekilde dahil değildir.|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Menü öğesi denetimi her zaman [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının denetim görünümüne eklenmelidir.|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Doğru|Menü öğesi denetimi, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının içerik görünümüne hiçbir şekilde dahil değildir.|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Doğru|Menü öğesi denetimi her zaman [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının denetim görünümüne eklenmelidir.|
 
 <a name="Required_UI_Automation_Control_Patterns"></a>
 
@@ -107,7 +107,7 @@ Aşağıdaki tabloda, tüm menü öğesi denetimleri tarafından desteklenmesi g
 
 ## <a name="legacy-issues"></a>Eski sorunlar
 
-İki durumlu model yalnızca [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] menü öğesi işaretlendiğinde ve geçiş modelini desteklemek için program aracılığıyla gerekli olarak belirlenebileceği şekilde desteklenecektir. [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] menü öğesi, denetlenecek özelliği olup olmadığını göstermediğinden, menü öğesi işaretlenmediği zaman Invoke deseninin desteklenecek. Yalnızca geçiş modelini destekleyen menü öğeleri için de her zaman çağırma modelini desteklemek için bir özel durum oluşturulur. Bu sayede istemciler, çağırma modelini destekleyen bir öğenin (menü öğesi işaretlenmediği zaman), bir kez işaretlendikten sonra stili artık desteklemediği için karıştırılır.
+Değiştirme stili yalnızca Win32 menü öğesi işaretlendiğinde ve geçiş modelini desteklemek için program aracılığıyla gerekli olarak belirlenebileceği şekilde desteklenecektir. Win32 menü öğesi, denetlenmesi mümkün olup olmadığını göstermediğinden, menü öğesi işaretlenmediği zaman Invoke deseninin desteklenecek olması gerekir. Yalnızca geçiş modelini destekleyen menü öğeleri için de her zaman çağırma modelini desteklemek için bir özel durum oluşturulur. Bu sayede istemciler, çağırma modelini destekleyen bir öğenin (menü öğesi işaretlenmediği zaman), bir kez işaretlendikten sonra stili artık desteklemediği için karıştırılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

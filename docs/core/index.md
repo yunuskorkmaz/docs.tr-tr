@@ -1,19 +1,19 @@
 ---
-title: .NET Core Kılavuzu
-description: .NET Core, Windows, Linux ve Mac uygulamaları oluşturmaya yönelik modüler ve yüksek performanslı bir uygulamasıdır. Başlamak için .NET Core hakkında bilgi edinin.
+title: .NET Core kılavuzu
+description: .NET Core, Windows, Linux ve macOS uygulamaları oluşturmaya yönelik modüler ve yüksek performanslı bir uygulamasıdır. Başlamak için .NET Core hakkında bilgi edinin.
 author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: b2622dba53d64c9dcf58e852d57de117fe79eb2e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 3db98d21a7cdc80d8a98b23782a81ffa37520937
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837018"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740749"
 ---
-# <a name="net-core-guide"></a>.NET Core Kılavuzu
+# <a name="net-core-guide"></a>.NET Core kılavuzu
 
-[.NET Core](about.md) , [GitHub](https://github.com/dotnet/core)'da Microsoft ve .net Community tarafından sürdürülen [Açık kaynaklı](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT), genel amaçlı bir geliştirme platformudur. Platformlar arası bir platformdur (Windows, macOS ve Linux 'u destekleme) ve cihaz, bulut ve IoT uygulamaları oluşturmak için kullanılabilir.
+[.NET Core](about.md) , [GitHub](https://github.com/dotnet/core)'da Microsoft ve .net Community tarafından sürdürülen [Açık kaynaklı](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT), genel amaçlı bir geliştirme platformudur. Platformlar arası bir platformdur (Windows, macOS ve Linux 'u destekleme) ve cihaz, bulut ve IoT uygulamaları oluşturmak için kullanılabilir.
 
 .NET Core hakkında özellikler, desteklenen diller ve çerçeveler ve anahtar API 'Leri dahil olmak üzere .NET Core hakkında daha fazla bilgi için bkz. [.NET Core hakkında](about.md) .
 
@@ -27,11 +27,11 @@ Başka bir .NET Core sürümü arıyorsanız, tüm .NET Core sürümleri [.NET C
 
 ## <a name="net-core-31"></a>.NET Core 3,1
 
-En son sürüm .NET Core 3,1 ' dir. .NET Core 3,0 üzerinde küçük iyileştirmeler içerir. Ancak .NET Core 3,1, uzun süreli desteklenen bir sürümdür. .NET Core 3,1 sürümü hakkında daha fazla bilgi için bkz. [.net core 3,1 ' deki](./whats-new/dotnet-core-3-1.md)yenilikler.
+En son sürüm .NET Core 3,1 ' dir. 3,1, .NET Core 3,0 üzerinde küçük geliştirmeler içerir, ancak .NET Core 3,1 [uzun süreli desteklenen bir sürümdür](https://dotnet.microsoft.com/platform/support/policy/dotnet-core). .NET Core 3,1 sürümü hakkında daha fazla bilgi için bkz. [.net core 3,1 ' deki](./whats-new/dotnet-core-3-1.md)yenilikler.
 
 ## <a name="create-your-first-application"></a>İlk uygulamanızı oluşturun
 
-.NET Core SDK yükledikten sonra bir komut istemi açın. Bir C# uygulama oluşturmak ve çalıştırmak için aşağıdaki `dotnet` komutlarını yazın:
+.NET Core SDK yükledikten sonra bir komut istemi açın. Bir C# uygulamayı oluşturmak ve çalıştırmak için aşağıdaki `dotnet` komutlarını girin:
 
 ```dotnetcli
 dotnet new console

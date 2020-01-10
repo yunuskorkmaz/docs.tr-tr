@@ -4,12 +4,12 @@ description: Ubuntu 19,04 ' de .NET Core SDK ve çalışma zamanı yüklemek iç
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 69bfc3395f5cd92ed54850e5ea8b76eba7f27d83
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a229369b9252d08fe5fc83add98c694214ce5ba5
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959748"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740602"
 ---
 # <a name="ubuntu-1904-package-manager---install-net-core"></a>Ubuntu 19,04 paket yöneticisi-.NET Core 'ı yükler
 
@@ -21,11 +21,11 @@ Bu makalede, Ubuntu 19,04 ' de .NET Core yüklemek için bir paket yöneticisi '
 
 .NET yüklemeden önce şunları yapmanız gerekir:
 
-- Microsoft anahtarını kaydetme
-- Ürün deposunu kaydetme
-- Gerekli bağımlılıkları yükler
+- Microsoft anahtarını kaydettirin.
+- Ürün deposunu kaydedin.
+- Gerekli bağımlılıkları yükler.
 
-Bu işlemin makine başına bir kez yapılması yeterlidir.
+Bu işlemin makine başına tek bir kez yapılması yeterlidir.
 
 Bir Terminal açın ve aşağıdaki komutları çalıştırın.
 

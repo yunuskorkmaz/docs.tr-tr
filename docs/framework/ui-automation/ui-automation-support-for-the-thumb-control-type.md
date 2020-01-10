@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Thumb control type
 - Thumb control type
 ms.assetid: 13636338-e320-4355-b071-ede20a3fb1de
-ms.openlocfilehash: f5b51a685176028a3844def9fc7139988433c28b
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b795a216d0f32b3bd4014c884a061c0c2d4558a8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800271"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741457"
 ---
 # <a name="ui-automation-support-for-the-thumb-control-type"></a>Parmak Denetim Türü İçin UI Otomasyon Desteği
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74800271"
   
  Parmak izi denetimleri, bir denetimin taşınması (veya sürüklenmesi), örneğin kaydırma çubuğu düğmesi veya pencere öğesinin yeniden boyutlandırılması gibi bir pencerenin yeniden boyutlandırılması gibi işlevleri sağlar. Thumb denetimleri, bölmelere taşınabilir kenarlıklar olarak da uygulanabilir. Sürükleme ve bırakma işlevlerini sunmadığını unutmayın. Parmak izi denetimleri, fare odağını alabilir ancak genellikle klavye odağı değildir. Denetim geliştiricisi, uygun şekilde davranması için denetimi uygulamalıdır (sürüklenerek veya yeniden boyutlandırılabilirler).  
   
- Aşağıdaki bölümler, parmak izi denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısını, özellikleri, denetim desenlerini ve olayları tanımlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimleri, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]veya [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]bakılmaksızın tüm parmak izi denetimleri için geçerlidir.  
+ Aşağıdaki bölümler, parmak izi denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısını, özellikleri, denetim desenlerini ve olayları tanımlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimleri, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 veya [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]gibi tüm parmak izi denetimleri için geçerlidir.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyonu ağaç yapısı  

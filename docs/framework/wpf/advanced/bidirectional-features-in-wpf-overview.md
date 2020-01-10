@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 385ce8d263991361512371dcacff52fcf0bbe738
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 19fb15a6310eba19792d7bd0744c2ae87f47c6fa
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740942"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740430"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF Genel Bakışında Çift Yönlü Özellikler
 
@@ -54,7 +54,7 @@ Aşağıdaki grafikte, önceki örneğin çıktısı gösterilmektedir:
 
 ## <a name="flowdocument"></a>FlowDocument
 
-HTML, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] ve Java gibi birçok geliştirme platformu, çift yönlü içerik geliştirmeye yönelik özel destek sağlar. HTML gibi biçimlendirme dilleri içerik yazıcılarını, metni gerekli herhangi bir yöne (4,0 Örneğin, "RTL" veya "LTR" değeri olarak alan "dir") göstermek için gerekli işaretlemeleri sağlar. Bu etiket <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliğine benzer, ancak <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliği metin içeriğini düzene eklemek için daha gelişmiş bir şekilde çalışabilir ve metin dışındaki içerikler için kullanılabilir.
+HTML, Win32 ve Java gibi birçok geliştirme platformu çift yönlü içerik geliştirmeye yönelik özel destek sağlar. HTML gibi biçimlendirme dilleri içerik yazıcılarını, metni gerekli herhangi bir yöne (4,0 Örneğin, "RTL" veya "LTR" değeri olarak alan "dir") göstermek için gerekli işaretlemeleri sağlar. Bu etiket <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliğine benzer, ancak <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliği metin içeriğini düzene eklemek için daha gelişmiş bir şekilde çalışabilir ve metin dışındaki içerikler için kullanılabilir.
 
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bir <xref:System.Windows.Documents.FlowDocument> metin, tablo, resim ve diğer öğelerin birleşimini barındırabileceğiniz çok yönlü bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğesidir. Aşağıdaki bölümlerdeki örnekler bu öğeyi kullanır.
 
@@ -64,7 +64,7 @@ Bir <xref:System.Windows.Documents.FlowDocument> metin eklemek tek bir şekilde 
 
 ![Span öğesini kullanmayı gösteren grafik.](./media/bidirectional-features-in-wpf-overview/flow-direction-span-element.png "FlowDocument")
 
-Metin <xref:System.Windows.FlowDirection.RightToLeft>olduğundan, "\\" gibi tüm özel karakterler metni sağdan sola sırada ayırır. Bu, bağlantının doğru sırada gösterilmeme sonucu olarak, bu nedenle sorunu çözmek için metnin, ayrı bir <xref:System.Windows.Documents.Run> akan <xref:System.Windows.FlowDirection.LeftToRight>korunması için katıştırılması gerekir. Her dil için ayrı bir <xref:System.Windows.Documents.Run> olmak yerine, sorunu çözmenin daha iyi bir yolu, daha az sıklıkta kullanılan Ingilizce metni daha büyük bir Arap <xref:System.Windows.Documents.Span> içine gömmaktır.
+Metin <xref:System.Windows.FlowDirection.RightToLeft>olduğundan, "\\" gibi tüm özel karakterler metni sağdan sola sırada ayırır. Bu, bağlantının doğru sırada gösterilmeme sonucu olarak, bu nedenle sorunu çözmek için metnin, ayrı bir <xref:System.Windows.Documents.Run> akan <xref:System.Windows.FlowDirection.LeftToRight>korunması için katıştırılması gerekir. Her dil için ayrı bir <xref:System.Windows.Documents.Run> olmak yerine, sorunu çözmenin daha iyi bir yolu, daha az sıklıkta kullanılan Ingilizce metni daha büyük bir Arap <xref:System.Windows.Documents.Span>içine gömmaktır.
 
 Aşağıdaki grafikte, bir span öğesinde gömülü Run öğesi kullanılarak gösterilmektedir:
 
@@ -78,7 +78,7 @@ Aşağıdaki örnek, belgelerindeki <xref:System.Windows.Documents.Run> ve <xref
 
 ## <a name="span-elements"></a>Span öğeleri
 
-<xref:System.Windows.Documents.Span> öğesi, farklı akış yönlerine sahip metinler arasında sınır ayırıcısı olarak çalışarak.  Aynı akış yönüne sahip <xref:System.Windows.Documents.Span> öğeler, <xref:System.Windows.Documents.Span> öğelerinin kapsayıcının <xref:System.Windows.FlowDirection> sıralı olduğu anlamına gelen farklı çift yönlü kapsamlara sahip olduğu kabul edilir, ancak yalnızca <xref:System.Windows.Documents.Span> öğesi içindeki içerikler <xref:System.Windows.FlowDirection> @no__ t_5.
+<xref:System.Windows.Documents.Span> öğesi, farklı akış yönlerine sahip metinler arasında sınır ayırıcısı olarak çalışarak.  Aynı akış yönüne sahip <xref:System.Windows.Documents.Span> öğeler çift yönlü kapsamlar olacak şekilde değerlendirilir, bu da <xref:System.Windows.Documents.Span> öğelerinin kapsayıcının <xref:System.Windows.FlowDirection>sıralı olduğu anlamına gelir. Bu, yalnızca <xref:System.Windows.Documents.Span> öğesi içindeki içerik <xref:System.Windows.FlowDirection> <xref:System.Windows.Documents.Span>izler.
 
 Aşağıdaki grafikte, birkaç <xref:System.Windows.Controls.TextBlock> öğesinin akış yönü gösterilmektedir.
 
@@ -88,7 +88,7 @@ Aşağıdaki örnek, önceki grafikte gösterilen sonuçları oluşturmak için 
 
 [!code-xaml[Span#Span](~/samples/snippets/csharp/VS_Snippets_Wpf/Span/CS/Window1.xaml#span)]
 
-Örnekteki <xref:System.Windows.Controls.TextBlock> öğelerinde, <xref:System.Windows.Documents.Span> öğeleri üst öğelerinin <xref:System.Windows.FlowDirection> göre düzenlenir, ancak her <xref:System.Windows.Documents.Span> öğesi içindeki metin kendi <xref:System.Windows.FlowDirection> göre akar. Bu, Latin ve Arapça ya da başka bir dil için geçerlidir.
+Örnekteki <xref:System.Windows.Controls.TextBlock> öğelerinde, <xref:System.Windows.Documents.Span> öğeleri üst öğelerinin <xref:System.Windows.FlowDirection> göre düzenlenir, ancak her <xref:System.Windows.Documents.Span> öğesi içindeki metin kendi <xref:System.Windows.FlowDirection>göre akar. Bu, Latin ve Arapça ya da başka bir dil için geçerlidir.
 
 ### <a name="adding-xmllang"></a>XML ekleme: lang
 
@@ -124,7 +124,7 @@ Aşağıdaki grafikte <xref:System.Windows.Media.LinearGradientBrush>yeniden hiz
 
 ![Sağdan sola degradeyle bir araç çubuğu gösteren grafik.](./media/bidirectional-features-in-wpf-overview/toolbar-right-left-gradient.png)
 
-Aşağıdaki örnekte bir <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.Controls.ToolBar> çizilmiştir. (Sola doğru çizmek için, <xref:System.Windows.Controls.ToolBar><xref:System.Windows.FlowDirection> özniteliğini kaldırın.
+Aşağıdaki örnekte bir <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.Controls.ToolBar>çizilmiştir. (Sola doğru çizmek için, <xref:System.Windows.Controls.ToolBar><xref:System.Windows.FlowDirection> özniteliğini kaldırın.
 
 [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]
 
@@ -156,9 +156,9 @@ Aşağıdaki örnek, <xref:System.Windows.Controls.Image> <xref:System.Windows.F
 
 **Yollar**
 
-Bir <xref:System.Windows.Controls.Image> ek olarak, başka bir ilgi çekici öğe <xref:System.Windows.Shapes.Path>. Yol, bir dizi bağlantılı çizgi ve eğri çizebileceğiniz bir nesnedir. <xref:System.Windows.FlowDirection>ilgili <xref:System.Windows.Controls.Image> benzer bir şekilde davranır; Örneğin <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>, <xref:System.Windows.FlowDirection.LeftToRight> bir yatay yansıtmadır. Ancak, bir <xref:System.Windows.Controls.Image>farklı olarak, <xref:System.Windows.Shapes.Path> <xref:System.Windows.FlowDirection> kapsayıcıdan devralır ve bunun açıkça belirtilmesi gerekmez.
+Bir <xref:System.Windows.Controls.Image>ek olarak, başka bir ilgi çekici öğe <xref:System.Windows.Shapes.Path>. Yol, bir dizi bağlantılı çizgi ve eğri çizebileceğiniz bir nesnedir. <xref:System.Windows.FlowDirection>ilgili <xref:System.Windows.Controls.Image> benzer bir şekilde davranır; Örneğin <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>, <xref:System.Windows.FlowDirection.LeftToRight> bir yatay yansıtmadır. Ancak, bir <xref:System.Windows.Controls.Image>farklı olarak, <xref:System.Windows.Shapes.Path> <xref:System.Windows.FlowDirection> kapsayıcıdan devralır ve bunun açıkça belirtilmesi gerekmez.
 
-Aşağıdaki örnek 3 satır kullanarak basit bir ok çizer. İlk ok, başlangıç ve bitiş noktalarının sağ taraftaki bir köke göre ölçülmesi için <xref:System.Windows.Controls.StackPanel> <xref:System.Windows.FlowDirection.RightToLeft> akış yönünü devralır. Açık bir <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> olan ikinci ok, sağ tarafta da başlatılır. Ancak, üçüncü ok sol tarafta başlangıç köküne sahiptir. Çizim hakkında daha fazla bilgi için bkz. <xref:System.Windows.Media.LineGeometry> ve <xref:System.Windows.Media.GeometryGroup>.
+Aşağıdaki örnek 3 satır kullanarak basit bir ok çizer. İlk ok, başlangıç ve bitiş noktalarının sağ taraftaki bir köke göre ölçülmesi için <xref:System.Windows.Controls.StackPanel> <xref:System.Windows.FlowDirection.RightToLeft> akış yönünü devralır. Açık bir <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> olan ikinci ok, sağ tarafta da başlatılır. Ancak, üçüncü ok sol tarafta başlangıç köküne sahiptir. Çizim hakkında daha fazla bilgi için bkz. <xref:System.Windows.Media.LineGeometry> ve <xref:System.Windows.Media.GeometryGroup>.
 
 [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]
 
@@ -192,7 +192,7 @@ Bu özellik, sayıların kültürünün nasıl belirlendiğini belirtir. Üç <x
 
 **CultureOverride**:
 
-<xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> özelliği, yalnızca <xref:System.Windows.Media.NumberSubstitution.CultureSource%2A> özelliği <xref:System.Windows.Media.NumberCultureSource.Override> olarak ayarlandıysa ve aksi durumda yoksayılırsa kullanılır. Kültür sayısını belirtir. Varsayılan değer olan `null` değeri en-US olarak yorumlanır.
+<xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> özelliği, yalnızca <xref:System.Windows.Media.NumberSubstitution.CultureSource%2A> özelliği <xref:System.Windows.Media.NumberCultureSource.Override> olarak ayarlandıysa ve aksi durumda yoksayılırsa kullanılır. Kültür sayısını belirtir. Varsayılan değer olan `null`değeri en-US olarak yorumlanır.
 
 **Değiştirme**:
 

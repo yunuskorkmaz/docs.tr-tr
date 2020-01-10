@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ae120311e7e58b34437de987e9f9a18e917043c0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974083"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740273"
 ---
 # <a name="threading-model"></a>İş Parçacığı Modeli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], geliştiricilerin iş parçacığı zorluklarından kaydedileceği şekilde tasarlanmıştır. Sonuç olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geliştiricilerin çoğunluğu birden fazla iş parçacığı kullanan bir arabirim yazmak zorunda kalmaz. Çok iş parçacıklı programlar karmaşık olduğu ve hata ayıklamanın zor olduğu için, tek iş parçacıklı çözümler olduğunda bu, kaçınılmalıdır.
@@ -58,7 +58,7 @@ ms.locfileid: "73974083"
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>Uzun süre çalışan bir hesaplama ile tek Iş parçacıklı bir uygulama
  Çoğu grafik kullanıcı arabirimi (Gua), kullanıcı etkileşimlerine yanıt olarak oluşturulan olayları beklerken zaman içindeki büyük bir bölümü harcamaktadır. Dikkatli bir programlamayla bu boşta kalma süresi, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]yanıt hızını etkilemeden oluşturulabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iş parçacığı modeli, girişin [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığında meydana gelen bir işlemi kesmesine izin vermez. Bu, bekleyen giriş olaylarını eski olmadan işlemek için <xref:System.Windows.Threading.Dispatcher> düzenli aralıklarla geri döndürtığınızdan emin olmanız gerektiği anlamına gelir.
 
- Aşağıdaki örneği göz önünde bulundurun:
+ Aşağıdaki örnek göz önünde bulundurun:
 
  ![Asal sayıların iş parçacığı gösteren ekran görüntüsü.](./media/threading-model/threading-prime-numbers.png)
 
@@ -203,7 +203,7 @@ ms.locfileid: "73974083"
  `handler2`, bu olayı işlemek için harika bir süre sürer. `handler2`, saat döndürmeyen bir iç içe ileti döngüsünü başlatmak için <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> kullanabilir. Bu ileti döngüsü tamamlandığında olayı işlenmiş olarak işaretlemeirse, etkinlik çok eski olsa bile ağaca geçirilir. `handler2`
 
 ### <a name="reentrancy-and-locking"></a>Yeniden giriş ve kilitleme
- Ortak dil çalışma zamanının (CLR) kilitleme mekanizması tam olarak tek bir şekilde davranmayabilir; bir kilit istenirken bir iş parçacığının işlemi tamamen durdurmasından kaynaklanabilir. Gerçekte, iş parçacığı yüksek öncelikli iletileri almaya ve işlemeye devam eder. Bu, kilitlenmeleri önlemeye yardımcı olur ve arabirimlerin düşük ölçüde yanıt vermesini sağlar, ancak hafif hatalara yönelik olasılığı ortaya çıkarır.  Bu sürenin büyük çoğunluğunda, bununla ilgili herhangi bir şey bilmeniz gerekmez, ancak nadir koşullarda (genellikle [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencere iletilerini veya COM STA bileşenlerini içeren) Bu durum farkında olabilir.
+ Ortak dil çalışma zamanının (CLR) kilitleme mekanizması tam olarak tek bir şekilde davranmayabilir; bir kilit istenirken bir iş parçacığının işlemi tamamen durdurmasından kaynaklanabilir. Gerçekte, iş parçacığı yüksek öncelikli iletileri almaya ve işlemeye devam eder. Bu, kilitlenmeleri önlemeye yardımcı olur ve arabirimlerin düşük ölçüde yanıt vermesini sağlar, ancak hafif hatalara yönelik olasılığı ortaya çıkarır.  Bu sürenin büyük çoğunluğunda, bununla ilgili herhangi bir şey bilmeniz gerekmez, ancak nadir koşullarda (genellikle Win32 pencere iletilerini veya COM STA bileşenlerini içeren) Bu durum yararlı olabilir.
 
  Çoğu arabirim, iş parçacığı güvenliği göz önünde bulundurularak derlenmez çünkü geliştiriciler bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] birden fazla iş parçacığı tarafından hiçbir şekilde erişilmediği varsayılarak çalışır. Bu durumda, bu tek iş parçacığı beklenmedik zamanlarda çevresel değişiklikler yapabilir ve bu durum, <xref:System.Windows.Threading.DispatcherObject> karşılıklı dışlama mekanizmasının çözülmesinin gerekmemesine neden olur. Aşağıdaki sözde kodu göz önünde bulundurun:
 

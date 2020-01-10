@@ -1,23 +1,25 @@
 ---
 title: Makine öğrenimi görevleri
 description: ML.NET sürümünde desteklenen farklı makine öğrenimi görevlerini ve ilişkili görevleri keşfedebilirsiniz.
-ms.custom: seodec18
-ms.date: 04/23/2019
-author: natke
-ms.openlocfilehash: d0634ce8a0559ab3cdb5bf27fc5406ab02af8df6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.date: 12/23/2019
+ms.openlocfilehash: badb096ab3e7fbd575d8594b4fbd0e2ebaf63820
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977250"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739632"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 'de makine öğrenimi görevleri
 
-Bir makine öğrenimi modeli oluştururken, öncelikle verilerinize ulaşmak için ne kadar atlama yapabileceğinizi tanımlamanız gerekir. Bu, durumunuz için doğru makine öğrenimi görevini seçmenizi sağlar. Aşağıdaki listede, aralarından seçim yapabileceğiniz farklı makine öğrenimi görevleri ve bazı yaygın kullanım durumları açıklanmaktadır. Senaryonuza uygun görevi seçme hakkında daha fazla bilgi için bkz. [algoritmalar](../how-to-choose-an-ml-net-algorithm.md).
+Makine öğrenimi görevi, istenen sorun veya soruya ve kullanılabilir verilere göre yapılan tahmin veya çıkarım türüdür. Örneğin, sınıflandırma görevi verileri kategorilere atar ve kümeleme görevi verileri benzerliğe göre gruplandırır.
+
+Machine Learning görevleri, verileri açıkça programlanabilir değil, verilerdeki desenlere bağlıdır.
+
+Bu makalede, ML.NET ve bazı yaygın kullanım durumları arasından seçim yapabileceğiniz farklı makine öğrenimi görevleri açıklanmaktadır.
 
 Senaryolarınız için hangi görevin çalıştığına karar verdikten sonra, modelinize eğitebilmeniz için en iyi algoritmayı seçmeniz gerekir. Kullanılabilir algoritmalar her görevin bölümünde listelenmiştir.
 
-## <a name="binary-classification"></a>ikili sınıflandırma
+## <a name="binary-classification"></a>İkili sınıflandırma
 
 İki sınıftan (kategori) hangisinin ait olduğunu tahmin etmek için kullanılan [denetimli bir makine öğrenimi](glossary.md#supervised-machine-learning) görevi. Sınıflandırma algoritmasının girişi, her etiketin 0 veya 1 tamsayısı olduğu etiketli örnekler kümesidir. İkili sınıflandırma algoritmasının çıktısı, yeni etiketlenmiş olmayan örneklerin sınıfını tahmin etmek için kullanabileceğiniz bir sınıflandırıcıdır. İkili sınıflandırma senaryolarına örnek olarak şunlar verilebilir:
 
@@ -96,7 +98,7 @@ Bu, aşağıdaki çıkışları verir:
 | `Score` | <xref:System.Single> vektörü | Tüm sınıfların puanları. Daha yüksek değer, ilişkili sınıfa düşecek daha büyük olasılık anlamına gelir. İ-th öğesi en büyük değere sahipse, tahmin edilen etiket dizini i olur. Sıfır tabanlı dizin olduğunu unutmayın. |
 | `PredictedLabel` | [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) türü | Tahmin edilen etiketin dizini. Değeri i ise, gerçek etiket anahtar değerli giriş etiketi türündeki ı-TH kategorisi olacaktır. |
 
-## <a name="regression"></a>regresyon
+## <a name="regression"></a>Regresyon
 
 Bir ilişkili özellikler kümesinden etiketin değerini tahmin etmek için kullanılan [denetimli bir makine öğrenimi](glossary.md#supervised-machine-learning) görevi. Etiket herhangi bir gerçek değer olabilir ve sınıflandırma görevlerinde olduğu gibi sınırlı bir değer kümesinden değildir. Regresyon algoritmaları, özelliğin değerleri farklılaştırılmadıkça etiketin nasıl değiştirileceğini anlamak için ilgili özellikler üzerindeki etiketin bağımlılığını modelleyebilir. Regresyon algoritmasının girişi, bilinen değerlerin etiketlerine sahip bir örnek kümesidir. Regresyon algoritmasının çıktısı, herhangi bir yeni giriş özellikleri kümesi için etiket değerini tahmin etmek üzere kullanabileceğiniz bir işlevdir. Regresyon senaryolarına örnek olarak şunlar verilebilir:
 
@@ -128,7 +130,7 @@ Bu görev için şu kadar traipler aşağıda verilmiştir:
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Model tarafından tahmin edilen ham puan |
 
-## <a name="clustering"></a>Lenmesi
+## <a name="clustering"></a>Kümeleme
 
 Benzer özellikler içeren kümelere veri örneklerini gruplamak için kullanılan, denetimli bir [makine öğrenimi](glossary.md#unsupervised-machine-learning) görevi. Kümeleme, göz atma veya basit gözlemlemeye göre mantıksal olarak türeteceğiniz bir veri kümesindeki ilişkileri tanımlamak için de kullanılabilir. Bir kümeleme algoritmasının giriş ve çıkışları, seçilen metodolojiye bağlıdır. Dağıtım, centroıd, bağlantı veya Yoğunluk tabanlı yaklaşıma sahip olabilirsiniz. ML.NET şu anda K-anlamı Kümelemesi kullanarak centroıd tabanlı bir yaklaşımı desteklemektedir. Kümeleme senaryolarına örnekler şunlardır:
 
@@ -183,6 +185,7 @@ Bu, aşağıdaki çıkışları verir:
 | Çıkış adı | Tür | Açıklama|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Anomali algılama modeli tarafından hesaplanan negatif olmayan, sınırlandırılmamış puan |
+| `PredictedLabel` | <xref:System.Boolean> | Girişin bir anomali (PredictedLabel = true) olup olmadığını temsil eden doğru/yanlış değeri (PredictedLabel = false) |
 
 ## <a name="ranking"></a>Sıralamasına
 

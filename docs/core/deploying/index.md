@@ -2,13 +2,12 @@
 title: .NET Core uygulama dağıtımı
 description: .NET Core uygulaması dağıtma yolları hakkında bilgi edinin.
 ms.date: 12/03/2018
-ms.custom: seodec18
-ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089190"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740813"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core uygulama dağıtımı
 
@@ -16,7 +15,7 @@ ms.locfileid: "73089190"
 
 - Çerçeveye bağımlı dağıtım. Adından da anlaşılacağı gibi, çerçeveye bağımlı dağıtım (FDD), hedef sistemde .NET Core 'un paylaşılan sistem genelindeki bir sürümünün varlığına dayanır. .NET Core zaten mevcut olduğundan, uygulamanız .NET Core yüklemeleri arasında da taşınabilir. Uygulamanız yalnızca kendi kodunu ve .NET Core kitaplıklarının dışında olan üçüncü taraf bağımlılıklarını içerir. FDDs, komut satırından [DotNet yardımcı programını](../tools/dotnet.md) kullanarak başlatılabilen *. dll* dosyaları içerir. Örneğin, `dotnet app.dll` `app`adlı bir uygulamayı çalıştırır.
 
-- Kendi kendine kapsanan dağıtım. FDD 'nin aksine, kendinden bağımsız bir dağıtım (SCD) hedef sistemdeki paylaşılan bileşenlerin varlığına güvenmez. .NET Core kitaplıkları ve .NET Core çalışma zamanı dahil olmak üzere tüm bileşenler, uygulamaya dahildir ve diğer .NET Core uygulamalarından yalıtılmıştır. SCN 'Ler, platforma özgü .NET Core ana bilgisayarının yeniden adlandırılmış bir sürümü olan bir yürütülebilir dosya (`app`adlı bir uygulama için Windows platformlarında *app. exe* gibi) ve gerçek değer olan bir *. dll* dosyası ( *app. dll*gibi) içerir. Uygulamanızı.
+- Kendi kendine kapsanan dağıtım. FDD 'nin aksine, kendinden bağımsız bir dağıtım (SCD) hedef sistemdeki paylaşılan bileşenlerin varlığına güvenmez. .NET Core kitaplıkları ve .NET Core çalışma zamanı dahil olmak üzere tüm bileşenler, uygulamaya dahildir ve diğer .NET Core uygulamalarından yalıtılmıştır. SCN 'Ler, platforma özgü .NET Core ana bilgisayarının yeniden adlandırılmış bir sürümü olan ve gerçek uygulama olan bir *. dll* dosyası ( *app. dll*gibi) bir yürütülebilir dosya (örneğin, `app`adlı bir uygulama için Windows platformlarında *app. exe* ) içerir.
 
 - Çerçeveye bağımlı yürütülebilir dosyalar. Hedef platformda çalışan bir yürütülebilir dosya oluşturur. FDDs 'ye benzer şekilde, çerçeveye bağımlı çalıştırılabilirler (FDE) platforma özgüdür ve kendi içinde değildir. Bu dağıtımlar, .NET Core 'un çalışmasına yönelik paylaşılan sistem genelinde bir sürümünün varlığını de temel alır. Bir SCD aksine, uygulamanız yalnızca kodunuzu ve .NET Core kitaplıklarının dışında olan üçüncü taraf bağımlılıklarını içerir. FDEs, hedef platformda çalışan bir yürütülebilir dosya oluşturur.
 
@@ -64,7 +63,7 @@ Ayrıca çeşitli dezavantajlara sahiptir:
 
 - .NET Core 'un yanı sıra uygulamanızı ve üçüncü taraf bağımlılıklarını da dahil etmeniz gerektiğinden, dağıtım paketinizin boyutu nispeten büyük olur.
 
-  .NET Core 2,0 ile başlayarak, .NET Core [*Genelleştirme sabit modunu*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)kullanarak Linux sistemlerinde dağıtımınızın boyutunu YAKLAŞıK 28 MB azaltabilirsiniz. Normalde, Linux üzerinde .NET Core, genelleştirme desteği için [ICU kitaplıklarını](http://icu-project.org) kullanır. Sabit modda, kitaplıklar dağıtımınıza dahil edilmez ve tüm kültürler [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)gibi davranır.
+  .NET Core 2,0 ile başlayarak, .NET Core [*Genelleştirme sabit modunu*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)kullanarak Linux sistemlerinde dağıtımınızın boyutunu YAKLAŞıK 28 MB azaltabilirsiniz. Normalde, Linux üzerinde .NET Core, genelleştirme desteği için [ICU kitaplıklarını](http://icu-project.org) kullanır. Sabit modda, kitaplıklar dağıtımınıza dahil edilmez ve tüm kültürler [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)gibi davranır.
 
 - Birçok bağımsız .NET Core uygulamasını bir sisteme dağıtmak, her uygulama .NET Core dosyalarını yinelemediğinden önemli miktarda disk alanı tüketebilir.
 

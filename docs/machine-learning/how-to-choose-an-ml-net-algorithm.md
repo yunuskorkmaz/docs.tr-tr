@@ -1,15 +1,14 @@
 ---
 title: ML.NET algoritması seçme
 description: Machine Learning modeliniz için bir ML.NET algoritması seçme hakkında bilgi edinin
-author: natke
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 0721418d8b0b3c9ab645eb9885b0f4951c37762e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976691"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740001"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET algoritması seçme
 
@@ -39,7 +38,7 @@ Doğrusal algoritmalar eğitim verileri üzerinde birden çok geçiş yapar. Ver
 
 **Doğrusal Traıners**
 
-|Algoritmalar|Özellikler|Eğitmenler|
+|Algoritma|Özellikler|Eğitmenler|
 |---------|----------|--------|
 |Ortalama Perceptron|Metin sınıflandırması için en iyisi|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
 |Stochastik çift Eşgüdümlü yoksı|Daha iyi varsayılan performans için ayarlama gerekmiyor|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
@@ -62,12 +61,12 @@ Artırılmış karar ağaçları, her bir ağacın giriş verilerini puanların�
 
 **Karar ağacı tracılar**
 
-|Algoritmalar|Özellikler|Eğitmenler|
+|Algoritma|Özellikler|Eğitmenler|
 |---------|----------|--------|
 |Hafif gradyan tarafından artırılmış makine|İkili sınıflandırma ağacı izleyenilerinin en hızlı ve en doğru. Yüksek düzeyde ayarlanabilir|<xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>|
 |Hızlı ağaç|Korleştirilmiş görüntü verileri için kullanın. Dengesiz verilere dayanıklı. Yüksek düzeyde ayarlanabilir | <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>|
-|Hızlı orman|Gürültülü verilerle iyi çalışma|<xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer><xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>|
-|Genelleştirilmiş eklenebilir model (GAM)|Ağaç algoritmalarıyla iyi bir şekilde gerçekleştiren, ancak explainability bir öncelik olduğu sorunlar için idealdir|<xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer><xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>|
+|Hızlı orman|Gürültülü verilerle iyi çalışma|<xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>|
+|Genelleştirilmiş eklenebilir model (GAM)|Ağaç algoritmalarıyla iyi bir şekilde gerçekleştiren, ancak explainability bir öncelik olduğu sorunlar için idealdir|<xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>|
 
 ## <a name="matrix-factorization"></a>Matris ayırma
 
@@ -79,7 +78,7 @@ Artırılmış karar ağaçları, her bir ağacın giriş verilerini puanların�
 
 Bu traçler, ikili bir eğitimci tarafından çok sınıf bir adım oluşturur. <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>, <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>, <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>, <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>, <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>, <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>, <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>ile kullanın.
 
-|Algoritmalar|Özellikler|Eğitmenler|
+|Algoritma|Özellikler|Eğitmenler|
 |---------|----------|--------|
 |Tek ve tüm|Bu çok sınıf Sınıflandırıcısı her sınıf için bir ikili sınıflandırıcının yanı da bu sınıfı diğer tüm sınıflardan ayırt eder. Sınıflandırılacak sınıf sayısına göre ölçeğe göre sınırlandırılmıştır|[OneVersusAllTrainer\<BinaryClassificationTrainer >](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
 |İkili eşlenme|Bu çok sınıf Sınıflandırıcısı, her sınıf çiftinde ikili bir sınıflandırma algoritması oluşturur. , İki sınıfın birleşiminin eğitililmesi gerektiği için sınıfların sayısına göre ölçeklendirilmesine sınırlıdır.|[PairwiseCouplingTrainer\<BinaryClassificationTrainer >](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
@@ -96,7 +95,7 @@ Bu traçler, ikili bir eğitimci tarafından çok sınıf bir adım oluşturur. 
 |----------|--------|
 |Anomali algılama için kullanma|<xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>|
 
-## <a name="naive-bayes"></a>Naive Bayes
+## <a name="naive-bayes"></a>Sade Bayes
 
 |Özellikler|Eğitmenler|
 |----------|--------|

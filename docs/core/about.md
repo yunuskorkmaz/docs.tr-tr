@@ -2,12 +2,12 @@
 title: .NET Core hakkında
 description: .NET Core hakkında bilgi edinin.
 ms.date: 09/17/2019
-ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c6d120445bc6625b37c461c1bf2686b10833dc13
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801954"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740948"
 ---
 # <a name="about-net-core"></a>.NET Core hakkında
 
@@ -58,7 +58,7 @@ Bu tümleştirme, kapsamında, [Omnisharp](https://www.omnisharp.net/) ve [ıon�
 
 - Bir tür sistemi, derleme yükleme, çöp toplayıcı, yerel birlikte çalışma ve diğer temel hizmetler sağlayan [.NET Core çalışma zamanı](https://github.com/dotnet/runtime/tree/master/src/coreclr). [.NET Core Framework kitaplıkları](https://github.com/dotnet/runtime/tree/master/src/libraries) temel veri türleri, uygulama bileşim türleri ve temel yardımcı programları sağlar.
 - Web uygulamaları, IoT uygulamaları ve mobil arka uçlar gibi modern bulut tabanlı Internet 'e bağlı uygulamalar oluşturmaya yönelik bir çerçeve sağlayan [ASP.NET çalışma zamanı](https://github.com/aspnet/home).
-- .NET Core geliştirici deneyimini etkinleştiren [.NET Core CLI araçları](https://github.com/dotnet/cli) ve dil derleyicileri ( [F#](https://github.com/microsoft/visualfsharp)[Roslyn](https://github.com/dotnet/roslyn) ve).
+- .NET Core geliştirici deneyimini etkinleştiren [.NET Core CLI araçları](https://github.com/dotnet/sdk) ve dil derleyicileri ( [F#](https://github.com/microsoft/visualfsharp)[Roslyn](https://github.com/dotnet/roslyn) ve).
 - .NET Core Uygulamaları ve CLı araçları 'nı başlatmak için kullanılan [DotNet aracı](https://github.com/dotnet/core-setup). Çalışma zamanını seçer ve çalışma zamanını barındırır, bir derleme yükleme ilkesi sağlar ve uygulamaları ve araçları başlatır.
 
 Bu bileşenler aşağıdaki yollarla dağıtılır:
@@ -113,7 +113,7 @@ Windows ve UNIX uygulamaları boyutuyla benzerdir. .NET Core kitaplıkları, [Mi
 
 ### <a name="comparison-with-mono"></a>Mono ile karşılaştırma
 
-[Mono](https://www.mono-project.com/) , .net 'in özgün platformlar arası uygulamasıdır. .NET Framework için [Açık kaynaklı](https://github.com/mono/mono) alternatif olarak başlatılır ve IOS ve Android cihazlar popüler hale geldiğinden mobil cihazları hedeflemeye geçirilir. .NET Framework topluluk kopyası olarak düşünülebilir. Mono proje ekibi, Microsoft tarafından uyumlu bir uygulama sağlamak üzere yayımlanan açık [.net standartlarına](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (özellikle ECMA 335) güvendi.
+[Mono](https://www.mono-project.com/) , .net 'in özgün platformlar arası uygulamasıdır. .NET Framework için [Açık kaynaklı](https://github.com/mono/mono) alternatif olarak başlatılır ve IOS ve Android cihazlar popüler hale geldiğinden mobil cihazları hedeflemeye geçirilir. .NET Framework topluluk kopyası olarak düşünülebilir. Mono proje ekibi, Microsoft tarafından uyumlu bir uygulama sağlamak üzere yayımlanan açık [.net standartlarına](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) (özellikle ECMA 335) güvendi.
 
 .NET Core ve mono arasındaki önemli farklılıklar:
 

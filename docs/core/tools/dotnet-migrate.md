@@ -1,21 +1,21 @@
 ---
 title: DotNet geçiş komutu
 description: DotNet Migrate komutu bir projeyi ve tüm bağımlılıklarını geçirir.
-ms.date: 08/08/2019
-ms.openlocfilehash: afc16161761d151e743e53a8572a6564add43517
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 01/07/2020
+ms.openlocfilehash: d746069b897a7458e0262663e96cc8743a586aa9
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117696"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740518"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
 **Bu makale şu şekilde geçerlidir: ✓** .NET Core 1. x SDK **✓** .NET Core 2. x SDK
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
-`dotnet migrate`-Preview 2 .NET Core projesini .NET Core SDK stilinde bir projeye geçirir.
+`dotnet migrate`-Preview 2 .NET Core projesini .NET Core SDK stili bir projeye geçirir.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -26,9 +26,9 @@ dotnet migrate [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-Komutu geçerli bir Preview 2 *Project. JSON*tabanlı projeyi geçerli bir .NET Core SDK stili csproj projesine geçirir. `dotnet migrate`
+Bu komut kullanım dışıdır. `dotnet migrate` komutu artık .NET Core 3,0 SDK ile başlayarak kullanılamaz. Yalnızca bir Preview 2 .NET Core projesini, desteklenmeyen bir 1. x .NET Core projesine geçirebilirler.
 
-Varsayılan olarak, komut kök projeyi ve kök projenin içerdiği tüm proje başvurularını geçirir. Bu davranış, `--skip-project-references` çalışma zamanında seçeneği kullanılarak devre dışıdır.
+Varsayılan olarak, komut kök projeyi ve kök projenin içerdiği tüm proje başvurularını geçirir. Bu davranış, çalışma zamanında `--skip-project-references` seçeneği kullanılarak devre dışıdır.
 
 Aşağıdaki varlıklarda geçiş yapılabilir:
 
@@ -37,13 +37,11 @@ Aşağıdaki varlıklarda geçiş yapılabilir:
 * Çözümde başvurulan projeleri geçirirken *çözüm. sln* dosyası.
 * Verilen dizinin tüm alt dizinlerinde özyinelemeli olarak.
 
-Komut, geçirilen *Project. JSON* dosyasını dizin yoksa oluşturduğu bir `backup` dizin içinde tutar. `dotnet migrate` Bu davranış `--skip-backup` seçeneği kullanılarak geçersiz kılınır.
+`dotnet migrate` komutu geçirilmiş *proje. JSON* dosyasını, dizin yoksa oluşturduğu `backup` bir dizin içinde tutar. Bu davranış, `--skip-backup` seçeneği kullanılarak geçersiz kılınır.
 
-Varsayılan olarak, geçiş işlemi geçiş işleminin durumunu standart çıktıya (STDOUT) verir. `--report-file <REPORT_FILE>` Seçeneğini kullanırsanız, çıkış dosyaya kaydedilir.
+Varsayılan olarak, geçiş işlemi geçiş işleminin durumunu standart çıktıya (STDOUT) verir. `--report-file <REPORT_FILE>` seçeneğini kullanırsanız, çıkış dosyaya kaydedilir.
 
-Komutu yalnızca geçerli Preview 2 *Project. JSON*tabanlı projeleri destekler. `dotnet migrate` Bu, DNX veya Preview 1 *Project. JSON*tabanlı projeleri doğrudan MSBuild/csproj projelerine geçirebileceğiniz anlamına gelir. Önce projeyi bir Preview 2 *Project. JSON*tabanlı projeye el ile geçirmeniz ve ardından projeyi geçirmek için `dotnet migrate` komutunu kullanmanız gerekir.
-
-`dotnet migrate` Komut artık .NET Core 3,0 SDK ile başlayarak kullanılamaz.
+`dotnet migrate` komutu yalnızca geçerli Preview 2 *Project. JSON*tabanlı projeleri destekler. Bu, DNX veya Preview 1 *Project. JSON*tabanlı projeleri doğrudan MSBuild/csproj projelerine geçirebileceğiniz anlamına gelir. Önce projeyi bir Preview 2 *Project. JSON*tabanlı projeye el ile geçirmeniz ve sonra `dotnet migrate` komutunu kullanarak projeyi geçirmeniz gerekir.
 
 ## <a name="arguments"></a>Arguments
 
@@ -78,15 +76,15 @@ Proje başvurularını geçirmeyi atlayın. Varsayılan olarak, proje başvurula
 
 `--skip-backup`
 
-Başarılı geçişten sonra *Project. JSON*, *Global. JSON*ve  *\*. xproj* ' ı `backup` bir dizine taşımayı atlayın.
+Başarılı geçişten sonra *Project. JSON*, *Global. JSON*ve *\*. xproj* ' ı bir `backup` dizinine taşımayı atlayın.
 
 `-t|--template-file <TEMPLATE_FILE>`
 
-Geçiş için kullanılacak şablon csproj dosyası. Varsayılan olarak, tarafından bırakılan ile `dotnet new console` aynı şablon kullanılır.
+Geçiş için kullanılacak şablon csproj dosyası. Varsayılan olarak, `dotnet new console` tarafından bırakılan şablonla aynı şablon kullanılır.
 
 `-v|--sdk-package-version <VERSION>`
 
-Geçirilen uygulamada başvurulan SDK paketinin sürümü. Varsayılan, ' deki `dotnet new`SDK sürümüdür.
+Geçirilen uygulamada başvurulan SDK paketinin sürümü. Varsayılan değer `dotnet new`SDK 'nın sürümüdür.
 
 `-x|--xproj-file <FILE>`
 

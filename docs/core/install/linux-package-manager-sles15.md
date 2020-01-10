@@ -4,12 +4,12 @@ description: .NET Core SDK ve çalışma zamanını SLES 15 ' e yüklemek için 
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 5551ce8cffa92d4efb6bbe9db2a4887f4b26cd6e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 18a0068e5494d6a25e9cd278ce88f5915e2000b8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74836915"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740650"
 ---
 # <a name="sles-15-package-manager---install-net-core"></a>SLES 15 Paket Yöneticisi-.NET Core 'ı yükler
 
@@ -21,11 +21,11 @@ Bu makalede, SLES 15 üzerinde .NET Core yüklemek için bir paket yöneticisi '
 
 .NET yüklemeden önce şunları yapmanız gerekir:
 
-- Microsoft anahtarını kaydetme
-- Ürün deposunu kaydetme
-- Gerekli bağımlılıkları yükler
+- Microsoft anahtarını kaydettirin.
+- Ürün deposunu kaydedin.
+- Gerekli bağımlılıkları yükler.
 
-Bu işlemin makine başına bir kez yapılması yeterlidir.
+Bu işlemin makine başına tek bir kez yapılması yeterlidir.
 
 Bir Terminal açın ve aşağıdaki komutu çalıştırın.
 

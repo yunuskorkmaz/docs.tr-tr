@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0ba4e8ff639cdfbbec596da45a6e950fff921974
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0c98d0e7363e7732f44f2edf238b9cb6d2bf11fb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740723"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740282"
 ---
 # <a name="typography-in-wpf"></a>WPF'de Tipografi
 Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]'in önemli tipografik özelliklerini tanıtır. Bu özellikler, metin işleme, OpenType tipografi desteği, gelişmiş uluslararası metin, gelişmiş yazı tipi desteği ve yeni metin uygulama programlama arabirimleri (API 'Ler) için geliştirilmiş kalite ve performans içerir.  
@@ -59,7 +59,7 @@ ClearType y yönünde düzgünleştirme içeren metin
   
 - Sistem yerel ayarı gibi genel ayarlardan bağımsız yazı tipi davranışı.  
   
-- <xref:System.Windows.Media.FontFamily>tanımlamak için <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>ve <xref:System.Windows.FontStyle> türlerini ayırın. Bu, bir yazı tipi ailesini tanımlamak için italik ve kalın Boole birleşimlerinin kullanıldığı [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] programlamadan daha fazla esneklik sağlar.  
+- <xref:System.Windows.Media.FontFamily>tanımlamak için <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>ve <xref:System.Windows.FontStyle> türlerini ayırın. Bu, bir yazı tipi ailesini tanımlamak için italik ve kalın olan Boole birleşimlerinin kullanıldığı Win32 programından daha fazla esneklik sağlar.  
   
 - Yazma yönü (yatay veya dikey), yazı tipi adından bağımsız olarak işlenir.  
   

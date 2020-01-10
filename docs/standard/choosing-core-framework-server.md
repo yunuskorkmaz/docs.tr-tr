@@ -4,12 +4,12 @@ description: .NET ' te bir sunucu uygulaması oluştururken göz önünde bulund
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b2b9e15cfdfd63d070ae94c29a9f2d1a5b5c87b2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799259"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738675"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma
 
@@ -46,7 +46,7 @@ Mikro hizmetler mimarisi, bir hizmet sınırı genelinde teknolojilerin karış�
 
 Kullanılabilir çok sayıda altyapı platformu vardır. [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) , büyük ve karmaşık mikro hizmet sistemleri için tasarlanmıştır. [Azure App Service](https://azure.microsoft.com/services/app-service/) , durum bilgisi olmayan mikro hizmetler için iyi bir seçimdir. Docker tabanlı mikro hizmet alternatifleri, [kapsayıcılar](#containers) bölümünde açıklandığı gibi her türlü mikro hizmet yaklaşımını ister. Tüm bu platformlar .NET çekirdeğini destekler ve mikro hizmetlerinizin barındırılmasına yönelik ideal hale getirir.
 
-Mikro hizmet mimarisi hakkında daha fazla bilgi için bkz [. .net mikro hizmetleri. Kapsayıcılı .NET uygulamaları](../architecture/microservices/index.md)için mimari.
+Mikro hizmet mimarisi hakkında daha fazla bilgi için bkz [. .net mikro hizmetleri. Kapsayıcılı .NET uygulamaları için mimari](../architecture/microservices/index.md).
 
 ### <a name="containers"></a>Kapsayıcılar
 
@@ -85,17 +85,17 @@ Bu nedenle, yalnızca kitaplıkların veya NuGet paketlerinin .NET Standard/. NE
 
 Bazı .NET Framework teknolojileri .NET Core 'da kullanılamaz. Bunlardan bazıları daha sonraki .NET Core sürümlerinde kullanılabilir olabilir. Diğerleri, .NET Core tarafından hedeflenen yeni uygulama düzenlerine uygulanmaz ve hiçbir şekilde kullanılamaz. Aşağıdaki listede, .NET Core 'da bulunmayan en yaygın teknolojiler gösterilmektedir:
 
-- ASP.NET Web Forms uygulamalar: ASP.NET Web Forms yalnızca .NET Framework kullanılabilir. ASP.NET Core, ASP.NET Web Forms için kullanılamaz. .NET Core 'a ASP.NET Web Forms getirmek için bir plan yoktur.
+- ASP.NET Web Forms uygulamalar: ASP.NET Web Forms yalnızca .NET Framework mevcuttur. ASP.NET Core, ASP.NET Web Forms için kullanılamaz. .NET Core 'a ASP.NET Web Forms getirmek için bir plan yoktur.
 
-- ASP.NET Web Pages uygulamaları: ASP.NET Web sayfaları ASP.NET Core dahil değildir. 
+- ASP.NET Web Pages uygulamaları: ASP.NET Web Pages ASP.NET Core. 
 
 - WCF Hizmetleri uygulama. .NET Core 'dan WCF hizmetlerini kullanmak için bir [WCF-istemci kitaplığı](https://github.com/dotnet/wcf) olsa bıle, WCF sunucu uygulamasının şu anda yalnızca .NET Framework kullanılabilir. Bu senaryo, .NET Core için geçerli planın bir parçası değildir, ancak geleceğe göre değerlendirilir.
 
 - İş akışı ile ilgili hizmetler: Windows Workflow Foundation (WF), Iş akışı hizmetleri (tek bir hizmette WCF + WF) ve WCF Veri Hizmetleri (eskiden "ADO.NET Data Services" olarak bilinirdi) yalnızca .NET Framework mevcuttur.  WF/WCF + WF/WCF Veri Hizmetleri .NET Core 'a getirmeye yönelik bir plan yoktur.
 
-- Dil desteği: Visual Basic ve F# Şu anda .NET Core 'da destekleniyor, ancak tüm proje türleri için desteklenmiyor. Desteklenen proje şablonlarının listesi için bkz. [DotNet New Için şablon seçenekleri](../core/tools/dotnet-new.md#arguments).
+- Dil desteği: Visual Basic ve F# Şu anda .NET Core 'da desteklenir, ancak tüm proje türleri için desteklenmez. Desteklenen proje şablonlarının listesi için bkz. [DotNet New Için şablon seçenekleri](../core/tools/dotnet-new.md#arguments).
 
-Resmi yol haritasını ek olarak, .NET Core 'a yönelik başka çerçeveler de vardır. Tam liste için bkz. [ana bağlantı noktası](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core)olarak Işaretlenmiş CoreFX sorunları. Bu liste, Microsoft 'un bu bileşenleri .NET Core 'a getirmeye yönelik bir taahhütünü temsil etmez. Bu, bunu yapmak için topluluktaki isteği yakalarlar. Olarak `port-to-core`işaretlenen bileşenlerden herhangi birini düşünüyorsanız, GitHub 'daki tartışmalara katılın. Bir şeyin eksik olduğunu düşünüyorsanız [Corefx deposunda](https://github.com/dotnet/corefx/issues/new)yeni bir sorun verin.
+Resmi yol haritasını ek olarak, .NET Core 'a yönelik başka çerçeveler de vardır. Tam liste için bkz. [ana bağlantı noktası](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core)olarak Işaretlenmiş CoreFX sorunları. Bu liste, Microsoft 'un bu bileşenleri .NET Core 'a getirmeye yönelik bir taahhütünü temsil etmez. Bu, bunu yapmak için topluluktaki isteği yakalarlar. `port-to-core`olarak işaretlenen bileşenlerden herhangi birini düşünüyorsanız, GitHub 'daki tartışmalara katılın. Bir şeyin eksik olduğunu düşünüyorsanız, [.net deposunda](https://github.com/dotnet/runtime/issues/new)yeni bir sorun verin.
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>.NET Core desteklemeyen bir platform kullanmanız gerekir
 
@@ -110,4 +110,4 @@ Bazı Microsoft veya üçüncü taraf platformları .NET Core ' u desteklemez. B
 - [.NET Framework 'den .NET Core 'a taşıma](../core/porting/index.md)
 - [.NET ve Docker’a Giriş](../core/docker/introduction.md)
 - [.NET bileşenlerine genel bakış](components.md)
-- [.NET mikro hizmetleri. Kapsayıcılı .NET Uygulamaları Mimarisi](../architecture/microservices/index.md)
+- [.NET mikro hizmetleri. Kapsayıcılı .NET uygulamaları için mimari](../architecture/microservices/index.md)

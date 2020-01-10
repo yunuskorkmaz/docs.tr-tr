@@ -1,21 +1,21 @@
 ---
-title: Null yapılabilir başvuru türleriyle tasarım
-description: Bu gelişmiş öğretici, null yapılabilir başvuru türlerine giriş sağlar. Başvuru değerleri null olduğunda ve derleyicinin null olmadıklarında zorunlu olmadığı durumlarda tasarım amacınızı ifade etmek için bilgi edineceksiniz.
+title: Null yapılabilir başvuru türlerine yükselt
+description: Bu gelişmiş öğreticide, var olan kodun null yapılabilir başvuru türleriyle nasıl geçirileceği gösterilmektedir.
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969342"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740458"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Öğretici: mevcut kodu Nullable başvuru türleriyle geçirme
 
 C#8, null olabilen değer türleri için aynı şekilde, başvuru türlerini tamamlayan **null yapılabilir başvuru türlerini**tanıtır. Türe bir `?` ekleyerek **null olabilen bir başvuru türü** olarak bir değişken bildirirsiniz. Örneğin `string?`, null yapılabilir bir `string`temsil eder. Tasarım amacınızı daha net bir şekilde ifade etmek için bu yeni türleri kullanabilirsiniz: bazı değişkenlerin *her zaman bir değeri olması gerekir*, bazılarında *bir değer eksik*olabilir. Bir başvuru türünün varolan değişkenleri, null olamayan bir başvuru türü olarak yorumlanır. 
 
-Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -36,7 +36,7 @@ Geçirilecek örnek uygulama bir RSS Akış okuyucusu web uygulamasıdır. Tek b
 
 Örnek uygulama, uygulamanın ana işlevlerini doğrulayan bir birim testi kitaplığı içerir. Oluşturulan uyarılara göre herhangi bir uygulamayı değiştirirseniz, bu proje güvenli bir şekilde yükseltmeyi daha kolay hale getirir. Başlangıç kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/start) GitHub deposundan indirebilirsiniz.
 
-Bir projeyi geçirme hedefiniz yeni dil özelliklerinden faydalanmak için olmalıdır. böylece, amacınızı null olabilir ve bu nedenle, null yapılabilir ek açıklama bağlamına sahip olduğunuzda derleyicinin uyarı üretmemesi ve null yapılabilir uyarı bağlamı `enabled`olarak ayarlanır.
+Bir projeyi geçirme hedefiniz yeni dil özelliklerinden faydalanır, böylece amacınızı null olabilir ve bu sayede, null yapılabilir ek açıklama bağlamı ve null atanabilir uyarı bağlamı `enabled`olarak ayarlanmış olduğunda derleyicinin uyarı üretmemesi gerekir.
 
 ## <a name="upgrade-the-projects-to-c-8"></a>Projeleri 8 ' e C# yükseltin
 
@@ -163,8 +163,8 @@ Bu değişiklik kümesi, genel örneklemeleri içeren kodu güncelleştirirken �
 
 `IMapper` parametresi null atanamaz bir başvuru olarak yazılmış. ASP.NET Core altyapı kodu tarafından çağrılır, bu nedenle derleyici `IMapper` hiçbir şekilde null olmadığını bilmez. Varsayılan ASP.NET Core bağımlılık ekleme (dı) kapsayıcısı, gerekli bir hizmeti çözümleyemezse, kod doğru olduğunda bir özel durum oluşturur. Kodunuz null yapılabilir ek açıklama bağlamlarıyla derlense bile derleyici ortak API 'lerinize yapılan tüm çağrıları doğrulayamaz. Ayrıca, kitaplıklarınız henüz null yapılabilir başvuru türlerini kullanarak onaylanmamış projeler tarafından tüketilebilir. Bu girdileri null yapılamayan türler olarak bildirseniz bile ortak API 'lere yönelik girişleri doğrulayın.
 
-## <a name="get-the-code"></a>Kodu alın
+## <a name="get-the-code"></a>Kodu edinin
 
 İlk test derlenmesi sırasında belirlediğiniz uyarıları düzelttiniz, bu nedenle artık her iki proje için de null yapılabilir ek açıklama bağlamını açabilirsiniz. Projeleri yeniden derleyin; Derleyici hiçbir uyarı rapor vermez. [DotNet/Samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished) GitHub deposundaki tamamlanmış projenin kodunu alabilirsiniz.
 
-Null yapılabilir başvuru türlerini destekleyen yeni özellikler, kodunuzda `null` değerleri nasıl işleyeceğinizi bulmanıza ve düzeltmenize yardımcı olur. Null yapılabilir ek açıklama bağlamını etkinleştirmek, tasarım amacınızı ifade etmenizi sağlar: bazı değişkenler hiçbir şekilde null olmamalıdır, diğer değişkenler de null değerler içerebilir. Bu özellikler tasarım amacınızı bildirmenize daha kolay bir hale getirir. Benzer şekilde, null yapılabilir uyarı bağlamı derleyiciye bu amacı ihlal ettiğinizde uyarı vermesini söyler. Bu uyarılar, kodunuzu daha dayanıklı hale getirmek ve yürütme sırasında `NullReferenceException` oluşturması olasılığını azaltır. Geri kalan kod temeli dokunulmamış olsa da, geçirilecek yerel kod alanına odaklanabilmeniz için bu bağlamların kapsamını kontrol edebilirsiniz. Uygulamada, bu geçiş görevini sınıflarınıza düzenli bakımın bir parçası yapabilirsiniz. Bu öğretici, bir uygulamayı null yapılabilir başvuru türlerini kullanacak şekilde geçirme işlemini göstermiştir. Bu işlemin daha büyük bir gerçek dünya örneğini, null yapılabilir başvuru türlerini [Nodadtime](https://github.com/nodatime/nodatime/pull/1240/commits)ile birleştirmek IÇIN yapılan PR [Jon iskeet](https://github.com/jskeet) 'i inceleyerek inceleyebilirsiniz.
+Null yapılabilir başvuru türlerini destekleyen yeni özellikler, kodunuzda `null` değerleri nasıl işleyeceğinizi bulmanıza ve düzeltmenize yardımcı olur. Null yapılabilir ek açıklama bağlamını etkinleştirmek, tasarım amacınızı ifade etmenizi sağlar: bazı değişkenler hiçbir şekilde null olmamalıdır, diğer değişkenler de null değerler içerebilir. Bu özellikler tasarım amacınızı bildirmenize daha kolay bir hale getirir. Benzer şekilde, null yapılabilir uyarı bağlamı derleyiciye bu amacı ihlal ettiğinizde uyarı vermesini söyler. Bu uyarılar, kodunuzu daha dayanıklı hale getirmek ve yürütme sırasında `NullReferenceException` oluşturması olasılığını azaltır. Geri kalan kod temeli dokunulmamış olsa da, geçirilecek yerel kod alanına odaklanabilmeniz için bu bağlamların kapsamını kontrol edebilirsiniz. Uygulamada, bu geçiş görevini sınıflarınıza düzenli bakımın bir parçası yapabilirsiniz. Bu öğretici, bir uygulamayı null yapılabilir başvuru türlerini kullanacak şekilde geçirme işlemini göstermiştir. Bu işlemin daha büyük bir gerçek dünya örneğini, null yapılabilir başvuru türlerini [Nodadtime](https://github.com/nodatime/nodatime/pull/1240/commits)ile birleştirmek IÇIN yapılan PR [Jon iskeet](https://github.com/jskeet) 'i inceleyerek inceleyebilirsiniz. Ya da buna ek olarak, null olabilen başvuru türleri [Ile çalışan Entity Framework Core](/ef/core/miscellaneous/nullable-reference-types)Entity Framework Core ile null yapılabilir başvuru türleri kullanmanın tekniklerini öğrenebilirsiniz.

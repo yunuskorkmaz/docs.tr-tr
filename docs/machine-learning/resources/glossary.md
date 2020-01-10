@@ -1,15 +1,14 @@
 ---
 title: Makine öğrenimi sözlüğü
 description: ML.NET ' de özel modellerinizi oluştururken yararlı olan önemli makine öğrenimi terimlerinin bir sözlüğü.
-ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: bd4f2db701f537d5c87529115a6bd44035432534
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977293"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739882"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Önemli terimlerin makine öğrenimi sözlüğü
 
@@ -23,7 +22,7 @@ Aşağıdaki liste, ML.NET ' de özel modellerinizi oluştururken yararlı olan 
 
 [İkili sınıflandırmada](#binary-classification), eğri altındaki alanın değeri olan bir değerlendirme ölçümü, doğru pozitif değer oranını (y ekseni üzerinde) yanlış pozitif sonuçlar oranına (x ekseninde) göre çizer. 0,5 (en kötü) ile 1 (en iyi) arasında aralıklar. Ayrıca, ROC eğrisi, yani alıcı işletim özelliği eğrisi altında alan olarak da bilinir. Daha fazla bilgi için, Vikipde yer alan [alıcı işletim özellikleri](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) makalesine bakın.
 
-## <a name="binary-classification"></a>ikili sınıflandırma
+## <a name="binary-classification"></a>İkili sınıflandırma
 
 [Etiketin](#label) yalnızca iki sınıftan oluşan bir [Sınıflandırma](#classification) durumu. Daha fazla bilgi için [Machine Learning görevleri](tasks.md) konusunun [ikili sınıflandırma](tasks.md#binary-classification) bölümüne bakın.
 
@@ -57,7 +56,7 @@ Veriler, tüm makine öğrenimi uygulamaları için tasarlanmıştır. ML.NET ve
 
 ML.NET içinde <xref:Microsoft.ML.IEstimator%601> arabirimini uygulayan bir sınıf.
 
-Bir tahmin aracı, dönüşümün bir belirtimidir (hem veri hazırlama dönüştürmesi hem de makine öğrenimi modeli eğitim dönüştürmesi). Estimators, bir dizi dönüşümde birlikte zincirlenebilir. Bir tahmin aracı veya tahmini işlem hattının parametreleri <xref:Microsoft.ML.IEstimator`1.Fit*> çağrıldığında öğrenilir. <xref:Microsoft.ML.IEstimator`1.Fit*> sonucu bir [transformatör](#transformer).
+Bir tahmin aracı, dönüşümün bir belirtimidir (hem veri hazırlama dönüştürmesi hem de makine öğrenimi modeli eğitim dönüştürmesi). Estimators, bir dizi dönüşümde birlikte zincirlenebilir. Bir tahmin aracı veya tahmini işlem hattının parametreleri <xref:Microsoft.ML.IEstimator%601.Fit%2A> çağrıldığında öğrenilir. <xref:Microsoft.ML.IEstimator%601.Fit%2A> sonucu bir [transformatör](#transformer).
 
 ## <a name="extension-method"></a>Genişletme yöntemi
 
@@ -69,7 +68,7 @@ Genişletme yöntemleri, [Tahmini](#estimator)örnekleri oluşturmak için ml.NE
 
 Ölçülecek, genellikle sayısal (Double) bir değer olan ölçülebilir bir özellik. Birçok özelliğe **özellik vektörü** denir ve genellikle `double[]`olarak depolanır. Özellikler, ölçülen olgudur 'ın önemli özelliklerini tanımlar. Daha fazla bilgi için Vikipde bulunan [Özellikler](https://en.wikipedia.org/wiki/Feature_(machine_learning)) makalesine bakın.
 
-## <a name="feature-engineering"></a>Özellik Mühendisliği
+## <a name="feature-engineering"></a>Özellik mühendisliği
 
 Özellik Mühendisliği, kullanılabilir olgudur verilerinden, yani Özellik ayıklamadan Özellik vektörleri üreten [bir özellik kümesi tanımlamayı ve yazılım](#feature) geliştirmeyi içerir. Daha fazla bilgi için Vikipde bulunan [özellik Mühendisliği](https://en.wikipedia.org/wiki/Feature_engineering) makalesine bakın.
 
@@ -119,7 +118,7 @@ Normalleştirme, kayan nokta verilerinin 0 ile 1 arasındaki değerlere ölçekl
 
 Yalnızca sayısal değerler içeren bir [özellik](#feature) vektörü. Bu, `double[]`benzerdir.
 
-## <a name="pipeline"></a>Konfigüre
+## <a name="pipeline"></a>İşlem hattı
 
 Bir modeli bir veri kümesine sığdırmak için gereken tüm işlemler. İşlem hattı, veri içeri aktarma, dönüştürme, korleştirme ve öğrenme adımlardan oluşur. Bir işlem hattı eğitilirken bir modeli açar.
 
@@ -127,7 +126,7 @@ Bir modeli bir veri kümesine sığdırmak için gereken tüm işlemler. İşlem
 
 [Sınıflandırmada](#classification), bir sınıf için duyarlık, sınıfa ait olarak tahmin edilen toplam öğe sayısına bölündüğü için, bu sınıfa ait olarak doğru tahmin edilen öğe sayısıdır.
 
-## <a name="recall"></a>Çekmenin
+## <a name="recall"></a>Geri çekme
 
 [Sınıflandırmada](#classification), sınıf için geri çağırma, o sınıfa ait olan öğelerin, gerçekte sınıfa ait olan toplam öğe sayısına bölünmesiyle, doğru şekilde tahmin edilen öğe sayısıdır.
 
@@ -138,7 +137,7 @@ Bir modeli bir veri kümesine sığdırmak için gereken tüm işlemler. İşlem
 - $L _1 $ düzenleme, önemli özellikler için sıfırlar. Bu düzenleme türünden sonra kaydedilen modelin boyutu daha küçük hale gelebilir.
 - $L _2 $ düzenleme, önemli özellikler için ağırlık aralığını en aza indirir. Bu, daha genel bir işlemdir ve aykırı değerleri daha az hassastır.
 
-## <a name="regression"></a>regresyon
+## <a name="regression"></a>Regresyon
 
 Çıktının gerçek bir değer olduğu [denetimli bir makine öğrenimi](#supervised-machine-learning) görevi; Örneğin, Double. Örnek stok fiyatlarını tahmin eder. Daha fazla bilgi için [Machine Learning görevleri](tasks.md) konusunun [gerileme](tasks.md#regression) bölümüne bakın.
 
@@ -162,7 +161,7 @@ Puanlama, eğitilen bir makine öğrenimi modeline yeni veri uygulama ve tahmin 
 
 İstenen modelin, henüz görünmeyen veriler için etiketi tahmin eden makine öğrenimi 'nin bir alt sınıfı. Örnek olarak sınıflandırma, gerileme ve yapılandırılmış tahmin sayılabilir. Daha fazla bilgi için Vikipedi 'teki [denetimli öğrenme](https://en.wikipedia.org/wiki/Supervised_learning) makalesine bakın.
 
-## <a name="training"></a>İtme
+## <a name="training"></a>Eğitim
 
 Verilen eğitim veri kümesi için bir [modeli](#model) tanımlama işlemi. Doğrusal bir model için bu, ağırlıkları bulma anlamına gelir. Ağaç için bölme noktalarını tanımlamayı içerir.
 

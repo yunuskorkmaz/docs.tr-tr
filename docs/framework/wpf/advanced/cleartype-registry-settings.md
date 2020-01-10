@@ -5,19 +5,19 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: ab6ff2ba6e0f3f1ea9e34de80b67276a990bc83b
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 6143cf835cc44a6c6cc50372b2ac1a4d24d65311
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151841"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740389"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType Kayıt Defteri Ayarları
 Bu konu, WPF uygulamaları tarafından kullanılan Microsoft ClearType kayıt defteri ayarlarına genel bir bakış sağlar.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Teknolojiye genel bakış  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bir görüntüleme cihazına metin işleyen uygulamalar, Gelişmiş okuma deneyimi sağlamak için ClearType özelliklerini kullanır. ClearType, dizüstü ekranları, Pocket PC ekranları ve düz panel izleyicileri gibi mevcut LCD 'lerde (sıvı kristal ekranlar) metinlerin okunabilirliğini artıran Microsoft tarafından geliştirilen bir yazılım teknolojisidir. ClearType, bir LCD ekranın her pikseline tek dikey renk Stripe öğelerine erişerek işe yarar. ClearType hakkında daha fazla bilgi için bkz. [ClearType Genel Bakış](cleartype-overview.md).  
+ bir görüntüleme cihazına metin işleyen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar, Gelişmiş okuma deneyimi sağlamak için ClearType özelliklerini kullanır. ClearType, dizüstü ekranları, Pocket PC ekranları ve düz panel izleyicileri gibi mevcut LCD 'lerde (sıvı kristal ekranlar) metinlerin okunabilirliğini artıran Microsoft tarafından geliştirilen bir yazılım teknolojisidir. ClearType, bir LCD ekranın her pikseline tek dikey renk Stripe öğelerine erişerek işe yarar. ClearType hakkında daha fazla bilgi için bkz. [ClearType Genel Bakış](cleartype-overview.md).  
   
  ClearType ile işlenen metin, çeşitli görüntü cihazlarında görüntülendiklerinde önemli ölçüde farklı görünebilir. Örneğin, küçük sayıda izleyici renk Stripe öğelerini, daha sık görülen kırmızı, yeşil, mavi (RGB) sıra yerine mavi, yeşil, kırmızı düzende uygular.  
   
@@ -26,8 +26,8 @@ Bu konu, WPF uygulamaları tarafından kullanılan Microsoft ClearType kayıt de
  Bu durumların her birinde, her biri için en iyi okuma deneyimini sağlamak üzere ClearType özelliklerinin değiştirilmesi gerekir.  
   
 <a name="registry_settings"></a>   
-## <a name="registry-settings"></a>Kayıt defteri ayarları  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType özelliklerini denetlemek için dört kayıt defteri ayarı belirtir:  
+## <a name="registry-settings"></a>Kayıt Defteri Ayarları  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearType özelliklerini denetlemek için dört kayıt defteri ayarı belirtir:  
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
@@ -38,10 +38,10 @@ Bu konu, WPF uygulamaları tarafından kullanılan Microsoft ClearType kayıt de
   
  Bu ayarlara, tanımlanan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType kayıt defteri ayarlarına nasıl başvurulacağını bilen bir dış yapılandırma yardımcı programı tarafından erişilebilir. Bu ayarlar, Windows kayıt defteri Düzenleyicisi kullanılarak değerlere doğrudan erişerek da oluşturulabilir veya değiştirilebilir.  
   
- ClearType kayıt defteri ayarları ayarlanmamışsa (varsayılan durum) [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , uygulama, yazı tipi yumuşatma ayarları için Windows sistem parametreleri bilgilerini sorgular. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType kayıt defteri ayarları ayarlanmamışsa (varsayılan durumdur), [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama, yazı tipi yumuşatma ayarları için Windows sistem parametreleri bilgilerini sorgular.  
   
 > [!NOTE]
-> Görüntüleme cihaz adlarını numaralandırma hakkında bilgi için bkz `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] . işlevi.  
+> Görüntüleme cihaz adlarını numaralandırma hakkında bilgi için bkz. `SystemParametersInfo`Win32 işlevi.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>ClearType düzeyi  
@@ -59,7 +59,7 @@ Bu konu, WPF uygulamaları tarafından kullanılan Microsoft ClearType kayıt de
  ![Kayıt defteri düzenleyicisinde ClearType ayarları.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]uygulamalar, ClearType ile ve olmayan iki moddan birinde metin işler. Metin ClearType olmadan işlendiğinde gri ölçekli işleme olarak adlandırılır.  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar, ClearType ile ve olmayan iki moddan birinde metin işler. Metin ClearType olmadan işlendiğinde gri ölçekli işleme olarak adlandırılır.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Gama düzeyi  
@@ -89,7 +89,7 @@ Bu konu, WPF uygulamaları tarafından kullanılan Microsoft ClearType kayıt de
  Piksel yapısı, 0 ile 2 arasında değişen bir tamsayı değerine karşılık gelir. Varsayılan düzey, düz bir piksel yapısını temsil eden 0 ' dır.  
   
 > [!NOTE]
-> Görüntüleme cihaz adlarını numaralandırma hakkında bilgi için bkz `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] . işlevi.  
+> Görüntüleme cihaz adlarını numaralandırma hakkında bilgi için bkz. `EnumDisplayDevices`Win32 işlevi.  
   
 ### <a name="registry-setting"></a>Kayıt defteri ayarı  
  Piksel yapısına yönelik kayıt defteri ayarı konumu, belirli bir görüntü aygıtı adına karşılık gelen bir yerel makine ayarıdır:  

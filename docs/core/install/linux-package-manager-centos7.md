@@ -4,12 +4,12 @@ description: .NET Core SDK ve çalışma zamanını CentOS 7 ' de yüklemek içi
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: cb65811d5cae5c747c2660b4b10486f3162b9f33
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a7b4a76d780714850fe0792f51f1fa1282f6525d
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74836943"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740737"
 ---
 # <a name="centos-7-package-manager---install-net-core"></a>CentOS 7 Paket Yöneticisi-.NET Core 'ı yükler
 
@@ -21,11 +21,11 @@ Bu makalede, CentOS 7 ' ye .NET Core yüklemek için bir paket yöneticisi 'nin 
 
 .NET yüklemeden önce şunları yapmanız gerekir:
 
-- Microsoft anahtarını kaydetme
-- Ürün deposunu kaydetme
-- Gerekli bağımlılıkları yükler
+- Microsoft anahtarını kaydettirin.
+- Ürün deposunu kaydedin.
+- Gerekli bağımlılıkları yükler.
 
-Bu işlemin makine başına bir kez yapılması yeterlidir.
+Bu işlemin makine başına tek bir kez yapılması yeterlidir.
 
 Bir Terminal açın ve aşağıdaki komutu çalıştırın.
 

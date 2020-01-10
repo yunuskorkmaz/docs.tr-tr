@@ -1,19 +1,17 @@
 ---
-title: Mac için Visual Studio kullanarak macOS üzerinde .NET Core kullanmaya başlama
+title: Mac için Visual Studio kullanarak .NET Core kullanmaya başlama
 description: Bu konu, Mac için Visual Studio ve .NET Core kullanarak basit bir konsol uygulaması oluşturma konusunda size rehberlik eder.
-author: mairaw
-ms.date: 07/11/2019
-ms.custom: seodec18
-ms.openlocfilehash: feaed88e902080c5c3b07578b78f8437489a690c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/19/2019
+ms.openlocfilehash: 4cd7e311411bce62698e291e763227496877ea39
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428588"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740484"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macOS üzerinde .NET Core kullanmaya başlama
 
-Mac için Visual Studio .NET Core uygulamaları geliştirmek için tam özellikli bir tümleşik geliştirme ortamı (IDE) sağlar. Bu konu, Mac için Visual Studio ve .NET Core kullanarak basit bir konsol uygulaması oluşturma konusunda size rehberlik eder.
+Mac için Visual Studio .NET Core uygulamaları geliştirmek için tam özellikli bir tümleşik geliştirme ortamı (IDE) sağlar. Bu makalede, Mac için Visual Studio ve .NET Core kullanarak basit bir konsol uygulaması oluşturma işlemi adım adım açıklanmaktadır.
 
 > [!NOTE]
 > Geri bildiriminiz çok değerli. Mac için Visual Studio üzerinde geliştirme ekibine geri bildirimde bulunmak için kullanabileceğiniz iki yol vardır:
@@ -21,13 +19,13 @@ Mac için Visual Studio .NET Core uygulamaları geliştirmek için tam özellikl
 > * Mac için Visual Studio, menüden bir **sorun bildirmek** veya hoş geldiniz ekranından bir **sorun** bildirmek için > **Yardım** ' ı seçin. Geri bildiriminizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/spaces/8/index.html) portalında izleyebilirsiniz.
 > * Bir öneride bulunmak için, **yardım** > menüden **bir öneri sağlayın** veya hoş geldiniz ekranından bir öneri **sağlayın** ve bu işlem sizi [Mac için Visual Studio Geliştirici topluluğu Web sayfasına](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)götürür.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
-Bkz. [.NET Core Dependencies ve Requirements](../install/dependencies.md?tabs=netcore30&pivots=os-macos) konusuna bakın.
+Bkz. [.NET Core Dependencies ve gereksinimler](../install/dependencies.md?pivots=os-macos) makalesi.
 
 .NET Core 'un desteklenen bir sürümünü kullandığınızdan emin olmak için [.NET Core destek](/visualstudio/mac/net-core-support) makalesine bakın.
 
-## <a name="get-started"></a>başlarken
+## <a name="get-started"></a>Kullanmaya başlayın
 
 Önkoşulları ve Mac için Visual Studio zaten yüklediyseniz, bu bölümü atlayın ve [proje oluşturmaya](#creating-a-project)devam edin. Önkoşulları ve Mac için Visual Studio yüklemek için şu adımları izleyin:
 
@@ -45,7 +43,7 @@ Bkz. [.NET Core Dependencies ve Requirements](../install/dependencies.md?tabs=ne
 
 1. .NET Core 'un birden fazla sürümü yüklüyse, projeniz için hedef çerçeveyi seçin.
 
-1. **Proje adı**Için "HelloWorld" yazın. **Oluştur**' u seçin.
+1. **Proje adı**Için "HelloWorld" yazın. Seçin **oluşturma**.
 
    ![Yeni konsol uygulamanızı yapılandırma iletişim kutusu](./media/using-on-mac-vs/visual-studio-mac-new-options.png)
 
@@ -53,7 +51,7 @@ Bkz. [.NET Core Dependencies ve Requirements](../install/dependencies.md?tabs=ne
 
    ![Program.cs dosyasının açık olduğu ana pencere](./media/using-on-mac-vs/visual-studio-mac-editor.png)
 
-## <a name="run-the-application"></a>Uygulamayı çalıştırma
+## <a name="run-the-application"></a>Uygulamayı çalıştırın
 
 Uygulamayı hata ayıklama modunda ⌘ ↵ (komut + ENTER) kullanarak veya ⌥ ⌘ ↵ (Option + Command + ENTER) kullanarak yayın modunda çalıştırın.
 

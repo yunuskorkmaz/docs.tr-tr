@@ -1,15 +1,13 @@
 ---
 title: Son değişiklikler ve .NET kitaplıkları
 description: .NET kitaplıkları oluştururken önemli değişikliklere gidilme için en iyi yöntem önerileri.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6881b8737d9dd3fa7fa71f099fa1dc97b747033d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 8536662ae1cd9733efbcc0c6526bd69d34a13177
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104653"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740989"
 ---
 # <a name="breaking-changes"></a>Yeni değişiklikler
 
@@ -56,27 +54,27 @@ Davranış değişiklikleri en yaygın Son değişiklik türüdür: neredeyse he
 
 Özellikleri eklemek ve hatalı davranışları iyileştirmek iyi bir şeydir, ancak bunu yapmadan, mevcut kullanıcıların yükseltilmesi çok zor hale gelir. Geliştiricilerin davranış önemli değişiklikleri ile uğraşmasına yardımcı olmak için bir yaklaşım, ayarların arkasındaki ayarları gizleyeyöneliktir. Ayarlar, geliştiricilerin kitaplığın en son sürümüne güncelleştirilmesini sağlar, ancak aynı zamanda değişiklikleri ortadan kaldırma veya devre dışı bırakmak üzere tercih ediyor. Bu strateji, geliştiricilerin zaman içinde kendi kod uyarlanmasına izin verirken güncel kalmasını sağlar.
 
-Örneğin, ASP.NET Core MVC, üzerinde `MvcOptions`etkin ve devre dışı bırakılan özellikleri değiştiren bir [Uyumluluk sürümü](/aspnet/core/mvc/compatibility-version) kavramıdır.
+Örneğin, ASP.NET Core MVC, `MvcOptions`etkinleştirilmiş ve devre dışı bırakılan özellikleri değiştiren bir [Uyumluluk sürümü](/aspnet/core/mvc/compatibility-version) kavramıdır.
 
 **✔️** , mevcut kullanıcıları etkiliyorsa ve geliştiricilerin özelliği bir ayarla birlikte kabul etmelerine izin vermek için yeni özellikleri varsayılan olarak devre dışı bırakmayı düşünün.
 
 ### <a name="binary-breaking-change"></a>İkili Son değişiklik
 
-Kitaplığınızın genel API 'sini değiştirdiğiniz zaman ikili bir değişiklik gerçekleşir, bu nedenle kitaplığınızın eski sürümlerine göre derlenen derlemeler artık API 'yi çağıramayacak. Örneğin, yeni bir parametre ekleyerek bir yöntemin imzasını değiştirmek, kitaplığın daha eski bir sürümüne karşı derlenen derlemelerin bir <xref:System.MissingMethodException>oluşturmasına neden olur.
+Kitaplığınızın genel API 'sini değiştirdiğiniz zaman ikili bir değişiklik gerçekleşir, bu nedenle kitaplığınızın eski sürümlerine göre derlenen derlemeler artık API 'yi çağıramayacak. Örneğin, yeni bir parametre ekleyerek bir yöntemin imzasını değiştirmek, kitaplığın daha eski sürümüne karşı derlenen derlemelerin bir <xref:System.MissingMethodException>oluşturması için neden olur.
 
-İkili bir son değişiklik, **tüm bir derlemeyi**de kesebilir. Bütünleştirilmiş kodun ile `AssemblyName` yeniden adlandırılması derlemenin kimliğini değiştirecek, bu da derlemenin tanımlayıcı adlandırma anahtarını ekler, kaldırır veya değiştirir. Bir derlemenin kimliğinin değişikliği, kendisini kullanan tüm derlenmiş kodları keser.
+İkili bir son değişiklik, **tüm bir derlemeyi**de kesebilir. Bir derlemeyi `AssemblyName` olarak yeniden adlandırmak derlemenin kimliğini değiştirecek, bu da derlemenin tanımlayıcı adlandırma anahtarını ekler, kaldırır veya değiştirir. Bir derlemenin kimliğinin değişikliği, kendisini kullanan tüm derlenmiş kodları keser.
 
-**❌** Bir derleme adını değiştirmez.
+**❌** bir derleme adını değiştirmez.
 
-**❌** Tanımlayıcı adlandırma anahtarını ekleme, kaldırma veya değiştirme.
+**❌** tanımlayıcı adlandırma anahtarını ekleme, kaldırma veya değiştirme.
 
 ✔️, arabirimler yerine soyut temel sınıflar kullanmayı **göz önünde bulundurun** .
 
 > Bir arabirime herhangi bir şey eklemek, onu uygulayan varolan türlerin başarısız olmasına neden olur. Soyut temel sınıf, varsayılan bir sanal uygulama eklemenize olanak tanır.
 
-✔️ kaldırmak istediğiniz türleri <xref:System.ObsoleteAttribute> ve üyeleri yerleştirmeyi **göz önünde bulundurun** . Öznitelik, artık kullanılmayan API 'yi kullanmayacak şekilde kodu güncelleştirme yönergelerine sahip olmalıdır.
+✔️ kaldırmak istediğiniz türlere ve üyelere <xref:System.ObsoleteAttribute> yerleştirmeyi **göz önünde bulundurun** . Öznitelik, artık kullanılmayan API 'yi kullanmayacak şekilde kodu güncelleştirme yönergelerine sahip olmalıdır.
 
-> İle <xref:System.ObsoleteAttribute> türleri ve yöntemleri çağıran kod, özniteliğe sağlanan iletiyle bir derleme uyarısı oluşturur. Uyarılar, kullanımdan kalkmış API 'nin kaldırılması için eski API yüzey süresini kullanan kişilere, çoğu zaman artık bunu kullanmayabilmesini sağlar.
+> <xref:System.ObsoleteAttribute> türleri ve yöntemleri çağıran kod, özniteliğe sağlanan iletiyle birlikte bir yapı uyarısı oluşturur. Uyarılar, kullanımdan kalkmış API 'nin kaldırılması için eski API yüzey süresini kullanan kişilere, çoğu zaman artık bunu kullanmayabilmesini sağlar.
 
 ```csharp
 public class Document
@@ -94,7 +92,7 @@ public class Document
 }
 ```
 
-✔️, <xref:System.ObsoleteAttribute> sınırsız ve orta düzeyde kitaplıklarda türleri ve yöntemleri süresiz olarak tutmayı **göz önünde bulundurun** .
+✔️, düşük ve orta düzeyde kitaplıklarda, <xref:System.ObsoleteAttribute> ile türleri ve yöntemleri süresiz olarak tutmayı **göz önünde bulundurun** .
 
 > API 'Lerin kaldırılması ikili bir son değişiklik olur. Eski türlerin ve yöntemlerin saklanması düşük maliyetlidir ve kitaplığınıza çok sayıda teknik borç eklemez. Türlerin ve yöntemlerin kaldırılmaması, yukarıda belirtilen en kötü durum senaryolarından kaçınmaya yardımcı olabilir.
 
@@ -102,7 +100,7 @@ public class Document
 
 - [Geliştiriciler için C# sürüm ve güncelleştirme değerlendirmeleri](../../csharp/whats-new/version-update-considerations.md)
 - [.NET 'teki API-kırılmaya yönelik kesin bir kılavuz](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-- [CoreFX değişiklik kurallarını ayırma](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
+- [.NET Son değişiklik kuralları](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[Önceki](versioning.md)

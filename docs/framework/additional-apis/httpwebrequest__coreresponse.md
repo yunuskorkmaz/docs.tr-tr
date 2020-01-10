@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest._CoreResponse Field
+title: HttpWebRequest. _CoreResponse alanı
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 3627c9bf0d72ccec3a0d6d9c7c89b62f83dcd4b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d16936f6984e73a886f5f48e05b53501ced63c1b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706071"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740453"
 ---
-# <a name="httpwebrequestcoreresponse-field"></a>HttpWebRequest. \_CoreResponse alan
+# <a name="httpwebrequest_coreresponse-field"></a>HttpWebRequest.\_CoreResponse alanı
 
-`HttpWebRequest._CoreResponse` bir nesnenin (ya da bir [CoreResponseData](coreresponsedata.md) veya <xref:System.Exception>) HTTP yanıt ayrıştırma sonucunu içeren.
+`HttpWebRequest._CoreResponse`, HTTP yanıtı ayrıştırma sonucunu içeren bir nesnedir (bir [CoreResponseData](coreresponsedata.md) veya <xref:System.Exception>).
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -28,14 +28,14 @@ private object _CoreResponse
 ```
 
 > [!WARNING]
-> Bu API, kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır. Bunun yerine, kullanmanız bir <xref:System.Diagnostics.DiagnosticSource> ağ kod yeteneklerinizi. Bkz: [DiagnosticSource Kullanıcı Kılavuzu](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Bu API 'nin doğrudan kodunuzda kullanılması amaçlıyordu. Bunun yerine, ağ kodunu bağlamak için bir <xref:System.Diagnostics.DiagnosticSource> kullanmanız gerekir. Bkz. [Diagnosticsource Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu sınıfın kullanımını desteklemez.
+> Microsoft, bu sınıfın herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Net>
+**Ad alanı:** <xref:System.Net>
 
-**Derleme:** Sistemde (System.dll)
+**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
 
-**.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

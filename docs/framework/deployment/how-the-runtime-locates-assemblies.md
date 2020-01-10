@@ -9,14 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 01cef9646ca9c4f49ab8376364648f66b9651e4a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c462a6df2d5221907a6b574c33bb8fa1c52abac5
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052122"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741343"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Çalışma Zamanının Derlemelerin Konumunu Bulması
 
@@ -29,13 +27,13 @@ Ortak dil çalışma zamanı, bir derlemeyi bulmaya ve derleme başvurusunu çö
 
 ## <a name="initiating-the-bind"></a>Bağlama başlatılıyor
 
-Bir derlemeyi bulma ve bağlama işlemi, çalışma zamanı başka bir derlemeye yönelik bir başvuruyu çözümlemeye çalıştığında başlar. Bu başvuru statik veya dinamik olabilir. Derleyici, derleme zamanında derleme bildiriminin meta verilerinde statik başvuruları kaydeder. Dinamik başvurular, gibi çeşitli yöntemlerin <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>çağrılmasının sonucu olarak anında oluşturulur.
+Bir derlemeyi bulma ve bağlama işlemi, çalışma zamanı başka bir derlemeye yönelik bir başvuruyu çözümlemeye çalıştığında başlar. Bu başvuru statik veya dinamik olabilir. Derleyici, derleme zamanında derleme bildiriminin meta verilerinde statik başvuruları kaydeder. Dinamik başvurular, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>gibi çeşitli yöntemlerin çağrılmasının sonucu olarak anında oluşturulur.
 
 Bir derlemeye başvurmak için tercih edilen yöntem, derleme adı, sürüm, kültür ve ortak anahtar belirteci (varsa) dahil olmak üzere tam bir başvuru kullanmaktır. Çalışma zamanı, bu bölümde daha sonra açıklanan adımları izleyerek derlemeyi bulmak için bu bilgileri kullanır. Çalışma zamanı, başvurunun statik veya dinamik bir derleme için olup olmamasına bakılmaksızın aynı çözüm işlemini kullanır.
 
-Ayrıca, derleme hakkında yalnızca derleme adını belirtmek gibi kısmi bilgilerle birlikte çağırma yöntemi sağlayarak derlemeye dinamik bir başvuru da yapabilirsiniz. Bu durumda, derleme için yalnızca uygulama dizini aranır ve başka bir denetim gerçekleşmez. <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> Ya da<xref:System.AppDomain.Load%2A?displayProperty=nameWithType>gibi derlemeleri yüklemek için çeşitli yöntemlerden birini kullanarak kısmi bir başvuru yaparsınız.
+Ayrıca, derleme hakkında yalnızca derleme adını belirtmek gibi kısmi bilgilerle birlikte çağırma yöntemi sağlayarak derlemeye dinamik bir başvuru da yapabilirsiniz. Bu durumda, derleme için yalnızca uygulama dizini aranır ve başka bir denetim gerçekleşmez. <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> veya <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>gibi derlemeleri yüklemek için çeşitli yöntemlerden birini kullanarak kısmi bir başvuru yaparsınız.
 
-Son olarak, gibi bir yöntemi <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> kullanarak dinamik bir başvuru yapabilir ve yalnızca kısmi bilgiler sağlayabilir; daha sonra başvuruyu uygulama yapılandırma dosyasında [ \<qualifyAssembly >](../configure-apps/file-schema/runtime/qualifyassembly-element.md) öğesini kullanarak niteleyebilirsiniz. Bu öğe, kodunuzun yerine uygulama yapılandırma dosyanızdaki tam başvuru bilgilerini (ad, sürüm, kültür ve varsa ortak anahtar belirteci) sağlamanıza olanak tanır. Bu tekniği, uygulama dizini dışındaki bir derlemeye yönelik başvuruyu tamamen nitelemek istiyorsanız veya genel derleme önbelleğindeki bir derlemeye başvurmak istiyorsanız, ancak tam başvuruyu ' de belirtmenin rahatlığını istiyordunuz. kodunuzda değil yapılandırma dosyası.
+Son olarak, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> gibi bir yöntemi kullanarak dinamik bir başvuru yapabilir ve yalnızca kısmi bilgiler sağlayabilirsiniz; daha sonra başvuruyu uygulama yapılandırma dosyasında [\<qualifyAssembly >](../configure-apps/file-schema/runtime/qualifyassembly-element.md) öğesini kullanarak niteleyebilirsiniz. Bu öğe, kodunuzun yerine uygulama yapılandırma dosyanızdaki tam başvuru bilgilerini (ad, sürüm, kültür ve varsa ortak anahtar belirteci) sağlamanıza olanak tanır. Bu tekniği, uygulama dizini dışındaki bir derlemeye yönelik başvuruyu tamamen nitelemek istiyorsanız veya genel derleme önbelleğindeki bir derlemeye başvurmak istiyorsanız, ancak tam başvuruyu ' de belirtmenin rahatlığını istiyordunuz. kodunuzda değil yapılandırma dosyası.
 
 > [!NOTE]
 > Bu tür kısmi başvuru, çeşitli uygulamalar arasında paylaşılan Derlemelerle kullanılmamalıdır. Yapılandırma ayarları, derleme başına değil, uygulama başına uygulandığından, bu tür kısmi başvuru kullanan paylaşılan bir derleme, paylaşılan derlemeyi kullanan her uygulamanın yapılandırma dosyasında uygun bilgilere sahip olmasını gerektirir.
@@ -64,7 +62,7 @@ Son olarak, gibi bir yöntemi <xref:System.Reflection.Assembly.Load*?displayProp
 
 <a name="step1"></a>
 
-## <a name="step-1-examining-the-configuration-files"></a>1\. Adım: Yapılandırma dosyalarını İnceleme
+## <a name="step-1-examining-the-configuration-files"></a>Adım 1: Yapılandırma Dosyalarını İnceleme
 
 Derleme bağlama davranışı, üç XML dosyasına göre farklı düzeylerde yapılandırılabilir:
 
@@ -74,18 +72,18 @@ Derleme bağlama davranışı, üç XML dosyasına göre farklı düzeylerde yap
 
 - Makine yapılandırma dosyası.
 
-Bu dosyalar aynı sözdizimini izler ve bağlama yeniden yönlendirmeleri, kodun konumu ve belirli derlemeler için bağlama modları gibi bilgiler sağlar. Her yapılandırma dosyası, bağlama işlemini yeniden yönlendiren bir [ \<assemblyBinding > öğesi](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) içerebilir. AssemblyBinding [ >\<](../configure-apps/file-schema/runtime/dependentassembly-element.md)öğesinin alt öğeleri dependentAssembly > öğesini içerir. [ \<](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) DependentAssembly > [ \<](../configure-apps/file-schema/runtime/bindingredirect-element.md) [ \<öğesinin alt](../configure-apps/file-schema/runtime/dependentassembly-element.md) öğeleri [ ,AssemblyIdentity>öğesi,bindingRedirect\<](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment)> öğesi ve [CODEBASE > öğesi içerir \< ](../configure-apps/file-schema/runtime/codebase-element.md).
+Bu dosyalar aynı sözdizimini izler ve bağlama yeniden yönlendirmeleri, kodun konumu ve belirli derlemeler için bağlama modları gibi bilgiler sağlar. Her yapılandırma dosyası bağlama işlemini yeniden yönlendiren bir [\<assemblyBinding > öğesi](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) içerebilir. [\<assemblyBinding > öğesinin](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) alt öğeleri [\<dependentAssembly > öğesi](../configure-apps/file-schema/runtime/dependentassembly-element.md)içerir. [\<dependentAssembly > öğesinin](../configure-apps/file-schema/runtime/dependentassembly-element.md) alt öğeleri [\<assemblyIdentity > öğesi](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment), [\<bindingRedirect > öğesi](../configure-apps/file-schema/runtime/bindingredirect-element.md)ve [\<codebase > öğesi](../configure-apps/file-schema/runtime/codebase-element.md)içerir.
 
 > [!NOTE]
 > Yapılandırma bilgilerini üç yapılandırma dosyasında bulabilirsiniz; tüm öğeler tüm yapılandırma dosyalarında geçerli değildir. Örneğin, bağlama modu ve özel yol bilgileri yalnızca uygulama yapılandırma dosyasında bulunabilir. Her dosyada bulunan bilgilerin tüm listesi için bkz. [yapılandırma dosyalarını kullanarak uygulamaları yapılandırma](../configure-apps/index.md).
 
-### <a name="application-configuration-file"></a>Uygulama yapılandırma dosyası
+### <a name="application-configuration-file"></a>Uygulama Yapılandırma Dosyası
 
 İlk olarak, ortak dil çalışma zamanı, çağıran derlemenin bildiriminde depolanan sürüm bilgilerini geçersiz kılan bilgiler için uygulama yapılandırma dosyasını denetler. Uygulama yapılandırma dosyası bir uygulamayla dağıtılabilir, ancak uygulama yürütmesi için gerekli değildir. Genellikle bu dosyanın alınması neredeyse anında yapılır, ancak uygulama tabanının, Internet Explorer Web tabanlı bir senaryoda olduğu gibi uzak bir bilgisayarda olduğu durumlarda yapılandırma dosyası indirilmelidir.
 
-İstemci yürütülebilir dosyaları için, uygulama yapılandırma dosyası uygulamanın yürütülebilir dosyası ile aynı dizinde bulunur ve. config uzantısıyla yürütülebilir dosya ile aynı temel ada sahiptir. Örneğin, C:\Program Files\Myapp\Myapp.exe için yapılandırma dosyası C:\Program Files\Myapp\Myapp.exe.config. ' dir Tarayıcı tabanlı bir senaryoda, HTML dosyası doğrudan yapılandırma dosyasını işaret etmek için  **\<LINK >** öğesini kullanmalıdır.
+İstemci yürütülebilir dosyaları için, uygulama yapılandırma dosyası uygulamanın yürütülebilir dosyası ile aynı dizinde bulunur ve. config uzantısıyla yürütülebilir dosya ile aynı temel ada sahiptir. Örneğin, C:\Program Files\Myapp\Myapp.exe için yapılandırma dosyası C:\Program Files\Myapp\Myapp.exe.config. ' dir Tarayıcı tabanlı bir senaryoda, HTML dosyası **\<link >** öğesini kullanarak yapılandırma dosyasını açıkça işaret etmelidir.
 
-Aşağıdaki kod, uygulama yapılandırma dosyasına basit bir örnek sağlar. Bu örnek, <xref:System.Diagnostics.Debug.Listeners%2A> hata <xref:System.Diagnostics.TextWriterTraceListener> ayıklama bilgilerinin bir dosyaya kaydedilmesini etkinleştirmek için koleksiyonuna bir ekler.
+Aşağıdaki kod, uygulama yapılandırma dosyasına basit bir örnek sağlar. Bu örnek, hata ayıklama bilgilerinin bir dosyaya kaydedilmesini etkinleştirmek için <xref:System.Diagnostics.Debug.Listeners%2A> koleksiyonuna bir <xref:System.Diagnostics.TextWriterTraceListener> ekler.
 
 ```xml
 <configuration>
@@ -136,55 +134,55 @@ Yayımcı ilke yapılandırma dosyası, uygulamadan gelen sürüm bilgilerini (y
 Bir yayımcı ilke dosyası, paylaşılan bir bileşen güncelleştirilirken ve paylaşılan bileşenin yeni sürümü bu bileşeni kullanan tüm uygulamalar tarafından çekilmelidir. Uygulama yapılandırma dosyası güvenli modu zorunlu kılarsa, yayımcı ilkesi dosyasındaki ayarlar uygulama yapılandırma dosyasındaki ayarları geçersiz kılar.
 
 #### <a name="safe-mode"></a>Güvenli mod
-Yayımcı ilke dosyaları genellikle bir hizmet paketinin veya program güncelleştirmesinin bir parçası olarak açıkça yüklenir. Yükseltilen paylaşılan bileşenle ilgili herhangi bir sorun varsa, güvenli mod kullanarak yayımcı ilkesi dosyasındaki geçersiz kılmaları yoksayabilirsiniz. Güvenli mod, yalnızca uygulama yapılandırma dosyasında bulunan  **\<publisherPolicy apply = "Yes**&#124;**No"/>** öğesi tarafından belirlenir. Yayımcı ilkesi yapılandırma bilgilerinin bağlama işleminden kaldırılması gerekip gerekmediğini belirtir.
+Yayımcı ilke dosyaları genellikle bir hizmet paketinin veya program güncelleştirmesinin bir parçası olarak açıkça yüklenir. Yükseltilen paylaşılan bileşenle ilgili herhangi bir sorun varsa, güvenli mod kullanarak yayımcı ilkesi dosyasındaki geçersiz kılmaları yoksayabilirsiniz. Güvenli mod **\<publisherPolicy apply = "Yes**&#124;**No"/>** öğesi tarafından belirlenir ve yalnızca uygulama yapılandırma dosyasında bulunur. Yayımcı ilkesi yapılandırma bilgilerinin bağlama işleminden kaldırılması gerekip gerekmediğini belirtir.
 
-Güvenli mod tüm uygulama veya seçili derlemeler için ayarlanabilir. Diğer bir deyişle, uygulamayı oluşturan tüm derlemeler için ilkeyi kapatabilir veya bazı derlemeler için açabilirsiniz, ancak diğerlerini kullanamazsınız. Yayımcı ilkesini bir uygulamayı oluşturan derlemelere seçmeli olarak uygulamak için,  **\<publisherPolicy Ayarla/> uygulayın\=** ve \<dependentAssembly kullanarak hangi derlemeleri etkilemelerini istediğinizi belirtin> öğesi. Uygulamayı oluşturan tüm derlemelere yayımcı ilkesi uygulamak için, publisherPolicy ' ı bağımlı derleme öğeleri olmadan  **\<No/> Uygula\=** ' yı ayarlayın. Yapılandırma hakkında daha fazla bilgi için bkz. [yapılandırma dosyalarını kullanarak uygulamaları yapılandırma](../configure-apps/index.md).
+Güvenli mod tüm uygulama veya seçili derlemeler için ayarlanabilir. Diğer bir deyişle, uygulamayı oluşturan tüm derlemeler için ilkeyi kapatabilir veya bazı derlemeler için açabilirsiniz, ancak diğerlerini kullanamazsınız. Yayımcı ilkesini, bir uygulamayı oluşturan derlemelere seçmeli olarak uygulamak için, **\<publisherPolicy öğesini ayarla\=Hayır/> uygulayın** ve \<**dependentAssembly**> öğesini kullanarak hangi derlemeleri etkilemelerini istediğinizi belirtin. Uygulamayı oluşturan tüm derlemelere yayımcı ilkesi uygulamak için, **\<publisherPolicy ayarla '\=hiçbir** bağımlı derleme öğesi olmadan/> uygulayın. Yapılandırma hakkında daha fazla bilgi için bkz. [yapılandırma dosyalarını kullanarak uygulamaları yapılandırma](../configure-apps/index.md).
 
 ### <a name="machine-configuration-file"></a>Makine yapılandırma dosyası
 Üçüncü olarak, çalışma zamanı makine yapılandırma dosyasını inceler. Machine. config adlı bu dosya, çalışma zamanının yüklendiği kök dizinin yapılandırma alt dizinindeki yerel bilgisayarda bulunur. Bu dosya, yöneticiler tarafından bu bilgisayarda yerel olan derleme bağlama kısıtlamalarını belirtmek için kullanılabilir. Makine yapılandırma dosyasındaki ayarlar diğer tüm yapılandırma ayarlarından önceliklidir; Ancak, bu, tüm yapılandırma ayarlarının bu dosyaya konulacağı anlamına gelmez. Yönetici ilke dosyası tarafından belirlenen sürüm son, geçersiz kılınamaz. Machine. config dosyasında belirtilen geçersiz kılmalar tüm uygulamaları etkiler. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyalarını kullanarak uygulamaları yapılandırma](../configure-apps/index.md).
 
 <a name="step2"></a> 
 
-## <a name="step-2-checking-for-previously-referenced-assemblies"></a>2\. Adım: Önceden başvurulan derlemeler denetleniyor
+## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Adım 2: Önceden Başvurulan Derlemeleri Denetleme
 
 İstenen derleme önceki çağrılar için de istenirse, ortak dil çalışma zamanı zaten yüklü olan derlemeyi kullanır. Bu, bir uygulamayı oluşturan derlemeleri adlandırırken bu sonuçları içerebilir. Derlemeleri adlandırma hakkında daha fazla bilgi için bkz. [derleme adları](../../standard/assembly/names.md).
 
 Derleme için önceki bir istek başarısız olduysa, derleme için sonraki istekler derlemeyi yükleme girişiminde bulunmadan hemen başarısız oldu. .NET Framework sürüm 2,0 ' den başlayarak, derleme bağlama sorunları önbelleğe alınır ve önbelleğe alınan bilgiler derlemeyi yüklemeyi denemesinin denenip denenmeyeceğini tespit etmek için kullanılır.
 
 > [!NOTE]
-> Bağlantı hatalarının önbelleğe alınmamasından 1,0 ve 1,1 .NET Framework sürümlerinin davranışına dönmek için, yapılandırma dosyanıza [ \<disablecachingbindinghatalarıyla > öğesini](../configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) ekleyin.
+> Bağlantı hatalarının önbelleğe alınmamasından 1,0 ve 1,1 .NET Framework sürümlerinin davranışına dönmek için, yapılandırma dosyanıza [\<Disablecachingbindinghatalarıyla > öğesini](../configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) ekleyin.
 
 <a name="step3"></a>
 
-## <a name="step-3-checking-the-global-assembly-cache"></a>3\. Adım: Genel bütünleştirilmiş kod önbelleği denetleniyor
+## <a name="step-3-checking-the-global-assembly-cache"></a>Adım 3: Genel Derleme Önbelleğini Denetleme
 
 Tanımlayıcı adlı derlemeler için bağlama işlemi, genel derleme önbelleğine bakarak devam eder. Genel bütünleştirilmiş kod önbelleği, bir bilgisayardaki çeşitli uygulamalar tarafından kullanılabilecek derlemeleri depolar. Genel derleme önbelleğindeki tüm derlemeler tanımlayıcı adlara sahip olmalıdır.
 
 <a name="step4"></a>
 
-## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>4\. Adım: Kod tabanları veya yoklama aracılığıyla derlemeyi bulma
+## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>Adım 4: Kod Temelleri veya Algılama Aracılığıyla Derlemenin Konumunu Bulma
 
 Doğru derleme sürümü, çağıran derlemenin başvurusu ve yapılandırma dosyalarındaki bilgiler kullanılarak belirlendikten sonra ve genel derleme önbelleğini (yalnızca güçlü adlandırılmış derlemeler için) iade ettikten sonra, ortak dil çalışma zamanı derlemeyi bulmayı dener. Bir derlemeyi bulma işlemi aşağıdaki adımları içerir:
 
-1. Uygulama yapılandırma dosyasında bir [ \<codebase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi bulunursa, çalışma zamanı belirtilen konumu denetler. Bir eşleşme bulunursa, bu derleme kullanılır ve hiçbir yoklama gerçekleşmez. Derleme orada bulunmazsa bağlama isteği başarısız olur.
+1. Uygulama yapılandırma dosyasında bir [\<codeBase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi bulunursa, çalışma zamanı belirtilen konumu denetler. Bir eşleşme bulunursa, bu derleme kullanılır ve hiçbir yoklama gerçekleşmez. Derleme orada bulunmazsa bağlama isteği başarısız olur.
 
 2. Çalışma zamanı daha sonra bu bölümün ilerleyen kısımlarında belirtilen kuralları kullanarak başvurulan derlemeye yönelik yoklamalar.
 
 > [!NOTE]
-> Bir dizinde derlemenin birden çok sürümüne sahipseniz ve bu derlemenin belirli bir sürümüne başvurmak istiyorsanız, `privatePath` [ \<](../configure-apps/file-schema/runtime/codebase-element.md) [ \<yoklama özniteliği yerine codebase > öğesini kullanmanız gerekir >](../configure-apps/file-schema/runtime/probing-element.md) öğesi. Yoklama > öğesini kullanıyorsanız [ \<](../configure-apps/file-schema/runtime/probing-element.md) , çalışma zamanı, belirtilen basit derleme adıyla eşleşen bir derlemeyi ilk kez bulduğunda, doğru bir eşleşme olup olmadığına göre yoklama işlemini durduruyor. Doğru bir eşleşmedir, bu derleme kullanılır. Doğru eşleşme değilse, araştırma durduruluyor ve bağlama başarısız olur.
+> Bir dizinde derlemenin birden çok sürümüne sahipseniz ve bu derlemenin belirli bir sürümüne başvurmak istiyorsanız, [\<yoklama >](../configure-apps/file-schema/runtime/probing-element.md) öğesinin `privatePath` özniteliği yerine [\<codebase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesini kullanmanız gerekir. [\<araştırma >](../configure-apps/file-schema/runtime/probing-element.md) öğesi kullanıyorsanız, çalışma zamanı, belirtilen basit derleme adıyla eşleşen bir derlemeyi ilk kez bulduğunda, doğru bir eşleşme olup olmadığına göre yoklama işlemini durduruyor. Doğru bir eşleşmedir, bu derleme kullanılır. Doğru eşleşme değilse, araştırma durduruluyor ve bağlama başarısız olur.
 
 ### <a name="locating-the-assembly-through-codebases"></a>Kod tabanları aracılığıyla derlemeyi bulma
 
-Kod temeli bilgileri bir yapılandırma dosyasında bir [ \<codebase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi kullanılarak temin edilebilir. Bu kod temeli, başvurulan derleme için çalışma zamanı araştırmayı denemeden önce her zaman denetlenir. Son sürüm yeniden yönlendirmeyi içeren bir yayımcı ilke dosyası aynı zamanda bir [ \<codebase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi içeriyorsa, bu [ \<codebase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi kullanılan bir öğedir. Örneğin, uygulama yapılandırma dosyanız bir [ \<codebase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi belirtiyorsa ve uygulama bilgilerini geçersiz kılan bir yayımcı ilke dosyası de bir [ \<codebase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi belirtiyorsa, Yayımcı ilkesi dosyasındaki [kod temeli > öğesi kullanılıyor. \<](../configure-apps/file-schema/runtime/codebase-element.md)
+Kod temeli bilgileri bir yapılandırma dosyasında [\<codebase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi kullanılarak belirtilebilir. Bu kod temeli, başvurulan derleme için çalışma zamanı araştırmayı denemeden önce her zaman denetlenir. Son sürüm yeniden yönlendirmeyi içeren bir yayımcı ilke dosyası aynı zamanda bir [\<codebase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi içeriyorsa, bu [\<codebase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi kullanılan bir öğedir. Örneğin, uygulama yapılandırma dosyanız bir [\<codebase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi belirtiyorsa ve uygulama bilgilerini geçersiz kılan bir yayımcı ilke dosyası aynı zamanda bir [\<codebase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi belirtiyorsa, yayımcı ilkesi dosyasındaki [\<codebase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi kullanılır.
 
-CodeBase > öğesi tarafından [ \<](../configure-apps/file-schema/runtime/codebase-element.md) belirtilen konumda eşleşme bulunamazsa, bağlama isteği başarısız olur ve başka bir adım alınmaz. Çalışma zamanı, bir derlemenin çağıran derlemenin ölçütleriyle eşleşip eşleşmediğini belirlerse, bu derlemeyi kullanır. [ Verilen\<codebase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi tarafından belirtilen dosya yüklendiğinde, çalışma zamanı, ad, sürüm, kültür ve ortak anahtarın çağıran derlemenin başvurusuyla eşleştiğinden emin olmak için kontrol eder.
+[\<codeBase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi tarafından belirtilen konumda eşleşme bulunamazsa, bağlama isteği başarısız olur ve başka bir adım alınmaz. Çalışma zamanı, bir derlemenin çağıran derlemenin ölçütleriyle eşleşip eşleşmediğini belirlerse, bu derlemeyi kullanır. Verilen [\<codeBase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi tarafından belirtilen dosya yüklendiğinde, çalışma zamanı, ad, sürüm, kültür ve ortak anahtarın çağıran derlemenin başvurusuyla eşleştiğinden emin olmak için kontrol eder.
 
 > [!NOTE]
-> Uygulamanın kök dizini dışındaki Başvurulmuş derlemeler tanımlayıcı adlara sahip olmalıdır ve genel derleme önbelleğinde yüklü olmalıdır ya da [ \<kod temeli >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi kullanılarak belirtilmelidir.
+> Uygulamanın kök dizini dışındaki Başvurulmuş derlemeler, tanımlayıcı adlara sahip olmalıdır ve genel derleme önbelleğinde yüklü olmalıdır ya da [\<codeBase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi kullanılarak belirtilmelidir.
 
 ### <a name="locating-the-assembly-through-probing"></a>Algılama yoluyla derlemeyi bulma
 
-Uygulama yapılandırma dosyasında bir [ kodtemeli>öğesiyoksa,derlemeiçindörtölçütkullanarakçalışmazamanıaraştırmalar:\<](../configure-apps/file-schema/runtime/codebase-element.md)
+Uygulama yapılandırma dosyasında [\<codeBase >](../configure-apps/file-schema/runtime/codebase-element.md) öğesi yoksa, derleme için dört ölçüt kullanılarak çalışma zamanı araştırmalar:
 
 - Uygulamanın yürütüldüğü kök konum olan uygulama tabanı.
 
@@ -192,7 +190,7 @@ Uygulama yapılandırma dosyasında bir [ kodtemeli>öğesiyoksa,derlemeiçindö
 
 - Başvurulan derlemenin adı olan ad.
 
-- Temel konum altındaki alt dizinlerin Kullanıcı tanımlı listesi olan [ \<yoklama >](../configure-apps/file-schema/runtime/probing-element.md) öğesinin özniteliği.`privatePath` Bu konum, uygulama yapılandırma dosyasında ve yönetilen kodda bir uygulama etki alanı için <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> özelliği kullanılarak belirtilebilir. Yönetilen kodda belirtildiğinde, yönetilen kod `privatePath` önce araştırılan uygulama yapılandırma dosyasında belirtilen yol gelir.
+- Kök konumun altındaki alt dizinlerin Kullanıcı tanımlı listesi olan [\<yoklama >](../configure-apps/file-schema/runtime/probing-element.md) öğesinin `privatePath` özniteliği. Bu konum, uygulama yapılandırma dosyasında ve yönetilen kodda bir uygulama etki alanı için <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> özelliği kullanılarak belirtilebilir. Yönetilen kodda belirtildiğinde, yönetilen kod `privatePath` önce, ardından uygulama yapılandırma dosyasında belirtilen yol tarafından araştırılan.
 
 #### <a name="probing-the-application-base-and-culture-directories"></a>Uygulama tabanı ve kültür dizinlerini araştırma
 
@@ -210,7 +208,7 @@ Başvurulan derleme için kültür bilgileri belirtilmişse, yalnızca aşağıd
 
 #### <a name="probing-with-the-privatepath-attribute"></a>PrivatePath özniteliğiyle yoklama
 
-Kültür alt dizinlerine ve başvurulan derleme için adlı alt dizinlere ek olarak, çalışma zamanı, `privatePath` [ \<araştırma >](../configure-apps/file-schema/runtime/probing-element.md) öğesinin özniteliği kullanılarak belirtilen dizinleri de yoklamaktadır. `privatePath` Özniteliği kullanılarak belirtilen dizinler, uygulamanın kök dizininin alt dizinleri olmalıdır. Araştırılan dizinler, başvurulan derleme isteğine kültür bilgilerinin dahil edilip edilmeyeceğini göre farklılık gösterir.
+Kültür alt dizinlerine ve başvurulan derleme için adlı alt dizinlere ek olarak, çalışma zamanı [\<araştırma >](../configure-apps/file-schema/runtime/probing-element.md) öğesinin `privatePath` özniteliği kullanılarak belirtilen dizinleri de yoklamaktadır. `privatePath` özniteliği kullanılarak belirtilen dizinler, uygulamanın kök dizininin alt dizinleri olmalıdır. Araştırılan dizinler, başvurulan derleme isteğine kültür bilgilerinin dahil edilip edilmeyeceğini göre farklılık gösterir.
 
 Çalışma zamanı, belirtilen basit derleme adıyla eşleşen bir derlemeyi ilk kez bulduğunda, doğru eşleşme olup olmadığına bakılmaksızın yoklama durduruyor. Doğru bir eşleşmedir, bu derleme kullanılır. Doğru eşleşme değilse, araştırma durduruluyor ve bağlama başarısız olur.
 
@@ -232,9 +230,9 @@ Aşağıdaki bilgiler veriliyor:
 
 - Başvurulan derleme adı: myAssembly
 
-- Uygulama kök dizini:`http://www.code.microsoft.com`
+- Uygulama kök dizini: `http://www.code.microsoft.com`
 
-- yapılandırma dosyasındaki yoklama > öğesi şunları belirtir: bin [ \<](../configure-apps/file-schema/runtime/probing-element.md)
+- yapılandırma dosyasında [\<yoklama >](../configure-apps/file-schema/runtime/probing-element.md) öğesi şunları belirtir: bin
 
 - Kültür: de
 
@@ -262,9 +260,9 @@ Aşağıdaki örnek, aynı ada sahip birden çok derlemenin nasıl yapılandır�
 
 #### <a name="other-locations-probed"></a>Araştırılan diğer konumlar
 
-Derleme konumu geçerli bağlama bağlamı kullanılarak da belirlenebilir. Bu, <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> genellikle yöntemi kullanıldığında ve com birlikte çalışma senaryolarında oluşur. Bir derleme başka bir derlemeye <xref:System.Reflection.Assembly.LoadFrom%2A> başvurmak için yöntemini kullanıyorsa, çağıran derlemenin konumu, başvurulan derlemenin nerede bulunacağı hakkında bir ipucu olarak değerlendirilir. Bir eşleşme bulunursa, bu derleme yüklenir. Hiçbir eşleşme bulunmazsa, çalışma zamanı arama semantiğine devam eder ve ardından derlemeyi sağlamak için Windows Installer sorgular. Bağlama isteğiyle eşleşen bir derleme sağlanmazsa, bir özel durum oluşturulur. Bu özel durum, <xref:System.TypeLoadException> bir türe başvuruluyorsa yönetilen bir kodda <xref:System.IO.FileNotFoundException> veya yüklenmekte olan bir derleme bulunamazsa.
+Derleme konumu geçerli bağlama bağlamı kullanılarak da belirlenebilir. Bu en genellikle <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> yöntemi ve COM birlikte çalışma senaryolarında kullanılır. Bir derleme başka bir derlemeye başvurmak için <xref:System.Reflection.Assembly.LoadFrom%2A> yöntemini kullanıyorsa, çağıran derlemenin konumu, başvurulan derlemenin nerede bulunacağı hakkında bir ipucu olarak değerlendirilir. Bir eşleşme bulunursa, bu derleme yüklenir. Hiçbir eşleşme bulunmazsa, çalışma zamanı arama semantiğine devam eder ve ardından derlemeyi sağlamak için Windows Installer sorgular. Bağlama isteğiyle eşleşen bir derleme sağlanmazsa, bir özel durum oluşturulur. Bu özel durum, bir türe başvuruluyorsa Yönetilen koddaki <xref:System.TypeLoadException> veya yüklenen bir derlemenin bulunamaması durumunda bir <xref:System.IO.FileNotFoundException>.
 
-Örneğin, Assembly1 başvuruları Assembly2 ve assembly1 ' den `http://www.code.microsoft.com/utils`indirildiyse, bu konum Assembly2. dll ' nin nerede bulunacağı hakkında bir ipucu olarak değerlendirilir. Çalışma zamanı daha sonra ve `http://www.code.microsoft.com/utils/Assembly2.dll` `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`içindeki bütünleştirilmiş koda yönelik yoklamalar. Assembly2 bu konumlardan birinde bulunmazsa, çalışma zamanı Windows Installer sorgular.
+Örneğin, Assembly1 başvuruları Assembly2 ve Assembly1 `http://www.code.microsoft.com/utils`' den indirildiyse, bu konum Assembly2. dll ' nin nerede bulunacağı hakkında bir ipucu olarak değerlendirilir. Çalışma zamanı daha sonra `http://www.code.microsoft.com/utils/Assembly2.dll` ve `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`derleme için araştırmalar. Assembly2 bu konumlardan birinde bulunmazsa, çalışma zamanı Windows Installer sorgular.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

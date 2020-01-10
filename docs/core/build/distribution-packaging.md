@@ -3,13 +3,12 @@ title: .NET Core dağıtımı paketleme
 description: Dağıtım için .NET Core 'u paketleme, adlandırma ve sürüm hakkında bilgi edinin.
 author: tmds
 ms.date: 10/09/2019
-ms.custom: seodec18
-ms.openlocfilehash: 715eb944c3e7626696f64e63b874e2f77595cf46
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cfd6003cfac5c00fc06ebc6195eccd55a0d7afe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393590"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740926"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core dağıtımı paketleme
 
@@ -126,7 +125,7 @@ Sürümün geri kalanı sürüm adına dahil değildir. Bu, işletim sistemi pak
 - `dotnet-runtime-deps-[major].[minor]` _(Isteğe bağlı)_ -kendi içindeki uygulamaları çalıştırmaya yönelik bağımlılıkları yükleme
   - **Sürüm:** \<çalışma zamanı sürümü >
   - **Örnek:** DotNet-Runtime-deps-2,1
-  - **Bağımlılıklar:** _geçmiş özel bağımlılıklar_
+  - **Bağımlılıklar:** _dağıtıma özgü bağımlılıklar_
 
 - `dotnet-runtime-[major].[minor]`-belirli bir çalışma zamanını yükleme
   - **Sürüm:** \<çalışma zamanı sürümü >
