@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 8cb0b017410e991628bad59a6986ba37426c913f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0c8496d4e452da92e0ae994f0b246cc16723c06e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345062"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636581"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic Dil Özellikleri
 Aşağıdaki konularda, nesne odaklı bir programlama dili olan Visual Basic temel bileşenleri tanıtılmaktadır ve ele alınmaktadır. Form ve denetimleri kullanarak uygulamanız için Kullanıcı arabirimini oluşturduktan sonra, uygulamanın davranışını tanımlayan kodu yazmanız gerekir. Tüm modern programlama dillerinde olduğu gibi Visual Basic, yaygın olarak kullanılan birçok programlama yapısını ve dil öğelerini destekler.  
@@ -54,7 +54,7 @@ Aşağıdaki konularda, nesne odaklı bir programlama dili olan Visual Basic tem
  Arabirimlerin ne olduğunu ve bunları uygulamalarınızda nasıl kullanabileceğinizi açıklar.  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] özellikleri ve programlamayı tanıtan konuların bağlantılarını sağlar.  
+ Dil ile tümleşik sorgu (LINQ) özelliklerini ve programlamayı sunan konuların bağlantılarını sağlar.  
   
  [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  Nesneler ve sınıflar, bunların nasıl kullanıldığı, birbirleriyle ilişkilerini ve sergiledikleri özellikler, Yöntemler ve olaylar hakkında genel bir bakış sağlar.  

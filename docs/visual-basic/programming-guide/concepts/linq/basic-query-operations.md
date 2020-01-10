@@ -15,15 +15,15 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: e9a646d60bb22507f4c6bcbcdf9222fd0ed18f02
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b9216dba23f49e4d9fd99687e38f5c13addde8fb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345758"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636880"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Temel Sorgu İşlemleri (Visual Basic)
-Bu konu, Visual Basic [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ifadelerine ve bir sorguda gerçekleştirdiğiniz bazı tipik işlem türlerinden bazılarına kısa bir giriş sağlar. Daha fazla bilgi için aşağıdaki konulara bakın:  
+Bu konu, Visual Basic dil ile tümleşik sorgu (LINQ) ifadelerine ve bir sorguda gerçekleştirdiğiniz bazı tipik işlem türlerinden bazılarına kısa bir giriş sağlar. Daha fazla bilgi için aşağıdaki konulara bakın:  
   
  [Visual Basic LINQ 'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
@@ -32,7 +32,7 @@ Bu konu, Visual Basic [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] if
  [İzlenecek yol: Visual Basic sorguları yazma](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
   
 ## <a name="specifying-the-data-source-from"></a>Veri Kaynağını (Kimden) Belirtme  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgusunda, ilk adım sorgulamak istediğiniz veri kaynağını belirtmektir. Bu nedenle, bir sorgudaki `From` yan tümcesi her zaman ilk olarak gelir. Sorgu işleçleri, kaynağın türüne göre sonucu seçin ve şekillendirin.  
+ Bir LINQ sorgusunda, ilk adım sorgulamak istediğiniz veri kaynağını belirtmektir. Bu nedenle, bir sorgudaki `From` yan tümcesi her zaman ilk olarak gelir. Sorgu işleçleri, kaynağın türüne göre sonucu seçin ve şekillendirin.  
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
@@ -124,7 +124,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Garcia, Kugo  
   
- Garcia, Deköşeli  
+ Gümüş, Meltem  
   
  Tucker, Izleme  
   

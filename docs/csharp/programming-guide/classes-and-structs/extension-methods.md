@@ -1,23 +1,22 @@
 ---
 title: Uzantı yöntemleri- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#], adding to existing types
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 5cce8eb3ad36208c3d376bc8c94da484e9f9181e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1ab831b10b4152e8713cdfba4962822042c15673
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971060"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714953"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Uzantı Metotları (C# Programlama Kılavuzu)
 Uzantı yöntemleri, yeni türetilmiş bir tür oluşturmadan, yeniden derlemeden ya da özgün türü değiştirmeden yöntemler "eklemenizi" sağlar. Uzantı yöntemleri özel bir statik yöntem türüdür, ancak bunlar genişletilmiş türdeki örnek yöntemler ise çağrılır. F# Ve Visual Basic yazılmış C#istemci kodu için, bir uzantı yöntemi çağırma ile gerçekte bir tür içinde tanımlanan Yöntemler arasında görünür bir fark yoktur.  
   
- En yaygın genişletme yöntemleri, varolan <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ve <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> türlerine sorgu işlevselliği ekleyen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] standart sorgu işleçleridir. Standart sorgu işleçlerini kullanmak için, önce bunları bir `using System.Linq` yönergesi ile kapsama taşıyın. Ardından <xref:System.Collections.Generic.IEnumerable%601> uygulayan herhangi bir tür <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>gibi örnek yöntemlere sahip olacak şekilde görünür. <xref:System.Collections.Generic.List%601> veya <xref:System.Array>gibi bir <xref:System.Collections.Generic.IEnumerable%601> türünün örneğinden sonra "Dot" yazdığınızda bu ek yöntemleri IntelliSense bildiri tamamlanmasında görebilirsiniz.  
+ En yaygın genişletme yöntemleri, var olan <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ve <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> türlerine sorgu işlevselliği ekleyen LINQ standart sorgu işleçleridir. Standart sorgu işleçlerini kullanmak için, önce bunları bir `using System.Linq` yönergesi ile kapsama taşıyın. Ardından <xref:System.Collections.Generic.IEnumerable%601> uygulayan herhangi bir tür <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>gibi örnek yöntemlere sahip olacak şekilde görünür. <xref:System.Collections.Generic.List%601> veya <xref:System.Array>gibi bir <xref:System.Collections.Generic.IEnumerable%601> türünün örneğinden sonra "Dot" yazdığınızda bu ek yöntemleri IntelliSense bildiri tamamlanmasında görebilirsiniz.  
   
  Aşağıdaki örnek, bir tamsayı dizisinde standart sorgu işleci `OrderBy` yönteminin nasıl çağrılacağını gösterir. Parantez içindeki ifade bir lambda ifadesidir. Birçok standart sorgu işleçleri, lambda ifadeleri parametre olarak alır, ancak bu uzantı yöntemleri için bir gereklilik değildir. Daha fazla bilgi için bkz. [lambda ifadeleri](../statements-expressions-operators/lambda-expressions.md).  
   

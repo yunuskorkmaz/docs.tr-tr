@@ -9,13 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - strings [.NET Framework], examples
 ms.assetid: 121d1eae-251b-44c0-8818-57da04b8215e
-ms.custom: seodec18
-ms.openlocfilehash: 9c5cdd15e189b8f0821f52d216c398299d44a5ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ff7abee460b4085fa9e039e678c975338ccb511a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105733"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711512"
 ---
 # <a name="how-to-perform-basic-string-manipulations-in-net"></a>Nasıl yapılır: .NET 'te temel dize Işlemeleri gerçekleştirme
 Aşağıdaki örnek, [temel dize işlemleri](../../../docs/standard/base-types/basic-string-operations.md) konularında açıklanan yöntemlerin bazılarını kullanarak, bir gerçek dünya uygulamasında bulunabilir bir şekilde dize düzenlemeleri gerçekleştiren bir sınıf oluşturur. `MailToData` sınıfı, bir bireyin adı ve adresini ayrı özelliklerde depolar ve `City`, `State`ve `Zip` alanlarını kullanıcıya göstermek için tek bir dizeye birleştirmek için bir yol sağlar. Ayrıca, sınıfı kullanıcının şehir, eyalet ve posta kodu bilgilerini tek bir dize olarak girmesine izin verir; uygulama, tek dizeyi otomatik olarak ayrıştırır ve ilgili özelliğe uygun bilgileri girer.  

@@ -1,6 +1,5 @@
 ---
 title: <code> - C# Programming Guide
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - code
@@ -9,14 +8,14 @@ helpviewer_keywords:
 - code XML tag
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
-ms.openlocfilehash: 31143b1da423ab762ac996acb1e74bae66000c11
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: eddf00c5fd51308d6d0f618282931190b43e92b5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523521"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711811"
 ---
-# <a name="code-c-programming-guide"></a>\<code > (C# Programlama Kılavuzu)
+# <a name="code-c-programming-guide"></a>\<kodu > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -28,12 +27,12 @@ ms.locfileid: "72523521"
  Kod olarak işaretlenmesini istediğiniz metin.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0code > etiketi, kod olarak birden fazla satırı göstermek için bir yol sağlar. Bir açıklama içindeki metnin kod olarak işaretlenmesi gerektiğini göstermek için [\<c >](./code-inline.md) kullanın.  
+ \<kodu > etiketi, birden fazla satırı kod olarak göstermek için bir yol sağlar. Bir açıklama içindeki metnin kod olarak işaretlenmesi gerektiğini göstermek için [\<c >](./code-inline.md) kullanın.  
   
  Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- @No__t_2code > etiketinin nasıl kullanılacağına ilişkin bir örnek için [\<example >](./example.md) konusuna bakın.  
+ \<Code > etiketinin nasıl kullanılacağına ilişkin bir örnek için [\<örnek >](./example.md) konusuna bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

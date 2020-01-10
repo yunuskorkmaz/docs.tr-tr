@@ -3,17 +3,15 @@ title: Var Olan Düğümleri Kopyalama
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 2aa8f65c-cc62-4638-9c46-129dc15be786
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eda5c9b4851b29c0a76e45414d7c47ba52252455
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb9ccd7b16d00355ba87bb32f5447906feeecd94
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864136"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711070"
 ---
 # <a name="copy-existing-nodes"></a>Var Olan Düğümleri Kopyalama
-Birçok yöntem ve Özellikler içinde XML belge nesne modeli (gibi bir düğümü seçmek için kullanabileceğiniz DOM) vardır **SelectSingleNode**, **ChildNodes [int i]**, **öznitelikleri [int miyim]**. Düğüm seçildikten sonra bu belirli düğüm türü için çalışan INSERT yöntemlerden birini kullanarak ağaca ekleyebilirsiniz. Ağacına bir düğüm eklemek için tek bir kısıtlama düğüm ekledikten sonra belgeyi yine de iyi biçimlendirilmiş olması gerekliliğidir. Varolan bir düğümü DOM ağacına eklendiğinde, özgün konumundan kaldırıldı ve hedef konumuna eklendi.  
+XML Belge Nesne Modeli (DOM), **selectSingleNode**, **ChildNodes [int i]** , **öznitelikler [int i]** gibi bir düğümü seçmek için kullanabileceğiniz birçok yöntem ve özellik vardır. Düğüm seçildikten sonra, söz konusu düğüm türü için çalışan INSERT yöntemlerinden birini kullanarak ağaca ekleyebilirsiniz. Ağaca bir düğüm eklemeye yönelik tek kısıtlama, belgenin düğüm eklendikten sonra yine de doğru biçimlendirilmiş olması gerekir. Varolan bir düğüm DOM ağacına eklendiğinde, özgün konumundan kaldırılır ve hedef konumuna eklenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

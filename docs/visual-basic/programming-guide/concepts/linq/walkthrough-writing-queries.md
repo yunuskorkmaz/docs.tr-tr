@@ -7,18 +7,18 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6a9f229697ce3d6328c6fb09d18d4cc2627eab10
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d2e472cc996c42aa091ed95c6954d0879c98372
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351023"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636763"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>İzlenecek Yol: Visual Basic'de Sorgu Yazma
 
-Bu izlenecek yol, [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu ifadeleri yazmak için Visual Basic dil özelliklerini nasıl kullanabileceğinizi gösterir. İzlenecek yol, öğrenci nesneleri listesinde sorgu oluşturmayı, sorguların nasıl çalıştırılacağını ve bunların nasıl değiştirileceğini gösterir. Sorgular, nesne başlatıcıları, yerel tür çıkarımı ve anonim türler dahil olmak üzere çeşitli özellikler birleştirilir.
+Bu izlenecek yol, dil ile tümleşik sorgu (LINQ) sorgu ifadeleri yazmak için Visual Basic dil özelliklerini nasıl kullanabileceğinizi gösterir. İzlenecek yol, öğrenci nesneleri listesinde sorgu oluşturmayı, sorguların nasıl çalıştırılacağını ve bunların nasıl değiştirileceğini gösterir. Sorgular, nesne başlatıcıları, yerel tür çıkarımı ve anonim türler dahil olmak üzere çeşitli özellikler birleştirilir.
 
-Bu yönergeyi tamamladıktan sonra, ilgilendiğiniz belirli [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcıya yönelik örneklere ve belgelere geçiş yapmaya hazırlanacaktır. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcılar [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]içerir.
+Bu yönergeyi tamamladıktan sonra, ilgilendiğiniz belirli bir LINQ sağlayıcısı için örneklere ve belgelere geçiş yapmaya hazırlanacaktır. LINQ sağlayıcıları [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]içerir.
 
 ## <a name="create-a-project"></a>Proje oluşturma
 
@@ -133,13 +133,13 @@ Sorgu sonuçlarının belirtilen sırada olmaları durumunda taranması daha kol
 
 ## <a name="additional-examples"></a>Ek Örnekler
 
-Temel bilgileri anladığınıza göre, aşağıda [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgularının esnekliğini ve gücünü gösteren ek örneklerin bir listesi verilmiştir. Her örnek öncesinde ne yapabileceğinize ilişkin kısa bir açıklamadır. Gösterilen türü görmek için fare işaretçisini her sorgu için sorgu sonuç değişkeninin üzerine getirin. Sonuçları oluşturmak için bir `For Each` döngüsü kullanın.
+Temel bilgileri anladığınıza göre, LINQ sorgularının esnekliğini ve gücünü göstermek için ek örneklerin bir listesi aşağıda verilmiştir. Her örnek öncesinde ne yapabileceğinize ilişkin kısa bir açıklamadır. Gösterilen türü görmek için fare işaretçisini her sorgu için sorgu sonuç değişkeninin üzerine getirin. Sonuçları oluşturmak için bir `For Each` döngüsü kullanın.
 
 [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]
 
 ## <a name="additional-information"></a>Ek Bilgiler
 
-Sorgularla çalışmanın temel kavramlarıyla ilgili bilgi sahibi olduktan sonra, ilgilendiğiniz [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcı türü için belge ve örnekleri okumaya hazırsınızdır:
+Sorgularla çalışmanın temel kavramlarıyla ilgili bilgi sahibi olduktan sonra, ilgilendiğiniz LINQ sağlayıcısı türü için belge ve örnekleri okumaya hazırsınızdır:
 
 - [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 

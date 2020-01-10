@@ -1,16 +1,15 @@
 ---
 title: Komut satırı bağımsız değişkenleri- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: f74f374f13aef5135b81d59f94bc2c6913766763
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e73eeeeb0e613d45b2ce31e744803bb75ba2a3c2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039312"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700646"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Komut Satırı Bağımsız Değişkenleri (C# Programlama Kılavuzu)
 
@@ -33,7 +32,7 @@ Ayrıca, <xref:System.Convert> sınıfını veya `Parse` yöntemini kullanarak d
 long num = Int64.Parse(args[0]);
 ```
 
-Ayrıca,`Int64`diğer ad `long`C# türü kullanmak da mümkündür:
+Ayrıca, `Int64`diğer ad `long`C# türü kullanmak da mümkündür:
 
 ```csharp
 long num = long.Parse(args[0]);
@@ -79,6 +78,6 @@ Uygulamayı bir komut isteminden derlemek ve çalıştırmak için aşağıdaki 
 - <xref:System.Environment?displayProperty=nameWithType>
 - [C# Programlama Kılavuzu](../index.md)
 - [Ana() ve Komut Satırı Bağımsız Değişkenleri](index.md)
-- [Nasıl yapılır: Komut Satırı Bağımsız Değişkenlerini Görüntüleme](how-to-display-command-line-arguments.md)
+- [Komut satırı bağımsız değişkenlerini nasıl DSP](how-to-display-command-line-arguments.md)
 - [Ana() Dönüş Değerleri](main-return-values.md)
 - [Sınıflar](../classes-and-structs/classes.md)

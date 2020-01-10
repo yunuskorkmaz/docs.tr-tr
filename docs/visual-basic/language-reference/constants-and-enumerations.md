@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: e47fd1c606f7d4cd0cf2fa6398beaa183ed95076
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 5109bf42c9caa7528c5405bb1a5cff0cfb62a5ac
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838162"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705762"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Sabitler ve Numaralandırmalar (Visual Basic)
 
@@ -27,7 +27,7 @@ Visual Basic, geliştiriciler için bir dizi önceden tanımlanmış sabitler ve
 |---|---|  
 |`CONFIG`|**Configuration Manager** **etkin çözüm yapılandırma** kutusunun geçerli ayarına karşılık gelen bir dize.|  
 |`DEBUG`|**Proje özellikleri** iletişim kutusunda ayarlankullanılabilecek bir `Boolean` değeri. Varsayılan olarak, bir proje için hata ayıklama yapılandırması `DEBUG`tanımlar. `DEBUG` tanımlandığında, <xref:System.Diagnostics.Debug> sınıf yöntemleri **Çıkış** penceresinde çıkış oluşturur. Tanımlanmadığı zaman, <xref:System.Diagnostics.Debug> sınıf yöntemleri derlenmez ve hata ayıklama çıkışı oluşturulmaz.|  
-|`TARGET`|Proje için çıkış türünü temsil eden bir dize veya komut satırı **/target** seçeneğinin ayarı. `TARGET` olası değerleri şunlardır:<br /><br /> -bir Windows uygulaması için "winexe".<br />-konsol uygulaması için-"exe".<br />-bir sınıf kitaplığı için "Library".<br />-bir modül için "Module".<br />- **/Target** seçeneği Visual Studio tümleşik geliştirme ortamında ayarlanabilir. Daha fazla bilgi için bkz. [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
+|`TARGET`|Proje için çıkış türünü temsil eden bir dize veya komut satırı **hedefi** seçeneğinin ayarı. `TARGET` olası değerleri şunlardır:<br /><br /> -bir Windows uygulaması için "winexe".<br />-konsol uygulaması için-"exe".<br />-bir sınıf kitaplığı için "Library".<br />-bir modül için "Module".<br />- **Target** seçeneği Visual Studio tümleşik geliştirme ortamında ayarlanabilir. Daha fazla bilgi için bkz. [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`TRACE`|**Proje özellikleri** iletişim kutusunda ayarlankullanılabilecek bir `Boolean` değeri. Varsayılan olarak, bir proje için tüm yapılandırmaların `TRACE`tanımlar. `TRACE` tanımlandığında, <xref:System.Diagnostics.Trace> sınıf yöntemleri **Çıkış** penceresinde çıkış oluşturur. Tanımlı olmadığında <xref:System.Diagnostics.Trace> sınıf yöntemleri derlenmez ve hiçbir `Trace` çıkışı oluşturulmaz.|  
 |`VBC_VER`|Visual Basic sürümünü *büyük*olarak temsil eden bir sayı. *küçük* biçim.|  
   
@@ -53,7 +53,7 @@ Visual Basic, geliştiriciler için bir dizi önceden tanımlanmış sabitler ve
 
  Aşağıdaki tabloda Visual Basic tarafından sunulan numaralandırmalar listelenmektedir ve açıklanmaktadır.  
   
-|Listeleme|Açıklama|  
+|Numaralandırma|Açıklama|  
 |---|---|  
 |<xref:Microsoft.VisualBasic.AppWinStyle>|<xref:Microsoft.VisualBasic.Interaction.Shell%2A> işlevi çağrılırken çağrılan program için kullanılacak pencere stilini gösterir.|  
 |<xref:Microsoft.VisualBasic.AudioPlayMode>|Ses yöntemleri çağrılırken seslerin nasıl çalındığını gösterir.|  

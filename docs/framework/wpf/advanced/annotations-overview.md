@@ -9,17 +9,17 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: dc9c4125f9ac3c44be41efe92b9e495599e5c130
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: b82c7e7300ebc295ca06d565c2fb5f6f2b28e92c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004040"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636516"
 ---
 # <a name="annotations-overview"></a>Ek açıklamalara Genel Bakış
 Yazılı belgelerde Not veya yorum yazmak, neredeyse kendisine verilmek üzere yaptığımız çok önemli bir etkinliktir. Bu notlar veya Yorumlar, bilgilere bayrak eklemek veya daha sonra başvurmak üzere ilgilendiğiniz öğeleri vurgulamak için bir belgeye eklediğimiz "ek açıklamalardır". Yazdırılmış belgelere not yazmak kolaydır ve çok daha kolay olsa da, elektronik belgelere kişisel açıklamalar ekleyebilme özelliği, genellikle çok sınırlı olur.  
   
- Bu konu başlığı altında, yaygın olarak yapışkan notlar ve önemli birçok ek açıklama türü incelenmiştir ve Microsoft ek açıklama çerçevesinin Windows Presentation Foundation aracılığıyla uygulamalarda bu ek açıklama türlerini nasıl kolaylaştırdığını gösterir (WPF ) belge görüntüleme denetimleri.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] belge görüntüleme denetimlerinin yanı sıra <xref:System.Windows.Controls.FlowDocumentReader> ve <xref:System.Windows.Controls.FlowDocumentScrollViewer>, <xref:System.Windows.Controls.DocumentViewer> ve <xref:System.Windows.Controls.FlowDocumentPageViewer>gibi <xref:System.Windows.Controls.Primitives.DocumentViewerBase> türetilen denetimleri içerir.  
+ Bu konu başlığı altında, yaygın olarak yapışkan notlar ve önemli birçok ek açıklama türü incelenmiştir ve Microsoft ek açıklama çerçevesinin Windows Presentation Foundation aracılığıyla uygulamalarda bu ek açıklama türlerini nasıl kolaylaştırdığını gösterir (WPF ) belge görüntüleme denetimleri.  Ek açıklamaları destekleyen WPF belge görüntüleme denetimleri <xref:System.Windows.Controls.FlowDocumentReader> ve <xref:System.Windows.Controls.FlowDocumentScrollViewer>ve <xref:System.Windows.Controls.DocumentViewer> ve <xref:System.Windows.Controls.FlowDocumentPageViewer>gibi <xref:System.Windows.Controls.Primitives.DocumentViewerBase> türetilen denetimleri içerir.  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>Yapışkan Notlar  
@@ -35,12 +35,12 @@ Yazılı belgelerde Not veya yorum yazmak, neredeyse kendisine verilmek üzere y
  [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
   
 <a name="caf1_type_callouts"></a>   
-## <a name="highlights"></a>Lamaları  
- İnsanlar, bir kağıt belgeyi işaret eden alt çizgi, vurgulama, Circling kelimeleri veya kenar boşluğunda çizim işaretleri veya gösterimler gibi, ilgi çekici öğelere dikkat çekmek için yaratıcı yöntemler kullanır.  Microsoft ek açıklamaları çerçevesindeki ek açıklamaları Vurgula [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] belge görüntüleme denetimlerinde görüntülenen bilgileri işaretlemek için benzer bir özellik sağlar.  
+## <a name="highlights"></a>Highlights  
+ İnsanlar, bir kağıt belgeyi işaret eden alt çizgi, vurgulama, Circling kelimeleri veya kenar boşluğunda çizim işaretleri veya gösterimler gibi, ilgi çekici öğelere dikkat çekmek için yaratıcı yöntemler kullanır.  Microsoft ek açıklamaları çerçevesindeki ek açıklamaları Vurgula WPF belge görüntüleme denetimlerinde görüntülenen bilgileri işaretlemek için benzer bir özellik sağlar.  
   
  Aşağıdaki çizimde bir vurgulama ek açıklaması örneği gösterilmektedir.  
   
- ![Ek açıklama](./media/caf-callouts.png "CAF_Callouts") Vurgula  
+ ![Ek açıklamayı Vurgula](./media/caf-callouts.png "CAF_Callouts")  
   
  Kullanıcılar genellikle ilk olarak bir metin veya ilgilendiğiniz öğe seçerek ve ardından ek açıklama seçeneklerinin bir <xref:System.Windows.Controls.ContextMenu> görüntülenmesini sağlamak için sağ tıklanarak ek açıklamalar oluşturur.  Aşağıdaki örnek, kullanıcıların ek açıklamaları oluşturup yönetmek için erişebileceği yönlendirilmiş komutlarla bir <xref:System.Windows.Controls.ContextMenu> bildirmek için kullanabileceğiniz [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] gösterir.  
   

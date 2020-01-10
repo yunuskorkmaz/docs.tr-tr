@@ -1,6 +1,5 @@
 ---
 title: ReadOnly anahtar sözcüğü C# -başvuru
-ms.custom: seodec18
 ms.date: 06/21/2018
 f1_keywords:
 - readonly_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9fa6f893e7f999564c4dcb43d40755547d3c793
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454965"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713124"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# Başvurusu)
 
@@ -103,7 +102,7 @@ Geçerli `struct` yöntemlerine `readonly` değiştiricisini uygulayarak iki ava
 
 `readonly` değiştiricisi, <xref:System.Object?displayProperty=nameWithType>tarafından belirtilen yöntemleri geçersiz kılan yöntemler de dahil olmak üzere `struct`çoğu üye üzerinde geçerlidir. Bazı kısıtlamalar vardır:
 
-- `readonly` statik üye bildiremezsiniz.
+- `readonly` statik yöntemler veya özellikler bildiremezsiniz.
 - `readonly` oluşturucuları bildiremezsiniz.
 
 `readonly` değiştiricisini bir özellik veya Dizin Oluşturucu bildirimine ekleyebilirsiniz:

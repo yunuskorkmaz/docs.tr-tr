@@ -1,17 +1,16 @@
 ---
 title: Erişim değiştiricileri- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: b415bf143e7da46b3ecd2c0828a3f8151878435a
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 0d8e536902317c1e5b00dadde069dd6242189088
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971673"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705671"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Erişim Değiştiricileri (C# Programlama Kılavuzu)
 Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelerinizdeki diğer koddan kullanılıp kullanılamayacağını denetleyen bir erişilebilirlik düzeyine sahiptir. Aşağıdaki erişim değiştiricilerini, bir tür veya üyenin bildirimini yaparken belirtmek için kullanabilirsiniz:  
@@ -42,7 +41,7 @@ Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelerinizdeki diğe
   
  İç içe sınıflar ve yapılar dahil yapı üyeleri, genel, iç veya özel olarak bildirilebilecek. İç içe sınıflar ve yapılar dahil olmak üzere sınıf üyeleri ortak, korumalı dahili, korunan, dahili, özel korumalı veya özel olabilir. Sınıf üyeleri ve yapı üyeleri için iç içe sınıflar ve yapılar dahil erişim düzeyi varsayılan olarak özeldir. Özel iç içe türlere, kapsayan türün dışından erişilemez.  
   
- Türetilmiş sınıfların temel türlerinden daha fazla erişilebilirliği olamaz. Diğer bir deyişle, bir iç sınıftan `B` `A`türeyen ortak bir sınıfa sahip olabilirsiniz. Buna izin verildiyse, tüm korumalı veya iç `A` `A` üyelerine türetilmiş sınıftan erişilebileceğinden, bu, ortak hale getirme etkisine sahip olur.  
+ Türetilmiş sınıfların temel türlerinden daha fazla erişilebilirliği olamaz. Diğer bir deyişle, bir iç sınıftan türetilen `B` ortak bir sınıfa sahip olamaz `A`. Buna izin veriliyorsa, tüm `A` korunan veya iç üyelerine türetilmiş sınıftan erişilebilir olduğundan `A` genel hale getirme etkisi vardır.  
   
  InternalsVisibleToAttribute kullanarak, özel diğer derlemelerin iç türlerinizi erişmesini sağlayabilirsiniz. Daha fazla bilgi için bkz. [arkadaş derlemeler](../../../standard/assembly/friend.md).  
   
@@ -51,7 +50,7 @@ Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelerinizdeki diğe
   
  Normalde, bir üyenin erişilebilirliği onu içeren türün erişilebilirliğiyle daha büyük değildir. Ancak, üye arabirim yöntemleri uygularsa veya ortak bir temel sınıfta tanımlanan sanal yöntemleri geçersiz kıldığında, iç sınıfın ortak bir üyesine derleme dışından erişilebilir.  
   
- Bir alan, özellik veya olay olan herhangi bir üyenin türü, en azından üyenin kendisi olarak erişilebilir olmalıdır. Benzer şekilde, dönüş türü ve bir yöntem, Dizin Oluşturucu ya da temsilci olan herhangi bir üyenin parametre türleri en azından üyenin kendisi olarak erişilebilir olmalıdır. Örneğin, ortak `M` `C` olmayan bir sınıf `C` döndüren ortak bir metoda sahip olamaz. Benzer şekilde, özel olarak bildirilirse türünde `A` `A` korumalı bir özelliği olamaz.  
+ Bir alan, özellik veya olay olan herhangi bir üyenin türü, en azından üyenin kendisi olarak erişilebilir olmalıdır. Benzer şekilde, dönüş türü ve bir yöntem, Dizin Oluşturucu ya da temsilci olan herhangi bir üyenin parametre türleri en azından üyenin kendisi olarak erişilebilir olmalıdır. Örneğin, `C` da genel olmadığı müddetçe bir sınıf `C` döndüren `M` ortak bir metoda sahip olabilirsiniz. Benzer şekilde, `A` Private olarak bildirilirse `A` türünde korumalı bir özelliği olamaz.  
   
  Kullanıcı tanımlı işleçler her zaman ortak ve statik olarak bildirilmelidir. Daha fazla bilgi için bkz. [operatör aşırı yüklemesi](../../language-reference/operators/operator-overloading.md).  
   

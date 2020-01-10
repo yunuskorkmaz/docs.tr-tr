@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: bf673195f06475daf8341fd17cd701b84a970b39
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 48536d8fba3f86c2883e48cd4e5cf9a3a8752fcd
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740670"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636321"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF Uygulaması Oluşturma (WPF)
 
-Windows Presentation Foundation (WPF) uygulamaları, .NET Framework yürütülebilir dosyalar (. exe), kitaplıklar (. dll) veya her iki tür derleme birleşimi olarak oluşturulabilir. Bu konu, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalarının nasıl oluşturulacağını ve yapı işlemindeki önemli adımları açıklar.
+Windows Presentation Foundation (WPF) uygulamaları, .NET Framework yürütülebilir dosyalar (. exe), kitaplıklar (. dll) veya her iki tür derleme birleşimi olarak oluşturulabilir. Bu konu, WPF uygulamalarının nasıl oluşturulacağını ve yapı işlemindeki önemli adımları açıklar.
 
 <a name="Building_a_WPF_Application_using_Command_Line"></a>
 
@@ -34,7 +34,7 @@ WPF uygulaması aşağıdaki yollarla derlenebilir:
 
 ## <a name="wpf-build-pipeline"></a>WPF derleme işlem hattı
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir proje yapılandırıldığında dile özgü ve [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]özgü hedeflerin birleşimi çağrılır. Bu hedefleri yürütme işlemine derleme işlem hattı denir ve anahtar adımları aşağıdaki şekilde gösterilmiştir.
+Bir WPF projesi yapılandırıldığında dile özgü ve WPF 'e özgü hedeflerin birleşimi çağrılır. Bu hedefleri yürütme işlemine derleme işlem hattı denir ve anahtar adımları aşağıdaki şekilde gösterilmiştir.
 
 ![WPF derleme işlemi](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")
 
@@ -48,7 +48,7 @@ Derlemeden önce, MSBuild aşağıdakiler de dahil olmak üzere önemli araçlar
 
 - Windows SDK dizinleri.
 
-- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] başvuru derlemelerinin konumu.
+- WPF başvuru derlemelerinin konumu.
 
 - Derleme arama yollarının özelliği.
 
@@ -58,7 +58,7 @@ MSBuild 'in derlemeleri arayacağı ilk konum başvuru derleme dizinidir (%Progr
 
 ### <a name="resolving-references"></a>Başvuruları çözme
 
-Yapı işlemi, uygulama projesini oluşturmak için gereken derlemeleri bulur ve bağlar. Bu mantık `ResolveAssemblyReference` görevde bulunur. Proje dosyasında `Reference` olarak belirtilen tüm derlemeler, sistemde zaten yüklü olan derlemeler üzerindeki arama yolları ve meta veriler hakkındaki bilgilerle birlikte göreve sağlanır. Görev, derlemeleri arar ve çıkış bildirimlerinde gösterilmemelidir olması gereken temel [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derlemelerini filtrelemek için yüklü derlemenin meta verilerini kullanır. Bu, ClickOnce bildirimlerinde gereksiz bilgilerin oluşmasını önlemek için yapılır. Örneğin, PresentationFramework. dll, üzerinde oluşturulmuş bir uygulama temsilcisi olarak kabul edilebilir ve [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] için ve üstelik, tüm [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derlemelerinin .NET Framework yüklü olan her makinede aynı konumda mevcut olduğundan, bu, bildirimlerde tüm .NET Framework başvuru Derlemeleriyle ilgili tüm bilgileri ekleme gereksinimi yoktur.
+Yapı işlemi, uygulama projesini oluşturmak için gereken derlemeleri bulur ve bağlar. Bu mantık `ResolveAssemblyReference` görevde bulunur. Proje dosyasında `Reference` olarak belirtilen tüm derlemeler, sistemde zaten yüklü olan derlemeler üzerindeki arama yolları ve meta veriler hakkındaki bilgilerle birlikte göreve sağlanır. Görev, derlemeleri arar ve çıkış bildirimlerinde gösterilmemelidir olması gereken temel WPF derlemelerini filtrelemek için yüklü derlemenin meta verilerini kullanır. Bu, ClickOnce bildirimlerinde gereksiz bilgilerin oluşmasını önlemek için yapılır. Örneğin, PresentationFramework. dll ' de ve WPF için oluşturulmuş bir uygulama temsilcisi olarak düşünülebilir ve tüm WPF derlemeleri .NET Framework yüklü olan her makinede aynı konumda olduğundan, tümünü dahil etmek zorunda değildir bildirimlerdeki tüm .NET Framework başvuru Derlemeleriyle ilgili bilgiler.
 
 <a name="Markup_Compilation___Pass_1"></a>
 
@@ -118,7 +118,7 @@ Varsayılan olarak, biçimlendirme derlemesi MSBuild altyapısıyla aynı <xref:
 
 <a name="File_Classification"></a>
 
-### <a name="file-classification"></a>Dosya sınıflandırması
+### <a name="file-classification"></a>Dosya Sınıflandırma
 
 Yapı işlemi, çıktı dosyalarını, hangi uygulama derlemesine yerleştirilebileceğini temel alarak farklı kaynak gruplarına koyar. Yerelleştirilmiş olmayan tipik bir uygulamada, `Resource` olarak işaretlenen tüm veri dosyaları ana derlemeye (yürütülebilir veya kitaplık) yerleştirilir. Projede `UICulture` ayarlandığında, derlenen tüm [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyalar ve özellikle dile özgü olarak işaretlenen kaynaklar uydu kaynak derlemesine yerleştirilir. Ayrıca, tüm dilden bağımsız kaynaklar ana derlemeye yerleştirilir. Yapı işleminin bu adımında, bu belirleme yapılır.
 
@@ -142,15 +142,15 @@ Uygulama bildirimi (bir. exe. manifest dosyası) uygulama derlemelerini ve bağ�
 
 Bu bildirim dosyaları her zaman XBAP için oluşturulur. Yüklü uygulamalar için, `GenerateManifests` özelliği proje dosyasında `true`değer ile belirtilmediği takdirde oluşturulmaz.
 
-XBAP 'ler, tipik Internet bölgesi uygulamalarına atanan izinlerin üzerinde ve üzerinde iki ek izin alır: <xref:System.Security.Permissions.WebBrowserPermission> ve <xref:System.Security.Permissions.MediaPermission>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] yapı sistemi bu izinleri uygulama bildiriminde bildirir.
+XBAP 'ler, tipik Internet bölgesi uygulamalarına atanan izinlerin üzerinde ve üzerinde iki ek izin alır: <xref:System.Security.Permissions.WebBrowserPermission> ve <xref:System.Security.Permissions.MediaPermission>. WPF derleme sistemi bu izinleri uygulama bildiriminde bildirir.
 
 <a name="Incremental_Build_Support"></a>
 
 ## <a name="incremental-build-support"></a>Artımlı derleme desteği
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] yapı sistemi Artımlı derlemeler için destek sağlar. Biçimlendirme veya koda yapılan değişiklikleri algılamayla oldukça akıllı bir şeydir ve yalnızca değişikliğin etkilediği yapıtları derler. Artımlı derleme mekanizması aşağıdaki dosyaları kullanır:
+WPF derleme sistemi Artımlı derlemeler için destek sağlar. Biçimlendirme veya koda yapılan değişiklikleri algılamayla oldukça akıllı bir şeydir ve yalnızca değişikliğin etkilediği yapıtları derler. Artımlı derleme mekanizması aşağıdaki dosyaları kullanır:
 
-- Geçerli derleyici durumunu korumak için bir $ (*AssemblyName*) _Markupcompiler. cache dosyası.
+- Geçerli derleyici durumunu korumak için bir $ (*AssemblyName*) _MarkupCompiler. cache dosyası.
 
 - [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyalarını yerel olarak tanımlanmış türlere başvurularla önbelleğe almak için $ (*AssemblyName*) _MarkupCompiler. lref dosyası.
 

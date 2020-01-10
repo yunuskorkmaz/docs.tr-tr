@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bb231df9ed33b89fa15cde998379b2964cf32ff9
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 9b868bd5ed77788cd9b44c11623ae38eba58153c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204767"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711369"
 ---
 # <a name="collections-and-data-structures"></a>Koleksiyonlar ve Veri Yapıları
 Benzer veriler genellikle koleksiyon olarak depolandığında ve değiştirildiğinde daha verimli bir şekilde işlenebilir. Tek tek öğeleri veya bir koleksiyondaki öğe aralığını eklemek, kaldırmak ve değiştirmek için <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System. Collections. sabit ad alanlarındaki <xref:System.Array?displayProperty=nameWithType> sınıfını veya sınıfları kullanabilirsiniz.  

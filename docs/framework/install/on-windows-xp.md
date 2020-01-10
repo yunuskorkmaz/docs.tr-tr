@@ -2,15 +2,13 @@
 title: Windows XP 'de .NET Framework yüklemesi
 description: .NET Framework Windows XP 'ye yüklemeyi öğrenin.
 ms.custom: updateeachrelease
-author: rlander
-ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 7d7ad0f86ff327c3273664fc1c7395c88d38a5bf
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 8d05c8c9cf961d3902b1d1287be5b1c2c73d349e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204723"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716296"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Windows XP ve Windows Server 2003’te .NET Framework Yükleme
 
@@ -31,7 +29,7 @@ Bu yönergeler, ihtiyacınız olan .NET Framework sürümlerini yüklemenize yar
 
 Windows XP 'de [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40) ' ü yükleyebilirsiniz. Artık Microsoft tarafından desteklenmemektedir.
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 Windows XP 'de [3,5 .NET Framework](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) yükleyebilirsiniz.
 

@@ -1,18 +1,17 @@
 ---
-title: 'Nasıl yapılır: sorgu C# programlama kılavuzunda lambda ifadeleri kullanma'
-ms.custom: seodec18
+title: Sorgu C# programlama kılavuzunda lambda ifadeleri kullanma
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: e7e7da211599b5ce0263377ecaf25b404399ce9c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 92bdbf842c5c30b2f32e06f622f3e08f3c7a878f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423160"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711967"
 ---
-# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Nasıl yapılır: Sorguda Lambda İfadeleri Kullanma (C# Programlama Kılavuzu)
+# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Bir sorguda lambda ifadeleri kullanma (C# Programlama Kılavuzu)
 Lambda ifadelerini doğrudan sorgu sözdiziminde kullanamazsınız, ancak bunları yöntem çağrılarında kullanın ve sorgu ifadeleri Yöntem çağrıları içerebilir. Aslında, bazı sorgu işlemleri yalnızca yöntem sözdiziminde ifade edilebilir. Sorgu sözdizimi ve Yöntem sözdizimi arasındaki fark hakkında daha fazla bilgi için bkz. [LINQ 'Te sorgu sözdizimi ve Yöntem sözdizimi](../concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="example"></a>Örnek  
@@ -27,8 +26,8 @@ Lambda ifadelerini doğrudan sorgu sözdiziminde kullanamazsınız, ancak bunlar
   
  [!code-csharp[csProgGuideLINQ#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csrefLINQHowTos.cs#2)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu kodu çalıştırmak için, metodu kopyalayıp [nasıl yapılır: bir nesne koleksiyonunu sorgulama](../../linq/query-a-collection-of-objects.md) ve `Main` yönteminden çağırma bölümünde sunulan `StudentClass` yapıştırın.  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu kodu çalıştırmak için, yöntemini kopyalayıp [bir nesne koleksiyonunu sorgulayın](../../linq/query-a-collection-of-objects.md) ve `Main` yönteminden çağıran `StudentClass` yapıştırın.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

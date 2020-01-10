@@ -1,19 +1,17 @@
 ---
 title: Charsets ve Marshal-.NET
 description: Farklı karakter kümesi, .NET 'in verilerinizi yerel koda nasıl bir şekilde kullandığını nasıl değiştirebileceğinizi öğrenin.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 301fa3d8bd379e76a0e751c3a20d0d8be37d9ac0
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4be4bd5a968eb5c0d6959a0f378ee1223ed906ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700918"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706393"
 ---
 # <a name="charsets-and-marshaling"></a>Karakter kümesi ve hazırlama
 
-@No__t-0 değerlerinin, `string` nesnelerinin ve `System.Text.StringBuilder` nesnelerinin sıralanma biçimi, P/Invoke ya da yapısındaki `CharSet` alanının değerine bağlıdır. P/Invoke 'nizi bildirirken <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> alanını ayarlayarak P/Invoke 'ın `CharSet` ' yı ayarlayabilirsiniz. Bir tür için `CharSet` ' ı ayarlamak için, sınıfınıza veya yapı bildirimindeki <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> alanını ayarlayın. Bu öznitelik alanları ayarlanmamışsa, hangi `CharSet` ' ı kullanacağını belirleyen dil derleyicisi vardır. C#ve VB, varsayılan olarak <xref:System.Runtime.InteropServices.CharSet.Ansi> karakter kümesini kullanır.
+`char` değerleri, `string` nesneleri ve `System.Text.StringBuilder` nesnelerinin sıralanma biçimi, P/Invoke ya da yapısındaki `CharSet` alanının değerine bağlıdır. P/Invoke 'nizi bildirirken <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> alanını ayarlayarak P/Invoke `CharSet` ayarlayabilirsiniz. Bir tür için `CharSet` ayarlamak için, sınıfınıza veya yapı bildirimindeki <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> alanını ayarlayın. Bu öznitelik alanları ayarlanmamışsa, hangi `CharSet` kullanacağınızı belirleyen dil derleyicisine kadar olur. C#Visual Basic <xref:System.Runtime.InteropServices.CharSet.Ansi> karakter kümesini varsayılan olarak kullanın.
 
 Aşağıdaki tabloda, her karakter kümesi ile bir karakter veya dizenin bu karakter kümesi ile sıralandığınızda nasıl temsil edildiği gösterilmektedir:
 

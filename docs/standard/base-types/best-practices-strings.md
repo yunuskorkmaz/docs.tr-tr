@@ -18,13 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.custom: seodec18
-ms.openlocfilehash: cd6b24a6dd893f0c522573a0e19914164c15141f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973943"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711486"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET 'teki dizeleri kullanmak için en iyi uygulamalar
 
@@ -90,7 +89,7 @@ Genelde, kodun amacını belirsiz yaptığından varsayılan değerleri kullanma
 Dize karşılaştırma, özellikle sıralama ve eşitlik testi gibi, dizeyle ilgili pek çok işlemin temelidir. Dizeler belirli bir düzende sıralanır: Eğer dizelerin sıralı bir listesinde "my" dizesi "string" dizesinden önce görünüyorsa, "my" dizesi "string" dizesi ile karşılaştırıldığında daha küçük veya eşit olmalıdır. Ek olarak, karşılaştırma dolaylı olarak eşitliği tanımlar. Karşılaştırma işlemi, eşit olarak gördüğü dizeler için sıfır döndürür. İki dizenin de diğerinden daha az olmaması iyi bir yorumdur. Dizeleri içeren en anlamlı işlemler, şu yordamların birini veya her ikisini içerir: başka bir dize ile karşılaştırma ve iyi tanımlanmış bir sıralama işlemini yürütme.
 
 > [!NOTE]
-> [Sıralama ağırlığı tablolarını](https://www.microsoft.com/download/details.aspx?id=10921), Windows işletim sistemleri için sıralama ve karşılaştırma işlemlerinde kullanılan karakter ağırlıkları hakkında bilgi içeren bir metin dosyası kümesi ve [varsayılan Unicode harmanlama öğesi tablosu](https://www.unicode.org/Public/UCA/latest/allkeys.txt), Linux ve macOS için sıralama ağırlığı tablosunun en son sürümü. Linux ve macOS üzerindeki sıralama ağırlığı tablosunun belirli sürümü sistemde yüklü olan [Unicode kitaplıklarının Uluslararası bileşenlerinin](http://site.icu-project.org/) sürümüne bağlıdır. ICU sürümleri ve uygulamadıkları Unicode sürümleri hakkında bilgi için, bkz. [ICU indirme](http://site.icu-project.org/download).
+> [Sıralama ağırlığı tablolarını](https://www.microsoft.com/download/details.aspx?id=10921), Windows işletim sistemleri için sıralama ve karşılaştırma işlemlerinde kullanılan karakter ağırlıklarını ve [varsayılan Unicode harmanlama öğesi tablosu](https://www.unicode.org/Public/UCA/latest/allkeys.txt), Linux ve MacOS için sıralama ağırlığı tablosunun en son sürümünü içeren bir metin dosyası kümesi indirebilirsiniz. Linux ve macOS üzerindeki sıralama ağırlığı tablosunun belirli sürümü sistemde yüklü olan [Unicode kitaplıklarının Uluslararası bileşenlerinin](http://site.icu-project.org/) sürümüne bağlıdır. ICU sürümleri ve uygulamadıkları Unicode sürümleri hakkında bilgi için, bkz. [ICU indirme](http://site.icu-project.org/download).
 
 Ancak, iki dizeyi eşitlik veya sıralama düzeni için değerlendirmek tek bir doğru sonuç vermez; sonuç, dizeleri karşılaştırmakta kullanılan ölçütlere bağlıdır. Özellikle, sıralı olan veya geçerli kültürün büyük/küçük harf ve sıralama kurallarına dayalı dize karşılaştırmaları veya [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture) (İngilizce dili temel alan yerel ayar belirsiz kültür) farklı sonuçlar üretebilir.
 
@@ -200,7 +199,7 @@ Buna karşılık, sabit kültürün karşılaştırma için kullanışlı olan �
 
 Aşağıdaki tabloda anlam dizesi bağlamından <xref:System.StringComparison> numaralandırma üyesine eşleme özetlenmektedir:
 
-|Veri|Davranış|İlgili System.StringComparison<br /><br /> value|
+|Veri|Davranış|İlgili System.StringComparison<br /><br /> {1&gt;value&lt;1}|
 |----------|--------------|-----------------------------------------------------|
 |Büyük/küçük harfe duyarlı dahili tanımlayıcılar.<br /><br /> XML ve HTTP gibi standartlardaki büyük/küçük harfe duyarlı tanımlayıcılar.<br /><br /> Güvenlikle ilgili büyük/küçük harfe duyarlı ayarlar.|Baytların tam olarak eşleştiği dilsel olmayan bir tanımlayıcı.|<xref:System.StringComparison.Ordinal>|
 |Büyük/küçük harfe duyarsız iç tanımlayıcılar.<br /><br /> XML ve HTTP gibi standartlardaki büyük/küçük harfe duyarsız tanımlayıcılar.<br /><br /> Dosya yolları.<br /><br /> Kayıt defteri anahtarları ve değerleri.<br /><br /> Ortam değişkenleri.<br /><br /> Kaynak tanımlayıcıları (örneğin, işleyici adları).<br /><br /> Güvenlikle ilgili büyük/küçük harfe duyarsız ayarlar.|Büyük/küçük harfin alakasız olduğu dilsel olmayan bir tanımlayıcı; özellikle çoğu Windows sistem hizmetinde depolanan veriler.|<xref:System.StringComparison.OrdinalIgnoreCase>|

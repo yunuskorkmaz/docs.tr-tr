@@ -1,16 +1,15 @@
 ---
 title: Main () dönüş değerleri- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 13d1eda178a4c2580af67ef5a7198e7f0884a7d6
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.openlocfilehash: 21e780470f455ac133fd4d11ae43c63a4b18c582
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884403"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712045"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main () dönüş değerleri (C# Programlama Kılavuzu)
 
@@ -51,7 +50,7 @@ if ($LastExitCode -eq 0) {
 Write-Host "Return value = " $LastExitCode
 ```
 
-## <a name="sample-output"></a>Örnek çıktı
+## <a name="sample-output"></a>Örnek çıkış
 
 ```txt
 Execution succeeded
@@ -98,4 +97,4 @@ Uygulama giriş noktası bir `Task` veya `Task<int>`döndürdüğünde, derleyic
 - [C# Programlama Kılavuzu](../index.md)
 - [C#Başvurunun](../index.md)
 - [Ana() ve Komut Satırı Bağımsız Değişkenleri](index.md)
-- [Nasıl yapılır: Komut Satırı Bağımsız Değişkenlerini Görüntüleme](./how-to-display-command-line-arguments.md)
+- [Komut satırı bağımsız değişkenlerini görüntüleme](./how-to-display-command-line-arguments.md)

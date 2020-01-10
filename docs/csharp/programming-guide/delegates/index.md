@@ -1,17 +1,16 @@
 ---
 title: Temsilciler- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: a0c5592f2f4cca8173f9b777f2c3f14fe468feac
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c0f28716926d4c9d74cde58fd00e27d1fdfa7ce1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423314"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705372"
 ---
 # <a name="delegates-c-programming-guide"></a>Temsilciler (C# Programlama Kılavuzu)
 [Temsilci](../../language-reference/builtin-types/reference-types.md) , belirli bir parametre listesi ve dönüş türü olan yöntemlere yapılan başvuruları temsil eden bir türdür. Bir temsilci oluşturduğunuzda, örneğini uyumlu bir imza ve dönüş türü içeren herhangi bir yöntemle ilişkilendirebilirsiniz. Yöntemi, temsilci örneği aracılığıyla çağırabilirsiniz.  
@@ -52,9 +51,9 @@ ms.locfileid: "73423314"
   
 - [Temsilcilerde Varyans Kullanma](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
-- [Nasıl yapılır: temsilcileri birleştirme (çok noktaya yayın temsilcileri)](./how-to-combine-delegates-multicast-delegates.md)  
+- [Temsilcileri birleştirme (çok noktaya yayın temsilcileri)](./how-to-combine-delegates-multicast-delegates.md)  
   
-- [Nasıl yapılır: Temsilci Bildirme, Oluşturma ve Kullanma](./how-to-declare-instantiate-and-use-a-delegate.md)  
+- [Bir temsilciyi bildirme, oluşturma ve kullanma](./how-to-declare-instantiate-and-use-a-delegate.md)
 
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 

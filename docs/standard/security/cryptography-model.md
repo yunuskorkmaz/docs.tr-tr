@@ -6,34 +6,32 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 42e5c7018f83f3849f46f33e09e09ea1749e7c70
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0c00e4cc866c537fe26dd1ad466d6cde95bc608
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753291"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706233"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework Şifreleme Modeli
 
-.NET Framework, pek çok standart şifreleme algoritmasını uygulamalarını sağlar. Bu algoritmalar güvenli olası varsayılan özelliklerini kullanıyorsanız ve kolaydır. Ayrıca, .NET Framework şifreleme modeli nesne devralma, akış tasarım ve yapılandırma son derece genişletilebilir.
+.NET Framework birçok standart şifreleme algoritmalarının uygulamalarını sağlar. Bu algoritmaların kullanımı kolaydır ve mümkün olan en güvenli varsayılan özelliklere sahiptir. Ayrıca, nesne devralım, akış tasarımı ve yapılandırmanın .NET Framework şifreleme modeli son derece genişletilebilir.
 
-## <a name="object-inheritance"></a>Nesne Devralma
+## <a name="object-inheritance"></a>Nesne devralma
 
-.NET Framework güvenlik sistemini genişletilebilir bir türetilmiş sınıf devralma deseni uygular. Hiyerarşi aşağıdaki gibidir:
+.NET Framework güvenlik sistemi, türetilmiş sınıf devralma için genişletilebilir bir model uygular. Hiyerarşi aşağıdaki gibidir:
 
-- Algoritma türü sınıfı, gibi <xref:System.Security.Cryptography.SymmetricAlgorithm>, <xref:System.Security.Cryptography.AsymmetricAlgorithm> veya <xref:System.Security.Cryptography.HashAlgorithm>. Bu düzey soyuttur.
+- <xref:System.Security.Cryptography.SymmetricAlgorithm>, <xref:System.Security.Cryptography.AsymmetricAlgorithm> veya <xref:System.Security.Cryptography.HashAlgorithm>gibi algoritma türü sınıfı. Bu düzey soyuttur.
 
-- Algoritma sınıfı bir algoritma türü sınıfından devralır; Örneğin, <xref:System.Security.Cryptography.Aes>, <xref:System.Security.Cryptography.RC2>, veya <xref:System.Security.Cryptography.ECDiffieHellman>. Bu düzey soyuttur.
+- Algoritma türü sınıfından devralan algoritma sınıfı; Örneğin, <xref:System.Security.Cryptography.Aes>, <xref:System.Security.Cryptography.RC2>veya <xref:System.Security.Cryptography.ECDiffieHellman>. Bu düzey soyuttur.
 
-- Bir algoritma sınıfından devralan bir algoritma sınıfı uygulaması; Örneğin, <xref:System.Security.Cryptography.AesManaged>, <xref:System.Security.Cryptography.RC2CryptoServiceProvider>, veya <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Bu düzey, tam olarak uygulanabilir.
+- Algoritma sınıfından devralan algoritma sınıfının uygulanması; Örneğin, <xref:System.Security.Cryptography.AesManaged>, <xref:System.Security.Cryptography.RC2CryptoServiceProvider>veya <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Bu düzey tam olarak uygulandı.
 
-Türetilen sınıfların bu düzeni kullanarak, yeni bir algoritma veya mevcut bir algoritmanın yeni bir uygulama eklemek kolaydır. Örneğin, yeni bir ortak anahtar algoritması oluşturmak için öğesinden devralır <xref:System.Security.Cryptography.AsymmetricAlgorithm> sınıfı. Belirli bir algoritma yeni bir uygulama oluşturmak için bu algoritmayı, soyut olmayan türetilmiş bir sınıf oluşturursunuz.
+Bu türetilmiş sınıfların modelini kullanarak, yeni bir algoritma veya var olan algoritmanın yeni bir uygulamasını eklemek kolaydır. Örneğin, yeni bir ortak anahtar algoritması oluşturmak için <xref:System.Security.Cryptography.AsymmetricAlgorithm> sınıfından devralmasını sağlayabilirsiniz. Belirli bir algoritmanın yeni bir uygulamasını oluşturmak için, bu algoritmanın soyut olmayan bir türetilmiş sınıfını oluşturacaksınız.
 
-## <a name="how-algorithms-are-implemented-in-the-net-framework"></a>.NET Framework'teki algoritmaları nasıl uygulanır
+## <a name="how-algorithms-are-implemented-in-the-net-framework"></a>Algoritmaların .NET Framework nasıl uygulandığı
 
-Farklı uygulamaları bir algoritma için kullanılabilir bir örnek olarak, simetrik algoritmaları göz önünde bulundurun. Temeli tüm simetrik algoritmaları için <xref:System.Security.Cryptography.SymmetricAlgorithm>, aşağıdaki algoritmaları tarafından devralınan:
+Algoritma için kullanılabilen farklı uygulamalara örnek olarak, simetrik algoritmaları göz önünde bulundurun. Tüm simetrik algoritmaların tabanı, aşağıdaki algoritmalar tarafından devralınan <xref:System.Security.Cryptography.SymmetricAlgorithm>.
 
 1. <xref:System.Security.Cryptography.Aes>
 
@@ -45,23 +43,23 @@ Farklı uygulamaları bir algoritma için kullanılabilir bir örnek olarak, sim
 
 5. <xref:System.Security.Cryptography.TripleDES>
 
-<xref:System.Security.Cryptography.Aes> iki sınıfları tarafından devralındığından: <xref:System.Security.Cryptography.AesCryptoServiceProvider> ve <xref:System.Security.Cryptography.AesManaged>. <xref:System.Security.Cryptography.AesCryptoServiceProvider> Sınıfı, Aes, Windows şifreleme API'si (CAPI) uygulamasının çevresinde sarmalayıcı ise <xref:System.Security.Cryptography.AesManaged> sınıfı, tamamen yönetilen kodda yazılır. Uygulama, şifreleme yeni nesil (CNG), yönetilen eklemeyi ve CAPI uygulamalarında üçüncü bir tür yoktur. CNG algoritması örneğidir <xref:System.Security.Cryptography.ECDiffieHellmanCng>. CNG algoritmaları kullanılabilir Windows Vista ve üstü.
+<xref:System.Security.Cryptography.Aes> iki sınıf tarafından devralınır: <xref:System.Security.Cryptography.AesCryptoServiceProvider> ve <xref:System.Security.Cryptography.AesManaged>. <xref:System.Security.Cryptography.AesCryptoServiceProvider> sınıfı, AES 'nin Windows şifreleme API 'SI (CAPı) uygulamasındaki bir sarmalayıcıdır, ancak <xref:System.Security.Cryptography.AesManaged> sınıfı tamamen yönetilen kodda yazılır. Ayrıca, yönetilen ve CAPı uygulamalarına ek olarak, bir sonraki nesil şifreleme (CNG) gibi üçüncü bir uygulama türü de vardır. CNG algoritmasına bir örnek <xref:System.Security.Cryptography.ECDiffieHellmanCng>. CNG algoritmaları Windows Vista ve sonraki sürümlerde kullanılabilir.
 
-Hangi uygulamayı sizin için en iyi seçebilirsiniz.  Yönetilen uygulamaları, .NET Framework'ü destekleyen tüm platformlarda kullanılamaz.  CAPI uygulamaları daha eski işletim sistemlerinde kullanılabilir olan ve artık geliştirilmektedir. CNG yeni geliştirme projeleri burada gerçekleşecek en son uygulamasıdır. Ancak, yönetilen uygulamalar, Federal Bilgi işleme standartları (FIPS tarafından) onaylanmamıştır ve sarmalayıcı sınıfları yavaş olabilir.
+Hangi uygulamanın sizin için en uygun olduğunu seçebilirsiniz.  Yönetilen uygulamalar .NET Framework destekleyen tüm platformlarda kullanılabilir.  CAPı uygulamaları daha eski işletim sistemlerinde kullanılabilir ve artık geliştirilmiyor. CNG, yeni geliştirmenin gerçekleştiği en son uygulamasıdır. Ancak, yönetilen uygulamalar Federal bilgi Işleme standartları (FIPS) tarafından sertifikalandırılması ve sarmalayıcı sınıflarından daha yavaş olabilir.
 
-## <a name="stream-design"></a>Stream tasarım
+## <a name="stream-design"></a>Akış tasarımı
 
-Ortak dil çalışma zamanı, simetrik algoritmalar ve karma algoritmaları uygulamak için bir akış Odaklı Tasarım kullanır. Bu tasarım temel <xref:System.Security.Cryptography.CryptoStream> türetilen sınıf <xref:System.IO.Stream> sınıfı. Stream tabanlı şifreleme nesneler tek ve standart bir arabirimi destekler (`CryptoStream`) nesnesi veri aktarımı bölümünü işlemek için. Tüm nesneleri standart bir arabirimdeki yerleşik olduğundan, birden çok nesne (örneğin, bir şifreleme nesne tarafından izlenen bir karma nesnesi) araya zincirleyebilirsiniz ve herhangi bir ara depolama için gerek kalmadan birden çok veri işlemleri gerçekleştirebilirsiniz. Akış modelinde, daha küçük nesneleri nesneleri oluşturmanızı sağlar. Örneğin, bu nesne, akışı nesneleri kümesinden oluşturulmuş ancak birleşik bir şifreleme ve karma algoritması bir tek akış nesnesi olarak görüntülenebilir.
+Ortak dil çalışma zamanı, simetrik algoritmaları ve karma algoritmaları uygulamak için akış yönelimli bir tasarım kullanır. Bu tasarımın çekirdeği, <xref:System.IO.Stream> sınıfından türetilen <xref:System.Security.Cryptography.CryptoStream> sınıfıdır. Akış tabanlı şifreleme nesneleri, nesnenin veri aktarımı bölümünü işlemek için tek bir standart arabirimi (`CryptoStream`) destekler. Tüm nesneler standart bir arabirim üzerinde oluşturulduğundan, birden fazla nesneyi (bir karma nesnesi ve ardından bir şifreleme nesnesi) birlikte zincirleyebilir ve veri üzerinde herhangi bir ara depolamaya gerek duymadan birden çok işlem gerçekleştirebilirsiniz. Akış modeli, daha küçük nesnelerden nesneler oluşturmanıza de olanak sağlar. Örneğin, bir birleştirilmiş şifreleme ve karma algoritması tek bir Stream nesnesi olarak görüntülenebilir, ancak bu nesne bir akış nesneleri kümesinden oluşturulmuş olabilir.
 
 ## <a name="cryptographic-configuration"></a>Şifreleme yapılandırması
 
-Şifreleme yapılandırması bir algoritmanın belirli bir uygulama, .NET Framework şifreleme sınıflarını genişletilebilirlik sağlayan bir algoritma adının çözümlemenize olanak tanır. Kendi donanım veya yazılım uygulaması bir algoritma ekleyebilir ve uygulama ettiğiniz algoritması adı eşleme. Bir algoritma yapılandırma dosyasında belirtilmemişse, varsayılan ayarlar kullanılır. Şifreleme yapılandırması hakkında daha fazla bilgi için bkz: [şifreleme sınıflarını yapılandırma](../../../docs/framework/configure-apps/configure-cryptography-classes.md).
+Şifreleme yapılandırması, bir algoritmanın belirli bir uygulamasını bir algoritma adına çözümlemenizi sağlar ve .NET Framework şifreleme sınıflarının genişletilebilirliğini sağlar. Bir algoritmanın kendi donanım veya yazılım uygulamanızı ekleyebilir ve uygulamayı tercih ettiğiniz algoritma adına eşleyebilirsiniz. Yapılandırma dosyasında bir algoritma belirtilmemişse, varsayılan ayarlar kullanılır. Şifreleme yapılandırması hakkında daha fazla bilgi için bkz. [şifreleme sınıflarını yapılandırma](../../../docs/framework/configure-apps/configure-cryptography-classes.md).
 
 ## <a name="choosing-an-algorithm"></a>Algoritma seçme
 
-Farklı nedenlerden dolayı bir algoritma seçebilirsiniz: Örneğin, veri bütünlüğü, veri gizliliği için veya bir anahtar oluşturmak için. Simetrik ve karma algoritmaları bütünlüğünü korumak (değişiklik koruma) ya da gizlilik nedenleriyle (görüntülemesini koruma) verileri korumak için tasarlanmıştır. Karma algoritmaları, öncelikli olarak veri bütünlüğü için kullanılır.
+Farklı nedenlerle bir algoritma seçebilirsiniz: Örneğin, veri bütünlüğü için, veri gizliliği veya bir anahtar oluşturmak için. Simetrik ve karma algoritmalar, bütünlük nedenleriyle (değişiklikten koruma) veya gizlilik nedenlerinden (görüntülemeden koruma) verileri korumak için tasarlanmıştır. Karma algoritmalar öncelikle veri bütünlüğü için kullanılır.
 
-Uygulama tarafından önerilen algoritmaları listesi aşağıda verilmiştir:
+Uygulamaya göre önerilen algoritmaların bir listesi aşağıda verilmiştir:
 
 - Veri gizliliği:
 
@@ -79,7 +77,7 @@ Uygulama tarafından önerilen algoritmaları listesi aşağıda verilmiştir:
 
   - <xref:System.Security.Cryptography.RSA>
 
-- Anahtar değişim:
+- Anahtar değişimi:
 
   - <xref:System.Security.Cryptography.ECDiffieHellman>
 
@@ -89,7 +87,7 @@ Uygulama tarafından önerilen algoritmaları listesi aşağıda verilmiştir:
 
   - <xref:System.Security.Cryptography.RNGCryptoServiceProvider>
 
-- Bir anahtarı bir paroladan oluşturma:
+- Paroladan anahtar oluşturma:
 
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 

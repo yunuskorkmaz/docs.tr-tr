@@ -1,40 +1,39 @@
 ---
-title: New kısıtlaması - C# başvurusu
-ms.custom: seodec18
+title: Yeni kısıtlama- C# başvuru
 ms.date: 07/20/2015
 helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
-ms.openlocfilehash: 7c788be52010cdfadbd3c03f9e570815d25bdbef
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: cd67aeb82d736b8941b0637494089723e7815505
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401488"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713349"
 ---
-# <a name="new-constraint-c-reference"></a>New kısıtlaması (C# Başvurusu)
+# <a name="new-constraint-c-reference"></a>Yeni kısıtlama (C# başvuru)
 
-`new` Kısıtlaması belirtir bir genel sınıf bildiriminde tür bağımsız değişkeni genel bir parametresiz oluşturucusu olmalıdır. Kullanılacak `new` kısıtlaması, türü olamaz abstract.
+`new` kısıtlaması, genel sınıf bildirimindeki bir tür bağımsız değişkeninin Ortak parametresiz bir oluşturucuya sahip olması gerektiğini belirtir. `new` kısıtlamasını kullanmak için tür soyut olamaz.
 
-Uygulama `new` öğesini aşağıdaki örnekte gösterildiği gibi genel bir sınıf türünün yeni örneğini oluşturduğunda, bir tür parametresi kısıtlaması:
+Aşağıdaki örnekte gösterildiği gibi, genel bir sınıf türün yeni örneklerini oluşturduğunda, `new` kısıtlamasını bir tür parametresine uygulayın:
 
 [!code-csharp[csrefKeywordsOperator#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#5)]
 
-Kullanırken `new()` kısıtlama diğer kısıtlamalarla en son belirtilmelidir:
+`new()` kısıtlamasını diğer kısıtlamalarla birlikte kullandığınızda, en son belirtilmelidir:
 
 [!code-csharp[csrefKeywordsOperator#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#6)]
 
-Daha fazla bilgi için [tür parametrelerindeki kısıtlamalar](../../programming-guide/generics/constraints-on-type-parameters.md).
+Daha fazla bilgi için bkz. [tür parametrelerindeki kısıtlamalar](../../programming-guide/generics/constraints-on-type-parameters.md).
 
-De kullanabilirsiniz `new` anahtar [bir türün bir örneğini oluşturma](../operators/new-operator.md) veya farklı bir [üye bildirim değiştirici](new-modifier.md).
+Ayrıca, [bir türün örneğini](../operators/new-operator.md) veya bir [üye bildirimi değiştiricisini](new-modifier.md)oluşturmak için `new` anahtar sözcüğünü kullanabilirsiniz.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [tür parametresi kısıtlamaları](~/_csharplang/spec/classes.md#type-parameter-constraints) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [tür parametresi kısıtlamaları](~/_csharplang/spec/classes.md#type-parameter-constraints) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../language-reference/index.md)
+- [C#Başvurunun](../../language-reference/index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [Genel Türler](../../programming-guide/generics/index.md)

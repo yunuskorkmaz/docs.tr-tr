@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: a1441f0cc3a7ac715a173be12e68c055ce36ff00
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d67919ba38c2e306672966ddc2f62140ef92b638
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460140"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636308"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Bir WPF Uygulamasını Dağıtma (WPF)
-Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıtılması gerekir. Windows ve .NET Framework çeşitli dağıtım teknolojileri içerir. Bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamasını dağıtmak için kullanılan dağıtım teknolojisi, uygulama türüne bağlıdır. Bu konuda her dağıtım teknolojisine ve bunların her bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama türünün dağıtım gereksinimleriyle birlikte nasıl kullanıldığı hakkında kısa bir genel bakış sunulmaktadır.  
+Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıtılması gerekir. Windows ve .NET Framework çeşitli dağıtım teknolojileri içerir. Bir WPF uygulamasını dağıtmak için kullanılan dağıtım teknolojisi, uygulama türüne bağlıdır. Bu konuda, her bir dağıtım teknolojisine ve bunların her WPF uygulama türünün dağıtım gereksinimleriyle birlikte nasıl kullanıldığı hakkında kısa bir genel bakış sunulmaktadır.  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Dağıtım Teknolojileri  
@@ -63,7 +63,7 @@ Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıt�
   
 <a name="Deploying_WPF_Applications"></a>   
 ## <a name="deploying-wpf-applications"></a>WPF uygulamalarını dağıtma  
- Bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulaması için dağıtım seçenekleri, uygulamanın türüne bağlıdır. Dağıtım perspektifinden [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] üç önemli uygulama türüne sahiptir:  
+ WPF uygulaması için dağıtım seçenekleri, uygulamanın türüne bağlıdır. Bir dağıtım perspektifinden, WPF üç önemli uygulama türüne sahiptir:  
   
 - Tek başına uygulamalar.  
   
@@ -79,7 +79,7 @@ Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıt�
 ### <a name="deploying-markup-only-xaml-applications"></a>Yalnızca biçimlendirme XAML uygulamalarını dağıtma  
  Yalnızca biçimlendirme [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfaları genellikle HTML sayfaları gibi Web sunucularına yayımlanır ve Internet Explorer kullanılarak görüntülenebilir. Yalnızca biçimlendirme [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfalar, Internet bölgesi izin kümesi tarafından tanımlanan kısıtlamalarla kısmi güven güvenlik korumalı alanı içinde çalışır. Bu, HTML tabanlı Web uygulamalarına eşdeğer bir güvenlik korumalı alanı sağlar.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalarına yönelik güvenlik hakkında daha fazla bilgi için bkz. [güvenlik](../security-wpf.md).  
+ WPF uygulamaları için güvenlik hakkında daha fazla bilgi için bkz. [güvenlik](../security-wpf.md).  
   
  Yalnızca biçimlendirme [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfalar yerel dosya sistemine XCopy veya Windows Installer kullanılarak yüklenebilir. Bu sayfalar, Internet Explorer veya Windows Gezgini kullanılarak görüntülenebilir.  
   
@@ -112,7 +112,7 @@ Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıt�
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>.NET Framework2ü yükleme  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamasını çalıştırmak için, Microsoft .NET Framework 'Ün istemcide yüklü olması gerekir. Internet Explorer, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tarayıcıda barındırılan uygulamalar görüntülenirken istemcilerin .NET Framework yüklenip yüklenmediğini otomatik olarak algılar. .NET Framework yüklü değilse, Internet Explorer kullanıcılardan yüklemeyi ister.  
+ Bir WPF uygulamasını çalıştırmak için Microsoft .NET Framework 'Ün istemcide yüklü olması gerekir. Internet Explorer, WPF tarayıcı tarafından barındırılan uygulamalar görüntülenirken .NET Framework istemcilerin yüklü olup olmadığını otomatik olarak algılar. .NET Framework yüklü değilse, Internet Explorer kullanıcılardan yüklemeyi ister.  
   
  .NET Framework yüklenip yüklenmediğini algılamak için, Internet Explorer aşağıdaki uzantılara sahip içerik dosyaları için geri dönüş çok amaçlı Internet posta uzantıları (MIME) işleyicisi olarak kaydedilmiş bir önyükleyici uygulaması içerir:. xaml,. XPS,. xbap , ve. Application. Bu dosya türlerine gittiğinizde .NET Framework istemcide yüklü değilse, önyükleyici uygulamanın bu uygulamayı yükleme izni ister. İzin sağlanmazsa, ne .NET Framework ne de uygulama yüklenmez.  
   

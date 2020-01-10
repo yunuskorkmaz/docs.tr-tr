@@ -3,14 +3,12 @@ title: XSLT Derleyicisi (xsltc.exe)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 729e6caa36ed8c2f6e77153f8d8ae356513b0603
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 83d880da65c2fc0730819f0a51c4e8b29deb4c8f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956990"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709731"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT Derleyicisi (xsltc.exe)
 XSLT derleyicisi (xsltc. exe) XSLT stil sayfalarını derler ve bir derleme oluşturur. Derlenmiş stil sayfası daha sonra doğrudan <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemine geçirilebilir. Xsltc. exe ile imzalı derlemeler oluşturamazsınız.  

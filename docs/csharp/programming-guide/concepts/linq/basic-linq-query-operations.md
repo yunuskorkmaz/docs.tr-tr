@@ -17,15 +17,15 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 361101258caca763502f92d897866c75bc8d7da2
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 91c038303c1ad7c2530964d3102aae49090c4c2a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418718"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635945"
 ---
 # <a name="basic-linq-query-operations-c"></a>Temel LINQ Sorgu İşlemleri (C#)
-Bu konu, sorgu ifadelerine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] için kısa bir giriş ve bir sorguda gerçekleştirdiğiniz bazı tipik işlem türlerinden bazılarını vermektedir. Daha ayrıntılı bilgi aşağıdaki konularda yer verilmiştir:  
+Bu konu, LINQ sorgu ifadelerine kısa bir giriş ve bir sorguda gerçekleştirdiğiniz bazı tipik işlem türlerinden bazılarını vermektedir. Daha ayrıntılı bilgi aşağıdaki konularda yer verilmiştir:  
   
  [LINQ sorgu Ifadeleri](../../../linq/index.md)  
   
@@ -34,17 +34,17 @@ Bu konu, sorgu ifadelerine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] iç
  [İzlenecek yol: sorguları yazmaC#](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
-> SQL veya XQuery gibi bir sorgu dili zaten hakkında bilginiz varsa, bu konunun çoğunu atlayabilirsiniz. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadelerinde yan tümceler sırası hakkında bilgi edinmek için sonraki bölümde "`from` yan tümcesi" konusunu okuyun.  
+> SQL veya XQuery gibi bir sorgu dili zaten hakkında bilginiz varsa, bu konunun çoğunu atlayabilirsiniz. LINQ sorgu ifadelerinde yan tümceler sırası hakkında bilgi edinmek için sonraki bölümde "`from` yan tümcesi" konusunu okuyun.  
   
 ## <a name="obtaining-a-data-source"></a>Bir Veri Kaynağı Elde Etme  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgusunda ilk adım veri kaynağını belirtmektir. Çoğu C# programlama dilinde olduğu gibi, kullanılmadan önce bir değişken bildirilmelidir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgusunda, veri kaynağını (`customers`) ve *Aralık değişkenini* (`cust`) tanıtmak için ilk olarak `from` yan tümcesi gelir.  
+ Bir LINQ sorgusunda, ilk adım veri kaynağını belirtmektir. Çoğu C# programlama dilinde olduğu gibi, kullanılmadan önce bir değişken bildirilmelidir. Bir LINQ sorgusunda, veri kaynağını (`customers`) ve *Aralık değişkenini* (`cust`) tanıtmak için öncelikle `from` yan tümcesi gelir.  
   
  [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
  Aralık değişkeni, bir sorgu ifadesinde hiçbir gerçek yineleme gerçekleşmedikçe, bir `foreach` döngüsünde yineleme değişkeni gibidir. Sorgu yürütüldüğünde, Aralık değişkeni `customers`art arda her bir öğeye başvuru olarak görev yapar. Derleyici `cust`türünü çıkarsanbildiğinden, açıkça belirtmeniz gerekmez. Ek Aralık değişkenleri, bir `let` yan tümcesi tarafından tanıtılamaz. Daha fazla bilgi için bkz. [Let yan tümcesi](../../../language-reference/keywords/let-clause.md).  
   
 > [!NOTE]
-> <xref:System.Collections.ArrayList>gibi genel olmayan veri kaynakları için, Aralık değişkeni açıkça yazılmalıdır. Daha fazla bilgi için bkz. [nasıl yapılır: bir ArrayList 'i LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) ve [from yan tümcesi](../../../language-reference/keywords/from-clause.md)ile sorgulama.  
+> <xref:System.Collections.ArrayList>gibi genel olmayan veri kaynakları için, Aralık değişkeni açıkça yazılmalıdır. Daha fazla bilgi için bkz. [LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) ve [from yan tümcesiyle](../../../language-reference/keywords/from-clause.md)bir ArrayList 'i sorgulama.  
   
 ## <a name="filtering"></a>Filtreleme  
  Büyük olasılıkla en yaygın sorgu işlemi, bir filtrenin Boole ifadesi biçiminde uygulanmasından kaynaklanıyor olabilir. Filtre sorgunun yalnızca ifadenin true olduğu öğeleri döndürmesine neden olur. Sonuç, `where` yan tümcesi kullanılarak oluşturulur. Etkin filtre, kaynak sırasından hangi öğelerin dışlanacağını belirtir. Aşağıdaki örnekte, yalnızca Londra 'da bir adrese sahip olan `customers` döndürülür.  
@@ -84,11 +84,11 @@ Bu konu, sorgu ifadelerine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] iç
  Daha fazla bilgi için bkz. [Group yan tümcesi](../../../language-reference/keywords/group-clause.md).  
   
 ## <a name="joining"></a>Katılma  
- JOIN işlemleri, veri kaynaklarında açıkça Modellenmemiş diziler arasında ilişkiler oluşturur. Örneğin, aynı konuma sahip tüm müşterileri ve dağıtımcıları bulmak için bir JOIN işlemi gerçekleştirebilirsiniz. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] `join` yan tümcesi her zaman doğrudan veritabanı tabloları yerine nesne koleksiyonlarına göre geçerlidir.  
+ JOIN işlemleri, veri kaynaklarında açıkça Modellenmemiş diziler arasında ilişkiler oluşturur. Örneğin, aynı konuma sahip tüm müşterileri ve dağıtımcıları bulmak için bir JOIN işlemi gerçekleştirebilirsiniz. LINQ içinde `join` yan tümcesi her zaman doğrudan veritabanı tabloları yerine nesne koleksiyonlarına göre geçerlidir.  
   
  [!code-csharp[csLINQGettingStarted#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#36)]  
   
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] yabancı anahtarları nesne modelinde bir öğe koleksiyonu tutan özellikler olarak temsil ettiğinden, SQL 'de yaptığınız gibi `join` kullanmak zorunda değilsiniz. Örneğin, bir `Customer` nesnesi bir `Order` nesneleri koleksiyonu içerir. Bir JOIN gerçekleştirmek yerine, siparişe nokta gösterimini kullanarak erişirsiniz:  
+ LINQ ' ta, LINQ içindeki yabancı anahtarlar nesne modelinde bir öğe koleksiyonu tutan özellikler olarak temsil edildiği için SQL 'de yaptığınız gibi `join` kullanmak zorunda değilsiniz. Örneğin, bir `Customer` nesnesi bir `Order` nesneleri koleksiyonu içerir. Bir JOIN gerçekleştirmek yerine, siparişe nokta gösterimini kullanarak erişirsiniz:  
   
 ```csharp
 from order in Customer.Orders...  
@@ -97,7 +97,7 @@ from order in Customer.Orders...
  Daha fazla bilgi için bkz. [JOIN yan tümcesi](../../../language-reference/keywords/join-clause.md).  
   
 ## <a name="selecting-projections"></a>Seçme (Tahminler)  
- `select` yan tümcesi sorgunun sonuçlarını üretir ve döndürülen her öğenin "şeklini" veya türünü belirtir. Örneğin, sonuçlarınızın tam `Customer` nesneleri, yalnızca bir üye, bir üye alt kümesi veya bir hesaplama ya da yeni nesne oluşturmaya göre tamamen farklı sonuç türü olacağını belirtebilirsiniz. `select` yan tümcesi kaynak öğenin bir kopyası dışında bir şey üretirse, işleme bir *projeksiyon*olarak adlandırılır. Verileri dönüştürmek için projeksiyonun kullanımı, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadelerinin güçlü bir özelliğidir. Daha fazla bilgi için bkz. [LINQ (C#)](./data-transformations-with-linq.md) ve [Select yan tümcesiyle](../../../language-reference/keywords/select-clause.md)veri dönüştürmeleri.  
+ `select` yan tümcesi sorgunun sonuçlarını üretir ve döndürülen her öğenin "şeklini" veya türünü belirtir. Örneğin, sonuçlarınızın tam `Customer` nesneleri, yalnızca bir üye, bir üye alt kümesi veya bir hesaplama ya da yeni nesne oluşturmaya göre tamamen farklı sonuç türü olacağını belirtebilirsiniz. `select` yan tümcesi kaynak öğenin bir kopyası dışında bir şey üretirse, işleme bir *projeksiyon*olarak adlandırılır. Verileri dönüştürmek için projeksiyonun kullanımı, LINQ sorgu ifadelerinin güçlü bir özelliğidir. Daha fazla bilgi için bkz. [LINQ (C#)](./data-transformations-with-linq.md) ve [Select yan tümcesiyle](../../../language-reference/keywords/select-clause.md)veri dönüştürmeleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

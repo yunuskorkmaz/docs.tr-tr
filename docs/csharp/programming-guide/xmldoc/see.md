@@ -1,6 +1,5 @@
 ---
-title: <see>- C# Programlama Kılavuzu
-ms.custom: seodec18
+title: <see> C# Programlama Kılavuzu
 ms.date: 07/20/2015
 f1_keywords:
 - <see>
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: e292e116ac468246bfe81e1eb5d5c5819a506701
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 995b67362bccbc3527f44e5a1d6b659f330e3afd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587692"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711720"
 ---
 # <a name="see-c-programming-guide"></a>\<bkz. >C# (Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -26,15 +25,15 @@ ms.locfileid: "69587692"
 ```  
   
 ## <a name="parameters"></a>Parametreler  
- cref = " `member`"  
- Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında `member` öğe adına geçirir. *Üyeyi* çift tırnak işareti ("") içine koyun.  
+ cref = "`member`"  
+ Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında öğe adına `member` geçirir. *Üyeyi* çift tırnak işareti ("") içine koyun.  
   
 ## <a name="remarks"></a>Açıklamalar  
- > \<Etiketi, metnin içinden bir bağlantı belirtmenize olanak tanır. Ayrıca, metnin See de bir bölümüne yerleştirilmesi gerektiğini belirtmek için [ \<de seede >](./seealso.md) kullanın. Kod öğeleri için belge sayfalarına iç köprüler oluşturmak üzere [cref özniteliğini](./cref-attribute.md) kullanın.  
+ \<bkz. > etiketi, metnin içinden bir bağlantı belirtmenize olanak tanır. Metnin Ayrıca See de bir bölümüne yerleştirilmesi gerektiğini belirtmek için [\<see>](./seealso.md) kullanın. Kod öğeleri için belge sayfalarına iç köprüler oluşturmak üzere [cref özniteliğini](./cref-attribute.md) kullanın.  
   
  Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   
- Aşağıdaki örnek bir Özet bölümü \<içindeki bir See > etiketini gösterir.  
+ Aşağıdaki örnek bir Özet bölümü içinde bir \<> etiketini gösterir.  
   
  [!code-csharp[csProgGuideDocComments#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#12)]  
   

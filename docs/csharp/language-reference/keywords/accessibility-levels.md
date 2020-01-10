@@ -1,21 +1,20 @@
 ---
 title: Erişilebilirlik düzeyleri- C# başvuru
-ms.custom: seodec18
 ms.date: 12/06/2017
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 2d6605a305e5003e19f4fe1dd260746302691215
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602392"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713823"
 ---
 # <a name="accessibility-levels-c-reference"></a>Erişilebilirlik Düzeyleri (C# Başvurusu)
 
-Üyeler için aşağıdaki tanımlanmış erişilebilirlik `public`düzeylerinden birini `internal`belirtmek için `private`,,, veya erişim değiştiricilerini `protected`kullanın.  
+Üyeler için aşağıdaki tanımlı erişilebilirlik düzeylerinden birini belirtmek için erişim değiştiricilerini `public`, `protected`, `internal`veya `private`kullanın.  
   
 |Tanımlanan erişilebilirlik|Açıklama|  
 |----------------------------|-------------|  
@@ -26,13 +25,13 @@ ms.locfileid: "69602392"
 |[`private`](private.md)|Erişim, kapsayan tür ile sınırlıdır.|  
 |[`private protected`](private-protected.md)|Erişim, geçerli derleme içindeki içeren sınıftan türetilmiş kapsayan sınıf veya türlerle sınırlıdır. 7,2 sürümünden C# itibaren kullanılabilir. |  
   
- `protected internal` Veya`private protected` kombinasyonlarını kullandığınızda, bir üye veya tür için yalnızca bir erişim değiştiricisine izin verilir.  
+ Bir üye veya tür için yalnızca bir erişim değiştiricisine, `protected internal` veya `private protected` birleşimlerini kullandığınızda izin verilir.  
   
  Ad alanlarında erişim değiştiricilerine izin verilmez. Ad alanlarının erişim kısıtlamaları yoktur.  
   
  Üye bildiriminin gerçekleştiği içeriğe bağlı olarak, yalnızca belirli olarak tanımlanmış erişilebilirlik izin verilir. Üye bildiriminde erişim değiştiricisi belirtilmemişse, varsayılan bir erişilebilirlik kullanılır.  
   
- Diğer türlerde iç içe olmayan en üst düzey türler yalnızca `internal` veya `public` erişilebilirliği olabilir. Bu türlerin `internal`varsayılan erişilebilirliği.  
+ Diğer türlerde iç içe olmayan en üst düzey türler yalnızca `internal` veya `public` erişilebilirliği olabilir. Bu türler için varsayılan erişilebilirlik `internal`.  
   
  Diğer türlerin üyeleri olan iç içe türler, aşağıdaki tabloda gösterildiği gibi, erişilebilir olarak bildirilebilecek.  
   

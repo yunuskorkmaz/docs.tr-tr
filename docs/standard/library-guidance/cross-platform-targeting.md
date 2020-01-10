@@ -1,77 +1,106 @@
 ---
-title: Platformlar arası .NET kitaplıkları için hedefleme
-description: Platformlar arası .NET kitaplıkları oluşturmak için en iyi yöntem önerileri.
-author: jamesnk
-ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 6bd310f2e4b7a9bd7bb550ed9c7da9ebabdf64ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+title: .NET kitaplıkları için platformlar arası hedefleme
+description: Platformlar arası .NET kitaplıkları oluşturmaya yönelik en iyi yöntem önerileri.
+ms.date: 08/12/2019
+ms.openlocfilehash: 45eb67837c924558ec51381dd924abf9fd0fa315
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947036"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706523"
 ---
 # <a name="cross-platform-targeting"></a>Platformlar arası hedefleme
 
-Birden çok işletim sistemleri ve cihazların modern .NET destekler. Azure veya bir .NET oyununuzu Unity barındırılan ASP.NET Web sitesi oluşturuyor mümkün olduğu kadar çok geliştiricileri desteklemek .NET açık kaynak kitaplıkları için önemlidir.
+Modern .NET birden çok işletim sistemini ve cihazı destekler. .NET açık kaynaklı kitaplıkların, Azure 'da barındırılan bir ASP.NET Web sitesi mi yoksa Unity 'de bir .NET oyunu mi sundukları gibi çok sayıda geliştirici desteklemesi gerekir.
 
 ## <a name="net-standard"></a>.NET Standard
 
-.NET standard platformlar arası destek .NET Kitaplığı'na eklemek için en iyi yoludur. [.NET standard](../net-standard.md) bir belirtimi .NET API'leri, tüm .NET uygulamalarında kullanılabilir. .NET Standard hedefleyen Standard'ın .NET, .NET Standard sürümünü kullanan tüm platformlar tarafından kullanılabilir olması anlamına gelir, belirli bir sürümü olan API'leri kullanmak için kısıtlanır kitaplıkları oluşturmak olanak tanır.
+.NET Standard, bir .NET kitaplığına platformlar arası destek eklemenin en iyi yoludur. [.NET Standard](../net-standard.md) , tüm .NET uygulamalarında bulunan .NET API 'lerinin bir belirtimidir. .NET Standard hedefleme, belirli bir .NET Standard sürümünde olan API 'Leri kullanmak için kısıtlanmış kitaplıklar oluşturmanızı sağlar. Bu, .NET Standard bu sürümü uygulayan tüm platformlar tarafından kullanılabilir olduğunu gösterir.
 
-![.NET standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET Standard")
+![.NET Standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET Standard")
 
-.NET Standard desteği ve başarıyla projenizde, derlemek, kitaplık başarıyla tüm platformlarda çalışacak garanti etmez:
+.NET Standard ve projenizi başarıyla derleyerek, kitaplığın tüm platformlarda başarıyla çalışacağını garanti etmez:
 
-1. Platforma özgü API, diğer platformlarda başarısız olur. Örneğin, <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> Windows üzerinde başarısız ve throw <xref:System.PlatformNotSupportedException> diğer tüm işletim sistemlerinde kullanıldığında.
-2. API'ler farklı şekilde davranabilir. Örneğin, bir uygulama, iOS veya UWP, zamanında tamamlanan derleme kullandığında yansıma API'leri farklı performans özelliklerine sahiptir.
+1. Platforma özgü API 'Ler diğer platformlarda başarısız olur. Örneğin, <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> Windows üzerinde başarılı olur ve başka herhangi bir IŞLETIM sisteminde kullanıldığında <xref:System.PlatformNotSupportedException> oluşturur.
+2. API 'Ler farklı davranabilirler. Örneğin, bir uygulama iOS veya UWP üzerinde güncel derleme kullandığında, yansıma API 'Leri farklı performans özelliklerine sahiptir.
 
 > [!TIP]
-> .NET ekibi [Roslyn çözümleyicinizi sunar](../analyzers/api-analyzer.md) olası sorunları keşfetmenize yardımcı olmak için.
+> .NET ekibi, olası sorunları bulmanıza yardımcı olmak için [bir Roslyn Çözümleyicisi sunmaktadır](../analyzers/api-analyzer.md) .
 
-**✔️ YAPMAK** dahil olmak üzere ile Başlat bir `netstandard2.0` hedef.
+`netstandard2.0` hedef dahil **✔️** .
 
-> En genel amaçlı kitaplıkları API'ler .NET Standard 2.0 dışında gerçekleştirmeniz gerekmez. .NET standard 2.0 tüm modern platformlar tarafından desteklenir ve bir hedef ile birden çok platform desteklemek için önerilen yoldur.
+> Genel amaçlı kitaplıkların çoğu .NET Standard 2,0 dışında API 'Lere ihtiyaç mamalıdır. .NET Standard 2,0 tüm modern platformlar tarafından desteklenir ve tek bir hedefle birden çok platformu desteklemek için önerilen yoldur.
 
-**❌ KAÇININ** dahil olmak üzere bir `netstandard1.x` hedef.
+**❌ `netstandard1.x` hedefini kullanmaktan kaçının** .
 
-> .NET standard 1.x NuGet paketlerini büyük paket bağımlılık grafiği oluşturur ve geliştiricilerin çok sayıda paketleri oluştururken indirme sonuçları ayrıntılı kümesi olarak dağıtılır. .NET Framework 4.6.1, UWP ve Xamarin, gibi Modern .NET platformları, tüm .NET Standard 2.0 desteği. Yalnızca .NET Standard hedeflemesi gereken özellikle daha eski bir platformunu hedeflemeniz gerekirse 1.x.
+> .NET Standard 1. x, büyük bir paket bağımlılığı grafiği oluşturan ve geliştiricilerin derlerken çok sayıda paket indirmelerine neden olan ayrıntılı bir NuGet paketleri kümesi olarak dağıtılır. .NET Framework 4.6.1, UWP ve Xamarin gibi modern .NET platformları, tüm destek .NET Standard 2,0. Yalnızca daha eski bir platformu hedeflemek istiyorsanız .NET Standard 1. x hedefini hedefleyin.
 
-**✔️ YAPMAK** dahil bir `netstandard2.0` gerektiriyorsa hedef bir `netstandard1.x` hedef.
+bir `netstandard1.x` hedefi gerekiyorsa **✔️** `netstandard2.0` hedefi vardır.
 
-> .NET Standard 2.0 destekleyen tüm platformlar kullanacağı `netstandard2.0` hedef ve avantaj daha eski platformlar hala çalışır ve kullanmaya geri döner ancak daha küçük bir paket grafik kalmamasını `netstandard1.x` hedef.
+> .NET Standard 2,0 destekleyen tüm platformlar `netstandard2.0` hedefini kullanır ve daha eski platformlar çalışmaya devam eder ve `netstandard1.x` hedefini kullanmaya geri dönecektir.
 
-**❌ SAĞLAMADIĞI** kitaplığı bir platforma özgü uygulama modelini kullanır. .NET standart bir hedef ekleyin.
+**❌** , kitaplık platforma özgü bir uygulama modelini kullanıyorsa .NET Standard hedefini içermez.
 
-> Örneğin, bir UWP Denetim Araç Seti kitaplığı yalnızca UWP üzerinde kullanılabilir bir uygulama modeli bağlıdır. Uygulama modeli özel API'ler .NET Standard sürümünde kullanılabilir olmayacak.
+> Örneğin, UWP Denetim araç seti kitaplığı, yalnızca UWP üzerinde kullanılabilen bir uygulama modeline bağlıdır. Uygulama modeline özgü API 'Ler .NET Standard kullanılabilir olmayacaktır.
 
-## <a name="multi-targeting"></a>Çoklu sürüm desteği
+## <a name="multi-targeting"></a>Çoklu hedefleme
 
-Bazen, kitaplıklarından çerçeveye özgü API erişmeniz gerekir. Çoklu fazla projeniz derlenir, sürüm, çerçeveye özgü API'leri çağırmak için en iyi yolu kullanarak [.NET hedef Framework](../frameworks.md) yerine yalnızca bir tane.
+Bazen kitaplıklarınızdan çerçeveye özel API 'Lere erişmeniz gerekir. Çerçeveye özgü API 'Leri çağırmak için en iyi yol, projenizi yalnızca bir yerine birçok [.net hedef](../frameworks.md) çerçevesi için oluşturan Çoklu hedefleme kullanmaktır.
 
-Tüketicileriniz, tek tek çerçeveleri için yapı zorunda korumak için .NET standart çıktı artı bir veya daha fazla çerçeveye özgü çıkışları çaba göstermelisiniz. Çoklu sürüm desteği ile tüm derlemeler içinde tek bir NuGet paketi olarak paketlenir. Tüketiciler aynı paket ardından başvurabilir ve NuGet uygun uygulama seçer. Geri dönüş kitaplığı NuGet paketinizi çerçeveye özgü uygulama yeri sunar durumları hariç her yerde kullanılan, .NET Standard kitaplığı işlevi görür. Multi-targeting'e koşullu derleme kodunuzda kullanın ve çerçeveye özgü API'leri çağırmak sağlar.
+Tüketicilerinizin tek tek çerçeveler için derleme yapmasına gerek kalmadan, bir .NET Standard çıkışına ve bir veya daha fazla çerçeveye özgü çıktıya sahip olmaya çalışmamalısınız. Çoklu hedefleme ile, tüm derlemeler tek bir NuGet paketi içinde paketlenmiştir. Daha sonra tüketiciler aynı pakete başvurabilir ve NuGet uygun uygulamayı seçer. .NET Standard kitaplığınız, NuGet paketinizin çerçeveye özgü bir uygulama sunduğu durumlar dışında her yerde kullanılan geri dönüş Kitaplığı işlevi görür. Çoklu hedefleme, kodunuzda koşullu derleme kullanmanıza ve çerçeveye özgü API 'Leri çağırayapılandırmanıza olanak tanır.
 
-![NuGet paketi ile birden çok derleme](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "birden çok derleme ile NuGet paketi")
+![Birden çok bütünleştirilmiş kod içeren NuGet paketi](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "Birden çok bütünleştirilmiş kod içeren NuGet paketi")
 
-**✔️ DÜŞÜNÜN** .NET uygulamalarının yanı sıra .NET Standard desteği.
+**✔️** .NET Standard ek olarak .NET uygulamalarını hedeflemeyi düşünün.
 
-> .NET uygulamaları hedefleyen .NET Standard dışında olan platforma özel API'leri çağırmak sağlar.
+> .NET uygulamalarını hedefleme, .NET Standard dışında olan platforma özel API 'Leri aramanızı sağlar.
 >
-> Bunu yaptığınızda, .NET Standard desteği bırak değil. Bunun yerine, uygulamadan throw ve API'leri becerisi sağlar. Bu şekilde kitaplığınızı her yerde kullanılabilir ve çalışma zamanı açık yukarı özelliklerini destekler.
+> Bunu yaparken .NET Standard desteğini kaldırmayın. Bunun yerine, uygulama ve teklif yeteneği API 'Lerini oluşturun. Bu şekilde, kitaplığınız her yerde kullanılabilir ve özelliklerin çalışma zamanı ışığını destekler.
 
-**❌ KAÇININ** tüm hedefler için aynı kaynak kodunuzu ise .NET Standard hedefleyen yanı sıra çoklu sürüm desteği.
+```csharp
+public static class GpsLocation
+{
+    // This project uses multi-targeting to expose device-specific APIs to .NET Standard.
+    public static async Task<(double latitude, double longitude)> GetCoordinatesAsync()
+    {
+#if NET461
+        return CallDotNetFramworkApi();
+#elif WINDOWS_UWP
+        return CallUwpApi();
+#else
+        throw new PlatformNotSupportedException();
+#endif
+    }
 
-> .NET Standard derleme NuGet tarafından otomatik olarak kullanılır. Tek tek .NET uygulamalarını hedefleme artırır `*.nupkg` hiçbir avantajı olmadan boyutu.
+    // Allows callers to check without having to catch PlatformNotSupportedException
+    // or replicating the OS check.
+    public static bool IsSupported
+    {
+        get
+        {
+#if NET461 || WINDOWS_UWP
+            return true;
+#else
+            return false;
+#endif
+        }
+    }
+}
+```
 
-**✔️ DÜŞÜNÜN** ekleme için hedef `net461` teklifi ne zaman bir `netstandard2.0` hedef. 
+kaynak kodunuz tüm hedefler için aynıysa, .NET Standard❌ çoklu hedeflemeyi **kullanmaktan kaçının** .
 
-> .NET Standard 2.0, .NET Framework kullanarak .NET Framework 4.7.2 ele alınan bazı sorunlar vardır. .NET Framework 4.6.1 - .NET Framework 4.6.1 için yerleşik bir ikili sunarak bunları 4.7.1 hala açıktır geliştiriciler için kullanım deneyimi sunmasını sağlayabilirsiniz.
+> .NET Standard derlemesi NuGet tarafından otomatik olarak kullanılacaktır. Bağımsız .NET uygulamalarının hedeflenmesi, `*.nupkg` boyutunu avantajsız olarak artırır.
 
-**✔️ YAPMAK** bir NuGet paketi kullanarak kitaplığınızda dağıtın.
+**✔️** bir `netstandard2.0` hedefi sunarken `net461` için bir hedef eklemeyi düşünün.
 
-> NuGet, geliştirici için en iyi hedef seçin ve bunları uygun uygulama almak zorunda korunamadı.
+> .NET Framework .NET Standard 2,0 ' in kullanılması .NET Framework 4.7.2 giderilen bazı sorunları içerir. Hala .NET Framework 4.6.1-4.7.1 ' de bulunan geliştiriciler için .NET Framework 4.6.1 için oluşturulmuş bir ikili sunarak deneyimi geliştirebilirsiniz.
 
-**✔️ YAPMAK** kullanan bir proje dosyasının `TargetFrameworks` özelliği çoklu sürüm desteği olduğunda.
+**✔️** , bir NuGet paketi kullanarak kitaplığınızı dağıtır.
+
+> NuGet, geliştirici için en iyi hedefi seçer ve uygun uygulamayı seçmek zorunda kalmalarını sağlar.
+
+**✔️** , Çoklu hedefleme bir proje dosyasının `TargetFrameworks` özelliğini kullanır.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -82,17 +111,17 @@ Tüketicileriniz, tek tek çerçeveleri için yapı zorunda korumak için .NET s
 </Project>
 ```
 
-**✔️ DÜŞÜNÜN** kullanarak [MSBuild.Sdk.Extras](https://github.com/onovotny/MSBuildSdkExtras) çoklu sürüm desteği olduğunda UWP ve Xamarin gibi proje dosyanız büyük ölçüde basitleştirir.
+**✔️** , UWP ve Xamarin için Çoklu hedefleme proje dosyanızı büyük ölçüde basitleştirirken [MSBuild. SDK. Extras](https://github.com/onovotny/MSBuildSdkExtras) kullanmayı düşünün.
 
-## <a name="older-targets"></a>Eski hedefleri
+## <a name="older-targets"></a>Daha eski hedefler
 
-.NET, Internet Explorer'ın artık yaygın olarak kullanılan platformları yanı sıra destek dışında uzun hedefleme .NET Framework sürümlerini destekler. Varken değer olabildiğince fazla sayıda hedefe API'leri eksik etrafında çalışmak zorunda ekleyebilirsiniz kitaplığı iş üzerinde ek yükünü önemli yaparak içinde. Çerçeve hedefleme değer bunların erişim ve sınırlamaları dikkate alarak kalmadığında belirli inanıyoruz.
+.NET, artık yaygın olarak kullanılmayan platformların yanı sıra, .NET Framework, destek ve uzun süreli olan sürümlerinin hedeflenmesini destekler. Kitaplığınızın mümkün olduğunca çok sayıda hedef üzerinde çalışmasını sağlamak için bir değer olsa da, eksik API 'Leri geçici olarak çözmek için önemli ölçüde ek yük eklenebilir. Belirli çerçevelerin daha fazla hedeflenmesini ve bunların erişim ve sınırlamalarını göz önünde bulundurduğumuz düşünülmektedir.
 
-**❌ SAĞLAMADIĞI** taşınabilir sınıf kitaplığı (PCL) hedef içerir. Örneğin: `portable-net45+win8+wpa81+wp8`
+**❌** , taşınabilir sınıf KITAPLıĞı (PCL) hedefi içermez. Örneğin: `portable-net45+win8+wpa81+wp8`.
 
-> .NET standard platformlar arası .NET kitaplıkları destekleyen modern yoludur ve PCLs değiştirir.
+> .NET Standard, platformlar arası .NET kitaplıklarını desteklemeye yönelik modern bir yoldur ve PCLs 'yi değiştirir.
 
-**❌ SAĞLAMADIĞI** artık desteklenmeyen bir .NET platformları için hedefler içerir. Örneğin, `SL4`, `WP`.
+**❌** artık desteklenmeyen .net platformları için hedefler dahil değildir. Örneğin, `SL4``WP`.
 
 >[!div class="step-by-step"]
 >[Önceki](get-started.md)

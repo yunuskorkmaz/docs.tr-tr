@@ -1,6 +1,5 @@
 ---
-title: 'Nasıl yapılır: onaltılık dizeler ve sayısal türler arasında dönüştürme- C# Programlama Kılavuzu'
-ms.custom: seodec18
+title: Onaltılık dizeler ve sayısal türler arasında dönüştürme- C# Programlama Kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - hexadecimal strings [C#], converting to numeric type
@@ -8,14 +7,14 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 8b72734f9b617fed2ff65977c9a0e60f46424ae8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0e1f6ad2606b367d369c1c644c947831b2aa8289
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429446"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698527"
 ---
-# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Nasıl yapılır: Onaltılık Dizeler ve Sayısal Türler Arasında Dönüştürme (C# Programlama Kılavuzu)
+# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Onaltılık dizeler ve sayısal türler arasında dönüştürme (C# Programlama Kılavuzu)
 Bu örneklerde aşağıdaki görevlerin nasıl gerçekleştirileceği gösterilmektedir:  
   
 - [Dizedeki](../../language-reference/builtin-types/reference-types.md)her karakterin onaltılık değerini elde edin.  
@@ -57,4 +56,4 @@ Bu örneklerde aşağıdaki görevlerin nasıl gerçekleştirileceği gösterilm
 
 - [Standart Sayısal Biçim Dizeleri](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Türler](./index.md)
-- [Nasıl yapılır: Bir Dizenin Sayısal bir Değeri Temsil Edip Etmediğini Belirleme](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [Bir dizenin sayısal bir değeri temsil edip etmediğini belirleme](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

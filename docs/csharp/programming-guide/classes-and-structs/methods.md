@@ -1,17 +1,16 @@
 ---
 title: Yöntemler- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 318f51afefd780ed7be0ab8c2a72acb5fcf9db15
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699964"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714765"
 ---
 # <a name="methods-c-programming-guide"></a>Yöntemler (C# Programlama Kılavuzu)
 

@@ -2,15 +2,13 @@
 title: .NET Framework Windows 8 ' de yüklemesi
 ms.custom: updateeachrelease
 description: Windows 8 ' de .NET Framework yüklemeyi öğrenin
-author: rlander
-ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: d0ee776fce94988478c8432e265c834ff2082ef0
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0d9afb30088256b6c5c1fd8c0b2c99e3a9760b89
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853893"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716724"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Windows 8 ve Windows Server 2012’de .NET Framework Yükleme
 
@@ -23,7 +21,7 @@ Bu yönergeler, ihtiyacınız olan .NET Framework sürümlerini yüklemenize yar
 ## <a name="net-framework-48"></a>.NET Framework 4,8
 
 > [!div class="button"]
-> [4,8 .NET Framework indirin](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [.NET Framework 4.8'i İndirin](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 4,8 .NET Framework Windows Server 2012 ' de desteklenir. Windows 8 ' de desteklenmez.
 
@@ -35,13 +33,13 @@ Bu yönergeler, ihtiyacınız olan .NET Framework sürümlerini yüklemenize yar
 
 .NET Framework 4,6 ile 4,6 .NET Framework 4,0 için oluşturulmuş uygulamaları destekler.
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 [Windows 8 ve 10 ' a .NET Framework 3,5](dotnet-35-windows-10.md)' ü yüklemek için yönergeleri izleyin.
 
 .NET Framework 3,5 ile 3,5 .NET Framework 1,0 için oluşturulmuş uygulamaları destekler.
 
-## <a name="help"></a>Help
+## <a name="help"></a>Yardım
 
 .NET Framework yüklü olan doğru sürümü alamazsanız, [Yardım Için Microsoft 'a başvurabilirsiniz](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help) .
 

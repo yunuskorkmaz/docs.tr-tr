@@ -9,18 +9,18 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 5d9b09085ed8057f53cae9f9177682b01e698f6d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5679bac06b87b3c4e50cbc4a238d7daf3e33a564
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580715"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636282"
 ---
 # <a name="navigation-topologies-overview"></a>Gezinti Topolojilerine Genel Bakış
-<a name="introduction"></a>Bu genel bakışta [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] içindeki gezinti topolojilerine giriş sağlanır. Örneklerle birlikte üç ortak gezinti topolojisi daha sonra ele alınmıştır.  
+<a name="introduction"></a>Bu genel bakış, WPF 'de gezinti topolojilerine bir giriş sağlar. Örneklerle birlikte üç ortak gezinti topolojisi daha sonra ele alınmıştır.  
   
 > [!NOTE]
-> Bu konuyu okumadan önce, sayfa işlevlerini kullanarak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] yapılandırılmış gezinme kavramıyla ilgili bilgi sahibi olmanız gerekir. Bu konuların her ikisi hakkında daha fazla bilgi için bkz. [yapılandırılmış gezintiye genel bakış](structured-navigation-overview.md).  
+> Bu konuyu okumadan önce, sayfa işlevlerini kullanarak WPF 'de yapılandırılmış gezinme kavramıyla ilgili bilgi sahibi olmanız gerekir. Bu konuların her ikisi hakkında daha fazla bilgi için bkz. [yapılandırılmış gezintiye genel bakış](structured-navigation-overview.md).  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "72580715"
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>Gezinti topolojileri  
- @No__t_0, gezinti tipik olarak, tıklandığı zaman diğer sayfalara gitmek için köprüler (<xref:System.Windows.Documents.Hyperlink>) ile sayfalardan (<xref:System.Windows.Controls.Page>) oluşur. ' Ye gidildiği sayfalar Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) tarafından tanımlanır (bkz. [WPF 'de paket URI 'leri](pack-uris-in-wpf.md)). Sayfaları, köprüleri ve Tekdüzen Kaynak tanımlayıcılarını (URI) gösteren aşağıdaki basit örneği göz önünde bulundurun:  
+ WPF 'de, gezinti genellikle diğer sayfalara tıklanan köprüler (<xref:System.Windows.Documents.Hyperlink>) ile sayfalardan (<xref:System.Windows.Controls.Page>) oluşur. ' Ye gidildiği sayfalar Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) tarafından tanımlanır (bkz. [WPF 'de paket URI 'leri](pack-uris-in-wpf.md)). Sayfaları, köprüleri ve Tekdüzen Kaynak tanımlayıcılarını (URI) gösteren aşağıdaki basit örneği göz önünde bulundurun:  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   

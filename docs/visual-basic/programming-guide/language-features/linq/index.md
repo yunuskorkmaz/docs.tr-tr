@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: ea6754d9d93a7d400ac3494b01b850374e9ec02d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 50d6c9ffb484dfbc6d33ed1a3e9a1f03f240990b
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354174"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636542"
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic'de LINQ
-Bu bölümde, Visual Basic ve [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]anlamanıza ve kullanmanıza yardımcı olacak genel bilgiler, örnekler ve arka plan bilgileri yer almaktadır.  
+Bu bölümde, Visual Basic ve dil ile tümleşik sorgu (LINQ) anlamanıza ve kullanmanıza yardımcı olacak genel bilgiler, örnekler ve arka plan bilgileri yer almaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Visual Basic LINQ 'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcılara, işleçlere, sorgu yapısına ve dil özelliklerine bir giriş sağlar.  
+ LINQ sağlayıcılarına, işleçlere, sorgu yapısına ve dil özelliklerine bir giriş sağlar.  
   
  [Nasıl yapılır: bir veritabanını sorgulama](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md)  
  Bir SQL Server veritabanına bağlanma ve LINQ kullanarak sorgu yürütme hakkında bir örnek sağlar.  

@@ -1,93 +1,92 @@
 ---
-title: .NET Core CLI ile DNX'ten geçiş
-description: .NET Core CLI araçları için araç DNX geçiş.
+title: DNX 'ten .NET Core CLI geçirme
+description: DNX Araçları ' i kullanarak .NET Core CLI Araçları ' na geçirin.
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 0f00ee6c05a47d976028c3cd4eade2b2b399260b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91a43ffda31b34332d2e545a90c857221aa162c4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614237"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715522"
 ---
-# <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>.NET Core CLI (project.json) için DNX'ten geçiş
+# <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>DNX 'ten .NET Core CLI 'e geçme (Project. JSON)
 
-## <a name="overview"></a>Genel Bakış
-.NET Core ve ASP.NET Core 1.0 RC1 sürümünü DNX araçlar kullanıma sunuldu. .NET Core ve ASP.NET Core 1.0 RC2 sürümünü, .NET Core CLI için DNX'ten taşındı.
+## <a name="overview"></a>Genel bakış
+.NET Core 'un RC1 sürümü ve ASP.NET Core 1,0 DNX araçları 'nı kullanıma sunmuştur. .NET Core ve ASP.NET Core 1,0 'nin RC2 sürümü DNX 'ten .NET Core CLI taşındı.
 
-Hafif bilgilerinizi tazelemeniz, şimdi hakkında DNX neydi bilgilerin üzerinden geçelim. Bir çalışma zamanı ve .NET Core ve ASP.NET Core 1.0 uygulamaları daha belirgin olarak oluşturmak için kullanılan bir araç takımı DNX oluştu. Bu 3 ana parçalarını almıştır:
+Küçük bir yenileyici olarak DNX 'in hangi amaçla olduğunu görelim. DNX, .NET Core ve daha özel olarak ASP.NET Core 1,0 uygulamaları oluşturmak için kullanılan bir çalışma zamanı ve bir araç takımıdır. 3 ana parçadan oluşur:
 
-1. DNVM - DNX almak için bir yükleme betiği
-2. DNX (Dotnet yürütme çalışma zamanı) - kod yürüten çalışma zamanı
-3. (Dotnet Geliştirici yardımcı programı) - DNU bağımlılıkları yönetmek, derleme ve uygulamalarınızı yayımlamak için araç kullanımı
+1. DNVM-DNX elde etmek için bir Install betiği
+2. DNX (DotNet yürütme çalışma zamanı)-kodunuzu yürüten çalışma zamanı
+3. DNU (DotNet geliştirici yardımcı programı)-bağımlılıkları yönetmek, uygulamalarınızı oluşturmak ve yayımlamak için araç
 
-CLI'yı sunulmasıyla birlikte, Yukarıdakilerin tümü artık tek bir araç takımı parçasıdır. Ancak, DNX RC1 profilleri'nde kullanılabilir olduğundan, kullanılarak oluşturulan projeler sahip olabileceğiniz yeni CLI kullanımı devre dışı taşımak istediğiniz.
+CLı 'nin tanıtılmasıyla birlikte yukarıdaki tüm bunlar artık tek bir araç takımının parçasıdır. Ancak DNX, RC1 zaman diliminde kullanıma sunulduğundan, yeni CLı araçlarına taşımak istediğiniz tarafından oluşturulan projelere sahip olabilirsiniz.
 
-Bu geçiş kılavuzunda projeleri DNX dışına ve .NET Core CLI üzerine geçirme hakkında temel bilgileri ele alınacaktır. Bu belge, ücretsiz, yalnızca bir proje üzerinde .NET Core baştan başlatıyorsanız atlayabilirsiniz.
+Bu geçiş kılavuzu, projelerin DNX ve .NET Core CLI üzerine nasıl geçirileceğiyle ilgili temel bilgileri kapsar. Yalnızca .NET Core üzerinde bir projeyi sıfırdan başlatıyorsanız, bu belgeyi serbestçe atlayabilirsiniz.
 
-## <a name="main-changes-in-the-tooling"></a>Ana araç değişiklikleri
-İlk özetlenen araç oluşturmada genel bazı değişiklikler vardır.
+## <a name="main-changes-in-the-tooling"></a>Araçdaki ana değişiklikler
+Araç üzerinde ilk olarak özetlenen bazı genel değişiklikler vardır.
 
-### <a name="no-more-dnvm"></a>Daha fazla DNVM yok
-DNVM kısaltması *DotNet sürüm Yöneticisi* olduğu bir DNX makinenizde yüklemek için kullanılan bir bash/PowerShell Betiği. Bu, bunlar belirtilen akış (veya varsayılan değerleri) yanı sıra belirli bir DNX işaretlemek DNX hangi $PATH üzerinde belirli bir oturum için koyabilirsiniz "etkin", kullanıcıların yardımcı olmuştur. Bu, çeşitli araçları kullanmak izin.
+### <a name="no-more-dnvm"></a>Başka DNVM yok
+DNVM, *DotNet sürüm Yöneticisi* için Short, makinenizde DNX yüklemek için kullanılan bir bash/PowerShell betiğiydi. Kullanıcıların, belirtilen oturum için $PATH, belirli bir DNX "etkin" olarak işaretleneceği (veya varsayılan olarak) akışların gereksinim duyduğu DNX 'i almasını ve bu dosyayı verilen oturum için yerleştirmesine yardımcı olur. Bu, çeşitli araçları kullanmanıza olanak sağlar.
 
-Öğrenerek özellik kümesi .NET Core CLI Araçları'nda gelen değişikliklerden yedekli yapıldığı DNVM ürününde kaldırıldı.
+DNVM, özellik kümesi .NET Core CLI araçlarında gelen değişiklikler tarafından yedekli şekilde yapıldığı için kullanımdan kaldırıldı.
 
-CLI araçları iki ana şekilde paketlenmiş birlikte gelir:
+CLı araçları iki ana şekilde paketlenmiş olarak sunulur:
 
-1. Belirli bir platform için yerel yükleyicilerden
-2. Diğer durumlarda (örneğin, CI sunucular) için komut dosyası yükleme
+1. Belirli bir platform için yerel yükleyiciler
+2. Diğer durumlar için betiği (CI sunucuları gibi) yükler
 
-Bunu göz önünde bulundurulduğunda, DNVM yükleme özellikleri gerekli değildir. Ancak çalışma zamanı seçimi özellikleri hakkında neler?
+Bu, DNVM yüklemesi özellikleri gerekli değildir. Çalışma zamanı seçim özellikleriyle ilgili ne var?
 
-Bir çalışma zamanı başvurusu, `project.json` bağımlılıklarınızı için belirli bir sürümü paketi ekleyerek. Bu değişiklik, uygulamanızın yeni bir çalışma zamanı BITS kullanmanız mümkün olacaktır. Bu bit makinenize alma, olduğu gibi CLI ile aynı: destekliyorsa yerel yükleyicilerden birini veya kendi yükleme betiğini yoluyla çalışma zamanını yükleyin.
+Bağımlılıklarınız için belirli bir sürümün paketini ekleyerek `project.json` bir çalışma zamanına başvurabilirsiniz. Bu değişiklik ile, uygulamanız yeni çalışma zamanı bitlerini kullanabilir. Bu bitlerin makinenize alınması CLı ile aynıdır: çalışma zamanını, desteklediği yerel yükleyicilerden biri aracılığıyla veya yükleme betiği aracılığıyla yüklersiniz.
 
-### <a name="different-commands"></a>Farklı komutları
-DNX kullandıysanız, bazı komutlar, üç birinden kullanılan bölümleri (DNX, DNU veya DNVM). CLI ile bu komutlardan bazıları değiştirmek, bazı kullanılamıyor ve bazı aynıdır, ancak biraz farklı semantiğe sahip.
+### <a name="different-commands"></a>Farklı komutlar
+DNX kullanıyorsanız, üç parçadan (DNX, DNU veya DNVM) birindeki bazı komutları kullandınız. CLı ile bu komutlardan bazıları değişmez ve bazıları aynı ancak biraz farklı semantiklerdir.
 
-Aşağıdaki tabloda DNX/DNU komutlar ve CLI karşılıkları arasındaki eşlemeyi gösterir.
+Aşağıdaki tabloda DNX/DNU komutları ve CLı karşılıkları arasındaki eşleme gösterilmektedir.
 
-| DNX komutu                    | CLI komutu    | Açıklama                                                                                                     |
+| DNX komutu                    | CLı komutu    | Açıklama                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
-| dnx çalıştırın                        | dotnet çalıştırın     | Kaynak kodu çalıştırın.                                                                                           |
-| dnu derleme                      | DotNet derleme   | Kodunuzun bir IL ikili oluşturun.                                                                                |
-| dnu paketi                       | DotNet paketi    | Kodunuzu bir NuGet paketi için paketi.                                                                        |
-| dnx \[komut] (örneğin, "dnx web") | YOK\*          | DNX dünyada, project.json içinde tanımlandığı şekilde bir komut çalıştırın.                                                     |
-| dnu yükleme                    | YOK\*          | DNX dünyada, bir bağımlılık olarak bir paket yükleyin.                                                            |
-| dnu geri yükleme                    | DotNet restore | Bağımlılıklar, project.json içinde belirtilen geri yükleyin. ([bkz. Not](#dotnet-restore-note))                                                            |
-| dnu yayımlama                    | DotNet yayımlama | Uygulamanız için dağıtım üç biçimlerden (taşınabilir, bağımsız ve yerel ile taşınabilir) içinde yayımlayın. |
-| dnu kaydırma                       | YOK\*          | DNX dünyada bir project.json packagetargetfallback kaydır.                                                                    |
-| dnu komutları                   | YOK\*          | DNX dünyada, genel olarak yüklenmiş komutları yönetin.                                                           |
+| DNX çalıştırma                        | dotnet run     | Kaynaktaki kodu çalıştırın.                                                                                           |
+| dnu derlemesi                      | dotnet build   | Kodunuzun bir Il ikilisini oluşturun.                                                                                |
+| dnu paketi                       | dotnet pack    | Kodunuzun NuGet paketini paketleyin.                                                                        |
+| DNX \[komutu] (örneğin, "DNX Web") | Yok\*          | DNX dünyasında, Project. JSON içinde tanımlandığı şekilde bir komut çalıştırın.                                                     |
+| dnu yüklemesi                    | Yok\*          | DNX dünyasında, bir paketi bağımlılık olarak yükler.                                                            |
+| dnu geri yükleme                    | dotnet restore | Project. JSON uygulamanızda belirtilen bağımlılıkları geri yükleyin. ([bkz. nota bakın](#dotnet-restore-note))                                                            |
+| dnu yayımlama                    | dotnet publish | Uygulamanızı üç formdan birinde dağıtım için yayımlayın (taşınabilir, yerel ve tek başına taşınabilir). |
+| dnu kaydırması                       | Yok\*          | DNX Dünyası ' de bir proje. json ' u csproj içinde sarın.                                                                    |
+| dnu komutları                   | Yok\*          | DNX dünyasında, genel olarak yüklenen komutları yönetin.                                                           |
 
-(\*)-bu özellikler, tasarımı gereği CLI'daki desteklenmez.
+(\*)-Bu özellikler, tasarıma göre CLı 'da desteklenmez.
 
 ## <a name="dnx-features-that-are-not-supported"></a>Desteklenmeyen DNX özellikleri
-Yukarıda gösterildiği bir tablo olarak CLI, en azından şimdilik desteklemeyen verdik DNX dünyadan özellikler mevcuttur. Bu bölümde, en önemlileri gidin ve ihtiyacınız varsa, bunların yanı sıra geçici çözümler desteklemediğinden arkasında stratejinin özetler.
+Yukarıdaki tabloda gösterildiği gibi, DNX dünyasının, CLı 'de desteklememeye karar verdiğimiz ve en azından süresi için olan özellikler vardır. Bu bölüm, en önemli olanlarından ilerleyenler ve ayrıca, daha sonra ihtiyaç duymaları durumunda bunları desteklememe ve geçici çözümler özetler.
 
-### <a name="global-commands"></a>Genel komutları
-DNU "Genel komutları" adlı bir kavram ile geldi. Bunlar, esas olarak, uygulamayı çalıştırmak için belirtilen DNX çağıracaktır bir kabuk betiği ile NuGet paketleri olarak paketlenir konsol uygulamaları yoktu.
+### <a name="global-commands"></a>Genel komutlar
+DNU, "genel komutlar" adlı bir kavram ile geldi. Bunlar temelde, uygulamayı çalıştırmak için belirttiğiniz DNX 'i çağıran bir kabuk betiği ile NuGet paketleri olarak paketlenmiş konsol uygulamatı.
 
-Bu kavram, CLI'yı desteklemez. Ancak, bilinen kullanılarak etkinleştirilebilir proje başına komutlar ekleme kavramını destekler `dotnet <command>` söz dizimi.
+CLı bu kavramı desteklemez. Ancak, tanıdık `dotnet <command>` sözdizimi kullanılarak çağrılabilecek proje başına komutları ekleme kavramını destekler.
 
 ### <a name="installing-dependencies"></a>Bağımlılıklar yükleniyor
-V1'den itibaren .NET Core CLI araçlara sahip olmadığınızı bir `install` Bağımlılıkların yüklenmesi için komut. Nuget'ten bir paketi yüklemek için bağımlılık olarak eklemeniz gerekecektir, `project.json` dosya ve ardından çalıştırın `dotnet restore` ([bkz. Not](#dotnet-restore-note)).
+V1 itibariyle .NET Core CLI araçları, bağımlılıkları yüklemek için bir `install` komutuna sahip değildir. NuGet 'den bir paket yüklemek için, `project.json` dosyanıza bir bağımlılık olarak eklemeniz ve sonra `dotnet restore` çalıştırmanız gerekir ([bkz. Note](#dotnet-restore-note)).
 
-### <a name="running-your-code"></a>Kodunuzu çalıştıran
-Kodunuzu çalıştırmak için iki ana yolu vardır. İle kaynaktan biridir `dotnet run`. Aksine `dnx run`, herhangi bir bellek içi derleme yapmaz. Aslında çağıracağı `dotnet build` kodunuzu oluşturun ve ardından yerleşik ikili çalıştırın.
+### <a name="running-your-code"></a>Kodunuzu çalıştırma
+Kodunuzu çalıştırmanın iki ana yolu vardır. Biri kaynaktan, `dotnet run`. `dnx run`aksine, bu, bellek içi derleme kullanmaz. Kodu oluşturmak için gerçekten `dotnet build` çağırır ve sonra oluşturulan ikiliyi çalıştırır.
 
-Başka bir yolu kullanarak `dotnet` kendi kodunuzu çalıştırmak için. Bu, derleme için bir yol sağlayarak gerçekleştirilir: `dotnet path/to/an/assembly.dll`.
+Kodunuzu çalıştırmak için `dotnet` başka bir şekilde kullanmaktır. Bu, derlemenizin yolunu sağlayarak yapılır: `dotnet path/to/an/assembly.dll`.
 
-## <a name="migrating-your-dnx-project-to-net-core-cli"></a>DNX projeniz .NET Core CLI sürümüne geçirme
-Yeni komutlar, kod ile çalışırken kullanmanın yanı sıra, DNX'ten geçiş içinde kalan üç önemli noktalar vardır:
+## <a name="migrating-your-dnx-project-to-net-core-cli"></a>DNX projenizi .NET Core CLI geçirme
+Kodunuzla çalışırken yeni komutların kullanılmasına ek olarak, DNX 'ten geçiş sırasında kalan üç önemli nokta vardır:
 
-1. Geçiş `global.json` CLI kullanabilmek için varsa dosya.
-2. Proje dosyası geçirme (`project.json`) kendisi için CLI araçları.
-3. Tüm DNX API'lerine BCL karşılıkları dışına geçiriliyor.
+1. CLı kullanabilmeniz için `global.json` dosyasını geçirin.
+2. Proje dosyasını (`project.json`) CLı araçlarına geçirme.
+3. Herhangi bir DNX API 'sini BCL karşılıklarına geçirme.
 
-### <a name="changing-the-globaljson-file"></a>Global.json dosyasını değiştirme
-`global.json` Dosya RC1 hem RC2 için bir çözüm dosyası gibi davranır (veya üzeri) projeleri. CLI Araçları (yanı sıra Visual Studio) RC1'de ve sonraki sürümler arasında ayırt etmek için sırada kullandıkları `"sdk": { "version" }` hangi proje ayrım yapma özelliği olan RC1 veya üzeri. Varsa `global.json` bu düğüm yok, en son olarak varsayılır.
+### <a name="changing-the-globaljson-file"></a>Global. json dosyasını değiştirme
+`global.json` dosyası, hem RC1 hem de RC2 (veya üzeri) projeleri için bir çözüm dosyası gibi davranır. CLı araçlarının (ve Visual Studio 'Nun yanı sıra) RC1 ve sonraki sürümleri birbirinden ayırt edilebilmesi için `"sdk": { "version" }` özelliğini kullanarak projenin RC1 veya üzeri olduğunu fark edin. `global.json` bu düğümü hiç içermiyorsa, en son olarak kabul edilir.
 
-Güncelleştirmek için `global.json` kaldırabilir ya da özellik dosyası veya bu durumda, kullanmak istediğiniz araçları tam sürüme ayarlayın **1.0.0-preview2-003121**:
+`global.json` dosyasını güncelleştirmek için, özelliği kaldırın ya da kullanmak istediğiniz araçların tam sürümüne ayarlayın, bu örnekte **1.0.0-preview2-003121**:
 
 ```json
 {
@@ -97,11 +96,11 @@ Güncelleştirmek için `global.json` kaldırabilir ya da özellik dosyası veya
 }
 ```
 
-### <a name="migrating-the-project-file"></a>Proje dosyası geçirme
+### <a name="migrating-the-project-file"></a>Proje dosyası geçiriliyor
 
-CLI'yı ve DNX göre aynı temel proje sistemi kullanmak `project.json` dosya. Sözdizimi ve semantiği proje dosyasının tarayıcınızdaki senaryolarını temel alarak küçük farklılıkla aynıdır. De görebileceğiniz gibi şemasında yapılan bazı değişiklikler vardır [şema dosyası](http://json.schemastore.org/project).
+CLı ve DNX her ikisi de `project.json` dosya tabanlı aynı temel proje sistemini kullanır. Proje dosyasının sözdizimi ve semantiği, senaryolara bağlı olarak küçük farklılıklar sayesinde oldukça kolaydır. Şemada, [şema dosyasında](http://json.schemastore.org/project)görebileceğiniz bazı değişiklikler de vardır.
 
-Bir konsol uygulaması oluşturuyorsanız proje dosyanıza aşağıdaki kod parçacığını eklemeniz gerekir:
+Bir konsol uygulaması oluşturuyorsanız, proje dosyanıza aşağıdaki kod parçacığını eklemeniz gerekir:
 
 ```json
 "buildOptions": {
@@ -109,24 +108,24 @@ Bir konsol uygulaması oluşturuyorsanız proje dosyanıza aşağıdaki kod par�
 }
 ```
 
-Bu bildirir `dotnet build` etkili bir şekilde kodunuzu çalıştırılabilir yapma, uygulamanız için bir giriş noktası yayılamıyor. Yalnızca bir sınıf kitaplığı oluşturuyorsanız yukarıdaki bölüme atlayın. Elbette, bir kez eklediğiniz için yukarıdaki kod parçacığında, `project.json` dosyası, bir statik giriş noktası eklemeniz gerekir. DNX kapalı taşıma ile sağlanan DI Hizmetleri artık kullanılamaz ve bu nedenle bu temel bir .NET giriş noktası olması gereken: `static void Main()`.
+Bu, kodunuzu çalıştırılabilir hale getirerek uygulamanız için bir giriş noktası yayma `dotnet build` söyler. Bir sınıf kitaplığı oluşturuyorsanız yukarıdaki bölümü atlayabilirsiniz. Elbette, `project.json` dosyanıza Yukarıdaki kod parçacığını ekledikten sonra bir statik giriş noktası eklemeniz gerekir. Taşınma DNX ile, sağlanan dı Hizmetleri artık kullanılabilir değil ve bu nedenle temel bir .NET giriş noktası olması gerekir: `static void Main()`.
 
-Bir "komutları" bölümü varsa, `project.json`, kaldırabilirsiniz. Entity Framework CLI komutları gibi DNU komutları olarak mevcut için kullanılan komutlardan bazıları CLI için uzantıları proje başına olacak şekilde Taşınmakta. Projelerinizde kullandığınız kendi komutları oluşturulduysa bunları CLI uzantıları ile değiştirmeniz gerekir. Bu durumda, `commands` düğümünde `project.json` tarafından değiştirilmesi gereken `tools` düğüm ve araçları bağımlılıkları listesi gerekiyor.
+`project.json`için bir "komutlar" bölümü varsa, bunu kaldırabilirsiniz. Entity Framework CLı komutları gibi DNU komutlarına sahip olmak için kullanılan komutlardan bazıları, CLı 'ye proje başına uzantılar olarak yönlendirilmekte. Projelerinizde kullandığınız komutları kullandıysanız, bunları CLı uzantıları ile değiştirmeniz gerekir. Bu durumda, `project.json` `commands` düğümünün `tools` düğümü tarafından değiştirilmeleri ve araç bağımlılıklarını listemeleri gerekir.
 
-Bu işlemleri tamamladıktan sonra uygulamanız için istediğiniz taşınabilirlik türünü'ı karar vermeniz gerekir. .NET Core ile biz aralarından seçim yapabileceğiniz taşınabilirlik seçenekleri yelpazesi sağlama içine yatırım yapmış. Örneğin, sahip olmak isteyebilirsiniz bir tam olarak *taşınabilir* uygulama veya sahip olmasını isteyebilir bir *müstakil* uygulama. .NET Framework uygulamaları iş gibi daha fazla taşınabilir uygulama seçeneğini: hedef makinede (.NET Core) yürütmek için paylaşılan bir bileşen gerekir. Kendi içinde uygulama hedefte yüklenmesi .NET Core gerektirmez, ancak desteklemek istediğiniz her bir işletim sistemi için bir uygulama oluşturmak sahip. Bu taşınabilirlik türleri ve daha fazlasını ele alınmıştır [uygulama taşınabilirliği türü](../deploying/index.md) belge.
+Bu işlemler yapıldıktan sonra, uygulamanız için istediğiniz taşınabilirlik türünü belirlemeniz gerekir. .NET Core ile, aralarından seçim yapabileceğiniz bir taşınabilirlik seçenekleri yelpazesi sunduğumuz için yatırım yaptık. Örneğin, tam olarak *Taşınabilir* bir uygulamaya sahip olmak veya *kendi içinde* olan bir uygulamaya sahip olmak isteyebilirsiniz. Taşınabilir uygulama seçeneği .NET Framework uygulamaların çalışması gibidir: Bu, hedef makinede (.NET Core), paylaşılan bir bileşen tarafından yürütülmesi gerekir. Kendi içinde bulunan uygulama, .NET Core 'un hedefe yüklenmesini gerektirmez, ancak desteklemek istediğiniz her işletim sistemi için bir uygulama oluşturmanız gerekir. Bu taşınabilirlik türleri ve daha fazlası, [uygulama taşınabilirlik türü](../deploying/index.md) belgesinde ele alınmıştır.
 
-İstediğiniz taşınabilirlik ne tür bir çağrı yaptıktan sonra hedef çerçeveleri Değiştir gerekir. .NET Core uygulamaları yazıyorsanız, büyük olasılıkla kullanmakta olduğunuz `dnxcore50` , hedeflenen çerçeve. CLI'yı ve değişiklikleri, yeni [.NET Standard](../../standard/net-standard.md) alınırsa, framework aşağıdakilerden biri olması gerekir:
+İstediğiniz taşınabilirlik türüyle ilgili bir çağrı yaptıktan sonra, hedeflenen çatılarınızı değiştirmeniz gerekir. .NET Core için uygulamalar yazıyorsanız, büyük olasılıkla hedeflenen çatısı olarak `dnxcore50` kullanmıştı. CLı ve yeni [.NET Standard](../../standard/net-standard.md) getirilen değişiklikler ile, Framework 'ün aşağıdakilerden biri olması gerekir:
 
-1. `netcoreapp1.0` -.NET Core (ASP.NET Core uygulamaları dahil) uygulamaları yazıyorsanız
-2. `netstandard1.6` -sınıf kitaplıkları için .NET Core yazıyorsanız
+1. `netcoreapp1.0`-.NET Core üzerinde uygulamalar yazıyorsanız (ASP.NET Core uygulamalar dahil)
+2. `netstandard1.6`-.NET Core için sınıf kitaplıkları yazıyorsanız
 
-Diğer kullanıyorsanız `dnx` gibi hedefler `dnx451` olanlar da değiştirmeniz gerekir. `dnx451` değiştirilmelidir `net451`.
-Lütfen [.NET Standard](../../standard/net-standard.md) konusuna bakın.
+Diğer `dnx` hedeflerini kullanıyorsanız `dnx451` gibi bunları da değiştirmeniz gerekir. `dnx451` `net451`olarak değiştirilmelidir.
+Daha fazla bilgi için lütfen [.NET Standard](../../standard/net-standard.md) konusuna bakın.
 
-`project.json` Çoğunlukla hazır hale gelir. Özellikle ASP.NET Core bağımlılıkları kullanıyorsanız, bağımlılıkları listesine göz at ve bağımlılıkları daha yeni sürümlerine güncelleştirme gerekir. BCL API için ayrı paketler kullandıysanız, açıklandığı gibi çalışma zamanı paketi kullanabilirsiniz [uygulama taşınabilirliği türü](../deploying/index.md) belge.
+`project.json` artık çoğunlukla hazırdır. Özellikle ASP.NET Core bağımlılıklar kullanıyorsanız, bağımlılıklar listenizi gözden geçirmeniz ve bağımlılıklarını daha yeni sürümlere güncelleştirmeniz gerekir. BCL API 'Leri için ayrı paketler kullanıyorsanız, çalışma zamanı paketini [uygulama taşınabilirlik türü](../deploying/index.md) belgesinde açıklandığı şekilde kullanabilirsiniz.
 
-Hazır olduğunuzda ile geri yüklemeyi deneyebilirsiniz `dotnet restore` ([bkz. Not](#dotnet-restore-note)). Bağımlılıklarınızı sürümüne bağlı olarak, NuGet bağımlılıklarını yukarıdaki hedeflenen altyapılarından birini çözümleyemezse hatalarla karşılaşabilirsiniz. Bu "-belirli bir noktaya" sorunudur; zaman ilerledikçe daha da fazla paketleri bu çerçeveler için destek içerir. Şimdilik bunu çalıştırırsanız kullanabileceğiniz `imports` deyimi içinde `framework` "alır" deyimi içinde framework hedefleme paketlerinin geri yükleyebilmesi için NuGet belirtmek için düğüm.
-Bu durumda aldığınız geri yükleme hataları içeri aktarmanız gerekir hangi çerçeveleri bildirmek için yeterli bilgi vermelidir. Biraz kaybolan ya da bu yeni varsa, genel olarak, belirtme `dnxcore50` ve `portable-net45+win8` içinde `imports` deyimi ux'in yapmak. Aşağıdaki JSON kod parçacığında, bu gibi sistem gösterilmektedir:
+Hazırsanız, `dotnet restore` ile geri yüklemeyi deneyebilirsiniz ([bkz. nota](#dotnet-restore-note)). Eğer NuGet, yukarıda hedeflenen çerçevelerden birinin bağımlılıklarını çözümleyemezse, bağımlılıklarınızın sürümüne bağlı olarak hatalarla karşılaşabilirsiniz. Bu, "bir noktadan noktaya" sorunudur; zaman ilerledikçe, bu çerçeveler için daha fazla ve daha fazla pakete destek dahil edilir. Şimdilik, bu ' de çalıştırırsanız, "Imports" deyimindeki Framework 'ü hedefleyen paketleri geri yüklemesini yapmak üzere `framework` düğümündeki `imports` ifadesini kullanabilirsiniz.
+Bu durumda aldığınız geri yükleme hataları, size hangi çerçevelerin içeri aktarılacağını söylemek için yeterli bilgi sağlamalıdır. Bu şekilde biraz kaybolur veya yeni bir kez daha varsa, genel olarak `dnxcore50` belirtmek ve `imports` deyimindeki `portable-net45+win8`, eli yapmanız gerekir. Aşağıdaki JSON kod parçacığı şöyle görünür:
 
 ```json
     "frameworks": {
@@ -136,7 +135,7 @@ Bu durumda aldığınız geri yükleme hataları içeri aktarmanız gerekir hang
     }
 ```
 
-Çalışan `dotnet build` var olmamalıdır ancak çok sayıda nihai derleme hataları gösterir. Kodunuzu oluşturmak ve düzgün çalışan sonra teslim Çalıştırıcısı ile test edebilirsiniz. Yürütme `dotnet <path-to-your-assembly>` ve çalıştırın.
+`dotnet build` çalıştırmak son derleme hatalarını gösterir, ancak bu çok fazla sayıda olabilir. Kodunuz doğru bir şekilde oluşturup çalıştırdıktan sonra, Çalıştırıcısı ile test edebilirsiniz. `dotnet <path-to-your-assembly>` yürütün ve çalıştırmayı görüntüleyin.
 
 <a name="dotnet-restore-note"></a>
 

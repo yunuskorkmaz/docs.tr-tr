@@ -1,6 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir Wave dosyasını oynatmak için platform çağırma kullanma- C# Programlama Kılavuzu'
-ms.custom: seodec18
+title: Bir WAV dosyası oynatmak için platform çağırma kullanma- C# Programlama Kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - platform invoke, sound files
@@ -8,16 +7,16 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 6c2313f7b600bc1670c944f6a93868c1bc4c7c16
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3ea90f0739ad45c31e4f25836c9de8e708dff2cc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039321"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700828"
 ---
-# <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Nasıl yapılır: Wave Dosyasını Oynatmak için Platform Çağırma Kullanma (C# Programlama Kılavuzu)
+# <a name="how-to-use-platform-invoke-to-play-a-wav-file-c-programming-guide"></a>Bir WAV dosyası oynatmak için platform çağırma kullanma (C# Programlama Kılavuzu)
 
-Aşağıdaki C# kod örneği, Windows işletim sisteminde bir Wave ses dosyası oynatmak için platform çağırma hizmetleri 'ni nasıl kullanacağınızı göstermektedir.
+Aşağıdaki C# kod örneği, Windows işletim SISTEMINDE bir wav ses dosyası oynatmak için platform çağırma Hizmetleri ' nin nasıl kullanılacağını göstermektedir.
 
 ## <a name="example"></a>Örnek
 
@@ -29,7 +28,7 @@ Bu örnek kod, `winmm.dll``PlaySound` yöntem giriş noktasını `Form1 PlaySoun
 
 [!code-csharp[csProgGuideInterop#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#3)]
 
-## <a name="compiling-the-code"></a>Kodu derleme
+## <a name="compiling-the-code"></a>Kod derleme
 
 1. Visual Studio 'da C# yeni bir Windows Forms uygulama projesi oluşturun ve **WinSound**olarak adlandırın.
 

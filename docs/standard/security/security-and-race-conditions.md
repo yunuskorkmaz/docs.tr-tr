@@ -11,20 +11,18 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8980122acdd069bc840aa09129483a1cb9a379fd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933815"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705879"
 ---
 # <a name="security-and-race-conditions"></a>Güvenlik ve Yarış Durumları
-Başka bir sorun olası güvenlik açıkları yarış koşulları tarafından kötüye alanıdır. Bu gerçekleşebilir birkaç yolu vardır. Aşağıdaki alt konuları Geliştirici kaçınmalısınız ana düşebileceğiniz tuzakları bazıları özetler.  
+Diğer bir konu alanı, yarış koşullarından yararlanılabilen güvenlik delikleri için olası bir konudur. Bunun gerçekleşebileceği çeşitli yollar vardır. İzleyen alt konu, geliştiricinin oluşmaması gereken önemli konuların bazılarını özetler.  
   
-## <a name="race-conditions-in-the-dispose-method"></a>Dispose yöntemi yarış koşulları  
- Bir sınıf, ın **Dispose** yöntemi (daha fazla bilgi için bkz. [çöp toplama](../../../docs/standard/garbage-collection/index.md)) olan eşitlenmemiş, mümkündür içinde temizleme kodu **Dispose** çalıştırılabilir birden fazla Aşağıdaki örnekte gösterildiği gibi kez.  
+## <a name="race-conditions-in-the-dispose-method"></a>Dispose yönteminde yarış koşulları  
+ Bir sınıfın **Dispose** yöntemi (daha fazla bilgi için bkz. [çöp toplama](../../../docs/standard/garbage-collection/index.md)) eşitlenmemişse, **Dispose** içindeki temizleme kodu, aşağıdaki örnekte gösterildiği gibi birden çok kez çalıştırılabilir.  
   
 ```vb  
 Sub Dispose()  
@@ -46,13 +44,13 @@ void Dispose()
 }  
 ```  
   
- Çünkü bu **Dispose** uygulama eşitlenmemiş, mümkündür `Cleanup` ilk iş parçacığı ve önce ikinci bir iş parçacığı tarafından çağrılacak `_myObj` ayarlanır **null**. Bu bir güvenlik sorunu olup olmadığını bağlıdır ne olur olduğunda `Cleanup` kodu çalıştırır. Önemli bir sorun ile eşitlenmemiş **Dispose** uygulamaları dosyalar gibi kaynak tanıtıcıları kullanımını içerir. Hatalı elden çıkarma, genellikle güvenlik açıklarını müşteri adayları kullanılmak üzere yanlış tanıtıcı neden olabilir.  
+ Bu **Dispose** uygulamasının eşitlenmediği için, ilk bir iş parçacığı tarafından `Cleanup` ve ardından `_myObj` **null**olarak ayarlanmadan önce ikinci bir iş parçacığının çağrılması mümkündür. Bunun bir güvenlik sorunu olup olmadığı, `Cleanup` kodu çalıştırıldığında ne olacağı hakkında farklılık gösterir. Eşitlenmemiş **Dispose** uygulamalarıyla ilgili önemli bir sorun, dosyalar gibi kaynak tanıtıcılarının kullanımını içerir. Hatalı bırakma yanlış tanıtıcı kullanılmasına neden olabilir, bu da genellikle güvenlik açıklarına yol açar.  
   
-## <a name="race-conditions-in-constructors"></a>Oluşturucularda yarış durumları  
- Bazı uygulamalarda, sınıf oluşturucuları tamamen çalıştırmadan önce sınıf üyelerinin erişmek diğer iş parçacıkları için mümkün olabilir. Bu durum veya gerekirse iş parçacığı eşitleme, hiçbir güvenlik sorunu olduğundan emin olmak için tüm sınıf oluşturucuları gözden geçirmeniz gerekir.  
+## <a name="race-conditions-in-constructors"></a>Oluşturuculardaki yarış koşulları  
+ Bazı uygulamalarda, sınıf oluşturucularının tamamen çalıştırılmasından önce diğer iş parçacıklarının sınıf üyelerine erişmesi mümkün olabilir. Bu durum oluşursa herhangi bir güvenlik sorunu olmadığından emin olmak için tüm sınıf oluşturucularını gözden geçirmeniz ve gerekirse iş parçacıklarını eşitlemeniz gerekir.  
   
-## <a name="race-conditions-with-cached-objects"></a>Önbelleğe alınan nesneleri ile yarış durumları  
- Güvenlik bilgileri önbelleğe alır veya kod erişimi güvenliği kullanan kod [Assert](../../../docs/framework/misc/using-the-assert-method.md) işlem de olabilir yarış durumlarını savunmasız sınıfı diğer bölümlerini uygun şekilde eşitlenmemişse, aşağıdaki örnekte gösterildiği gibi.  
+## <a name="race-conditions-with-cached-objects"></a>Önbelleğe alınmış nesneleri olan yarış koşulları  
+ Aşağıdaki örnekte gösterildiği gibi, güvenlik bilgilerini önbelleğe alan veya kod erişimi güvenlik [onayı](../../../docs/framework/misc/using-the-assert-method.md) işlemini kullanan kod, sınıfın diğer kısımları uygun şekilde eşitlenmiyorsa yarış koşullarına açık de olabilir.  
   
 ```vb  
 Sub SomeSecureFunction()  
@@ -97,12 +95,12 @@ void DoOtherWork()
 }  
 ```  
   
- Diğer yollara varsa `DoOtherWork` aynı nesneye sahip başka bir iş parçacığından çağrılabilir, güvenilmeyen bir çağıranın isteğe bağlı Koçan.  
+ Aynı nesneye sahip başka bir iş parçacığından çağrılabilecek `DoOtherWork` başka yollar varsa, güvenilmeyen bir arayan bir talebi geçmiş olabilir.  
   
- Kodunuzu güvenlik bilgilerini önbelleğe alıyorsa, bu güvenlik açığı için incelemeyi unutmayın.  
+ Kodunuz güvenlik bilgilerini önbelleğe alıyorsa, bu güvenlik açığı için gözden geçirdiğinizden emin olun.  
   
-## <a name="race-conditions-in-finalizers"></a>Sonlandırıcılar yarış koşulları  
- Ardından nesnenin Sonlandırıcısı serbest bırakan bir statik veya yönetilmeyen kaynağa başvuran bir nesnedeki yarış durumları da meydana gelebilir. Nesneleri, birden çok nesne bir sınıfın Sonlandırıcı içinde yönetilen bir kaynak paylaşıyorsanız, tüm bu kaynağa erişimi eşitlemeniz gerekir.  
+## <a name="race-conditions-in-finalizers"></a>Sonlandırıcılar içindeki yarış koşulları  
+ Yarış koşulları, bir statik veya yönetilmeyen kaynağa başvuruda bulunan bir nesnede, daha sonra sonlandırıcıda boşaldığı bir nesne içinde de gerçekleşebilir. Birden çok nesne, bir sınıfın sonlandırıcıda yönetilen bir kaynağı paylaşıyorsa, nesnelerin bu kaynağa tüm erişimi eşitlemesi gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

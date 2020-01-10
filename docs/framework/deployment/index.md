@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 04cbfb8d41135b57c3e090959e041f95fcda2840
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975688"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716472"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework ve Uygulamaları Dağıtma
 
@@ -60,7 +58,7 @@ Bu makale, .NET Framework uygulamanıza dağıtmaya başlamanıza yardımcı olu
 
 - .NET Framework dağıtma (OEM 'Ler ve yöneticiler için):
 
-  - [Windows değerlendirme ve Dağıtım Seti (ADK)](https://go.microsoft.com/fwlink/p/?LinkId=254976)
+  - [Windows Assessment and Deployment Kit (ADK)](https://go.microsoft.com/fwlink/p/?LinkId=254976)
 
   - [Yönetici Kılavuzu](guide-for-administrators.md)
 
@@ -136,7 +134,7 @@ Bu makale, .NET Framework uygulamanıza dağıtmaya başlamanıza yardımcı olu
 
      Bu seçenekle, Windows Installer ile kullanmak üzere. msi dosyaları oluşturur veya uygulamanızı başka bir yükleyiciyle kullanmak üzere paketlemenize yardımcı olursunuz.
 
-### <a name="distribution"></a>Dağılı
+### <a name="distribution"></a>Dağıtım
 
 .NET Framework, uygulamaları dağıtmak için aşağıdaki seçenekleri sağlar:
 
@@ -165,7 +163,7 @@ Güvenlik konuları, uygulamanızı nasıl dağıtabileceğinizi da etkileyebili
 |[Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](how-the-runtime-locates-assemblies.md)|Ortak dil çalışma zamanının, bir bağlama isteğini karşılamak için hangi derlemeyi kullanacağınızı nasıl belirlediğini açıklar.|
 |[Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](best-practices-for-assembly-loading.md)|<xref:System.InvalidCastException>, <xref:System.MissingMethodException>ve diğer hatalara yol açabilecek kimlik tür sorunlarından kaçınmanın yollarını açıklar.|
 |[.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](reducing-system-restarts.md)|Mümkün olan her durumda yeniden başlatma Işlemini önleyen ve .NET Framework yükleyen uygulamaların nasıl yararlanacağı açıklanmaktadır.|
-|[Yöneticiler için Dağıtım Kılavuzu](guide-for-administrators.md)|Bir sistem yöneticisinin, System Center Configuration Manager (SCCM) kullanarak bir ağ üzerinde .NET Framework ve sistem bağımlılıklarını nasıl dağıtabilebileceğini açıklar.|
+|[Yöneticiler için Dağıtım Kılavuzu](guide-for-administrators.md)|Bir sistem yöneticisinin, Microsoft uç nokta Configuration Manager kullanarak bir ağ üzerinde .NET Framework ve sistem bağımlılıklarını nasıl dağıtabilebileceğini açıklar.|
 |[Geliştiriciler için Dağıtım Kılavuzu](deployment-guide-for-developers.md)|Geliştiricilerin kullanıcıların bilgisayarlarına uygulamalarına .NET Framework nasıl yükleyebileceğini açıklar.|
 |[Uygulamaları, Hizmetleri ve Bileşenleri Dağıtma](/visualstudio/deployment/deploying-applications-services-and-components)|ClickOnce ve Windows Installer teknolojilerini kullanarak uygulama yayımlama yönergeleri de dahil olmak üzere Visual Studio 'da dağıtım seçeneklerini açıklar.|
 |[ClickOnce Uygulamalarını Yayımlama](/visualstudio/deployment/publishing-clickonce-applications)|Bir Windows Forms uygulamasının nasıl paketleneceğini ve bir ağdaki istemci bilgisayarlara ClickOnce ile nasıl dağıtılacağını açıklar.|

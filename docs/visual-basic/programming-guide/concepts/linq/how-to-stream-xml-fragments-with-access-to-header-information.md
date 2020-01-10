@@ -2,17 +2,17 @@
 title: 'Nasıl yapılır: üst bilgi bilgilerine erişimi olan XML parçalarını akışa alma'
 ms.date: 07/20/2015
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-ms.openlocfilehash: 489e128e86a47e0e7f76c14a6cf1baf80fb0c406
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 325609b9f8cf1feebcb4be1fcfd0122e12100156
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332460"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636698"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Nasıl yapılır: üst bilgi bilgilerine erişimi olan XML parçalarını akışa alma (Visual Basic)
 Bazen rastgele büyük XML dosyalarını okumanız ve uygulamanın bellek parmak izin tahmin edilebilir olması için uygulamanızı yazmanız gerekir. Bir XML ağacını büyük bir XML dosyası ile doldurmayı denerseniz, bellek kullanımınız dosyanın boyutuyla orantılıdır; yani çok fazla. Bu nedenle, bunun yerine bir akış tekniği kullanmanız gerekir.  
   
- Bir seçenek <xref:System.Xml.XmlReader>kullanarak uygulamanızı yazmaktır. Ancak, XML ağacını sorgulamak için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kullanmak isteyebilirsiniz. Bu durumda, kendi özel eksen yönteminizi yazabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: LINQ to XML eksen yöntemi yazma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Bir seçenek <xref:System.Xml.XmlReader>kullanarak uygulamanızı yazmaktır. Ancak, XML ağacını sorgulamak için LINQ kullanmak isteyebilirsiniz. Bu durumda, kendi özel eksen yönteminizi yazabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: LINQ to XML eksen yöntemi yazma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
  Kendi eksen yönteminizi yazmak için, ilgilendiğiniz düğümlerin birine ulaşıncaya kadar düğümleri okumak için <xref:System.Xml.XmlReader> kullanan küçük bir yöntem yazarsınız. Daha sonra yöntemi, <xref:System.Xml.XmlReader> okuyan ve bir XML parçasını örnekleyen <xref:System.Xml.Linq.XNode.ReadFrom%2A>çağırır. Daha sonra özel eksen yönteinizde LINQ sorguları yazabilirsiniz.  
   

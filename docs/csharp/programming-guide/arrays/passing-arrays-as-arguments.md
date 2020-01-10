@@ -1,58 +1,57 @@
 ---
-title: Dizileri bağımsız değişkenler olarak - geçirme C# Programlama Kılavuzu
-ms.custom: seodec18
+title: Dizileri bağımsız değişkenler olarak geçirme C# -Programlama Kılavuzu
 ms.date: 07/05/2018
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-ms.openlocfilehash: 1538988c1145a19055074b440f04cbaac4ef7aa7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e53008910a9062ada25680eb4b8e54a225fd226
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651993"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705697"
 ---
-# <a name="passing-arrays-as-arguments-c-programming-guide"></a>Dizileri bağımsız değişkenler (C# programlama Kılavuzu) olarak geçirme
+# <a name="passing-arrays-as-arguments-c-programming-guide"></a>Dizileri bağımsız değişkenler olarak geçirmeC# (Programlama Kılavuzu)
 
-Dizileri bağımsız değişkenler olarak yöntemi parametrelerine geçirilebilir. Yöntemi, diziler, başvuru türleri olduğundan, öğelerin değerini değiştirebilirsiniz.
+Diziler, yöntem parametrelerine bağımsız değişken olarak geçirilebilir. Diziler başvuru türleri olduğundan, yöntemi öğelerinin değerini değiştirebilir.
 
 ## <a name="passing-single-dimensional-arrays-as-arguments"></a>Tek boyutlu dizileri bağımsız değişkenler olarak geçirme
 
-Başlatılmış bir tek boyutlu dizi için bir yöntem geçirebilirsiniz. Örneğin, aşağıdaki deyim, yazdırma bir yönteme bir dizi gönderir.
+Başlatılmış bir tek boyutlu diziyi bir yönteme geçirebilirsiniz. Örneğin, aşağıdaki ifade bir PRINT yöntemine bir dizi gönderir.
 
 [!code-csharp[csProgGuideArrays#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#34)]
 
-Aşağıdaki kod, yazdırma yöntemin kısmi bir uygulamasını gösterir.
+Aşağıdaki kod, Print yönteminin kısmi bir uygulamasını gösterir.
 
 [!code-csharp[csProgGuideArrays#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#33)]
 
-Başlatın ve aşağıdaki örnekte gösterildiği gibi bir adım, yeni bir dizi geçirin.
+Aşağıdaki örnekte gösterildiği gibi, yeni bir diziyi tek bir adımda başlatabilir ve geçirebilirsiniz.
 
 [!code-csharp[CsProgGuideArrays#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#35)]
 
 ### <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, dize dizisi başlatılır ve bağımsız değişken olarak geçirilen bir `DisplayArray` dizeler için yöntemi. Yöntemi, dizinin öğeleri görüntüler. Ardından, `ChangeArray` yöntemi, dizi öğelerinin tersine çevirir ve ardından `ChangeArrayElements` yöntemi, dizinin ilk üç öğeleri değiştirir. Her yöntemin dönüşünün ardından `DisplayArray` yöntemi bir dizi değere göre geçirme değişiklikleri dizi öğelerine engellemez olduğunu gösterir.
+Aşağıdaki örnekte, dizeler dizisi başlatılır ve dizeler için bir `DisplayArray` metoduna bir bağımsız değişken olarak geçirilir. Yöntemi, dizinin öğelerini görüntüler. Sonra `ChangeArray` yöntemi dizi öğelerini tersine çevirir ve sonra `ChangeArrayElements` yöntemi dizinin ilk üç öğesini değiştirir. Her yöntemin döndürdüğü `DisplayArray` yöntemi, diziyi değere göre geçirmenin dizi öğelerinde değişiklik yapılmasını önleyemediğini gösterir.
 
 [!code-csharp[csProgGuideArrays#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/ArrayExample.cs)]
 
-## <a name="passing-multidimensional-arrays-as-arguments"></a>Çok boyutlu diziler bağımsız değişken olarak geçirme
+## <a name="passing-multidimensional-arrays-as-arguments"></a>Çok boyutlu dizileri bağımsız değişken olarak geçirme
 
-Başlatılmış bir çok boyutlu dizi tek boyutlu dizi geçirdiğiniz aynı şekilde bir yönteme geçirin.
+Başlatılmış bir çok boyutlu diziyi, tek boyutlu bir diziyi geçirdiğiniz şekilde bir yönteme geçirirsiniz.
 
 [!code-csharp[csProgGuideArrays#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#41)]
 
-Aşağıdaki kod iki boyutlu bir dizi bağımsız değişken olarak kabul eden bir yazdırma yöntemin kısmi bir bildirimi gösterir.
+Aşağıdaki kod, bağımsız değişkeni olarak iki boyutlu bir diziyi kabul eden bir Print yönteminin kısmi bildirimini gösterir.
 
 [!code-csharp[csProgGuideArrays#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#36)]
 
-Başlatın ve aşağıdaki örnekte gösterildiği gibi bir adım, yeni bir dizi geçirin:
+Aşağıdaki örnekte gösterildiği gibi, yeni bir diziyi tek bir adımda başlatabilir ve geçirebilirsiniz:
 
 [!code-csharp[csProgGuideArrays#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#32)]
 
 ### <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, iki boyutlu bir tamsayı dizisi başlatılır ve geçirilen `Print2DArray` yöntemi. Yöntemi, dizinin öğeleri görüntüler.
+Aşağıdaki örnekte, iki boyutlu bir tamsayılar dizisi başlatılır ve `Print2DArray` yöntemine geçirilir. Yöntemi, dizinin öğelerini görüntüler.
 
 [!code-csharp[csProgGuideArrays#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#31)]
 

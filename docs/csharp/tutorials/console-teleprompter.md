@@ -4,14 +4,14 @@ description: Bu öğretici, .NET Core ve bu C# dilin çeşitli özelliklerini ö
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 2b9948ce22eb221d9d757fcec4c556d365469fdf
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 921c8fc7824bdb48f08e4d9f5a276bf2284f8a17
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039258"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714599"
 ---
-# <a name="console-application"></a>Konsol Uygulaması
+# <a name="console-app"></a>Konsol uygulaması
 
 Bu öğretici, .NET Core ve bu C# dilin çeşitli özelliklerini öğretir. Şunları öğreneceksiniz:
 
@@ -27,10 +27,11 @@ Bu öğreticide birçok özellik vardır. Bunları birer birer oluşturalım.
 
 ## <a name="prerequisites"></a>Prerequisites
 
-.NET Core 'u çalıştırmak için makinenizi ayarlamanız gerekir. Yükleme yönergelerini [.NET Core İndirmeleri](https://dotnet.microsoft.com/download) sayfasında bulabilirsiniz. Bu uygulamayı Windows, Linux, macOS veya bir Docker kapsayıcısında çalıştırabilirsiniz.
-En sevdiğiniz kod düzenleyicinizi yüklemeniz gerekir.
+- Makinenizi .NET Core çalıştıracak şekilde ayarlayın. Yükleme yönergelerini [.NET Core İndirmeleri](https://dotnet.microsoft.com/download) sayfasında bulabilirsiniz. Bu uygulamayı Windows, Linux, macOS veya Docker kapsayıcısında çalıştırabilirsiniz.
 
-## <a name="create-the-application"></a>Uygulamayı oluşturma
+- En sevdiğiniz kod düzenleyicinizi yükler.
+
+## <a name="create-the-app"></a>Uygulama oluşturma
 
 İlk adım yeni bir uygulama oluşturmaktır. Bir komut istemi açın ve uygulamanız için yeni bir dizin oluşturun. Geçerli dizini oluşturun. Komut istemine komut `dotnet new console` yazın. Bu, temel bir "Merhaba Dünya" uygulaması için başlangıç dosyalarını oluşturur.
 
@@ -40,8 +41,7 @@ Değişiklik yapmaya başlamadan önce, basit Merhaba Dünya uygulamasını çal
 
 Paketleri geri yükledikten sonra `dotnet build`çalıştırırsınız. Bu, yapı altyapısını yürütür ve uygulamanızı çalıştırılabilir olarak oluşturur. Son olarak, uygulamanızı çalıştırmak için `dotnet run` yürütün.
 
-Basit Merhaba Dünya uygulama kodu Program.cs ' de bulunur. Bu dosyayı en sevdiğiniz metin düzenleyicinizle açın. İlk değişikliklerimizi yapmak bizim için çalışıyoruz.
-Dosyanın en üstünde, bkz. using deyimleri:
+Basit Merhaba Dünya uygulama kodu Program.cs ' de bulunur. Bu dosyayı en sevdiğiniz metin düzenleyicinizle açın. İlk değişikliklerimizi yapmak bizim için çalışıyoruz. Dosyanın en üstünde, bkz. using deyimleri:
 
 ```csharp
 using System;
@@ -156,8 +156,7 @@ if (lineLength > 70)
 
 ## <a name="async-tasks"></a>Zaman uyumsuz görevler
 
-Bu son adımda, çıktıyı zaman uyumsuz olarak bir görevde yazacak şekilde, Ayrıca metin görüntüsünü hızlandırmak veya yavaşlatacak şekilde Kullanıcı girişini okumak için başka bir görevi çalıştırırken, metin görüntülemeyi tamamen durdurmak için kodu ekleyeceksiniz. Bunun içinde ve sonunda birkaç adım vardır, ihtiyacınız olan tüm güncelleştirmelere sahip olacaksınız.
-İlk adım, dosyayı okuyup görüntülemesi için oluşturduğunuz kodu temsil eden zaman uyumsuz <xref:System.Threading.Tasks.Task> döndüren bir yöntem oluşturmaktır.
+Bu son adımda, çıktıyı zaman uyumsuz olarak bir görevde yazacak şekilde, Ayrıca metin görüntüsünü hızlandırmak veya yavaşlatacak şekilde Kullanıcı girişini okumak için başka bir görevi çalıştırırken, metin görüntülemeyi tamamen durdurmak için kodu ekleyeceksiniz. Bunun içinde ve sonunda birkaç adım vardır, ihtiyacınız olan tüm güncelleştirmelere sahip olacaksınız. İlk adım, dosyayı okuyup görüntülemesi için oluşturduğunuz kodu temsil eden zaman uyumsuz <xref:System.Threading.Tasks.Task> döndüren bir yöntem oluşturmaktır.
 
 Bu yöntemi `Program` sınıfa ekleyin (`Main` yönteminizin gövdesinden alınır):
 
@@ -176,8 +175,7 @@ private static async Task ShowTeleprompter()
 }
 ```
 
-İki değişiklik fark edeceksiniz. İlk olarak, yöntemin gövdesinde, bir görevin bitmesini zaman uyumlu olarak beklemek <xref:System.Threading.Tasks.Task.Wait> yerine, bu sürüm `await` anahtar sözcüğünü kullanır. Bunu yapmak için yöntem imzasına `async` değiştiricisini eklemeniz gerekir. Bu yöntem bir `Task`döndürür. `Task` nesnesi döndüren bir dönüş deyimi olmadığına dikkat edin. Bunun yerine, `Task` nesnesi, `await` işlecini kullandığınızda derleyicinin oluşturduğu kodla oluşturulur. Bu yöntemin, bir `await`ulaştığında döndürdüğünü düşünün. Döndürülen `Task`, çalışmanın tamamlanmadığını gösterir.
-Yöntemi, beklenen görev tamamlandığında devam eder. Tamamlanmayı yürütüldüğünde, döndürülen `Task` tamamlandığını gösterir.
+İki değişiklik fark edeceksiniz. İlk olarak, yöntemin gövdesinde, bir görevin bitmesini zaman uyumlu olarak beklemek <xref:System.Threading.Tasks.Task.Wait> yerine, bu sürüm `await` anahtar sözcüğünü kullanır. Bunu yapmak için yöntem imzasına `async` değiştiricisini eklemeniz gerekir. Bu yöntem bir `Task`döndürür. `Task` nesnesi döndüren bir dönüş deyimi olmadığına dikkat edin. Bunun yerine, `Task` nesnesi, `await` işlecini kullandığınızda derleyicinin oluşturduğu kodla oluşturulur. Bu yöntemin, bir `await`ulaştığında döndürdüğünü düşünün. Döndürülen `Task`, çalışmanın tamamlanmadığını gösterir. Yöntemi, beklenen görev tamamlandığında devam eder. Tamamlanmayı yürütüldüğünde, döndürülen `Task` tamamlandığını gösterir.
 Çağıran kod, ne zaman tamamlandığını öğrenmek için döndürülen `Task` izleyebilir.
 
 `Main` yönteminde bu yeni yöntemi çağırabilirsiniz:
@@ -219,8 +217,7 @@ private static async Task GetInput()
 }
 ```
 
-Bu, konsolundan bir anahtar okuyan bir <xref:System.Action> temsilcisini temsil eden bir lambda ifadesi oluşturur ve Kullanıcı ' < ' (küçüktür) veya ' > ' (büyüktür) tuşlarından sonra gelen gecikmeyi temsil eden yerel bir değişkeni değiştirir. Temsilci yöntemi, Kullanıcı ' X ' veya ' x ' tuşlarına bastığında sona erdiğinde, kullanıcının metin görüntüsünü istediğiniz zaman durdurmasına izin verir.
-Bu yöntem, engellemek için <xref:System.Console.ReadKey> kullanır ve kullanıcının bir tuşa basması için bekleyin.
+Bu, konsolundan bir anahtar okuyan bir <xref:System.Action> temsilcisini temsil eden bir lambda ifadesi oluşturur ve Kullanıcı ' < ' (küçüktür) veya ' > ' (büyüktür) tuşlarından sonra gelen gecikmeyi temsil eden yerel bir değişkeni değiştirir. Temsilci yöntemi, Kullanıcı ' X ' veya ' x ' tuşlarına bastığında sona erdiğinde, kullanıcının metin görüntüsünü istediğiniz zaman durdurmasına izin verir. Bu yöntem, engellemek için <xref:System.Console.ReadKey> kullanır ve kullanıcının bir tuşa basması için bekleyin.
 
 Bu özelliği bitirebilmeniz için, bu görevlerin her ikisini de (`GetInput` ve `ShowTeleprompter`) Başlatan yeni bir `async Task` döndürme yöntemi oluşturmanız ve ayrıca bu iki görev arasındaki paylaşılan verileri de yönetmesi gerekir.
 
@@ -314,7 +311,6 @@ RunTeleprompter().Wait();
 
 ## <a name="conclusion"></a>Sonuç
 
-Bu öğreticide, C# dil etrafındaki ve konsol uygulamalarında çalışmaya yönelik .NET Core kitaplıklarının çeşitli özellikleri gösterildi.
-Bu bilgiyi, dil ve burada tanıtılan sınıflar hakkında daha fazla bilgi için oluşturabilirsiniz. Dosya ve konsol g/ç, görev tabanlı zaman uyumsuz programlama ile ilgili temel bilgileri, C# dilin bir turuna ve programların nasıl C# düzenlendiğini ve .NET Core komut satırı arabirimini ve araçlarını gördünüz.
+Bu öğreticide, C# dil etrafındaki ve konsol uygulamalarında çalışmaya yönelik .NET Core kitaplıklarının çeşitli özellikleri gösterildi. Bu bilgiyi, dil ve burada tanıtılan sınıflar hakkında daha fazla bilgi için oluşturabilirsiniz. Dosya ve konsol g/ç, görev tabanlı zaman uyumsuz programlama ile ilgili temel bilgileri, C# dilin bir turuna ve programların nasıl C# düzenlendiğini ve .NET Core komut satırı arabirimini ve araçlarını gördünüz.
 
 Dosya g/ç hakkında daha fazla bilgi için bkz. [dosya ve akış g/ç](../../standard/io/index.md) konusu. Bu öğreticide kullanılan zaman uyumsuz programlama modeli hakkında daha fazla bilgi için [görev tabanlı zaman uyumsuz programlama](../..//standard/parallel-programming/task-based-asynchronous-programming.md) konusuna ve [zaman uyumsuz programlama](../async.md) konusuna bakın.

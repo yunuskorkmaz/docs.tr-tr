@@ -6,43 +6,42 @@ helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-author: KrzysztofCwalina
-ms.openlocfilehash: e4ed4fd39a9ebd63b9d5dbff38dc15647d65934f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d5cdbfdb38c7aebaca6cbcdeb63959ac12884e0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026327"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709133"
 ---
 # <a name="property-design"></a>Özellik Tasarımı
-Özellikleri teknik yöntemlere benzer olsa da, bunlar kendi kullanım senaryoları açısından oldukça farklıdır. Bunlar, akıllı alanları olarak başlatmasında gösterilmelidir. Alanları arama söz dizimi ve yöntemleri esnekliğini sahiptirler.  
+Özellikler teknik açıdan yöntemlere çok benzer olsa da, bunlar kullanım senaryolarında oldukça farklıdır. Akıllı alanlar olarak görülenmelidir. Alanların çağırma söz dizimi ve yöntemlerin esnekliği vardır.  
   
  **✓ DO** çağıran özelliğin değerini değiştirmek açmaması gereken, yalnızca get özellikleri oluşturun.  
   
- Türü olmadığını aklınızda bulundurun özelliği kesilebilir başvuru türü, özellik değeri salt alma özelliği olsa bile değiştirilebilir.  
+ Özelliğin türü kesilebilir bir başvuru türü ise, özellik salt al olsa bile Özellik değerinin değiştirilebileceğini aklınızda bulundurun.  
   
  **X DO NOT** alıcı daha geniş erişilebilirlik sahip ayarlayıcı yalnızca küme özellikleri veya özellikleri sağlar.  
   
- Örneğin, özellikler, genel bir Ayarlayıcısı ve korumalı bir alıcı ile kullanmayın.  
+ Örneğin, özellikleri ortak bir ayarlayıcı ve korumalı bir alıcı ile birlikte kullanmayın.  
   
- Özellik Get yordamı sağlanan, bir yöntem işlevselliği bunun yerine uygulayın. Yöntem adı ile başlamayı düşünün `Set` ne özelliği adlı ile izleyin. Örneğin, <xref:System.AppDomain> adlı bir yöntem olan `SetCachePath` adlı yalnızca kümesi özelliği yerine `CachePath`.  
+ Özellik alıcısı sağlanmadıysa, işlevi bir yöntem olarak uygulayın. Yöntem adını `Set` ile başlatmayı ve özelliği adlandırdıklarınızı takip etmeyi düşünün. Örneğin <xref:System.AppDomain>, `CachePath`adlı salt ayarlı bir özelliği olması yerine `SetCachePath` adlı bir yönteme sahiptir.  
   
  **✓ DO** tüm özellikleri, varsayılan bir güvenlik açığı veya çok verimsiz kodu yol açmamasını sağlamak için duyarlı varsayılan değerler sağlayın.  
   
  **✓ DO** bu nesne bir geçici geçersiz durumda sonuçları olsa bile herhangi bir sırada ayarlanacak özellikler izin verir.  
   
- Aynı nesne üzerinde diğer özelliklerin değerlerine burada bazı özellik değerlerini geçersiz olabilir bir noktaya birbiriyle ilişkili iki veya daha fazla özelliklerini yaygındır. Birbiriyle ilişkili özellikleri gerçekten birlikte nesne tarafından kullanılan kadar bu gibi durumlarda, geçersiz durumdan kaynaklanan özel durumları ertelenebiliyorsa.  
+ İki veya daha fazla özelliğin, bir özelliğin bazı değerlerinin aynı nesne üzerindeki diğer özelliklerin değerleri verildiğinde geçersiz olabileceği bir nokta ile ilişkili olması yaygındır. Bu gibi durumlarda, ilişkili özellikler gerçekten nesne tarafından birlikte kullanıldığından, geçersiz durumdan kaynaklanan özel durumlar ertelenmelidir.  
   
  **✓ DO** özellik set yordamı bir özel durum oluşturursa önceki değeri korumak.  
   
  **X AVOID** özellik alıcıları özel durumları atma.  
   
- Özellik alıcılar basit işlemler olmalıdır ve tüm önkoşullara sahip olmamalıdır. Bir alıcı bir özel durum oluşturabilecek, bir yöntem için büyük olasılıkla tasarlanması gerekir. Bu kural, dizin oluşturucular, bağımsız değişkenleri doğrulamak sonucunda özel durumlar nerede bekliyoruz uygulanmaz dikkat edin.  
+ Özellik alıcıları basit işlemler olmalıdır ve herhangi bir önkoşullara sahip olmamalıdır. Alıcı bir özel durum oluştur, büyük olasılıkla bir yöntem olarak yeniden tasarlanması gerekir. Bu kuralın, bağımsız değişkenlerin doğrulanması sonucunda özel durumlar beklediğimiz Dizin oluşturucular için uygulanmadığından emin olun.  
   
-### <a name="indexed-property-design"></a>Dizinlenmiş özellik tasarımı  
- Dizini oluşturulmuş özelliğe parametrelerine sahip olabilir ve dizi dizini oluşturma için benzer bir özel sözdizimi ile çağrılabilen özel bir özelliktir.  
+### <a name="indexed-property-design"></a>Dizinli özellik tasarımı  
+ Dizinli bir özellik, parametrelere sahip olabilecek ve dizi dizine benzer özel söz dizimi ile çağrılabilen özel bir özelliktir.  
   
- Dizinli Özellikler, dizin oluşturucular yaygın olarak adlandırılır. Dizin oluşturucular mantıksal bir koleksiyondaki öğelerin erişim sağlayan API kullanılmalıdır. Örneğin, bir dizi karakter ve dizin oluşturucusunda bir dize olan <xref:System.String?displayProperty=nameWithType> kendi karakterlerin erişmek için eklendi.  
+ Dizinli özellikler genellikle Dizin oluşturucular olarak adlandırılır. Dizin oluşturucular yalnızca bir mantıksal koleksiyondaki öğelere erişim sağlayan API 'lerde kullanılmalıdır. Örneğin, bir dize bir karakter koleksiyonudur ve <xref:System.String?displayProperty=nameWithType> üzerindeki Dizin Oluşturucu, karakterlerine erişmek için eklenmiştir.  
   
  **✓ CONSIDER** iç dizisinde depolanan verilere erişim sağlamak için dizin oluşturucular kullanma.  
   
@@ -50,42 +49,42 @@ ms.locfileid: "62026327"
   
  **X AVOID** dizin oluşturulmuş özellikleri birden fazla parametresiyle kullanarak.  
   
- Tasarım birden çok parametre gerektiriyorsa, özelliğin gerçekten mantıksal bir koleksiyon için bir erişimci temsil edip etmediğini yeniden belirleyin. Kullanmıyorsa, bunun yerine yöntemlerini kullanın. Yöntem adı ile başlamayı düşünün `Get` veya `Set`.  
+ Tasarım birden çok parametre gerektiriyorsa, özelliğin bir mantıksal koleksiyona bir erişimciyi temsil edip etmediğini yeniden düşünün. Yoksa, bunun yerine yöntemleri kullanın. Yöntem adını `Get` veya `Set`başlatmayı düşünün.  
   
  **X AVOID** dışında parametre türleri oluşturucularla <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType>, veya enum.  
   
- Diğer parametre türleri tasarımı gerektiriyorsa, API, gerçekten erişimci mantıksal bir koleksiyonu temsil edip etmediğini kesinlikle yeniden değerlendir. Kullanmıyorsa, bir yöntem kullanın. Yöntem adı ile başlamayı düşünün `Get` veya `Set`.  
+ Tasarımda diğer parametre türleri gerekiyorsa, API 'nin mantıksal bir koleksiyona bir erişimciyi temsil edip etmediğini kesin olarak yeniden değerlendirin. Değilse, bir yöntemi kullanın. Yöntem adını `Get` veya `Set`başlatmayı düşünün.  
   
  **✓ DO** adını kullanın `Item` için tabii daha iyi bir adı olmadıkça özellikleri dizine (örn., bkz: <xref:System.String.Chars%2A> özellikte `System.String`).  
   
- C# ' ta adlı öğe varsayılan dizin oluşturucular özelliklere. <xref:System.Runtime.CompilerServices.IndexerNameAttribute> Bu ad özelleştirmek için kullanılabilir.  
+ ' C#De, Dizin oluşturucular varsayılan olarak adlandırılmış öğedir. Bu adı özelleştirmek için <xref:System.Runtime.CompilerServices.IndexerNameAttribute> kullanılabilir.  
   
  **X DO NOT** hem bir dizin oluşturucu hem de anlam olarak eşdeğerdir yöntemleri sağlar.  
   
  **X DO NOT** aşırı yüklenmiş dizin oluşturucular bir türde birden fazla ailesi sağlayın.  
   
- Bu, C# Derleyici tarafından zorlanır.  
+ Bu, C# derleyici tarafından zorlanır.  
   
  **X DO NOT** kullanım varsayılan olmayan dizin oluşturulmuş özellikleri.  
   
- Bu, C# Derleyici tarafından zorlanır.  
+ Bu, C# derleyici tarafından zorlanır.  
   
-### <a name="property-change-notification-events"></a>Özellik değişikliği bildirimi olayları  
- Bazı durumlarda kullanıcı bir özellik değeri değişiklikleri bildiren bir olay sağlamak kullanışlıdır. Örneğin, `System.Windows.Forms.Control` başlatır bir `TextChanged` olayından sonra değerini kendi `Text` özelliği değişti.  
+### <a name="property-change-notification-events"></a>Özellik değişiklik bildirimi olayları  
+ Bazen bir özellik değerindeki değişiklikleri kullanıcıya bildiren bir olay sağlamak yararlı olur. Örneğin, `System.Windows.Forms.Control`, `Text` özelliğinin değeri değiştirildikten sonra `TextChanged` olayını harekete geçirir.  
   
  **✓ CONSIDER** değişiklik üst düzey API'leri (genellikle Tasarımcı bileşenleri) özellik değerlerinde değişiklik yapıldığında bildirim olayları oluşturma.  
   
- Bir nesnenin bir özelliğini ne zaman değişiyor bilmek, bir kullanıcı için iyi bir senaryo ise, nesne özelliği için bir değişikliği bildirim olayı harekete geçirmelidir.  
+ Bir kullanıcının bir nesnenin özelliğinin ne zaman değiştiğini bilmesini sağlamak için iyi bir senaryo varsa, nesne özellik için bir değişiklik bildirimi olayı tetiklemelidir.  
   
- Ancak, bu tür taban türler veya koleksiyonları gibi alt düzey API'ler için olay yükü değer olması beklenmez. Örneğin, <xref:System.Collections.Generic.List%601> yeni bir öğe listesine eklendiğinde bu tür olayların oluşturmaz ve `Count` özellik değişiklikleri.  
+ Bununla birlikte, temel türler veya Koleksiyonlar gibi alt düzey API 'Ler için bu tür olayları yükseltme yüküyle ilgili ek yükün olması düşüktür. Örneğin, <xref:System.Collections.Generic.List%601>, listeye yeni bir öğe eklendiğinde ve `Count` özelliği değiştiğinde bu tür olayları yükseltemez.  
   
  **✓ CONSIDER** değişiklik bir özelliğin değerini dış zorlar değiştiğinde bildirim olayları oluşturma.  
   
- Bazı dış zorla (bir yolla nesne üzerinde yöntemleri çağırarak dışında) aracılığıyla bir özellik değeri değişirse yükseltmek olayları göstermek için geliştirici değer değişiyor ve değişti. İyi bir örnektir `Text` metin kutusu denetimi özelliği. Kullanıcının yazdığı metni ne zaman bir `TextBox`, özellik değeri otomatik olarak değiştirir.  
+ Bir özellik değeri, bazı dış zorlanarak (nesne üzerinde Yöntemler çağırma dışında bir şekilde) değişirse, olay oluşturma, geliştiricinin değerin değiştiğini ve değiştiğini gösterir. İyi bir örnek, metin kutusu denetiminin `Text` özelliğidir. Kullanıcı bir `TextBox`metin yazdığında, özellik değeri otomatik olarak değişir.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: e5d2465d145f4059600121c6cef30bb2c74a8c1c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4eaa9399ca0038e3142886abf2161266f8c77782
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346196"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636087"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML Değişmez Değerlerine Genel Bakış (Visual Basic)
 *XML sabit değeri* , doğrudan VISUAL BASIC kodunuzda XML eklemenize olanak tanır. XML sabit sözdizimi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesneleri temsil eder ve XML 1,0 söz dizimine benzerdir. Bu, kodunuzun son XML ile aynı yapıya sahip olması nedeniyle, programlama yoluyla XML öğelerinin ve belgelerinin oluşturulmasını kolaylaştırır.  
   
- Visual Basic XML değişmez değerlerini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesnelerine derler. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], XML oluşturmak ve işlemek için basit bir nesne modeli sağlar ve bu model [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]iyi tümleşir. Daha fazla bilgi için bkz. <xref:System.Xml.Linq.XElement>.  
+ Visual Basic XML değişmez değerlerini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesnelerine derler. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], XML oluşturmak ve işlemek için basit bir nesne modeli sağlar ve bu model dil ile tümleşik sorgu (LINQ) ile iyi tümleşir. Daha fazla bilgi için bkz. <xref:System.Xml.Linq.XElement>.  
   
  Bir Visual Basic ifadesini bir XML değişmez değerine ekleyebilirsiniz. Çalışma zamanında, uygulamanız her sabit değer için bir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesnesi oluşturur ve katıştırılmış ifadelerin değerlerini dahil. Bu, bir XML sabit değeri içinde dinamik içerik belirtmenize olanak sağlar. Daha fazla bilgi için bkz. [XML 'de katıştırılmış ifadeler](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   

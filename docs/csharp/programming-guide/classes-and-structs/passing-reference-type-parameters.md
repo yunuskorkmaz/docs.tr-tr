@@ -1,17 +1,16 @@
 ---
 title: Başvuru türü parametreleri geçirme- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: 6489d31ac1e466fdbf2b47ce1aae7e1139af0960
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6fa0e60fafabaa9fb04cdc5d5bf3f9e29490e84f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419037"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714715"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Başvuru Türü Parametreleri Geçirme (C# Programlama Kılavuzu)
 Bir [başvuru türü](../../language-reference/keywords/reference-types.md) değişkeni, verilerini doğrudan içermez; Bu, verilerine bir başvuru içerir. Bir başvuru türü parametresini değere göre geçirdiğinizde, bir sınıf üyesinin değeri gibi başvurulan nesneye ait verileri değiştirmek mümkündür. Bununla birlikte, başvurunun kendisi için değerini değiştiremezsiniz; Örneğin, yeni bir nesne için bellek ayırmak ve yöntemin dışında kalmasını sağlamak için aynı başvuruyu kullanamazsınız. Bunu yapmak için [ref](../../language-reference/keywords/ref.md) veya [Out](../../language-reference/keywords/out-parameter-modifier.md) anahtar sözcüğünü kullanarak parametreyi geçirin. Basitlik için aşağıdaki örneklerde `ref`kullanılır.  

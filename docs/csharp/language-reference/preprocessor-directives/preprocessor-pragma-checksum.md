@@ -1,18 +1,17 @@
 ---
 title: '#pragma sağlama toplamı C# -başvuru'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma checksum'
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 4103b6262fc5085c1204f423a36c9c5c2053b497
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1bbb404e1183daa5e68e512e7439b6ae52abd605
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605656"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712487"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma sağlama toplamı (C# Başvurusu)
 ASP.NET sayfalarında hata ayıklamaya yardımcı olmak için kaynak dosyaları için sağlama toplamı üretir.  
@@ -36,11 +35,11 @@ ASP.NET sayfalarında hata ayıklamaya yardımcı olmak için kaynak dosyaları 
 ## <a name="remarks"></a>Açıklamalar  
  Visual Studio hata ayıklayıcı, her zaman doğru kaynağı bulmasını sağlamak için bir sağlama toplamı kullanır. Derleyici, kaynak dosya için sağlama toplamını hesaplar ve sonra çıktıyı program veritabanı (PDB) dosyasına yayar. Hata ayıklayıcı daha sonra kaynak dosya için hesapladığı sağlama toplamıyla karşılaştırmak için PDB 'yi kullanır.  
   
- Hesaplanan sağlama toplamı,. aspx dosyası yerine oluşturulan kaynak dosya için olduğundan, bu çözüm ASP.NET projelerinde çalışmaz. Bu sorunu `#pragma checksum` gidermek için ASP.NET sayfaları için sağlama toplamı desteği sağlar.  
+ Hesaplanan sağlama toplamı,. aspx dosyası yerine oluşturulan kaynak dosya için olduğundan, bu çözüm ASP.NET projelerinde çalışmaz. Bu sorunu gidermek için, `#pragma checksum` ASP.NET sayfaları için sağlama toplamı desteği sağlar.  
   
  Görselde C#bir ASP.NET projesi oluşturduğunuzda oluşturulan kaynak dosya, kaynağın oluşturulduğu. aspx dosyası için bir sağlama toplamı içerir. Derleyici daha sonra bu bilgileri PDB dosyasına yazar.  
   
- Derleyici dosyada hiçbir `#pragma checksum` yönergeyle karşılaşırsa, sağlama toplamını hesaplar ve değeri pdb dosyasına yazar.  
+ Derleyici dosyada `#pragma checksum` yönergeyle karşılaşırsa, sağlama toplamını hesaplar ve değeri PDB dosyasına yazar.  
   
 ## <a name="example"></a>Örnek  
   

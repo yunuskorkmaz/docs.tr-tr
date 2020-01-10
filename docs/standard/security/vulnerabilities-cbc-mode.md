@@ -1,121 +1,120 @@
 ---
-title: Doldurmayı kullanarak CBC modunda simetrik şifre çözmedeki zamanlama açıkları
-description: Algılama ve doldurmayı kullanarak Şifre blok zincirleme (CBC) modunu simetrik şifre çözme ile zamanlama güvenlik açıklarını azaltmaya öğrenin.
+title: CBC şifre çözme güvenlik açığı
+description: Doldurma kullanarak şifreleme blok zincirleme (CBC) modu simetrik şifre çözme ile zamanlama güvenlik açıklarını algılamayı ve etkilerini öğrenin.
 ms.date: 06/12/2018
 author: blowdart
-ms.author: mairaw
-ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87f8e3c53e4d06f6a4edc7670891ac83ec8d65ab
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933906"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705853"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Doldurmayı kullanarak CBC modunda simetrik şifre çözmedeki zamanlama açıkları
 
-Microsoft, artık ilk ciphertext bütünlüğünü dışında sağlamaya gerek kalmadan doğrulanabilir doldurma yapıldıysa simetrik şifreleme şifre blok zincirleme (CBC) modunu ile şifrelenen verilerin şifresini çözmek güvenli olduğunu düşündüğü özgü koşullar. Bu judgement üzerinde şu anda bilinen şifreleme araştırmaları temel alır. 
+Microsoft, yalnızca belirli bir durum dışında, şifreli doldurma uygulandığında, şifreli şifrelemenin Şifre blok zincirleme (CBC) moduyla şifrelenmiş verilerin şifresinin çözülmesi için artık güvenli olduğunu düşünmektedir durumlarda. Bu, şu anda bilinen şifreleme araştırmasını temel alır. 
 
 ## <a name="introduction"></a>Giriş
 
-Doldurma oracle saldırı sağlar saldırgan anahtarı bilmeden içeriği verilerin şifresini çözmek, şifrelenmiş verilere karşı bir saldırı türüdür.
+Oracle saldırısı doldurma, şifrelenmiş verilere yönelik bir saldırı türüdür ve bu, anahtarı bilmeden, saldırganın verilerin içeriğini çözmesini sağlar.
 
-Bir "bilgi" bunlar yürütüyorsunuz eylem doğru olup olmamasına hakkında bir saldırgan bilgi veren bir oracle başvuruyor. Bir Pano yürütmeyi Imagine veya bir alt ile oyun kartı. Ne zaman kendi yüz yanar büyük gülümseme Filiz Filiz olarak gördüğü için oracle olan iyi bir ettirmek üzere. Bir sonraki uygun şekilde planlamak için bu oracle rakip kullanabilirsiniz.
+Bir Oracle, yürütmekte olduğu eylemin doğru olup olmadığı hakkında bir saldırgan bilgisi veren bir "söyleme" anlamına gelir. Bir pano veya kart oyununu bir alt öğe ile çalınmasını düşünün. Yüz, büyük bir gülümseme ile ışıkdığında, bu, bir Oracle olan iyi bir taşıma yapmak üzere olduğunu düşündü. Bu şekilde, rakip olarak bir sonraki taşımayı uygun şekilde planlamak için bu Oracle 'ı kullanabilirsiniz.
 
-Doldurma özel bir şifreleme terimdir. Verilerinizi şifrelemek için kullanılan algoritmalar olan bazı şifrelemeleri her blok sabit boyutta olduğu veri blokları üzerinde çalışır. Şifrelemek istediğiniz veri blokları doldurmak için doğru boyutta değilse, verilerinizi mevcut kadar sıfır eklenir. Doldurma birçok forms uygun boyutta özgün giriş olsa bile her zaman mevcut olacak şekilde bu doldurma gerektirir. Bu şifre çözme sırasında her zaman güvenli bir şekilde kaldırılması için doldurma sağlar.
+Doldurma, belirli bir şifreleme terimidir. Verilerinizi şifrelemek için kullanılan algoritmalar olan bazı şifrelemeler, her bloğun sabit boyutta olduğu veri blokları üzerinde çalışır. Şifrelemek istediğiniz veriler blokları dolduracak doğru boyutta değilse, verileriniz tamamlanana kadar doldurulur. Birçok doldurma formu, özgün giriş doğru boyutta olsa bile, her zaman doldurma gerektirir. Bu, verilerin şifre çözme sırasında her zaman güvenli bir şekilde kaldırılmasına olanak sağlar.
 
-İki şeyi bir araya getirildiğinde, bir yazılım uygulaması doldurma oracle ile şifresi çözülmüş veriler geçerli doldurma olup olmadığını gösterir. Oracle, "Geçersiz doldurma" ifadesini içeren bir değer döndüren olarak basit bir şey ya da geçersiz bir engel aksine geçerli bloğu işlemek için bir yaşamları farklı zaman ayırdığınız gibi daha karmaşık bir şey olabilir.
+İki şeyi birlikte koymak, Oracle içeren bir yazılım uygulamasının, şifresi çözülmüş verilerin geçerli bir doldurma içerip içermediğini gösterir. Oracle, "Geçersiz doldurma" ya da geçersiz bir bloğun aksine geçerli bir blok işlemek için farklı bir zaman yaşamları gibi bir değer döndürmek gibi basit bir şey olabilir.
 
-Blok tabanlı şifrelemeleri ilişki verileri ikinci bloğundaki ilk blokla veri belirleyen modu adlı başka bir özelliğe sahip ve benzeri. En sık kullanılan modları CBC biridir. CBC başlatma vektörü (IV olarak), bilinen bir ilk rastgele bloğunu ortaya çıkarır ve önceki blok aynı anahtarla aynı ileti şifreleme her zaman aynı şifrelenmiş çıktı oluşturmasa şekilde sağlamak için statik şifreleme sonucu ile birleştirir.
+Blok tabanlı şifrelemeler, ikinci bloktaki verilerin ilk bloğundaki verilerin ilişkisini belirleyen, mod adlı başka bir özelliğe sahiptir ve bu şekilde devam eder. En yaygın olarak kullanılan modlardan biri CBC ' dir. CBC, başlatma vektörü (IV) olarak bilinen bir başlangıç rastgele bloğunu tanıtır ve önceki bloğu, aynı anahtarla aynı iletiyi şifrelemek için aynı şifrelenmiş çıktıyı her zaman üretmediği için statik şifrelemenin sonucuyla birleştirir.
 
-Oracle sunan koda biraz değiştirilmiş bir ileti gönderin ve bunları oracle söyler kadar veri göndermeye devam verilerinin doğru olduğundan, bir saldırganın doldurma oracle, CBC verileri nasıl yapılandırıldığını birlikte kullanabilirsiniz. Bu yanıtından, saldırgan iletinin bayt şifresini çözebilir.
+Bir saldırgan, CBC verilerinin nasıl yapılandırıldığı, Oracle 'ı kullanıma açan koda kısmen değiştirilen iletileri gönderme ve Oracle 'ın verilerin doğru olduğunu söyleene kadar veri göndermeye devam eden bir Oracle ile birlikte bir doldurma kullanabilir. Bu yanıttan saldırgan, ileti baytının bayt olarak şifresini çözebilir.
 
-Modern bir bilgisayar gibi yüksek kaliteli bir saldırganın çok küçük (0,1 MS'den kısa) yürütme farklılıkları uzak sistemlere zaman algılayabilir ağlardır. Başarılı bir şifre çözme veri üzerinde oynama değildi, yalnızca oluşabilir varsayılarak uygulamaları araçlarından başarılı ve başarısız şifre çözme farklılıkları gözlemlemek için tasarlanmış saldırılara karşı savunmasız olabilir. Bu zamanlama fark diğerlerinden bazı diller ya da kitaplıkları daha önemli olabilir, ancak bunu şimdi uygulamanın yanıt hata olarak dikkate alındığında bu tüm dillerde ve kitaplıklarda için pratik bir tehdit olarak yorumlanmamalıdır.
+Modern bilgisayar ağları, bir saldırganın uzak sistemlerde yürütme sırasında çok küçük (0,1 MS 'den az) farklılık algılayabildiği yüksek kaliteden oluşur. Başarılı bir şifre çözme işleminin yalnızca verilerin üzerinde oynanmadığı durumlarda olabileceği, başarılı ve şifre çözme farklılıklarını gözlemleyecek şekilde tasarlanan araçların saldırılarına karşı savunmasız olduğu varsayılarak uygulamalar. Bu zamanlama farkı, bazı dillerde veya kitaplıklarda diğerlerinden daha önemli olabilir, ancak bu durum, uygulamanın hata yanıtı hesaba alındıktan sonra bu, tüm diller ve kitaplıklar için pratik bir tehdit olduğunu düşünülüyor.
 
-Bu saldırı şifrelenmiş verileri değiştirin ve test sonucu oracle ile olanağı kullanır. Tam olarak saldırının etkilerini hafifletmek için tek yolu, şifrelenmiş verilere değişiklikleri algılar ve herhangi bir eylem gerçekleştirmek Reddet sağlamaktır. Bunu yapmak için standart verileri için imza oluşturma ve tüm işlemler gerçekleştirilir önce bu imzayı doğrulamak için yoludur. İmza doğrulanabilir, saldırgan tarafından oluşturulamıyor, aksi takdirde bunlar şifrelenmiş veriler değiştirin, sonra değiştirilen verileri temel alan yeni bir imza işlem. Bir ortak tür uygun imzaya anahtarlı karma ileti kimlik doğrulama kodu (HMAC) bilinir. Gizli bir anahtar yalnızca HMAC oluşturan kişi ve doğrulamadan kişi bilinen alır, bir HMAC bir sağlama toplamı farklıdır. Elinde anahtarının doğru HMAC üretemiyor. Verilerinizi almak, şifrelenmiş verilerin, gizli bir anahtar kullanarak HMAC ve gönderen paylaşımı, daha sonra karşı bir gönderildiği HMAC hesaplanan karşılaştırma bağımsız olarak işlem. Bu karşılaştırma sabit zaman olmalıdır, farklı türde bir saldırı sağlayan başka bir algılanabilir oracle, aksi takdirde ekledik.
+Bu saldırı, şifrelenen verileri değiştirme ve sonucu Oracle ile test etme yeteneğine bağımlıdır. Saldırıyı tamamen hafifletmenin tek yolu, şifrelenen verilerde yapılan değişiklikleri algılamadır ve üzerinde herhangi bir işlem gerçekleştirmeyi reddeder. Bunu yapmanın standart yolu, veriler için bir imza oluşturmak ve herhangi bir işlem gerçekleştirilmeden önce imzayı doğrulamak içindir. İmza doğrulanabilir olmalıdır, saldırgan tarafından oluşturulamaz, aksi takdirde şifrelenmiş verileri değiştirebilir, ardından değiştirilen verilere göre yeni bir imza hesaplar. Bir ortak uygun imza türü, anahtarlı karma ileti kimlik doğrulama kodu (HMAC) olarak bilinir. HMAC, yalnızca HMAC 'yi üreten kişi tarafından bilinen ve bunu doğrulayan kişiye ait gizli anahtar alan bir sağlama toplamıyla farklılık gösterir. Anahtarı elinde bulunmadan doğru bir HMAC oluşturamıyoruz. Verilerinizi aldığınızda, sizin ve gönderen paylaşımının gizli anahtarını kullanarak HMAC 'yi bağımsız olarak hesapladıktan sonra, sizin oluşturduğunuz bir parola ile gönderilen HMAC 'yi karşılaştırırsınız. Bu karşılaştırma sabit zamanlı olmalıdır, aksi takdirde başka bir algılanabilir Oracle eklediniz, farklı bir tür saldırıya izin verir.
 
-Özet olarak, sıfır güvenli bir şekilde CBC blok şifreleme özelliklerinden kullanmak için bunları bir HMAC (veya başka bir veri bütünlük denetimi ile) kullanarak verilerin şifresini çözmek için bir sabit zaman karşılaştırma denemeden önce doğrulayan birleştirebilirsiniz. Tüm değiştirilmiş bir yanıt oluşturması için aynı süre iletilerin olduğundan, saldırı engellenir.
+Özet ' te, doldurulmuş CBC blok şifrelemelerini güvenle kullanmak için, verilerin şifresini çözmeyi denemeden önce sabit bir zaman karşılaştırması kullanarak doğruladığınız bir HMAC (veya başka bir veri bütünlüğü denetimi) ile birleştirmeniz gerekir. Değiştirilen tüm iletiler yanıt üretmek için aynı miktarda zaman aldığı için, saldırı engellenir.
 
-## <a name="who-is-vulnerable"></a>Güvenlik Açığı kimdir
+## <a name="who-is-vulnerable"></a>Güvenlik açığı kimler
 
-Bu güvenlik açığını kendi şifreleme ve şifre çözme işlemi hem yönetilen hem de yerel uygulamalar için geçerlidir. Bu, örneğin içerir:
+Bu güvenlik açığı, kendi şifrelemesini ve şifre çözmeyi gerçekleştiren hem yönetilen hem de yerel uygulamalar için geçerlidir. Bu, örneğin:
 
-- Sunucuda sonraki şifre çözme için bir tanımlama bilgisi şifreler uygulama.
-- Sütunları kullanıcıların bir tabloya veri ekleme yeteneği sağlayan bir veritabanı uygulaması daha sonra şifresi.
-- Şifreleme Aktarımdaki verileri korumak için paylaşılan bir anahtar kullanarak dayalı bir veri aktarımı uygulama.
-- Bir uygulama, uygulama şifreleyen ve iletilerin "içinde" TLS tünelinin şifresini çözer.
+- Daha sonra sunucuda şifresinin çözülmesi için bir tanımlama bilgisi şifreleyen uygulama.
+- Kullanıcıların, sütunları daha sonra şifresi çözülen bir tabloya veri eklemesine olanak sağlayan bir veritabanı uygulaması.
+- Geçiş sırasında verileri korumak için paylaşılan bir anahtar kullanarak şifrelemeye dayalı bir veri aktarma uygulaması.
+- TLS tünelinin "içindeki" iletilerini şifreleyen ve şifresini çözdüğü bir uygulama.
 
-Tek başına TLS kullanarak, bu senaryolarda koruma sağlamaz olduğunu unutmayın.
+Bu senaryolarda yalnızca TLS kullanmanın sizi koruyamadığını unutmayın.
 
-Bir güvenlik açığına sahip uygulama:
+Savunmasız bir uygulama:
 
-- PKCS #7 ya da ANSI X.923 gibi doğrulanabilir doldurma moduyla CBC şifreleme modu kullanarak verilerin şifresini çözer.
-- Şifre çözme veri bütünleştirme denetimi (MAC ya da asimetrik bir dijital imza) aracılığıyla gerçekleştirilen olmadan gerçekleştirir.
+- , BHŞIFRE modunu kullanarak, PKCS # 7 veya ANSI X. 923 gibi bir doğrulanabilen doldurma moduyla verilerin şifresini çözer.
+- Veri bütünlüğü denetimi gerçekleştirmeden (MAC veya asimetrik dijital imza aracılığıyla) şifre çözme gerçekleştirir.
 
-Bu soyutlama üzerinde şu temel elemanlar şifreli ileti söz dizimi (PKCS #7/CMS) EnvelopedData yapısı gibi üst üzerinden oluşturulan uygulamalar için de geçerlidir.
+Bu, şifreleme Iletisi sözdizimi (PKCS # 7/CMS) EnvelopedData yapısı gibi bu temel elemanların üst kısmında oluşturulan uygulamalar için de geçerlidir.
 
-## <a name="related-areas-of-concern"></a>İlgili sorunlu alanları
+## <a name="related-areas-of-concern"></a>İlgili sorun bölgeleri
 
-Araştırma ISO 10126 ileti iyi bilinen veya öngörülebilir alt yapısına sahip olduğunda doldurma eşdeğeri ile doldurulan CBC iletileri hakkında daha fazla endişe Microsoft'a açmıştır. Örneğin, öneri (xmlenc EncryptedXml) işleme ve W3C XML şifreleme sözdizimi kurallarına altında hazırlanmış içeriği. İletiyi imzalamak sonra şifrelemek için W3C kılavuzunu zaman uygun kabul ederken Microsoft artık her zaman şifreleyin-then-oturum yapılması önerir.
+Araştırma, Microsoft 'un, iletinin iyi bilinen veya öngörülebilir bir altbilgi yapısına sahip olduğu durumlarda ISO 10126 ile doldurulmuş CBC iletileri hakkında daha fazla endişeniz olduğunu fark etti. Örneğin, W3C XML şifreleme söz dizimi ve Işleme önerisi (xmlenc, EncryptedXml) kuralları altında hazırlanan içerik. İletiyi imzalamak için W3C Kılavuzu, daha sonra şifreleyin ve bu süre içinde uygun kabul edilse de, Microsoft artık her zaman şifrelemeden sonra-ENTER ' ı önerir.
 
-Asimetrik anahtar ile rastgele bir ileti arasındaki devralınan güven ilişkisi olduğundan uygulama geliştiricilerinin her zaman bir asimetrik imza anahtarı uygulanabilirliğini doğrulama dikkatli olmalıdır.
+Asimetrik bir anahtarla rastgele bir ileti arasında herhangi bir güven ilişkisi bulunmadığından, uygulama geliştiricileri her zaman asimetrik imza anahtarının uygulanabilirliğini doğrulamak için en az olmalıdır.
 
 ## <a name="details"></a>Ayrıntılar
 
-Tarihsel olarak, hem şifreleme hem de HMAC veya RSA imzaları gibi bir araç kullanarak önemli verileri doğrulamak önemli olan bir fikir birliğine varılmış olmuştur. Ancak, how to sequence şifreleme ve kimlik doğrulama işlemleri için daha az kılavuzluk olmuştur. Bu makalede ayrıntılı güvenlik açığı nedeniyle, Microsoft'un Kılavuzu artık her zaman "şifrelemek-then-sign" paradigma kullanmaktır. Diğer bir deyişle, ilk simetrik anahtar kullanarak verileri şifreleme ve ardından MAC ya da asimetrik imza ciphertext (şifrelenmiş veri) üzerinde işlem. Verilerin şifresini çözme, ters gerçekleştirin. İlk olarak, MAC veya imza şifreler onayladıktan sonra şifreyi.
+Tarihsel olarak, HMAC veya RSA imzaları gibi yollarla önemli verileri şifrelemek ve kimliklerini doğrulamak için önemli bir sorun oluştu. Ancak, şifreleme ve kimlik doğrulama işlemlerinin nasıl dizilebileceğine ilişkin daha az açık yönergeler vardır. Bu makalede açıklanan güvenlik açığı nedeniyle, Microsoft 'un artık "şifreleyin-then-imzala" paradigmasını her zaman kullanması gerekir. Diğer bir deyişle, önce simetrik anahtar kullanarak verileri şifreler, sonra şifreli bir MAC veya asimetrik imza (şifrelenmiş veriler) üzerinden işlem yapın. Verilerin şifresini çözerken, ters işlemini gerçekleştirin. İlk olarak, şifreli nesnelerin MAC veya imzasını onaylayın ve sonra şifresini çözün.
 
-"Oracle saldırıları doldurma" 10 yılı aşkın süredir mevcut bilinmektedir olarak bilinen güvenlik açıklarının sınıf. Bu güvenlik açıklarına veri bloğu başına en fazla 4096 deneme kullanarak AES ve 3DES ' gibi blok simetrik algoritmaları ile şifrelenen verilerin şifresini çözmek bir saldırganın. Bu güvenlik açıklarına olun şifrelemeleri block olgu kullanımını sonunda doğrulanabilir doldurma verilerle en sık kullanılır. Bir saldırganın ile ciphertext değiştirmesine ve olup kurcalama hata en sonda doldurma biçimde neden olduğunu bulmak, saldırgan verilerin şifresini çözebilen bulunamadı.
+"Oracle saldırılarını doldurma" olarak bilinen bir güvenlik açığı sınıfı, 10 yıldan fazla bir süredir mevcut olduğu bilinmektedir. Bu güvenlik açıkları, bir saldırganın her veri bloğu için 4096 ' den fazla girişim kullanılarak AES ve 3DES gibi simetrik blok algoritmalarıyla şifrelenmiş verilerin şifresini çözmesine olanak tanır. Bu güvenlik açıkları, şifrelemelerin blok verileri sonunda en sık kullanılan doğrulanabilir doldurma verileriyle kullanımını engeller. Bir saldırgan şifreli ile oynayabilir ve yapılan bir hatanın sonda bir hata nedeniyle başarısız olup olmadığını fark etmeksizin, saldırganın verilerin şifresini çözebilmesini sağlayabilirsiniz.
 
-Başlangıçta, pratik saldırıları doldurma gibi ASP.NET güvenlik açığı geçerli olup üzerinde farklı hata kodları döndürecekti Hizmetleri bağlı [MS10-070](/security-updates/SecurityBulletins/2010/ms10-070). Ancak, Microsoft artık yalnızca zamanlama geçerli ve geçersiz doldurma işlem arasındaki farklılıkları kullanarak benzer saldırıları yürütmek pratik olduğunu düşündüğü.
+Başlangıçta pratik saldırılar, ASP.NET güvenlik açığı [MS10-070](/security-updates/SecurityBulletins/2010/ms10-070)gibi doldurma 'nın geçerli olup olmadığına göre farklı hata kodları döndüren hizmetlere dayanmaktadır. Bununla birlikte, Microsoft artık işleme geçerli ve geçersiz doldurma arasındaki farkları kullanarak benzer saldırıları gerçekleştirmek için pratik olduğunu düşünmektedir.
 
-İmza şifreleme şeması kullanır ve imza doğrulaması (içeriği) bağımsız olarak veri belirli bir süre için sabit bir çalışma zamanı ile gerçekleştirilen şartıyla, veri bütünlüğünü herhangi bir bilgi yayma olmadan doğrulanabilir bir Saldırgan aracılığıyla bir [yan kanal](https://en.wikipedia.org/wiki/Side-channel_attack). Bütünlük denetimi değiştirilen tüm iletileri reddeder beri doldurma oracle tehdit azalır.
+Şifreleme şeması bir imza kullanır ve imza doğrulamasının belirli bir veri uzunluğu (içeriğinden bağımsız olarak) için sabit bir çalışma zamanı ile gerçekleştirildiğinden, veri bütünlüğü bir saldırgana bir [taraf kanal](https://en.wikipedia.org/wiki/Side-channel_attack)aracılığıyla herhangi bir bilgi yaymadan doğrulanabilir. Bütünlük denetimi, değiştirilen iletileri reddettiğinde, Oracle tehdidi doldurma işlemi azaltılmış olur.
 
 ## <a name="guidance"></a>Kılavuz
 
-İlk ve, Microsoft gizlilik sahip herhangi bir veri üzerinden Aktarım Katmanı Güvenliği (TLS), Güvenli Yuva Katmanı (SSL) için ardıl iletilmesi önerir.
+İlk ve daha önce, Microsoft, gizlilik ihtiyaçlarına sahip tüm verilerin Aktarım Katmanı Güvenliği (TLS) üzerinden aktarılması ve Güvenli Yuva Katmanı (SSL) ' nin ardıl olması önerilir.
 
-Ardından, uygulamanızı çözümleyin:
+Sonra, uygulamanızı şu şekilde çözümleyin:
 
-- Tam olarak hangi şifreleme gerçekleştirmekte anlayın ve hangi şifreleme platformlar ve API'ler kullanmakta olduğunuz tarafından sağlanmaktadır.
-- Belirli bir simetrik, her katmanda her kullanım olun [blok şifreleme algoritması](https://en.wikipedia.org/wiki/Block_cipher#Notable_block_ciphers)gibi gizli Anahtarlanan veri bütünleştirme denetimi kullanımını AES ve CBC modunda 3DES birleştirmek (asimetrik bir imza, bir HMAC veya şifreleme modunu değiştirmek için bir [kimliği doğrulanmış şifreleme](https://en.wikipedia.org/wiki/Authenticated_encryption) (AE) modunu GCM veya CCM gibi).
+- Hangi şifrelemeyi tam olarak kullandığınızı ve kullanmakta olduğunuz platformlar ve API 'Ler tarafından hangi şifrelemenin sağlandığını anlayın.
+- Bir simetrik [blok şifre algoritmasındaki](https://en.wikipedia.org/wiki/Block_cipher#Notable_block_ciphers)AES ve 3DES gibi her bir kullanımın, bir gizli anahtar veri bütünlüğü denetimi (asimetrik Imza, HMAC veya şifre modunu, GCM veya CCM gibi [kimliği doğrulanmış şifreleme](https://en.wikipedia.org/wiki/Authenticated_encryption) (AE) modu olarak değiştirme) dahil edin.
 
-Güncel bir araştırmaya göre bunu genellikle kimlik doğrulama ve şifreleme adımları birbirinden bağımsız olarak şifreleme AE olmayan modları için gerçekleştirildiğinde, şifreli kimlik doğrulaması (şifreleme-then-oturum) genel en iyi seçenek olduğunu azalttığı kabul edilir. Ancak, şifreleme BT'ye bir doğru yanıt yok ve bu Genelleştirme profesyonel cryptographer kadar iyi yönlendirilmiş önerileri desteklenmez.
+Geçerli araştırmayı temel alan genellikle, kimlik doğrulama ve şifreleme adımları AE olmayan şifreleme modları için bağımsız olarak gerçekleştirildiğinde, en iyi genel seçenektir. Bununla birlikte, şifrelemeye en uygun yanıt yoktur ve bu Genelleştirme, profesyonel bir cryptotlv ile yönlendirilmiş tavsiyeler kadar iyi değildir.
 
-Kendi ileti biçimi değiştirebilirsiniz ancak kimlik doğrulamasız CBC şifre çözme gerçekleştirmek mümkün olan uygulamaların risk azaltma işlemleri gibi birleştirmek için önerilir:
+Mesajlaşma biçimini değiştiremedik ancak kimliği doğrulanmamış CBC şifre çözme işlemini gerçekleştirmeye yönelik uygulamalar, şu gibi azaltıcı etkenleri kullanmayı denemenize önerilir:
 
-- Doğrulayın veya doldurmayı kaldırmak şifre çözücü vermeden şifre çözme:
-  - Uygulanmış olan tüm doldurma hala göz ardı veya kaldırılmasına izin gerekir, uygulamanıza yük taşıma.
-  - Diğer uygulama veri doğrulama mantığı eklemenize doldurma doğrulama ve temizleme birleştirilebilir avantajdır. Verileri doğrulama ve doldurma doğrulama Sabit sürede yapılabilir, tehdit azaltılır.
-  - Algılanan ileti uzunluğu doldurmayı yorumunu değişiklikleri olduğundan, yine de bu yaklaşımı yayılan zamanlama bilgi olabilir.
-- Şifre çözme doldurma modu için ISO10126 değiştirin:
-  - ISO10126 şifre çözme doldurma PKCS7 şifreleme doldurma ve ANSIX923 şifreleme doldurma ile uyumludur.
-  - Modunu değiştirme doldurma oracle bilgi tüm bloğu yerine 1 bayt azaltır. Ancak, içerik XML öğesi, bir kapatma gibi iyi bilinen bir alt bilgi varsa ilgili saldırıları ileti geri kalanını saldırılara karşı devam edebilirsiniz.
-  - Ayrıca, burada saldırganın birden çok kez farklı ileti uzaklığı ile şifrelenmiş aynı düz metin zorlayacak durumlarda düz metin kurtarma da engellemez.
-- Şifre çözme çağrısı zamanlama sinyal Donuklaştır değerlendirmesi kapısı:
-  - Durma süresini hesaplama şifre çözme işlemi doldurma içeren veri segmenti için gereken en uzun süreyi aşan en az olmalıdır.
-  - Saat hesaplamaları kılavuzunda göre yapılmalıdır [yüksek çözünürlüklü zaman damgaları alınırken](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps), kullanarak değil <xref:System.Environment.TickCount?displayProperty=nameWithType> (tabi Top-üzerinden/taşma) veya iki sistem zaman damgaları (tabi NTP ayarlama çıkararak hatalar).
-  - Saat hesaplamaları tüm potansiyel özel durumlar dahil olmak üzere şifre çözme işlemi tamamlanmıyorsa yönetilmelidir veya C++ uygulamaları, yalnızca sona sıfır.
-  - Başarı veya başarısızlık henüz belirlendiyse, zamanlama kapısı süresi dolduğunda, hata döndürmesi gerekir.
-- Kimliği doğrulanmamış şifre çözme işlemi Hizmetleri "geçersiz" iletileri hakkında güncelleştirmekte gelen olduğunu algılamak için bir izleme olması gerekir.
-  - Bu sinyal hatalı pozitif sonuçları (duyup duymayacağını bozuk veri) hem de false negatif (saldırı algılama atlatabilir yeterince uzun bir zaman aşımına yayılmasını) taşıyan aklınızda size aittir.
+- Şifre çözme, şifre çözücü 'ın doldurmayı doğrulamasına veya kaldırmasına izin vermeden çözülür:
+  - Uygulanan herhangi bir doldurma hala kaldırılmalı veya yoksayıldı, bu da yükü uygulamanıza taşıyor olursunuz.
+  - Bu avantaj, doldurma doğrulamanın ve kaldırmanın diğer uygulama verileri doğrulama mantığına dahil edilebilir olması olabilir. Doldurma doğrulaması ve veri doğrulaması sabit zamanlı olarak yapılabiliyorsanız, tehdit azalır.
+  - Doldurma yorumu algılanan ileti uzunluğunu değiştirdiği için, bu yaklaşımdan alınan zamanlama bilgileri yine de olabilir.
+- Şifre çözme doldurma modunu ISO10126 olarak değiştirin:
+  - ISO10126 şifre çözme dolgusu, hem PKCS7 şifreleme dolgusu hem de ANSIX923 şifreleme dolgusu ile uyumludur.
+  - Modunun değiştirilmesi, Oracle bilgisinin tüm blok yerine 1 bayta doldurmasını azaltır. Ancak içeriğin, kapanış XML öğesi gibi iyi bilinen bir altbilgisi varsa ilgili saldırılar da iletinin geri kalanına saldırmak için devam edebilir.
+  - Bu Ayrıca, saldırganın aynı düz metin ile farklı bir ileti kaymasıyla birden çok kez şifrelenmesini engelleyebileceği durumlarda düz metin kurtarmayı engellemez.
+- Zamanlama sinyalini sönmek için bir şifre çözme çağrısının değerlendirilmesine geçit:
+  - Saklama zamanı hesaplamasının, doldurma işleminin bulunduğu tüm veri kesimlerine yönelik olarak en fazla bir şifre çözme işleminin gerçekleşmesi için en az sürede olması gerekir.
+  - Zaman hesaplamaları, <xref:System.Environment.TickCount?displayProperty=nameWithType> (kullanıma alma/taşma) veya iki sistem zaman damgasını (NTP ayarlama hatalarıyla ilgili olarak) değil, [yüksek çözünürlüklü zaman damgaları](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps)elde etmek için yapılmalıdır.
+  - Zaman hesaplamaları, yalnızca sonuna kadar değil, yönetilen veya C++ uygulamalardaki tüm olası özel durumlar dahil olmak üzere şifre çözme işleminin yerine eklenmelidir.
+  - Başarı veya başarısızlık henüz belirlendiyse, zaman aşımı kapısı zaman aşımına uğradığında hata döndürmemelidir.
+- Kimliği doğrulanmamış bir şifre çözme işlemi gerçekleştiren hizmetler, "geçersiz" iletilerinin bir taşın bir şekilde gelip gelmediğini tespit etmek için izlenmesi gerekir.
+  - Bu sinyalin, hem hatalı pozitif sonuçları (meşru olmayan veriler) hem de yanlış negatifleri (atlatabilir algılama için çok uzun bir süre boyunca saldırıyı yayma) taşıdığını unutmayın.
 
-## <a name="finding-vulnerable-code---native-applications"></a>Güvenlik Açığı kodu - yerel uygulamaları bulma
+## <a name="finding-vulnerable-code---native-applications"></a>Savunmasız koda yerel uygulamalar bulma
 
-Windows şifreleme karşı yerleşik programları için: Sonraki nesil (CNG) kitaplığı:
+Windows şifrelemesi: yeni nesil (CNG) kitaplığı 'nda oluşturulan programlar için:
 
-- Şifre çözme çağrıdır [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), belirten `BCRYPT_BLOCK_PADDING` bayrağı.
-- Anahtar tanıtıcısı çağırarak başlatılmış [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) ile [BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE) kümesine `BCRYPT_CHAIN_MODE_CBC`.
-  - Bu yana `BCRYPT_CHAIN_MODE_CBC` etkilenen varsayılan kod değil atamış herhangi bir değer `BCRYPT_CHAINING_MODE`.
+- Şifre çözme çağrısı, `BCRYPT_BLOCK_PADDING` bayrağını belirterek [Bcryptşifre çözmeye](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt)yapılır.
+- Anahtar tanıtıcısı, [BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE) `BCRYPT_CHAIN_MODE_CBC`olarak ayarlanmış [bcryptsetproperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) çağırarak başlatıldı.
+  - `BCRYPT_CHAIN_MODE_CBC` varsayılan olduğundan, etkilenen kod `BCRYPT_CHAINING_MODE`için herhangi bir değer atamalamayabilir.
 
-Eski Windows şifreleme API üzerinde derlenmiş programlar için:
+Eski Windows şifreleme API 'sine karşı oluşturulan programlar için:
 
-- Şifre çözme çağrıdır [CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) ile `Final=TRUE`.
-- Anahtar tanıtıcısı çağırarak başlatılmış [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) ile [KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam) kümesine `CRYPT_MODE_CBC`.
-  - Bu yana `CRYPT_MODE_CBC` etkilenen varsayılan kod değil atamış herhangi bir değer `KP_MODE`.
+- Şifre çözme çağrısı, `Final=TRUE`ile [Cryptşifre çözme](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) işlemi yapılır.
+- Anahtar tanıtıcısı, `CRYPT_MODE_CBC`olarak ayarlanmış [KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam) [Cryptsetkeyparad](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) çağırarak başlatıldı.
+  - `CRYPT_MODE_CBC` varsayılan olduğundan, etkilenen kod `KP_MODE`için herhangi bir değer atamalamayabilir.
 
-## <a name="finding-vulnerable-code---managed-applications"></a>Güvenlik Açığı kodu bulma - yönetilen uygulamalar
+## <a name="finding-vulnerable-code---managed-applications"></a>Savunmasız koda göre yönetilen uygulamalar bulma
 
-- Şifre çözme çağrıdır <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor> veya <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])> yöntemlerde <xref:System.Security.Cryptography.SymmetricAlgorithm?displayProperty=nameWithType>.
-  - .NET içinde aşağıdaki türetilmiş türlerini içerir, ancak ayrıca üçüncü taraf türleri şunlardır:
+- Şifre çözme çağrısı, <xref:System.Security.Cryptography.SymmetricAlgorithm?displayProperty=nameWithType><xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor> veya <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])> yöntemlerine bağlıdır.
+  - Bu, .NET içinde aşağıdaki türetilmiş türleri içerir, ancak üçüncü taraf türlerini de içerebilir:
     - <xref:System.Security.Cryptography.Aes>
     - <xref:System.Security.Cryptography.AesCng>
     - <xref:System.Security.Cryptography.AesCryptoServiceProvider>
@@ -129,24 +128,24 @@ Eski Windows şifreleme API üzerinde derlenmiş programlar için:
     - <xref:System.Security.Cryptography.TripleDES>
     - <xref:System.Security.Cryptography.TripleDESCng>
     - <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
-- <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> Özelliğinin ayarlandığı <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType>, <xref:System.Security.Cryptography.PaddingMode.ANSIX923?displayProperty=nameWithType>, veya <xref:System.Security.Cryptography.PaddingMode.ISO10126?displayProperty=nameWithType>.
-  - Bu yana <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType> etkilenen varsayılan kod hiçbir zaman atamış <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> özelliği.
-- <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> Özelliği ayarlanmıştır <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType>
-  - Bu yana <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType> etkilenen varsayılan kod hiçbir zaman atamış <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> özelliği.
+- <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> özelliği <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType>, <xref:System.Security.Cryptography.PaddingMode.ANSIX923?displayProperty=nameWithType>veya <xref:System.Security.Cryptography.PaddingMode.ISO10126?displayProperty=nameWithType>olarak ayarlanmıştır.
+  - <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType> varsayılan olduğundan, etkilenen koda hiçbir şekilde <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> özelliği atanmayabilir.
+- <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> özelliği <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType> olarak ayarlandı
+  - <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType> varsayılan olduğundan, etkilenen koda hiçbir şekilde <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> özelliği atanmayabilir.
 
-## <a name="finding-vulnerable-code---cryptographic-message-syntax"></a>Şifreli ileti söz dizimi - savunmasız kod bulma
+## <a name="finding-vulnerable-code---cryptographic-message-syntax"></a>Güvenlik açığı kodu bulma-şifreleme iletisi sözdizimi
 
-Kimliği doğrulanmamış bir CMS EnvelopedData ileti şifreli içerikleri CBC modunda AES (2.16.840.1.101.3.4.1.2, 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.42), DES (1.3.14.3.2.7), 3DES kullanır (1.2.840.113549.3.7) veya RC2 (1.2.840.113549.3.2) olan açıktan de olarak diğer bir blok şifreleme algoritmaları kullanarak CBC modunda iletileri.
+Şifrelenmiş içeriği AES (2.16.840.1.101.3.4.1.2, 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.42), DES (1.3.14.3.2.7), 3DES (1.2.840.113549.3.7) veya RC2 (1.2.840.113549.3.2) için CBC modunu kullanan, kimliği doğrulanmamış bir CMS EnvelopedData iletisi Ayrıca, CBC modunda başka bir blok şifre algoritmasını kullanan iletiler ve güvenlik açığı.
 
-Akış şifrelemeleri belirli bu güvenlik açığını maruz değildir, ancak her zaman veri ContentEncryptionAlgorithm değeri inceleyerek üzerinden kimlik doğrulaması yapan Microsoft önerir.
+Akış şifrelemeleri bu belirli güvenlik açığına karşı savunmasız olmasa da, Microsoft, her zaman ContentEncryptionAlgorithm değerini inceleyerek verilerin kimlik doğrulamasını önerir.
 
-Yönetilen uygulamalar için blob olabilir bir CMS EnvelopedData geçirilir olarak herhangi bir değer algılandı. <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.Byte[])?displayProperty=fullName>.
+Yönetilen uygulamalar için, <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.Byte[])?displayProperty=fullName>iletilen herhangi bir değer olarak bir CMS EnvelopedData blobu algılanabilir.
 
-Yerel uygulamalar için bir CMS EnvelopedData blob bir CMS tanıtıcı sağlanan herhangi bir değer olarak algılanabilir [CryptMsgUpdate](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgupdate) olan kaynaklanan [CMSG_TYPE_PARAM](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsggetparam) olduğu `CMSG_ENVELOPED` ve/veya CMS tanıtıcısı Daha sonra gönderilen bir `CMSG_CTRL_DECRYPT` yönerge aracılığıyla [CryptMsgControl](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgcontrol).
+Yerel uygulamalar için, bir CMS EnvelopedData blobu, elde edilen [CMSG_TYPE_PARAM](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsggetparam) `CMSG_ENVELOPED` ve/veya CMS tanıtıcısı daha sonra [cryptmsgcontrol](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgcontrol)aracılığıyla bir `CMSG_CTRL_DECRYPT` yönergesini gönderdiyse [CryptMsgUpdate](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgupdate) aracılığıyla bir CMS tanıtıcısına sağlanan herhangi bir değer olarak algılanabilir.
 
-## <a name="vulnerable-code-example---managed"></a>Güvenlik açığı kod örneği - yönetilen
+## <a name="vulnerable-code-example---managed"></a>Güvenlik açığı bulunan kod örneği-yönetilen
 
-Bu yöntem bir tanımlama bilgisi okur ve bunun şifresini çözer ve hiçbir veri bütünlüğü denetimi tarafından görülebilir. Bu nedenle, bu yöntem tarafından okunan bir tanımlama bilgisinin içeriğinin aldığı kullanıcı tarafından veya şifrelenmiş bir tanımlama bilgisi değeri elde herhangi bir saldırgan tarafından saldırıya.
+Bu yöntem bir tanımlama bilgisini okur ve şifresini çözer ve veri bütünlüğü denetimi görünmez. Bu nedenle, bu yöntem tarafından okunan bir tanımlama bilgisinin içeriği, kendisini alan Kullanıcı tarafından veya şifrelenmiş tanımlama bilgisi değerini almış olan herhangi bir saldırgan tarafından saldırıya uğrayılabilir.
 
 ```csharp
 private byte[] DecryptCookie(string cookieName)
@@ -171,17 +170,17 @@ private byte[] DecryptCookie(string cookieName)
 }
 ```
 
-## <a name="example-code-following-recommended-practices---managed"></a>Önerilen uygulamalar - yönetilen örnek kodu aşağıdaki
+## <a name="example-code-following-recommended-practices---managed"></a>Önerilen uygulamalar-yönetilen örnek kodu
 
-Aşağıdaki örnek kod bir standart ileti biçimini kullanır.
+Aşağıdaki örnek kod standart olmayan bir ileti biçimi kullanır
 
 `cipher_algorithm_id || hmac_algorithm_id || hmac_tag || iv || ciphertext`
 
-Burada `cipher_algorithm_id` ve `hmac_algorithm_id` algoritması tanımlayıcılardır yerel uygulama (standart) bu algoritmaları temsillerini. Bu tanımlayıcılar, var olan bir Mesajlaşma Protokolü yerine diğer bölümlerinde çıplak bir birleştirilmiş bytestream mantıklı olabilir.
+`cipher_algorithm_id` ve `hmac_algorithm_id` algoritma tanımlayıcıları, bu algoritmaların uygulama yerel (Standart olmayan) temsilleridir. Bu tanımlayıcılar, tam olarak birleştirilmiş bir bytestream yerine mevcut mesajlaşma protokolünün diğer bölümlerinde anlamlı olabilir.
 
-Bu örnek, tek bir ana anahtarı hem bir şifreleme anahtarı hem de bir HMAC anahtarı türetmek için de kullanır. Bu kolaylık her ikisi de tek Anahtarlanan çift Anahtarlanan bir uygulamaya ve iki anahtar olarak farklı değerler tutma teşvik etmek için bir uygulamayı kapatmak için sağlanır. Daha fazla eşitleme dışı şifreleme anahtarını ve HMAC anahtarı alınamıyor garanti eder.
+Bu örnek ayrıca bir şifreleme anahtarı ve HMAC anahtarı türetmek için tek bir ana anahtar kullanır. Bu, listedir anahtarlı bir uygulamayı çift anahtarlı bir uygulamaya açmak ve iki anahtarı farklı değerler olarak korumak için kolaylık olarak sağlanır. Bu, HMAC anahtar ve şifreleme anahtarının eşitlememe dışı olmasını da güvence altına alır.
 
-Bu örnek kabul etmeyen bir <xref:System.IO.Stream> şifreleme veya şifre çözme. Geçerli veri biçimi yaptığı bir geçişli zor şifrelemek için `hmac_tag` değeri önündeki şifreler. Ancak, ayrıştırıcının daha basit tutmaya başında tuttuğundan, tüm sabit boyutlu öğeleri bu biçim seçildi. Bir uygulayan GetHashAndReset arayın ve sonuç TransformFinalBlock çağırmadan önce doğrulamak için dikkatli olmalıdır ancak bu veri biçimiyle bir geçişli şifresini çözme mümkündür. Akış şifreleme önemliyse, farklı bir AE modu gerekli olabilir.
+Bu örnek, şifreleme veya şifre çözme için <xref:System.IO.Stream> kabul etmez. Geçerli veri biçimi, `hmac_tag` değeri, şifreli dosyadan önce olduğundan tek geçişli şifrelemeyi zorlaştırır. Ancak, bu biçim, ayrıştırıcının daha kolay tutulmasını sağlamak için başındaki tüm sabit boyutlu öğeleri sakladığı için seçilmiştir. Bu veri biçimiyle, tek taramalı şifre çözme mümkün olsa da, bir uygulayıcının GetHashAndReset çağrısına ve TransformFinalBlock çağrılmadan önce sonucu doğrulamaya yönelik bir sorun vardır. Akış şifrelemesi önemliyse, farklı bir AE modu gerekebilir.
 
 ```csharp
 // ==++==

@@ -10,23 +10,21 @@ helpviewer_keywords:
 - security [.NET Framework], impersonating Windows accounts
 - impersonating Windows accounts
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 97b15ea2202ca410dd517db63a7145d27f62bb48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14b01ec3ac800abd795e87b641a442df100f102b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018599"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706025"
 ---
 # <a name="impersonating-and-reverting"></a>Kimliğe Bürünme ve Geri Alma
-Bazen bir Windows hesabı kimliğine bürünmek üzere Windows hesabı belirteç edinme gerekebilir. Örneğin, ASP.NET tabanlı uygulamanız farklı zamanlarda birden çok kullanıcı adına hareket gerekebilir. Uygulamanızı yönetici Internet Information Services (IIS) temsil eden bir belirteci kabul edin, bu kullanıcının kimliğine bürün, bir işlemi gerçekleştirmek ve önceki kimliğine geri dönülemiyor. Ardından, daha az haklarına sahip bir kullanıcıyı temsil eden IIS belirtecinden kabul, başka bir işlem gerçekleştirmek ve yeniden geri.  
+Bazen bir Windows hesabının kimliğine bürünmek için bir Windows hesabı belirteci edinmeniz gerekebilir. Örneğin, ASP.NET tabanlı uygulamanızın farklı zamanlarda birkaç kullanıcı adına işlem yapması gerekebilir. Uygulamanız Internet Information Services (IIS) tarafından bir yöneticiyi temsil eden bir belirteci kabul edebilir, bu kullanıcının kimliğine bürünerek bir işlem gerçekleştirir ve önceki kimliğe geri dönebilir. Daha sonra, IIS 'den daha az haklara sahip bir kullanıcıyı temsil eden bir belirteç kabul edebilir, bazı işlemler gerçekleştirebilir ve yeniden döndürülür.  
   
- Geçerli iş parçacığı için IIS tarafından bağlı olmayan bir Windows hesabı, uygulamanız nerede bürünmelidir durumlarda, bu hesabın belirteç almalı ve hesabını etkinleştirmek için kullanın. Aşağıdaki görevleri gerçekleştirerek bunu yapabilirsiniz:  
+ Uygulamanızın IIS tarafından geçerli iş parçacığına eklenmemiş bir Windows hesabı kimliğine bürünmesi gereken durumlarda, bu hesabın belirtecini alıp hesabı etkinleştirmek için kullanmanız gerekir. Bunu aşağıdaki görevleri gerçekleştirerek yapabilirsiniz:  
   
-1. Belirli bir kullanıcı için bir hesap belirteci yönetilmeyen bir çağrı yaparak alma **LogonUser** yöntemi. Bu yöntem .NET Framework temel sınıf kitaplığı'nda değildir, ancak bulunan yönetilmeyen olarak **advapi32.dll**. Yönetilmeyen kod yöntemleri erişme, İleri düzey bir işlemdir ve bu tartışma kapsamı dışındadır. Daha fazla bilgi için [yönetilmeyen kod ile birlikte çalışma](../../../docs/framework/interop/index.md). Hakkında daha fazla bilgi için **LogonUser** yöntemi ve **advapi32.dll**, Platform SDK belgelerine bakın.  
+1. Yönetilmeyen **LogonUser** yöntemine bir çağrı yaparak belirli bir kullanıcı için hesap belirteci alın. Bu yöntem .NET Framework temel sınıf kitaplığında değildir, ancak yönetilmeyen **Advapi32. dll**dosyasında bulunur. Yönetilmeyen koddaki yöntemlere erişim gelişmiş bir işlemdir ve bu tartışmanın kapsamı dışındadır. Daha fazla bilgi için bkz. [yönetilmeyen kodla birlikte çalışma](../../../docs/framework/interop/index.md). **LogonUser** yöntemi ve **Advapi32. dll**hakkında daha fazla bilgi IÇIN bkz. Platform SDK belgeleri.  
   
-2. Yeni bir örneğini oluşturma **WindowsIdentity** belirtece geçirerek sınıfı. Aşağıdaki kod, bu çağrıyı gösterir. burada `hToken` Windows belirteci temsil eder.  
+2. , Belirteci geçirerek **WindowsIdentity** sınıfının yeni bir örneğini oluşturun. Aşağıdaki kod bu çağrıyı gösterir; burada `hToken` bir Windows belirtecini temsil eder.  
   
     ```csharp  
     WindowsIdentity impersonatedIdentity = new WindowsIdentity(hToken);  
@@ -36,7 +34,7 @@ Bazen bir Windows hesabı kimliğine bürünmek üzere Windows hesabı belirteç
     Dim impersonatedIdentity As New WindowsIdentity(hToken)  
     ```  
   
-3. Kimliğe bürünme, yeni bir örneğini oluşturarak başlayın <xref:System.Security.Principal.WindowsImpersonationContext> sınıfı ve onunla başlatma <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> başlatılmış sınıfının, aşağıdaki kodda gösterildiği yöntemi.  
+3. <xref:System.Security.Principal.WindowsImpersonationContext> sınıfının yeni bir örneğini oluşturarak ve onu, aşağıdaki kodda gösterildiği gibi başlatılan sınıfın <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> yöntemiyle başlatarak kimliğe bürünme işlemini başlatın.  
   
     ```csharp  
     WindowsImpersonationContext myImpersonation = impersonatedIdentity.Impersonate();  
@@ -46,7 +44,7 @@ Bazen bir Windows hesabı kimliğine bürünmek üzere Windows hesabı belirteç
     WindowsImpersonationContext myImpersonation = impersonatedIdentity.Impersonate()  
     ```  
   
-4. Artık bürünülecek gerektiğinde, çağrı <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> kimliğe bürünme, aşağıdaki kodda gösterildiği şekilde geri dönmek için yöntemi.  
+4. Artık taklit etmeniz gerekmiyorsa, aşağıdaki kodda gösterildiği gibi, kimliğe bürünme özelliğini dönüştürmek için <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> yöntemini çağırın.  
   
     ```csharp  
     myImpersonation.Undo();  
@@ -56,9 +54,9 @@ Bazen bir Windows hesabı kimliğine bürünmek üzere Windows hesabı belirteç
     myImpersonation.Undo()  
     ```  
   
- Kodu zaten eklenmiş güvenilen bir <xref:System.Security.Principal.WindowsPrincipal> nesne iş parçacığı için örnek yöntemi çağırabilirsiniz **doğrulamasından**, bir hesap belirteci almaz. Bu yalnızca ne zaman yararlı olduğuna dikkat edin **WindowsPrincipal** iş parçacığında nesnesini temsil eden görevli işlemin şu anda Yürütülüyor bir başka bir kullanıcı. Örneğin, Windows kimlik doğrulaması açık ve kapalı kimliğe bürünme ASP.NET kullanarak bu durumla karşılaşabilirsiniz. Bu durumda, işlem geçerli sorumlu sayfa erişiyor Windows kullanıcı temsil ederken, Internet Information Services (IIS) içinde yapılandırılmış bir hesap altında çalışıyor.  
+ Güvenilen kod zaten iş parçacığına bir <xref:System.Security.Principal.WindowsPrincipal> nesnesi iliştirmişse, bir hesap belirteci almaz, **kimliğe bürünme**örnek yöntemini çağırabilirsiniz. Bu, yalnızca iş parçacığındaki **WindowsPrincipal** nesnesi, işlemin Şu anda yürütülmekte olduğu bir kullanıcıyı temsil ettiğinde yararlı olduğunu unutmayın. Örneğin, Windows kimlik doğrulaması açık ve kimliğe bürünme kapalı ASP.NET kullanarak bu durumla karşılaşabilirsiniz. Bu durumda, işlem Internet Information Services (IIS) ' de yapılandırılmış bir hesap altında çalışıyor, geçerli sorumlusu ise sayfaya erişen Windows kullanıcısını temsil eder.  
   
- Diğerinden unutmayın **doğrulamasından** ya da **geri** değişiklikleri **asıl** nesne (<xref:System.Security.Principal.IPrincipal>) geçerli çağrı bağlamla ilişkili. Bunun yerine, kimliğe bürünme ve geri alma değişikliği belirtecin geçerli işletim sistemi işlemle ilişkili...  
+ **Kimliğe bürünme** ve **geri alma** seçeneklerinin geçerli çağrı bağlamıyla ilişkili **asıl** nesne (<xref:System.Security.Principal.IPrincipal>) değişikliklerini unutmayın. Bunun yerine, kimliğe bürünme ve geri döndürme geçerli işletim sistemi işlemiyle ilişkili belirteci değiştirir...  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

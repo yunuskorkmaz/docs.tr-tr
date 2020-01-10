@@ -3,37 +3,35 @@ title: DOM’da Varlık Bildirimleri ve Varlık Başvuruları Okuma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e30b52b8cdfb4d185687d58c80f4475730031c86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa650e75d7661eeafea74146f5cbb61878978575
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698823"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710407"
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>DOM’da Varlık Bildirimleri ve Varlık Başvuruları Okuma
-XML içeriği veya biçimlendirme yerine kullanılmak üzere bir adını belirten bir bildirimi bir varlıktır. Varlıkları iki bölümü vardır. İlk olarak, bir ad kullanarak bir varlık bildirimi değiştirme içerik bağlamak gerekir. Bir varlık bildirimi kullanılarak oluşturulan `<!ENTITY name "value">` belge türü tanımı (DTD'nin) veya XML şema söz dizimi. İkincisi, varlık bildiriminde tanımlanan adını XML bundan sonra kullanılır. XML'de kullanıldığında, bir varlık başvurusu adı verilir. Örneğin, aşağıdaki varlık bildirimi varlığın adını bildirir `publisher` "Microsoft Press" içeriğini ile ilişkilendiriliyor.  
+Varlık, içerik veya biçimlendirme yerine XML 'de kullanılacak adı belirten bir bildirimidir. Varlıkların iki bölümü vardır. İlk olarak, bir varlık bildirimi kullanarak bir adı değiştirme içeriğine bağlamamalısınız. Bir varlık bildirimi, bir belge türü tanımı (DTD) veya XML şemasında `<!ENTITY name "value">` söz dizimi kullanılarak oluşturulur. İkinci olarak, varlık bildiriminde tanımlanan ad daha sonra XML 'de kullanılır. XML 'de kullanıldığında, bir varlık başvurusu olarak adlandırılır. Örneğin, aşağıdaki varlık bildirimi, "Microsoft Press" içeriğiyle ilişkili `publisher` adının bir varlığını bildirir.  
   
 ```xml  
 <!ENTITY publisher "Microsoft Press">  
 ```  
   
- Aşağıdaki örnek, bir varlık başvurusu XML içinde bu varlık bildirim kullanımını göstermektedir.  
+ Aşağıdaki örnek bir varlık başvurusu olarak XML 'de bu varlık bildiriminin kullanımını gösterir.  
   
 ```xml  
 <author>Fred</author>  
 <pubinfo>Published by &publisher;</pubinfo>  
 ```  
   
- Bir belge belleğe yüklendiğinde bazı Çözümleyicileri varlıkları otomatik olarak genişletin. XML belleğe okuyun, bu nedenle, varlık bildirimleri anımsanacak kaydedildi ve. Daha sonra karşılaştığında `&;` , genel varlık başvurusu tanımlayın, karakterler ayrıştırıcı bir varlık bildirimi tablosunun ad arar. Başvuru `&publisher;` temsil ettiği içerik ile değiştirilir. Aşağıdaki XML kullanarak  
+ Bazı çözümleyiciler, bir belge belleğe yüklendiğinde varlıkları otomatik olarak genişletir. Bu nedenle, XML belleğe okunmakta olduğunda, varlık bildirimleri hatırlanır ve kaydedilir. Ayrıştırıcı daha sonra genel bir varlık başvurusunu tanımlayan `&;` karakterlerle karşılaştığında, ayrıştırıcı bu adı bir varlık bildirim tablosunda arar. Başvuru, `&publisher;` gösterdiği içerikle değiştirilmiştir. Aşağıdaki XML 'i kullanarak  
   
 ```xml  
 <author>Fred</author>  
 <pubinfo>Published by &publisher;</pubinfo>  
 ```  
   
- Varlık başvurusu genişletme ve değiştirerek `&publisher;` ile Microsoft Press, şu genişletilmiş XML içeriği sağlar.  
+ varlık başvurusunu genişletmek ve `&publisher;` Microsoft Press içeriğiyle değiştirmek, aşağıdaki genişletilmiş XML 'yi sağlar.  
   
  **Output**  
   
@@ -42,17 +40,17 @@ XML içeriği veya biçimlendirme yerine kullanılmak üzere bir adını belirte
 <pubinfo>Published by Microsoft Press</pubinfo>  
 ```  
   
- Varlıkları birçok çeşit vardır. Aşağıdaki diyagramda, terminolojisi ve varlık türleri dökümünü gösterir.  
+ Birçok varlık türü vardır. Aşağıdaki diyagramda, varlık türlerinin ve terminolojinin dökümü gösterilmektedir.  
   
- ![Akış Çizelgesi varlık türü hiyerarşisinin](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")  
+ ![varlık türü hiyerarşisinin akış grafiği](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")  
   
- Microsoft .NET Framework uygulaması XML belge nesne modeli (DOM) için varsayılan varlık başvuruları korur ve XML yüklendiğinde varlıkları genişletme değil sağlamaktır. Bir belge DOM, yüklü olan bu olduğu çıkarımında bir **XmlEntityReference** başvuru değişkenini içeren düğüm `&publisher;` oluşturulmuş, varlık içeriği temsil eden alt düğümler ile DTD'nin içinde bildirilmiş.  
+ XML Belge Nesne Modeli (DOM) Microsoft .NET Framework uygulamasının varsayılan örneği, varlıkların başvurularını korumasıdır ve XML yüklendiğinde varlıkları genişletmez. Bunun, DOM 'a bir belge yüklendiği, DTD 'de bildirildiği varlıktaki içeriği temsil eden alt düğümler ile `&publisher;` başvuru değişkenini içeren bir **XmlEntityReference** düğümünün oluşturulduğu bir ifade.  
   
- Kullanarak `<!ENTITY publisher "Microsoft Press">` varlık bildirimi, aşağıdaki diyagramda gösterilmiştir **XmlEntity** ve **XmlText** düğümleri bu bildirimden oluşturulur.  
+ `<!ENTITY publisher "Microsoft Press">` varlık bildirimini kullanarak, aşağıdaki diyagramda bu bildirimden oluşturulan **XmlEntity** ve **XmlText** düğümleri gösterilmektedir.  
   
- ![Varlık bildiriminden oluşturulan düğümler](../../../../docs/standard/data/xml/media/xml-entitydeclaration-node2.png "xml_entitydeclaration_node2")  
+ ![varlık bildiriminden oluşturulan düğümler](../../../../docs/standard/data/xml/media/xml-entitydeclaration-node2.png "xml_entitydeclaration_node2")  
   
- Farklar varlık başvuruları genişletilir ve onlara hangi düğümleri DOM ağacında, bellekte oluşturulan içinde bir fark yapar. Oluşturulan düğümler arasındaki fark konularında açıklanan [varlık başvuruları korunur](../../../../docs/standard/data/xml/entity-references-are-preserved.md) ve [varlık başvuruları genişletilir ve korunmaz olan](../../../../docs/standard/data/xml/entity-references-are-expanded-and-not-preserved.md).  
+ Varlık başvurularının genişletilme ve bu durumlarda, DOM ağacında bellek içinde oluşturulan düğümlerin bir farkı olmayan farklar. Oluşturulan düğümlerdeki fark, [varlık başvuruları korunur](../../../../docs/standard/data/xml/entity-references-are-preserved.md) ve [varlık başvuruları genişletilir ve korunmaz](../../../../docs/standard/data/xml/entity-references-are-expanded-and-not-preserved.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

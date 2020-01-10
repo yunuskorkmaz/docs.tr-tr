@@ -9,26 +9,24 @@ helpviewer_keywords:
 - exceptions, COM interop
 - COM interop, exceptions
 ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0a17752257589ea4ee4d9e58182d4448f02f6460
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17cd739ac40b43bdd4a93b83a4ab9d0d92400e2d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970943"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708938"
 ---
 # <a name="handling-com-interop-exceptions"></a>COM Birlikte Çalışması Özel Durumlarını İşleme
-Yönetilen ve yönetilmeyen kod özel durumları işlemek için birlikte çalışabilir. Bir yöntem, yönetilen kodda bir özel durum oluşturursa, ortak dil çalışma zamanı için bir COM nesnesi HRESULT geçirebilirsiniz. Bir hata HRESULT döndüren bir yöntemi yönetilmeyen kodda başarısız olursa, çalışma zamanı, yönetilen kod tarafından yakalanan özel durum oluşturur.  
+Yönetilen ve yönetilmeyen kod, özel durumları işlemek için birlikte çalışabilir. Bir yöntem yönetilen kodda bir özel durum oluşturursa, ortak dil çalışma zamanı bir HRESULT 'yi bir COM nesnesine geçirebilir. Bir yöntem HRESULT hatası döndürerek yönetilmeyen kodda başarısız olursa, çalışma zamanı yönetilen kod tarafından yakalanamayan bir özel durum oluşturur.  
   
- Çalışma zamanı, COM birlikte çalışma HRESULT daha ayrıntılı özel durumlar için otomatik olarak eşler. Örneğin, E_ACCESSDENIED olur <xref:System.UnauthorizedAccessException>, E_OUTOFMEMORY olur <xref:System.OutOfMemoryException>ve benzeri.  
+ Çalışma zamanı, HRESULT 'yi COM birlikte çalışabilirliğine özel özel durumlarla otomatik olarak eşleştirir. Örneğin, E_ACCESSDENIED <xref:System.UnauthorizedAccessException>olur E_OUTOFMEMORY <xref:System.OutOfMemoryException>olur.  
   
- HRESULT özel bir sonuç ise veya çalışma zamanı bilinmiyorsa, genel çalışma geçirir <xref:System.Runtime.InteropServices.COMException> istemciye. **ErrorCode** özelliği **COMException** HRESULT değerini içerir.  
+ HRESULT özel bir sonuçse veya çalışma zamanı için bilinmiyorsa, çalışma zamanı istemciye genel <xref:System.Runtime.InteropServices.COMException> geçirir. **COMException** öğesinin **ErrorCode** özelliği HRESULT değerini içerir.  
   
 ## <a name="working-with-ierrorinfo"></a>IErrorInfo ile çalışma  
- Yönetilen kod için hata COM'dan geçirildiğinde, çalışma zamanı hata bilgilerini özel durum nesnesiyle doldurur. IErrorInfo destekleyen ve HRESULTS dönüş COM nesneleri, yönetilen kod özel durumlar için bu bilgileri sağlayın. Örneğin, çalışma zamanı özel durumun COM hata açıklamasını eşler <xref:System.Exception.Message%2A> özelliği. HRESULT ek hata bilgisi sağlıyorsa, çalışma zamanının birçok özel durumun özellikleri varsayılan değerlerle doldurur.  
+ COM 'dan yönetilen koda bir hata geçirildiğinde, çalışma zamanı özel durum nesnesini hata bilgileriyle doldurur. IErrorInfo ve döndürülen HRESULTS 'leri destekleyen COM nesneleri, bu bilgileri yönetilen kod özel durumlarına sağlar. Örneğin, çalışma zamanı, açıklamayı COM hatasından özel durumun <xref:System.Exception.Message%2A> özelliğine eşler. HRESULT ek bir hata bilgisi sunduğunda, çalışma zamanı özel durum özelliklerinin çoğunu varsayılan değerlerle doldurur.  
   
- Yönetilmeyen kodda bir yöntem başarısız olursa, bir özel durum için bir yönetilen kod kesimi geçirilebilir. Konu [HRESULTS ve özel durumları](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md) HRESULTS çalışma zamanı özel durum nesnelere nasıl eşleştiğini gösteren bir tablo içeriyor.  
+ Yönetilmeyen kodda bir yöntem başarısız olursa, yönetilen bir kod kesimine özel durum geçirilebilir. [HResults ve Exceptions](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md) konuları, HResults 'ın çalışma zamanı özel durum nesneleriyle nasıl eşlendiğini gösteren bir tablo içerir.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

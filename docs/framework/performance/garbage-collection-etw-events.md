@@ -6,14 +6,12 @@ helpviewer_keywords:
 - garbage collection events [.NET Framework]
 - ETW, garbage collection events (CLR)
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cd4a4699f115c5b134ea60e703607ff36c229a78
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 5ff214314b92796f4a4a89ddd33a976d8b1f21d1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040576"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716064"
 ---
 # <a name="garbage-collection-etw-events"></a>Çöp Toplama ETW Olayları
 
@@ -52,9 +50,9 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
-|Biriktirme|Win: UInt32|*N*. çöp toplama.|
+|Count|Win: UInt32|*N*. çöp toplama.|
 |Derinliğini|Win: UInt32|Toplanmakta olan oluşturma.|
 |Neden|Win: UInt32|Çöp toplamanın neden tetiklendiği:<br /><br /> 0x0-küçük nesne yığını ayırması.<br /><br /> 0x1-alınmış.<br /><br /> 0x2-düşük bellek.<br /><br /> 0x3-boş.<br /><br /> 0x4-büyük nesne yığını ayırması.<br /><br /> 0x5-alan kalmadı (küçük nesne yığını için).<br /><br /> 0x6-alan kalmadı (büyük nesne yığını için).<br /><br /> 0x7-alınmış ancak engelleme olarak zorlanmadı.|
 |Tür|Win: UInt32|0x0-arka plan atık toplama dışında bir çöp toplama engelleme gerçekleşti.<br /><br /> 0x1-arka plan atık toplama.<br /><br /> 0x2-arka plan atık toplama sırasında atık toplamayı engelleme oluştu.|
@@ -76,9 +74,9 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
-|Biriktirme|Win: UInt32|*N*. çöp toplama.|
+|Count|Win: UInt32|*N*. çöp toplama.|
 |Derinliğini|Win: UInt32|Toplanan nesil.|
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
 
@@ -98,7 +96,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
 |GenerationSize0|Win: UInt64|0\. nesil belleğin bayt cinsinden boyutu.|
 |TotalPromotedSize0|Win: UInt64|Nesil 0 ' dan 1 ' e yükseltilen bayt sayısı.|
@@ -131,9 +129,9 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
-|Adrestir|Win: UInt64|Segmentin adresi.|
+|Adres|Win: UInt64|Segmentin adresi.|
 |Boyut|Win: UInt64|Segmentin boyutu.|
 |Tür|Win: UInt32|0x0-küçük nesne yığını.<br /><br /> 0x1-büyük nesne yığını.<br /><br /> 0x2-salt okunurdur yığın.|
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
@@ -156,9 +154,9 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
-|Adrestir|Win: UInt64|Segmentin adresi.|
+|Adres|Win: UInt64|Segmentin adresi.|
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
 
 ## <a name="gcrestarteebegin_v1-event"></a>GCRestartEEBegin_V1 olayı
@@ -187,7 +185,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
-|Olay|Olay kimliği|Ne zaman oluşturulur|
+|Olay|Olay Kimliği|Ne zaman oluşturulur|
 |-----------|--------------|-----------------|
 |`GCRestartEEEnd_V1`|3|Ortak dil çalışma zamanı askıya alma işleminden sürdürme sonlandı.|
 
@@ -209,10 +207,10 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
 |Neden|Win: UInt16|0x0-diğer.<br /><br /> 0x1-çöp toplama.<br /><br /> 0x2-Uygulama etki alanı kapanıyor.<br /><br /> 0x3-kod yeniden getiriliyor.<br /><br /> 0x4-kapanıyor.<br /><br /> 0x5-Debugger.<br /><br /> çöp toplama için 0x6 hazırlığı.|
-|Biriktirme|Win: UInt32|GC sayısı (saat). Genellikle, bundan sonra sonraki bir GC başlangıç olayını görürsünüz ve çöp toplama sırasında GC dizinini artırdıkça bu sayı + 1 olur.|
+|Count|Win: UInt32|GC sayısı (saat). Genellikle, bundan sonra sonraki bir GC başlangıç olayını görürsünüz ve çöp toplama sırasında GC dizinini artırdıkça bu sayı + 1 olur.|
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
 
 ## <a name="gcsuspendeeend_v1-event"></a>GCSuspendEEEnd_V1 olayı
@@ -247,13 +245,13 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
 |AllocationAmount|Win: UInt32|Bayt cinsinden ayırma boyutu. Bu değer, ULONG 'un uzunluğundan (4.294.967.295 bayt) daha az olan ayırmalar için doğrudur. Ayırma daha büyükse, bu alan kesilmiş bir değer içerir. Çok büyük ayırmalar için `AllocationAmount64` kullanın.|
 |AllocationKind|Win: UInt32|0x0-küçük nesne ayırma (ayırma küçük nesne yığınında).<br /><br /> 0x1-büyük nesne ayırma (ayırma büyük nesne yığınında).|
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
 |AllocationAmount64|Win: UInt64|Bayt cinsinden ayırma boyutu. Bu değer, çok büyük ayırmalar için doğrudur.|
-|Türü|Win: Işaretçi|MethodTable 'ın adresi. Bu olay sırasında ayrılan çeşitli nesne türleri olduğunda, bu, ayrılan son nesneye (100 KB eşiğinin aşılmasına neden olan nesne) karşılık gelen MethodTable 'ın adresidir.|
+|TürKimliği|Win: Işaretçi|MethodTable 'ın adresi. Bu olay sırasında ayrılan çeşitli nesne türleri olduğunda, bu, ayrılan son nesneye (100 KB eşiğinin aşılmasına neden olan nesne) karşılık gelen MethodTable 'ın adresidir.|
 |TypeName|Win: UnicodeString|Ayrılan türün adı. Bu olay sırasında ayrılan çeşitli nesne türleri varsa, bu, ayrılan son nesnenin türüdür (100 KB eşiğinin aşılmasına neden olan nesne).|
 |Heapındex|Win: UInt32|Nesnenin ayrıldığı yığın. Bu değer, iş istasyonu atık toplama ile çalıştırılırken 0 (sıfır) değeridir.|
 
@@ -289,9 +287,9 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
-|Biriktirme|Win: UInt32|Çalıştırılan sonlandırıcılar sayısı.|
+|Count|Win: UInt32|Çalıştırılan sonlandırıcılar sayısı.|
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
 
 ## <a name="gccreateconcurrentthread_v1-event"></a>GCCreateConcurrentThread_V1 Olayı

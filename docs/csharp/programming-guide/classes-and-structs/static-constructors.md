@@ -1,17 +1,16 @@
 ---
 title: Statik oluşturucular- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 6d1a39008ebb965649104c2e74241780731911bb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0956c174f4d5742780baf00a6f2785a9efd1d93f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596036"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714684"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Statik Oluşturucular (C# Programlama Kılavuzu)
 Statik bir Oluşturucu, herhangi bir [statik](../../language-reference/keywords/static.md) veriyi başlatmak veya yalnızca bir kez gerçekleştirilmesi gereken belirli bir eylemi gerçekleştirmek için kullanılır. İlk örnek oluşturulmadan veya herhangi bir statik üyeye başvurulmadan önce bu otomatik olarak çağrılır.  
@@ -35,11 +34,11 @@ Statik oluşturucular aşağıdaki özelliklere sahiptir:
 
 - Statik alanları başlatmak için statik bir Oluşturucu sağlamazsanız, [varsayılan değerler tablosunda](../../language-reference/keywords/default-values-table.md)listelendiği gibi tüm statik alanlar varsayılan değerlerine başlatılır. 
   
-- Statik bir Oluşturucu bir özel durum oluşturursa, çalışma zamanı ikinci bir kez çağrılmaz ve programınızın çalıştığı uygulama etki alanının ömrü boyunca tür başlatılmamış olarak kalır. En yaygın olarak, <xref:System.TypeInitializationException> statik bir Oluşturucu bir tür örneklememediğinde veya statik oluşturucu içinde oluşan işlenmeyen bir özel durum için bir özel durum oluşturulur. Kaynak kodunda açıkça tanımlanmayan örtük statik oluşturucular için, sorun giderme ara dil (IL) kodunu denetlemesini gerektirebilir.
+- Statik bir Oluşturucu bir özel durum oluşturursa, çalışma zamanı ikinci bir kez çağrılmaz ve programınızın çalıştığı uygulama etki alanının ömrü boyunca tür başlatılmamış olarak kalır. En yaygın olarak, bir statik oluşturucu bir tür örneklememediğinde veya statik oluşturucu içinde oluşan işlenmeyen bir özel durum için <xref:System.TypeInitializationException> özel durumu oluşturulur. Kaynak kodunda açıkça tanımlanmayan örtük statik oluşturucular için, sorun giderme ara dil (IL) kodunu denetlemesini gerektirebilir.
 
-- Statik bir oluşturucunun varlığı <xref:System.Reflection.TypeAttributes.BeforeFieldInit> tür özniteliğinin eklenmesini engeller. Bu, çalışma zamanının iyileştirmesini sınırlandırır.
+- Statik bir oluşturucunun varlığı, <xref:System.Reflection.TypeAttributes.BeforeFieldInit> türü özniteliğinin eklenmesini engeller. Bu, çalışma zamanının iyileştirmesini sınırlandırır.
 
-- Olarak `static readonly` belirtilen bir alan, bildiriminin bir parçası olarak veya bir statik oluşturucuda atanabilir. Açık bir statik Oluşturucu gerekli olmadığında, daha iyi çalışma zamanı iyileştirmesi için bir statik Oluşturucu yerine bildiriminde statik alanları başlatın.
+- `static readonly` olarak belirtilen bir alan, yalnızca bildiriminin bir parçası olarak veya bir statik oluşturucuda atanabilir. Açık bir statik Oluşturucu gerekli olmadığında, daha iyi çalışma zamanı iyileştirmesi için bir statik Oluşturucu yerine bildiriminde statik alanları başlatın.
 
 > [!Note]
 > Doğrudan erişilemeyen halde, açık bir statik oluşturucunun varlığı, başlatma özel durumlarının giderilmesi için yardımcı olmak üzere açıklanmalıdır.
@@ -47,12 +46,12 @@ Statik oluşturucular aşağıdaki özelliklere sahiptir:
 ### <a name="usage"></a>Kullanım
 
 - Statik oluşturucuların tipik kullanımı, sınıfın bir günlük dosyası kullanıldığı ve oluşturucunun bu dosyaya giriş yazmak için kullanıldığı durumlarda kullanılır.  
-- Statik oluşturucular, Oluşturucu `LoadLibrary` yöntemi çağırabilmesini, yönetilmeyen kod için sarmalayıcı sınıflar oluştururken de kullanışlıdır.  
+- Statik oluşturucular, Oluşturucu `LoadLibrary` yöntemini çağırabilmesini, yönetilmeyen kod için sarmalayıcı sınıflar oluştururken de kullanışlıdır.  
 
 - Statik oluşturucular, derleme zamanında kısıtlamalar aracılığıyla denetlenemeyen tür parametresinde çalışma zamanı denetimlerini zorlamak için de kullanışlı bir yerdir (tür parametresi kısıtlamaları).
 
 ## <a name="example"></a>Örnek
- Bu örnekte, sınıfının `Bus` statik bir Oluşturucusu vardır. İlk örneği `Bus` oluşturulduğunda (`bus1`), sınıfı başlatmak için statik oluşturucu çağrılır. Örnek çıktı, statik oluşturucunun, iki örneği `Bus` oluşturulsa ve örnek Oluşturucu çalışmadan önce çalışmasına rağmen yalnızca bir kez çalıştığını doğrular.  
+ Bu örnekte, `Bus` sınıfının statik bir Oluşturucusu vardır. İlk `Bus` örneği oluşturulduğunda (`bus1`), sınıfı başlatmak için statik oluşturucu çağrılır. Örnek çıktı, statik oluşturucunun iki `Bus` örneği oluşturulsa ve örnek Oluşturucu çalıştırılmadan önce çalışmasına rağmen yalnızca bir kez çalıştığını doğrular.  
   
  [!code-csharp[csProgGuideObjects#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#15)]
  
@@ -67,4 +66,4 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 - [Statik Sınıflar ve Statik Sınıf Üyeleri](./static-classes-and-static-class-members.md)
 - [Sonlandırıcılar](./destructors.md)
 - [Oluşturucu tasarım yönergeleri](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
-- [Güvenlik Uyarısı-CA2121: Statik oluşturucular özel olmalıdır](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)
+- [Güvenlik Uyarısı-CA2121: statik oluşturucular özel olmalıdır](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)

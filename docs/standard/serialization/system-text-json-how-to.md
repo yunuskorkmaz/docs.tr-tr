@@ -1,19 +1,17 @@
 ---
 title: .NET kullanarak C# JSON serileştirmek ve serisini kaldırma
-author: tdykstra
-ms.author: tdykstra
 ms.date: 09/16/2019
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3d3dc0011562e25854938aff857f2832a5978b49
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a9c690e736a08c729a4099d5e7a519ed17ec282c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283330"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705801"
 ---
 # <a name="how-to-serialize-and-deserialize-json-in-net"></a>.NET 'te JSON serileştirme ve serisini kaldırma
 
@@ -23,7 +21,7 @@ Yönergeler ve örnek kod, kitaplığı, [ASP.NET Core](/aspnet/core/)gibi bir �
 
 Seri hale getirme örnek kodunun çoğu, JSON 'ı (örneğin girintileme ve insanlar okunabilirlik için boşluk) `true` <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> belirler. Üretim kullanımı için genellikle bu ayar için `false` varsayılan değerini kabul etmiş olursunuz.
 
-## <a name="namespaces"></a>{1&gt;Ad Alanları&lt;1}
+## <a name="namespaces"></a>{1&gt;Ad alanları&lt;1}
 
 <xref:System.Text.Json> ad alanı tüm giriş noktalarını ve ana türleri içerir. <xref:System.Text.Json.Serialization> ad alanı, serileştirme ve seri durumdan çıkarma için özel gelişmiş senaryolar ve özelleştirmeler için öznitelikler ve API 'Leri içerir. Bu makalede gösterilen kod örnekleri, bu ad alanlarından biri veya her ikisi için `using` yönergeler gerektirir:
 
@@ -377,9 +375,9 @@ Tüm null değer özelliklerini dışlamak için, aşağıdaki örnekte gösteri
 
 Seri hale getirmek ve JSON çıktısı için örnek bir nesne aşağıda verilmiştir:
 
-|Özellik |Value  |
+|Özellik |Değer  |
 |---------|---------|
-| Date    | 8/1/2019 12:00:00-07:00|
+| Tarih    | 8/1/2019 12:00:00-07:00|
 | TemperatureCelsius| 25 |
 | Özet| {1&gt;null&lt;1}|
 
@@ -460,7 +458,7 @@ Kaçı en aza indirmek için aşağıdaki örnekte gösterildiği gibi <xref:Sys
 
 ## <a name="serialize-properties-of-derived-classes"></a>Türetilmiş sınıfların serileştirme özellikleri
 
-Derleme zamanında seri hale getirilecek tür için belirttiğiniz zaman polimorfik serileştirme desteklenmez. Örneğin, bir `WeatherForecast` sınıfa ve `WeatherForecastWithWind`türetilmiş bir sınıfa sahip olduğunuzu varsayalım:
+Derleme zamanında seri hale getirilecek tür için belirttiğiniz zaman polimorfik serileştirme desteklenmez. Örneğin, bir `WeatherForecast` sınıfa ve `WeatherForecastDerived`türetilmiş bir sınıfa sahip olduğunuzu varsayalım:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -470,7 +468,7 @@ Ve derleme zamanında `Serialize` yönteminin tür bağımsız değişkeninin `W
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeDefault)]
 
-Bu senaryoda, `weatherForecast` nesnesi gerçekten bir `WeatherForecastWithWind` nesnesi olsa bile `WindSpeed` özelliği serileştirilmez. Yalnızca temel sınıf özellikleri serileştirilir:
+Bu senaryoda, `weatherForecast` nesnesi gerçekten bir `WeatherForecastDerived` nesnesi olsa bile `WindSpeed` özelliği serileştirilmez. Yalnızca temel sınıf özellikleri serileştirilir:
 
 ```json
 {
@@ -571,14 +569,14 @@ Gösterilen türde gösterilen JSON serisini kaldırırsanız, `DatesAvailable` 
 
 Daha önce Bu örnek türünde gösterilen JSON serisini kaldırdığınızda, ek veriler `ExtensionData` özelliğinin anahtar-değer çiftleri haline gelir:
 
-|Özellik |Value  |Notlar  |
+|Özellik |Değer  |Notlar  |
 |---------|---------|---------|
-| Date    | 8/1/2019 12:00:00-07:00||
+| Tarih    | 8/1/2019 12:00:00-07:00||
 | TemperatureCelsius| 0 | Büyük/küçük harfe duyarlı uyuşmazlık (JSON içinde`temperatureCelsius`), bu nedenle özellik ayarlanmadı. |
-| Özet | Kolay ||
+| Özet | Sık Erişimli ||
 | ExtensionData | temperatureCelsius: 25 |Büyük/küçük harf eşleşmediğinden, bu JSON özelliği çok fazla olur ve sözlükte anahtar-değer çifti olur.|
 || DatesAvailable:<br>  8/1/2019 12:00:00-07:00<br>8/2/2019 12:00:00-07:00 |JSON 'dan fazladan özellik, değer nesnesi olarak bir dizi ile anahtar-değer çifti haline gelir.|
-| |SummaryWords:<br>İyi<br>Rüzgarlı<br>İnsankimliği |JSON 'dan fazladan özellik, değer nesnesi olarak bir dizi ile anahtar-değer çifti haline gelir.|
+| |SummaryWords:<br>Seyrek Erişimli<br>Rüzgarlı<br>İnsankimliği |JSON 'dan fazladan özellik, değer nesnesi olarak bir dizi ile anahtar-değer çifti haline gelir.|
 
 Hedef nesne serileştirildiğinde, uzantı veri anahtarı değer çiftleri, gelen JSON 'da olduğu gibi JSON özellikleri olur:
 

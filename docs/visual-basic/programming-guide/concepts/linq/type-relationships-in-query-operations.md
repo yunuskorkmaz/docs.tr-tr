@@ -11,29 +11,29 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 8c201abef924766d52b1adb084970a24ebea2b50
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e839271ac254a5e96f8c99f59397016fb99540aa
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350560"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636919"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>LINQ Sorgu İşlemlerinde Tür İlişkileri (Visual Basic)
 
-[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu işlemlerinde kullanılan değişkenler kesin olarak türdedir ve birbirleriyle uyumlu olmalıdır. Güçlü yazma, veri kaynağında, sorgunun kendisinde ve sorgu yürütmesinde kullanılır. Aşağıdaki çizimde, bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgusunu tanımlamak için kullanılan terimler tanımlanmaktadır. Bir sorgunun kısımları hakkında daha fazla bilgi için bkz. [temel sorgu işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
+Dil ile tümleşik sorgu (LINQ) sorgu işlemlerinde kullanılan değişkenler kesin olarak türdedir ve birbirleriyle uyumlu olmalıdır. Güçlü yazma, veri kaynağında, sorgunun kendisinde ve sorgu yürütmesinde kullanılır. Aşağıdaki çizimde, bir LINQ sorgusunu tanımlamak için kullanılan terimler tanımlanmaktadır. Bir sorgunun kısımları hakkında daha fazla bilgi için bkz. [temel sorgu işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
 
 ![Öğeleri vurgulanmış bir sözde kod sorgusunu gösteren ekran görüntüsü.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
 Sorgudaki aralık değişkeninin türü, veri kaynağındaki öğelerin türüyle uyumlu olmalıdır. Sorgu değişkeninin türü, `Select` yan tümcesinde tanımlanan dizi öğesiyle uyumlu olmalıdır. Son olarak, dizi öğelerinin türü sorguyu yürüten `For Each` bildiriminde kullanılan döngü denetimi değişkeninin türüyle uyumlu olmalıdır. Bu güçlü yazma, derleme zamanında tür hatalarının tanımlanmasını kolaylaştırır.
 
-Visual Basic, *örtülü yazma*olarak da bilinen yerel tür çıkarımı uygulayarak güçlü yazma kullanışlı hale getirir. Bu özellik önceki örnekte kullanılır ve [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] örnekleri ve belgeler boyunca bu özelliği kullanır. Visual Basic, yerel tür çıkarımı yalnızca bir `As` yan tümcesi olmadan bir `Dim` deyimi kullanılarak gerçekleştirilir. Aşağıdaki örnekte, `city` kesin bir dize olarak türdedir.
+Visual Basic, *örtülü yazma*olarak da bilinen yerel tür çıkarımı uygulayarak güçlü yazma kullanışlı hale getirir. Bu özellik önceki örnekte kullanılır ve LINQ örnekleri ve belgelerinin tamamında kullanıldığını görürsünüz. Visual Basic, yerel tür çıkarımı yalnızca bir `As` yan tümcesi olmadan bir `Dim` deyimi kullanılarak gerçekleştirilir. Aşağıdaki örnekte, `city` kesin bir dize olarak türdedir.
 
 [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]
 
 > [!NOTE]
 > Yerel tür çıkarımı yalnızca `Option Infer` `On`olarak ayarlandığında kullanılır. Daha fazla bilgi için bkz. [Option Infer deyimleri](../../../../visual-basic/language-reference/statements/option-infer-statement.md).
 
-Ancak, bir sorguda yerel tür çıkarımı kullanıyor olsanız bile, veri kaynağı, sorgu değişkeni ve sorgu yürütme döngüsünde değişkenler arasında aynı tür ilişkileri vardır. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları yazarken veya belgelerde örnek ve kod örnekleriyle çalışırken, bu tür ilişkilerle ilgili temel bilgiye sahip olmanız yararlı olur.
+Ancak, bir sorguda yerel tür çıkarımı kullanıyor olsanız bile, veri kaynağı, sorgu değişkeni ve sorgu yürütme döngüsünde değişkenler arasında aynı tür ilişkileri vardır. LINQ sorguları yazarken veya belgelerde örnek ve kod örnekleriyle çalışırken, bu tür ilişkilerden temel olarak anlaşılmak yararlıdır.
 
 Veri kaynağından döndürülen türle eşleşmeyen bir Aralık değişkeni için açık bir tür belirtmeniz gerekebilir. `As` yan tümcesini kullanarak Aralık değişkeninin türünü belirtebilirsiniz. Ancak, dönüştürme bir [daraltma dönüştürmedir](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) ve `Option Strict` `On`olarak ayarlanırsa bu hata oluşur. Bu nedenle, dönüştürmeyi veri kaynağından alınan değerlerle gerçekleştirmenizi öneririz. <xref:System.Linq.Enumerable.Cast%2A> yöntemini kullanarak veri kaynağındaki değerleri açık Aralık değişkeni türüne dönüştürebilirsiniz. `Select` yan tümcesindeki seçili değerleri, Aralık değişkeninin türünden farklı bir açık türe de çevirebilirsiniz. Bu noktaları aşağıdaki kodda gösterilmiştir.
 
@@ -41,7 +41,7 @@ Veri kaynağından döndürülen türle eşleşmeyen bir Aralık değişkeni iç
 
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Kaynak verilerin tüm öğelerini döndüren sorgular
 
-Aşağıdaki örnek, kaynak verilerden seçilen bir dizi öğeyi döndüren [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] bir sorgu işlemini gösterir. Kaynak, `names`, bir dize dizisi içerir ve sorgu çıktısı, ı harfiyle başlayan dizeleri içeren bir dizidir.
+Aşağıdaki örnek, kaynak verilerden seçilen öğelerin dizisini döndüren bir LINQ sorgu işlemini gösterir. Kaynak, `names`, bir dize dizisi içerir ve sorgu çıktısı, ı harfiyle başlayan dizeleri içeren bir dizidir.
 
 [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]
 

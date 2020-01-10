@@ -1,17 +1,16 @@
 ---
 title: Özel durum Işleme C# -Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 895f561c15941d851980ea9b392d2e86db2462f3
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ee1e5bd15183dad9ffe97824f9b194668e9d3b17
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423278"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705307"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Özel Durum İşleme (C# Programlama Kılavuzu)
 [TRY](../../language-reference/keywords/try-catch.md) bloğu, programcılar tarafından C# bir özel durumdan etkilenebilecek kodu bölümlemek için kullanılır. İlişkili [catch](../../language-reference/keywords/try-catch.md) blokları, ortaya çıkan özel durumları işlemek için kullanılır. [Finally](../../language-reference/keywords/try-finally.md) bloğu, `try` bloğunda ayrılan kaynakları serbest bırakma gibi `try` bloğunda bir özel durumun oluşturulup oluşturulmayacağını bakılmaksızın çalıştırılan kodu içerir. `try` bir blok, bir veya daha fazla ilişkili `catch` bloğunu veya `finally` bloğunu veya her ikisini de gerektirir.  

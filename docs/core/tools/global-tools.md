@@ -3,13 +3,12 @@ title: .NET Core küresel araçları
 description: .NET Core genel araçlarının ne olduğuna ve bunlara yönelik .NET Core CLI komutlarına genel bakış.
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.custom: seodec18
-ms.openlocfilehash: 116739f80d5157632a8e44a19cbef6ba7971d339
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 665cee64cb92efd16f5528feb656b377f9f3283c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318307"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714154"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core genel araçlarına genel bakış
 
@@ -21,7 +20,7 @@ ms.locfileid: "72318307"
 
 * Araçla ilgili bilgileri bulun (genellikle bir Web sitesi veya GitHub sayfası).
 * Akışın giriş sayfasındaki yazar ve istatistikleri denetleyin (genellikle NuGet.org).
-* Aracı 'nı yükler.
+* Aracı yükleyin.
 * Aracı çağırın.
 * Aracı güncelleştirin.
 * Aracı kaldırın.
@@ -69,7 +68,7 @@ Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 
 Genel araçlar varsayılan dizine veya belirli bir konuma yüklenebilir. Varsayılan dizinler şunlardır:
 
-| ATAYAMADı          | Yol                          |
+| İşletim Sistemi          | Yol                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -85,13 +84,13 @@ Bu durumda .NET Core CLI, bu konumu otomatik olarak PATH ortam değişkenine ekl
 
 Araç yüklendikten sonra, komutunu kullanarak çağırabilirsiniz. Komutun paket adı ile aynı olamayacağını unutmayın.
 
-Komut `dotnetsay` ise, şunu ile çağırın:
+Komut `dotnetsay`ise, şunu ile çağırın:
 
 ```console
 dotnetsay
 ```
 
-Araç yazarı, aracın `dotnet` istemi bağlamında görünmesini istiyorlarsa, bunu şöyle `dotnet <command>` olarak çağırdığınız bir şekilde yazmış olabilirler:
+Araç yazarı aracın `dotnet` istem bağlamında görünmesini istiyorlarsa, bu, örneğin şöyle bir şekilde `dotnet <command>`çağrılabileceği şekilde yazmış olabilirler:
 
 ```dotnetcli
 dotnet doc
@@ -108,10 +107,10 @@ dotnet <command> --help
 
 ## <a name="other-cli-commands"></a>Diğer CLı komutları
 
-.NET Core SDK .NET Core küresel araçlarını destekleyen diğer komutları içerir. Aşağıdaki seçeneklerden biriyle `dotnet tool` komutlarından birini kullanın:
+.NET Core SDK .NET Core küresel araçlarını destekleyen diğer komutları içerir. Aşağıdaki seçeneklerden biriyle `dotnet tool` komutlardan birini kullanın:
 
 * `--global` veya `-g`, komutun Kullanıcı genelindeki genel araçlara uygun olduğunu belirtir.
-* `--tool-path` küresel araçlar için özel bir konum belirtir.
+* `--tool-path` genel araçlar için özel bir konum belirtir.
 
 Genel araçlar için hangi komutların kullanılabildiğini öğrenmek için:
 

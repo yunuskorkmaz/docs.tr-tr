@@ -3,23 +3,22 @@ title: Bağımlılık Özellikleri
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
-author: KrzysztofCwalina
-ms.openlocfilehash: 52d7a69a3f52c67ebff3f3db1daf0790e995913a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd12d05dbba133503778e6df3cd0e6c3e5689d5b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778774"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709497"
 ---
 # <a name="dependency-properties"></a>Bağımlılık Özellikleri
-Bağımlılık özelliği (DP) bir tür değişken (alan), örneğin depolamak yerine bir özellik deposu değerini depolayan bir normal bir özelliktir.  
+Bağımlılık özelliği (DP), değerini bir tür değişkeninde (alan) depolamak yerine bir özellik deposunda depolayan normal bir özelliktir.  
   
- Bir ekli bağımlılık özelliği olarak "Özellikler" nesnelerini ve bunların kapsayıcılar arasındaki ilişkileri tanımlayan temsil eden statik alma ve ayarlama yöntemlerini modellenmiş bağımlılık özelliği türüdür (örneğin, konumunu bir `Button` nesnenin bir `Panel` kapsayıcı).  
+ İliştirilmiş bir bağımlılık özelliği, nesneler ve kapsayıcıları arasındaki ilişkileri açıklayan "özellikleri" temsil eden, statik get ve set yöntemleri olarak modellenen bir bağımlılık özelliği türüdür (örn. bir `Panel` kapsayıcısında bir `Button` nesnesinin konumu).  
   
  **✓ DO** stil, Tetikleyiciler, veri bağlama, animasyon, dinamik kaynaklar ve devralma gibi WPF özellikleri desteklemek için özellikler gerekiyorsa bağımlılık özellikleri sağlar.  
   
 ## <a name="dependency-property-design"></a>Bağımlılık özelliği tasarımı  
- **✓ DO** devralınmalıdır <xref:System.Windows.DependencyObject>, veya bağımlılık özellikleri uygularken kendi alt biri. Türü bir çok verimli bir özellik deposu sağlar ve otomatik olarak WPF veri bağlamayı destekler.  
+ **✓ DO** devralınmalıdır <xref:System.Windows.DependencyObject>, veya bağımlılık özellikleri uygularken kendi alt biri. Türü, bir özellik deposunun çok verimli bir uygulamasını sağlar ve otomatik olarak WPF veri bağlamayı destekler.  
   
  **✓ DO** normal CLR özellik ve bir örneğini depolamak ortak statik salt okunur alan sağlamak <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> her bağımlılık özelliği için.  
   
@@ -29,18 +28,18 @@ Bağımlılık özelliği (DP) bir tür değişken (alan), örneğin depolamak y
   
  **X DO NOT** Ayarla bağımlılık özelliklerinin varsayılan değerlerini açıkça kodda; bunun yerine meta verilerde ayarlayın.  
   
- Açık bir özelliği varsayılan olarak, bu özellik bir stil gibi örtük bazı araçlar tarafından ayarlanan engelleyebilir.  
+ Özelliği varsayılan olarak ayarlarsanız, bu özelliğin stil gibi bazı örtük yollarla ayarlanmasını engelleyebilirsiniz.  
   
  **X DO NOT** kodu statik alana erişmek için özellik erişimcisi içinde standart kod dışında koyun.  
   
- Özelliği bir stil gibi örtük bir şekilde ayarlanmışsa kod stili uygulanması nedeniyle yürütmesine olmaz statik alan doğrudan kullanır.  
+ Stil bir stil gibi örtük yollarla ayarlandıysa, stil statik alanı doğrudan kullandığından bu kod yürütülmez.  
   
- **X DO NOT** güvenli veri depolamak için bağımlılık özelliklerini kullanın. Hatta özel bağımlılık özellikleri genel olarak erişilebilir.  
+ **X DO NOT** güvenli veri depolamak için bağımlılık özelliklerini kullanın. Hatta özel bağımlılık özelliklerine herkese açık bir şekilde erişilebilir.  
   
-## <a name="attached-dependency-property-design"></a>Ekli bir bağımlılık özelliği tasarımı  
- Bağımlılık özellikleri önceki bölümde açıklanan bildirim türü iç özelliklerini temsil eder; Örneğin, `Text` özelliktir özelliği `TextButton`, hangi bildirir. Özel bağımlılık özelliği ekli bağımlılık özelliği türüdür.  
+## <a name="attached-dependency-property-design"></a>İliştirilmiş bağımlılık özelliği tasarımı  
+ Önceki bölümde açıklanan bağımlılık özellikleri, bildirim türünün iç özelliklerini temsil eder; Örneğin, `Text` özelliği bir `TextButton`özelliğidir ve bunu bildirir. Özel bir tür bağımlılık özelliği, ekli bağımlılık özelliğidir.  
   
- Ekli özelliği Klasik örneğidir <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> özelliği. Düğmenin (değil kılavuz) sütun konumu özelliğini temsil eder, ancak yalnızca düğme kılavuzunda yer alıyorsa, ve "düğmeleri Kılavuzlar tarafından eklenmiş şekilde" ilgili.  
+ Ekli özelliğe ait klasik bir örnek <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> özelliktir. Özelliği, düğmenin (Grid 'in) sütun konumunu temsil eder, ancak yalnızca düğmenin bir kılavuzda yer aldığı ve kılavuza göre düğmelere "eklenmiş" olması durumunda geçerlidir.  
   
 ```xaml
 <Grid>  
@@ -54,7 +53,7 @@ Bağımlılık özelliği (DP) bir tür değişken (alan), örneğin depolamak y
 </Grid>  
 ```  
   
- Erişimciler statik alma ve ayarlama yöntemlerini tarafından temsil edilen dışında ekli özelliği tanımı normal bağımlılık özelliği, çoğunlukla, gibi görünür:  
+ İliştirilmiş bir özelliğin tanımı, erişimcilerinin statik get ve set yöntemlerine göre temsil edildiği durumlar dışında, genellikle normal bağımlılık özelliği gibi görünür:  
   
 ```csharp
 public class Grid {  
@@ -76,26 +75,26 @@ public class Grid {
 }  
 ```  
   
-## <a name="dependency-property-validation"></a>Bağımlılık özelliği doğrulama  
- Doğrulama olarak adlandırılan özellikleri genellikle uygulayın. Bir özelliğin değerini değiştirmek için bir deneme yapıldığında Doğrulama mantığı yürütür.  
+## <a name="dependency-property-validation"></a>Bağımlılık özelliği doğrulaması  
+ Özellikler genellikle doğrulama olarak adlandırılan şeyi uygular. Bir özelliğin değerini değiştirme girişimi yapıldığında doğrulama mantığı yürütülür.  
   
- Ne yazık ki bağımlılık özellik erişimcileri, rastgele bir doğrulama kodu içeremez. Bunun yerine, bağımlılık özelliği Doğrulama mantığı özelliği kayıt sırasında belirtilmesi gerekiyor.  
+ Ne yazık ki bağımlılık özellik erişimcileri rastgele doğrulama kodu içeremez. Bunun yerine, özellik kaydı sırasında bağımlılık özelliği doğrulama mantığının belirtilmesi gerekir.  
   
- **X DO NOT** bağımlılık özelliği doğrulama mantığını özelliğin erişimciler yerleştirin. Bunun yerine, doğrulama geri çağırma işlevi için geçirin `DependencyProperty.Register` yöntemi.  
+ **X DO NOT** bağımlılık özelliği doğrulama mantığını özelliğin erişimciler yerleştirin. Bunun yerine `DependencyProperty.Register` yöntemine bir doğrulama geri çağırması geçirin.  
   
-## <a name="dependency-property-change-notifications"></a>Bağımlılık özellik değişikliği bildirimleri  
- **X DO NOT** bağımlılık özellik erişimcisi değişiklik bildirimi mantığı uygular. Bağımlılık özelliklerine sahip bir değişiklik bildirimi geri araması için sağlanarak kullanılmalıdır bir yerleşik değişiklik bildirimleri özellik <xref:System.Windows.PropertyMetadata>.  
+## <a name="dependency-property-change-notifications"></a>Bağımlılık özelliği değişiklik bildirimleri  
+ **X DO NOT** bağımlılık özellik erişimcisi değişiklik bildirimi mantığı uygular. Bağımlılık özellikleri, <xref:System.Windows.PropertyMetadata>bir değişiklik bildirimi geri çağırması sağlayarak kullanılması gereken yerleşik bir değişiklik bildirimleri özelliğine sahiptir.  
   
-## <a name="dependency-property-value-coercion"></a>Bağımlılık özelliği değer zorlama  
- Özellik zorlama özellik deposu gerçekten değiştirilmeden önce ayarlayıcı tarafından verilen bir özellik ayarlayıcı değer değiştirildiğinde gerçekleşir.  
+## <a name="dependency-property-value-coercion"></a>Bağımlılık özelliği değer zorlaması  
+ Özellik deposu gerçekten değiştirilmeden önce özellik ayarlayıcısına verilen değer ayarlayıcı tarafından değiştirilirse Özellik zorlaması gerçekleşir.  
   
  **X DO NOT** bağımlılık özellik erişimcisi zorlama mantığı uygular.  
   
- Bağımlılık özelliklerine sahip yerleşik zorlama özelliği ve zorlama geri çağırmaya sağlanarak kullanılabilir `PropertyMetadata`.  
+ Bağımlılık özellikleri yerleşik bir zorlama özelliğine sahiptir ve `PropertyMetadata`bir zorlama geri çağırması sağlayarak kullanılabilir.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

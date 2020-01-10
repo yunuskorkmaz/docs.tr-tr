@@ -11,14 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee8cc1b677ad6f6c2718c155edbba632df38dbd3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 909b03588d2a41f667bfa117a5cecb420b125088
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974693"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708403"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Genel Türlerde Kovaryans ve Kontravaryans
 Kovaryans ve değişken Varyans, başlangıçta belirtilenden daha fazla türetilmiş bir tür (daha fazla özel) veya daha az türetilmiş bir tür (daha az özel) kullanma olanağına işaret eden terimlerdir. Genel tür parametreleri, genel türleri atamakta ve kullanmakta daha fazla esneklik sağlamak için birlikte değişme ve değişken karşıtlığını destekler. Bir tür sisteminden söz ederken, birlikte değişme, değişken karşıtlığı ve değişmezlik terimlerinin tanımları aşağıdaki gibidir. Örneklerde `Base` adlı bir temel sınıf ve `Derived`adlı türetilmiş bir sınıf varsayılır.  
@@ -148,11 +146,11 @@ Kovaryans ve değişken Varyans, başlangıçta belirtilenden daha fazla türeti
   
 |Tür|Birlikte değişken türde parametreler|Değişken karşıtı türde parametreler|  
 |----------|-------------------------------|-----------------------------------|  
-|<xref:System.Action%6016> <xref:System.Action%601>||Evet|  
+|<xref:System.Action%601> - <xref:System.Action%6016>||Evet|  
 |<xref:System.Comparison%601>||Evet|  
 |<xref:System.Converter%602>|Evet|Evet|  
 |<xref:System.Func%601>|Evet||  
-|<xref:System.Func%6017> <xref:System.Func%602>|Evet|Evet|  
+|<xref:System.Func%602> - <xref:System.Func%6017>|Evet|Evet|  
 |<xref:System.IComparable%601>||Evet|  
 |<xref:System.Predicate%601>||Evet|  
 |<xref:System.Collections.Generic.IComparer%601>||Evet|  

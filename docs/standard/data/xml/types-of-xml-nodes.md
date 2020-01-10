@@ -3,48 +3,46 @@ title: XML Düğüm Türleri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 623583f16c23b55c16f648fedcd039ca36f73b1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83b8c09323e73a9b3ba7dea8d272d7d41d03add1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026867"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710095"
 ---
 # <a name="types-of-xml-nodes"></a>XML Düğüm Türleri
-Bir XML belgesi bir ağaç düğümleri olarak belleğe okunduğunda, düğüm için düğüm türleri düğümleri oluşturulduğunda verdi. XML belge nesne modeli (DOM), düğüm türleri, World Wide Web Consortium (W3C) tarafından belirlenen çeşitli türlerde olan ve DOM yapısı modeli 1.1.1 bölümünde listelenir. Aşağıdaki tabloda, bu düğüm türü ve her kısa bir açıklaması için atanan nesne düğüm türleri listelenmektedir.  
+Bir XML belgesi, düğüm ağacı olarak belleğe okuna, düğümlerin düğüm türleri düğümler oluşturulduğunda karardır. XML Belge Nesne Modeli (DOM), World Wide Web Konsorsiyumu (W3C) tarafından belirlendiği ve DOM yapı modelinde bölümünde listelenen çeşitli düğüm türleri türlerine sahiptir. Aşağıdaki tabloda düğüm türleri, bu düğüm türüne atanan nesne ve her birinin kısa bir açıklaması listelenmektedir.  
   
 |DOM düğüm türü|Nesne|Açıklama|  
 |-------------------|------------|-----------------|  
-|Belge|<xref:System.Xml.XmlDocument>|Ağaçtaki tüm düğümleri kapsayıcı. Olarak da bilinir, her zaman aynı kök öğesi değil belge kökü olan.|  
-|DocumentFragment|<xref:System.Xml.XmlDocumentFragment>|Bir veya daha fazla düğüm bir ağaç yapısı olmadan içeren geçici bir paketi.|  
-|DocumentType|<xref:System.Xml.XmlDocumentType>|Temsil eden `<!DOCTYPE…>` düğümü.|  
-|EntityReference|<xref:System.Xml.XmlEntityReference>|Genişletilmiş varlık başvurusu metni temsil eder.|  
-|Öğe|<xref:System.Xml.XmlElement>|Bir öğe düğümü temsil eder.|  
-|attr|<xref:System.Xml.XmlAttribute>|Bir öğenin bir özniteliktir.|  
-|İnstruction|<xref:System.Xml.XmlProcessingInstruction>|Bir işlem yönergesi düğümü ' dir.|  
+|Belge|<xref:System.Xml.XmlDocument>|Ağaçtaki tüm düğümlerin kapsayıcısı. Her zaman kök öğesiyle aynı olmayan belge kökü olarak da bilinir.|  
+|DocumentFragment|<xref:System.Xml.XmlDocumentFragment>|Herhangi bir ağaç yapısı olmadan bir veya daha fazla düğüm içeren geçici bir paket.|  
+|DocumentType|<xref:System.Xml.XmlDocumentType>|`<!DOCTYPE…>` düğümünü temsil eder.|  
+|EntityReference|<xref:System.Xml.XmlEntityReference>|Genişletilmemiş varlık başvuru metnini temsil eder.|  
+|Öğe|<xref:System.Xml.XmlElement>|Bir öğe düğümünü temsil eder.|  
+|Özniteliği|<xref:System.Xml.XmlAttribute>|, Bir öğesinin özniteliğidir.|  
+|Processingyönergesi|<xref:System.Xml.XmlProcessingInstruction>|Bir işleme yönergesi düğümüdür.|  
 |Yorum|<xref:System.Xml.XmlComment>|Bir açıklama düğümü.|  
-|Metin|<xref:System.Xml.XmlText>|Bir öğe veya öznitelik ait olan metin.|  
-|CDATASection|<xref:System.Xml.XmlCDataSection>|CDATA temsil eder.|  
-|Varlık|<xref:System.Xml.XmlEntity>|Temsil eden `<!ENTITY…>` bildirimlerinde XML belge, bir iç belge türü tanımı (DTD'nin) alt ya da DTD'ler ve parametre varlık.|  
-|Gösterim|<xref:System.Xml.XmlNotation>|DTD'nin içinde bildirilen bir yazım biçimi temsil eder.|  
+|Metin|<xref:System.Xml.XmlText>|Bir öğeye veya özniteliğe ait metin.|  
+|CDATASection|<xref:System.Xml.XmlCDataSection>|CDATA 'ı temsil eder.|  
+|Varlık|<xref:System.Xml.XmlEntity>|Bir XML belgesindeki `<!ENTITY…>` bildirimlerini, iç belge türü tanımı (DTD) alt kümesinden veya dış DTD 'lerden ve parametre varlıklarından temsil eder.|  
+|Gösterim|<xref:System.Xml.XmlNotation>|DTD 'de belirtilen bir gösterimi temsil eder.|  
   
- Olsa bile bir öznitelik (*attr*) listelenen W3C DOM düzey 1 bölümüne 1.2 temel arabirimlerde bir düğüm olarak, herhangi bir öğe düğümün alt öğesi olarak kabul edilmez.  
+ Bir öznitelik (*ATTR*), W3C DOM Level 1 bölümü 1,2 temel arabirimlerinde bir düğüm olarak listelense de, herhangi bir öğe düğümünün alt öğesi olarak kabul edilmez.  
   
- Microsoft .NET Framework nesne modeli kullanmak için kullanılabilir ancak W3C tarafından tanımlanmayan ek düğüm türleri aşağıdaki tabloda gösterilmektedir **XmlNodeType** numaralandırma. Bu nedenle, bu düğüm türü için eşleşen DOM düğüm türü sütun yok.  
+ Aşağıdaki tabloda, W3C tarafından tanımlanmayan ek düğüm türleri gösterilmektedir, ancak bunlar Microsoft .NET Framework nesne modelinde, **XmlNodeType** numaralandırmalar olarak kullanıma sunulmuştur. Bu nedenle, bu düğüm türleri için eşleşen bir DOM düğüm türü sütunu yok.  
   
 |Düğüm türü|Açıklama|  
 |---------------|-----------------|  
-|<xref:System.Xml.XmlDeclaration>|Bildirim düğümü temsil eden `<?xml version="1.0"…>`.|  
-|<xref:System.Xml.XmlSignificantWhitespace>|Önemli boşluk, boşluk içerikte olduğu temsil eder.|  
-|<xref:System.Xml.XmlWhitespace>|Boşluk bir öğenin içeriğini temsil eder.|  
-|EndElement|Ne zaman iade **XmlReader** sonuna bir öğe alır.<br /><br /> Örnek XML:  **\< /item >**<br /><br /> Daha fazla bilgi için bkz. <xref:System.Xml.XmlNodeType>.|  
-|EndEntity|Ne zaman iade **XmlReader** varlık değiştirme için bir arama sonucunda sonuna alır <xref:System.Xml.XmlReader.ResolveEntity%2A>. Daha fazla bilgi için bkz. <xref:System.Xml.XmlNodeType>.|  
+|<xref:System.Xml.XmlDeclaration>|`<?xml version="1.0"…>`bildirim düğümünü temsil eder.|  
+|<xref:System.Xml.XmlSignificantWhitespace>|Karışık içerikte boşluk olan önemli boşluk temsil eder.|  
+|<xref:System.Xml.XmlWhitespace>|Bir öğenin içeriğindeki boşluğu temsil eder.|  
+|EndElement|**XmlReader** bir öğenin sonuna geldiğinde döndürülür.<br /><br /> Örnek XML: **\</item >**<br /><br /> Daha fazla bilgi için bkz. <xref:System.Xml.XmlNodeType>.|  
+|EndEntity|**XmlReader** , <xref:System.Xml.XmlReader.ResolveEntity%2A>çağrısı sonucu olarak varlık değişikliği sonuna geldiğinde döndürülür. Daha fazla bilgi için bkz. <xref:System.Xml.XmlNodeType>.|  
   
- XML okur ve düğüm ve içeriği hakkındaki bilgileri yazdırmak için düğüm türleri üzerinde büyük bir yapı kullanan bir kod örneği görüntülemek için bkz: <xref:System.Xml.XmlSignificantWhitespace.NodeType%2A>.  
+ XML 'de okuyan ve düğüm ve içeriği hakkında bilgi yazdırmak için düğüm türlerinde bir Case yapısı kullanan bir kod örneğini görüntülemek için, bkz. <xref:System.Xml.XmlSignificantWhitespace.NodeType%2A>.  
   
- Düğüm türleri ve denk nesneleri adlarının nesne hiyerarşisi hakkında daha fazla bilgi için bkz. [XML belge nesne modeli (DOM) hiyerarşisi](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md). Düğüm ağaçta oluşturulan nesneleri hakkında daha fazla bilgi için bkz. [XML verilerine nesne hiyerarşisi eşleme](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).  
+ Düğüm türlerinin nesne hiyerarşisi ve bunların eşdeğer nesne adı hakkında daha fazla bilgi için bkz. [XML belge nesne modeli (DOM) hiyerarşisi](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md). Düğüm ağacında oluşturulan nesneler hakkında daha fazla bilgi için, bkz. [nesne HIYERARŞISINI XML verileriyle eşleme](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

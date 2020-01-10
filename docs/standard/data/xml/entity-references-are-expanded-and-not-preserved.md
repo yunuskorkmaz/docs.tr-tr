@@ -3,26 +3,24 @@ title: Varlık Başvuruları Genişletilir ve Korunmaz
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7a55aa71ff3976241b96dd12baef06a9a13ef9dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae3db77d7659b7e1d36a9bccf7143f52c536dbbf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934582"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710940"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Varlık Başvuruları Genişletilir ve Korunmaz
-Varlık başvurusu genişletilmiş ve temsil ettiği metin tarafından değiştirilen **XmlEntityReference** düğüm oluşturulmaz. Bunun yerine, varlık bildirimi ayrıştırılır ve bildirimde içeriğinden oluşturulan düğümler yerine, kopyalanır **XmlEntityReference**. Bu nedenle `&publisher;` örnek, `&publisher;` , ancak bunun yerine, kaydedilmemiş bir **XmlText** düğüm oluşturulur.  
+Varlık başvurusu genişletildiğinde ve gösterdiği metin tarafından değiştirildiğinde, **XmlEntityReference** düğümü oluşturulmaz. Bunun yerine, varlık bildirimi ayrıştırılır ve bildirimdeki içerikten oluşturulan düğümler **XmlEntityReference**yerine kopyalanır. Bu nedenle, `&publisher;` örnekte, `&publisher;` kaydedilmez, ancak bunun yerine **XmlText** düğümü oluşturulur.  
   
  ![Genişletilmiş ağaç yapısı](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
 Genişletilmiş varlık başvuruları için ağaç yapısı  
   
- Varlıklar gibi karakter `B` veya `<` korunmaz. Bunun yerine, bunlar her zaman genişletilmiş ve metin düğümleri temsil edilir.  
+ `B` veya `<` gibi karakter varlıkları korunmaz. Bunun yerine, her zaman genişletilir ve metin düğümleri olarak gösterilir.  
   
- Korumak için **XmlEntityReference** ayarlayın, düğümleri ve alt düğümleri varlık başvurusunun iliştirilmiş **EntityHandling** bayrak **ExpandCharEntities**. Aksi halde bırakın **EntityHandling** için varsayılan bayrağı **ExpandEntities**. Bu durumda, varlık başvurusu düğümler yerli görmezsiniz Düğümlerinin alt düğümleri varlık bildirimin kopyalarını düğümleri tarafından değiştirilir.  
+ **XmlEntityReference** düğümlerini ve ona iliştirilmiş Varlık başvurusunun alt düğümlerini korumak Için, **EntityHandling** bayrağını **ExpandCharEntities**olarak ayarlayın. Aksi halde, **EntityHandling** bayrağını varsayılan konumda bırakın, bu, **ExpandEntities**. Bu durumda, DOM 'da varlık başvurusu düğümlerini görmezsiniz. Düğümler, varlık bildiriminin alt düğümlerinin kopyaları olan düğümlerle değiştirilmiştir.  
   
- Varlık başvuruları koruma değil bir yan etkisi, Belge kaydedildiğinde ve başka bir uygulama için geçen zaman alıcı uygulama düğümleri bir varlık başvurusu tarafından oluşturulan tanımadığını ' dir. Ancak, varlık başvuruları korunur, alıcı uygulamanın bir varlık başvurusu görür ve alt düğümleri okur. Alt düğümler varlık bildiriminde bilgilerin temsil açıktır. Örneğin, varlık başvuruları korunur, DOM teorik olarak aşağıdaki yapıya sahiptir.  
+ Varlık başvurularını korumadan bir yan etkisi, belge kaydedilip başka bir uygulamaya geçirildiğinde, alıcı uygulamanın düğümlerin bir varlık başvurusu tarafından oluşturulduğunu bilmez. Ancak, varlık başvuruları korunduğunda, alıcı bir uygulama bir varlık başvurusu görür ve alt düğümleri okur. Alt düğümlerin varlık bildiriminde bulunan bilgileri temsil ettiği görünür. Örneğin, varlık başvuruları korunsa, DOM teorik olarak aşağıdaki yapıya sahiptir.  
   
  XmlElement: Yayımcı  
   
@@ -30,15 +28,15 @@ Genişletilmiş varlık başvuruları için ağaç yapısı
   
  XmlText: Microsoft Press  
   
- Varsayılan yöntemi olan DOM'da varlık başvuruları genişletilir, bu tür bir ağaç yapısı vardır:  
+ Varlık başvuruları DOM 'da genişletilmişse (varsayılan yöntem), yapı bu ağaç türüne sahiptir:  
   
  XmlElement: Yayımcı  
   
  XmlText: Microsoft Press  
   
- Varlık referans düğümün kalktığını ve alıcı uygulama, bilgi Uyarısı **XmlText** düğümünü "Microsoft Press" içeren bir varlık bildiriminden oluşturuldu.  
+ Varlık başvurusu düğümünün kaybolduğuna ve alıcı uygulamanın "Microsoft Press" içeren **XmlText** düğümünün bir varlık bildiriminden oluşturulduğunu söylüdiğine dikkat edin.  
   
- Varlıklar, çözümlenemiyor bir okuyucu kullanırsanız **yük** yöntemi, bir varlık başvurusu karşılaştığında bir özel durum oluşturur.  
+ Varlıkları çözümleyemediği bir okuyucu kullanıyorsanız, **Load** yöntemi bir varlık başvurusuyla karşılaştığında bir özel durum oluşturur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-author: KrzysztofCwalina
-ms.openlocfilehash: 28b00f5911bb47536ec44b96f284e47b6c671149
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: e3725cd11e170c64b6cbf7d77a7a6526603dfd95
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353736"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709120"
 ---
-# <a name="parameter-design"></a>Parametre Tasarımı
+# <a name="parameter-design"></a>Parametre tasarımı
+
 Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren bölümler dahil olmak üzere parametre tasarımı hakkında kapsamlı yönergeler sağlar. Ayrıca, [adlandırma parametrelerinde](../../../docs/standard/design-guidelines/naming-parameters.md)açıklanan yönergelere başvurmalısınız.  
   
  **✓ DO** üyesi tarafından gerekli işlevselliği sağlayan en az türetilen parametre türü kullanın.  
@@ -40,7 +40,7 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
   
  Bu, Yöntemler arasındaki ilişkiyi daha iyi bir şekilde iletir.  
   
-### <a name="choosing-between-enum-and-boolean-parameters"></a>Enum ve Boole parametreleri arasında seçim yapma  
+### <a name="choose-between-enum-and-boolean-parameters"></a>Enum ve Boole parametreleri arasında seçim yapın  
  **✓ DO** üyesi aksi iki veya daha fazla Boolean parametreleri varsa numaralandırmaları kullanın.  
   
  **X DO NOT** ayrıca ikiden fazla değerleri gereksinimini hiçbir zaman olacaktır kesinlikle emin olmadığınız sürece Boole değerlerini kullanın.  
@@ -49,7 +49,7 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
   
  **✓ CONSIDER** gerçekten iki durumlu değerleri desteklenir ve yalnızca Boole özellikleri başlatmak için kullanılan Oluşturucu parametreleri Boole değerlerini kullanarak.  
   
-### <a name="validating-arguments"></a>Bağımsız değişkenler doğrulanıyor  
+### <a name="validate-arguments"></a>Bağımsız değişkenleri doğrula  
  **✓ DO** public, korumalı ya da açıkça gerçekleştirilen üyelerine geçirilen bağımsız değişken doğrulanamıyor. Doğrulama başarısız olursa, <xref:System.ArgumentException?displayProperty=nameWithType>veya alt sınıflarından birini oluşturun.  
   
  Gerçek doğrulamanın ortak veya korumalı üyenin kendisinde olması gerekmediğini unutmayın. Bu, bazı özel veya iç bir yordamın daha düşük bir düzeyinde gerçekleşecektir. Ana nokta, son kullanıcılara sunulan tüm yüzey alanının bağımsız değişkenleri denetlemesini sağlar.  
@@ -66,10 +66,10 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
   
  Üye güvenliğe duyarlı ise, bir kopya yapmanız ve sonra bağımsız değişkeni doğrulamanız ve işlemesi önerilir.  
   
-### <a name="parameter-passing"></a>Parametre Geçirme  
+### <a name="pass-parameters"></a>Parametre geçirme  
  Bir çerçeve tasarımcısının perspektifinden, üç temel parametre grubu vardır: değere göre parametreler, `ref` parametreleri ve `out` parametreleri.  
   
- Bir bağımsız değişken bir by değeri parametresiyle geçirildiğinde, üye geçirilen gerçek bağımsız değişkenin bir kopyasını alır. Bağımsız değişken bir değer türü ise, bağımsız değişkenin bir kopyası yığına konur. Bağımsız değişken bir başvuru türü ise, başvurunun bir kopyası yığına konur. C#, Vb.net ve C++gibi en popüler CLR dilleri değere göre parametreleri geçirmek için varsayılan değer.  
+ Bir bağımsız değişken bir by değeri parametresiyle geçirildiğinde, üye geçirilen gerçek bağımsız değişkenin bir kopyasını alır. Bağımsız değişken bir değer türü ise, bağımsız değişkenin bir kopyası yığına konur. Bağımsız değişken bir başvuru türü ise, başvurunun bir kopyası yığına konur. C#, Visual Basic, ve C++gibi en popüler CLR dilleri değere göre parametreleri geçirmek için varsayılan değer.  
   
  Bir bağımsız değişken bir `ref` parametresi aracılığıyla geçirildiğinde, üye geçirilen gerçek bağımsız değişkene bir başvuru alır. Bağımsız değişken bir değer türü ise, yığına bağımsız değişkene bir başvuru konur. Bağımsız değişken bir başvuru türü ise, bir başvuruya başvuru, yığına konur. `Ref` parametreler, üyenin çağıran tarafından geçirilen bağımsız değişkenleri değiştirmesine izin vermek için kullanılabilir.  
   

@@ -11,20 +11,19 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-author: KrzysztofCwalina
-ms.openlocfilehash: 4c7f411bdf538762de18873007c839f66911f96a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad98c0f3b02bdc81e6348493b4e0a02f9cb20ed4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757267"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709198"
 ---
 # <a name="naming-guidelines"></a>Adlandırma Kuralları
-Tutarlı bir adlandırma kuralları geliştirmeye yönelik bir çerçeve kümesi uygulayarak framework'ün kullanılabilirlik önemli bir katkısı olabilir. Yaygın olarak ayrılmış projelerde birçok geliştirici tarafından kullanılmak üzere çerçevesi sağlar. Tutarlılık formunun ötesinde framework öğelerinin adlarını kolayca anlaşılır olmasını ve her öğenin işlevi iletmek gerekir.  
+Bir çerçeve geliştirmede tutarlı bir adlandırma kuralları kümesi takip etmek framework 'ün kullanılabilirlik açısından önemli bir katkı olabilir. Framework 'ün yaygın olarak ayrılmış projeler üzerinde birçok geliştirici tarafından kullanılmasını sağlar. Formun tutarlılığı ötesinde, Framework öğelerinin adları kolayca anlaşılmalıdır ve her bir öğenin işlevini iletmelidir.  
   
- Bu bölümün amacı, geliştiricilerin hemen anlamlı adlar sonuçlanır tutarlı adlandırma kuralları kümesi sağlamaktır.  
+ Bu bölümün amacı, geliştiricilere anında anlam veren adlara neden olan tutarlı bir adlandırma kuralları kümesi sağlamaktır.  
   
- Genel kod geliştirme yönergeleri, tüm kodunuzda daha tutarlı adlandırma içinde neden olarak bu adlandırma kurallarını uygulamak olsa da, bunları yalnızca genel olarak kullanıma sunulan API'ler uygulamak için gereklidir (ortak veya korumalı türler ve üyeler, ve "açıkça arabirimleri uygulanmış).  
+ Bu adlandırma kurallarını genel kod geliştirme yönergeleri olarak benimseme, kodunuzun tamamında daha tutarlı adlandırmaya neden olacağından, bunları yalnızca herkese açık olan (genel veya korumalı türler ve Üyeler) API 'Lerine uygulamanız gerekir ve açıkça uygulanan arabirimler).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Büyük/Küçük Harf Kuralları](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
@@ -35,9 +34,9 @@ Tutarlı bir adlandırma kuralları geliştirmeye yönelik bir çerçeve kümesi
  [Tür Üyelerinin Adları](../../../docs/standard/design-guidelines/names-of-type-members.md)  
  [Adlandırma Parametreleri](../../../docs/standard/design-guidelines/naming-parameters.md)  
  [Adlandırma Kaynakları](../../../docs/standard/design-guidelines/naming-resources.md)  
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

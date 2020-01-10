@@ -1,16 +1,15 @@
 ---
 title: İfade-Bodied Üyeler- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 02/06/2019
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
-ms.openlocfilehash: 45dcc58b252963e80798ba86ca5c4f461d493fac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f212bb707d3dd2d4a7cc917d335a83cff01ed0cf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120143"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711993"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>İfade-Bodied Üyeler (C# Programlama Kılavuzu)
 
@@ -26,12 +25,12 @@ Burada *ifadesi* geçerli bir ifadedir.
 
 |Üye  |İtibariyle destekleniyor... |
 |---------|---------|
-|[Yöntemidir](#methods)  |C# 6 |
+|[Yöntemi](#methods)  |C# 6 |
 |[Salt okunurdur özelliği](#read-only-properties)   |C# 6  |
-|[Özelliði](#properties)  |C# 7.0 |
+|[Özellik](#properties)  |C# 7.0 |
 |[Constructor](#constructors)   |C# 7.0 |
 |[Sonlandırıcı](#finalizers)     |C# 7.0 |
-|[Dizinleyic](#indexers)       |C# 7.0 |
+|[Dizin Oluşturucu](#indexers)       |C# 7.0 |
 
 ## <a name="methods"></a>Yöntemler
 
@@ -59,7 +58,7 @@ Aşağıdaki örnek, salt okunurdur `Name` özelliği özel `locationName` alan�
 
 ## <a name="properties"></a>Özellikler
 
-7,0 ' C# den başlayarak, özellik`get`ve`set`erişimcileri uygulamak için ifade gövdesi tanımlarını kullanabilirsiniz. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir:
+7,0 ' C# den başlayarak, özellik `get` ve `set` erişimcileri uygulamak için ifade gövdesi tanımlarını kullanabilirsiniz. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir:
 
 [!code-csharp[expression-bodied-property-get-set](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]
 

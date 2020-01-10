@@ -2,13 +2,13 @@
 title: Docker 'a giriş
 description: Bu makalede bir .NET Core uygulaması bağlamında Docker 'a bir giriş ve genel bakış sunulmaktadır.
 ms.date: 03/20/2019
-ms.custom: mvc, seodec18
-ms.openlocfilehash: 22c8fa4cda5cfd6564695d3b86072c64f22fa335
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.custom: mvc
+ms.openlocfilehash: 278c921de83282d61b25f4d44e91535981285e83
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087396"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715544"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET ve Docker’a Giriş
 
@@ -30,7 +30,7 @@ Resimler görüntülerden oluşturulduğu için görüntüler, kapsayıcı başl
 
 Kapsayıcı bir görüntünün çalıştırılabilir örneğidir. Görüntünüzü oluştururken uygulamanızı ve bağımlılıklarınızı dağıtırsınız. Daha sonra, birden çok kapsayıcı, her biri bir diğerinden yalıtılmış olarak oluşturulabilir. Her kapsayıcı örneğinin kendi dosya sistemi, belleği ve ağ arabirimi vardır.
 
-### <a name="registries"></a>kayıt
+### <a name="registries"></a>Kayıt Defterleri
 
 Kapsayıcı kayıt defterleri, bir görüntü depoları koleksiyonudur. Görüntülerinizi bir kayıt defteri görüntüsünde temel alabilirsiniz. Kapsayıcılardan doğrudan kayıt defterindeki bir görüntüden kapsayıcı oluşturabilirsiniz. [Docker kapsayıcıları, görüntüleri ve kayıt defterleri arasındaki ilişki](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md) , [Kapsayıcılı uygulamaları veya mikro hizmetleri tasarlayarak ve derlerken](../../architecture/microservices/architect-microservice-container-applications/index.md)önemli bir kavramdır. Bu yaklaşım geliştirme ve dağıtım arasındaki süreyi büyük ölçüde kısaltır.
 
@@ -52,22 +52,22 @@ Microsoft, belirli senaryolar için uyarlanmış görüntüler sağlar. Örneği
 
 Çeşitli Azure Hizmetleri, kapsayıcıları destekler. Uygulamanız için bir Docker görüntüsü oluşturup aşağıdaki hizmetlerden birine dağıtırsınız:
 
-- [Azure Kubernetes hizmeti (AKS)](https://azure.microsoft.com/services/kubernetes-service/) \
+- [Azure Kubernetes hizmeti (AKS)](https://azure.microsoft.com/services/kubernetes-service/)\
 Kubernetes kullanarak Linux kapsayıcılarını ölçeklendirin ve düzenleyin.
 
-- [Azure App Service](https://azure.microsoft.com/services/app-service/containers/) \
+- [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
 Bir PaaS ortamında Linux kapsayıcıları kullanarak Web uygulamaları veya API 'Ler dağıtın.
 
-- [Azure Container Instances](https://azure.microsoft.com/services/container-instances/) \
+- [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
 Daha üst düzey yönetim hizmetleri olmadan kapsayıcınızı bulutta barındırın.
 
-- [Azure Batch](https://azure.microsoft.com/services/batch/) \
+- [Azure Batch](https://azure.microsoft.com/services/batch/)\
 Kapsayıcıları kullanarak yinelenen işlem işleri çalıştırın.
 
-- [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) \
+- [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
 .NET uygulamalarını Windows Server kapsayıcıları kullanarak mikro hizmetlere kaldırma, kaydırma ve modernleştirin.
 
-- [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) \
+- [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
 Tüm Azure dağıtımı türlerinde kapsayıcı görüntüleri depolayın ve yönetin.
 
 ## <a name="next-steps"></a>Sonraki adımlar

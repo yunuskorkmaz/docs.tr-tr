@@ -1,17 +1,16 @@
 ---
 title: Arabirimlerde Dizin oluşturucular- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: 7f52df0283cf057c1cd6cc4fa87c0086da7e61d2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4ac51589ed1680f8484fde797c045d15beed3af9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252999"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712123"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Arabirimlerdeki Dizin Oluşturucular (C# Programlama Kılavuzu)
 Dizin oluşturucular bir [arabirimde](../../language-reference/keywords/interface.md)bildirilemez. Arabirim dizin oluşturucularının erişimcileri, [sınıf](../../language-reference/keywords/class.md) dizin oluşturucularının erişimcilerine aşağıdaki yollarla göre farklılık gösterir:  
@@ -41,7 +40,7 @@ string ISomeInterface.this[int index]
 }   
 ```  
   
- Ancak, tam adı yalnızca, sınıf aynı Dizin Oluşturucu imzasına sahip birden fazla arabirim uygularken karışıklığı önlemek için gereklidir. Örneğin, bir `Employee` sınıf iki `ICitizen` arabirim `IEmployee`uygusa ve her iki arabirimde de aynı Dizin Oluşturucu imzası varsa, açık arabirim üye uygulaması gereklidir. Diğer bir deyişle, aşağıdaki Dizin Oluşturucu bildirimi:  
+ Ancak, tam adı yalnızca, sınıf aynı Dizin Oluşturucu imzasına sahip birden fazla arabirim uygularken karışıklığı önlemek için gereklidir. Örneğin, bir `Employee` sınıfı iki arabirim uygusa, `ICitizen` ve `IEmployee`ve her iki arabirimde de aynı Dizin Oluşturucu imzası varsa, açık arabirim üye uygulaması gereklidir. Diğer bir deyişle, aşağıdaki Dizin Oluşturucu bildirimi:  
   
 ```csharp  
 string IEmployee.this[int index]   
@@ -49,7 +48,7 @@ string IEmployee.this[int index]
 }   
 ```  
   
- `IEmployee` arabirim üzerinde dizin oluşturucuyu uygular, aşağıdaki bildirim:  
+ , aşağıdaki bildirim sırasında `IEmployee` arabiriminde Dizin oluşturucuyu uygular:  
   
 ```csharp  
 string ICitizen.this[int index]
@@ -63,5 +62,5 @@ string ICitizen.this[int index]
 
 - [C# Programlama Kılavuzu](../index.md)
 - [Dizin Oluşturucular](./index.md)
-- [Özellikler](../classes-and-structs/properties.md)
+- [Veri Erişimi](../classes-and-structs/properties.md)
 - [Arabirimler](../interfaces/index.md)

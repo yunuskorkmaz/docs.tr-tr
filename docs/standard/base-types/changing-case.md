@@ -14,13 +14,12 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.custom: seodec18
-ms.openlocfilehash: a8eb45e45a905f0b366642050f4845460e14aaf8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 91fc0022eae3f036e0ec046ea12446871926ab27
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132900"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711473"
 ---
 # <a name="changing-case-in-net"></a>.NET ' te durum değiştirme
 Bir kullanıcıdan girişi kabul eden bir uygulama yazarsanız, ya da kendisinin verileri girerken kullanacağı durumda hiçbir şekilde emin olabilirsiniz. Genellikle, özellikle de Kullanıcı arabiriminde görüntülüyorsanız, dizelerin tutarlı bir şekilde kullanılabilir olmasını istersiniz. Aşağıdaki tabloda üç büyük/küçük harf değiştirme yöntemi açıklanmaktadır. İlk iki yöntem kültürü kabul eden bir aşırı yükleme sağlar.  
@@ -42,21 +41,21 @@ Bir kullanıcıdan girişi kabul eden bir uygulama yazarsanız, ya da kendisinin
   
  Daha fazla bilgi için bkz. [dizeleri kullanmak Için En Iyi uygulamalar](../../../docs/standard/base-types/best-practices-strings.md).  
   
-## <a name="toupper"></a>toUpper  
+## <a name="toupper"></a>ToUpper  
  <xref:System.String.ToUpper%2A?displayProperty=nameWithType> yöntemi bir dizedeki tüm karakterleri büyük harfe dönüştürür. Aşağıdaki örnek "Merhaba Dünya!" dizesini dönüştürür Karma durumundan büyük harfe kadar.  
   
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
  [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
   
- Yukarıdaki örnek, varsayılan olarak kültüre duyarlıdır; geçerli kültürün büyük/küçük harf kurallarını uygular. Kültüre duyarsız bir durum değişikliği gerçekleştirmek veya belirli bir kültürün büyük/küçük harf kurallarını uygulamak için <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> yöntemi aşırı yüklemesini kullanın ve bir <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> değeri ya da belirtilen kültürü temsil eden bir <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> nesnesi *kültür* parametresine girin . Kültüre duyarsız bir durum değişikliği gerçekleştirmek üzere <xref:System.String.ToUpper%2A> yönteminin nasıl kullanılacağını gösteren bir örnek için, bkz. [kültüre duyarsız büyük/küçük harf değişiklikleri gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
+ Yukarıdaki örnek, varsayılan olarak kültüre duyarlıdır; geçerli kültürün büyük/küçük harf kurallarını uygular. Kültüre duyarsız bir durum değişikliği gerçekleştirmek veya belirli bir kültürün büyük/küçük harf kurallarını uygulamak için <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> yöntemi aşırı yüklemesini kullanın ve bir <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> değeri ya da belirtilen kültürü temsil eden bir <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> nesnesi *kültür* parametresine girin. Kültüre duyarsız bir durum değişikliği gerçekleştirmek üzere <xref:System.String.ToUpper%2A> yönteminin nasıl kullanılacağını gösteren bir örnek için, bkz. [kültüre duyarsız büyük/küçük harf değişiklikleri gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
   
-## <a name="tolower"></a>toLower  
+## <a name="tolower"></a>ToLower  
  <xref:System.String.ToLower%2A?displayProperty=nameWithType> yöntemi Previous yöntemine benzer, ancak bunun yerine dizedeki tüm karakterleri küçük harfe dönüştürür. Aşağıdaki örnek "Merhaba Dünya!" dizesini dönüştürür küçük harfe Dönüştür.  
   
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
  [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
   
- Yukarıdaki örnek, varsayılan olarak kültüre duyarlıdır; geçerli kültürün büyük/küçük harf kurallarını uygular. Kültüre duyarsız bir durum değişikliği gerçekleştirmek veya belirli bir kültürün büyük/küçük harf kurallarını uygulamak için <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> yöntemi aşırı yüklemesini kullanın ve bir <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> değeri ya da belirtilen kültürü temsil eden bir <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> nesnesi *kültür* parametresine girin . Kültüre duyarsız bir durum değişikliği gerçekleştirmek üzere <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> yönteminin nasıl kullanılacağını gösteren bir örnek için, bkz. [kültüre duyarsız büyük/küçük harf değişiklikleri gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
+ Yukarıdaki örnek, varsayılan olarak kültüre duyarlıdır; geçerli kültürün büyük/küçük harf kurallarını uygular. Kültüre duyarsız bir durum değişikliği gerçekleştirmek veya belirli bir kültürün büyük/küçük harf kurallarını uygulamak için <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> yöntemi aşırı yüklemesini kullanın ve bir <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> değeri ya da belirtilen kültürü temsil eden bir <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> nesnesi *kültür* parametresine girin. Kültüre duyarsız bir durum değişikliği gerçekleştirmek üzere <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> yönteminin nasıl kullanılacağını gösteren bir örnek için, bkz. [kültüre duyarsız büyük/küçük harf değişiklikleri gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="totitlecase"></a>ToTitleCase  
  <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> her sözcüğün ilk karakterini büyük harfe ve geri kalan karakterleri küçük harfe dönüştürür. Ancak, tamamen büyük harfli sözcüklerin kısaltmalar olduğu ve dönüştürülmemekte olduğu varsayılır.  

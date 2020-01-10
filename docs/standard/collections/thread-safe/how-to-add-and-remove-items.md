@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Öğeleri Ekleme ve Bir ConcurrentDictionary'den Alma"
+title: "Nasıl yapılır: Öğeleri Ekleme ve Bir ConcurrentDictionary'dan Alma"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,45 +8,43 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d8b1c63f10d1d79c3fec6cad87c9a82f03716c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc4d13e09a91633fac1fcf5bd8ab5b043473bd7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052657"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711317"
 ---
-# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Nasıl yapılır: Öğeleri Ekleme ve Bir ConcurrentDictionary'den Alma
-Bu örnek, ekleyin, alma, güncelleştirme ve öğelerden Kaldır gösterir. bir <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Bir iş parçacığı açısından güvenli uygulaması bu koleksiyon sınıfıdır. Birden çok iş parçacığı öğeleri aynı anda erişmeye çalışıyor olabilir her bunu kullanmanızı öneririz.  
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Nasıl yapılır: Öğeleri Ekleme ve Bir ConcurrentDictionary'dan Alma
+Bu örnek, bir <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>öğe ekleme, alma, güncelleştirme ve kaldırma işlemlerinin nasıl yapılacağını gösterir. Bu koleksiyon sınıfı, iş parçacığı güvenli bir uygulama. Birden çok iş parçacığının aynı anda öğelere erişmeye çalıştığı her seferinde kullanmanızı öneririz.  
   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602> ilk veri ekleme veya kaldırma çalışmadan önce bir anahtar var olup olmadığını denetlemek kod için gereksiz hale getiren çeşitli kullanışlı yöntemler sunar. Aşağıdaki tabloda bu yöntemler listeler ve bunların ne zaman kullanılacağı açıklanır.  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, kodun, verileri ekleme veya kaldırma girişiminden önce bir anahtarın mevcut olup olmadığını kontrol etmek için gereksiz hale getirmek üzere çeşitli yöntemler sunar. Aşağıdaki tabloda bu kullanışlı yöntemler listelenmekte ve ne zaman kullanılacağı açıklanmaktadır.  
   
-|Yöntem|Şu durumlarda kullanın...|  
+|Yöntem|Şu durumlarda kullan...|  
 |------------|---------------|  
-|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>|Belirtilen anahtar için yeni bir değer eklemek istediğiniz ve anahtarı zaten varsa, değeri değiştirmek istiyorsunuz.|  
-|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>|Belirtilen anahtar mevcut değerini almak istediğiniz ve anahtar mevcut değilse, bir anahtar/değer çifti belirtmek istediğinizde.|  
-|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryAdd%2A>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryGetValue%2A> , <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryUpdate%2A> , <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryRemove%2A>|Ekle, Al, güncelleştirmek veya bir anahtar/değer çiftini kaldırmak istediğiniz ve anahtar zaten var veya başka bir nedenle denemesi başarısız olursa, alternatif bir eylem gerçekleştirmek istediğiniz.|  
+|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>|Belirtilen anahtar için yeni bir değer eklemek istiyorsunuz ve anahtar zaten varsa, değerini değiştirmek istersiniz.|  
+|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>|Belirtilen bir anahtar için varolan değeri almak istiyorsunuz ve anahtar yoksa anahtar/değer çifti belirtmek istersiniz.|  
+|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryAdd%2A>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryGetValue%2A> , <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryUpdate%2A> , <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryRemove%2A>|Anahtar/değer çifti eklemek, almak, güncelleştirmek veya kaldırmak, anahtar zaten varsa veya deneme başka bir nedenle başarısız olursa, alternatif bir işlem yapmak istersiniz.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki iki örnekte <xref:System.Threading.Tasks.Task> örnekleri için bazı öğeler eklemek için bir <xref:System.Collections.Concurrent.ConcurrentDictionary%602> eşzamanlı ve tüm öğeler başarıyla eklendiğini gösterilecek içeriğini çıkarır. Örnek ayrıca nasıl kullanılacağını gösterir <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>, <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>, ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> yöntemleri eklemek, güncelleştirme ve tüm öğeleri koleksiyondan Al.  
+ Aşağıdaki örnekte, bazı öğeleri eşzamanlı olarak bir <xref:System.Collections.Concurrent.ConcurrentDictionary%602> eklemek için iki <xref:System.Threading.Tasks.Task> örneği kullanılmıştır ve sonra öğelerin başarıyla eklendiğini göstermek için tüm içerik çıkışları oluşur. Örnek ayrıca, koleksiyondan öğe eklemek, güncelleştirmek ve almak için <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>, <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> yöntemlerinin nasıl kullanılacağını gösterir.  
   
  [!code-csharp[CDS#16](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds_dictionaryhowto.cs#16)]
  [!code-vb[CDS#16](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/cds_concdict.vb#16)]  
   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602> çok iş parçacıklı senaryoları için tasarlanmıştır. Kilit ekleme veya öğeleri koleksiyondan kaldırmak için kodunuzda kullanmak zorunda değil. Ancak, her zaman bir değer almak için bir iş parçacığı ve yeni bir değer aynı anahtara vererek koleksiyonu hemen güncelleştirmek için başka bir iş parçacığı mümkündür.  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, çok iş parçacıklı senaryolar için tasarlanmıştır. Koleksiyonda öğe eklemek veya kaldırmak için kodunuzda kilit kullanmanız gerekmez. Ancak, bir iş parçacığının bir değeri alabilmesi ve aynı anahtara yeni bir değer vererek koleksiyonu hemen güncellemek için başka bir iş parçacığında her zaman mümkündür.  
   
- Ayrıca, ancak tüm yöntemleri <xref:System.Collections.Concurrent.ConcurrentDictionary%602> olan iş parçacığı açısından güvenli, kararlı, özellikle olan tüm yöntemleri <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>. Bu yönteme geçirilen kullanıcı temsilcisine sözlüğün iç kilit (Bu bilinmeyen kod tüm iş parçacıklarının engellemesini önlemek için yapılır) dışında çağrılır. Bu nedenle, oluşacak olayları bu dizi için mümkündür:  
+ Ayrıca, tüm <xref:System.Collections.Concurrent.ConcurrentDictionary%602> yöntemleri iş parçacığı açısından güvenlidir, ancak tüm yöntemler atomik, özellikle <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>değildir. Bu yöntemlere geçirilen kullanıcı temsilcisi sözlüğün iç kilidi dışında çağrılır (Bu işlem, bilinmeyen kodun tüm iş parçacıklarını engellemesini engellemek için yapılır). Bu nedenle, bu olay sırası oluşması mümkündür:  
   
- 1\) threadA çağrıları <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>, hiçbir öğeyi bulur ve valueFactory temsilci çağırarak eklenecek yeni bir öğe oluşturur.  
+ 1\) threadA <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>çağırır, hiçbir öğe buluyor ve valueFactory temsilcisini çağırarak eklenecek yeni bir öğe oluşturuyor.  
   
- 2\) threadB çağrıları <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> eş zamanlı olarak, kendi valueFactory temsilci çağrılır ve iç kilit threadA önce ulaştığında ve yeni anahtar-değer çiftini sözlüğe eklenen şekilde.  
+ 2\) threadB aynı anda <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> çağırır, valueFactory temsilcisi çağrılır ve bu, tehdit ve sonra iç kilidine ulaşır ve bu nedenle yeni anahtar-değer çifti sözlüğe eklenir.  
   
- 3\) threadA'ın kullanıcı temsilcisinde tamamlanır ve iş parçacığı kilit ulaşan, ancak öğe zaten var. Şimdi görür.  
+ 3\) threadA 'un Kullanıcı temsilcisi tamamlanır ve iş parçacığı kilidine ulaşır, ancak artık öğenin zaten var olduğunu görüyor.  
   
- 4\) threadA "Get" gerçekleştirir ve threadB tarafından daha önceden eklenmiş verileri döndürür.  
+ 4\) threadA bir "Get" gerçekleştirir ve threadB tarafından daha önce eklenmiş olan verileri döndürür.  
   
- Bu nedenle, böyle değildir, tarafından döndürülen veri garanti <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> iş parçacığının valueFactory tarafından oluşturulan aynı verilerdir. Benzer bir olay dizisi oluşabilir olduğunda <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> çağrılır.  
+ Bu nedenle, <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> tarafından döndürülen verilerin, iş parçacığının valueFactory tarafından oluşturulan verilerle aynı olduğu garanti edilmez. <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> çağrıldığında benzer bir olay dizisi meydana gelebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

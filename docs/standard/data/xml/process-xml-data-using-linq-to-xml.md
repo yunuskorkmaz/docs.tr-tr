@@ -3,14 +3,12 @@ title: LINQ to XML Kullanarak XML Verilerini İşleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e4e8e4a826fda20a39576ca78259bb7b389bbf75
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f45c5c9dccd2c1e8bdd67000a8b2f22425822ac9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424446"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710472"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>LINQ to XML Kullanarak XML Verilerini İşleme
 LINQ to XML, XML verilerini işlemek için .NET Framework sürüm 3,5 ' deki yeni bir modeldir. LINQ to XML, geliştiricilerin XML verileri ile bekledikleri her şeyi yapmasına izin verir: XML belgelerini sorgulama, değiştirme, oluşturma, kaydetme ve serileştirme. Gerçek avantajlar sorgu ve oluşturma özellikleri ' nde yer almalıdır.  

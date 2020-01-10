@@ -6,22 +6,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d1bbe8b-ed43-4e62-a5ba-d602d244f4ae
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3c7c8f6739fc5132af2c8cf1af2c111d51565db0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e19e0d18dc0f4aceb38bf006c3b9b80276455510
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923297"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709770"
 ---
 # <a name="xpathdocument-input-to-xsltransform"></a>XslTransform’a XPathDocument Girişi
-, <xref:System.Xml.XPath.XPathDocument> İle<xref:System.Xml.Xsl.XslTransform>belgelerin işlenmesine yönelik salt okunurdur. Bu, XML Belge Nesne Modeli (DOM) için yapısal olarak benzerdir, ancak, dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) işleme ve XML yol dili (XPath) veri modeli için son derece en iyi duruma getirilmiştir. <xref:System.Xml.XPath.XPathNavigator>.  
+<xref:System.Xml.XPath.XPathDocument>, belgeleri <xref:System.Xml.Xsl.XslTransform>işlemek için salt okuma önbelleğidir. Bu, XML Belge Nesne Modeli (DOM) için yapısal olarak benzerdir, ancak <xref:System.Xml.XPath.XPathNavigator>XPath en iyi duruma getirme işlevlerini kullanarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) işleme ve XML yol dili (XPath) veri modeli için son derece iyileştirilmiştir.  
   
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> Sınıf .NET Framework 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfını kullanarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
+> <xref:System.Xml.Xsl.XslTransform> sınıfı, .NET Framework 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> sınıfını kullanarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- Aşağıdaki kod örneği bir Transform için <xref:System.Xml.XPath.XPathDocument> bir as girişi oluşturur.  
+ Aşağıdaki kod örneği, bir dönüşüm için girdi olarak bir <xref:System.Xml.XPath.XPathDocument> oluşturur.  
   
 ```vb  
 Dim xslt as XslTransform = new XslTransform()  

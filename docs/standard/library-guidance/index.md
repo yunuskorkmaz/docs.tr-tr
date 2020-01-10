@@ -1,15 +1,13 @@
 ---
 title: Açık kaynaklı .NET kitaplığı Kılavuzu
 description: Geliştiricilerin yüksek kaliteli .NET kitaplıkları oluşturmalarına yönelik en iyi yöntem önerileri.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: eff6c822757af6fb85622e88714accd40c32bcf5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c1e1c302eede86fd5555a8e84630e216e96f1ce7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928958"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706458"
 ---
 # <a name="open-source-library-guidance"></a>Açık kaynak kitaplık kılavuzu
 
@@ -30,7 +28,7 @@ Yüksek kaliteli açık kaynaklı .NET kitaplıklarının yönleri:
 
 ## <a name="types-of-recommendations"></a>Öneri türleri
 
-Her makalede dört tür öneri sunulmaktadır: **Bunu yapın**, **düşünün**, **önleyin**ve **Not**edin. Öneri türü, ne kadar önemli olduğunu gösterir.
+Her makalede dört tür öneri sunulmaktadır: **Do**, **düþünün**, **önleyin**ve **Not**. Öneri türü, ne kadar önemli olduğunu gösterir.
 
 Neredeyse her zaman bir **Do** önerisi izlemeniz gerekir. Örneğin:
 
@@ -42,11 +40,11 @@ Diğer yandan, önerilerin genellikle izlenmesi gerektiğine **dikkat** edin, an
 
 Genellikle iyi bir fikir olmayan ancak kuralın bölünmesi bazen anlamlı hale getirmeyen önerilerden **kaçının** :
 
-**❌ Önlemek** Tam bir sürümü talep eden NuGet paket başvuruları.
+**❌ önlemek** Tam bir sürümü talep eden NuGet paket başvuruları.
 
 Son **olarak, önermeyin,** neredeyse asla yapmanız gereken bir şeyi gösterir:
 
-❌, Kitaplığınızın güçlü adlandırılmış ve tanımlayıcı olmayan sürümlerini **yayımlamaz** . Örneğin, `Contoso.Api` ve `Contoso.Api.StrongNamed`.
+❌, kitaplığınızın güçlü adlandırılmış ve tanımlayıcı olmayan sürümlerini **yayımlamaz** . Örneğin, `Contoso.Api` ve `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
 >[Next](get-started.md)

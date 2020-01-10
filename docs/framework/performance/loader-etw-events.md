@@ -5,14 +5,12 @@ helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a6928b5ac41a6af36dc7d5e7f5bb02074ba742e5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 73665915a70225c2b1da47c7b60347b089564884
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974596"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716024"
 ---
 # <a name="loader-etw-events"></a>Yükleyici ETW Olayları
 Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler toplar.  
@@ -39,7 +37,7 @@ Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve ka
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |AppDomainID|Win: UInt64|Bir uygulama etki alanı için benzersiz tanımlayıcı.|  
 |AppDomainFlags|Win: UInt32|0x1: varsayılan etki alanı.<br /><br /> 0x2: yürütülebilir.<br /><br /> 0x4: uygulama etki alanı, bit 28-31: Bu etki alanının paylaşılması ilkesi.<br /><br /> 0: paylaşılan bir etki alanı.|  
@@ -67,7 +65,7 @@ Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve ka
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |AssemblyId|Win: UInt64|Derlemenin benzersiz KIMLIĞI.|  
 |AppDomainID|Win: UInt64|Bu derlemenin etki alanının KIMLIĞI.|  
@@ -97,7 +95,7 @@ Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve ka
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |Modül kimliği|Win: UInt64|Modülün benzersiz KIMLIĞI.|  
 |AssemblyId|Win: UInt64|Bu modülün bulunduğu derlemenin KIMLIĞI.|  
@@ -140,7 +138,7 @@ Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve ka
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |Modül kimliği|Win: UInt64|Bu modülün ait olduğu derlemeyi tanımlar.|  
 |AssemblyId|Win: UInt64|Bu modülün bulunduğu derlemenin KIMLIĞI.|  
@@ -170,7 +168,7 @@ Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve ka
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|Win: UInt16|CLR 'nin birden fazla örneği yüklenirse, bir işlemde CLR 'nin belirli bir örneğini benzersiz şekilde tanımlar.|  
 |Modül kimliği|Win: UInt64|Bu modülün ait olduğu derlemeyi tanımlar.|  

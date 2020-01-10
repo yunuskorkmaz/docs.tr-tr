@@ -5,21 +5,19 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dc842713a16df8e5ada5ad6c71ca19f91ecbc405
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: be15ce0b0bed37da6fe400e98bfdd118c48f7ba0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975561"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716533"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Yöneticiler için .NET Framework Dağıtım Kılavuzu
 
-Bu adım adım makalede, bir sistem yöneticisinin Microsoft System Center Configuration Manager kullanarak bir ağ üzerinde .NET Framework 4,5 ve sistem bağımlılıklarını nasıl dağıtabileceğiniz açıklanır. Bu makalede tüm istemci bilgisayarların .NET Framework için gerekli olan minimum sistem gereksinimlerini karşıladığı varsayılmıştır. 4,5 .NET Framework yüklemeye yönelik yazılım ve donanım gereksinimlerinin bir listesi için bkz. [sistem gereksinimleri](../get-started/system-requirements.md).
+Bu adım adım makalede, bir sistem yöneticisinin Microsoft uç noktası Configuration Manager kullanarak bir ağ üzerinde .NET Framework 4,5 ve sistem bağımlılıklarını nasıl dağıtabileceğinizi açıklanmaktadır. Bu makalede tüm istemci bilgisayarların .NET Framework için gerekli olan minimum sistem gereksinimlerini karşıladığı varsayılmıştır. 4,5 .NET Framework yüklemeye yönelik yazılım ve donanım gereksinimlerinin bir listesi için bkz. [sistem gereksinimleri](../get-started/system-requirements.md).
 
 > [!NOTE]
-> Bu belgede başvurulan yazılım, sınırlama olmadan, .NET Framework 4,5, System Center Configuration Manager ve Active Directory, her biri lisans hüküm ve koşullarına tabidir. Bu yönergeler, bu tür lisans koşullarını ve koşulları gözden geçirilmiş yazılımların sahipleri tarafından kabul edildiği varsaymaktadır. Bu yönergeler, bu tür lisans anlaşmalarının koşullarından feragat etmiş sayılmaz.
+> Bu belgede başvurulan yazılım, sınırlama olmadan, .NET Framework 4,5, Configuration Manager ve Active Directory, her biri lisans hüküm ve koşullarına tabidir. Bu yönergeler, bu tür lisans koşullarını ve koşulları gözden geçirilmiş yazılımların sahipleri tarafından kabul edildiği varsaymaktadır. Bu yönergeler, bu tür lisans anlaşmalarının koşullarından feragat etmiş sayılmaz.
 >
 > .NET Framework için destek hakkında daha fazla bilgi için Microsoft Desteği Web sitesinde [.NET Framework resmi destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) ' ne bakın.
 
@@ -38,13 +36,13 @@ Bu konu aşağıdaki bölümleri içermektedir:
 
 ## <a name="the-deployment-process"></a>Dağıtım işlemi
 
-Yerinde destek altyapısı varsa, ağ üzerinden .NET Framework dağıtılabilir paketini bilgisayarlara dağıtmak için Sistem Merkezi 2012 Yapılandırma Yöneticisi'ni kullanın. Altyapının oluşturulması, beş birincil alanın oluşturulmasını ve tanımlanmasını gerektirir: koleksiyonlar, yazılım için bir paket ve program, dağıtım noktaları ve dağıtımlar.
+Destekleyici altyapıyı kullanıyorsanız, .NET Framework yeniden dağıtılabilir paketini ağdaki bilgisayarlara dağıtmak için Configuration Manager kullanırsınız. Altyapının oluşturulması, beş birincil alanın oluşturulmasını ve tanımlanmasını gerektirir: koleksiyonlar, yazılım için bir paket ve program, dağıtım noktaları ve dağıtımlar.
 
-- **Koleksiyonlar** , .NET Framework dağıtıldığı kullanıcılar, Kullanıcı grupları veya bilgisayarlar gibi Configuration Manager kaynak gruplarıdır. Daha fazla bilgi için, Configuration Manager belge kitaplığındaki [System Center Configuration Manager koleksiyonlara giriş](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) bölümüne bakın.
+- **Koleksiyonlar** , .NET Framework dağıtıldığı kullanıcılar, Kullanıcı grupları veya bilgisayarlar gibi Configuration Manager kaynak gruplarıdır. Daha fazla bilgi için, Configuration Manager belge kitaplığındaki [Configuration Manager koleksiyonlara giriş](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections) bölümüne bakın.
 
-- **Paketler ve programlar** , genellikle bir istemci bilgisayara yüklenecek yazılım uygulamalarını temsil eder, ancak tek tek dosyalar, güncelleştirmeler ve hatta ayrı komutlar da içerebilir. Daha fazla bilgi için Configuration Manager belge kitaplığındaki [System Center Configuration Manager Içindeki paketler ve programlar](https://docs.microsoft.com/sccm/apps/deploy-use/packages-and-programs) bölümüne bakın.
+- **Paketler ve programlar** , genellikle bir istemci bilgisayara yüklenecek yazılım uygulamalarını temsil eder, ancak tek tek dosyalar, güncelleştirmeler ve hatta ayrı komutlar da içerebilir. Daha fazla bilgi için Configuration Manager belge kitaplığındaki [Configuration Manager Içindeki paketler ve programlar](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs) bölümüne bakın.
 
-- **Dağıtım noktaları** , yazılımın istemci bilgisayarlarda çalışması için gereken dosyaları depolayan site sistem rolleridir Configuration Manager. Yapılandırma Yöneticisi istemcisi bir yazılım dağıtımı alıp işlediğinde, yazılımla ilişkili içeriği indirmek ve kurulum işlemini başlatmak için bir dağıtım noktasıyla temasa geçer. Daha fazla bilgi için bkz. Configuration Manager belge kitaplığındaki [Configuration Manager içerik yönetimi Için temel kavramlar](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management) .
+- **Dağıtım noktaları** , yazılımın istemci bilgisayarlarda çalışması için gereken dosyaları depolayan site sistem rolleridir Configuration Manager. Yapılandırma Yöneticisi istemcisi bir yazılım dağıtımı alıp işlediğinde, yazılımla ilişkili içeriği indirmek ve kurulum işlemini başlatmak için bir dağıtım noktasıyla temasa geçer. Daha fazla bilgi için bkz. Configuration Manager belge kitaplığındaki [Configuration Manager içerik yönetimi Için temel kavramlar](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management) .
 
 - **Dağıtımlar** , yazılım paketini yüklemek için belirtilen hedef koleksiyonun geçerli üyelerine yönlendirir.
 
@@ -55,7 +53,7 @@ Yerinde destek altyapısı varsa, ağ üzerinden .NET Framework dağıtılabilir
 
 ## <a name="deploying-the-net-framework"></a>.NET Framework'ü dağıtma
 
-.NET Framework 4,5 ' nin sessiz yüklemesini dağıtmak için System Center 2012 Configuration Manager kullanabilirsiniz. Bu, kullanıcıların yükleme işlemiyle etkileşimde bulunmazlar. Aşağıdaki adımları uygulayın:
+Configuration Manager, kullanıcıların yükleme işlemiyle etkileşimde bulunmayan .NET Framework 4,5 sessiz yüklemesini dağıtmak için kullanabilirsiniz. Aşağıdaki adımları uygulayın:
 
 1. [Koleksiyon oluşturun](#creating_a_collection).
 
@@ -69,7 +67,7 @@ Yerinde destek altyapısı varsa, ağ üzerinden .NET Framework dağıtılabilir
 
 ### <a name="create-a-collection"></a>Koleksiyon oluşturma
 
-Bu adımda, paket ve program dağıtacağınız bilgisayarları seçersiniz ve onları bir aygıt koleksiyonunda gruplandırırsınız. Yapılandırma Yöneticisi'nde bir koleksiyon oluşturmak için, doğrudan üyelik kurallarını (koleksiyon üyelerini el ile belirtirsiniz) veya sorgu kurallarını (koleksiyon üyelerini sizin belirttiğiniz ölçütlere göre Yapılandırma Yöneticisi belirler) kullanabilirsiniz. Sorgular ve doğrudan kurallar dahil Üyelik kuralları hakkında daha fazla bilgi için, Configuration Manager belge kitaplığındaki [System Center Configuration Manager koleksiyonlara giriş](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) bölümüne bakın.
+Bu adımda, paket ve program dağıtacağınız bilgisayarları seçersiniz ve onları bir aygıt koleksiyonunda gruplandırırsınız. Yapılandırma Yöneticisi'nde bir koleksiyon oluşturmak için, doğrudan üyelik kurallarını (koleksiyon üyelerini el ile belirtirsiniz) veya sorgu kurallarını (koleksiyon üyelerini sizin belirttiğiniz ölçütlere göre Yapılandırma Yöneticisi belirler) kullanabilirsiniz. Sorgular ve doğrudan kurallar dahil Üyelik kuralları hakkında daha fazla bilgi için, Configuration Manager belge kitaplığındaki [Configuration Manager koleksiyonlara giriş](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections) bölümüne bakın.
 
 Bir koleksiyon oluşturmak için:
 
@@ -83,7 +81,7 @@ Bir koleksiyon oluşturmak için:
 
 5. Sınırlama koleksiyonu belirtmek için **Gözden** geçirme ' yi seçin.
 
-6. **Üyelik kuralları** sayfasında **Kural Ekle**' yi ve ardından **doğrudan kural** ' ı seçerek **doğrudan üyelik kuralı oluşturma Sihirbazı**' nı açın. **İleri ' yi**seçin.
+6. **Üyelik kuralları** sayfasında **Kural Ekle**' yi ve ardından **doğrudan kural** ' ı seçerek **doğrudan üyelik kuralı oluşturma Sihirbazı**' nı açın. Seçin **sonraki**.
 
 7. Kaynak **Ara** sayfasında, **kaynak sınıfı** listesinde **sistem kaynağı**' nı seçin. **Öznitelik adı** listesinde **ad**' ı seçin. **Değer** alanına `%`girin ve ardından **İleri**' yi seçin.
 
@@ -133,8 +131,8 @@ Aşağıdaki tablo, 7. adımda belirtilen komut satırı seçeneklerini açıkla
 
 |Seçenek|Açıklama|
 |------------|-----------------|
-|**anahtarın**|Sessiz modu ayarlar. Hiçbir kullanıcı girişine gerek yoktur ve hiçbir çıktı gösterilmez.|
-|**/norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, Yapılandırma Yöneticisi'nin bilgisayarı yeniden başlatmayı üstlenmesi gerekir.|
+|**/q**|Sessiz modu ayarlar. Hiçbir kullanıcı girişine gerek yoktur ve hiçbir çıktı gösterilmez.|
+|**/ norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, Yapılandırma Yöneticisi'nin bilgisayarı yeniden başlatmayı üstlenmesi gerekir.|
 |**/ChainingPackage** *PackageName*|Zincirlemeyi yapan paketin adını belirtir. Bu bilgiler, Microsoft Müşteri Deneyimini Geliştirme Programı (CEIP) için kaydolup diğer yükleme oturum bilgileriyle birlikte raporlanır. Paket adı boşluk içeriyorsa, çift tırnak işaretlerini sınırlayıcılar olarak kullanın; Örneğin: **/chainingpackage "zincirleme ürün"** .|
 
 Bu adımlar, .NET Framework 4.5 adlı bir paket oluşturur. Program, .NET Framework 4.5'in sessiz bir kurulumunu dağıtır. Sessiz yüklemede, kullanıcılar yükleme işlemiyle etkileşime girmez ve zincirleme uygulama, dönüş kodunu yakalayıp yeniden başlatmayı işleymelidir; bkz. [bir yükleme paketinden Ilerleme bilgileri alma](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).
@@ -163,7 +161,7 @@ Bir önceki bölümde oluşturulan .NET Framework 4.5 paketi için bir dağıtı
 
 8. Sihirbazı tamamlayın.
 
-Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz tüm bilgileri içerir. Paketi ve programı dağıtmadan önce, dağıtım noktasında yüklü olduğunu doğrulayın; Configuration Manager belge kitaplığındaki [System Center Configuration Manager ile dağıttığınız Içeriği izlemek](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed) Için "içeriği izleme" bölümüne bakın.
+Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz tüm bilgileri içerir. Paketi ve programı dağıtmadan önce, dağıtım noktasında yüklü olduğunu doğrulayın; Configuration Manager belge kitaplığındaki [Configuration Manager ile dağıttığınız Içeriği izlemek](https://docs.microsoft.com/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed) Için "içerik durumu izleme" bölümüne bakın.
 
 <a name="deploying_package"></a>
 
@@ -179,13 +177,13 @@ Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz t�
 
 4. **Giriş** sekmesinde, **dağıtım** grubunda, **Dağıt**' ı seçin.
 
-5. **Yazılım Dağıtma Sihirbazı**'nın **genel** sayfasında, **Araştır**' ı seçin ve daha önce oluşturduğunuz koleksiyonu seçin. **İleri ' yi**seçin.
+5. **Yazılım Dağıtma Sihirbazı**'nın **genel** sayfasında, **Araştır**' ı seçin ve daha önce oluşturduğunuz koleksiyonu seçin. Seçin **sonraki**.
 
 6. Sihirbazın **içerik** sayfasında, yazılımı dağıtmak istediğiniz noktanın görüntülendiğini doğrulayın ve ardından **İleri**' yi seçin.
 
-7. Sihirbazın **dağıtım ayarları** sayfasında, **eylemin** **yüklenmek**üzere ayarlandığını ve **amacın** **gerekli**olarak ayarlandığını onaylayın. Bu, yazılım paketinin hedeflenen bilgisayarlarda zorunlu bir yükleme olmasını sağlar. **İleri ' yi**seçin.
+7. Sihirbazın **dağıtım ayarları** sayfasında, **eylemin** **yüklenmek**üzere ayarlandığını ve **amacın** **gerekli**olarak ayarlandığını onaylayın. Bu, yazılım paketinin hedeflenen bilgisayarlarda zorunlu bir yükleme olmasını sağlar. Seçin **sonraki**.
 
-8. Sihirbazın **zamanlama** sayfasında, .NET Framework yüklenmesini istediğiniz tarihi belirtin. Bir yükleme süresi atamak için **Yeni** ' yi seçebilir veya yazılımın kullanıcı oturum açtığında ya da kapalıyken veya mümkün olan en kısa sürede yüklenmesine izin verebilirsiniz. **İleri ' yi**seçin.
+8. Sihirbazın **zamanlama** sayfasında, .NET Framework yüklenmesini istediğiniz tarihi belirtin. Bir yükleme süresi atamak için **Yeni** ' yi seçebilir veya yazılımın kullanıcı oturum açtığında ya da kapalıyken veya mümkün olan en kısa sürede yüklenmesine izin verebilirsiniz. Seçin **sonraki**.
 
 9. Sihirbazın **Kullanıcı deneyimi** sayfasında varsayılan değerleri kullanın ve **İleri**' yi seçin.
 

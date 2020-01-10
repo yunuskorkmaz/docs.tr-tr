@@ -1,6 +1,5 @@
 ---
 title: <summary> - C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <summary>
@@ -9,14 +8,14 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: f0e67ca248e5c94318032c8769410d4fd4c9d3a9
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 63c65e11a274779015cf99859b7fa67bb536529d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523301"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711694"
 ---
-# <a name="summary-c-programming-guide"></a>\<summary > (C# Programlama Kılavuzu)
+# <a name="summary-c-programming-guide"></a>\<Özet > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -28,9 +27,9 @@ ms.locfileid: "72523301"
  Nesnenin Özeti.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0summary > etiketi bir tür veya tür üyesini tanımlamakta kullanılmalıdır. Bir tür açıklamasına ek bilgi eklemek için [\<remarks >](./remarks.md) kullanın. Kod öğeleri için belge sayfalarına iç köprüler oluşturmak üzere [Docfx](https://dotnet.github.io/docfx/) ve [sandrole](https://github.com/EWSoftware/SHFB) gibi belge araçlarını etkinleştirmek için [cref özniteliğini](./cref-attribute.md) kullanın.  
+ \<Özet > etiketi, bir tür veya tür üyesini tanımlamakta kullanılmalıdır. Bir tür açıklamasına ek bilgi eklemek için [\<açıklamaları >](./remarks.md) kullanın. Kod öğeleri için belge sayfalarına iç köprüler oluşturmak üzere [Docfx](https://dotnet.github.io/docfx/) ve [sandrole](https://github.com/EWSoftware/SHFB) gibi belge araçlarını etkinleştirmek için [cref özniteliğini](./cref-attribute.md) kullanın.  
   
- @No__t_0summary > etiketinin metni, IntelliSense 'deki türle ilgili tek bilgi kaynağıdır ve ayrıca Nesne Tarayıcısı penceresinde de görüntülenir.  
+ \<Summary > etiketinin metni, IntelliSense 'teki tür hakkındaki tek bilgi kaynağıdır ve ayrıca Nesne Tarayıcısı penceresinde de görüntülenir.  
   
  Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin. Derleyici tarafından oluşturulan dosyayı temel alan son belgeleri oluşturmak için özel bir araç oluşturabilir veya [Docfx](https://dotnet.github.io/docfx/) veya [sandrole](https://github.com/EWSoftware/SHFB)gibi bir araç kullanabilirsiniz.  
   

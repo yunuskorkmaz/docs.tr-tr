@@ -1,6 +1,5 @@
 ---
 title: Atama ve tür dönüşümleri- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - type conversion [C#]
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 33195ef77e2f51e52cd9ed69a11b12bed8d9ead1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 252d509617ab5dbc53b282bac52e356396d82fab
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969620"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711902"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Atama ve tür dönüşümleri (C# Programlama Kılavuzu)
 
@@ -34,7 +33,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Kullanıcı tanımlı dönüştürmeler**: Kullanıcı tanımlı dönüştürmeler, temel sınıf ile türetilmiş sınıf ilişkisine sahip olmayan özel türler arasında açık ve örtük dönüştürmeleri etkinleştirmek için tanımlayabileceğiniz özel yöntemler tarafından gerçekleştirilir. Daha fazla bilgi için bkz. [Kullanıcı tanımlı dönüştürme işleçleri](../../language-reference/operators/user-defined-conversion-operators.md).  
   
-- **Yardımcı sınıflarla dönüşümler**: tamsayılar ve <xref:System.DateTime?displayProperty=nameWithType> nesneleri ya da onaltılı dizeler ve bayt dizileri gibi uyumlu olmayan türler arasında dönüştürme yapmak için <xref:System.BitConverter?displayProperty=nameWithType> sınıfını, <xref:System.Convert?displayProperty=nameWithType> sınıfını ve <xref:System.Int32.Parse%2A?displayProperty=nameWithType>gibi yerleşik sayısal türlerin `Parse` yöntemlerini kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Byte dizisini int 'e dönüştürme](./how-to-convert-a-byte-array-to-an-int.md), [nasıl yapılır: bir dizeyi sayıya dönüştürme](./how-to-convert-a-string-to-a-number.md)ve [nasıl yapılır: onaltılık dizeler ve sayısal türler arasında dönüştürme](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
+- **Yardımcı sınıflarla dönüşümler**: tamsayılar ve <xref:System.DateTime?displayProperty=nameWithType> nesneleri ya da onaltılı dizeler ve bayt dizileri gibi uyumlu olmayan türler arasında dönüştürme yapmak için <xref:System.BitConverter?displayProperty=nameWithType> sınıfını, <xref:System.Convert?displayProperty=nameWithType> sınıfını ve <xref:System.Int32.Parse%2A?displayProperty=nameWithType>gibi yerleşik sayısal türlerin `Parse` yöntemlerini kullanabilirsiniz. Daha fazla bilgi için bkz. [byte dizisini int 'e dönüştürme](./how-to-convert-a-byte-array-to-an-int.md), [bir dizeyi sayıya dönüştürme](./how-to-convert-a-string-to-a-number.md)ve [onaltılık dizeler ve sayısal türler arasında dönüştürme](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).
   
 ## <a name="implicit-conversions"></a>Örtük dönüştürmeler
 
@@ -96,4 +95,4 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 - [() Cast işleci](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
 - [Kullanıcı tanımlı dönüştürme işleçleri](../../language-reference/operators/user-defined-conversion-operators.md)
 - [Genelleştirilmiş tür dönüştürmesi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
-- [Nasıl yapılır: Bir Dizeyi Sayıya Dönüştürme](./how-to-convert-a-string-to-a-number.md)
+- [Bir dizeyi sayıya dönüştürme](./how-to-convert-a-string-to-a-number.md)

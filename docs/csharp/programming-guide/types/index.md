@@ -1,6 +1,5 @@
 ---
 title: Türler- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - value types [C#]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 27560449daa18741a53e3affa33e08afa40d006a
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 0b7c9fc0e9dd0f559c52f692c405a3f9e68814d0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552503"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711889"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 
@@ -68,7 +67,7 @@ C#tamsayılar, kayan nokta değerleri, Boole ifadeleri, metin karakterleri, onda
 
 ## <a name="custom-types"></a>Özel türler
 
-Kendi özel türlerinizi oluşturmak için [struct](../../language-reference/keywords/struct.md), [Class](../../language-reference/keywords/class.md), [Interface](../../language-reference/keywords/interface.md)ve [enum](../../language-reference/keywords/enum.md) yapılarını kullanırsınız. .NET sınıf kitaplığı, Microsoft tarafından kendi uygulamalarınızda kullanabileceğiniz özel türlerin bir koleksiyonudur. Varsayılan olarak, sınıf kitaplığındaki en sık kullanılan türler her C# programda kullanılabilir. Diğerleri yalnızca tanımlandıkları derlemeye açıkça bir proje başvurusu eklediğinizde kullanılabilir hale gelir. Derleyicinin derlemeye bir başvurusu olduktan sonra, kaynak kodda o derlemede belirtilen türlerin değişkenlerini (ve sabitleri) bildirebilirsiniz. Daha fazla bilgi için bkz. [.NET sınıf kitaplığı](../../../standard/class-library-overview.md).
+Kendi özel türlerinizi oluşturmak için [struct](../../language-reference/keywords/struct.md), [Class](../../language-reference/keywords/class.md), [Interface](../../language-reference/keywords/interface.md)ve [enum](../../language-reference/builtin-types/enum.md) yapılarını kullanırsınız. .NET sınıf kitaplığı, Microsoft tarafından kendi uygulamalarınızda kullanabileceğiniz özel türlerin bir koleksiyonudur. Varsayılan olarak, sınıf kitaplığındaki en sık kullanılan türler her C# programda kullanılabilir. Diğerleri yalnızca tanımlandıkları derlemeye açıkça bir proje başvurusu eklediğinizde kullanılabilir hale gelir. Derleyicinin derlemeye bir başvurusu olduktan sonra, kaynak kodda o derlemede belirtilen türlerin değişkenlerini (ve sabitleri) bildirebilirsiniz. Daha fazla bilgi için bkz. [.NET sınıf kitaplığı](../../../standard/class-library-overview.md).
 
 ## <a name="the-common-type-system"></a>Ortak tür sistemi
 
@@ -91,7 +90,7 @@ Aşağıdaki görüntüde, CTS 'deki değer türleri ve başvuru türleri göste
 
 Değer türleri, <xref:System.Object?displayProperty=nameWithType>türetilen <xref:System.ValueType?displayProperty=nameWithType>türetilir. <xref:System.ValueType?displayProperty=nameWithType> türetilen türlerin CLR 'de özel davranışı vardır. Değer türü değişkenleri doğrudan değerlerini içerir, bu da belleğin, değişkenin bildirildiği bağlamda satır içi olarak ayrıldığı anlamına gelir. Değer türü değişkenler için ayrı bir yığın ayırma veya çöp toplama ek yükü yoktur.
 
-Değer türlerinin iki kategorisi vardır: [struct](../../language-reference/keywords/struct.md) ve [enum](../../language-reference/keywords/enum.md).
+Değer türlerinin iki kategorisi vardır: [struct](../../language-reference/keywords/struct.md) ve [enum](../../language-reference/builtin-types/enum.md).
 
 Yerleşik sayısal türler yapı birimleridir ve erişebileceğiniz özelliklere ve yöntemlere sahiptirler:
 
@@ -116,17 +115,17 @@ Kendi özel değer türlerinizi oluşturmak için [struct](../../language-refere
 
 Yapılar hakkında daha fazla bilgi için bkz. [yapılar](../classes-and-structs/structs.md). .NET 'teki değer türleri hakkında daha fazla bilgi için bkz. [değer türleri](../../language-reference/keywords/value-types.md).
 
-Değer türlerinin diğer kategorisi [sabit listesi](../../language-reference/keywords/enum.md)' dir. Enum, adlandırılmış integral sabitleri kümesini tanımlar. Örneğin, .NET sınıf kitaplığındaki <xref:System.IO.FileMode?displayProperty=nameWithType> numaralandırması, bir dosyanın nasıl açılacağını belirten adlandırılmış sabit tamsayılar kümesi içerir. Aşağıdaki örnekte gösterildiği gibi tanımlanmıştır:
+Değer türlerinin diğer kategorisi [sabit listesi](../../language-reference/builtin-types/enum.md)' dir. Enum, adlandırılmış integral sabitleri kümesini tanımlar. Örneğin, .NET sınıf kitaplığındaki <xref:System.IO.FileMode?displayProperty=nameWithType> numaralandırması, bir dosyanın nasıl açılacağını belirten adlandırılmış sabit tamsayılar kümesi içerir. Aşağıdaki örnekte gösterildiği gibi tanımlanmıştır:
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
 `System.IO.FileMode.Create` sabiti 2 değerine sahiptir. Ancak ad, kaynak kodu okuyan insanlar için çok daha anlamlı olur ve bu nedenle sabit değişmez sayılar yerine Numaralandırmaların kullanılması daha iyidir. Daha fazla bilgi için bkz. <xref:System.IO.FileMode?displayProperty=nameWithType>.
 
-Tüm numaralandırmalar <xref:System.ValueType?displayProperty=nameWithType>devralan <xref:System.Enum?displayProperty=nameWithType>devralır. Yapılar için uygulanan tüm kurallar, numaralandırmalar için de geçerlidir. Numaralandırmalar hakkında daha fazla bilgi için bkz. [numaralandırma türleri](../enumeration-types.md).
+Tüm numaralandırmalar <xref:System.ValueType?displayProperty=nameWithType>devralan <xref:System.Enum?displayProperty=nameWithType>devralır. Yapılar için uygulanan tüm kurallar, numaralandırmalar için de geçerlidir. Numaralandırmalar hakkında daha fazla bilgi için bkz. [numaralandırma türleri](../../language-reference/builtin-types/enum.md).
 
 ### <a name="reference-types"></a>Başvuru türleri
 
-[Class](../../language-reference/keywords/class.md), [Delegate](../../language-reference/builtin-types/reference-types.md), array veya [Interface](../../language-reference/keywords/interface.md) olarak tanımlanan bir tür, bir *başvuru türüdür*. Çalışma zamanında, bir başvuru türünde bir değişken bildirdiğinizde, [New](../../language-reference/operators/new-operator.md) işlecini kullanarak açıkça bir nesne [oluşturana veya](../../language-reference/keywords/null.md) başka bir `new`yerde oluşturulmuş bir nesne (örneğin, ' de gösterildiği gibi) Aşağıdaki örnek:
+[Class](../../language-reference/keywords/class.md), [Delegate](../../language-reference/builtin-types/reference-types.md), array veya [Interface](../../language-reference/keywords/interface.md) olarak tanımlanan bir tür, bir *başvuru türüdür*. Çalışma zamanında, bir başvuru türü değişkeni bildirdiğinizde, [New](../../language-reference/operators/new-operator.md) işlecini kullanarak açıkça bir nesne oluşturana ya da aşağıdaki örnekte gösterildiği gibi `new`kullanarak başka bir yerde oluşturulmuş bir nesne atayarak değişken [null](../../language-reference/keywords/null.md) değerini içerir:
 
 ```csharp
 MyClass mc = new MyClass();
@@ -166,7 +165,7 @@ stringList.Add("String example");
 stringList.Add(4);
 ```
 
-Tür parametresinin kullanımı, her öğeyi [nesneye](../../language-reference/builtin-types/reference-types.md)dönüştürmek zorunda kalmadan her türlü öğe türünü tutmak için aynı sınıfı yeniden kullanmayı mümkün kılar. Derleyici, koleksiyon öğelerinin belirli türünü bildiğinden ve derleme zamanında bir hata tetikleyebildiğinden, genel koleksiyon sınıfları *kesin türü belirtilmiş koleksiyonlar* olarak adlandırılır. `stringList` Örneğin, önceki örnek. Daha fazla bilgi için bkz. [Genel türler](../generics/index.md).
+Tür parametresinin kullanımı, her öğeyi [nesneye](../../language-reference/builtin-types/reference-types.md)dönüştürmek zorunda kalmadan her türlü öğe türünü tutmak için aynı sınıfı yeniden kullanmayı mümkün kılar. Derleyici, koleksiyon öğelerinin belirli türünü bildiğinden ve derleme zamanında bir hata tetikleyebildiğinden, genel koleksiyon sınıfları *kesin türü belirtilmiş koleksiyonlar* olarak adlandırılır. Örneğin, önceki örnekteki `stringList` nesnesine bir tamsayı eklemeye çalışırsınız. Daha fazla bilgi için bkz. [Genel türler](../generics/index.md).
 
 ## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>Örtük türler, anonim türler ve null yapılabilir değer türleri
 

@@ -1,17 +1,16 @@
 ---
 title: Nesne ve koleksiyon başlatıcıları- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 12/19/2018
 helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: 837be04208d438f15b4cc7c7124a47ef6c038cb2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5565f37c9cfd8cb84c07f9ecc6f6c2edf8c66c61
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455447"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714762"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Nesne ve Koleksiyon Başlatıcıları (C# Programlama Kılavuzu)
 
@@ -58,13 +57,13 @@ public string this[char c, int i] {  set { ... }; }
 
 ## <a name="object-initializers-with-anonymous-types"></a>Anonim türlerde Nesne Başlatıcıları
 
-Nesne başlatıcıları herhangi bir bağlamda kullanılabilse de, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadelerinde özellikle faydalıdır. Sorgu ifadeleri, aşağıdaki bildirimde gösterildiği gibi, yalnızca bir nesne Başlatıcısı kullanılarak başlatılan [anonim türler](./anonymous-types.md)için sık kullanılan kullanımı kolaylaştırır.  
+Nesne başlatıcıları herhangi bir bağlamda kullanılabilse de, LINQ sorgu ifadelerinde özellikle faydalıdır. Sorgu ifadeleri, aşağıdaki bildirimde gösterildiği gibi, yalnızca bir nesne Başlatıcısı kullanılarak başlatılan [anonim türler](./anonymous-types.md)için sık kullanılan kullanımı kolaylaştırır.  
 
 ```csharp
 var pet = new { Age = 10, Name = "Fluffy" };  
 ```
 
-Anonim türler, özgün dizinin nesnelerini değeri ve şekli orijinalden farklı olabilecek nesnelere dönüştürmek için bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadesinde `select` yan tümcesini etkinleştirir. Bir sıradaki her bir nesneden elde edilen bilgilerin yalnızca bir kısmını depolamak isterseniz, bu kullanışlıdır. Aşağıdaki örnekte, bir ürün nesnesinin (`p`) birçok alanı ve yöntemi içerdiğini ve yalnızca ürün adını ve birim fiyatını içeren bir nesne dizisi oluşturmak istediğinizi varsayalım.  
+Anonim türler, bir LINQ sorgu ifadesindeki `select` yan tümcesini, özgün dizinin nesnelerini değeri ve şekli orijinalden farklı olabilecek nesnelere dönüştürmek üzere etkinleştirir. Bir sıradaki her bir nesneden elde edilen bilgilerin yalnızca bir kısmını depolamak isterseniz, bu kullanışlıdır. Aşağıdaki örnekte, bir ürün nesnesinin (`p`) birçok alanı ve yöntemi içerdiğini ve yalnızca ürün adını ve birim fiyatını içeren bir nesne dizisi oluşturmak istediğinizi varsayalım.  
   
 [!code-csharp[ObjectInitializer3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#AnonymousUse)]  
 

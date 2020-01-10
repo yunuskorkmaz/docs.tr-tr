@@ -6,31 +6,29 @@ helpviewer_keywords:
 - encryption [.NET Framework], creating cryptographic schemes
 - cryptography [.NET Framework], creating cryptographic schemes
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ef3741ef5cec720c2fb285c9aa60d610acc0be9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00fff5f346633a9682d75cf6a3be7e8e7d5db7e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909395"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706298"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Şifreleme Düzeni Oluşturma
-.NET Framework şifreleme bileşenlerini şifrelemek ve verilerin şifresini çözmek için farklı düzenleri oluşturmak için birleştirilebilir.  
+.NET Framework şifreleme bileşenleri, verileri şifrelemek ve şifrelerini çözmek için farklı şemalar oluşturmak üzere birleştirilebilir.  
   
- Şifreleme ve verilerin şifresini çözmek için basit bir şifreleme düzeni aşağıdakileri belirtebilirsiniz:  
+ Verileri şifrelemek ve şifrelerini çözmek için basit bir şifreleme şeması aşağıdaki adımları belirtebilir:  
   
-1. Her iki taraf bir ortak/özel anahtar çifti oluşturur.  
+1. Her taraf ortak/özel anahtar çifti oluşturur.  
   
-2. Taraflar, ortak anahtar değişimi.  
+2. Taraflar ortak anahtarlarını değiş tokuş altına alırlar.  
   
-3. Her iki taraf TripleDES şifreleme için gizli bir anahtar oluşturur ve diğer kişinin ortak anahtar kullanarak yeni oluşturulan anahtarı şifreler.  
+3. Her bir taraf, üç aylık şifreleme için gizli bir anahtar oluşturur, örneğin, diğer ortak anahtarını kullanarak yeni oluşturulan anahtarı şifreler.  
   
-4. Her bir taraf, diğer veri gönderir ve yeni bir gizli anahtar oluşturmak için kendi belirli bir siparişi ile diğer tarafın gizli anahtar birleştirir.  
+4. Her bir taraf, verileri birbirlerine gönderir ve yeni bir gizli anahtar oluşturmak için kendi gizli anahtarını belirli bir sırada kendi kendine birleştirir.  
   
-5. Taraflar ardından simetrik şifreleme kullanarak bir konuşma başlatır.  
+5. Taraflar daha sonra simetrik şifrelemeyi kullanarak bir konuşma başlatır.  
   
- Şifreleme düzeni oluşturma, basit bir görev değildir.
+ Şifreleme düzeni oluşturmak, önemsiz bir görev değildir.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

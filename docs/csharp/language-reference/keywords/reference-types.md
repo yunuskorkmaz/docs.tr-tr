@@ -1,6 +1,5 @@
 ---
 title: Başvuru türleri- C# başvuru
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.referencetypes
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference types
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
-ms.openlocfilehash: 61b9f8096e1b2093b1ea5589f4336618cd189c34
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 16e7cdc624979f9a35e287ea5274bd9398c83132
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422452"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715173"
 ---
 # <a name="reference-types-c-reference"></a>Başvuru türleri (C# başvuru)
 
@@ -41,5 +40,5 @@ C#'de iki çeşit tür vardır: başvuru türleri ve değer türleri. Başvuru t
 - [C#Başvurunun](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [Türler](/dotnet/csharp/language-reference/keywords)
-- [Değer Türleri](value-types.md)
+- [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Değer türleri](value-types.md)

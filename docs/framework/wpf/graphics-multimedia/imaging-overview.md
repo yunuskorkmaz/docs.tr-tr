@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: b60f2871062a12d3bee91a9c6d9883222b3034f4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a4151ff610c67ac762f0096c6a136f4475317782
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733571"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636646"
 ---
 # <a name="imaging-overview"></a>Görüntülemeye Genel Bakış
 Bu konu, Microsoft Windows Presentation Foundation Imaging bileşenine bir giriş sağlar. WPF Imaging, geliştiricilerin resimleri görüntülemesine, dönüştürmelerine ve biçimlendirmeye olanak sağlar.  
@@ -48,7 +48,7 @@ Bu konu, Microsoft Windows Presentation Foundation Imaging bileşenine bir giri�
   
 - Dosya içi, özel meta veriler için destek.  
   
-- Yönetilen bileşen, [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animasyon ve grafik gibi diğer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] özellikleriyle görüntülerin sorunsuz bir şekilde tümleştirilmesini sağlamak için yönetilmeyen altyapıyı kullanır. Yönetilen bileşen ayrıca, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalarda yeni görüntü biçimlerinin otomatik olarak tanınmasını sağlayan Windows Presentation Foundation (WPF) görüntüleme codec genişletilebilirliği modelinden de faydalanır.  
+- Yönetilen bileşen, [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animasyon ve grafik gibi diğer WPF özellikleriyle görüntülerin sorunsuz bir şekilde tümleştirilmesini sağlamak için yönetilmeyen altyapıyı kullanır. Yönetilen bileşen, WPF uygulamalarında yeni görüntü biçimlerinin otomatik olarak tanınmasını sağlayan Windows Presentation Foundation (WPF) görüntüleme codec genişletilebilirliği modelinden de faydalanır.  
   
  Yönetilen WPF Görüntüleme API 'sinin çoğunluğu <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> ad alanında bulunur, ancak <xref:System.Windows.Media.ImageBrush> ve <xref:System.Windows.Media.ImageDrawing> gibi çeşitli önemli türler <xref:System.Windows.Media?displayProperty=nameWithType> ad alanında bulunur ve <xref:System.Windows.Controls.Image> <xref:System.Windows.Controls?displayProperty=nameWithType> ad alanında yer alır.  
   
@@ -59,7 +59,7 @@ Bu konu, Microsoft Windows Presentation Foundation Imaging bileşenine bir giri�
 
  Bir codec bileşeni, belirli bir medya biçiminin kodunu çözmek veya kodlamak için kullanılır. WPF Imaging, BMP, JPEG, PNG, TIFF, Windows Medya fotoğrafı, GIF ve SIMGE resim biçimleri için bir codec bileşeni içerir. Bu codec bileşenlerinden her biri, uygulamaların kodunu çözmelerini ve SIMGE dışında kendi görüntü biçimlerini kodlamalarını sağlar.  
   
- <xref:System.Windows.Media.Imaging.BitmapSource>, görüntülerin kod çözmede ve kodlamasında kullanılan önemli bir sınıftır. WPF görüntüleme işlem hattının temel yapı taşıdır ve belirli bir boyut ve çözünürlükte tek bir sabit piksel kümesini temsil eder. <xref:System.Windows.Media.Imaging.BitmapSource> birden çok çerçeve görüntüsünün tek bir çerçevesi olabilir veya bir <xref:System.Windows.Media.Imaging.BitmapSource>üzerinde gerçekleştirilen dönüşümün sonucu olabilir. Bu, <xref:System.Windows.Media.Imaging.BitmapFrame>gibi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Imaging 'de kullanılan birçok birincil sınıfların üst öğesidir.  
+ <xref:System.Windows.Media.Imaging.BitmapSource>, görüntülerin kod çözmede ve kodlamasında kullanılan önemli bir sınıftır. WPF görüntüleme işlem hattının temel yapı taşıdır ve belirli bir boyut ve çözünürlükte tek bir sabit piksel kümesini temsil eder. <xref:System.Windows.Media.Imaging.BitmapSource> birden çok çerçeve görüntüsünün tek bir çerçevesi olabilir veya bir <xref:System.Windows.Media.Imaging.BitmapSource>üzerinde gerçekleştirilen dönüşümün sonucu olabilir. WPF Imaging 'de <xref:System.Windows.Media.Imaging.BitmapFrame>gibi kullanılan birçok birincil sınıfların üst öğesidir.  
   
  Bir görüntü biçiminin gerçek bit eşlem verilerini depolamak için bir <xref:System.Windows.Media.Imaging.BitmapFrame> kullanılır. Birçok görüntü biçimi yalnızca tek bir <xref:System.Windows.Media.Imaging.BitmapFrame>destekler, ancak GIF ve TIFF gibi biçimler görüntü başına birden çok çerçeveyi destekler. Çerçeveler, kod çözücüleri tarafından giriş verisi olarak kullanılır ve görüntü dosyaları oluşturmak için kodlayıcılara geçirilir.  
   
@@ -69,7 +69,7 @@ Bu konu, Microsoft Windows Presentation Foundation Imaging bileşenine bir giri�
  [!code-vb[BitmapFrameExample#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
   
 ### <a name="image-format-decoding"></a>Görüntü biçimi kod çözme  
- Görüntü kod çözme, bir görüntü biçiminin sistem tarafından kullanılabilecek verileri görüntüye dönüştürmesidir. Görüntü verileri daha sonra farklı bir biçimde görüntüleme, işleme veya kodlama için kullanılabilir. Kod çözücü seçimi resim biçimini temel alır. Belirli bir kod çözücü belirtilmedikçe, codec bileşeni seçimi otomatiktir. [WPF resimlerini görüntüleme](#_displayingimages) bölümünde örnekleri otomatik kod çözme gösterilmektedir. Yönetilmeyen WPF görüntüleme arabirimleri kullanılarak geliştirilen ve sisteme kaydedilen özel biçim kod çözücüleri, kod çözücü seçimine otomatik olarak katılır. Bu, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalarında özel biçimlerin otomatik olarak görüntülenmesine izin verir.  
+ Görüntü kod çözme, bir görüntü biçiminin sistem tarafından kullanılabilecek verileri görüntüye dönüştürmesidir. Görüntü verileri daha sonra farklı bir biçimde görüntüleme, işleme veya kodlama için kullanılabilir. Kod çözücü seçimi resim biçimini temel alır. Belirli bir kod çözücü belirtilmedikçe, codec bileşeni seçimi otomatiktir. [WPF resimlerini görüntüleme](#_displayingimages) bölümünde örnekleri otomatik kod çözme gösterilmektedir. Yönetilmeyen WPF görüntüleme arabirimleri kullanılarak geliştirilen ve sisteme kaydedilen özel biçim kod çözücüleri, kod çözücü seçimine otomatik olarak katılır. Bu, WPF uygulamalarında özel biçimlerin otomatik olarak görüntülenmesine izin verir.  
   
  Aşağıdaki örnek, bir BMP biçimli görüntünün kodunu çözmek için bir bit eşlem kod çözücünün kullanımını gösterir.  
   
@@ -106,7 +106,7 @@ Bu konu, Microsoft Windows Presentation Foundation Imaging bileşenine bir giri�
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 #### <a name="rotating-converting-and-cropping-images"></a>Görüntüleri döndürme, dönüştürme ve kırpma  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], kullanıcıların <xref:System.Windows.Media.Imaging.BitmapImage> özelliklerini kullanarak veya <xref:System.Windows.Media.Imaging.CroppedBitmap> veya <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>gibi ek <xref:System.Windows.Media.Imaging.BitmapSource> nesneleri kullanarak görüntüleri dönüştürmesine olanak sağlar. Bu görüntü dönüştürmeleri bir görüntüyü ölçeklendirebilir veya döndürebilir, bir görüntünün piksel biçimini değiştirebilir veya bir görüntüyü kırpabilir.  
+ WPF, kullanıcıların <xref:System.Windows.Media.Imaging.BitmapImage> özelliklerini kullanarak veya <xref:System.Windows.Media.Imaging.CroppedBitmap> ya da <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>gibi ek <xref:System.Windows.Media.Imaging.BitmapSource> nesneleri kullanarak görüntüleri dönüştürmesine olanak sağlar. Bu görüntü dönüştürmeleri bir görüntüyü ölçeklendirebilir veya döndürebilir, bir görüntünün piksel biçimini değiştirebilir veya bir görüntüyü kırpabilir.  
   
  Resim döndürmeler, <xref:System.Windows.Media.Imaging.BitmapImage><xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> özelliği kullanılarak gerçekleştirilir. Döndürmeler yalnızca 90 derece artışlarla yapılabilir. Aşağıdaki örnekte, bir görüntü 90 derece döndürülür.  
   
@@ -181,7 +181,7 @@ Görüntü fırçaları şekilleri, denetimleri, metinleri ve daha fazlasını d
   
 <a name="_extensibility"></a>   
 ## <a name="codec-extensibility"></a>Codec genişletilebilirliği  
- WPF Imaging 'in temel bir özelliği, yeni görüntü codec bileşenleri için genişletilebilirlik modelidir. Bu yönetilmeyen arabirimler, codec geliştiricilerinin codec bileşenlerini [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ile tümleştirmesini sağlar, böylece yeni resim biçimleri [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar tarafından otomatik olarak kullanılabilir.  
+ WPF Imaging 'in temel bir özelliği, yeni görüntü codec bileşenleri için genişletilebilirlik modelidir. Bu yönetilmeyen arabirimler, codec geliştiricilerinin codec bileşenlerini WPF ile tümleştirmesini sağlar, böylece yeni görüntü biçimleri WPF uygulamaları tarafından otomatik olarak kullanılabilir.  
   
  Genişletilebilirlik API 'sinin bir örneği için bkz. [Win32 örnek codec bileşeni](https://go.microsoft.com/fwlink/?LinkID=160052). Bu örnek, bir özel görüntü biçimi için bir kod çözücü ve kodlayıcı oluşturmayı gösterir.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: dfd494ceb631a8f86cc3a249e5168c1f413e7e4f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c2b674ba17360c6ee9d2b21683560e840063f17d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972907"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636061"
 ---
 # <a name="command-line-build-with-cscexe"></a>Csc. exe ile komut satırı oluşturma
 
@@ -29,7 +29,7 @@ Ayrıca C# programlarını program aracılığıyla oluşturmak için MSBuild'i 
 > [!TIP]
 > Visual Studio IDE kullanarak bir proje oluşturduğunuzda, **CSC** komutunu ve ilgili derleyici seçeneklerini **Çıkış** penceresinde görüntüleyebilirsiniz. Bu bilgileri görüntülemek için nasıl yapılır: günlük verilerinin ayrıntı düzeyini **normal** veya **ayrıntılı**olarak değiştirmek üzere [derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) konusundaki yönergeleri izleyin. Projenizi yeniden oluşturduktan sonra, C# derleyicinin çağrılmasını bulmak Için **CSC** **Çıkış** penceresinde arama yapın.
 
- **Bu konuda**
+ **Bu konudaki**
 
 - [Komut satırı söz dizimi için kurallar](#rules-for-command-line-syntax-for-the-c-compiler)
 
@@ -103,5 +103,5 @@ Derleyiciyi çağırma sonucu olarak oluşturulan nesne ( *. obj*) dosyaları yo
 - [Kategorilere Göre Listelenen C# Derleyici Seçenekleri](./listed-by-category.md)
 - [Ana() ve Komut Satırı Bağımsız Değişkenleri](../../programming-guide/main-and-command-args/index.md)
 - [Komut Satırı Bağımsız Değişkenleri](../../programming-guide/main-and-command-args/command-line-arguments.md)
-- [Nasıl yapılır: komut satırı bağımsız değişkenlerini görüntüleme](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Komut satırı bağımsız değişkenlerini görüntüleme](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
 - [Ana() Dönüş Değerleri](../../programming-guide/main-and-command-args/main-return-values.md)

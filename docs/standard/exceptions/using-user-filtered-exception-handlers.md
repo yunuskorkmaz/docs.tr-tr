@@ -6,22 +6,20 @@ helpviewer_keywords:
 - user-filtered exceptions
 - exceptions, user-filtered
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 228bae8db833abfa3c8c906d57e2177cde644548
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5537404178b746310f720c5b0c075c77287dda4c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945463"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708459"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>Kullanıcı Tarafından Filtrelenmiş Özel Durum İşleyicilerini Kullanma
 
-Şu anda, Visual Basic, kullanıcı tarafından filtrelenmiş özel durumu destekler. Kullanıcı tarafından filtrelenmiş özel durum işleyicileri catch ve özel durum için tanımladığınız gereksinimlerine göre özel durumları işleyin. Bu işleyicilerini **Catch** deyimiyle **olduğunda** anahtar sözcüğü.  
+Şu anda Visual Basic Kullanıcı tarafından filtrelenen özel durumları destekler. Kullanıcı filtrelenmiş özel durum işleyicileri özel durum için tanımladığınız gereksinimlere göre özel durumları yakalar ve işler. Bu işleyiciler **catch** **ifadesini as anahtar** sözcüğüyle birlikte kullanır.  
   
- Bu teknik, belirli bir özel durum nesnesi için birden çok hata karşılık gelen yararlıdır. Bu durumda, nesne, genellikle hatayla ilişkili söz konusu hata kodunu içeren bir özelliğe sahiptir. Yalnızca, işlemek istediğiniz belirli hata seçmek için ifade hata kodu özelliğini kullanabilirsiniz **Catch** yan tümcesi.  
+ Bu teknik, belirli bir özel durum nesnesi birden çok hataya karşılık geldiğinde yararlıdır. Bu durumda, nesnesi genellikle hatayla ilişkili özel hata kodunu içeren bir özelliğe sahiptir. Bu **catch** yan tümcesinde işlemek istediğiniz belirli bir hatayı seçmek için ifadesindeki hata kodu özelliğini kullanabilirsiniz.  
   
- Aşağıdaki Visual Basic örnek gösterir **Catch/olduğunda** deyimi.  
+ Aşağıdaki Visual Basic örnek, **catch/** while ifadesini gösterir.  
   
 ```vb
 Try  
@@ -31,12 +29,12 @@ Try
 End Try  
 ```  
   
- Kullanıcı tarafından filtrelenmiş yan tümcesinin ifadesi herhangi bir yolla sınırlı değildir. Kullanıcı tarafından filtrelenmiş ifadenin yürütülmesi sırasında bir özel durum meydana gelirse, o özel durumu atılır ve filtre ifadesi false olarak değerlendirildi olarak kabul edilir. Bu durumda, ortak dil çalışma zamanı, geçerli özel durum işleyicisi için arama devam eder.  
+ Kullanıcı filtrelenmiş yan tümcesinin ifadesi herhangi bir şekilde kısıtlanmaz. Kullanıcı tarafından filtrelenen ifadenin yürütülmesi sırasında bir özel durum oluşursa, bu özel durum atılır ve filtre ifadesi yanlış olarak değerlendirilir. Bu durumda, ortak dil çalışma zamanı, geçerli özel durum için bir işleyici aramaya devam eder.  
   
-## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>Özel durum ve kullanıcı tarafından filtrelenmiş yan tümceleri birleştirme  
- Catch deyimi, hem özel hem de kullanıcı tarafından filtrelenmiş yan tümceleri içerebilir. Çalışma zamanı özel duruma önce test eder. Özel durum başarılı olursa, çalışma zamanı kullanıcı filtresini yürütür. Genel filtre sınıfı filtrede bildirilen değişken başvuru içerebilir. İki filtre yan tümcesi sırasını ters unutmayın.  
+## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>Belirli özel durumu ve kullanıcı filtrelenmiş tümceleri birleştirme  
+ Catch ifadesinde hem belirli özel durum hem de Kullanıcı tarafından filtrelenmiş yan tümceler bulunabilir. Çalışma zamanı, önce belirli özel durumu sınar. Belirli özel durum başarılı olursa, çalışma zamanı Kullanıcı filtresini yürütür. Genel filtre, sınıf filtresinde belirtilen değişkene bir başvuru içerebilir. İki filtre yan tümcelerinin sırasının geri çevrilmeyeceğini unutmayın.  
   
- Aşağıdaki Visual Basic örnek, belirli özel durum gösterir `ClassLoadException` içinde **Catch** deyimi hem de kullanıcı tarafından filtrelenmiş yan tümcesini kullanarak **olduğunda** anahtar sözcüğü.  
+ Aşağıdaki Visual Basic örnekte, **catch** deyimindeki özel durum **`ClassLoadException` ve WHERE anahtar sözcüğü** kullanılarak kullanıcı filtrelenmiş yan tümce gösterilmektedir.  
   
 ```vb
 Try  

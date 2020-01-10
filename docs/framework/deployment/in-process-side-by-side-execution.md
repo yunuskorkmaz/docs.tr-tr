@@ -5,14 +5,12 @@ helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2a33d3c4216ed8c5d79aef4017c6b9256fc1ad7c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0c699f90143a87b7e7bee24c892efe2936a9399e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052098"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716476"
 ---
 # <a name="in-process-side-by-side-execution"></a>Devam Eden Yan Yana Yürütme
 .NET Framework 4 ' te başlayarak, tek bir işlemde ortak dil çalışma zamanının (CLR) birden çok sürümünü çalıştırmak için işlem içi yan yana barındırma kullanabilirsiniz. Varsayılan olarak, yönetilen COM bileşenleri, işlem için yüklenen .NET Framework sürümden bağımsız olarak, ile derlendikleri .NET Framework sürümüyle çalışır.  
@@ -32,7 +30,7 @@ ms.locfileid: "71052098"
   
 - **Uygulama geliştiricileri**. Yan yana barındırma, uygulama geliştiricileri üzerinde neredeyse hiçbir etkiye sahip değildir. Uygulamalar, varsayılan olarak her zaman üzerinde derlendikleri .NET Framework sürümüne karşı çalışır; Bu değiştirilmedi. Ancak, geliştiriciler bu davranışı geçersiz kılabilir ve uygulamayı .NET Framework daha yeni bir sürümü altında çalışacak şekilde yönlendirebilir (bkz. [Senaryo 2](#scenarios)).  
   
-- **Kitaplık geliştiricileri ve tüketicileri**. Yan yana barındırma, kitaplık geliştiricilerinin karşılaştığı uyumluluk sorunlarını çözmez. Doğrudan başvuru aracılığıyla veya bir <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> çağrı aracılığıyla bir uygulama tarafından doğrudan yüklenen bir kitaplık, ' <xref:System.AppDomain> ın ' a yüklendiği çalışma zamanını kullanmaya devam eder. Kitaplıklarınızı, desteklemek istediğiniz tüm .NET Framework sürümlerine karşı test etmelisiniz. Bir uygulama .NET Framework 4 çalışma zamanı kullanılarak derlenirse ancak önceki bir çalışma zamanı kullanılarak oluşturulmuş bir kitaplığı içeriyorsa, bu kitaplık .NET Framework 4 çalışma zamanını da kullanacaktır. Ancak, önceki bir çalışma zamanı ve .NET Framework 4 kullanılarak oluşturulmuş bir kitaplık kullanılarak oluşturulmuş bir uygulamanız varsa, uygulamanızı .NET Framework 4 ' ü (bkz. [Senaryo 3](#scenarios)) de kullanacak şekilde zorlamanız gerekir.  
+- **Kitaplık geliştiricileri ve tüketicileri**. Yan yana barındırma, kitaplık geliştiricilerinin karşılaştığı uyumluluk sorunlarını çözmez. Doğrudan başvuru aracılığıyla veya bir <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> çağrısı aracılığıyla bir uygulama tarafından doğrudan yüklenen bir kitaplık, yüklendiği <xref:System.AppDomain> çalışma zamanını kullanmaya devam eder. Kitaplıklarınızı, desteklemek istediğiniz tüm .NET Framework sürümlerine karşı test etmelisiniz. Bir uygulama .NET Framework 4 çalışma zamanı kullanılarak derlenirse ancak önceki bir çalışma zamanı kullanılarak oluşturulmuş bir kitaplığı içeriyorsa, bu kitaplık .NET Framework 4 çalışma zamanını da kullanacaktır. Ancak, önceki bir çalışma zamanı ve .NET Framework 4 kullanılarak oluşturulmuş bir kitaplık kullanılarak oluşturulmuş bir uygulamanız varsa, uygulamanızı .NET Framework 4 ' ü (bkz. [Senaryo 3](#scenarios)) de kullanacak şekilde zorlamanız gerekir.  
   
 - **YÖNETILEN com bileşeni geliştiricileri**. Geçmişte, yönetilen COM bileşenleri, bilgisayarda yüklü olan çalışma zamanının en son sürümü kullanılarak otomatik olarak çalışır. Artık, yerleşik oldukları çalışma zamanının sürümüne göre COM bileşenlerini yürütebilirsiniz.  
   
@@ -52,15 +50,15 @@ ms.locfileid: "71052098"
   
 - **Senaryo 1:** .NET Framework önceki sürümleriyle oluşturulmuş COM bileşenlerini kullanan yerel uygulama.  
   
-     .NET Framework yüklenen sürümler: .NET Framework 4 ve COM bileşenleri tarafından kullanılan .NET Framework diğer tüm sürümleri.  
+     .NET Framework yüklü sürümler: COM bileşenleri tarafından kullanılan .NET Framework .NET Framework 4 ve diğer tüm sürümleri.  
   
-     Yapmanız gerekenler: Bu senaryoda hiçbir şey yapmayın. COM bileşenleri, kayıtlı oldukları .NET Framework sürümüyle çalışacaktır.  
+     Yapılacaklar: Bu senaryoda hiçbir şey yapmayın. COM bileşenleri, kayıtlı oldukları .NET Framework sürümüyle çalışacaktır.  
   
-- **Senaryo 2**: .NET Framework 2,0 ile çalıştırmayı tercih ettiğiniz, ancak sürüm 2,0 mevcut değilse .NET Framework 4 ' te çalışmak üzere .NET Framework 2,0 SP1 ile oluşturulmuş yönetilen uygulama.  
+- **Senaryo 2**: .NET Framework 2,0 SP1 ile oluşturulmuş, .NET Framework 2,0 ile çalıştırmayı tercih ettiğiniz, ancak sürüm 2,0 mevcut değilse .NET Framework 4 ' te çalıştırmayı tercih ettiğiniz yönetilen uygulama.  
   
-     .NET Framework yüklenen sürümler: .NET Framework önceki bir sürümü ve .NET Framework 4.  
+     .NET Framework yüklü sürümler: .NET Framework ve .NET Framework 4 ' ün önceki bir sürümü.  
   
-     Yapmanız gerekenler: Uygulama dizinindeki [uygulama yapılandırma dosyasında](../configure-apps/index.md) , [ \<](../configure-apps/file-schema/startup/startup-element.md) [ \<Başlangıç > öğesini ve supportedRuntime > öğesi](../configure-apps/file-schema/startup/supportedruntime-element.md) kümesini aşağıdaki şekilde kullanın:  
+     Yapılacaklar: uygulama dizinindeki [uygulama yapılandırma dosyasında](../configure-apps/index.md) , [\<Startup > öğesini](../configure-apps/file-schema/startup/startup-element.md) ve [\<supportedRuntime > öğesi](../configure-apps/file-schema/startup/supportedruntime-element.md) kümesini aşağıdaki gibi kullanın:  
   
     ```xml  
     <configuration>  
@@ -73,9 +71,9 @@ ms.locfileid: "71052098"
   
 - **Senaryo 3:** .NET Framework 4 ile çalıştırmak istediğiniz .NET Framework önceki sürümleriyle oluşturulmuş COM bileşenlerini kullanan yerel uygulama.  
   
-     .NET Framework yüklenen sürümler: .NET Framework 4.  
+     .NET Framework yüklü sürümler: .NET Framework 4.  
   
-     Yapmanız gerekenler: Uygulama dizinindeki `<startup>` uygulama yapılandırma dosyasında, `useLegacyV2RuntimeActivationPolicy` `true` özniteliği olarak ayarlanmış ve öğekümesiaşağıdakişekildeolanöğesinikullanın:`<supportedRuntime>`  
+     Yapılacaklar: uygulama dizinindeki uygulama yapılandırma dosyasında, `true` ve `<supportedRuntime>` öğesi olarak ayarlanan `useLegacyV2RuntimeActivationPolicy` özniteliğiyle birlikte `<startup>` öğesini aşağıda gösterildiği gibi kullanın:  
   
     ```xml  
     <configuration>  

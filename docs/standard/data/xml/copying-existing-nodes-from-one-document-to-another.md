@@ -3,14 +3,12 @@ title: Var Olan Düğümleri Bir Belgeden Diğerine Kopyalama
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e08c86ebdd71746520085844de5743692e84640e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4ee3f8d280b8bf0f2de067e7529d777e62bff406
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965926"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711031"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Var Olan Düğümleri Bir Belgeden Diğerine Kopyalama
 **ImportNode** yöntemi, bir düğümün veya tüm düğüm alt ağacının bir **XmlDocument** 'dan diğerine kopyalandığı mekanizmadır. Çağrıdan döndürülen düğüm, öznitelik değerleri, düğüm adı, düğüm türü ve önek, yerel ad ve ad alanı Tekdüzen Kaynak tanımlayıcısı (URI) gibi tüm ad alanıyla ilgili öznitelikleri dahil olmak üzere kaynak belgesinden düğümün bir kopyasıdır. Kaynak belge değiştirilmez. Düğümü içeri aktardıktan sonra, düğümleri eklemek için kullanılan yöntemlerden birini kullanarak ağaca yine de eklemeniz gerekir.  
@@ -21,14 +19,14 @@ ms.locfileid: "69965926"
   
  Aşağıdaki tabloda, içeri aktarılabilecek her düğüm türü için belirli davranış açıklanmaktadır.  
   
-|Düğüm türü|*derin* parametre doğru|*derin* parametre yanlış|  
+|Düğüm Türü|*derin* parametre doğru|*derin* parametre yanlış|  
 |---------------|------------------------------|-------------------------------|  
-|XmlAttribute|, <xref:System.Xml.XmlAttribute.Specified%2A> XmlAttribute üzerinde **true** olarak ayarlanır. Kaynak **XmlAttribute** 'in alt öğeleri yinelemeli olarak içeri aktarılır ve elde edilen düğümler, karşılık gelen alt ağacı oluşturmak için yeniden birleştirir.|*Derin* parametresi, her zaman içeri aktarıldığında her zaman alt düğümlerini taşıdıklarından, **XmlAttribute** düğümleri için uygulanmaz.|  
+|XmlAttribute|<xref:System.Xml.XmlAttribute.Specified%2A>, XmlAttribute üzerinde **true** olarak ayarlanır. Kaynak **XmlAttribute** 'in alt öğeleri yinelemeli olarak içeri aktarılır ve elde edilen düğümler, karşılık gelen alt ağacı oluşturmak için yeniden birleştirir.|*Derin* parametresi, her zaman içeri aktarıldığında her zaman alt düğümlerini taşıdıklarından, **XmlAttribute** düğümleri için uygulanmaz.|  
 |XmlCDataSection|, Verileri dahil olmak üzere düğümü kopyalar.|, Verileri dahil olmak üzere düğümü kopyalar.|  
 |XmlComment|, Verileri dahil olmak üzere düğümü kopyalar.|, Verileri dahil olmak üzere düğümü kopyalar.|  
 |XmlDocumentFragment|Kaynak düğümün alt öğeleri yinelemeli olarak içeri aktarılır ve elde edilen düğümler, karşılık gelen alt ağacı oluşturmak için yeniden birleştirir.|Boş bir **XmlDocumentFragment** oluşturulur.|  
 |XmlDocumentType|, Verileri dahil olmak üzere düğümü kopyalar. *|, Verileri dahil olmak üzere düğümü kopyalar. *|  
-|XmlElement|Kaynak öğenin alt öğeleri yinelemeli olarak içeri aktarılır ve elde edilen düğümler, karşılık gelen alt ağacı oluşturmak için yeniden birleştirir. **Not:**  Varsayılan öznitelikler kopyalanmaz. İçeri aktarılan belge, bu öğe adı için varsayılan öznitelikleri tanımlıyorsa, bunlar atanır.|Kaynak öğenin belirtilen öznitelik düğümleri içeri aktarılır ve oluşturulan **XmlAttribute** düğümleri yeni öğeye eklenir. Alt düğümler kopyalanmaz. **Not:**  Varsayılan öznitelikler kopyalanmaz. İçeri aktarılan belge, bu öğe adı için varsayılan öznitelikleri tanımlıyorsa, bunlar atanır.|  
+|XmlElement|Kaynak öğenin alt öğeleri yinelemeli olarak içeri aktarılır ve elde edilen düğümler, karşılık gelen alt ağacı oluşturmak için yeniden birleştirir. **Note:**  Varsayılan öznitelikler kopyalanmaz. İçeri aktarılan belge, bu öğe adı için varsayılan öznitelikleri tanımlıyorsa, bunlar atanır.|Kaynak öğenin belirtilen öznitelik düğümleri içeri aktarılır ve oluşturulan **XmlAttribute** düğümleri yeni öğeye eklenir. Alt düğümler kopyalanmaz. **Note:**  Varsayılan öznitelikler kopyalanmaz. İçeri aktarılan belge, bu öğe adı için varsayılan öznitelikleri tanımlıyorsa, bunlar atanır.|  
 |XmlEntityReference|Kaynak ve hedef belgeler varlıkların farklı şekilde tanımlandığından, bu yöntem yalnızca **XmlEntityReference** düğümünü kopyalar. Değiştirme metni dahil değildir. Hedef belge tanımlı varlığa sahipse, değeri atanır.|Kaynak ve hedef belgeler varlıkların farklı şekilde tanımlandığından, bu yöntem yalnızca **XmlEntityReference** düğümünü kopyalar. Değiştirme metni dahil değildir. Hedef belge tanımlı varlığa sahipse, değeri atanır.|  
 |XmlProcessingInstruction|İçeri aktarılan düğümden hedef ve veri değerini kopyalar.|İçeri aktarılan düğümden hedef ve veri değerini kopyalar.|  
 |XmlText|, Verileri dahil olmak üzere düğümü kopyalar.|, Verileri dahil olmak üzere düğümü kopyalar.|  

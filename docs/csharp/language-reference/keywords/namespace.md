@@ -1,6 +1,5 @@
 ---
 title: namespace anahtar sözcüğü C# -başvurusu
-ms.custom: seoapril2019
 ms.date: 07/20/2015
 f1_keywords:
 - namespace_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: d1e30162cbce65193783d2fb0607900f209cc648
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1eaec05289ad1146ac3dcd6479442a6fae067cc9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422681"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713362"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# Başvurusu)
 
@@ -34,9 +33,9 @@ Bir ad alanı içinde, aşağıdaki türlerden sıfır veya daha fazlasını bil
 
 - [struct](struct.md)
 
-- [enum](enum.md)
+- [enum](../builtin-types/enum.md)
 
-- [delegate](../builtin-types/reference-types.md)
+- [delegate](../builtin-types/reference-types.md#the-delegate-type)
 
 Bir C# kaynak dosyasında açıkça bir ad alanı bildirip bildirmeyeceğinizi belirtir, derleyici varsayılan bir ad alanı ekler. Her zaman genel ad alanı olarak adlandırılan bu adlandırılmamış ad alanı her dosyada mevcuttur. Genel ad alanındaki herhangi bir tanımlayıcı, adlandırılmış bir ad alanında kullanılmak üzere kullanılabilir.
 
@@ -63,4 +62,4 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 - [using](using-directive.md)
 - [statik kullanma](using-static.md)
 - [Ad alanı diğer adı niteleyicisi `::`](../operators/namespace-alias-qualifier.md)
-- [Ad alanları](../../programming-guide/namespaces/index.md)
+- [Ad Alanları](../../programming-guide/namespaces/index.md)

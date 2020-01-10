@@ -1,20 +1,19 @@
 ---
 title: Açık arabirim uygulama- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-ms.openlocfilehash: 498c45ff1c5837f5dcb0d4a80d0e3bb249abd694
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ac90726fd50f104d1b9251d4f9b097b721ea5e7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589223"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75701764"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>Açık Arabirim Uygulaması (C# Programlama Kılavuzu)
-Bir [sınıf](../../language-reference/keywords/class.md) , aynı imzaya sahip bir üye içeren iki arabirim uygularsa, bu üyeyi sınıfında uygulamak, her iki arabirimin de uygulama olarak bu üyeyi kullanmasına neden olur. Aşağıdaki örnekte, tüm çağrıları aynı yöntemi çağırmak için `Paint` çağırır.  
+Bir [sınıf](../../language-reference/keywords/class.md) , aynı imzaya sahip bir üye içeren iki arabirim uygularsa, bu üyeyi sınıfında uygulamak, her iki arabirimin de uygulama olarak bu üyeyi kullanmasına neden olur. Aşağıdaki örnekte, `Paint` için tüm çağrılar aynı yöntemi çağırır.  
   
  [!code-csharp[csProgGuideInheritance#39](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#39)]  
   
@@ -22,7 +21,7 @@ Bir [sınıf](../../language-reference/keywords/class.md) , aynı imzaya sahip b
   
  [!code-csharp[csProgGuideInheritance#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#40)]  
   
- Sınıf üyesi `IControl.Paint` yalnızca `IControl` arabirim aracılığıyla kullanılabilir ve `ISurface.Paint` yalnızca ile `ISurface`kullanılabilir. Her iki yöntem uygulaması ayrı değildir ve doğrudan sınıfta kullanılamaz. Örneğin:  
+ Sınıf üyesi `IControl.Paint` yalnızca `IControl` arabirimi aracılığıyla kullanılabilir ve `ISurface.Paint` yalnızca `ISurface`ile kullanılabilir. Her iki yöntem uygulaması ayrı değildir ve doğrudan sınıfta kullanılamaz. Örneğin:  
   
  [!code-csharp[csProgGuideInheritance#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#41)]  
   

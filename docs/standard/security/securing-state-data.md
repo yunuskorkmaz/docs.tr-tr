@@ -8,25 +8,23 @@ helpviewer_keywords:
 - secure coding, state data
 - state data security
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 85a12fb52efe32083d21b9aad50f2d9c1d6f0785
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c30bd2fe9e1ed371be2db60739d3b329fea788c7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602499"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705905"
 ---
 # <a name="securing-state-data"></a>Durum Verilerinin Güvenliğini Sağlama
-Hassas verileri işleyebilir veya herhangi bir türden güvenlik kararları olun uygulamalar bu verileri kendi denetimi altında tutmanız gerekir ve diğer kötü amaçlı olabilecek kod verilere doğrudan erişmek izin veremez. Verileri (kapsamla aynı derlemeye sınırlı) özel veya iç olarak bildirmek için bellekteki verileri korumak için en iyi yolu olan değişkenler. Ancak, bile bu veri bilincinde olmanız gereken erişim vardır:  
+Hassas verileri işleyen veya herhangi bir tür güvenlik kararı veren uygulamalar, bu verileri kendi denetimleri altında tutmanız gerekir ve diğer olası kötü amaçlı kodun verilere doğrudan erişmesine izin vermez. Bellekteki verileri korumanın en iyi yolu, verileri özel veya iç (aynı derleme ile sınırlı olan) değişkenleriyle bildirmenin en iyi yoludur. Bununla birlikte, bu veriler Access 'e bağlı olsa da şunları göz önünde bulundurun:  
   
-- Nesnenizin başvurabilirsiniz yüksek derecede güvenilen kod, yansıma mekanizmalarını kullanarak, alma ve özel üyeler ayarlayın.  
+- Yansıma mekanizmalarını kullanarak, nesnenizin başvurmasına başvuran, son derece güvenilen kod özel üyeleri alabilir ve ayarlayabilir.  
   
-- Serileştirme kullanarak yüksek derecede güvenilen kod etkili bir şekilde almak ve nesnesinin seri hala getirilmiş biçimini karşılık gelen verileri erişebiliyorsa özel üyeler ayarlayın.  
+- Serileştirme kullanımı, son derece güvenilen kod, nesnenin serileştirilmiş formundaki karşılık gelen verilere erişebiliyorsa, etkin bir şekilde özel Üyeler alabilir ve ayarlayabilir.  
   
-- Hata ayıklama altında bu verileri okunabilir.  
+- Hata ayıklama altında bu veriler okunabilir.  
   
- Kendi yöntemlerin hiçbiri emin olun veya özellikleri bu değerleri istemeden gösterir.  
+ Kendi yöntemlerinizin veya özelliklerinin hiçbirinin bu değerleri istemeden açığa çıkardığı emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

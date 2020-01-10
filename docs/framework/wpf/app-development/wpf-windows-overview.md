@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3bc31391d30b0724a480152aa7f1d0dc93380b8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740682"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636412"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows'a Genel Bakış
-Kullanıcılar Windows aracılığıyla Windows Presentation Foundation (WPF) tek başına uygulamalarıyla etkileşime geçer. Bir pencerenin birincil amacı, verileri görselleştirerek kullanıcıların verilerle etkileşime geçmesini sağlayan içeriği barındırmak için kullanılır. Tek başına [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar, <xref:System.Windows.Window> sınıfını kullanarak kendi pencerelerini sağlar. Bu konu, Windows 'un tek başına uygulamalarda oluşturulması ve yönetilmesi temellerini kapsamadan önce <xref:System.Windows.Window> tanıtır.  
+Kullanıcılar Windows aracılığıyla Windows Presentation Foundation (WPF) tek başına uygulamalarıyla etkileşime geçer. Bir pencerenin birincil amacı, verileri görselleştirerek kullanıcıların verilerle etkileşime geçmesini sağlayan içeriği barındırmak için kullanılır. Tek başına WPF uygulamaları, <xref:System.Windows.Window> sınıfını kullanarak kendi pencerelerini sağlar. Bu konu, Windows 'un tek başına uygulamalarda oluşturulması ve yönetilmesi temellerini kapsamadan önce <xref:System.Windows.Window> tanıtır.  
   
 > [!NOTE]
-> XAML tarayıcı uygulamaları (XBAP) ve gevşek [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sayfaları dahil olmak üzere tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar kendi pencerelerini sağlamamalıdır. Bunun yerine, Windows Internet Explorer tarafından sunulan Windows 'da barındırılır. Bkz. [WPF XAML tarayıcı uygulamalarına genel bakış](wpf-xaml-browser-applications-overview.md).  
+> XAML tarayıcı uygulamaları (XBAP) ve gevşek [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sayfaları dahil olmak üzere tarayıcıda barındırılan WPF uygulamaları kendi pencerelerini sağlamamalıdır. Bunun yerine, Windows Internet Explorer tarafından sunulan Windows 'da barındırılır. Bkz. [WPF XAML tarayıcı uygulamalarına genel bakış](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Pencere sınıfı  
@@ -49,7 +49,7 @@ Kullanıcılar Windows aracılığıyla Windows Presentation Foundation (WPF) te
   
  Bir pencere iki alana ayrılmıştır: istemci olmayan alan ve istemci alanı.  
   
- Bir pencerenin *istemci olmayan alanı* [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tarafından uygulanır ve aşağıdakiler dahil olmak üzere çoğu Windows için ortak olan bir pencerenin parçalarını içerir:  
+ Bir pencerenin *istemci olmayan alanı* WPF tarafından uygulanır ve aşağıdakiler dahil olmak üzere çoğu Windows için ortak olan bir pencerenin parçalarını içerir:  
   
 - Bir kenarlık.  
   
@@ -65,7 +65,7 @@ Kullanıcılar Windows aracılığıyla Windows Presentation Foundation (WPF) te
   
  Pencerenin *istemci alanı* , bir pencerenin istemci olmayan alanındaki alanıdır ve geliştiriciler tarafından menü çubukları, araç çubukları ve denetimler gibi uygulamaya özgü içerik eklemek için kullanılır.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], bir pencere, aşağıdakileri yapmak için kullandığınız <xref:System.Windows.Window> sınıfı tarafından kapsüllenir:  
+ WPF 'de, bir pencere, aşağıdakileri yapmak için kullandığınız <xref:System.Windows.Window> sınıfıyla kapsüllenir:  
   
 - Bir pencere görüntüleyin.  
   
@@ -77,7 +77,7 @@ Kullanıcılar Windows aracılığıyla Windows Presentation Foundation (WPF) te
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>Pencere uygulama  
- Tipik bir pencerenin uygulanması, görünümün ve davranışın yanı sıra, *görünümün* kullanıcılar tarafından kullanıcılara nasıl göründüğünü ve *davranışın* Kullanıcı tarafından etkileşim kurma şeklini tanımlar. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], kod veya [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işaretlemesini kullanarak bir pencerenin görünümünü ve davranışını uygulayabilirsiniz.  
+ Tipik bir pencerenin uygulanması, görünümün ve davranışın yanı sıra, *görünümün* kullanıcılar tarafından kullanıcılara nasıl göründüğünü ve *davranışın* Kullanıcı tarafından etkileşim kurma şeklini tanımlar. WPF 'de, kod veya [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işaretlemesini kullanarak bir pencerenin görünümünü ve davranışını uygulayabilirsiniz.  
   
  Ancak, genel olarak, bir pencerenin görünümü [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme kullanılarak uygulanır ve davranışı aşağıdaki örnekte gösterildiği gibi arka plan kodu kullanılarak uygulanır.  
   
@@ -90,7 +90,7 @@ Kullanıcılar Windows aracılığıyla Windows Presentation Foundation (WPF) te
   
 - Biçimlendirme ' de `Window` öğesi `x:Class` özniteliğini içermelidir. Uygulama oluşturulduğunda, biçimlendirme dosyasında `x:Class` varlığı, Microsoft Build Engine 'in (MSBuild) <xref:System.Windows.Window> türetilen ve `x:Class` özniteliği tarafından belirtilen ada sahip bir `partial` sınıfı oluşturmasına neden olur. Bu, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] şeması için bir XML ad alanı bildiriminin eklenmesini gerektirir (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). Oluşturulan `partial` sınıfı, olayları kaydetmek ve biçimlendirmede uygulanan özellikleri ayarlamak için çağrılan `InitializeComponent` yöntemini uygular.  
   
-- Arka plan kod içinde, sınıf, biçimlendirme içindeki `x:Class` özniteliğiyle belirtilen aynı ada sahip `partial` bir sınıf olmalıdır ve <xref:System.Windows.Window>türetmelidir. Bu, arka plan kod dosyasının, uygulama oluşturulduğunda biçimlendirme dosyası için oluşturulan `partial` sınıfıyla ilişkilendirilmesine izin verir (bkz. [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md)).  
+- Arka plan kod içinde, sınıf, biçimlendirme içindeki `x:Class` özniteliğiyle belirtilen aynı ada sahip `partial` bir sınıf olmalıdır ve <xref:System.Windows.Window>türetmelidir. Bu, arka plan kod dosyasının, uygulama oluşturulduğunda işaretleme dosyası için oluşturulan `partial` sınıfıyla ilişkilendirilmesine izin verir (bkz. [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md)).  
   
 - Arka plan kod içinde <xref:System.Windows.Window> sınıfı, `InitializeComponent` yöntemini çağıran bir Oluşturucu uygulamalıdır. `InitializeComponent`, olayları kaydetmek ve biçimlendirmede tanımlanan özellikleri ayarlamak için biçimlendirme dosyasının oluşturulan `partial` sınıfı tarafından uygulanır.  
   
@@ -124,7 +124,7 @@ Kullanıcılar Windows aracılığıyla Windows Presentation Foundation (WPF) te
 </Project>  
 ```  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar oluşturma hakkında daha fazla bilgi için bkz. [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md).  
+ WPF uygulamaları oluşturma hakkında daha fazla bilgi için bkz. [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md).  
   
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Pencere ömrü  
@@ -401,7 +401,7 @@ Kullanıcılar Windows aracılığıyla Windows Presentation Foundation (WPF) te
 
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>Yeniden boyutlandırma modu  
- <xref:System.Windows.Window.WindowStyle%2A> özelliğine bağlı olarak, kullanıcıların pencereyi yeniden boyutlandırıp nasıl (ve ne olduğunu) kontrol edebilirsiniz. Pencere stili seçimi, bir kullanıcının kenarlığını fareyle sürükleyerek, **simge durumuna küçültme**, **Ekranı Kapla**ve **yeniden boyutlandır** düğmelerinin istemci olmayan alanda görünüp görünmeyeceğini ve görünüp görünmeyeceğini belirler. etkinletir.  
+ <xref:System.Windows.Window.WindowStyle%2A> özelliğine bağlı olarak, kullanıcıların pencereyi yeniden boyutlandırıp nasıl (ve ne olduğunu) kontrol edebilirsiniz. Pencere stili seçimi, bir kullanıcının kenarlığını fareyle sürükleyerek, **simge durumuna küçültme**, **Ekranı Kapla**ve **yeniden boyutlandır** düğmelerinin istemci olmayan alanda görünüp görünmediğini ve etkin olup olmadıkları gösterilmediğini etkiler.  
   
  <xref:System.Windows.Window.ResizeMode%2A> özelliğini ayarlayarak pencerenin nasıl yeniden boyutlandırılacağını yapılandırabilirsiniz. Bu, aşağıdaki <xref:System.Windows.ResizeMode> sabit listesi değerlerinden biri olabilir:  
   
@@ -466,7 +466,7 @@ Pencerenin varsayılan görünümü, aşağıdaki şekilde gösterildiği gibi b
  [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
   
 <a name="SecurityConsiderations"></a>   
-## <a name="security-considerations"></a>Güvenlik Değerlendirmeleri  
+## <a name="security-considerations"></a>Güvenlik Konuları  
  <xref:System.Windows.Window> `UnmanagedCode` güvenlik izninin örneğinin oluşturulmasını gerektirir. Üzerinde yüklü olan ve yerel makineden başlatılan uygulamalar için, bu, uygulamaya verilen izinler kümesi içinde yer alır.  
   
  Bununla birlikte, bu, ClickOnce kullanılarak Internet 'ten veya yerel intranet bölgesinden başlatılan uygulamalara verilen izin kümesinin dışındadır. Sonuç olarak, kullanıcılar bir ClickOnce güvenlik uyarısı alır ve uygulamanın izin kümesini tam güvenle yükseltmek gerekecektir.  

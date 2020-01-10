@@ -3,23 +3,21 @@ title: DOM’dan Düğümleri Kaldırma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 0a98e0ca-0555-45c1-ab69-0d8d20ca1abd
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: be592466627e6ee7b23c608e0defe786548907ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a34b92abc59215c3cb2b94afd88e2e30405b4e9a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698674"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710316"
 ---
 # <a name="removing-nodes-from-the-dom"></a>DOM’dan Düğümleri Kaldırma
-XML belge nesne modeli (DOM) öğesinden bir düğümü kaldırmak için <xref:System.Xml.XmlNode.RemoveChild%2A> belirli bir düğümü kaldırmak için yöntemi. Yöntemi, bir düğümü kaldırdığınızda, kaldırılmakta olan düğüme ait alt ağacı kaldırır; diğer bir deyişle, bir yaprak düğüm değilse.  
+XML Belge Nesne Modeli (DOM) bir düğümü kaldırmak için, belirli bir düğümü kaldırmak için <xref:System.Xml.XmlNode.RemoveChild%2A> metodunu kullanın. Bir düğümü kaldırdığınızda, yöntemi kaldırılan düğüme ait olan alt ağacı kaldırır; diğer bir deyişle, bir yaprak düğüm değildir.  
   
- DOM'dan birden fazla düğüm kaldırmak için <xref:System.Xml.XmlNode.RemoveAll%2A> geçerli düğümünün (varsa), tüm alt öğeleri ve öznitelikleri kaldırmak için yöntemi.  
+ DOM 'dan birden fazla düğümü kaldırmak için, geçerli düğümün varsa tüm alt ve özniteliklerini kaldırmak üzere <xref:System.Xml.XmlNode.RemoveAll%2A> yöntemini kullanın.  
   
- İle çalışıyorsanız bir <xref:System.Xml.XmlNamedNodeMap>, kullanarak bir düğümü kaldırmak <xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A> yöntemi.  
+ Bir <xref:System.Xml.XmlNamedNodeMap>çalışıyorsanız, <xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A> yöntemini kullanarak bir düğümü kaldırabilirsiniz.  
   
- Öznitelikleri kaldırmak için bkz: [DOM'da bir öğe düğümünden öznitelikleri kaldırma](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
+ Öznitelikleri kaldırmak için bkz. [Dom 'daki bir öğe düğümünden öznitelikleri kaldırma](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

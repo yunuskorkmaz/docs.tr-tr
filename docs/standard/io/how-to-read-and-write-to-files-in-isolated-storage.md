@@ -16,20 +16,18 @@ helpviewer_keywords:
 - data stores, reading and writing to files
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 59a89aa354941b7ff22a125a980c2d9c75ac37ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1ea65b0b8280faf51595b2fe9edcbf17eaabd8f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947206"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706692"
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma
-Okuma veya yazma için bir yalıtılmış depodaki bir dosya kullanın bir <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> bir akış okuyucusunu nesnesiyle (<xref:System.IO.StreamReader> nesne) veya akış yazıcı (<xref:System.IO.StreamWriter> nesne).  
+Yalıtılmış bir depodaki bir dosyayı okumak veya dosyaya yazmak için, bir <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> nesnesini Stream Reader (<xref:System.IO.StreamReader> nesnesi) veya Stream Writer (<xref:System.IO.StreamWriter> nesnesi) ile kullanın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bir yalıtılmış depolama alır ve TestStore.txt adlı bir dosya deposunda mevcut olup olmadığını denetler. Yoksa, dosyayı oluşturur ve "Merhaba yalıtılmış depolama" yazar. TestStore.txt zaten varsa, örnek kod dosyasından okur.  
+ Aşağıdaki kod örneği yalıtılmış bir depo edinir ve mağaza 'da TestStore. txt adlı bir dosyanın var olup olmadığını denetler. Yoksa, dosyayı oluşturur ve dosyaya "Hello yalıtılmış depolama" yazar. TestStore. txt zaten varsa, örnek kod dosyadan okur.  
   
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]
  [!code-vb[Conceptual.IsolatedStorage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source5.vb#5)]  

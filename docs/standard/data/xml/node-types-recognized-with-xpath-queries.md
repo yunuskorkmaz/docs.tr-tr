@@ -3,20 +3,18 @@ title: XPath Sorguları ile Tanınan Düğüm Türleri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aa004f0def04c7efe2ba7450050a899760b0bbcd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc1aa668ccf6fc7f210f48a28cf76b364459c784
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590199"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710550"
 ---
 # <a name="node-types-recognized-with-xpath-queries"></a>XPath Sorguları ile Tanınan Düğüm Türleri
-Bir XPath sorgusu tanınan düğüm türlerini belge nesne modeli (DOM) bulunan aynı düğüm türü değildir.  
+Bir XPath sorgusunda tanınan düğümlerin türleri Belge Nesne Modeli (DOM) içinde bulunan aynı düğüm türleri değildir.  
   
 ## <a name="w3c-xpath-node-types"></a>W3C XPath düğüm türleri  
- Bir XPath sorgusu tanınan düğüm türlerini belge nesne modeli (DOM) bulunan düğüm türlerini değildir. Tarafından temsil edilen XPath düğüm türleri verilmiştir <xref:System.Xml.XPath.XPathNodeType> sabit listesi.  
+ Bir XPath sorgusunda tanınan düğümlerin türleri Belge Nesne Modeli (DOM) içinde bulunan düğümlerin türleri değildir. <xref:System.Xml.XPath.XPathNodeType> numaralandırması tarafından temsil edilen XPath düğüm türleri aşağıda verilmiştir.  
   
 - <xref:System.Xml.XPath.XPathNodeType.All>  
   
@@ -38,13 +36,13 @@ Bir XPath sorgusu tanınan düğüm türlerini belge nesne modeli (DOM) bulunan 
   
 - <xref:System.Xml.XPath.XPathNodeType.Whitespace>  
   
- Bu düğüm türleri burada düğümleri XML bilgi kümesi'den türetilen XPath veri modelini temel alır. <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> Ve <xref:System.Xml.XPath.XPathNodeType.Whitespace> düğüm türleri, Microsoft .NET Framework uzantılarını XPath veri modelinde tanımlanan temel düğüm türleri aşağıdadır.  
+ Bu düğüm türleri, düğümlerin XML bilgi kümesinden türetildiği XPath veri modelini temel alır. <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> ve <xref:System.Xml.XPath.XPathNodeType.Whitespace> düğüm türleri, Microsoft .NET Framework uzantılarıdır ve XPath veri modelinde açıklanan temel düğüm türlerine sahiptir.  
   
- DOM'da olandan öznitelik düğümü türü farklı XPath veri modelinde kullanılan XPath veri modeli, öğe düğümü ilgili öznitelik düğümleri kümesi vardır ve her öznitelik düğümünün üst öğesi düğümüdür. Ancak, DOM, sahibi ve üst öğe düğümü olur. Her iki modelleri, öznitelik ve ad alanı düğümleri öğe düğümünün alt düğümleri dikkate alınmaz.  
+ Öznitelik düğümü türü, XPath veri modelinde DOM 'da olduğundan farklı bir şekilde kullanılır. XPath veri modelinde, öğe düğümü kendisiyle ilişkili bir öznitelik düğümleri kümesine sahiptir ve öğe düğümü her öznitelik düğümünün üst öğesidir. Bununla birlikte, DOM 'da, öğe düğümü üst öğesi değil, sahip olur. Her iki modelde da öznitelik ve ad alanı düğümleri, öğe düğümünün alt düğümleri olarak değerlendirilmez.  
   
- Ad alanı düğüm türü, XPath veri modelini ekidir ve tanınan bir DOM düğümünü türü değil.  
+ Ad alanı düğüm türü, XPath veri modeline bir ektir ve tanınan bir DOM düğüm türü değildir.  
   
- Öğe, öznitelik ve ad alanı düğümleri gezinme hakkında daha fazla bilgi için bkz. [kullanarak düğüm kümesi Gezinti XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) ve [özniteliği ve Namespace düğüm Gezinti XPathNavigator kullanarak](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md) konuları.  
+ Öğe, öznitelik ve ad alanı düğümlerine gitme hakkında daha fazla bilgi için bkz. XPathNavigator ve [Attribute ve ad alanı düğüm gezintisi](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md) kullanarak XPathNavigator konuları kullanılarak [gezinme](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

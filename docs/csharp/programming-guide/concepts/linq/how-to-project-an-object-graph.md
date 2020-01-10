@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Nesne grafiğini (C#) proje'
+title: Bir nesne grafiğini (C#) proje
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: b00e350dd5bf00a5939547b3ed1651b2a6645197
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 93fabe26fd3d9ff0b61d8b8dfc33425715452c88
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253490"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635697"
 ---
-# <a name="how-to-project-an-object-graph-c"></a>Nasıl yapılır: Nesne grafiğini (C#) proje
+# <a name="how-to-project-an-object-graph-c"></a>Bir nesne grafiğini (C#) proje
 Bu konu, XML 'deki bir nesne grafiğinin nasıl proje veya doldurma yapılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, bir `Address`nesne grafiğini [örnek XML dosyasındaki, `PurchaseOrder`, ve `PurchaseOrderItem` sınıflarıyla doldurur: Tipik satın alma siparişi (LINQ to XML](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) ) XML belgesi.  
+ Aşağıdaki kod, bir nesne grafiğini örnek XML dosyasındaki `Address`, `PurchaseOrder`ve `PurchaseOrderItem` sınıflarıyla doldurur [: tipik satın alma siparişi (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML belgesi.  
   
 ```csharp  
 class Address  
@@ -214,7 +214,7 @@ class Program {
 }  
 ```  
   
- Bu örnekte, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgunun sonucu ' a döndürülür <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`. `PurchaseOrder` Sınıfındaki <xref:System.Collections.Generic.IEnumerable%601> öğeler`PurchaseOrderItem`türündedir. Kod, sorgu sonuçlarından <xref:System.Linq.Enumerable.ToList%2A> bir <xref:System.Collections.Generic.List%601> koleksiyon oluşturmak için genişletme yöntemini kullanır.  
+ Bu örnekte, LINQ sorgusunun sonucu `PurchaseOrderItem`<xref:System.Collections.Generic.IEnumerable%601> olarak döndürülür. `PurchaseOrder` sınıfındaki öğeler `PurchaseOrderItem`<xref:System.Collections.Generic.IEnumerable%601> türüdür. Kod, sorgu sonuçlarından bir <xref:System.Collections.Generic.List%601> koleksiyonu oluşturmak için <xref:System.Linq.Enumerable.ToList%2A> uzantısı yöntemini kullanır.  
   
  Örnek aşağıdaki çıktıyı üretir:  
   

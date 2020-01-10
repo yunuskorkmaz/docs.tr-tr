@@ -3,25 +3,23 @@ title: msxsl:node-set() İşlevi Desteği
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3670803ff20351fd9ff6892a0cef48b9caa70199
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9603f6c910e8e29309618c8e01e283c28ae2bff
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939519"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710134"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>msxsl:node-set() İşlevi Desteği
-İşlevi `msxsl:node-set` , bir sonuç ağacı parçasını bir düğüm kümesine dönüştürmenize olanak sağlar. Sonuçta elde edilen düğüm kümesi her zaman tek bir düğüm içerir ve ağacın kök düğümüdür.  
+`msxsl:node-set` işlevi, bir sonuç ağacı parçasını bir düğüm kümesine dönüştürmenize olanak sağlar. Sonuçta elde edilen düğüm kümesi her zaman tek bir düğüm içerir ve ağacın kök düğümüdür.  
   
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> Sınıf .NET Framework 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfını kullanarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
+> <xref:System.Xml.Xsl.XslTransform> sınıfı, .NET Framework 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> sınıfını kullanarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- İşlevi `msxsl:node-set` , bir sonuç ağacı parçasını bir düğüm kümesine dönüştürmenize olanak sağlar. Sonuçta elde edilen düğüm kümesi her zaman tek bir düğüm içerir ve ağacın kök düğümüdür.  
+ `msxsl:node-set` işlevi, bir sonuç ağacı parçasını bir düğüm kümesine dönüştürmenize olanak sağlar. Sonuçta elde edilen düğüm kümesi her zaman tek bir düğüm içerir ve ağacın kök düğümüdür.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, `$var` stil sayfasındaki düğüm ağacı olan bir değişkendir. `node-set` İşleviyle birlikte bulunan for-each deyimleri, kullanıcının bu düğüm ağacı üzerinde bir düğüm kümesi olarak yinemasına olanak tanır.  
+ Aşağıdaki örnekte, `$var` stil sayfasındaki düğüm ağacı olan bir değişkendir. `node-set` işleviyle birlikte bulunan for-each deyimleri, kullanıcının bu düğüm ağacını bir düğüm kümesi olarak yineetmesine olanak tanır.  
   
 ## <a name="nodesetxsl"></a>nodeset. Xsl  
   

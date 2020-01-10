@@ -9,13 +9,12 @@ helpviewer_keywords:
 - overloaded members
 - signatures, members
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
-author: KrzysztofCwalina
-ms.openlocfilehash: 4caa0ae78d168b23fd2862153bef0e3960d3ea42
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: e7decab042dd1ee36beacb18956e175196cd112c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392950"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709289"
 ---
 # <a name="member-overloading"></a>Üye Aşırı Yüklemesi
 Üye aşırı yüklemesi, aynı türde yalnızca parametre sayısı veya türünde farklı ancak aynı ada sahip iki veya daha fazla üye oluşturma anlamına gelir. Örneğin, aşağıdaki `WriteLine` yöntemi aşırı yüklenmiştir:  

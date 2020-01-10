@@ -12,20 +12,19 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.custom: seodec18
-ms.openlocfilehash: e41c333dc088c8f712866cb7a130c4f8e1c9722f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 905578d763ebe5d5b8eb96a9056fbe11fbfab137
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140526"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711538"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Normal İfadelerdeki Yeniden Başvuru Yapıları
 
 Geri başvurular, bir dize içinde yinelenen bir karakter veya alt dizenin tanımlanması için kullanışlı bir yol sağlar. Örneğin, giriş dizesi rastgele bir alt dizenin birden çok oluşumunu içeriyorsa, ilk oluşumu bir yakalama grubuyla eşleştirebilir ve sonra alt dizenin sonraki tekrarlamalarını eşleştirmek için bir geri başvuru kullanabilirsiniz.
 
 > [!NOTE]
-> Değiştirme dizelerindeki adlandırılmış ve Numaralandırılmış yakalama gruplarına başvurmak için ayrı bir sözdizimi kullanılır. Daha fazla bilgi için bkz. [alternatifler](substitutions-in-regular-expressions.md).
+> Değiştirme dizelerindeki adlandırılmış ve Numaralandırılmış yakalama gruplarına başvurmak için ayrı bir sözdizimi kullanılır. Daha fazla bilgi için bkz. [Değişimler](substitutions-in-regular-expressions.md).
 
 .NET, numaralandırılmış ve adlandırılmış yakalama gruplarına başvuracak ayrı dil öğelerini tanımlar. Grupları yakalama hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
@@ -35,7 +34,7 @@ Numaralandırılmış geri başvuru, aşağıdaki sözdizimini kullanır:
 
 `\` *numarası*
 
-Burada *sayı* , normal ifadede yakalama grubunun sıralı konumudur. Örneğin, `\4` dördüncü yakalama grubunun içeriğiyle eşleşir. *Sayı* normal ifade modelinde tanımlanmamışsa, bir ayrıştırma hatası oluşur ve normal ifade altyapısı bir <xref:System.ArgumentException>oluşturur. Örneğin, `\b(\w+)\s\1` normal ifade geçerlidir çünkü `(\w+)` ifadede ilk ve tek yakalama grubudur. Diğer taraftan `\b(\w+)\s\2` geçersizdir ve bir bağımsız değişken özel durumu oluşturur, çünkü `\2`numaralandırılmış bir yakalama grubu yoktur. Ayrıca, *sayı* belirli bir sıra konumunda bir yakalama grubu tanımlarsa, ancak bu yakalama grubuna sıra konumundan farklı bir sayısal ad atanmışsa, normal ifade ayrıştırıcısı da bir <xref:System.ArgumentException>oluşturur.
+Burada *sayı* , normal ifadede yakalama grubunun sıralı konumudur. Örneğin, `\4` dördüncü yakalama grubunun içeriğiyle eşleşir. *Sayı* normal ifade modelinde tanımlanmamışsa, bir ayrıştırma hatası oluşur ve normal ifade altyapısı bir <xref:System.ArgumentException>oluşturur. Örneğin, `\b(\w+)\s\1` normal ifade geçerlidir çünkü `(\w+)` ifadede ilk ve tek yakalama grubudur. Diğer taraftan `\b(\w+)\s\2` geçersizdir ve bir bağımsız değişken özel durumu oluşturur, çünkü `\2`numaralandırılmış bir yakalama grubu yoktur. Ayrıca, varsa *numarası* sıralı belirli bir konumda bir yakalama grubunu tanımlar, yakalama grubu sayısal verildiğine göre ancak sıra konumuna farklı bir ad, normal ifade ayrıştırıcısı bir deoluşturur<xref:System.ArgumentException>.
 
 Aynı gösterimi kullanan sekizlik kaçış kodları (`\16`gibi) ve `\`*sayı* geribaşvuruları arasındaki belirsizlik olduğunu unutmayın. Bu belirsizlik aşağıdaki şekilde çözümlenir:
 

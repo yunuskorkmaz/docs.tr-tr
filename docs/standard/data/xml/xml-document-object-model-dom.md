@@ -3,18 +3,16 @@ title: XML Belge Nesne Modeli (DOM)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 160d056491ca71f6de039e8cac7302a61504fcd5
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 4faa481a6331863112b7dba65bdbccb69cd12b7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662478"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709965"
 ---
 # <a name="xml-document-object-model-dom"></a>XML Belge Nesne Modeli (DOM)
 
-XML belge nesne modeli (DOM) sınıfı, bir XML belgesi bir bellek içi gösterimidir. DOM programlı olarak okuma, işleme ve XML belgesi değiştirmenize olanak sağlar. **XmlReader** sınıfı ayrıca XML okur; ancak, önbelleğe alınmamış yalnızca iletme, salt okunur erişim sağlar. Bu özniteliğin değerini veya bir öğeyi veya özelliği ekleyin ve düğümleri kaldırma içeriği düzenlemek için hiçbir özellikleri olduğu anlamına gelir **XmlReader**. DOM sunucunun birincil işlevi olduğu düzenleme Gerçek XML verilerini bir dosya veya başka bir nesneden gelen doğrusal bir biçimde depolanır ancak ortak ve yapılandırılmış biçimde XML verilerini bellek içinde temsil edilen adıdır. XML veri verilmiştir.
+XML Belge Nesne Modeli (DOM) sınıfı, bir XML belgesinin bellek içi gösterimidir. DOM bir XML belgesini programlı bir şekilde okumanıza, değiştirmenize ve değiştirmenize olanak sağlar. **XmlReader** sınıfı XML 'yi de okur; Ancak, önbelleğe alınmamış, salt iletme, salt okunurdur erişimi sağlar. Bu, bir özniteliğin veya bir öğenin içeriğinin veya **XmlReader**ile düğüm ekleme ve kaldırma yeteneğinin değerlerini düzenleme özelliği olmadığı anlamına gelir. Düzenlemeler, DOM 'ın birincil işlevidir. XML verilerinin bellekte temsil edildiği yaygın ve yapılandırılmış bir yoldur, ancak gerçek XML verileri bir dosya içinde veya başka bir nesneden geldiği sırada doğrusal bir biçimde depolanır. XML verileri aşağıda verilmiştir.
 
 ## <a name="input"></a>Giriş
 
@@ -33,24 +31,24 @@ XML belge nesne modeli (DOM) sınıfı, bir XML belgesi bir bellek içi gösteri
   </books>
 ```
 
-Aşağıdaki çizim, DOM yapısına bu XML verileri okunurken, bellek nasıl yapılandırıldığını gösterir.
+Aşağıdaki çizim, bu XML verileri DOM yapısına okurken belleğin nasıl yapılandırıldığını gösterir.
 
 ![XML belge yapısı](../../../../docs/standard/data/xml/media/xml-to-domtree.gif "XML_To_DOMTree") XML belge yapısı
 
-XML belge yapısı içinde bu çizimde gösterilen her bir daire olarak adlandırılan bir düğümü temsil eder. bir **XmlNode** nesne. **XmlNode** nesnesi DOM ağacında temel nesnedir. **XmlDocument** sınıfını **XmlNode**, (örneğin, belleğe yüklenirken veya XML dosya kaydediliyor. bir bütün olarak belge işlemlerini gerçekleştirmek için yöntemleri destekler. Ayrıca, **XmlDocument** görüntüleme ve tüm XML belgesindeki düğüm işlemek için bir yol sağlar. Her ikisi de **XmlNode** ve **XmlDocument** performans ve kullanılabilirlik geliştirmeleri mevcut olabilir ve yöntemleri ve özelliklerine sahiptir:
+XML belge yapısında, bu çizimdeki her bir daire, **XMLNode** nesnesi olarak adlandırılan bir düğümü temsil eder. **XMLNode** NESNESI, Dom ağacındaki temel nesnedir. **XMLNode**'Yi genişleten **XmlDocument** sınıfı, belgede bir bütün olarak işlem gerçekleştirmeye yönelik yöntemleri destekler (örneğin, belleğe yükleme veya XML bir dosyaya kaydetme). Ayrıca, **XmlDocument** tüm XML belgesindeki düğümleri görüntülemek ve işlemek için bir yol sağlar. Hem **XMLNode** hem de **XmlDocument** performans ve Kullanılabilirlik geliştirmeleri içerir ve şunları yapmak için yöntemlere ve özelliklere sahiptir:
 
-- Erişim ve öğe düğümlerinin varlık başvurusu düğümleri ve benzeri gibi DOM için belirli düğümler değiştirin.
+- Öğe düğümleri, varlık başvuru düğümleri vb. gibi DOM 'a özgü düğümlere erişin ve değiştirin.
 
-- Gibi bir öğe düğümü metin düğümü içeren bilgilerine ek olarak tüm düğümleri alın.
+- Bir öğe düğümündeki metin gibi, düğümün içerdiği bilgilere ek olarak tüm düğümleri alın.
 
   > [!NOTE]
-  > Bir uygulama yapısı veya düzenleme DOM tarafından sağlanan özellikleri gerektirmiyorsa **XmlReader** ve **XmlWriter** sınıfları için XML önbelleğe alınmamış, yalnızca iletme akış erişim sağlar. Daha fazla bilgi için bkz. <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter>.
+  > Bir uygulama, DOM tarafından sağlanmış yapı veya Düzenle özelliklerine ihtiyaç sağlamazsa, **XmlReader** ve **XmlWriter** sınıfları önbelleğe alınmamış, salt iletme akışı xml 'e erişim sağlar. Daha fazla bilgi için bkz. <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter>.
 
-**Düğüm** nesnelerin yöntemleri ve özellikleri yanı sıra, temel ve iyi tanımlanmış özellikler kümesi vardır. Bu özelliklere bazıları şunlardır:
+**Düğüm** nesnelerinin bir dizi yöntem ve özellik yanı sıra temel ve iyi tanımlanmış özellikler vardır. Bu özelliklerden bazıları şunlardır:
 
-- Düğümlerin tek üst düğümü, bir düğümü hemen üstüne olan üst düğümü vardır. Bir üst öğeye sahip olmayan tek düğümlerin, üst düzey düğüm ve belge parçalarını ve belgenin kendisini içeren belge kökü olur.
+- Düğümlerin tek bir üst düğümü vardır, üst düğüm, doğrudan üzerlerine düğüm. Üst düzey düğüm olduğu ve belgenin kendisini ve belge parçalarını içeren tek bir üst öğe olmayan tek düğümler belge köküdür.
 
-- Çoğu düğümleri hemen altındaki düğümleri olan birden çok alt düğümleri olabilir. Alt düğümleri içeren düğüm türlerinin bir listesi verilmiştir.
+- Çoğu düğüm, doğrudan düğümlerin altındaki düğümler olan birden çok alt düğüme sahip olabilir. Aşağıda alt düğümlere sahip olan düğüm türlerinin bir listesi verilmiştir.
 
   - **Belge**
 
@@ -62,19 +60,19 @@ XML belge yapısı içinde bu çizimde gösterilen her bir daire olarak adlandı
 
   - **Öznitelik**
 
-  **XmlDeclaration**, **gösterimi**, **varlık**, **CDATASection**, **metin**,  **Yorum**, **instruction**, ve **DocumentType** düğümlerinin alt düğümleri sahip değil.
+  **XmlDeclaration**, **Gösterim**, **varlık**, **CDataSection**, **metin**, **Açıklama**, **processinginstruction**ve **DocumentType** düğümlerinin alt düğümleri yoktur.
 
-- Aynı düzeyde diyagram tarafından temsil edilen düğümlerden **kitap** ve **PubInfo** düğümlerdir, eşdüzey öğesi.
+- **Kitap** ve **PubInfo** düğümleri tarafından diyagramda temsil edilen aynı düzeydeki düğümler eşdüzey düzeydir.
 
-Bir DOM öznitelikleri nasıl işler özelliğidir. Öznitelik, üst, alt ve eşdüzey ilişkileri parçası olan düğümleri değildir. Öznitelikleri bir öğe düğümü özelliği olarak kabul edilir ve bir ad ve değer çifti oluşur. Örneğin, XML veri oluşan varsa `format="dollar`"öğeyle ilişkili `price`, word `format` adını ve değerini `format` özniteliği `dollar`. Alınacak `format="dollar"` özniteliği **fiyat** düğümünü çağırmanızı **GetAttribute** imleç konumu olduğunda yöntemi `price` öğe düğümü. Daha fazla bilgi için [DOM özniteliklerine erişim](../../../../docs/standard/data/xml/accessing-attributes-in-the-dom.md).
+DOM 'ın bir özelliği öznitelikleri nasıl işler. Öznitelikler üst, alt ve eşdüzey ilişkilerin parçası olan düğümler değildir. Öznitelikler, öğe düğümünün bir özelliği olarak değerlendirilir ve bir ad ve değer çiftinden oluşur. Örneğin, öğe `price`ilişkili `format="dollar`"içeren XML verileriniz varsa, `format` sözcüğü addır ve `format` özniteliğinin değeri `dollar`olur. **Fiyat** düğümünün `format="dollar"` özniteliğini almak için, imleç `price` öğesi düğümünde bulunduğu zaman **GetAttribute** yöntemini çağırın. Daha fazla bilgi için bkz. [Dom Içindeki özniteliklere erişme](../../../../docs/standard/data/xml/accessing-attributes-in-the-dom.md).
 
-XML belleğe okurken düğümler oluşturulur. Ancak, tüm düğümler aynı türdedir. Bir öğenin farklı kuralları ve bir işlem yönergesi sözdizimi vardır. Bu nedenle, çeşitli veri okuma gibi bir düğüm türü için her düğüme atanır. Bu düğüm türü özellikleri ve işlevleri düğümünün belirler.
+XML belleğe okunduğu için düğümler oluşturulur. Ancak, tüm düğümler aynı türde değildir. XML içindeki bir öğe, işleme yönergesinden farklı kurallara ve sözdizimine sahiptir. Bu nedenle, çeşitli veriler okunabileceği için her düğüme bir düğüm türü atanır. Bu düğüm türü, düğümün özelliklerini ve işlevlerini belirler.
 
-Bellekte oluşturulan düğüm türleri hakkında daha fazla bilgi için bkz. [XML düğüm türleri](../../../../docs/standard/data/xml/types-of-xml-nodes.md). Düğüm ağaçta oluşturulan nesneleri hakkında daha fazla bilgi için bkz. [XML verilerine nesne hiyerarşisi eşleme](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).
+Bellekte oluşturulan düğümlerin türleri hakkında daha fazla bilgi için bkz. [XML düğümlerinin türleri](../../../../docs/standard/data/xml/types-of-xml-nodes.md). Düğüm ağacında oluşturulan nesneler hakkında daha fazla bilgi için, bkz. [nesne HIYERARŞISINI XML verileriyle eşleme](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).
 
-Microsoft, World Wide Web Consortium (W3C) DOM düzey 1 ve 2. düzey bir XML belgesi ile çalışmak daha kolay hale getirmek için kullanılabilen API'lerin genişletti. W3C standartları tam olarak desteklerken, ek sınıfları, yöntemleri ve özellikleri ekleme işlevselliği ne yapılabilir ötesine W3C XML DOM kullanma Yeni sınıflar eşzamanlı olarak XML verileri gösterme, ADO.NET veri ile eşitlemek için yöntem vererek ilişkisel verilere erişmek etkinleştirin. Daha fazla bilgi için [bir DataSet'i bir XmlDataDocument ile eşitleme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).
+Microsoft, bir XML belgesiyle çalışmayı kolaylaştırmak için World Wide Web Konsorsiyumu (W3C) DOM düzey 1 ve düzey 2 ' de bulunan API 'Leri genişletmiştir. W3C standartları tam olarak desteklenirken ek sınıflar, Yöntemler ve özellikler, W3C XML DOM kullanılarak yapılabilecekleri daha fazla işlevsellik ekler. Yeni sınıflar, ADO.NET verileriyle eşitleme yöntemleri sunarak, verileri aynı anda XML olarak açığa çıkaran, ilişkisel verilere erişmenizi sağlar. Daha fazla bilgi için bkz. [bir veri kümesini XmlDataDocument Ile eşitleme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).
 
-DOM belleğe yapısını değiştirmek, ekleme veya düğümleri kaldırma veya bir öğe tarafından içerilen metin olduğu gibi bir düğüm tarafından tutulan verileri değiştirmek için XML verileri okumak için kullanışlıdır. Ancak, diğer sınıfların kullanılabilir olan diğer senaryolarda DOM hızlıdır. XML için hızlı, önbelleğe alınmamış, yalnızca iletme akış erişimi için kullandığınız **XmlReader** ve **XmlWriter**. Bir imleç modeliyle rastgele erişmeniz gerekiyorsa ve **XPath**, kullanın **XPathNavigator** sınıfı.
+DOM, yapısını değiştirmek, düğüm eklemek veya kaldırmak ya da bir düğüm tarafından tutulan verileri bir öğe tarafından kapsanan metinde değiştirmek için, XML verilerini belleğe okumak için yararlıdır. Ancak diğer bazı sınıflar, diğer senaryolarda DOM 'dan daha hızlı bir şekilde kullanılabilir. XML 'e yönelik hızlı, önbelleğe alınmamış, salt ileri akış erişimi için **XmlReader** ve **XmlWriter**kullanın. İmleç modeli ve **XPath**ile rastgele erişime ihtiyacınız varsa, **XPathNavigator** sınıfını kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

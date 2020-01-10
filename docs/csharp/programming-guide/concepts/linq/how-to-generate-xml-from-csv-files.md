@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: CSV dosyalarından XML oluşturma (C#)'
+title: CSV dosyalarından XML oluşturma (C#)
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-ms.openlocfilehash: bcae061bd5899f4ae5cbb89f8e05079bc9222312
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486775"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635814"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a>Nasıl yapılır: CSV dosyalarından XML oluşturma (C#)
-Bu örnek nasıl kullanılacağını gösterir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir virgülle ayrılmış değer (CSV) dosyasından bir XML dosyası oluşturmak için.  
+# <a name="how-to-generate-xml-from-csv-files-c"></a>CSV dosyalarından XML oluşturma (C#)
+Bu örnek, bir virgülle ayrılmış değer (CSV) dosyasından bir XML dosyası oluşturmak için dil ile tümleşik sorgu (LINQ) ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kullanmayı gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod gerçekleştiren bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dizelerden oluşan bir dizi üzerindeki sorgu.  
+ Aşağıdaki kod, bir dize dizisi üzerinde bir LINQ sorgusu gerçekleştirir.  
   
- Sorgu kullanan `let` her dize alanları bir diziye bölmek için yan tümcesi.  
+ Sorgu, her dizeyi bir alan dizisine bölmek için `let` yan tümcesini kullanır.  
   
 ```csharp  
 // Create the text file.  

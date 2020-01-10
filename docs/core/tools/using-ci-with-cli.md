@@ -1,15 +1,14 @@
 ---
-title: Sürekli tümleştirme (CI) içinde .NET Core SDK ve araçları kullanma
-description: Yapı sunucusunda .NET Core SDK ve araçlarının kullanımıyla ilgili bilgiler.
+title: .NET Core SDK ve araçlarla sürekli tümleştirme (CI)
+description: .NET Core SDK ve araçlarını sürekli tümleştirme ile yapı sunucusunda nasıl kullanacağınızı öğrenin.
 author: mairaw
 ms.date: 05/18/2017
-ms.custom: seodec18
-ms.openlocfilehash: 481d54904192ee82da1f9d34bbf62fa8ffe1cd3b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 65d062fce2f364932ebf8091bd9c6cdef561b633
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428601"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714115"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Sürekli tümleştirme (CI) içinde .NET Core SDK ve araçları kullanma
 
@@ -142,7 +141,7 @@ install:
   # See appveyor.yml example for install script
 ```
 
-### <a name="azure-devops-services"></a>Azure DevOps Hizmetleri
+### <a name="azure-devops-services"></a>Azure DevOps Services
 
 Aşağıdaki yaklaşımlardan birini kullanarak .NET Core projeleri oluşturmak için Azure DevOps Services yapılandırın:
 

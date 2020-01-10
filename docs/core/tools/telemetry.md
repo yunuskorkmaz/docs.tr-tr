@@ -3,13 +3,12 @@ title: .NET Core SDK telemetri
 description: Analiz için kullanım bilgilerini toplayan, hangi verilerin toplandığı ve devre dışı bırakılacağı .NET Core SDK telemetri özelliklerini bulun.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.custom: seodec18
-ms.openlocfilehash: ecb8dbed036a04726867d004dbadf6205c1fa09f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8bde344ee393e113502a0895ee55c241cbf24c57
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281768"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714109"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK telemetri
 
@@ -55,7 +54,7 @@ Gizliliğinizi korumak bizim için önemlidir. Telemetrinin hassas verileri topl
 
 Telemetri özelliği aşağıdaki verileri toplar:
 
-| SDK sürümleri | Veriler |
+| SDK sürümleri | Veri |
 |--------------|------|
 | Tümü          | Çağırma zaman damgası. |
 | Tümü          | Komut çağrıldı (örneğin, "Build"), 2,1 'den başlayarak karma hale getirilmiş. |

@@ -6,27 +6,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4e4847dd6bc05127799cb6d8424a8fdb63fbc0f7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 72e866e43b556d8534024a219d924b1f372ed073
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590070"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710524"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Dizine Göre Sıralı Düğüm Alma
-World Wide Web Consortium (W3C) XML belge nesne modeli (DOM) tarafından işlenen sıralanmamış aksine düğümleri sıralı bir listesi işleyebilme yeteneği olan bir düğüm listesine de açıklar **XmlNamedNodeMap**. Bir düğüm listesine neden Microsoft .NET Framework adlı **XmlNodeList**. Yöntemleri ve döndüren özellikler bir **XmlNodeList** şunlardır:  
+World Wide Web Konsorsiyumu (W3C) XML Belge Nesne Modeli (DOM), **XmlNamedNodeMap**tarafından işlenen sıralanmamış bir küme aksine, sıralı düğüm listesini işleyebilme özelliğine sahip bir NodeList ' i de açıklar. Microsoft .NET çerçevesindeki NodeList, **XmlNodeList**olarak adlandırılır. Bir **XmlNodeList** döndüren yöntemler ve özellikler şunlardır:  
   
-- XmlNode.ChildNodes  
+- XmlNode. ChildNodes  
   
-- XmlDocument.GetElementsByTagName  
+- XmlDocument. GetElementsByTagName  
   
-- XmlElement.GetElementsByTagName  
+- XmlElement. GetElementsByTagName  
   
-- XmlNode.SelectNodes  
+- XmlNode. SelectNodes  
   
- **XmlNodeList** sahip bir **sayısı** düğümler üzerinden yinelemek için döngüleri yazmak için kullanılan özellik **XmlNodeList**aşağıdaki kod örneğinde gösterildiği gibi:  
+ **XmlNodeList** , aşağıdaki kod örneğinde gösterildiği gibi, **XmlNodeList**içindeki düğümler üzerinde yinelemek için döngüleri yazmak üzere kullanılabilecek bir **Count** özelliğine sahiptir:  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -55,7 +53,7 @@ for (int i=0; i < elemList.Count; i++)
 }   
 ```  
   
- Ek olarak **sayısı** özelliği var. bir **GetEnumerator** sağlayan yöntemi `foreach` düğümleri koleksiyonu üzerinden yineleme stil **XmlNodeList**. Aşağıdaki kod örneği, kullanımını gösterir `foreach` deyimi.  
+ **Count** özelliğine ek olarak, **XmlNodeList**içindeki düğümlerin koleksiyonu üzerinde, `foreach` stil yinelemesi sağlayan bir **GetEnumerator** yöntemi vardır. Aşağıdaki kod örneği `foreach` deyimin kullanımını gösterir.  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -92,7 +90,7 @@ End While
   }  
 ```  
   
- Kullanılabilir özellikler ve yöntemler hakkında daha fazla bilgi için **XmlNodeList**, bkz: <xref:System.Xml.XmlNodeList>.  
+ **XmlNodeList**üzerinde bulunan Yöntemler ve özellikler hakkında daha fazla bilgi için bkz. <xref:System.Xml.XmlNodeList>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

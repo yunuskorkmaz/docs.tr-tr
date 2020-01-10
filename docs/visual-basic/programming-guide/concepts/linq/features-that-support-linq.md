@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e81d0434aa60e0c7b316b72fb78ebfe2a3782cbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57c0566f9a76715e48b20f2e6493aa1a506c64be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353510"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636867"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>LINQ'i Destekleyen Visual Basic Özellikleri
-Ad [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)], sorgu söz dizimini ve diğer dil yapılarını doğrudan dilde destekleyen Visual Basic teknolojiden başvurur. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], bir dış veri kaynağında sorgulama yapmak için yeni bir dil öğrenmek zorunda değilsiniz. Visual Basic kullanarak ilişkisel veritabanlarındaki, XML mağazalarındaki veya nesnelerdeki verilere göre sorgulama yapabilirsiniz. Bu dile sorgu yeteneklerini tümleştirme, sözdizimi hataları ve tür güvenliği için derleme zamanı denetimini sunar. Bu tümleştirme Ayrıca, Visual Basic içinde zengin, değişen sorgular yazmak için bilmeniz gerekenleri zaten öğrenmenizi de sağlar.  
+Dil ile tümleşik sorgu (LINQ), sorgu söz dizimini ve diğer dil yapılarını doğrudan dilde destekleyen Visual Basic teknolojiden başvurur. LINQ ile, bir dış veri kaynağında sorgulama yapmak için yeni bir dil öğreninizin olması gerekmez. Visual Basic kullanarak ilişkisel veritabanlarındaki, XML mağazalarındaki veya nesnelerdeki verilere göre sorgulama yapabilirsiniz. Bu dile sorgu yeteneklerini tümleştirme, sözdizimi hataları ve tür güvenliği için derleme zamanı denetimini sunar. Bu tümleştirme Ayrıca, Visual Basic içinde zengin, değişen sorgular yazmak için bilmeniz gerekenleri zaten öğrenmenizi de sağlar.  
   
  Aşağıdaki bölümlerde, giriş belgelerini, kod örneklerini ve örnek uygulamaları okumaya başlamanıza olanak tanımak için LINQ 'i destekleyen dil yapıları açıklanır. Ayrıca, dil özelliklerinin, dil ile tümleşik sorguyu etkinleştirmek için nasıl bir araya geldiği hakkında daha ayrıntılı açıklamalar bulmak için bağlantılara tıklayabilirsiniz. Başlamak için iyi bir yer [Izlenecek yol: Visual Basic sorguları yazma](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
@@ -56,7 +56,7 @@ Ad [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)], sorgu söz dizimini 
  Daha fazla bilgi için bkz. [anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
 ## <a name="extension-methods"></a>Genişletme Yöntemleri  
- Uzantı yöntemleri, tanım dışından bir veri türüne veya arabirime Yöntemler eklemenizi sağlar. Bu özellik, aslında türü değiştirmeden mevcut bir türe yeni yöntemler eklemenizi sağlar. Standart sorgu işleçleri, <xref:System.Collections.Generic.IEnumerable%601>uygulayan herhangi bir tür için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu işlevselliği sağlayan bir genişletme yöntemleri kümesidir. <xref:System.Collections.Generic.IEnumerable%601> diğer uzantılar <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>ve <xref:System.Linq.Enumerable.Intersect%2A>içerir.  
+ Uzantı yöntemleri, tanım dışından bir veri türüne veya arabirime Yöntemler eklemenizi sağlar. Bu özellik, aslında türü değiştirmeden mevcut bir türe yeni yöntemler eklemenizi sağlar. Standart sorgu işleçleri, <xref:System.Collections.Generic.IEnumerable%601>uygulayan herhangi bir tür için LINQ sorgu işlevselliği sağlayan bir genişletme yöntemleri kümesidir. <xref:System.Collections.Generic.IEnumerable%601> diğer uzantılar <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>ve <xref:System.Linq.Enumerable.Intersect%2A>içerir.  
   
  Aşağıdaki genişletme yöntemi <xref:System.String> sınıfına bir Print yöntemi ekler.  
   
@@ -77,7 +77,7 @@ Ad [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)], sorgu söz dizimini 
   
  [!code-vb[VbLINQVbFeatures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#12)]  
   
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], lambda ifadeleri standart sorgu işleçlerinin birçoğunu daha az bir şekilde ifade ediyor. Derleyici, `Where`, `Select`, `Order By`, `Take While`ve diğerleri gibi temel sorgu yöntemlerinde tanımlanmış hesaplamaları yakalamak için lambda ifadeleri oluşturur.  
+ LINQ 'ta, lambda ifadeleri standart sorgu işleçlerinin birçoğunu daha az bir şekilde ifade ediyor. Derleyici, `Where`, `Select`, `Order By`, `Take While`ve diğerleri gibi temel sorgu yöntemlerinde tanımlanmış hesaplamaları yakalamak için lambda ifadeleri oluşturur.  
   
  Örneğin, aşağıdaki kod, öğrenciler listesinden tüm kıdemli öğrenciler döndüren bir sorgu tanımlar.  
   

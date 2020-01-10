@@ -1,6 +1,5 @@
 ---
 title: OrderBy yan tümcesi C# -başvuru
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - orderby
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-ms.openlocfilehash: 09a745fe3da3a5acb71972b9cf56391774c7016a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: d88b2b40f63f0616cfd54e8abb62f1bc2183f776
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422649"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713306"
 ---
 # <a name="orderby-clause-c-reference"></a>orderby tümcesi (C# Başvurusu)
 

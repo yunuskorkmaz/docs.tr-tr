@@ -1,6 +1,5 @@
 ---
 title: Lambda ifadeleri- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/29/2019
 helpviewer_keywords:
 - lambda expressions [C#]
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: d401c832dd3b29de609e9eaab69ea3334d6591b9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 668bb08526a6eeb1cf640c9ecdac3b8f2c850a99
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417679"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711954"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda ifadeleri (C# Programlama Kılavuzu)
 
@@ -222,7 +221,7 @@ Lambda ifadelerindeki değişken kapsam için aşağıdaki kurallar geçerlidir:
 
 Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [anonim işlev ifadeleri](~/_csharplang/spec/expressions.md#anonymous-function-expressions) bölümüne bakın.
 
-## <a name="featured-book-chapter"></a>öne çıkan kitap bölümü
+## <a name="featured-book-chapter"></a>Öne çıkan kitap bölümü
 
 3,0 tanımlama kitabı, üçüncü sürüm 'de [Temsilciler, olaylar ve lambda ifadeleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) [ C# : 3,0 programcılar için C# 250 ' den fazla çözüm](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
   

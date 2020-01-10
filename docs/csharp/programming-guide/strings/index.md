@@ -1,17 +1,16 @@
 ---
 title: Dizeler- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: c6e29781f566fac0fd1219ac842a4838d631afb6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: dd76450c2a6a1726d630285f652d252c5f66183f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969711"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711915"
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
 Dize, değeri Text olan <xref:System.String> türünde bir nesnedir. Dahili olarak, metin, <xref:System.Char> nesnelerinin sıralı salt okunurdur koleksiyonu olarak depolanır. C# Dizenin sonunda null sonlandırma karakteri yoktur; Bu nedenle C# , bir dize herhangi bir sayıda katıştırılmış null karakteri (' \ 0 ') içerebilir. Bir dizenin <xref:System.String.Length%2A> özelliği, Unicode karakterlerin sayısını değil, içerdiği `Char` nesne sayısını temsil eder. Bir dizedeki tek tek Unicode kod noktalarına erişmek için <xref:System.Globalization.StringInfo> nesnesini kullanın.  
@@ -50,12 +49,12 @@ Dize, değeri Text olan <xref:System.String> türünde bir nesnedir. Dahili olar
   
 ## <a name="string-escape-sequences"></a>Dize kaçış dizileri  
   
-|Kaçış sırası|Karakter adı|Unicode kodlaması|  
+|Kaçış sırası|Karakter adı|Unicode kodlama|  
 |---------------------|--------------------|----------------------|  
 |\\'|Tek tırnak|0x0027|  
 |\\"|Çift tırnak|0x0022|  
-|\\\\ |Sola|0x005C|  
-|izin|Null|0x0000|  
+|\\\\ |Ters eğik çizgi|0x005C|  
+|\0|Null|0x0000|  
 |\|Uyarı|0x0007|  
 |\b|Geri Al tuşu|0x0008|  
 |\f|Form akışı|0x000C|  
@@ -100,7 +99,7 @@ Kodlarınızın okunabilirliğini ve bakımlılığını artırmak için dize il
   
  [!code-csharp[csProgGuideStrings#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#8)]  
   
- <xref:System.String> Yöntemler bir dizedeki bağımsız karakterleri değiştirmek için sahip olmanız gereken işlevselliği sağlamıyorsa, "yerinde" karakterlerini tek tek değiştirmek için bir <xref:System.Text.StringBuilder> nesnesi kullanabilir ve sonra sonuçları depolamak için yeni bir dize oluşturabilirsiniz <xref:System.Text.StringBuilder> Yöntem. Aşağıdaki örnekte, özgün dizeyi belirli bir şekilde değiştirmeniz ve ardından daha sonra kullanmak üzere sonuçları depolamanız gerektiğini varsayalım:  
+ <xref:System.String> Yöntemler bir dizedeki bağımsız karakterleri değiştirmek için sahip olmanız gereken işlevselliği sağlamıyorsa, "yerinde" karakterlerini değiştirmek için bir <xref:System.Text.StringBuilder> nesnesi kullanabilir ve ardından sonuçları <xref:System.Text.StringBuilder> yöntemleri kullanarak depolamak için yeni bir dize oluşturabilirsiniz. Aşağıdaki örnekte, özgün dizeyi belirli bir şekilde değiştirmeniz ve ardından daha sonra kullanmak üzere sonuçları depolamanız gerektiğini varsayalım:  
   
  [!code-csharp[csProgGuideStrings#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#27)]  
   
@@ -125,7 +124,7 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Dizeler, uzantı yöntemleri ve LINQ  
- <xref:System.String> türü <xref:System.Collections.Generic.IEnumerable%601>uyguladığından, dizeler üzerinde <xref:System.Linq.Enumerable> sınıfında tanımlanan genişletme yöntemlerini kullanabilirsiniz. Görsel dağınıklığı önlemek için, bu yöntemler <xref:System.String> türü için IntelliSense 'den dışlanır, ancak yine de kullanılabilir. Ayrıca, dizeler üzerinde [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadeleri de kullanabilirsiniz. Daha fazla bilgi için bkz. [LINQ ve dizeler](../concepts/linq/linq-and-strings.md).  
+ <xref:System.String> türü <xref:System.Collections.Generic.IEnumerable%601>uyguladığından, dizeler üzerinde <xref:System.Linq.Enumerable> sınıfında tanımlanan genişletme yöntemlerini kullanabilirsiniz. Görsel dağınıklığı önlemek için, bu yöntemler <xref:System.String> türü için IntelliSense 'den dışlanır, ancak yine de kullanılabilir. Ayrıca, dizeler üzerinde LINQ sorgu ifadeleri de kullanabilirsiniz. Daha fazla bilgi için bkz. [LINQ ve dizeler](../concepts/linq/linq-and-strings.md).  
   
 ## <a name="related-topics"></a>İlgili Konular  
   

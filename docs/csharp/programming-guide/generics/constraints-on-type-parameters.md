@@ -1,18 +1,17 @@
 ---
 title: Tür parametrelerine yönelik kısıtlamalar- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 04/12/2018
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: d05307735506db0f0e4abab067334e4f0466ee6a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 3ce68ecc1f0740fdb43ccf22b636dcd4bc05ea0a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204634"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712240"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Tür Parametrelerindeki Kısıtlamalar (C# Programlama Kılavuzu)
 
@@ -107,15 +106,15 @@ Son satırın açıklamasını kaldırırsanız, derlenmez. Hem `first` hem de `
 
 C# 7,3 ' den başlayarak, <xref:System.Enum?displayProperty=nameWithType> türünü temel sınıf kısıtlaması olarak da belirtebilirsiniz. CLR bu kısıtlamaya her zaman izin verilir, ancak C# dil izin vermez. `System.Enum` kullanan genel türler, `System.Enum`statik yöntemlerin kullanılmasıyla sonuçları önbelleğe almak için tür kullanımı uyumlu programlama sağlar. Aşağıdaki örnek, bir sabit listesi türü için geçerli tüm değerleri bulur ve sonra bu değerleri dize gösterimiyle eşleyen bir sözlük oluşturur.
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
+[!code-csharp[using the enum constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
 
-Kullanılan yöntemler, performans etkilerine sahip olan yansıma kullanımını kullanır. Bu yöntemi, yansıma gerektiren çağrıları yinelemek yerine önbelleğe alınmış ve yeniden kullanılan bir koleksiyon oluşturmak için çağırabilirsiniz.
+Performans etkilerine sahip olan yansıma kullanımını sağlamak için kullanılan yöntemler. Bu yöntemi, yansıma gerektiren çağrıları yinelemek yerine önbelleğe alınmış ve yeniden kullanılan bir koleksiyon oluşturmak için çağırabilirsiniz.
 
 Aşağıdaki örnekte gösterildiği gibi, bir sabit listesi oluşturmak ve değerlerini ve adlarını bir sözlüğü oluşturmak için kullanabilirsiniz:
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
+[!code-csharp[enum definition](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
+[!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

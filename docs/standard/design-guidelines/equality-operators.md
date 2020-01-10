@@ -9,44 +9,43 @@ helpviewer_keywords:
 - Equals method
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
-author: KrzysztofCwalina
-ms.openlocfilehash: ef1a0aff1ac59434d9d9a6f0371bf236f637050e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31a5ce18f4526b5e3b8411365dff812601de87ad
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960343"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709445"
 ---
 # <a name="equality-operators"></a>Eşitlik İşleçleri
-Bu bölümde, aşırı yüklerken eşitlik işleci açıklar ve başvurduğu `operator==` ve `operator!=` eşitlik işleçleri olarak.  
+Bu bölümde eşitlik işleçlerini aşırı yükleme ve `operator==` ve eşitlik işleçleri olarak `operator!=` açıklanır.  
   
  **X DO NOT** eşitlik işleçleri ve diğer aşırı yükleme.  
   
  **✓ DO** emin <xref:System.Object.Equals%2A?displayProperty=nameWithType> ve eşitlik işleçleri tam olarak aynı semantiği ve benzer performans özellikleri vardır.  
   
- Bu genellikle anlamına `Object.Equals` eşitlik operatörleri aşırı yüklendiğinde geçersiz kılınması gerekiyor.  
+ Bu genellikle eşitlik işleçleri aşırı yüklendiğinde `Object.Equals` geçersiz kılınmasının gerektiği anlamına gelir.  
   
  **X AVOID** eşitlik işleçleri özel durumları atma.  
   
- Örneğin, bağımsız değişkenlerden biri oluşturmak yerine null ise yanlış geri `NullReferenceException`.  
+ Örneğin, `NullReferenceException`yapmak yerine bağımsız değişkenlerden biri null ise false döndürün.  
   
-## <a name="equality-operators-on-value-types"></a>Değer türleri üzerinde eşitlik işleçleri  
+## <a name="equality-operators-on-value-types"></a>Değer türlerinde eşitlik Işleçleri  
  **✓ DO** eşitlik anlamlı ise, değer türleri üzerinde eşitlik işleçleri aşırı yükleme.  
   
- Çoğu programlama dilinde, hiçbir varsayılan uygulaması olduğundan `operator==` değer türleri için.  
+ Çoğu programlama dilinde, değer türleri için `operator==` varsayılan bir uygulama yoktur.  
   
-## <a name="equality-operators-on-reference-types"></a>Başvuru türlerinde eşitlik işleçleri  
+## <a name="equality-operators-on-reference-types"></a>Başvuru türlerinde eşitlik Işleçleri  
  **X AVOID** kesilebilir başvuru türleri üzerinde eşitlik işleçleri aşırı yükleme.  
   
- Birçok dil başvuru türleri için yerleşik eşitlik işleçleri sahip. Yerleşik işleçler, genellikle başvuru eşitliği uygulamak ve birçok geliştiricinin varsayılan davranışı için değer eşitliği değiştirildiğinde şaşırmayın.  
+ Birçok dilde başvuru türleri için yerleşik eşitlik işleçleri vardır. Yerleşik operatörler genellikle başvuru eşitliğini uygular ve varsayılan davranış değer eşitliğine değiştirildiğinde çok sayıda geliştirici şaşırtır.  
   
- Bu sorun, değiştirilemezlik çok başvuru eşitliği değer eşitliği arasındaki fark zorlaştırır çünkü değişmez başvuru türleri için azalır.  
+ Bu sorun, sabit başvuru türleri için azaltıldığı için, değişiklik, başvuru eşitliği ve değer eşitlik arasındaki farkı fark ettiğini çok daha zor hale getirir.  
   
  **X AVOID** uygulama önemli ölçüde daha yavaş, başvuru eşitliği olacaksa başvuru türlerinde eşitlik işleçleri aşırı yükleme.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

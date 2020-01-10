@@ -8,21 +8,19 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c879375a4b0622311c8731acc276ec79fe0217d5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a1b061b480b3e22b136a6373ddb87cf9d2233457
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044886"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715780"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX Denetim İçeri Aktarıcı)
 ActiveX Denetimi Alma Programı, ActiveX denetimi için bir COM tür kitaplığındaki tür tanımlarını bir Windows Formları denetimine dönüştürür.  
   
- Windows Forms, yalnızca Windows Forms denetimleri barındırabilir — diğer bir deyişle, öğesinden <xref:System.Windows.Forms.Control>türetilmiş sınıflar. Aximp.exe, Windows Formu üzerinde barındırılabilen bir ActiveX denetimi için bir sarmalayıcı sınıfı oluşturur. Bu, diğer Windows Formları denetimleri için geçerli olanla aynı tasarım zamanı desteği ve programlama metodolojisini kullanmanıza olanak tanır.  
+ Windows Forms yalnızca Windows Forms denetimleri barındırabilir — diğer bir deyişle, <xref:System.Windows.Forms.Control>türetilmiş sınıflar. Aximp.exe, Windows Formu üzerinde barındırılabilen bir ActiveX denetimi için bir sarmalayıcı sınıfı oluşturur. Bu, diğer Windows Formları denetimleri için geçerli olanla aynı tasarım zamanı desteği ve programlama metodolojisini kullanmanıza olanak tanır.  
   
- ActiveX denetimini barındırmak için, öğesinden <xref:System.Windows.Forms.AxHost>türetilen bir sarmalayıcı denetimi oluşturmanız gerekir. Bu sarmalayıcı denetimi, arka plandaki ActiveX denetiminin bir örneğini içerir. ActiveX denetimiyle nasıl iletişim kuracağını bilir, fakat bir Windows Formları denetimi olarak görünür. Üretilen bu denetim ActiveX denetimini barındırır ve özelliklerini, yöntemlerini ve olaylarını üretilen denetiminkiler gibi sergiler.  
+ ActiveX denetimini barındırmak için <xref:System.Windows.Forms.AxHost>türetilen bir sarmalayıcı denetimi oluşturmanız gerekir. Bu sarmalayıcı denetimi, arka plandaki ActiveX denetiminin bir örneğini içerir. ActiveX denetimiyle nasıl iletişim kuracağını bilir, fakat bir Windows Formları denetimi olarak görünür. Üretilen bu denetim ActiveX denetimini barındırır ve özelliklerini, yöntemlerini ve olaylarını üretilen denetiminkiler gibi sergiler.  
   
  Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).  
   
@@ -42,14 +40,14 @@ aximp [options]{file.dll | file.ocx}
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|`/delaysign`|Sonuç olarak oluşan denetimi gecikmeli imzalamayı kullanarak imzalamasını Aximp.exe'ye belirtir. Bu seçeneği `/keycontainer:`, `/keyfile:`, ya `/publickey:` da seçeneğiyle belirtmeniz gerekir. Gecikmeli imzalama işlemi hakkında daha fazla bilgi için bkz. [bir derlemeyi IMZALAMAYı geciktirme](../../standard/assembly/delay-sign.md).|  
+|`/delaysign`|Sonuç olarak oluşan denetimi gecikmeli imzalamayı kullanarak imzalamasını Aximp.exe'ye belirtir. `/keycontainer:`, `/keyfile:`veya `/publickey:` seçeneğiyle bu seçeneği belirtmeniz gerekir. Gecikmeli imzalama işlemi hakkında daha fazla bilgi için bkz. [bir derlemeyi IMZALAMAYı geciktirme](../../standard/assembly/delay-sign.md).|  
 |`/help`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
-|`/keycontainer:`*ContainerName*|Sonuç denetimini, *ContainerName*tarafından belirtilen anahtar kapsayıcısında bulunan ortak/özel anahtar çiftini kullanarak tanımlayıcı bir adla imzalar.|  
-|`/keyfile:`*dosya adı*|Ortaya çıkan denetimi, yayımcının *dosya adında*bulunan resmi ortak/özel anahtar çiftini kullanarak tanımlayıcı bir adla imzalar.|  
+|`/keycontainer:` *ContainerName*|Sonuç denetimini, *ContainerName*tarafından belirtilen anahtar kapsayıcısında bulunan ortak/özel anahtar çiftini kullanarak tanımlayıcı bir adla imzalar.|  
+|`/keyfile:` *dosya adı*|Ortaya çıkan denetimi, yayımcının *dosya adında*bulunan resmi ortak/özel anahtar çiftini kullanarak tanımlayıcı bir adla imzalar.|  
 |`/nologo`|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
-|`/out:`*dosya adı*|Oluşturulacak derlemenin adını belirtir.|  
-|`/publickey:`*dosya adı*|Elde edilen denetimi dosya *adı*tarafından belirtilen dosyada bulunan ortak anahtarı kullanarak tanımlayıcı bir adla imzalar.|  
-|`/rcw:`*dosya adı*|Yeni birini üretmek yerine, belirtilen çalışma zamanı çağrılabilir sarmalayıcısını kullanır. Birden çok örnek belirtebilirsiniz. Geçerli dizin, göreli yollar için kullanılır. Daha fazla bilgi için bkz. [çalışma zamanında çağrılabilir sarmalayıcı](../../standard/native-interop/runtime-callable-wrapper.md).|  
+|`/out:` *dosya adı*|Oluşturulacak derlemenin adını belirtir.|  
+|`/publickey:` *dosya adı*|Elde edilen denetimi dosya *adı*tarafından belirtilen dosyada bulunan ortak anahtarı kullanarak tanımlayıcı bir adla imzalar.|  
+|`/rcw:` *dosya adı*|Yeni birini üretmek yerine, belirtilen çalışma zamanı çağrılabilir sarmalayıcısını kullanır. Birden çok örnek belirtebilirsiniz. Geçerli dizin, göreli yollar için kullanılır. Daha fazla bilgi için bkz. [çalışma zamanında çağrılabilir sarmalayıcı](../../standard/native-interop/runtime-callable-wrapper.md).|  
 |`/silent`|Başarı iletilerinin görüntülenmesini bastırır.|  
 |`/source`|Windows Formları sarmalayıcısı için C# kaynak kodu üretir.|  
 |`/verbose`|Ayrıntılı modu belirtir; ek ilerleme bilgilerini görüntüler.|  
@@ -70,10 +68,10 @@ aximp [options]{file.dll | file.ocx}
   
  Aximp.exe'yi shdocvw.dll üzerinden çalıştırdığınızda, aracın çalıştığı dizinde her zaman shdocvw.dll adlı başka bir dosya oluşturur. Üretilen bu dosya Documents and Settings dizinine yerleştirilirse, Microsoft Internet Explorer ve Windows Gezgini için sorunlara neden olur. Bilgisayar yeniden başlatıldığında, Windows, shdocvw.dll'in bir kopyasını bulmak için system32 dizininden önce Documents and Settings dizinine bakar. Documents and Settings dizininde bulduğu kopyayı kullanır ve yönetilen sarmalayıcıları yüklemeyi dener. System32 dizininde bulunan shdocvw.dll sürümündeki oluşturma altyapısına dayalı olduklarından, Internet Explorer ve Windows Gezgini doğru şekilde çalışmaz. Bu sorun oluşursa, Documents and Settings dizinindeki shdocvw.dll kopyasını silin ve bilgisayarı yeniden başlatın.  
   
- Uygulama geliştirmede kullanmak üzere bir .NET derlemesi oluşturmak için Aximp.exe'yi shdocvw.dll ile birlikte kullanmak da sorunlara neden olabilir. Bu durumda, uygulamanız shdocvw.dll'in hem sistem sürümünü hem de üretilen sürümünü yükler ve istem sürümüne öncelik verebilir. Bu durumda, WebBrowser ActiveX denetimi içinde bir Web sayfasını yüklemeyi denediğinizde, kullanıcılara bir Aç/Kaydet iletişim kutusu görüntülenebilir. Kullanıcı **Aç**' ı tıklattığında, Web sayfası Internet Explorer 'da açılır. Bu yalnızca, Internet Explorer sürüm 6 veya önceki sürümlerin çalıştığı bilgisayarlarda olur. Bu sorunu engellemek için, yönetilen <xref:System.Windows.Forms.WebBrowser> denetimi kullanın veya Visual Studio 'yu kullanarak yönetilen Shdocvw. dll dosyasını aşağıdaki [konularda açıklandığı gibi oluşturun: Tür kitaplıklarına](../interop/how-to-add-references-to-type-libraries.md)başvurular ekleyin.  
+ Uygulama geliştirmede kullanmak üzere bir .NET derlemesi oluşturmak için Aximp.exe'yi shdocvw.dll ile birlikte kullanmak da sorunlara neden olabilir. Bu durumda, uygulamanız shdocvw.dll'in hem sistem sürümünü hem de üretilen sürümünü yükler ve istem sürümüne öncelik verebilir. Bu durumda, WebBrowser ActiveX denetimi içinde bir Web sayfasını yüklemeyi denediğinizde, kullanıcılara bir Aç/Kaydet iletişim kutusu görüntülenebilir. Kullanıcı **Aç**' ı tıklattığında, Web sayfası Internet Explorer 'da açılır. Bu yalnızca, Internet Explorer sürüm 6 veya önceki sürümlerin çalıştığı bilgisayarlarda olur. Bu sorunu engellemek için yönetilen <xref:System.Windows.Forms.WebBrowser> denetimini kullanın veya Visual Studio 'Yu kullanarak yönetilen Shdocvw. dll dosyasını, [tür kitaplıklarına başvurular ekleme](../interop/how-to-add-references-to-type-libraries.md)bölümünde açıklandığı gibi oluşturun.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki komut Media Player denetimi `msdxm.ocx`için MediaPlayer. dll ve axmediaplayer. dll dosyasını oluşturur.  
+ Aşağıdaki komut, Media Player Denetim `msdxm.ocx`için MediaPlayer. dll ve AxMediaPlayer. dll oluşturur.  
   
 ```console 
 aximp c:\systemroot\system32\msdxm.ocx  

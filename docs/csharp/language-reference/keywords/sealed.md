@@ -1,6 +1,5 @@
 ---
 title: Sealed değiştirici- C# başvuru
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - sealed
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: 84f838645bed6facc8b59ebf596d16373a9c6f86
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 686afd5d9d0394bb1a802551b65083732599f384
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422369"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713111"
 ---
 # <a name="sealed-c-reference"></a>sealed (C# Başvurusu)
 
@@ -28,7 +27,7 @@ Bir temel sınıftaki sanal bir yöntemi veya özelliği geçersiz kılan bir y�
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, `Z` `Y` devralır, ancak `Z` `X` ve mühürlenen `F` sanal işlevi geçersiz kılamaz.`Y`
+Aşağıdaki örnekte, `Z` `Y` devralır, ancak `Z` `X` ve mühürlenen `F` sanal işlevi geçersiz kılamaz.
 
 [!code-csharp[csrefKeywordsModifiers#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#16)]
 

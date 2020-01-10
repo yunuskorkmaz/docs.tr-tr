@@ -1,23 +1,22 @@
 ---
 title: Olaylar- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [C#], events
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: d70ec5784d56bad60fbc33ae0b992de1bebfce38
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 183f53a579bdd9f70deb16ca9157c377fa3aff3f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417952"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712318"
 ---
 # <a name="events-c-programming-guide"></a>Olaylar (C# Programlama Kılavuzu)
 Olaylar, bir [sınıf](../../language-reference/keywords/class.md) ya da nesnenin, ilgi çekici bir şeyler gerçekleştiğinde diğer sınıflara veya nesnelere bildirilmesini sağlar. Olayı gönderen (veya *başlatan*) sınıf *Yayımcı* olarak adlandırılır ve olayı alan (veya *işleyen*) sınıflar *aboneler*olarak adlandırılır.  
   
- Tipik C# bir Windows Forms veya Web uygulamasında, düğmeler ve liste kutuları gibi denetimler tarafından oluşturulan olaylara abone olursunuz. Bir denetimin yayımladığı olaylara gözatabilmek ve işlemek istediklerinizi seçmek için Visual C# tümleşik geliştirme ortamı 'Nı (IDE) kullanabilirsiniz. IDE, otomatik olarak boş bir olay işleyici yöntemi ve olaya abone olmak için kod eklemenin kolay bir yolunu sunar. Daha fazla bilgi için bkz. [nasıl yapılır: olaylara abone olma ve aboneliği kaldırma](./how-to-subscribe-to-and-unsubscribe-from-events.md).  
+Tipik C# bir Windows Forms veya Web uygulamasında, düğmeler ve liste kutuları gibi denetimler tarafından oluşturulan olaylara abone olursunuz. Bir denetimin yayımladığı olaylara gözatabilmek ve işlemek istediklerinizi seçmek için Visual C# tümleşik geliştirme ortamı 'Nı (IDE) kullanabilirsiniz. IDE, otomatik olarak boş bir olay işleyici yöntemi ve olaya abone olmak için kod eklemenin kolay bir yolunu sunar. Daha fazla bilgi için bkz. [olaylara abone olma ve olayları kaldırma](./how-to-subscribe-to-and-unsubscribe-from-events.md).
   
 ## <a name="events-overview"></a>Olaylara Genel Bakış  
  Olaylar aşağıdaki özelliklere sahiptir:  
@@ -35,18 +34,18 @@ Olaylar, bir [sınıf](../../language-reference/keywords/class.md) ya da nesneni
 - .NET Framework sınıf kitaplığında olaylar, <xref:System.EventHandler> temsilciyi ve <xref:System.EventArgs> temel sınıfını temel alır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- Daha fazla bilgi için bkz.:  
+ Daha fazla bilgi için bkz.  
   
-- [Nasıl yapılır: Olaylara Abone Olma ve Aboneliği Kaldırma](./how-to-subscribe-to-and-unsubscribe-from-events.md)  
-  
-- [Nasıl yapılır: .NET Framework Yönergeleriyle Uyumlu Olayları Yayımlama](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
-  
-- [Nasıl yapılır: Türetilmiş Sınıflarda Temel Sınıf Olayları Oluşturma](./how-to-raise-base-class-events-in-derived-classes.md)  
-  
-- [Nasıl yapılır: arabirim olaylarını uygulama](./how-to-implement-interface-events.md)  
-  
-- [Nasıl yapılır: Özel Olay Erişimcilerini Uygulama](./how-to-implement-custom-event-accessors.md)  
-  
+- [Olaylara abone olma ve olayları kaldırma](./how-to-subscribe-to-and-unsubscribe-from-events.md)
+
+- [.NET Framework yönergeleriyle uyumlu olayları yayımlama](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+
+- [Türetilmiş sınıflarda temel sınıf olayları nasıl tetiklemeli](./how-to-raise-base-class-events-in-derived-classes.md)
+
+- [Arabirim olaylarını uygulama](./how-to-implement-interface-events.md)
+
+- [Özel olay erişimcileri nasıl uygulanır](./how-to-implement-custom-event-accessors.md)
+
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 
 Daha fazla bilgi için bkz. [ C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Olaylar](~/_csharplang/spec/classes.md#events) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.

@@ -24,25 +24,25 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: a0916a2957eab6ae340fe914395eda44860da3b7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 8afda2a314bd04e91c6686fb254a1bd9e773913d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733732"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636295"
 ---
 # <a name="navigation-overview"></a>Gezintiye Genel Bakış
 
-Windows Presentation Foundation (WPF), iki tür uygulamada kullanılabilen tarayıcı stili gezinmeyi destekler: tek başına uygulamalar ve XAML tarayıcı uygulamaları (XBAP). Gezinmede içerik paketlemek için, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] <xref:System.Windows.Controls.Page> sınıfını sağlar. Bir <xref:System.Windows.Controls.Page> ' dan diğerine, <xref:System.Windows.Documents.Hyperlink> veya program aracılığıyla <xref:System.Windows.Navigation.NavigationService> kullanarak gidebilirsiniz. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], ' den gelen ve geri gitmek için kullanılan sayfaları hatırlamaları için günlüğü kullanır.
+Windows Presentation Foundation (WPF), iki tür uygulamada kullanılabilen tarayıcı stili gezinmeyi destekler: tek başına uygulamalar ve XAML tarayıcı uygulamaları (XBAP). WPF içeriği paketlemek için <xref:System.Windows.Controls.Page> sınıfını sağlar. Bir <xref:System.Windows.Controls.Page>, bir <xref:System.Windows.Documents.Hyperlink>veya programlı olarak <xref:System.Windows.Navigation.NavigationService>kullanarak bir veya daha fazla bildirimli olarak gidebilirsiniz. WPF, ' den gelen ve geri gitmek için kullanılan sayfaları hatırlama günlüğünü kullanır.
 
-<xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Navigation.NavigationService>ve günlük [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]tarafından sunulan gezinti desteğinin çekirdeğini oluşturur. Bu genel bakış, gevşek [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyalar, HTML dosyaları ve nesneler için gezinti içeren gelişmiş gezinti desteğini kullanmadan önce bu özellikleri ayrıntılı olarak ele alır.
+<xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Navigation.NavigationService>ve Journal, WPF tarafından sunulan gezinti desteğinin çekirdeğini oluşturur. Bu genel bakış, gevşek [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyalar, HTML dosyaları ve nesneler için gezinti içeren gelişmiş gezinti desteğini kullanmadan önce bu özellikleri ayrıntılı olarak ele alır.
 
 > [!NOTE]
-> Bu konuda, "Browser" terimi, şu anda Microsoft Internet Explorer ve Firefox içeren [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları barındırabilen tarayıcılara başvurur. Belirli [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] özelliklerinin yalnızca belirli bir tarayıcı tarafından desteklendiği, tarayıcı sürümüne başvurulur.
+> Bu konuda, "Browser" terimi, şu anda Microsoft Internet Explorer ve Firefox içeren WPF uygulamalarını barındırabilen tarayıcılara başvurur. Belirli WPF özelliklerinin yalnızca belirli bir tarayıcı tarafından desteklendiği, tarayıcı sürümüne başvurulur.
 
 ## <a name="navigation-in-wpf-applications"></a>WPF uygulamalarında gezinme
 
-Bu konu, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]' deki temel gezinti özelliklerine genel bir bakış sağlar. Bu yetenekler hem tek başına uygulamalar hem de XBAP 'ler için kullanılabilir, ancak bu konu, bunları bir XBAP bağlamı içinde gösterir.
+Bu konu, WPF 'de anahtar gezinti özelliklerine genel bir bakış sağlar. Bu yetenekler hem tek başına uygulamalar hem de XBAP 'ler için kullanılabilir, ancak bu konu, bunları bir XBAP bağlamı içinde gösterir.
 
 > [!NOTE]
 > Bu konuda, XBAP oluşturma ve dağıtma konusu ele alınmaktadır. XBAP 'ler hakkında daha fazla bilgi için bkz. [WPF XAML tarayıcı uygulamalarına genel bakış](wpf-xaml-browser-applications-overview.md).
@@ -79,13 +79,13 @@ Bu bölümde, aşağıdaki gezinti yönleri açıklanmaktadır ve gösterilmekte
 
 ### <a name="implementing-a-page"></a>Sayfa uygulama
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], .NET Framework nesneleri, özel nesneleri, numaralandırma değerlerini, kullanıcı denetimlerini, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyalarını ve HTML dosyalarını içeren birkaç içerik türüne gidebilirsiniz. Ancak, <xref:System.Windows.Controls.Page> ' ı kullanarak içerik paketlemeyi kullanmanın en yaygın ve kolay yolunu bulabilirsiniz. Ayrıca, <xref:System.Windows.Controls.Page>, görünümünü iyileştirmek ve geliştirmeyi basitleştirmek için gezintiye özgü özellikler uygular.
+WPF 'de .NET Framework nesneleri, özel nesneleri, numaralandırma değerlerini, kullanıcı denetimlerini, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyalarını ve HTML dosyalarını içeren çeşitli içerik türlerine gidebilirsiniz. Ancak, <xref:System.Windows.Controls.Page>kullanarak içerik paketlemeyi kullanmanın en yaygın ve kolay yolunu bulabilirsiniz. Ayrıca, <xref:System.Windows.Controls.Page> görünümünü iyileştirmek ve geliştirmeyi basitleştirmek için gezintiye özgü özellikler uygular.
 
 <xref:System.Windows.Controls.Page>kullanarak, aşağıdaki gibi işaretlemeleri kullanarak, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] içeriğin gezinebilir bir sayfasını bildirimli olarak uygulayabilirsiniz.
 
 [!code-xaml[NavigationOverviewSnippets#Page1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page1.xaml#page1xaml)]
 
-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirmesinde uygulanan <xref:System.Windows.Controls.Page> kök öğesi olarak `Page` ve [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]XML ad alanı bildirimi gerektirir. `Page` öğesi, gitmek ve göstermek istediğiniz içeriği içerir. Aşağıdaki biçimlendirmede gösterildiği gibi `Page.Content` özellik öğesini ayarlayarak içerik eklersiniz.
+[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirmesinde uygulanan <xref:System.Windows.Controls.Page> kök öğesi olarak `Page` ve WPF XML ad alanı bildirimi gerektirir. `Page` öğesi, gitmek ve göstermek istediğiniz içeriği içerir. Aşağıdaki biçimlendirmede gösterildiği gibi `Page.Content` Property öğesini ayarlayarak içerik eklersiniz.
 
 [!code-xaml[NavigationOverviewSnippets#Page2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page2.xaml#page2xaml)]
 
@@ -95,9 +95,9 @@ Bir `Page` öğesinin alt öğeleri bir <xref:System.Windows.Controls.Page> içe
 
 [!code-xaml[NavigationOverviewSnippets#Page3XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page3.xaml#page3xaml)]
 
-Bu durumda, `Page.Content` `Page` öğesinin alt öğeleriyle otomatik olarak ayarlanır. Daha fazla bilgi için bkz. [WPF Içerik modeli](../controls/wpf-content-model.md).
+Bu durumda `Page.Content`, `Page` öğesinin alt öğeleriyle otomatik olarak ayarlanır. Daha fazla bilgi için bkz. [WPF Içerik modeli](../controls/wpf-content-model.md).
 
-Yalnızca biçimlendirme <xref:System.Windows.Controls.Page> içerik görüntülemek için kullanışlıdır. Ancak, <xref:System.Windows.Controls.Page>, kullanıcıların sayfayla etkileşime geçmesini sağlayan denetimleri de görüntüleyebilir ve olayları işleyerek ve uygulama mantığını çağırarak kullanıcı etkileşimine yanıt verebilir. Etkileşimli <xref:System.Windows.Controls.Page>, aşağıdaki örnekte gösterildiği gibi, biçimlendirme ve arka plan kodu birleşimi kullanılarak uygulanır.
+Yalnızca biçimlendirme <xref:System.Windows.Controls.Page> içerik görüntülemek için yararlıdır. Ancak, bir <xref:System.Windows.Controls.Page> kullanıcıların sayfayla etkileşime geçmesini sağlayan denetimleri de görüntüleyebilir ve olayları işleyerek ve uygulama mantığını çağırarak kullanıcı etkileşimine yanıt verebilir. Etkileşimli <xref:System.Windows.Controls.Page>, aşağıdaki örnekte gösterildiği gibi, biçimlendirme ve arka plan kodu birleşimi kullanılarak uygulanır.
 
 [!code-xaml[XBAPAppDefSnippets#HomePageMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/HomePage.xaml#homepagemarkup)]
 
@@ -106,24 +106,24 @@ Yalnızca biçimlendirme <xref:System.Windows.Controls.Page> içerik görüntül
 
 Biçimlendirme dosyası ve arka plan kod dosyasının birlikte çalışmasına izin vermek için aşağıdaki yapılandırma gereklidir:
 
-- Biçimlendirme ' de `Page` öğesi `x:Class` özniteliğini içermelidir. Uygulama yapılandırıldığında, biçimlendirme dosyasında `x:Class` ' ı, Microsoft Build Engine 'in (MSBuild) <xref:System.Windows.Controls.Page> ' den türetilen ve `x:Class` özniteliğiyle belirtilen ada sahip bir `partial` sınıfı oluşturmasına neden olur. Bu, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] şeması için bir XML ad alanı bildiriminin eklenmesini gerektirir (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). Oluşturulan `partial` sınıfı, olayları kaydetmek ve biçimlendirmede uygulanan özellikleri ayarlamak için çağrılan `InitializeComponent` ' i uygular.
+- Biçimlendirme ' de `Page` öğesi `x:Class` özniteliğini içermelidir. Uygulama oluşturulduğunda, biçimlendirme dosyasında `x:Class` varlığı, Microsoft Build Engine 'in (MSBuild) <xref:System.Windows.Controls.Page> türetilen ve `x:Class` özniteliği tarafından belirtilen ada sahip bir `partial` sınıfı oluşturmasına neden olur. Bu, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] şeması için bir XML ad alanı bildiriminin eklenmesini gerektirir (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). Oluşturulan `partial` sınıfı, olayları kaydetmek ve biçimlendirmede uygulanan özellikleri ayarlamak için çağrılan `InitializeComponent`uygular.
 
-- Arka plan kod içinde, sınıf, biçimlendirme içindeki `x:Class` özniteliğiyle belirtilen aynı ada sahip `partial` sınıfı olmalıdır ve <xref:System.Windows.Controls.Page> ' den türetilmelidir. Bu, arka plan kod dosyasının, uygulama oluşturulduğunda biçimlendirme dosyası için oluşturulan `partial` sınıfıyla ilişkilendirilmesine izin verir (bkz. [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md)).
+- Arka plan kod içinde, sınıf, biçimlendirme içindeki `x:Class` özniteliğiyle belirtilen aynı ada sahip `partial` bir sınıf olmalıdır ve <xref:System.Windows.Controls.Page>türetmelidir. Bu, arka plan kod dosyasının, uygulama oluşturulduğunda işaretleme dosyası için oluşturulan `partial` sınıfıyla ilişkilendirilmesine izin verir (bkz. [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md)).
 
 - Arka plan kod içinde <xref:System.Windows.Controls.Page> sınıfı, `InitializeComponent` yöntemini çağıran bir Oluşturucu uygulamalıdır. `InitializeComponent`, olayları kaydetmek ve biçimlendirmede tanımlanan özellikleri ayarlamak için biçimlendirme dosyasının oluşturulan `partial` sınıfı tarafından uygulanır.
 
 > [!NOTE]
 > Visual Studio kullanarak projenize yeni bir <xref:System.Windows.Controls.Page> eklediğinizde, <xref:System.Windows.Controls.Page> hem biçimlendirme hem de arka plan kullanılarak uygulanır ve burada açıklanan biçimlendirme ve arka plan kod dosyaları arasındaki ilişkiyi oluşturmak için gerekli yapılandırmayı içerir.
 
-<xref:System.Windows.Controls.Page>aldıktan sonra, bu sayfaya gidebilirsiniz. Bir uygulamanın gittiği ilk <xref:System.Windows.Controls.Page> ' ı belirtmek için, Start <xref:System.Windows.Controls.Page> ' i yapılandırmanız gerekir.
+<xref:System.Windows.Controls.Page>aldıktan sonra, bu sayfaya gidebilirsiniz. Bir uygulamanın gittiği ilk <xref:System.Windows.Controls.Page> belirtmek için, başlangıç <xref:System.Windows.Controls.Page>yapılandırmanız gerekir.
 
 <a name="Configuring_a_Start_Page"></a>
 
 ### <a name="configuring-a-start-page"></a>Başlangıç sayfasını yapılandırma
 
-XBAP 'ler bir tarayıcıda barındırılmak için belirli bir uygulama altyapısı miktarı gerektirir. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], <xref:System.Windows.Application> sınıfı gerekli uygulama altyapısını kuran bir uygulama tanımının parçasıdır (bkz. [uygulama yönetimine genel bakış](application-management-overview.md)).
+XBAP 'ler bir tarayıcıda barındırılmak için belirli bir uygulama altyapısı miktarı gerektirir. WPF 'de <xref:System.Windows.Application> sınıfı, gerekli uygulama altyapısını kuran bir uygulama tanımının parçasıdır (bkz. [uygulama yönetimine genel bakış](application-management-overview.md)).
 
-Bir uygulama tanımı genellikle, biçimlendirme dosyası bir MSBuild `ApplicationDefinition` öğesi olarak yapılandırıldığında hem biçimlendirme hem de arka plan kodu kullanılarak uygulanır. Aşağıda bir XBAP için uygulama tanımı verilmiştir.
+Bir uygulama tanımı genellikle, biçimlendirme dosyası bir MSBuild`ApplicationDefinition` öğesi olarak yapılandırıldığında hem biçimlendirme hem de arka plan kodu kullanılarak uygulanır. Aşağıda bir XBAP için uygulama tanımı verilmiştir.
 
 [!code-xaml[XBAPAppDefSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]
 
@@ -133,7 +133,7 @@ Bir uygulama tanımı genellikle, biçimlendirme dosyası bir MSBuild `Applicati
 Bir XBAP, XBAP başlatıldığında otomatik olarak yüklenen <xref:System.Windows.Controls.Page> olan bir başlangıç <xref:System.Windows.Controls.Page>belirtmek için uygulama tanımını kullanabilir. Bunu, istenen <xref:System.Windows.Controls.Page>Tekdüzen Kaynak tanımlayıcısı (URI) ile <xref:System.Windows.Application.StartupUri%2A> özelliğini ayarlayarak yapabilirsiniz.
 
 > [!NOTE]
-> Çoğu durumda, <xref:System.Windows.Controls.Page> bir uygulamayla derlenir veya bir uygulamayla birlikte dağıtılır. Bu durumlarda, bir <xref:System.Windows.Controls.Page> tanımlayan URI, *paket* şemasına uygun bir URI olan bir paket URI 'sidir. Paket URI 'Leri, [WPF 'de paket URI 'lerinde](pack-uris-in-wpf.md)daha fazla ele alınmıştır. Ayrıca, aşağıda açıklanan http düzenini kullanarak içeriğe gidebilirsiniz.
+> Çoğu durumda <xref:System.Windows.Controls.Page>, bir uygulamayla birlikte derlenir veya dağıtılır. Bu durumlarda, bir <xref:System.Windows.Controls.Page> tanımlayan URI, *paket* şemasına uygun bir URI olan bir paket URI 'sidir. Paket URI 'Leri, [WPF 'de paket URI 'lerinde](pack-uris-in-wpf.md)daha fazla ele alınmıştır. Ayrıca, aşağıda açıklanan http düzenini kullanarak içeriğe gidebilirsiniz.
 
 Aşağıdaki örnekte gösterildiği gibi biçimlendirme içinde <xref:System.Windows.Application.StartupUri%2A> bildirimli olarak ayarlayabilirsiniz.
 
@@ -164,7 +164,7 @@ Sonuç aşağıdaki şekilde gösterilmiştir.
 
 ### <a name="hyperlink-navigation"></a>Köprü gezintisi
 
-Tipik bir XBAP çeşitli sayfalar içerir. Bir sayfadan diğerine gitmenin en kolay yolu <xref:System.Windows.Documents.Hyperlink> kullanmaktır. Aşağıdaki biçimlendirmede gösterilen `Hyperlink` öğesini kullanarak, bildirimli bir <xref:System.Windows.Documents.Hyperlink> ' a bir <xref:System.Windows.Controls.Page> öğesine ekleyebilirsiniz.
+Tipik bir XBAP çeşitli sayfalar içerir. Bir sayfadan diğerine gitmenin en kolay yolu <xref:System.Windows.Documents.Hyperlink>kullanmaktır. Aşağıdaki biçimlendirmede gösterilen `Hyperlink` öğesini kullanarak bir <xref:System.Windows.Controls.Page> bildirimli olarak bir <xref:System.Windows.Documents.Hyperlink> ekleyebilirsiniz.
 
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml1)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]
@@ -174,7 +174,7 @@ Bir `Hyperlink` öğesi şunları gerektirir:
 
 - `NavigateUri` özniteliği tarafından belirtildiği gibi, gidilecek <xref:System.Windows.Controls.Page> paket URI 'SI.
 
-- Kullanıcının, metin ve görüntüler gibi gezinti işlemini başlatmak için tıklabileceği içerik (`Hyperlink` öğesinin içerebileceği içerik için, bkz. <xref:System.Windows.Documents.Hyperlink>).
+- Kullanıcının gezinti işlemini başlatmak için metin ve resimler gibi bir içerik (`Hyperlink` öğenin içerebileceği içerik için, bkz. <xref:System.Windows.Documents.Hyperlink>).
 
 Aşağıdaki şekilde, <xref:System.Windows.Documents.Hyperlink>olan <xref:System.Windows.Controls.Page> sahip bir XBAP gösterilmektedir.
 
@@ -184,13 +184,13 @@ Aşağıdaki şekilde, <xref:System.Windows.Documents.Hyperlink>olan <xref:Syste
 
 ![Geri ve Ileri düğmeleri](./media/navigation-overview/back-and-forward-navigation.png "Geri ve ileri düğmelerine gidin.")
 
-Ayrıca, bir <xref:System.Windows.Controls.Page> ' dan diğerine gezinmeyi desteklemenin yanı sıra, <xref:System.Windows.Documents.Hyperlink> de parça gezintisini destekler.
+Ayrıca, bir <xref:System.Windows.Controls.Page> diğerine gezinmeyi desteklemenin yanı sıra parça gezintisini da destekler <xref:System.Windows.Documents.Hyperlink>.
 
 <a name="FragmentNavigation"></a>
 
 ### <a name="fragment-navigation"></a>Parça gezintisi
 
-*Parça gezintisi* , geçerli <xref:System.Windows.Controls.Page> ya da başka bir <xref:System.Windows.Controls.Page> ' deki bir içerik parçasına yönelik gezindir. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], içerik parçası, adlandırılmış bir öğe tarafından içerilen içeriktir. Adlandırılmış bir öğe, `Name` özniteliği ayarlanmış bir öğedir. Aşağıdaki biçimlendirme, bir içerik parçası içeren adlandırılmış bir `TextBlock` öğesi gösterir.
+*Parça gezintisi* , geçerli <xref:System.Windows.Controls.Page> ya da başka bir <xref:System.Windows.Controls.Page>bir içerik parçasına gezindir. WPF 'de, içerik parçası, adlandırılmış bir öğe tarafından içerilen içeriktir. Adlandırılmış bir öğe, `Name` özniteliği ayarlanmış bir öğedir. Aşağıdaki biçimlendirme, bir içerik parçası içeren adlandırılmış bir `TextBlock` öğesini gösterir.
 
 [!code-xaml[NavigationOverviewSnippets#PageWithContentFragmentsMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithFragments.xaml#pagewithcontentfragmentsmarkup1)]
 [!code-xaml[NavigationOverviewSnippets#PageWithContentFragmentsMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithFragments.xaml#pagewithcontentfragmentsmarkup2)]
@@ -208,14 +208,14 @@ Bir parça URI 'SI aşağıdaki biçime sahiptir.
 
 *PageUri* `#` *ElementName*
 
-Aşağıda bir içerik parçasına gitmek üzere yapılandırılan `Hyperlink` ' ın bir örneği gösterilmektedir.
+Aşağıda, bir içerik parçasına gitmek için yapılandırılmış bir `Hyperlink` örneği gösterilmektedir.
 
 [!code-xaml[NavigationOverviewSnippets#PageThatNavigatesXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageThatNavigatesToFragment.xaml#pagethatnavigatesxaml1)]
 [!code-xaml[NavigationOverviewSnippets#PageThatNavigatesXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageThatNavigatesToFragment.xaml#pagethatnavigatesxaml2)]
 [!code-xaml[NavigationOverviewSnippets#PageThatNavigatesXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageThatNavigatesToFragment.xaml#pagethatnavigatesxaml3)]
 
 > [!NOTE]
-> Bu bölüm, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]' deki varsayılan parça gezintisi uygulamasını açıklar. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Ayrıca, <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType> olayını işlemeyi gerektiren kendi parça gezinti düzeninizi uygulamanıza olanak tanır.
+> Bu bölüm, WPF 'de varsayılan parça gezintisi uygulamasını açıklar. WPF ayrıca, kısmen <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType> olayını işlemeyi gerektiren kendi parça gezinti düzeninizi uygulamanıza olanak tanır.
 
 > [!IMPORTANT]
 > Gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfalardaki parçalara gidebilirsiniz (kök öğe olarak `Page` yalnızca biçimlendirme [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyaları), yalnızca sayfaların HTTP aracılığıyla gözatılabilir.
@@ -226,32 +226,32 @@ Aşağıda bir içerik parçasına gitmek üzere yapılandırılan `Hyperlink` '
 
 ### <a name="navigation-service"></a>Gezinti hizmeti
 
-<xref:System.Windows.Documents.Hyperlink>, bir kullanıcının belirli bir <xref:System.Windows.Controls.Page>gezinmesini başlatmasına izin veriyorsa, sayfayı bulma ve indirme işi <xref:System.Windows.Navigation.NavigationService> sınıfı tarafından gerçekleştirilir. Temelde <xref:System.Windows.Navigation.NavigationService>, <xref:System.Windows.Documents.Hyperlink> gibi istemci kodu adına bir gezinti isteği işleme olanağı sağlar. Ayrıca, <xref:System.Windows.Navigation.NavigationService>, bir gezinti isteğini izlemek ve etkili bir şekilde eğmek için daha yüksek düzeyde destek uygular.
+<xref:System.Windows.Documents.Hyperlink>, bir kullanıcının belirli bir <xref:System.Windows.Controls.Page>gezinmesini başlatmasına izin veriyorsa, sayfayı bulma ve indirme işi <xref:System.Windows.Navigation.NavigationService> sınıfı tarafından gerçekleştirilir. Temelde, <xref:System.Windows.Navigation.NavigationService> <xref:System.Windows.Documents.Hyperlink>gibi istemci kodu adına bir gezinti isteği işleme olanağı sağlar. Ayrıca, <xref:System.Windows.Navigation.NavigationService>, bir gezinti isteğini izlemek ve etkili bir şekilde eğmek için daha yüksek düzeyde destek uygular.
 
-<xref:System.Windows.Documents.Hyperlink> tıklandığında [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], belirtilen paket URI 'sindeki <xref:System.Windows.Controls.Page> bulup indirmek <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> çağırır. İndirilen <xref:System.Windows.Controls.Page>, kök nesnesi indirilen <xref:System.Windows.Controls.Page> ' in bir örneği olan bir nesne ağacına dönüştürülür. Kök <xref:System.Windows.Controls.Page> nesnesine bir başvuru <xref:System.Windows.Navigation.NavigationService.Content%2A?displayProperty=nameWithType> özelliğinde depolanır. Gezindiği içeriğin paket URI 'SI <xref:System.Windows.Navigation.NavigationService.Source%2A?displayProperty=nameWithType> özelliğinde depolanır ve <xref:System.Windows.Navigation.NavigationService.CurrentSource%2A?displayProperty=nameWithType>, gezindiği son sayfanın paket URI 'sini depolar.
+<xref:System.Windows.Documents.Hyperlink> tıklandığında WPF, belirtilen paket URI 'sindeki <xref:System.Windows.Controls.Page> bulmak ve indirmek için <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> çağırır. İndirilen <xref:System.Windows.Controls.Page>, kök nesnesi indirilen <xref:System.Windows.Controls.Page>bir örneği olan bir nesne ağacına dönüştürülür. Kök <xref:System.Windows.Controls.Page> nesnesine bir başvuru <xref:System.Windows.Navigation.NavigationService.Content%2A?displayProperty=nameWithType> özelliğinde depolanır. Gezindiği içeriğin paket URI 'SI <xref:System.Windows.Navigation.NavigationService.Source%2A?displayProperty=nameWithType> özelliğinde depolanır ve <xref:System.Windows.Navigation.NavigationService.CurrentSource%2A?displayProperty=nameWithType>, gezindiği son sayfanın paket URI 'sini depolar.
 
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir uygulamanın birden çok etkin <xref:System.Windows.Navigation.NavigationService>sahip olması mümkündür. Daha fazla bilgi için bu konunun ilerleyen kısımlarında bulunan [Gezinti konakları](#Navigation_Hosts) bölümüne bakın.
+> Bir WPF uygulamasının birden fazla etkin <xref:System.Windows.Navigation.NavigationService>olması mümkündür. Daha fazla bilgi için bu konunun ilerleyen kısımlarında bulunan [Gezinti konakları](#Navigation_Hosts) bölümüne bakın.
 
 <a name="Programmatic_Navigation_with_the_Navigation_Service"></a>
 
 ### <a name="programmatic-navigation-with-the-navigation-service"></a>Gezinti hizmeti ile programlama yoluyla gezinme
 
-<xref:System.Windows.Documents.Hyperlink>, sizin adınıza <xref:System.Windows.Navigation.NavigationService> kullandığından, gezinme, <xref:System.Windows.Documents.Hyperlink>kullanılarak biçimlendirme içinde bildirimli olarak uygulanırsa <xref:System.Windows.Navigation.NavigationService> hakkında bilgi sahibi olmanız gerekmez. Yani, bir <xref:System.Windows.Documents.Hyperlink> ' ın doğrudan veya dolaylı üst öğesi bir gezinti ana bilgisayarı olduğu sürece (bkz. [Gezinti konakları](#Navigation_Hosts)), <xref:System.Windows.Documents.Hyperlink> ' yi bir gezinti isteğini işlemek için gezinti konağının gezinti hizmetini bulabilir ve kullanabilir.
+<xref:System.Windows.Documents.Hyperlink>, sizin adınıza <xref:System.Windows.Navigation.NavigationService> kullandığından, gezinme, <xref:System.Windows.Documents.Hyperlink>kullanılarak biçimlendirme içinde bildirimli olarak uygulanırsa <xref:System.Windows.Navigation.NavigationService> hakkında bilgi sahibi olmanız gerekmez. Yani, bir <xref:System.Windows.Documents.Hyperlink> doğrudan veya dolaylı üst öğesi bir gezinti ana bilgisayarı (bkz. [gezinme Konakları](#Navigation_Hosts)) olduğu sürece, <xref:System.Windows.Documents.Hyperlink> bir gezinti isteğini işlemek için gezinti konağının gezinti hizmetini bulabilir ve kullanabilir.
 
-Ancak, aşağıdakiler de dahil olmak üzere <xref:System.Windows.Navigation.NavigationService> kullanmanız gerektiğinde durumlar vardır:
+Ancak, aşağıdakiler de dahil olmak üzere <xref:System.Windows.Navigation.NavigationService> doğrudan kullanmanız gerektiğinde durumlar vardır:
 
-- Parametresiz bir Oluşturucu kullanarak <xref:System.Windows.Controls.Page> örneğini oluşturmanız gerektiğinde.
+- Parametresiz bir Oluşturucu kullanarak bir <xref:System.Windows.Controls.Page> örneği oluşturmanız gerektiğinde.
 
 - Bu sayfaya geçmeden önce <xref:System.Windows.Controls.Page> özellikleri ayarlamanız gerektiğinde.
 
 - Gezinilmesi gereken <xref:System.Windows.Controls.Page> yalnızca çalışma zamanında belirlenebilir.
 
-Bu durumlarda, <xref:System.Windows.Navigation.NavigationService> nesnesinin <xref:System.Windows.Navigation.NavigationService.Navigate%2A> yöntemini çağırarak programlı bir şekilde Gezinti başlatmak için kod yazmanız gerekir. Bu, <xref:System.Windows.Navigation.NavigationService> başvuru almayı gerektirir.
+Bu durumlarda, <xref:System.Windows.Navigation.NavigationService> nesnesinin <xref:System.Windows.Navigation.NavigationService.Navigate%2A> yöntemini çağırarak programlı bir şekilde Gezinti başlatmak için kod yazmanız gerekir. Bu, <xref:System.Windows.Navigation.NavigationService>başvuru almayı gerektirir.
 
 #### <a name="getting-a-reference-to-the-navigationservice"></a>NavigationService 'e başvuru alma
 
-[Gezinti konakları](#Navigation_Hosts) bölümünde ele alınan nedenlerden dolayı [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir uygulama birden fazla <xref:System.Windows.Navigation.NavigationService>sahip olabilir. Bu, kodunuzun <xref:System.Windows.Navigation.NavigationService> ' ı bulmak için bir yönteme ihtiyaç duymasıdır. Bu, genellikle geçerli <xref:System.Windows.Controls.Page> ' ye gidildiği <xref:System.Windows.Navigation.NavigationService> ' dir. `static`<xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A?displayProperty=nameWithType> yöntemini çağırarak bir <xref:System.Windows.Navigation.NavigationService> başvuru alabilirsiniz. Belirli bir <xref:System.Windows.Controls.Page>gezindiği <xref:System.Windows.Navigation.NavigationService> almak için, <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A> yönteminin bağımsız değişkeni olarak <xref:System.Windows.Controls.Page> başvurusunu geçirirsiniz. Aşağıdaki kod, geçerli <xref:System.Windows.Controls.Page> için <xref:System.Windows.Navigation.NavigationService> ' ın nasıl alınacağını gösterir.
+[Gezinti konakları](#Navigation_Hosts) bölümünde ele alınan nedenlerden dolayı WPF uygulamasında birden fazla <xref:System.Windows.Navigation.NavigationService>olabilir. Bu, kodunuzun, genellikle geçerli <xref:System.Windows.Controls.Page>gezindiği <xref:System.Windows.Navigation.NavigationService> <xref:System.Windows.Navigation.NavigationService>bulmak için bir yol olması anlamına gelir. `static`<xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A?displayProperty=nameWithType> yöntemini çağırarak bir <xref:System.Windows.Navigation.NavigationService> başvuru alabilirsiniz. Belirli bir <xref:System.Windows.Controls.Page>gezindiği <xref:System.Windows.Navigation.NavigationService> almak için, <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A> yönteminin bağımsız değişkeni olarak <xref:System.Windows.Controls.Page> başvurusunu geçirirsiniz. Aşağıdaki kod, geçerli <xref:System.Windows.Controls.Page>için <xref:System.Windows.Navigation.NavigationService> nasıl alınacağını gösterir.
 
 [!code-csharp[NavigationOverviewSnippets#GetNSCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/GetNSPage.xaml.cs#getnscodebehind1)]
 [!code-csharp[NavigationOverviewSnippets#GetNSCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/GetNSPage.xaml.cs#getnscodebehind2)]
@@ -268,14 +268,14 @@ Bir <xref:System.Windows.Controls.Page>için <xref:System.Windows.Navigation.Nav
 
 #### <a name="programmatic-navigation-to-a-page-object"></a>Sayfa nesnesine programlama yoluyla gezinme
 
-Aşağıdaki örnek, bir <xref:System.Windows.Controls.Page> ' e programlı olarak gitmek için <xref:System.Windows.Navigation.NavigationService> ' nın nasıl kullanılacağını gösterir. Programlı gezinme gereklidir çünkü gezinmekte olan <xref:System.Windows.Controls.Page> yalnızca tek, parametresiz bir Oluşturucu kullanılarak örneklenebilir. Parametresiz oluşturucuya sahip <xref:System.Windows.Controls.Page>, aşağıdaki biçimlendirme ve kodda gösterilmiştir.
+Aşağıdaki örnek, <xref:System.Windows.Navigation.NavigationService> programlı olarak bir <xref:System.Windows.Controls.Page>gezinmek için nasıl kullanılacağını gösterir. Programlı gezinme gereklidir çünkü gezinmekte olan <xref:System.Windows.Controls.Page> yalnızca tek, parametresiz olmayan bir Oluşturucu kullanılarak oluşturulabilir. Parametresiz oluşturucuya sahip <xref:System.Windows.Controls.Page> aşağıdaki biçimlendirme ve kodda gösterilmiştir.
 
 [!code-xaml[NavigationOverviewSnippets#PageWithNonDefaultConstructorXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithNonDefaultConstructor.xaml#pagewithnondefaultconstructorxaml)]
 
 [!code-csharp[NavigationOverviewSnippets#PageWithNonDefaultConstructorCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithNonDefaultConstructor.xaml.cs#pagewithnondefaultconstructorcodebehind)]
 [!code-vb[NavigationOverviewSnippets#PageWithNonDefaultConstructorCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/PageWithNonDefaultConstructor.xaml.vb#pagewithnondefaultconstructorcodebehind)]
 
-Parametresiz oluşturucusu ile <xref:System.Windows.Controls.Page> ' e giden <xref:System.Windows.Controls.Page>, aşağıdaki biçimlendirme ve kodda gösterilmiştir.
+Parametresiz oluşturucusu ile <xref:System.Windows.Controls.Page> giden <xref:System.Windows.Controls.Page>, aşağıdaki biçimlendirme ve kodda gösterilmiştir.
 
 [!code-xaml[NavigationOverviewSnippets#NSNavigationPageXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSNavigationPage.xaml#nsnavigationpagexaml)]
 
@@ -295,7 +295,7 @@ Program aracılığıyla bir paket URI 'SI oluşturmanız gerekiyorsa (örneğin
 
 #### <a name="refreshing-the-current-page"></a>Geçerli sayfa yenileniyor
 
-<xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationService.Source%2A?displayProperty=nameWithType> özelliğinde depolanan paket URI 'si ile aynı paket URI 'sine sahipse indirilmez. Geçerli sayfayı yeniden indirmek [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zorlamak için, aşağıdaki örnekte gösterildiği gibi <xref:System.Windows.Navigation.NavigationService.Refresh%2A?displayProperty=nameWithType> yöntemini çağırabilirsiniz.
+<xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationService.Source%2A?displayProperty=nameWithType> özelliğinde depolanan paket URI 'si ile aynı paket URI 'sine sahipse indirilmez. WPF 'in geçerli sayfayı yeniden indirmesini zorlamak için aşağıdaki örnekte gösterildiği gibi <xref:System.Windows.Navigation.NavigationService.Refresh%2A?displayProperty=nameWithType> yöntemini çağırabilirsiniz.
 
 [!code-xaml[NavigationOverviewSnippets#NSRefreshNavigationPageXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSRefreshNavigationPage.xaml#nsrefreshnavigationpagexaml1)]
 
@@ -308,7 +308,7 @@ Program aracılığıyla bir paket URI 'SI oluşturmanız gerekiyorsa (örneğin
 
 ### <a name="navigation-lifetime"></a>Gezinti ömrü
 
-Gördüğünüz gibi, gezintiyi başlatmak için birçok yol vardır. Gezinti başlatıldığında ve gezinme devam ederken, <xref:System.Windows.Navigation.NavigationService> tarafından uygulanan aşağıdaki olayları kullanarak gezintiyi izleyebilir ve etkileyebilirsiniz:
+Gördüğünüz gibi, gezintiyi başlatmak için birçok yol vardır. Gezinti başlatıldığında ve gezinme devam ederken, <xref:System.Windows.Navigation.NavigationService>tarafından uygulanan aşağıdaki olayları kullanarak gezintiyi izleyebilir ve etkileyebilirsiniz:
 
 - <xref:System.Windows.Navigation.NavigationService.Navigating>. Yeni bir gezinti istendiğinde gerçekleşir. Gezinmeyi iptal etmek için kullanılabilir.
 
@@ -332,7 +332,7 @@ Gezinti olayları aşağıdaki şekilde gösterilen sırayla oluşturulur.
 
 ![Sayfa gezintisi akış grafiği](./media/navigation-overview/order-of-navigation-events.png "Sayfa gezintisi olay akışı grafiği")
 
-Genel olarak, <xref:System.Windows.Controls.Page> bu olaylar hakkında endişe vermez. Bir uygulamanın bunlarla ilgilenmesi daha olasıdır ve bu nedenle, bu olaylar <xref:System.Windows.Application> sınıfı tarafından da oluşturulur:
+Genel olarak, <xref:System.Windows.Controls.Page> bu olaylar hakkında endişelenmez. Bir uygulamanın bunlarla ilgilenmesi daha olasıdır ve bu nedenle, bu olaylar <xref:System.Windows.Application> sınıfı tarafından da oluşturulur:
 
 - <xref:System.Windows.Application.Navigating?displayProperty=nameWithType>
 
@@ -348,22 +348,22 @@ Genel olarak, <xref:System.Windows.Controls.Page> bu olaylar hakkında endişe v
 
 - <xref:System.Windows.Application.FragmentNavigation?displayProperty=nameWithType>
 
-Her <xref:System.Windows.Navigation.NavigationService> bir olay harekete geçirirse, <xref:System.Windows.Application> sınıfı ilgili olayı başlatır. <xref:System.Windows.Controls.Frame> ve <xref:System.Windows.Navigation.NavigationWindow>, ilgili kapsamları içinde gezinmeyi algılamak için aynı olayları sunar.
+Her seferinde <xref:System.Windows.Navigation.NavigationService> bir olay harekete geçirirse, <xref:System.Windows.Application> sınıfı ilgili olayı başlatır. <xref:System.Windows.Controls.Frame> ve <xref:System.Windows.Navigation.NavigationWindow>, ilgili kapsamları içinde gezinmeyi algılamak için aynı olayları sunar.
 
-Bazı durumlarda, bu olaylarla ilgili bir <xref:System.Windows.Controls.Page> olabilir. Örneğin, bir <xref:System.Windows.Controls.Page> ' ın kendisinden bir gezintinin iptal edilip edilmeyeceğini tespit etmek için <xref:System.Windows.Navigation.NavigationService.Navigating?displayProperty=nameWithType> olayı işleyebilir. Bu, aşağıdaki örnekte gösterilir.
+Bazı durumlarda, <xref:System.Windows.Controls.Page> bu olaylarla ilgileniyor olabilir. Örneğin, bir <xref:System.Windows.Controls.Page>, gezinmenin kendisinden uzağa iptal edilip edilmeyeceğini tespit etmek için <xref:System.Windows.Navigation.NavigationService.Navigating?displayProperty=nameWithType> olayını işleyebilir. Bu, aşağıdaki örnekte gösterilir.
 
 [!code-xaml[NavigationOverviewSnippets#CancelNavigationPageXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/CancelNavigationPage.xaml#cancelnavigationpagexaml)]
 
 [!code-csharp[NavigationOverviewSnippets#CancelNavigationPageCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/CancelNavigationPage.xaml.cs#cancelnavigationpagecodebehind)]
 [!code-vb[NavigationOverviewSnippets#CancelNavigationPageCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/CancelNavigationPage.xaml.vb#cancelnavigationpagecodebehind)]
 
-Bir işleyiciyi bir <xref:System.Windows.Controls.Page> ' dan bir gezinti olayı ile kaydedersiniz, önceki örnekte olduğu gibi, olay işleyicisinin de kaydını kaldırmanız gerekir. Bunu yapmazsanız, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gezinmesinin günlük kullanarak gezinmede <xref:System.Windows.Controls.Page> açısından yan etkileri olabilir.
+Bir işleyiciyi bir <xref:System.Windows.Controls.Page>gezinti olayına kaydettiğinizde, önceki örnekte olduğu gibi, olay işleyicisinin de kaydını kaldırmanız gerekir. Bunu yapmazsanız, WPF gezintisinin günlük kullanarak gezinti <xref:System.Windows.Controls.Page> hatırlıyor olması açısından yan etkileri olabilir.
 
 <a name="NavigationHistory"></a>
 
 ### <a name="remembering-navigation-with-the-journal"></a>Günlükle gezinti hatırlama
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], bir arka yığın ve ileriye doğru bir yığın olmak üzere iki yığın kullanır: Geçerli <xref:System.Windows.Controls.Page> ' dan yeni bir <xref:System.Windows.Controls.Page> ' e gittiğinizde veya varolan bir <xref:System.Windows.Controls.Page> ' ye ilettiğinizde, geçerli <xref:System.Windows.Controls.Page> *arka yığına*eklenir. Geçerli <xref:System.Windows.Controls.Page> ' dan önceki <xref:System.Windows.Controls.Page> ' e gittiğinizde, geçerli <xref:System.Windows.Controls.Page> *İleri yığına*eklenir. Arka yığın, ileri yığın ve bunları yönetme işlevleri, toplu olarak günlük olarak adlandırılır. Arka yığındaki her öğe ve ileri yığın, <xref:System.Windows.Navigation.JournalEntry> sınıfının bir örneğidir ve *günlük girdisi*olarak adlandırılır.
+WPF, bir arka yığın ve bir ileri yığını olan sayfaları anımsamak için iki yığın kullanır. Geçerli <xref:System.Windows.Controls.Page> yeni bir <xref:System.Windows.Controls.Page> veya varolan bir <xref:System.Windows.Controls.Page>ilettiğinizde, geçerli <xref:System.Windows.Controls.Page> *arka yığına*eklenir. Geçerli <xref:System.Windows.Controls.Page> önceki <xref:System.Windows.Controls.Page>geri gittiğinizde, geçerli <xref:System.Windows.Controls.Page> *İleri yığına*eklenir. Arka yığın, ileri yığın ve bunları yönetme işlevleri, toplu olarak günlük olarak adlandırılır. Arka yığındaki her öğe ve ileri yığın, <xref:System.Windows.Navigation.JournalEntry> sınıfının bir örneğidir ve *günlük girdisi*olarak adlandırılır.
 
 #### <a name="navigating-the-journal-from-internet-explorer"></a>Internet Explorer 'da günlük gezinme
 
@@ -371,12 +371,12 @@ Kavramsal olarak, günlük, Internet Explorer 'daki **geri** ve **İleri** düğ
 
 ![Geri ve Ileri düğmeleri](./media/navigation-overview/back-and-forward-navigation.png "Geri ve ileri düğmelerine gidin.")
 
-Internet Explorer tarafından barındırılan XBAP 'ler için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], günlüğü Internet Explorer 'ın gezinti [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] tümleştirir. Bu, kullanıcıların Internet Explorer 'daki **geri**, **Ileri**ve **son sayfalar** düğmelerini kullanarak bir XBAP içindeki sayfalarda gezinmelerini sağlar.
+Internet Explorer tarafından barındırılan XBAP 'ler için WPF, Internet Explorer 'ın gezinti [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], günlüğü tümleştirir. Bu, kullanıcıların Internet Explorer 'daki **geri**, **Ileri**ve **son sayfalar** düğmelerini kullanarak bir XBAP içindeki sayfalarda gezinmelerini sağlar.
 
 > [!IMPORTANT]
 > Internet Explorer 'da, bir Kullanıcı bir XBAP 'den uzağa ve geri gittiğinde, günlükte yalnızca canlı tutulmayan sayfaların günlük girişleri tutulur. Sayfaların canlı tutulması hakkında tartışma için, bu konunun ilerleyen kısımlarında [sayfa ömrü ve günlük](#PageLifetime) bölümüne bakın.
 
-Varsayılan olarak, Internet Explorer 'ın **son sayfalar** listesinde görüntülenen her bir <xref:System.Windows.Controls.Page> için metin, <xref:System.Windows.Controls.Page> URI 'sidir. Çoğu durumda bu, kullanıcıya özellikle anlamlı değildir. Neyse ki, aşağıdaki seçeneklerden birini kullanarak metni değiştirebilirsiniz:
+Varsayılan olarak, Internet Explorer 'ın **son sayfalar** listesinde görüntülenen her bir <xref:System.Windows.Controls.Page> için metin, <xref:System.Windows.Controls.Page>URI 'sidir. Çoğu durumda bu, kullanıcıya özellikle anlamlı değildir. Neyse ki, aşağıdaki seçeneklerden birini kullanarak metni değiştirebilirsiniz:
 
 1. İliştirilmiş `JournalEntry.Name` özniteliği değeri.
 
@@ -384,11 +384,11 @@ Varsayılan olarak, Internet Explorer 'ın **son sayfalar** listesinde görünt�
 
 3. `Page.WindowTitle` öznitelik değeri ve geçerli <xref:System.Windows.Controls.Page>URI 'SI.
 
-4. Geçerli <xref:System.Windows.Controls.Page> URI 'SI. (Varsayılan)
+4. Geçerli <xref:System.Windows.Controls.Page>URI 'SI. (Varsayılan)
 
-Seçeneklerin listelenme sırası, metni bulmak için öncelik sırasına göre eşleşir. Örneğin, `JournalEntry.Name` ayarlanmışsa, diğer değerler yoksayılır.
+Seçeneklerin listelenme sırası, metni bulmak için öncelik sırasına göre eşleşir. Örneğin, `JournalEntry.Name` ayarlandıysa, diğer değerler yok sayılır.
 
-Aşağıdaki örnek, bir günlük girişi için görüntülenen metni değiştirmek üzere `Page.Title` özniteliğini kullanır.
+Aşağıdaki örnek, bir günlük girişi için görüntülenen metni değiştirmek için `Page.Title` özniteliğini kullanır.
 
 [!code-xaml[NavigationOverviewSnippets#PageTitleMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithTitle.xaml#pagetitlemarkup1)]
 [!code-xaml[NavigationOverviewSnippets#PageTitleMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithTitle.xaml#pagetitlemarkup2)]
@@ -400,9 +400,9 @@ Aşağıdaki örnek, bir günlük girişi için görüntülenen metni değiştir
 
 #### <a name="navigating-the-journal-using-wpf"></a>WPF kullanarak günlükte gezinme
 
-Bir Kullanıcı, Internet Explorer 'daki **geri**, **Ileri**ve **son sayfaları** kullanarak günlüğe gidebilse de, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]tarafından sunulan hem bildirime dayalı hem de programlama mekanizmalarını kullanarak günlükte gezinebilirsiniz. Bunu yapmak için bir neden, sayfalarınızda özel gezinti 'leri sağlamaktır.
+Bir Kullanıcı, Internet Explorer 'daki **geri**, **Ileri**ve **son sayfaları** kullanarak günlüğe gidebilse de, WPF tarafından sunulan hem bildirime dayalı hem de programlama mekanizmalarını kullanarak günlükte gezinebilirsiniz. Bunu yapmak için bir neden, sayfalarınızda özel gezinti 'leri sağlamaktır.
 
-<xref:System.Windows.Input.NavigationCommands>tarafından sunulan gezinti komutlarını kullanarak bildirimli olarak günlük gezintisi desteği ekleyebilirsiniz. Aşağıdaki örnek `BrowseBack` gezinti komutunun nasıl kullanılacağını gösterir.
+<xref:System.Windows.Input.NavigationCommands>tarafından sunulan gezinti komutlarını kullanarak bildirimli olarak günlük gezintisi desteği ekleyebilirsiniz. Aşağıdaki örnek, `BrowseBack` gezinti komutunun nasıl kullanılacağını göstermektedir.
 
 [!code-xaml[NavigationOverviewSnippets#NavigationCommandsPageXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NavigationCommandsPage.xaml#navigationcommandspagexaml1)]
 [!code-xaml[NavigationOverviewSnippets#NavigationCommandsPageXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NavigationCommandsPage.xaml#navigationcommandspagexaml2)]
@@ -427,17 +427,17 @@ Günlük Ayrıca, bu konunun ilerleyen kısımlarında bulunan [Içerik durumunu
 
 Grafik, animasyon ve medya dahil zengin içerik içeren birden çok sayfalı bir XBAP düşünün. Özellikle video ve ses medyası kullanılıyorsa, bu gibi sayfalar için bellek ayak izi oldukça büyük olabilir. Bu tür bir XBAP, Journal 'ın gezindiği sayfaları "anımsar" olarak, büyük ve belirgin bir bellek miktarını hızla tüketebilir.
 
-Bu nedenle, günlüğün varsayılan davranışı, <xref:System.Windows.Controls.Page> nesnesine bir başvuru yerine her günlük girişinde <xref:System.Windows.Controls.Page> meta verileri depolamadır. Bir günlük girişi gezindiği zaman, <xref:System.Windows.Controls.Page> meta verisi belirtilen <xref:System.Windows.Controls.Page> ' in yeni bir örneğini oluşturmak için kullanılır. Sonuç olarak, gezindiği her <xref:System.Windows.Controls.Page>, aşağıdaki şekilde gösterilen yaşam süresine sahiptir.
+Bu nedenle, günlüğün varsayılan davranışı, <xref:System.Windows.Controls.Page> nesnesine bir başvuru yerine her günlük girişinde <xref:System.Windows.Controls.Page> meta verileri depolamadır. Bir günlük girişi gezindiği zaman, <xref:System.Windows.Controls.Page> meta verileri, belirtilen <xref:System.Windows.Controls.Page>yeni bir örneğini oluşturmak için kullanılır. Sonuç olarak, gezindiği her <xref:System.Windows.Controls.Page>, aşağıdaki şekilde gösterilen yaşam süresine sahiptir.
 
 ![Sayfa ömrü](./media/navigation-overview/navigated-page-lifetime.png "Bu, bir sayfa gezindiği zaman ömrünü gösterir.")
 
-Varsayılan günlük kaydı davranışının kullanılması bellek tüketimine kaydedebilse de, sayfa başına işleme performansı azaltılabilir; <xref:System.Windows.Controls.Page> yeniden örnekleniyor, özellikle çok sayıda içerik varsa zaman yoğunluğu olabilir. Günlükte <xref:System.Windows.Controls.Page> örneğini tutmanız gerekiyorsa, bunu yapmak için iki teknikte çizim yapabilirsiniz. İlk olarak, <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> yöntemini çağırarak program aracılığıyla bir <xref:System.Windows.Controls.Page> nesnesine gidebilirsiniz.
+Varsayılan günlük kaydı davranışının kullanılması bellek tüketimine kaydedebilse de, sayfa başına işleme performansı azaltılabilir; <xref:System.Windows.Controls.Page> yeniden örnekleniyor, özellikle çok sayıda içerik varsa zaman yoğunluğu olabilir. Günlükte bir <xref:System.Windows.Controls.Page> örneğini tutmanız gerekiyorsa, bunu yapmak için iki teknikte çizim yapabilirsiniz. İlk olarak, <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> yöntemini çağırarak program aracılığıyla bir <xref:System.Windows.Controls.Page> nesnesine gidebilirsiniz.
 
-İkinci olarak, <xref:System.Windows.Controls.Page.KeepAlive%2A> özelliğini `true` olarak ayarlayarak, günlükteki bir <xref:System.Windows.Controls.Page> örneğini [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] belirtebilirsiniz (varsayılan değer `false`' dir). Aşağıdaki örnekte gösterildiği gibi, biçimlendirme içinde <xref:System.Windows.Controls.Page.KeepAlive%2A> bildirimli olarak ayarlayabilirsiniz.
+İkincisi, WPF 'in, <xref:System.Windows.Controls.Page.KeepAlive%2A> özelliğini `true` olarak ayarlayarak <xref:System.Windows.Controls.Page> bir örneğini saklar (varsayılan `false`' dir) belirtebilirsiniz. Aşağıdaki örnekte gösterildiği gibi, biçimlendirme içinde <xref:System.Windows.Controls.Page.KeepAlive%2A> bildirimli olarak ayarlayabilirsiniz.
 
 [!code-xaml[NavigationOverviewSnippets#KeepAlivePageXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/KeepAlivePage.xaml#keepalivepagexaml)]
 
-Etkin tutulan <xref:System.Windows.Controls.Page> yaşam süresi, olmayan bir sunucudan daha çok farklıdır. Canlı tutulan bir <xref:System.Windows.Controls.Page> ' a gidildiği zaman, etkin olmayan bir <xref:System.Windows.Controls.Page> gibi oluşturulur. Ancak, <xref:System.Windows.Controls.Page> ' ın bir örneği günlüğe korunduğu için, günlükte kaldığı sürece hiçbir zaman yeniden örneklenemez. Sonuç olarak, bir <xref:System.Windows.Controls.Page> <xref:System.Windows.Controls.Page> her gezindikten sonra çağrılması gereken başlatma mantığı varsa, <xref:System.Windows.FrameworkElement.Loaded> olayı için oluşturucudan bir işleyiciye taşımalısınız. Aşağıdaki şekilde gösterildiği gibi, <xref:System.Windows.FrameworkElement.Loaded> ve <xref:System.Windows.FrameworkElement.Unloaded> olayları sırasıyla bir <xref:System.Windows.Controls.Page> ' ye gidildiği her seferinde de oluşturulur.
+Etkin tutulan bir <xref:System.Windows.Controls.Page> ömrü, daha fazla olmayan bir sunucudan daha çok farklıdır. Canlı tutulan bir <xref:System.Windows.Controls.Page> ilk kez gezindiği için, yalnızca canlı tutulmayan bir <xref:System.Windows.Controls.Page> gibi oluşturulur. Ancak, <xref:System.Windows.Controls.Page> bir örneği günlüğe korunduğu için, günlükte kaldığı sürece hiçbir zaman yeniden örneklenemez. Sonuç olarak, bir <xref:System.Windows.Controls.Page> <xref:System.Windows.Controls.Page> her gezindikten sonra çağrılması gereken başlatma mantığı varsa, <xref:System.Windows.FrameworkElement.Loaded> olayı için oluşturucudan bir işleyiciye taşımalısınız. Aşağıdaki şekilde gösterildiği gibi, <xref:System.Windows.FrameworkElement.Loaded> ve <xref:System.Windows.FrameworkElement.Unloaded> olayları, sırasıyla her bir <xref:System.Windows.Controls.Page> gezindiği her seferinde de oluşturulur.
 
 ![Yüklenen ve yüklenmeyen olaylar tetiklenir](./media/navigation-overview/loaded-and-unloaded-events.png "Yüklenen ve yüklenmeyen olaylar, bir sayfaya ve öğesinden gidildiği zaman tetiklenir.")
 
@@ -447,7 +447,7 @@ Etkin tutulan <xref:System.Windows.Controls.Page> yaşam süresi, olmayan bir su
 
 - Olay işleyicilerini, tarafından uygulanmayan olaylarla kaydedin.
 
-Bunlardan herhangi birini yapmak, <xref:System.Windows.Controls.Page> ' ı bellekten kaldırıldıktan sonra bile bellekte bekletilmeye zorlayan başvurular oluşturur.
+Bunlardan herhangi birinin yapılması, günlükten kaldırıldıktan sonra bile <xref:System.Windows.Controls.Page> bellekte bekletilmeye zorlayan başvurular oluşturur.
 
 Genel olarak, <xref:System.Windows.Controls.Page> canlı tutmamak için varsayılan <xref:System.Windows.Controls.Page> davranışını tercih etmelisiniz. Ancak, bu, sonraki bölümde ele alınan durum etkilerine sahiptir.
 
@@ -455,15 +455,15 @@ Genel olarak, <xref:System.Windows.Controls.Page> canlı tutmamak için varsayı
 
 ### <a name="retaining-content-state-with-navigation-history"></a>Içerik durumunu gezinti geçmişi ile koruma
 
-Bir <xref:System.Windows.Controls.Page> etkin tutulmazsa ve kullanıcıdan veri toplayacak denetimler içeriyorsa, bir Kullanıcı <xref:System.Windows.Controls.Page> ' den uzaklaştığında verilere ne olur? Kullanıcı deneyimi perspektifinden, Kullanıcı daha önce girdikleri verileri görmeyi bekler. Ne yazık ki, her bir gezintide <xref:System.Windows.Controls.Page> ' ın yeni bir örneği oluşturulduğundan, verilerin toplandığı denetimlerin yeniden oluşturulması ve verilerin kaybolması.
+Bir <xref:System.Windows.Controls.Page> etkin tutulmazsa ve kullanıcıdan veri toplayacak denetimler varsa, bir Kullanıcı, <xref:System.Windows.Controls.Page>geri dönerek geri gittiğinde verilere ne olur? Kullanıcı deneyimi perspektifinden, Kullanıcı daha önce girdikleri verileri görmeyi bekler. Ne yazık ki her bir gezinmede <xref:System.Windows.Controls.Page> yeni bir örneği oluşturulduğundan, verileri toplayan denetimler yeniden oluşturulur ve veriler kaybolur.
 
-Neyse ki günlük, Denetim verileri de dahil olmak üzere <xref:System.Windows.Controls.Page> gezginlerinin genelinde verileri hatırlama desteği sağlar. Özellikle, her bir <xref:System.Windows.Controls.Page> yönelik günlük girdisi, ilişkili <xref:System.Windows.Controls.Page> durumu için geçici bir kapsayıcı görevi görür. Aşağıdaki adımlar, <xref:System.Windows.Controls.Page> ' dan gezindiği zaman bu desteğin nasıl kullanıldığını özetler:
+Neyse ki günlük, Denetim verileri de dahil olmak üzere <xref:System.Windows.Controls.Page> gezginlerinin genelinde verileri hatırlama desteği sağlar. Özellikle, her bir <xref:System.Windows.Controls.Page> yönelik günlük girdisi, ilişkili <xref:System.Windows.Controls.Page> durumu için geçici bir kapsayıcı görevi görür. Aşağıdaki adımlar, bir <xref:System.Windows.Controls.Page> gezindiği zaman bu desteğin nasıl kullanıldığını özetler:
 
-1. Geçerli <xref:System.Windows.Controls.Page> girişi günlüğe eklenir.
+1. Geçerli <xref:System.Windows.Controls.Page> için bir giriş günlüğe eklenir.
 
 2. <xref:System.Windows.Controls.Page> durumu, Bu sayfa için arka yığına eklenen günlük girdisiyle birlikte depolanır.
 
-3. Yeni <xref:System.Windows.Controls.Page> ' a gidildi.
+3. Yeni <xref:System.Windows.Controls.Page> gezilebilir.
 
 Sayfa <xref:System.Windows.Controls.Page> geri gezinirken, günlük kullanılarak aşağıdaki adımlar gerçekleştirilir:
 
@@ -473,7 +473,7 @@ Sayfa <xref:System.Windows.Controls.Page> geri gezinirken, günlük kullanılara
 
 3. <xref:System.Windows.Controls.Page> öğesine geri gidilmesini sağlar.
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], aşağıdaki denetimler <xref:System.Windows.Controls.Page>kullanıldığında otomatik olarak bu desteği kullanır:
+WPF, aşağıdaki denetimler <xref:System.Windows.Controls.Page>kullanıldığında otomatik olarak bu desteği kullanır:
 
 - <xref:System.Windows.Controls.CheckBox>
 
@@ -501,7 +501,7 @@ Sayfa <xref:System.Windows.Controls.Page> geri gezinirken, günlük kullanılara
 
 - <xref:System.Windows.Controls.TextBox>
 
-Bir <xref:System.Windows.Controls.Page> bu denetimleri kullanıyorsa, bunlara girilen veriler, **sık kullanılan renk** <xref:System.Windows.Controls.ListBox> aşağıdaki şekilde gösterildiği gibi <xref:System.Windows.Controls.Page> gezginlerine göre hatırlanır.
+Bir <xref:System.Windows.Controls.Page> bu denetimleri kullanıyorsa, bunlara girilen veriler, **sık kullanılan renk**<xref:System.Windows.Controls.ListBox> aşağıdaki şekilde gösterildiği gibi <xref:System.Windows.Controls.Page> gezginlerine göre hatırlanır.
 
 ![Durumu hatırlayacağı denetimlerin bulunduğu sayfa](./media/navigation-overview/data-remembered-across-page-navigations.png "Girilen veriler sayfa gezginlerine göre hatırlanır.")
 
@@ -515,9 +515,9 @@ Tek bir <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.Page>
 
 <a name="Cookies"></a>
 
-### <a name="cookies"></a>Özgü
+### <a name="cookies"></a>Tanımlama bilgileri
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaların verileri depolayabileceği başka bir yol da, <xref:System.Windows.Application.SetCookie%2A> ve <xref:System.Windows.Application.GetCookie%2A> yöntemleri kullanılarak oluşturulan, güncellenen ve silinen tanımlama bilgileriyle yapılır. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] içinde oluşturabileceğiniz tanımlama bilgileri, diğer Web uygulaması türlerinin kullandığı tanımlama bilgilerinden oluşur; tanımlama bilgileri, uygulama oturumları sırasında veya üzerinde bir istemci makinesinde bir uygulama tarafından depolanan rastgele veri parçalarından oluşur. Tanımlama bilgisi verileri genellikle aşağıdaki biçimde bir ad/değer çifti biçimini alır.
+WPF uygulamalarının verileri depolayabileceği diğer bir yöntem de <xref:System.Windows.Application.SetCookie%2A> ve <xref:System.Windows.Application.GetCookie%2A> yöntemleri kullanılarak oluşturulan, güncellenen ve silinen tanımlama bilgileriyle yapılır. WPF 'de oluşturabileceğiniz tanımlama bilgileri, diğer Web uygulaması türlerinin kullandığı tanımlama bilgilerine sahiptir; tanımlama bilgileri, uygulama oturumları sırasında veya üzerinde bir istemci makinesinde bir uygulama tarafından depolanan rastgele veri parçalarından oluşur. Tanımlama bilgisi verileri genellikle aşağıdaki biçimde bir ad/değer çifti biçimini alır.
 
 *Ad* `=` *değeri*
 
@@ -525,15 +525,15 @@ Veriler <xref:System.Windows.Application.SetCookie%2A>geçirildiğinde, tanımla
 
 Bir tanımlama bilgisini uygulama oturumlarında depolamak için, aşağıdaki biçimi kullanarak tanımlama bilgisine bir sona erme tarihi eklenmelidir.
 
-*Ad* `=` *değer* `; expires=DAY, DD-MMM-YYYY HH:MM:SS GMT`
+*Ad* `=` *değeri* `; expires=DAY, DD-MMM-YYYY HH:MM:SS GMT`
 
 Son kullanma tarihine sahip bir tanımlama bilgisi, tanımlama bilgisi süresi dolana kadar geçerli Windows yüklemesinin Temporary Internet Files klasöründe depolanır. Bu tür bir tanımlama bilgisi, uygulama oturumlarında devam ettiğinden *kalıcı tanımlama bilgisi* olarak bilinir.
 
 <xref:System.Windows.Application.GetCookie%2A> yöntemini çağırarak hem oturum hem de kalıcı tanımlama bilgilerini, tanımlama bilgisinin <xref:System.Windows.Application.SetCookie%2A> yöntemiyle ayarlandığı konumun <xref:System.Uri> geçirerek elde edersiniz.
 
-Tanımlama bilgilerinin [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]desteklenme yöntemlerinden bazıları aşağıda verilmiştir:
+Aşağıdakiler, WPF 'de tanımlama bilgilerinin desteklediği bazı yollardır:
 
-- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulamalar ve XBAP 'ler, tanımlama bilgilerini oluşturup yönetebilir.
+- WPF tek başına uygulamaları ve XBAP 'ler, tanımlama bilgilerini oluşturup yönetebilir.
 
 - Bir XBAP tarafından oluşturulan tanımlama bilgilerine tarayıcıdan erişilebilir.
 
@@ -545,17 +545,17 @@ Tanımlama bilgilerinin [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptl
 
 - Hem üst düzey XBAP 'ler hem de IFRAME 'lerde barındırılan XBAP, tanımlama bilgilerine erişebilir.
 
-- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 'de tanımlama bilgisi desteği, desteklenen tüm tarayıcılarda aynıdır.
+- WPF 'de tanımlama bilgisi desteği, desteklenen tüm tarayıcılarda aynıdır.
 
-- Internet Explorer 'da, tanımlama bilgileriyle ilgili P3P ilkesi, özellikle birinci taraf ve üçüncü taraf XBAP 'ler bakımından [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]tarafından kabul edilir.
+- Internet Explorer 'da, tanımlama bilgileriyle ilgili olan P3P ilkesi, özellikle birinci taraf ve üçüncü taraf XBAP 'ler açısından WPF tarafından kabul edilir.
 
 <a name="Structured_Navigation"></a>
 
 ### <a name="structured-navigation"></a>Yapılandırılmış gezinti
 
-Bir <xref:System.Windows.Controls.Page> ' dan diğerine veri geçirmeniz gerekiyorsa, verileri bağımsız değişken olarak <xref:System.Windows.Controls.Page> ' in parametresiz oluşturucusuna geçirebilirsiniz. Bu tekniği kullanıyorsanız, <xref:System.Windows.Controls.Page> canlı tutmanız gerektiğini unutmayın; Aksi takdirde, <xref:System.Windows.Controls.Page>bir sonraki sefer, parametresiz oluşturucuyu kullanarak <xref:System.Windows.Controls.Page> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] yeniden başlatır.
+Verileri bir <xref:System.Windows.Controls.Page> diğerine geçirmeniz gerekirse, verileri, <xref:System.Windows.Controls.Page>olmayan bir oluşturucuya bağımsız değişken olarak geçirebilirsiniz. Bu tekniği kullanıyorsanız, <xref:System.Windows.Controls.Page> canlı tutmanız gerektiğini unutmayın; Aksi takdirde, <xref:System.Windows.Controls.Page>bir sonraki sefer, WPF parametresiz oluşturucuyu kullanarak <xref:System.Windows.Controls.Page> yeniden başlatır.
 
-Alternatif olarak, <xref:System.Windows.Controls.Page> ' ı, geçirilmesi gereken verilerle ayarlanmış özellikleri uygulayabilir. Ancak, <xref:System.Windows.Controls.Page> ' ın verileri kendisine gidildiği <xref:System.Windows.Controls.Page> ' e geçirmesi gerektiğinde bu şeyler karmaşık hale gelir. Bu sorun, gezinmeden sonra <xref:System.Windows.Controls.Page> ' ın geri döndürüldüğünden emin olmak için gezinmede mekanizmaların yerel olarak desteklemediği bir sorundur. Temelde, gezinme çağrı/döndürme semantiğini desteklemez. Bu sorunu çözmek için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], bir <xref:System.Windows.Controls.Page> öngörülebilir ve yapılandırılmış bir biçimde döndürüldüğünden emin olmak için kullanabileceğiniz <xref:System.Windows.Navigation.PageFunction%601> sınıfını sağlar. Daha fazla bilgi için bkz. [yapılandırılmış gezintiye genel bakış](structured-navigation-overview.md).
+Alternatif olarak, <xref:System.Windows.Controls.Page> geçirilmesi gereken verilerle ayarlanmış özellikleri uygulayabilir. Ancak, bir <xref:System.Windows.Controls.Page> verileri kendisine gidilmiş <xref:System.Windows.Controls.Page> iletmek gerektiğinde bu şeyler karmaşık hale gelir. Bu sorun, gezinmeden sonra <xref:System.Windows.Controls.Page> döndürüldüğünden emin olmak için gezintinin yerel olarak desteklememesinden de sorumludur. Temelde, gezinme çağrı/döndürme semantiğini desteklemez. Bu sorunu çözmek için WPF, bir <xref:System.Windows.Controls.Page> öngörülebilir ve yapılandırılmış bir biçimde döndürüldüğünden emin olmak için kullanabileceğiniz <xref:System.Windows.Navigation.PageFunction%601> sınıfını sağlar. Daha fazla bilgi için bkz. [yapılandırılmış gezintiye genel bakış](structured-navigation-overview.md).
 
 <a name="The_NavigationWindow_Class"></a>
 
@@ -571,14 +571,14 @@ Bu noktada, gezinilebilir içeriğe sahip uygulamalar oluşturmak için en büy�
 
 Tek başına uygulamalarınıza tarayıcı stili gezinme eklemek için <xref:System.Windows.Navigation.NavigationWindow> sınıfını kullanabilirsiniz. <xref:System.Windows.Navigation.NavigationWindow> <xref:System.Windows.Window> türetilir ve bunu XBAP 'nin sağladığı gezinti için aynı desteğe genişletir. <xref:System.Windows.Navigation.NavigationWindow>, tek başına uygulamanızın ana penceresi veya iletişim kutusu gibi ikincil bir pencere olarak kullanabilirsiniz.
 
-<xref:System.Windows.Navigation.NavigationWindow>uygulamak için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] (<xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>, vb.) en üst düzey sınıflarda olduğu gibi, biçimlendirme ve arka plan kod birleşimini kullanırsınız. Bu, aşağıdaki örnekte gösterilir.
+<xref:System.Windows.Navigation.NavigationWindow>uygulamak için WPF (<xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>vb.) en üst düzey sınıflarda olduğu gibi, biçimlendirme ve arka plan kod birleşimini kullanırsınız. Bu, aşağıdaki örnekte gösterilir.
 
 [!code-xaml[IntroToNavNavigationWindowSnippets#NavigationWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/MainWindow.xaml#navigationwindowmarkup)]
 
 [!code-csharp[IntroToNavNavigationWindowSnippets#NavigationWindowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/MainWindow.xaml.cs#navigationwindowcodebehind)]
 [!code-vb[IntroToNavNavigationWindowSnippets#NavigationWindowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/VisualBasic/MainWindow.xaml.vb#navigationwindowcodebehind)]
 
-Bu kod, <xref:System.Windows.Navigation.NavigationWindow> açıldığında otomatik olarak bir <xref:System.Windows.Controls.Page> (Ana sayfa. xaml) öğesine giden <xref:System.Windows.Navigation.NavigationWindow> oluşturur. <xref:System.Windows.Navigation.NavigationWindow> ana uygulama penceresuyorsa, bu işlemi başlatmak için `StartupUri` özniteliğini kullanabilirsiniz. Bu, aşağıdaki biçimlendirmede gösterilmiştir.
+Bu kod, <xref:System.Windows.Navigation.NavigationWindow> açıldığında otomatik olarak bir <xref:System.Windows.Controls.Page> (giriş sayfası. xaml) öğesine giden bir <xref:System.Windows.Navigation.NavigationWindow> oluşturur. <xref:System.Windows.Navigation.NavigationWindow> ana uygulama penceresuyorsa, bu işlemi başlatmak için `StartupUri` özniteliğini kullanabilirsiniz. Bu, aşağıdaki biçimlendirmede gösterilmiştir.
 
 [!code-xaml[IntroToNavNavigationWindowSnippets#AppLaunchNavWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/App.xaml#applaunchnavwindow)]
 
@@ -586,7 +586,7 @@ Aşağıdaki şekilde, tek başına bir uygulamanın ana penceresi olarak <xref:
 
 ![Ana pencere](./media/navigation-overview/navigation-window-as-main-window.png "Ana pencere olarak gezinti penceresi")
 
-Bu şekilde, <xref:System.Windows.Navigation.NavigationWindow> ' ın bir başlık olduğunu görebilirsiniz. Bu, önceki örnekteki <xref:System.Windows.Navigation.NavigationWindow> uygulama kodunda ayarlanmamış olsa da olabilir. Bunun yerine, başlık aşağıdaki kodda gösterilen <xref:System.Windows.Controls.Page.WindowTitle%2A> özelliği kullanılarak ayarlanır.
+Bu şekilde, <xref:System.Windows.Navigation.NavigationWindow> bir başlık olduğunu görebilirsiniz. Bu, önceki örnekteki <xref:System.Windows.Navigation.NavigationWindow> uygulama kodunda ayarlanmamış olsa da olabilir. Bunun yerine, başlık aşağıdaki kodda gösterilen <xref:System.Windows.Controls.Page.WindowTitle%2A> özelliği kullanılarak ayarlanır.
 
 [!code-xaml[IntroToNavNavigationWindowSnippets#HomePageMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/HomePage.xaml#homepagemarkup1)]
 [!code-xaml[IntroToNavNavigationWindowSnippets#HomePageMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/HomePage.xaml#homepagemarkup2)]
@@ -597,7 +597,7 @@ Genellikle kendi <xref:System.Windows.Navigation.NavigationWindow> davranışın
 
 [!code-xaml[IntroToNavNavigationWindowSnippets#AppLaunchPage](~/samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/AnotherApp.xaml#applaunchpage)]
 
-İletişim kutusu gibi bir ikincil uygulama penceresinin <xref:System.Windows.Navigation.NavigationWindow> olmasını istiyorsanız, aşağıdaki örnekteki kodu kullanarak açabilirsiniz.
+İletişim kutusu gibi bir ikincil uygulama penceresinin <xref:System.Windows.Navigation.NavigationWindow>olmasını istiyorsanız, bu kodu açmak için aşağıdaki örnekteki kodu kullanabilirsiniz.
 
 [!code-csharp[IntroToNavNavigationWindowSnippets#CreateNWDialogBox](~/samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/DialogOwnerWindow.xaml.cs#createnwdialogbox)]
 [!code-vb[IntroToNavNavigationWindowSnippets#CreateNWDialogBox](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/VisualBasic/DialogOwnerWindow.xaml.vb#createnwdialogbox)]
@@ -606,21 +606,21 @@ Aşağıdaki şekilde sonuç gösterilmektedir.
 
 ![İletişim kutusu](./media/navigation-overview/navigation-window-as-dialog-box.png "İletişim kutusu olarak gezinti penceresi")
 
-Gördüğünüz gibi, <xref:System.Windows.Navigation.NavigationWindow>, kullanıcıların günlükte gezinmesine izin veren Internet Explorer stili **geri** ve **İleri** düğmelerini görüntüler. Bu düğmeler, aşağıdaki şekilde gösterildiği gibi aynı kullanıcı deneyimini sağlar.
+Gördüğünüz gibi, <xref:System.Windows.Navigation.NavigationWindow> kullanıcıların günlükte gezinmesine izin veren Internet Explorer stili **geri** ve **İleri** düğmelerini görüntüler. Bu düğmeler, aşağıdaki şekilde gösterildiği gibi aynı kullanıcı deneyimini sağlar.
 
 ![NavigationWindow 'daki geri ve Ileri düğmeleri](./media/navigation-overview/back-and-forward-buttons-in-navigation-window.png "Gezinti penceresinde geri ve Ileri düğmeleri")
 
 Sayfalarınız kendi günlük gezintisi desteğini ve Kullanıcı arabirimini sağladıysanız, <xref:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI%2A> özelliğinin değerini `false`olarak ayarlayarak <xref:System.Windows.Navigation.NavigationWindow> tarafından görüntülenmiş **geri** ve **İleri** düğmelerini gizleyebilirsiniz.
 
-Alternatif olarak, <xref:System.Windows.Navigation.NavigationWindow> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] değiştirmek için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] özelleştirme desteğini kullanabilirsiniz.
+Alternatif olarak, <xref:System.Windows.Navigation.NavigationWindow> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] değiştirmek için WPF 'de özelleştirme desteğini de kullanabilirsiniz.
 
 <a name="Frame_in_Standalone_Applications"></a>
 
 ## <a name="the-frame-class"></a>Frame sınıfı
 
-Hem tarayıcı hem de <xref:System.Windows.Navigation.NavigationWindow>, gezinebilir içeriği barındıran Windows ' dır. Bazı durumlarda, uygulamalarda bir pencerenin tamamında barındırılması gerekmeyen içerikler vardır. Bunun yerine, bu içerik diğer içeriğin içinde barındırılır. <xref:System.Windows.Controls.Frame> sınıfını kullanarak diğer içeriklere gezinebilir içerik ekleyebilirsiniz. <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> ve XBAP ile aynı desteği sağlar.
+Hem tarayıcı hem de <xref:System.Windows.Navigation.NavigationWindow> gezinebilir içeriği barındıran Windows ' dir. Bazı durumlarda, uygulamalarda bir pencerenin tamamında barındırılması gerekmeyen içerikler vardır. Bunun yerine, bu içerik diğer içeriğin içinde barındırılır. <xref:System.Windows.Controls.Frame> sınıfını kullanarak diğer içeriklere gezinebilir içerik ekleyebilirsiniz. <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> ve XBAP ile aynı desteği sağlar.
 
-Aşağıdaki örnek, `Frame` öğesini kullanarak <xref:System.Windows.Controls.Frame> ' a <xref:System.Windows.Controls.Page> ' e nasıl ekleneceğini gösterir.
+Aşağıdaki örnek, `Frame` öğesi kullanılarak bir <xref:System.Windows.Controls.Page> bildirimli olarak bir <xref:System.Windows.Controls.Frame> nasıl ekleneceğini gösterir.
 
 [!code-xaml[NavigationOverviewSnippets#FrameHostPageXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPage.xaml#framehostpagexaml1)]
 [!code-xaml[NavigationOverviewSnippets#FrameHostPageXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPage.xaml#framehostpagexaml2)]
@@ -630,9 +630,9 @@ Bu biçimlendirme, <xref:System.Windows.Controls.Frame> başlangıçta gidilecek
 
 ![Birden çok sayfa arasında gezindiği çerçeve](./media/navigation-overview/frame-navigation-between-multiple-pages.png "Bu, birden çok sayfa arasında bir çerçeve gezintisi gösterir.")
 
-Yalnızca bir <xref:System.Windows.Controls.Page> içeriğinin içinde <xref:System.Windows.Controls.Frame> kullanmanız gerekmez. Ayrıca, bir <xref:System.Windows.Window> içeriğinin içinde <xref:System.Windows.Controls.Frame> barındırmak için de ortaktır.
+Yalnızca bir <xref:System.Windows.Controls.Page>içeriğinin içinde <xref:System.Windows.Controls.Frame> kullanmanız gerekmez. Ayrıca, bir <xref:System.Windows.Window>içeriğinin içinde <xref:System.Windows.Controls.Frame> barındırmak da yaygındır.
 
-Varsayılan olarak, <xref:System.Windows.Controls.Frame> yalnızca başka bir günlük yokluğunda kendi günlüğünü kullanır. <xref:System.Windows.Controls.Frame>, bir <xref:System.Windows.Navigation.NavigationWindow> veya XBAP içinde barındırılan içeriğin parçasıysa <xref:System.Windows.Controls.Frame> <xref:System.Windows.Navigation.NavigationWindow> veya XBAP 'ye ait günlüğü kullanır. Bazen, <xref:System.Windows.Controls.Frame> ' ın kendi günlüğünden sorumlu olması gerekebilir. Bunun bir nedeni, <xref:System.Windows.Controls.Frame> tarafından barındırılan sayfalarda günlük gezintisine izin vermektedir. Bu, aşağıdaki şekilde gösterilmiştir.
+Varsayılan olarak, <xref:System.Windows.Controls.Frame> yalnızca kendi günlüğünü başka bir günlük yokluğunda kullanır. <xref:System.Windows.Controls.Frame>, bir <xref:System.Windows.Navigation.NavigationWindow> veya XBAP içinde barındırılan içeriğin parçasıysa <xref:System.Windows.Controls.Frame> <xref:System.Windows.Navigation.NavigationWindow> veya XBAP 'ye ait günlüğü kullanır. Bazen, bir <xref:System.Windows.Controls.Frame> kendi günlüğünden sorumlu olması gerekebilir. Bunun bir nedeni, bir <xref:System.Windows.Controls.Frame>tarafından barındırılan sayfalarda günlük gezintisine izin vermektedir. Bu, aşağıdaki şekilde gösterilmiştir.
 
 ![Çerçeve ve sayfa diyagramı](./media/navigation-overview/journal-navigation-within-pages-hosted-by-a-frame.png "Bu, bir çerçeve tarafından barındırılan sayfaların içindeki günlük gezintisini gösterir.")
 
@@ -681,7 +681,7 @@ Daha önce belirtildiği gibi, bir uygulama içinde birden çok günlük bulunab
 
 ## <a name="navigating-to-content-other-than-xaml-pages"></a>XAML sayfaları dışındaki Içeriğe gitme
 
-Bu konu başlığı altında, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]çeşitli gezinti özelliklerini göstermek için <xref:System.Windows.Controls.Page> ve Pack XBAP 'ler kullanılmıştır. Ancak, bir uygulamaya derlenen bir <xref:System.Windows.Controls.Page>, tek bir içerik türü değildir ve Pack XBAP, içeriği belirlemenin tek yolu değildir.
+Bu konuda <xref:System.Windows.Controls.Page> ve Pack XBAP 'ler WPF 'in çeşitli gezinti özelliklerini göstermek için kullanılmıştır. Ancak, bir uygulamaya derlenen bir <xref:System.Windows.Controls.Page>, tek bir içerik türü değildir ve Pack XBAP, içeriği belirlemenin tek yolu değildir.
 
 Bu bölümde gösterildiği gibi, gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyalar, HTML dosyaları ve nesneler ' e de gidebilirsiniz.
 
@@ -762,11 +762,11 @@ Aşağıdaki şekilde sonuç gösterilmektedir.
 
 ![Bir sınıfa giden bir sayfa](./media/navigation-overview/page-navigates-to-an-object.png "Bu, bir nesnesine giden bir sayfa örneğidir.")
 
-Bu şekilde, hiçbir şeyin yararlı görüntülendiğini görebilirsiniz. Aslında, görüntülenen değer, **kişi** nesnesi için `ToString` yönteminin dönüş değeridir; Varsayılan olarak, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] nesnesini temsil etmek için kullanabileceği tek değerdir. Daha anlamlı bilgiler döndürmek için `ToString` yöntemini geçersiz kılabilirsiniz, ancak yalnızca bir dize değeri olmaya devam eder. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sunum özelliğinden faydalanan bir teknik, veri şablonu kullanmaktır. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] belirli bir türdeki bir nesneyle ilişkilendirebileceğiniz bir veri şablonu uygulayabilirsiniz. Aşağıdaki kod `Person` nesnesi için bir veri şablonu gösterir.
+Bu şekilde, hiçbir şeyin yararlı görüntülendiğini görebilirsiniz. Aslında, görüntülenen değer, **kişi** nesnesi için `ToString` yönteminin dönüş değeridir; Varsayılan olarak, WPF 'in nesneyi temsil etmek için kullanabileceği tek değerdir. Daha anlamlı bilgiler döndürmek için `ToString` yöntemini geçersiz kılabilirsiniz, ancak yalnızca bir dize değeri olmaya devam eder. WPF 'in sunum özelliğinden yararlanan kullanabileceğiniz bir teknik, veri şablonu kullanmaktır. WPF 'nin belirli bir türdeki nesneyle ilişkilendirebileceğiniz bir veri şablonu uygulayabilirsiniz. Aşağıdaki kod `Person` nesnesi için bir veri şablonu gösterir.
 
 [!code-xaml[NavigateToObjectSnippets#DataTemplateMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigateToObjectSnippets/CSharp/App.xaml#datatemplatemarkup)]
 
-Burada, veri şablonu `DataType` özniteliğinde `x:Type` biçimlendirme uzantısı kullanılarak `Person` türüyle ilişkilendirilir. Daha sonra veri şablonu `TextBlock` öğelerini (bkz. <xref:System.Windows.Controls.TextBlock>) `Person` sınıfının özelliklerine bağlar. Aşağıdaki şekilde `Person` nesnesinin güncelleştirilmiş görünümü gösterilmektedir.
+Burada, veri şablonu `DataType` özniteliğinde `x:Type` işaretleme uzantısı kullanılarak `Person` türüyle ilişkilendirilir. Daha sonra veri şablonu `TextBlock` öğeleri bağlar (bkz. <xref:System.Windows.Controls.TextBlock>) `Person` sınıfının özellikleri. Aşağıdaki şekilde `Person` nesnesinin güncelleştirilmiş görünümü gösterilmektedir.
 
 ![Veri şablonu olan bir sınıfa gitme](./media/navigation-overview/navigating-to-a-class.png "Veri şablonu olan bir sınıfa gitme.")
 
@@ -778,7 +778,7 @@ Veri şablonları hakkında daha fazla bilgi için bkz. [veri şablonu oluşturm
 
 ## <a name="security"></a>Güvenlik
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gezinti desteği, XBAP 'lerin Internet üzerinden gezinmesine olanak sağlar ve uygulamaların üçüncü taraf içeriği barındıralmasına izin verir. Her iki uygulamayı ve kullanıcıyı zararlı davranışlara karşı korumak için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], [güvenlik](../security-wpf.md) ve [WPF Kısmi güven güvenliği](../wpf-partial-trust-security.md)bölümünde ele alınan çeşitli güvenlik özellikleri sağlar.
+WPF gezinti desteği, XBAP 'lerin Internet üzerinden gezinmesine olanak sağlar ve uygulamaların üçüncü taraf içeriği barındıralmasına izin verir. Hem uygulama hem de kullanıcıların zararlı davranışlardan korunması için WPF, [güvenlik](../security-wpf.md) ve [WPF Kısmi güven güvenliği](../wpf-partial-trust-security.md)bölümünde ele alınan çeşitli güvenlik özellikleri sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

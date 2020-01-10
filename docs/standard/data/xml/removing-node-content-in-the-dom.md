@@ -3,17 +3,15 @@ title: DOM’daki Düğüm İçeriğini Kaldırma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 615d81a7-f44f-416c-a9ab-bfe03f85e6e4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 737766586ee920a87c25dd42896bdfb14ae69d98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f5086bdea8ff1f0ee5329f347223ebb4a6bd71da
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698713"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710342"
 ---
 # <a name="removing-node-content-in-the-dom"></a>DOM’daki Düğüm İçeriğini Kaldırma
-Devralınan düğüm türleri için <xref:System.Xml.XmlCharacterData>, hangi <xref:System.Xml.XmlComment>, <xref:System.Xml.XmlText>, <xref:System.Xml.XmlCDataSection>, <xref:System.Xml.XmlWhitespace>, ve <xref:System.Xml.XmlSignificantWhitespace> düğüm türlerini kullanarak karakterler kaldırabilirsiniz <xref:System.Xml.XmlCharacterData.DeleteData%2A> çeşitli kaldıran yöntemi düğümünden karakter. İçeriği tamamen kaldırmak istiyorsanız, içeriğin bulunduğu düğümü kaldırın. Ardından düğümü tutmak istediğiniz, ancak içerik yanlış, içeriği değiştirin. Bir düğüm içeriğini değiştirme hakkında daha fazla bilgi için bkz: [değiştirme düğümleri, içeriği ve değerleri bir XML belgesi](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
+<xref:System.Xml.XmlComment>, <xref:System.Xml.XmlText>, <xref:System.Xml.XmlCDataSection>, <xref:System.Xml.XmlWhitespace>ve <xref:System.Xml.XmlSignificantWhitespace> düğüm türleri olan <xref:System.Xml.XmlCharacterData>'ten devraldığı düğüm türleri için, düğümden bir karakter aralığını kaldıran <xref:System.Xml.XmlCharacterData.DeleteData%2A> yöntemini kullanarak karakterleri kaldırabilirsiniz. İçeriği tamamen kaldırmak istiyorsanız, içeriği içeren düğümü kaldırırsınız. Düğümü korumak istiyorsanız, ancak içerik yanlış ise içeriği değiştirin. Bir düğümün içeriğini değiştirme hakkında daha fazla bilgi için bkz. [BIR XML belgesindeki düğümleri, içeriği ve değerleri değiştirme](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

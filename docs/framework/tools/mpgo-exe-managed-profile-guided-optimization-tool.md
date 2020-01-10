@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a5ab3040a246a135771c45b2639567db9ab510e3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b90971e072c0d075479523dc70187894cd0c8565
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447964"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715746"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Yönetilen Profil Temelli İyileştirme Aracı)
 

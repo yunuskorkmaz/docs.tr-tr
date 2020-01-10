@@ -2,12 +2,12 @@
 title: LINQ to XML Eksenlerine Genel Bakış
 ms.date: 07/20/2015
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
-ms.openlocfilehash: 47e95fcca251212475c925a24d382ba2dceedd62
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0cf3c20266d0ca9d861eec963afda8f2e71a55a3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352033"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636490"
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>LINQ to XML eksenlerine genel bakış (Visual Basic)
 Bir xml ağacını oluşturduktan veya bir XML ağacına bir XML belgesi yükledikten sonra, öğeleri ve öznitelikleri bulmak ve değerlerini almak için onu sorgulayabilirsiniz. Koleksiyonları, eksen olarak *da adlandırılan* *eksen yöntemleri*aracılığıyla alırsınız. Eksenlerden bazıları, <xref:System.Collections.Generic.IEnumerable%601> koleksiyonları döndüren <xref:System.Xml.Linq.XElement> ve <xref:System.Xml.Linq.XDocument> sınıflarında yöntemlerdir. Eksenlerden bazıları <xref:System.Xml.Linq.Extensions> sınıfında uzantı yöntemleridir. Uzantı yöntemleri olarak uygulanan eksenler koleksiyonlar üzerinde çalışır ve koleksiyonlar döndürülür.  
@@ -16,7 +16,7 @@ Bir xml ağacını oluşturduktan veya bir XML ağacına bir XML belgesi yükled
   
  Koleksiyonları döndüren eksen yöntemlerine ek olarak, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgularda yaygın olarak kullanabileceğiniz iki yöntem vardır. <xref:System.Xml.Linq.XContainer.Element%2A> yöntemi tek bir <xref:System.Xml.Linq.XElement>döndürür. <xref:System.Xml.Linq.XElement.Attribute%2A> yöntemi tek bir <xref:System.Xml.Linq.XAttribute>döndürür.  
   
- Birçok amaç için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları, bir ağacı incelemek, verileri dosyadan ayıklamak ve dönüştürmek için en güçlü yolu sağlar. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları <xref:System.Collections.Generic.IEnumerable%601>uygulayan nesneler üzerinde çalışır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eksenleri <xref:System.Xml.Linq.XElement> koleksiyonlarının <xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.Collections.Generic.IEnumerable%601> koleksiyonlarının <xref:System.Xml.Linq.XAttribute> döndürür. Sorgularınızı gerçekleştirmek için bu koleksiyonlara ihtiyacınız vardır.  
+ LINQ sorguları birçok amaçla bir ağacı incelemek, verileri dosyadan ayıklamak ve dönüştürmek için en güçlü yolu sağlar. LINQ sorguları <xref:System.Collections.Generic.IEnumerable%601>uygulayan nesneler üzerinde çalışır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eksenleri <xref:System.Xml.Linq.XElement> koleksiyonlarının <xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.Collections.Generic.IEnumerable%601> koleksiyonlarının <xref:System.Xml.Linq.XAttribute> döndürür. Sorgularınızı gerçekleştirmek için bu koleksiyonlara ihtiyacınız vardır.  
   
  Öğe ve özniteliklerin koleksiyonlarını alan eksen yöntemlerine ek olarak, ağaç üzerinde harika ayrıntılarla yineleme yapmanızı sağlayan eksen yöntemleri vardır. Örneğin, öğeleri ve öznitelikleri kullanmak yerine, ağacın düğümleri ile çalışabilirsiniz. Düğümler, öğe ve özniteliklerin daha ayrıntılı bir düzeyde ayrıntı düzeyidir. Düğümlerle çalışırken, XML açıklamalarını, metin düğümlerini, işleme talimatlarını ve daha fazlasını inceleyebilirsiniz. Bu işlevsellik, örneğin, bir sözcük işlemcisi yazan ve belgeleri XML olarak kaydetmek isteyen bir kişiye önemlidir. Ancak, XML programcılarının çoğunluğu öncelikle öğeler, öznitelikler ve değerleri ile ilgilidir.  
   

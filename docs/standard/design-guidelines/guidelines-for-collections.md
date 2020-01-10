@@ -3,90 +3,89 @@ title: Koleksiyonlar için yönergeler
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-author: KrzysztofCwalina
-ms.openlocfilehash: a8e8672d71500478dbbe28512e413e8ada501f45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 231d8b04c11f19c4440e184533e1eeaded72b70b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669058"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709328"
 ---
 # <a name="guidelines-for-collections"></a>Koleksiyonlar için yönergeler
-Özellikle bazı genel özelliği içeren nesnelerin bir grup yönetmek üzere tasarlanmış herhangi bir türü bir koleksiyon kabul edilebilir. Neredeyse her zaman böyle türleri uygulamak uygun olan <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601>, bu bölümde biz yalnızca birini veya her ikisini bu arabirimleri uygulayan türleri, koleksiyonları olmasını düşünün.  
+Özellikle bir nesne grubunu işlemek için tasarlanan herhangi bir tür, bir koleksiyon olarak düşünülebilir. <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601>uygulamak üzere bu tür türler için neredeyse her zaman uygundur, bu nedenle bu arabirimlerin yalnızca birini ya da her ikisini de koleksiyonlar olarak uygulayan türleri göz önünde bulundurarız.  
   
  **X DO NOT** zayıf yazılan koleksiyonları genel API'leri kullanın.  
   
- Tüm dönüş değerleri ve parametre koleksiyonu öğeleri temsil eden türünü (yalnızca koleksiyonun Genel üyeler için geçerlidir) temel türlerinden hiçbir tam öğe türü olmalıdır.  
+ Koleksiyon öğelerini temsil eden tüm dönüş değerlerinin ve parametrelerinin türü, temel türlerinden hiçbirini değil, tam öğe türü olmalıdır (Bu yalnızca koleksiyonun genel üyeleri için geçerlidir).  
   
  **X DO NOT** kullanmak <xref:System.Collections.ArrayList> veya <xref:System.Collections.Generic.List%601> ortak API'lerde.  
   
- Bu değil genel API'leri, iç uygulamada kullanılmak üzere tasarlanmış veri yapılarını türleridir. `List<T>` Performans ve esneklik ve API'leri cleanness karşılığında power için optimize edilmiştir. Örneğin, iade ettiğiniz `List<T>`, hiç kod istemci koleksiyonu değiştirdiğinde bildirim almak mümkün olmayacaktır. Ayrıca, `List<T>` gibi çok sayıda üye sunan <xref:System.Collections.Generic.List%601.BinarySearch%2A>, olmayan kullanışlı veya birçok senaryoda uygulanabilir. Aşağıdaki iki bölümü, ortak API'lerde kullanılmak üzere özel olarak tasarlanmış türleri (soyutlama) açıklanmaktadır.  
+ Bu türler, genel API 'lerde değil, iç uygulamada kullanılmak üzere tasarlanan veri yapılarıdır. `List<T>`, API 'lerin ve esnekliğin Temizleme maliyetiyle performans ve güç için iyileştirilmiştir. Örneğin, `List<T>`döndürmeniz durumunda, istemci kodu koleksiyonu değiştirdiğinde hiçbir zaman bildirim alamazsınız. Ayrıca, çok sayıda senaryoda yararlı olmayan veya geçerli olmayan <xref:System.Collections.Generic.List%601.BinarySearch%2A>gibi birçok üye `List<T>` sunar. Aşağıdaki iki bölümde, genel API 'lerde kullanılmak üzere özel olarak tasarlanan türler (soyutlamalar) açıklanır.  
   
  **X DO NOT** kullanmak `Hashtable` veya `Dictionary<TKey,TValue>` ortak API'lerde.  
   
- Bu veri yapılarını iç uygulamasında kullanılmak üzere tasarlanmış türleridir. Ortak API'lerde kullanması gereken <xref:System.Collections.IDictionary>, `IDictionary <TKey, TValue>`, ya da birini veya her ikisini arabirimleri uygulayan özel bir tür.  
+ Bu türler, iç uygulamada kullanılmak üzere tasarlanan veri yapılarıdır. Ortak API 'Ler <xref:System.Collections.IDictionary>, `IDictionary <TKey, TValue>`veya arabirimlerin birini ya da her ikisini birden uygulayan özel bir tür kullanmalıdır.  
   
  **X DO NOT** kullanmak <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Collections.IEnumerator>, veya dönüş türü olarak ya da bu arabirimi uygulayan dışında herhangi bir türü bir `GetEnumerator` yöntemi.  
   
- Numaralandırıcılar yöntemleri dışında döndüren türleri `GetEnumerator` kullanılamaz `foreach` deyimi.  
+ `GetEnumerator` dışındaki yöntemlerden Numaralandırıcı döndüren türler `foreach` ifadesiyle kullanılamaz.  
   
- **X DO NOT** her ikisini de uygulamak `IEnumerator<T>` ve `IEnumerable<T>` aynı türünde. Aynı jenerik olmayan arabirimleri için geçerlidir `IEnumerator` ve `IEnumerable`.  
+ **X DO NOT** her ikisini de uygulamak `IEnumerator<T>` ve `IEnumerable<T>` aynı türünde. Aynı, genel olmayan arabirimler `IEnumerator` ve `IEnumerable`için de geçerlidir.  
   
-## <a name="collection-parameters"></a>Toplama parametrelerini  
- **✓ DO** en az özelleştirilmiş türü olası parametre türü olarak kullanın. Koleksiyonları parametreleri kullanma gibi birçok üye `IEnumerable<T>` arabirimi.  
+## <a name="collection-parameters"></a>Koleksiyon parametreleri  
+ **✓ DO** en az özelleştirilmiş türü olası parametre türü olarak kullanın. Koleksiyonları parametre olarak alan çoğu üye `IEnumerable<T>` arabirimini kullanır.  
   
  **X AVOID** kullanarak <xref:System.Collections.Generic.ICollection%601> veya <xref:System.Collections.ICollection> yalnızca erişmek için bir parametre olarak `Count` özelliği.  
   
- Bunun yerine, kullanmayı `IEnumerable<T>` veya `IEnumerable` ve dinamik olarak nesne uygulayan olup olmadığını denetleyerek `ICollection<T>` veya `ICollection`.  
+ Bunun yerine, `IEnumerable<T>` veya `IEnumerable` kullanmayı ve nesnenin `ICollection<T>` veya `ICollection`uygulayıp uygulamadığını dinamik olarak denetlemeyi düşünün.  
   
-## <a name="collection-properties-and-return-values"></a>Koleksiyon Özellikleri ve dönüş değerleri  
+## <a name="collection-properties-and-return-values"></a>Koleksiyon özellikleri ve dönüş değerleri  
  **X DO NOT** ayarlanabilir koleksiyon özellikleri sağlar.  
   
- Kullanıcılar, koleksiyon ilk temizlemek ve ardından yeni içerik ekleyerek koleksiyonun içeriğini değiştirebilir. Tüm koleksiyon değiştirerek yaygın bir senaryo ise sağlamayı göz önüne alın `AddRange` yöntemi koleksiyonu.  
+ Kullanıcılar, önce koleksiyonu temizleyerek ve sonra yeni içerikleri ekleyerek koleksiyonun içeriğini değiştirebilir. Tüm koleksiyonu değiştirmek ortak bir senaryodur, koleksiyonda `AddRange` yöntemi sağlamayı düşünün.  
   
  **✓ DO** kullanmak `Collection<T>` veya bir alt sınıfı `Collection<T>` özellikleri veya return temsil eden okuma/yazma koleksiyonları değerler için.  
   
- Varsa `Collection<T>` bazı gereksinimleri karşılamıyor (örn, toplama olmayan uygulamalıdır <xref:System.Collections.IList>), özel bir koleksiyona uygulayarak kullanma `IEnumerable<T>`, `ICollection<T>`, veya <xref:System.Collections.Generic.IList%601>.  
+ `Collection<T>`, bazı gereksinimleri karşılamıyorsa (örneğin, koleksiyon <xref:System.Collections.IList>uygulamamalı), `IEnumerable<T>`, `ICollection<T>`veya <xref:System.Collections.Generic.IList%601>uygulayarak özel bir koleksiyon kullanın.  
   
  **✓ DO** kullanmak <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, öğesinin bir alt `ReadOnlyCollection<T>`, veya nadir durumlarda `IEnumerable<T>` özellikleri veya return temsil eden salt okunur koleksiyonlar değerler için.  
   
- Genel olarak, tercih ettiğiniz `ReadOnlyCollection<T>`. Bazı gereksinimi karşılamıyorsa (örneğin, koleksiyon değil uygulamalıdır `IList`), özel bir koleksiyona uygulayarak kullanın `IEnumerable<T>`, `ICollection<T>`, veya `IList<T>`. Özel bir salt okunur koleksiyon uygularsanız, uygulama `ICollection<T>.IsReadOnly` döndürülecek `true`.  
+ Genel olarak `ReadOnlyCollection<T>`tercih edin. Bir gereksinimi karşılamıyorsa (örneğin, koleksiyon `IList`uygulamamalı), `IEnumerable<T>`, `ICollection<T>`veya `IList<T>`uygulayarak özel bir koleksiyon kullanın. Özel bir salt okuma koleksiyonu uygularsanız, `true`döndürmek için `ICollection<T>.IsReadOnly` uygulayın.  
   
- Hiç olmadığı kadar desteklemek istediğiniz tek senaryo yalnızca iletme yineleme olduğundan emin olduğu durumlarda, yalnızca kullanabilirsiniz `IEnumerable<T>`.  
+ Yalnızca ileri düzey yineleme olduğundan, desteklemek istediğiniz tek senaryonun yalnızca iletme yinelemesi olduğundan emin olmanız durumunda yalnızca `IEnumerable<T>`kullanabilirsiniz.  
   
  **✓ CONSIDER** koleksiyonlar doğrudan kullanmak yerine genel temel koleksiyonlar alt sınıflarının kullanarak.  
   
- Bu, daha iyi bir adı ve temel koleksiyon türleri üzerinde mevcut olmayan Yardımcısı üye ekleme için sağlar. Bu, özellikle de üst düzey API'ler için geçerlidir.  
+ Bu, daha iyi bir ad sağlar ve temel koleksiyon türlerinde bulunmayan yardımcı Üyeler ekler. Bu, özellikle üst düzey API 'Ler için geçerlidir.  
   
  **✓ CONSIDER** öğesinin bir alt kümesi döndüren `Collection<T>` veya `ReadOnlyCollection<T>` çok sık kullanılan yöntemleri ve özellikleri.  
   
- Bu, sizin için yardımcı yöntemler ekler veya gelecekte koleksiyonu uygulama değiştirmek mümkün hale getirir.  
+ Bu, daha sonra yardımcı yöntemler eklemenizi veya koleksiyon uygulamasını değiştirmenizi mümkün hale getirir.  
   
- **✓ CONSIDER** koleksiyonda depolanan öğeler benzersiz anahtarlar varsa anahtarlı bir koleksiyonunu kullanarak (ad, kimlikleri, vs.). Anahtarlanmış koleksiyonlar olan bir tamsayı ve bir anahtar tarafından sıralanabilir ve genellikle devralarak uygulanan koleksiyonları `KeyedCollection<TKey,TItem>`.  
+ **✓ CONSIDER** koleksiyonda depolanan öğeler benzersiz anahtarlar varsa anahtarlı bir koleksiyonunu kullanarak (ad, kimlikleri, vs.). Anahtarlı koleksiyonlar, hem bir tamsayı hem de anahtar tarafından dizinlenebilir ve genellikle `KeyedCollection<TKey,TItem>`devralınarak uygulanabilir koleksiyonlardır.  
   
- Anahtarlanmış koleksiyonlar, genellikle daha büyük bellek kaplama sahip ve bellek yükü anahtarına sahip avantajları ağır varsa kullanılmamalıdır.  
+ Anahtarlı koleksiyonlar genellikle daha büyük bellek baskılarına sahiptir ve bellek ek yükü anahtarlara sahip olmanın avantajlarından yararlanıyorsa kullanılmamalıdır.  
   
- **X DO NOT** koleksiyon özellikleri veya koleksiyonları döndüren yöntemler null değerleri döndürür. Bunun yerine boş bir koleksiyon ya da boş bir dizi döndürür.  
+ **X DO NOT** koleksiyon özellikleri veya koleksiyonları döndüren yöntemler null değerleri döndürür. Bunun yerine boş bir koleksiyon veya boş bir dizi döndürün.  
   
- Genel kural null ve boş (0 öğe) koleksiyonları veya dizi olması gerekliliğidir aynı kabul edilir.  
+ Genel kural, null ve boş (0 öğe) koleksiyonlarının veya dizilerinin aynı kabul edilmesidir.  
   
-### <a name="snapshots-versus-live-collections"></a>Canlı koleksiyonları ve anlık görüntüleri  
- Anlık görüntü koleksiyonlarını belirli bir noktada bir durum saati temsil eden koleksiyon çağrılır. Örneğin, bir veritabanı sorgusundan döndürülen satır içeren bir koleksiyon bir anlık görüntü olacaktır. Canlı koleksiyonları her zaman geçerli durumu temsil eden koleksiyon çağrılır. Örneğin, bir koleksiyonunu `ComboBox` öğeleri canlı bir derlemesidir.  
+### <a name="snapshots-versus-live-collections"></a>Anlık görüntüler ve canlı Koleksiyonlar  
+ Bir zaman noktasında bir durumu temsil eden koleksiyonlara anlık görüntü koleksiyonları denir. Örneğin, bir veritabanı sorgusundan döndürülen satırları içeren bir koleksiyon bir anlık görüntü olacaktır. Geçerli durumu her zaman temsil eden koleksiyonlara canlı koleksiyonlar denir. Örneğin, `ComboBox` öğelerinin bir koleksiyonu canlı bir koleksiyondur.  
   
- **X DO NOT** anlık görüntü koleksiyonları özelliklerinden döndürür. Özellikleri, Canlı koleksiyon döndürmelidir.  
+ **X DO NOT** anlık görüntü koleksiyonları özelliklerinden döndürür. Özellikler canlı koleksiyonlar döndürmelidir.  
   
- Özellik alıcılar, basit bir işlem olmalıdır. Bir anlık görüntü döndüren bir o(n) iç bir koleksiyonun bir kopyasını oluşturmak için gerekir.  
+ Özellik alıcıları çok hafif işlemler olmalıdır. Anlık görüntü döndürmek için bir O (n) işleminde iç koleksiyonun kopyasının oluşturulması gerekir.  
   
  **✓ DO** bir anlık görüntü koleksiyon veya bir canlı kullanmak `IEnumerable<T>` (veya onun alt) volatile koleksiyonları temsil etmek için (yani, değiştirebilirsiniz açıkça koleksiyonu değiştirmeden).  
   
- Genel olarak, paylaşılan bir kaynağa (örneğin, bir dizindeki dosyaları) temsil eden tüm geçici koleksiyonlarıdır. Bu, çok zor veya imkansız uygulaması yalnızca iletme Numaralandırıcı yalnızca olmadıkça Canlı koleksiyon olarak uygulamak koleksiyonlarıdır.  
+ Genel olarak, paylaşılan bir kaynağı (örneğin, bir dizindeki dosyalar) temsil eden tüm koleksiyonlar geçici bir uygulamadır. Uygulama yalnızca ileri bir Numaralandırıcı değilse, bu tür koleksiyonlar canlı koleksiyonlar olarak uygulamak oldukça zordur veya imkansız olur.  
   
-## <a name="choosing-between-arrays-and-collections"></a>Diziler ve Koleksiyonlar arasında seçim yapma  
+## <a name="choosing-between-arrays-and-collections"></a>Diziler ve koleksiyonlar arasında seçim yapma  
  **✓ DO** koleksiyonları diziler tercih.  
   
- Koleksiyonlar içerikleri üzerinde daha fazla denetim sağlamak, zamanla gelişmesinin ve daha kullanışlı. Dizi kopyalama maliyeti engelleyici olduğundan ek olarak, dizi salt okunur senaryoları için kullanılması önerilmez. Kullanılabilirlik incelemeleri bazı geliştiriciler koleksiyon tabanlı API'leri daha ettirebilecek olduğunu göstermiştir.  
+ Koleksiyonlar içerik üzerinde daha fazla denetim sağlar, zaman içinde gelişiyor ve daha fazla kullanılabilir. Ayrıca, diziyi kopyalama maliyeti yüksek olduğundan, salt okuma senaryolarında diziler kullanılması önerilmez. Kullanılabilirlik çalışmaları, bazı geliştiricilerin koleksiyon tabanlı API 'Leri kullanarak daha rahat olduğunu göstermiştir.  
   
- Ancak, alt düzey API'ler geliştiriyorsanız diziler için okuma-yazma senaryolarını kullanmak daha iyi olabilir. Çalışma kümesi azaltılmasına yardımcı olur, bir küçük bellek Ayak izi diziler sahip ve çalışma zamanı tarafından iyileştirildiği bir dizideki öğelerin erişimi daha hızlıdır.  
+ Ancak, alt düzey API 'Ler geliştiriyorsanız, okuma-yazma senaryolarında dizileri kullanmak daha iyi olabilir. Diziler, çalışma kümesini azaltmaya yardımcı olan daha küçük bir bellek parmak izine sahiptir ve çalışma zamanı tarafından iyileştirildiğinden, bir dizideki öğelere erişim daha hızlıdır.  
   
  **✓ CONSIDER** bellek tüketimini en aza indirmek ve performansı en üst düzeye çıkarmak için alt düzey API'leri dizileri kullanma.  
   
@@ -94,21 +93,21 @@ ms.locfileid: "61669058"
   
  **X DO NOT** özelliği özellik alıcısı adlı her zaman yeni bir dizi (örneğin, bir iç dizisinin bir kopyasını) dönmek zorunda kalırsanız diziler özellikler için kullanın.  
   
-## <a name="implementing-custom-collections"></a>Uygulama özel koleksiyonlar  
+## <a name="implementing-custom-collections"></a>Özel Koleksiyonlar uygulama  
  **✓ CONSIDER** içinden devralma `Collection<T>`, `ReadOnlyCollection<T>`, veya `KeyedCollection<TKey,TItem>` yeni koleksiyonları tasarlarken.  
   
- **✓ DO** uygulamak `IEnumerable<T>` yeni koleksiyonları tasarlarken. Uygulamayı düşünün `ICollection<T>` ve hatta `IList<T>` burada anlamlı.  
+ **✓ DO** uygulamak `IEnumerable<T>` yeni koleksiyonları tasarlarken. `ICollection<T>`, hatta anlamlı olduğu yerde `IList<T>` uygulamayı düşünün.  
   
- Bu tür özel bir koleksiyon uygularken tarafından oluşturulan API desenler izleyen `Collection<T>` ve `ReadOnlyCollection<T>` mümkün olduğunca yakın. Diğer bir deyişle, aynı üyelerini açıkça uygulama, bunları vb. Bu iki koleksiyon adı gibi parametreler adlandırın.  
+ Böyle bir özel koleksiyon uygularken, `Collection<T>` tarafından belirlenen API düzenine ve mümkün olduğunca yakından `ReadOnlyCollection<T>` uygulayın. Diğer bir deyişle, aynı üyeleri açıkça uygular, parametreleri bu iki koleksiyon gibi adlandırın ve daha fazlasını yapın.  
   
  **✓ CONSIDER** nongeneric koleksiyonu arabirimler uygulama (`IList` ve `ICollection`) koleksiyon genellikle API'leri için girdi olarak bu arabirimleri alma geçirilir durumunda.  
   
  **X AVOID** koleksiyon arabirimleri türlerinde bir koleksiyon kavramı, ilgisiz karmaşık API'leri ile uygulama.  
   
- **X DO NOT** nongeneric temel koleksiyonlarından gibi devral `CollectionBase`. Kullanım `Collection<T>`, `ReadOnlyCollection<T>`, ve `KeyedCollection<TKey,TItem>` yerine.  
+ **X DO NOT** nongeneric temel koleksiyonlarından gibi devral `CollectionBase`. Bunun yerine `Collection<T>`, `ReadOnlyCollection<T>`ve `KeyedCollection<TKey,TItem>` kullanın.  
   
-### <a name="naming-custom-collections"></a>Özel koleksiyonlar adlandırma  
- Koleksiyonlar (türleri uygulayan `IEnumerable`) genellikle iki nedenden dolayı oluşturulur: (1) varolan veri yapılarına değerinden farklı performans özellikleri yapısı özgü işlemleri ve genellikle yeni bir veri yapısı oluşturmak için (örneğin, <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) ve özel bir koleksiyon için oluşturma (2) belirli bir öğe kümesini bulunduran (örneğin, <xref:System.Collections.Specialized.StringCollection>). Veri yapıları, uygulamaları ve kitaplıkları iç uygulamasında en sık kullanılır. Özelleştirilmiş koleksiyonlar çoğunlukla API (özelliği, parametre türleri) olarak gösterilmesini üzeresiniz.  
+### <a name="naming-custom-collections"></a>Özel koleksiyonları adlandırma  
+ Koleksiyonlar (`IEnumerable`uygulayan türler) genellikle iki nedenden dolayı oluşturulur: (1) yapıya özgü işlemlere sahip yeni bir veri yapısı ve genellikle varolan veri yapılarından (örn., <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) ve (2) belirli bir öğe kümesini tutmak için özel bir koleksiyon oluşturmak için (örn., <xref:System.Collections.Specialized.StringCollection>). Veri yapıları genellikle uygulamaların ve kitaplıkların iç uygulamalarında kullanılır. Özel Koleksiyonlar genellikle API 'lerde (özellik ve parametre türleri olarak) gösterilmelidir.  
   
  **✓ DO** uygulama soyutlamalar adlarında "Sözlük" soneki kullanan `IDictionary` veya `IDictionary<TKey,TValue>`.  
   
@@ -118,15 +117,15 @@ ms.locfileid: "61669058"
   
  **X AVOID** koleksiyonu soyutlamalar adlarında "LinkedList" veya "Hashtable," gibi belirli bir uygulamaya olduğunu belirtmek sonekleri kullanarak.  
   
- **✓ CONSIDER** koleksiyon adları öğesi türünün adı ile önek. Örneğin, bir koleksiyon öğe türü depolama `Address` (uygulama `IEnumerable<Address>`) adlandırılmalıdır `AddressCollection`. Öğe türü bir arabirim ise, "t" öneki öğenin türü atlanabilir. Bu nedenle, bir koleksiyonunu <xref:System.IDisposable> öğeleri çağrılabilir `DisposableCollection`.  
+ **✓ CONSIDER** koleksiyon adları öğesi türünün adı ile önek. Örneğin, `Address` türünde öğeleri depolayan bir koleksiyon (`IEnumerable<Address>`uygulayan) `AddressCollection`olarak adlandırılmalıdır. Öğe türü bir arabirimse, öğe türünün "I" öneki atlanabilir. Bu nedenle, <xref:System.IDisposable> öğelerinin bir koleksiyonu `DisposableCollection`çağrılabilir.  
   
  **✓ CONSIDER** karşılık gelen bir yazılabilir koleksiyon eklenebilir ya da Framework'te zaten varsa, salt okunur koleksiyonlar adlarında "Salt okunur" önekini kullanarak.  
   
- Örneğin, dizelerin bir salt okunur koleksiyon çağrılmalıdır `ReadOnlyStringCollection`.  
+ Örneğin, salt okunurdur bir dize koleksiyonu `ReadOnlyStringCollection`çağrılmalıdır.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

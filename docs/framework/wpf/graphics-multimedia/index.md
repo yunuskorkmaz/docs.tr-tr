@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 150b742c2195c07abf2b2823871627b0ba827580
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: f9d27ce50376c3a494a546a23cd5d7409b4c475a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919989"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636633"
 ---
 # <a name="graphics-and-multimedia"></a>Grafikler ve Multimedya
 
@@ -59,11 +59,11 @@ WPF, yüksek kaliteli 2-b grafikler için destek içerir. İşlevsellik, fırça
 
 ### <a name="2-d-shapes"></a>2-b şekiller
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], aşağıdaki çizimin gösterdiği dikdörtgen ve üç nokta gibi yaygın olarak kullanılan vektör çizimli 2-b şekillerinin bir kitaplığını sağlar.
+WPF, aşağıdaki çizimin gösterdiği dikdörtgen ve üç nokta gibi yaygın olarak kullanılan vektör çizimli 2-b şekillerinin bir kitaplığını sağlar.
 
 ![Üç nokta ve dikdörtgeni gösteren diyagram.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
-Bu iç [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] şekiller yalnızca şekil değildir: klavye ve fare girişi içeren en yaygın denetimlerden beklediğinizi birçok özelliği uygulayan programlanabilir öğelerdir. Aşağıdaki örnek, bir <xref:System.Windows.Shapes.Ellipse> öğesine tıklanarak oluşturulan <xref:System.Windows.UIElement.MouseUp> olayının nasıl işleneceğini gösterir.
+Bu iç WPF şekilleri yalnızca şekil değildir: klavye ve fare girişi içeren en yaygın denetimlerden beklediğinizi birçok özelliği uygulayan programlanabilir öğelerdir. Aşağıdaki örnek, bir <xref:System.Windows.Shapes.Ellipse> öğesine tıklanarak oluşturulan <xref:System.Windows.UIElement.MouseUp> olayının nasıl işleneceğini gösterir.
 
 ```xaml
 <Window
@@ -101,7 +101,7 @@ Daha fazla bilgi için bkz. [WPF 'de şekillere ve temel çizime genel bakış](
 
 ### <a name="2-d-geometries"></a>2-b geometrileri
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tarafından sağlanan 2-b şekiller yeterli değilse, kendi oluşturduğunuz geometriler ve yollar için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] desteğini kullanabilirsiniz. Aşağıdaki çizimde, şekil oluşturmak için geometriler nasıl kullanabileceğiniz, çizim Fırçası olarak ve diğer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] öğeleri kırpmanız gösterilmektedir.
+WPF 'in sağladığı 2-b şekilleri yeterli değilse, kendi oluşturduğunuz geometriler ve yollar için WPF desteği kullanabilirsiniz. Aşağıdaki çizimde, bir çizim Fırçası olarak şekiller oluşturmak ve diğer WPF öğelerini kırpmak için geometriler nasıl kullanabileceğiniz gösterilmektedir.
 
 ![Şekil oluşturmak için geometrilerin nasıl kullanılabileceğini gösteren ekran görüntüsü.](./media/index/use-geometries-create-shapes.png)
 
@@ -109,7 +109,7 @@ Daha fazla bilgi için bkz. [geometriye genel bakış](geometry-overview.md). Ta
 
 ### <a name="2-d-effects"></a>2-b efekt
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], çeşitli efektler oluşturmak için kullanabileceğiniz 2-b sınıfların bir kitaplığını sağlar. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 2-b işleme özelliği degradeler, bit eşlemler, çizimler ve videolar içeren [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğelerini boyama olanağı sağlar; ve döndürme, ölçekleme ve eğriltme kullanarak bunları değiştirebilirsiniz. Aşağıdaki çizimde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fırçalarını kullanarak elde edilebilecek birçok etkiye bir örnek verilmiştir.
+WPF, çeşitli efektler oluşturmak için kullanabileceğiniz bir 2-b sınıfları kitaplığı sağlar. WPF 'nin 2-b işleme özelliği, degradeler, bit eşlemler, çizimler ve videolar içeren [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğeleri boyama olanağı sağlar; ve döndürme, ölçekleme ve eğriltme kullanarak bunları değiştirebilirsiniz. Aşağıdaki çizimde, WPF fırçalarını kullanarak elde edilebilecek birçok etkiye bir örnek verilmiştir.
 
 ![Farklı WPF fırçalarını ve boyama öğelerini gösteren çizim.](./media/index/brushes-paint-elements.png)
 
@@ -119,7 +119,7 @@ Daha fazla bilgi için bkz. [WPF Fırçalarına Genel Bakış](wpf-brushes-overv
 
 ## <a name="3-d-rendering"></a>3-b Işleme
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], daha heyecan verici düzen, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ve veri görselleştirmesi oluşturabilmeniz için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 2-b grafik desteğiyle tümleştirilen 3-b işleme özellikleri kümesi sağlar. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], SPI 'nin bir ucunda, 2-b görüntüleri 3-b şekillerin yüzeylerinde, aşağıdaki çizimde gösterildiği gibi işlemenizi sağlar.
+WPF, daha heyecan verici düzen, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ve veri görselleştirmesi oluşturabilmeniz için WPF 'de 2-b grafik desteğiyle tümleştirilen 3-b işleme özellikleri kümesi sağlar. Bu, spektrumun bir ucunda, 2-b görüntüleri 3-b şekillerin yüzeylerinde, aşağıdaki çizimde gösterildiği gibi işlemenizi sağlar.
 
 ![Farklı dokularla 3-b şekiller gösteren bir örnek ekran görüntüsü.](./media/index/visual-three-dimensional-shape.png)
 
@@ -129,7 +129,7 @@ Daha fazla bilgi için bkz. [3-b grafik genel bakış](3-d-graphics-overview.md)
 
 ## <a name="animation"></a>Animasyon
 
-Denetimleri ve öğeleri büyütmek, sallama, döndürme ve belirme yapmak için animasyon kullanın; ve ilginç sayfa geçişleri ve daha fazlasını oluşturun. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] özelliklerin çoğuna animasyon uygulamanızı sağladığından, yalnızca çoğu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] nesneleri hareketlendirmenize olanak tanıdığından, oluşturduğunuz özel nesnelere animasyon eklemek için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] de kullanabilirsiniz.
+Denetimleri ve öğeleri büyütmek, sallama, döndürme ve belirme yapmak için animasyon kullanın; ve ilginç sayfa geçişleri ve daha fazlasını oluşturun. WPF birçok özelliğe animasyon uygulamanızı sağladığından, yalnızca birçok WPF nesnesini hareketlendirmenize olanak tanıdığından, oluşturduğunuz özel nesnelere animasyon eklemek için WPF de kullanabilirsiniz.
 
 ![Animasyonlu küpün ekran görüntüsü.](./media/index/animate-custom-objects.png)
 
@@ -143,7 +143,7 @@ Görüntü, video ve ses, bilgi ve kullanıcı deneyimlerini vermenin zengin ort
 
 ### <a name="images"></a>Görüntüler
 
-Simgeler, arka planlar ve hatta animasyonların parçaları dahil olmak üzere birçok uygulamanın temel bir parçası olan görüntüler. Görüntüleri sık kullanmanız gerektiğinden [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], bunlarla çeşitli yollarla çalışma olanağı sunar. Aşağıdaki çizimde bu yolların yalnızca biri gösterilmektedir.
+Simgeler, arka planlar ve hatta animasyonların parçaları dahil olmak üzere birçok uygulamanın temel bir parçası olan görüntüler. Genellikle görüntüleri kullanmanız gerektiğinden, WPF bunlarla çeşitli yollarla çalışma olanağı sunar. Aşağıdaki çizimde bu yolların yalnızca biri gösterilmektedir.
 
 ![Stil örnek ekran görüntüsü](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
 
@@ -151,7 +151,7 @@ Daha fazla bilgi için bkz. [Imaging 'e genel bakış](imaging-overview.md).
 
 ### <a name="video-and-audio"></a>Video ve ses
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] grafik özelliklerinin temel bir özelliği, video ve ses dahil olmak üzere multimedya ile çalışmaya yönelik yerel destek sağlamaktır. Aşağıdaki örnek, bir medya yürütücüsünün bir uygulamaya nasıl ekleneceğini gösterir.
+WPF 'nin grafik özelliklerinin temel bir özelliği, video ve ses dahil olmak üzere multimedya ile çalışmaya yönelik yerel destek sağlamaktır. Aşağıdaki örnek, bir medya yürütücüsünün bir uygulamaya nasıl ekleneceğini gösterir.
 
 ```xaml
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />

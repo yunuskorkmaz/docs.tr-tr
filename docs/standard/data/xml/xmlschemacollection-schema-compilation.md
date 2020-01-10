@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 40d7ef11dde882d99c21fe541c2689c52a634edf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1f300bab01f94af8c70c8b67a69a73fbc5ba5bac
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915943"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709835"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection Şema Derlemesi
 **XmlSchemaCollection** , XML verileri AZALTıLMıŞ (xdr) ve XML şeması tanım DILI (xsd) şemaları depolanabilecek ve doğrulanabilen bir önbellek veya kitaplıktır. **XmlSchemaCollection** , şemaları bir dosya veya URL 'den erişmek yerine bellekte önbelleğe alarak performansı geliştirir.  
@@ -22,7 +20,7 @@ ms.locfileid: "69915943"
 > **XmlSchemaCollection** sınıfı hem XDR şemaları hem de XML şemaları depolasa da, **XmlSchema** nesnesi alan veya döndüren herhangi bir yöntem ve özellik yalnızca XML şemalarını destekler.  
   
 > [!IMPORTANT]
-> Sınıf artık kullanımdan kalkmıştır ve <xref:System.Xml.Schema.XmlSchemaSet> sınıfıyla değiştirilmiştir. <xref:System.Xml.Schema.XmlSchemaCollection> <xref:System.Xml.Schema.XmlSchemaSet> Sınıf hakkında daha fazla bilgi için bkz. [şema derlemesi için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+> <xref:System.Xml.Schema.XmlSchemaCollection> sınıf artık kullanımdan kalkmıştır ve <xref:System.Xml.Schema.XmlSchemaSet> sınıfıyla değiştirilmiştir. <xref:System.Xml.Schema.XmlSchemaSet> sınıfı hakkında daha fazla bilgi için bkz. [şema derlemesi Için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
   
 ## <a name="add-schemas-to-the-collection"></a>Koleksiyona şemalar ekleme  
  Şemalar, şema bir ad alanı URI 'siyle ilişkili olan **XmlSchemaCollection**'ın **Add** yöntemi kullanılarak koleksiyona yüklenir. XML şemaları için ad alanı URI 'SI genellikle şemanın hedef ad alanı olacaktır. XDR şemaları için ad alanı URI 'SI, şema koleksiyona eklendiğinde belirtilen ad alanıdır.  
@@ -34,7 +32,7 @@ ms.locfileid: "69915943"
  **Öğe** özelliğini kullanarak koleksiyondan bir şema alabilirsiniz. **Öğe** özelliği, şemayla ilişkili ad alanı URI 'sini temsil eden bir dize alır, genellikle hedef ad alanı ve bir **XmlSchema** nesnesi döndürür. **Öğe** ÖZELLIĞI yalnızca XML şemaları için geçerlidir. Bir nesne modeli mevcut olmadığından, dönüş değeri her zaman XDR şemaları için bir null başvurudur.  
   
 ## <a name="validate-xml-documents-using-xmlschemacollection"></a>XmlSchemaCollection kullanarak XML belgelerini doğrulama  
- **XmlSchemaCollection** nesnesini oluşturup, şemalarınızı koleksiyona ekleyerek ve **XmlValidatingReader** 'daki **schemas** özelliğini olarak AYARLAYARAK bir **XmlSchemaCollection** kullanarak bir XML örnek belgesini doğrulayabilirsiniz. oluşturulan **XmlSchemaCollection** 'ı **XmlValidatingReader**'a atayın.  
+ **XmlSchemaCollection nesnesini oluşturarak** , şemalarınızı koleksiyona ekleyerek ve **XmlValidatingReader** üzerinde oluşturulan **XmlSchemaCollection** 'ı atamak için, XmlValidatingReader üzerinde **şemalar** özelliğini ayarlayarak bir **XmlSchemaCollection** kullanarak bir XML örnek belgesini **doğrulayabilirsiniz.**  
   
 ### <a name="improved-performance"></a>İyileştirilmiş performans  
  Aynı şemaya karşı birden fazla belge doğrulmanız önerilir, bu, bir şemayı bellekte önbelleğe alarak daha iyi performans sağladığından, **XmlSchemaCollection** 'ı kullanıyorsunuz.  

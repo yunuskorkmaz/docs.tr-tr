@@ -1,27 +1,26 @@
 ---
 title: Genel yöntemler- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 600bb249d1bc1e9f68026caf6596e0a35bb97c43
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5f066ca39c97b70554886e423c37c4ee47d49158
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589703"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712201"
 ---
 # <a name="generic-methods-c-programming-guide"></a>Genel Yöntemler (C# Programlama Kılavuzu)
 Genel bir yöntem, tür parametreleriyle belirtilen ve aşağıdaki gibi bir yöntemdir:  
   
  [!code-csharp[csProgGuideGenerics#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#22)]  
   
- Aşağıdaki kod örneği, tür bağımsız değişkeni için kullanarak `int` yöntemini çağırmak için bir yol gösterir:  
+ Aşağıdaki kod örneği, tür bağımsız değişkeni için `int` kullanarak yöntemi çağırmak için bir yol gösterir:  
   
  [!code-csharp[csProgGuideGenerics#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#23)]  
   
- Ayrıca tür bağımsız değişkenini de atlayabilirsiniz, derleyici onu çıkaracaktır. Aşağıdaki çağrısı `Swap` , önceki çağrıya eşdeğerdir:  
+ Ayrıca tür bağımsız değişkenini de atlayabilirsiniz, derleyici onu çıkaracaktır. Aşağıdaki `Swap` çağrısı, önceki çağrıya eşdeğerdir:  
   
  [!code-csharp[csProgGuideGenerics#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#24)]  
   
@@ -31,11 +30,11 @@ Genel bir yöntem, tür parametreleriyle belirtilen ve aşağıdaki gibi bir yö
   
  [!code-csharp[csProgGuideGenerics#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#25)]  
   
- İçerilen sınıfla aynı tür parametrelerini alan genel bir yöntem tanımlarsanız, derleyici yöntem kapsamı içinde uyarı [CS0693](../../misc/cs0693.md) oluşturur, iç `T` için sağlanan bağımsız değişken dıştaki için sağlanan bağımsız değişkeni gizler `T`. Sınıf örneği oluşturulurken sağlananlara farklı tür bağımsız değişkenleriyle bir genel sınıf yöntemi çağırma esnekliğine ihtiyaç duyuyorsanız, yöntemin tür parametresi için aşağıda gösterildiği `GenericList2<T>` gibi başka bir tanımlayıcı sağlamayı düşünün örneğinde.  
+ İçerilen sınıfla aynı tür parametrelerini alan genel bir yöntem tanımlarsanız, derleyici [CS0693](../../misc/cs0693.md) uyarı oluşturur, çünkü Yöntem kapsamı içinde, iç `T` sağlanan bağımsız değişken dış `T`için sağlanan bağımsız değişkeni gizler. Sınıf örneği oluşturulurken sağlananlara farklı tür bağımsız değişkenleriyle bir genel sınıf yöntemi çağırma esnekliğine ihtiyaç duyuyorsanız, aşağıdaki örnekte `GenericList2<T>` gösterildiği gibi yönteminin tür parametresi için başka bir tanımlayıcı sağlamayı düşünün.  
   
  [!code-csharp[csProgGuideGenerics#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#26)]  
   
- Yöntemlerde tür parametrelerinde daha özelleştirilmiş işlemleri sağlamak için kısıtlamaları kullanın. Artık adlandırılan `Swap<T>` `SwapIfGreater<T>`bu sürümü yalnızca uygulayan <xref:System.IComparable%601>tür bağımsız değişkenleriyle kullanılabilir.  
+ Yöntemlerde tür parametrelerinde daha özelleştirilmiş işlemleri sağlamak için kısıtlamaları kullanın. Artık `SwapIfGreater<T>`olarak adlandırılan bu `Swap<T>`sürümü yalnızca <xref:System.IComparable%601>uygulayan tür bağımsız değişkenleriyle kullanılabilir.  
   
  [!code-csharp[csProgGuideGenerics#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#27)]  
   

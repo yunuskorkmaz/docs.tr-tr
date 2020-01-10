@@ -2,12 +2,12 @@
 title: "Nasıl yapılır: bir XmlReader 'dan XML parçalarını akışa alma"
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-ms.openlocfilehash: abefc8c6e75ae41c47135a2e89cdb3be6a8e5cd6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 42d3edb390035d20f506388974000aa204312109
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346219"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636802"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Nasıl yapılır: bir XmlReader 'dan XML parçalarını akışa alma (Visual Basic)
 Büyük XML dosyalarını işlemek zorunda olduğunuzda, tüm XML ağacının belleğe yüklenmesi mümkün olmayabilir. Bu konuda, <xref:System.Xml.XmlReader>kullanarak parçaların nasıl akışının yapılacağı gösterilmektedir.  
@@ -23,7 +23,7 @@ Büyük XML dosyalarını işlemek zorunda olduğunuzda, tüm XML ağacının be
  [Nasıl yapılır: büyük XML belgelerinin (Visual Basic) akış dönüşümünü gerçekleştirme](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) , küçük bir bellek parmak izini sağlarken çok büyük XML belgelerini dönüştürmek için LINQ to XML kullanmayla bir örnek içerir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek bir özel eksen yöntemi oluşturur. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] bir sorgu kullanarak sorgulama yapabilirsiniz. `StreamRootChildDoc`özel eksen yöntemi, bir yinelenen `Child` öğesi olan bir belgeyi okumak için özel olarak tasarlanan bir yöntemdir.  
+ Bu örnek bir özel eksen yöntemi oluşturur. Bir LINQ sorgusu kullanarak bunu sorgulayabilirsiniz. `StreamRootChildDoc`özel eksen yöntemi, bir yinelenen `Child` öğesi olan bir belgeyi okumak için özel olarak tasarlanan bir yöntemdir.  
   
 ```vb  
 Module Module1  

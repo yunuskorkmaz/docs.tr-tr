@@ -8,16 +8,15 @@ helpviewer_keywords:
 - exceptions, catching
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-author: KrzysztofCwalina
-ms.openlocfilehash: b947c7cce057c060b1ab5054d1227f5703ccbf89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b202d618d9d2216c8998181303250081de6781c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026347"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708990"
 ---
 # <a name="using-standard-exception-types"></a>Standart Özel Durum Türlerini Kullanma
-Bu bölümde, Framework ve bunların kullanım ayrıntılarını tarafından sağlanan standart özel durumlar açıklanmaktadır. Listede olmadığı göre Hayır hepsine yer. Lütfen .NET Framework başvuru diğer Framework özel durum türlerinin kullanımı için belgelerine bakın.  
+Bu bölümde, çerçevesi tarafından sunulan standart özel durumlar ve kullanımlarının ayrıntıları açıklanmaktadır. Liste, ayrıntılı anlamına gelir. Diğer Framework özel durum türlerinin kullanımı için lütfen .NET Framework başvuru belgelerine bakın.  
   
 ## <a name="exception-and-systemexception"></a>Özel durum ve SystemException  
  **X DO NOT** throw <xref:System.Exception?displayProperty=nameWithType> veya <xref:System.SystemException?displayProperty=nameWithType>.  
@@ -32,36 +31,36 @@ Bu bölümde, Framework ve bunların kullanım ayrıntılarını tarafından sa�
 ## <a name="invalidoperationexception"></a>InvalidOperationException  
  **✓ DO** throw bir <xref:System.InvalidOperationException> nesne uygunsuz bir durumda ise.  
   
-## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException ArgumentNullException ve üretiliyor  
- **✓ DO** throw <xref:System.ArgumentException> ya da hatalı değişkenler üye aktarılırsa, alt türlerinden birini. En çok türetilen özel durum türü varsa tercih eder.  
+## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException, ArgumentNullException ve ArgumentOutOfRangeException  
+ **✓ DO** throw <xref:System.ArgumentException> ya da hatalı değişkenler üye aktarılırsa, alt türlerinden birini. Varsa, en çok türetilmiş özel durum türünü tercih edin.  
   
  **✓ DO** ayarlamak `ParamName` sınıfları birini atarken özelliği `ArgumentException`.  
   
- Bu özellik, özel durum oluşturulmasına neden olan parametrenin adını temsil eder. Özellik oluşturucu aşırı yüklemeleri birini kullanarak ayarlanabilir unutmayın.  
+ Bu özellik, özel durumun oluşturulmasına neden olan parametrenin adını temsil eder. Özelliğin, Oluşturucu aşırı yüklerinden biri kullanılarak ayarlankullanılamayacağını unutmayın.  
   
  **✓ DO** kullanmak `value` özellik ayarlayıcıları örtük değeri parametrenin adı.  
   
-## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException ve IndexOutOfRangeException AccessViolationException  
- **X DO NOT** açıkça veya örtük throw herkese açık şekilde çağrılabilir izin vermek <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, veya <xref:System.IndexOutOfRangeException>. Bu özel durumlar ayrılmış ve yürütme altyapısı tarafından oluşturulur ve buna genellikle bir hata gösterir.  
+## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException, IndexOutOfRangeException ve AccessViolationException  
+ **X DO NOT** açıkça veya örtük throw herkese açık şekilde çağrılabilir izin vermek <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, veya <xref:System.IndexOutOfRangeException>. Bu özel durumlar, yürütme altyapısı tarafından ayrılmıştır ve oluşturulur ve çoğu durumda bir hata olduğunu gösterir.  
   
- Bağımsız değişken bu özel durumları atma önlemek için denetimi yapın. Bu özel durumları atma zaman içinde değişebileceğini yönteminizi uygulama ayrıntılarını gösterir.  
+ Bağımsız değişken denetimini, bu özel durumların üretilmesini önlemek için yapın. Bu özel durumları oluşturmak, zaman içinde değişebilir yönteminizin uygulama ayrıntılarını sunar.  
   
 ## <a name="stackoverflowexception"></a>StackOverflowException  
- **X DO NOT** açıkça throw <xref:System.StackOverflowException>. Özel durum CLR tarafından yalnızca açıkça durum.  
+ **X DO NOT** açıkça throw <xref:System.StackOverflowException>. Özel durum yalnızca CLR tarafından açıkça oluşturulmalıdır.  
   
  **X DO NOT** catch `StackOverflowException`.  
   
- Rastgele yığını taşmaları saklanacaktır tutarlılığın yönetilen kod yazmak neredeyse imkansızdır. CLR yönetilmeyen bölümlerini, iyi tanımlanmış basamağa yığın taşmaları taşımak araştırmalarını kullanan yerine rastgele yığını taşmaları yedekleme göre tutarlı kalır.  
+ Rastgele yığın taşlarına sahip olan yönetilen kodu yazmak neredeyse imkansızdır. CLR 'nin yönetilmeyen parçaları, yığın dışına çıkmaları, rastgele yığın taşlarından yedeklenmek yerine iyi tanımlanmış konumlara taşımak için yoklamalar kullanılarak tutarlı kalır.  
   
 ## <a name="outofmemoryexception"></a>OutOfMemoryException  
- **X DO NOT** açıkça throw <xref:System.OutOfMemoryException>. Bu durum CLR altyapısı tarafından yalnızca durum sağlamaktır.  
+ **X DO NOT** açıkça throw <xref:System.OutOfMemoryException>. Bu özel durum yalnızca CLR altyapısı tarafından oluşturulmalıdır.  
   
-## <a name="comexception-sehexception-and-executionengineexception"></a>ComException SEHException ve ExecutionEngineException  
- **X DO NOT** açıkça throw <xref:System.Runtime.InteropServices.COMException>, <xref:System.ExecutionEngineException>, ve <xref:System.Runtime.InteropServices.SEHException>. Bu özel durumların CLR altyapısı tarafından yalnızca durum üzeresiniz.  
+## <a name="comexception-sehexception-and-executionengineexception"></a>ComException, şehir özel durumu ve ExecutionEngineException  
+ **X DO NOT** açıkça throw <xref:System.Runtime.InteropServices.COMException>, <xref:System.ExecutionEngineException>, ve <xref:System.Runtime.InteropServices.SEHException>. Bu özel durumlar yalnızca CLR altyapısı tarafından atılır.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

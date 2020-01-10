@@ -8,24 +8,23 @@ helpviewer_keywords:
 - errors [.NET Framework], exceptions
 - reporting errors
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
-author: KrzysztofCwalina
-ms.openlocfilehash: 60c3d25138c224f5eabf44d06b6c9a8373eb5f96
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b64b6052aeb99c6e878c1a9aac50e67bca7f8d2a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669062"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709380"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Özel Durumlar için Tasarım Yönergeleri
-Özel durum işleme dönüş değerine göre hata bildirimi üzerinden birçok avantaj sunar. İyi çerçevesi tasarımı, uygulama geliştiricisinin özel durumları avantajlarını daha iyi anlamanıza yardımcı olur. Bu bölümde, özel durumların avantajlar açıklanır ve verimli bir şekilde kullanmak için yönergeler sunar.  
+Özel durum işlemede, return-Value tabanlı hata raporlama üzerinde birçok avantaj bulunur. İyi çerçeve tasarımı, uygulama geliştiricisinin özel durumların avantajlarını belirlemesine yardımcı olur. Bu bölümde özel durumların avantajları ele alınmaktadır ve bunları etkili bir şekilde kullanmaya yönelik yönergeler sunulmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Özel Durum Oluşturma](../../../docs/standard/design-guidelines/exception-throwing.md)  
  [Standart Özel Durum Türlerini Kullanma](../../../docs/standard/design-guidelines/using-standard-exception-types.md)  
  [Özel Durumlar ve Performans](../../../docs/standard/design-guidelines/exceptions-and-performance.md)  
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

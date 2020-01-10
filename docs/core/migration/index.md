@@ -2,13 +2,12 @@
 title: Project. json ' dan .NET Core geçişi
 description: Project. JSON kullanarak eski bir .NET Core projesini geçirmeyi öğrenin
 ms.date: 07/19/2017
-ms.custom: seodec18
-ms.openlocfilehash: 2912262d1191114d2314fed89e31c91c114f1935
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: f81d01c052c3632c48a5f961be86eab686c2074e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773906"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714352"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Project. json ' dan .NET Core projelerini geçirme
 
@@ -29,13 +28,13 @@ Bu belge yalnızca Project. JSON kullanan eski .NET Core projelerine uygulanabil
 
 Her iki yöntem de projeleri geçirmek için aynı temel altyapıyı kullanır, bu nedenle sonuçlar her ikisi için de aynı olacaktır. Çoğu durumda, projeyi geçirmek için şu iki yönden birini kullanmak yeterlidir *. JSON* , gereken tek şeydir ve proje dosyasının el ile düzenlenmesinin *gerekli değildir.* Elde edilen *. csproj* dosyası, kapsayan dizin adı ile aynı ada sahip olacaktır.
 
-### <a name="visual-studio"></a>Visual Studio
+### <a name="visual-studio"></a>{1&gt;Visual Studio&lt;1}
 
 Visual Studio 2017 veya Visual Studio 2019 sürüm 16,2 ve önceki sürümlerde *.* xproj dosyalarına başvuran bir *. xproj* dosyası veya çözüm dosyası açtığınızda **tek yönlü yükseltme** iletişim kutusu görüntülenir. İletişim kutusunda geçirilecek projeler görüntülenir. Bir çözüm dosyası açarsanız, çözüm dosyasında belirtilen tüm projeler listelenir. Geçirilecek projelerin listesini gözden geçirin ve **Tamam ' ı**seçin.
 
 ![Geçirilecek projelerin listesini gösteren tek yönlü yükseltme iletişim kutusu](media/one-way-upgrade.jpg)
 
-Visual Studio seçilen projeleri otomatik olarak geçirir. Bir çözümü geçirirken, tüm projeler ' i seçmezseniz, bu çözümden kalan projeleri yükseltmenizi isteyen iletişim kutusu görüntülenir. Proje geçirildikten sonra, **Çözüm Gezgini** penceresinde projeye sağ tıklayıp, **>. csproj \<project adını Düzenle**' yi seçerek içeriğini görebilir ve değiştirebilirsiniz.
+Visual Studio seçilen projeleri otomatik olarak geçirir. Bir çözümü geçirirken, tüm projeler ' i seçmezseniz, bu çözümden kalan projeleri yükseltmenizi isteyen iletişim kutusu görüntülenir. Proje geçirildikten sonra, **Çözüm Gezgini** penceresinde projeye sağ tıklayıp, **\<proje adını >. csproj**öğesini seçerek içeriğini görebilir ve değiştirebilirsiniz.
 
 Geçirilen dosyalar (*Project. JSON*, *Global. JSON*, *. xproj*ve çözüm dosyası) bir *yedekleme* klasörüne taşınır. Geçirilen çözüm dosyası Visual Studio 2017 veya Visual Studio 2019 sürümüne yükseltilir ve bu çözüm dosyasını Visual Studio 2015 veya önceki sürümlerde açamazsınız. Bir geçiş raporu içeren *UpgradeLog. htm* adlı bir dosya Ayrıca otomatik olarak kaydedilir ve açılır.
 
@@ -77,8 +76,8 @@ Geçerli veya üst dizinde *Global. JSON* dosyanız varsa ve belirttiği `sdk` s
 
 - Araçlar sürümü özelliğini, varsa `<Project>` öğesinden kaldırın.
 - XML ad alanını (`xmlns`) `<Project>` öğesinden kaldırın.
-- Yoksa, `Sdk` özniteliğini `<Project>` öğesine ekleyin ve `Microsoft.NET.Sdk` ya da `Microsoft.NET.Sdk.Web` olarak ayarlayın. Bu öznitelik, projenin kullanılacak SDK 'Yı kullandığını belirtir. `Microsoft.NET.Sdk.Web` Web uygulamaları için kullanılır.
-- @No__t_0 ve `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` deyimlerini projenin üst ve alt kısmından kaldırın. Bu içeri aktarma deyimleri SDK tarafından kapsanıyor, bu nedenle projenin projede olması gerekmez.
+- Yoksa, `Sdk` özniteliğini `<Project>` öğesine ekleyin ve `Microsoft.NET.Sdk` ya da `Microsoft.NET.Sdk.Web`olarak ayarlayın. Bu öznitelik, projenin kullanılacak SDK 'Yı kullandığını belirtir. `Microsoft.NET.Sdk.Web` Web uygulamaları için kullanılır.
+- `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` ve `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` deyimlerini projenin üst ve alt kısmından kaldırın. Bu içeri aktarma deyimleri SDK tarafından kapsanıyor, bu nedenle projenin projede olması gerekmez.
 - Projenizdeki öğelerin `<PackageReference>` `Microsoft.NETCore.App` veya `NETStandard.Library` varsa, bunları kaldırmanız gerekir. Bu paket başvuruları [SDK tarafından kapsanıyor](https://aka.ms/sdkimplicitrefs).
 - Varsa `Microsoft.NET.Sdk` `<PackageReference>` öğesi kaldırın. SDK başvurusu, `<Project>` öğesindeki `Sdk` özniteliği aracılığıyla gelir.
 - [SDK tarafından kapsanan](../tools/csproj.md#default-compilation-includes-in-net-core-projects) [genelleştirmeler](https://en.wikipedia.org/wiki/Glob_(programming)) kaldırın. Derleme öğeleri yineleneceği için bu genelleştirmeler, projenizde bir hata oluşmasına neden olur.
@@ -89,4 +88,4 @@ Eski csproj biçiminden yenisine geçişten önceki ve sonraki örneklere örnek
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio projelerini bağlantı noktası, geçirme ve yükseltme](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)
+- [Taşıma, geçirme ve Visual Studio projelerini yükseltme](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)

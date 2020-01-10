@@ -1,23 +1,22 @@
 ---
 title: Sınıflar- C# Programlama Kılavuzu
-ms.custom: seodec18
 description: Sınıf türleri ve bunların nasıl oluşturulacağı hakkında bilgi edinin
 ms.date: 08/21/2018
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 193446ff98edce3b7c078c6eeba07cf9acdadaf0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 832095e1d9712c85ad588836e8eba8f523719021
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597180"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714974"
 ---
 # <a name="classes-c-programming-guide"></a>Sınıflar (C# Programlama Kılavuzu)
 
 ## <a name="reference-types"></a>Başvuru türleri  
-[Sınıf](../../language-reference/keywords/class.md) olarak tanımlanan bir tür, *başvuru türüdür*. Çalışma zamanında, bir başvuru türünde bir değişken bildirdiğinizde, [New](../../language-reference/operators/new-operator.md) işlecini kullanarak sınıfın bir örneğini açıkça oluşturana veya onu oluşturulmuş bir uyumlu türdeki nesne atayan sürece değişken [null](../../language-reference/keywords/null.md) değerini içerir diğer bir yerde, aşağıdaki örnekte gösterildiği gibi:
+[Sınıf](../../language-reference/keywords/class.md) olarak tanımlanan bir tür, *başvuru türüdür*. Çalışma zamanında, bir başvuru türünde bir değişken bildirdiğinizde, [New](../../language-reference/operators/new-operator.md) işlecini kullanarak sınıfın bir örneğini açıkça oluşturana veya onu aşağıdaki örnekte gösterildiği gibi başka bir yerde oluşturulmuş olan uyumlu bir türde bir nesne atayarak, değişken [null](../../language-reference/keywords/null.md) değerini içerir:
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -41,7 +40,7 @@ Nesne oluşturulduğunda, söz konusu nesne için yönetilen yığında yeterli 
  }
 ```
 
- `class` Anahtar sözcüğü öncesinde erişim düzeyidir. Bu durumda [genel](../../language-reference/keywords/public.md) kullanıldığından, herkes bu sınıfın örneklerini oluşturabilir. Sınıfın adı `class` anahtar sözcüğünü izler. Sınıfın adı geçerli C# bir [tanımlayıcı adı](../inside-a-program/identifier-names.md)olmalıdır. Tanımın geri kalanı, davranışın ve verilerin tanımlandığı sınıf gövdesidir. Bir sınıftaki alanlar, özellikler, Yöntemler ve olaylar topluca *sınıf üyeleri*olarak adlandırılır.  
+ `class` anahtar kelimesinin öncesinde erişim düzeyi vardır. Bu durumda [genel](../../language-reference/keywords/public.md) kullanıldığından, herkes bu sınıfın örneklerini oluşturabilir. Sınıfın adı `class` anahtar sözcüğünü izler. Sınıfın adı geçerli C# bir [tanımlayıcı adı](../inside-a-program/identifier-names.md)olmalıdır. Tanımın geri kalanı, davranışın ve verilerin tanımlandığı sınıf gövdesidir. Bir sınıftaki alanlar, özellikler, Yöntemler ve olaylar topluca *sınıf üyeleri*olarak adlandırılır.  
   
 ## <a name="creating-objects"></a>Nesneler oluşturma
 
@@ -53,7 +52,7 @@ Bazen birbirinin yerine kullanıldıkları halde bir sınıf ve bir nesne farkl�
  Customer object1 = new Customer();
  ```
 
- Bir sınıfın bir örneği oluşturulduğunda, nesnesine bir başvuru, programcıya geri geçirilir. Önceki örnekte, `object1` temel alan `Customer`bir nesnesine başvurudur. Bu başvuru yeni nesneye başvurur ancak nesne verilerinin kendisini içermez. Aslında, herhangi bir nesne oluşturmadan bir nesne başvurusu oluşturabilirsiniz:  
+ Bir sınıfın bir örneği oluşturulduğunda, nesnesine bir başvuru, programcıya geri geçirilir. Önceki örnekte, `object1` `Customer`tabanlı bir nesneye başvurudur. Bu başvuru yeni nesneye başvurur ancak nesne verilerinin kendisini içermez. Aslında, herhangi bir nesne oluşturmadan bir nesne başvurusu oluşturabilirsiniz:  
  
 ```csharp
  Customer object2;
@@ -66,7 +65,7 @@ Bazen birbirinin yerine kullanıldıkları halde bir sınıf ve bir nesne farkl�
  Customer object4 = object3;
 ```
   
- Bu kod, her ikisi de aynı nesneye başvuran iki nesne başvurusu oluşturur. Bu nedenle, nesne üzerinde yapılan `object3` tüm değişiklikler sonraki `object4`kullanımlarda yansıtılır. Sınıfları temel alan nesneler başvuruya göre başvurulduğu için sınıflar başvuru türleri olarak bilinir.  
+ Bu kod, her ikisi de aynı nesneye başvuran iki nesne başvurusu oluşturur. Bu nedenle, `object3` aracılığıyla yapılan nesne üzerindeki tüm değişiklikler, `object4`sonraki kullanımlarına yansıtılır. Sınıfları temel alan nesneler başvuruya göre başvurulduğu için sınıflar başvuru türleri olarak bilinir.  
   
 ## <a name="class-inheritance"></a>Sınıf devralma  
 

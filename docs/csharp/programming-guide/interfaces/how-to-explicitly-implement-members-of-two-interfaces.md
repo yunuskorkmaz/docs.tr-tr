@@ -1,19 +1,18 @@
 ---
-title: 'Nasıl yapılır: Iki arabirimin üyelerini açıkça uygulama- C# Programlama Kılavuzu'
-ms.custom: seodec18
+title: İki arabirimin üyelerini açıkça uygulama- C# Programlama Kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [C#], explicitly implementing interface members
 - interfaces [C#], explicitly implementing with inheritance
 ms.assetid: 8b402ddc-dff9-4869-89cb-d718c764e68e
-ms.openlocfilehash: 1d4dd0485be1d859e3e9594ab1558a907b8f1f7a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c7adc08f62a7f8a14b8e10f8b5ecdd6e37db811d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589200"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75701244"
 ---
-# <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Nasıl yapılır: Iki arabirimin üyelerini açıkça uygulama (C# Programlama Kılavuzu)
+# <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>İki arabirimin üyelerini açıkça uygulama (C# Programlama Kılavuzu)
 Açık [arabirim](../../language-reference/keywords/interface.md) uygulaması Ayrıca, programcı 'nin aynı üye adlarına sahip iki arabirim uygulamasına ve her arabirime ayrı bir uygulama sağlamasına izin verir. Bu örnek, hem ölçüm hem de Ingilizce birimlerindeki bir kutunun boyutlarını görüntüler. Box [sınıfı](../../language-reference/keywords/class.md) , farklı ölçü sistemlerini temsil eden iki arabirim olan IEnglishDimensions ve IMetricDimensions uygular. Her iki arabirimde de aynı üye adları, uzunluğu ve genişliği vardır.  
   
 ## <a name="example"></a>Örnek  
@@ -33,4 +32,4 @@ Açık [arabirim](../../language-reference/keywords/interface.md) uygulaması Ay
 - [C# Programlama Kılavuzu](../index.md)
 - [Sınıflar ve Yapılar](../classes-and-structs/index.md)
 - [Arabirimler](./index.md)
-- [Nasıl yapılır: Arabirim üyelerini açıkça uygulama](./how-to-explicitly-implement-interface-members.md)
+- [Arabirim üyelerini açıkça uygulama](./how-to-explicitly-implement-interface-members.md)

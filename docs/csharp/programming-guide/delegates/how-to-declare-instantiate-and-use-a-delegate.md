@@ -1,18 +1,17 @@
 ---
-title: 'Nasıl yapılır: temsilci C# programlama kılavuzunu bildirme, oluşturma ve kullanma'
-ms.custom: seodec18
+title: Bir temsilci C# programlama kılavuzunu bildirme, oluşturma ve kullanma
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: bd3d80023f6cb382f057e976dba01daf5e28db50
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7ac1d736e19c4dcf1c8408db944505c399762778
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423316"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712370"
 ---
-# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Nasıl yapılır: Temsilci Bildirme, Oluşturma ve Kullanma (C# Programlama Kılavuzu)
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Bir temsilciyi bildirme, oluşturma ve kullanma (C# Programlama Kılavuzu)
 C# 1,0 ve sonraki sürümlerde, temsilciler aşağıdaki örnekte gösterildiği gibi bildirilebilecek.  
   
  [!code-csharp[csProgGuideDelegates#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#13)]  

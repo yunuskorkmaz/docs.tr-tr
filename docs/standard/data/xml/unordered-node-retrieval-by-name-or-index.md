@@ -6,27 +6,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a7701f887410aa263483e52a5dd65a09d1444aa6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8c6819b4c1628d9e09a9bbf96ae8d5edbb6c643d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589864"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710082"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Ada veya Dizine Göre Sırasız Düğüm Alma
-**XmlNamedNodeMap** NamedNodeMap olarak World Wide Web Consortium (W3C) belirtimi açıklanmıştır ve bunların adı veya dizin tarafından başvuru düğümleri olanağı sırasız bir dizi düğümü işlemek için gerekli değildir. Tek yolu erişiminiz bir **XmlNamedNodeMap** olduğunda bir **XmlNamedNodeMap** bir yöntem veya özellik ile döndürülür. Üç yöntem veya döndüren özellikler bir **XmlNamedNodeMap**:  
+**XmlNamedNodeMap** , world WIDE Web KONSORSIYUMU (W3C) belirtiminde NamedNodeMap olarak tanımlanır ve düğümler adına veya dizinine göre başvuru yeteneğine sahip sıralanmamış bir düğüm kümesini işlemek için gereklidir. **XmlNamedNodeMap** 'e erişiminizin tek yolu, bir **XmlNamedNodeMap** bir yöntem veya özellik aracılığıyla döndürüldüğünde olur. **XmlNamedNodeMap**döndüren üç yöntem veya özellik vardır:  
   
-- XmlElement.Attributes  
+- XmlElement. Attributes  
   
-- XmlDocumentType.Entities  
+- XmlDocumentType. Entities  
   
-- XmlDocumentType.Notations  
+- XmlDocumentType. gösterimler  
   
- Örneğin, **XmlDocumentType.Entities** özellik koleksiyonunu alır **XmlEntity** düğümleri belge türü bildirimi içinde bildirilmiş. Bu koleksiyonu olarak döndürülür bir **XmlNamedNodeMap**, ve kullanımı ile bir koleksiyon üzerinden yineleme **sayısı** özelliği ve görüntü varlık bilgileri. Bir örnek üzerinden yineleme için bir **XmlNamedNodeMap**, bkz: <xref:System.Xml.XmlDocumentType.Entities%2A>.  
+ Örneğin, **XmlDocumentType. Entities** özelliği, belge türü bildiriminde belirtilen **XmlEntity** düğümlerinin koleksiyonunu alır. Bu koleksiyon bir **XmlNamedNodeMap**olarak döndürülür ve koleksiyon içinde **Count** özelliğinin kullanımıyla ve varlık bilgilerini görüntüleyecek şekilde yineleyebilirsiniz. **XmlNamedNodeMap**aracılığıyla yineleme örneği için bkz. <xref:System.Xml.XmlDocumentType.Entities%2A>.  
   
- **XmlAttributeCollection** türetilir **XmlNamedNodeMap** ve gösterimler ve varlıkların salt okunur olsa yalnızca öznitelikler değiştirilebilir,. Kullanarak **XmlNamedNodeMap** öznitelikler için kendi XML adlarına göre bu öznitelikleri için düğümleri alabilirsiniz. Bu, bir öğe düğümü üzerinde özniteliklerin koleksiyonunu yönetmek için kolay bir yöntemini sağlar. Bu doğrudan karşıtlıklar **XmlNodeList**, ayrıca uygulayan **IEnumerable** arabirimi, ancak dizin erişimci yerine bir dize. **RemoveNamedItem** ve **SetNamedItem** yöntemleri karşı kullanılan yalnızca bir **XmlAttributeCollection**. Ekleme veya bir öznitelik koleksiyonundan olup olmadığını kaldırma **AttributeCollection** veya **XmlNamedNodeMap** uygulama, öznitelik koleksiyonundan öğesindeki değiştirir. Aşağıdaki kod örneği, bir özniteliği Taşı ve yeni bir öznitelik oluşturmak gösterilmektedir.  
+ **XmlAttributeCollection** , **XmlNamedNodeMap** 'ten türetilir ve yalnızca öznitelikler değiştirilebilir, ancak gösterimler ve varlıklar salt okunurdur. Öznitelikler için **XmlNamedNodeMap** ' i kullanarak, XML adlarına göre bu özniteliklerin düğümlerini alabilirsiniz. Bu, bir öğe düğümündeki özniteliklerin koleksiyonunu işlemek için kolay bir yöntem sağlar. Bu, doğrudan **XmlNodeList**ile oluşturulabilir, bu da **IEnumerable** arabirimini de uygular, ancak bir dize yerine dizin erişimcisi vardır. **Removenamedidıtem** ve **setnamedidıtem** yöntemleri yalnızca bir **XmlAttributeCollection**ile kullanılır. Öznitelik koleksiyonunu ekleme veya kaldırma, **AttributeCollection** veya **XmlNamedNodeMap** uygulamasının kullanılmasına bakılmaksızın, öğesindeki öznitelik koleksiyonunu değiştirir. Aşağıdaki kod örneği, bir özniteliğin nasıl taşınacağını ve yeni bir özniteliğin nasıl oluşturulacağını gösterir.  
   
 ```vb  
 Imports System  
@@ -117,7 +115,7 @@ class test {
 }  
 ```  
   
- Öğesinden kaldırılan bir öznitelik gösteren ek kod örneği görmek için bir **AttributeCollection**, bkz: [XmlNamedNodeMap.RemoveNamedItem yöntemi](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem). Özellikler ve yöntemler hakkında daha fazla bilgi için bkz. [XmlNamedNodeMap üyeleri](AllMembers.T:System.Xml.XmlNamedNodeMap).  
+ Bir **AttributeCollection**'dan çıkarılan bir özniteliği gösteren ek bir kod örneği görmek için bkz. [XmlNamedNodeMap. Removenamedidıtem yöntemi](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem). Yöntemler ve özellikler hakkında daha fazla bilgi için bkz. [XmlNamedNodeMap üyeleri](AllMembers.T:System.Xml.XmlNamedNodeMap).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

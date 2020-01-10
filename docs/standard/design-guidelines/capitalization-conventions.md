@@ -9,34 +9,33 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-author: KrzysztofCwalina
-ms.openlocfilehash: e0da4cd747846921d170d9c07d6f1fb91dbd4ed7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fee7f5b7749c97a87e37581f67cbe1b49250b9ce
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615261"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709536"
 ---
 # <a name="capitalization-conventions"></a>Büyük/Küçük Harf Kuralları
-Yönergeleri bu bölümün yerleşim kullanmak için basit bir yöntemini, tutarlı bir şekilde, türleri, üyeler ve parametreler okuması yapma tanımlayıcıları uygulandığında durumda.  
+Bu bölümdeki yönergeler, tutarlı bir şekilde uygulandığında, türler, Üyeler ve parametreler için tanımlayıcıların kolay okunmasını sağlamak üzere basit bir yöntem sağlar.  
   
-## <a name="capitalization-rules-for-identifiers"></a>Tanımlayıcıların büyük/küçük harf kuralları  
- Bir tanımlayıcı sözcükleri ayırt etmek için tanımlayıcının her sözcüğün ilk harfini büyük harfe Dönüştür. Sözcükleri ayırmak için alt çizgi kullanmayın veya tanımlayıcıları herhangi bir yerinden, sorgunuzun. Büyük harf tanımlayıcıları, tanımlayıcı kullanılmasına bağlı olarak uygun iki yolu vardır:  
+## <a name="capitalization-rules-for-identifiers"></a>Tanımlayıcılar için büyük harfe dönüştürme kuralları  
+ Bir Tanımlayıcıdaki sözcükleri ayırt etmek için, Tanımlayıcıdaki her sözcüğün ilk harfini büyük harfle yapın. Sözcükleri ayırt etmek için alt çizgi kullanmayın veya bu konuyla ilgili olarak tanımlayıcılardan herhangi bir yerde. Tanımlayıcının kullanılmasına bağlı olarak, tanımlayıcıları büyük harfle almanın iki uygun yolu vardır:  
   
-- PascalCasing  
+- Pascalbüyük harf  
   
-- camelCasing  
+- Camelbüyük harf  
   
- Parametre adları hariç tüm tanımlayıcıları için kullanılan PascalCasing kural, ilk karakter (iki harf uzunluğu üzerinde kısaltmalar dahil), her bir sözcüğün aşağıdaki örneklerde gösterildiği gibi büyük harfe dönüştürür:  
+ Parametre adları hariç tüm tanımlayıcılar için kullanılan Pascalas kuralı, aşağıdaki örneklerde gösterildiği gibi her sözcüğün ilk karakterini (uzunluğunun iki harfli kısaltmalarla birlikte) büyük harfe dönüştürür:  
   
  `PropertyDescriptor`  
  `HtmlTag`  
   
- Özel bir durum, her iki harf olduğundan, iki harfli kısaltmalar için aşağıdaki tanımlayıcıda gösterildiği şekilde yapılır:  
+ Aşağıdaki tanımlayıcıda gösterildiği gibi, iki harfli kısaltmalar için her iki harf de büyük harfli olan özel bir durum yapılır:  
   
  `IOStream`  
   
- Parametre adları için yalnızca kullanılan camelCasing kural, aşağıdaki örneklerde gösterildiği gibi her sözcüğün ilk sözcük dışındaki ilk karakteri büyük harfe dönüştürür. Örnekte de gösterildiği gibi bir başlamalıdır tanımlayıcı başlayan iki harfli kısaltmalar hem küçük olan.  
+ Yalnızca parametre adları için kullanılan Camelas kuralı, aşağıdaki örneklerde gösterildiği gibi ilk sözcük hariç her sözcüğün ilk karakterini büyük harfe dönüştürür. Örnekte de gösterildiği gibi, Camel bir tanımlayıcıya başlayan iki harfli kısaltmalar her ikisi de küçük harftir.  
   
  `propertyDescriptor`  
  `ioStream`  
@@ -46,11 +45,11 @@ Yönergeleri bu bölümün yerleşim kullanmak için basit bir yöntemini, tutar
   
  **✓ DO** camelCasing parametre adları için kullanın.  
   
- Aşağıdaki tabloda, farklı tür tanımlayıcıları büyük/küçük harf kurallarını açıklar.  
+ Aşağıdaki tabloda, farklı türlerde tanımlayıcılar için büyük/küçük harf kuralları açıklanmaktadır.  
   
 |tanımlayıcı|Büyük/küçük harf kullanımı|Örnek|  
 |----------------|------------|-------------|  
-|Ad Alanı|Pascal|`namespace System.Security { ... }`|  
+|Ad alanı|Pascal|`namespace System.Security { ... }`|  
 |Tür|Pascal|`public class StreamReader { ... }`|  
 |Arabirim|Pascal|`public interface IEnumerable { ... }`|  
 |Yöntem|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
@@ -58,16 +57,16 @@ Yönergeleri bu bölümün yerleşim kullanmak için basit bir yöntemini, tutar
 |Olay|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |Alan|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
 |Sabit listesi değeri|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
-|Parametre|Ortası|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
+|Parametre|Ortası büyük harf|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
   
-## <a name="capitalizing-compound-words-and-common-terms"></a>Bileşik sözcüklerin büyük harfe dönüştürme ve genel koşulları  
- Çoğu bileşik koşulları büyük/küçük harf amaçları için tek sözcük olarak kabul edilir.  
+## <a name="capitalizing-compound-words-and-common-terms"></a>Bileşik sözcüklerin ve ortak koşulların büyük bir olması  
+ Çoğu bileşik terim, büyük küçük harf amaçlarıyla tek sözcük olarak değerlendirilir.  
   
  **X DO NOT** sözde kapalı form bileşik sözcüklerin her sözcüğün büyük harfe çevirme.  
   
- Bu uç nokta gibi tek bir sözcük olarak yazılan bileşik sözcüklerdir. Büyük/küçük harf kuralları amacıyla kapalı biçimli bir bileşik sözcük tek bir sözcük kabul eder. Bir bileşik sözcük kapalı formunda yazılırsa belirlemek için geçerli bir sözlük kullanın.  
+ Bunlar, uç nokta gibi tek bir kelime olarak yazılmış olan Birleşik sözcüklerdir. Büyük/küçük harf yönergeleri için kapalı biçimli bir bileşik sözcüğü tek bir sözcük olarak değerlendirin. Bileşik bir sözcüğün kapalı biçimde yazılıp yazılmadığını öğrenmek için geçerli bir sözlük kullanın.  
   
-|Pascal|Ortası|değil|  
+|Pascal|Ortası büyük harf|değil|  
 |------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  
@@ -95,14 +94,14 @@ Yönergeleri bu bölümün yerleşim kullanmak için basit bir yöntemini, tutar
 |`WhiteSpace`|`whiteSpace`|`Whitespace`|  
 |`Writable`|`writable`|`Writeable`|  
   
-## <a name="case-sensitivity"></a>Büyük/küçük harfe duyarlılık  
- Bazı yapın, ancak CLR üzerinde çalışabilen dilleri büyük küçük harf duyarlılığı, desteklemek için gerekli değildir. Dilinizi desteklediği bile Çerçevenizi erişebilecek diğer diller yoktur. Harici olarak erişilebilen herhangi bir API, bu nedenle, tek başına, aynı bağlamda iki ad arasında ayrım yapmak için servis talebi üzerinde güvenemezsiniz.  
+## <a name="case-sensitivity"></a>Büyük/küçük harf duyarlılığı  
+ CLR üzerinde çalışabilen dillerin, büyük/küçük harf duyarlılığı desteklemek için gerekli değildir, ancak bazıları. Diliniz destekliyorsa bile, çerçeve'nize erişebilen diğer diller değildir. Bu nedenle dışarıdan erişilebilen tüm API 'Ler, aynı bağlamdaki iki ad arasında ayrım yapmak için tek başına bir durum kullanamaz.  
   
- **X DO NOT** tüm programlama dilleriyle büyük küçük harfe duyarlı olduğunu varsayar. Değiller. Adlar tek başına harfe göre farklılık göstermeyebilir.  
+ **X DO NOT** tüm programlama dilleriyle büyük küçük harfe duyarlı olduğunu varsayar. Bunlar değildir. Adlar tek başına büyük/küçük harf bakımından farklı olamaz.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

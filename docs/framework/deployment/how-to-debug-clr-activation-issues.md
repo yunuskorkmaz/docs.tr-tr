@@ -4,18 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2bed01a74c5b3338df958a3e178c06602bd69866
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 602ee3c88237a902d48339836fbe25f636ae9705
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052110"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716503"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>CLR etkinleştirme sorunlarını ayıklama
 
-Uygulamanızı ortak dil çalışma zamanının (CLR) doğru sürümü ile çalışacak şekilde almaya yönelik sorunlarla karşılaşırsanız, CLR etkinleştirme günlüklerini görüntüleyebilir ve hata ayıklaması yapabilirsiniz. Bu Günlükler, uygulamanız beklenenden farklı bir CLR sürümü yüklediğinde veya CLR 'yi hiç yüklemediğinde, bir etkinleştirme sorununun kök nedenini belirlemede çok yararlı olabilir. [.NET Framework başlatma hataları: Kullanıcı deneyimini](initialization-errors-managing-the-user-experience.md) yönetmek, bir uygulama için clr bulunamadığı zaman deneyimi ele alır.
+Uygulamanızı ortak dil çalışma zamanının (CLR) doğru sürümü ile çalışacak şekilde almaya yönelik sorunlarla karşılaşırsanız, CLR etkinleştirme günlüklerini görüntüleyebilir ve hata ayıklaması yapabilirsiniz. Bu Günlükler, uygulamanız beklenenden farklı bir CLR sürümü yüklediğinde veya CLR 'yi hiç yüklemediğinde, bir etkinleştirme sorununun kök nedenini belirlemede çok yararlı olabilir. [.NET Framework başlatma hataları: Kullanıcı deneyimini yönetmek](initialization-errors-managing-the-user-experience.md) , bir uygulama için clr bulunamadığı zaman deneyimi ele alır.
 
 CLR etkinleştirme günlüğü, bir HKEY_LOCAL_MACHINE kayıt defteri anahtarı veya bir sistem ortam değişkeni kullanılarak sistem genelinde etkinleştirilebilir. Günlük kaydı, kayıt defteri girişi veya ortam değişkeni kaldırılana kadar oluşturulur. Alternatif olarak, farklı bir kapsam ve süre ile günlüğe kaydetmeyi etkinleştirmek için bir kullanıcı veya işlem yerel ortam değişkeni kullanabilirsiniz.
 
@@ -25,15 +23,15 @@ CLR etkinleştirme günlükleri, tamamen farklı olan [bütünleştirilmiş kod 
 
 ### <a name="using-the-registry"></a>Kayıt defterini kullanma
 
-1. Kayıt Defteri Düzenleyicisi 'nde HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\adresine gidin. NETFramework (32 bitlik bir bilgisayarda) veya HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. NETFramework klasörü (64 bitlik bir bilgisayarda).
+1. Kayıt Defteri Düzenleyicisi 'nde, HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\\adresine gidin. NETFramework (32 bitlik bir bilgisayarda) veya \SOFTWARE\Wow6432Node\Microsoft\\HKEY_LOCAL_MACHINE. NETFramework klasörü (64 bitlik bir bilgisayarda).
 
-2. Adlı `CLRLoadLogDir`bir dize değeri ekleyin ve CLR etkinleştirme günlüklerini depolamak istediğiniz mevcut bir dizinin tam yolu olarak ayarlayın.
+2. `CLRLoadLogDir`adlı bir dize değeri ekleyin ve CLR etkinleştirme günlüklerini depolamak istediğiniz mevcut bir dizinin tam yolu olarak ayarlayın.
 
 Etkinleştirme günlüğü, dize değerini kaldırana kadar etkin kalır.
 
 ### <a name="using-an-environment-variable"></a>Ortam değişkeni kullanma
 
-- `COMPLUS_CLRLoadLogDir` Ortam değişkenini, CLR etkinleştirme günlüklerini depolamak istediğiniz mevcut bir dizinin tam yolunu temsil eden bir dizeye ayarlayın.
+- `COMPLUS_CLRLoadLogDir` ortam değişkenini, CLR etkinleştirme günlüklerini depolamak istediğiniz mevcut bir dizinin tam yolunu temsil eden bir dizeye ayarlayın.
 
     Ortam değişkenini nasıl ayarlarsanız kapsamını belirler:
 
@@ -112,7 +110,7 @@ Aşağıdaki bir etkinleştirme günlüğü örneğinde, en yararlı bilgiler vu
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
-- **isteğe bağlı özellik yüklemesi** , Windows 8 ' de .NET Framework 3,5 ' i etkinleştirmeyi belirtir. Bkz [. .NET Framework başlatma hataları: Bu senaryo hakkında daha](initialization-errors-managing-the-user-experience.md) fazla bilgi için Kullanıcı deneyimini yönetme.
+- **isteğe bağlı özellik yüklemesi** , Windows 8 ' de .NET Framework 3,5 ' i etkinleştirmeyi belirtir. Bu senaryo hakkında daha fazla bilgi için bkz. [.NET Framework başlatma hataları: Kullanıcı deneyimini yönetme](initialization-errors-managing-the-user-experience.md) .
 
     ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
@@ -121,4 +119,4 @@ Aşağıdaki bir etkinleştirme günlüğü örneğinde, en yararlı bilgiler vu
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dağıtım](index.md)
-- [Nasıl yapılır: .NET Framework 4 veya sonraki sürümleri desteklemek için bir uygulama yapılandırma](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Nasıl yapılır: .NET Framework 4 veya sonraki sürümleri desteklemek için uygulama yapılandırma](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

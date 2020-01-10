@@ -1,51 +1,49 @@
 ---
-title: 'Nasıl yapılır: Düğüm Parçasını Dönüştürme'
+title: 'Nasıl yapılır: düğüm parçasını dönüştürme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fabf7983a1887fb318bfb8d111b3911f4d90c545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 56e9ef6031a5736acfa066ed6c068f954bd5af8d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62027205"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710823"
 ---
-# <a name="how-to-transform-a-node-fragment"></a>Nasıl yapılır: Düğüm Parçasını Dönüştürme
-İçerdiği verileri dönüştürme ne zaman bir <xref:System.Xml.XmlDocument> veya <xref:System.Xml.XPath.XPathDocument> XSLT dönüşümleri uygulamak için bir belgenin bir bütün olarak nesnesi. Belge kök düğümü dışındaki bir düğümde geçirirseniz, diğer bir deyişle, bu dönüştürme süreci yüklenen belgedeki tüm düğümleri erişmesini engellemez. Düğüm parçasını dönüştürme için yalnızca düğüm parçasını içeren ayrı bir nesne oluşturun ve gerekir, nesneyi geçirmek <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi.  
+# <a name="how-to-transform-a-node-fragment"></a>Nasıl yapılır: düğüm parçasını dönüştürme
+Bir <xref:System.Xml.XmlDocument> veya <xref:System.Xml.XPath.XPathDocument> nesnesi içindeki verileri dönüştürdüğünüzde XSLT dönüştürmeleri bir belge için bir bütün olarak uygulanır. Diğer bir deyişle, belge kök düğümü dışında bir düğüm geçirirseniz, bu, dönüşüm işleminin yüklenen belgedeki tüm düğümlere erişmesini engellemez. Bir düğüm parçasını dönüştürmek için yalnızca düğüm parçasını içeren ayrı bir nesne oluşturmanız ve bu nesneyi <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemine iletmeniz gerekir.  
   
 ## <a name="procedures"></a>Yordamlar  
   
-#### <a name="to-transform-a-node-fragment"></a>Düğüm parçasını dönüştürme için  
+#### <a name="to-transform-a-node-fragment"></a>Düğüm parçasını dönüştürmek için  
   
-1. Kaynak belge içeren bir nesne oluşturun.  
+1. Kaynak belgeyi içeren bir nesne oluşturun.  
   
 2. Dönüştürmek istediğiniz düğüm parçasını bulun.  
   
-3. Ayrı bir nesne yalnızca düğüm parçasını ile oluşturun.  
+3. Yalnızca düğüm parçamı ile ayrı bir nesne oluşturun.  
   
-4. Geçirmek için düğüm parçasını <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi.  
+4. Düğüm parçasını <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metoduna geçirin.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir düğüm parçasını dönüştürür ve sonuçlarını konsola çıkartır.  
+ Aşağıdaki örnek bir düğüm parçasını dönüştürür ve sonuçları konsola verir.  
   
  [!code-csharp[XSLT_NodeFrag#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_NodeFrag/CS/xslt_frag.cs#1)]
  [!code-vb[XSLT_NodeFrag#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_NodeFrag/VB/xslt_frag.vb#1)]  
   
 ### <a name="input"></a>Giriş  
   
-##### <a name="booksxml"></a>Books.XML  
+##### <a name="booksxml"></a>Books. xml  
  [!code-xml[XML_Core_Files#1](../../../../samples/snippets/xml/VS_Snippets_Data/XML_Core_Files/XML/books.xml#1)]  
   
-##### <a name="singlexsl"></a>Single.xsl  
+##### <a name="singlexsl"></a>tek. Xsl  
  [!code-xml[XSLT_NodeFrag#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_NodeFrag/XML/single.xsl#2)]  
   
 ### <a name="output"></a>Çıkış  
- Güvenle el kitabı başlıktır  
+ Kitap başlığı, güvenirlik Man.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

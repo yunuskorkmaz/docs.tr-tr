@@ -1,6 +1,5 @@
 ---
 title: Sayısal sonuçlar tablosunu biçimlendirme- C# başvuru
-ms.custom: seodec18
 description: Standart sayısal C# biçim dizeleri hakkında bilgi edinin
 ms.date: 09/20/2018
 helpviewer_keywords:
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 2cba5e704787ae6368b2543c985babf2fde3b4dd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: eb93f0a4f3c66e9f7b295366a77b9fb099fc3a1e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422749"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713505"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Sayısal sonuçlar tablosunu biçimlendirme (C# başvuru)
 
@@ -21,13 +20,13 @@ Aşağıdaki tabloda sayısal sonuçları biçimlendirmek için desteklenen biç
 
 |Biçim belirteci|Açıklama|Örnekler|Sonuç|  
 |----------------------|-----------------|--------------|------------|  
-|C veya c|Para Birimi|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2,50<br /><br /> ($2,50)|  
+|C veya c|Para Birimi|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|\\$2,50<br /><br /> (\\$2,50)|  
 |D veya d|Ondalık|`string s = $"{25:D5}";`|00025|  
-|E veya e|Simge|`string s = $"{250000:E2}";`|2.50 e + 005|  
-|F veya f|Sabit nokta|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2,50<br /><br /> 3|  
+|E veya e|Üstel|`string s = $"{250000:E2}";`|2.50 e + 005|  
+|F veya f|Sabit nokta|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  
 |G veya g|Genel|`string s = $"{2.5:G}";`|2,5|  
-|N veya n|rakamlardan|`string s = $"{2500000:N}";`|2\.500.000,00|  
-|P veya p|Yüzde|`string s = $"{0.25:P}";`|% 25,00|  
+|N veya n|Sayısal|`string s = $"{2500000:N}";`|2,500,000.00|  
+|P veya p|Yüzde|`string s = $"{0.25:P}";`|%25|  
 |R veya r|Gidiş|`string s = $"{2.5:R}";`|2,5|  
 |X veya x|Onaltılık|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|BELIRLEDIĞINIZ<br /><br /> 'DIR|  
 

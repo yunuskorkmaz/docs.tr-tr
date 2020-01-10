@@ -12,49 +12,47 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2d9124c90d09e2fa94a0eaa2ff8cd4e4ab15206f
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: fc6972061994e17c2176d3ab278b8d2b37c725ee
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135668"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711395"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Koleksiyonlardaki Karşılaştırmalar ve Sıralamalar
-<xref:System.Collections> Sınıfları kaldırılacak öğe için arama olup olmadığını koleksiyonları, yönetme veya anahtar-değer çiftinin değer döndüren ilgili neredeyse tüm işlemler karşılaştırmalar gerçekleştirin.  
+<xref:System.Collections> sınıfları, bir anahtar ve değer çiftinin değerini kaldırmak ya da döndürmek için arama yapılıp yapılmayacağını, koleksiyonları yönetmeye dahil olan tüm işlemlerde karşılaştırmalar gerçekleştirir.  
   
- Koleksiyonlar, genellikle bir eşitlik karşılaştırıcısının ve/veya bir sipariş karşılaştırıcı kullanır. İki yapıları karşılaştırmalar için kullanılır.  
+ Koleksiyonlar genellikle bir eşitlik karşılaştırıcısı ve/veya bir sıralama karşılaştırıcısı kullanır. Karşılaştırmalar için iki yapı kullanılır.  
   
 <a name="BKMK_Checkingforequality"></a>   
-## <a name="checking-for-equality"></a>Eşitlik için denetleniyor  
- Yöntemler gibi `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>, ve `Remove` eşitlik karşılaştırıcısının koleksiyon öğeleri için kullanın. Koleksiyon genelse, öğe eşitlik aşağıdaki kılavuzlara göre karşılaştırılır:  
+## <a name="checking-for-equality"></a>Eşitlik denetleniyor  
+ `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>ve `Remove` gibi yöntemler, koleksiyon öğeleri için eşitlik karşılaştırıcısı kullanır. Koleksiyon genel ise, öğeler aşağıdaki yönergelere göre eşitlik için karşılaştırılır:  
   
-- T türü uygulayan <xref:System.IEquatable%601> genel arabirim sonra eşitlik karşılaştırıcısının <xref:System.IEquatable%601.Equals%2A> o arabirimin yöntemi.  
+- Tür T <xref:System.IEquatable%601> genel arabirimini uyguluyorsa, eşitlik karşılaştırıcısı bu arabirimin <xref:System.IEquatable%601.Equals%2A> yöntemidir.  
   
-- T türü uygulamazsa <xref:System.IEquatable%601>, <xref:System.Object.Equals%2A?displayProperty=nameWithType> kullanılır.  
+- Tür T <xref:System.IEquatable%601>uygulamadığından, <xref:System.Object.Equals%2A?displayProperty=nameWithType> kullanılır.  
   
- Ayrıca, bazı oluşturucu aşırı yüklemeleri sözlük koleksiyonlar için kabul bir <xref:System.Collections.Generic.IEqualityComparer%601> eşitlik için anahtarları karşılaştırmak için kullanılan uygulama. Bir örnek için bkz <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> Oluşturucusu.  
+ Ayrıca, sözlük koleksiyonları için bazı Oluşturucu aşırı yüklemeleri, anahtarları eşitlik için karşılaştırmak üzere kullanılan bir <xref:System.Collections.Generic.IEqualityComparer%601> uygulamasını kabul eder. Bir örnek için <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> oluşturucusuna bakın.  
   
 <a name="BKMK_Determiningsortorder"></a>   
 ## <a name="determining-sort-order"></a>Sıralama düzenini belirleme  
- Yöntemler gibi `BinarySearch` ve `Sort` koleksiyon öğeleri için bir sıralama karşılaştırıcı kullanın. Karşılaştırmalar, koleksiyonun öğeleri arasında veya bir öğe ile belirtilen değer arasında olabilir. Nesneleri karşılaştırma için kavramı yoktur bir `default comparer` ve `explicit comparer`.  
+ `BinarySearch` ve `Sort` gibi yöntemler, koleksiyon öğeleri için bir sıralama karşılaştırıcısı kullanır. Karşılaştırmalar koleksiyonun öğeleri arasında veya bir öğe ile belirtilen değer arasında olabilir. Nesneleri karşılaştırmak için, bir `default comparer` ve `explicit comparer`kavramı vardır.  
   
- En az bir uygulama karşılaştırılan nesnelerin varsayılan karşılaştırıcı kullanır **IComparable** arabirimi. Uygulamak için iyi bir uygulamadır **IComparable** üzerinde tüm sınıflar, değerleri bir liste koleksiyon veya bir sözlük koleksiyondaki anahtarlar olarak kullanılır. Genel bir koleksiyon için eşitlik karşılaştırma aşağıdakilere göre belirlenir:  
+ Varsayılan karşılaştırıcı, **IComparable** arabirimini uygulamak için karşılaştırılan nesnelerden en az birini temel alır. Tüm sınıflarda **IComparable** uygulamak iyi bir uygulamadır, bir liste koleksiyonunda değer olarak veya bir sözlük koleksiyonundaki anahtarlar olarak kullanılır. Genel bir koleksiyon için eşitlik karşılaştırması aşağıdakilere göre belirlenir:  
   
-- T türü uygulayan <xref:System.IComparable%601?displayProperty=nameWithType> genel arabirim sonra varsayılan karşılaştırıcı <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> o arabirimin yöntemi  
+- Tür T <xref:System.IComparable%601?displayProperty=nameWithType> genel arabirimini uyguluyorsa, varsayılan karşılaştırıcı bu arabirimin <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> yöntemidir  
   
-- T türü genel olmayan uyguluyorsa <xref:System.IComparable?displayProperty=nameWithType> arabirim ise varsayılan karşılaştırıcı <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> o arabirimin yöntemi.  
+- Tür T genel olmayan <xref:System.IComparable?displayProperty=nameWithType> arabirimini uyguluyorsa, varsayılan karşılaştırıcı, bu arabirimin <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> yöntemidir.  
   
-- T türü ya da arabirimi uygulamaz, ardından hiçbir varsayılan karşılaştırıcı yoktur ve bir karşılaştırıcı veya karşılaştırma temsilciyi açıkça belirtilmelidir.  
+- Tür T her iki arabirimi de uygulamadığından, varsayılan karşılaştırıcı yoktur ve açıkça bir karşılaştırıcı veya karşılaştırma temsilcisi sağlanmalıdır.  
   
- Açık karşılaştırma sağlamak için bazı yöntemler kabul bir **IComparer** bir parametre olarak bir uygulama. Örneğin, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> yöntemi kabul bir <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> uygulaması.  
+ Açık karşılaştırmalar sağlamak için bazı yöntemler bir **IComparer** uygulamasını parametre olarak kabul eder. Örneğin, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> yöntemi bir <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> uygulamasını kabul eder.  
   
- Koleksiyonlardaki karşılaştırmalar ve sıralamalar bir koleksiyon içinde sistemin geçerli kültür ayarı etkileyebilir. Varsayılan, karşılaştırma ve sıralar **koleksiyonları** kültüre duyarlı sınıflardır. Kültür ayarı yok sayılır ve bu nedenle tutarlı karşılaştırma ve sıralama sonuçları elde etmek için kullanın <xref:System.Globalization.CultureInfo.InvariantCulture%2A> kabul üye aşırı yüklemeleri ile bir <xref:System.Globalization.CultureInfo>. Daha fazla bilgi için [koleksiyonlarda kültüre duyarsız dize işlemlerini gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) ve [dizilerde kültüre duyarsız dize işlemlerini gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md).  
+ Sistemin geçerli kültür ayarı karşılaştırmaları etkileyebilir ve bir koleksiyon içinde sıralama yapabilir. Varsayılan olarak, **koleksiyonlar** sınıflarında karşılaştırmalar ve sıralamalar kültüre duyarlıdır. Kültür ayarını yoksaymak ve bu nedenle tutarlı karşılaştırma ve sıralama sonuçları elde etmek için, <xref:System.Globalization.CultureInfo>kabul eden üye aşırı yüklemeleri olan <xref:System.Globalization.CultureInfo.InvariantCulture%2A> kullanın. Daha fazla bilgi için bkz. [koleksiyonlarda kültüre duyarsız dize Işlemleri gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) ve [dizilerde kültüre duyarsız dize işlemlerini gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md).  
   
 <a name="BKMK_Equalityandsortexample"></a>   
 ## <a name="equality-and-sort-example"></a>Eşitlik ve sıralama örneği  
- Aşağıdaki kod bir uygulamasını gösterir <xref:System.IEquatable%601> ve <xref:System.IComparable%601> basit iş nesnesinde. Ayrıca, nesnenin bir listede depolanıp sıralanmış çağırmanın görürsünüz <xref:System.Collections.Generic.List%601.Sort> yöntemi için varsayılan karşılaştırıcı kullanımıyla sonuçlanıyor `Part` türü ve <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29> anonim bir yöntem kullanılarak uygulanan yöntem.  
+ Aşağıdaki kod, basit bir iş nesnesi üzerinde <xref:System.IEquatable%601> ve <xref:System.IComparable%601> bir uygulamasını gösterir. Ayrıca, nesnesi bir listede depolandığında ve sıralandığında, <xref:System.Collections.Generic.List%601.Sort> yöntemini çağırmanın `Part` türü için varsayılan karşılaştırıcının kullanılmasına ve anonim bir yöntem kullanılarak uygulanan <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29> yöntemine neden olduğunu görürsünüz.  
   
  [!code-csharp[System.Collections.Generic.List.Sort#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.list.sort/cs/program.cs#1)]
  [!code-vb[System.Collections.Generic.List.Sort#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.list.sort/vb/module1.vb#1)]  

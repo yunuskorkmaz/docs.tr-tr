@@ -1,18 +1,17 @@
 ---
 title: Atama işleçleri- C# başvuru
-ms.custom: seodec18
 ms.date: 09/10/2019
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 103bc823ab6a56d53a3f2ec05b8de9295f1de400
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 19f74e6835ae555a3a38aa6ca8679948c7f290dd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039075"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712760"
 ---
 # <a name="assignment-operators-c-reference"></a>Atama işleçleri (C# başvuru)
 
@@ -36,7 +35,7 @@ Aşağıdaki örnek, bir yerel değişken, bir özellik ve bir Dizin Oluşturucu
 
 ## <a name="ref-assignment-operator"></a>ref atama işleci
 
-7,3 ' C# den başlayarak ref atama işlecini`= ref`bir [ref yerel](../keywords/ref.md#ref-locals) veya [ref ReadOnly yerel](../keywords/ref.md#ref-readonly-locals) değişkenini yeniden atamak için kullanabilirsiniz. Aşağıdaki örnek, ref atama işlecinin kullanımını gösterir:
+7,3 ' C# den başlayarak ref atama işlecini `= ref` bir [ref yerel](../keywords/ref.md#ref-locals) veya [ref ReadOnly yerel](../keywords/ref.md#ref-readonly-locals) değişkenini yeniden atamak için kullanabilirsiniz. Aşağıdaki örnek, ref atama işlecinin kullanımını gösterir:
 
 [!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#RefAssignment)]
 
@@ -44,7 +43,7 @@ Ref atama operatörü durumunda, her iki işleneni de aynı türde olmalıdır.
 
 ## <a name="compound-assignment"></a>Bileşik atama
 
-Bir ikili işleci için `op`, formun bileşik atama ifadesi
+Bir ikili işleç `op`için, formun bileşik atama ifadesi
 
 ```csharp
 x op= y
@@ -56,13 +55,13 @@ eşdeğerdir
 x = x op y
 ```
 
-`x` yalnızca bir kez değerlendirilir.
+`x` hariç, yalnızca bir kez değerlendirilir.
 
 Bileşik atama [Aritmetik](arithmetic-operators.md#compound-assignment), [Boole mantıksal](boolean-logical-operators.md#compound-assignment)ve [bit düzeyinde mantıksal ve kaydırma](bitwise-and-shift-operators.md#compound-assignment) işleçleri tarafından desteklenir.
 
 ## <a name="null-coalescing-assignment"></a>Null birleştirme ataması
 
-8,0 ' C# den başlayarak, sağ işleneninin değerini yalnızca sol taraftaki işlenenin`null`olarak değerlendirdiği durumlarda sol işlenenin değerini atamak için null birleşim atama işlecini`??=`kullanabilirsiniz. Daha fazla bilgi için?? [ve?? = operatörler](null-coalescing-operator.md) makalesi.
+8,0 ' C# den başlayarak, sağ işleneninin değerini yalnızca sol taraftaki işlenenin `null`olarak değerlendirdiği durumlarda sol işlenenin değerini atamak için null birleşim atama işlecini `??=` kullanabilirsiniz. Daha fazla bilgi için?? [ve?? = operatörler](null-coalescing-operator.md) makalesi.
 
 ## <a name="operator-overloadability"></a>Operatör overloadability
 

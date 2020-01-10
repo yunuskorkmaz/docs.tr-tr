@@ -2,25 +2,25 @@
 title: İşlevsel oluşturma (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-ms.openlocfilehash: 46cf4dbaf190182467cbbe1094070b2da0854c68
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e55b0010a5f75eee8137d1e9bcefc573b5e07e72
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486044"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635762"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>İşlevsel oluşturma (LINQ to XML) (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] adlı XML öğeleri oluşturmak için güçlü bir yol sağlar *işlevsel oluşturma*. Tek bir deyimde bir XML ağacı oluşturma olanağı işlevsel yapısıdır.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] *işlevsel oluşturma*adlı XML öğeleri oluşturmak için güçlü bir yol sağlar. İşlevsel oluşturma, tek bir bildirimde bir XML ağacı oluşturma olanağıdır.  
   
- Birkaç temel özellikleri vardır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] işlevsel oluşturma sağlayan bir programlama arabirimi:  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] programlama arabiriminin işlevsel oluşturmayı etkinleştiren birkaç temel özelliği vardır:  
   
-- <xref:System.Xml.Linq.XElement> Oluşturucusu, çeşitli içerik için bağımsız değişkenleri alır. Örneğin, başka bir geçirebilirsiniz <xref:System.Xml.Linq.XElement> bir alt öğesi olan nesne. Geçirebilirsiniz bir <xref:System.Xml.Linq.XAttribute> öğesinin bir özniteliği olan nesne. Veya başka türde bir nesne bir dizeye dönüştürülür ve öğenin metin içeriğini olur geçirebilirsiniz.  
+- <xref:System.Xml.Linq.XElement> Oluşturucu içerik için çeşitli bağımsız değişken türlerini alır. Örneğin, bir alt öğe haline gelen başka bir <xref:System.Xml.Linq.XElement> nesnesini geçirebilirsiniz. Öğesinin bir özniteliği haline gelen bir <xref:System.Xml.Linq.XAttribute> nesnesini geçirebilirsiniz. Ya da bir dizeye dönüştürülen ve öğenin metin içeriği haline gelen başka herhangi bir nesne türünü geçirebilirsiniz.  
   
-- <xref:System.Xml.Linq.XElement> Oluşturucusu alır bir `params` türünde dizi <xref:System.Object>, böylece herhangi bir sayıda nesneleri için oluşturucu geçirebilirsiniz. Bu, karmaşık içeriğe sahip bir öğe oluşturmanıza olanak sağlar.  
+- <xref:System.Xml.Linq.XElement> Oluşturucu <xref:System.Object>türünde bir `params` dizisi alır, böylece oluşturucuya herhangi bir sayıda nesne geçirebilirsiniz. Bu, karmaşık içeriğe sahip bir öğe oluşturmanıza olanak sağlar.  
   
-- Bir nesne uyguluyorsa <xref:System.Collections.Generic.IEnumerable%601>, koleksiyon nesnesi içinde listelenmiş ve koleksiyondaki tüm öğelerin eklenir. Koleksiyon içeriyorsa <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XAttribute> nesneler, koleksiyondaki her öğe ayrı olarak eklenir. Sonuçlarını geçirmenize izin verdiğinden, bu önemli bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Sorgu Oluşturucusu.  
+- Bir nesne <xref:System.Collections.Generic.IEnumerable%601>uygularsa, nesnedeki koleksiyon numaralandırılır ve koleksiyondaki tüm öğeler eklenir. Koleksiyon <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XAttribute> nesneler içeriyorsa, koleksiyondaki her öğe ayrı olarak eklenir. Bir LINQ sorgusunun sonuçlarını oluşturucuya geçirmenize izin sağladığından bu önemlidir.  
   
- Bu özellikleri bir XML ağacı oluşturmak için kod yazmanıza olanak sağlar. Bir örnek verilmiştir:  
+ Bu özellikler bir XML ağacı oluşturmak için kod yazmanıza olanak sağlar. Aşağıda bir örnek verilmiştir:  
   
 ```csharp  
 XElement contacts =  
@@ -38,7 +38,7 @@ XElement contacts =
     );  
 ```  
   
- Bu özellikler ayrıca sonuçlarını kullanan kod yazmanıza etkinleştirme [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgular ne zaman bir XML ağacı şu şekilde oluşturun:  
+ Bu özellikler ayrıca, bir XML ağacı oluştururken aşağıdaki gibi LINQ sorgularının sonuçlarını kullanan kodu yazmanızı de sağlar:  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  

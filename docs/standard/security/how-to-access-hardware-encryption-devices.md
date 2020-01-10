@@ -13,49 +13,47 @@ helpviewer_keywords:
 - hardware encryption
 - CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9c16c994e3976fb3ee569799461db1d1789a6186
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6ee22fd9fb0c11e22ac01ff83b3269e37e37763
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654375"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706181"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>Nasıl yapılır: Donanım Şifreleme Cihazlarına Erişim
-Kullanabileceğiniz <xref:System.Security.Cryptography.CspParameters> donanım şifreleme cihazlarına erişim için sınıf. Örneğin, bu sınıf, uygulamanızın bir akıllı kart, donanım rastgele sayı üretici veya belirli bir şifreleme algoritması bir donanım uygulaması ile tümleştirmek için kullanabilirsiniz.  
+Donanım şifreleme cihazlarına erişmek için <xref:System.Security.Cryptography.CspParameters> sınıfını kullanabilirsiniz. Örneğin, uygulamanızı bir akıllı kart, donanım rastgele numara Oluşturucu veya belirli bir şifreleme algoritmasının donanım uygulamasıyla bütünleştirmek için bu sınıfı kullanabilirsiniz.  
   
- <xref:System.Security.Cryptography.CspParameters> Sınıfı yüklendiğinden donanım şifreleme cihaz erişen bir şifreleme hizmeti sağlayıcısı (CSP) oluşturur.  Kayıt Defteri Düzenleyicisi'ni (Regedit.exe) kullanarak aşağıdaki kayıt defteri anahtarını inceleyerek bir CSP kullanılabilirliğini doğrulayabilirsiniz:  HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
+ <xref:System.Security.Cryptography.CspParameters> sınıfı, düzgün yüklenmiş bir donanım şifreleme cihazına erişen bir şifreleme hizmeti sağlayıcısı (CSP) oluşturur.  CSP 'nin kullanılabilirliğini, kayıt defteri Düzenleyicisi 'Ni (Regedit. exe) kullanarak aşağıdaki kayıt defteri anahtarını inceleyerek doğrulayabilirsiniz: HKEY_LOCAL_MACHINE \Software\Microsoft\Cryptography\Defaults\Provider.  
   
-### <a name="to-sign-data-using-a-key-card"></a>Anahtar kartı kullanarak verileri imzalamak için  
+### <a name="to-sign-data-using-a-key-card"></a>Bir anahtar kartı kullanarak verileri imzalamak için  
   
-1. Yeni bir örneğini oluşturma <xref:System.Security.Cryptography.CspParameters> tamsayı sağlayıcı türünü ve sağlayıcı adı oluşturucusuna geçirerek sınıfı.  
+1. <xref:System.Security.Cryptography.CspParameters> sınıfının yeni bir örneğini oluşturun, tamsayı sağlayıcı türünü ve sağlayıcı adını oluşturucuya geçirerek.  
   
-2. Geçirmek için uygun bayrakları <xref:System.Security.Cryptography.CspParameters.Flags%2A> özelliği yeni oluşturulan <xref:System.Security.Cryptography.CspParameters> nesne.  Örneğin, <xref:System.Security.Cryptography.CspProviderFlags.UseDefaultKeyContainer> bayrağı.  
+2. Uygun bayrakları yeni oluşturulan <xref:System.Security.Cryptography.CspParameters> nesnesinin <xref:System.Security.Cryptography.CspParameters.Flags%2A> özelliğine geçirin.  Örneğin <xref:System.Security.Cryptography.CspProviderFlags.UseDefaultKeyContainer> bayrağını geçirin.  
   
-3. Yeni bir örneğini oluşturmak bir <xref:System.Security.Cryptography.AsymmetricAlgorithm> sınıfı (örneğin, <xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfı), geçen <xref:System.Security.Cryptography.CspParameters> oluşturucusuna.  
+3. <xref:System.Security.Cryptography.AsymmetricAlgorithm> sınıfının yeni bir örneğini oluşturun (örneğin, <xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfı), <xref:System.Security.Cryptography.CspParameters> nesnesini oluşturucuya geçirerek.  
   
-4. Verilerinizi kullanarak oturum `Sign` yöntemlerden birini kullanarak verilerinizi doğrulayın `Verify` yöntemleri.  
+4. `Sign` yöntemlerinden birini kullanarak verilerinizi imzalayın ve `Verify` yöntemlerinden birini kullanarak verilerinizi doğrulayın.  
   
-### <a name="to-generate-a-random-number-using-a-hardware-random-number-generator"></a>Bir donanım rastgele sayı oluşturucusunu kullanarak rastgele bir sayı oluşturmak için  
+### <a name="to-generate-a-random-number-using-a-hardware-random-number-generator"></a>Donanım rastgele numara Oluşturucu kullanarak rastgele bir sayı oluşturmak için  
   
-1. Yeni bir örneğini oluşturma <xref:System.Security.Cryptography.CspParameters> tamsayı sağlayıcı türünü ve sağlayıcı adı oluşturucusuna geçirerek sınıfı.  
+1. <xref:System.Security.Cryptography.CspParameters> sınıfının yeni bir örneğini oluşturun, tamsayı sağlayıcı türünü ve sağlayıcı adını oluşturucuya geçirerek.  
   
-2. Yeni bir örneğini oluşturma <xref:System.Security.Cryptography.RNGCryptoServiceProvider>, geçen <xref:System.Security.Cryptography.CspParameters> oluşturucusuna.  
+2. <xref:System.Security.Cryptography.CspParameters> nesnesini oluşturucuya geçirerek <xref:System.Security.Cryptography.RNGCryptoServiceProvider>yeni bir örneğini oluşturun.  
   
-3. Bir rastgele bir değer kullanarak oluşturduğunuz <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A> veya <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes%2A> yöntemi.  
+3. <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A> veya <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes%2A> yöntemini kullanarak rastgele bir değer oluşturun.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bir akıllı kart kullanarak verileri imzalamak gösterilmektedir.  Kod örneği oluşturur bir <xref:System.Security.Cryptography.CspParameters> bir akıllı kart kullanıma sunar ve ardından başlatır nesne bir <xref:System.Security.Cryptography.RSACryptoServiceProvider> CSP kullanarak nesne.  Kod örneği sonra imzalar ve bazı verileri doğrular.  
+ Aşağıdaki kod örneği, bir akıllı kart kullanılarak verilerin nasıl imzalanacağını göstermektedir.  Kod örneği, akıllı kartı kullanıma sunan bir <xref:System.Security.Cryptography.CspParameters> nesnesi oluşturur ve sonra CSP kullanarak bir <xref:System.Security.Cryptography.RSACryptoServiceProvider> nesnesi başlatır.  Kod örneği daha sonra bazı verileri imzalar ve doğrular.  
   
  [!code-cpp[Cryptography.SmartCardCSP#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CPP/Cryptography.SmartCardCSP.cpp#1)]
  [!code-csharp[Cryptography.SmartCardCSP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CS/example.cs#1)]
  [!code-vb[Cryptography.SmartCardCSP#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.SmartCardCSP/VB/example.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
   
-- Dahil <xref:System> ve <xref:System.Security.Cryptography> ad alanları.  
+- <xref:System> ve <xref:System.Security.Cryptography> ad alanlarını dahil edin.  
   
-- Bir akıllı kart okuyucu ve sürücüleri yüklü olmalıdır.  
+- Bilgisayarınızda yüklü bir akıllı kart okuyucunuz ve sürücüleriniz olmalıdır.  
   
-- Başlatması gerekir <xref:System.Security.Cryptography.CspParameters> kart okuyucu için belirli bilgileri kullanarak nesne.  Daha fazla bilgi için kart okuyucusu belgelerine bakın.
+- <xref:System.Security.Cryptography.CspParameters> nesnesini, kart okuyucunuzun özel bilgilerini kullanarak başlatmalısınız.  Daha fazla bilgi için, kart okuyucunuzun belgelerine bakın.

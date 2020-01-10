@@ -14,26 +14,24 @@ helpviewer_keywords:
 - stores, creating files and directories
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 92f4b686a5a2bdc74ff3f0f68de4c6b2048da5a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83e8c800dc74d9689f1bfdb506a6b454e87b36ca
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751919"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75707876"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamada Dosya ve Dizinler Oluşturma
-Bir yalıtılmış depolama aldıktan sonra dizin ve dosya verilerini depolamak için oluşturabilirsiniz. Bir depo dosya ve dizin adları sanal dosya sisteminin kökünü göre belirtilir.  
+Yalıtılmış bir mağaza elde ettikten sonra, verileri depolamak için dizin ve dosya oluşturabilirsiniz. Bir mağaza içinde, dosya ve Dizin adları, sanal dosya sisteminin köküne göre belirtilir.  
   
- Bir dizin oluşturmak için kullanın <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType> örnek yöntemi. Mevcut bir dizininin bir alt belirtirseniz, her iki dizini de oluşturulur. Zaten bir dizin belirtirseniz, bir dizin oluşturmadan yöntemi döndürür ve hiçbir özel durum. Ancak, bir dizin adı belirtirseniz, geçersiz karakterler içeren bir <xref:System.IO.IsolatedStorage.IsolatedStorageException> özel durumu oluşturulur.  
+ Bir dizin oluşturmak için <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType> örnek yöntemini kullanın. Mevcut olmayan bir dizinin alt dizinini belirtirseniz, her iki dizin de oluşturulur. Zaten var olan bir dizin belirtirseniz, yöntem bir dizin oluşturmadan geri döner ve hiçbir özel durum oluşturulmaz. Ancak, geçersiz karakterler içeren bir dizin adı belirtirseniz bir <xref:System.IO.IsolatedStorage.IsolatedStorageException> özel durumu oluşturulur.  
   
- Bir dosya oluşturmak için kullanın <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=nameWithType> yöntemi.  
+ Bir dosya oluşturmak için <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=nameWithType> yöntemi kullanın.  
   
- Windows işletim sistemi, yalıtılmış depolama dosya ve dizin adlarını büyük küçük harf duyarlıdır. Diğer bir deyişle, adlı bir dosya oluşturursanız `ThisFile.txt`, ardından adlı başka bir dosya oluşturun `THISFILE.TXT`, tek bir dosya oluşturulur. Dosya adı, kendi özgün büyük/küçük harfleri görüntüleme amacıyla tutar.  
+ Windows işletim sisteminde, yalıtılmış depolama dosyası ve Dizin adları büyük/küçük harfe duyarlıdır. Diğer bir deyişle, `ThisFile.txt`adlı bir dosya oluşturup `THISFILE.TXT`adlı başka bir dosya oluşturursanız, yalnızca bir dosya oluşturulur. Dosya adı, görüntü amaçlarıyla orijinal büyük küçük harf durumunu korur.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği bir yalıtılmış depoda dosyalar ve dizinler oluşturma işlemini göstermektedir.  
+ Aşağıdaki kod örneği, yalıtılmış bir depoda dosyaların ve dizinlerin nasıl oluşturulacağını göstermektedir.  
   
  [!code-csharp[Conceptual.IsolatedStorage#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source.cs#1)]
  [!code-vb[Conceptual.IsolatedStorage#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source.vb#1)]  

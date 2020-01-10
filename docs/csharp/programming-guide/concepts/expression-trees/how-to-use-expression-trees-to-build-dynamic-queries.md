@@ -2,12 +2,12 @@
 title: Dinamik sorgular oluşturmak için ifade ağaçları kullanma (C#)
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 36a81b145b6a9a25c22243f63cfb71a6a39c5891
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6114ec13dd43a7df146b87dda00fba06d6eb870c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969871"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635905"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Dinamik sorgular oluşturmak için ifade ağaçları kullanma (C#)
 LINQ içinde, ifade ağaçları, <xref:System.Linq.IQueryable%601>uygulayan veri kaynaklarını hedefleyen yapısal sorguları temsil etmek için kullanılır. Örneğin, LINQ sağlayıcısı ilişkisel veri depolarını sorgulamak için <xref:System.Linq.IQueryable%601> arabirimini uygular. Derleyici C# , bu tür veri kaynaklarını hedefleyen sorguları, çalışma zamanında bir ifade ağacı oluşturan koda derler. Sorgu sağlayıcısı daha sonra ifade ağacı veri yapısına çapraz geçiş yapabilir ve veri kaynağı için uygun bir sorgu diline çevirebilir.  
@@ -101,7 +101,7 @@ foreach (string company in results)
   
  Bu kod, `Queryable.Where` metoduna geçirilen koşuldaki sabit sayıda ifadeyi kullanır. Ancak, kullanıcı girişine bağlı bir değişken sayıda koşul ifadesini birleştiren bir uygulama yazabilirsiniz. Ayrıca, kullanıcının girişine bağlı olarak sorguda çağrılan standart sorgu işleçlerini da değiştirebilirsiniz.  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
   
 - System. Linq. Ifadeler ad alanını ekleyin.  
   
@@ -109,4 +109,4 @@ foreach (string company in results)
 
 - [İfade ağaçları (C#)](./index.md)
 - [İfade ağaçlarını yürütme (C#)](./how-to-execute-expression-trees.md)
-- [Nasıl yapılır: çalışma zamanında koşul filtrelerini dinamik olarak belirtme](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
+- [Çalışma zamanında koşul filtrelerini dinamik olarak belirtme](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)

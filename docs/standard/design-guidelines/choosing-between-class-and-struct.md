@@ -12,46 +12,45 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-author: KrzysztofCwalina
-ms.openlocfilehash: 5041368ca1a440698c399c935ac72aba2002c3ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34ab2589364e244fed1c64c1703205fb4b0832e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615273"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709523"
 ---
 # <a name="choosing-between-class-and-struct"></a>Sınıf ile Yapı Arasında Seçim Yapma
-Her framework Tasarımcısı yüz temel tasarım kararlarından biri mi (bir başvuru türü) bir sınıf veya yapı (bir değer türü) olarak bir tür tasarlamak biridir. Başvuru türleri ve değer türlerinin davranış farklılıkları iyi anlaşılmasını, bu seçim yaparken önemlidir.  
+Temel tasarım kararlarından biri olan her çerçeve tasarlayıcı, bir türü Sınıf (başvuru türü) veya yapı (değer türü) olarak tasarlamayacağındır. Bu seçimi yapmak için başvuru türleri ve değer türleri davranışlarındaki farkları iyi anlamak çok önemlidir.  
   
- İlk yığın başvuru türleri ve değer türleri biz başvuru türleri ise, değer türleri yığın üzerinde ayrılan veya içeren satır içi türleri ve ne zaman serbest ve atık toplanan yığında ayrılmış olmasıdır dikkate alacaktır fark geriye doğru alır veya ne zaman, içeren türlerine serbest bırakıldı. Bu nedenle, genel ayırma ve başvuru türleri deallocations ucuz ayırmaları ve değer türlerinin deallocations altındadır.  
+ Başvuru türleri ve değer türleri arasındaki ilk fark, başvuru türlerinin yığın ve atık toplama üzerinde ayrıldığı, ancak değer türlerinin yığın üzerinde ayrıldığı ya da yığın üzerinde serbest bırakıldığı ve yığın olduğunda serbest bırakıldığı durumlarda dikkate alınması gerektiğini düşüneceğiz. ya da içerdiği tür serbest bırakılır. Bu nedenle, değer türlerinin ayırmaları ve ayırması, genel bir ucuz 'da, başvuru türlerinin tahsislerini ve ayırmayı kaldırır.  
   
- Ardından, diziler başvuru türleridir çıkış dizi anlamı satır dışı, yalnızca başvuru yığında bulunan başvuru türünün örneğini tahsis edilir. Değer türü diziler, dizi öğelerinin değer türü gerçek örneklerini olduğu anlamına satır içi, ayrılır. Bu nedenle, ayırma ve değer türü diziler deallocations ayırmaları ve başvuru türü diziler deallocations ucuz. Ayrıca, çoğu durumda, değer türü diziler çok daha iyi bir yerleşim yeri başvuru sergiler.  
+ Daha sonra, başvuru türü dizileri satır dışı ayrılır, yani dizi öğeleri yalnızca yığında bulunan başvuru türünün örneklerine başvurudur. Değer türü dizileri satır içi olarak ayrılır, yani dizi öğeleri değer türünün gerçek örnekleridir. Bu nedenle, değer türü dizilerinin ayırmaları ve ayırmaları, başvuru türü dizilerinin ayırmaya ve ayırmaya göre çok daha ucuz. Bunlara ek olarak, çoğu durumda değer türü dizileri başvurunun çok daha iyi yer aldığı yeri gösterir.  
   
- Sonraki farka bellek kullanımı ile ilgilidir. Değer türleri, bir başvuru türü veya uyguladıkları arabirimlerinden birini olduğunda cast Kutulu. Kutulanmamış aldıkları ne zaman değer türüne dönüştürme. Kutuları yığında ayrılır ve atık olarak toplanmış, çok fazla kutulama ve kutudan çıkarma nesneler olduğundan, yığın, atık toplayıcı ve nihai olarak uygulamanın performansı üzerinde olumsuz bir etkiye sahip olabilir.  Buna karşılık, başvuru türleri dönüştürme gibi böyle bir kutulama gerçekleşir. (Daha fazla bilgi için [kutulama ve kutudan çıkarma](../../csharp/programming-guide/types/boxing-and-unboxing.md)).
+ Sonraki fark, bellek kullanımıyla ilgilidir. Değer türleri, bir başvuru türüne veya uygulamadıkları arabirimlerden birine dönüştürme yaparken kutulanır. Değer türüne geri dönüştürme yapıldıklarında kutulanmamış alırlar. Kutular, yığında ayrılan ve atık olarak toplanmış olan nesneler olduğundan, çok fazla kutulama ve kutudan çıkarma yığın üzerinde olumsuz bir etkiye, çöp toplayıcısına ve sonuç olarak uygulamanın performansına sahip olabilir.  Buna karşılık, başvuru türleri atama olarak böyle bir kutulama gerçekleşmez. (Daha fazla bilgi için bkz. [kutulama ve kutudan](../../csharp/programming-guide/types/boxing-and-unboxing.md)çıkarma).
   
- Ardından, değer türü atamaları tüm değeri kopyalayın ise başvuru türü atamaları başvuru kopyalayın. Bu nedenle, büyük referans tür atamaları büyük değer türlerinin atamaları ucuz.  
+ Ardından, başvuru türü atamaları başvuruyu kopyalar, ancak değer türü atamaları tüm değeri kopyalar. Bu nedenle, büyük başvuru türlerinin atamaları büyük değer türlerinin atamalarından çok daha ucuz.  
   
- Son olarak, değer türleri değere göre geçirilir ancak başvuru türleri başvuruya göre iletilir. Bir başvuru türünün örneğini yapılan değişiklikler tüm başvuruları örneğine işaret etkiler. Değer türü örnekleri değere göre geçirildiğinde kopyalanır. Bir değer türü örneği değiştirildiğinde, Elbette herhangi birini kendi kopya etkilemez. Kopya açıkça kullanıcı tarafından oluşturulmaz, ancak bağımsız değişkenler geçirilir veya dönüş değerleri döndürülür, örtük olarak oluşturulur, değiştirilebilir bir değer türleri birçok kullanıcılar için kafa karıştırıcı olabilir. Bu nedenle, değer türleri sabit olmalıdır.  
+ Son olarak, başvuru türleri başvuruya göre geçirilir, ancak değer türleri değere göre geçirilir. Başvuru türünün bir örneğinde yapılan değişiklikler örneğe işaret eden tüm başvuruları etkiler. Değer türü örnekleri, değere göre geçirildiğinde kopyalanır. Bir değer türünün örneği değiştirildiğinde, kurs herhangi bir kopyasını etkilemez. Kopyalar Kullanıcı tarafından açıkça oluşturulmadığından ancak bağımsız değişkenler geçtiğinde veya dönüş değerleri döndürüldüğünde örtük olarak oluşturulduysa, değiştirilebilen değer türleri çok sayıda kullanıcıya kafa karıştırıcı olabilir. Bu nedenle, değer türleri sabit olmalıdır.  
   
- Bir kural karşısında, bir Framework türlerinin çoğu sınıflar olmalıdır. Ancak, bir değer türü özelliklerini yapıları kullanmak daha uygun hale bazı durumlar vardır.  
+ Thumb kuralı olarak, bir çerçevede türlerin çoğunluğu sınıf olmalıdır. Ancak, bir değer türünün özelliklerinin yapıları kullanmak için daha uygun hale yaptığı bazı durumlar vardır.  
   
  **✓ CONSIDER** türünün örnekleri küçük ve yaygın olarak kısa süreli veya diğer nesneleri genellikle katıştırılmış yapı yerine bir sınıf tanımlama.  
   
  **X AVOID** türü tüm aşağıdaki özelliklere sahip olmadığı sürece yapı tanımlama:  
   
-- Mantıksal olarak, ilkel türler için benzer tek bir değeri temsil eder (`int`, `double`vb..).  
+- Temel türler (`int`, `double`, vb.) gibi tek bir değeri mantıksal olarak temsil eder.  
   
-- Bir örnek boyutu altında 16 bayt var.  
+- 16 baytlık bir örnek boyutu vardır.  
   
-- Sabittir.  
+- Bu sabittir.  
   
-- Bu sık Kutulu gerekmez.  
+- Sık olarak kutulanabilir olması gerekmez.  
   
- Diğer tüm durumlarda, türlerinizi sınıfları olarak tanımlamanız gerekir.  
+ Diğer tüm durumlarda türlerinizi sınıflar olarak tanımlamanız gerekir.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

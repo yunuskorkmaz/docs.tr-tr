@@ -6,33 +6,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ab2dbe79e1b4b89070d07e0f2c966cb54f6e500
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 99b6b3b6959abf4c8adc313364ad641249bd9bc3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589986"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710173"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verileri Seçme
-<xref:System.Xml.XPath.XPathNavigator> Sınıfı bir dizi içinde düğümü seçmek için kullanılan yöntemler kümesi sağlar bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> bir XPath ifadesi kullanarak nesne. Sonra seçili düğümleri kümesini yineleyebilirsiniz.  
+<xref:System.Xml.XPath.XPathNavigator> sınıfı bir XPath ifadesi kullanarak bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesindeki düğüm kümesini seçmek için kullanılan bir yöntemler kümesi sağlar. Seçili düğüm kümesi üzerinde yineleme yapabilirsiniz.  
   
-## <a name="xpathnavigator-selection-methods"></a>XPathNavigator seçimi yöntemleri  
- <xref:System.Xml.XPath.XPathNavigator> Sınıfı bir dizi içinde düğümü seçmek için kullanılan yöntemler kümesi sağlar bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> bir XPath ifadesi kullanarak nesne. <xref:System.Xml.XPath.XPathNavigator> Sınıfı bir dizi bir XPath ifadesi kullanarak daha hızlı üst, alt ve alt düğümleri seçmek için en iyi duruma getirilmiş bir yöntem sağlar. Seçili düğümleri kümesini iade bir <xref:System.Xml.XPath.XPathNodeIterator> nesnesi veya bir <xref:System.Xml.XPath.XPathNavigator> söz konusu olduğunda tek bir Seçili düğüm nesnesi.  
+## <a name="xpathnavigator-selection-methods"></a>XPathNavigator seçim yöntemleri  
+ <xref:System.Xml.XPath.XPathNavigator> sınıfı bir XPath ifadesi kullanarak bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesindeki düğüm kümesini seçmek için kullanılan bir yöntemler kümesi sağlar. <xref:System.Xml.XPath.XPathNavigator> sınıfı, bir XPath ifadesi kullanmaktan daha hızlı üst, alt ve alt düğümleri seçmek için iyileştirilmiş bir yöntemler kümesi de sağlar. Seçili düğüm kümesi, tek bir seçili düğüm olması durumunda <xref:System.Xml.XPath.XPathNodeIterator> nesne veya bir <xref:System.Xml.XPath.XPathNavigator> nesnesi içinde döndürülür.  
   
-### <a name="selecting-nodes-using-xpath-expressions"></a>XPath ifadeleri kullanarak düğümleri seçme  
- Bir dizi bir XPath ifadesi kullanarak düğümü seçmek için aşağıdaki seçimi yöntemlerden birini kullanın.  
+### <a name="selecting-nodes-using-xpath-expressions"></a>XPath Ifadeleri kullanarak düğüm seçme  
+ Bir XPath ifadesi kullanarak bir düğüm kümesi seçmek için aşağıdaki seçim yöntemlerinden birini kullanın.  
   
 - <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
 - <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
- Çağrıldığında, bu yöntemler serbestçe kullanarak gidebilirsiniz düğümleri kümesini döndürür. bir <xref:System.Xml.XPath.XPathNodeIterator> nesnesi veya bir <xref:System.Xml.XPath.XPathNavigator> söz konusu olduğunda tek bir Seçili düğüm nesnesi.  
+ Çağrıldığında, bu yöntemler bir <xref:System.Xml.XPath.XPathNodeIterator> nesnesi veya tek bir seçili düğüm olması durumunda <xref:System.Xml.XPath.XPathNavigator> bir nesne kullanarak serbestçe gezinebileceğiniz bir düğüm kümesi döndürür.  
   
- Gezinme bir <xref:System.Xml.XPath.XPathNodeIterator> nesne konumunu etkilemez <xref:System.Xml.XPath.XPathNavigator> oluşturmak için kullanılan nesne. <xref:System.Xml.XPath.XPathNavigator> Döndürülen nesne <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> yöntemlerden döndürülen tek düğümde konumlandırılır ve ayrıca konumunu etkilemez <xref:System.Xml.XPath.XPathNavigator> oluşturmak için kullanılan nesne.  
+ Bir <xref:System.Xml.XPath.XPathNodeIterator> nesnesiyle gezinmek, onu oluşturmak için kullanılan <xref:System.Xml.XPath.XPathNavigator> nesnesinin konumunu etkilemez. <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> metotlarından döndürülen <xref:System.Xml.XPath.XPathNavigator> nesnesi, tek döndürülen düğümde konumlandırılır ve ayrıca onu oluşturmak için kullanılan <xref:System.Xml.XPath.XPathNavigator> nesnesinin konumunu etkilemez.  
   
- Aşağıdaki örnek, oluşturulmasını gösterir. bir <xref:System.Xml.XPath.XPathNavigator> nesnesinden bir <xref:System.Xml.XPath.XPathDocument> nesnesi, kullanımını <xref:System.Xml.XPath.XPathNavigator.Select%2A> düğümleri seçmek için <xref:System.Xml.XPath.XPathDocument> nesne ve kullanımını <xref:System.Xml.XPath.XPathNodeIterator> seçilen düğümler yineleme yapmak için nesne.  
+ Aşağıdaki örnek, bir <xref:System.Xml.XPath.XPathDocument> nesnesinden <xref:System.Xml.XPath.XPathNavigator> nesnesinin oluşturulmasını, <xref:System.Xml.XPath.XPathDocument> nesnesindeki düğümleri seçmek için <xref:System.Xml.XPath.XPathNavigator.Select%2A> yönteminin kullanımını ve seçilen düğümlerin üzerinde yinelemek için <xref:System.Xml.XPath.XPathNodeIterator> nesnesinin kullanımını gösterir.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -55,12 +53,12 @@ while(nodes.MoveNext())
 }  
 ```  
   
- Örnek alan `books.xml` dosya giriş olarak.  
+ Örnek, `books.xml` dosyasını girdi olarak alır.  
   
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
-### <a name="optimized-selection-methods"></a>En iyi duruma getirilmiş seçimi yöntemleri  
- <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A>, Ve <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> yöntemlerinin <xref:System.Xml.XPath.XPathNavigator> alt öğe, alt ve üst düğümleri almak için kullanılan XPath ifadeleri sınıfını temsil edin. Bu yöntemler, performans için iyileştirilmiş ve onların ilgili XPath ifadeleri hızlıdır. <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A>, Ve <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> yöntemler, üst, alt ve alt düğümleri göre seçer bir <xref:System.Xml.XPath.XPathNodeType> değeri veya yerel bir ad ve ad alanı düğümleri seçmek için URI. Seçilen üst, alt ve alt düğümleri döndürülür bir <xref:System.Xml.XPath.XPathNodeIterator> nesne.  
+### <a name="optimized-selection-methods"></a>İyileştirilmiş seçim yöntemleri  
+ <xref:System.Xml.XPath.XPathNavigator> sınıfının <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A>ve <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> yöntemleri, genel, alt ve üst düğümleri almak için yaygın olarak kullanılan XPath ifadelerini temsil eder. Bu yöntemler performans için iyileştirilmiştir ve bunlara karşılık gelen XPath ifadelerinden daha hızlıdır. <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A>ve <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> yöntemleri, bir <xref:System.Xml.XPath.XPathNodeType> değere veya seçilecek düğümlerin yerel adına ve ad alanı URI 'sine göre üst, alt ve alt düğümleri seçer. Seçilen üst öğe, alt ve alt düğümler bir <xref:System.Xml.XPath.XPathNodeIterator> nesnesinde döndürülür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

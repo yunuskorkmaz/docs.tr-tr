@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 20e46d7ecc206abb28240075d9ec5f764ab78d01
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e6ffc649d7eb841c2d009b0ec1237975f46e2d2d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346130"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636815"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Nesne Başlatıcıları: Adlandırılmış ve Anonim Türler (Visual Basic)
 Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesne için özellikler belirtmenize olanak tanır. Bunlar, adlandırılmış türlerin örnekleri ve anonim türler oluşturmak için kullanılabilir.  
@@ -105,7 +105,7 @@ Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesne için öz
   
  Türün adı kullanılamadığından, `cust13`bildirmek için bir `As` yan tümcesi kullanamazsınız. Türü çıkarsanmalıdır. Bu, geç bağlama kullanılmadan, anonim türlerin kullanımını yerel değişkenlere kısıtlar.  
   
- Anonim türler [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları için kritik destek sağlar. Sorgularda anonim türlerin kullanımı hakkında daha fazla bilgi için, bkz. Visual Basic [anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) ve [lınq 'ye giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
+ Anonim türler, LINQ sorguları için kritik destek sağlar. Sorgularda anonim türlerin kullanımı hakkında daha fazla bilgi için, bkz. Visual Basic [anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) ve [lınq 'ye giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
 ### <a name="remarks-about-anonymous-types"></a>Anonim türler hakkında açıklamalar  
   

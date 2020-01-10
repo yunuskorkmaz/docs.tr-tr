@@ -15,13 +15,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.custom: seodec18
-ms.openlocfilehash: 352cfd65cd4620d8274ff0a14ea507cd49522470
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8db9ef72415f148aca2c975fc4e8b70421e3adc3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140557"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711564"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Normal İfadelerdeki Değişim Yapıları
 
@@ -50,7 +49,7 @@ Pozitif karakter sınıfı gibi `|` karakter, bir dizi tek karakterden biriyle e
 |<code>(a&#124;e)</code>|Bir "a" veya "e" ile eşleş.|  
 |`y\b`|Bir sözcük sınırında "y" ile eşleşir.|  
 
-`|` karakteri, herhangi bir karakter sabit değeri ve normal ifade dili öğelerinin herhangi bir birleşimini içerebilen birden çok karakterle veya alt ifadeyle eşleşen bir/veya ile eşleşme gerçekleştirmek için de kullanılabilir. (Karakter sınıfı bu işlevselliği sağlamaz.) Aşağıdaki örnek, *ddd*-*gg*-*gggg*veya ABD işveren kimlik numarası (EIN) biçimindeki 9 basamaklı bir sayı olan ABD sosyal güvenlik numarasını (SSN) ayıklamak için `|` karakteri kullanır. 9 basamaklı bir sayıdır, *gg*-*ddggddd*biçimindedir.
+`|` karakteri, herhangi bir karakter sabit değeri ve normal ifade dili öğelerinin herhangi bir birleşimini içerebilen birden çok karakterle veya alt ifadeyle eşleşen bir/veya ile eşleşme gerçekleştirmek için de kullanılabilir. (Karakter sınıfı bu işlevselliği sağlamaz.) Aşağıdaki örnek, *ddd*-*gg*-*gggg*veya BIR abd işveren kimlik numarası ( *EIN-)* olan 9 basamaklı bir sayı olan bir ABD sosyal güvenlik numarası (SSID) çıkarmak için `|` karakterini *kullanır.*
 
 [!code-csharp[RegularExpressions.Language.Alternation#2](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
 [!code-vb[RegularExpressions.Language.Alternation#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
@@ -74,7 +73,7 @@ Burada ifadesi eşleşmek üzere Başlangıç *düzensiyse* , *Evet* *ifadesi* e
 
 `(?(?=` *ifade* `)` *Evet* `|` *`)`*
 
-`(?=`*ifadesi*`)` sıfır genişlikli bir onaylama yapısıdır. (Daha fazla bilgi için bkz. [yapıları gruplandırma](grouping-constructs-in-regular-expressions.md).) Normal ifade altyapısı *ifadeyi* bir tutturucu (sıfır genişlikli bir onaylama) olarak yorumladığı için, *ifadenin* sıfır genişlikli bir onaylama (daha fazla bilgi Için, bkz. [Tutturucular](anchors-in-regular-expressions.md)) veya içinde de bulunan bir alt ifade olması gerekir. *Evet*. Aksi halde, *Evet* deseninin eşleştirilemez.  
+`(?=`*ifadesi*`)` sıfır genişlikli bir onaylama yapısıdır. (Daha fazla bilgi için bkz. [yapıları gruplandırma](grouping-constructs-in-regular-expressions.md).) Normal ifade altyapısı *ifadeyi* bir tutturucu (sıfır genişlikli bir onaylama) olarak yorumladığı için, *ifadenin* sıfır genişlikli bir onaylama (daha fazla bilgi Için, bkz. [Tutturucular](anchors-in-regular-expressions.md)) veya *Evet*' de bulunan bir alt ifade olması gerekir. Aksi halde, *Evet* deseninin eşleştirilemez.  
   
 > [!NOTE]
 > İfade adlandırılmış veya numaralandırılmış yakalama *grubsiyse* , değişim yapısı yakalama testi olarak yorumlanır; daha fazla bilgi için, [geçerli bir yakalama grubuna göre koşullu eşleme](#Conditional_Group)başlıklı sonraki bölüme bakın. Diğer bir deyişle, normal ifade altyapısı yakalanan alt dizeyle eşleştirmeye çalışmaz, bunun yerine grubun varlığını veya yokluğunu sınar.  

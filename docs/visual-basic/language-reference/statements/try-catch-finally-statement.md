@@ -1,6 +1,6 @@
 ---
-title: Deneyin... Catch... -Visual Basic finally deyimi
-description: Özel durum işleme Visual Basic Try/Catch/Finally deyimleri ile kullanmayı öğrenin.
+title: Deneyin... Yakala... Finally ekstresi
+description: Visual Basic try/catch/finally deyimleriyle özel durum işlemeyi kullanmayı öğrenin.
 ms.date: 12/07/2018
 f1_keywords:
 - vb.Try...Catch...Finally
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Visual Basic code, handling errors while running
 - structured exception handling, Try...Catch...Finally statements
 ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
-ms.custom: seodec18
-ms.openlocfilehash: 126f20c86bb47e8002382e069ce6236600394aba
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: bb6f17f7ce88caea0b9d30ec880194f2bb71c6a6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638767"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705775"
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally Deyimi (Visual Basic)
 
-Kod çalışmaya devam ederken, belirli bir kod bloğu içinde oluşabilecek bazı ya da tüm olası hataları işlemek için bir yol sağlar.
+Kodu çalıştırmaya devam ederken, belirli bir kod bloğunda oluşabilecek bazı veya tüm olası hataları işlemek için bir yol sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -51,151 +50,151 @@ End Try
 
 |Terim|Tanım|
 |---|---|
-|`tryStatements`|İsteğe bağlı. Deyim, burada bir hata oluşabilir. Bileşik deyim olabilir.|
-|`Catch`|İsteğe bağlı. Birden çok `Catch` izin engeller. Bir özel durum işleme sırasında oluşursa `Try` engelleme, her `Catch` deyimi, özel durum ile işleme olup olmadığını belirlemek için metinsel sırayla incelenir `exception` temsil eden özel durum oluşturuldu.|
-|`exception`|İsteğe bağlı. Herhangi bir değişken adı. Başlangıç değeri oluşan `exception` hatadır değeridir. İle kullanılan `Catch` hatanın belirtileceği yakalandı. Atlanırsa, `Catch` deyimi herhangi bir özel durumu yakalar.|
-|`type`|İsteğe bağlı. Sınıf filtre türünü belirtir. Varsa değerini `exception` tarafından belirtilen türde `type` veya türetilmiş bir tür tanımlayıcısı özel durum nesnesine bağlı olur.|
-|`When`|İsteğe bağlı. A `Catch` deyimiyle bir `When` yan tümcesi, özel durumları yakalar yalnızca `expression` değerlendiren `True`. A `When` yan tümcesi yalnızca özel durumun türünü denetledikten sonra uygulanır ve `expression` özel durumu temsil eden tanımlayıcı başvurabilir.|
-|`expression`|İsteğe bağlı. Örtük olarak dönüştürülebilir olmalıdır `Boolean`. Genel filtre açıklar herhangi bir ifade. Genellikle, hata numarasına göre filtrelemek için kullanılır. İle kullanılan `When` koşullar altında hata yakalandı belirtmek için anahtar sözcüğü.|
-|`catchStatements`|İsteğe bağlı. İlişkili içinde oluşan hataları işlemek için deyim `Try` blok. Bileşik deyim olabilir.|
-|`Exit Try`|İsteğe bağlı. / Keser anahtar sözcüğü `Try...Catch...Finally` yapısı. Yürütmeyi hemen kod ile devam ettirir `End Try` deyimi. `Finally` Deyimi hala yürütülür. İçinde izin verilmiyor `Finally` engeller.|
-|`Finally`|İsteğe bağlı. A `Finally` blok herhangi bir bölümü yürütme ayrıldığında her zaman yürütülür `Try...Catch` deyimi.|
-|`finallyStatements`|İsteğe bağlı. Diğer tüm hata işleme gerçekleştikten sonra yürütülen deyim.|
-|`End Try`|Sonlandırır `Try...Catch...Finally` yapısı.|
+|`tryStatements`|İsteğe bağlı. Bir hatanın gerçekleşebileceği deyimler. Bileşik bir ifade olabilir.|
+|`Catch`|İsteğe bağlı. Çoklu `Catch` blokları izin veriliyor. `Try` bloğunu işlerken bir özel durum oluşursa, her `Catch` bir durum, özel durumu (atılan özel durumu temsil eden `exception`) nasıl işleyeceğini öğrenmek için metin sırasına göre incelenir.|
+|`exception`|İsteğe bağlı. Herhangi bir değişken adı. `exception` ilk değeri oluşturulan hatanın değeridir. Yakalanan hatayı belirtmek için `Catch` ile birlikte kullanılır. Atlanırsa, `Catch` ifade herhangi bir özel durumu yakalar.|
+|`type`|İsteğe bağlı. Sınıf filtresinin türünü belirtir. `exception` değeri `type` veya türetilmiş bir tür tarafından belirtilen türde ise, tanımlayıcı özel durum nesnesine bağlanır.|
+|`When`|İsteğe bağlı. `When` yan tümcesinin bulunduğu `Catch` deyimi, yalnızca `expression` `True`değerlendirirken özel durumları yakalar. `When` yan tümcesi yalnızca özel durumun türü denetlendikten sonra uygulanır ve `expression` özel durumu temsil eden tanımlayıcıya başvurabilir.|
+|`expression`|İsteğe bağlı. `Boolean`için örtük olarak dönüştürülebilir olmalıdır. Genel bir filtreyi tanımlayan herhangi bir ifade. Genellikle hata numarasına göre filtrelemek için kullanılır. Hatanın yakalandığı koşulları belirtmek için `When` anahtar sözcüğüyle birlikte kullanılır.|
+|`catchStatements`|İsteğe bağlı. İlişkili `Try` bloğunda oluşan hataları işlemek için deyimler. Bileşik bir ifade olabilir.|
+|`Exit Try`|İsteğe bağlı. `Try...Catch...Finally` yapısını kesen anahtar sözcük. Yürütme `End Try` deyimden hemen sonra kodla devam eder. `Finally` deyimin yürütülmesi devam eder. `Finally` bloklarında izin verilmez.|
+|`Finally`|İsteğe bağlı. `Finally` bloğu her zaman yürütme, `Try...Catch` bildiriminin herhangi bir parçasını terk ettiğinde yürütülür.|
+|`finallyStatements`|İsteğe bağlı. Diğer tüm hata işlemeden sonra yürütülen deyimler.|
+|`End Try`|`Try...Catch...Finally` yapısını sonlandırır.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Belirli bir özel durum kodu belirli bir bölümünü sırasında oluşabilecek bekliyorsanız, kod yerleştirecek bir `Try` engelleme ve kullanmak bir `Catch` denetimini sürdürme ve bu durum oluşursa özel durum işleme bloğu.
+Belirli bir özel durumun kodun belirli bir bölümü sırasında oluşması beklendiğinde, kodu bir `Try` bloğuna koyun ve bir `Catch` bloğunu kullanarak denetimi koruyabilir ve hata oluşursa özel durumu işleyebilir.
 
-A `Try…Catch` deyimi oluşur bir `Try` blok izlenen bir veya daha fazla tarafından `Catch` çeşitli özel durumlar için işleyiciler belirten yan tümceleri. Bir özel durum harekete geçirildiğinde bir `Try` engelleme, Visual Basic arar `Catch` özel durumu işleyen bir ifade. Eşleşen bir `Catch` deyimi bulunamadı, Visual Basic, çağrı yığını ayarlama ve benzeri geçerli bir yöntemi çağıran yönteme inceler. Hayır ise `Catch` bloğu bulundu, Visual Basic, kullanıcıya bir işlenmeyen özel durum iletisi görüntüler ve programın yürütülmesini durdurur.
+`Try…Catch` bir ifade, çeşitli özel durumlar için işleyiciler belirten bir veya daha fazla `Catch` yan tümcesi tarafından izlenen bir `Try` bloğundan oluşur. Bir `Try` bloğunda bir özel durum oluştuğunda, Visual Basic özel durumu işleyen `Catch` ifadeye bakar. Eşleşen bir `Catch` deyimleri bulunamazsa, Visual Basic geçerli yöntemi çağıran yöntemi inceler ve bu şekilde çağrı yığınını devam eder. `Catch` bloğu bulunmazsa Visual Basic kullanıcıya işlenmeyen bir özel durum iletisi görüntüler ve programın yürütülmesini engeller.
 
-Birden fazla kullanabileceğiniz `Catch` deyiminde bir `Try…Catch` deyimi. Bu sırasını `Catch` yan tümceleri, bunlar sırayla incelenir olduğundan önemlidir. Less yazımına özgü olanlardan önce daha özel istisnaları yakalayın.
+Bir `Try…Catch` bildiriminde birden fazla `Catch` ifadesini kullanabilirsiniz. Bunu yaparsanız, `Catch` yan tümcelerinin sıralaması, sırayla incelendikleri için önemlidir. Daha az özel durumları daha az spesifik olanlardan önce yakalayın.
 
-Aşağıdaki `Catch` deyimi koşulları en az özel olan ve tüm türetilen özel durum <xref:System.Exception> sınıfı. Bu farklılıkların biri son normalde kullanması gereken `Catch` engelleyin `Try...Catch...Finally` beklediğiniz tüm belirli özel durumları yakalama sonra yapısı. Denetim akışı ulaşabilirsiniz hiçbir zaman bir `Catch` ya da bu farklılıkların izleyen blok.
+Aşağıdaki `Catch` deyimin koşulları en az özeldir ve <xref:System.Exception> sınıfından türetilen tüm özel durumları yakalar. Tahmin ettiğiniz tüm özel durumları yakalandıktan sonra, bu varyasyonların her birini `Try...Catch...Finally` yapısında son `Catch` bloğu olarak kullanmanız gerekir. Denetim akışı, bu çeşitlemelerden birini izleyen `Catch` bloğuna hiçbir şekilde ulaşabilirler.
 
-- `type` Olduğu `Exception`, örneğin: `Catch ex As Exception`
+- `type` `Exception`, örneğin: `Catch ex As Exception`
 
-- Deyim olmayan `exception` değişken, örneğin: `Catch`
+- Deyimin `exception` değişkeni yok, örneğin: `Catch`
 
-Olduğunda bir `Try…Catch…Finally` deyimi iç içe başka `Try` blok, Visual Basic ilk inceler her `Catch` en içteki deyiminde `Try` blok. Hiç eşleşen `Catch` deyimi bulundu, aramaya devam eder `Catch` bilgilerinin dış `Try…Catch…Finally` blok.
+`Try…Catch…Finally` bir ifade başka bir `Try` bloğunda iç içe olduğunda, Visual Basic ilk olarak en içteki `Try` bloğundaki her bir `Catch` ekstresini inceler. Eşleşen `Catch` deyimi bulunamazsa, arama, dış `Try…Catch…Finally` bloğunun `Catch` ifadelerine devam eder.
 
-Yerel değişkenleri bir `Try` blok içinde kullanılabilir olmayan bir `Catch` çünkü bunlar ayrı bloklarda engelleyin. Birden fazla blok içinde bir değişken kullanmak istiyorsanız, dışında değişkenini tanımlamak `Try...Catch...Finally` yapısı.
+`Try` bloğundan yerel değişkenler, ayrı bloklar olduklarından bir `Catch` bloğunda kullanılamaz. Birden fazla blok içinde bir değişken kullanmak istiyorsanız, değişkeni `Try...Catch...Finally` yapısı dışında bildirin.
 
 > [!TIP]
-> `Try…Catch…Finally` Deyimi bir IntelliSense kod parçacığı kullanılabilir. Kod parçacıkları Yöneticisi'nde **kod desenleri - IF, adet için Try Catch, özellik vb.**, ardından **hata işleme (özel)**. Daha fazla bilgi için [kod parçacıkları](/visualstudio/ide/code-snippets).
+> `Try…Catch…Finally` deyimin bir IntelliSense kod parçacığı olarak kullanılabilir. Kod parçacıkları yöneticisinde, **her biri için, catch, Property, vb**. ve ardından **hata Işleme (özel durumlar)** için kod desenleri ' ni genişletin. Daha fazla bilgi için [kod parçacıkları](/visualstudio/ide/code-snippets).
 
 ## <a name="finally-block"></a>Finally bloğu
 
-Çıkış önce çalıştırılması gereken bir veya daha fazla deyimleri varsa `Try` yapısı, kullanan bir `Finally` blok. Denetim geçtiği `Finally` yalnızca tanesi geçirmeden önce block `Try…Catch` yapısı. İçinde herhangi bir özel bir durum oluştuğunda olsa bile bu geçerlidir `Try` yapısı.
+`Try` yapısından çıkmadan önce çalışması gereken bir veya daha fazla deyim varsa, bir `Finally` bloğu kullanın. Denetim, `Try…Catch` yapısını geçirmeden hemen önce `Finally` bloğuna geçer. Bu, `Try` yapısı içinde herhangi bir yerde bir özel durum gerçekleşse bile geçerlidir.
 
-A `Finally` blok, bir özel durum olsa bile, herhangi bir kod çalıştıran yürütülmesi gereken için yararlıdır. Denetim geçirildiğinde `Finally` bakılmaksızın nasıl blok `Try...Catch` block çıkar.
+Bir `Finally` bloğu, bir özel durum olsa bile yürütülmesi gereken herhangi bir kodu çalıştırmak için yararlıdır. `Try...Catch` bloğunun çıkış şeklinden bağımsız olarak denetim `Finally` bloğuna geçirilir.
 
-Kodda bir `Finally` kodunuzu karşılaştığında bile bloğu çalışır bir `Return` deyiminde bir `Try` veya `Catch` blok. Denetim gelen geçirmek değil bir `Try` veya `Catch` block karşılık gelen `Finally` aşağıdaki durumlarda engelle:
+`Finally` bloğundaki kod, kodunuz `Try` veya `Catch` bloğunda bir `Return` ifadesiyle karşılaşırsa bile çalışır. Denetim, aşağıdaki durumlarda bir `Try` veya `Catch` bloğundan karşılık gelen `Finally` bloğuna geçmiyor:
 
-- Bir [End deyimi](end-statement.md) ile karşılaşılırsa `Try` veya `Catch` blok.
+- `Try` veya `Catch` bloğunda bir [End ifadesiyle](end-statement.md) karşılaşıldı.
 
-- A <xref:System.StackOverflowException> oluşturulur `Try` veya `Catch` blok.
+- `Try` veya `Catch` bloğunda bir <xref:System.StackOverflowException> oluşturulur.
 
-Açıkça yürütme içine aktarmak için geçerli değil bir `Finally` blok. Yürütme / aktarma bir `Finally` bloğu geçerli olmayan bir özel durum, dışında.
+Yürütmeyi `Finally` bloğuna açıkça aktarmak geçerli değildir. Bir özel durum dışında `Finally` bloğunun yürütülmesini aktarma geçerli değildir.
 
-Varsa bir `Try` deyimi en az bir içermiyor `Catch` bloğu içermesi gereken bir `Finally` blok.
+Bir `Try` deyimin en az bir `Catch` bloğu yoksa, bir `Finally` bloğu içermesi gerekir.
 
 > [!TIP]
-> Belirli özel durumları yakalamak yoksa `Using` deyimi davranacağını gibi bir `Try…Finally` blok ve nasıl blok çıkış bağımsız olarak bağlı olarak, kaynakların elden garanti eder. İşlenmeyen bir özel durumla bile bu geçerlidir. Daha fazla bilgi için [Using deyimi](using-statement.md).
+> Belirli özel durumları yakalamada, `Using` ifade `Try…Finally` bir blok gibi davranır ve bloğundan nasıl çıktığınızda bağımsız olarak kaynakların elden çıkarılmasını garanti eder. Bu, işlenmeyen bir özel durumla bile geçerlidir. Daha fazla bilgi için bkz. [using deyimleri](using-statement.md).
 
-## <a name="exception-argument"></a>Özel durum bağımsız değişken
+## <a name="exception-argument"></a>Özel durum bağımsız değişkeni
 
-`Catch` Blok `exception` bağımsız değişken öğesinin bir örneğiyse <xref:System.Exception> sınıfı veya türetildiği bir sınıf `Exception` sınıfı. `Exception` Karşılık gelen sınıf örneği oluştu hata `Try` blok.
+`Catch` Block `exception` bağımsız değişkeni, <xref:System.Exception> sınıfının veya `Exception` sınıfından türetilen bir sınıfın bir örneğidir. `Exception` sınıfı örneği, `Try` bloğunda oluşan hataya karşılık gelir.
 
-Özelliklerini `Exception` nesnesi bir özel durum konumunu ve sorunun kaynağını belirlemek için Yardım. Örneğin, <xref:System.Exception.StackTrace%2A> özelliği, kod hatasının oluştuğu bulmanıza yardımcı olacak özel durumu götüren çağırılan yöntemleri listeler. <xref:System.Exception.Message%2A> özel durumu açıklayan bir ileti döndürür. <xref:System.Exception.HelpLink%2A> bir bağlantı, ilişkili bir Yardım dosyasına döndürür. <xref:System.Exception.InnerException%2A> döndürür `Exception` veya geçerli özel duruma neden olan bir nesne döndürür `Nothing` hiçbir özgün ise `Exception`.
+`Exception` nesnesinin özellikleri, bir özel durumun nedenini ve konumunu belirlemesine yardımcı olur. Örneğin, <xref:System.Exception.StackTrace%2A> özelliği, özel duruma yol eden çağrılan yöntemleri listeler ve hatanın kodda nerede oluştuğunu bulmanıza yardımcı olur. <xref:System.Exception.Message%2A>, özel durumu açıklayan bir ileti döndürür. <xref:System.Exception.HelpLink%2A> ilişkili bir yardım dosyasının bağlantısını döndürür. <xref:System.Exception.InnerException%2A>, geçerli özel duruma neden olan `Exception` nesnesini döndürür veya orijinal `Exception`yoksa `Nothing` döndürüyor.
 
-## <a name="considerations-when-using-a-trycatch-statement"></a>Bir Try kullanmayla ilgili konular... Catch deyimi
+## <a name="considerations-when-using-a-trycatch-statement"></a>TRY kullanırken dikkat edilecek noktalar... Catch ekstresi
 
-Kullanım bir `Try…Catch` deyimi yalnızca olağan dışı ya da beklenmeyen programı olayların sinyal. Bunun nedeni aşağıdakileri içerir:
+Yalnızca olağan dışı veya beklenmeyen program olaylarının oluşumunu göstermek için bir `Try…Catch` ifadesini kullanın. Bunun nedenleri şunları içerir:
 
-- Çalışma zamanında özel durumları yakalama ek yükü oluşturur ve özel durumlar önlemek için önceden denetlemekten daha yavaş olması olasıdır.
+- Çalışma zamanında özel durumları yakalama, ek yük oluşturur ve özel durumların önüne geçmek için önceden denetlenmekten daha yavaş olabilir.
 
-- Varsa bir `Catch` blok düzgün işlenmez, özel durum kullanıcılara doğru bildirilmeyebilir.
+- `Catch` bloğu doğru işlenmezse, özel durum kullanıcılara doğru şekilde raporlanmayabilir.
 
-- Özel durum işleme bir program daha karmaşık hale getirir.
+- Özel durum işleme bir programı daha karmaşık hale getirir.
 
-Her zaman gereksinim duymadığınız bir `Try…Catch` deyimi, arıza oluştuğu sırada bir koşul için denetlenecek. Aşağıdaki örnek, bir dosyayı açmak denemeden önce mevcut olup olmadığını denetler. Bu tarafından oluşturulan bir özel durum yakalama gereksinimini azaltır <xref:System.IO.File.OpenText%2A> yöntemi.
+Gerçekleşmesi muhtemel bir koşulu denetlemek için her zaman bir `Try…Catch` bildirimine ihtiyacınız yoktur. Aşağıdaki örnek, açmayı denemeden önce bir dosyanın var olup olmadığını denetler. Bu, <xref:System.IO.File.OpenText%2A> metodu tarafından oluşturulan özel durum yakalama gereksinimini azaltır.
 
 [!code-vb[VbVbalrStatements#94](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#94)]
 
-Bu kodu olun `Catch` blokları düzgün bir şekilde rapor edebilir, kullanıcılara özel durumları iş parçacığı günlük kaydı veya uygun iletileri üzerinden. Aksi takdirde, özel durumlar bilinmeyen kalabilir.
+`Catch` bloklardaki kodun, iş parçacığı güvenli günlüğe kaydetme veya uygun iletiler aracılığıyla kullanıcılara özel durumları düzgün şekilde bildirediğinden emin olun. Aksi takdirde, özel durumlar bilinmiyor olarak kalabilir.
 
 ## <a name="async-methods"></a>Zaman uyumsuz yöntemler
 
-Bir yöntem ile işaretlerseniz [zaman uyumsuz](../modifiers/async.md) kullanabileceğiniz değiştiricisi [Await](../operators/await-operator.md) yönteminde işleci. With deyimi `Await` işleci awaited görevi tamamlanıncaya kadar yöntemin yürütülmesini askıya alır. Görev, devam eden çalışmayı temsil eder. Zaman ile ilişkili görev `Await` işleci tamamlandıktan, aynı yöntemin yürütülmesine devam ettirir. Daha fazla bilgi için [zaman uyumsuz programlarda akış kontrolü](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).
+[Zaman uyumsuz](../modifiers/async.md) değiştiriciyle bir yöntemi işaretlerseniz, yönteminde [await](../operators/await-operator.md) işlecini kullanabilirsiniz. `Await` işleci olan bir ifade, beklenen görev tamamlanana kadar yöntemi yürütmeyi askıya alır. Görev, devam eden işi temsil eder. `Await` işleci ile ilişkili görev tamamlandığında, yürütme aynı yöntemde devam eder. Daha fazla bilgi için bkz. [zaman uyumsuz programlarda denetim akışı](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).
 
-Zaman uyumsuz bir yöntem tarafından döndürülen görev hatalı bir durumda, işlenmeyen bir özel durum nedeniyle tamamlandı belirten sonlandırabiliriz. Bir görev sonuçlanır bir iptal edilmiş duruma da bitemez bir `OperationCanceledException` await ifadesi dışında oluşturulan. Herhangi bir türde özel durum yakalamak için yerleştirin `Await` görev ile ilişkili ifade bir `Try` blok ve özel durumu `Catch` blok. Örnek bu konunun ilerleyen bölümlerinde verilmiştir.
+Zaman uyumsuz bir yöntem tarafından döndürülen bir görev, işlenmemiş bir özel durum nedeniyle tamamlanmadığını belirten hatalı bir durumda bitemeyebilir. Bir görev iptal edildi durumunda da bitebileceği için, await ifadesinin dışında bir `OperationCanceledException` oluşur. Her iki özel durum türünü yakalamak için, görevle ilişkili `Await` ifadesini bir `Try` bloğunda yerleştirin ve özel durumu `Catch` bloğunda yakalayın. Bu konunun ilerleyen kısımlarında bir örnek verilmiştir.
 
-Bir görev birden çok özel durum, hatalı için sorumlu hatalı bir durumda olabilir. Örneğin, görev yapılan bir çağrının sonucu olabilir <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Böyle bir görevi beklerken, özel durum yakalandı yalnızca bir özel durumlar ve özel durum yakalandı tahmin edemezsiniz. Örnek bu konunun ilerleyen bölümlerinde verilmiştir.
+Bir görev hatalı bir durumda olabilir, çünkü hatalı bir şekilde birden çok özel durum sorumludur. Örneğin, görev bir <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>çağrısının sonucu olabilir. Böyle bir görevi bekleyolduğunuzda, yakalanan özel durum yalnızca özel durumlardan biridir ve hangi özel durumun yakalanıp yakalanmayacak olduğunu tahmin edemeyecektir. Bu konunun ilerleyen kısımlarında bir örnek verilmiştir.
 
-Bir `Await` ifade olamaz içinde bir `Catch` blok veya `Finally` blok.
+`Await` ifadesi `Catch` bloğu veya `Finally` bloğu içinde olamaz.
 
 ## <a name="iterators"></a>Yineleyiciler
 
-Yineleyici işleve veya `Get` erişimci bir koleksiyon üzerinde özel yineleme gerçekleştirir. Yineleyici bir [Yield](yield-statement.md) deyimini her öğesini birer birer koleksiyonunun bir döndürür. Kullanarak bir yineleyici işlevi çağırmak bir [her biri için... Sonraki deyimi](for-each-next-statement.md).
+Yineleyici işlevi veya `Get` erişimcisi bir koleksiyon üzerinde özel bir yineleme gerçekleştirir. Bir yineleyici, tek seferde koleksiyonun her bir öğesini döndürmek için bir [yield](yield-statement.md) ifadesini kullanır. Her biri Için bir kullanarak bir yineleyici işlevi çağırın [... Sonraki Ifade](for-each-next-statement.md).
 
-A `Yield` deyimi içinde olabilir bir `Try` blok. A `Try` içeren blok bir `Yield` deyimi olabilir `Catch` engeller ve olabilir bir `Finally` blok. "Deneyin blokları Visual Basic" bölümüne bakın [yineleyiciler](../../programming-guide/concepts/iterators.md) örneği.
+`Yield` bir ifade `Try` bloğunun içinde olabilir. Bir `Yield` ifadesini içeren `Try` bloğu `Catch` bloklara sahip olabilir ve bir `Finally` bloğuna sahip olabilir. Bir örnek için [yineleyicilerin](../../programming-guide/concepts/iterators.md) "Visual Basic blokları dene" bölümüne bakın.
 
-A `Yield` deyimi içinde olamaz bir `Catch` blok veya `Finally` blok.
+`Yield` bir ifade `Catch` bloğunun veya `Finally` bloğunun içinde olamaz.
 
-Varsa `For Each` gövdesi (yineleyici işleve dışında) bir özel durum oluşturursa bir `Catch` yineleyici işleve bloğunda yürütülmedi, ancak bir `Finally` yineleyici işleve bloğunda yürütülür. A `Catch` blok içinde bir yineleyici işlevi yineleyici işlevde oluşan özel durumları yakalar.
+`For Each` gövdesi (Yineleyici işlevi dışında) bir özel durum oluşturursa, yineleyici işlevindeki bir `Catch` bloğu yürütülmez, ancak Yineleyici işlevindeki bir `Finally` bloğu yürütülür. Yineleyici işlevi içindeki bir `Catch` bloğu yalnızca Yineleyici işlevinin içinde oluşan özel durumları yakalar.
 
 ## <a name="partial-trust-situations"></a>Kısmi güven durumları
 
-Bir ağ paylaşımında barındırılan bir uygulamanın gibi kısmi güven durumlarında `Try...Catch...Finally` çağrı içeren yöntemi çağrılmadan önce gerçekleşen bir güvenlik özel durumları yakalamaz. Sunucu paylaşımı üzerindeki put ve oradan çalıştırın, aşağıdaki örnekte, bir hata oluşturur. "System.Security.SecurityException: İstek başarısız oldu." Güvenlik özel durumları hakkında daha fazla bilgi için bkz. <xref:System.Security.SecurityException> sınıfı.
+Bir ağ paylaşımında barındırılan bir uygulama gibi kısmi güven durumlarında `Try...Catch...Finally`, çağrıyı içeren yöntemden önce oluşan güvenlik özel durumlarını yakalamaz. Aşağıdaki örnek, bir sunucu paylaşımında yerleştirip buradan çalıştırdığınızda "System. Security. SecurityException: Istek başarısız oldu" hatasını üretir. Güvenlik özel durumları hakkında daha fazla bilgi için <xref:System.Security.SecurityException> sınıfına bakın.
 
 [!code-vb[VbVbalrStatements#85](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#85)]
 
-Böyle bir kısmi güven durumda moduna sahip `Process.Start` ayrı bir deyimde `Sub`. İlk çağrı `Sub` başarısız olur. Böylece `Try...Catch` önce bunu yakalayıp yakalamayacağınıza karar `Sub` içeren `Process.Start` başlatılır ve güvenlik özel durumu üretti.
+Böyle bir kısmi güven durumunda `Process.Start` ifadesini ayrı bir `Sub`yerleştirmeniz gerekir. `Sub` ilk çağrısı başarısız olur. Bu, `Try...Catch`, `Process.Start` içeren `Sub` ve güvenlik özel durumu üretilmadan önce yakalayıp yakalamayacağını sağlar.
 
 ## <a name="examples"></a>Örnekler
 
-### <a name="the-structure-of-trycatchfinally"></a>Try yapısı... Catch... Son olarak
+### <a name="the-structure-of-trycatchfinally"></a>TRY yapısı... Yakala... Son olarak
 
-Yapısı aşağıdaki örnekte `Try...Catch...Finally` deyimi.
+Aşağıdaki örnek `Try...Catch...Finally` deyimin yapısını gösterir.
 
 [!code-vb[VbVbalrStatements#86](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#86)]  
 
-### <a name="exception-in-a-method-called-from-a-try-block"></a>Bir Try bloğundan adlı bir yöntemde özel durum
+### <a name="exception-in-a-method-called-from-a-try-block"></a>Try bloğundan çağrılan bir yöntemde özel durum
 
-Aşağıdaki örnekte, `CreateException` yöntem bir `NullReferenceException`. Özel durum oluşturan kodu kullanımda olmayan bir `Try` blok. Bu nedenle, `CreateException` yöntemi özel durum işlemez. `RunSample` Olduğundan, yöntemi özel durum işleme çağrısı `CreateException` yöntemdir içinde bir `Try` blok.
+Aşağıdaki örnekte `CreateException` yöntemi bir `NullReferenceException`oluşturur. Özel durumu üreten kod `Try` bloğunda değil. Bu nedenle `CreateException` yöntemi özel durumu işlemez. `CreateException` yöntemine yapılan çağrı bir `Try` bloğunda olduğundan `RunSample` yöntemi özel durumu işler.
 
-Örnek içerir `Catch` deyimleri için birden fazla özel durumlar, sipariş gelen en belirli en genel.
+Örnek, çok sayıda özel durum türü için en çok genel olarak sıralanmış `Catch` deyimlerini içerir.
 
 [!code-vb[VbVbalrStatements#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#91)]
 
-### <a name="the-catch-when-statement"></a>Catch deyimi
+### <a name="the-catch-when-statement"></a>Catch while ekstresi
 
-Aşağıdaki örnek nasıl kullanılacağını gösteren bir `Catch When` üzerinde bir koşullu ifade filtrelemek için deyimi. Koşullu ifade değerlendirilirse `True`, kodda `Catch` bloğu çalışır.
+Aşağıdaki örnek, bir `Catch When` deyiminin koşullu bir ifadeye filtre uygulamak için nasıl kullanılacağını gösterir. Koşullu ifade `True`olarak değerlendirilirse, `Catch` bloğundaki kod çalışır.
 
 [!code-vb[VbVbalrStatements#92](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#92)]
 
-### <a name="nested-try-statements"></a>İç içe geçmiş Try deyimleri
+### <a name="nested-try-statements"></a>İç içe deneme deyimleri
 
-Aşağıdaki örnek sahip bir `Try…Catch` bulunan deyimi bir `Try` blok. İç `Catch` blok olan bir özel durum oluşturursa, `InnerException` özgün özel durum özelliği. Dış `Catch` blok raporları kendi özel ve iç özel durum.
+Aşağıdaki örnek, bir `Try` bloğunda bulunan bir `Try…Catch` bildirimine sahiptir. İç `Catch` bloğu, `InnerException` özelliği özgün özel duruma ayarlanmış bir özel durum oluşturur. Dış `Catch` bloğu kendi özel durumunu ve iç özel durumu raporlar.
 
 [!code-vb[VbVbalrStatements#93](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#93)]
 
-### <a name="exception-handling-for-async-methods"></a>Özel durum işleme için zaman uyumsuz yöntemi
+### <a name="exception-handling-for-async-methods"></a>Zaman uyumsuz metotlar için özel durum işleme
 
-Aşağıdaki örnekte, özel durum işleme için zaman uyumsuz yöntemler gösterilmektedir. Zaman uyumsuz bir görev için geçerli bir özel durum yakalamak için `Await` ifade konusu bir `Try` bloğunu çağıran ve özel durum yakalandı `Catch` blok.
+Aşağıdaki örnek, zaman uyumsuz metotlar için özel durum işlemeyi gösterir. Zaman uyumsuz bir görev için geçerli olan bir özel durumu yakalamak için, `Await` ifadesi çağıranın `Try` bir bloğunda ve özel durum `Catch` bloğunda yakalanır.
 
-Açıklamadan çıkarın `Throw New Exception` özel durum işleme göstermek için örnek satır. Özel durum yakalandı `Catch` engelleme, görevin `IsFaulted` özelliği `True`ve görev `Exception.InnerException` özelliği, özel duruma ayarlanır.
+Özel durum işlemeyi göstermek için örnekteki `Throw New Exception` satırının açıklamasını kaldırın. Özel durum `Catch` bloğunda yakalanmışsa, görevin `IsFaulted` özelliği `True`olarak ayarlanır ve görevin `Exception.InnerException` özelliği özel duruma ayarlanır.
 
-Açıklamadan çıkarın `Throw New OperationCancelledException` zaman uyumsuz bir işlem iptal ettiğinizde ne göstermek için satır. Özel durum yakalandı `Catch` blok ve görevin `IsCanceled` özelliği `True`. Ancak, bu örnek için geçerli değildir bazı koşullar altında `IsFaulted` ayarlanır `True` ve `IsCanceled` ayarlanır `False`.
+Zaman uyumsuz bir işlemi iptal ettiğinizde ne olacağını göstermek için `Throw New OperationCancelledException` çizginin açıklamasını kaldırın. Özel durum `Catch` bloğunda yakalanır ve görevin `IsCanceled` özelliği `True`olarak ayarlanır. Ancak, bu örnek için geçerli olmayan bazı koşullar altında, `IsFaulted` `True` olarak ayarlanır ve `IsCanceled` `False`olarak ayarlanır.
 
 [!code-vb[csAsyncExceptions#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncexceptions/vb/class1.vb#1)]
 
-### <a name="handling-multiple-exceptions-in-async-methods"></a>Birden çok zaman uyumsuz yöntemlerde özel durumları işleme
+### <a name="handling-multiple-exceptions-in-async-methods"></a>Zaman uyumsuz metotlarda birden çok özel durumu işleme
 
-Aşağıdaki örnek, özel durum işleme birden çok görev içinde birden çok özel durum burada sonuçlanabilir gösterir. `Try` Bloğu `Await` görev ifadesi, <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> döndürdü. Üç, görevler, görev tamamlandığında <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> uygulanan getirildiğinden.
+Aşağıdaki örnekte, birden çok görevin birden çok özel durum ile sonuçlanbildiği özel durum işleme gösterilmektedir. `Try` bloğunun <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> döndürülen görev için `Await` ifadesi vardır. <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> uygulandığı üç görev tamamlandığında görev tamamlanır.
 
-Her biri üç görev, bir özel durum neden olur. `Catch` Blok yinelenir bulunan özel durumlar üzerinden `Exception.InnerExceptions` görevin özelliği, `Task.WhenAll` döndürdü.
+Üç görevin her biri özel duruma neden olur. `Catch` bloğu, `Task.WhenAll` döndürülen görevin `Exception.InnerExceptions` özelliğinde bulunan özel durumlar boyunca yinelenir.
 
 [!code-vb[csAsyncExceptions#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncexceptions/vb/class1.vb#3)]
 

@@ -15,14 +15,12 @@ helpviewer_keywords:
 - impersonation [.NET Framework], named pipes
 - full duplex communication [.NET Framework], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ddd862480a5977a4bada17945e10a25753b44de4
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 71f3a8d38b46993762b2673ea5fe735d8d54d351
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402489"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706640"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Nasıl yapılır: Ağ İşlemler Arası İletişimi için Adlandırılmış Kanallar Kullanma
 Adlandırılmış kanallar, bir kanal sunucusu ve bir veya daha fazla kanal istemcisi arasındaki işlemler arası iletişimi sağlar. Bunlar, yerel bir bilgisayarda işlemler arası iletişim sağlayan anonim kanallardan daha fazla işlevsellik sağlar. Adlandırılmış kanallar, bağlantı işlemlerinin uzak sunucularda kendi izin setlerini kullanmasını sağlayan bir ağ ve birden çok sunucu örneği, ileti tabanlı iletişim ve istemci kimliğine bürünme üzerinden tam çift yönlü iletişim sağlar.  
@@ -50,4 +48,4 @@ Adlandırılmış kanallar, bir kanal sunucusu ve bir veya daha fazla kanal iste
 - <xref:System.Security.Principal.TokenImpersonationLevel>
 - <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>
 - [Kanallar](../../../docs/standard/io/pipe-operations.md)
-- [Nasıl yapılır: Yerel işlemler arası iletişim için anonim kanallar kullanma](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
+- [Nasıl yapılır: Yerel İşlemler Arası İletişim için Anonim Kanallar Kullanma](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)

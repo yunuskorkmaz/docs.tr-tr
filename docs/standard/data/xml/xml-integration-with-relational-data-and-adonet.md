@@ -3,49 +3,47 @@ title: İlişkisel Veriler ve ADO.NET ile XML Tümleştirmesi
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6c37e494431eae9d17f442b2c32dea5f0b4bcf2b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 373e28d1fffd8c47acb4acb70271db056aa3a27b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397795"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709939"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>İlişkisel Veriler ve ADO.NET ile XML Tümleştirmesi
-**XmlDataDocument** , türetilmiş bir sınıfı **XmlDocument**ve XML verileri içerir. Avantajı **XmlDataDocument** ilişkisel ve hiyerarşik veriler arasında bir köprü sağlar. Bu bir **XmlDocument** için bağlanabilir bir **veri kümesi** ve hem sınıflarını iki sınıflarında bulunan verilere yapılan değişiklikleri eşitleyebilirsiniz. Bir **XmlDocument** bağlanan bir **veri kümesi** ilişkisel veriler ile tümleştirmek XML verir ve verilerinizin ya da XML olarak veya bir biçimde temsil gerekmez. Her ikisini de yapabilirsiniz ve tek bir veri temsilini için kısıtlı olabilir değil.  
+**XmlDataDocument** sınıfı, **XmlDocument**'ın TÜRETILMIŞ bir sınıfıdır ve XML verisi içerir. **XmlDataDocument** 'in avantajı, ilişkisel ve hiyerarşik veriler arasında bir köprü sağlar. Bu, bir **veri kümesine** bağlanabilen ve iki sınıfta bulunan veriler üzerinde yapılan değişiklikleri eşitleyebileceğiniz bir **XmlDocument** . Bir **veri kümesine** bağlanan bir **XmlDocument** , XML 'nin ilişkisel verilerle tümleştirilmesine olanak tanır ve verilerinizin XML veya ilişkisel biçimde temsil edilebilmesi gerekmez. Her ikisini de yapabilirsiniz ve verilerin tek bir gösterimiyle sınırlandırmayın.  
   
- Verilerin iki görünümlerde kullanılabilir olduğu avantajları şunlardır:  
+ Verilerin iki görünümde kullanılabilir olmasının avantajları şunlardır:  
   
-- Bir XML belgesi yapılandırılmış kısmı bir veri kümesine eşlenmesi verimli bir şekilde depolanan, dizine ve Aranan.  
+- Bir XML belgesinin yapılandırılmış bölümü bir veri kümesiyle eşleştirilebilir ve etkili bir şekilde depolanabilir, dizine alınmış ve aranabilir.  
   
-- Verimli bir şekilde dönüştürmeleri, doğrulama ve gezinti gösterim depolanır XML verilerinde bir imleç modeli aracılığıyla yapılabilir. Bazen, bunu daha verimli bir şekilde XML içinde depolanıyorsa daha ilişkisel yapıları karşı yapılabilir bir **XmlDocument** modeli.  
+- Dönüşümler, doğrulama ve gezinme, ilişkisel olarak depolanan XML verilerinde bir imleç modeli aracılığıyla etkili bir şekilde yapılabilir. Her zaman, XML 'nin bir **XmlDocument** modelinde depolandığından, ilişkisel yapılara karşı daha etkili bir şekilde yapılabilir.  
   
-- **Veri kümesi** XML'nin bir kısmı depolayabilirsiniz. Diğer bir deyişle, kullanabileceğiniz **XPath** veya **XslTransform** için depolamak için bir **veri kümesi** yalnızca bu öğeler ve öznitelikler ilgi. Büyük veriler üzerinde yayma değişikliklerle daha küçük, filtrelenmiş veri alt kümesini için değişiklik yapılamaz buradan **XmlDataDocument**.  
+- **Veri kümesi** , XML 'nin bir bölümünü saklayabilir. Diğer bir deyişle, yalnızca ilgili öğeleri ve ilgilendiğiniz öznitelikleri bir **veri kümesine** depolamak için **XPath** veya **XslTransform** kullanabilirsiniz. Buradan, değişiklikler, **XmlDataDocument**'teki daha büyük verilere yayılırken, verilerin daha küçük, filtrelenmiş bir alt kümesiyle yapılabilir.  
   
- İçine yüklenen veriler üzerinde dönüşüm çalıştırabilirsiniz **veri kümesi** SQL Server'dan. .NET Framework sınıfları stili yönetilen WinForm bağlamak için başka bir seçenektir ve WebForm denetimleri bir **veri kümesi** XML giriş akışından doldurulmuş.  
+ Ayrıca, SQL Server veri **kümesine** yüklenmiş veriler üzerinde bir dönüştürme de çalıştırabilirsiniz. Diğer bir seçenek de .NET Framework sınıfları stili yönetilen WinForm ve WebForm denetimlerini bir XML giriş akışından doldurulmuş bir **veri kümesine** bağlamak olur.  
   
- Destek yanı sıra **XslTransform**, bir **XmlDataDocument** ilişkisel veri sunan **XPath** sorgular ve doğrulama.  Temel olarak, tüm XML Hizmetleri ilişkisel veriler üzerinde kullanılabilir ve denetim bağlama codegen ve benzeri gibi ilişkisel tesis XML yapılandırılmış bir projeksiyon üzerinde XML uygunluk ödün vermeden kullanılabilir.  
+ Bir **XmlDataDocument** , **XslTransform**' ı desteklemeye ek olarak, ilişkisel verileri **XPath** sorguları ve doğrulama için kullanıma sunar.  Temel olarak, tüm XML Hizmetleri ilişkisel veriler üzerinden kullanılabilir ve denetim bağlama, CodeGen vb. gibi ilişkisel tesisler, XML uygunluğa ödün vermeden, yapılandırılmış bir XML projeksiyonu üzerinden kullanılabilir.  
   
- Çünkü **XmlDataDocument** devralınan bir **XmlDocument**, W3C yerli uygulaması sağlar Olgu, **XmlDataDocument** ilişkili olduğu ve depolar, içinde verilerin bir alt kümesini bir **veri kümesi** değil erişimi kısıtlamak veya kullanımını alter bir **XmlDocument** herhangi bir şekilde. Kodu kullanmak için yazılan bir **XmlDocument** works değiştirilmeden karşı bir **XmlDataDocument**. **Veri kümesi** tablolar, sütunlar, ilişkiler ve kısıtlamalar tanımlayarak aynı verilerin ilişkisel görünümünü sağlar ve tek başına, bellek içi kullanıcı veri deposudur.  
+ **XmlDataDocument** bir **XmlDocument**ÖĞESINDEN DEVRALıNDıĞıNDAN, W3C DOM uygulamasının bir uygulamasını sağlar. **XmlDataDocument** 'in ilişkilendirildiği ve içindeki verilerinin bir alt kümesini depoladığı olgu, bir **veri kümesi** herhangi bir şekilde bir **XmlDocument** olarak kullanımını kısıtlamaz veya değiştirmez. Bir **XmlDocument** kullanmak için yazılan kod, bir **XmlDataDocument**'e karşı değiştirilmeden çalışmaktadır. **Veri kümesi** , tabloları, sütunları, ilişkileri ve kısıtlamaları tanımlayarak aynı verilerin ilişkisel görünümünü sağlar ve tek başına, bellek içi kullanıcı veri deposudur.  
   
- XML verileri ile olduğunu farklı ilişkilendirmeleri aşağıda gösterilmiştir **veri kümesi** ve **XmlDataDocument**: 
+ Aşağıdaki çizimde XML verilerinde veri **kümesi** ve **XmlDataDocument**ile birlikte bulunan farklı ilişkilendirmeler gösterilmektedir: 
   
- ![XML veri kümesi ile farklı ilişkileri gösteren diyagram.](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
+ ![XML veri kümesiyle farklı ilişkilendirmeleri gösteren diyagram.](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
   
- XML verileri doğrudan içine yüklenemez çizimin gösterdiği bir **veri kümesi**, ilişkisel bir biçimde XML doğrudan düzenlenmesini sağlar. Veya, XML, türetilmiş bir sınıf olan DOM yüklenebilir **XmlDataDocument**, daha sonra yüklenen ve eşitlenmiş **veri kümesi**. Çünkü **veri kümesi** ve **XmlDataDocument** tek bir küme üzerinde eşitlenir verilerinin diğer deposunda bir depo verilerde yapılan değişiklikler yansıtılır.  
+ Çizimde XML verilerinin doğrudan bir **veri kümesine**yüklenebileceği gösterilmektedir ve bu, ILIŞKISEL şekilde XML ile doğrudan işleme sağlar. Ya da, XML DOM 'ın türetilmiş bir sınıfına yüklenebilir, bu, **XmlDataDocument**' dir ve daha sonra **veri kümesiyle**yüklenip eşitlenir. **Veri kümesi ve** **XmlDataDocument** tek bir veri kümesi üzerinden eşitlendiğinden, bir depodaki verilerde yapılan değişiklikler diğer depoya yansıtılır.  
   
- **XmlDataDocument** tüm düzenleme ve gezinti özellikleri devralır **XmlDocument**. Bazı durumlarda kullanırken **XmlDataDocument** ve eşitlenmiş özelliklerini devralınan bir **veri kümesi**, doğrudan XML yüklenirken değerinden daha uygun bir seçenektir **verikümesi**. Aşağıdaki tabloda, hangi yöntemin yüklemek için kullanılacağını seçerken göz önünde bulundurulması öğeleri gösterilmektedir **veri kümesi**.  
+ **XmlDataDocument** , **XmlDocument**içindeki tüm düzen ve gezinme özelliklerini devralır. **XmlDataDocument** 'in ve devralınmış özelliklerinin kullanıldığı zamanlar, bir **veri KÜMESIYLE**eşitlendiğinde, XML 'i doğrudan **veri kümesine**yüklemeye kıyasla daha uygun bir seçenektir. Aşağıdaki tabloda, **veri kümesini**yüklemek için kullanılacak yöntemi seçerken göz önünde bulundurmanız gereken öğeler gösterilmektedir.  
   
-|Bir veri kümesine doğrudan XML yükleme zamanı|Bir veri kümesiyle bir XmlDataDocument eşitleme zamanı|  
+|XML 'ı doğrudan bir veri kümesine yükleme|Bir XmlDataDocument ile bir veri kümesiyle ne zaman eşitleneceğini|  
 |----------------------------------------------|-----------------------------------------------------------|  
-|Veri sorguları **veri kümesi** kullanarak SQL XPath daha kolaydır.|XPath sorguları, verileri üzerinde gereklidir **veri kümesi**.|  
-|Öğenin kaynak XML sıralama korunması kritik değildir.|Öğenin kaynak XML sıralama korunması kritik öneme sahiptir.|  
-|Öğeleri ve biçimlendirme arasında yer alan kaynak XML korunması gerekmez.|Boşluk ve ' % s'kaynağındaki XML Biçimlendirme korunması kritik.|  
+|Veri **kümesindeki** verilerin sorguları XPath 'ten SQL kullanılarak daha kolay.|Veri **kümesindeki**veriler üzerinde XPath sorguları gerekir.|  
+|Kaynak XML 'de öğe sıralamasını koruma kritik değildir.|Kaynak XML 'de öğe sıralamasını koruma kritik öneme sahiptir.|  
+|Öğe ve biçimlendirme arasındaki boşluk, kaynak XML 'de korunması gerekmez.|Kaynak XML 'de boşluk ve biçimlendirme koruması kritik öneme sahiptir.|  
   
- Yükleme ve XML doğrudan tanesi yazma bir **veri kümesi** ihtiyaçlarınızı adresleri bkz [XML'den DataSet yükleme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) ve [XML verileri olarak DataSet yazma](../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
+ Bir **veri kümesinin** içine ve DıŞıNA doğrudan XML yükleme ve yazma için, bkz. xml 'den veri kümesi [yükleme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) ve [XML verisi olarak veri kümesi yazma](../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
   
- Yükleniyor, **veri kümesi** gelen bir **XmlDataDocument** ihtiyaçlarınızı adresleri bkz [bir XML belgesi bir veri kümesi eşitleme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
+ **Veri kümesinin** bir **XmlDataDocument** 'ten yüklenmesi gereksinimlerinize göre, bkz. [XML belgesi ile veri kümesini eşitleme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -16,55 +16,53 @@ helpviewer_keywords:
 - decryption
 - data [.NET Framework], encryption
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1dc8c75d3c8c91d974388779528deff16453d852
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0efd677f11189b28b8efc184c04b30a047ab942b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602548"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706038"
 ---
 # <a name="how-to-use-data-protection"></a>Nasıl yapılır: Veri Korumayı Kullanma
-.NET Framework veri koruma API'si (geçerli kullanıcı hesabı veya bilgisayar bilgileri kullanarak verileri şifreleme olanak tanıyan DPAPI), erişim sağlar.  DPAPI kullandığınızda, açıkça oluşturma ve bir şifreleme anahtarı depolamak zor bir sorun çıkmıştır.  
+.NET Framework, veri koruma API 'sine (DPAPI) erişim sağlar. Bu, geçerli kullanıcı hesabındaki veya bilgisayardaki bilgileri kullanarak verileri şifrelemenizi sağlar.  DPAPI 'yı kullandığınızda, bir şifreleme anahtarını açıkça oluşturma ve depolama konusunda zor olan sorunu gidereolursunuz.  
   
- Kullanım <xref:System.Security.Cryptography.ProtectedMemory> bellek içi bir bayt dizisi şifrelemek için sınıf.  Bu işlev, Microsoft Windows XP ve üstü işletim sistemlerinde kullanılabilir.  Geçerli tarafından şifrelenmiş belleğin belirtebilirsiniz işlem şifresi yalnızca, tüm işlemler tarafından ya da aynı kullanıcı bağlamından geçerli işlem.  Bkz: <xref:System.Security.Cryptography.MemoryProtectionScope> numaralandırma ayrıntılı bir açıklaması için <xref:System.Security.Cryptography.ProtectedMemory> seçenekleri.  
+ Bellek içi bayt dizisini şifrelemek için <xref:System.Security.Cryptography.ProtectedMemory> sınıfını kullanın.  Bu işlev, Microsoft Windows XP ve sonraki işletim sistemlerinde kullanılabilir.  Geçerli işlem tarafından şifrelenmiş belleğin, tüm işlemlerle veya aynı kullanıcı bağlamından yalnızca geçerli işlem tarafından çözülemediğini belirtebilirsiniz.  <xref:System.Security.Cryptography.ProtectedMemory> seçeneklerinin ayrıntılı bir açıklaması için bkz. <xref:System.Security.Cryptography.MemoryProtectionScope> numaralandırması.  
   
- Kullanım <xref:System.Security.Cryptography.ProtectedData> Bayt dizisine bir kopyasını şifrelemek için sınıf. Bu işlev, Microsoft Windows 2000 ve sonraki işletim sistemlerinde kullanılabilir.  Geçerli kullanıcı hesabı tarafından şifrelenmiş verilerin yalnızca aynı kullanıcı hesabı tarafından şifresi çözülemez veya geçerli kullanıcı hesabı tarafından şifrelenmiş verilere bilgisayarda herhangi bir hesabı tarafından çözülecek şekilde belirtebilirsiniz belirtebilirsiniz.  Bkz: <xref:System.Security.Cryptography.DataProtectionScope> numaralandırma ayrıntılı bir açıklaması için <xref:System.Security.Cryptography.ProtectedData> seçenekleri.  
+ Bir bayt dizisinin bir kopyasını şifrelemek için <xref:System.Security.Cryptography.ProtectedData> sınıfını kullanın. Bu işlev, Microsoft Windows 2000 ve sonraki işletim sistemlerinde kullanılabilir.  Geçerli Kullanıcı hesabı tarafından şifrelenen verilerin yalnızca aynı kullanıcı hesabı tarafından çözülemediğini belirtebilir veya geçerli kullanıcı hesabı tarafından şifrelenen verilerin, bilgisayardaki herhangi bir hesap tarafından çözülebilecek olduğunu belirtebilirsiniz.  <xref:System.Security.Cryptography.ProtectedData> seçeneklerinin ayrıntılı bir açıklaması için bkz. <xref:System.Security.Cryptography.DataProtectionScope> numaralandırması.  
   
-### <a name="to-encrypt-in-memory-data-using-data-protection"></a>Veri korumayı kullanarak bellek içi verileri şifrelemek için  
+### <a name="to-encrypt-in-memory-data-using-data-protection"></a>Veri koruma kullanarak bellek içi verileri şifrelemek için  
   
-1. Statik çağrı <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> şifrelemek için bayt entropi ve bellek koruma kapsamını bir dizi geçirme sırasında yöntemi.  
+1. Şifrelemek, entropi ve bellek koruma kapsamını şifrelemek için bir bayt dizisi geçirirken statik <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> yöntemini çağırın.  
   
-### <a name="to-decrypt-in-memory-data-using-data-protection"></a>Veri korumayı kullanarak bellek içi verilerin şifresini çözmek için  
+### <a name="to-decrypt-in-memory-data-using-data-protection"></a>Veri koruma kullanarak bellek içi verilerin şifresini çözmek için  
   
-1. Statik çağrı <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> şifresini çözmek için bayt ve bellek koruma kapsamını bir dizi geçirme sırasında yöntemi.  
+1. Şifre çözme ve bellek koruma kapsamının bir bayt dizisini geçirirken statik <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> yöntemini çağırın.  
   
-### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>Veri korumayı kullanarak akış veya dosyaya verileri şifrelemek için  
+### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>Veri koruma kullanarak bir dosya veya akışa veri şifrelemek için  
   
 1. Rastgele entropi oluşturun.  
   
-2. Statik çağrı <xref:System.Security.Cryptography.ProtectedData.Protect%2A> şifrelemek için bayt entropi ve veri koruma kapsamını bir dizi geçirme sırasında yöntemi.  
+2. Şifrelemek, entropi ve veri koruma kapsamını şifrelemek için bir bayt dizisi geçirirken statik <xref:System.Security.Cryptography.ProtectedData.Protect%2A> yöntemini çağırın.  
   
-3. Şifrelenmiş veriler, bir dosya veya akışınıza yazın.  
+3. Şifrelenmiş verileri bir dosyaya veya akışa yazın.  
   
-### <a name="to-decrypt-data-from-a-file-or-stream-using-data-protection"></a>Bir dosyadan verilerin şifresini çözmek veya veri koruması kullanarak akış  
+### <a name="to-decrypt-data-from-a-file-or-stream-using-data-protection"></a>Veri koruma kullanarak bir dosya veya akıştan verilerin şifresini çözmek için  
   
-1. Şifrelenmiş veriler, bir dosya veya akıştan okuyun.  
+1. Şifrelenen verileri bir dosyadan veya akıştan okuyun.  
   
-2. Statik çağrı <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> şifresini çözmek için bayt ve verileri koruma kapsamını bir dizi geçirme sırasında yöntemi.  
+2. Şifre çözme ve veri koruma kapsamı için bir bayt dizisi geçirirken statik <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> yöntemini çağırın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, iki tür şifreleme ve şifre çözme gösterir.  İlk olarak, kod örneği, şifreler ve daha sonra bir bellek içi bayt dizisi şifresini çözer.  Ardından, kod örneği bir bayt dizisinin bir kopyasını şifreler, bir dosyaya kaydeder, verileri dosyadan geri yükler ve ardından verilerin şifresini çözer.  Örneğin, şifresi çözülmüş veriler özgün veri ve şifrelenmiş verileri görüntüler.  
+ Aşağıdaki kod örneği, iki şifreleme ve şifre çözme biçimini gösterir.  İlk olarak, kod örneği, bellek içi bayt dizisinin şifresini şifreler ve şifresini çözer.  Ardından, kod örneği bir bayt dizisinin kopyasını şifreler, bir dosyaya kaydeder, verileri dosyadan geri yükler ve sonra verilerin şifresini çözer.  Örnek, özgün verileri, şifrelenen verileri ve şifresi çözülen verileri görüntüler.  
   
  [!code-csharp[DPAPI-HowTO#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DPAPI-HowTO/cs/sample.cs#1)]
  [!code-vb[DPAPI-HowTO#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DPAPI-HowTO/vb/sample.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
   
-- Bir başvuru eklemek `System.Security.dll`.  
+- `System.Security.dll`bir başvuru ekleyin.  
   
-- Dahil <xref:System>, <xref:System.IO>, <xref:System.Security.Cryptography>, ve <xref:System.Text> ad alanı.  
+- <xref:System>, <xref:System.IO>, <xref:System.Security.Cryptography>ve <xref:System.Text> ad alanını ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

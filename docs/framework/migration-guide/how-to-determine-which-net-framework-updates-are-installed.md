@@ -1,5 +1,5 @@
 ---
-title: Hangi güvenlik güncelleştirmelerinin ve düzeltmelerinin yüklü .NET Framework
+title: Bkz. yüklü .NET Framework güvenlik güncelleştirmeleri ve düzeltmeleri
 description: Bir bilgisayara hangi .NET Framework güvenlik güncelleştirmelerinin ve düzeltmelerin yüklendiğini belirlemeyi öğrenin.
 ms.date: 11/27/2017
 dev_langs:
@@ -9,14 +9,12 @@ helpviewer_keywords:
 - updates, determining for .NET Framework
 - .NET Framework, determining updates
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aad202e7c9df01c2893e74a39744f2c32783f1f0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 087519048b412798ef7495d250dc2538ee5c2fd0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735205"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716263"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Hangi .NET Framework güvenlik güncelleştirmelerinin ve düzeltmelerinin yüklendiğini belirleme
 
@@ -33,7 +31,7 @@ Bir bilgisayarda yüklü .NET Framework her sürümü için yüklü güvenlik g�
 
 2. Kayıt Defteri Düzenleyicisi'nde, aşağıdaki alt anahtarı açın:
 
-     **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates**
+     **\SOFTWARE\Wow6432Node\Microsoft\Updates HKEY_LOCAL_MACHINE**
 
      Yüklü güncelleştirmeler, için uygulandıkları .NET Framework sürümünü tanımlayan alt anahtarlar altında listelenir. Her güncelleştirme bir Bilgi Bankası (KB) numarasıyla tanımlanır.
 

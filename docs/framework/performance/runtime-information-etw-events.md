@@ -5,14 +5,12 @@ helpviewer_keywords:
 - runtime information events [.NET Framework]
 - ETW, runtime information events
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6ab3844b293d09cec02236fb9befd836aa4113ea
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2927ed088ba6c9e46b9676d55d0046575e23cfb1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046223"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715949"
 ---
 # <a name="runtime-information-etw-events"></a>Çalışma Zamanı Bilgileri ETW Olayları
 Bu ETW olayları, çalışma zamanı hakkındaki SKU, sürüm numarası, çalışma zamanının etkinleştirildiği yol, ile başlatıldığı komut satırı parametreleri, GUID (varsa) ve diğer ilgili bilgiler dahil olmak üzere çalışma zamanı hakkındaki bilgileri günlüğe kaydeder. Bir işlem içinde birden çok çalışma alanı yürütülerek, bu olaylar tarafından sunulan bilgiler (ClrInstanceID) çalışma zamanlarının belirsizliğini ortadan kaldırmaya yardımcı olur.  
@@ -29,7 +27,7 @@ Bu ETW olayları, çalışma zamanı hakkındaki SKU, sürüm numarası, çalı�
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
-|İsteyin|Win: UInt16|1 – Masaüstü CLR.<br /><br /> 2 – CoreCLR.|  
+|Sku|Win: UInt16|1 – Masaüstü CLR.<br /><br /> 2 – CoreCLR.|  
 |BclVersion – ana sürüm|Win: UInt16|Mscorlib. dll ' nin ana sürümü.|  
 |BclVersion – Ikincil sürüm|Win: UInt16|Mscorlib. dll ' nin ikincil sürüm numarası.|  
 |BclVersion – derleme numarası|Win: UInt16|Mscorlib. dll ' nin derleme numarası.|  

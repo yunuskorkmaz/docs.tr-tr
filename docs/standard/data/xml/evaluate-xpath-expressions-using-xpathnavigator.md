@@ -6,20 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2913ccf3-f932-4363-8028-9e2d22ce6093
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b8666aa9cb9f0512c600a77891b16f439c46995a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a17aea66be7f9d35336434408c49bae8046b7e7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934427"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710914"
 ---
 # <a name="evaluate-xpath-expressions-using-xpathnavigator"></a>XPathNavigator Kullanarak XPath İfadelerini Değerlendirme
-<xref:System.Xml.XPath.XPathNavigator> Sağlar sınıfını <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> bir XPath ifadesini değerlendirme için yöntemi. <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Yöntemi bir XPath ifadesini alır, bu değerlendirir ve W3C XPath türü Boolean, sayı, dize döndürür veya düğüm kümesi temel XPath ifadesinin sonucu üzerinde.  
+<xref:System.Xml.XPath.XPathNavigator> sınıfı bir XPath ifadesini değerlendirmek için <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi sağlar. <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi bir XPath ifadesi alır, bunu değerlendirir ve XPath ifadesinin sonucuna göre Boole, sayı, dize veya düğüm kümesinin W3C XPath türünü döndürür.  
   
-## <a name="the-evaluate-method"></a>Yöntemi  
- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Yöntemi bir XPath ifadesini alır, bu değerlendirir ve belirlenmiş bir Boolean sonucunu döndürür (<xref:System.Boolean>), sayı (<xref:System.Double>), dize (<xref:System.String>), veya düğüm kümesi (<xref:System.Xml.XPath.XPathNodeIterator>). Örneğin, <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi matematiksel bir yöntemde kullanılabilir. Aşağıdaki kod örneği tüm kitaplar toplam fiyatı hesaplar `books.xml` dosya.  
+## <a name="the-evaluate-method"></a>Değerlendir yöntemi  
+ <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi bir XPath ifadesi alır, bunu değerlendirir ve Boole (<xref:System.Boolean>), sayı (<xref:System.Double>), dize (<xref:System.String>) veya düğüm kümesinin (<xref:System.Xml.XPath.XPathNodeIterator>) yazılmış bir sonucunu döndürür. Örneğin, <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi matematiksel bir yöntemde kullanılabilir. Aşağıdaki örnek kod, `books.xml` dosyasındaki tüm kitapların toplam fiyatını hesaplar.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -39,12 +37,12 @@ Double total = (Double)navigator.Evaluate(query);
 Console.WriteLine(total);  
 ```  
   
- Örnek alan `books.xml` dosya giriş olarak.  
+ Örnek, `books.xml` dosyasını girdi olarak alır.  
   
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
-### <a name="position-and-last-functions"></a>konum ve son işlevlerin  
- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Yöntemi aşırı yüklüdür. Aşağıdakilerden birini <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemleri alır bir <xref:System.Xml.XPath.XPathNodeIterator> bir parametre olarak nesne. Bu özellikle <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi ile aynıdır <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yönteminin yalnızca alan bir <xref:System.Xml.XPath.XPathExpression> değerlendirme gerçekleştirmek için geçerli bağlam belirtmek için bağımsız değişkeni bir düğüm kümesi sağlayan dışında bir parametre olarak nesne. Bu bağlam için XPath gereklidir `position()` ve `last()` göre geçerli bağlam düğümünün oldukları gibi çalışır. Bir koşul konumu adımda olarak kullanılmadığı sürece `position()` ve `last()` işlevleri, aksi takdirde, değerlendirilebilmesi için ayarlanmış bir düğümü için bir başvuru gerektirir `position` ve `last` işlev dönüş `0`.  
+### <a name="position-and-last-functions"></a>konum ve son Işlevler  
+ <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi aşırı yüklendi. <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemlerinden biri, bir <xref:System.Xml.XPath.XPathNodeIterator> nesnesini parametre olarak alır. Bu <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi, yalnızca bir <xref:System.Xml.XPath.XPathExpression> nesnesini parametre olarak alan <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi ile aynıdır, ancak bir düğüm kümesi bağımsız değişkeninin üzerinde değerlendirmeyi gerçekleştirmek için geçerli bağlamı belirtmesini sağlar. Bu bağlam, XPath `position()` ve `last()` işlevleri için, geçerli bağlam düğümüne göreli oldukları için gereklidir. Bir konum adımında bir koşul olarak kullanılmadıkça, `position()` ve `last()` işlevleri, aksi takdirde değerlendirilmek üzere bir düğüm kümesine başvuru gerektirir, `position` ve `last` işlevleri `0`döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

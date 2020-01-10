@@ -1,22 +1,21 @@
 ---
 title: '#If Önişlemci yönergesi- C# başvuru'
-ms.custom: seodec18
 ms.date: 10/27/2019
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: e467a890e971e6c6f2c681ee503d7c7ead19a1e4
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 656b8d9eb2bda2d01f001748c992958e95387744
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552450"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712513"
 ---
 # <a name="if-c-reference"></a>#if (C# Başvurusu)
 
-C# Derleyici bir`#if`yönergesi ile karşılaştığında, sonunda bir [#endif](preprocessor-endif.md) yönergesi ile, yalnızca belirtilen sembol tanımlanmışsa, yönergeler arasındaki kodu derler. C ve C++' nin aksine, bir simgeye sayısal değer atayamazsınız. İçindeki C# #if deyimleri Boolean olur ve yalnızca sembolün tanımlanıp tanımlanmadığını sınar. Örneğin:
+C# Derleyici bir `#if` yönergesi ile karşılaştığında, sonunda bir [#endif](preprocessor-endif.md) yönergesi ile, yalnızca belirtilen sembol tanımlanmışsa, yönergeler arasındaki kodu derler. C ve C++' nin aksine, bir simgeye sayısal değer atayamazsınız. İçindeki C# #if deyimleri Boolean olur ve yalnızca sembolün tanımlanıp tanımlanmadığını sınar. Örneğin:
 
 ```csharp
 #if DEBUG

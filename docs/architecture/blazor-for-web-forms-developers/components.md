@@ -4,12 +4,12 @@ description: Blazor ile yeniden kullanılabilir kullanıcı arabirimi bileşenle
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b34bdf61a425807030cf7648df245cc7a01c95de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337396"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705736"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Blazor ile yeniden kullanılabilir kullanıcı arabirimi bileşenleri oluşturun
 
@@ -269,7 +269,7 @@ Olay işleyicileri, zaman uyumlu veya zaman uyumsuz olarak çalıştırılabilir
 Bir olay işlendikten sonra bileşen, bileşen durumu değişikliklerini hesaba göre işlenir. Zaman uyumsuz olay işleyicileriyle, bileşen işleyici yürütme tamamlandıktan hemen sonra işlenir. Zaman uyumsuz `Task` tamamlandıktan sonra bileşen *yeniden* işlenir. Bu zaman uyumsuz yürütme modu, zaman uyumsuz `Task` devam ederken, bazı uygun Kullanıcı arabirimini işleme fırsatı sağlar.
 
 ```razor
-<button @onclick="Get message">Get message</button>
+<button @onclick="ShowMessage">Get message</button>
 
 @if (showMessage)
 {

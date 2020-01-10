@@ -1,16 +1,15 @@
 ---
 title: İşaretçi dönüştürmeleri- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: b0a517eacc505376c9502e9d095c7aac0cd54555
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 308d5e0646eeb94012dbe18d46d6d33f67dfeaf5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417528"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698371"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>İşaretçi Dönüşümleri (C# Programlama Kılavuzu)
 Aşağıdaki tabloda önceden tanımlanmış örtük işaretçi dönüşümleri gösterilmektedir. Örtük dönüştürmeler, yöntem çağırma ve atama deyimleri dahil olmak üzere birçok durumda gerçekleşebilir.  
@@ -20,7 +19,7 @@ Aşağıdaki tabloda önceden tanımlanmış örtük işaretçi dönüşümleri 
 |Başlangıç|Bitiş|  
 |----------|--------|  
 |Herhangi bir işaretçi türü|Kağıt|  
-|null|Herhangi bir işaretçi türü|  
+|{1&gt;null&lt;1}|Herhangi bir işaretçi türü|  
   
  Açık işaretçi dönüştürmesi, bir atama ifadesi kullanarak örtük dönüştürme olmayan dönüştürmeler gerçekleştirmek için kullanılır. Aşağıdaki tabloda bu dönüşümler gösterilmektedir.  
   
@@ -42,8 +41,9 @@ Aşağıdaki tabloda önceden tanımlanmış örtük işaretçi dönüşümleri 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [İşaretçi türleri](./pointer-types.md)
-- [Türler](/dotnet/csharp/language-reference/keywords)
+- [İşaretçi türleri](pointer-types.md)
+- [Başvuru türleri](../../language-reference/keywords/reference-types.md)
+- [Değer türleri](../../language-reference/keywords/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
 - [fixed Deyimi](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)

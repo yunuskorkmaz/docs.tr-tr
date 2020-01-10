@@ -5,13 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.custom: seodec18
-ms.openlocfilehash: 86145e8971d9a59fba17368d9530f40d86bf2858
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 38d7c856e9a536db9ef26349175ad440a49f5fe2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037682"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713949"
 ---
 # <a name="asynchronous-programming"></a>Zaman uyumsuz programlama
 
@@ -49,7 +48,7 @@ downloadButton.Clicked += async (o, e) =>
 };
 ```
 
-İşte bu kadar! Kod, görev nesneleriyle etkileşimde bulunmak için sürüklenmeden azaltma olmadan amacı ifade eder (bazı verileri zaman uyumsuz olarak indirme).
+İşte bu kadar. Kod, görev nesneleriyle etkileşimde bulunmak için sürüklenmeden azaltma olmadan amacı ifade eder (bazı verileri zaman uyumsuz olarak indirme).
 
 ### <a name="cpu-bound-example-performing-a-calculation-for-a-game"></a>CPU-bağlantılı örnek: bir oyun için hesaplama gerçekleştirme
 
@@ -81,7 +80,7 @@ calculateButton.Clicked += async (o, e) =>
 
 Zaman uyumsuz işlemlere önem taşıyan çok sayıda hareketli parça vardır.  `Task` ve `Task<T>`kapakların altında neler olduğunu merak ediyorsanız, daha fazla bilgi için [zaman uyumsuz ayrıntılı](../standard/async-in-depth.md) makaleyi kullanıma alın.
 
-Nesnelerin C# yanında, derleyici kodunuzu bir durum makinesine dönüştürür ve bu da bir`await`erişildiğinde ve bir arka plan işi bittiğinde yürütmeye devam eder.
+Nesnelerin C# yanında, derleyici kodunuzu bir durum makinesine dönüştürür ve bu da bir `await` erişildiğinde ve bir arka plan işi bittiğinde yürütmeye devam eder.
 
 Teorik olarak, bu, [zaman uyumsuzluğu 'nin Promise modelinin](https://en.wikipedia.org/wiki/Futures_and_promises)bir uygulamasıdır.
 
@@ -243,7 +242,7 @@ LINQ kullanım içindeki lambda ifadeleri ertelenmiş yürütme, bu kodun bir ke
 
 Görevin tamamlanmasını beklemek için geçerli iş parçacığını engellemek, kilitlenmeleri ve engellenen bağlam iş parçacıklarının oluşmasına neden olabilir ve önemli ölçüde daha karmaşık hata işleme gerektirebilir. Aşağıdaki tabloda, engellenmeyen bir şekilde görevlerin beklenmesiyle ilgili yönergeler sağlanmaktadır:
 
-| Bunu kullan... | Bunun yerine... | Bunu yapmak için |
+| Bunu kullanın... | Bunun yerine... | Bunu yapmak için |
 | --- | --- | --- |
 | `await` | `Task.Wait` veya `Task.Result` | Arka plan görevinin sonucunu alma |
 | `await Task.WhenAny` | `Task.WaitAny` | Herhangi bir görevin tamamlanması bekleniyor |

@@ -1,6 +1,5 @@
 ---
 title: Soyut- C# başvuru
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - abstract
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: a6c0ac86689c5d095fc077beb39d6281f77aab24
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 96e8bbce2e67c316d5cd1cd78e3e2506dabead25
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422949"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713858"
 ---
 # <a name="abstract-c-reference"></a>abstract (C# Başvurusu)
 `abstract` değiştirici, değiştirilmekte olan bir uygulamanın eksik veya tamamlanmamış bir uygulamasına sahip olduğunu gösterir. Soyut değiştirici sınıflar, Yöntemler, özellikler, Dizin oluşturucular ve olaylar ile kullanılabilir. Bir sınıfın yalnızca diğer sınıfların temel sınıfı olduğunu göstermek için bir sınıf bildiriminde `abstract` değiştiricisini kullanın, kendi kendine örneği değildir. Soyut olarak işaretlenen Üyeler soyut sınıftan türetilen soyut olmayan sınıflar tarafından uygulanmalıdır.

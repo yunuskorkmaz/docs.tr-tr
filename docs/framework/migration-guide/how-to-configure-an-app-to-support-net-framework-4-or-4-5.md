@@ -1,20 +1,18 @@
 ---
-title: 'Nasıl yapılır: Uygulamayı .NET Framework 4 veya sonraki sürümleri destekleyecek şekilde yapılandırma'
+title: 'Nasıl yapılır: .NET Framework 4 veya sonraki sürümleri desteklemek için uygulama yapılandırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring apps to support .NET Framework
 - .NET Framework, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cd267de1e632fdc40dc50e8acdeba7d16bf8e61a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 586f39fc9b50dcd45bb959ebd0063e3c38d9c3ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779487"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716241"
 ---
-# <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Nasıl yapılır: .NET Framework 4 veya sonraki sürümleri desteklemek için bir uygulama yapılandırma
+# <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Nasıl yapılır: .NET Framework 4 veya sonraki sürümleri desteklemek için uygulama yapılandırma
 
 Ortak dil çalışma zamanını (CLR) barındıran tüm uygulamaların, yönetilen kodu çalıştırmak için CLR 'yi başlatması veya *etkinleştirmesi*gerekir. Genellikle bir .NET Framework uygulaması üzerinde derlendiği CLR sürümünde çalışır, ancak bir uygulama yapılandırma dosyası (bazen app.config dosyası olarak da anılır) kullanarak bu davranışı masaüstü uygulamalar için değiştirebilirsiniz. Ancak bir uygulama yapılandırma dosyası Windows Mağazası uygulamaları ya da Windows Phone uygulamaları için varsayılan etkinleştirme davranışını değiştiremezsiniz. Bu makalede, masaüstü uygulamanızın .NET Framework başka bir sürümünde çalışacak şekilde nasıl etkinleştirileceği ve sürüm 4 veya sonraki sürümlerin nasıl hedefleneceği hakkında bir örnek verilmiştir.
 
@@ -22,7 +20,7 @@ Ortak dil çalışma zamanını (CLR) barındıran tüm uygulamaların, yönetil
 
 - Yapılandırma dosyası.
 
-     Uygulama yapılandırma dosyası, bir veya daha fazla .NET Framework sürümünü belirten [ \<supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) girdileri içeriyorsa ve bu sürümlerden biri kullanıcının bilgisayarında mevcutsa, uygulama o sürümde çalışır. Yapılandırma dosyası, [ \<supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) girdileri listelendikleri sırada okur ve kullanıcının bilgisayarında mevcut olan ilk .NET Framework sürümünü kullanır. (Sürüm 1,0 için [ \<requiredRuntime > öğesini](../configure-apps/file-schema/startup/requiredruntime-element.md) kullanın.)
+     Uygulama yapılandırma dosyası, bir veya daha fazla .NET Framework sürümü belirten [\<supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) girişlerini içeriyorsa ve bu sürümlerden biri kullanıcının bilgisayarında mevcutsa, uygulama o sürümde çalışır. Yapılandırma dosyası [\<supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) girdileri listelendikleri sırada okur ve kullanıcının bilgisayarında bulunan ilk .NET Framework sürümünü kullanır. (Sürüm 1,0 için [\<requiredRuntime > öğesini](../configure-apps/file-schema/startup/requiredruntime-element.md) kullanın.)
 
 - Derlenmiş sürüm.
 
@@ -30,7 +28,7 @@ Ortak dil çalışma zamanını (CLR) barındıran tüm uygulamaların, yönetil
 
 - En son sürüm yüklendi.
 
-     Uygulamanın üzerinde oluşturulduğu .NET Framework sürümü yoksa ve bir yapılandırma dosyası [ \<supportedRuntime > öğesinde](../configure-apps/file-schema/startup/supportedruntime-element.md)bir sürüm belirtmezse, uygulama mevcut .NET Framework en son sürümünde çalıştırmayı dener kullanıcının bilgisayarında.
+     Uygulamanın üzerinde oluşturulduğu .NET Framework sürümü yoksa ve bir yapılandırma dosyası [\<supportedRuntime > öğesinde](../configure-apps/file-schema/startup/supportedruntime-element.md)bir sürüm belirtmezse, uygulama, kullanıcının bilgisayarında bulunan .NET Framework en son sürümünü çalıştırmayı dener.
 
      Ancak .NET Framework 1.0, 1.1, 2.0, 3.0 ve 3.5 uygulamaları, .NET Framework 4 ve sonraki sürümleri otomatik çalıştırmaz ve bazı durumlarda kullanıcı bir hata alabilir ve kullanıcının .NET Framework 3.5 yüklemesi istenebilir. Windows sisteminin farklı sürümleri .NET Framework'ün farklı sürümlerinin içerdiğinden etkinleştirme davranışı kullanıcının işletim sistemine de bağlı olabilir. Uygulamanız hem .NET Framework 3.5 hem de 4 ve üstünü destekliyorsa, .NET Framework başlatma hatalarını önlemek için bunu yapılandırma dosyasında birden çok giriş işe belirtmenizi öneririz. Daha fazla bilgi için bkz. [sürümler ve bağımlılıklar](versions-and-dependencies.md).
 
@@ -45,9 +43,9 @@ Ortak dil çalışma zamanını (CLR) barındıran tüm uygulamaların, yönetil
 
 1. .NET Framework projesinin yapılandırma dosyasını ekleyin ya da bulun. Bir uygulamanın yapılandırma dosyası aynı dizindedir ve uygulama ile aynı ada ancak .config uzantısına sahiptir. Örneğin, MyExecutable.exe adlı bir uygulama için uygulama yapılandırma dosyası MyExecutable.exe.config olarak adlandırılır.
 
-     Bir yapılandırma dosyası eklemek için, Visual Studio menü çubuğunda **Proje**, **Yeni öğe Ekle**' yi seçin. Sol bölmeden **genel** ' i ve ardından **yapılandırma dosyası**' nı seçin. Yapılandırma dosyasını *appname*. exe. config olarak adlandırın. Bu menü seçenekleri Windows Mağazası uygulaması veya Windows telefon uygulaması projelerinde kullanılamaz, çünkü bu platformlarda etkinleştirme ilkesini değiştiremezsiniz.
+     Bir yapılandırma dosyası eklemek için, Visual Studio menü çubuğunda **Proje**, **Yeni öğe Ekle**' yi seçin. Sol bölmeden **genel** ' i ve ardından **yapılandırma dosyası**' nı seçin. Yapılandırma dosyasını *appname*. exe. config olarak adlandırın. Bu platformlardaki etkinleştirme ilkesini değiştiremediğinden bu menü seçenekleri Windows Mağazası uygulaması veya Windows Phone uygulama projeleri için kullanılamaz.
 
-2. SupportedRuntime > öğesini uygulama yapılandırma dosyasına aşağıdaki şekilde ekleyin: [ \<](../configure-apps/file-schema/startup/supportedruntime-element.md)
+2. [\<supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesini uygulama yapılandırma dosyasına aşağıdaki şekilde ekleyin:
 
     ```xml
     <configuration>
@@ -57,7 +55,7 @@ Ortak dil çalışma zamanını (CLR) barındıran tüm uygulamaların, yönetil
     </configuration>
     ```
 
-     *burada\<sürüm >* , uygulamanızın desteklediği .NET Framework sürümle hizalanan CLR sürümünü belirtir. Aşağıdaki dizeleri kullanın:
+     *\<sürümünün >* , uygulamanızın desteklediği .NET Framework sürümü Ile hizalanan CLR sürümünü belirtir. Aşağıdaki dizeleri kullanın:
 
     - .NET Framework 1.0: "v1.0.3705"
 
@@ -67,7 +65,7 @@ Ortak dil çalışma zamanını (CLR) barındıran tüm uygulamaların, yönetil
 
     - .NET Framework 4 ve sonraki sürümler: "v 4.0"
 
-     .NET Framework birden çok sürümü için destek belirtmek üzere tercih sırasına göre listelenen çoklu [ \<supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) öğelerini ekleyebilirsiniz.
+     .NET Framework birden çok sürümü için destek belirtmek üzere tercih sırasına göre listelenen birden fazla [\<supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesi ekleyebilirsiniz.
 
  Aşağıdaki tablo, bir bilgisayara yüklenen uygulama yapılandırma dosyası ayarlarının ve .NET Framework sürümlerinin bir .NET Framework 3.5 uygulamasının üzerinde çalıştığı sürümü nasıl belirlediğini göstermektedir. Örnekler, .NET Framework 3.5 uygulamasına özgüdür, ancak daha eski .NET Framework sürümlerini kullanarak oluşturulan hedef uygulamalar için de aynı mantığı kullanabilirsiniz. NET Framework 2.0 sürüm numarasının (v2.0.50727), uygulama yapılandırma dosyasında .NET Framework 3.5'i belirtmek için kullanıldığını unutmayın.
 
@@ -79,7 +77,7 @@ Ortak dil çalışma zamanını (CLR) barındıran tüm uygulamaların, yönetil
 |`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|3\.5 üzerinde çalışır|4 veya sonraki sürümlerde çalışır|4 veya sonraki sürümlerde çalışır|
 |`<supportedRuntime version="v4.0"/>`|Kullanıcının doğru sürümü* yüklemesini isteyen hata iletisini görüntüler|4 veya sonraki sürümlerde çalışır|4 veya sonraki sürümlerde çalışır|
 
- \*Bu hata iletisi ve bunu önlemenin yolları hakkında daha fazla bilgi için bkz [. .NET Framework başlatma hataları: Kullanıcı deneyimini](../deployment/initialization-errors-managing-the-user-experience.md)yönetme.
+ Bu hata iletisi ve bunu önlemenin yolları hakkında daha fazla bilgi Için, bkz. [.NET Framework başlatma hataları: Kullanıcı deneyimini yönetme](../deployment/initialization-errors-managing-the-user-experience.md). \*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

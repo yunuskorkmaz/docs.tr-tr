@@ -6,20 +6,20 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: a9fe4241972815a04ec9c6a51a45760d72a8bbb2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: addf35afa2a4c88faf73ebc3d60fbcf9c4db1518
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349340"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636711"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>İlk LINQ Sorgunuzu Yazma (Visual Basic)
 *Sorgu* , veri kaynağından veri alan bir ifadedir. Sorgular adanmış bir sorgu dilinde ifade edilir. Zaman içinde farklı diller, örneğin, ilişkisel veritabanları için SQL ve XML için XQuery gibi farklı türlerde veri kaynakları için geliştirilmiştir. Bu, uygulama geliştiricisinin desteklenen her bir veri kaynağı türü veya veri biçimi için yeni bir sorgu dili öğrenmesini zorunlu kılar.  
   
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)], çeşitli veri kaynakları ve biçimlerdeki verilerle çalışmaya yönelik tutarlı bir model sunarak durumu basitleştirir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgusunda, her zaman nesneleriyle birlikte çalışmanız gerekir. XML belgelerinde, SQL veritabanlarında, ADO.NET veri kümelerinde ve varlıklarda, .NET Framework koleksiyonlarında ve [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcının kullanılabildiği diğer tüm kaynak veya biçimdeki verileri sorgulamak ve dönüştürmek için aynı temel kodlama düzenlerini kullanırsınız. Bu belgede temel [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgularının oluşturulması ve kullanılması için üç aşama açıklanmaktadır.  
+ Dil ile tümleşik sorgu (LINQ), çeşitli veri kaynakları ve biçimlerdeki verilerle çalışmaya yönelik tutarlı bir model sunarak durumu basitleştirir. LINQ sorgusunda, her zaman nesneleriyle birlikte çalışmanız gerekir. XML belgelerinde, SQL veritabanlarında, ADO.NET veri kümelerinde ve varlıklarda, .NET Framework koleksiyonlarında ve LINQ sağlayıcısının kullanılabildiği diğer tüm kaynak veya biçimdeki verileri sorgulamak ve dönüştürmek için aynı temel kodlama düzenlerini kullanırsınız. Bu belgede temel LINQ sorgularının oluşturulması ve kullanılması için üç aşama açıklanmaktadır.  
   
 ## <a name="three-stages-of-a-query-operation"></a>Bir Sorgu İşleminin Üç Aşaması  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu işlemleri üç eylemden oluşur:  
+ LINQ sorgu işlemleri üç eylemden oluşur:  
   
 1. Veri kaynağını veya kaynaklarını edinin.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "74349340"
   
 3. Sorguyu yürütün.  
   
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], bir sorgunun yürütülmesi sorgunun oluşturulmasından farklıdır. Yalnızca bir sorgu oluşturarak herhangi bir veri alamazsınız. Bu nokta, bu konunun ilerleyen kısımlarında daha ayrıntılı bir şekilde ele alınmıştır.  
+ LINQ içinde, bir sorgunun yürütülmesi sorgunun oluşturulmasından farklıdır. Yalnızca bir sorgu oluşturarak herhangi bir veri alamazsınız. Bu nokta, bu konunun ilerleyen kısımlarında daha ayrıntılı bir şekilde ele alınmıştır.  
   
  Aşağıdaki örnekte, bir sorgu işleminin üç bölümü gösterilmektedir. Örnek, Gösterim amacıyla uygun bir veri kaynağı olarak bir tamsayılar dizisi kullanır. Ancak, aynı kavramlar diğer veri kaynakları için de geçerlidir.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "74349340"
  `0 2 4 6`  
   
 ## <a name="the-data-source"></a>Veri Kaynağı  
- Önceki örnekteki veri kaynağı bir dizi olduğundan, genel <xref:System.Collections.Generic.IEnumerable%601> arabirimini örtülü olarak destekler. Bu, bir diziyi [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] bir sorgu için veri kaynağı olarak kullanmanıza olanak tanıyan bir olgu. <xref:System.Collections.Generic.IEnumerable%601> destekleyen türler veya genel <xref:System.Linq.IQueryable%601> gibi türetilmiş bir arabirim *sorgulanabilir türler*olarak adlandırılır.  
+ Önceki örnekteki veri kaynağı bir dizi olduğundan, genel <xref:System.Collections.Generic.IEnumerable%601> arabirimini örtülü olarak destekler. Bu aslında bir diziyi bir LINQ sorgusu için veri kaynağı olarak kullanmanıza olanak sağlar. <xref:System.Collections.Generic.IEnumerable%601> destekleyen türler veya genel <xref:System.Linq.IQueryable%601> gibi türetilmiş bir arabirim *sorgulanabilir türler*olarak adlandırılır.  
   
- Örtük olarak sorgulanabilir bir tür olarak, dizi [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] veri kaynağı olarak kullanılacak değişiklik veya özel bir işleme gerektirmez. Aynı değer, .NET Framework sınıf kitaplığındaki genel <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602>ve diğer sınıflar dahil olmak üzere <xref:System.Collections.Generic.IEnumerable%601>destekleyen tüm koleksiyon türleri için de geçerlidir.  
+ Örtük olarak sorgulanabilir bir tür olarak, dizi hiçbir değişiklik veya bir LINQ veri kaynağı olarak kullanılacak özel bir işleme gerektirmez. Aynı değer, .NET Framework sınıf kitaplığındaki genel <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602>ve diğer sınıflar dahil olmak üzere <xref:System.Collections.Generic.IEnumerable%601>destekleyen tüm koleksiyon türleri için de geçerlidir.  
   
- Kaynak verileri zaten <xref:System.Collections.Generic.IEnumerable%601>uygulamadıysanız, bu veri kaynağı için *Standart sorgu işleçleri* işlevlerini uygulamak üzere bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcısı gerekir. Örneğin, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], aşağıdaki örnekte gösterildiği gibi, bir XML belgesini bir sorgulanabilir <xref:System.Xml.Linq.XElement> türüne yükleme işini işler. Standart sorgu işleçleri hakkında daha fazla bilgi için bkz. [Standart sorgu Işleçlerine genel bakış (Visual Basic)](standard-query-operators-overview.md).  
+ Kaynak verileri zaten <xref:System.Collections.Generic.IEnumerable%601>uygulamadıysanız, bu veri kaynağı için *Standart sorgu işleçleri* işlevlerini uygulamak üzere bir LINQ sağlayıcısı gerekir. Örneğin, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], aşağıdaki örnekte gösterildiği gibi, bir XML belgesini bir sorgulanabilir <xref:System.Xml.Linq.XElement> türüne yükleme işini işler. Standart sorgu işleçleri hakkında daha fazla bilgi için bkz. [Standart sorgu Işleçlerine genel bakış (Visual Basic)](standard-query-operators-overview.md).  
   
  [!code-vb[VbLINQFirstQuery#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#2)]  
   
@@ -57,10 +57,10 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- Belirli veri kaynağı türlerinin nasıl oluşturulacağı hakkında daha fazla bilgi için çeşitli [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcılarına yönelik belgelere bakın. (Bu sağlayıcıların listesi için bkz. [LINQ (dil Ile tümleşik sorgu)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) Temel kural basittir: [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] veri kaynağı, genel <xref:System.Collections.Generic.IEnumerable%601> arabirimini veya bundan devralan bir arabirimi destekleyen herhangi bir nesnedir.  
+ Belirli türde veri kaynakları oluşturma hakkında daha fazla bilgi için bkz. çeşitli LINQ sağlayıcıları için belgeler. (Bu sağlayıcıların listesi için bkz. [LINQ (dil Ile tümleşik sorgu)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) Temel kural basittir: LINQ veri kaynağı, genel <xref:System.Collections.Generic.IEnumerable%601> arabirimini veya bundan devralan bir arabirimi destekleyen herhangi bir nesnedir.  
   
 > [!NOTE]
-> Genel olmayan <xref:System.Collections.IEnumerable> arabirimini destekleyen <xref:System.Collections.ArrayList> gibi türler [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] veri kaynakları olarak da kullanılabilir. Bir <xref:System.Collections.ArrayList>kullanan bir örnek için bkz. [nasıl yapılır: bir ArrayList 'ı LINQ Ile sorgulama (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
+> Genel olmayan <xref:System.Collections.IEnumerable> arabirimini destekleyen <xref:System.Collections.ArrayList> türler, LINQ veri kaynakları olarak da kullanılabilir. Bir <xref:System.Collections.ArrayList>kullanan bir örnek için bkz. [nasıl yapılır: bir ArrayList 'ı LINQ Ile sorgulama (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
   
 ## <a name="the-query"></a>Sorgu  
  Sorguda, veri kaynağından veya kaynaklardan hangi bilgileri almak istediğinizi belirtirsiniz. Ayrıca, bu bilgilerin döndürülmeden önce nasıl sıralanacağını, gruplanacağını veya yapılandırıldığını belirtme seçeneğiniz de vardır. Sorgu oluşturmayı etkinleştirmek için Visual Basic dilde yeni sorgu söz dizimi eklendi.  
@@ -69,7 +69,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
- Sorgu ifadesi üç yan tümce içerir: `From`, `Where`ve `Select`. Her sorgu ifadesi yan tümcesinin belirli bir işlevi ve amacı, [temel sorgu işlemlerinde (Visual Basic)](basic-query-operations.md)ele alınmıştır. Daha fazla bilgi için bkz. [sorgular](../../../../visual-basic/language-reference/queries/index.md). [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]bir sorgu tanımının genellikle bir değişkende depolandığını ve daha sonra yürütüldüğünü unutmayın. Önceki örnekteki `evensQuery` gibi sorgu değişkeni, sorgulanabilir bir tür olmalıdır. `evensQuery` türü, derleyici tarafından yerel tür çıkarımı kullanılarak atanan `IEnumerable(Of Integer)`.  
+ Sorgu ifadesi üç yan tümce içerir: `From`, `Where`ve `Select`. Her sorgu ifadesi yan tümcesinin belirli bir işlevi ve amacı, [temel sorgu işlemlerinde (Visual Basic)](basic-query-operations.md)ele alınmıştır. Daha fazla bilgi için bkz. [sorgular](../../../../visual-basic/language-reference/queries/index.md). LINQ 'ta bir sorgu tanımının genellikle bir değişkende depolandığını ve daha sonra yürütüldüğünü unutmayın. Önceki örnekteki `evensQuery` gibi sorgu değişkeni, sorgulanabilir bir tür olmalıdır. `evensQuery` türü, derleyici tarafından yerel tür çıkarımı kullanılarak atanan `IEnumerable(Of Integer)`.  
   
  Sorgu değişkeninin kendisinin hiçbir eylem aldığını ve veri döndürdüğünü unutmamak önemlidir. Yalnızca sorgu tanımını depolar. Önceki örnekte, sorguyu yürüten `For Each` döngüdür.  
   
@@ -77,7 +77,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  Sorgu yürütme sorgu oluşturulduktan farklıdır. Sorgu oluşturma sorguyu tanımlar, ancak yürütme farklı bir mekanizma tarafından tetiklenir. Sorgu, tanımlanır (*anında yürütme*), veya tanım depolanabilir ve sorgu daha sonra yürütülebilir (*ertelenmiş yürütme*).  
   
 ### <a name="deferred-execution"></a>Ertelenmiş Yürütme  
- Tipik bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgusu, bir önceki örnekteki bir örneğe benzer ve `evensQuery` tanımlanmıştır. Sorguyu oluşturur ancak hemen yürütmez. Bunun yerine sorgu tanımı `evensQuery`sorgu değişkeninde depolanır. Sorguyu daha sonra, bir değer dizisi döndüren `For Each` döngüsünü kullanarak veya `Count` veya `Max`gibi standart bir sorgu işleci uygulayarak yürütün. Bu işlem *ertelenmiş yürütme*olarak adlandırılır.  
+ Tipik bir LINQ sorgusu, `evensQuery` tanımlandığı önceki örnekteki birine benzer. Sorguyu oluşturur ancak hemen yürütmez. Bunun yerine sorgu tanımı `evensQuery`sorgu değişkeninde depolanır. Sorguyu daha sonra, bir değer dizisi döndüren `For Each` döngüsünü kullanarak veya `Count` veya `Max`gibi standart bir sorgu işleci uygulayarak yürütün. Bu işlem *ertelenmiş yürütme*olarak adlandırılır.  
   
  [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
   

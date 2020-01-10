@@ -8,44 +8,43 @@ helpviewer_keywords:
 - preventing customization
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
-author: KrzysztofCwalina
-ms.openlocfilehash: f25573c0fef29ef54dc04c5287757903429d89d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0920ea26b94d86b41f8ba9338f3ec19f9bc099e9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615210"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709094"
 ---
 # <a name="sealing"></a>Mühürleme
-Nesne yönelimli çerçeveleri özelliklerinin geliştiriciler genişletmek ve framework Designer'ların beklenmedik şekilde özelleştirin biridir. Güç ve Genişletilebilir tasarım tehlike budur. Framework'ünüzün tasarlarken, bu nedenle olduğu için genişletilebilirlik, istendiğinde dikkatlice tasarlayın ve tehlikeli olduğunda genişletilebilirlik sınırlamak için çok önemlidir.  
+Nesne yönelimli çerçevelerin özelliklerinden biri, geliştiricilerin bunları çerçeve tasarımcıları tarafından beklenmeyen yollarla genişletebileceği ve özelleştirebilleridir. Bu, Genişletilebilir tasarımın güç ve tehlike ' dir. Çatısını tasarladığınızda, bu, bu nedenle, gerektiğinde genişletilebilirlik için dikkatle tasarlamak ve çok önemli olduğunda genişletilebilirliği kısıtlamak için çok önemlidir.  
   
- Genişletilebilirlik engelleyen güçlü bir mekanizma mühürleme. Sınıf veya bireysel üyelere adımını. Bir sınıf mühürleme kullanıcıların sınıftan devralmasını engeller. Üye mühürleme, kullanıcıların belirli bir üye geçersiz kılmasını önler.  
+ Genişletilebilirlik 'in mühürlediği güçlü bir mekanizma. Sınıfı ya da tek üyeleri mühürleyebilirsiniz. Bir sınıfı mühürleyen, kullanıcıların sınıfından devralmasını önler. Bir üyeyi mühürleyen, kullanıcıların belirli bir üyeyi geçersiz kılmasını önler.  
   
  **X DO NOT** sınıfları Bunu yapmak için iyi bir neden olmadan mühürlemek.  
   
- Bir sınıf bir genişletilebilirlik senaryo düşündüğünüz olamaz çünkü mühürleme geçerli bir nedeniniz değil. Framework kullanıcılarını kolaylık üyeleri ekleme gibi çeşitli nonobvious nedeniyle sınıflardan devralmasına izin ister. Bkz: [Mühürsüz sınıflar](../../../docs/standard/design-guidelines/unsealed-classes.md) nonobvious nedenlerden örnekler için kullanıcıların bir türden devralmak istediğiniz.  
+ Bir sınıfı mühürleyen bir genişletilebilirlik senaryosunu düşünmek iyi bir neden değil. Kullanışlı Üyeler ekleme gibi belirgin olmayan çeşitli nedenlerle sınıflardan devralması gibi Framework kullanıcıları. Kullanıcıların bir türden kalýtýmla devralması için açık olmayan nedenler örnekleri için bkz. [korumasız sınıflar](../../../docs/standard/design-guidelines/unsealed-classes.md) .  
   
- Bir sınıf mühürleme için iyi nedenler şunlardır:  
+ Bir sınıfı mühürleyen olası nedenler şunlardır:  
   
-- Sınıfı statik bir sınıftır. Bkz: [statik sınıf tasarımı](../../../docs/standard/design-guidelines/static-class.md).  
+- Sınıfı statik bir sınıftır. Bkz. [statik sınıf tasarımı](../../../docs/standard/design-guidelines/static-class.md).  
   
-- Sınıfı, güvenlik açısından duyarlı gizli dizileri devralınan korunan üyeleri depolar.  
+- Sınıfı, devralınan korunan üyelerde güvenlik duyarlı gizli dizileri depolar.  
   
-- Sınıf çok sayıda sanal üyelerini devralır ve ayrı ayrı mühürleme maliyeti korumasız sınıfı bırakmanın basıyor.  
+- Sınıf birçok sanal üyeyi devralır ve tek tek mühürlemek, sınıfın korumasız bırakılması avantajlarından yararlanır.  
   
-- Sınıf çok hızlı çalışma zamanı arama gerektiren bir özniteliktir. Korumalı öznitelikleri korumasız yapılandırılanlardan biraz daha yüksek performans düzeyine sahip. bkz: [öznitelikleri](../../../docs/standard/design-guidelines/attributes.md).  
+- Sınıfı çok hızlı çalışma zamanı araması gerektiren bir özniteliktir. Sealed öznitelikleri, korumasız olanlardan biraz daha yüksek performans düzeylerine sahiptir. bkz. [öznitelikler](../../../docs/standard/design-guidelines/attributes.md).  
   
  **X DO NOT** korumalı türlerde korunan veya sanal üyeleri bildirme.  
   
- Tanımı gereği, mühürlenmiş türler öğesinden devralınamaz. Yani mühürlenmiş türler üzerindeki korunan üyeleri çağrılamaz ve mühürlenmiş türler üzerindeki sanal yöntemleri geçersiz kılınamaz.  
+ Tanım olarak, korumalı türler öğesinden devralınamaz. Bu, korumalı türlerdeki korunan üyelerin çağrılabilmesi ve korumalı türlerde Sanal yöntemlerin geçersiz kılınamayacağını gösterir.  
   
  **✓ CONSIDER** kılmanız üyeleri mühürleme.  
   
- Sanal üye eklemesini kaynaklanan sorunları (ele [sanal üyeleri](../../../docs/standard/design-guidelines/virtual-members.md)) ancak biraz daha düşük bir düzeyde de geçersiz kılmalar için geçerlidir. Bir geçersiz kılma mühürleme, devralma hiyerarşisinde o noktadan itibaren bu sorunlardan ayrıntılarından korur.  
+ Sanal üyelere ( [sanal Üyelerde](../../../docs/standard/design-guidelines/virtual-members.md)ele alınan) neden olan sorunlar, çok daha az bir ölçüde geçersiz kılmalara de uygulanır. Bir geçersiz kılmayı mühürleyen, devralma hiyerarşisindeki noktadan itibaren bu sorunlardan kalkan.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

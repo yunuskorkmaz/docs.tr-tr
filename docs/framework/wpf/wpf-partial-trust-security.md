@@ -15,17 +15,17 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 907c1f02e07c60ac38c8e09e94fc96ae2573e97c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ce9341a45b43c4af4543cf473597c273c33701fc
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455309"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636555"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF Kısmi Güven Güvenliği
-<a name="introduction"></a>Genel olarak, kötü amaçlı hasar engellemek için Internet uygulamalarının kritik sistem kaynaklarına doğrudan erişimi olması kısıtlanmalıdır. Varsayılan olarak, HTML ve istemci tarafı komut dosyası dilleri kritik sistem kaynaklarına erişemez. Windows Presentation Foundation (WPF) tarayıcıda barındırılan uygulamalar tarayıcıdan başlatılabildiğinden, benzer bir kısıtlama kümesine uymalıdır. Bu kısıtlamaları zorlamak için [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] hem kod erişim güvenliği (CAS) hem de ClickOnce 'a (bkz. [WPF Güvenlik Stratejisi-Platform güvenliği](wpf-security-strategy-platform-security.md)) dayanır. Varsayılan olarak, tarayıcıda barındırılan uygulamalar Internet, yerel intranet veya yerel bilgisayar tarafından başlatıldıklarından bağımsız olarak Internet bölgesi CA 'ları izin kümesi ister. Tüm izin kümesinden daha az bir şekilde çalışan uygulamalar kısmi güvenle çalışıyor olarak kabul edilir.  
+<a name="introduction"></a>Genel olarak, kötü amaçlı hasar engellemek için Internet uygulamalarının kritik sistem kaynaklarına doğrudan erişimi olması kısıtlanmalıdır. Varsayılan olarak, HTML ve istemci tarafı komut dosyası dilleri kritik sistem kaynaklarına erişemez. Windows Presentation Foundation (WPF) tarayıcıda barındırılan uygulamalar tarayıcıdan başlatılabildiğinden, benzer bir kısıtlama kümesine uymalıdır. Bu kısıtlamaları zorlamak için WPF hem kod erişim güvenliği (CAS) hem de ClickOnce kullanır (bkz. [WPF Güvenlik Stratejisi-Platform güvenliği](wpf-security-strategy-platform-security.md)). Varsayılan olarak, tarayıcıda barındırılan uygulamalar Internet, yerel intranet veya yerel bilgisayar tarafından başlatıldıklarından bağımsız olarak Internet bölgesi CA 'ları izin kümesi ister. Tüm izin kümesinden daha az bir şekilde çalışan uygulamalar kısmi güvenle çalışıyor olarak kabul edilir.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], olabildiğince fazla işlevselliğin kısmi güvende güvenli bir şekilde kullanılabileceği ve CA 'ların yanı sıra, kısmi güven programlama için ek destek sağlayan çok çeşitli destek sağlar.  
+ WPF, olabildiğince fazla işlevselliğin kısmi güvende güvenli bir şekilde kullanılabileceği ve CA 'ların yanı sıra, kısmi güven programlama için ek destek sağlayan çok çeşitli destek sağlar.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
@@ -44,13 +44,13 @@ ms.locfileid: "73455309"
 |Özellik alanı|Özellik|  
 |------------------|-------------|  
 |Genel|Tarayıcı penceresi<br /><br /> Kaynak erişimi sitesi<br /><br /> IsolatedStorage (512KB sınırı)<br /><br /> UIAutomation sağlayıcıları<br /><br /> Verme<br /><br /> Giriş Yöntemi Düzenleyicileri (IME'ler)<br /><br /> Tablet ekran kalemi ve mürekkep<br /><br /> Fare yakalama ve taşıma olayları kullanılarak sanal sürükleyip bırakma<br /><br /> OpenFileDialog<br /><br /> XAML serisini kaldırma (XamlReader. Load aracılığıyla)|  
-|Web tümleştirmesi|Tarayıcı Indirme Iletişim kutusu<br /><br /> En üst düzey kullanıcı tarafından başlatılan Gezinti<br /><br /> mailto: bağlantılar<br /><br /> Tekdüzen Kaynak tanımlayıcısı parametreleri<br /><br /> HTTPWebRequest<br /><br /> IFRAME 'de barındırılan WPF Içeriği<br /><br /> Çerçeve kullanarak aynı site HTML sayfalarının barındırılması<br /><br /> WebBrowser kullanarak aynı site HTML sayfalarının barındırılması<br /><br /> Web Hizmetleri (ASMX)<br /><br /> Web Hizmetleri (Windows Communication Foundation kullanarak)<br /><br /> Betik Oluşturma<br /><br /> Belge Nesne Modeli|  
-|Öğeleri|2B ve 3B<br /><br /> Animasyon<br /><br /> Medya (kaynak ve etki alanları arası)<br /><br /> Görüntü/ses/video|  
-|Okuyamadı|FlowDocuments<br /><br /> XPS belgeleri<br /><br /> Katıştırılmış & sistem yazı tipleri<br /><br /> CFF & TrueType yazı tipleri|  
+|Web tümleştirmesi|Tarayıcı Indirme Iletişim kutusu<br /><br /> En üst düzey kullanıcı tarafından başlatılan Gezinti<br /><br /> mailto: bağlantılar<br /><br /> Tekdüzen Kaynak tanımlayıcısı parametreleri<br /><br /> HTTPWebRequest<br /><br /> IFRAME 'de barındırılan WPF Içeriği<br /><br /> Çerçeve kullanarak aynı site HTML sayfalarının barındırılması<br /><br /> WebBrowser kullanarak aynı site HTML sayfalarının barındırılması<br /><br /> Web Hizmetleri (ASMX)<br /><br /> Web Hizmetleri (Windows Communication Foundation kullanarak)<br /><br /> Komut Dosyaları<br /><br /> Belge Nesne Modeli|  
+|Görseller|2B ve 3B<br /><br /> Animasyon<br /><br /> Medya (kaynak ve etki alanları arası)<br /><br /> Görüntü/ses/video|  
+|Okuma|FlowDocuments<br /><br /> XPS belgeleri<br /><br /> Katıştırılmış & sistem yazı tipleri<br /><br /> CFF & TrueType yazı tipleri|  
 |Düzenleme|Yazım denetimi<br /><br /> RichTextBox<br /><br /> Düz metin ve mürekkep panosu desteği<br /><br /> Kullanıcı tarafından başlatılan yapıştırma<br /><br /> Seçili Içerik kopyalanıyor|  
 |Denetimler|Genel denetimler|  
   
- Bu tablo, yüksek düzeyde [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] özelliklerini içerir. Daha ayrıntılı bilgi için Windows SDK [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]her üye için gereken izinleri belgelemektedir. Ayrıca, aşağıdaki özellikler, kısmi güven yürütme ile ilgili özel konular da dahil olmak üzere daha ayrıntılı bilgiler sunar.  
+ Bu tablo, WPF özelliklerini yüksek düzeyde ele alır. Daha ayrıntılı bilgi için Windows SDK WPF içindeki her üye için gereken izinleri belgelemektedir. Ayrıca, aşağıdaki özellikler, kısmi güven yürütme ile ilgili özel konular da dahil olmak üzere daha ayrıntılı bilgiler sunar.  
   
 - [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (bkz. [xaml 'ye Genel Bakış (WPF)](../../desktop-wpf/fundamentals/xaml.md)).  
   
@@ -66,14 +66,14 @@ ms.locfileid: "73455309"
   
 - Dosya Aç Iletişim kutusu (bkz. <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
   
- Aşağıdaki tabloda Internet bölgesi izin kümesi sınırları içinde çalıştırılması güvenli olmayan [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] özellikleri özetlenmektedir.  
+ Aşağıdaki tabloda Internet bölgesi izin kümesi sınırları içinde çalıştırılması güvenli olmayan WPF özellikleri özetlenmektedir.  
   
  Tablo 2: kısmi güvende güvenli olmayan WPF özellikleri  
   
 |Özellik alanı|Özellik|  
 |------------------|-------------|  
 |Genel|Pencere (uygulama tanımlı pencereler ve Iletişim kutuları)<br /><br /> SaveFileDialog<br /><br /> Dosya sistemi<br /><br /> Kayıt defteri erişimi<br /><br /> Sürükleme ve Bırakma<br /><br /> XAML serileştirme (XamlWriter. Save aracılığıyla)<br /><br /> UIAutomation Istemcileri<br /><br /> Kaynak pencere erişimi (HwndHost)<br /><br /> Tam konuşma desteği<br /><br /> Windows Forms birlikte çalışabilirlik|  
-|Öğeleri|Bit Eşlem Efektleri<br /><br /> Görüntü kodlama|  
+|Görseller|Bit Eşlem Efektleri<br /><br /> Görüntü kodlama|  
 |Düzenleme|Zengin metin biçimi panosu<br /><br /> Tam XAML desteği|  
   
 <a name="Partial_Trust_Programming"></a>   
@@ -89,7 +89,7 @@ ms.locfileid: "73455309"
 > [!NOTE]
 > Önceki tabloda açıklanan davranış, ClickOnce güvenilir dağıtım modelini takip eden tam güven XBAP 'ler içindir.  
   
- Genel olarak, izin verilen izinleri aşabilir kod büyük olasılıkla hem tek başına hem de tarayıcıda barındırılan uygulamalar arasında paylaşılan ortak koddur. CA 'LAR ve [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bu senaryonun yönetilmesi için çeşitli teknikler sunmaktadır.  
+ Genel olarak, izin verilen izinleri aşabilir kod büyük olasılıkla hem tek başına hem de tarayıcıda barındırılan uygulamalar arasında paylaşılan ortak koddur. CAS ve WPF, bu senaryonun yönetilmesi için çeşitli teknikler sunmaktadır.  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
 ### <a name="detecting-permissions-using-cas"></a>CA 'ları kullanarak Izinleri algılama  
@@ -131,19 +131,19 @@ ms.locfileid: "73455309"
 |İzin|Öznitelik|Yerel Intranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
 |DNS|DNS sunucularına erişme|Evet|Hayır|  
-|Ortam Değişkenleri|Oku|Evet|Hayır|  
+|Ortam Değişkenleri|Okuma|Evet|Hayır|  
 |Dosya Iletişimleri|Open|Evet|Evet|  
-|Dosya Iletişimleri|Edin|Evet|Hayır|  
+|Dosya Iletişimleri|Sınırsız|Evet|Hayır|  
 |Yalıtılmış Depolama|Kullanıcıya göre derleme yalıtımı|Evet|Hayır|  
 |Yalıtılmış Depolama|Bilinmeyen yalıtım|Evet|Evet|  
 |Yalıtılmış Depolama|Sınırsız Kullanıcı kotası|Evet|Hayır|  
-|Medyasını|Güvenli ses, video ve görüntüler|Evet|Evet|  
+|Ortam|Güvenli ses, video ve görüntüler|Evet|Evet|  
 |Yazdırma|Varsayılan yazdırma|Evet|Hayır|  
 |Yazdırma|Güvenli yazdırma|Evet|Evet|  
 |Yansıma|Pdb|Evet|Hayır|  
 |Güvenlik|Yönetilen kod yürütme|Evet|Evet|  
 |Güvenlik|İzin verilen izinler|Evet|Hayır|  
-|Kullanıcı Arabirimi|Edin|Evet|Hayır|  
+|Kullanıcı Arabirimi|Sınırsız|Evet|Hayır|  
 |Kullanıcı Arabirimi|Güvenli üst düzey pencereler|Evet|Evet|  
 |Kullanıcı Arabirimi|Kendi Pano|Evet|Evet|  
 |Web tarayıcısı|HTML 'e güvenli çerçeve gezintisi|Evet|Evet|  

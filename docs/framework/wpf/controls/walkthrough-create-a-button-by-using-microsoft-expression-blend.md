@@ -6,16 +6,16 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: e1fdc3ef51e8658e07bc555238229bed9116e165
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10d049288cf560dadedf7bc5e624deb7c42aae81
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460099"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636180"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>İzlenecek yol: Microsoft Expression Blend Kullanarak Düğme Oluşturma
 
-Bu izlenecek yol, Microsoft Expression Blend kullanarak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] özelleştirilmiş bir düğme oluşturma sürecinde size kılavuzluk eden bir adım.
+Bu izlenecek yol, Microsoft Expression Blend kullanarak WPF özelleştirilmiş bir düğme oluşturma sürecinde size kılavuzluk eden bir adım adım.
 
 > [!IMPORTANT]
 > Microsoft Expression Blend, yürütülebilir programı oluşturmak için derlenen [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] oluşturarak işe yarar. Doğrudan XAML ile çalışmayı tercih ediyorsanız, Blend yerine Visual Studio ile aynı uygulamayı oluşturan başka bir anlatım de vardır. Daha fazla bilgi için bkz. [XAML kullanarak düğme oluşturma](walkthrough-create-a-button-by-using-xaml.md) .
@@ -40,7 +40,7 @@ Bu izlenecek yolun ilk bölümünde özel düğmesine özel bir görünüm oluş
 
 5. Projeyi `CustomButton` adlandırın ve **Tamam**' a basın.
 
-Bu noktada boş bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] projesi vardır. F5 tuşuna basarak uygulamayı çalıştırabilirsiniz. Tahmin edebileceğiniz gibi, uygulama yalnızca boş bir pencereden oluşur. Ardından, yuvarlatılmış bir dikdörtgen oluşturur ve bunu bir düğmeye dönüştürürsünüz.
+Bu noktada, boş bir WPF projeniz vardır. F5 tuşuna basarak uygulamayı çalıştırabilirsiniz. Tahmin edebileceğiniz gibi, uygulama yalnızca boş bir pencereden oluşur. Ardından, yuvarlatılmış bir dikdörtgen oluşturur ve bunu bir düğmeye dönüştürürsünüz.
 
 ### <a name="to-convert-a-rectangle-to-a-button"></a>Bir dikdörtgeni düğmeye dönüştürmek için
 
@@ -208,7 +208,7 @@ Bu izlenecek yolun son adımında, düğmeye animasyon ekleyeceğiz. Bu animasyo
 
     ![Bir düğmenin boyutunu küçültme](./media/custom-button-blend-sizetransform.png)
 
-    Uygulamayı çalıştırmak için F5 tuşuna basın. Fare işaretçisini düğmenin üzerine taşıyın. Cam katmanın düğmenin üstünde küçültüdiğine dikkat edin.
+    Uygulamayı çalıştırmak için F5'e basın. Fare işaretçisini düğmenin üzerine taşıyın. Cam katmanın düğmenin üstünde küçültüdiğine dikkat edin.
 
 5. **Başka bir olay tetikleyicisi oluşturun ve onunla farklı bir animasyon ilişkilendirin:** Daha sonra bir animasyon ekleyelim. Önceki olay tetikleyicisi animasyonunu oluşturmak için kullandığınız işlemin benzer bir yordamını kullanın:
 
@@ -224,7 +224,7 @@ Bu izlenecek yolun son adımında, düğmeye animasyon ekleyeceğiz. Bu animasyo
 
         ![Döndürme dönüşümü oluşturma](./media/custom-button-blend-rotatetransform.gif)
 
-    5. Uygulamayı çalıştırmak için F5 tuşuna basın. Düğmesine tıklayın. Cam katmanın etrafında dönerek göründüğünü unutmayın.
+    5. Uygulamayı çalıştırmak için F5'e basın. Düğmesine tıklayın. Cam katmanın etrafında dönerek göründüğünü unutmayın.
 
 ## <a name="conclusion"></a>Sonuç
 
@@ -234,7 +234,7 @@ Bu izlenecek yolun son adımında, düğmeye animasyon ekleyeceğiz. Bu animasyo
 
 ![Aynı şablonu kullanan birden çok düğme](./media/custom-button-blend-createmultiplebuttons.png)
 
-Uygulamayı çalıştırmak için F5 tuşuna basın. Düğmelere tıklayın ve bunların tümünün aynı davranış şeklini görürsünüz.
+Uygulamayı çalıştırmak için F5'e basın. Düğmelere tıklayın ve bunların tümünün aynı davranış şeklini görürsünüz.
 
 Şablonu özelleştirirken, **ınnerrectangle** 'ın **<xref:System.Windows.Shapes.Shape.Fill%2A> özelliğini ve <xref:System.Windows.Shapes.Shape.Stroke%2A> özelliği şablon** arka planına ({TemplateBinding background}) ayarlandığını unutmayın. Bu nedenle, ayrı düğmelerin arka plan rengini ayarladığınızda, bu ilgili özellikler için ayarladığınız arka plan kullanılacaktır. Arka planları şimdi değiştirmeyi deneyin. Aşağıdaki şekilde farklı degradeler kullanılır. Bu nedenle, bir şablon düğme gibi denetimlerin genel özelleştirmesi için yararlı olsa da, şablonlara sahip denetimler, birbirleriyle farklı görünecek şekilde değiştirilebilir.
 

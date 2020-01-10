@@ -6,22 +6,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 56b5b51848858b7f1240059ca30eb48474650b73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0cdab8861ca50b40ce2b422fcc1acf16e2f2273
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669127"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711096"
 ---
 # <a name="conversion-of-xml-data-types"></a>XML Veri Türlerini Dönüştürme
-Yöntemlerin çoğunun bulunan bir **XmlConvert** sınıfı veri dizeler ve kesin tür belirtilmiş biçimleri arasında dönüştürmek için kullanılır. Yerel ayar bağımsız yöntemlerdir. Bu, tüm yerel ayarlar dönüştürme yaparken dikkate değil, anlamına gelir.  
+Bir **XmlConvert** sınıfında bulunan yöntemlerin çoğu, dizeler ve kesin türü belirtilmiş biçimler arasında veri dönüştürmek için kullanılır. Yöntemler yerel olarak bağımsızdır. Bu, dönüştürme yaparken herhangi bir yerel ayarı dikkate almaz demektir.  
   
-## <a name="reading-string-as-types"></a>Okuma dize türleri olarak  
- Aşağıdaki örnek bir dize olarak okur ve ona dönüştürür bir **DateTime** türü.  
+## <a name="reading-string-as-types"></a>Dize tür olarak okunuyor  
+ Aşağıdaki örnek bir dize okur ve bunu bir **Tarih saat** türüne dönüştürür.  
   
- Aşağıdaki XML geçirmesini:  
+ Aşağıdaki XML girişi verildi:  
   
  **Giriş**  
   
@@ -29,7 +27,7 @@ Yöntemlerin çoğunun bulunan bir **XmlConvert** sınıfı veri dizeler ve kesi
 <Element>2001-02-27T11:13:23</Element>  
 ```  
   
- Bu kod dizeye dönüştürür **DateTime** biçimi:  
+ Bu kod, dizeyi **Tarih saat** biçimine dönüştürür:  
   
 ```vb  
 reader.ReadStartElement()  
@@ -43,10 +41,10 @@ DateTime vDateTime = XmlConvert.ToDateTime(reader.ReadString());
 Console.WriteLine(vDateTime);  
 ```  
   
-## <a name="writing-strings-as-types"></a>Yazma dize türleri olarak  
- Aşağıdaki örnek okuma bir **Int32** ve bir dizeye dönüştürür.  
+## <a name="writing-strings-as-types"></a>Dizeleri tür olarak yazma  
+ Aşağıdaki örnek bir **Int32** okur ve bunu bir dizeye dönüştürür.  
   
- Aşağıdaki XML geçirmesini:  
+ Aşağıdaki XML girişi verildi:  
   
  **Giriş**  
   
@@ -54,7 +52,7 @@ Console.WriteLine(vDateTime);
 <TestInt32>-2147483648</TestInt32>  
 ```  
   
- Bu kod dönüştürür **Int32** içine bir **dize**:  
+ Bu kod, **Int32** 'Yi bir **dizeye**dönüştürür:  
   
 ```vb  
 Dim vInt32 As Int32 = -2147483648  

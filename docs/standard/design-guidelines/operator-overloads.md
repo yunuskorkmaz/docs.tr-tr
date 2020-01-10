@@ -8,44 +8,43 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-author: KrzysztofCwalina
-ms.openlocfilehash: 441dc2777cd8d221300c526b6b31a647af60ca71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cea3c17de40a873d977223f36b6dcef4f2c2d78
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756864"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709146"
 ---
 # <a name="operator-overloads"></a>İşleç Aşırı Yüklemeleri
-İşleç aşırı yüklemeleri framework türleri yerleşik dil temelleri oldukları gibi görünmesine izin verin.  
+İşleç aşırı yüklemeleri, çerçeve türlerinin yerleşik dil temelleri gibi görünmesine izin verir.  
   
- İzin verilen ve bazı durumlarda yararlı olsa da, İşleç aşırı yüklemeleri dikkatli kullanılmalıdır. Hangi işlecinde aşırı yükleme, framework tasarımcıları işleçleri basit yöntemleri olmalıdır işlemlerinde kullanılacak başlatıldığında gibi kötüye birçok durumlar vardır. Aşağıdaki yönergeleri İşleç aşırı yüklemesi kullanma nasıl ve ne zaman karar vermenize yardımcı olmalıdır.  
+ Bazı durumlarda izin verilen ve yararlı olsa da, işleç aşırı yüklemeleri dikkatle kullanılmalıdır. Çerçeve tasarımcılarının basit yöntemler olması gereken işlemler için İşleçleri kullanmaya başladığı durumlar gibi, operatör aşırı yüklemesinde çok sayıda durum vardır. Aşağıdaki kılavuzlar, işleç aşırı yüklemesini ne zaman ve nasıl kullanacağınızı belirlemenize yardımcı olmalıdır.  
   
  **X AVOID** gibi (yerleşik) ilkel türlerinde geliyor olmalıdır türlerinde dışında işleci aşırı tanımlama.  
   
  **✓ CONSIDER** gibi basit tür geliyor olmalıdır bir türdeki işlecin tanımlama.  
   
- Örneğin, <xref:System.String?displayProperty=nameWithType> sahip `operator==` ve `operator!=` tanımlı.  
+ Örneğin, <xref:System.String?displayProperty=nameWithType> `operator==` ve `operator!=` tanımlı.  
   
  **✓ DO** numaralarını temsil eden yapılar için işleç aşırı yüklemeleri tanımlayın (gibi <xref:System.Decimal?displayProperty=nameWithType>).  
   
  **X DO NOT** işlecin tanımlarken şirin olabilir.  
   
- İşleç aşırı yüklemesi, işlemin sonucunu ne olacağını hemen açık olduğu durumlarda kullanışlıdır. Örneğin, bir çıkarma için mantıklıdır <xref:System.DateTime> başka bir `DateTime` ve bir <xref:System.TimeSpan>. Ancak, UNION iki veritabanı sorguları için mantıksal birleşim işleci kullanmayı veya bir akışa yazmak için kaydırma işleci kullanmak için uygun değildir.  
+ İşleç aşırı yüklemesi, işlemin sonucunun anında daha açık olduğu durumlarda faydalıdır. Örneğin, bir <xref:System.DateTime> başka bir `DateTime` çıkarmak ve bir <xref:System.TimeSpan>alabilmesi mantıklı olur. Ancak, iki veritabanı sorgusu UNION veya bir akışa yazmak için SHIFT işlecini kullanmak üzere mantıksal UNION işlecini kullanmak uygun değildir.  
   
  **X DO NOT** işleci aşırı yüklemeler işlenen en az biri aşırı tanımlama türü olmadıkça sağlayın.  
   
  **✓ DO** bir simetrik şekilde işleçleri aşırı yükleme.  
   
- Örneğin, aşırı yükleme `operator==`, siz de aşırı `operator!=`. Benzer şekilde, işlecini aşırı yüklediyseniz `operator<`, siz de aşırı `operator>`ve benzeri.  
+ Örneğin, `operator==`aşırı yüklüyorsanız `operator!=`da aşırı yükleme yapmalısınız. Benzer şekilde, `operator<`aşırı yüklüyorsanız `operator>`da aşırı yüklemesi yapmanız gerekir.  
   
  **✓ CONSIDER** yöntemleri karşılık gelen kolay adlarla her aşırı yüklenmiş işleç sağlama.  
   
- Birçok diller, İşleç aşırı yüklemesi desteklemez. Bu nedenle, aşırı yükleme işleçleri türleri eşdeğer bir işlevselliği sağlayan uygun bir etki alanına özgü ad ile ikincil bir yöntem içerdiğini önerilir.  
+ Birçok dil, işleç aşırı yüklemesini desteklemez. Bu nedenle, aşırı yükleme işleçleri 'nin eşdeğer işlevselliği sağlayan uygun bir etki alanına özgü ada sahip ikincil bir yöntem içermesi önerilir.  
   
- Aşağıdaki tabloda, işleçler ve karşılık gelen kolay bir yöntem adları listesini içerir.  
+ Aşağıdaki tabloda, işleçler ve ilgili kolay yöntem adları listelenmiştir.  
   
-|C# işleç simgesi|Meta veri adı|Kolay ad|  
+|C#İşleç simgesi|Meta veri adı|Kolay Ad|  
 |-------------------------|-------------------|-------------------|  
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|  
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|  
@@ -86,31 +85,31 @@ ms.locfileid: "61756864"
 |`+ (unary)`|`op_UnaryPlus`|`Plus`|  
 |`~`|`op_OnesComplement`|`OnesComplement`|  
   
-### <a name="overloading-operator-"></a>İşleç aşırı yüklemesi ==  
- Aşırı yükleme `operator ==` oldukça karmaşıktır. İşleci semantiği gibi çeşitli diğer üyeleriyle uyumlu olmasına gerek <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+### <a name="overloading-operator-"></a>Aşırı yükleme Işleci = =  
+ Aşırı yükleme `operator ==` oldukça karmaşıktır. İşlecinin semantiğinin <xref:System.Object.Equals%2A?displayProperty=nameWithType>gibi çeşitli diğer üyelerle uyumlu olması gerekir.  
   
 ### <a name="conversion-operators"></a>Dönüşüm İşleçleri  
- Dönüştürme işleçleri, bir türden diğerine dönüştürme izin birli işleçler şunlardır. İşleçler, statik üye işlenen ya da dönüş türü olarak tanımlanmalıdır. Dönüştürme işleçleri iki tür vardır: örtük ve açık.  
+ Dönüştürme işleçleri, bir türden diğerine dönüştürmeye izin veren birli işleçlerdir. İşleçler, işlenen ya da dönüş türü üzerinde statik üye olarak tanımlanmalıdır. İki tür dönüştürme işleci vardır: örtük ve açık.  
   
  **X DO NOT** tür dönüştürme son kullanıcılar tarafından açıkça görülmüyorsa bir dönüşüm işleci sağlayın.  
   
  **X DO NOT** dönüşüm işleçleri dışında bir tür etki alanını tanımlayın.  
   
- Örneğin, <xref:System.Int32>, <xref:System.Double>, ve <xref:System.Decimal> ise tüm sayısal türlerin olan <xref:System.DateTime> değil. Bu nedenle, bulunmamalıdır dönüştürmek için hiçbir dönüştürme işleci bir `Double(long)` için bir `DateTime`. Böyle bir durumda bir oluşturucu tercih edilir.  
+ Örneğin, <xref:System.Int32>, <xref:System.Double>ve <xref:System.Decimal> tüm sayısal türlerdir, ancak <xref:System.DateTime> değildir. Bu nedenle, bir `Double(long)` `DateTime`dönüştürmek için bir dönüştürme işleci olmaması gerekir. Böyle bir durumda bir Oluşturucu tercih edilir.  
   
  **X DO NOT** dönüştürme olası kayıplı ise bir örtük dönüşüm işleci sağlayın.  
   
- Örneğin, olmamalıdır örtük bir dönüştürme `Double` için `Int32` çünkü `Double` daha geniş bir sahip `Int32`. Dönüştürme, olası kayıplı olsa bile, açık bir dönüştürme operatörü sağlanabilir.  
+ Örneğin, `Double` `Int32`daha geniş bir aralığa sahip olduğundan, `Double` `Int32` ' dan örtük bir dönüşüm olmaması gerekir. Dönüştürme potansiyel olarak kayıplı olsa bile açık bir dönüştürme işleci sağlayabilirsiniz.  
   
  **X DO NOT** örtük atamaları özel durumlar atar.  
   
- Son kullanıcılar için neler olduğunu, bunlar bir dönüştürme yer aldığını haberdar olmayabilir çünkü anlamak çok zordur.  
+ Son kullanıcıların ne olduğunu anlaması çok zordur, çünkü bir dönüştürmenin gerçekleştiğinden haberdar olmayabilir.  
   
  **✓ DO** throw <xref:System.InvalidCastException?displayProperty=nameWithType> atama işleci için bir çağrı sonuçları kayıplı dönüştürmede ve sözleşmenin işlecinin kayıplı dönüşümleri izin vermez.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,18 +1,16 @@
 ---
 title: Yapı sıralamasını özelleştirme-.NET
 description: .NET 'in yapılarınızı yerel bir gösterimde nasıl sıraladığında nasıl özelleştireceğinizi öğrenin.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: f4b8402413f4d2f558d8e61ad4f10490dece9835
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e69746e03cefa2444d4c34b582730824ff357858
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423987"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706354"
 ---
 # <a name="customizing-structure-marshaling"></a>Yapı hazırlamayı özelleştirme
 

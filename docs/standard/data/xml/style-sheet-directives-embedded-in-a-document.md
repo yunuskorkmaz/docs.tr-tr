@@ -3,18 +3,16 @@ title: Belgeye Katıştırılmış Stil Sayfası Yönergeleri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 65987c5e29d593758b21259d6367202c882df2de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19e25ab7262bb006144eea71e74bd7454066b3f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026945"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710160"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>Belgeye Katıştırılmış Stil Sayfası Yönergeleri
 
-Bazen, var olan XML stil sayfası yönergesi içeren `<?xml:stylesheet?>`. Microsoft Internet Explorer alternatif olarak bu kabul `<?xml-stylesheet?>` söz dizimi. XML verilerini içerdiğinde bir `<?xml:stylesheet?>` yönerge, aşağıdaki veriler gösterildiği gibi XML belge nesne modeli (DOM) içine bu verileri yüklemeye çalışırken bir özel durum oluşturur.
+Bazen mevcut XML, `<?xml:stylesheet?>`stil sayfası yönergesini içerir. Microsoft Internet Explorer, `<?xml-stylesheet?>` sözdizimine alternatif olarak bunu kabul eder. XML verileri, aşağıdaki verilerde gösterildiği gibi bir `<?xml:stylesheet?>` yönergesi içerdiğinde, bu verileri XML Belge Nesne Modeli yüklemeye çalışmak (DOM) bir özel durum oluşturur.
 
 ```xml
 <?xml version="1.0" ?>
@@ -25,17 +23,17 @@ Bazen, var olan XML stil sayfası yönergesi içeren `<?xml:stylesheet?>`. Micro
 </root>
 ```
 
-Bu durum oluşur `<?xml:stylesheet?>` geçersiz olarak kabul edilir **instruction** yerli için Tüm **instruction**, ad alanları XML belirtiminde göre no-iki nokta üst üste adları (NCNames) yalnızca olabilir, yerine tam adları (QNames).
+Bunun nedeni, `<?xml:stylesheet?>` DOM 'a geçersiz bir işlem **yönergesi yönergesi** olarak kabul edildiği için oluşur. XML belirtiminde ad alanlarına göre herhangi bir işlem **yönergesi**, nitelenmiş adların (QNames 'ler) aksine yalnızca iki nokta üst üste olmayan adlar (NCNames) olabilir.
 
-Bölüm 6 ad alanları XML belirtiminde olan etkisini **yük** ve **LoadXml** yöntemleri uygun belirtimi bir belgede olmasıdır:
+XML belirtiminde ad alanlarının 6. bölümünde, **Load** ve **LoadXml** yöntemlerine sahip olmanın etkisi bir belgede olur:
 
 - Tüm öğe türleri ve öznitelik adları sıfır veya bir iki nokta üst üste içerir.
 
-- Herhangi iki nokta üst üste, hiçbir varlık adları, instruction hedefler ya da bildirim adları içeriyor.
+- Hiçbir varlık adı, Işleme yönergesi hedefi veya gösterim adı herhangi bir iki nokta üst üste içermez.
 
-İle `<?xml:stylesheet?>` bir iki nokta üst üste içeren, Şimdi ikinci madde işareti kuralı ihlal ediyor.
+İki nokta üst üste içeren `<?xml:stylesheet?>`, şimdi ikinci madde işareti içindeki kuralı ihlal ediyor.
 
-World Wide Web Consortium (W3C) göre [XML ile ilişkilendirme stil sayfaları, sürüm 1.0 öneri belgeleri](https://www.w3.org/TR/xml-stylesheet/), bir XSLT stil sayfası bir XML belgesi ile ilişkilendirmek için işleme yönergesi `<?xml-stylesheet?>`, ile bir iki nokta üst üste değiştirerek dash.
+World Wide Web Konsorsiyumu (W3C) [Ile xml belgelerinin sürüm 1,0 önerisi Ile ilişkilendirme](https://www.w3.org/TR/xml-stylesheet/)IÇIN, XSLT stil SAYFASıNı bir XML belgesi ile ilişkilendirme işleme yönergesi, iki nokta üst üste değiştirme ile `<?xml-stylesheet?>`.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

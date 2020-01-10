@@ -4,13 +4,12 @@ description: Ve .NET Core 'daki C# birim testi kavramlarını, DotNet test ve MS
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.custom: seodec18
-ms.openlocfilehash: d9ad21aded45c8955e24b93fd4ddf8a86b989055
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 2d432f5efd6f8de3593f939abbd488f9fe68b73e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116188"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715393"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>MSTest ve C# .NET Core ile birim testi
 
@@ -20,7 +19,7 @@ Bu öğreticide, birim testi kavramlarını öğrenmek için bir örnek çözüm
 
 ## <a name="create-the-source-project"></a>Kaynak projeyi oluşturma
 
-Bir kabuk penceresi açın. Çözümü tutmak için- *Testing-testusing* adlı bir dizin oluşturun. Bu yeni dizin içinde, sınıf [`dotnet new sln`](../tools/dotnet-new.md) kitaplığı ve test projesi için yeni bir çözüm dosyası oluşturmak üzere öğesini çalıştırın. Ardından, bir *Primeservice* dizini oluşturun. Aşağıdaki ana hat, şu ana kadar dizin ve dosya yapısını gösterir:
+Bir kabuk penceresi açın. Çözümü tutmak için- *Testing-testusing* adlı bir dizin oluşturun. Bu yeni dizinin içinde, sınıf kitaplığı ve test projesi için yeni bir çözüm dosyası oluşturmak üzere [`dotnet new sln`](../tools/dotnet-new.md) çalıştırın. Ardından, bir *Primeservice* dizini oluşturun. Aşağıdaki ana hat, şu ana kadar dizin ve dosya yapısını gösterir:
 
 ```console
 /unit-testing-using-mstest
@@ -28,7 +27,7 @@ Bir kabuk penceresi açın. Çözümü tutmak için- *Testing-testusing* adlı b
     /PrimeService
 ```
 
-Kaynak projeyi oluşturmak için *primeservice* 'i geçerli [`dotnet new classlib`](../tools/dotnet-new.md) Dizin yapın ve çalıştırın. *Class1.cs* *olarak yeniden*adlandırın. `PrimeService` Sınıfın başarısız bir uygulamasını oluşturursunuz:
+Kaynak projeyi oluşturmak için *Primeservice* 'i geçerli dizin yapın ve [`dotnet new classlib`](../tools/dotnet-new.md) çalıştırın. *Class1.cs* *olarak yeniden*adlandırın. `PrimeService` sınıfının başarısız bir uygulamasını oluşturursunuz:
 
 ```csharp
 using System;
@@ -45,7 +44,7 @@ namespace Prime.Services
 }
 ```
 
-Dizini *Unit-Testing-MSTest* dizinine doğru değiştirin. Çözüme [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) Sınıf Kitaplığı projesini eklemek için ' i çalıştırın. 
+Dizini *Unit-Testing-MSTest* dizinine doğru değiştirin. Çözüme Sınıf Kitaplığı projesini eklemek için [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) çalıştırın. 
 
 ## <a name="create-the-test-project"></a>Test projesi oluşturma
 
@@ -60,7 +59,7 @@ Ardından, *Primeservice. Tests* dizinini oluşturun. Aşağıdaki ana hat dizin
     /PrimeService.Tests
 ```
 
-*Primeservice. test* dizinini geçerli dizini yapın ve kullanarak [`dotnet new mstest`](../tools/dotnet-new.md)yeni bir proje oluşturun. DotNet New komutu, test kitaplığı olarak MSTest kullanan bir test projesi oluşturur. Oluşturulan şablon, *Primeservicetests. csproj* dosyasında Test Çalıştırıcısı 'nı yapılandırır:
+*Primeservice. test* dizinini geçerli dizini yapın ve [`dotnet new mstest`](../tools/dotnet-new.md)kullanarak yeni bir proje oluşturun. DotNet New komutu, test kitaplığı olarak MSTest kullanan bir test projesi oluşturur. Oluşturulan şablon, *Primeservicetests. csproj* dosyasında Test Çalıştırıcısı 'nı yapılandırır:
 
 ```xml
 <ItemGroup>
@@ -70,7 +69,7 @@ Ardından, *Primeservice. Tests* dizinini oluşturun. Aşağıdaki ana hat dizin
 </ItemGroup>
 ```
 
-Test projesi, birim testlerini oluşturmak ve çalıştırmak için diğer paketlerin kullanılmasını gerektirir. `dotnet new`önceki adımda MSTest SDK, MSTest test çerçevesi ve MSTest Çalıştırıcısı eklenmiştir. Şimdi, `PrimeService` sınıf kitaplığını projeye başka bir bağımlılık olarak ekleyin. [`dotnet add reference`](../tools/dotnet-add-reference.md) Şu komutu kullanın:
+Test projesi, birim testlerini oluşturmak ve çalıştırmak için diğer paketlerin kullanılmasını gerektirir. önceki adımda `dotnet new` MSTest SDK, MSTest test çerçevesi ve MSTest Çalıştırıcısı eklenmiştir. Şimdi, `PrimeService` sınıf kitaplığını projeye başka bir bağımlılık olarak ekleyin. [`dotnet add reference`](../tools/dotnet-add-reference.md) komutunu kullanın:
 
 ```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
@@ -91,7 +90,7 @@ Aşağıdaki ana hat, son çözüm yerleşimini göstermektedir:
         PrimeServiceTests.csproj
 ```
 
-[`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) *Birim-test-using-MSTest* dizininde yürütün. 
+[`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) *birim-test-using-MSTest* dizininde yürütün. 
 
 ## <a name="create-the-first-test"></a>İlk testi oluşturma
 
@@ -126,9 +125,9 @@ namespace Prime.UnitTests.Services
 
 [TestClass özniteliği](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) birim testlerini içeren bir sınıfı gösterir. [TestMethod özniteliği](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) bir yöntemin test yöntemi olduğunu gösterir. 
 
-Testleri ve sınıf kitaplığını derlemek [`dotnet test`](../tools/dotnet-test.md) ve ardından testleri çalıştırmak için bu dosyayı kaydedin ve yürütün. MSTest Test Çalıştırıcısı, testlerinizi çalıştırmak için program giriş noktasını içerir. `dotnet test`oluşturduğunuz birim test projesini kullanarak Test Çalıştırıcısı başlatır.
+Testleri ve sınıf kitaplığını oluşturmak için bu dosyayı kaydedin ve [`dotnet test`](../tools/dotnet-test.md) yürütün ve ardından testleri çalıştırın. MSTest Test Çalıştırıcısı, testlerinizi çalıştırmak için program giriş noktasını içerir. `dotnet test`, oluşturduğunuz birim test projesini kullanarak Test Çalıştırıcısı başlatır.
 
-Testiniz başarısız oluyor. Uygulamayı henüz oluşturmadınız. Bu test geçişini, çalıştıran `PrimeService` sınıfa en basit kodu yazarak yapın:
+Testiniz başarısız oluyor. Uygulamayı henüz oluşturmadınız. Aşağıdaki `PrimeService` sınıfında en basit kodu yazarak bu test geçişini yapın:
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -141,7 +140,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-*Birim-test-using-MSTest* dizininde yeniden çalıştırın `dotnet test` . Komutu, `PrimeService` proje için bir yapı ve ardından projeiçinçalışır.`PrimeService.Tests` `dotnet test` Her iki proje de oluşturulduktan sonra bu tek testi çalıştırır. Geçirir.
+*Birim-test-using-MSTest* dizininde `dotnet test` yeniden çalıştırın. `dotnet test` komutu, `PrimeService` projesi için bir derleme ve sonra `PrimeService.Tests` projesi için çalışır. Her iki proje de oluşturulduktan sonra bu tek testi çalıştırır. Geçirir.
 
 ## <a name="add-more-features"></a>Daha fazla özellik ekleyin
 
@@ -151,7 +150,7 @@ Yeni test oluşturmak yerine, tek bir veri temelli test oluşturmak için bu iki
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-Çalıştır `dotnet test`ve bu testlerin ikisi de başarısız olur. Tüm testlerin geçişini yapmak için yönteminin başındaki `if` yan tümceyi değiştirin:
+`dotnet test`çalıştırın, bu testlerin ikisi de başarısız olur. Tüm testlerin geçişini yapmak için, yönteminin başındaki `if` yan tümcesini değiştirin:
 
 ```csharp
 if (candidate < 2)

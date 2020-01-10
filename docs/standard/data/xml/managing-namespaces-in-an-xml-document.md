@@ -3,14 +3,12 @@ title: XML Belgesinde Ad Alanlarını Yönetme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3befdd0ec96856a62e5c3c603935303498758710
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 64ef9fd4ca3a9a83b9cd3eba9cb952b0f668e9f0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423921"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710706"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML Belgesinde Ad Alanlarını Yönetme
 XML ad alanları, bir XML belgesindeki öğe ve öznitelik adlarını özel ve önceden tanımlanmış URI 'Ler ile ilişkilendirir. Bu ilişkilendirmeleri oluşturmak için, ad alanı URI 'Leri için ön ekleri tanımlar ve bu önekleri, XML verilerinde öğe ve öznitelik adlarını nitelemek için kullanabilirsiniz. Ad alanları öğe ve öznitelik adı çakışmalarını önler ve aynı ada sahip öğelerin ve özniteliklerin işlenmesini ve farklı şekilde doğrulanmasını etkinleştirir.  

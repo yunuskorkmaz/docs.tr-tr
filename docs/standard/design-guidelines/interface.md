@@ -7,20 +7,19 @@ helpviewer_keywords:
 - type design guidelines, interfaces
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-author: KrzysztofCwalina
-ms.openlocfilehash: 1f982aa37f92b7270725574d949989ca120297d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06b2e0d281314f3bd6346a7dbbd8bb56928fe58b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026373"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709302"
 ---
 # <a name="interface-design"></a>Arabirim Tasarımı
-Çoğu API'ler, en iyi sınıfları ve yapıları kullanarak modellenir olsa da, arabirimler daha uygun olan veya tek seçenektir durumlar vardır.  
+Çoğu API 'Ler sınıflar ve yapılar kullanılarak en iyi modellense de, arabirimlerin daha uygun veya tek seçenek olduğu durumlar vardır.  
   
- CLR'nin birden çok devralmayı desteklemez (yani, CLR sınıflarını birden fazla temel sınıfından devralamaz), ancak bir taban sınıftan devralmayı ek olarak, bir veya daha fazla arabirimi uygulayan türleri sağlar. Bu nedenle, arabirimler, genellikle birden çok devralma etkiyi elde etmek için kullanılır. Örneğin, <xref:System.IDisposable> disposability, istedikleri katılmak diğer tüm Devralma Hiyerarşisi bağımsız desteklemek için türleri izin veren bir arabirimdir.  
+ CLR birden çok devralmayı desteklemez (yani, CLR sınıfları birden fazla taban sınıftan devralamaz), ancak türlerin bir temel sınıftan devralmaya ek olarak bir veya daha fazla arabirim uygulamasına izin verir. Bu nedenle, arabirimler genellikle birden çok devralmanın etkisini elde etmek için kullanılır. Örneğin <xref:System.IDisposable>, türlerin katılmak istedikleri diğer devralma hiyerarşisinden bağımsız olarak elden atımı desteklemeye izin veren bir arabirimdir.  
   
- Hangi tanımlama arabirimin uygun olan diğer bazı değer türleri dahil olmak üzere çeşitli türleri tarafından desteklenen ortak bir arabirim oluştururken bir durumdur. Değer türleri devralamaz türlerinden dışında <xref:System.ValueType>, ancak arabirimleri uygulayabilir, bunu bir arabirimi kullanarak ortak bir taban türü sağlamak için tek seçenek.  
+ Bir arabirimin tanımlanmasıyla ilgili diğer durum, bazı değer türleri dahil olmak üzere çeşitli türlerde desteklenebilir ortak bir arabirim oluşturmaktır. Değer türleri <xref:System.ValueType>dışındaki türlerden devralınabilir, ancak arabirimler uygulayabilir, bu nedenle bir arabirim kullanmak ortak bir temel tür sağlamak için tek seçenektir.  
   
  **✓ DO** değer türleri içeren bir dizi türleri tarafından desteklenen bazı ortak API gerekiyorsa bir arabirim tanımlayın.  
   
@@ -28,25 +27,25 @@ ms.locfileid: "62026373"
   
  **X AVOID** işaret arabirimleri (hiçbir üye arabirimleriyle) kullanarak.  
   
- Genel olarak, belirli bir karakteristik (işaretçi) sahip bir sınıfı işaretlemek gerekiyorsa, bir arabirim yerine özel bir öznitelik kullanın.  
+ Bir sınıfı belirli bir özelliğe (işaret) sahip olacak şekilde işaretlemeniz gerekiyorsa, genel olarak, bir arabirim yerine özel bir öznitelik kullanın.  
   
  **✓ DO** bir arabirim uygulaması en az bir türü sağlar.  
   
- Arabirim tasarımı doğrulamak için bu yardımcı yapılıyor. Örneğin, <xref:System.Collections.Generic.List%601> uygulamasıdır <xref:System.Collections.Generic.IList%601> arabirimi.  
+ Bunu yapmak, arabirimin tasarımını doğrulamaya yardımcı olur. Örneğin, <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.IList%601> arabiriminin bir uygulamasıdır.  
   
  **✓ DO** tanımladığınız her bir arabirime tüketir en az bir API sağlar (bir parametre veya bir özellik arabirimi alma yöntemi yazılan arabirimi olarak).  
   
- Arabirim tasarımı doğrulamak için bu yardımcı yapılıyor. Örneğin, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> tüketir <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> arabirimi.  
+ Bunu yapmak, arabirim tasarımını doğrulamaya yardımcı olur. Örneğin, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> arabirimini tüketir.  
   
  **X DO NOT** önceden sevk edilmiş bir arabirim üye ekleyin.  
   
- Bunun yapılması uygulamaları arabiriminin bölün. Sürüm oluşturma sorunları önlemek için yeni bir arabirim oluşturmanız gerekir.  
+ Bunun yapılması, arabirimin uygulamalarını bozar. Sürüm oluşturma sorunlarından kaçınmak için yeni bir arabirim oluşturmanız gerekir.  
   
- Bu yönergelere uymanız açıklanan durumlar hariç, genel olarak, arabirimler yerine sınıfları yönetilen kod yeniden kullanılabilir kitaplıklar tasarlama seçtiğiniz gerekir.  
+ Bu kılavuzlar bölümünde açıklanan durumlar haricinde, genel olarak, yönetilen kod yeniden kullanılabilir kitaplıklarını tasarlarken arabirimler yerine sınıfları seçin.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

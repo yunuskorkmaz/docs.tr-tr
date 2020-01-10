@@ -2,17 +2,17 @@
 title: LINQ to XML’e Genel Bakış
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
-ms.openlocfilehash: ef3fca844dc98440eb4816110a5a78482cfa4f4e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a30340e06a3f8eac9fe2b7718b14ba20363d682f
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346788"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636477"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML genel bakış (Visual Basic)
 XML, çok sayıda bağlamdaki verileri biçimlendirmeye yönelik bir yöntem olarak çok daha benimsemiştir. Örneğin, Web 'de, yapılandırma dosyalarında, Microsoft Office Word dosyalarında ve veritabanlarında XML bulabilirsiniz.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], XML ile programlamaya yönelik güncel ve yeniden tasarlanan bir yaklaşımdır. Belge Nesne Modeli (DOM) için bellek içi belge değiştirme yeteneklerini sağlar ve [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadelerini destekler. Bu sorgu ifadeleri XPath 'ten farklı bir şekilde farklılık içerse de, benzer işlevler sağlarlar.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], XML ile programlamaya yönelik güncel ve yeniden tasarlanan bir yaklaşımdır. Belge Nesne Modeli (DOM) bellek içi belge değiştirme yeteneklerini sağlar ve LINQ sorgu ifadelerini destekler. Bu sorgu ifadeleri XPath 'ten farklı bir şekilde farklılık içerse de, benzer işlevler sağlarlar.  
   
 ## <a name="linq-to-xml-developers"></a>LINQ to XML geliştiriciler  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] çeşitli geliştiricilere hedefler. Yalnızca bir şey yapmak isteyen ortalama bir geliştirici için, SQL 'e benzer bir sorgu deneyimi sağlayarak XML 'i daha kolay hale getirir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Yalnızca bir çok çalışma sayesinde programcılar, tercih ettiğiniz programlama dilinde kısa ve güçlü sorgular yazmayı öğreniyor.  
@@ -24,7 +24,7 @@ XML, çok sayıda bağlamdaki verileri biçimlendirmeye yönelik bir yöntem ola
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], XML belgesini belleğe getiren Belge Nesne Modeli (DOM) gibidir. Belgeyi sorgulayabilir ve değiştirebilir ve değişiklik yaptıktan sonra dosyayı bir dosyaya kaydedebilir veya seri hale getirebilirsiniz ve Internet üzerinden gönderebilirsiniz. Ancak, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] DOM 'dan farklıdır: Bu, daha hafif ve daha kolay bir şekilde çalışacak ve Visual Basic dil özelliklerinden faydalanan yeni bir nesne modeli sağlar.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] en önemli avantajı [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]Tümleştirmesidir. Bu tümleştirme, öğelerin ve özniteliklerin koleksiyonlarını almak için bellek içi XML belgesi üzerinde sorgular yazmanızı sağlar. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgu özelliği, XPath ve XQuery için (sözdiziminde olmasa da) işlev olarak karşılaştırılabilir. Visual Basic [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] tümleştirmesi daha güçlü yazma, derleme zamanı denetimi ve geliştirilmiş hata ayıklayıcı desteği sağlar.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] en önemli avantajı, dil ile tümleşik sorgu (LINQ) ile tümleştirmedir. Bu tümleştirme, öğelerin ve özniteliklerin koleksiyonlarını almak için bellek içi XML belgesi üzerinde sorgular yazmanızı sağlar. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgu özelliği, XPath ve XQuery için (sözdiziminde olmasa da) işlev olarak karşılaştırılabilir. Visual Basic LINQ 'ın tümleştirilmesi, daha güçlü yazma, derleme zamanı denetimi ve geliştirilmiş hata ayıklayıcı desteği sağlar.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] başka bir avantajı, sorgu sonuçlarının <xref:System.Xml.Linq.XElement> parametre olarak kullanılması ve <xref:System.Xml.Linq.XAttribute> nesne oluşturucuları, XML ağaçları oluşturmaya yönelik güçlü bir yaklaşım sağlar. *İşlevsel oluşturma*olarak adlandırılan bu yaklaşım, geliştiricilerin XML ağaçlarını bir şekilden diğerine kolayca dönüştürmelerine olanak sağlar.  
   
@@ -47,7 +47,7 @@ Order By item.<PartNumber>.Value _
 Select item  
 ```  
   
- Bu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] özelliklerine ek olarak, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] geliştirilmiş bir XML programlama arabirimi sağlar. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]kullanarak şunları yapabilirsiniz:  
+ Bu LINQ özelliklerine ek olarak, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] geliştirilmiş bir XML programlama arabirimi sağlar. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]kullanarak şunları yapabilirsiniz:  
   
 - Dosyalardan veya akışlardan XML yükleyin.  
   

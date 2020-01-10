@@ -1,6 +1,5 @@
 ---
 title: $-dize ilişkilendirme- C# başvuru
-ms.custom: seodec18
 description: Dize ilişkilendirme, dize çıkışını geleneksel dize bileşik biçimlendirmeden biçimlendirmek için daha okunabilir ve kullanışlı bir sözdizimi sağlar.
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: cda8582da9ca8262ec2ce6bcfbb76e2e2f5f6006
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b32bbbb0bd99878822d7ca5abdba80b46539846a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421852"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715080"
 ---
 # <a name="---string-interpolation-c-reference"></a>$-dize ilişkilendirme (C# başvuru)
 
@@ -61,7 +60,7 @@ Aşağıdaki örnek, bir sonuç dizesinde bir küme ayracın nasıl ekleneceğin
 Enterpolasyonlu bir dize `$` karakteriyle başlar ve ardından `@` karakteri gelir. Tam dizeler hakkında daha fazla bilgi için bkz. [dize](../builtin-types/reference-types.md) ve tam [tanımlayıcı](verbatim.md) konuları.
 
 > [!NOTE]
-> 8,0 ile C# başlayarak,`$`ve`@`belirteçlerini dilediğiniz sırada kullanabilirsiniz: her iki `$@"..."`ve`@$"..."`geçerli bir ara değerli dizelerdir. Önceki C# sürümlerde `$` belirtecinin `@` belirtecinden önce görünmesi gerekir.
+> 8,0 ile C# başlayarak, `$` ve `@` belirteçlerini dilediğiniz sırada kullanabilirsiniz: her iki `$@"..."` ve `@$"..."` geçerli bir ara değerli dizelerdir. Önceki C# sürümlerde `$` belirtecinin `@` belirtecinden önce görünmesi gerekir.
 
 ## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>Örtük dönüştürmeler ve `IFormatProvider` uygulamasını belirtme
 

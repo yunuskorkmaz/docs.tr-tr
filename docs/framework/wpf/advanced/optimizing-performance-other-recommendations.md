@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 6b4a5379145ebdffde0d5b76d8c7b9ab57261007
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b6d99d90a3da232e1873ebe8433e01ceb2977de6
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975784"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636438"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Performansı İyileştirme: Diğer Öneriler
 <a name="introduction"></a>Bu konu, [WPF uygulama performansını En Iyi duruma getirme](optimizing-wpf-application-performance.md) bölümünde yer almayan konular kapsamında ele alınanlara ek olarak performans önerileri sağlar.  
@@ -64,13 +64,13 @@ ms.locfileid: "73975784"
   
 <a name="Avoid_Using_ScrollBarVisibility"></a>   
 ## <a name="avoid-using-scrollbarvisibilityauto"></a>ScrollBarVisibility = Auto kullanmaktan kaçının  
- Mümkün olduğunda, `HorizontalScrollBarVisibility` ve `VerticalScrollBarVisibility` özellikleri için <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> değerini kullanmaktan kaçının. Bu özellikler <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer> ve <xref:System.Windows.Controls.TextBox> nesneleri için ve <xref:System.Windows.Controls.ListBox> nesnesi için iliştirilmiş bir özellik olarak tanımlanmıştır. Bunun yerine, <xref:System.Windows.Controls.ScrollBarVisibility> <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden> veya <xref:System.Windows.Controls.ScrollBarVisibility.Visible> olarak ayarlayın.  
+ Mümkün olduğunda, `HorizontalScrollBarVisibility` ve `VerticalScrollBarVisibility` özellikleri için <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> değerini kullanmaktan kaçının. Bu özellikler <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer>ve <xref:System.Windows.Controls.TextBox> nesneleri için ve <xref:System.Windows.Controls.ListBox> nesnesi için iliştirilmiş bir özellik olarak tanımlanmıştır. Bunun yerine, <xref:System.Windows.Controls.ScrollBarVisibility> <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden>veya <xref:System.Windows.Controls.ScrollBarVisibility.Visible>olarak ayarlayın.  
   
  <xref:System.Windows.Controls.ScrollBarVisibility.Auto> değeri, boşluk sınırlı olduğunda ve kaydırma çubuklarının yalnızca gerektiğinde görüntülenmesi gerektiği durumlar için tasarlanmıştır. Örneğin, yüzlerce satırlık metin içeren bir <xref:System.Windows.Controls.TextBox> aksine bu <xref:System.Windows.Controls.ScrollBarVisibility> değerini 30 öğe <xref:System.Windows.Controls.ListBox> ile kullanmak yararlı olabilir.  
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Başlangıç saatini azaltmak için yazı tipi önbellek hizmetini yapılandırın  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] yazı tipi önbellek hizmeti, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar arasında yazı tipi verilerini paylaşır. Çalıştırdığınız ilk [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulaması, hizmet zaten çalışmıyorsa bu hizmeti başlatır. Windows Vista kullanıyorsanız, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalarının ilk başlangıç zamanını azaltmak için "Windows Presentation Foundation (WPF) yazı tipi önbelleği 3.0.0.0" hizmetini "El Ile" (varsayılan) "otomatik (Gecikmeli başlatma)" olarak ayarlayabilirsiniz.  
+ WPF yazı tipi önbellek hizmeti, WPF uygulamaları arasında yazı tipi verilerini paylaşır. Hizmet zaten çalışmıyorsa, çalıştırdığınız ilk WPF uygulaması bu hizmeti başlatır. Windows Vista kullanıyorsanız, WPF uygulamalarının ilk başlangıç zamanını azaltmak için "Windows Presentation Foundation (WPF) yazı tipi önbelleği 3.0.0.0" hizmetini "El Ile" (varsayılan) "otomatik (Gecikmeli başlatma)" olarak ayarlayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

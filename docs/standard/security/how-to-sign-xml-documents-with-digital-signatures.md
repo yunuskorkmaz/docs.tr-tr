@@ -14,75 +14,73 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0928f6091a80877609b545a25c8ac014f011d0b2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0df036b3336527f3cc0e48d9a7ec835ab9f1cf4a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602612"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706051"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Nasıl yapılır: XML Belgelerini Dijital İmzalarla imzalama
-Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML belgesi ya da bir dijital imzaya sahip bir XML belgesi bir parçası olarak imzalamak için ad alanı.  XML dijital imzaları (XMLDSIG) imzalandıktan sonra veri değiştirilmiş değil olduğunu doğrulamanızı sağlar.  World Wide Web Consortium (W3C) öneri XMLDSIG standart hakkında daha fazla bilgi için bkz. [XML imza söz dizimi ve işleme](https://www.w3.org/TR/xmldsig-core/).  
+Bir XML belgesini veya bir XML belgesinin bir kısmını dijital imzaya imzalamak için <xref:System.Security.Cryptography.Xml> ad alanındaki sınıfları kullanabilirsiniz.  XML dijital imzaları (XMLDSIG), imzalandıktan sonra verilerin değiştirilmediğini doğrulamanızı sağlar.  XMLDSIG standardı hakkında daha fazla bilgi için, World Wide Web Konsorsiyumu (W3C) önerisi [XML Imzası sözdizimi ve işleme](https://www.w3.org/TR/xmldsig-core/)bölümüne bakın.  
   
- Kod örneği, bu yordamı dijital olarak tüm bir XML belgesi oturum ve imza belgede ekleme yapmayı gösteren bir <`Signature`> öğesi.  Örnek, RSA imzalama anahtarı oluşturur, anahtarı güvenli bir anahtar kapsayıcısına ekler ve ardından bir XML belgesinin dijital olarak imzalamak için anahtar kullanır.  Anahtar XML dijital imzasını alınabilir veya başka bir XML belgesi imzalamak için kullanılabilir.  
+ Bu yordamdaki kod örneğinde, bir XML belgesinin tamamını dijital olarak imzalama ve bir <`Signature`> öğesinde imzayı belgeye iliştirme gösterilmektedir.  Örnek, bir RSA imzalama anahtarı oluşturur, anahtarı güvenli bir anahtar kapsayıcısına ekler ve ardından bir XML belgesini dijital olarak imzalamak için anahtarı kullanır.  Anahtar daha sonra XML dijital imzasını doğrulamak için alınabilir veya başka bir XML belgesi imzalamak için kullanılabilir.  
   
- Bu yordamı kullanılarak oluşturulan bir XML dijital imza doğrulama hakkında daha fazla bilgi için bkz: [nasıl yapılır: XML belgelerinin dijital imzalarını doğrulama](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).  
+ Bu yordam kullanılarak oluşturulan bir XML dijital imzasını doğrulama hakkında daha fazla bilgi için bkz. [nasıl yapılır: XML belgelerinin dijital Imzalarını doğrulama](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).  
   
-### <a name="to-digitally-sign-an-xml-document"></a>Bir XML belgesinin dijital olarak imzalamak için  
+### <a name="to-digitally-sign-an-xml-document"></a>Bir XML belgesini dijital olarak imzalamak için  
   
-1. Oluşturma bir <xref:System.Security.Cryptography.CspParameters> nesne ve anahtar kapsayıcısı adını belirtin.  
+1. <xref:System.Security.Cryptography.CspParameters> nesnesi oluşturun ve anahtar kapsayıcısının adını belirtin.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#2)]
      [!code-vb[HowToSignXMLDocumentRSA#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#2)]  
   
-2. Bir asimetrik anahtar kullanarak Oluştur <xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfı.  Geçirdiğinizde anahtarı için anahtar kapsayıcısını otomatik olarak kaydedilir <xref:System.Security.Cryptography.CspParameters> nesnesi oluşturucusuna <xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfı.  Bu anahtar, XML belgesi imzalamak için kullanılır.  
+2. <xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfını kullanarak asimetrik bir anahtar oluşturun.  <xref:System.Security.Cryptography.CspParameters> nesnesini <xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfının oluşturucusuna geçirdiğinizde anahtar otomatik olarak anahtar kapsayıcısına kaydedilir.  Bu anahtar, XML belgesini imzalamak için kullanılacaktır.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#3)]
      [!code-vb[HowToSignXMLDocumentRSA#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#3)]  
   
-3. Oluşturma bir <xref:System.Xml.XmlDocument> diskten bir XML dosyası yüklenirken nesne.  <xref:System.Xml.XmlDocument> Nesne şifrelemek için XML öğesi içerir.  
+3. Diskten bir XML dosyası yükleyerek <xref:System.Xml.XmlDocument> nesnesi oluşturun.  <xref:System.Xml.XmlDocument> nesnesi şifrelenecek XML öğesini içeriyor.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#4)]
      [!code-vb[HowToSignXMLDocumentRSA#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#4)]  
   
-4. Yeni bir <xref:System.Security.Cryptography.Xml.SignedXml> nesne ve geçirin <xref:System.Xml.XmlDocument> nesnesi.  
+4. Yeni bir <xref:System.Security.Cryptography.Xml.SignedXml> nesnesi oluşturun ve <xref:System.Xml.XmlDocument> nesnesini ona geçirin.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#5)]
      [!code-vb[HowToSignXMLDocumentRSA#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#5)]  
   
-5. İmzalama RSA anahtarı ekleme <xref:System.Security.Cryptography.Xml.SignedXml> nesne.  
+5. <xref:System.Security.Cryptography.Xml.SignedXml> nesnesine imzalama RSA anahtarını ekleyin.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#6)]
      [!code-vb[HowToSignXMLDocumentRSA#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#6)]  
   
-6. Oluşturma bir <xref:System.Security.Cryptography.Xml.Reference> oturum gerekenler tanımlayan nesne.  Tüm belgeyi imzalamak için ayarlanmış <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> özelliğini `""`.  
+6. İmzalanacak öğeleri açıklayan bir <xref:System.Security.Cryptography.Xml.Reference> nesnesi oluşturun.  Tüm belgeyi imzalamak için <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> özelliğini `""`olarak ayarlayın.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#7)]
      [!code-vb[HowToSignXMLDocumentRSA#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#7)]  
   
-7. Ekleme bir <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> nesnesini <xref:System.Security.Cryptography.Xml.Reference> nesnesi.  Bir dönüştürme imzalayan kullanılan aynı şekilde XML verileri temsil etmek Doğrulayıcı sağlar.  Bu doğrulama için önemli bir adımdır şekilde XML verileri farklı şekillerde temsil edilebilir.  
+7. <xref:System.Security.Cryptography.Xml.Reference> nesnesine bir <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> nesnesi ekleyin.  Bir dönüşüm, doğrulayıcının XML verilerini imzalayan tarafından aynı şekilde temsil etmesine olanak tanır.  XML verileri farklı yollarla temsil edilebilir, bu nedenle doğrulama için bu adım önemlidir.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#8)]
      [!code-vb[HowToSignXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#8)]  
   
-8. Ekleme <xref:System.Security.Cryptography.Xml.Reference> nesnesini <xref:System.Security.Cryptography.Xml.SignedXml> nesnesi.  
+8. <xref:System.Security.Cryptography.Xml.Reference> nesnesini <xref:System.Security.Cryptography.Xml.SignedXml> nesnesine ekleyin.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#9)]
      [!code-vb[HowToSignXMLDocumentRSA#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#9)]  
   
-9. İmza çağırarak işlem <xref:System.Security.Cryptography.Xml.SignedXml.ComputeSignature%2A> yöntemi.  
+9. <xref:System.Security.Cryptography.Xml.SignedXml.ComputeSignature%2A> yöntemini çağırarak imzayı hesaplama.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#10)]
      [!code-vb[HowToSignXMLDocumentRSA#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#10)]  
   
-10. İmza XML gösterimini almak (bir <`Signature`> öğesi) ve yeni bir kaydetme <xref:System.Xml.XmlElement> nesne.  
+10. İmzanın XML temsilini (bir <`Signature`> öğesi) alın ve yeni bir <xref:System.Xml.XmlElement> nesnesine kaydedin.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#11)]
      [!code-vb[HowToSignXMLDocumentRSA#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#11)]  
   
-11. Öğesine ekleme <xref:System.Xml.XmlDocument> nesne.  
+11. <xref:System.Xml.XmlDocument> nesnesine öğeyi ekleyin.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#12)]
      [!code-vb[HowToSignXMLDocumentRSA#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#12)]  
@@ -93,7 +91,7 @@ Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML b
      [!code-vb[HowToSignXMLDocumentRSA#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#13)]  
   
 ## <a name="example"></a>Örnek  
- Bu örnek adlı bir dosya olduğunu varsayar `test.xml` derlenmiş programın aynı dizinde bulunmaktadır.  Aşağıdaki XML adlı bir dosyaya yerleştirebilirsiniz `test.xml` ve bu örneği kullanın.  
+ Bu örnek, `test.xml` adlı bir dosyanın derlenen programla aynı dizinde olduğunu varsayar.  Aşağıdaki XML 'i `test.xml` adlı bir dosyaya yerleştirebilir ve bu örnekle birlikte kullanabilirsiniz.  
   
 ```xml  
 <root>  
@@ -107,18 +105,18 @@ Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML b
  [!code-csharp[HowToSignXMLDocumentRSA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#1)]
  [!code-vb[HowToSignXMLDocumentRSA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
   
-- Bu örneği derlemeye bir başvuru eklemek gereken `System.Security.dll`.  
+- Bu örneği derlemek için `System.Security.dll`bir başvuru eklemeniz gerekir.  
   
-- Aşağıdaki ad alanlarını içerir: <xref:System.Xml>, <xref:System.Security.Cryptography>, ve <xref:System.Security.Cryptography.Xml>.  
+- Şu ad alanlarını ekleyin: <xref:System.Xml>, <xref:System.Security.Cryptography>ve <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Hiçbir zaman depolayabilen veya asimetrik anahtar çifti düz metin olarak özel anahtarı.  Simetrik hem de asimetrik şifreleme anahtarları hakkında daha fazla bilgi için bkz. [şifreleme ve şifre çözme için anahtarlar oluşturma](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
+ Asimetrik anahtar çiftinin özel anahtarını düz metin olarak depolamayın veya aktarmayın.  Simetrik ve asimetrik şifreleme anahtarları hakkında daha fazla bilgi için bkz. [şifreleme ve şifre çözme Için anahtarlar oluşturma](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
   
- Hiçbir zaman bir özel anahtar doğrudan sizin kaynak kodunuza ekleyin.  Katıştırılmış anahtarları kullanarak bir derlemeden kolayca da okunabilir [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) veya Not Defteri gibi bir metin düzenleyicisinde derleme açarak.  
+ Özel anahtarı hiçbir şekilde doğrudan kaynak kodunuza gömmeyin.  Gömülü anahtarlar [ıldadsm. exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) kullanılarak veya derlemeyi Not Defteri gibi bir metin düzenleyicisinde açarak bir derlemeden kolayca okunabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Security.Cryptography.Xml>
-- [Nasıl yapılır: XML belgelerinin dijital imzalarını doğrulama](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
+- [Nasıl yapılır: XML Belgelerinin Dijital İmzalarını Doğrulama](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)

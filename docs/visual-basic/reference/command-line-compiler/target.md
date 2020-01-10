@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: bd79d95a18fb1935d97fff2d1b2c7767752b9765
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d186670489ada51fced67ff9adeb73b14909b664
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351727"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716684"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 
@@ -27,9 +27,9 @@ Derleyici çıktısının biçimini belirtir.
 
 Aşağıdaki tablo `-target` seçeneğinin etkisini özetler.
 
-|**Seçeneği**|**Durum**|
+|**Seçeneği**|**Davranışı**|
 |----------------|------------------|
-|`-target:exe`|Derleyicinin yürütülebilir bir konsol uygulaması oluşturmasına neden olur.<br /><br /> `-target` seçeneği belirtilmediğinde bu varsayılan seçenektir. Yürütülebilir dosya bir. exe uzantısıyla oluşturulur.<br /><br /> Aksi takdirde, `/out` seçeneğiyle belirtilmediği takdirde, çıkış dosyası adı `Sub Main` yordamını içeren giriş dosyasının adını alır.<br /><br /> Bir. exe dosyasına derlenen kaynak kodu dosyalarında yalnızca bir `Sub Main` yordamı gereklidir. Hangi sınıfın `Sub Main` yordamını içerdiğini belirtmek için `-main` derleyici seçeneğini kullanın.|
+|`-target:exe`|Derleyicinin yürütülebilir bir konsol uygulaması oluşturmasına neden olur.<br /><br /> `-target` seçeneği belirtilmediğinde bu varsayılan seçenektir. Yürütülebilir dosya bir. exe uzantısıyla oluşturulur.<br /><br /> Aksi takdirde, `-out` seçeneğiyle belirtilmediği takdirde, çıkış dosyası adı `Sub Main` yordamını içeren giriş dosyasının adını alır.<br /><br /> Bir. exe dosyasına derlenen kaynak kodu dosyalarında yalnızca bir `Sub Main` yordamı gereklidir. Hangi sınıfın `Sub Main` yordamını içerdiğini belirtmek için `-main` derleyici seçeneğini kullanın.|
 |`-target:library`|Derleyicinin dinamik bağlantı kitaplığı (DLL) oluşturmasına neden olur.<br /><br /> Dinamik bağlantı kitaplığı dosyası bir. dll uzantısıyla oluşturulur.<br /><br /> Aksi takdirde, `-out` seçeneğiyle belirtilmediği takdirde, çıkış dosyası adı ilk giriş dosyasının adını alır.<br /><br /> Bir DLL derlerken `Sub Main` yordam gerekli değildir.|
 |`-target:module`|Derleyicinin bir derlemeye eklenebilecek bir modül oluşturmasına neden olur.<br /><br /> Çıkış dosyası. netmodule uzantısıyla oluşturulur.<br /><br /> .NET ortak dil çalışma zamanı, derlemesi olmayan bir dosyayı yükleyemez. Ancak, `-reference`kullanarak bu tür bir dosyayı derlemenin derleme bildirimine ekleyebilirsiniz.<br /><br /> Bir modüldeki kod, başka bir modüldeki iç türlere başvurduğunda, her iki modülün `-reference`kullanılarak bir derleme bildirimine dahil olması gerekir.<br /><br /> [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) seçeneği bir modülden meta verileri içeri aktarır.|
 |`-target:winexe`|Derleyicinin yürütülebilir bir Windows tabanlı uygulama oluşturmasına neden olur.<br /><br /> Yürütülebilir dosya bir. exe uzantısıyla oluşturulur. Windows tabanlı bir uygulama, .NET Framework sınıf kitaplığından veya Windows API 'Leriyle bir kullanıcı arabirimi sağlayan bir uygulamadır.<br /><br /> Aksi takdirde, `-out` seçeneğiyle belirtilmediği takdirde, çıkış dosyası adı `Sub Main` yordamını içeren giriş dosyasının adını alır.<br /><br /> Bir. exe dosyasına derlenen kaynak kodu dosyalarında yalnızca bir `Sub Main` yordamı gereklidir. Kodunuzun `Sub Main` yordamına sahip birden fazla sınıfı olduğu durumlarda, hangi sınıfın `Sub Main` yordamını içerdiğini belirtmek için `-main` derleyici seçeneğini kullanın|

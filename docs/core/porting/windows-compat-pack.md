@@ -1,27 +1,26 @@
 ---
 title: .NET Core 'a bağlantı noktası için Windows Uyumluluk paketini kullanın
-description: Windows Uyumluluk Paketi hakkında bilgi edinin ve mevcut .NET Framework kodunu .NET Core 'a bağlamak için nasıl kullanabileceğinizi öğrenin
+description: Windows Uyumluluk Paketi hakkında bilgi edinin ve onu .NET Core 'a mevcut .NET Framework kodu ile bağlantı noktası için nasıl kullanabileceğinizi öğrenin.
 author: terrajobst
 ms.date: 12/07/2018
-ms.custom: seodec18
-ms.openlocfilehash: adf2aaab27b5a8afcc89fceac67184d3b1974037
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 65530987a3cded941b6a292118ed9bfdb6f5b86c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521286"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715475"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>.NET Core 'a bağlantı noktası için Windows Uyumluluk paketini kullanın
 
 Mevcut kodun .NET Core 'a taşıma sırasında bulunan en yaygın sorunlardan bazıları yalnızca .NET Framework bulunan API ve teknolojilerin bağımlılıklarıdır. *Windows Uyumluluk Paketi* bu teknolojilerin çoğunu sağlar, bu sayede .NET Core uygulamaları ve .NET Standard kitaplıklarını derlemek çok daha kolay olur.
 
-Bu paket, API kümesini önemli ölçüde artıran ve neredeyse hiçbir değişiklik yapılmaksızın mevcut kodu derlenen [.NET Standard 2,0 ' nin](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) mantıksal bir uzantısıdır. Ancak .NET Standard taahhüdünü korumak için ("tüm .NET uygulamalarının sağladığı API kümesidir"), bu, kayıt defteri, Windows Yönetim Araçları (WMI) veya yansıma yayma gibi tüm platformlarda çalışmadığınız teknolojileri içermemektedir GetVersionEx.
+Bu paket, API kümesini önemli ölçüde artıran ve neredeyse hiçbir değişiklik yapılmaksızın mevcut kodu derlenen [.NET Standard 2,0 ' nin](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) mantıksal bir uzantısıdır. .NET Standard taahhüdünü korumak için ("tüm .NET uygulamalarının sağladığı API kümesidir"), paket kayıt defteri, Windows Yönetim Araçları (WMI) veya yansıma yayma gibi tüm platformlarda çalışmayan teknolojiler içermez GetVersionEx.
 
-*Windows Uyumluluk paketi* .NET Standard en üstünde bulunur ve yalnızca Windows olan teknolojiler için erişim sağlar. .NET Core 'a geçmek isteyen ancak ilk adım olarak Windows 'ta kalmak için plan yapmak isteyen müşteriler için özellikle faydalıdır. Bu senaryoda, yalnızca Windows teknolojilerini kullanamayacak, sıfır mimari avantajları olan yalnızca bir geçiş değildir.
+Windows Uyumluluk Paketi .NET Standard en üstünde bulunur ve yalnızca Windows olan teknolojiler için erişim sağlar. .NET Core 'a geçmek isteyen ancak ilk adım olarak Windows 'ta kalmak için plan yapmak isteyen müşteriler için özellikle faydalıdır. Bu senaryoda yalnızca Windows teknolojilerini kullanamayacak, mimari avantajsız yalnızca bir geçiş değildir.
 
 ## <a name="package-contents"></a>Paket içeriği
 
-*Windows Uyumluluk Paketi* , [Microsoft. Windows. Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) NuGet paketi aracılığıyla sağlanır ve .NET Core veya .NET Standard hedefleyen projelerden başvurulabilir.
+Windows Uyumluluk Paketi, [Microsoft. Windows. Compatibility NuGet paketi](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) aracılığıyla sağlanır ve .NET Core veya .NET Standard ' i hedefleyen projelerden başvurulabilirler.
 
 Aşağıdaki teknoloji alanlarından yalnızca Windows 'un yanı sıra platformlar arası API 'Ler dahil olmak üzere 20.000 API 'si sağlar:
 
@@ -29,16 +28,16 @@ Aşağıdaki teknoloji alanlarından yalnızca Windows 'un yanı sıra platforml
 - CodeDom
 - Yapılandırma
 - Dizin Hizmetleri
-- İnizde
+- Çizim
 - ODBC
 - İzinler
-- Bağlantı Noktaları
+- Bağlantı noktaları
 - Windows Access Control listeleri (ACL)
 - Windows Communication Foundation (WCF)
 - Windows şifrelemesi
 - Windows olay günlüğü
 - Windows Yönetim Araçları (WMI)
-- Windows performans sayaçları
+- Windows Performans Sayaçları
 - Windows Kayıt Defteri
 - Windows Çalışma Zamanı önbelleğe alma
 - Windows Hizmetleri
@@ -49,13 +48,13 @@ Daha fazla bilgi için bkz. [Uyumluluk paketinin belirtimi](https://github.com/d
 
 1. Taşıma işleminden önce, [taşıma işlemine](index.md)göz atın.
 
-2. Mevcut kodu .NET Core 'a veya .NET Standard taşıma sırasında [Microsoft. Windows. Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)NuGet paketini yüklemek.
+2. Mevcut kodu .NET Core 'a veya .NET Standard taşırken, [Microsoft. Windows. Compatibility NuGet paketini](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)yükledikten sonra.
 
-3. Windows üzerinde kalmak isterseniz, hazırsınız demektir.
+   Windows üzerinde kalmak isterseniz, hazırsınız demektir.
 
-4. Linux veya macOS 'ta .NET Core uygulamasını veya .NET Standard kitaplığını çalıştırmak istiyorsanız, platformlar arası çalışmayan API 'lerin kullanımını bulmak için [API Çözümleyicisi](../../standard/analyzers/api-analyzer.md) ' ni kullanın.
+3. Linux veya macOS 'ta .NET Core uygulamasını veya .NET Standard kitaplığını çalıştırmak istiyorsanız, platformlar arası çalışmayan API 'lerin kullanımını bulmak için [API Çözümleyicisi](../../standard/analyzers/api-analyzer.md) ' ni kullanın.
 
-5. Bu API 'lerin kullanımlarını kaldırın, bunları platformlar arası alternatifler ile değiştirin ya da şunun gibi bir platform denetimi kullanarak koruma edin:
+4. Bu API 'lerin kullanımlarını kaldırın, bunları platformlar arası alternatifler ile değiştirin ya da şunun gibi bir platform denetimi kullanarak koruma edin:
 
     ```csharp
     private static string GetLoggingPath()

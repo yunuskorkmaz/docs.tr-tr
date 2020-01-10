@@ -3,19 +3,17 @@ title: DOM Yüklerken Boşluk ve Önemli Boşluk İşleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1b141a0a-50d8-4ebd-83cd-a84449bb22b2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1d9bbb14320b84a6d417c5c28026b169092de219
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 834644a07d790401a1131d6d901f144ef90dc495
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799339"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710030"
 ---
 # <a name="white-space-and-significant-white-space-handling-when-loading-the-dom"></a>DOM Yüklerken Boşluk ve Önemli Boşluk İşleme
-Belge yüklenirken bölünemez boşluğu koruyacak ve oluşturmak için seçeneği ayarlayabilirsiniz **XmlWhitespace** belge ağacında düğümleri. Boşluk düğümleri oluşturmak için **PreserveWhitespace** özelliği true. Özellik ayarlanmışsa **false**, varsayılan değer olan, boşluk düğümleri oluşturulmaz. Her zaman önemli boşluk düğümleri korunur, ve **XmlSignificantWhitespace** düğümleri her zaman bellek ayarından bağımsız olarak bu verileri temsil etmek için oluşturulan **PreserveWhitespace** bayrak.  
+Belge yüklenirken, boşluk koruma ve belge ağacında **XmlWhitespace** düğümleri oluşturma seçeneğini ayarlayabilirsiniz. Boşluk düğümleri oluşturmak için **PreserveWhitespace** özelliğini true olarak ayarlayın. Özelliği **false**olarak ayarlandıysa, varsayılan değer olan boşluk düğümleri oluşturulmaz. Önemli beyaz alanlar düğümleri her zaman korunur ve **XmlSignificantWhitespace** düğümleri her zaman bu verileri temsil etmek Için, **PreserveWhitespace** bayrağının ayarından bağımsız olarak her zaman bellekte oluşturulur.  
   
- Belge okuyucudan yüklenirse, ardından ayarıyla **PreserveWhitespace** özellik bayrağını **XmlDocument** sınıfı etkiler oluşturulmasını **XmlWhitespace** düğümleri yalnızca **WhitespaceHandling** özelliği **XmlTextReader** ayarlı değil **WhitespaceHandling.None**. Bu değeri **WhitespaceHandling** bu bayrağının ayarını üzerinde önceliklidir üzerinde okuyucu özelliği **XmlDocument**. Daha fazla bilgi için **XmlSignificantWhitespace**, bkz: <xref:System.Xml.XmlSignificantWhitespace>.  
+ Belge bir okuyucudan yüklenirse, **XmlDocument** sınıfında **PreserveWhitespace** bayrak özelliğinin ayarlanması yalnızca **XmlTextReader** üzerinde **WhitespaceHandling** özelliği **WhitespaceHandling. None**olarak ayarlanmamışsa **XmlWhitespace** düğümlerinin oluşturulmasını etkiler. Bu, okuyucudaki **WhitespaceHandling** özelliğinin değeridir. Bu, **XmlDocument**üzerindeki bu bayrağın ayarından önceliklidir. **XmlSignificantWhitespace**hakkında daha fazla bilgi için bkz. <xref:System.Xml.XmlSignificantWhitespace>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,16 +1,15 @@
 ---
 title: Sorgu C# programlama kılavuzunda öğe özelliklerinin alt kümelerini döndürme
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 1266b866d671854c787d907b91f654c128681de9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 27a2626fc46307a7195040adf746d8d8757d2f82
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970456"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714865"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Sorguda öğe özelliklerinin alt kümelerini döndürme (C# Programlama Kılavuzu)
 Bu koşulların her ikisi de geçerli olduğunda bir sorgu ifadesinde anonim bir tür kullanın:  
@@ -42,7 +41,7 @@ select new { First = student.FirstName, Last = student.LastName };
 Console.WriteLine(student.First + " " + student.Last);  
 ```  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
   
 Bu kodu çalıştırmak için, System. LINQ için `using` yönergesi ile C# sınıfı kopyalayıp bir konsol uygulamasına yapıştırın.
   

@@ -2,12 +2,12 @@
 title: XElement Sınıfına Genel Bakış
 ms.date: 07/20/2015
 ms.assetid: 52331fcd-6023-4d19-b423-7b24f2d86ded
-ms.openlocfilehash: ff751a14abf9a9cb5d64e44e601c5d0ca6218c7d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2e5a1e161345df39ff5c006f751fb293cad60510
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349317"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636672"
 ---
 # <a name="xelement-class-overview-visual-basic"></a>XElement sınıfına genel bakış (Visual Basic)
 <xref:System.Xml.Linq.XElement> sınıfı, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]temel sınıflardan biridir. Bir XML öğesini temsil eder. Bu sınıfı, öğeler oluşturmak için kullanabilirsiniz; öğenin içeriğini değiştirme; alt öğeleri ekleyin, değiştirin veya silin; özniteliği bir öğeye ekleyin; veya metin biçimindeki bir öğenin içeriğini seri hale getirme. Ayrıca, <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>ve <xref:System.Xml.Xsl.XslCompiledTransform>gibi <xref:System.Xml?displayProperty=nameWithType>diğer sınıflarla da birlikte kullanabilirsiniz.  
@@ -44,7 +44,7 @@ Dim contacts As XElement = _
     </Contacts>  
 ```  
   
- Bir XML ağacı oluşturmaya yönelik başka bir çok yaygın teknik, aşağıdaki örnekte gösterildiği gibi bir XML ağacını doldurmak için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgusunun sonuçlarının kullanılmasını içerir:  
+ Bir XML ağacı oluşturmaya yönelik başka bir çok yaygın teknik, aşağıdaki örnekte gösterildiği gibi bir XML ağacını doldurmak için bir LINQ sorgusunun sonuçlarının kullanılmasını içerir:  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -84,12 +84,12 @@ Console.WriteLine(xmlTree)
  Daha fazla bilgi için bkz. [XML ağaçlarını serileştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md).  
   
 ### <a name="retrieving-xml-data-via-axis-methods"></a>XML verilerini eksen yöntemleri aracılığıyla alma  
- Öznitelikleri, alt öğeleri, alt öğeleri ve üst öğeleri almak için eksen yöntemlerini kullanabilirsiniz. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları eksen yöntemleri üzerinde çalışır ve bir XML ağacı üzerinde gezinmek ve işlemek için çeşitli esnek ve güçlü yollar sunar.  
+ Öznitelikleri, alt öğeleri, alt öğeleri ve üst öğeleri almak için eksen yöntemlerini kullanabilirsiniz. LINQ sorguları eksen yöntemleri üzerinde çalışır ve bir XML ağacı üzerinde gezinmek ve işlemek için çeşitli esnek ve güçlü yollar sunar.  
   
  Daha fazla bilgi için bkz. [LINQ to XML eksenleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md).  
   
 ### <a name="querying-xml-trees"></a>XML Ağaçlarını Sorgulama  
- Bir XML ağacından veri çıkaran [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları yazabilirsiniz.  
+ XML ağacından veri çıkaran LINQ sorguları yazabilirsiniz.  
   
  Daha fazla bilgi için bkz. [XML ağaçlarını sorgulama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md).  
   

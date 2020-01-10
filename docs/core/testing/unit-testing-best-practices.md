@@ -4,13 +4,12 @@ description: .NET Core ve .NET Standard projeleri için Code Quality ve esnekli�
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.custom: seodec18
-ms.openlocfilehash: afd6e7e25573cbb571b225c263b9bcfccfca5647
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 387d66bfeaf48359a27a532247a799c319f38caa
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926380"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714293"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core ve .NET Standard ile birim testi en iyi uygulamaları
 
@@ -33,7 +32,7 @@ Gerileme hataları, uygulamada bir değişiklik yapıldığında ortaya çıkan 
 Birim testinde, her derlemeden sonra veya bir kod satırını değiştirdikten sonra bile tüm test paketlerinizi yeniden çalıştırmak mümkündür. Yeni kodunuzun mevcut işlevselliği bozmadığından emin olabilirsiniz.
 
 ### <a name="executable-documentation"></a>Yürütülebilir belge
-Belirli bir yöntemin ne yaptığını veya belirli bir giriş verilen bir girişi nasıl davranacağını her zaman açık olmayabilir. Kendinize şunları yapabilirsiniz: Boş bir dize geçirdiğimde bu yöntem nasıl davranır? Değer?
+Belirli bir yöntemin ne yaptığını veya belirli bir giriş verilen bir girişi nasıl davranacağını her zaman açık olmayabilir. Kendinize şunu sorabilirsiniz: boş bir dize geçirdiğimde bu yöntem nasıl davranır? Değer?
 
 Bir iyi adlı birim testi paketiniz olduğunda, her bir test, belirli bir giriş için beklenen çıktıyı açıkça açıklayabilmelidir. Ayrıca, aslında gerçekten çalıştığını doğrulayabilmelidir.
 
@@ -70,7 +69,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Bu, sahte olarak başvurulan bir saplama örneği olacaktır. Bu durumda, bir saplama olur. Siparişi, örneklendirilecek `Purchase` (test edilen sistem) bir yol olarak geçiriyoruz. Ad `MockOrder` aynı zamanda çok yanıltıcı olduğundan, sıra bir sahte değildir.
+Bu, sahte olarak başvurulan bir saplama örneği olacaktır. Bu durumda, bir saplama olur. Siparişi, `Purchase` (test altındaki sistem) örneklendirilecek bir yol olarak geçiriyoruz. `MockOrder` adı da çok yanıltıcı olduğundan, sıra bir sahte değildir.
 
 Daha iyi bir yaklaşım
 
@@ -83,7 +82,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Sınıfını olarak yeniden adlandırarak, `FakeOrder`sınıfı çok daha genel hale getirdiğiniz için sınıf, bir sahte veya saplama olarak kullanılabilir. Test çalışması için ne olursa daha iyidir. Yukarıdaki örnekte, `FakeOrder` bir saplama olarak kullanılır. Onaylama sırasında herhangi bir şekil `FakeOrder` veya formda öğesini kullanmıyoruz. `FakeOrder`, oluşturucunun gereksinimlerini karşılamak için `Purchase` yalnızca sınıfa geçildi.
+Sınıfı `FakeOrder`olarak yeniden adlandırarak, sınıfı çok daha genel hale getirdiğiniz için sınıf, bir sahte veya saplama olarak kullanılabilir. Test çalışması için ne olursa daha iyidir. Yukarıdaki örnekte `FakeOrder` bir saplama olarak kullanılır. Onaylama sırasında herhangi bir şekil veya formda `FakeOrder` kullanmıyoruz. `FakeOrder`, oluşturucunun gereksinimlerini karşılamak için `Purchase` sınıfına geçildi.
 
 Bunu bir sahte olarak kullanmak için şöyle bir şey yapabilirsiniz
 
@@ -96,7 +95,7 @@ purchase.ValidateOrders();
 Assert.True(mockOrder.Validated);
 ```
 
-Bu durumda, bir özelliği sahte (buna karşı) olarak denetlemekte, yukarıdaki kod parçacığında `mockOrder` bir sahte olur.
+Bu durumda, bir özelliği sahte (buna karşı ele alınır) olarak denetlemekte, yukarıdaki kod parçacığında `mockOrder` bir sahte olur.
 
 > [!IMPORTANT]
 > Bu terminolojinin doğru olması önemlidir. Saplailerinizi "izlerinizi" çağırırsanız, diğer geliştiriciler sizin amacınızla ilgili yanlış varsayımlar yapar.
@@ -118,7 +117,7 @@ Testinizin adı üç bölümden oluşmalıdır:
 
 Testler yalnızca kodunuzun çalıştığından emin olmanızı sağlamaktan daha fazla. Yalnızca birim testleri paketine bakarak, kodun kendisini araymaksızın bile kodunuzun davranışını çıkarsanbilmelisiniz. Ayrıca, testler başarısız olduğunda, beklentilerinizi tam olarak hangi senaryoların karşılayabileceğini görebilirsiniz.
 
-#### <a name="bad"></a>Hatalı
+#### <a name="bad"></a>Kötü:
 [!code-csharp[BeforeNaming](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeNaming)]
 
 #### <a name="better"></a>Görünmesi
@@ -138,7 +137,7 @@ Birim testi yaparken, **düzenleme, Yasası, onaylama** ortak bir modeldir. Adı
 
 Okunabilirlik, bir testi yazarken en önemli yönlerden biridir. Test içindeki bu eylemlerin her birini, kodunuzun çağrılması için gereken bağımlılıkları, kodunuzun nasıl çağrılacağını ve ne yapmaya çalıştığınız hakkında açık bir şekilde vurgulayın. Bazı adımları birleştirmek ve testinizin boyutunu azaltmak mümkün olsa da, birincil hedef, testi mümkün olduğunca okunabilir hale getirmek olacaktır.
 
-#### <a name="bad"></a>Hatalı
+#### <a name="bad"></a>Kötü:
 [!code-csharp[BeforeArranging](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeArranging)]
 
 #### <a name="better"></a>Görünmesi
@@ -154,7 +153,7 @@ Bir birim testinde kullanılacak giriş, şu anda sınamakta olduğunuz davranı
 
 Testi geçirmek için gerekenden daha fazla bilgi içeren testlerin, teste hata ekleme şansı daha yüksektir ve testin amacını daha az net hale getirebilirsiniz. Testleri yazarken, davranışa odaklanmak istediğiniz zaman. Modellerdeki ek özellikleri ayarlama veya gerekmediği zaman sıfır olmayan değerler kullanma, yalnızca kanıtlamaya çalıştığınız kadar olan özelliklerden arının.
 
-#### <a name="bad"></a>Hatalı
+#### <a name="bad"></a>Kötü:
 [!code-csharp[BeforeMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
 
 #### <a name="better"></a>Görünmesi
@@ -173,7 +172,7 @@ Sihirli dizeler, testlerinizin okuyucularına karışmasına neden olabilir. Bir
 > [!TIP] 
 > Testleri yazarken, mümkün olduğunca çok amaç ifade etmeniz gerekir. Sihirli dizeler söz konusu olduğunda, bu değerleri sabitlere atamak iyi bir yaklaşımdır.
 
-#### <a name="bad"></a>Hatalı
+#### <a name="bad"></a>Kötü:
 [!code-csharp[BeforeMagicString](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMagicString)]
 
 #### <a name="better"></a>Görünmesi
@@ -192,7 +191,7 @@ Test paketiniz için mantık tanıdığınızda, hataya bir hata tanıtma olası
 > [!TIP]
 > Testinizin mantığı kaçınılmaz görünüyorsa, testi iki veya daha fazla farklı teste bölmeyi göz önünde bulundurun.
 
-#### <a name="bad"></a>Hatalı
+#### <a name="bad"></a>Kötü:
 [!code-csharp[LogicInTests](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#LogicInTests)]
 
 #### <a name="better"></a>Görünmesi
@@ -207,12 +206,12 @@ Testleriniz için benzer bir nesne veya durum gerekiyorsa, kurulum ve Tearı öz
 - Verilen test için çok fazla veya çok az olma olasılığı daha düşüktür.
 - Aralarında istenmeyen bağımlılıklar oluşturan testler arasında durum paylaşma şansı daha düşüktür.
 
-Birim testi çerçeveleri ' nde `Setup` , test paketinizdeki her bir ve her birim testinin önünde çağrılır. Bazıları bunu yararlı bir araç olarak görebilir, ancak testleri okumak için genellikle önde gelen ve zor olacak şekilde sona erer. Her test, testi çalıştırmak ve çalıştırmak için genellikle farklı gereksinimlere sahip olur. Ne yazık `Setup` ki, her test için tam olarak aynı gereksinimleri kullanmanıza zorlar.
+Birim testi çerçeveleri ' nde, `Setup` her bir test paketinizde ve her birim testinin önüne çağırılır. Bazıları bunu yararlı bir araç olarak görebilir, ancak testleri okumak için genellikle önde gelen ve zor olacak şekilde sona erer. Her test, testi çalıştırmak ve çalıştırmak için genellikle farklı gereksinimlere sahip olur. Ne yazık ki, `Setup` her test için tam olarak aynı gereksinimleri kullanmanıza zorlar.
 
 > [!NOTE] 
 > xUnit, sürüm 2. x itibariyle kurulum ve test düzeyini kaldırdı
 
-#### <a name="bad"></a>Hatalı
+#### <a name="bad"></a>Kötü:
 [!code-csharp[BeforeSetup](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeSetup)]
 
 ```csharp
@@ -247,7 +246,7 @@ Bir test çalışması için birden fazla onay tanıtımı yaparken, tüm Onayla
 > [!NOTE]
 > Bu kural için genel bir özel durum, bir nesneye yönelik olarak ele geçmiştir. Bu durumda, nesnenin içinde olmasını istediğiniz durumda olduğundan emin olmak için her bir özelliğe karşı birden fazla onay sağlamak kabul edilebilir.
 
-#### <a name="bad"></a>Hatalı
+#### <a name="bad"></a>Kötü:
 [!code-csharp[BeforeMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
 
 #### <a name="better"></a>Görünmesi
@@ -271,9 +270,9 @@ private string TrimInput(string input)
 }
 ```
 
-Yöntemin beklendiği gibi çalıştığından emin olmak istediğiniz için `TrimInput` ilk yeniden eyleminiz bir test yazmaya başlayabilir. Ancak, `ParseLogLine` `sanitizedInput` bu şekilde, bir testi `TrimInput` gereksiz bir şekilde işlemek için beklenmez. 
+Metodun beklendiği gibi çalıştığından emin olmak istediğiniz için, ilk yeniden eyleminiz `TrimInput` bir test yazmaya başlayabilir. Ancak, `ParseLogLine` `sanitizedInput`, bir testi beklemediği bir şekilde `TrimInput`, hiçbir şekilde kullanılamaz. 
 
-Gerçek test `ParseLogLine` , en sonunda ilgilenmelisiniz çünkü bu, son önem verdiğiniz şeydir. 
+Gerçek test, en sonunda ilgilenmelisiniz çünkü `ParseLogLine` genel kullanıma yönelik yönteme karşı yapılmalıdır. 
 
 ```csharp
 public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
@@ -289,7 +288,7 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 Bu görüş açısından, özel bir yöntem görürseniz ortak yöntemi bulun ve testlerinizi bu yönteme göre yazın. Özel bir yöntem beklenen sonucu döndürdüğünden, sonuçta özel yöntemi çağıran sistem sonucu doğru bir şekilde kullanır.
 
 ### <a name="stub-static-references"></a>Saplama statik başvuruları
-Bir birim testinin prensipleri, test altındaki sistem üzerinde tam denetime sahip olması gerekir. Bu, üretim kodu statik başvurulara çağrı içerdiğinde (ör. `DateTime.Now`) sorunlu olabilir. Aşağıdaki kodu göz önünde bulundurun
+Bir birim testinin prensipleri, test altındaki sistem üzerinde tam denetime sahip olması gerekir. Bu, üretim kodu statik başvurulara çağrı içerdiğinde (örn. `DateTime.Now`) sorunlu olabilir. Aşağıdaki kodu göz önünde bulundurun
 
 ```csharp
 public int GetDiscountedPrice(int price)
@@ -379,4 +378,4 @@ public void GetDiscountedPrice_OnTuesday_ReturnsHalfPrice()
 }
 ```
 
-Artık test paketinin üzerinde `DateTime.Now` tam denetimi vardır ve yöntemine çağrı yapıldığında herhangi bir değer bulunabilir.
+Artık test paketi `DateTime.Now` üzerinde tam denetime sahiptir ve yöntemine çağrı yapıldığında herhangi bir değer üzerinde bulunabilir.

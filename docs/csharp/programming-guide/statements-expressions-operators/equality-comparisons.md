@@ -1,16 +1,15 @@
 ---
 title: Eşitlik karşılaştırmaları- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: a6876cb98a8c1b1e58e61eb650416d412467ae3d
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d8dc1fd9ba99116d4d6ec84ca6e48b4307b30dbb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552416"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75699190"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Eşitlik karşılaştırmaları (C# Programlama Kılavuzu)
 
@@ -24,7 +23,7 @@ Her zaman eşitlik için iki değeri karşılaştırmak gereklidir. Bazı duruml
   
  Bu kodda, iki nesne oluşturulur, ancak atama ifadesinden sonra, her iki başvuru da aynı nesneye başvurur. Bu nedenle, başvuru eşitliği vardır. İki başvuruyu aynı nesneye başvurmadığını öğrenmek için <xref:System.Object.ReferenceEquals%2A> yöntemini kullanın.  
   
- Başvuru eşitliği kavramı yalnızca başvuru türleri için geçerlidir. Değer türünün bir örneği bir değişkene atandığında, değerin bir kopyası yapıldığında değer türü nesnelerinin başvuru eşitliği olamaz. Bu nedenle, bellekte aynı konuma başvuran iki kutulanmış yapı olamaz. Ayrıca, iki değer türünü karşılaştırmak için <xref:System.Object.ReferenceEquals%2A> kullanırsanız, nesnelerde yer alan değerler aynı olsa bile sonuç her zaman `false`olur. Bunun nedeni, her değişkenin ayrı bir nesne örneğinde paketlenme örneğidir. Daha fazla bilgi için bkz. [nasıl yapılır: başvuru eşitliği testi (kimlik)](./how-to-test-for-reference-equality-identity.md).  
+Başvuru eşitliği kavramı yalnızca başvuru türleri için geçerlidir. Değer türünün bir örneği bir değişkene atandığında, değerin bir kopyası yapıldığında değer türü nesnelerinin başvuru eşitliği olamaz. Bu nedenle, bellekte aynı konuma başvuran iki kutulanmış yapı olamaz. Ayrıca, iki değer türünü karşılaştırmak için <xref:System.Object.ReferenceEquals%2A> kullanırsanız, nesnelerde yer alan değerler aynı olsa bile sonuç her zaman `false`olur. Bunun nedeni, her değişkenin ayrı bir nesne örneğinde paketlenme örneğidir. Daha fazla bilgi için bkz. [başvuru eşitlik için test etme (kimlik)](./how-to-test-for-reference-equality-identity.md).
 
 ## <a name="value-equality"></a>Değer eşitlik
 
@@ -43,7 +42,7 @@ if( b == a)
   
  Çoğu diğer tür için, değer eşitlik testi, türün onu nasıl tanımladığını anladığından emin olmanızı gerektirdiğinden daha karmaşıktır. Birden çok alanı veya özelliği olan sınıflar ve yapılar için, değer eşitlik genellikle tüm alanların veya özelliklerin aynı değere sahip olduğu anlamına gelir. Örneğin, pointA. X, pointB. X ve pointA. Y ' ye eşitse, iki `Point` nesne eşdeğer olacak şekilde tanımlanabilir. y öğesine eşittir.  
   
- Ancak, bir tür içindeki tüm alanları temel alan denklik gereksinimi yoktur. Bir alt kümeyi temel alabilir. Sahip olmadığınız türleri karşılaştırdığınızda, bu tür için denkliğin nasıl tanımlandığını anladığınızdan emin olmalısınız. Kendi sınıflarınızda ve yapılarda değer eşitliğini tanımlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: tür Için değer eşitliği tanımlama](./how-to-define-value-equality-for-a-type.md).  
+Ancak, bir tür içindeki tüm alanları temel alan denklik gereksinimi yoktur. Bir alt kümeyi temel alabilir. Sahip olmadığınız türleri karşılaştırdığınızda, bu tür için denkliğin nasıl tanımlandığını anladığınızdan emin olmalısınız. Kendi sınıflarınızda ve yapılarda değer eşitliğini tanımlama hakkında daha fazla bilgi için, bkz. [bir tür için değer eşitliği tanımlama](./how-to-define-value-equality-for-a-type.md).
   
 ### <a name="value-equality-for-floating-point-values"></a>Kayan nokta değerleri için değer eşitliği
 
@@ -53,8 +52,8 @@ if( b == a)
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Nasıl yapılır: Başvuru Eşitliği Testi (Kimlik)](./how-to-test-for-reference-equality-identity.md)|İki değişkenin başvuru eşitlik içerip içermediğini nasıl belirleyebileceğinizi açıklar.|  
-|[Nasıl yapılır: Tür için Değer Eşitliği Tanımlama](./how-to-define-value-equality-for-a-type.md)|Bir tür için bir özel değer eşitlik tanımı sağlamayı açıklar.|  
+|[Başvuru eşitliği testi (kimlik)](./how-to-test-for-reference-equality-identity.md)|İki değişkenin başvuru eşitlik içerip içermediğini nasıl belirleyebileceğinizi açıklar.|  
+|[Bir tür için değer eşitliği tanımlama](./how-to-define-value-equality-for-a-type.md)|Bir tür için bir özel değer eşitlik tanımı sağlamayı açıklar.|  
 |[C# Programlama Kılavuzu](../index.md)|.NET Framework C# C# aracılığıyla kullanılabilecek önemli dil özellikleri ve özellikleri hakkında ayrıntılı bilgi için bağlantılar sağlar.|  
 |[Türler](../types/index.md)|C# Tür sistemi ve ek bilgilerin bağlantıları hakkında bilgi sağlar.|  
   

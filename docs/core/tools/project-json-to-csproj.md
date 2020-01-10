@@ -1,27 +1,26 @@
 ---
-title: Project.JSON ile csproj karşılaştırma
-description: Project.json ile csproj öğeleri arasında bir eşleme bakın.
+title: Project. JSON ve csproj karşılaştırması
+description: Project. JSON ve csproj öğeleri arasındaki eşlemeyi görüntüleyin.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.custom: seodec18
-ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647365"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714130"
 ---
-# <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Project.json ile csproj özellikleri arasında bir eşleme
+# <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Project. JSON ve csproj özellikleri arasındaki eşleme
 
-Tarafından [Nate McMaster](https://github.com/natemcmaster)
+[Nate McMaster](https://github.com/natemcmaster) tarafından
 
-.NET Core araçları geliştirme sırasında artık desteklemek için bir önemli tasarım değişikliğin yapıldığı *project.json* dosyaları ve bunun yerine .NET Core projeleri için MSBuild/csproj biçimine taşıyın.
+.NET Core araçları 'nın geliştirilmesi sırasında, artık *Project. JSON* dosyalarını desteklemeyen önemli bir tasarım değişikliği yapılmıştır ve bunun yerine .NET Core projelerini MSBuild/csproj biçimine taşıyın.
 
-Bu makale nasıl ayarlarında *project.json* yeni biçimini kullanın ve projenize yükseltirken yükseltme araçları tarafından yapılan değişiklikleri anlama hakkında bilgi edinmek için MSBuild/csproj biçimde temsil edilir araç en son sürümü.
+Bu makalede, Project *. JSON* Içindeki ayarların MSBuild/csproj biçiminde nasıl temsil edildiği gösterilmektedir, böylece yeni biçimin nasıl kullanılacağını ve projenizi araçların en son sürümüne yükseltirken geçiş araçlarının yaptığı değişiklikleri nasıl anlayabileceğinizi öğrenebilirsiniz.
 
-## <a name="the-csproj-format"></a>Csproj biçimine
+## <a name="the-csproj-format"></a>Csproj biçimi
 
-Yeni biçim \*.csproj, XML tabanlı bir biçim olduğu. Aşağıdaki örnek, gösterir kullanarak bir .NET Core proje kök düğümü `Microsoft.NET.Sdk`. Web projeleri için kullanılan SDK şeklindedir `Microsoft.NET.Sdk.Web`.
+Yeni biçim olan \*. csproj, XML tabanlı bir biçimdir. Aşağıdaki örnek, `Microsoft.NET.Sdk`kullanarak bir .NET Core projesinin kök düğümünü gösterir. Web projeleri için kullanılan SDK `Microsoft.NET.Sdk.Web`.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -29,9 +28,9 @@ Yeni biçim \*.csproj, XML tabanlı bir biçim olduğu. Aşağıdaki örnek, gö
 </Project>
 ```
 
-## <a name="common-top-level-properties"></a>Ortak bir üst düzey özellikler
+## <a name="common-top-level-properties"></a>Ortak en üst düzey Özellikler
 
-### <a name="name"></a>name
+### <a name="name"></a>{1&gt;name&lt;1}
 
 ```json
 {
@@ -39,9 +38,9 @@ Yeni biçim \*.csproj, XML tabanlı bir biçim olduğu. Aşağıdaki örnek, gö
 }
 ```
 
-Artık desteklenmiyor. Csproj Bu genellikle dizin adı ile eşleşen proje dosya adı tarafından belirlenir. Örneğin: `MyProjectName.csproj`
+Artık desteklenmiyor. Csproj içinde, bu, genellikle dizin adıyla eşleşen proje dosya adı tarafından belirlenir. Örneğin: `MyProjectName.csproj`.
 
-Varsayılan olarak, proje dosya adına ayrıca değerini belirtir. `<AssemblyName>` ve `<PackageId>` özellikleri.
+Varsayılan olarak, proje dosya adı `<AssemblyName>` ve `<PackageId>` özelliklerinin değerini de belirtir.
 
 ```xml
 <PropertyGroup>
@@ -50,10 +49,10 @@ Varsayılan olarak, proje dosya adına ayrıca değerini belirtir. `<AssemblyNam
 </PropertyGroup>
 ```
 
-`<AssemblyName>` Değerinden farklı bir değere sahip `<PackageId>` varsa `buildOptions\outputName` özelliği, project.json içinde tanımlandı.
-Daha fazla bilgi için [diğer ortak yapı seçeneklerini](#other-common-build-options).
+`<AssemblyName>`, Project. JSON içinde `buildOptions\outputName` özelliği tanımlanmışsa `<PackageId>` farklı bir değere sahip olacaktır.
+Daha fazla bilgi için bkz. [diğer ortak derleme seçenekleri](#other-common-build-options).
 
-### <a name="version"></a>sürüm
+### <a name="version"></a>sürümü
 
 ```json
 {
@@ -61,7 +60,7 @@ Daha fazla bilgi için [diğer ortak yapı seçeneklerini](#other-common-build-o
 }
 ```
 
-Kullanım `VersionPrefix` ve `VersionSuffix` özellikleri:
+`VersionPrefix` ve `VersionSuffix` özelliklerini kullanın:
 
 ```xml
 <PropertyGroup>
@@ -70,7 +69,7 @@ Kullanım `VersionPrefix` ve `VersionSuffix` özellikleri:
 </PropertyGroup>
 ```
 
-Ayrıca `Version` özelliği, ancak bu geçersiz sürüm ayarlarını paketleme sırasında:
+`Version` özelliğini de kullanabilirsiniz, ancak bu durum paketleme sırasında sürüm ayarlarını geçersiz kılabilir:
 
 ```xml
 <PropertyGroup>
@@ -78,7 +77,7 @@ Ayrıca `Version` özelliği, ancak bu geçersiz sürüm ayarlarını paketleme 
 </PropertyGroup>
 ```
 
-### <a name="other-common-root-level-options"></a>Diğer ortak kök düzeyinde seçenekleri
+### <a name="other-common-root-level-options"></a>Diğer genel kök düzeyi seçenekleri
 
 ```json
 {
@@ -105,7 +104,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="frameworks"></a>Çerçeveler
+## <a name="frameworks"></a>çerçeveleri
 
 ### <a name="one-target-framework"></a>Bir hedef çerçeve
 
@@ -134,7 +133,7 @@ And it's really great!</Description>
 }
 ```
 
-Kullanım `TargetFrameworks` hedef çerçeve listesini tanımlamak için özellik. Framework değerleri birbirinden ayırmak için noktalı virgül kullanın.
+Hedef çerçeveler listenizi tanımlamak için `TargetFrameworks` özelliğini kullanın. Birden çok Framework değerini ayırmak için noktalı virgül kullanın.
 
 ```xml
 <PropertyGroup>
@@ -145,10 +144,10 @@ Kullanım `TargetFrameworks` hedef çerçeve listesini tanımlamak için özelli
 ## <a name="dependencies"></a>bağımlılıklar
 
 > [!IMPORTANT]
-> Bağımlılık ise bir **proje** ve bir paket biçimi farklıdır.
-> Daha fazla bilgi için [bağımlılık türü](#dependency-type) bölümü.
+> Bağımlılık bir paket değil bir **projem** ise, biçim farklıdır.
+> Daha fazla bilgi için [bağımlılık türü](#dependency-type) bölümüne bakın.
 
-### <a name="netstandardlibrary-metapackage"></a>NETStandard.Library metapackage
+### <a name="netstandardlibrary-metapackage"></a>NETStandard. Library meta paketi
 
 ```json
 {
@@ -164,7 +163,7 @@ Kullanım `TargetFrameworks` hedef çerçeve listesini tanımlamak için özelli
 </PropertyGroup>
 ```
 
-### <a name="microsoftnetcoreapp-metapackage"></a>Microsoft.NETCore.App metapackage
+### <a name="microsoftnetcoreapp-metapackage"></a>Microsoft. NETCore. app metapackage
 
 ```json
 {
@@ -180,9 +179,9 @@ Kullanım `TargetFrameworks` hedef çerçeve listesini tanımlamak için özelli
 </PropertyGroup>
 ```
 
-Unutmayın `<RuntimeFrameworkVersion>` geçirilen Proje değeri, SDK'sı yüklü olan sürümü tarafından belirlenir.
+Geçirilen projedeki `<RuntimeFrameworkVersion>` değerinin yüklediğiniz SDK sürümü tarafından belirlendiğini unutmayın.
 
-### <a name="top-level-dependencies"></a>Üst düzey bağımlılıkları
+### <a name="top-level-dependencies"></a>Üst düzey bağımlılıklar
 
 ```json
 {
@@ -198,7 +197,7 @@ Unutmayın `<RuntimeFrameworkVersion>` geçirilen Proje değeri, SDK'sı yüklü
 </ItemGroup>
 ```
 
-### <a name="per-framework-dependencies"></a>Çerçeve başına bağımlılıklarını
+### <a name="per-framework-dependencies"></a>Çerçeve başına bağımlılıklar
 
 ```json
 {
@@ -254,9 +253,9 @@ Unutmayın `<RuntimeFrameworkVersion>` geçirilen Proje değeri, SDK'sı yüklü
 </ItemGroup>
 ```
 
-### <a name="dependency-type"></a>Bağımlılık türü
+### <a name="dependency-type"></a>bağımlılık türü
 
-#### <a name="type-project"></a>Tür: Proje
+#### <a name="type-project"></a>Tür: proje
 
 ```json
 {
@@ -277,7 +276,7 @@ Unutmayın `<RuntimeFrameworkVersion>` geçirilen Proje değeri, SDK'sı yüklü
 ```
 
 > [!NOTE]
-> Bu şekilde çalışmamasına neden olur, `dotnet pack --version-suffix $suffix` bir proje başvurusu bağımlılık sürümünü belirler.
+> Bu, `dotnet pack --version-suffix $suffix` bir proje başvurusunun bağımlılık sürümünü belirleyen yolunu ortadan keser.
 
 #### <a name="type-build"></a>Tür: derleme
 
@@ -311,9 +310,9 @@ Unutmayın `<RuntimeFrameworkVersion>` geçirilen Proje değeri, SDK'sı yüklü
 }
 ```
 
-Csproj'a eşdeğeri yoktur.
+Csproj içinde eşdeğer değildir.
 
-## <a name="runtimes"></a>Çalışma zamanları
+## <a name="runtimes"></a>zamanları
 
 ```json
 {
@@ -331,14 +330,14 @@ Csproj'a eşdeğeri yoktur.
 </PropertyGroup>
 ```
 
-### <a name="standalone-apps-self-contained-deployment"></a>Tek başına uygulamaları (müstakil dağıtım)
+### <a name="standalone-apps-self-contained-deployment"></a>Tek başına uygulamalar (otomatik olarak kapsanan dağıtım)
 
-Project.json'da, tanımlayan bir `runtimes` uygulama olan sırasında tek başına bölüm anlamına gelir oluşturun ve yayınlayın.
-Msbuild'de, tüm projeleri, *taşınabilir* yapı sırasında ancak bağımsız yayımlanabilir.
+Project. JSON içinde, bir `runtimes` bölümü tanımlamak, uygulamanın oluşturma ve yayımlama sırasında tek başına olduğu anlamına gelir.
+MSBuild 'de, tüm projeler derleme sırasında *Taşınabilir* , ancak tek başına olarak yayımlanabilir.
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
-Daha fazla bilgi için [müstakil dağıtımlar (SCD)](../deploying/index.md#self-contained-deployments-scd).
+Daha fazla bilgi için bkz. [kendi içindeki dağıtımlar (SCD)](../deploying/index.md#self-contained-deployments-scd).
 
 ## <a name="tools"></a>araçlar
 
@@ -357,11 +356,11 @@ Daha fazla bilgi için [müstakil dağıtımlar (SCD)](../deploying/index.md#sel
 ```
 
 > [!NOTE]
-> `imports` Araçları csproj içinde desteklenmez. İçeri aktarmalar gereken Araçlar yeni çalışmaz `Microsoft.NET.Sdk`.
+> `imports` araçları, csproj 'da desteklenmez. İçeri aktarmalar gerektiren araçlar yeni `Microsoft.NET.Sdk`çalışmaz.
 
-## <a name="buildoptions"></a>buildOptions
+## <a name="buildoptions"></a>Buildoseçenekleri
 
-Ayrıca bkz: [dosyaları](#files).
+Ayrıca bkz. [dosyalar](#files).
 
 ### <a name="emitentrypoint"></a>emitEntryPoint
 
@@ -379,7 +378,7 @@ Ayrıca bkz: [dosyaları](#files).
 </PropertyGroup>
 ```
 
-Varsa `emitEntryPoint` olduğu `false`, değerini `OutputType` dönüştürülür `Library`, varsayılan değer olan:
+`emitEntryPoint` `false`, `OutputType` değeri, varsayılan değer olan `Library`' a dönüştürülür:
 
 ```json
 {
@@ -396,7 +395,7 @@ Varsa `emitEntryPoint` olduğu `false`, değerini `OutputType` dönüştürülü
 </PropertyGroup>
 ```
 
-### <a name="keyfile"></a>KeyFile
+### <a name="keyfile"></a>Dosyasına
 
 ```json
 {
@@ -406,7 +405,7 @@ Varsa `emitEntryPoint` olduğu `false`, değerini `OutputType` dönüştürülü
 }
 ```
 
-`keyFile` Üç özellik msbuild'de öğe genişletir:
+`keyFile` öğesi MSBuild 'te üç özelliğe genişletilir:
 
 ```xml
 <PropertyGroup>
@@ -448,9 +447,9 @@ Varsa `emitEntryPoint` olduğu `false`, değerini `OutputType` dönüştürülü
 
 ## <a name="packoptions"></a>packOptions
 
-Ayrıca bkz: [dosyaları](#files).
+Ayrıca bkz. [dosyalar](#files).
 
-### <a name="common-pack-options"></a>Ortak paketi seçenekleri
+### <a name="common-pack-options"></a>Ortak paket seçenekleri
 
 ```json
 {
@@ -486,8 +485,8 @@ Ayrıca bkz: [dosyaları](#files).
 </PropertyGroup>
 ```
 
-İçin eşdeğeri yoktur `owners` msbuild'de öğe.
-İçin `summary`, MSBuild kullanabilirsiniz `<Description>` özelliği olsa bile değerini `summary` bu özellik eşlendiği olduğundan bu özellik için otomatik olarak taşınmaz [ `description` ](#other-common-root-level-options) öğesi.
+MSBuild içinde `owners` öğesi için eşdeğer yok.
+`summary`, bu özellik [`description`](#other-common-root-level-options) öğesiyle eşlendiğinden, `summary` değeri bu özelliğe otomatik olarak geçirilmese de, MSBuild `<Description>` özelliğini kullanabilirsiniz.
 
 ## <a name="scripts"></a>betikler
 
@@ -500,7 +499,7 @@ Ayrıca bkz: [dosyaları](#files).
 }
 ```
 
-MSBuild eşdeğeri olan [hedefleri](/visualstudio/msbuild/msbuild-targets):
+MSBuild 'teki eşdeğeri [hedefler](/visualstudio/msbuild/msbuild-targets):
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -529,7 +528,7 @@ MSBuild eşdeğeri olan [hedefleri](/visualstudio/msbuild/msbuild-targets):
 }
 ```
 
-Bu gruptaki "System.GC.Server" özelliği dışında tüm ayarlar adlı bir dosyaya yerleştirilir *runtimeconfig.template.json* proje klasöründeki kök nesnesi için geçiş işlemi sırasında yükseltilmiş seçenekleri:
+Bu gruptaki "System. GC. Server" özelliği hariç tüm ayarlar, proje klasöründe *runtimeconfig. Template. JSON* adlı bir dosyaya yerleştirilir ve bu işlem, geçiş işlemi sırasında kök nesnesine yükseltilmemiş seçenekleridir:
 
 ```json
 {
@@ -542,7 +541,7 @@ Bu gruptaki "System.GC.Server" özelliği dışında tüm ayarlar adlı bir dosy
 }
 ```
 
-"System.GC.Server" özelliği csproj dosyasına geçirilir:
+"System. GC. Server" özelliği csproj dosyasına geçirilir:
 
 ```xml
 <PropertyGroup>
@@ -550,7 +549,7 @@ Bu gruptaki "System.GC.Server" özelliği dışında tüm ayarlar adlı bir dosy
 </PropertyGroup>
 ```
 
-Ancak, bu değerleri csproj yanı sıra MSBuild özellikleri ayarlayabilirsiniz:
+Bununla birlikte, csproj içindeki tüm değerleri ve MSBuild özelliklerini de ayarlayabilirsiniz:
 
 ```xml
 <PropertyGroup>
@@ -570,13 +569,13 @@ Ancak, bu değerleri csproj yanı sıra MSBuild özellikleri ayarlayabilirsiniz:
 }
 ```
 
-Csproj içinde desteklenmiyor. Bunun yerine oluşturmalısınız içerik dosyalarına dahil, *.nuspec* dosya.
-Daha fazla bilgi için [içerik dosyaları dahil olmak üzere](/nuget/schema/nuspec#including-content-files).
+Csproj içinde desteklenmez. Bunun yerine, *. nuspec* dosyanızdaki içerik dosyalarını ekle ' nin oluşturulması gerekir.
+Daha fazla bilgi için bkz. [içerik dosyaları ekleme](/nuget/schema/nuspec#including-content-files).
 
 ## <a name="files"></a>dosyaları
 
-İçinde *project.json*, derleme ve paketi genişletilmiş derlenip başka klasörlerinden ekleme.
-Msbuild'de yapıldığını kullanarak [öğeleri](/visualstudio/msbuild/common-msbuild-project-items). Aşağıdaki örnek bir ortak bir dönüştürmedir:
+*Project. JSON*içinde derleme ve paketleme farklı klasörlerden derlenmesi ve katıştırılması için genişletilebilir.
+MSBuild 'te bu, [öğeler](/visualstudio/msbuild/common-msbuild-project-items)kullanılarak yapılır. Aşağıdaki örnek ortak bir dönüştürmedir:
 
 ```json
 {
@@ -622,19 +621,19 @@ Msbuild'de yapıldığını kullanarak [öğeleri](/visualstudio/msbuild/common-
 ```
 
 > [!NOTE]
-> Varsayılan birçok [Glob desenlerinin](https://en.wikipedia.org/wiki/Glob_(programming)) .NET Core SDK'sı tarafından otomatik olarak eklenir.
-> Daha fazla bilgi için [varsayılan derleme öğe değerleri](https://aka.ms/sdkimplicititems).
+> Varsayılan [Glob desenlerinin](https://en.wikipedia.org/wiki/Glob_(programming)) birçoğu .NET Core SDK tarafından otomatik olarak eklenir.
+> Daha fazla bilgi için bkz. [varsayılan derleme öğesi değerleri](https://aka.ms/sdkimplicititems).
 
-Tüm MSBuild `ItemGroup` öğeleri Destek `Include`, `Exclude`, ve `Remove`.
+Tüm MSBuild `ItemGroup` öğeleri `Include`, `Exclude`ve `Remove`destekler.
 
-Paket düzeni .nupkg içinde değiştirilebilir `PackagePath="path"`.
+. Nupkg içindeki paket düzeni `PackagePath="path"`ile değiştirilebilir.
 
-Dışında `Content`, açıkça ekleme çoğu öğesi grupları iste `Pack="true"` pakete dahil edilecek. `Content` yerleştirilir *içeriği* MSBuild sonrasında bir paket klasörüne `<IncludeContentInPack>` özelliği `true` varsayılan olarak.
-Daha fazla bilgi için [bir içerik paketine](/nuget/schema/msbuild-targets#including-content-in-a-package).
+`Content`haricinde çoğu öğe grubu, pakete dahil edilecek `Pack="true"` açıkça eklenmesini gerektirir. MSBuild `<IncludeContentInPack>` özelliği varsayılan olarak `true` olarak ayarlandığı için `Content` bir paketin *içerik* klasörüne yerleştirilir.
+Daha fazla bilgi için bkz. [bir paketteki Içerik ekleme](/nuget/schema/msbuild-targets#including-content-in-a-package).
 
-`PackagePath="%(Identity)"` Proje göreli dosya yolu için paket yolu ayarlama, kısa bir yoludur.
+`PackagePath="%(Identity)"`, paket yolunu proje göreli dosya yoluna ayarlamanın kısa bir yoludur.
 
-## <a name="testrunner"></a>testRunner
+## <a name="testrunner"></a>TestRunner belirtilmelidir
 
 ### <a name="xunit"></a>xUnit
 
@@ -676,4 +675,4 @@ Daha fazla bilgi için [bir içerik paketine](/nuget/schema/msbuild-targets#incl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CLI değişiklikleri üst düzey genel bakış](../tools/cli-msbuild-architecture.md)
+- [CLı 'deki değişikliklere üst düzey genel bakış](../tools/cli-msbuild-architecture.md)

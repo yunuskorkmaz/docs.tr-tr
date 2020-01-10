@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 09c3c57f3ac1009416a5c67b37c035fe30cd5b5e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5e8c27d017ed4bf8a7dcc2dda18877c9ed8dba69
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425335"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636347"
 ---
 # <a name="structured-navigation-overview"></a>Yapılandırılmış Gezintiye Genel Bakış
 
@@ -135,7 +135,7 @@ Aşağıdaki kod, çağrılan sayfanın örneğini oluşturmak ve bir ilk dize d
 
   - <xref:System.Windows.Application.Properties%2A>depolanan parametreleri alın ve kullanın.
 
-Ancak, kısa bir süre içinde gördüğünüz gibi, çağrılan sayfada döndürülen verileri toplamak için kod örneğini kullanmanız ve çağrılan sayfaya gitmeniz gerekir. Bu nedenle, <xref:System.Windows.Navigation.PageFunction%601> canlı tutulması gerekir; Aksi takdirde, <xref:System.Windows.Navigation.PageFunction%601>bir sonraki sefer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], parametresiz oluşturucuyu kullanarak <xref:System.Windows.Navigation.PageFunction%601> örneğini oluşturur.
+Ancak, kısa bir süre içinde gördüğünüz gibi, çağrılan sayfada döndürülen verileri toplamak için kod örneğini kullanmanız ve çağrılan sayfaya gitmeniz gerekir. Bu nedenle, <xref:System.Windows.Navigation.PageFunction%601> canlı tutulması gerekir; Aksi halde, <xref:System.Windows.Navigation.PageFunction%601>bir sonraki sefer, WPF parametresiz oluşturucuyu kullanarak <xref:System.Windows.Navigation.PageFunction%601> başlatır.
 
 Ancak çağrılan sayfanın dönebilmesi için, çağıran sayfa tarafından alınabilecek verileri döndürmesi gerekir.
 
@@ -154,7 +154,7 @@ Bilgi döndürmek için <xref:System.Windows.Navigation.PageFunction%601> <xref:
 [!code-csharp[StructuredNavigationSample#ReturnCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#returncodebehind2)]
 [!code-vb[StructuredNavigationSample#ReturnCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#returncodebehind2)]
 
-Bu örnekte, bir Kullanıcı Iptal düğmesine basarsa, arama sayfasına bir `null` değeri döndürülür. Bunun yerine Tamam düğmesine basıldığında, Kullanıcı tarafından verilen dize değeri döndürülür. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>, verileri çağırma sayfasına döndürmek için çağırdığınız bir `protected virtual` yöntemidir. Verilerinizin, <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> döndürülen değer türünü belirten genel <xref:System.Windows.Navigation.ReturnEventArgs%601> türünün bir örneğinde paketlenmesi gerekir. Bu şekilde, belirli bir tür bağımsız değişkeniyle bir <xref:System.Windows.Navigation.PageFunction%601> bildirdiğinizde, bir <xref:System.Windows.Navigation.PageFunction%601> tür bağımsız değişkeni tarafından belirtilen türün bir örneğini döndürmektedir. Bu örnekte, tür bağımsız değişkeni ve sonuç olarak, dönüş değeri <xref:System.String> türündedir.
+Bu örnekte, bir Kullanıcı Iptal düğmesine basarsa, arama sayfasına bir `null` değeri döndürülür. Bunun yerine Tamam düğmesine basıldığında, Kullanıcı tarafından verilen dize değeri döndürülür. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>, verileri çağırma sayfasına döndürmek için çağırdığınız bir `protected virtual` yöntemidir. Verilerinizin, <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> döndürülen değer türünü belirten genel <xref:System.Windows.Navigation.ReturnEventArgs%601> türünün bir örneğinde paketlenmesi gerekir. Bu şekilde, belirli bir tür bağımsız değişkeniyle bir <xref:System.Windows.Navigation.PageFunction%601> bildirdiğinizde, bir <xref:System.Windows.Navigation.PageFunction%601> tür bağımsız değişkeni tarafından belirtilen türün bir örneğini döndürmektedir. Bu örnekte, tür bağımsız değişkeni ve sonuç olarak, dönüş değeri <xref:System.String>türündedir.
 
 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> çağrıldığında, çağıran sayfanın <xref:System.Windows.Navigation.PageFunction%601>dönüş değerini alması için bir yol gerekir. Bu nedenle, <xref:System.Windows.Navigation.PageFunction%601> işlenecek sayfaları çağırmak için <xref:System.Windows.Navigation.PageFunction%601.Return> olayını uygular. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> çağrıldığında, <xref:System.Windows.Navigation.PageFunction%601.Return> tetiklenir. bu nedenle, arama sayfası bildirimi almak için <xref:System.Windows.Navigation.PageFunction%601.Return> kaydedebilir.
 

@@ -6,32 +6,31 @@ helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-author: KrzysztofCwalina
-ms.openlocfilehash: 6811423258481fcbae24743c9b17f3f20c379c58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af62658ce728dd480df630cf6162549f33f28b4d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785547"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709549"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Soyutlama Uygulamak için Temel Sınıflar
-NET olarak söylemek gerekirse, başka bir sınıfın bu türden türetilmiş bir sınıf bir temel sınıf olur. Amacıyla bu bölümde, ancak bir taban sınıf genellikle ortak bir Özet sağlar veya diğer sınıfların bazılarını yeniden kullanmak uygulama yine de devralma varsayılan için tasarlanmış bir sınıftır. Temel sınıflar, genellikle bir Özet bir hiyerarşinin kökü altındaki çeşitli özel uygulamalar arasındaki devralma hiyerarşilerini ortasında bulunur.  
+Kesinlikle konuşurken, bir sınıf başka bir sınıf bundan türetildiği zaman bir temel sınıf haline gelir. Ancak, bu bölümün amacına yönelik olarak, temel sınıf genellikle ortak bir soyutlama sağlamak için veya diğer sınıfların devralma sırasında bazı varsayılan uygulamaları yeniden kullanabilmesi için tasarlanmış bir sınıftır. Temel sınıflar genellikle, bir hiyerarşinin kökündeki bir soyutlama ve alt kısımdaki birkaç özel uygulama arasındaki devralma hiyerarşilerinin ortasında yer vardır.  
   
- Bunlar, uygulama Yardımcıları soyutlama uygulamak için hizmet eder. Örneğin, öğelerin sıralı koleksiyonlar için Framework'ün soyutlama biri olan <xref:System.Collections.Generic.IList%601> arabirimi. Uygulama <xref:System.Collections.Generic.IList%601> Önemsiz değildir ve bu nedenle çerçeve gibi birkaç temel sınıf sağlar <xref:System.Collections.ObjectModel.Collection%601> ve <xref:System.Collections.ObjectModel.KeyedCollection%602>, hangi hizmet Yardımcıları özel koleksiyonlar uygulamak için.  
+ Soyutlamalar uygulamak için uygulama yardımcıları olarak görev yapar. Örneğin, çatı öğe koleksiyonları için çerçeve soyutlarından biri <xref:System.Collections.Generic.IList%601> arabirimidir. <xref:System.Collections.Generic.IList%601> uygulamak önemsiz değildir ve bu nedenle Framework, özel koleksiyonlar uygulamak için yardımcılar olarak işlev gösteren <xref:System.Collections.ObjectModel.Collection%601> ve <xref:System.Collections.ObjectModel.KeyedCollection%602>gibi çeşitli temel sınıflar sağlar.  
   
- Temel sınıflar içeren çok fazla uygulama eğilimli olduğundan genellikle soyutlama ayrı olarak hizmet vermek için uygun değildir. Örneğin, `Collection<T>` temel sınıfı içerir olgusu nongeneric uygulayan ilgili uygulama çok sayıda `IList` (daha iyi jenerik olmayan koleksiyon ile tümleştirmek için) arabirim ve öğelerin bir koleksiyonunu depolanan bu olgusu bellek alanlarından birinde.  
+ Temel sınıflar genellikle çok fazla uygulama içereceğinden, kendilerine soyut olarak sunulacak şekilde uygun değildir. Örneğin, `Collection<T>` temel sınıfı, genel olmayan `IList` arabirimini (genel olmayan koleksiyonlarla daha iyi tümleşecek şekilde) ve alanlarından birinde bellekte depolanan öğelerin bir koleksiyonu olduğunu bulmadan ilgili çok sayıda uygulama içerir.  
   
- Daha önce ele alındığı temel sınıflar soyutlama uygulamak için gereken kullanıcılar için her Yardım sağlayabilir, ancak aynı anda önemli bir yükümlülük olabilirler. Bunlar yüzey alanını ekleyin ve devralma hiyerarşilerini derinliğini Artır ve bu nedenle, kavramsal olarak framework genişlemesiyle. Yalnızca bunlar önemli ölçüde framework'ün kullanıcılara sağlarsanız, bu nedenle, temel sınıflar kullanılmalıdır. İçinde kesin bir temel sınıftan devralma yerine iç bir uygulama için büyük/küçük harf temsilci düşünülmelidir framework'ün uygulayıcılar değeri sağlarsanız, kaçınılmalıdır.  
+ Daha önce anlatıldığı gibi temel sınıflar, soyutlamalar uygulaması gereken kullanıcılar için değerli yardım sağlayabilir, ancak aynı zamanda önemli bir yükümlülük olabilir. Bunlar yüzey alanı ekler ve devralma hiyerarşilerinin derinliğini artırır ve bu sayede Framework 'ü karmaşıklaştırır. Bu nedenle, temel sınıfların yalnızca Framework kullanıcılarına önemli bir değer sağladıklarında kullanılması gerekir. Yalnızca çerçevenin uygulayıcılarına değer sağladıklarında kaçınılması gerekir, bu durum bir temel sınıftan devralınması yerine bir iç uygulamaya yönelik temsilinin kesin olarak dikkate alınması gerekir.  
   
- **✓ CONSIDER** yapmayı temel, Özet üye içermeyen olsa bile soyut sınıflar. Bu kullanıcılara açıkça iletişim kurar, sınıfı yalnızca devralınan için tasarlanmıştır.  
+ **✓ CONSIDER** yapmayı temel, Özet üye içermeyen olsa bile soyut sınıflar. Bu, sınıfın yalnızca devralınacağı şekilde tasarlanan kullanıcılarla açıkça iletişim kurar.  
   
- **✓ CONSIDER** mainline senaryo türlerinden ayrı bir ad alanı taban sınıfları yerleştirmekten. Tanımına göre temel sınıflar, gelişmiş Genişletilebilirlik senaryoları için tasarlanmıştır ve bu nedenle kullanıcıların çoğunluğunun ilgi çekici olmayan.  
+ **✓ CONSIDER** mainline senaryo türlerinden ayrı bir ad alanı taban sınıfları yerleştirmekten. Tanım olarak, temel sınıflar gelişmiş genişletilebilirlik senaryolarına yöneliktir ve bu nedenle kullanıcıların çoğunluğu için ilginç değildir.  
   
  **X AVOID** sınıfı için ortak API'ler kullanımda amaçlanıyorsa bir "Temel" soneki temel sınıflarının adlandırma.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,17 +1,16 @@
 ---
 title: Arabirim özellikleri- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: fad674c6d56011afcccbe9ce2a88e7af411fe0a2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ff892a35f4be6600c00bc0c72c2f789ef6eb4408
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579150"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705541"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Arabirim Özellikleri (C# Programlama Kılavuzu)
 
@@ -23,7 +22,7 @@ Bir arabirim özelliğinin erişimcisinin gövdesi yok. Bu nedenle, erişimciler
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, `IEmployee` arabirim, bir okuma-yazma özelliğine, `Name` ve salt okunurdur bir özelliğe sahiptir `Counter`. Sınıf `Employee` `IEmployee` arabirimini uygular ve bu iki özelliği kullanır. Program yeni bir çalışanın adını ve geçerli çalışan sayısını okur ve çalışan adını ve hesaplanan çalışan numarasını görüntüler.
+Bu örnekte, `IEmployee` arabirim, bir okuma-yazma özelliğine, `Name`ve salt okunurdur bir özelliğe sahiptir `Counter`. Sınıf `Employee` `IEmployee` arabirimini uygular ve bu iki özelliği kullanır. Program yeni bir çalışanın adını ve geçerli çalışan sayısını okur ve çalışan adını ve hesaplanan çalışan numarasını görüntüler.
 
 Özelliğin, üyenin bildirildiği arabirime başvuruda bulunduğu tam nitelikli adını kullanabilirsiniz. Örneğin:
 

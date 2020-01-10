@@ -11,40 +11,39 @@ helpviewer_keywords:
 - type design guidelines, structures
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
-author: KrzysztofCwalina
-ms.openlocfilehash: e787c5b34848a561b43c3457341673f11cc2bd00
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8841a30f1dd0420b2ea45740b1e33bde5199c3f9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775550"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709055"
 ---
 # <a name="struct-design"></a>Yapı Tasarımı
-Genel amaçlı bir değer türü, genellikle kendi C# anahtar sözcüğü bir yapı da adlandırılır. Bu bölümde, genel yapı tasarımı için yönergeler sağlar.  
+Genel amaçlı değer türü, genellikle bir struct, C# anahtar kelimesi olarak adlandırılır. Bu bölüm, genel yapı tasarımı için yönergeler sağlar.  
   
- **X yok** parametresiz bir oluşturucu için bir yapı sağlar.  
+ **X** bir struct için parametresiz bir Oluşturucu sağlamaz.  
   
- Bu kılavuz aşağıdaki dizinin her öğesinde Oluşturucusu çalıştırmak zorunda kalmadan oluşturulacak yapı dizileri sağlar. Dikkat C# parametresiz oluşturucular yapılar izin vermiyor.  
+ Bu kılavuzdan sonra, dizinin her öğesinde oluşturucuyu çalıştırmak zorunda kalmadan yapıların dizilerinin oluşturulmasına izin verir. Yapıların parametresiz C# oluşturuculara sahip olduğundan emin olun.  
   
  **X DO NOT** değişmez değer türleri tanımlayın.  
   
- Değişmez değer türleri, bazı sorunlar vardır. Örneğin, bir değer türü özellik alıcısı geri döndüğünde, çağıran bir kopyasını alır. Geliştiriciler, kopya örtük olarak oluşturulduğundan, bunlar kopya ve özgün değeri diziyi emin haberdar olmayabilir. Ayrıca, bazı diller (özellikle dinamik dilleri) yerel değişkenler, başvurusu kaldırıldığında bile, bir kopyalama yapılacak neden değişmez değer türleri kullanarak sorunları vardır.  
+ Kesilebilir değer türlerinde birçok sorun vardır. Örneğin, bir özellik alıcısı bir değer türü döndürdüğünde, çağıran bir kopyasını alır. Kopya örtük olarak oluşturulduğundan, geliştiriciler özgün değeri değil, kopyayı değiştirmez gibi farkında olmayabilir. Ayrıca, bazı dillerin (özellikle de dinamik diller) değişebilir değer türlerini kullanarak sorunlar vardır, çünkü başvuru yapıldığında yerel değişkenler de bir kopyanın oluşturulmasına neden olur.  
   
  **✓ DO** veri tüm örnek olduğu bir duruma sıfıra ayarlanır ve yanlış veya boş (hangisi uygunsa) geçerli olduğundan emin.  
   
- Struct'ın bir dizi oluşturulduğunda bu geçersiz örnekleri yanlışlıkla oluşturulmasını engeller.  
+ Bu, yapıların bir dizisi oluşturulduğunda geçersiz örneklerin yanlışlıkla oluşturulmasını önler.  
   
  **✓ DO** uygulamak <xref:System.IEquatable%601> değer türleri üzerinde.  
   
- <xref:System.Object.Equals%2A?displayProperty=nameWithType> Yöntemi değer türleri üzerinde kutulama neden olur ve yansıma kullandığından, varsayılan uygulama çok verimli değildir. <xref:System.IEquatable%601.Equals%2A> çok daha iyi performans sahip olabilir ve böylece kutulama açmayacağını uygulanabilir.  
+ Değer türlerinde <xref:System.Object.Equals%2A?displayProperty=nameWithType> yöntemi kutulama sağlar ve yansıma kullandığından, varsayılan uygulama çok verimli değildir. <xref:System.IEquatable%601.Equals%2A> çok daha iyi bir performansa sahip olabilir ve bu, kutulamayı neden olmayacak şekilde uygulanabilir.  
   
- **X DO NOT** açıkça genişletmek <xref:System.ValueType>. Aslında, çoğu dil bu engeller.  
+ **X DO NOT** açıkça genişletmek <xref:System.ValueType>. Aslında çoğu dil bunu engeller.  
   
- Genel olarak, yapılar çok kullanışlı olabilir, ancak yalnızca sık Kutulu değil küçük, tek, sabit değerler kullanılmalıdır.  
+ Genel olarak, yapılar çok faydalı olabilir, ancak yalnızca sık kutulanmamış küçük, tek, sabit değerler için kullanılmalıdır.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 - parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-author: KrzysztofCwalina
-ms.openlocfilehash: a43ec815275e58f4bc6462fb4f5cb4733267de31
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 823bc893c9384bb687e5f9a196abe497db14f4db
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972112"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709484"
 ---
 # <a name="constructor-design"></a>Oluşturucu Tasarımı
 
@@ -76,9 +75,9 @@ Bir tür oluşturucusundan bir özel durum oluşturulursa, tür geçerli uygulam
 
 **✓ CONSIDER** çalışma zamanı açıkça tanımlanmış bir statik oluşturucusu yok türleri performansını optimize etmek mümkün olduğundan statik oluşturucular açıkça kullanmak yerine statik alanları satır içi başlatılıyor.
 
-*Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
+*© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
-*, Framework tasarım yönergelerinden [Pearson Eğitim, Inc. izni ile yeniden yazdırılıyor: Microsoft Windows geliştirme serisi 'nin bir parçası olarak, bezysztof](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Cwalina ve atacan abkms, Ekim 22, 2008 ile Addison-Wesley Professional ile yeniden kullanılabilir .NET kitaplıkları için kurallar, ıoms ve desenler.*
+*İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

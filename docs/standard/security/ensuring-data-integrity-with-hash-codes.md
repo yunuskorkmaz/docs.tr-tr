@@ -14,14 +14,12 @@ helpviewer_keywords:
 - encryption [.NET Framework], hash
 - hash
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 995f54e81a48fb3f809d99981ad135974544eb28
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 98bdce59ccbbb3b1d00ea5521169214c2bd7a10b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353175"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706207"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Karma Kodlarla Veri Bütünlüğünü Sağlama
 Karma değeri, verileri benzersiz bir şekilde tanımlayan sabit uzunlukta sayısal bir değerdir. Karma değerler, büyük miktarlarda veriyi çok daha küçük sayısal değerler halinde temsil eder, bu nedenle dijital imzalarla birlikte kullanılır. Karma değeri, daha büyük değeri imzalamadan daha verimli bir şekilde imzalayabilirsiniz. Karma değerleri, güvenli olmayan kanallar aracılığıyla gönderilen verilerin bütünlüğünü doğrulamak için de kullanışlıdır. Alınan verilerin karma değeri, verilerin değiştirilip değiştirilmediğini tespit etmek için gönderilen verilerin karma değeriyle karşılaştırılabilir.  
@@ -29,7 +27,7 @@ Karma değeri, verileri benzersiz bir şekilde tanımlayan sabit uzunlukta sayı
  Bu konu, <xref:System.Security.Cryptography?displayProperty=nameWithType> ad alanındaki sınıfları kullanarak karma kodların nasıl oluşturulacağını ve doğrulanacağını açıklamaktadır.  
   
 ## <a name="generating-a-hash"></a>Karma oluşturma  
- Yönetilen karma sınıflar bir bayt dizisini veya yönetilen bir akış nesnesini karma hale getirebilirsiniz. Aşağıdaki örnek, bir dize için bir karma değer oluşturmak üzere SHA1 karma algoritmasını kullanır. Örnek, sınıfını <xref:System.Security.Cryptography.SHA1Managed> kullanarak <xref:System.Text.UnicodeEncoding> dizeyi karma bir bayt dizisine dönüştürmek için sınıfını kullanır. Karma değeri daha sonra konsola görüntülenir.  
+ Yönetilen karma sınıflar bir bayt dizisini veya yönetilen bir akış nesnesini karma hale getirebilirsiniz. Aşağıdaki örnek, bir dize için bir karma değer oluşturmak üzere SHA1 karma algoritmasını kullanır. Örnek, <xref:System.Security.Cryptography.SHA1Managed> sınıfını kullanarak dizeyi karma bir bayt dizisine dönüştürmek için <xref:System.Text.UnicodeEncoding> sınıfını kullanır. Karma değeri daha sonra konsola görüntülenir.  
 
  Microsoft, SHA1 ile ilgili çakışma sorunları nedeniyle SHA256 veya daha iyi bir performans öneriyor.
   

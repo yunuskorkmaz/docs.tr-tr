@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 2e443030445d2817c8f53a044a261edd22eeb26e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 9a0640a7ce73fa8454442cd301157bf5c265f9de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973269"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713895"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Birden çok dizeyi birleştirme (C# kılavuz)
 
@@ -41,7 +41,7 @@ Diğer durumlarda dizeleri bir döngüde birleştiriyor olabilirsiniz; burada, h
   
 [!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
 
-[Dize birleştirmesi veya `StringBuilder` sınıfı seçme nedenleri](xref:System.Text.StringBuilder#StringAndSB) hakkında daha fazla bilgi edinebilirsiniz
+[Dize bitiştirilmesi veya `StringBuilder` sınıfını seçme nedenleri](xref:System.Text.StringBuilder#StringAndSB)hakkında daha fazla bilgi edinebilirsiniz.
 
 Bir koleksiyondaki dizeleri birleştirmek için başka bir seçenek de <xref:System.String.Concat%2A?displayProperty=nameWithType> yöntemi kullanmaktır. Kaynak dizelerin bir delikile ayrılması gerekiyorsa <xref:System.String.Join%2A?displayProperty=nameWithType> yöntemi kullanın. Aşağıdaki kod her iki yöntemi kullanarak bir sözcük dizisini birleştirir:
 

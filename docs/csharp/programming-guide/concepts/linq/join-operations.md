@@ -2,12 +2,12 @@
 title: JOIN Işlemleri (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: 456894dd07f512d7e694ad0056b1e861dc3012c5
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 86d85c7de16887fbe3001dc548d940d9c114e634
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423388"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635606"
 ---
 # <a name="join-operations-c"></a>JOIN Işlemleri (C#)
 İki veri kaynağının *birleşimi* , bir veri kaynağındaki nesnelerin, başka bir veri kaynağında ortak bir özniteliği paylaşan nesnelerle ilişkilendirilmesi.  
@@ -34,11 +34,11 @@ ms.locfileid: "73423388"
 - [Anonim Tipler](../../classes-and-structs/anonymous-types.md)
 - [Birleşimler ve Çapraz Ürün Sorguları Düzenleme](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
 - [join yan tümcesi](../../../language-reference/keywords/join-clause.md)
-- [Nasıl yapılır: bileşik anahtarlar kullanarak ekleme](../../../linq/join-by-using-composite-keys.md)
-- [Nasıl yapılır: farklı dosyalardan Içerik ekleme (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
-- [Nasıl yapılır: JOIN yan tümcesinin sonuçlarını sıralama](../../../linq/order-the-results-of-a-join-clause.md)
-- [Nasıl yapılır: özel JOIN Işlemleri gerçekleştirme](../../../linq/perform-custom-join-operations.md)
-- [Nasıl yapılır: Gruplandırılmış Birleştirmeler Gerçekleştirme](../../../linq/perform-grouped-joins.md)
-- [Nasıl yapılır: Iç birleştirmeler gerçekleştirme](../../../linq/perform-inner-joins.md)
-- [Nasıl yapılır: sol dış birleştirmeler gerçekleştirme](../../../linq/perform-left-outer-joins.md)
-- [Nasıl yapılır: birden çok kaynaktan nesne koleksiyonları doldurma (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Bileşik anahtarlar kullanarak birleştirme](../../../linq/join-by-using-composite-keys.md)
+- [Benzer olmayan dosyalardaki (LINQ) (C#) içerik ekleme](./how-to-join-content-from-dissimilar-files-linq.md)
+- [Join yan tümcesinin sonuçlarını sıralama](../../../linq/order-the-results-of-a-join-clause.md)
+- [Özel birleştirme işlemleri gerçekleştirme](../../../linq/perform-custom-join-operations.md)
+- [Gruplanmış birleşimler gerçekleştirme](../../../linq/perform-grouped-joins.md)
+- [İç birleşimler gerçekleştirme](../../../linq/perform-inner-joins.md)
+- [Sol dış birleştirmeler gerçekleştirme](../../../linq/perform-left-outer-joins.md)
+- [Birden çok kaynaktan nesne koleksiyonları doldurma (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)

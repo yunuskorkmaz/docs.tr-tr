@@ -1,17 +1,16 @@
 ---
 title: Arabirimler- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 77326b37baebc3ade12336b1b3735ed1da497afc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3187b8b94c6e46ec13312fc31ac1ed9852199d6b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120150"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714619"
 ---
 # <a name="interfaces-c-programming-guide"></a>Arabirimler (C# Programlama Kılavuzu)
 
@@ -54,7 +53,7 @@ Bir arabirim aşağıdaki özelliklere sahiptir:
 - Bir arabirim, yalnızca soyut üyelere sahip bir soyut temel sınıf gibidir. Arabirimi uygulayan herhangi bir sınıf veya yapının tüm üyelerini uygulaması gerekir.
 - Arabirim doğrudan başlatılamaz. Üyeleri, arabirimini uygulayan herhangi bir sınıf veya yapı tarafından uygulanır.
 - Arabirimler olay, Dizin oluşturucular, Yöntemler ve özellikler içerebilir.
-- Arabirimler yöntemlerin uygulanmasını içermez.
+- Arabirimler yöntemlerin bir uygulamasını içermez (8,0 sürümünde C# arabirimler [Yöntemler için varsayılan uygulamaya](../../whats-new/csharp-8.md#default-interface-methods)sahip olabilir).
 - Bir sınıf veya yapı, birden çok arabirim uygulayabilir. Bir sınıf bir temel sınıfı devralınabilir ve ayrıca bir veya daha fazla arabirim uygulayabilir.
 
 ## <a name="in-this-section"></a>Bu bölümde
@@ -62,17 +61,17 @@ Bir arabirim aşağıdaki özelliklere sahiptir:
 [Belirtik Arabirim Kullanma](explicit-interface-implementation.md)  
  Bir arabirime özgü bir sınıf üyesinin nasıl oluşturulacağını açıklar.  
   
- [Nasıl yapılır: Arabirim Üyelerini Açıkça Uygulama](how-to-explicitly-implement-interface-members.md)  
+ [Arabirim üyelerini açıkça uygulama](how-to-explicitly-implement-interface-members.md)  
  Arabirimlerin üyelerini açıkça nasıl uygulayacağınızı gösteren bir örnek sağlar.  
   
- [Nasıl yapılır: İki Arabirimin Üyelerini Açıkça Uygulama](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [İki arabirimin üyelerini açıkça uygulama](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Devralma ile arabirimlerin üyelerini açıkça nasıl uygulayabileceğinizi gösteren bir örnek sağlar.  
   
 ## <a name="BKMK_RelatedSections"></a>İlgili bölümler
 
 - [Arabirim Özellikleri](../classes-and-structs/interface-properties.md)  
 - [Arabirimlerdeki Dizin Oluşturucular](../indexers/indexers-in-interfaces.md)  
-- [Nasıl yapılır: arabirim olaylarını uygulama](../events/how-to-implement-interface-events.md)  
+- [Arabirim olaylarını uygulama](../events/how-to-implement-interface-events.md)
 - [Sınıflar ve Yapılar](../classes-and-structs/index.md)  
 - [Devralma](../classes-and-structs/inheritance.md)  
 - [Yöntemler](../classes-and-structs/methods.md)  
@@ -82,7 +81,7 @@ Bir arabirim aşağıdaki özelliklere sahiptir:
 - [Olaylar](../events/index.md)  
 - [Dizin Oluşturucular](../indexers/index.md)  
   
-## <a name="featured-book-chapter"></a>öne çıkan kitap bölümü
+## <a name="featured-book-chapter"></a>Öne çıkan kitap bölümü
 
 [Öğrenme C# 3,0 ' deki arabirimler: C# 3,0 temelleri ana](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29) [](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29)
 

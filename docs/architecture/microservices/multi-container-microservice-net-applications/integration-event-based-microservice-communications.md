@@ -2,12 +2,12 @@
 title: Mikro hizmetler arasında olay tabanlı iletişim uygulama (tümleştirme olayları)
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmetler arasında olay tabanlı iletişim uygulamak için tümleştirme olaylarını anlayın.
 ms.date: 10/02/2018
-ms.openlocfilehash: a355ba9ede4e3390edd858d173dd88548e876202
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6d4e324a05def91935a82df41c971a75cb75c3f8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711221"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712409"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Mikro hizmetler arasında olay tabanlı iletişim uygulama (tümleştirme olayları)
 
@@ -27,7 +27,7 @@ Mimari bölümünde belirtildiği gibi, soyut olay veri yolunu uygulamak için b
 
 EShopOnContainers örneğinde olduğu gibi, geliştirme ortamınız için yalnızca bir olay veri yolu kavramını uygulamak amacıyla, bir kapsayıcı olarak çalışan Kbbitmq üzerinde basit bir uygulama yeterince olabilir. Ancak, yüksek ölçeklenebilirlik gerektiren görev açısından kritik ve üretim sistemlerinde Azure Service Bus değerlendirmek ve kullanmak isteyebilirsiniz.
 
-Dağıtılmış geliştirmeyi daha kolay hale getirmek için yüksek düzeyde soyut ve çok daha zengin özellikler, örneğin NServiceBus, Masstransıya ve daha [parlak gibi diğer](https://docs.particular.net/nservicebus/sagas/) ticari ve açık kaynaklı hizmet yolları gerekir irsiniz. Bu durumda, kullanılacak soyutlamalar ve API genellikle kendi soyutlamaları yerine bu üst düzey hizmet veri yolları tarafından sağlananlar olur ( [eShopOnContainers 'da sunulan basit olay veri yolu soyutlaması](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)gibi). Bu şekilde, NServiceBus (belirli yazılımlar tarafından uygulanan ek türetilmiş örnek) [kullanarak, forlenmiş eShopOnContainers](https://go.particular.net/eShopOnContainers) 'ı araştırabilirsiniz
+Dağıtılmış geliştirmeyi daha kolay hale getirmek için yüksek düzeyde soyut ve çok daha zengin özellikler, örneğin NServiceBus, Masstransıya ve daha [parlak gibi diğer](https://docs.particular.net/nservicebus/sagas/) ticari ve açık kaynaklı hizmet yolları, değerlendirmek için gereklidir. Bu durumda, kullanılacak soyutlamalar ve API genellikle kendi soyutlamaları yerine bu üst düzey hizmet veri yolları tarafından sağlananlar olur ( [eShopOnContainers 'da sunulan basit olay veri yolu soyutlaması](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)gibi). Bu şekilde, NServiceBus (belirli yazılımlar tarafından uygulanan ek türetilmiş örnek) [kullanarak, forlenmiş eShopOnContainers](https://go.particular.net/eShopOnContainers) 'ı araştırabilirsiniz.
 
 Tabii ki, her zaman Pbbitmq ve Docker gibi alt düzey teknolojilerin üzerinde kendi hizmet veri yolu özelliklerini derleyebilir, ancak "tekerleği yeniden bağlamak" için gereken iş, özel bir kurumsal uygulama için çok maliyetli olabilir.
 

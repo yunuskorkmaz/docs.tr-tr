@@ -3,25 +3,24 @@ title: C# ve Visual Studio Code kullanmaya başlama
 description: Visual Studio Code C# kullanarak Ilk .NET Core uygulamanızı nasıl oluşturacağınızı ve hata ayıklacağınızı öğrenin.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.custom: seodec18
-ms.openlocfilehash: 4e283f631f463953185a37bf196a1a9b706eee2b
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: fdf26d67ca06ffb5ae9f8c12aa29819280770d5c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002324"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715315"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# ve Visual Studio Code kullanmaya başlama
 
 .NET Core, Windows, Linux ve macOS 'ta çalışan uygulamalar oluşturmaya yönelik hızlı ve modüler bir platform sağlar. IntelliSense (akıllı kod C# tamamlama) ve hata ayıklama için C# tam desteğe sahip güçlü bir düzen deneyimi almak üzere uzantıya sahip Visual Studio Code kullanın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
-1. [Visual Studio Code](https://code.visualstudio.com/)'i yükler.
+1. [Visual Studio Code](https://code.visualstudio.com/)’u yükleyin.
 2. [.NET Core SDK](https://dotnet.microsoft.com/download)'i yükler.
 3. Visual Studio Code [ C# uzantısını](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) yükler. Visual Studio Code uzantıları nasıl yükleyeceğiniz hakkında daha fazla bilgi için bkz. [vs Code uzantısı marketi](https://code.visualstudio.com/docs/editor/extension-gallery).
 
-## <a name="hello-world"></a>Hello World
+## <a name="hello-world"></a>Merhaba Dünya
 
 .NET Core üzerinde basit bir "Merhaba Dünya" programı kullanmaya başlayalım:
 
@@ -63,7 +62,7 @@ Ayrıca, [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Co
 
     ![Program.cs dosyasını açın](media/with-visual-studio-code/open-program-cs.png)
 
-2. Visual Studio Code, uygulamanızda derlemek ve hata ayıklamak için eksik varlıkları eklemenizi ister. **Evet**' i seçin.
+2. Visual Studio Code, uygulamanızda derlemek ve hata ayıklamak için eksik varlıkları eklemenizi ister. **Evet**’i seçin.
 
     ![Eksik varlıklar için istem](media/with-visual-studio-code/missing-assets.png)
 

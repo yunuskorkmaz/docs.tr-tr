@@ -1,46 +1,44 @@
 ---
-title: Bir NuGet Paketi Yayımlama
-description: .NET kitaplıkları için NuGet yayımlamak için en iyi yöntem önerileri.
-author: jamesnk
-ms.author: mairaw
+title: NuGet paketi yayımlama
+description: NuGet 'e .NET kitaplıklarını yayımlamaya yönelik en iyi yöntem önerileri.
 ms.date: 10/02/2018
-ms.openlocfilehash: 9c8442b52ed2c54d2fb3368a2e886c5fc2b19148
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e567fe3f7e00bf322cdd50786e50128961107469
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640764"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706471"
 ---
-# <a name="publishing-a-nuget-package"></a>Bir NuGet Paketi Yayımlama
+# <a name="publishing-a-nuget-package"></a>NuGet paketi yayımlama
 
-NuGet paketlerini yayımlandı ve paket depolarından kullanılan. NuGet.org bilinen ve kullanılan depo en yaygın olsa da, NuGet paketlerini yayımlamak için pek çok yerde vardır:
+NuGet paketleri, paket depolarından yayımlanır ve kullanılır. NuGet.org, en yaygın olarak bilinen ve kullanılan depoken, NuGet paketlerini yayımlamak için birçok yer vardır:
 
-* **[NuGet.org](https://www.nuget.org/)**  birincil çevrimiçi için NuGet paketlerini depodur. Tüm paketleri NuGet.org üzerinde herkese genel olarak kullanılabilir. Varsayılan olarak, Visual Studio Paket kaynağı olarak NuGet.org sahiptir ve birçok geliştirici için ile etkileşim kuracağınızı yalnızca paket deposu Nuget.org'nin olduğundan. NuGet.org kararlı paketler ve topluluk geri bildirimi almak istediğiniz yayın öncesi paketleri yayımlamak için en iyi yerdir.
+* **[NuGet.org](https://www.nuget.org/)** , NuGet paketleri için birincil çevrimiçi depodur. NuGet.org üzerindeki tüm paketler herkese açık olarak herkes tarafından kullanılabilir. Varsayılan olarak, Visual Studio 'nun bir paket kaynağı olarak NuGet.org vardır ve birçok geliştirici NuGet.org, etkileşime gitireceğiz tek paket deposudur. NuGet.org, topluluk geri bildirimi sağlamak istediğiniz kararlı paketleri ve yayın öncesi paketleri yayımlamak için en iyi yerdir.
 
-* **[MyGet](https://myget.org/)**  , açık kaynak projeleri için özel paket akışları destekleyen bir depo hizmetidir. Bir MyGet genel özel akışı CI hizmetiniz tarafından oluşturulan yayın öncesi paketleri yayımlamak için ideal yerdir. MyGet ayrıca özel akışları ticari olarak sağlar.
+* **[Myget](https://myget.org/)** , açık kaynaklı projeler için özel paket akışlarını destekleyen bir depo hizmetidir. Bir MyGet genel özel akışı, CI hizmetiniz tarafından oluşturulan yayın öncesi paketleri yayımlamak için ideal bir yerdir. MyGet ayrıca ticari olarak özel akışlar sağlar.
 
-* A **[yerel akış](/nuget/hosting-packages/local-feeds)** yapar ve bir paket deposu gibi bir klasör değerlendirilecek sağlar `*.nupkg` NuGet tarafından erişilebilir klasöründe bulunan dosyaları. Yerel bir akış, bir NuGet paketi için NuGet.org yayımlamadan önce test edilmesi için yararlıdır.
+* **[Yerel akış](/nuget/hosting-packages/local-feeds)** , bir klasörü paket deposu gibi davranmanıza ve `*.nupkg` dosyalarını NuGet tarafından erişilebilir hale getirir. Yerel akış, NuGet.org 'de yayımlamadan önce bir NuGet paketini test etmek için kullanışlıdır.
 
 > [!NOTE]
-> NuGet.org [silinmesi paket izin vermiyor](/nuget/policies/deleting-packages) karşıya yüklendikten sonra. Bir paketi kullanıcı Arabiriminde herkese görünür olmaması listelenmemiş olabilir ancak `*.nupkg` geri yükleme yine de indirilebilir. Ayrıca, nuget.org yinelenen paket sürümlerini izin vermez. Bir NuGet paketi yanlış paketi listeden kaldırma için sahip olduğunuz hata gidermek için sürüm numarasını Artır ve paketin yeni bir sürüm yayımlayın.
+> NuGet.org, bir paketin karşıya yüklendikten sonra [silinmesine izin vermez](/nuget/policies/deleting-packages) . Bir paket, Kullanıcı arabiriminde herkese açık olmayan ancak `*.nupkg` hala geri yükleme sırasında indirilebilecek şekilde listelenmemiş şekilde görünmeyebilir. Ayrıca, nuget.org yinelenen paket sürümlerine izin vermez. Bir NuGet paketini hata ile düzeltmek için yanlış paketi listelemeyi, sürüm numarasını artırmanız ve paketin yeni bir sürümünü yayımlamanız gerekir.
 
-**✔️ YAPMAK** [kararlı paketler ve yayın öncesi paketleri yayımlama](/nuget/create-packages/publish-a-package) NuGet.org açın topluluk geri bildirimi istiyor.
+**✔️** , topluluk geri bildirimini NuGet.org 'e göndermek istediğiniz [kararlı paketleri ve yayın öncesi paketleri yayımlayın](/nuget/create-packages/publish-a-package) .
 
-**✔️ DÜŞÜNÜN** sürekli tümleştirme derleme akışı için bir MyGet yayın öncesi paketleri yayımlama.
+**✔️** yayın öncesi paketleri sürekli tümleştirme derlemesinden bir myget akışına yayımlamayı düşünün.
 
-**✔️ DÜŞÜNÜN** paketleri yerel akış veya MyGet kullanarak geliştirme ortamınızda test etme. Paket çalıştığını denetleyin ardından NuGet.org için yayımlayın.
+**✔️** yerel bir akış veya myget kullanarak geliştirme ortamınızda paketleri test etmeyi düşünün. Paketin çalıştığından emin olun ve NuGet.org 'de yayımlayın.
 
-## <a name="nugetorg-security"></a>NuGet.org güvenlik
+## <a name="nugetorg-security"></a>NuGet.org güvenliği
 
-Kötü aktörleri NuGet hesabınıza erişmesine olamaz ve kitaplığınızı kötü amaçlı bir sürümünü karşıya önemlidir. Bir paketi yayımlandığında NuGet.org iki öğeli kimlik doğrulama ve e-posta bildirimleri sağlar. Üzerinde NuGet.org oturum açtıktan sonra bu özellikleri etkinleştirmek **hesap ayarları** sayfası.
+Kötü aktörlerin NuGet hesabınıza erişebilmeleri ve kitaplığınızın kötü amaçlı bir sürümünü karşıya yüklemesi önemlidir. NuGet.org, bir paket yayımlandığında iki öğeli kimlik doğrulaması ve e-posta bildirimleri sunar. **Hesap ayarları** sayfasında NuGet.org ' da oturum açtıktan sonra bu özellikleri etkinleştirin.
 
-![Alternatif metin](./media/publish-nuget-package/nuget-2fa.png "NuGet hesap güvenliği")
+![alternatif metin](./media/publish-nuget-package/nuget-2fa.png "NuGet hesap güvenliği")
 
-**✔️ YAPMAK** için NuGet oturum açmak için bir Microsoft hesabı kullanın.
+**✔️** NuGet 'de oturum açmak için Microsoft hesabı kullanın.
 
-**✔️ YAPMAK** NuGet erişmek için iki öğeli kimlik doğrulamasını etkinleştirin.
+NuGet 'e erişmek için iki öğeli kimlik doğrulamayı etkinleştirme **✔️** .
 
-**✔️ YAPMAK** paketi yayımlandığında e-posta bildirimi etkinleştir.
+bir paket yayımlandığında e-posta bildirimini etkinleştir **✔️** .
 
 >[!div class="step-by-step"]
 >[Önceki](sourcelink.md)

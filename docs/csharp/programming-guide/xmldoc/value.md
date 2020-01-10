@@ -1,6 +1,5 @@
 ---
 title: <value> - C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <value>
@@ -8,14 +7,14 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: 09577d931c6b1f571cd4112c788da38bab85bf42
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a30435c40ad31e026b9cb1952086984548f0cdb6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523271"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694549"
 ---
-# <a name="value-c-programming-guide"></a>\<value > (C# Programlama Kılavuzu)
+# <a name="value-c-programming-guide"></a>\<değeri > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -27,7 +26,7 @@ ms.locfileid: "72523271"
  Özelliği için bir açıklama.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0value > etiketi, bir özelliğin temsil ettiği değeri açıklamanıza olanak sağlar. Visual Studio .NET geliştirme ortamında kod Sihirbazı aracılığıyla bir özellik eklediğinizde, yeni özellik için bir [\<summary >](./summary.md) etiketi ekleneceğini unutmayın. Sonra özelliğin temsil ettiği değeri tanımlayan bir \<value > etiketini el ile eklemeniz gerekir.  
+ \<Value > etiketi, bir özelliğin temsil ettiği değeri açıklamanıza olanak sağlar. Visual Studio .NET geliştirme ortamında kod Sihirbazı aracılığıyla bir özellik eklediğinizde, yeni özellik için bir [\<summary >](./summary.md) etiketi ekleneceğini unutmayın. Sonra özelliğin temsil ettiği değeri tanımlayan bir \<değer > etiketi eklemeniz gerekir.  
   
  Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   

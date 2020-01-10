@@ -3,22 +3,20 @@ title: XML Belge Nesne Modeli (DOM) Hiyerarşisi
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 79078b16f0d56c40a3dcfeabaaed9b5cbb7753a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1193d7631816fe9fbf7aa1984d79ef8e61d5da80
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589836"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709978"
 ---
 # <a name="xml-document-object-model-dom-hierarchy"></a>XML Belge Nesne Modeli (DOM) Hiyerarşisi
-Sınıf hiyerarşisi için XML belge nesne modeli (DOM), aşağıdaki çizimde, ilgili olduğu sınıf adıyla birlikte parantez içinde World Wide Web Consortium (W3C) adı.  
+Aşağıdaki çizim, parantez içinde World Wide Web Konsorsiyumu (W3C) adı olan XML Belge Nesne Modeli (DOM) için sınıf hiyerarşisini ve ilgili olduğu sınıf adını gösterir.  
   
- ![XML belge nesne modeli &#40;DOM&#41; hiyerarşi](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
-XML belge nesne modeli (DOM) hiyerarşisi  
+ ![XML Belge Nesne Modeli &#40;Dom&#41; hiyerarşisi](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
+XML Belge Nesne Modeli (DOM) hiyerarşisi  
   
- Aşağıdaki sınıflar seçeneğinden devralmamanızı **XmlNode**:  
+ Aşağıdaki sınıflar **XMLNode**'dan aktarılmaz:  
   
 - **XmlImplementation**  
   
@@ -28,15 +26,15 @@ XML belge nesne modeli (DOM) hiyerarşisi
   
 - **XmlNodeChangedEventArgs**  
   
- **XmlImplementation** sınıfı, bir XML belgesi oluşturmak için kullanılır. Daha fazla bilgi için [XML belgesi oluşturma](../../../../docs/standard/data/xml/xml-document-creation.md).  
+ **XmlImplementation** sınıfı bir XML belgesi oluşturmak için kullanılır. Daha fazla bilgi için bkz. [XML belgesi oluşturma](../../../../docs/standard/data/xml/xml-document-creation.md).  
   
- **XmlNamedNodeMap** sınıfı sırasız bir dizi düğümü işler. Daha fazla bilgi için [ada veya dizine göre sırasız düğüm alma](../../../../docs/standard/data/xml/unordered-node-retrieval-by-name-or-index.md).  
+ **XmlNamedNodeMap** sınıfı, sıralanmamış bir düğüm kümesini işler. Daha fazla bilgi için bkz. [ada veya dizine göre sıralanmamış düğüm alma](../../../../docs/standard/data/xml/unordered-node-retrieval-by-name-or-index.md).  
   
- **XmlNodeList** sınıfı işleme düğümleri sıralı bir listesi. Daha fazla bilgi için [dizine göre sıralı düğüm alma](../../../../docs/standard/data/xml/ordered-node-retrieval-by-index.md).  
+ **XmlNodeList** sınıfı, sıralı bir düğüm listesini işler. Daha fazla bilgi için bkz. [dizine göre sıralı düğüm alma](../../../../docs/standard/data/xml/ordered-node-retrieval-by-index.md).  
   
- **XmlNodeChangedEventArgs** sınıfı işleme kayıtlı olay işleyicilerinin **XmlDocument**. Daha fazla bilgi için [XML belgesinde XmlNodeChangedEventArgs kullanarak olay işleme](../../../../docs/standard/data/xml/event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md).  
+ **XmlNodeChangedEventArgs** sınıfı, **XmlDocument**üzerinde kayıtlı olay işleyicilerini işler. Daha fazla bilgi için bkz. [XML belgesinde XmlNodeChangedEventArgs kullanılarak olay işleme](../../../../docs/standard/data/xml/event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md).  
   
- **XmlLinkedNode** sınıfının devraldığı **XmlNode**. İki yöntemleri geçersiz kılmak için amacı olan **XmlNode**: **PreviousSibling** ve **NextSibling** yöntemleri. Bu geçersiz kılınan yöntemler ardından devralınan ve tarafından kullanılan **XmlCharacterData**, **XmlDeclaration**, **XmlDocumentType**, **XmlElement**, **XmlEntityReference**, ve **XmlProcessingInstruction**, önceki ve sonraki eşdüzey öğesi olan sınıfları şunlardır.  
+ **XmlLinkedNode** sınıfı **XMLNode**'dan devralır. Amacı **XMLNode**'dan iki yöntemi geçersiz kılmalıdır: **Previouseşdüzey** ve **nexteşdüzey** yöntemleri. Bu geçersiz kılınan Yöntemler daha sonra devralınan ve **Xmlkarakterverisi**, **XmlDeclaration**, **XmlDocumentType**, **XmlElement**, **XmlEntityReference**ve **xmlprocessinginstruction**tarafından, önceki ve sonraki eşdüzey olan sınıflar tarafından kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

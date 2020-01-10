@@ -6,14 +6,12 @@ helpviewer_keywords:
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cadcb5c2e85f046b5c1c561c17663b7c94829f4f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 73a0ffd4a39b144a61bf559ac424414728fb9a3f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802247"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716449"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework başlatma hataları: Kullanıcı deneyimini yönetme
 
@@ -82,7 +80,7 @@ CLR çeşitli senaryolar için bir dizi ana bilgisayar içerir ve bu konaklar, �
 
 CLR etkinleştirme sistemi, Windows 8 ' de aynı davranışı ve Kullanıcı arabirimini, Windows işletim sisteminin diğer sürümlerinde olduğu gibi, CLR 2,0 yükleme sorunlarıyla karşılaştığında de sağlar. Windows 8, CLR 4,5 kullanan .NET Framework 4,5 ' i içerir. Ancak, Windows 8, tüm CLR 2,0 kullanan 2,0, 3,0 veya 3,5 .NET Framework içermez. Sonuç olarak, CLR 2,0 ' ye bağımlı uygulamalar varsayılan olarak Windows 8 üzerinde çalışmaz. Bunun yerine, kullanıcıların 3,5 .NET Framework yüklemesine olanak tanımak için aşağıdaki iletişim kutusunu görüntüler. Kullanıcılar ayrıca Denetim Masası 'nda .NET Framework 3,5 ' i etkinleştirebilir. Her iki seçenek de, [Windows 10, Windows 8.1 ve Windows 8 ' de .NET Framework 3,5 ' i yüklein](../install/dotnet-35-windows-10.md)makalesinde açıklanmaktadır.
 
-![Windows 8 ' de 3,5 yüklemesi için iletişim kutusu](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "İstek üzerine .NET Framework 3.5'i yükleme istemi")
+![Windows 8 ' de 3,5 yüklemesi için iletişim kutusu](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "İsteğe bağlı .NET Framework 3,5 yükleme istemi")
 
 > [!NOTE]
 > .NET Framework 4,5, kullanıcının bilgisayarındaki .NET Framework 4 ' ün (CLR 4) yerini almıştır. Bu nedenle, Windows 8 ' de bu iletişim kutusunu görüntülemeden .NET Framework 4 uygulama sorunsuz bir şekilde çalışır.

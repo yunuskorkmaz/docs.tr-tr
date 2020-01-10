@@ -1,16 +1,15 @@
 ---
 title: statik yönerge kullanma- C# başvuru
-ms.custom: seodec18
 ms.date: 03/10/2017
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
-ms.openlocfilehash: 1a0e26d8b0a14e0c77b724fc492588e08762e47f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 55847aceb9fdf032ba533b82ee59be53761fa2c2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099993"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712955"
 ---
 # <a name="using-static-directive-c-reference"></a>static yönergesini kullanma (C# başvuru)
 
@@ -20,7 +19,7 @@ ms.locfileid: "73099993"
 using static <fully-qualified-type-name>;
 ```
 
-*tam nitelikli tür* adı, statik üyeleri ve iç içe türlerine bir tür adı belirtilmeden başvurulabilen türün adıdır. Tam nitelikli tür adı (tür adıyla birlikte tam ad alanı adı) sağlamazsanız, C# derleyici hatası oluşturur [CS0246](../compiler-messages/cs0246.md): "tür veya ad alanı adı ' Type/Namespace ' bulunamadı (bir using yönergeniz veya bir bütünleştirilmiş kod eksik olabilir başvuru?) ".
+*tam nitelikli tür* adı, statik üyeleri ve iç içe türlerine bir tür adı belirtilmeden başvurulabilen türün adıdır. Tam nitelikli tür adı (tür adıyla birlikte tam ad alanı adı) sağlamazsanız, C# derleyici hatası oluşturur [CS0246](../compiler-messages/cs0246.md): "tür veya ad alanı adı ' Type/Namespace ' bulunamadı (bir using yönergeniz veya derleme başvurunuz eksik olabilir mi?)".
 
 `using static` yönergesi, örnek üyelerine de sahip olsa bile statik üyelere (veya iç içe türler) sahip her tür için geçerlidir. Ancak, örnek üyeleri yalnızca tür örneği aracılığıyla çağrılabilir.
 
@@ -56,4 +55,4 @@ Aşağıdaki örnek, <xref:System.Console>, <xref:System.Math>ve <xref:System.St
 - [C#Başvurunun](../index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [Ad Alanlarını Kullanma](../../programming-guide/namespaces/using-namespaces.md)
-- [Ad alanları](../../programming-guide/namespaces/index.md)
+- [Ad Alanları](../../programming-guide/namespaces/index.md)

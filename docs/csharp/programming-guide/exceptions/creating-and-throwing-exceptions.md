@@ -1,6 +1,5 @@
 ---
 title: Özel durumlar oluşturma ve atma C# -Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - catching exceptions [C#]
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: dfc852722531c06f986f54221ad094b13496561f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f775a0917560a219f24329adcb1542f605d47dc2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417946"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712305"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Özel Durumlar Oluşturma ve Atma (C# Programlama Kılavuzu)
 Özel durumlar, programı çalıştırırken bir hata oluştuğunu göstermek için kullanılır. Bir hatayı tanımlayan özel durum nesneleri oluşturulur ve [throw](../../language-reference/keywords/throw.md) anahtar *sözcüğüyle oluşturulur.* Çalışma zamanı, en uyumlu özel durum işleyicisini arar.  

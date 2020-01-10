@@ -1,21 +1,20 @@
 ---
-title: 'Nasıl yapılır: bir bayt dizisini int C# programlama kılavuzuna dönüştürme'
-ms.custom: seodec18
+title: Bir bayt dizisini int C# programlama kılavuzuna dönüştürme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: cb6252069302a28f8a85247aa4584a9284b26c4d
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 9f477649dba1b42d7a10d521c010977707daf3ec
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195460"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698761"
 ---
-# <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Nasıl yapılır: byte Dizisini int'e Dönüştürme (C# Programlama Kılavuzu)
+# <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Byte dizisini int 'e dönüştürme (C# Programlama Kılavuzu)
 
-Bu örnek, bir bayt dizisini bir [int](../../language-reference/builtin-types/integral-numeric-types.md) 'e ve bir bayt dizisine geri dönüştürmek için <xref:System.BitConverter> sınıfının nasıl kullanılacağını gösterir. Örneğin, ağ dışı baytları okuduktan sonra bayttan bir yerleşik veri türüne dönüştürmeniz gerekebilir. Örnekteki [ToInt32 (byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) yöntemine ek olarak, aşağıdaki tablo, baytları (bayt dizisinden bir diziden) diğer yerleşik türlere dönüştüren <xref:System.BitConverter> sınıfındaki yöntemleri listelemektedir.
+Bu örnek, bir bayt dizisinin bir [int](../../language-reference/builtin-types/integral-numeric-types.md) 'e ve bir bayt dizisine geri dönüştürülmesi için <xref:System.BitConverter> sınıfını nasıl kullanacağınızı gösterir. Örneğin, ağ dışı baytları okuduktan sonra bayttan bir yerleşik veri türüne dönüştürmeniz gerekebilir. Örnekteki [ToInt32 (byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) yöntemine ek olarak, aşağıdaki tablo, baytları (bayt dizisinden bir diziden) diğer yerleşik türlere dönüştüren <xref:System.BitConverter> sınıfındaki yöntemleri listelemektedir.
 
 |Döndürülen tür|Yöntem|
 |-------------------|------------|
@@ -32,7 +31,7 @@ Bu örnek, bir bayt dizisini bir [int](../../language-reference/builtin-types/in
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, bir bayt dizisini başlatır, bilgisayar mimarisi az endian ise diziyi tersine çevirir (yani, ilk olarak en az önemli bayt depolanır) ve ardından dört baytı dönüştürmek için [ToInt32 (byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) yöntemini çağırır dizide `int`. Toınt32 için ikinci bağımsız değişken [(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) bayt dizisinin başlangıç dizinini belirtir.
+Bu örnek, bir bayt dizisini başlatır, bilgisayar mimarisi az endian ise diziyi tersine çevirir (yani öncelikle en az önemli bayt depolanır) ve sonra dizideki dört baytı bir `int`dönüştürmek için [ToInt32 (byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) yöntemini çağırır. Toınt32 için ikinci bağımsız değişken [(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) bayt dizisinin başlangıç dizinini belirtir.
 
 > [!NOTE]
 > Çıktı, bilgisayarınızın mimarisinin bitiliğine bağlı olarak farklılık gösterebilir.

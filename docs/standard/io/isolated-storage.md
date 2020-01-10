@@ -18,14 +18,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 33583f430e5af2f3fa7027233febd9ec61f85a3f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ed784bafda2aed829f2e97d7e7e8b2716c48c7ba
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802459"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706588"
 ---
 # <a name="isolated-storage"></a>Yalıtılmış Depolama
 <a name="top"></a>Masaüstü uygulamaları için yalıtılmış depolama, kodu kaydedilen verilerle ilişkilendirmenin standartlaştırılmış yollarını tanımlayarak yalıtım ve güvenlik sağlayan bir veri depolama mekanizmasıdır. Standart hale getirme başka yararlar da sağlar. Yöneticiler yalıtılmış depolamayı değiştirecek araçları kullanarak dosya depolama alanını yapılandırabilir, güvenlik ilkelerini ayarlayabilir ve kullanılmayan verileri silebilir. Yalıtılmış depolama ile kodunuz dosya sistemindeki güvenli konumları belirtmek için benzersiz yollara ihtiyaç duymaz ve veriniz yalnızca yalıtılmış depolama erişimi olan diğer uygulamalardan korunur. Bir uygulamanın depo alanının nerede olduğunu belirten sabit kodlu bilgi gerekli değildir.

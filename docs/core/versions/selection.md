@@ -4,13 +4,12 @@ description: .NET Core 'un programınızın çalışma zamanı sürümlerini oto
 author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
-ms.custom: seodec18
-ms.openlocfilehash: 043b9b85633e81670783e7870f1be7726ab07e81
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 546725db907937dea6fe0739656fb585a8855644
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454626"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713982"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Kullanılacak .NET Core sürümünü seçin
 
@@ -79,7 +78,7 @@ Belirli bir SDK, birlikte geldiği çalışma zamanının hedef çerçevesine ka
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Çerçeveye bağımlı uygulamalar ileri alma
 
-Bir uygulamayı [`dotnet run`](../tools/dotnet-run.md), [**çerçeveye bağlı bir dağıtımdan**](../deploying/index.md#framework-dependent-deployments-fdd) [`dotnet myapp.dll`](../tools/dotnet.md#description)veya `myapp.exe`olan [**çerçeveye bağlı bir yürütülebilirden**](../deploying/index.md#framework-dependent-executables-fde) çalıştırdığınızda, `dotnet` çalıştırılabilir dosyadır uygulama için.
+Bir uygulamayı [`dotnet run`](../tools/dotnet-run.md), [**çerçeveye bağlı bir dağıtımdan**](../deploying/index.md#framework-dependent-deployments-fdd) [`dotnet myapp.dll`](../tools/dotnet.md#description)veya `myapp.exe`olan [**çerçeveye bağlı bir yürütülebilirden**](../deploying/index.md#framework-dependent-executables-fde) çalıştırdığınızda, `dotnet` çalıştırılabilir dosya uygulamanın **ana bilgisayarı** olur.
 
 Konak makinede yüklü en son düzeltme eki sürümünü seçer. Örneğin, proje dosyanızda `netcoreapp2.0` belirttiyseniz ve en son .NET çalışma zamanı yüklü `2.0.4`, `2.0.4` çalışma zamanı kullanılır.
 
@@ -92,7 +91,7 @@ Birkaç kullanım örneği, 2,0 hedefliyorsanız davranışı gösterir:
 - 2,0 belirtildi. 2,0. * sürüm yüklendi. 2.2.2, en yüksek 2. x çalışma zamanı sürümü yüklenir. 2.2.2 kullanılır.
 - 2,0 belirtildi. 2\. x sürümü yüklü değil. 3.0.0 yüklendi. Bir hata iletisi görüntülenir.
 
-İkincil sürüm al-ileri, son kullanıcıları etkileyebilecek bir yan etkiye sahiptir. Aşağıdaki senaryoyu göz önünde bulundurun:
+İkincil sürüm al-ileri, son kullanıcıları etkileyebilecek bir yan etkiye sahiptir. Aşağıdaki senaryoyu ele alalım:
 
 1. Uygulama, 2,0 'in gerekli olduğunu belirtir.
 2. Çalıştırıldığında, 2,0. * sürümü yüklü değildir, ancak 2.2.2. Sürüm 2.2.2 kullanılacak.

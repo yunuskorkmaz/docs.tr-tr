@@ -16,13 +16,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.custom: seodec18
-ms.openlocfilehash: 53f16e65a3cd19cd516756f3a2d036039964e021
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 319aa76754adc852528f35448d9906d4e903693b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971366"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711551"
 ---
 # <a name="anchors-in-regular-expressions"></a>Normal İfadelerdeki Tutturucular
 Yer işaretleri veya atomik sıfır genişlik onayları, eşleşme gerçekleşmesi gereken dizedeki bir konumu belirtir. Arama ifadenizde bir yer işareti kullandığınızda, normal ifade motoru dize veya harcama karakterleri boyunca ilerlemez; sadece belirtilen konumda bir eşleşme arar. Örneğin `^` , eşleşmenin bir satır veya dize başında başlaması gerektiğini belirtir. Bu nedenle `^http:` normal ifadesi, sadece bir satırın başında gerçekleştiğinde "http:" ile eşleşir. Aşağıdaki tabloda, .NET 'teki normal ifadeler tarafından desteklenen bağlantılar listelenmektedir.  

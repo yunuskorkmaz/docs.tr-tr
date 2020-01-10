@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: ecb7b0448b8ee9c1c1fc1eb9542b693d60a38ffd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c15f55f3a3c2b4e404767ddf96e258bc1e9771d7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74335842"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716750"
 ---
 # <a name="-link-visual-basic"></a>-bağlantı (Visual Basic)
 Derleyicinin, belirtilen derlemelerdeki COM tür bilgilerini şu anda derlediğiniz projede kullanılabilir hale getirmesine neden olur.  
@@ -33,7 +33,7 @@ veya
 -l:fileList  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Arguments  
   
 |Terim|Tanım|  
 |---|---|  
@@ -86,7 +86,7 @@ veya
  Aşağıdaki komut satırı, kaynak dosya `OfficeApp.vb` ve `COMData1.dll` ve `COMData2.dll` başvuru derlemelerini `OfficeApp.exe`üretecek şekilde derler.  
   
 ```console  
-vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
+vbc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.vb  
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.

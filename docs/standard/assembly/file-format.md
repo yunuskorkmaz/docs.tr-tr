@@ -2,16 +2,15 @@
 title: .NET derlemesi dosya biçimi
 description: .NET uygulamaları ve kitaplıklarını anlatmak ve içermesi için kullanılan .NET derleme dosyası biçimi hakkında bilgi edinin.
 author: richlander
-ms.author: mairaw
 ms.date: 08/20/2019
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: c9396c45e3c6cdbc9360485f6286a1746bf81fdd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4cf6522d66d7a1efccde45078768a773db6e6cb0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970161"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711590"
 ---
 # <a name="net-assembly-file-format"></a>.NET derlemesi dosya biçimi
 
@@ -35,4 +34,4 @@ ECMA 335 II. 25.1 'den derleme üst bilgileri, çalışma zamanı dosya biçimin
 
 ## <a name="process-the-assemblies"></a>Derlemeleri işleme
 
-Derlemeleri işlemek için araçlar veya API 'Ler yazmak mümkündür. Derleme bilgileri, çalışma zamanında programlama kararları almanızı, derlemeleri yeniden yazmayı, bir düzenleyicide API IntelliSense sağlamayı ve belge oluşturmayı sağlar. <xref:System.Reflection?displayProperty=nameWithType>, <xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType>, ve [mono. CECIL](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) , bu amaçla sık kullanılan araçların yararlı örnekleridir.
+Derlemeleri işlemek için araçlar veya API 'Ler yazmak mümkündür. Derleme bilgileri, çalışma zamanında programlama kararları almanızı, derlemeleri yeniden yazmayı, bir düzenleyicide API IntelliSense sağlamayı ve belge oluşturmayı sağlar. <xref:System.Reflection?displayProperty=nameWithType>, <xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType>ve [mono. CECIL](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) , bu amaçla sık kullanılan araçlara yönelik iyi bir örnektir.

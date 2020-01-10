@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: 8f4e415576562885c9edbd3d2dddbe2a271e9923
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 9a5822a097828f818da020735c3822e86eb3236b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005458"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716631"
 ---
 # <a name="-libpath"></a>-libpath
 Başvurulan derlemelerin konumunu belirtir.  
@@ -29,7 +29,7 @@ Başvurulan derlemelerin konumunu belirtir.
 |`dirList`|Gerekli. Başvurulan bir derlemenin geçerli çalışma dizininde (derleyicisini çağırmakta olduğunuz dizin) veya ortak dil çalışma zamanının sistem dizininde bulunamaması halinde, derleyicinin aranacağı dizinlerin noktalı virgülle ayrılmış listesi. Dizin adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 seçeneği, [-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) seçeneğinin başvurduğu derlemelerin konumunu belirtir.  
+ `-libpath` seçeneği, [-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) seçeneğinin başvurduğu derlemelerin konumunu belirtir.  
   
  Derleyici, aşağıdaki sırada tam olarak nitelenen derleme başvurularını arar:  
   
@@ -37,15 +37,15 @@ Başvurulan derlemelerin konumunu belirtir.
   
 2. Ortak dil çalışma zamanı sistem dizini.  
   
-3. @No__t-0 tarafından belirtilen dizinler.  
+3. `-libpath`tarafından belirtilen dizinler.  
   
 4. LıB ortam değişkeni tarafından belirtilen dizinler.  
   
- @No__t-0 seçeneği eklenebilir; bir defadan fazla belirtmek önceki değerlere ekler.  
+ `-libpath` seçeneği eklenebilir; bir defadan fazla belirtmek önceki değerlere ekler.  
   
  Derleme başvurusunu belirtmek için `-reference` kullanın.  
   
-|Visual Studio tümleşik geliştirme ortamında/LIBPATH ayarlamak için|  
+|Visual Studio tümleşik geliştirme ortamında Set-libpath|  
 |---|  
 |1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Başvurular** sekmesine tıklayın.<br />3. **başvuru yolları...** düğmesine tıklayın.<br />4. **başvuru yolları** iletişim kutusunda dizin adını **klasör:** kutusuna girin.<br />5. **Klasör Ekle**'ye tıklayın.|  
   

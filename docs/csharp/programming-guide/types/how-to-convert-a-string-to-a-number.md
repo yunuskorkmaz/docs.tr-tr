@@ -1,6 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir dizeyi sayı C# programlama kılavuzuna dönüştürme'
-ms.custom: seodec18
+title: Bir dizeyi sayı C# programlama kılavuzuna dönüştürme
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -8,14 +7,14 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 8cd5a54bead2790d8e6e4c8e4a5649352f12869d
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 21732acd65eb4522b19ce84600fd8b333fb8a705
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552408"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711876"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Nasıl yapılır: Bir Dizeyi Sayıya Dönüştürme (C# Programlama Kılavuzu)
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Bir dizeyi sayıya dönüştürme (C# Programlama Kılavuzu)
 
 Çeşitli sayısal türlerde (`int`, `long`, `double`, vb.) bulunan `Parse` veya `TryParse` yöntemini çağırarak veya <xref:System.Convert?displayProperty=nameWithType> sınıfındaki yöntemleri kullanarak bir [dizeyi](../../language-reference/builtin-types/reference-types.md) sayıya dönüştürebilirsiniz.  
   
@@ -25,7 +24,7 @@ ms.locfileid: "74552408"
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Parse ve Trypari yöntemlerini çağırma
 
-`Parse` ve `TryParse` yöntemleri, dizenin başındaki ve sonundaki boşlukları yoksayar, ancak diğer tüm karakterler uygun sayısal türü (`int`, `long`, `ulong`, `float`) biçimli karakterler olmalıdır. , `decimal`vb.).  Dizeyi oluşturan dize içindeki tüm boşluklar hataya neden olur.  Örneğin, "10", "10,3" veya "10" öğesini ayrıştırmak için `decimal.TryParse` kullanabilirsiniz, ancak bu yöntemi, "10X", "1 0" (katıştırılmış alanı notta), "10 .3" (katıştırılmış alanı), "10E1" (`float.TryParse` burada), vb. ayrıştırarak kullanamazsınız. Ayrıca, değeri `null` olan bir dize veya <xref:System.String.Empty?displayProperty=nameWithType> başarıyla ayrıştırılamadı. <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> metodunu çağırarak, ayrıştırmayı denemeden önce null veya boş bir dize kontrol edebilirsiniz. 
+`Parse` ve `TryParse` yöntemleri dizenin başındaki ve sonundaki boşlukları yoksayar, ancak diğer tüm karakterler uygun sayısal türü (`int`, `long`, `ulong`, `float`, `decimal`, vb.) oluşturan karakterler olmalıdır.  Dizeyi oluşturan dize içindeki tüm boşluklar hataya neden olur.  Örneğin, "10", "10,3" veya "10" öğesini ayrıştırmak için `decimal.TryParse` kullanabilirsiniz, ancak bu yöntemi, "10X", "1 0" (katıştırılmış alanı notta), "10 .3" (katıştırılmış alanı), "10E1" (`float.TryParse` burada), vb. ayrıştırarak kullanamazsınız. Ayrıca, değeri `null` olan bir dize veya <xref:System.String.Empty?displayProperty=nameWithType> başarıyla ayrıştırılamadı. <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> metodunu çağırarak, ayrıştırmayı denemeden önce null veya boş bir dize kontrol edebilirsiniz. 
 
 Aşağıdaki örnek, `Parse` ve `TryParse`için hem başarılı hem de başarısız çağrıları gösterir.  
   
@@ -58,5 +57,5 @@ Aşağıdaki tabloda, bir dizeyi sayıya dönüştürmek için kullanabileceğin
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Türler](./index.md)
-- [Nasıl yapılır: Bir Dizenin Sayısal bir Değeri Temsil Edip Etmediğini Belirleme](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [Bir dizenin sayısal bir değeri temsil edip etmediğini belirleme](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [Örnek: .NET Core WinForms biçimlendirme yardımcı programıC#()](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)

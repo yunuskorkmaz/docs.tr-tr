@@ -1,79 +1,91 @@
 ---
 title: Serileştirme (C# )
-ms.date: 04/26/2018
-ms.openlocfilehash: 638fdbd31912ffeb284d734e1f8ce2ecd879b540
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.date: 01/02/2020
+ms.openlocfilehash: 1d2bda9022b7e43744dd8a0286eff88914cf65a3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680119"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635736"
 ---
 # <a name="serialization-c"></a>Serileştirme (C# )
 
-Serileştirme bir nesneyi depolamak veya bellek, bir veritabanı veya dosya aktarmak için bayt akışı bir nesne dönüştürme işlemidir. Ana amacı, gerektiğinde yeniden oluşturmak için bir nesnenin durumu kaydetmektir. Seri durumundan çıkarma ters işlem çağrılır.
+Serileştirme, nesneyi depolamak veya belleği, bir veritabanı ya da bir dosyaya aktarmak için bir nesneyi bayt akışına dönüştürme işlemidir. Temel amacı, bir nesnenin durumunu gerektiğinde yeniden oluşturmak için kaydetmeyecektir. Ters işlem serisini kaldırma olarak adlandırılır.
 
-## <a name="how-serialization-works"></a>Seri hale getirme nasıl çalışır?
+## <a name="how-serialization-works"></a>Serileştirme çalışma şekli
 
-Bu örnekte genel seri hale getirme işlemini gösterir:
+Bu çizimde serileştirme işleminin genel işlemi gösterilmektedir:
 
-![Grafik seri hale getirme](./media/index/serialization-process.gif)
+![Serileştirme grafiği](./media/index/serialization-process.gif)
 
-Yalnızca veri ancak nesnenin türü, sürüm, kültür ve derleme adı gibi bilgileri izleme bir akışa nesne seri hale getirilir. Bu akıştan, bir veritabanı, dosya veya bellek içinde saklanabilir.
+Nesne, verileri taşıyan bir akışa serileştirilir. Akışta Ayrıca nesnenin türü ile ilgili sürüm, kültür ve derleme adı gibi bilgiler de bulunabilir. Bu akıştan, nesne bir veritabanında, bir dosyada veya bellekte depolanabilir.
 
-### <a name="uses-for-serialization"></a>Serileştirme kullanımları
+### <a name="uses-for-serialization"></a>Serileştirme için kullanımlar
 
-Seri hale getirme geliştiricinin bir nesne durumunu kaydetmek ve gerektiğinde depolama nesneleri ve bunun yanı sıra veri değişimi sağlama yeniden sağlar. Serileştirme bir geliştirici nesnesi aracılığıyla bir Web hizmeti uzak bir uygulamaya gönderme, bir etki alanından bir nesne geçirme, nesnenin bir güvenlik duvarı üzerinden bir XML dizesi olarak geçirme veya güvenliğini sağlama gibi eylemleri gerçekleştirebilirsiniz veya uygulamalar arasında kullanıcıya özgü bilgileri.
+Serileştirme, geliştiricinin bir nesnenin durumunu kaydetmesine ve gerektiğinde, nesnelerin ve veri değişim verilerinin depolanmasını sağlayarak yeniden oluşturmasını sağlar. Bir geliştirici, serileştirme aracılığıyla şunları gibi eylemler gerçekleştirebilir:
 
-### <a name="making-an-object-serializable"></a>Bir nesne seri hale getirilebilir yapma
+* Web hizmeti kullanarak nesneyi uzak uygulamaya gönderme
+* Bir etki alanından diğerine nesne geçirme
+* Bir nesneyi bir JSON veya XML dizesi olarak güvenlik duvarı üzerinden geçirme
+* Uygulamalar arasında güvenlik veya kullanıcıya özel bilgileri koruma
 
-Nesne seri hale için gereken bir nesneyi serileştirmek için bir akış serileştirilmiş nesne içerecek ve bir <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization> seri hale getirme ve seri kaldırma nesneler için gerekli olan sınıflar içerir.
+## <a name="json-serialization"></a>JSON seri hale getirme
 
-Uygulama <xref:System.SerializableAttribute> özniteliği bu türün örneğini serileştirilmiş göstermek için bir tür. Seri hale getirmek çalışır, ancak türüne sahip bir özel durum <xref:System.SerializableAttribute> özniteliği.
+<xref:System.Text.Json> ad alanı, JavaScript Nesne Gösterimi (JSON) serileştirme ve serisini kaldırma için sınıflar içerir. JSON, web genelinde veri paylaşımında yaygın olarak kullanılan açık bir standarttır.
 
-Seri hale getirilebilir olması için sınıf alana istemiyorsanız, uygulama <xref:System.NonSerializedAttribute> özniteliği. Bir işaretçi, tanıtıcı veya belirli bir ortama özgü bazı başka veri yapısına serializable bir tür alanı içeren ve alan atayamayacağına farklı bir ortamda yeniden oluşturulur olamaz, nonserializable yapmak isteyebilirsiniz.
+JSON serileştirme bir nesnenin ortak özelliklerini, [RFC 8259 JSON belirtimine](https://tools.ietf.org/html/rfc8259)uyan bir dizeye, bayt dizisine veya akışa seri hale getirir. <xref:System.Text.Json.JsonSerializer>, sınıfın bir örneğini seri hale getirmenin veya seri hale getirmenin yolunu denetlemek için:
 
-Serileştirilmiş sınıf işaretlenen diğer sınıfların nesnelere başvurular içeriyorsa <xref:System.SerializableAttribute>, bu nesneleri ayrıca seri hale.
+* <xref:System.Text.Json.JsonSerializerOptions> nesnesi kullanma
+* <xref:System.Text.Json.Serialization> ad alanından sınıflara veya özelliklere öznitelikleri uygulama
+* [Özel dönüştürücüler uygulama](../../../../standard/serialization/system-text-json-converters-how-to.md)
 
 ## <a name="binary-and-xml-serialization"></a>İkili ve XML serileştirme
 
-İkili veya XML serileştirme kullanabilirsiniz. İkili seri hale getirme, tüm üyeleri, salt okunur bile üyeleri seri hale getirilmiş ve performans geliştirilir. XML serileştirme daha okunabilir bir kod ve nesneyi paylaşmak ve birlikte çalışabilirlik amacıyla kullanım daha fazla esneklik sağlar.
+<xref:System.Runtime.Serialization> ad alanı, ikili ve XML serileştirme ve seri durumdan çıkarma için sınıflar içerir.
 
-### <a name="binary-serialization"></a>İkili seri hale getirme
+İkili serileştirme, depolama veya soket tabanlı ağ akışları gibi kullanımlar için sıkıştırılmış serileştirme oluşturmak üzere ikili kodlama kullanır. İkili serileştirme ' de, salt okunan tüm Üyeler, hatta salt okunurdur ve performans geliştirilir. 
 
-İkili kodlama ikili serileştirme depolama veya ağ yuva tabanlı akışları gibi kullanımlar için compact serileştirme üretmek için kullanır.
+XML serileştirme, bir nesnenin ortak alanlarını ve özelliklerini veya parametrelerinin parametrelerini ve dönüş değerlerini belirli bir XML şeması tanım dili (XSD) belgesine uygun bir XML akışı olarak serileştirir. XML serileştirme, XML 'e dönüştürülen ortak özellikler ve alanlarla kesin olarak belirlenmiş sınıflarda oluşur. <xref:System.Xml.Serialization> XML serileştirme ve seri durumdan çıkarma için sınıflar içerir. Sınıfın bir örneğini seri hale getirmenin veya seri hale getirmenin <xref:System.Xml.Serialization.XmlSerializer> yolunu denetlemek için sınıflara ve sınıf üyelerine öznitelikler uygularsınız.
 
-### <a name="xml-serialization"></a>XML serileştirme
+### <a name="making-an-object-serializable"></a>Bir nesneyi seri hale getirilebilir hale getirme
 
-XML serileştirme ortak alanları ve bir nesne veya özelliklerini parametre ve dönüş değerleri yöntemleri, belirli bir XML Şeması Tanım Dili (XSD) belge uyan bir XML akışı olarak serileştirir. XML serileştirme sonuçlarında sınıflarıyla ortak özellikler ve XML için dönüştürülür alanları kesin. <xref:System.Xml.Serialization> seri hale getirme ve XML seri durumdan çıkarmak için gereken sınıfların içerir.
+İkili veya XML serileştirme için şunlar gerekir:
 
-Öznitelikleri için sınıflar ve sınıf üyeleri denetlenmesine uygulamak <xref:System.Xml.Serialization.XmlSerializer> serileştiren veya sınıfının bir örneği seri durumdan çıkarır.
+* Seri hale getirilecek nesne
+* Seri hale getirilen nesneyi içeren akış
+* Bir <xref:System.Runtime.Serialization.Formatter?displayProperty=fullName> örneği
 
-## <a name="basic-and-custom-serialization"></a>Temel ve özel seri hale getirme
+Türün örneklerinin seri hale getirilebilir olduğunu göstermek için <xref:System.SerializableAttribute> özniteliğini bir türe uygulayın. Seri hale getirme denerseniz, ancak türün <xref:System.SerializableAttribute> özniteliği yoksa bir özel durum oluşturulur.
 
-İki yolla temel ve özel serileştirme gerçekleştirilebilir. Temel serileştirme otomatik olarak nesneyi serileştirmek için .NET Framework'ü kullanır.
+Bir alanın serileştirilmesi için <xref:System.NonSerializedAttribute> özniteliğini uygulayın. Seri hale getirilebilir türdeki bir alan belirli bir ortama özel bir işaretçi, tanıtıcı veya başka bir veri yapısı içeriyorsa ve alan farklı bir ortamda anlamlı bir reconstituted değilse, bu durumda seri hale getirilebilir olmayan bir şekilde oluşturulabilir.
 
-### <a name="basic-serialization"></a>Temel serileştirme
+Serileştirilmiş bir sınıf, <xref:System.SerializableAttribute>olarak işaretlenen diğer sınıfların nesnelerine başvurular içeriyorsa, bu nesneler de serileştirilir.
 
-Nesne sahip temel serileştirme sırasında tek gereksinim olmasıdır <xref:System.SerializableAttribute> özniteliği uygulandı. <xref:System.NonSerializedAttribute> Serileştirilmekte olan belirli alanları tutmak için kullanılabilir.
+### <a name="basic-and-custom-serialization"></a>Temel ve özel serileştirme
 
-Temel serileştirme kullandığınızda, sürüm oluşturma nesnelerin sorunlara neden olabilir. Sürüm oluşturma sorunları önemli olduğunda, özel serileştirme kullanırsınız. Temel serileştirme serileştirme gerçekleştirmek için en kolay yoludur ancak kadar denetim işlemi üzerinde sağlamaz.
+İkili ve XML serileştirme, temel ve özel olmak üzere iki şekilde gerçekleştirilebilir.
 
-### <a name="custom-serialization"></a>Özel serileştirme
+Temel serileştirme, nesneyi otomatik olarak seri hale getirmek için .NET Framework kullanır. Tek gereksinim, sınıfın <xref:System.SerializableAttribute> özniteliğin uygulanmış olması. <xref:System.NonSerializedAttribute>, belirli alanların serileştirilme tutulmasını sağlamak için kullanılabilir.
 
-Özel serileştirme, tam olarak hangi nesnelerin serileştirilmiş ve nasıl yapılacağıyla belirtebilirsiniz. Sınıf işaretlenmelidir <xref:System.SerializableAttribute> ve uygulama <xref:System.Runtime.Serialization.ISerializable> arabirimi.
+Temel serileştirme kullandığınızda nesnelerin sürümü oluşturma sorunlar oluşturabilir. Sürüm oluşturma sorunları önemli olduğunda özel serileştirme kullanırsınız. Temel serileştirme, serileştirme gerçekleştirmenin en kolay yoludur, ancak süreç üzerinde çok fazla denetim sağlamaz.
 
-Bir özel biçimde seri durumdan nesnenizin istiyorsanız özel bir oluşturucu kullanmanız gerekir.
+Özel seri hale getirmek için, tam olarak hangi nesnelerin serileştirildiği ve nasıl yapılacağını belirtebilirsiniz. Sınıfın <xref:System.SerializableAttribute> işaretlenmesi ve <xref:System.Runtime.Serialization.ISerializable> arabirimini uygulamanız gerekir. Nesnenizin bir özel şekilde seri durumdan çıkarılabilmesini istiyorsanız özel bir Oluşturucu kullanın.
 
 ## <a name="designer-serialization"></a>Tasarımcı serileştirme
 
-Tasarımcı serileştirme özel bir geliştirme araçları ile ilişkili nesne Kalıcılık türü içeren serileştirme biçimidir. Tasarımcı serileştirme bir nesne grafiğinin daha sonra nesne grafiğini kurtarmak için kullanılabilir bir kaynak dosyasına dönüştürme işlemidir. Bir kaynak dosyası, kod, biçimlendirme veya hatta SQL tablo bilgileri içerebilir.
+Tasarımcı serileştirme, geliştirme araçlarıyla ilişkili nesne kalıcılığı türünü içeren özel bir serileştirme biçimidir. Tasarımcı serileştirme bir nesne grafiğini, daha sonra nesne grafiğini kurtarmak için kullanılabilecek bir kaynak dosyaya dönüştürme işlemidir. Kaynak dosya, kod, biçimlendirme veya hatta SQL tablo bilgisi içerebilir.
 
-## <a name="BKMK_RelatedTopics"></a> İlgili Konular ve örnekler  
-[İzlenecek yol: Visual Studio'da bir nesneyi kalıcı kılma (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
-Bir nesnenin veri değerleri depolamak ve bunları nesnesi örneği başlatıldığında almanıza imkan sağlayan, örnekleri arasında kalıcı hale getirmek için serileştirme'nın nasıl kullanılabileceğini gösterir.
+## <a name="BKMK_RelatedTopics"></a>İlgili konular ve örnekler  
 
-[Nasıl yapılır: Nesne verilerini bir XML dosyasından okuma (C#)](how-to-read-object-data-from-an-xml-file.md)  
- Bir XML dosyası kullanmayı önceden yazılmış nesne verilerini okuma işlemini gösterir <xref:System.Xml.Serialization.XmlSerializer> sınıfı.
+[System. Text. JSON genel bakış](../../../../standard/serialization/system-text-json-overview.md) `System.Text.Json` kitaplığının nasıl alınacağını gösterir.
 
-[Nasıl yapılır: Nesne verilerini bir XML dosyasına yazma (C#)](how-to-write-object-data-to-an-xml-file.md)  
-Nesne öğesinden bir sınıf bir XML kullanarak dosyaya yazma işlemi gösterilmektedir <xref:System.Xml.Serialization.XmlSerializer> sınıfı.
+[.Net 'TE JSON serileştirmek ve serisini kaldırma](../../../../standard/serialization/system-text-json-how-to.md). <xref:System.Text.Json.JsonSerializer> sınıfı kullanılarak JSON 'dan ve öğesinden nesne verilerinin nasıl okunacağını ve yazılacağını gösterir.
+
+[İzlenecek yol: Visual Studio 'da bir nesneyi kalıcıC#hale getirme ()](walkthrough-persisting-an-object-in-visual-studio.md)  
+Serileştirme 'in nesnelerin örnekleri arasında bir nesne verilerini kalıcı hale getirmek için nasıl kullanılabileceğini gösterir. Bu, değerleri depolamanızı ve nesnenin bir sonraki örneklendirilmesi durumunda bunları almanızı sağlar.
+
+[XML dosyasından nesne verilerini okuma (C#)](how-to-read-object-data-from-an-xml-file.md)  
+Daha önce <xref:System.Xml.Serialization.XmlSerializer> sınıfını kullanarak bir XML dosyasına yazılmış nesne verilerinin nasıl okunacağını gösterir.
+
+[Nesne verilerini bir XML dosyasına yazma (C#)](how-to-write-object-data-to-an-xml-file.md)  
+<xref:System.Xml.Serialization.XmlSerializer> sınıfını kullanarak bir sınıftan XML dosyasına nesnenin nasıl yazılacağını gösterir.

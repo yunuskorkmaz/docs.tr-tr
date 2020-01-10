@@ -1,6 +1,5 @@
 ---
 title: Class anahtar sözcüğü C# başvurusu
-ms.custom: seodec18
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -8,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 0c4fc9645e43f23e340804b46bbe8a5faa19525d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 187a49131e903e00cab54d9db43b6cd8eb359a3a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922386"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713685"
 ---
 # <a name="class-c-reference"></a>class (C# Başvurusu)
 
-Sınıflar, aşağıdaki örnekte gösterildiği gibi `class`anahtar sözcüğü kullanılarak bildirilmiştir:
+Sınıflar, aşağıdaki örnekte gösterildiği gibi anahtar sözcük `class`kullanılarak bildirilmiştir:
 
 ```csharp
 class TestClass
@@ -38,9 +37,9 @@ class TestClass
 |Hiçbiri, iki arabirim uygular|`class ImplClass: IFace1, IFace2 { }`|
 |Tek, bir arabirim uygular|`class ImplDerivedClass: BaseClass, IFace1 { }`|
 
-Diğer sınıflarda iç içe değil, bir ad alanı içinde doğrudan bildirdiğiniz sınıflar [ortak](./public.md) veya [iç](./internal.md)olabilir. Sınıflar varsayılan `internal` olarak ' dir.
+Diğer sınıflarda iç içe değil, bir ad alanı içinde doğrudan bildirdiğiniz sınıflar [ortak](./public.md) veya [iç](./internal.md)olabilir. Sınıflar varsayılan olarak `internal`.
 
-İç içe geçmiş sınıflar dahil olmak üzere sınıf üyeleri [ortak](public.md), [korumalı dahili](protected-internal.md), [korunan](protected.md), [dahili](internal.md), [özel](private.md)veya [özel korumalı](private-protected.md)olabilir. Üyeler varsayılan `private` olarak ' dir.
+İç içe geçmiş sınıflar dahil olmak üzere sınıf üyeleri [ortak](public.md), [korumalı dahili](protected-internal.md), [korunan](protected.md), [dahili](internal.md), [özel](private.md)veya [özel korumalı](private-protected.md)olabilir. Üyeler varsayılan olarak `private`.
 
 Daha fazla bilgi için bkz. [erişim değiştiricileri](../../programming-guide/classes-and-structs/access-modifiers.md).
 
@@ -58,7 +57,7 @@ Bir sınıf, aşağıdaki üyelerin bildirimlerini içerebilir:
 
 - [Yöntemler](../../programming-guide/classes-and-structs/methods.md)
 
-- [Özellikler](../../programming-guide/classes-and-structs/properties.md)
+- [Veri Erişimi](../../programming-guide/classes-and-structs/properties.md)
 
 - [Dizin Oluşturucular](../../programming-guide/indexers/index.md)
 
@@ -74,27 +73,27 @@ Bir sınıf, aşağıdaki üyelerin bildirimlerini içerebilir:
 
 - [Yapılar](../../programming-guide/classes-and-structs/structs.md)
 
-- [Sabit Listeleri](../../programming-guide/enumeration-types.md)
+- [Sabit Listeleri](../builtin-types/enum.md)
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, sınıf alanları, oluşturucular ve yöntemlerinin bildirimini gösterir. Ayrıca, nesne örneğini oluşturmayı ve örnek verilerini yazdırmayı gösterir. Bu örnekte, iki sınıf bildirilmiştir. İlk sınıf `Child`olan, iki özel alan (`name` ve `age`), iki ortak Oluşturucu ve bir genel yöntem içerir. İkinci sınıfı `StringTest`, öğesini içermesi `Main`için kullanılır.
+Aşağıdaki örnek, sınıf alanları, oluşturucular ve yöntemlerinin bildirimini gösterir. Ayrıca, nesne örneğini oluşturmayı ve örnek verilerini yazdırmayı gösterir. Bu örnekte, iki sınıf bildirilmiştir. İlk sınıf `Child`, iki özel alan (`name` ve `age`), iki ortak Oluşturucu ve bir genel yöntem içerir. İkinci sınıf, `StringTest`, `Main`içermesi için kullanılır.
 
 [!code-csharp[csrefKeywordsTypes#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#5)]
 
 ## <a name="comments"></a>Açıklamalar
 
-Önceki örnekte özel alanlara (`name` ve `age`) yalnızca `Child` sınıfın genel yöntemiyle erişildiğine dikkat edin. Örneğin, aşağıdaki gibi bir ifade kullanarak alt öğenin adını `Main` yöntemden yazdıramazsınız:
+Önceki örnekte özel alanlara (`name` ve `age`) yalnızca `Child` sınıfının public yöntemi aracılığıyla erişildiğine dikkat edin. Örneğin, aşağıdaki gibi bir ifade kullanarak, çocuğun adını `Main` yönteminden yazdıramıyorsunuz:
 
 ```csharp
 Console.Write(child1.name);   // Error
 ```
 
-' In `Child` `Main` özel üyelerine erişim, yalnızca sınıfının bir üyesi `Main` ise mümkün olacaktır.
+`Main` `Child` özel üyelerine erişmek, yalnızca `Main` sınıfının bir üyesi olması durumunda olabilir.
 
-Bir erişim değiştiricisi `private`olmayan bir sınıf içinde bildirildiği türler, bu nedenle bu örnekteki veri üyeleri anahtar sözcüğünün kaldırılmakta olması `private` durumunda olmaya devam eder.
+Bir erişim değiştiricisi olmayan bir sınıf içinde belirtilen türler `private`için varsayılan olarak, bu örnekteki veri üyeleri anahtar sözcük kaldırılırsa `private` olmaya devam eder.
 
-Son olarak, parametresiz Oluşturucu (`child3`) kullanılarak oluşturulan nesne için `age` , alanın varsayılan olarak sıfıra başlatıldığını fark edersiniz.
+Son olarak, parametresiz Oluşturucu (`child3`) kullanılarak oluşturulan nesne için, `age` alanın varsayılan olarak sıfırdan başlatıldığını görürsünüz.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

@@ -1,19 +1,18 @@
 ---
-title: 'Nasıl yapılır: Komut satırı bağımsız değişkenlerini görüntüle C# -Programlama Kılavuzu'
-ms.custom: seodec18
+title: Komut satırı bağımsız değişkenlerini görüntüleme- C# Programlama Kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: ba732930d08c74433d6ea7b38e7dc3a9fddf594c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 210dad71220572535a0325fac925b0453b0d4e03
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923858"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712032"
 ---
-# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Nasıl yapılır: Komut satırı bağımsız değişkenlerini görüntüleC# (Programlama Kılavuzu)
-Komut satırındaki bir çalıştırılabilir dosyaya girilen bağımsız değişkenlere, için `Main`isteğe bağlı bir parametre üzerinden erişilebilir. Bağımsız değişkenler, dizeler dizisi biçiminde sağlanır. Dizinin her öğesi bir bağımsız değişken içerir. Bağımsız değişkenler arasındaki beyaz boşluk kaldırılır. Örneğin, kurgusal bir yürütülebilirin şu komut satırı çağırmaları göz önünde bulundurun:  
+# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Komut satırı bağımsız değişkenlerini görüntüleme (C# Programlama Kılavuzu)
+Komut satırındaki bir yürütülebilir dosyaya sunulan bağımsız değişkenlere `Main`için isteğe bağlı bir parametre üzerinden erişilebilir. Bağımsız değişkenler, dizeler dizisi biçiminde sağlanır. Dizinin her öğesi bir bağımsız değişken içerir. Bağımsız değişkenler arasındaki beyaz boşluk kaldırılır. Örneğin, kurgusal bir yürütülebilirin şu komut satırı çağırmaları göz önünde bulundurun:  
   
 |Komut satırında giriş|Main 'e geçirilen dizelerin dizisi|  
 |----------------------------|-------------------------------------|  

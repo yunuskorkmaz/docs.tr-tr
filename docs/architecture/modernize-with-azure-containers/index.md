@@ -2,18 +2,18 @@
 title: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin (2. sürüm)
 description: Bu e-defterle, mevcut uygulamaları Azure bulutuna ve kapsayıcılara kaldırıp modernleştirin ve bunlarla aynı şekilde geçiş yapmayı öğrenin.
 ms.date: 04/28/2018
-ms.openlocfilehash: 67b1c7743697832684e96225e3d365da625ce6a3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: fa20e606c9a1364fbdf8c9a58c8703420d9e65a9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73089765"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714580"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin (2. sürüm)
 
 ![Modernleştirin .NET uygulamaları kılavuzu 'nun kapak resmi.](./media/index/web-application-guide-cover-image.png)
 
-YAYıMLAYAN  
+YAYIMLAYAN  
 Microsoft Press ve Microsoft Devdıv  
 Microsoft Corporation 'ın bölümleri  
 One Microsoft Way  
@@ -25,15 +25,15 @@ Tüm hakları saklıdır. Bu kitabın içeriğinin bir kısmı herhangi bir biç
 
 Bu kitap, Microsoft 'ta <https://dot.net/architecture>gibi birden çok kanal aracılığıyla kullanılabilen elektronik kitap (e-kitap) biçiminde ücretsiz olarak kullanılabilir.
 
-Bu kitap ile ilgili sorularınız varsa, e-posta [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
+Bu kitap ile ilgili sorularınız varsa [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)adresinden e-posta gönderin.
 
 Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi ifade eder. URL ve diğer Internet Web sitesi başvuruları dahil olmak üzere bu kitapta ifade edilen görünümler, eklentiler ve bilgiler bildirimde bulunmadan değiştirilebilir.
 
-Burada gösterilen bazı örnekler yalnızca gösterim amaçlıdır ve hayal ürünüdür. Hiçbir gerçek ilişkilendirme veya bağlantı amaçlanmaz veya çıkarsanmamalıdır.
+Burada gösterilen bazı örnekler yalnızca örnek amaçlıdır ve kurgusaldır. Gerçek bir ilişki veya bağlantı amaçlanmaz ya da bu anlam çıkarılmamalıdır.
 
 Microsoft ve "ticari markalar" Web sayfasındaki <https://www.microsoft.com> listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır. Diğer tüm işaretler ilgili sahiplerinin mülkiyetindedir.
 
-Geliştirici
+Yazar:
 > **Cesar de La Torre**, SR. PM, .net ürün ekibi, Microsoft Corp.
 
 Katılımcılar ve gözden geçirenler:
@@ -81,7 +81,7 @@ Her bir uygulama için tanım ve kısa açıklama aşağıdaki gibi verilmiştir
 **Düzey 1: buluta yönelik bulut altyapısına** yönelik uygulamalar: Bu geçiş yaklaşımında, mevcut şirket içi uygulamalarınızı bir hizmet olarak altyapı ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)) platformuna geçirin veya yeniden barındırabilirsiniz. Uygulamalarınız daha önce olduğu gibi neredeyse aynı birleşimde sahiptir, ancak artık bunları buluttaki VM 'lere dağıtırsınız.
 Bu basit geçiş türü genellikle sektörde "Yükselt & SHIFT" olarak bilinir.
 
-**Düzey 2: buluta iyileştirilmiş** uygulamalar: Bu düzeyde, ancak önemli bir kodu yeniden tasarlamadan veya değiştirmeden, uygulamanızı bulutta çalıştırmanın yanı sıra kapsayıcılar gibi modern teknolojiler ve ek yararlar elde edebilirsiniz. bulut tarafından yönetilen hizmetler. Kuruluşunuzun geliştirme işlemleri (DevOps) işlemlerinizi iyileştirerek uygulamalarınızın daha hızlı gönderim çevikliğini artırırsınız. Bu, Docker altyapısını temel alan Windows kapsayıcıları gibi teknolojileri kullanarak elde edersiniz. Kapsayıcılar, birden çok aşamada dağıtırken uygulama bağımlılıklarından kaynaklanan uçuşmayı kaldırır. Bu vade modelinde, veritabanları, hizmet olarak önbellek, izleme ve sürekli tümleştirme/sürekli dağıtım (CI/CD) işlem hatları ile ilgili ek Bulut Yönetimli hizmetler kullanırken IaaS veya PaaS üzerinde kapsayıcılar dağıtabilirsiniz.
+**Düzey 2: buluta iyileştirilmiş** uygulamalar: Bu düzeyde, ancak önemli bir kodu yeniden tasarlamadan veya değiştirmeden, uygulamanızı bulutta çalıştırmanın yanı sıra kapsayıcılar gibi modern teknolojiler ve bulut tarafından yönetilen ek hizmetler de elde edebilirsiniz. Kuruluşunuzun geliştirme işlemleri (DevOps) işlemlerinizi iyileştirerek uygulamalarınızın daha hızlı gönderim çevikliğini artırırsınız. Bu, Docker altyapısını temel alan Windows kapsayıcıları gibi teknolojileri kullanarak elde edersiniz. Kapsayıcılar, birden çok aşamada dağıtırken uygulama bağımlılıklarından kaynaklanan uçuşmayı kaldırır. Bu vade modelinde, veritabanları, hizmet olarak önbellek, izleme ve sürekli tümleştirme/sürekli dağıtım (CI/CD) işlem hatları ile ilgili ek Bulut Yönetimli hizmetler kullanırken IaaS veya PaaS üzerinde kapsayıcılar dağıtabilirsiniz.
 
 Üçüncü vade düzeyi buluttaki son hedeftir, ancak bu kılavuzun ana odağa değil birçok uygulama için isteğe bağlıdır:
 
@@ -97,7 +97,7 @@ Tablo 1-1 ' nin başlıca avantajları ve her bir geçişi ya da modernleştirme
 | Bir VM 'deki SQL veya herhangi bir ilişkisel veritabanı | Azure SQL veritabanı yönetilen örneği veya buluttaki başka bir yönetilen veritabanı. | Azure SQL veritabanı, Azure Cosmos DB veya buluttaki başka bir yönetilen veritabanını temel alan, mikro hizmet başına fined-gren veritabanları |
 | **Avantajlar**|
 | <li>Yeniden mimari yok, yeni kod yok <li> Hızlı geçiş için en az çaba <li> En az-Azure 'da desteklenen ortak payda <li> Temel kullanılabilirlik garantisi <li> Buluta taşıdıktan sonra daha modernleştirin daha da kolay | <li> Yeniden mimari yok <li> Minimum kod/yapılandırma değişiklikleri <li> Kapsayıcılar nedeniyle yayın için geliştirilmiş dağıtım ve DevOps çevikliği <li> Daha fazla yoğunluk ve daha düşük dağıtım maliyetleri <li> Uygulama ve bağımlılıkların taşınabilirliği <li> Konak hedeflerinin esnekliği: PaaS yaklaşımları veya IaaS | <li> Bulut mimarı, buluttan en iyi avantajları elde edersiniz, ancak yeni kod gerekiyor <li> Mikro hizmetler bulutu-yerel yaklaşımları <li> Modern görev açısından kritik uygulamalar, bulut açısından dayanıklı hiper ölçeklenebilir <li> Tam olarak yönetilen hizmetler <li> Ölçek için iyileştirildi <li> Alt sistem tarafından otonom çeviklik için iyileştirildi <li> Dağıtım ve DevOps üzerine inşa |
-| **Sorunlarını** |
+| **Zorluklar** |
 | <li> İşletim giderleri veya kapanış veri merkezleri dışında daha küçük bir bulut değeri <li> Çok az yönetiliyor: işletim sistemi veya ara yazılım düzeltme eki uygulama; Terrayform, Spinnaker veya Pupevcil hayvan gibi altyapı çözümlerini kullanabilir | <li> Kapsayıcı, geliştiriciler ve BT Işlemleri için öğrenme eğrisinin ek bir adımdır <li> DevOps ve CI/CD işlem hatları bu yaklaşım için genellikle ' a gerekir '. Şu anda kuruluşun kültürüyle yoksa, ek bir zorluk olabilir| <li> Bulut Yerel uygulamaları ve mikro hizmet mimarileri için yeniden mimari gerektirir ve genellikle modernize (artan zaman ve bütçe) göre önemli kod yeniden düzenleme veya yeniden yazma gerektirir|
 > **Tablo 1-1.** Mevcut .NET uygulamaları ve hizmetleri için modernleştirme yollarının avantajları ve güçlükleri
 
@@ -117,14 +117,14 @@ Birçok mevcut .NET uygulaması günümüzde .NET Framework 4. x 3,5 .NET Framew
 
 Modernleştirme işlemindeki her bir vade düzeyi aşağıdaki anahtar teknolojileriyle ve yaklaşımlar ile ilişkilendirilir:
 
-- **Bulut altyapısına Ready** (yeniden barındırma veya temel kaldırma & SHIFT): ilk bir adım olarak, birçok kuruluş yalnızca bir bulut geçişi stratejisini hızla yürütmek istiyor. Bu durumda, uygulamalar yeniden barındırılır. En iyi şekilde barındırma, [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/) ve Azure veritabanı geçişi gibi bulut araçlarına göre Azure 'a geçiş yaparken size yardımcı olmak için gereken yönergeler, içgörüler ve mekanizmaları sağlayan bir hizmet olan [Azure geçişi](https://aka.ms/azuremigrate)kullanılarak otomatikleştirilebilir. [ Hizmeti](https://azure.microsoft.com/campaigns/database-migration/). Ayrıca, eski uygulamaları buluta taşırken varlıklarınızla ilgili altyapı ayrıntılarını öğrenmenize olanak sağlamak için el ile yeniden barındırma ayarlayabilirsiniz. Örneğin, uygulamalarınızı Azure 'daki VM 'lere, büyük olasılıkla yalnızca küçük yapılandırma değişiklikleriyle taşıyabilirsiniz. Bu durumda ağ, özellikle Azure 'da sanal ağlar oluşturursanız, şirket içi bir ortama benzer.
+- **Bulut altyapısına Ready** (yeniden barındırma veya temel kaldırma & SHIFT): ilk bir adım olarak, birçok kuruluş yalnızca bir bulut geçişi stratejisini hızla yürütmek istiyor. Bu durumda, uygulamalar yeniden barındırılır. En iyi şekilde barındırma, [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/) ve [Azure veritabanı geçiş hizmeti](https://azure.microsoft.com/campaigns/database-migration/)gibi bulut araçlarına dayalı olarak Azure 'a geçiş yaparken size yardımcı olmak için gereken yönergeler, Öngörüler ve mekanizmaları sağlayan [Azure geçişi](https://aka.ms/azuremigrate)kullanılarak otomatikleştirilebilir. Ayrıca, eski uygulamaları buluta taşırken varlıklarınızla ilgili altyapı ayrıntılarını öğrenmenize olanak sağlamak için el ile yeniden barındırma ayarlayabilirsiniz. Örneğin, uygulamalarınızı Azure 'daki VM 'lere, büyük olasılıkla yalnızca küçük yapılandırma değişiklikleriyle taşıyabilirsiniz. Bu durumda ağ, özellikle Azure 'da sanal ağlar oluşturursanız, şirket içi bir ortama benzer.
 
 - **Buluta iyileştirilmiş** (yönetilen hizmetler ve Windows kapsayıcıları): Bu model, uygulamanın çekirdek mimarisini değiştirmeden, buluttan bazı önemli avantajlar kazanmak için birkaç önemli dağıtım iyileştirmesi yapmayı sağlar. Buradaki temel adım, mevcut .NET Framework uygulamalarınıza [Windows kapsayıcıları](https://docs.microsoft.com/virtualization/windowscontainers/about/) desteği eklemektir. Bu önemli adım (kapsayıcılama) koda dokunmasını gerektirmez, bu nedenle, genel kaldırma ve kaydırma çabasının açık olması gerekir. [Image2Docker](https://github.com/docker/communitytools-image2docker-win) veya Visual Studio gibi araçları [Docker](https://www.docker.com/)araçları ile birlikte kullanabilirsiniz. Visual Studio, ASP.NET uygulamaları ve Windows kapsayıcıları görüntüleri için otomatik olarak akıllı varsayılanlar seçer. Bu araçlar bir hızlı iç döngü ve kapsayıcıları Azure 'a almak için hızlı bir yol sunar. Birden çok ortama dağıtırken çevikliği geliştirilmiştir.
 Ardından, üretime geçiş yapmak için Windows Kapsayıcılarınızı [azure kapsayıcılar için Web App](https://azure.microsoft.com/services/app-service/containers/), [Azure Container Instances (aci)](https://azure.microsoft.com/services/container-instances/)ve Azure VM 'Lerine ve bir IaaS yaklaşımını tercih ediyorsanız Windows Server 2016 ve kapsayıcılarına dağıtabilirsiniz. Daha karmaşık çok Kapsayıcılı uygulamalar için [Azure Kubernetes hizmeti (AKS/ACS)](https://azure.microsoft.com/services/container-service/)gibi düzenleyicilerinin kullanımını göz önünde bulundurun.
 
 Bu ilk modernleştirme sırasında, buluttan [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview)gibi araçlarla izleme gibi varlıklar da ekleyebilirsiniz; [Azure DevOps Services](https://azure.microsoft.com/services/devops/); uygulama yaşam DÖNGÜLERINIZIN CI/CD işlem hatları ve Azure 'da kullanılabilen pek çok daha fazla veri kaynağı hizmeti. Örneğin, başlangıçta geleneksel [ASP.NET Web Forms](https://www.asp.net/web-forms) veya [ASP.NET MVC](https://www.asp.net/mvc)kullanılarak geliştirilmiş tek parçalı bir Web uygulamasını değiştirebilir, ancak şimdi Windows kapsayıcıları kullanarak dağıtırsınız. Windows kapsayıcıları kullandığınızda, uygulamanızın çekirdek mimarisini değiştirmeden verilerinizi [Azure SQL veritabanı yönetilen örneği](https://docs.microsoft.com/azure/sql-database/)' nde bir veritabanına geçirmeniz gerekir.
 
-- **Bulutta yerel**: sunulan farklı mikro Hizmetlerde çalışan birden fazla bağımsız geliştirme ekiple büyük ve karmaşık uygulamaları hedeflerken, [bulutta yerel](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) uygulamalar için mimari oluşturma hakkında düşünmeniz gerekir. geliştirilen ve dağıtılan olarak çalışabilen. Ayrıca, mikro hizmet başına granleştirilmiş ve bağımsız ölçeklenebilirlik nedeniyle. Bu mimari yaklaşımlar, çok önemli zorluk ve karmaşıklıklarla, ancak [Azure Kubernetes hizmeti (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (yönetilen Kubernetes) gibi bulut PaaS ve düzenleme [işlemleri](https://azure.microsoft.com/services/functions/) kullanılarak önemli ölçüde basitleştirilebilir. Sunucusuz yaklaşım. Tüm bu yaklaşımlar (mikro hizmetler ve sunucusuz gibi) genellikle bulut için mimarunuzu ve yeni kod yazmanızı, belirli PaaS platformlarına uyarlanan kodu veya mikro hizmetler gibi belirli mimarilere göre uygulanan kodu ister.
+- **Bulutta yerel**: sunulan farklı mikro Hizmetlerde çalışan birden fazla bağımsız geliştirme ekiple büyük ve karmaşık uygulamaları hedeflerken, [bulutta yerel](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) uygulamalarda mimari oluşturma hakkında düşünmeniz gerekir. olarak çalışabilen. Ayrıca, mikro hizmet başına granleştirilmiş ve bağımsız ölçeklenebilirlik nedeniyle. Bu mimari yaklaşımlar, çok önemli zorluk ve karmaşıklıklarla, ancak [Azure Kubernetes hizmeti (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (yönetilen Kubernetes) gibi bulut PaaS ve düzenleme işlemleri ile sunucusuz bir yaklaşım Için [Azure işlevleri](https://azure.microsoft.com/services/functions/) kullanılarak önemli ölçüde basitleştirilebilir. Tüm bu yaklaşımlar (mikro hizmetler ve sunucusuz gibi) genellikle bulut için mimarunuzu ve yeni kod yazmanızı, belirli PaaS platformlarına uyarlanan kodu veya mikro hizmetler gibi belirli mimarilere göre uygulanan kodu ister.
 
 Şekil 1-3 her bir vade düzeyi için kullanabileceğiniz iç teknolojileri gösterir:
 
@@ -183,7 +183,7 @@ Bu kılavuzda, mikro hizmetler mimarisine nasıl geliştikçe olduğu gibi, bulu
 
 Bu kılavuz, uygulamaları teslim etme ve serbest bırakma çevikliği için .NET Framework tabanlı mevcut ASP.NET Web uygulamalarını veya WCF hizmetlerini modernleştirin etmek isteyen geliştiriciler ve çözüm mimarları için yazılmıştır.
 
-Ayrıca, bir kuruluş mimarı veya Windows kapsayıcıları kullanarak elde edeceğiniz avantajlara genel bakış isteyen bir geliştirme lideri/müdürü gibi teknik bir karar veren ve kullanırken buluta dağıtarak bu kılavuzu yararlı bulabilirsiniz. Microsoft Azure.
+Ayrıca, bir kuruluş mimarı veya Windows kapsayıcıları kullanarak alabileceğiniz avantajlara genel bakış isteyen bir geliştirme lideri/müdürü gibi teknik bir karar veren ve Microsoft Azure kullanırken buluta dağıtarak bu kılavuzu yararlı bulabilirsiniz.
 
 ## <a name="how-to-use-this-guide"></a>Bu kılavuz nasıl kullanılır?
 
@@ -199,7 +199,7 @@ Bu örnek uygulamalar, modernlanmış kod ile ikinci bir sürüme sahiptir ve bu
 
 ## <a name="send-your-feedback"></a>Geri bildiriminizi gönderin
 
-Bu kılavuz, mevcut .NET Web uygulamalarını geliştirme ve Moderasyonu için seçeneklerinizi anlamanıza yardımcı olmak üzere yazılmıştır. Kılavuz ve ilgili örnek uygulamalar gelişiyor. Geri bildiriminiz hoş geldiniz! Bu kılavuzun nasıl yararlı olabileceği hakkında açıklamalarınız varsa, lütfen bunları [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)gönderin.
+Bu kılavuz, mevcut .NET Web uygulamalarını geliştirme ve Moderasyonu için seçeneklerinizi anlamanıza yardımcı olmak üzere yazılmıştır. Kılavuz ve ilgili örnek uygulamalar gelişiyor. Geri bildiriminiz bizim için çok önemlidir! Bu kılavuzun nasıl yararlı olabileceği hakkında açıklamalarınız varsa, lütfen bunları [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)gönderin.
 
 >[!div class="step-by-step"]
 >[Next](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->

@@ -1,6 +1,5 @@
 ---
 title: const anahtar sözcüğü C# başvurusu
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - const_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 81660e6a56efe5737600122d4ff7e182654f9a9f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 812aeb331b6dd333075d19076a896246ecc5b374
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422887"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713673"
 ---
 # <a name="const-c-reference"></a>const (C# Başvurusu)
 

@@ -13,50 +13,48 @@ helpviewer_keywords:
 - Rijndael
 - decryption
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f45ba28a4c2d4ab56abf15f8e8b5ba4c6cb7d611
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fd377cd470d361f5a46c662ab37780713a2d3804
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602721"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706129"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Nasıl yapılır: XML Öğelerinin Şifresini Simetrik Anahtarlarla Çözme
-Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML belgesi bir öğesinde şifrelemek için ad alanı.  XML şifreleme depolamak veya hassas XML kolay okunan verilerin hakkında endişelenmeden taşıma sağlar.  Bu kod örneği, Gelişmiş Şifreleme Standardı (AES) olarak da bilinen Rijndael algoritmasını kullanarak bir XML öğesinin şifresini çözer.  
+Bir XML belgesi içindeki bir öğeyi şifrelemek için <xref:System.Security.Cryptography.Xml> ad alanındaki sınıfları kullanabilirsiniz.  XML şifrelemesi, gizli XML 'yi kolayca okuyamakta olan veriler hakkında endişelenmenize gerek kalmadan depolamanıza veya taşıetmenize olanak tanır.  Bu kod örneği, Rijnbael olarak da bilinen Gelişmiş Şifreleme Standardı (AES) algoritmasını kullanarak bir XML öğesinin şifresini çözer.  
   
- Bu yordamı kullanarak bir XML öğesi şifreleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: XML öğelerini simetrik anahtarlarla şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
+ Bu yordamı kullanarak bir XML öğesinin nasıl şifreleneceği hakkında bilgi için bkz. [nasıl yapılır: XML öğelerini Simetrik Anahtarlarla Şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
   
- XML verileri şifrelemek için Simetrik algoritma AES gibi kullandığınızda, aynı anahtar şifreleme ve şifre çözme XML verileri için kullanmanız gerekir.  Bu yordamdaki örnek olduğunu varsayar aynı anahtar kullanılarak şifrelenmiş XML şifrelenmiş ve şifreleme ve taraflar şifre çözme algoritması ve anahtar kullanmayı kabul etmiş olursunuz.  Bu örnekte depolamak veya şifrelenmiş XML içinde AES anahtarını şifrelemek desteklemez.  
+ XML verilerini şifrelemek için AES gibi simetrik bir algoritma kullandığınızda, XML verilerini şifrelemek ve şifrelerini çözmek için aynı anahtarı kullanmanız gerekir.  Bu yordamdaki örnek, şifrelenmiş XML 'in aynı anahtar kullanılarak şifrelendiğini ve şifreleme ve şifre çözme tarafların kullanılacak algoritmayı ve anahtarı kabul etmiş olduğunu varsayar.  Bu örnek, şifreli XML içinde AES anahtarını depolamaz veya şifrelemez.  
   
- Bu örnek, tek bir uygulama bellekte veya bir parolasından türetilen şifreleme açısından güçlü bir anahtara göre bir oturum anahtarı temel alan verileri şifrelemek için gereken yere durumlar için uygundur.  İki veya daha fazla uygulama şifrelenmiş XML veri paylaşımı için gereken yere durumlarda, asimetrik algoritma veya bir X.509 sertifikası tabanlı bir şifreleme şeması kullanılarak göz önünde bulundurun.  
+ Bu örnek, tek bir uygulamanın bellekte depolanan bir oturum anahtarını temel alarak veya bir paroladan türetilmiş şifreli olmayan bir güçlü anahtara göre verileri şifrelemek için gereken durumlar için uygundur.  İki veya daha fazla uygulamanın şifrelenmiş XML verilerini paylaşması gereken durumlarda, asimetrik algoritmayı veya X. 509.440 sertifikasını temel alan bir şifreleme düzeni kullanmayı düşünün.  
   
 ### <a name="to-decrypt-an-xml-element-with-a-symmetric-key"></a>XML öğesinin şifresini bir simetrik anahtarla çözmek için  
   
-1. Bir XML öğesi içinde açıklanan teknikleri kullanarak daha önce oluşturulmuş anahtarla şifrelemek [nasıl yapılır: XML öğelerini simetrik anahtarlarla şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
+1. [Nasıl yapılır: XML öğelerini Simetrik Anahtarlarla Şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)bölümünde açıklanan teknikleri kullanarak, önceden oluşturulan ANAHTARLA bir XML öğesini şifreleyin.  
   
-2. Bulma <`EncryptedData`> (XML şifreleme standardı tarafından tanımlanan) öğesinde bir <xref:System.Xml.XmlDocument> şifrelenmiş XML içeren nesne ve yeni bir <xref:System.Xml.XmlElement> o öğenin temsil eden nesne.  
+2. Şifrelenmiş XML içeren bir <xref:System.Xml.XmlDocument> nesnesindeki <`EncryptedData`> öğesini (XML şifreleme standardı tarafından tanımlanır) bulun ve bu öğeyi temsil eden yeni bir <xref:System.Xml.XmlElement> nesnesi oluşturun.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#10)]
      [!code-vb[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#10)]  
   
-3. Oluşturma bir <xref:System.Security.Cryptography.Xml.EncryptedData> ham XML verileri daha önce oluşturulan yüklerken nesne <xref:System.Xml.XmlElement> nesne.  
+3. Daha önce oluşturulan <xref:System.Xml.XmlElement> nesnesinden ham XML verilerini yükleyerek bir <xref:System.Security.Cryptography.Xml.EncryptedData> nesnesi oluşturun.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#11)]
      [!code-vb[HowToEncryptXMLElementSymmetric#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#11)]  
   
-4. Yeni bir <xref:System.Security.Cryptography.Xml.EncryptedXml> nesne ve şifreleme için kullanılan aynı anahtarı kullanarak XML verileri şifrelemek için kullanabilirsiniz.  
+4. Yeni bir <xref:System.Security.Cryptography.Xml.EncryptedXml> nesnesi oluşturun ve şifreleme için kullanılan anahtarı kullanarak XML verilerinin şifresini çözmek için kullanın.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#12)]
      [!code-vb[HowToEncryptXMLElementSymmetric#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#12)]  
   
-5. XML belgesi içindeki yeni şifresi düz metin öğesi ile şifrelenmiş öğeyi değiştirin.  
+5. Şifrelenmiş öğeyi XML belgesi içindeki yeni şifresi çözülmüş düz metin öğesiyle değiştirin.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#13)]
      [!code-vb[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#13)]  
   
 ## <a name="example"></a>Örnek  
- Bu örnek adlı bir dosya olduğunu varsayar `"test.xml"` derlenmiş programın aynı dizinde bulunmaktadır.  Ayrıca varsayılmaktadır `"test.xml"` içeren bir `"creditcard"` öğesi.  Aşağıdaki XML adlı bir dosyaya yerleştirebilirsiniz `test.xml` ve bu örneği kullanın.  
+ Bu örnek, `"test.xml"` adlı bir dosyanın derlenen programla aynı dizinde olduğunu varsayar.  Ayrıca, `"test.xml"` bir `"creditcard"` öğesi içerdiğini varsayar.  Aşağıdaki XML 'i `test.xml` adlı bir dosyaya yerleştirebilir ve bu örnekle birlikte kullanabilirsiniz.  
   
 ```xml  
 <root>  
@@ -70,18 +68,18 @@ Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML b
  [!code-csharp[HowToEncryptXMLElementSymmetric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#1)]
  [!code-vb[HowToEncryptXMLElementSymmetric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
   
-- Bu örneği derlemeye bir başvuru eklemek gereken `System.Security.dll`.  
+- Bu örneği derlemek için `System.Security.dll`bir başvuru eklemeniz gerekir.  
   
-- Aşağıdaki ad alanlarını içerir: <xref:System.Xml>, <xref:System.Security.Cryptography>, ve <xref:System.Security.Cryptography.Xml>.  
+- Şu ad alanlarını ekleyin: <xref:System.Xml>, <xref:System.Security.Cryptography>ve <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Hiçbir zaman düz metin olarak bir şifreleme anahtarı depolamak veya düz metin makineler arasında bir anahtar aktarımı.  
+ Bir şifreleme anahtarını düz metin olarak depolamayın veya bir anahtar düz metin olarak makineler arasında aktarmayın.  
   
- İşiniz bittiğinde bir simetrik şifreleme anahtarını kullanarak temizleyin, bellekten her byte sıfır olarak ayarlayarak veya çağırarak <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> yönetilen şifreleme sınıfının yöntemi.  
+ Bir simetrik şifreleme anahtarı kullanarak işiniz bittiğinde, her baytı sıfıra ayarlayarak veya yönetilen şifreleme sınıfının <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> yöntemini çağırarak bellekten kaldırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Security.Cryptography.Xml>
-- [Nasıl yapılır: XML öğelerini simetrik anahtarlarla şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)
+- [Nasıl yapılır: XML Öğelerini Simetrik Anahtarlarla Şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)

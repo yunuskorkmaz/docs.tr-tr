@@ -1,26 +1,25 @@
 ---
 title: cref özniteliği- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: d088e1fcd0a1d1910b1284909dccf7b7d7b1d479
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 13bdfefaaa6f8daff0e7d9e30a6353af34654ba2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588171"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75697253"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref Özniteliği (C# Programlama Kılavuzu)
-XML belgesi etiketindeki özniteliği "kod başvurusu" anlamına gelir. `cref` Etiketin iç metninin tür, yöntem veya özellik gibi bir kod öğesi olduğunu belirtir. [Docfx](https://dotnet.github.io/docfx/) ve [sandrole](https://github.com/EWSoftware/SHFB) gibi belge araçları, otomatik `cref` olarak tür veya üyenin belgelendiği sayfaya köprüler oluşturmak için öznitelikleri kullanır.  
+XML belgesi etiketindeki `cref` özniteliği "kod başvurusu" anlamına gelir. Etiketin iç metninin tür, yöntem veya özellik gibi bir kod öğesi olduğunu belirtir. [Docfx](https://dotnet.github.io/docfx/) ve [sandrole](https://github.com/EWSoftware/SHFB) gibi belge araçları, tür veya üyenin belgelendiği sayfaya otomatik olarak köprüler oluşturmak için `cref` özniteliklerini kullanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `cref` [ \<bkz. >](./see.md) etiketlerinde kullanılan öznitelikleri gösterir.  
+ Aşağıdaki örnek, [\<`cref` >](./see.md) etiketlerinde kullanılan öznitelikleri gösterir.  
   
  [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]  
   
- Derlendiğinde, program aşağıdaki XML dosyasını oluşturur. Yöntemin özniteliği, örneğin, derleyicisinin tarafından öğesine `"M:TestNamespace.TestClass.GetZero"`dönüştürüldüğünü unutmayın. `cref` `GetZero` "D:" öneki "method" anlamına gelir ve DocFX ve Sandrole gibi belge araçları tarafından tanınan bir kuraldır. Tüm ön eklerin listesi için bkz. [XML dosyasını işleme](./processing-the-xml-file.md).  
+ Derlendiğinde, program aşağıdaki XML dosyasını oluşturur. Örneğin, `GetZero` yöntemi için `cref` özniteliğinin `"M:TestNamespace.TestClass.GetZero"`için derleyici tarafından dönüştürüldüğünü unutmayın. "D:" öneki "method" anlamına gelir ve DocFX ve Sandrole gibi belge araçları tarafından tanınan bir kuraldır. Tüm ön eklerin listesi için bkz. [XML dosyasını işleme](./processing-the-xml-file.md).  
   
 ```xml  
 <?xml version="1.0"?>  

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fd29d07b6253cb8c177cc1e8854435ce0079b520
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4937afe8bb23be58b72d082cd5ba200b4948ab4d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974911"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715990"
 ---
 # <a name="method-etw-events"></a>Yöntem ETW Olayları
 
@@ -44,7 +42,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
 |Methoddıd|Win: UInt64|Metodun benzersiz tanımlayıcısı. JıT yardımcı yöntemleri için bu, yönteminin başlangıç adresine ayarlanır.|
 |Modül kimliği|Win: UInt64|Bu yöntemin ait olduğu modülün tanımlayıcısı (JıT yardımcıları için 0).|
@@ -77,7 +75,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
 
@@ -103,7 +101,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
 |Methoddıd|Win: UInt64|Metodun benzersiz tanıtıcısı. JıT yardımcı yöntemleri için, yönteminin başlangıç adresine ayarlanır.|
 |Modül kimliği|Win: UInt64|Bu yöntemin ait olduğu modülün tanımlayıcısı (JıT yardımcıları için 0).|
@@ -135,14 +133,14 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
 |Methoddıd|Win: UInt64|Metodun benzersiz tanıtıcısı.|
 |Modül kimliği|Win: UInt64|Bu yöntemin ait olduğu modülün tanımlayıcısı.|
 |MethodToken|Win: UInt32|dinamik yöntemler ve JıT yardımcıları için 0.|
 |Methoddilsize|Win: UInt32|JıT olarak derlenen metodun Microsoft ara dili (MSIL) boyutu.|
 |MethodNameSpace|Win: UnicodeString|Yöntemiyle ilişkili tam sınıf adı.|
-|MethodName|Win: UnicodeString|Metodun adı.|
+|MethodName|Win: UnicodeString|Yöntemin adı.|
 |MethodSignature|Win: UnicodeString|Metodun imzası (tür adlarının virgülle ayrılmış listesi).|
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
 

@@ -2,27 +2,27 @@
 title: XAttribute sınıfına genel bakışC#()
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: 79ef00aa79be0c743423cfba1a911b238ff9a7ca
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7a806314664c6319fc45cff0dddedbe38027059d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590919"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635671"
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute sınıfına genel bakışC#()
-Öznitelikler, bir öğesiyle ilişkili ad/değer çiftleridir. <xref:System.Xml.Linq.XAttribute> Sınıfı XML özniteliklerini temsil eder.  
+Öznitelikler, bir öğesiyle ilişkili ad/değer çiftleridir. <xref:System.Xml.Linq.XAttribute> sınıfı XML özniteliklerini temsil eder.  
   
-## <a name="overview"></a>Genel Bakış  
- İçindeki [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] özniteliklerle çalışma, öğelerle çalışmaya benzerdir. Oluşturucular benzerdir. Bunların koleksiyonlarını almak için kullandığınız yöntemler benzerdir. Öznitelik koleksiyonu için bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguifadesibiröğekoleksiyonuiçinsorguifadesineçokbenzerşekildegörünür.[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]  
+## <a name="overview"></a>Genel bakış  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] özniteliklerle çalışma, öğelerle çalışmaya benzer. Oluşturucular benzerdir. Bunların koleksiyonlarını almak için kullandığınız yöntemler benzerdir. Öznitelik koleksiyonu için LINQ sorgu ifadesi bir öğe koleksiyonu için LINQ sorgu ifadesine çok benzer şekilde görünür.  
   
  Öznitelikleri bir öğeye eklenme sırası korunur. Diğer bir deyişle, özniteliklerde yineleme yaparken, bunları eklendiği sırayla görürsünüz.  
   
 ## <a name="the-xattribute-constructor"></a>XAttribute Oluşturucusu  
- <xref:System.Xml.Linq.XAttribute> Sınıfının aşağıdaki Oluşturucusu, en yaygın olarak kullanabileceğiniz bir sınıftır:  
+ <xref:System.Xml.Linq.XAttribute> sınıfının aşağıdaki Oluşturucusu, en sık kullandığınız bir sınıftır:  
   
 |Oluşturucu|Açıklama|  
 |-----------------|-----------------|  
-|`XAttribute(XName name, object content)`|Oluşturur bir <xref:System.Xml.Linq.XAttribute> nesne. `name` Bağımsız değişken özniteliğin adını belirtir; `content` özniteliğin içeriğini belirtir.|  
+|`XAttribute(XName name, object content)`|Oluşturur bir <xref:System.Xml.Linq.XAttribute> nesne. `name` bağımsız değişkeni özniteliğin adını belirtir; `content` özniteliğin içeriğini belirtir.|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>Özniteliği olan bir öğe oluşturma  
  Aşağıdaki kod, bir özniteliği içeren bir öğe oluşturma ortak görevini gösterir:  
@@ -41,7 +41,7 @@ Console.WriteLine(phone);
 ```  
   
 ### <a name="functional-construction-of-attributes"></a>Özniteliklerin işlevsel olarak oluşturulması  
- Nesneleri oluşturmak <xref:System.Xml.Linq.XAttribute> için <xref:System.Xml.Linq.XElement> aşağıdaki gibi nesneleri satır içinde oluşturabilirsiniz:  
+ <xref:System.Xml.Linq.XElement> nesnelerinin yapımını aşağıdaki gibi <xref:System.Xml.Linq.XAttribute> nesneleri satır içinde oluşturabilirsiniz:  
   
 ```csharp  
 XElement c = new XElement("Customers",  
@@ -75,7 +75,7 @@ Console.WriteLine(c);
 ```  
   
 ### <a name="attributes-are-not-nodes"></a>Öznitelikler düğüm değil  
- Öznitelikler ve öğeler arasında bazı farklılıklar vardır. <xref:System.Xml.Linq.XAttribute>nesneler XML ağacındaki düğümler değildir. Bunlar bir XML öğesiyle ilişkili ad/değer çiftleridir. Belge Nesne Modeli (DOM) aksine bu, XML yapısını daha yakından yansıtır. Nesneler <xref:System.Xml.Linq.XAttribute> gerçekte XML ağacında düğümler olmasa da nesnelerle <xref:System.Xml.Linq.XAttribute> çalışma, <xref:System.Xml.Linq.XElement> nesnelerle çalışmaya çok benzer.  
+ Öznitelikler ve öğeler arasında bazı farklılıklar vardır. <xref:System.Xml.Linq.XAttribute> nesneler XML ağacındaki düğümler değildir. Bunlar bir XML öğesiyle ilişkili ad/değer çiftleridir. Belge Nesne Modeli (DOM) aksine bu, XML yapısını daha yakından yansıtır. <xref:System.Xml.Linq.XAttribute> nesneler gerçekten XML ağacında düğümler olmasa da, <xref:System.Xml.Linq.XAttribute> nesneleriyle çalışma <xref:System.Xml.Linq.XElement> nesneleriyle çalışmaya çok benzer.  
   
  Bu ayrım, birincil olarak yalnızca düğüm düzeyindeki XML ağaçları ile çalışan kod yazan geliştiriciler için önemlidir. Birçok geliştirici bu ayrım ile ilgilenmeyecektir.  
   

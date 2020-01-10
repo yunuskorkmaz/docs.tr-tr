@@ -1,6 +1,5 @@
 ---
 title: <param> - C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - param
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - <param> C# XML tag
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: ed7a8f8a06771a18dc4244bffbda53e9adbd4e90
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: f9613a7373a829d2a52f3f56b8ea1ab35ebdcf5f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523422"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711733"
 ---
 # <a name="param-c-programming-guide"></a>\<param > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -31,9 +30,9 @@ ms.locfileid: "72523422"
  Parametresi için bir açıklama.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemin parametrelerinden birini açıklayacak bir yöntem bildirimi için açıklamasında \<param > etiketi kullanılmalıdır. Birden çok parametreyi belgelemek için birden çok \<param > etiketi kullanın.  
+ Yöntemin parametrelerinden birini açıklayacak bir yöntem bildirimi için açıklamasında \<param > etiketi kullanılmalıdır. Birden çok parametreyi belgelemek için, birden çok \<param > etiketi kullanın.  
   
- @No__t_0param > etiketinin metni IntelliSense 'de, Nesne Tarayıcısı ve kod yorumu Web raporunda görüntülenir.  
+ \<param > etiketinin metni IntelliSense 'de, Nesne Tarayıcısı ve kod yorumu Web raporunda görüntülenir.  
   
  Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   

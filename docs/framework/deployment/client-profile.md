@@ -9,14 +9,12 @@ helpviewer_keywords:
 - profile [.NET Framework Client Profile]
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 72749f47d85c4ed910bf8bf925d14246dcb4244a
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 32fc29500a8a2e95b52ba16847020cdb390caceb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195182"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716567"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework İstemci Profili
 .NET Istemci profili, .NET Framework 4 ve önceki sürümleriyle birlikte sunulan ve istemci uygulamaları için en iyi duruma getirilmiş .NET Framework bir alt kümesidir. .NET Framework, Windows, Windows Phone ve Microsoft Azure için bir geliştirme platformudur ve yönetilen bir uygulama yürütme ortamı ve .NET Framework sınıf kitaplığı sağlar. .NET Framework 4 ve önceki sürümler iki dağıtım seçeneği sağlamıştır: tam .NET Framework ve Istemci profili. İstemci Profili daha hızlı dağıtım ve daha küçük uygulama yükleme paketlerini tam .NET Framework'ten etkinleştirdi.  

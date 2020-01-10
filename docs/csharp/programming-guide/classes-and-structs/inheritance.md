@@ -1,6 +1,5 @@
 ---
 title: Devralma- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - abstract methods [C#]
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 3211a4741eb56ad9e138a848e52fabbc1d3daaeb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3c59741fa646111d27f6d1087a9275178c1a41a1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924465"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705554"
 ---
 # <a name="inheritance-c-programming-guide"></a>Devralma (C# Programlama Kılavuzu)
 
@@ -24,15 +23,15 @@ Kapsülleme ve çok biçimlilik ile birlikte devralma, nesne odaklı programlama
 > [!NOTE]
 > Yapılar devralmayı desteklemez, ancak arabirimler uygulayabilir. Daha fazla bilgi için bkz. [arabirimler](../interfaces/index.md).  
   
- Kavramsal olarak, türetilmiş bir sınıf temel sınıfın bir özelleştirmesi olur. Örneğin, bir taban sınıfınız `Animal`varsa adlı bir türetilmiş sınıfa `Mammal` ve adında `Reptile`başka bir türetilmiş sınıfa sahip olabilirsiniz. , Bir, `Reptile` ve bir olur ,ancakhertüretilmişsınıftemelsınıfınfarklıözelleştirmelerinitemsileder.`Animal` `Mammal` `Animal`  
+ Kavramsal olarak, türetilmiş bir sınıf temel sınıfın bir özelleştirmesi olur. Örneğin, `Animal`bir taban sınıfınız varsa, `Mammal` adlı bir türetilmiş sınıfa ve `Reptile`adlı başka bir türetilmiş sınıfa sahip olabilirsiniz. `Mammal` bir `Animal`ve bir `Reptile` `Animal`, ancak türetilmiş her sınıf temel sınıfın farklı özelleştirmelerini temsil eder.  
   
  Başka bir sınıftan türetmek için bir sınıf tanımladığınızda, türetilmiş sınıf, oluşturucular ve sonlandırıcılar hariç, temel sınıfın tüm üyelerini dolaylı olarak kazanıyor. Türetilmiş sınıf bundan sonra kodu yeniden uygulamak zorunda kalmadan temel sınıfta yeniden kullanabilir. Türetilmiş sınıfta daha fazla üye ekleyebilirsiniz. Bu şekilde, türetilmiş sınıf temel sınıfın işlevselliğini genişletir.  
   
- Aşağıdaki çizimde, bazı iş sürecindeki `WorkItem` bir iş öğesini temsil eden bir sınıf gösterilmektedir. Tüm sınıflar gibi, öğesinden <xref:System.Object?displayProperty=nameWithType> türetilir ve tüm yöntemlerini devralır. `WorkItem`kendisine ait beş üyeyi ekler. Bunlar bir Oluşturucu içerir, çünkü oluşturucular devralınmaz. Sınıf `ChangeRequest` öğesinden`WorkItem` devralır ve belirli bir iş öğesi türünü temsil eder. `ChangeRequest`devralınan `WorkItem` üyelere ve kaynağından <xref:System.Object>daha fazla üye ekler. Kendi oluşturucusunu eklemesi ve ayrıca eklemesi `originalItemID`gerekir. Özelliği `originalItemID` , `ChangeRequest` Örneğin değişiklik isteğinin uygulandığı orijinalle `WorkItem` ilişkilendirilmesini sağlar.  
+ Aşağıdaki çizimde, bazı iş sürecindeki bir iş öğesini temsil eden bir sınıf `WorkItem` gösterilmektedir. Tüm sınıflar gibi, <xref:System.Object?displayProperty=nameWithType> türetilir ve tüm yöntemlerini devralır. `WorkItem` kendi başına beş üye ekler. Bunlar bir Oluşturucu içerir, çünkü oluşturucular devralınmaz. Sınıf `ChangeRequest` `WorkItem` devralır ve belirli bir iş öğesi türünü temsil eder. `ChangeRequest`, devralınan üyelere `WorkItem` ve <xref:System.Object>öğesinden daha fazla üye ekler. Kendi oluşturucusunu eklemesi gerekir ve ayrıca `originalItemID`ekler. Özellik `originalItemID`, `ChangeRequest` örneğinin, değişiklik isteğinin uygulandığı orijinal `WorkItem` ile ilişkilendirilmesini sağlar.  
   
  ![Sınıf devralmayı gösteren diyagram](./media/inheritance/class-inheritance-diagram.png)  
   
- Aşağıdaki örnek, önceki çizimde gösterilen sınıf ilişkilerinin ' de C#nasıl ifade edildiği gösterilmektedir. `WorkItem` Örnek ayrıca sanal yöntemin <xref:System.Object.ToString%2A?displayProperty=nameWithType>nasıl geçersiz kılındığını ve `ChangeRequest` sınıfın yöntem `WorkItem` uygulamasını nasıl devraldığını gösterir.  
+ Aşağıdaki örnek, önceki çizimde gösterilen sınıf ilişkilerinin ' de C#nasıl ifade edildiği gösterilmektedir. Örnek ayrıca `WorkItem` sanal yöntemin <xref:System.Object.ToString%2A?displayProperty=nameWithType>nasıl geçersiz kılacağını ve `ChangeRequest` sınıfının yöntemin `WorkItem` uygulamasını nasıl devraldığını gösterir.  
   
  [!code-csharp[csProgGuideInheritance#49](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#49)]  
   
@@ -45,7 +44,7 @@ Kapsülleme ve çok biçimlilik ile birlikte devralma, nesne odaklı programlama
 ## <a name="interfaces"></a>Arabirimler  
  *Arabirim* , yalnızca soyut üyelerden oluşan soyut temel sınıfa benzer bir başvuru türüdür. Bir sınıf bir arabirim uygularsa, arabirimin tüm üyeleri için bir uygulama sağlamalıdır. Bir sınıf, yalnızca tek bir doğrudan taban sınıftan türeyebilse de birden çok arabirim uygulayabilir.  
   
- Arabirimler, "bir" a "ilişkisine sahip olmayan sınıflar için belirli özellikleri tanımlamak üzere kullanılır. Örneğin, <xref:System.IEquatable%601?displayProperty=nameWithType> arabirim, tür iki nesnenin eşdeğer olup olmadığını belirlemesi için istemci kodunu etkinleştirmek zorunda olan herhangi bir sınıf veya yapı tarafından uygulanabilir (ancak tür denklik tanımlar). <xref:System.IEquatable%601>, bir temel sınıf ve türetilmiş bir sınıf (örneğin, a `Mammal` `Animal`) arasında bulunan aynı "bir" ilişki türünü göstermez. Daha fazla bilgi için bkz. [arabirimler](../interfaces/index.md).  
+ Arabirimler, "bir" a "ilişkisine sahip olmayan sınıflar için belirli özellikleri tanımlamak üzere kullanılır. Örneğin, <xref:System.IEquatable%601?displayProperty=nameWithType> arabirimi her bir sınıf veya yapı tarafından uygulanabilir (ancak tür denklik tanımlıyor), bu tür iki nesnenin aynı olup olmadığını belirlemesini sağlar. <xref:System.IEquatable%601>, bir temel sınıf ve türetilmiş sınıf arasında bulunan "bir" ilişkisidir (örneğin, bir `Mammal` bir `Animal`) anlamına gelmez. Daha fazla bilgi için bkz. [arabirimler](../interfaces/index.md).  
   
 ## <a name="preventing-further-derivation"></a>Daha fazla türetme engelleniyor  
  Bir sınıf, kendisini veya üyeyi [korumalı](../../language-reference/keywords/sealed.md)olarak bildirerek diğer sınıfların bunlardan veya üyelerinden birinden devralmasını önleyebilir. Daha fazla bilgi için bkz. [soyut ve korumalı sınıflar ve sınıf üyeleri](./abstract-and-sealed-classes-and-class-members.md).  

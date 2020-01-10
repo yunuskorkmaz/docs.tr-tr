@@ -4,17 +4,16 @@ description: Kaynak kodu yerine,, DotNet VSTest komutuyla testlerin yayımlanmı
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.custom: seodec18
-ms.openlocfilehash: e4fd25dc9ff30bdfe85cd1167a1dc41ea20a5f80
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 7618d37782de3a16f1963380bbb56945fb73e8eb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771932"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714262"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>DotNet VSTest ile yayımlanan çıktıyı test etme
 
-@No__t_0 komutunu kullanarak, zaten yayınlanmış çıkış üzerinde testler çalıştırabilirsiniz. Bu işlem xUnit, MSTest ve NUnit testlerinde çalışır. Yalnızca yayınlanmış çıktılarınızın parçası olan DLL dosyasını bulun ve çalıştırın:
+`dotnet vstest` komutunu kullanarak, zaten yayınlanmış çıkış üzerinde testler çalıştırabilirsiniz. Bu işlem xUnit, MSTest ve NUnit testlerinde çalışır. Yalnızca yayınlanmış çıktılarınızın parçası olan DLL dosyasını bulun ve çalıştırın:
 
 ```dotnetcli
 dotnet vstest <MyPublishedTests>.dll
@@ -34,7 +33,7 @@ dotnet vstest out/MyProject.Tests.dll
 ```
 
 > [!NOTE]
-> Note: uygulamanız `netcoreapp` dışında bir çerçeveyi hedefliyorsa, bir çerçeve bayrağıyla hedeflenen çerçeveye geçirerek `dotnet vstest` komutunu yine de çalıştırabilirsiniz. Örneğin, `dotnet vstest <MyPublishedTests>.dll --Framework:".NETFramework,Version=v4.6"`. Visual Studio 2017 güncelleştirme 5 ve sonraki sürümlerde, istenen çerçeve otomatik olarak algılanır.
+> Note: uygulamanız `netcoreapp`dışında bir çerçeveyi hedefliyorsa, bir çerçeve bayrağıyla hedeflenen çerçeveye geçirerek `dotnet vstest` komutunu yine de çalıştırabilirsiniz. Örneğin: `dotnet vstest <MyPublishedTests>.dll --Framework:".NETFramework,Version=v4.6"`. Visual Studio 2017 güncelleştirme 5 ve sonraki sürümlerde, istenen çerçeve otomatik olarak algılanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,6 +1,5 @@
 ---
 title: this anahtar sözcüğü C# başvurusu
-ms.custom: seodec18
 description: this anahtar sözcüğüC# (başvuru)
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,21 +8,21 @@ f1_keywords:
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-ms.openlocfilehash: 4a3342e73fef3effd54f72e68283eb6085eef5b5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2a2c487ad93e6fc75ecf95c541e859b8b60bb5b5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608441"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715104"
 ---
 # <a name="this-c-reference"></a>this (C# Başvurusu)
 
-`this` Anahtar sözcüğü, sınıfın geçerli örneğine başvurur ve bir genişletme yönteminin ilk parametresi için bir değiştirici olarak da kullanılır.
+`this` anahtar sözcüğü, sınıfın geçerli örneğine başvurur ve bir genişletme yönteminin ilk parametresi için bir değiştirici olarak da kullanılır.
 
 > [!NOTE]
-> Bu makalede, sınıf örneklerinin kullanımı `this` ele alınmaktadır. Uzantı yöntemlerinde kullanımı hakkında daha fazla bilgi için bkz. [Uzantı yöntemleri](../../programming-guide/classes-and-structs/extension-methods.md).
+> Bu makalede, sınıf örnekleriyle `this` kullanımı ele alınmaktadır. Uzantı yöntemlerinde kullanımı hakkında daha fazla bilgi için bkz. [Uzantı yöntemleri](../../programming-guide/classes-and-structs/extension-methods.md).
 
-Aşağıdakiler yaygın kullanımları `this`aşağıda verilmiştir:
+Aşağıda `this`yaygın kullanımları verilmiştir:
 
 - Benzer adlarla gizlenen üyeleri nitelemek için, örneğin:
 
@@ -39,11 +38,11 @@ Aşağıdakiler yaygın kullanımları `this`aşağıda verilmiştir:
 
   [!code-csharp[csrefKeywordsAccess#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#5)]
 
-Statik üye işlevleri, sınıf düzeyinde olduklarından ve bir nesnenin parçası olarak değil, bir `this` işaretçisine sahip değildir. Statik bir yöntemde başvurmak `this` için bir hatadır.
+Statik üye işlevleri, sınıf düzeyinde olduklarından ve bir nesnenin parçası olarak olmadığından, `this` işaretçisine sahip değildir. Statik bir yöntemde `this` başvurmak hatadır.
 
 ## <a name="example"></a>Örnek
 
-Bu `this` örnekte, `Employee` sınıf üyelerini `name` nitelemek ve `alias`benzer adlarla gizlenen için kullanılır. Ayrıca, başka bir sınıfa ait olan yöntemine `CalcTax`bir nesne geçirmek için de kullanılır.
+Bu örnekte `this`, benzer adlarla gizlenen `name` ve `alias``Employee` sınıf üyelerini nitelemek için kullanılır. Ayrıca, bir nesneyi başka bir sınıfa ait `CalcTax`yönteme geçirmek için de kullanılır.
 
 [!code-csharp[csrefKeywordsAccess#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#3)]
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: ba611be8e63380f2bff958e37b72ffe8e0f90d9a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 90cd1984ceb3bdb9de62450e86184f493e7417f0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837096"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636724"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic Dil Başvurusu
 
@@ -59,14 +59,14 @@ Bu bölüm Visual Basic dilinin çeşitli yönleri için başvuru bilgileri sağ
  [Nesneler](../../visual-basic/language-reference/objects/index.md)  
  Visual Basic ve üyelerinde bulunan nesneleri belgeler.  
   
- [işleçler](../../visual-basic/language-reference/operators/index.md)  
+ [İşleçler](../../visual-basic/language-reference/operators/index.md)  
  Visual Basic ' de kullanılabilen işleçleri belgeler.  
   
  [Veri Erişimi](../../visual-basic/language-reference/properties.md)  
  Visual Basic bulunan özellikleri belgeler.  
   
  [Sorgular](../../visual-basic/language-reference/queries/index.md)  
- Kodunuzda [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ifadeleri kullanma hakkında başvuru bilgileri sağlar.  
+ Kodunuzda dil ile tümleşik sorgu (LINQ) ifadeleri kullanma hakkında başvuru bilgileri sağlar.  
   
  [Deyimler](../../visual-basic/language-reference/statements/index.md)  
  Visual Basic ' de bulunan bildirim ve çalıştırılabilir deyimleri belgeler.  

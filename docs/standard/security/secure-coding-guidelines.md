@@ -14,40 +14,38 @@ helpviewer_keywords:
 - security-neutral code
 - security [.NET], coding guidelines
 ms.assetid: 4f882d94-262b-4494-b0a6-ba9ba1f5f177
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b3a8f0dfc1a2b5e09722876b73281ed1d8b6334e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 51f835803cc545e2a9982c1c8a90d0c998c2bcb8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018651"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705918"
 ---
 # <a name="secure-coding-guidelines"></a>Güvenli kodlama yönergeleri
 
-Kanıt tabanlı güvenlik ve kod erişimi güvenliği güvenliği uygulamak için çok güçlü, açık mekanizmaları sağlar. Çoğu uygulama kodu, yalnızca .NET tarafından uygulanan altyapısı kullanabilirsiniz. Bazı durumlarda, uygulamaya özgü ek güvenlik güvenlik sistemini genişletmek veya yeni bir geçici yöntemleri kullanarak yerleşik gereklidir.
+Kanıt tabanlı güvenlik ve kod erişim güvenliği, güvenliği uygulamak için çok güçlü ve açık mekanizmalar sağlar. Çoğu uygulama kodu yalnızca .NET tarafından uygulanan altyapıyı kullanabilir. Bazı durumlarda, güvenlik sistemini genişleterek veya yeni geçici yöntemler kullanılarak oluşturulan uygulamaya özgü ek güvenlik gerekir.
 
-.NET kullanarak, izinleri ve diğer uygulama kodunuzda zorunlu, kötü amaçlı kod olmasını istemediğiniz bilgilerine erişme veya istenmeyen diğer eylemleri gerçekleştirmesini önlemek için engelleri erect. Ayrıca, güvenlik ve kullanılabilirlik arasında bir denge güvenilen kod kullanarak tüm beklenen senaryolarda strike gerekir.
+Kodunuzda .NET tarafından zorlanan izinleri ve diğer uygulamayı kullanarak, kötü amaçlı kodun, istemediğiniz bilgilere erişmesini veya başka istenmeyen eylemler gerçekleştirmesini istemediğiniz bilgilere erişmesini önlemeye yönelik engelleri almalısınız. Ayrıca, güvenilen kod kullanarak beklenen tüm senaryolarda güvenlik ve kullanılabilirlik arasında bir denge oluşturmanız gerekir.
 
-Bu genel bakışta, kod güvenlik sistemiyle çalışacak şekilde tasarlanmış farklı yollarını açıklar.
+Bu genel bakışta kodun güvenlik sistemiyle çalışmak için tasarlanma yöntemi açıklanmaktadır.
 
 ## <a name="securing-resource-access"></a>Kaynak erişiminin güvenliğini sağlama
 
-Tasarlama ve yazma kodunuzu koruyun ve kod özellikle kullanırken veya bilinmeyen kaynaklardan gelen kod yürütmesini kaynaklarına sahip olduğu erişimi sınırlamak gerekir. Bu nedenle, kodunuzu güvenli olduğundan emin olmak için aşağıdaki tekniklerden göz önünde bulundurun:
+Kodunuzu tasarlarken ve yazarken, özellikle de bilinmeyen kaynak kodu kullanırken veya çağırılırken, kodun kaynaklarla olan erişimini korumanız ve sınırlamanız gerekir. Bu nedenle, kodunuzun güvende olduğundan emin olmak için aşağıdaki teknikleri aklınızda bulundurun:
 
 - Kod erişim güvenliği (CAS) kullanmayın.
 
-- Kısmen güvenilen kod kullanmayın.
+- Kısmi güvenilir kod kullanmayın.
 
-- Kullanmayın [AllowPartiallyTrustedCaller](xref:System.Security.AllowPartiallyTrustedCallersAttribute) özniteliği (APTCA).
+- [Allowpartiallytrustedcaller](xref:System.Security.AllowPartiallyTrustedCallersAttribute) özniteliğini (aptca) kullanmayın.
 
-- .NET uzaktan iletişim kullanmayın.
+- .NET uzaktan Iletişim kullanmayın.
 
-- Dağıtılmış Bileşen Nesne Modeli (DCOM) kullanmayın.
+- Dağıtılmış bileşen nesne modeli (DCOM) kullanmayın.
 
-- İkili biçimlendiricileri kullanmayın.
+- İkili formatlayıcıları kullanmayın.
 
-Kod erişimi güvenliği ve güvenliği saydam kod kısmen güvenilen kod ile güvenlik sınırı olarak desteklenmez. Bilinmeyen kaynaklardan gelen kodların, alternatif güvenlik önlemleri alınmadan yüklenmesi ve yürütülmesi önerilmez. Alternatif güvenlik önlemleri şunlardır:
+Kod erişimi güvenliği ve güvenlik açısından saydam kod, kısmen güvenilen kod içeren bir güvenlik sınırı olarak desteklenmez. Bilinmeyen kaynaklardan gelen kodların, alternatif güvenlik önlemleri alınmadan yüklenmesi ve yürütülmesi önerilmez. Alternatif güvenlik ölçüleri şunlardır:
 
 - Sanallaştırma
 
@@ -57,34 +55,34 @@ Kod erişimi güvenliği ve güvenliği saydam kod kısmen güvenilen kod ile g�
 
 - Hyper-V kapsayıcıları
 
-## <a name="security-neutral-code"></a>Tarafsız güvenlik kodu
+## <a name="security-neutral-code"></a>Güvenlikle bağımsız kod
 
-Tarafsız güvenlik kodu güvenlik sistemi ile açık bir şey yapmaz. Bu izinlere çalıştığı alır. (Örneğin, dosyalar, ağ vb. kullanarak) korumalı işlemleriyle ilişkili güvenlik özel durumları yakalamak için başarısız olan uygulamaları içinde işlenmeyen bir özel yol açabilir ancak Tarafsız güvenlik kodu yine de güvenlik teknolojilerini. NET'te yararlanır .
+Güvenlik için bağımsız kod, güvenlik sistemiyle hiçbir şey yapmaz. Aldığı izinlerle çalışır. Korunan işlemlerle ilişkili güvenlik özel durumlarını (örneğin, dosya kullanımı, ağ ve benzeri) yakalayamayan uygulamalar işlenmeyen bir özel durumla sonuçlansa da, güvenlikle bağımsız kod yine de .NET 'teki güvenlik teknolojilerinden faydalanır .
 
-Tarafsız güvenlik kitaplığı anlamanız gereken özel özelliklere sahiptir. Kitaplığınızı dosyalarını kullanın ya da yönetilmeyen kod çağırmak API öğeleri sağlar varsayalım. Kodunuzu karşılık gelen izni yoksa, açıklandığı gibi çalışmaz. Ancak, kod izni olmasa bile, çağıran herhangi bir uygulama kodu çalışması için aynı izni olması gerekir. Çağıran kod doğru izne sahip değilse bir <xref:System.Security.SecurityException> sonucunda kod erişim güvenlik yığın ilerlemesi görüntülenir.
+Güvenlikle bağımsız bir kitaplıkta anlamanız gereken özel özellikler vardır. Kitaplığınızın dosyaları kullanan veya yönetilmeyen kodu çağıran API öğeleri sağladığını varsayalım. Kodunuzun karşılık gelen izni yoksa, açıklanan şekilde çalışmaz. Ancak, kod izne sahip olsa bile, çağıran herhangi bir uygulama kodunun çalışması için aynı izne sahip olması gerekir. Çağıran kodun doğru izni yoksa, kod erişimi güvenlik yığını yürüme sonucu olarak bir <xref:System.Security.SecurityException> görüntülenir.
 
 ## <a name="application-code-that-isnt-a-reusable-component"></a>Yeniden kullanılabilir bir bileşen olmayan uygulama kodu
 
-Kodunuzun diğer kod tarafından çağrılmak olmaz bir uygulamanın parçası ise, güvenlik basittir ve özel kodlama gerekli olmayabilir. Bununla birlikte, kötü amaçlı kod kodunuzu çağırabilirsiniz unutmayın. Kod erişimi güvenliği kaynaklara erişimini kötü amaçlı kod durdurabilir, ancak bu tür kod hala alanlar veya hassas bilgiler içerebilir özellikleri değerlerini okuyabilir.
+Kodunuz, başka kod tarafından çağrılmayan bir uygulamanın parçasıysa, güvenlik basittir ve özel kodlama gerekli olmayabilir. Ancak, kötü amaçlı kodun kodunuzun çağıraolabileceğini unutmayın. Kod erişimi güvenliği kötü amaçlı kodun kaynaklara erişmesini durdurmasına karşın, bu kod, gizli bilgiler içerebilen alanlarınızın veya özelliklerinin değerlerini yine de okuyabilir.
 
-Ayrıca, kodunuzu Internet'ten veya güvenilir olmayan diğer kaynaklardan kullanıcı girişi kabul ederse, kötü amaçlı girişi hakkında dikkatli olmalıdır.
+Ayrıca, kodunuz Internet veya diğer güvenilir olmayan kaynaklardan Kullanıcı girişini kabul ediyorsa kötü amaçlı giriş konusunda dikkatli olmanız gerekir.
 
-## <a name="managed-wrapper-to-native-code-implementation"></a>Sarmalayıcı yerel kod uygulamasına yönetilen
+## <a name="managed-wrapper-to-native-code-implementation"></a>Yerel kod uygulamasına yönetilen sarmalayıcı
 
-Genellikle bu senaryoda, yönetilen kod için kullanılabilir hale getirmek istediğiniz yerel kodda bazı kullanışlı işlevsellik uygulanır. Yönetilen sarmalayıcılar, yazma ya da platform çağırma kullanma veya COM birlikte çalışma için kolaydır. Ancak bunu yaparsanız, sarmalayıcıları arayanlar başarılı olması için yönetilmeyen kod haklarına sahip olmalıdır. Varsayılan ilkesi altında bu kod intranetten indirilen veya Internet ile sarmalayıcıları çalışmaz anlamına gelir.
+Genellikle bu senaryoda, bazı yararlı işlevler, yönetilen kod için kullanılabilir hale getirmek istediğiniz yerel kodda uygulanır. Yönetilen sarmalayıcılardan, platform çağırma veya COM birlikte çalışabilirliği kullanılarak kolayca yazılabilir. Ancak bunu yaparsanız, sarmalayıcılarınızın başarılı olması için yönetilmeyen kod haklarına sahip olması gerekir. Varsayılan ilke altında bu, bir intranet veya Internet 'ten indirilen kodun sarmalayıcılarla birlikte çalışacağı anlamına gelir.
 
-Bu sarmalayıcılar kullanan tüm uygulamalar için yönetilmeyen kod hakları vermek yerine, yalnızca sarmalayıcı kodu bu hakları vermek iyidir. Hiçbir kaynaklarını temel işlevselliği kullanıma sunar ve uygulama benzer şekilde güvenlidir, sarmalayıcı yalnızca kendi hakları assert içinden çağırmak herhangi bir kod sağlayan gerekir. Kaynaklar söz konusu olduğunda güvenlik kodlama sonraki bölümde açıklanan kitaplık kodu çalışması ile aynı olması gerekir. Sarmalayıcı çağıranlar bu kaynaklara potansiyel olarak kullanıma sunmak için yerel kod güvenliği dikkatli doğrulama gereklidir ve sarmalayıcının sorumluluğundadır.
+Bu sarmalayıcıları kullanan tüm uygulamalara yönetilmeyen kod hakları vermek yerine, bu hakları yalnızca sarmalayıcı koduna vermek daha iyidir. Temeldeki işlevsellik hiçbir kaynak açığa çıkardığı ve uygulamanın aynı şekilde güvende olması halinde, sarmalayıcının yalnızca kendi haklarını sağlaması gerekir, bu da herhangi bir kodun bunun üzerinde çağrı yapmasına olanak sağlar. Kaynaklar dahil edildiğinde, güvenlik kodlaması, sonraki bölümde açıklanan kitaplık kodu durumuyla aynı olmalıdır. Sarmalayıcı, bu kaynaklara çağıranları ortaya çıkardığından, yerel kodun güvenliğine dikkat etmeniz gerekir ve sarmalayıcı sorumluluğunda olur.
 
-## <a name="library-code-that-exposes-protected-resources"></a>Korunan kaynakları gösteren kitaplık kodu
+## <a name="library-code-that-exposes-protected-resources"></a>Korumalı kaynakları açığa çıkaran kitaplık kodu
 
-En güçlü ve bu nedenle aşağıdaki yaklaşımı (yanlışlıkla yapıldıysa) tehlikeli güvenlik kodlamak için: .NET sınıfları yalnızca zorunlu olarak kullanamayacağınız, aksi takdirde, belirli kaynaklara erişmek başka bir kod için bir arabirimi kitaplığınızı görür kullandıkları kaynaklar için izinler. Bir kaynak kullanıma her yerde, kodunuzu kaynağa uygun izni ilk talep gerekir (diğer bir deyişle, bu güvenlik denetimi gerçekleştirmeniz gerekir) ve genellikle gerçek işlemi gerçekleştirme hakkı onay.
+Aşağıdaki yaklaşım, güvenlik kodlaması için en güçlü ve potansiyel olarak tehlikeli (yanlış yapılmasa) olabilir: kitaplığınız, .NET sınıflarının zorunlu olduğu gibi, başka bir şekilde kullanılamayan belirli kaynaklara erişmek için bir arabirim görevi görür kullandıkları kaynaklar için izinler. Bir kaynağı kullanıma sunduğunuzdan, kodunuzun öncelikle kaynağa uygun olan izni talep etmelidir (yani, bir güvenlik denetimi gerçekleştirmesi gerekir) ve tipik olarak gerçek işlemi gerçekleştirmek için haklarını onaylayın.
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Durum Verilerinin Güvenliğini Sağlama](securing-state-data.md)|Özel üyeler korumak nasıl açıklar.|
-|[Güvenlik ve Kullanıcı Girdisi](security-and-user-input.md)|Kullanıcı girişi kabul eden uygulamalar ile ilgili güvenlik konuları açıklanmaktadır.|
-|[Güvenlik ve Yarış Durumları](security-and-race-conditions.md)|Yarış durumları kodunuzda önlemek nasıl açıklar.|
-|[Güvenlik ve Çalışma Sırasında Kod Oluşturma](security-and-on-the-fly-code-generation.md)|Dinamik kod oluşturan uygulamalar ile ilgili güvenlik konuları açıklanmaktadır.|
-|[Rol Tabanlı Güvenlik](role-based-security.md)|.NET rol tabanlı güvenlik ayrıntılı açıklar ve kodunuzda kullanma yönergeleri sağlar.|
+|[Durum Verilerinin Güvenliğini Sağlama](securing-state-data.md)|Özel üyelerin nasıl korunacağını açıklar.|
+|[Güvenlik ve Kullanıcı Girdisi](security-and-user-input.md)|Kullanıcı girişini kabul eden uygulamalar için güvenlik konularını açıklar.|
+|[Güvenlik ve Yarış Durumları](security-and-race-conditions.md)|Kodunuzda yarış durumlarının nasıl önleneceğini açıklar.|
+|[Güvenlik ve Çalışma Sırasında Kod Oluşturma](security-and-on-the-fly-code-generation.md)|Dinamik kod üreten uygulamalarla ilgili güvenlik konularını açıklar.|
+|[Rol Tabanlı Güvenlik](role-based-security.md)|.NET rol tabanlı güvenliği ayrıntılı olarak açıklar ve kodunuzda kullanmak için yönergeler sağlar.|

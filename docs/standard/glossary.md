@@ -3,12 +3,12 @@ title: .NET Sözlüğü
 description: .NET belgelerinde kullanılan seçili koşulların anlamını öğrenin.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9bca68753a93721e48d1ff90aa7baf3a147da0ee
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929074"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708210"
 ---
 # <a name="net-glossary"></a>.NET Sözlüğü
 
@@ -58,7 +58,7 @@ Bu CLR, CLR ile aynı kod tabanında oluşturulmuştur. Özgün olarak CoreCLR, 
 
 .NET Core temel sınıf kitaplığı (BCL)
 
-System. * (ve sınırlı ölçüde Microsoft. *) ad alanlarını oluşturan kitaplıklar kümesi. BCL, ASP.NET Core gibi daha üst düzey uygulama çerçevelerinin üzerine inşa eden genel amaçlı, alt düzey bir çerçevedir. .NET Core BCL kaynak kodu [Corefx deposunda](https://github.com/dotnet/corefx)bulunur. Ancak, .NET Core API 'lerinin çoğunluğu .NET Framework de mevcuttur. bu sayede CoreFX ' i .NET Framework BCL çatalını olarak düşünebilirsiniz.
+Sistemi oluşturan kitaplıkların bir kümesi.\* (ve sınırlı ölçüde Microsoft.\*) ad alanları. BCL, ASP.NET Core gibi daha üst düzey uygulama çerçevelerinin üzerine inşa eden genel amaçlı, alt düzey bir çerçevedir. .NET Core BCL kaynak kodu, [.NET Core çalışma zamanı deposunda](https://github.com/dotnet/runtime)bulunur. Ancak, .NET Core API 'lerinin çoğunluğu .NET Framework de mevcuttur. bu sayede CoreFX ' i .NET Framework BCL çatalını olarak düşünebilirsiniz.
 
 ## <a name="corert"></a>CoreRT
 
@@ -66,13 +66,13 @@ System. * (ve sınırlı ölçüde Microsoft. *) ad alanlarını oluşturan kita
 
 CLR/CoreCLR 'nin aksine CoreRT bir sanal makine değildir, bu da bir [JIT](#jit)içermediğinden kod oluşturma ve çalıştırma tesislerini içermediği anlamına gelir. Ancak, [GC](#gc) ve çalışma zamanı türü tanımlama (RTTI) ve yansıma özelliğini içerir. Ancak, tür sistemi yansıma için meta verilerin gerekli olmaması için tasarlanmıştır. Bu, gereksiz meta verileri bağlayabilen bir [AOT](#aot) araç zinciri olmasını ve (daha önemlisi) uygulamanın kullandığı kodu belirlemenizi mümkün bir şekilde belirler. CoreRT geliştirme aşamasındadır.
 
-[.NET Native ve CoreRT tanıtımı](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md) konusuna bakın
+[.NET Native ve CoreRT Için tanıtım](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)bölümüne bakın.
 
 ## <a name="cross-platform"></a>platformlar arası
 
 Her biri için özel olarak yeniden yazmak zorunda kalmadan, Linux, Windows ve iOS gibi birden çok farklı işletim sisteminde kullanılabilen bir uygulamayı geliştirebilir ve yürütebilme özelliği. Bu, kod yeniden kullanımını ve farklı platformlardaki uygulamalar arasında tutarlılığı mümkün bir şekilde sunar.
 
-## <a name="ecosystem"></a>Ekosistemi
+## <a name="ecosystem"></a>ekosistemi
 
 Belirli bir teknoloji için uygulama derlemek ve çalıştırmak için kullanılan tüm çalışma zamanı yazılımları, geliştirme araçları ve topluluk kaynakları.
 
@@ -100,7 +100,7 @@ Mevcut belgelerde, "Framework" Bazen bir [.NET uygulamasını](#implementation-o
 
 Bkz. [çöp toplama](garbage-collection/index.md).
 
-## <a name="il"></a>DEMIRYOLU
+## <a name="il"></a>IL
 
 Ara dil.
 
@@ -195,7 +195,7 @@ UWP, .NET Native tarafından desteklenen ilk uygulama çerçevesidir. Şimdi Win
 
 .NET API 'lerinin her bir .NET uygulamasında kullanılabilen resmi bir belirtimi.
 
-.NET Standard belirtimine bazen belgelerde bir kitaplık denir. Bir kitaplık yalnızca belirtim (arabirimler) değil API uygulamalarını içerdiğinden, bir "Library" .NET Standard çağırmak yanıltıcıdır. .NET Standard metapackage (`NETStandard.Library`) adı ile ilgili olarak, belgelerden bu kullanımı ortadan kaldırmaya planlıyoruz.
+.NET Standard belirtimine bazen belgelerde bir kitaplık denir. Bir kitaplık yalnızca belirtim (arabirimler) değil API uygulamalarını içerdiğinden, bir "Library" .NET Standard çağırmak yanıltıcıdır. Bu kullanımı, .NET Standard metapackage (`NETStandard.Library`) adı ile ilgili başvuru dışında, belgelerden ortadan kaldırmaya planlıyoruz.
 
 Bkz. [.NET Standard](net-standard.md).
 
@@ -205,9 +205,9 @@ Yerel (görüntü) oluşturma.
 
 Bu teknolojiyi kalıcı bir JıT derleyicisi olarak düşünebilirsiniz. Genellikle kodun yürütüldüğü makinede kodu derler, ancak derleme genellikle yüklemesi sırasında gerçekleşir.
 
-## <a name="package"></a>Leyebilir
+## <a name="package"></a>paket
 
-Bir NuGet paketi &mdash; veya yalnızca bir paket &mdash; , aynı ada sahip bir veya daha fazla bütünleştirilmiş kod içeren bir *. zip* dosyasıdır ve yazar adı gibi ek meta verilerle birlikte.
+Bir NuGet paketi &mdash; veya yalnızca bir paket &mdash;, aynı ada sahip bir veya daha fazla bütünleştirilmiş kod içeren bir *. zip* dosyasıdır ve yazar adı gibi ek meta verilerle birlikte.
 
 *. Zip* dosyası *. nupkg* uzantısına sahiptir ve birden çok hedef çerçeve ve sürümde kullanılmak üzere *. dll* dosyaları ve *. xml* dosyaları gibi varlıkları içerebilir. Bir uygulama veya kitaplığa yüklendiğinde, uygun varlıklar uygulama veya kitaplık tarafından belirtilen hedef çerçeveye göre seçilir. Arabirimi tanımlayan varlıklar *ref* klasöründedir ve uygulamayı tanımlayan varlıklar *lib* klasöründedir.
 
@@ -247,7 +247,7 @@ Uygulamaları derlemek ve çalıştırmak için birlikte kullanılan bir program
 
 ".NET Stack" .NET Standard ve tüm .NET uygulamalarını ifade eder. "A .NET Stack" ifadesi bir .NET uygulamasına başvurabilir. 
 
-## <a name="target-framework"></a>hedef çerçeve
+## <a name="target-framework"></a>Hedef çerçeve
 
 Bir .NET uygulamasının veya kitaplığının dayandığı API 'lerin koleksiyonu.
 
@@ -261,7 +261,7 @@ Bkz. [hedef çerçeveler](frameworks.md).
 
 Hedef Framework bilinen adı.
 
-.NET uygulaması veya kitaplığının hedef çerçevesini belirtmek için standartlaştırılmış bir belirteç biçimi. Hedef çerçevelere genellikle gibi `net462`kısa bir ad başvurulur. Uzun biçimli TFMs (gibi. NETFramework, Version = 4.6.2) var, ancak genellikle bir hedef çerçeve belirtmek için kullanılmaz.
+.NET uygulaması veya kitaplığının hedef çerçevesini belirtmek için standartlaştırılmış bir belirteç biçimi. Hedef çerçevelere genellikle `net462`gibi kısa bir ad tarafından başvurulur. Uzun biçimli TFMs (gibi. NETFramework, Version = 4.6.2) var, ancak genellikle bir hedef çerçeve belirtmek için kullanılmaz.
 
 Bkz. [hedef çerçeveler](frameworks.md).
 
@@ -269,7 +269,7 @@ Bkz. [hedef çerçeveler](frameworks.md).
 
 Evrensel Windows Platformu.
 
-Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows Uygulamaları ve yazılım oluşturmak için kullanılan bir .NET uygulaması. Bilgisayar, tabletler, phabizin, telefon ve hatta Xbox dahil olmak üzere hedeflemek isteyebileceğiniz farklı cihaz türlerini birleştirmeleri için tasarlanmıştır. UWP, merkezi bir App Store, bir yürütme ortamı (AppContainer) ve Win32 (WinRT) yerine kullanılacak bir dizi Windows API 'si gibi birçok hizmeti sağlar. Uygulamalar, C#, vb.net ve C++JavaScript 'te yazılabilir. C# Ve vb.net kullanıldığında .NET API 'Leri .NET Core tarafından sağlanır.
+Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows Uygulamaları ve yazılım oluşturmak için kullanılan bir .NET uygulaması. Bilgisayar, tabletler, phabizin, telefon ve hatta Xbox dahil olmak üzere hedeflemek isteyebileceğiniz farklı cihaz türlerini birleştirmeleri için tasarlanmıştır. UWP, merkezi bir App Store, bir yürütme ortamı (AppContainer) ve Win32 (WinRT) yerine kullanılacak bir dizi Windows API 'si gibi birçok hizmeti sağlar. Uygulamalar, C#, Visual Basic ve C++JavaScript 'te yazılabilir. C# Ve Visual Basic kullanıldığında .NET API 'Leri .NET Core tarafından sağlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

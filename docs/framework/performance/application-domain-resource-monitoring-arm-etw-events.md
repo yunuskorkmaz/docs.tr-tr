@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, application domain monitoring events
 - application domain monitoring events [.NET Framework]
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e1c2a38be6f2c15a118b35925570119b474f096
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 0e453b2bafffd9e07a1bdddd97282c5b97f5483d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040572"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716224"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Uygulama Etki Alanı Kaynak İzleme (ARM) ETW Olayları
 
@@ -37,7 +35,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
 |ThreadID|Win: UInt64|Oluşturulan iş parçacığının KIMLIĞI.|
 |AppDomainID|Win: UInt64|İş parçacığı etkinliğinin bildirildiği uygulama etki alanının tanımlayıcısı.|
@@ -62,7 +60,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
 |AppDomainID|Win: UInt64|Kaynak kullanımının bildirildiği uygulama etki alanının tanımlayıcısı.|
 |Ayrılabilir|Win: UInt64|Uygulama etki alanı oluşturulduğundan bu yana bu uygulama etki alanında ayrılan toplam bayt sayısı (serbest bırakılan bellek miktarı çıkarıldı).|
@@ -84,7 +82,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
 |AppDomainID|Win: UInt64|Kaynak kullanımının bildirildiği etki alanının tanımlayıcısı.|
 |Kalan|Win: UInt64|Son koleksiyondan sonra kalan ve bu uygulama etki alanı tarafından tutulması bilinen bayt sayısı. Bu sayı doğru ve tam bir koleksiyon sonrasında tamamlanır, ancak kısa ömürlü bir koleksiyon sonrasında tamamlanmamış olabilir.|
@@ -108,7 +106,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
 |ThreadID|Win: UInt64|İş parçacığı tanımlayıcısı.|
 |AppDomainID|Win: UInt64|Uygulama etki alanı tanımlayıcısı.|
@@ -131,7 +129,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
 |ThreadID|Win: UInt64|İş parçacığı tanımlayıcısı.|
 |AppDomainID|Win: UInt64|Uygulama etki alanı tanımlayıcısı.|

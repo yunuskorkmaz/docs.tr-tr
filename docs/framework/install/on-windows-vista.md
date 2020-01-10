@@ -2,15 +2,13 @@
 title: Windows Vista 'da .NET Framework yüklemesi
 description: .NET Framework Windows Vista 'da yüklemeyi öğrenin.
 ms.custom: updateeachrelease
-author: rlander
-ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 630ab717e44d72de248bb0f0b1abf3d781d26a93
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 95a536ea201844461d60bda0da2654e76de04787
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204735"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716327"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Windows Vista ve Windows Server 2008’de .NET Framework Yükleme
 
@@ -26,7 +24,7 @@ Bu yönergeler, ihtiyacınız olan .NET Framework sürümlerini yüklemenize yar
 
 [.NET Framework 4,6](https://www.microsoft.com/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) ile 4,6 .NET Framework 4,0 için oluşturulmuş uygulamaları destekler.
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 Windows Vista 'da [3,5 .NET Framework](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) yükleyebilirsiniz.
 

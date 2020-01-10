@@ -1,17 +1,16 @@
 ---
 title: Tek boyutlu diziler- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 5559acd162b26a94b009ec21691d1501c90db290
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 07c6061bfc66b1640d0eacca217302feff1a390a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419523"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715025"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Tek Boyutlu Diziler (C# Programlama Kılavuzu)
 
@@ -55,7 +54,7 @@ Aşağıdaki örnekte gösterildiği gibi, beş tamsayının tek boyutlu bir diz
   
  Bu deyimin sonucu, `SomeType` bir değer türü veya bir başvuru türü olmasına bağlıdır. Değer bir tür ise, ifade, her birinin türü `SomeType`olan 10 öğeden oluşan bir dizi oluşturur. `SomeType` bir başvuru türü ise, ifade her biri null başvuruya başlatılan 10 öğeden oluşan bir dizi oluşturur.  
   
- Değer türleri ve başvuru türleri hakkında daha fazla bilgi için bkz. [türler](/dotnet/csharp/language-reference/keywords).  
+Değer türleri ve başvuru türleri hakkında daha fazla bilgi için bkz. [değer türleri](../../language-reference/keywords/value-types.md) ve [başvuru türleri](../../language-reference/keywords/reference-types.md).
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

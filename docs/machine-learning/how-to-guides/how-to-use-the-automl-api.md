@@ -1,14 +1,14 @@
 ---
 title: ML.NET otomatik ML API 'sini kullanma
 description: ML.NET otomatikleştirilen ML API 'SI, model oluşturma işlemini otomatikleştirir ve dağıtım için hazırlamış bir model oluşturur. Otomatik makine öğrenimi görevlerini yapılandırmak için kullanabileceğiniz seçenekleri öğrenin.
-ms.date: 11/7/2019
+ms.date: 12/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c1c18decc48bc1499aa55210becff305cdec4a53
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977123"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636568"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>ML.NET otomatik makine öğrenimi API 'sini kullanma
 
@@ -37,7 +37,8 @@ Bir deneme oluşturmadan önce, çözmek istediğiniz makine öğrenimi sorunu t
 
 * İkili sınıflandırma
 * Birden çok Lass sınıflandırması
-* regresyon
+* Regresyon
+* Öneri
 
 ## <a name="create-experiment-settings"></a>Deneme ayarları oluşturma
 
@@ -55,17 +56,23 @@ Belirlenen ML görev türü için deneme ayarları oluşturun:
   var experimentSettings = new MulticlassExperimentSettings();
   ```
 
-* regresyon
+* Regresyon
 
   ```csharp
   var experimentSettings = new RegressionExperimentSettings();
+  ```
+
+* Öneri
+
+  ```csharp
+  var experimentSettings = new RecommendationExperimentSettings();
   ```
 
 ## <a name="configure-experiment-settings"></a>Deneme ayarlarını yapılandırma
 
 Denemeleri, yüksek oranda yapılandırılabilir. Yapılandırma ayarlarının tam listesi için bkz. [oto ml API belgeleri](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview) .
 
-Bazı örnekler şunlardır:
+Bazı örnekler:
 
 1. Denemenin çalışmasına izin verilen en uzun süreyi belirtin.
 
@@ -97,7 +104,7 @@ Bazı örnekler şunlardır:
 
 1. Otomatikleştirilmiş ML 'nin belirli eğitimleri kullanmamasını söyleyin.
 
-    En iyileştirmek için, görev başına araştırılan varsayılan bir liste. Bu liste, her deneme için değiştirilebilir. Örneğin, veri kümeniz üzerinde yavaş çalışan traıners listeden kaldırılabilir. Tek bir belirli bir ariner çağrısında `experimentSettings.Trainers.Clear()` iyileştirmek için, kullanmak istediğiniz bir eğitmen ekleyin.
+    En iyileştirmek için, görev başına araştırılan varsayılan bir liste. Bu liste, her deneme için değiştirilebilir. Örneğin, veri kümeniz üzerinde yavaş çalışan traıners listeden kaldırılabilir. Tek bir belirli bir ariner çağrısında `experimentSettings.Trainers.Clear()`iyileştirmek için, kullanmak istediğiniz bir eğitmen ekleyin.
 
     ```csharp
     var experimentSettings = new RegressionExperimentSettings();
@@ -110,12 +117,13 @@ ML başına desteklenen aers görevleri listesi aşağıdaki ilgili bağlantıda
 * [Desteklenen Ikili sınıflandırma algoritmaları](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [Desteklenen birden çok Lass sınıflandırma algoritması](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [Desteklenen Regresyon algoritmaları](xref:Microsoft.ML.AutoML.RegressionTrainer)
+* [Desteklenen öneri algoritmaları](xref:Microsoft.ML.AutoML.RecommendationTrainer)
 
 ## <a name="optimizing-metric"></a>Ölçümü iyileştirme
 
 Yukarıdaki örnekte gösterildiği gibi en iyileştirme ölçümü, model eğitimi sırasında en iyi duruma getirilecek ölçümü belirler. Seçebileceğiniz ölçüm en iyi duruma getirme, seçtiğiniz görev türüne göre belirlenir. Kullanılabilir ölçümlerin listesi aşağıda verilmiştir.
 
-|[İkili sınıflandırma](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Birden çok Lass sınıflandırması](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Regresyon](xref:Microsoft.ML.AutoML.RegressionMetric)
+|[İkili sınıflandırma](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Birden çok Lass sınıflandırması](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Gerileme & önerisi](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
 |Veritabanınızın| Logkaybetme | RKARE
 |Areaunderperrecallcurve | LogLossReduction | MeanAbsoluteError
@@ -126,28 +134,28 @@ Yukarıdaki örnekte gösterildiği gibi en iyileştirme ölçümü, model eğit
 |PositivePrecision
 |PositiveRecall
 
-## <a name="data-pre-processing-and-featurization"></a>Veri ön işleme ve korleştirme
+## <a name="data-pre-processing-and-featurization"></a>Veri ön işleme ve özellik kazandırma sayesinde
 
 > [!NOTE]
-> Özellik sütunu yalnızca <xref:System.Boolean>, <xref:System.Single> ve <xref:System.String> türlerini destekler.
+> Özellik sütunu yalnızca <xref:System.Boolean>, <xref:System.Single>ve <xref:System.String>türlerini destekler.
 
 Verilerin ön işlemesi varsayılan olarak gerçekleşir ve aşağıdaki adımlar sizin için otomatik olarak gerçekleştirilir:
 
 1. Yararlı bilgiler olmadan bırakma özellikleri
 
-    Eğitim ve doğrulama kümelerinden yararlı bilgiler olmadan özellikleri bırakın. Bunlar tüm değerler eksik, tüm satırlarda aynı değere sahip olan veya son derece yüksek kardinalite (örn. karma, kimlik veya GUID) ile özellikleri içerir.
+    Hiçbir yararlı bilgiler özellikleriyle, eğitim ve doğrulama kümesinden bırakın. Bu, eksik, tüm değerlerin tüm satırlar boyunca veya son derece yüksek kardinalite (örneğin, karmaları kimlikleri veya GUID'leri) ile aynı değere sahip özellikler içerir.
 
 1. Eksik değer gösterimi ve imputation
 
     Eksik değer hücrelerini, veri türü için varsayılan değerle doldur. Giriş sütunuyla aynı sayıda yuva içeren gösterge özellikleri ekleyin. Giriş sütunundaki değer eksikse ve `0` yoksa, eklenen gösterge özelliklerinin değeri `1`.
 
-1. Ek özellikler oluştur
+1. Ek özellikler oluşturma
 
     Metin özellikleri için: unigram ve üçlü karakter-gram kullanan sözcük paketi özellikleri.
 
     Kategorik özellikler için: düşük kardinalite özelliklerine yönelik tek yönlü bir kodlama ve yüksek kardinalite kategorik özellikleri için tek Hot-Hash kodlaması.
 
-1. Dönüşümler ve kodlamalar
+1. Dönüşümler ve kodlamaları
 
     Kategorik özelliklere dönüştürülen çok az benzersiz değerler içeren metin özellikleri. Kategorik özelliklerin kardinalitesine bağlı olarak, tek başına kodlama veya tek yönlü karma kodlama gerçekleştirin.
 
@@ -174,7 +182,7 @@ Deneme ayarlarını yapılandırdıktan sonra, denemeyi oluşturmaya hazırlanı
 RegressionExperiment experiment = mlContext.Auto().CreateRegressionExperiment(experimentSettings);
 ```
 
-## <a name="run-the-experiment"></a>Denemeyi çalıştırın
+## <a name="run-the-experiment"></a>Denemeyi çalıştırma
 
 Denemeyi çalıştırmak, verileri önceden işleme, öğrenme algoritması seçimi ve hiper parametre ayarlamayı tetikler. Oto, `MaxExperimentTimeInSeconds` ulaşılıncaya veya deneme sonlandırılana kadar, doğru şekilde, öğrenme algoritmalarının ve hiper parametrelerin birleşimlerini oluşturmaya devam edecektir.
 
@@ -197,13 +205,13 @@ experiment.Execute(trainDataView);
 
 ### <a name="custom-validation-dataset"></a>Özel doğrulama veri kümesi
 
-Genellikle zaman serisi verilerinde olduğu gibi rastgele bölme kabul edilebilir değilse, özel doğrulama veri kümesini kullanın. Kendi doğrulama veri kümenizi belirtebilirsiniz. Model, bir veya daha fazla rastgele veri kümesi yerine belirtilen doğrulama veri kümesine göre değerlendirilir.
+Genellikle zaman serisi verilerinde olduğu gibi rastgele bölme kabul edilebilir değilse, özel doğrulama veri kümesini kullanın. Kendi doğrulama veri kümesi belirtebilirsiniz. Model, bir veya daha fazla rastgele veri kümesi yerine belirtilen doğrulama veri kümesine göre değerlendirilir.
 
 ```csharp
 experiment.Execute(trainDataView, validationDataView);
 ```
 
-## <a name="explore-model-metrics"></a>Model ölçümlerini keşfet
+## <a name="explore-model-metrics"></a>Model ölçümleri keşfedin
 
 Her bir ML denemesinin yinelemesinden sonra, bu görevle ilgili ölçümler depolanır.
 
@@ -219,7 +227,7 @@ Her ML görevi için kullanılabilir ölçümler şunlardır:
 
 * [İkili sınıflandırma ölçümleri](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [Birden çok Lass sınıflandırma ölçümleri](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
-* [Gerileme ölçümleri](xref:Microsoft.ML.AutoML.RegressionMetric)
+* [Gerileme & öneri ölçümleri](xref:Microsoft.ML.AutoML.RegressionMetric)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

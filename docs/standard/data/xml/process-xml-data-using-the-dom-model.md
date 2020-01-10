@@ -3,19 +3,17 @@ title: DOM Modelini Kullanarak XML Verilerini İşleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 56b6e9c7-ed82-4a65-a647-7be32c83bcc8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d34d22d8329f0bc26c1e29653137211bf300d324
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 01ef4bef57b8a2e3e13f28a98adb21b111f3f4ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647816"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710459"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>DOM Modelini Kullanarak XML Verilerini İşleme
-XML belge nesne modeli (DOM) XML verileri standart bir nesneler kümesini değerlendirir ve XML verilerini bellek içinde işleme kullanılır. `System.Xml` Ad alanı XML belgeleri, parçalar, düğüm veya düğüm kümeleri programlı bir gösterimini sağlar. World Wide Web Consortium (W3C) DOM düzey 1 çekirdek ve DOM düzeyi 2 Çekirdek önerileri temel alır.  
+XML Belge Nesne Modeli (DOM), XML verilerini standart bir nesne kümesi olarak değerlendirir ve XML verilerini bellekte işlemek için kullanılır. `System.Xml` ad alanı, XML belgelerinin, parçaların, düğümlerin veya düğüm kümelerinin programlı bir gösterimini sağlar. World Wide Web Konsorsiyumu (W3C) DOM düzeyi 1 çekirdeğini ve DOM düzey 2 temel önerilerini temel alır.  
   
- <xref:System.Xml.XmlDocument> Sınıf bir XML belgesi temsil eder. Alma ve diğer tüm XML nesneleri oluşturmak için üyelerini içerir. Kullanarak <xref:System.Xml.XmlDocument>ve ilişkili sınıflarının, XML belgeleri oluşturmak, yüklemek ve verilere erişir, verileri değiştirme ve değişiklikleri kaydedilsin.  
+ <xref:System.Xml.XmlDocument> sınıfı bir XML belgesini temsil eder. Diğer tüm XML nesnelerini alma ve oluşturma üyelerini içerir. <xref:System.Xml.XmlDocument>ve ilgili sınıfları kullanarak, XML belgeleri oluşturabilir, verileri yükleyebilir ve erişebilir, verileri değiştirebilir ve değişiklikleri kaydedebilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
@@ -59,4 +57,4 @@ XML belge nesne modeli (DOM) XML verileri standart bir nesneler kümesini değer
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- XML işleme kullanımını açıklar <xref:System.Xml.XPath.XPathNavigator> sınıfı.
+ <xref:System.Xml.XPath.XPathNavigator> sınıfını kullanarak XML işlemesini açıklar.

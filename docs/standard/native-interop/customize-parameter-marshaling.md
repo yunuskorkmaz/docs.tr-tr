@@ -1,71 +1,69 @@
 ---
-title: Özelleştirme parametre sıralama - .NET
-description: .NET yerel gösterimine parametrelerinizi nasıl sürekliliğe devreder özelleştirmeyi öğrenin.
-author: jkoritzinsky
-ms.author: jekoritz
+title: Parametre hazırlamayı özelleştirme-.NET
+description: .NET 'in parametrelerinizi yerel bir gösterimde nasıl sıraladığında nasıl özelleştireceğinizi öğrenin.
 ms.date: 01/18/2019
-ms.openlocfilehash: 877eb00c18c9108fe6bcfb50104ff5ed813e85f3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 36fb8c105a8836d77b862095a616de3ba641073c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065470"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706367"
 ---
-# <a name="customizing-parameter-marshaling"></a>Parametreyi özelleştirme
+# <a name="customizing-parameter-marshaling"></a>Parametre hazırlamayı özelleştirme
 
-.NET çalışma zamanının varsayılan parametre hazırlama davranışı istediklerinizi yapmaz, kullanım kullanabilirsiniz <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> parametrelerinizi nasıl sıralanmış özelleştirmek için özniteliği.
+.NET çalışma zamanının varsayılan parametre sıralama davranışı istediğiniz şeyi gerçekleştirmezse, kullanım parametrelerinden nasıl sıralandıklarınızı özelleştirmek için <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> özniteliğini kullanabilir.
 
-## <a name="customizing-string-parameters"></a>Dize parametreleri özelleştirme
+## <a name="customizing-string-parameters"></a>Dize parametrelerini özelleştirme
 
-.NET, çeşitli biçimlerde hazırlama dizeler için vardır. Bu yöntemler, C stili dizeler ve dize biçimleri Windows merkezli ayrı bölümlere ayrılır.
+.NET, dizeleri sıralama için çeşitli biçimlere sahiptir. Bu yöntemler, C stili dizeler ve Windows merkezli dize biçimleri üzerinde ayrı bölümlere ayrılır.
 
 ### <a name="c-style-strings"></a>C stili dizeler
 
-Her biri Bu biçimler yerel kod için null ile sonlandırılmış bir dize geçirir. Bunlar, yerel dizesi kodlayarak farklılık gösterir.
+Bu biçimlerin her biri, yerel koda null ile sonlandırılmış bir dize geçirir. Bunlar yerel dizenin kodlamasına göre farklılık gösterir.
 
-| `System.Runtime.InteropServices.UnmanagedType` Değer | Encoding |
+| `System.Runtime.InteropServices.UnmanagedType` değeri | Encoding |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
 | LPUTF8Str | UTF-8 | 
 | LPWStr | UTF-16 |
 | LPTStr | UTF-16 |
 
-<xref:System.Runtime.InteropServices.UnmanagedType.VBByRefStr?displayProperty=nameWithType> Biçimi biraz farklıdır. Gibi `LPWStr`, yerel C stili dizeyi UTF-16 kodlamalı dize sıralar. Ancak, başvuruya göre dizesine geçmenizi yönetilen imzaya sahip ve eşleşen yerel imza dize değerine göre alır. Bu ayrım değere göre bir dize alır ve değiştirdiği bir yerel API kullanmak üzere yerinde kullanmak zorunda kalmadan sağlar bir `StringBuilder`. Eşleşmeyen yerel ve yönetilen imzalarla karışıklığa neden eğilimlidir olduğundan el ile şu biçimi kullanarak karşı öneririz.
+<xref:System.Runtime.InteropServices.UnmanagedType.VBByRefStr?displayProperty=nameWithType> biçimi biraz farklıdır. `LPWStr`gibi, dize, UTF-16 ' d e kodlanmış yerel bir C stili dizeye göre sıraar. Ancak, yönetilen imza dizeyi başvuruya göre geçirirseniz ve eşleşen yerel imza, dizeyi değere göre alır. Bu ayrım, değere göre bir dize alan ve bir `StringBuilder`kullanmak zorunda kalmadan yerinde değişiklik yapan yerel bir API kullanmanıza olanak sağlar. Eşleşmeyen yerel ve yönetilen imzalarla karışıklık oluşmasına yol açacağımız için bu biçimi kullanarak el ile karşı öneriyoruz.
 
 ### <a name="windows-centric-string-formats"></a>Windows merkezli dize biçimleri
 
-COM veya OLE arabirimleri ile etkileşim kurulurken, büyük olasılıkla yerel işlevleri dize olarak alın bulabilirsiniz `BSTR` bağımsız değişkenler. Kullanabileceğiniz <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> türü bir dize olarak hazırlamak için yönetilmeyen bir `BSTR`.
+COM veya OLE arabirimleriyle etkileşim kurarken, yerel işlevlerin dizeleri `BSTR` bağımsız değişken olarak ele geçirmesine benzer. Bir dizeyi `BSTR`olarak sıralamak için <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> yönetilmeyen türünü kullanabilirsiniz.
 
-WinRT API'lar ile etkileşim kurma, kullanabileceğiniz <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> biçiminde bir dize olarak hazırlamak için bir `HSTRING`.
+WinRT API 'Leri ile etkileşim ediyorsanız, bir dizeyi `HSTRING`olarak sıralamak için <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> biçimini kullanabilirsiniz.
 
-## <a name="customizing-array-parameters"></a>Dizi parametreleri özelleştirme
+## <a name="customizing-array-parameters"></a>Dizi parametrelerini özelleştirme
 
-.NET de sıralama dizi parametreleri için birden çok yol sağlar. Bir C tarzı dizi alan bir API arıyoruz kullanırsanız <xref:System.Runtime.InteropServices.UnmanagedType.LPArray?displayProperty=nameWithType> yönetilmeyen türü. Özelleştirilmiş sıralama dizideki değerleri ihtiyacınız varsa, kullanabileceğiniz <xref:System.Runtime.InteropServices.MarshalAsAttribute.ArraySubType> alanını `[MarshalAs]` söz konusu öznitelik.
+.NET ayrıca dizi parametrelerini sıralamak için birçok yol sağlar. C stili dizi alan bir API arıyorsanız <xref:System.Runtime.InteropServices.UnmanagedType.LPArray?displayProperty=nameWithType> yönetilmeyen türünü kullanın. Dizideki değerlerin özelleştirilmiş sıralama ihtiyacı varsa, bunun için `[MarshalAs]` özniteliğinde <xref:System.Runtime.InteropServices.MarshalAsAttribute.ArraySubType> alanını kullanabilirsiniz.
 
-COM API kullanıyorsanız, büyük olasılıkla, dizi parametreleri olarak sıralamanız gerekir `SAFEARRAY*`s. Bunu yapmak için kullanabileceğiniz <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> yönetilmeyen türü. Varsayılan tür öğelerinin `SAFEARRAY` tablodaki görülebilir [özelleştirme `object` alanları](./customize-struct-marshaling.md#marshaling-systemobjects). Kullanabileceğiniz <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> ve <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> tam öğe özelleştirmek için alanları türü `SAFEARRAY`.
+COM API 'Leri kullanıyorsanız, muhtemelen dizi parametrelerinizi `SAFEARRAY*`s olarak sıralıyoruz. Bunu yapmak için <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> yönetilmeyen türünü kullanabilirsiniz. `SAFEARRAY` öğelerinin varsayılan türü, [`object` alanları özelleştirilirken](./customize-struct-marshaling.md#marshaling-systemobjects)tabloda görülebilir. `SAFEARRAY`öğesinin tam öğe türünü özelleştirmek için <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> ve <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> alanlarını kullanabilirsiniz.
 
-## <a name="customizing-boolean-or-decimal-parameters"></a>Ondalık ya da Boole parametreleri özelleştirme
+## <a name="customizing-boolean-or-decimal-parameters"></a>Boole veya ondalık parametrelerini özelleştirme
 
-Ondalık ya da Boole parametreleri hazırlama hakkında daha fazla bilgi için bkz: [yapısı hazırlama özelleştirme](customize-struct-marshaling.md).
+Boolean veya Decimal parametrelerini hazırlama hakkında bilgi için bkz. [Yapı hazırlamayı özelleştirme](customize-struct-marshaling.md).
 
-## <a name="customizing-object-parameters-windows-only"></a>Nesnesi parametrelerini özelleştirme (yalnızca Windows)
+## <a name="customizing-object-parameters-windows-only"></a>Nesne parametrelerini özelleştirme (yalnızca Windows)
 
-Windows üzerinde .NET çalışma zamanı bir nesne parametreleri yerel kod için hazırlamak için farklı yollar sağlar.
+Windows 'da, .NET çalışma zamanı, yerel koda nesne parametrelerini sıralamak için çeşitli yollar sağlar.
 
-### <a name="marshaling-as-specific-com-interfaces"></a>Belirli bir COM arabirimleri olarak hazırlama
+### <a name="marshaling-as-specific-com-interfaces"></a>Belirli COM arabirimleri olarak hazırlama
 
-API'nizi bir COM nesnesi için bir işaretçi alır, aşağıdakilerden herhangi birini kullanabilirsiniz `UnmanagedType` biçimleri üzerinde bir `object`-yazılan bu belirli arabirimleri hazırlamak için .NET bildirmek için parametre:
+API 'niz bir COM nesnesine bir işaretçi alırsa, .NET 'in bu belirli arabirimler olarak Marshal konusunda bilgi almak için, `object`türü belirlenmiş bir parametre üzerinde aşağıdaki `UnmanagedType` biçimlerinden herhangi birini kullanabilirsiniz:
 
 - `IUnknown`
 - `IDispatch`
 - `IInspectable`
 
-Ayrıca, türünüz işaretlenmişse `[ComVisible(true)]` veya hazırlama `object` kullanabileceğiniz türü <xref:System.Runtime.InteropServices.UnmanagedType.Interface?displayProperty=nameWithType> COM çağrılabilir sarmalayıcı COM görünümün türünüz olarak nesnenizin sıralamakta biçimi.
+Ayrıca, türü `[ComVisible(true)]` işaretlenmişse veya `object` türünü sıraaktarıyorsanız, nesnenizin COM görünümü için bir COM çağrılabilir sarmalayıcı olarak nesneyi sıralamak üzere <xref:System.Runtime.InteropServices.UnmanagedType.Interface?displayProperty=nameWithType> biçimini kullanabilirsiniz.
 
-### <a name="marshaling-to-a-variant"></a>Hazırlama için bir `VARIANT`
+### <a name="marshaling-to-a-variant"></a>`VARIANT` sıralama
 
-API'nizi yerel bir Win32 sürerse `VARIANT`, kullanabileceğiniz <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> Biçimlendir, `object` nesnelerinizi olarak hazırlamak için parametre `VARIANT`s. İlgili belgelere bakın [özelleştirme `object` alanları](customize-struct-marshaling.md#marshaling-systemobjects) .NET türleri arasında bir eşleme için ve `VARIANT` türleri.
+Yerel API 'niz bir Win32 `VARIANT`alırsa, nesnelerinizi `VARIANT`s olarak sıralamak için `object` parametresindeki <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> biçimini kullanabilirsiniz. .NET türleri ve `VARIANT` türleri arasındaki bir eşlemenin [`object` alanlarını özelleştirme](customize-struct-marshaling.md#marshaling-systemobjects) hakkındaki belgelere bakın.
 
-### <a name="custom-marshalers"></a>Özel sıralayıcılara
+### <a name="custom-marshalers"></a>Özel sıralayıcılar
 
-Yerel bir COM arabirimi farklı bir yönetilen türü proje istiyorsanız kullanabileceğiniz `UnmanagedType.CustomMarshaler` biçimi ve uygulaması <xref:System.Runtime.InteropServices.ICustomMarshaler> kendi özel sıralama kodu sağlayabilir.
+Yerel bir COM arabirimini farklı bir yönetilen türe eklemek istiyorsanız, kendi özel sıralama kodunuzu sağlamak için `UnmanagedType.CustomMarshaler` biçimini ve <xref:System.Runtime.InteropServices.ICustomMarshaler> uygulamasını kullanabilirsiniz.

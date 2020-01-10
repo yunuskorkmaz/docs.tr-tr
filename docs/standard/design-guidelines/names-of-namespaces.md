@@ -8,20 +8,19 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-author: KrzysztofCwalina
-ms.openlocfilehash: b8b6ec195fd3f95a4255ea820f2bffcb3e27ba19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0678f695e3ae7c40660031862c9073a21fd72491
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615214"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709237"
 ---
 # <a name="names-of-namespaces"></a>Ad Alanlarının Adları
-Olarak diğer adlandırma kuralları ile hedef ad alanları adlandırırken yeterli netlik ad alanı içeriğini olma olasılığı nedir hemen bilmek framework kullanarak programcısı için oluşturuyor. Aşağıdaki şablonu genel bir kural ad alanlarını adlandırma belirtir:  
+Diğer adlandırma kılavuzlarında olduğu gibi, ad alanlarını Adlandırmanın amacı, programlama çerçevesini kullanarak, ad alanının içeriğinin büyük olasılıkla ne olduğunu hemen bilmenin ne kadar anlaşılır olduğunu oluşturmaktır. Aşağıdaki şablon ad alanlarını adlandırmak için genel kuralı belirtir:  
   
  `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`  
   
- Örnekler şunlardır:  
+ Aşağıda örnekler verilmiştir:  
   
  `Fabrikam.Math`  
  `Litware.Security`  
@@ -30,59 +29,59 @@ Olarak diğer adlandırma kuralları ile hedef ad alanları adlandırırken yete
   
  **✓ DO** ad alanı adı ikinci düzeyde kararlı ve sürüm bağımsız ürün adı kullanın.  
   
- **X DO NOT** grup adlarını kuruluşlar içinde kısa süreli olma eğilimindedir için kuruluş hiyerarşileri temel olarak ad alanı hiyerarşileri adları kullanın. İlgili teknolojiler gruplarının çevresinde ad alanları hiyerarşisi düzenleyin.  
+ **X DO NOT** grup adlarını kuruluşlar içinde kısa süreli olma eğilimindedir için kuruluş hiyerarşileri temel olarak ad alanı hiyerarşileri adları kullanın. İlgili teknolojilerin grupları etrafında ad alanlarının hiyerarşisini düzenleyin.  
   
- **✓ DO** PascalCasing ve ayrı ad alanı bileşenler süreleriyle kullanır (örn., `Microsoft.Office.PowerPoint`). Markanızı nontraditional büyük/küçük harf içeriyorsa, bu normal bir ad alanı büyük küçük harflerini öğesinden farklılık göstermesi bile markanızı tarafından tanımlanan büyük/küçük harf izlemelidir.  
+ **✓ DO** PascalCasing ve ayrı ad alanı bileşenler süreleriyle kullanır (örn., `Microsoft.Office.PowerPoint`). Markanız geleneksel olmayan büyük harfe kullanıyorsa, normal ad alanı büyük küçük harfe göre farklılık gösterir olsa da markanız tarafından tanımlanan büyük/küçük harfleri izlemeniz gerekir.  
   
  **✓ CONSIDER** uygun olan yerlerde çoğul ad alanı adlarını kullanarak.  
   
- Örneğin, `System.Collections` yerine `System.Collection`. Bu kuralın istisnası, marka adları ve kısaltmalar ancak uygulanır. Örneğin, `System.IO` yerine `System.IOs`.  
+ Örneğin, `System.Collection`yerine `System.Collections` kullanın. Ancak, marka adları ve kısaltmalar bu kuralın istisnalardır. Örneğin, `System.IOs`yerine `System.IO` kullanın.  
   
  **X DO NOT** bu ad alanında bir ad alanı ve türü için aynı adı kullanın.  
   
- Örneğin, kullanmayın `Debug` bir ad alanı olarak adlandırın ve sonra da adlı bir sınıf sağlayın `Debug` ad. Bazı derleyiciler gibi türler tam olmasını gerektirir.  
+ Örneğin, `Debug` ad alanı adı olarak kullanmayın ve ayrıca aynı ad alanında `Debug` adlı bir sınıf sağlayın. Çeşitli derleyiciler, bu tür türlerin tam nitelikli olmasını gerektirir.  
   
-### <a name="namespaces-and-type-name-conflicts"></a>Ad alanları ve tür adı çakışıyor  
+### <a name="namespaces-and-type-name-conflicts"></a>Ad alanları ve tür adı çakışmaları  
  **X DO NOT** genel tür adları gibi tanıtmak `Element`, `Node`, `Log`, ve `Message`.  
   
- Ad önünü açacak yapılması, ortak senaryolar çakışıyor çok yüksek bir olasılık yoktur. Genel tür adları nitelemeniz (`FormElement`, `XmlNode`, `EventLog`, `SoapMessage`).  
+ Bunu yapmanın çok büyük bir olasılığı, yaygın senaryolarda tür adı çakışmalarına yol açacaktır. Genel tür adlarını (`FormElement`, `XmlNode`, `EventLog`, `SoapMessage`) nitelemeniz gerekir.  
   
- Belirli ad alanları farklı kategorileri için tür adı çakışmalarını önleme ilkeleri vardır.  
+ Farklı ad alanları kategorileri için tür adı çakışmalarını önlemeye yönelik özel yönergeler vardır.  
   
 - **Uygulama modeli ad alanları**  
   
-     Tek bir uygulama modeline ait olan ad alanları sıklıkla birlikte kullanılır, ancak diğer uygulama modellerini ad alanları ile neredeyse hiçbir zaman kullanılır. Örneğin, <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı ile birlikte kullanılan nadiren <xref:System.Web.UI?displayProperty=nameWithType> ad alanı. İyi bilinen uygulama modeli ad gruplarının listesi verilmiştir:  
+     Tek bir uygulama modeline ait olan ad alanları birlikte çok sık kullanılır, ancak bunlar, diğer uygulama modelleriyle ilgili ad alanları ile neredeyse hiç kullanılmaz. Örneğin, <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı <xref:System.Web.UI?displayProperty=nameWithType> ad alanıyla birlikte çok seyrek kullanılır. Aşağıda, iyi bilinen uygulama modeli ad alanı gruplarının listesi verilmiştir:  
   
      `System.Windows*`   
      `System.Web.UI*`  
   
      **X DO NOT** tek bir uygulama modeli içindeki ad alanlarında türleri için aynı adı verin.  
   
-     Örneğin, adlı bir tür eklemeyin `Page` için <xref:System.Web.UI.Adapters?displayProperty=nameWithType> ad alanı, çünkü <xref:System.Web.UI?displayProperty=nameWithType> ad alanını adlı bir tür zaten var. `Page`.  
+     Örneğin, <xref:System.Web.UI?displayProperty=nameWithType> ad alanı zaten `Page`adlı bir tür içerdiğinden, <xref:System.Web.UI.Adapters?displayProperty=nameWithType> ad alanına `Page` adlı bir tür eklemeyin.  
   
 - **Altyapı ad alanları**  
   
-     Bu grup, nadiren uygulamaların ortak bir geliştirme sırasında içeri aktarılan ad alanlarını içerir. Örneğin, `.Design` ad alanları programlama geliştirme araçları oluştururken temel olarak kullanılır. Bu ad alanlarında türleri ile çakışmaları önleme önemli değildir.  
+     Bu grup, ortak uygulamaların geliştirilmesi sırasında nadiren içeri aktarılan ad alanlarını içerir. Örneğin, `.Design` ad alanları genellikle programlama araçları geliştirilirken kullanılır. Bu ad alanlarında bulunan çakışmaları önleme kritik değildir.  
   
-- **Temel ad alanları**  
+- **Çekirdek ad alanları**  
   
-     Temel ad alanlarını dahil tüm `System` ad alanları, uygulama modellerin ad alanları ve altyapı ad alanlarını hariç. Temel ad alanlarını içeren diğerleriyle birlikte, `System`, `System.IO`, `System.Xml`, ve `System.Net`.  
+     Çekirdek ad alanları, uygulama modellerinin ad alanları ve altyapı ad alanları hariç tüm `System` ad alanlarını içerir. Temel ad alanları, diğerleri, `System`, `System.IO`, `System.Xml`ve `System.Net`arasında yer alır.  
   
      **X DO NOT** verin çekirdek ad alanlarında herhangi bir türü ile çakışan adları türleri.  
   
-     Örneğin, hiçbir zaman kullanmayın `Stream` olarak bir tür adı. İle çakışmadığı <xref:System.IO.Stream?displayProperty=nameWithType>, çok kullanılan tür.  
+     Örneğin, hiçbir `Stream` tür adı olarak kullanmayın. Yaygın olarak kullanılan bir tür olan <xref:System.IO.Stream?displayProperty=nameWithType>ile çakışır.  
   
-- **Teknoloji ad grupları**  
+- **Teknoloji ad alanı grupları**  
   
-     Bu kategori, tüm ad alanları ile aynı ilk iki ad alanı düğümleri içerir `(<Company>.<Technology>*`), aşağıdakiler gibi `Microsoft.Build.Utilities` ve `Microsoft.Build.Tasks`. Türler için tek bir teknoloji ait birbiriyle çakışmadığından emin önemlidir.  
+     Bu kategori, `Microsoft.Build.Utilities` ve `Microsoft.Build.Tasks`gibi aynı ilk iki ad alanı düğümüne sahip tüm ad alanlarını içerir `(<Company>.<Technology>*`). Tek bir teknolojiye ait olan türlerin birbirleriyle çakışmaması önemlidir.  
   
      **X DO NOT** tek bir teknoloji içindeki diğer türleriyle çakışabilir tür adları atayın.  
   
      **X DO NOT** (teknoloji uygulama modeli ile kullanılmak üzere tasarlanmamıştır sürece) teknolojisi ad alanlarında türleri ve bir uygulama model ad arasındaki ad çakışmalarının türü tanıtır.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

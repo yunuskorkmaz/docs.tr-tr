@@ -1,6 +1,5 @@
 ---
-title: FROM yan tümcesi - C# başvurusu
-ms.custom: seodec18
+title: from yan tümcesi C# -başvuru
 ms.date: 07/20/2015
 f1_keywords:
 - from_CSharpKeyword
@@ -9,52 +8,52 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: d44c0b7a2f6617a01416ccc5bd1eb857b1f782da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 388b9c0245b112d619fc173f6019b3f7dbf59940
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661540"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715287"
 ---
 # <a name="from-clause-c-reference"></a>from tümcesi (C# Başvurusu)
 
-Sorgu ifadesi ile başlamalıdır bir `from` yan tümcesi. Ayrıca, bir sorgu ifadesi de şununla alt sorgularda içerebilir bir `from` yan tümcesi. `from` Yan tümcesi şunları belirtir:
+Sorgu ifadesinin bir `from` yan tümcesiyle başlaması gerekir. Ayrıca, bir sorgu ifadesi Ayrıca bir `from` yan tümcesiyle başlayan alt sorgular içerebilir. `from` yan tümcesi şunları belirtir:
 
-- Veri kaynağı üzerinde sorgu veya alt sorgu çalıştırılır.
+- Sorgu veya alt sorgunun çalıştırılacağı veri kaynağı.
 
-- Yerel bir *aralık değişkeni* , kaynak dizideki her öğe temsil eder.
+- Kaynak dizideki her öğeyi temsil eden yerel bir *Aralık değişkeni* .
 
-Veri kaynağı ve aralık değişkeni kesin türlü yapılır. Başvurulan veri kaynağı `from` yan tümcesi, bir tür olmalıdır <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, veya türetilmiş bir tür gibi <xref:System.Linq.IQueryable%601>.
+Hem Aralık değişkeni hem de veri kaynağı kesin olarak türdedir. `from` yan tümcesinde başvurulan veri kaynağı bir tür <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>veya <xref:System.Linq.IQueryable%601>gibi türetilmiş bir tür olmalıdır.
 
-Aşağıdaki örnekte, `numbers` veri kaynağıdır ve `num` aralık değişkeni. Her iki değişken olsa bile kesin olarak belirlenmiştir, Not [var](var.md) anahtar sözcüğü kullanılır.
+Aşağıdaki örnekte, `numbers` veri kaynağıdır ve `num` Aralık değişkenidir. Aynı [anahtar sözcüğünün kullanıldığı halde, her](var.md) iki değişkenin de kesin olarak yazıldığına göz önünde varın.
 
 [!code-csharp[cscsrefQueryKeywords#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/From.cs#1)]
 
 ## <a name="the-range-variable"></a>Aralık değişkeni
 
-Veri kaynağı uygular, derleyici Aralık değişkeninin türünü çıkarsar <xref:System.Collections.Generic.IEnumerable%601>. Örneğin, kaynak türü varsa `IEnumerable<Customer>`, aralık değişkeni olması sorguluyorsanız `Customer`. Açıkça türüdür ne zaman belirtmelisiniz. yalnızca bir kez kaynağı olan genel olmayan `IEnumerable` gibi yazın <xref:System.Collections.ArrayList>. Daha fazla bilgi için [nasıl yapılır: LINQ ile ArrayList sorgulama](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
+Derleyici, veri kaynağı <xref:System.Collections.Generic.IEnumerable%601>uyguladığı zaman Aralık değişkeninin türünü kullanır. Örneğin, kaynağın bir `IEnumerable<Customer>`türü varsa, Aralık değişkeni `Customer`olarak algılanır. Türü açıkça belirtmeniz gereken tek zaman, kaynak <xref:System.Collections.ArrayList>gibi genel olmayan bir `IEnumerable` türüdür. Daha fazla bilgi için bkz. [LINQ Ile ArrayList 'i sorgulama](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
 
-Önceki örnekte `num` türünde olmasını çıkarılan `int`. Aralık değişkeninin türü kesin olarak belirtilmiş olduğundan üzerinde yöntemleri çağırmak ya da diğer işlemleri kullanın. Örneğin, yazmak yerine `select num`, şunu yazabilirsiniz `select num.ToString()` dize yerine tamsayı bir dizisini döndürmek sorgu ifadesi neden olacak. Veya şunu yazabilirsiniz `select num + 10` 14 dizisini döndürmek için ifadeyi neden 11, 13, 12, 10. Daha fazla bilgi için [select yan tümcesi](select-clause.md).
+Önceki örnekte `num` `int`türü olarak algılanır. Aralık değişkeni kesin olarak yazıldığından, üzerinde Yöntemler çağırabilir veya diğer işlemlerde kullanabilirsiniz. Örneğin, `select num`yazmak yerine sorgu ifadesinin tamsayılar yerine dizeler dizisi döndürmesini sağlamak için `select num.ToString()` yazabilirsiniz. Ya da ifadenin 14, 11, 13, 12, 10 sırasını döndürmesini sağlamak için `select num + 10` yazabilirsiniz. Daha fazla bilgi için bkz. [Select yan tümcesi](select-clause.md).
 
-Bir yineleme değişkeni aralık değişkeni benzer bir [foreach](foreach-in.md) çok önemli bir fark dışında deyimi: bir aralık değişkenine asla gerçekten kaynaktan gelen verileri depolar. Yalnızca bir sorgu çalıştırıldığında ne olacağını açıklamak sorgu sağlar söz dizimsel kolaylık bir özelliktir. Daha fazla bilgi için [(C#) LINQ sorgularına giriş](../../programming-guide/concepts/linq/introduction-to-linq-queries.md).
+Aralık değişkeni, çok önemli bir fark dışında bir [foreach](foreach-in.md) deyimindeki bir yineleme değişkeni gibidir: bir Aralık değişkeni aslında verileri kaynaktan depolamaz. Sorgu yürütüldüğünde neler olacağını açıklamaya olanak sağlayan, yalnızca sözdizimsel bir kolaylık vardır. Daha fazla bilgi için bkz. [LINQ Sorgularına Giriş (C#)](../../programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
-## <a name="compound-from-clauses"></a>Bileşik yan tümcelerinden
+## <a name="compound-from-clauses"></a>Yan tümcelerden bileşik
 
-Bazı durumlarda, kaynak dizideki her öğe kendisi ya da bir dizi veya bir dizisini içerir. Örneğin, veri kaynağınızın olabilir bir `IEnumerable<Student>` burada dizideki her Öğrenci nesne içeren test puanlarını listesi. Her iç listesine erişmek için `Student` öğesi bileşik kullanabilirsiniz `from` yan tümceleri. Kullanarak içe gibi tekniktir [foreach](foreach-in.md) deyimleri. Ekleyebileceğiniz [burada](partial-method.md) veya [orderby](orderby-clause.md) ya da yan tümceleri `from` sonuçları filtrelemek için yan tümcesi. Aşağıdaki örnek, bir dizi gösterir `Student` her biri içeren bir iç nesneler `List` tamsayılar temsil eden test puanlarını. İç listesine erişmek için bileşik kullanın `from` yan tümcesi. İkisi arasındaki yan tümce ekleyebilirsiniz `from` yan tümceleri gerekirse.
+Bazı durumlarda, kaynak dizideki her öğe bir sıra ya da bir sıra içerebilir. Örneğin, veri kaynağınız dizideki her öğrenci nesnesinin bir test puanları listesi içerdiği bir `IEnumerable<Student>` olabilir. Her `Student` öğesi içindeki iç listeye erişmek için bileşik `from` yan tümceleri kullanabilirsiniz. Tekniği iç içe geçmiş [foreach](foreach-in.md) deyimlerini kullanma gibidir. Sonuçları filtrelemek için `from` yan tümcesine [WHERE](partial-method.md) veya [OrderBy](orderby-clause.md) yan tümceleri ekleyebilirsiniz. Aşağıdaki örnek, her biri test puanlarını temsil eden tamsayıların iç `List` içeren `Student` nesnelerinin bir dizisini gösterir. İç listeye erişmek için bileşik `from` yan tümcesini kullanın. Gerekirse iki `from` yan tümce arasına yan tümceler ekleyebilirsiniz.
 
 [!code-csharp[cscsrefQueryKeywords#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/From.cs#2)]
 
-## <a name="using-multiple-from-clauses-to-perform-joins"></a>Birleştirmeler gerçekleştirme için birden çok yan tümceleri'den kullanma
+## <a name="using-multiple-from-clauses-to-perform-joins"></a>Birleştirme gerçekleştirmek için birden çok from yan tümcesini kullanma
 
-Bileşik `from` yan tümcesi, tek bir veri kaynağındaki iç koleksiyonlara erişmek için kullanılır. Ancak, bir sorgu birden çok de içerebilir `from` yan tümceleri bağımsız veri kaynaklarından ek sorgular oluşturun. Belirli türlerini kullanarak mümkün olmayan birleştirme işlemleri gerçekleştirmek Bu teknik sayesinde [JOIN yan tümcesi](join-clause.md).
+Tek bir veri kaynağındaki iç koleksiyonlara erişmek için bileşik bir `from` yan tümcesi kullanılır. Ancak, bir sorgu bağımsız veri kaynaklarından ek sorgular üreten çoklu `from` yan tümceleri de içerebilir. Bu teknik, [JOIN yan tümcesini](join-clause.md)kullanarak mümkün olmayan belirli tür ekleme işlemlerini gerçekleştirmenize olanak tanır.
 
-Aşağıdaki örnekte gösterildiği nasıl iki `from` yan tümceleri, iki veri kaynaklarının tam çapraz birleştirme oluşturmak için kullanılabilir.
+Aşağıdaki örnek iki `from` yan tümcelerinin, iki veri kaynağından oluşan bir çapraz birleştirmeyi oluşturmak için nasıl kullanılabileceğini gösterir.
 
 [!code-csharp[cscsrefQueryKeywords#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/From.cs#3)]
 
-Birden çok kullanan birleştirme işlemleri hakkında daha fazla bilgi için `from` yan tümcesi bkz [sol dış birleştirmeler gerçekleştirme](../../linq/perform-left-outer-joins.md).
+Çoklu `from` yan tümceleri kullanan birleştirme işlemleri hakkında daha fazla bilgi için bkz. [sol dış birleştirmeler gerçekleştirme](../../linq/perform-left-outer-joins.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Query Keywords (LINQ)](query-keywords.md)
+- [Sorgu anahtar sözcükleri (LINQ)](query-keywords.md)
 - [Dil ile Tümleşik Sorgu (LINQ)](../../linq/index.md)

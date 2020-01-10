@@ -2,18 +2,18 @@
 title: 'Nasıl yapılır: CSV dosyalarından XML oluşturma'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 2e2d76fdae8473e47e397f2559f3051c47a180fd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 79b609c3a706db4c8b4c082fbeaf143632a75033
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344602"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636828"
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Nasıl yapılır: CSV dosyalarından XML oluşturma (Visual Basic)
-Bu örnek, bir virgülle ayrılmış değer (CSV) dosyasından bir XML dosyası oluşturmak için [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nasıl kullanacağınızı gösterir.  
+Bu örnek, bir virgülle ayrılmış değer (CSV) dosyasından bir XML dosyası oluşturmak için dil ile tümleşik sorgu (LINQ) ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kullanmayı gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, dizeler dizisinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgusu gerçekleştirir.  
+ Aşağıdaki kod, bir dize dizisi üzerinde bir LINQ sorgusu gerçekleştirir.  
   
 ```vb  
       ' Create the text file.  

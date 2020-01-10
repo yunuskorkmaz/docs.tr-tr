@@ -6,19 +6,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d26872fb97551e5392eb3f6a1a0825728046553
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ecbed7e57628b4e140e0f4dbcd600643617b075a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965886"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710901"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Bir XML Belgesinde XmlNodeChangedEventArgs Kullanarak Olay İşleme
 **XmlNodeChangedEventArgs** , olayları Işlemek için **XmlDocument** nesnesinde kayıtlı olan olay işleyicilerine geçirilen bağımsız değişkenleri kapsüller. Olaylar ve tetiklendiklerinde bir açıklama aşağıdaki tabloda verilmiştir.  
   
-|Olay|Belirtildiği|  
+|Olay|Tetiklenen|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|Geçerli belgeye ait bir düğüm başka bir düğüme Eklenme konusunda olduğunda.|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|Geçerli belgeye ait bir düğüm başka bir düğüme eklendiyse.|  

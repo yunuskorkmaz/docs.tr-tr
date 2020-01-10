@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 8b57affa05c77d8ed20bfead7de767a8dd994241
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 35e02d1ad4409e754c2466f7d0ae7e68214772e6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348593"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716700"
 ---
 # <a name="-reference-visual-basic"></a>-başvuru (Visual Basic)
 Derleyicinin, belirtilen derlemelerde bulunan tür bilgilerini şu anda derlediğiniz projede kullanılabilir hale getirmesine neden olur.  
@@ -31,7 +31,7 @@ veya
 -r:fileList  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Arguments  
   
 |Terim|Tanım|  
 |---|---|  
@@ -52,7 +52,7 @@ veya
   
  Yaygın olarak kullanılan .NET Framework derlemelerine başvuran Vbc. rsp yanıt dosyası varsayılan olarak kullanılır. Derleyicinin Vbc. rsp kullanmasını istemiyorsanız `-noconfig` kullanın.  
   
- `-reference` kısa biçimi `/r`.  
+ `-reference` kısa biçimi `-r`.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki komut, `Metad1.dll` ve `Metad2.dll` `Out.exe`oluşturmak için kaynak dosya `Input.vb` ve başvuru derlemelerini derler.  

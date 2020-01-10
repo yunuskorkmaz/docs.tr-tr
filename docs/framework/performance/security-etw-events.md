@@ -5,14 +5,12 @@ helpviewer_keywords:
 - security events [.NET Framework]
 - ETW, security events (CLR)
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b1dad042595608a805f978673858acaa5c01130f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c443bda8cdc2c6b32760e9dcba8b81a29d81660b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974875"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715935"
 ---
 # <a name="security-etw-events"></a>Güvenlik ETW Olayları
 
@@ -34,7 +32,7 @@ Güvenlik olayları, tanımlayıcı ad doğrulama ve Authenticode doğrulaması 
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |Doğrulamaları ıationflags|Win: UInt32|Doğrulama bayrakları.|  
 |ErrorCode|Win: UInt32|HResult hata kodu.|  
@@ -57,7 +55,7 @@ Güvenlik olayları, tanımlayıcı ad doğrulama ve Authenticode doğrulaması 
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |Doğrulamaları ıationflags|Win: UInt32|Doğrulama bayrakları.|  
 |ErrorCode|Win: UInt32|HResult hata kodu.|  

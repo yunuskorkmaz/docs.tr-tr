@@ -1,15 +1,13 @@
 ---
 title: DotNet-izleme aracı-.NET Core
 description: DotNet-Trace komut satırı aracını yükleme ve kullanma.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 11/21/2019
-ms.openlocfilehash: 07eaec843e27f5d291b6d18fab53c43051794626
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 64c931db5a18659707e832aaca910cfbbd6823c0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428885"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714430"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>DotNet-izleme performansı Analizi yardımcı programı
 
@@ -110,7 +108,7 @@ Alternatif izleme çözümleme araçlarıyla kullanılmak üzere `nettrace` izle
 dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 ```
 
-### <a name="arguments"></a>Bağımsız Değişkenler
+### <a name="arguments"></a>Arguments
 
 - **`<input-filename>`**
 
@@ -210,7 +208,7 @@ Yukarıdaki komut, çalışma zamanı olaylarını ve yönetilen yığın profil
 
 .NET Core çalışma zamanı, aşağıdaki .NET sağlayıcılarını destekler. .NET Core hem `Event Tracing for Windows (ETW)` hem de `EventPipe` izlemelerini etkinleştirmek için aynı anahtar kelimeleri kullanır.
 
-| Sağlayıcı adı                            | Bilgiler |
+| Sağlayıcı adı                            | Bilgisi |
 |------------------------------------------|-------------|
 | `Microsoft-Windows-DotNETRuntime`        | [Çalışma zamanı sağlayıcısı](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[CLR çalışma zamanı anahtar sözcükleri](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
 | `Microsoft-Windows-DotNETRuntimeRundown` | [Özet sağlayıcı](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[CLR Özeti anahtar sözcükleri](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |

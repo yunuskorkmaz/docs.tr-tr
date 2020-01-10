@@ -1,17 +1,16 @@
 ---
 title: Belge açıklamaları için önerilen Etiketler- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: d17ff0b78d8ae40916447e8e12da7948a21e5717
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 15a183d72a7d3e47f99227cea2cf870ad2f98d18
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523360"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696538"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Belge Açıklamaları için Önerilen Etiketler (C# Programlama Kılavuzu)
 C# Derleyici kodunuzda belge açıklamalarını işler ve adı **/doc** komut satırı SEÇENEĞINDE belirttiğiniz bir dosyada xml olarak biçimlendirir. Derleyici tarafından oluşturulan dosyayı temel alan son belgeleri oluşturmak için özel bir araç oluşturabilir veya [Docfx](https://dotnet.github.io/docfx/) veya [sandrole](https://github.com/EWSoftware/SHFB)gibi bir araç kullanabilirsiniz.  
@@ -27,12 +26,12 @@ C# Derleyici kodunuzda belge açıklamalarını işler ve adı **/doc** komut sa
   
 ||||  
 |---|---|---|  
-|[\<c >](./code-inline.md)|[\<para >](./para.md)|[\<see >](./see.md) *|  
-|[\<code >](./code.md)|[\<param >](./param.md) *|[\<seealso >](./seealso.md) *|  
-|[\<example >](./example.md)|[\<paramref >](./paramref.md)|[\<summary>](./summary.md)|  
-|[\<exception >](./exception.md) *|[\<permission >](./permission.md) *|[\<typeparam >](./typeparam.md) *|  
-|[\<include >](./include.md) *|[\<remarks >](./remarks.md)|[\<typeparamref >](./typeparamref.md)|  
-|[\<list >](./list.md)|[\<returns>](./returns.md)|[\<value>](./value.md)|  
+|[\<c >](./code-inline.md)|[\<paragraf >](./para.md)|[\<bkz. >](./see.md)*|  
+|[\<kodu >](./code.md)|[\<param >](./param.md)*|[\<seede >](./seealso.md)*|  
+|[\<örnek >](./example.md)|[\<paramref >](./paramref.md)|[\<summary>](./summary.md)|  
+|[\<özel durum >](./exception.md)*|[\<izin >](./permission.md)*|[\<typeparam >](./typeparam.md)*|  
+|[\<> ekleme](./include.md)*|[\<açıklamalar >](./remarks.md)|[\<typeparamref >](./typeparamref.md)|  
+|[\<listesi >](./list.md)|[\<returns>](./returns.md)|[\<value>](./value.md)|  
   
  (* derleyicinin söz dizimini doğruladığını gösterir.)  
   

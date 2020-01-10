@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 8dd57a43f814d7e41ec74af3eeb6d797fef41c9c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 393e3bd24c4bc8b89064e01e1048b24254f5f83b
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418626"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635957"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ ile Veri Dönüştürmeler (C#)
-[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] yalnızca verileri alma hakkında değildir. Ayrıca, verileri dönüştürmek için güçlü bir araçtır. Bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgusu kullanarak, giriş olarak bir kaynak sırası kullanabilir ve yeni bir çıkış sırası oluşturmak için bunu birçok şekilde değiştirebilirsiniz. Sıralamayı sıralama ve gruplama yoluyla öğeleri değiştirmeden değiştirebilirsiniz. Ancak, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgularının en güçlü özelliği yeni türler oluşturma olanağıdır. Bu, [Select](../../../language-reference/keywords/select-clause.md) yan tümcesinde gerçekleştirilir. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  
+Dil ile tümleşik sorgu (LINQ) yalnızca veri alma hakkında değildir. Ayrıca, verileri dönüştürmek için güçlü bir araçtır. Bir LINQ sorgusu kullanarak, giriş olarak bir kaynak sırası kullanabilir ve yeni bir çıkış sırası oluşturmak için bunu birçok şekilde değiştirebilirsiniz. Sıralamayı sıralama ve gruplama yoluyla öğeleri değiştirmeden değiştirebilirsiniz. Ancak, LINQ sorgularının en güçlü özelliği de yeni türler oluşturma olanağıdır. Bu, [Select](../../../language-reference/keywords/select-clause.md) yan tümcesinde gerçekleştirilir. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  
   
 - Birden çok giriş dizisini yeni bir türe sahip tek bir çıkış dizisinde birleştirin.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "73418626"
  Bunlar yalnızca birkaç örnektir. Tabii ki, bu dönüşümler aynı sorgudaki çeşitli şekillerde birleştirilebilir. Ayrıca, bir sorgunun çıkış sırası yeni bir sorgu için giriş sırası olarak kullanılabilir.  
   
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>Birden Çok Girdiyi Bir Çıkış Sırasına Katma  
- Birden fazla giriş dizisinin öğelerini içeren bir çıkış sırası oluşturmak için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] bir sorgu kullanabilirsiniz. Aşağıdaki örnek, iki bellek içi veri yapısının nasıl birleştirileceğini gösterir, ancak aynı ilkeler XML veya SQL veya veri kümesi kaynaklarından verileri birleştirmek için uygulanabilir. Aşağıdaki iki sınıf türünü varsayın:  
+ Birden fazla giriş dizisinin öğelerini içeren bir çıkış sırası oluşturmak için bir LINQ sorgusu kullanabilirsiniz. Aşağıdaki örnek, iki bellek içi veri yapısının nasıl birleştirileceğini gösterir, ancak aynı ilkeler XML veya SQL veya veri kümesi kaynaklarından verileri birleştirmek için uygulanabilir. Aşağıdaki iki sınıf türünü varsayın:  
   
  [!code-csharp[CsLINQGettingStarted#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#7)]  
   
@@ -61,7 +61,7 @@ ms.locfileid: "73418626"
  Daha fazla bilgi için bkz. [nesne ve koleksiyon başlatıcıları](../../classes-and-structs/object-and-collection-initializers.md) ve [anonim türler](../../classes-and-structs/anonymous-types.md).  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>Bellek İçi Nesneleri XML'e dönüştürme  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları, bellek içi veri yapıları, SQL veritabanları, ADO.NET veri kümeleri ve XML akışları veya belgeler arasında veri dönüştürmeyi kolaylaştırır. Aşağıdaki örnek, bellek içi veri yapısındaki nesneleri XML öğelerine dönüştürür.  
+ LINQ sorguları, bellek içi veri yapıları, SQL veritabanları, ADO.NET veri kümeleri ve XML akışları veya belgeler arasında veri dönüştürmeyi kolaylaştırır. Aşağıdaki örnek, bellek içi veri yapısındaki nesneleri XML öğelerine dönüştürür.  
   
  [!code-csharp[CsLINQGettingStarted#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#9)]  
   

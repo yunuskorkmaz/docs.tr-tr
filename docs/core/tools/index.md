@@ -2,13 +2,12 @@
 title: .NET Core komut satırı arabirimi (CLı) araçları
 description: .NET Core komut satırı arabirimi (CLı) araçları ve özelliklerine genel bakış.
 ms.date: 08/14/2017
-ms.custom: seodec18
-ms.openlocfilehash: 4ff5cfd6c5a70c92387911ab87ddea5cee80275e
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: b3bffb47ff973bd0da90e3f943e817756e563138
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117393"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714146"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core komut satırı arabirimi (CLı) araçları
 
@@ -36,12 +35,12 @@ Aşağıdaki komutlar varsayılan olarak yüklenir:
 - [new](dotnet-new.md)
 - [restore](dotnet-restore.md)
 - [derlemeyi](dotnet-build.md)
-- [yayınlamanız](dotnet-publish.md)
+- [publish](dotnet-publish.md)
 - [çalışmaz](dotnet-run.md)
 - [sınamanız](dotnet-test.md)
 - [VSTest](dotnet-vstest.md)
 - [pack](dotnet-pack.md)
-- [geçiremezsiniz](dotnet-migrate.md)
+- [geçirme](dotnet-migrate.md)
 - [temizlenemedi](dotnet-clean.md)
 - [sln](dotnet-sln.md)
 - [Yardım](dotnet-help.md)
@@ -70,12 +69,12 @@ Aşağıdaki komutlar varsayılan olarak yüklenir:
 - [new](dotnet-new.md)
 - [restore](dotnet-restore.md)
 - [derlemeyi](dotnet-build.md)
-- [yayınlamanız](dotnet-publish.md)
+- [publish](dotnet-publish.md)
 - [çalışmaz](dotnet-run.md)
 - [sınamanız](dotnet-test.md)
 - [VSTest](dotnet-vstest.md)
 - [pack](dotnet-pack.md)
-- [geçiremezsiniz](dotnet-migrate.md)
+- [geçirme](dotnet-migrate.md)
 - [temizlenemedi](dotnet-clean.md)
 - [sln](dotnet-sln.md)
 
@@ -101,7 +100,7 @@ CLı, projeleriniz için ek araçlar belirtmenize olanak tanıyan bir genişleti
 
 ## <a name="command-structure"></a>Komut yapısı
 
-CLı komut yapısı, [sürücüden ("DotNet")](#driver), [komuttan](#command)ve muhtemelen komut [bağımsız değişkenlerinden](#arguments) ve [seçeneklerden](#options)oluşur. Bu kalıbı, yeni bir konsol uygulaması oluşturma ve bunu komut satırından çalıştırma gibi, *my_app*adlı bir dizinden yürütüldüğünde gösterildiği gıbı birçok CLI işlemi içinde görürsünüz:
+CLı komut yapısı, [sürücüden ("DotNet")](#driver), [komuttan](#command)ve muhtemelen komut [bağımsız değişkenlerinden](#arguments) ve [seçeneklerden](#options)oluşur. Bu kalıbı, yeni bir konsol uygulaması oluşturma ve aşağıdaki komutlar *my_app*adlı bir dizinden yürütüldüğünde gösterildiği gibi komut satırından çalıştırma gıbı birçok CLI işlemi içinde görürsünüz:
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
@@ -126,9 +125,9 @@ dotnet /build_output/my_app.dll
 
 Sürücü [DotNet](dotnet.md) olarak adlandırılır ve [çerçeveye bağlı bir uygulama](../deploying/index.md) çalıştırarak ya da bir komut yürüten iki sorumluluklara sahiptir. 
 
-Çerçeveye bağımlı bir uygulama çalıştırmak için, uygulamayı sürücüden sonra belirtin, örneğin, `dotnet /path/to/my_app.dll`. Komutu, uygulamanın DLL 'sinin bulunduğu klasörden yürütürken yalnızca yürütün `dotnet my_app.dll`. .NET Core çalışma zamanının belirli bir sürümünü kullanmak istiyorsanız, `--fx-version <VERSION>` seçeneğini kullanın ( [DotNet komut](dotnet.md) başvurusuna bakın).
+Çerçeveye bağımlı bir uygulama çalıştırmak için, uygulamayı sürücüden sonra belirtin, örneğin, `dotnet /path/to/my_app.dll`. Uygulamanın DLL 'sinin bulunduğu klasörden komutu yürütürken `dotnet my_app.dll`yürütmek yeterlidir. .NET Core çalışma zamanının belirli bir sürümünü kullanmak istiyorsanız, `--fx-version <VERSION>` seçeneğini kullanın ( [DotNet komut](dotnet.md) başvurusuna bakın).
 
-Sürücüye bir komut sağlarsanız, `dotnet.exe` CLI komutu yürütme işlemini başlatır. Örneğin:
+Sürücüye bir komut sağlarsanız, `dotnet.exe` CLı komutu yürütme işlemini başlatır. Örneğin:
 
 ```dotnetcli
 dotnet build
@@ -138,19 +137,19 @@ dotnet build
 
 ### <a name="command"></a>Komut
 
-Komut bir eylem gerçekleştirir. Örneğin, `dotnet build` derleme kodu. `dotnet publish`kodu yayımlar. Komutlar, bir `dotnet {command}` kural kullanılarak konsol uygulaması olarak uygulanır.
+Komut bir eylem gerçekleştirir. Örneğin, `dotnet build` derleme kodu. `dotnet publish` kodu yayınlar. Komutlar bir `dotnet {command}` kuralı kullanılarak konsol uygulaması olarak uygulanır.
 
 ### <a name="arguments"></a>Arguments
 
-Komut satırında geçirdiğiniz bağımsız değişkenler çağrılan komutun bağımsız değişkenlerdir. Örneğin `dotnet publish my_app.csproj` `publish` , çalıştırdığınızda bağımsız değişkeni yayımlanacak projeyi belirtir ve komutuna geçirilir. `my_app.csproj`
+Komut satırında geçirdiğiniz bağımsız değişkenler çağrılan komutun bağımsız değişkenlerdir. Örneğin, `dotnet publish my_app.csproj`yürüttüğünüzde, `my_app.csproj` bağımsız değişkeni yayımlanacak projeyi belirtir ve `publish` komutuna geçirilir.
 
 ### <a name="options"></a>Seçenekler
 
-Komut satırında geçirdiğiniz seçenekler çağrılan komuta yönelik seçeneklerdir. Örneğin `dotnet publish --output /build_output` `publish` , çalıştırdığınızda seçeneği ve değeri komutuna geçirilir. `--output`
+Komut satırında geçirdiğiniz seçenekler çağrılan komuta yönelik seçeneklerdir. Örneğin `dotnet publish --output /build_output`yürüttüğünüzde, `--output` seçeneği ve değeri `publish` komutuna geçirilir.
 
 ## <a name="migration-from-projectjson"></a>Project. JSON 'dan geçiş
 
-*Project. JSON*tabanlı projeler oluşturmak için Preview 2 araçları 'nı kullandıysanız, sürüm araçları ile kullanmak üzere projenizi MSBuild/ *. csproj* 'a geçirme hakkında bilgi edinmek için [DotNet geçiş](dotnet-migrate.md) konusuna başvurun. Preview 2 araçları 'nın yayınlanmasından önce oluşturulan .NET Core projeleri için, [DNX 'ten .NET Core CLI (Project. JSON) ' den geçiş yapma bölümündeki kılavuzdan](../migration/from-dnx.md) sonra projeyi el ile güncelleştirin ve ardından projelerinizi kullanın `dotnet migrate` veya doğrudan yükseltin.
+*Project. JSON*tabanlı projeler oluşturmak için Preview 2 araçları 'nı kullandıysanız, sürüm araçları ile kullanmak üzere projenizi MSBuild/ *. csproj* 'a geçirme hakkında bilgi edinmek için [DotNet geçiş](dotnet-migrate.md) konusuna başvurun. Preview 2 araçları 'nın yayınlanmasından önce oluşturulan .NET Core projeleri için, [DNX 'ten .NET Core CLI (Project. JSON) ' den geçiş yapma bölümündeki kılavuzdan](../migration/from-dnx.md) sonra projeyi el ile güncelleştirin ve `dotnet migrate` kullanın ya da projelerinizi doğrudan yükseltin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

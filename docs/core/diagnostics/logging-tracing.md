@@ -1,15 +1,13 @@
 ---
 title: Günlüğe kaydetme ve izleme-.NET Core
 description: .NET Core günlüğe kaydetme ve izlemeye giriş.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 46e64a7f60b88c26ceef9ac817be885bfa180c8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926358"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714417"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core günlüğe kaydetme ve izleme
 
@@ -29,7 +27,7 @@ Bu basit teknik, her ne kadar güçlü bir işlemdir. Bir hata ayıklayıcının
 
 ### <a name="print-style-apis"></a>Yazdırma stili API 'Leri
 
-<xref:System.Console?displayProperty=nameWithType>, Ve <xref:System.Diagnostics.Trace?displayProperty=nameWithType> sınıflarınınherbiri,günlüğekaydetmeiçinuygun<xref:System.Diagnostics.Debug?displayProperty=nameWithType> olan benzer yazdırma stili API 'leri sağlar.
+<xref:System.Console?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace?displayProperty=nameWithType>ve <xref:System.Diagnostics.Debug?displayProperty=nameWithType> sınıflarının her biri günlüğe kaydetmeye uygun benzer yazdırma stili API 'Leri sağlar.
 
 Hangi yazdırma stili API 'sinin kullanılması tercih edilir. Temel farklılıklar şunlardır:
 
@@ -38,13 +36,13 @@ Hangi yazdırma stili API 'sinin kullanılması tercih edilir. Temel farklılık
   - Müşterinizin yayında görmeniz gerekebilecek bilgiler için faydalıdır.
   - En basit yaklaşım olduğundan, genellikle geçici geçici hata ayıklama için kullanılır. Bu hata ayıklama kodu genellikle kaynak denetimine hiçbir zaman iade edilmedi.
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
-  - Yalnızca tanımlı olduğunda `TRACE` etkindir.
-  - Varsayılan olarak, <xref:System.Diagnostics.Trace.Listeners> <xref:System.Diagnostics.DefaultTraceListener>ekli öğesine yazar.
+  - Yalnızca `TRACE` tanımlandığında etkinleştirilir.
+  - Eklenen <xref:System.Diagnostics.Trace.Listeners>, varsayılan olarak <xref:System.Diagnostics.DefaultTraceListener>yazar.
   - Çoğu derlemelerde etkinleştirilecek günlükleri oluştururken bu API 'YI kullanın.
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
-  - Yalnızca tanımlı olduğunda `DEBUG` etkindir.
+  - Yalnızca `DEBUG` tanımlandığında etkinleştirilir.
   - Ekli bir hata ayıklayıcıya yazar.
-  - Ayarlandıysa ,`COMPlus_DebugWriteToStdErr` stderr 'e `*nix` yazma işlemleri yapılır.
+  - `COMPlus_DebugWriteToStdErr` ayarlandıysa `*nix` stderr 'e yazar.
   - Yalnızca hata ayıklama yapılarında etkinleştirilecek günlükleri oluştururken bu API 'YI kullanın.
 
 ### <a name="logging-events"></a>Olayları günlüğe kaydetme
@@ -64,7 +62,7 @@ Aşağıdaki API 'Ler daha fazla olay yönelimlidir. Basit dizeleri günlüğe k
 - <xref:System.Diagnostics.DiagnosticSource?displayProperty=nameWithType>
   - .NET Core 'a ve .NET Framework için bir [NuGet paketi](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource) olarak eklenmiştir.
   - Seri hale getirilebilir olmayan nesnelerin işlem içi izlenmesini sağlar.
-  - Günlüğe kaydedilen nesnelerin seçili alanlarının bir <xref:System.Diagnostics.Tracing.EventSource>öğesine yazılmasına izin veren bir köprü içerir.
+  - Günlüğe kaydedilen nesnelerin seçili alanlarının bir <xref:System.Diagnostics.Tracing.EventSource>yazılmasına izin veren bir köprü içerir.
 
 - <xref:System.Diagnostics.Activity?displayProperty=nameWithType>
   - Belirli bir etkinlik veya işlemden kaynaklanan günlük iletilerini belirlemek için kesin bir yol sağlar. Bu nesne, farklı hizmetlerde günlükleri ilişkilendirmek için kullanılabilir.
@@ -78,26 +76,26 @@ Aşağıdaki API 'Ler daha fazla olay yönelimlidir. Basit dizeleri günlüğe k
 
 Düşük düzey API 'Ler, günlük gereksinimleriniz için doğru seçim olmayabilir. Bir günlük çerçevesini düşünmek isteyebilirsiniz.
 
-<xref:Microsoft.Extensions.Logging.ILogger> Arabirim, günlükçülerin bağımlılık ekleme yoluyla eklenebileceği ortak bir günlüğe kaydetme arabirimi oluşturmak için kullanılır.
+<xref:Microsoft.Extensions.Logging.ILogger> arabirimi, günlükçülerin bağımlılık ekleme yoluyla eklenebileceği ortak bir günlüğe kaydetme arabirimi oluşturmak için kullanılır.
 
-Örneğin, uygulamanız `ASP.NET` için en iyi seçimi yapmanıza olanak tanımak için yerleşik ve üçüncü taraf çerçeveler için destek sunar:
+Örneğin, uygulamanız için en iyi seçimi yapmanıza olanak tanımak için `ASP.NET` yerleşik ve üçüncü taraf çerçeveler için destek sunar:
 
 - [ASP.NET yerleşik günlük sağlayıcıları](/aspnet/core/fundamentals/logging/#built-in-logging-providers)
 - [ASP.NET üçüncü taraf günlüğü sağlayıcıları](/aspnet/core/fundamentals/logging/#third-party-logging-providers)
 
 ## <a name="logging-related-references"></a>Günlüğe kaydetme ilgili başvurular
 
-- [Nasıl yapılır: Izleme ve hata ayıklama ile koşullu derleme](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 
-- [Nasıl yapılır: Uygulama koduna Izleme deyimleri ekleme](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 
 - [ASP.net günlüğü](/aspnet/core/fundamentals/logging) , desteklediği günlük tekniklerine genel bir bakış sağlar.
 
 - Dize ilişkilendirme, günlük kodu yazmayı kolaylaştırabilir. [ C# ](../../csharp/language-reference/tokens/interpolated.md)
 
-- Özelliği <xref:System.Exception.Message?displayProperty=nameWithType> , özel durumları günlüğe kaydetmek için yararlıdır.
+- <xref:System.Exception.Message?displayProperty=nameWithType> özelliği, özel durumları günlüğe kaydetmek için yararlıdır.
 
-- Bu <xref:System.Diagnostics.StackTrace?displayProperty=nameWithType> sınıf, günlüklerinizi yığın bilgileri sağlamak için yararlı olabilir.
+- <xref:System.Diagnostics.StackTrace?displayProperty=nameWithType> sınıfı günlüklerinizi yığın bilgileri sağlamak için yararlı olabilir.
 
 ## <a name="performance-considerations"></a>Performans değerlendirmeleri
 

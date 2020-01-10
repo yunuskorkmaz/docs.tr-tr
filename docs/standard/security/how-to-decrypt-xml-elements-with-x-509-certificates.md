@@ -13,48 +13,46 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4d033911151ef5cdf8143ad9d64f9c21897fc975
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 46fbefbf7a427ec0d60a34ecc2166f8499d08575
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654104"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708894"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Nasıl yapılır: XML Öğelerinin Şifresini X.509 Sertifikalarıyla Çözme
-Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> şifreleme ve şifre çözme bir XML belgesi içindeki bir öğe için ad alanı.  XML şifreleme, exchange veya bir kolayca okunan verilerin hakkında endişelenmeden şifrelenmiş XML verileri depolamak için standart bir yoludur.  XML şifreleme konumundaki XML şifreleme standardı hakkında daha fazla bilgi için World Wide Web Consortium (W3C) belirtimi bakın <https://www.w3.org/TR/xmldsig-core/>.  
+Bir XML belgesi içindeki bir öğeyi şifrelemek ve şifrelerini çözmek için <xref:System.Security.Cryptography.Xml> ad alanındaki sınıfları kullanabilirsiniz.  XML şifrelemesi, kolayca okunan veriler hakkında endişelenmeden şifrelenmiş XML verilerini alışverişi veya depolamayı standart bir yoludur.  XML şifreleme standardı hakkında daha fazla bilgi için, <https://www.w3.org/TR/xmldsig-core/>konumundaki XML şifrelemesi için World Wide Web Konsorsiyumu (W3C) belirtimine bakın.  
   
- Bu örnekte açıklanan yöntemleri kullanılarak şifrelenmiş bir XML öğesi şifresini çözer: [Nasıl yapılır: XML öğelerini X.509 sertifikalarıyla şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md).  Bulduğu bir <`EncryptedData`> öğesi, öğenin şifresini çözer ve daha sonra öğenin özgün düz metin XML öğesi ile değiştirir.  
+ Bu örnek,: [nasıl yapılır: XML öğelerini X. 509.440 sertifikalarıyla şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)bölümünde açıklanan yöntemler kullanılarak ŞIFRELENMIŞ bir XML öğesinin şifresini çözer.  Bir <`EncryptedData`> öğesi bulur, öğenin şifresini çözer ve sonra öğeyi özgün düz metin XML öğesiyle değiştirir.  
   
- Kod örneği, bu yordamı geçerli kullanıcı hesabı yerel sertifika deposundan bir X.509 sertifikası kullanarak bir XML öğesinin şifresini çözer.  Örnekte <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> otomatik olarak X.509 sertifika almak ve bir oturum anahtarı depolanan şifresini çözmek için gereken yöntemini <`EncryptedKey`> öğesi <`EncryptedData`> öğesi.  <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> Yöntemi ardından otomatik olarak oturum anahtarı XML öğesinin şifresini çözmek için kullanır.  
+ Bu yordamdaki kod örneği, geçerli kullanıcı hesabının yerel sertifika deposundan bir X. 509.440 sertifikası kullanarak bir XML öğesinin şifresini çözer.  Örnek, X. 509.952 sertifikasını otomatik olarak almak ve <`EncryptedData`> öğesinin <`EncryptedKey`> öğesinde depolanan bir oturum anahtarının şifresini çözmek için <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> yöntemini kullanır.  <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> yöntemi, XML öğesinin şifresini çözmek için oturum anahtarını otomatik olarak kullanır.  
   
- Bu örnek, birden çok uygulama şifrelenmiş veri paylaşımı gereken yere veya uygulamanın çalıştığı zamanları arasında şifrelenmiş verileri kaydetmek gereken yere durumlar için uygundur.  
+ Bu örnek, birden fazla uygulamanın şifrelenmiş verileri paylaşması gereken ya da bir uygulamanın, kaç kez şifrelenmiş verileri çalıştığı zamanlar arasında kaydetmesi gereken durumlar için uygundur.  
   
 ### <a name="to-decrypt-an-xml-element-with-an-x509-certificate"></a>X.509 sertifikası olan bir XML öğesinin şifresini çözmek için  
   
-1. Oluşturma bir <xref:System.Xml.XmlDocument> diskten bir XML dosyası yüklenirken nesne.  <xref:System.Xml.XmlDocument> Nesne şifresini çözmek için XML öğesi içerir.  
+1. Diskten bir XML dosyası yükleyerek <xref:System.Xml.XmlDocument> nesnesi oluşturun.  <xref:System.Xml.XmlDocument> nesnesi, şifresinin çözülmesi için XML öğesini içerir.  
   
      [!code-csharp[HowToDecryptXMLElementX509#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementX509/cs/sample.cs#2)]
      [!code-vb[HowToDecryptXMLElementX509#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementX509/vb/sample.vb#2)]  
   
-2. Yeni bir <xref:System.Security.Cryptography.Xml.EncryptedXml> geçirerek nesne <xref:System.Xml.XmlDocument> oluşturucusuna.  
+2. <xref:System.Xml.XmlDocument> nesnesini oluşturucuya geçirerek yeni bir <xref:System.Security.Cryptography.Xml.EncryptedXml> nesnesi oluşturun.  
   
      [!code-csharp[HowToDecryptXMLElementX509#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementX509/cs/sample.cs#3)]
      [!code-vb[HowToDecryptXMLElementX509#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementX509/vb/sample.vb#3)]  
   
-3. XML kullanarak belgenin şifresini <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> yöntemi.  
+3. <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> yöntemi kullanarak XML belgesinin şifresini çözün.  
   
      [!code-csharp[HowToDecryptXMLElementX509#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementX509/cs/sample.cs#4)]
      [!code-vb[HowToDecryptXMLElementX509#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementX509/vb/sample.vb#4)]  
   
-4. Kaydet <xref:System.Xml.XmlDocument> nesne.  
+4. <xref:System.Xml.XmlDocument> nesnesini kaydedin.  
   
      [!code-csharp[HowToDecryptXMLElementX509#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementX509/cs/sample.cs#5)]
      [!code-vb[HowToDecryptXMLElementX509#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementX509/vb/sample.vb#5)]  
   
 ## <a name="example"></a>Örnek  
- Bu örnek adlı bir dosya olduğunu varsayar `"test.xml"` derlenmiş programın aynı dizinde bulunmaktadır.  Ayrıca varsayılmaktadır `"test.xml"` içeren bir `"creditcard"` öğesi.  Aşağıdaki XML adlı bir dosyaya yerleştirebilirsiniz `test.xml` ve bu örneği kullanın.  
+ Bu örnek, `"test.xml"` adlı bir dosyanın derlenen programla aynı dizinde olduğunu varsayar.  Ayrıca, `"test.xml"` bir `"creditcard"` öğesi içerdiğini varsayar.  Aşağıdaki XML 'i `test.xml` adlı bir dosyaya yerleştirebilir ve bu örnekle birlikte kullanabilirsiniz.  
   
 ```xml  
 <root>  
@@ -68,16 +66,16 @@ Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> şifrelem
  [!code-csharp[HowToDecryptXMLElementX509#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementX509/cs/sample.cs#1)]
  [!code-vb[HowToDecryptXMLElementX509#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementX509/vb/sample.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
   
-- Bu örneği derlemeye bir başvuru eklemek gereken `System.Security.dll`.  
+- Bu örneği derlemek için `System.Security.dll`bir başvuru eklemeniz gerekir.  
   
-- Aşağıdaki ad alanlarını içerir: <xref:System.Xml>, <xref:System.Security.Cryptography>, ve <xref:System.Security.Cryptography.Xml>.  
+- Şu ad alanlarını ekleyin: <xref:System.Xml>, <xref:System.Security.Cryptography>ve <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Bu örnekte kullanılan X.509 sertifikası, yalnızca test amaçlıdır.  Uygulamaları, bir güvenilen sertifika yetkilisi tarafından oluşturulan bir X.509 sertifikası kullanın veya Microsoft Windows sertifika sunucusu tarafından oluşturulan bir sertifika kullanın.  
+ Bu örnekte kullanılan X. 509.440 sertifikası yalnızca test amaçlıdır.  Uygulamalar, güvenilir bir sertifika yetkilisi tarafından oluşturulan bir X. 509.440 sertifikası kullanmalı veya Microsoft Windows sertifika sunucusu tarafından oluşturulan bir sertifikayı kullanmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Security.Cryptography.Xml>
-- [Nasıl yapılır: XML öğelerini X.509 sertifikalarıyla şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)
+- [Nasıl yapılır: XML Öğelerini X.509 Sertifikalarıyla Şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)

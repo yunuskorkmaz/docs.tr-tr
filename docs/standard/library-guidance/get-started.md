@@ -1,49 +1,47 @@
 ---
 title: Yüksek kaliteli .NET kitaplıkları oluşturmaya başlama
-description: Başlarken .NET kitaplıkları oluşturmak.
-author: jamesnk
-ms.author: mairaw
+description: .NET kitaplıklarını oluşturmaya başlama.
 ms.date: 10/02/2018
-ms.openlocfilehash: 980f0edcee07688935f6d08f3ce1ed812159695e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 10576219d8470a171ad0f1f347196999b2a2ee03
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640736"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706497"
 ---
 # <a name="get-started"></a>Kullanmaya başlayın
 
 ## <a name="cross-platform-targetingcross-platform-targetingmd"></a>[Platformlar arası hedefleme](./cross-platform-targeting.md)
 
-Platformlar arası kitaplıklar oluşturmak için .NET Standard ve çoklu sürüm desteğinin kullanma .NET pek çok yerde çalışır ve iyi .NET kitaplıkları mümkün olduğu kadar platformları ve geliştiricilerin desteklemek çaba göstermelisiniz.
+Platformlar arası kitaplıklar oluşturmak için .NET Standard ve Çoklu hedefleme kullanma. .NET birçok yerde çalışır ve iyi .NET kitaplıkları, mümkün olduğunca fazla platform ve geliştirici desteklemek için çaba göstermelidir.
 
 ## <a name="strong-namingstrong-namingmd"></a>[Kesin adlandırma](./strong-naming.md)
 
-Tanımlayıcı adlandırma ve kendi avantajları ve dezavantajları hakkında bilgi edinin. Bir .NET kitaplığı tanımlayıcı adlandırma kullanmak en iyi geliştiriciler sağlar ve önerilen bir en iyi yöntemdir.
+Tanımlayıcı adlandırma ve avantajları ve dezavantajları hakkında bilgi edinin. .NET kitaplığı tanımlayıcı adlandırma, geliştiricilerin en iyi şekilde kullanmasını sağlar ve önerilen en iyi uygulamadır.
 
 ## <a name="nuget-and-open-source-librariesnugetmd"></a>[NuGet ve açık kaynak kitaplıkları](./nuget.md)
 
-Açık kaynak .NET kitaplıkları için NuGet paketleri NuGet.org üzerinde yayımlandığını tüm paketler için de dahil olmak üzere önerilen meta verileri oluşturmak için en iyi yolu.
+NuGet.org üzerinde herkese açık olarak yayınlanan tüm paketler için önerilen meta veriler de dahil olmak üzere açık kaynaklı .NET kitaplıkları için NuGet paketleri oluşturmanın en iyi yolu.
 
 ### <a name="dependenciesdependenciesmd"></a>[Bağımlılıklar](./dependencies.md)
 
-NuGet, kullanımı kolay var olan paketleri bir .NET kitaplığı oluşturulurken kolaylaştırır. NuGet bağımlılıklarını genel kaynakları uyuşmazlıkları ve kaçınma yöntemleri hakkında bilgi edinin.
+NuGet, bir .NET kitaplığı oluştururken var olan paketleri kullanmayı kolaylaştırır. NuGet bağımlılıklarının ortak kaynakları hakkında bilgi edinin ve bunların nasıl önleneceğini öğrenin.
 
 ### <a name="source-linksourcelinkmd"></a>[Kaynak Bağlantısı](./sourcelink.md)
 
-Kaynak bağlantı, kullanıcıların .NET kitaplığınızın kaynak kodunda hata ayıklama sırasında adım olanak tanıyan harika bir araçtır. Bu makalede, kaynak bağlantı nedir ve neden kullanılması gerektiği bir genel bakıştır.
+Kaynak bağlantısı, .NET kitaplığınızın kullanıcılarının hata ayıklarken kaynak kodunda yer almasına izin veren harika bir araçtır. Bu makalede, kaynak bağlantısının ne olduğu ve neden kullanılması gerektiği hakkında genel bir bakış sunulmaktadır.
 
 ### <a name="publishingpublish-nuget-packagemd"></a>[Yayımlama](./publish-nuget-package.md)
 
-NuGet.org bilinen ve kullanılan depo en yaygın olsa da, NuGet paketlerini yayımlamak için pek çok yerde vardır. Farklı NuGet paket depolarınızın kullanılabilir ve bir .NET kitaplığı yayımlamak için en iyi güvenlik uygulamaları hakkında bilgi edinin.
+NuGet.org, en yaygın olarak bilinen ve kullanılan depoken, NuGet paketlerini yayımlamak için birçok yer vardır. Kullanılabilir farklı NuGet paketi depoları ve bir .NET kitaplığını yayımlamak için en iyi güvenlik yöntemleri hakkında bilgi edinin.
 
 ## <a name="versioningversioningmd"></a>[Sürüm Oluşturma](./versioning.md)
 
-Özellik ekleme, hataları düzeltiyor ve sonraki sürümlerde performansını iyileştirme zaman içinde iyi .NET kitaplıkları geliştirilir. Çeşitli sürüm numaraları ve geliştiriciler için bozucu değişiklikler iletişim kurma hakkında bilgi edinin.
+İyi .NET kitaplıkları zaman içinde gelişerek özellikler ekliyor, hataları düzeltiyor ve sonraki sürümlerde performansı artırdı. Çeşitli sürüm numaraları ve geliştiricilerle ilgili son değişiklikleri nasıl iletişim kuracağınızı öğrenin.
 
 ### <a name="breaking-changesbreaking-changesmd"></a>[Hataya neden olan değişiklikler](./breaking-changes.md)
 
-Mevcut kullanıcılar için kararlılık ve gelecek yeniliğe arasında bir denge bulmak bir .NET kitaplığı için önemlidir. Son değişiklikler ve geriye dönük uyumluluğu koruyarak yeni özellikler eklemek için stratejiler, farklı türleri hakkında bilgi edinin.
+Bir .NET kitaplığı, gelecekte mevcut kullanıcılar ve yeniliklere yönelik kararlılık arasında bir denge bulmalıdır. Geriye dönük uyumluluğu sürdürirken yeni özellikler eklemeye yönelik farklı tür son değişiklikler ve stratejiler hakkında bilgi edinin.
 
 >[!div class="step-by-step"]
 >[Önceki](index.md)

@@ -1,20 +1,19 @@
 ---
-title: 'Nasıl yapılır: COM birlikte çalışma programlama- C# programlama kılavuzunda dizinli özellikleri kullanma'
-ms.custom: seodec18
+title: COM birlikte çalışma programlama- C# programlama kılavuzunda dizinli özellikleri kullanma
 ms.date: 07/20/2015
 helpviewer_keywords:
 - indexed properties [C#]
 - Office programming [C#], indexed properties
 - properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
-ms.openlocfilehash: 0d4e85646a1e7f8c4ee9a73fbf7bf5a01b10b14b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 864e2274f0e0e79b4843e0bb67b5c4384eac8588
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423216"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712071"
 ---
-# <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>Nasıl yapılır: COM Birlikte Çalışma Programlamada Dizin Oluşturulmuş Özellikleri Kullanma (C# Programlama Kılavuzu)
+# <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>COM birlikte çalışma programlamada Dizin oluşturulmuş özellikleri kullanma (C# Programlama Kılavuzu)
 *Dizinli Özellikler* , programlama içinde C# parametreleri olan com özelliklerinin hangi şekilde tüketildiğini geliştirir. Dizinli Özellikler C#, Microsoft Office programlamayı geliştirmek için [adlandırılmış ve isteğe bağlı bağımsız değişkenler](../classes-and-structs/named-and-optional-arguments.md), yeni bir tür ([dinamik](../../language-reference/builtin-types/reference-types.md)) ve [katıştırılmış tür bilgileri](../../../standard/assembly/embed-types-visual-studio.md)gibi görseldeki diğer özelliklerle birlikte çalışır.  
   
  Önceki sürümlerinde C#, yöntemler yalnızca `get` yönteminin parametresi yoksa ve `set` yöntemi bir ve yalnızca bir değer parametresi içeriyorsa özellikler olarak erişilebilir. Ancak, tüm COM özellikleri bu kısıtlamaları karşılamıyor. Örneğin, Excel <xref:Microsoft.Office.Interop.Excel.Range.Range%2A> özelliğinin, Aralık adı için bir parametre gerektiren bir `get` erişimcisi vardır. Geçmişte, `Range` özelliğine doğrudan erişemediği için, aşağıdaki örnekte gösterildiği gibi, bunun yerine `get_Range` yöntemini kullanmanız gerekiyordu.  
@@ -39,7 +38,7 @@ ms.locfileid: "73423216"
  Kendinizinkini dizinli Özellikler oluşturamazsınız. Özelliği yalnızca var olan dizinli özelliklerin kullanımını destekler.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, bir örnek gösterir. Office API 'sine erişen bir projeyi ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Visual C# özelliklerini kullanarak Office birlikte çalışma nesnelerine erişme](./how-to-access-office-onterop-objects.md).  
+ Aşağıdaki kod, bir örnek gösterir. Office API 'sine erişen bir projeyi ayarlama hakkında daha fazla bilgi için bkz. [özellikleri kullanarak C# Office birlikte çalışma nesnelerine erişme](./how-to-access-office-onterop-objects.md).
   
  [!code-csharp[csProgGuideIndexedProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#5)]  
   
@@ -48,6 +47,6 @@ ms.locfileid: "73423216"
 - [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../classes-and-structs/named-and-optional-arguments.md)
 - [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Tür dinamiği kullanma](../types/using-type-dynamic.md)
-- [Nasıl yapılır: Office Programlamada Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenleri Kullanma](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [Nasıl yapılır: Visual C# Özelliklerini Kullanarak Office Birlikte Çalışma Nesnelerine Erişim](./how-to-access-office-onterop-objects.md)
+- [Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Özellikleri kullanarak C# Office birlikte çalışma nesnelerine erişme](./how-to-access-office-onterop-objects.md)
 - [İzlenecek yol: Office programlama](./walkthrough-office-programming.md)

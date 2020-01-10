@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: 6a83b636dd83534788f3a38971e0fef2919314f5
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 9b611a72656bdd570eccec8a0585bf5ce6fa55f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005632"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716787"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -24,7 +24,7 @@ Derleyicinin bayt çıkışı, aynı girişlerin derlemeleri arasında özdeş o
 
 ## <a name="remarks"></a>Açıklamalar
 
-Varsayılan olarak, belirli bir giriş kümesinden Derleyici çıktısı benzersizdir, çünkü derleyici bir zaman damgası ve rastgele sayıdan oluşturulan bir GUID ekliyor. Değer aynı kaldığı sürece, bir *belirleyici derleme*oluşturmak için `-deterministic` seçeneğini kullanın.
+Varsayılan olarak, belirli bir giriş kümesinden Derleyici çıktısı benzersizdir, çünkü derleyici bir zaman damgası ve rastgele sayıdan oluşturulan bir GUID ekliyor. Değer aynı kaldığı sürece, bir *belirleyici derleme*oluşturmak için `-deterministic` seçeneğini kullanın, biri derlemeler genelinde özdeş olan ikili içerik.
 
 Derleyici, belirlemeleri için aşağıdaki girişleri dikkate alır:
 
@@ -44,9 +44,9 @@ Derleyici, belirlemeleri için aşağıdaki girişleri dikkate alır:
   - Çözümleyiciler tarafından kullanılabilecek ek dosyalar
 - Geçerli kültür (tanılama ve özel durum iletilerinin oluşturulduğu dil için).
 - Kodlama belirtilmemişse, varsayılan kodlama (veya geçerli kod sayfası).
-- Derleyicinin arama yollarındaki dosyaların varlığı, var olmayan ve içeriği (örneğin, `/lib` veya `/recurse`).
+- Derleyicinin arama yollarındaki dosyaların varlığı, var olmayan ve içeriği (örneğin, `-lib` veya `-recurse`tarafından).
 - Derleyicinin çalıştırıldığı CLR platformu.
-- Çözümleyici bağımlılığı yüklemeyi etkileyebilecek `%LIBPATH%` değeri.
+- `%LIBPATH%`değeri, çözümleyici bağımlılığını yüklemeyi etkileyebilecek.
 
 Kaynaklar herkese açık olduğunda, bir ikilinin güvenilir bir kaynaktan derlenip derlenmediğini oluşturmak için belirleyici derleme kullanılabilir. Ayrıca, bir ikiliye yapılan değişikliklere bağımlı derleme adımlarının yürütülmesi gerekip gerekmediğini belirlemek için sürekli bir derleme sisteminde de yararlı olabilir.
 

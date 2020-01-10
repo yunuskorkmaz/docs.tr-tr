@@ -1,17 +1,16 @@
 ---
 title: Adlandırılmış ve anonim yöntemler- C# Programlama Kılavuzu ile Temsilciler
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 50df0e9c42d366c9c79dde3b0d34f85b8e552a45
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1ec366999ca6457471b705fa83f06fcde4293f4e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418026"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712383"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Adlandırılmış ve Anonim Yöntemler ile Temsilciler (C# Programlama Kılavuzu)
 Bir [temsilci](../../language-reference/builtin-types/reference-types.md) , adlandırılmış bir yöntemle ilişkilendirilebilir. Adlandırılmış bir yöntemi kullanarak bir temsilciyi örneklediğinizde, yöntemi parametre olarak geçirilir, örneğin:  
@@ -41,5 +40,5 @@ Bir [temsilci](../../language-reference/builtin-types/reference-types.md) , adla
 
 - [C# Programlama Kılavuzu](../index.md)
 - [Temsilciler](./index.md)
-- [Nasıl yapılır: temsilcileri birleştirme (çok noktaya yayın temsilcileri)](./how-to-combine-delegates-multicast-delegates.md)
+- [Temsilcileri birleştirme (çok noktaya yayın temsilcileri)](./how-to-combine-delegates-multicast-delegates.md)
 - [Olaylar](../events/index.md)

@@ -11,23 +11,21 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8f298a7b036857e783efa128ce45ee8634ce993d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d409c0e9a2a6564e5fb16e4e2c72ab661ae2d5ce
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795193"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706168"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>Nasıl yapılır: WindowsPrincipal Nesnesi Oluşturma
-Oluşturmanın iki yolu vardır. bir <xref:System.Security.Principal.WindowsPrincipal> nesne, rol tabanlı doğrulama gerçekleştirmeniz olup kod tekrar tekrar gerekir bağlı olarak veya yalnızca bir kez gerçekleştirmeniz gerekir.  
+Kodun, tekrar tekrar rol tabanlı doğrulama yapıp gerçekleştirmeyeceğini veya yalnızca bir kez yerine getirmeniz gerektiğini bağlı olarak, <xref:System.Security.Principal.WindowsPrincipal> nesnesi oluşturmanın iki yolu vardır.  
   
- Kod tekrar tekrar rol tabanlı doğrulama gerçekleştirmesi gerekiyorsa, aşağıdaki yordamlardan birini ilk daha az ek yük oluşturur. Kod gerektiğinde yalnızca bir kez oluşturabilir, rol tabanlı doğrulamaları yapmak bir <xref:System.Security.Principal.WindowsPrincipal> ikinci aşağıdaki yordamlardan birini kullanarak nesne.  
+ Kodun sürekli olarak rol tabanlı doğrulama yapması gerekiyorsa, aşağıdaki yordamların ilki daha az ek yük üretir. Kodun rol tabanlı doğrulamaları yalnızca bir kez yapması gerektiğinde, aşağıdaki yordamların saniyesini kullanarak bir <xref:System.Security.Principal.WindowsPrincipal> nesnesi oluşturabilirsiniz.  
   
-### <a name="to-create-a-windowsprincipal-object-for-repeated-validation"></a>Yinelenen doğrulama için WindowsPrincipal nesnesi oluşturma  
+### <a name="to-create-a-windowsprincipal-object-for-repeated-validation"></a>Yinelenen doğrulama için bir WindowsPrincipal nesnesi oluşturmak için  
   
-1. Çağrı <xref:System.AppDomain.SetPrincipalPolicy%2A> metodunda <xref:System.AppDomain> statik tarafından döndürülen nesne <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> yöntemi geçirme özelliği, bir <xref:System.Security.Principal.PrincipalPolicy> yeni ilke olmaması gerektiğini gösteren bir numaralandırma değeri. Desteklenen değerler şunlardır: <xref:System.Security.Principal.PrincipalPolicy.NoPrincipal>, <xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal>, ve <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal>. Aşağıdaki kod, bu yöntem çağrısının gösterir.  
+1. Statik <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> özelliği tarafından döndürülen <xref:System.AppDomain> nesnesi üzerinde <xref:System.AppDomain.SetPrincipalPolicy%2A> yöntemi çağırın ve yöntemi, yeni ilkenin ne olması gerektiğini belirten bir <xref:System.Security.Principal.PrincipalPolicy> numaralandırma değeri geçirerek. Desteklenen değerler <xref:System.Security.Principal.PrincipalPolicy.NoPrincipal>, <xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal>ve <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal>. Aşağıdaki kod bu yöntem çağrısını gösterir.  
   
     ```csharp  
     AppDomain.CurrentDomain.SetPrincipalPolicy(  
@@ -39,7 +37,7 @@ Oluşturmanın iki yolu vardır. bir <xref:System.Security.Principal.WindowsPrin
         PrincipalPolicy.WindowsPrincipal)  
     ```  
   
-2. İlkeyle ayarlama, statik <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> kapsülleyen geçerli Windows kullanıcısının asıl almak için özellik. Özelliği döndürme türü olduğundan <xref:System.Security.Principal.IPrincipal>, sonucu dönüştürmelisiniz bir <xref:System.Security.Principal.WindowsPrincipal> türü. Aşağıdaki kodu yeni başlatır <xref:System.Security.Principal.WindowsPrincipal> değerine geçerli iş parçacığıyla ilişkilendirilmiş sorumlusu nesnesi.  
+2. İlke kümesiyle, geçerli Windows kullanıcısını kapsülleyen sorumluyu almak için statik <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> özelliğini kullanın. Özellik dönüş türü <xref:System.Security.Principal.IPrincipal>olduğundan, sonucu bir <xref:System.Security.Principal.WindowsPrincipal> türüne atamalısınız. Aşağıdaki kod, geçerli iş parçacığıyla ilişkili asıl değerin değerine yeni bir <xref:System.Security.Principal.WindowsPrincipal> nesnesi başlatır.  
   
     ```csharp  
     WindowsPrincipal myPrincipal =   
@@ -51,11 +49,11 @@ Oluşturmanın iki yolu vardır. bir <xref:System.Security.Principal.WindowsPrin
         CType(Thread.CurrentPrincipal, WindowsPrincipal)   
     ```  
   
-3. Asıl nesne oluşturulduğunda bunu doğrulamak için birkaç yöntemden birini kullanabilirsiniz.  
+3. Asıl nesne oluşturulduğunda, doğrulamak için birkaç yöntemden birini kullanabilirsiniz.  
   
-### <a name="to-create-a-windowsprincipal-object-for-a-single-validation"></a>Tek bir doğrulama için WindowsPrincipal nesnesi oluşturma  
+### <a name="to-create-a-windowsprincipal-object-for-a-single-validation"></a>Tek bir doğrulama için bir WindowsPrincipal nesnesi oluşturmak için  
   
-1. Yeni bir başlatma <xref:System.Security.Principal.WindowsIdentity> statik çağırarak <xref:System.Security.Principal.WindowsIdentity.GetCurrent%2A?displayProperty=nameWithType> yöntemi geçerli Windows hesabını sorgular ve bu hesabı hakkında bilgi yeni oluşturulan kimlik nesnesi içine yerleştirir. Aşağıdaki kod yeni bir oluşturur <xref:System.Security.Principal.WindowsIdentity> nesne ve kimliği doğrulanmış geçerli kullanıcının başlatır.  
+1. Geçerli Windows hesabını sorgulayan ve bu hesapla ilgili bilgileri yeni oluşturulan kimlik nesnesine yerleştiren statik <xref:System.Security.Principal.WindowsIdentity.GetCurrent%2A?displayProperty=nameWithType> yöntemini çağırarak yeni bir <xref:System.Security.Principal.WindowsIdentity> nesnesi başlatın. Aşağıdaki kod yeni bir <xref:System.Security.Principal.WindowsIdentity> nesnesi oluşturur ve onu geçerli kimliği doğrulanmış kullanıcıya başlatır.  
   
     ```csharp  
     WindowsIdentity myIdentity = WindowsIdentity.GetCurrent();  
@@ -65,7 +63,7 @@ Oluşturmanın iki yolu vardır. bir <xref:System.Security.Principal.WindowsPrin
     Dim myIdentity As WindowsIdentity = WindowsIdentity.GetCurrent()  
     ```  
   
-2. Yeni bir <xref:System.Security.Principal.WindowsPrincipal> nesne ve değerini geçirin <xref:System.Security.Principal.WindowsIdentity> önceki adımda oluşturulan nesne.  
+2. Yeni bir <xref:System.Security.Principal.WindowsPrincipal> nesnesi oluşturun ve önceki adımda oluşturulan <xref:System.Security.Principal.WindowsIdentity> nesnesinin değerini geçirin.  
   
     ```csharp  
     WindowsPrincipal myPrincipal = new WindowsPrincipal(myIdentity);  
@@ -75,7 +73,7 @@ Oluşturmanın iki yolu vardır. bir <xref:System.Security.Principal.WindowsPrin
     Dim myPrincipal As New WindowsPrincipal(myIdentity)  
     ```  
   
-3. Asıl nesne oluşturulduğunda bunu doğrulamak için birkaç yöntemden birini kullanabilirsiniz.  
+3. Asıl nesne oluşturulduğunda, doğrulamak için birkaç yöntemden birini kullanabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

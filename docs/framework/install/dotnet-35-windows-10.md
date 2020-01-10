@@ -1,15 +1,13 @@
 ---
-title: Windows 10, Windows 8.1 ve Windows 8’de .NET Framework 3.5 Yükleme
+title: Windows 10, 8,1, 8 ' de .NET Framework 3,5 'yi yükler
 description: 3,5 .NET Framework Windows 10, Windows 8.1 ve Windows 8 ' e nasıl yükleyeceğinizi öğrenin.
-author: rlander
-ms.author: mairaw
 ms.date: 07/16/2018
-ms.openlocfilehash: 949f73febe2eb2ad7155bddd2b7b7514eddfe6c9
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 208016e22eed324a3996552284072c6ad29637a5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319152"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716387"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Windows 10, Windows 8.1 ve Windows 8’de .NET Framework 3.5 Yükleme
 
@@ -29,13 +27,13 @@ Windows 10, Windows 8.1 ve Windows 8 ' de uygulama çalıştırmak için .NET Fr
 
 Windows Denetim Masası aracılığıyla .NET Framework 3,5 ' i etkinleştirebilirsiniz. Bu seçenek, Internet bağlantısı gerektirir.
 
-1. Windows tuşu logosunun Windows tuşu ![Ekran görüntüsüne basın. ](./media/dotnet-35-windows-10/windows-keyboard-logo.png) klavyenizde "Windows özellikleri" yazın ve ENTER tuşuna basın. **Windows özelliklerini aç veya kapat** iletişim kutusu görüntülenir.
+1. Windows tuşu logosunun Windows tuşu ![ekran görüntüsüne basın.](./media/dotnet-35-windows-10/windows-keyboard-logo.png) klavyenizde "Windows özellikleri" yazın ve ENTER tuşuna basın. **Windows özelliklerini aç veya kapat** iletişim kutusu görüntülenir.
 
 2. **.NET Framework 3,5 (.net 2,0 ve 3,0 içerir)** onay kutusunu Işaretleyin, **Tamam**' ı seçin ve istenirse bilgisayarınızı yeniden başlatın.
 
    ![Denetim Masası ile .NET yüklemesini gösteren ekran görüntüsü.](./media/dotnet-35-windows-10/dotnet-control-panel.png)
 
-   Bunu gerektiren bir geliştirici veya sunucu yöneticisi değilseniz, **Windows Communication Foundation (WCF) HTTP etkinleştirmesi** ve **Windows Communication Foundation (WCF) http olmayan etkinleştirme** için alt öğeleri seçmeniz gerekmez işlevin.
+   Bu işlevselliğe ihtiyaç duyan bir geliştirici veya sunucu yöneticisi değilseniz **Windows Communication Foundation (WCF) HTTP etkinleştirmesi** ve **Windows Communication Foundation (WCF)** için alt öğeleri seçmeniz gerekmez.
 
 ## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a>.NET Framework 3,5 yüklemesinde sorun giderme
 

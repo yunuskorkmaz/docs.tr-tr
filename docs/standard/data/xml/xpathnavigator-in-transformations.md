@@ -6,25 +6,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57290af1df8d370c928a97aba1622e41a6a33589
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 240f9ca7a887a4a146437fdef46de776b299705a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026749"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709757"
 ---
 # <a name="xpathnavigator-in-transformations"></a>Dönüşümlerde XPathNavigator
-<xref:System.Xml.XPath.XPathNavigator> Sınıfı veri salt okunur rastgele erişim sağlar ve Genişletilebilir Stil sayfası dili için giriş olarak kullanmak için Dönüşümleri (XSLT) için tasarlanmıştır. Üzerinde uygulanan <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, ve <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathNavigator> XML Path Language (XPath) öneri 5. bölümünde anlatıldığı gibi World Wide Web Consortium (W3C) veri modeline dayanır.  
+<xref:System.Xml.XPath.XPathNavigator> sınıfı verilere salt okunurdur ve dönüşümler (XSLT) için Genişletilebilir Stil sayfası dili girişi olarak kullanılmak üzere tasarlanmıştır. <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>ve <xref:System.Xml.XmlDocument>uygulanır. <xref:System.Xml.XPath.XPathNavigator>, XML yol dili (XPath) önerisinin 5. bölümünde açıklandığı gibi World Wide Web Konsorsiyumu (W3C) veri modelini temel alır.  
   
- <xref:System.Xml.XPath.XPathNavigator> Hiçbir depo üzerinde bir imleç modeli tanımlar ve XPath sorgularını hızlı ve salt okunur herhangi bir veri deposu sağlar. <xref:System.Xml.XPath.XPathNavigator> Ayrıca sonucu ağacı parçalarını yineleme için kullanılacak bir sınıftır.  
+ <xref:System.Xml.XPath.XPathNavigator> herhangi bir mağaza üzerinde bir imleç modeli tanımlar ve tüm veri depolarındaki hızlı, salt okuma XPath sorguları sağlar. <xref:System.Xml.XPath.XPathNavigator> Ayrıca, sonuç ağacı parçaları üzerinde yineleme için kullanılacak sınıftır.  
   
- API, depodaki geçerli düğüm öğrenmesini ve bağlı düğümleri için taşıma sağlar. <xref:System.Xml.XPath.XPathNavigator> Kümesini kullanan bir depo üzerinde çapraz geçişi gerçekleştirir imleç stil modelidir **taşıma** yöntemleri. <xref:System.Xml.XPath.XPathNavigator> Her zaman bir düğümde konumlandırılır. Tüm **taşıma** bırakır başarısız yöntemi <xref:System.Xml.XPath.XPathNavigator> değişmez.  
+ API, depodaki geçerli düğümden bilgi almanızı ve bağlantılı düğümlere taşımanızı sağlar. <xref:System.Xml.XPath.XPathNavigator>, bir **taşıma** yöntemleri kümesi kullanarak bir mağaza üzerinde geçiş yapan bir imleç stil modelidir. <xref:System.Xml.XPath.XPathNavigator> her zaman bir düğüm üzerinde konumlandırılır. Başarısız olan herhangi bir **Move** yöntemi, <xref:System.Xml.XPath.XPathNavigator> değişmeden bırakılamaz.  
   
- <xref:System.Xml.XPath.XPathNavigator> Sonucu ağacı parçalarını yineleme için kullanılacak sınıftır. Aşağıdaki kod örneği, işlev parametresi ile çağırarak bir stil sayfası içinde bir sonuç ağacı parçası oluşturur `fragment`, XML içeriyor.  
+ <xref:System.Xml.XPath.XPathNavigator>, sonuç ağacı parçaları üzerinde yineleme için kullanılacak sınıftır. Aşağıdaki kod örneği, bir stil sayfası içinde, XML içeren `fragment`parametresiyle işlevi çağırarak bir sonuç ağacı parçası oluşturur.  
   
-## <a name="testxsl"></a>Test.xsl  
+## <a name="testxsl"></a>test. Xsl  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -57,13 +55,13 @@ ms.locfileid: "62026749"
 </xsl:stylesheet>  
 ```  
   
-## <a name="testxml"></a>test.xml  
+## <a name="testxml"></a>test. xml  
   
 ```xml  
 <root>Some text</root>  
 ```  
   
- Aşağıdaki kod **test.xsl** stil sayfası ve **test.xml** veri girişi.  
+ Aşağıdaki kod, **test. xsl** stil sayfası ve **test. xml** giriş verilerini kullanır.  
   
 ```vb  
 Imports System  
@@ -110,7 +108,7 @@ public class sample
 ```  
   
 ## <a name="output"></a>Çıkış  
- Dönüştürme sonucunu dosyasında bulunan **out.xml**:  
+ Dönüşümün sonucu, **out. xml**dosyasında bulunur:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>Joe  

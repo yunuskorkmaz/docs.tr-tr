@@ -3,48 +3,46 @@ title: Bir XML Belgesindeki Düğüm, İçerik ve Değerleri Değiştirme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 976c34d72f9fcc89193658e50727a0ad365f2dd8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a53ba4fe16a3653b1be380da49e6b75cb347a28
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647884"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710680"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Bir XML Belgesindeki Düğüm, İçerik ve Değerleri Değiştirme
-Düğümler ve belgedeki içeriği değiştirebilirsiniz birçok yolu vardır. Şunları yapabilirsiniz:  
+Belgedeki düğümleri ve içerikleri değiştirebileceğiniz birçok yol vardır. Şunları yapabilirsiniz:  
   
-- Kullanarak düğümlerin içerik modelini değiştirin <xref:System.Xml.XmlNode.Value%2A> özelliği.  
+- <xref:System.Xml.XmlNode.Value%2A> özelliğini kullanarak düğümlerin değerini değiştirin.  
   
-- Düğüm kümesinin tamamını, yeni düğümleri düğümler değiştirerek değiştirin. Bu yapılır kullanarak <xref:System.Xml.XmlNode.InnerXml%2A> özelliği.  
+- Düğümleri yeni düğümlerle değiştirerek tüm düğüm kümesini değiştirin. Bu, <xref:System.Xml.XmlNode.InnerXml%2A> özelliği kullanılarak yapılır.  
   
-- Var olan düğümleri kullanarak yeni düğümler ile değiştirin <xref:System.Xml.XmlNode.RemoveChild%2A> yöntemi.  
+- <xref:System.Xml.XmlNode.RemoveChild%2A> yöntemini kullanarak var olan düğümleri yeni düğümlerle değiştirin.  
   
-- Devralma düğümleri ek karakterleri eklemek <xref:System.Xml.XmlCharacterData> kullanarak <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A>, veya <xref:System.Xml.XmlCharacterData.ReplaceData%2A> yöntemleri.  
+- <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A>veya <xref:System.Xml.XmlCharacterData.ReplaceData%2A> yöntemlerini kullanarak <xref:System.Xml.XmlCharacterData> sınıfından kalıtımla alan düğümlere ek karakterler ekleyin.  
   
-- Karakterleri kullanarak bir dizi kaldırarak içerik değiştirme <xref:System.Xml.XmlCharacterData.DeleteData%2A> yöntemi devralacak düğüm türleri üzerinde <xref:System.Xml.XmlCharacterData>.  
+- <xref:System.Xml.XmlCharacterData>öğesinden devraldığı düğüm türlerindeki <xref:System.Xml.XmlCharacterData.DeleteData%2A> yöntemi kullanarak bir karakter aralığını kaldırarak içeriği değiştirin.  
   
- Bir düğümün değerini değiştirmek için basit bir yöntem kullanmaktır `node.Value = "new value";`. Aşağıdaki tabloda, bu tek satırlık bir kod üzerinde çalıştığı düğüm türleri ve bu düğüm türü için hangi verilerin tam olarak değiştiğini listeler.  
+ Bir düğümün değerini değiştirmenin basit bir tekniği `node.Value = "new value";`kullanmaktır. Aşağıdaki tabloda bu tek kod satırının üzerinde çalışma ve bu düğüm türü için tam olarak hangi verilerin değiştiği düğüm türleri listelenmektedir.  
   
 |Düğüm türü|Değiştirilen veriler|  
 |---------------|------------------|  
-|Öznitelik|Öznitelik değeri.|  
+|Öznitelik|Özniteliğin değeri.|  
 |CDATASection|CDATASection içeriği.|  
-|Yorum|İçerik açıklaması.|  
-|İnstruction|Hedef hariç içeriği.|  
-|Metin|Metin içeriği.|  
-|XmlDeclaration|Bildirim içeriğini hariç `<?xml` ve `?>` biçimlendirme.|  
-|Boşluk|Boşluk değeri. Dört tanınan XML boşluk karakterleri bir değere ayarlayabilirsiniz: boşluk, sekme, CR veya LF.|  
-|SignificantWhitespace|Önemli boşluk değeri. Dört tanınan XML boşluk karakterleri bir değere ayarlayabilirsiniz: boşluk, sekme, CR veya LF.|  
+|Yorum|Yorumun içeriği.|  
+|Processingyönergesi|Hedef hariç içerik.|  
+|Metin|Metnin içeriği.|  
+|XmlDeclaration|`<?xml` ve `?>` işaretlemesi hariç, bildirimin içeriği.|  
+|Boşlu|Boşluk değeri. Değeri, tanınan dört XML boşluk karakterinden biri olacak şekilde ayarlayabilirsiniz: boşluk, sekme, CR veya LF.|  
+|SignificantWhitespace|Önemli boşluk değeri. Değeri, tanınan dört XML boşluk karakterinden biri olacak şekilde ayarlayabilirsiniz: boşluk, sekme, CR veya LF.|  
   
- Tabloda listelenmeyen bir düğüm türü herhangi bir değeri ayarlamak için geçerli düğüm türü değil. Başka bir düğüm türü herhangi bir değere ayarlamak oluşturur bir <xref:System.InvalidOperationException>.  
+ Tabloda listelenmeyen hiçbir düğüm türü, üzerinde bir değer ayarlamak için geçerli bir düğüm türü değildir. Diğer herhangi bir düğüm türünde bir değer ayarlamak bir <xref:System.InvalidOperationException>oluşturur.  
   
- <xref:System.Xml.XmlNode.InnerXml%2A> Özelliğini geçerli düğümünün alt düğümleri biçimlerini değiştirir. Bu özelliğin ayarlanması alt düğümleri ayrıştırılmış içeriğini verilen dize ile değiştirir. Ayrıştırma geçerli bir ad alanı bağlamında gerçekleştirilir. Ayrıca, <xref:System.Xml.XmlNode.InnerXml%2A> yedekli ad alanı bildirimi kaldırır. Sonuç, çok sayıda kesme ve yapıştırma işlemlerini belgeniz ile yedekli ad alanı bildirimi boyutunu artırmaz gibi. Ad alanları etkisini gösteren bir kod örneği için <xref:System.Xml.XmlNode.InnerXml%2A> işlemi görmek <xref:System.Xml.XmlDocument.InnerXml%2A> özelliği.  
+ <xref:System.Xml.XmlNode.InnerXml%2A> özelliği, geçerli düğüm için alt düğümlerin işaretlemesini değiştirir. Bu özelliğin ayarlanması, alt düğümlerin belirtilen dizenin ayrıştırılmış içeriğiyle yerini alır. Ayrıştırma geçerli ad alanı bağlamında yapılır. Ayrıca, <xref:System.Xml.XmlNode.InnerXml%2A> gereksiz ad alanı bildirimlerini kaldırır. Sonuç olarak, çok sayıda kesme ve yapıştırma işlemi belgenizin boyutunu gereksiz ad alanı bildirimleriyle artırmaz. <xref:System.Xml.XmlNode.InnerXml%2A> işleminde ad alanlarının etkisini gösteren bir kod örneği için, <xref:System.Xml.XmlDocument.InnerXml%2A> özelliğine bakın.  
   
- Kullanırken <xref:System.Xml.XmlCharacterData.ReplaceData%2A> ve <xref:System.Xml.XmlNode.RemoveChild%2A> yöntemleri, yöntemleri, değiştirilen veya kaldırılan düğüm döndürür. Bu düğüm ardından yere başka XML belge nesne modeli (DOM) yeniden. <xref:System.Xml.XmlCharacterData.ReplaceData%2A> Yöntemi belgeye eklenen düğüm üzerinde iki doğrulama denetimleri yapar. İlk onay düğümünün alt düğümleri türüne sahip olabilecek bir düğümün alt düğümü gelmektedir sağlar. İkinci onay eklenen düğüm alt gelmektedir düğümünün üst öğesi değil sağlar. Bunlardan biri ihlal koşulları oluşturur bir <xref:System.InvalidOperationException>.  
+ <xref:System.Xml.XmlCharacterData.ReplaceData%2A> ve <xref:System.Xml.XmlNode.RemoveChild%2A> yöntemleri kullanılırken, Yöntemler değiştirilmiş veya kaldırılmış düğümü döndürür. Daha sonra bu düğüm, XML Belge Nesne Modeli (DOM) içinde başka bir yere yeniden eklenebilir. <xref:System.Xml.XmlCharacterData.ReplaceData%2A> yöntemi, belgeye eklenmekte olan düğümde iki doğrulama denetimi yapar. İlk denetim, düğümün kendi türünün alt düğümlerine sahip olan bir düğümün alt öğesi haline gelmesini sağlar. İkinci denetim, eklenmekte olan düğümün alt öğesi olan düğümün üst öğesi olmamasını sağlar. Bu koşullardan birini ihlal eden bir <xref:System.InvalidOperationException>oluşturur.  
   
- Eklemek veya salt okunur bir alt düzenlenebilir bir düğümden kaldırmak için geçerlidir. Ancak, salt okunur düğümü değiştirmeye çalıştığında oluşturur bir <xref:System.InvalidOperationException>. Buna örnek olarak, alt değiştirerek bir <xref:System.Xml.XmlEntityReference> düğümü. Alt salt okunurdur ve değiştirilemez. Yapmaya oluşturur değiştirilecek bir <xref:System.InvalidOperationException>.  
+ Düzenlenebilecek bir düğümden salt okunurdur bir alt öğe eklemek veya kaldırmak için geçerlidir. Ancak, salt okunurdur bir düğümü değiştirme girişimleri bir <xref:System.InvalidOperationException>oluşturur. Bunun bir örneği, bir <xref:System.Xml.XmlEntityReference> düğümünün alt öğelerini değiştiriyor. Alt öğeler salt okunurdur ve değiştirilemez. Bunları değiştirme girişimleri bir <xref:System.InvalidOperationException>oluşturur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: af7bf487ff4ed250025b946f0948c269fcc5bf09
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418568"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635801"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ'i Destekleyen C# Özellikleri
 
-Aşağıdaki bölümde 3,0 sürümünde C# tanıtılan yeni dil yapıları tanıtılmaktadır. Bu yeni özelliklerin tümü [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgularıyla bir dereceye kadar kullanılsa da, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] bunlarla sınırlı değildir ve yararlı bulduğunuz herhangi bir bağlamda kullanılabilir.
+Aşağıdaki bölümde 3,0 sürümünde C# tanıtılan yeni dil yapıları tanıtılmaktadır. Bu yeni özelliklerin tümü LINQ sorgularıyla bir dereceye kadar kullanılsa da, LINQ ile sınırlı değildir ve yararlı bulduğunuz herhangi bir bağlamda kullanılabilir.
 
 ## <a name="query-expressions"></a>Sorgu İfadeleri
 
-Sorgu ifadeleri, IEnumerable koleksiyonlarını sorgulamak için SQL veya XQuery ile benzer bir bildirime dayalı sözdizimi kullanır. Derleme zamanı sorgu söz dizimi, bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcının standart sorgu işleci genişletme yöntemlerinin uygulamasına olan yöntem çağrılarına dönüştürülür. Uygulamalar, `using` yönergesi ile uygun ad alanını belirterek kapsamdaki standart sorgu işleçlerini denetler. Aşağıdaki sorgu ifadesi bir dize dizisi alır, bunları dizedeki ilk karaktere göre gruplandırır ve grupları sıralar.
+Sorgu ifadeleri, IEnumerable koleksiyonlarını sorgulamak için SQL veya XQuery ile benzer bir bildirime dayalı sözdizimi kullanır. Derleme zamanı sorgu söz dizimi, bir LINQ sağlayıcısının standart sorgu işleci genişletme yöntemlerinin uygulamasına yönelik yöntem çağrılarına dönüştürülür. Uygulamalar, `using` yönergesi ile uygun ad alanını belirterek kapsamdaki standart sorgu işleçlerini denetler. Aşağıdaki sorgu ifadesi bir dize dizisi alır, bunları dizedeki ilk karaktere göre gruplandırır ve grupları sıralar.
 
 ```csharp
 var query = from str in stringArray
@@ -66,7 +66,7 @@ Veri kaynağı, `OrderSize`gibi `Customer` sınıftan çok daha fazla özelliğe
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
 ```
 
-Daha fazla bilgi için bkz.:
+Daha fazla bilgi için bkz.
 
 - [Nesne ve Koleksiyon Başlatıcıları](../../classes-and-structs/object-and-collection-initializers.md)
 
@@ -84,15 +84,15 @@ Daha fazla bilgi için bkz. [anonim türler](../../classes-and-structs/anonymous
 
 ## <a name="extension-methods"></a>Genişletme Yöntemleri
 
-Uzantı yöntemi, bir tür ile ilişkilendirilebilen statik bir yöntemdir ve bu sayede tür üzerinde bir örnek yöntemi gibi çağrılabilir. Bu özellik, etkin bir şekilde, var olan türlere "Ekle" gibi yeni yöntemler eklemenizi sağlar. Standart sorgu işleçleri, <xref:System.Collections.Generic.IEnumerable%601>uygulayan her tür için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu işlevselliği sağlayan bir genişletme yöntemleri kümesidir.
+Uzantı yöntemi, bir tür ile ilişkilendirilebilen statik bir yöntemdir ve bu sayede tür üzerinde bir örnek yöntemi gibi çağrılabilir. Bu özellik, etkin bir şekilde, var olan türlere "Ekle" gibi yeni yöntemler eklemenizi sağlar. Standart sorgu işleçleri, <xref:System.Collections.Generic.IEnumerable%601>uygulayan herhangi bir tür için LINQ sorgu işlevselliği sağlayan bir genişletme yöntemleri kümesidir.
 
 Daha fazla bilgi için bkz. [Uzantı yöntemleri](../../classes-and-structs/extension-methods.md).
 
 ## <a name="lambda-expressions"></a>Lambda İfadeleri
 
-Lambda ifadesi, işlev gövdesinden giriş parametrelerini ayırmak için = > işlecini kullanan ve derleme zamanında bir temsilciye veya bir ifade ağacına dönüştürülebilen bir satır içi işlevdir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] programlamada, standart sorgu işleçleri için doğrudan Yöntem çağrıları yaptığınızda lambda ifadeleriyle karşılaşacaksınız.
+Lambda ifadesi, işlev gövdesinden giriş parametrelerini ayırmak için = > işlecini kullanan ve derleme zamanında bir temsilciye veya bir ifade ağacına dönüştürülebilen bir satır içi işlevdir. LINQ programlamada, standart sorgu işleçleri için doğrudan Yöntem çağrıları yaptığınızda lambda ifadeleriyle karşılaşacaksınız.
 
-Daha fazla bilgi için bkz.:
+Daha fazla bilgi için bkz.
 
 - [Anonim İşlevler](../../statements-expressions-operators/anonymous-functions.md)
 

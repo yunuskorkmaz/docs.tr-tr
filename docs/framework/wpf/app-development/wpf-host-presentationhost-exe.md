@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 981e518a55f179c2fbf44534783c80fb230e4ecf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 64ba1261134184f22e9faf157ca70e3471e3b3cb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421120"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636256"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF Konağı (PresentationHost.exe)
-Windows Presentation Foundation (WPF) ana bilgisayarı (PresentationHost. exe), [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalarının uyumlu tarayıcılarda barındırılmasına olanak tanıyan uygulamadır (Microsoft Internet Explorer 6 ve üzeri dahil). Varsayılan olarak, Windows Presentation Foundation (WPF) ana bilgisayarı, aşağıdakiler de dahil olmak üzere tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] içeriği için kabuk ve MIME işleyicisi olarak kaydedilir:  
+Windows Presentation Foundation (WPF) ana bilgisayarı (PresentationHost. exe), WPF uygulamalarının uyumlu tarayıcılarda barındırılmasına olanak tanıyan uygulamadır (Microsoft Internet Explorer 6 ve üzeri dahil). Varsayılan olarak, Windows Presentation Foundation (WPF) ana bilgisayarı, tarayıcı tarafından barındırılan WPF içeriği için kabuk ve MIME işleyicisi olarak kaydedilir ve şunları içerir:  
   
 - Gevşek (derlenmemiş) [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyaları (. xaml).  
   
@@ -38,10 +38,10 @@ Windows Presentation Foundation (WPF) ana bilgisayarı (PresentationHost. exe), 
 |---------------|-----------------|  
 |filename|Etkinleştirilecek dosyanın yolu. Ayrıca bir URI olabilir.|  
 |-debug|Bir uygulamayı etkinleştirirken, bir uygulamayı üzerinde yürütmez veya mağazadan çalıştırmaz. Bu yalnızca yerel bir dosya etkinleştirildiğinde işe yarar.|  
-|-debugSecurityZoneURL \<url >|Bir uygulamanın, belirtilen URL 'den dağıtılarak hata ayıklaması gerektiğini PresentationHost. exe ' ye işaret eden bir URL değeriyle birlikte kullanılır. Bu hem dağıtım bölgesini hem de kaynak sitesini belirler.|  
+|-debugSecurityZoneURL \<URL >|Bir uygulamanın, belirtilen URL 'den dağıtılarak hata ayıklaması gerektiğini PresentationHost. exe ' ye işaret eden bir URL değeriyle birlikte kullanılır. Bu hem dağıtım bölgesini hem de kaynak sitesini belirler.|  
 |-Gömme|OLE tarafından gerektirilir. `-event` veya `-debug` parametresi belirtilirse, bu parametre dahili olarak ayarlandığı için `-embedding` parametresinin belirtilmesi gerekmez.|  
-|-Event \<eventname >|Bu adı taşıyan olayı açın ve PresentationHost. exe başlatıldığında ve [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] içeriği barındırmaya hazırlandığınızda bunu işaret edin. Olay açılırken bir hata oluşursa (örneğin, zaten oluşturulmadıysa) PresentationHost. exe sonlandırılır.|  
-|-launchApplication \<url >|Belirtilen URL 'den tek başına ClickOnce uygulaması başlatır. .NET uygulamaları ile ilgili Internet Explorer ve WinINet güvenlik ilkesi uygulanır.|  
+|-Event \<EventName >|Bu adı taşıyan olayı açın ve PresentationHost. exe başlatıldığında ve WPF içeriğini barındırmak için hazırsanız bunu işaret edin. Olay açılırken bir hata oluşursa (örneğin, zaten oluşturulmadıysa) PresentationHost. exe sonlandırılır.|  
+|-launchApplication \<URL >|Belirtilen URL 'den tek başına ClickOnce uygulaması başlatır. .NET uygulamaları ile ilgili Internet Explorer ve WinINet güvenlik ilkesi uygulanır.|  
   
 ## <a name="scenarios"></a>Senaryolar  
   

@@ -10,26 +10,24 @@ helpviewer_keywords:
 - security [.NET Framework], replacing principal objects
 - security [.NET Framework], principals
 ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5f33be207dd6166b16a04844f3d92b6e017d1c7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89b7036215cb7998222e280ceef02073d455a1b2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018794"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705944"
 ---
 # <a name="replacing-a-principal-object"></a>Asıl Nesneyi Değiştirme
-Kimlik doğrulama hizmetleri sağlayan uygulamalar sağlayabilmelidir değiştirin **asıl** nesne (<xref:System.Security.Principal.IPrincipal>) belirli bir iş parçacığı için. Ayrıca, güvenlik sistemi değiştirme olanağı korumanız gerekir **asıl** çünkü nesneleri bir kötü amaçlı olarak eklenen, yanlış **asıl** uygulamanız tarafından güvenliği tehlikeye atar bir doğru kimlik veya bir rolü beyanda bulunma. Bu nedenle, uygulamaları gerektiren değiştirme olanağı **asıl** nesneleri verilmelidir <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> asıl denetim için nesne. (Bu izni rol tabanlı güvenlik denetimleri gerçekleştirme veya oluşturmak için gerekli olmadığını unutmayın **asıl** nesneleri.)  
+Kimlik doğrulama hizmetleri sağlayan uygulamalar, belirli bir iş parçacığının **asıl** nesnesini (<xref:System.Security.Principal.IPrincipal>) değiştirmek zorunda olmalıdır. Ayrıca, güvenlik sistemi, kötü amaçlı olarak eklenmiş, yanlış bir **asıl öğe** , doğru olmayan bir kimlik veya rol belirterek uygulamanızın güvenliğini tehlikeye atarak **asıl** nesneleri değiştirme özelliğini korumaya yardımcı olmalıdır. Bu nedenle, **asıl** nesneleri değiştirme olanağına sahip olan uygulamalara asıl denetim için <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> nesnesi verilmelidir. (Rol tabanlı güvenlik denetimleri gerçekleştirmek veya **asıl** nesneler oluşturmak için bu iznin gerekli olmadığını unutmayın.)  
   
- Geçerli **asıl** nesne, aşağıdaki görevleri gerçekleştirerek değiştirilebilir:  
+ Şu görevleri gerçekleştirerek geçerli **asıl** nesne değiştirilebilir:  
   
-1. Değiştirme Oluştur **asıl** nesnesini ve ilişkili **kimlik** nesne.  
+1. Yeni bir **asıl** nesne ve ilişkili **Identity** nesnesi oluşturun.  
   
-2. Yeni Ekle **asıl** çağrı bağlam nesnesi.  
+2. Yeni **Principal** nesnesini çağrı bağlamına ekleyin.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, genel bir sorumlu nesnesi oluşturun ve bir iş parçacığı sorumlusu ayarlamak için kullanma gösterilmektedir.  
+ Aşağıdaki örnek, bir genel Principal nesnesinin nasıl oluşturulduğunu ve bir iş parçacığının asıl öğesini ayarlamak için nasıl kullanılacağını gösterir.  
   
  [!code-csharp[SetCurrentPrincipal#1](../../../samples/snippets/csharp/VS_Snippets_CLR/SetCurrentPrincipal/CS/program.cs#1)]
  [!code-vb[SetCurrentPrincipal#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/SetCurrentPrincipal/VB/program.vb#1)]  

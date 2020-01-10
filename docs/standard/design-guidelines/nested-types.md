@@ -10,40 +10,39 @@ helpviewer_keywords:
 - members [.NET Framework], type
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-author: KrzysztofCwalina
-ms.openlocfilehash: 22c14d05105154ff642cb8a44eda8e7c5d0575e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3467851aa767efcd0557e8a412cd36316a48b9b0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756877"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709159"
 ---
 # <a name="nested-types"></a>İç içe Geçmiş Türler
-İç içe türü kapsayan tür adlı başka bir tür kapsamında tanımlanan bir türdür. İç içe türü, kapsayan türdeki tüm üyelerine erişebilir. Örneğin, kapsayan türdeki ve protected olarak kapsayan türdeki tüm üst öğelerinden içinde tanımlanan alanların tanımlı özel alanlara erişimi vardır.  
+İç içe bir tür, kapsayan tür olarak adlandırılan başka bir türün kapsamı içinde tanımlanan bir türdür. İç içe bir tür, kapsayan türünün tüm üyelerine erişebilir. Örneğin, kapsayan tür ' de tanımlanan özel alanlara ve kapsayan türün tüm yokler ' de tanımlanan korumalı alanlara erişimi vardır.  
   
- Genel olarak, iç içe geçmiş türler kullanılmamalıdır. Bunun birkaç nedeni vardır. Bazı geliştiriciler kavramı ile tamamen tanıdık olmayan. Örneğin, bu geliştiricilerin iç içe geçmiş türlerinin değişkenleri bildirme söz dizimi ile ilgili sorunlar olabilir. İç içe geçmiş türler kapsayan türlerini de çok sıkı şekilde bağlı ve bu nedenle genel amaçlı türleri için uygun değildir.  
+ Genel olarak, iç içe türler gelişigüzel kullanılmalıdır. Bunun birçok nedeni vardır. Bazı geliştiriciler kavram ile tam olarak tanıdık değildir. Bu geliştiriciler Örneğin, iç içe geçmiş türlerin değişkenlerini bildirme söz dizimi ile ilgili sorunlarla karşılaşabilirsiniz. İç içe türler aynı zamanda kapsayan türleriyle çok sıkı bir şekilde bağlanmış ve bu nedenle genel amaçlı türler gibi uygun değildir.  
   
- İç içe geçmiş türler uygulama ayrıntılarını kapsayan türleri modellemek için uygundur. Son kullanıcı, iç içe türün değişkenler bildirmek nadiren olmalıdır ve neredeyse hiç açıkça iç içe geçmiş türler oluşturmak sahip olmalıdır. Örneğin, bir koleksiyonun Numaralandırıcı, koleksiyon iç içe geçmiş bir tür olabilir. Numaralandırıcılar genellikle kapsayan türü tarafından örneği oluşturulur ve birçok dilde foreach deyimi desteklediğinden, numaralandırıcı değişkenleri nadiren son kullanıcı tarafından bildirilmesi gerekir.  
+ İç içe türler, kapsayan türlerin modelleme uygulama ayrıntıları için idealdir. Son Kullanıcı nadiren iç içe bir türün değişkenlerini bildirmeli ve neredeyse asla iç içe geçmiş türleri örneklemek gerekmez. Örneğin, bir koleksiyonun numaralandırıcısı, o koleksiyonun iç içe bir türü olabilir. Numaralandırıcılar genellikle kapsayan türlerine göre örneklenmiştir ve birçok dil foreach ifadesini destekledikleri için, Numaralandırıcı değişkenlerinin Son Kullanıcı tarafından bildirilmelidir.  
   
  **✓ DO** üye erişilebilirlik semantiği istenen şekilde iç içe geçmiş tür ve dış türü arasındaki ilişkiyi olduğunda iç içe geçmiş türler kullanın.  
   
  **X DO NOT** kullanım ortak iç içe geçmiş türler, mantıksal bir gruplandırma olarak oluşturun; ad alanları için bunu kullanın.  
   
- **X AVOID** herkese açık şekilde iç içe geçmiş türler açık. Tek özel durumu, iç içe türün değişkenleri yalnızca sınıflara veya diğer gelişmiş özelleştirme senaryoları gibi nadir senaryolarda bildirilmelidir gerektiğinde olur.  
+ **X AVOID** herkese açık şekilde iç içe geçmiş türler açık. Bunun tek istisnası, iç içe türün değişkenlerinin yalnızca altsınıflama veya diğer gelişmiş özelleştirme senaryoları gibi nadir senaryolarda bildirilmesine ihtiyaç duymalıdır.  
   
  **X DO NOT** türü içeren türde dışında başvurulacak olasılığı olan iç içe geçmiş türler kullanın.  
   
- Örneğin, bir sınıfta tanımlanan yönteme geçirilen bir sabit listesi sınıfı iç içe geçmiş tür olarak tanımlanmamalıdır.  
+ Örneğin, bir sınıfta tanımlanan bir metoda geçirilen Enum, sınıfta iç içe geçmiş bir tür olarak tanımlanmamalıdır.  
   
- **X DO NOT** istemci kodu tarafından örneğinin oluşturulması gerekirse iç içe geçmiş türler kullanın.  Bir tür genel bir oluşturucusu varsa, bu yuvalanmış olmayabilir.  
+ **X DO NOT** istemci kodu tarafından örneğinin oluşturulması gerekirse iç içe geçmiş türler kullanın.  Bir türün ortak Oluşturucusu varsa, muhtemelen iç içe olmamalıdır.  
   
- Bir tür oluşturulabilir, kilitlersiniz türüne sahip bir yerde kendi framework belirtmek için (oluşturun, birlikte çalışmak ve dış türün kullanmadan yok) ve bu nedenle iç içe yerleştirilmiş. İç türleri değil yaygın olarak yeniden kullanılabilir dışında herhangi bir ilişkisi olmayan dış türün dış türe vermemektedir.  
+ Bir tür örneği oluşturulabilir, bu, türün kendi çerçevesinde bir yerde yer aldığı anlamına gelir (bunu oluşturabilir, onunla çalışabilir ve dış türü kullanmadan yok edebilir) ve bu nedenle iç içe geçmemelidir. İç türler, dış tür herhangi bir ilişki olmadan dış türün dışında yaygın olarak yeniden kullanılmamalıdır.  
   
- **X DO NOT** iç içe geçmiş tür bir arabirim üye olarak tanımlayın. Birçok dilde bu tür bir yapı desteklemez.  
+ **X DO NOT** iç içe geçmiş tür bir arabirim üye olarak tanımlayın. Birçok dil böyle bir yapıyı desteklemez.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

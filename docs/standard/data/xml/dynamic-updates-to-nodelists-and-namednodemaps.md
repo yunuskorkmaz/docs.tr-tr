@@ -3,17 +3,15 @@ title: NodeLists ve NamedNodeMaps Dinamik Güncelleştirmeleri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 76c511fd-6704-4ca4-8078-860a68d898ad
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9f56ba8711988f2f7d743dc4ff7b69272e2642a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58dfde94c2f37b0a09ee795b9df20296c9f86da6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934478"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710979"
 ---
 # <a name="dynamic-updates-to-nodelists-and-namednodemaps"></a>NodeLists ve NamedNodeMaps Dinamik Güncelleştirmeleri
-Çünkü **XmlNodeList** ve **XmlNamedNodeMap** XML belgesi belleğe yüklenir ve değiştirilmekte olduğundan, henüz bir dizi düğümü, içeren bildiren World Wide Web Consortium (W3C) bu nesneler dinamik olarak düğüm gereksinim kümesini içerir. Temel alınan belge değişirse, diğer bir deyişle, sonra bu iki nesne verileri de değiştirmeniz gerekir. Bu nedenle, varsa bir **XmlNodeList** (örneğin, X öğesi) belirli bir öğenin tüm alt öğelerini içeren ve ardından ek bir öğe, öğe Q, belgenin X öğesinin altına ekleyin. **XmlNodeList** o yeni öğe kendi koleksiyonuna eklediğiniz soru da olmalıdır. Aynı durum geçerlidir ters. Bir düğüm eklenirse **XmlNodeList**, temel alınan belge de güncelleştirilir.  
+**XmlNodeList** ve **XmlNamedNodeMap** bir düğüm kümesi içerdiğinden, XML belgesi belleğe yüklenmiş ve değiştirilmekte olduğundan, World Wide Web Konsorsiyumu (W3C) düğüm kümelerini içeren bu nesnelerin dinamik olması gerektiğini belirtir. Diğer bir deyişle, temeldeki belge değişirse, bu iki nesnelerdeki verilerin de değiştirilmesi gerekir. Bu nedenle, belirli bir öğenin tüm alt öğelerini içeren bir **XmlNodeList** varsa (örneğin, öğesi x), öğe x ' in altındaki belgeye, ek bir öğe olan soru-cevap ekleyin. **XmlNodeList** aynı zamanda koleksiyonuna yeni bir s öğesi eklenmiş olmalıdır. Aynı değer ters de geçerlidir. **XmlNodeList**nesnesine bir düğüm eklenirse, temel alınan belge de güncelleştirilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

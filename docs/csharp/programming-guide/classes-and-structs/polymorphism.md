@@ -1,17 +1,16 @@
 ---
 title: Çok biçimlilik- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: be075c358d9ca2c36b6d173fca983c16f6b0d78c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4f65082ad5094eb0aab28edeb06790a9af4019c6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970338"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714726"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Çok Biçimlilik (C# Programlama Kılavuzu)
 Çok biçimlilik, kapsülleme ve devralma sonrasında nesne odaklı programlama için genellikle üçüncü olarak adlandırılır. Çok biçimlilik, "çoktan şekillendirilmiş" anlamına gelen ve iki ayrı yönü bulunan bir Yunan kelimedir:  

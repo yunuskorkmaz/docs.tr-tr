@@ -1,24 +1,23 @@
 ---
 title: Geçersiz kılma ve yeni anahtar sözcüklerin ne zaman kullanılacağını C# bilme-Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: 00751cd8eac7979fe94d890ddeb7d13edb233f9e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0a209b9522202649765654013fdc3a468913c6b1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596478"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714786"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme (C# Programlama Kılavuzu)
 
-İçinde C#, türetilmiş bir sınıftaki bir yöntem, temel sınıftaki bir yöntemle aynı ada sahip olabilir. Yöntemlerinin [New](../../language-reference/keywords/new-modifier.md) ve [override](../../language-reference/keywords/override.md) anahtar sözcüklerini kullanarak nasıl etkileşime gireceğini belirtebilirsiniz. `virtual` `new` Değiştirici, temel sınıf yöntemini genişletir ve değiştirici, erişilebilir bir temel sınıf yöntemini gizler. `override` Fark, bu konudaki örneklerde gösterilmiştir.  
+İçinde C#, türetilmiş bir sınıftaki bir yöntem, temel sınıftaki bir yöntemle aynı ada sahip olabilir. Yöntemlerinin [New](../../language-reference/keywords/new-modifier.md) ve [override](../../language-reference/keywords/override.md) anahtar sözcüklerini kullanarak nasıl etkileşime gireceğini belirtebilirsiniz. `override` değiştirici temel sınıf `virtual` yöntemini *genişletir* ve `new` değiştiricisi erişilebilir bir temel sınıf yöntemini *gizler* . Fark, bu konudaki örneklerde gösterilmiştir.  
   
- Konsol uygulamasında, aşağıdaki iki sınıfı `BaseClass` bildirin ve. `DerivedClass` `DerivedClass`öğesinden `BaseClass`devralır.  
+ Konsol uygulamasında, `BaseClass` ve `DerivedClass`aşağıdaki iki sınıfı bildirin. `DerivedClass` `BaseClass`devralır.  
   
 ```csharp  
 class BaseClass  
@@ -38,15 +37,15 @@ class DerivedClass : BaseClass
 }  
 ```  
   
- Yönteminde, ve `bc` değişkenlerinibildirin.`bcdc` `dc` `Main`  
+ `Main` yönteminde, değişkenleri `bc`, `dc`ve `bcdc`bildirin.  
   
-- `bc`türündedir `BaseClass`ve değeri türündedir `BaseClass`.  
+- `bc` `BaseClass`türüdür ve değeri `BaseClass`türündedir.  
   
-- `dc`türündedir `DerivedClass`ve değeri türündedir `DerivedClass`.  
+- `dc` `DerivedClass`türüdür ve değeri `DerivedClass`türündedir.  
   
-- `bcdc`türündedir `BaseClass`ve değeri türündedir `DerivedClass`. Bu, dikkat edilmesi gereken değişkendir.  
+- `bcdc` `BaseClass`türüdür ve değeri `DerivedClass`türündedir. Bu, dikkat edilmesi gereken değişkendir.  
   
- Ve `bc` türüolduğundan`BaseClass`, atama kullanmadığınız müddetçe yalnızca doğrudan erişim `Method1`sağlayabilir. `bcdc` Değişken `dc` , `Method1` ve ' `Method2`a erişebilir. Bu ilişkiler aşağıdaki kodda gösterilmiştir.  
+ `bc` ve `bcdc` tür `BaseClass`olduğundan, atama kullanmadığınız müddetçe yalnızca `Method1`doğrudan erişim sağlayabilir. Değişken `dc`, hem `Method1` hem de `Method2`erişebilir. Bu ilişkiler aşağıdaki kodda gösterilmiştir.  
   
 ```csharp  
 class Program  
@@ -70,7 +69,7 @@ class Program
 }  
 ```  
   
- Ardından, aşağıdaki `Method2` yöntemi öğesine `BaseClass`ekleyin. Bu yöntemin imzası içindeki `Method2` `DerivedClass`yönteminin imzasıyla eşleşir.  
+ Sonra, `BaseClass`için aşağıdaki `Method2` yöntemi ekleyin. Bu yöntemin imzası, `DerivedClass``Method2` yönteminin imzasıyla eşleşir.  
   
 ```csharp  
 public void Method2()  
@@ -79,7 +78,7 @@ public void Method2()
 }  
 ```  
   
- Artık `BaseClass` bir `BaseClass` `bc` `bcdc`yöntemi olduğundan, aşağıdaki kodda gösterildiği gibi, değişkenler için ikinci bir çağırma açıklaması eklenebilir. `Method2`  
+ `BaseClass` artık `Method2` bir yöntemi olduğundan, aşağıdaki kodda gösterildiği gibi `BaseClass` değişkenleri `bc` ve `bcdc`için ikinci bir çağrı ekstresi eklenebilir.  
   
 ```csharp  
 bc.Method1();  
@@ -90,9 +89,9 @@ bcdc.Method1();
 bcdc.Method2();  
 ```  
   
- Projeyi derlediğinizde, içinde `Method2` `BaseClass` yönteminin eklenmesi bir uyarıya neden olur. Uyarı, içindeki `DerivedClass` yönteminin içindeki `Method2` `Method2` yöntemigizlediğinibelirtir`BaseClass`. Bu sonuca neden olmak istiyorsanız, `new` `Method2` tanımda anahtar sözcüğünü kullanmanız önerilir. Alternatif olarak, uyarıyı çözümlemek için `Method2` yöntemlerden birini yeniden adlandırabilirsiniz, ancak her zaman pratik değildir.  
+ Projeyi derlediğinizde `Method2` yönteminin `BaseClass` bir uyarıya neden olduğunu görürsünüz. Uyarı, `DerivedClass` `Method2` yönteminin `BaseClass``Method2` yöntemini gizlediğini belirtir. Bu sonuca neden olmak istiyorsanız `Method2` tanımında `new` anahtar sözcüğünü kullanmanız önerilir. Alternatif olarak, uyarıyı çözümlemek için `Method2` yöntemlerinden birini yeniden adlandırabilirsiniz, ancak bu her zaman pratik değildir.  
   
- Eklemeden `new`önce, ek çağırma deyimleri tarafından üretilen çıktıyı görmek için programı çalıştırın. Aşağıdaki sonuçlar görüntülenir.  
+ `new`eklemeden önce, ek çağırma deyimleri tarafından üretilen çıktıyı görmek için programı çalıştırın. Aşağıdaki sonuçlar görüntülenir.  
   
 ```csharp  
 // Output:  
@@ -104,9 +103,9 @@ bcdc.Method2();
 // Base - Method2  
 ```  
   
- `new` Anahtar sözcüğü, bu çıktıyı üreten ilişkileri korur, ancak uyarıyı bastırır. Türüne `BaseClass` sahip değişkenler `BaseClass`, üyelerine erişmeye devam eder ve türüne `DerivedClass` sahip olan değişken ilk olarak `DerivedClass` üyelere erişmeye devam eder ve öğesinden `BaseClass`devralınan üyeleri göz önünde bulundurun.  
+ `new` anahtar sözcüğü, bu çıktıyı üreten ilişkileri korur, ancak uyarıyı bastırır. Türü `BaseClass` olan değişkenler `BaseClass`üyelerine erişmeye devam eder ve tür `DerivedClass` olan değişken, önce `DerivedClass` üyelere erişmeye devam eder ve ardından `BaseClass`devralınmış üyeleri göz önüne alın.  
   
- Uyarıyı bastırmak için, aşağıdaki kodda gösterildiği `new` gibi değiştiricisini `Method2` içindeki `DerivedClass`tanımına ekleyin. Değiştirici veya `public`daha önce eklenebilir.  
+ Uyarıyı bastırmak için, aşağıdaki kodda gösterildiği gibi `new` değiştiricisini `DerivedClass``Method2` tanımına ekleyin. Değiştirici, `public`önce veya sonra eklenebilir.  
   
 ```csharp  
 public new void Method2()  
@@ -115,9 +114,9 @@ public new void Method2()
 }  
 ```  
   
- Çıktının değiştirilmediğini doğrulamak için programı yeniden çalıştırın. Ayrıca uyarının artık göründüğünü doğrulayın. Kullanarak `new`, değiştirdiği üyenin, temel sınıftan devralınan bir üyeyi gizlediğini fark edersiniz. Devralma yoluyla ad gizleme hakkında daha fazla bilgi için bkz. [Yeni değiştirici](../../language-reference/keywords/new-modifier.md).  
+ Çıktının değiştirilmediğini doğrulamak için programı yeniden çalıştırın. Ayrıca uyarının artık göründüğünü doğrulayın. `new`kullanarak, değiştirdiği üyenin, temel sınıftan devralınan bir üyeyi gizlediğini unutmayın. Devralma yoluyla ad gizleme hakkında daha fazla bilgi için bkz. [Yeni değiştirici](../../language-reference/keywords/new-modifier.md).  
   
- Bu davranışı kullanmanın `override`etkilerine karşı tersine geçmek için aşağıdaki yöntemi öğesine `DerivedClass`ekleyin. Değiştirici veya daha önce eklenebilir. `public` `override`  
+ Bu davranışı `override`kullanmanın etkilerinin aksine, `DerivedClass`için aşağıdaki yöntemi ekleyin. `override` değiştiricisi `public`önce veya sonra eklenebilir.  
   
 ```csharp  
 public override void Method1()  
@@ -126,7 +125,7 @@ public override void Method1()
 }  
 ```  
   
- `virtual` Değiştiricisini`Method1` içindeki tanımına`BaseClass`ekleyin. Değiştirici veya daha önce eklenebilir. `public` `virtual`  
+ `virtual` değiştiricisini `BaseClass``Method1` tanımına ekleyin. `virtual` değiştiricisi `public`önce veya sonra eklenebilir.  
   
 ```csharp  
 public virtual void Method1()  
@@ -135,7 +134,7 @@ public virtual void Method1()
 }  
 ```  
   
- Projeyi yeniden çalıştırın. Özellikle aşağıdaki Çıktının son iki satırını görürsünüz.  
+ Projeyi tekrar çalıştırın. Özellikle aşağıdaki Çıktının son iki satırını görürsünüz.  
   
 ```csharp  
 // Output:  
@@ -147,7 +146,7 @@ public virtual void Method1()
 // Base - Method2  
 ```  
   
- `override` Değiştiricinin kullanımı, içinde `bcdc` `Method1` tanımlanan`DerivedClass`yönteme erişim sağlar. Genellikle, devralma hiyerarşilerindeki istenen davranıştır. Türetilmiş sınıftan oluşturulan değerlere sahip nesnelerin türetilmiş sınıfta tanımlanan yöntemleri kullanmasını istiyorsunuz. Temel sınıf yöntemini genişletmek için bu `override` davranışı kullanarak elde edersiniz.  
+ `override` değiştiricisinin kullanımı, `bcdc` `DerivedClass`tanımlanmış `Method1` yöntemine erişmesini sağlar. Genellikle, devralma hiyerarşilerindeki istenen davranıştır. Türetilmiş sınıftan oluşturulan değerlere sahip nesnelerin türetilmiş sınıfta tanımlanan yöntemleri kullanmasını istiyorsunuz. Temel sınıf yöntemini genişletmek için `override` kullanarak bu davranışı elde edersiniz.  
   
  Aşağıdaki kod tam örneği içerir.  
   
@@ -219,7 +218,7 @@ namespace OverrideAndNew
 }  
 ```  
   
- Aşağıdaki örnek farklı bağlamdaki benzer davranışı gösterir. Örnek üç sınıfı tanımlar: adlı `Car` bir temel sınıf ve ondan türetilmiş `ConvertibleCar` iki sınıf ve `Minivan`. Temel sınıf bir `DescribeCar` yöntemi içerir. Yöntemi, bir araba için temel bir açıklama görüntüler ve daha sonra ek `ShowDetails` bilgi sağlamak için çağırır. Üç sınıfın her biri bir `ShowDetails` yöntemi tanımlar. Değiştirici sınıfında tanımlamak `ShowDetails` için kullanılır. `ConvertibleCar` `new` Değiştirici sınıfında tanımlamak `ShowDetails` için kullanılır. `Minivan` `override`  
+ Aşağıdaki örnek farklı bağlamdaki benzer davranışı gösterir. Örnek üç sınıfı tanımlar: `Car` adlı bir temel sınıf ve bundan türetilmiş iki sınıf, `ConvertibleCar` ve `Minivan`. Temel sınıf bir `DescribeCar` yöntemi içerir. Yöntemi, bir araba için temel bir açıklama görüntüler ve daha sonra ek bilgi sağlamak için `ShowDetails` çağırır. Üç sınıfın her biri bir `ShowDetails` yöntemi tanımlar. `new` değiştiricisi `ConvertibleCar` sınıfında `ShowDetails` tanımlamak için kullanılır. `override` değiştiricisi `Minivan` sınıfında `ShowDetails` tanımlamak için kullanılır.  
   
 ```csharp  
 // Define the base class, Car. The class defines two methods,  
@@ -263,7 +262,7 @@ class Minivan : Car
 }  
 ```  
   
- Örnek, hangi sürümünün `ShowDetails` çağrıldığını sınar. Aşağıdaki yöntem `TestCars1`, her sınıfın bir örneğini bildirir ve ardından her bir örnek üzerinde çağırır `DescribeCar` .  
+ Örnek, hangi `ShowDetails` sürümünün çağrıldığını sınar. Aşağıdaki yöntem `TestCars1`, her sınıfın bir örneğini bildirir ve sonra her bir örnekteki `DescribeCar` çağırır.  
   
 ```csharp  
 public static void TestCars1()  
@@ -289,7 +288,7 @@ public static void TestCars1()
 }  
 ```  
   
- `TestCars1`Aşağıdaki çıktıyı üretir. Özellikle, beklendikleriniz `car2`olmayan büyük olasılıkla için sonuçları görebilirsiniz. `ConvertibleCar`Nesnenin `new` türü, `DescribeCar` ancak bu yöntem değiştirici değil `ShowDetails` `ConvertibleCar` değiştiriciylebildirildiğiiçinsınıfındatanımlanan`override` sürümüne erişmez. Sonuç olarak, `ConvertibleCar` bir nesnesi bir `Car` nesneyle aynı açıklamayı görüntüler. `car3` Bir`Minivan` nesnesi olan için sonuçlarını kontrast. Bu `ShowDetails` durumda, `Minivan` sınıfında belirtilen yöntem, `Car` sınıfında belirtilen `ShowDetails` yöntemi geçersiz kılar ve görüntülenen açıklama bir mini Van 'yi tanımlar.  
+ `TestCars1` aşağıdaki çıktıyı üretir. Büyük olasılıkla beklendikleriniz olmayan `car2`için sonuçlara dikkat edin. Nesnenin türü `ConvertibleCar`, ancak bu yöntem `new` değiştiricisiyle değil `override` değiştiriciyle bildirildiği için, `DescribeCar` `ConvertibleCar` sınıfında tanımlanan `ShowDetails` sürümüne erişemez. Sonuç olarak, bir `ConvertibleCar` nesnesi aynı açıklamayı bir `Car` nesnesi ile görüntüler. Bir `Minivan` nesnesi olan `car3`için sonuçları kontrast. Bu durumda, `Minivan` sınıfında belirtilen `ShowDetails` yöntemi `Car` sınıfında belirtilen `ShowDetails` yöntemini geçersiz kılar ve görüntülenen açıklama bir mini Van 'yi tanımlar.  
   
 ```csharp  
 // TestCars1  
@@ -305,7 +304,7 @@ public static void TestCars1()
 // ----------  
 ```  
   
- `TestCars2`türü `Car`olan nesnelerin bir listesini oluşturur. Nesnelerin değerleri `Car`, `ConvertibleCar`, ve `Minivan` sınıflarından oluşturulur. `DescribeCar`, listedeki her öğe için çağrılır. Aşağıdaki kod tanımını `TestCars2`gösterir.  
+ `TestCars2`, `Car`türüne sahip nesnelerin bir listesini oluşturur. Nesnelerin değerleri `Car`, `ConvertibleCar`ve `Minivan` sınıflarından oluşturulur. `DescribeCar`, listedeki her öğe için çağrılır. Aşağıdaki kod `TestCars2`tanımını gösterir.  
   
 ```csharp  
 public static void TestCars2()  
@@ -324,7 +323,7 @@ public static void TestCars2()
 }  
 ```  
   
- Aşağıdaki çıktı görüntülenir. Bunun, tarafından `TestCars1`görüntülenen çıktıyla aynı olduğuna dikkat edin. `ShowDetails` `Car`Sınıfının yöntemi `TestCars2`, nesne `ConvertibleCar`türünün ' de olduğu gibi, veya ' de olduğu gibi çağrılmaz. `TestCars1` `ConvertibleCar` Buna karşılık `car3` , tür `ShowDetails` `Minivan` veyatür`Car`içerip içermediğini her iki durumda da sınıfından yöntemini çağırır. `Minivan`  
+ Aşağıdaki çıktı görüntülenir. `TestCars1`tarafından görüntülenen çıktıyla aynı olduğuna dikkat edin. `ConvertibleCar` sınıfının `ShowDetails` yöntemi, nesnenin türünün `TestCars1`veya `Car`gibi `TestCars2`gibi `ConvertibleCar`olmasına bakılmaksızın çağrılmaz. Buna karşılık `car3`, `ShowDetails` yöntemini her iki durumda da `Minivan` sınıfından çağırır `Minivan` veya `Car`yazın.  
   
 ```csharp  
 // TestCars2  
@@ -340,7 +339,7 @@ public static void TestCars2()
 // ----------  
 ```  
   
- Yöntemini `TestCars3` doldurun `TestCars4` ve örnek. Bu yöntemler, `ShowDetails` önce türü `ConvertibleCar` ve `Minivan` (`TestCars3`) olan olarak belirtilen nesnelerden, daha sonra türü `Car` (`TestCars4`) olan olarak belirtilen nesnelerden doğrudan çağrı yapılır. Aşağıdaki kod bu iki yöntemi tanımlar.  
+ Yöntemler `TestCars3` ve `TestCars4` örneğini tamamlar. Bu yöntemler, öncelikle tür `ConvertibleCar` ve `Minivan` (`TestCars3`) sahip olduğu belirtilen nesnelerden, daha sonra tür `Car` (`TestCars4`) sahip olarak belirtilen nesnelerden `ShowDetails`. Aşağıdaki kod bu iki yöntemi tanımlar.  
   
 ```csharp  
 public static void TestCars3()  

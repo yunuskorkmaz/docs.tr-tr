@@ -1,6 +1,5 @@
 ---
 title: <permission> - C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - permission
@@ -9,14 +8,14 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 454928d5dfd023639bc68f194f2f5ec9e2d7dc22
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 67e9d398d1bb43d480f8ca56733106e0f0a22731
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523386"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696577"
 ---
-# <a name="permission-c-programming-guide"></a>\<permission > (C# Programlama Kılavuzu)
+# <a name="permission-c-programming-guide"></a>\<izin > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -27,13 +26,13 @@ ms.locfileid: "72523386"
  cref = "`member`"  
  Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında kurallı öğe adına `member` çevirir. *üye* çift tırnak işareti ("") içinde yer almalıdır.  
   
- Genel bir türe cref başvurusu oluşturma hakkında bilgi için bkz. [\<see >](./see.md).  
+ Genel bir türe cref başvurusu oluşturma hakkında daha fazla bilgi için bkz. [\<](./see.md).  
   
  `description`  
  Üyeye erişim açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0permission > etiketi bir üyenin erişimini belgelemenizi sağlar. @No__t_0 sınıfı, bir üyeye erişim belirtmenize olanak tanır.  
+ \<izin > etiketi bir üyenin erişimini belgelemenizi sağlar. <xref:System.Security.PermissionSet> sınıfı, bir üyeye erişim belirtmenize olanak tanır.  
   
  Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   

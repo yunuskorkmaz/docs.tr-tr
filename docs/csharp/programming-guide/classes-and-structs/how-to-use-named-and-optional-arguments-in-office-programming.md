@@ -1,18 +1,17 @@
 ---
 title: Office programlama- C# programlama kılavuzunda adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - named and optional arguments [C#], Office programming
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: d7efd13f26912f8cd944bcbc5568e9bbca92c3a0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 36b5c8b49404606c8240d24953c3677d5612d30e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970500"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714869"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma (C# Programlama Kılavuzu)
 
@@ -26,7 +25,7 @@ Bu yordamları gerçekleştirmek için bilgisayarınızda Microsoft Office Word 
 
 ## <a name="to-create-a-new-console-application"></a>Yeni bir konsol uygulaması oluşturmak için
 
-1. Visual Studio 'Yu başlatın.
+1. Visual Studio’yu çalıştırın.
 
 2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 
@@ -38,7 +37,7 @@ Bu yordamları gerçekleştirmek için bilgisayarınızda Microsoft Office Word 
 
 6. **Ad** alanına projeniz için bir ad yazın.
 
-7. **Tamam**'a tıklayın.
+7. **Tamam**'ı tıklatın.
 
      Yeni proje **Çözüm Gezgini**görüntülenir.
 
@@ -48,7 +47,7 @@ Bu yordamları gerçekleştirmek için bilgisayarınızda Microsoft Office Word 
 
 2. **.Net** sayfasında, **bileşen adı** listesinde **Microsoft. Office. Interop. Word** öğesini seçin.
 
-3. **Tamam**'a tıklayın.
+3. **Tamam**'ı tıklatın.
 
 ## <a name="to-add-necessary-using-directives"></a>Gerekli yönergeleri kullanarak ekleme
 

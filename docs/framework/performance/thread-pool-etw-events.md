@@ -5,14 +5,12 @@ helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8f1c92154fe62b1b6ba6981606680daf37d087f4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e1deb17dfdfea4c8b66eb8d836a10bf888727e1a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974858"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715894"
 ---
 # <a name="thread-pool-etw-events"></a>İş Parçacığı Havuzu ETW Olayları
 Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.  
@@ -44,7 +42,7 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |ActiveWorkerThreadCount|Win: UInt32|İşleri işlemek için kullanılabilen çalışan iş parçacığı sayısı, zaten işleme işleri de dahil olmak üzere.|  
 |RetiredWorkerThreadCount|Win: UInt32|Çalışmayı işlemek için kullanılamayan, ancak daha sonra ayrılan iş parçacığı sayısı daha sonra daha fazla iş parçacığı olması gerekir.|  
@@ -68,9 +66,9 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Trafiği|Win: Double|Zaman birimi başına tamamlama sayısı.|  
+|Aktarım hızı|Win: Double|Zaman birimi başına tamamlama sayısı.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>Threadpoolworkerthreadadyatmentadde  
@@ -88,7 +86,7 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |Averageüretilen Iş|Win: Double|Ölçüm örneğinin ortalama performansı.|  
 |NewWorkerThreadCount|Win: UInt32|Yeni etkin çalışan iş parçacığı sayısı.|  
@@ -110,16 +108,16 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|sürenin|Win: Double|Bu istatistiklerin toplandığı sürenin saniye cinsinden miktarı.|  
-|Trafiği|Win: Double|Bu Aralık sırasında saniye başına ortalama tamamlama sayısı.|  
-|ThreadWave|Win: Double|Dahili kullanım için ayrılmıştır.|  
-|ThroughputWave|Win: Double|Dahili kullanım için ayrılmıştır.|  
-|ThroughputErrorEstimate|Win: Double|Dahili kullanım için ayrılmıştır.|  
-|AverageThroughputErrorEstimate|Win: Double|Dahili kullanım için ayrılmıştır.|  
+|Duration|Win: Double|Bu istatistiklerin toplandığı sürenin saniye cinsinden miktarı.|  
+|Aktarım hızı|Win: Double|Bu Aralık sırasında saniye başına ortalama tamamlama sayısı.|  
+|ThreadWave|Win: Double|İç kullanım için ayrılmış.|  
+|ThroughputWave|Win: Double|İç kullanım için ayrılmış.|  
+|ThroughputErrorEstimate|Win: Double|İç kullanım için ayrılmış.|  
+|AverageThroughputErrorEstimate|Win: Double|İç kullanım için ayrılmış.|  
 |ThroughputRatio|Win: Double|Bu zaman aralığı boyunca etkin çalışan iş parçacığı sayısında değişimler nedeniyle üretilen iş akışındaki göreli geliştirme.|  
-|likli|Win: Double|ThroughputRatio alanının geçerlilik süresinin ölçüsü.|  
+|Güven|Win: Double|ThroughputRatio alanının geçerlilik süresinin ölçüsü.|  
 |NewcontrolSetting|Win: Double|Etkin iş parçacığı sayısında gelecekteki Çeşitlemeler için temel olarak görev yapacak etkin çalışan iş parçacıklarının sayısı.|  
 |Newthreadwavebüyüklük|Win: UInt16|Etkin iş parçacığı sayısı ' nda gelecekteki varyasyonların büyüklüğü.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
@@ -142,9 +140,9 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Biriktirme|Win: UInt64|Yeni oluşturulan iş parçacığı dahil olmak üzere g/ç iş parçacıklarının sayısı.|  
+|Count|Win: UInt64|Yeni oluşturulan iş parçacığı dahil olmak üzere g/ç iş parçacıklarının sayısı.|  
 |Numemekli|Win: UInt64|Kullanımdan kaldırılan çalışan iş parçacıklarının sayısı.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
@@ -163,9 +161,9 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Biriktirme|Win: UInt64|İş parçacığı havuzunda kalan g/ç iş parçacığı sayısı.|  
+|Count|Win: UInt64|İş parçacığı havuzunda kalan g/ç iş parçacığı sayısı.|  
 |Numemekli|Win: UInt64|Kullanımdan kaldırılan g/ç iş parçacığı sayısı.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
@@ -184,9 +182,9 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Biriktirme|Win: UInt64|Bu dahil iş parçacığı havuzundaki g/ç iş parçacıklarının sayısı.|  
+|Count|Win: UInt64|Bu dahil iş parçacığı havuzundaki g/ç iş parçacıklarının sayısı.|  
 |Numemekli|Win: UInt64|Kullanımdan kaldırılan g/ç iş parçacığı sayısı.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
@@ -205,9 +203,9 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Biriktirme|Win: UInt64|İş parçacığı havuzunda kalan g/ç iş parçacığı sayısı.|  
+|Count|Win: UInt64|İş parçacığı havuzunda kalan g/ç iş parçacığı sayısı.|  
 |Numemekli|Win: UInt64|Kullanımdan kaldırılan g/ç iş parçacığı sayısı.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   

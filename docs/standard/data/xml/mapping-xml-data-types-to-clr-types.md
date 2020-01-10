@@ -3,21 +3,19 @@ title: XML Veri Türlerini CLR Türleriyle Eşleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 48ec3a5b719b05112b257871f64a34f2bc21eeab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 536c8dcd03d98879e24ae62d2b8a47e36564aaf6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650186"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710667"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>XML Veri Türlerini CLR Türleriyle Eşleme
 
-Aşağıdaki tablo, XML veri türleri ve ortak dil çalışma zamanı (CLR) türleri arasında Varsayılan eşleme açıklar.
+Aşağıdaki tabloda, XML veri türleri ve ortak dil çalışma zamanı (CLR) türleri arasındaki varsayılan eşleme açıklanmaktadır.
 
 > [!NOTE]
-> `xs` Ve `xdt` önekleri eşleştirilmiş <https://www.w3.org/2001/XMLSchema> ve <https://www.w3.org/2003/05/xpath-datatypes> ad alanı URI sırasıyla.
+> `xs` ve `xdt` önekleri, sırasıyla <https://www.w3.org/2001/XMLSchema> ve <https://www.w3.org/2003/05/xpath-datatypes> ad alanı URI 'Leri ile eşleştirilir.
 
 |XML türü|CLR türü|
 |--------------|--------------|
@@ -73,10 +71,10 @@ Aşağıdaki tablo, XML veri türleri ve ortak dil çalışma zamanı (CLR) tür
 |Belge düğümü|<xref:System.Xml.XPath.XPathNavigator>|
 |Öğe düğümü|<xref:System.Xml.XPath.XPathNavigator>|
 |Öznitelik düğümü|<xref:System.Xml.XPath.XPathNavigator>|
-|Namespace düğümü|<xref:System.Xml.XPath.XPathNavigator>|
+|Ad alanı düğümü|<xref:System.Xml.XPath.XPathNavigator>|
 |Metin düğümü|<xref:System.Xml.XPath.XPathNavigator>|
 |Açıklama düğümü|<xref:System.Xml.XPath.XPathNavigator>|
-|İşlem yönergesi düğümü|<xref:System.Xml.XPath.XPathNavigator>|
+|Yönerge düğümü işleniyor|<xref:System.Xml.XPath.XPathNavigator>|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

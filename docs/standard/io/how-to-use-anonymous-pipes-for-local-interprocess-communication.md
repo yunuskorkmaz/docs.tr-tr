@@ -13,14 +13,12 @@ helpviewer_keywords:
 - one-way communication [.NET Framework]
 - local computer communication [.NET Framework], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 810b29b4abde174e3634a03d5c7b5e0e43de11b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16018be820951a2739d602edb99845eb89495d5e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947179"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706653"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Nasıl yapılır: Yerel İşlemler Arası İletişim için Anonim Kanallar Kullanma
 Anonim kanallar, yerel bir bilgisayarda işlemler arası iletişim sağlar. Adlandırılmış kanallardan daha az işlevsellik sağlarlar, ancak daha az yük gerektirirler. Yerel bir bilgisayarda işlemler arası iletişimi kolaylaştırmak için anonim kanalları kullanabilirsiniz. Bir ağ üzerinden iletişim için anonim kanalları kullanamazsınız.  
@@ -48,4 +46,4 @@ Anonim kanallar, yerel bir bilgisayarda işlemler arası iletişim sağlar. Adla
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kanallar](../../../docs/standard/io/pipe-operations.md)
-- [Nasıl yapılır: Ağ işlemler arası iletişimi için adlandırılmış kanallar kullanma](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [Nasıl yapılır: Ağ İşlemler Arası İletişimi için Adlandırılmış Kanallar Kullanma](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

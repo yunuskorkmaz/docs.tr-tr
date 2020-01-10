@@ -5,14 +5,12 @@ helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975507"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716003"
 ---
 # <a name="jit-tracing-etw-events"></a>ETW Olaylarını JIT İzleme
 Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının başarısı veya başarısızlığı ile ilgili bilgiler toplar.
@@ -34,7 +32,7 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|Win: UnicodeString|Derlenmekte olan metodun ad alanı.|  
 |MethodBeingCompiledName|Win: UnicodeString|Derlenmekte olan yöntemin adı.|  
@@ -64,7 +62,7 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|Win: UnicodeString|Derlenmekte olan metodun ad alanı.|  
 |MethodBeingCompiledName|Win: UnicodeString|Derlenen yöntemin adı.|  
@@ -94,7 +92,7 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|Win: UnicodeString|Derlenmekte olan metodun ad alanı.|  
 |MethodBeingCompiledName|Win: UnicodeString|Derlenmekte olan yöntemin adı.|  
@@ -124,7 +122,7 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|Win: UnicodeString|Derlenmekte olan metodun ad alanı.|  
 |MethodBeingCompiledName|Win: UnicodeString|Derlenmekte olan yöntemin adı.|  

@@ -1,16 +1,14 @@
 ---
 title: .NET Framework Windows 10 ' a yükler
 description: .NET Framework Windows 10 veya Windows Server 2016 ' e yüklemeyi öğrenin.
-author: rlander
-ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0de48e14f11d3763ee239b28b40bdb809dbeb433
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: c2b274bb85b6d4c496e7b6b6b62f05aa932202dd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853946"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716374"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 ve Windows Server 2016 ve sonraki sürümlere .NET Framework yüklemesini
 
@@ -27,7 +25,7 @@ Bir uygulamayı çalıştırmayı ve makinenizde aşağıdakine benzer bir ileti
 - [Windows 10 Mayıs 2019 güncelleştirmesi](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 > [!div class="button"]
-> [4,8 .NET Framework indirin](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [.NET Framework 4.8'i İndirin](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 [.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48) , 4.7.2 aracılığıyla 4,0 .NET Framework için oluşturulan uygulamaları çalıştırmak için kullanılabilir.
 
@@ -56,7 +54,7 @@ Windows 10 1507 veya 1511 kullanıyorsanız ve .NET Framework 4,8 ' i yüklemek 
 
 .NET Framework 4.6.2, 4.6.2 aracılığıyla 4,0 .NET Framework oluşturulan uygulamaları destekler.
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 [Windows 10 ' a .NET Framework 3,5 '](dotnet-35-windows-10.md)ü yüklemek için yönergeleri izleyin.
 
@@ -74,7 +72,7 @@ Windows 10 1507 veya 1511 kullanıyorsanız ve .NET Framework 4,8 ' i yüklemek 
 
 İndirileceği .NET Framework tüm sürümlerinin bir listesi için bkz. [.net İndirmeleri](https://dotnet.microsoft.com/download) sayfası.
 
-## <a name="help"></a>Help
+## <a name="help"></a>Yardım
 
 .NET Framework yüklü olan doğru sürümü alamazsanız, [Yardım Için Microsoft 'a başvurabilirsiniz](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).
 

@@ -6,17 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4a6597a3a57cd68c4dd17c4fbae882590f373709
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e6b811d58ef9d98c51e9a45a46a1965c4fa12b55
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669153"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711122"
 ---
 # <a name="changing-namespace-prefix-properties"></a>Ad Alanı Ön Ek Özelliklerini Değiştirme
-**XmlNode** sınıfı belirli bir düğümle ilişkili ad alanı öneki değiştirmenize izin verir. Örneğin, aşağıdaki kod, değişmekte olan bir öğenin ön ek gösterir.  
+**XMLNode** sınıfı, belirli bir düğümle ilişkili ad alanı önekini değiştirmenize izin verir. Örneğin, aşağıdaki kod değiştirilmekte olan bir öğenin önekini gösterir.  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -40,7 +38,7 @@ Console.WriteLine(doc.InnerXml);
 <b:test xmlns:a="123" xmlns:b="456" />  
 ```  
   
- Bir düğümün önek değiştirme, ad alanı değiştirmez. Ad alanı, yalnızca düğüm oluşturulduğunda ayarlanabilir. Ağaç kalıcı, yeni ad alanı öznitelikleri kullanıma ayarladığınız ön ekini karşılamak için kalıcı. Yeni ad alanı oluşturulamazsa önek yerel adı ve ad alanı düğümü korur şekilde değiştirilir. Aşağıdaki örnek, eklenen bir ad alanı özniteliği gösterir.  
+ Bir düğümün önekini değiştirmek, ad alanını değiştirmez. Ad alanı yalnızca düğüm oluşturulduğunda ayarlanabilir. Ağacı kalıcı hale getirdikten sonra, ayarladığınız ön eki karşılamak için yeni ad alanı öznitelikleri kalıcı olabilir. Yeni ad alanı oluşturuoluşturulamadığı takdirde, düğüm yerel adını ve ad alanını koruyabilmesi için önek değişir. Aşağıdaki örnekte, eklenmekte olan bir ad alanı özniteliği gösterilmektedir.  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -64,7 +62,7 @@ Console.WriteLine(doc.InnerXml);
 <a:test xmlns="123" xmlns:a="123" />  
 ```  
   
- Ne zaman ağaç kalıcı bir dizeye çağrısının sonucunda **belge. Sınıfının InnerXml**, `xmlns:a='123'` öznitelik ad alanı korumak için eklenen `test` öğesi. Bu `'123'`, ve onu kaldığını `'123'`.  
+ Ağaç, belge çağrısının bir sonucu olarak bir dizeye kalıcı yapıldığında **. InnerXml**, `test` öğesinin ad alanını korumak için `xmlns:a='123'` özniteliği eklenmiştir. `'123'`ve `'123'`kaldı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

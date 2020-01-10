@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d534553fcc6ee63d560e731a535d44c3acd1a214
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5f670fa5e83d1802496c0cc6972a7e3af7cae374
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347905"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709653"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>XslTransform Sınıfı ile XSLT Dönüşümleri
 
@@ -22,7 +20,7 @@ ms.locfileid: "74347905"
 
 XSLT 'nin amacı, bir kaynak XML belgesinin içeriğini biçim veya yapıda farklı bir belgeye dönüştürmektir (örneğin, XML 'i bir Web sitesinde kullanılmak üzere veya yalnızca gerekli alanları içeren bir belgeye dönüştürmek için). y bir uygulama). Bu dönüştürme işlemi World Wide Web Konsorsiyumu (W3C)[XSLT sürüm 1,0 önerisi](https://www.w3.org/TR/1999/REC-xslt-19991116)tarafından belirtilir. .NET Framework, <xref:System.Xml.Xsl> ad alanında bulunan <xref:System.Xml.Xsl.XslTransform> sınıfı, bu belirtimin işlevlerini uygulayan XSLT işlemcisidir. [Bir XslTransform çıktılarında](outputs-from-an-xsltransform.md)LISTELENEN W3C XSLT 1,0 önerinden uygulanmayan az sayıda özellik vardır. Aşağıdaki şekilde .NET Framework dönüştürme mimarisi gösterilmektedir.
 
-## <a name="overview"></a>Genel Bakış
+## <a name="overview"></a>Genel bakış
 
 ![XSLT dönüştürme mimarisini gösteren diyagram.](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif) 
 

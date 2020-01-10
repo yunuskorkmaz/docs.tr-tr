@@ -14,117 +14,117 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: d24e7ad22eeebfb1c129306451aefbd393a9d087
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ef59631663e6cf1c98adfed77a2dbdb6ca124fa1
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615807"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636035"
 ---
 # <a name="animation-tips-and-tricks"></a>Animasyon İpuçları ve Püf Noktaları
-İçinde animasyon ile çalışırken [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], birkaç ipucu vardır ve animasyonlarınızın püf noktaları daha iyi performans ve yükünden kurtarın.  
+WPF 'de animasyonlarla çalışırken, animasyonlarınızın daha iyi bir şekilde çalışmasını ve sizi daha da gerçekleştirmenizi sağlayan çeşitli ipuçları ve püf noktaları vardır.  
   
 <a name="generalissuessection"></a>   
-## <a name="general-issues"></a>Genel sorunlar  
+## <a name="general-issues"></a>Genel Sorunlar  
   
-### <a name="animating-the-position-of-a-scroll-bar-or-slider-freezes-it"></a>Bir kaydırma çubuğunun konumuna animasyon ekleme veya kaydırıcı donuyor  
- Bir kaydırma çubuğuna ya da olan bir animasyon kullanarak kaydırıcı konumunu hareketlendirirseniz bir <xref:System.Windows.Media.Animation.FillBehavior> , <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd> (varsayılan değer), kullanıcı artık kaydırma çubuğu veya kaydırıcıyı mümkün olacaktır. Animasyon sona erse bile hedef özelliğin temel değerin hala geçersiz kılma olmasıdır. Özelliğin geçerli değerini geçersiz kılmasını animasyon durdurmak için kaldırın veya ona bir <xref:System.Windows.Media.Animation.FillBehavior> , <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Daha fazla bilgi ve örnek için bkz. [bir özellik sonra animasyon film şeridi ile ayarlayın](how-to-set-a-property-after-animating-it-with-a-storyboard.md).  
+### <a name="animating-the-position-of-a-scroll-bar-or-slider-freezes-it"></a>Bir kaydırma çubuğunun veya kaydırıcının konumunu hareketlendirmek bunu dondurur  
+ Bir kaydırma çubuğunun veya kaydırıcının konumunu <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd> <xref:System.Windows.Media.Animation.FillBehavior> (varsayılan değer) olan bir animasyon kullanarak hareketlendirmek durumunda, Kullanıcı artık kaydırma çubuğunu veya kaydırıcıyı taşıyamayacaktır. Yani, animasyon sona erse de hedef özelliğin temel değerini geçersiz kılmış olur. Animasyonun özelliğin geçerli değerini geçersiz kılmasını durdurmak için, bunu kaldırın veya <xref:System.Windows.Media.Animation.FillBehavior.Stop><xref:System.Windows.Media.Animation.FillBehavior> verin. Daha fazla bilgi ve bir örnek için bkz. [Görsel Taslakla animasyon uygulandıktan sonra özelliği ayarlama](how-to-set-a-property-after-animating-it-with-a-storyboard.md).  
   
-### <a name="animating-the-output-of-an-animation-has-no-effect"></a>Hiçbir etkisi olmaz animasyon çıktısını animasyon ekleme  
- Başka bir animasyon çıktısını bir nesneye animasyon uygulayamazsınız. Kullanırsanız, örneğin, bir <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> animasyon uygulamak için <xref:System.Windows.Shapes.Shape.Fill%2A> , bir <xref:System.Windows.Shapes.Rectangle> gelen bir <xref:System.Windows.Media.RadialGradientBrush> için bir <xref:System.Windows.Media.SolidColorBrush>, tüm özellikleri hareketlendiremezsiniz <xref:System.Windows.Media.RadialGradientBrush> veya <xref:System.Windows.Media.SolidColorBrush>.  
+### <a name="animating-the-output-of-an-animation-has-no-effect"></a>Animasyonun çıktısının animasyon ekleme etkisi yoktur  
+ Başka bir animasyonun çıktısı olan bir nesneyi hareketlendiremezsiniz. Örneğin, bir <xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Media.RadialGradientBrush> bir <xref:System.Windows.Media.SolidColorBrush>hareketlendirmek için <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> kullanırsanız, <xref:System.Windows.Media.RadialGradientBrush> veya <xref:System.Windows.Media.SolidColorBrush>özelliklerinin herhangi bir özelliğini hareketlendiremezsiniz.  
   
-### <a name="cant-change-the-value-of-a-property-after-animating-it"></a>Bir özelliğin değerini animasyon ekledikten sonra değiştiremezsiniz  
- Bazı durumlarda, sonra bile animasyon sona erdikten sonra bu, bir animasyon görünür bir özelliğin değerini değiştiremezsiniz görünebilir. Animasyon sona erse bile özelliğin temel değerin hala geçersiz kılma olmasıdır. Özelliğin geçerli değerini geçersiz kılmasını animasyon durdurmak için kaldırın veya ona bir <xref:System.Windows.Media.Animation.FillBehavior> , <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Daha fazla bilgi ve örnek için bkz. [bir özellik sonra animasyon film şeridi ile ayarlayın](how-to-set-a-property-after-animating-it-with-a-storyboard.md).  
+### <a name="cant-change-the-value-of-a-property-after-animating-it"></a>Hareketlendirilen bir özelliğin değeri değiştirilemez  
+ Bazı durumlarda, animasyon sona erdikten sonra bile, bir özelliğin değerini, hareketlendirildikten sonra değiştiremeyebilirsiniz. Yani, animasyon sona erse de özelliğin temel değerini geçersiz kılmış olur. Animasyonun özelliğin geçerli değerini geçersiz kılmasını durdurmak için, bunu kaldırın veya <xref:System.Windows.Media.Animation.FillBehavior.Stop><xref:System.Windows.Media.Animation.FillBehavior> verin. Daha fazla bilgi ve bir örnek için bkz. [Görsel Taslakla animasyon uygulandıktan sonra özelliği ayarlama](how-to-set-a-property-after-animating-it-with-a-storyboard.md).  
   
-### <a name="changing-a-timeline-has-no-effect"></a>Bir zaman çizelgesi değiştirmenin etkisi olmaz  
- Ancak çoğu <xref:System.Windows.Media.Animation.Timeline> özellikleri canlandırılabilir ve etkin bir özellik değerlerini değiştirme veri bağlanabilen <xref:System.Windows.Media.Animation.Timeline> hiçbir etkisi yok gibi görünüyor. Çünkü, bir <xref:System.Windows.Media.Animation.Timeline> olan başladığında zamanlama sistemi bir kopyasını oluşturur <xref:System.Windows.Media.Animation.Timeline> ve oluşturmak için kullandığı bir <xref:System.Windows.Media.Animation.Clock> nesne. Özgün değiştirerek sistemin kopyası üzerinde etkisi yoktur.  
+### <a name="changing-a-timeline-has-no-effect"></a>Bir zaman çizelgesinin değiştirilmesinin etkisi yoktur  
+ <xref:System.Windows.Media.Animation.Timeline> özelliklerinin çoğu Animatable olmasına rağmen veri sınırı içerebilse de, etkin bir <xref:System.Windows.Media.Animation.Timeline> özellik değerlerinin değiştirilmesi hiçbir etkisi olmaz. Bunun nedeni, bir <xref:System.Windows.Media.Animation.Timeline> başlatıldığında, zamanlama sisteminin <xref:System.Windows.Media.Animation.Timeline> bir kopyasını yapması ve bir <xref:System.Windows.Media.Animation.Clock> nesnesi oluşturmak için kullanması. Orijinalin değiştirilmesi sistemin kopyasını etkilemez.  
   
- İçin bir <xref:System.Windows.Media.Animation.Timeline> değişiklikleri yansıtacak şekilde kendi saat yeniden ve önceden oluşturulmuş saati değiştirmek için kullanılması gerekir. Saatleri sizin için otomatik olarak yeniden oluşturulmaz. Zaman Çizelgesi değişiklikleri uygulamak için birkaç yolu şunlardır:  
+ Değişiklikleri yansıtması için bir <xref:System.Windows.Media.Animation.Timeline> için, bu saatin yeniden oluşturulması ve daha önce oluşturulan saatin yerine kullanılması gerekir. Saatler sizin için otomatik olarak yeniden oluşturulmaz. Aşağıda, zaman çizelgesi değişikliklerini uygulamak için çeşitli yollar verilmiştir:  
   
-- Zaman Çizelgesi veya ait bir <xref:System.Windows.Media.Animation.Storyboard>, bunu görsel taslak kullanarak uygulayarak değişiklikleri yansıtacak yapabileceğiniz bir <xref:System.Windows.Media.Animation.BeginStoryboard> veya <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> yöntemi. Bu, yan etkisi, ayrıca animasyon yeniden vardır. Kod içinde kullanabileceğiniz <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> back önceki konumuna film şeridi ilerlemek için yöntemi.  
+- Zaman çizelgesi bir <xref:System.Windows.Media.Animation.Storyboard>aitse veya bir <xref:System.Windows.Media.Animation.BeginStoryboard> veya <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> yöntemi kullanarak film şeridini yeniden uygulayarak değişiklikleri yansıtabilir. Bu, animasyonun yeniden başlatılmasına de yönelik yan etkiye sahiptir. Kod içinde, film şeridini önceki konumuna geri ilerletmek için <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> yöntemini kullanabilirsiniz.  
   
-- Animasyonun bir özellik kullanarak doğrudan uyguladıysanız <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yöntemi, çağrı <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yeniden yöntemi ve değiştirilmiş animasyonu geçirin.  
+- <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yöntemi kullanarak doğrudan bir özelliği bir animasyon uyguladıysanız, <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yöntemini yeniden çağırın ve değiştirilmiş animasyonu geçirin.  
   
-- Doğrudan saat düzeyinde çalışıyorsanız ve saatler yeni bir uygulama oluşturup bunları oluşturulan saatler önceki kümesini değiştirmek için kullanabilirsiniz.  
+- Doğrudan saat düzeyinde çalışıyorsanız, yeni bir saat kümesi oluşturup uygulayın ve bunları önceki bir üretilen saat kümesini değiştirmek için kullanın.  
   
- Zaman çizelgeleri ve saatler hakkında daha fazla bilgi için bkz: [animasyon ve zamanlama sistemine genel bakış](animation-and-timing-system-overview.md).  
+ Zaman çizelgeleri ve saatler hakkında daha fazla bilgi için bkz. [animasyon ve zamanlama sistemine genel bakış](animation-and-timing-system-overview.md).  
   
-### <a name="fillbehaviorstop-doesnt-work-as-expected"></a>FillBehavior.Stop beklendiği gibi çalışmıyor  
- Bazı durumlarda ayarlarken <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> özelliğini <xref:System.Windows.Media.Animation.FillBehavior.Stop> ne zaman gibi hiçbir etkiye sahip gibi görünüyor. bir animasyon "uygulamalı kapalı" diğerine olduğundan bir <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> ayarıyla <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace>.  
+### <a name="fillbehaviorstop-doesnt-work-as-expected"></a>FillBehavior. Stop, beklendiği gibi çalışmıyor  
+ <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> özelliğinin <xref:System.Windows.Media.Animation.FillBehavior.Stop> olarak ayarlanması, bir animasyonun bir <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> ayarı olduğu için başka bir animasyon (örneğin, bir animasyon "olduğu gibi) gibi görünse durumlar vardır.  
   
- Aşağıdaki örnek, oluşturur bir <xref:System.Windows.Controls.Canvas>, <xref:System.Windows.Shapes.Rectangle> ve <xref:System.Windows.Media.TranslateTransform>. <xref:System.Windows.Media.TranslateTransform> Taşımak için animasyon <xref:System.Windows.Shapes.Rectangle> etrafında <xref:System.Windows.Controls.Canvas>.  
+ Aşağıdaki örnek, bir <xref:System.Windows.Controls.Canvas>, bir <xref:System.Windows.Shapes.Rectangle> ve <xref:System.Windows.Media.TranslateTransform>oluşturur. <xref:System.Windows.Media.TranslateTransform>, <xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.Controls.Canvas>etrafında hareket ettirmek için canlandırılır.  
   
  [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipAnimatedObject](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipanimatedobject)]  
   
- Bu bölümdeki örneklerde, bazı durumları göstermek için önceki nesneleri kullanır. burada <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> özelliği değil, kendisine bekleyebileceğiniz gibi davranır.  
+ Bu bölümdeki örneklerde, <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> özelliğinin ' de beklediği gibi davranmadığının birkaç durumu göstermek için önceki nesneler kullanılır.  
   
-#### <a name="fillbehaviorstop-and-handoffbehavior-with-multiple-animations"></a>FillBehavior "Durdur" ve birden çok animasyonlarla HandoffBehavior =  
- Bazen bir animasyon yoksayar gibi görünüyor, <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> ikinci bir animasyon tarafından değiştirildiğinde özelliği. İki oluşturan aşağıdaki örnekte, ele <xref:System.Windows.Media.Animation.Storyboard> nesneleri ve bunları aynı animasyon uygulamak için kullandığı <xref:System.Windows.Media.TranslateTransform> önceki örnekte gösterilen.  
+#### <a name="fillbehaviorstop-and-handoffbehavior-with-multiple-animations"></a>FillBehavior = "Durdur" ve birden çok Animasyonle HandoffBehavior  
+ Bazen bir animasyon ikinci bir animasyonla değiştirildiğinde <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> özelliğini yok saymış gibi görünüyor. İki <xref:System.Windows.Media.Animation.Storyboard> nesnesi oluşturan ve bunları önceki örnekte gösterilen <xref:System.Windows.Media.TranslateTransform> hareketlendirmek için kullanan aşağıdaki örneği alın.  
   
- İlk <xref:System.Windows.Media.Animation.Storyboard>, `B1`, canlandırır <xref:System.Windows.Media.TranslateTransform.X%2A> özelliği <xref:System.Windows.Media.TranslateTransform> sağa dikdörtgen 350 piksel taşır 350 için 0 ile. Animasyon süresinin sonuna ulaştığında ve yürütmeyi, durdurduğunda <xref:System.Windows.Media.TranslateTransform.X%2A> özelliği, özgün değer için 0'a döner. Sonuç olarak, dikdörtgen sağ 350 piksel taşır ve ardından özgün konumuna geri atlar.  
+ İlk <xref:System.Windows.Media.Animation.Storyboard>`B1`, <xref:System.Windows.Media.TranslateTransform> <xref:System.Windows.Media.TranslateTransform.X%2A> özelliğinin 0 ' dan 350 ' e taşınması ve bu dikdörtgeni 350 piksel sağa taşıdır. Animasyon süresinin sonuna ulaştığında ve yürütmeyi durdurduktan sonra, <xref:System.Windows.Media.TranslateTransform.X%2A> özelliği özgün değerine döner, 0. Sonuç olarak, dikdörtgen doğru 350 piksele gider ve sonra özgün konumuna geri atlar.  
   
  [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB1Button](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb1button)]  
   
- İkinci <xref:System.Windows.Media.Animation.Storyboard>, `B2`, ayrıca canlandırır <xref:System.Windows.Media.TranslateTransform.X%2A> aynı özellik <xref:System.Windows.Media.TranslateTransform>. Çünkü yalnızca <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> bu animasyonun özellik <xref:System.Windows.Media.Animation.Storyboard> , animasyon kullanır, canlandırır özelliğinin geçerli değeri başlangıç değeri olarak ayarlanmış.  
+ İkinci <xref:System.Windows.Media.Animation.Storyboard>, `B2`aynı <xref:System.Windows.Media.TranslateTransform><xref:System.Windows.Media.TranslateTransform.X%2A> özelliğini de hareketlendirir. Bu <xref:System.Windows.Media.Animation.Storyboard> animasyonun yalnızca <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliği ayarlandığından animasyon, başlangıç değeri olarak canlandırdığı özelliğin geçerli değerini kullanır.  
   
  [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB2Button](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb2button)]  
   
- İlk İkinci düğmeye tıklarsanız <xref:System.Windows.Media.Animation.Storyboard> olduğundan yürütme, aşağıdaki davranış bekleyebilirsiniz:  
+ İlk <xref:System.Windows.Media.Animation.Storyboard> oynatılırken ikinci düğmeye tıklarsanız, aşağıdaki davranışı bekleyebilir:  
   
-1. İlk film şeridi sona erer ve animasyon olduğundan dikdörtgeni özgün konumuna geri gönderir. bir <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> , <xref:System.Windows.Media.Animation.FillBehavior.Stop>.  
+1. İlk film şeridi sonlanır ve dikdörtgeni özgün konumuna geri gönderir çünkü animasyon <xref:System.Windows.Media.Animation.FillBehavior.Stop><xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>.  
   
-2. İkinci film şeridi etkili olur ve artık geçerli konumundan canlandırır 500 0.  
+2. İkinci film şeridi etkili olur ve şu anda 0 olan geçerli konumdan 500 'e hareketlenir.  
   
- **Ancak neler değil.** Bunun yerine, rectangle geri dönmez; sağa doğru ilerlendiğinde devam eder. Bunun nedeni, ikinci animasyonun başlangıç değeri geçerli değerin ilk animasyonun kullanır ve bu değeri 500'e canlandırır olmasıdır. Ne zaman ikinci animasyon değiştirir ilk çünkü <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace> <xref:System.Windows.Media.Animation.HandoffBehavior> kullanılan <xref:System.Windows.Media.Animation.FillBehavior> ilk animasyon önemli değildir.  
+ **Ancak bu durum bu değildir.** Bunun yerine, dikdörtgen geri atlanmaz; sağa geçmeyi sürdürür. Bunun nedeni, ikinci animasyonun başlangıçtaki değeri olarak ilk animasyonun geçerli değerini kullanması ve bu değerden 500 ' e hareketlendirir. <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior> kullanıldığı için ikinci animasyon ilk yerini değiştirdiğine göre ilk animasyonun <xref:System.Windows.Media.Animation.FillBehavior> önemi yoktur.  
   
 #### <a name="fillbehavior-and-the-completed-event"></a>FillBehavior ve tamamlanan olay  
- Sonraki örneklerde, başka bir senaryoyu göstermek <xref:System.Windows.Media.Animation.FillBehavior.Stop> <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> hiçbir etkisi yok gibi görünüyor. Yeniden animasyon uygulamak için bir görsel taslak örnek kullanır <xref:System.Windows.Media.TranslateTransform.X%2A> özelliği <xref:System.Windows.Media.TranslateTransform> 350 için 0. Ancak bu kez örnek için kayıtları <xref:System.Windows.Media.Animation.Timeline.Completed> olay.  
+ Sonraki örneklerde <xref:System.Windows.Media.Animation.FillBehavior.Stop><xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> hiçbir etkisi olmadığı gibi başka bir senaryo gösterilmektedir. Yine, örnek, <xref:System.Windows.Media.TranslateTransform> <xref:System.Windows.Media.TranslateTransform.X%2A> özelliğine 0 ' dan 350 ' a animasyon uygulamak için bir görsel taslak kullanır. Ancak, bu kez örnek <xref:System.Windows.Media.Animation.Timeline.Completed> olayına kaydolur.  
   
  [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardCButton](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardcbutton)]  
   
- <xref:System.Windows.Media.Animation.Timeline.Completed> Olay işleyicisini başlatır başka <xref:System.Windows.Media.Animation.Storyboard> , aynı özelliğin geçerli değerini 500 canlandırın.  
+ <xref:System.Windows.Media.Animation.Timeline.Completed> olay işleyicisi, aynı özelliği geçerli değerinden 500 ' e canlandıran başka bir <xref:System.Windows.Media.Animation.Storyboard> başlatır.  
   
  [!code-csharp[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardC1CompletedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml.cs#fillbehaviortipstoryboardc1completedhandler)]
  [!code-vb[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardC1CompletedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/VisualBasic/FillBehaviorTip.xaml.vb#fillbehaviortipstoryboardc1completedhandler)]  
   
- İkinci tanımlar biçimlendirme verilmiştir <xref:System.Windows.Media.Animation.Storyboard> bir kaynak olarak.  
+ İkinci <xref:System.Windows.Media.Animation.Storyboard> kaynak olarak tanımlayan biçimlendirme aşağıda verilmiştir.  
   
  [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipResources](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipresources)]  
   
- Çalıştırdığınızda <xref:System.Windows.Media.Animation.Storyboard>, beklediğiniz <xref:System.Windows.Media.TranslateTransform.X%2A> özelliği <xref:System.Windows.Media.TranslateTransform> tamamlandıktan sonra 350 için 0 ile animasyon uygulamak için ardından 0 olarak geri (olduğundan bir <xref:System.Windows.Media.Animation.FillBehavior> ayarıyla <xref:System.Windows.Media.Animation.FillBehavior.Stop>) ve ardından 0 ile 500'e animasyon ekleme. Bunun yerine, <xref:System.Windows.Media.TranslateTransform> 350'ye ve sonra 500 0'dan canlandırın.  
+ <xref:System.Windows.Media.Animation.Storyboard>çalıştırdığınızda, <xref:System.Windows.Media.TranslateTransform> <xref:System.Windows.Media.TranslateTransform.X%2A> özelliğinin 0 ' dan 350 ' e animasyonunu bekleyebilir, ardından tamamlandıktan sonra 0 ' a döndürebilirsiniz (<xref:System.Windows.Media.Animation.FillBehavior.Stop><xref:System.Windows.Media.Animation.FillBehavior> ayarı vardır) ve ardından 0 ' dan 500 ' e animasyon uygulayabilirsiniz. Bunun yerine, <xref:System.Windows.Media.TranslateTransform> 0 ' dan 350 ' e ve ardından 500 ' e hareketlenir.  
   
- Bir sırayı nedeniyle olan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] olayları başlatır ve özellik değerlerini önbelleğe alınır ve değildir çünkü özelliği geçersiz kılınmadığı sürece yeniden hesaplanır. <xref:System.Windows.Media.Animation.Timeline.Completed> Olay kök Zaman Çizelgesi tarafından tetiklendi çünkü önce işlenir (ilk <xref:System.Windows.Media.Animation.Storyboard>). Şu anda <xref:System.Windows.Media.TranslateTransform.X%2A> özelliği henüz kılınmamıştır değerini animasyonlu hala döndürür. İkinci <xref:System.Windows.Media.Animation.Storyboard> başlangıç değeri önbelleğe alınan değeri kullanır ve animasyonu başlar.  
+ Bu, WPF 'nin olayları harekete geçirme sırası ve özellik değerlerinin önbelleğe alınması ve özellik geçersiz kılınmadığı takdirde yeniden hesaplanmaması nedeniyle oluşur. <xref:System.Windows.Media.Animation.Timeline.Completed> olay, kök zaman çizelgesi (ilk <xref:System.Windows.Media.Animation.Storyboard>) tarafından tetiklendiğinden önce işlenir. Şu anda <xref:System.Windows.Media.TranslateTransform.X%2A> özelliği henüz geçersiz kılınmadığı için animasyon değerini döndürür. İkinci <xref:System.Windows.Media.Animation.Storyboard>, başlangıç değeri olarak önbelleğe alınan değeri kullanır ve animasyon kullanmaya başlar.  
   
 <a name="performancesection"></a>   
 ## <a name="performance"></a>Performans  
   
-### <a name="animations-continue-to-run-after-navigating-away-from-a-page"></a>Bir sayfadan ayrılmak geçtikten sonra çalıştırılacak animasyon devam edin  
- Gittiğinizde liste kutusundan bir <xref:System.Windows.Controls.Page> bu animasyonları kadar çalışmaya devam edecek, çalışan animasyonlar içeren <xref:System.Windows.Controls.Page> olan çöp olarak toplanacak. Kullanmakta olduğunuz Gezinti sistem UZAĞINIZDA gidin bir sayfa bağlı olarak düzeltmede kalma belirsiz bir zaman, tüm süre miktarı için bellek tüketen kendi animasyonları ile kaynakları. ("Ortam") animasyonlar sürekli olarak çalışan bir sayfa içerir, bu en belirgin olur.  
+### <a name="animations-continue-to-run-after-navigating-away-from-a-page"></a>Animasyonlar bir sayfadan Uzaklaşdıktan sonra çalışmaya devam eder  
+ Çalışan animasyonları içeren bir <xref:System.Windows.Controls.Page> uzağa gittiğinizde, bu animasyonlar <xref:System.Windows.Controls.Page> atık toplanana kadar oynatılmaya devam eder. Kullanmakta olduğunuz gezinti sistemine bağlı olarak, üzerinden gittiğiniz bir sayfa, sınırsız bir süre boyunca bellekte kalabilir ve bu da tüm kaynakları animasyonlarla tüketiyor. Bu, bir sayfa sürekli olarak çalışan ("çevresel") animasyonları içerdiğinde görülür.  
   
- Bu nedenle, bunu kullanmak için iyi bir fikirdir <xref:System.Windows.FrameworkElement.Unloaded> sayfadan ayrılmak gittiğinizde animasyonları kaldırılacağı olay.  
+ Bu nedenle, bir sayfadan uzağa gittiğinizde animasyonları kaldırmak için <xref:System.Windows.FrameworkElement.Unloaded> olayını kullanmak iyi bir fikirdir.  
   
- Bir animasyonu kaldırmak için farklı yolu vardır. Aşağıdaki teknikler ait animasyonları kaldırmak için kullanılan bir <xref:System.Windows.Media.Animation.Storyboard>.  
+ Bir animasyonu kaldırmanın farklı yolları vardır. Aşağıdaki teknikler bir <xref:System.Windows.Media.Animation.Storyboard>ait olan animasyonları kaldırmak için kullanılabilir.  
   
-- Kaldırmak için bir <xref:System.Windows.Media.Animation.Storyboard> bir olay tetikleyicisi ile başlattığınız için bkz: [nasıl yapılır: Film şeridini kaldırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
+- Bir olay tetikleyicisiyle başlattığınız <xref:System.Windows.Media.Animation.Storyboard> kaldırmak için bkz. [nasıl yapılır: görsel taslağı kaldırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
   
-- Kaldırmak için kodu kullanmak için bir <xref:System.Windows.Media.Animation.Storyboard>, bkz: <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> yöntemi.  
+- <xref:System.Windows.Media.Animation.Storyboard>kaldırmak için kodu kullanmak için <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> yöntemine bakın.  
   
- Sonraki yöntem, animasyon nasıl başlatıldığından bağımsız olarak kullanılabilir.  
+ Sonraki Yöntem animasyonun nasıl başlatıldığına bakılmaksızın kullanılabilir.  
   
-- Belirli bir özellikten animasyonları kaldırmak için <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> yöntemi. İlk parametre olarak, animasyon uygulanan bir özellik belirtin ve `null` ikinci olarak. Bu, tüm animasyon saatleri özelliği kaldırır.  
+- Animasyonları belirli bir özellikten kaldırmak için <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> yöntemini kullanın. İlk parametre olarak hareketlendirilen özelliği ve ikinci olarak `null` belirtin. Bu, tüm animasyon saatlerini özellikten kaldırır.  
   
- Özelliklerine animasyon uygulamak için farklı yollar hakkında daha fazla bilgi için bkz. [özellik Animasyon Tekniklerine Genel Bakış](property-animation-techniques-overview.md).  
+ Özellikleri hareketlendirmek için farklı yollar hakkında daha fazla bilgi için bkz. [özellik animasyon tekniklerine genel bakış](property-animation-techniques-overview.md).  
   
-### <a name="using-the-compose-handoffbehavior-consumes-system-resources"></a>Kullanarak Compose HandoffBehavior kullanmak sistem kaynakları  
- Uyguladığınızda bir <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, veya <xref:System.Windows.Media.Animation.AnimationClock> kullanarak bir özelliğe <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>, <xref:System.Windows.Media.Animation.Clock> daha önce bu özellik ile ilişkilendirilen nesneleri sistem kaynaklarının kullanılmasına devam; zamanlama sistemi sağlamaz Bu saatler otomatik olarak kaldırın.  
+### <a name="using-the-compose-handoffbehavior-consumes-system-resources"></a>Compose HandoffBehavior kullanmak sistem kaynaklarını kullanır  
+ <xref:System.Windows.Media.Animation.HandoffBehavior.Compose><xref:System.Windows.Media.Animation.HandoffBehavior>kullanarak bir özelliğe <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>veya <xref:System.Windows.Media.Animation.AnimationClock> uyguladığınızda, daha önce bu özellikle ilişkilendirilen tüm <xref:System.Windows.Media.Animation.Clock> nesneleri sistem kaynaklarını kullanmaya devam eder; zamanlama sistemi bu saatleri otomatik olarak kaldırmaz.  
   
- Çok sayıda kullanarak saatler uyguladığınızda, performans sorunlarını önlemek için <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>, tamamlandıktan sonra animasyonlu özelliğinden çıktısından saatler kaldırmanız gerekir. Bir saat kaldırmak için birkaç yol vardır.  
+ <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>kullanarak çok sayıda saat uyguladığınızda performans sorunlarından kaçınmak için, tamamlandıktan sonra animasyonlu özelliğinden saatleri oluşturmayı kaldırmanız gerekir. Saati kaldırmanın birkaç yolu vardır.  
   
-- Tüm saatler bir özelliği kaldırmak için <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> veya <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> yöntemi animasyonlu nesne. İlk parametre olarak, animasyon uygulanan bir özellik belirtin ve `null` ikinci olarak. Bu, tüm animasyon saatleri özelliği kaldırır.  
+- Bir özellikten tüm saatleri kaldırmak için, animasyonlu nesnenin <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> veya <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> yöntemini kullanın. İlk parametre olarak hareketlendirilen özelliği ve ikinci olarak `null` belirtin. Bu, tüm animasyon saatlerini özellikten kaldırır.  
   
-- Belirli bir kaldırmak için <xref:System.Windows.Media.Animation.AnimationClock> saatler listesinden kullanmak <xref:System.Windows.Media.Animation.Clock.Controller%2A> özelliği <xref:System.Windows.Media.Animation.AnimationClock> almak için bir <xref:System.Windows.Media.Animation.ClockController>, ardından çağırın <xref:System.Windows.Media.Animation.ClockController.Remove%2A> yöntemi <xref:System.Windows.Media.Animation.ClockController>. Bu genellikle yapılabilir <xref:System.Windows.Media.Animation.Clock.Completed> bir saat için olay işleyicisi. Not yalnızca kök saatler tarafından denetlenebilir bir <xref:System.Windows.Media.Animation.ClockController>; <xref:System.Windows.Media.Animation.Clock.Controller%2A> alt saat özelliği döndürür `null`. Ayrıca <xref:System.Windows.Media.Animation.Clock.Completed> saatin geçerlilik süresi sonsuz ise olay çağrılmayacak.  Bu durumda, ne zaman çağrılacağını belirlemek kullanıcı gerekir <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
+- Belirli bir <xref:System.Windows.Media.Animation.AnimationClock> saat listesinden kaldırmak için, <xref:System.Windows.Media.Animation.ClockController>almak için <xref:System.Windows.Media.Animation.AnimationClock> <xref:System.Windows.Media.Animation.Clock.Controller%2A> özelliğini kullanın ve ardından <xref:System.Windows.Media.Animation.ClockController.Remove%2A> <xref:System.Windows.Media.Animation.ClockController>yöntemini çağırın. Bu, genellikle bir saat için <xref:System.Windows.Media.Animation.Clock.Completed> olay işleyicisinde yapılır. Yalnızca kök saatlerinin bir <xref:System.Windows.Media.Animation.ClockController>tarafından denetlenebileceğini unutmayın; bir alt saatin <xref:System.Windows.Media.Animation.Clock.Controller%2A> özelliği, `null`döndürür. Ayrıca, saatin geçerlilik süresi süresiz ise <xref:System.Windows.Media.Animation.Clock.Completed> olayının çağrılmadığını unutmayın.  Bu durumda, kullanıcının <xref:System.Windows.Media.Animation.ClockController.Remove%2A>ne zaman çağrılacağını belirlemesi gerekir.  
   
- Uzun ömürlü nesnelerine animasyon için öncelikle bir sorun budur.  Bir nesnenin çöp olarak toplanacak olduğunda, kendi saatler da kesilir ve atık olarak toplanmış.  
+ Bu, öncelikle uzun ömürlü nesneler üzerindeki animasyonlar için bir sorundur.  Bir nesne atık olarak toplandığında, saatlerinin de bağlantısı kesilir ve atık olarak toplanır.  
   
  Saat nesneleri hakkında daha fazla bilgi için bkz. [animasyon ve zamanlama sistemine genel bakış](animation-and-timing-system-overview.md).  
   

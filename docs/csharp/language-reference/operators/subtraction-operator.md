@@ -1,6 +1,5 @@
 ---
 title: '- ve-= işleçleri- C# başvuru'
-ms.custom: seodec18
 ms.date: 05/27/2019
 f1_keywords:
 - -_CSharpKeyword
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: cf642fcac7233d27f2ed9052829c145038e93419
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 775f06b05d75078e53ab777d09713d69467ace14
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038880"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712617"
 ---
 # <a name="--and---operators-c-reference"></a>-ve-= işleçleri (C# başvuru)
 
@@ -62,13 +61,13 @@ eşdeğerdir
 x = x - y
 ```
 
-`x` yalnızca bir kez değerlendirilir.
+`x` hariç, yalnızca bir kez değerlendirilir.
 
 Aşağıdaki örnek `-=` işlecinin kullanımını gösterir:
 
 [!code-csharp-interactive[-= examples](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#SubtractAndAssign)]
 
-Bir [olaydan](../keywords/event.md)abonelik kaldırdığınızda kaldırılacak olay işleyicisi yöntemini belirtmek için `-=` işlecini de kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: olaylara abone olma ve aboneliği kaldırma](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+Bir [olaydan](../keywords/event.md)abonelik kaldırdığınızda kaldırılacak olay işleyicisi yöntemini belirtmek için `-=` işlecini de kullanabilirsiniz. Daha fazla bilgi için bkz. [olaylara abone olma ve olayları kaldırma](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
 ## <a name="operator-overloadability"></a>Operatör overloadability
 

@@ -1,6 +1,5 @@
 ---
 title: <example> - C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <example>
@@ -9,14 +8,14 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: 17956838c20a4342873478869c07c6382f037fcb
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 13f4a2bb9dcef5bd0359f7e5bd9cab60acde3719
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523505"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75697019"
 ---
-# <a name="example-c-programming-guide"></a>\<example > (C# Programlama Kılavuzu)
+# <a name="example-c-programming-guide"></a>\<örnek > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -28,7 +27,7 @@ ms.locfileid: "72523505"
  Kod örneğinin açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0example > etiketi, bir yöntemin veya diğer kitaplık üyesinin nasıl kullanılacağına ilişkin bir örnek belirtmenize olanak tanır. Bu genellikle [\<code >](./code.md) etiketinin kullanılmasını içerir.  
+ \<örnek > etiketi, bir yöntemin veya diğer kitaplık üyesinin nasıl kullanılacağına ilişkin bir örnek belirtmenize olanak tanır. Bu genellikle [\<kodu >](./code.md) etiketinin kullanılmasını içerir.  
   
  Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   

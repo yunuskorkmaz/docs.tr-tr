@@ -3,37 +3,35 @@ title: XPath Veri Modelini Kullanarak XML Verilerini İşleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 67fbacd24b888b9c45072bcb34031f38adc118e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f964864577cf08eb074bdfb9af7f7daf3ffb37b9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703159"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710446"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>XPath Veri Modelini Kullanarak XML Verilerini İşleme
-<xref:System.Xml?displayProperty=nameWithType> Ad alanı XML belgeleri, parçalar, düğüm veya düğüm kümeleri bellek içi, programlı bir gösterimini sağlar kullanarak <xref:System.Xml.XmlDocument> veya <xref:System.Xml.XPath.XPathDocument> sınıfları.  
+<xref:System.Xml?displayProperty=nameWithType> ad alanı, <xref:System.Xml.XmlDocument> veya <xref:System.Xml.XPath.XPathDocument> sınıfları kullanarak XML belgelerinin, parçaların, düğümlerin veya düğüm kümesinin bellek içinde programlı bir gösterimini sağlar.  
   
- <xref:System.Xml.XPath.XPathDocument> Sınıfı XPath veri modelini kullanarak bir XML belgesi hızlı, salt okunur, bellek içi bir gösterimini sağlar. <xref:System.Xml.XmlDocument> Sınıf uygulama W3C belge nesne modeli (DOM) Düzey 1 çekirdek ve çekirdek DOM düzeyi 2 olan bir XML belgesi düzenlenebilir bir bellek içi gösterimini sağlar. Her iki sınıfları uygulayan <xref:System.Xml.XPath.IXPathNavigable> arabirim ve dönüş bir <xref:System.Xml.XPath.XPathNavigator> seçin, değerlendirmek, gidin ve bazı durumlarda, temel alınan XML verileri düzenlemek için kullanılan nesne.  
+ <xref:System.Xml.XPath.XPathDocument> sınıfı, XPath veri modelini kullanarak bir XML belgesinin hızlı, Salt okunabilir ve bellek içi gösterimini sağlar. <xref:System.Xml.XmlDocument> sınıfı, W3C Belge Nesne Modeli (DOM) düzey 1 Core ve çekirdek DOM düzeyi 2 uygulayan bir XML belgesinin düzenlenebilir bellek içi gösterimini sağlar. Her iki sınıf de <xref:System.Xml.XPath.IXPathNavigable> arabirimini uygular ve bazı durumlarda seçmek, değerlendirmek, gezinmek ve bazı durumlarda kullanılan bir <xref:System.Xml.XPath.XPathNavigator> nesnesi döndürür, temel alınan XML verilerini düzenler.  
   
- Aşağıdaki bölümlerde işlevselliğini <xref:System.Xml.XPath.XPathNavigator> sınıf tabanlı döndürdüğü sınıfta.  
+ Aşağıdaki bölümlerde, döndüren sınıfına göre <xref:System.Xml.XPath.XPathNavigator> sınıfının işlevleri açıklanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [XPathDocument ve XmlDocument Kullanarak XML Verilerini Okuma](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
- Salt okunur oluşturmayı açıklar <xref:System.Xml.XPath.XPathDocument> bir XML belgesi ve düzenlenebilir bir oluşturma okumak için sınıf nesnesi <xref:System.Xml.XmlDocument> okuyun ve bir XML belgesi düzenlemek için sınıf nesnesi. Bu konu açıklar nasıl dönüş bir <xref:System.Xml.XPath.XPathNavigator> gidin ve bir XML belgesi düzenlemek için her bir sınıftan nesne.  
+ Bir <xref:System.Xml.XmlDocument> XML belgesini okumak ve bir XML belgesini okumak ve düzenlemek için bir salt okunurdur <xref:System.Xml.XPath.XPathDocument> sınıf nesnesinin nasıl oluşturulduğunu açıklar. Bu konu ayrıca, bir XML belgesini gezinmek ve düzenlemek için her bir sınıftan bir <xref:System.Xml.XPath.XPathNavigator> nesne döndürme işlemini açıklar.  
   
  [XPathNavigator Kullanarak XML Verileri Seçme, Değerlendirme ve Eşleştirme](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
- Yöntemlerini açıklar <xref:System.Xml.XPath.XPathNavigator> düğümleri seçmek için kullanılan sınıf bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> bir XPath sorgusu kullanarak nesne, değerlendirmek ve bir XPath ifadesi sonuçları inceleyin ve bir XML belgesindeki düğüm, belirli bir XPath eşleşip eşleşmediğini belirler ifade.  
+ Bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesindeki düğümleri XPath sorgusu kullanarak seçmek, bir XPath ifadesinin sonuçlarını değerlendirmek ve incelemek ve bir XML belgesindeki bir düğümün belirli bir XPath ifadesiyle eşleşip eşleşmediğini belirlemek için kullanılan <xref:System.Xml.XPath.XPathNavigator> sınıfının yöntemlerini açıklar.  
   
  [XPathNavigator Kullanarak XML Verilerine Erişme](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- Yöntemlerini açıklar <xref:System.Xml.XPath.XPathNavigator> düğümleri gidin, XML verileri ayıklamak ve kesin türü belirtilmiş XML verilerine erişmek için kullanılan sınıf bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesne.  
+ Düğümlerde gezinmek, XML verilerini ayıklamak ve bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesinde kesin türü belirtilmiş XML verilerine erişmek için kullanılan <xref:System.Xml.XPath.XPathNavigator> sınıfının yöntemlerini açıklar.  
   
  [XPathNavigator Kullanarak XML Verilerini Düzenleme](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
- Yöntemlerini açıklar <xref:System.Xml.XPath.XPathNavigator> eklemek, değiştirmek ve bir XML belgesi içindeki düğümleri ve değerleri kaldırmak için kullanılan sınıf bir <xref:System.Xml.XmlDocument> nesne.  
+ Bir <xref:System.Xml.XmlDocument> nesnesinde bulunan bir XML belgesinden düğüm ve değer eklemek, değiştirmek ve kaldırmak için kullanılan <xref:System.Xml.XPath.XPathNavigator> sınıfının yöntemlerini açıklar.  
   
  [XPathNavigator Kullanarak Şema Doğrulama](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
- İçindeki XML içeriği doğrulama yöntemlerini açıklar bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesne.  
+ Bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesinde bulunan XML içeriğini doğrulamaya yönelik yolları açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

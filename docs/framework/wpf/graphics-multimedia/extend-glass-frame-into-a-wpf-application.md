@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: ae4d7f23729f5bd39558902a58d33c6c45572d85
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a702456895cfdbd44a58059befefb69deee5afa3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977014"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636204"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Cam Çerçeveyi WPF Uygulamasında Genişletme
 
@@ -30,7 +30,7 @@ Aşağıdaki görüntüde, Internet Explorer 7 ' nin adres çubuğuna genişleti
 
 ![IE7 çerçeve adres çubuğunun arkasındaki cam çerçeveyi gösteren ekran görüntüsü.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamasındaki cam çerçeveyi genişletmek için yönetilmeyen API 'ye erişim gerekir. Aşağıdaki kod örneği, çerçeveyi istemci alanına genişletmek için gereken iki API için bir platform çağırma (PInvoke) sağlar. Bu API 'nin her biri **Clientregionapı**adlı bir sınıfta bildirilmiştir.
+Bir WPF uygulamasında cam çerçeveyi genişletmek için yönetilmeyen API 'ye erişim gerekir. Aşağıdaki kod örneği, çerçeveyi istemci alanına genişletmek için gereken iki API için bir platform çağırma (PInvoke) sağlar. Bu API 'nin her biri **Clientregionapı**adlı bir sınıfta bildirilmiştir.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -66,7 +66,7 @@ End Function
 
 ## <a name="example"></a>Örnek
 
-[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) işlevini kullanmak için bir pencere tanıtıcısının alınması gerekir. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], pencere tutamacı bir <xref:System.Windows.Interop.HwndSource><xref:System.Windows.Interop.HwndSource.Handle%2A> özelliğinden elde edilebilir. Aşağıdaki örnekte, çerçeve pencerenin <xref:System.Windows.FrameworkElement.Loaded> olayında istemci alanına genişletilir.
+[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) işlevini kullanmak için bir pencere tanıtıcısının alınması gerekir. WPF 'de, pencere tutamacı bir <xref:System.Windows.Interop.HwndSource><xref:System.Windows.Interop.HwndSource.Handle%2A> özelliğinden elde edilebilir. Aşağıdaki örnekte, çerçeve pencerenin <xref:System.Windows.FrameworkElement.Loaded> olayında istemci alanına genişletilir.
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -145,7 +145,7 @@ Aşağıdaki örnek, çerçevenin istemci alanına genişletilme basit bir pence
 </Window>
 ```
 
-Aşağıdaki görüntüde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir uygulamaya genişletilmiş cam çerçeve gösterilmektedir:
+Aşağıdaki görüntüde, bir WPF uygulamasına genişletilmiş cam çerçeve gösterilmektedir:
 
 ![WPF uygulamasına genişletilmiş bir cam çerçeveyi gösteren ekran görüntüsü.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 

@@ -1,17 +1,16 @@
 ---
 title: Sorgu anahtar sözcükleri C# -başvuru
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: 44af3bf1a7c013c16c7b4a4528c3516621bea149
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3c08c2b6ecdaa4b875f118531e7e77f7164dd784
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422545"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713163"
 ---
 # <a name="query-keywords-c-reference"></a>Sorgu anahtar sözcükleriC# (başvuru)
 
@@ -21,13 +20,13 @@ Bu bölüm sorgu ifadelerinde kullanılan bağlamsal anahtar sözcüklerini içe
 
 |Yan Tümce|Açıklama|
 |------------|-----------------|
-|[Kaynak](from-clause.md)|Bir veri kaynağını ve bir Aralık değişkenini (yineleme değişkenine benzer) belirtir.|
+|[from](from-clause.md)|Bir veri kaynağını ve bir Aralık değişkenini (yineleme değişkenine benzer) belirtir.|
 |[olmadığı](where-clause.md)|Mantıksal ve ve veya işleçlerle (`&&` veya <code>&#124;&#124;</code>) ayrılmış bir veya daha fazla Boole ifadesine göre kaynak öğelerine filtre uygular.|
 |[seçin](select-clause.md)|Sorgu yürütüldüğünde döndürülen dizideki öğelerin sahip olacağı türü ve şekli belirtir.|
 |[grubu](group-clause.md)|Sorgu sonuçlarını belirtilen bir anahtar değerine göre gruplandırır.|
 |[into](into.md)|JOIN, Group veya Select yan tümcesinin sonuçlarına başvuru olarak sunacak bir tanımlayıcı sağlar.|
 |[OrderBy](orderby-clause.md)|Sorgu sonuçlarını, öğe türünün varsayılan karşılaştırmasına göre artan veya azalan düzende sıralar.|
-|[ayrılma](join-clause.md)|İki veri kaynağını belirtilen iki eşleşen ölçüt arasında bir eşitlik karşılaştırması temelinde birleştirir.|
+|[join](join-clause.md)|İki veri kaynağını belirtilen iki eşleşen ölçüt arasında bir eşitlik karşılaştırması temelinde birleştirir.|
 |[atalım](let-clause.md)|Bir sorgu ifadesinde alt ifade sonuçlarının depolanması için bir Aralık değişkeni tanıtır.|
 |[in](in.md)|[JOIN](join-clause.md) yan tümcesinde bağlamsal anahtar sözcüğü.|
 |[on](on.md)|[JOIN](join-clause.md) yan tümcesinde bağlamsal anahtar sözcüğü.|

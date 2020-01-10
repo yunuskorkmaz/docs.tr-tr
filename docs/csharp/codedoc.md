@@ -4,18 +4,18 @@ description: Kodunuzu XML belge açıklamalarıyla belgeleme ve derleme zamanın
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 92a64a8f7a652f8b957013fc05f426e6b983655d
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6aa52030e20f61b26311347a57629658ebe0e609
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710984"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713933"
 ---
-# <a name="documenting-your-code-with-xml-comments"></a>Kodunuzu XML açıklamalarıyla belgeleme
+# <a name="document-your-code-with-xml-comments"></a>Kodunuzu XML açıklamalarıyla belgeleme
 
 XML belge açıklamaları, Kullanıcı tanımlı herhangi bir tür veya üyenin tanımının üzerine eklenen özel bir açıklama türüdür.
 Bunlar, derleme zamanında bir XML belge dosyası oluşturmak için derleyici tarafından işlenebilecekleri için özeldir.
-Derleyici tarafından oluşturulan XML dosyası, .NET derlemenizin yanı sıra, Visual Studio ve diğer IDE 'Ler, türler veya üyeler hakkında hızlı bilgileri göstermek için IntelliSense kullanabilmesi için birlikte dağıtılabilir. Ayrıca, XML dosyası, API başvuru Web siteleri oluşturmak için [Docfx](https://dotnet.github.io/docfx/) ve [sandrole](https://github.com/EWSoftware/SHFB) gibi araçlar aracılığıyla çalıştırılabilir.
+Derleyici tarafından oluşturulan XML dosyası, .NET derlemenizin yanı sıra, Visual Studio ve diğer IDE 'Ler, türler veya üyeler hakkında hızlı bilgileri göstermek için IntelliSense kullanabilmesi için birlikte dağıtılabilir. Ayrıca, XML dosyasını gibi araçlarla çalıştırılabilir [DocFX](https://dotnet.github.io/docfx/) ve [Sandcastle](https://github.com/EWSoftware/SHFB) API Başvurusu Web siteleri oluşturmak için.
 
 Tüm diğer yorumlar gibi XML belgesi açıklamaları derleyici tarafından yok sayılır.
 
@@ -41,7 +41,7 @@ XML belge açıklamaları Üçlü eğik çizgi (`///`) ve XML biçimli bir açı
 
 [!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
-## <a name="walkthrough"></a>Gidiş
+## <a name="walkthrough"></a>İzlenecek yol
 
 Yeni geliştiricilerin, üçüncü taraf geliştiricilerin kullanması için ve katkıda bulunmak üzere çok basit bir matematik kitaplığını belgeleme konusunda bilgi vereceğiz.
 
@@ -170,7 +170,7 @@ Belge bilgilerini sıralı liste, sırasız liste veya tablo olarak biçimlendir
 
 `type` özniteliğini sırasıyla `number` veya `table`olarak değiştirerek sıralı bir liste veya tablo yapabilirsiniz.
 
-### <a name="putting-it-all-together"></a>Tümünü bir araya getirme
+### <a name="put-it-all-together"></a>Hepsini bir araya getirin
 
 Bu öğreticiyi takip ediyorsanız ve gereken yere etiketleri kodunuza uyguladıysanız, kodunuzun aşağıdakine benzer şekilde görünmesi gerekir:
 
@@ -206,10 +206,10 @@ Bu durumda: kodunuz okunabilir hale getirilir ve belge bilgisi kaybedilmiyor.
 ### <a name="user-defined-tags"></a>Kullanıcı tanımlı Etiketler
 
 Yukarıda özetlenen tüm Etiketler, C# derleyici tarafından tanınan olanları temsil eder. Ancak, bir Kullanıcı kendi etiketlerini tanımlayaücretsizdir.
-Sandrole gibi Araçlar [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm), [`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) gibi ek Etiketler için destek getirme ve hatta [ad alanlarını belgeleme](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)desteği.
+Sandrole gibi Araçlar [\<olay >](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) ve [\<Note >](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)gibi ek Etiketler için destek getirme ve hatta [ad alanlarını belgeleme](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)desteği.
 Özel veya şirket içi belge oluşturma araçları ayrıca standart Etiketler ve HTML 'den PDF 'ye birden çok çıktı biçimi ile kullanılabilir.
 
-## <a name="recommendations"></a>Öneri
+## <a name="recommendations"></a>Öneriler
 
 Kodu belgeleme pek çok nedenden dolayı önerilir. Aşağıda, bazı en iyi yöntemler, genel kullanım örneği senaryoları ve C# kodunuzda XML belge etiketlerini kullanırken bilmeniz gereken noktalar verilmiştir.
 
@@ -218,7 +218,7 @@ Kodu belgeleme pek çok nedenden dolayı önerilir. Aşağıda, bazı en iyi yö
 - İçerik IntelliSense için gerekli olduğundan, en azından, türlerin ve üyelerinin `<summary>` bir etiketi olmalıdır.
 - Belge metni tam uyarılarla biten tam tümceler kullanılarak yazılmalıdır.
 - Kısmi sınıflar tam olarak desteklenir ve belge bilgileri bu tür için tek bir girişte birleştirilir.
-- Derleyici `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` ve `<typeparam>` etiketlerinin sözdizimini doğrular.
+- Derleyici `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>`ve `<typeparam>` etiketlerinin sözdizimini doğrular.
 - Derleyici dosya yolları içeren parametreleri ve kodun diğer bölümlerine başvuruları doğrular.
 
 ## <a name="see-also"></a>Ayrıca bkz.

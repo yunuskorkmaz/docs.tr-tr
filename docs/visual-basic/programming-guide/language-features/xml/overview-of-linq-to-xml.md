@@ -5,17 +5,17 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 80d94ecb7dcc196ad831be7418bfecc785015cf9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0d804a00eca1910a5415859b1ed3a18ad2f8e9d2
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346230"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636230"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visual Basic'de LINQ - XML Dönüşümüne Genel Bakış
 Visual Basic, XML değişmez değerleri ve XML eksen özellikleri aracılığıyla [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] için destek sağlar. Bu, Visual Basic kodunuzda XML ile çalışmak için tanıdık, kullanışlı bir sözdizimi kullanmanıza olanak sağlar. *XML değişmez değerleri* doğrudan kodunuza XML dahil etme olanağı sağlar. *Xml eksen özellikleri* , bir XML sabit değerinin alt düğümlerine, alt düğümlerine ve özniteliklerine erişmenizi sağlar. Daha fazla bilgi için bkz. [XML değişmez değerlerine genel bakış](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) ve [Visual Basic xml 'e erişme](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], özellikle de [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]yararlanmak için tasarlanan bir bellek içi XML programlama API 'sidir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] API 'Lerini doğrudan çağırabilseniz de, yalnızca Visual Basic XML değişmez değerleri bildirmenize ve doğrudan XML ekseni özelliklerine erişebilmenize olanak sağlar.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], özellikle dil ile tümleşik sorgu (LINQ) avantajlarından yararlanmak için tasarlanan, bellek içi bir XML programlama API 'sidir. LINQ API 'Lerini doğrudan çağırabilseniz de yalnızca Visual Basic, XML değişmez değerlerini bildirmenize ve doğrudan XML ekseni özelliklerine erişebilmenize olanak sağlar.  
   
 > [!NOTE]
 > ASP.NET sayfasındaki bildirim temelli kodda XML sabit değerleri ve XML eksen özellikleri desteklenmez. Visual Basic XML özelliklerini kullanmak için kodunuzu ASP.NET uygulamanızdaki bir arka plan kod sayfasına koyun.  
@@ -23,14 +23,14 @@ Visual Basic, XML değişmez değerleri ve XML eksen özellikleri aracılığıy
  [Yürüt düğmesi](./media/overview-of-linq-to-xml/play-video-icon-example.gif) İlgili video gösterileri için bkz. [LINQ to XML nasıl başladım?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml) ve [LINQ to XML kullanarak Excel elektronik tabloları nasıl oluşturabilirim?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml).   
   
 ## <a name="creating-xml"></a>XML oluşturma  
- Visual Basic XML ağaçları oluşturmanın iki yolu vardır. Doğrudan kodda bir XML sabit değeri bildirebilirsiniz veya ağacı oluşturmak için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] API 'Lerini kullanabilirsiniz. Her iki işlem de kodun XML ağacının son yapısını yansıtmasını sağlar. Örneğin, aşağıdaki kod örneği bir XML öğesi oluşturur:  
+ Visual Basic XML ağaçları oluşturmanın iki yolu vardır. Doğrudan kodda bir XML sabit değeri bildirebilirsiniz veya ağacı oluşturmak için LINQ API 'Lerini kullanabilirsiniz. Her iki işlem de kodun XML ağacının son yapısını yansıtmasını sağlar. Örneğin, aşağıdaki kod örneği bir XML öğesi oluşturur:  
   
  [!code-vb[VbXmlSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
  Daha fazla bilgi için bkz. [VISUAL BASIC XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md).  
   
 ## <a name="accessing-and-navigating-xml"></a>XML 'e erişme ve gezinme  
- Visual Basic, XML yapılarına erişmek ve bunları gezinmek için XML eksen özellikleri sağlar. Bu özellikler, xml alt öğe adlarını belirterek XML öğelerine ve özniteliklerine erişmenizi sağlar. Alternatif olarak, öğeleri ve öznitelikleri gezinmek ve bulmak için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] yöntemlerini açıkça çağırabilirsiniz. Örneğin, aşağıdaki kod örneği bir XML öğesinin özniteliklerine ve alt öğelerine başvurmak için XML eksen özelliklerini kullanır. Kod örneği, alt öğeleri almak için bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgusu kullanır ve bunları, etkin bir şekilde bir dönüşüm gerçekleştirerek XML öğeleri olarak çıktılar.  
+ Visual Basic, XML yapılarına erişmek ve bunları gezinmek için XML eksen özellikleri sağlar. Bu özellikler, xml alt öğe adlarını belirterek XML öğelerine ve özniteliklerine erişmenizi sağlar. Alternatif olarak, öğeleri ve öznitelikleri gezinmek ve bulmak için LINQ yöntemlerini açık bir şekilde çağırabilirsiniz. Örneğin, aşağıdaki kod örneği bir XML öğesinin özniteliklerine ve alt öğelerine başvurmak için XML eksen özelliklerini kullanır. Kod örneği, alt öğeleri almak için bir LINQ sorgusu kullanır ve bunları, etkin bir şekilde bir dönüşüm gerçekleştirerek XML öğeleri olarak çıktılar.  
   
  [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   

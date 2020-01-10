@@ -1,5 +1,5 @@
 ---
-title: Tür üyelerinin adları
+title: Tür Üyelerinin Adları
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-author: KrzysztofCwalina
-ms.openlocfilehash: b4da14575d29582814d32a3050087b7acc0da802
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a9cd531100057fbad4884a20e6e7db6ef94e7956
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353715"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709224"
 ---
-# <a name="names-of-type-members"></a>Tür üyelerinin adları
+# <a name="names-of-type-members"></a>Tür Üyelerinin Adları
 Üyeleri türlerine yapılan: yöntemler, özellikler, olaylar, Oluşturucular ve alanları. Aşağıdaki bölümlerde, tür üyeleri adlandırmak için yönergeler açıklanmaktadır.  
   
 ## <a name="names-of-methods"></a>Yöntemlerin adları  
@@ -48,9 +47,9 @@ public class String {
   
  Bu düzen, genellikle özelliği bir yöntem gerçekten gerektiğini gösterir.  
   
- **✓ DO** koleksiyon özellikleri ardından "List" veya "Koleksiyonu." tekil bir ifade kullanmak yerine koleksiyondaki öğeleri açıklayan çoğul tümcecik adı  
+ **✓** , Koleksiyon özelliklerini, tekil bir tümcecik kullanmak yerine "List" veya "Collection" tarafından izlenen bir plural ifadesi ile tanımlar.  
   
- **✓ DO** olumlu bir ifade ile Boole özellikleri adlandırın (`CanSeek` yerine `CantSeek`). İsteğe bağlı olarak ayrıca Boole özellikleri öneki "İçin"Olan,"" veya ", ancak yalnızca değer kazandıran burada sahip".  
+ **✓ DO** olumlu bir ifade ile Boole özellikleri adlandırın (`CanSeek` yerine `CantSeek`). İsteğe bağlı olarak, Boolean özelliklerinin önüne "dir", "can" veya "sahip" de önek olarak önek ekleyebilirsiniz, ancak yalnızca değer ekler.  
   
  **✓ CONSIDER** özellik türü olarak aynı adı vererek.  
   

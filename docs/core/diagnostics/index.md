@@ -1,16 +1,14 @@
 ---
 title: Tanılama araçlarına genel bakış-.NET Core
 description: .NET Core uygulamalarını tanılamak için kullanılabilen araçlara ve tekniklere genel bakış.
-author: sdmaclea
-ms.author: stmaclea
-ms.date: 10/14/2019
+ms.date: 12/17/2019
 ms.topic: overview
-ms.openlocfilehash: c0a45a1bfe866ad42890db576b5dd5098b1dbc3d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0a78ec6c88f5323104277cddea4480a5e13b4e41
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318338"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715576"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 'da hangi tanılama araçları kullanılabilir?
 
@@ -32,14 +30,20 @@ Bu makale, ihtiyacınız olan çeşitli araçları bulmanıza yardımcı olur.
 
 ## <a name="net-core-dotnet-diagnostic-global-tools"></a>.NET Core DotNet tanılama küresel araçları
 
-### <a name="dotnet-counters"></a>DotNet-sayaçlar
+### <a name="dotnet-counters"></a>dotnet-counters
 
-[DotNet sayaçları](dotnet-counters.md) , ilk düzey sistem durumu izleme ve performans araştırması için bir performans izleme aracıdır. @No__t-0 API 'SI aracılığıyla yayınlanan performans sayacı değerlerini sunar. Örneğin, CPU kullanımı gibi şeyleri veya .NET Core uygulamanızda oluşturulan özel durumların oranını hızlıca izleyebilirsiniz.
+[DotNet sayaçları](dotnet-counters.md) , ilk düzey sistem durumu izleme ve performans araştırması için bir performans izleme aracıdır. <xref:System.Diagnostics.Tracing.EventCounter> API 'SI aracılığıyla yayınlanan performans sayacı değerlerini sunar. Örneğin, CPU kullanımı gibi şeyleri veya .NET Core uygulamanızda oluşturulan özel durumların oranını hızlıca izleyebilirsiniz.
 
-### <a name="dotnet-dump"></a>DotNet-döküm
+### <a name="dotnet-dump"></a>dotnet-dump
 
 [DotNet-dump](dotnet-dump.md) Aracı, yerel bir hata ayıklayıcı olmadan Windows ve Linux temel dökümlerinin toplanması ve çözümlenmesi için bir yoldur.
 
-### <a name="dotnet-trace"></a>DotNet-izleme
+### <a name="dotnet-trace"></a>dotnet-trace
 
 .NET Core, tanılama verilerinin açığa çıkarılabileceği `EventPipe` olarak adlandırılan öğeleri içerir. [DotNet-Trace](dotnet-trace.md) Aracı, uygulamanızın yavaş çalışan uygulamaların yavaşlamasına neden olması gereken senaryolarda yardımcı olabilecek, uygulamanızda ilgi çekici profil oluşturma verilerini kullanmanıza olanak tanır.
+
+## <a name="net-core-diagnostics-tutorials"></a>.NET Core tanılama öğreticileri
+
+### <a name="debug-a-memory-leak"></a>Bellek sızıntısı hatalarını ayıklama
+
+[Öğretici:](debug-memory-leak.md) Bellek sızıntısını bulma adım bir bellek sızıntısı. Sızıntı [-Counters](dotnet-counters.md) Aracı, sızıntıyı doğrulamak için kullanılır ve sızıntı sorunlarını tanılamak için [DotNet-dump](dotnet-dump.md) aracı kullanılır.

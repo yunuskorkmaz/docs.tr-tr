@@ -1,6 +1,5 @@
 ---
 title: <c> C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - c
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - c C# XML tag
 - <c> C# XML tag
 ms.assetid: aad5b16e-a29e-445e-bd0d-eea0b138d7b2
-ms.openlocfilehash: 9454ef8cc4b72d1d6bdcac26faf76eb17080328c
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 97d5949a1a1528befeffdc27a3e727ac510e8da2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523537"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75697240"
 ---
 # <a name="c-c-programming-guide"></a>\<c > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -30,7 +29,7 @@ ms.locfileid: "72523537"
  Kod olarak göstermek istediğiniz metin.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0c > etiketi, bir açıklama içindeki metnin kod olarak işaretlenmesi gerektiğini göstermek için bir yol sağlar. Birden çok satırı kod olarak göstermek için [\<code >](./code.md) kullanın.  
+ \<c > etiketi, bir açıklama içindeki metnin kod olarak işaretlenmesi gerektiğini belirtmek için bir yol sağlar. Birden çok satırı kod olarak göstermek için [\<kodu >](./code.md) kullanın.  
   
  Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   

@@ -1,6 +1,5 @@
 ---
 title: Adlandırılmış ve Isteğe bağlı bağımsız C# değişkenler-Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 30475b637202d3b614ac968897e467956bc78646
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6afa8a2bd2dfee8d7c36b58342036d18241317a8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970515"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714795"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler (C# Programlama Kılavuzu)
 C#4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. *Adlandırılmış bağımsız değişkenler* , bağımsız değişkenini parametrenin adıyla ilişkilendirerek parametre listesindeki konumuyla değil, belirli bir parametre için bir bağımsız değişken belirtmenizi sağlar. *Isteğe bağlı bağımsız değişkenler* bazı parametrelerin bağımsız değişkenlerini atlamanızı sağlar. Her iki yöntem de Yöntemler, Dizin oluşturucular, oluşturucular ve temsilcilerle birlikte kullanılabilir.  
@@ -70,7 +69,7 @@ C#4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. *
   
 - sabit bir ifade;  
   
-- `new ValType()`, `ValType` bir [numaralandırma](../../language-reference/keywords/enum.md) ya da [Yapı](./structs.md)gibi bir değer türü olduğunda formun bir ifadesi;  
+- `new ValType()`, `ValType` bir [numaralandırma](../../language-reference/builtin-types/enum.md) ya da [Yapı](structs.md)gibi bir değer türü olduğunda formun bir ifadesi;  
   
 - [varsayılan form (ValType)](../../language-reference/operators/default.md)bir ifade, burada `ValType` bir değer türüdür.  
   
@@ -113,7 +112,7 @@ C#4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. *
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- Daha fazla bilgi ve örnek için bkz. [Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma](./how-to-use-named-and-optional-arguments-in-office-programming.md) ve [nasıl yapılır: görsel C# özellikler kullanarak Office birlikte çalışma nesnelerine erişme](../interop/how-to-access-office-onterop-objects.md).  
+ Daha fazla bilgi ve örnek için bkz. [Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma](./how-to-use-named-and-optional-arguments-in-office-programming.md) ve [özellikleri kullanarak C# Office birlikte çalışma nesnelerine erişme](../interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Aşırı Yükleme Çözümü  
  Adlandırılmış ve isteğe bağlı bağımsız değişkenlerin kullanılması, aşırı yükleme çözünürlüğünü aşağıdaki yollarla etkiler:  
@@ -129,7 +128,7 @@ C#4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. *
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [Tür dinamiği kullanma](../types/using-type-dynamic.md)
 - [Oluşturucuları Kullanma](./using-constructors.md)
 - [Dizin Oluşturucular Kullanma](../indexers/using-indexers.md)

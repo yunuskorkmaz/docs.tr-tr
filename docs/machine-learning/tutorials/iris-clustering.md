@@ -4,19 +4,19 @@ description: Kümeleme senaryosunda ML.NET kullanmayı öğrenin
 author: pkulikov
 ms.date: 11/15/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: a7199ce2e5217eaadfa10893eb1fbb3417e9be20
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: cc3a1ae984289eb01ad8fdee9741f3f9788196c7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204830"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716229"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Öğretici: Iris çiçekler 'i k-ML.NET Kümelemesi kullanarak kategorilere ayırın
 
 Bu öğreticide, [Iris çiçek veri kümesi](https://en.wikipedia.org/wiki/Iris_flower_data_set)için bir [kümeleme modeli](../resources/tasks.md#clustering) oluşturmak üzere ml.net 'in nasıl kullanılacağı gösterilmektedir.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > - Sorunu anlama
@@ -27,7 +27,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > - Modeli eğitme
 > - Tahmin için modeli kullanma
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio 2017 sürüm 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
@@ -118,7 +118,7 @@ Aşağıdaki ek `using` yönergelerini *program.cs* dosyasının en üstüne ekl
 
 <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> sınıfı, Machine Learning ortamını temsil eder ve veri yükleme, model eğitimi, tahmin ve diğer görevler için günlüğe kaydetme ve giriş noktaları için mekanizmalar sağlar. Bu, Entity Framework `DbContext` kullanımı kavramsal olarak karşılaştırılabilir.
 
-## <a name="setup-data-loading"></a>Kurulum verilerini yükleme
+## <a name="set-up-data-loading"></a>Veri yüklemeyi ayarlama
 
 Aşağıdaki kodu `Main` yöntemine ekleyerek verileri yükleme yolunu ayarlayın:
 

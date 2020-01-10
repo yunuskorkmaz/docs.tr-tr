@@ -3,41 +3,39 @@ title: DOM’da Bir Öğe Düğümünden Öznitelikleri Kaldırma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7031d34916c520f52550d215a1a8e62880209c87
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb18e712d5ed2cd06c7ae0e867b19ca8a9ad2513
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590043"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710355"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>DOM’da Bir Öğe Düğümünden Öznitelikleri Kaldırma
-Öznitelikleri kaldırmak için birçok yolu vardır. Öznitelik koleksiyonundan kaldırabilirsiniz bir tekniktir. Bunu yapmak için aşağıdaki adımları gerçekleştirilir:  
+Öznitelikleri kaldırmanın birçok yolu vardır. Bir teknik, öznitelik koleksiyonundan kaldırmektir. Bunu yapmak için aşağıdaki adımlar gerçekleştirilir:  
   
-1. Öğesini kullanarak gelen öznitelik koleksiyonu alma `XmlAttributeCollection attrs = elem.Attributes;`.  
+1. `XmlAttributeCollection attrs = elem.Attributes;`kullanarak öğeden öznitelik koleksiyonunu alın.  
   
-2. Öznitelik, öznitelik koleksiyonundan üç yöntemden birini kullanarak kaldırın:  
+2. Öznitelik koleksiyonundan özniteliği, üç yöntemden birini kullanarak kaldırın:  
   
-    - Kullanım <xref:System.Xml.XmlAttributeCollection.Remove%2A> belirli bir öznitelik kaldırmak için.  
+    - Belirli bir özniteliği kaldırmak için <xref:System.Xml.XmlAttributeCollection.Remove%2A> kullanın.  
   
-    - Kullanım <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> tüm öznitelikler koleksiyondan Kaldır ve özniteliklere bir öğe bırakın.  
+    - Koleksiyondan tüm öznitelikleri kaldırmak ve öğeyi hiçbir öznitelik olmadan bırakmak için <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> kullanın.  
   
-    - Kullanım <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> bir özniteliği öznitelik koleksiyonundan dizin numarası kullanarak kaldırmak için.  
+    - Öznitelik koleksiyonundan bir özniteliği Dizin numarasını kullanarak kaldırmak için <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> kullanın.  
   
- Aşağıdaki yöntemlerden öğe düğümünden öznitelikleri kaldırın.  
+ Aşağıdaki yöntemler öğe düğümünden öznitelikleri kaldırır.  
   
-- Kullanım <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> öznitelik koleksiyonundan kaldırılamadı.  
+- Öznitelik koleksiyonunu kaldırmak için <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> kullanın.  
   
-- Kullanım <xref:System.Xml.XmlElement.RemoveAttribute%2A> tek bir öznitelik ada göre Koleksiyondan kaldırılacak.  
+- Koleksiyondan ada göre tek bir özniteliği kaldırmak için <xref:System.Xml.XmlElement.RemoveAttribute%2A> kullanın.  
   
-- Kullanım <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> tek bir öznitelik koleksiyonundan dizin numarası ile kaldırmak için.  
+- Koleksiyondan dizin numarasına göre tek bir özniteliği kaldırmak için <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> kullanın.  
   
- Öğesi, öznitelik koleksiyonundan öznitelik alma ve doğrudan öznitelik düğümü kaldırmak için bir daha fazla seçenek var. Öznitelik öznitelik koleksiyonundan almak için bir ad kullanabilirsiniz `XmlAttribute attr = attrs["attr_name"];`, dizin `XmlAttribute attr = attrs[0];`, veya ad alanı adıyla tam olarak uygun `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`.  
+ Diğer bir seçenek de öğeyi almak, öznitelik koleksiyonundan özniteliği almak ve öznitelik düğümünü doğrudan kaldırkullanmaktır. Öznitelik koleksiyonundan özniteliği almak için, bir ad, `XmlAttribute attr = attrs["attr_name"];`, Dizin `XmlAttribute attr = attrs[0];`veya ad alanı `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`ile tam olarak niteleyerek adı kullanabilirsiniz.  
   
- Öznitelikleri kaldırmak için kullanılan yöntem ne olursa olsun, varsayılan öznitelikler belge türü tanımı (DTD'nin) olarak tanımlanan öznitelikleri kaldırma hakkında özel sınırlamalar vardır. Ait oldukları öğesi kaldırılmadığı sürece, varsayılan öznitelikler kaldırılamaz. Her zaman, varsayılan öznitelikler bildirilmiş olan öğeler için varsayılan öznitelikleri yok. Varsayılan özniteliğinden kaldırma bir <xref:System.Xml.XmlAttributeCollection> veya <xref:System.Xml.XmlElement> değiştirme özniteliği sonuçlarında eklenen içine <xref:System.Xml.XmlAttributeCollection> bildirilen varsayılan değeri olarak başlatılan bir öğe. Olarak tanımlanan bir öğe varsa `<book att1="1" att2="2" att3="3"></book>`, sahip olduğunuz sonra bir `book` varsayılan öznitelikler üç öğeyle bildirilir. XML belge nesne modeli (DOM) uygulaması, garanti olduğu sürece bu `book` öğe varsa, bu üç varsayılan özniteliklerini sahip `att1`, `att2`, ve `att3`.  
+ Öznitelikleri kaldırmak için kullanılan yöntemden bağımsız olarak, belge türü tanımında (DTD) varsayılan öznitelikler olarak tanımlanan öznitelikleri kaldırmaya ilişkin özel sınırlamalar vardır. Ait oldukları öğe kaldırılmadığı takdirde varsayılan öznitelikler kaldırılamaz. Varsayılan öznitelikler, varsayılan özniteliklerin bildirildiği öğeler için her zaman vardır. Varsayılan bir özniteliği bir <xref:System.Xml.XmlAttributeCollection> veya <xref:System.Xml.XmlElement> kaldırmak, öğesinin <xref:System.Xml.XmlAttributeCollection> eklenen ve varsayılan değere başlatılan bir değiştirme özniteliğiyle sonuçlanır. `<book att1="1" att2="2" att3="3"></book>`olarak tanımlanmış bir öğeye sahipseniz, üç varsayılan özniteliğe göre bildirildiği bir `book` öğesi vardır. XML Belge Nesne Modeli (DOM) uygulama, bu `book` öğesinin var olduğu sürece `att1`, `att2`ve `att3`bu üç varsayılan özniteliğe sahiptir.  
   
- İle çağrıldığında bir <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> yöntemi gibi bir öznitelik, bir değer olmadan var olamaz bu özniteliğin değeri String.Empty için ayarlar.  
+ Bir <xref:System.Xml.XmlAttribute>ile çağrıldığında <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> yöntemi öznitelik değerini String. Empty olarak ayarlar, çünkü bir öznitelik değer olmadan bulunamaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

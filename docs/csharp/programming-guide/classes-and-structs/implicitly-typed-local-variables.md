@@ -1,17 +1,16 @@
 ---
 title: Örtük olarak yazılan yerel değişkenler C# -Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: dab708bfbc33458bc2664c0d04757f0badcc2575
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 692a0f8ad933f3ba4bef50681cb3487fa0a7eea9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141607"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714832"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Örtük olarak yazılan yerel değişkenlerC# (Programlama Kılavuzu)
 
@@ -49,7 +48,7 @@ Daha fazla bilgi için bkz. [bir sorgu ifadesinde örtük olarak yazılan yerel 
 
 ## <a name="var-and-anonymous-types"></a>var ve anonim türler
 
-Çoğu durumda `var` kullanımı isteğe bağlıdır ve yalnızca sözdizimsel bir kolaylık vardır. Ancak, bir değişken anonim bir türle başlatıldığında, nesnenin özelliklerine sonraki bir noktada erişmeniz gerekiyorsa değişkeni `var` olarak bildirmeniz gerekir. Bu, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadelerinde yaygın bir senaryodur. Daha fazla bilgi için bkz. [anonim türler](anonymous-types.md).
+Çoğu durumda `var` kullanımı isteğe bağlıdır ve yalnızca sözdizimsel bir kolaylık vardır. Ancak, bir değişken anonim bir türle başlatıldığında, nesnenin özelliklerine sonraki bir noktada erişmeniz gerekiyorsa değişkeni `var` olarak bildirmeniz gerekir. Bu, LINQ sorgu ifadelerinde yaygın bir senaryodur. Daha fazla bilgi için bkz. [anonim türler](anonymous-types.md).
 
 Kaynak kodunuzun perspektifinden adsız bir türün adı yoktur. Bu nedenle, bir sorgu değişkeni `var`ile başlatılmışsa, nesne dizisinde döndürülen özelliklere erişmenin tek yolu, `foreach` deyimindeki yineleme değişkeninin türü olarak `var` kullanmaktır.
 
@@ -69,7 +68,7 @@ Aşağıdaki kısıtlamalar, örtük olarak belirlenmiş değişken bildirimleri
 
 - `var` adlı bir tür kapsamdadır, `var` anahtar sözcüğü bu tür adına çözümlenir ve örtük olarak yazılmış bir yerel değişken bildiriminin parçası olarak değerlendirilmez.
 
-`var` anahtar sözcüğüyle örtük yazma, yalnızca yerel Yöntem kapsamındaki değişkenlere uygulanabilir. C# Derleyici, kodu işlediği bir mantıksal Paradox ile karşılaşacağından, sınıf alanları için örtülü yazma kullanılamaz: derleyicinin alanın türünü bilmesi gerekir, ancak atama ifadesi çözümlenene kadar türü belirleyemez ve ifade, türü bilmeden değerlendirilemiyor. Aşağıdaki kodu göz önünde bulundurun:
+`var` anahtar sözcüğüyle örtük yazma, yalnızca yerel Yöntem kapsamındaki değişkenlere uygulanabilir. C# Derleyici, kodu işlediği bir mantıksal Paradox ile karşılaşacağından, sınıf alanları için örtülü yazma kullanılamaz: derleyicinin alanın türünü bilmesi gerekir, ancak atama ifadesi çözümlenene kadar türü belirleyemez ve ifade türü bilmeden değerlendirilemiyor. Aşağıdaki kodu inceleyin:
 
 ```csharp
 private var bookTitles;

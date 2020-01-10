@@ -1,5 +1,5 @@
 ---
-title: /debug
+title: -debug
 ms.date: 03/10/2018
 helpviewer_keywords:
 - debug compiler switches
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: 3beb9ad3829c2f55120a9136e6e54185551bd20b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: df65d1c095f5a22d562d78e15baf750a20ec2556
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344773"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716784"
 ---
 # <a name="-debug-visual-basic"></a>-Debug (Visual Basic)
 
@@ -30,18 +30,18 @@ veya
 -debug:[full | pdbonly]
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Arguments
 
 |Terim|Tanım|
 |---|---|
-|`+` &#124; `-`|İsteğe bağlı. `+` veya `/debug` belirtme derleyicinin hata ayıklama bilgileri oluşturmasına ve bir. pdb dosyasına yerleştirmesine neden olur. `-` belirtmek `/debug`Belirtmemeye yönelik aynı etkiye sahiptir.|
-|`full` &#124; `pdbonly`|İsteğe bağlı. Derleyici tarafından oluşturulan hata ayıklama bilgilerinin türünü belirtir. `/debug:pdbonly`belirtmezseniz, varsayılan değer, çalışan programa bir hata ayıklayıcı eklemenize olanak sağlayan `full`. `pdbonly` bağımsız değişkeni, program hata ayıklayıcıda başlatıldığında kaynak kodu hata ayıklamasına izin verir, ancak yalnızca çalışan program hata ayıklayıcıya eklendiğinde derleme dili kodunu görüntüler.|
+|`+` &#124; `-`|İsteğe bağlı. `+` veya `-debug` belirtme derleyicinin hata ayıklama bilgileri oluşturmasına ve bir. pdb dosyasına yerleştirmesine neden olur. `-` belirtmek `-debug`Belirtmemeye yönelik aynı etkiye sahiptir.|
+|`full` &#124; `pdbonly`|İsteğe bağlı. Derleyici tarafından oluşturulan hata ayıklama bilgilerinin türünü belirtir. `-debug:pdbonly`belirtmezseniz, varsayılan değer, çalışan programa bir hata ayıklayıcı eklemenize olanak sağlayan `full`. `pdbonly` bağımsız değişkeni, program hata ayıklayıcıda başlatıldığında kaynak kodu hata ayıklamasına izin verir, ancak yalnızca çalışan program hata ayıklayıcıya eklendiğinde derleme dili kodunu görüntüler.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Hata ayıklama derlemeleri oluşturmak için bu seçeneği kullanın. `/debug`, `/debug+`veya `/debug:full`belirtmezseniz, programınızın çıkış dosyasında hata ayıklaması yapamazsınız.
+Hata ayıklama derlemeleri oluşturmak için bu seçeneği kullanın. `-debug`, `-debug+`veya `-debug:full`belirtmezseniz, programınızın çıkış dosyasında hata ayıklaması yapamazsınız.
 
-Varsayılan olarak, hata ayıklama bilgileri yayılmaz (`/debug-`). Hata ayıklama bilgilerini yayma için `/debug` veya `/debug+`belirtin.
+Varsayılan olarak, hata ayıklama bilgileri yayılmaz (`-debug-`). Hata ayıklama bilgilerini yayma için `-debug` veya `-debug+`belirtin.
 
 Bir uygulamanın hata ayıklama performansını yapılandırma hakkında daha fazla bilgi için bkz. [bir görüntüyü hata ayıklamayı kolaylaştırın](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).
 

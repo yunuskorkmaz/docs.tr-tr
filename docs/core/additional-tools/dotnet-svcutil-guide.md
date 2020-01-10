@@ -3,13 +3,12 @@ title: WCF Svcutil aracına genel bakış
 description: .NET Framework projelerine yönelik WCF Svcutil aracına benzer şekilde .NET Core ve ASP.NET Core projelerine yönelik işlevler ekleyen Microsoft WCF DotNet-Svcutil aracına genel bakış.
 author: mlacouture
 ms.date: 02/22/2019
-ms.custom: seodec18
-ms.openlocfilehash: 89fe72c8116498ff60d439ce17ef2e857edf621e
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: d204576f27227ce6e65d61471f19cdf3ec4df37a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771977"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714558"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core için WCF DotNet-Svcutil aracı
 
@@ -22,7 +21,7 @@ Windows Communication Foundation (WCF) **DotNet-Svcutil** Aracı, bir ağ konumu
 > [!IMPORTANT]
 > Yalnızca güvenilir bir kaynaktan hizmetlere başvurmanız gerekir. Güvenilmeyen bir kaynaktan başvuruları eklemek güvenliği tehlikeye atabilir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 <!-- markdownlint-disable MD025 -->
 
@@ -179,6 +178,6 @@ Sorularınız veya geri bildiriminiz varsa [GitHub ' da bir sorun açın](https:
 
 - Bilinen sorunlar da dahil olmak üzere, güncelleştirilmiş sürüm bilgileri için [sürüm notlarına](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md) bakın.
 
-## <a name="information"></a>Bilgiler
+## <a name="information"></a>Bilgisi
 
 - [DotNet-Svcutil NuGet paketi](https://nuget.org/packages/dotnet-svcutil)

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 80fd1f7487dbe3925b875e728eaeddac86927ad4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974926"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716014"
 ---
 # <a name="interop-etw-events"></a>Birlikte Çalışma ETW Olayları
 Birlikte çalışma olayları, Microsoft ara dili (MSIL) saplama oluşturma ve önbelleğe alma hakkında bilgi yakalar.  
@@ -33,7 +31,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir. (Daha faz
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |Modül kimliği|Win: UInt16|Modül tanımlayıcısı.|  
 |StubMethodID|Win: UInt64|Saplama yöntemi tanımlayıcısı.|  
@@ -63,7 +61,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |Modül kimliği|Win: UInt16|Modül tanımlayıcısı.|  
 |StubMethodID|Win: UInt64|Saplama yöntemi tanımlayıcısı.|  

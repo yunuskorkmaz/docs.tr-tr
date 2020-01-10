@@ -17,14 +17,12 @@ helpviewer_keywords:
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b39373239d6aefaa671afebbb85dc2156866358f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 66e7d01f37a1119b9d2076a9131aa40f26d15625
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204813"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708197"
 ---
 # <a name="asynchronous-file-io"></a>Zaman Uyumsuz Dosya G/Ç
 
@@ -36,11 +34,11 @@ Zaman uyumsuz işlemler, yoğun kaynak kullanan I/O işlemlerini ana iş parçac
 
 C#Visual Basic, zaman uyumsuz programlama için iki anahtar sözcüğe sahiptir:
 
-- zaman uyumsuz bir işlem içeren bir yöntemiC#işaretlemek için kullanılan `Async` (Visual Basic) veya `async` () değiştiricisi.
+- Zaman uyumsuz bir işlem içeren bir yöntemi işaretlemek için kullanılan `Async` (Visual Basic) veya `async` (C#) değiştiricisi.
 
-- zaman uyumsuz bir yöntemin sonucuna uygulanan `Await`C#(Visual Basic) veya `await` () işleci.
+- Bir zaman uyumsuz yöntemin sonucuna uygulanan `Await` (Visual Basic) veya `await` (C#) işleci.
 
-Zaman uyumsuz G/Ç işlemlerini uygulamak için, aşağıdaki örneklerde gösterildiği üzere zaman uyumsuz yöntemlerle bu anahtar sözcükleri kullanın. Daha fazla bilgi için bkz. [Async ve awaitC#() ile](../../csharp/programming-guide/concepts/async/index.md) zaman uyumsuz programlama veya [Async ve await ile zaman uyumsuz programlama (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md).
+Zaman uyumsuz G/Ç işlemlerini uygulamak için, aşağıdaki örneklerde gösterildiği üzere zaman uyumsuz yöntemlerle bu anahtar sözcükleri kullanın. Daha fazla bilgi için [zaman uyumsuz programlama ile zaman uyumsuz ve await (C#)](../../csharp/programming-guide/concepts/async/index.md) veya [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md).
 
 Aşağıdaki örnek, dosyaları zaman uyumsuz olarak bir dizinden başka bir dizine kopyalamak için <xref:System.IO.FileStream> nesnelerini nasıl kullanacağınızı gösterir. <xref:System.Web.UI.WebControls.Button.Click> denetimi için <xref:System.Windows.Controls.Button> olay işleyicisinin, zaman uyumsuz bir yöntem çağırdığı için `async` değiştiricisi ile işaretlendiğine dikkat edin.
 

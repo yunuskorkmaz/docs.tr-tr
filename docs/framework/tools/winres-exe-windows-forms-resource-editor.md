@@ -11,14 +11,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: df7ce0795daabdf34f46e20460bef23e7c486467
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043899"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715703"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres. exe (Windows kaynak yerelleştirme Düzenleyicisi)
 
@@ -65,13 +63,13 @@ Winres.exe bir denetimin türünü çözümleyemezse, yerelleştirilmiş .resx v
 
 Genel olarak, bir uygulamanın Windows Forms formlarını yerelleştirmeye başlamadan önce, yerelleştirme aracı olarak Visual Studio'yu mu yoksa Winres.exe'yi mi kullanmak istediğinize karar vermelisiniz. Sürüm uyumluluğu, daha sonra açıklandığı gibi, bir araçtan diğerine geçiş yapmasını engelleyebilir.
 
-Visual Studio'nun avantajı, bir uygulamayı hem geliştirmek hem de yerelleştirmek için kullanabilmenizdedir. Bir formu yerelleştirmek için, geliştirme tamamlandıktan <xref:System.ComponentModel.LocalizableAttribute> sonra formun ( **Özellikler** düzenleyicisinde `true` **yerelleştirilebilir** özelliği) öğesini olarak ayarlayın ve **Language** özelliğini istenen hedef kültür olarak değiştirin. Daha sonra, dizeleri düzenleyin ve denetimlerin konumu ile boyutunu hedef kültürün dizelerine uygun olacak şekilde ayarlayın. Yerelleştirilmiş .resx dosyasını kaydettiğinizde, Visual Studio dosyaya yalnızca yerelleştirilebilir özellikleri (hedef kültürde değiştirilen özellikler) yazar. Visual Studio, yerelleştirilmiş .resx dosyası için bir uydu derlemesini doğru dizin konumunda otomatik olarak oluşturur.
+Visual Studio'nun avantajı, bir uygulamayı hem geliştirmek hem de yerelleştirmek için kullanabilmenizdedir. Bir formu yerelleştirmek için, geliştirme tamamlandıktan sonra formun <xref:System.ComponentModel.LocalizableAttribute> ( **Özellikler** düzenleyicisinde **yerelleştirilebilir** özelliği) `true` olarak ayarlayın ve **Language** özelliğini istenen hedef kültür olarak değiştirin. Daha sonra, dizeleri düzenleyin ve denetimlerin konumu ile boyutunu hedef kültürün dizelerine uygun olacak şekilde ayarlayın. Yerelleştirilmiş .resx dosyasını kaydettiğinizde, Visual Studio dosyaya yalnızca yerelleştirilebilir özellikleri (hedef kültürde değiştirilen özellikler) yazar. Visual Studio, yerelleştirilmiş .resx dosyası için bir uydu derlemesini doğru dizin konumunda otomatik olarak oluşturur.
 
 Visual Studio tümleşik bir geliştirme ve yerelleştirme ortamı sağlasa da, yerelleştirme üçüncü taraf yerelleştiriciler tarafından yapıldığında kullanılması önerilen araç Winres. exe ' dir. Winres.exe yalnızca bir yerelleştirme aracı olduğu için, bir uygulamanın kodu ile yerelleştirilecek formlar arasında daha net bir ayrım sağlar, ki bu da büyük projeleri yönetirken daha büyük bir kolaylık demektir.
 
 ## <a name="using-winresexe"></a>Winres.exe'yi kullanma
 
-Winres. exe kullanarak yerelleştirmek için, ilk olarak Visual Studio 'daki **Windows Form Tasarımcısı** gibi bir görsel tasarımcı kullanarak bir uygulama geliştirmeniz gerekir. Geliştirme tamamlandığında, formun <xref:System.ComponentModel.LocalizableAttribute> ( **Özellikler** düzenleyicisinde `true` **yerelleştirilebilir** özelliği) öğesini olarak ayarlayın ve ardından varsayılan kültür için. resx dosyasını bir üçüncü taraf yerelleştiriciye bırakın. Bu .resx dosyası özgün formun tasarım zamanı sürümünü yeniden oluşturmak için Winres.exe'nin kullandığı ek bilgileri içerir.
+Winres. exe kullanarak yerelleştirmek için, ilk olarak Visual Studio 'daki **Windows Form Tasarımcısı** gibi bir görsel tasarımcı kullanarak bir uygulama geliştirmeniz gerekir. Geliştirme tamamlandığında formun <xref:System.ComponentModel.LocalizableAttribute> ( **Özellikler** düzenleyicisinde **yerelleştirilebilir** özelliği) `true`olarak ayarlayın ve ardından varsayılan kültür için. resx dosyasını bir üçüncü taraf yerelleştiriciye koyun. Bu .resx dosyası özgün formun tasarım zamanı sürümünü yeniden oluşturmak için Winres.exe'nin kullandığı ek bilgileri içerir.
 
 > [!NOTE]
 > Winres.exe varsayılan kaynak dosyayı düzenlemek için kullanılamaz. Winres.exe, değişen tüm özellikleri yerelleştirilmiş özellikler olarak yorumlar ve bunları hedef kültür kaynak dosyasına kaydeder.
@@ -90,7 +88,7 @@ Winres. exe aşağıdaki özelliklere ve özelliklere sahiptir:
 
 Kullandığınız .NET Framework ile yayınlanan Winres. exe sürümünü kullanmanız gerekir. Aşağıdaki tabloda uyumlu sürümler listelenmiştir:
 
-|Visual Studio|.NET Framework|Winres.exe|
+|{1&gt;Visual Studio&lt;1}|.NET Framework|Winres.exe|
 |-------------------|--------------------|----------------|
 |Visual Studio .NET 2002|1.0|1.0|
 |Visual Studio .NET 2003|1.1|1.1|
@@ -100,27 +98,27 @@ Kullandığınız .NET Framework ile yayınlanan Winres. exe sürümünü kullan
 |Visual Studio 2017|4.6|4.6|
 
 > [!NOTE]
-> VSFM'de, Visual Studio ile uyumluluk avantajı bulunuyor olsa da, kaynak dosyaya yalnızca değiştirilmiş değerleri depoladığından, Winres.exe geçerli kaynak dosyanın üst öğelerinin aynı dizinde bulunmasını gerektirir. Örneğin `TestApp.de-DE.resources`, Almanya kaynak dosyasındaki bir Almanca, varsayılan kaynak `TestApp.resx`dosyası, ve muhtemelen kültür bağımsız kaynak dosyası `TestApp.de.resources`olması gerekir.
+> VSFM'de, Visual Studio ile uyumluluk avantajı bulunuyor olsa da, kaynak dosyaya yalnızca değiştirilmiş değerleri depoladığından, Winres.exe geçerli kaynak dosyanın üst öğelerinin aynı dizinde bulunmasını gerektirir. Örneğin, Almanya kaynak dosyasında Almanca `TestApp.de-DE.resources`, varsayılan kaynak dosyası, `TestApp.resx`ve muhtemelen kültür bağımsız kaynak dosyası `TestApp.de.resources`olması gerekir.
 
 ## <a name="examples"></a>Örnekler
 
 ### <a name="to-localize-a-resx-or-resources-file-associated-with-a-form"></a>Bir formla ilişkili .resx veya .resources dosyasını yerelleştirmek için
 
-1. Winres. exe ' yi çalıştırmak için geliştirici komut istemine yazın `winres` .
+1. Winres. exe ' yi çalıştırmak için geliştirici komut istemine `winres` yazın.
 
 2. Yerelleştirmek üzere bir formun varsayılan kaynaklarını açmak için **Dosya** menüsünde **Aç** komutuna tıklayın ve dosyayı açmak için dosyaya gidin.
 
-     -veya-
+     veya
 
      Winres.exe'yi başlattığınızda komut satırında açılacak dosyayı belirtin.
 
-     Aşağıdaki komut Winres. exe ' yi başlatır ve form tasarımcısında ile `TestApp.resx` ilişkili formu yükler.
+     Aşağıdaki komut Winres. exe ' yi başlatır ve form tasarımcısında `TestApp.resx` ilişkili formu yükler.
 
     ```console
     winres TestApp.resx
     ```
 
-     Aşağıdaki komut Winres. exe ' yi başlatır ve form tasarımcısında ile `TestApp.resources` ilişkili formu yükler.
+     Aşağıdaki komut Winres. exe ' yi başlatır ve form tasarımcısında `TestApp.resources` ilişkili formu yükler.
 
     ```console
     winres TestApp.resources
@@ -129,13 +127,13 @@ Kullandığınız .NET Framework ile yayınlanan Winres. exe sürümünü kullan
     > [!NOTE]
     > Kaynaklarını düzenlediğiniz form devralınmış bir form ise, hem formun içindeki derleme hem de devralan (türetilmiş) formu içeren derleme Genel Derleme Önbelleği'ne (GAC) kaydettirilmeli veya WinRes.exe ile aynı dizinde bulunmalıdır. GAC 'ye .NET Framework bileşenleri yükleme hakkında daha fazla bilgi için bkz. [genel derleme önbelleği](../app-domains/gac.md).
 
-3. Formdaki denetimleri seçin ve diğer özelliklerini yerelleştirilmiş kültürü <xref:System.Windows.Forms.Control.Text%2A> ve dilini yansıtacak şekilde değiştirin. Yerelleştirilmiş metnin sığmasını sağlayacak şekilde denetimleri gerektiği gibi taşıyın veya yeniden boyutlandırın.
+3. Formdaki denetimleri seçin ve <xref:System.Windows.Forms.Control.Text%2A> ve diğer özelliklerini yerelleştirilmiş kültürü ve dilini yansıtacak şekilde değiştirin. Yerelleştirilmiş metnin sığmasını sağlayacak şekilde denetimleri gerektiği gibi taşıyın veya yeniden boyutlandırın.
 
 4. . Resx veya. resources dosyasının yerelleştirilmiş sürümünü kaydetmek için, **Dosya** menüsünde **Kaydet** simgesine veya aynı komuta tıklayın. Araç, **kültür Seç** penceresini görüntüler.
 
 5. Uygun kültürü ve dosya modunu seçip **Tamam**' a tıklayın.
 
-   Araç dosyayı, çalışma zamanının yerelleştirilmiş kaynak dosyaları için beklediği adlandırma kuralını kullanarak kaydeder. Örneğin, Almanya 'da Almanca için `TestApp.resources` yerelleştirmeniz halinde, araç dosyayı olarak `TestApp.de-DE.resources`kaydeder. Almanya 'da Almanca `TestApp.resx` için yerelleştirmeniz durumunda, araç dosyayı olarak `TestApp.de-DE.resx`kaydeder. Kaynak adlandırma kuralları hakkında daha fazla bilgi için bkz. [kaynakları paketleme ve dağıtma](../resources/packaging-and-deploying-resources-in-desktop-apps.md). Çalışma zamanı tarafından kullanılan önceden tanımlanmış kültür adlarının bir listesi için, <xref:System.Globalization.CultureInfo> sınıfına bakın.
+   Araç dosyayı, çalışma zamanının yerelleştirilmiş kaynak dosyaları için beklediği adlandırma kuralını kullanarak kaydeder. Örneğin, Almanya 'da Almanca için `TestApp.resources` yerelleştirmeniz halinde araç dosyayı `TestApp.de-DE.resources`olarak kaydeder. Almanya 'da Almanca için `TestApp.resx` yerelleştirmeniz durumunda araç dosyayı `TestApp.de-DE.resx`olarak kaydeder. Kaynak adlandırma kuralları hakkında daha fazla bilgi için bkz. [kaynakları paketleme ve dağıtma](../resources/packaging-and-deploying-resources-in-desktop-apps.md). Çalışma zamanı tarafından kullanılan önceden tanımlanmış kültür adlarının bir listesi için <xref:System.Globalization.CultureInfo> sınıfına bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

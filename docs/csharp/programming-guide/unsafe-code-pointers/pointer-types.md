@@ -1,16 +1,15 @@
 ---
 title: İşaretçi türleri- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: b9b9f145f8f2d945fa06d53efa89f5754766963f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: fe0eacbd67917826c88c5ef68bb8d8aeab9ba251
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423121"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711824"
 ---
 # <a name="pointer-types-c-programming-guide"></a>İşaretçi türleri (C# Programlama Kılavuzu)
 
@@ -87,5 +86,6 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 - [C# Programlama Kılavuzu](../index.md)
 - [Güvenli Olmayan Kod ve İşaretçiler](index.md)
 - [İşaretçi Dönüştürmeler](pointer-conversions.md)
-- [Türler](/dotnet/csharp/language-reference/keywords)
+- [Başvuru türleri](../../language-reference/keywords/reference-types.md)
+- [Değer türleri](../../language-reference/keywords/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

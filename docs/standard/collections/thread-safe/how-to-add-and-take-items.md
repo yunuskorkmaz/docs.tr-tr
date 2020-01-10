@@ -8,28 +8,26 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, blocking dictionary
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0e24c6b5aa02e8bc7ca4bcbf2c69bffd06216962
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f4270d2ec71421bad8974a3e5cd8f1d65db3b74
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054295"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711304"
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Nasıl yapılır: Öğeleri Tek Tek Ekleme ve Bir BlockingCollection'dan ve Alma
-Bu örnek nasıl öğelerinden ekleyip gösterir bir <xref:System.Collections.Concurrent.BlockingCollection%601> bir engelleyici ve engelleyici olmayan bir şekilde. Daha fazla bilgi için <xref:System.Collections.Concurrent.BlockingCollection%601>, bkz: [BlockingCollection genel bakışı](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
+Bu örnek, hem engelleme hem de engellenmeyen bir şekilde <xref:System.Collections.Concurrent.BlockingCollection%601> öğelerin nasıl ekleneceğini ve kaldırılacağını gösterir. <xref:System.Collections.Concurrent.BlockingCollection%601>hakkında daha fazla bilgi için bkz. [BlockingCollection genel bakış](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
   
- Bir numaralandırma örneği bir <xref:System.Collections.Concurrent.BlockingCollection%601> boş ve daha fazla öğe eklenecek kadar bkz [nasıl yapılır: Bir Blockingcollection'daki öğeleri kaldırmak için ForEach kullanma](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).
+ Boş olana kadar <xref:System.Collections.Concurrent.BlockingCollection%601> nasıl numaralandırılacağı ve daha fazla öğe eklenemeyecek bir örnek için bkz. [nasıl yapılır: bir BlockingCollection Içindeki öğeleri kaldırmak Için foreach kullanma](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).
   
 ## <a name="example"></a>Örnek  
- Bu ilk örnekte, böylece işlemleri geçici olarak koleksiyon geçerli olduğunda engeller ve eklemek için öğeleri (çekerken) boş veya (eklerken) maksimum kapasite veya belirtilen zaman aşımı süresi dolduysa gösterilmektedir. Oluşturucuda belirtilen en yüksek kapasiteli Blockingcollection'a oluşturulduğunda kapasite üst sınırı engelleme yalnızca etkin olduğunu unutmayın.  
+ Bu ilk örnek, koleksiyonun geçici olarak boş (alma sırasında) veya en yüksek kapasiteye (eklenirken) ya da belirtilen bir zaman aşımı süresi geçtiğinde işlemleri engelleyecek şekilde öğelerin nasıl ekleneceğini ve alınacağını gösterir. Maksimum kapasiteden engelleme özelliğinin yalnızca, Oluşturucu içinde belirtilen en fazla kapasite ile BlockingCollection oluşturulduğunda etkinleştirildiğini unutmayın.  
   
  [!code-csharp[CDS_BlockingCollection#01](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/example01.cs#01)]
  [!code-vb[CDS_BlockingCollection#01](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/simpleblocking.vb#01)]  
   
 ## <a name="example"></a>Örnek  
- Bu ikinci örnek ekleyin ve böylece işlemleri değil engeller öğeleri almak nasıl gösterir. Hiçbir öğe varsa, sınırlanmış bir koleksiyon üzerinde en yüksek kapasite sınırına veya zaman aşımı süresi dolduysa, ardından <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> veya <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> işlem false döndürür. Böylece, iş parçacığı bir süre için bazı diğer faydalı iş yapmak ve sonra yeniden yeni bir öğe almak veya daha önce eklenemedi aynı öğeyi eklemeyi denediğinizde deneyin. Programı iptal erişirken uygulamak nasıl de gösterir. bir <xref:System.Collections.Concurrent.BlockingCollection%601>.  
+ Bu ikinci örnek işlemlerin nasıl ekleneceğini ve öğelerin nasıl alınacağını gösterir. Hiçbir öğe yoksa, sınırlanmış bir koleksiyondaki maksimum kapasiteye ulaşıldı veya zaman aşımı süresi doldu, <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> veya <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> işlemi false döndürür. Bu, iş parçacığının bir süre boyunca başka bir faydalı iş yapmasına ve sonra yeni bir öğe almayı veya daha önce eklenemeyen aynı öğeyi eklemeyi denemesini sağlar. Program ayrıca bir <xref:System.Collections.Concurrent.BlockingCollection%601>erişirken iptalin nasıl uygulanacağını gösterir.  
   
  [!code-csharp[CDS_BlockingCollection#02](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/example02.cs#02)]
  [!code-vb[CDS_BlockingCollection#02](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/nonblockingbc.vb#02)]  

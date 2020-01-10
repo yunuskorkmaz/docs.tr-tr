@@ -13,19 +13,19 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 75e6c7b4886bd490c462e9128eca7ec13f233824
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 612b99354310c18030cefce4e6f02fab8ed20f83
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837304"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636781"
 ---
 # <a name="security-wpf"></a>Güvenlik (WPF)
-<a name="introduction"></a>Windows Presentation Foundation (WPF) tek başına ve tarayıcıda barındırılan uygulamalar geliştirirken güvenlik modelini göz önünde bulundurmanız gerekir. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulamalar, Windows Installer (. msi), XCopy veya ClickOnce kullanılarak dağıtılıp dağıtılmayacağı Kısıtlanmamış izinlerle (CAS**FullTrust** izin kümesi) yürütülür. ClickOnce ile kısmi güven dağıtma, tek başına WPF uygulamaları desteklenmez. Ancak, bir tam güven ana bilgisayar uygulaması, .NET Framework eklenti modelini kullanarak kısmi güven <xref:System.AppDomain> oluşturabilir. Daha fazla bilgi için bkz. [WPF Eklentilerine Genel Bakış](./app-development/wpf-add-ins-overview.md).  
+<a name="introduction"></a>Windows Presentation Foundation (WPF) tek başına ve tarayıcıda barındırılan uygulamalar geliştirirken güvenlik modelini göz önünde bulundurmanız gerekir. WPF tek başına uygulamaları, Windows Installer (. msi), XCopy veya ClickOnce kullanılarak dağıtılıp dağıtılmayacağı Kısıtlanmamış izinlerle (CAS**FullTrust** izin kümesi) yürütülür. ClickOnce ile kısmi güven dağıtma, tek başına WPF uygulamaları desteklenmez. Ancak, bir tam güven ana bilgisayar uygulaması, .NET Framework eklenti modelini kullanarak kısmi güven <xref:System.AppDomain> oluşturabilir. Daha fazla bilgi için bkz. [WPF Eklentilerine Genel Bakış](./app-development/wpf-add-ins-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tarayıcıda barındırılan uygulamalar Windows Internet Explorer veya Firefox tarafından barındırılır ve daha fazla bilgi Için XAML tarayıcı uygulamaları (XBAP) veya gevşek [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] belgeleri olabilir. bkz. [WPF XAML tarayıcı uygulamalarına genel bakış](./app-development/wpf-xaml-browser-applications-overview.md).  
+ WPF tarayıcı tarafından barındırılan uygulamalar Windows Internet Explorer veya Firefox tarafından barındırılır ve daha fazla bilgi Için XAML tarayıcı uygulamaları (XBAP) veya gevşek [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] belgeleri olabilir. bkz. [WPF XAML tarayıcı uygulamalarına genel bakış](./app-development/wpf-xaml-browser-applications-overview.md).  
   
- tarayıcıda barındırılan uygulamalar [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], varsayılan olarak varsayılan CA**Internet** bölgesi izin kümesiyle sınırlı bir kısmi güven güvenlik alanı içinde yürütülür. Böylece, tarayıcıda barındırılan uygulamaları istemci bilgisayardan, normal web uygulamalarının yalıtılacak şekilde bekleeceğiniz şekilde [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] yalıtılmıştır. Bir XBAP, dağıtım URL 'sinin güvenlik bölgesine ve istemcinin güvenlik yapılandırmasına bağlı olarak, ayrıcalıkları tam güvenle yükseltebilir. Daha fazla bilgi için bkz. [WPF Kısmi güven güvenliği](wpf-partial-trust-security.md).  
+ WPF tarayıcıda barındırılan uygulamalar, varsayılan olarak varsayılan CA**Internet** bölgesi izin kümesiyle sınırlanan kısmi güven güvenlik alanı içinde yürütülür. Bu, WPF tarayıcı tarafından barındırılan uygulamaları istemci bilgisayardan, normal web uygulamalarının yalıtılması için bekleeceğiniz şekilde yalıtılmıştır. Bir XBAP, dağıtım URL 'sinin güvenlik bölgesine ve istemcinin güvenlik yapılandırmasına bağlı olarak, ayrıcalıkları tam güvenle yükseltebilir. Daha fazla bilgi için bkz. [WPF Kısmi güven güvenliği](wpf-partial-trust-security.md).  
   
  Bu konuda Windows Presentation Foundation (WPF) tek başına ve tarayıcıda barındırılan uygulamalar için güvenlik modeli ele alınmaktadır.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74837304"
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>Güvenli gezinti  
- XBAP 'ler için [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] iki gezinti türünü ayırır: uygulama ve tarayıcı.  
+ XBAP 'ler için WPF iki tür gezinti ayırır: uygulama ve tarayıcı.  
   
  *Uygulama gezintisi* , bir tarayıcı tarafından barındırılan bir uygulama içindeki içerik öğeleri arasında gezinmektedir. *Tarayıcı gezintisi* , tarayıcının içerik ve konum URL 'sini değiştiren gezinidir. Uygulama Gezintisi (genellikle XAML) ve tarayıcı Gezintisi (genellikle HTML) arasındaki ilişki aşağıdaki çizimde gösterilmiştir:
   
@@ -62,7 +62,7 @@ ms.locfileid: "74837304"
 |Kaynak|**Kaynak**yapı türüne sahip bir projeye eklenen dosyalar.|`pack://application:,,,/MyResourceFile.xaml`|  
 |İçerik|**İçerik**yapı türü olan bir projeye eklenen dosyalar.|`pack://application:,,,/MyContentFile.xaml`|  
 |Kaynak site|Derleme türü **none**olan bir projeye eklenen dosyalar.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Uygulama kodu|Derlenmiş bir arka plan kodu olan XAML Kaynakları.<br /><br /> veya<br /><br /> Yapı türü **sayfa**olan bir projeye eklenen XAML dosyaları.|`pack://application:,,,/MyResourceFile``.xaml`|  
+|Uygulama kodu|Derlenmiş bir arka plan kodu olan XAML Kaynakları.<br /><br /> veya<br /><br /> Yapı türü **sayfa**olan bir projeye eklenen XAML dosyaları.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
 > Uygulama verileri dosyaları ve paket URI 'Leri hakkında daha fazla bilgi için bkz. [WPF uygulama kaynağı, içerik ve veri dosyaları](./app-development/wpf-application-resource-content-and-data-files.md).  
@@ -220,7 +220,7 @@ ms.locfileid: "74837304"
   
  Ancak, bir APTCA derlemesinin GAC 'ye yüklendikten sonra bir güvenlik kusuru göstermesi mümkündür. Bir güvenlik kusurunu bulduktan sonra, derleme yayımcıları mevcut kurulumlarda sorunu gidermek ve sorun keşfedildiğinde oluşabilecek yüklemelere karşı korumak için bir güvenlik güncelleştirmesi oluşturabilir. Güncelleştirme için bir seçenek derlemeyi kaldırmakla birlikte, derlemeyi kullanan diğer tam güvenilir istemci uygulamaları da kesintiye uğramayabilir.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], APTCA derlemesini kaldırmadan kısmen güvenilen XBAP 'ler için bir APTCA derlemesinin devre dışı bırakılabileceği bir mekanizma sağlar.  
+ WPF, APTCA derlemesini kaldırmadan kısmen güvenilen XBAP 'ler için bir APTCA derlemesinin devre dışı bırakılabileceği bir mekanizma sağlar.  
   
  Bir APTCA derlemesini devre dışı bırakmak için özel bir kayıt defteri anahtarı oluşturmanız gerekir:  
   
@@ -262,14 +262,14 @@ ms.locfileid: "74837304"
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Güvenliği geliştiren WPF uygulamaları geliştirmeye yönelik kaynaklar  
- Aşağıda güvenliği destekleyen [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalar geliştirmeye yardımcı olacak bazı ek kaynaklar verilmiştir:  
+ Aşağıda, güvenliği geliştiren WPF uygulamaları geliştirmeye yardımcı olacak bazı ek kaynaklar verilmiştir:  
   
 |Alan|Kaynak|  
 |----------|--------------|  
 |Yönetilen kod|[Uygulamalar için modeller ve uygulamalar güvenlik kılavuzu](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))|  
 |CAS|[Kod erişim güvenliği](../misc/code-access-security.md)|  
 |ClickOnce|[ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)|  
-|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF Kısmi Güven Güvenliği](wpf-partial-trust-security.md)|  
+|WPF|[WPF Kısmi Güven Güvenliği](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

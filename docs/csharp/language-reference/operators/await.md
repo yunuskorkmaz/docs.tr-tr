@@ -1,6 +1,5 @@
 ---
 title: Await işleci- C# başvuru
-ms.custom: seodec18
 ms.date: 11/08/2019
 f1_keywords:
 - await_CSharpKeyword
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 36cb4a5def6b75281edbe878d89af0c18ab226ec
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 6dc058f3850e30d8c424d4372c47b127c7d361b6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140650"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712747"
 ---
 # <a name="await-operator-c-reference"></a>Await işleci (C# başvuru)
 
@@ -40,7 +39,7 @@ Yukarıdaki örnekte, 7,1 ile C# başlayan [zaman uyumsuz `Main` yöntemi](../..
 
 ## <a name="await-operator-in-the-main-method"></a>Main yönteminde Await işleci
 
-7,1 ' C# den başlayarak, uygulama giriş noktası olan [`Main` yöntemi](../../programming-guide/main-and-command-args/index.md)`Task`veya`Task<int>`döndürebilir, onun gövdesinde`await`işlecini kullanabilmeniz için zaman uyumsuz olmasını sağlayabilir. Önceki C# sürümlerde `Main` yönteminin zaman uyumsuz bir işlemin tamamlanmasını beklediği için, karşılık gelen async yöntemi tarafından döndürülen <xref:System.Threading.Tasks.Task%601> örneğinin <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> özelliğinin değerini alabilirsiniz. Değer üretmeyen zaman uyumsuz işlemler için <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemini çağırabilirsiniz. Dil sürümünü seçme hakkında daha fazla bilgi için bkz [ C# . dil sürümü oluşturma](../configure-language-version.md).
+7,1 ' C# den başlayarak, uygulama giriş noktası olan [`Main` yöntemi](../../programming-guide/main-and-command-args/index.md)`Task` veya `Task<int>`döndürebilir, onun gövdesinde `await` işlecini kullanabilmeniz için zaman uyumsuz olmasını sağlayabilir. Önceki C# sürümlerde `Main` yönteminin zaman uyumsuz bir işlemin tamamlanmasını beklediği için, karşılık gelen async yöntemi tarafından döndürülen <xref:System.Threading.Tasks.Task%601> örneğinin <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> özelliğinin değerini alabilirsiniz. Değer üretmeyen zaman uyumsuz işlemler için <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemini çağırabilirsiniz. Dil sürümünü seçme hakkında daha fazla bilgi için bkz [ C# . dil sürümü oluşturma](../configure-language-version.md).
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

@@ -5,13 +5,12 @@ author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.custom: seodec18
-ms.openlocfilehash: 1a5320f47b880c2d84132d70e1d0be19d6de486b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 3347e5b90c31589e9a0f99ac0d9298927a717f56
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116212"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715441"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>DotNet test F# ve NUnit kullanarak .NET Core 'da birim testi kitaplıkları
 
@@ -19,10 +18,10 @@ Bu öğreticide, birim testi kavramlarını öğrenmek için bir örnek çözüm
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 - [.NET Core 2,1 SDK](https://dotnet.microsoft.com/download) veya sonraki sürümleri.
-- Seçtiğiniz bir metin düzenleyici veya kod Düzenleyicisi.
+- Tercih ettiğiniz bir metin veya kod düzenleyicisi.
 
 ## <a name="creating-the-source-project"></a>Kaynak proje oluşturma
 
@@ -44,7 +43,7 @@ Sonra bir *MathService* dizini oluşturun. Aşağıdaki ana hat şu ana kadar di
 *MathService* geçerli dizin yapın ve kaynak projeyi oluşturmak için şu komutu çalıştırın:
 
 ```dotnetcli
-dotnet new classlib -lang F#
+dotnet new classlib -lang "F#"
 ```
 
 Matematik hizmetinin başarısız bir uygulamasını oluşturursunuz:
@@ -76,7 +75,7 @@ Sonra, *MathService. Tests* dizinini oluşturun. Aşağıdaki ana hat dizin yap�
 *MathService. Tests* dizinini geçerli dizini yapın ve aşağıdaki komutu kullanarak yeni bir proje oluşturun:
 
 ```dotnetcli
-dotnet new nunit -lang F#
+dotnet new nunit -lang "F#"
 ```
 
 Bu, test çerçevesi olarak NUnit kullanan bir test projesi oluşturur. Oluşturulan şablon, *MathServiceTests. fsproj*içindeki Test Çalıştırıcısı 'nı yapılandırır:
@@ -89,7 +88,7 @@ Bu, test çerçevesi olarak NUnit kullanan bir test projesi oluşturur. Oluştur
 </ItemGroup>
 ```
 
-Test projesi, birim testlerini oluşturmak ve çalıştırmak için diğer paketlerin kullanılmasını gerektirir. `dotnet new`önceki adımda NUnit ve NUnit test bağdaştırıcısı eklenmiştir. Şimdi, `MathService` sınıf kitaplığını projeye başka bir bağımlılık olarak ekleyin. [`dotnet add reference`](../tools/dotnet-add-reference.md) Şu komutu kullanın:
+Test projesi, birim testlerini oluşturmak ve çalıştırmak için diğer paketlerin kullanılmasını gerektirir. önceki adımda `dotnet new` NUnit ve NUnit test bağdaştırıcısı eklenmiştir. Şimdi, `MathService` sınıf kitaplığını projeye başka bir bağımlılık olarak ekleyin. `dotnet add reference` komutunu kullanın:
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -138,11 +137,11 @@ type TestClass () =
      member this.FailEveryTime() = Assert.True(false)
 ```
 
-Öznitelik `[<TestFixture>]` , testleri içeren bir sınıfı gösterir. `[<Test>]` Öznitelik, Test Çalıştırıcısı tarafından çalıştırılan bir test yöntemini gösterir. *Birim-test--FSharp* dizininden, testleri ve sınıf kitaplığını [`dotnet test`](../tools/dotnet-test.md) oluşturmak için yürütün ve ardından testleri çalıştırın. NUnit Test Çalıştırıcısı, testlerinizi çalıştırmak için program giriş noktasını içerir. `dotnet test`oluşturduğunuz birim test projesini kullanarak Test Çalıştırıcısı başlatır.
+`[<TestFixture>]` özniteliği, testleri içeren bir sınıfı gösterir. `[<Test>]` özniteliği, Test Çalıştırıcısı tarafından çalıştırılan bir test yöntemini gösterir. *Birim-test--FSharp* dizininden, testleri ve sınıf kitaplığını oluşturmak için `dotnet test` yürütün ve ardından testleri çalıştırın. NUnit Test Çalıştırıcısı, testlerinizi çalıştırmak için program giriş noktasını içerir. `dotnet test`, oluşturduğunuz birim test projesini kullanarak Test Çalıştırıcısı başlatır.
 
-Bu iki test, en temel geçirme ve başarısız testleri gösterir. `My test`geçirilir ve `Fail every time` başarısız olur. Şimdi, `squaresOfOdds` yöntemi için bir test oluşturun. `squaresOfOdds` Yöntemi, giriş dizisinin parçası olan tüm tek tamsayı değerlerinin karelerinin dizisini döndürür. Bu işlevlerin tümünü aynı anda yazmaya çalışmak yerine, işlevi doğrulayan testleri tekrarlayarak oluşturabilirsiniz. Her test geçişinin yapılması, yöntemi için gerekli işlevselliğin oluşturulması anlamına gelir.
+Bu iki test, en temel geçirme ve başarısız testleri gösterir. `My test` geçirilir ve `Fail every time` başarısız olur. Şimdi `squaresOfOdds` yöntemi için bir test oluşturun. `squaresOfOdds` yöntemi, giriş dizisinin parçası olan tüm tek tamsayı değerlerinin karelerinin dizisini döndürür. Bu işlevlerin tümünü aynı anda yazmaya çalışmak yerine, işlevi doğrulayan testleri tekrarlayarak oluşturabilirsiniz. Her test geçişinin yapılması, yöntemi için gerekli işlevselliğin oluşturulması anlamına gelir.
 
-Yazdığımız en basit test, sonucun boş bir `squaresOfOdds` tamsayılar dizisi olması gereken tüm çift sayılarla çağrıdır.  Bu test şu şekildedir:
+Yazdığımız en basit test, tüm çift sayılarla `squaresOfOdds` çağırmakta olduğundan, sonucun boş bir tamsayılar dizisi olması gerekir.  Bu test şu şekildedir:
 
 ```fsharp
 [<Test>]
@@ -152,7 +151,7 @@ member this.TestEvenSequence() =
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
-`expected` Sıranın bir listeye dönüştürüldüğüne dikkat edin. NUnit çerçevesi birçok standart .NET türünü temel alır. Bu bağımlılık, genel arabiriminiz ve <xref:System.Collections.ICollection> <xref:System.Collections.IEnumerable>yerine beklenen sonuç desteğinden biridir.
+`expected` sırasının bir listeye dönüştürüldüğüne dikkat edin. NUnit çerçevesi birçok standart .NET türünü temel alır. Bu bağımlılık, genel arabiriminiz ve beklenen sonuçlar <xref:System.Collections.IEnumerable>yerine <xref:System.Collections.ICollection> destekledikleri anlamına gelir.
 
 Testi çalıştırdığınızda, testinizin başarısız olduğunu görürsünüz. Uygulamayı henüz oluşturmadınız. MathService projenizdeki *Library. FS* sınıfına en basit kodu yazarak bu test geçişini yapın:
 
@@ -161,11 +160,11 @@ let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
-*Birim-test--FSharp diziniyle birlikte* yeniden çalıştırın `dotnet test` . Komutu, `MathService` proje için bir yapı ve ardından projeiçinçalışır.`MathService.Tests` `dotnet test` Her iki proje de oluşturulduktan sonra testlerinizi çalıştırır. İki test şimdi geçer.
+*Birim-test--FSharp diziniyle birlikte* `dotnet test` yeniden çalıştırın. `dotnet test` komutu, `MathService` projesi için bir derleme ve sonra `MathService.Tests` projesi için çalışır. Her iki proje de oluşturulduktan sonra testlerinizi çalıştırır. İki test şimdi geçer.
 
 ## <a name="completing-the-requirements"></a>Gereksinimleri tamamlama
 
-Artık bir test geçişi yapmış olduğunuza göre daha fazla yazma zamanı vardır. Bir sonraki basit durum yalnızca tek sayı olan bir sıra ile birlikte kullanılır `1`. 1 numaralı kare 1 olduğundan, 1 sayısı daha kolay. İşte bu sonraki test:
+Artık bir test geçişi yapmış olduğunuza göre daha fazla yazma zamanı vardır. Bir sonraki basit durum yalnızca tek sayı `1`olan bir sıra ile birlikte kullanılır. 1 numaralı kare 1 olduğundan, 1 sayısı daha kolay. İşte bu sonraki test:
 
 ```fsharp
 [<Test>]
@@ -175,7 +174,7 @@ member public this.TestOnesAndEvens() =
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
-Yürütme `dotnet test` işlemi yeni test başarısız olur. Bu yeni testi işlemek `squaresOfOdds` için yöntemini güncelleştirmeniz gerekir. Bu test geçişini yapmak için tüm çift sayıları sıranın dışına filtrelemeniz gerekir. Bunu, küçük bir filtre işlevi yazarak ve kullanarak `Seq.filter`yapabilirsiniz:
+`dotnet test` yürütülmesi yeni test başarısız olur. Bu yeni testi işlemek için `squaresOfOdds` metodunu güncelleştirmeniz gerekir. Bu test geçişini yapmak için tüm çift sayıları sıranın dışına filtrelemeniz gerekir. Bunu, küçük bir filtre işlevi yazarak ve `Seq.filter`kullanarak yapabilirsiniz:
 
 ```fsharp
 let private isOdd x = x % 2 <> 0
@@ -185,7 +184,7 @@ let squaresOfOdds xs =
     |> Seq.filter isOdd
 ```
 
-Çağrısına dikkat edin `Seq.toList`. Bu, <xref:System.Collections.ICollection> arabirimini uygulayan bir liste oluşturur.
+`Seq.toList`çağrısına dikkat edin. Bu, <xref:System.Collections.ICollection> arabirimini uygulayan bir liste oluşturur.
 
 Bir adım daha vardır: her bir tek sayının kare sayısı. Yeni bir test yazarak başlayın:
 
@@ -210,3 +209,8 @@ let squaresOfOdds xs =
 ```
 
 Bu kitaplık için küçük bir kitaplık ve birim testleri kümesi oluşturdunuz. Çözümü, yeni paket ve test eklemek normal iş akışının bir parçası olacak şekilde öğrendiniz. Uygulamanın hedeflerini çözme konusunda zaman ve çaba harcamanızı en iyi şekilde gördünüz.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [dotnet add reference](../tools/dotnet-add-reference.md)
+- [dotnet test](../tools/dotnet-test.md)

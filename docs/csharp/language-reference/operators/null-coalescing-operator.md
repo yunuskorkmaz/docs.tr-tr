@@ -1,6 +1,5 @@
 ---
 title: ?? ve?? = işleçler- C# başvuru
-ms.custom: seodec18
 ms.date: 09/10/2019
 f1_keywords:
 - ??_CSharpKeyword
@@ -11,24 +10,24 @@ helpviewer_keywords:
 - null-coalescing assignment [C#]
 - ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 2bd6fe3d2d283e64eebc2251416fa5234e30bdad
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b3d56c6c08443d344002b8e780a72fc547c316bb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739663"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712656"
 ---
 # <a name="-and--operators-c-reference"></a>?? ve?? = işleçleri (C# başvuru)
 
 Null birleşim işleci `??` `null`değilse, sol taraftaki işlenenin değerini döndürür; Aksi takdirde, sağ işleneni değerlendirir ve sonucunu döndürür. Sol işlenen, null olmayan olarak değerlendirilirse `??` işleci sağ işleneni değerlendirmez.
 
-C# 8,0 ve sonraki sürümlerde bulunan null birleşim atama işleci`??=`sağ işleneninin değerini sol taraftaki işlenene yalnızca sol işlenen`null`değerlendirirken atar. Sol işlenen, null olmayan olarak değerlendirilirse `??=` işleci sağ işleneni değerlendirmez.
+C# 8,0 ve sonraki sürümlerde bulunan null birleşim atama işleci `??=` sağ işleneninin değerini sol taraftaki işlenene yalnızca sol işlenen `null`değerlendirirken atar. Sol işlenen, null olmayan olarak değerlendirilirse `??=` işleci sağ işleneni değerlendirmez.
 
 [!code-csharp[null-coalescing assignment](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#Assignment)]
 
 `??=` işlecinin sol tarafındaki işleneni bir değişken, [özellik](../../programming-guide/classes-and-structs/properties.md)veya [Dizin Oluşturucu](../../programming-guide/indexers/index.md) öğesi olmalıdır.
 
-C# 7,3 ve önceki sürümlerde `??` işlecinin sol işlenenin türü bir [başvuru türü](../keywords/reference-types.md) ya da [null yapılabilir bir değer türü](../builtin-types/nullable-value-types.md)olmalıdır. 8,0 ile C# başlayarak, bu gereksinim aşağıdaki değerle değiştirilmiştir:`??`ve`??=`işleçlerinin sol taraftaki işleneninin türü null yapılamayan bir değer türü olamaz. Özellikle, 8,0 ile C# başlayarak, null birleşim işleçlerini kısıtlanmış olmayan tür parametreleriyle kullanabilirsiniz:
+C# 7,3 ve önceki sürümlerde `??` işlecinin sol işlenenin türü bir [başvuru türü](../keywords/reference-types.md) ya da [null yapılabilir bir değer türü](../builtin-types/nullable-value-types.md)olmalıdır. 8,0 ile C# başlayarak, bu gereksinim aşağıdaki değerle değiştirilmiştir: `??` ve `??=` işleçlerinin sol taraftaki işleneninin türü null yapılamayan bir değer türü olamaz. Özellikle, 8,0 ile C# başlayarak, null birleşim işleçlerini kısıtlanmış olmayan tür parametreleriyle kullanabilirsiniz:
 
 [!code-csharp[unconstrained type parameter](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#UnconstrainedType)]
 
@@ -60,13 +59,13 @@ d ??= (e ??= f)
 
   Null yapılabilir bir tür değeri `null`, temel alınan değer türünün varsayılan değeri olması durumunda kullanılacak değer <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> yöntemi kullanın.
 
-- 7,0 ' C# den başlayarak bağımsız değişken denetim kodunu daha kısa hale getirmek için`??`işlecinin sağ işleneni olarak bir [`throw` ifadesini](../keywords/throw.md#the-throw-expression) kullanabilirsiniz:
+- 7,0 ' C# den başlayarak bağımsız değişken denetim kodunu daha kısa hale getirmek için `??` işlecinin sağ işleneni olarak bir [`throw` ifadesini](../keywords/throw.md#the-throw-expression) kullanabilirsiniz:
 
   [!code-csharp[with throw expression](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
 
   Yukarıdaki örnek ayrıca bir özelliği tanımlamak için [Expression-Bodied üyelerini](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) nasıl kullanacağınızı gösterir.
 
-- 8,0 ile C# başlayarak, form kodunu değiştirmek için`??=`işlecini kullanabilirsiniz
+- 8,0 ile C# başlayarak, form kodunu değiştirmek için `??=` işlecini kullanabilirsiniz
 
   ```csharp
   if (variable is null)
@@ -95,5 +94,5 @@ d ??= (e ??= f)
 
 - [C#başvurunun](../index.md)
 - [C# işleçleri](index.md)
-- [?. '? [] işleçleri](member-access-operators.md#null-conditional-operators--and-)
+- [?. ve ?[] işleçleri](member-access-operators.md#null-conditional-operators--and-)
 - [?: işleci](conditional-operator.md)

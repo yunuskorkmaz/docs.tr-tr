@@ -3,23 +3,21 @@ title: Dönüşümlerdeki Sonuç Ağacı Parçası
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e3b99606698124455ca9b325042ffbe430915aee
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 33d66b0a835be8bacab76ef9295ce8158385d8d1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170771"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710264"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Dönüşümlerdeki Sonuç Ağacı Parçası
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> Sınıfı .NET Framework 2. 0'kullanılmıyor. Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT) dönüştürmeleri için kullanarak gerçekleştirebileceğiniz <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı. Bkz: [XslCompiledTransform sınıfını kullanma](using-the-xslcompiledtransform-class.md) ve [geçirme gelen XslTransform sınıfı](migrating-from-the-xsltransform-class.md) daha fazla bilgi için.
+> <xref:System.Xml.Xsl.XslTransform> sınıfı, .NET Framework 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> sınıfını kullanarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](migrating-from-the-xsltransform-class.md) .
 
- Sonucu ağacı parçalarını sonucu ağacı parçalarını olarak da bilinir, düğüm kümesi özel bir tür başka bir şey var. Bir düğüm kümesi üzerinde gerçekleştirilebilen bunlar üzerinde herhangi bir işlev gerçekleştirebilirsiniz. Ya da sonuç ağacı parçası kullanılarak ayarlanan bir düğüme dönüştürebilirsiniz `node-set()` işlev ve sonradan herhangi yerleştirileceği bir düğüm kümesi kullanılabilir kullanın.
+ Sonuç ağacı parçaları olarak da bilinen sonuç ağacı parçaları, özel bir düğüm kümesi türünden başka hiçbir şey değildir. Bir düğüm kümesinde gerçekleştirilebilecek her türlü işlevi gerçekleştirebilirsiniz. Ayrıca, bir sonuç ağacı parçasını `node-set()` işlevini kullanarak bir düğüm kümesine dönüştürebilir ve ardından bunu bir düğüm kümesinin kullanılabileceği herhangi bir yerde kullanabilirsiniz.
 
- Sonuç ağacı parçası kullanarak sonucu olarak oluşturulan bir `<xsl:variable>` veya `<xsl:param>` belirli bir şekilde bir stil sayfası öğesinde. Sözdizimi `variable` ve `parameter` öğeleri aşağıdaki gibidir:
+ Bir `<xsl:variable>` veya `<xsl:param>` öğesi bir stil sayfasında belirli bir şekilde kullanılması sonucu olarak bir sonuç ağacı parçası oluşturulur. `variable` ve `parameter` öğeleri için sözdizimi aşağıdaki gibidir:
 
 ```xml
 <xsl:param name=Qname select= XPath Expression >
@@ -31,17 +29,17 @@ ms.locfileid: "67170771"
 </xsl:variable>
 ```
 
-İçin `parameter` öğesi, değerin tam adı için atanır (`Qname`) çeşitli şekillerde. XML Path Language (XPath) ifade gelen içerik döndürerek parametre bir varsayılan değer atayabilirsiniz `select` özniteliği veya şablon gövdesi içeriğini göre atama.
+`parameter` öğesi için, değer nitelenmiş ada (`Qname`) birkaç şekilde atanır. `select` özniteliğinde XML Path Language (XPath) ifadesinden içerik döndürerek veya şablon gövdesinin içeriğini atayarak parametreye varsayılan bir değer atayabilirsiniz.
 
-İçin `variable` öğesi değeri de atandığı çeşitli yollarla. XPath ifadesinden içerik döndürerek atayabilirsiniz `select` özniteliği veya şablon gövdesi içeriğini göre atama.
+`variable` öğesi için, değer de çeşitli yollarla atanır. `select` özniteliğinde XPath ifadesinden içerik döndürerek veya şablon gövdesinin içeriğini atayarak bunu atayabilirsiniz.
 
-Her ikisi için de `parameter` ve `variable` öğeleri XPath ifadesi tarafından atanmış bir değer ise ardından dört temel XPath türlerinden biri döndürülür: Boole, dize, sayı veya düğüm ayarlayın. Boş şablon gövdesi kullanarak değeri belirtildiğinde, ardından döndürülen bir XPath olmayan veri türü ve bir sonuç ağacı parçası olacak.
+Hem `parameter` hem de `variable` öğelerinde, XPath ifadesi tarafından bir değer atanırsa, dört temel XPath türünden biri döndürülür: Boolean, dize, sayı veya düğüm kümesi. Değer boş olmayan bir şablon gövdesi kullanılarak verildiğinde, bir XPath olmayan veri türü döndürülür ve sonuç ağacı parçası olur.
 
-Bir değişken dört temel XPath veri türlerinden biri yerine bir sonuç ağacı parçası bağlandığında, bu yalnızca bir kez olan bir XPath sorgusu dört XPath nesne türlerinden biri değil bir tür döndürür. Sonucu ağacı parçalarını ve davranışları açıklanmıştır [World Wide Web Consortium (W3C) belirtimi](https://www.w3.org/TR/xslt-10/), [11.1 sonucu ağacı parçalarını bölümünde](https://www.w3.org/TR/xslt-10/#section-Result-Tree-Fragments) aracılığıyla [11.6 geçirme bölümü Şablon parametreleri](https://www.w3.org/TR/xslt-10/#section-Passing-Parameters-to-Templates). Ayrıca, [1 giriş bölümünde](https://www.w3.org/TR/xslt-10/#section-Introduction) nasıl şablonları döndürür ya da sonuç ağacı parçalarını oluşturan XSLT ad alanından öğeler içerebilir açıklanır.
+Bir değişken dört temel XPath veri türünden biri yerine bir sonuç ağacı parçasına bağlandığında, bu bir XPath sorgusunun dört XPath nesne türünden biri olmayan bir tür döndürdüğü tek zaman olur. Sonuç ağacı parçaları ve davranışları, [World Wide Web Konsorsiyumu (W3C) belirtiminde](https://www.w3.org/TR/xslt-10/), Bölüm 11,1 ' de, Bölüm ' deki [sonuç ağacı 11,6 parçalarında](https://www.w3.org/TR/xslt-10/#section-Result-Tree-Fragments) , [parametrelere parametreler geçirilerek](https://www.w3.org/TR/xslt-10/#section-Passing-Parameters-to-Templates)ele alınmıştır. Ayrıca, [Bölüm 1 giriş](https://www.w3.org/TR/xslt-10/#section-Introduction) , şablonların, sonuç ağacı parçaları döndüren veya oluşturan XSLT ad alanından nasıl öğe içerebileceğini açıklar.
 
-Bir sonuç ağacı parçası, kavram, bir düğüm ile tek bir kök düğümde başka bir şey kümesi gibi davranır. Ancak, rest döndürülen düğümlerinin alt düğümleri uygulanır. Program aracılığıyla alt düğümleri görmek için sonuç ağacı parçası sonucu ağacı kullanarak kopyalama `<xsl:copy-of>` öğesi. Kopyalama, gerçekleştirildiğinde, tüm alt düğümleri de sırayla sonucu ağacına kopyalanır. Kadar bir `copy` veya `copy-of` olan kullanıldığında, bir sonuç ağacı parçası sonucu ağacı veya dönüştürme çıktısını bir parçası değil.
+Kavramdaki bir sonuç ağacı parçası, tek bir kök düğümden daha fazla şey olmayan bir düğüm kümesi gibi davranır. Ancak, döndürülen düğümlerin geri kalanı alt düğümlerdir. Alt düğümleri programlı bir şekilde görmek için, `<xsl:copy-of>` öğesini kullanarak sonuç ağacı parçasını sonuç ağacına kopyalayın. Kopya gerçekleştirildiğinde, tüm alt düğümler de sıradaki sonuç ağacına kopyalanır. Bir `copy` veya `copy-of` kullanılana kadar, sonuç ağacı parçası sonuç ağacının veya dönüşümdeki çıktının bir parçası değildir.
 
-Sonuç ağacı parçası döndürülen düğümler yineleme yapmak için bir <xref:System.Xml.XPath.XPathNavigator> kullanılır. Aşağıdaki kod örneği, bir parametre ile işlevini çağırarak bir stil sayfası içinde bir sonuç ağacı parçası oluşturma işlemi gösterilmektedir `fragment`, XML içeriyor.
+Sonuç ağacı parçasının döndürülen düğümlerini yinelemek için bir <xref:System.Xml.XPath.XPathNavigator> kullanılır. Aşağıdaki kod örneği, işlevi XML içeren `fragment`parametresi ile çağırarak bir stil sayfası içinde bir sonuç ağacı parçasının nasıl oluşturulacağını gösterir.
 
 ```xml
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -69,7 +67,7 @@ Sonuç ağacı parçası döndürülen düğümler yineleme yapmak için bir <xr
 </xsl:stylesheet>
 ```
 
-Zengin metin biçimi (RTF) olan bir değişken gösteren başka bir örneği aşağıdadır ve bu nedenle, bir düğüme dönüştürülmedi sonuç ağacı parçası, bir tür ayarlayın. Bunun yerine, bir komut dosyası işleve geçirilir ve <xref:System.Xml.XPath.XPathNavigator> düğümleri üzerinde gezinmek için kullanılır.
+Burada, zengin metin biçimi (RTF) ve bu nedenle bir düğüm kümesine Dönüştürülmeyen bir sonuç ağacı parçası olan bir değişken gösteren başka bir örnek verilmiştir. Bunun yerine, bir betik işlevine geçirilir ve düğümler üzerinde gezinmek için <xref:System.Xml.XPath.XPathNavigator> kullanılır.
 
 ```xml
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -111,7 +109,7 @@ Zengin metin biçimi (RTF) olan bir değişken gösteren başka bir örneği aş
 </xsl:stylesheet>
 ```
 
-Bu stil sayfası ile herhangi bir XML dönüştürme sonucu aşağıdaki çıktıda gösterilir.
+Bu stil sayfasıyla herhangi bir XML dönüştürmenin sonucu aşağıdaki çıktıda gösterilmektedir.
 
 ## <a name="output"></a>Çıkış
 
@@ -119,15 +117,15 @@ Bu stil sayfası ile herhangi bir XML dönüştürme sonucu aşağıdaki çıkt�
 <first_book xmlns:user="urn:books">Book1</first_book>
 ```
 
-Yukarıda belirtildiği gibi `node-set` işlevi bir sonuç ağacı parçası düğümünü kümeyi dönüştürmek sağlar. Sonuç olarak oluşan düğüm her zaman kök düğüm ağacı tek bir düğüm içerir. Bir düğüme bir sonuç ağacı parçası dönüştürürseniz ayarlayın, sonra da bunu bir normal bir düğüm kümesi kullanılır, her yerde kullanabilirsiniz gibi için-her bir deyim olduğu gibi veya değeri bir `select` özniteliği. Aşağıdaki kod satırlarını ayarlayın ve bir düğüm kümesi kullanılan bir düğüme dönüştürülen parça göster:
+Yukarıda belirtildiği gibi, `node-set` işlevi bir sonuç ağacı parçasını bir düğüm kümesine dönüştürmenize olanak sağlar. Elde edilen düğüm, her zaman ağacın kök düğümü olan tek bir düğüm içerir. Bir sonuç ağacı parçasını bir düğüm kümesine dönüştürürseniz, for-each ifadesinde veya bir `select` özniteliği değerinde olduğu gibi normal bir düğüm kümesinin kullanıldığı her yerde kullanabilirsiniz. Aşağıdaki kod satırları bir düğüm kümesine dönüştürülmekte olan ve düğüm kümesi olarak kullanılan parçayı gösterir:
 
 `<xsl:for-each select="msxsl:node-set($node-fragment)">`
 
 `<xsl:value-of select="user:func(msxsl:node-set($node-fragment))"/>`
 
-Bir parça için bir düğüm kümesi dönüştürülür, artık kullanmadığınız <xref:System.Xml.XPath.XPathNavigator> üzerine gidin. Bir düğüm kümesi için kullandığınız <xref:System.Xml.XPath.XPathNodeIterator> yerine.
+Bir parça bir düğüm kümesine dönüştürüldüğünde, üzerinde gezinmek için artık <xref:System.Xml.XPath.XPathNavigator> kullanamazsınız. Bir düğüm kümesi için, bunun yerine <xref:System.Xml.XPath.XPathNodeIterator> kullanırsınız.
 
-Aşağıdaki örnekte, `$var` stil sayfası düğümü ağacında bir değişkendir. For-each ifadesinin Sunucusu'yla birlikte `node-set` işlevi, bir düğüm kümesi olarak bu ağaç gezinilen izin verir.
+Aşağıdaki örnekte, `$var` stil sayfasındaki düğüm ağacı olan bir değişkendir. For-each deyimleri, `node-set` işleviyle birlikte, kullanıcının bu ağacı üzerinde bir düğüm kümesi olarak yinemasına olanak tanır.
 
 ```xml
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -147,7 +145,7 @@ Aşağıdaki örnekte, `$var` stil sayfası düğümü ağacında bir değişken
 </xsl:stylesheet>
 ```
 
-RTF biçiminde olan bir değişkeni başka bir örnek aşağıda verilmiştir ve bu nedenle türü sonuç ağacı parçası, düğüm kümesi bir betik işlevi XPathNodeIterator iletilmeden önce dönüştürülür.
+Burada, RTF 'deki bir değişkene ait başka bir örnek ve bu nedenle, bir komut dosyası işlevine XPathNodeIterator olarak geçirilmeden önce bir düğüm kümesine dönüştürülecek olan sonuç ağacı parçası türü bir örnektir.
 
 ```xml
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -186,7 +184,7 @@ RTF biçiminde olan bir değişkeni başka bir örnek aşağıda verilmiştir ve
 </xsl:stylesheet>
 ```
 
-Bu stil sayfası ile XML dönüştürme sonucunu verilmiştir:
+XML 'nin bu stil sayfasıyla dönüştürülmesi sonucu aşağıda verilmiştir:
 
 ```xml
 <books xmlns:user="urn:books">Book1Book2Book3Book4</books>

@@ -3,59 +3,57 @@ title: XslCompiledTransform Sınıfındaki Çıkış Seçenekleri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0f56e27b2ae9a32385aa9a44db631d2909023206
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 504057bd5e10498d39b2bce908742fc20b112c52
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647847"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710511"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform Sınıfındaki Çıkış Seçenekleri
-Bu konu başlığı altında kullanılabilir XSLT çıkış seçenekleri açıklanır. Stil sayfası veya üzerinde çıkış seçenekleri belirtebilirsiniz <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi.  
+Bu konu başlığı altında, kullanılabilir XSLT çıkış seçenekleri açıklanmaktadır. Stil sayfasında veya <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yönteminde çıkış seçeneklerini belirtebilirsiniz.  
   
-## <a name="xsloutput-element"></a>xsl:output Element  
- `xsl:output` Öğesi çıktı seçeneklerini belirtir. Çıktı türü tarafından belirtilen <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi davranışını belirler `xsl:output` seçenekleri.  
+## <a name="xsloutput-element"></a>xsl: output öğesi  
+ `xsl:output` öğesi çıkışın seçeneklerini belirtir. <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi tarafından belirtilen çıkış türü `xsl:output` seçeneklerinin davranışını belirler.  
   
- Aşağıdaki tabloda bulunan özniteliklerin her biri için davranışını tanımlar. `xsl:output` bir akış çıktı türü olduğunda, öğe veya <xref:System.IO.TextWriter>.  
+ Aşağıdaki tabloda, çıkış türü bir Stream veya <xref:System.IO.TextWriter>olduğunda `xsl:output` öğesinde kullanılabilen özniteliklerin her biri için davranış açıklanmaktadır.  
   
 |Öznitelik adı|Davranış|  
 |--------------------|--------------|  
-|yöntemi|Desteklenen.|  
-|sürüm|Yoksayıldı. Her zaman 1.0 için XML ve HTML 4.0 sürümüdür.|  
-|encoding|İçin alırken dikkate bir <xref:System.IO.TextWriter>. <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType> Özelliği bunun yerine kullanılır.|  
-|atlayın-xml-bildirimi|Desteklenen.|  
-|bağımsız|Desteklenen.|  
+|{1&gt; yöntemi&lt;1}|Desteklenen.|  
+|sürümü|LIP. Sürüm, her zaman için 1,0 for XML ve HTML için 4,0 ' dir.|  
+|{1&gt;encoding&lt;1}|Bir <xref:System.IO.TextWriter>çıktısı alırken yok sayılır. Bunun yerine <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType> özelliği kullanılır.|  
+|{1&gt;atlayın-xml-bildirimi&lt;1}|Desteklenen.|  
+|tek başına|Desteklenen.|  
 |doctype-genel|Desteklenen.|  
-|doctype sistem|Desteklenen.|  
-|CDATA bölümünün öğeleri|Desteklenen.|  
-|Girintile|Desteklenen.|  
-|medya türü|Desteklenen.|  
+|DOCTYPE-System|Desteklenen.|  
+|CDATA-bölüm-öğeler|Desteklenen.|  
+|{1&gt;Girinti&lt;1}|Desteklenen.|  
+|{1&gt;medya türü&lt;1}|Desteklenen.|  
   
-#### <a name="sending-output-to-an-xmlwriter"></a>Çıkış için bir XmlWriter gönderme  
- Stil sayfası kullanıyorsa `xsl:output` öğesi ve çıkış türü bir <xref:System.Xml.XmlWriter> nesne kullanmanız gerektiğini <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> oluşturduğunuzda özelliği <xref:System.Xml.XmlWriter> nesne. <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> Özelliği döndürür bir <xref:System.Xml.XmlWriterSettings> bilgi içeren nesne türetilen `xsl:output` öğesi bir derlenmiş bir stil sayfası. Bu <xref:System.Xml.XmlWriterSettings> nesne geçilebilir <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> yöntemi oluşturmak için bir <xref:System.Xml.XmlWriter> doğru ayarlarla nesne.  
+#### <a name="sending-output-to-an-xmlwriter"></a>Bir XmlWriter 'a çıkış gönderme  
+ Stil sayfanızda `xsl:output` öğesi kullanılıyorsa ve çıkış türü bir <xref:System.Xml.XmlWriter> nesnesi ise, <xref:System.Xml.XmlWriter> nesnesini oluştururken <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> özelliğini kullanmanız gerekir. <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> özelliği, derlenmiş bir stil sayfasının `xsl:output` öğesinden türetilmiş bilgiler içeren bir <xref:System.Xml.XmlWriterSettings> nesnesi döndürür. Bu <xref:System.Xml.XmlWriterSettings> nesnesi, doğru ayarlarla bir <xref:System.Xml.XmlWriter> nesnesi oluşturmak için <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> yöntemine geçirilebilir.  
   
-## <a name="output-types"></a>Çıktı türleri  
- Aşağıdaki listede bulunan çıktı türleri açıklanmaktadır <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> komutu.  
+## <a name="output-types"></a>Çıkış türleri  
+ Aşağıdaki liste <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> komutunda bulunan çıkış türlerini açıklar.  
   
-#### <a name="xmlwriter"></a>XmlWriter  
- <xref:System.Xml.XmlWriter> Sınıfı, XML akışlarını veya dosyaları yazar. Destek almak için özellikleri belirtebilirsiniz <xref:System.Xml.XmlWriter> kullanarak çıkış seçenekleri dahil olmak üzere nesne <xref:System.Xml.XmlWriterSettings> sınıfı. <xref:System.Xml.XmlWriter> Sınıfı bir parçası olan <xref:System.Xml> framework. Bu çıkış türü, çıktı sonuçları başka bir XML işleme işlem hattı için kullanın.  
+#### <a name="xmlwriter"></a>Işleyemez  
+ <xref:System.Xml.XmlWriter> sınıfı, XML akışlarını veya dosyalarını yazar. <xref:System.Xml.XmlWriterSettings> sınıfını kullanarak, çıkış seçenekleri de dahil olmak üzere <xref:System.Xml.XmlWriter> nesnesinde destekedilecek özellikleri belirtebilirsiniz. <xref:System.Xml.XmlWriter> sınıfı, <xref:System.Xml> çerçevesinin ayrılmaz bir parçasıdır. Bu çıktı türünü, çıkış sonuçlarının başka bir XML işlemine göre işlem hattını kullanarak kullanın.  
   
 #### <a name="string"></a>Dize  
- Çıkış dosyasının URI belirtmek için bu çıktı türünü kullanın.  
+ Çıkış dosyasının URI 'sini belirtmek için bu çıkış türünü kullanın.  
   
 #### <a name="stream"></a>Akış  
- Bir akış, bir dosya, bir giriş/çıkış cihaz, bir işlemler arası iletişim kanalı ya da bir TCP/IP yuva gibi bir bayt dizisi bir soyutlamadır. <xref:System.IO.Stream> Sınıfı ve türetilmiş sınıflarının girdi ve çıktı, işletim sistemi ve temel alınan cihazlar belirli ayrıntılarından Programcı yalıtma, bu farklı türde genel bir görünümünü sağlar.  
+ Akış, bir dosya, giriş/çıkış aygıtı, işlem içi iletişim kanalı veya TCP/IP yuvası gibi bir bayt dizisinin soyutlamasıdır. <xref:System.IO.Stream> sınıfı ve onun türetilmiş sınıfları, bu farklı giriş ve çıkış türlerinin genel bir görünümünü sağlar ve bu da programcı 'yı işletim sisteminin ve temel cihazların belirli ayrıntılarından yalılar.  
   
- Veri göndermek için bu çıktı türü kullanan bir <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>, veya bir çıkış akışı (`Response.OutputStream`).  
+ <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>veya çıkış akışına (`Response.OutputStream`) veri göndermek için bu çıkış türünü kullanın.  
   
 #### <a name="textwriter"></a>TextWriter  
- <xref:System.IO.TextWriter> Sıralı karakterler yazar. İçinde uygulanan <xref:System.IO.StringWriter> ve <xref:System.IO.StreamWriter> sınıfları, karakter dizeleri veya akış, sırasıyla yazma. Bu çıkış türü, bir dizeye çıktı istediğinizde kullanın.  
+ <xref:System.IO.TextWriter> sıralı karakterler yazar. Sırasıyla dizelere veya akışlara karakter yazan <xref:System.IO.StringWriter> ve <xref:System.IO.StreamWriter> sınıflarında uygulanır. Bir dizeye çıkış yapmak istediğinizde bu çıkış türünü kullanın.  
   
 ## <a name="notes"></a>Notlar  
   
-- Boş etiketleri yazarken, ters eğik çizgi, öğe adı, son karakter arasında bir boşluk yazılır `<myElement />` örneğin. Bu, oluşturulan HTML sayfalarını düzgün görüntülenmesi eski tarayıcılar olanak tanır.  
+- Boş Etiketler yazılırken, öğe adının son karakteri ve ters eğik çizgi arasına bir boşluk yazılır, örneğin `<myElement />`. Bu, daha eski tarayıcıların oluşturulan HTML sayfalarını doğru görüntülemesini sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

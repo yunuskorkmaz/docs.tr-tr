@@ -11,13 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.custom: seodec18
-ms.openlocfilehash: 3ac5602c32ce0dcfe21e913868faa7ab356e4194
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3cd461d8c56c3f31bf3ffe04acf239ecd32fe328
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120598"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711447"
 ---
 # <a name="character-encoding-in-net"></a>.NET içinde Karakter Kodlaması
 
@@ -67,7 +66,7 @@ Bu konu aşağıdaki bölümlerden oluşur:
 
 <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> yöntemini çağırarak .NET 'te bulunan tüm Kodlamalar hakkında bilgi alabilirsiniz. .NET, aşağıdaki tabloda listelenen karakter kodlama sistemlerini destekler.
 
-|Şifreleme|örneği|Açıklama|Avantajlar/dezavantajlar|
+|Encoding|Sınıf|Açıklama|Avantajlar/dezavantajlar|
 |--------------|-----------|-----------------|-------------------------------|
 |ASCII|<xref:System.Text.ASCIIEncoding>|Bir baytın alt yedi bitini kullanarak sınırlı bir karakter aralığını kodlar.|Bu kodlama yalnızca U+0000 ile U+007F arasındaki karakter değerlerini desteklediğinden, çoğu zaman uluslararası uygulamalar için yeterli değildir.|
 |UTF-7|<xref:System.Text.UTF7Encoding>|Karakterleri 7-bitlik ASCII karakter dizileri olarak temsil eder. ASCII olmayan Unicode karakterleri, ASCII karakterlerinin bir kaçış dizisi ile temsil edilir.|UTF-7, e-posta ve haber grubu protokolleri gibi protokolleri destekler. Ancak, UTF-7 özellikle güvenli veya sağlam değildir. Bazı durumlarda bir biti değiştirmek, bütün bir UTF-7 dizesinin yorumunu tamamen değiştirebilir. Diğer durumlarda, farklı UTF-7 dizeleri aynı metni kodlayabilir. ASCII olmayan karakterleri içeren diziler için UTF-7, UTF-8'den daha fazla alan gerektirir ve kodlama/kod çözme daha yavaştır. Sonuç olarak, mümkünse UTF-7 yerine UTF-8 kullanmanız gerekir.|
@@ -85,7 +84,7 @@ Varsayılan olarak, .NET Core kod sayfası 28591 dışında herhangi bir kod say
 
 <a name="Selecting"></a>
 
-## <a name="selecting-an-encoding-class"></a>Bir Kodlama Sınıfı Seçme
+## <a name="selecting-an-encoding-class"></a>{1&gt;Bir Kodlama Sınıfı Seçme&lt;1}
 
 Eğer uygulamanız tarafından kullanılacak kodlamayı seçme olanağınız varsa, bir Unicode kodlamasını, tercihen <xref:System.Text.UTF8Encoding> veya <xref:System.Text.UnicodeEncoding>'i kullanmanız gerekir. (.NET ayrıca, <xref:System.Text.UTF32Encoding>üçüncü bir Unicode kodlamasını destekler.)
 
@@ -107,7 +106,7 @@ Bir web uygulamasında, bir web isteğine karşılık olarak istemciye gönderil
 
 <a name="Using"></a>
 
-## <a name="using-an-encoding-object"></a>Using an Encoding Object
+## <a name="using-an-encoding-object"></a>{1&gt;Using an Encoding Object&lt;1}
 
 Bir kodlayıcı, bir karakter dizesini (genellikle Unicode karakterleri) sayısal (bayt) eşdeğerine dönüştürür. Örneğin, Unicode karakterlerini dönüştürmek için bir ASCII kodlayıcısı kullanabilirsiniz ve bu sayede bunların konsolda görüntülenmelerini sağlayabilirsiniz. Dönüşümü gerçekleştirmek için, <xref:System.Text.Encoding.GetBytes%2A?displayProperty=nameWithType> yöntemini çağırın. Eğer kodlanmış karakterlerin depolanması için kaç bayt gerektiğini kodlamayı gerçekleştirmeden önce belirlemek istiyorsanız, <xref:System.Text.Encoding.GetByteCount%2A> yöntemini çağırabilirsiniz.
 
@@ -134,7 +133,7 @@ Aşağıdaki örnek, bir Unicode bayt dizisinin kodunu çözmek için <xref:Syst
 
 <a name="FallbackStrategy"></a>
 
-## <a name="choosing-a-fallback-strategy"></a>Choosing a Fallback Strategy
+## <a name="choosing-a-fallback-strategy"></a>{1&gt;Choosing a Fallback Strategy&lt;1}
 
 Bir yöntem, bir karakter için kodlamayı veya kod çözmeyi denediğinde ancak hiçbir eşleme bulunmadığında, başarısız olan eşlemenin nasıl işleneceğini belirleyen bir geri dönüş stratejisi uygulanmalıdır. Üç çeşit geri dönüş stratejisi bulunur:
 
@@ -217,7 +216,7 @@ Bir en uygun geri dönüş veya değiştirme dizesi sağlamak yerine bir kodlay�
 
 <a name="Custom"></a>
 
-## <a name="implementing-a-custom-fallback-strategy"></a>Implementing a Custom Fallback Strategy
+## <a name="implementing-a-custom-fallback-strategy"></a>{1&gt;Implementing a Custom Fallback Strategy&lt;1}
 
 Kod sayfaları tarafından dahili olarak uygulanan en uygun eşlemenin yanı sıra, .NET geri dönüş stratejisi uygulamak için aşağıdaki sınıfları içerir:
 

@@ -2,17 +2,17 @@
 title: XML Ağaçlarını Sorgulama
 ms.date: 07/20/2015
 ms.assetid: 2e35c1ab-08c8-4378-9ca8-8ff344756eda
-ms.openlocfilehash: c8103820a231ba0fb5e8e7c15b7a2b9e7c996e65
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 643b19a0cfcd2a81c6f685de65979f83ca32d918
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346575"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636906"
 ---
 # <a name="querying-xml-trees-visual-basic"></a>XML ağaçlarını sorgulama (Visual Basic)
 Bu bölümde [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgularının örnekleri verilmiştir.  
   
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları yazma hakkında daha fazla bilgi için bkz. [LINQ Ile çalışmaya başlama Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
+ LINQ sorguları yazma hakkında daha fazla bilgi için bkz. [VISUAL BASIC LINQ Ile çalışmaya](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)başlama.  
   
  Bir XML ağacı örnekledikten sonra, verileri yazma, ağaçtan veri ayıklamaya yönelik en etkili yoldur. Ayrıca, işlevsel oluşturma ile birlikte sorgulama, orijinal belgeden farklı bir şekle sahip yeni bir XML belgesi oluşturmanıza olanak sağlar.  
   

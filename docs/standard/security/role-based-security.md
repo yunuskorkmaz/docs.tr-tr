@@ -11,32 +11,30 @@ helpviewer_keywords:
 - authentication [.NET Framework], principals
 - role-based security, principals
 ms.assetid: 578cc32b-5654-4d8b-9d8c-ebcbc5c75390
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 596165bfac9c65898448714a4477b7f045bd87d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1dfb1f6246e86d6f565c9338fb09f34a1608e9b0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018586"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705931"
 ---
 # <a name="role-based-security"></a>Rol Tabanlı Güvenlik
-Rolleri, finansal veya iş uygulamalarında ilkeyi uygulamak için sık kullanılır. Örneğin, bir uygulama isteği yapan kullanıcının belirtilen rolünün bir üyesi olduğuna bağlı olarak işlenmekte olan işlem boyutu sınırı oluşturabileceğini. Belirtilen bir eşik değerinden düşük olan işlemleri işlemek için yetkilendirme elemanı olabilir, denetçilere daha yüksek bir sınıra sahip olmayabilir ve yardımcısının Başkan, hala daha yüksek bir sınır (veya hiç sınır yok) olabilir. Rol tabanlı güvenlik, uygulamanın bir eylemi tamamlamak için birden çok onay gerektirdiğinde de kullanılabilir. Böyle bir durumda çalışan bir satın alma isteği oluşturabilirsiniz bir satın alma sistemi olabilir, ancak yalnızca satın alma aracı bu istek için bir sağlayıcı gönderilebilecek bir satın alma siparişi dönüştürebilirsiniz.  
+Roller, ilkeyi zorlamak için genellikle finansal veya iş uygulamalarında kullanılır. Örneğin, bir uygulama, istekte bulunan kullanıcının belirtilen bir rolün üyesi olup olmadığına bağlı olarak işlenen işlemin boyutuna yönelik sınırlar uygulayabilir. Büro 'lar, belirtilen eşikten daha az olan işlemleri işlemek için yetkilendirmeye yetki verebilir, süper vizörlerin daha yüksek bir sınırı olabilir ve başkanlardan de daha yüksek bir sınıra sahip olabilir (veya hiç sınır yoktur). Rol tabanlı güvenlik, bir uygulamanın bir eylemi tamamlaması için birden fazla onay gerektirmesi durumunda da kullanılabilir. Böyle bir durum, herhangi bir çalışanın bir satın alma isteği oluşturabileceği bir satın alma sistemi olabilir, ancak yalnızca bir satın alma aracısı bu talebi bir tedarikçiye gönderilebilecek bir satın alma siparişine dönüştürebilir.  
   
- .NET framework rol tabanlı güvenlik sorumlusu, geçerli iş parçacığı için kullanılabilir ilişkili bir kimlik nesnesinden oluşturulan hakkında bilgi sağlayarak yetkilendirme destekler. Kimlik (ve tanımlamak için yardımcı asıl) bir Windows hesabı ya da temel alabilir veya ilgisi olmayan bir Windows hesabı için özel bir kimlik. .NET framework uygulamaları, sorumlunun kimliğini veya rol üyeliğini veya her ikisi de göre yetkilendirme kararları hale getirebilirsiniz. Bir rol (örneğin, bir gişe veya Yöneticisi) güvenlik açısından aynı ayrıcalıklara sahip sorumluları adlandırılmış kümesidir. Bir sorumlunun bir veya daha fazla rollerinin bir üyesi olabilir. Bu nedenle, uygulamaları, rol üyeliğini bir sorumlunun istenen eylemi gerçekleştirmek için yetkili olup olmadığını belirlemek için kullanabilirsiniz.  
+ Rol tabanlı güvenlik .NET Framework, geçerli iş parçacığı tarafından kullanılabilen, ilişkili bir kimlikle oluşturulan sorumlu hakkında bilgi vererek yetkilendirmeyi destekler. Kimlik (ve tanımlamaya yardımcı olan asıl), bir Windows hesabına göre veya bir Windows hesabıyla ilgisi olmayan özel bir kimlik olabilir. .NET Framework uygulamalar, sorumlu kimlik veya rol üyeliğine veya her ikisine göre yetkilendirme kararları verebilir. Rol, güvenlikle ilgili olarak aynı ayrıcalıklara sahip olan (örneğin, bir teller veya yönetici), adlandırılmış bir sorumlu kümesidir. Bir sorumlu bir veya daha fazla rolün üyesi olabilir. Bu nedenle, uygulamalar, bir sorumlunun istenen eylemi gerçekleştirme yetkisine sahip olup olmadığını anlamak için rol üyeliğini kullanabilir.  
   
- Kod erişimi güvenliği kullanım kolaylığı ve tutarlılığı sağlamak için .NET Framework rol tabanlı güvenlik sağlar. <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType> yetkilendirme koda benzer bir şekilde gerçekleştirmek ortak dil çalışma zamanını etkinleştirme nesneleri erişim güvenlik denetimleri. <xref:System.Security.Permissions.PrincipalPermission> Kimliği veya sorumlu eşleşmesi gerekir ve her iki bildirim temelli ve kesinlik temelli güvenlik denetimleri ile uyumlu olan rol sınıfı temsil eder. Ayrıca bir sorumlusunun kimlik bilgilerini doğrudan erişmek ve rol gerçekleştirmek ve gerektiğinde kodunuzda kimlik denetler.  
+ Kod erişim güvenliği ile kullanım kolaylığı ve tutarlılığı sağlamak için .NET Framework rol tabanlı güvenlik, ortak dil çalışma zamanının kimlik doğrulama erişimi güvenlik denetimlerine benzer bir şekilde gerçekleştirmesini sağlayan <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType> nesneleri sağlar. <xref:System.Security.Permissions.PrincipalPermission> sınıfı, sorumlunun eşleşmesi gereken kimliği veya rolü temsil eder ve hem bildirime dayalı hem de zorunlu güvenlik denetimleri ile uyumludur. Ayrıca, bir sorumlu kimlik bilgilerine doğrudan erişebilir ve gerektiğinde kodunuzda rol ve kimlik denetimleri gerçekleştirebilirsiniz.  
   
- .NET Framework, esnek ve çok geniş bir spektrumda uygulamalarının ihtiyaçlarını karşılamak için yeterli Genişletilebilir rol tabanlı güvenlik desteği sağlar. COM + 1.0 Hizmetleri gibi mevcut kimlik doğrulama altyapıları ile birlikte çalışmak veya bir özel kimlik doğrulama sistemi oluşturmak için seçebilirsiniz. Rol tabanlı güvenlik özellikle çok birincil sunucuda işlenir ASP.NET Web uygulamalarında kullanmak için uygundur. Ancak, .NET Framework rol tabanlı güvenlik, istemci veya sunucu üzerinde kullanılabilir.  
+ .NET Framework, esnek ve geniş bir uygulama yelpazesini karşılamak için yeterince Genişletilebilir rol tabanlı güvenlik desteği sağlar. COM+ 1,0 hizmetleri gibi mevcut kimlik doğrulama altyapılarla birlikte çalışabilme veya özel bir kimlik doğrulama sistemi oluşturma seçeneğini belirleyebilirsiniz. Rol tabanlı güvenlik, özellikle sunucuda işlenen ASP.NET Web uygulamalarında kullanım için uygun bir seçenektir. Ancak, istemci veya sunucu üzerinde rol tabanlı güvenlik .NET Framework kullanılabilir.  
   
- Bu bölümü okumadan önce içinde sunulan malzeme anladığınızdan emin olun [temel güvenlik kavramları](../../../docs/standard/security/key-security-concepts.md).  
+ Bu bölümü okumadan önce, [anahtar güvenlik kavramları](../../../docs/standard/security/key-security-concepts.md)bölümünde sunulan malzemeleri anladığınızdan emin olun.  
   
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Sorumlu ve Kimlik Nesneleri](../../../docs/standard/security/principal-and-identity-objects.md)|Ayarlamanıza ve Windows ve genel kimlikleri ve ilkeleri yönetmenize olunacağı açıklanmaktadır.|  
-|[Temel Güvenlik Kavramları](../../../docs/standard/security/key-security-concepts.md)|.NET Framework güvenlik kullanmadan önce anlamanız gereken temel kavramlar tanıtılmaktadır.|  
+|[Sorumlu ve Kimlik Nesneleri](../../../docs/standard/security/principal-and-identity-objects.md)|Hem Windows hem de genel kimliklerin ve sorumluların nasıl ayarlanacağını ve yönetileceğini açıklar.|  
+|[Temel Güvenlik Kavramları](../../../docs/standard/security/key-security-concepts.md)|.NET Framework güvenliği kullanmadan önce anlamanız gereken temel kavramları tanıtır.|  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType>

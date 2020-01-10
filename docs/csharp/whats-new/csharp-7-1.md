@@ -2,12 +2,12 @@
 title: C# 7,1 sürümündeki yenilikler
 description: C# 7,1 sürümündeki yeni özelliklere genel bakış.
 ms.date: 04/09/2019
-ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105544"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714588"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7,1 sürümündeki yenilikler
 
@@ -17,20 +17,20 @@ C#7,1, [dil sürümü seçimi](../language-reference/configure-language-version.
 
 Bu sürümdeki yeni dil özellikleri şunlardır:
 
-- [`async``Main` yöntemi](#async-main)
+- [`async` `Main` yöntemi](#async-main)
   - Bir uygulama için giriş noktası `async` değiştiriciye sahip olabilir.
-- [`default`değişmez değer ifadeleri](#default-literal-expressions)
+- [`default` değişmez ifadesi](#default-literal-expressions)
   - Hedef türü çıkarsanamıyor varsayılan değer ifadelerinde varsayılan değişmez ifadeleri kullanabilirsiniz.
 - [Gösterilen demet öğesi adları](#inferred-tuple-element-names)
   - Kayıt düzeni öğelerinin adları, birçok durumda demet başlatmasıyla çıkarsanamıyor.
 - [Genel tür parametrelerinde model eşleştirme](#pattern-matching-on-generic-type-parameters)
   - Türü genel bir tür parametresi olan değişkenlerde model eşleşme ifadeleri kullanabilirsiniz.
 
-Son olarak, derleyici iki seçeneğe `-refout` sahiptir ve `-refonly` bu, [Başvuru derleme üretimini](#reference-assembly-generation)denetler.
+Son olarak, derleyici `-refout` iki seçeneğe sahiptir ve bu denetim [Başvuru derleme üretimini](#reference-assembly-generation)`-refonly`.
 
 En son özellikleri bir nokta sürümünde kullanmak için, [Derleyici dil sürümünü yapılandırmanız](../language-reference/configure-language-version.md) ve sürümü seçmeniz gerekir.
 
-Bu makalenin geri kalanında her özelliğe bir genel bakış sunulmaktadır. Her bir özellik için, arkasında yatan bir düşünme olduğunu öğrenirsiniz. Söz dizimini öğrenirsiniz. `dotnet try` Genel aracı kullanarak ortamınızdaki bu özellikleri keşfedebilirsiniz:
+Bu makalenin geri kalanında her özelliğe bir genel bakış sunulmaktadır. Her bir özellik için, arkasında yatan bir düşünme olduğunu öğrenirsiniz. Söz dizimini öğrenirsiniz. Ortamınızdaki bu özellikleri, `dotnet try` genel aracını kullanarak inceleyebilirsiniz:
 
 1. [DotNet-TRY](https://github.com/dotnet/try/blob/master/README.md#setup) küresel aracını yükler.
 1. [DotNet/TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyalayın.
@@ -39,7 +39,7 @@ Bu makalenin geri kalanında her özelliğe bir genel bakış sunulmaktadır. He
 
 ## <a name="async-main"></a>Zaman uyumsuz ana
 
-*Zaman uyumsuz Main* yöntemi, yöntekinizdeki `await` `Main` kullanmanıza olanak sağlar.
+*Async Main* yöntemi `Main` yönteminde `await` kullanmanıza olanak sağlar.
 Daha önce yazmanız gerekir:
 
 ```csharp
@@ -60,7 +60,7 @@ static async Task<int> Main()
 }
 ```
 
-Programınız çıkış kodu döndürmezse, şunu `Main` <xref:System.Threading.Tasks.Task>döndüren bir yöntem bildirebilirsiniz:
+Programınız çıkış kodu döndürmezse, bir <xref:System.Threading.Tasks.Task>döndüren `Main` yöntemi bildirebilirsiniz:
 
 ```csharp
 static async Task Main()
@@ -110,7 +110,7 @@ Bu özellik hakkında daha fazla bilgi için [Tanımlama grupları](../tuples.md
 
 ## <a name="pattern-matching-on-generic-type-parameters"></a>Genel tür parametrelerinde model eşleştirme
 
-7,1 ile C# başlayarak, `is` ve `switch` tür deseninin model ifadesi bir genel tür parametresinin türüne sahip olabilir. Bu, ya da `struct` `class` türünde olabilecek türler denetlenirken ve kutulamayı önlemek istediğiniz durumlarda yararlı olabilir.
+7,1 ile C# başlayarak, `is` ve `switch` tür deseninin model ifadesi bir genel tür parametresinin türüne sahip olabilir. Bu, `struct` ya da `class` türler olabilecek türler denetlenirken ve kutulamayı önlemek istediğiniz durumlarda yararlı olabilir.
 
 ## <a name="reference-assembly-generation"></a>Başvuru derlemesi oluşturma
 

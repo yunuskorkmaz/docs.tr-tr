@@ -2,12 +2,12 @@
 title: Verileri gruplandırma (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: e7f10b121a7a1c599d88731a806fe784eb1a7e66
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7ef3d3c9097d7a9478605565518ac8975feb9fe2
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423414"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635749"
 ---
 # <a name="grouping-data-c"></a>Verileri gruplandırma (C#)
 Gruplandırma, her bir gruptaki öğelerin ortak bir özniteliği paylaşması için verileri gruplara yerleştirme işlemini ifade eder.  
@@ -22,7 +22,7 @@ Gruplandırma, her bir gruptaki öğelerin ortak bir özniteliği paylaşması i
   
 |Yöntem adı|Açıklama|C#Sorgu Ifadesi söz dizimi|Daha fazla bilgi|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Ölçütü|Ortak bir özniteliği paylaşan öğeleri gruplandırır. Her grup <xref:System.Linq.IGrouping%602> nesne tarafından temsil edilir.|`group … by`<br /><br /> veya<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|GroupBy|Ortak bir özniteliği paylaşan öğeleri gruplandırır. Her grup <xref:System.Linq.IGrouping%602> nesne tarafından temsil edilir.|`group … by`<br /><br /> veya<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|Bir anahtar Seçici işlevine dayalı olarak bir <xref:System.Linq.Lookup%602> (bire çok sözlüğüne) öğe ekler.|Yok.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Sorgu Ifadesi söz dizimi örneği  
@@ -64,8 +64,8 @@ foreach (var group in query)
 - <xref:System.Linq>
 - [Standart sorgu Işleçlerine genelC#bakış ()](./standard-query-operators-overview.md)
 - [group yan tümcesi](../../../language-reference/keywords/group-clause.md)
-- [Nasıl yapılır: Iç Içe geçmiş grup oluşturma](../../../linq/create-a-nested-group.md)
-- [Nasıl yapılır: dosyaları uzantıya göre gruplama (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
-- [Nasıl yapılır: sorgu sonuçlarını gruplandırma](../../../linq/group-query-results.md)
-- [Nasıl yapılır: gruplandırma Işleminde alt sorgu gerçekleştirme](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
-- [Nasıl yapılır: grupları (LINQ) kullanarak bir dosyayı birçok dosyaya bölme (LINQ)C#()](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [İç içe geçmiş grup oluşturma](../../../linq/create-a-nested-group.md)
+- [Dosyaları uzantıya göre gruplama (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
+- [Sorgu sonuçlarını gruplandırma](../../../linq/group-query-results.md)
+- [Gruplandırma işleminde alt sorgu gerçekleştirme](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
+- [Grupları (LINQ) kullanarak bir dosyayı birden çok dosyaya bölme (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

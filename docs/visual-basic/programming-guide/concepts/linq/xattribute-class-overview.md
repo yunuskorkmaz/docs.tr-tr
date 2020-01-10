@@ -2,18 +2,18 @@
 title: XAttribute Sınıfına Genel Bakış
 ms.date: 07/20/2015
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
-ms.openlocfilehash: 00aeeec3f251ecd1d21a313290326b3ba49d63d3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ceafe5478e41fb4c2038fd9300ef7b1ee6cb8411
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349333"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636659"
 ---
 # <a name="xattribute-class-overview-visual-basic"></a>XAttribute sınıfına genel bakış (Visual Basic)
 Öznitelikler, bir öğesiyle ilişkili ad/değer çiftleridir. <xref:System.Xml.Linq.XAttribute> sınıfı XML özniteliklerini temsil eder.  
   
 ## <a name="overview"></a>Genel bakış  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] özniteliklerle çalışma, öğelerle çalışmaya benzer. Oluşturucular benzerdir. Bunların koleksiyonlarını almak için kullandığınız yöntemler benzerdir. Öznitelik koleksiyonu için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadesi bir öğe koleksiyonu için bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadesine çok benzer şekilde görünür.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] özniteliklerle çalışma, öğelerle çalışmaya benzer. Oluşturucular benzerdir. Bunların koleksiyonlarını almak için kullandığınız yöntemler benzerdir. Öznitelik koleksiyonu için LINQ sorgu ifadesi bir öğe koleksiyonu için LINQ sorgu ifadesine çok benzer şekilde görünür.  
   
  Öznitelikleri bir öğeye eklenme sırası korunur. Diğer bir deyişle, özniteliklerde yineleme yaparken, bunları eklendiği sırayla görürsünüz.  
   

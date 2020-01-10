@@ -1,16 +1,15 @@
 ---
 title: varsayılan işleç- C# başvuru
-ms.custom: seodec18
 description: Bir türün varsayılan değerini oluşturmak için varsayılan işleci kullanın
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 6503e82a42f116a7ba8461ae060592377579f255
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 744bdf1ec683ef32bba508c260590c0ed4c6e987
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039057"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712721"
 ---
 # <a name="default-operator-c-reference"></a>Default işleci (C# başvuru)
 
@@ -24,7 +23,7 @@ Ayrıca, bir [`switch` ifadesinde](../keywords/switch.md)varsayılan Case etiket
 
 ## <a name="default-literal"></a>Varsayılan sabit değer
 
-7,1 ' C# den başlayarak, derleyici ifade türünü çıkarsdığı zaman bir türün varsayılan değerini oluşturmak için`default`değişmez değerini kullanabilirsiniz. `default` değişmez ifadesi, `T` çıkarılan tür olduğu `default(T)` ifadesiyle aynı değeri üretir. `default` değişmez değerini aşağıdaki durumlardan herhangi birinde kullanabilirsiniz:
+7,1 ' C# den başlayarak, derleyici ifade türünü çıkarsdığı zaman bir türün varsayılan değerini oluşturmak için `default` değişmez değerini kullanabilirsiniz. `default` değişmez ifadesi, `T` çıkarılan tür olduğu `default(T)` ifadesiyle aynı değeri üretir. `default` değişmez değerini aşağıdaki durumlardan herhangi birinde kullanabilirsiniz:
 
 - Bir değişkenin atamasında veya başlatılmasında.
 - [İsteğe bağlı bir yöntem parametresi](../../methods.md#optional-parameters-and-arguments)için varsayılan değer bildiriminde.

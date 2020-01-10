@@ -1,18 +1,17 @@
 ---
 title: Anonim işlevler- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], as anonymous functions
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: 078596dcbfd907be53cae2ab3e7dcaa9e311c3f4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: cfb0190ee263e65e8130a8925f76357a382eafa3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588823"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712006"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Anonim işlevler (C# Programlama Kılavuzu)
 
@@ -20,7 +19,7 @@ Anonim bir işlev, bir temsilci türünün beklendiği her yerde kullanılabilec
 
 Anonim bir işlev oluşturmak için bir [lambda ifadesi](lambda-expressions.md) veya [anonim yöntem](../../language-reference/operators/delegate-operator.md) kullanabilirsiniz. Satır içi kod yazmak için daha kısa ve açıklayıcı bir yol sağlayan lambda ifadeleri kullanmanızı öneririz. Anonim yöntemlerin aksine, bazı lambda ifadesi türleri ifade ağacı türlerine dönüştürülebilir.
 
-## <a name="the-evolution-of-delegates-in-c"></a>C 'deki temsilcilerin evrimi\#
+## <a name="the-evolution-of-delegates-in-c"></a>C\# temsilcilerin evrimi
 
  1,0 C# ' de, bir temsilci örneğini kodun başka bir yerinde tanımlanmış bir yöntemle açıkça başlatarak oluşturdunuz. C#2,0, anonim yöntemler kavramını bir temsilci çağrısında yürütülebilecek adlandırılmamış satır içi deyimler yazmak için bir yol olarak sunmuştur. C#3,0, anonim yöntemlere kavram olarak benzeyen, ancak daha açıklayıcı ve kısa olan lambda ifadeleri sunmuştur. Bu iki özellik topluca *Anonim işlevler*olarak bilinir. Genel olarak, .NET Framework sürüm 3,5 ve üstünü hedefleyen uygulamalar Lambda ifadelerini kullanmalıdır.  
   

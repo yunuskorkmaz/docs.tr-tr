@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: fd0875f09bf3ba7211ede500aa0da45f8b7cd2c7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5035466de4aa17c374824e1b0f02ed594731a9d3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344771"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716805"
 ---
 # <a name="-define-visual-basic"></a>-tanımla (Visual Basic)
 Koşullu derleyici sabitlerini tanımlar.  
@@ -31,7 +31,7 @@ veya
 -d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Arguments  
   
 |Terim|Tanım|  
 |---|---|  
@@ -47,7 +47,7 @@ veya
   
  Sembol tanımlarını ayırmak için virgül kullanarak `-define` birden çok sembol tanımlayabilirsiniz.  
   
-|Visual Studio tümleşik geliştirme ortamında/define ayarlamak için|  
+|Visual Studio tümleşik geliştirme ortamında ayarlamak için|  
 |---|  
 |1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Derle** sekmesine tıklayın.<br />3. **Gelişmiş**'e tıklayın.<br />4. **Özel sabitler** kutusundaki değeri değiştirin.|  
   

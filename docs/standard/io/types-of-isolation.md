@@ -18,14 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 323b3fedb570ff97012b148aaeda2311b01960b5
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: aa8a62ee0c653a1905283696b97f55a3e6ffff85
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74205013"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706549"
 ---
 # <a name="types-of-isolation"></a>Yalıtım Türleri
 Yalıtılmış depolamaya erişim, her zaman onu oluşturan kullanıcıyla kısıtlanır. Bu tür yalıtımın uygulanması için ortak dil çalışma zamanı, işletim sisteminin tanıdığı aynı kullanıcı kimliği kavramını kullanır. Bu, mağaza açıldığında kodun çalıştırıldığı işlemle ilişkili kimliktir. Bu kimlik kimliği doğrulanmış bir kullanıcı kimliğidir, ancak kimliğe bürünme geçerli kullanıcının kimliğinin dinamik olarak değişmesine neden olabilir.  

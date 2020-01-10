@@ -5,14 +5,14 @@ author: mgroves
 ms.technology: csharp-fundamentals
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 54eb3038594e1d4becf8a1bddd58b1e0e6464d68
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9f08e362ada032e7193d83a73fbbf05259bd2259
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039285"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694562"
 ---
-# <a name="using-attributes-in-c"></a>C\# içindeki öznitelikleri kullanma
+# <a name="use-attributes-in-c"></a>C\# öznitelikleri kullanma
 
 Öznitelikler, bilgileri bildirimli bir şekilde kod ile ilişkilendirmenin bir yolunu sağlar. Ayrıca, çeşitli hedeflere uygulanabilen yeniden kullanılabilir bir öğe de sağlayabilir.
 
@@ -21,8 +21,9 @@ ms.locfileid: "73039285"
 Bu öğreticide, kodunuza nasıl öznitelik ekleneceği, kendi öznitelerinizi nasıl oluşturacağınız ve kullanacağınız ve .NET Core 'da yerleşik bazı özniteliklerin nasıl kullanılacağı gösterilir.
 
 ## <a name="prerequisites"></a>Prerequisites
-.NET Core 'u çalıştırmak için makinenizi ayarlamanız gerekir. Yükleme yönergelerini [.NET Core İndirmeleri](https://dotnet.microsoft.com/download) sayfasında bulabilirsiniz.
-Bu uygulamayı Windows, Ubuntu Linux, macOS veya bir Docker kapsayıcısında çalıştırabilirsiniz. En sevdiğiniz kod düzenleyicinizi yüklemeniz gerekir. Aşağıdaki açıklamalar açık kaynaklı, platformlar arası düzenleyici olan [Visual Studio Code](https://code.visualstudio.com/) kullanır. Bununla birlikte, rahat olan her türlü aracı kullanabilirsiniz.
+Makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. Yükleme yönergelerini [.NET Core İndirmeleri](https://dotnet.microsoft.com/download) sayfasında bulabilirsiniz.
+Bu uygulamayı Windows, Ubuntu Linux, macOS veya bir Docker kapsayıcısında çalıştırabilirsiniz.
+En sevdiğiniz kod düzenleyicinizi yüklemeniz gerekir. Aşağıdaki açıklamalar açık kaynaklı, platformlar arası düzenleyici olan [Visual Studio Code](https://code.visualstudio.com/) kullanır. Bununla birlikte, rahat olan her türlü aracı kullanabilirsiniz.
 
 ## <a name="create-the-application"></a>Uygulamayı oluşturma
 
@@ -30,7 +31,7 @@ Tüm araçları yüklemişseniz, yeni bir .NET Core uygulaması oluşturun. Komu
 
 `dotnet new console`
 
-Bu komut, barekemikler .NET Core proje dosyaları oluşturur. Bu projeyi derlemek için gereken bağımlılıkları geri yüklemek için `dotnet restore` yürütmeniz gerekir.
+Bu komut, tam kemikler .NET Core proje dosyaları oluşturur. Bu projeyi derlemek için gereken bağımlılıkları geri yüklemek için `dotnet restore` yürütmeniz gerekir.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -38,10 +39,10 @@ Programı yürütmek için `dotnet run`kullanın. Konsola "Hello, World" çıkı
 
 ## <a name="how-to-add-attributes-to-code"></a>Koda öznitelikler ekleme
 
-' C#De, öznitelikleri`Attribute`temel sınıfından devraldığı sınıflardır. `Attribute` devralan herhangi bir sınıf, diğer kod parçalarında "Tag" sıralaması olarak kullanılabilir.
+' C#De, öznitelikleri `Attribute` temel sınıfından devraldığı sınıflardır. `Attribute` devralan herhangi bir sınıf, diğer kod parçalarında "Tag" sıralaması olarak kullanılabilir.
 Örneğin, `ObsoleteAttribute`adlı bir öznitelik vardır. Bu, kodun artık kullanılmıyor olduğunu ve artık kullanılmaması gerektiğini bildirmek için kullanılır. Bu özniteliği bir sınıfa, örneğin köşeli ayraçları kullanarak yerleştirebilirsiniz.
 
-[!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]  
+[!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]
 
 Sınıfı `ObsoleteAttribute`çağrıldığında yalnızca kodda `[Obsolete]` kullanılması gerekir. Bu, C# aşağıdaki bir kuraldır.
 ' I seçerseniz tam adı `[ObsoleteAttribute]` kullanabilirsiniz.
@@ -82,7 +83,7 @@ Yukarıdaki `Attribute constructor parameter 'myClass' has type 'Foo', which is 
 Öznitelikler, bir dizi "hedef" üzerinde kullanılabilir. Yukarıdaki örneklerde bunları sınıflarda gösterilmektedir, ancak bunlar üzerinde de kullanılabilir:
 
 * Derleme
-* örneği
+* Sınıf
 * Oluşturucu
 * Temsilci
 * Enum
@@ -91,7 +92,7 @@ Yukarıdaki `Attribute constructor parameter 'myClass' has type 'Foo', which is 
 * GenericParameter
 * Arabirim
 * Yöntem
-* Modül
+* Modülü
 * Parametre
 * Özellik
 * ReturnValue
@@ -111,7 +112,7 @@ Yukarıdaki özniteliği bir sınıf veya yapı olmayan bir şeye koymaya çalı
 
 Öznitelikleri bulmak ve üzerinde işlem yapmak için, [yansıma](../programming-guide/concepts/reflection.md) genellikle gereklidir. Bu öğreticide yansıma derinlemesine bir savunma ele alınmayacak, ancak temel fikir, yansıma ' de C# diğer kodu incelediği için kod yazmanıza olanak tanır.
 
-Örneğin, bir sınıf hakkında bilgi almak için yansıma kullanabilirsiniz (kodunuzun baş `using System.Reflection;` ekleyin): 
+Örneğin, bir sınıf hakkında bilgi almak için yansıma kullanabilirsiniz (kodunuzun baş `using System.Reflection;` ekleyin):
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 
@@ -140,7 +141,7 @@ Bunlar her seferinde de örneklenmiştir. Bir satırda `GetCustomAttributes` iki
 * `[Conditional]`. Bu öznitelik `System.Diagnostics` ad alanıdır. Bu öznitelik yöntemlere (veya öznitelik sınıflarına) uygulanabilir. Oluşturucuya bir dize geçirmeniz gerekir.
 Bu dize bir `#define` yönergeyle eşleşmiyorsa, bu yönteme yapılan çağrılar (ancak yöntemin kendisi değil) C# derleyici tarafından kaldırılır. Genellikle bu, hata ayıklama (Tanılama) amaçlarıyla kullanılır.
 
-* `[CallerMemberName]`. Bu öznitelik, parametrelerde kullanılabilir ve `System.Runtime.CompilerServices` ad alanında bulunabilir. Bu, başka bir yöntemi çağıran yöntemin adını eklemek için kullanılan bir özniteliktir. Bu, genellikle çeşitli kullanıcı arabirimi çerçevelerinde INotifyPropertyChanged uygularken ' sihirli dizeler ' ' i ortadan kaldırmanın bir yolu olarak kullanılır. Örnek olarak:
+* `[CallerMemberName]`. Bu öznitelik, parametrelerde kullanılabilir ve `System.Runtime.CompilerServices` ad alanında bulunabilir. Bu, başka bir yöntemi çağıran yöntemin adını eklemek için kullanılan bir özniteliktir. Bu, genellikle çeşitli kullanıcı arabirimi çerçevelerinde INotifyPropertyChanged uygularken ' sihirli dizeler ' ' i ortadan kaldırmanın bir yolu olarak kullanılır. Örneğin:
 
 [!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 

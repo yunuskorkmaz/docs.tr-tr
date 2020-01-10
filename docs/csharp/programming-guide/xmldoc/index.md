@@ -1,6 +1,5 @@
 ---
 title: XML belge açıklamaları- C# Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.xml
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: 6405b094ccc50499bfeb4db4522f0ec9b01f68ad
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 07daff8b819220fad07e516281b93b24e39cba46
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523489"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711772"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML Belgeleri Yorumları (C# Programlama Kılavuzu)
 Visual C#'de, kaynak kodda doğrudan açıklamaların başvurduğu kod bloğunun hemen öncesindeki özel açıklama alanlarına (üç eğik çizgiyle gösterilir) XML öğeleri ekleyerek, kodunuz için belge oluşturabilirsiniz, örneğin:  
@@ -44,10 +43,10 @@ public class MyClass {}
   
 - [Belge Etiketleri için Sınırlayıcılar](./delimiters-for-documentation-tags.md)  
   
-- [Nasıl yapılır: XML Belgesi Özelliklerini Kullanma](./how-to-use-the-xml-documentation-features.md)  
+- [XML belgeleri özelliklerini kullanma](./how-to-use-the-xml-documentation-features.md)
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- Daha fazla bilgi için bkz.:  
+ Daha fazla bilgi için bkz.  
   
 - [-Doc (Işlem belgeleri açıklamaları)](../../language-reference/compiler-options/doc-compiler-option.md)  
   

@@ -1,17 +1,16 @@
 ---
 title: Genel türler ve öznitelikler C# -Programlama Kılavuzu
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], attributes
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
-ms.openlocfilehash: 99a24a7069145dfad5ce6c9c91f2a8653eb9a224
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 47bf4e8f07a8b6778db8fa675d745d362dc10d7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589632"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75703032"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>Genel Türler ve Öznitelikler (C# Programlama Kılavuzu)
 Öznitelikler Genel türlere genel olmayan türlerle aynı şekilde uygulanabilir. Öznitelikleri uygulama hakkında daha fazla bilgi için bkz. [öznitelikler](../concepts/attributes/index.md).  
@@ -26,7 +25,7 @@ ms.locfileid: "69589632"
   
  [!code-csharp[csProgGuideGenerics#49](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#49)]  
   
- Uygun sayıda virgül kullanarak birden çok tür parametresi belirtin. Bu örnekte, `GenericClass2` iki tür parametresi vardır:  
+ Uygun sayıda virgül kullanarak birden çok tür parametresi belirtin. Bu örnekte `GenericClass2` iki tür parametreye sahiptir:  
   
  [!code-csharp[csProgGuideGenerics#50](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#50)]  
   
@@ -38,11 +37,11 @@ ms.locfileid: "69589632"
   
  [!code-csharp[csProgGuideGenerics#52](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#52)]  
   
- Genel bir tür şuradan <xref:System.Attribute>devralınabilir:  
+ Genel bir tür <xref:System.Attribute>devralınabilir:  
   
  [!code-csharp[csProgGuideGenerics#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#53)]  
   
- Çalışma zamanında genel bir tür veya tür parametresi hakkında bilgi edinmek için, yöntemlerini <xref:System.Reflection>kullanabilirsiniz. Daha fazla bilgi için bkz. [Genel türler ve yansıma](./generics-and-reflection.md)  
+ Çalışma zamanında genel bir tür veya tür parametresi hakkında bilgi almak için <xref:System.Reflection>yöntemlerini kullanabilirsiniz. Daha fazla bilgi için bkz. [Genel türler ve yansıma](./generics-and-reflection.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

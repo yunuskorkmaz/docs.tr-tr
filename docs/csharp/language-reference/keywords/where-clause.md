@@ -1,6 +1,5 @@
 ---
 title: WHERE yan tümcesi C# -başvuru
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - whereclause_CSharpKeyword
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 15df6339cec9eabadf5aa4c184d7504c4e065032
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 42932809d58c739afc165676c0b90c5a23f568de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421927"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712825"
 ---
 # <a name="where-clause-c-reference"></a>where tümcesi (C# Başvurusu)
 
@@ -41,7 +40,7 @@ Tek bir `where` yan tümcesi içinde, [&&](../operators/boolean-logical-operator
 
 `where` yan tümcesi bir filtreleme mekanizmasıdır. Bir sorgu ifadesinde neredeyse her yerde konumlandırılmış olabilir, ancak ilk veya son yan tümce olamaz. Bir `where` yan tümcesi, gruplandırıldıklarında veya sonra kaynak öğeleri filtrelemeniz gerekip gerekmediğini bağlı olarak, bir [Grup](group-clause.md) yan tümcesinden önce veya sonra görünebilir.
 
-Belirtilen koşul veri kaynağındaki öğeler için geçerli değilse, bir derleme zamanı hatası ortaya kalır. Bu, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]tarafından sunulan güçlü tür denetlemenin bir avantajıdır.
+Belirtilen koşul veri kaynağındaki öğeler için geçerli değilse, bir derleme zamanı hatası ortaya kalır. Bu, LINQ tarafından sunulan güçlü tür denetiminin bir avantajıdır.
 
 Derleme zamanında `where` anahtar sözcüğü <xref:System.Linq.Enumerable.Where%2A> standart sorgu Işleci yöntemine yapılan çağrıya dönüştürülür.
 

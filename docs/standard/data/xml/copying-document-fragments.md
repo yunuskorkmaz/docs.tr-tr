@@ -3,17 +3,15 @@ title: Belge Parçalarını Kopyalama
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: cf424bbe-81b7-40d2-9978-9b727da94d80
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a5dae283234819bc23c34e0bbe960967dff612d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e124bcfca34c984af127466c891526b052d08987
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934595"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711044"
 ---
 # <a name="copying-document-fragments"></a>Belge Parçalarını Kopyalama
-Oluşturabileceğiniz bir **XmlDocumentFragment** düğümünü ve ardından altındaki düğümler ekleyin. Zaman **XmlDocumentFragment** ile eklenen **InsertNode** yöntemi **XmlDocumentFragment** düğüm kopyalanmaz, ancak XML'de, alt düğümleri eklenir Belge nesne modeli (DOM).  
+Bir **XmlDocumentFragment** düğümü oluşturup altına düğümleri ekleyebilirsiniz. **XmlDocumentFragment** **InsertNode** yöntemiyle eklendiğinde, **XmlDocumentFragment** düğümü kopyalanmaz, ancak alt düğümleri XML belge nesne modeli (DOM) eklenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

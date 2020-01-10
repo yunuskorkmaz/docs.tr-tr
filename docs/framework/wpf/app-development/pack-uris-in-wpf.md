@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: efaf55220a41526b8952f01b8225f8336a4e8657
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e20053c451d12c6a8493d5d7fcfc72fe3d3d764e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459672"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636386"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF İçinde URI'leri Paketleme
 
@@ -38,7 +38,7 @@ Ayrıca, URI 'Ler aşağıdakiler de dahil olmak üzere çeşitli konumlardan do
 
 - Uygulamanın kaynak sitesi.
 
-Bu konumlardan bu dosya türlerini tanımlamaya ve yüklemeye yönelik tutarlı bir mekanizma sağlamak için, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] *Pack URI düzeninin*genişletilebilirliğine yararlanır. Bu konu, şemaya genel bir bakış sağlar ve çeşitli senaryolar için paket URI 'Lerinin nasıl kullanılacağını ele alır. her iki biçimlendirme ve koddan paket URI 'Lerinin nasıl kullanılacağını göstermeden önce mutlak ve göreli URI 'Ler ve URI çözümlemesini açıklar.
+Bu konumlardan bu dosya türlerini tanımlamaya ve yüklemeye yönelik tutarlı bir mekanizma sağlamak için WPF, *paket URI düzeninin*genişletilebilirliği kullanır. Bu konu, şemaya genel bir bakış sağlar ve çeşitli senaryolar için paket URI 'Lerinin nasıl kullanılacağını ele alır. her iki biçimlendirme ve koddan paket URI 'Lerinin nasıl kullanılacağını göstermeden önce mutlak ve göreli URI 'Ler ve URI çözümlemesini açıklar.
 
 <a name="The_Pack_URI_Scheme"></a>
 
@@ -52,7 +52,7 @@ OPC belirtimi, parçaları belirlemek için, paket URI düzenini tanımlamak üz
 
 Bir URI tarafından belirtilen düzen ön eki tarafından tanımlanır; http, FTP ve dosya iyi bilinen örneklerdir. Paket URI şeması, düzeni olarak "Pack" kullanır ve iki bileşen içerir: yetkili ve yol. Paket URI 'sinin biçimi aşağıda verilmiştir.
 
-pack://*authority* /*yolu*
+pack://*authority*/*yolu*
 
 *Yetkili* , bir bölümün içerdiği paketin türünü belirtir. *yol* , bir paket içindeki bir bölümün konumunu belirtir.
 
@@ -72,7 +72,7 @@ Paketler ve parçalar, uygulamalar ve dosyalarla benzerdir; burada bir uygulama 
 
 - Kaynak dosyalarının sitesi.
 
-Bu dosya türlerine erişmek için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] iki kaynakçayı destekler: application:///ve siteoforigin:///. Application:///yetkilisi, kaynak ve içerik dosyaları dahil olmak üzere derleme zamanında bilinen uygulama verileri dosyalarını tanımlar. Siteoforigin:///yetkilisi, kaynak dosyalarının sitesini tanımlar. Her bir yetkilinin kapsamı aşağıdaki şekilde gösterilmiştir.
+Bu dosya türlerine erişmek için WPF iki kaynakçayı destekler: application:///ve siteoforigin:///. Application:///yetkilisi, kaynak ve içerik dosyaları dahil olmak üzere derleme zamanında bilinen uygulama verileri dosyalarını tanımlar. Siteoforigin:///yetkilisi, kaynak dosyalarının sitesini tanımlar. Her bir yetkilinin kapsamı aşağıdaki şekilde gösterilmiştir.
 
 ![Paket URI diyagramı](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)
 
@@ -139,7 +139,7 @@ Aşağıdaki örnek, başvurulan, sürüme özgü derlemenin proje klasörünün
 
 `pack://application:,,,/ReferencedAssembly;v1.0.0.1;component/ResourceFile.xaml`
 
-Başvurulan derleme kaynak dosyalarının paket URI sözdiziminin yalnızca application:///yetkilisi ile kullanılabileceğini unutmayın. Örneğin, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]içinde aşağıdakiler desteklenmez.
+Başvurulan derleme kaynak dosyalarının paket URI sözdiziminin yalnızca application:///yetkilisi ile kullanılabileceğini unutmayın. Örneğin, WPF 'de aşağıdakiler desteklenmez.
 
 `pack://siteoforigin:,,,/SomeAssembly;component/ResourceFile.xaml`
 
@@ -251,7 +251,7 @@ Bu mutlak paket URI 'SI, yerel derlemedeki veya bir içerik dosyasındaki bir ka
 
 `/ResourceOrContentFile.xaml`
 
-Bir paket URI 'sinin başvurduğu dosya türünü belirleyebilmek için, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aşağıdaki buluşsal yöntemleri kullanarak yerel derlemelerde ve içerik dosyalarındaki kaynak dosyaları için URI 'Leri çözümler:
+Bir paket URI 'sinin başvurduğu dosya türünü belirleyebilmek için WPF, aşağıdaki buluşsal yöntemleri kullanarak yerel derlemelerdeki ve içerik dosyalarındaki kaynak dosyaları için URI 'Leri çözümler:
 
 1. Paket URI 'siyle eşleşen bir <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> özniteliği için bütünleştirilmiş kod meta verilerini araştırma.
 
@@ -265,7 +265,7 @@ Bir paket URI 'sinin başvurduğu dosya türünü belirleyebilmek için, [!INCLU
 
 URI çözümlemesi, aşağıdakilere başvuran URI 'Ler için uygulanmaz:
 
-- Başvurulan derlemelerdeki içerik dosyaları: Bu dosya türleri [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]tarafından desteklenmez.
+- Başvurulan derlemelerdeki içerik dosyaları: Bu dosya türleri WPF tarafından desteklenmez.
 
 - Başvurulan derlemelerdeki gömülü dosyalar: başvurulan derlemenin ve `;component` sonekin her ikisi de dahil olduklarından, bunları tanımlayan URI 'Ler benzersizdir.
 
@@ -277,7 +277,7 @@ Paket URI 'SI çözümlemenin izin verdiği bir basitleştirmeli, kodun kaynak v
 
 ## <a name="programming-with-pack-uris"></a>Paket URI 'Leri ile programlama
 
-Birçok [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sınıfı, paket URI 'Leri ile ayarlanabilir özellikleri uygular, örneğin:
+Birçok WPF sınıfı, aşağıdakiler dahil olmak üzere paket URI 'Leri ile ayarlanabilir özellikleri uygular:
 
 - <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>
 
@@ -364,7 +364,7 @@ TextBox userProvidedUriTextBox = new TextBox();
 Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 ```
 
-Tablo 3 ' <xref:System.Uri?displayProperty=nameWithType> kullanarak kodda belirtebileceğiniz çeşitli göreli paket URI 'Leri gösterilmektedir.
+Tablo 3 ' <xref:System.Uri?displayProperty=nameWithType>kullanarak kodda belirtebileceğiniz çeşitli göreli paket URI 'Leri gösterilmektedir.
 
 Tablo 3: koddaki mutlak paket URI 'Leri
 
@@ -380,7 +380,7 @@ Tablo 3: koddaki mutlak paket URI 'Leri
 |Kaynak dosyanın sitesi|`Uri uri = new Uri("pack://siteoforigin:,,,/SOOFile.xaml", UriKind.Absolute);`|
 |Alt klasördeki kaynak dosyanın sitesi|`Uri uri = new Uri("pack://siteoforigin:,,,/Subfolder/SOOFile.xaml", UriKind.Absolute);`|
 
-Tablo 4 ' te <xref:System.Uri?displayProperty=nameWithType> kullanarak kodda belirtebileceğiniz çeşitli göreli paket URI 'Leri gösterilmektedir.
+Tablo 4 ' te <xref:System.Uri?displayProperty=nameWithType>kullanarak kodda belirtebileceğiniz çeşitli göreli paket URI 'Leri gösterilmektedir.
 
 Tablo 4: koddaki göreli paket URI 'Leri
 
@@ -397,13 +397,13 @@ Tablo 4: koddaki göreli paket URI 'Leri
 
 ### <a name="common-pack-uri-scenarios"></a>Ortak paket URI senaryoları
 
-Önceki bölümlerde kaynak, içerik ve kaynak dosyalarının kaynağını tanımlamak için paket URI 'Leri oluşturma konusu ele alınmıştır. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], bu kurulumlarını çeşitli yollarla kullanılır ve aşağıdaki bölümlerde bazı yaygın kullanımlar ele alınmaktadır.
+Önceki bölümlerde kaynak, içerik ve kaynak dosyalarının kaynağını tanımlamak için paket URI 'Leri oluşturma konusu ele alınmıştır. WPF 'de, bu kurulumlarını çeşitli yollarla kullanılır ve aşağıdaki bölümlerde birçok yaygın kullanım kullanımı ele alınmaktadır.
 
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>
 
 #### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>Uygulamanın başladığı zaman gösterilecek Kullanıcı arabirimini belirtme
 
-<xref:System.Windows.Application.StartupUri%2A>, bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulaması başlatıldığında gösterilecek ilk [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] belirtir. Tek başına uygulamalar için, aşağıdaki örnekte gösterildiği gibi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bir pencere olabilir.
+<xref:System.Windows.Application.StartupUri%2A> WPF uygulaması başlatıldığında gösterilecek ilk [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] belirtir. Tek başına uygulamalar için, aşağıdaki örnekte gösterildiği gibi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bir pencere olabilir.
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
@@ -411,7 +411,7 @@ Tek başına uygulamalar ve XAML tarayıcı uygulamaları (XBAP 'ler), aşağıd
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-Uygulama tek başına bir uygulamadır ve <xref:System.Windows.Application.StartupUri%2A>ile bir sayfa belirtilirse, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sayfayı barındırmak için bir <xref:System.Windows.Navigation.NavigationWindow> açar. XBAP 'ler için, sayfa konak tarayıcısında gösterilir.
+Uygulama bağımsız bir uygulamadır ve <xref:System.Windows.Application.StartupUri%2A>ile bir sayfa belirtilirse, WPF sayfayı barındırmak için bir <xref:System.Windows.Navigation.NavigationWindow> açar. XBAP 'ler için, sayfa konak tarayıcısında gösterilir.
 
 <a name="Navigating_to_a_Page"></a>
 
@@ -423,7 +423,7 @@ Aşağıdaki örnek, bir sayfaya nasıl gidebileceğiniz gösterilmektedir.
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]'de gezinmek için çeşitli yollar hakkında daha fazla bilgi için bkz. [gezintiye genel bakış](navigation-overview.md).
+WPF 'de gezinmek için çeşitli yollar hakkında daha fazla bilgi için bkz. [gezintiye genel bakış](navigation-overview.md).
 
 <a name="Specifying_a_Window_Icon"></a>
 
@@ -439,7 +439,7 @@ Daha fazla bilgi için bkz. <xref:System.Windows.Window.Icon%2A>.
 
 #### <a name="loading-image-audio-and-video-files"></a>Görüntü, ses ve video dosyaları yükleniyor
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], aşağıdaki örneklerde gösterildiği gibi uygulamaların hepsi, paket URI 'leriyle tanımlanabilecek ve yüklenebilecek çok çeşitli medya türlerini kullanmasına olanak sağlar.
+WPF, uygulamaların, her biri aşağıdaki örneklerde gösterildiği gibi, paket URI 'leriyle tanımlanabilecek ve yüklenebilecek çok çeşitli medya türlerini kullanmasına olanak sağlar.
 
 [!code-xaml[MediaPlayerVideoSample#VideoPackURIAtSOO](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerVideoSample/CS/HomePage.xaml#videopackuriatsoo)]
 
@@ -457,7 +457,7 @@ Kaynak sözlükleri (<xref:System.Windows.ResourceDictionary>), uygulama temalar
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]temalara genel bakış için bkz. stil oluşturma [ve şablon](../../../desktop-wpf/fundamentals/styles-templates-overview.md)oluşturma.
+WPF 'deki temalara genel bakış için bkz. [Stil oluşturma ve şablon](../../../desktop-wpf/fundamentals/styles-templates-overview.md)oluşturma.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

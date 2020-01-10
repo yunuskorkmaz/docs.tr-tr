@@ -1,6 +1,5 @@
 ---
 title: Group yan tümcesi C# -başvuru
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - group
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: dd14a4baf9967f41690e7978b8b6cf57c9275e36
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 75a366ec24e4e48af7e87d3372950aad8d76435b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428506"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713466"
 ---
 # <a name="group-clause-c-reference"></a>group tümcesi (C# Başvurusu)
 
@@ -54,7 +53,7 @@ Aşağıdaki örnek, sonuçları iki gruba bölmek için bir anahtar için bool 
 
 ### <a name="grouping-by-numeric-range"></a>Sayısal aralığa göre gruplandırma
 
-Sonraki örnek, bir yüzdebirlik aralığını temsil eden sayısal grup anahtarları oluşturmak için bir ifade kullanır. Yöntem çağrı sonucunu depolamak için uygun bir konum olarak [izin ver](let-clause.md) öğesinin kullanımını unutmayın. bu sayede yöntemi `group` yan tümcesinde iki kez çağırmak zorunda kalmazsınız. Sorgu ifadelerinde yöntemleri güvenle kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: sorgu Ifadelerinde özel durumları işleme](../../linq/handle-exceptions-in-query-expressions.md).
+Sonraki örnek, bir yüzdebirlik aralığını temsil eden sayısal grup anahtarları oluşturmak için bir ifade kullanır. Yöntem çağrı sonucunu depolamak için uygun bir konum olarak [izin ver](let-clause.md) öğesinin kullanımını unutmayın. bu sayede yöntemi `group` yan tümcesinde iki kez çağırmak zorunda kalmazsınız. Sorgu ifadelerinde yöntemleri güvenle kullanma hakkında daha fazla bilgi için bkz. [sorgu ifadelerinde özel durumları işleme](../../linq/handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -66,7 +65,7 @@ Sonraki örnek, bir yüzdebirlik aralığını temsil eden sayısal grup anahtar
 group person by new {name = person.surname, city = person.city};
 ```
 
-Sorgu değişkenini başka bir yönteme geçirmeniz gerekiyorsa adlandırılmış bir tür kullanın. Anahtarlar için otomatik uygulanan özellikler kullanarak özel bir sınıf oluşturun ve ardından <xref:System.Object.Equals%2A> ve <xref:System.Object.GetHashCode%2A> yöntemlerini geçersiz kılın. Ayrıca, bu yöntemleri kesin bir şekilde geçersiz kılmak zorunda değilsiniz bir yapı da kullanabilirsiniz. Daha fazla bilgi için bkz. [Otomatik uygulanan özelliklerle hafif bir sınıf uygulama](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) ve [nasıl yapılır: bir dizin ağacındaki yinelenen dosyaları sorgulama](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). İkinci makalede, adlandırılmış tür ile bileşik anahtarın nasıl kullanılacağını gösteren bir kod örneği bulunur.
+Sorgu değişkenini başka bir yönteme geçirmeniz gerekiyorsa adlandırılmış bir tür kullanın. Anahtarlar için otomatik uygulanan özellikler kullanarak özel bir sınıf oluşturun ve ardından <xref:System.Object.Equals%2A> ve <xref:System.Object.GetHashCode%2A> yöntemlerini geçersiz kılın. Ayrıca, bu yöntemleri kesin bir şekilde geçersiz kılmak zorunda değilsiniz bir yapı da kullanabilirsiniz. Daha fazla bilgi için bkz. [Otomatik uygulanan özelliklerle hafif bir sınıf uygulama](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) ve [bir dizin ağacındaki yinelenen dosyaları sorgulama](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). İkinci makalede, adlandırılmış tür ile bileşik anahtarın nasıl kullanılacağını gösteren bir kod örneği bulunur.
 
 ## <a name="example"></a>Örnek
 

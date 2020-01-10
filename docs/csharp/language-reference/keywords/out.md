@@ -1,6 +1,5 @@
 ---
-title: out anahtar sözcüğü - C# başvurusu
-ms.custom: seodec18
+title: out anahtar sözcüğü C# -başvurusu
 ms.date: 03/01/2017
 f1_keywords:
 - out_CSharpKeyword
@@ -9,21 +8,21 @@ helpviewer_keywords:
 - out [C#]
 - out keyword [C#]
 ms.assetid: 7e911a0c-3f98-4536-87be-d539b7536ca8
-ms.openlocfilehash: eccc89d3cee687f7b6ecf7b0ce2030ef709a81b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75b556535c5c0c0b55bf029cc400eb61b1002cb2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660976"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713267"
 ---
 # <a name="out-c-reference"></a>out (C# Başvurusu)
 
-Kullanabileceğiniz `out` anahtar sözcüğü iki bağlamlarda:
+`out` anahtar sözcüğünü iki bağlamda kullanabilirsiniz:
 
-- Olarak bir [parametre değiştiricisi](out-parameter-modifier.md), olanak sağlayan, bağımsız değişken bir yönteme başvuru yerine değere göre geçirin.
+- Bir [parametre değiştiricisi](out-parameter-modifier.md)olarak, bir bağımsız değişkeni değere göre değil başvuruya göre geçirmenize olanak sağlar.
 
-- İçinde [genel tür parametre bildirimleri](out-generic-modifier.md) arabirimlerde ve temsilcilerde için belirten bir tür parametresi birlikte değişken olduğu.
+- Bir tür parametresinin birlikte değişken olduğunu belirten arabirimler ve temsilciler için [genel tür parametre bildirimlerinde](out-generic-modifier.md) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C#Başvurunun](../index.md)

@@ -6,23 +6,23 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: cf9c0ad345ce8762e700bb46b431804dccb79409
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d2fd879203932ea3f2211e38a2efdd626928962b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283058"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713906"
 ---
-# <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# Diline ve.NET Framework'e Giriş
+# <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# Dile ve .NET Framework giriş
 
 C#, geliştiricilerin .NET Framework çalışan çeşitli güvenli ve güçlü uygulamalar oluşturmalarına olanak tanıyan, şık ve tür açısından güvenli bir nesne yönelimli dildir. Windows istemci uygulamaları C# , XML Web Hizmetleri, dağıtılmış bileşenler, istemci-sunucu uygulamaları, veritabanı uygulamaları ve çok daha fazlasını oluşturmak için kullanabilirsiniz. Visual C# , gelişmiş bir kod düzenleyici, uygun Kullanıcı arabirimi tasarımcıları, tümleşik hata ayıklayıcı ve C# dile ve .NET Framework göre uygulama geliştirmeyi kolaylaştırmak için birçok diğer araç sağlar.  
   
 > [!NOTE]
 > Görsel C# belgeler, temel programlama kavramlarını anladığınızı varsayar. Yeni bir başlangıç yapıyorsanız, Web 'de bulunan Visual C# Express 'i incelemek isteyebilirsiniz. Ayrıca, pratik programlama becerileri öğrenmek C# için kitaplar ve Web kaynaklarından yararlanabilirsiniz.  
   
-## <a name="c-language"></a>C# Dili
+## <a name="c-language"></a>C# dili
 
- C#sözdizimi büyük ölçüde ifade edilir, ancak kolayca öğrenilmesi ve kolay bir işlemdir. Küme ayracı sözdizimi C# , C C++ veya Java 'yı bilen herkese anında tanınacaktır. Bu dillerden herhangi birini bilen geliştiriciler genellikle çok kısa bir süre C# içinde üretken bir şekilde çalışmaya başlayabilirler. C#sözdizimi, C++ ' nin birçok karmaşıklıklarını basitleştirir ve null yapılabilir değer türleri, numaralandırmalar, temsilciler, lambda ifadeleri ve doğrudan bellek erişimi gibi Java 'da bulunmayan güçlü özellikler sağlar. C#, Artırılmış tür güvenliği ve performans ve yineleyiciler sağlayan genel yöntemleri ve türleri destekler ve bu sayede, istemci kodu tarafından kullanılması kolay olan özel yineleme davranışları tanımlamak için koleksiyon sınıflarının uygulayıcıları özelliğini etkinleştirir. [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ifadeler, türü kesin belirlenmiş sorguyu birinci sınıf dil yapısına getirir.  
+C#sözdizimi büyük ölçüde ifade edilir, ancak kolayca öğrenilmesi ve kolay bir işlemdir. Küme ayracı sözdizimi C# , C, C++veya Java 'yı bilen herkese anında tanınacaktır. Bu dillerden herhangi birini bilen geliştiriciler genellikle çok kısa bir süre C# içinde üretken bir şekilde çalışmaya başlayabilirler. C#sözdizimi, birçok karmaşıklıklarından çoğunu basitleştirir C++ ve null yapılabilir değer türleri, numaralandırmalar, temsilciler, lambda ifadeleri ve doğrudan bellek erişimi gibi güçlü özellikler sağlar. C#, Artırılmış tür güvenliği ve performans ve yineleyiciler sağlayan genel yöntemleri ve türleri destekler ve bu sayede, istemci kodu tarafından kullanılması kolay olan özel yineleme davranışları tanımlamak için koleksiyon sınıflarının uygulayıcıları özelliğini etkinleştirir. Dil ile tümleşik sorgu (LINQ) ifadeleri, türü kesin belirlenmiş sorguyu birinci sınıf dil yapısına yapar.  
   
  Nesne yönelimli bir dil olarak kapsülleme, C# devralma ve çok biçimlilik kavramlarını destekler. `Main` yöntemi dahil olmak üzere tüm değişkenler ve Yöntemler, uygulamanın giriş noktası, sınıf tanımları içinde kapsüllenir. Bir sınıf doğrudan bir üst sınıftan devralınabilir, ancak herhangi bir sayıda arabirim uygulayabilir. Bir üst sınıftaki sanal yöntemleri geçersiz kılan yöntemler, yanlışlıkla yeniden tanımlama önlemek için `override` anahtar sözcüğünü gerektirir. ' C#De, bir yapı hafif bir sınıf gibidir; arabirim uygulayan, ancak devralmayı desteklemeyen, yığın olarak ayrılmış bir türdür.  
   
@@ -36,9 +36,9 @@ C#, geliştiricilerin .NET Framework çalışan çeşitli güvenli ve güçlü u
   
 - Satır içi XML belge açıklamaları.  
   
-- çeşitli veri kaynakları genelinde yerleşik sorgu özellikleri sağlayan [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
+- Çeşitli veri kaynakları genelinde yerleşik sorgu özellikleri sağlayan, dil ile tümleşik sorgu (LINQ).  
   
- COM nesneleri veya yerel Win32 DLL 'Leri gibi diğer Windows yazılımlarıyla etkileşimde bulunmak istiyorsanız bunu "birlikte çalışma" adlı bir işlem C# aracılığıyla yapabilirsiniz. Birlikte çalışabilirlik C# , programların bir yerel C++ uygulamanın yapabildiği neredeyse her şeyi yapmasına olanak sağlar. C#, doğrudan bellek erişiminin kesinlikle kritik olduğu durumlar için işaretçileri ve "güvenli olmayan" kod kavramını destekler.  
+ COM nesneleri veya yerel Win32 DLL 'Leri gibi diğer Windows yazılımlarıyla etkileşimde bulunmak istiyorsanız bunu "birlikte çalışma" adlı bir işlem C# aracılığıyla yapabilirsiniz. Birlikte çalışabilirlik C# , programların bir yerel C++ uygulamanın yapabildiği neredeyse her şeyi yapmasına olanak sağlar. C#, doğrudan bellek erişiminin kritik olduğu durumlar için işaretçileri ve "unsafe" kod kavramını destekler.  
   
  Yapı C# Işlemi, Java 'dan daha fazla C ve C++ daha esnek ile karşılaştırılır. Ayrı bir üst bilgi dosyası yoktur ve yöntemlerin ve türlerin belirli bir sırada bildirildiği hiçbir gereksinimi yoktur. C# Kaynak dosya herhangi bir sayıda sınıf, yapı, arabirim ve olay tanımlayabilir.  
   
@@ -48,7 +48,7 @@ C#, geliştiricilerin .NET Framework çalışan çeşitli güvenli ve güçlü u
   
 - C# Dilin belirli yönleri hakkında ayrıntılı bilgi için bkz. [ C# başvuru](../language-reference/index.md).  
   
-- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]hakkında daha fazla bilgi için bkz. [LINQ (dil Ile tümleşik sorgu)](../programming-guide/concepts/linq/index.md).  
+- LINQ hakkında daha fazla bilgi için bkz. [LINQ (dil Ile tümleşik sorgu)](../programming-guide/concepts/linq/index.md).  
 
 ## <a name="net-framework-platform-architecture"></a>.NET Framework platform mimarisi
 
@@ -56,11 +56,11 @@ C#, geliştiricilerin .NET Framework çalışan çeşitli güvenli ve güçlü u
   
  İçinde C# yazılan kaynak kodu, CLI belirtimine uyan bir [Ara dilde (IL)](../../standard/managed-code.md) derlenir. Il kodu ve bit eşlemler ve dizeler gibi kaynaklar, genellikle bir. exe veya. dll uzantısıyla derleme adlı yürütülebilir bir dosyada diskte depolanır. Bütünleştirilmiş kod, derlemenin türleri, sürümü, kültürü ve güvenlik gereksinimleri hakkında bilgi sağlayan bir bildirim içerir.  
   
- C# Program yürütüldüğünde, derleme clr 'ye yüklenir ve bu, bildirimdeki bilgilere bağlı olarak çeşitli eylemler gerçekleştirebilir. Daha sonra, güvenlik gereksinimleri karşılanırsa, Il kodunu yerel makine yönergelerine dönüştürmek için CLR tam zamanında (JıT) derleme gerçekleştirir. CLR Ayrıca otomatik çöp toplama, özel durum işleme ve kaynak yönetimiyle ilgili diğer hizmetleri de sağlar. CLR tarafından yürütülen kod bazen "yönetilen kod" olarak adlandırılır. Bu, belirli bir sistemi hedefleyen yerel makine dilinde derlenen "yönetilmeyen kodun" aksine. Aşağıdaki diyagramda C# kaynak kodu dosyalarının derleme zamanı ve çalışma zamanı ilişkileri, .NET Framework sınıf kitaplıkları, derlemeler ve clr gösterilmektedir.  
+ C# Program yürütüldüğünde, derleme clr 'ye yüklenir ve bu, bildirimdeki bilgilere bağlı olarak çeşitli eylemler gerçekleştirebilir. Daha sonra, güvenlik gereksinimleri karşılanıyorsa, CLR tam zamanında (JıT) derleme gerçekleştirerek Il kodunu yerel makine yönergelerine dönüştürür. CLR Ayrıca otomatik çöp toplama, özel durum işleme ve kaynak yönetimiyle ilgili diğer hizmetleri de sağlar. CLR tarafından yürütülen kod bazen "yönetilen kod" olarak adlandırılır ve bu, belirli bir sistemi hedefleyen yerel makine diline derlenen "yönetilmeyen kodun" aksine. Aşağıdaki diyagramda C# kaynak kodu dosyalarının derleme zamanı ve çalışma zamanı ilişkileri, .NET Framework sınıf kitaplıkları, derlemeler ve clr gösterilmektedir.  
   
- ![C&#35; kaynak kodundan makine yürütmeye](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
+ ![C# Kaynak koddan makine yürütmeye](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
- Dil birlikte çalışabilirliği, .NET Framework temel bir özelliğidir. C# Derleyici tarafından üretilen IL kodu ortak tür BELIRTIMINE (Cts) uygun olduğundan, ÖĞESINDEN C# oluşturulan IL kodu Visual Basic, görselin C++.net sürümlerinden veya 20 ' den daha fazlası tarafından oluşturulan kodla etkileşime girebilirler CTS uyumlu diller. Tek bir derleme, farklı .NET dillerinde yazılmış birden çok modül içerebilir ve türler aynı dilde yazıldıklarında olduğu gibi birbirlerine başvurabilir.  
+ Dil birlikte çalışabilirliği, .NET Framework temel bir özelliğidir. C# Derleyici tarafından üretilen IL kodu ortak tür BELIRTIMINE (Cts) uygun olduğundan, ÖĞESINDEN C# oluşturulan IL kodu, Visual Basic, görsel C++veya 20 ' den fazla diğer CTS uyumlu dilden oluşan .net sürümlerinden oluşturulan kodla etkileşime girebilirler. Tek bir derleme, farklı .NET dillerinde yazılmış birden çok modül içerebilir ve türler aynı dilde yazıldıklarında olduğu gibi birbirlerine başvurabilir.  
   
  Çalışma zamanı hizmetlerine ek olarak .NET Framework, dosya girişi ve çıktısından dize işlemeye XML 'e kadar her şey için çok çeşitli yararlı işlevler sağlayan ad alanları halinde düzenlenmiş 4000 ' den fazla sınıftan oluşan kapsamlı bir kitaplık içerir. Windows Forms denetimleri için ayrıştırma. Tipik C# uygulama, ortak "sıhhi tesisat" kullanımlarını işlemek için .NET Framework sınıf kitaplığını kapsamlı şekilde kullanır.  
   

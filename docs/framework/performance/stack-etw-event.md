@@ -5,14 +5,12 @@ helpviewer_keywords:
 - stack event [.NET Framework]
 - ETW, stack event (CLR)
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5dc23f5105b589d5b74c9ea6b7f40b84c2b04e6a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f3014a04ba7cacbe37b6706e2919ffd7de19aa65
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046163"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715918"
 ---
 # <a name="stack-etw-event"></a>Yığın ETW Olayı
 Yığın olayı, bir olay oluşturulduktan sonra yığın izlemeleri oluşturmak için diğer olaylarla birlikte kullanılmalıdır. Çalışma zamanı sağlayıcısı etkinleştirildiğinde günlüğe kaydedilir. Bu çok yüksek bir sıklık olayıdır, çünkü başka bir çalışma zamanı olayı oluşturulduğunda tetiklenir. Bu nedenle, bu olayı dikkatli kullanmanızı öneririz.  
@@ -21,7 +19,7 @@ Yığın olayı, bir olay oluşturulduktan sonra yığın izlemeleri oluşturmak
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`StackKeyword`0x40000000|LogAlways (0)|  
+|`StackKeyword` (0x40000000)|LogAlways (0)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -37,7 +35,7 @@ Yığın olayı, bir olay oluşturulduktan sonra yığın izlemeleri oluşturmak
 |Reserved1|Win: UInt8|Ayrılamadı.|  
 |Reserved2|Win: UInt8|Ayrılamadı.|  
 |FrameCount|Win: UInt32|Yığın izlemesinde çerçeve sayısı.|  
-|Yığın|Win: Işaretçi|Yönerge işaretçilerinin sütunları.|  
+|Toplu İş|Win: Işaretçi|Yönerge işaretçilerinin sütunları.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

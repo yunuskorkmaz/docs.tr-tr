@@ -6,12 +6,12 @@ helpviewer_keywords:
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-ms.openlocfilehash: a3990a7dc446c264e0865e15dadcdaf3ba0a0ff6
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 0f881c19516eb42a71e6cd91d612caf8f5cf7b5e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460053"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636191"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>İzlenecek yollar: Özel Animasyonlu Düğme Oluşturma
 Adından da anlaşılacağı gibi, Windows Presentation Foundation (WPF) müşteriler için zengin sunum deneyimleri oluşturmak için harika. Bu izlenecek yollar, bir düğmenin (animasyonlar dahil) görünümünü ve davranışını nasıl özelleştireceğinizi gösterir. Bu özelleştirme, bu özel düğmeyi uygulamanızdaki düğmelere kolayca uygulayabilmeniz için stil ve şablon kullanılarak yapılır. Aşağıdaki çizimde, oluşturacağınız özelleştirilmiş düğme gösterilmektedir.
@@ -28,8 +28,8 @@ Adından da anlaşılacağı gibi, Windows Presentation Foundation (WPF) müşte
 ## <a name="related-sections"></a>İlgili Bölümler
  [Stil ve şablon](../../../desktop-wpf/fundamentals/styles-templates-overview.md) oluşturma Stillerin ve şablonlarının denetimlerin görünümünü ve davranışını belirlemede nasıl kullanılabileceğini açıklar.
 
- [Animasyona genel bakış](../graphics-multimedia/animation-overview.md) Nesnelerin, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] animasyon ve zamanlama sistemi kullanılarak nasıl canlandırılabileceğinizi açıklar.
+ [Animasyona genel bakış](../graphics-multimedia/animation-overview.md) Nesnelerin WPF animasyon ve zamanlama sistemi kullanılarak nasıl canlandırılabileceğinizi açıklar.
 
  [Düz renkler ve gradyanlar Ile boyama genel bakış](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md) Düz renkler, doğrusal degradeler ve radyal gradyanlar ile boyamak için fırça nesnelerinin nasıl kullanılacağını açıklar.
 
- [Bit eşlem efektlerine genel bakış](../graphics-multimedia/bitmap-effects-overview.md) [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tarafından desteklenen bit eşlem efektlerini açıklar ve bunların nasıl uygulanacağını açıklar.
+ [Bit eşlem efektlerine genel bakış](../graphics-multimedia/bitmap-effects-overview.md) WPF tarafından desteklenen bit eşlem efektlerini açıklar ve bunların nasıl uygulanacağını açıklar.

@@ -3,13 +3,13 @@ title: WCF Web hizmeti başvurusu Ekle
 description: .NET Framework projelerine yönelik Hizmet Başvurusu Ekle benzer şekilde .NET Core ve ASP.NET Core projelerine yönelik işlevsellik ekleyen Microsoft WCF Web Service Reference Provider aracına genel bakış.
 author: dasetser
 ms.date: 10/29/2019
-ms.custom: mvc, seodec18
-ms.openlocfilehash: feecf374e1af48f349495c13ea91b810c6b0a1c3
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.custom: mvc
+ms.openlocfilehash: cdd6b457d289dd7b752c97c5645f0797f24b72aa
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191903"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715680"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>WCF Web hizmeti başvuru sağlayıcısı aracını kullanma
 
@@ -27,9 +27,9 @@ Yıllarca, birçok Visual Studio geliştiricisi, .NET Framework projeleri Web hi
 > [!NOTE]
 > **WCF Web hizmeti başvuru** seçeneği, aşağıdaki proje şablonları kullanılarak oluşturulan projeler için geçerlidir:
 >
-> - **Visual C#**   >  **.NET Core**
-> - **Görsel C#**   >  **.NET Standard**
-> - **Visual C#**   > **Web**  > **Web uygulaması ASP.NET Core**
+> - **Visual C#**  >  **.NET Core**
+> - **Görsel C#**  >  **.NET Standard**
+> - **Visual C#**  > **Web** > **Web uygulaması ASP.NET Core**
 
 Örnek olarak **ASP.NET Core Web uygulaması** proje şablonunu kullanarak, bu makalede projeye bir WCF hizmeti başvurusu ekleme işlemi adım adım gösterilmektedir:
 
@@ -45,13 +45,13 @@ Yıllarca, birçok Visual Studio geliştiricisi, .NET Framework projeleri Web hi
 
 3. Bir hizmet seçin.
 
-    3A. **WCF Web hizmeti başvurusunu yapılandırma** Sihirbazı 'nda kullanılabilen birkaç hizmet arama seçeneği vardır:
+    3a. **WCF Web hizmeti başvurusunu yapılandırma** Sihirbazı 'nda kullanılabilen birkaç hizmet arama seçeneği vardır:
 
      * Geçerli çözümde tanımlanan Hizmetleri aramak için **bul** düğmesine tıklayın.
      * Belirtilen bir adreste barındırılan Hizmetleri aramak için, **Adres** kutusuna bir hizmet URL 'si girin ve **Git** düğmesine tıklayın.
      * Web hizmeti meta veri bilgilerini içeren bir WSDL dosyası seçmek için, **Gözden** geçirme düğmesine tıklayın.
 
-    3B. **Hizmetler** kutusundaki arama sonuçları listesinden hizmeti seçin. Gerekirse, ilgili **ad alanı** metin kutusunda oluşturulan kod için ad alanını girin.
+    3b. **Hizmetler** kutusundaki arama sonuçları listesinden hizmeti seçin. Gerekirse, ilgili **ad alanı** metin kutusunda oluşturulan kod için ad alanını girin.
 
     3c. **Veri türü seçeneklerini** ve **istemci seçenekleri** sayfalarını açmak için **İleri** düğmesine tıklayın. Alternatif olarak, varsayılan seçenekleri kullanmak için **son** düğmesine tıklayın.
 

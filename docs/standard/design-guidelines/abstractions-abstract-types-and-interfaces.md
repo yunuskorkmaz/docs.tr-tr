@@ -8,34 +8,33 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-author: KrzysztofCwalina
-ms.openlocfilehash: fcf566c24677630fdbb1fcd0eb7628f830b3be2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 014144764609c8a7faa87f3d080900824f9189eb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789226"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709588"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Soyutlamalar (Soyut Türler ve Arabirimler)
-Bir Özet bir sözleşme açıklar ancak sözleşmenin tam bir uygulamayı sağlamayan bir türdür. Soyutlama genellikle soyut sınıflar veya arabirimleri olarak uygulanır ve bunlar gerekli semantiği sözleşmesi uygulama türlerini açıklayan başvuru belgeleri iyi tanımlanmış bir dizi birlikte gelir. .NET Framework'teki en önemli soyutlama bazıları <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, ve <xref:System.Object>.  
+Soyutlama, sözleşmeyi tanımlayan, ancak sözleşmenin tam bir uygulamasını sağlamayan bir türdür. Soyutlamalar genellikle soyut sınıflar veya arabirimler olarak uygulanır ve sözleşmeyi uygulayan türlerin gereken semantiğini açıklayan, iyi tanımlanmış bir başvuru belgeleri kümesiyle gelir. .NET Framework en önemli soyutlamalar <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>ve <xref:System.Object>içerir.  
   
- Bir Özet anlaşmasını destekler somut bir türde uygulama ve bu somut bir türde framework API'leri kullanan (üzerinde çalışma ile) kullanılarak çerçeveleri genişletebilirsiniz Özet.  
+ Bir soyutlamayı destekleyen somut bir tür uygulayarak ve soyutlamayı kullanan (üzerinde çalışan) çerçeve API 'Leriyle bu somut türü kullanarak çerçeveleri genişletebilirsiniz.  
   
- Test zaman dayanacak şekilde bulabildiği anlamlı ve kullanışlı bir soyutlama tasarlamak çok zordur. Ana zorluk üyeleri, daha fazla ve en az doğru ortaklık kümesi almaktır. Bir Özet çok fazla sayıda üye varsa, zor veya uygulamak bile imkansız olur. Taahhüt edilen işlev için çok az sayıda üye varsa, birçok ilgi çekici senaryolarda gereksiz olur.  
+ Zamanı test etmek mümkün olan anlamlı ve yararlı bir soyutlama tasarlamak çok zordur. Ana zorluk, daha fazla ve daha az olmayan, doğru üye kümesini alıyor. Soyutlama çok fazla üyeye sahipse, uygulanması zor veya imkansız olur. Taahhüt edilen işlevsellik için çok az üye varsa, bu çok sayıda ilginç senaryo için kullanılamaz hale gelir.  
   
- Çerçeve içinde çok fazla soyutlama framework'ün kullanılabilirlik da olumsuz şekilde etkileyebilir. Genellikle, oldukça nasıl somut uygulamalarını ve API'leri soyutlama üzerinde çalışan daha büyük resmi içine uyduğunu anlama olmadan bir Özet anlamak zor olabilir. Ayrıca, soyutlamalar ve üye adları genellikle bunları görünümleriniz karmaşık ve unapproachable daha geniş bir bağlama kullanımları, ilk anlama olmadan getiren mutlaka soyuttur.  
+ Çerçevede çok fazla soyut olan soyutlamalar ayrıca Framework kullanılabilirliğini olumsuz etkiler. Somut uygulamaların ve soyutlama üzerinde çalışan API 'lerin daha büyük resmine ne kadar uygun olduğunu anlamak zorunda kalmadan bir soyutlamayı anlamak oldukça zordur. Ayrıca, soyutlamalar ve üyelerinin adları soyut hale gelir, bu da genellikle kullanımının daha geniş bir bağlamını anlamak zorunda kalmadan şifreli ve unapproachable.  
   
- Ancak, soyutlama diğer genişletilebilirlik mekanizması genellikle eşleşemez son derece güçlü genişletilebilirlik sağlar. Çekirdek eklentiler gibi birçok mimari desenlerinin tersine çevirme (IOC) denetim, işlem hatları, vb. olur. Ayrıca test çerçevesini edilebilecek son derece önemlidir. İyi soyutlama ağır bağımlılıkları birim testi amacıyla kullanıma saplama mümkün kılar. Özet olarak, soyutlama sought-after zenginliğini modern nesne yönelimli çerçeveleri için sorumludur.  
+ Ancak soyutlamalar, diğer genişletilebilirlik mekanizmalarının sıklıkla eşleşemesinden çok güçlü bir genişletilebilirlik sağlar. Eklentiler, denetim (IOC), işlem hatları vb. gibi birçok mimari deseninden oluşur. Çerçeveler için test edilebilirlik için de oldukça önemlidir. İyi soyutlamalar, birim testi amacıyla ağır bağımlılıkların yerine koymasını mümkün kılar. Özet olarak, modern nesne yönelimli çerçevelerin zenginleştirmesinden sonra soyutlamalar sorumludur.  
   
  **X DO NOT** birkaç somut uygulamaları ve soyutlama kullanan API'ler geliştirerek sınanır sürece soyutlamalar sağlar.  
   
  **✓ DO** bir Özet tasarlarken, bir Özet sınıf arasında bir arabirim dikkatle seçin.  
   
- **✓ CONSIDER** başvuru testleri soyutlamalar somut uygulamaları için sağlama. Bu testleri kendi uygulamalarını sözleşmesini doğru uygulama olup olmadığını sınamak kullanıcılara izin vermelidir.  
+ **✓ CONSIDER** başvuru testleri soyutlamalar somut uygulamaları için sağlama. Bu tür testler, kullanıcıların, sözleşmesinin sözleşmeyi doğru şekilde uygulayıp uygulamadığını test etmelerini sağlar.  
   
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

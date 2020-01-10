@@ -3,17 +3,15 @@ title: Yeni Düğümler Oluştururken XML Öğesi ve Öznitelik Adı Doğrulamas
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: b489f647-a175-4659-ada4-170058bb41d0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 008cf14e63b8458feebf26eaf27be516bb79f933
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c99ffa9d139d94d26c562cb1668f1b855bed32d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61959050"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709952"
 ---
 # <a name="xml-element-and-attribute-name-verification-when-creating-new-nodes"></a>Yeni Düğümler Oluştururken XML Öğesi ve Öznitelik Adı Doğrulaması
-Yeni Öğe düğümlerinin veya öznitelik düğümleri oluşturulurken, XML belge nesne modeli (DOM) adlarını geçerliliğini denetler. Ad geçersiz karakterler içeriyorsa bir özel durum oluşturulur. Adları geçerli ve kodlanmış doğru, kullanmanız gereken emin olmak için **XmlConvert** adı kodlama ve bir uygulama düzeyinde çözülmesi için sınıf. **XmlWriter** doğru biçimlendirilmiş XML oluşturulan emin olmak için ek iş yapması yöntemlerine sahiptir.  
+XML Belge Nesne Modeli (DOM), yeni öğe düğümleri veya öznitelik düğümleri oluştururken adların geçerliliğini denetler. Adlar geçersiz karakterler içeriyorsa, bir özel durum oluşturulur. Adların geçerli ve doğru şekilde kodlandığından emin olmak için, adı kodlamak ve uygulama düzeyinde geri yüklemek için **XmlConvert** sınıfını kullanmanız gerekir. **XmlWriter** 'ın ıyı biçimlendirilmiş XML 'nin oluşturulduğundan emin olmak için ek iş yapan yöntemleri vardır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

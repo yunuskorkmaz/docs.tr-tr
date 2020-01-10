@@ -3,35 +3,33 @@ title: DOM Ad Alanları ve DTD’ler
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a3a3ec957a55ff23dec728ccd31fe9e1f52ce78f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 22762e3a7003d9b28a53c7b500829aaa41924c6d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590207"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710602"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>DOM Ad Alanları ve DTD’ler
-Belge türü tanımları (DTD'ler) complicate ad alanı desteği. Örneğin, aşağıdaki XML, iki nokta üst üste adlarında içeren varsayılan öznitelikler içeriyor.  
+Belge türü tanımları (DTD 'Ler) ad alanı desteğini karmaşıklaştırır. Örneğin, aşağıdaki XML adlarında iki nokta üst üste içeren varsayılan öznitelikleri içerir.  
   
 ```xml  
 <!ATTLIST item x:id CDATA #IMPLIED>  
 ```  
   
- Tento konstruktor je izin verilip verilmediğini olası çözümlemeler aşağıda belirtilmiştir:  
+ Bu yapı için izin veriliyorsa aşağıdakiler olası çözümlerdir:  
   
-- `x:` Çözümlenebilir kullanarak bir ad alanı öneki, ancak bu öneki olmalıdır olarak kabul edilir bir `xmlns:x` ad alanı bildirimi, ayrıca DTD'nin yere bulunmalıdır. Bu örnek belgeye farklı bir şey bu ön ek eşlemek için bir hatadır.  
+- `x:` bir ad alanı öneki olarak değerlendirilir, ancak bu ön ek bir `xmlns:x` ad alanı bildirimi kullanılarak çözümlenebilmelidir ve bu da DTD 'de bir yerde bulunmalıdır. Bu öneki örnek belgesinde farklı bir şeye eşlemek hatadır.  
   
-- `x:` Bir ad alanı öneki kabul edilir, ancak bu ön eki her zaman örneği öğeleri bağlamında çözümlenir. Önek gerçekten eşleme farklı bir ad alanı Tekdüzen Kaynak Tanımlayıcıları (URI'lar) ad alanı kapsamında bağlı olarak başka bir deyişle `item` öğe görüntülenir. Bu davranış önceki maddede verilen çözümleme daha öngörülebilir olmakla birlikte, varsayılan öznitelikler gerçekleştirilmiş gerektirdiğinden, diğer karmaşık ayrımlar sahip.  
+- `x:`, bir ad alanı öneki olarak değerlendirilir, ancak bu ön ek, örnek öğelerinin bağlamında her zaman çözümlenir. Bu, önek aslında `item` öğesinin göründüğü ad alanı kapsamına bağlı olarak farklı ad alanı Tekdüzen Kaynak tanımlayıcılarına (URI) eşleyebileceğiniz anlamına gelir. Bu davranış, önceki madde işaretinde verilen çözünürlükten daha öngörülebilir hale gelir, ancak varsayılan özniteliklerin gerçekleştirilmiş olması gerektiğinden diğer karmaşık kollar vardır.  
   
-- İki nokta üst üste bir DTD'nin içinde olduğundan ve öznitelik adı olduğundan göz ardı edilir `x:y`, önek ve ad alanı URI.  
+- İki nokta üst üste, bir DTD 'de olduğundan ve özniteliğin adı `x:y`, ön ek ve ad alanı URI 'SI olmadığından yok sayılır.  
   
-- İki nokta üst üste varsayılan özniteliğinde, iki nokta üst üste bir DTD'nin içinde adlarının desteklenmediğine belirten, özel durum oluşturur. Bu tahmin edilebilir bir davranışa neden olur, ancak DTD'ler çok World Wide Web Consortium (W3C) yüklenemiyor anlamına gelir yayımlanmış.  
+- Varsayılan öznitelikteki iki nokta üst üste, bir DTD içindeki adlarda iki nokta üst üsteyle desteklenmediğini söyleyen bir özel durum oluşturur. Bu, öngörülebilir bir davranışa neden olur, ancak World Wide Web Konsorsiyumu (W3C) yayımlanmış DTD 'lerin çoğunu yükleyemeyeceğiniz anlamına gelir.  
   
-- Kullanıcı DTD'nin doğrulama istediğinde, ad alanı desteği için belgenin tamamını kapalıdır. W3C DTD'ler ve sonuçları tahmin edilebilir davranış yüklemek mümkün kılar.  
+- Kullanıcı DTD doğrulaması istediğinde, tüm belge için ad alanı desteği kapalıdır. Bu, W3C DTD 'Leri yüklemek ve tahmin edilebilir bir davranışa neden olabilir.  
   
- Microsoft .NET Framework XML W3C en büyük uyumluluk için ikinci seçeneği uygular.  
+ Microsoft .NET çerçevesindeki XML, en yüksek W3C uyumluluğu için ikinci seçeneği uygular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
