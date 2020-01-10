@@ -1,46 +1,45 @@
 ---
 title: using yönergesi- C# başvuru
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 413d3ee6323aa601df84c0f402aaea7567a61e76
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: a2028ccce47de54b59323194a0ffab3a643d878c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422280"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712981"
 ---
-# <a name="using-directive-c-reference"></a><span data-ttu-id="7b9f4-102">using yönergesi (C# başvuru)</span><span class="sxs-lookup"><span data-stu-id="7b9f4-102">using directive (C# Reference)</span></span>
+# <a name="using-directive-c-reference"></a><span data-ttu-id="b5c06-102">using yönergesi (C# başvuru)</span><span class="sxs-lookup"><span data-stu-id="b5c06-102">using directive (C# Reference)</span></span>
 
-<span data-ttu-id="7b9f4-103">`using` yönergesinin üç kullanımı vardır:</span><span class="sxs-lookup"><span data-stu-id="7b9f4-103">The `using` directive has three uses:</span></span>
+<span data-ttu-id="b5c06-103">`using` yönergesinin üç kullanımı vardır:</span><span class="sxs-lookup"><span data-stu-id="b5c06-103">The `using` directive has three uses:</span></span>
 
-- <span data-ttu-id="7b9f4-104">Bir ad alanında türlerin kullanılmasına izin vermek için, bu ad alanında bir tür kullanımını nitelendirmeniz gerekmez:</span><span class="sxs-lookup"><span data-stu-id="7b9f4-104">To allow the use of types in a namespace so that you do not have to qualify the use of a type in that namespace:</span></span>
+- <span data-ttu-id="b5c06-104">Bir ad alanında türlerin kullanılmasına izin vermek için, bu ad alanında bir tür kullanımını nitelendirmeniz gerekmez:</span><span class="sxs-lookup"><span data-stu-id="b5c06-104">To allow the use of types in a namespace so that you do not have to qualify the use of a type in that namespace:</span></span>
 
     ```csharp
     using System.Text;
     ```
 
-- <span data-ttu-id="7b9f4-105">Tür adıyla erişimi nitelemek zorunda kalmadan statik üyelere ve bir tür iç içe türlerine erişmenize izin vermek için.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-105">To allow you to access static members and nested types of a type without having to qualify the access with the type name.</span></span>
+- <span data-ttu-id="b5c06-105">Tür adıyla erişimi nitelemek zorunda kalmadan statik üyelere ve bir tür iç içe türlerine erişmenize izin vermek için.</span><span class="sxs-lookup"><span data-stu-id="b5c06-105">To allow you to access static members and nested types of a type without having to qualify the access with the type name.</span></span>
 
     ```csharp
     using static System.Math;
     ```
 
-    <span data-ttu-id="7b9f4-106">Daha fazla bilgi için bkz. [using static yönergesi](using-static.md).</span><span class="sxs-lookup"><span data-stu-id="7b9f4-106">For more information, see the [using static directive](using-static.md).</span></span>
+    <span data-ttu-id="b5c06-106">Daha fazla bilgi için bkz. [using static yönergesi](using-static.md).</span><span class="sxs-lookup"><span data-stu-id="b5c06-106">For more information, see the [using static directive](using-static.md).</span></span>
 
-- <span data-ttu-id="7b9f4-107">Bir ad alanı veya tür için bir diğer ad oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-107">To create an alias for a namespace or a type.</span></span> <span data-ttu-id="7b9f4-108">Bu, *Using alias yönergesi*olarak adlandırılır.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-108">This is called a *using alias directive*.</span></span>
+- <span data-ttu-id="b5c06-107">Bir ad alanı veya tür için bir diğer ad oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="b5c06-107">To create an alias for a namespace or a type.</span></span> <span data-ttu-id="b5c06-108">Bu, *Using alias yönergesi*olarak adlandırılır.</span><span class="sxs-lookup"><span data-stu-id="b5c06-108">This is called a *using alias directive*.</span></span>
 
     ```csharp
     using Project = PC.MyCompany.Project;
     ```
 
-<span data-ttu-id="7b9f4-109">`using` anahtar sözcüğü Ayrıca, dosyalar ve yazı tipleri gibi <xref:System.IDisposable> nesnelerin doğru şekilde işlenmesini sağlamaya yardımcı olan *using deyimlerini*oluşturmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-109">The `using` keyword is also used to create *using statements*, which help ensure that <xref:System.IDisposable> objects such as files and fonts are handled correctly.</span></span> <span data-ttu-id="7b9f4-110">Daha fazla bilgi için bkz. [using deyimleri](using-statement.md) .</span><span class="sxs-lookup"><span data-stu-id="7b9f4-110">See [using Statement](using-statement.md) for more information.</span></span>
+<span data-ttu-id="b5c06-109">`using` anahtar sözcüğü Ayrıca, dosyalar ve yazı tipleri gibi <xref:System.IDisposable> nesnelerin doğru şekilde işlenmesini sağlamaya yardımcı olan *using deyimlerini*oluşturmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="b5c06-109">The `using` keyword is also used to create *using statements*, which help ensure that <xref:System.IDisposable> objects such as files and fonts are handled correctly.</span></span> <span data-ttu-id="b5c06-110">Daha fazla bilgi için bkz. [using deyimleri](using-statement.md) .</span><span class="sxs-lookup"><span data-stu-id="b5c06-110">See [using Statement](using-statement.md) for more information.</span></span>
 
-## <a name="using-static-type"></a><span data-ttu-id="7b9f4-111">Statik tür kullanma</span><span class="sxs-lookup"><span data-stu-id="7b9f4-111">Using static type</span></span>
+## <a name="using-static-type"></a><span data-ttu-id="b5c06-111">Statik tür kullanma</span><span class="sxs-lookup"><span data-stu-id="b5c06-111">Using static type</span></span>
 
-<span data-ttu-id="7b9f4-112">Tür adıyla erişimi nitelemek zorunda kalmadan, bir türün statik üyelerine erişebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="7b9f4-112">You can access static members of a type without having to qualify the access with the type name:</span></span>
+<span data-ttu-id="b5c06-112">Tür adıyla erişimi nitelemek zorunda kalmadan, bir türün statik üyelerine erişebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="b5c06-112">You can access static members of a type without having to qualify the access with the type name:</span></span>
 
 ```csharp
 using static System.Console;
@@ -54,51 +53,51 @@ class Program
 }
 ```
 
-## <a name="remarks"></a><span data-ttu-id="7b9f4-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7b9f4-113">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="b5c06-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b5c06-113">Remarks</span></span>
 
-<span data-ttu-id="7b9f4-114">`using` yönergesinin kapsamı, göründüğü dosyayla sınırlıdır.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-114">The scope of a `using` directive is limited to the file in which it appears.</span></span>
+<span data-ttu-id="b5c06-114">`using` yönergesinin kapsamı, göründüğü dosyayla sınırlıdır.</span><span class="sxs-lookup"><span data-stu-id="b5c06-114">The scope of a `using` directive is limited to the file in which it appears.</span></span>
 
-<span data-ttu-id="7b9f4-115">`using` yönergesi görünebilir:</span><span class="sxs-lookup"><span data-stu-id="7b9f4-115">The `using` directive can appear:</span></span>
+<span data-ttu-id="b5c06-115">`using` yönergesi görünebilir:</span><span class="sxs-lookup"><span data-stu-id="b5c06-115">The `using` directive can appear:</span></span>
 
-- <span data-ttu-id="7b9f4-116">Bir kaynak kodu dosyasının başlangıcında, herhangi bir ad alanı veya tür tanımlarından önce.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-116">At the beginning of a source code file, before any namespace or type definitions.</span></span>
-- <span data-ttu-id="7b9f4-117">Herhangi bir ad alanında, bu ad alanında bildirilmeyen herhangi bir ad alanı veya türden önce.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-117">In any namespace, but before any namespace or types declared in this namespace.</span></span>
+- <span data-ttu-id="b5c06-116">Bir kaynak kodu dosyasının başlangıcında, herhangi bir ad alanı veya tür tanımlarından önce.</span><span class="sxs-lookup"><span data-stu-id="b5c06-116">At the beginning of a source code file, before any namespace or type definitions.</span></span>
+- <span data-ttu-id="b5c06-117">Herhangi bir ad alanında, bu ad alanında bildirilmeyen herhangi bir ad alanı veya türden önce.</span><span class="sxs-lookup"><span data-stu-id="b5c06-117">In any namespace, but before any namespace or types declared in this namespace.</span></span>
 
-<span data-ttu-id="7b9f4-118">Aksi halde, derleyici hatası [CS1529](../../misc/cs1529.md) oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-118">Otherwise, compiler error [CS1529](../../misc/cs1529.md) is generated.</span></span>
+<span data-ttu-id="b5c06-118">Aksi halde, derleyici hatası [CS1529](../../misc/cs1529.md) oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="b5c06-118">Otherwise, compiler error [CS1529](../../misc/cs1529.md) is generated.</span></span>
 
-<span data-ttu-id="7b9f4-119">Bir tanımlayıcıyı bir ad alanına veya türe göre bulmayı kolaylaştırmak için `using` bir diğer ad yönergesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-119">Create a `using` alias directive to make it easier to qualify an identifier to a namespace or type.</span></span> <span data-ttu-id="7b9f4-120">Herhangi bir `using` yönergesinde, bundan önce gelen `using` yönergelerinden bağımsız olarak tam nitelenmiş ad alanı veya tür kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-120">In any `using` directive, the fully-qualified namespace or type must be used regardless of the `using` directives that come before it.</span></span> <span data-ttu-id="7b9f4-121">`using` yönergesinin bildiriminde `using` diğer ad kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-121">No `using` alias can be used in the declaration of a `using` directive.</span></span> <span data-ttu-id="7b9f4-122">Örneğin, aşağıdakiler bir derleyici hatası oluşturur:</span><span class="sxs-lookup"><span data-stu-id="7b9f4-122">For example, the following generates a compiler error:</span></span>
+<span data-ttu-id="b5c06-119">Bir tanımlayıcıyı bir ad alanına veya türe göre bulmayı kolaylaştırmak için `using` bir diğer ad yönergesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="b5c06-119">Create a `using` alias directive to make it easier to qualify an identifier to a namespace or type.</span></span> <span data-ttu-id="b5c06-120">Herhangi bir `using` yönergesinde, bundan önce gelen `using` yönergelerinden bağımsız olarak tam nitelenmiş ad alanı veya tür kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="b5c06-120">In any `using` directive, the fully-qualified namespace or type must be used regardless of the `using` directives that come before it.</span></span> <span data-ttu-id="b5c06-121">`using` yönergesinin bildiriminde `using` diğer ad kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="b5c06-121">No `using` alias can be used in the declaration of a `using` directive.</span></span> <span data-ttu-id="b5c06-122">Örneğin, aşağıdakiler bir derleyici hatası oluşturur:</span><span class="sxs-lookup"><span data-stu-id="b5c06-122">For example, the following generates a compiler error:</span></span>
 
 ```csharp
 using s = System.Text;
 using s.RegularExpressions;
 ```
 
-<span data-ttu-id="7b9f4-123">Ad alanını belirtmek zorunda kalmadan bir ad alanındaki türleri kullanmak için bir `using` yönergesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-123">Create a `using` directive to use the types in a namespace without having to specify the namespace.</span></span> <span data-ttu-id="7b9f4-124">`using` yönergesi, belirttiğiniz ad alanı içinde iç içe geçmiş herhangi bir ad alanı için erişim sağlamaz.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-124">A `using` directive does not give you access to any namespaces that are nested in the namespace you specify.</span></span>
+<span data-ttu-id="b5c06-123">Ad alanını belirtmek zorunda kalmadan bir ad alanındaki türleri kullanmak için bir `using` yönergesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="b5c06-123">Create a `using` directive to use the types in a namespace without having to specify the namespace.</span></span> <span data-ttu-id="b5c06-124">`using` yönergesi, belirttiğiniz ad alanı içinde iç içe geçmiş herhangi bir ad alanı için erişim sağlamaz.</span><span class="sxs-lookup"><span data-stu-id="b5c06-124">A `using` directive does not give you access to any namespaces that are nested in the namespace you specify.</span></span>
 
-<span data-ttu-id="7b9f4-125">Ad alanları iki kategoride gelir: Kullanıcı tanımlı ve sistem tanımlı.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-125">Namespaces come in two categories: user-defined and system-defined.</span></span> <span data-ttu-id="7b9f4-126">Kullanıcı tanımlı ad alanları kodunuzda tanımlı ad uzaylardır.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-126">User-defined namespaces are namespaces defined in your code.</span></span> <span data-ttu-id="7b9f4-127">Sistem tanımlı ad alanlarının listesi için bkz. [.NET API Browser](../../../../api/index.md).</span><span class="sxs-lookup"><span data-stu-id="7b9f4-127">For a list of the system-defined namespaces, see [.NET API Browser](../../../../api/index.md).</span></span>
+<span data-ttu-id="b5c06-125">Ad alanları iki kategoride gelir: Kullanıcı tanımlı ve sistem tanımlı.</span><span class="sxs-lookup"><span data-stu-id="b5c06-125">Namespaces come in two categories: user-defined and system-defined.</span></span> <span data-ttu-id="b5c06-126">Kullanıcı tanımlı ad alanları kodunuzda tanımlı ad uzaylardır.</span><span class="sxs-lookup"><span data-stu-id="b5c06-126">User-defined namespaces are namespaces defined in your code.</span></span> <span data-ttu-id="b5c06-127">Sistem tanımlı ad alanlarının listesi için bkz. [.NET API Browser](../../../../api/index.md).</span><span class="sxs-lookup"><span data-stu-id="b5c06-127">For a list of the system-defined namespaces, see [.NET API Browser](../../../../api/index.md).</span></span>
 
-## <a name="example-1"></a><span data-ttu-id="7b9f4-128">Örnek 1</span><span class="sxs-lookup"><span data-stu-id="7b9f4-128">Example 1</span></span>
+## <a name="example-1"></a><span data-ttu-id="b5c06-128">Örnek 1</span><span class="sxs-lookup"><span data-stu-id="b5c06-128">Example 1</span></span>
 
-<span data-ttu-id="7b9f4-129">Aşağıdaki örnek, bir ad alanı için `using` diğer adının nasıl tanımlanacağını ve kullanılacağını gösterir:</span><span class="sxs-lookup"><span data-stu-id="7b9f4-129">The following example shows how to define and use a `using` alias for a namespace:</span></span>
+<span data-ttu-id="b5c06-129">Aşağıdaki örnek, bir ad alanı için `using` diğer adının nasıl tanımlanacağını ve kullanılacağını gösterir:</span><span class="sxs-lookup"><span data-stu-id="b5c06-129">The following example shows how to define and use a `using` alias for a namespace:</span></span>
 
 [!code-csharp[csrefKeywordsNamespace#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace2.cs#8)]
 
-<span data-ttu-id="7b9f4-130">Using takma ad yönergesinin sağ tarafta açık genel bir türü olamaz.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-130">A using alias directive cannot have an open generic type on the right hand side.</span></span> <span data-ttu-id="7b9f4-131">Örneğin, bir `List<T>`için bir using diğer adı oluşturamazsınız, ancak bir `List<int>`için bir tane oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-131">For example, you cannot create a using alias for a `List<T>`, but you can create one for a `List<int>`.</span></span>
+<span data-ttu-id="b5c06-130">Using takma ad yönergesinin sağ tarafta açık genel bir türü olamaz.</span><span class="sxs-lookup"><span data-stu-id="b5c06-130">A using alias directive cannot have an open generic type on the right hand side.</span></span> <span data-ttu-id="b5c06-131">Örneğin, bir `List<T>`için bir using diğer adı oluşturamazsınız, ancak bir `List<int>`için bir tane oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b5c06-131">For example, you cannot create a using alias for a `List<T>`, but you can create one for a `List<int>`.</span></span>
 
-## <a name="example-2"></a><span data-ttu-id="7b9f4-132">Örnek 2</span><span class="sxs-lookup"><span data-stu-id="7b9f4-132">Example 2</span></span>
+## <a name="example-2"></a><span data-ttu-id="b5c06-132">Örnek 2</span><span class="sxs-lookup"><span data-stu-id="b5c06-132">Example 2</span></span>
 
-<span data-ttu-id="7b9f4-133">Aşağıdaki örnek, bir sınıf için `using` yönergesinin ve `using` diğer adının nasıl tanımlanacağını göstermektedir:</span><span class="sxs-lookup"><span data-stu-id="7b9f4-133">The following example shows how to define a `using` directive and a `using` alias for a class:</span></span>
+<span data-ttu-id="b5c06-133">Aşağıdaki örnek, bir sınıf için `using` yönergesinin ve `using` diğer adının nasıl tanımlanacağını göstermektedir:</span><span class="sxs-lookup"><span data-stu-id="b5c06-133">The following example shows how to define a `using` directive and a `using` alias for a class:</span></span>
 
 [!code-csharp[csrefKeywordsNamespace#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace2.cs#9)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="7b9f4-134">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="7b9f4-134">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="b5c06-134">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="b5c06-134">C# language specification</span></span>
 
-<span data-ttu-id="7b9f4-135">Daha fazla bilgi için bkz. [ C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [yönergeleri kullanma](~/_csharplang/spec/namespaces.md#using-directives) .</span><span class="sxs-lookup"><span data-stu-id="7b9f4-135">For more information, see [Using directives](~/_csharplang/spec/namespaces.md#using-directives) in the [C# Language Specification](/dotnet/csharp/language-reference/language-specification/introduction).</span></span> <span data-ttu-id="7b9f4-136">Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-136">The language specification is the definitive source for C# syntax and usage.</span></span>
+<span data-ttu-id="b5c06-135">Daha fazla bilgi için bkz. [ C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [yönergeleri kullanma](~/_csharplang/spec/namespaces.md#using-directives) .</span><span class="sxs-lookup"><span data-stu-id="b5c06-135">For more information, see [Using directives](~/_csharplang/spec/namespaces.md#using-directives) in the [C# Language Specification](/dotnet/csharp/language-reference/language-specification/introduction).</span></span> <span data-ttu-id="b5c06-136">Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.</span><span class="sxs-lookup"><span data-stu-id="b5c06-136">The language specification is the definitive source for C# syntax and usage.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="7b9f4-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7b9f4-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b5c06-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b5c06-137">See also</span></span>
 
-- [<span data-ttu-id="7b9f4-138">C#Başvurunun</span><span class="sxs-lookup"><span data-stu-id="7b9f4-138">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="7b9f4-139">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="7b9f4-139">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="7b9f4-140">Ad Alanlarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="7b9f4-140">Using Namespaces</span></span>](../../programming-guide/namespaces/using-namespaces.md)
-- [<span data-ttu-id="7b9f4-141">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="7b9f4-141">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="7b9f4-142">Ad alanları</span><span class="sxs-lookup"><span data-stu-id="7b9f4-142">Namespaces</span></span>](../../programming-guide/namespaces/index.md)
-- [<span data-ttu-id="7b9f4-143">using Deyimi</span><span class="sxs-lookup"><span data-stu-id="7b9f4-143">using Statement</span></span>](using-statement.md)
+- [<span data-ttu-id="b5c06-138">C#Başvurunun</span><span class="sxs-lookup"><span data-stu-id="b5c06-138">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="b5c06-139">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="b5c06-139">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="b5c06-140">Ad Alanlarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="b5c06-140">Using Namespaces</span></span>](../../programming-guide/namespaces/using-namespaces.md)
+- [<span data-ttu-id="b5c06-141">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="b5c06-141">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="b5c06-142">Ad Alanları</span><span class="sxs-lookup"><span data-stu-id="b5c06-142">Namespaces</span></span>](../../programming-guide/namespaces/index.md)
+- [<span data-ttu-id="b5c06-143">using Deyimi</span><span class="sxs-lookup"><span data-stu-id="b5c06-143">using Statement</span></span>](using-statement.md)
