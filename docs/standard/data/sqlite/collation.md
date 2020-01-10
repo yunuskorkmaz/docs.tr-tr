@@ -2,12 +2,12 @@
 title: Harmanlama
 ms.date: 12/13/2019
 description: Özel bir harmanlama sırası oluşturmayı öğrenin.
-ms.openlocfilehash: 0942ad4523a149ad74321cbe0f63021f53303579
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9cc574a75c8f5347dd9bb44e36af72e50afa57b4
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447029"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777383"
 ---
 # <a name="collation"></a>Harmanlama
 
@@ -21,7 +21,7 @@ Harmanlama dizileri, sıralama ve eşitlik belirlenmesi için metın değerleri 
 
 ## <a name="custom-collation"></a>Özel harmanlama
 
-Ayrıca, kendi harmanlama dizlerinizi tanımlayabilir veya <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>kullanarak yerleşik olanları geçersiz kılabilirsiniz. Aşağıdaki örnekte, Unicode karakterlerini desteklemek için NOCASE harmanlamasının geçersiz kılınması gösterilmektedir. [Tam örnek kod](https://github.com/dotnet/samples/blob/master/samples/snippets/standard/data/sqlite/CollationSample/Program.cs) GitHub ' da kullanılabilir.
+Ayrıca, kendi harmanlama dizlerinizi tanımlayabilir veya <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>kullanarak yerleşik olanları geçersiz kılabilirsiniz. Aşağıdaki örnekte, Unicode karakterlerini desteklemek için NOCASE harmanlamasının geçersiz kılınması gösterilmektedir. [Tam örnek kod](https://github.com/dotnet/samples/blob/master/snippets/standard/data/sqlite/CollationSample/Program.cs) GitHub ' da kullanılabilir.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/CollationSample/Program.cs?name=snippet_Collation)]
 

@@ -1,15 +1,14 @@
 ---
 title: Model Oluşturucu nedir ve nasıl çalışır?
 description: Makine öğrenimi modelini otomatik olarak eğiteiçin ML.NET model Oluşturucu 'Yu kullanma
-author: natke
-ms.date: 08/07/2019
+ms.date: 01/07/2020
 ms.custom: overview
-ms.openlocfilehash: 77fe56dba3532617ad9fb0c89bfaac7c8e031ce7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ac704b7961a8442a9174cdef5a4cd2a619236a4e
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971518"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777400"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Model Oluşturucu nedir ve nasıl çalışır?
 
@@ -35,18 +34,9 @@ Senaryo, verilerinizi kullanarak yapmak istediğiniz tahmin türünün bir açı
 - Bankacılık işleminin sahte olup olmadığını Algıla
 - Müşteri geri bildirim sorunlarını şirketinizdeki doğru ekibe yönlendirin
 
-## <a name="choose-a-model-type"></a>Model türü seçin
+### <a name="which-machine-learning-scenario-is-right-for-me"></a>Hangi makine öğrenimi senaryosu bana uygun?
 
-Model Oluşturucu 'da, bir makine öğrenimi model türü seçmeniz gerekir. Modelin türü, yapmaya çalıştığınız tahmine göre farklılık gösterir.
-
-Bir sayıyı tahmin eden senaryolar için makine öğrenimi model türü `regression`olarak adlandırılır.
-
-Bir kategoriyi tahmin eden senaryolar için model türü `classification`. İki tür sınıflandırma vardır:
-
-- yalnızca 2 kategorinin bulunduğu yer: `binary classification`.
-- üç veya daha fazla kategorinin bulunduğu yer: `multiclass classification`.
-
-### <a name="which-model-type-is-right-for-me"></a>Benim için hangi model türü uygun?
+Model Oluşturucu 'da bir senaryo seçmeniz gerekir. Senaryonun türü, yapmaya çalıştığınız tahmin türüne bağlıdır.
 
 #### <a name="predict-a-category-when-there-are-only-two-categories"></a>Kategori tahmin etme (yalnızca iki kategori olduğunda)
 
@@ -54,7 +44,7 @@ Bir kategoriyi tahmin eden senaryolar için model türü `classification`. İki 
 
 ![Sahtekarlık algılama, risk azaltma ve uygulama filtreleme dahil olmak üzere ikili sınıflandırma örneklerini gösteren diyagram](media/binary-classification-examples.png)
 
-Yaklaşım analizi, müşteri geri bildirimlerine yönelik olumlu veya olumsuz yaklaşımı tahmin etmek için kullanılabilir. İkili sınıflandırma modeli türüne bir örnektir.
+Yaklaşım analizi, müşteri geri bildirimlerine yönelik olumlu veya olumsuz yaklaşımı tahmin etmek için kullanılabilir. Bu, ikili sınıflandırma makinesi öğrenimi görevinin bir örneğidir.
 
 Senaryonuz iki kategoriye sınıflandırma gerektiriyorsa, bu şablonu kendi veri kümeniz ile birlikte kullanabilirsiniz.
 
@@ -64,7 +54,7 @@ Birden çok Lass sınıflandırması, verileri üç veya daha fazla sınıfa kat
 
 ![Belge ve ürün sınıflandırması, destek bileti yönlendirmesi ve müşteri sorunu önceliklendirmesi dahil birden çok Lass sınıflandırması örnekleri](media/multiclass-classification-examples.png)
 
-Sorun sınıflandırması, sorun başlığı ve açıklaması kullanılarak müşteri geri bildirimini (örneğin, GitHub 'da) kategorilere ayırmak için kullanılabilir. Bu, çok sınıflı sınıflandırma modeli türüne bir örnektir.
+Sorun sınıflandırması, sorun başlığı ve açıklaması kullanılarak müşteri geri bildirimini (örneğin, GitHub 'da) kategorilere ayırmak için kullanılabilir. Bu, çok sınıflı sınıflandırma makinesi öğrenimi görevinin bir örneğidir.
 
 Verileri üç veya daha fazla kategoride sınıflandırmak istiyorsanız senaryonuz için sorun sınıflandırması şablonunu kullanabilirsiniz.
 
@@ -74,19 +64,33 @@ Regresyon, sayıları tahmin etmek için kullanılır.
 
 ![Fiyat tahmini, satış tahmini ve tahmine dayalı bakım gibi gerileme örneklerini gösteren diyagram](media/regression-examples.png)
 
-Fiyat tahmini, evin konum, boyut ve diğer özelliklerini kullanarak ev fiyatlarını tahmin etmek için kullanılabilir. Regresyon modeli türüne bir örnektir.
+Fiyat tahmini, evin konum, boyut ve diğer özelliklerini kullanarak ev fiyatlarını tahmin etmek için kullanılabilir. Gerileme makine öğrenimi görevi örneğidir.
 
 Kendi veri kümeniz ile sayısal bir değer tahmin etmek istiyorsanız senaryonuz için fiyat tahmini şablonunu kullanabilirsiniz.
 
-#### <a name="custom-scenario-choose-your-model-type"></a>Özel senaryo (model türünü seçin)
+#### <a name="classify-images-into-categories"></a>Görüntüleri kategoriler halinde sınıflandır
 
-Özel senaryo, model türünü el ile seçmenizi sağlar.
+Bu senaryo, kategorize edilecek giriş verilerinin bir görüntü kümesi olduğu birden çok Lass sınıflandırmasının özel bir durumdur.
+
+Görüntü sınıflandırması, farklı kategorilerin görüntülerini belirlemek için kullanılabilir. Örneğin, farklı türlerde terur veya hayvanlar veya üretim kusurları vardır.
+
+Bir görüntü kümesine sahipseniz ve görüntüleri farklı kategorilerde sınıflandırmak istiyorsanız senaryonuz için görüntü sınıflandırması şablonunu kullanabilirsiniz.
+
+#### <a name="custom-scenario"></a>Özel senaryo
+
+Özel senaryo, senaryonuzu el ile seçmenizi sağlar.
 
 ## <a name="data"></a>Veri
 
-Model türünü seçtikten sonra model Oluşturucu sizden bir veri kümesi sağlamanızı ister. Veriler, senaryonuza yönelik en iyi modeli eğlendirmek, değerlendirmek ve seçmek için kullanılır.
+Senaryonuzu seçtikten sonra model Oluşturucu sizden bir veri kümesi sağlamanızı ister. Veriler, senaryonuza yönelik en iyi modeli eğlendirmek, değerlendirmek ve seçmek için kullanılır.
 
 ![Model Oluşturucu adımlarını gösteren diyagram](media/model-builder-steps.png)
+
+Model Oluşturucu,. tsv,. csv,. txt biçimlerinin yanı sıra SQL veritabanı biçiminde veri kümelerini destekler. . Txt dosyanız varsa, sütunların `,`, `;` veya `/t` ile ayrılması ve dosyanın bir başlık satırı olması gerekir.
+
+Veri kümesi görüntülerden birini yapılırsa, desteklenen dosya türleri `.jpg` ve `.png`.
+
+Daha fazla bilgi için bkz. [model Oluşturucu 'da eğitim verilerini yükleme](how-to-guides/load-data-model-builder.md).
 
 ### <a name="choose-the-output-to-predict-label"></a>Tahmin edilecek çıktıyı seçin (etiket)
 
@@ -109,15 +113,16 @@ Etiket, bu kare çekimi, yatak odası ve banyo değerleri ve posta kodu satırı
 
 Henüz kendi verileriniz yoksa, bu veri kümelerinden birini deneyin:
 
-|Senaryo|Model türü|Veri|Etiketle|Özellikler|
+|Senaryo|ML görevi|Veri|Etiketle|Özellikler|
 |-|-|-|-|-|
 |Fiyat tahmini|regresyon|[taxı tarifeli havayolu verileri](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Tarifeli havayolu|Seyahat süresi, uzaklık|
-|Anomali algılama|ikili sınıflandırma|[ürün satış verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ürün satışları|Başından|
-|Yaklaşım Analizi|ikili sınıflandırma|[Web sitesi açıklama verileri](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etiket (negatif yaklaşım olduğunda 0, pozitif olduğunda 1)|Açıklama, yıl|
+|Anomali algılama|ikili sınıflandırma|[ürün satış verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ürün satışları|Ay|
+|Yaklaşım analizi|ikili sınıflandırma|[Web sitesi açıklama verileri](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etiket (negatif yaklaşım olduğunda 0, pozitif olduğunda 1)|Açıklama, yıl|
 |Sahtekarlık algılama|ikili sınıflandırma|[kredi kartı verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Sınıf (sahte olduğunda 1, aksi durumda 0)|Miktar, v1-V28 (anonimleştirilmiş Özellikler)|
 |Metin sınıflandırması|birden çok Lass sınıflandırması|[GitHub sorun verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Alan|Başlık, açıklama|
+|Görüntü sınıflandırma|birden çok Lass sınıflandırması|[Çiçekler görüntüleri](http://download.tensorflow.org/example_images/flower_photos.tgz)|Çiçek türü: da, Dandelion, Roses, sunçiçekler, TULIP 'ler|Görüntü verilerinin kendisi|
 
-## <a name="train"></a>eğit
+## <a name="train"></a>Eğitim
 
 Senaryonuzu, verilerinizi ve etiketini seçtikten sonra model Oluşturucu modeli izleyin.
 
@@ -127,13 +132,67 @@ Eğitim, model Oluşturucu 'nun, senaryonuza yönelik soruların nasıl yanıtla
 
 Model Oluşturucu otomatik makine öğrenimi (Otomatikml) kullandığından, eğitim sırasında sizin için herhangi bir giriş veya ayarlama gerekmez.
 
-## <a name="evaluate"></a>Değerlendirmesini
+### <a name="how-long-should-i-train-for"></a>Ne kadar eğitmem gerekir?
 
-Değerlendirme, eğitilen modeli kullanarak yeni test verileriyle tahminleri yapabilir ve daha sonra tahmine göre ne kadar iyi olduğunu ölçmeye yönelik bir işlemdir.
+Model Oluşturucu, sizi en iyi şekilde gerçekleştiren modeli bulmak için birden çok modeli araştırmak üzere oto ml kullanır.
 
-Model Oluşturucu eğitim verilerini bir eğitim kümesine ve bir test kümesine böler. Eğitim verileri (%80) modelinizi ve test verilerini eğiteetmek için kullanılır (%20) , modelinizi değerlendirmek için geri tutulur. Model Oluşturucu, modelin ne kadar iyi olduğunu ölçmek için ölçümleri kullanır. Kullanılan belirli ölçümler modelin türüne bağlıdır. Daha fazla bilgi için bkz. [model değerlendirme ölçümleri](resources/metrics.md).
+Daha uzun eğitim dönemleri, oto ml 'nin daha geniş bir ayar aralığıyla daha fazla modeli keşfetmesine olanak tanır.
 
-## <a name="improve"></a>Enizi
+Aşağıdaki tabloda, yerel bir makinedeki bir örnek veri kümesi paketi için iyi performans sağlamak üzere harcanan ortalama süre özetlenmektedir.
+
+|Veri kümesi boyutu|Ortalama eğitim süresi|
+|------------|---------------------|
+|0-10 MB|10 sn|
+|10-100 MB|10 dakika|
+|100-500 MB|30 dakika|
+|500-1 GB|60 dk|
+|1 GB +|3 + saat|
+
+Bu numaralar yalnızca bir kılavuzdur. Eğitimin tam uzunluğu şu şekilde bağımlıdır:
+
+- modele girdi olarak kullanılan özellik sayısı (sütun)
+- sütun türü
+- ML görevi
+- Eğitim için kullanılan makinenin CPU, disk ve bellek performansı
+
+## <a name="evaluate"></a>'i Değerlendirme
+
+Değerlendirme, modelinizin ne kadar iyi olduğunu ölçmeye yönelik bir işlemdir. Model Oluşturucu, yeni test verileriyle tahmine dayalı hale getirmek için eğitilen modeli kullanır ve daha sonra tahminlerin ne kadar iyi olduğunu ölçer.
+
+Model Oluşturucu eğitim verilerini bir eğitim kümesine ve bir test kümesine böler. Eğitim verileri (%80) modelinizi ve test verilerini eğiteetmek için kullanılır (%20) , modelinizi değerlendirmek için geri tutulur. 
+
+### <a name="how-do-i-understand-my-model-performance"></a>Nasıl yaparım? model performansımı anladım mı?
+
+Bir senaryo bir makine öğrenimi göreviyle eşlenir. Her ML görevinin kendi değerlendirme ölçümleri kümesi vardır.
+
+#### <a name="regression-for-example-price-prediction"></a>Gerileme (örneğin, fiyat tahmini)
+
+Gerileme sorunları için varsayılan ölçüm RKARE, RKARE değeri 0 ile 1 arasında aralıklar olur. 1 mümkün olan en iyi değer veya diğer bir deyişle, modelinizin daha iyi bir performans elde etmek için, RKARE değerinin 1 ' e yakın olması.
+
+Mutlak kayıp, kareli kayıp ve RMS kaybı gibi bildirilen diğer ölçümler, modelinizin nasıl çalıştığını anlamak ve diğer gerileme modelleriyle karşılaştırmak için kullanılabilecek ek ölçümlerdir.
+
+#### <a name="binary-classification-for-example-sentiment-analysis"></a>İkili Sınıflandırma (örneğin, Yaklaşım Analizi)
+
+Sınıflandırma sorunları için varsayılan ölçüm doğruluk ' dir. Doğruluk, modelinizin test veri kümesi üzerinde yapmakta olduğu doğru tahminlerden oranını tanımlar. %100 veya 1,0 ' e yakın olan daha iyi bir seçenektir.
+
+Doğru pozitif oranı içeren AUC (eğri kapsamındaki alan) gibi bildirilen diğer ölçümler, modellerin kabul edilebilir olması için 0,50 ' den büyük olmalıdır.
+
+Duyarlılık ve geri çekme arasındaki dengeyi denetlemek için F1 puanı gibi ek ölçümler de kullanılabilir.
+
+#### <a name="multi-class-classification-for-example-issue-classification-image-classification"></a>Çok sınıf sınıflandırması (örneğin, sorun sınıflandırması, görüntü sınıflandırması)
+
+Çoklu Sınıf sınıflandırması için varsayılan ölçüm mikro doğruluk ' dir. Mikro doğruluk %100 veya 1,0 ' e daha iyi.
+
+Çok sınıf sınıflandırma için başka bir önemli ölçüm, daha iyi olan 1,0 ' e yakın olan mikro doğrulukta olduğu gibi, makro doğruluğuna benzer. Bu iki tür doğruluğu düşünmek için iyi bir yoldur:
+
+- Mikro doğruluk: bir gelen bilet, doğru ekibe ne sıklıkla sınıflandırıldı?
+- Makro doğruluğu: ortalama bir ekip Için, takımlarına yönelik gelen bir bilet ne sıklıkta doğru?
+
+### <a name="more-information-on-evaluation-metrics"></a>Değerlendirme ölçümleri hakkında daha fazla bilgi
+
+Daha fazla bilgi için bkz. [model değerlendirme ölçümleri](resources/metrics.md).
+
+## <a name="improve"></a>.NET becerilerinizi
 
 Model performans puanınız istediğiniz kadar iyi değilse şunları yapabilirsiniz:
 

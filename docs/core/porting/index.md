@@ -3,17 +3,16 @@ title: .NET Framework 'den .NET Core 'a bağlantı noktası
 description: Bir .NET Framework projesi .NET Core 'a taşıma konusunda yararlı bulabileceğiniz yardım alabileceğiniz işlem ve bulma araçlarını anlayın.
 author: cartermp
 ms.date: 10/22/2019
-ms.custom: seodec18
-ms.openlocfilehash: 89f00e5c6ce7f3cea7a3135c9b2856c54a70da40
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b5b010acbccf134afe800aa5bb98a0ae6e9ffa25
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038526"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777356"
 ---
-# <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>.NET Framework 'den .NET Core 'a taşıma işlemine genel bakış
+# <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework .NET Core 'a taşıma ile genel bakış
 
-Şu anda .NET Core 'a taşıma konusunda ilgilendiğiniz .NET Framework çalışan bir kodunuz olabilir. Bu makale şunları sağlar:
+Şu anda .NET Core 'a taşıma konusunda ilgilendiğiniz .NET Framework çalışan bir kodunuz olabilir. Bu makalede aşağıdakiler sunulmaktadır:
 
 * Taşıma işlemine genel bakış.
 * Kodunuzu .NET Core 'a taşırken yararlı bulabileceğiniz araçların bir listesi.
@@ -22,7 +21,7 @@ ms.locfileid: "73038526"
 
 Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı öneririz:
 
-1. .NET Framework 4.7.2 veya üstünü hedeflemek için bağlantı noktası yapmak istediğiniz tüm projeleri yeniden hedefleyin.
+1. .NET Framework 4.7.2 veya üstünü hedeflemek için, bağlantı noktası yapmak istediğiniz tüm projeleri yeniden hedefleyin.
 
    Bu adım, .NET Core belirli bir API 'YI desteklemedikleri zaman .NET Framework özel hedefler için API alternatifleri kullanmanıza da sağlar.
 
@@ -32,7 +31,7 @@ Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı 
 
 3. Bazı platformlarda <xref:System.PlatformNotSupportedException> oluşturan API 'Leri ve bazı diğer olası uyumluluk sorunlarını belirlemek için, projelerinize [.NET API Çözümleyicisi](../../standard/analyzers/api-analyzer.md) 'ni yükler.
 
-   Bu araç, taşınabilirlik Çözümleyicisi 'ne benzer, ancak .NET Core üzerinde şeyler oluşturabilirliğini çözümlemek yerine, çalışma zamanında <xref:System.PlatformNotSupportedException> oluşturacak şekilde bir API kullanıyorsanız analiz edilir. .NET Framework 4.7.2 veya üzeri bir sürümü taşıyorsanız, bu yaygın olmasa da kontrol etmeniz iyidir.
+   Bu araç taşınabilirlik Çözümleyicisi ile benzerdir, ancak .NET Core üzerinde nesnelerin oluşturabildiğini çözümlemek yerine, çalışma zamanında <xref:System.PlatformNotSupportedException> oluşturacak şekilde bir API kullanıp kullandığınızı analiz eder. .NET Framework 4.7.2 veya üzeri bir sürümü taşıyorsanız, bu yaygın olmasa da kontrol etmeniz iyidir.
 
 4. `packages.config` bağımlılıklarınızın tümünü, [Visual Studio 'daki Dönüştürme aracıyla](/nuget/consume-packages/migrate-packages-config-to-package-reference) [packagereference](/nuget/consume-packages/package-references-in-project-files) biçimine dönüştürün.
 
@@ -44,9 +43,11 @@ Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı 
 
 6. Test kodunuzun bağlantı noktası.
 
-   .NET Core 'a geçiş yapmak, kod tabanınızda önemli bir değişiklik olduğundan, test etmeniz, kodunuzun bağlantı noktası oluşturduğunuz gibi testler çalıştırabilmeniz için, testlerinizi almak kesinlikle önerilir. MSTest, xUnit ve NUnit tüm .NET Core üzerinde çalışır.
+   .NET Core 'a taşıma işlemi, kod tabanınızda önemli bir değişiklik olduğundan, kodunuzun bağlantı noktası oluşturduğunuz testleri çalıştırabilmeniz için test projelerinizin bağlantı noktası yapılması önemle önerilir. MSTest, xUnit ve NUnit tüm .NET Core üzerinde çalışır.
 
-Ayrıca, bir işlemde [DotNet TRY-Convert](https://github.com/dotnet/try-convert) aracı Ile .NET Core proje dosyası biçiminde daha küçük çözümler veya ayrı projeler için bağlantı kurmayı deneyebilirsiniz. `dotnet try-convert` tüm projeleriniz için çalışması garanti edilmez ve bağımlılarınızın bağlı olduğunu fark ettiğiniz davranıştaki değişikliklere neden olabilir. Otomatikleştirilmiş olabilecek temel şeyleri otomatikleştiren bir _Başlangıç noktası_ olarak kullanılmalıdır. Projenin geçirilmesi için garantili bir çözüm değildir.
+Ayrıca, [DotNet TRY-Convert](https://github.com/dotnet/try-convert) aracı Ile .NET Core proje dosyası biçimine tek bir işlemde daha küçük çözümler veya tek tek projeler için bağlantı kurmayı deneyebilirsiniz. `dotnet try-convert` tüm projeleriniz için çalışma garantisi verilmez ve bağımlı olduğunuz davranışta hafif değişikliklere neden olabilir. Otomatikleştirilmiş olabilecek temel şeyleri otomatikleştiren bir _Başlangıç noktası_ olarak kullanın. Projenin geçirilmesi için garantili bir çözüm değildir.
 
->[!div class="step-by-step"]
->[Next](net-framework-tech-unavailable.md)
+## <a name="next-steps"></a>Sonraki adımlar
+
+>[!div class="nextstepaction"]
+>[.NET Core 'da kullanılamayan teknolojiler](net-framework-tech-unavailable.md)
