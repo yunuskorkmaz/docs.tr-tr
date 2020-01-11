@@ -2,12 +2,12 @@
 title: Kaber sınırlamaları
 ms.date: 12/13/2019
 description: Kaber kullanırken karşılaştığınız kısıtlamaların bazılarını açıklar.
-ms.openlocfilehash: 90c7fb24f068d663081390bdba9b1b222b4be56e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 396507f25f591a9ab5c3bb07c0af6fd8d175e4ea
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447281"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901205"
 ---
 # <a name="dapper-limitations"></a>Kaber sınırlamaları
 
@@ -15,7 +15,7 @@ Microsoft. Data. SQLite ile [kaber](https://stackexchange.github.io/Dapper/)kull
 
 ## <a name="parameters"></a>Parametreler
 
-SQLite parametre adları büyük/küçük harfe duyarlıdır. SQL 'de kullanılan parametre adlarının anonim nesne özellikleri ile eşleştiğinden emin olun. Sorun [#18861](https://github.com/aspnet/EntityFrameworkCore/issues/18861) bu deneyimi iyileştirir.
+SQLite parametre adları büyük/küçük harfe duyarlıdır. SQL 'de kullanılan parametre adlarının anonim nesne özellikleri ile eşleştiğinden emin olun. Sorun [#18861](https://github.com/dotnet/efcore/issues/18861) bu deneyimi iyileştirir.
 
 Paber Ayrıca `@` önekini kullanmak için parametreler bekliyor. Diğer ön ekler çalışmaz.
 

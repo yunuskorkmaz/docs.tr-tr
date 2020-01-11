@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: df3151dfd3628231d84d2d128c61d1c0b6b0d48e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 43cd34ad02f1e2d212ff5e2ff4694591fbed52e5
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800356"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900956"
 ---
 # <a name="quickstart-wcf-data-services"></a>Hızlı Başlangıç (WCF Veri Hizmetleri)
 
@@ -45,7 +45,7 @@ Bu hızlı başlangıcı tamamlayabilmeniz için aşağıdaki bileşenleri yükl
  OData akışını kullanmak, verileri Windows denetimlerine bağlamak, bağlama denetimlerindeki verileri değiştirmek ve sonra değişiklikleri veri hizmetine geri göndermek için bir WPF uygulaması oluşturun.
 
 > [!NOTE]
-> Hızlı başlangıç sürümünün tamamlanmış sürümlerinden proje dosyaları [WCF veri Hizmetleri belge örnekleri](https://go.microsoft.com/fwlink/?LinkId=179994) sayfasından indirilebilir.
+> Hızlı başlangıç sürümünün tamamlanmış sürümlerinden proje dosyaları [GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/WCF%20Data%20Services%20Quickstart%20(OData%20Service%20and%20WPF%20Client))'dan indirilebilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

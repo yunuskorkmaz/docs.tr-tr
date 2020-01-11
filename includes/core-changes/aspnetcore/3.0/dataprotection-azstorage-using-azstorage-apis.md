@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: f103c96588bae167216d09a82973a4a7abfb5cc3
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: db70596552ffd699156e1b7a55cb1e944596f077
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393938"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75902064"
 ---
 ### <a name="data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis"></a>Veri koruma: DataProtection. AzureStorage yeni Azure depolama API 'Lerini kullanır
 
 <xref:Microsoft.AspNetCore.DataProtection.AzureStorage?displayProperty=fullName>, [Azure depolama kitaplıklarına](https://github.com/Azure/azure-storage-net)bağlıdır. Bu kitaplıklar derlemeleri, paketleri ve ad alanlarını yeniden adlandırdı. ASP.NET Core 3,0 ' den başlayarak, `Microsoft.AspNetCore.DataProtection.AzureStorage` yeni `Microsoft.Azure.Storage.`ön eki olan API 'Leri ve paketleri kullanır.
 
-Azure depolama API 'Leri hakkında sorularınız için <https://github.com/Azure/azure-storage-net>kullanın. Bu sorunla ilgili tartışmak için bkz. [ASPNET/AspNetCore # 8472](https://github.com/aspnet/AspNetCore/issues/8472).
+Azure depolama API 'Leri hakkında sorularınız için <https://github.com/Azure/azure-storage-net>kullanın. Bu sorunla ilgili tartışmak için bkz. [DotNet/aspnetcore # 8472](https://github.com/dotnet/aspnetcore/issues/8472).
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3,0
+3.0
 
 #### <a name="old-behavior"></a>Eski davranış
 

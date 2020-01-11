@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e50480a-8ada-4044-b2a5-97bb14ed3525
 topic_type:
 - apiref
-ms.openlocfilehash: 798bb0585bfe4cc29afba2fbefae818301704613
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9561d383e7c134230b8664329b59aec23e487124
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135189"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899578"
 ---
 # <a name="iclrstrongnamegethashfromfile-method"></a>ICLRStrongName::GetHashFromFile Yöntemi
 Belirtilen dosyanın içeriği üzerinde bir karma oluşturur.  
@@ -54,7 +54,7 @@ HRESULT GetHashFromFile (
  dışı Döndürülen `pbHash`bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](https://go.microsoft.com/fwlink/?LinkId=213878) ).  
+ Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](/windows/win32/seccrypto/common-hresult-values) ).  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu yöntem, [ICLRStrongName:: GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) yöntemiyle aynıdır, ancak dosya adı belirtimi UNICODE yerine ANSI olur.  

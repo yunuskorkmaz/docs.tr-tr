@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: 8812a98b0f28dd1336903dc34682f638a291f53b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a69fb861f7c2671a5c26245aa544ee99bcbdb56b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111002"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901007"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess Yöntemi
 Hata ayıklayıcının denetimi altında bir işlem ve birincil iş parçacığını başlatır.  
@@ -61,7 +61,7 @@ HRESULT CreateProcess (
  'ndaki Çağıran işlemdeki her bir devralınabilir tanıtıcının başlatılan işlem tarafından devralındığını veya tanıtıcıların devralınamayacağını belirtmek için `false` `true` olarak ayarlayın. Devralınan tutamaçlar, özgün tanıtıcılarla aynı değere ve erişim haklarına sahiptir.  
   
  `dwCreationFlags`  
- 'ndaki Öncelik sınıfını ve başlatılan işlemin davranışını denetleyen [Win32 Işlemi oluşturma bayraklarının](https://go.microsoft.com/fwlink/?linkid=69981) bit düzeyinde birleşimi.  
+ 'ndaki Öncelik sınıfını ve başlatılan işlemin davranışını denetleyen [Win32 Işlemi oluşturma bayraklarının](/windows/win32/procthread/process-creation-flags) bit düzeyinde birleşimi.  
   
  `lpEnvironment`  
  'ndaki Yeni işlem için ortam bloğunun işaretçisi.  

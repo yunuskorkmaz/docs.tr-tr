@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: a56c5fc32b5fd274d5da0d9b295918f5ea3b345e
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: de06825f1031d05bc83183a83bae165e2f9512ff
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394116"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901717"
 ---
 ### <a name="signalr-hubconnection-resetsendping-and-resettimeout-methods-removed"></a>SignalR: HubConnection ResetSendPing ve ResetTimeout yöntemleri kaldırıldı
 
-@No__t-0 ve `ResetTimeout` yöntemleri, SignalR `HubConnection` API 'sinden kaldırılmıştır. Bu yöntemler başlangıçta yalnızca iç kullanıma yöneliktir, ancak ASP.NET Core 2,2 ' de genel kullanıma sunulmuştur. Bu yöntemler ASP.NET Core 3,0 Preview 4 sürümünden itibaren kullanılabilir olmayacaktır. Tartışma için bkz. [ASPNET/AspNetCore # 8543](https://github.com/aspnet/AspNetCore/issues/8543).
+`ResetSendPing` ve `ResetTimeout` yöntemleri, SignalR `HubConnection` API 'sinden kaldırılmıştır. Bu yöntemler başlangıçta yalnızca iç kullanıma yöneliktir, ancak ASP.NET Core 2,2 ' de genel kullanıma sunulmuştur. Bu yöntemler ASP.NET Core 3,0 Preview 4 sürümünden itibaren kullanılabilir olmayacaktır. Tartışma için bkz. [DotNet/aspnetcore # 8543](https://github.com/dotnet/aspnetcore/issues/8543).
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 

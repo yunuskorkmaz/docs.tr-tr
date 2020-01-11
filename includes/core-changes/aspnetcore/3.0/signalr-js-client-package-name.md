@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: acef6d7177ee5ad7e18dc8ba1e383d6f76263623
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: f202b39f1a45f740625827be25e72df0e403d605
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394189"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901831"
 ---
 ### <a name="signalr-javascript-client-package-name-changed"></a>SignalR: JavaScript istemci paketi adı değiştirildi
 
-ASP.NET Core 3,0 Preview 7 ' de, SignalR JavaScript istemci paketi adı `@aspnet/signalr` ' dan `@microsoft/signalr` ' e değişti. Ad değişikliği, SignalR 'nin Azure SignalR hizmeti sayesinde yalnızca ASP.NET Core uygulamalardan daha fazla yararlı olduğunu yansıtır.
+ASP.NET Core 3,0 Preview 7 ' de, SignalR JavaScript istemci paketi adı `@aspnet/signalr` `@microsoft/signalr`olarak değiştirildi. Ad değişikliği, SignalR 'nin Azure SignalR hizmeti sayesinde yalnızca ASP.NET Core uygulamalardan daha fazla yararlı olduğunu yansıtır.
 
 Bu değişikliğe tepki vermek için *Package. JSON* dosyalarınızda, `require` deyimlerinizin ve ECMAScript `import` deyiminizdeki başvuruları değiştirin. Bu yeniden adlandırma kapsamında hiçbir API değişmeyecektir.
 
-Tartışma için bkz. [ASPNET/AspNetCore # 11637](https://github.com/aspnet/AspNetCore/issues/11637).
+Tartışma için bkz. [DotNet/aspnetcore # 11637](https://github.com/dotnet/aspnetcore/issues/11637).
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
@@ -20,11 +20,11 @@ Tartışma için bkz. [ASPNET/AspNetCore # 11637](https://github.com/aspnet/AspN
 
 #### <a name="old-behavior"></a>Eski davranış
 
-İstemci paketi `@aspnet/signalr` olarak adlandırılmıştı.
+İstemci paketi `@aspnet/signalr`olarak adlandırılmıştı.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-İstemci paketinin adı `@microsoft/signalr` ' dır.
+İstemci paketine `@microsoft/signalr`adı verilir.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 

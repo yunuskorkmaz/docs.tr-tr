@@ -3,12 +3,12 @@ title: .NET Core küresel araçları
 description: .NET Core genel araçlarının ne olduğuna ve bunlara yönelik .NET Core CLI komutlarına genel bakış.
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.openlocfilehash: 665cee64cb92efd16f5528feb656b377f9f3283c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0df3c1b615adfeaaf41542dc8252a8f14f49f6f9
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714154"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899861"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core genel araçlarına genel bakış
 
@@ -34,7 +34,7 @@ ms.locfileid: "75714154"
 
 * [NuGet](https://www.nuget.org)üzerinde .NET Core küresel araçları bulabilirsiniz. Ancak, NuGet henüz .NET Core küresel araçları için arama yapmanıza izin vermez.
 * Araç önerilerini blog gönderilerinde veya [natemcmaster/DotNet-Tools](https://github.com/natemcmaster/dotnet-tools) GitHub deposunda bulabilirsiniz.
-* ASP.NET ekibi tarafından oluşturulan genel araçların kaynak kodunu [ASPNET/DotNetTools](https://github.com/aspnet/DotNetTools/) GitHub deposunda görebilirsiniz.
+* [DotNet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) GitHub deposunda ASP.NET ekibi tarafından oluşturulan genel araçların kaynak kodunu görebilirsiniz.
 * [.NET Core DotNet Diagnostic küresel araçlar](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)' da tanılama araçları hakkında bilgi edinebilirsiniz.
 
 ## <a name="check-the-author-and-statistics"></a>Yazarı ve istatistikleri denetleme

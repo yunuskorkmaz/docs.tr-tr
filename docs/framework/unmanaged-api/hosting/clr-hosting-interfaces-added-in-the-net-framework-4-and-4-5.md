@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework 4, hosting interfaces
 - interfaces [.NET Framework hosting], version 4
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
-ms.openlocfilehash: aea88430d8f83234a1568bcaf433c2a75492e23a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8484b47549f83795778420048d610e2d1626d87b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195921"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899728"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 ve 4.5'e Eklenen CLR Barındırma Arabirimleri
 Bu bölümde, yönetilmeyen ana bilgisayarların .NET Framework 4, .NET Framework 4,5 ve sonraki sürümlerindeki ortak dil çalışma zamanını (CLR) bütünleştirmek için kullanabileceği arabirimler açıklanmaktadır. Bu arabirimler, bir ana bilgisayarın çalışma zamanını yapılandırmak ve bir işleme yüklemek için yöntemler sağlar.  
@@ -22,7 +22,7 @@ Bu bölümde, yönetilmeyen ana bilgisayarların .NET Framework 4, .NET Framewor
   
 - `BSTR`, `SAFEARRAY`veya `VARIANT`gibi COM türlerini kullanmaz.  
   
-- [Cocreateınstance işlevini](https://go.microsoft.com/fwlink/?LinkId=142894)kullanan hiçbir Grup modeli, toplama veya kayıt defteri etkinleştirmesi yoktur.  
+- [Cocreateınstance işlevini](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)kullanan hiçbir Grup modeli, toplama veya kayıt defteri etkinleştirmesi yoktur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ICLRAppDomainResourceMonitor Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  

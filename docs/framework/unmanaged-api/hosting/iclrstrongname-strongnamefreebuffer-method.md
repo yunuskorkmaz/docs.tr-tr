@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6148c508-bd1d-4a37-85c3-06ecb09cc857
 topic_type:
 - apiref
-ms.openlocfilehash: e3d0c4791f6d487522ef4bb0ba31ccb6042589c4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9aeac02e865214db8fec25621f1bf204a93b36f6
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135106"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901133"
 ---
 # <a name="iclrstrongnamestrongnamefreebuffer-method"></a>ICLRStrongName::StrongNameFreeBuffer Yöntemi
-[ICLRStrongName:: StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md):: StrongNameTokenFromPublicKey veya ICLRStrongName:: StrongNameSignatureGeneration gibi tanımlayıcı bir ad yöntemine önceki bir çağrı ile ayrılmış belleği boşaltır [ ](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).  
+[ICLRStrongName:: StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md):: StrongNameTokenFromPublicKey veya [ICLRStrongName:: StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)gibi tanımlayıcı bir ad yöntemine önceki bir çağrı ile ayrılmış belleği serbest bırakır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,7 +38,7 @@ HRESULT StrongNameFreeBuffer (
  'ndaki Boşaltılacak belleğin bir işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](https://go.microsoft.com/fwlink/?LinkId=213878) ).  
+ Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](/windows/win32/seccrypto/common-hresult-values) ).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1f8b59d0-5b72-45b8-ab74-c2b43ffc806e
 topic_type:
 - apiref
-ms.openlocfilehash: 1a5bcfb7a272af694126025f28ca3efe5a881c15
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b09677a45c5d515aacb2cac709599140039a9dd8
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135015"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899551"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>ICLRStrongName::StrongNameKeyGenEx Yöntemi
 Tanımlayıcı ad kullanımı için belirtilen anahtar boyutuyla yeni bir ortak/özel anahtar çifti oluşturur.  
@@ -58,7 +58,7 @@ HRESULT StrongNameKeyGenEx (
  dışı `ppbKeyBlob`bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](https://go.microsoft.com/fwlink/?LinkId=213878) ).  
+ Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](/windows/win32/seccrypto/common-hresult-values) ).  
   
 ## <a name="remarks"></a>Açıklamalar  
  1,0 ve 1,1 .NET Framework sürümleri, bir derlemeyi güçlü bir adla imzalamak için 1024 bit `dwKeySize` gerektirir; sürüm 2,0, 2048 bit anahtarlar için destekler.  

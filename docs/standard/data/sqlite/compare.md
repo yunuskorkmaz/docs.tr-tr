@@ -2,12 +2,12 @@
 title: System. Data. SQLite ile karşılaştırma
 ms.date: 12/13/2019
 description: Microsoft. Data. SQLite ve System. Data. SQLite kitaplıkları arasındaki bazı farklılıkları açıklar.
-ms.openlocfilehash: dee90c132b108f2c876c0d8becc1b02035a47b61
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 076bbc6f746cf9296c96ec73047397a21a3b2558
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447022"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900707"
 ---
 # <a name="comparison-to-systemdatasqlite"></a>System. Data. SQLite ile karşılaştırma
 
@@ -63,15 +63,15 @@ Microsoft. Data. SQLite daha az sayıda [bağlantı dizesi](connection-strings.m
 
 ## <a name="authorization"></a>Yetkilendirme
 
-Microsoft. Data. SQLite, SQLite 'un yetkilendirme geri aramasını ortaya çıkaran bir API 'ye sahip değil. Bu özellik hakkında geri bildirim sağlamak için sorun [#13835](https://github.com/aspnet/EntityFrameworkCore/issues/13835) kullanın.
+Microsoft. Data. SQLite, SQLite 'un yetkilendirme geri aramasını ortaya çıkaran bir API 'ye sahip değil. Bu özellik hakkında geri bildirim sağlamak için sorun [#13835](https://github.com/dotnet/efcore/issues/13835) kullanın.
 
 ## <a name="data-change-notifications"></a>Veri değişikliği bildirimleri
 
-Microsoft. Data. SQLite, SQLite 'un veri değişikliği bildirimlerini açığa çıkaran bir API 'ye sahip değil. Bu özellik hakkında geri bildirim sağlamak için sorun [#13827](https://github.com/aspnet/EntityFrameworkCore/issues/13827) kullanın.
+Microsoft. Data. SQLite, SQLite 'un veri değişikliği bildirimlerini açığa çıkaran bir API 'ye sahip değil. Bu özellik hakkında geri bildirim sağlamak için sorun [#13827](https://github.com/dotnet/efcore/issues/13827) kullanın.
 
 ## <a name="virtual-table-modules"></a>Sanal tablo modülleri
 
-Microsoft. Data. SQLite, sanal tablo modülleri oluşturmak için API içermiyor. Bu özellik hakkında geri bildirim sağlamak için sorun [#13823](https://github.com/aspnet/EntityFrameworkCore/issues/13823) kullanın.
+Microsoft. Data. SQLite, sanal tablo modülleri oluşturmak için API içermiyor. Bu özellik hakkında geri bildirim sağlamak için sorun [#13823](https://github.com/dotnet/efcore/issues/13823) kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

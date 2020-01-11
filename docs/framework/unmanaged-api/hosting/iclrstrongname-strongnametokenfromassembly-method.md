@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc725afb-b66b-4015-aa44-1c0d1304197f
 topic_type:
 - apiref
-ms.openlocfilehash: 0e7e49fae24ff7e12c5a8d9cac5e814f7a7ae813
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 12677799136e9ca887809e58fba838cb421ea183
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092588"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901059"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassembly-method"></a>ICLRStrongName::StrongNameTokenFromAssembly Yöntemi
 Belirtilen derleme dosyasından bir tanımlayıcı ad belirteci oluşturur.  
@@ -46,7 +46,7 @@ HRESULT StrongNameTokenFromAssembly (
  dışı Tanımlayıcı ad belirtecinin bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](https://go.microsoft.com/fwlink/?LinkId=213878) ).  
+ Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](/windows/win32/seccrypto/common-hresult-values) ).  
   
 ## <a name="remarks"></a>Açıklamalar  
  Tanımlayıcı ad belirteci, ortak anahtarın kısaltılmış biçimidir. Belirteç, derlemeyi imzalamak için kullanılan ortak anahtardan oluşturulan 64 bitlik bir karmadır. Belirteç, derlemenin tanımlayıcı adının bir parçasıdır ve derleme meta verilerinden okunabilir.  

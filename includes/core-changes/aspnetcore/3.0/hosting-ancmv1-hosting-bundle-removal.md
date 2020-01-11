@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 04e5ca41374fc333a31f0422bc2e89f54b3cb049
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 82103d82a6f68c62f3532608718bc71b0ba126bf
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394150"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901985"
 ---
 ### <a name="hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle"></a>Barındırma: AspNetCoreModule v1 Windows barındırma paketinden kaldırıldı
 
@@ -12,7 +12,7 @@ ASP.NET Core 3,0 ' den itibaren Windows barındırma paketi, AspNetCoreModule (A
 
 ANCM v2, ANCM OutOfProcess ile geriye dönük olarak uyumludur ve ASP.NET Core 3,0 uygulamalarıyla birlikte kullanılması önerilir.
 
-Tartışma için bkz. [ASPNET/AspNetCore # 7095](https://github.com/aspnet/AspNetCore/issues/7095).
+Tartışma için bkz. [DotNet/aspnetcore # 7095](https://github.com/dotnet/aspnetcore/issues/7095).
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
@@ -38,8 +38,8 @@ ANCM v1 gerekliyse, ASP.NET Core 2,1 veya 2,2 Windows barındırma paketi kullan
 
 Bu değişiklik, şu şekilde ASP.NET Core 3,0 uygulamalarını keser:
 
-- @No__t-0 ile birlikte ANCM v1 kullanarak açıkça kabul edildi.
-- @No__t-1 ile özel bir *Web. config* dosyası olmalıdır.
+- `<AspNetCoreModuleName>AspNetCoreModule</AspNetCoreModuleName>`ile birlikte ANCM v1 kullanarak açık bir şekilde kabul edildi.
+- `<add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModule" resourceType="Unspecified" />`olan özel bir *Web. config* dosyası olmalıdır.
 
 #### <a name="category"></a>Kategori
 

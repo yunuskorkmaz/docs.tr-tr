@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: bb6447c39c3de9605f6f7bc280da2778be2b3070
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: c445f0d6117abfd1ac7a5153f8f80d55051a3f5a
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568863"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900929"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Nasıl yapılır: veri hizmeti Isteği için Istemci kimlik bilgilerini belirtme (WCF Veri Hizmetleri)
 Varsayılan olarak, istemci kitaplığı bir OData hizmetine istek gönderilirken kimlik bilgileri sağlamaz. Ancak, <xref:System.Data.Services.Client.DataServiceContext><xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> özelliği için bir <xref:System.Net.NetworkCredential> sağlayarak veri hizmetine isteklerin kimliğini doğrulamak için kimlik bilgilerinin gönderilmesini belirtebilirsiniz. Daha fazla bilgi için bkz. [güvenliği WCF veri Hizmetleri](securing-wcf-data-services.md). Bu konudaki örnekte, veri hizmetinden veri istenirken WCF Veri Hizmetleri istemcisi tarafından kullanılan kimlik bilgilerinin açık bir şekilde nasıl sağlanması gösterilmektedir.  
   
- Bu konudaki örnek, Northwind örnek veri hizmeti ve otomatik olarak istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları, [WCF veri hizmetleri hızlı](quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur. OData web sitesinde yayımlanan [Northwind örnek veri hizmetini](https://go.microsoft.com/fwlink/?LinkId=187426) de kullanabilirsiniz; Bu örnek veri hizmeti salt okunurdur ve değişiklikler kaydedilmeye çalışıldığında bir hata döndürülür. OData web sitesindeki örnek veri hizmetleri anonim kimlik doğrulamasına izin verir.  
+ Bu konudaki örnek, Northwind örnek veri hizmeti ve otomatik olarak istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları, [WCF veri hizmetleri hızlı](quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur. OData web sitesinde yayımlanan [Northwind örnek veri hizmetini](https://services.odata.org/Northwind/Northwind.svc/) de kullanabilirsiniz; Bu örnek veri hizmeti salt okunurdur ve değişiklikler kaydedilmeye çalışıldığında bir hata döndürülür. OData web sitesindeki örnek veri hizmetleri anonim kimlik doğrulamasına izin verir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, Windows Presentation Framework uygulamasının ana sayfası olan bir Extensible Application Markup Language (XAML) dosyası için arka plan kod sayfasından oluşur. Bu örnek, kullanıcıdan kimlik doğrulama kimlik bilgilerini toplamak için bir `LoginWindow` örneği görüntüler ve sonra veri hizmetine bir istek yaparken bu kimlik bilgilerini kullanır.  

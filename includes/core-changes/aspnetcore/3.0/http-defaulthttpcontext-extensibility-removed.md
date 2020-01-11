@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: 7b5ae84d02b83a10a4b9e002fc2ed4ee0833b84c
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1b4b0aba3ea24682ae972bf283ac387692c83781
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198596"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75902011"
 ---
 ### <a name="http-defaulthttpcontext-extensibility-removed"></a>HTTP: DefaultHttpContext genişletilebilirliği kaldırıldı
 
-ASP.NET Core 3,0 performans geliştirmelerinden bir parçası olarak, `DefaultHttpContext` ' ın genişletilebilirliği kaldırılmıştır. Sınıf artık `sealed` ' dır. Daha fazla bilgi için bkz. [ASPNET/AspNetCore # 6504](https://github.com/aspnet/AspNetCore/pull/6504).
+ASP.NET Core 3,0 performans geliştirmelerinden bir parçası olarak, `DefaultHttpContext` genişletilebilirliği kaldırılmıştır. Sınıf artık `sealed`. Daha fazla bilgi için bkz. [DotNet/aspnetcore # 6504](https://github.com/dotnet/aspnetcore/pull/6504).
 
-Birim testleriniz `Mock<DefaultHttpContext>` kullanıyorsa, bunun yerine `Mock<HttpContext>` kullanın.
+Birim testleriniz `Mock<DefaultHttpContext>`kullanıyorsa, bunun yerine `Mock<HttpContext>` kullanın.
 
-Tartışma için bkz. [ASPNET/AspNetCore # 6534](https://github.com/aspnet/AspNetCore/issues/6534).
+Tartışma için bkz. [DotNet/aspnetcore # 6534](https://github.com/dotnet/aspnetcore/issues/6534).
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
@@ -20,19 +20,19 @@ Tartışma için bkz. [ASPNET/AspNetCore # 6534](https://github.com/aspnet/AspNe
 
 #### <a name="old-behavior"></a>Eski davranış
 
-Sınıflar `DefaultHttpContext` ' dan türetilebilir.
+Sınıflar `DefaultHttpContext`türetilebilir.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Sınıflar `DefaultHttpContext` ' dan türetilemez.
+Sınıflar `DefaultHttpContext`türetilemiyor.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Genişletilebilirlik başlangıçta `HttpContext` ' a havuza izin vermek için sağlanmış, ancak gereksiz karmaşıklık ve daha önce diğer iyileştirmeler getirmiştir.
+Genişletilebilirlik, başlangıçta `HttpContext`havuza izin verecek şekilde sağlandı, ancak gereksiz karmaşıklık ve başka iyileştirmeler getirmiştir.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Birim testlerinizde `Mock<DefaultHttpContext>` kullanıyorsanız, bunun yerine `Mock<HttpContext>` ' i kullanmaya başlayın.
+Birim testlerinizde `Mock<DefaultHttpContext>` kullanıyorsanız, bunun yerine `Mock<HttpContext>` kullanmaya başlayın.
 
 #### <a name="category"></a>Kategori
 

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 1ce152b84f17a35982a75f54b5418623ba39210f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 890f0ba25d8320008228c73660753b9899269fd7
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975228"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900996"
 ---
 # <a name="wcf-data-services-45"></a>WCF Veri Hizmetleri 4.5
 
-WCF Veri Hizmetleri (eskiden "ADO.NET Data Services" olarak bilinirdi), [temsili durum aktarımı (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)semantiğini kullanarak Web veya intranet üzerinden veri sunmak ve kullanmak Için açık veri Protokolü 'Nü (OData) kullanan hizmetler oluşturmanızı sağlayan bir .NET Framework bileşenidir. OData, verileri URI 'Ler tarafından adreslenebilir kaynaklar olarak kullanıma sunar. Al, koy, POST ve DELETE için standart HTTP fiilleri kullanılarak verilere erişilir ve değiştirilir. OData, kaynakları ilişkilendirmeler ile ilgili varlık kümeleri olarak göstermek için [varlık veri modeli](../adonet/entity-data-model.md) varlık ilişkisi kurallarını kullanır.
+WCF Veri Hizmetleri (eskiden "ADO.NET Data Services" olarak bilinirdi), [temsili durum aktarımı (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)semantiğini kullanarak Web veya intranet üzerinden veri sunmak ve kullanmak Için açık veri Protokolü 'Nü (OData) kullanan hizmetler oluşturmanızı sağlayan bir .NET Framework bileşenidir. OData, verileri URI 'Ler tarafından adreslenebilir kaynaklar olarak kullanıma sunar. Al, koy, POST ve DELETE için standart HTTP fiilleri kullanılarak verilere erişilir ve değiştirilir. OData, kaynakları ilişkilendirmeler ile ilgili varlık kümeleri olarak göstermek için [varlık veri modeli](../adonet/entity-data-model.md) varlık ilişkisi kurallarını kullanır.
 
 WCF Veri Hizmetleri, kaynakları adresleme ve güncelleştirme için OData protokolünü kullanır. Bu şekilde, bu hizmetlere OData destekleyen herhangi bir istemciden erişebilirsiniz. OData, iyi bilinen aktarım biçimlerini kullanarak kaynaklara istek yapmanızı ve veri yazmanızı sağlar: Atom, verileri XML olarak değiştirme ve güncelleştirme için bir standartlar kümesi ve JavaScript Nesne Gösterimi (JSON), AJAX 'ta yaygın olarak kullanılan metin tabanlı veri değişim biçimi uygulamaları.
 
@@ -32,10 +32,6 @@ Hemen hızlı bir şekilde geçmek istiyorum...
 
 - [Başlarken](getting-started-with-wcf-data-services.md)
 
-- [Silverlight hızlı başlangıç](https://go.microsoft.com/fwlink/?LinkID=192782)
-
-- [Windows Phone geliştirme için Silverlight hızlı başlangıcı](https://go.microsoft.com/fwlink/?LinkID=214535)
-
 Yalnızca bana bir kod göster...
 
 - [Hızlı başlangıç](quickstart-wcf-data-services.md)
@@ -46,29 +42,14 @@ Yalnızca bana bir kod göster...
 
 OData hakkında daha fazla bilgi edinmek istiyorum...
 
-- [Teknik İnceleme: OData 'e giriş](https://go.microsoft.com/fwlink/?LinkId=220867)
-
-- [Veri Protokolü Web sitesini aç](https://go.microsoft.com/fwlink/?LinkID=184554)
-
-- [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
-
-- [OData: sık sorulan sorular](https://go.microsoft.com/fwlink/?LinkId=185867)
-
-Bazı videoları izlemek istiyorum...
-
-- [WCF Veri Hizmetleri için başlangıç kılavuzu](https://go.microsoft.com/fwlink/?LinkId=220864)
-
-- [Geliştirici videolarını WCF Veri Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=220861)
-
-- [OData: Geliştirici Web sitesi](https://go.microsoft.com/fwlink/?LinkId=185866)
+- [Teknik İnceleme: OData 'e giriş](https://download.microsoft.com/download/E/5/A/E5A59052-EE48-4D64-897B-5F7C608165B8/IntroducingOData.pdf)
+- [Veri Protokolü Web sitesini aç](https://www.odata.org/)
+- [OData: SDK](https://www.odata.org/ecosystem/)
 
 Uçtan uca örnekleri görmek istiyorum...
 
-- [MSDN örnekleri galerisinde WCF Veri Hizmetleri belge örnekleri](https://go.microsoft.com/fwlink/?LinkID=220865)
-
-- [MSDN örnekleri galerisinde diğer WCF Veri Hizmetleri örnekleri](https://go.microsoft.com/fwlink/?LinkId=220866)
-
-- [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [Hızlı başlangıç WCF Veri Hizmetleri](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/WCF%20Data%20Services%20Quickstart%20(OData%20Service%20and%20WPF%20Client))
+- [OData SDK-örnek kod](https://www.odata.org/ecosystem/#sdk)
 
 Visual Studio ile nasıl tümleştirilir?
 
@@ -82,17 +63,7 @@ Bununla ne yapabilirim?
 
 - [Genel bakış](wcf-data-services-overview.md)
 
-- [Teknik İnceleme: OData 'e giriş](https://go.microsoft.com/fwlink/?LinkId=220867)
-
 - [Uygulama Senaryoları](application-scenarios-wcf-data-services.md)
-
-Silverlight kullanmak istiyorum...
-
-- [Silverlight hızlı başlangıç](https://go.microsoft.com/fwlink/?LinkID=192782)
-
-- [WCF Veri Hizmetleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149)
-
-- [Silverlight 'ı kullanmaya başlama](https://go.microsoft.com/fwlink/?LinkId=148366)
 
 LINQ kullanmak istiyorum...
 
@@ -104,13 +75,9 @@ LINQ kullanmak istiyorum...
 
 Hala daha fazla bilgi gerekiyor...
 
-- [Ekip Blogu WCF Veri Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=150511)
+- [Ekip Blogu WCF Veri Hizmetleri](https://docs.microsoft.com/archive/blogs/astoriateam/)
 
 - [Kaynaklar](wcf-data-services-resources.md)
-
-- [WCF Veri Hizmetleri Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=220868)
-
-- [Veri Protokolü Web sitesini aç](https://go.microsoft.com/fwlink/?LinkID=184554)
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
@@ -136,4 +103,4 @@ OData akışlarını kullanıma sunan bir veri hizmetinin nasıl oluşturulduğu
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temsili durum aktarımı (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)
+- [Temsili durum aktarımı (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)

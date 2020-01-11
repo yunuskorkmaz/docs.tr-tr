@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 09fd95ba5f3aee59f2abdfbb4e64eb6202e2b873
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 5741e8cdd51e00d5459c4c1032a56682429aab17
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394427"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901644"
 ---
 ### <a name="mvc-pubternal-types-changed-to-internal"></a>MVC: "Pubternal" türleri iç olarak değiştirildi
 
@@ -16,7 +16,7 @@ ASP.NET Core, "pubternal" türleri `public` olarak belirtilir, ancak bir `.Inter
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3,0
+3.0
 
 #### <a name="old-behavior"></a>Eski davranış
 
@@ -34,7 +34,7 @@ Bu tür türler desteklenen bir ad alanında `public` ya da `internal`olarak iş
 
 Gerçekten `public` olan ve yeni, desteklenen bir ad alanına taşınan türler kullanıyorsanız, başvurularınızı yeni ad alanlarıyla eşleşecek şekilde güncelleştirin.
 
-`internal`olarak işaretlenen türler kullanıyorsanız, alternatif bulmanız gerekir. Daha önce "pubternal" türleri genel kullanım için hiçbir şekilde desteklenmez. Bu ad alanlarında uygulamalarınız için kritik olan belirli türler varsa, [ASPNET/AspNetCore](https://github.com/aspnet/AspNetCore/issues)' da bir sorun yayınlayın. İstenen türlerin `public`yapılması için dikkat edilmesi gereken noktalar olabilir.
+`internal`olarak işaretlenen türler kullanıyorsanız, alternatif bulmanız gerekir. Daha önce "pubternal" türleri genel kullanım için hiçbir şekilde desteklenmez. Bu ad alanlarında uygulamalarınız için kritik olan belirli türler varsa, [DotNet/aspnetcore](https://github.com/dotnet/aspnetcore/issues)' da bir sorun yapın. İstenen türlerin `public`yapılması için dikkat edilmesi gereken noktalar olabilir.
 
 #### <a name="category"></a>Kategori
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d0b44a2-5a14-44a2-9a0e-e8682fd4e106
 topic_type:
 - apiref
-ms.openlocfilehash: 43a5cd57a8eeaba70f1bb1ffb9cab5bb1a067914
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d98181e0d43206bfbf96182d7e4acf33da486348
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130946"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901184"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a>ICLRStrongName::GetHashFromAssemblyFileW Metodu
 Unicode dizesi tarafından belirtilen dosyanın içeriği üzerinde bir karma oluşturur.  
@@ -54,7 +54,7 @@ HRESULT GetHashFromAssemblyFileW (
  dışı `pbHash`bayt cinsinden döndürülen boyut.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](https://go.microsoft.com/fwlink/?LinkId=213878) ).  
+ Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](/windows/win32/seccrypto/common-hresult-values) ).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

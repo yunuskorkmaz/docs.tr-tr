@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 656b8d9eb2bda2d01f001748c992958e95387744
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d047b88f202341a795834809d0b601706c30fcb4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712513"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899850"
 ---
-# <a name="if-c-reference"></a>#if (C# Başvurusu)
+# <a name="if-c-reference"></a>#if (C# başvuru)
 
-C# Derleyici bir `#if` yönergesi ile karşılaştığında, sonunda bir [#endif](preprocessor-endif.md) yönergesi ile, yalnızca belirtilen sembol tanımlanmışsa, yönergeler arasındaki kodu derler. C ve C++' nin aksine, bir simgeye sayısal değer atayamazsınız. İçindeki C# #if deyimleri Boolean olur ve yalnızca sembolün tanımlanıp tanımlanmadığını sınar. Örneğin:
+C# Derleyici bir `#if` yönergesi ile karşılaştığında, sonunda bir [#endif](preprocessor-endif.md) yönergesi ile, yalnızca belirtilen sembol tanımlanmışsa, yönergeler arasındaki kodu derler. C ve C++' nin aksine, bir simgeye sayısal değer atayamazsınız. İçindeki C# `#if` deyimleri Boolean olur ve yalnızca sembolün tanımlanıp tanımlanmadığını sınar. Örneğin:
 
 ```csharp
 #if DEBUG
@@ -23,7 +23,7 @@ C# Derleyici bir `#if` yönergesi ile karşılaştığında, sonunda bir [#endif
 #endif
 ```
 
-[==](../operators/equality-operators.md#equality-operator-) (eşitlik) ve [! =](../operators/equality-operators.md#inequality-operator-) (eşitsizlik) işleçlerini yalnızca [bool](../builtin-types/bool.md) değerleri `true` veya `false`test etmek için kullanabilirsiniz. Doğru, simgenin tanımlandığı anlamına gelir. Deyimin `#if DEBUG` `#if (DEBUG == true)`ile aynı anlamı vardır. İşleçlerini [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (ve), [ &#124; ](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (veya) ve [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (değil) birden çok sembolün tanımlanıp tanımlanmadığını değerlendirmek için. Simgeleri ve işleçleri parantez ile de gruplandırabilirsiniz.
+[==](../operators/equality-operators.md#equality-operator-) (eşitlik) ve [! =](../operators/equality-operators.md#inequality-operator-) (eşitsizlik) işleçlerini yalnızca [bool](../builtin-types/bool.md) değerleri `true` veya `false`test etmek için kullanabilirsiniz. `true`, simgenin tanımlandığı anlamına gelir. Deyimin `#if DEBUG` `#if (DEBUG == true)`ile aynı anlamı vardır. [& & (Ve)](../operators/boolean-logical-operators.md#conditional-logical-and-operator-), [ &#124; &#124; (veya)](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) [ve ' i kullanabilirsiniz. (Not)](../operators/boolean-logical-operators.md#logical-negation-operator-) birden çok sembolün tanımlanıp tanımlanmadığını değerlendirmek için işleçler. Simgeleri ve işleçleri parantez ile de gruplandırabilirsiniz.
 
 ## <a name="remarks"></a>Açıklamalar
 

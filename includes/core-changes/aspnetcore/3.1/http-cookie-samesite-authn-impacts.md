@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: b0d093cc30a09b3248cc57a521b386bf581b5451
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 02602c70689a6d2729e03d3d7230cda5ae7a4994
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552156"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75902030"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: Browser SameSite değişikliklerinin etkisi kimlik doğrulaması
 
 Chrome ve Firefox gibi bazı tarayıcılar, tanımlama bilgileri için `SameSite` uygulamalarında önemli değişiklikler yaptı. Değişiklikler, OpenID Connect ve WS-Federation gibi uzak kimlik doğrulama senaryolarını etkiler ve bu, `SameSite=None`göndermesi için kabul etmelidir. Ancak, iOS 12 ' de ve diğer tarayıcıların bazı eski sürümlerinde `SameSite=None` kesilir. Uygulamanın bu sürümleri algılaması ve `SameSite`atması gerekir.
 
-Bu sorunla ilgili tartışmak için bkz. [ASPNET/AspNetCore # 14996](https://github.com/aspnet/AspNetCore/issues/14996).
+Bu sorunla ilgili tartışmak için bkz. [DotNet/aspnetcore # 14996](https://github.com/dotnet/aspnetcore/issues/14996).
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 

@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core ve .NET hakkında bilgi edinmenize yardımc
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 5132415a6be03787111aaed8d027d436bb6820fe
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.openlocfilehash: e64d0fdd02b28a1c9f21f06305f5ef278fb2827b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884442"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901031"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET örnekleri ve öğreticiler
 
@@ -107,7 +107,7 @@ Birçok konuda, GitHub 'dan görüntülenmek veya indirmek için kullanılabilen
 
 1. Aşağıdaki yordamlardan birini gerçekleştirerek örnek kodu içeren depoyu indirin:
    * Deponun bir ZIP kopyasını yerel sisteminize indirin. Sıkıştırılmış Arşivi ZIP olarak kaldırın.
-   * Depoyu [çatalla](https://help.github.com/articles/fork-a-repo/) ve çatalınızı yerel sisteminize [klonlayın](https://help.github.com/articles/cloning-a-repository/) . Dallama ve kopyalama, Çatalınıza değişiklikler gerçekleştirerek ve sonra resmi docs deposu için bir çekme isteği oluşturarak belgelere katkı sağlar. Daha fazla bilgi için bkz. [.net belgeleri katkıda bulunan Kılavuzu](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) ve [ASP.net docs katkıda bulunan Kılavuzu](https://github.com/aspnet/Docs/blob/master/CONTRIBUTING.md).
+   * Depoyu [çatalla](https://help.github.com/articles/fork-a-repo/) ve çatalınızı yerel sisteminize [klonlayın](https://help.github.com/articles/cloning-a-repository/) . Dallama ve kopyalama, Çatalınıza değişiklikler gerçekleştirerek ve sonra resmi docs deposu için bir çekme isteği oluşturarak belgelere katkı sağlar. Daha fazla bilgi için [.net belgelerine katkıda bulunan Kılavuzu](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) ve [ASP.NET Core docs katkıda bulunan Kılavuzu](https://github.com/aspnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)' na bakın.
    * Depoyu yerel olarak kopyalayın. Bir docs deposunu doğrudan yerel sisteminize klonladığınızda, işleme doğrudan resmi depoya karşı, belge katkılarını daha sonra yapamayabilmeniz mümkün olmayacaktır. Daha sonra belgelere katkıda bulunmak için fırsatı korumak istiyorsanız, daha önce açıklanan çatal ve kopyalama yordamını kullanın.
 1. Deponun klasörlerinde örnek konumuna gidin. Örnek konumunun göreli yolu, örneğin bağlantısını izlediğinizde tarayıcınızın adres çubuğunda görüntülenir.
 1. Örnek çalıştırmak için birkaç seçeneğiniz vardır:

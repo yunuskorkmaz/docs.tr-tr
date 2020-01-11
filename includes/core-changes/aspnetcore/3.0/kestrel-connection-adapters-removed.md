@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: a916af91670dc9c5ceb2ff759cd8ae308fb2c2dc
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 06d5f48566c239e37355496c3f27163d952602c6
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393994"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901714"
 ---
 ### <a name="kestrel-connection-adapters-removed"></a>Kestrel: bağlantı bağdaştırıcıları kaldırıldı
 
-"Pubternal" API 'Lerini `public` ' a taşımanın bir parçası olarak, `IConnectionAdapter` kavramı Kestrel ' den kaldırılmıştır. Bağlantı bağdaştırıcıları bağlantı ara yazılımı ile değiştiriliyor (ASP.NET Core işlem hattındaki HTTP ara hattına benzer ancak alt düzey bağlantılar için). HTTPS ve bağlantı günlüğü bağlantı bağdaştırıcılarından bağlantı ara yazılıma taşındı. Bu uzantı yöntemleri sorunsuz şekilde çalışmaya devam etmelidir, ancak uygulama ayrıntıları değişmiştir.
+"Pubternal" API 'Lerini `public`'a taşıma kapsamında, bir `IConnectionAdapter` kavramı Kestrel ' den kaldırılmıştır. Bağlantı bağdaştırıcıları bağlantı ara yazılımı ile değiştiriliyor (ASP.NET Core işlem hattındaki HTTP ara hattına benzer ancak alt düzey bağlantılar için). HTTPS ve bağlantı günlüğü bağlantı bağdaştırıcılarından bağlantı ara yazılıma taşındı. Bu uzantı yöntemleri sorunsuz şekilde çalışmaya devam etmelidir, ancak uygulama ayrıntıları değişmiştir.
 
-Daha fazla bilgi için bkz. [ASPNET/AspNetCore # 11412](https://github.com/aspnet/AspNetCore/pull/11412). Tartışma için bkz. [ASPNET/AspNetCore # 11475](https://github.com/aspnet/AspNetCore/issues/11475).
+Daha fazla bilgi için bkz. [DotNet/aspnetcore # 11412](https://github.com/dotnet/aspnetcore/pull/11412). Tartışma için bkz. [DotNet/aspnetcore # 11475](https://github.com/dotnet/aspnetcore/issues/11475).
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
@@ -18,11 +18,11 @@ Daha fazla bilgi için bkz. [ASPNET/AspNetCore # 11412](https://github.com/aspne
 
 #### <a name="old-behavior"></a>Eski davranış
 
-@No__t-0 kullanılarak Kestrel genişletilebilirlik bileşenleri oluşturuldu.
+`IConnectionAdapter`kullanılarak Kestrel genişletilebilirlik bileşenleri oluşturuldu.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Kestrel genişletilebilirlik bileşenleri, [Ara yazılım](https://github.com/aspnet/AspNetCore/pull/11412/files#diff-89acc06acf1b2e96bbdb811ce523619f)olarak oluşturulur.
+Kestrel genişletilebilirlik bileşenleri, [Ara yazılım](https://github.com/dotnet/aspnetcore/pull/11412/files#diff-89acc06acf1b2e96bbdb811ce523619f)olarak oluşturulur.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -30,7 +30,7 @@ Bu değişiklik, daha esnek bir genişletilebilirlik mimarisi sağlamaya yöneli
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-@No__t-0 ' ın tüm uygulamalarını, [burada](https://github.com/aspnet/AspNetCore/pull/11412/files#diff-89acc06acf1b2e96bbdb811ce523619f)gösterildiği gibi yeni ara yazılım düzenlerini kullanacak şekilde dönüştürün.
+`IConnectionAdapter` tüm uygulamalarını, [burada](https://github.com/dotnet/aspnetcore/pull/11412/files#diff-89acc06acf1b2e96bbdb811ce523619f)gösterildiği gibi yeni ara yazılım düzenlerini kullanacak şekilde dönüştürün.
 
 #### <a name="category"></a>Kategori
 

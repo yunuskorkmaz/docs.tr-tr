@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3f702febc78488b9413ec9303ded211493650f02
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1e081c9f37fbd7ab754ce44ba89d7aa5cabfc219
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198595"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901749"
 ---
 ### <a name="mvc-precompilation-tool-deprecated"></a>MVC: ön derleme aracı kullanım dışı
 
@@ -30,7 +30,7 @@ Razor SDK daha fazla işlevsellik sağlar ve derleme zamanında *. cshtml* dosya
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-ASP.NET Core 2,1 veya sonraki bir sürümü kullananlar için, [Razor SDK 'sında](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0)ön derleme için yerel desteği kullanmak üzere güncelleştirin. Hatalar veya eksik özellikler Razor SDK 'ya geçişi engelliyorsa, [ASPNET/AspNetCore](https://github.com/aspnet/AspNetCore/issues)yolunda bir sorun açın.
+ASP.NET Core 2,1 veya sonraki bir sürümü kullananlar için, [Razor SDK 'sında](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0)ön derleme için yerel desteği kullanmak üzere güncelleştirin. Hatalar veya eksik özellikler Razor SDK 'ya geçişi engelliyorsa, [DotNet/aspnetcore](https://github.com/dotnet/aspnetcore/issues)' da bir sorun açın.
 
 #### <a name="category"></a>Kategori
 

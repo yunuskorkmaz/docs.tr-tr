@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f5a2ec8-e776-4fd8-bda6-937b6834575a
 topic_type:
 - apiref
-ms.openlocfilehash: ad3b151165eb233bd3a4a78d8f4d612a696b7e93
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a0bcc62a1715fb455f0affee64a351cabe0ba3f6
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135104"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901132"
 ---
 # <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a>ICLRStrongName::StrongNameGetBlobFromImage Yöntemi
 Belirtilen bellek adresindeki derleme görüntüsünün ikili gösterimini alır.  
@@ -50,7 +50,7 @@ HRESULT StrongNameGetBlobFromImage (
  [in, out] `pbBlob`istenen en büyük boyut (bayt cinsinden). Dönüş sonrasında, `pbBlob`bayt cinsinden gerçek boyut.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](https://go.microsoft.com/fwlink/?LinkId=213878) ).  
+ Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](/windows/win32/seccrypto/common-hresult-values) ).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

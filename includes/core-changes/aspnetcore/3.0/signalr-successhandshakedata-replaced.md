@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: e9278320ee3fdf9e6b89698d187f047c309ea791
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1d8bcaf68d44f27642048c1c207b52c55b604690
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198591"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75902042"
 ---
 ### <a name="signalr-handshakeprotocolsuccesshandshakedata-replaced"></a>SignalR: HandshakeProtocol. Başarıkıandshakedata değişti
 
-[Handshakeprotocol. Fshandshakedata](https://github.com/aspnet/AspNetCore/blob/c5b2bc0df2a0027832bf7d01dfb19ca39cd08ae6/src/SignalR/common/SignalR.Common/src/Protocol/HandshakeProtocol.cs#L27) alanı kaldırılmıştır ve, belirli bir `IHubProtocol` verilen başarılı bir el sıkışma yanıtı üreten bir yardımcı yöntemle değiştirilmiştir.
+[Handshakeprotocol. Fshandshakedata](https://github.com/dotnet/aspnetcore/blob/c5b2bc0df2a0027832bf7d01dfb19ca39cd08ae6/src/SignalR/common/SignalR.Common/src/Protocol/HandshakeProtocol.cs#L27) alanı kaldırılmıştır ve belirli bir `IHubProtocol`verilen başarılı bir el sıkışma yanıtı üreten bir yardımcı yöntem ile değiştirilmiştir.
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
@@ -16,7 +16,7 @@ ms.locfileid: "73198591"
 
 #### <a name="old-behavior"></a>Eski davranış
 
-`HandshakeProtocol.SuccessHandshakeData` bir `public static ReadOnlyMemory<byte>` alanıdır.
+`HandshakeProtocol.SuccessHandshakeData` bir `public static ReadOnlyMemory<byte>` alandır.
 
 #### <a name="new-behavior"></a>Yeni davranış
 

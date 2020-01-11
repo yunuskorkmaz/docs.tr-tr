@@ -2,12 +2,12 @@
 title: .NET Core son değişiklikleri
 description: .NET Core 'un her sürümündeki son değişiklikler hakkında bilgi edinin.
 ms.date: 11/27/2019
-ms.openlocfilehash: 3e1b2a7d0edea1c06af340711182e533aa007c61
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8bd8ebc803a80069530fe1cf6adc66769f7d6c85
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343747"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900152"
 ---
 # <a name="breaking-change-selectors"></a>Son değişiklik seçicileri
 
@@ -34,7 +34,7 @@ Ayrıca, aşağıdaki GitHub depolarında .NET Core 'da ortaya çıkan son deği
 
 - .NET Core için [DotNet/docs](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change) deposu.
 - ASP.NET Core için, [ASPNET/Duyurular](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) deposu.
-- Entity Framework Core için, [ASPNET/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) deposu.
+- Entity Framework Core için [DotNet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) deposu.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

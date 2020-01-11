@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c861d61cbbe8075db4b17a702e863336ea621f2b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 53d2c989120c92f4e2d18f50ce4b364bd4c9b604
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198588"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901939"
 ---
 ### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP: tüm sunucularda zaman uyumlu GÇ devre dışı
 
@@ -12,7 +12,7 @@ ASP.NET Core 3,0 ' den başlayarak, zaman uyumlu sunucu işlemleri varsayılan o
 
 #### <a name="change-description"></a>Açıklamayı Değiştir
 
-`AllowSynchronousIO`, her bir sunucuda `HttpRequest.Body.Read`, `HttpResponse.Body.Write` ve `Stream.Flush` gibi zaman uyumlu GÇ API 'Lerini sağlayan veya devre dışı bırakan bir seçenektir. Bu API 'Ler, bir iş parçacığı kaynağı ve uygulama askıda kalıyor. ASP.NET Core 3,0 Preview 3 ' te başlayarak bu zaman uyumlu işlemler varsayılan olarak devre dışıdır.
+`AllowSynchronousIO`, her bir sunucuda `HttpRequest.Body.Read`, `HttpResponse.Body.Write`ve `Stream.Flush`gibi zaman uyumlu GÇ API 'Lerini sağlayan veya devre dışı bırakan bir seçenektir. Bu API 'Ler, bir iş parçacığı kaynağı ve uygulama askıda kalıyor. ASP.NET Core 3,0 Preview 3 ' te başlayarak bu zaman uyumlu işlemler varsayılan olarak devre dışıdır.
 
 Etkilenen sunucular:
 
@@ -27,7 +27,7 @@ Etkilenen sunucular:
 - `Synchronous operations are disallowed. Call WriteAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call FlushAsync or set AllowSynchronousIO to true instead.`
 
-Her sunucu, bu davranışı denetleyen `AllowSynchronousIO` seçeneğine sahiptir ve bunların tümü için varsayılan değer olarak `false` ' dir.
+Her sunucu, bu davranışı denetleyen bir `AllowSynchronousIO` seçeneğine sahiptir ve bunların tümü için varsayılan olarak `false`.
 
 Davranış, geçici bir risk azaltma olarak istek başına temelinde da geçersiz kılınabilir. Örneğin:
 
@@ -41,7 +41,7 @@ if (syncIOFeature != null)
 
 `Dispose`içinde zaman uyumlu bir API çağıran `TextWriter` veya başka bir akış ile ilgili sorun yaşıyorsanız, bunun yerine yeni `DisposeAsync` API 'sini çağırın.
 
-Tartışma için bkz. [ASPNET/AspNetCore # 7644](https://github.com/aspnet/AspNetCore/issues/7644).
+Tartışma için bkz. [DotNet/aspnetcore # 7644](https://github.com/dotnet/aspnetcore/issues/7644).
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
@@ -49,7 +49,7 @@ Tartışma için bkz. [ASPNET/AspNetCore # 7644](https://github.com/aspnet/AspNe
 
 #### <a name="old-behavior"></a>Eski davranış
 
-Varsayılan olarak `HttpRequest.Body.Read`, `HttpResponse.Body.Write` ve `Stream.Flush` ' ye izin verilir.
+`HttpRequest.Body.Read`, `HttpResponse.Body.Write`ve `Stream.Flush` varsayılan olarak izin verilir.
 
 #### <a name="new-behavior"></a>Yeni davranış
 

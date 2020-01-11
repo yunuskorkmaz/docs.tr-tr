@@ -1,14 +1,14 @@
 ---
 title: Çöp toplayıcı yapılandırma ayarları
 description: Çöp toplayıcının .NET Core uygulamaları için belleği nasıl yönettiğini yapılandırmak üzere çalışma zamanı ayarları hakkında bilgi edinin.
-ms.date: 11/13/2019
+ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 41157db7770a89f4402fa6675f7031c508f33aca
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 24e5c47de781e7eed5f76d2c551cac2dce1e8f05
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740548"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900102"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Çöp toplama için çalışma zamanı yapılandırma seçenekleri
 
@@ -20,7 +20,7 @@ Ayarlar bu sayfadaki gruplar halinde düzenlenir. Her grup içindeki ayarlar, be
 >
 > - Bu ayarlar ayrıca uygulama çalışırken dinamik olarak değiştirilebilir, bu nedenle ayarladığınız tüm çalışma zamanı ayarları geçersiz kılınabilir.
 > - [Gecikme düzeyi](../../standard/garbage-collection/latency.md)gibi bazı ayarlar tipik olarak yalnızca TASARıM zamanında API aracılığıyla ayarlanır. Bu tür ayarlar bu sayfadan çıkarılır.
-> - Sayı değerleri için, *runtimeconfig. JSON* dosyasındaki ayarlar için ondalık gösterimi ve ortam değişkeni ayarları için onaltılık gösterimi kullanın.
+> - Sayı değerleri için, *runtimeconfig. JSON* dosyasındaki ayarlar için ondalık gösterimi ve ortam değişkeni ayarları için onaltılık gösterimi kullanın. Onaltılık değerler için, bunları "0x" öneki olmadan veya olmadan belirtebilirsiniz.
 
 ## <a name="flavors-of-garbage-collection"></a>Çöp toplamanın türleri
 
@@ -41,6 +41,18 @@ Ayarlar bu sayfadaki gruplar halinde düzenlenir. Her grup içindeki ayarlar, be
 | **Ortam değişkeni** | `COMPlus_gcServer` | `0`-iş istasyonu<br/>`1`-sunucu | .NET Core 1,0 |
 | **.NET Framework için App. config** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false`-iş istasyonu<br/>`true`-sunucu |  |
 
+Örnek:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.Server": true
+      }
+   }
+}
+```
+
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System. GC. eşzamanlı/COMPlus_gcConcurrent
 
 - Arka plan (eşzamanlı) Çöp toplamanın etkinleştirilip etkinleştirilmeyeceğini yapılandırır.
@@ -53,6 +65,18 @@ Ayarlar bu sayfadaki gruplar halinde düzenlenir. Her grup içindeki ayarlar, be
 | **Ortam değişkeni** | `COMPlus_gcConcurrent` | `true` arka plan GC<br/>`false`-eş zamanlı olmayan GC | .NET Core 1,0 |
 | **.NET Framework için App. config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true` arka plan GC<br/>`false`-eş zamanlı olmayan GC |  |
 
+Örnek:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.Concurrent": false
+      }
+   }
+}
+```
+
 ## <a name="manage-resource-usage"></a>Kaynak kullanımını yönetme
 
 Çöp toplayıcının bellek ve işlemci kullanımını yönetmek için bu bölümde açıklanan ayarları kullanın.
@@ -62,7 +86,7 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 ### <a name="systemgcheapcountcomplus_gcheapcount"></a>System. GC. HeapCount/COMPlus_GCHeapCount
 
 - Çöp toplayıcı tarafından oluşturulan Heap sayısını sınırlandırır.
-- Yalnızca sunucu çöp toplama (GC) için geçerlidir.
+- Yalnızca sunucu çöp toplama için geçerlidir.
 - GC işlemci benzeşimi etkinse, varsayılan olarak, yığın sayısı ayarı GC sayfa@@/iş parçacıklarını ilk `n` işlemcilere `n`. (Tam olarak hangi işlemcilerin olduğunu belirtmek için, bu maskeyi seçin veya aralıklar ayarlarını kesin olarak belirleyin.)
 - GC işlemci benzeşimi devre dışıysa, bu ayar GC yığınlarının sayısını sınırlar.
 - Daha fazla bilgi için [Gcheapcount açıklamalarını](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md#remarks)inceleyin.
@@ -71,23 +95,47 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.HeapCount` | *ondalık değer* | .NET Core 3.0 |
 | **Ortam değişkeni** | `COMPlus_GCHeapCount` | *onaltılık değer* | .NET Core 3.0 |
-| **.NET Framework için App. config** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | *ondalık değer* | 4.6.2 |
+| **.NET Framework için App. config** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | *ondalık değer* | .NET Framework 4.6.2 |
+
+Örnek:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapCount": 16
+      }
+   }
+}
+```
 
 > [!TIP]
-> *Runtimeconfig. JSON*içinde seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, Heap sayısını 16 ile sınırlamak için değerler JSON dosyası için 16, ortam değişkeni için 10 olur.
+> *Runtimeconfig. JSON*içinde seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, Heap sayısını 16 ile sınırlamak için değerler JSON dosyası için 16, ortam değişkeni için 0x10 veya 10 olur.
 
 ### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System. GC. ısıpaffinitizemask/COMPlus_GCHeapAffinitizeMask
 
 - Çöp toplayıcı iş parçacıklarının kullanması gereken tam işlemcileri belirtir.
 - `System.GC.NoAffinitize` `true`olarak ayarlanarak, işlemci benzeşimi devre dışı bırakıldıysa, bu ayar yoksayılır.
-- Yalnızca sunucu çöp toplama (GC) için geçerlidir.
-- Değer, işlem için kullanılabilir olan işlemcileri tanımlayan bir bit maskesidir. Örneğin, bir 1023 ondalık değeri (veya ortam değişkenini kullanıyorsanız, 3FF onaltılı değeri), ikili gösterimde 0011 1111 1111 ' dir. Bu, ilk 10 işlemcinin kullanılacağını belirtir. Sonraki 10 işlemciyi belirtmek için, işlemciler 10-19, bir ondalık değeri olan 1047552 ' in (veya onaltılı bir FFC00) bir değer olan 1111 1111 1100 0000 0000 ikili değere denk gelir.
+- Yalnızca sunucu çöp toplama için geçerlidir.
+- Değer, işlem için kullanılabilir olan işlemcileri tanımlayan bir bit maskesidir. Örneğin, bir 1023 ondalık değeri (veya ortam değişkenini kullanıyorsanız, 0x3FF veya 3FF onaltılı değeri), ikili gösterimde 0011 1111 1111 ' dir. Bu, ilk 10 işlemcinin kullanılacağını belirtir. Sıradaki 10 işlemciyi belirtmek için, işlemci 10-19 ' 1047552 nin ondalık değerini (veya 0xFFC00 ya da FFC00) bir 1111 1111 1100 0000 0000 ikili değere eşdeğer bir değere belirleyin.
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.HeapAffinitizeMask` | *ondalık değer* | .NET Core 3.0 |
 | **Ortam değişkeni** | `COMPlus_GCHeapAffinitizeMask` | *onaltılık değer* | .NET Core 3.0 |
-| **.NET Framework için App. config** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | *ondalık değer* | 4.6.2 |
+| **.NET Framework için App. config** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | *ondalık değer* | .NET Framework 4.6.2 |
+
+Örnek:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapAffinitizeMask": 1023
+      }
+   }
+}
+```
 
 ### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>System. GC. GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
 
@@ -95,7 +143,7 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 - Bu ayar `System.GC.HeapAffinitizeMask`benzerdir, ancak 64 'den fazla işlemciyi belirtmenizi sağlar.
 - Windows işletim sistemleri için, işlemci numarasını veya aralığını karşılık gelen [CPU grubuyla](/windows/win32/procthread/processor-groups)önek olarak ekleyin, örneğin, "0:1-10, 0:12, 1:50-52, 1:70".
 - `System.GC.NoAffinitize` `true`olarak ayarlanarak, işlemci benzeşimi devre dışı bırakıldıysa, bu ayar yoksayılır.
-- Yalnızca sunucu çöp toplama (GC) için geçerlidir.
+- Yalnızca sunucu çöp toplama için geçerlidir.
 - Daha fazla bilgi için bkz. Maoni Stephens ' blogu üzerinde [> 64 CPU 'su olan MAKINELERDE GC için daha Iyi hale getirme](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) .
 
 | | Ayar adı | Değerler | Sunulan sürüm |
@@ -103,13 +151,25 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 | **runtimeconfig. JSON** | `System.GC.GCHeapAffinitizeRanges` | İşlemci numaralarının veya işlemci numarası aralıklarının virgülle ayrılmış listesi.<br/>UNIX örneği: "1-10, 12, 50-52, 70"<br/>Windows örnek: "0:1-10, 0:12, 1:50-52, 1:70" | .NET Core 3.0 |
 | **Ortam değişkeni** | `COMPlus_GCHeapAffinitizeRanges` | İşlemci numaralarının veya işlemci numarası aralıklarının virgülle ayrılmış listesi.<br/>UNIX örneği: "1-10, 12, 50-52, 70"<br/>Windows örnek: "0:1-10, 0:12, 1:50-52, 1:70" | .NET Core 3.0 |
 
+Örnek:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.GCHeapAffinitizeRanges": "0:1-10,0:12,1:50-52,1:70"
+      }
+   }
+}
+```
+
 ### <a name="complus_gccpugroup"></a>COMPlus_GCCpuGroup
 
 - Çöp toplayıcının [CPU grupları](/windows/win32/procthread/processor-groups) kullanıp kullanmadığını yapılandırır.
 
   64 bitlik bir Windows bilgisayarında birden çok CPU grubu olduğunda, diğer bir deyişle, 64 ' den fazla işlemci varsa, bu öğenin tüm CPU gruplarında çöp toplamayı genişletmelerini etkinleştirir. Çöp toplayıcı, Heap 'ler oluşturmak ve dengelemek için tüm çekirdekleri kullanır.
 
-- Yalnızca 64-bit Windows işletim sistemlerinde sunucu çöp toplama (GC) için geçerlidir.
+- Yalnızca 64-bit Windows işletim sistemlerinde sunucu çöp toplama için geçerlidir.
 - Varsayılan: devre dışı (`0`).
 - Daha fazla bilgi için bkz. Maoni Stephens ' blogu üzerinde [> 64 CPU 'su olan MAKINELERDE GC için daha Iyi hale getirme](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) .
 
@@ -125,14 +185,26 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 ### <a name="systemgcnoaffinitizecomplus_gcnoaffinitize"></a>System. GC. Noafınitize/COMPlus_GCNoAffinitize
 
 - *Çöp toplama* iş parçacıklarının işlemcilerle kullanılıp kullanılmayacağını belirtir. Bir GC iş parçacığını eklemek için yalnızca belirli bir CPU üzerinde çalışabilen anlamına gelir. Her GC iş parçacığı için bir yığın oluşturulur.
-- Yalnızca sunucu çöp toplama (GC) için geçerlidir.
+- Yalnızca sunucu çöp toplama için geçerlidir.
 - Varsayılan: işlemciler (`false`) ile atık toplama iş parçacıklarını ön olarak başlatma.
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.NoAffinitize` | `false`-afze<br/>`true`-yok etme | .NET Core 3.0 |
 | **Ortam değişkeni** | `COMPlus_GCNoAffinitize` | `0`-afze<br/>`1`-yok etme | .NET Core 3.0 |
-| **.NET Framework için App. config** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false`-afze<br/>`true`-yok etme | 4.6.2 |
+| **.NET Framework için App. config** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false`-afze<br/>`true`-yok etme | .NET Framework 4.6.2 |
+
+Örnek:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.NoAffinitize": true
+      }
+   }
+}
+```
 
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System. GC. HeapHardLimit/COMPlus_GCHeapHardLimit
 
@@ -143,8 +215,20 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 | **runtimeconfig. JSON** | `System.GC.HeapHardLimit` | *ondalık değer* | .NET Core 3.0 |
 | **Ortam değişkeni** | `COMPlus_GCHeapHardLimit` | *onaltılık değer* | .NET Core 3.0 |
 
+Örnek:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapHardLimit": 209715200
+      }
+   }
+}
+```
+
 > [!TIP]
-> *Runtimeconfig. JSON*içinde seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, 80.000 baytlık bir yığın sabit sınırı belirtmek için değerler, JSON dosyası için 80000 ve ortam değişkeni için 13880 olur.
+> *Runtimeconfig. JSON*içinde seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, 200 mebibytes (MIB) yığın sabit sınırı belirtmek için, değerler JSON dosyası için 209715200 ve ortam değişkeni için 0xC800000 veya C800000 olur.
 
 ### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System. GC. HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 
@@ -155,8 +239,20 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 | **runtimeconfig. JSON** | `System.GC.HeapHardLimitPercent` | *ondalık değer* | .NET Core 3.0 |
 | **Ortam değişkeni** | `COMPlus_GCHeapHardLimitPercent` | *onaltılık değer* | .NET Core 3.0 |
 
+Örnek:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapHardLimitPercent": 30
+      }
+   }
+}
+```
+
 > [!TIP]
-> *Runtimeconfig. JSON*içinde seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, yığın kullanımını %30 olarak sınırlandırmak için değerler JSON dosyası için 30, ortam değişkeni için ise
+> *Runtimeconfig. JSON*içinde seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, yığın kullanımını %30 olarak sınırlandırmak için değerler JSON dosyası için 30, ortam değişkeni için 0x1E veya 1E olur.
 
 ### <a name="systemgcretainvmcomplus_gcretainvm"></a>System. GC. RetainVM/COMPlus_GCRetainVM
 
@@ -167,6 +263,18 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.RetainVM` | `false`-işletim sistemine yayın<br/>`true`-bekleme üzerine koy| .NET Core 1,0 |
 | **Ortam değişkeni** | `COMPlus_GCRetainVM` | `0`-işletim sistemine yayın<br/>`1`-bekleme üzerine koy | .NET Core 1,0 |
+
+Örnek:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.RetainVM": true
+      }
+   }
+}
+```
 
 ## <a name="large-pages"></a>Büyük sayfalar
 
@@ -209,8 +317,20 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 | **Ortam değişkeni** | `COMPlus_GCLOHThreshold` | *onaltılık değer* | .NET Core 1,0 |
 | **.NET Framework için App. config** | [GCLOHThreshold](../../framework/configure-apps/file-schema/runtime/gclohthreshold-element.md) | *ondalık değer* | .NET Framework 4,8 |
 
+Örnek:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.LOHThreshold": 120000
+      }
+   }
+}
+```
+
 > [!TIP]
-> *Runtimeconfig. JSON*içinde seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, 120.000 baytlık bir eşik boyutu ayarlamak için değerler JSON dosyası için 120000, ortam değişkeni için ise 1D4C0 olur.
+> *Runtimeconfig. JSON*içinde seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, 120.000 baytlık bir eşik boyutu ayarlamak için, değerler JSON dosyası için 120000, ve ortam değişkeni için 0x1D4C0 ya da 1D4C0 olur.
 
 ## <a name="standalone-gc"></a>Tek başına GC
 

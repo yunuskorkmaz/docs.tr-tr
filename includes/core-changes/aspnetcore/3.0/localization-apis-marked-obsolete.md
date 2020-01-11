@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: da1ec7908b3082fc61313cb805773aa600bc1b5d
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8cb0aca991f5adfe4561ef56090cb9f7b2e56283
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394418"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901892"
 ---
 ### <a name="localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete"></a>Yerelleştirme: ResourceManagerWithCultureStringLocalizer ve WithCulture artık kullanılmıyor olarak işaretlendi
 
 [ResourceManagerWithCultureStringLocalizer](https://github.com/aspnet/Localization/blob/43b974482c7b703c92085c6f68b3b23d8fe32720/src/Microsoft.Extensions.Localization/ResourceManagerWithCultureStringLocalizer.cs#L18) sınıfı ve [withculture](https://github.com/aspnet/Localization/blob/master/src/Microsoft.Extensions.Localization/ResourceManagerStringLocalizer.cs#L154-L170) arabirim üyesi, genellikle yerelleştirme kullanıcıları için, özellikle kendi `IStringLocalizer` uygulamasını oluştururken karışıklık kaynaklarıdır. Bu öğeler kullanıcıya bir `IStringLocalizer` örneği "dil başına, kaynak başına" olan izlenimi verir. Gerçekte, örneklerin yalnızca "kaynak başına" olması gerekir. Aranan dil, yürütme sırasında `CultureInfo.CurrentUICulture` tarafından belirlenir. Karışıklık kaynağını ortadan kaldırmak için, API 'Ler ASP.NET Core 3,0 Preview 3 ' te eski olarak işaretlendi. API 'Ler gelecek bir sürümde kaldırılacak.
 
-Bağlam için bkz. [ASPNET/AspNetCore # 3324](https://github.com/aspnet/AspNetCore/issues/3324). Tartışma için bkz. [ASPNET/AspNetCore # 7756](https://github.com/aspnet/AspNetCore/issues/7756).
+Bağlam için bkz. [DotNet/aspnetcore # 3324](https://github.com/dotnet/aspnetcore/issues/3324). Tartışma için bkz. [DotNet/aspnetcore # 7756](https://github.com/dotnet/aspnetcore/issues/7756).
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3,0
+3.0
 
 #### <a name="old-behavior"></a>Eski davranış
 

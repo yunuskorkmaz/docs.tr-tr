@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568800"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900919"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Veri Hizmetleri)
 
@@ -39,7 +39,7 @@ Bir veri hizmetini ikili verilerin akışını destekleyecek şekilde yapıland�
 
 5. Sunucuda veya bir veri kaynağında ikili kaynaklara erişimi etkinleştirin.
 
-Bu konudaki örnekler, [veri hizmetleri akış sağlayıcısı serisi: bir akış sağlayıcısı uygulama (1. bölüm)](https://go.microsoft.com/fwlink/?LinkID=198989)hakkında ayrıntılı olarak açıklanan örnek bir akış fotoğrafı hizmetini temel alır. Bu örnek hizmetin kaynak kodu, MSDN kod galerisindeki [akış fotoğrafı veri hizmeti örnek sayfasında](https://go.microsoft.com/fwlink/?LinkID=198988) bulunur.
+Bu konudaki örnekler, [veri hizmetleri akış sağlayıcısı serisi: bir akış sağlayıcısı uygulama (1. bölüm)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1)hakkında ayrıntılı olarak açıklanan örnek bir akış fotoğrafı hizmetini temel alır. Akış fotoğrafı veri hizmeti örneği için kaynak kodu [GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample)' da kullanılabilir.
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Veri modelinde medya bağlantısı girişi tanımlama
 
@@ -53,7 +53,7 @@ Bir varlığın medya bağlantı girişi olduğunu belirtmek için, aşağıdaki
 
 Ayrıca, ad alanını varlığa veya veri modelini tanımlayan. edmx ya da. csdl dosyasının köküne `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` eklemeniz gerekir.
 
-Entity Framework sağlayıcıyı kullanan ve bir medya kaynağı sunan bir veri hizmeti örneği için, bkz. Post [a Services akış sağlayıcısı serisi: bir akış sağlayıcısı uygulama (1. bölüm)](https://go.microsoft.com/fwlink/?LinkID=198989).
+Entity Framework sağlayıcıyı kullanan ve bir medya kaynağı sunan bir veri hizmeti örneği için, bkz. Post [a Services akış sağlayıcısı serisi: bir akış sağlayıcısı uygulama (1. bölüm)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1).
 
 **Yansıma Sağlayıcısı**
 

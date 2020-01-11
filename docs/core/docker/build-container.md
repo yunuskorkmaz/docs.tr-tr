@@ -1,15 +1,15 @@
 ---
 title: Docker öğreticisi ile uygulama Kapsayıcılı hale getirme
-description: Bu öğreticide, Docker ile bir .NET Core uygulamasını kapsayıya kapsayıtabilecek öğreneceksiniz.
-ms.date: 06/26/2019
+description: Bu öğreticide, Docker ile bir .NET Core uygulamasını kapsayıya kapsayıtabilecek hakkında bilgi edineceksiniz.
+ms.date: 01/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e012fcf78c88e7f64f6ee205cd69b69683bed9c3
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 17d3dfbe58770b19a75be1dad3ae03406584992c
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740765"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900109"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Öğretici: bir .NET Core uygulamasını Kapsayıize edin
 
@@ -26,30 +26,19 @@ Bu öğretici, .NET Core uygulamanızı içeren bir Docker görüntüsü oluştu
 
 Docker kapsayıcısının bir .NET Core uygulaması için görevleri oluşturup dağıtduklarını anlayacaksınız. *Docker platformu* , uygulamaları *Docker görüntüleri*olarak hızlı bir şekilde oluşturmak ve paketlemek için *Docker altyapısını* kullanır. Bu görüntüler, katmanlı bir kapsayıcıda dağıtılacak ve çalıştırılacak *Dockerfile* biçiminde yazılır.
 
+> [!TIP]
+> Mevcut bir ASP.NET Core uygulamasıyla çalışıyorsanız, [bir ASP.NET Core uygulama öğreticisini nasıl kapsayıtabilecek hakkında bilgi edinin](/aspnet/core/host-and-deploy/docker/building-net-docker-images) .
+
 ## <a name="prerequisites"></a>Prerequisites
 
 Aşağıdaki önkoşulları yükler:
 
-- [.NET Core 2,2 SDK](https://dotnet.microsoft.com/download)\
+- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download)\
 .NET Core yüklüyse, kullanmakta olduğunuz SDK 'yı öğrenmek için `dotnet --info` komutunu kullanın.
 
 - [Docker Community sürümü](https://www.docker.com/products/docker-desktop)
 
-- *Dockerfile* ve .NET Core örnek uygulaması için geçici çalışma klasörü. Bu öğreticide, `docker-working` adı çalışma klasörü olarak kullanılır.
-
-### <a name="use-sdk-version-22"></a>SDK sürüm 2,2 kullanma
-
-3,0 gibi daha yeni bir SDK kullanıyorsanız uygulamanızın 2,2 SDK 'Yı kullanmaya zorlandığından emin olun. Çalışma klasörünüzde *Global. JSON* adlı bir dosya oluşturun ve aşağıdaki JSON kodunu yapıştırın:
-
-```json
-{
-  "sdk": {
-    "version": "2.2.100"
-  }
-}
-```
-
-Bu dosyayı kaydedin. Dosya varlığı, .NET Core 'un bu klasörden ve altında çağrılan tüm `dotnet` komutları için 2,2 sürümünü kullanmasına zorlanır.
+- *Dockerfile* ve .NET Core örnek uygulaması için geçici çalışma klasörü. Bu öğreticide, *Docker-Working* adı çalışma klasörü olarak kullanılır.
 
 ## <a name="create-net-core-app"></a>.NET Core uygulaması oluşturma
 
@@ -63,7 +52,6 @@ Klasör ağaclarınız şöyle görünür:
 
 ```
 docker-working
-│   global.json
 │
 └───app
     │   myapp.csproj
@@ -71,6 +59,7 @@ docker-working
     │
     └───obj
             myapp.csproj.nuget.cache
+            myapp.csproj.nuget.dgspec.json
             myapp.csproj.nuget.g.props
             myapp.csproj.nuget.g.targets
             project.assets.json
@@ -150,45 +139,56 @@ Uygulama için komut satırına bir sayı geçirirseniz, bu miktarı yalnızca b
 dotnet publish -c Release
 ```
 
-Bu komut, uygulamanızı *Yayımla* klasörüne derler. Çalışma klasöründeki *Yayımla* klasörünün yolu `.\app\bin\Release\netcoreapp2.2\publish\` olmalıdır
+Bu komut, uygulamanızı *Yayımla* klasörüne derler. Çalışma klasöründeki *Yayımla* klasörünün yolu `.\app\bin\Release\netcoreapp3.1\publish\` olmalıdır
 
-*MyApp. dll* dosyasının oluşturulduğunu doğrulamak için Yayımla klasörünün bir dizin listesini alın. *Uygulama* klasöründen aşağıdaki komutlardan birini çalıştırın:
+*App* klasöründen, *MyApp. dll* dosyasının oluşturulduğunu doğrulamak için Yayımla klasörünün bir dizin listesini alın. 
 
 ```console
-> dir bin\Release\netcoreapp2.2\publish
- Directory of C:\docker-working\app\bin\Release\netcoreapp2.2\publish
+> dir bin\Release\netcoreapp3.1\publish
 
-04/05/2019  11:00 AM    <DIR>          .
-04/05/2019  11:00 AM    <DIR>          ..
-04/05/2019  11:00 AM               447 myapp.deps.json
-04/05/2019  11:00 AM             4,608 myapp.dll
-04/05/2019  11:00 AM               448 myapp.pdb
-04/05/2019  11:00 AM               154 myapp.runtimeconfig.json
+    Directory:  C:\docker-working\app\bin\Release\netcoreapp3.1\publish
+
+01/09/2020  11:41 AM    <DIR>          .
+01/09/2020  11:41 AM    <DIR>          ..
+01/09/2020  11:41 AM               407 myapp.deps.json
+01/09/2020  12:15 PM             4,608 myapp.dll
+01/09/2020  12:15 PM           169,984 myapp.exe
+01/09/2020  12:15 PM               736 myapp.pdb
+01/09/2020  11:41 AM               154 myapp.runtimeconfig.json
 ```
 
+Linux veya macOS kullanıyorsanız, dizin listesi almak için `ls` komutunu kullanın ve *MyApp. dll* dosyasının oluşturulduğunu doğrulayın.
+
 ```bash
-me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp2.2/publish
+me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp3.1/publish
 myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 ```
 
 ## <a name="create-the-dockerfile"></a>Dockerfile oluşturma
 
-*Dockerfile* dosyası `docker build` komutu tarafından bir kapsayıcı görüntüsü oluşturmak için kullanılır. Bu dosya, uzantısı olmayan *Dockerfile* adlı bir düz metin dosyasıdır.
+*Dockerfile* dosyası `docker build` komutu tarafından bir kapsayıcı görüntüsü oluşturmak için kullanılır. Bu dosya, uzantısı olmayan *Dockerfile* adlı bir metin dosyasıdır.
 
-Terminalinizde, başlangıçta oluşturduğunuz çalışma klasörünün dizinine gidin. Çalışma klasörünüzde *Dockerfile* adlı bir dosya oluşturun ve dosyayı bir metin düzenleyicisinde açın. Aşağıdaki komutu dosyanın ilk satırı olarak ekleyin:
+Terminalinizde, başlangıçta oluşturduğunuz çalışma klasörünün dizinine gidin. Çalışma klasörünüzde *Dockerfile* adlı bir dosya oluşturun ve dosyayı bir metin düzenleyicisinde açın. Kapsayıcılı olduğunuz uygulamanın türüne bağlı olarak, ASP.NET Core çalışma zamanını veya .NET Core çalışma zamanını seçersiniz. Şüpheli olduğunda, .NET Core çalışma zamanını içeren ASP.NET Core çalışma zamanını seçin. Bu öğretici ASP.NET Core çalışma zamanı görüntüsünü kullanır, ancak önceki bölümlerde oluşturulan uygulama bir .NET Core uygulamasıdır.
 
-```dockerfile
-FROM mcr.microsoft.com/dotnet/core/runtime:2.2
-```
+- ASP.NET Core çalışma zamanı
 
-`FROM` komutu, Docker 'ın **MCR.Microsoft.com/DotNet/Core/Runtime** deposundan etiketli **2,2** görüntüsünü çekmesini söyler. SDK 'nizin hedeflediği çalışma zamanına uyan .NET Core çalışma zamanını çekdiğinizden emin olun. Örneğin, önceki bölümde oluşturulan uygulama .NET Core 2,2 SDK 'sını kullandı ve .NET Core 2,2 ' yi hedefleyen bir uygulama oluşturdu. Bu nedenle, *Dockerfile* dosyasında başvurulan temel görüntü **2,2**ile etiketlenir.
+  ```dockerfile
+  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+  ```
+
+- .NET core çalışma zamanı
+
+  ```dockerfile
+  FROM mcr.microsoft.com/dotnet/core/runtime:3.1
+  ```
+
+`FROM` komutu, Docker 'ın belirtilen depodan etiketlenen **3,1** görüntüsünü çekmesini söyler. SDK 'nizin hedeflediği çalışma zamanıyla eşleşen çalışma zamanı sürümünü çekdiğinizden emin olun. Örneğin, önceki bölümde oluşturulan uygulama .NET Core 3,1 SDK 'sını ve *Dockerfile* içinde başvurulan temel görüntüyü **3,1**ile etiketledi.
 
 *Dockerfile* dosyasını kaydedin. Çalışma klasörünün dizin yapısı aşağıdaki gibi görünmelidir. Daha derin düzey dosya ve klasörlerin bazıları, makalede yer kazanmak için kesildi:
 
 ```
 docker-working
 │   Dockerfile
-│   global.json
 │
 └───app
     │   myapp.csproj
@@ -196,9 +196,10 @@ docker-working
     │
     ├───bin
     │   └───Release
-    │       └───netcoreapp2.2
+    │       └───netcoreapp3.1
     │           └───publish
     │                   myapp.deps.json
+    │                   myapp.exe
     │                   myapp.dll
     │                   myapp.pdb
     │                   myapp.runtimeconfig.json
@@ -217,14 +218,14 @@ Docker, *Dockerfile*dosyasındaki her satırı işleyecek. `docker build` komutu
 ```console
 > docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
-mcr.microsoft.com/dotnet/core/runtime   2.2                 d51bb4452469        2 days ago          314MB
-myimage                                 latest              d51bb4452469        2 days ago          314MB
+myimage                                 latest              38db0eb8f648        4 weeks ago         346MB
+mcr.microsoft.com/dotnet/core/aspnet    3.1                 38db0eb8f648        4 weeks ago         346MB
 ```
 
-İki görüntünün aynı **görüntü kimliği** değerini paylaştığından emin olun. *Dockerfile* 'daki tek komut yeni görüntünün varolan bir görüntüye dayandırdığı için, her iki görüntü arasında değer aynıdır. *Dockerfile dosyasına*iki komut ekleyelim. Her komut, **MyImage** deposunun işaret ettiği görüntüyü temsil eden son komutla yeni bir görüntü katmanı oluşturur.
+İki görüntünün aynı **görüntü kimliği** değerini paylaştığından emin olun. *Dockerfile* 'daki tek komut yeni görüntünün varolan bir görüntüye dayandırdığı için, her iki görüntü arasında değer aynıdır. *Dockerfile dosyasına*iki komut ekleyelim. Her komut, **MyImage** Repository girişinin işaret ettiği görüntüyü temsil eden son komutla yeni bir görüntü katmanı oluşturur.
 
 ```dockerfile
-COPY app/bin/Release/netcoreapp2.2/publish/ app/
+COPY app/bin/Release/netcoreapp3.1/publish/ app/
 
 ENTRYPOINT ["dotnet", "app/myapp.dll"]
 ```
@@ -237,22 +238,22 @@ Terminalinizden `docker build -t myimage -f Dockerfile .` çalıştırın ve bu 
 
 ```console
 > docker build -t myimage -f Dockerfile .
-Sending build context to Docker daemon  819.7kB
-Step 1/3 : FROM mcr.microsoft.com/dotnet/core/runtime:2.2
- ---> d51bb4452469
-Step 2/3 : COPY app/bin/Release/netcoreapp2.2/publish/ app/
- ---> a1e98ac62017
+Sending build context to Docker daemon  1.624MB
+Step 1/3 : FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+ ---> 38db0eb8f648
+Step 2/3 : COPY app/bin/Release/netcoreapp3.1/publish/ app/
+ ---> 37873673e468
 Step 3/3 : ENTRYPOINT ["dotnet", "app/myapp.dll"]
- ---> Running in f34da5c18e7c
-Removing intermediate container f34da5c18e7c
- ---> ddcc6646461b
-Successfully built ddcc6646461b
+ ---> Running in d8deb7b3aa9e
+Removing intermediate container d8deb7b3aa9e
+ ---> 0d602ca35c1d
+Successfully built 0d602ca35c1d
 Successfully tagged myimage:latest
 
 > docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
-myimage                                 latest              ddcc6646461b        10 seconds ago      314MB
-mcr.microsoft.com/dotnet/core/runtime   2.2                 d51bb4452469        2 days ago          314MB
+myimage                                 latest              0d602ca35c1d        4 seconds ago       346MB
+mcr.microsoft.com/dotnet/core/aspnet    3.1                 38db0eb8f648        4 weeks ago         346MB
 ```
 
 *Dockerfile* 'daki her komut bir katman oluşturdu ve BIR **görüntü kimliği**oluşturdu. Son **görüntü kimliği** (sizinki farklı olacak) **ddcc6646461b** ve bir sonraki adımda bu görüntüye göre bir kapsayıcı oluşturacaksınız.
@@ -263,7 +264,7 @@ Artık uygulamanızı içeren bir görüntünüz olduğuna göre, bir kapsayıc�
 
 ```console
 > docker create myimage
-0e8f3c2ca32ce773712a5cca38750f41259a4e54e04bdf0946087e230ad7066c
+ceda87b219a4e55e9ad5d833ee1a7ea4da21b5ea7ce5a7d08f3051152e784944
 ```
 
 Yukarıdaki `docker create` komutu, **MyImage** görüntüsünü temel alan bir kapsayıcı oluşturur. Bu komutun çıktısı, oluşturulan kapsayıcının **KAPSAYıCı kimliğini** (sizinki farklı olacak) gösterir. *Tüm* kapsayıcıların listesini görmek için `docker ps -a` komutunu kullanın:
@@ -271,29 +272,29 @@ Yukarıdaki `docker create` komutu, **MyImage** görüntüsünü temel alan bir 
 ```console
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS        PORTS   NAMES
-0e8f3c2ca32c        myimage             "dotnet app/myapp.dll"   4 seconds ago       Created               boring_matsumoto
+ceda87b219a4        myimage             "dotnet app/myapp.dll"   4 seconds ago       Created               gallant_lehmann
 ```
 
 ### <a name="manage-the-container"></a>Kapsayıcıyı yönetme
 
-Her kapsayıcıya, bu kapsayıcı örneğine başvurmak için kullanabileceğiniz bir rastgele ad atanır. Örneğin, otomatik olarak oluşturulan kapsayıcı **boring_matsumoto** adı (sizinki farklı olacaktır) seçti ve bu ad kapsayıcıyı başlatmak için kullanılabilir. Otomatik adı, `docker create --name` parametresini kullanarak belirli bir adla geçersiz kılabilirsiniz.
+Her kapsayıcıya, bu kapsayıcı örneğine başvurmak için kullanabileceğiniz bir rastgele ad atanır. Örneğin, otomatik olarak oluşturulan kapsayıcı **gallant_lehmann** adı (sizinki farklı olacaktır) seçti ve bu ad kapsayıcıyı başlatmak için kullanılabilir. Otomatik adı, `docker create --name` parametresini kullanarak belirli bir adla geçersiz kılabilirsiniz.
 
 Aşağıdaki örnek, kapsayıcıyı başlatmak için `docker start` komutunu kullanır ve sonra yalnızca çalıştıran kapsayıcıları göstermek için `docker ps` komutunu kullanır:
 
 ```console
-> docker start boring_matsumoto
-boring_matsumoto
+> docker start gallant_lehmann
+gallant_lehmann
 
 > docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS         PORTS   NAMES
-0e8f3c2ca32c        myimage             "dotnet app/myapp.dll"   7 minutes ago       Up 8 seconds           boring_matsumoto
+ceda87b219a4        myimage             "dotnet app/myapp.dll"   7 minutes ago       Up 8 seconds           gallant_lehmann
 ```
 
 Benzer şekilde, `docker stop` komutu kapsayıcıyı durdurur. Aşağıdaki örnek, kapsayıcıyı durdurmak için `docker stop` komutunu kullanır ve ardından hiçbir kapsayıcının çalışmadığını göstermek için `docker ps` komutunu kullanır:
 
 ```console
-> docker stop boring_matsumoto
-boring_matsumoto
+> docker stop gallant_lehmann
+gallant_lehmann
 
 > docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS     PORTS   NAMES
@@ -301,21 +302,21 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 ### <a name="connect-to-a-container"></a>Bir kapsayıcıya bağlanma
 
-Bir kapsayıcı çalışmaya başladıktan sonra çıktıyı görmek için bu sunucuya bağlanabilirsiniz. Kapsayıcıyı başlatmak ve çıkış akışına gözatmak için `docker start` ve `docker attach` komutlarını kullanın. Bu örnekte, <kbd>CTRL + C</kbd> komutu, çalışan kapsayıcıyı ayırmak için kullanılır. Bu işlem, kapsayıcıyı durduran kapsayıcıyı gerçekten sonlandıracaktır. `--sig-proxy=false` parametresi, <kbd>CTRL + C</kbd> 'nin kapsayıcıdaki işlemi durdurmamasını sağlar.
+Bir kapsayıcı çalışmaya başladıktan sonra çıktıyı görmek için bu sunucuya bağlanabilirsiniz. Kapsayıcıyı başlatmak ve çıkış akışına gözatmak için `docker start` ve `docker attach` komutlarını kullanın. Bu örnekte, <kbd>CTRL + C</kbd> tuş vuruşu, çalışan kapsayıcıyı ayırmak için kullanılır. Bu tuş vuruşu, kapsayıcıyı durduran kapsayıcıyı gerçekten sonlandırarak işlemden çıkabilir. `--sig-proxy=false` parametresi, <kbd>CTRL + C</kbd> 'nin kapsayıcıdaki işlemi durdurmamasını sağlar.
 
 Kapsayıcıdan ayrıldıktan sonra, hala çalıştığını ve saymakta olduğunu doğrulamak için yeniden bağlayın.
 
 ```console
-> docker start boring_matsumoto
-boring_matsumoto
+> docker start gallant_lehmann
+gallant_lehmann
 
-> docker attach --sig-proxy=false boring_matsumoto
+> docker attach --sig-proxy=false gallant_lehmann
 Counter: 7
 Counter: 8
 Counter: 9
 ^C
 
-> docker attach --sig-proxy=false boring_matsumoto
+> docker attach --sig-proxy=false gallant_lehmann
 Counter: 17
 Counter: 18
 Counter: 19
@@ -327,7 +328,7 @@ Counter: 19
 Bu makalenin amaçları doğrultusunda, kapsayıcıların hiçbir şey yapmadan asılı istememeniz gerekmez. Daha önce oluşturduğunuz kapsayıcıyı silin. Kapsayıcı çalışıyorsa durdurun.
 
 ```console
-> docker stop boring_matsumoto
+> docker stop gallant_lehmann
 ```
 
 Aşağıdaki örnekte tüm kapsayıcılar listelenmektedir. Ardından, kapsayıcıyı silmek için `docker rm` komutunu kullanır ve ardından çalışan kapsayıcılar için ikinci bir kez kontrol eder.
@@ -335,10 +336,10 @@ Aşağıdaki örnekte tüm kapsayıcılar listelenmektedir. Ardından, kapsayıc
 ```console
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS     PORTS   NAMES
-0e8f3c2ca32c        myimage             "dotnet app/myapp.dll"   19 minutes ago      Exited             boring_matsumoto
+ceda87b219a4        myimage             "dotnet app/myapp.dll"   19 minutes ago      Exited             gallant_lehmann
 
-> docker rm boring_matsumoto
-boring_matsumoto
+> docker rm gallant_lehmann
+gallant_lehmann
 
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS     PORTS    NAMES
@@ -446,7 +447,7 @@ Sonra, makinenizde artık istemediğiniz görüntüleri silin. *Dockerfile* dosy
 
 ```console
 docker rmi myimage:latest
-docker rmi mcr.microsoft.com/dotnet/core/runtime:2.2
+docker rmi mcr.microsoft.com/dotnet/core/aspnet:3.1
 ```
 
 Yüklenen görüntülerin listesini görmek için `docker images` komutunu kullanın.
@@ -456,6 +457,7 @@ Yüklenen görüntülerin listesini görmek için `docker images` komutunu kulla
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
+- [ASP.NET Core uygulamasını kapsayıya kapsayıtabilecek hakkında bilgi edinin.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 - [ASP.NET Core mikro hizmet öğreticisini deneyin.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
 - [Kapsayıcıları destekleyen Azure hizmetlerini gözden geçirin.](https://azure.microsoft.com/overview/containers/)
 - [Dockerfile komutları hakkında bilgi edinin.](https://docs.docker.com/engine/reference/builder/)

@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: e0d0a680915f14c2d33f1864ad5ad05aff3dde5f
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 31e7f84a787d255a474f4c2b1fa3068903dbed52
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394326"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901700"
 ---
 ### <a name="http-headernames-constants-changed-to-static-readonly"></a>HTTP: HeaderNames sabitleri statik ReadOnly olarak değiştirildi
 
 ASP.NET Core 3,0 Preview 5 ' ten başlayarak, <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> alan `const` `static readonly`olarak değişir.
 
-Tartışma için bkz. [ASPNET/AspNetCore # 9514](https://github.com/aspnet/AspNetCore/issues/9514).
+Tartışma için bkz. [DotNet/aspnetcore # 9514](https://github.com/dotnet/aspnetcore/issues/9514).
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3,0
+3.0
 
 #### <a name="old-behavior"></a>Eski davranış
 

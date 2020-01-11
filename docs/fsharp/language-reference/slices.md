@@ -2,12 +2,12 @@
 title: Dilimler
 description: Mevcut F# veri türleri için dilimleri kullanmayı ve diğer veri türleri için kendi dilimlerinizi nasıl tanımlayacağınızı öğrenin.
 ms.date: 12/23/2019
-ms.openlocfilehash: 3911139c7ce656043817eb23d30f3686555b6efe
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 3f16c71b071bab7de5b1fb90a2075e351e83cfb4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545107"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901238"
 ---
 # <a name="slices"></a>Dilimler
 
@@ -119,7 +119,7 @@ open System
 
 type ReadOnlySpan<'T> with
     // Note the 'inline' in the member definition
-    member sp.GetSlice(startIdx, endIdx) =
+    member inline sp.GetSlice(startIdx, endIdx) =
         let s = defaultArg startIdx 0
         let e = defaultArg endIdx sp.Length
         sp.Slice(s, e - s)

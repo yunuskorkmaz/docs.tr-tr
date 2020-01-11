@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974758"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900578"
 ---
 # <a name="garbage-collection-and-performance"></a>Çöp Toplama ve Performans
 
@@ -133,7 +133,7 @@ Parçalanma, sıkıştırılmış olmadığından her zaman büyük nesne yığ�
 
 Nesil 1 ve nesil 2'de parçalanma bir sorun olabilir. Eğer bu nesiller çöp toplama sonrasında büyük bir boş alana sahipse, uygulamanın nesne kullanımının değiştirilmesi gerekebilir ve uzun zamanlı nesnelerin kullanım sürelerini yeniden değerlendirmeyi göz önünde bulundurmanız gerekir.
 
-Aşırı nesne sabitlenmesi parçalanmayı arttırabilir. Eğer parçalanma yüksekse, çok fazla nesne sabitlenmiş olabilir.
+Aşırı nesne sabitlenmesi parçalanmayı arttırabilir. Parçalama yüksekse çok fazla nesne sabitlenmiş olabilir.
 
 Sanal belleğin parçalanması toplamanın segment eklemesini engelliyorsa, bunun sebebi aşağıdakilerden biri olabilir:
 
@@ -209,7 +209,7 @@ Bir profil oluşturucu kullanmıyorsanız, performans sorunlarını etkili bir b
 
 - Bir çöp toplamadan hemen önce ölçerseniz, çöp toplama başlamadan önce mümkün olduğunca fazla ayırmayı ölçersiniz.
 
-- Çöp toplama veri yapıları gezinme için geçerli bir durumda olmadığından ve size tam sonuçlar vermeyebileceğinden çöp toplama sırasında ölçüm yapmak çeşitli sorunlara yol açar. Bu tasarım gereğidir.
+- Çöp toplama veri yapıları gezinme için geçerli bir durumda olmadığından ve size tam sonuçlar vermeyebileceğinden çöp toplama sırasında ölçüm yapmak çeşitli sorunlara yol açar. Bu, bilinçli olarak böyle tasarlanmıştır.
 
 - Eşzamanlı çöp toplama özellikli iş istasyonu çöp toplama kullandığınızda, geri kazanılan nesneler sıkıştırılmayacağından, yığın boyutu aynı veya daha büyük olabilir (parçalanma boyutu daha büyük gösterebilir).
 
@@ -275,7 +275,7 @@ Bu bölümde, performans sorunlarınızın sebeplerini ortadan kaldırmak için 
 
   - **Toplam kaydedilmiş bayt**sayısı. Çöp toplayıcısı tarafından o an yürütülen sanal bellek miktarını gösterir. Bu sayacı kullanarak çöp toplayıcı tarafından uygulamanızın kullandığı belleğin aşırı bir kısmının kullanılıp kullanılmadığını belirleyebilirsiniz.
 
-  Çoğu bellek performans sayacı her çöp toplamanın sonunda güncelleştirilir. Bu nedenle, hakkında bilgi almak istediğiniz geçerli koşulları yansıtmayabilir.
+  Çoğu bellek performans sayacı her çöp toplama işlemi sonunda güncellenir. Bu nedenle, hakkında bilgi almak istediğiniz geçerli koşulları yansıtmayabilir.
 
 <a name="OOMIsManaged"></a>
 

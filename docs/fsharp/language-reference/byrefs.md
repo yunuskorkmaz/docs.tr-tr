@@ -2,12 +2,12 @@
 title: ByRef’ler
 description: İçindeki F#ByRef ve ByRef benzeri türler hakkında bilgi edinin ve bu, alt düzey programlama için kullanılır.
 ms.date: 11/04/2019
-ms.openlocfilehash: a6d3d69c4a163be9ecef7e33c284c4a73e800405
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 5aaee1e4eac9ce0d7e9ba89a2ab5f745d31367a0
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545134"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901306"
 ---
 # <a name="byrefs"></a>ByRef’ler
 
@@ -175,7 +175,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 Bu son nokta, işlem hattı F# stili programlama için önemlidir. `|>`, giriş türlerini parametreleştiren genel bir işlevdir. Bu kısıtlama, gelecekte `|>` için gevşek olabilir ve gövdesinde satır içi olmayan genel işlevlere hiçbir çağrı yapmaz.
 
-Bu kurallar kullanımı çok kuvvetli olsa da, yüksek performanslı bilgi işlem taahhüdünü güvenli bir şekilde yerine getirmelerini sağlar.
+Bu kurallar kullanımı kesin olarak kısıtlıyor olsa da, yüksek performanslı bilgi işlem taahhüdünü güvenli bir şekilde yerine getirmek için bu işlemleri yapılır.
 
 ## <a name="byref-returns"></a>ByRef dönüşler
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 8e68d2dbb13d226ba738bdf8455418c9e771d6a6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733158"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900591"
 ---
 # <a name="assemblies-in-net"></a>.NET’te bütünleştirilmiş kodlar
 
@@ -43,7 +43,7 @@ Derlemeler, tür uygulamalarının farkında olması için gereken bilgilerle or
 
 Bir derleme aşağıdaki bilgileri tanımlar:
 
-- Ortak dil çalışma zamanının yürütüldüğünü belirten kod. Her derlemenin yalnızca bir giriş noktası olabileceğini unutmayın: `DllMain`, `WinMain` veya `Main`.
+- Ortak dil çalışma zamanının yürütüldüğünü belirten kod. Her derlemenin yalnızca bir giriş noktası olabileceğini unutmayın: `DllMain`, `WinMain`veya `Main`.
 
 - Güvenlik sınırı. Bir derleme, izinlerin istendiği ve verildiği birimdir. Derlemelerdeki güvenlik sınırları hakkında daha fazla bilgi için bkz. [bütünleştirilmiş kod güvenliği konuları](security-considerations.md).
 
@@ -61,7 +61,7 @@ Bir derleme aşağıdaki bilgileri tanımlar:
 
 Derlemeler statik veya dinamik olabilir. Statik derlemeler, disk üzerinde taşınabilir yürütülebilir (PE) dosyalarda saklanır. Statik derlemeler, arabirimler, sınıflar ve bit eşlemler, JPEG dosyaları ve diğer kaynak dosyaları gibi kaynakları içerebilir. Ayrıca, doğrudan bellekten çalıştırılan ve yürütmeden önce diske kaydedilmemiş dinamik derlemeler de oluşturabilirsiniz. Yürütüldükten sonra dinamik derlemeleri diske kaydedebilirsiniz.
 
-Derleme oluşturmak için birçok yol vardır. Visual Studio gibi, *. dll* veya *. exe* dosyaları oluşturabileceğiniz geliştirme araçlarını kullanabilirsiniz. Diğer geliştirme ortamlarındaki modüllerle derlemeler oluşturmak için Windows SDK araçlarını kullanabilirsiniz. Dinamik derlemeler oluşturmak için <xref:System.Reflection.Emit?displayProperty=nameWithType> gibi ortak dil çalışma zamanı API 'Lerini de kullanabilirsiniz.
+Derleme oluşturmak için birçok yol vardır. Visual Studio gibi, *. dll* veya *. exe* dosyaları oluşturabileceğiniz geliştirme araçlarını kullanabilirsiniz. Diğer geliştirme ortamlarındaki modüllerle derlemeler oluşturmak için Windows SDK araçlarını kullanabilirsiniz. Dinamik derlemeler oluşturmak için <xref:System.Reflection.Emit?displayProperty=nameWithType>gibi ortak dil çalışma zamanı API 'Lerini de kullanabilirsiniz.
 
 Derlemeleri Visual Studio 'da oluşturarak, .NET Core komut satırı arabirimi araçlarıyla derleyerek veya komut satırı derleyicisi ile .NET Framework derlemeleri oluştururken derleyin. .NET Core komut satırı arabirimi araçlarını kullanarak derlemeler oluşturma hakkında daha fazla bilgi için bkz. [.NET Core komut satırı arabirim araçları](../../core/tools/index.md). Komut satırı derleyicileri ile derleme oluşturmak için, bkz. için C# [CSC. exe ile birlikte komut satırı oluşturma](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) veya Visual Basic için [komut satırından derleme](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) .
 
@@ -85,7 +85,7 @@ Derlemeler içerik, sürüm oluşturma ve Bağımlılıklar hakkında bilgi içe
 Bir uygulamada bir derlemeyi kullanmak için buna bir başvuru eklemeniz gerekir. Bir derlemeye başvurulduktan sonra, tüm erişilebilir türler, özellikler, Yöntemler ve ad alanlarının diğer üyeleri, kodu kaynak dosyanızın bir parçası olduğundan, uygulamanız için kullanılabilir.
 
 > [!NOTE]
-> .NET sınıf kitaplığındaki çoğu derlemeye otomatik olarak başvurulur. Bir sistem derlemesine otomatik olarak başvurulmazsa, .NET Core için derlemeyi içeren NuGet paketine bir başvuru ekleyebilirsiniz. Visual Studio 'da NuGet paket yöneticisini kullanın veya *. csproj* veya *. vbproj* projesine derleme için bir [\<PackageReference >](../../core/tools/dependencies.md#the-new-packagereference-element) öğesi ekleyin. .NET Framework, Visual Studio 'da **Başvuru Ekle** iletişim kutusunu kullanarak veya [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) veya [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) derleyicileri için `-reference` komut satırı seçeneğini kullanarak derlemeye bir başvuru ekleyebilirsiniz.
+> .NET sınıf kitaplığındaki çoğu derlemeye otomatik olarak başvurulur. Bir sistem derlemesine otomatik olarak başvurulmazsa, .NET Core için derlemeyi içeren NuGet paketine bir başvuru ekleyebilirsiniz. Visual Studio 'da NuGet paket yöneticisini kullanın veya *. csproj* veya *. vbproj* projesine derleme Için bir [\<packagereference >](../../core/tools/dependencies.md#the-new-packagereference-element) öğesi ekleyin. .NET Framework, Visual Studio 'da **Başvuru Ekle** iletişim kutusunu kullanarak veya [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) veya [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) derleyicileri için `-reference` komut satırı seçeneğini kullanarak derlemeye bir başvuru ekleyebilirsiniz.
 
 İçinde C#, tek bir uygulamada aynı derlemenin iki sürümünü kullanabilirsiniz. Daha fazla bilgi için bkz. [extern diğer ad](../../csharp/language-reference/keywords/extern-alias.md).
 
@@ -111,7 +111,6 @@ Bir uygulamada bir derlemeyi kullanmak için buna bir başvuru eklemeniz gerekir
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET derleme dosyası biçimi](file-format.md)
-- [.NET’te bütünleştirilmiş kodlar](index.md)
 - [Arkadaş derlemeleri](friend.md)
 - [Başvuru derlemeleri](reference-assemblies.md)
 - [Nasıl yapılır: derlemeleri yükleme ve kaldırma](load-unload.md)

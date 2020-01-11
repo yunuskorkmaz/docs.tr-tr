@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 9a09908a2a998d5da739b28aefda3d5aecdc08e0
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: aa3e58d559121aaca401e7b851a4b4fd8e7753cd
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568745"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900839"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Ikili verilerle çalışma (WCF Veri Hizmetleri)
 
@@ -26,7 +26,7 @@ WCF Veri Hizmetleri istemci kitaplığı, aşağıdaki yollarla bir açık veri 
 WCF Veri Hizmetleri, OData 'de tanımlanan HTTP kullanarak ikili verilerin akışını uygular. Bu mekanizmaya, ikili veriler, ancak medya bağlantı girişi olarak adlandırılan bir varlıkla ilişkili olan bir medya kaynağı olarak değerlendirilir. Daha fazla bilgi için bkz. [Akış sağlayıcısı](streaming-provider-wcf-data-services.md).
 
 > [!TIP]
-> Fotoğrafları depolayan bir OData hizmetinden ikili görüntü dosyalarını yükleyen Windows Presentation Foundation (WPF) istemci uygulamasının nasıl oluşturulacağı hakkında adım adım bir örnek için bkz. Post [Data Services akış sağlayıcısı serisi-2. Bölüm: Istemciden medya kaynak akışına erişme](https://go.microsoft.com/fwlink/?LinkId=201637). Blog postasında sunulan Stream Photo Data Service için örnek kodu indirmek için MSDN kod galerisinde [akış fotoğrafı veri hizmeti örneğine](https://go.microsoft.com/fwlink/?LinkId=198988) bakın.
+> Fotoğrafları depolayan bir OData hizmetinden ikili görüntü dosyalarını yükleyen Windows Presentation Foundation (WPF) istemci uygulamasının nasıl oluşturulacağı hakkında adım adım bir örnek için bkz. Post [Data Services akış sağlayıcısı serisi-2. Bölüm: Istemciden medya kaynak akışına erişme](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client). Blog gönderisine özel akış fotoğrafı veri hizmeti için örnek kodu indirmek için bkz. GitHub 'da [akış fotoğrafı veri hizmeti örneği](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample) .
 
 ## <a name="entity-metadata"></a>Varlık meta verileri
 
@@ -34,14 +34,14 @@ WCF Veri Hizmetleri, OData 'de tanımlanan HTTP kullanarak ikili verilerin akı�
 
 [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]
 
-Bu konudaki geri kalan örneklerde, medya kaynağı akışına nasıl erişebileceğiniz ve değiştirileceği gösterilmektedir. WCF Veri Hizmetleri istemci kitaplığı 'nı kullanarak bir .NET Framework istemci uygulamasında medya kaynak akışının nasıl kullanılacağına ilişkin tüm bir örnek için, [Istemciden medya kaynak akışına erişme](https://go.microsoft.com/fwlink/?LinkID=201637)gönderisini inceleyin.
+Bu konudaki geri kalan örneklerde, medya kaynağı akışına nasıl erişebileceğiniz ve değiştirileceği gösterilmektedir. WCF Veri Hizmetleri istemci kitaplığı 'nı kullanarak bir .NET Framework istemci uygulamasında medya kaynak akışının nasıl kullanılacağına ilişkin tüm bir örnek için, [Istemciden medya kaynak akışına erişme](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)gönderisini inceleyin.
 
 ## <a name="accessing-the-binary-resource-stream"></a>Ikili kaynak akışına erişme
 
 WCF Veri Hizmetleri istemci kitaplığı, OData tabanlı bir veri hizmetinden ikili kaynak akışlarına erişmek için yöntemler sağlar. Bir medya kaynağı indirilirken, Medya kaynağının URI 'sini kullanabilir veya medya kaynağı verilerinin kendisini içeren bir ikili akış alabilirsiniz. Ayrıca, medya kaynağı verilerini ikili akış olarak karşıya yükleyebilirsiniz.
 
 > [!TIP]
-> Fotoğrafları depolayan bir OData hizmetinden ikili görüntü dosyalarını yükleyen Windows Presentation Foundation (WPF) istemci uygulamasının nasıl oluşturulacağı hakkında adım adım bir örnek için bkz. Post [Data Services akış sağlayıcısı serisi-2. Bölüm: Istemciden medya kaynak akışına erişme](https://go.microsoft.com/fwlink/?LinkId=201637). Blog postasında sunulan Stream Photo Data Service için örnek kodu indirmek için MSDN kod galerisinde [akış fotoğrafı veri hizmeti örneğine](https://go.microsoft.com/fwlink/?LinkId=198988) bakın.
+> Fotoğrafları depolayan bir OData hizmetinden ikili görüntü dosyalarını yükleyen Windows Presentation Foundation (WPF) istemci uygulamasının nasıl oluşturulacağı hakkında adım adım bir örnek için bkz. Post [Data Services akış sağlayıcısı serisi-2. Bölüm: Istemciden medya kaynak akışına erişme](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client). Blog gönderisine özel akış fotoğrafı veri hizmeti için örnek kodu indirmek için bkz. GitHub 'da [akış fotoğrafı veri hizmeti örneği](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample) .
 
 ### <a name="getting-the-uri-of-the-binary-stream"></a>Ikili akışın URI 'sini alma
 

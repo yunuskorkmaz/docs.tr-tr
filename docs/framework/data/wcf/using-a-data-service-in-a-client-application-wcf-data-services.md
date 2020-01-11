@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: 26fd25a268204ad2644a07b6a56967cc5d2df95e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 41d3af831ff3c99e7f3000593db52d307d37ac38
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568827"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900904"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Istemci uygulamasında bir veri hizmeti kullanma (WCF Veri Hizmetleri)
 Bir Web tarayıcısına URI sağlayarak açık veri Protokolü (OData) akışı sunan bir hizmete erişebilirsiniz. URI, bir kaynağın adresini sağlar ve isteğin gösterdiği temel verilere erişmek veya değiştirmek için bu adreslere gönderilen istek iletileri gönderilir. Tarayıcı bir HTTP GET komutu yayınlar ve istenen kaynağı OData akışı olarak döndürür. Daha fazla bilgi için bkz. [bir Web tarayıcısından hizmete erişme](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -33,23 +33,23 @@ Bir Web tarayıcısına URI sağlayarak açık veri Protokolü (OData) akışı 
   
 - **Http birleştirme** -bir DELETE ' ın yürütüldüğü ve ardından veri kaynağındaki bir INSERT tarafından yalnızca varlık verilerini değiştirmek Için, OData yenı bır http birleştirme eylemi sunmuştur. İstek iletisinin yükü, belirtilen varlık kaynağında değiştirilmesi gereken özellikleri içerir. Http belirtimi http belirtiminde tanımlanmadığı için, bir HTTP BIRLEŞTIRME isteğini OData ile uyumlu olmayan sunucular aracılığıyla yönlendirmek için ek işleme gerekebilir.  
   
- Daha fazla bilgi için bkz. [OData: Operations](https://go.microsoft.com/fwlink/?LinkId=185792).  
+ Daha fazla bilgi için bkz. [OData: Operations](https://www.odata.org/documentation/odata-version-2-0/operations/).
   
 ### <a name="payload-formats"></a>Yük biçimleri  
  Bir HTTP PUT, HTTP POST veya HTTP MERGE isteği için, bir istek iletisinin yükü veri hizmetine göndereceğiniz varlık verilerini içerir. Yükün içeriği iletinin veri biçimine bağlıdır. SILME dışındaki tüm eylemlere yönelik HTTP yanıtları de böyle bir yük içerir. OData, hizmete erişmek ve verileri değiştirmek için aşağıdaki yük biçimlerini destekler:  
   
-- **Atom** -Web akışları, Pod yayınları, WIKSıS ve XML tabanlı Internet IŞLEVSELLIĞI için http üzerinden veri değişimi sağlamak üzere OData tarafından Atom yayımlama Protokolü (AtomPub) uzantısı olarak tanımlanan XML tabanlı bir ileti kodlaması. Daha fazla bilgi için bkz. [OData: Atom biçimi](https://go.microsoft.com/fwlink/?LinkId=185794).  
+- **Atom** -Web akışları, Pod yayınları, WIKSıS ve XML tabanlı Internet IŞLEVSELLIĞI için http üzerinden veri değişimi sağlamak üzere OData tarafından Atom yayımlama Protokolü (AtomPub) uzantısı olarak tanımlanan XML tabanlı bir ileti kodlaması. Daha fazla bilgi için bkz. [OData: Atom biçimi](https://www.odata.org/documentation/odata-version-2-0/atom-format/).
   
-- **JSON** -JAVASCRIPT nesne GÖSTERIMI (JSON), JavaScript programlama dilinin bir alt kümesini temel alan hafif bir veri değişim biçimidir. Daha fazla bilgi için bkz. [OData: JSON biçimi](https://go.microsoft.com/fwlink/?LinkId=185795).  
+- **JSON** -JAVASCRIPT nesne GÖSTERIMI (JSON), JavaScript programlama dilinin bir alt kümesini temel alan hafif bir veri değişim biçimidir. Daha fazla bilgi için bkz. [OData: JSON biçimi](https://www.odata.org/documentation/odata-version-2-0/json-format/).
   
- Yükün ileti biçimi HTTP istek iletisi üstbilgisinde istendi. Daha fazla bilgi için bkz. [OData: Operations](https://go.microsoft.com/fwlink/?LinkID=185792).  
+ Yükün ileti biçimi HTTP istek iletisi üstbilgisinde istendi. Daha fazla bilgi için bkz. [OData: Operations](https://www.odata.org/documentation/odata-version-2-0/operations/).
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>Istemci kitaplıklarını kullanarak verilere erişme ve verileri değiştirme  
  WCF Veri Hizmetleri, .NET Framework ve Silverlight tabanlı istemci uygulamalarından bir OData akışını daha kolay bir şekilde kullanmanıza olanak tanıyan istemci kitaplıklarını içerir. Bu kitaplıklar HTTP iletileri göndermeyi ve almayı basitleştirir. Ayrıca, ileti yükünü varlık verilerini temsil eden CLR nesnelerine çevirirler. İstemci kitaplıkları, <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601>iki çekirdek sınıfı özelliğidir. Bu sınıflar bir veri hizmetini sorgulamanızı ve ardından döndürülen varlık verileriyle CLR nesneleri olarak çalışmanızı sağlar. Daha fazla bilgi için bkz. [WCF veri Hizmetleri Istemci kitaplığı](wcf-data-services-client-library.md) ve [WCF veri Hizmetleri (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)).  
   
  Bir veri hizmetine başvuru eklemek için Visual Studio 'daki **hizmet başvurusu Ekle** iletişim kutusunu kullanabilirsiniz. Bu araç, başvurulan bir veri hizmetinden hizmet meta verilerini ister ve bir veri hizmetini temsil eden <xref:System.Data.Services.Client.DataServiceContext> oluşturur, ayrıca varlıkları temsil eden istemci veri hizmeti sınıflarını üretir. Daha fazla bilgi için bkz. [veri hizmeti Istemci kitaplığı oluşturma](generating-the-data-service-client-library-wcf-data-services.md).  
   
- Diğer istemci uygulamalarında bir OData akışını tüketmek için kullanabileceğiniz programlama kitaplıkları mevcuttur. Daha fazla bilgi için bkz. [OData SDK](https://go.microsoft.com/fwlink/?LinkId=185796).  
+ Diğer istemci uygulamalarında bir OData akışını tüketmek için kullanabileceğiniz programlama kitaplıkları mevcuttur. OData SDK hakkında daha fazla bilgi için bkz. [OData SDK-örnek kodu](https://www.odata.org/ecosystem/#sdk).
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

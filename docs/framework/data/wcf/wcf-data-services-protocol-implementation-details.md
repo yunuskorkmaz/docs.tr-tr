@@ -2,16 +2,16 @@
 title: WCF Veri Hizmetleri Protokol Uygulama Ayrıntıları
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
-ms.openlocfilehash: 5cd73caf848badc058c1f6df75973e1bb0a4fad4
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 2302b5577bec3fc4221bc6e5161c87905c38bec3
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568767"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900866"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>WCF Veri Hizmetleri Protokol Uygulama Ayrıntıları
 ## <a name="odata-protocol-implementation-details"></a>OData protokol uygulama ayrıntıları  
- Açık Veri Protokolü (OData), protokolü uygulayan bir veri hizmetinin belirli bir minimum işlevler kümesini sağlamasını gerektirir. Bu işlevler, protokol belgelerinde "şunları yapmalısınız" ve "gerekir." olarak açıklanmaktadır. Diğer isteğe bağlı işlevler "Mayıs" terimlerinde açıklanmıştır. Bu konu, şu anda WCF Veri Hizmetleri tarafından uygulanmayan bu isteğe bağlı işlevleri açıklamaktadır. Daha fazla bilgi için bkz. [OData protokolü belgeleri](https://go.microsoft.com/fwlink/?LinkID=184554).  
+Açık Veri Protokolü (OData), protokolü uygulayan bir veri hizmetinin belirli bir minimum işlevler kümesini sağlamasını gerektirir. Bu işlevler, "gereken" ve "gereken" koşullarda protokol belgelerinde açıklanmıştır. Diğer isteğe bağlı işlevler "Mayıs" terimlerinde açıklanmıştır. Bu makalede, şu anda WCF Veri Hizmetleri tarafından uygulanmayan bu isteğe bağlı işlevler açıklanır.
   
 ### <a name="support-for-the-format-query-option"></a>$format sorgu seçeneği için destek  
  OData protokolü hem JavaScript gösterimini (JSON) hem de Atom akışlarını destekler ve OData, bir istemcinin yanıt akışı biçimini istemesine izin vermek için `$format` sistem sorgu seçeneğini sağlar. Veri hizmeti tarafından destekleniyorsa, bu sistem sorgu seçeneği isteğin Accept üst bilgisinin değerini geçersiz kılmalıdır. WCF Veri Hizmetleri hem JSON hem de Atom akışlarını döndürmeyi destekler. Ancak, varsayılan uygulama `$format` sorgu seçeneğini desteklemez ve yanıt biçimini belirlemekte yalnızca Accept üst bilgisinin değerini kullanır. Veri hizmetinizin, kabul üst bilgisini ayarlayaamadığı durumlar gibi `$format` sorgu seçeneğini desteklemesi gerekebilecek durumlar vardır. Bu senaryoları desteklemek için veri hizmetinizi URI 'deki bu seçeneği işleyecek şekilde genişletmelidir. [ADO.NET Data Services örnek projesi Için JSONP ve URL denetimli biçim DESTEĞINI](https://go.microsoft.com/fwlink/?LinkId=208228) MSDN Kod Galerisi Web sitesinden indirerek ve veri hizmeti projenize ekleyerek bu işlevselliği veri hizmetinize ekleyebilirsiniz. Bu örnek `$format` sorgu seçeneğini kaldırır ve Accept üst bilgisini `application/json`olarak değiştirir. Örnek projeyi dahil ettiğinizde ve veri hizmeti sınıfınız `JSONPSupportBehaviorAttribute` eklendiğinde, hizmetin `$format` sorgu seçeneği `$format=json`işlemesini sağlar. Bu örnek projenin daha fazla özelleştirilmesi, `$format=atom` veya diğer özel biçimleri işlemek için de gereklidir.  

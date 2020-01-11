@@ -4,12 +4,12 @@ description: Bu makalede, .NET Core ve .NET Standard projelerine yönelik birim 
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 776a430868c7a4829e11a2958fb998c11315c43d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 41f4457e636ca495b78109803ca66680e72d007e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714307"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899891"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core ve .NET Standard birim testi
 
@@ -28,7 +28,7 @@ Otomatikleştirilmiş testlerin olması, bir yazılım uygulamasının yazarlar�
 Ayrıca, testlerin yazılması için en iyi uygulamaları aklınızda bulundurun. Örneğin, [test odaklı geliştirme (TDD)](https://deviq.com/test-driven-development/) , bir birim testinin denetlenecek kodun önüne yazıldığı bir birimdir. TDD yazmadan önce kitap için bir ana hat oluşturma gibidir. Geliştiricilerin daha basit, daha okunabilir ve verimli bir kod yazmasına yardımcı olmak için tasarlanmıştır. 
 
 > [!NOTE]
-> ASP.NET ekibi, geliştiricilerin test sınıfları ve yöntemleri için iyi adlarla karşılaşmalarına yardımcı olmak için [Bu kuralları](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests) izler.
+> ASP.NET ekibi, geliştiricilerin test sınıfları ve yöntemleri için iyi adlarla karşılaşmalarına yardımcı olmak için [Bu kuralları](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests) izler.
 
 Birim testlerini yazarken altyapıya bağımlılıklar tanıtmamanızda deneyin. Bunlar testleri yavaş ve Brittle yapar ve tümleştirme testleri için ayrılmış olmalıdır. [Açık bağımlılıklar ilkesini](https://deviq.com/explicit-dependencies-principle/) Izleyerek ve [bağımlılık ekleme](/aspnet/core/fundamentals/dependency-injection)'yi kullanarak uygulamanızdaki bu bağımlılıklardan kaçınabilirsiniz. Ayrıca, birim testlerinizi tümleştirme testlerinizden ayrı bir projede tutabilirsiniz. Bu, birim testi projenizin altyapı paketlerine yönelik başvuruları veya bağımlılıkları olmamasını sağlar.
 

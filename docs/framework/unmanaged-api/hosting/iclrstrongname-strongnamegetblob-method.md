@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a24218f8-7196-44be-b7a2-ee9cdd7a85c4
 topic_type:
 - apiref
-ms.openlocfilehash: 9d7f1a71658b53a1b4167c767eb89c873308421b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c7f04364cc52bd38d7d2659d1d188c5fd783ad01
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135121"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899757"
 ---
 # <a name="iclrstrongnamestrongnamegetblob-method"></a>ICLRStrongName::StrongNameGetBlob Yöntemi
 Belirtilen adresteki yürütülebilir dosyanın ikili gösterimiyle belirtilen arabelleği doldurur.  
@@ -47,7 +47,7 @@ HRESULT StrongNameGetBlob (
  [in, out] `pbBlob`istenen en büyük boyut (bayt cinsinden). Dönüş sonrasında, `pbBlob`bayt cinsinden gerçek boyut.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](https://go.microsoft.com/fwlink/?LinkId=213878) ).  
+ Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](/windows/win32/seccrypto/common-hresult-values) ).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

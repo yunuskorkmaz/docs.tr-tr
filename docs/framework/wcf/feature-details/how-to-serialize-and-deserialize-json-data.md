@@ -2,17 +2,17 @@
 title: 'Nasıl yapılır: DataContractJsonSerializer kullanma'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 354f0c58a83e07ff3180977311adf85ae306dd21
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3cf8cc52587a64e7273ab9e0de0b1751d00827cf
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976869"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901222"
 ---
 # <a name="how-to-use-datacontractjsonserializer"></a>DataContractJsonSerializer 'ı kullanma
 
 > [!NOTE]
-> Bu makale <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. JSON serileştirilmesinin ve serisini kaldırma ile ilgili çoğu senaryo için, [System. Text. JSON ad alanındaki](../../../standard/serialization/system-text-json-overview.md)araçları öneririz.
+> Bu makale <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. JSON serileştirilmesinin ve serisini kaldırma ile ilgili çoğu senaryo için, [System. Text. JSON ad alanındaki](../../../standard/serialization/system-text-json-overview.md)API 'leri öneririz.
 
 JSON (JavaScript Nesne Gösterimi), istemci tarayıcıları ve AJAX özellikli Web Hizmetleri arasında küçük miktarlarda verilerin hızlı bir şekilde değiş tokuşlanmasını sağlayan etkili bir veri kodlama biçimidir.
 

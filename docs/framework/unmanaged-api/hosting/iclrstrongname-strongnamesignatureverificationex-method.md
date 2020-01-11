@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbd2f662-208b-4174-b301-5c99af91040f
 topic_type:
 - apiref
-ms.openlocfilehash: 3e4181cbd14674336133314acdcd6cdcf0c9ff6b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fbc9ea6aab9f0c3d9be95e6affcd04342ce4c5cc
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134927"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901070"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationex-method"></a>ICLRStrongName::StrongNameSignatureVerificationEx Yöntemi
 Belirtilen yoldaki Derleme bildiriminin bir tanımlayıcı ad imzası içerip içermediğini gösteren bir değer alır.  
@@ -46,7 +46,7 @@ HRESULT StrongNameSignatureVerificationEx (
  [out] tanımlayıcı ad imzası doğrulandıysa `true`; Aksi takdirde, `false`. Ayrıca, kayıt defteri ayarları nedeniyle doğrulama başarılı olduysa, `pfWasVerified` `false` olarak ayarlanır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- doğrulama başarılı olduysa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](https://go.microsoft.com/fwlink/?LinkId=213878) ).  
+ doğrulama başarılı olduysa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](/windows/win32/seccrypto/common-hresult-values) ).  
   
 ## <a name="remarks"></a>Açıklamalar  
  [ICLRStrongName:: Strongnamesignaturedoğrulamaları Icationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) yöntemi [ICLRStrongName:: Strongnamesignaturedoğrulama](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) yöntemine benzer bir yetenek sağlar. Ancak, [ICLRStrongName:: Strongnamesignaturedoğrulamaları Icationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) için ikinci giriş parametresi ve çıkış parametresi `DWORD`yerine `BOOLEAN` türündedir.  
