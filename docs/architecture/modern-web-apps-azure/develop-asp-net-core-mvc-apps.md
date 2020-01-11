@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: b57741ed68b3481ad2c85b1c3d62717f09c7570e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: efb57b4290825be9f21c61c8dee5af073d264d3a
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971592"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899701"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları geliştirin
 
@@ -239,7 +239,7 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 ASP.NET Core MVC, görünümleri bulmak için de bir kural kullanır. Görünümlerin Özellik klasörlerinizde bulunması için (yukarıdaki FeatureConvention tarafından sunulan özellik adı kullanılarak) özel bir kural ile geçersiz kılabilirsiniz. Bu yaklaşım hakkında daha fazla bilgi alabilir ve MSDN makalesinden çalışan bir örnek indirebilirsiniz [ASP.NET Core MVC Için özellik dilimleri](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
 
-### <a name="cross-cutting-concerns"></a>Çapraz kesme konuları
+### <a name="cross-cutting-concerns"></a>Geniş kapsamlı kritik konular
 
 Uygulamalar büyüdükçe, çoğaltmayı ortadan kaldırmak ve tutarlılığı sürdürmek için çapraz kesme sorunlarını ortadan kaldırmak giderek daha da önemli hale gelir. ASP.NET Core uygulamalardaki çapraz kesme kaygılarının bazı örnekleri, çok sayıda diğerleri olsa da, kimlik doğrulama, model doğrulama kuralları, çıktı önbelleği ve hata işleme örnekleridir. ASP.NET Core MVC [filtreleri](/aspnet/core/mvc/controllers/filters) , istek işleme ardışık düzeninde belirli adımlardan önce veya sonra kod çalıştırmanızı sağlar. Örneğin bir filtre, model bağlamadan önce ve sonra, bir eylemden önce ve sonra ya da bir eylem sonucundan önce ve sonra çalışabilir. Ayrıca, ardışık düzenin geri kalanına erişimi denetlemek için bir yetkilendirme filtresi de kullanabilirsiniz. Şekil 7-2, yapılandırılmışsa, istek yürütmenin filtreler aracılığıyla nasıl akacağını gösterir.
 
@@ -395,7 +395,7 @@ public IActionResult ExecutiveSalaryReport()
 
 İlkeleri bu şekilde kullanarak, bu işlem için uygulanan belirli rol veya kurallardan sınırlandırılmakta olan eylemlerin türlerini ayırabilirsiniz. Daha sonra, belirli kaynaklara erişmesi gereken yeni bir rol oluşturursanız, her bir rol listesini her bir \[\] özniteliğinde güncelleştirmek yerine yalnızca bir ilkeyi güncelleştirebilirsiniz.
 
-#### <a name="claims"></a>belirt
+#### <a name="claims"></a>Talepler
 
 Talepler, kimliği doğrulanmış bir kullanıcının özelliklerini temsil eden ad değer çiftleridir. Örneğin, kullanıcıların çalışan numarasını bir talep olarak saklayabilirsiniz. Talepler, yetkilendirme ilkelerinin bir parçası olarak kullanılabilir. Bu örnekte gösterildiği gibi "EmployeeNumber" adlı bir talebin varlığını gerektiren "EmployeeOnly" adlı bir ilke oluşturabilirsiniz:
 
@@ -436,7 +436,7 @@ Kendi kimlik doğrulama hizmetinizi oluşturabilir, Azure AD ve OAuth ile tümle
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **Yetkilendirmeye giriş**  
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
-> - **Azure App Service API Apps için kimlik doğrulaması ve yetkilendirme**  
+> - **Azure App Service’te API Apps için Kimlik Doğrulama ve Yetkilendirme**  
 >   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 > - **Kimlik sunucusu**  
 >   <https://github.com/IdentityServer>
@@ -500,7 +500,7 @@ Uygulamalarınızın istemci uygulamalarıyla doğrudan iletişim kurmasına dik
 > ### <a name="references--client-communication"></a>Başvurular – Istemci Iletişimi
 >
 > - **ASP.NET Core SignalR**  
->   <https://github.com/aspnet/SignalR>
+>   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
 > - **WebSocket Yöneticisi**  
 >   https://github.com/radu-matei/websocket-manager
 

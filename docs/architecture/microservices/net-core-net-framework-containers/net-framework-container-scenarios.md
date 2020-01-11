@@ -2,12 +2,12 @@
 title: Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Docker kapsayıcıları için .NET Framework seçme
 ms.date: 01/07/2019
-ms.openlocfilehash: 579e1a475b1ce96d98d7a2c521c1296e17b9f42e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: e60572f33bda93663080b9d2e3504f0987b8483e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740958"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899711"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 
@@ -39,7 +39,7 @@ Aşağıdaki listede .NET Core 2. x ' de kullanılamayan teknolojilerin çoğu g
 
 - İş akışı ile ilgili hizmetler. Windows Workflow Foundation (WF), Iş akışı hizmetleri (tek bir hizmette WCF + WF) ve WCF Veri Hizmetleri (eski adıyla ADO.NET veri Hizmetleri) yalnızca .NET Framework kullanılabilir. Şu anda bunları .NET Core 'a getirmeye yönelik bir plan yoktur.
 
-Resmi [.NET Core yol haritasında](https://github.com/aspnet/Home/wiki/Roadmap)listelenen teknolojilerin yanı sıra, diğer özellikler de .NET Core 'a eklenebilir. Tam liste için CoreFX GitHub sitesinde [bağlantı noktası](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) olarak etiketlenmiş öğelere bakın. Bu listede, Microsoft 'un bu bileşenleri .NET Core 'a getirmesinin bir taahhüdünü temsil etmediği ve öğelerin topluluklardan yalnızca istekleri yakaladığı unutulmamalıdır. Yukarıda listelenen bileşenlerden herhangi birini düşünüyorsanız, sesinizin duyabilmesi için GitHub 'daki tartışmalara katılımını düşünün. Bir şeyin eksik olduğunu düşünüyorsanız, lütfen [çalışma zamanı deposunda yeni bir sorun](https://github.com/dotnet/runtime/issues/new)bildirin.
+Resmi [.NET Core yol haritasında](https://github.com/dotnet/aspnetcore/wiki/Roadmap)listelenen teknolojilerin yanı sıra, diğer özellikler de .NET Core 'a eklenebilir. Tam liste için CoreFX GitHub sitesinde [bağlantı noktası](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) olarak etiketlenmiş öğelere bakın. Bu listede, Microsoft 'un bu bileşenleri .NET Core 'a getirmesinin bir taahhüdünü temsil etmediği ve öğelerin topluluklardan yalnızca istekleri yakaladığı unutulmamalıdır. Yukarıda listelenen bileşenlerden herhangi birini düşünüyorsanız, sesinizin duyabilmesi için GitHub 'daki tartışmalara katılımını düşünün. Bir şeyin eksik olduğunu düşünüyorsanız, lütfen [çalışma zamanı deposunda yeni bir sorun](https://github.com/dotnet/runtime/issues/new)bildirin.
 
 .NET Core 3 ' ün (Bu yazma işlemi çalışır durumda olduğundan) çok sayıda mevcut .NET Framework API 'Leri için destek de dahil olmak üzere, bunlar masaüstü yönelimlidir ve şu anda kapsayıcı dünyada hiç kullanılmamaktadır.
 

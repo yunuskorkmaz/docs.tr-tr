@@ -2,12 +2,12 @@
 title: Etki alanı model katmanında doğrulamaları tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Etki alanı modeli doğrulamaları için temel kavramları anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 1d3196d2130df33969ed231bccfe0fc6f0af2ad8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 98ccc5df84c9f6f402ecbee83b077c806d6a76fc
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295964"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899675"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Etki alanı model katmanında tasarım doğrulamaları
 
@@ -53,7 +53,7 @@ Varlığın oluşturucusunda benzer bir yaklaşım kullanılabilir ve varlığı
 
 ### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>Veri ek açıklamalarına göre modelde doğrulama özniteliklerini kullanma
 
-Gerekli veya MaxLength öznitelikleri gibi veri ek açıklamaları, [Tablo eşleme](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) bölümünde ayrıntılı olarak açıklandığı gibi EF Core veritabanı alanı özelliklerini yapılandırmak için kullanılabilir, ancak [artık EF Core varlık doğrulaması için](https://github.com/aspnet/EntityFrameworkCore/issues/3680) (<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> yöntemi değil), .NET Framework içinde EF 4. x bu yana gerçekleştirdikleri şekilde,
+Gerekli veya MaxLength öznitelikleri gibi veri ek açıklamaları, [Tablo eşleme](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) bölümünde ayrıntılı olarak açıklandığı gibi EF Core veritabanı alanı özelliklerini yapılandırmak için kullanılabilir, ancak [artık EF Core varlık doğrulaması için](https://github.com/dotnet/efcore/issues/3680) (<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> yöntemi değil), .NET Framework içinde EF 4. x bu yana gerçekleştirdikleri şekilde,
 
 Veri ek açıklamaları ve <xref:System.ComponentModel.DataAnnotations.IValidatableObject> arabirimi, model bağlama sırasında, denetleyicinin her zamanki gibi işlem yapılmadan önce model doğrulama için de kullanılabilir, ancak bu modelin bir ViewModel veya DTO olması amaçlanmıştır ve bir etki alanı modeli sorunu olmadığı bir MVC veya API.
 
@@ -61,7 +61,7 @@ Kavramsal farkı açık hale getirdiğiniz, eylemleriniz bir varlık sınıfı n
 
 DbContext 'in SaveChanges metodunu geçersiz kılarak veri açıklamalarını ve `IValidatableObject.Validate` yöntemini kullanarak varlık sınıfında özel doğrulama uygulayabilirsiniz.
 
-[GitHub 'da bu açıklamada](https://github.com/aspnet/EntityFrameworkCore/issues/3680#issuecomment-155502539)`IValidatableObject` varlıkları doğrulamak için örnek bir uygulama görebilirsiniz. Bu örnek, öznitelik tabanlı doğrulamalar yapmaz, ancak aynı geçersiz kılmada yansıma kullanarak uygulanması kolay olmalıdır.
+[GitHub 'da bu açıklamada](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539)`IValidatableObject` varlıkları doğrulamak için örnek bir uygulama görebilirsiniz. Bu örnek, öznitelik tabanlı doğrulamalar yapmaz, ancak aynı geçersiz kılmada yansıma kullanarak uygulanması kolay olmalıdır.
 
 Bununla birlikte, bir DDD görünümünde, etki alanı modeli, varlıklarınızın davranış yöntemlerinde özel durumların kullanımı ile veya doğrulama kurallarını zorlamak için belirtim ve bildirim desenleri uygulayarak en iyi şekilde korunur.
 
