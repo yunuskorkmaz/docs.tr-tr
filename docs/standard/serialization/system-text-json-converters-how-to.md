@@ -1,20 +1,20 @@
 ---
 title: JSON serileştirme-.NET için özel dönüştürücüler yazma
-ms.date: 10/16/2019
+ms.date: 01/10/2020
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: efbaf852f07b2b59111f0e330cf52470e3eca4c3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8a2af76ca64359c12fafce6678def14d11d9f029
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705814"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904563"
 ---
-# <a name="how-to-write-custom-converters-for-json-serialization-in-net"></a>.NET 'teki JSON serileştirme için özel dönüştürücüler yazma
+# <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET 'teki JSON serileştirme (sıralama) için özel dönüştürücüler yazma
 
 Bu makalede, <xref:System.Text.Json> ad alanında belirtilen JSON serileştirme sınıfları için özel dönüştürücüler oluşturma işlemi gösterilmektedir. `System.Text.Json`giriş için bkz. [.net 'TE JSON serileştirme ve seri durumdan çıkarma](system-text-json-how-to.md).
 
@@ -23,7 +23,7 @@ Bu makalede, <xref:System.Text.Json> ad alanında belirtilen JSON serileştirme 
 * Yerleşik dönüştürücünün varsayılan davranışını geçersiz kılmak için. Örneğin, `DateTime` değerlerinin varsayılan ISO 8601-1:2019 biçimi yerine aa/gg/yyyy biçiminde temsil olmasını isteyebilirsiniz.
 * Özel bir değer türünü desteklemek için. Örneğin, bir `PhoneNumber` yapısı.
 
-Ayrıca, geçerli sürüme dahil olmayan işlevlerle `System.Text.Json` genişletmek için özel dönüştürücüler yazabilirsiniz. Bu makalenin ilerleyen bölümlerinde aşağıdaki senaryolar ele alınmıştır:
+Ayrıca, geçerli sürüme dahil olmayan işlevlerle `System.Text.Json` özelleştirmek veya genişletmek için özel dönüştürücüler de yazabilirsiniz. Bu makalenin ilerleyen bölümlerinde aşağıdaki senaryolar ele alınmıştır:
 
 * [Çıkartılan türlerin nesne özelliklerine serisini kaldırma](#deserialize-inferred-types-to-object-properties).
 * [Dize olmayan anahtarla destek sözlüğü](#support-dictionary-with-non-string-key).
@@ -68,9 +68,9 @@ Aşağıdaki adımlarda, temel kalıbı izleyerek bir dönüştürücünün nas�
 * Seri hale getirilecek ve seri durumdan çıkarılacak tür `T` <xref:System.Text.Json.Serialization.JsonConverter%601> türetilen bir sınıf oluşturun.
 * Gelen JSON serisini kaldırmak için `Read` yöntemini geçersiz kılın ve `T`türüne dönüştürün. JSON 'ı okumak için yöntemine geçirilen <xref:System.Text.Json.Utf8JsonReader> kullanın.
 * `T`türündeki gelen nesneyi seri hale getirmek için `Write` yöntemini geçersiz kılın. JSON yazmak için yöntemine geçirilen <xref:System.Text.Json.Utf8JsonWriter> kullanın.
-* `CanConvert` yöntemini yalnızca gerekirse geçersiz kılın. Varsayılan uygulama, dönüştürülecek tür `T`tür olduğunda `true` döndürür. Bu nedenle, yalnızca tür `T` destekleyen dönüştürücüler Bu yöntemi geçersiz kılmalıdır. Bu yöntemi geçersiz kılmanın gerekli olduğu dönüştürücünün bir örneği için, bu makalenin ilerleyen kısımlarında yer alan [polimorfik serisini kaldırma](#support-polymorphic-deserialization) bölümüne bakın.
+* `CanConvert` yöntemini yalnızca gerekirse geçersiz kılın. Varsayılan uygulama, dönüştürülecek tür `T`türünde olduğunda `true` döndürür. Bu nedenle, yalnızca tür `T` destekleyen dönüştürücüler Bu yöntemi geçersiz kılmalıdır. Bu yöntemi geçersiz kılmanın gerekli olduğu dönüştürücünün bir örneği için, bu makalenin ilerleyen kısımlarında yer alan [polimorfik serisini kaldırma](#support-polymorphic-deserialization) bölümüne bakın.
 
-[Yerleşik dönüştürücüler kaynak koduna](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json/src/System/Text/Json/Serialization/Converters/) , özel dönüştürücüler yazmak için başvuru uygulamaları olarak başvurabilirsiniz.
+[Yerleşik dönüştürücüler kaynak koduna](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/) , özel dönüştürücüler yazmak için başvuru uygulamaları olarak başvurabilirsiniz.
 
 ## <a name="steps-to-follow-the-factory-pattern"></a>Fabrika deseninin izlenmesi için adımlar
 
@@ -179,14 +179,15 @@ Aşağıdaki bölümlerde, yerleşik işlevlerin sağlamadığı bazı yaygın s
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>Çıkartılan türlerin nesne özelliklerine serisini kaldırma
 
-`Object`türünde bir özelliğin serisi kaldırılırken, bir `JsonElement` nesnesi oluşturulur. Bunun nedeni, seri hale getiricinin oluşturulacak CLR türünü bilmeyeceği ve tahmin etmeye çalışmayın. Örneğin, bir JSON özelliğinde "true" varsa, seri hale getirici değerin bir `Boolean`olduğunu ve bir öğede "01/01/2019" varsa, seri hale getirici bir `DateTime`olduğunu çıkarmaz.
+`object`türünde bir özelliğin serisi kaldırılırken, bir `JsonElement` nesnesi oluşturulur. Bunun nedeni, seri hale getiricinin oluşturulacak CLR türünü bilmeyeceği ve tahmin etmeye çalışmayın. Örneğin, bir JSON özelliğinde "true" varsa, seri hale getirici değerin bir `Boolean`olduğunu ve bir öğede "01/01/2019" varsa, seri hale getirici bir `DateTime`olduğunu çıkarmaz.
 
 Tür çıkarımı yanlış olabilir. Seri hale getirici, `long`olarak ondalık noktası olmayan bir JSON numarası ayrıştırdığında, bu, değerin başlangıçta bir `ulong` veya `BigInteger`olarak serileştirildiği, Aralık dışı sorunlara yol açabilir. Sayı ilk olarak bir `decimal`olarak seri hale getirileolduysa, `double` ondalık noktası olan bir sayının çözümlenmesi duyarlık kaybedebilir.
 
-Tür çıkarımı gerektiren senaryolar için aşağıdaki kodda `Object` özellikleri için özel bir dönüştürücü gösterilmektedir. Kod dönüştürür:
+Tür çıkarımı gerektiren senaryolar için aşağıdaki kodda `object` özellikleri için özel bir dönüştürücü gösterilmektedir. Kod dönüştürür:
 
 * `Boolean` `true` ve `false`
-* `long` veya `double` sayılar
+* `long` ondalık olmayan sayılar
+* `double` ondalık sayı olan sayılar
 * `DateTime` tarihler
 * `string` dizeler
 * `JsonElement` diğer her şey
@@ -195,9 +196,9 @@ Tür çıkarımı gerektiren senaryolar için aşağıdaki kodda `Object` özell
 
 Aşağıdaki kod dönüştürücüyü kaydeder:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertInferredTypesToObject.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeInferredTypesToObject.cs?name=SnippetRegister)]
 
-Aşağıda `Object` özelliklere sahip örnek bir tür verilmiştir:
+Aşağıda `object` özelliklere sahip örnek bir tür verilmiştir:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithObjectProperties)]
 
@@ -213,7 +214,7 @@ Seri durumdan çıkarılacak aşağıdaki JSON örneği, `DateTime`, `long`ve `s
 
 Özel dönüştürücü olmadan, seri durumdan çıkarma her özelliğe bir `JsonElement` koyar.
 
-`System.Text.Json.Serialization` ad alanındaki [birim testleri klasörü](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/) , nesne özelliklerine seri durumdan çıkarmayı işleyen özel dönüştürücülerin daha fazla örneklerine sahiptir.
+`System.Text.Json.Serialization` ad alanındaki [birim testleri klasörü](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) , `object` özelliklerini seri durumdan çıkarmayı işleyen özel dönüştürücülerin daha fazla örneklerine sahiptir.
 
 ### <a name="support-dictionary-with-non-string-key"></a>Dize olmayan anahtarla destek sözlüğü
 
@@ -225,7 +226,7 @@ Aşağıdaki kod, `Dictionary<Enum,TValue>`ile birlikte çalışarak özel bir d
 
 Aşağıdaki kod dönüştürücüyü kaydeder:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
 
 Dönüştürücü aşağıdaki `Enum`kullanan aşağıdaki sınıfın `TemperatureRanges` özelliğini seri hale getirebilirsiniz ve serisini kaldıramıyor:
 
@@ -245,11 +246,11 @@ Seri hale getirme işleminden alınan JSON çıktısı aşağıdaki örneğe ben
 }
 ```
 
-`System.Text.Json.Serialization` ad alanındaki [birim testleri klasörü](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/) , dize dışı anahtar sözlüklerini işleyen özel dönüştürücülere daha fazla örnek içerir.
+`System.Text.Json.Serialization` ad alanındaki [birim testleri klasörü](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) , dize dışı anahtar sözlüklerini işleyen özel dönüştürücülere daha fazla örnek içerir.
 
 ### <a name="support-polymorphic-deserialization"></a>Polimorfik serisini destekler
 
-[Polimorfik serileştirme](system-text-json-how-to.md#serialize-properties-of-derived-classes) özel bir dönüştürücü gerektirmez, ancak seri durumundan çıkarma özel bir dönüştürücü gerektirir.
+Yerleşik özellikler sınırlı sayıda [polimorfik serileştirme](system-text-json-how-to.md#serialize-properties-of-derived-classes) sağlar, ancak hiçbir zaman serisini kaldırma desteği yoktur. Seri durumdan çıkarma özel bir dönüştürücü gerektirir.
 
 Örneğin, `Employee` ve `Customer` türetilmiş sınıflarla `Person` soyut bir temel sınıfınız olduğunu varsayalım. Polimorfik seri kaldırma, tasarım zamanında `Person` serisini kaldırma hedefi olarak belirtebileceğiniz ve `Customer` ve JSON 'daki `Employee` nesnelerinin çalışma zamanında doğru şekilde seri durumdan çıkarılmasıdır. Seri durumdan çıkarma sırasında, JSON 'da gerekli türü tanımlayan ipuçları bulmanız gerekir. Kullanılabilir ipuçları türleri her senaryoya göre farklılık gösterir. Örneğin, bir Ayrıştırıcı özelliği kullanılabilir olabilir veya belirli bir özelliğin varlığına veya yokluğuna güvenebilirsiniz. `System.Text.Json` geçerli sürümü, çok biçimli seri kaldırma senaryolarının nasıl işleneceğini belirtmek için öznitelikler sağlamaz, bu nedenle özel dönüştürücüler gereklidir.
 
@@ -261,7 +262,7 @@ Aşağıdaki kod, temel sınıfı, iki türetilmiş sınıfı ve bunlar için ö
 
 Aşağıdaki kod dönüştürücüyü kaydeder:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertPolymorphic.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripPolymorphic.cs?name=SnippetRegister)]
 
 Dönüştürücü, serileştirme için aynı dönüştürücü kullanılarak oluşturulan JSON serisini kaldıramıyor, örneğin:
 
@@ -282,22 +283,25 @@ Dönüştürücü, serileştirme için aynı dönüştürücü kullanılarak olu
 
 ## <a name="other-custom-converter-samples"></a>Diğer özel dönüştürücü örnekleri
 
-`System.Text.Json.Serialization` kaynak kodundaki [birim testleri klasörü](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/) , aşağıdakiler gibi diğer özel dönüştürücü örneklerini içerir:
+[Newtonsoft. JSON 'Dan System. Text. JSON 'A geçiş](system-text-json-migrate-from-newtonsoft-how-to.md) , özel dönüştürücülerin ek örneklerini içerir.
 
-* seri durumdan çıkarma sırasında null değeri 0 olarak dönüştüren `Int32` Dönüştürücüsü
-* seri durumdan çıkarma sırasında hem dize hem de sayı değerlerine izin veren `Int32` Dönüştürücüsü
-* `Enum` Dönüştürücüsü
-* dış veri kabul eden `List<T>` Dönüştürücüsü
-* virgülle ayrılmış bir sayı listesi ile birlikte kullanılan `Long[]` Dönüştürücüsü 
+`System.Text.Json.Serialization` kaynak kodundaki [birim testleri klasörü](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) , aşağıdakiler gibi diğer özel dönüştürücü örneklerini içerir:
+
+* [Seri durumdan çıkarma sırasında null değeri 0 olarak dönüştüren Int32 Dönüştürücüsü](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.NullValueType.cs)
+* [Seri durumdan çıkarma sırasında hem dize hem de sayı değerlerine izin veren Int32 Dönüştürücüsü](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Int32.cs)
+* [Sabit Listesi Dönüştürücüsü](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Enum.cs)
+* [Dış verileri kabul eden\<T > dönüştürücüsünü listeleyin](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
+* [Long [] bir sayı listesi ile birlikte çalışma](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs) 
+
+Varolan bir yerleşik dönüştürücünün davranışını değiştiren bir dönüştürücü yapmanız gerekiyorsa, varolan dönüştürücünün özelleştirme için bir başlangıç noktası olarak sunmak üzere [kaynak kodunu](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters) alabilirsiniz.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
+* [Yerleşik dönüştürücüler için kaynak kodu](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
+* [System. Text. JSON içinde DateTime ve DateTimeOffset desteği](../datetime/system-text-json-support.md)
 * [System. Text. JSON genel bakış](system-text-json-overview.md)
-* [System. Text. JSON API başvurusu](xref:System.Text.Json)
 * [System. Text. JSON kullanma](system-text-json-how-to.md)
-* [Yerleşik dönüştürücüler için kaynak kodu](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json/src/System/Text/Json/Serialization/Converters/)
-* `System.Text.Json` yönelik özel dönüştürücüler ile ilgili GitHub sorunları
-  * [36639 özel dönüştürücüler tanıtımı](https://github.com/dotnet/corefx/issues/36639)
-  * [Nesne serisini kaldırma hakkında 38713](https://github.com/dotnet/corefx/issues/38713)
-  * [dize olmayan anahtar sözlükleri hakkında 40120](https://github.com/dotnet/corefx/issues/40120)
-  * [çok biçimli seri kaldırma hakkında 37787](https://github.com/dotnet/corefx/issues/37787)
+* [Newtonsoft. JSON 'dan geçiş yapma](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [System. Text. JSON API başvurusu](xref:System.Text.Json)
+* [System. Text. JSON. Serialization API başvurusu](xref:System.Text.Json.Serialization)
+<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

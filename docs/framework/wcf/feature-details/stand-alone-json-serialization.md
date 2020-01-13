@@ -2,17 +2,17 @@
 title: DataContractJsonSerializer kullanarak tek başına JSON serileştirmesi
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 412da71617a8627c47e877a75770271d9a3cf180
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 39d3c0acd75ffd9a54c5e62a15487a2cd8c465cb
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976068"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904598"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>DataContractJsonSerializer kullanarak tek başına JSON serileştirmesi
 
 > [!NOTE]
-> Bu makale <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. JSON serileştirilmesinin ve serisini kaldırma ile ilgili çoğu senaryo için, [System. Text. JSON ad alanındaki](../../../standard/serialization/system-text-json-overview.md)araçları öneririz. 
+> Bu makale <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. JSON serileştirilmesinin ve serisini kaldırma ile ilgili çoğu senaryo için, [System. Text. JSON ad alanındaki](../../../standard/serialization/system-text-json-overview.md)API 'leri öneririz. 
 
 JSON (JavaScript Nesne Gösterimi), tarayıcı içindeki Web sayfalarında çalışan JavaScript kodu tarafından kullanılmak üzere özel olarak tasarlanan bir veri biçimidir. Bu, Windows Communication Foundation (WCF) içinde oluşturulan ASP.NET AJAX Hizmetleri tarafından kullanılan varsayılan veri biçimidir.
 
@@ -39,7 +39,7 @@ Aşağıdaki tabloda, serileştirme ve serisini kaldırma yordamları ile eşlen
 |<xref:System.DateTimeOffset>|Karmaşık tür|Bu konunun ilerleyen kısımlarında tarihlere/saatlere ve JSON öğesine bakın.|
 |XML ve ADO.NET türleri (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. <xref:System.Xml.XmlNode>dizileri,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|Dize|Bu konunun XML türleri ve JSON bölümüne bakın.|
 |<xref:System.DBNull>|Boş karmaşık tür|--|
-|Koleksiyonlar, sözlükler ve diziler|Dizide|Bu konunun koleksiyonlar, sözlükler ve diziler bölümüne bakın.|
+|Koleksiyonlar, sözlükler ve diziler|Array|Bu konunun koleksiyonlar, sözlükler ve diziler bölümüne bakın.|
 |Karmaşık türler (<xref:System.Runtime.Serialization.DataContractAttribute> veya <xref:System.SerializableAttribute> uygulanmış)|Karmaşık tür|Veri üyeleri JavaScript karmaşık türünün üyesi olur.|
 |<xref:System.Runtime.Serialization.ISerializable> arabirimini uygulayan karmaşık türler)|Karmaşık tür|Diğer karmaşık türlerle aynı ancak bazı <xref:System.Runtime.Serialization.ISerializable> türleri desteklenmez – bu konunun gelişmiş bilgiler bölümünün ISerializable destek bölümüne bakın.|
 |her tür için `Null` değeri|Null|Null yapılabilir türler de desteklenir ve JSON ile aynı şekilde null atanamaz türler ile eşlenir.|
