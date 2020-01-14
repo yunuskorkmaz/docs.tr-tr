@@ -16,7 +16,11 @@
     - name: 2.0’dan 2.1’e
       href: 2.0-2.1.md
     - name: .NET Framework - .NET Core
-      href: fx-core.md
+      items:
+        - name: Yeni değişiklikler
+          href: fx-core.md
+        - name: Özel durumlar oluşturan API’ler
+          href: unsupported-apis.md
 - name: Alana göre
   expanded: true
   items:

@@ -185,7 +185,7 @@
       items:
         - name: Bellek sızıntısında hata ayıklama
           href: diagnostics/debug-memory-leak.md
-- name: Birim Testi
+- name: Birim testi
   href: testing/index.md
   items:
     - name: Birim testi en iyi deneyimler
@@ -339,8 +339,9 @@
     - name: XML Serileştirici Oluşturucusu
       href: additional-tools/xml-serializer-generator.md
 - name: .NET Framework’ten taşıma
-  href: porting/index.md
   items:
+    - name: Genel Bakış
+      href: porting/index.md
     - name: .NET Core’da kullanılamayan .NET Framework teknolojileri
       href: porting/net-framework-tech-unavailable.md
     - name: Üçüncü taraf bağımlılıklarını çözümleme

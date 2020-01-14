@@ -1,14 +1,16 @@
 - name: 'C# belgeleri'
   href: index.yml
-- name: Başlarken
+- name: Kullanmaya başlayın
   items:
     - name: Genel Bakış
+      displayName: get started
       href: getting-started/index.md
     - name: 'C# Diline ve.NET Framework’e Giriş'
       href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
 - name: Öğreticiler
   items:
     - name: Genel Bakış
+      displayName: tutorials
       href: tutorials/index.md
     - name: 'C# ile programlamaya giriş'
       items:
@@ -93,6 +95,7 @@
 - name: 'C# yenilikleri'
   items:
     - name: 'C# 8.0'
+      displayName: what's new
       href: whats-new/csharp-8.md
     - name: 'C# 7.3'
       href: whats-new/csharp-7-3.md
@@ -112,9 +115,9 @@
       href: whats-new/relationships-between-language-and-library.md
     - name: Sürüm ve güncelleştirme konusunda dikkat edilmesi gerekenler
       href: whats-new/version-update-considerations.md
-- name: 'C# Kavramları'
+- name: 'C# kavramları'
   items:
-    - name: 'C# Tür sistemi'
+    - name: 'C# tür sistemi'
       href: programming-guide/types/index.md
     - name: Boş değer atanabilir başvuru türleri
       href: nullable-references.md
@@ -214,7 +217,7 @@
       href: pattern-matching.md
     - name: 'Güvenli, verimli kod yazma'
       href: write-safe-efficient-code.md
-    - name: İfade Ağaçları
+    - name: İfade ağaçları
       items:
         - name: İfade ağaçlarına giriş
           href: expression-trees.md
@@ -238,9 +241,10 @@
       href: codedoc.md
     - name: Sürüm Oluşturma
       href: versioning.md
-- name: 'C# Kullanımı Hakkındaki Konular'
+- name: 'Nasıl yapılır C# makaleleri'
   items:
-    - name: Konu dizini
+    - name: Makale dizini
+      displayName: how to's
       href: how-to/index.md
     - name: '`String.Split` kullanarak dizeleri ayrıştırma'
       href: how-to/parse-strings-using-split.md
@@ -270,7 +274,7 @@
       href: roslyn-sdk/work-with-workspace.md
     - name: Söz dizimi görselleştiricisi ile kod bulma
       href: roslyn-sdk/syntax-visualizer.md
-    - name: Hızlı Başlangıçlar
+    - name: Hızlı başlangıçlar
       items:
         - name: Söz dizimi analizi
           href: roslyn-sdk/get-started/syntax-analysis.md
@@ -282,13 +286,14 @@
       items:
         - name: İlk çözümleyicinizi oluşturma ve kod düzeltmesi uygulama
           href: roslyn-sdk/tutorials/how-to-write-csharp-analyzer-code-fix.md
-- name: 'C# Programlama Kılavuzu'
+- name: 'C# programlama kılavuzu'
   items:
     - name: Genel Bakış
+      displayName: programming guide
       href: programming-guide/index.md
-    - name: 'C# Programı İçinde'
+    - name: 'C# programı içinde'
       items:
-        - name: 'C# Programı içinde neler var?'
+        - name: 'C# programı içinde neler bulunur?'
           href: programming-guide/inside-a-program/index.md
         - name: Hello World -- İlk Programınız
           href: programming-guide/inside-a-program/hello-world-your-first-program.md
@@ -298,9 +303,10 @@
           href: programming-guide/inside-a-program/identifier-names.md
         - name: 'C# Kodlama Kuralları'
           href: programming-guide/inside-a-program/coding-conventions.md
-    - name: Ana() ve Komut Satırı Bağımsız Değişkenleri
+    - name: Ana() ve komut satırı bağımsız değişkenleri
       items:
         - name: Genel Bakış
+          displayName: main method
           href: programming-guide/main-and-command-args/index.md
         - name: Komut Satırı Bağımsız Değişkenleri
           href: programming-guide/main-and-command-args/command-line-arguments.md
@@ -308,13 +314,15 @@
           href: programming-guide/main-and-command-args/how-to-display-command-line-arguments.md
         - name: Ana() Dönüş Değerleri
           href: programming-guide/main-and-command-args/main-return-values.md
-    - name: Programlama Kavramları
+    - name: Programlama kavramları
       items:
         - name: Genel Bakış
+          displayName: programming concepts
           href: programming-guide/concepts/index.md
-        - name: Async ve await ile Zaman Uyumsuz Programlama
+        - name: Async ve await ile asenkron programlama
           items:
             - name: Genel Bakış
+              displayName: asynchronous programming
               href: programming-guide/concepts/async/index.md
             - name: Zaman uyumsuz görev programlama modeli
               href: programming-guide/concepts/async/task-asynchronous-programming-model.md
@@ -347,6 +355,7 @@
         - name: Öznitelikler
           items:
             - name: Genel Bakış
+              displayName: attributes
               href: programming-guide/concepts/attributes/index.md
             - name: Özel Öznitelikler Oluşturma
               href: programming-guide/concepts/attributes/creating-custom-attributes.md
@@ -358,18 +367,19 @@
               href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
             - name: Ortak Öznitelikler
               href: programming-guide/concepts/attributes/common-attributes.md
-        - name: Arayan Bilgileri
+        - name: Çağıran bilgileri
           href: programming-guide/concepts/caller-information.md
         - name: Koleksiyonlar
           href: programming-guide/concepts/collections.md
-        - name: Kovaryans ve Kontravaryans
+        - name: Kovaryans ve kontravaryans
           items:
             - name: Genel Bakış
+              displayName: covariance and contravariance
               href: programming-guide/concepts/covariance-contravariance/index.md
             - name: Genel Arabirimlerde Varyans
               href: programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md
               items:
-                - name: Değişken Genel Arabirimler Oluşturma
+                - name: Varyant Genel Arabirim Oluşturma
                   href: programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md
                 - name: Genel Koleksiyonlar için Arabirimlerde Varyans Kullanma
                   href: programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md
@@ -380,9 +390,10 @@
                   href: programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md
                 - name: İşlev ve Eylem Genel Temsilcileri için Varyans Kullanma
                   href: programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md
-        - name: İfade Ağaçları
+        - name: İfade ağaçları
           items:
             - name: Genel Bakış
+              displayName: expression trees
               href: programming-guide/concepts/expression-trees/index.md
             - name: İfade ağaçlarını yürütme
               href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
@@ -399,6 +410,7 @@
         - name: Dil ile Tümleşik Sorgu (LINQ)
           items:
             - name: Genel Bakış
+              displayName: LINQ overview
               href: programming-guide/concepts/linq/index.md
             - name: 'C#''de LINQ''e Başlarken'
               items:
@@ -873,6 +885,7 @@
         - name: 'Serileştirme (C# )'
           items:
             - name: Genel Bakış
+              displayName: serialization
               href: programming-guide/concepts/serialization/index.md
             - name: Nesne verilerini bir XML dosyasına yazma
               href: programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md
@@ -880,9 +893,10 @@
               href: programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md
             - name: 'İzlenecek yol: Visual Studio’da Bir Nesneyi Kalıcı Kılma'
               href: programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md
-    - name: 'Deyimler, İfadeler ve İşleçler'
+    - name: 'Deyimler, ifadeler ve işleçler'
       items:
         - name: Genel Bakış
+          displayName: 'statements, expressions, operators'
           href: programming-guide/statements-expressions-operators/index.md
         - name: Deyimler
           href: programming-guide/statements-expressions-operators/statements.md
@@ -927,6 +941,7 @@
     - name: Sınıflar ve Yapılar
       items:
         - name: Genel Bakış
+          displayName: classes structs
           href: programming-guide/classes-and-structs/index.md
         - name: Sınıflar
           href: programming-guide/classes-and-structs/classes.md
@@ -935,14 +950,16 @@
         - name: Yapılar
           items:
             - name: Genel Bakış
+              displayName: structs
               href: programming-guide/classes-and-structs/structs.md
-            - name: Yapıları Kullanma
+            - name: Yapıları kullanma
               href: programming-guide/classes-and-structs/using-structs.md
         - name: Devralma
           href: programming-guide/classes-and-structs/inheritance.md
         - name: Çok Biçimlilik
           items:
             - name: Genel Bakış
+              displayName: polymorphism
               href: programming-guide/classes-and-structs/polymorphism.md
             - name: Geçersiz Kılma ve Yeni Anahtar Sözcüklerle Sürüm Oluşturma
               href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
@@ -1049,6 +1066,7 @@
     - name: Arabirimler
       items:
         - name: Genel Bakış
+          displayName: interfaces
           href: programming-guide/interfaces/index.md
         - name: Açık Arabirim Uygulaması
           href: programming-guide/interfaces/explicit-interface-implementation.md
@@ -1059,6 +1077,7 @@
     - name: Temsilciler
       items:
         - name: Genel Bakış
+          displayName: delegates
           href: programming-guide/delegates/index.md
         - name: Temsilcileri Kullanma
           href: programming-guide/delegates/using-delegates.md
@@ -1071,6 +1090,7 @@
     - name: Diziler
       items:
         - name: Genel Bakış
+          displayName: arrays
           href: programming-guide/arrays/index.md
         - name: Nesne Olarak Diziler
           href: programming-guide/arrays/arrays-as-objects.md
@@ -1095,6 +1115,7 @@
     - name: Dizin Oluşturucular
       items:
         - name: Genel Bakış
+          displayName: indexers
           href: programming-guide/indexers/index.md
         - name: Dizin Oluşturucular Kullanma
           href: programming-guide/indexers/using-indexers.md
@@ -1105,6 +1126,7 @@
     - name: Olaylar
       items:
         - name: Genel Bakış
+          displayName: events
           href: programming-guide/events/index.md
         - name: Olaylara abone olma ve aboneliği kaldırma
           href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
@@ -1119,6 +1141,7 @@
     - name: Genel Türler
       items:
         - name: Genel Bakış
+          displayName: generics
           href: programming-guide/generics/index.md
         - name: Genel Tür Parametreleri
           href: programming-guide/generics/generic-type-parameters.md
@@ -1145,6 +1168,7 @@
     - name: Ad Alanları
       items:
         - name: Genel Bakış
+          displayName: namespaces
           href: programming-guide/namespaces/index.md
         - name: Ad alanlarını kullanma
           href: programming-guide/namespaces/using-namespaces.md
@@ -1153,12 +1177,14 @@
     - name: Güvenli Olmayan Kod ve İşaretçiler
       items:
         - name: Genel bakış ve kısıtlamalar
+          displayName: unsafe code pointers
           href: programming-guide/unsafe-code-pointers/index.md
         - name: Sabit Boyutlu Arabellekler
           href: programming-guide/unsafe-code-pointers/fixed-size-buffers.md
         - name: İşaretçi türleri
           items:
             - name: Genel Bakış
+              displayName: pointer types
               href: programming-guide/unsafe-code-pointers/pointer-types.md
             - name: İşaretçi Dönüştürmeler
               href: programming-guide/unsafe-code-pointers/pointer-conversions.md
@@ -1167,6 +1193,7 @@
     - name: XML Belgeleri Yorumları
       items:
         - name: Genel Bakış
+          displayName: xml documentation comments
           href: programming-guide/xmldoc/index.md
         - name: Belge Açıklamaları için Önerilen Etiketler
           href: programming-guide/xmldoc/recommended-tags-for-documentation-comments.md
@@ -1219,6 +1246,7 @@
     - name: Özel Durumlar ve Özel Durum İşleme
       items:
         - name: Genel Bakış
+          displayName: exceptions
           href: programming-guide/exceptions/index.md
         - name: Özel Durumlar Kullanma
           href: programming-guide/exceptions/using-exceptions.md
@@ -1237,6 +1265,7 @@
     - name: Dosya Sistemi ve Kayıt Defteri
       items:
         - name: Genel Bakış
+          displayName: file system registry
           href: programming-guide/file-system/index.md
         - name: Dizin ağacında yineleme
           href: programming-guide/file-system/how-to-iterate-through-a-directory-tree.md
@@ -1275,12 +1304,14 @@
 - name: Dil Başvurusu
   items:
     - name: Genel Bakış
+      displayName: language reference
       href: language-reference/index.md
     - name: Dil sürümünü yapılandırma
       href: language-reference/configure-language-version.md
     - name: 'C# anahtar sözcükleri'
       items:
         - name: Genel Bakış
+          displayName: keywords
           href: language-reference/keywords/index.md
         - name: Yerleşik türler
           items:
@@ -1435,6 +1466,7 @@
             - name: Checked ve Unchecked
               items:
                 - name: Genel Bakış
+                  displayName: checked unchecked
                   href: language-reference/keywords/checked-and-unchecked.md
                 - name: checked
                   href: language-reference/keywords/checked.md
@@ -1499,6 +1531,7 @@
         - name: Bağlamsal Anahtar Sözcükler
           items:
             - name: Hızlı başvuru
+              displayName: contextual keywords
               href: language-reference/keywords/contextual-keywords.md
             - name: add
               href: language-reference/keywords/add.md
@@ -1521,6 +1554,7 @@
         - name: Sorgu Anahtar Sözcükleri
           items:
             - name: Hızlı başvuru
+              displayName: query keywords
               href: language-reference/keywords/query-keywords.md
             - name: from tümcesi
               href: language-reference/keywords/from-clause.md
@@ -1631,6 +1665,7 @@
     - name: 'C# özel karakterleri'
       items:
         - name: Genel Bakış
+          displayName: special characters
           href: language-reference/tokens/index.md
         - name: $ -- dize ilişkilendirme
           href: language-reference/tokens/interpolated.md
@@ -1639,6 +1674,7 @@
     - name: 'C# ön işlemci yönergeleri'
       items:
         - name: Genel Bakış
+          displayName: preprocessor directives
           href: language-reference/preprocessor-directives/index.md
         - name: '#if'
           href: language-reference/preprocessor-directives/preprocessor-if.md
@@ -1671,6 +1707,7 @@
     - name: 'C# derleyici seçenekleri'
       items:
         - name: Genel Bakış
+          displayName: compiler options
           href: language-reference/compiler-options/index.md
         - name: csc.exe Kullanarak Komut Satırı Derleme
           href: language-reference/compiler-options/command-line-building-with-csc-exe.md
