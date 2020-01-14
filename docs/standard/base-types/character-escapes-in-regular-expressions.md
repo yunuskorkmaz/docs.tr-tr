@@ -15,13 +15,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.custom: seodec18
-ms.openlocfilehash: 0179c4313ebce3cf6f2ad09d527d43aeb627bf77
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 82e60b3cb5eb777d48219209550367642f78d8c3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120583"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711434"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Çıkışları
 Bir normal ifadede ters eğik çizgi (\\) aşağıdakilerden birini belirtir:  
@@ -38,9 +37,9 @@ Bir normal ifadede ters eğik çizgi (\\) aşağıdakilerden birini belirtir:
   
 |Karakter veya sıra|Açıklama|  
 |---------------------------|-----------------|  
-|Aşağıdakiler hariç tüm karakterler:<br /><br /> biçimindeki telefon numarasıdır. $ ^ { [ ( &#124; ) * + ? \ |**Karakter veya dizi** sütununda listelenenler dışındaki karakterlerin normal ifadelerde özel bir anlamı yoktur; Bunlar kendileriyle eşleşir.<br /><br /> **Karakter veya dizi** sütununa dahil edilen karakterler özel normal ifade dili öğeleridir. Bunları düzenli bir ifadede eşleştirmek için, bu, kaçış veya [pozitif bir karakter grubuna](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)dahil edilmeleri gerekir. Örneğin, `\$\d+` veya `[$]\d+` normal ifade "$1200" ile eşleşir.|  
+|Aşağıdakiler hariç tüm karakterler:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |**Karakter veya dizi** sütununda listelenenler dışındaki karakterlerin normal ifadelerde özel bir anlamı yoktur; Bunlar kendileriyle eşleşir.<br /><br /> **Karakter veya dizi** sütununa dahil edilen karakterler özel normal ifade dili öğeleridir. Bunları düzenli bir ifadede eşleştirmek için, bu, kaçış veya [pozitif bir karakter grubuna](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)dahil edilmeleri gerekir. Örneğin, `\$\d+` veya `[$]\d+` normal ifade "$1200" ile eşleşir.|  
 |`\a`|`\u0007`bir zil (alarm) karakteriyle eşleşir.|  
-|`\b`|Bir `[`*character_group*`]` karakter sınıfında, bir geri al `\u0008`eşleşir.  (Bkz. [karakter sınıfları](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) Bir karakter sınıfı dışında `\b`, bir sözcük sınırı ile eşleşen bir bağlantıdır. (Bkz. [Tutturucuların](../../../docs/standard/base-types/anchors-in-regular-expressions.md).)|  
+|`\b`|Bir `[`*character_group*`]` karakter sınıfında, geri al, `\u0008`ile eşleşir.  (Bkz. [karakter sınıfları](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) Bir karakter sınıfı dışında `\b`, bir sözcük sınırı ile eşleşen bir bağlantıdır. (Bkz. [Tutturucuların](../../../docs/standard/base-types/anchors-in-regular-expressions.md).)|  
 |`\t`|Bir sekmeyle eşleşir, `\u0009`.|  
 |`\r`|Bir satır dönüşüyle eşleşir, `\u000D`. `\r`, `\n`yeni satır karakteriyle eşit olmadığına unutmayın.|  
 |`\v`|`\u000B`dikey sekme ile eşleşir.|  
