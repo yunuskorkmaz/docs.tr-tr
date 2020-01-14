@@ -2,12 +2,12 @@
 title: Olaylara abone olma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Tümleştirme olaylarına yayımlama ve aboneliğin ayrıntılarını anlayın.
 ms.date: 10/02/2018
-ms.openlocfilehash: c607f8b980f7dffacf3564688c6c9bb498264d96
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: facbb04d322c5df03498a0313556dd9b5b3161d2
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737024"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937142"
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
@@ -368,7 +368,7 @@ Aralıklı ağ arızalarının meydana gelmesi durumunda iletiler yinelenebilir 
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Rick sallama. CAP 'ler: bulut ve Internet \ "her şey farklı"**
-    <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
+    <https://docs.microsoft.com/archive/blogs/rickatmicrosoft/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
 - **Eric Brewer. BÜYÜK on Iki yıl sonra: "kurallar" nasıl değiştirildi** \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>

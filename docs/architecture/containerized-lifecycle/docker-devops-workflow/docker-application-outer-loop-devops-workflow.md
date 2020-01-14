@@ -2,12 +2,12 @@
 title: Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 description: DevOps iş akışının "dıştaki döngüsü" adımlarını öğrenin
 ms.date: 02/15/2019
-ms.openlocfilehash: 7c465ab380770441005f7365f53bc585236c31bd
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 735f92c00cd6279649ec3b0c35cfb00543f21a8c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738272"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936776"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 
@@ -67,7 +67,7 @@ Docker ve Azure DevOps Services ile ilgili temel CI iş akışı adımları aşa
 
 ### <a name="implementing-the-ci-pipeline-with-azure-devops-services-and-the-docker-extension-for-azure-devops-services"></a>Azure DevOps Services için Azure DevOps Services ve Docker uzantısıyla CI işlem hattını uygulama
 
-Visual Studio Azure DevOps Services,, Docker görüntülerini oluşturabileceğiniz, Docker görüntülerini kimliği doğrulanmış bir Docker kayıt defterine gönderebilen, Docker görüntülerini çalıştıran veya tarafından sunulan diğer işlemleri çalıştıran, CI/CD işlem hattınızda kullanabileceğiniz derleme & sürüm şablonları içerir. Docker CLı. Ayrıca, Şekil 5-3 ' de gösterildiği gibi, çok Kapsayıcılı Docker uygulamaları oluşturmak, göndermek ve çalıştırmak için kullanabileceğiniz bir Docker Compose görevi ekler veya Docker Compose CLı tarafından sunulan diğer işlemleri çalıştırabilirsiniz.
+Visual Studio Azure DevOps Services, Docker görüntülerini oluşturabileceğiniz, Docker görüntülerini kimliği doğrulanmış bir Docker kayıt defterine gönderebilen, Docker görüntülerini çalıştıran veya Docker CLı tarafından sunulan diğer işlemleri çalıştıran, CI/CD işlem hattınızda kullanabileceğiniz derleme & sürüm şablonları içerir. Ayrıca, Şekil 5-3 ' de gösterildiği gibi, çok Kapsayıcılı Docker uygulamaları oluşturmak, göndermek ve çalıştırmak için kullanabileceğiniz bir Docker Compose görevi ekler veya Docker Compose CLı tarafından sunulan diğer işlemleri çalıştırabilirsiniz.
 
 ![Azure DevOps 'daki Docker CI işlem hattının ekran görüntüsü.](./media/docker-application-outer-loop-devops-workflow/docker-ci-pipeline-azure-devops.png)
 
@@ -75,7 +75,7 @@ Visual Studio Azure DevOps Services,, Docker görüntülerini oluşturabileceği
 
 Azure Service Fabric, Azure Kubernetes hizmeti ve benzer tekliflerde derleme/test ve dağıtım yapmak üzere CI/CD yapılarınızı oluşturmak için bu şablonları ve görevleri kullanabilirsiniz.
 
-Bu Visual Studio Team Services görevlerle, Azure 'da sağlanan bir Linux-Docker Konağı/VM ve tercih ettiğiniz Docker kayıt defteri (Azure Container Registry, Docker Hub, özel Docker DTR veya başka bir Docker kayıt defteri) ile Docker CI işlem hattınızı bir ile birleştirebilirsiniz. çok tutarlı bir yoldur.
+Bu Visual Studio Team Services görevlerle, Azure 'da ve tercih ettiğiniz Docker kayıt defterinizde (Azure Container Registry, Docker Hub, özel Docker DTR veya başka bir Docker kayıt defteri) sağlanan bir derleme Linux-Docker Konağı/VM ile Docker CI işlem hattınızı çok tutarlı bir şekilde birleştirebilirsiniz.
 
 ***Gereksinimler:***
 
@@ -91,7 +91,7 @@ Bu Visual Studio Team Services görevlerle, Azure 'da sağlanan bir Linux-Docker
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
 > - Azure DevOps Services .NET Core Linux Docker görüntüleri derleniyor: \
->   <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
+>   <https://docs.microsoft.com/archive/blogs/stevelasker/building-net-core-linux-docker-images-with-visual-studio-team-services>
 >
 > - Docker desteğiyle Linux tabanlı bir Visual Studio Team Service derleme makinesi oluşturma: \
 >   <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
