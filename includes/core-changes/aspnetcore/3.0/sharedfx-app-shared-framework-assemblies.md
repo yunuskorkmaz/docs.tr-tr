@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2067ea2a70277d188950c449d3990f4426f69beb
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: a8146db1fb54d63d4716b879ce793f7d817cef59
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901965"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937280"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Paylaşılan çerçeve: Microsoft. AspNetCore. app öğesinden kaldırılan derlemeler
 
@@ -46,7 +46,7 @@ Daha fazla bilgi için [.NET Core 3,0 ' de JSON 'nin geleceğe](https://github.c
 
 Bu değişiklik, `Microsoft.AspNetCore.App` tüketimini basitleştirir ve NuGet paketleri ile paylaşılan Çerçeveler arasındaki yinelemeyi azaltır.
 
-Bu değişiklik için mosyon hakkında daha fazla bilgi için [Bu blog gönderisine](https://blogs.msdn.microsoft.com/webdev/2018/10/29/a-first-look-at-changes-coming-in-asp-net-core-3-0)bakın.
+Bu değişiklik için mosyon hakkında daha fazla bilgi için [Bu blog gönderisine](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/)bakın.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 

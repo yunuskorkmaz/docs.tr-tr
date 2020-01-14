@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 30931874-4d0e-4df1-b3d1-e425b50655d1
 topic_type:
 - apiref
-ms.openlocfilehash: 1759ee2ecf08322b745a4f80a62b24596c4504cb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11bb220068e978dc130701e3b28ab3f421be7337
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123245"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937648"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim İşlevi
 Yeniden dağıtılabilir .NET Framework paketinde bulunan bir DLL 'nin belirtilen sürümünü yükler.  
@@ -43,10 +43,10 @@ HRESULT LoadLibraryShim (
  'ndaki .NET Framework kitaplığından yüklenecek DLL 'nin adını temsil eden sıfır ile sonlandırılmış bir dize.  
   
  `szVersion`  
- 'ndaki Yüklenecek DLL sürümünü temsil eden sıfır ile sonlandırılmış bir dize. `szVersion` null ise, yükleme için seçilen sürüm, belirtilen DLL 'nin sürüm 4 ' ten küçük olan en son sürümüdür. Diğer bir deyişle, `szVersion` null olduğunda ve sürüm 4 ' ten küçük bir sürüm yüklü değilse DLL yüklenemediğinde, sürüm 4 ' ten büyük veya bundan büyük tüm sürümler yok sayılır. Bu, .NET Framework 4 yüklemesinin önceden var olan uygulamaları veya bileşenleri etkilememesini sağlamaktır. CLR ekibi bloguna [-proc sxs ve geçiş hızlı başlangıç](https://go.microsoft.com/fwlink/?LinkId=200329) girdisine bakın.  
+ 'ndaki Yüklenecek DLL sürümünü temsil eden sıfır ile sonlandırılmış bir dize. `szVersion` null ise, yükleme için seçilen sürüm, belirtilen DLL 'nin sürüm 4 ' ten küçük olan en son sürümüdür. Diğer bir deyişle, `szVersion` null olduğunda ve sürüm 4 ' ten küçük bir sürüm yüklü değilse DLL yüklenemediğinde, sürüm 4 ' ten büyük veya bundan büyük tüm sürümler yok sayılır. Bu, .NET Framework 4 yüklemesinin önceden var olan uygulamaları veya bileşenleri etkilememesini sağlamaktır. CLR ekibi bloguna [-proc sxs ve geçiş hızlı başlangıç](https://devblogs.microsoft.com/dotnet/in-proc-sxs-and-migration-quick-start/) girdisine bakın.  
   
  `pvReserved`  
- Daha sonraki kullanımlar için ayrılmıştır.  
+ Gelecekte kullanılmak üzere ayrılmış.  
   
  `phModDll`  
  dışı Modülün tanıtıcısına yönelik bir işaretçi.  

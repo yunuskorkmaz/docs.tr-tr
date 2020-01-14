@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation Özellik Ayrıntıları
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: c534575fcf70035bc728642dbb65b05db1fd4686
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 197b2e0d6586e001a4970cf8cb3f8e6b2a372af2
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345102"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936790"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation Özellik Ayrıntıları
 
@@ -101,9 +101,9 @@ WCF yapılandırma şeması karmaşıktır ve kullanıcılara birçok özellik b
 
 - [Standart uç nokta öğesi](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [.NET Framework 4 ' te hizmet yapılandırması geliştirmeleri](https://blogs.msdn.microsoft.com/endpoint/2009/06/30/service-configuration-improvements-in-net-4/)
+- [.NET Framework 4 ' te hizmet yapılandırması geliştirmeleri](https://docs.microsoft.com/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
 
-- [.NET 4 ' te yaygın kullanıcı hatası: WF/WCF hizmeti yapılandırma adını yanlış yazma](https://blogs.msdn.microsoft.com/endpoint/2009/11/09/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name/)
+- [.NET 4 ' te yaygın kullanıcı hatası: WF/WCF hizmeti yapılandırma adını yanlış yazma](https://docs.microsoft.com/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
 
 ### <a name="simplified-configuration-scenarios"></a>Basitleştirilmiş yapılandırma senaryoları
 
@@ -127,7 +127,7 @@ WCF yapılandırma şeması karmaşıktır ve kullanıcılara birçok özellik b
 
 - [Veri sözleşme Çözümleyicisi API 'SI belgeleri](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [Veri sözleşmesi çözümleyicisine giriş](https://blogs.msdn.microsoft.com/youssefm/2009/06/05/configuring-known-types-dynamically-introducing-the-datacontractresolver/)
+- [Veri sözleşmesi çözümleyicisine giriş](https://docs.microsoft.com/archive/blogs/youssefm/configuring-known-types-dynamically-introducing-the-datacontractresolver)
 
 - Lerinizi
 
@@ -287,7 +287,7 @@ Yönlendirme hizmeti, WCF iletilerinin istemcileriniz ve hizmetleriniz arasında
 
 2. Örnekler: [Yönlendirme Hizmetleri &#91;WCF örnekleri&#93; ](../wcf/samples/routing-services.md)
 
-3. Blog: [yönlendirme kuralları!](https://blogs.msdn.microsoft.com/RoutingRules/)
+3. Blog: [yönlendirme kuralları!](https://docs.microsoft.com/archive/blogs/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>Yönlendirme Senaryoları
 

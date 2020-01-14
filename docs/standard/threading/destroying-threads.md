@@ -9,16 +9,17 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET Framework], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: 1852135e9b7f48d6556e27f16819ddd48805af21
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: efd4c596f67d5eabace8ecafb48f2d350df6a18e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138087"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938042"
 ---
 # <a name="destroying-threads"></a>İş parçacıklarını yok etme
-<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> yöntemi, yönetilen bir iş parçacığını kalıcı olarak durdurmak için kullanılır. <xref:System.Threading.Thread.Abort%2A>çağırdığınızda, ortak dil çalışma zamanı hedef iş parçacığında hedef iş parçacığının yakalayabileceği bir <xref:System.Threading.ThreadAbortException> oluşturur. Daha fazla bilgi için bkz. <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
-  
+
+İş parçacığının yürütülmesini sonlandırmak için genellikle [birlikte bulunan iptal modelini](cancellation-in-managed-threads.md)kullanırsınız. Bazen iş parçacığı işbirliği yapmak mümkün değildir, çünkü birlikte çalışma iptali için tasarlanmamış üçüncü taraf kodu çalıştırır. .NET Framework <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> yöntemi, yönetilen bir iş parçacığını zorla sonlandırmak için kullanılabilir. <xref:System.Threading.Thread.Abort%2A>çağırdığınızda, ortak dil çalışma zamanı hedef iş parçacığında hedef iş parçacığının yakalayabileceği bir <xref:System.Threading.ThreadAbortException> oluşturur. Daha fazla bilgi için bkz. <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> yöntemi .NET Core 'da desteklenmez. Üçüncü taraf kod yürütmeyi .NET Core 'da zorla sonlandırmak istiyorsanız, ayrı bir işlemde çalıştırın ve <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>kullanın.
+
 > [!NOTE]
 > Bir iş parçacığı <xref:System.Threading.Thread.Abort%2A> yöntemi çağrıldığında yönetilmeyen kodu yürütüp, çalışma zamanı <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>işaretler. Özel durum, iş parçacığı yönetilen koda döndüğünde oluşturulur.  
   
@@ -29,7 +30,7 @@ ms.locfileid: "73138087"
  <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> yöntemine yapılan bir çağrıda bekleyen iş parçacıkları, <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>çağıran diğer iş parçacıkları tarafından kesintiye uğrar.  
   
 ## <a name="handling-threadabortexception"></a>Threadadbortexception işleme  
- İş parçacığınızdan, kendi kodunuzun <xref:System.Threading.Thread.Abort%2A> çağrılması veya iş parçacığının çalıştığı bir uygulama etki alanının kaldırılması sonucu olarak (<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> iş parçacıklarını sonlandırmak için <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> kullanıyorsa) , iş parçacığın <xref:System.Threading.ThreadAbortException> işlemesi ve aşağıdaki kodda gösterildiği gibi `finally` yan tümcesinde son işlemleri gerçekleştirmesi gerekir.  
+ İş parçacığınızdan, kendi kodunuzda <xref:System.Threading.Thread.Abort%2A> çağırmanın veya iş parçacığının çalıştığı bir uygulama etki alanının kaldırılması sonucu olarak (<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> iş parçacıklarını sonlandırmak için <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> kullanıyorsa), iş parçacığın <xref:System.Threading.ThreadAbortException> işlemesi ve aşağıdaki kodda gösterildiği gibi `finally` yan tümcesinde son işlemleri gerçekleştirmesi gerekir.  
   
 ```vb  
 Try  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: a3e60f715c4c61e671980e4f36813e864469d28e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1a839c4cd99e21bc2a3ebd90cf3302a475c02e17
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344764"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938138"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR Profil Oluşturucular ve Microsoft Store Uygulamaları
 
@@ -76,7 +76,7 @@ Windows RT cihazları oldukça kilitlidir. Üçüncü taraf profil oluşturucula
 
 Aşağıdaki bölümlerde ele alınan çeşitli senaryolarda, Profil Oluşturucu kullanıcı arabirimi masaüstü uygulamanızın bazı yeni Windows Çalışma Zamanı API 'Leri kullanması gerekir. Masaüstü uygulamalarından hangi Windows Çalışma Zamanı API 'Lerinin kullanılabileceğini ve bunların Masaüstü uygulamalarından ve Windows Mağazası uygulamalarından çağrıldığında farklı olup olmadığını anlamak için belgelere danışmak isteyeceksiniz.
 
-Profil Oluşturucu kullanıcı arabiriminizi yönetilen kodda yazılmışsa, bu Windows Çalışma Zamanı API 'Leri kullanmayı kolaylaştırmak için yapmanız gereken birkaç adım olacaktır. Daha fazla bilgi için bkz. [yönetilen masaüstü uygulamaları ve Windows çalışma zamanı](https://go.microsoft.com/fwlink/?LinkID=271858) makalesi.
+Profil Oluşturucu kullanıcı arabiriminizi yönetilen kodda yazılmışsa, bu Windows Çalışma Zamanı API 'Leri kullanmayı kolaylaştırmak için yapmanız gereken birkaç adım olacaktır. Daha fazla bilgi için bkz. [yönetilen masaüstü uygulamaları ve Windows çalışma zamanı](https://docs.microsoft.com/previous-versions/windows/apps/jj856306(v=win.10)) makalesi.
 
 ## <a name="loading-the-profiler-dll"></a>Profil oluşturucu DLL yükleniyor
 
@@ -378,11 +378,11 @@ WinMDs 'de meta verileri değiştirme desteklenmiyor. Bir WinMD dosyası için [
 
 Bellek profili oluşturma sırasında, profil oluşturucu DLL 'niz genellikle [ForceGC yöntemi](icorprofilerinfo-forcegc-method.md) yönteminin çağrılabileceği ayrı bir iş parçacığı oluşturur. Bu yeni bir şey değildir. Ancak, bir Windows Mağazası uygulamasının içinde çöp toplama işlemi yapma işleminin iş parçacığını yönetilen bir iş parçacığına dönüştürebileceği (örneğin, bu iş parçacığı için bir profil oluşturma API 'SI tehdit oluşturulacak).
 
-Bunun sonuçlarını anlamak için, CLR profil oluşturma API 'SI tarafından tanımlanan, zaman uyumlu ve zaman uyumsuz çağrılar arasındaki farklılıkları anlamak önemlidir. Bu, Windows Mağazası uygulamalarındaki zaman uyumsuz çağrılar kavramından çok farklı olduğunu unutmayın. Daha fazla bilgi için [corprof_e_unsupported_call_sequence neden yaptığımız](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) blog gönderisine bakın.
+Bunun sonuçlarını anlamak için, CLR profil oluşturma API 'SI tarafından tanımlanan, zaman uyumlu ve zaman uyumsuz çağrılar arasındaki farklılıkları anlamak önemlidir. Bu, Windows Mağazası uygulamalarındaki zaman uyumsuz çağrılar kavramından çok farklı olduğunu unutmayın. Daha fazla bilgi için [corprof_e_unsupported_call_sequence neden yaptığımız](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) blog gönderisine bakın.
 
 İlgili nokta, Profil oluşturucunuz tarafından oluşturulan iş parçacıklarında yapılan çağrıların, profil oluşturucu DLL 'inin [ICorProfilerCallback](icorprofilercallback-interface.md) metotlarından birinin bir uygulamasının dışından yapılsa bile her zaman zaman uyumlu olarak kabul edilir. En azından, bu durum olarak kullanılır. [ForceGC yöntemine](icorprofilerinfo-forcegc-method.md)yapılan ÇAĞRıLARıNıZ nedeniyle CLR 'nin Profiler iş parçacığını yönetilen bir iş parçacığına kapatmış olduğuna göre, bu iş parçacığı artık profil oluşturucunun iş parçacığını kabul edilmiyor. Bu nedenle, CLR, bu iş parçacığı için zaman uyumlu olarak niteleyen nelerin daha sıkı bir tanımını uygular — yani bir çağrı, zaman uyumlu olarak nitelendirmek için profil oluşturucu DLL 'inin [ICorProfilerCallback](icorprofilercallback-interface.md) yöntemlerinden birinin içinden kaynaklanmalıdır.
 
-Bu uygulamada ne anlama geliyor? Çoğu [ICorProfilerInfo](icorprofilerinfo-interface.md) yöntemlerinin yalnızca zaman uyumlu olarak çağrılması güvenlidir ve aksi halde, daha sonra başarısız olur. Profil oluşturucu DLL 'niz, genellikle profil oluşturucu tarafından oluşturulan iş parçacıklarında (örneğin, [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)veya [requestdönmesi](icorprofilerinfo4-requestrevert-method.md)Için) gerçekleştirilen diğer çağrılar için [ForceGC yöntemi](icorprofilerinfo-forcegc-method.md) iş parçacığını yeniden kullanıyorsa, sorun yaşamaya devam edersiniz. [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) gibi zaman uyumsuz güvenli bir işlev, yönetilen iş parçacıklarında çağrıldığında özel kurallara sahiptir. (Daha fazla bilgi için bkz. Profiler Stack for the blog gönderisi [: temel bilgiler ve](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) daha fazlası.)
+Bu uygulamada ne anlama geliyor? Çoğu [ICorProfilerInfo](icorprofilerinfo-interface.md) yöntemlerinin yalnızca zaman uyumlu olarak çağrılması güvenlidir ve aksi halde, daha sonra başarısız olur. Profil oluşturucu DLL 'niz, genellikle profil oluşturucu tarafından oluşturulan iş parçacıklarında (örneğin, [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)veya [requestdönmesi](icorprofilerinfo4-requestrevert-method.md)Için) gerçekleştirilen diğer çağrılar için [ForceGC yöntemi](icorprofilerinfo-forcegc-method.md) iş parçacığını yeniden kullanıyorsa, sorun yaşamaya devam edersiniz. [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) gibi zaman uyumsuz güvenli bir işlev, yönetilen iş parçacıklarında çağrıldığında özel kurallara sahiptir. (Daha fazla bilgi için bkz. Profiler Stack for the blog gönderisi [: temel bilgiler ve](https://docs.microsoft.com/archive/blogs/davbr/profiler-stack-walking-basics-and-beyond) daha fazlası.)
 
 Bu nedenle, profil oluşturucu DLL 'nizin [ForceGC yöntemini](icorprofilerinfo-forcegc-method.md) çağırmak için oluşturduğu tüm iş parçacıklarının *yalnızca* GCS 'yi TETIKLEMENIN ve sonra GC geri çağırmaları için kullanılması önerilir. Yığın örnekleme veya ayırma gibi diğer görevleri gerçekleştirmek için profil oluşturma API 'sine çağrı gerçekleştirmemelidir.
 

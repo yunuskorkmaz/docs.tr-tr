@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 2a0d138151722a76133da45c166c51d7f3bb0a31
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8fe2a386da8cdb4bb075b67a5e52c840a7b66c77
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428193"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935284"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework Uygulamalarında Önbelleğe Alma
 Önbelleğe alma, verileri hızlı erişim için bellekte depolamanıza olanak sağlar. Verilere yeniden erişildiğinde, uygulamalar verileri özgün kaynaktan almak yerine önbellekten alabilir. Bu, performansı ve ölçeklenebilirliği iyileştirebilir. Ayrıca, veri kaynağı geçici olarak kullanılamadığında önbelleğe alma verilerin kullanılabilir olmasını sağlar.  
@@ -52,7 +52,7 @@ ms.locfileid: "74428193"
 > [!NOTE]
 > Yeni uygulamalar geliştirirken, <xref:System.Runtime.Caching.MemoryCache> sınıfını kullanmanızı öneririz. <xref:System.Runtime.Caching> ad alanında belirtilen API, <xref:System.Web.Caching.Cache> ad alanında belirtilen API 'ye benzer. Bu nedenle, ASP.NET 'in önceki sürümlerinde önbelleğe alma kullandıysanız API tanıdık gelecektir. ASP.NET uygulamalarında önbelleğe alma özelliğinin nasıl kullanılacağına ilişkin bir örnek için bkz. [Izlenecek yol: ASP.net Içindeki uygulama verilerini önbelleğe alma](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100)).  
   
-### <a name="output-caching"></a>Çıktıyı önbelleğe alma  
+### <a name="output-caching"></a>Çıktı Önbelleği  
  Uygulama verilerini el ile önbelleğe almak için, ASP.NET içinde <xref:System.Runtime.Caching.MemoryCache> sınıfını kullanabilirsiniz. ASP.NET ayrıca, bellek içinde sayfaların, denetimlerin ve HTTP yanıtlarının üretilen çıkışını depolayan çıkış önbelleğe almayı destekler. Çıktıyı önbelleğe alma işlemini bildirimli olarak bir ASP.NET Web sayfasında veya Web. config dosyasındaki ayarları kullanarak yapılandırabilirsiniz. Daha fazla bilgi için bkz. [önbelleğe alma Için OutputCache öğesi (ASP.NET Settings şeması)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms228124(v=vs.100)).  
   
  ASP.NET, özel çıkış önbelleği sağlayıcıları oluşturarak çıktı önbelleğe almayı genişletmenizi sağlar. Özel sağlayıcılar kullanarak, önbelleğe alınmış içeriği diskler, bulut depolaması ve dağıtılmış önbellek motorları gibi diğer depolama cihazlarını kullanarak saklayabilirsiniz. Özel çıkış önbelleği sağlayıcısı oluşturmak için, <xref:System.Web.Caching.OutputCacheProvider> sınıfından türeten bir sınıf oluşturur ve uygulamayı özel çıkış önbelleği sağlayıcısını kullanacak şekilde yapılandırırsınız.  
@@ -69,7 +69,7 @@ ms.locfileid: "74428193"
   
 - <xref:System.Runtime.Caching.ObjectCache> sınıfından türeten özel bir sınıf oluşturun ve ardından türetilmiş sınıfta özel bir önbellek uygulamasını sağlayın.  
   
-- <xref:System.Runtime.Caching.MemoryCache> sınıfından türeten bir sınıf oluşturun ve türetilmiş sınıfı özelleştirin veya genişletin. Bunun nasıl yapılacağı hakkında bir örnek için bkz. [bir ASP.NET uygulamasında birden çok Cache nesnesi kullanarak uygulama verilerini önbelleğe alma](https://blogs.msdn.microsoft.com/aspnetue/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application/).  
+- <xref:System.Runtime.Caching.MemoryCache> sınıfından türeten bir sınıf oluşturun ve türetilmiş sınıfı özelleştirin veya genişletin. Bunun nasıl yapılacağı hakkında bir örnek için bkz. [bir ASP.NET uygulamasında birden çok Cache nesnesi kullanarak uygulama verilerini önbelleğe alma](https://docs.microsoft.com/archive/blogs/aspnetue/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application).  
   
 - <xref:System.Web.Caching.OutputCacheProvider> sınıfından türeten bir sınıf oluşturun ve uygulamayı özel çıkış önbelleği sağlayıcısını kullanacak şekilde yapılandırın.  
   

@@ -2,12 +2,12 @@
 title: Arka Plan Bilgileri
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: deb4d59dc2fb40b63e0362a9a4ee4b84c08dce49
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: d7d00a0c64c6b25219403e8fd15eae85c09eafa0
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634735"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937544"
 ---
 # <a name="background-information"></a>Arka Plan Bilgileri
 Bu bölümdeki konular, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]kullanımı hakkındaki temel bilgileri aşmaya yönelik kavramlar ve yordamlar ile ilgilidir.  
@@ -18,7 +18,7 @@ Bu bölümdeki konular, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdl
   
 - Uzmanlarla ilgili daha karmaşık konuları tartışabilirsiniz [LINQ forumuna](https://go.microsoft.com/fwlink/?LinkId=76488)katılın.  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknolojinin ayrıntıları Visual Basic ve C# kod örnekleri ile tamamlanan teknik incelemeyi inceleyin. Daha fazla bilgi için bkz. [LINQ to SQL: .NET dil Ile tümleşik sorgulama verileri](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknolojinin ayrıntılarını Visual Basic ve C# kod örnekleriyle tamamlamaya yönelik teknik incelemeyi inceleyin. Daha fazla bilgi için bkz. [LINQ to SQL: .NET dil Ile tümleşik sorgulama verileri](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ADO.NET ve LINQ to SQL](ado-net-and-linq-to-sql.md)  

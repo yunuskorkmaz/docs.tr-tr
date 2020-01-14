@@ -2,12 +2,12 @@
 title: Özel Durum ve Hataları İşleme
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: c28b4420be82562a30873b65113811da06cee761
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2886463510a2237834529e1ec61c73ec7251e621
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975470"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937714"
 ---
 # <a name="handling-exceptions-and-faults"></a>Özel Durum ve Hataları İşleme
 Özel durumlar, hizmette veya istemci uygulamasında yerel olarak hatalara iletişim kurmak için kullanılır. Diğer yandan hatalar, sunucudan istemciye gibi veya tam tersi gibi hizmet sınırları genelinde hataları iletmek için kullanılır. Hatalara ek olarak, aktarım kanalları genellikle aktarım düzeyi hataları iletmek için aktarıma özgü mekanizmalar kullanır. Örneğin, HTTP taşıması mevcut olmayan bir uç nokta URL 'SI ile iletişim kurmak için 404 gibi durum kodlarını kullanır (bir hata geri gönderilmesi için uç nokta yoktur). Bu belge, özel kanal yazarlarına rehberlik sağlayan üç bölümden oluşur. İlk bölüm, özel durumların ne zaman ve nasıl tanımlanacağını ve throw hakkında rehberlik sağlar. İkinci bölüm, hataları oluşturma ve kullanma konusunda rehberlik sağlar. Üçüncü bölümde, çalışan uygulamalarda sorun gidermek için özel kanalınızın kullanıcısına yardımcı olmak üzere izleme bilgilerinin nasıl sağlanacağını açıklanmaktadır.  
@@ -18,7 +18,7 @@ ms.locfileid: "73975470"
 ### <a name="exception-types"></a>Özel Durum Türleri  
  Kanallar tarafından oluşturulan tüm özel durumlar <xref:System.TimeoutException?displayProperty=nameWithType>, <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>veya <xref:System.ServiceModel.CommunicationException>türetilmiş bir tür olmalıdır. (<xref:System.ObjectDisposedException> gibi özel durumlar da oluşturulabilir, ancak yalnızca çağıran kodun kanalda kötüye kullanılması gerektiğini gösterir. Bir kanal doğru şekilde kullanılırsa yalnızca verilen özel durumları oluşturması gerekir.) WCF, <xref:System.ServiceModel.CommunicationException> türetilen ve kanallar tarafından kullanılmak üzere tasarlanan yedi özel durum türü sağlar. Sistemin diğer bölümleri tarafından kullanılmak üzere tasarlanan diğer <xref:System.ServiceModel.CommunicationException>türetilmiş özel durumlar vardır. Bu özel durum türleri şunlardır:  
   
-|Özel durum türü|Açıklama|İç özel durum Içeriği|Kurtarma stratejisi|  
+|Özel Durum Türü|Açıklama|İç özel durum Içeriği|Kurtarma Stratejisi|  
 |--------------------|-------------|-----------------------------|-----------------------|  
 |<xref:System.ServiceModel.AddressAlreadyInUseException>|Dinleme için belirtilen uç nokta adresi zaten kullanılıyor.|Varsa, bu özel duruma neden olan taşıma hatası hakkında daha fazla ayrıntı sağlar. Örneğin. <xref:System.IO.PipeException>, <xref:System.Net.HttpListenerException>veya <xref:System.Net.Sockets.SocketException>.|Farklı bir adres deneyin.|  
 |<xref:System.ServiceModel.AddressAccessDeniedException>|İşlem, dinleme için belirtilen uç nokta adresine erişime izin verilmiyor.|Varsa, bu özel duruma neden olan taşıma hatası hakkında daha fazla ayrıntı sağlar. Örneğin, <xref:System.IO.PipeException>veya <xref:System.Net.HttpListenerException>.|Farklı kimlik bilgileriyle deneyin.|  
@@ -34,7 +34,7 @@ ms.locfileid: "73975470"
 ### <a name="exception-messages"></a>Özel durum Iletileri  
  Özel durum iletileri, kullanıcının sorunu anlamalarına ve çözmesine yardımcı olmak için yeterli bilgi sağlamaları için programı değil kullanıcıya hedeflenirler. İyi bir özel durum iletisinin üç temel bölümü şunlardır:  
   
- Ne oldu. Kullanıcının deneyimiyle ilgili terimleri kullanarak sorun hakkında net bir açıklama sağlayın. Örneğin, hatalı bir özel durum iletisi "geçersiz yapılandırma bölümü" olacaktır. Bu, kullanıcının hangi yapılandırma bölümünün yanlış olduğunu ve neden yanlış olduğunu merak eden kullanıcı olarak bırakır. İyileştirilmiş bir ileti "geçersiz yapılandırma bölümü \<customBinding >" olacaktır. Daha da iyi bir ileti "myTransport adlı bağlamaya myBinding adlı bağlamaya eklenemiyor, çünkü bağlama zaten myTransport adlı bir aktarıma sahip" olur. Bu, kullanıcının uygulama yapılandırma dosyasında kolayca tanımlayabilmesi için hüküm ve adları kullanan çok özel bir iletidir. Ancak, hala birkaç anahtar bileşen eksik.  
+ Olan şeyleri ifade eder. Kullanıcının deneyimiyle ilgili terimleri kullanarak sorun hakkında net bir açıklama sağlayın. Örneğin, hatalı bir özel durum iletisi "geçersiz yapılandırma bölümü" olacaktır. Bu, kullanıcının hangi yapılandırma bölümünün yanlış olduğunu ve neden yanlış olduğunu merak eden kullanıcı olarak bırakır. İyileştirilmiş bir ileti "geçersiz yapılandırma bölümü \<customBinding >" olacaktır. Daha da iyi bir ileti "myTransport adlı bağlamaya myBinding adlı bağlamaya eklenemiyor, çünkü bağlama zaten myTransport adlı bir aktarıma sahip" olur. Bu, kullanıcının uygulama yapılandırma dosyasında kolayca tanımlayabilmesi için hüküm ve adları kullanan çok özel bir iletidir. Ancak, hala birkaç anahtar bileşen eksik.  
   
  Hatanın önemi. İleti, hatanın ne anlama geldiğini açıkça belirtmedikçe, Kullanıcı önemli bir hata olup olmadığını veya yoksayılıp yoksayılmadığını merak ediyor olabilir. Genel olarak, iletiler hatanın anlamı veya önemi ile sonuçlanmalıdır. Önceki örneği geliştirmek için, bir yapılandırma hatası nedeniyle ileti "ServiceHost açılamadı: bağlama zaten myTransport adlı bir aktarıma sahip olduğu için myTransport adlı bağlamaya eklenemedi.  
   
@@ -68,11 +68,11 @@ public abstract class MessageFault
 }  
 ```  
   
- `Code` özelliği, `env:Code` (veya SOAP 1,1 ' deki `faultCode`) karşılık gelir ve hatanın türünü tanımlar. SOAP 1,2 `faultCode` için izin verilen beş değeri tanımlar (örneğin, gönderen ve alıcı) ve herhangi bir alt kod değeri içerebilen bir `Subcode` öğesi tanımlar. (İzin verilen hata kodlarının listesi ve anlamları için [SOAP 1,2 belirtimine](https://go.microsoft.com/fwlink/?LinkId=95176) bakın.) SOAP 1,1 biraz farklı bir mekanizmaya sahiptir: tamamen yeni olanlar tanımlayarak veya nokta gösterimini kullanarak, örneğin Client. Authentication gibi daha belirli `faultCodes`oluşturmak için Genişletilebilir olabilecek dört `faultCode` değeri (örneğin, Istemci ve sunucu) tanımlar.  
+ `Code` özelliği, `env:Code` (veya SOAP 1,1 ' deki `faultCode`) karşılık gelir ve hatanın türünü tanımlar. SOAP 1,2 `faultCode` için izin verilen beş değeri tanımlar (örneğin, gönderen ve alıcı) ve herhangi bir alt kod değeri içerebilen bir `Subcode` öğesi tanımlar. (İzin verilen hata kodlarının listesi ve anlamları için [SOAP 1,2 belirtimine](https://www.w3.org/TR/soap12-part1/#tabsoapfaultcodes) bakın.) SOAP 1,1 biraz farklı bir mekanizmaya sahiptir: tamamen yeni olanlar tanımlayarak veya nokta gösterimini kullanarak, örneğin Client. Authentication gibi daha belirli `faultCodes`oluşturmak için Genişletilebilir olabilecek dört `faultCode` değeri (örneğin, Istemci ve sunucu) tanımlar.  
   
  Program hatalarına MessageFault kullandığınızda, FaultCode.Name ve FaultCode. Namespace, SOAP 1,2 `env:Code` veya SOAP 1,1 `faultCode`ad ve ad uzayına eşlenir. FaultCode. alt kod SOAP 1,2 için `env:Subcode` eşlenir ve SOAP 1,1 için null.  
   
- Bir hatayı programlama yoluyla ayırt etmek için ilginç olması halinde yeni hata alt kodları (veya SOAP 1,1 kullanıyorsanız yeni hata kodları) oluşturmanız gerekir. Bu, yeni bir özel durum türü oluşturulmasına benzer. SOAP 1,1 hata kodlarıyla nokta gösterimini kullanmaktan kaçının. ( [WS-ı temel profili](https://go.microsoft.com/fwlink/?LinkId=95177) Ayrıca hata kodu nokta gösteriminin kullanımını etkilenmeden.)  
+ Bir hatayı programlama yoluyla ayırt etmek için ilginç olması halinde yeni hata alt kodları (veya SOAP 1,1 kullanıyorsanız yeni hata kodları) oluşturmanız gerekir. Bu, yeni bir özel durum türü oluşturulmasına benzer. SOAP 1,1 hata kodlarıyla nokta gösterimini kullanmaktan kaçının. ( [WS-ı temel profili](http://www.ws-i.org/Profiles/BasicProfile-1.1-2004-08-24.html#SOAP_Custom_Fault_Codes) Ayrıca hata kodu nokta gösteriminin kullanımını etkilenmeden.)  
   
 ```csharp
 public class FaultCode  
@@ -302,7 +302,7 @@ public class MessageFault
 }  
 ```  
   
- hata bir `mustUnderstand` hatası ise `IsMustUnderstandFault` `true` döndürür. `WasHeaderNotUnderstood`, belirtilen ad ve ad alanına sahip üstbilgi hataya NotUnderstood üstbilgisi olarak dahil edilse `true` döndürür.  Aksi takdirde, `false` döndürür.  
+ hata bir `mustUnderstand` hatası ise `IsMustUnderstandFault` `true` döndürür. `WasHeaderNotUnderstood`, belirtilen ad ve ad alanına sahip üstbilgi hataya NotUnderstood üstbilgisi olarak dahil edilse `true` döndürür.  Aksi takdirde, `false`döndürür.  
   
  Bir kanal MustUnderstand = true olarak işaretlenmiş bir üst bilgi yayıyorsa, bu katman özel durum oluşturma API 'SI modelini de uygulamalıdır ve bu üstbilginin neden olduğu `mustUnderstand` hataları daha önce açıklandığı gibi daha kullanışlı bir özel duruma dönüştürmelidir.  
   

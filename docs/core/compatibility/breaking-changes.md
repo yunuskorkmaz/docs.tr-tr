@@ -2,12 +2,12 @@
 title: .NET Core son değişiklikleri
 description: .NET Core 'un her sürümündeki son değişiklikler hakkında bilgi edinin.
 ms.date: 11/27/2019
-ms.openlocfilehash: 8bd8ebc803a80069530fe1cf6adc66769f7d6c85
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: c03054972a5e1cd427e069c65fa8e8b601af5894
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900152"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937343"
 ---
 # <a name="breaking-change-selectors"></a>Son değişiklik seçicileri
 
@@ -18,9 +18,6 @@ Aşağıdaki sürüm ve alan seçicileri, .NET Core 'un farklı sürümleri, ASP
 Şu anda hedeflediğiniz .NET sürümünü ve ardından geçiş yapmak istediğiniz .NET Core sürümünü seçin:
 
 [!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
-
-> [!TIP]
-> .NET Framework bir Windows Forms uygulamasını .NET Core 'a geçiriyorsanız, sürüm seçiciyi kullanmak yerine bkz. [Windows Forms 'da (.NET Core 'a .NET Framework) son değişiklikler](../porting/winforms-breaking-changes.md) .
 
 ## <a name="by-area"></a>Alana göre
 

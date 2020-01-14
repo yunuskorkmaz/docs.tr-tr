@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4c676a185ff4a7a825acb059bf0a5842ca3922fc
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b60f74947a537c602c7bd1a89587b76bd847c82a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394485"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937272"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>Hedef Framework: .NET Framework desteği bırakıldı
 
@@ -18,9 +18,9 @@ ASP.NET Core 3,0 ' den başlayarak, .NET Framework desteklenmeyen bir hedef çer
 
 .NET Framework .NET Core 'a taşıma hakkında daha fazla bilgi için bkz. [.NET Core 'A taşıma](~/docs/core/porting/index.md).
 
-`Microsoft.Extensions` paket (günlüğe kaydetme, bağımlılık ekleme ve yapılandırma gibi) ve Entity Framework Core etkilenmemektedir. .NET Standard desteklemeye devam eder.
+`Microsoft.Extensions` paketler (günlüğe kaydetme, bağımlılık ekleme ve yapılandırma gibi) ve Entity Framework Core etkilenmez. .NET Standard desteklemeye devam eder.
 
-Bu değişiklik için mosyon hakkında daha fazla bilgi için, [özgün blog gönderisine](https://blogs.msdn.microsoft.com/webdev/2018/10/29/a-first-look-at-changes-coming-in-asp-net-core-3-0)bakın.
+Bu değişiklik için mosyon hakkında daha fazla bilgi için, [özgün blog gönderisine](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/)bakın.
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
@@ -36,7 +36,7 @@ ASP.NET Core uygulamalar yalnızca .NET Core üzerinde çalıştırılabilir.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Aşağıdaki eylemlerden birini yapın:
+Aşağıdaki eylemlerden birini gerçekleştirin:
 
 - Uygulamanızı ASP.NET Core 2,1 ' de saklayın.
 - Uygulamanızı ve bağımlılıklarınızı .NET Core 'a geçirin.

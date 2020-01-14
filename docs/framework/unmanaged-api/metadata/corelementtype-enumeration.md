@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-ms.openlocfilehash: 0ce84e1545523302cd47e60b9f047bc470e6bf0f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4e9268d292004f447b30c82f1db4d0fe58404fe
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443622"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937956"
 ---
 # <a name="corelementtype-enumeration"></a>CorElementType Numaralandırması
 
@@ -75,9 +75,9 @@ typedef enum CorElementType {
 } CorElementType;
 ```
 
-## <a name="members"></a>Üyeleri
+## <a name="members"></a>Üyeler
 
-|Üyesi|Açıklama|
+|Üye|Açıklama|
 |------------|-----------------|
 |`ELEMENT_TYPE_END`|Dahili olarak kullanılır.|
 |`ELEMENT_TYPE_VOID`|Void türü.|
@@ -121,19 +121,19 @@ typedef enum CorElementType {
 Tür değiştiricileri, daha karmaşık türleri temsil etme temelini oluşturur. Tür imzasında hemen takip eden değere bir `CorElementType` türü değiştirici değeri uygulanır. `CorElementType` türü değiştirici değerini izleyen değer, aşağıdaki tabloda belirtildiği gibi bir `CorElementType` basit tür değeri, meta veri belirteci veya başka bir değer olabilir.
 
 > [!NOTE]
-> Tüm sayılar (*sayı*, *bağımsız değişken sayısı*, *meta veri belirteci*, *derece*, *sayı*ve *bağlantılı*) sıkıştırılmış tamsayılar olarak depolanır. Ayrıntılar için bkz. ECMA Web sitesinde [standart ECMA-335-ortak dil altyapısı (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) .
+> Tüm sayılar (*sayı*, *bağımsız değişken sayısı*, *meta veri belirteci*, *derece*, *sayı*ve *bağlantılı*) sıkıştırılmış tamsayılar olarak depolanır. Ayrıntılar için bkz. ECMA Web sitesinde [standart ECMA-335-ortak dil altyapısı (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm) .
 
 |Tür değiştiricisi|Biçimi|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR bir `CorElementType` değeri \<>|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF bir `CorElementType` değeri \<>|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR bir `CorElementType` değeri \<|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF bir `CorElementType` değeri \<|
 |`ELEMENT_TYPE_VALUETYPE`|`mdTypeDef` meta veri belirteci \<ELEMENT_TYPE_VALUETYPE >|
 |`ELEMENT_TYPE_CLASS`|`mdTypeDef` meta veri belirteci \<ELEMENT_TYPE_CLASS >|
 |`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<sayı >|
 |`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<`CorElementType` değeri > \<Rank > \<count1 > \<bound1 >... \<countN > \<boundN >|
 |`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<`mdTypeDef` meta veri belirteci > \<bağımsız değişken sayısı > \<arg1 >... \<argN >|
 |`ELEMENT_TYPE_FNPTR`|Çağırma kuralı dahil olmak üzere işlev için ELEMENT_TYPE_FNPTR \<imzayı doldurun >|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY bir `CorElementType` değeri \<>|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY bir `CorElementType` değeri \<|
 |`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<sayı >|
 |`ELEMENT_TYPE_CMOD_REQD`|`mdTypeRef` veya `mdTypeDef` meta veri belirteci\<ELEMENT_TYPE_ >|
 |`ELEMENT_TYPE_CMOD_OPT`|`mdTypeRef` veya `mdTypeDef` meta veri belirteci \<E_T_CMOD_OPT >|

@@ -1,120 +1,120 @@
 ---
 title: Azure’da F# Kullanma
-description: Azure Hizmetleri ile kullanarakF#
+description: İle Azure hizmetlerini kullanma kılavuzuF#
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: 92b453b680a5f8c55f35458e9020f15444e90035
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cf2951092074a7fab6707c8ed26bda125ea00b0
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031908"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935531"
 ---
 # <a name="using-f-on-azure"></a>Azure’da F# Kullanma
 
-F#Bulut programlama için mükemmel bir dildir ve web uygulamaları, bulut Hizmetleri, bulutta barındırılan mikro hizmetler, yazmak için sık kullanılan ve ölçeklenebilir veri işleme için.
+F#, bulut programlamasına yönelik mükemmel bir dildir ve Web uygulamaları, bulut Hizmetleri, bulutta barındırılan mikro hizmetler ve ölçeklenebilir veri işleme için sık sık kullanılır.
 
-Aşağıdaki bölümlerde, çeşitli Azure Hizmetleri ile kullanma hakkında kaynaklar bulacaksınız F#.
+Aşağıdaki bölümlerde, ile F#bir dizi Azure hizmetinin kullanımıyla ilgili kaynakları bulacaksınız.
 
 > [!NOTE]
-> Belirli bir Azure hizmeti bu belgelerde değilse, lütfen Azure işlevleri veya .NET bu hizmet için belgelere bakın. Bazı Azure Hizmetleri, dilden bağımsız ve hiçbir dile özgü belge gerektirir ve burada listelenmeyen.
+> Belirli bir Azure hizmeti bu belge kümesinde değilse, lütfen bu hizmetin Azure Işlevlerine veya .NET belgelerine danışın. Bazı Azure hizmetleri dilden bağımsızdır ve dile özgü bir belge gerektirmez ve burada listelenmez.
 
-## <a name="using-azure-virtual-machines-with-f"></a>Azure sanal makineler F ile kullanma\#
+## <a name="using-azure-virtual-machines-with-f"></a>Azure sanal makinelerini F\# kullanma
 
-Azure, çok çeşitli sanal makine (VM) yapılandırmaları destekler, bkz: [Linux ve Azure sanal makineleri](https://azure.microsoft.com/services/virtual-machines/).
+Azure, çok çeşitli sanal makine (VM) yapılandırmasını destekler, bkz. [Linux ve Azure sanal makineleri](https://azure.microsoft.com/services/virtual-machines/).
 
-Yüklenecek F# yürütme, derleme ve/veya bkz için bir sanal makinede [kullanma F# Linux'ta](https://fsharp.org/use/linux) ve [kullanma F# Windows üzerinde](https://fsharp.org/use/windows).
+Yürütme, F# derleme ve/veya komut dosyası oluşturma için bir sanal makineye yüklemek için bkz. [Linux üzerinde kullanma F# ](https://fsharp.org/use/linux) ve [Windows 'da kullanma F# ](https://fsharp.org/use/windows).
 
-## <a name="using-azure-functions-with-f"></a>F ile Azure işlevleri'ni kullanarak\#
+## <a name="using-azure-functions-with-f"></a>Azure Işlevlerini F\# ile kullanma
 
-[Azure işlevleri](https://azure.microsoft.com/services/functions/) kod veya "işlevleri" küçük parçaları kolayca çalıştırmaya yönelik bir bulutta çözümüdür. Yalnızca çalıştırmak için tüm uygulama veya altyapı hakkında endişelenmeden elinizdeki sorun için ihtiyacınız olan kodu yazabilirsiniz. İşlevlerinizi olayları Azure depolama ve diğer bulutta barındırılan kaynaklara bağlıdır. Veri akışları halinde, F# işlevleri aracılığıyla işlev bağımsız değişkenleri. Seçtiğiniz, gerektiği gibi ölçek güvenen Azure geliştirme dilini kullanabilirsiniz.
+[Azure işlevleri](https://azure.microsoft.com/services/functions/) , küçük kod parçalarını veya bulutta "işlevleri" kolayca çalıştırmaya yönelik bir çözümdür. Tüm uygulama veya bunu çalıştıracak altyapı hakkında endişelenmeden elinizdeki sorun için ihtiyacınız olan kodu yazabilirsiniz. İşlevleriniz, Azure depolama 'daki olaylara ve bulut tarafından barındırılan diğer kaynaklara bağlanır. Veri, işlevleriniz F# içinde işlev bağımsız değişkenleri aracılığıyla akar. Tercih ettiğiniz geliştirme dilini kullanarak istediğiniz kadar ölçeklendirerek Azure 'a erişebilirsiniz.
 
-Azure işlevleri desteği F# verimli, ölçeklenebilir, reaktif yürütülmesini ile birinci sınıf bir dil olarak F# kod. Bkz: [Azure işlevleri F# Geliştirici Başvurusu](/azure/azure-functions/functions-reference-fsharp) nasıl kullanılacağı hakkındaki referans belgeleri için F# Azure işlevleri ile.
+Azure Işlevleri, F# etkin, reaktif ve ölçeklenebilir F# kod yürütmesiyle birinci sınıf bir dil olarak destekler. Azure Işlevleri ile birlikte kullanma F# hakkında başvuru belgeleri için bkz. [Azure işlevleri F# geliştirici başvurusu](/azure/azure-functions/functions-reference-fsharp) .
 
-Azure işlevleri'ni kullanarak diğer kaynakları ve F#:
+Azure Işlevleri 'ni kullanmaya yönelik diğer kaynaklar F#ve:
 
-* [Azure işlevleri ölçeğini F# Suave kullanma](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
-* [Azure işlevi oluşturmaF#](https://mnie.github.io/2016-09-08-AzureFunctions/)
-* [Azure işlevleri ile Azure tür sağlayıcısını kullanma](https://compositional-it.com/blog/2017/08-30-using-the-azure-type-provider-with-azure-functions/index.html)
+* [Suave kullanarak Azure Işlevlerini F# ölçeklendirin](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
+* [İçinde Azure işlevi oluşturmaF#](https://mnie.github.io/2016-09-08-AzureFunctions/)
+* [Azure Işlevleri ile Azure tür sağlayıcısını kullanma](https://compositional-it.com/blog/2017/08-30-using-the-azure-type-provider-with-azure-functions/index.html)
 
-## <a name="using-azure-storage-with-f"></a>Azure depolama ile F kullanma\#
+## <a name="using-azure-storage-with-f"></a>Azure Storage 'ı F\# kullanma
 
-Azure depolama, depolama hizmetleri dayanıklılık, kullanılabilirlik ve ölçeklenebilirlik, müşterilerin ihtiyaçlarını karşılamak üzere dayanan modern uygulamalar için temel bir katmanıdır. F#Program, doğrudan aşağıdaki makalelerde açıklanan teknikleri kullanarak Azure depolama hizmetleri ile etkileşim kurabilir.
+Azure depolama, müşterilerin ihtiyaçlarını karşılamak üzere dayanıklılık, kullanılabilirlik ve ölçeklenebilirlik kullanan modern uygulamalar için bir temel depolama hizmetleri katmanıdır. F#Programlar, aşağıdaki makalelerde açıklanan teknikleri kullanarak doğrudan Azure Storage Services ile etkileşime geçebilir.
 
 * [F# kullanarak Azure Blob depolama kullanmaya başlama](blob-storage.md)
 * [F# kullanarak Azure Dosya depolama kullanmaya başlama](file-storage.md)
 * [F# kullanarak Azure Kuyruk depolama kullanmaya başlama](queue-storage.md)
 * [F# kullanarak Azure Tablo depolama kullanmaya başlama](table-storage.md)
 
-Azure depolama, Azure işlevleri ile birlikte açık API çağrıları yerine bildirim temelli yapılandırması aracılığıyla da kullanılabilir. Bkz: [Azure depolama için Azure işlevleri Tetikleyicileri ve bağlamaları](/azure/azure-functions/functions-bindings-storage) içeren F# örnekler.
+Azure depolama Ayrıca, açık API çağrıları yerine bildirim temelli yapılandırma aracılığıyla Azure Işlevleri ile birlikte kullanılabilir. Örnekleri içeren F# Azure [depolama için Azure işlevleri Tetikleyicileri ve bağlamaları](/azure/azure-functions/functions-bindings-storage) bölümüne bakın.
 
-## <a name="using-azure-app-service-with-f"></a>Azure App Service ile F kullanarak\#
+## <a name="using-azure-app-service-with-f"></a>F\# ile Azure App Service kullanma
 
-[Azure App Service](https://azure.microsoft.com/services/app-service/) güçlü web uygulamaları ve bulutta veya şirket içinde her yerden, veri bağlanan mobil uygulamaları oluşturmak için bir bulut platformu.
+[Azure App Service](https://azure.microsoft.com/services/app-service/) , bulutta veya şirket içinde verilere her yerden bağlanan güçlü web uygulamaları ve mobil uygulamalar oluşturmak için kullanılan bir bulut platformudur.
 
-* [F#Azure Web API'si örneği](https://github.com/fsprojects/azure-webapi-example)
-* [Barındırma F# azure'da bir web uygulaması](https://github.com/isaacabraham/fsharp-demonstrator)
+* [F#Azure Web API örneği](https://github.com/fsprojects/azure-webapi-example)
+* [Azure F# 'da bir Web uygulamasında barındırma](https://github.com/isaacabraham/fsharp-demonstrator)
 
-## <a name="using-apache-spark-with-f-with-azure-hdinsight"></a>Apache Spark'ı kullanarak F# Azure HDInsight ile
+## <a name="using-apache-spark-with-f-with-azure-hdinsight"></a>Azure HDInsight F# ile Apache Spark kullanma
 
-[Azure HDInsight için Apache Spark](https://azure.microsoft.com/services/hdinsight/apache-spark/) büyük ölçekli veri analizi uygulamalarını çalıştıran bir açık kaynak işleme çerçevesidir. Azure Apache Spark, kolay ve dağıtmak için uygun maliyetli hale getirir. Spark uygulamanızda geliştirme F# kullanarak [Mobius](https://github.com/Microsoft/Mobius), Spark için .NET API'si.
+[Azure HDInsight için Apache Spark](https://azure.microsoft.com/services/hdinsight/apache-spark/) , büyük ölçekli veri analizi uygulamalarını çalıştıran bir açık kaynak işleme çerçevesidir. Azure, dağıtıma Apache Spark kolaylaştırır ve ekonomik hale gelir. Spark için .NET API 'SI F# olan [Mobius](https://github.com/Microsoft/Mobius)kullanarak Spark uygulamanızı geliştirin.
 
-* [Spark uygulamalarında uygulama F# Mobius kullanma](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
-* [Örnek F# Spark Mobius kullanan uygulamalar](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
+* [Mobius F# kullanarak Spark uygulamalarını uygulama](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
+* [Mobius kullanarak örnek F# Spark uygulamaları](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
 
-## <a name="using-azure-cosmos-db-with-f"></a>Azure Cosmos DB ile F kullanma\#
+## <a name="using-azure-cosmos-db-with-f"></a>F\# ile Azure Cosmos DB kullanma
 
-[Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db) yüksek kullanılabilirliğe sahip, Global olarak dağıtılmış uygulamalar için bir NoSQL hizmetidir.
+[Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db) , yüksek oranda kullanılabilir, genel olarak dağıtılmış uygulamalar Için bir NoSQL hizmetidir.
 
-Azure Cosmos DB ile kullanılabilir F# iki yolla:
+Azure Cosmos DB, iki şekilde ile F# kullanılabilir:
 
-1. Oluşturulmasını aracılığıyla F# tepki veya değişiklikler Azure Cosmos DB koleksiyonları için neden Azure işlevleri. Bkz: [Azure işlevleri için Azure Cosmos DB bağlamaları](/azure/azure-functions/functions-bindings-cosmosdb), veya
-2. Kullanarak [SQL API'si için Azure Cosmos DB .NET SDK](/azure/cosmos-db/sql-api-sdk-dotnet). İlgili örnekler C# ' de var.
+1. Azure Cosmos DB koleksiyonlarındaki değişikliklere tepki F# veren veya bunlara neden olan Azure işlevleri oluşturma. Bkz. [Azure işlevleri için Azure Cosmos DB bağlamaları](/azure/azure-functions/functions-bindings-cosmosdb)veya
+2. [SQL API için Azure Cosmos DB .NET SDK 'yı](/azure/cosmos-db/sql-api-sdk-dotnet)kullanarak. İlgili örnekler içinde C#bulunur.
 
-## <a name="using-azure-event-hubs-with-f"></a>Azure Event Hubs ile F kullanarak\#
+## <a name="using-azure-event-hubs-with-f"></a>F\# ile Azure Event Hubs kullanma
 
-[Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/) Web siteleri, uygulamalardan ve cihazlardan bulut ölçekli telemetri içe alma sağlayın.
+[Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/) , Web sitelerinden, uygulamalardan ve cihazlardan bulut ölçekli telemetri alımı sağlar.
 
-Azure Event Hubs ile kullanılabilir F# iki yolla:
+Azure Event Hubs, iki şekilde kullanılabilir F# :
 
-1. Oluşturulmasını aracılığıyla F# olaylar tarafından tetiklenen Azure işlevleri. Bkz: [Azure Event Hubs için Tetikleyiciler](/azure/azure-functions/functions-bindings-event-hubs), veya
-2. Kullanarak [için Azure .NET SDK'sı](/azure/event-hubs/event-hubs-csharp-ephcs-getstarted). Bu örnekler C# ' ta olduğunu unutmayın.
+1. Olaylar tarafından tetiklenen F# Azure işlevlerinin oluşturulması. [Event Hubs Için Azure işlev tetikleyicilerine](/azure/azure-functions/functions-bindings-event-hubs)bakın veya
+2. [Azure için .NET SDK 'yı](/azure/event-hubs/event-hubs-csharp-ephcs-getstarted)kullanarak. Bu örneklerin içinde C#olduğunu aklınızda edin.
 
-## <a name="using-azure-notification-hubs-with-f"></a>Azure Notification hubs'ı F ile kullanma\#
+## <a name="using-azure-notification-hubs-with-f"></a>F\# ile Azure Notification Hubs kullanma
 
-[Azure Notification hubs'ı](/azure/notification-hubs/) dilediğiniz mobil platforma herhangi bir arka uçtan (bulutta veya şirket içi) mobil anında iletme bildirimleri göndermenize olanak tanıyan çok platformlu, ölçeği genişletilmiş bir gönderim altyapısı olan.
+[Azure Notification Hubs](/azure/notification-hubs/) , herhangi bir arka uçtan (bulutta veya şirket içinde) herhangi bir mobil platforma mobil anında iletme bildirimleri göndermenize olanak tanıyan çok platformlu, genişleme bir gönderim altyapısıdır.
 
-Azure Notification Hubs ile kullanılabilir F# iki yolla:
+Azure Notification Hubs, iki şekilde kullanılabilir F# :
 
-1. Oluşturulmasını aracılığıyla F# Azure işlevleri, sonuçları bir bildirim hub'ına gönderir. Bkz: [Azure işlevi için Notification hubs'ı Tetikleyicileri çıkış](/azure/azure-functions/functions-bindings-notification-hubs), veya
-2. Kullanarak [için Azure .NET SDK'sı](https://blogs.msdn.microsoft.com/azuremobile/2014/04/08/push-notifications-using-notification-hub-and-net-backend/). Bu örnekler C# ' ta olduğunu unutmayın.
+1. Bir Bildirim Hub 'ına F# sonuçları gönderen Azure işlevleri oluşturma yoluyla. [Notification Hubs Için Azure işlev çıkış tetikleyicilerine](/azure/azure-functions/functions-bindings-notification-hubs)bakın veya
+2. [Azure için .NET SDK 'yı](https://docs.microsoft.com/archive/blogs/azuremobile/push-notifications-using-notification-hub-and-net-backend)kullanarak. Bu örneklerin içinde C#olduğunu aklınızda edin.
 
-## <a name="implementing-webhooks-on-azure-with-f"></a>Web kancaları F ile azure'da uygulama\#
+## <a name="implementing-webhooks-on-azure-with-f"></a>F\# ile Azure 'da Web kancaları uygulama
 
-A [Web kancası](https://en.wikipedia.org/wiki/Webhook) olan bir web isteği aracılığıyla tetiklenen bir geri çağırma. Web kancaları, sinyal olayları için GitHub gibi siteleri tarafından kullanılır.
+Web [kancası](https://en.wikipedia.org/wiki/Webhook) , bir Web isteği aracılığıyla tetiklenen bir geri çağırmasıdır. Web kancaları GitHub gibi siteler tarafından olayları işaret etmek için kullanılır.
 
-Web kancaları uygulanabilir F# ve azure'da barındırılan bir [Azure işlevinde F# bağlama Web kancası ile](/azure/azure-functions/functions-bindings-http-webhook).
+Web kancaları, ' de F# [bir Web kancası bağlamasıyla Içindeki F# bir Azure işlevi](/azure/azure-functions/functions-bindings-http-webhook)aracılığıyla Azure 'da barındırılabilir.
 
-## <a name="using-webjobs-with-f"></a>Webjobs ile F kullanma\#
+## <a name="using-webjobs-with-f"></a>Web Işlerini F\# kullanma
 
-[Webjobs](/azure/app-service-web/web-sites-create-web-jobs) programlar üç yolla App Service web uygulamasında çalıştırabilirsiniz: talep üzerine, kesintisiz veya bir planlamaya göre.
+[WebJobs](/azure/app-service-web/web-sites-create-web-jobs) , App Service Web uygulamanızda çalıştırdığınız programlardır. isteğe bağlı, sürekli veya bir zamanlamaya göre.
 
-[Örnek F# Webjob](https://github.com/jrr/webjob-project-examples)
+[Örnek F# WebJob](https://github.com/jrr/webjob-project-examples)
 
-## <a name="implementing-timers-on-azure-with-f"></a>Zamanlayıcılar F ile azure'da uygulama\#
+## <a name="implementing-timers-on-azure-with-f"></a>F\# ile Azure 'da zamanlayıcılar uygulama
 
-Zamanlayıcı, bir zamanlama, bir kez veya yinelenen göre arama işlevleri tetikler.
+Zamanlayıcı, bir zamanlamaya göre, bir kez veya yinelenen işlevleri çağırır.
 
-Zamanlayıcılar uygulanabilir F# ve azure'da barındırılan bir [Azure işlevinde F# bir zamanlayıcı tetikleyicisi ile](/azure/azure-functions/functions-bindings-timer).
+Zamanlayıcılar, ' de [bir Zamanlayıcı tetikleyicisiyle F# ' de bir Azure işlevi](/azure/azure-functions/functions-bindings-timer)aracılığıyla Azure 'da barındırılabilir. F#
 
-## <a name="deploying-and-managing-azure-resources-with-f-scripts"></a>Azure kaynaklarınızı dağıtıp F# betikleri
+## <a name="deploying-and-managing-azure-resources-with-f-scripts"></a>Azure kaynaklarını betiklerle F# dağıtma ve yönetme
 
-Azure sanal makineler programlı olarak dağıtılabilir ve yönetilen engelle F# Microsoft.Azure.Management paketleri ve API'leri kullanarak komut dosyaları. Örneğin, [.NET için yönetim kitaplıkları ile çalışmaya başlama](https://msdn.microsoft.com/library/dn722415.aspx) ve [Azure Resource Manager'ı kullanarak](/azure/azure-resource-manager/resource-manager-deployment-model).
+Azure VM 'Ler, Microsoft. Azure. Yönetim F# paketleri ve API 'leri kullanılarak program aracılığıyla dağıtılabilir ve betiklerden yönetilebilir. Örneğin, bkz. [.net Için yönetim kitaplıklarını kullanmaya başlama](https://msdn.microsoft.com/library/dn722415.aspx) ve [Azure Resource Manager kullanma](/azure/azure-resource-manager/resource-manager-deployment-model).
 
-Benzer şekilde, diğer Azure kaynakları da dağıtılabilir ve yönetilen engelle F# aynı bileşenleri kullanarak komut dosyaları. Örneğin, depolama hesapları oluşturabilir, Azure bulut Hizmetleri dağıtma, Azure Cosmos DB örnekleri oluşturmak ve Azure bildirim hub'larından programlı olarak yönetmek F# betikler.
+Benzer şekilde, diğer Azure kaynakları aynı bileşenleri kullanan betiklerden F# de dağıtılabilir ve yönetilebilir. Örneğin, depolama hesapları oluşturabilir, Azure Cloud Services dağıtabilir, Azure Cosmos DB örnekleri oluşturabilir ve Azure notifcation hub 'Larını betiklerden F# programlı bir şekilde yönetebilirsiniz.
 
-Kullanarak F# dağıtmak ve kaynakları yönetmek için betikleri genellikle gerekli değildir. Örneğin, Azure kaynaklarını parametreli olabilir, doğrudan JSON şablonu alınan açıklamaları, dağıtılabilir. Bkz: [Azure Resource Manager şablonları](/azure/azure-resource-manager/resource-manager-template-best-practices) örnekleri gibi [Azure hızlı başlangıç şablonları](https://azure.microsoft.com/resources/templates/).
+Kaynakları F# dağıtmak ve yönetmek için betikler kullanılması normalde gerekli değildir. Örneğin, Azure kaynakları, parametreleştirilen parametreli bir şekilde doğrudan JSON şablonu açıklamalarından da dağıtılabilir. Bkz. [Azure hızlı başlangıç şablonları](https://azure.microsoft.com/resources/templates/)gibi örnekler de [Azure Resource Manager şablonları](/azure/azure-resource-manager/resource-manager-template-best-practices) .
 
 ## <a name="other-resources"></a>Diğer kaynaklar
 
-* [Tüm Azure Hizmetleri tüm belgeler](/azure/)
+* [Tüm Azure hizmetlerinde tam belgeler](/azure/)

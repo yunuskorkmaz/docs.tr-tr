@@ -3,18 +3,18 @@ title: .NET Core 'da .NET Framework teknolojileri kullanılamıyor
 description: .NET Core 'da kullanılamayan .NET Framework teknolojileri hakkında bilgi edinin
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: d474b694b80b2f0e74dd2916106016802f7e0c68
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 89871753fef92a30bf2151a618207a73b40bb402
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777308"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936954"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core 'da .NET Framework teknolojileri kullanılamıyor
 
 .NET Framework kitaplıkları için kullanılabilen çeşitli teknolojiler, uygulama etki alanları, uzaktan Iletişim, kod erişim güvenliği (CAS), güvenlik saydamlığı ve System. EnterpriseServices gibi .NET Core ile birlikte kullanılamaz. Kitaplıklarınız Bu teknolojilerden birini veya birkaçını kullanıyorsa, aşağıda özetlenen diğer yaklaşımları göz önünde bulundurun. API uyumluluğu hakkında daha fazla bilgi için bkz. [.NET Core son değişiklikler](../compatibility/breaking-changes.md).
 
-Bir API veya teknoloji şu anda uygulanmadığından, kasıtlı olarak desteklenmeyen anlamına gelmez. Karşılaştığınız belirli bir sorunun tasarım ile olup olmadığını görmek için GitHub depolarında .NET Core ' u arayın. Böyle bir gösterge bulamazsanız, lütfen belirli API 'Leri ve teknolojileri sormak için [DotNet/Runtime deposunda](https://github.com/dotnet/runtime/issues) bir sorun bildirin. Taşıma istekleri olan sorunlar [bağlantı noktası-çekirdek](https://github.com/dotnet/runtime/labels/port-to-core) etiketiyle işaretlenir.
+Bir API veya teknoloji şu anda uygulanmadığından, kasıtlı olarak desteklenmeyen anlamına gelmez. Karşılaştığınız belirli bir sorunun tasarım ile olup olmadığını görmek için GitHub depolarında .NET Core ' u arayın. Böyle bir gösterge bulamazsanız, belirli API 'Ler ve teknolojiler istemek için [DotNet/Runtime deposunda](https://github.com/dotnet/runtime/issues) bir sorun verin. Taşıma istekleri olan sorunlar [bağlantı noktası-çekirdek](https://github.com/dotnet/runtime/labels/port-to-core) etiketiyle işaretlenir.
 
 ## <a name="appdomains"></a>Uygulama
 
@@ -46,7 +46,6 @@ En az ayrıcalık kümesine sahip süreçler çalıştırmak için sanallaştır
 
 System. EnterpriseServices (COM+), .NET Core tarafından desteklenmez.
 
-## <a name="next-steps"></a>Sonraki adımlar
+## <a name="see-also"></a>Ayrıca bkz.
 
->[!div class="nextstepaction"]
->[Bağımlılıkları çözümle](third-party-deps.md)
+- [.NET Framework .NET Core 'a taşıma ile genel bakış](../porting/index.md)

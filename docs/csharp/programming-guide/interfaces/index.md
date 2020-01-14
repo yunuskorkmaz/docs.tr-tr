@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 3187b8b94c6e46ec13312fc31ac1ed9852199d6b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 43e37dc4b0977542add05c8cc13e2d7fa47b19bf
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714619"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937502"
 ---
 # <a name="interfaces-c-programming-guide"></a>Arabirimler (C# Programlama Kılavuzu)
 
@@ -22,7 +22,7 @@ Arabirimleri kullanarak, örneğin, bir sınıftaki birden çok kaynaktan davran
   
  [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
-Yapının adı geçerli C# bir [tanımlayıcı adı](../inside-a-program/identifier-names.md)olmalıdır. Kural gereği, arabirim adları büyük `I`başlar.
+Arabirimin adı geçerli C# bir [tanımlayıcı adı](../inside-a-program/identifier-names.md)olmalıdır. Kural gereği, arabirim adları büyük `I`başlar.
 
 <xref:System.IEquatable%601> arabirimini uygulayan herhangi bir sınıf veya yapı, arabirimin belirttiği imzayla eşleşen bir <xref:System.IEquatable%601.Equals%2A> yöntemi tanımı içermelidir. Sonuç olarak, sınıfının bir örneğinin aynı sınıfın başka bir örneğine eşit olup olmadığını belirleyebildiği bir `Equals` yöntemi içermesi için `IEquatable<T>` uygulayan bir sınıf üzerinde sayım yapabilirsiniz.  
   

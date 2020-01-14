@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-ms.openlocfilehash: 80643187045e7e96b9c18169c5e71287713d711f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d505b917c343c40c7fa2a7aecf3466578ae0a8d
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73106244"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936636"
 ---
 # <a name="runtime_info_flags-enumeration"></a>RUNTIME_INFO_FLAGS Numaralandırması
 Ortak dil çalışma zamanı (CLR) hakkında hangi bilgilerin döndürüleceğini belirten değerleri içerir.  
@@ -48,7 +48,7 @@ typedef enum {
 |`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Dizin bilgilerinin içerilmeyeceğini belirtir.|  
 |`RUNTIME_INFO_DONT_RETURN_VERSION`|Sürüm bilgisinin dahil edilmemelidir.|  
 |`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Hata sonrasında bir hata iletişim kutusu gösterilmemelidir.|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|[SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) işlevini SEM_FAILCRITICALERRORS bayrağıyla çağırmanın etkilerinin geçersiz kılınabileceğini belirtir. Diğer bir deyişle, bir yükleme iletişim kutusu gizlenmeden önce hata sonrasında gösterilmelidir.|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|[SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) işlevini SEM_FAILCRITICALERRORS bayrağıyla çağırmanın etkilerinin geçersiz kılınabileceğini belirtir. Diğer bir deyişle, bir yükleme iletişim kutusu gizlenmeden önce hata sonrasında gösterilmelidir.|  
 |`RUNTIME_INFO_REQUEST_AMD64`|Çalışma zamanının AMD-64 ile uyumlu bir sürümü hakkında bilgi isteği gösterir.|  
 |`RUNTIME_INFO_REQUEST_IA64`|Çalışma zamanının IA-64 ile uyumlu bir sürümü hakkında bilgi isteği gösterir.|  
 |`RUNTIME_INFO_REQUEST_X86`|Çalışma zamanının x86 uyumlu sürümü hakkında bilgi isteği gösterir.|  

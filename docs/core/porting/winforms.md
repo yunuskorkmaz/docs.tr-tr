@@ -4,12 +4,12 @@ description: Bir .NET Framework Windows Forms uygulamasının Windows için .NET
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.openlocfilehash: 959b506fe23691e160d7e88e0ae61cc71c1f3421
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b1048c2d725a2bcf8398af1d2d53f40efc36c82e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567282"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936962"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Windows Forms masaüstü uygulamasının .NET Core 'a bağlantı noktası oluşturma
 
@@ -30,7 +30,7 @@ Bu makalede, geçiş için kullanılan dosya türlerini tanımlamak için çeşi
 
   Aşağıdaki Visual Studio iş yüklerini yükler:
   - .NET masaüstü geliştirme
-  - .NET Core platformlar arası geliştirme
+  - .NET core platformlar arası geliştirme
 
 - Sorun olmadan oluşturulup çalışan bir çözümde çalışan bir Windows Forms projesi.
 - İçinde C#kodlanmış bir proje.
@@ -106,7 +106,7 @@ SolutionFolder
     └───MyFormsCore.csproj
 ```
 
-**Myformscore. csproj** projesini, Visual Studio ya da **solutionfolder** dizininden .NET Core CLI **uygulamalılar. sln** öğesine eklemek isteyeceksiniz:
+Visual Studio ya da **SolutionFolder** dizininden .NET Core CLI **myformscore. csproj** projesini **uygulamaps. sln** ' ye ekleyin:
 
 ```dotnetcli
 dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
@@ -287,7 +287,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.1.0" />
   </ItemGroup>
 ```
 
@@ -299,6 +299,7 @@ Visual Studio 2019 Windows Form Tasarımcısı desteklediğinde, .NET Core proje
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
+- [.NET Framework 'den .NET Core 'a son değişiklikler](../compatibility/fx-core.md)hakkında bilgi edinin.
 - [Windows Uyumluluk Paketi][compat-pack]hakkında daha fazla bilgi edinin.
 - .NET Framework Windows Forms projenizi .NET Core 'a [taşıma hakkında bir video](https://www.youtube.com/watch?v=upVQEUc_KwU) izleyin.
 

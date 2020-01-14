@@ -27,12 +27,12 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: 08015e2e5918ca64f601ec912a906cfb6319ed6c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a13470b970b35a2f6f088fd305ba455167c8e107
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427093"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937826"
 ---
 # <a name="profiling-overview"></a>Profil Oluşturmaya Genel Bakış
 
@@ -175,7 +175,7 @@ Profil oluşturma API 'SI, çağrı yığınlarının alınması için iki yol s
 
 Yığın anlık görüntüsü, zaman içinde anlık bir iş parçacığı yığınının bir izlemesinde. Profil oluşturma API 'SI yığında yönetilen işlevlerin izlenmesini destekler, ancak yönetilmeyen işlevlerin izlenmesini profil oluşturucunun kendi yığın Denetçisi ' ne bırakır.
 
-Profil oluşturucunun yönetilen yığınları izlenecek şekilde programlamanın nasıl yapılacağı hakkında daha fazla bilgi için, bu belge kümesindeki [ICorProfilerInfo2::D oStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) yöntemine ve [profiler Stack .NET Framework 2,0: temelleri ve ötesinde](https://go.microsoft.com/fwlink/?LinkId=73638)inceleyin.
+Profil oluşturucunun yönetilen yığınları izlenecek şekilde programlamanın nasıl yapılacağı hakkında daha fazla bilgi için, bu belge kümesindeki [ICorProfilerInfo2::D oStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) yöntemine ve [profiler Stack .NET Framework 2,0: temelleri ve ötesinde](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10))inceleyin.
 
 ### <a name="shadow-stack"></a>Gölge yığını
 

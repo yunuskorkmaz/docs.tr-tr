@@ -2,12 +2,12 @@
 title: Geçiş Kılavuzu
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 672ed1a93b4409f491d76ffeeaaac5f67a1c4b6e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: f0c21d32b745a51bada9133230dd0c87be9c915e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802615"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937964"
 ---
 # <a name="migration-guidance"></a>Geçiş Kılavuzu
 
@@ -21,7 +21,8 @@ ms.locfileid: "74802615"
   
  Bu nedenle, .NET Framework 4 ' ü benimsemeye yönelik karar, WF3 (System. Workflow.\*) öğesinden WF4 (System. Activities.\*) öğesine geçme kararına göre belirlenir. Bu konuda, WF3 ve WF4 ile çalışma hakkında bilgi sağlayan WF geçiş kılavuzunun bağlantıları sağlanmaktadır.  
   
-## <a name="wf-migration-whitepapers-and-cookbooks"></a>WF geçiş teknik Incelemeleri ve tanıtım Rehberleri  
+## <a name="wf-migration-white-papers-and-cookbooks"></a>WF geçişi Teknik İncelemeleri ve tanıtım defterleri
+
  [WF geçişine genel bakış](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10)) konusu WF3 ve WF4 ile geçiş stratejileri arasındaki ilişkiye yönelik kapsamlı bir genel bakış sunar. Yardımcı konular belirli konularda detaya gitme.  
   
  [WF geçişine genel bakış](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))  

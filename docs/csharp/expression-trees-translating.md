@@ -4,12 +4,12 @@ description: Bu ifade ağacının değiştirilmiş bir kopyasını oluştururken
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 5c55ef2141e63462c91f84efab09828fafbff142
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a4cb40e439726e5fff60fe697da70d61bb24cb68
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036617"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937228"
 ---
 # <a name="translating-expression-trees"></a>Ifade ağaçları çevriliyor
 
@@ -190,9 +190,9 @@ Computed sum: 10
 
 Nihai yanıt aynı olsa da, ağaç geçişi tamamen farklıdır. Ağaç, ilk olarak oluşan farklı işlemlerle oluşturulduğundan, bu düğümler farklı bir sıraya göre yapılır.
 
-## <a name="learning-more"></a>Daha fazla bilgi
+## <a name="learning-more"></a>Daha Fazla Bilgi
 
-Bu örnek, bir ifade ağacı tarafından temsil edilen algoritmaları çapraz olarak geçirmek ve yorumlamak için derleyerek kodun küçük bir alt kümesini gösterir. İfade ağaçlarını başka bir dile çeviren genel amaçlı bir kitaplık oluşturmak için gereken tüm çalışmalar hakkında ayrıntılı bir açıklama için lütfen [Bu seriyi](https://blogs.msdn.microsoft.com/mattwar/2008/11/18/linq-building-an-iqueryable-provider-series/) Matt Warren ile okuyun. Bir ifade ağacında bulabileceğiniz herhangi bir kodun nasıl çevrilebileceğini gösteren harika bir ayrıntıya gider.
+Bu örnek, bir ifade ağacı tarafından temsil edilen algoritmaları çapraz olarak geçirmek ve yorumlamak için derleyerek kodun küçük bir alt kümesini gösterir. İfade ağaçlarını başka bir dile çeviren genel amaçlı bir kitaplık oluşturmak için gereken tüm çalışmalar hakkında ayrıntılı bir açıklama için lütfen [Bu seriyi](https://docs.microsoft.com/archive/blogs/mattwar/linq-building-an-iqueryable-provider-series) Matt Warren ile okuyun. Bir ifade ağacında bulabileceğiniz herhangi bir kodun nasıl çevrilebileceğini gösteren harika bir ayrıntıya gider.
 
 Artık ifade ağaçlarının gerçek gücünü gördük.
 Bir kod kümesini inceleyebilir, bu koda istediğiniz değişiklikleri yapabilir ve değiştirilen sürümü yürütebilirsiniz. İfade ağaçları sabit olduğundan, varolan ağaçların bileşenlerini kullanarak yeni ağaçlar oluşturabilirsiniz. Bu, değiştirilen ifade ağaçları oluşturmak için gereken bellek miktarını en aza indirir.

@@ -2,51 +2,51 @@
 title: WCF'de Kullanılan Güvenlik Kavramları
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: 3ef2b9c104fa15de17a769c9ca9354e5cef085bf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce6dc6f5cb8680d6228e21206afdc3aa33085e7d
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990879"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938116"
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF'de Kullanılan Güvenlik Kavramları
-Windows Communication Foundation (WCF) güvenlik kavramları zaten kullanımda üzerine ve çeşitli güvenlik altyapısına içinde dağıtılmış.  
+Windows Communication Foundation (WCF) güvenliği, daha önce kullanılan ve çeşitli güvenlik altyapılarında dağıtılan kavramlar üzerine kurulmuştur.  
   
- WCF bu altyapılarının gibi Güvenli Yuva Katmanı (SSL) üzerinden HTTP (HTTPS) destekler. Ancak, WCF yeni birlikte çalışabilen güvenlik standartları (örneğin, WS-güvenlik) uygulayarak mevcut güvenlik altyapıları destekleme ötesinde SOAP kodlu iletileri gider. Mekanizmalar veya birlikte çalışabilen yeni standartları kullanarak olsun, hem de güvenlik kavramları aynıdır. Mevcut altyapıyla kavramları ve en yeni standartları anlama, uygulama için en iyi güvenlik modeli uygulamak için taşımaktadır.  
+ WCF, HTTP (HTTPS) üzerinde Güvenli Yuva Katmanı (SSL) gibi bazı altyapıların bazılarını destekler. Ancak, WCF, SOAP kodlu iletiler üzerinden daha yeni birlikte çalışabilen güvenlik standartları (WS-Security gibi) uygulayarak mevcut güvenlik altyapılarını desteklemeye daha fazla yardımcı vardır. Mevcut mekanizmalar veya yeni birlikte çalışabilen standartlar kullanıyor olmanız durumunda, her ikisinin de her ikisi de aynı olan güvenlik kavramlarıdır. Mevcut altyapıların arkasındaki kavramları ve daha yeni standartları anlamak, bir uygulama için en iyi güvenlik modelini uygulamaya yönelik bir merkezidir.  
   
-## <a name="introduction-to-security-for-wcf-web-services"></a>WCF Web Hizmetleri için güvenliğine giriş  
- Microsoft Patterns and Practices grubu derinlemesine bir Teknik İnceleme burada indirme için kullanılabilir olan WCF Güvenlik Kılavuzu yazdı: [WCF Güvenlik Kılavuzu](https://go.microsoft.com/fwlink/?LinkId=210210). Web Hizmetleri, anahtar WCF güvenlik kavramları, intranet uygulama senaryoları ve Internet uygulama senaryoları için ilgili olarak bu teknik incelemede, temel güvenlik kavramları açıklar.  
+## <a name="introduction-to-security-for-wcf-web-services"></a>WCF Web Hizmetleri güvenliğine giriş  
+ Microsoft düzenleri ve uygulamalar grubu, WCF güvenlik kılavuzuyla ilgili olarak indirilebilir bir teknik incelemeyi buradan yazdı: [WCF güvenlik kılavuzu](https://go.microsoft.com/fwlink/?LinkId=210210). Bu Teknik İnceleme, Web Hizmetleri, anahtar WCF güvenlik kavramları, intranet uygulama senaryoları ve Internet uygulaması senaryolarıyla bağlantılı olarak temel güvenlik kavramlarını açıklamaktadır.  
   
-## <a name="industry-wide-security-specifications"></a>Endüstri genelinde güvenlik belirtimleri  
+## <a name="industry-wide-security-specifications"></a>Sektör genelinde güvenlik belirtimleri  
   
 ### <a name="public-key-infrastructure"></a>Ortak anahtar altyapısı  
- Ortak anahtar altyapısı (PKI), dijital sertifikalar, sertifika yetkililerini ve ortak anahtar şifrelemesi kullanarak elektronik bir işlemde katılan her iki taraf doğrulayan ve diğer yetkililerden sistemidir. Daha fazla bilgi için [Windows Server 2008 R2 sertifikası Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=210211).  
+ Ortak anahtar altyapısı (PKI), genel anahtar şifrelemesi kullanılarak elektronik bir işlemde yer alan her bir tarafı doğrulayan ve kimlik doğrulayan dijital sertifikalar, sertifika yetkilileri ve diğer kayıt yetkilileri sistemidir. Daha fazla bilgi için bkz. [Windows Server 2008 R2 Sertifika Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=210211).  
   
 ### <a name="kerberos-protocol"></a>Kerberos protokolü  
- *Kerberos protokolü* bir güvenlik mekanizması oluşturduğunuz bir Windows etki alanındaki kullanıcıların kimlik doğrulaması için bir özelliğidir. Bu, bir etki alanındaki diğer varlıklarla güvenli bir bağlam'kurmak bir kullanıcı sağlar. Windows 2000 ve sonraki platformları varsayılan olarak Kerberos protokolünü kullanır. Bir hizmet oluşturma, intranet istemcilerle etkileşime gireceğini sisteminin mekanizmalarını anlama yararlı olur. Ayrıca, bu yana *Web Hizmetleri Güvenlik Kerberos bağlama* yaygın olan yayımlanan Internet istemcileri ile iletişim kurmak için Kerberos protokolünü kullanabilirsiniz (diğer bir deyişle, Kerberos protokolü birlikte). Kerberos protokolü Windows nasıl uygulandığı hakkında daha fazla bilgi için bkz. [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkId=210212).  
+ *Kerberos protokolü* , bir Windows etki alanında kullanıcıların kimliğini doğrulayan bir güvenlik mekanizması oluşturmaya yönelik bir belirtimdir. Bir kullanıcının etki alanı içindeki diğer varlıklarla güvenli bir bağlam kurmasını sağlar. Windows 2000 ve üzeri platformlar Kerberos protokolünü varsayılan olarak kullanır. Sistem mekanizmalarını anlamak, intranet istemcilerle etkileşime girebilen bir hizmet oluştururken faydalıdır. Bunlara ek olarak, *Web Hizmetleri güvenliği Kerberos bağlama* yaygın olarak yayınlandığından, Internet istemcileriyle iletişim kurmak için Kerberos protokolünü kullanabilirsiniz (yani, Kerberos protokolü birlikte kullanılabilir). Windows 'da Kerberos protokolünün nasıl uygulandığı hakkında daha fazla bilgi için bkz. [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkId=210212).  
   
-### <a name="x509-certificates"></a>X.509 sertifikaları  
- X.509 sertifikaları güvenlik uygulamalarında kullanılan birincil kimlik bilgisi bir biçimidir. X.509 hakkında daha fazla bilgi için bkz: sertifikaları [X.509 ortak anahtar sertifikaları](https://go.microsoft.com/fwlink/?LinkId=210213). X.509 sertifikaları bir sertifika deposunda depolanır. Windows çalıştıran bir bilgisayar sertifika depoları, her biri farklı bir amaca sahip çeşitli türlerde sahiptir. Farklı depoları hakkında daha fazla bilgi için bkz. [sertifika depolarını](https://go.microsoft.com/fwlink/?LinkID=87787).  
+### <a name="x509-certificates"></a>X. 509.440 sertifikaları  
+ X. 509.440 sertifikaları, güvenlik uygulamalarında kullanılan birincil kimlik bilgileri biçimidir. X. 509.440 sertifikaları hakkında daha fazla bilgi için bkz. [x. 509.440 ortak anahtar sertifikaları](https://go.microsoft.com/fwlink/?LinkId=210213). X. 509.440 sertifikaları bir sertifika deposunda depolanır. Windows çalıştıran bir bilgisayarda, her biri farklı bir amaca sahip birkaç tür sertifika deposu vardır. Farklı mağazalar hakkında daha fazla bilgi için bkz. [sertifika depoları](https://go.microsoft.com/fwlink/?LinkID=87787).  
   
-## <a name="web-services-security-specifications"></a>Güvenlik belirtimleri Web Hizmetleri  
- Sistem tarafından tanımlanan bağlamaları birçok yaygın olarak kullanılan web Hizmetleri güvenlik özelliklerini destekler. Sistem tarafından sağlanan bağlamalar ve web hizmetleri belirtimleri tam listesi için bkz: destekledikleri: [Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+## <a name="web-services-security-specifications"></a>Web Hizmetleri Güvenliği belirtimleri  
+ Sistem tanımlı bağlamalar, yaygın olarak kullanılan birçok Web hizmeti güvenlik belirtimini destekler. Sistem tarafından sunulan bağlamaların tam listesi ve destekledikleri Web Hizmetleri belirtimleri için bkz: [sistem tarafından sunulan birlikte çalışabilirlik bağlamaları tarafından desteklenen Web Hizmetleri protokolleri](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
   
 ## <a name="access-control-mechanisms"></a>Erişim Denetimi Mekanizmaları  
- WCF hizmeti veya işlemi erişimi denetlemek için çeşitli yollarla sağlar. Bunlar arasında olan  
+ WCF, bir hizmet veya işleme erişimi denetlemek için çeşitli yollar sağlar. Aralarında  
   
 1. <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
 2. ASP.NET üyelik sağlayıcısı  
   
-3. ASP.NET rol sağlayıcısını  
+3. ASP.NET rol sağlayıcısı  
   
 4. Yetkilendirme Yöneticisi  
   
 5. Kimlik modeli  
   
- Bu konulara bakın hakkında daha fazla bilgi için [erişim denetimi mekanizmaları](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
+ Bu konular hakkında daha fazla bilgi için bkz. [Access Control mekanizmaları](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 2433d8b8563cace4415fb8fcd2d110f75d7d4304
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196376"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937689"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamaları
 
@@ -150,15 +150,15 @@ Bu bölümde açıklanan [AppContext](../configure-apps/file-schema/runtime/appc
 
 Anahtarlar, HTTP ağı (<xref:System.Net.ServicePointManager>) veya TCP yuvaları ağı (<xref:System.Net.Security.SslStream>) yapıp yapsanız da aynı etkiye sahiptir.
 
-### <a name="switchsystemnetdontenableschusestrongcrypto"></a>Switch. System .net. Dontenableschusestrongşifre
+### <a name="switchsystemnetdontenableschusestrongcrypto"></a>Switch.System.Net.DontEnableSchUseStrongCrypto
 
-`Switch.System.Net.DontEnableSchUseStrongCrypto` için `false` değeri, uygulamanızın güçlü şifreleme kullanmasına neden olur. `DontEnableSchUseStrongCrypto` için `false` değeri, daha güvenli ağ protokolleri (TLS 1,2, TLS 1,1 ve TLS 1,0) kullanır ve güvenli olmayan protokolleri engeller. Daha fazla bilgi için bkz. [SCH_USE_STRONG_CRYPTO bayrağı](#the-sch_use_strong_crypto-flag). `true` değeri uygulamanız için güçlü şifrelemeyi devre dışı bırakır.
+`Switch.System.Net.DontEnableSchUseStrongCrypto` için `false` değeri, uygulamanızın güçlü şifreleme kullanmasına neden olur. `DontEnableSchUseStrongCrypto` için `false` değeri, daha güvenli ağ protokolleri (TLS 1,2, TLS 1,1 ve TLS 1,0) kullanır ve güvenli olmayan protokolleri engeller. Daha fazla bilgi için [SCH_USE_STRONG_CRYPTO bayrağına](#the-sch_use_strong_crypto-flag)bakın. `true` değeri uygulamanız için güçlü şifrelemeyi devre dışı bırakır.
 
 Uygulamanız .NET Framework 4,6 veya sonraki sürümlerini hedefliyorsa, bu anahtar varsayılan olarak `false`. Bu, önerdiğimiz güvenli bir varsayılan seçenektir. Uygulamanız .NET Framework 4,6 üzerinde çalışıyorsa, ancak önceki bir sürümü hedefliyorsa, anahtar varsayılan olarak `true`. Bu durumda, açıkça `false`olarak ayarlamanız gerekir.
 
 `DontEnableSchUseStrongCrypto`, güçlü şifrelemeyi desteklemeyen ve yükseltilemeyen eski hizmetlere bağlanmanız gerekiyorsa `true` bir değere sahip olmalıdır.
 
-### <a name="switchsystemnetdontenablesystemdefaulttlsversions"></a>Switch. System .net. DontEnableSystemDefaultTlsVersions
+### <a name="switchsystemnetdontenablesystemdefaulttlsversions"></a>Switch.System.Net.DontEnableSystemDefaultTlsVersions
 
 `Switch.System.Net.DontEnableSystemDefaultTlsVersions` için `false` değeri, uygulamanızın işletim sisteminin Protokolü seçmesine izin vermesine neden olur. `true` değeri, uygulamanızın .NET Framework tarafından çekilen protokolleri kullanmasına neden olur.
 
@@ -193,7 +193,7 @@ Aşağıda açıklanan kayıt defteri anahtarlarının hepsi, HTTP ağı (<xref:
 
 ### <a name="schusestrongcrypto"></a>SchUseStrongCrypto
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` kayıt defteri anahtarının DWORD türünde bir değeri vardır. 1 değeri, uygulamanızın güçlü şifrelemeyi kullanmasına neden olur. Güçlü şifreleme daha güvenli ağ protokolleri (TLS 1,2, TLS 1,1 ve TLS 1,0) kullanır ve güvenli olmayan protokolleri engeller. 0 değeri güçlü şifrelemeyi devre dışı bırakır. Daha fazla bilgi için bkz. [SCH_USE_STRONG_CRYPTO bayrağı](#the-sch_use_strong_crypto-flag).
+`HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` kayıt defteri anahtarının DWORD türünde bir değeri vardır. 1 değeri, uygulamanızın güçlü şifrelemeyi kullanmasına neden olur. Güçlü şifreleme daha güvenli ağ protokolleri (TLS 1,2, TLS 1,1 ve TLS 1,0) kullanır ve güvenli olmayan protokolleri engeller. 0 değeri güçlü şifrelemeyi devre dışı bırakır. Daha fazla bilgi için [SCH_USE_STRONG_CRYPTO bayrağına](#the-sch_use_strong_crypto-flag)bakın.
 
 Uygulamanız .NET Framework 4,6 veya sonraki sürümlerini hedefliyorsa, bu anahtar varsayılan değer olan 1 ' dir. Bu, önerdiğimiz güvenli bir varsayılan seçenektir. Uygulamanız .NET Framework 4,6 üzerinde çalışıyorsa, ancak önceki bir sürümü hedefliyorsa, anahtar varsayılan olarak 0 olur. Bu durumda, değerini açıkça 1 olarak ayarlamanız gerekir.
 
@@ -241,7 +241,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="the-sch_use_strong_crypto-flag"></a>SCH_USE_STRONG_CRYPTO bayrağı
 
-Etkinleştirildiğinde (varsayılan olarak, bir `AppContext` anahtarıyla veya Windows kayıt defteri tarafından), uygulamanız bir TLS güvenlik protokolü istediğinde .NET Framework `SCH_USE_STRONG_CRYPTO` bayrağını kullanır. `SCH_USE_STRONG_CRYPTO` bayrağı varsayılan olarak, `AppContext` anahtarıyla veya kayıt defteriyle etkinleştirilebilir. İşletim sistemi, daha iyi birlikte çalışabilirlik için devre dışı bırakılacak bilinen zayıf şifreleme algoritmalarını, şifre paketlerini ve TLS/SSL protokolü sürümlerini devre dışı bırakmayı bildirmek için bayrağını `Schannel`geçirir. Daha fazla bilgi için bkz.:
+Etkinleştirildiğinde (varsayılan olarak, bir `AppContext` anahtarıyla veya Windows kayıt defteri tarafından), uygulamanız bir TLS güvenlik protokolü istediğinde .NET Framework `SCH_USE_STRONG_CRYPTO` bayrağını kullanır. `SCH_USE_STRONG_CRYPTO` bayrağı varsayılan olarak, `AppContext` anahtarıyla veya kayıt defteriyle etkinleştirilebilir. İşletim sistemi, daha iyi birlikte çalışabilirlik için devre dışı bırakılacak bilinen zayıf şifreleme algoritmalarını, şifre paketlerini ve TLS/SSL protokolü sürümlerini devre dışı bırakmayı bildirmek için bayrağını `Schannel`geçirir. Daha fazla bilgi için bkz.
 
 - [Güvenli kanal](/windows/desktop/SecAuthN/secure-channel)
 - [SCHANNEL_CRED yapısı](/windows/win32/api/schannel/ns-schannel-schannel_cred)
@@ -262,7 +262,7 @@ Ayrıca bkz:
 - [.NET Framework Sürümleri ve Bağımlılıkları](../migration-guide/versions-and-dependencies.md)
 - [Nasıl yapılır: hangi .NET Framework sürümlerinin yüklendiğini belirleme](../migration-guide/how-to-determine-which-versions-are-installed.md).
 
-## <a name="support-for-tls-12"></a>TLS 1,2 için destek
+## <a name="support-for-tls-12"></a>TLS 1.2 desteği
 
 Uygulamanızın TLS 1,2 anlaşması yapması için, işletim sisteminin ve .NET Framework sürümünün her ikisi de TLS 1,2 ' i desteklemelidir.
 
@@ -270,12 +270,12 @@ Uygulamanızın TLS 1,2 anlaşması yapması için, işletim sisteminin ve .NET 
 
 TLS 1,2 ve/veya TLS 1,1 'yi destekleyen bir sistemde etkinleştirmek veya yeniden etkinleştirmek için bkz. [Aktarım Katmanı Güvenliği (TLS) kayıt defteri ayarları](/windows-server/security/tls/tls-registry-settings).
 
-| **ATAYAMADı** | **TLS 1,2 desteği** |
+| **OS** | **TLS 1,2 desteği** |
 | --- | --- |
-| Windows 10<br>Windows Server 2016 | Desteklenir ve varsayılan olarak etkindir. |
-| Windows 8.1<br>Windows Server 2012 R2 | Desteklenir ve varsayılan olarak etkindir. |
-| Windows 8,0<br>Windows Server 2012 | Desteklenir ve varsayılan olarak etkindir. |
-| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | Desteklenir, ancak varsayılan olarak etkinleştirilmez. TLS 1,2 ' i etkinleştirme hakkında daha fazla bilgi için bkz. [Aktarım Katmanı Güvenliği (TLS) kayıt defteri ayarları](/windows-server/security/tls/tls-registry-settings) Web sayfası. |
+| Windows 10<br>Windows Server 2016 | Desteklenen ve varsayılan olarak etkindir. |
+| Windows 8.1<br>Windows Server 2012 R2 | Desteklenen ve varsayılan olarak etkindir. |
+| Windows 8.0<br>Windows Server 2012 | Desteklenen ve varsayılan olarak etkindir. |
+| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | , Varsayılan olarak etkin değildir ancak desteklenir. TLS 1,2 ' i etkinleştirme hakkında daha fazla bilgi için bkz. [Aktarım Katmanı Güvenliği (TLS) kayıt defteri ayarları](/windows-server/security/tls/tls-registry-settings) Web sayfası. |
 | Windows Server 2008 | TLS 1,2 ve TLS 1,1 desteği için bir güncelleştirme gerekiyor. [Windows Server 2008 SP2 'de tls 1,1 ve tls 1,2 desteği eklemek Için güncelleştirme](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s)bölümüne bakın. |
 | Windows Vista | Desteklenmez. |
 
@@ -285,11 +285,11 @@ Her Windows sürümünde varsayılan olarak hangi TLS/SSL protokollerinin etkinl
 
 Bu tabloda, .NET Framework 3,5 ile TLS 1,2 ' i desteklemeniz gereken işletim sistemi güncelleştirmesi gösterilmektedir. Tüm işletim sistemi güncelleştirmelerini uygulamanızı öneririz.
 
-| **ATAYAMADı** | **.NET Framework 3,5 ile TLS 1,2 ' i desteklemek için gereken en düşük güncelleştirme** |
+| **OS** | **.NET Framework 3,5 ile TLS 1,2 ' i desteklemek için gereken en düşük güncelleştirme** |
 | --- | --- |
 | Windows 10<br>Windows Server 2016 | [Windows 10 sürüm 1511 ve Windows Server 2016 Technical Preview 4 için toplu güncelleştirme: 10 Mayıs 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
 | Windows 8.1<br>Windows Server 2012 R2 | [Windows 8.1 ve Windows Server 2012 R2 'de .NET Framework 3,5 ' de bulunan TLS sistem varsayılan sürümleri için destek](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
-| Windows 8,0<br>Windows Server 2012 | [Windows Server 2012 ' de .NET Framework 3,5 ' de bulunan TLS sistemi varsayılan sürümleri için destek](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 8.0<br>Windows Server 2012 | [Windows Server 2012 ' de .NET Framework 3,5 ' de bulunan TLS sistemi varsayılan sürümleri için destek](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows 7 SP1<br>Windows Server 2008 R2 SP1 | [Windows 7 SP1 ve Server 2008 R2 SP1 'de .NET Framework 3.5.1 'de bulunan TLS sistem varsayılan sürümleri için destek](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Server 2008 | [Windows Vista SP2 ve Server 2008 SP2 'de .NET Framework 2,0 SP2 'de bulunan TLS sistem varsayılan sürümleri için destek](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Vista | Desteklenmez |

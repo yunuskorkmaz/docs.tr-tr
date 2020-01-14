@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: 1b8a00c7716a60daec4e4f6af6ae8e3a7a45e943
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f838cbd0a1884d9fca1f12398b996cde93af453a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346169"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937560"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Hizmet Işlemlerini çağırma (WCF Veri Hizmetleri)
 Açık Veri Protokolü (OData), bir veri hizmeti için hizmet işlemlerini tanımlar. WCF Veri Hizmetleri, bu işlemleri veri hizmetindeki yöntemler olarak tanımlamanızı sağlar. Diğer veri hizmeti kaynakları gibi bu hizmet işlemleri de URI 'Ler kullanılarak karşılanır. Bir hizmet işlemi varlık türleri, tek varlık türü örnekleri ve tamsayı ve dize gibi basit türler için Koleksiyonlar döndürebilir. Ayrıca, bir hizmet işlemi `null` (`Nothing` Visual Basic) döndürebilir. WCF Veri Hizmetleri istemci kitaplığı, HTTP GET isteklerini destekleyen hizmet işlemlerine erişmek için kullanılabilir. Bu tür hizmet işlemleri, <xref:System.ServiceModel.Web.WebGetAttribute> uygulanmış yöntemler olarak tanımlanır. Daha fazla bilgi için bkz. [hizmet işlemleri](service-operations-wcf-data-services.md).  
@@ -32,7 +32,7 @@ Açık Veri Protokolü (OData), bir veri hizmeti için hizmet işlemlerini tanı
   
 - Tek bir sonuç döndüren veya birden fazla giriş parametresi gerektiren bir GET hizmeti işlemini çağırmak için <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> kullanamazsınız. Bunun yerine <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> yöntemini çağırmanız gerekir.  
   
-- Araçlar tarafından oluşturulan, bir hizmet işlemini çağırmak için <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> veya <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> yöntemini kullanan kesin olarak belirlenmiş <xref:System.Data.Services.Client.DataServiceContext> kısmi sınıfında bir genişletme yöntemi oluşturmayı düşünün. Bu, hizmet işlemlerini doğrudan bağlamdan çağırmanızı sağlar. Daha fazla bilgi için bkz. Blog Post [hizmeti işlemleri ve WCF veri Hizmetleri istemcisi](https://blogs.msdn.microsoft.com/astoriateam/2010/05/26/service-operations-and-the-wcf-data-services-client/).  
+- Araçlar tarafından oluşturulan, bir hizmet işlemini çağırmak için <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> veya <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> yöntemini kullanan kesin olarak belirlenmiş <xref:System.Data.Services.Client.DataServiceContext> kısmi sınıfında bir genişletme yöntemi oluşturmayı düşünün. Bu, hizmet işlemlerini doğrudan bağlamdan çağırmanızı sağlar. Daha fazla bilgi için bkz. Blog Post [hizmeti işlemleri ve WCF veri Hizmetleri istemcisi](https://docs.microsoft.com/archive/blogs/astoriateam/service-operations-and-the-wcf-data-services-client).  
   
 - Bir hizmet işlemini çağırmak için <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> kullandığınızda, istemci kitaplığı, ampersan (&) ve dizelerde tek tırnak işareti gibi ayrılmış karakterlerin yüzde kodlaması gerçekleştirerek <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> sağlanan karakterleri otomatik olarak çıkar. Ancak, bir hizmet işlemini çağırmak için *Execute* yöntemlerinden birini çağırdığınızda, Kullanıcı tarafından sağlanan herhangi bir dize değerinin bu kaçışı gerçekleştirmeyi unutmamanız gerekir. URI 'Lerinde tek tırnak işareti, tek tırnak çifti olarak atlardır.  
   

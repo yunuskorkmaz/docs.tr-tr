@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 84b6bfc32f5a73597b227098e5aee1e3450cf85b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 75baa4f23eae838defafd3ce9b3907a187982a18
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644014"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937069"
 ---
-### <a name="switchsystemwindowsformsenablevisualstylevalidation-compatibility-switch-not-supported"></a>Switch. System. Windows. Forms. EnableVisualStyleValidation uyumluluk anahtarı desteklenmiyor
+### <a name="enablevisualstylevalidation-compatibility-switch-not-supported"></a>EnableVisualStyleValidation uyumluluk anahtarı desteklenmiyor
 
 `Switch.System.Windows.Forms.EnableVisualStyleValidation` uyumluluk anahtarı .NET Core 3,0 üzerinde Windows Forms desteklenmez.
 

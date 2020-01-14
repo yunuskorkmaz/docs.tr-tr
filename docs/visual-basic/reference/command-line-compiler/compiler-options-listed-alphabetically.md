@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: c529c03fd3856bbd3d3b26371415907c94ca8d30
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 85fb07f46c2d885491db7358f24b3b50836c2ca8
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343513"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937752"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Alfabetik olarak listelenen Visual Basic derleyici seçenekleri
 Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme ortamından (IDE) program derlemek için alternatif olarak sağlanır. Aşağıda alfabetik olarak sıralanan Visual Basic komut satırı derleyici seçeneklerinin bir listesi verilmiştir.  
@@ -57,7 +57,7 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|Değişken bildirimlerinde yerel tür çıkarımı kullanımını mümkün.|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Katı dil semantiğini zorlar.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Bir çıkış dosyasını belirtir.|  
-|`-parallel[+&#124;-]`|Eşzamanlı yapı (+) kullanılıp kullanılmayacağını belirtir.|  
+|<code>-parallel[+&#124;-]</code>|Eşzamanlı yapı (+) kullanılıp kullanılmayacağını belirtir.|  
 |[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|Derleyicinin çıkış dosyası için hedeflediği işlemci platformunu belirtir.|  
 |`-preferreduilang`|Tercih edilen çıkış dili adını belirtin.|  
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|Derleyicinin sözdizimiyle ilgili hatalar ve uyarılar için kod görüntülemesini engeller.|  

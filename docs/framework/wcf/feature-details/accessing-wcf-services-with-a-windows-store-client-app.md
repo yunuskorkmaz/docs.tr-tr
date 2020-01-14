@@ -2,12 +2,12 @@
 title: WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: f5cc18973231f327ee161946a235cb8b8b2ea5a7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 77dc5d19bc40dc09148a8d2368c56e522bfafc1a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978191"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938171"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
 Windows 8, Windows Mağazası uygulamaları adlı yeni bir uygulama türü sunar. Bu uygulamalar dokunmatik ekran arabirimi etrafında tasarlanmıştır. .NET Framework 4,5, Windows Mağazası uygulamalarının WCF hizmetlerini çağırmasını sağlar.  
@@ -16,7 +16,7 @@ Windows 8, Windows Mağazası uygulamaları adlı yeni bir uygulama türü sunar
  WCF işlevselliğinin bir alt kümesi bir Windows Mağazası uygulaması içinden edinilebilir, daha fazla ayrıntı için aşağıdaki bölümlere bakın.  
   
 > [!IMPORTANT]
-> WCF tarafından sunulmayan yerine WinRT dağıtım API 'Lerini kullanın. Daha fazla bilgi için bkz. [WinRT dağıtım API 'si](https://go.microsoft.com/fwlink/?LinkId=236265)  
+> WCF tarafından sunulmayan yerine WinRT dağıtım API 'Lerini kullanın. Daha fazla bilgi için bkz. [WinRT dağıtım API 'si](xref:Windows.Web.Syndication)  
   
 > [!WARNING]
 > Bir Windows Çalışma Zamanı bileşenine Web hizmeti başvurusu eklemek için Hizmet Başvurusu Ekle kullanmak desteklenmez.  
@@ -124,11 +124,11 @@ Aşağıdaki istemci kimlik bilgisi türleri Windows Mağazası uygulamalarında
   
 2. Temel  
   
-3. bilgisi  
+3. Bilgisi  
   
-4. 'Nin  
+4. Anlaşma  
   
-5. NT  
+5. NTLM  
   
 6. Windows  
   
@@ -176,9 +176,9 @@ void async SomeMethod()
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Mağazası uygulamaları blogu 'nda WCF](https://blogs.msdn.microsoft.com/piyushjo/2011/09/21/wcf-in-windows-8-metro-styled-apps-absolutely-supported/)
-- [WCF Windows Mağazası Istemcileri ve güvenliği](https://blogs.msdn.microsoft.com/piyushjo/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security/)
-- [Windows Mağazası uygulamaları ve çapraz makine çağrıları](https://blogs.msdn.microsoft.com/piyushjo/2011/10/21/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario/)
-- [Azure 'da dağıtılan bir WCF hizmetini bir Windows Mağazası uygulamasından çağırma](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Windows Mağazası uygulamaları blogu 'nda WCF](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
+- [WCF Windows Mağazası Istemcileri ve güvenliği](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
+- [Windows Mağazası uygulamaları ve çapraz makine çağrıları](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
+- [Azure 'da dağıtılan bir WCF hizmetini bir Windows Mağazası uygulamasından çağırma](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [WCF Güvenliğini Programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Bağlamalar](../../../../docs/framework/wcf/bindings.md)

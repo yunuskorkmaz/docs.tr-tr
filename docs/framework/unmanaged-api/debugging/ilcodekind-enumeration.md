@@ -12,12 +12,12 @@ api_type:
 ms.assetid: b91765e4-82db-46f9-a6dc-6b80610276af
 topic_type:
 - apiref
-ms.openlocfilehash: b59fbc2acefa907bb3f881b7ed183388d2e4c368
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 553a92812f009ca1033f1bdcda0ea3722c5f01e3
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103364"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937830"
 ---
 # <a name="ilcodekind-enumeration"></a>ILCodeKind Numaralandırması
 [.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
@@ -41,7 +41,7 @@ typedef enum ILCodeKind {
 |`ILCODE_REJIT_IL`|Hata ayıklayıcının, ReJIT araçlarından bilgilere erişimi vardır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklayıcının profil oluşturucu ReJIT araçlarına ve GetCodeEx öğesine eklenen değişkenlere erişip erişemeyeceğini anlamak için `ILCodeKind` numaralandırmanın bir üyesi [EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) ve [GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) yöntemlerine geçirilebilir [ ](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)hata ayıklayıcının IŞARETLENMIŞ Il 'ye erişip erişemeyeceğini belirleme yöntemi.  
+ Hata ayıklayıcının profil oluşturucu ReJIT [Araçları ' na](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) eklenen değişkenlere erişip [erişemeyeceğini ve hata](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) ayıklayıcının işaretlenmiş Il 'ye erişip erişemeyeceğini tespit etmek için [GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) yöntemine `ILCodeKind` numaralandırmanın bir üyesi geçirilebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -56,4 +56,4 @@ typedef enum ILCodeKind {
 
 - [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [ICorDebugILFrame4 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
-- [ReJIT: nasıl yapılır Kılavuzu](https://blogs.msdn.microsoft.com/davbr/2011/10/12/rejit-a-how-to-guide/)
+- [ReJIT: nasıl yapılır Kılavuzu](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

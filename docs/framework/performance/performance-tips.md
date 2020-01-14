@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 48b62990abf85eac4d4ab30c9a4b891de0875cd7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 12e8d9398a1cf76267f4e8441845007da17949cd
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444538"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937895"
 ---
 # <a name="net-performance-tips"></a>.NET Performans İpuçları
 *Performans* terimi genellikle programın yürütme hızına başvurur. Kaynak kodunuzda belirli temel kuralları izleyerek, bazen yürütme hızını artırabilirsiniz. Bazı programlarda, kodu yakından incelemek ve profil oluşturucular kullanarak olabildiğince hızlı çalıştığından emin olmak önemlidir. Diğer programlarda, bu tür iyileştirme gerçekleştirmek zorunda değilsiniz çünkü kod yazıldığı kadar hızlı şekilde çalışıyor. Bu makalede, performansın önyüklenebileceği bazı yaygın bölgeler ve ek performans konularına yönelik bağlantılar yer almaktadır. Performansı planlama ve ölçme hakkında daha fazla bilgi için bkz. [performans](index.md)  
@@ -38,9 +38,9 @@ ms.locfileid: "74444538"
   
 - [.NET uygulamalarındaki performans Ipuçları ve püf noktaları](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
 
-- [Riko Mariani performansı tidbits](https://blogs.msdn.microsoft.com/ricom/)  
+- [Riko Mariani performansı tidbits](https://docs.microsoft.com/archive/blogs/ricom/)  
 
-- [Vance Morrison blogu](https://blogs.msdn.microsoft.com/vancem/)
+- [Vance Morrison blogu](https://docs.microsoft.com/archive/blogs/vancem/)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
