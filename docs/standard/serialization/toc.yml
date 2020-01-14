@@ -9,6 +9,8 @@
           href: system-text-json-how-to.md
         - name: Özel dönüştürücü yazma
           href: system-text-json-converters-how-to.md
+        - name: Newtonsoft.Json’dan geçiş yapma
+          href: system-text-json-migrate-from-newtonsoft-how-to.md
     - name: İkili Serileştirme
       href: binary-serialization.md
       items:
