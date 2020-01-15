@@ -1358,14 +1358,14 @@
               href: language-reference/keywords/var.md
             - name: Yönetilmeyen türler
               href: language-reference/builtin-types/unmanaged-types.md
+            - name: Varsayılan değerler
+              href: language-reference/builtin-types/default-values.md
             - name: Türler için başvuru tabloları
               items:
                 - name: Yerleşik türler tablosu
                   href: language-reference/keywords/built-in-types-table.md
                 - name: Değer türleri tablosu
                   href: language-reference/keywords/value-types-table.md
-                - name: Varsayılan değerler tablosu
-                  href: language-reference/keywords/default-values-table.md
                 - name: Sayısal sonuçlar tablosunu biçimlendirme
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Değiştiriciler

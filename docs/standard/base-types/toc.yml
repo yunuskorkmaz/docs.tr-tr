@@ -38,10 +38,6 @@
               href: how-to-define-and-use-custom-numeric-format-providers.md
             - name: 'Nasıl yapılır: Gidiş Dönüş Tarih ve Saat Değerleri'
               href: how-to-round-trip-date-and-time-values.md
-            - name: 'Nasıl yapılır: Web Denetimlerindeki Sayısal Kullanıcı Girişlerini Sayıya Dönüştürme'
-              href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
-            - name: 'Nasıl yapılır: Web Kullanıcılarına Yerelleştirilmiş Tarih ve Saat Bilgilerini Görüntüleme'
-              href: how-to-display-localized-date-and-time-information-to-web-users.md
             - name: 'Nasıl yapılır: Tarih ve Saat Değerlerinde Milisaniyeleri Görüntüleme'
               href: how-to-display-milliseconds-in-date-and-time-values.md
             - name: 'Nasıl yapılır: Miladi Olmayan Takvimlerde Tarihleri Görüntüleme'

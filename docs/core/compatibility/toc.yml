@@ -19,7 +19,9 @@
       items:
         - name: Yeni değişiklikler
           href: fx-core.md
-        - name: Özel durumlar oluşturan API’ler
+        - name: Kullanılamayan teknolojiler
+          href: ../porting/net-framework-tech-unavailable.md?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
+        - name: Her zaman özel durum oluşturan API’ler
           href: unsupported-apis.md
 - name: Alana göre
   expanded: true
