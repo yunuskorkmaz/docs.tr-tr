@@ -342,24 +342,20 @@
   items:
     - name: Genel Bakış
       href: porting/index.md
-    - name: .NET Core’da kullanılamayan .NET Framework teknolojileri
-      href: porting/net-framework-tech-unavailable.md
     - name: Üçüncü taraf bağımlılıklarını çözümleme
       href: porting/third-party-deps.md
     - name: Taşıma kitaplıkları
       href: porting/libraries.md
     - name: .NET Core için projeleri düzenleme
       href: porting/project-structure.md
+    - name: Kullanılamayan teknolojiler
+      href: porting/net-framework-tech-unavailable.md
     - name: Araçlar
       href: porting/tools.md
     - name: Windows Uyumluluk Paketi’ni kullanma
       href: porting/windows-compat-pack.md
     - name: Windows Forms projelerini bağlama
-      items:
-        - name: Proje taşıma
-          href: porting/winforms.md
-        - name: Yeni değişiklikler
-          href: porting/winforms-breaking-changes.md
+      href: porting/winforms.md
     - name: WPF projelerini bağlama
       href: porting/wpf.md
 - name: Bağımlılık yüklemesi

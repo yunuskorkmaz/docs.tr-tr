@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 158964d1e04091faaa9b3acf82bf4ce2b5aba797
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cb1764d1a6f363f3011268eae5fbcb2c76d9cc89
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711499"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938008"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 'teki normal ifadeler için en iyi uygulamalar
 
@@ -62,7 +62,7 @@ Bu sorunu çözmek için, şunları yapabilirsiniz:
 . NET 'in normal ifade nesne modeli, normal ifade altyapısını temsil eden <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıfıdır. Genellikle, normal ifade performansını etkileyen tek en büyük faktör <xref:System.Text.RegularExpressions.Regex> altyapısının kullanılma yoludur. Normal bir ifadeyi tanımlama, normal ifade motorunu bir normal ifade deseni ile sıkı şekilde eşlemeyi içerir. Bu, oluşturucunun bir normal ifade düzenine geçerek bir <xref:System.Text.RegularExpressions.Regex> nesnesinin örneğini oluşturma veya bir statik yöntem çağırma ile birlikte, analiz edilecek dizenin yanı da, zorunludur pahalıdır.
 
 > [!NOTE]
-> Yorumlanan ve derlenmiş normal ifadelerin kullanılmasıyla ilgili performans etkilerine ilişkin daha ayrıntılı bir tartışma için bkz. BCL ekibi blogundan [normal Ifade performansını En Iyi duruma getirme, Bölüm II: geri Izlemenin ücretlendirmesi](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) .
+> Yorumlanan ve derlenmiş normal ifadelerin kullanılmasıyla ilgili performans etkilerine ilişkin daha ayrıntılı bir tartışma için bkz. BCL ekibi blogundan [normal Ifade performansını En Iyi duruma getirme, Bölüm II: geri Izlemenin ücretlendirmesi](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha) .
 
 Normal ifade altyapısını belirli bir normal ifade deseniyle birleştirebilir, sonra altyapıyı birkaç şekilde metin eşlemesi yapmak üzere kullanabilirsiniz:
 
@@ -161,7 +161,7 @@ Aşağıdaki örnek, derlenmiş bir normal ifade içeren bir derlemenin nasıl o
 Sıradan şekilde, normal ifade motoru bir giriş dizsi içinde ilerlemek ve bunu bir normal ifade deseni ile karşılaştırmak için doğrusal ilerlemeyi kullanır. Ancak, `*`, `+`ve `?` gibi belirsiz nicelik belirteçleri bir normal ifade düzeninde kullanıldığında, normal ifade motoru başarılı kısmi eşleşmelerin bir kısmını verebilir ve tüm düzen için başarılı bir eşleşme aramak amacıyla önceden kaydedilmiş bir duruma geri dönebilir. Bu işlem geri dönüş olarak bilinir.
 
 > [!NOTE]
-> Geri izleme hakkında daha fazla bilgi için bkz. [normal Ifade davranışı](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) ve [geri izleme](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)ayrıntıları. Geri izlemenin ayrıntılı bir açıklaması için bkz. BCL ekibi blogundan [normal Ifade performansını En Iyi duruma getirme, Bölüm II: geri Izlemenin ücretlendirmesi](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) .
+> Geri izleme hakkında daha fazla bilgi için bkz. [normal Ifade davranışı](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) ve [geri izleme](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)ayrıntıları. Geri izlemenin ayrıntılı bir açıklaması için bkz. BCL ekibi blogundan [normal Ifade performansını En Iyi duruma getirme, Bölüm II: geri Izlemenin ücretlendirmesi](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha) .
 
 Geri dönüş için destek, normal ifadelere güç ve esneklik kazandırır. Ayrıca normal ifade motorunun çalışmasının denetlenmesini sorumluluğunu normal ifade geliştiricisine teslim eder. Geliştiriciler genelde bu sorumluluğun farkında olmadığından, geri dönüşü yanlış kullanmaları ya da aşırı geri dönüşe bağımlılıkları genelde normal ifade performansının düşmesinde önemli bir rol oynar. En kötü senaryoda yürütme süresi girdi dizesinde her ek karakter ile iki katına çıkar. Aslında geri izlemeyi aşırı şekilde kullanarak, girişin normal ifade desenini yakın eşlemesi halinde sonsuz bir döngünün program eşdeğerini oluşturmak kolaydır; normal ifade motorunun görece kısa bir giriş dizesini işlemesi saatler ve hatta günler alabilir.
 
