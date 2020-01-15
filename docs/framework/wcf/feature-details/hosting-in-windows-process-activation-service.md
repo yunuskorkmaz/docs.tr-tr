@@ -4,54 +4,54 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: af40660d1af0a88710c4b53009474847cece6deb
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: aa782c46d6530bb30055c536dd10d78f9ab9f79f
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486633"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963771"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows İşlem Etkinleştirme Hizmetinde Barındırma
-Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Windows Communication Foundation (WCF) hizmetlerini barındırmak içeren çalışan işlemleri yaşam süresini yönetir. WAS işlem modeli, HTTP bağımlılığını kaldırarak HTTP sunucusu için IIS 6.0 işlem modelini genelleştirir. Bu, hem HTTP hem de ileti tabanlı etkinleştirme destekleyen ve çok sayıda belirli bir makinede uygulamaları barındırmak için eklenebilir bir barındırma ortamında Net.TCP gibi HTTP olmayan protokolleri kullanmak WCF hizmetleri sağlar.  
+Windows Işlem etkinleştirme hizmeti (WAS), Windows Communication Foundation (WCF) hizmetlerini barındıran uygulamalar içeren çalışan işlemlerinin etkinleştirilmesini ve ömrünü yönetir. WAS işlem modeli http sunucusu için IIS 6,0 işlem modelini genelleştirir ve HTTP 'nin bağımlılığını ortadan kaldırır. Bu, WCF hizmetlerinin, ileti tabanlı etkinleştirmeyi destekleyen bir barındırma ortamında ve belirli bir makinede çok sayıda uygulamayı barındırma olanağı sunan, hem HTTP hem de HTTP olmayan protokolleri (net. TCP gibi) kullanmasına izin verir.  
   
- Bir WCF hizmeti oluşturma hakkında daha fazla bilgi WAS barındırma ortamında çalışan için bkz: [nasıl yapılır: Was'ta WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ WAS barındırma ortamında çalışan bir WCF hizmeti oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: BIR WCF hizmetini BARıNDıRMA was](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
- WAS işlem modeli, uygulamaların daha sağlam, daha kolay yönetilebilir ve kaynakları verimli kullanan bir biçimde barındırılmasına olanak sağlayan birçok özellik sunar:  
+ WAS işlem modeli, uygulamaların daha sağlam, daha yönetilebilir ve kaynakları verimli bir şekilde kullandığı bir şekilde barındırılmasını sağlayan çeşitli özellikler sağlar:  
   
-- İleti tabanlı etkinleştirme uygulamaların ve çalışan işlem uygulamaları başlatabilir ve yanıt olarak HTTP ve HTTP olmayan protokolleri kullanarak gelen gelen iş öğelerini dinamik olarak durdurabilirsiniz.  
+- Uygulamaların ve çalışan işlem uygulamalarının ileti tabanlı etkinleştirilmesi, HTTP ve HTTP olmayan ağ protokollerini kullanan gelen iş öğelerine yanıt olarak başlatılır ve dinamik olarak durdurulur.  
   
-- Güçlü uygulama ve çalışan işlemi geri dönüştürme çalışan uygulamaların durumunu korumak üzere.  
+- Çalışan uygulamaların sistem durumunu korumak için sağlam uygulama ve çalışan işlemi geri dönüştürülüyor.  
   
 - Merkezi uygulama yapılandırması ve yönetimi.  
   
-- Dağıtım ayak izine tam IIS yüklemeye gerek kalmadan IIS işlem modelini yararlanmak uygulamaları sağlar.  
-[Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) IIS 7.0 ve Windows İşlem Etkinleştirme Hizmeti (WAS) barındırma ortamı ve WF NET4 WCF hizmetleri için zengin bir uygulama sağlamak için birlikte çalışır. Bu işlem yaşam döngüsü yönetimi, işlem geri dönüştürme, paylaşılan barındırma, hızlı hata koruması, işlem tek bırakma, isteğe bağlı etkinleştirme ve sistem durumu izleme avantajına sahip olur. Ayrıntılı bilgi için bkz. [AppFabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=196494) ve [AppFabric barındırma kavramları](https://go.microsoft.com/fwlink/?LinkId=196495).  
+- Uygulamaların, tam bir IIS yüklemesinin dağıtım ayak izine gerek kalmadan IIS işlem modelinden yararlanmasını sağlar.  
+[Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)) , NET4 WCF ve WF hizmetleri için zengin bir uygulama barındırma ortamı sağlamak üzere IIS 7,0 ve Windows Işlem etkinleştirme HIZMETI (was) ile birlikte çalışarak. Bu avantajlar arasında işlem yaşam döngüsü yönetimi, işlem geri dönüşümü, paylaşılan barındırma, hızlı hata koruması, işlem orphaning, isteğe bağlı etkinleştirme ve sistem durumu izleme sayılabilir. Ayrıntılı bilgi için bkz. [AppFabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10)) ve [AppFabric barındırma kavramları](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10)).  
   
-## <a name="elements-of-the-was-addressing-model"></a>Model adresleme WAS öğeleri  
- Uygulamaları, yaşam süresi ve yürütme ortamı sunucusu tarafından yönetilen kod birimleri Tekdüzen Kaynak Tanımlayıcısı (URI) adreslerine sahiptir. Tek bir WAS sunucu örneği olabilir çok sayıda farklı uygulamaya giriş. Sunucularını düzenlemek uygulamalar olarak adlandırılan gruplara *siteleri*. Bir site içinde uygulamalar, dış adresleri hizmet veren bir URI'leri yapısını gösteren hiyerarşik bir şekilde düzenlenir.  
+## <a name="elements-of-the-was-addressing-model"></a>WAS adresleme modelinin öğeleri  
+ Uygulamalar, yaşam süresi ve yürütme ortamı sunucu tarafından yönetilen kod birimleri olan Tekdüzen Kaynak tanımlayıcısı (URI) adresleridir. Tek bir WAS sunucu örneği, birçok farklı uygulamaya giriş yapabilir. Sunucular uygulamaları *siteler*adlı gruplar halinde düzenler. Bir site içinde uygulamalar, dış adresleri olarak görev yapan URI 'lerin yapısını yansıtan hiyerarşik bir şekilde düzenlenir.  
   
- Uygulama adresine sahip iki bölümden: birlikte katıldığında bir uygulama için dış adresini sağlayan temel bir URI öneki ve uygulamaya özgü, göreli adresi (yol). Taban URI öneki site bağlamayı oluşturulur ve site altındaki tüm uygulamalar için kullanılır. Uygulama adresleri ardından uzamayan uygulamaya özgü yolu parçaları yararlanarak (gibi "/ applicationOne") ve tam URI uygulamayı gelmesi taban URI öneki ("NET.TCP://localhost" gibi) ekleme.  
+ Uygulama adresleri iki bölümden oluşur: bir temel URI öneki ve bir uygulamayla birlikte katıldığında bir uygulama için dış adres sağlayan uygulamaya özgü, göreli bir adres (yol). Temel URI öneki site bağlamalarından oluşturulur ve site altındaki tüm uygulamalar için kullanılır. Uygulama adresleri bundan sonra uygulamaya özel yol parçaları (örneğin, "/applicationOne") alınarak oluşturulur ve bunları, tam uygulama URI 'sine ulaşmak için temel URI ön ekine (örneğin, "net. TCP: TC localhost") ekleyerek oluşturulur.  
   
- Aşağıdaki tabloda, hem HTTP hem de HTTP olmayan site bağlamaları WAS siteler için birkaç olası adresleme senaryo gösterilmektedir.  
+ Aşağıdaki tabloda, hem HTTP hem de HTTP olmayan site bağlamaları olan WAS siteleri için birkaç olası adresleme senaryosu gösterilmektedir.  
   
-|Senaryo|Site bağlamaları|Uygulama yolu|Temel uygulama URI'ler|  
+|Senaryo|Site bağlamaları|Uygulama yolu|Temel uygulama URI 'Leri|  
 |--------------|-------------------|----------------------|---------------------------|  
 |Yalnızca HTTP|http: *: 80:\*|/appTwo|http://localhost/appTwo/|  
-|Hem HTTP hem de HTTP olmayan|http: *: 80:\*<br /><br /> NET.TCP: 808:\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
-|HTTP olmayan yalnızca|NET.pipe: *|/appThree|NET.pipe://appThree/|  
+|Hem HTTP hem de HTTP olmayan|http: *: 80:\*<br /><br /> net. TCP: 808:\*|/appTwo|http://localhost/appTwo/<br />net. TCP://localhost/appTwo/|  
+|Yalnızca HTTP olmayan|net. pipe: *|/appThree|net. pipe:/\ Appthree/|  
   
- Hizmet ve uygulama içindeki kaynaklara da çözülebilir. Uygulamanın içinde uygulama kaynaklarını temel uygulama yoluyla göreli ele alınır. Örneğin, bir sitede bir makine adı contoso.com, hem HTTP hem de Net.TCP protokoller için site bağlamaları içerdiğini varsayar. Ayrıca site GetOrders.svc bir hizmeti sunan /Billing konumunda bulunan bir uygulama içerdiğini varsayın. Daha sonra GetOrders.svc hizmeti SecureEndpoint göreli adresi olan bir uç nokta kullanıma sunulan, hizmet uç noktası aşağıdaki iki bir URI'leri sırasında ortaya:  
+ Bir uygulama içindeki hizmetler ve kaynaklar da çözülebilir. Bir uygulama içinde uygulama kaynakları, temel uygulama yoluna göre karşılanır. Örneğin, contoso.com makine adındaki bir sitenin, hem HTTP hem de net. TCP protokolleri için site bağlamaları olduğunu varsayalım. Ayrıca, sitenin, GetOrders. svc ' de bir hizmet sunan,/faturalandırma konumunda bulunan bir uygulama içerdiğini varsayın. Daha sonra, GetOrders. svc hizmeti SecureEndpoint 'in göreli adresiyle bir uç nokta açıkalıyorsa, hizmet uç noktası aşağıdaki iki URI 'de gösterilebilir:  
   
 - `http://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
 - `net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
   
 ## <a name="the-was-runtime"></a>WAS çalışma zamanı  
- Uygulamaları siteye adresleme ve yönetim amaçları doğrultusunda düzenlenir. Çalışma zamanında uygulamalar da birlikte uygulama havuzları halinde gruplandırılır. Bir uygulama havuzu, birçok farklı uygulama birçok farklı sitelerde barındırmak. Tüm uygulamalar bir uygulama havuzu içindeki ortak çalışma zamanı özelliklerine sahip. Örneğin, hepsi aynı ortak dil çalışma zamanı (CLR) sürümünü altında çalıştırmak ve bunların tümü ortak bir işlem kimliği paylaşın. Her bir uygulama havuzu bir çalışan işlemi (w3wp.exe) örneğine karşılık gelir. İçinde bir paylaşılan uygulama havuzu çalışan her yönetilen uygulamanın bir CLR AppDomain yoluyla diğer uygulamalardan ayrı tutulur.  
+ Uygulamalar, adresleme ve yönetim amacıyla siteler halinde düzenlenir. Çalışma zamanında uygulamalar da uygulama havuzlarında birlikte gruplandırılır. Bir uygulama havuzu birçok farklı siteden birçok farklı uygulamayı barındırabilir. Bir uygulama havuzu içindeki tüm uygulamalar ortak bir çalışma zamanı özellikleri kümesini paylaşır. Örneğin, hepsi aynı ortak dil çalışma zamanı (CLR) sürümü altında çalışır ve hepsi ortak bir işlem kimliğini paylaşır. Her uygulama havuzu bir çalışan işleminin (W3wp. exe) örneğine karşılık gelir. Paylaşılan bir uygulama havuzu içinde çalışan her yönetilen uygulama, CLR AppDomain 'i aracılığıyla diğer uygulamalardan yalıtılmıştır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WAS Etkinleştirme Mimarisi](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
 - [WAS'ı WCF ile Kullanmak için Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Nasıl yapılır: WCF etkinleştirme bileşenlerini yükleme ve yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [Nasıl yapılır: Was'ta WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
-- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [Nasıl yapılır: WAS'ta WCF Hizmeti Barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Windows Server App Fabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
