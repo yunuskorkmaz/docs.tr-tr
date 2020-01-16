@@ -4,16 +4,16 @@ description: Bir türün varsayılan değerini oluşturmak için varsayılan iş
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 744bdf1ec683ef32bba508c260590c0ed4c6e987
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 651c4698514aee8cf4dab75ea32c98493e19a30b
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712721"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964616"
 ---
 # <a name="default-operator-c-reference"></a>Default işleci (C# başvuru)
 
-`default` işleci, bir türün [varsayılan değerini](../keywords/default-values-table.md) üretir. `default` işlecinin bağımsız değişkeni bir türün veya tür parametresinin adı olmalıdır.
+`default` işleci, bir türün [varsayılan değerini](../builtin-types/default-values.md) üretir. `default` işlecinin bağımsız değişkeni bir türün veya tür parametresinin adı olmalıdır.
 
 Aşağıdaki örnek `default` işlecinin kullanımını gösterir:
 
@@ -44,5 +44,5 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 
 - [C#başvurunun](../index.md)
 - [C# işleçleri](index.md)
-- [Varsayılan değerler tablosu](../keywords/default-values-table.md)
+- [C# Türlerin varsayılan değerleri](../builtin-types/default-values.md)
 - [.NET 'teki genel türler](../../../standard/generics/index.md)

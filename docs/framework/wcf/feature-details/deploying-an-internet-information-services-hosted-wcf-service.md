@@ -2,12 +2,12 @@
 title: Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: e46bcec846fcc8f9455c436bb551564e1cb5b5ea
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 36bdd22ec838af8b1a6b3be8c5636beced9b9132
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053307"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964850"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
 
@@ -23,7 +23,7 @@ Internet Information Services (IIS) içinde barındırılan Windows Communicatio
 
 - WCF hizmetini yapılandırın.
 
-IIS tarafından barındırılan bir WCF hizmeti oluşturma hakkında ayrıntılı yönergeler için bkz [. nasıl yapılır: IIS](how-to-host-a-wcf-service-in-iis.md)'de bir WCF hizmeti barındırın.
+IIS tarafından barındırılan bir WCF hizmeti oluşturma hakkında ayrıntılı yönergeler için bkz. [nasıl yapılır: IIS 'de WCF hizmeti barındırma](how-to-host-a-wcf-service-in-iis.md).
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>IIS, ASP.NET ve WCF 'Nin doğru bir şekilde yüklendiğinden ve kaydedildiğinden emin olun
 
@@ -37,13 +37,13 @@ Diğer işletim sistemlerine IIS yükleme yönergeleri [Windows Vista ve Windows
 
 - Windows 7 ve Windows Server 2003: WCF 'yi IIS ile kaydetmek için [ServiceModel Kayıt Aracı (ServiceModelReg. exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) aracını kullanın. Bu aracı kullanmak için, [Visual Studio için geliştirici komut istemi](../../tools/developer-command-prompt-for-vs.md) **ServiceModelReg. exe/i/x** yazın.
 
-- Windows 7: Son olarak, ASP.NET 'in .NET Framework sürüm 4 veya üstünü kullanacak şekilde yapılandırıldığını doğrulamanız gerekir. Bu, Aspnet_regiis aracını `–i` seçeneğiyle çalıştırarak yapılır. Daha fazla bilgi için bkz. [ASP.NET IIS kayıt aracı](https://go.microsoft.com/fwlink/?LinkId=201186).
+- Windows 7: son olarak, ASP.NET 'in .NET Framework sürüm 4 veya üstünü kullanacak şekilde yapılandırıldığını doğrulamanız gerekir. Bunu, `–i` seçeneğiyle ASPNET_Regiis aracını çalıştırarak yapabilirsiniz. Daha fazla bilgi için bkz. [ASP.NET IIS kayıt aracı](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)).
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Yeni bir IIS uygulaması oluşturun veya var olan bir ASP.NET uygulamasını yeniden kullanın
 
 IIS tarafından barındırılan WCF Hizmetleri bir IIS uygulamasının içinde bulunmalıdır. WCF hizmetlerini özel olarak barındırmak için yeni bir IIS uygulaması oluşturabilirsiniz. Alternatif olarak, zaten ASP.NET 2,0 içeriğini barındıran mevcut bir uygulamaya (örneğin. aspx sayfaları ve ASP.NET Web Hizmetleri [ASMX]) bir WCF Hizmeti dağıtabilirsiniz. Bu seçenekler hakkında daha fazla bilgi için, [WCF Hizmetleri ve ASP.net](wcf-services-and-aspnet.md)' deki "wcf 'yi ASP.net Ile yan yana barındırma" ve "wcf hizmetleri ASP.NET uyumluluk modunda barındırma" bölümlerine bakın.
 
-IIS 6,0 ve sonraki sürümlerin, yalıtılmış nesne odaklı bir programlama uygulamasını düzenli aralıklarla yeniden başlatdığına göz önünde unutmayın. Varsayılan değer 1740 dakikadır. Desteklenen en yüksek değer 71.582 dakikadır. Bu yeniden başlatma devre dışı bırakılabilir. Bu özellik hakkında daha fazla bilgi için bkz. [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
+IIS 6,0 ve sonraki sürümlerin, yalıtılmış nesne odaklı bir programlama uygulamasını düzenli aralıklarla yeniden başlatdığına göz önünde unutmayın. Varsayılan değer 1740 dakikadır. Desteklenen en yüksek değer 71.582 dakikadır. Bu yeniden başlatma devre dışı bırakılabilir. Bu özellik hakkında daha fazla bilgi için bkz. [PeriodicRestartTime](https://docs.microsoft.com/previous-versions/iis/6.0-sdk/ms525914(v=vs.90)).
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>WCF hizmeti için bir. svc dosyası oluşturma
 
@@ -51,15 +51,15 @@ IIS 'de barındırılan WCF Hizmetleri, IIS uygulamasının içinde özel içeri
 
 `<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>`
 
-ServiceHost yönergesini ve tek `Service`bir özniteliği içerir. [ \@](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) `Service` Özniteliğin değeri, hizmet uygulamasının ortak dil çalışma zamanı (CLR) türü adıdır. Bu yönergeyi kullanmak, aşağıdaki kodu kullanarak bir hizmet ana bilgisayarı oluşturmaya temelde eşdeğerdir.
+[\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) yönergesinden ve `Service`tek bir özniteliğiyle oluşur. `Service` özniteliğinin değeri, hizmet uygulamasının ortak dil çalışma zamanı (CLR) türü adıdır. Bu yönergeyi kullanmak, aşağıdaki kodu kullanarak bir hizmet ana bilgisayarı oluşturmaya temelde eşdeğerdir.
 
 ```csharp
 new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 ```
 
-Hizmetin temel adres listesini oluşturma gibi ek barındırma yapılandırması da yapılabilir. Özel barındırma çözümleriyle kullanım için yönergeyi <xref:System.ServiceModel.Activation.ServiceHostFactory> genişletmek üzere özel bir de kullanabilirsiniz. WCF hizmetlerini barındıran IIS uygulamaları, <xref:System.ServiceModel.ServiceHost> örneklerin oluşturulmasını ve yaşam süresini yönetmekten sorumludur. Yönetilen WCF barındırma altyapısı,. svc dosyası <xref:System.ServiceModel.ServiceHost> için ilk istek alındığında gerekli örneği dinamik olarak oluşturur. Kod ya da uygulama geri dönüştürüldüğünde, örnek açıkça kapatılana kadar serbest bırakılır.
+Hizmetin temel adres listesini oluşturma gibi ek barındırma yapılandırması da yapılabilir. Özel barındırma çözümleriyle kullanım için yönergeyi genişletmek üzere özel bir <xref:System.ServiceModel.Activation.ServiceHostFactory> de kullanabilirsiniz. WCF hizmetlerini barındıran IIS uygulamaları <xref:System.ServiceModel.ServiceHost> örneklerinin oluşturulmasını ve yaşam süresini yönetmekten sorumludur. Yönetilen WCF barındırma altyapısı,. svc dosyası için ilk istek alındığında gerekli <xref:System.ServiceModel.ServiceHost> örneğini dinamik olarak oluşturur. Kod ya da uygulama geri dönüştürüldüğünde, örnek açıkça kapatılana kadar serbest bırakılır.
 
-. Svc dosyaları için sözdizimi hakkında daha fazla bilgi için bkz [ \@. ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md).
+. Svc dosyaları için sözdizimi hakkında daha fazla bilgi için bkz. [ServiceHost\@](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md).
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>Hizmet uygulamasını IIS uygulamasına dağıtma
 
@@ -67,11 +67,11 @@ IIS 'de barındırılan WCF Hizmetleri, ASP.NET 2,0 ile aynı dinamik derleme mo
 
 - Genel derleme önbelleğinde (GAC) veya uygulamanın \bin dizininde bulunan önceden derlenmiş bir. dll dosyası olarak. Sınıf kitaplığının yeni bir sürümü dağıtılana kadar önceden derlenmiş ikili dosyalar güncellenmez.
 
-- , Derlenmiş kaynak dosyaları olarak uygulamanın \App_Code dizininde bulunur. Bu dizinde bulunan kaynak dosyaları, uygulamanın ilk isteği işlenirken dinamik olarak gereklidir. \App_Code dizinindeki dosyalarda yapılan tüm değişiklikler, sonraki istek alındığında tüm uygulamanın geri dönüştürülüp yeniden derlenmesine neden olur.
+- Uygulamanın \ App_Code dizininde bulunan derlenmemiş kaynak dosyaları olarak. Bu dizinde bulunan kaynak dosyaları, uygulamanın ilk isteği işlenirken dinamik olarak gereklidir. \ App_Code dizinindeki dosyalarda yapılan değişiklikler, bir sonraki istek alındığında tüm uygulamanın geri dönüştürülüp yeniden derlenmesine neden olur.
 
-- Derlenmemiş kod olarak doğrudan. svc dosyasına yerleştirilmiş. Uygulama kodu Ayrıca, Service 'in. svc dosyasında, \@ServiceHost yönergesinden sonra satır içi olarak da bulunabilir. Satır içi kodda yapılan değişiklikler, bir sonraki istek alındığında uygulamanın geri dönüştürülüp yeniden derlenmesine neden olur.
+- Derlenmemiş kod olarak doğrudan. svc dosyasına yerleştirilmiş. Uygulama kodu, \@ServiceHost yönergesi sonrasında hizmetin. svc dosyasında satır içi olarak da bulunabilir. Satır içi kodda yapılan değişiklikler, bir sonraki istek alındığında uygulamanın geri dönüştürülüp yeniden derlenmesine neden olur.
 
-ASP.NET 2,0 derleme modeli hakkında daha fazla bilgi için bkz. [ASP.net derlemesine genel bakış](https://go.microsoft.com/fwlink/?LinkId=94773).
+ASP.NET 2,0 derleme modeli hakkında daha fazla bilgi için bkz. [ASP.net derlemesine genel bakış](https://docs.microsoft.com/previous-versions/aspnet/ms178466(v=vs.100)).
 
 ## <a name="configure-the-wcf-service"></a>WCF hizmetini yapılandırma
 
@@ -79,19 +79,19 @@ IIS tarafından barındırılan WCF Hizmetleri, yapılandırmalarını uygulamal
 
 - IIS tarafından barındırılan hizmetlerin temel adresleri.
 
-- WCF hizmetlerini IIS dışında barındıran uygulamalar, bir dizi temel adres URI 'sini <xref:System.ServiceModel.ServiceHost> oluşturucuya geçirerek veya hizmetin ' de bir [ \<ana bilgisayar >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) öğesi sağlayarak barındırdıkları hizmetlerin temel adresini denetleyebilir. yapılandırmada. IIS 'de barındırılan hizmetlerin kendi temel adreslerini denetleme yeteneği yoktur; IIS tarafından barındırılan bir hizmetin temel adresi. svc dosyasının adresidir.
+- WCF hizmetlerini IIS dışında barındıran uygulamalar, bir dizi temel adres URI 'sini <xref:System.ServiceModel.ServiceHost> oluşturucusuna geçirerek veya hizmetin yapılandırmasında bir [\<ana bilgisayar >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) öğesi sunarak, barındırdıkları hizmetlerin temel adresini denetleyebilir. IIS 'de barındırılan hizmetlerin kendi temel adreslerini denetleme yeteneği yoktur; IIS tarafından barındırılan bir hizmetin temel adresi. svc dosyasının adresidir.
 
 ### <a name="endpoint-addresses-for-iis-hosted-services"></a>IIS tarafından barındırılan hizmetler için uç nokta adresleri
 
-IIS 'de barındırıldığında, uç nokta adresleri her zaman hizmeti temsil eden. svc dosyasının adresine göreli olarak değerlendirilir. Örneğin, bir WCF hizmetinin `http://localhost/Application1/MyService.svc` temel adresi aşağıdaki uç nokta yapılandırmasıyla varsa:
+IIS 'de barındırıldığında, uç nokta adresleri her zaman hizmeti temsil eden. svc dosyasının adresine göreli olarak değerlendirilir. Örneğin, bir WCF hizmetinin temel adresi aşağıdaki uç nokta yapılandırmasıyla `http://localhost/Application1/MyService.svc`:
 
 ```xml
 <endpoint address="anotherEndpoint" .../>
 ```
 
-Bu, tarihinde `http://localhost/Application1/MyService.svc/anotherEndpoint`erişilebilecek bir uç nokta sağlar.
+Bu, `http://localhost/Application1/MyService.svc/anotherEndpoint`adresinden erişilebilecek bir uç nokta sağlar.
 
-Benzer şekilde, göreli adres olarak boş bir dize kullanan uç nokta yapılandırma öğesi `http://localhost/Application1/MyService.svc`, temel adres olan ' de erişilebilen bir uç nokta sağlar.
+Benzer şekilde, göreli adres olarak boş bir dize kullanan uç nokta yapılandırma öğesi, temel adres olan `http://localhost/Application1/MyService.svc`adresinden erişilebilen bir uç nokta sağlar.
 
 ```xml
 <endpoint address="" ... />
@@ -113,4 +113,4 @@ IIS tarafından barındırılan WCF Hizmetleri, hizmeti içeren IIS sanal dizini
 
 - [Internet Information Services'te Barındırma](hosting-in-internet-information-services.md)
 - [Internet Information Services Barındırma En İyi Uygulamaları](internet-information-services-hosting-best-practices.md)
-- [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server App Fabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

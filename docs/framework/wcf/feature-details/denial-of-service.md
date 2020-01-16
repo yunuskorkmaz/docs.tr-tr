@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 4a9f3a3b7e69d33a8707a4bed5b9bc369c75f601
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 55120430a9aaafe7d8bbf2b26f07806e4f1aa44a
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346689"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964418"
 ---
 # <a name="denial-of-service"></a>Hizmet Reddi
 Bir sistem, iletilerin işlenemediği veya çok yavaş işlendiği durumlarda hizmet reddi oluşur.  
@@ -44,7 +44,7 @@ Bir sistem, iletilerin işlenemediği veya çok yavaş işlendiği durumlarda hi
 ## <a name="auditing-event-log-can-be-filled"></a>Denetim olayı günlüğü doldurulabilir  
  Kötü amaçlı bir kullanıcı denetimin etkinleştirildiğini anladıysa, bu saldırgan denetim girişlerinin yazılmasına neden olan geçersiz iletiler gönderebilir. Denetim günlüğü bu şekilde doldurulmuşsa, denetim sistemi başarısız olur.  
   
- Bunu azaltmak için <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğini `true` olarak ayarlayın ve Denetim davranışını denetlemek için Olay Görüntüleyicisi özelliklerini kullanın. Olay günlüklerini görüntülemek ve yönetmek için Olay Görüntüleyicisi kullanma hakkında daha fazla bilgi için bkz. [Olay Görüntüleyicisi](https://go.microsoft.com/fwlink/?LinkId=186123). Daha fazla bilgi için bkz. [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Bunu azaltmak için <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğini `true` olarak ayarlayın ve Denetim davranışını denetlemek için Olay Görüntüleyicisi özelliklerini kullanın. Olay günlüklerini görüntülemek ve yönetmek için Olay Görüntüleyicisi kullanma hakkında daha fazla bilgi için bkz. [Olay Görüntüleyicisi](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11)). Daha fazla bilgi için bkz. [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Geçersiz IAuthorizationPolicy uygulamaları hizmetin yanıt vermemesine neden olabilir  
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy> arabiriminin hatalı bir uygulamasında <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> yönteminin çağrılması hizmetin yanıt vermemesine neden olabilir.  
@@ -52,7 +52,7 @@ Bir sistem, iletilerin işlenemediği veya çok yavaş işlendiği durumlarda hi
  Risk azaltma: yalnızca güvenilir kodu kullanın. Diğer bir deyişle, yalnızca yazdığınız ve test ettiğiniz veya güvenilir bir sağlayıcıdan gelen kodu kullanın. Güvenilmeyen <xref:System.IdentityModel.Policy.IAuthorizationPolicy> uzantılarının, önemli bir süre olmaksızın kodunuza takılmasına izin vermeyin. Bu, hizmet uygulamasında kullanılan tüm uzantılar için geçerlidir. WCF, uygulama kodu ve genişletilebilirlik noktaları kullanılarak takılan yabancı kod arasında ayrım yapmaz.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Kerberos en büyük belirteç boyutu yeniden boyutlandırılmasına gerek olabilir  
- İstemci çok sayıda gruba aitse (yaklaşık 900, ancak gerçek sayı gruplara bağlı olarak farklılık gösterir), bir ileti üstbilgisinin bloğu 64 kilobayt değerini aştığında bir sorun ortaya çıkabilir. Bu durumda,[Internet Explorer Kerberos kimlik doğrulaması, IIS 'e bağlanan yetersiz bir arabellek nedeniyle](https://go.microsoft.com/fwlink/?LinkId=89176)Microsoft desteği makalesinde açıklandığı şekilde, en yüksek Kerberos belirteç boyutunu artırabilirsiniz. Daha büyük Kerberos belirtecine uyum sağlamak için, en büyük WCF ileti boyutunu da artırmanız gerekebilir.  
+ İstemci çok sayıda gruba aitse (yaklaşık 900, ancak gerçek sayı gruplara bağlı olarak farklılık gösterir), bir ileti üstbilgisinin bloğu 64 kilobayt değerini aştığında bir sorun ortaya çıkabilir. Bu durumda, en fazla Kerberos belirteç boyutunu artırabilirsiniz. Daha büyük Kerberos belirtecine uyum sağlamak için, en büyük WCF ileti boyutunu da artırmanız gerekebilir.  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>Otomatik kayıt, makine için aynı konu adına sahip birden çok sertifika ile sonuçlanır  
  Otomatik *kayıt* , Windows Server 2003 ' in, sertifikaları otomatik olarak kullanıcıları ve bilgisayarları kaydedecek yetenektir. Bir makine, özelliğin etkinleştirildiği bir etki alanında olduğunda, istemci kimlik doğrulamasının amaçlanan amacını taşıyan bir X. 509.440 sertifikası otomatik olarak oluşturulur ve yeni bir makine her katıldığında yerel bilgisayarın kişisel sertifika deposuna eklenir. Network. Ancak otomatik kayıt, önbellekte oluşturduğu tüm sertifikalar için aynı konu adını kullanır.  
@@ -61,7 +61,7 @@ Bir sistem, iletilerin işlenemediği veya çok yavaş işlendiği durumlarda hi
   
  Bunu azaltmak için, [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)üzerinde daha kesin bir arama ölçütü kullanarak kullanmak üzere tam sertifikaya başvurun. Örneğin, <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> seçeneğini kullanın ve sertifikayı benzersiz parmak izine (karma) göre belirtin.  
   
- Otomatik kayıt özelliği hakkında daha fazla bilgi için bkz. [Windows Server 'Da sertifika otomatik kaydı 2003](https://go.microsoft.com/fwlink/?LinkId=95166).  
+ Otomatik kayıt özelliği hakkında daha fazla bilgi için bkz. [Windows Server 'Da sertifika otomatik kaydı 2003](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10)).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Yetkilendirme için kullanılan birden çok alternatif konu adının son sayısı  
  Bir X. 509.440 sertifikası birden çok alternatif konu adı içerdiğinde ve alternatif konu adını kullanarak yetkilendirdiğiniz durumlarda, yetkilendirme başarısız olabilir.  

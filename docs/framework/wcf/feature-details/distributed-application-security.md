@@ -1,102 +1,102 @@
 ---
-title: Dağıtılan Uygulama Güvenliği
+title: Dağıtılmış Uygulama Güvenliği
 ms.date: 03/30/2017
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: c4feb52cbefe7e3f8bab7f90568b231302b77372
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: cb271bcf8fb27bae4c8ef6b60df0f8d2940ecb9a
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486856"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964823"
 ---
-# <a name="distributed-application-security"></a>Dağıtılan Uygulama Güvenliği
-Windows Communication Foundation (WCF) güvenlik üç önemli işlevsel alanları bozuk: güvenlik, erişim denetimi ve denetim aktarın. Aktarım güvenliği, kimlik doğrulaması bütünlüğü ve gizliliği sağlar. Aktarım güvenliği aşağıdakilerden biri tarafından sağlanır: aktarım güvenliği, ileti güvenliği veya `TransportWithMessageCredential`.  
+# <a name="distributed-application-security"></a>Dağıtılmış Uygulama Güvenliği
+Windows Communication Foundation (WCF) güvenliği üç önemli işlevsel alana bölünmüştür: aktarım güvenliği, erişim denetimi ve denetim. Aktarım güvenliği bütünlük, gizlilik ve kimlik doğrulama sağlar. Aktarım güvenliği, aşağıdakilerden biri tarafından sağlanır: aktarım güvenliği, ileti güvenliği veya `TransportWithMessageCredential`.  
   
- WCF ileti güvenliğini genel bakış için bkz. [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md). Diğer iki parça WCF güvenlik hakkında daha fazla bilgi için bkz: [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) ve [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ WCF ileti güvenliğine genel bakış için bkz. [Güvenliğe genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md). WCF güvenliğinin diğer iki parçası hakkında daha fazla bilgi için bkz. [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) ve [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
-## <a name="transfer-security-scenarios"></a>Aktarım güvenliği senaryoları  
- WCF aktarma güvenlik görevlendirmek yaygın senaryolar şunlardır:  
+## <a name="transfer-security-scenarios"></a>Güvenlik senaryolarını aktarma  
+ WCF Aktarım güvenliği kullanan yaygın senaryolar şunlardır:  
   
-- Windows kullanarak güvenli aktarım. Bir WCF istemcisi ve hizmet, bir Windows etki alanı (veya Windows orman) dağıtılır. İstemci ve hizmet, ileti bütünlüğü ve ileti gizliliği karşılıklı kimlik doğrulaması gereksinimleri içerir böylece iletileri kişisel verileri içerir. Ayrıca, kavram gereklidir belirli bir işlem, örneğin, ileti alıcısı imza bilgilerini kaydetmek oluştuğunu.  
+- Windows kullanarak güvenli aktarım. WCF istemcisi ve hizmeti bir Windows etki alanına (veya Windows ormanına) dağıtılır. İletiler kişisel veriler içerir, bu nedenle gereksinimler istemci ve hizmetin karşılıklı kimlik doğrulamasını, ileti bütünlüğünü ve ileti gizliliğini içerir. Ayrıca, belirli bir işlemin gerçekleşmesinin gerekli olması gerekir, örneğin, iletinin alıcısı imza bilgilerini kaydeder.  
   
-- Güvenli aktarım kullanarak `UserName` ve HTTPS. Bir WCF istemcisi ve hizmet Internet üzerinden çalışacak şekilde geliştirilen gerekir. İstemci kimlik bilgileri, bir kullanıcı adı/parola çiftleri veritabanına karşı kimlik doğrulaması. Hizmet, güvenilir bir Güvenli Yuva Katmanı (SSL) sertifikasını kullanarak bir HTTPS adresi dağıtılır. İletileri Internet üzerinden yolculuk ediyor çünkü istemci ve hizmet birbirini doğrulanması gerekir ve iletileri gizliliği ve bütünlüğü aktarım sırasında korunur.  
+- `UserName` ve HTTPS kullanarak güvenli aktarım. Internet üzerinden çalışmak için bir WCF istemcisi ve hizmetinin geliştirilmesi gerekir. İstemci kimlik bilgileri, Kullanıcı adı/parola çiftleri veritabanına göre kimlik doğrular. Hizmet, güvenilir bir Güvenli Yuva Katmanı (SSL) sertifikası kullanarak bir HTTPS adresinde dağıtılır. İletiler Internet üzerinden seyahat ettiğinden, istemci ve hizmetin karşılıklı olarak kimlik doğrulaması yapması ve iletilerin gizli ve bütünlüğü aktarım sırasında korunması gerekir.  
   
-- Sertifikaları kullanarak güvenli aktarım. Bir WCF istemcisi ve hizmet genel internet üzerinden çalışmak için geliştirilmiş gerekir. İstemci ve hizmet iletileri güvenli hale getirmek için kullanılan sertifikaları her ikisi de sahiptir. Hizmet ve istemci Internet birbirleri ile iletişim kurmak ve ileti bütünlüğü ve gizliliği karşılıklı kimlik doğrulaması gerektiren yüksek değerli işlemleri gerçekleştirmek için kullanın.  
+- Sertifikaları kullanarak güvenli aktarım. Genel internet üzerinden çalışacak bir WCF istemcisi ve hizmetinin geliştirilmesi gerekir. İstemci ve hizmetin her ikisinin de iletileri güvenli hale getirmek için kullanılabilecek sertifikaları vardır. İstemci ve hizmet, Internet 'i birbirleriyle iletişim kurmak ve ileti bütünlüğü, gizlilik ve karşılıklı kimlik doğrulaması gerektiren yüksek değerli işlemleri gerçekleştirmek için kullanır.  
   
-## <a name="integrity-confidentiality-and-authentication"></a>Kimlik doğrulaması bütünlüğü ve gizlilik  
- Üç işlev — bütünlüğü, gizlilik ve kimlik doğrulaması — birlikte Aktarım güvenlik olarak da adlandırılır. Aktarım güvenliği bir dağıtılmış uygulama tehditlerin azaltılmasına yardımcı olacak işlevleri sağlar. Aşağıdaki tabloda kısaca aktarım güvenliği olun üç işlevleri açıklanmaktadır.  
+## <a name="integrity-confidentiality-and-authentication"></a>Bütünlük, gizlilik ve kimlik doğrulama  
+ Bütünlük, gizlilik ve kimlik doğrulama dahil olmak üzere üç işlev birlikte aktarım güvenliği olarak adlandırılır. Aktarım güvenliği, dağıtılmış bir uygulamayla ilgili tehditleri azaltmaya yardımcı olan işlevleri sağlar. Aşağıdaki tabloda, aktarım güvenliği oluşturan üç işlev kısaca açıklanmaktadır.  
   
 |İşlev|Açıklama|  
 |--------------|-----------------|  
-|Bütünlüğü|*Bütünlük* özellikle bir noktasından diğerine geçiş ve büyük olasılıkla pek çok aktörler tarafından Okunmuş sonra veri tam ve doğru olduğundan emin olan. Bütünlük verilerle kurcalanmaya karşı korunmalıdır ve genellikle bir iletinin dijital imzalama tarafından sağlanır.|  
-|Gizliliği|*Gizlilik* tarafından istenen okuyucu dışındaki bir ileti okunmadı güvencesi olduğu. Örneğin, bir kredi kartı numarası, Internet üzerinden gönderilen gizli tutulmalıdır. Gizlilik genellikle ortak bir anahtar/özel anahtar şeması kullanarak veri şifrelemesi tarafından sağlanır.|  
-|Kimlik doğrulaması|*Kimlik doğrulaması* talep edilen kimlik doğrulama. Örneğin, bir banka hesabı kullanırken, yalnızca gerçek hesap sahibini fon geri izin verileceğini olmazsa olmaz. Kimlik doğrulaması anlamına gelir çeşitli tarafından sağlanabilir. Bir genel yöntem kullanıcı/parola sistemidir. İkinci bir üçüncü taraf tarafından sağlanan bir X.509 sertifikası kullanılır.|  
+|Bütünlük|*Bütünlük* , verilerin tam ve doğru, özellikle bir noktadan diğerine geçen ve büyük olasılıkla birçok aktör tarafından okunan güvencedir. Verilerin üzerinde oynanmasını engellemek için bütünlük korunmalıdır ve genellikle bir iletinin dijital olarak imzalanmasıyla elde edilir.|  
+|Gizlilik|*Gizlilik* , bir iletinin amaçlanan okuyucu dışında bir kişi tarafından okunmadığını güvence altına taşımaktadır. Örneğin, Internet üzerinden gönderildiği için kredi kartı numarasının gizli tutulması gerekir. Gizlilik, genellikle ortak anahtar/özel anahtar düzeni kullanılarak verilerin şifrelenmesi tarafından sağlanır.|  
+|Kimlik Doğrulama|*Kimlik doğrulaması* , istenen kimliğin doğrulanmasıdır. Örneğin, bir banka hesabı kullanırken, yalnızca hesabın gerçek sahibinin fonları geri çekmesini sağlamak zorunludur. Kimlik doğrulaması çeşitli yollarla sağlanarak yapılabilir. Yaygın olarak kullanılan bir yöntem, Kullanıcı/parola sistemidir. İkincisi, üçüncü taraf tarafından sunulan bir X. 509.440 sertifikası kullanmaktır.|  
   
-## <a name="security-modes"></a>Güvenlik modu  
- Aşağıdaki tabloda açıklanan birkaç Aktarım güvenlik modu WCF sahiptir.  
+## <a name="security-modes"></a>Güvenlik modları  
+ WCF, aşağıdaki tabloda açıklanan çeşitli aktarım güvenliği modlarına sahiptir.  
   
 |Mod|Açıklama|  
 |----------|-----------------|  
-|Yok.|Güvenlik aktarım katmanında veya ileti katmanında sağlanır. Önceden tanımlanmış bağlamaları hiçbiri dışında varsayılan olarak bu modu kullanın [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) öğesi veya kodun kullanırken <xref:System.ServiceModel.BasicHttpBinding> sınıfı.|  
-|Taşıma|HTTPS gibi güvenli aktarım bütünlüğü, gizliliği ve karşılıklı kimlik doğrulaması için kullanır.|  
-|`Message`|SOAP ileti güvenliği bütünlüğü, gizliliği ve karşılıklı kimlik doğrulaması için kullanır. SOAP iletilerini göre WS-güvenlik standartları güvenlidir.|  
-|Karma mod|Kullanan bütünlüğü, gizliliği ve sunucu kimlik doğrulaması için güvenlik taşıma. Güvenlik (WS-güvenlik ve diğer standartların) istemci kimlik doğrulaması için kullandığı ileti.<br /><br /> (Bu modu için bu numaralandırma `TransportWithMessageCredential`.)|  
-|Her ikisi de|Koruma ve kimlik doğrulama, iki düzeyde gerçekleştirir. Bu mod yalnızca kullanılabilir [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) öğesi.|  
+|Yok.|Aktarım katmanında veya ileti katmanında güvenlik sağlanmaz. Önceden tanımlı bağlamalardan hiçbiri, [\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) öğesi hariç veya kod kullanırken <xref:System.ServiceModel.BasicHttpBinding> sınıfı dışında bu modu varsayılan olarak kullanır.|  
+|Aktarma|Bütünlük, gizlilik ve karşılıklı kimlik doğrulama için HTTPS gibi güvenli bir aktarım kullanır.|  
+|İleti|Bütünlük, gizlilik ve karşılıklı kimlik doğrulama için SOAP iletisi güvenliği kullanır. SOAP iletileri WS-Security standartlarına göre güvenli hale getirilir.|  
+|Karma mod|Bütünlük, gizlilik ve sunucu kimlik doğrulaması için Transport Security 'yi kullanır. İstemci kimlik doğrulaması için ileti güvenliğini (WS-Security ve diğer standartları) kullanır.<br /><br /> (Bu mod için bu sabit listesi `TransportWithMessageCredential`.)|  
+|Her İkisi|Her iki düzeyde koruma ve kimlik doğrulaması gerçekleştirir. Bu mod yalnızca [\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) öğesinde kullanılabilir.|  
   
 ## <a name="credentials-and-transfer-security"></a>Kimlik bilgileri ve aktarım güvenliği  
- A *kimlik bilgisi* bir talep kimliği veya özellikleri kurmak için sunulan veriler. Bir kimlik bilgisi sunma hem verileri hem de veri kanıtını sunma içerir. WCF çeşitli hem aktarım hem de ileti güvenlik düzeylerinde kimlik bilgisi türlerini destekler. Bir WCF bağlama için kimlik bilgisi türünü belirtebilirsiniz.  
+ Bir *kimlik bilgisi* , istenen bir kimlik veya özellik kurmak için sunulan bir veri olabilir. Bir kimlik bilgisi sunmak, verilerin hem verilerin hem de sahip olma kanıtını içerir. WCF, hem aktarım hem de ileti güvenlik düzeylerinde çeşitli kimlik bilgileri türlerini destekler. WCF bağlaması için bir kimlik bilgisi türü belirtebilirsiniz.  
   
- Birçok ülkede veya bölgede, bir sürücünün lisans, bir kimlik bilgisi örneğidir. Bir lisans birinin kimlik ve özellikleri temsil eden veriler içerir. Bu kaynağı'nın resmi biçiminde kanıtını içerir. Lisans, genellikle bir kamu lisanslama departmanı gibi güvenilir bir yetkili tarafından verilmiş. Lisans, korumalı ve onu olmayan kurcalanmadığından veya sahtesi olduğunu gösteren, bir hologramı içerebilir.  
+ Birçok ülkede veya bölgede, bir sürücünün lisansı bir kimlik bilgisi örneğidir. Bir lisans, bir kullanıcının kimliğini ve yeteneklerini temsil eden verileri içerir. Bu, desessor 'ın resmi biçiminde sahip olma kanıtını içerir. Lisans, genellikle bir kamu lisanslama departmanı olan güvenilen bir yetkili tarafından verilir. Lisans mühürlü ve üzerinde oynanmadığını veya onay yapılmadığını gösteren bir hologram içerebilir.  
   
- Örneğin, iki tür kimlik bilgileri WCF'de desteklenen göz önünde bulundurun: sertifika kimlik bilgileri kullanıcı adı ve (X.509).  
+ Örnek olarak, WCF: Kullanıcı adı ve (X. 509.440) sertifika kimlik bilgileri ' nde desteklenen iki kimlik bilgileri türünü göz önünde bulundurun.  
   
- Kullanıcı adı kimlik bilgisi için kullanıcı adını temsil eden talep kimliğini ve parolayı kanıtını sunar. Güvenilir yetkili bu durumda kullanıcı adını ve parolayı doğrular sistemidir.  
+ Kullanıcı adı kimlik bilgisi için Kullanıcı adı, istenen kimliği temsil eder ve parola, sahip olma kanıtını gösterir. Bu durumda güvenilen yetkili, Kullanıcı adını ve parolasını doğrulayan sistemidir.  
   
- Sertifika kimlik bilgisi, konu adı, konu alternatif adı veya belirli alanların sertifika talep edilen kimlik ve/veya özellikleri temsil etmek için kullanılabilir. Kimlik bilgisi verilerinin kanıtını bir imzayı üretmek için ilişkili özel anahtarı kullanılarak oluşturulur.  
+ Sertifika kimlik bilgilerinde, konu adı, konu diğer adı veya sertifika içindeki belirli alanlar, istenen kimliği ve/veya özellikleri temsil etmek için kullanılabilir. Kimlik bilgilerinde bulunan verilerin kanıtı, bir imza oluşturmak için ilişkili özel anahtar kullanılarak oluşturulur.  
   
- Aktarım güvenliği ve kimlik bilgilerini belirtme programlama hakkında daha fazla bilgi için [bağlamalar ve güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) ve [güvenlik davranışları](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
+ Aktarım güvenliğini programlama ve kimlik bilgilerini belirtme hakkında daha fazla bilgi için bkz. [bağlamalar ve güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) ve [güvenlik davranışları](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
-### <a name="transport-client-credential-types"></a>Taşıma istemcisi kimlik bilgisi türü  
- Bir uygulama oluşturma aktarım güvenliği kullandığında kullanılan olası değerler aşağıdaki tabloda gösterilmektedir. Bu değerleri kod veya bağlama ayarları kullanabilirsiniz.  
-  
-|Ayar|Açıklama|  
-|-------------|-----------------|  
-|Yok.|İstemci mevcut herhangi bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
-|Temel|Temel kimlik doğrulaması belirtir.  RFC2617, ek bilgi için bkz. "[HTTP kimlik doğrulaması: Temel ve Özet kimlik doğrulama](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
-|Özet|Özet kimlik doğrulaması belirtir.  RFC2617, ek bilgi için bkz. "[HTTP kimlik doğrulaması: Temel ve Özet kimlik doğrulama](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
-|NTLM|Bir Windows etki alanında SSPI anlaşması kullanılarak Windows kimlik doğrulaması belirtir.<br /><br /> SSPI anlaşması Kerberos protokolü veya NT LanMan (NTLM) kullanarak sonuçlanır.|  
-|Windows|SSPI kullanarak bir Windows etki alanında Windows kimlik doğrulaması belirtir. SSPI, hizmet olarak kimlik doğrulaması Kerberos protokolü veya NTLM sitesinden seçer.<br /><br /> SSPI Kerberos protokolü ilk olarak çalışır; Bu başarısız olursa, NTLM kullanır.|  
-|Sertifika|Genellikle X.509 sertifikası kullanarak istemci kimlik doğrulaması gerçekleştirir.|  
-  
-### <a name="message-client-credential-types"></a>İleti istemci kimlik bilgisi türleri  
- İleti güvenliği bir uygulama oluşturma kullandığında, kullanılan olası değerler aşağıdaki tabloda gösterilmektedir. Bu değerleri kod veya bağlama ayarları kullanabilirsiniz.  
+### <a name="transport-client-credential-types"></a>Aktarım Istemci kimlik bilgisi türleri  
+ Aşağıdaki tabloda, aktarım güvenliği kullanan bir uygulama oluşturulurken kullanılan olası değerler gösterilmektedir. Bu değerleri, kod veya bağlama ayarlarından kullanabilirsiniz.  
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
-|Yok.|Anonim istemci ile etkileşim kurmak hizmet sağlar.|  
-|Windows|SOAP ileti alışverişlerinde Windows kimlik bilgisi kimliği doğrulanmış bağlamı altında gerçekleşmesini sağlar. Kerberos protokolü veya NTLM kimlik doğrulama hizmeti olarak çekmek için SSPI anlaşması mekanizması kullanır.|  
-|Kullanıcı adı|Bir kullanıcı adı kimlik bilgisi ile istemcinin kimliğinin doğrulanmasını gerektiren hizmet sağlar. WCF kullanıcı adıyla bir imza oluşturma veya verileri şifreleme gibi şifreleme işlemleri izin vermediğini unutmayın. Bu nedenle, WCF aktarma kullanıcı adı kimlik bilgilerini kullanarak güvenli zorlar.|  
-|Sertifika|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir sertifika.|  
-|CardSpace|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir CardSpace.|  
+|Yok.|İstemcinin herhangi bir kimlik bilgisi sunması gerekmediğini belirtir. Bu, anonim bir istemciyi dönüştürür.|  
+|Temel|Temel kimlik doğrulamasını belirtir. Daha fazla bilgi için bkz. RFC2617, "[http Authentication: Basic ve Digest Authentication](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)."|  
+|Bilgisi|Özet kimlik doğrulamasını belirtir. Daha fazla bilgi için bkz. RFC2617, "[http Authentication: Basic ve Digest Authentication](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)."|  
+|NT|Windows etki alanında SSPI anlaşması kullanan Windows kimlik doğrulamasını belirtir.<br /><br /> SSPI anlaşması, Kerberos protokolünü veya NT LanMan (NTLM) kullanarak sonuçlanır.|  
+|Windows|Windows etki alanında SSPI kullanarak Windows kimlik doğrulamasını belirtir. SSPI, Kerberos protokolünü veya kimlik doğrulama hizmeti olarak NTLM 'yi seçer.<br /><br /> SSPI önce Kerberos protokolünü dener; başarısız olursa, NTLM kullanır.|  
+|Sertifika|Genellikle X. 509.440 olan bir sertifika kullanarak istemci kimlik doğrulaması gerçekleştirir.|  
   
-### <a name="programming-credentials"></a>Kimlik bilgilerini programlama  
- Her bir istemci kimlik bilgisi türü için WCF programlama modeli, kimlik bilgileri değerlerini belirtme ve hizmet davranışlarını ve kanal davranışlarını kullanarak doğrulayıcılar kimlik bilgisi sağlar.  
+### <a name="message-client-credential-types"></a>İleti Istemci kimlik bilgisi türleri  
+ Aşağıdaki tabloda ileti güvenliği kullanan bir uygulama oluşturulurken kullanılan olası değerler gösterilmektedir. Bu değerleri, kod veya bağlama ayarlarından kullanabilirsiniz.  
   
- WCF güvenlik kimlik bilgilerini iki tür vardır: Hizmet kimlik bilgisi davranışları ve kanal kimlik bilgisi davranışlarını. Wcf'de kimlik bilgisi davranışları gerçek verileri, yani bağlamaları ifade güvenlik gereksinimlerini karşılamak için kullanılan kimlik bilgilerini belirtin. WCF'de, işlem çağırma ve iletileri arasında dönüştürür çalışma zamanı bileşeni bir istemci sınıftır. Tüm istemcilerin devralınacak <xref:System.ServiceModel.ClientBase%601> sınıfı. <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Temel sınıf özelliği, istemci kimlik bilgileri çeşitli değerleri belirtmenize olanak sağlar.  
+|Ayar|Açıklama|  
+|-------------|-----------------|  
+|Yok.|Hizmetin anonim istemcilerle etkileşime geçmesini sağlar.|  
+|Windows|SOAP ileti değişimlerinin, bir Windows kimlik bilgisinin kimliği doğrulanmış bağlamı altında oluşmasına izin verir. , Kerberos protokolünü veya bir kimlik doğrulama hizmeti olarak NTLM 'yi seçmek için SSPI anlaşma mekanizmasını kullanır.|  
+|Kullanıcı adı|Hizmetin, istemcinin kimliğinin Kullanıcı adı kimlik bilgileriyle doğrulanmasını gerektirmesini sağlar. WCF 'nin Kullanıcı adı ile imza oluşturma veya veri şifreleme gibi herhangi bir şifreleme işlemine izin vermediği unutulmamalıdır. Bu nedenle, WCF Kullanıcı adı kimlik bilgileri kullanılırken taşımanın güvenli hale getirilme işlemi uygular.|  
+|Sertifika|Hizmetin, bir sertifika kullanarak istemcinin kimliğinin doğrulanmasını gerektirmesini sağlar.|  
+|CardSpace|Hizmetin, istemcinin bir CardSpace kullanarak kimliğinin doğrulanmasını gerektirmesini sağlar.|  
   
- WCF'de, hizmet davranışları hizmeti programlı olarak denetlemek için bir hizmet sözleşmesini (arabirimi) uygulama sınıfına uygulanan öznitelikleri görüntülenir. <xref:System.ServiceModel.Description.ServiceCredentials> Sınıfı, çeşitli istemci kimlik bilgisi türlerinin hizmet kimlik bilgilerini ve istemci doğrulama ayarları için sertifikaları belirtmenize olanak sağlar.  
+### <a name="programming-credentials"></a>Programlama kimlik bilgileri  
+ Her istemci kimlik bilgisi türü için, WCF programlama modeli, hizmet davranışları ve kanal davranışları kullanarak kimlik bilgisi değerlerini ve kimlik bilgisi Doğrulayıcıları belirtmenize olanak tanır.  
   
-### <a name="negotiation-model-for-message-security"></a>İleti güvenliği için anlaşma modeli  
- İleti güvenlik modunu İstemci bant dışı hizmet kimlik bilgisi yapılandırılması aktarım güvenliği yapmanıza olanak tanır. Örneğin, Windows sertifika depolama alanında depolanan bir sertifika kullanıyorsanız, bir Microsoft Yönetim Konsolu (MMC) ek bileşenini gibi bir araç kullanmanız gerekir.  
+ WCF güvenliği iki tür kimlik bilgisine sahiptir: hizmet kimlik bilgileri davranışları ve kanal kimlik bilgisi davranışları. WCF 'de kimlik bilgisi davranışları, bağlar aracılığıyla ifade edilen güvenlik gereksinimlerini karşılamak için kullanılan kimlik bilgilerini, yani, gerçek verileri belirler. WCF 'de istemci sınıfı, işlem çağrısı ve iletileri arasında dönüştürme yapan çalışma zamanı bileşenidir. Tüm istemciler <xref:System.ServiceModel.ClientBase%601> sınıfından devralınır. Temel sınıftaki <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> özelliği, istemci kimlik bilgilerinin çeşitli değerlerini belirtmenize olanak tanır.  
   
- İleti güvenlik modunu hizmeti kimlik bilgileri istemcinin bir başlangıç anlaşmasının bir parçası değiştirilir aktarım güvenliği gerçekleştirmenizi sağlar. Anlaşma etkinleştirmek için <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> özelliğini `true`.  
+ WCF 'de hizmet davranışları, hizmeti programlı bir şekilde denetlemek için bir hizmet sözleşmesi (arabirim) uygulayan sınıfa uygulanan özniteliklerdir. <xref:System.ServiceModel.Description.ServiceCredentials> sınıfı, çeşitli istemci kimlik bilgileri türleri için hizmet kimlik bilgileri ve istemci doğrulama ayarları için sertifikalar belirtmenize olanak tanır.  
+  
+### <a name="negotiation-model-for-message-security"></a>Ileti güvenliği için anlaşma modeli  
+ İleti güvenliği modu, hizmet kimlik bilgilerinin bant dışı istemcide yapılandırılması için aktarım güvenliği gerçekleştirmenize olanak tanır. Örneğin, Windows sertifika deposunda depolanan bir sertifika kullanıyorsanız, Microsoft Yönetim Konsolu (MMC) ek bileşeni gibi bir araç kullanmanız gerekir.  
+  
+ İleti güvenliği modu, hizmet kimlik bilgisinin istemci ile ilk anlaşmanın bir parçası olarak alınıp aktarılması için aktarım güvenliği gerçekleştirmenize olanak tanır. Anlaşmayı etkinleştirmek için <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> özelliğini `true`olarak ayarlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Uç Nokta Oluşturmaya Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

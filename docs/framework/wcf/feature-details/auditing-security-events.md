@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 62b218a7259d824930a2eb2c7f810b480034e2b6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6505cc027b2983fd61ae53ca7ae43319024c74f7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338026"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964709"
 ---
 # <a name="auditing-security-events"></a>Güvenlik Etkinliklerini Denetleme
 Windows Communication Foundation (WCF) ile oluşturulan uygulamalar, denetim özelliğiyle güvenlik olaylarını (başarı, hata veya her ikisi de) günlüğe kaydedebilir. Olaylar Windows sistem olay günlüğüne yazılır ve Olay Görüntüleyicisi kullanılarak incelenebilir.  
@@ -76,7 +76,7 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar, denetim öz
  Denetim etkinse ve bir `auditLogLocation` belirtilmemişse, varsayılan günlük adı, güvenlik günlüğüne yazmayı destekleyen platformun "güvenlik" günlüğü olur; Aksi halde, "uygulama" günlüğü. Yalnızca Windows Server 2003 ve Windows Vista işletim sistemleri güvenlik günlüğüne yazmayı destekler. Daha fazla bilgi için bu konunun ilerleyen bölümlerindeki "Işletim sistemi" bölümüne bakın.  
   
 ## <a name="security-considerations"></a>Güvenlik Konuları  
- Kötü amaçlı bir kullanıcı denetimin etkinleştirildiğini biliyorsa, bu saldırgan denetim girişlerinin yazılmasına neden olan geçersiz iletiler gönderebilir. Denetim günlüğü bu şekilde doldurulmuşsa, denetim sistemi başarısız olur. Bunu azaltmak için <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğini `true` olarak ayarlayın ve Denetim davranışını denetlemek için Olay Görüntüleyicisi özelliklerini kullanın. Daha fazla bilgi için, [WINDOWS XP 'de Olay Görüntüleyicisi olay günlüklerini görüntüleme ve yönetme konusunda](https://go.microsoft.com/fwlink/?LinkId=89150)bulunan Windows xp 'de Olay Görüntüleyicisi kullanarak olay günlüklerini görüntüleme ve yönetme hakkında Microsoft desteği makalesine bakın.  
+ Kötü amaçlı bir kullanıcı denetimin etkinleştirildiğini biliyorsa, bu saldırgan denetim girişlerinin yazılmasına neden olan geçersiz iletiler gönderebilir. Denetim günlüğü bu şekilde doldurulmuşsa, denetim sistemi başarısız olur. Bunu azaltmak için <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğini `true` olarak ayarlayın ve Denetim davranışını denetlemek için Olay Görüntüleyicisi özelliklerini kullanın.  
   
  [!INCLUDE[wxp](../../../../includes/wxp-md.md)] uygulama günlüğüne yazılan denetim olayları, kimliği doğrulanmış herhangi bir kullanıcı tarafından görülebilir.  
   
@@ -107,4 +107,4 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar, denetim öz
 - [Nasıl yapılır: Güvenlik Olaylarını Denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [\<Servicesecurityauıdıt >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<davranışlar >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
-- [Windows Server App Fabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

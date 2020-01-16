@@ -4,12 +4,12 @@ description: Null yapılabilir C# değer türleri ve bunların nasıl kullanıla
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 661b5e8502cba42588a07d757f056c715c1c82e8
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936893"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964320"
 ---
 # <a name="nullable-value-types-c-reference"></a>Nullable değer türleri (C# başvuru)
 
@@ -56,7 +56,7 @@ Null olabilen bir değer türünün değerini null yapılamayan bir değer tür�
 
 [!code-csharp-interactive[?? operator](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
 
-`null`yerine temel alınan değer türünün [varsayılan](../keywords/default-values-table.md) değerini kullanmak istiyorsanız <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> yöntemini kullanın.
+`null`yerine temel alınan değer türünün [varsayılan](default-values.md) değerini kullanmak istiyorsanız <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> yöntemini kullanın.
 
 Ayrıca, aşağıdaki örnekte gösterildiği gibi, null olabilen bir değer türünü null yapılamayan bir türe açıkça çevirebilirsiniz:
 

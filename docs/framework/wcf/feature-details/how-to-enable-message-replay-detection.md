@@ -10,49 +10,49 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: a41c53e87d82452eac8d7535a422b7aa4bd4e270
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 450a99fc6604ccb3fa796e8a73e1ddc3e3adff9e
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626885"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964655"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Nasıl yapılır: İleti Yeniden Yürütme Algılamayı Etkinleştirme
-Yeniden yürütme saldırı bir saldırganın iki taraflar arasında iletileri akışını kopyalar ve bir veya daha fazla taraflar akışa başlayarak yeniden oynatılır oluşur. Azaltılabilir sürece, saldırı bilgisayarların stream yasal iletileri, sonuçta hatalı sonuçları, bir öğenin yedekli siparişler gibi bir dizi olarak işler.  
+Bir saldırgan iki taraf arasında bir ileti akışını kopyaladığında veya bir veya daha fazla tarafın akışını yeniden oynadığında bir yeniden yürütme saldırısı meydana gelir. Hafiflemediği sürece, saldırıya tabi olan bilgisayarlar akışı meşru iletiler olarak işleyecek ve bu da bir öğenin gereksiz sıraları gibi hatalı sonuçlar oluşmasına neden olur.  
   
- İleti yeniden yürütme algılamayı hakkında daha fazla bilgi için bkz: [ileti yeniden yürütme algılamayı](https://go.microsoft.com/fwlink/?LinkId=88536).  
+ İleti yeniden yürütme algılaması hakkında daha fazla bilgi için bkz. [ileti yeniden yürütme algılaması](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
   
- Aşağıdaki yordam Windows Communication Foundation (WCF) kullanarak yeniden yürütme algılaması denetlemek için kullanabileceğiniz çeşitli özelliklerini gösterir.  
+ Aşağıdaki yordamda Windows Communication Foundation (WCF) kullanarak yeniden yürütme algılamasını denetlemek için kullanabileceğiniz çeşitli özellikler gösterilmektedir.  
   
-### <a name="to-control-replay-detection-on-the-client-using-code"></a>Kod kullanılarak istemcide yeniden yürütme algılaması denetlemek için  
+### <a name="to-control-replay-detection-on-the-client-using-code"></a>Kodu kullanarak istemcide yeniden yürütme algılamasını denetlemek için  
   
-1. Oluşturma bir <xref:System.ServiceModel.Channels.SecurityBindingElement> kullanmak için bir <xref:System.ServiceModel.Channels.CustomBinding>. Daha fazla bilgi için [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Aşağıdaki örnekte bir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ile oluşturulan <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> , <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı.  
+1. <xref:System.ServiceModel.Channels.CustomBinding>kullanmak için bir <xref:System.ServiceModel.Channels.SecurityBindingElement> oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Aşağıdaki örnek <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfının <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> oluşturulmuş bir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> kullanır.  
   
-2. Kullanım <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> bir başvuru döndürmek için özellik <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> sınıfı ve aşağıdaki özellikleri uygun şekilde ayarlayın:  
+2. <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> özelliğini kullanarak <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> sınıfına bir başvuru döndürün ve aşağıdaki özelliklerden herhangi birini uygun şekilde ayarlayın:  
   
-    1. `DetectReplay`. Bir Boole değeri. Bu, istemcinin sunucudan olumsuzlukları algılanmalıdır olmadığını yönetir. Varsayılan, `true` değeridir.  
+    1. `DetectReplay`. Boole değeri. Bu, istemcinin sunucudan yeniden yürütme algılaması gerekip gerekmediğini yönetir. Varsayılan, `true` değeridir.  
   
-    2. `MaxClockSkew`. A <xref:System.TimeSpan> değeri. Yeniden yürütme mekanizması istemci ve sunucu arasında tolere edebilen ne kadar zaman eğimi yönetir. Güvenlik mekanizması, zaman damgası gönderilen ve bu çok kadar geri geçmişte gönderilip gönderilmediğini belirler inceler. Varsayılan değer 5 dakikadır.  
+    2. `MaxClockSkew`. Bir <xref:System.TimeSpan> değeri. Yeniden yürütme mekanizmasına ne kadar eğinin istemci ile sunucu arasında ne kadar zaman harcamaya harcanabileceği yönetir. Güvenlik mekanizması gönderilen zaman damgasını inceler ve geçmişte daha fazla geri gönderilip gönderilmediğini belirler. Varsayılan değer 5 dakikadır.  
   
-    3. `ReplayWindow`. A `TimeSpan` değeri. Bu ne kadar iletiye yöneten sunucu (aracılar) üzerinden istemci ulaşmadan önce gönderdikten sonra ağdaki Canlı çalıştırabilirsiniz. En son gönderilen iletilerin imzalarını istemci izler `ReplayWindow` yeniden yürütme algılaması amaçları için.  
+    3. `ReplayWindow`. Bir `TimeSpan` değeri. Bu, istemciye ulaşmadan önce bir iletinin ağ üzerinde ne kadar süreyle (aracılar aracılığıyla) ne kadar sürdüğünü yönetir. İstemci, yeniden yürütme algılaması amacıyla en son `ReplayWindow` gönderilen iletilerin imzalarını izler.  
   
-    4. `ReplayCacheSize`. Bir tamsayı değeri. İstemci, iletinin imzalarını bir önbellekte depolar. Bu ayar önbellekte saklayabilirsiniz kaç imzaları belirtir. Son yeniden yürütme penceresine gönderilen ileti sayısını önbellek sınırı ulaşırsa, en eski önbelleğe alınmış imzaları süre ulaşana kadar yeni iletileri reddedilir. 500000 varsayılandır.  
+    4. `ReplayCacheSize`. Bir tamsayı değeri. İstemci, iletinin imzalarını bir önbellekte depolar. Bu ayar önbelleğin kaç tane imza depolayabileceği belirtir. Son yeniden yürütme penceresi içinde gönderilen ileti sayısı önbellek sınırına ulaşırsa, en eski önbelleğe alınan imzaların zaman sınırına ulaşması için yeni iletiler reddedilir. Varsayılan değer 500000 ' dir.  
   
-### <a name="to-control-replay-detection-on-the-service-using-code"></a>Kod kullanarak hizmet yeniden yürütme algılamayı denetlemek için  
+### <a name="to-control-replay-detection-on-the-service-using-code"></a>Kodu kullanarak hizmette yeniden yürütme algılamasını denetlemek için  
   
-1. Oluşturma bir <xref:System.ServiceModel.Channels.SecurityBindingElement> kullanmak için bir <xref:System.ServiceModel.Channels.CustomBinding>.  
+1. <xref:System.ServiceModel.Channels.CustomBinding>kullanmak için bir <xref:System.ServiceModel.Channels.SecurityBindingElement> oluşturun.  
   
-2. Kullanım <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> bir başvuru döndürmek için özellik <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> sınıfı ve daha önce açıklandığı gibi özellikleri ayarlayın.  
+2. <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> sınıfına bir başvuru döndürmek ve daha önce açıklandığı gibi özellikleri ayarlamak için <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> özelliğini kullanın.  
   
-### <a name="to-control-replay-detection-in-configuration-for-the-client-or-service"></a>Yeniden yürütme algılaması istemci veya hizmet yapılandırmasında denetlemek için  
+### <a name="to-control-replay-detection-in-configuration-for-the-client-or-service"></a>İstemci veya hizmet yapılandırmasında yeniden yürütme algılamayı denetlemek için  
   
-1. Oluşturma bir [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+1. [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)oluşturun.  
   
-2. Oluşturma bir `<security>` öğesi.  
+2. `<security>` öğesi oluşturun.  
   
-3. Oluşturma bir [ \<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) veya [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
+3. [\<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) veya [\<localservicesettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)oluşturun.  
   
-4. Aşağıdaki öznitelik değerlerini uygun şekilde ayarlayın: `detectReplays`, `maxClockSkew`, `replayWindow`, ve `replayCacheSize`. Aşağıdaki örnek, her iki öznitelikleri ayarlar bir `<localServiceSettings>` ve `<localClientSettings>` öğesi:  
+4. Aşağıdaki öznitelik değerlerini uygun şekilde ayarlayın: `detectReplays`, `maxClockSkew`, `replayWindow`ve `replayCacheSize`. Aşağıdaki örnek, hem `<localServiceSettings>` hem de bir `<localClientSettings>` öğesinin özniteliklerini ayarlar:  
   
     ```xml  
     <customBinding>  
@@ -75,26 +75,26 @@ Yeniden yürütme saldırı bir saldırganın iki taraflar arasında iletileri a
     ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, oluşturur bir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> kullanarak <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> yöntemi ve bağlama yeniden yürütme özelliklerini ayarlar.  
+ Aşağıdaki örnek, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> yöntemini kullanarak bir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> oluşturur ve bağlamanın yeniden yürütme özelliklerini ayarlar.  
   
  [!code-csharp[c_ReplayDetection#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_replaydetection/cs/source.cs#1)]
  [!code-vb[c_ReplayDetection#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_replaydetection/vb/source.vb#1)]  
   
-## <a name="scope-of-replay-message-security-only"></a>Yeniden yürütme kapsamı: İleti güvenliği  
- Aşağıdaki yordamlar, yalnızca ileti güvenlik modu için geçerli olduğunu unutmayın. Taşıma ve ileti kimlik bilgileri modları ile aktarma için taşıma mekanizmaları olumsuzlukları algılayın.  
+## <a name="scope-of-replay-message-security-only"></a>Yeniden yürütme kapsamı: yalnızca Ileti güvenliği  
+ Aşağıdaki yordamların yalnızca Ileti güvenliği modu için uygulanacağını unutmayın. Ileti kimlik bilgileri modlarıyla taşıma ve taşıma için, aktarım mekanizmaları yeniden oynatılır.  
   
 ## <a name="secure-conversation-notes"></a>Güvenli konuşma notları  
- Güvenli konuşma etkinleştirmek için bağlamaları, hem uygulama kanalı yanı sıra güvenli konuşma başlatma bağlaması için bu ayarları ayarlayabilirsiniz. Örneğin, uygulama kanalı olumsuzlukları kapatma ancak kuran güvenli konuşma önyükleme kanalı odaklanmalarını.  
+ Güvenli konuşmaları etkinleştiren bağlamalar için, bu ayarları hem uygulama kanalında hem de güvenli konuşma önyükleme bağlaması için ayarlayabilirsiniz. Örneğin, uygulama kanalı için yeniden oynatılamayı kapatabilir, ancak bunları güvenli konuşmayı kuran önyükleme kanalı için etkinleştirebilirsiniz.  
   
- Güvenli konuşma oturumları kullanıyorsanız değil, yeniden yürütme algılaması olumsuzlukları sunucu grubu senaryolarını ve ne zaman işlem geri dönüştürülmeden algılama garanti etmez. Bu, aşağıdaki sistem tarafından sağlanan bağlamalar için geçerlidir:  
+ Güvenli konuşma oturumlarını kullanmıyorsanız, yeniden yürütme algılaması, sunucu grubu senaryolarında ve işlem geri dönüştürüldüğünde yeniden yürütmenin saptanmasını garantilemez. Bu, sistem tarafından belirtilen aşağıdaki bağlamalar için geçerlidir:  
   
 - <xref:System.ServiceModel.BasicHttpBinding>.  
   
-- <xref:System.ServiceModel.WSHttpBinding> ile <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliğini `false`.  
+- <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliği `false`olarak ayarlanmış <xref:System.ServiceModel.WSHttpBinding>.  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
   
-- Aşağıdaki ad alanlarını, kodu derlemek için gereklidir:  
+- Kodu derlemek için aşağıdaki ad alanları gereklidir:  
   
 - <xref:System>  
   
@@ -108,4 +108,4 @@ Yeniden yürütme saldırı bir saldırganın iki taraflar arasında iletileri a
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - [Güvenli İletişimler ve Güvenli Oturumlar](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
 - [\<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
-- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

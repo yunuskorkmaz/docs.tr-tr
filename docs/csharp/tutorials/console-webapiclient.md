@@ -3,12 +3,12 @@ title: .NET Core kullanarak REST istemcisi oluşturma
 description: Bu öğretici, .NET Core ve bu C# dilin çeşitli özelliklerini öğretir.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 776d0ca65944e943c1c5114f95801c20d31a2b74
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9478966598a9aaa1e9f592b72afce8f878a38abf
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900733"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964416"
 ---
 # <a name="rest-client"></a>REST istemcisi
 
@@ -38,7 +38,7 @@ En sevdiğiniz kod düzenleyicinizi yüklemeniz gerekir. Aşağıdaki açıklama
 
 İlk adım yeni bir uygulama oluşturmaktır. Bir komut istemi açın ve uygulamanız için yeni bir dizin oluşturun. Geçerli dizini oluşturun. Konsol penceresine aşağıdaki komutu girin:
 
-```console
+```dotnetcli
 dotnet new console --name WebApiClient
 ```
 

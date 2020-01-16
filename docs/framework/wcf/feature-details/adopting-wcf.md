@@ -2,25 +2,25 @@
 title: Windows Communication Foundation'ı Benimseme
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
-ms.openlocfilehash: 58a51f7ea0db2297c7151a752de3f54307e0c5fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53f51c6a93d4768d3aa158d44cb7d20f945393f5
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857720"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964253"
 ---
 # <a name="adopting-windows-communication-foundation"></a>Windows Communication Foundation'ı Benimseme
 
-ASP.NET kullanılarak geliştirilen mevcut uygulamaları korumak devam ederken, yeni geliştirme projeleri için Windows Communication Foundation (WCF) kullanmayı da tercih edebilirsiniz. WCF hiçbir senaryoda .NET Framework ile oluşturulan uygulamalar ile iletişimi etkinleştirme için en uygun seçeneği olacak şekilde tasarlandığından, çok çeşitli yazılım bir şekilde iletişim sorunlarını çözmek için standart bir araç ASP.NET görebilir uygulanamaz.
+Yeni geliştirme için Windows Communication Foundation (WCF) kullanmayı seçebilirsiniz, ancak ASP.NET kullanarak geliştirilen mevcut uygulamaları sürdürmeye devam edebilirsiniz. WCF 'nin herhangi bir senaryoda .NET Framework ile oluşturulmuş uygulamalarla iletişimi kolaylaştırmak için en uygun seçim olması amaçlandığından, çok çeşitli yazılım iletişim sorunlarını ASP.NET bir şekilde çözmek için standart bir araç işlevi görebilir. edemez.
 
-Yeni WCF uygulamaları mevcut ASP.NET Web Hizmetleri olarak aynı makinede dağıtılabilir. Mevcut ASP.NET Web Hizmetleri .NET Framework 2.0 sürümünden önceki bir sürümünü kullanıyorsanız, seçmeli olarak .NET Framework 2.0, barındırılması için yeni WCF uygulamaları olduğu IIS uygulama dağıtmak için ASP.NET IIS Kayıt aracını kullanabilirsiniz. Bu aracı adresinde belgelenen [ASP.NET IIS Kayıt Aracı (Aspnet_regiis.exe)](https://go.microsoft.com/fwlink/?LinkId=94687), ve IIS 6.0 yönetim konsoluna oluşturduğu bir kullanıcı arabirimi.
+Yeni WCF uygulamaları, var olan ASP.NET Web hizmetleriyle aynı makinelere dağıtılabilir. Mevcut ASP.NET Web Hizmetleri sürüm 2,0 ' den önceki bir .NET Framework sürümünü kullanıyorsa, yeni WCF uygulamalarının barındırıldığı IIS uygulamalarına .NET Framework 2,0 ' i seçmeli olarak dağıtmak için ASP.NET IIS kayıt aracı 'nı kullanabilirsiniz. Bu araç [ASP.NET IIS Kayıt Aracı (Aspnet_regiis. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))adresinde BELGELENMIŞTIR ve IIS 6,0 yönetim konsoluna yerleşik bir kullanıcı arabirimine sahiptir.
 
-WCF, IIS mevcut ASP.NET Web hizmeti uygulama için ASP.NET uyumluluk modunda çalışacak şekilde yapılandırılmış WCF hizmetlerini ekleyerek mevcut bir ASP.NET Web Hizmetleri için yeni özellikler eklemek için kullanılabilir. ASP.NET uyumluluk modunun nedeniyle yeni WCF hizmetleri için kod erişebilir ve aynı uygulama durumu bilgileri önceden mevcut olan ASP.NET kodunu kullanarak güncelleştirme <xref:System.Web.HttpContext> sınıfı. Uygulamalar Ayrıca aynı sınıf kitaplıkları paylaşabilirsiniz.
+WCF, ASP.NET uyumluluk modunda çalışmak üzere yapılandırılmış WCF hizmetlerini IIS 'de var olan ASP.NET Web hizmeti uygulamalarına ekleyerek mevcut ASP.NET Web hizmetlerine yeni özellikler eklemek için kullanılabilir. ASP.NET uyumluluk modu nedeniyle, yeni WCF hizmetlerinin kodu, <xref:System.Web.HttpContext> sınıfını kullanarak, önceden var olan ASP.NET kodu ile aynı uygulama durumu bilgilerine erişebilir ve güncelleştirebilir. Uygulamalar aynı sınıf kitaplıklarını da paylaşabilir.
 
-WCF istemcileri, ASP.NET Web hizmetlerini kullanabilirsiniz. İle yapılandırılan WCF hizmetleri <xref:System.ServiceModel.BasicHttpBinding> ASP.NET Web hizmeti istemcileri tarafından kullanılabilir. ASP.NET Web Hizmetleri ile WCF uygulamaları birlikte bulunabilir ve WCF bile var olan ASP.NET Web hizmetlerini özellikleri eklemek için kullanılabilir. Tüm yolların, WCF ve ASP.NET Web hizmetlerini birlikte kullanılabilmesi için göz önünde bulundurulduğunda, WCF ve ASP.NET Web Hizmetleri tarafından sağlanan özellikler gerektiriyorsa, ASP.NET Web hizmetlerini WCF'ye taşıma isteyebilirsiniz.
+WCF istemcileri, ASP.NET Web Hizmetleri 'ni kullanabilir. <xref:System.ServiceModel.BasicHttpBinding> ile yapılandırılan WCF Hizmetleri, ASP.NET Web hizmeti istemcileri tarafından kullanılabilir. ASP.NET Web Hizmetleri WCF uygulamalarıyla birlikte bulunabilir ve WCF, var olan ASP.NET Web hizmetlerine özellikler eklemek için bile kullanılabilir. WCF ve ASP.NET Web hizmetlerinin birlikte kullanılabileceği tüm bu yollar verildiğinde, ASP.NET Web Hizmetleri 'ni yalnızca WCF tarafından sağlanan ve ASP.NET Web Hizmetleri olmayan özelliklere ihtiyacınız varsa WCF 'ye geçirmek isteyebilirsiniz.
 
-Gerekli olduğu bazı durumlarda bile, bir teknoloji geçirme koddan diğerine nadiren doğru bir yaklaşımdır. Yeni Teknoloji benimseme nedeni önceki teknolojisiyle karşılanamıyor yeni gereksinimlerini karşılamak için ve bu durumda, doğru bir şey yapmak için yeni Genişletilmiş gereksinimlerini karşılaması için yeni bir çözüm tasarlamak için. Bu sistem tasarlandığından beri yeni tasarım avantajları bilgilerini ve mevcut sistem deneyiminizi kavuştu. Yeni tasarım özelliklerinin tamamı yeni platformunda eski tasarım yeniden yerine yeni teknolojileri de kullanabilirsiniz. Prototip oluşturma anahtar yeni tasarım öğeleri sonra kod yeniden kullanımı için yeni bir tane var olan sistemden daha kolay olur.
+Gerekli olduğu durumlarda bile, kodun bir teknolojiden diğerine geçirilmesi nadiren doğru yaklaşımda olur. Yeni teknolojinin benimseme nedeni, önceki teknolojiyle karşılanmayacak yeni gereksinimleri karşılamadır ve bu durumda, doğru olan şey, yeni bir çözüm oluştururken yeni bir çözüm tasarlayamalıdır. Mevcut sistemle ve bu sistem tasarlanmasından bu yana elde edilen wısystem ile deneyiminizden yeni tasarım avantajları. Yeni tasarım, yeni teknolojiden eski tasarımın yerine yeni teknolojilerin tam yeteneklerini de kullanabilir. Yeni tasarımın anahtar öğelerinin prototipi oluşturulduktan sonra, yeni bir sistemdeki kodu yeniden kullanmak daha kolay hale gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Meta veri alma ve uyumlu bir hizmet ekleme](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)
+- [Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)

@@ -2,12 +2,12 @@
 title: Filtre Seçme
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: 908e905b4196409b00abccccae03436640cbe986
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 282f6e9e2bc986feee0d1825ee9d87217d453e50
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045973"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964811"
 ---
 # <a name="choosing-a-filter"></a>Filtre Seçme
 Yönlendirme hizmetini yapılandırırken, doğru ileti filtrelerini seçmek ve bunları aldığınız iletilerle tam olarak eşleştirmenizi sağlamak için yapılandırmak önemlidir. Seçtiğiniz filtreler, eşleşmelerinde çok geniş ise veya yanlış yapılandırıldıysa, iletiler hatalı yönlendirilir. Filtreler çok kısıtlayıcıysa, bazı iletileriniz için geçerli bir yolunuz bulunmayabilir.
@@ -18,7 +18,7 @@ Yönlendirme hizmeti tarafından kullanılan filtreleri seçerken, her bir filtr
 
 ### <a name="action"></a>Eylem
 
-Eylem filtresi, <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> özelliği inceler. İletideki eylem üstbilgisinin içeriği, filtre yapılandırmasında belirtilen filtre verileri değeriyle eşleşiyorsa, bu filtre döndürülür `true`. Aşağıdaki örnek, bir `FilterElement` `http://namespace/contract/operation/`değeri içeren bir eylem üst bilgisine sahip iletileri eşleştirmek için eylem filtresini kullanan bir tanımlar.
+Eylem filtresi <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> özelliğini inceler. İletideki eylem üstbilgisinin içeriği, filtre yapılandırmasında belirtilen filtre verileri değeriyle eşleşiyorsa, bu filtre `true`döndürür. Aşağıdaki örnek, bir `http://namespace/contract/operation/`değeri içeren bir eylem üst bilgisine sahip iletilerle eşleştirmek için eylem filtresini kullanan bir `FilterElement` tanımlar.
 
 ```xml
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />
@@ -32,7 +32,7 @@ Bu filtre, benzersiz bir eylem üst bilgisi içeren iletileri yönlendirçalış
 
 ### <a name="endpointaddress"></a>EndpointAddress
 
-EndpointAddress filtresi, iletinin alındığı EndpointAddress öğesini inceler. İletinin ulaştığı adres, filtre yapılandırmasında belirtilen filtre adresiyle tam olarak eşleşiyorsa, bu filtre döndürülür `true`. Aşağıdaki örnek, "http:// `FilterElement` \<hostname >/vdir/s.svc/b" ile adreslenen tüm iletilerle eşleştirmek için adres filtresini kullanan bir tanımlar.
+EndpointAddress filtresi, iletinin alındığı EndpointAddress öğesini inceler. İletinin ulaştığı adres, filtre yapılandırmasında belirtilen filtre adresiyle tam olarak eşleşiyorsa, bu filtre `true`döndürür. Aşağıdaki örnek, "http://\<hostname >/vdir/s.svc/b" ile adreslenen tüm iletilerle eşleştirmek için adres filtresini kullanan bir `FilterElement` tanımlar.
 
 ```xml
 <filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b" />
@@ -51,7 +51,7 @@ Gelen iletiler benzersiz bir adrese değinilmesi durumunda bu filtre kullanılma
 
 ### <a name="endpointaddressprefix"></a>EndpointAddressPrefix
 
-EndpointAddressPrefix filtresi EndpointAddress filtresine benzerdir. EndpointAddressPrefix filtresi, iletinin alındığı EndpointAddress öğesini inceler. Ancak EndpointAddressPrefix filtresi, filtre yapılandırmasında belirtilen değerle başlayan adresleriyle eşleşen bir joker karakter görevi görür. Aşağıdaki örnek, ile `FilterElement` `http://<hostname>/vdir*`bahsedilen tüm iletileri eşleştirmek için EndpointAddressPrefix filtresini kullanan bir tanımlar.
+EndpointAddressPrefix filtresi EndpointAddress filtresine benzerdir. EndpointAddressPrefix filtresi, iletinin alındığı EndpointAddress öğesini inceler. Ancak EndpointAddressPrefix filtresi, filtre yapılandırmasında belirtilen değerle başlayan adresleriyle eşleşen bir joker karakter görevi görür. Aşağıdaki örnek, `http://<hostname>/vdir*`olan tüm iletilerle eşleştirmek için EndpointAddressPrefix filtresini kullanan bir `FilterElement` tanımlar.
 
 ```xml
 <filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/vdir" />
@@ -68,7 +68,7 @@ Bu filtre, ortak adres ön ekini paylaşan gelen iletileri yönlendirmesinde kul
 
 ### <a name="and"></a>AND
 
-Ve filtresi bir ileti içindeki bir değer üzerinde doğrudan filtrelemez, ancak her iki filtrenin de ve filtresi `AND` `true`hesaplanmadan önce iletiyle eşleşmesi gereken bir koşul oluşturmak için iki diğer filtreyi birleştirmenize olanak tanır. Bu, yalnızca tüm alt filtreler eşleşiyorsa eşleşen karmaşık filtreler oluşturmanıza olanak sağlar. Aşağıdaki örnek bir adres filtresini ve bir eylem filtresini tanımlar ve ardından bir iletiyi hem adres hem de eylem filtrelerine karşı değerlendiren bir ve filtresi tanımlar. Hem adres hem de eylem filtresi eşleşiyorsa, ve filtresi döndürülür `true`.
+VE filtresi bir ileti içindeki bir değer üzerinde doğrudan filtrelemez, ancak her iki filtrenin de ve filtresi `true`olarak değerlendirilmesinden önce iletiyle eşleşmesi gereken `AND` bir koşul oluşturmak için iki diğer filtreyi birleştirmenize olanak tanır. Bu, yalnızca tüm alt filtreler eşleşiyorsa eşleşen karmaşık filtreler oluşturmanıza olanak sağlar. Aşağıdaki örnek bir adres filtresini ve bir eylem filtresini tanımlar ve ardından bir iletiyi hem adres hem de eylem filtrelerine karşı değerlendiren bir ve filtresi tanımlar. Hem adres hem de eylem filtresi eşleşiyorsa, ve filtresi `true`döndürür.
 
 ```xml
 <filter name="address1" filterType="AddressPrefix" filterData="http://host/vdir"/>
@@ -86,7 +86,7 @@ Bu filtre, bir eşleşmenin ne zaman yapılması gerektiğini öğrenmek için b
 
 ### <a name="custom"></a>Özel
 
-Özel filtre türünü seçerken, bu filtre için kullanılacak **MessageFilter** uygulamasını içeren derlemenin türünü Içeren bir CustomType değeri sağlamanız gerekir. Ayrıca, filterData özel filtrenin ileti değerlendirmesi için ihtiyaç duyduğu herhangi bir değer içermelidir. Aşağıdaki örnek, `CustomAssembly.MyCustomMsgFilter` MessageFilter `FilterElement` uygulamasını kullanan bir tanımlar.
+Özel filtre türünü seçerken, bu filtre için kullanılacak **MessageFilter** uygulamasını içeren derlemenin türünü Içeren bir CustomType değeri sağlamanız gerekir. Ayrıca, filterData özel filtrenin ileti değerlendirmesi için ihtiyaç duyduğu herhangi bir değer içermelidir. Aşağıdaki örnek, `CustomAssembly.MyCustomMsgFilter` MessageFilter uygulamasını kullanan bir `FilterElement` tanımlar.
 
 ```xml
 <filter name="custom1" filterType="Custom" customType="CustomAssembly.MyCustomMsgFilter, CustomAssembly" filterData="Custom Data" />
@@ -96,11 +96,11 @@ Bu filtre, bir eşleşmenin ne zaman yapılması gerektiğini öğrenmek için b
 MyCustomMsgFilter custom1=new MyCustomMsgFilter("Custom Data");
 ```
 
-İle birlikte [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]sunulan filtrelerin kapsamına girmeyen bir iletiye karşı özel bir eşleştirme mantığı gerçekleştirmeniz gerekiyorsa, **MessageFilter** sınıfının uygulanması olan özel bir filtre oluşturmanız gerekir. Örneğin, gelen iletideki bir alanı, yapılandırmaya göre filtreye verilen bilinen değerler listesiyle karşılaştırarak veya belirli bir ileti öğesini karma hale getirir ve sonra filtrenin bu değeri inceleyerek filtre olup olmadığını belirleyebilirsiniz. `true` veya`false`döndürmelidir.
+[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]ile birlikte sunulan filtreler tarafından kapsanmayan bir iletiye karşı özel bir eşleştirme mantığı gerçekleştirmeniz gerekiyorsa, **MessageFilter** sınıfının uygulanması olan özel bir filtre oluşturmanız gerekir. Örneğin, gelen iletideki bir alanı, yapılandırmaya göre filtreye verilen bilinen değerler listesiyle veya belirli bir ileti öğesini karma hale getirdiğinden ve filtrenin `true` ya da `false`döndürmesinin gerekip gerekmediğini belirlemekte bu değeri inceleyerek bir özel filtre oluşturabilirsiniz.
 
 ### <a name="endpointname"></a>EndpointName
 
-EndpointName filtresi, iletiyi alan uç noktanın adını inceler. Aşağıdaki örnek, "svcendpoint" üzerinde alınan iletileri yönlendirmek için EndpointName filtresini kullanan bir `FilterElement` tanımlar.
+EndpointName filtresi, iletiyi alan uç noktanın adını inceler. Aşağıdaki örnek, "SvcEndpoint" üzerinde alınan iletileri yönlendirmek için EndpointName filtresini kullanan bir `FilterElement` tanımlar.
 
 ```xml
 <filter name="name1" filterType="Endpoint" filterData="SvcEndpoint" />
@@ -116,7 +116,7 @@ Genellikle bir iletinin hangi bitiş noktasına alındığını tespit etmek iç
 
 ### <a name="matchall"></a>MatchAll
 
-MatchAll filtresi, alınan tüm iletiyle eşleşir. Alınan tüm iletilerin bir kopyasını depolayan günlüğe kaydetme hizmeti gibi, tüm alınan iletileri her zaman belirli bir uç noktasına yönlendirdiğinizde yararlıdır. Aşağıdaki örnek, Matchall `FilterElement` filtresini kullanan bir tanımlar.
+MatchAll filtresi, alınan tüm iletiyle eşleşir. Alınan tüm iletilerin bir kopyasını depolayan günlüğe kaydetme hizmeti gibi, tüm alınan iletileri her zaman belirli bir uç noktasına yönlendirdiğinizde yararlıdır. Aşağıdaki örnek, MatchAll filtresini kullanan bir `FilterElement` tanımlar.
 
 ```xml
 <filter name="matchAll1" filterType="MatchAll" />
@@ -126,9 +126,9 @@ MatchAll filtresi, alınan tüm iletiyle eşleşir. Alınan tüm iletilerin bir 
 MatchAllMessageFilter matchAll1 = new MatchAllMessageFilter();
 ```
 
-### <a name="xpath"></a>XPath
+### <a name="xpath"></a>{1&gt;XPath&lt;1}
 
-XPath filtresi, ileti içinde belirli bir öğeyi denetlemek için kullanılan bir XPath sorgusu belirtmenize olanak tanır. XPath filtreleme, ileti içinde herhangi bir XML adreslenebilir girişi doğrudan incelemenize olanak tanıyan güçlü bir filtreleme seçeneğidir; Ancak, aldığınız iletilerin yapısına özgü bir bilginiz olmasını gerektirir. Aşağıdaki örnek, "NS `FilterElement` " ad alanı öneki tarafından başvurulan ad alanı içinde "element" adlı bir öğenin iletisini incelemek için XPath filtresini kullanan bir tanımlar.
+XPath filtresi, ileti içinde belirli bir öğeyi denetlemek için kullanılan bir XPath sorgusu belirtmenize olanak tanır. XPath filtreleme, ileti içinde herhangi bir XML adreslenebilir girişi doğrudan incelemenize olanak tanıyan güçlü bir filtreleme seçeneğidir; Ancak, aldığınız iletilerin yapısına özgü bir bilginiz olmasını gerektirir. Aşağıdaki örnek, "NS" ad alanı öneki tarafından başvurulan ad alanı içinde "element" adlı bir öğe için iletiyi incelemek üzere XPath filtresini kullanan bir `FilterElement` tanımlar.
 
 ```xml
 <filter name="xpath1" filterType="XPath" filterData="//ns:element" />
@@ -142,9 +142,9 @@ Bu filtre, aldığınız iletilerin belirli bir değer içerdiğini biliyorsanı
 
 XPath sorguları genellikle uzun veya karmaşık dize değerleri olan benzersiz ad alanları içerdiğinden, XPath filtresi, ad alanlarınızın benzersiz öneklerini tanımlamak için ad alanı tablosunu kullanmanıza olanak sağlar. Ad alanı tablosu hakkında daha fazla bilgi için bkz. [Ileti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md).
 
-XPath sorguları tasarlama hakkında daha fazla bilgi için bkz. [XPath sözdizimi](https://go.microsoft.com/fwlink/?LinkId=164592).
+XPath sorguları tasarlama hakkında daha fazla bilgi için bkz. [XPath sözdizimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İleti Filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md)
-- [Nasıl yapılır: Filtreleri kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+- [Nasıl yapılır: Filtreleri Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

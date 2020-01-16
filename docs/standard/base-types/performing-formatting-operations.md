@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatting strings [.NET Framework], how-to topics
 - strings [.NET Framework], formatting
 ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
-ms.openlocfilehash: 63ba008ab7c6f1b7f7466ef60f7597a8df9bd8fc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 70dbb0d8d39abb1252d944e1b3ab9656b9ed6c0a
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084325"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964734"
 ---
 # <a name="performing-formatting-operations"></a>Biçimlendirme İşlemlerini Gerçekleştirme
 Aşağıdaki konularda belirli biçimlendirme işlemlerini gerçekleştirmeye yönelik adım adım yönergeler sağlanmaktadır.  
@@ -24,13 +24,9 @@ Aşağıdaki konularda belirli biçimlendirme işlemlerini gerçekleştirmeye y�
   
 - [Nasıl yapılır: Özel Sayısal Biçim Sağlayıcıları Tanımlama ve Kullanma](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
   
-- [Nasıl yapılır: Web Denetimlerindeki Sayısal Kullanıcı Girişlerini Sayıya Dönüştürme](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
-  
 - [Nasıl yapılır: belirli bir tarihten haftanın gününü ayıklama](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).  
   
 - [Nasıl yapılır: Gidiş Dönüş Tarih ve Saat Değerleri](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
-  
-- [Nasıl yapılır: Web Kullanıcılarına Yerelleştirilmiş Tarih ve Saat Bilgilerini Görüntüleme](../../../docs/standard/base-types/how-to-display-localized-date-and-time-information-to-web-users.md)  
   
 - [Nasıl yapılır: Tarih ve Saat Değerlerinde Milisaniyeleri Görüntüleme](../../../docs/standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md)  
   

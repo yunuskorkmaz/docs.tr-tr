@@ -2,36 +2,36 @@
 title: Kimlik Doğrulama için Genişletilmiş Koruma Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: 2c166ae4795a64983c0df81629669c9cbf5b0d97
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 400bf7987b5fcd4ec75628d19a30739dd5f23b08
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665946"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964611"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Kimlik Doğrulama için Genişletilmiş Koruma Genel Bakış
-Kimlik doğrulama için genişletilmiş koruma, bir saldırganın istemci kimlik bilgileri yakalar ve bunları bir sunucuya yönlendirdiği ortadaki-de-adam (MITM) saldırılarına karşı korumaya yardımcı olur.  
+Kimlik Doğrulaması için Genişletilmiş Koruma, bir saldırganın istemcinin kimlik bilgilerini aldığı ve bunları sunucuya ileten, ortadaki adam (MITı) saldırılarına karşı korunmaya yardımcı olur.  
   
- Üç katılımcılarıyla bir senaryo düşünün: bir istemci, sunucu ve saldırganın. Sunucu URL'si yok `https://server`, saldırgan URL sahipken `https://attacker`. Saldırgan, sunucunun değilmiş gibi saldırgan erişme içine istemci ipuçları. Saldırgan, ardından sunucusuna bir istek gönderir. Saldırgan, güvenli bir kaynağa erişmeye çalıştığında, sunucunun saldırgan bir WWW-Authenticate üstbilgisi ile yanıtlar. Saldırgan kimlik doğrulama bilgileri olmadığından, istemcide WWW-Authenticate üstbilgisi gönderir. İstemci yetkilendirme üst bilgisi bir saldırgana gönderir ve bir saldırgan, sunucuya üst bilgisi gönderir ve istemci kimlik bilgileri kullanılarak güvenli kaynaklara erişim alır.  
+ Üç katılımcı içeren bir senaryo düşünün: bir istemci, sunucu ve saldırgan. Sunucu `https://server`URL 'ye sahiptir, ancak saldırgan URL 'YI `https://attacker`. Saldırgan, istemci, sunucu gibi saldırgana erişmesini ister. Saldırgan daha sonra sunucuya bir istek gönderir. Saldırgan güvenli bir kaynağa erişmeye çalışıyorsa, sunucu saldırgana bir WWW-Authenticate üstbilgisiyle yanıt verir. Saldırgan kimlik doğrulama bilgilerine sahip değildir, bu nedenle WWW-Authenticate üstbilgisini istemciye gönderir. İstemci, yetkilendirme üst bilgisini saldırgana gönderir ve saldırgan üst bilgiyi sunucuya gönderir ve istemcinin kimlik bilgilerini kullanarak güvenli kaynaklara erişim sağlar.  
   
- Şu anda, bir istemci uygulaması kendisini sunucuya Kerberos, Özet veya HTTPS kullanarak NTLM kullanarak kimlik doğrulamasını gerçekleştirdiğinde aktarım düzeyi güvenlik (TLS) kanalı ilk kurulur ve kimlik doğrulaması kullanarak bu kanal gerçekleşir. Ancak, Güvenli Yuva Katmanı (SSL) tarafından oluşturulan oturum anahtarı ile kimlik doğrulaması sırasında oluşturulan oturum anahtarı arasındaki hiçbir bağlama yok. Bu nedenle, önceki senaryoda iletişimin (örneğin, bir HTTPS kanalı aracılığıyla), bir TLS üzerinden yer alıyorsa vardır oluşturulan iki SSL kanalı: bir istemci ve saldırganın ve başka bir saldırgan sunucusu arasında arasında. İstemci kimlik bilgileri istemciden sunucuya ilk saldırgan ile istemci arasında SSL kanalı üzerinden ve daha sonra saldırgan sunucusu arasındaki kanalı üzerinden gönderilir. İstemci kimlik bilgileri tarafından sunucuya ulaşmak sonra sunucu üzerinde bu kimlik bilgilerinin gönderilen kanal saldırgan ve istemci ile kaynaklandığını algılama olmadan kimlik bilgilerini doğrular.  
+ Şu anda bir istemci uygulaması HTTPS kullanarak Kerberos, Özet veya NTLM kullanan sunucuda kendi kimliğini doğruladığında, ilk olarak bir aktarım düzeyi güvenlik (TLS) kanalı oluşturulur ve kimlik doğrulaması bu kanalı kullanarak gerçekleşir. Ancak, Güvenli Yuva Katmanı (SSL) tarafından oluşturulan oturum anahtarı ile kimlik doğrulama sırasında oluşturulan oturum anahtarı arasında bir bağlama yoktur. Bu nedenle, önceki senaryoda, iletişim bir TLS (örneğin, bir HTTPS kanalı) üzerinde yer alıyorsa, iki SSL kanalı oluşturulur: biri istemci ile saldırgan arasında ve saldırgan ile sunucu arasında bir diğeri. İstemcinin kimlik bilgileri, istemci ile saldırgan arasındaki SSL kanalı üzerinden önce istemciden sunucuya, sonra da saldırgan ile sunucu arasındaki kanal üzerinden gönderilir. İstemcinin kimlik bilgileri sunucuya ulaştığında, sunucu kimlik bilgilerini bu kimlik bilgilerinin gönderildiği kanalın istemciye değil saldırgan ile geldiğini algılamadan doğrular.  
   
- TLS güvenli bir dış kanal ve istemci kimlik doğrulaması iç kanal kullanın ve bir kanal bağlama simgesi (CBT) sunucusuna geçirilecek çözümüdür. CBT TLS güvenli dış kanal bir özelliktir ve dış kanal üzerinden istemci kimlik doğrulaması iç kanal konuşmaya bağlamak için kullanılır.  
+ Çözüm, TLS ile güvenli bir dış kanal ve istemci kimliği doğrulanmış bir iç kanal kullanmak ve bir kanal bağlama belirtecini (CBT) sunucuya geçirmek için kullanılır. CBT, TLS ile güvenli dış kanalın bir özelliğidir ve dış kanalı istemci kimliği doğrulanmış iç kanal üzerinden konuşmaya bağlamak için kullanılır.  
   
- Önceki senaryoda, istemci saldırgan TLS kanalının CBT sunucuya gönderilen yetkilendirme bilgilerle birleştirilir. CBT kullanan bir sunucu, istemci saldırgan kanala saldırgan sunuculu kanala eklenen CBT karşılık gelen istemci kimlik doğrulama bilgileri bulunan CBT karşılaştırır. Bir CBT belirli bir kanalın hedefe olduğundan istemci-saldırgan CBT saldırgan-server CBT eşleşmiyor. Bu sunucunun MITM saldırı algılama ve kimlik doğrulama isteği reddet sağlar.  
+ Önceki senaryoda, istemci-saldırgan TLS kanalının CBT, sunucuya gönderilen yetkilendirme bilgileriyle birleştirilir. CBT ile uyumlu bir sunucu, istemci-saldırgan kanalına karşılık gelen istemci kimlik doğrulama bilgilerinde bulunan CBT 'yi, saldırgan-sunucu kanalına eklenen CBT 'e göre karşılaştırır. Bir CBT, bir kanalın hedefine özgüdür, bu nedenle istemci-saldırgan CBT, saldırgan-sunucu CBT ile eşleşmez. Bu, sunucunun MITK saldırısını algılamasına ve kimlik doğrulama isteğini reddetmesine olanak tanır.  
   
- İstemci tarafı herhangi bir yapılandırma ayarı gerektirmez. İstemci CBT sunucuya geçirmek için güncelleştirilmiş sonra bunu her zaman yapar. Sunucu aynı zamanda güncelleştirildiyse, CBT kullanın veya bunu yoksaymak için yapılandırılabilir. Bunu güncelleştirilmemiş, onu yoksayar.  
+ İstemci tarafı herhangi bir yapılandırma ayarı gerektirmez. İstemci, CBT 'yi sunucusuna iletmek üzere güncelleştirildikten sonra her zaman bunu yapar. Sunucu da güncelleştirilmiş ise, CBT 'yi kullanacak şekilde yapılandırılabilir veya onu yoksayabilirsiniz. Güncelleştirmemişse, yok sayılır.  
   
- Sunucunun aşağıdaki koruma düzeyleri sahip olabilir:  
+ Sunucu aşağıdaki koruma düzeylerine sahip olabilir:  
   
-- Yok. Kanal bağlama doğrulama yapılmaz. Bu güncelleştirilmemiş tüm sunucuların davranıştır.  
+- Yok. Kanal bağlama doğrulaması yapılmaz. Bu, güncelleştirilmemiş tüm sunucuların davranışıdır.  
   
-- Kısmi. Güncelleştirilen tüm istemcilerin, sunucuya kanal bağlama bilgileri sağlamanız gerekir. Güncelleştirilmemiş istemciler, bunu yapmak gerekmez. Bu uygulama uyumluluğu için sağlayan bir ara bir seçenektir.  
+- Kısmi. Güncelleştirilmiş tüm istemciler, sunucuya kanal bağlama bilgilerini sağlamalıdır. Güncelleştirilmemiş istemcilerin bunu yapması gerekmez. Bu, uygulama uyumluluğuna izin veren bir ara seçenektir.  
   
-- Tam. Tüm istemciler, kanal bağlama bilgileri sağlamanız gerekir. Sunucu, bunu yapmayın istemcilerinden kimlik doğrulama istekleri reddeder.  
+- Tam düzeyine getirir. Tüm istemcilerin kanal bağlama bilgilerini sağlaması gerekir. Sunucu, bunu yapan istemcilerden gelen kimlik doğrulama isteklerini reddeder.  
   
- Win7 CBT/genişletilmiş koruma örnek daha fazla bilgi için bkz.  
+ Daha fazla bilgi için bkz. Win7 CBT/genişletilmiş koruma örneği.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

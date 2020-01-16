@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 804e22c79c328a2ae96d8f1cb817d0aea2b0c25d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 068ddcab5cfb7bfb5f37a1858820195a5a05269f
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544732"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964575"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>WS Atomik Işlem desteğini yapılandırma
 
@@ -59,7 +59,7 @@ Aşağıdaki örnekte, A ve B olmak üzere iki makine arasında güven oluşturm
 
 Bu yordam MMC sertifikaları ek bileşenini gerektirir. Ek bileşene, Başlat/Çalıştır menüsü açılarak giriş kutusuna "MMC" yazarak ve Tamam ' a basılarak erişilebilir. Ardından, **Konsol1** penceresinde, **Dosya/Ekle/Kaldır** ek bileşenine gidin, Ekle ' ye tıklayın ve **kullanılabilir tek başına ek bileşen** listesinden **Sertifikalar** ' ı seçin. Son olarak, yönetilecek **bilgisayar hesabı** ' nı seçin ve **Tamam**' a tıklayın. **Sertifikalar** düğümü ek bileşen konsolunda görünür.
 
-Güven sağlamak için gerekli sertifikalara sahip olmanız gerekir. Aşağıdaki adımlardan önce yeni sertifikalar oluşturma ve yüklemeyi öğrenmek için bkz. [nasıl yapılır: geliştirme SıRASıNDA WCF 'de geçici Istemci sertifikaları oluşturma ve yüklemeyi](https://go.microsoft.com/fwlink/?LinkId=158925)öğrenme.
+Güven sağlamak için gerekli sertifikalara sahip olmanız gerekir. Aşağıdaki adımlardan önce yeni sertifikalar oluşturma ve yüklemeyi öğrenmek için bkz. [nasıl yapılır: geliştirme SıRASıNDA WCF 'de geçici Istemci sertifikaları oluşturma ve yüklemeyi](https://docs.microsoft.com/previous-versions/msp-n-p/ff650751(v=pandp.10))öğrenme.
 
 1. A makinesi ' nde, MMC sertifikaları ek bileşenini kullanarak mevcut sertifikayı (certA) Localmachine\(Personal node) ve localmachıneroot deposuna (güvenilen kök sertifika yetkilisi düğümü) içeri aktarın. Belirli bir düğüme bir sertifikayı içeri aktarmak için düğüme sağ tıklayın ve **Tüm görevler/Içeri aktar**' ı seçin.
 

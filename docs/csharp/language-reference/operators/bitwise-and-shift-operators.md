@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4e4dbe085b11751416f69c9fa7f790f18a68f5d7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345338"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964367"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bit düzeyinde ve kaydırma işleçleriC# (başvuru)
 
@@ -60,7 +60,7 @@ Sonlandırıcıları bildirmek için `~` sembolünü de kullanabilirsiniz. Daha 
 
 ## <a name="left-shift-operator-"></a>Sola kaydırma işleci \<\<
 
-`<<` işleci sol taraftaki işlenenini sağ işleneni tarafından tanımlanan bit sayısına göre sola kaydırır.
+`<<` işleci sol taraftaki işlenenini [sağ işleneni tarafından tanımlanan bit sayısına](#shift-count-of-the-shift-operators)göre sola kaydırır.
 
 Aşağıdaki örnekte gösterildiği gibi, sol SHIFT işlemi, sonuç türü aralığının dışındaki yüksek sıralı bitleri atar ve düşük sıralı boş bit konumlarını sıfıra ayarlar:
 
@@ -74,7 +74,7 @@ SHIFT işleçleri yalnızca `int`, `uint`, `long`ve `ulong` türleri için tanı
 
 ## <a name="right-shift-operator-"></a>Sağa kaydırma işleci > >
 
-`>>` işleci, sol işlenenin sağ işleneni tarafından tanımlanan bit sayısına göre sağa kayar.
+`>>` işleci, sol işlenenin [sağ işleneni tarafından tanımlanan bit sayısına](#shift-count-of-the-shift-operators)göre sağa kayar.
 
 Aşağıdaki örnekte gösterildiği gibi, doğru kaydırma işlemi düşük sıralı bitleri atar:
 
@@ -169,6 +169,9 @@ Aşağıdaki liste, en yüksek öncelikten en düşüğe başlayarak bit düzeyi
 Aşağıdaki örnekte bu davranış gösterilmektedir:
 
 [!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
+
+> [!NOTE]
+> Yukarıdaki örnekte gösterildiği gibi, sağ işlenenin değeri sol işlenendeki bit sayısından büyük olsa da bir vardiya işleminin sonucu sıfır olamaz.
 
 ## <a name="enumeration-logical-operators"></a>Sabit listesi mantıksal işleçleri
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT [.NET Framework profiling]
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
-ms.openlocfilehash: 4d835f749a33d21a13be307e1524671e36496899
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a0b117949190bcaffc334c208fff6e04a6a2c5bf
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440834"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964495"
 ---
 # <a name="corprof_e_unsupported_call_sequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT .NET Framework sürüm 2,0 ' de tanıtılmıştı. .NET Framework 4, bu HRESULT 'yi iki senaryoda döndürür:  
@@ -67,7 +67,7 @@ CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT .NET Framework sürüm 2,0 ' de tan�
   
 - [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
   
- Daha fazla bilgi için bkz. CLR profil oluşturma API bloguna [neden corprof_e_unsupported_call_sequence sahip olduğumuz](https://go.microsoft.com/fwlink/?LinkId=169156) girişi.  
+ Daha fazla bilgi için bkz. CLR profil oluşturma API bloguna [neden corprof_e_unsupported_call_sequence sahip olduğumuz](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) girişi.  
   
 ## <a name="triggering-garbage-collections"></a>Çöp koleksiyonları tetikleniyor  
  Bu senaryo, bir geri çağırma yöntemi içinde çalışan bir profil Oluşturucu içerir (örneğin, `ICorProfilerCallback` yöntemlerinden biri) yasaklıyor çöp toplama. Profil Oluşturucu çöp toplama tetikleyebilen bir bilgilendirici yöntemi (örneğin, `ICorProfilerInfo` arabirimindeki bir yöntemi) çağırmaya çalışırsa, bilgilendirici yöntemi bir HRESULT CORPROF_E_UNSUPPORTED_CALL_SEQUENCE başarısız olur.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 69f2724182f83d507f749a150a8d006a4e0f2192
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: bf1bda5f1a2e1f0dfa0cc034c293f448cca2bd32
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838071"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964479"
 ---
 # <a name="choosing-a-transport"></a>Taşıma Seçme
 Bu konu, Windows Communication Foundation (WCF) ' de yer alan üç ana taşıma arasında seçim yapma ölçütlerini anlatmaktadır: HTTP, TCP ve adlandırılmış kanallar. WCF Ayrıca bir Message Queuing (MSMQ olarak da bilinir) taşıması içerir, ancak bu belge Message Queuing 'i kapsamaz.  
@@ -26,7 +26,7 @@ Bu konu, Windows Communication Foundation (WCF) ' de yer alan üç ana taşıma 
  Bu bölümde, aralarında seçim yapmak üzere ayrıntılı bir karar grafiği de dahil olmak üzere üç ana aktarımdan birini seçmek için başlıca nedenler açıklanmaktadır.  
   
 ### <a name="when-to-use-http-transport"></a>HTTP taşıması ne zaman kullanılır?  
- HTTP, istemciler ve sunucular arasında bir istek/yanıt protokolüdür. En yaygın uygulama, bir Web sunucusuyla iletişim kuran Web tarayıcısı istemcilerinden oluşur. İstemci, istemci isteği iletilerini dinleyen bir sunucuya istek gönderir. Sunucu bir istek aldığında, isteğin durumunu içeren bir yanıt döndürür. Başarılı olursa, bir Web sayfası, bir hata iletisi veya diğer bilgiler gibi isteğe bağlı veriler döndürülür. HTTP protokolü hakkında daha fazla bilgi için bkz. [http-HyperText aktarım protokolü](https://go.microsoft.com/fwlink/?LinkId=94858).  
+ HTTP, istemciler ve sunucular arasında bir istek/yanıt protokolüdür. En yaygın uygulama, bir Web sunucusuyla iletişim kuran Web tarayıcısı istemcilerinden oluşur. İstemci, istemci isteği iletilerini dinleyen bir sunucuya istek gönderir. Sunucu bir istek aldığında, isteğin durumunu içeren bir yanıt döndürür. Başarılı olursa, bir Web sayfası, bir hata iletisi veya diğer bilgiler gibi isteğe bağlı veriler döndürülür. HTTP protokolü hakkında daha fazla bilgi için bkz. [http-HyperText aktarım protokolü](https://www.w3.org/Protocols/).  
   
  HTTP protokolü bağlantı tabanlı değil — yanıt gönderildikten sonra durum korunmaz. Birden çok sayfalı işlemleri işlemek için, uygulamanın gerekli tüm durumları kalıcı hale getirilmesi gerekir.  
   

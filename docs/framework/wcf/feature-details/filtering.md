@@ -2,86 +2,86 @@
 title: Filtreleme
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 46716d1a96da6ddc729992b546be56c2aec0bf5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: efbedc16fe48d83cdc4223862bc691e9cbe15c10
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593496"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964289"
 ---
 # <a name="filtering"></a>Filtreleme
-Sistem filtreleme Windows Communication Foundation (WCF), iletileri eşleşmesi ve işletimsel karar vermek için bildirim temelli filtreleri kullanabilirsiniz. Filtreleri içeren bir ileti iletinin bölümünü inceleyerek yapmanız gerekenler belirlemek için kullanabilirsiniz. Sıraya alma işlemi, örneğin, priority öğesi bir ileti kuyruğu öne taşınıp taşınmayacağını belirleme bilinen üstbilgisinin denetlemek için bir XPath 1.0 sorgu kullanabilirsiniz.  
+Windows Communication Foundation (WCF) filtreleme sistemi, iletileri eşleştirmek ve işlem kararları almak için bildirim temelli filtreler kullanabilir. İleti parçasını inceleyerek, bir iletiyle ne yapılacağını belirlemek için filtreler kullanabilirsiniz. Örneğin, bir sıraya alma işlemi, bir iletiyi kuyruğun önüne taşıyıp taşımayacağını anlamak için bilinen bir üstbilginin öncelik öğesini denetlemek üzere bir XPath 1,0 sorgusu kullanabilir.  
   
- Filtreleme sistemini verimli bir şekilde gerçekleştirebileceğiniz sınıfları kümesinden oluşan bir filtre kümesi olan belirlemek `true` belirli bir WCF ileti.  
+ Filtreleme sistemi, belirli bir WCF iletisi için `true` bir filtre kümesinden hangisinin etkin bir şekilde belirleyebilen bir sınıf kümesinden oluşur.  
   
- Filtreleme sistemini WCF Mesajlaşma çekirdek bileşenidir; son derece hızlı olacak şekilde tasarlanmıştır. Her filtre uygulama, belirli bir tür WCF iletileri karşı eşleştirme için iyileştirilmiştir.  
+ Filtreleme sistemi, WCF mesajlaşma 'nın çekirdek bileşenidir; Son derece hızlı olacak şekilde tasarlanmıştır. Her filtre uygulama, WCF iletileriyle belirli bir tür eşleştirme için iyileştirilmiştir.  
   
- Filtreleme sistemini iş parçacığı güvenli değildir. Uygulamanın herhangi bir kilitleme semantiği işlemesi gerekir. Ancak, birden çok Okuyucu, tek bir yazıcı destekler.  
+ Filtreleme sistemi iş parçacığı güvenli değildir. Uygulamanın herhangi bir kilitleme semantiğini işlemesi gerekir. Ancak, çok okuyuculu tek bir yazıcıyı destekler.  
   
-## <a name="where-filtering-fits"></a>Burada filtreleme uyar  
- Bir ileti alındığında ve uygun uygulama bileşeni için ileti gönderilirken işleminin bir parçası olan sonra filtre uygulanmaz. Filtreleme sistemin tasarımını Mesajlaşma, yönlendirme, güvenlik, olay işleme ve sistem yönetimi dahil olmak üzere çeşitli WCF alt gereksinimlerini ele alır.  
+## <a name="where-filtering-fits"></a>Filtrelemenin sığması  
+ Filtre, bir ileti alındıktan ve doğru uygulama bileşenine ileti gönderme işleminin bir parçası olduktan sonra yapılır. Filtreleme sisteminin tasarımı, mesajlaşma, yönlendirme, güvenlik, olay işleme ve sistem yönetimi de dahil olmak üzere birkaç WCF alt sisteminin gereksinimlerini ele alınmaktadır.  
   
 ## <a name="filters"></a>FilTReleri  
- Filtre altyapısı, filtreler ve filtre tabloları olmak üzere iki birincil bileşenden oluşur. Bir filtre, kullanıcı tarafından belirtilen mantıksal koşullara göre bir ileti hakkında Boole kararlarını verir. Filtreler uygulamak <xref:System.ServiceModel.Dispatcher.MessageFilter> sınıfı.  
+ Filtre altyapısının iki adet birincil bileşeni, filtre ve filtre tabloları vardır. Filtre, Kullanıcı tarafından belirtilen mantıksal koşullara göre bir iletiyle ilgili Boole kararları verir. Filtreler <xref:System.ServiceModel.Dispatcher.MessageFilter> sınıfını uygular.  
   
- <xref:System.ServiceModel.Dispatcher.MessageFilter.Match%2A> Yöntemleri, bir ileti bir filtre karşılayıp karşılamadığını belirlemek için kullanılır. Yöntemlerinden biri olan ileti üst bilgisi testleri, ancak ileti gövdesi İnceleme olamaz. Diğer yöntem alır bir *ileti arabelleği* giriş parametresi olarak ve ileti gövdesi inceleyebilirsiniz.  
+ <xref:System.ServiceModel.Dispatcher.MessageFilter.Match%2A> yöntemleri, bir iletinin bir filtreyi karşılayıp karşılamadığını belirlemede kullanılır. Yöntemlerden biri iletinin üstbilgisini sınar, ancak ileti gövdesini inceleyin. Diğer yöntem, giriş parametresi olarak bir *ileti arabelleği* alır ve ileti gövdesini inceleyebilir.  
   
- Filtreler değil genellikle test ayrı ayrı, ancak bir filtre tablo bir parçası olarak olduğu genel, sınıf <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.CreateFilterTable%2A> yöntemi oluşturur.  
+ Filtreler genellikle ayrı ayrı sınanmamıştır, ancak <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.CreateFilterTable%2A> yönteminin oluşturduğu genel bir sınıf olan filtre tablosunun bir parçası olarak.  
   
- Filtreleri her çeşitli türlerde belirli bir Boolean koşulu türünü eşleşen uzmanlaşmıştır. Bir filtre oluşturmak sonra bir filtre kullanır, ölçütleri değiştiremezsiniz; bir filtre ölçütlerini değiştirmek için yeni bir tane oluşturun ve mevcut filtresini Sil.  
+ Her biri belirli bir tür Boolean koşulunda eşleşen birçok filtre türü. Bir filtre oluşturduktan sonra, bir filtrenin kullandığı kriterleri değiştiremezsiniz; bir filtrenin ölçütlerini değiştirmek için yenisini oluşturun ve var olan filtreyi silin.  
   
 ### <a name="action-filters"></a>Eylem filtreleri  
- <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> Eylem dizeleri listesini içerir. Filtrenin listesindeki eylemlerden herhangi birini eşleşiyorsa ileti veya mesaj arabelleğine eylem üstbilgisinde `Match` yöntemi döndürür `true`. Liste boşsa, filtre eşleşen tüm filtre ve iletisi ve ileti arabelleği eşleşen kabul edilir ve `Match` döndürür `true`. Filtrenin listesindeki eylemleri hiçbiri ileti veya mesaj arabelleğine eylem üstbilgisinde eşleşiyorsa `Match` döndürür `false`. İletide bir eylem ve filtre listesi boş ise `Match` döndürür `false`.  
+ <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> eylem dizelerinin bir listesini içerir. Filtre listesindeki eylemlerden herhangi biri ileti veya ileti arabelleğindeki eylem üstbilgisiyle eşleşiyorsa, `Match` yöntemi `true`döndürür. Liste boşsa, filtre eşleşme olarak kabul edilir-tüm filtre ve ileti veya ileti arabelleğinin eşleşmesi ve `Match` `true`döndürür. Filtre listesindeki eylemlerden hiçbiri ileti veya ileti arabelleğindeki eylem üstbilgisiyle eşleşiyorsa, `Match` `false`döndürür. İletide bir eylem yoksa ve filtrenin listesi boş değilse, `Match` `false`döndürür.  
   
-### <a name="endpoint-address-filters"></a>Uç nokta adresi filtreleri  
- <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> Filtreler iletileri ve bir uç nokta adresini temel alan ileti arabelleklerinin üstbilgi koleksiyonu içinde temsil edilen. Bir ileti gibi bir filtre geçirmek aşağıdaki koşullar karşılanmalıdır:  
+### <a name="endpoint-address-filters"></a>Uç nokta adres filtreleri  
+ <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>, üst bilgi koleksiyonunda gösterildiği gibi, bir uç nokta adresini temel alarak iletileri ve ileti arabelleklerini filtreler. Bu tür bir filtre iletmek için aşağıdaki koşulların karşılanması gerekir:  
   
-- Filtrenin adresi Tekdüzen Kaynak Tanımlayıcısı (URI) bir ileti üst bilgisi ile aynı olmalıdır.  
+- Filtrenin adres Tekdüzen Kaynak tanımlayıcısı (URI), üstbilgideki ileti Ile aynı olmalıdır.  
   
-- Her uç nokta parametresi filtre adresini (`address.Headers` koleksiyonu) bir başlık iletisi üzerinde eşlemek için bulmanız gerekir. Fazladan üst bilgiler ileti veya mesaj arabelleğine eşleşme kalması kabul edilebilir `true`.  
+- Filtrenin adresindeki her bir uç nokta parametresi (`address.Headers` Collection), üzerinde eşlenecek iletideki bir üst bilgi bulmalıdır. İleti veya ileti arabelleğindeki ek üstbilgiler, eşleşme `true`kalacak şekilde kabul edilebilir.  
   
-### <a name="prefix-endpoint-address-filters"></a>Uç nokta adresi filtreleri öneki  
+### <a name="prefix-endpoint-address-filters"></a>Önek uç noktası adres filtreleri  
   
-1. <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> İşlevleri olduğu gibi <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtre dışında eşleşmenin bir ön ek iletisinin URI olabilir. Örneğin, adresi belirten bir filtre `http://www.adatum.com` eşleşen gönderilen iletileri `http://www.adatum.com/userA`.  
+1. <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>, eşleşme ileti URI 'sinin bir ön eki üzerinde olabilir, ancak <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtresi gibi çalışır. Örneğin, adresi belirten bir filtre, `http://www.adatum.com/userA`adreslenen iletilerle eşleşir `http://www.adatum.com`.  
   
-### <a name="xpath-message-filters"></a>XPath ileti filtreleri  
- Bir <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> bir XPath ifadesi içeren bir XML belgesi belirli öğeler, öznitelikler, metin veya diğer XML söz dizimi yapıları olup olmadığını belirlemek için kullanır. Filtre bir katı XPath alt kümesi için son derece etkili olması için optimize edilmiştir. XML Path Language açıklanan [W3C XML yolu dil 1.0 belirtimi](https://go.microsoft.com/fwlink/?LinkId=94779).  
+### <a name="xpath-message-filters"></a>XPath Ileti filtreleri  
+ Bir <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>, bir XML belgesinin belirli öğeler, öznitelikler, metin veya diğer XML sözdizimi yapıları içerip içermediğini anlamak için bir XPath ifadesi kullanır. Filtre, XPath 'in katı bir alt kümesi için son derece etkili olacak şekilde iyileştirilmiştir. XML yol dili [W3C XML yol dili 1,0 belirtiminde](https://www.w3.org/TR/xpath/all/)açıklanmıştır.  
   
- Genellikle, bir uygulamanın kullandığı bir <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> SOAP iletisi ve gerçekleştirilen işlemlerin içeriğini sorgulamak için bir uç noktada uygun eylemi sorgu sonuçlarına dayalı. Sıraya alma işlemi, örneğin, sıranın önüne bir ileti geçmeye karar vermek için bir bilinen üstbilgisinin priority öğesi incelemek için bir XPath sorgusu kullanabilir.  
+ Genellikle, bir uygulama bir SOAP iletisinin içeriğini sorgulamak için bir uç noktada <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> kullanır ve ardından bu sorgunun sonuçlarına göre uygun eylemi gerçekleştirir. Örneğin, bir sıraya alma işlemi, bir iletiyi kuyruğun önüne taşıyıp taşımayacağına karar vermek üzere bilinen üstbilginin öncelik öğesini incelemek için bir XPath sorgusu kullanabilir.  
   
-## <a name="filter-tables"></a>Filtre tabloları  
- Filtre tabloları, burada bir filtre anahtarı, ilişkilendirilmiş bazı veri değeri ise anahtar-değer çiftlerini depolamak için kullanılır. Filtre verisi belirten bir ileti eşleşen filtre ve filtre veri türünü genel parametresi filtre tablo sınıfı için yapılacak işlemler için kullanılabilir. Filtre verisi, yönlendirme kuralları, oturumun güvenlik durumunu, kanal dinleyicileri oluşur ve benzeri. Veriler, veri akış denetimi gerekli olduğu kullanılabilir.  
+## <a name="filter-tables"></a>Tabloları filtrele  
+ Filtre tabloları anahtar-değer çiftlerini depolamak için kullanılır; burada bir filtre anahtar ve ilişkili veriler ise değerdir. Filtre verileri, filtre ile eşleşen bir ileti ve filtre verilerinin türü, filtre tablosu sınıfının genel parametresi ise, hangi eylemlerin yapılacağını belirtmek için kullanılabilir. Filtre verileri yönlendirme kurallarından, oturum güvenlik durumundan, bir kanaldaki dinleyicilerine ve bu şekilde olabilir. Veriler veri akışı denetiminin gerekli olduğu yerde kullanılabilir.  
   
- Filtre tabloları yönelik genel arabirimi uygulayan <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601>.  
+ Filtre tabloları genel arabirimi <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601>uygular.  
   
- Filtre tabloların bir ileti tabloda tüm filtreleriyle eşleşen ve sırasız koleksiyonunun eşleşen filtreleri ya da veri dönüş çeşitli yöntemler vardır. Eşleşme yöntemlerden bazıları birden çok eşleşme ve tüm eşleşen öğeleri döndürür. Başkaları tek-match, yalnızca bir öğe döndüren ve throw bir <xref:System.ServiceModel.Dispatcher.MultipleFilterMatchesException> birden fazla filtre eşleşmesi durumunda.  
+ Filtre tablolarında, tablodaki tüm filtrelere karşı eşleşen ve eşleşen filtrelerin veya verilerin sıralanmamış bir koleksiyonunu döndüren çeşitli yöntemler vardır. Eşleşme yöntemlerinden bazıları birden çok eşleşmedir ve eşleşen tüm öğeleri döndürür. Diğerleri tek eşleşmedir, yalnızca bir öğe döndürüyor ve birden fazla filtre eşleşiyorsa <xref:System.ServiceModel.Dispatcher.MultipleFilterMatchesException> oluşturur.  
   
-### <a name="message-filter-table"></a>İleti filtreleme tablosu  
- <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> En genel uygulamasıdır <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601>. Tablodaki tüm türleri filtreler depolayabilirsiniz.  
+### <a name="message-filter-table"></a>İleti Filtresi tablosu  
+ <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> en genel <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601>uygulamasıdır. Tablodaki tüm türlerin filtrelerini saklayabilirsiniz.  
   
- En yüksek önceliği en yüksek sayısı burada miktarlara filtreleri, sayısal öncelikleri atayabilirsiniz. Birden çok filtre türleri, aynı önceliğe sahip olabilir. Filtre, belirli bir tür içindeki birden fazla öncelik düzeyi görünebilir.  
+ En yüksek önceliğin en yüksek sayıya göre kullanıldığı filtrelere sayısal öncelikler atayabilirsiniz. Birden çok filtre türü aynı önceliğe sahip olabilir. Belirli bir filtre türü, birden fazla öncelik düzeyinde görünebilir.  
   
- Eşleşen yapılır en yüksek öncelik ile başlayan ve bir kez filtrelerle eşleşen bulunan söz konusu önceliğe, daha düşük önceliklere sahip filtre incelenir. Bu nedenle, kullanıyorsanız tek filtresini kullanarak eşleşen yöntemi, eşleşen birden fazla filtre bir ileti ancak eşleşen her filtre farklı bir önceliği olan, hiçbir özel durum ve en yüksek öncelikli filtre döndürülür. Benzer şekilde, birden çok filtre uyuşan yöntemi yalnızca en yüksek öncelikli filtrelerle eşleşen.  
+ Eşleştirme en yüksek önceliğe göre yapılır ve belirli bir önceliğe sahip eşleşen filtreler bulunduğunda, daha düşük önceliklere sahip hiçbir filtre incelenir. Bu nedenle, tek bir filtre eşleştirme yöntemi kullanıyorsanız ve bir iletiyle birden çok filtre eşleşiyorsa, ancak eşleşen her filtrenin farklı bir önceliği varsa, hiçbir özel durum oluşturulmaz ve en yüksek önceliğe sahip filtre döndürülür. Benzer şekilde, birden çok filtreli eşleşme yöntemi yalnızca en yüksek önceliğe sahip eşleşen filtreleri döndürür.  
   
-### <a name="xpath-message-filter-table"></a>XPath İleti Filtresi tablosu  
- <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> Bildirim temelli XPath filtrelerinde için iyileştirilmiş tablo anahtarı, bu nedenle bir <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.  
+### <a name="xpath-message-filter-table"></a>XPath Iletisi filtre tablosu  
+ <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> bildirim temelli XPath filtreleri için iyileştirilmiştir, bu nedenle tablo anahtarı bir <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.  
   
- <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> Sınıfı, ileti senaryolarının çoğunu kapsar ve ayrıca tam XPath 1.0 dilbilgisi destekleyen XPath bir alt kümesi için eşleşen iyileştirir. Verimli paralel eşleşen algoritmalar için iyileştirilmiş.  
+ <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> sınıfı, birçok mesajlaşma senaryosunu içeren bir XPath alt kümesi için eşleştirmeyi iyileştirir ve ayrıca tam XPath 1,0 dilbilgisini destekler. Etkili paralel eşleştirme için iyileştirilmiş algoritmalara sahiptir.  
   
- Bu tablo vardır özelleştirilmiş `Match` üzerinden çalışan yöntemleri bir <xref:System.Xml.XPath.XPathNavigator> ve <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>. A <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> genişletir <xref:System.Xml.XPath.XPathNavigator> ekleyerek sınıfı bir <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> özelliği. Bu özellik kaydedilebilir ve Gezgin, pahalı bellek ayırması kopyalamak zorunda kalmadan kolayca yüklenebilir için XML belgesi içindeki konumları sağlayan, <xref:System.Xml.XPath.XPathNavigator> bu tür bir işlem gerektirir. WCF XPath altyapısı sorguları XML belgelerinde, yürütme sırasında imleç konumu sık kaydetmeniz gerekir böylece <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> ileti işleme için önemli bir iyileştirme sağlar.  
+ Bu tabloda, bir <xref:System.Xml.XPath.XPathNavigator> ve <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>üzerinde çalışan çeşitli özelleştirilmiş `Match` yöntemleri vardır. Bir <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> <xref:System.Xml.XPath.XPathNavigator> sınıfını bir <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> özelliği ekleyerek genişletir. Bu özellik, XML belgesi içindeki konumların, bu tür bir işlem için ihtiyaç duyduğu pahalı bir bellek ayırma <xref:System.Xml.XPath.XPathNavigator> olan gezgin 'i kopyalamaya gerek olmadan hızla kaydedilmesine ve yüklenmesine izin verir. WCF XPath altyapısı, XML belgelerinde sorgu yürütme sırasında imlecin konumunu sıklıkla kaydetmeniz gerekir, bu nedenle <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> ileti işleme için önemli bir iyileştirme sağlar.  
   
 ## <a name="customer-scenarios"></a>Müşteri senaryoları  
- Farklı işleme modülleri ileti içinde yer alan verilere bağlı olarak bir ileti göndermek için istediğiniz zaman filtresini kullanabilirsiniz. İki tipik senaryo, eylem koduna göre ve temel alınan iletileri uç noktası adresi iletileri akışını XML'deki çoğullama bir ileti yönlendirme.  
+ İleti içinde bulunan verilere bağlı olarak farklı işleme modüllerine ileti göndermek istediğiniz zaman filtrelemeyi kullanabilirsiniz. İki tipik senaryo, işlem koduna göre bir iletiyi yönlendirerek iletilerin bir uç nokta adresini temel alan bir ileti akışını de aynı şekilde alır.  
   
 ### <a name="routing"></a>Yönlendirme  
- İletinin SOAP üst bilgisinde bir veya daha fazla eylem kodları olan iletiler için bir uç noktası dinleyicisi dinler. Oluşturarak uygulayan bir <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> oluşturucusuna eylem kodları içeren bir dizi geçirerek. Bu filtre kaydolmak için kullandığı `ListenerFactory`, bu nedenle, belirli bir uç nokta için olan eylem eşleşen filtre biri yalnızca iletileri alın.  
+ Bir uç noktanın dinleyicisi, iletinin SOAP üstbilgisindeki bir veya daha fazla eylem koduna sahip iletileri dinler. Bu işlemi, eylem kodlarını içeren bir diziyi oluşturucusuna geçirerek bir <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> oluşturarak uygulayabilirsiniz. Bu filtre, `ListenerFactory`kaydetmek için bu filtreyi kullanır, bu nedenle yalnızca eylemi bu belirli bir uç noktaya sahip olan filtreden biriyle eşleşen mesajlar.  
   
-### <a name="de-multiplexing"></a>XML'deki çoğullama  
- Ne zaman birden fazla uç nokta fan aynı `ServiceListener` kablo, iletileri çoğullamasını ve bir belirli uç nokta adresine ait olup olmadığını bilmek tek yolu kullanmaktır <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>s, kayıtlı uç noktaları tarafından doğru iletileri seçin üst bilgilerinde depolanan bilgileri bir arama gerçekleştirme. Bu filtrelere geçen iletileri hem de karşılık gelen tüm gerekli üstbilgileri vardır:  
+### <a name="de-multiplexing"></a>Çoğullama  
+ Birden fazla uç nokta, aynı `ServiceListener` olduğunda, her zaman çift yönlü mesajlardan bağımsız olarak ileti kullanmanın ve belirli bir uç nokta adresine ait olup olmadığını bilmenin tek yolu, üst bilgilerde depolanan bilgilerde bir arama gerçekleştirerek kayıtlı uç noktalara giden iletileri seçme <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>s ' nin kullanılması anlamına gelir. Bu filtrelerde, yalnızca geçen iletiler, her ikisine karşılık gelen gerekli tüm üstbilgilere sahiptir:  
   
-- URI'de `EndpointAddress`.  
+- `EndpointAddress`URI 'SI.  
   
-- Rest uç noktası parametrelerini `EndpointAddress` belirtilmiş <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
+- <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>belirtilen `EndpointAddress` uç nokta parametrelerinin geri kalanı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,56 +2,56 @@
 title: Keşif Bulma ve FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 477edabb5d6fe263db43debc2f1d4f29df862609
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: da4c3c4a1d765e4f91b03f4f8fc1a73c3fea1535
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663352"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964844"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Keşif Bulma ve FindCriteria
 
-Bir bulma bulma işlemi bir veya daha fazla Hizmetleri bulmak için bir istemci tarafından başlatılan ve bulma ana eylemleri biridir. Bir bulma gerçekleştirme ağ üzerinden bir WS-bulma işlemi araştırma iletisi gönderir. Ölçütlerle eşleşen Hizmetleri yanıt WS-bulma ProbeMatch iletileriyle belirtilen. Bulma iletileri hakkında daha fazla bilgi için bkz. [WS-bulma belirtimi](https://go.microsoft.com/fwlink/?LinkID=122347).
+Bir bulma bul işlemi, bir veya daha fazla hizmeti bulmak için istemci tarafından başlatılır ve bulma işlemindeki ana eylemlerden biridir. Find işlemi gerçekleştirmek, ağ üzerinden WS-Discovery araştırma iletisi gönderir. WS-Discovery ProbeMatch iletileriyle Yanıtla belirtilen ölçütlerle eşleşen hizmetler. Bulma iletileri hakkında daha fazla bilgi için bkz. [WS-Discovery belirtimi](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf).
 
 ## <a name="discoveryclient"></a>DiscoveryClient
 
-<xref:System.ServiceModel.Discovery.DiscoveryClient> Sınıfı bulma istemci işlemlerini kolay hale getirir ve bulma işlemlerinin gerçekleştirmek için bir mekanizma sağlar. İçerdiği bir <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> (engelleme) zaman uyumlu bulma gerçekleştiren yöntemi ve bir <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> engelleyici olmayan bir zaman uyumsuz bulma başlatan yöntem. Her iki yöntem de ele bir <xref:System.ServiceModel.Discovery.FindCriteria> parametresi ve sonuçları kullanıcının üzerinden sağlamak bir <xref:System.ServiceModel.Discovery.FindResponse> nesne.
+<xref:System.ServiceModel.Discovery.DiscoveryClient> sınıfı, bulma işlemlerini gerçekleştirme mekanizmasını sağlar ve bulma istemci işlemlerini kolay hale getirir. Bir (engelleyici) zaman uyumlu bul gerçekleştiren bir <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> yöntemi ve engelleyici olmayan bir zaman uyumsuz bulma Başlatan bir <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> yöntemi içerir. Her iki yöntem de <xref:System.ServiceModel.Discovery.FindCriteria> bir parametre alır ve kullanıcıya sonuçları bir <xref:System.ServiceModel.Discovery.FindResponse> nesnesi aracılığıyla sağlar.
 
 ## <a name="findcriteria"></a>FindCriteria
 
-<xref:System.ServiceModel.Discovery.FindCriteria> sonlandırma ölçütünü (ne kadar süreyle arama son) bulun ve aradığınız hangi hizmetlerin belirtin, arama ölçütleri gruplandırılabilir birçok özelliğe sahiptir. A <xref:System.ServiceModel.Discovery.FindCriteria> birden çok ölçüt içerebilir. Varsayılan olarak, tüm bileşenlerin eşleşecek şekilde hizmet vardır. Aksi takdirde, kendisini eşleşen hizmet göz önünde bulundurmaz. Yalnızca bazı ölçütlerle eşleşen Hizmetleri bulmak istiyorsanız, hizmette özel bulma mantığını uygulayabilir veya birden çok sorgu kullanabilirsiniz.
+<xref:System.ServiceModel.Discovery.FindCriteria>, aradığınız Hizmetleri belirten arama ölçütlerine göre gruplanabilir ve sonlandırma ölçütlerini (aramanın en son ne kadar süreyle) bulabilecekleri çeşitli özelliklere sahiptir. <xref:System.ServiceModel.Discovery.FindCriteria>, birden çok arama ölçütü içerebilir. Varsayılan olarak, hizmetin kendisini eşleşen bir hizmeti düşünmediği, varsayılan olarak tüm bileşenlerle eşleşmesi gerekir. Yalnızca bazı ölçütlere uyan hizmetleri bulmak istiyorsanız, hizmette özel bulma mantığı uygulayabilir veya birden çok sorgu kullanabilirsiniz.
 
-Arama ölçütleri şunlardır:
+Arama ölçütleri şunları içerir:
 
-- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> -İsteğe bağlı. Aranan hizmet ve genellikle bir hizmet için ararken kullanılan ölçütü sözleşme adı. Birden fazla sözleşme adı belirtilirse, yalnızca hizmet uç noktaları tüm sözleşmelerin eşleşen yanıtlayın. WCF'de bir uç nokta yalnızca bir sözleşme destekleyebileceğini unutmayın.
+- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement>-Isteğe bağlı. Aranmakta olan hizmetin sözleşme adı ve genellikle bir hizmet aranırken kullanılan ölçütler. Birden fazla sözleşme adı belirtilmişse, yalnızca tüm sözleşmeleri eşleştiren hizmet uç noktaları yanıtlayabilir. WCF 'de bir uç noktanın yalnızca bir sözleşmeyi destekleyebileceğini unutmayın.
 
-- <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> -İsteğe bağlı. Belirli hizmet uç noktalarını sınıflandırmak için kullanılan mutlak bir URI'leri kapsamlardır. Bu senaryolarda, burada aynı anlaşmaya birden fazla uç nokta kullanıma sunmak ve aramak için bir yol uç noktaları bir alt kümesi için istediğiniz kullanmak isteyebilirsiniz. Birden fazla kapsam belirtilmezse, yalnızca hizmet uç noktaları tüm kapsamlar eşleşen yanıtlayın.
+- <xref:System.ServiceModel.Discovery.Configuration.ScopeElement>-Isteğe bağlı. Kapsamlar, ayrı hizmet uç noktalarını sınıflandırmak için kullanılan mutlak URI 'Lerdir. Bu, birden çok uç noktanın aynı sözleşmeyi kullanıma sunduğundan ve uç noktaların bir alt kümesini aramak için bir yol olmasını istediğiniz senaryolarda kullanmak isteyebilirsiniz. Birden fazla kapsam belirtilmişse, yalnızca tüm kapsamlar ile eşleşen hizmet uç noktaları yanıt verebilir.
 
-- <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> -Kapsamlar araştırma iletisi ve onun uç noktasında alanları eşleştirirken kullanılan eşleştirme algoritmasını belirtir. Desteklenen beş kapsam eşleşen kural vardır:
+- <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A>-bitiş noktası ile araştırma iletisindeki kapsamları eşleştirirken kullanılacak eşleşen algoritmayı belirtir. Desteklenen beş kapsam eşleştirme kuralı vardır:
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> Karşılaştırma büyük/küçük harfe temel dize.
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType>, temel büyük/küçük harfe duyarlı bir dize karşılaştırması yapar.
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> eşleşme parçaları tarafından ayrılmış "/". Bir arama `http://contoso/building1` kapsamlı bir hizmet eşleşen `http://contoso/building/floor1`. Eşleşmemesi Not `http://contoso/building100` son iki Segment eşleşmediğinden.
+  - "/" ile ayrılmış kesimlerle eşleşen <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>. `http://contoso/building1` araması, kapsam `http://contoso/building/floor1`bir hizmetle eşleşiyor. Son iki segment eşleşmediğinden `http://contoso/building100` eşleşmez.
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> kapsamlar tarafından kesimleri kullanarak bir LDAP URL'si ile eşleşir.
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType>, bir LDAP URL 'SI kullanarak kapsamlarla eşler ile eşleşir.
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> kapsamları bir UUID dizesiyle tam olarak eşleşir.
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType>, kapsamlarla tam olarak bir UUID dizesi kullanarak eşleşir.
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> bir kapsam belirtmeyen Hizmetleri eşleşir.
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> yalnızca bir kapsam belirtmeyen hizmetlerle eşleşir.
 
-  Bir kapsam eşleşen kural belirtilmezse <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix> kullanılır.
+  Kapsam eşleştirme kuralı belirtilmemişse, <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix> kullanılır.
 
-Sonlandırma ölçütünü şunlardır:
+Sonlandırma ölçütleri şunları içerir:
 
-1. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> -Ağdaki hizmetlerden yanıtları için beklenecek en uzun süre. Varsayılan süre 20 saniyedir.
+1. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>-ağdaki hizmetlerden gelen yanıtlar için beklenecek en uzun süre. Varsayılan süre 20 saniyedir.
 
-2. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> -İçin beklenilecek en fazla sayısı. Varsa <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> önce alınan yanıtları <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> geçti, bulma işlemi sona erer.
+2. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>-beklenecek en fazla yanıt sayısı. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> geçmeden önce <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> yanıtları alınıyorsa, bulma işlemi sona erer.
 
 ## <a name="findresponse"></a>FindResponse
 
-<xref:System.ServiceModel.Discovery.FindResponse> sahip bir <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> içeren bus'dan eşleşen ağ üzerindeki hizmet tarafından gönderilen koleksiyon özelliği. Hizmet yanıtlandı, boş bir koleksiyondur. Bir veya daha fazla hizmet yanıt verdi, her yanıt depolanan bir <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> adresi, sözleşme ve hizmetle ilgili bazı ek bilgiler içeren nesne.
+<xref:System.ServiceModel.Discovery.FindResponse>, ağda eşleşen hizmetler tarafından gönderilen yanıtları içeren bir <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> Collection özelliğine sahiptir. Hiçbir hizmet yanıtlanmadan, koleksiyon boştur. Bir veya daha fazla hizmet yanıtladıysanız, her yanıt adresi, sözleşmeyi ve hizmetle ilgili bazı ek bilgileri içeren <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> nesnesinde depolanır.
 
-Aşağıdaki örnek kodda bir bulma işlemi gösterilmektedir.
+Aşağıdaki örnek, kodda bulma işleminin nasıl gerçekleştirileceğini gösterir.
 
 ```csharp
 // Create DiscoveryClient

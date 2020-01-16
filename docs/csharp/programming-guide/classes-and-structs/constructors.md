@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: f435c149f7ec2768ee6c954c1f0ae12a95cc326f
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 465dbb9120e6e81e5ef216c34dc6a92283956033
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937535"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964669"
 ---
 # <a name="constructors-c-programming-guide"></a>Oluşturucular (C# Programlama Kılavuzu)
 
@@ -19,7 +19,7 @@ Bir [sınıf](../../language-reference/keywords/class.md) veya [Yapı](../../lan
 
 ## <a name="parameterless-constructors"></a>Parametresiz oluşturucular
   
-Sınıfınız için bir Oluşturucu sağlamazsanız, C# nesneyi örnekleyen ve varsayılan [değerler tablosunda](../../language-reference/keywords/default-values-table.md)listelenen üye değişkenlerini varsayılan değerlere ayarlayan varsayılan olarak bir tane oluşturur. Struct için bir Oluşturucu sağlamazsanız, C# [varsayılan değerler tablosunda](../../language-reference/keywords/default-values-table.md)listelenen bir değer türünün her alanını varsayılan değerine otomatik olarak başlatmak için *örtük parametresiz bir oluşturucuya* bağımlıdır. Daha fazla bilgi ve örnek için bkz. [örnek oluşturucular](./instance-constructors.md).  
+Sınıfınız için bir Oluşturucu sağlamazsanız, C# varsayılan olarak, nesneyi örnekleyen ve üye değişkenlerini varsayılan değerlere ayarlar, örneğin [varsayılan C# ](../../language-reference/builtin-types/default-values.md) değerleri makalede listelendiği şekilde oluşturur. Yapı aboneliğiniz için bir Oluşturucu sağlamazsanız, C# her bir alanı varsayılan değerine otomatik olarak başlatmak için örtük olarak parametresiz bir *oluşturucuya* bağımlıdır. Daha fazla bilgi ve örnek için bkz. [örnek oluşturucular](instance-constructors.md).  
 
 ## <a name="constructor-syntax"></a>Oluşturucu sözdizimi
 
@@ -33,13 +33,13 @@ Bir Oluşturucu tek bir deyim olarak uygulan, bir [ifade gövdesi tanımı](../s
 
 ## <a name="static-constructors"></a>Statik oluşturucular
 
-Önceki örneklerde, yeni bir nesne oluşturan tüm gösterilen örnek oluşturucuları vardır. Bir sınıf veya yapı, türün statik üyelerini Başlatan statik bir oluşturucuya de sahip olabilir.  Statik oluşturucular parametresiz. Statik alanları başlatmak için statik bir Oluşturucu sağlamazsanız, C# derleyici [varsayılan değerler tablosunda](../../language-reference/keywords/default-values-table.md)listelenen statik alanları varsayılan değerlerine başlatır.
+Önceki örneklerde, yeni bir nesne oluşturan tüm gösterilen örnek oluşturucuları vardır. Bir sınıf veya yapı, türün statik üyelerini Başlatan statik bir oluşturucuya de sahip olabilir.  Statik oluşturucular parametresiz. Statik alanları başlatmak için statik bir Oluşturucu sağlamazsanız, C# derleyici varsayılan değer [ C# türleri](../../language-reference/builtin-types/default-values.md) makalesinde listelenen statik alanları varsayılan değerlerine başlatır.
 
 Aşağıdaki örnek, statik bir alanı başlatmak için statik bir Oluşturucu kullanır.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
 
-Aşağıdaki örnekte gösterildiği gibi, bir ifade gövdesi tanımıyla bir statik oluşturucu da tanımlayabilirsiniz. 
+Aşağıdaki örnekte gösterildiği gibi, bir ifade gövdesi tanımıyla bir statik oluşturucu da tanımlayabilirsiniz.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
 

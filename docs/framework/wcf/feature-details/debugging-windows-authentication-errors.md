@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 52e968706ef4ca703a26e613e681cff3c30ba181
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 45e4926905bbf3b5a24af15de153afc7bd2a4823
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838032"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964565"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows Kimlik Doğrulama Hatalarını Ayıklama
 Windows kimlik doğrulamasını bir güvenlik mekanizması olarak kullanırken, güvenlik desteği sağlayıcısı arabirimi (SSPI) güvenlik süreçlerini işler. SSPI katmanında güvenlik hataları oluştuğunda, bunlar Windows Communication Foundation (WCF) ile ortaya çıkar. Bu konu, hataları tanılamanıza yardımcı olmak için bir çerçeve ve soru kümesi sağlar.  
   
- Kerberos protokolüne genel bakış için bkz. [Kerberos açıklanıyor](https://go.microsoft.com/fwlink/?LinkID=86946); SSPI 'ye genel bakış için bkz. [SSPI](https://go.microsoft.com/fwlink/?LinkId=88941).  
+ Kerberos protokolüne genel bakış için bkz. [Kerberos açıklanıyor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10)); SSPI 'ye genel bakış için bkz. [SSPI](/windows/win32/secauthn/sspi).  
   
  WCF, Windows kimlik doğrulaması için genellikle istemci ve hizmet arasında Kerberos karşılıklı kimlik doğrulaması gerçekleştiren *Negotiate* güvenlik desteği sağlayıcısı 'Nı (SSP) kullanır. Kerberos protokolü kullanılamıyorsa, varsayılan olarak WCF, NT LAN Manager 'a (NTLM) geri döner. Ancak, WCF 'yi yalnızca Kerberos protokolünü kullanacak şekilde yapılandırabilirsiniz (ve Kerberos kullanılamıyorsa bir özel durum oluşturur). WCF 'yi, Kerberos protokolünün kısıtlı biçimlerini kullanacak şekilde de yapılandırabilirsiniz.  
   
@@ -66,7 +66,7 @@ Windows kimlik doğrulamasını bir güvenlik mekanizması olarak kullanırken, 
   
  Web grupları veya Web bahçeleri gibi yük dengeleme senaryolarında, yaygın bir yöntem her bir uygulama için benzersiz bir hesap tanımlamak, bu hesaba bir SPN atamak ve tüm uygulama hizmetlerinin bu hesapta çalıştığından emin olmak içindir.  
   
- Hizmetinizin hesabı için bir SPN elde etmek üzere bir Active Directory etki alanı yöneticisi olmanız gerekir. Daha fazla bilgi için bkz. [Windows Için Kerberos teknik eki](https://go.microsoft.com/fwlink/?LinkID=88330).  
+ Hizmetinizin hesabı için bir SPN elde etmek üzere bir Active Directory etki alanı yöneticisi olmanız gerekir. Daha fazla bilgi için bkz. [Windows Için Kerberos teknik eki](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10)).  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Kerberos protokolü doğrudan, hizmetin bir etki alanı makine hesabı altında çalışmasını gerektirir  
  Bu, `ClientCredentialType` özelliği `Windows` olarak ayarlandığında ve <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> özelliği aşağıdaki kodda gösterildiği gibi `false`olarak ayarlandığında oluşur.  

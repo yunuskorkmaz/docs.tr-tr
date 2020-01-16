@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: d85b11204eb1f1de3a95efc67054cdffc4c219e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714671"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964753"
 ---
 # <a name="using-structs-c-programming-guide"></a>Yapıları kullanma (C# Programlama Kılavuzu)
 
@@ -21,7 +21,7 @@ Bir struct için parametresiz bir Oluşturucu tanımlamak hatadır. Bir yapı g�
 
 [New](../../language-reference/operators/new-operator.md) işlecini kullanarak bir struct nesnesi oluşturduğunuzda, oluşturulur ve uygun Oluşturucu [oluşturucunun imzasına](constructors.md#constructor-syntax)göre çağırılır. Sınıfların aksine, yapılar `new` işleci kullanılmadan örneklenebilir. Böyle bir durumda, bir Oluşturucu çağrısı yoktur ve bu da ayırmayı daha verimli hale getirir. Ancak alanlar atanmamış olarak kalır ve tüm alanlar başlatılana kadar nesne kullanılamaz. Bu, özellikler aracılığıyla değerleri almak veya ayarlamak için bir değer içerir.
 
-Parametresiz oluşturucuyu kullanarak bir yapı nesnesi örneği oluşturursanız, tüm Üyeler [varsayılan değerlerine](../../language-reference/keywords/default-values-table.md)göre atanır.
+Parametresiz oluşturucuyu kullanarak bir yapı nesnesi örneği oluşturursanız, tüm Üyeler [varsayılan değerlerine](../../language-reference/builtin-types/default-values.md)göre atanır.
 
 Bir yapı için parametrelere sahip bir Oluşturucu yazarken, tüm üyeleri açık olarak başlatmalısınız; Aksi takdirde bir veya daha fazla üye atanmamış olarak kalır ve yapı birimi [CS0171](../../misc/cs0171.md), derleyici hatası üretirken kullanılamaz.
 
