@@ -2,12 +2,12 @@
 title: Saniyede Hatalı Çağrı
 ms.date: 03/30/2017
 ms.assetid: 81c88073-8e32-4520-a71a-2c56b71ee515
-ms.openlocfilehash: 424e658c2f8243fae1b4ebef8d98c57681166a67
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 37fd47a3e4ca474338a4a6ae1117c2626acb546f
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321080"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163156"
 ---
 # <a name="calls-faulted-per-second"></a>Saniyede Hatalı Çağrı
 Sayaç adı: Hatalı çağrı/saniye  
@@ -15,7 +15,7 @@ Sayaç adı: Hatalı çağrı/saniye
 ## <a name="description"></a>Açıklama  
  Saniye içinde bu işleme hata döndüren çağrı sayısı.  
   
- Bu sayaç, değeri aşağıdaki formül kullanılarak hesaplanmış olan [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)performans sayacı türüdür.  
+ Bu sayaç, değeri aşağıdaki formül kullanılarak hesaplanan [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))performans sayacı türüdür.  
   
  (N 1-N 0)/((D 1-D 0)/F)  
   

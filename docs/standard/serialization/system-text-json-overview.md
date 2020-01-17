@@ -1,17 +1,20 @@
 ---
 title: .NET kullanarak C# JSON serisini serileştirme ve serisini kaldırma
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: c05783963ba521109fb542f247ec9e62fdb5c2d9
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: acb83be9b20a155b6b6a9fb5ade38e099f54e71d
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904639"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163598"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET 'te JSON serileştirme ve seri durumundan çıkarma (sıralama ve kaldırma)-genel bakış
 
@@ -24,7 +27,7 @@ Kitaplık Ayrıca, bellek içi belge nesne modeli (DOM) ile çalışmak için s�
 ## <a name="how-to-get-the-library"></a>Kitaplığı alma
 
 * Kitaplığı, [.NET Core 3,0](https://aka.ms/netcore3download) paylaşılan çerçevesinin bir parçası olarak yerleşik olarak bulunur.
-* Diğer hedef çerçeveler için [System. Text. JSON](https://www.nuget.org/packages/System.Text.Json) NuGet paketini yükler. Paket şunları destekler:
+* Diğer hedef çerçeveler için [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet paketini yükler. Paket şunları destekler:
   * .NET Standard 2,0 ve sonraki sürümler
   * .NET Framework 4.7.2 ve sonraki sürümler
   * .NET Core 2,0, 2,1 ve 2,2
@@ -32,9 +35,9 @@ Kitaplık Ayrıca, bellek içi belge nesne modeli (DOM) ile çalışmak için s�
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 * [Kitaplığı kullanma](system-text-json-how-to.md)
-* [Newtonsoft. JSON 'dan geçiş yapma](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Newtonsoft.Json geçiş](system-text-json-migrate-from-newtonsoft-how-to.md)
 * [Dönüştürücüler yazma](system-text-json-converters-how-to.md)
-* [System. Text. JSON kaynak kodu](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
-* [System. Text. JSON API başvurusu](xref:System.Text.Json)
-* [System. Text. JSON. Serialization API başvurusu](xref:System.Text.Json.Serialization)
+* [System.Text.Json kaynak kodu](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
+* [System.Text.Json API başvurusu](xref:System.Text.Json)
+* [System.Text.Json. Serileştirme API başvurusu](xref:System.Text.Json.Serialization)
 <!-- * [Roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

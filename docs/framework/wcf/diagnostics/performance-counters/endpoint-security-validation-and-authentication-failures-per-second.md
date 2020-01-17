@@ -1,34 +1,34 @@
 ---
-title: 'Uç noktası: Güvenlik Doğrulaması ve Kimlik Doğrulaması Hatası/Saniye'
+title: 'Uç Noktası: Saniyede Güvenlik Doğrulama ve Kimlik Doğrulama Hatası'
 ms.date: 03/30/2017
 ms.assetid: 89a70b90-d7e4-4b03-9b84-4dc88ce3d605
-ms.openlocfilehash: a6d76a0d11c52d20aebd44a85862c802cc0a68f7
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: fb882c7cbfd86e1949798df9c0b7514182c1b8f6
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912475"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163533"
 ---
-# <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>Uç noktası: Güvenlik Doğrulaması ve Kimlik Doğrulaması Hatası/Saniye
-Sayaç adı: Güvenlik Doğrulaması ve Kimlik Doğrulaması Hatası/Saniye  
+# <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>Uç Noktası: Saniyede Güvenlik Doğrulama ve Kimlik Doğrulama Hatası
+Sayaç adı: güvenlik doğrulaması ve saniye başına kimlik doğrulama başarısızlığı  
   
 ## <a name="description"></a>Açıklama  
- Her bir ileti "Güvenlik çağrıları yetkilendirilmedi" sayacı tarafından kapsanmayan bir güvenlik sorunu nedeniyle reddedilmesi Bu sayaç artırılır. Bu tür sorunlar şunlardır:  
+ Bu sayaç, "güvenlik çağrıları yetkilendirilmemiş" sayacı kapsamında olmayan bir güvenlik sorunu nedeniyle her ileti reddedildiğinde artırılır. Bu tür sorunlar şunlardır:  
   
 - İstemci belirteci iletiden okunamıyor.  
   
-- İstemci belirteci (örneğin, hatalı parola) kimlik doğrulaması başarısız oldu.  
+- İstemci belirteci kimlik doğrulaması başarısız oldu (örneğin, hatalı parola).  
   
-- İmza doğrulaması başarısız oldu (örneğin, iletiyi oynanmadığını).  
+- İmza doğrulama başarısız oldu (örneğin, ileti değiştirilmiş).  
   
-- İleti yeniden yürütme bir saldırı sırasında gerçekleşebilir bir önceki bir yineleniyor.  
+- İleti, bir yeniden yürütme saldırısında meydana gelebilen bir öncekinden yineleniyor.  
   
-- Bir şifre çözme hatası oluştu.  
+- Şifre çözme hatası oluştu.  
   
-- Gereken bazı öğeleri (örneğin, eksik bir zaman damgası veya şifrelenmiş veriler engelle) gelen iletiyi yok.  
+- İletide bazı gerekli öğeler (örneğin, eksik zaman damgası veya şifrelenmiş veri bloğu) eksik.  
   
-- TLSNEGO/SPNEGO anlaşması sırasında hatalar oluştu.  
+- TLSNEGO/SPNEGO Handshake sırasında hatalar oluştu.  
   
- Bu sayaç performans sayacı türüdür [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), değeri aşağıdaki formül kullanılarak hesaplanır:  
+ Bu sayaç, değeri aşağıdaki formül kullanılarak hesaplanan [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))performans sayacı türüdür:  
   
  (N1-N0)/((D1-D0)/F)

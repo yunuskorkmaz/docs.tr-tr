@@ -2,12 +2,12 @@
 title: Kısmi Güven Özelliği Uyumluluğu
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: adeef7a8fa12751c53e2096ae6bf844f091a5545
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3e0f1c2f673d4ba603df7da431d10c211cf779ac
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965314"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212117"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Kısmi Güven Özelliği Uyumluluğu
 Windows Communication Foundation (WCF) kısmen güvenilen bir ortamda çalışırken sınırlı bir işlev alt kümesini destekler. Kısmi güvende desteklenen özellikler, [Desteklenen Dağıtım senaryoları](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) konusunda açıklandığı gibi belirli bir senaryo kümesi etrafında tasarlanmıştır.  
@@ -24,22 +24,22 @@ Windows Communication Foundation (WCF) kısmen güvenilen bir ortamda çalışı
 ## <a name="contracts"></a>Sözleşmeler  
  Sözleşmeler kısmi güven altında çalışırken aşağıdaki kısıtlamalara tabidir:  
   
-- `[ServiceContract]` Arabirimi uygulayan hizmet sınıfı, olmalıdır `public` ve bir `public` oluşturucuya sahip olmalıdır. Yöntemleri tanımlıyorsa `[OperationContract]` , bunlar `public`olmalıdır. Bunun yerine bir `[ServiceContract]` arabirim uygularsa, bu yöntem uygulamaları açık `[ServiceContract]` veya `private`arabirimin olması `public`şartıyla açık olabilir.  
+- `[ServiceContract]` arabirimini uygulayan hizmet sınıfı `public` ve `public` oluşturucusuna sahip olmalıdır. `[OperationContract]` yöntemleri tanımlıyorsa, bunların `public`olması gerekir. Bunun yerine bir `[ServiceContract]` arabirimi uygularsa, bu yöntem uygulamaları açık veya `private`olabilir, `[ServiceContract]` arabirimi `public`olur.  
   
-- `[ServiceKnownType]` Özniteliği kullanılırken, belirtilen yöntemin olması `public`gerekir.  
+- `[ServiceKnownType]` özniteliği kullanılırken, belirtilen yöntem `public`olmalıdır.  
   
-- `[MessageContract]`sınıflar ve üyeleri olabilir `public`. Sınıf uygulama derlemesinde `internal` tanımlıysa, ve `internal` üyeleri olabilir. `[MessageContract]`  
+- `[MessageContract]` sınıfları ve üyeleri `public`olabilir. `[MessageContract]` sınıfı uygulama derlemesinde tanımlıysa, `internal` ve `internal` üyelere sahip olabilir.  
   
 ## <a name="system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamalar  
- <xref:System.ServiceModel.BasicHttpBinding> Ve<xref:System.ServiceModel.WebHttpBinding> kısmi güven ortamında tamamen desteklenir. <xref:System.ServiceModel.WSHttpBinding> Yalnızca Aktarım güvenliği modu için desteklenir.  
+ <xref:System.ServiceModel.BasicHttpBinding> ve <xref:System.ServiceModel.WebHttpBinding> kısmi güven ortamında tamamen desteklenir. <xref:System.ServiceModel.WSHttpBinding> yalnızca Aktarım güvenliği modu için desteklenir.  
   
- ,, Veya <xref:System.ServiceModel.NetTcpBinding> <xref:System.ServiceModel.NetNamedPipeBinding> gibi<xref:System.ServiceModel.NetMsmqBinding>http dışındaki aktarımları kullanan bağlamalar, kısmi güven ortamında çalışırken desteklenmez.  
+ <xref:System.ServiceModel.NetTcpBinding>, <xref:System.ServiceModel.NetNamedPipeBinding>veya <xref:System.ServiceModel.NetMsmqBinding>gibi HTTP dışındaki aktarımları kullanan bağlamalar, kısmi güven ortamında çalışırken desteklenmez.  
   
 ## <a name="custom-bindings"></a>Özel Bağlamalar  
  Özel Bağlamalar kısmi güven ortamında oluşturulabilir ve kullanılabilir, ancak bu bölümde belirtilen kısıtlamaların izlenmesi gerekir.  
   
 ### <a name="transports"></a>Taşımalar  
- Yalnızca <xref:System.ServiceModel.Channels.HttpTransportBindingElement> ve<xref:System.ServiceModel.Channels.HttpsTransportBindingElement>izin verilen aktarım bağlama öğeleri.  
+ Yalnızca <xref:System.ServiceModel.Channels.HttpTransportBindingElement> izin verilen aktarım bağlama öğeleri <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>.  
   
 ### <a name="encoders"></a>Kodlayıcılar  
  Aşağıdaki kodlayıcılara izin verilir:  
@@ -59,43 +59,43 @@ Windows Communication Foundation (WCF) kısmen güvenilen bir ortamda çalışı
  Güvenilir Mesajlaşma, işlemler veya ileti düzeyi güvenlik kullanan bağlamalar desteklenmez.  
   
 ## <a name="serialization"></a>Serileştirme  
- Hem hem de, <xref:System.Xml.Serialization.XmlSerializer> kısmi güven ortamında desteklenir. <xref:System.Runtime.Serialization.DataContractSerializer> Ancak, öğesinin <xref:System.Runtime.Serialization.DataContractSerializer> kullanımı aşağıdaki koşullara tabidir:  
+ <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Xml.Serialization.XmlSerializer> her ikisi de kısmi güven ortamında desteklenir. Ancak, <xref:System.Runtime.Serialization.DataContractSerializer> kullanımı aşağıdaki koşullara tabidir:  
   
-- Tüm serileştirilebilir `[DataContract]` türler `public`olmalıdır.  
+- Tüm seri hale getirilebilir `[DataContract]` türleri `public`olmalıdır.  
   
-- `[DataMember]` Bir`[DataContract]` türdeki tüm seri hale getirilebilir alanların veya özelliklerin ortak ve okuma/yazma olması gerekir. [Salt okunur](https://go.microsoft.com/fwlink/?LinkID=98854) alanların serileştirilmesi ve serisini kaldırma, kısmen güvenilen BIR uygulamada WCF çalıştırılırken desteklenmez.  
+- `[DataContract]` bir türdeki tüm seri hale getirilebilir `[DataMember]` alanları veya özellikleri ortak ve okuma/yazma olmalıdır. [Salt okunur](https://go.microsoft.com/fwlink/?LinkID=98854) alanların serileştirilmesi ve serisini kaldırma, kısmen güvenilen BIR uygulamada WCF çalıştırılırken desteklenmez.  
   
 - `[Serializable]`/ISerializable programlama modeli kısmi güven ortamında desteklenmez.  
   
 - Bilinen türler kod veya makine düzeyinde yapılandırma (Machine. config) içinde belirtilmelidir. Bilinen türler güvenlik nedeniyle uygulama düzeyi yapılandırmasında belirtilemez.  
   
-- Uygulayan <xref:System.Runtime.Serialization.IObjectReference> türler kısmen güvenilen bir ortamda özel durum oluşturur.  
+- <xref:System.Runtime.Serialization.IObjectReference> uygulayan türler kısmen güvenilen bir ortamda özel durum oluşturur.  
   
- Kısmen güvenilen bir uygulamada güvenle kullanırken <xref:System.Runtime.Serialization.DataContractSerializer> güvenlik hakkında daha fazla bilgi için [kısmi güven en iyi uygulamaları](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) bölümündeki serileştirme bölümüne bakın.  
+ Kısmen güvenilen bir uygulamada güvenli <xref:System.Runtime.Serialization.DataContractSerializer> kullanırken güvenlik hakkında daha fazla bilgi için [kısmi güven En Iyi uygulamaları](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) bölümündeki serileştirme bölümüne bakın.  
   
 ### <a name="collection-types"></a>Koleksiyon türleri  
- Bazı koleksiyon türleri hem hem <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Collections.IEnumerable>uygular. Örnek, uygulayan <xref:System.Collections.Generic.ICollection%601>türler içerir. Bu tür türler `GetEnumerator()`, uygulamasının `public` bir uygulamasını `GetEnumerator()`ve açık bir uygulamasını uygulayabilir. Bu durumda <xref:System.Runtime.Serialization.DataContractSerializer> , uygulamasının açık uygulamasını `public` `GetEnumerator()`değil, uygulamasını çağırır. `GetEnumerator()` `GetEnumerator()` <xref:System.Runtime.Serialization.DataContractSerializer> `IEnumerable.GetEnumerator()`Uygulamalardan hiçbiri ve hepsi açık uygulamalartadıysanız, öğesini çağırır. `public`  
+ Bazı koleksiyon türleri <xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.Collections.IEnumerable>uygular. Örnek, <xref:System.Collections.Generic.ICollection%601>uygulayan türler içerir. Bu tür türler `GetEnumerator()``public` uygulamasını ve açık bir `GetEnumerator()`uygulamasını uygulayabilir. Bu durumda <xref:System.Runtime.Serialization.DataContractSerializer>, `GetEnumerator()`açık uygulamasını değil `GetEnumerator()``public` uygulamasını çağırır. `GetEnumerator()` uygulamalardan hiçbiri `public` ve tümü açık uygulamalardır <xref:System.Runtime.Serialization.DataContractSerializer> `IEnumerable.GetEnumerator()`çağırır.  
   
- Bir kısmi güven ortamında WCF çalışırken koleksiyon türleri için, `GetEnumerator()` `public`uygulamalardan hiçbiri yoksa veya hiçbiri açık arabirim uygulamaları değilse, bir güvenlik özel durumu oluşturulur.  
+ Bir kısmi güven ortamında WCF çalışırken, koleksiyon türleri için `GetEnumerator()` uygulamalarından hiçbiri `public`yoksa veya hiçbiri açık arabirim uygulamaları değilse, bir güvenlik özel durumu oluşturulur.  
   
 ### <a name="netdatacontractserializer"></a>NetDataContractSerializer  
- <xref:System.Collections.Generic.List%601> <xref:System.Collections.ArrayList>, Ve<xref:System.Collections.Generic.Dictionary%602> gibibirçok<xref:System.Runtime.Serialization.NetDataContractSerializer> .NET Framework koleksiyon türü, kısmi güvende içinde desteklenmez. <xref:System.Collections.Hashtable> Bu türlerin `[Serializable]` özniteliği kümesi vardır ve daha önce serileştirme bölümünde belirtildiği gibi, bu öznitelik kısmi güvende desteklenmez. , <xref:System.Runtime.Serialization.DataContractSerializer> Koleksiyonları özel bir şekilde davranır ve bu kısıtlamayı aşmak, <xref:System.Runtime.Serialization.NetDataContractSerializer> ancak bu kısıtlamayı aşmak için böyle bir mekanizması yoktur.  
+ <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ArrayList>, <xref:System.Collections.Generic.Dictionary%602> ve <xref:System.Collections.Hashtable> gibi birçok .NET Framework koleksiyon türü kısmi güvende <xref:System.Runtime.Serialization.NetDataContractSerializer> tarafından desteklenmez. Bu türlerin `[Serializable]` özniteliği ayarlanmış ve daha önce serileştirme bölümünde belirtildiği gibi, bu öznitelik kısmi güvende desteklenmez. <xref:System.Runtime.Serialization.DataContractSerializer>, koleksiyonlara özel bir şekilde davranır ve bu kısıtlamayı aşmak için, bu kısıtlamayı aşmak için <xref:System.Runtime.Serialization.NetDataContractSerializer> böyle bir mekanizmaya sahip değildir.  
   
- Tür kısmi güvende <xref:System.Runtime.Serialization.NetDataContractSerializer> tarafından desteklenmiyor. <xref:System.DateTimeOffset>  
+ <xref:System.DateTimeOffset> türü kısmi güvende <xref:System.Runtime.Serialization.NetDataContractSerializer> tarafından desteklenmiyor.  
   
- Kısmi güvende çalışırken <xref:System.Runtime.Serialization.NetDataContractSerializer> ( <xref:System.Runtime.Serialization.SurrogateSelector> mekanizması kullanılarak) bir vekil ile birlikte kullanılamaz. Bu kısıtlamanın, bir yedek kullanılarak, serileştirilmek için geçerli olduğunu unutmayın.  
+ Kısmi güvende çalışırken, bir yedek <xref:System.Runtime.Serialization.NetDataContractSerializer> (<xref:System.Runtime.Serialization.SurrogateSelector> mekanizması kullanılarak) kullanılamaz. Bu kısıtlamanın, bir yedek kullanılarak, serileştirilmek için geçerli olduğunu unutmayın.  
   
 ## <a name="enabling-common-behaviors-to-run"></a>Ortak davranışları çalıştırmak için etkinleştirme  
- Uygulama kısmi güven ortamında çalıştırıldığında ve Hayır olmadığında <xref:System.Security.AllowPartiallyTrustedCallersAttribute> bir yapılandırma dosyasının [ \<commondavranışlar >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) bölümüne eklenen öznitelik (aptca) ile işaretlenmemiş hizmet veya uç nokta davranışları çalıştırılmaz. Bu gerçekleştiğinde özel durum oluşturulur. Ortak davranışları çalıştırmaya zorlamak için aşağıdaki seçeneklerden birini yapmanız gerekir:  
+ Bir yapılandırma dosyasının [\<Commondavranışları >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) bölümüne eklenen <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliği (aptca) ile işaretlenmeyen hizmet veya uç nokta davranışları, uygulama kısmi güven ortamında çalıştırıldığında ve bu gerçekleştiğinde hiçbir özel durum atılışında çalıştırılmaz. Ortak davranışları çalıştırmaya zorlamak için aşağıdaki seçeneklerden birini yapmanız gerekir:  
   
-- Kısmi güven uygulaması olarak dağıtıldığında çalışabilmesi <xref:System.Security.AllowPartiallyTrustedCallersAttribute> için ortak davranışınızı özniteliğiyle işaretleyin. APTCA tarafından işaretlenmiş derlemelerin çalıştırılmasını engellemek için bilgisayarda bir kayıt defteri girişi ayarlanmayacağınızı unutmayın. biçimindeki telefon numarasıdır.  
+- Kısmi güven uygulaması olarak dağıtıldığında çalışabilmesi için, <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliğiyle ortak davranışınızı işaretleyin. APTCA tarafından işaretlenmiş derlemelerin çalıştırılmasını engellemek için bilgisayarda bir kayıt defteri girişi ayarlanmayacağınızı unutmayın. .  
   
 - Uygulamanın, uygulamayı kısmi güven ortamında çalıştırmak için kod erişimi güvenlik ayarlarını değiştiremediği tam güvenilir bir uygulama olarak dağıtıldığından emin olun. Bunu yapabilirse, davranış çalışmaz ve hiçbir özel durum oluşturulmaz. Bunu sağlamak için, [Caspol. exe (kod erişimi güvenlik Ilkesi aracı)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)kullanılarak **LevelFinal** seçeneğine bakın.  
   
- Yaygın bir davranış örneği için bkz [. nasıl yapılır: Kuruluştaki](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)uç noktaları kilitle.  
+ Yaygın bir davranış örneği için bkz. [nasıl yapılır: kuruluştaki uç noktaları kilitleme](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Yapılandırma  
- Tek bir özel durum ile, kısmen güvenilen kod yalnızca yerel `app.config` dosyadaki WCF yapılandırma bölümlerini yükleyebilir. Machine. config dosyasındaki WCF bölümlerine veya bir kök Web. config dosyasına başvuruda bulunan WCF yapılandırma bölümlerinin yüklenmesi için ConfigurationPermission (Kısıtlamasız) gerekir. Bu izin olmadan, yerel yapılandırma dosyası dışındaki WCF yapılandırma bölümlerine (davranışlar, bağlamalar) başvurular, yapılandırma yüklendiğinde bir özel durumla sonuçlanır.  
+ Tek bir özel durum ile, kısmen güvenilen kod yalnızca yerel `app.config` dosyasındaki WCF yapılandırma bölümlerini yükleyebilir. Machine. config dosyasındaki WCF bölümlerine veya bir kök Web. config dosyasına başvuruda bulunan WCF yapılandırma bölümlerinin yüklenmesi için ConfigurationPermission (Kısıtlamasız) gerekir. Bu izin olmadan, yerel yapılandırma dosyası dışındaki WCF yapılandırma bölümlerine (davranışlar, bağlamalar) başvurular, yapılandırma yüklendiğinde bir özel durumla sonuçlanır.  
   
  Bu konunun serileştirme bölümünde açıklandığı gibi, bir özel durum serileştirme için bilinen tür yapılandırmadır.  
   
@@ -111,7 +111,7 @@ Windows Communication Foundation (WCF) kısmen güvenilen bir ortamda çalışı
  WCF kısmi güven ortamında çalıştırıldığında ileti günlüğe kaydetme çalışmaz. Kısmi güven altında etkinleştirilirse, hizmet etkinleştirmesi başarısız olmaz, ancak hiçbir ileti günlüğe kaydedilmez.  
   
 ### <a name="tracing"></a>İzleme  
- Kısıtlı izleme işlevselliği, kısmi güven ortamında çalışırken kullanılabilir. Yapılandırma dosyasındaki <`listeners`> öğesinde, <xref:System.Diagnostics.TextWriterTraceListener> ekleyebileceğiniz tek tür ve yeni <xref:System.Diagnostics.EventSchemaTraceListener>. Standart <xref:System.Diagnostics.XmlWriterTraceListener> kullanımı tamamlanmamış veya hatalı günlüklere neden olabilir.  
+ Kısıtlı izleme işlevselliği, kısmi güven ortamında çalışırken kullanılabilir. Yapılandırma dosyasındaki <`listeners`> öğesinde ekleyebileceğiniz tek türler <xref:System.Diagnostics.TextWriterTraceListener> ve yeni <xref:System.Diagnostics.EventSchemaTraceListener>. Standart <xref:System.Diagnostics.XmlWriterTraceListener> kullanımı tamamlanmamış veya hatalı günlüklere neden olabilir.  
   
  Desteklenen izleme kaynakları şunlardır:  
   
@@ -119,7 +119,7 @@ Windows Communication Foundation (WCF) kısmen güvenilen bir ortamda çalışı
   
 - <xref:System.Runtime.Serialization>  
   
-- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>,,ve. <xref:System.IdentityModel.Selectors> <xref:System.IdentityModel.Tokens>  
+- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors> ve <xref:System.IdentityModel.Tokens>.  
   
  Aşağıdaki izleme kaynakları desteklenmez:  
   
@@ -129,13 +129,13 @@ Windows Communication Foundation (WCF) kısmen güvenilen bir ortamda çalışı
 
 - [System. ServiceModel. Internal. TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
   
- <xref:System.Diagnostics.TraceOptions> Numaralandırmanın aşağıdaki üyeleri belirtilmemelidir:  
+ <xref:System.Diagnostics.TraceOptions> numaralandırmanın aşağıdaki üyeleri belirtilmemelidir:  
   
 - <xref:System.Diagnostics.TraceOptions.Callstack?displayProperty=nameWithType>  
   
 - <xref:System.Diagnostics.TraceOptions.ProcessId?displayProperty=nameWithType>  
   
- İzlemeyi kısmi güven ortamında kullanırken, uygulamanın İzleme dinleyicisinin çıkışını depolamak için yeterli izinlere sahip olduğundan emin olun. Örneğin, izleme çıkışını bir metin <xref:System.Diagnostics.TextWriterTraceListener> dosyasına yazmak için kullanırken, uygulamanın izleme dosyasına başarıyla yazmak için gerekli dosya dosyası ' na sahip olduğundan emin olun.  
+ İzlemeyi kısmi güven ortamında kullanırken, uygulamanın İzleme dinleyicisinin çıkışını depolamak için yeterli izinlere sahip olduğundan emin olun. Örneğin, izleme çıkışını bir metin dosyasına yazmak için <xref:System.Diagnostics.TextWriterTraceListener> kullanırken, uygulamanın izleme dosyasına başarıyla yazmak için gerekli dosya dosyası ' na sahip olduğundan emin olun.  
   
 > [!NOTE]
 > İzleme dosyalarının yinelenen hatalarla taşmasını önlemek için, WCF ilk güvenlik hatasından sonra kaynağın veya eylemin izlenmesini devre dışı bırakır. Her başarısız kaynak erişimi için bir özel durum izlemesi vardır. kaynağa erişmek veya eylemi gerçekleştirmek için ilk kez girişimde bulunuldu.  
@@ -144,7 +144,8 @@ Windows Communication Foundation (WCF) kısmen güvenilen bir ortamda çalışı
  WCF hizmeti ana bilgisayarı kısmi güveni desteklemez. Kısmi güvende bir WCF hizmeti kullanmak istiyorsanız, Visual Studio 'da WCF hizmet kitaplığı proje şablonunu kullanarak hizmetinizi oluşturun. Bunun yerine, Visual Studio 'da, WCF kısmi güveninin desteklendiği bir Web sunucusunda hizmeti barındırabilen WCF hizmeti Web sitesi şablonunu seçerek yeni bir Web sitesi oluşturun.  
   
 ## <a name="other-limitations"></a>Diğer sınırlamalar  
- WCF, genel olarak, barındırma uygulaması tarafından bu uygulamaya getirilen güvenlik hususları ile sınırlıdır. Örneğin, WCF bir XAML tarayıcı uygulamasında (XBAP) barındırılıyorsa, [Windows Presentation Foundation kısmi güven güvenliği](https://go.microsoft.com/fwlink/?LinkId=89138)' nde açıklandığı gıbı, XBAP kısıtlamalarına tabidir.  
+
+  WCF, genel olarak, barındırma uygulaması tarafından bu uygulamaya getirilen güvenlik hususları ile sınırlıdır. Örneğin, WCF bir XAML tarayıcı uygulamasında (XBAP) barındırılıyorsa, [Windows Presentation Foundation kısmi güven güvenliği](../../wpf/wpf-partial-trust-security.md)' nde açıklandığı gıbı, XBAP kısıtlamalarına tabidir.  
   
  Kısmi güven ortamında İndigo2 çalıştırılırken aşağıdaki ek özellikler etkinleştirilmemiştir:  
   
@@ -157,7 +158,7 @@ Windows Communication Foundation (WCF) kısmen güvenilen bir ortamda çalışı
  Kısmi güven ortamında desteklenmeyen WCF özelliklerinin kullanımı, çalışma zamanında özel durumlara neden olabilir.  
   
 ## <a name="unlisted-features"></a>Listelenmemiş Özellikler  
- Kısmi güven ortamında çalışırken bir bilgi veya eylem parçasının kullanılamaz olduğunu öğrenmenin en iyi yolu, kaynağa erişmeyi veya bir `try` bloğun içinde eylemi yapmayı denemenin yanı `catch` sıra başarısız olur. İzleme dosyalarının yinelenen hatalarla taşmasını önlemek için, WCF ilk güvenlik hatasından sonra kaynağın veya eylemin izlenmesini devre dışı bırakır. Her başarısız kaynak erişimi için bir özel durum izlemesi vardır. kaynağa erişmek veya eylemi gerçekleştirmek için ilk kez girişimde bulunuldu.  
+ Kısmi güven ortamında çalışırken bir bilgi veya eylem parçasının kullanılamaz olduğunu öğrenmenin en iyi yolu, kaynağa erişmeyi veya `try` bloğunun içindeki eylemi yapmayı denemeniz ve sonra hatanın `catch`. İzleme dosyalarının yinelenen hatalarla taşmasını önlemek için, WCF ilk güvenlik hatasından sonra kaynağın veya eylemin izlenmesini devre dışı bırakır. Her başarısız kaynak erişimi için bir özel durum izlemesi vardır. kaynağa erişmek veya eylemi gerçekleştirmek için ilk kez girişimde bulunuldu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

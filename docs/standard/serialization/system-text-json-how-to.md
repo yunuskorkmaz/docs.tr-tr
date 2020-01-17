@@ -1,17 +1,20 @@
 ---
 title: .NET kullanarak C# JSON serileştirmek ve serisini kaldırma
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 047d5b5c6fa339089d2054eb6bfe8b3066c1d00c
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: fdca8d957bb2453e90652af1dfe5ef99b33b1b2c
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904653"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163208"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET içinde JSON ve seri hale getirme (sıralama ve kaldırma)
 
@@ -563,7 +566,7 @@ Aşağıdaki örnek, önceki koddan elde edilen JSON 'u göstermektedir:
 }
 ```
 
-Polimorfik **serileştirme**hakkında daha fazla bilgi edinmek ve **serisini kaldırma**hakkında bilgi Için, bkz. [Newtonsoft. JSON 'Dan System. Text. JSON 'a geçiş](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
+Polimorfik **serileştirme**hakkında daha fazla bilgi ve **seri durumundan çıkarma**hakkında daha fazla bilgi için, bkz. [Newtonsoft.Json 'dan System.Text.Json'ye geçirme ](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
 
 ## <a name="allow-comments-and-trailing-commas"></a>Yorumlara ve sondaki virgülleri izin ver
 
@@ -777,9 +780,9 @@ Yukarıdaki kodun okuya, bir JSON örneği aşağıda verilmiştir. Sonuçtaki �
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-* [System. Text. JSON genel bakış](system-text-json-overview.md)
+* [System.Text.Json genel bakış](system-text-json-overview.md)
 * [Özel dönüştürücüler yazma](system-text-json-converters-how-to.md)
-* [Newtonsoft. JSON 'dan geçiş yapma](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [System. Text. JSON içinde DateTime ve DateTimeOffset desteği](../datetime/system-text-json-support.md)
-* [System. Text. JSON API başvurusu](xref:System.Text.Json)
+* [Newtonsoft.Json geçiş](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [System.Text.Json DateTime ve DateTimeOffset desteği](../datetime/system-text-json-support.md)
+* [System.Text.Json API başvurusu](xref:System.Text.Json)
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

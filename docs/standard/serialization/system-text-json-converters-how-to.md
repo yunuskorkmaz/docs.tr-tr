@@ -1,18 +1,21 @@
 ---
 title: JSON serileştirme-.NET için özel dönüştürücüler yazma
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 0f8b89ec7d7b1677de085631958b888e154aa4fa
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: f72d2d83d701b20648140900d65c9098a8abb721
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116715"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76164066"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET 'teki JSON serileştirme (sıralama) için özel dönüştürücüler yazma
 
@@ -285,7 +288,7 @@ Yukarıdaki örnekteki dönüştürücü kodu, her bir özelliği el ile okur ve
 
 ## <a name="other-custom-converter-samples"></a>Diğer özel dönüştürücü örnekleri
 
-[Newtonsoft. JSON 'Dan System. Text. JSON 'A geçiş](system-text-json-migrate-from-newtonsoft-how-to.md) , özel dönüştürücülerin ek örneklerini içerir.
+[Newtonsoft.Json 'den System.Text.Jsonmakalesine geçiş](system-text-json-migrate-from-newtonsoft-how-to.md) , özel dönüştürücülerin ek örneklerini içerir.
 
 `System.Text.Json.Serialization` kaynak kodundaki [birim testleri klasörü](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) , aşağıdakiler gibi diğer özel dönüştürücü örneklerini içerir:
 
@@ -300,10 +303,10 @@ Varolan bir yerleşik dönüştürücünün davranışını değiştiren bir dö
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 * [Yerleşik dönüştürücüler için kaynak kodu](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
-* [System. Text. JSON içinde DateTime ve DateTimeOffset desteği](../datetime/system-text-json-support.md)
-* [System. Text. JSON genel bakış](system-text-json-overview.md)
-* [System. Text. JSON kullanma](system-text-json-how-to.md)
-* [Newtonsoft. JSON 'dan geçiş yapma](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [System. Text. JSON API başvurusu](xref:System.Text.Json)
-* [System. Text. JSON. Serialization API başvurusu](xref:System.Text.Json.Serialization)
+* [System.Text.Json DateTime ve DateTimeOffset desteği](../datetime/system-text-json-support.md)
+* [System.Text.Json genel bakış](system-text-json-overview.md)
+* [System.Text.Json kullanma](system-text-json-how-to.md)
+* [Newtonsoft.Json geçiş](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [System.Text.Json API başvurusu](xref:System.Text.Json)
+* [System.Text.Json. Serileştirme API başvurusu](xref:System.Text.Json.Serialization)
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

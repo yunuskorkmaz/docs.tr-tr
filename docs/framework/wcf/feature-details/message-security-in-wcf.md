@@ -2,70 +2,70 @@
 title: WCF'de İleti Güvenliği
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 9c63e035d295860ea29dbbcd66bfd4527d837de4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32f6659f6ac744ab7af07c23e7e26ea1124d020c
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046585"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212065"
 ---
 # <a name="message-security-in-wcf"></a>WCF'de İleti Güvenliği
 
-Windows Communication Foundation (WCF) güvenlik sağlamak için iki ana modu vardır (`Transport` ve `Message`) ve üçüncü modu (`TransportWithMessageCredential`), iki birleştirir. Bu konu, ileti güvenliği ve nedenleri kullanılacağını açıklar.
+Windows Communication Foundation (WCF), güvenlik sağlamak için iki ana moda sahiptir (`Transport` ve `Message`) ve ikisini birleştiren üçüncü bir mod (`TransportWithMessageCredential`). Bu konuda ileti güvenliği ve kullanma nedenleri ele alınmaktadır.
 
-## <a name="what-is-message-security"></a>İleti güvenliği nedir?
+## <a name="what-is-message-security"></a>Ileti güvenliği nedir?
 
-İleti güvenliği WS-Security belirtimi iletileri güvenli hale getirmek için kullanır. WS-Security belirtimi, gizlilik, bütünlük ve kimlik doğrulaması (aktarım düzeyi) yerine SOAP ileti düzeyinde emin olmak için Mesajlaşma SOAP yapılan geliştirmeleri açıklar.
+İleti güvenliği, iletileri güvenli hale getirmek için WS-Security belirtimini kullanır. WS-Security belirtimi SOAP ileti düzeyinde gizlilik, bütünlük ve kimlik doğrulaması sağlamak için SOAP mesajlaşma iyileştirmeleri tanımlar (aktarım düzeyi yerine).
 
-Kısaca, ileti güvenliği, güvenlik kimlik bilgileri ve herhangi bir ileti koruma (imzalama veya şifreleme) yanı sıra her bir ileti ile talep kapsülleyerek aktarım güvenliği ' farklıdır. Güvenlik içeriği değiştirerek iletiyi doğrudan uygulama güvenli bir ileti ile ilgili güvenlik konuları içeren kendi kendine olmasını sağlar. Bu aktarım güvenliği kullanıldığında, mümkün olmayan bazı senaryolar sağlar.
+Kısaca ileti güvenliği, her iletiyle birlikte güvenlik kimlik bilgilerini ve taleplerini kapsülleyerek (imzalama veya şifreleme), aktarım güveninden farklıdır. İçeriğini değiştirerek güvenlik doğrudan iletiye uygulandığında, güvenli iletinin güvenlik yönlerine göre kendi kendine birlikte içerme olanağı sağlanır. Bu, aktarım güvenliği kullanıldığında mümkün olmayan bazı senaryolar sunar.
 
-## <a name="reasons-to-use-message-security"></a>İleti güvenliği kullanma nedenleri
+## <a name="reasons-to-use-message-security"></a>Ileti güvenliğini kullanma nedenleri
 
-İleti düzeyi güvenlik, tüm güvenlik bilgileri saklanmış olduğu iletisi. İleti düzeyi güvenliği yerine aktarım düzeyi güvenlik ile ileti güvenliği aşağıdaki avantajlara sahiptir:
+İleti düzeyinde güvenlik bölümünde, tüm güvenlik bilgileri iletide kapsüllenir. Aktarım düzeyi güvenlik yerine ileti düzeyinde güvenlikle iletinin güvenliğini sağlamak aşağıdaki avantajları içerir:
 
-- Uçtan uca güvenlik. Noktadan noktaya iletişim olduğunda aktarım güvenliği, Güvenli Yuva Katmanı (SSL) gibi iletileri yalnızca güvenliğini sağlar. İleti ultimate alıcı ulaşmadan önce bir veya daha fazla SOAP aracıları (örneğin bir yönlendirici) için yönlendirilir, isteğe bağlı olarak bir aracı hattan okur sonra ileti korumalı değil. Ayrıca, istemci kimlik doğrulama bilgilerini yalnızca ilk aracı için kullanılabilir ve bant dışı bir şekilde ultimate alıcısına gerekirse yeniden iletilmesi gerekir. SSL güvenlik tek atlama arasında tüm yol kullansa bile bu geçerlidir. İleti güvenliği doğrudan ileti ile çalışır ve XML'de güvenliğini sağlar çünkü güvenlik iletisi ultimate alıcı ulaşmadan önce kaç aracılar dahil bağımsız olarak kalır. Bu, doğru uçtan uca güvenlik senaryosu sağlar.
+- Uçtan uca güvenlik. Güvenli Yuva Katmanı (SSL) gibi aktarım güvenliği, yalnızca iletişim noktadan noktaya olduğunda iletileri korur. İleti, son alıcıya ulaşmadan önce bir veya daha fazla SOAP aracısıyla (örneğin, bir yönlendirici) yönlendirilirse, bir aracı onu kablodan okuduktan sonra ileti korunmaz. Ayrıca, istemci kimlik doğrulama bilgileri yalnızca ilk aracı tarafından kullanılabilir ve gerekirse bant dışı olarak son alıcıya yeniden aktarılmalıdır. Bu, tüm yolun bireysel atlama arasında SSL güvenliği kullanması durumunda bile geçerlidir. İleti güvenliği iletiyle doğrudan çalıştığı ve içindeki XML 'nin güvenliğini sağladığından, son alıcıya ulaşmadan önce kaç aracı dahil ettiğinize bakılmaksızın güvenlik iletiyle birlikte kalır. Bu, doğru uçtan uca bir güvenlik senaryosu sağlar.
 
-- Daha fazla esneklik. İletinin tamamı yerine ileti bölümlerini imzalanmış veya şifrelenmiş. Başka bir deyişle, aracılar için tasarlanmıştır ileti bölümlerini görüntüleyebilirsiniz. Gönderen bilgi parçası iletisinde aracılar için görünür duruma getirmek için gerekli, ancak bunu ile müdahaleye uğramadığından emin olmak istiyor, bunu yalnızca imzalayın ancak şifrelenmemiş bırakın. İmza iletisinin bir parçası olduğundan, ultimate alıcı bilgi iletisi bozulmadan alındığını doğrulayabilirsiniz. Bir senaryo, bir SOAP aracı eylemi üst bilgi değeri göre yollar ileti hizmet olabilir. Varsayılan olarak, WCF, eylem değerini şifrelemez ancak ileti güvenliği kullanılıyorsa, oturum açtığında. Bu nedenle, bu bilgiler, tüm aracılar için kullanılabilir, ancak hiç değiştirebilirsiniz.
+- Daha fazla esneklik. İletinin tamamı yerine ileti parçaları imzalanabilir veya şifrelenebilir. Bu, aracıların kendisine yönelik ileti parçalarını görüntüleyebileceği anlamına gelir. Gönderenin, iletideki bilgilerin bir kısmını aracıların görebilmesi, ancak üzerinde oynanmamasını sağlamak isterse, bu, yalnızca imzalayıp şifrelenmemiş olarak bırakabilirsiniz. İmza iletinin bir parçası olduğundan, son alıcı iletideki bilgilerin bozulmadan alındığını doğrulayabilirler. Bir senaryoda iletiyi eylem üst bilgi değerine göre yönlendiren bir SOAP aracı hizmeti olabilir. Varsayılan olarak, WCF eylem değerini şifrelemez, ancak ileti güvenliği kullanılıyorsa bunu imzalar. Bu nedenle, bu bilgiler tüm aracılar tarafından kullanılabilir, ancak kimse bunu değiştiremezler.
 
-- Birden çok aktarımı için destek. İçin güvenlik protokolü kullanan gerek kalmadan Adlandırılmış Kanallar ve, TCP gibi çok sayıda farklı taşımalar üzerinden güvenli iletiler gönderebilirsiniz. Aktarım düzeyi güvenlik ile tüm güvenlik bilgilerini tek bir belirli taşıma bağlantısı kapsamlıdır ve ileti içeriği kendisini kullanılabilir değil. İleti güvenliği iletinin ileti ve güvenlik bağlamı iletmek için kullandığınız aktarım doğrudan ileti içine katıştırılmış bağımsız olarak güvenli hale getirir.
+- Birden çok aktarım için destek. Güvenlik protokolüne güvenmeleri gerekmeden, adlandırılmış kanallar ve TCP gibi birçok farklı aktarımdan güvenli iletiler gönderebilirsiniz. Aktarım düzeyi güvenliği sayesinde, tüm güvenlik bilgileri tek bir belirli aktarım bağlantısı kapsamına alınır ve ileti içeriğinin kendisi tarafından kullanılamaz. İleti güvenliği iletiyi aktarmak için kullandığınız aktarımdan bağımsız olarak iletiyi güvenli hale getirir ve güvenlik bağlamı doğrudan iletinin içine katıştırılır.
 
-- Çok sayıda kimlik bilgilerini ve talepler için destek. İleti güvenliği talep SOAP iletisi içinde herhangi bir türde aktarabilen genişletilebilir bir çerçeve sağlar WS-güvenlik belirtimi temel alır. Aktarım güvenliği, kimlik doğrulama mekanizmaları veya kullanabileceğiniz talep kümesini taşıma özellikleri ile sınırlı değildir. WCF ileti güvenliğini birden çok kimlik doğrulaması ve talep iletim içerir ve gerektiğinde ek türlerini destekleyecek şekilde genişletilebilir. Bu nedenlerle, örneğin, bir Federasyon kimlik senaryosu ileti güvenliği mümkün değildir. Federasyon senaryolarında WCF desteklediği hakkında daha fazla bilgi için bkz. [Federasyon ve verilen belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).
+- Geniş bir kimlik bilgileri ve talepler kümesi için destek. İleti güvenliği, SOAP iletisinde herhangi bir tür talep gönderebilen genişletilebilir bir çerçeve sağlayan WS-Security belirtimini temel alır. Aktarım güvenliğinin aksine, kullanabileceğiniz kimlik doğrulama mekanizmaları veya talepler kümesi, taşıma özellikleri ile sınırlı değildir. WCF ileti güvenliği, birden çok kimlik doğrulaması ve talep iletimi içerir ve gerektiğinde ek türleri desteklemek için genişletilebilir. Örneğin, bu nedenlerle bir federal kimlik bilgileri senaryosu ileti güvenliği olmadan mümkün değildir. WCF tarafından desteklenen Federasyon senaryoları hakkında daha fazla bilgi için bkz. [Federasyon ve verilen belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).
 
-## <a name="how-message-and-transport-security-compare"></a>İleti ve aktarım güvenliği nasıl karşılaştırın
+## <a name="how-message-and-transport-security-compare"></a>Ileti ve taşıma güvenliği nasıl karşılaştırılır
 
-### <a name="pros-and-cons-of-transport-level-security"></a>Artıları ve eksileri aktarım düzeyi güvenlik
+### <a name="pros-and-cons-of-transport-level-security"></a>Aktarım düzeyi güvenliği için olumlu ve olumsuz yönleri
 
-Aktarım güvenliği aşağıdaki avantajlara sahiptir:
+Taşıma güvenliği aşağıdaki avantajları içerir:
 
-- İletişim kuran taraflar XML düzeyinde güvenlik kavramları anlama gerektirmez. Örneğin, HTTPS iletişimi güvenli hale getirmek için kullanıldığında, bu birlikte çalışabilirlik artırabilir.
+- , İletişim kuran tarafların XML düzeyi güvenlik kavramlarını anlamasına gerek yoktur. Bu, örneğin HTTPS 'yi güvenli hale getirmek için HTTPS kullanıldığında, birlikte çalışabilirliğini iyileştirebilir.
 
-- Genel olarak performansı İyileştirildi.
+- Genel olarak gelişmiş performans.
 
-- Donanım Hızlandırıcıları kullanılabilir.
+- Donanım hızlandırıcıları kullanılabilir.
 
 - Akış mümkündür.
 
- Aktarım güvenliği aşağıdaki dezavantajları bulunur:
+ Taşıma güvenliği aşağıdaki dezavantajlara sahiptir:
 
-- Atlama için-atlama yalnızca.
+- Yalnızca atlama atlama.
 
-- Kimlik bilgileri sınırlandırırız ve inextensible kümesi.
+- Sınırlı ve Genişletilebilir kimlik bilgileri kümesi.
 
-- Aktarım bağlıdır.
+- Aktarıma bağımlı.
 
-### <a name="disadvantages-of-message-level-security"></a>İleti düzeyi güvenliği dezavantajları
+### <a name="disadvantages-of-message-level-security"></a>Ileti düzeyinde güvenliğin dezavantajları
 
-İleti güvenliği aşağıdaki dezavantajları bulunur:
+İleti güvenliği aşağıdaki dezavantajlara sahiptir:
 
 - Performans
 
-- İleti akışı kullanamazsınız.
+- İleti akışı kullanılamıyor.
 
-- Uygulama, XML düzeyinde güvenlik mekanizmalar ve destek için WS-Security belirtimi gerektirir. Bu, birlikte çalışabilirlik etkileyebilir.
+- XML düzeyi güvenlik mekanizmalarının uygulanmasını ve WS-Security belirtimi desteğini gerektirir. Bu işlem, birlikte çalışabilirliği etkileyebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [Nasıl yapılır: Kullanım taşıma Güveniği ve ileti kimlik bilgileri](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
-- [Microsoft desenler ve uygulamalar, Bölüm 3: Uygulama aktarım ve ileti Katmanı Güvenliği](https://go.microsoft.com/fwlink/?LinkId=88897)
+- [Nasıl yapılır: Aktarım Güvenliği ve İleti Kimlik Bilgilerini Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [Microsoft desenleri ve uygulamaları, Bölüm 3: taşıma ve Ileti Katmanı Güvenliği uygulama](https://docs.microsoft.com/previous-versions/msp-n-p/ff647370(v=pandp.10))

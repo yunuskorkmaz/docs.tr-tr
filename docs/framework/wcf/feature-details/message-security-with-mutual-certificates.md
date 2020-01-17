@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: bd64531116b1588683c2f5c8964e78e41e371ecf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e784e254fb9314e69457d81a70400f7be30d9c13
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955348"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211991"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Karşılıklı Sertifikalar ile İleti Güvenliği
 Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanmış bir Windows Communication Foundation (WCF) hizmeti ve istemcisi gösterilmektedir. İstemci ve hizmet, sertifikalarla doğrulanır.  
@@ -22,14 +22,14 @@ Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanm
   
  ![Karşılıklı sertifikalarla ileti güvenliği](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
-|Özellik|Açıklama|  
+|Özellikler|Açıklama|  
 |--------------------|-----------------|  
-|Güvenlik modu|`Message`|  
+|Güvenlik modu|İleti|  
 |Birlikte Çalışabilirlik|Evet, WS-Security ve X. 509.440 sertifika belirteci profiliyle uyumlu istemciler ve hizmetler ile.|  
-|Kimlik doğrulaması|Sunucu ve istemcinin karşılıklı kimlik doğrulaması.|  
-|Doğruluğunu|Evet|  
+|Kimlik Doğrulama|Sunucu ve istemcinin karşılıklı kimlik doğrulaması.|  
+|Bütünlük|Evet|  
 |Gizlilik|Evet|  
-|Aktarım|HTTP|  
+|Aktarma|HTTP|  
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Hizmet  
@@ -107,7 +107,7 @@ Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanm
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>Yapılandırma  
- Aşağıdaki, istemcisini yapılandırır. Bir istemci sertifikasının, [ \<ClientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)kullanılarak belirtilmesi gerekir. Ayrıca, hizmet sertifikası [ \<DefaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)kullanılarak belirtilir.  
+ Aşağıdaki, istemcisini yapılandırır. İstemci sertifikasının [\<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)kullanılarak belirtilmesi gerekir. Ayrıca, hizmet sertifikası [\<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)kullanılarak belirtilir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -161,5 +161,5 @@ Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanm
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
-- [Nasıl yapılır: Geliştirme sırasında aktarım güvenliği için WCF 'de geçici sertifikalar oluşturma ve bunları yüklemesi](https://go.microsoft.com/fwlink/?LinkId=244264)
+- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Nasıl yapılır: geliştirme sırasında aktarım güvenliği için WCF 'de geçici sertifikalar oluşturma ve bunları kullanma](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))

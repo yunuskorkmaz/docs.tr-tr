@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: a73f6333a91cd8018fe8e0c34d44db87938b8058
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: c68ca0f7c95515a0552b7003454dd87804176d3d
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347091"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212211"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma
 Türü belirlenmiş bir sözleşmeyle bir COM uygulaması içinde Windows Communication Foundation (WCF) hizmet bilinen adını kullanmadan önce, gerekli öznitelikli türleri COM 'a kaydetmeniz ve COM uygulamasını ve bilinen bağlamayı gerekli bağlamaya göre yapılandırmanız gerekir yapılandırmada.  
@@ -25,7 +25,7 @@ Türü belirlenmiş bir sözleşmeyle bir COM uygulaması içinde Windows Commun
     [assembly: ComVisible(true)]  
     ```  
   
-3. Yönetilen WCF istemcisini tanımlayıcı adlı bir derleme olarak derleyin. Bu, bir şifreleme anahtar çiftiyle imza gerektirir. Daha fazla bilgi için bkz. .NET geliştirici kılavuzunda [güçlü bir ada sahip bir derlemeyi imzalama](https://go.microsoft.com/fwlink/?LinkId=94874) .  
+3. Yönetilen WCF istemcisini tanımlayıcı adlı bir derleme olarak derleyin. Bu, bir şifreleme anahtar çiftiyle imza gerektirir. Daha fazla bilgi için bkz. [bir derlemeyi güçlü bir adla imzalama](../../../standard/assembly/sign-strong-name.md).  
   
 4. Derlemeyi COM ile derlemeye kaydetmek için `/tlb` seçeneğiyle bütünleştirilmiş kod kaydı (Regasm. exe) aracını kullanın.  
   

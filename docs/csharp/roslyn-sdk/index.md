@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK’sı (Roslyn API’leri)
 description: .NET kodunu anlamak, hataları belirlemek ve bu hataları onarmak için .NET Compiler Platform SDK 'sını (Roslyn API 'Leri olarak da bilinir) kullanmayı öğrenin.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 3a202d977237ce716e3f8c0cf906894efd02196d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 98984edad3a25daa8b0ea13b903c4e6447b8a22a
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346951"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163143"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK 'Sı
 
@@ -21,7 +21,7 @@ Roslyn aracılığıyla, opak kaynak kodu ve nesne kodu genişletme çeviriciler
 
 .NET Compiler Platform SDK, kodlama hatalarını bulup düzelten ***çözümleyiciler*** ve ***kod düzeltmeleri*** oluşturmanıza olanak sağlar. ***Çözümleyiciler*** , kodun sözdizimini ve yapısını anlayıp düzeltilmesi gereken uygulamaları algılar. ***Kod düzeltmeleri*** , çözümleyiciler tarafından bulunan kodlama hatalarının adreslenmesi için bir veya daha fazla önerilen düzeltme sağlar. Genellikle, bir çözümleyici ve ilişkili kod düzeltmeleri tek bir projede birlikte paketlenir.
 
-Çözümleyiciler ve kod düzeltmeleri kodu anlamak için statik analizler kullanır. Kodu çalıştırmaz veya diğer test avantajları sağlamaz. Ancak, genellikle hatalara, sürdürülebilir koda veya Standart Kılavuz doğrulamasına yol açabilecek uygulamalar ortaya çıkar.
+Çözümleyiciler ve kod düzeltmeleri kodu anlamak için statik analizler kullanır. Kodu çalıştırmaz veya diğer test avantajları sağlamaz. Ancak, genellikle hatalara, sürdürülebilir koda veya Standart Kılavuz ihlaline yol açabilecek uygulamalar ortaya çıkar.
 
 .NET Compiler Platform SDK, bir C# veya Visual Basic kod temeli incelemenizi ve anlamanıza olanak tanıyan tek bir API kümesi sağlar. Bu tek kod temelini kullanabilmeniz için, .NET Compiler Platform SDK 'Sı tarafından sunulan sözdizimsel ve anlam Analizi API 'Lerinden yararlanarak çözümleyiciler ve kod düzeltmeleri daha kolay bir şekilde yazabilirsiniz. Derleyicinin yaptığı çözümlemenin çoğaltılmasının büyük bir görevinden serbest bırakılmış olduğunda, projeniz veya kitaplığınız için ortak kodlama hatalarını bulma ve düzeltme hakkında daha odaklanmış bir göreve odaklanabilirsiniz.
 

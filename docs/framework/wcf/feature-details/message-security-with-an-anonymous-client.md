@@ -5,49 +5,49 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: 613b85e18109faa2a4386090e91aaddcfd8e0b68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fccdd021e392e6c37615a9091ce13f0e94167246
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038592"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211999"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Anonim İstemci ile İleti Güvenliği
 
-Aşağıdaki senaryoda bir istemci ve Windows Communication Foundation (WCF) ileti güvenliği tarafından güvenliği sağlanan hizmet gösterilmektedir. Gelecekte daha zengin bir beyana dayalı modeli destekleyebilir böylece tasarım hedefi aktarım güvenliği yerine ileti güvenliği kullanmaktır. Yetkilendirme için zengin talep kullanma hakkında daha fazla bilgi için bkz. [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).
+Aşağıdaki senaryoda, Windows Communication Foundation (WCF) ileti güvenliği ile güvenliği sağlanmış bir istemci ve hizmet gösterilmektedir. Bir tasarım hedefi, aktarım güvenliği yerine ileti güvenliği kullanmak ve ileride daha zengin bir talep tabanlı modeli destekleyebilmesi için kullanılır. Yetkilendirme için zengin talepler kullanma hakkında daha fazla bilgi için bkz. [kimlik modeliyle talepleri ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).
 
-Örnek bir uygulama için bkz: [ileti güvenliği anonim](../../../../docs/framework/wcf/samples/message-security-anonymous.md).
+Örnek bir uygulama için bkz. [Ileti güvenliği anonim](../../../../docs/framework/wcf/samples/message-security-anonymous.md).
 
-![İleti güvenliği anonim istemci ile](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
+![Anonim bir istemciyle ileti güvenliği](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
 
-|Özelliği|Açıklama|
+|Özellikler|Açıklama|
 |--------------------|-----------------|
 |Güvenlik modu|İleti|
 |Birlikte Çalışabilirlik|Yalnızca WCF|
-|Kimlik doğrulaması (sunucu)|İlk anlaşma sunucu kimlik doğrulaması, ancak değil istemci kimlik doğrulaması gerektirir|
-|Kimlik doğrulaması (istemci)|None|
-|Bütünlüğü|Evet, paylaşılan bir güvenlik bağlamı kullanma|
-|Gizliliği|Evet, paylaşılan bir güvenlik bağlamı kullanma|
-|Taşıma|HTTP|
+|Kimlik doğrulaması (sunucu)|İlk anlaşma sunucu kimlik doğrulaması gerektirir, ancak istemci kimlik doğrulaması gerektirmez|
+|Kimlik doğrulaması (Istemci)|Yok.|
+|Bütünlük|Evet, paylaşılan güvenlik bağlamını kullanma|
+|Gizlilik|Evet, paylaşılan güvenlik bağlamını kullanma|
+|Aktarma|HTTP|
 
 ## <a name="service"></a>Hizmet
 
-Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:
+Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:
 
-- Kod ile yapılandırma kullanarak tek başına bir hizmet oluşturun.
+- Yapılandırma olmadan kodu kullanarak tek başına bir hizmet oluşturun.
 
-- Sağlanan Yapılandırması'nı kullanarak bir hizmet oluşturma, ancak tüm uç noktalar tanımlamaz.
+- Sağlanan yapılandırmayı kullanarak bir hizmet oluşturun, ancak herhangi bir uç nokta tanımlamaz.
 
 ### <a name="code"></a>Kod
 
-Aşağıdaki kod, ileti güvenliği kullanan bir hizmet uç noktası oluşturma gösterilmektedir.
+Aşağıdaki kod, ileti güvenliği kullanan bir hizmet uç noktasının nasıl oluşturulacağını göstermektedir.
 
 [!code-csharp[C_SecurityScenarios#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#8)]
 [!code-vb[C_SecurityScenarios#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#8)]
 
 ### <a name="configuration"></a>Yapılandırma
 
-Aşağıdaki yapılandırmayı kod yerine kullanılabilir. Hizmet davranışı öğesi hizmete istemcinin kimliğini doğrulamak için kullanılan bir sertifika belirtmek için kullanılır. Hizmet öğesi davranışını kullanarak belirtmelisiniz `behaviorConfiguration` özniteliği. İstemci kimlik bilgisi türü olduğunu bağlama öğesi belirtir `None`, hizmeti kullanmak anonim istemcilere izin verme.
+Aşağıdaki yapılandırma kod yerine kullanılabilir. Hizmet davranışı öğesi, istemciye hizmetin kimliğini doğrulamak için kullanılan bir sertifika belirtmek için kullanılır. Hizmet öğesi `behaviorConfiguration` özniteliğini kullanarak davranışı belirtmelidir. Bağlama öğesi, istemci kimlik bilgisi türünün `None`olduğunu belirtir ve anonim istemcilerin hizmeti kullanmasına izin verir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -90,25 +90,25 @@ Aşağıdaki yapılandırmayı kod yerine kullanılabilir. Hizmet davranışı �
 
 ## <a name="client"></a>İstemci
 
-Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:
+Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:
 
-- Bir tek başına istemci kodu (ve istemci kodu) kullanarak oluşturun.
+- Kodu kullanarak tek başına istemci oluşturun (ve istemci kodu).
 
-- Herhangi bir uç nokta adresi tanımlamıyor bir istemci oluşturun. Bunun yerine, yapılandırma adı bağımsız değişkeni olarak alan İstemci Oluşturucu kullanın. Örneğin:
+- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucusunu kullanın. Örneğin:
 
     [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
     [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
 
 ### <a name="code"></a>Kod
 
-Aşağıdaki kod, istemci bir örneğini oluşturur. İleti modu güvenliği bağlama kullanır ve istemci kimlik bilgisi türü hiçbiri olarak ayarlandı.
+Aşağıdaki kod, istemcisinin bir örneğini oluşturur. Bağlama ileti modu güvenliği kullanır ve istemci kimlik bilgisi türü None olarak ayarlanır.
 
 [!code-csharp[C_SecurityScenarios#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#15)]
 [!code-vb[C_SecurityScenarios#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#15)]
 
 ### <a name="configuration"></a>Yapılandırma
 
-Aşağıdaki kod, istemciyi yapılandırır.
+Aşağıdaki kod istemcisini yapılandırır.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -144,4 +144,4 @@ Aşağıdaki kod, istemciyi yapılandırır.
 - [Dağıtılan Uygulama Güvenliği](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
 - [İleti Güvenliği Anonim](../../../../docs/framework/wcf/samples/message-security-anonymous.md)
 - [Kimlik Doğrulama ile Hizmet Kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

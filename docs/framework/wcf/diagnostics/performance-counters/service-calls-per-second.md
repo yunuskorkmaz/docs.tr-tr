@@ -1,20 +1,20 @@
 ---
-title: 'Hizmet: Çağrı/saniye'
+title: 'Hizmet: Saniye Başına Çağrı'
 ms.date: 03/30/2017
 ms.assetid: 6261d28d-d449-425a-b9fc-a4ee14079134
-ms.openlocfilehash: 5189a78e2655707d165f187e06ac9a60d055eac0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be5d77169a71d6f44205a1150da5239eceff7d9c
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773371"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163910"
 ---
-# <a name="service-calls-per-second"></a>Hizmet: Çağrı/saniye
-Sayaç adı: Saniyede çağrı sayısı.  
+# <a name="service-calls-per-second"></a>Hizmet: Saniye Başına Çağrı
+Sayaç adı: saniye başına çağrı.  
   
 ## <a name="description"></a>Açıklama  
- Bu hizmete bir saniye içinde çağrı sayısı.  
+ Bu hizmete saniye içinde yapılan çağrı sayısı.  
   
- Bu sayaç performans sayacı türüdür [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), değeri aşağıdaki formül kullanılarak hesaplanır.  
+ Bu sayaç, değeri aşağıdaki formül kullanılarak hesaplanan [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))performans sayacı türüdür.  
   
- (1 - N 0 N) / ((1 D -D 0) / F) (N) pay tıklarının sayısını geçen son örnek zaman aralığı boyunca paydası (D) temsil son örnek aralığı sırasında gerçekleştirilen işlemlerin sayısını temsil eder ve F işaretleri sıklığını olduğu yerde.
+ (N 1-N 0)/((D 1-D 0)/F) pay (N) son örnekleme aralığı sırasında gerçekleştirilen işlem sayısını temsil ediyorsa, payda (D) son örnekleme aralığı sırasında geçen işaret sayısını temsil eder ve F, Tick 'lerin sıklığıdır.

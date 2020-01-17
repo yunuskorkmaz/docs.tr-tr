@@ -2,19 +2,19 @@
 title: Saniyede Kuyruğa Alınan Bırakılmış İleti
 ms.date: 03/30/2017
 ms.assetid: 74540f52-8762-4147-b5ba-e171180515a3
-ms.openlocfilehash: f15b2db08ac4486377189a1533b653260d79024a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ec762d7e5dd7daf63b5df76e1ffb48957538538
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916168"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76164040"
 ---
 # <a name="queue-dropped-messages-per-second"></a>Saniyede Kuyruğa Alınan Bırakılmış İleti
-Sayaç adı: Saniye başına bırakılan kuyruğa alınmış iletiler.  
+Sayaç adı: saniye başına bırakılan sıraya alınan Ileti.  
   
 ## <a name="description"></a>Açıklama  
- Bir saniyede sıraya alınan aktarım sırasında bu hizmeti tarafından bırakılan ileti sayısı.  
+ Bu hizmette saniye içinde sıraya alınan aktarım tarafından bırakılan ileti sayısı.  
   
- Bu sayaç performans sayacı türüdür [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), değeri aşağıdaki formül kullanılarak hesaplanır.  
+ Bu sayaç, değeri aşağıdaki formül kullanılarak hesaplanan [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))performans sayacı türüdür.  
   
- (1 - N 0 N) / ((D 1 - D 0) / F)
+ (N 1-N 0)/((D 1-D 0)/F)

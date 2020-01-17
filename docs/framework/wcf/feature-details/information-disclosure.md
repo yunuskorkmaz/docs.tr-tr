@@ -2,68 +2,68 @@
 title: Bilgileri Açıklama
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 0e45a71855ecb172f36aae8139f89d4b8c8ffd0d
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0bcf1aa04d7ba7477a6c3f1559a77bbda1f974af
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425304"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211952"
 ---
 # <a name="information-disclosure"></a>Bilgileri Açıklama
 
-Bilgilerin açıklanması, bir saldırganın bir sistem hakkında değerli bilgiler sağlar. Bu nedenle, her zaman ve mi kötü niyetli bir kullanıcı tarafından kullanılabilir, devamlılığımız bilgiler göz önünde bulundurun. Aşağıdaki olası bilgi ifşası saldırıları listeler ve her risk azaltma işlemleri sağlar.
+Bilgilerin açığa çıkması, saldırganın bir sistem hakkında değerli bilgiler sağlamasına olanak sağlar. Bu nedenle, hangi bilgileri öğrendiklerinizi ve kötü niyetli bir kullanıcı tarafından kullanılıp kullanılamayacağını her zaman düşünün. Aşağıda olası bilgilerin açığa çıkması saldırıları listelenmekte ve her biri için azaltmalar sunulmaktadır.
 
 ## <a name="message-security-and-http"></a>İleti güvenliği ve HTTP
 
-Bir HTTP Aktarım katmanı üzerinden ileti düzeyi güvenliği kullanıyorsanız, ileti düzeyi güvenliği HTTP üst bilgilerini korumaz dikkat edin. HTTP üst bilgilerini korumak için tek yolu, HTTP yerine HTTPS aktarımı kullanmaktır. HTTPS aktarımı Güvenli Yuva Katmanı (SSL) protokolü kullanılarak şifrelenmesi HTTP üst bilgileri de dahil olmak üzere tüm ileti, neden olur.
+Bir HTTP aktarım katmanı üzerinden ileti düzeyinde güvenlik kullanıyorsanız, ileti düzeyi güvenliğin HTTP üstbilgilerini korumadığı farkında olun. HTTP üstbilgilerini korumanın tek yolu HTTP yerine HTTPS taşıması kullanmaktır. HTTPS taşıması HTTP üstbilgileri dahil olmak üzere iletinin tamamının Güvenli Yuva Katmanı (SSL) protokolü kullanılarak şifrelenmesini sağlar.
 
 ## <a name="policy-information"></a>İlke bilgileri
 
-İlke güvende tutmanın özellikle nerede ilkede hassas verilen belirtecin gereksinimleri veya belirteci veren bilgi ifşa Federasyon senaryolarında önemlidir. Bu gibi durumlarda verilen belirteç koymak için talep türü gibi hizmeti hakkında bilgi almak veya kötü amaçlı belirteci verenler için istemcilerin yeniden yönlendirme saldırganların engel olmak için Federasyon hizmet uç noktası İlkesi güvenliğini sağlamak için önerilir. Örneğin, bir saldırganın federasyon güven zincirinde bir adam-de-ortadaki adam saldırısı yürütülen bir veren sonlandırmak için yapılandırarak kullanıcı adı/parola çiftleri keşfedin. İlke alma işlemi aracılığıyla bağlantıları elde Federasyon istemcilerinin elde edilen bir federasyon güven zincirinde verenler güvendikleri doğrulamanız önerilir. Federasyon senaryoları hakkında daha fazla bilgi için bkz. [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).
+İlkenin güvenli tutulması, özellikle hassas verilen belirteç gereksinimlerinin veya belirteç verenin bilgilerinin ilkede açığa çıkarılan Federasyon senaryolarında önemlidir. Bu durumlarda, saldırganların hizmet hakkında, verilen belirtece yerleştirilecek talepler türü veya istemcileri kötü amaçlı belirteç verenler için yeniden yönlendirme gibi bilgileri almasını engellemek için Federasyon Hizmeti 'nin ilke uç noktasının güvenli hale getirilmesine yönelik olması önerilir. Örneğin, bir saldırgan, Federasyon güven zincirini, ortadaki adam saldırısı gerçekleştiren bir verende sona erecek şekilde yeniden yapılandırarak Kullanıcı adı/parola çiftlerini bulabilir. Ayrıca, ilke alma yoluyla bağlamalarını elde eden Federasyon istemcilerinin, edinilen federasyon güven zincirindeki verenler için güvendiklerini doğrulayın. Federasyon senaryoları hakkında daha fazla bilgi için bkz. [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).
 
-## <a name="memory-dumps-can-reveal-claim-information"></a>Bellek dökümleri talep bilgilerini ortaya koyabilir
+## <a name="memory-dumps-can-reveal-claim-information"></a>Bellek dökümleri, talep bilgilerini açığa çıkarır
 
-Bir uygulama başarısız olduğunda, günlük dosyaları gibi Dr tarafından üretilen olanlar gibi. Watson, talep bilgilerini içerebilir. Bu bilgiler gibi destek ekipleri diğer varlıklara verilebilir; Aksi takdirde, özel veri içeren talep bilgileri de dışarı aktarılır. Bu günlük dosyaları için bilinmeyen varlıkların göndererek değil azaltabilirsiniz. Daha fazla bilgi için [Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=89160).
+Bir uygulama başarısız olduğunda, Dr. Watson tarafından üretilen gibi günlük dosyaları talep bilgilerini içerebilir. Bu bilgiler, destek takımları gibi diğer varlıklara aktarılmamalıdır; Aksi takdirde, özel verileri içeren talep bilgileri de verilir. Günlük dosyalarını bilinmeyen varlıklara göndermemek için bunu azaltabilirsiniz.
 
 ## <a name="endpoint-addresses"></a>Uç Noktası Adresleri
 
-Bir uç nokta adresi bir uç noktasıyla iletişim için gereken bilgileri içerir. SOAP güvenliği, tam olarak bir istemci ve sunucu arasında bir simetrik anahtar anlaşması için değiştirilen güvenlik anlaşma iletileri adresi eklemeniz gerekir. Güvenlik görüşmeleri önyükleme işlemi olduğundan, bu işlem sırasında adres üstbilgileri şifrelenemez. Bu nedenle, adresi herhangi bir gizli veri içermemelidir; Aksi takdirde, bilgi ifşası saldırılarına yol açar.
+Uç nokta adresi, bir uç nokta ile iletişim kurmak için gereken bilgileri içerir. SOAP Güvenliği, istemci ile sunucu arasında bir simetrik anahtar üzerinde anlaşmak için değiştirilen güvenlik anlaşması iletilerinde tam olarak adresi içermelidir. Güvenlik anlaşması bir önyükleme işlemi olduğundan, bu işlem sırasında adres üst bilgileri şifrelenemez. Bu nedenle, adres hiçbir gizli veri içermemelidir; Aksi takdirde, bilgilerin açığa çıkması saldırılarına yol açar.
 
-## <a name="certificates-transferred-unencrypted"></a>Sertifikaları şifrelenmemiş aktarılan
+## <a name="certificates-transferred-unencrypted"></a>Sertifikalar şifrelenmemiş olarak aktarıldı
 
-Bir istemcinin kimliğini doğrulamak için bir X.509 sertifikası kullandığınızda, sertifikanın SOAP üstbilgisi içinde açıkta aktarılır. Olası kişisel bilgileri (PII) ifşaatı bunun farkında olun. Bunun için bir sorun değildir `TransportWithMessageCredential` modu, tüm ileti aktarım düzeyi güvenlik ile şifrelenir burada.
+Bir istemcinin kimliğini doğrulamak için bir X. 509.952 sertifikası kullandığınızda, sertifika SOAP üstbilgisinin içinde açık olarak aktarılır. Bunu, kişisel olarak tanımlanabilen bilgileri (PII) açığa çıkabilecek bir açıklama olarak unutmayın. Bu, `TransportWithMessageCredential` modu için bir sorun değildir; burada iletinin tamamı aktarım düzeyi güvenlik ile şifrelenir.
 
 ## <a name="service-references"></a>Hizmet başvuruları
 
-Bir hizmet başvurusu, başka bir hizmete bir başvurudur. Örneğin, bir hizmet, bir istemcinin bir işlemi sırasında bir hizmet başvurusu iletebilir. Hizmet başvurusunu da ile kullanılan bir *kimlik doğrulama güven*, hedef sorumlunun kimlik gibi uygulama verileri veya hedef kimlik bilgilerini açığa çıkarmaktan önce sağlar. bir iç bileşeni. Uzak güven kimlik doğrulanamıyor veya yanlış, gönderen veri kendisi, uygulama veya kullanıcıya tehlikeye atabilecek duyurulmuştur emin olmanız gerekir.
+Hizmet başvurusu, başka bir hizmete başvurudur. Örneğin, bir hizmet, bir işlem sırasında bir istemciye hizmet başvurusu geçirebilir. Hizmet başvurusu, uygulama verileri veya hedef kimlik bilgileri gibi bilgileri kapatmadan önce hedef Sorumlunun kimliğini sağlayan bir *güven Kimliği Doğrulayıcısı*ile de kullanılır. Uzak güven kimliği doğrulanamazsa veya yanlışsa, gönderici kendisini, uygulamayı veya kullanıcıyı tehlikeye atabilecek hiçbir veri açıklanmamalıdır.
 
-Risk azaltma işlemleri şunlardır:
+Azaltmaları şunları içerir:
 
-- Hizmet başvurularını güvenilir olarak kabul edilir. Bunlar üzerinde oynanmadığını değil emin olmak için hizmet başvurusu örnekleri aktarma zaman dikkatli olun.
+- Hizmet başvurularının güvenilir olduğu varsayılır. Bakım yapılmamasını sağlamak için hizmet başvuru örneklerini aktarırken dikkatli olun.
 
-- Bazı uygulamalar, uzak konak tarafından kanıtlanmış hizmet başvurusu ve güven verilerini dayalı güven etkileşimli kurma izin veren bir kullanıcı deneyimi sunabilir. WCF böyle bir özellik için genişletilebilirlik noktaları sağlar, ancak kullanıcı bunları uygulanan gerekir.
+- Bazı uygulamalar, hizmet başvurusunda bulunan verilere ve uzak ana bilgisayar tarafından kanıtlanan güven verilerine göre etkileşimli güven oluşturulmasına izin veren bir kullanıcı deneyimi sunabilir. WCF böyle bir tesis için genişletilebilirlik noktaları sağlar, ancak kullanıcı bunları uygulamalıdır.
 
 ## <a name="ntlm"></a>NTLM
 
-Varsayılan olarak, Windows etki alanı ortamında kimliğini doğrulamak ve kullanıcılara yetki vermek için Kerberos protokolü Windows kimlik doğrulaması kullanır. Kerberos protokolü için herhangi bir nedenle kullanılamıyorsa, NT LAN Manager (NTLM) bir geri dönüş olarak kullanılır. Ayarlayarak bu davranışı devre dışı bırakabilirsiniz <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliğini `false`. NTLM izin verirken dikkat edilmesi gereken konular şunlardır:
+Varsayılan olarak, Windows etki alanı ortamında Windows kimlik doğrulaması, kullanıcıların kimliğini doğrulamak ve yetkilendirmek için Kerberos protokolünü kullanır. Kerberos protokolü bir nedenle kullanılmıyorsa, geri dönüş olarak NT LAN Manager (NTLM) kullanılır. <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliğini `false`olarak ayarlayarak bu davranışı devre dışı bırakabilirsiniz. NTLM 'ye izin verirken dikkat edilecek sorunlar şunlardır:
 
-- NTLM için istemci kullanıcı adını gösterir. Kullanıcı adı gizli tutulması gerekiyorsa, ardından ayarlayın `AllowNTLM` bağlama özelliği `false`.
+- NTLM, istemci kullanıcı adını gösterir. Kullanıcı adının gizli tutulması gerekiyorsa, bağlamasındaki `AllowNTLM` özelliğini `false`olarak ayarlayın.
 
-- NTLM kimlik doğrulaması sağlamaz. Bu nedenle, istemci bir kimlik doğrulama protokolü NTLM kullandığınızda, doğru hizmet ile iletişim kurduğunu garanti edemez.
+- NTLM sunucu kimlik doğrulaması sağlamaz. Bu nedenle, kimlik doğrulama protokolü olarak NTLM kullandığınızda istemci doğru hizmetle iletişim kurmasını güvence altına alamaz.
 
-### <a name="specifying-client-credentials-or-invalid-identity-forces-ntlm-usage"></a>İstemci kimlik bilgileri veya geçersiz kimlik zorlar NTLM kullanımını belirtme
+### <a name="specifying-client-credentials-or-invalid-identity-forces-ntlm-usage"></a>Istemci kimlik bilgilerini belirtme veya geçersiz kimlik NTLM kullanımını zorlar
 
-Bir istemci oluştururken, istemci kimlik bilgileri olmadan bir etki alanı adı belirterek veya bir geçersiz bir sunucu kimliğini belirterek Kerberos protokolü yerine kullanılacak NTLM neden (varsa `AllowNtlm` özelliği `true`). NTLM kimlik doğrulaması yapmak için bilgi büyük olasılıkla partilere açık.
+İstemci oluştururken, bir etki alanı adı olmadan istemci kimlik bilgilerini belirtme veya geçersiz bir sunucu kimliği belirtme, Kerberos protokolü yerine NTLM 'nin kullanılmasına neden olur (`AllowNtlm` özelliği `true`olarak ayarlandıysa). NTLM sunucu kimlik doğrulaması yapamadığı için bilgiler büyük olasılıkla açıklanamaz.
 
-Örneğin, aşağıdaki Visual C# kodu gösterildiği gibi Windows istemci kimlik bilgileri olmadan bir etki alanı adı belirtmek mümkündür.
+Örneğin, aşağıdaki görsel C# kodda gösterildiği gibi, etki alanı adı olmadan Windows istemci kimlik bilgilerini belirtmek mümkündür.
 
 ```csharp
 MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCredential("username", "password");
 ```
 
-Kod, bir etki alanı adı belirtmiyor ve NTLM kullanılır.
+Kod, bir etki alanı adı belirtmez ve bu nedenle NTLM kullanılacaktır.
 
-Etki alanı belirtildi, ancak geçersiz hizmet asıl adı uç nokta kimlik özelliği kullanılarak belirtilir NTLM kullanılır. Uç nokta kimliğini nasıl belirtildiğine hakkında daha fazla bilgi için bkz. [kimlik doğrulama ile hizmet kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).
+Etki alanı belirtilmişse, ancak Endpoint Identity özelliği kullanılarak geçersiz bir hizmet asıl adı belirtilmişse, NTLM kullanılır. Uç nokta kimliğinin nasıl belirtildiği hakkında daha fazla bilgi için bkz. [hizmet kimliği ve kimlik doğrulaması](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

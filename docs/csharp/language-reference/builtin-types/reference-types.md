@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: d8858acb2743b26cc3a5172edf4765976d81adf4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d5ca0593d802d331d980cf35c701e0a79d54abee
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973007"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163104"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Yerleşik başvuru türleri (C# başvuru)
 
@@ -33,7 +33,7 @@ C#, çeşitli yerleşik başvuru türlerine sahiptir. .NET kitaplığındaki bir
 
 ## <a name="the-object-type"></a>Nesne türü
 
-`object` türü, .NET <xref:System.Object?displayProperty=nameWithType> için bir diğer addır. Birleşik tür sisteminde C#, tüm türler, önceden tanımlanmış ve Kullanıcı tanımlı, başvuru türleri ve değer türleri, <xref:System.Object?displayProperty=nameWithType>doğrudan veya dolaylı olarak devralınır. `object`türündeki değişkenlere herhangi bir tür değeri atayabilirsiniz. Herhangi bir `object` değişken varsayılan değeri, değişmez `null`kullanılarak atanabilir. Değer türünde bir değişken nesnesine dönüştürüldüğünde, *kutulanmış*olarak kabul edilir. Nesne türündeki bir değişken bir değer türüne dönüştürüldüğünde, *kutulanmamış*olarak kabul edilir. Daha fazla bilgi için bkz. [kutulama ve kutudan](../../programming-guide/types/boxing-and-unboxing.md)çıkarma. 
+`object` türü, .NET <xref:System.Object?displayProperty=nameWithType> için bir diğer addır. Birleşik tür sisteminde C#, tüm türler, önceden tanımlanmış ve Kullanıcı tanımlı, başvuru türleri ve değer türleri, <xref:System.Object?displayProperty=nameWithType>doğrudan veya dolaylı olarak devralınır. `object`türündeki değişkenlere herhangi bir tür değeri atayabilirsiniz. Herhangi bir `object` değişken varsayılan değeri, değişmez `null`kullanılarak atanabilir. Değer türünde bir değişken nesnesine dönüştürüldüğünde, *kutulanmış*olarak kabul edilir. `object` türünde bir değişken değer türüne dönüştürüldüğünde, *kutulanmamış*olarak kabul edilir. Daha fazla bilgi için bkz. [kutulama ve kutudan](../../programming-guide/types/boxing-and-unboxing.md)çıkarma. 
 
 ## <a name="the-string-type"></a>Dize türü
 
@@ -67,14 +67,14 @@ string b = "h";
 b += "ello";
 ```
 
-`[]` [işleci](../operators/member-access-operators.md#indexer-operator-) , bir `string`tek tek karakterleri için salt okunur erişim için kullanılabilir. Geçerli değerler `0` başlar ve `string`uzunluğundan küçük olmalıdır:
+`[]` [işleci](../operators/member-access-operators.md#indexer-operator-) , bir dizenin tek tek karakterleri için salt okunur erişim için kullanılabilir. Geçerli dizin değerleri `0` başla ve dizenin uzunluğundan küçük olmalıdır:
 
 ```csharp
 string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-Benzer şekilde, `[]` işleci, `string`her bir karakter üzerinde yineleme için de kullanılabilir:
+Benzer şekilde, `[]` işleci bir dizedeki her bir karakter üzerinde yineleme için de kullanılabilir:
 
 ```csharp-interactive
 string str = "test";

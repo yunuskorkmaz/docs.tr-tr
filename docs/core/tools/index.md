@@ -2,16 +2,16 @@
 title: .NET Core komut satırı arabirimi (CLı) araçları
 description: .NET Core komut satırı arabirimi (CLı) araçları ve özelliklerine genel bakış.
 ms.date: 08/14/2017
-ms.openlocfilehash: b3bffb47ff973bd0da90e3f943e817756e563138
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f19dcb19fb9d0203b3d3795c3fdc0b026c4c60e3
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714146"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163221"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core komut satırı arabirimi (CLı) araçları
 
-.NET Core komut satırı arabirimi (CLı), .NET uygulamaları geliştirmeye yönelik yeni bir platformlar arası araç zinciridir. CLı, tümleşik geliştirme ortamları (IDN 'ler), düzenleyiciler ve derleme yöneticileri gibi daha üst düzey araçların geri kalanı olan bir temelidir.
+.NET Core komut satırı arabirimi (CLı), .NET uygulamaları geliştirmeye yönelik platformlar arası bir araç zinciridir. CLı, tümleşik geliştirme ortamları (IDN 'ler), düzenleyiciler ve derleme yöneticileri gibi daha üst düzey araçların geri kalanı olan bir temelidir.
 
 ## <a name="installation"></a>Yükleme
 
