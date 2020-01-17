@@ -2,12 +2,12 @@
 title: docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 description: Docker-Compose. yıml ile çok kapsayıcılı bir uygulama için mikro hizmet birleşimini belirtme.
 ms.date: 10/02/2018
-ms.openlocfilehash: fa863495c785d89a0b244162e58948ff622e139a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937159"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116546"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 
@@ -82,7 +82,7 @@ services:
     image: redis
 ```
 
-Bu dosyadaki kök anahtar hizmetdir. Bu anahtar altında, `docker-compose up` komutunu yürüttüğünüzde veya bu Docker-Compose. yıml dosyasını kullanarak Visual Studio 'dan dağıtırken, dağıtmak ve çalıştırmak istediğiniz hizmetleri tanımlarsınız. Bu durumda, aşağıdaki tabloda açıklandığı gibi, Docker-Compose. yıml dosyasında birden çok hizmet tanımlanmıştır.
+Bu dosyadaki kök anahtar hizmetdir. Bu anahtar altında, `docker-compose up` komutunu yürüttüğünüzde veya bu Docker-Compose. yıml dosyasını kullanarak Visual Studio 'dan dağıtırken dağıtmak ve çalıştırmak istediğiniz hizmetleri tanımlarsınız. Bu durumda, aşağıdaki tabloda açıklandığı gibi, Docker-Compose. yıml dosyasında birden çok hizmet tanımlanmıştır.
 
 | Hizmet adı | Açıklama |
 |--------------|-------------|
@@ -141,7 +141,7 @@ Bu nedenle, Docker-Compose komutunu kullanarak aşağıdaki ana senaryoları hed
 
 #### <a name="development-environments"></a>Geliştirme ortamları
 
-Uygulama geliştirirken, bir uygulamayı yalıtılmış bir geliştirme ortamında çalıştırabilmek önemlidir. Bu ortamı oluşturmak için Docker-Compose CLı komutunu veya kapabileşenler altında Docker-Compose kullanan Visual Studio 'Yu kullanabilirsiniz.
+Uygulama geliştirirken, bir uygulamayı yalıtılmış bir geliştirme ortamında çalıştırabilmek önemlidir. Bu ortamı veya bu ortamı oluşturmak için Docker-Compose CLı komutunu, kapabileşenler altında Docker-Compose kullanan Visual Studio 'Yu oluşturmak için kullanabilirsiniz.
 
 Docker-Compose. yıml dosyası, tüm uygulamanızın hizmet bağımlılıklarını (diğer hizmetler, önbellek, veritabanları, kuyruklar vb.) yapılandırmanıza ve belgeetmenize olanak tanır. Docker-Compose CLı komutunu kullanarak her bağımlılık için bir veya daha fazla kapsayıcıyı tek bir komutla oluşturup başlatabilirsiniz (Docker-Compose).
 
@@ -201,7 +201,7 @@ Tipik kullanım örneği, birden çok ortamı, hazırlama, CI veya geliştirme g
 
 **Şekil 6-12**. Temel Docker-Compose. yıml dosyasındaki değerleri geçersiz kılan birden çok Docker-dosya oluşturma
 
-Farklı ortamları işlemek için birden çok Docker-Compose*. yıml dosyasını birleştirebilirsiniz. Temel Docker-Compose. yıml dosyası ile başlayabilirsiniz. Bu temel dosya, ortama bağlı olarak değişmeyen temel veya statik yapılandırma ayarlarını içermelidir. Örneğin eShopOnContainers, temel dosya olarak aşağıdaki Docker-Compose. yıml dosyasına (daha az hizmetlerle Basitleştirilmiş) sahiptir.
+Farklı ortamları işlemek için birden çok Docker-Compose*. yıml dosyasını birleştirebilirsiniz. Temel Docker-Compose. yıml dosyası ile başlayabilirsiniz. Bu temel dosya, ortama bağlı olarak değişmeyen temel veya statik yapılandırma ayarlarını içermelidir. Örneğin eShopOnContainers, temel dosya olarak aşağıdaki Docker-Compose. yıml dosyasına (daha az hizmet ile Basitleştirilmiş) sahiptir.
 
 ```yml
 #docker-compose.yml (Base)
@@ -422,7 +422,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 
 Docker-Compose, bir. env dosyasındaki her satırın \<değişken\>=\<değer\>biçiminde olmasını bekler.
 
-Çalışma zamanı ortamında ayarlanan değerlerin her zaman. env dosyası içinde tanımlanan değerleri geçersiz kıldığını unutmayın. Benzer şekilde, komut satırı komut bağımsız değişkenleri ile geçirilen değerler aynı zamanda. env dosyasında ayarlanan varsayılan değerleri geçersiz kılar.
+Çalışma zamanı ortamında ayarlanan değerler her zaman. env dosyası içinde tanımlanan değerleri geçersiz kılar. Benzer şekilde, komut satırı bağımsız değişkenleri ile geçirilen değerler aynı zamanda. env dosyasında ayarlanan varsayılan değerleri geçersiz kılar.
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 

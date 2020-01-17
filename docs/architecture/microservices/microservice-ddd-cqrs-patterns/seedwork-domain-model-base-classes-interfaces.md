@@ -2,16 +2,16 @@
 title: Seedwork (etki alanı modeliniz için yeniden kullanılabilir kök sınıflar ve arabirimler)
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD tabanlı bir etki alanı modeline yönelik uygulamayı başlatmak için başlangıç noktası olarak seedwork kavramını kullanın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 491ff39f493a8f5ab192dc4a8376f560a8a7624b
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: ab0aadc28dbd1175c75b04dadca29b7b0947f29b
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937167"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116576"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (etki alanı modeliniz için yeniden kullanılabilir kök sınıflar ve arabirimler)
 
-Çözüm klasörü bir *Seedwork* klasörü içerir. Bu klasör, etki alanı varlıklarınız ve değer nesneleriniz için temel olarak kullanabileceğiniz özel temel sınıflar içerir. Bu temel sınıfları kullanarak her bir etki alanının nesne sınıfında gereksiz kodunuz olamaz. Bu sınıf türlerinin klasörü, *Framework*gibi bir şey değil *seedwork* olarak adlandırılır. Bu, bir çerçeve olarak kabul edilmeden önce yeniden kullanılabilir sınıfların yalnızca küçük bir alt kümesini içerdiğinden *Seedwork* olarak adlandırılır. *Seedwork* , [Marwler](https://martinfowler.com/bliki/Seedwork.html) tarafından sunulan [Michael feassileri](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) ve populartarafından sunulan bir terimdir, ancak bu klasörün ortak, sharedkernel veya benzer bir şekilde adını da değiştirebilirsiniz.
+Çözüm klasörü bir *Seedwork* klasörü içerir. Bu klasör, etki alanı varlıklarınız ve değer nesneleriniz için temel olarak kullanabileceğiniz özel temel sınıflar içerir. Bu temel sınıfları kullanarak her bir etki alanının nesne sınıfında gereksiz kodunuz olamaz. Bu sınıf türlerinin klasörü, *Framework*gibi bir şey değil *seedwork* olarak adlandırılır. Bu, bir çerçeve olarak kabul edilemez yeniden kullanılabilir sınıfların yalnızca küçük bir alt kümesini içerdiğinden *Seedwork* olarak adlandırılır. *Seedwork* , [Marwler](https://martinfowler.com/bliki/Seedwork.html) tarafından sunulan [Michael feassileri](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) ve populartarafından sunulan bir terimdir, ancak bu klasörün ortak, sharedkernel veya benzer bir şekilde adını da değiştirebilirsiniz.
 
 Şekil 7-12, etki alanı modelinin sıralama mikro hizmetindeki seedwork 'i oluşturan sınıfları gösterir. Varlık, ValueObject ve numaralandırma gibi bazı özel temel sınıflara ek olarak birkaç arabirim vardır. Bu arabirimler (ırepository ve IUnitOfWork) altyapı katmanını uygulanması gerekenler hakkında bilgilendirir. Bu arabirimler, uygulama katmanından bağımlılık ekleme yoluyla da kullanılır.
 
@@ -21,7 +21,7 @@ Temel sınıfları ve arabirimleri içeren SeedWork klasörünün ayrıntılı i
 
 **Şekil 7-12**. "Seedwork" temel sınıfları ve arabirimleri için örnek bir etki alanı modeli kümesi
 
-Bu, birçok geliştiricinin bir biçimsel çerçeve değil projeler arasında paylaştığı kopyalama ve yapıştırma yeniden kullanımının türüdür. Seedçalışmalardan herhangi bir katmanda veya kitaplıkta sahip olabilirsiniz. Ancak, sınıf ve arabirimlerin kümesi yeterince büyük olursa, tek bir sınıf kitaplığı oluşturmak isteyebilirsiniz.
+Bu, birçok geliştiricinin bir biçimsel çerçeve değil projeler arasında paylaştığı kopyalama ve yapıştırma yeniden kullanımının türüdür. Seedçalışmalardan herhangi bir katmanda veya kitaplıkta sahip olabilirsiniz. Ancak, sınıf ve arabirimlerin kümesi yeterince büyük alırsa, tek bir sınıf kitaplığı oluşturmak isteyebilirsiniz.
 
 ## <a name="the-custom-entity-base-class"></a>Özel varlık temel sınıfı
 

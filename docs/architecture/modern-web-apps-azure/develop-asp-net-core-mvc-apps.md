@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: efb57b4290825be9f21c61c8dee5af073d264d3a
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 7bc30db084f361e6c4654b89e69230b379b0136c
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899701"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116535"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları geliştirin
 
@@ -32,9 +32,9 @@ Bir Razor sayfasının sayfa modeli, bir MVC denetleyicisinin ve viewmodelinin s
 
 ### <a name="when-to-use-mvc"></a>MVC ne zaman kullanılır?
 
-Web API 'Leri oluşturuyorsanız, MVC deseninin Razor Pages kullanmayı deneenden daha anlamlı hale gelir. Projeniz yalnızca Web API uç noktalarını kullanıma sunacaktır, ideal olarak Web API proje şablonundan başlamanız gerekir, aksi takdirde, denetleyiciler ve ilgili API uç noktalarını herhangi bir ASP.NET Core uygulamasına eklemek kolaydır. Ayrıca, var olan bir uygulamayı ASP.NET MVC 5 veya daha önceki bir sürümden ASP.NET Core MVC 'ye geçiriyorsanız ve en az çaba miktarına göre yapmak istiyorsanız, görünüm tabanlı MVC yaklaşımını de kullanmanız gerekir. İlk geçişi yaptıktan sonra, yeni özellikler için Razor Pages benimsemek ve hatta toptan bir geçiş olarak, bunun mantıklı olup olmadığını değerlendirebilirsiniz.
+Web API 'Leri oluşturuyorsanız, MVC deseninin Razor Pages kullanmayı deneenden daha anlamlı hale gelir. Projeniz yalnızca Web API uç noktalarını kullanıma sunacaktır, ideal olarak Web API proje şablonundan başlamanız gerekir. Aksi takdirde, denetleyiciler ve ilgili API uç noktalarını herhangi bir ASP.NET Core uygulamasına eklemek kolaydır. Var olan bir uygulamayı ASP.NET MVC 5 veya daha önceki bir sürümden ASP.NET Core MVC 'ye geçiriyorsanız ve en az çaba ile devam etmek istiyorsanız, görünüm tabanlı MVC yaklaşımını kullanın. İlk geçişi yaptıktan sonra, yeni özellikler için Razor Pages benimsemek ve hatta toptan bir geçiş olarak, bunun mantıklı olup olmadığını değerlendirebilirsiniz.
 
-Razor Pages veya MVC görünümlerini kullanarak Web uygulamanızı oluşturmayı tercih etmeksizin, uygulamanız benzer performansa sahip olur ve bağımlılık ekleme, filtreler, model bağlama ve doğrulama için destek içerir.
+Razor Pages veya MVC görünümlerini kullanarak Web uygulamanızı oluşturmayı tercih etmeksizin, uygulamanız benzer performansa sahip olur ve bağımlılık ekleme, filtreler, model bağlama, doğrulama vb. için destek içerir.
 
 ## <a name="mapping-requests-to-responses"></a>İstekleri yanıtlara eşleme
 
@@ -540,7 +540,7 @@ DDD Ayrıca, daha önce ele alınan temiz mimarinin kullanımını önerir. böy
 
 ### <a name="when-should-you-apply-ddd"></a>DDD ne zaman uygulanır?
 
-DDD, önemli iş (yalnızca teknik değil) karmaşıklığı olan büyük uygulamalar için uygundur. Uygulamanın etki alanı uzmanları hakkında bilgi sahibi olması gerekir. Veri depolarından çeşitli kayıtların geçerli durumunu depolamanın ve almanın ötesinde iş kurallarını ve etkileşimleri temsil eden etki alanı modelinin kendisinde önemli bir davranış olması gerekir.
+DDD, önemli iş (yalnızca teknik değil) karmaşıklığa sahip büyük uygulamalar için uygundur. Uygulamanın etki alanı uzmanları hakkında bilgi sahibi olması gerekir. Veri depolarından çeşitli kayıtların geçerli durumunu depolamanın ve almanın ötesinde iş kurallarını ve etkileşimleri temsil eden etki alanı modelinin kendisinde önemli bir davranış olması gerekir.
 
 ### <a name="when-shouldnt-you-apply-ddd"></a>DDD ne zaman uygulamanız gerekir
 
