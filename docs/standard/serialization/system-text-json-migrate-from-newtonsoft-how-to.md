@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 8b3ffc885691264548a19f694d159ce07aba7550
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: 01f94bcfce97da8c71b1b709baa34c2b7509a5e5
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904686"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116692"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft. JSON 'dan System. Text. JSON 'a geçiş
 
@@ -136,17 +136,6 @@ Serileştirme sırasında `Newtonsoft.Json`, karakterlerin kaçış olmadan geç
 ### <a name="maximum-depth"></a>En yüksek derinlik
 
 `Newtonsoft.Json` varsayılan olarak en yüksek derinlik sınırına sahip değildir. <xref:System.Text.Json> için varsayılan bir 64 sınırı vardır ve <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>ayarlanarak yapılandırılabilir.
-
-### <a name="stack-type-handling"></a>Yığın türü işleme
-
-<xref:System.Text.Json>, yığın içeriklerinin sırası serileştirildiğinde tersine çevrilir. Bu davranış, aşağıdaki türler ve arabirim ve bunlardan türetilmiş Kullanıcı tanımlı türler için geçerlidir:
-
-* <xref:System.Collections.Stack>
-* <xref:System.Collections.Generic.Stack%601>
-* <xref:System.Collections.Immutable.ImmutableStack%601>
-* <xref:System.Collections.Immutable.IImmutableStack%601>
-
-Yığın içeriklerini aynı sırada tutmak için özel bir dönüştürücü uygulanabilir.
 
 ### <a name="omit-null-value-properties"></a>Null değer özelliklerini atla
 

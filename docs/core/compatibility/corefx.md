@@ -2,16 +2,34 @@
 title: Temel sınıf kitaplığı bölme değişiklikleri-.NET Core
 description: Temel sınıf kitaplığı olan .NET CoreFx 'teki son değişiklikleri listeler.
 ms.date: 09/20/2019
-ms.openlocfilehash: 1b578a6e3ae986a4c12c36fdf558b1fa5d8a3d66
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: eb416a0b061bfe50db330627c0ea68e0ba0c9079
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344875"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116506"
 ---
 # <a name="corefx-breaking-changes"></a>CoreFx değişiklikleri
 
-Aşağıda .NET Core sürümüne göre CoreFx 'in son değişikliklerinin bir listesi verilmiştir. CoreFx, .NET Core tarafından kullanılan temel öğeler ve diğer genel türler sağlar.
+CoreFx, .NET Core tarafından kullanılan temel öğeler ve diğer genel türler sağlar.
+
+Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
+
+- [Sürümü şimdi rapor eden API 'Ler rapor ürünü ve dosya sürümü değil](#apis-that-report-version-now-report-product-and-not-file-version)
+- [Özel EncoderFallbackBuffer örnekleri özyinelemeli olarak geri dönemez](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively)
+- [Kayan nokta biçimlendirme ve ayrıştırma davranışı değişiklikleri](#floating-point-formatting-and-parsing-behavior-changed)
+- [Kayan nokta ayrıştırma işlemleri artık başarısız olmaz veya bir OverflowException oluşturmaz](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception)
+- [InvalidAsynchronousStateException başka bir derlemeye taşındı](#invalidasynchronousstateexception-moved-to-another-assembly)
+- [NET Core 3,0 hatalı biçimlendirilmiş UTF-8 bayt dizilerini değiştirirken Unicode en iyi yöntemlerini izler](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences)
+- [TypeDescriptionProviderAttribute başka bir derlemeye taşındı](#typedescriptionproviderattribute-moved-to-another-assembly)
+- [ZipArchiveEntry artık tutarsız giriş boyutlarına sahip arşivleri işliyor](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes)
+- [JsonException iken NotSupportedException olarak değiştirilen JSON seri hale getirici özel durum türü](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception)
+- [Utf8JsonWriter içinde (String) null semantiğinin değiştirilmesi](#change-in-semantics-of-stringnull-in-utf8jsonwriter)
+- [JsonEncodedText. Encode yöntemlerinde ek bir JavaScriptEncoder bağımsız değişkeni vardır](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument)
+- [JsonFactoryConverter. CreateConverter imzası değişti](#jsonfactoryconvertercreateconverter-signature-changed)
+- [JsonElement API değişiklikleri](#jsonelement-api-changes)
+- [Yerleşik yapı türlerine eklenen özel alanlar](#private-fields-added-to-built-in-struct-types)
+- [UseShellExecute varsayılan değerindeki değişiklik](#change-in-default-value-of-useshellexecute)
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
@@ -45,9 +63,13 @@ Aşağıda .NET Core sürümüne göre CoreFx 'in son değişikliklerinin bir li
 
 [!INCLUDE[ZipArchiveEntry no longer handles archives with inconsistent entry sizes](~/includes/core-changes/corefx/3.0/ziparchiveentry-and-inconsistent-entry-sizes.md)]
 
+***
+
 ## <a name="net-core-30-preview-9"></a>.NET Core 3,0 Preview 9
 
-[!INCLUDE[Json serializer exception type changed from JsonException to NotSupportedException](~/includes/core-changes/corefx/3.0/serializer-throws-notsupportedexception.md)]
+[!INCLUDE[JSON serializer exception type changed from JsonException to NotSupportedException](~/includes/core-changes/corefx/3.0/serializer-throws-notsupportedexception.md)]
+
+***
 
 ## <a name="net-core-30-preview-8"></a>.NET Core 3,0 Preview 8
 
@@ -61,14 +83,20 @@ Aşağıda .NET Core sürümüne göre CoreFx 'in son değişikliklerinin bir li
 
 [!INCLUDE[JsonFactoryConverter.CreateConverter signature changed](~/includes/core-changes/corefx/3.0/jsonfactoryconverter-createconverter.md)]
 
+***
+
 ## <a name="net-core-30-preview-7"></a>.NET Core 3,0 Preview 7
 
 [!INCLUDE[JsonElement API changes](~/includes/core-changes/corefx/3.0/jsonelement-api-changes.md)]
 
+***
+
 ## <a name="net-core-21"></a>.NET Core 2.1
 
-[!INCLUDE[Instantiate struct](~/includes/core-changes/corefx/2.1/instantiate-struct.md)]
+[!INCLUDE[Private fields added to built-in struct types](~/includes/core-changes/corefx/2.1/instantiate-struct.md)]
 
 ***
 
-[!INCLUDE[Process.Start changes](~/includes/core-changes/corefx/2.1/process-start-changes.md)]
+[!INCLUDE[Change in default value of UseShellExecute](~/includes/core-changes/corefx/2.1/process-start-changes.md)]
+
+***

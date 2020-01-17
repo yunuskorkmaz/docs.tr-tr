@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 94284a196030d784909c41aae7fef9a5ad3cb52a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: eb1815f965e86a6f8f709b32f84f879eb03de447
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937231"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115809"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -497,9 +497,13 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ### <a name="fast-built-in-json-support"></a>Hızlı yerleşik JSON desteği
 
-.NET kullanıcıları, [**JSON.NET**](https://www.newtonsoft.com/json) ve DIĞER popüler JSON kitaplıklarına büyük ölçüde güvenmeye devam eder ve bu da iyi seçeneklere sahip olur. **JSON.net** , temel veri türü olarak .net dizelerini kullanır, bu da arada bulunan UTF-16 ' dır.
+.NET Kullanıcıları [Newtonsoft. JSON](https://www.newtonsoft.com/json) ve DIĞER popüler JSON kitaplıklarına büyük ölçüde güvendi ve bu da iyi seçimler olmaya devam eder. `Newtonsoft.Json`, temel veri türü olarak .NET dizelerini kullanır, bu da arada bulunan UTF-16 ' dır.
 
-Yeni yerleşik JSON desteği yüksek performanslı, düşük ayırma ve `Span<byte>`temel alır. <xref:System.Text.Json> ad alanı ve türleri hakkında daha fazla bilgi için bkz. [.net 'Te JSON serileştirme](../../standard/serialization/system-text-json-overview.md). Yaygın JSON serileştirme senaryolarında öğreticiler için bkz. [.net 'TE JSON serileştirme ve seri durumdan çıkarma](../../standard/serialization/system-text-json-how-to.md).
+Yeni yerleşik JSON desteği yüksek performanslı, düşük ayırma, UTF-8 kodlu JSON metniyle birlikte çalışıyor. <xref:System.Text.Json> ad alanı ve türleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
+
+* [.NET 'te JSON serileştirme-genel bakış](../../standard/serialization/system-text-json-overview.md)
+* [.Net 'TE JSON serileştirmek ve serisini kaldırma](../../standard/serialization/system-text-json-how-to.md).
+* [Newtonsoft. JSON 'dan System. Text. JSON 'a geçiş](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
 ### <a name="http2-support"></a>HTTP/2 desteği
 

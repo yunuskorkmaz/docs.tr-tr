@@ -2,19 +2,20 @@
 title: WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 5964c58ce28f67815774741815bba0fcbe3b2de7
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: b6247dd6c178b355fa4de271415b7cac12f6c629
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964228"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116674"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği
 
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], WCF Web HTTP hizmetinizdeki ASP.NET içinde zaten bulunan bildirime dayalı önbelleğe alma mekanizmasını kullanmanıza olanak sağlar. Bu, WCF Web HTTP hizmet işlemlerinizin yanıtlarını önbelleğe almanıza olanak sağlar. Bir kullanıcı hizmetinize önbelleğe alma için yapılandırılmış bir HTTP Al gönderdiğinde, ASP.NET önbelleğe alınan yanıtı geri gönderir ve hizmet yöntemi çağrılmaz. Önbelleğin süresi dolarsa, bir Kullanıcı bir sonraki HTTP GET gönderdiğinde, hizmet yönteminiz çağrılır ve yanıt yeniden önbelleğe alınır. ASP.NET önbelleğe alma hakkında daha fazla bilgi için bkz. [ASP.net Caching Overview](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
   
 ## <a name="basic-web-http-service-caching"></a>Temel Web HTTP hizmeti önbelleğe alma  
- WEB HTTP hizmeti önbelleğe almayı etkinleştirmek için, <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> veya <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required><xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> hizmet ayarına uygulayarak önce ASP.NET uyumluluğunu etkinleştirmeniz gerekir.  
+
+  WEB HTTP hizmeti önbelleğe almayı etkinleştirmek için, <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> veya <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>hizmet ayarına uygulayarak, önce ASP.NET uyumluluğunu etkinleştirmeniz gerekir.  
   
  .NET Framework 4, bir önbellek profili adı belirtmenize izin veren <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> adlı yeni bir öznitelik tanıtır. Bu öznitelik bir hizmet işlemine uygulanır. Aşağıdaki örnek, ASP.NET uyumluluğunu etkinleştirmek ve önbelleğe almak için `GetCustomer` işlemini yapılandıran bir hizmete <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> uygular. <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> özniteliği, kullanılacak önbellek ayarlarını içeren bir önbellek profili belirtir.  
   
@@ -32,7 +33,7 @@ public class Service
 }
 ```  
   
- Ayrıca, aşağıdaki örnekte gösterildiği gibi Web. config dosyasında ASP.NET uyumluluk modunu da açmanız gerekir.  
+Ayrıca, aşağıdaki örnekte gösterildiği gibi Web. config dosyasında ASP.NET uyumluluk modunu da açın.  
   
 ```xml
 <system.serviceModel>
@@ -62,7 +63,8 @@ public class Service
  Bu, ASP.NET uygulamaları için kullanılabilen yapılandırma öğesidir. ASP.NET önbellek profilleri hakkında daha fazla bilgi için bkz. <xref:System.Web.Configuration.OutputCacheProfile>. Web HTTP Hizmetleri için önbellek profilindeki en önemli öznitelikler şunlardır: `cacheDuration` ve `varyByParam`. Bu özniteliklerin her ikisi de gereklidir. `cacheDuration`, bir yanıtın saniye cinsinden önbelleğe alınması gereken süreyi belirler. `varyByParam`, yanıtları önbelleğe almak için kullanılan bir sorgu dizesi parametresi belirtmenize izin verir. Farklı sorgu dizesi parametre değerleriyle yapılan tüm istekler ayrı olarak önbelleğe alınır. Örneğin, `http://MyServer/MyHttpService/MyOperation?param=10`için bir başlangıç isteği yapıldıktan sonra, aynı URI ile yapılan sonraki tüm istekler önbelleğe alınan yanıtı (önbellek süresi geçmediğinde uzun) döndürülür. Benzer bir istek için aynı ancak parametre sorgu dizesi parametresi için farklı bir değere sahip yanıtlar ayrı olarak önbelleğe alınır. Bu ayrı önbelleğe alma davranışını istemiyorsanız, `varyByParam` "none" olarak ayarlayın.  
   
 ## <a name="sql-cache-dependency"></a>SQL önbellek bağımlılığı  
- Web HTTP hizmet yanıtları bir SQL önbellek bağımlılığı ile de önbelleğe alınabilir. WCF Web HTTP hizmetiniz bir SQL veritabanında depolanan verilere bağımlıysa, SQL veritabanı tablosundaki veriler değiştiğinde hizmetin yanıtını önbelleğe almak ve önbelleğe alınmış yanıtı geçersiz kılmak isteyebilirsiniz. Bu davranış, Web. config dosyası içinde tamamen yapılandırılır. Önce <`connectionStrings`> öğesinde bir bağlantı dizesi tanımlamanız gerekir.  
+
+  Web HTTP hizmet yanıtları bir SQL önbellek bağımlılığı ile de önbelleğe alınabilir. WCF Web HTTP hizmetiniz bir SQL veritabanında depolanan verilere bağımlıysa, SQL veritabanı tablosundaki veriler değiştiğinde hizmetin yanıtını önbelleğe almak ve önbelleğe alınmış yanıtı geçersiz kılmak isteyebilirsiniz. Bu davranış, Web. config dosyası içinde tamamen yapılandırılır. İlk olarak, <`connectionStrings`> öğesinde bir bağlantı dizesi tanımlayın.  
   
 ```xml
 <connectionStrings>
@@ -120,13 +122,14 @@ public class Service
 </system.web>
 ```  
   
- Burada önbellek süresi 60 saniyeye, `varyByParam` yok olarak ayarlanır ve `sqlDependency`, iki nokta üst üste ile ayrılmış bir virgülle ayrılmış veritabanı adı/tablo çiftleri listesi olarak ayarlanır. `MyTable` veri değiştirildiğinde, hizmet işlemi için önbelleğe alınmış yanıt kaldırılır ve işlem çağrıldığında yeni bir yanıt oluşturulur (hizmet işlemini çağırarak), önbelleğe alınır ve istemciye döndürülür.  
+ Burada önbellek süresi 60 saniyeye ayarlanır, `varyByParam` None olarak ayarlanır ve `sqlDependency` noktalı virgülle ayrılmış veritabanı adı/tablo çiftleri listesini iki noktayla ayırarak ayarlar. `MyTable` veri değiştirildiğinde, hizmet işlemi için önbelleğe alınmış yanıt kaldırılır ve işlem çağrıldığında yeni bir yanıt oluşturulur (hizmet işlemini çağırarak), önbelleğe alınır ve istemciye döndürülür.  
   
 > [!IMPORTANT]
 > ASP.NET 'in bir SQL veritabanına erişmesi için [ASP.NET SQL Server kayıt aracını](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229862(v=vs.90))kullanmanız gerekir. Ayrıca, uygun Kullanıcı hesabının veritabanına ve tabloya erişimine izin vermeniz gerekir. Daha fazla bilgi için bkz. [bir Web uygulamasından SQL Server erişme](https://docs.microsoft.com/previous-versions/aspnet/ht43wsex(v=vs.100)).  
   
 ## <a name="conditional-http-get-based-caching"></a>Koşullu HTTP alma tabanlı önbelleğe alma  
- Web HTTP senaryolarında Koşullu HTTP GET, genellikle [http belirtiminde](https://www.w3.org/Protocols/rfc2616/rfc2616.html)açıklandığı gıbı akıllı http önbelleği uygulamak için kullanılır. Bunu yapmak için hizmet, HTTP yanıtında ETag üst bilgisinin değerini ayarlamış olmalıdır. Ayrıca, belirtilen ETag öğesinin geçerli ETag ile eşleşip eşleşmediğini görmek için HTTP isteğindeki If-None-Match üst bilgisini denetmelidir.  
+
+  Web HTTP senaryolarında Koşullu HTTP GET, genellikle [http belirtiminde](https://www.w3.org/Protocols/rfc2616/rfc2616.html)açıklandığı gıbı akıllı http önbelleği uygulamak için kullanılır. Bunu yapmak için hizmet, HTTP yanıtında ETag üst bilgisinin değerini ayarlamış olmalıdır. Ayrıca, belirtilen ETag öğesinin geçerli ETag ile eşleşip eşleşmediğini görmek için HTTP isteğindeki If-None-Match üst bilgisini denetmelidir.  
   
  GET ve HEAD istekleri için <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> bir ETag değeri alır ve isteğin If-None-Match üst bilgisine karşı denetler. Üst bilgi varsa ve bir eşleşme varsa, HTTP durum kodu 304 (değiştirilmez) ile bir <xref:System.ServiceModel.Web.WebFaultException> oluşturulur ve eşleşen ETag ile yanıta bir ETag üst bilgisi eklenir.  
   

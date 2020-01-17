@@ -1,21 +1,21 @@
 ---
-title: OpenSUSE 15-Package Manager-.NET Core 'a .NET Core 'u yükler
-description: OpenSUSE 15 üzerinde .NET Core SDK ve çalışma zamanı yüklemek için bir paket Yöneticisi kullanın.
+title: .NET Core 'u Fedora 31-Package Manager-.NET Core 'a yükler
+description: .NET Core SDK ve çalışma zamanını Fedora 31 ' de yüklemek için bir paket Yöneticisi kullanın.
 author: thraka
 ms.author: adegeo
-ms.date: 12/26/2019
-ms.openlocfilehash: ae0f6664c0545ceb047cd9b110fe3f26740e5816
+ms.date: 12/17/2019
+ms.openlocfilehash: 25c670694ed2d9e89fe37cedf0b06efd8bc93293
 ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116141"
+ms.locfileid: "76116968"
 ---
-# <a name="opensuse-15-package-manager---install-net-core"></a>openSUSE 15 Paket Yöneticisi-.NET Core 'ı yükler
+# <a name="fedora-31-package-manager---install-net-core"></a>Fedora 31 Paket Yöneticisi-.NET Core 'ı yükler
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-Bu makalede, openSUSE 15 ' te .NET Core yüklemek için bir paket yöneticisi 'nin nasıl kullanılacağı açıklanır. Çalışma zamanını yüklüyorsanız, hem .NET Core 'u hem de ASP.NET Core çalışma zamanlarını içerdiğinden [ASP.NET Core çalışma zamanını](#install-the-aspnet-core-runtime)yüklemenizi öneririz.
+Bu makalede, Fedora 31 ' de .NET Core yüklemek için bir paket yöneticisi 'nin nasıl kullanılacağı açıklanır. Çalışma zamanını yüklüyorsanız, hem .NET Core 'u hem de ASP.NET Core çalışma zamanlarını içerdiğinden [ASP.NET Core çalışma zamanını](#install-the-aspnet-core-runtime)yüklemenizi öneririz.
 
 ## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtarını ve akışını kaydetme
 
@@ -30,11 +30,8 @@ Bu işlemin makine başına tek bir kez yapılması yeterlidir.
 Bir Terminal açın ve aşağıdaki komutları çalıştırın.
 
 ```bash
-sudo zypper install libicu
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-wget -q https://packages.microsoft.com/config/opensuse/15/prod.repo
-sudo mv prod.repo /etc/zypp/repos.d/microsoft-prod.repo
-sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
+sudo wget -q -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/31/prod.repo
 ```
 
 ## <a name="install-the-net-core-sdk"></a>.NET Core SDK 'i yükler
@@ -42,7 +39,7 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 Yükleme için kullanılabilen ürünleri güncelleştirin, ardından .NET Core SDK yükleme. Terminalinizde aşağıdaki komutu çalıştırın.
 
 ```bash
-sudo zypper install dotnet-sdk-3.1
+sudo dnf install dotnet-sdk-3.1
 ```
 
 ## <a name="install-the-aspnet-core-runtime"></a>ASP.NET Core çalışma zamanını yükler
@@ -50,7 +47,7 @@ sudo zypper install dotnet-sdk-3.1
 Yükleme için kullanılabilen ürünleri güncelleştirin, sonra ASP.NET çalışma zamanını yükleme. Terminalinizde aşağıdaki komutu çalıştırın.
 
 ```bash
-sudo zypper install aspnetcore-runtime-3.1
+sudo dnf install aspnetcore-runtime-3.1
 ```
 
 ## <a name="install-the-net-core-runtime"></a>.NET Core çalışma zamanını yükler
@@ -58,7 +55,7 @@ sudo zypper install aspnetcore-runtime-3.1
 Yükleme için kullanılabilen ürünleri güncelleştirin ve ardından .NET Core çalışma zamanı 'nı yükleme. Terminalinizde aşağıdaki komutu çalıştırın.
 
 ```bash
-sudo zypper install dotnet-runtime-3.1
+sudo dnf install dotnet-runtime-3.1
 ```
 
 ## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir

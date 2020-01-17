@@ -2,12 +2,12 @@
 title: Son değişiklikler-.NET Core 'a .NET Framework
 description: .NET Framework 'den .NET Core 'a yapılan son değişiklikleri listeler.
 ms.date: 12/18/2019
-ms.openlocfilehash: 9f4ecc8a9de7279bb4b222b3df77e1eb17b33f0a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 6959bffab62cabc524062231db989de45c8c1498
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937388"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116496"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>.NET Framework 'den .NET Core 'a geçiş için son değişiklikler
 
@@ -18,11 +18,7 @@ ms.locfileid: "75937388"
 
 ## <a name="corefx"></a>CoreFx
 
-Hataya neden olan değişiklikler:
-
 - [UseShellExecute varsayılan değerindeki değişiklik](#change-in-default-value-of-useshellexecute)
-
-***
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -33,8 +29,6 @@ Hataya neden olan değişiklikler:
 ## <a name="windows-forms"></a>Windows Forms
 
 Sürüm 3,0 ' de .NET Core 'a Windows Forms desteği eklenmiştir. .NET Framework bir Windows Forms uygulamasını .NET Core 'a geçiriyorsanız, burada listelenen son değişiklikler uygulamanızı etkileyebilir.
-
-Hataya neden olan değişiklikler:
 
 - [Kaldırılan denetimler](#removed-controls)
 - [Araç ipucu gösterildiğinde CellFormatting olayı oluşturulmaz](#cellformatting-event-not-raised-if-tooltip-is-shown)

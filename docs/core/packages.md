@@ -3,14 +3,14 @@ title: Paketler, Metapackages ve çerçeveler-.NET Core
 description: Paketler, Metapackages ve çerçeveler için terminoloji öğrenin.
 author: richlander
 ms.date: 06/20/2016
-ms.openlocfilehash: bd40ca603aaa9685fca9934368895bf7e945d962
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6a8e257ebf493365518dd9663fbd2a9cadc83875
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715516"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116059"
 ---
-# <a name="packages-metapackages-and-frameworks"></a>Paketler, Metapackages ve çerçeveler
+# <a name="packages-metapackages-and-frameworks"></a>Paketler, meta paketler ve çerçeveler
 
 .NET Core, NuGet paketlerinden oluşan bir platformdur. Bazı ürün deneyimleri, başka bir deyişle çok büyük olan paketlerin ayrıntılı tanımlarından faydalanır. Bu kase uyum sağlamak için ürün, hassas bir paket kümesi ve bir [metapackage](#metapackages)adı verilen bir paket türü olan kaba parçalar halinde dağıtılır.
 
@@ -18,7 +18,7 @@ ms.locfileid: "75715516"
 
 ## <a name="packages"></a>Paketler
 
-.NET Core, temel elemanlar, daha yüksek düzeyde veri türleri, uygulama bileşim türleri ve ortak yardımcı programlar sağlayan bir dizi pakete ayrılır. Bu paketlerin her biri aynı ada sahip tek bir derlemeyi temsil eder. Örneğin, [System. Runtime](https://www.nuget.org/packages/System.Runtime) System. Runtime. dll dosyasını içerir. 
+.NET Core, temel elemanlar, üst düzey veri türleri, uygulama bileşim türleri ve ortak yardımcı programlar sağlayan bir dizi pakete ayrılır. Bu paketlerin her biri aynı ada sahip tek bir derlemeyi temsil eder. Örneğin, [System. Runtime paketi](https://www.nuget.org/packages/System.Runtime) System. Runtime. dll dosyasını içerir. 
 
 Paketleri hassas bir şekilde tanımlamanın avantajları vardır:
 

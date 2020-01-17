@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ff156afb3da4b921517fd841c5de2295265a8d7b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 9aff20e35469f9e786f0f790fda4ffaa04e76e64
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567747"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116427"
 ---
 ### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>HttpRequestMessage. Version öğesinin varsayılan değeri 1,1 olarak değiştirildi
 
@@ -38,5 +38,4 @@ a def
 
 - `P:System.Net.Http.HttpRequestMessage.Version`
 
--- >
-
+-->

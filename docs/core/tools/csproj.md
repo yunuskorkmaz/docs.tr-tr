@@ -2,12 +2,12 @@
 title: .NET Core için csproj biçimine eklemeler
 description: Mevcut ve .NET Core csproj dosyaları arasındaki farklılıklar hakkında bilgi edinin
 ms.date: 04/08/2019
-ms.openlocfilehash: 4a05709da63c4f6a200039ba5dd59358c700130e
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: da066625b445eca9186acedf06a941564921a6dd
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899877"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115842"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core için csproj biçimine eklemeler
 
@@ -73,17 +73,17 @@ Aşağıdaki tabloda, SDK 'nın hangi öğesi ve hangi [genelleştirmeler](https
 | Öğe           | Glob 'yi dahil et                              | Glob 'yi hariç tut                                                  | Glob 'yi kaldır              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Derleme           | \*\*/\*. cs (veya diğer dil uzantıları) | \*\*/\*. Kullanıcı;  \*\*/\*.\*PROJ;  \*\*/\*. sln;  \*\*/\*. vssscc  | YOK                      |
-| EmbeddedResource  | \*\*/\*. resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | YOK                      |
-| Yok.              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
+| EmbeddedResource  | \*\*/\*. resx                              | \*\*/\*. Kullanıcı; \*\*/\*.\*PROJ; \*\*/\*. sln; \*\*/\*. vssscc     | YOK                      |
+| Yok.              | \*\*/\*                                   | \*\*/\*. Kullanıcı; \*\*/\*.\*PROJ; \*\*/\*. sln; \*\*/\*. vssscc     | \*\*/\*. cs; \*\*/\*. resx   |
 
 > [!NOTE]
-> **Exclude glob** always excludes the `./bin` and `./obj` folders, which are represented by the `$(BaseOutputPath)` and `$(BaseIntermediateOutputPath)` MSBuild properties, respectively. As a whole, all excludes are represented by `$(DefaultItemExcludes)`.
+> **DIB 'Yi hariç tut** , sırasıyla `$(BaseOutputPath)` ve `$(BaseIntermediateOutputPath)` MSBuild özellikleriyle temsil edilen `./bin` ve `./obj` klasörlerini her zaman dışlar. Bütün olarak, tüm dışlar `$(DefaultItemExcludes)`tarafından temsil edilir.
 
-If you have globs in your project and you try to build it using the newest SDK, you'll get the following error:
+Projenizde genelleştirmeler varsa ve en yeni SDK kullanarak derlemeyi denerseniz, şu hatayı alırsınız:
 
-> Duplicate Compile items were included. The .NET SDK includes Compile items from your project directory by default. You can either remove these items from your project file, or set the 'EnableDefaultCompileItems' property to 'false' if you want to explicitly include them in your project file.
+> Yinelenen derleme öğeleri eklendi. .NET SDK, varsayılan olarak proje dizininizdeki derleme öğelerini içerir. Bu öğeleri proje dosyanıza kaldırabilir ya da bunları proje dosyanıza açıkça dahil etmek istiyorsanız ' Enabledefaultcompileıtems ' özelliğini ' false ' olarak ayarlayabilirsiniz.
 
-In order to get around this error, you can either remove the explicit `Compile` items that match the ones listed on the previous table, or you can set the `<EnableDefaultCompileItems>` property to `false`, like this:
+Bu hatayı çözmek için, önceki tabloda listelenenlere uyan açık `Compile` öğelerini kaldırabilir veya `<EnableDefaultCompileItems>` özelliğini aşağıdaki gibi `false`olarak ayarlayabilirsiniz:
 
 ```xml
 <PropertyGroup>
@@ -91,11 +91,11 @@ In order to get around this error, you can either remove the explicit `Compile` 
 </PropertyGroup>
 ```
 
-Setting this property to `false` will disable implicit inclusion, reverting to the behavior of previous SDKs where you had to specify the default globs in your project.
+Bu özelliğin `false` olarak ayarlanması örtük eklemeyi devre dışı bırakır ve projenizde varsayılan genelleştirmeler belirtmeniz gereken önceki SDK 'ların davranışına geri dönülmesini sağlar.
 
-This change does not modify the main mechanics of other includes. However, if you wish to specify, for example, some files to get published with your app, you can still use the known mechanisms in *csproj* for that (for example, the `<Content>` element).
+Bu değişiklik, diğer dahil olmak üzere ana mekana 'yi değiştirmez. Bununla birlikte, örneğin, uygulamanızla yayımlanacak bazı dosyalar belirtmek istiyorsanız, bilinen mekanizmaların *csproj* içinde yine de kullanılabilir (örneğin, `<Content>` öğesi).
 
-`<EnableDefaultCompileItems>` only disables `Compile` globs but doesn't affect other globs, like the implicit `None` glob, which also applies to \*.cs items. Because of that, **Solution Explorer** will continue show \*.cs items as part of the project, included as `None` items. In a similar way, you can set `<EnableDefaultNoneItems>` to false to disable the implicit `None` glob, like this:
+`<EnableDefaultCompileItems>` yalnızca `Compile` genelleştirmeler devre dışı bırakır ancak \*. cs öğeleri için de geçerli olan örtük `None` glob gibi diğer genelleştirmeler 'yi etkilemez. Bu nedenle **Çözüm Gezgini** , \*. cs öğelerini projenin bir parçası olarak göstermeye devam eder, `None` öğeler olarak dahil edilir. Benzer şekilde, aşağıdaki gibi örtük `None` glob 'yi devre dışı bırakmak için `<EnableDefaultNoneItems>` false olarak ayarlayabilirsiniz:
 
 ```xml
 <PropertyGroup>
@@ -103,7 +103,7 @@ This change does not modify the main mechanics of other includes. However, if yo
 </PropertyGroup>
 ```
 
-To disable **all implicit globs**, you can set the `<EnableDefaultItems>` property to `false` as in the following example:
+**Tüm örtük genelleştirmeler**devre dışı bırakmak için, aşağıdaki örnekte olduğu gibi `<EnableDefaultItems>` özelliğini `false` olarak ayarlayabilirsiniz:
 
 ```xml
 <PropertyGroup>
@@ -111,9 +111,9 @@ To disable **all implicit globs**, you can set the `<EnableDefaultItems>` proper
 </PropertyGroup>
 ```
 
-## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a>How to see the whole project as MSBuild sees it
+## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a>Tüm projeyi MSBuild tarafından görüyor
 
-While those csproj changes greatly simplify project files, you might want to see the fully expanded project as MSBuild sees it once the SDK and its targets are included. Preprocess the project with [the `/pp` switch](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) of the [`dotnet msbuild`](dotnet-msbuild.md) command, which shows which files are imported, their sources, and their contributions to the build without actually building the project:
+Bu csproj proje dosyalarını büyük ölçüde basitleştirirken, SDK ve hedefleri dahil edildikten sonra MSBuild tarafından, tam genişletilmiş projeyi görmek isteyebilirsiniz. Projeyi gerçekten oluşturmadan, hangi dosyaların içeri aktarılacağını, kaynaklarını ve yapıya katkılarını gösteren [`dotnet msbuild`](dotnet-msbuild.md) komutunun [`/pp` anahtarıyla](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) projeyi önceden işleyin:
 
 `dotnet msbuild -pp:fullproject.xml`
 
@@ -366,7 +366,7 @@ Bu Boole değeri, paket işleminin bir kaynak paketi oluşturup oluşturmayacağ
 
 ### <a name="istool"></a>IsTool
 
-Tüm çıkış dosyalarının *lib* klasörü yerine *Araçlar* klasörüne kopyalanıp kopyalanmayacağını belirtir. Bu, *. csproj* dosyasındaki `PackageType` ayarlanarak belirtilen `DotNetCliTool` farklı olduğunu unutmayın.
+Tüm çıkış dosyalarının *lib* klasörü yerine *Araçlar* klasörüne kopyalanıp kopyalanmayacağını belirtir. Bu, *. csproj* dosyasındaki `PackageType` ayarlanarak belirtilen `DotNetCliTool`farklıdır.
 
 ### <a name="repositoryurl"></a>Depourl 'Si
 
@@ -392,7 +392,7 @@ NuGet. exe ve Visual Studio Paket Yöneticisi tarafından zorlanan, bu paketi y�
 
 ### <a name="includebuildoutput"></a>IncludeBuildOutput
 
-Bu Boole değerleri, derleme çıkış derlemelerinin *. nupkg* dosyasına paketedilip edilmeyeceğini belirtir.
+Bu Boole değeri, derleme çıkış derlemelerinin *. nupkg* dosyasına paketedilip edilmeyeceğini belirtir.
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
 

@@ -4,14 +4,14 @@ description: Bu ifade ağacının değiştirilmiş bir kopyasını oluştururken
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: a4cb40e439726e5fff60fe697da70d61bb24cb68
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: f60c447d5c89aa83f85073e642e621608131ed8d
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937228"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115784"
 ---
-# <a name="translating-expression-trees"></a>Ifade ağaçları çevriliyor
+# <a name="translate-expression-trees"></a>İfade ağaçlarını çevir
 
 [Previous--Ifadeleri derleme](expression-trees-building.md)
 
@@ -91,7 +91,7 @@ Console.WriteLine(theSum);
 ```
 
 Burada bir kod biraz daha vardır ancak kavramlar çok ulaşılabilir.
-Bu kod, alt öğeleri derinlemesine bir ilk aramada ziyaret ediyor. Sabit bir düğümle karşılaştığında, ziyaretçi sabit değeri döndürür. Ziyaretçi her iki öğeyi de ziyaret ettikten sonra bu alt ağaç için hesaplanan toplamı hesaplamıştır. Toplama düğümü artık toplamını hesaplaedebilir.
+Bu kod, alt öğeleri derinlemesine bir ilk aramada ziyaret ediyor. Sabit bir düğümle karşılaştığında, ziyaretçi sabit değeri döndürür. Ziyaretçi iki alt öğeyi ziyaret ettikten sonra bu alt ağaç için hesaplanan toplamı hesaplamıştır. Toplama düğümü artık toplamını hesaplaedebilir.
 İfade ağacındaki tüm düğümler ziyaret edildikten sonra toplam hesaplanır. Örneği hata ayıklayıcıda çalıştırıp yürütmeyi izleyerek yürütmeyi izleyebilirsiniz.
 
 Düğümlerin nasıl çözümlenmekte olduğunu ve ağacın çapraz geçiş yaparak nasıl hesaplantığını izlemeyi daha kolay hale getirir. Toplam yönteminin, tam olarak bir izleme bilgisi içeren güncelleştirilmiş bir sürümü aşağıda verilmiştir:

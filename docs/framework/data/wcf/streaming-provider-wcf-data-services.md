@@ -10,18 +10,18 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 83f28c50c53281692e1c3c6d55cc55e8d9304ad9
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900919"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116594"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Veri Hizmetleri)
 
 Veri hizmeti, büyük nesne ikili verilerini açığa çıkarır. Bu ikili veriler video ve ses akışlarını, görüntüleri, belge dosyalarını veya diğer ikili medya türlerini temsil edebilir. Veri modelindeki bir varlık bir veya daha fazla ikili özellik içerdiğinde, veri hizmeti yanıt akışındaki girdinin içinde Base-64 olarak kodlanmış bu ikili verileri döndürür. Büyük ikili verilerin bu şekilde yüklenmesi ve serileştirilmesi performansı etkileyebileceğinden, açık veri Protokolü (OData), ait olduğu varlıktan bağımsız ikili verileri almak için bir mekanizma tanımlar. Bu, ikili verileri varlıktaki bir veya daha fazla veri akışlarına ayırarak gerçekleştirilir.
 
-- Medya kaynağı-video, ses, görüntü veya başka türde medya kaynağı akışı gibi bir varlığa ait ikili veriler.
+- Medya kaynağı-bir varlığa ait olan, video, ses, görüntü veya diğer medya kaynak akışı türü gibi ikili veriler.
 
 - Medya bağlantı girişi-ilgili medya kaynağı akışına başvuran bir varlık.
 
@@ -88,14 +88,14 @@ Veri hizmeti oluşturma hakkında genel bilgi için bkz. [veri hizmetini yapıla
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Barındırma ortamında büyük Ikili akışları etkinleştirme
 
-Bir ASP.NET Web uygulamasında bir veri hizmeti oluşturduğunuzda, HTTP protokol uygulamasını sağlamak için Windows Communication Foundation (WCF) kullanılır. Varsayılan olarak, WCF HTTP iletilerinin boyutunu yalnızca 65K bayt olarak sınırlandırır. Veri hizmetinden büyük ikili veri akışı oluşturabilmek için, büyük ikili dosyaları etkinleştirmek ve aktarım için akışları kullanmak üzere Web uygulamasını da yapılandırmanız gerekir. Bunu yapmak için, uygulamanın Web. config dosyasının `<configuration />` öğesinde aşağıdakini ekleyin:
+Bir ASP.NET Web uygulamasında bir veri hizmeti oluşturduğunuzda, HTTP protokol uygulamasını sağlamak için Windows Communication Foundation (WCF) kullanılır. Varsayılan olarak, WCF HTTP iletilerinin boyutunu yalnızca 65 KB ile sınırlandırır. Veri hizmetinden büyük ikili veri akışı oluşturabilmek için, büyük ikili dosyaları etkinleştirmek ve aktarım için akışları kullanmak üzere Web uygulamasını da yapılandırmanız gerekir. Bunu yapmak için, uygulamanın Web. config dosyasının `<configuration />` öğesinde aşağıdakini ekleyin:
 
 > [!NOTE]
 > Hem istek hem de yanıt iletilerindeki ikili verilerin, WCF tarafından arabelleğe alınmadığından emin olmak için <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> aktarım modunu kullanmanız gerekir.
 
 Daha fazla bilgi için bkz. [akış Ileti aktarımı](../../wcf/feature-details/streaming-message-transfer.md) ve [Aktarım kotaları](../../wcf/feature-details/transport-quotas.md).
 
-Varsayılan olarak, Internet Information Services (IIS) isteklerin boyutunu 4MB olarak sınırlandırır. Veri hizmetinizin IIS üzerinde çalışırken 4.000'den büyük akışlar almasını sağlamak için, aşağıdaki örnekte gösterildiği gibi, `<system.web />` yapılandırma bölümünde [httpRuntime öğesinin (ASP.NET Settings şeması)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) `maxRequestLength` özniteliğini de ayarlamanız gerekir:
+Varsayılan olarak, Internet Information Services (IIS), isteklerin boyutunu 4 MB ile sınırlar. Veri hizmetinizin IIS üzerinde çalışırken 4 MB 'tan büyük akışlar almasını sağlamak için, aşağıdaki örnekte gösterildiği gibi, `<system.web />` yapılandırma bölümünde [httpRuntime öğesinin (ASP.NET Settings şeması)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) `maxRequestLength` özniteliğini de ayarlamanız gerekir:
 
 ## <a name="using-data-streams-in-a-client-application"></a>Istemci uygulamasında veri akışlarını kullanma
 
@@ -117,7 +117,7 @@ Aşağıda, bir akış sağlayıcısı uyguladığınızda ve bir veri hizmetind
 
   - Medya kaynağı olan bir ikili özelliğin veri modeline dahil edilmemelidir. Bir veri modelinde kullanıma sunulan tüm özellikler bir yanıt akışındaki girişte döndürülür.
 
-  - Büyük bir ikili akış ile performansı artırmak için, ikili verileri veritabanında depolamak üzere özel bir akış sınıfı oluşturmanızı öneririz. Bu sınıf, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> uygulamanız tarafından döndürülür ve ikili verileri öbeklerdeki veritabanına gönderir. Bir SQL Server veritabanı için, ikili veriler 1 MB 'tan büyükse veritabanına veri akışı için bir FıLESTREAM kullanmanızı öneririz.
+  - Büyük bir ikili akış ile performansı artırmak için, ikili verileri veritabanında depolamak üzere özel bir akış sınıfı oluşturmanızı öneririz. Bu sınıf, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> uygulamanız tarafından döndürülür ve ikili verileri öbeklerdeki veritabanına gönderir. Bir SQL Server veritabanı için, ikili veriler 1 MB 'den büyük olduğunda veritabanına veri akışı sağlamak için bir FıLESTREAM kullanmanızı öneririz.
 
   - Veritabanınızın, veri hizmetiniz tarafından alınacak ikili büyük akışları depolamak için tasarlandığından emin olun.
 
