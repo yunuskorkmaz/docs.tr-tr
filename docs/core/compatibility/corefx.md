@@ -2,18 +2,36 @@
 title: Temel sınıf kitaplığı bölme değişiklikleri-.NET Core
 description: Temel sınıf kitaplığı olan .NET CoreFx 'teki son değişiklikleri listeler.
 ms.date: 09/20/2019
-ms.openlocfilehash: 1b578a6e3ae986a4c12c36fdf558b1fa5d8a3d66
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: eb416a0b061bfe50db330627c0ea68e0ba0c9079
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344875"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116506"
 ---
-# <a name="corefx-breaking-changes"></a><span data-ttu-id="2d6fc-103">CoreFx değişiklikleri</span><span class="sxs-lookup"><span data-stu-id="2d6fc-103">CoreFx breaking changes</span></span>
+# <a name="corefx-breaking-changes"></a><span data-ttu-id="4e467-103">CoreFx değişiklikleri</span><span class="sxs-lookup"><span data-stu-id="4e467-103">CoreFx breaking changes</span></span>
 
-<span data-ttu-id="2d6fc-104">Aşağıda .NET Core sürümüne göre CoreFx 'in son değişikliklerinin bir listesi verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="2d6fc-104">The following is a list of CoreFx breaking changes by .NET Core version.</span></span> <span data-ttu-id="2d6fc-105">CoreFx, .NET Core tarafından kullanılan temel öğeler ve diğer genel türler sağlar.</span><span class="sxs-lookup"><span data-stu-id="2d6fc-105">CoreFx provides the primitives and other general types used by .NET Core.</span></span>
+<span data-ttu-id="4e467-104">CoreFx, .NET Core tarafından kullanılan temel öğeler ve diğer genel türler sağlar.</span><span class="sxs-lookup"><span data-stu-id="4e467-104">CoreFx provides the primitives and other general types used by .NET Core.</span></span>
 
-## <a name="net-core-30"></a><span data-ttu-id="2d6fc-106">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="2d6fc-106">.NET Core 3.0</span></span>
+<span data-ttu-id="4e467-105">Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:</span><span class="sxs-lookup"><span data-stu-id="4e467-105">The following breaking changes are documented on this page:</span></span>
+
+- [<span data-ttu-id="4e467-106">Sürümü şimdi rapor eden API 'Ler rapor ürünü ve dosya sürümü değil</span><span class="sxs-lookup"><span data-stu-id="4e467-106">APIs that report version now report product and not file version</span></span>](#apis-that-report-version-now-report-product-and-not-file-version)
+- [<span data-ttu-id="4e467-107">Özel EncoderFallbackBuffer örnekleri özyinelemeli olarak geri dönemez</span><span class="sxs-lookup"><span data-stu-id="4e467-107">Custom EncoderFallbackBuffer instances cannot fall back recursively</span></span>](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively)
+- [<span data-ttu-id="4e467-108">Kayan nokta biçimlendirme ve ayrıştırma davranışı değişiklikleri</span><span class="sxs-lookup"><span data-stu-id="4e467-108">Floating point formatting and parsing behavior changes</span></span>](#floating-point-formatting-and-parsing-behavior-changed)
+- [<span data-ttu-id="4e467-109">Kayan nokta ayrıştırma işlemleri artık başarısız olmaz veya bir OverflowException oluşturmaz</span><span class="sxs-lookup"><span data-stu-id="4e467-109">Floating-point parsing operations no longer fail or throw an OverflowException</span></span>](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception)
+- [<span data-ttu-id="4e467-110">InvalidAsynchronousStateException başka bir derlemeye taşındı</span><span class="sxs-lookup"><span data-stu-id="4e467-110">InvalidAsynchronousStateException moved to another assembly</span></span>](#invalidasynchronousstateexception-moved-to-another-assembly)
+- [<span data-ttu-id="4e467-111">NET Core 3,0 hatalı biçimlendirilmiş UTF-8 bayt dizilerini değiştirirken Unicode en iyi yöntemlerini izler</span><span class="sxs-lookup"><span data-stu-id="4e467-111">NET Core 3.0 follows Unicode best practices when replacing ill-formed UTF-8 byte sequences</span></span>](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences)
+- [<span data-ttu-id="4e467-112">TypeDescriptionProviderAttribute başka bir derlemeye taşındı</span><span class="sxs-lookup"><span data-stu-id="4e467-112">TypeDescriptionProviderAttribute moved to another assembly</span></span>](#typedescriptionproviderattribute-moved-to-another-assembly)
+- [<span data-ttu-id="4e467-113">ZipArchiveEntry artık tutarsız giriş boyutlarına sahip arşivleri işliyor</span><span class="sxs-lookup"><span data-stu-id="4e467-113">ZipArchiveEntry no longer handles archives with inconsistent entry sizes</span></span>](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes)
+- [<span data-ttu-id="4e467-114">JsonException iken NotSupportedException olarak değiştirilen JSON seri hale getirici özel durum türü</span><span class="sxs-lookup"><span data-stu-id="4e467-114">JSON serializer exception type changed from JsonException to NotSupportedException</span></span>](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception)
+- [<span data-ttu-id="4e467-115">Utf8JsonWriter içinde (String) null semantiğinin değiştirilmesi</span><span class="sxs-lookup"><span data-stu-id="4e467-115">Change in semantics of (string)null in Utf8JsonWriter</span></span>](#change-in-semantics-of-stringnull-in-utf8jsonwriter)
+- [<span data-ttu-id="4e467-116">JsonEncodedText. Encode yöntemlerinde ek bir JavaScriptEncoder bağımsız değişkeni vardır</span><span class="sxs-lookup"><span data-stu-id="4e467-116">JsonEncodedText.Encode methods have an additional JavaScriptEncoder argument</span></span>](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument)
+- [<span data-ttu-id="4e467-117">JsonFactoryConverter. CreateConverter imzası değişti</span><span class="sxs-lookup"><span data-stu-id="4e467-117">JsonFactoryConverter.CreateConverter signature changed</span></span>](#jsonfactoryconvertercreateconverter-signature-changed)
+- [<span data-ttu-id="4e467-118">JsonElement API değişiklikleri</span><span class="sxs-lookup"><span data-stu-id="4e467-118">JsonElement API changes</span></span>](#jsonelement-api-changes)
+- [<span data-ttu-id="4e467-119">Yerleşik yapı türlerine eklenen özel alanlar</span><span class="sxs-lookup"><span data-stu-id="4e467-119">Private fields added to built-in struct types</span></span>](#private-fields-added-to-built-in-struct-types)
+- [<span data-ttu-id="4e467-120">UseShellExecute varsayılan değerindeki değişiklik</span><span class="sxs-lookup"><span data-stu-id="4e467-120">Change in default value of UseShellExecute</span></span>](#change-in-default-value-of-useshellexecute)
+
+## <a name="net-core-30"></a><span data-ttu-id="4e467-121">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="4e467-121">.NET Core 3.0</span></span>
 
 [!INCLUDE[APIs that report version now report product and not file version](~/includes/core-changes/corefx/3.0/version-information-changes.md)]
 
@@ -45,11 +63,15 @@ ms.locfileid: "75344875"
 
 [!INCLUDE[ZipArchiveEntry no longer handles archives with inconsistent entry sizes](~/includes/core-changes/corefx/3.0/ziparchiveentry-and-inconsistent-entry-sizes.md)]
 
-## <a name="net-core-30-preview-9"></a><span data-ttu-id="2d6fc-107">.NET Core 3,0 Preview 9</span><span class="sxs-lookup"><span data-stu-id="2d6fc-107">.NET Core 3.0 Preview 9</span></span>
+***
 
-[!INCLUDE[Json serializer exception type changed from JsonException to NotSupportedException](~/includes/core-changes/corefx/3.0/serializer-throws-notsupportedexception.md)]
+## <a name="net-core-30-preview-9"></a><span data-ttu-id="4e467-122">.NET Core 3,0 Preview 9</span><span class="sxs-lookup"><span data-stu-id="4e467-122">.NET Core 3.0 Preview 9</span></span>
 
-## <a name="net-core-30-preview-8"></a><span data-ttu-id="2d6fc-108">.NET Core 3,0 Preview 8</span><span class="sxs-lookup"><span data-stu-id="2d6fc-108">.NET Core 3.0 Preview 8</span></span>
+[!INCLUDE[JSON serializer exception type changed from JsonException to NotSupportedException](~/includes/core-changes/corefx/3.0/serializer-throws-notsupportedexception.md)]
+
+***
+
+## <a name="net-core-30-preview-8"></a><span data-ttu-id="4e467-123">.NET Core 3,0 Preview 8</span><span class="sxs-lookup"><span data-stu-id="4e467-123">.NET Core 3.0 Preview 8</span></span>
 
 [!INCLUDE[Change in semantics of (string)null in Utf8JsonWriter](~/includes/core-changes/corefx/3.0/change-in-null-in-utf8jsonwriter.md)]
 
@@ -61,14 +83,20 @@ ms.locfileid: "75344875"
 
 [!INCLUDE[JsonFactoryConverter.CreateConverter signature changed](~/includes/core-changes/corefx/3.0/jsonfactoryconverter-createconverter.md)]
 
-## <a name="net-core-30-preview-7"></a><span data-ttu-id="2d6fc-109">.NET Core 3,0 Preview 7</span><span class="sxs-lookup"><span data-stu-id="2d6fc-109">.NET Core 3.0 Preview 7</span></span>
+***
+
+## <a name="net-core-30-preview-7"></a><span data-ttu-id="4e467-124">.NET Core 3,0 Preview 7</span><span class="sxs-lookup"><span data-stu-id="4e467-124">.NET Core 3.0 Preview 7</span></span>
 
 [!INCLUDE[JsonElement API changes](~/includes/core-changes/corefx/3.0/jsonelement-api-changes.md)]
 
-## <a name="net-core-21"></a><span data-ttu-id="2d6fc-110">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="2d6fc-110">.NET Core 2.1</span></span>
+***
 
-[!INCLUDE[Instantiate struct](~/includes/core-changes/corefx/2.1/instantiate-struct.md)]
+## <a name="net-core-21"></a><span data-ttu-id="4e467-125">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="4e467-125">.NET Core 2.1</span></span>
+
+[!INCLUDE[Private fields added to built-in struct types](~/includes/core-changes/corefx/2.1/instantiate-struct.md)]
 
 ***
 
-[!INCLUDE[Process.Start changes](~/includes/core-changes/corefx/2.1/process-start-changes.md)]
+[!INCLUDE[Change in default value of UseShellExecute](~/includes/core-changes/corefx/2.1/process-start-changes.md)]
+
+***
