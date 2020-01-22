@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7ff8345fd0a3ca30375cf93d22625f89d5d9a053
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 10811a90887624a731c58d557e1dd196ae2c9207
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567338"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76508556"
 ---
 ### <a name="removed-controls"></a>Kaldırılan denetimler
 
@@ -47,7 +47,7 @@ Aşağıdaki türler artık kullanılamaz:
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3,1
+3.1
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
@@ -59,7 +59,7 @@ Her kaldırılan denetimin önerilen bir değiştirme denetimi vardır. Aşağı
 | ToolBar | ToolStrip | Araç Barappearance |
 | ToolBarButton | ToolStripButton | Toolbarbuttonkerkeventargs, Toolbarbuttonclick Kerkeventhandler, ToolBarButtonStyle, ToolBarTextAlign|
 | ContextMenu | ContextMenuStrip | |
-| Menü | ToolStripDropDown, ToolstripDropDownMenu | MenuItemCollection |
+| Menü | ToolStripDropDown, ToolStripDropDownMenu | MenuItemCollection |
 | MainMenu | MenuStrip | |
 | MenuItem | ToolStripMenuItem | |
 

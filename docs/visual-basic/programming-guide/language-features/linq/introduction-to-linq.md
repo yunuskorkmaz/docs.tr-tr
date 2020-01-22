@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 610f2a1020cc15f855b3ddfc0917e14aae34fb82
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3f58edf326ab9415d78d7065d74d8c1954fbbf37
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344933"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76315869"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic'de LINQ'e Giriş
 Dil ile tümleşik sorgu (LINQ) Visual Basic 'e sorgu özellikleri ekler ve tüm veri türleriyle çalışırken basit ve güçlü yetenekler sağlar. İşlenecek bir veritabanına sorgu göndermek veya arama yaptığınız her veri türü için farklı sorgu söz dizimiyle çalışmak yerine, LINQ sorguları Visual Basic dilinin bir parçası olarak tanıtır. Veri türünden bağımsız olarak Birleşik bir sözdizimi kullanır.  
@@ -43,7 +43,7 @@ Dil ile tümleşik sorgu (LINQ) Visual Basic 'e sorgu özellikleri ekler ve tüm
 |Nesnelere LINQ|LINQ to Objects sağlayıcı, bellek içi koleksiyonları ve dizileri sorgulamanızı sağlar. Bir nesne <xref:System.Collections.IEnumerable> ya da <xref:System.Collections.Generic.IEnumerable%601> arabirimini destekliyorsa, LINQ to Objects sağlayıcısı sorgulamanızı sağlar.<br /><br /> Tüm Visual Basic projeleri için varsayılan olarak içeri aktarılan <xref:System.Linq> ad alanını içeri aktararak LINQ to Objects sağlayıcıyı etkinleştirebilirsiniz.<br /><br /> LINQ to Objects sağlayıcısı hakkında daha fazla bilgi için bkz. [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
 |LINQ - SQL|LINQ to SQL sağlayıcı, verileri bir SQL Server veritabanında sorgulamanıza ve değiştirmenize olanak sağlar. Bu, bir uygulamanın nesne modelini bir veritabanındaki tablolar ve nesneler için eşlemeyi kolaylaştırır.<br /><br /> Visual Basic, Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) dahil LINQ to SQL birlikte çalışmayı kolaylaştırır. Bu tasarımcı, bir veritabanındaki nesnelerle eşleşen bir uygulamada nesne modeli oluşturmak için kullanılır. O/R Tasarımcısı Ayrıca, saklı yordamları ve işlevleri, veritabanı ile iletişimi yöneten ve iyimser eşzamanlılık denetimleri için durum depolayan <xref:System.Data.Linq.DataContext> nesnesine eşlemek için de işlevsellik sağlar.<br /><br /> LINQ to SQL sağlayıcısı hakkında daha fazla bilgi için bkz. [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Nesne İlişkisel Tasarımcısı hakkında daha fazla bilgi için bkz. [Visual Studio 'da LINQ to SQL araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
 |LINQ - XML|LINQ to XML sağlayıcı, XML 'yi sorgulamanıza ve değiştirmenize olanak sağlar. Bellek içi XML 'yi değiştirebilir veya XML dosyasından XML yükleyebilir ve bir dosyaya kaydedebilirsiniz.<br /><br /> Ayrıca, LINQ to XML sağlayıcı, doğrudan Visual Basic kodunuzda XML yazmanızı sağlayan XML sabit değerleri ve XML eksen özelliklerini etkinleştirir. Daha fazla bilgi için bkz. [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
-|LINQ - DataSet|LINQ to DataSet sağlayıcı, bir ADO.NET veri kümesindeki verileri sorgulamanıza ve güncelleştirmenize olanak sağlar. Veri kümenizdeki verileri sorgulama, toplama ve güncelleştirme özelliklerini basitleştirmek ve genişletmek için veri kümelerini kullanan uygulamalara LINQ 'ın gücünü ekleyebilirsiniz.<br /><br /> Daha fazla bilgi için bkz. [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
+|LINQ - DataSet|LINQ to DataSet sağlayıcı, bir ADO.NET veri kümesindeki verileri sorgulamanıza ve güncelleştirmenize olanak sağlar. Veri kümenizdeki verileri sorgulama, toplama ve güncelleştirme özelliklerini basitleştirmek ve genişletmek için veri kümelerini kullanan uygulamalara LINQ 'ın gücünü ekleyebilirsiniz.<br /><br /> Daha fazla bilgi için [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
 ## <a name="structure-of-a-linq-query"></a>LINQ sorgusunun yapısı  
  Genellikle *sorgu ifadesi*olarak ANıLAN bir LINQ sorgusu, sorgu için veri kaynaklarını ve yineleme değişkenlerini tanımlayan bir sorgu yan tümceleri birleşimini içerir. Sorgu ifadesi Ayrıca sıralama, filtreleme, gruplama ve katılma veya kaynak verilere uygulanacak hesaplamalar için yönergeleri de içerebilir. Sorgu ifadesi söz dizimi SQL; sözdizimine benzer Bu nedenle, bilinen sözdiziminin büyük bir bölümünü bulabilirsiniz.  
@@ -94,9 +94,9 @@ Bir `Select` yan tümcesi belirtilmemişse, sorgunun yineleme değişkenleri, `F
 
  [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
-### <a name="order-by-clause"></a>Order by tümcesi]
+### <a name="order-by-clause"></a>Order By tümcesi
 
-| Seçim. [`Order By` yan tümcesi](../../../../visual-basic/language-reference/queries/order-by-clause.md) , bir sorgudaki sütunlar için sıralama düzenini belirtir. Örneğin:
+İsteğe bağlı. [`Order By` yan tümcesi](../../../../visual-basic/language-reference/queries/order-by-clause.md) , bir sorgudaki sütunlar için sıralama düzenini belirtir. Örneğin:
 
  [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 

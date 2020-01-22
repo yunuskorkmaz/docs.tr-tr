@@ -2,12 +2,12 @@
 title: WordprocessingML Belgelerinin Şekli
 ms.date: 07/20/2015
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-ms.openlocfilehash: 64e9ca280c000ba488bfc72248bd83e37474f043
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9dd858e28c010d901c2c5fdfb477fe2c6975dbd4
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350601"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76315856"
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>WordprocessingML belgelerinin şekli (Visual Basic)
 Bu konu, bir WordprocessingML belgesinin XML şeklini tanıtır.  
@@ -87,13 +87,11 @@ Module Module1
 End Module  
 ```  
   
-## <a name="external-resources"></a>Dış Kaynaklar  
- [Office (2007) Open XML dosya biçimlerine giriş](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))  
-  
- [WordprocessingML 'ye Genel Bakış](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812(v=office.11))  
-  
- [Office 2003: XML başvuru şemaları Indirme sayfası](https://go.microsoft.com/fwlink/?LinkId=98095)  
-  
+## <a name="external-resources"></a>Dış kaynaklar
+
+- [Office (2007) Open XML dosya biçimlerine giriş](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))
+- [WordprocessingML 'ye Genel Bakış](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812(v=office.11))
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
