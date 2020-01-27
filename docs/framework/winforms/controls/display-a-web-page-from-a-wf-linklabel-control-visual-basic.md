@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Forms LinkLabel Denetiminden Web Sayfası Görüntüleme (Visual Basic)'
+title: LinkLabel denetiminden Web sayfasını görüntüle (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: f36f5bbaaf28963fc95440a4f3a174b8b48f6276
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75373d55b7bc5ef11e39d5b9546996cb1c4f6f7c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651795"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745921"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="a6d48-102">Nasıl yapılır: Bir Windows Forms LinkLabel Denetiminden Web Sayfası Görüntüleme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a6d48-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
-<span data-ttu-id="a6d48-103">Bir kullanıcı bir Windows Forms tıkladığında bu örnek bir Web sayfası varsayılan tarayıcıda görüntülenir. <xref:System.Windows.Forms.LinkLabel> denetimi.</span><span class="sxs-lookup"><span data-stu-id="a6d48-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="a757b-102">Nasıl yapılır: Bir Windows Forms LinkLabel Denetiminden Web Sayfası Görüntüleme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a757b-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
+<span data-ttu-id="a757b-103">Bu örnek, Kullanıcı Windows Forms <xref:System.Windows.Forms.LinkLabel> denetimine tıkladığında varsayılan tarayıcıda bir Web sayfası görüntüler.</span><span class="sxs-lookup"><span data-stu-id="a757b-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a6d48-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="a6d48-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a757b-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="a757b-104">Example</span></span>  
   
 ```vb  
 Private Sub Form1_Load(ByVal sender As System.Object, ByVal e _  
@@ -37,19 +37,19 @@ LinkLabel1.LinkClicked
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a6d48-105">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="a6d48-105">Compiling the Code</span></span>  
- <span data-ttu-id="a6d48-106">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="a6d48-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="a757b-105">Kod Derleme</span><span class="sxs-lookup"><span data-stu-id="a757b-105">Compiling the Code</span></span>  
+ <span data-ttu-id="a757b-106">Bu örnek şunları gerektirir:</span><span class="sxs-lookup"><span data-stu-id="a757b-106">This example requires:</span></span>  
   
-- <span data-ttu-id="a6d48-107">Adlı bir Windows formu `Form1`.</span><span class="sxs-lookup"><span data-stu-id="a6d48-107">A Windows Form named `Form1`.</span></span>  
+- <span data-ttu-id="a757b-107">`Form1`adlı bir Windows formu.</span><span class="sxs-lookup"><span data-stu-id="a757b-107">A Windows Form named `Form1`.</span></span>  
   
-- <span data-ttu-id="a6d48-108">A <xref:System.Windows.Forms.LinkLabel> adlı Denetim `LinkLabel1`.</span><span class="sxs-lookup"><span data-stu-id="a6d48-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
+- <span data-ttu-id="a757b-108">`LinkLabel1`adlı <xref:System.Windows.Forms.LinkLabel> denetim.</span><span class="sxs-lookup"><span data-stu-id="a757b-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
   
-- <span data-ttu-id="a6d48-109">Etkin bir Internet bağlantısı.</span><span class="sxs-lookup"><span data-stu-id="a6d48-109">An active Internet connection.</span></span>  
+- <span data-ttu-id="a757b-109">Etkin bir Internet bağlantısı.</span><span class="sxs-lookup"><span data-stu-id="a757b-109">An active Internet connection.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="a6d48-110">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="a6d48-110">.NET Framework Security</span></span>  
- <span data-ttu-id="a6d48-111">Çağrı <xref:System.Diagnostics.Process.Start%2A> yöntemi tam güven gerektirir.</span><span class="sxs-lookup"><span data-stu-id="a6d48-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="a6d48-112">Daha fazla bilgi için bkz. <xref:System.Security.SecurityException>.</span><span class="sxs-lookup"><span data-stu-id="a6d48-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="a757b-110">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="a757b-110">.NET Framework Security</span></span>  
+ <span data-ttu-id="a757b-111"><xref:System.Diagnostics.Process.Start%2A> yöntemine yapılan çağrı tam güven gerektirir.</span><span class="sxs-lookup"><span data-stu-id="a757b-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="a757b-112">Daha fazla bilgi için bkz. <xref:System.Security.SecurityException>.</span><span class="sxs-lookup"><span data-stu-id="a757b-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a6d48-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a6d48-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a757b-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a757b-113">See also</span></span>
 
 - <xref:System.Windows.Forms.LinkLabel>
-- [<span data-ttu-id="a6d48-114">LinkLabel Denetimi</span><span class="sxs-lookup"><span data-stu-id="a6d48-114">LinkLabel Control</span></span>](linklabel-control-windows-forms.md)
+- [<span data-ttu-id="a757b-114">LinkLabel Denetimi</span><span class="sxs-lookup"><span data-stu-id="a757b-114">LinkLabel Control</span></span>](linklabel-control-windows-forms.md)

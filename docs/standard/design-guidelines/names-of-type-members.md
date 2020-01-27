@@ -12,95 +12,94 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: a9cd531100057fbad4884a20e6e7db6ef94e7956
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 81c837bd045992043208a59f6ee16803c1d6eb3c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709224"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744186"
 ---
-# <a name="names-of-type-members"></a><span data-ttu-id="3cca8-102">Tür Üyelerinin Adları</span><span class="sxs-lookup"><span data-stu-id="3cca8-102">Names of Type Members</span></span>
-<span data-ttu-id="3cca8-103">Üyeleri türlerine yapılan: yöntemler, özellikler, olaylar, Oluşturucular ve alanları.</span><span class="sxs-lookup"><span data-stu-id="3cca8-103">Types are made of members: methods, properties, events, constructors, and fields.</span></span> <span data-ttu-id="3cca8-104">Aşağıdaki bölümlerde, tür üyeleri adlandırmak için yönergeler açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="3cca8-104">The following sections describe guidelines for naming type members.</span></span>  
-  
-## <a name="names-of-methods"></a><span data-ttu-id="3cca8-105">Yöntemlerin adları</span><span class="sxs-lookup"><span data-stu-id="3cca8-105">Names of Methods</span></span>  
- <span data-ttu-id="3cca8-106">Yöntemleri eylemde toplanabilmesini olduğundan, tasarım yönergeleri yöntem adları fiilleri ya da tümcelere fiili olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="3cca8-106">Because methods are the means of taking action, the design guidelines require that method names be verbs or verb phrases.</span></span> <span data-ttu-id="3cca8-107">Bu kılavuz ayrıca aşağıdaki isim veya sıfat tümcecikleri olan özellik ve tür adları, yöntem adlarını ayırt etmek için hizmet verir.</span><span class="sxs-lookup"><span data-stu-id="3cca8-107">Following this guideline also serves to distinguish method names from property and type names, which are noun or adjective phrases.</span></span>  
-  
- <span data-ttu-id="3cca8-108">**✓ DO** fiilleri ya da fiili tümcecikleri yöntemleri adlar verin.</span><span class="sxs-lookup"><span data-stu-id="3cca8-108">**✓ DO** give methods names that are verbs or verb phrases.</span></span>  
-  
-```csharp  
-public class String {  
-    public int CompareTo(...);  
-    public string[] Split(...);  
-    public string Trim();  
-}  
-```  
-  
-## <a name="names-of-properties"></a><span data-ttu-id="3cca8-109">Özelliklerin adları</span><span class="sxs-lookup"><span data-stu-id="3cca8-109">Names of Properties</span></span>  
- <span data-ttu-id="3cca8-110">Diğer üyeleri özellikleri isim ifade veya sıfat adları verilmelidir.</span><span class="sxs-lookup"><span data-stu-id="3cca8-110">Unlike other members, properties should be given noun phrase or adjective names.</span></span> <span data-ttu-id="3cca8-111">Bir özellik verileri ifade eder ve özellik adını yansıtılan çünkü olmasıdır.</span><span class="sxs-lookup"><span data-stu-id="3cca8-111">That is because a property refers to data, and the name of the property reflects that.</span></span> <span data-ttu-id="3cca8-112">PascalCasing her zaman özellik adları için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="3cca8-112">PascalCasing is always used for property names.</span></span>  
-  
- <span data-ttu-id="3cca8-113">**✓ DO** adı bir isim, isim sözcük veya sıfat kullanarak özellikleri.</span><span class="sxs-lookup"><span data-stu-id="3cca8-113">**✓ DO** name properties using a noun, noun phrase, or adjective.</span></span>  
-  
- <span data-ttu-id="3cca8-114">**X DO NOT** aşağıdaki örnekte olduğu gibi "Get" yöntemlerinin adıyla aynı özelliklere sahiptir:</span><span class="sxs-lookup"><span data-stu-id="3cca8-114">**X DO NOT** have properties that match the name of "Get" methods as in the following example:</span></span>  
-  
- `public string TextWriter { get {...} set {...} }`  
- `public string GetTextWriter(int value) { ... }`  
-  
- <span data-ttu-id="3cca8-115">Bu düzen, genellikle özelliği bir yöntem gerçekten gerektiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="3cca8-115">This pattern typically indicates that the property should really be a method.</span></span>  
-  
- <span data-ttu-id="3cca8-116">**✓** , Koleksiyon özelliklerini, tekil bir tümcecik kullanmak yerine "List" veya "Collection" tarafından izlenen bir plural ifadesi ile tanımlar.</span><span class="sxs-lookup"><span data-stu-id="3cca8-116">**✓ DO** name collection properties with a plural phrase describing the items in the collection instead of using a singular phrase followed by "List" or "Collection".</span></span>  
-  
- <span data-ttu-id="3cca8-117">**✓ DO** olumlu bir ifade ile Boole özellikleri adlandırın (`CanSeek` yerine `CantSeek`).</span><span class="sxs-lookup"><span data-stu-id="3cca8-117">**✓ DO** name Boolean properties with an affirmative phrase (`CanSeek` instead of `CantSeek`).</span></span> <span data-ttu-id="3cca8-118">İsteğe bağlı olarak, Boolean özelliklerinin önüne "dir", "can" veya "sahip" de önek olarak önek ekleyebilirsiniz, ancak yalnızca değer ekler.</span><span class="sxs-lookup"><span data-stu-id="3cca8-118">Optionally, you can also prefix Boolean properties with "Is", "Can", or "Has", but only where it adds value.</span></span>  
-  
- <span data-ttu-id="3cca8-119">**✓ CONSIDER** özellik türü olarak aynı adı vererek.</span><span class="sxs-lookup"><span data-stu-id="3cca8-119">**✓ CONSIDER** giving a property the same name as its type.</span></span>  
-  
- <span data-ttu-id="3cca8-120">Örneğin, aşağıdaki özelliği doğru alır ve bir enum değeri ayarlar `Color`, özellik adlı `Color`:</span><span class="sxs-lookup"><span data-stu-id="3cca8-120">For example, the following property correctly gets and sets an enum value named `Color`, so the property is named `Color`:</span></span>  
-  
-```csharp  
-public enum Color {...}  
-public class Control {  
-    public Color Color { get {...} set {...} }  
-}  
-```  
-  
-## <a name="names-of-events"></a><span data-ttu-id="3cca8-121">Olayların adları</span><span class="sxs-lookup"><span data-stu-id="3cca8-121">Names of Events</span></span>  
- <span data-ttu-id="3cca8-122">Olayları için gerçekleşmesini olan bir ya da gerçekleşen bir bazı eylemler her zaman bakın.</span><span class="sxs-lookup"><span data-stu-id="3cca8-122">Events always refer to some action, either one that is happening or one that has occurred.</span></span> <span data-ttu-id="3cca8-123">Bu nedenle, yöntemleriyle yönteminde olduğu gibi olayları fiiller ile adlandırılır ve fiili şimdiki zaman olayı zaman belirtmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="3cca8-123">Therefore, as with methods, events are named with verbs, and verb tense is used to indicate the time when the event is raised.</span></span>  
-  
- <span data-ttu-id="3cca8-124">**✓ DO** fiil veya fiili tümcecik olaylarlaA adı.</span><span class="sxs-lookup"><span data-stu-id="3cca8-124">**✓ DO** name events with a verb or a verb phrase.</span></span>  
-  
- <span data-ttu-id="3cca8-125">Örnekler `Clicked`, `Painting`, `DroppedDown`ve benzeri.</span><span class="sxs-lookup"><span data-stu-id="3cca8-125">Examples include `Clicked`, `Painting`, `DroppedDown`, and so on.</span></span>  
-  
- <span data-ttu-id="3cca8-126">**✓ DO** mevcut ve geçmiş zamanlarını kullanarak önce ve sonra bir kavramı ile olayları adlar verin.</span><span class="sxs-lookup"><span data-stu-id="3cca8-126">**✓ DO** give events names with a concept of before and after, using the present and past tenses.</span></span>  
-  
- <span data-ttu-id="3cca8-127">Örneğin, bir pencere kapatılmadan hemen önce bir kapatma olayı adlı `Closing`, ve penceresi kapatıldıktan sonra başlatan bir çağrılabilir `Closed`.</span><span class="sxs-lookup"><span data-stu-id="3cca8-127">For example, a close event that is raised before a window is closed would be called `Closing`, and one that is raised after the window is closed would be called `Closed`.</span></span>  
-  
- <span data-ttu-id="3cca8-128">**X DO NOT** "Önce" veya "Sonra" ön ekleri veya öncesi belirtmek için postfixes ve sonrası olayları kullanın.</span><span class="sxs-lookup"><span data-stu-id="3cca8-128">**X DO NOT** use "Before" or "After" prefixes or postfixes to indicate pre- and post-events.</span></span> <span data-ttu-id="3cca8-129">Kullanımı mevcut ve geçmiş zamanlarını yalnızca tanımlandığı gibi.</span><span class="sxs-lookup"><span data-stu-id="3cca8-129">Use present and past tenses as just described.</span></span>  
-  
- <span data-ttu-id="3cca8-130">**✓ DO** aşağıdaki örnekte gösterildiği gibi "EventHandler" soneki ile ad olay işleyicileri (temsilcileri olay türleri kullanılan):</span><span class="sxs-lookup"><span data-stu-id="3cca8-130">**✓ DO** name event handlers (delegates used as types of events) with the "EventHandler" suffix, as shown in the following example:</span></span>  
-  
- `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`  
-  
- <span data-ttu-id="3cca8-131">**✓ DO** adlı iki parametre kullanmak `sender` ve `e` olay işleyicileri.</span><span class="sxs-lookup"><span data-stu-id="3cca8-131">**✓ DO** use two parameters named `sender` and `e` in event handlers.</span></span>  
-  
- <span data-ttu-id="3cca8-132">Gönderen parametresi olayı tetikleyen nesne temsil eder.</span><span class="sxs-lookup"><span data-stu-id="3cca8-132">The sender parameter represents the object that raised the event.</span></span> <span data-ttu-id="3cca8-133">Gönderen parametresi genellikle türüdür `object`bile daha belirli bir tür kullanmak istemiyorsunuz mümkündür.</span><span class="sxs-lookup"><span data-stu-id="3cca8-133">The sender parameter is typically of type `object`, even if it is possible to employ a more specific type.</span></span>  
-  
- <span data-ttu-id="3cca8-134">**✓ DO** "EventArgs" sonek bağımsız değişkeni sınıflarıyla olay adı.</span><span class="sxs-lookup"><span data-stu-id="3cca8-134">**✓ DO** name event argument classes with the "EventArgs" suffix.</span></span>  
-  
-## <a name="names-of-fields"></a><span data-ttu-id="3cca8-135">Alanların adlarını</span><span class="sxs-lookup"><span data-stu-id="3cca8-135">Names of Fields</span></span>  
- <span data-ttu-id="3cca8-136">Statik genel ve korumalı alanlar için alan adlandırma yönergeleri uygulayın.</span><span class="sxs-lookup"><span data-stu-id="3cca8-136">The field-naming guidelines apply to static public and protected fields.</span></span> <span data-ttu-id="3cca8-137">İç ve özel alanları yönergeleri tarafından kapsanmayan ve ortak veya korumalı örnek alanları tarafından izin verilmez [üye tasarımı yönergeleri](../../../docs/standard/design-guidelines/member.md).</span><span class="sxs-lookup"><span data-stu-id="3cca8-137">Internal and private fields are not covered by guidelines, and public or protected instance fields are not allowed by the [member design guidelines](../../../docs/standard/design-guidelines/member.md).</span></span>  
-  
- <span data-ttu-id="3cca8-138">**✓ DO** PascalCasing alan adları kullanın.</span><span class="sxs-lookup"><span data-stu-id="3cca8-138">**✓ DO** use PascalCasing in field names.</span></span>  
-  
- <span data-ttu-id="3cca8-139">**✓ DO** ad alanları bir isim, isim tümceciği veya sıfat kullanarak.</span><span class="sxs-lookup"><span data-stu-id="3cca8-139">**✓ DO** name fields using a noun, noun phrase, or adjective.</span></span>  
-  
- <span data-ttu-id="3cca8-140">**X DO NOT** alan adları için önek kullanın.</span><span class="sxs-lookup"><span data-stu-id="3cca8-140">**X DO NOT** use a prefix for field names.</span></span>  
-  
- <span data-ttu-id="3cca8-141">Örneğin, "g_" veya "kendisinin" statik alanları göstermek için kullanmayın.</span><span class="sxs-lookup"><span data-stu-id="3cca8-141">For example, do not use "g_" or "s_" to indicate static fields.</span></span>  
-  
- <span data-ttu-id="3cca8-142">*© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*</span><span class="sxs-lookup"><span data-stu-id="3cca8-142">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
-  
- <span data-ttu-id="3cca8-143">*İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*</span><span class="sxs-lookup"><span data-stu-id="3cca8-143">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="3cca8-144">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3cca8-144">See also</span></span>
+# <a name="names-of-type-members"></a><span data-ttu-id="fd2e4-102">Tür Üyelerinin Adları</span><span class="sxs-lookup"><span data-stu-id="fd2e4-102">Names of Type Members</span></span>
+<span data-ttu-id="fd2e4-103">Üyeleri türlerine yapılan: yöntemler, özellikler, olaylar, Oluşturucular ve alanları.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-103">Types are made of members: methods, properties, events, constructors, and fields.</span></span> <span data-ttu-id="fd2e4-104">Aşağıdaki bölümlerde, tür üyeleri adlandırmak için yönergeler açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-104">The following sections describe guidelines for naming type members.</span></span>
 
-- [<span data-ttu-id="3cca8-145">Çerçeve Tasarım Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="3cca8-145">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
-- [<span data-ttu-id="3cca8-146">Adlandırma Kuralları</span><span class="sxs-lookup"><span data-stu-id="3cca8-146">Naming Guidelines</span></span>](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="names-of-methods"></a><span data-ttu-id="fd2e4-105">Yöntemlerin adları</span><span class="sxs-lookup"><span data-stu-id="fd2e4-105">Names of Methods</span></span>
+ <span data-ttu-id="fd2e4-106">Yöntemleri eylemde toplanabilmesini olduğundan, tasarım yönergeleri yöntem adları fiilleri ya da tümcelere fiili olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-106">Because methods are the means of taking action, the design guidelines require that method names be verbs or verb phrases.</span></span> <span data-ttu-id="fd2e4-107">Bu kılavuz ayrıca aşağıdaki isim veya sıfat tümcecikleri olan özellik ve tür adları, yöntem adlarını ayırt etmek için hizmet verir.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-107">Following this guideline also serves to distinguish method names from property and type names, which are noun or adjective phrases.</span></span>
+
+ <span data-ttu-id="fd2e4-108">✔️ fiiller veya fiil tümceleri olan yöntem adlarını verir.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-108">✔️ DO give methods names that are verbs or verb phrases.</span></span>
+
+```csharp
+public class String {
+    public int CompareTo(...);
+    public string[] Split(...);
+    public string Trim();
+}
+```
+
+## <a name="names-of-properties"></a><span data-ttu-id="fd2e4-109">Özelliklerin adları</span><span class="sxs-lookup"><span data-stu-id="fd2e4-109">Names of Properties</span></span>
+ <span data-ttu-id="fd2e4-110">Diğer üyeleri özellikleri isim ifade veya sıfat adları verilmelidir.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-110">Unlike other members, properties should be given noun phrase or adjective names.</span></span> <span data-ttu-id="fd2e4-111">Bir özellik verileri ifade eder ve özellik adını yansıtılan çünkü olmasıdır.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-111">That is because a property refers to data, and the name of the property reflects that.</span></span> <span data-ttu-id="fd2e4-112">PascalCasing her zaman özellik adları için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-112">PascalCasing is always used for property names.</span></span>
+
+ <span data-ttu-id="fd2e4-113">✔️ adı, isim tümceciğini veya sıfatıcı kullanarak ad özellikleri YAPıN.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-113">✔️ DO name properties using a noun, noun phrase, or adjective.</span></span>
+
+ <span data-ttu-id="fd2e4-114">❌, aşağıdaki örnekte olduğu gibi "Get" yöntemlerinin adıyla eşleşen özelliklere sahip DEĞILDIR:</span><span class="sxs-lookup"><span data-stu-id="fd2e4-114">❌ DO NOT have properties that match the name of "Get" methods as in the following example:</span></span>
+
+ <span data-ttu-id="fd2e4-115">`public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`</span><span class="sxs-lookup"><span data-stu-id="fd2e4-115">`public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`</span></span>
+
+ <span data-ttu-id="fd2e4-116">Bu düzen, genellikle özelliği bir yöntem gerçekten gerektiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-116">This pattern typically indicates that the property should really be a method.</span></span>
+
+ <span data-ttu-id="fd2e4-117">✔️ koleksiyon özelliklerini, tekil bir tümceciği, ardından "List" veya "Collection" yerine, koleksiyondaki öğeleri açıklayan bir plural ifadesi ile YAPıN.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-117">✔️ DO name collection properties with a plural phrase describing the items in the collection instead of using a singular phrase followed by "List" or "Collection".</span></span>
+
+ <span data-ttu-id="fd2e4-118">✔️ Boolean özelliklerini, bir belirleyici ifade (`CantSeek`yerine`CanSeek`) ile adlandırın.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-118">✔️ DO name Boolean properties with an affirmative phrase (`CanSeek` instead of `CantSeek`).</span></span> <span data-ttu-id="fd2e4-119">İsteğe bağlı olarak, Boolean özelliklerinin önüne "dir", "can" veya "sahip" de önek olarak önek ekleyebilirsiniz, ancak yalnızca değer ekler.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-119">Optionally, you can also prefix Boolean properties with "Is", "Can", or "Has", but only where it adds value.</span></span>
+
+ <span data-ttu-id="fd2e4-120">✔️ bir özelliği türüyle aynı ada vermeyi düşünün.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-120">✔️ CONSIDER giving a property the same name as its type.</span></span>
+
+ <span data-ttu-id="fd2e4-121">Örneğin, aşağıdaki özelliği doğru alır ve bir enum değeri ayarlar `Color`, özellik adlı `Color`:</span><span class="sxs-lookup"><span data-stu-id="fd2e4-121">For example, the following property correctly gets and sets an enum value named `Color`, so the property is named `Color`:</span></span>
+
+```csharp
+public enum Color {...}
+public class Control {
+    public Color Color { get {...} set {...} }
+}
+```
+
+## <a name="names-of-events"></a><span data-ttu-id="fd2e4-122">Olayların adları</span><span class="sxs-lookup"><span data-stu-id="fd2e4-122">Names of Events</span></span>
+ <span data-ttu-id="fd2e4-123">Olayları için gerçekleşmesini olan bir ya da gerçekleşen bir bazı eylemler her zaman bakın.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-123">Events always refer to some action, either one that is happening or one that has occurred.</span></span> <span data-ttu-id="fd2e4-124">Bu nedenle, yöntemleriyle yönteminde olduğu gibi olayları fiiller ile adlandırılır ve fiili şimdiki zaman olayı zaman belirtmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-124">Therefore, as with methods, events are named with verbs, and verb tense is used to indicate the time when the event is raised.</span></span>
+
+ <span data-ttu-id="fd2e4-125">bir fiil veya fiil ifadesi ile ad olayları ✔️.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-125">✔️ DO name events with a verb or a verb phrase.</span></span>
+
+ <span data-ttu-id="fd2e4-126">Örnekler `Clicked`, `Painting`, `DroppedDown`ve benzeri.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-126">Examples include `Clicked`, `Painting`, `DroppedDown`, and so on.</span></span>
+
+ <span data-ttu-id="fd2e4-127">✔️, var olan ve son kullanılan kullanımı kullanarak olay adlarını önceden ve sonra bir kavram olarak verir.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-127">✔️ DO give events names with a concept of before and after, using the present and past tenses.</span></span>
+
+ <span data-ttu-id="fd2e4-128">Örneğin, bir pencere kapatılmadan hemen önce bir kapatma olayı adlı `Closing`, ve penceresi kapatıldıktan sonra başlatan bir çağrılabilir `Closed`.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-128">For example, a close event that is raised before a window is closed would be called `Closing`, and one that is raised after the window is closed would be called `Closed`.</span></span>
+
+ <span data-ttu-id="fd2e4-129">❌ ön ve son olayları belirtmek için "önce" veya "After" öneklerini veya postdüzeltmelerinizi kullanmayın.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-129">❌ DO NOT use "Before" or "After" prefixes or postfixes to indicate pre- and post-events.</span></span> <span data-ttu-id="fd2e4-130">Kullanımı mevcut ve geçmiş zamanlarını yalnızca tanımlandığı gibi.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-130">Use present and past tenses as just described.</span></span>
+
+ <span data-ttu-id="fd2e4-131">Aşağıdaki örnekte gösterildiği gibi, ad olay işleyicilerini (olay türleri olarak kullanılan temsilciler) "EventHandler" sonekiyle birlikte ✔️:</span><span class="sxs-lookup"><span data-stu-id="fd2e4-131">✔️ DO name event handlers (delegates used as types of events) with the "EventHandler" suffix, as shown in the following example:</span></span>
+
+ `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`
+
+ <span data-ttu-id="fd2e4-132">✔️, olay işleyicilerinde `sender` ve `e` adında iki parametre kullanır.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-132">✔️ DO use two parameters named `sender` and `e` in event handlers.</span></span>
+
+ <span data-ttu-id="fd2e4-133">Gönderen parametresi olayı tetikleyen nesne temsil eder.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-133">The sender parameter represents the object that raised the event.</span></span> <span data-ttu-id="fd2e4-134">Gönderen parametresi genellikle türüdür `object`bile daha belirli bir tür kullanmak istemiyorsunuz mümkündür.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-134">The sender parameter is typically of type `object`, even if it is possible to employ a more specific type.</span></span>
+
+ <span data-ttu-id="fd2e4-135">✔️ olay bağımsız değişkeni sınıflarını "EventArgs" sonekiyle birlikte adlandırın.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-135">✔️ DO name event argument classes with the "EventArgs" suffix.</span></span>
+
+## <a name="names-of-fields"></a><span data-ttu-id="fd2e4-136">Alanların adlarını</span><span class="sxs-lookup"><span data-stu-id="fd2e4-136">Names of Fields</span></span>
+ <span data-ttu-id="fd2e4-137">Statik genel ve korumalı alanlar için alan adlandırma yönergeleri uygulayın.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-137">The field-naming guidelines apply to static public and protected fields.</span></span> <span data-ttu-id="fd2e4-138">İç ve özel alanları yönergeleri tarafından kapsanmayan ve ortak veya korumalı örnek alanları tarafından izin verilmez [üye tasarımı yönergeleri](../../../docs/standard/design-guidelines/member.md).</span><span class="sxs-lookup"><span data-stu-id="fd2e4-138">Internal and private fields are not covered by guidelines, and public or protected instance fields are not allowed by the [member design guidelines](../../../docs/standard/design-guidelines/member.md).</span></span>
+
+ <span data-ttu-id="fd2e4-139">✔️, alan adlarında Pascalbüyük harfleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-139">✔️ DO use PascalCasing in field names.</span></span>
+
+ <span data-ttu-id="fd2e4-140">ad alanlarını bir isim, isim tümceciği veya sıfatıcı kullanarak ✔️.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-140">✔️ DO name fields using a noun, noun phrase, or adjective.</span></span>
+
+ <span data-ttu-id="fd2e4-141">❌ alan adları için bir önek kullanmaz.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-141">❌ DO NOT use a prefix for field names.</span></span>
+
+ <span data-ttu-id="fd2e4-142">Örneğin, "g_" veya "kendisinin" statik alanları göstermek için kullanmayın.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-142">For example, do not use "g_" or "s_" to indicate static fields.</span></span>
+
+ <span data-ttu-id="fd2e4-143">*© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*</span><span class="sxs-lookup"><span data-stu-id="fd2e4-143">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>
+
+ <span data-ttu-id="fd2e4-144">*İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*</span><span class="sxs-lookup"><span data-stu-id="fd2e4-144">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="fd2e4-145">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fd2e4-145">See also</span></span>
+
+- [<span data-ttu-id="fd2e4-146">Çerçeve Tasarım Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="fd2e4-146">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
+- [<span data-ttu-id="fd2e4-147">Adlandırma Kuralları</span><span class="sxs-lookup"><span data-stu-id="fd2e4-147">Naming Guidelines</span></span>](../../../docs/standard/design-guidelines/naming-guidelines.md)

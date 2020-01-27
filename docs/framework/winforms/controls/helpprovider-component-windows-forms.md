@@ -1,36 +1,36 @@
 ---
-title: HelpProvider Bileşeni (Windows Forms)
+title: HelpProvider Bileşeni
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], Help
 - Help [Windows Forms], displaying on Windows Forms
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
-ms.openlocfilehash: b5da5895b39412052f83cb0a89c3852d28f264bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 058a90a6d868d051e36523ae93bb1f3f810fc3b2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011313"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745602"
 ---
-# <a name="helpprovider-component-windows-forms"></a><span data-ttu-id="6acac-102">HelpProvider Bileşeni (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="6acac-102">HelpProvider Component (Windows Forms)</span></span>
-<span data-ttu-id="6acac-103">Windows Forms `HelpProvider` bileşen bir HTML Yardım 1.x Yardım dosyası (HTML Help Workshop ile üretilen bir .chm dosyası veya bir .htm dosyasının) ilişkilendirmek için kullanılan Windows tabanlı uygulamanızla.</span><span class="sxs-lookup"><span data-stu-id="6acac-103">The Windows Forms `HelpProvider` component is used to associate an HTML Help 1.x Help file (either a .chm file, produced with the HTML Help Workshop, or an .htm file) with your Windows-based application.</span></span>  
+# <a name="helpprovider-component-windows-forms"></a><span data-ttu-id="48da8-102">HelpProvider Bileşeni (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="48da8-102">HelpProvider Component (Windows Forms)</span></span>
+<span data-ttu-id="48da8-103">Windows Forms `HelpProvider` bileşeni, bir HTML Yardım 1. x yardım dosyasını (HTML yardım Atölyiyle oluşturulan bir. chm dosyası ya da bir. htm dosyası) Windows tabanlı uygulamanızla ilişkilendirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="48da8-103">The Windows Forms `HelpProvider` component is used to associate an HTML Help 1.x Help file (either a .chm file, produced with the HTML Help Workshop, or an .htm file) with your Windows-based application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6acac-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="6acac-104">In This Section</span></span>  
- [<span data-ttu-id="6acac-105">HelpProvider Bileşenine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="6acac-105">HelpProvider Component Overview</span></span>](helpprovider-component-overview-windows-forms.md)  
- <span data-ttu-id="6acac-106">Genel konseptlerini tanıtan `HelpProvider` bileşenin bir HTML Yardım dosyasını Windows tabanlı bir uygulamayla ilişkilendirmenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="6acac-106">Introduces the general concepts of the `HelpProvider` component, which lets you associate an HTML Help file with a Windows-based application.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="48da8-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="48da8-104">In This Section</span></span>  
+ [<span data-ttu-id="48da8-105">HelpProvider Bileşenine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="48da8-105">HelpProvider Component Overview</span></span>](helpprovider-component-overview-windows-forms.md)  
+ <span data-ttu-id="48da8-106">, Bir HTML Yardım dosyasını Windows tabanlı bir uygulamayla ilişkilendirmenizi sağlayan `HelpProvider` bileşeninin genel kavramlarını tanıtır.</span><span class="sxs-lookup"><span data-stu-id="48da8-106">Introduces the general concepts of the `HelpProvider` component, which lets you associate an HTML Help file with a Windows-based application.</span></span>  
   
- <span data-ttu-id="6acac-107">Bkz: [sistemleri Windows Forms uygulamalarındaki Yardım](../advanced/help-systems-in-windows-forms-applications.md).</span><span class="sxs-lookup"><span data-stu-id="6acac-107">See [Help Systems in Windows Forms Applications](../advanced/help-systems-in-windows-forms-applications.md).</span></span>  
+ <span data-ttu-id="48da8-107">Bkz. [Windows Forms uygulamalarında yardım sistemleri](../advanced/help-systems-in-windows-forms-applications.md).</span><span class="sxs-lookup"><span data-stu-id="48da8-107">See [Help Systems in Windows Forms Applications](../advanced/help-systems-in-windows-forms-applications.md).</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="6acac-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="6acac-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="48da8-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="48da8-108">Reference</span></span>  
  <xref:System.Windows.Forms.HelpProvider>  
- <span data-ttu-id="6acac-109">Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.</span><span class="sxs-lookup"><span data-stu-id="6acac-109">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="48da8-109">Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.</span><span class="sxs-lookup"><span data-stu-id="48da8-109">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.Help>  
- <span data-ttu-id="6acac-110">Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.</span><span class="sxs-lookup"><span data-stu-id="6acac-110">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="48da8-110">Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.</span><span class="sxs-lookup"><span data-stu-id="48da8-110">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="6acac-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="6acac-111">Related Sections</span></span>  
- [<span data-ttu-id="6acac-112">Windows Forms'da Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="6acac-112">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="6acac-113">Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.</span><span class="sxs-lookup"><span data-stu-id="6acac-113">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="48da8-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="48da8-111">Related Sections</span></span>  
+ [<span data-ttu-id="48da8-112">Windows Forms'da Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="48da8-112">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="48da8-113">Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.</span><span class="sxs-lookup"><span data-stu-id="48da8-113">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- <span data-ttu-id="6acac-114">Ayrıca bkz: [Windows Forms uygulamalarındaki yardım sistemleri](../advanced/help-systems-in-windows-forms-applications.md).</span><span class="sxs-lookup"><span data-stu-id="6acac-114">Also see [Help Systems in Windows Forms Applications](../advanced/help-systems-in-windows-forms-applications.md).</span></span>
+ <span data-ttu-id="48da8-114">Ayrıca bkz. [Windows Forms uygulamalarında yardım sistemleri](../advanced/help-systems-in-windows-forms-applications.md).</span><span class="sxs-lookup"><span data-stu-id="48da8-114">Also see [Help Systems in Windows Forms Applications](../advanced/help-systems-in-windows-forms-applications.md).</span></span>

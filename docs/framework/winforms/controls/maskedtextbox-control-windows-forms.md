@@ -1,5 +1,5 @@
 ---
-title: MaskedTextBox Denetimi (Windows Forms)
+title: MaskedTextBox Denetimi
 ms.date: 03/30/2017
 f1_keywords:
 - MaskedTextBox
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 - text boxes [Windows Forms], validating user input
 ms.assetid: 235d6121-027d-481d-8d59-4f6794d15d0c
-ms.openlocfilehash: af699875f6f3dea2f384574c85d85bd77a4507af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e46c5b5ec670a58b571703e9920cb3ee90a13aa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780646"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744965"
 ---
-# <a name="maskedtextbox-control-windows-forms"></a><span data-ttu-id="52030-102">MaskedTextBox Denetimi (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="52030-102">MaskedTextBox Control (Windows Forms)</span></span>
-<span data-ttu-id="52030-103">Bu konu hakkında diğerlerine bağlanan `MaskedTextBox` denetimi.</span><span class="sxs-lookup"><span data-stu-id="52030-103">This topic links to others about the `MaskedTextBox` control.</span></span>  
+# <a name="maskedtextbox-control-windows-forms"></a><span data-ttu-id="2cba7-102">MaskedTextBox Denetimi (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="2cba7-102">MaskedTextBox Control (Windows Forms)</span></span>
+<span data-ttu-id="2cba7-103">Bu konu, `MaskedTextBox` denetimiyle ilgili diğerlerine bağlantı sağlar.</span><span class="sxs-lookup"><span data-stu-id="2cba7-103">This topic links to others about the `MaskedTextBox` control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="52030-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="52030-104">In This Section</span></span>  
- [<span data-ttu-id="52030-105">İzlenecek yol: MaskedTextBox denetimiyle çalışma</span><span class="sxs-lookup"><span data-stu-id="52030-105">Walkthrough: Working with the MaskedTextBox Control</span></span>](walkthrough-working-with-the-maskedtextbox-control.md)  
- <span data-ttu-id="52030-106">Anahtar özelliklerini gösterir `MaskedTextBox` denetimi.</span><span class="sxs-lookup"><span data-stu-id="52030-106">Demonstrates the key features of the `MaskedTextBox` control.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="2cba7-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="2cba7-104">In This Section</span></span>  
+ [<span data-ttu-id="2cba7-105">İzlenecek Yol: MaskedTextBox Denetimiyle Çalışma</span><span class="sxs-lookup"><span data-stu-id="2cba7-105">Walkthrough: Working with the MaskedTextBox Control</span></span>](walkthrough-working-with-the-maskedtextbox-control.md)  
+ <span data-ttu-id="2cba7-106">`MaskedTextBox` denetiminin temel özelliklerini gösterir.</span><span class="sxs-lookup"><span data-stu-id="2cba7-106">Demonstrates the key features of the `MaskedTextBox` control.</span></span>  
   
- [<span data-ttu-id="52030-107">Nasıl yapılır: MaskedTextBox denetimine veri bağlama</span><span class="sxs-lookup"><span data-stu-id="52030-107">How to: Bind Data to the MaskedTextBox Control</span></span>](how-to-bind-data-to-the-maskedtextbox-control.md)  
- <span data-ttu-id="52030-108">Veritabanı verilerini maskesi tanımınızı tarafından beklenen biçimde eşleşmediğinde verileri yeniden biçimlendirmek nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="52030-108">Demonstrates how to reformat the data when data in the database does not match the format expected by your mask definition.</span></span>  
+ [<span data-ttu-id="2cba7-107">Nasıl yapılır: MaskedTextBox Denetimine Veri Bağlama</span><span class="sxs-lookup"><span data-stu-id="2cba7-107">How to: Bind Data to the MaskedTextBox Control</span></span>](how-to-bind-data-to-the-maskedtextbox-control.md)  
+ <span data-ttu-id="2cba7-108">Veritabanındaki veriler maske tanımınızda beklenen biçimle eşleşmediği zaman verilerin nasıl yeniden biçimlendirileceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="2cba7-108">Demonstrates how to reformat the data when data in the database does not match the format expected by your mask definition.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="52030-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="52030-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2cba7-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="2cba7-109">Reference</span></span>  
  <xref:System.Windows.Forms.MaskedTextBox>  
- <span data-ttu-id="52030-110">Maskelenmiş metin kutusu denetimini uygulanması için birincil sınıf.</span><span class="sxs-lookup"><span data-stu-id="52030-110">The primary class for the implementation of the masked text box control.</span></span>  
+ <span data-ttu-id="2cba7-110">Maskelenmiş metin kutusu denetiminin uygulanması için birincil sınıf.</span><span class="sxs-lookup"><span data-stu-id="2cba7-110">The primary class for the implementation of the masked text box control.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="52030-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="52030-111">Related Sections</span></span>  
- [<span data-ttu-id="52030-112">Windows Forms'da Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="52030-112">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="52030-113">Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.</span><span class="sxs-lookup"><span data-stu-id="52030-113">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="2cba7-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="2cba7-111">Related Sections</span></span>  
+ [<span data-ttu-id="2cba7-112">Windows Forms'da Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="2cba7-112">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="2cba7-113">Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.</span><span class="sxs-lookup"><span data-stu-id="2cba7-113">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

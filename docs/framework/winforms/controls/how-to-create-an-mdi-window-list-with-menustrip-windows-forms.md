@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Windows Forms) MenuStrip ile MDI pencere listesi oluşturma'
+title: 'Nasıl yapılır: MenuStrip ile MDI Pencere Listesi Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: 229afc879be6407340e2fca6c3b2474475bcb5a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f013c3df2ab5783a22fe2c34402dc53a328cafa2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611963"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731014"
 ---
-# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a><span data-ttu-id="d08a2-102">Nasıl yapılır: (Windows Forms) MenuStrip ile MDI pencere listesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="d08a2-102">How to: Create an MDI Window List with MenuStrip (Windows Forms)</span></span>
-<span data-ttu-id="d08a2-103">Çok Belgeli Arabirim (MDI), aynı zaman ve kopyalama sırasında birkaç belge açın ve içeriğini bir belgeden diğerine yapıştırma uygulamalar oluşturmak için kullanın.</span><span class="sxs-lookup"><span data-stu-id="d08a2-103">Use the multiple-document interface (MDI) to create applications that can open several documents at the same time and copy and paste content from one document to the other.</span></span>  
+# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a><span data-ttu-id="511ed-102">Nasıl yapılır: MenuStrip (Windows Forms) ile MDI Pencere Listesi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="511ed-102">How to: Create an MDI Window List with MenuStrip (Windows Forms)</span></span>
+<span data-ttu-id="511ed-103">Birden çok belge arabirimi (MDI) kullanarak, aynı anda birden fazla belge açan uygulamalar oluşturun ve içeriği bir belgeden diğerine kopyalayabilir ve yapıştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="511ed-103">Use the multiple-document interface (MDI) to create applications that can open several documents at the same time and copy and paste content from one document to the other.</span></span>  
   
- <span data-ttu-id="d08a2-104">Bu yordam, üst öğenin Pencere menüsünden tüm etkin alt formların listesini oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="d08a2-104">This procedure shows you how to create a list of all the active child forms on the parent's Window menu.</span></span>  
+ <span data-ttu-id="511ed-104">Bu yordamda, üst öğenin pencere menüsündeki tüm etkin alt formların listesini nasıl oluşturacağınız gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="511ed-104">This procedure shows you how to create a list of all the active child forms on the parent's Window menu.</span></span>  
   
-### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a><span data-ttu-id="d08a2-105">MenuStrip üzerinde bir MDI pencere listesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="d08a2-105">To create an MDI Window list on a MenuStrip</span></span>  
+### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a><span data-ttu-id="511ed-105">MenuStrip 'te MDI pencere listesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="511ed-105">To create an MDI Window list on a MenuStrip</span></span>  
   
-1. <span data-ttu-id="d08a2-106">Bir form oluşturun ve ayarlayın, <xref:System.Windows.Forms.Form.IsMdiContainer%2A> özelliğini `true`.</span><span class="sxs-lookup"><span data-stu-id="d08a2-106">Create a form and set its <xref:System.Windows.Forms.Form.IsMdiContainer%2A> property to `true`.</span></span>  
+1. <span data-ttu-id="511ed-106">Bir form oluşturun ve <xref:System.Windows.Forms.Form.IsMdiContainer%2A> özelliğini `true`olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="511ed-106">Create a form and set its <xref:System.Windows.Forms.Form.IsMdiContainer%2A> property to `true`.</span></span>  
   
-2. <span data-ttu-id="d08a2-107">Ekleme bir <xref:System.Windows.Forms.MenuStrip> form.</span><span class="sxs-lookup"><span data-stu-id="d08a2-107">Add a <xref:System.Windows.Forms.MenuStrip> to the form.</span></span>  
+2. <span data-ttu-id="511ed-107">Forma <xref:System.Windows.Forms.MenuStrip> ekleyin.</span><span class="sxs-lookup"><span data-stu-id="511ed-107">Add a <xref:System.Windows.Forms.MenuStrip> to the form.</span></span>  
   
-3. <span data-ttu-id="d08a2-108">İki üst düzey menü öğeleri ekleme <xref:System.Windows.Forms.MenuStrip> ve bunların <xref:System.Windows.Forms.Control.Text%2A> özelliklerine `&File` ve `&Window`.</span><span class="sxs-lookup"><span data-stu-id="d08a2-108">Add two top-level menu items to the <xref:System.Windows.Forms.MenuStrip> and set their <xref:System.Windows.Forms.Control.Text%2A> properties to `&File` and `&Window`.</span></span>  
+3. <span data-ttu-id="511ed-108"><xref:System.Windows.Forms.MenuStrip> iki üst düzey menü öğesi ekleyin ve <xref:System.Windows.Forms.Control.Text%2A> özelliklerini `&File` ve `&Window`olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="511ed-108">Add two top-level menu items to the <xref:System.Windows.Forms.MenuStrip> and set their <xref:System.Windows.Forms.Control.Text%2A> properties to `&File` and `&Window`.</span></span>  
   
-4. <span data-ttu-id="d08a2-109">Bir alt öğe ekleme `&File` menü öğesi ve kümesi kendi <xref:System.Windows.Forms.ToolStripItem.Text%2A> özelliğini `&Open`.</span><span class="sxs-lookup"><span data-stu-id="d08a2-109">Add a submenu item to the `&File` menu item and set its <xref:System.Windows.Forms.ToolStripItem.Text%2A> property to `&Open`.</span></span>  
+4. <span data-ttu-id="511ed-109">`&File` menü öğesine bir alt menü öğesi ekleyin ve <xref:System.Windows.Forms.ToolStripItem.Text%2A> özelliğini `&Open`olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="511ed-109">Add a submenu item to the `&File` menu item and set its <xref:System.Windows.Forms.ToolStripItem.Text%2A> property to `&Open`.</span></span>  
   
-5. <span data-ttu-id="d08a2-110">Ayarlama <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> özelliği <xref:System.Windows.Forms.MenuStrip> için `&Window` <xref:System.Windows.Forms.ToolStripMenuItem>.</span><span class="sxs-lookup"><span data-stu-id="d08a2-110">Set the <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> property of the <xref:System.Windows.Forms.MenuStrip> to the `&Window`<xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
+5. <span data-ttu-id="511ed-110"><xref:System.Windows.Forms.MenuStrip> <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> özelliğini `&Window`<xref:System.Windows.Forms.ToolStripMenuItem>olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="511ed-110">Set the <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> property of the <xref:System.Windows.Forms.MenuStrip> to the `&Window`<xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
   
-6. <span data-ttu-id="d08a2-111">Projeye form ekleme ve istediğiniz denetim, başka bir gibi <xref:System.Windows.Forms.MenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="d08a2-111">Add a form to the project and add the control you want to it, such as another <xref:System.Windows.Forms.MenuStrip>.</span></span>  
+6. <span data-ttu-id="511ed-111">Projeye bir form ekleyin ve istediğiniz denetimi, başka bir <xref:System.Windows.Forms.MenuStrip>gibi ekleyin.</span><span class="sxs-lookup"><span data-stu-id="511ed-111">Add a form to the project and add the control you want to it, such as another <xref:System.Windows.Forms.MenuStrip>.</span></span>  
   
-7. <span data-ttu-id="d08a2-112">İçin bir olay işleyicisi oluşturun <xref:System.Windows.Forms.Control.Click> olayı `&New` <xref:System.Windows.Forms.ToolStripMenuItem>.</span><span class="sxs-lookup"><span data-stu-id="d08a2-112">Create an event handler for the <xref:System.Windows.Forms.Control.Click> event of the `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
+7. <span data-ttu-id="511ed-112">`&New`<xref:System.Windows.Forms.ToolStripMenuItem><xref:System.Windows.Forms.Control.Click> olayı için bir olay işleyicisi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="511ed-112">Create an event handler for the <xref:System.Windows.Forms.Control.Click> event of the `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
   
-8. <span data-ttu-id="d08a2-113">Olay işleyicisinin içerisinde oluşturmak ve yeni örneklerini görüntülemek için aşağıdaki için benzer bir kod ekleme `Form2` MDI alt öğeleri olarak `Form1`.</span><span class="sxs-lookup"><span data-stu-id="d08a2-113">Within the event handler, insert code similar to the following to create and display new instances of `Form2` as MDI children of `Form1`.</span></span>  
+8. <span data-ttu-id="511ed-113">Olay işleyicisi içinde, `Form1`MDI alt öğeleri olarak `Form2` yeni örneklerini oluşturmak ve göstermek için aşağıdakine benzer bir kod ekleyin.</span><span class="sxs-lookup"><span data-stu-id="511ed-113">Within the event handler, insert code similar to the following to create and display new instances of `Form2` as MDI children of `Form1`.</span></span>  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As _  
@@ -61,7 +61,7 @@ ms.locfileid: "64611963"
     }  
     ```  
   
-9. <span data-ttu-id="d08a2-114">Kod aşağıdaki gibi yerleştirmek `&New` <xref:System.Windows.Forms.ToolStripMenuItem> olay işleyicisi kaydetmek için.</span><span class="sxs-lookup"><span data-stu-id="d08a2-114">Place code like the following in the `&New`<xref:System.Windows.Forms.ToolStripMenuItem> to register the event handler.</span></span>  
+9. <span data-ttu-id="511ed-114">Olay işleyicisini kaydetmek için `&New`<xref:System.Windows.Forms.ToolStripMenuItem> gibi bir kod girin.</span><span class="sxs-lookup"><span data-stu-id="511ed-114">Place code like the following in the `&New`<xref:System.Windows.Forms.ToolStripMenuItem> to register the event handler.</span></span>  
   
     ```vb  
     Private Sub newToolStripMenuItem_Click(sender As Object, e As _  
@@ -72,17 +72,17 @@ ms.locfileid: "64611963"
     this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);  
     ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d08a2-115">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="d08a2-115">Compiling the Code</span></span>  
- <span data-ttu-id="d08a2-116">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="d08a2-116">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="511ed-115">Kod Derleme</span><span class="sxs-lookup"><span data-stu-id="511ed-115">Compiling the Code</span></span>  
+ <span data-ttu-id="511ed-116">Bu örnek şunları gerektirir:</span><span class="sxs-lookup"><span data-stu-id="511ed-116">This example requires:</span></span>  
   
-- <span data-ttu-id="d08a2-117">İki <xref:System.Windows.Forms.Form> adlarında `Form1` ve `Form2`.</span><span class="sxs-lookup"><span data-stu-id="d08a2-117">Two <xref:System.Windows.Forms.Form> controls named `Form1` and `Form2`.</span></span>  
+- <span data-ttu-id="511ed-117">`Form1` ve `Form2`adlı iki <xref:System.Windows.Forms.Form> denetimi.</span><span class="sxs-lookup"><span data-stu-id="511ed-117">Two <xref:System.Windows.Forms.Form> controls named `Form1` and `Form2`.</span></span>  
   
-- <span data-ttu-id="d08a2-118">A <xref:System.Windows.Forms.MenuStrip> denetimi `Form1` adlı `menuStrip1`ve <xref:System.Windows.Forms.MenuStrip> denetimi `Form2` adlı `menuStrip2`.</span><span class="sxs-lookup"><span data-stu-id="d08a2-118">A <xref:System.Windows.Forms.MenuStrip> control on `Form1` named `menuStrip1`, and a <xref:System.Windows.Forms.MenuStrip> control on `Form2` named `menuStrip2`.</span></span>  
+- <span data-ttu-id="511ed-118">`menuStrip1`adlı `Form1` ve `Form2` adlı `menuStrip2`<xref:System.Windows.Forms.MenuStrip> bir denetim <xref:System.Windows.Forms.MenuStrip> denetimi.</span><span class="sxs-lookup"><span data-stu-id="511ed-118">A <xref:System.Windows.Forms.MenuStrip> control on `Form1` named `menuStrip1`, and a <xref:System.Windows.Forms.MenuStrip> control on `Form2` named `menuStrip2`.</span></span>  
   
-- <span data-ttu-id="d08a2-119">Başvurular <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemeler.</span><span class="sxs-lookup"><span data-stu-id="d08a2-119">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+- <span data-ttu-id="511ed-119"><xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemelerine başvurular.</span><span class="sxs-lookup"><span data-stu-id="511ed-119">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d08a2-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d08a2-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="511ed-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="511ed-120">See also</span></span>
 
-- [<span data-ttu-id="d08a2-121">Nasıl yapılır: MDI üst formları oluşturma</span><span class="sxs-lookup"><span data-stu-id="d08a2-121">How to: Create MDI Parent Forms</span></span>](../advanced/how-to-create-mdi-parent-forms.md)
-- [<span data-ttu-id="d08a2-122">Nasıl yapılır: MDI alt formları oluştur</span><span class="sxs-lookup"><span data-stu-id="d08a2-122">How to: Create MDI Child Forms</span></span>](../advanced/how-to-create-mdi-child-forms.md)
-- [<span data-ttu-id="d08a2-123">MenuStrip Denetimi</span><span class="sxs-lookup"><span data-stu-id="d08a2-123">MenuStrip Control</span></span>](menustrip-control-windows-forms.md)
+- [<span data-ttu-id="511ed-121">Nasıl yapılır: MDI Üst Formları Oluşturma</span><span class="sxs-lookup"><span data-stu-id="511ed-121">How to: Create MDI Parent Forms</span></span>](../advanced/how-to-create-mdi-parent-forms.md)
+- [<span data-ttu-id="511ed-122">Nasıl yapılır: MDI Alt Formları Oluşturma</span><span class="sxs-lookup"><span data-stu-id="511ed-122">How to: Create MDI Child Forms</span></span>](../advanced/how-to-create-mdi-child-forms.md)
+- [<span data-ttu-id="511ed-123">MenuStrip Denetimi</span><span class="sxs-lookup"><span data-stu-id="511ed-123">MenuStrip Control</span></span>](menustrip-control-windows-forms.md)

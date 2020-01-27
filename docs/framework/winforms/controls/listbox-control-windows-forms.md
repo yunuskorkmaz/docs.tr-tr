@@ -1,5 +1,5 @@
 ---
-title: ListBox Denetimi (Windows Forms)
+title: ListBox Denetimi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListBox control [Windows Forms]
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: b0172473-c5f2-411e-aaa4-c8f17cb5eed4
-ms.openlocfilehash: 09b58bb0440f8ec187c4fa047e280d802747cd3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36ae8140a2d81aafe983b5f1f56e180a0f91e96c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012821"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745169"
 ---
-# <a name="listbox-control-windows-forms"></a><span data-ttu-id="8e47a-102">ListBox Denetimi (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="8e47a-102">ListBox Control (Windows Forms)</span></span>
-<span data-ttu-id="8e47a-103">Bir Windows Forms `ListBox` denetimi, kullanıcı seçebilir bir veya daha fazla öğe listesi görüntüler.</span><span class="sxs-lookup"><span data-stu-id="8e47a-103">A Windows Forms `ListBox` control displays a list of items from which the user can select one or more.</span></span>  
+# <a name="listbox-control-windows-forms"></a><span data-ttu-id="74ef2-102">ListBox Denetimi (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="74ef2-102">ListBox Control (Windows Forms)</span></span>
+<span data-ttu-id="74ef2-103">Windows Forms `ListBox` denetim, kullanıcının bir veya daha fazla seçim bileceği öğelerin bir listesini görüntüler.</span><span class="sxs-lookup"><span data-stu-id="74ef2-103">A Windows Forms `ListBox` control displays a list of items from which the user can select one or more.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8e47a-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="8e47a-104">In This Section</span></span>  
- [<span data-ttu-id="8e47a-105">ListBox Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="8e47a-105">ListBox Control Overview</span></span>](listbox-control-overview-windows-forms.md)  
- <span data-ttu-id="8e47a-106">Bu denetimi nedir ve önemli özellikler ve özellikleri açıklar.</span><span class="sxs-lookup"><span data-stu-id="8e47a-106">Explains what this control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="74ef2-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="74ef2-104">In This Section</span></span>  
+ [<span data-ttu-id="74ef2-105">ListBox Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="74ef2-105">ListBox Control Overview</span></span>](listbox-control-overview-windows-forms.md)  
+ <span data-ttu-id="74ef2-106">Bu denetimin ne olduğunu ve temel özelliklerini ve özelliklerini açıklar.</span><span class="sxs-lookup"><span data-stu-id="74ef2-106">Explains what this control is and its key features and properties.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="8e47a-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="8e47a-107">Reference</span></span>  
- <span data-ttu-id="8e47a-108"><xref:System.Windows.Forms.ListBox> Sınıfı</span><span class="sxs-lookup"><span data-stu-id="8e47a-108"><xref:System.Windows.Forms.ListBox> class</span></span>  
- <span data-ttu-id="8e47a-109">Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.</span><span class="sxs-lookup"><span data-stu-id="8e47a-109">Describes this class and has links to all its members.</span></span>  
+## <a name="reference"></a><span data-ttu-id="74ef2-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="74ef2-107">Reference</span></span>  
+ <span data-ttu-id="74ef2-108"><xref:System.Windows.Forms.ListBox> sınıfı</span><span class="sxs-lookup"><span data-stu-id="74ef2-108"><xref:System.Windows.Forms.ListBox> class</span></span>  
+ <span data-ttu-id="74ef2-109">Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.</span><span class="sxs-lookup"><span data-stu-id="74ef2-109">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="8e47a-110">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="8e47a-110">Related Sections</span></span>  
- [<span data-ttu-id="8e47a-111">Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="8e47a-111">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)  
- <span data-ttu-id="8e47a-112">Liste kutuları, birleşik giriş kutuları ve denetlenen liste kutuları ile yapabileceğiniz çok şey bir listesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="8e47a-112">Provides a list of things you can do with list boxes, combo boxes, and checked list boxes.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="74ef2-110">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="74ef2-110">Related Sections</span></span>  
+ [<span data-ttu-id="74ef2-111">Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="74ef2-111">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)  
+ <span data-ttu-id="74ef2-112">Liste kutuları, Birleşik giriş kutuları ve denetlenen liste kutuları ile yapabileceğiniz öğelerin bir listesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="74ef2-112">Provides a list of things you can do with list boxes, combo boxes, and checked list boxes.</span></span>

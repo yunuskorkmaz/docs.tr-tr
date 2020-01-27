@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Windows Forms'da Bir Kullanıcının Bilgisayarına Bağlanan Yazıcıları Seçme"
+title: 'Nasıl yapılır: bir kullanıcının bilgisayarına bağlı yazıcıları seçme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: e81ef8b563afff6dd57a9fbb7674d17c0eb80916
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 7fc2427468540ac0a1480f6140cbb34c3a0f1ab3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053068"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746503"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a><span data-ttu-id="c534a-102">Nasıl yapılır: Windows Forms'da Bir Kullanıcının Bilgisayarına Bağlanan Yazıcıları Seçme</span><span class="sxs-lookup"><span data-stu-id="c534a-102">How to: Choose the Printers Attached to a User's Computer in Windows Forms</span></span>
-<span data-ttu-id="c534a-103">Genellikle, kullanıcıların bir yazıcı yazdırmak için varsayılan yazıcı dışında seçmek istersiniz.</span><span class="sxs-lookup"><span data-stu-id="c534a-103">Often, users want to choose a printer other than the default printer to print to.</span></span> <span data-ttu-id="c534a-104">Kullanıcıların bunları kullanarak yüklü arasından seçim yapmasını sağlayabilirsiniz <xref:System.Windows.Forms.PrintDialog> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="c534a-104">You can enable users to choose a printer from among those currently installed by using the <xref:System.Windows.Forms.PrintDialog> component.</span></span> <span data-ttu-id="c534a-105">Aracılığıyla <xref:System.Windows.Forms.PrintDialog> bileşeni <xref:System.Windows.Forms.DialogResult> , <xref:System.Windows.Forms.PrintDialog> bileşen yakalanır ve yazıcı seçmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="c534a-105">Through the <xref:System.Windows.Forms.PrintDialog> component, the <xref:System.Windows.Forms.DialogResult> of the <xref:System.Windows.Forms.PrintDialog> component is captured and used to select the printer.</span></span>  
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a><span data-ttu-id="028ba-102">Nasıl yapılır: Windows Forms'ta Bir Kullanıcının Bilgisayarına Bağlanan Yazıcıları Seçme</span><span class="sxs-lookup"><span data-stu-id="028ba-102">How to: Choose the Printers Attached to a User's Computer in Windows Forms</span></span>
+<span data-ttu-id="028ba-103">Genellikle, kullanıcılar, yazdırma için varsayılan yazıcıdan farklı bir yazıcı seçmek ister.</span><span class="sxs-lookup"><span data-stu-id="028ba-103">Often, users want to choose a printer other than the default printer to print to.</span></span> <span data-ttu-id="028ba-104">Kullanıcıların, <xref:System.Windows.Forms.PrintDialog> bileşenini kullanarak şu anda yüklü olanlardan bir yazıcı seçmesini sağlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="028ba-104">You can enable users to choose a printer from among those currently installed by using the <xref:System.Windows.Forms.PrintDialog> component.</span></span> <span data-ttu-id="028ba-105"><xref:System.Windows.Forms.PrintDialog> bileşeni aracılığıyla <xref:System.Windows.Forms.PrintDialog> bileşenin <xref:System.Windows.Forms.DialogResult> yakalanır ve yazıcıyı seçmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="028ba-105">Through the <xref:System.Windows.Forms.PrintDialog> component, the <xref:System.Windows.Forms.DialogResult> of the <xref:System.Windows.Forms.PrintDialog> component is captured and used to select the printer.</span></span>  
   
- <span data-ttu-id="c534a-106">Aşağıdaki yordamda, bir metin dosyası varsayılan yazıcıda yazdırılmak üzere seçilir.</span><span class="sxs-lookup"><span data-stu-id="c534a-106">In the following procedure, a text file is selected to be printed to the default printer.</span></span> <span data-ttu-id="c534a-107"><xref:System.Windows.Forms.PrintDialog> Sınıfının örneği sonra.</span><span class="sxs-lookup"><span data-stu-id="c534a-107">The <xref:System.Windows.Forms.PrintDialog> class is then instantiated.</span></span>  
+ <span data-ttu-id="028ba-106">Aşağıdaki yordamda, varsayılan yazıcıda yazdırılmak üzere bir metin dosyası seçilidir.</span><span class="sxs-lookup"><span data-stu-id="028ba-106">In the following procedure, a text file is selected to be printed to the default printer.</span></span> <span data-ttu-id="028ba-107"><xref:System.Windows.Forms.PrintDialog> sınıfı daha sonra oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="028ba-107">The <xref:System.Windows.Forms.PrintDialog> class is then instantiated.</span></span>  
   
-### <a name="to-choose-a-printer-and-then-print-a-file"></a><span data-ttu-id="c534a-108">Bir yazıcı seçin ve ardından dosya yazdırmak için</span><span class="sxs-lookup"><span data-stu-id="c534a-108">To choose a printer and then print a file</span></span>  
+### <a name="to-choose-a-printer-and-then-print-a-file"></a><span data-ttu-id="028ba-108">Bir yazıcı seçmek ve sonra bir dosyayı yazdırmak için</span><span class="sxs-lookup"><span data-stu-id="028ba-108">To choose a printer and then print a file</span></span>  
   
-1. <span data-ttu-id="c534a-109">Kullanarak kullanılacak yazıcı seçin <xref:System.Windows.Forms.PrintDialog> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="c534a-109">Select the printer to be used using the <xref:System.Windows.Forms.PrintDialog> component.</span></span>  
+1. <span data-ttu-id="028ba-109"><xref:System.Windows.Forms.PrintDialog> bileşeni kullanılarak kullanılacak yazıcıyı seçin.</span><span class="sxs-lookup"><span data-stu-id="028ba-109">Select the printer to be used using the <xref:System.Windows.Forms.PrintDialog> component.</span></span>  
   
-     <span data-ttu-id="c534a-110">Aşağıdaki kod örneğinde, işlenen iki olaylar vardır.</span><span class="sxs-lookup"><span data-stu-id="c534a-110">In the following code example, there are two events being handled.</span></span> <span data-ttu-id="c534a-111">İlk bir <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olay <xref:System.Windows.Forms.PrintDialog> sınıfı örneği ve kullanıcı tarafından seçilen yazıcı yakalanan <xref:System.Windows.Forms.DialogResult> özelliği.</span><span class="sxs-lookup"><span data-stu-id="c534a-111">In the first, a <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event, the <xref:System.Windows.Forms.PrintDialog> class is instantiated and the printer selected by the user is captured in the <xref:System.Windows.Forms.DialogResult> property.</span></span>  
+     <span data-ttu-id="028ba-110">Aşağıdaki kod örneğinde, işlenen iki olay vardır.</span><span class="sxs-lookup"><span data-stu-id="028ba-110">In the following code example, there are two events being handled.</span></span> <span data-ttu-id="028ba-111">İlk olarak, bir <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olayında <xref:System.Windows.Forms.PrintDialog> sınıfı örneklenmiştir ve Kullanıcı tarafından seçilen yazıcı <xref:System.Windows.Forms.DialogResult> özelliğinde yakalanır.</span><span class="sxs-lookup"><span data-stu-id="028ba-111">In the first, a <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event, the <xref:System.Windows.Forms.PrintDialog> class is instantiated and the printer selected by the user is captured in the <xref:System.Windows.Forms.DialogResult> property.</span></span>  
   
-     <span data-ttu-id="c534a-112">İkinci olay <xref:System.Drawing.Printing.PrintDocument.PrintPage> olayı <xref:System.Drawing.Printing.PrintDocument> bileşeni, örnek bir belge belirtilen yazıcıya yazdırılır.</span><span class="sxs-lookup"><span data-stu-id="c534a-112">In the second event, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event of the <xref:System.Drawing.Printing.PrintDocument> component, a sample document is printed to the printer specified.</span></span>  
+     <span data-ttu-id="028ba-112">İkinci olayda, <xref:System.Drawing.Printing.PrintDocument> bileşenin <xref:System.Drawing.Printing.PrintDocument.PrintPage> olayı, belirtilen yazıcıda bir örnek belge yazdırılır.</span><span class="sxs-lookup"><span data-stu-id="028ba-112">In the second event, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event of the <xref:System.Drawing.Printing.PrintDocument> component, a sample document is printed to the printer specified.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -89,7 +89,7 @@ ms.locfileid: "66053068"
        }  
     ```  
   
-     <span data-ttu-id="c534a-113">(Visual C# ve görsel C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="c534a-113">(Visual C# and Visual C++) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="028ba-113">(Görsel C# ve görsel C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="028ba-113">(Visual C# and Visual C++) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -106,6 +106,6 @@ ms.locfileid: "66053068"
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="c534a-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c534a-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="028ba-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="028ba-114">See also</span></span>
 
-- [<span data-ttu-id="c534a-115">Windows Forms Yazdırma Desteği</span><span class="sxs-lookup"><span data-stu-id="c534a-115">Windows Forms Print Support</span></span>](windows-forms-print-support.md)
+- [<span data-ttu-id="028ba-115">Windows Forms Yazdırma Desteği</span><span class="sxs-lookup"><span data-stu-id="028ba-115">Windows Forms Print Support</span></span>](windows-forms-print-support.md)
