@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 0764ca29fc959092e77629ff3888e65f0d68d70c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: e38ead0d378092af086218277fd2e85b4a6396c3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938060"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746880"
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
 
@@ -119,7 +119,7 @@ Alanın, her biri değeri belirtmek için bir başlatma ile birlikte birden çok
 
 Ayrıca, sertifikanın **amaçlanan amaçlar** alanının değeri, "sunucu kimlik doğrulaması" veya "Istemci kimlik doğrulaması" gibi uygun bir değer içermelidir.
 
-### <a name="client-certificates"></a>İstemci Sertifikaları
+### <a name="client-certificates"></a>İstemci sertifikaları
 
 İstemci sertifikaları genellikle üçüncü taraf bir sertifika yetkilisi tarafından verilmez. Bunun yerine, geçerli kullanıcı konumunun kişisel deposu genellikle, "Istemci kimlik doğrulaması" amacını taşıyan bir kök yetkilisi tarafından verilen sertifikaları içerir. İstemci, karşılıklı kimlik doğrulaması gerektiğinde böyle bir sertifikayı kullanabilir.
 
@@ -164,9 +164,9 @@ Sertifikaları, yapılandırma kullanarak da ayarlayabilirsiniz. Bir hizmet olu�
 
 ## <a name="mapping-a-certificate-to-a-user-account"></a>Bir sertifikayı bir kullanıcı hesabıyla eşleme
 
-IIS ve Active Directory özelliği bir sertifikayı Windows Kullanıcı hesabına eşleyebilme yeteneğidir. Özelliği hakkında daha fazla bilgi için bkz. [sertifikaları kullanıcı hesaplarıyla eşleme](https://go.microsoft.com/fwlink/?LinkId=88917).
+IIS ve Active Directory özelliği bir sertifikayı Windows Kullanıcı hesabına eşleyebilme yeteneğidir. Özelliği hakkında daha fazla bilgi için bkz. [sertifikaları kullanıcı hesaplarıyla eşleme](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736706(v=ws.10)).
 
-Active Directory eşleme kullanma hakkında daha fazla bilgi için bkz. [Istemci sertifikalarını dizin hizmeti eşleme Ile eşleme](https://go.microsoft.com/fwlink/?LinkId=88918).
+Active Directory eşleme kullanma hakkında daha fazla bilgi için bkz. [Istemci sertifikalarını dizin hizmeti eşleme Ile eşleme](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10)).
 
 Bu özellik etkinleştirildiğinde, <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> sınıfının <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> özelliğini `true`olarak ayarlayabilirsiniz. Yapılandırma ' da, aşağıdaki kodda gösterildiği gibi, [\<kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) öğesinin `mapClientCertificateToWindowsAccount` özniteliğini `true`olarak ayarlayabilirsiniz.
 

@@ -1,15 +1,15 @@
 ---
-title: Bir Windows Forms Uygulamasında Fare Girdisi
+title: Fare girişi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, mouse input
 ms.assetid: 743c2f3c-219e-4a52-b6b8-2657096a2da6
-ms.openlocfilehash: 91bbf61029d52cf1d434136ee72ef389ca499ebc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e0b43fa5f98a23b1cde882154ca1d7ec7542cdc0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949895"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727907"
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Bir Windows Forms Uygulamasında Fare Girdisi
 Windows Forms, özelleştirilmiş fare imleçleri, fare yakalama ve sürükle bırak davranışı için çeşitli fare olayları ve ek destek içerir.  
@@ -21,7 +21,7 @@ Windows Forms, özelleştirilmiş fare imleçleri, fare yakalama ve sürükle b�
  [Windows Forms'ta Fare Olayları](mouse-events-in-windows-forms.md)  
  Fare olaylarının oluşma sırası ve belirli denetimler içinde fare olaylarının nasıl oluşturulduğu hakkında bilgi sağlar.  
   
- [Nasıl yapılır: Tıklama ve çift tıklama arasında ayrım yapın](how-to-distinguish-between-clicks-and-double-clicks.md)  
+ [Nasıl yapılır: Tıklamalar ve Çift Tıklamaları Birbirinden Ayırma](how-to-distinguish-between-clicks-and-double-clicks.md)  
  Uyumsuz eylemleri başlatmak için tek ve çift tıklamaların nasıl kullanılacağını gösterir.  
   
  [Windows Forms'ta Fare İşaretçileri](mouse-pointers-in-windows-forms.md)  

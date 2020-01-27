@@ -1,15 +1,16 @@
 ---
-title: 'İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma'
+title: Windows Forms WPF bileşik denetimini barındırma
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 59243e1810757ff0ff58a60ac3eb007bbc227be0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458926"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742691"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodda önemli bir yatırımınız varsa, sıfırdan yazmak yerine mevcut [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamanızı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] genişletmek daha etkili olabilir. Yaygın bir senaryo, Windows Forms uygulamanızda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulanmış bir veya daha fazla denetim eklemek istemeniz durumunda olur. WPF denetimlerini özelleştirme hakkında daha fazla bilgi için bkz. [Denetim özelleştirmesi](../controls/control-customization.md).  
@@ -213,7 +214,7 @@ Aşağıdaki görüntüde, bir Windows Forms uygulamasında barındırılan bir 
   
     - PresentationFramework  
   
-    - System. xaml  
+    - System.Xaml  
   
     - WindowsBase  
   
@@ -237,7 +238,7 @@ Aşağıdaki görüntüde, bir Windows Forms uygulamasında barındırılan bir 
     |groupBox3|Yazı tipi boyutu|  
     |groupBox4|Yazı tipi ailesi|  
     |groupBox5|Yazı tipi stili|  
-    |groupBox6|Yazı tipi ağırlığı|  
+    |groupBox6|Yazı tipi genişliği|  
     |groupBox7|Denetimdeki veriler|  
   
 5. Aşağıdaki <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> denetimlerini <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> denetimlerine ekleyin.  
@@ -248,15 +249,15 @@ Aşağıdaki görüntüde, bir Windows Forms uygulamasında barındırılan bir 
     |groupBox1|radioBackgroundLightGreen|Açık yeşil|  
     |groupBox1|radioBackgroundLightSalmon|Açık somon|  
     |groupBox2|radioForegroundOriginal|Özgün|  
-    |groupBox2|radioForegroundRed|Saniyedeki|  
-    |groupBox2|radioForegroundYellow|renkle|  
+    |groupBox2|radioForegroundRed|Kırmızı|  
+    |groupBox2|radioForegroundYellow|Renkle|  
     |groupBox3|radioSizeOriginal|Özgün|  
     |groupBox3|radioSizeTen|10|  
     |groupBox3|radioSizeTwelve|12|  
     |groupBox4|radioFamilyOriginal|Özgün|  
     |groupBox4|Radiofamili|Times New Roman|  
     |groupBox4|Radiofamilswingdings|Simgesine|  
-    |groupBox5|radioStyleOriginal|Olağan|  
+    |groupBox5|radioStyleOriginal|Normal|  
     |groupBox5|radioStyleItalic|İtalik|  
     |groupBox6|radioWeightOriginal|Özgün|  
     |groupBox6|radioWeightBold|Kalın|  
@@ -268,7 +269,7 @@ Aşağıdaki görüntüde, bir Windows Forms uygulamasında barındırılan bir 
     |groupBox7|lblName|Ad:|  
     |groupBox7|lblAddress|Sokak adresi:|  
     |groupBox7|lblCity|Baş|  
-    |groupBox7|lblState|Durumunda|  
+    |groupBox7|lblState|Durum:|  
     |groupBox7|lblZip|Zip|  
   
 ### <a name="initializing-the-form"></a>Form başlatılıyor  

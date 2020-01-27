@@ -1,29 +1,29 @@
 ---
-title: TrackBar Denetimi (Windows Forms)
+title: TrackBar Denetimi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - sliders
 - slider controls [Windows Forms]
 - TrackBar control [Windows Forms]
 ms.assetid: 37d6aee3-7e8a-4a10-a99c-3a6e09199553
-ms.openlocfilehash: adeb796b0411473d8e17f164f2f87bdf6ed7ae0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f5efdcbefe97156338439c14a6203a75c1bc3fdb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009259"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747230"
 ---
 # <a name="trackbar-control-windows-forms"></a>TrackBar Denetimi (Windows Forms)
-Windows Forms `TrackBar` denetimi (bazen "kaydırıcı" denetimi olarak da adlandırılır), büyük miktarda bilgiyi arasında gezinmek için veya bir sayısal ayar görsel olarak ayarlamak için kullanılır. `TrackBar` Denetime sahip olmak üzere iki parçadan: parmak olarak da bilinen bir kaydırıcı ve değer çizgileri. Thumb ayarlanabilir bir parçasıdır. Konumuna karşılık gelen <xref:System.Windows.Forms.TrackBar.Value%2A> özelliği. Değer çizgilerinin düzenli aralıklarla aralıklı görsel göstergeleri ' dir. İzleme çubuğu belirtin ve yatay veya dikey yönde hizalanabilir artışlarla taşır. İmleç yanıp sönme hızı veya fare hızını ayarlamak için bir kullanımı izleme çubuğu örneği olacaktır.  
+Windows Forms `TrackBar` denetimi (bazen "kaydırıcı" denetimi olarak da adlandırılır), büyük miktarda bilgi veya görsel olarak bir sayısal ayarı düzeltmek için kullanılır. `TrackBar` denetimi iki bölümden oluşur: kaydırıcı olarak da bilinen Thumb ve değer çizgileri. Thumb, ayarlanabilecek bölümüdür. Konumu <xref:System.Windows.Forms.TrackBar.Value%2A> özelliğine karşılık gelir. Değer çizgileri, düzenli aralıklarla boşluklu görsel göstergeler. İzleme çubuğu belirttiğiniz artışlarla, yatay veya dikey olarak hizalanabilir. İmleç yanıp sönme hızını veya fare hızını ayarlamak için bir izleme çubuğunu örnek olarak kullanabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [TrackBar Denetimine Genel Bakış](trackbar-control-overview-windows-forms.md)  
- Genel konseptlerini tanıtan `TrackBar` sayısal ayar görsel olarak ayarlayarak kullanıcıların bilgileri sağlayan denetim.  
+ `TrackBar` denetiminin genel kavramlarını tanıtır, bu da kullanıcıların bir sayısal ayarı görsel olarak ayarlayarak bilgi almasına olanak tanır.  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Windows.Forms.TrackBar> Sınıfı  
- Sınıf ve onun üyeleri hakkında başvuru bilgileri sağlar.  
+ <xref:System.Windows.Forms.TrackBar> sınıfı  
+ Sınıf ve üyeleri hakkında başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
- Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.
+ Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.

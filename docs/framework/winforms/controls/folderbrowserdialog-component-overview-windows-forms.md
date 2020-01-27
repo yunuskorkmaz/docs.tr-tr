@@ -1,5 +1,5 @@
 ---
-title: FolderBrowserDialog Bileşenine Genel Bakış (Windows Forms)
+title: FolderBrowserDialog bileşenine genel bakış
 ms.date: 03/30/2017
 f1_keywords:
 - FolderBrowserDialog
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - directories [Windows Forms], enabling browsing in applications
 - folders [Windows Forms], enabling browsing in applications
 ms.assetid: 796b622c-3ba9-4356-93bb-e217fc52f2c7
-ms.openlocfilehash: cd89980ccad7e6c73094c1fb462d93cee8094959
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8b017ba08ae4205e930ac00177c89a89fde17d3b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210407"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745731"
 ---
 # <a name="folderbrowserdialog-component-overview-windows-forms"></a>FolderBrowserDialog Bileşenine Genel Bakış (Windows Forms)
 
-Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> klasörleri seçme ve Tarama için kullanılan kalıcı bir iletişim kutusu bir bileşendir. Yeni klasörler de oluşturulabilir içinden <xref:System.Windows.Forms.FolderBrowserDialog> bileşeni.
+Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> bileşeni, klasörlere göz atmak ve klasörler seçmek için kullanılan bir kalıcı iletişim kutusudur. Yeni klasörler, <xref:System.Windows.Forms.FolderBrowserDialog> bileşeni içinden de oluşturulabilir.
 
 > [!NOTE]
-> Dosyaları, klasörleri, yerine seçmek için kullanın [OpenFileDialog](openfiledialog-component-windows-forms.md) bileşeni.
+> Klasörler yerine dosyaları seçmek için [OpenFileDialog](openfiledialog-component-windows-forms.md) bileşenini kullanın.
 
-<xref:System.Windows.Forms.FolderBrowserDialog> Bileşeni kullanarak çalışma zamanında görüntülenen <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> yöntemi. Ayarlama <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> en üst klasörü ve iletişim kutusunun ağacı görünümü içinde görünecek tüm alt klasörleri belirlemek için özellik. İletişim kutusunda gösterilen sonra kullanabileceğiniz <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> seçilen klasörün yolunu almak için özellik.
+<xref:System.Windows.Forms.FolderBrowserDialog> bileşeni, <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> yöntemi kullanılarak çalışma zamanında görüntülenir. En üstteki klasörü ve iletişim kutusunun ağaç görünümünde görünecek alt klasörleri öğrenmek için <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> özelliğini ayarlayın. İletişim kutusu gösterildikten sonra, seçilen klasörün yolunu almak için <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> özelliğini kullanabilirsiniz.
 
-Bir forma eklendiğinde <xref:System.Windows.Forms.FolderBrowserDialog> bileşeni Tepsi Visual Studio'da Windows Form Tasarımcısı'nın altındaki görünür.
+Bir forma eklendiğinde <xref:System.Windows.Forms.FolderBrowserDialog> bileşeni, Visual Studio 'daki Windows Form Tasarımcısı alt kısmındaki tepside görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [Nasıl yapılır: Windows Forms FolderBrowserDialog bileşeni ile klasörleri seçin](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
+- [Nasıl yapılır: Windows Forms FolderBrowserDialog Bileşeni ile Klasörleri Seçme](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
 - [FolderBrowserDialog Bileşeni](folderbrowserdialog-component-windows-forms.md)

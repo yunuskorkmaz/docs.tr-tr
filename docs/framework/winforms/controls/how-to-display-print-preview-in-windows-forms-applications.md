@@ -1,5 +1,6 @@
 ---
-title: 'Nasıl yapılır: Windows Forms Uygulamalarında Baskı Önizlemede Görüntüleme'
+title: Windows Forms uygulamalarında baskı önizlemeyi görüntüleme
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,30 +11,30 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: 8252906de9a574f49617609a4cb08a1e8aa6a992
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac02339ad86e491cd047dcd4b0c8841374b3bb2e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929003"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745575"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Nasıl yapılır: Windows Forms Uygulamalarında Baskı Önizlemede Görüntüleme
-Kullanıcıların, genellikle yazdırılmadan <xref:System.Windows.Forms.PrintPreviewDialog> önce bir belgeyi görüntülemesini sağlamak için denetimini kullanabilirsiniz.  
+Kullanıcıların, genellikle yazdırılmadan önce bir belgeyi görüntülemesini sağlamak için <xref:System.Windows.Forms.PrintPreviewDialog> denetimini kullanabilirsiniz.  
   
- Bunu yapmak için, <xref:System.Drawing.Printing.PrintDocument> sınıfının bir örneğini belirtmeniz gerekir; bu, yazdırılacak belgedir. <xref:System.Drawing.Printing.PrintDocument> Bileşen ile baskı önizlemeyi kullanma hakkında daha fazla bilgi için bkz [. nasıl yapılır: Baskı önizlemeyi](../advanced/how-to-print-in-windows-forms-using-print-preview.md)kullanarak Windows Forms yazdır.  
+ Bunu yapmak için <xref:System.Drawing.Printing.PrintDocument> sınıfının bir örneğini belirtmeniz gerekir; Bu, yazdırılacak belgedir. <xref:System.Drawing.Printing.PrintDocument> bileşeniyle baskı önizlemeyi kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: baskı önizlemeyi kullanarak Windows Forms Yazdırma](../advanced/how-to-print-in-windows-forms-using-print-preview.md).  
   
 > [!NOTE]
-> Çalışma zamanında <xref:System.Windows.Forms.PrintPreviewDialog> denetimi kullanmak için, kullanıcıların bir belgenin yazdırıldığında nasıl görüneceğine ilişkin bir yazıcı, yerel olarak veya bir ağ <xref:System.Windows.Forms.PrintPreviewDialog> aracılığıyla bilgisayarında yüklü bir yazıcıya sahip olması gerekir.  
+> Çalışma zamanında <xref:System.Windows.Forms.PrintPreviewDialog> denetimini kullanmak için, kullanıcıların, bir belgenin yazdırıldığında nasıl görüneceğine ilişkin bir, <xref:System.Windows.Forms.PrintPreviewDialog> bileşeninin bir yazıcı üzerinden yerel olarak ya da bir ağ üzerinden yüklü olması gerekir.  
   
- <xref:System.Windows.Forms.PrintPreviewDialog> Denetim ,<xref:System.Drawing.Printing.PrinterSettings> sınıfını kullanır. Ayrıca, <xref:System.Windows.Forms.PrintPreviewDialog> denetim, <xref:System.Windows.Forms.PrintPreviewDialog> bileşeni olduğu <xref:System.Drawing.Printing.PageSettings> gibi sınıfını kullanır. Denetimin özelliğinde belirtilen <xref:System.Drawing.Printing.PrinterSettings> <xref:System.Drawing.Printing.PageSettings> yazdırma belgesi hem hem de sınıflarının örneklerine başvurur ve bunlar belgeyi önizleme penceresinde işlemek için kullanılır. <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> <xref:System.Windows.Forms.PrintPreviewDialog>  
+ <xref:System.Windows.Forms.PrintPreviewDialog> denetim <xref:System.Drawing.Printing.PrinterSettings> sınıfını kullanır. Ayrıca, <xref:System.Windows.Forms.PrintPreviewDialog> bileşeni gibi <xref:System.Windows.Forms.PrintPreviewDialog> denetimi <xref:System.Drawing.Printing.PageSettings> sınıfını kullanır. <xref:System.Windows.Forms.PrintPreviewDialog> denetiminin <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> özelliğinde belirtilen yazdırma belgesi hem <xref:System.Drawing.Printing.PrinterSettings> hem de <xref:System.Drawing.Printing.PageSettings> sınıflarının örneklerine başvurur ve bunlar belgeyi önizleme penceresinde işlemek için kullanılır.  
   
 ### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>Printönizleme Iletişim kutusu denetimini kullanarak sayfaları görüntülemek için  
   
-- Kullanılacak öğesini<xref:System.Drawing.Printing.PrintDocument> belirterek iletişim kutusunu göstermek için <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> yöntemini kullanın.  
+- Kullanılacak <xref:System.Drawing.Printing.PrintDocument> belirterek iletişim kutusunu göstermek için <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> yöntemini kullanın.  
   
-     Aşağıdaki kod örneğinde, <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.Control.Click> denetimin olay işleyicisi <xref:System.Windows.Forms.PrintPreviewDialog> denetimin bir örneğini açar. Yazdırma belgesi, <xref:System.Windows.Forms.PrintDialog.Document%2A> özelliğinde belirtilmiştir. Aşağıdaki örnekte, bir yazdırma belgesi belirtilmedi.  
+     Aşağıdaki kod örneğinde, <xref:System.Windows.Forms.Button> denetiminin <xref:System.Windows.Forms.Control.Click> olay işleyicisi <xref:System.Windows.Forms.PrintPreviewDialog> denetiminin bir örneğini açar. Yazdırma belgesi <xref:System.Windows.Forms.PrintDialog.Document%2A> özelliğinde belirtilmiştir. Aşağıdaki örnekte, bir yazdırma belgesi belirtilmedi.  
   
-     Örnekte formunuzun bir <xref:System.Windows.Forms.Button> denetimi, `myDocument`adlı bir <xref:System.Drawing.Printing.PrintDocument> bileşen ve bir <xref:System.Windows.Forms.PrintPreviewDialog> denetim olması gerekir.  
+     Örnekte formunuzun <xref:System.Windows.Forms.Button> denetimi, `myDocument`adlı bir <xref:System.Drawing.Printing.PrintDocument> bileşeni ve <xref:System.Windows.Forms.PrintPreviewDialog> denetimi olması gerekir.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  

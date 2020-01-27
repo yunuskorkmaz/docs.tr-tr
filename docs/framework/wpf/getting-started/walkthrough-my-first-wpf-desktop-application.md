@@ -1,5 +1,6 @@
 ---
-title: "Öğretici: Visual Studio 'da ilk WPF uygulamanızı oluşturma 2019-.NET Framework"
+title: Visual Studio 'da ilk WPF uygulamanızı oluşturma 2019-.NET Framework
+titleSuffix: ''
 ms.date: 09/06/2019
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 232605850c65aebd9aafdc9b76c90af42f2c901c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336816"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746982"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Öğretici: Visual Studio 'da ilk WPF uygulamanızı oluşturma 2019
 
@@ -214,7 +215,7 @@ Bu bölümde, uygulamaya iki sayfa ve bir görüntü ekleyeceksiniz.
 
     2. **Varolan öğe Ekle** iletişim kutusunda, dosya filtresini **tüm dosyalar** veya **görüntü dosyaları**olarak ayarlayın, kullanmak istediğiniz görüntü dosyasına gidin ve **Ekle**' yi seçin.
 
-## <a name="build-and-run-the-application"></a>Uygulamayı derleme ve çalıştırma
+## <a name="build-and-run-the-application"></a>Uygulamayı derleyin ve çalıştırın
 
 1. Uygulamayı derlemek ve çalıştırmak için **F5** tuşuna basın veya **Hata Ayıkla** menüsünden **hata ayıklamayı Başlat** ' ı seçin.
 

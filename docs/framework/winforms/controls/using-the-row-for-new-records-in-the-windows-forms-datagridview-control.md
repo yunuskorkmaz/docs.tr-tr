@@ -1,65 +1,65 @@
 ---
-title: Windows Forms DataGridView Denetiminde Yeni Kayıtlar için Satır Kullanma
+title: DataGridView Denetimindeki yeni kayıtlar için satır kullanma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], adding rows for new records
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: b28a8a8fc2d75f80a14447008c850de63e4e04b3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2fcd35f8c4d04909cdbc26f6a4293fdd570385b8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882428"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728341"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Yeni Kayıtlar için Satır Kullanma
-Kullandığınızda, bir <xref:System.Windows.Forms.DataGridView> uygulamanızdaki verileri düzenlemek için genellikle, kullanıcılarınızın veri deposuna veri yeni satır ekleme olanağı sağlayacak istersiniz. <xref:System.Windows.Forms.DataGridView> Denetimi, bir satır yeni kayıtlar için her zaman son satır gösterilen sağlayarak bu işlevselliği destekler. Kendi satır üst bilgisi olarak bir yıldız işareti (*) simgesiyle işaretlenir. Aşağıdaki bölümlerde yeni kayıtlar için satır programla etkin olduğunda dikkate almanız gereken şeylerden bazıları açıklanmaktadır.  
+Uygulamanızdaki verileri düzenlemekte bir <xref:System.Windows.Forms.DataGridView> kullandığınızda genellikle kullanıcılarınıza veri deposuna yeni veri satırları ekleme olanağı vermek isteyeceksiniz. <xref:System.Windows.Forms.DataGridView> denetimi, her zaman son satır olarak gösterilen yeni kayıtlar için bir satır sağlayarak bu işlevselliği destekler. Satır üstbilgisinde bir yıldız işareti (*) simgesiyle işaretlenir. Aşağıdaki bölümlerde, yeni kayıtların etkin olduğu satırla programlama yaparken göz önünde bulundurmanız gereken bazı şeyler ele alınmaktadır.  
   
-## <a name="displaying-the-row-for-new-records"></a>Yeni kayıtlar için satır görüntüleme  
- Kullanım <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> yeni kayıtlar için satır görüntülenip görüntülenmeyeceğini belirtmek için özelliği. Bu özelliğin varsayılan değeri `true`.  
+## <a name="displaying-the-row-for-new-records"></a>Yeni kayıtlar için satırı görüntüleme  
+ Yeni kayıtların satırının görüntülenip görüntülenmediğini göstermek için <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> özelliğini kullanın. Bu özelliğin varsayılan değeri `true`.  
   
- Durum veri bağlama için yeni kayıtlar için satır gösterilir, <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> denetimin özellik ve <xref:System.ComponentModel.IBindingList.AllowNew%2A?displayProperty=nameWithType> veri kaynağının özelliği olan hem de `true`. Geçerli olduğunda `false` sonra satır gösterilmez.  
+ Veri kaynağı, denetimin <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> özelliğinin ve veri kaynağının <xref:System.ComponentModel.IBindingList.AllowNew%2A?displayProperty=nameWithType> özelliğinin her ikisi de `true`ise yeni kayıtlar için satır görüntülenir. `false`, bu durumda satır gösterilmeyecektir.  
   
-## <a name="populating-the-row-for-new-records-with-default-data"></a>Varsayılan veri ile yeni kayıtlar için satır doldurma  
- Kullanıcı geçerli satır olarak, yeni kayıtlar için satır seçtiğinde <xref:System.Windows.Forms.DataGridView> denetim harekete geçirirse <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> olay.  
+## <a name="populating-the-row-for-new-records-with-default-data"></a>Varsayılan verilerle satırı yeni kayıtlar için doldurma  
+ Kullanıcı yeni kayıtlar için satırı geçerli satır olarak seçtiğinde, <xref:System.Windows.Forms.DataGridView> denetimi <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> olayını başlatır.  
   
- Bu olay yeni erişim sağlayan <xref:System.Windows.Forms.DataGridViewRow> ve yeni satır varsayılan verilerle doldurmak sağlar. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGridView denetiminde yeni satırlar için varsayılan değerleri belirtme](specify-default-values-for-new-rows-in-the-datagrid.md)  
+ Bu olay yeni <xref:System.Windows.Forms.DataGridViewRow> erişim sağlar ve yeni satırı varsayılan verilerle doldurmanıza olanak sağlar. Daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms DataGridView Denetimindeki yeni satırlar Için varsayılan değerleri belirtme](specify-default-values-for-new-rows-in-the-datagrid.md)  
   
 ## <a name="the-rows-collection"></a>Satır koleksiyonu  
- Yeni kayıtlar için satır içerdiği <xref:System.Windows.Forms.DataGridView> denetimin <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyon ancak davranışını farklı iki yönden:  
+ Yeni kayıtların satırı <xref:System.Windows.Forms.DataGridView> denetimin <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyonunda bulunur, ancak iki yönden farklı şekilde davranır:  
   
-- Yeni kayıtlar için satır alanından kaldırılamaz <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyon programlı olarak. Bir <xref:System.InvalidOperationException> bu denenirse oluşturulur. Kullanıcı ayrıca yeni kayıtlar için satır silinemiyor. <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> Yöntemi bu satırdan kaldırmaz <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyonu.  
+- Yeni kayıtların satırı, program aracılığıyla <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyonundan kaldırılamaz. Bu denendiğinde bir <xref:System.InvalidOperationException> oluşturulur. Kullanıcı yeni kayıtlar için satırı da silemez. <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> yöntemi bu satırı <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyonundan kaldırmaz.  
   
-- Hiçbir satır, yeni kayıtlar için satır sonra eklenebilir. Bir <xref:System.InvalidOperationException> bu denenirse tetiklenir. Sonuç olarak yeni kayıtlar için her zaman son satıra satırdır <xref:System.Windows.Forms.DataGridView> denetimi. Yöntemlerde <xref:System.Windows.Forms.DataGridViewRowCollection> satır ekleme —<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, ve <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— tüm çağrı ekleme yöntemleri dahili olarak yeni kayıtlar için satır olduğunda.  
+- Yeni kayıtlar için satırdan sonra satır eklenemez. Bu denendiğinde <xref:System.InvalidOperationException> tetiklenir. Sonuç olarak, yeni kayıtlar için satır her zaman <xref:System.Windows.Forms.DataGridView> denetimindeki son satırdır. Satırları ekleyen <xref:System.Windows.Forms.DataGridViewRowCollection> (<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>ve <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>), yeni kayıtlar için satır olduğunda tüm çağrı ekleme yöntemleri dahili olarak.  
   
-## <a name="visual-customization-of-the-row-for-new-records"></a>Yeni kayıtlar için satır Visual özelleştirme  
- Yeni kayıtlar için satır oluşturulduğunda tarafından belirtilen satır bağlı olduğu <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> özelliği. Bu satır için belirtilmeyen herhangi bir hücre stilleri, diğer özelliklerden devralınır. Hücre stili devralma hakkında daha fazla bilgi için bkz. [Windows Forms DataGridView denetimindeki hücre stilleri](cell-styles-in-the-windows-forms-datagridview-control.md).  
+## <a name="visual-customization-of-the-row-for-new-records"></a>Yeni kayıtlar için satır görsel özelleştirmesi  
+ Yeni kayıtlar için satır oluşturulduğunda, <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> özelliği tarafından belirtilen satırı temel alır. Bu satır için belirtilmeyen herhangi bir hücre stili diğer özelliklerden devralınır. Hücre stili devralma hakkında daha fazla bilgi için, [Windows Forms DataGridView Denetimindeki Hücre stilleri](cell-styles-in-the-windows-forms-datagridview-control.md)bölümüne bakın.  
   
- Yeni kayıtlar her hücrenin alınır satır hücrelerde tarafından gösterilen ilk değerleri <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> özelliği. Hücreleri türü <xref:System.Windows.Forms.DataGridViewImageCell>, bu özellik, bir yer tutucu resminin döndürür. Aksi takdirde, bu özellik döndürür `null`. Özel bir değer döndürmek için bu özellik geçersiz kılabilirsiniz. Ancak, bu ilk değerleri tarafından değiştirilebilir bir <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> odak yeni kayıtlar için satır girdiğinde olay işleyicisi.  
+ Yeni kayıtlar için satırdaki hücrelere görüntülenen ilk değerler her bir hücrenin <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> özelliğinden alınır. <xref:System.Windows.Forms.DataGridViewImageCell>türündeki hücreler için, bu özellik bir yer tutucu görüntüsünü döndürür. Aksi takdirde, bu özellik `null`döndürür. Özel bir değer döndürmek için bu özelliği geçersiz kılabilirsiniz. Ancak, odak yeni kayıtlar için satıra girdiğinde, bu ilk değerler <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> bir olay işleyicisi ile değiştirilebilir.  
   
- Bu satırın üst bilgi, bir ok ya da bir yıldız işareti olan standart simgelerini herkese açık şekilde gösterilmez. Simgeleri özelleştirmek istiyorsanız, özel bir oluşturmanız gerekecektir <xref:System.Windows.Forms.DataGridViewRowHeaderCell> sınıfı.  
+ Bu satır üst bilgisi için bir ok veya yıldız işareti olan standart simgeler herkese açık bir şekilde gösterilmez. Simgeleri özelleştirmek isterseniz, özel bir <xref:System.Windows.Forms.DataGridViewRowHeaderCell> sınıfı oluşturmanız gerekecektir.  
   
- Standart simgeleri kullanın <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> özelliği <xref:System.Windows.Forms.DataGridViewCellStyle> satır üst bilgi hücresini tarafından kullanılıyor. Tamamını görüntülemek için yeterli alan yoksa, standart simgeleri işlenmez.  
+ Standart simgeler, satır üst bilgisi hücresi tarafından kullanılan <xref:System.Windows.Forms.DataGridViewCellStyle> <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> özelliğini kullanır. Standart simgeler, tamamen görüntülenmesi için yeterli alan yoksa işlenmez.  
   
- Simgesi, ilk satırı üst bilgi hücresini kümesi bir dize değeri varsa ve hem metin hem de simge için yeterli alan yoksa, bırakılır.  
+ Satır üst bilgisi hücresi bir dize değeri kümesine sahipse ve hem metin hem de simge için yeterli alan yoksa, önce simge bırakılır.  
   
 ## <a name="sorting"></a>Sıralama  
- Bağlantısız modda, yeni kayıtlar her zaman sonuna eklenecek <xref:System.Windows.Forms.DataGridView> kullanıcı içeriğini sıralanmış olsa bile <xref:System.Windows.Forms.DataGridView>. Kullanıcı sıralama satır doğru konuma sıralamak için yeniden uygulamanız gerekir; Bu benzer, davranıştır <xref:System.Windows.Forms.ListView> denetimi.  
+ İlişkisiz modda, Kullanıcı <xref:System.Windows.Forms.DataGridView>içeriğini sıralamış olsa bile, yeni kayıtlar <xref:System.Windows.Forms.DataGridView> sonuna her zaman eklenecektir. Satırı doğru konuma sıralamak için kullanıcının sıralamayı yeniden uygulaması gerekir; Bu davranış, <xref:System.Windows.Forms.ListView> denetimiyle benzerdir.  
   
- Veri ilişkili ve sanal modda bir sıralama uygulandığında ekleme davranışını ve veri modelinin uygulamasına bağımlı olacaktır. ADO.NET için satırın doğru konumda hemen sıralanır.  
+ Veri bağlı ve sanal modlarda, bir sıralama uygulandığında ekleme davranışı, veri modeli uygulamasına göre değişir. ADO.NET için, satır hemen doğru konuma sıralanır.  
   
-## <a name="other-notes-on-the-row-for-new-records"></a>Yeni kayıtlar için satır ilgili diğer notlar  
- Ayarlayamazsınız <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> özelliği için bu satırın `false`. Bir <xref:System.InvalidOperationException> bu denenirse tetiklenir.  
+## <a name="other-notes-on-the-row-for-new-records"></a>Yeni kayıtlar için satırdaki diğer notlar  
+ Bu satırın <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> özelliğini `false`olarak ayarlayamazsınız. Bu denendiğinde <xref:System.InvalidOperationException> tetiklenir.  
   
- Yeni kayıtlar için satır, seçili olmayan durumunda her zaman oluşturulur.  
+ Yeni kayıtların satırı her zaman seçilmemiş durumunda oluşturulur.  
   
 ## <a name="virtual-mode"></a>Sanal mod  
- Sanal mod uyguluyorsanız, yeni kayıtlar için bir satır veri modeli ve satır eklenmesi geri almak ne zaman gerektiğinde izlemek gerekir. Bu işlevlerin tam uygulama işleme kapsamı bir veya daha fazla satır düzeyinde olup olmadığını uygulamasının veri modeli ve kendi işlem semantiği, örneğin, bağlıdır. Daha fazla bilgi için [Windows Forms DataGridView denetiminde sanal mod](virtual-mode-in-the-windows-forms-datagridview-control.md).  
+ Sanal modu uygulamadıysanız, veri modelinde yeni kayıtlar için bir satır gerektiğinde ve satırın eklenmesi ne zaman geri alınacağı izlemeniz gerekir. Bu işlevin tam uygulanması, veri modeli ve işlem semantiğinin uygulanmasına bağlıdır, örneğin, işleme kapsamının hücre veya satır düzeyinde olup olmadığı. Daha fazla bilgi için [Windows Forms DataGridView Denetimindeki sanal mod](virtual-mode-in-the-windows-forms-datagridview-control.md)' a bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
 - [Windows Forms DataGridView Denetiminde Veri Girişi](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminde yeni satırlar için varsayılan değerleri belirtme](specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Yeni Satırlar İçin Varsayılan Değerleri Belirtme](specify-default-values-for-new-rows-in-the-datagrid.md)

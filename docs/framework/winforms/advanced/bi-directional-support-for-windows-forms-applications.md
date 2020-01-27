@@ -1,5 +1,5 @@
 ---
-title: Windows Forms Uygulamalarında İki Yönlü Destek
+title: İki yönlü destek
 ms.date: 09/30/2017
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - localization [Windows Forms], bi-directional support in Windows
 - bi-directional language support [Windows Forms], Windows applications
 - Windows Forms, bi-directional support
-ms.openlocfilehash: 0b99dcdb9549a2319efe8a78eb4bca33f40f2cb0
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 8b2e842fc08be78b74cede85927352fafca7bc8f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197496"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742071"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms Uygulamalarında İki Yönlü Destek
 Visual Studio 'Yu, Arapça ve Ibranice gibi çift yönlü (sağdan sola) dilleri destekleyen Windows tabanlı uygulamalar oluşturmak için kullanabilirsiniz. Bu, standart formları, iletişim kutularını, MDI formlarını ve bu formlarda (<xref:System.Windows.Forms.Control> ad alanındaki tüm nesneler) birlikte çalışarak kullanabileceğiniz tüm denetimleri içerir.
@@ -76,7 +76,7 @@ Visual Studio 'Yu, Arapça ve Ibranice gibi çift yönlü (sağdan sola) dilleri
 |<xref:System.Windows.Forms.UserControl>|Dikey kaydırma çubuğu solda görünür; yatay kaydırma çubuğunun sağ tarafta parmak izi vardır|Doğrudan destek yoktur; <xref:System.Windows.Forms.TableLayoutPanel> kullanma|Hayır|
 |<xref:System.Windows.Forms.VScrollBar>|Kaydırılabilir denetimlerin sağ tarafı yerine sol tarafta gösterilir|Efekt yok|Hayır|
 
-## <a name="encoding"></a>Şifreleme
+## <a name="encoding"></a>Encoding
  Windows Forms Unicode desteği sayesinde, çift yönlü uygulamalarınızı oluştururken herhangi bir karakter kümesini dahil edebilirsiniz. Ancak, tüm Windows Forms denetimleri tüm platformlarda Unicode 'U desteklemez.
 
 ## <a name="gdi"></a>GDI+

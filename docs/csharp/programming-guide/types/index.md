@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 0b7c9fc0e9dd0f559c52f692c405a3f9e68814d0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: be2af77f9680ab3285720525638bba8ef2041999
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711889"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745383"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 
@@ -113,7 +113,7 @@ Kendi özel değer türlerinizi oluşturmak için [struct](../../language-refere
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-Yapılar hakkında daha fazla bilgi için bkz. [yapılar](../classes-and-structs/structs.md). .NET 'teki değer türleri hakkında daha fazla bilgi için bkz. [değer türleri](../../language-reference/keywords/value-types.md).
+Yapılar hakkında daha fazla bilgi için bkz. [yapılar](../classes-and-structs/structs.md). Değer türleri hakkında daha fazla bilgi için bkz. [değer türleri](../../language-reference/builtin-types/value-types.md).
 
 Değer türlerinin diğer kategorisi [sabit listesi](../../language-reference/builtin-types/enum.md)' dir. Enum, adlandırılmış integral sabitleri kümesini tanımlar. Örneğin, .NET sınıf kitaplığındaki <xref:System.IO.FileMode?displayProperty=nameWithType> numaralandırması, bir dosyanın nasıl açılacağını belirten adlandırılmış sabit tamsayılar kümesi içerir. Aşağıdaki örnekte gösterildiği gibi tanımlanmıştır:
 
@@ -148,7 +148,7 @@ Başvuru türleri devralmayı tamamen destekler. Bir sınıf oluşturduğunuzda,
 
 ## <a name="types-of-literal-values"></a>Değişmez değer türleri
 
-' C#De, değişmez değerler derleyicisinden bir tür alır. Sayının sonuna bir harf ekleyerek sayısal bir sabit değerin nasıl yazılması gerektiğini belirtebilirsiniz. Örneğin, 4,56 değerinin bir float olarak değerlendirilip değerlendirilmeyeceğini belirtmek için, sayının sonuna bir "f" veya "F" ekleyin: `4.56f`. Hiçbir harf eklenyoksa, derleyici değişmez değer için bir tür çıkarması olur. Hangi türlerin harf sonekleriyle belirtibileceği hakkında daha fazla bilgi için bkz. [değer türlerinde](../../language-reference/keywords/value-types.md)bağımsız türler için başvuru sayfaları.
+' C#De, değişmez değerler derleyicisinden bir tür alır. Sayının sonuna bir harf ekleyerek sayısal bir sabit değerin nasıl yazılması gerektiğini belirtebilirsiniz. Örneğin, 4,56 değerinin bir float olarak değerlendirilip değerlendirilmeyeceğini belirtmek için, sayının sonuna bir "f" veya "F" ekleyin: `4.56f`. Hiçbir harf eklenyoksa, derleyici değişmez değer için bir tür çıkarması olur. Hangi türlerin harf sonekleriyle belirtibileceği hakkında daha fazla bilgi için bkz. [Integral sayısal türleri](../../language-reference/builtin-types/integral-numeric-types.md) ve [kayan nokta sayısal türleri](../../language-reference/builtin-types/floating-point-numeric-types.md).
 
 Değişmez değerler yazıldığı ve tüm türler <xref:System.Object?displayProperty=nameWithType>sonunda sonuç olarak türettiğinden, aşağıdaki gibi bir kod yazabilir ve derleyebilirsiniz:
 
@@ -185,7 +185,7 @@ Daha fazla bilgi için aşağıdaki konulara bakın:
 
 - [Tür dinamiği kullanma](./using-type-dynamic.md)
 
-- [Değer Türleri](../../language-reference/keywords/value-types.md)
+- [Değer Türleri](../../language-reference/builtin-types/value-types.md)
 
 - [Başvuru Türleri](../../language-reference/keywords/reference-types.md)
 

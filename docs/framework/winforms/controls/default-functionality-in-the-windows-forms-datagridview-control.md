@@ -1,50 +1,50 @@
 ---
-title: Windows Forms DataGridView Denetimindeki Varsayılan İşlevler
+title: DataGridView Denetimindeki varsayılan Işlevsellik
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-ms.openlocfilehash: b84d5a279bfe7cd99262ca904daeceabc9d0355d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b695883ac7ec3fb0c459adb66214b0eceab3a128
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648066"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746126"
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Varsayılan İşlevler
-Windows Forms <xref:System.Windows.Forms.DataGridView> denetimi varsayılan işlevselliği önemli ölçüde ile kullanıcılara sağlar.  
+Windows Forms <xref:System.Windows.Forms.DataGridView> denetimi kullanıcılara önemli miktarda varsayılan işlevsellik sağlar.  
   
-## <a name="default-functionality"></a>Varsayılan işlevsellik  
+## <a name="default-functionality"></a>Varsayılan Işlevsellik  
  Varsayılan olarak, bir <xref:System.Windows.Forms.DataGridView> denetimi:  
   
-- Sütun üst bilgilerini ve tablo dikey kaydırma yaparken görünür kalmasını satır üst bilgileri otomatik olarak görüntüler.  
+- Tablo dikey olarak kaydırıldığında görünür kalan sütun üst bilgilerini ve satır üstbilgilerini otomatik olarak görüntüler.  
   
-- Seçimi göstergesi geçerli satır içeren bir satır üst bilgisi yok.  
+- Geçerli satır için seçim göstergesi içeren bir satır üst bilgisine sahiptir.  
   
-- Seçim dikdörtgeninin ilk hücreye sahiptir.  
+- İlk hücrede seçim dikdörtgeni vardır.  
   
-- Sütun ayırıcılarını kullanıcı çift tıkladığında, otomatik olarak yeniden boyutlandırılıp boyutlandırılamayacağını sütun içeriyor.  
+- Kullanıcı sütun bölücüleri çift tıkladığında otomatik olarak yeniden boyutlandırılabileceği sütunlar içerir.  
   
-- Görsel stiller, Windows XP ve Windows Server 2003 ailesinde otomatik olarak destekler, <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> yöntemi uygulamanın çağrılır `Main` yöntemi.  
+- <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> yöntemi uygulamanın `Main` yönteminden çağrıldığında Windows XP ve Windows Server 2003 ailesinden görsel stilleri otomatik olarak destekler.  
   
- Ayrıca, içeriğini bir <xref:System.Windows.Forms.DataGridView> denetim varsayılan olarak düzenlenebilir:  
+ Ayrıca, bir <xref:System.Windows.Forms.DataGridView> denetiminin içeriği varsayılan olarak düzenlenebilir:  
   
-- Kullanıcı çift tıklamaları birbirinden ayırma ya da bir hücreye F2 tuşuna basar denetimi otomatik olarak hücre düzenleme moduna geçirir ve hücre içeriğini kullanıcı türleri olarak güncelleştirir.  
+- Kullanıcı hücredeki F2 tuşuna çift tıkladığında veya basarsa, denetim hücreyi otomatik olarak düzenleme moduna geçirir ve hücrenin içeriğini Kullanıcı türleri olarak güncelleştirir.  
   
-- Kullanıcı Kılavuzu sonuna kadar kaydırma ise kullanıcı yeni kayıtları eklemek için bir satır bulunduğunu görürsünüz. Kullanıcı bu satırı tıkladığında, yeni bir satır eklenir <xref:System.Windows.Forms.DataGridView> denetimiyle varsayılan değerleri. Bu yeni satır, kullanıcı ESC tuşuna bastığında kaybolur.  
+- Kullanıcı kılavuzun sonuna kaydığında, Kullanıcı yeni kayıt eklemek için bir satır bulunduğunu görür. Kullanıcı bu satıra tıkladığında, <xref:System.Windows.Forms.DataGridView> denetimine varsayılan değerlerle yeni bir satır eklenir. Kullanıcı ESC tuşuna bastığında bu yeni satır kaybolur.  
   
-- Kullanıcı bir satır üst bilgisi tıklarsa, tüm satırı seçilir.  
+- Kullanıcı bir satır başlığına tıklarsa, satırın tamamı seçilir.  
   
- Bağladığınızda bir <xref:System.Windows.Forms.DataGridView> denetim ayarlayarak bir veri kaynağı için kendi <xref:System.Windows.Forms.DataGridView.DataSource%2A> özelliği, denetimi:  
+ <xref:System.Windows.Forms.DataGridView.DataSource%2A> özelliğini ayarlayarak bir <xref:System.Windows.Forms.DataGridView> denetimini bir veri kaynağına bağladığınızda denetim:  
   
-- Otomatik olarak veri kaynağının sütunlarının adlarını, sütun üst bilgi metni olarak kullanır.  
+- , Sütun üst bilgisi metni olarak veri kaynağının sütunlarının adlarını otomatik olarak kullanır.  
   
-- Veri kaynağının içeriğiyle doldurulur. <xref:System.Windows.Forms.DataGridView> sütunlar, veri kaynağındaki her sütun için otomatik olarak oluşturulur.  
+- Veri kaynağının içeriğiyle doldurulur. <xref:System.Windows.Forms.DataGridView> sütunları, veri kaynağındaki her bir sütun için otomatik olarak oluşturulur.  
   
-- Görünür her satır için bir satır bir tablo oluşturur.  
+- Tablodaki her bir görünür satır için bir satır oluşturur.  
   
-- Kullanıcı bir sütun başlığına sağ tıkladığında, temel alınan verileri temel alan satır otomatik olarak sıralar.  
+- Kullanıcı bir sütun başlığına tıkladığında, temel alınan verilere göre satırları otomatik olarak sıralar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

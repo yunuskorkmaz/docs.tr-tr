@@ -1,37 +1,37 @@
 ---
-title: OpenFileDialog Bileşeni (Windows Forms)
+title: OpenFileDialog Bileşeni
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Open File dialog box
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
-ms.openlocfilehash: 0e13417e43e9cda79e9e253135e564990361dcf6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef6b69a90a048caf7924b00ddd0b79a0a7efaeb9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936350"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744366"
 ---
 # <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog Bileşeni (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.OpenFileDialog> bir önceden yapılandırılmış bir iletişim kutusu bir bileşendir. Aynı olan **açık dosya** Windows işletim sistemi tarafından kullanıma sunulan iletişim kutusu. Devraldığı <xref:System.Windows.Forms.CommonDialog> sınıfı.  
+Windows Forms <xref:System.Windows.Forms.OpenFileDialog> bileşeni önceden yapılandırılmış bir iletişim kutusudur. Windows işletim sistemi tarafından kullanıma sunulan aynı **Açık dosya** iletişim kutusudur. <xref:System.Windows.Forms.CommonDialog> sınıfından devralır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [OpenFileDialog Bileşenine Genel Bakış](openfiledialog-component-overview-windows-forms.md)  
- Genel konseptlerini tanıtan <xref:System.Windows.Forms.OpenFileDialog> sağlayan önceden yapılandırılmış iletişim kutusunu görüntülemek için kullanıcıların bileşen dosyaları açmak için kullanabilirsiniz.  
+ , Kullanıcıların dosyaları açmak için kullanabileceği önceden yapılandırılmış bir iletişim kutusu görüntülemenize olanak tanıyan <xref:System.Windows.Forms.OpenFileDialog> bileşeninin genel kavramlarını tanıtır.  
   
- [Nasıl yapılır: OpenFileDialog bileşenini kullanarak dosyaları açma](how-to-open-files-using-the-openfiledialog-component.md)  
- Örneği aracılığıyla çalışma zamanında bir dosyayı açmaya açıklanmaktadır <xref:System.Windows.Forms.OpenFileDialog> bileşeni.  
+ [Nasıl Yapılır: OpenFileDialog Bileşenini Kullanarak Dosyaları Açma](how-to-open-files-using-the-openfiledialog-component.md)  
+ <xref:System.Windows.Forms.OpenFileDialog> bileşeninin bir örneği aracılığıyla çalışma zamanında bir dosyanın nasıl açılacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.OpenFileDialog>  
- Başvuru bilgileri sağlar <xref:System.Windows.Forms.OpenFileDialog> sınıfını ve üyelerini.  
+ <xref:System.Windows.Forms.OpenFileDialog> sınıfı ve üyeleri hakkında başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [İletişim Kutusu Denetimleri ve Bileşenleri](dialog-box-controls-and-components-windows-forms.md)  
- Denetimleri ve bileşenleri kullanıcıların uygulama veya sistem standart etkileşim gerçekleştirmesine olanak sağlayan birtakım açıklar.  
+ Kullanıcıların uygulama veya sistemle standart etkileşimler gerçekleştirmesine izin veren bir denetim ve bileşen kümesini açıklar.  
   
  [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
- Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.  
+ Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.  
   
- [Windows için temel kod Forms iletişim kutuları](https://go.microsoft.com/fwlink/?LinkID=102575)  
- Windows Forms iletişim kutusu denetimleri ve bileşenleri ve bunların temel işlevlerini yürütmek için gerekli kod açıklanır. (MSDN çevrimiçi kitaplığındaki teknik makalesi)
+ [Windows Forms Iletişim kutuları için gerekli kod](https://go.microsoft.com/fwlink/?LinkID=102575)  
+ Windows Forms iletişim kutusu denetimlerini ve bileşenlerini ve temel işlevlerini yürütmek için gereken kodu açıklar. (MSDN Çevrimiçi Kitaplığı teknik makalesi)

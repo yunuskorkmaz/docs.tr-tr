@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: BindingSource ile Windows Forms Denetiminde Veri Kaynağı Güncelleştirmelerini Yansıtma'
+title: BindingSource ile denetimdeki veri kaynağı güncelleştirmelerini yansıtma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,27 +12,27 @@ helpviewer_keywords:
 - data sources [Windows Forms], updating
 - BindingSource component [Windows Forms], examples
 ms.assetid: bd8bd9b2-af8a-4f11-a3d5-54eecbe2400b
-ms.openlocfilehash: 9b3f3c53a74fa00c4e2c674fe6270a22e6e8cef5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f98296b477dbb674cdbdbd8d03e291dd6ca0c8a3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591464"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742444"
 ---
 # <a name="how-to-reflect-data-source-updates-in-a-windows-forms-control-with-the-bindingsource"></a>Nasıl yapılır: BindingSource ile Windows Forms Denetiminde Veri Kaynağı Güncelleştirmelerini Yansıtma
-Verilere bağlı denetimler kullandığınızda, bazen veri kaynağındaki değişiklikleri veri kaynağına listesi değişti olayları oluşturmaz, yanıtlamak zorunda değilsiniz. Kullandığınızda, <xref:System.Windows.Forms.BindingSource> bileşen veri kaynağınızın bir Windows Forms denetimine bağlamak için veri kaynağınızın çağırarak değişti denetim bildirebilir <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> yöntemi.  
+Veriye dayalı denetimler kullandığınızda, veri kaynağı liste değiştirme olaylarını yükseltmezse bazen veri kaynağındaki değişikliklere yanıt vermelisiniz. Veri kaynağınızı bir Windows Forms denetimine bağlamak için <xref:System.Windows.Forms.BindingSource> bileşenini kullandığınızda, <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> yöntemini çağırarak veri kaynağınızın değiştiği denetime bildirimde bulunabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği kullanmayı gösterir <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> ilişkili bir denetimi veri kaynağında bir güncelleştirme hakkında bilgilendirmek için yöntemi.  
+ Aşağıdaki kod örneği, veri kaynağındaki bir güncelleştirmeyle ilgili bir denetim hakkında bildirim almak için <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> yöntemi kullanmayı gösterir.  
   
  [!code-cpp[System.Windows.Forms.DataConnector.ResetBindings#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.ResetBindings/CPP/form1.cpp#1)]
  [!code-csharp[System.Windows.Forms.DataConnector.ResetBindings#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.ResetBindings/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnector.ResetBindings#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.ResetBindings/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- Sistem, System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
+- System, System. Drawing ve System. Windows. Forms derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -40,4 +40,4 @@ Verilere bağlı denetimler kullandığınızda, bazen veri kaynağındaki deği
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource Bileşeni](bindingsource-component.md)
-- [Nasıl yapılır: Bir Windows Forms denetimini bir türe bağlama](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Nasıl yapılır: Windows Forms Denetimini Bir Türe Bağlama](how-to-bind-a-windows-forms-control-to-a-type.md)

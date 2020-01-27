@@ -1,5 +1,5 @@
 ---
-title: NotifyIcon Bileşeni (Windows Forms)
+title: NotifyIcon Bileşeni
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application icons [Windows Forms], background processes
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - NotifyIcon component
 - SysTray icons
 ms.assetid: 20312268-1d67-494a-8601-5c43b7f1b513
-ms.openlocfilehash: b1237a1280142cf65002ca307179b054a8fb7dd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61fc4a53a16c3e7df8e0141cecb497a6a85fc5cb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627817"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744952"
 ---
 # <a name="notifyicon-component-windows-forms"></a>NotifyIcon Bileşeni (Windows Forms)
-Windows Forms `NotifyIcon` bileşen arka planda çalışır ve aksi takdirde çıkarmayacaktır işlemler kullanıcı arabirimini kullanıyorsunuzdur için bu simgeleri görev çubuğuna durum bildirim alanında görüntüler. Görev çubuğu durum bildirim alanındaki simgeye tıklayarak erişilebilir bir virüs koruma programı örnek verilebilir.  
+Windows Forms `NotifyIcon` bileşeni, arka planda çalışan ve başka türlü Kullanıcı arabirimlerine sahip olmayan işlemlere yönelik görev çubuğunun durum bildirimi alanındaki simgeleri görüntüler. Görev çubuğunun durum bildirimi alanındaki bir simgeye tıklanarak erişilebilen bir virüsten koruma programı örnek olarak yer alabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [NotifyIcon Bileşenine Genel Bakış](notifyicon-component-overview-windows-forms.md)  
- Genel konseptlerini tanıtan `NotifyIcon` bileşenin bir kullanıcı arabirimi olmayan arka planda çalışan işlemler için simgeler görmesini sağlar.  
+ , Kullanıcıların bir kullanıcı arabirimine sahip olmayan arka planda çalışan işlemlere ait simgeleri görmesini sağlayan `NotifyIcon` bileşeninin genel kavramlarını tanıtır.  
   
- [Nasıl yapılır: Windows Forms Notifyıcon bileşeni taskbar'na uygulama simgeleri ekleme](app-icons-to-the-taskbar-with-wf-notifyicon.md)  
- Tarafından görüntülenen simgeyi ayarlamak için adımları sağlar `NotifyIcon` bileşeni.  
+ [Nasıl yapılır: Windows Forms NotifyIcon Bileşeniyle TaskBar'a Uygulama Simgeleri Ekleme](app-icons-to-the-taskbar-with-wf-notifyicon.md)  
+ `NotifyIcon` bileşeni tarafından gösterilecek simgeyi ayarlamak için gereken adımları sağlar.  
   
- [Nasıl yapılır: Bir kısayol menüsünü Windows Forms Notifyıcon bileşeniyle ilişkilendirme](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
- Bir kısayol menüsüne eklemek için adımları sağlar. bir `NotifyIcon` bileşeni.  
+ [Nasıl yapılır: Bir Kısayol Menüsünü Windows Forms NotifyIcon Bileşeniyle İlişkilendirme](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
+ `NotifyIcon` bileşenine kısayol menüsü eklemek için gereken adımları sağlar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.NotifyIcon>  
- Sınıf ve onun üyeleri hakkında başvuru bilgileri sağlar.  
+ Sınıf ve üyeleri hakkında başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
- Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.
+ Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.

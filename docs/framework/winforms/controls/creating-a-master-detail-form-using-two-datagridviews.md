@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Iki Windows Forms DataGridView denetimi kullanarak ana ayrıntı formu oluşturma'
+title: 'İzlenecek yol: iki DataGridView denetimi kullanarak ana ayrıntı formu oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 4212c7223aca6a5e7de3189d5f6b2757453cc438
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bb3da36430c7493b941f3711cb584b4517d5bd54
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046089"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740577"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>İzlenecek yol: İki Windows Forms DataGridView Denetimi Kullanarak Ana/Ayrıntı Formu Oluşturma
 
-<xref:System.Windows.Forms.DataGridView> Denetimi kullanmanın en yaygın senaryolarından biri, iki veritabanı tablosu arasındaki üst/alt ilişkinin görüntülendiği *ana/ayrıntı* formundadır. Ana tablodaki satırları seçmek ayrıntı tablosunun karşılık gelen alt verilerle güncelleştirilmesini sağlar.
+<xref:System.Windows.Forms.DataGridView> denetimini kullanmanın en yaygın senaryolarından biri, iki veritabanı tablosu arasındaki üst/alt ilişkinin görüntülendiği *ana/ayrıntı* formundadır. Ana tablodaki satırları seçmek ayrıntı tablosunun karşılık gelen alt verilerle güncelleştirilmesini sağlar.
 
-Ana/ayrıntı formunun uygulanması, <xref:System.Windows.Forms.DataGridView> denetim <xref:System.Windows.Forms.BindingSource> ve bileşen arasındaki etkileşim kullanılarak kolayca yapılır. Bu kılavuzda, iki <xref:System.Windows.Forms.DataGridView> denetimi ve iki <xref:System.Windows.Forms.BindingSource> bileşeni kullanarak formu oluşturacaksınız. Form, Northwind SQL Server örnek veritabanında bulunan iki ilişkili tabloyu gösterir: `Customers` ve. `Orders` İşiniz bittiğinde, ana <xref:System.Windows.Forms.DataGridView> formdaki veritabanındaki tüm müşterileri ve seçilen müşteri için tüm siparişleri ayrıntılı <xref:System.Windows.Forms.DataGridView>olarak gösteren bir formunuza sahip olursunuz.
+Ana/ayrıntı formunun uygulanması, <xref:System.Windows.Forms.DataGridView> denetimi ve <xref:System.Windows.Forms.BindingSource> bileşeni arasındaki etkileşim kullanılarak kolayca yapılır. Bu kılavuzda, iki <xref:System.Windows.Forms.DataGridView> denetimi ve iki <xref:System.Windows.Forms.BindingSource> bileşeni kullanarak formu oluşturacaksınız. Form, Northwind SQL Server örnek veritabanında iki ilişkili tablo gösterir: `Customers` ve `Orders`. İşiniz bittiğinde, ana <xref:System.Windows.Forms.DataGridView> veritabanındaki tüm müşterileri ve ayrıntı <xref:System.Windows.Forms.DataGridView>seçilen müşteriye ait tüm siparişleri gösteren bir formunuz olur.
 
-Bu konudaki kodu tek bir liste olarak kopyalamak için bkz [. nasıl yapılır: Iki Windows Forms DataGridView denetimi](create-a-master-detail-form-using-two-datagridviews.md)kullanarak ana/ayrıntı formu oluşturun.
+Bu konudaki kodu tek bir liste olarak kopyalamak için, bkz. [nasıl yapılır: iki Windows Forms DataGridView denetimi kullanarak ana/ayrıntı formu oluşturma](create-a-master-detail-form-using-two-datagridviews.md).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Bu izlenecek yolu tamamlamak için şunlar gerekir:
 
@@ -35,14 +35,14 @@ Bu izlenecek yolu tamamlamak için şunlar gerekir:
 
 #### <a name="to-create-a-masterdetail-form"></a>Ana/ayrıntı formu oluşturmak için
 
-1. Öğesinden <xref:System.Windows.Forms.Form> türetilen ve iki <xref:System.Windows.Forms.DataGridView> denetim ve iki <xref:System.Windows.Forms.BindingSource> bileşen içeren bir sınıf oluşturun. Aşağıdaki kod temel form başlatması sağlar ve bir `Main` yöntemi içerir. Formunuzu oluşturmak için Visual Studio tasarımcısını kullanırsanız, bu kod yerine tasarımcı tarafından oluşturulan kodu kullanabilirsiniz, ancak burada değişken bildirimlerinde gösterilen adları kullandığınızdan emin olun.
+1. <xref:System.Windows.Forms.Form> türetilen ve iki <xref:System.Windows.Forms.DataGridView> denetimi ve iki <xref:System.Windows.Forms.BindingSource> bileşeni içeren bir sınıf oluşturun. Aşağıdaki kod temel form başlatması sağlar ve bir `Main` yöntemi içerir. Formunuzu oluşturmak için Visual Studio tasarımcısını kullanırsanız, bu kod yerine tasarımcı tarafından oluşturulan kodu kullanabilirsiniz, ancak burada değişken bildirimlerinde gösterilen adları kullandığınızdan emin olun.
 
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#02)]
 
-2. Veritabanına bağlanma ayrıntılarını işlemek için formunuzun sınıf tanımına bir yöntem uygulayın. Bu örnek, bir `GetData` <xref:System.Data.DataSet> nesneyi dolduran bir yöntemi kullanır, veri kümesine <xref:System.Data.DataRelation> bir nesne ekler ve <xref:System.Windows.Forms.BindingSource> bileşenleri bağlar. Değişkeni, `connectionString` veritabanınız için uygun bir değere ayarladığınızdan emin olun.
+2. Veritabanına bağlanma ayrıntılarını işlemek için formunuzun sınıf tanımına bir yöntem uygulayın. Bu örnek, bir <xref:System.Data.DataSet> nesnesini dolduran `GetData` yöntemi kullanır, veri kümesine <xref:System.Data.DataRelation> nesnesi ekler ve <xref:System.Windows.Forms.BindingSource> bileşenleri bağlar. `connectionString` değişkenini veritabanınız için uygun bir değere ayarladığınızdan emin olun.
 
     > [!IMPORTANT]
     > Parola gibi hassas bilgileri, bağlantı dizesi içinde depolamak, uygulamanızın güvenliğini etkileyebilir. Windows Kimlik Doğrulaması (tümleşik güvenlik olarak da bilinir) kullanılarak bir veritabanına erişimi denetlemek için daha güvenli bir yoldur. Daha fazla bilgi için bkz. [bağlantı bilgilerini koruma](../../data/adonet/protecting-connection-information.md).
@@ -50,7 +50,7 @@ Bu izlenecek yolu tamamlamak için şunlar gerekir:
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#20)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#20)]
 
-3. Formunuza <xref:System.Windows.Forms.Form.Load> <xref:System.Windows.Forms.DataGridView> `GetData` denetimleri bileşenlerebağlayanveyöntemiçağıranformunuzunolayıiçinbirişleyiciuygulayın.<xref:System.Windows.Forms.BindingSource> Aşağıdaki örnek, sütunları görüntülenen verilere sığacak <xref:System.Windows.Forms.DataGridView> şekilde yeniden boyutlandırabilecek kodu içerir.
+3. <xref:System.Windows.Forms.DataGridView> denetimlerini <xref:System.Windows.Forms.BindingSource> bileşenlerine bağlayan ve `GetData` yöntemini çağıran formunuzun <xref:System.Windows.Forms.Form.Load> olayı için bir işleyici uygulayın. Aşağıdaki örnek, <xref:System.Windows.Forms.DataGridView> sütunları görüntülenen verilere sığacak şekilde yeniden boyutlandırabilecek kodu içerir.
 
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]
@@ -63,26 +63,26 @@ Artık, beklenen şekilde davrandığından emin olmak için formu test edebilir
 
 - Uygulamayı derleyin ve çalıştırın.
 
-  Diğeri üzerinde bir tane <xref:System.Windows.Forms.DataGridView> olmak üzere iki denetim görürsünüz. En üstte, Northwind `Customers` tablosundaki müşteriler, en altta `Orders` ise seçilen müşteriye karşılık gelir. Üstteki <xref:System.Windows.Forms.DataGridView>farklı satırları seçerken, daha düşük <xref:System.Windows.Forms.DataGridView> değişikliğin içerikleri buna göre değişir.
+  Diğeri üzerinde bir tane olmak üzere iki <xref:System.Windows.Forms.DataGridView> denetimi göreceksiniz. En üstte, Northwind `Customers` tablosundaki müşteriler, en altta ise seçilen müşteriye karşılık gelen `Orders`. Büyük <xref:System.Windows.Forms.DataGridView>farklı satırları seçerken, alt <xref:System.Windows.Forms.DataGridView> içerikleri buna uygun şekilde değişir.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
-Bu uygulama, <xref:System.Windows.Forms.DataGridView> denetimin yeteneklerini temel olarak öğrenmenizi sağlar. <xref:System.Windows.Forms.DataGridView> Denetimin görünümünü ve davranışını çeşitli yollarla özelleştirebilirsiniz:
+Bu uygulama, <xref:System.Windows.Forms.DataGridView> denetimin yeteneklerini temel olarak öğrenmenizi sağlar. <xref:System.Windows.Forms.DataGridView> denetiminin görünümünü ve davranışını çeşitli yollarla özelleştirebilirsiniz:
 
-- Kenarlık ve başlık stillerini değiştirin. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGridView Denetimindeki](change-the-border-and-gridline-styles-in-the-datagrid.md)kenarlık ve kılavuz çizgisi stillerini değiştirin.
+- Kenarlık ve başlık stillerini değiştirin. Daha fazla bilgi için, bkz. [nasıl yapılır: Windows Forms DataGridView Denetimindeki sınır ve kılavuz çizgisi stillerini değiştirme](change-the-border-and-gridline-styles-in-the-datagrid.md).
 
-- <xref:System.Windows.Forms.DataGridView> Denetim için Kullanıcı girişini etkinleştirin veya kısıtlayın. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGridView denetiminde](prevent-row-addition-and-deletion-datagridview.md)satır eklemeyi ve silmeyi önleyin ve [şunları yapın: Sütunları Windows Forms DataGridView denetiminde](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)salt okunurdur.
+- <xref:System.Windows.Forms.DataGridView> denetimine Kullanıcı girişini etkinleştirin veya kısıtlayın. Daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms DataGridView denetiminde satır eklemeyi ve silmeyi engelleme](prevent-row-addition-and-deletion-datagridview.md)ve [Windows Forms DataGridView denetiminde sütunları salt okuma yapma](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).
 
-- <xref:System.Windows.Forms.DataGridView> Denetim için Kullanıcı girişini doğrulayın. Daha fazla bilgi için bkz [. İzlenecek yol: Windows Forms DataGridView Denetimindeki](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)veriler doğrulanıyor.
+- <xref:System.Windows.Forms.DataGridView> denetimine Kullanıcı girişini doğrulayın. Daha fazla bilgi için bkz. [Izlenecek yol: Windows Forms DataGridView Denetimindeki verileri doğrulama](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).
 
-- Sanal modu kullanarak çok büyük veri kümelerini işleyin. Daha fazla bilgi için bkz [. İzlenecek yol: Windows Forms DataGridView denetiminde](implementing-virtual-mode-wf-datagridview-control.md)sanal mod uygulama.
+- Sanal modu kullanarak çok büyük veri kümelerini işleyin. Daha fazla bilgi için bkz. [Izlenecek yol: Windows Forms DataGridView denetiminde sanal mod uygulama](implementing-virtual-mode-wf-datagridview-control.md).
 
-- Hücrelerin görünümünü özelleştirin. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGridView Denetimindeki](customize-the-appearance-of-cells-in-the-datagrid.md) hücrelerin görünümünü özelleştirin ve [şunları yapın: Windows Forms DataGridView denetimi](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)Için varsayılan hücre stillerini ayarlayın.
+- Hücrelerin görünümünü özelleştirin. Daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms DataGridView Denetimindeki hücrelerin görünümünü özelleştirme](customize-the-appearance-of-cells-in-the-datagrid.md) ve [nasıl yapılır: Windows Forms DataGridView denetimi Için varsayılan hücre stillerini ayarlama](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Windows Forms DataGridView Denetiminde Verileri Görüntüleme](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Iki Windows Forms DataGridView denetimi kullanarak ana/ayrıntı formu oluşturma](create-a-master-detail-form-using-two-datagridviews.md)
+- [Nasıl Yapılır: İki Windows Forms DataGridView Denetimi Kullanarak Ana/Ayrıntı Formu Oluşturma](create-a-master-detail-form-using-two-datagridviews.md)
 - [Bağlantı Bilgilerini Koruma](../../data/adonet/protecting-connection-information.md)

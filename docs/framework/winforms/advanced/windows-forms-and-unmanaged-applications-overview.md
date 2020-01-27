@@ -1,5 +1,5 @@
 ---
-title: Windows Forms ve Yönetilmeyen Uygulamalara Genel Bakış
+title: Yönetilmeyen uygulamalara genel bakış
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [Windows Forms]
@@ -8,52 +8,52 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0b4c3e738848be1ead2adeb1945e168c9db60071
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592507"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732527"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows Forms ve Yönetilmeyen Uygulamalara Genel Bakış
-Windows Forms uygulamaları ve denetimleri bazı uyarılar ile yönetilmeyen uygulamalar ile çalışabilirler. Aşağıdaki bölümlerde, Windows Forms uygulamalarının ve denetimlerinin destekleyen ve destekledikleri değil, senaryolar ve yapılandırmaları açıklanmaktadır.  
+Windows Forms uygulamalar ve denetimler, bazı uyarılarla yönetilmeyen uygulamalarla birlikte çalışabilir. Aşağıdaki bölümlerde, uygulamaları ve denetimleri Windows Forms uygulamalar ve denetimlerin desteklediği senaryolar ve Konfigürasyonlar açıklanır.  
   
-## <a name="windows-forms-controls-and-activex-applications"></a>Windows Forms denetimleri ve ActiveX uygulamalarında  
- Microsoft Internet Explorer ve Microsoft Foundation Classes (MFC) dışında Windows Forms denetimleri konak ActiveX denetimleri için tasarlanmış uygulamalar desteklenmez. Diğer uygulama ve geliştirme araçları, Visual Studio .NET 2003'ten, önceki Visual Studio sürümlerindeki ActiveX test kapsayıcılarını dahil ActiveX denetimlerini yönetiliyor Windows Forms denetimleri için desteklenen konaklar değildir.  
+## <a name="windows-forms-controls-and-activex-applications"></a>Windows Forms denetimleri ve ActiveX uygulamaları  
+ Microsoft Internet Explorer ve Microsoft Foundation Sınıfları (MFC) dışında, ActiveX denetimlerini barındırmak için tasarlanan uygulamalarda Windows Forms denetimleri desteklenmez. Visual Studio .NET 2003 ' den önceki Visual Studio sürümlerinden ActiveX test kapsayıcıları dahil olmak üzere, ActiveX denetimlerini barındırabilen diğer uygulamalar ve geliştirme araçları Windows Forms denetimleri için desteklenen konaklar değildir.  
   
- Bu kısıtlamalar, Windows Forms denetimlerini aracılığıyla Bileşen Nesne modeli COM birlikte çalışma için de geçerlidir. COM çağrılabilir sarmalayıcı (CCW) aracılığıyla bir Windows Forms denetiminin yalnızca Internet Explorer'da desteklenir. COM birlikte çalışma hakkında daha fazla bilgi için bkz.  
+ Bu kısıtlamalar, bileşen nesne modeli COM birlikte çalışabilirliği aracılığıyla Windows Forms denetimlerinin kullanımı için de geçerlidir. COM çağrılabilir sarmalayıcı (CCW) aracılığıyla Windows Forms denetiminin kullanılması yalnızca Internet Explorer 'da desteklenir. COM birlikte çalışma hakkında daha fazla bilgi için bkz.  
   
- [COM birlikte çalışma](../../../visual-basic/programming-guide/com-interop/index.md).  
+ [Com birlikte çalışma](../../../visual-basic/programming-guide/com-interop/index.md).  
   
- Aşağıdaki tabloda, Windows Forms denetimleri için desteği barındırma kullanılabilir ActiveX gösterilmektedir.  
+ Aşağıdaki tabloda Windows Forms denetimleri için kullanılabilir ActiveX barındırma desteği gösterilmektedir.  
   
 |Windows Forms sürümü|Destek|  
 |---------------------------|-------------|  
-|.NET framework sürüm 1.0|Internet Explorer 5.01 ve sonraki sürümler|  
-|.NET framework sürüm 1.1 ve üzeri|Internet Explorer 5.01 ve sonraki sürümler<br /><br /> Microsoft Foundation Classes (MFC) 7.0 ve üzeri|  
+|.NET Framework sürüm 1,0|Internet Explorer 5,01 ve sonraki sürümleri|  
+|.NET Framework sürüm 1,1 ve üzeri|Internet Explorer 5,01 ve sonraki sürümleri<br /><br /> Microsoft Foundation Sınıfları (MFC) 7,0 ve üzeri|  
   
-## <a name="hosting-windows-forms-components-as-activex-controls"></a>Windows Forms bileşenleri ActiveX denetimleri barındırma  
- .NET Framework 1.1 desteği, MFC 7.0 ve üzeri sürümler içerecek şekilde genişletildi. Bu desteği MFC 7.0 ve üzeri ActiveX denetimi kapsayıcısı ile tamamen uyumlu olan herhangi bir kapsayıcı içerir.  
+## <a name="hosting-windows-forms-components-as-activex-controls"></a>Bileşenleri ActiveX denetimleri olarak barındırma Windows Forms  
+ .NET Framework 1,1 ' de, destek MFC 7,0 ve sonraki sürümleri içerecek şekilde genişletildi. Bu destek MFC 7,0 ve sonraki ActiveX denetim kapsayıcısıyla tam uyumlu olan tüm kapsayıcıları içerir.  
   
- Ancak, Windows Forms denetimlerinin ActiveX denetimlerini kaydı için desteklenmez. Ayrıca, çağırma `com.ms.win32.Ole32.CoCreateInstance` yöntemi Windows Forms denetimleri için desteklenmiyor. Windows Forms denetimleri için yalnızca yönetilen etkinleştirme desteklenir. Bir Windows Forms denetimi oluşturduktan sonra bunu bir MFC uygulamasında ile olduğu gibi bir ActiveX denetimini barındırabilirsiniz.  
+ Ancak, Windows Forms denetimlerinin ActiveX denetimleri olarak kaydı desteklenmez. Ayrıca, Windows Forms denetimleri için `com.ms.win32.Ole32.CoCreateInstance` yöntemi çağrılması desteklenmez. Yalnızca Windows Forms denetimlerinin yönetilen etkinleştirmesi desteklenir. Bir Windows Forms denetimi oluşturduktan sonra, bunu bir MFC uygulamasında bir ActiveX denetimiyle olduğu gibi barındırabilirsiniz.  
   
- Yönetilmeyen Windows Forms denetimlerini kullanmak için yönetilmeyen CLR barındırma API'leri kullanarak CLR barındırma veya C++ birlikte çalışma özellikleri kullanın. C++ birlikte çalışabilirlik özelliklerini kullanmak önerilen çözümdür.  
+ Yönetilmeyen uygulamanızda Windows Forms denetimleri kullanmak için, yönetilmeyen CLR barındırma API 'Lerini kullanarak CLR 'yi barındırmalısınız ya da C++ birlikte çalışma özelliklerini kullanmanız gerekir. C++ Birlikte çalışabilirlik özelliklerinin kullanılması önerilen çözümdür.  
   
-## <a name="windows-forms-in-com-client-applications"></a>COM istemci uygulamalarının Windows Formları  
- Bir Visual Basic 6.0 uygulaması veya bir MFC uygulaması gibi bir COM istemci uygulamasından bir Windows formu açtığınızda form beklenmedik şekilde davranabilir. Örneğin, odağı TAB tuşuna bastığınızda, başka bir denetime bir denetimden değiştirmez. Bastığınızda ENTER tuşunu komut düğmesi, düğmeyi 's odaklanmışken <xref:System.Windows.Forms.Control.Click> olayı oluşmaz. Ayrıca, tuş vuruşlarınızı veya fare etkinlikleri için beklenmeyen davranışlara karşılaşabilirsiniz.  
+## <a name="windows-forms-in-com-client-applications"></a>COM istemci uygulamalarında Windows Forms  
+ Visual Basic 6,0 uygulaması veya MFC uygulaması gibi bir COM istemci uygulamasından bir Windows formunu açtığınızda form beklenmedik şekilde davranabilir. Örneğin, sekme tuşuna bastığınızda, odak bir denetimden başka bir denetime değişmez. Komut düğmesi odağa sahip olduğunda ENTER tuşuna bastığınızda, düğmenin <xref:System.Windows.Forms.Control.Click> olayı oluşturulmaz. Ayrıca, tuş vuruşları veya fare etkinlikleri için beklenmeyen davranışlara da karşılaşabilirsiniz.  
   
- Bu davranış, yönetilmeyen Windows Forms düzgün çalışması için gereken ileti döngüsü desteği uygulamaz kaynaklanır. COM istemci uygulama tarafından sağlanan ileti döngüsü Windows Forms ileti döngüden tamamen farklıdır.  
+ Bu davranış, yönetilmeyen uygulama Windows Forms doğru çalışması gereken ileti döngüsü desteğini uygulamadığı için oluşur. COM istemci uygulaması tarafından sunulan ileti döngüsü Windows Forms ileti döngüsünden temelde farklıdır.  
   
- Bir uygulamanın ileti döngüsü bir iş parçacığının ileti kuyruktan iletileri alır bir program iç döngü bunları çevirir ve bunları daha sonra işlenmek üzere uygulamaya gönderir. Bir Windows formu için ileti döngüsü, Visual Basic 6.0 uygulamalarını ve MFC uygulamaları gibi eski uygulamaları sağlayan ileti döngüleri aynı mimarisine sahip değil. Windows Form beklediğinden ileti döngüsü için gönderilen pencere iletileri farklı şekilde ele alınabilir. Bu nedenle, beklenmeyen davranış oluşabilir. Bazı tuş bileşimlerini çalışmayabilir, bazı fare etkinlik çalışmayabilir veya bazı olaylar beklendiği gibi oluşturulabilir değil.  
+ Bir uygulamanın ileti döngüsü, bir iş parçacığının ileti kuyruğundan iletileri alan, bunları çeviren ve sonra işlenecek uygulamaya gönderen bir iç program döngüsüdür. Bir Windows formu için ileti döngüsü, daha önceki uygulamaların yanı sıra Visual Basic 6,0 uygulamaları ve MFC uygulamaları gibi, ileti döngüsüyle aynı mimariye sahip değildir. İleti döngüsüne gönderilen pencere iletileri, Windows form 'un beklediği şekilde farklı şekilde işlenebilir. Bu nedenle, beklenmeyen davranış ortaya çıkabilir. Bazı tuş vuruşu birleşimleri çalışmayabilir, bazı fare etkinlikleri çalışmayabilir veya bazı olaylar beklendiği gibi görüntülenmeyebilir.  
   
 ## <a name="resolving-interoperability-issues"></a>Birlikte çalışabilirlik sorunlarını çözme  
- Kullanılarak oluşturulmuş bir .NET Framework ileti döngüsü üzerinde formunu görüntüleyerek bu sorunları çözebilir <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> yöntemi.  
+ Bu sorunları, <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> yöntemi kullanılarak oluşturulan .NET Framework ileti döngüsünde formu görüntüleyerek çözebilirsiniz.  
   
- Bir COM istemci uygulamasından doğru şekilde bir Windows Form çalışmasını sağlamak için bir Windows Forms ileti döngüsü üzerinde çalıştırmanız gerekir. Bunu yapmak için aşağıdaki yaklaşımlardan birini kullanın:  
+ Bir Windows formunun bir COM istemci uygulamasından düzgün çalışmasını sağlamak için, bunu bir Windows Forms ileti döngüsünde çalıştırmanız gerekir. Bunu yapmak için aşağıdaki yaklaşımlardan birini kullanın:  
   
-- Kullanım <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> Windows formu görüntülemek için yöntemi. Daha fazla bilgi için [nasıl yapılır: ShowDialog yöntemi ile bir Windows formunu görüntüleyerek COM birlikte çalışmasını destekleme](com-interop-by-displaying-a-windows-form-shadow.md).  
+- Windows formunu göstermek için <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> yöntemini kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: ShowDialog yöntemi ile bir Windows formunu görüntüleyerek com birlikte çalışmasını destekleme](com-interop-by-displaying-a-windows-form-shadow.md).  
   
-- Her Windows formunu yeni bir iş parçacığı üzerinde görüntüleyin. Daha fazla bilgi için [nasıl yapılır: Her Windows formunu kendi iş parçacığında görüntüleyerek COM birlikte çalışmasını destekleme](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+- Her Windows formunu yeni bir iş parçacığında görüntüleyin. Daha fazla bilgi için, bkz. [nasıl yapılır: her Windows formunu kendi Iş parçacığında görüntüleyerek com birlikte çalışmasını destekleme](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -65,5 +65,5 @@ Windows Forms uygulamaları ve denetimleri bazı uyarılar ile yönetilmeyen uyg
 - [.NET Framework Bileşenlerini COM'da Gösterme](../../interop/exposing-dotnet-components-to-com.md)
 - [COM için Bütünleştirilmiş Kod Paketleme](../../interop/packaging-an-assembly-for-com.md)
 - [Bütünleştirilmiş Kodları COM ile Kaydetme](../../interop/registering-assemblies-with-com.md)
-- [Nasıl yapılır: ShowDialog yöntemi ile bir Windows formunu görüntüleyerek COM birlikte çalışma desteği](com-interop-by-displaying-a-windows-form-shadow.md)
-- [Nasıl yapılır: Her Windows formunu kendi iş parçacığında görüntüleyerek COM birlikte çalışma desteği](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Nasıl yapılır: ShowDialog Yöntemi ile bir Windows Formunu Görüntüleyerek COM Birlikte Çalışmasını Destekleme](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Nasıl yapılır: Her Windows Formunu Kendi İş Parçacığında Görüntüleyerek COM Birlikte Çalışmasını Destekleme](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms Denetimini Bir Türe Bağlama'
+title: Denetimi bir türe bağlama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 94faeebb-d2bc-45d6-86d7-96a42661b43d
-ms.openlocfilehash: ab088e3f34f3f03be2073864a440006259fe5679
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0bc1f92ee8922990bd0e461655168f5618ba39a6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591336"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744993"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>Nasıl yapılır: Windows Forms Denetimini Bir Türe Bağlama
-Verilerle etkileşimde bulunmak denetimleri oluştururken, bazı durumlarda, bir nesne yerine bir tür bir denetimin bağlanması gerekli bulacaksınız. Bu durum, ne zaman veri kullanılamıyor olabilir, ancak bir türün ortak arabirim bilgilerini görüntülemek, verilere bağlı denetimler hala gerekir özellikle, tasarım zamanında ortaya çıkar. Örneğin, bağlama bir <xref:System.Windows.Forms.DataGridView> denetlemek için bir Web hizmeti tarafından kullanıma sunulan bir nesne ve istediğiniz <xref:System.Windows.Forms.DataGridView> sütunlarını tasarım zamanında bir özel tür adlarını üyesiyle etiket denetimi.  
+Verilerle etkileşime geçen denetimleri oluştururken, bazen bir denetimi bir nesne yerine bir türe bağlamayı gerekli bulacaktır. Bu durum özellikle tasarım zamanında, verilerin kullanılamadığı durumlarda ortaya çıkar, ancak veri bağlantılı denetimleriniz, bir türün ortak arabiriminden bilgi görüntülemeye hala gerek duyar. Örneğin, bir Web hizmeti tarafından kullanıma sunulan bir nesneye <xref:System.Windows.Forms.DataGridView> denetimi bağlayabilir ve <xref:System.Windows.Forms.DataGridView> denetiminin sütunlarını tasarım zamanında özel bir türün üye adlarıyla etiketlemesini sağlayabilirsiniz.  
   
- Bir denetim türü ile kolayca bağlayabilirsiniz <xref:System.Windows.Forms.BindingSource> bileşeni.  
+ <xref:System.Windows.Forms.BindingSource> bileşeniyle bir denetimi kolayca bir türe bağlayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde nasıl bağlanacağını gösterir. bir <xref:System.Windows.Forms.DataGridView> kullanarak özel bir tür denetimi bir <xref:System.Windows.Forms.BindingSource> bileşeni. Örneği çalıştırdığınızda, fark edeceksiniz <xref:System.Windows.Forms.DataGridView> özelliklerini yansıtan sütunları etiketli bir `Customer` nesne önce denetimin verilerle doldurulur. Örnek verileri eklemek için bir müşteri Ekle düğmesine sahip <xref:System.Windows.Forms.DataGridView> denetimi. Düğmeye tıkladığınızda yeni bir `Customer` eklenir <xref:System.Windows.Forms.BindingSource>. Gerçek hayattaki bir senaryoda, verileri bir Web hizmeti veya başka bir veri kaynağı için bir çağrı tarafından alınabilir.  
+ Aşağıdaki kod örneğinde, bir <xref:System.Windows.Forms.DataGridView> denetiminin bir <xref:System.Windows.Forms.BindingSource> bileşeni kullanılarak özel bir türe nasıl bağlanacağı gösterilmektedir. Örneği çalıştırdığınızda <xref:System.Windows.Forms.DataGridView>, denetimin verilerle doldurulmadan önce, bir `Customer` nesnesinin özelliklerini yansıtan sütunlar etiketli olduğunu fark edeceksiniz. Örneğin, <xref:System.Windows.Forms.DataGridView> denetimine veri eklemek için bir müşteri Ekle düğmesi vardır. Düğmeye tıkladığınızda, <xref:System.Windows.Forms.BindingSource>yeni bir `Customer` nesnesi eklenir. Gerçek dünyada bir senaryoda veriler, bir Web hizmeti veya başka bir veri kaynağı çağrısıyla elde edilebilir.  
   
  [!code-csharp[System.Windows.Forms.DataConnector.BindingToType#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.BindingToType/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnector.BindingToType#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.BindingToType/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- Sistem ve System.Windows.Forms öğelerini derlemelerine başvurular.  
+- System ve System. Windows. Forms derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

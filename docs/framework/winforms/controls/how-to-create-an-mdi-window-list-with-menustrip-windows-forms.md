@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Windows Forms) MenuStrip ile MDI pencere listesi oluşturma'
+title: 'Nasıl yapılır: MenuStrip ile MDI Pencere Listesi Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: 229afc879be6407340e2fca6c3b2474475bcb5a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f013c3df2ab5783a22fe2c34402dc53a328cafa2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611963"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731014"
 ---
-# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Nasıl yapılır: (Windows Forms) MenuStrip ile MDI pencere listesi oluşturma
-Çok Belgeli Arabirim (MDI), aynı zaman ve kopyalama sırasında birkaç belge açın ve içeriğini bir belgeden diğerine yapıştırma uygulamalar oluşturmak için kullanın.  
+# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Nasıl yapılır: MenuStrip (Windows Forms) ile MDI Pencere Listesi Oluşturma
+Birden çok belge arabirimi (MDI) kullanarak, aynı anda birden fazla belge açan uygulamalar oluşturun ve içeriği bir belgeden diğerine kopyalayabilir ve yapıştırabilirsiniz.  
   
- Bu yordam, üst öğenin Pencere menüsünden tüm etkin alt formların listesini oluşturulacağını gösterir.  
+ Bu yordamda, üst öğenin pencere menüsündeki tüm etkin alt formların listesini nasıl oluşturacağınız gösterilmektedir.  
   
-### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a>MenuStrip üzerinde bir MDI pencere listesi oluşturma  
+### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a>MenuStrip 'te MDI pencere listesi oluşturmak için  
   
-1. Bir form oluşturun ve ayarlayın, <xref:System.Windows.Forms.Form.IsMdiContainer%2A> özelliğini `true`.  
+1. Bir form oluşturun ve <xref:System.Windows.Forms.Form.IsMdiContainer%2A> özelliğini `true`olarak ayarlayın.  
   
-2. Ekleme bir <xref:System.Windows.Forms.MenuStrip> form.  
+2. Forma <xref:System.Windows.Forms.MenuStrip> ekleyin.  
   
-3. İki üst düzey menü öğeleri ekleme <xref:System.Windows.Forms.MenuStrip> ve bunların <xref:System.Windows.Forms.Control.Text%2A> özelliklerine `&File` ve `&Window`.  
+3. <xref:System.Windows.Forms.MenuStrip> iki üst düzey menü öğesi ekleyin ve <xref:System.Windows.Forms.Control.Text%2A> özelliklerini `&File` ve `&Window`olarak ayarlayın.  
   
-4. Bir alt öğe ekleme `&File` menü öğesi ve kümesi kendi <xref:System.Windows.Forms.ToolStripItem.Text%2A> özelliğini `&Open`.  
+4. `&File` menü öğesine bir alt menü öğesi ekleyin ve <xref:System.Windows.Forms.ToolStripItem.Text%2A> özelliğini `&Open`olarak ayarlayın.  
   
-5. Ayarlama <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> özelliği <xref:System.Windows.Forms.MenuStrip> için `&Window` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+5. <xref:System.Windows.Forms.MenuStrip> <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> özelliğini `&Window`<xref:System.Windows.Forms.ToolStripMenuItem>olarak ayarlayın.  
   
-6. Projeye form ekleme ve istediğiniz denetim, başka bir gibi <xref:System.Windows.Forms.MenuStrip>.  
+6. Projeye bir form ekleyin ve istediğiniz denetimi, başka bir <xref:System.Windows.Forms.MenuStrip>gibi ekleyin.  
   
-7. İçin bir olay işleyicisi oluşturun <xref:System.Windows.Forms.Control.Click> olayı `&New` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+7. `&New`<xref:System.Windows.Forms.ToolStripMenuItem><xref:System.Windows.Forms.Control.Click> olayı için bir olay işleyicisi oluşturun.  
   
-8. Olay işleyicisinin içerisinde oluşturmak ve yeni örneklerini görüntülemek için aşağıdaki için benzer bir kod ekleme `Form2` MDI alt öğeleri olarak `Form1`.  
+8. Olay işleyicisi içinde, `Form1`MDI alt öğeleri olarak `Form2` yeni örneklerini oluşturmak ve göstermek için aşağıdakine benzer bir kod ekleyin.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As _  
@@ -61,7 +61,7 @@ ms.locfileid: "64611963"
     }  
     ```  
   
-9. Kod aşağıdaki gibi yerleştirmek `&New` <xref:System.Windows.Forms.ToolStripMenuItem> olay işleyicisi kaydetmek için.  
+9. Olay işleyicisini kaydetmek için `&New`<xref:System.Windows.Forms.ToolStripMenuItem> gibi bir kod girin.  
   
     ```vb  
     Private Sub newToolStripMenuItem_Click(sender As Object, e As _  
@@ -72,17 +72,17 @@ ms.locfileid: "64611963"
     this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);  
     ```  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- İki <xref:System.Windows.Forms.Form> adlarında `Form1` ve `Form2`.  
+- `Form1` ve `Form2`adlı iki <xref:System.Windows.Forms.Form> denetimi.  
   
-- A <xref:System.Windows.Forms.MenuStrip> denetimi `Form1` adlı `menuStrip1`ve <xref:System.Windows.Forms.MenuStrip> denetimi `Form2` adlı `menuStrip2`.  
+- `menuStrip1`adlı `Form1` ve `Form2` adlı `menuStrip2`<xref:System.Windows.Forms.MenuStrip> bir denetim <xref:System.Windows.Forms.MenuStrip> denetimi.  
   
-- Başvurular <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemeler.  
+- <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: MDI üst formları oluşturma](../advanced/how-to-create-mdi-parent-forms.md)
-- [Nasıl yapılır: MDI alt formları oluştur](../advanced/how-to-create-mdi-child-forms.md)
+- [Nasıl yapılır: MDI Üst Formları Oluşturma](../advanced/how-to-create-mdi-parent-forms.md)
+- [Nasıl yapılır: MDI Alt Formları Oluşturma](../advanced/how-to-create-mdi-child-forms.md)
 - [MenuStrip Denetimi](menustrip-control-windows-forms.md)

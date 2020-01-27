@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms RichTextBox Denetimi İçin Yazı Tipi Özniteliklerini Ayarlama'
+title: RichTextBox denetimi için yazı tipi özniteliklerini ayarlama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - text boxes [Windows Forms], formatting text
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
-ms.openlocfilehash: 4919e94c23b1a67680ea0f360304ee0f75c7f425
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f27256c155223df576ee3c42e6bf65270c870b0f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963218"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744858"
 ---
 # <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox Denetimi İçin Yazı Tipi Özniteliklerini Ayarlama
-Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, görüntülediği metni biçimlendirmek için çeşitli seçeneklere sahiptir. <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> Özelliği kullanarak seçili karakterleri kalın, altı çizili veya italik yapabilirsiniz. Bu özelliği, seçilen karakterlerin boyutunu ve yazı tipini değiştirmek için de kullanabilirsiniz. Özelliği <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> , seçilen karakterlerin rengini değiştirmenize olanak sağlar.  
+Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, görüntülediği metni biçimlendirmek için çeşitli seçeneklere sahiptir. <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> özelliğini kullanarak seçili karakterleri kalın, altı çizili veya italik yapabilirsiniz. Bu özelliği, seçilen karakterlerin boyutunu ve yazı tipini değiştirmek için de kullanabilirsiniz. <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> özelliği, seçilen karakterlerin rengini değiştirmenize olanak sağlar.  
   
 ### <a name="to-change-the-appearance-of-characters"></a>Karakterlerin görünüşünü değiştirmek için  
   
-1. <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> Özelliği uygun bir yazı tipine ayarlayın.  
+1. <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> özelliğini uygun bir yazı tipine ayarlayın.  
   
-     Kullanıcıların bir uygulamadaki yazı tipi ailesini, boyutunu ve yazı tipini ayarlayacağından, genellikle <xref:System.Windows.Forms.FontDialog> bileşeni kullanacaksınız. Genel bakış için bkz. [FontDialog bileşenine genel bakış](fontdialog-component-overview-windows-forms.md).  
+     Kullanıcıların bir uygulamadaki yazı tipi ailesini, boyutunu ve yazı tipini ayarlayacağından, genellikle <xref:System.Windows.Forms.FontDialog> bileşenini kullanırsınız. Genel bakış için bkz. [FontDialog bileşenine genel bakış](fontdialog-component-overview-windows-forms.md).  
   
-2. <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> Özelliği uygun bir renge ayarlayın.  
+2. <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> özelliğini uygun bir renk olarak ayarlayın.  
   
      Kullanıcıların bir uygulamada renk ayarlaması için, genellikle <xref:System.Windows.Forms.ColorDialog> bileşenini kullanırsınız. Genel bakış için bkz. [ColorDialog Bileşenine Genel Bakış](colordialog-component-overview-windows-forms.md).  
   
@@ -51,7 +51,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, görüntülediğ
     ```  
   
     > [!NOTE]
-    > Bu özellikler yalnızca seçili metni etkiler veya hiçbir metin seçilmezse, ekleme noktasının geçerli konumuna yazılan metni. Program aracılığıyla metin seçme hakkında bilgi için bkz <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
+    > Bu özellikler yalnızca seçili metni etkiler veya hiçbir metin seçilmezse, ekleme noktasının geçerli konumuna yazılan metni. Program aracılığıyla metin seçme hakkında bilgi için bkz. <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

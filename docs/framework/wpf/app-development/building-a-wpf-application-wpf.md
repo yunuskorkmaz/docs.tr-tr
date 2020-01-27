@@ -1,5 +1,5 @@
 ---
-title: WPF Uygulaması Oluşturma (WPF)
+title: Uygulama derleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 48536d8fba3f86c2883e48cd4e5cf9a3a8752fcd
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 00c76dfcdcedc7ceaefaaae785368f8b343457a7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636321"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744769"
 ---
-# <a name="building-a-wpf-application-wpf"></a>WPF Uygulaması Oluşturma (WPF)
+# <a name="compile-a-wpf-application"></a>WPF uygulaması derleme
 
 Windows Presentation Foundation (WPF) uygulamaları, .NET Framework yürütülebilir dosyalar (. exe), kitaplıklar (. dll) veya her iki tür derleme birleşimi olarak oluşturulabilir. Bu konu, WPF uygulamalarının nasıl oluşturulacağını ve yapı işlemindeki önemli adımları açıklar.
 
@@ -118,7 +118,7 @@ Varsayılan olarak, biçimlendirme derlemesi MSBuild altyapısıyla aynı <xref:
 
 <a name="File_Classification"></a>
 
-### <a name="file-classification"></a>Dosya Sınıflandırma
+### <a name="file-classification"></a>Dosya sınıflandırması
 
 Yapı işlemi, çıktı dosyalarını, hangi uygulama derlemesine yerleştirilebileceğini temel alarak farklı kaynak gruplarına koyar. Yerelleştirilmiş olmayan tipik bir uygulamada, `Resource` olarak işaretlenen tüm veri dosyaları ana derlemeye (yürütülebilir veya kitaplık) yerleştirilir. Projede `UICulture` ayarlandığında, derlenen tüm [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyalar ve özellikle dile özgü olarak işaretlenen kaynaklar uydu kaynak derlemesine yerleştirilir. Ayrıca, tüm dilden bağımsız kaynaklar ana derlemeye yerleştirilir. Yapı işleminin bu adımında, bu belirleme yapılır.
 

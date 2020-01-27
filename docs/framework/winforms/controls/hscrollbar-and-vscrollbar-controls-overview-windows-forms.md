@@ -1,5 +1,5 @@
 ---
-title: HScrollBar ve VScrollBar Denetimlerine Genel Bakış (Windows Forms)
+title: HScrollBar ve VScrollBar Denetimlerine Genel Bakış
 ms.date: 03/30/2017
 f1_keywords:
 - HScrollBar
@@ -11,29 +11,29 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-ms.openlocfilehash: d4a7912a5781fc583357affa728f7d81059b5cf9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abe0c8da9723f17cb80715454f6ab7297724a21f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928586"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728166"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar ve VScrollBar Denetimlerine Genel Bakış (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.ScrollBar> denetimleri yatay kaydırma tarafından veya içinde bir uygulamanın veya denetimin dikey olarak uzun bir liste aracılığıyla kolay gezinti öğeleri veya büyük miktarda bilgi sağlamak amacıyla kullanılır. Kaydırma çubukları Windows arabiriminin ortak bir öğesi olan böylece <xref:System.Windows.Forms.ScrollBar> öğesinden türetilen değil denetimlerle genellikle Denetim kullanılır <xref:System.Windows.Forms.ScrollableControl> sınıfı. Benzer şekilde, dahil etmek birçok geliştiricinin seçin <xref:System.Windows.Forms.ScrollBar> denetlemek, kendi kullanıcı denetimleri yazma.  
+Windows Forms <xref:System.Windows.Forms.ScrollBar> denetimleri, bir uygulama veya denetim içinde yatay veya dikey olarak gezinerek uzun bir öğe listesi veya büyük miktarda bilgi için kolay gezinti sağlamak üzere kullanılır. Kaydırma çubukları Windows arabiriminin ortak bir öğesidir, bu nedenle <xref:System.Windows.Forms.ScrollBar> denetimi genellikle <xref:System.Windows.Forms.ScrollableControl> sınıfından türemeyen denetimlerle kullanılır. Benzer şekilde birçok geliştirici, kendi kullanıcı denetimlerini yazarken <xref:System.Windows.Forms.ScrollBar> denetimini de eklemenizi seçer.  
   
- <xref:System.Windows.Forms.HScrollBar> (Yatay) ve <xref:System.Windows.Forms.VScrollBar> (dikey) denetimleri diğer denetimleri birbirinden bağımsız olarak çalışır ve kendi olayları, özellikler ve yöntemler vardır. <xref:System.Windows.Forms.ScrollBar> denetimleri metin kutuları, liste kutuları, birleşik giriş kutuları veya MDI formları bağlı yerleşik kaydırma çubuklarının ile aynı değildir ( <xref:System.Windows.Forms.TextBox> kontrolünde bir <xref:System.Windows.Forms.TextBox.ScrollBars%2A> denetime eklidir kaydırma çubuklarını gösterme veya gizleme özelliğini).  
+ <xref:System.Windows.Forms.HScrollBar> (yatay) ve <xref:System.Windows.Forms.VScrollBar> (dikey) denetimleri, diğer denetimlerden bağımsız olarak çalışır ve kendi olay, özellik ve Yöntem kümesine sahip olabilir. <xref:System.Windows.Forms.ScrollBar> denetimleri, metin kutularına, liste kutularına, Birleşik giriş kutularına veya MDI formlarına eklenen yerleşik kaydırma çubuklarıyla aynı değildir (<xref:System.Windows.Forms.TextBox> denetim, denetime eklenmiş olan kaydırma çubuklarını göstermek veya gizlemek için bir <xref:System.Windows.Forms.TextBox.ScrollBars%2A> özelliğine sahiptir).  
   
- <xref:System.Windows.Forms.ScrollBar> Denetimleri kullanın <xref:System.Windows.Forms.ScrollBar.Scroll> kaydırma çubuğu (bazen thumb adlandırılır) kaydırma kutusunun hareketini izlemek için olay. Kullanarak <xref:System.Windows.Forms.ScrollBar.Scroll> olay sürüklenen gibi kaydırma çubuğu değeri erişim sağlar.  
+ <xref:System.Windows.Forms.ScrollBar> denetimleri kaydırma çubuğunun yanı da kaydırma kutusunun hareketini (bazen Thumb olarak adlandırılır) izlemek için <xref:System.Windows.Forms.ScrollBar.Scroll> olayını kullanır. <xref:System.Windows.Forms.ScrollBar.Scroll> olayının kullanılması kaydırma çubuğu değerine sürüklenirken erişim sağlar.  
   
 ## <a name="value-property"></a>Value özelliği  
- <xref:System.Windows.Forms.ScrollBar.Value%2A> (Bu, varsayılan olarak, 0) özelliği bir `integer` kaydırma çubuğuna ait kaydırma kutusunun konumuna karşılık gelen bir değer. Kaydırma kutusunun konumundaki en düşük değer olduğunda, en soldaki konumu (yatay kaydırma çubuklarını) ya da (dikey kaydırma çubukları için) en üst konuma taşır. Kaydırma kutusuna en yüksek değer, en sağdaki kaydırma kutusuna taşınır veya alt konumunu olduğunda. Benzer şekilde, yarısı alt ve üst aralık arasında bir değer lider ortasında kaydırma çubuğuna ait kaydırma kutusunun yerleştirir.  
+ <xref:System.Windows.Forms.ScrollBar.Value%2A> özelliği (varsayılan olarak, 0 ' dır), kaydırma çubuğundaki kaydırma kutusunun konumuna karşılık gelen bir `integer` değeridir. Kaydırma kutusu konumu en düşük değerde olduğunda, en sol konuma (yatay kaydırma çubukları için) veya üst konuma (dikey kaydırma çubukları için) gider. Kaydırma kutusu en büyük değerde olduğunda, kaydırma kutusu en sağ veya alt konuma gider. Benzer şekilde, aralığın alt ve üst sınırı arasındaki bir değer, kaydırma çubuğunun ortasındaki kaydırma kutusunun baştaki ucunu koyar.  
   
- Fare tıklama kaydırma çubuğu değeri değiştirmek için kullanmanın yanı sıra, bir kullanıcı kaydırma kutusunun çubuk boyunca herhangi bir noktaya sürükleyebilirsiniz. Sonuç değerini kaydırma kutusunun konumuna bağlıdır, ancak her zaman aralığında ise <xref:System.Windows.Forms.ScrollBar.Minimum%2A> için <xref:System.Windows.Forms.ScrollBar.Maximum%2A> kullanıcı tarafından ayarlanan özellikler.  
+ Kullanıcı kaydırma çubuğu değerini değiştirmek için fare tıklamalarının kullanılmasına ek olarak, kaydırma kutusunu da çubuk üzerinde herhangi bir noktaya sürükleyebilirsiniz. Elde edilen değer, kaydırma kutusunun konumuna bağlıdır, ancak her zaman <xref:System.Windows.Forms.ScrollBar.Minimum%2A> aralığı içinde Kullanıcı tarafından ayarlanan <xref:System.Windows.Forms.ScrollBar.Maximum%2A> özelliklere sahiptir.  
   
 ## <a name="largechange-and-smallchange-properties"></a>LargeChange ve SmallChange özellikleri  
- Kullanıcı PAGE UP veya PAGE DOWN tuşuna bastığında veya her iki tarafında, kaydırma kutusunun kaydırma çubuğu parça içinde tıkladığında <xref:System.Windows.Forms.ScrollBar.Value%2A> içinde ayarlanan değere göre özellik değişiklikleri <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> özelliği.  
+ Kullanıcı sayfa yukarı veya sayfa aşağı tuşuna bastığında veya kaydırma kutusunun her iki tarafında da kaydırma çubuğu kanalında tıkladığı zaman, <xref:System.Windows.Forms.ScrollBar.Value%2A> özelliği <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> özelliğinde ayarlanan değere göre değişir.  
   
- Kullanıcı oka birini bastığında anahtarları veya kaydırma çubuğu düğmelerden birine tıklar <xref:System.Windows.Forms.ScrollBar.Value%2A> içinde ayarlanan değere göre özellik değişiklikleri <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> özelliği.  
+ Kullanıcı, ok tuşlarından birine bastığında veya kaydırma çubuğu düğmelerinden birine tıkladığında, <xref:System.Windows.Forms.ScrollBar.Value%2A> özelliği <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> özelliğinde ayarlanan değere göre değişir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

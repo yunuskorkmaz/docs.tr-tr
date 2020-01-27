@@ -1,16 +1,16 @@
 ---
-title: WPF İzlenecek Yollar
+title: İzlenecek Yollar
 ms.date: 03/30/2017
 helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: fbd5006611a0a8e0d90b589df7b2cb6a34101457
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d7853019b109fa7be97f83134be223b1c65375ac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977023"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746913"
 ---
 # <a name="wpf-walkthroughs"></a>WPF İzlenecek Yollar
 İzlenecek yollar, yaygın senaryolar için adım adım yönergeler sağlar. Bu, ürün veya belirli bir özellik alanı hakkında öğrenmeye başlamak için iyi bir yer sağlar.

@@ -1,58 +1,58 @@
 ---
-title: Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri
+title: Seçenekleri listelemek için kullanılan denetimler
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, listing options
 - option lists in Windows Forms
 ms.assetid: 5bc064c7-bc1f-4b62-8f4b-252f864b118e
-ms.openlocfilehash: 92d5f330fbd5269e15bf52dc11ad998939aa18e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52e8f2fcae3cbb4dae495cad3b29b647732ad5b7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009077"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742345"
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri
-Kullanıcılara bir seçenek yelpazesinden listesi sağlamak istiyorsanız Windows Form çeşitli denetimlere ekleyebilirsiniz. Bağlı olarak ne kadar istediğiniz kullanıcılarınızın kısıtlamak input, ekleyebileceğiniz bir <xref:System.Windows.Forms.ListBox> denetimi, bir <xref:System.Windows.Forms.ComboBox> denetimi veya <xref:System.Windows.Forms.CheckedListBox> denetimi. En iyi hangi denetimin gereksinimlerinize uyan belirlemek için aşağıdaki bağlantıları kullanın.  
+Kullanıcılara aralarından seçim yapabileceğiniz bir seçenek listesi sağlamak istiyorsanız, bir Windows formuna çeşitli denetimler ekleyebilirsiniz. Kullanıcılarınızın girişini ne kadar kısıtlamak istediğinize bağlı olarak, <xref:System.Windows.Forms.ListBox> denetim, <xref:System.Windows.Forms.ComboBox> denetimi veya <xref:System.Windows.Forms.CheckedListBox> denetimi ekleyebilirsiniz. Hangi denetimin gereksinimlerinize en uygun olduğunu öğrenmek için aşağıdaki bağlantıları kullanın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ListBox Yerine Ne Zaman Windows Forms ComboBox Kullanılır?](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
- Gereksinimleri ve kısıtlamaları, Windows formunun bağlı olarak, uygun bir liste tabanlı denetim önerir.  
+ Windows formunuzun ihtiyaçlarına ve kısıtlamalarına bağlı olarak uygun bir liste tabanlı denetim önerir.  
   
- [Nasıl yapılır: Özel erişim öğeleri bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
- Program aracılığıyla belirli bir konumda listesindeki hangi öğe görünür belirlemek için yönergeler sağlar.  
+ [Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Belirli Öğelere Erişme](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
+ Belirli bir konumda bir listedeki hangi öğenin göründüğünü programlı bir şekilde belirlemek için yönergeler sağlar.  
   
- [Nasıl yapılır: Ekleme ve kaldırma öğeleri bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi](add-and-remove-items-from-a-wf-combobox.md)  
- Öğe ekleme veya bir denetimin öğeleri listeden kaldırma için yönergeler sağlar.  
+ [Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Öğe Ekleme ve Kaldırma](add-and-remove-items-from-a-wf-combobox.md)  
+ Bir denetimin öğe listesinden öğe ekleme veya kaldırma için yönergeler sağlar.  
   
- [Nasıl yapılır: ComboBox, ListBox veya CheckedListBox denetiminde bir Windows Forms için arama tablosu oluşturma](create-a-lookup-table-for-a-wf-combobox-listbox.md)  
- Görüntüleme ve kullanışlı biçimlerde form verilerini depolamak için yönergeler sağlar.  
+ [Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetimi için Arama Tablosu Oluşturma](create-a-lookup-table-for-a-wf-combobox-listbox.md)  
+ Form verilerini yararlı biçimlerde görüntülemek ve depolamak için yönergeler sağlar.  
   
- [Nasıl yapılır: Bir Windows Forms ComboBox veya ListBox denetimini verilere bağlama](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
- Bir liste tabanlı denetim bir veri kaynağına bağlama için yönergeler sağlar.  
+ [Nasıl yapılır: Windows Forms ComboBox veya ListBox Denetimini Verilere Bağlama](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
+ Bir veri kaynağına liste tabanlı denetim bağlama için yönergeler sağlar.  
   
- [Nasıl yapılır: Sıralama içeriği bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
- Veri kaynağında listesi verileri sıralamak açıklanmaktadır.  
+ [Nasıl yapılır: Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminin İçeriğini Sıralama](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ Liste verilerinin veri kaynağında nasıl sıralanacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.CheckedListBox>  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
+ Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.  
   
  <xref:System.Windows.Forms.ComboBox>  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
+ Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.  
   
  <xref:System.Windows.Forms.ListBox>  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
+ Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [CheckedListBox Denetimine Genel Bakış](checkedlistbox-control-overview-windows-forms.md)  
- Bu denetimi nedir ve önemli özellikler ve özellikleri açıklar.  
+ Bu denetimin ne olduğunu ve temel özelliklerini ve özelliklerini açıklar.  
   
  [ComboBox Denetimine Genel Bakış](combobox-control-overview-windows-forms.md)  
- Bu denetimi nedir ve önemli özellikler ve özellikleri açıklar.  
+ Bu denetimin ne olduğunu ve temel özelliklerini ve özelliklerini açıklar.  
   
  [ListBox Denetimine Genel Bakış](listbox-control-overview-windows-forms.md)  
- Bu denetimi nedir ve önemli özellikler ve özellikleri açıklar.  
+ Bu denetimin ne olduğunu ve temel özelliklerini ve özelliklerini açıklar.  
   
  [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
- Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.
+ Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.

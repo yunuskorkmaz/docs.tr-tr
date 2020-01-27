@@ -1,58 +1,58 @@
 ---
-title: Windows Formları DataGridView Denetimi ile Tasarımcı Kullanımı
+title: Tasarımcıyı DataGridView denetimiyle kullanma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tables [Windows Forms]
 - DataGridView control [Windows Forms], designer support
 - formatting [Windows Forms]
 ms.assetid: b66057a6-5983-4864-b4e7-8cbc88a7010c
-ms.openlocfilehash: daac7dca27ac5dca8df4db24c9a3e22dae831377
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 50e8bddb97c2dfb84cebdbb2ca4d42a6c5743304
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948011"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728359"
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Windows Formları DataGridView Denetimi ile Tasarımcı Kullanımı
-Visual Studio için tasarımcı desteği sağlar `DataGridView` denetimi, kod yazmaya gerek kalmadan birçok kurulum görevleri gerçekleştirmenizi sağlar. Bu görevler, verileri görüntülemek için kullanılan denetim sütunlarını değiştirme, bir veri kaynağına bağlama ve temel denetimin davranışını ve görünümünü ayarlamayı içerir.  
+Visual Studio, kod yazmadan birçok Kurulum görevi gerçekleştirmenizi sağlayan `DataGridView` denetimine yönelik tasarımcı desteği sağlar. Bu görevler, denetimi bir veri kaynağına bağlamayı, verileri göstermek için kullanılan sütunları değiştirmeyi ve denetimin görünümünü ve temel davranışını ayarlamayı içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Ekleme ve Windows Forms Tasarımcısı'nı kullanarak DataGridView denetimindeki sütunları kaldırma](add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
- Nasıl kullanılacağını açıklar **Sütun Ekle** ve **sütunları Düzenle** iletişim kutularını doldurun ve sütun koleksiyonundaki değiştirin.  
+ [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimine Sütunlar Ekleme ve Kaldırma](add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
+ Sütunlar koleksiyonunu doldurmak ve değiştirmek için sütun **Ekle** ve **Sütunları Düzenle** iletişim kutularının nasıl kullanılacağını açıklar.  
   
- [Nasıl yapılır: Windows Forms DataGridView Tasarımcısı'nı kullanarak denetimine veri bağlama](bind-data-to-the-datagrid-using-the-designer.md)  
- Nasıl kullanılacağını açıklar **veri kaynağı Seç** verilere bağlanmak için akıllı etiket denetimin seçeneği.  
+ [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimine Veri Bağlama](bind-data-to-the-datagrid-using-the-designer.md)  
+ Verilere bağlanmak için denetimin akıllı etiketindeki **veri kaynağı seç** seçeneğinin nasıl kullanılacağını açıklar.  
   
- [Nasıl yapılır: Tasarımcı kullanarak Windows Forms DataGridView denetiminde sütunların sırasını değiştirme](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)  
- Nasıl kullanılacağını açıklar **sütunları Düzenle** sütunları yeniden sıralamak için iletişim kutusu.  
+ [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetiminde Sütunların Sırasını Değiştirme](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)  
+ Sütunları **Düzenle** iletişim kutusunun sütunları yeniden düzenlemek için nasıl kullanılacağını açıklar.  
   
- [Nasıl yapılır: Tasarımcı kullanarak Windows Formları DataGridView sütununun türünü değiştirme](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)  
- Nasıl kullanılacağını açıklar **sütunları Düzenle** sütun türlerini değiştirmek için iletişim kutusu.  
+ [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Sütununun Türünü Değiştirme](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)  
+ Sütun türlerini değiştirmek için **Sütunları Düzenle** iletişim kutusunun nasıl kullanılacağını açıklar.  
   
- [Nasıl yapılır: Windows Forms Tasarımcısı'nı kullanarak DataGridView denetimindeki sütun yeniden sıralamayı etkinleştirme](enable-column-reordering-in-the-datagrid-using-the-designer.md)  
- Sütunları yeniden sıralamak kullanıcıları etkinleştirmek için akıllı etiket denetimin kullanmayı açıklar.  
+ [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimindeki Sütun Yeniden Sıralamayı Etkinleştirme](enable-column-reordering-in-the-datagrid-using-the-designer.md)  
+ Kullanıcıların sütunları yeniden düzenlemenizi sağlamak için denetimin akıllı etiketinin nasıl kullanılacağını açıklar.  
   
- [Nasıl yapılır: Tasarımcı kullanarak Windows Forms DataGridView denetiminde sütunları dondurma](freeze-columns-in-the-datagrid-using-the-designer.md)  
- Nasıl kullanılacağını açıklar **sütunları Düzenle** kaymasını belirli sütunları engellemek için iletişim kutusu.  
+ [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimindeki Sütunları Dondurma](freeze-columns-in-the-datagrid-using-the-designer.md)  
+ Belirli sütunların kaymasını engellemek için **Sütunları Düzenle** iletişim kutusunun nasıl kullanılacağını açıklar.  
   
- [Nasıl yapılır: Tasarımcı kullanarak Windows Forms DataGridView denetiminde sütunları gizleme](hide-columns-in-the-datagrid-using-the-designer.md)  
- Nasıl kullanılacağını açıklar **sütunları Düzenle** belirli sütunları gizlemek için iletişim kutusu.  
+ [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimindeki Sütunları Gizleme](hide-columns-in-the-datagrid-using-the-designer.md)  
+ **Sütunları Düzenle** iletişim kutusunun belirli sütunları gizlemek için nasıl kullanılacağını açıklar.  
   
- [Nasıl yapılır: Salt okunur Tasarımcı kullanarak Windows Forms DataGridView denetiminde sütunları olun](make-columns-read-only-in-the-datagrid-using-the-designer.md)  
- Nasıl kullanılacağını açıklar **sütunları Düzenle** iletişim kutusu, kullanıcıların düzenlemesini önlemek için belirli sütunlardaki değerleri.  
+ [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimindeki Sütunları Salt Okunur Yapma](make-columns-read-only-in-the-datagrid-using-the-designer.md)  
+ Kullanıcıların belirli sütunlardaki değerleri düzenlemesini engellemek için **Sütunları Düzenle** iletişim kutusunun nasıl kullanılacağını açıklar.  
   
- [Nasıl yapılır: Satır eklemeyi ve tasarımcı kullanarak Windows Forms DataGridView denetiminde Silmeyi engelle](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)  
- Denetimin akıllı etiket ekleme veya silme satırları kullanıcıların önlemek için kullanmayı açıklar.  
+ [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetiminde Satır Eklemeyi ve Silmeyi Engelleme](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)  
+ Kullanıcıların satır eklemesini ve silmesini engellemek için denetimin akıllı etiketinin nasıl kullanılacağını açıklar.  
   
- [Nasıl yapılır: Windows Forms DataGridView Tasarımcısı'nı kullanarak denetimi için alternatif satır stillerini ayarlama](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)  
- Nasıl kullanılacağını açıklar **CellStyle Oluşturucu** denetiminde defter benzeri bir görünüm oluşturmak için iletişim kutusu.  
+ [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimi İçin Alternatif Satır Stillerini Ayarlama](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)  
+ Denetimde defter benzeri bir görünüm oluşturmak için **CellStyle Builder** iletişim kutusunun nasıl kullanılacağını açıklar.  
   
- [Nasıl yapılır: Windows Forms DataGridView Tasarımcısı'nı kullanarak denetimi için varsayılan hücre stilleri ve veri biçimleri ayarlama](default-cell-styles-datagridview.md)  
- Nasıl kullanılacağını açıklar **CellStyle Oluşturucu** temel görünümünü ve veri görüntü ayarlamak için iletişim kutusu için denetimin biçimlendirir.  
+ [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimi İçin Varsayılan Hücre Stilleri ve Veri Biçimleri Ayarlama](default-cell-styles-datagridview.md)  
+ Denetimin temel görünümünü ve veri görüntüleme biçimlerini ayarlamak için **CellStyle Builder** iletişim kutusunun nasıl kullanılacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.DataGridView>  
- İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView> denetimi.  
+ <xref:System.Windows.Forms.DataGridView> denetimi için başvuru belgeleri sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

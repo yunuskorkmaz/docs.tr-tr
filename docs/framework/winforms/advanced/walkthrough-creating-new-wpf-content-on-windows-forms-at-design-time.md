@@ -1,5 +1,6 @@
 ---
-title: 'İzlenecek yol: Windows Formlarında Tasarım Zamanında Yeni bir WPF İçeriği Oluşturma'
+title: Windows Forms yeni WPF Içeriği oluştur
+titleSuffix: ''
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -11,12 +12,12 @@ ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 395543a3141af66038cabef9a3c9fed40a36b47e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 69a0598b05d1b2bff84b203317d6d5a166ce109d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460661"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746393"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: tasarım zamanında Windows Forms yeni WPF içeriği oluşturma
 

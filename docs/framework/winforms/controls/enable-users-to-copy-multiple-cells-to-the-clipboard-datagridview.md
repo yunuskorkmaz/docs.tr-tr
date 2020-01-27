@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Kullanıcıların Windows Forms DataGridView Denetiminden Panoya Birden Fazla Hücre Kopyalamasına Olanak Tanıma'
+title: Kullanıcıların DataGridView denetiminden panoya birden fazla hücre kopyalamasını sağlama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,37 +10,37 @@ helpviewer_keywords:
 - data grids [Windows Forms], copying multiple cells
 - Clipboard [Windows Forms], copying multiple cells
 ms.assetid: fd0403b2-d0e3-4ae0-839c-0f737e1eb4a9
-ms.openlocfilehash: b220603adcaeae6f3380a2e3c10ea524c9a61f24
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2bb74a1f0c59b28ab496ce9c89c1c1b5f9d8147b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591913"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745775"
 ---
 # <a name="how-to-enable-users-to-copy-multiple-cells-to-the-clipboard-from-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Kullanıcıların Windows Forms DataGridView Denetiminden Panoya Birden Fazla Hücre Kopyalamasına Olanak Tanıma
-Hücre kopyalama etkinleştirdiğinizde, verileri olun, <xref:System.Windows.Forms.DataGridView> denetim diğer uygulamalara kolayca erişilebilir <xref:System.Windows.Forms.Clipboard>. Seçili hücreleri değerleri dizelere dönüştürülür ve not defteri ve Excel gibi uygulamalara yapıştırmak için sekmeyle ayrılmış metin değerleri ve HTML biçimli bir tablo Word gibi uygulamalarda yapıştırma olarak panoya eklendi.  
+Hücre kopyalamayı etkinleştirdiğinizde, <xref:System.Windows.Forms.DataGridView> denetimindeki verileri, <xref:System.Windows.Forms.Clipboard>üzerinden diğer uygulamalar için kolayca erişilebilir hale getirebilirsiniz. Seçilen hücrelerin değerleri dizelere dönüştürülür ve Not defteri ve Excel gibi uygulamalara yapıştırılmasına yönelik sekmeyle ayrılmış metin değerleri olarak panoya ve Word gibi uygulamalara yapıştırılmasına yönelik HTML biçimli bir tablo olarak eklenir.  
   
- Hücre değerlerini kopyalamak için satır ve sütun üst bilgi metni Pano verilerine dahil edilecek veya tüm satırları veya sütunları yalnızca belirli kullanıcılara üst bilgi metni dahil edilecek hücre kopyalama yapılandırabilirsiniz.  
+ Hücre kopyalamayı yalnızca hücre değerlerini kopyalamak, pano verilerine satır ve sütun üst bilgi metnini dahil etmek veya yalnızca kullanıcılar tüm satırları veya sütunları seçerken başlık metnini eklemek için yapılandırabilirsiniz.  
   
- Seçim moduna bağlı olarak, kullanıcıların birden fazla bağlantısı kesilen grubu hücre seçebilirsiniz. Bir kullanıcı hücreleri panoya kopyalar, satırları ve sütunları ile seçilen hücre kopyalanmaz. Diğer tüm satırları veya sütunları panoya kopyalandı veri tablo içindeki satırları ve sütunları haline gelir. Bu satırlar veya sütunlar seçili olmayan hücre boş yer tutucu olarak panoya kopyalanamadı.  
+ Kullanıcılar seçim moduna bağlı olarak, birden fazla bağlantısı kesilmiş hücre grubunu seçebilir. Bir Kullanıcı panoya hücre kopyadığında, seçili hücreleri olmayan satırlar ve sütunlar kopyalanmaz. Diğer tüm satırlar veya sütunlar, panoya kopyalanmış veri tablosunda satır ve sütun haline gelir. Bu satırlardaki veya sütunlardaki seçilmemiş hücreler, panoya boş yer tutucular olarak kopyalanır.  
   
-### <a name="to-enable-cell-copying"></a>Hücre kopyalama etkinleştirmek için  
+### <a name="to-enable-cell-copying"></a>Hücre kopyalamayı etkinleştirmek için  
   
-- Ayarlama <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A?displayProperty=nameWithType> özelliği.  
+- <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A?displayProperty=nameWithType> özelliğini ayarlayın.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewClipboardDemo#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewClipboardDemo/CS/datagridviewclipboarddemo.cs#15)]
      [!code-vb[System.Windows.Forms.DataGridViewClipboardDemo#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewClipboardDemo/VB/datagridviewclipboarddemo.vb#15)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, nasıl hücreler panoya kopyalanır gösterir. Bu örnek Pano kullanarak seçili hücreleri kopyalayan bir düğme içerir <xref:System.Windows.Forms.DataGridView.GetClipboardContent%2A?displayProperty=nameWithType> Pano içeriğini metin kutusunda yöntemi ve görüntüler.  
+ Aşağıdaki kod örneğinde, hücrelerin Pano 'ya nasıl kopyalandığı gösterilmektedir. Bu örnek, <xref:System.Windows.Forms.DataGridView.GetClipboardContent%2A?displayProperty=nameWithType> yöntemini kullanarak seçili hücreleri panoya kopyalayan ve Pano içeriğini bir metin kutusunda görüntüleyen bir düğme içerir.  
   
  [!code-csharp[System.Windows.Forms.DataGridViewClipboardDemo#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewClipboardDemo/CS/datagridviewclipboarddemo.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewClipboardDemo#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewClipboardDemo/VB/datagridviewclipboarddemo.vb#00)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu kod gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu kod şunları gerektirir:  
   
-- N: System ve N:System.Windows.Forms derlemelerine başvurular.  
+- N:System ve N:System.Windows.Forms derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 58057709e2d5c5e34d0aa37158ea9b033840f840
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1e551572fa6d94e9fd1170eb7e3b258f2e8fb926
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344699"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728897"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Windows Communication Foundation güvenliğe genel bakış
 Windows Communication Foundation (WCF), bir SOAP ileti tabanlı dağıtılmış programlama platformudur ve istemciler ve hizmetler arasındaki iletilerin güvenliğini korumak için gereklidir. WCF, hem mevcut güvenlik altyapısına hem de SOAP iletileri için tanınan güvenlik standartlarına dayalı olarak güvenli iletiler değiş tokuş eden, çok yönlü ve birlikte çalışabilen bir platform sağlar.  
   
 > [!NOTE]
-> WCF güvenliğine yönelik kapsamlı bir kılavuz için bkz. [WCF güvenlik kılavuzu](https://go.microsoft.com/fwlink/?LinkID=158912).  
+> WCF güvenliğine yönelik kapsamlı bir kılavuz için bkz. [WCF güvenlik kılavuzu](https://archive.codeplex.com/?p=WCFSecurity).  
   
  WCF, kullanıcıların kimliğini doğrulamak için HTTPS, Windows tümleşik güvenliği veya Kullanıcı adları ve parolalar gibi mevcut teknolojiler ile güvenli, dağıtılmış uygulamalar oluşturduysanız tanıdık kavramları kullanır. WCF yalnızca mevcut güvenlik altyapılarından tümleştirilemez, ancak güvenli SOAP iletileri kullanarak yalnızca Windows etki alanlarının ötesinde dağıtılmış güvenliği de genişletir. Var olan protokollerin yanı sıra protokol olarak SOAP kullanmanın önemli avantajlarından yararlanarak mevcut güvenlik mekanizmalarının bir uygulamasını WCF olarak değerlendirin. Örneğin, Kullanıcı adı ve parola veya X. 509.440 sertifikaları gibi bir istemciyi veya hizmeti tanımlayan kimlik bilgileri, birlikte çalışabilen XML tabanlı SOAP profillerine sahiptir. Bu profiller kullanılarak iletiler, XML dijital imzaları ve XML şifrelemesi gibi açık belirtimlerden yararlanarak güvenli bir şekilde değiştirilir. Belirtimlerin listesi için, bkz. [sistem tarafından sunulan birlikte çalışabilirlik bağlamaları tarafından desteklenen Web Hizmetleri protokolleri](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
   
@@ -113,4 +113,4 @@ Windows Communication Foundation (WCF), bir SOAP ileti tabanlı dağıtılmış 
 - [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [Uç Nokta Oluşturmaya Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Güvenliği Genişletme](../../../../docs/framework/wcf/extending/extending-security.md)
-- [Windows Server App Fabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

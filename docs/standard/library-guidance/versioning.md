@@ -2,12 +2,12 @@
 title: Sürüm oluşturma ve .NET kitaplıkları
 description: .NET kitaplıklarını sürüm oluşturma için en iyi yöntem önerileri.
 ms.date: 12/10/2018
-ms.openlocfilehash: 8ed3217e39b1fe0f330a650ec72cda224866e207
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a274410714791e2790da0e3deb2a595390ee9389
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706419"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745022"
 ---
 # <a name="versioning"></a>Sürüm Oluşturma
 
@@ -29,15 +29,15 @@ Sürümler arasındaki önemli değişiklikleri işleme hakkında daha fazla bil
 <PackageVersion>1.0.0-alpha1</PackageVersion>
 ```
 
-NuGet paket sürümü ile birlikte bulunan NuGet paket tanımlayıcısı, NuGet içindeki bir paketi tanımlamak için kullanılır. Örneğin, `Newtonsoft.Json` + `11.0.2`. Soneki olan bir paket yayın öncesi paketidir ve test için ideal hale getiren özel davranışları vardır. Daha fazla bilgi için bkz. [yayın öncesi paketleri](./nuget.md#pre-release-packages).
+NuGet paket sürümü ile birlikte bulunan NuGet paket tanımlayıcısı, NuGet içindeki bir paketi tanımlamak için kullanılır. Örneğin,  + `11.0.2``Newtonsoft.Json`. Soneki olan bir paket yayın öncesi paketidir ve test için ideal hale getiren özel davranışları vardır. Daha fazla bilgi için bkz. [yayın öncesi paketleri](./nuget.md#pre-release-packages).
 
 NuGet paketi sürümü geliştiricilerin en çok görülebilen sürümü olduğu için, [anlamsal sürüm oluşturma (SemVer)](https://semver.org/)kullanılarak güncelleştirilmesi iyi bir fikirdir. SemVer, yayın arasındaki değişikliklerin önemini gösterir ve geliştiricilerin hangi sürümü kullanacağınızı seçerken bilinçli bir karar vermesini sağlar. Örneğin, `1.0` `2.0`, olası büyük değişiklikler olduğunu gösterir.
 
-**✔️** NuGet paketinizi sürüm Için [Semver 2.0.0](https://semver.org/) kullanmayı düşünün.
+✔️ NuGet paketinizi sürüm için [Semver 2.0.0](https://semver.org/) kullanmayı düşünün.
 
-**✔️** , kullanıcıların yaygın olarak göreceği sürüm numarası olduğundan, ortak belgelerde NuGet paketi sürümünü kullanın.
+✔️, kullanıcıların yaygın olarak göreceği sürüm numarası olduğundan, ortak belgelerde NuGet paketi sürümünü kullanın.
 
-kararlı olmayan bir paket yayınlarken yayın öncesi son eki dahil **✔️** .
+kararlı olmayan bir paket yayınlarken yayın öncesi son eki dahil ✔️.
 
 > Kullanıcılar, yayın öncesi paketleri almak için kabul etmelidir, dolayısıyla paketin tamamlanmamış olduğunu anlayacaktır.
 
@@ -53,15 +53,15 @@ Windows .NET Framework CLR kesin bir adlandırılmış derlemeyi yüklemek için
 
 Bütünleştirilmiş kod sürümüyle birlikte tanımlayıcı adlandırma [katı derleme sürümü yüklemeye](../assembly/versioning.md)izin vermez. Bir kitaplıkta güçlü adlandırma bir dizi avantaja sahip olsa da, genellikle bir derlemenin bulunamaması ve `app.config`/`web.config` düzeltilmesi için bağlama yeniden [yönlendirmeleri gerektirdiğinden](../../framework/configure-apps/redirect-assembly-versions.md) çalışma zamanı özel durumları oluşur. .NET Core derleme yüklemesi gevşek bir şekilde geliştirilmiştir ve .NET Core CLR, derlemeleri daha yüksek bir sürüme sahip çalışma zamanında otomatik olarak yükler.
 
-✔️ yalnızca AssemblyVersion içinde önemli bir sürüm dahil olmak üzere **göz önünde bulundurun** .
+✔️ yalnızca AssemblyVersion içinde önemli bir sürüm dahil olmak üzere göz önünde bulundurun.
 
 > Örneğin, Library 1,0 ve Library 1.0.1 'in AssemblyVersion 'ı `1.0.0.0`vardır, ancak kitaplığı 2,0, `2.0.0.0`AssemblyVersion öğesine sahiptir. Derleme sürümü genellikle daha az değiştiğinde bağlama yeniden yönlendirmelerini azaltır.
 
-✔️ AssemblyVersion 'ın ana sürüm numarasını ve NuGet paket sürümünü eşitlenmiş halde tutmayı **göz önünde bulundurun** .
+✔️ AssemblyVersion 'ın ana sürüm numarasını ve NuGet paket sürümünü eşitlenmiş halde tutmayı göz önünde bulundurun.
 
 > AssemblyVersion, kullanıcıya görüntülenen bazı bilgilendirici iletilere, örneğin, özel durum iletilerinde derleme adı ve derleme nitelikli tür adlarına dahildir. Sürümler arasındaki ilişkinin saklanması, geliştiriciler tarafından hangi sürümü kullandıkları hakkında daha fazla bilgi sağlar.
 
-**❌** sabit bir AssemblyVersion yok.
+❌ sabit bir AssemblyVersion yok.
 
 > Bir AssemblyVersion, bağlama yeniden yönlendirmeleri gereksinimini ortadan kaldırdıkça, derlemenin yalnızca tek bir sürümünün genel derleme önbelleği 'ne (GAC) yüklenebileceği anlamına gelir. Ayrıca, GAC 'de derlemeye başvuruda bulunan uygulamalar, başka bir uygulama GAC derlemesini bozan değişikliklerle güncelleştirmiş olursa kesilir.
 
@@ -75,11 +75,11 @@ Derleme dosyası sürümü, Windows 'ta bir dosya sürümünü göstermek için 
 
 ![Windows Gezgini](./media/versioning/win-properties.png "Windows Gezgini")
 
-✔️ AssemblyFileVersion düzeltmesi olarak bir sürekli tümleştirme yapı numarası dahil **etmeyi göz önünde bulundurun** .
+✔️ AssemblyFileVersion düzeltmesi olarak bir sürekli tümleştirme yapı numarası dahil etmeyi göz önünde bulundurun.
 
 > Örneğin, projenizin sürüm 1.0.0 derleniyor ve sürekli tümleştirme derleme numarası 99 ' dir; bu nedenle AssemblyFileVersion 1.0.0.99.
 
-**✔️** dosya sürümü için `Major.Minor.Build.Revision` biçimini kullanır.
+✔️ dosya sürümü için `Major.Minor.Build.Revision` biçimini kullanır.
 
 > Dosya sürümü hiçbir şekilde .NET tarafından kullanılmadığından, [Windows dosya sürümünün](/windows/desktop/menurc/versioninfo-resource) `Major.Minor.Build.Revision` biçiminde olmasını bekler. Sürüm bu biçimi izmezse bir uyarı tetiklenir.
 
@@ -94,7 +94,7 @@ Derleme bilgilendirici sürümü, ek sürüm bilgilerini kaydetmek için kullan�
 > [!NOTE]
 > Visual Studio 'nun eski sürümleri, bu sürüm `Major.Minor.Build.Revision`biçimini izmazsa derleme uyarısı oluşturur. Uyarı güvenle yoksayılabilir.
 
-**❌** derleme bilgilendirici sürümünü kendi kendinize AYARLAMAKTAN kaçının.
+❌ derleme bilgilendirici sürümünü kendi kendinize ayarlamaktan KAÇıNıN.
 
 > SourceLink 'in NuGet ve kaynak denetimi meta verilerini içeren sürümü otomatik olarak oluşturmasına izin verin.
 

@@ -1,19 +1,19 @@
 ---
-title: MainMenu Bileşeni (Windows Forms)
+title: MainMenu Bileşeni
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-ms.openlocfilehash: f177ee397b0641645d55de9e805543a68fa75672
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6b56ae27d32d85ca75f749727674ea24e91d82ac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952121"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747147"
 ---
 # <a name="mainmenu-component-windows-forms"></a>MainMenu Bileşeni (Windows Forms)
 > [!NOTE]
-> `MainMenu` <xref:System.Windows.Forms.ContextMenu> `MainMenu` <xref:System.Windows.Forms.ContextMenu> , Ve '`ContextMenuStrip` i önceki sürümlerin ve denetimlerine değiştirebilir ve bunları değiştirip, ve ' ı seçerseniz hem geri uyumluluk hem de gelecekte kullanılmak üzere korunur. `MenuStrip`  
+> `MenuStrip` ve `ContextMenuStrip` önceki sürümlerin `MainMenu` ve <xref:System.Windows.Forms.ContextMenu> denetimlerine işlev ekleyip ekler ve bu, `MainMenu` ve <xref:System.Windows.Forms.ContextMenu>, hem geri uyumluluk hem de daha ileride kullanılmak üzere korunur.  
   
  Windows Forms `MainMenu` bileşeni çalışma zamanında bir menü görüntüler.  
   

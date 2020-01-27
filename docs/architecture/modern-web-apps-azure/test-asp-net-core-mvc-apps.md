@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın MVC 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 6096bd3aa35a27c97862089d09d537bdc5b1fff0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 82c9815abdd5140340f9a8ea39be23496d433889
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971538"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738384"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>MVC uygulamalarını test ASP.NET Core
 
@@ -94,7 +94,7 @@ Bu yaklaşımın bir çeşitlemesi, her bir test sınıfı adını "olmalıdır"
 
 - `CatalogControllerGetImage` **`.`** **günlük**`WarningGivenImageMissingException`
 
-Bazı takımlar ikinci adlandırma yaklaşımını daha net, ancak biraz daha ayrıntılı bir şekilde bulur. Herhangi bir durumda, test davranışına Öngörüler sağlayan bir adlandırma kuralı kullanmayı deneyin, böylece bir veya daha fazla testin başarısız olması durumunda, bazı durumlarda kendi adlarından belirgin olur. Bu teklif, test sonuçlarında gördüğünüz zaman hiçbir değer olmadığı için, ControllerTests. test1 gibi testlerin bir şekilde adlandırılmasını önleyin.
+Bazı takımlar ikinci adlandırma yaklaşımını daha net, ancak biraz daha ayrıntılı bir şekilde bulur. Herhangi bir durumda, test davranışına Öngörüler sağlayan bir adlandırma kuralı kullanmayı deneyin, böylece bir veya daha fazla testin başarısız olması durumunda, bazı durumlarda kendi adlarından belirgin olur. Bu teklif, test sonuçlarında gördüğünüz zaman hiçbir değer olmadığı için, ControllerTests. test1 gibi testlerinizi adlandırmaktan kaçının.
 
 Yukarıdaki gibi birçok küçük test sınıfı üreten bir adlandırma kuralını izlerseniz, testlerinizi klasörler ve ad alanları kullanarak daha fazla düzenlemek iyi bir fikirdir. Şekil 9-4, birkaç test projesi içindeki testleri klasöre göre düzenlemek için bir yaklaşımı gösterir.
 

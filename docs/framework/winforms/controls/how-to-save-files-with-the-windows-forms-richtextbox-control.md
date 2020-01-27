@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms RichTextBox Denetimi Dosyaları Kaydetme'
+title: RichTextBox denetimiyle dosyaları kaydetme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: c5d88e4942d96ee12e8b9f40156090c874386668
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a87b93a53347aeba54f944b0f4c455aa272ea243
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046261"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744824"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox Denetimi Dosyaları Kaydetme
 
@@ -44,9 +44,9 @@ Bir dosyayı kaydetmek için <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>
 
     Bunu gerçek dünya uygulamasında yapmak için genellikle <xref:System.Windows.Forms.SaveFileDialog> bileşenini kullanırsınız. Genel bakış için bkz. [SaveFileDialog Bileşenine Genel Bakış](savefiledialog-component-overview-windows-forms.md).
 
-2. Kaydedilecek dosyayı ve isteğe bağlı <xref:System.Windows.Forms.RichTextBox> olarak bir dosya türünü belirterek denetimin yönteminiçağırın.<xref:System.Windows.Forms.RichTextBox.SaveFile%2A> Yöntemini tek bağımsız değişkeni olarak bir dosya adı ile çağırırsanız, Dosya RTF olarak kaydedilir. Başka bir dosya türü belirtmek için, ikinci bağımsız değişkeni olarak <xref:System.Windows.Forms.RichTextBoxStreamType> numaralandırmanın bir değeriyle yöntemi çağırın.
+2. Kaydedilecek dosyayı ve isteğe bağlı olarak bir dosya türünü belirterek <xref:System.Windows.Forms.RichTextBox> denetiminin <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> yöntemini çağırın. Yöntemini tek bağımsız değişkeni olarak bir dosya adı ile çağırırsanız, Dosya RTF olarak kaydedilir. Başka bir dosya türü belirtmek için, ikinci bağımsız değişkeni olarak <xref:System.Windows.Forms.RichTextBoxStreamType> numaralandırması değeri ile yöntemini çağırın.
 
-    Aşağıdaki örnekte, zengin metin dosyasının konumu için ayarlanan yol Belgelerim klasörüdür. Bu konum, Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu klasörü içerdiğini varsaydığı için kullanılır. Bu konumun seçilmesi, en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenle çalıştırmasına olanak tanır. Aşağıdaki örnekte, bir <xref:System.Windows.Forms.RichTextBox> denetimin zaten eklendiği bir form varsayılır.
+    Aşağıdaki örnekte, zengin metin dosyasının konumu için ayarlanan yol **Belgelerim klasörüdür.** Bu konum, Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu klasörü içerdiğini varsaydığı için kullanılır. Bu konumun seçilmesi, en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenle çalıştırmasına olanak tanır. Aşağıdaki örnekte, <xref:System.Windows.Forms.RichTextBox> denetimi zaten eklenmiş bir form varsayılır.
 
     ```vb
     Public Sub SaveFile()

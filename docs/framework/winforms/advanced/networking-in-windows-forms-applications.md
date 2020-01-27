@@ -1,36 +1,36 @@
 ---
-title: Windows Forms Uygulamalarında Ağ İletişimi
+title: Ağ Oluşturma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - networking [Windows Forms], Windows Forms
 - Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
-ms.openlocfilehash: 2432fbd0a2c769efb126e4b9c1dc19e35fbe4c31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a339792e716e9c23a0c178dc08410aa66988d7c6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641508"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745015"
 ---
 # <a name="networking-in-windows-forms-applications"></a>Windows Forms Uygulamalarında Ağ İletişimi
-.NET Framework Web sayfalarını görüntüleme, Web içerik yükleme, Dosya Aktarım Protokolü (FTP) siteler ile etkileşim kurma ve uygulamanızda ağ işlevselliğini oluşturmanızı kolaylaştıran, Web hizmetlerini kullanma için sınıflar sağlar. Aşağıdaki kaynaklar, .NET Framework ve nasıl bunları Windows formlarına tümleştirebilir ağ teknolojileri anlamanıza yardımcı olur.  
+.NET Framework Web sayfalarını görüntülemek, Web içeriğini indirmek, Dosya Aktarım Protokolü (FTP) siteleriyle etkileşime geçmek ve Web hizmetlerini kullanmak için sınıflar sağlar. bu sayede, uygulamanıza ağ işlevselliği oluşturmayı kolaylaştırırsınız. Aşağıdaki kaynaklar, .NET Framework ağ teknolojilerini ve bunları Windows Forms nasıl tümleştirileceğini anlamanıza yardımcı olur.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Net>  
- Sınıflar .NET Framework'teki tanıtıcı ağ bağlantısı kök ad alanı.  
+ Ağ bağlantısını işleyen .NET Framework sınıfların kök ad alanı.  
   
  <xref:System.Net.WebClient>  
- Program aracılığıyla Web veya HTTP tabanlı içeriği almak için uygun bir sınıf.  
+ Web veya HTTP tabanlı içeriği programlı bir şekilde almaya yönelik uygun bir sınıf.  
   
  <xref:System.Net.FtpWebRequest>  
- FTP ile dosyaları göndermek ve almak için bir sınıf.  
+ FTP ile dosya almaya ve göndermeye yönelik bir sınıf.  
   
  <xref:System.Windows.Forms.WebBrowser>  
- Yönetilen sarmalayıcı sınıf için `WebBrowser` Windows ile birlikte sağlanan denetimi.  
+ Windows ile birlikte gelen `WebBrowser` denetimi için yönetilen sarmalayıcı sınıfı.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [.NET Framework'te Ağ Programlaması](../../network-programming/index.md)  
- .NET Framework'te ağ giriş.  
+ .NET Framework ağa giriş.  
   
  [Windows Forms Veri Bağlama](../windows-forms-data-binding.md)  
- Uygulamanızdaki bir yerel veri deposu ya da bir ağ üzerinde bulunan bir veritabanı ya da veritabanı içeriğini görüntüleme işlemini açıklamaktadır.
+ Uygulamanızda, yerel bir veri deposundan veya bir ağda bulunan bir veritabanından veritabanı içeriğinin nasıl görüntüleneceğini açıklar.

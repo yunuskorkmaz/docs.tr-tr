@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DataGridView Denetiminde Sıralamayı Özelleştirme'
+title: DataGridView Denetiminde Sıralamayı Özelleştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,44 +9,44 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sorting
 - data grids [Windows Forms], customizing sorting
 ms.assetid: 92fb5c14-afab-4cf5-a97e-924fd9cb99f5
-ms.openlocfilehash: 85ca27bf2ef738dce86c6e88037da00e4992a4b2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 20f581b2df6fd172a0a1998aed60c56b0306f2eb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592788"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743185"
 ---
 # <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Sıralamayı Özelleştirme
-<xref:System.Windows.Forms.DataGridView> Denetimi, Otomatik sıralama sağlar ancak gereksinimlerinize bağlı olarak, sıralama işlemlerinde özelleştirmeniz gerekebilir. Örneğin, bir diğer kullanıcı arabirimi (UI) oluşturmak için programlı sıralama kullanabilirsiniz. Alternatif olarak, işleyebileceği <xref:System.Windows.Forms.DataGridView.SortCompare> olay veya çağrı `Sort(IComparer)` aşırı yükünü <xref:System.Windows.Forms.DataGridView.Sort%2A> birden çok sütunu sıralama gibi sıralama esneklik için yöntemi.  
+<xref:System.Windows.Forms.DataGridView> denetimi otomatik sıralama sağlar, ancak gereksinimlerinize bağlı olarak sıralama işlemlerini özelleştirmeniz gerekebilir. Örneğin, alternatif bir kullanıcı arabirimi (UI) oluşturmak için programlı sıralama kullanabilirsiniz. Alternatif olarak, <xref:System.Windows.Forms.DataGridView.SortCompare> olayını işleyebilir veya birden çok sütunu sıralama gibi daha fazla sıralama esnekliği için <xref:System.Windows.Forms.DataGridView.Sort%2A> yönteminin `Sort(IComparer)` aşırı yüklemesini çağırabilirsiniz.  
   
- Aşağıdaki kod örnekleri, özel sıralamak için üç bu yaklaşım gösterilmektedir. Daha fazla bilgi için [Windows Forms DataGridView denetiminde Sütun sıralama modları](column-sort-modes-in-the-windows-forms-datagridview-control.md).  
+ Aşağıdaki kod örneklerinde özel sıralamaya yönelik bu üç yaklaşım gösterilmektedir. Daha fazla bilgi için, [Windows Forms DataGridView Denetimindeki sütun sıralama modları](column-sort-modes-in-the-windows-forms-datagridview-control.md)bölümüne bakın.  
   
 ## <a name="programmatic-sorting"></a>Programlı sıralama  
- Aşağıdaki kod örneği kullanılarak programlı bir sıralama gösterir <xref:System.Windows.Forms.DataGridView.SortOrder%2A> ve <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> sıralama yönünü belirlemek için özellikleri ve <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A> karakter Sırala el ile ayarlamak için özellik. `Sort(DataGridViewColumn,ListSortDirection)` Aşırı yükünü <xref:System.Windows.Forms.DataGridView.Sort%2A> yöntemi yalnızca tek bir sütunda verileri sıralamak için kullanılır.  
+ Aşağıdaki kod örneği, sıralamayı ve sıralama karakterini el ile ayarlamak için <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A> özelliğini kullanarak <xref:System.Windows.Forms.DataGridView.SortOrder%2A> ve <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> özellikleri kullanılarak programlı bir sıralama gösterir. <xref:System.Windows.Forms.DataGridView.Sort%2A> yönteminin `Sort(DataGridViewColumn,ListSortDirection)` aşırı yüklemesi, verileri yalnızca tek bir sütunda sıralamak için kullanılır.  
   
  [!code-csharp[System.Windows.Forms.DataGridViewProgrammaticSort#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewProgrammaticSort/CS/form1.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewProgrammaticSort#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewProgrammaticSort/VB/form1.vb#00)]  
   
-## <a name="custom-sorting-using-the-sortcompare-event"></a>Özel SortCompare olayını kullanarak sıralama  
- Aşağıdaki kod örneği kullanarak özel sıralama gösterir bir <xref:System.Windows.Forms.DataGridView.SortCompare> olay işleyicisi. Seçili <xref:System.Windows.Forms.DataGridViewColumn> sıralanır ve sütundaki yinelenen değerler varsa, kimlik sütunu son sırasını belirlemek için kullanılır.  
+## <a name="custom-sorting-using-the-sortcompare-event"></a>SortCompare olayını kullanarak özel sıralama  
+ Aşağıdaki kod örneği, bir <xref:System.Windows.Forms.DataGridView.SortCompare> olay işleyicisi kullanarak özel sıralamayı gösterir. Seçilen <xref:System.Windows.Forms.DataGridViewColumn> sıralanır ve sütunda yinelenen değerler varsa, son sırayı belirlemede KIMLIK sütunu kullanılır.  
   
  [!code-csharp[System.Windows.Forms.DataGridView.SortCompare#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/CS/form1.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridView.SortCompare#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/VB/form1.vb#00)]  
   
-## <a name="custom-sorting-using-the-icomparer-interface"></a>Özel IComparer arabirimini kullanarak sıralama  
- Aşağıdaki kod örneği kullanarak özel sıralama gösterir `Sort(IComparer)` aşırı yükünü <xref:System.Windows.Forms.DataGridView.Sort%2A> uygulaması gereken yöntemini <xref:System.Collections.IComparer> birden çok sütunu sıralamayı gerçekleştirmek için arabirim.  
+## <a name="custom-sorting-using-the-icomparer-interface"></a>IComparer arabirimini kullanarak özel sıralama  
+ Aşağıdaki kod örneği, birden çok sütunlu sıralama gerçekleştirmek için <xref:System.Collections.IComparer> arabiriminin bir uygulamasını Alan <xref:System.Windows.Forms.DataGridView.Sort%2A> yönteminin `Sort(IComparer)` aşırı yüklemesini kullanarak özel sıralamayı gösterir.  
   
  [!code-csharp[System.Windows.Forms.DataGridViewIComparerSort#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewIComparerSort/CS/form1.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewIComparerSort#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewIComparerSort/VB/form1.vb#00)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örneği gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örneklerde şunlar gerekir:  
   
-- Sistem, System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
+- System, System. Drawing ve System. Windows. Forms derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Windows Forms DataGridView Denetimindeki Verileri Sıralama](sorting-data-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetiminde Sütun Sıralama Modları](column-sort-modes-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminde sütunlar için sıralama modlarını ayarlama](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Sütunlar için Sıralama Modlarını Ayarlama](set-the-sort-modes-for-columns-wf-datagridview-control.md)

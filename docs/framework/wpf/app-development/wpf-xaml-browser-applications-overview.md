@@ -1,5 +1,5 @@
 ---
-title: WPF XAML Tarayıcı Uygulamalarına Genel Bakış
+title: XAML tarayıcı uygulamalarına genel bakış
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: a4d3b808aee14d5d2f29053b0c60798f9f626e8c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: bec7e14ceed867e89c3117efbc245938356b9d78
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636334"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742288"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML Tarayıcı Uygulamalarına Genel Bakış
 <a name="introduction"></a>XAML tarayıcı uygulamaları (XBAP 'ler) hem Web uygulamalarının hem de zengin istemci uygulamalarının özelliklerini birleştirir. Web uygulamaları gibi, XBAP 'ler bir Web sunucusuna dağıtılabilir ve Internet Explorer veya Firefox 'tan başlatılabilir. Zengin istemci uygulamaları gibi, XBAP 'ler WPF 'nin yeteneklerini kullanabilir. XBAP 'lerin geliştirilmesi, zengin istemci geliştirmeye de benzer. Bu konu, XBAP geliştirmeye basit, yüksek düzey bir giriş sağlar ve XBAP geliştirmenin standart zengin istemci geliştirmeden farklı olduğunu açıklar.
@@ -101,9 +101,9 @@ ms.locfileid: "75636334"
 
 1. Visual Studio 'da proje özelliklerini açın.
 
-2. **Güvenlik** sekmesinde **Gelişmiş**'e tıklayın.
+2. **Güvenlik** sekmesinde **Gelişmiş**' e tıklayın.
 
-     Gelişmiş Güvenlik Ayarları iletişim kutusu görüntülenir.
+     Gelişmiş güvenlik ayarları iletişim kutusu görüntülenir.
 
 3. **Uygulamanın kaynak sitesine erişimi ver** onay kutusunun işaretli olduğundan emin olun ve ardından **Tamam**' a tıklayın.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms RichTextBox Denetimi ile Sürükleyip Bırakma İşlemlerini Etkinleştirme'
+title: RichTextBox denetimiyle sürükle ve bırak Işlemlerini etkinleştir
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: d1b8f3e1d0ef7d0f83db4a742ab76a05e42f761b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3c17560dee012912aea2938654f1dc4dc56e0725
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053679"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745813"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox Denetimi ile Sürükleyip Bırakma İşlemlerini Etkinleştirme
-Windows Forms ile sürükle ve bırak işlemleri <xref:System.Windows.Forms.RichTextBox> denetim işleyerek yapılır <xref:System.Windows.Forms.RichTextBox.DragEnter> ve <xref:System.Windows.Forms.RichTextBox.DragDrop> olayları. Bu nedenle, sürükle ve bırak işlemleri ile son derece basit <xref:System.Windows.Forms.RichTextBox> denetimi.  
+Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi ile sürükleyip bırakma işlemleri, <xref:System.Windows.Forms.RichTextBox.DragEnter> ve <xref:System.Windows.Forms.RichTextBox.DragDrop> olayları işlenerek yapılır. Bu nedenle, sürükle ve bırak işlemleri <xref:System.Windows.Forms.RichTextBox> denetimiyle son derece basittir.  
   
-### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>RichTextBox denetiminde sürükleme işlemleri etkinleştirmek için  
+### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>RichTextBox denetiminde sürükleme işlemlerini etkinleştirmek için  
   
-1. Ayarlama <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> özelliği <xref:System.Windows.Forms.RichTextBox> denetimini `true`.  
+1. <xref:System.Windows.Forms.RichTextBox> denetiminin <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> özelliğini `true`olarak ayarlayın.  
   
-2. Olay işleyicisinde kodu yazma <xref:System.Windows.Forms.RichTextBox.DragEnter> olay. Kullanım bir `if` deyimini sürüklenen verilerin (Bu durumda, metin) kabul edilebilir bir tür olduğundan emin olun. <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> Özelliği herhangi bir değere ayarlanabilir <xref:System.Windows.Forms.DragDropEffects> sabit listesi.  
+2. <xref:System.Windows.Forms.RichTextBox.DragEnter> olayının olay işleyicisine kod yazın. Sürüklenen verilerin kabul edilebilir bir tür (Bu örnekte, metin) olduğundan emin olmak için bir `if` ifadesini kullanın. <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> özelliği <xref:System.Windows.Forms.DragDropEffects> Numaralandırmadaki herhangi bir değere ayarlanabilir.  
   
     ```vb  
     Private Sub RichTextBox1_DragEnter(ByVal sender As Object, _   
@@ -62,7 +62,7 @@ Windows Forms ile sürükle ve bırak işlemleri <xref:System.Windows.Forms.Rich
        }  
     ```  
   
-     (Visual C# ve görsel C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.  
+     (Görsel C# ve görsel C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.  
   
     ```csharp  
     this.richTextBox1.DragEnter += new  
@@ -76,9 +76,9 @@ Windows Forms ile sürükle ve bırak işlemleri <xref:System.Windows.Forms.Rich
        (this, &Form1::richTextBox1_DragEnter);  
     ```  
   
-3. İşlemek için kod yazma <xref:System.Windows.Forms.RichTextBox.DragDrop> olay. Kullanım <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> sürüklenen verileri almak için yöntemi.  
+3. <xref:System.Windows.Forms.RichTextBox.DragDrop> olayını işlemek için kod yazın. Sürüklediğiniz verileri almak için <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> yöntemini kullanın.  
   
-     Kod aşağıdaki örnekte ayarlar <xref:System.Windows.Forms.RichTextBox.Text%2A> özelliği <xref:System.Windows.Forms.RichTextBox> sürüklenen verilere eşit denetim. Zaten varsa metinde <xref:System.Windows.Forms.RichTextBox> sürüklenen metin denetimi ekleme noktasına eklenir.  
+     Aşağıdaki örnekte kod, <xref:System.Windows.Forms.RichTextBox> denetiminin <xref:System.Windows.Forms.RichTextBox.Text%2A> özelliğini sürüklenen verilere eşit olarak ayarlar. <xref:System.Windows.Forms.RichTextBox> denetiminde zaten metin varsa, sürüklenen metin ekleme noktasına eklenir.  
   
     ```vb  
     Private Sub RichTextBox1_DragDrop(ByVal sender As Object, _   
@@ -138,7 +138,7 @@ Windows Forms ile sürükle ve bırak işlemleri <xref:System.Windows.Forms.Rich
        }  
     ```  
   
-     (Visual C# ve görsel C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.  
+     (Görsel C# ve görsel C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.  
   
     ```csharp  
     this.richTextBox1.DragDrop += new  
@@ -152,21 +152,21 @@ Windows Forms ile sürükle ve bırak işlemleri <xref:System.Windows.Forms.Rich
        (this, &Form1::richTextBox1_DragDrop);  
     ```  
   
-### <a name="to-test-the-drag-and-drop-functionality-in-your-application"></a>Sürükle ve bırak işlevi uygulamanızı test etmek için  
+### <a name="to-test-the-drag-and-drop-functionality-in-your-application"></a>Uygulamanızdaki sürükle ve bırak işlevini test etmek için  
   
-1. Kaydet ve uygulamanızı oluşturun. Çalışır durumdayken WordPad çalıştırın.  
+1. Uygulamanızı kaydedin ve oluşturun. Çalışırken WordPad ' i çalıştırın.  
   
-     WordPad sürükle ve bırak işlemleri sağlayan Windows tarafından yüklenen bir metin düzenleyicidir. Tıklayarak erişilebilir durumda **Başlat** düğmesi, seçerek **çalıştırmak**yazarak `WordPad` metin kutusunda **çalıştırmak** iletişim kutusunu ve ardından  **Tamam**.  
+     WordPad, sürükle ve bırak işlemlerine izin veren Windows tarafından yüklenen bir metin düzenleyicisidir. **Başlat** düğmesine tıklayıp **Çalıştır**' ı seçip **çalıştır** iletişim kutusunun metin kutusuna `WordPad` yazarak ve ardından **Tamam**' a tıklayarak erişilebilir.  
   
-2. WordPad açıldıktan sonra bir metin dizesi yazın. Fareyi kullanarak, metni seçin ve ardından seçili metin üzerine sürükleyin <xref:System.Windows.Forms.RichTextBox> Windows uygulamanızda denetimi.  
+2. WordPad açıldıktan sonra içine bir metin dizesi yazın. Fareyi kullanarak metni seçin ve ardından seçili metni Windows uygulamanızda <xref:System.Windows.Forms.RichTextBox> denetimine sürükleyin.  
   
-     Fareyi üzerine geldiğinizde dikkat <xref:System.Windows.Forms.RichTextBox> denetimi (ve sonuç olarak, yükseltme <xref:System.Windows.Forms.RichTextBox.DragEnter> olay), fare işaretçisini değişiklikleri ve seçilen metne bırakabilirsiniz <xref:System.Windows.Forms.RichTextBox> denetimi.  
+     Fareyi <xref:System.Windows.Forms.RichTextBox> denetimine işaret ettiğinizde (ve sonuç olarak <xref:System.Windows.Forms.RichTextBox.DragEnter> olayını yükselttiğinizde), fare işaretçisi değiştiğinde ve seçili metni <xref:System.Windows.Forms.RichTextBox> denetimine bırakabilirsiniz.  
   
-     Fare düğmesini bıraktığınızda, seçili metni bırakılır (diğer bir deyişle, <xref:System.Windows.Forms.RichTextBox.DragDrop> olayı) ve içinde eklenen <xref:System.Windows.Forms.RichTextBox> denetimi.  
+     Fare düğmesini serbest bırakırsanız, seçilen metin bırakılır (yani <xref:System.Windows.Forms.RichTextBox.DragDrop> olayı tetiklenir) ve <xref:System.Windows.Forms.RichTextBox> denetimine eklenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.RichTextBox>
-- [Nasıl yapılır: Uygulamalar arasında sürükle ve bırak işlemleri gerçekleştirme](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [Nasıl yapılır: Uygulamalar Arasında Sürükle ve Bırak İşlemleri Gerçekleştirme](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [RichTextBox Denetimi](richtextbox-control-windows-forms.md)
 - [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

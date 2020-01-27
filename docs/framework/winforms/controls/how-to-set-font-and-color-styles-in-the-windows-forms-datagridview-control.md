@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DataGridView Denetiminde Yazı Tipi ve Renk Stillerini Ayarlama'
+title: DataGridView denetiminde yazı tipi ve renk stillerini ayarlama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,37 +10,37 @@ helpviewer_keywords:
 - data grids [Windows Forms], font styles
 - data grids [Windows Forms], color styles
 ms.assetid: 588f2c57-d963-41b1-9c1d-d02d71818113
-ms.openlocfilehash: ad2426ed9643fd46927c4f8b6373fedbec372d38
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f1ee9131cfc0b28a5f6263dcd6254d27a092cc62
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638102"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746750"
 ---
 # <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Yazı Tipi ve Renk Stillerini Ayarlama
-Hücreleri görsel görünümünü belirtebilirsiniz bir <xref:System.Windows.Forms.DataGridView> denetim özelliklerini ayarlayarak <xref:System.Windows.Forms.DataGridViewCellStyle> sınıfı. Bu sınıfın örnekleri çeşitli özelliklerinden alabilirsiniz <xref:System.Windows.Forms.DataGridView> sınıf ve bunun yardımcı sınıfları veya örneği <xref:System.Windows.Forms.DataGridViewCellStyle> atama bu özellikler için nesneleri.  
+<xref:System.Windows.Forms.DataGridViewCellStyle> sınıfının özelliklerini ayarlayarak <xref:System.Windows.Forms.DataGridView> denetim içindeki hücrelerin görsel görünümünü belirtebilirsiniz. Bu sınıfın örneklerini <xref:System.Windows.Forms.DataGridView> sınıfının ve yardımcı sınıflarının çeşitli özelliklerinden alabilir veya bu özelliklere atanmak üzere <xref:System.Windows.Forms.DataGridViewCellStyle> nesneleri örnekleyebilirsiniz.  
   
- Aşağıdaki yordamlar hücre görünümü kullanarak temel bir özelleştirme göstermektedir <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> özelliği. Her hücre denetimindeki sütun, satır veya hücre düzeyinde geçersiz kılınmadığı sürece, bu özelliği belirtilen stilleri devralır. Stil devralımı örneği için bkz: [nasıl yapılır: Windows Forms DataGridView denetimi için varsayılan hücre stillerini ayarlama](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md). Ek kullanımı hakkında bilgi için <xref:System.Windows.Forms.DataGridViewCellStyle> sınıfı, ayrıca bkz. bölümünde listelenen konulara bakın.  
+ Aşağıdaki yordamlarda <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> özelliğini kullanarak hücre görünümünün temel özelleştirmesi gösterilmektedir. Denetimdeki her hücre, sütun, satır veya hücre düzeyinde geçersiz kılınmadıkça, bu özellik ile belirtilen stilleri devralır. Stil devralmayla ilgili bir örnek için bkz. [nasıl yapılır: Windows Forms DataGridView denetimi Için varsayılan hücre stillerini ayarlama](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md). <xref:System.Windows.Forms.DataGridViewCellStyle> sınıfının ek kullanımları hakkında daha fazla bilgi için Ayrıca bkz. bölümünde listelenen konulara bakın.  
   
- Visual Studio'da bu görevi için kapsamlı desteği yoktur.  Ayrıca bkz: [nasıl yapılır: DataGridView denetimi Tasarımcı kullanarak Windows formları için varsayılan hücre stilleri ve veri biçimleri ayarlama](default-cell-styles-datagridview.md).  
+ Visual Studio 'da bu görev için kapsamlı destek vardır.  Ayrıca bkz. [nasıl yapılır: Tasarımcıyı kullanarak Windows Forms DataGridView denetimi Için varsayılan hücre stillerini ve veri biçimlerini ayarlama](default-cell-styles-datagridview.md).  
   
-### <a name="to-specify-the-font-used-by-datagridview-cells"></a>DataGridView hücrelerinin tarafından kullanılan yazıtipi belirtmek için  
+### <a name="to-specify-the-font-used-by-datagridview-cells"></a>DataGridView hücreleri tarafından kullanılan yazı tipini belirtmek için  
   
-- Ayarlama <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> özelliği bir <xref:System.Windows.Forms.DataGridViewCellStyle>. Aşağıdaki kod örneğinde <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> tüm denetim yazı tipini ayarlamak için özellik.  
+- Bir <xref:System.Windows.Forms.DataGridViewCellStyle><xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> özelliğini ayarlayın. Aşağıdaki kod örneği, tüm denetimin yazı tipini ayarlamak için <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> özelliğini kullanır.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#101](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#101)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#101](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#101)]  
   
-### <a name="to-specify-the-foreground-and-background-colors-of-datagridview-cells"></a>DataGridView hücrelerinin ön ve arka plan renkleri belirtmek için  
+### <a name="to-specify-the-foreground-and-background-colors-of-datagridview-cells"></a>DataGridView hücrelerinin ön plan ve arka plan renklerini belirtmek için  
   
-- Ayarlama <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> ve <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> özelliklerini bir <xref:System.Windows.Forms.DataGridViewCellStyle>. Aşağıdaki kod örneğinde <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> bu stiller tüm denetim için ayarlanacak özellik.  
+- <xref:System.Windows.Forms.DataGridViewCellStyle><xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> ve <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> özelliklerini ayarlayın. Aşağıdaki kod örneği, tüm denetimin bu stillerini ayarlamak için <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> özelliğini kullanır.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#102](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#102)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#102](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#102)]  
   
-### <a name="to-specify-the-foreground-and-background-colors-of-selected-datagridview-cells"></a>Seçili DataGridView hücrelerinin ön ve arka plan renkleri belirtmek için  
+### <a name="to-specify-the-foreground-and-background-colors-of-selected-datagridview-cells"></a>Seçili DataGridView hücrelerinin ön plan ve arka plan renklerini belirtmek için  
   
-- Ayarlama <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A> ve <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> özelliklerini bir <xref:System.Windows.Forms.DataGridViewCellStyle>. Aşağıdaki kod örneğinde <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> bu stiller tüm denetim için ayarlanacak özellik.  
+- <xref:System.Windows.Forms.DataGridViewCellStyle><xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A> ve <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> özelliklerini ayarlayın. Aşağıdaki kod örneği, tüm denetimin bu stillerini ayarlamak için <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> özelliğini kullanır.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#103](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#103)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#103](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#103)]  
@@ -49,15 +49,15 @@ Hücreleri görsel görünümünü belirtebilirsiniz bir <xref:System.Windows.Fo
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#100)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#100)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- A <xref:System.Windows.Forms.DataGridView> adlı Denetim `dataGridView1`.  
+- `dataGridView1`adlı <xref:System.Windows.Forms.DataGridView> denetim.  
   
-- Başvurular <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemeler.  
+- <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemelerine başvurular.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- En yüksek ölçeklenebilirlik için paylaşmalıdır <xref:System.Windows.Forms.DataGridViewCellStyle> nesneleri birden çok satırları, sütunları veya hücreleri stil özellikleri her öğe için ayrı olarak ayarlamak yerine aynı stili kullanın. Daha fazla bilgi için [Windows Forms DataGridView denetimini ölçeklendirme için en iyi yöntemler](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ En yüksek ölçeklenebilirlik için, her bir öğe için stil özelliklerini ayrı ayrı ayarlamak yerine, <xref:System.Windows.Forms.DataGridViewCellStyle> nesneleri birden çok satırda, sütunda veya aynı stilleri kullanan hücrelerde paylaşabilirsiniz. Daha fazla bilgi için bkz. [Windows Forms DataGridView denetimini ölçeklendirme Için En Iyi uygulamalar](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

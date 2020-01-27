@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms RichTextBox Denetiminde Biçimlendirme Öznitelikleri Değiştiğinde Belirleme'
+title: RichTextBox denetiminde biçimlendirme öznitelikleri değiştiğinde belirleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: a90affde9de36f1c83d5b7c21b40580cdf53402e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9b2a1028f79059ec7d4d6bf3683100455bb5dea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972295"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746041"
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox Denetiminde Biçimlendirme Öznitelikleri Değiştiğinde Belirleme
-Windows Forms yaygın bir kullanımı <xref:System.Windows.Forms.RichTextBox> denetim metin yazı tipi seçenekleri veya stilleri gibi özniteliklerle biçimlendirme. Birçok kelime işleme uygulaması olduğu gibi bir araç çubuğunu görüntüleme amacıyla biçimlendirme metin değişiklikleri izlemek, uygulamanız gerekebilir.  
+Windows Forms <xref:System.Windows.Forms.RichTextBox> denetiminin yaygın kullanımı, yazı tipi seçenekleri veya paragraf stilleri gibi özniteliklerle biçimlendirme metinleridir. Uygulamanızın birçok sözcük işleme uygulamasında olduğu gibi, bir araç çubuğunu görüntülemek amacıyla metin biçimlendirmesinde değişiklik yapması gerekebilir.  
   
-### <a name="to-respond-to-changes-in-formatting-attributes"></a>Biçimlendirme öznitelikleri değişikliklere yanıt vermek için  
+### <a name="to-respond-to-changes-in-formatting-attributes"></a>Biçimlendirme özniteliklerinde değişikliklere yanıt vermek için  
   
-1. Kod yazmaya <xref:System.Windows.Forms.RichTextBox.SelectionChanged> özniteliğin değerine bağlı olarak uygun bir eylem gerçekleştirmek için olay işleyicisi. Aşağıdaki örnek bir araç çubuğu düğmesinin değerine bağlı olarak değişir <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> özelliği. Araç çubuğu düğmesini yalnızca denetiminde ekleme noktasını taşındığında güncelleştirilecektir.  
+1. Özniteliğin değerine bağlı olarak uygun bir eylem gerçekleştirmek için <xref:System.Windows.Forms.RichTextBox.SelectionChanged> olay işleyicisine kod yazın. Aşağıdaki örnek, <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> özelliğinin değerine bağlı olarak bir araç çubuğu düğmesinin görünümünü değiştirir. Araç çubuğu düğmesi yalnızca ekleme noktası denetimde taşındığında güncelleştirilir.  
   
-     Aşağıdaki örnekte bir form varsayar bir <xref:System.Windows.Forms.RichTextBox> denetimi ve bir <xref:System.Windows.Forms.ToolBar> içeren bir araç çubuğu düğmesi denetimi. Araç çubukları ve araç çubuğu düğmeleri hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir ToolBar denetimine düğme ekleme](how-to-add-buttons-to-a-toolbar-control.md).  
+     Aşağıdaki örnekte, bir <xref:System.Windows.Forms.RichTextBox> denetimi olan bir form ve bir araç çubuğu düğmesi içeren bir <xref:System.Windows.Forms.ToolBar> denetimi varsayılır. Araç çubukları ve araç çubuğu düğmeleri hakkında daha fazla bilgi için bkz. [nasıl yapılır: araç çubuğu denetimine düğme ekleme](how-to-add-buttons-to-a-toolbar-control.md).  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  

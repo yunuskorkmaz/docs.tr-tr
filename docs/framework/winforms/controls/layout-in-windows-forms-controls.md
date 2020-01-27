@@ -1,5 +1,5 @@
 ---
-title: Windows Forms Denetimlerindeki Düzenler
+title: Denetimlerin düzeni
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [Windows Forms]
@@ -7,45 +7,45 @@ helpviewer_keywords:
 - Margin property [Windows Forms]
 - Padding property [Windows Forms]
 ms.assetid: 99400e3a-720e-4f56-b68f-89df911a251c
-ms.openlocfilehash: d1a3954c8eda87bdda9fa17df1bd2b3858c43619
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed8603e997e7d0c1ed7a2ebda6dc960726d32f45
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012834"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745250"
 ---
 # <a name="layout-in-windows-forms-controls"></a>Windows Forms Denetimlerindeki Düzenler
 
-Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek öncelik taşır. <xref:System.Windows.Forms?displayProperty=nameWithType> Ad alanı, bunu gerçekleştirmek için çok sayıda düzen araçları sağlar.
+Denetimlerin formunuza kesin olarak yerleştirilmesi birçok uygulama için yüksek önceliktir. <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı, bunu gerçekleştirmek için size birçok düzen aracı sağlar.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
 [AutoSize özelliğine genel bakış](autosize-property-overview.md)\
-Açıklar <xref:System.Windows.Forms.Control.AutoSize%2A> özelliği ve düzeninde rolü.
+<xref:System.Windows.Forms.Control.AutoSize%2A> özelliğini ve düzen içindeki rolünü açıklar.
 
-[Kenar boşluğu bırakma ve Windows formlarında denetimleri doldurma](margin-and-padding-in-windows-forms-controls.md)\
-Açıklar <xref:System.Windows.Forms.Control.Margin%2A> ve <xref:System.Windows.Forms.Control.Padding%2A> özellikleri ve rolleri düzeni.
+[Windows Forms Denetimlerinde Kenar boşluğu ve doldurma](margin-and-padding-in-windows-forms-controls.md)\
+Düzen içinde <xref:System.Windows.Forms.Control.Margin%2A> ve <xref:System.Windows.Forms.Control.Padding%2A> özelliklerini ve rollerini açıklar.
 
-[Nasıl yapılır: Bir denetimi formların kenarlarına hizalama](how-to-align-a-control-to-the-edges-of-forms.md)\
-Nasıl kullanılacağını gösteren <xref:System.Windows.Forms.Control.Dock%2A> denetiminiz kapladığı form köşesine hizalamak için özellik.
+[Nasıl yapılır: bir denetimi formların kenarlarına hizalama](how-to-align-a-control-to-the-edges-of-forms.md)\
+Denetiminizi, sahip olduğu formun kenarına hizalamak için <xref:System.Windows.Forms.Control.Dock%2A> özelliğinin nasıl kullanılacağını gösterir.
 
-[Nasıl yapılır: Bir Windows Forms çevresinde kenarlık oluşturma doldurma kullanarak denetleme](how-to-create-a-border-around-a-windows-forms-control-using-padding.md)\
-Nasıl kullanılacağını gösteren <xref:System.Windows.Forms.Control.Padding%2A> denetim anahat özelliği.
+[Nasıl yapılır: doldurma kullanarak Windows Forms denetimi etrafında kenarlık oluşturma](how-to-create-a-border-around-a-windows-forms-control-using-padding.md)\
+Bir denetimi ana hatlarıyla <xref:System.Windows.Forms.Control.Padding%2A> özelliğinin nasıl kullanılacağını gösterir.
 
-[Nasıl yapılır: Özel yerleşim altyapısı uygulama](how-to-implement-a-custom-layout-engine.md)\
-Nasıl uygulanacağını gösterir bir <xref:System.Windows.Forms.Layout.LayoutEngine> Windows Forms denetimlerini düzenleme için.
+[Nasıl yapılır: özel yerleşim altyapısı uygulama](how-to-implement-a-custom-layout-engine.md)\
+Windows Forms denetimleri düzenlemek için bir <xref:System.Windows.Forms.Layout.LayoutEngine> nasıl uygulanacağını gösterir.
 
 ## <a name="reference"></a>Başvuru
 
 <xref:System.Windows.Forms.TableLayoutPanel>\
-İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.TableLayoutPanel> denetimi.
+<xref:System.Windows.Forms.TableLayoutPanel> denetimi için başvuru belgeleri sağlar.
 
 <xref:System.Windows.Forms.FlowLayoutPanel>\
-İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.
+<xref:System.Windows.Forms.FlowLayoutPanel> denetimi için başvuru belgeleri sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Sabitleme ve FlowLayoutPanel denetiminde alt denetimleri yerleştirme](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [Nasıl yapılır: Sabitleme ve TableLayoutPanel denetiminde alt denetimleri yerleştirme](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Nasıl yapılır: Yerelleştirmeye iyi cevap veren bir Windows Forms düzeni tasarlama](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
+- [Nasıl yapılır: FlowLayoutPanel Denetiminde Alt Denetimleri Sabitleme ve Yerleştirme](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [Nasıl yapılır: TableLayoutPanel Denetiminde Alt Denetimleri Sabitleme ve Yerleştirme](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Nasıl yapılır: Yerelleştirmeye İyi Cevap Veren Bir Windows Forms Düzeni Tasarlama](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
 - [TableLayoutPanel Denetiminde AutoSize Davranışı](autosize-behavior-in-the-tablelayoutpanel-control.md)

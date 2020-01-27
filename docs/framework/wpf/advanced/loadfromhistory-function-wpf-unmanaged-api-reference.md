@@ -1,5 +1,6 @@
 ---
-title: LoadFromHistory işlevi (WPF yönetilmeyen API Başvurusu)
+title: LoadFromHistory Işlevi-WPF yönetilmeyen API başvurusu
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +9,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: d037c062-a911-4949-b251-ccd3e48b1d17
-ms.openlocfilehash: a4480d54390aea2771e2939b0a0825f6c49c3564
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7807e073d1f09ac6a6213aee6d86d53cc75a3c56
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766145"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727935"
 ---
-# <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a>LoadFromHistory işlevi (WPF yönetilmeyen API Başvurusu)
+# <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a>LoadFromHistory Işlevi (WPF yönetilmeyen API Başvurusu)
 Bu API Windows Presentation Foundation (WPF) altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
- Windows Presentation Foundation (WPF) altyapısı tarafından windows yönetimi için kullanılır.  
+ Windows yönetimi için Windows Presentation Foundation (WPF) altyapısı tarafından kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,21 +32,21 @@ HRESULT LoadFromHistory_export(
   
 ## <a name="parameters"></a>Parametreler  
  pHistoryStream  
- Geçmiş bilgileri akışı için bir işaretçi.  
+ Geçmiş bilgileri akışına yönelik bir işaretçi.  
   
  pBindCtx  
- Bir bağlama bağlamı için bir işaretçi.  
+ Bağlama bağlamına yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [.NET Framework sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [.NET Framework sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **DLL:**  
+ **DOSYASıNı**  
   
- .NET Framework 3.0 ve 3.5: PresentationHostDLL.dll  
+ .NET Framework 3,0 ve 3,5: PresentationHostDLL. dll  
   
- .NET Framework 4 ve üzeri: PresentationHost_v0400.dll  
+ .NET Framework 4 ve üzeri: PresentationHost_v0400. dll  
   
- **.NET framework sürümü:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **.NET Framework sürümü:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: PrintPreviewDialog Denetimi (Windows Forms)
+title: PrintPreviewDialog Denetimi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PrintPreviewDialog control (using designer)
@@ -7,36 +7,36 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview (using designer)
 - print preview [Windows Forms], default interface (using designer)
 ms.assetid: bfb5a3d7-021e-44f4-90f3-d435467f51d6
-ms.openlocfilehash: 6d763b51e1ac0ba0e07b986be701e86f5bd60df2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 459ff62c5645704d5cbf688af37302500f47e54a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012587"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741360"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>PrintPreviewDialog Denetimi (Windows Forms)
-Windows Forms `PrintPreviewDialog` bir belge yazdırıldığında nasıl görüneceğini görüntülemek için kullanılan bir önceden yapılandırılmış bir iletişim kutusu bir denetimdir. Windows tabanlı uygulamanızda kendi iletişim kutusu yapılandırma yerine basit bir çözüm olarak kullanın. Yazdırma ve yakınlaştırma, bir veya birden çok sayfa görüntüleme ve iletişim kutusunu kapatmak için düğme denetimi içerir.  
+Windows Forms `PrintPreviewDialog` denetimi bir belgenin yazdırıldığında nasıl göründüğünü göstermek için kullanılan önceden yapılandırılmış bir iletişim kutusudur. Kendi iletişim kutusunu yapılandırmak yerine, bunu Windows tabanlı uygulamanızda basit bir çözüm olarak kullanın. Denetim, yazdırma, yakınlaştırma, bir veya birden çok sayfa görüntüleme ve iletişim kutusunu kapatma düğmelerini içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [PrintPreviewDialog Denetimine Genel Bakış](printpreviewdialog-control-overview-windows-forms.md)  
- Genel konseptlerini tanıtan `PrintPreviewDialog` denetimi, kullanıcılar kendi belge sürümünü yazdırıldığında nasıl görüneceğini görmek için kullanabileceğiniz bir önceden yapılandırılmış bir iletişim kutusu görüntülemenizi sağlar.  
+ `PrintPreviewDialog` denetiminin genel kavramlarını tanıtır ve bu, kullanıcıların, yazdırıldığında bakacağı bir sürümünü görmek için kullanabileceği önceden yapılandırılmış bir iletişim kutusu görüntülemenizi sağlar.  
   
- [Nasıl yapılır: Forms uygulamaları Windows baskı önizlemede görüntüleme](how-to-display-print-preview-in-windows-forms-applications.md)  
- Örneğini kullanarak yazdırılacak bir sayfa görüntüleme açıklar `PrintPreviewDialog` çalışma zamanında denetim.  
+ [Nasıl yapılır: Windows Forms Uygulamalarında Baskı Önizlemede Görüntüleme](how-to-display-print-preview-in-windows-forms-applications.md)  
+ Çalışma zamanında `PrintPreviewDialog` denetiminin bir örneği kullanılarak yazdırılacak bir sayfanın nasıl görüntüleneceğini açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.PrintPreviewDialog>  
- Sınıf ve onun üyeleri hakkında başvuru bilgileri sağlar.  
+ Sınıf ve üyeleri hakkında başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
- Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.  
+ Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.  
   
- [Windows için temel kod Forms iletişim kutuları](https://go.microsoft.com/fwlink/?LinkID=102575)  
- Windows Forms iletişim kutusu denetimleri ve bileşenleri ve bunların temel işlevlerini yürütmek için gerekli kod açıklanır. (MSDN çevrimiçi kitaplığındaki teknik makalesi)  
+ [Windows Forms Iletişim kutuları için gerekli kod](https://go.microsoft.com/fwlink/?LinkID=102575)  
+ Windows Forms iletişim kutusu denetimlerini ve bileşenlerini ve temel işlevlerini yürütmek için gereken kodu açıklar. (MSDN Çevrimiçi Kitaplığı teknik makalesi)  
   
  [İletişim Kutusu Denetimleri ve Bileşenleri](dialog-box-controls-and-components-windows-forms.md)  
- Farklı iletişim kutusu denetimleri Windows formları için listelenir.  
+ Windows Forms için farklı iletişim kutusu denetimlerini listeler.  
   
  [Windows Forms'ta İletişim Kutuları](../dialog-boxes-in-windows-forms.md)  
- Bir iletişim kutusu için bir Windows formu oluşturma işlemini açıklar.
+ Bir Windows formu için iletişim kutusu oluşturmayı açıklar.

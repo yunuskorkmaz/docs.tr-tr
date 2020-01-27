@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: fe0eacbd67917826c88c5ef68bb8d8aeab9ba251
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ad6e6f17f9a8c30339a74b8ab41af3a99e716d3f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711824"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745350"
 ---
 # <a name="pointer-types-c-programming-guide"></a>İşaretçi türleri (C# Programlama Kılavuzu)
 
@@ -87,5 +87,5 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 - [Güvenli Olmayan Kod ve İşaretçiler](index.md)
 - [İşaretçi Dönüştürmeler](pointer-conversions.md)
 - [Başvuru türleri](../../language-reference/keywords/reference-types.md)
-- [Değer türleri](../../language-reference/keywords/value-types.md)
+- [Değer türleri](../../language-reference/builtin-types/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

@@ -1,5 +1,5 @@
 ---
-title: Windows Forms Süreölçer Bileşeninin Aralık Özelliğiyle İlgili Sınırlamalar
+title: Zamanlayıcı bileşen aralığı özelliğinin sınırlamaları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - timers [Windows Forms], event intervals
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: a9c4fda179e45ad2cf2ee2183e5881e97b763cdc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 15626a53f0541ff79e2098377d9dfdb4626ac155
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644937"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745239"
 ---
 # <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Windows Forms Süreölçer Bileşeninin Aralık Özelliğiyle İlgili Sınırlamalar
-Windows Forms <xref:System.Windows.Forms.Timer> bileşeniyse bir <xref:System.Windows.Forms.Timer.Interval%2A> özelliği bir süreölçer olayı ve sonraki arasında geçen milisaniye sayısını belirtir. Bileşen devre dışı bırakılmadığı sürece, bir zamanlayıcı almaya devam ettiğinden <xref:System.Windows.Forms.Timer.Tick> zaman kabaca eşit aralıklarla olay.  
+Windows Forms <xref:System.Windows.Forms.Timer> bileşeni, bir zamanlayıcı olayı ve bir sonraki arasında geçen milisaniye sayısını belirten bir <xref:System.Windows.Forms.Timer.Interval%2A> özelliğine sahiptir. Bileşen devre dışı bırakılmadığı takdirde Zamanlayıcı kabaca eşit aralıklarla <xref:System.Windows.Forms.Timer.Tick> olayını almaya devam eder.  
   
- Bu bileşen, bir Windows Forms ortamı için tasarlanmıştır. Bir sunucu ortamı için uygun olan bir zamanlayıcı gerekirse bkz [sunucu tabanlı zamanlayıcılar giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
+ Bu bileşen bir Windows Forms ortamı için tasarlanmıştır. Sunucu ortamı için uygun bir zamanlayıcıya ihtiyacınız varsa bkz. [sunucu tabanlı zamanlayıcılara giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
-## <a name="the-interval-property"></a>Aralık özelliği  
- <xref:System.Windows.Forms.Timer.Interval%2A> Özelliğine sahip olduğunda programlama dikkate alınması gereken bazı sınırlamalar bir <xref:System.Windows.Forms.Timer> bileşeni:  
+## <a name="the-interval-property"></a>Interval özelliği  
+ <xref:System.Windows.Forms.Timer.Interval%2A> özelliği, bir <xref:System.Windows.Forms.Timer> bileşenini programlarken göz önünde bulundurmanız gereken birkaç sınırlamalara sahiptir:  
   
-- Uygulamanızı veya başka bir uygulama sistem üzerinde ağır taleplerini değiştirirken, — uzun döngüleri, yoğun hesaplama veya sürücü, ağ veya bağlantı noktası erişim gibi — uygulamanızı Zamanlayıcı olaylar çok sık olarak alamayabilir <xref:System.Windows.Forms.Timer.Interval%2A> özelliği belirtir.  
+- Uygulamanız veya başka bir uygulama sistemde uzun döngüler, yoğun hesaplamalar veya sürücü, ağ ya da bağlantı noktası erişimi gibi yoğun talepler alıyorsa, <xref:System.Windows.Forms.Timer.Interval%2A> özelliği tarafından belirtildiği gibi, uygulamanız Zamanlayıcı olaylarını alamaz.  
   
-- Aralık tam zamanında geçmesi garanti edilmez. Doğruluğunu sağlamak için Zamanlayıcıyı gerektiği gibi sistem saati denetlemek yerine biriken zaman dahili olarak izlemek deneyin.  
+- Zaman aralığı tam zamanında geçecek şekilde garanti edilmez. Doğruluk sağlamak için Zamanlayıcı, toplanan süreyi dahili olarak izlemeye çalışmak yerine, sistem saatini gerektiği gibi denetlemelidir.  
   
-- Duyarlığını <xref:System.Windows.Forms.Timer.Interval%2A> milisaniye cinsinden bir özelliktir. Bazı bilgisayarlar, bir milisaniyeden daha yüksek çözünürlüğe sahip yüksek çözünürlüklü bir sayaç belirtin. Böyle bir sayaç kullanılabilirliğini bilgisayarınızın işlemci donanımda bağlıdır.
+- <xref:System.Windows.Forms.Timer.Interval%2A> özelliğinin duyarlığı milisaniyedir. Bazı bilgisayarlar, en fazla milisaniyelik çözünürlüğü olan yüksek çözünürlüklü bir sayaç sağlar. Böyle bir sayacın kullanılabilirliği bilgisayarınızın işlemci donanımına bağlıdır.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

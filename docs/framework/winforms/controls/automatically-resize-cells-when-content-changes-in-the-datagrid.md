@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DataGridView Denetiminde İçerik Değiştiğinde Hücreleri Otomatik Olarak Yeniden Boyutlandırma'
+title: DataGridView denetiminde Içerik değiştiğinde hücreleri otomatik olarak yeniden boyutlandır
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - cells [Windows Forms], resizing automatically
 - DataGridView control [Windows Forms], resizing cells
 ms.assetid: 1d68934d-a04c-4b12-9e66-c856c6828131
-ms.openlocfilehash: 3411b68b4dcc64dba86cd9fa8804e0a487cec76d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 86e3bce993aa06546e301c6d7a7e03a31013c337
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586637"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732062"
 ---
 # <a name="how-to-automatically-resize-cells-when-content-changes-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde İçerik Değiştiğinde Hücreleri Otomatik Olarak Yeniden Boyutlandırma
-Yapılandırabileceğiniz <xref:System.Windows.Forms.DataGridView> satırları, sütunları yeniden boyutlandırmak için Denetim ve üst bilgileri otomatik olarak her içerik değişiklikleri, hücre her zaman değerlerine kırpma olmadan görüntülemek için büyük olacak şekilde.  
+<xref:System.Windows.Forms.DataGridView> denetimini, içerik değiştiğinde satırları, sütunları ve başlıkları otomatik olarak yeniden boyutlandırmak üzere yapılandırabilirsiniz. böylece, hücreler her zaman değerlerini kırpma olmadan görüntüleyecek kadar büyük olacak.  
   
- Hangi hücrelerin yeni boyutlar belirlemek için kullanılan kısıtlamak için birçok seçeneğiniz vardır. Örneğin, yalnızca şu anda görüntülenen satırların değerlere göre sütunların genişliğini otomatik olarak yeniden boyutlandırmak için denetimi yapılandırabilirsiniz. Bu durumda, boyutlandırma yöntemleri gibi kullanmak isteyebilirsiniz ancak bu, Etkisizliği çok sayıda satırı, ile çalışırken önleyebilirsiniz <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> bazen ettiğiniz boyutlarını ayarlamak için.  
+ Yeni boyutları belirlemekte kullanılacak hücreleri kısıtlamak için birçok seçeneğiniz vardır. Örneğin, yalnızca şu anda görüntülenen satırlardaki değerleri temel alarak sütunlarının genişliğini otomatik olarak yeniden boyutlandırmak için denetimi yapılandırabilirsiniz. Bu şekilde, çok sayıda satırla çalışırken inefficiency önleyebilirsiniz, ancak bu durumda, istediğiniz zaman boyutları ayarlamak için <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> gibi boyutlandırma yöntemlerini kullanmak isteyebilirsiniz.  
   
- Otomatik yeniden boyutlandırma hakkında daha fazla bilgi için bkz. [Windows Forms DataGridView denetimindeki boyutlandırma seçenekleri](sizing-options-in-the-windows-forms-datagridview-control.md).  
+ Otomatik yeniden boyutlandırma hakkında daha fazla bilgi için [Windows Forms DataGridView Denetimindeki Boyutlandırma Seçenekleri](sizing-options-in-the-windows-forms-datagridview-control.md)bölümüne bakın.  
   
- Aşağıdaki kod örneği, otomatik olarak yeniden boyutlandırmak için kullanılabilir seçenekleri gösterir.  
+ Aşağıdaki kod örneği, otomatik yeniden boyutlandırma için kullanılabilen seçenekleri gösterir.  
   
 ## <a name="example"></a>Örnek  
  [!code-cpp[System.Windows.Forms.DataGridView.AutoSizing#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/CPP/autosizing.cpp#0)]
  [!code-csharp[System.Windows.Forms.DataGridView.AutoSizing#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/CS/autosizing.cs#0)]
  [!code-vb[System.Windows.Forms.DataGridView.AutoSizing#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/VB/autosizing.vb#0)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- Sistem, System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
+- System, System. Drawing ve System. Windows. Forms derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -52,4 +52,4 @@ Yapılandırabileceğiniz <xref:System.Windows.Forms.DataGridView> satırları, 
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
 - [Windows Forms DataGridView Denetiminde Hücre ve Satırları Yeniden Boyutlandırma](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetimindeki Boyutlandırma Seçenekleri](sizing-options-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminde içeriği sığdıracak şekilde hücreleri programlı olarak yeniden boyutlandırma](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)
+- [Nasıl yapılır: Windows Forms DataGridView Denetiminde İçeriği Sığdıracak Şekilde Hücreleri Programlı Olarak Yeniden Boyutlandırma](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)

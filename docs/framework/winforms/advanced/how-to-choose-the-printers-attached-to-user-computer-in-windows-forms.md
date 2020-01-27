@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Windows Forms'da Bir Kullanıcının Bilgisayarına Bağlanan Yazıcıları Seçme"
+title: 'Nasıl yapılır: bir kullanıcının bilgisayarına bağlı yazıcıları seçme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: e81ef8b563afff6dd57a9fbb7674d17c0eb80916
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 7fc2427468540ac0a1480f6140cbb34c3a0f1ab3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053068"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746503"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Nasıl yapılır: Windows Forms'da Bir Kullanıcının Bilgisayarına Bağlanan Yazıcıları Seçme
-Genellikle, kullanıcıların bir yazıcı yazdırmak için varsayılan yazıcı dışında seçmek istersiniz. Kullanıcıların bunları kullanarak yüklü arasından seçim yapmasını sağlayabilirsiniz <xref:System.Windows.Forms.PrintDialog> bileşeni. Aracılığıyla <xref:System.Windows.Forms.PrintDialog> bileşeni <xref:System.Windows.Forms.DialogResult> , <xref:System.Windows.Forms.PrintDialog> bileşen yakalanır ve yazıcı seçmek için kullanılır.  
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta Bir Kullanıcının Bilgisayarına Bağlanan Yazıcıları Seçme
+Genellikle, kullanıcılar, yazdırma için varsayılan yazıcıdan farklı bir yazıcı seçmek ister. Kullanıcıların, <xref:System.Windows.Forms.PrintDialog> bileşenini kullanarak şu anda yüklü olanlardan bir yazıcı seçmesini sağlayabilirsiniz. <xref:System.Windows.Forms.PrintDialog> bileşeni aracılığıyla <xref:System.Windows.Forms.PrintDialog> bileşenin <xref:System.Windows.Forms.DialogResult> yakalanır ve yazıcıyı seçmek için kullanılır.  
   
- Aşağıdaki yordamda, bir metin dosyası varsayılan yazıcıda yazdırılmak üzere seçilir. <xref:System.Windows.Forms.PrintDialog> Sınıfının örneği sonra.  
+ Aşağıdaki yordamda, varsayılan yazıcıda yazdırılmak üzere bir metin dosyası seçilidir. <xref:System.Windows.Forms.PrintDialog> sınıfı daha sonra oluşturulur.  
   
-### <a name="to-choose-a-printer-and-then-print-a-file"></a>Bir yazıcı seçin ve ardından dosya yazdırmak için  
+### <a name="to-choose-a-printer-and-then-print-a-file"></a>Bir yazıcı seçmek ve sonra bir dosyayı yazdırmak için  
   
-1. Kullanarak kullanılacak yazıcı seçin <xref:System.Windows.Forms.PrintDialog> bileşeni.  
+1. <xref:System.Windows.Forms.PrintDialog> bileşeni kullanılarak kullanılacak yazıcıyı seçin.  
   
-     Aşağıdaki kod örneğinde, işlenen iki olaylar vardır. İlk bir <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olay <xref:System.Windows.Forms.PrintDialog> sınıfı örneği ve kullanıcı tarafından seçilen yazıcı yakalanan <xref:System.Windows.Forms.DialogResult> özelliği.  
+     Aşağıdaki kod örneğinde, işlenen iki olay vardır. İlk olarak, bir <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olayında <xref:System.Windows.Forms.PrintDialog> sınıfı örneklenmiştir ve Kullanıcı tarafından seçilen yazıcı <xref:System.Windows.Forms.DialogResult> özelliğinde yakalanır.  
   
-     İkinci olay <xref:System.Drawing.Printing.PrintDocument.PrintPage> olayı <xref:System.Drawing.Printing.PrintDocument> bileşeni, örnek bir belge belirtilen yazıcıya yazdırılır.  
+     İkinci olayda, <xref:System.Drawing.Printing.PrintDocument> bileşenin <xref:System.Drawing.Printing.PrintDocument.PrintPage> olayı, belirtilen yazıcıda bir örnek belge yazdırılır.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -89,7 +89,7 @@ Genellikle, kullanıcıların bir yazıcı yazdırmak için varsayılan yazıcı
        }  
     ```  
   
-     (Visual C# ve görsel C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.  
+     (Görsel C# ve görsel C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

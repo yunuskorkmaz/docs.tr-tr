@@ -1,19 +1,20 @@
 ---
-title: "İzlenecek yol: Win32'de WPF Saati Barındırma"
+title: "İzlenecek yol: Win32 'de WPF saati barındırma"
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 8d1f376a2c5b3f31407af0100d9a4417f7cff34e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 79f79e42652ca51c409fabb12a572485ad734b35
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740244"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744892"
 ---
-# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>İzlenecek yol: Win32'de WPF Saati Barındırma
+# <a name="walkthrough-host-a-wpf-clock-in-win32"></a>İzlenecek yol: Win32 'de WPF saati barındırma
 
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Win32 uygulamalarının içine koymak için, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğinizi içeren HWND 'yi sağlayan <xref:System.Windows.Interop.HwndSource>kullanın. İlk olarak <xref:System.Windows.Interop.HwndSource>oluşturun ve bu parametrelere CreateWindow 'a benzer. Daha sonra <xref:System.Windows.Interop.HwndSource> içinde istediğiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik hakkında söylemeniz gerekir. Son olarak, <xref:System.Windows.Interop.HwndSource>HWND 'den yararlanın. Bu izlenecek yol, Win32 uygulamasının içinde işletim sistemi **Tarih ve saat özellikleri** iletişim kutusunu yeniden uygulayan bir karma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oluşturmayı gösterir.
 

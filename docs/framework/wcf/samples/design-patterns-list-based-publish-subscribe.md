@@ -2,12 +2,12 @@
 title: 'Tasarım Desenleri: Liste Tabanlı Yayımlama-Abone Olma'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 831e6947c0919e8112627ff0a0697592f598561b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3a62b09a29ec0b7e241bf2fdc09df6eaba5420c7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716350"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728833"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Tasarım Desenleri: Liste Tabanlı Yayımlama-Abone Olma
 Bu örnek, Windows Communication Foundation (WCF) programı olarak uygulanan liste tabanlı yayımla-abone ol modelini gösterir.  
@@ -15,7 +15,7 @@ Bu örnek, Windows Communication Foundation (WCF) programı olarak uygulanan lis
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Liste tabanlı yayımlama-abone ol tasarım deseni, Microsoft düzenleri & uygulamalar yayımı, [tümleştirme desenleri](https://go.microsoft.com/fwlink/?LinkId=95894)' nde açıklanmaktadır. Yayımla-abone ol, bilgileri bir bilgi konusuna abone olan bir alıcı koleksiyonuna geçirir. Liste tabanlı yayımlama-abone ol, abonelerin bir listesini tutar. Paylaşılacak bilgiler olduğunda, listedeki her aboneye bir kopya gönderilir. Bu örnek, istemcilerin abone olabileceği veya aboneliği kaldırmak için gerekli olan dinamik bir liste tabanlı yayımlama-abonelik modelini gösterir.  
+ Liste tabanlı yayımlama-abone ol tasarım deseni, Microsoft düzenleri & uygulamalar yayımı, [tümleştirme desenleri](https://docs.microsoft.com/previous-versions/msp-n-p/ff647309(v=pandp.10))' nde açıklanmaktadır. Yayımla-abone ol, bilgileri bir bilgi konusuna abone olan bir alıcı koleksiyonuna geçirir. Liste tabanlı yayımlama-abone ol, abonelerin bir listesini tutar. Paylaşılacak bilgiler olduğunda, listedeki her aboneye bir kopya gönderilir. Bu örnek, istemcilerin abone olabileceği veya aboneliği kaldırmak için gerekli olan dinamik bir liste tabanlı yayımlama-abonelik modelini gösterir.  
   
  Liste tabanlı yayımlama-abone olma örneği bir istemciden, hizmetten ve bir veri kaynağı programından oluşur. Birden fazla istemci ve çalıştıran birden fazla veri kaynağı programı olabilir. İstemciler hizmete abone olur, bildirimler alabilir ve aboneliği kaldırın. Veri kaynağı programları, hizmete tüm geçerli aboneler ile paylaşılmak üzere bilgi gönderir.  
   

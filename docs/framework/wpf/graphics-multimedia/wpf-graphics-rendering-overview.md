@@ -1,5 +1,5 @@
 ---
-title: WPF Grafik İşlemeye Genel Bakış
+title: Grafik işlemeye genel bakış
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: 09f5f026ed320aaa253d8cdf6e0b271235aff604
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 103d086857bce8ae0960452bb92a69b68dc49dfa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004175"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744801"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF Grafik İşlemeye Genel Bakış
 Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel katmanına bir genel bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelinde işleme desteği için <xref:System.Windows.Media.Visual> sınıfının rolüne odaklanır.  
@@ -179,7 +179,7 @@ Mantıksal ağaç diyagramı
 ### <a name="profiling-visual-performance"></a>Görsel performansı profil oluşturma  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], uygulamanızın çalışma zamanı davranışını çözümlemenize ve uygulayabileceğiniz performans iyileştirmeleri türlerini belirlemenize olanak tanıyan bir dizi performans profil araçları sağlar. Görsel profil Oluşturucu Aracı, doğrudan uygulamanın görsel ağacına eşleyerek performans verilerinin zengin, grafik bir görünümünü sağlar. Bu ekran görüntüsünde, Visual Profiler 'ın **CPU kullanımı** bölümü, nesnenin işleme ve düzen gibi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hizmetleri kullanımına ilişkin kesin bir döküm sağlar.  
   
- ![Visual Profiler ekran çıktı](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
+ ![Görsel profil oluşturucu görüntüleme çıktısı](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
 Görsel profil oluşturucu görüntüleme çıktısı  
   
 <a name="visual_rendering_behavior"></a>   
@@ -220,7 +220,7 @@ Görsel profil oluşturucu görüntüleme çıktısı
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], donanım pikselleri yerine, ana ölçü birimi olarak cihazdan bağımsız pikseli kullanarak otomatik ölçeklendirmeyi destekler; uygulama geliştiricisinden ek bir iş olmadan grafik ve metin ölçeği düzgün şekilde ölçeklendirin. Aşağıdaki çizimde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metin ve grafiklerin farklı DPı ayarlarında nasıl göründüğü hakkında bir örnek gösterilmektedir.  
   
- ![Farklı DPI ayarlarındaki grafik ve metin](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
+ ![Farklı DPı ayarlarındaki grafikler ve metinler](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
 Farklı DPı ayarlarındaki grafikler ve metinler  
   
 <a name="visualtreehelper_class"></a>   

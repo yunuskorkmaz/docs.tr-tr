@@ -1,44 +1,44 @@
 ---
-title: Windows Forms DataGridView Denetiminde Hücre ve Satırları Yeniden Boyutlandırma
+title: DataGridView Denetimindeki sütunları ve satırları yeniden boyutlandırma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], sizing rows and columns
 - columns [Windows Forms], resizing in grids
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
-ms.openlocfilehash: e1fa2d57cfb2cd374d691fe03a0e0bdbd3ad7141
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f8394a837ccc11c469f9ad4feeb60464d0014fe
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903194"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742417"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Hücre ve Satırları Yeniden Boyutlandırma
-`DataGridView` Denetim satırları ve sütunları boyutlandırma davranışını özelleştirmek için çeşitli seçenekler sağlar. Genellikle, `DataGridView` hücreleri değil yeniden boyutlandırma, içeriğine göre. Bunun yerine, hücreden daha büyük herhangi bir görüntü değeriyle küçük. İçerik bir dize olarak görüntülenebilir, hücre bir araç ipucu olarak görüntülenir.  
+`DataGridView` denetimi, sütunlarının ve satırlarının boyutlandırma davranışını özelleştirmek için çok sayıda seçenek sunar. Genellikle, `DataGridView` hücreleri içeriklerine göre yeniden boyutlandırmaz. Bunun yerine, hücreden daha büyük olan herhangi bir görüntüleme değerini kırpırlar. İçerik bir dize olarak görüntülenebiliyorsanız, hücre onu bir araç Ipucunda görüntüler.  
   
- Varsayılan olarak, kullanıcılar, satır ve sütun üst bilgisi Bölücü daha fazla bilgi görüntülemek için fareyle sürükleyebilirsiniz. Kullanıcılar ayrıca kendi içeriklerini temel alarak ilişkili satır, sütun veya üstbilgi bant otomatik olarak yeniden boyutlandırmak için bir ayırıcı çift tıklatabilirsiniz.  
+ Kullanıcılar, varsayılan olarak satır, sütun ve başlık bölücüleri fareyle sürükleyerek daha fazla bilgi görüntüleyebilirsiniz. Kullanıcılar ayrıca, ilişkili satır, sütun veya üst bilgi bandı içeriğine göre otomatik olarak yeniden boyutlandırmak için bir bölüye çift tıklabilirler.  
   
- `DataGridView` Denetimi özellikleri, yöntemleri ve özelleştirme ya da tüm bu kullanıcıyı yönlendiren davranışların devre dışı etkinleştiren olayları sağlar. Ayrıca, satırlar, sütunlar ve bunların içeriğini sığdırmak için üst bilgileri programlı bir şekilde boyutlandırabilirsiniz veya içerikleri değiştiğinde kendilerini otomatik olarak yeniden yapılandırabilirsiniz. Sütunları otomatik olarak belirttiğiniz oranlarını denetimi kullanılabilir genişliğini bölmek için de yapılandırabilirsiniz.  
+ `DataGridView` denetimi, bu kullanıcıya yönelik bu davranışları özelleştirmenize veya devre dışı bırakmanızı sağlayan özellikler, Yöntemler ve olaylar sağlar. Ayrıca, satırları, sütunları ve üst bilgileri programlı olarak içeriğe uyacak şekilde yeniden boyutlandırabilir ya da bunların içerikleri değiştiğinde otomatik olarak yeniden boyutlandırılacak şekilde yapılandırma yapabilirsiniz. Ayrıca sütunları, denetimin kullanılabilir genişliğini belirttiğiniz oranlara göre otomatik olarak bölmek için de yapılandırabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Windows Forms DataGridView Denetimindeki Boyutlandırma Seçenekleri](sizing-options-in-the-windows-forms-datagridview-control.md)  
- Boyutlandırma satırlar, sütunlar ve üst bilgileri için seçenekleri açıklar. Ayrıca boyutlandırma ile ilgili özellikleri ve yöntemleri hakkında ayrıntılar sağlar ve genel kullanım senaryoları açıklar.  
+ Satırları, sütunları ve başlıkları boyutlandırma seçeneklerini açıklar. Ayrıca, boyutlandırma ile ilgili özellikler ve yöntemler hakkında ayrıntılar sağlar ve yaygın kullanım senaryolarını açıklar.  
   
  [Windows Forms DataGridView Denetiminde Sütun Doldurma Modu](column-fill-mode-in-the-windows-forms-datagridview-control.md)  
- Sütun doldurma modu ayrıntılı açıklar ve sütun doldurma modu ve Diğer modları ile denemek için kullanabileceğiniz bir tanıtım kodu sağlar.  
+ Sütun dolgusu modunu ayrıntılı olarak açıklar ve sütun dolgusu modunu ve diğer modlarını denemek için kullanabileceğiniz tanıtım kodu sağlar.  
   
- [Nasıl yapılır: Windows Forms DataGridView denetiminin boyutlandırma modlarını ayarlama](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
- Genel amaçlar için boyutlandırma modlarını yapılandırılması açıklanmaktadır.  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminin Boyutlandırma Modlarını Ayarlama](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
+ Genel amaçlar için boyutlandırma modlarının nasıl yapılandırılacağını açıklar.  
   
- [Nasıl yapılır: Windows Forms DataGridView denetiminde içeriği sığdıracak şekilde hücreleri programlı olarak yeniden boyutlandırma](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
- Programlı olarak yeniden boyutlandırma ile denemek için kullanabileceğiniz tanıtım kodu sağlar.  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminde İçeriği Sığdıracak Şekilde Hücreleri Programlı Olarak Yeniden Boyutlandırma](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+ Programlı yeniden boyutlandırmayı denemek için kullanabileceğiniz tanıtım kodu sağlar.  
   
- [Nasıl yapılır: Windows Forms DataGridView denetiminde içerik değiştiğinde hücreleri otomatik olarak yeniden boyutlandırma](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
- Otomatik boyutlandırma modları ile denemek için kullanabileceğiniz tanıtım kodu sağlar.  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminde İçerik Değiştiğinde Hücreleri Otomatik Olarak Yeniden Boyutlandırma](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+ Otomatik boyutlandırma modlarıyla denemeler yapmak için kullanabileceğiniz tanıtım kodu sağlar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.DataGridView>  
- İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView> denetimi.  
+ <xref:System.Windows.Forms.DataGridView> denetimi için başvuru belgeleri sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

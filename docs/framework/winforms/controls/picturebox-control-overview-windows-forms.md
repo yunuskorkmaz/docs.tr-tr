@@ -1,5 +1,5 @@
 ---
-title: PictureBox Denetimine Genel Bakış (Windows Forms)
+title: PictureBox Denetimine Genel Bakış
 ms.date: 03/30/2017
 f1_keywords:
 - PictureBox
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - picture controls [Windows Forms], about picture controls
 - image controls [Windows Forms], about image controls
 ms.assetid: e5befee7-dc29-4888-a7c4-3b177e394112
-ms.openlocfilehash: 54ae01789f972381304480c9faf28d084ac3f1db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c911e0190b5a1b063d84e589a7f39285358cbd22
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012639"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744245"
 ---
 # <a name="picturebox-control-overview-windows-forms"></a>PictureBox Denetimine Genel Bakış (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.PictureBox> denetim, bit eşlem, GIF, JPEG, meta dosyası veya simge biçiminde grafikleri görüntülemek için kullanılır.  
+Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi, grafikleri bit eşlem, GIF, JPEG, meta dosyası veya simge biçiminde göstermek için kullanılır.  
   
 ## <a name="key-properties-and-methods"></a>Anahtar özellikleri ve yöntemleri  
- Tarafından görüntülenen resmi belirlenen <xref:System.Windows.Forms.PictureBox.Image%2A> özelliği çalışma zamanında veya tasarım zamanında ayarlanabilir. Alternatif olarak ayarlayarak görüntü belirtebilirsiniz <xref:System.Windows.Forms.PictureBox.ImageLocation%2A> özelliği ve sonra görüntüyü kullanarak zaman uyumlu olarak yük <xref:System.Windows.Forms.PictureBox.Load%2A> yöntemi veya zaman uyumsuz olarak kullanarak <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> yöntemi. <xref:System.Windows.Forms.PictureBox.SizeMode%2A> Özelliği, birbirleri ile nasıl denetim ve görüntü uygun denetler. Daha fazla bilgi için [nasıl yapılır: Çalışma zamanında resmin yerleştirme ve boyutunu değiştirme](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md).  
+ Görüntülenen resim, çalışma zamanında veya tasarım zamanında ayarlanarak <xref:System.Windows.Forms.PictureBox.Image%2A> özelliği tarafından belirlenir. Alternatif olarak, <xref:System.Windows.Forms.PictureBox.ImageLocation%2A> özelliğini ayarlayarak görüntüyü belirtebilir ve sonra <xref:System.Windows.Forms.PictureBox.Load%2A> yöntemini kullanarak görüntüyü zaman uyumlu olarak veya <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> yöntemini kullanarak zaman uyumsuz olarak yükleyebilirsiniz. <xref:System.Windows.Forms.PictureBox.SizeMode%2A> özelliği, görüntünün ve denetimin birbirleriyle nasıl uyduğunu denetler. Daha fazla bilgi için bkz. [nasıl yapılır: çalışma zamanında resmin boyutunu veya yerleşimini değiştirme](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.PictureBox>
-- [Nasıl yapılır: Tasarımcıyı kullanarak resim yükleme](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Nasıl yapılır: Çalışma zamanında resmin yerleştirme ve boyutunu değiştirme](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [Nasıl yapılır: Çalışma zamanında resimleri ayarlama](how-to-set-pictures-at-run-time-windows-forms.md)
+- [Nasıl yapılır: Tasarımcıyı Kullanarak Resim Yükleme](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Nasıl yapılır: Çalışma Zamanında Resmin Boyutunu veya Konumunu Değiştirme](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Nasıl yapılır: Çalışma Zamanında Resimleri Ayarlama](how-to-set-pictures-at-run-time-windows-forms.md)
 - [PictureBox Denetimi](picturebox-control-windows-forms.md)

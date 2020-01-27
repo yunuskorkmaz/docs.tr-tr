@@ -1,5 +1,6 @@
 ---
-title: "İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma"
+title: WPF 'de Windows Forms Bileşik denetim barındırma
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: e42737b9fccd3b91dee2c446dfb0653e57f9dd1b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 16c09b4bb393fa830412385b4b405dd1fae9878b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197943"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744999"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodda önemli bir yatırımınız olduğunda, sıfırdan yazmak yerine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamanızda bu kodların en az bir kısmını yeniden kullanmak daha etkili olabilir. En yaygın senaryo, Windows Forms denetimlerinizi var. Bazı durumlarda, bu denetimlerin kaynak koduna bile erişiminiz olmayabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bu denetimleri bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamasında barındırmak için kolay bir yordam sağlar. Örneğin, özelleştirilmiş <xref:System.Windows.Forms.DataGridView> denetimlerinizi barındırırken birçok programlama için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanabilirsiniz.  
@@ -62,9 +63,9 @@ Bu yönergeyi tamamlamak için Visual Studio gerekir.
   
 - System.Data  
   
-- System. Drawing  
+- System.Drawing  
   
-- System. Windows. Forms  
+- System.Windows.Forms  
   
 - System.Xml  
   

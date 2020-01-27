@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: eb1815f965e86a6f8f709b32f84f879eb03de447
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115809"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742594"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -112,20 +112,20 @@ Il bağlayıcı aracı hakkında daha fazla bilgi için [belgelere](https://aka.
 
 ### <a name="tiered-compilation"></a>Katmanlı derleme
 
-[Katmanlı derleme](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC), .NET Core 3.0 ile varsayılan olarak açık olur. Bu özellik, çalışma zamanının daha iyi performans almak için tam zamanında (JıT) derleyicisini daha kolay bir şekilde kullanmasına olanak sağlar.
+[Katmanlı derleme](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) (TC), .NET Core 3.0 ile varsayılan olarak açık olur. Bu özellik, çalışma zamanının daha iyi performans elde etmek için tam zamanında (JıT) derleyicisini daha kolay bir şekilde kullanmasına olanak sağlar.
 
-TC 'nin başlıca avantajı, daha düşük kaliteli, ancak daha hızlı bir katman veya daha yüksek kaliteli, ancak daha yavaş bir katman ile yöntemleri etkinleştirmektir (yeniden). Bu, bir uygulamanın, düzenli durum aracılığıyla başlangıçtan itibaren çeşitli yürütme aşamalarından geçerek performansını artırmaya yardımcı olur. Bu, her yöntemin tek bir şekilde (yüksek kaliteli katmanla aynı) derlenmesi ve bu durum, başlangıç performansı üzerinden kararlı bir duruma yol gösteren TC olmayan yaklaşımla karşıtdır.
+Katmanlı derlemenin başlıca avantajı, daha düşük kalitede, ancak daha hızlı bir katmanda ya da daha yüksek kalitede, ancak daha yavaş bir katmanda çeşitli yöntemler elde etmenin iki yolunu sağlamaktır. Kalite, yöntemin en iyi duruma getirilmiş olduğunu gösterir. TC, düzenli bir durum aracılığıyla başlangıçtan itibaren çeşitli yürütme aşamalarından geçen bir uygulamanın performansını artırmaya yardımcı olur. Katmanlı derleme devre dışı bırakıldığında, her yöntem, başlangıç performansı üzerinden düzenli durum performansına yol gösteren tek bir şekilde derlenir.
 
-TC etkinleştirildiğinde, çağrılan bir yöntem için başlatma sırasında:
+TC etkinleştirildiğinde, bir uygulama başlatıldığında Yöntem derlemesi için aşağıdaki davranış geçerlidir:
 
-- Yöntemin AOT ile derlenen kodu (ReadyToRun) varsa, önceden oluşturulan kod kullanılacaktır.
-- Aksi halde yöntem, cderlenen olur. Genellikle, bu yöntemler şu anda değer türleri üzerinde genel türler.
-  - Hızlı JıT daha hızlı bir şekilde daha hızlı bir şekilde kod üretir. Hızlı JıT, döngüler içermeyen ve başlangıç sırasında tercih edilen yöntemler için .NET Core 3,0 ' de varsayılan olarak etkindir.
-  - Tam iyileştirmeli JıT daha yüksek kaliteli kodlar daha yavaş üretir. Hızlı JıT 'in kullanılacağı yöntemler için (örneğin, yöntem `[MethodImpl(MethodImplOptions.AggressiveOptimization)]`ile ilişkilendirilebildiği), tam olarak iyileştirmeli JıT kullanılır.
+- Metodun önceden derlenen kodu veya [Readytorun](#readytorun-images)varsa, önceden oluşturulan kod kullanılır.
+- Aksi halde, yöntemi jmesdir. Genellikle, bu yöntemler değer türleri üzerinde genel türlerdir.
+  - *Hızlı JIT* daha hızlı (veya daha az iyileştirilmiş) kod üretir. .NET Core 3,0 ' de hızlı JıT, döngüler içermeyen ve başlangıç sırasında tercih edilen yöntemler için varsayılan olarak etkindir.
+  - Tam iyileştirmeli JıT daha yüksek kaliteli (veya daha iyileştirilmiş) kodu daha yavaş üretir. Hızlı JıT 'in kullanılacağı yöntemler için (örneğin, yöntem <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>ile ilişkilendirilebildiği), tam olarak iyileştirmeli JıT kullanılır.
 
-Sonuç olarak, metotların sayısı bir kez çağrıldıktan sonra, arka planda tam iyileştirmeli JıT ile yeniden yapılır.
+Sık çağrılan yöntemler için, tam zamanında derleyici arka planda tamamen iyileştirilmiş kod oluşturur. En iyi duruma getirilmiş kod daha sonra bu yöntem için önceden derlenmiş kodun yerini alır.
 
-Hızlı JıT tarafından oluşturulan kod daha yavaş çalışabilir, daha fazla bellek ayırabilir veya daha fazla yığın alanı kullanabilir. Sorunlar varsa, proje dosyanızda Bu ayar kullanılarak hızlı JıT devre dışı bırakılabilir:
+Hızlı JıT tarafından oluşturulan kod daha yavaş çalışabilir, daha fazla bellek ayırabilir veya daha fazla yığın alanı kullanabilir. Sorunlar varsa, proje dosyasında bu MSBuild özelliğini kullanarak hızlı JıT 'i devre dışı bırakabilirsiniz:
 
 ```xml
 <PropertyGroup>
@@ -133,7 +133,7 @@ Hızlı JıT tarafından oluşturulan kod daha yavaş çalışabilir, daha fazla
 </PropertyGroup>
 ```
 
-TC 'yi tamamen devre dışı bırakmak için, proje dosyanızda bu ayarı kullanın:
+TC 'yi tamamen devre dışı bırakmak için, proje dosyanızda bu MSBuild özelliğini kullanın:
 
 ```xml
 <PropertyGroup>
@@ -141,7 +141,10 @@ TC 'yi tamamen devre dışı bırakmak için, proje dosyanızda bu ayarı kullan
 </PropertyGroup>
 ```
 
-Proje dosyasındaki yukarıdaki ayarlarda yapılan tüm değişiklikler, temiz bir derlemeyi yansıtılmasını gerektirebilir (`obj` ve dizinleri `bin` ve yeniden derle).
+> [!TIP]
+> Bu ayarları proje dosyasında değiştirirseniz, yeni ayarların yansıtılması için temiz bir derleme gerçekleştirmeniz gerekebilir (`obj` ve dizinleri `bin` ve yeniden derle).
+
+Çalışma zamanında derlemeyi yapılandırma hakkında daha fazla bilgi için bkz. [derleme Için çalışma zamanı yapılandırma seçenekleri](../run-time-config/compilation.md).
 
 ### <a name="readytorun-images"></a>ReadyToRun görüntüleri
 

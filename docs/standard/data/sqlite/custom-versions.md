@@ -2,12 +2,12 @@
 title: Özel SQLite sürümleri
 ms.date: 12/13/2019
 description: Yerel SQLite kitaplığı 'nın özel bir sürümünü nasıl kullanacağınızı öğrenin.
-ms.openlocfilehash: 8a2646138ea9dbecf412a2e8e0e347e2d71a5b0b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dd27278c1dbe17b12e5067d04d19043bf259b1e8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447148"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746983"
 ---
 # <a name="custom-sqlite-versions"></a>Özel SQLite sürümleri
 
@@ -23,7 +23,7 @@ Farklı bir paket kullanmak için, kullanmak istediğiniz paket paketiyle birlik
 
 | Paket | Açıklama |
 | --- | --- |
-| SQLitePCLRaw. bundle_e_sqlite3 | Tüm platformlarda SQLite ' un tutarlı bir sürümünü sağlar. FTS4, FTS5, JSON1 ve | R * ağaç uzantıları. Bu varsayılandır. |
+| SQLitePCLRaw. bundle_e_sqlite3 | Tüm platformlarda SQLite ' un tutarlı bir sürümünü sağlar. FTS4, FTS5, JSON1 ve R * ağaç uzantılarını içerir. Bu varsayılandır. |
 | SQLitePCLRaw. bundle_green | System SQLite kitaplığını kullandığı iOS dışında bundle_e_sqlite3 ile aynıdır. |
 | SQLitePCLRaw. bundle_zetetic | Zetetik 'dan (dahil değil) resmi SQLCipher derlemelerini kullanır. |
 | SQLitePCLRaw. bundle_winsqlite3 | Windows 10 ' da sistem SQLite kitaplığı olan winsqlite3. dll ' yi kullanır. |

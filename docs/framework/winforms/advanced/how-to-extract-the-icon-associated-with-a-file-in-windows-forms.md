@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms’da Bir Dosyayla İlişkili Simgeyi Çıkarma'
+title: 'Nasıl yapılır: bir dosyayla Ilişkili simgeyi ayıklama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - file name extension icons [Windows Forms], displaying in a ListView
 - extracting icons associated with a file type [Windows Forms]
 ms.assetid: 88e2ad8b-c34f-415a-84f2-dad756b5c928
-ms.openlocfilehash: c3173a3fa756a3294154217f5cf0a13dbc8721f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28769144b0e1c631a31c3c541747a6215f861d0e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645408"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742547"
 ---
-# <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Nasıl yapılır: Windows Forms’da Bir Dosyayla İlişkili Simgeyi Çıkarma
-Çok sayıda dosya sağlayan bir görsel bir temsili ilişkili dosya türü simgeleri katıştırılmış sahip. Örneğin, Microsoft Word belgeleri, bunları Word belgeleri olarak tanımlayan bir simge içerir. Liste denetimi ya da tablo denetim dosyaları görüntülerken, her dosya adının yanındaki dosya türünü temsil eden bir simge görüntülemek isteyebilirsiniz. Kolayca kullanarak bunu yapabilirsiniz <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> yöntemi.  
+# <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Nasıl yapılır: Windows Formlarında Bir Dosyayla İlişkili Simgeyi Çıkarma
+Birçok dosya, ilişkili dosya türünün görsel gösterimini sağlayan katıştırılmış simgelere sahiptir. Örneğin, Microsoft Word belgeleri bunları Word belgeleri olarak tanımlayan bir simge içerir. Bir liste denetimindeki veya tablo denetimindeki dosyaları görüntülerken, her dosya adının yanında dosya türünü temsil eden simgeyi görüntülemek isteyebilirsiniz. <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> yöntemini kullanarak bunu kolayca yapabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği bir dosyayla ilişkili simgeyi çıkarma ve görüntü dosya adı ve ilgili simgeye yapmayı gösteren bir <xref:System.Windows.Forms.ListView> denetimi.  
+ Aşağıdaki kod örneği, bir dosyayla ilişkili simgenin nasıl ayıklanacağını ve dosya adını ve ilişkili simgesini bir <xref:System.Windows.Forms.ListView> denetiminde görüntülemeyi gösterir.  
   
  [!code-csharp[System.Drawing.Icon.ExtractAssociatedIconEx#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.Icon.ExtractAssociatedIconEx#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
  Örneği derlemek için:  
   
-- Yukarıdaki kod, bir Windows Form ve çağrı yapıştırın `ExtractAssociatedIconExample` formun oluşturucudan yöntemi veya <xref:System.Windows.Forms.Form.Load> olay işleme yöntemi.  
+- Önceki kodu bir Windows formuna yapıştırın ve formun Oluşturucu veya <xref:System.Windows.Forms.Form.Load> olay işleme yönteminden `ExtractAssociatedIconExample` yöntemi çağırın.  
   
-     Formunuza alındığından emin olmak ihtiyacınız olacak <xref:System.IO> ad alanı.  
+     Formunuzun <xref:System.IO> ad alanını içeri aktardığından emin olmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

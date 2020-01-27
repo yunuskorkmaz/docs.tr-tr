@@ -4,12 +4,12 @@ description: .NET Core işlevselliğini desteklemek ve genişletmek için yükle
 author: mlacouture
 ms.date: 12/02/2019
 ms.custom: mvc
-ms.openlocfilehash: 1f066523a24d4e1fd7aaaa5a19e8d6c9d72d35af
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 853633f5ef159eee39ed1a8682372d4291a752f5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714531"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740712"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core ek araçlara genel bakış
 
@@ -17,7 +17,7 @@ Bu bölüm .NET Core [komut satırı arabirimi (CLI)](../tools/index.md) araçla
 
 ## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[.NET Core kaldırma aracı](uninstall-tool.md)
 
-[.NET Core kaldırma aracı](https://dotnet.microsoft.com/download/dotnet-core/uninstall-tool) (`dotnet-core-uninstall`), sistemde yalnızca belirtilen sürümlerin kalması gibi .NET Core SDK 'larını ve çalışma zamanlarını temizlemenizi sağlar. Hangi sürümlerin kaldırılacağını belirlemek için bir seçenek koleksiyonu kullanılabilir.
+[.NET Core kaldırma aracı](https://github.com/dotnet/cli-lab/releases) (`dotnet-core-uninstall`), sistemde yalnızca belirtilen sürümlerin kalması gibi .NET Core SDK 'larını ve çalışma zamanlarını temizlemenizi sağlar. Hangi sürümlerin kaldırılacağını belirlemek için bir seçenek koleksiyonu kullanılabilir.
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[WCF Web hizmeti başvuru aracı](wcf-web-service-reference-guide.md)
 

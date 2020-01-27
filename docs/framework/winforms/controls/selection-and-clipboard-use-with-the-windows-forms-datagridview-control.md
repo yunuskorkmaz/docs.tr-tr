@@ -1,5 +1,5 @@
 ---
-title: Windows Forms DataGridView Denetimi ile Seçim ve Pano Kullanımı
+title: DataGridView denetimiyle seçim ve Pano kullanımı
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], Clipboard use
@@ -9,47 +9,47 @@ helpviewer_keywords:
 - data grids [Windows Forms], selecting cells
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
-ms.openlocfilehash: 1836fbc1887082ca685c49bef2bc42bdb167578f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6993f77e8ce532d8df1bdc7e6b6abc1cc3268e49
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902258"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743069"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimi ile Seçim ve Pano Kullanımı
-`DataGridView` Denetim çeşitli kullanıcılar hücreler, satırlar ve sütunlarla nasıl seçebilir yapılandırma seçenekleri sağlar. Kullanıcılar kendi üst bilgileri tıkladığınızda gibi tek veya birden çok seçim, tüm satırları veya kullanıcılar hücreleri tıkladığınızda sütun seçimi ya da tüm satırları veya sütunları seçimi hücre seçimi sağlayan etkinleştirebilirsiniz. Seçimi için kendi kullanıcı arabirimini sağlamak istiyorsanız, sıradan seçimi devre dışı bırakabilir ve tüm seçimi programlı olarak işleme. Ayrıca, kullanıcıların seçilen değerleri panoya kopyalamak etkinleştirebilirsiniz.  
+`DataGridView` denetimi, kullanıcıların hücreleri, satırları ve sütunları nasıl seçkullanılabileceğini yapılandırmaya yönelik çeşitli seçenekler sunar. Örneğin, kullanıcılar hücrelere tıkladığınızda tek veya birden çok seçimi, satır veya sütun seçimini etkinleştirebilir veya yalnızca kullanıcılar üst bilgilerine tıkladığınızda, hücre seçimini de etkinleştiren tüm satır veya sütunları seçebilirsiniz. Seçim için kendi Kullanıcı arabiriminizi sağlamak istiyorsanız, normal seçimi devre dışı bırakabilir ve tüm seçimleri program aracılığıyla işleyebilirsiniz. Ayrıca, kullanıcıların seçili değerleri panoya kopyalamasını sağlayabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Windows Forms DataGridView Denetimindeki Seçim Modları](selection-modes-in-the-windows-forms-datagridview-control.md)  
- Kullanıcı ve programlı seçiminde denetim seçeneklerini açıklar.  
+ Denetimde kullanıcı ve programlı seçim seçeneklerini açıklar.  
   
- [Nasıl yapılır: Windows Forms DataGridView denetiminin seçim modunu ayarlama](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
- Bir kullanıcı bir hücreye tıkladığında denetim tek satır seçimi için yapılandırılması açıklanmaktadır.  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminin Seçim Modunu Ayarlama](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
+ Kullanıcı bir hücreye tıkladığında, tek satırlık seçim için denetimin nasıl yapılandırılacağını açıklar.  
   
- [Nasıl yapılır: Windows Forms DataGridView denetiminde seçili hücre, satır ve sütunları alma](selected-cells-rows-and-columns-datagridview.md)  
- Seçili hücre, satır ve sütun koleksiyonlarla çalışma açıklar.  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminde Seçili Hücre, Satır ve Sütunları Alma](selected-cells-rows-and-columns-datagridview.md)  
+ Seçilen hücre, satır ve sütun koleksiyonlarıyla nasıl çalışabileceğinizi açıklar.  
   
- [Nasıl yapılır: Kullanıcıların Windows Forms DataGridView denetiminden panoya birden fazla hücre kopyalamasına olanak](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
- Denetimdeki Pano desteğini nasıl etkinleştireceğinizi açıklar.  
+ [Nasıl yapılır: Kullanıcıların Windows Forms DataGridView Denetiminden Panoya Birden Fazla Hücre Kopyalamasına Olanak Tanıma](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+ Denetimde Pano desteğinin nasıl etkinleştirileceğini açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.DataGridView>  
- İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView> denetimi.  
+ <xref:System.Windows.Forms.DataGridView> denetimi için başvuru belgeleri sağlar.  
   
  <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType>  
- İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> özelliği.  
+ <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> özelliği için başvuru belgeleri sağlar.  
   
  <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A>  
- İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A> özelliği.  
+ <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A> özelliği için başvuru belgeleri sağlar.  
   
  <xref:System.Windows.Forms.DataGridViewSelectedCellCollection>  
- İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridViewSelectedCellCollection> sınıfı.  
+ <xref:System.Windows.Forms.DataGridViewSelectedCellCollection> sınıfı için başvuru belgeleri sağlar.  
   
  <xref:System.Windows.Forms.DataGridViewSelectedRowCollection>  
- İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridViewSelectedRowCollection> sınıfı.  
+ <xref:System.Windows.Forms.DataGridViewSelectedRowCollection> sınıfı için başvuru belgeleri sağlar.  
   
  <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>  
- İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection> sınıfı.  
+ <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection> sınıfı için başvuru belgeleri sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

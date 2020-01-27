@@ -1,5 +1,5 @@
 ---
-title: Windows Forms Denetimlerinde Kenar Boşluğu Bırakma ve Doldurma
+title: Denetimlerde kenar boşluğu ve doldurma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Padding property [Windows Forms]
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Windows Forms, layout
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
-ms.openlocfilehash: bf1f88f6efcedd740bff92dda391470391f16ce5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02cabccd0d51a3501a8aafb8733a5273deef6c49
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752520"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728565"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Windows Forms Denetimlerinde Kenar Boşluğu Bırakma ve Doldurma
-Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek öncelik taşır. <xref:System.Windows.Forms?displayProperty=nameWithType> Ad alanı bunu gerçekleştirmek için çok sayıda düzen özelliklerini sağlar. En önemli iki <xref:System.Windows.Forms.Control.Margin%2A> ve <xref:System.Windows.Forms.Control.Padding%2A> özellikleri.  
+Denetimlerin formunuza kesin olarak yerleştirilmesi birçok uygulama için yüksek önceliktir. <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı, bunu gerçekleştirmek için size çok sayıda düzen özelliği sunar. En önemlileri <xref:System.Windows.Forms.Control.Margin%2A> ve <xref:System.Windows.Forms.Control.Padding%2A> özelliklerdir.  
   
- <xref:System.Windows.Forms.Control.Margin%2A> Tutar diğer denetimleri belirtilen bir denetimin kenarlık uzaklıkta çevresindeki boşluk özelliği tanımlar.  
+ <xref:System.Windows.Forms.Control.Margin%2A> özelliği, denetimin kenarlıklarından belirli bir uzaklıkta bulunan diğer denetimleri tutan denetimin etrafındaki boşluğu tanımlar.  
   
- <xref:System.Windows.Forms.Control.Padding%2A> Özelliği, denetimin içeriği tutan bir denetimin iç alanı tanımlar (örneğin, değerini kendi <xref:System.Windows.Forms.Control.Text%2A> özelliği) belirtilen bir denetimin kenarlık uzaklığı.  
+ <xref:System.Windows.Forms.Control.Padding%2A> özelliği, denetimin içeriklerini (örneğin, <xref:System.Windows.Forms.Control.Text%2A> özelliğinin değeri) denetimin kenarlıklarından belirtilen mesafeden tutan bir denetimin iç kısmında yer alan alanı tanımlar.  
   
- Aşağıdaki çizimde gösterildiği <xref:System.Windows.Forms.Control.Padding%2A> ve <xref:System.Windows.Forms.Control.Margin%2A> denetim özellikleri.  
+ Aşağıdaki çizimde bir denetimdeki <xref:System.Windows.Forms.Control.Padding%2A> ve <xref:System.Windows.Forms.Control.Margin%2A> özellikleri gösterilmektedir.  
   
- ![Doldurma ve kenar boşlukları için Windows Forms denetimlerine](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
+ ![Windows Forms denetimleri için doldurma ve kenar boşluğu](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
- Visual Studio'da bu özellik için tasarım zamanı desteği yoktur. Ayrıca bkz: [izlenecek yol: Yerleştirme Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile](windows-forms-controls-padding-autosize.md).  
+ Visual Studio 'da bu özellik için tasarım zamanı desteği vardır. Ayrıca bkz. [Izlenecek yol: doldurma, kenar boşlukları ve AutoSize özelliği ile Windows Forms denetimleri yerleştirme](windows-forms-controls-padding-autosize.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

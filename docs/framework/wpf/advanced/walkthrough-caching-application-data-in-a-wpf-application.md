@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma'
+title: Önbellek uygulaması verileri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b7d999f94e2f2ae410a16e537d51c0f890def4e1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715885"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728066"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma
 Önbelleğe alma, verileri hızlı erişim için bellekte depolamanıza olanak sağlar. Verilere yeniden erişildiğinde, uygulamalar verileri özgün kaynaktan almak yerine önbellekten alabilir. Bu, performansı ve ölçeklenebilirliği iyileştirebilir. Ayrıca, veri kaynağı geçici olarak kullanılamadığında önbelleğe alma verilerin kullanılabilir olmasını sağlar.
@@ -56,7 +56,7 @@ ms.locfileid: "74715885"
 
 #### <a name="to-create-a-wpf-application"></a>WPF uygulaması oluşturmak için
 
-1. Visual Studio 'Yu başlatın.
+1. Visual Studio’yu çalıştırın.
 
 2. **Dosya** menüsünde **Yeni**' ye ve ardından **Yeni proje**' ye tıklayın.
 
@@ -73,7 +73,7 @@ ms.locfileid: "74715885"
 
 6. **Çözüm için dizin oluştur** onay kutusunu seçin.
 
-7. **Tamam**'a tıklayın.
+7. **Tamam**'ı tıklatın.
 
      WPF Tasarımcısı **Tasarım** görünümünde açılır ve MainWindow. xaml dosyasını görüntüler. Visual Studio **My projem** klasörünü, Application. xaml dosyasını ve MainWindow. xaml dosyasını oluşturur.
 
@@ -99,9 +99,9 @@ ms.locfileid: "74715885"
 
 4. **Hedef Framework (tüm konfigürasyonlar)** listesinde .NET Framework 4 ' ü seçin. (.NET Framework 4 Istemci profili seçmeyin.)
 
-5. **Tamam**'a tıklayın.
+5. **Tamam**'ı tıklatın.
 
-     **Hedef çerçeve değişimi** iletişim kutusu görüntülenir.
+     **Hedef Framework değişikliği** iletişim kutusu görüntülenir.
 
 6. **Hedef çerçeve değişimi** Iletişim kutusunda **Evet**' e tıklayın.
 

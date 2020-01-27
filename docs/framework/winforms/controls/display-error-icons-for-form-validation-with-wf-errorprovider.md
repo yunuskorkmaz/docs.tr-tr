@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms ErrorProvider Bileşeni ile Form Doğrulama için Hata Simgeleri Görüntüleme'
+title: ErrorProvider bileşeniyle form doğrulaması için hata simgelerini görüntüle
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: 2af8d3b9ea97b678c493de8a58d439b62f448387
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: a1e346e332db489351f59c9a0c03ae731baf3dc3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053705"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745915"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Nasıl yapılır: Windows Forms ErrorProvider Bileşeni ile Form Doğrulama için Hata Simgeleri Görüntüleme
-Bir Windows Forms kullanabileceğiniz <xref:System.Windows.Forms.ErrorProvider> kullanıcı geçersiz veri girdiğinde bir hata simgesi görüntülenecek bileşeni. Bunlar arasında sekme ve böylece bir doğrulama kodu çağırmak için form üzerinde en az iki denetimleri olması gerekir.  
+Kullanıcı geçersiz veri girdiğinde bir hata simgesi göstermek için Windows Forms <xref:System.Windows.Forms.ErrorProvider> bileşenini kullanabilirsiniz. Aralarında sekme almak ve bu nedenle doğrulama kodunu çağırmak için formda en az iki denetim olması gerekir.  
   
-### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>Bir denetimin değeri geçersiz bir hata simgesi görüntülemek için  
+### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>Bir denetimin değeri geçersiz olduğunda bir hata simgesi göstermek için  
   
-1. İki denetimler ekleme — Örneğin, metin kutuları: bir Windows Form.  
+1. Bir Windows formuna iki denetim (örneğin, metin kutuları) ekleyin.  
   
-2. Ekleme bir <xref:System.Windows.Forms.ErrorProvider> forma bileşen.  
+2. Forma bir <xref:System.Windows.Forms.ErrorProvider> bileşeni ekleyin.  
   
-3. Birinci denetimi seçin ve kod ekleyin, <xref:System.Windows.Forms.Control.Validating> olay işleyicisi. Düzgün çalışması için bu kodu için sırada yordamı olaya bağlı olması gerekir. Daha fazla bilgi için [nasıl yapılır: Windows Forms için çalışma zamanında olay işleyicileri oluşturma](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+3. İlk denetimi seçin ve <xref:System.Windows.Forms.Control.Validating> olay işleyicisine kod ekleyin. Bu kodun düzgün çalışması için, yordamın olaya bağlı olması gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: çalışma zamanında olay Işleyicileri oluşturma Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
-     Aşağıdaki kod, kullanıcının girdiği verileri geçerliliğini sınar; Veri geçersizse <xref:System.Windows.Forms.ErrorProvider.SetError%2A> yöntemi çağrılır. İlk bağımsız değişkeni <xref:System.Windows.Forms.ErrorProvider.SetError%2A> yöntemi yanındaki simge görüntülenecek denetleyen belirtir. İkinci bağımsız değişkeni, görüntülenecek hata metindir.  
+     Aşağıdaki kod, kullanıcının girdiği verilerin geçerliliğini sınar; veriler geçersizse <xref:System.Windows.Forms.ErrorProvider.SetError%2A> yöntemi çağrılır. <xref:System.Windows.Forms.ErrorProvider.SetError%2A> yönteminin ilk bağımsız değişkeni, öğesinin yanında simgenin görüntüleneceği denetimi belirtir. İkinci bağımsız değişken, görüntülenecek hata metni.  
   
     ```vb  
     Private Sub TextBox1_Validating(ByVal Sender As Object, _  
@@ -77,7 +77,7 @@ Bir Windows Forms kullanabileceğiniz <xref:System.Windows.Forms.ErrorProvider> 
        }  
     ```  
   
-     (Visual C#, Visual C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.  
+     (Görsel C#, görsel C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.  
   
     ```csharp  
     this.textBox1.Validating += new  
@@ -90,10 +90,10 @@ Bir Windows Forms kullanabileceğiniz <xref:System.Windows.Forms.ErrorProvider> 
        (this, &Form1::textBox1_Validating);  
     ```  
   
-4. Projeyi çalıştırın. İlk denetim ve ardından ikinci için sekmesinde (Bu örnekte, sayısal olmayan) geçersiz veri türü. Hata simgesi görüntülendiğinde, hem hata metnini görmek için fare işaretçisi ile işaretleyin.  
+4. Projeyi çalıştırın. İlk denetime geçersiz (Bu örnekte sayısal olmayan) veriler yazın ve ardından ikinci sekmeye sürükleyin. Hata simgesi görüntülendiğinde, hata metnini görmek için fare işaretçisiyle üzerine gelin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
 - [ErrorProvider Bileşenine Genel Bakış](errorprovider-component-overview-windows-forms.md)
-- [Nasıl yapılır: Windows Forms ErrorProvider bileşeni ile DataSet içindeki hataları görüntüleme](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [Nasıl yapılır: Windows Forms ErrorProvider Bileşeni ile DataSet İçindeki Hataları Görüntüleme](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

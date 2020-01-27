@@ -1,5 +1,5 @@
 ---
-title: PrintDialog Bileşeni (Windows Forms)
+title: PrintDialog Bileşeni
 ms.date: 03/30/2017
 helpviewer_keywords:
 - print options [Windows Forms], PrintDialog component (using designer)
@@ -8,27 +8,27 @@ helpviewer_keywords:
 - printing [Windows Forms], PrintDialog component (using designer)
 - printing [Windows Forms], print options
 ms.assetid: 09b54db1-d7c7-42fa-b98a-840e6b80a9ad
-ms.openlocfilehash: 35bc465b70d9e92f427a70590af45613555380cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 544cdcd7c07e12a7da9812432c0761fe3d3b21bf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795492"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728649"
 ---
 # <a name="printdialog-component-windows-forms"></a>PrintDialog Bileşeni (Windows Forms)
-Windows Forms `PrintDialog` bir yazıcı seçin, yazdırılacak sayfa seçin ve diğer Windows tabanlı uygulamalar ile ilgili ayarları belirlemek için kullanılan bir önceden yapılandırılmış bir iletişim kutusu bir bileşendir. Yazıcı ve yazdırma ile ilgili ayarları Seçimi'yerine kendi iletişim kutusunu yapılandırma için basit bir çözüm kullanın. Kullanıcılar kendi belgeleri pek çok bölümünün yazdırmak etkinleştirebilirsiniz: tüm yazdırma, yazdırma belirtilen sayfa aralığı veya bir seçim yazdırma. Standart Windows iletişim kutularında bağlı olarak, temel işlevleri kullanıcılarına hemen tanıdık uygulamalar oluşturun.  
+Windows Forms `PrintDialog` bileşeni, bir yazıcı seçmek, yazdırılacak sayfaları seçmek ve Windows tabanlı uygulamalarda yazdırma ile ilgili diğer ayarları belirlemek için kullanılan önceden yapılandırılmış bir iletişim kutusudur. Kendi iletişim kutusunu yapılandırmak yerine yazıcı ve yazdırma ile ilgili ayarlar için basit bir çözüm olarak kullanın. Kullanıcıların belgelerinin birçok bölümünü yazdırmasını sağlayabilirsiniz: tümünü yazdır, belirtilen sayfa aralığını Yazdır veya bir seçimi yazdır. Standart Windows iletişim kutularına bağlı olarak, temel işlevselliği kullanıcılara hemen tanıdık olan uygulamalar oluşturursunuz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [PrintDialog Bileşenine Genel Bakış](printdialog-component-overview-windows-forms.md)  
- Genel konseptlerini tanıtan `PrintDialog` , kullanıcıların bir yazıcı seçmek için kullanabileceği bir önceden yapılandırılmış iletişim kutusunu görüntülemek için izin veren bileşen yazdırılacak sayfa seçin ve yazdırmayla ayarları belirler.  
+ , Kullanıcıların bir yazıcı seçmek, yazdırılacak sayfaları seçmek ve yazdırma ile ilgili ayarları belirlemek için kullanabileceği önceden yapılandırılmış bir iletişim kutusu görüntülemenizi sağlayan `PrintDialog` bileşeninin genel kavramlarını tanıtır.  
   
- [Nasıl yapılır: PrintDialog bileşenini görüntüleme](how-to-display-the-printdialog-component.md)  
- İletişim kutusunu görüntülemek nasıl ve nerede özellikleri kaydeder açıklar.  
+ [Nasıl yapılır: PrintDialog Bileşenini Görüntüleme](how-to-display-the-printdialog-component.md)  
+ İletişim kutusunun nasıl görüntüleneceğini ve özellikleri nereye kaydettiğini açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.PrintDialog>  
- Sınıf ve onun üyeleri hakkında başvuru bilgileri sağlar.  
+ Sınıf ve üyeleri hakkında başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
- Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.
+ Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.

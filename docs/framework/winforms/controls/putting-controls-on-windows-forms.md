@@ -1,43 +1,43 @@
 ---
-title: Windows Formlarına Denetimler Koyma
+title: Formlara denetim yerleştirme
 ms.date: 03/30/2017
 f1_keywords:
 - ENV.Window.Toolbox
 helpviewer_keywords:
 - Windows Forms controls, adding to form
 ms.assetid: 997508f2-87e5-4bec-a78e-9eec8f1fb15b
-ms.openlocfilehash: b9ffe797fef9e063470ef93ce73f881aed80e7f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c9ad4a21a0530f540ee2bab424e22bad64e8de2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012496"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741169"
 ---
 # <a name="putting-controls-on-windows-forms"></a>Windows Formlarına Denetimler Koyma
-Çok çeşitli Windows Formları, uygulamanızın ihtiyaçlarına bağlı olarak koyabilirsiniz denetimleri vardır.  
+Uygulamanızın ihtiyaçlarına bağlı olarak Windows Forms koyabileceğiniz çok çeşitli denetimler vardır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md)  
- Formunuza denetimler ekleme için yönergeler sağlar.  
+ [Nasıl yapılır: Windows Forms’a Denetimler Ekleme](how-to-add-controls-to-windows-forms.md)  
+ Formunuza denetim eklemek için yönergeler sağlar.  
   
- [Nasıl yapılır: Windows Forms'a kullanıcı arabirimi olmadan denetimler ekleme](how-to-add-controls-without-a-user-interface-to-windows-forms.md)  
- Uygulamanız için kullanıcı arabirimi olmadan denetimler ekleme için yönergeler sağlar.  
+ [Nasıl yapılır: Windows Forms’a Kullanıcı Arabirimi Olmadan Denetimler Ekleme](how-to-add-controls-without-a-user-interface-to-windows-forms.md)  
+ Uygulamanıza Kullanıcı arabirimi içermeyen denetimleri eklemek için yönergeler sağlar.  
   
- [Nasıl yapılır: Ekleme veya çalışma zamanında denetimlerin bir koleksiyondan Kaldır](how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  
- Bir panel denetimleri çalışma zamanında ekleyip açıklanmaktadır.  
+ [Nasıl yapılır: Çalışma Zamanında Denetimler Koleksiyonuna Ekleme veya Kaldırma](how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  
+ Çalışma zamanında bir panelde denetimlerin nasıl ekleneceğini ve kaldırılacağını açıklar.  
   
- [İzlenecek yol: Otomatik olarak araç kutusunu özel bileşenlerle doldurma](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
- Otomatik olarak görünür bir özel bileşene nasıl kullanabileceğinizi gösterir **araç kutusu** bileşeni oluşturulduktan sonra.  
+ [İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ Bileşen oluşturulduktan sonra bir özel bileşenin **araç kutusunda** otomatik olarak nasıl görüneceğini gösterir.  
   
- [Nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme](how-to-add-activex-controls-to-windows-forms.md)  
- Eski ActiveX denetimleriyle çalışmak için yönergeler sağlar.  
+ [Nasıl yapılır: Windows Forms’a ActiveX Denetimleri Ekleme](how-to-add-activex-controls-to-windows-forms.md)  
+ Eski ActiveX denetimleriyle çalışma için yönergeler sağlar.  
   
  [Bir Windows Formunda bir ActiveX Denetimi Barındırmayla İlgili Konular](considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
- ActiveX denetimlerini kullanan bir uygulamayı planlarken göz önünde bulundurmanız gereken noktalar açıklanmaktadır.  
+ ActiveX denetimlerini kullanan bir uygulamayı planlarken göz önünde bulundurmanız gereken şeyleri açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms Denetimleri](index.md)  
- Denetimleri ve bunları ile yapabileceklerinizi tanıtım konulara bağlantılar sağlar.  
+ Denetimlerle ilgili açıklayıcı konuların bağlantılarını ve bunlarla neler yapabileceğinizi sağlar.  
   
  [Windows Forms'ta Kullanıcı Girdisi Doğrulama](../user-input-validation-in-windows-forms.md)  
- Windows Forms denetimleri içeriğini doğrulama arkasında teorik ve temelleri açıklanır.
+ Windows Forms denetimlerinin içeriğini doğrulayan ve teorik bir arka plandaki temel bilgileri açıklar.

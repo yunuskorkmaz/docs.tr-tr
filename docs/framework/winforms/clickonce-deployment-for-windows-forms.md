@@ -1,66 +1,66 @@
 ---
-title: Windows Forms için ClickOnce Dağıtımı
+title: ClickOnce dağıtımı
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ClickOnce deployment [Windows Forms]
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 457d74cda7587c81363c13f1e66ae095e2a145ff
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 13b65173e8aff81a554350942d2559cf2b5395ea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487335"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746340"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows Forms için ClickOnce Dağıtımı
-Aşağıdaki konularda, ClickOnce, istemci bilgisayarlara Windows Forms uygulamaları kolayca dağıtmak için kullanılan bir teknoloji açıklanmaktadır.  
+Aşağıdaki konularda, istemci bilgisayarlarına Windows Forms uygulamaları kolayca dağıtmak için kullanılan bir teknoloji olan ClickOnce açıklanır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [ClickOnce Dağıtım Stratejisini Seçme](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)  
- ClickOnce uygulamaları dağıtmak için çeşitli seçenekler sunar.  
+ ClickOnce uygulamalarını dağıtmak için çeşitli seçenekler sunar.  
   
  [ClickOnce Güncelleştirme Stratejisini Seçme](/visualstudio/deployment/choosing-a-clickonce-update-strategy)  
- ClickOnce uygulamaları güncelleştirmek için çeşitli seçenekler sunar.  
+ ClickOnce uygulamalarını güncelleştirmek için çeşitli seçenekler sunar.  
   
  [ClickOnce Uygulamalarının Güvenliğini Sağlama](/visualstudio/deployment/securing-clickonce-applications)  
- ClickOnce dağıtımı güvenlik etkilerini açıklar.  
+ ClickOnce dağıtımının güvenlik etkilerini açıklar.  
   
  [ClickOnce Dağıtım Sorunlarını Giderme](/visualstudio/deployment/troubleshooting-clickonce-deployments)  
- ClickOnce oluşturabilen en üst düzey hata iletileri belgeleri ve ClickOnce uygulamaları dağıtırken oluşabilecek çeşitli sorunları açıklar.  
+ ClickOnce uygulamaları dağıtıldığında oluşabilecek çeşitli sorunları açıklar ve ClickOnce 'ın oluşturabileceği en üst düzey hata iletilerini belgeler.  
   
  [ClickOnce ve Uygulama Ayarları](/visualstudio/deployment/clickonce-and-application-settings)  
- ClickOnce dağıtımı'uygulama ayarları, uygulama depolar ve gelecekteki alma için kullanıcı ayarlarını nasıl çalıştığı açıklanır.  
+ ClickOnce dağıtımının uygulama ayarları ile nasıl çalıştığını açıklar ve ileride almak üzere uygulama ve Kullanıcı ayarlarını depolar.  
   
  [Güvenilir Uygulama Dağıtımına Genel Bakış](/visualstudio/deployment/trusted-application-deployment-overview)  
- İstemci bilgisayarlarda daha yüksek bir izin düzeyi ile çalıştırmak güvenilir uygulamalar sağlayan bir ClickOnce özelliği açıklar.  
+ Güvenilen uygulamaların istemci bilgisayarlarda daha yüksek bir izin düzeyiyle çalışmasına izin veren bir ClickOnce özelliğini açıklar.  
   
  [ClickOnce ve Authenticode](/visualstudio/deployment/clickonce-and-authenticode)  
- Güvenilir Uygulama Dağıtımı'Authenticode teknolojisi nasıl kullanıldığını açıklar.  
+ Güvenilir uygulama dağıtımında Authenticode teknolojisinin nasıl kullanıldığını açıklar.  
   
  [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
- Komut satırı kullanarak ve SDK Araçları Visual Studio kullanmadan bir ClickOnce uygulamasını dağıtmak için gösterir.  
+ Visual Studio kullanmadan bir ClickOnce uygulaması dağıtmak için komut satırı ve SDK araçları kullanmayı gösterir.  
   
  [Nasıl yapılır: ClickOnce Uygulamaları için Sunucu Bilgisayara Güvenilir Yayımcı Ekleme](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
- İstemci bilgisayarların güvenilen uygulama dağıtımı için gerekli tek seferlik yapılandırmasını gösterir.  
+ Güvenilen uygulama dağıtımı için gerekli olan istemci bilgisayarlarının tek seferlik yapılandırmasını gösterir.  
   
  [Nasıl yapılır: Dağıtım Güncelleştirmeleri için Alternatif Bir Konum Belirtme](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
- Farklı bir konum için bir uygulamanın yeni sürümlerini denetlemek için SDK araçlarını kullanarak bir ClickOnce uygulamasını yapılandırma gösterilmektedir.  
+ Bir uygulamanın yeni sürümleri için farklı bir konum denetlemek üzere SDK araçlarını kullanarak bir ClickOnce uygulaması yapılandırmayı gösterir.  
   
  [İzlenecek yol: ClickOnce Dağıtım API'si ile İsteğe Bağlı Derlemeleri İndirme](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
- API çağrıları, uygulamanızın onu yüklemeye çalışır bir bütünleştirilmiş kod ilk zaman almak için kullanmayı gösterir.  
+ Uygulamanız uygulamayı ilk kez yüklemeye çalıştığında bir derlemeyi almak için API çağrıları kullanmayı gösterir.  
   
  [Nasıl yapılır: Çevrimiçi bir ClickOnce Uygulamasında Sorgu Dize Bilgilerini Alma](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
- Bir ClickOnce uygulamasını çalıştırmak için kullanılan URL alınırken parametreleri gösterir.  
+ ClickOnce uygulamasını çalıştırmak için kullanılan URL 'den parametrelerin alınması gösterilmektedir.  
   
  [ClickOnce Önbelleğine Genel Bakış](/visualstudio/deployment/clickonce-cache-overview)  
- ClickOnce uygulamalarında yerel bilgisayarda depolamak için kullanılan önbellek açıklar.  
+ Yerel bilgisayarda ClickOnce uygulamalarını depolamak için kullanılan önbelleği açıklar.  
   
  [ClickOnce Uygulamalarında Yerel ve Uzak Veri Erişimi](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)  
- Yerel veri dosyaları ve uzak veri kaynaklarını bir ClickOnce uygulamaya erişmek nasıl açıklar.  
+ Bir ClickOnce uygulamasından yerel veri dosyalarına ve uzak veri kaynaklarına nasıl erişebileceğinizi açıklar.  
   
  [Nasıl yapılır: ClickOnce Uygulamasına bir Veri Dosyası Dahil Etme](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
- Böylece ClickOnce veri dizinde kullanılabilir bir dosyayı işaretler gösterilmektedir.  
+ ClickOnce veri dizininde kullanılabilir olacak şekilde bir dosyanın nasıl işaretleneceğini gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

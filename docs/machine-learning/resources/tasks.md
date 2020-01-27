@@ -2,12 +2,12 @@
 title: Makine öğrenimi görevleri
 description: ML.NET sürümünde desteklenen farklı makine öğrenimi görevlerini ve ilişkili görevleri keşfedebilirsiniz.
 ms.date: 12/23/2019
-ms.openlocfilehash: badb096ab3e7fbd575d8594b4fbd0e2ebaf63820
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 6cd41065e668375537b9816ef7a208a65e0a523b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739632"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745105"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 'de makine öğrenimi görevleri
 
@@ -85,6 +85,7 @@ Aşağıdaki eğitim algoritmalarını kullanarak çok bir Lass sınıflandırma
 * <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Vision.ImageClassificationTrainer>
 
 ### <a name="multiclass-classification-inputs-and-outputs"></a>Birden çok Lass sınıflandırma girişleri ve çıkışları
 
@@ -219,3 +220,13 @@ Bu, aşağıdaki çıkışları verir:
 Aşağıdaki algoritmayla bir öneri modeli eğitebilirsiniz:
 
 * <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>
+
+## <a name="forecasting"></a>Tahmin etme
+
+Tahmin görevi, gelecekteki davranışları hakkında tahminler yapmak için geçen zaman serisi verilerini kullanır. Tahmin için geçerli olan senaryolar, hava durumu tahmini, dönemsel satış tahminleri ve tahmine dayalı bakım dahil,
+
+### <a name="forecasting-trainers"></a>Tahmin tahminleri tahmin ediliyor
+
+Aşağıdaki algoritmayla bir tahmin modeli eğitebilirsiniz:
+
+<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*>

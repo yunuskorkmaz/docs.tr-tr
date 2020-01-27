@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: ToolStripControlHost ile Bir Windows Forms Denetimini Kaydırma'
+title: Denetimi ToolStripControlHost ile sarın
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - toolbars [Windows Forms], wrapping controls
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
-ms.openlocfilehash: 6335d09a89225ae1e202a781a73bfd149608f5fc
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c7dbe042623006ed9501016669d6451ba0667cbc
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364194"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728184"
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Nasıl yapılır: ToolStripControlHost ile Bir Windows Forms Denetimini Kaydırma
-<xref:System.Windows.Forms.ToolStripControlHost>, <xref:System.Windows.Forms.ToolStripControlHost> oluşturucuyu kullanarak veya kendisini genişleterek <xref:System.Windows.Forms.ToolStripControlHost> rastgele Windows Forms denetimlerinin barındırılmasına olanak tanımak üzere tasarlanmıştır. Denetimin sık kullanılan özelliklerini ve yöntemlerini sunan özellikleri ve <xref:System.Windows.Forms.ToolStripControlHost> yöntemleri genişleterek ve uygulayarak denetimi sarmayı daha kolay hale getirir. Ayrıca, denetimin <xref:System.Windows.Forms.ToolStripControlHost> olaylarını düzeyinde kullanıma sunabilirsiniz.  
+<xref:System.Windows.Forms.ToolStripControlHost>, <xref:System.Windows.Forms.ToolStripControlHost> Oluşturucusu kullanılarak veya <xref:System.Windows.Forms.ToolStripControlHost> kendisini genişleterek rastgele Windows Forms denetimlerinin barındırılmasına olanak tanımak üzere tasarlanmıştır. <xref:System.Windows.Forms.ToolStripControlHost> genişleterek ve denetimin sık kullanılan özelliklerini ve yöntemlerini ortaya çıkaran özellikleri ve yöntemleri uygulayarak denetimi sarmayı daha kolay hale getirir. Ayrıca, denetimin olaylarını <xref:System.Windows.Forms.ToolStripControlHost> düzeyinde kullanıma sunabilirsiniz.  
   
 ### <a name="to-host-a-control-in-a-toolstripcontrolhost-by-derivation"></a>Türeerek bir ToolStripControlHost 'ta denetim barındırmak için  
   
-1. Genişletin <xref:System.Windows.Forms.ToolStripControlHost>. İstenen denetimde geçen temel sınıf oluşturucusunu çağıran parametresiz bir Oluşturucu uygulayın.  
+1. <xref:System.Windows.Forms.ToolStripControlHost>genişletin. İstenen denetimde geçen temel sınıf oluşturucusunu çağıran parametresiz bir Oluşturucu uygulayın.  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#10)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#10)]
      [!code-vb[System.Windows.Forms.ToolStripControlHost#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#10)]  
   
-2. Sarmalanan denetimle aynı türde bir özellik bildirin ve özelliğin erişimcisinde doğru `Control` denetim türü olarak döndürün.  
+2. Sarmalanan denetimle aynı türde bir özellik bildirin ve özelliğin erişimcisinde doğru denetim türü olarak `Control` döndürün.  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#11](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#11)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#11)]
@@ -57,7 +57,7 @@ ms.locfileid: "68364194"
  [!code-csharp[System.Windows.Forms.ToolStripControlHost#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#13)]
  [!code-vb[System.Windows.Forms.ToolStripControlHost#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#13)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
   
 Bu örnek şunları gerektirir:
   

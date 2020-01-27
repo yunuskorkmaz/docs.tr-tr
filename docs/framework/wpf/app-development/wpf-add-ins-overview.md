@@ -1,5 +1,5 @@
 ---
-title: WPF Eklentilerine Genel Bakış
+title: Eklentilere genel bakış
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add-ins and XAML browser applications [WPF]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 93904e308932ea41c736ca849ce0efb200502a7e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421096"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738947"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF Eklentilerine Genel Bakış
 
@@ -252,7 +252,7 @@ Doğası gereği, ana bilgisayar uygulamalarının bunları nasıl kullanabilece
 
 ## <a name="wpf-add-in-benefits"></a>WPF eklentisi avantajları
 
-WPF eklentisi kullanıcı arabirimleri, <xref:System.Windows.Interop.HwndHost>türetilen bir iç sınıf kullanılarak konak uygulamalardan görüntülendiğinden, bu kullanıcı arabirimleri, düzen, işleme, veri gibi WPF Kullanıcı arabirimi Hizmetleri ile ilgili <xref:System.Windows.Interop.HwndHost> özellikleri tarafından kısıtlanır bağlama, stiller, şablonlar ve kaynaklar. Ancak WPF, iç <xref:System.Windows.Interop.HwndHost> alt sınıfını aşağıdakileri içeren ek yetenekler ile genişlettiğini içerir:
+WPF eklentisi kullanıcı arabirimleri, <xref:System.Windows.Interop.HwndHost>türetilen bir iç sınıf kullanılarak konak uygulamalardan görüntülendiğinden, bu kullanıcı arabirimleri, düzen, işleme, veri bağlama, stiller, şablonlar ve kaynaklar gibi WPF Kullanıcı arabirimi hizmetleriyle ilgili <xref:System.Windows.Interop.HwndHost> özellikleri tarafından kısıtlanır. Ancak WPF, iç <xref:System.Windows.Interop.HwndHost> alt sınıfını aşağıdakileri içeren ek yetenekler ile genişlettiğini içerir:
 
 - Ana bilgisayar uygulamasının Kullanıcı arabirimi ve bir eklentinin Kullanıcı arabirimi arasında sekme. "Eklenti bir kullanıcı arabirimi" programlama modelinin, eklentinin tam olarak güvenilir veya kısmen güvenilir olup olmadığı, sekmeyi etkinleştirmek üzere <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> geçersiz kılmasını sağlamak için eklentinin yan yana bağdaştırıcısını gerektirdiğini unutmayın.
 

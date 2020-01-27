@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DataGridViewComboBoxCell Açılır Listesindeki Nesnelere Erişme'
+title: DataGridViewComboBoxCell açılır listesindeki nesnelere erişme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,64 +9,64 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: 8df9ef1c30704c8b0d0dc7bbec48e53252cf9ae6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7e76ab1ac9089778e4371f4ee65b06d5ebc570bf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665878"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746316"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Nasıl yapılır: Windows Forms DataGridViewComboBoxCell Açılır Listesindeki Nesnelere Erişme
-Gibi <xref:System.Windows.Forms.ComboBox> denetimi <xref:System.Windows.Forms.DataGridViewComboBoxColumn> ve <xref:System.Windows.Forms.DataGridViewComboBoxCell> türleri açılan listelerine rastgele bir nesne eklemek etkinleştirin. Bu özellik, ayrı bir koleksiyonda karşılık gelen nesneleri depolamak zorunda kalmadan bir açılan listedeki karmaşık durumları temsil edebilir.  
+<xref:System.Windows.Forms.ComboBox> denetimi gibi <xref:System.Windows.Forms.DataGridViewComboBoxColumn> ve <xref:System.Windows.Forms.DataGridViewComboBoxCell> türleri, açılan listelerine rastgele nesneler eklemenize olanak tanır. Bu özellikle, ilgili nesneleri ayrı bir koleksiyonda depolamak zorunda kalmadan, karmaşık durumları bir açılan listede temsil edebilirsiniz.  
   
- Farklı <xref:System.Windows.Forms.ComboBox> denetimi <xref:System.Windows.Forms.DataGridView> türlerine sahip değil bir <xref:System.Windows.Forms.ComboBox.SelectedItem%2A> özelliği şu anda seçilen nesne alınıyor. Bunun yerine, ayarlamalısınız <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=nameWithType> veya <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType> özelliğini, iş nesnesinde bir özelliğin adı. Kullanıcı bir seçim yaptığında, hücre iş nesnesi belirtilen özelliği ayarlar <xref:System.Windows.Forms.DataGridViewCell.Value%2A> özelliği.  
+ <xref:System.Windows.Forms.ComboBox> denetiminden farklı olarak, <xref:System.Windows.Forms.DataGridView> türler seçili nesneyi almak için bir <xref:System.Windows.Forms.ComboBox.SelectedItem%2A> özelliğine sahip değildir. Bunun yerine, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=nameWithType> veya <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType> özelliğini iş nesnenizin bir özelliğin adı olarak ayarlamanız gerekir. Kullanıcı bir seçim yaptığında, iş nesnesinin belirtilen özelliği, hücre <xref:System.Windows.Forms.DataGridViewCell.Value%2A> özelliğini ayarlar.  
   
- İş nesnesi aracılığıyla bir hücre değerini almak için `ValueMember` özelliği, iş nesnesine bir başvuru döndürür bir özelliği belirtmelisiniz. Bu nedenle, iş nesnesi türünü denetiminiz altında değil, devralma yoluyla türü genişleterek böyle bir özellik eklemeniz gerekir.  
+ İş nesnesini hücre değeri aracılığıyla almak için `ValueMember` özelliği, iş nesnesinin kendisi için bir başvuru döndüren bir özelliği belirtmelidir. Bu nedenle, iş nesnesinin türü denetiminizin altındaysa, türü devralma yoluyla genişleterek böyle bir özelliği eklemeniz gerekir.  
   
- Nasıl iş nesnesi ile bir açılan listeyi doldurmak ve hücre nesnelerde almak aşağıdaki yordamları göstermek <xref:System.Windows.Forms.DataGridViewCell.Value%2A> özelliği.  
+ Aşağıdaki yordamlarda, bir açılan listeyi iş nesneleriyle doldurma ve nesneleri hücre <xref:System.Windows.Forms.DataGridViewCell.Value%2A> özelliği aracılığıyla alma işlemleri gösterilmektedir.  
   
-### <a name="to-add-business-objects-to-the-drop-down-list"></a>İş nesnesi aşağı açılan listesine eklemek için  
+### <a name="to-add-business-objects-to-the-drop-down-list"></a>Açılan listeye iş nesneleri eklemek için  
   
-1. Yeni bir <xref:System.Windows.Forms.DataGridViewComboBoxColumn> ve doldurma kendi <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> koleksiyonu. Alternatif olarak, sütun ayarlayabilirsiniz <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> özelliğini iş nesneleri koleksiyonu. Bu durumda, ancak, "atanmamış" açılan listeye koleksiyonunuzda karşılık gelen iş nesne oluşturulmadan ekleyemezsiniz.  
+1. Yeni bir <xref:System.Windows.Forms.DataGridViewComboBoxColumn> oluşturun ve <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> koleksiyonunu doldurun. Alternatif olarak, sütun <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> özelliğini iş nesneleri koleksiyonuna ayarlayabilirsiniz. Ancak, bu durumda, koleksiyonunuzda karşılık gelen bir iş nesnesi oluşturmadan açılan listeye "atanmamış" ekleyemezsiniz.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#110)]  
   
-2. Ayarlama <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> ve <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> özellikleri. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> aşağı açılan listede görüntülenecek iş nesnesinin özelliğini gösterir. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> iş nesnesine bir başvuru döndürür özelliği belirtir.  
+2. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> ve <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> özelliklerini ayarlayın. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, açılan listede gösterilecek iş nesnesinin özelliğini gösterir. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>, iş nesnesine bir başvuru döndüren özelliği gösterir.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#115)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#115)]  
   
-3. İş nesne türünüz geçerli örneğe bir başvuru döndürür bir özelliği içerdiğinden emin olun. Bu özellik, atanan değer kullanılarak adlandırılmalıdır. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> önceki adımda.  
+3. İş nesnesi türünün geçerli örneğe bir başvuru döndüren bir özellik içerdiğinden emin olun. Bu özellik, önceki adımda <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> için atanan değerle birlikte adlandırılmalıdır.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#310)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#310)]  
   
-### <a name="to-retrieve-the-currently-selected-business-object"></a>Seçili iş nesnesi alınamadı  
+### <a name="to-retrieve-the-currently-selected-business-object"></a>Şu anda seçili olan iş nesnesini almak için  
   
-- Hücreyi alma <xref:System.Windows.Forms.DataGridViewCell.Value%2A> özelliği ve iş nesne türüne dönüştürün.  
+- Hücreyi <xref:System.Windows.Forms.DataGridViewCell.Value%2A> özelliğini alın ve iş nesnesi türüne dönüştürün.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#120)]  
   
 ## <a name="example"></a>Örnek  
- Tam bir örnek açılır listesindeki nesnelere iş kullanımını gösterir. Örnekte, bir <xref:System.Windows.Forms.DataGridView> denetimin bir koleksiyonuna bağlı `Task` nesneleri. Her `Task` nesnesinin bir `AssignedTo` gösteren özellik `Employee` nesne şu anda bu göreve atanan kişi. `Assigned To` Sütunu görüntüler `Name` her özellik değerini atanan çalışan veya "atanmamış" if `Task.AssignedTo` özellik değeri `null`.  
+ Tam örnek, iş nesnelerinin bir açılan listede kullanımını gösterir. Örnekte, bir <xref:System.Windows.Forms.DataGridView> denetimi bir `Task` nesneleri koleksiyonuna bağlanır. Her `Task` nesnesi, o göreve atanmış olan `Employee` nesnesini gösteren bir `AssignedTo` özelliğine sahiptir. `Assigned To` sütununda, atanan her çalışana ait `Name` Özellik değeri veya `Task.AssignedTo` Özellik değeri `null`ise "atanmamış" görüntülenir.  
   
- Bu örnek davranışını görüntülemek için aşağıdaki adımları gerçekleştirin:  
+ Bu örneğin davranışını görüntülemek için aşağıdaki adımları gerçekleştirin:  
   
-1. Atamalarını değiştirmek `Assigned To` farklı değerler aşağı açılan listelerden seçerek veya CTRL + 0, birleşik giriş kutusu hücredeki tuşuna basarak sütun.  
+1. `Assigned To` sütunundaki atamaları, açılan listelerden farklı değerler seçerek veya Birleşik giriş kutusu hücresinde CTRL + 0 tuşlarına basarak değiştirin.  
   
-2. Tıklayın `Generate Report` geçerli atamaları görüntülenecek. Bu gösteren bir değişiklik `Assigned To` sütun otomatik olarak güncelleştirir `tasks` koleksiyonu.  
+2. Geçerli atamaları göstermek için `Generate Report` ' ye tıklayın. Bu, `Assigned To` sütununda bir değişikliğin `tasks` koleksiyonunu otomatik olarak güncelleştirdiğini gösterir.  
   
-3. ' A tıklayın bir `Request Status` çağırmak için düğme `RequestStatus` yöntemi geçerli `Employee` ilgili satır için nesne. Bu, seçili nesne başarıyla alınmış gösterir.  
+3. Bu satır için geçerli `Employee` nesnesinin `RequestStatus` yöntemini çağırmak için bir `Request Status` düğmesine tıklayın. Bu, seçilen nesnenin başarıyla alındığını gösterir.  
   
  [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#000)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- Sistem ve System.Windows.Forms öğelerini derlemelerine başvurular.  
+- System ve System. Windows. Forms derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

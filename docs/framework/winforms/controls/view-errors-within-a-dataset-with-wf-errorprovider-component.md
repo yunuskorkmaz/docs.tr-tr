@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms ErrorProvider Bileşeni ile DataSet İçindeki Hataları Görüntüleme'
+title: ErrorProvider bileşeni kullanarak bir veri kümesi Içindeki hataları görüntüleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 3dbd2ccca607869a6f28bc5b3bd1c9f0769db9f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8c2155bf288db89b5d53567738fd399b915d50b6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950076"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745459"
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Nasıl yapılır: Windows Forms ErrorProvider Bileşeni ile DataSet İçindeki Hataları Görüntüleme
-Bir veri kümesi veya başka <xref:System.Windows.Forms.ErrorProvider> bir veri kaynağı içindeki sütun hatalarını görüntülemek için Windows Forms bileşenini kullanabilirsiniz. <xref:System.Windows.Forms.ErrorProvider> Bir bileşenin veri hatalarını bir form üzerinde görüntülemesi için, bir denetimle doğrudan ilişkilendirilmesi gerekmez. Bir veri kaynağına bağlandıktan sonra, aynı veri kaynağına bağlanan herhangi bir denetimin yanında bir hata simgesi görüntülenebilir.  
+Bir veri kümesi veya başka bir veri kaynağı içindeki sütun hatalarını görüntülemek için Windows Forms <xref:System.Windows.Forms.ErrorProvider> bileşenini kullanabilirsiniz. Bir <xref:System.Windows.Forms.ErrorProvider> bileşenin veri hatalarını bir form üzerinde görüntülemesi için, bir denetimle doğrudan ilişkilendirilmesi gerekmez. Bir veri kaynağına bağlandıktan sonra, aynı veri kaynağına bağlanan herhangi bir denetimin yanında bir hata simgesi görüntülenebilir.  
   
 > [!NOTE]
-> Çalışma zamanında hata sağlayıcısının <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> ve <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> özelliklerini değiştirirseniz <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> , çakışmaları önlemek için yöntemini kullanmanız gerekir.  
+> Çalışma zamanında hata sağlayıcısının <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> ve <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> özelliklerini değiştirirseniz, çakışmaları önlemek için <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> yöntemini kullanmanız gerekir.  
   
 ### <a name="to-display-data-errors"></a>Veri hatalarını görüntüleme  
   
@@ -40,7 +40,7 @@ Bir veri kümesi veya başka <xref:System.Windows.Forms.ErrorProvider> bir veri 
     errorProvider1.DataMember = "Customers";  
     ```  
   
-2. <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> Özelliğini form olarak ayarlayın.  
+2. <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> özelliğini form olarak ayarlayın.  
   
     ```vb  
     ErrorProvider1.ContainerControl = Me  
@@ -65,4 +65,4 @@ Bir veri kümesi veya başka <xref:System.Windows.Forms.ErrorProvider> bir veri 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ErrorProvider Bileşenine Genel Bakış](errorprovider-component-overview-windows-forms.md)
-- [Nasıl yapılır: Windows Forms ErrorProvider Bileşeni ile form doğrulama için hata simgeleri görüntüle](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [Nasıl yapılır: Windows Forms ErrorProvider Bileşeni ile Form Doğrulama için Hata Simgeleri Görüntüleme](display-error-icons-for-form-validation-with-wf-errorprovider.md)

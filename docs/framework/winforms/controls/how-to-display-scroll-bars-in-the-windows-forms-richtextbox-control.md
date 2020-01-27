@@ -1,43 +1,43 @@
 ---
-title: 'Nasıl yapılır: Windows Forms RichTextBox Denetiminde Kaydırma Çubukları Görüntüleme'
+title: RichTextBox denetiminde kaydırma çubuklarını görüntüleme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes [Windows Forms], displaying scroll bars
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-ms.openlocfilehash: 152706cee511e4bca1dd324a652e8077b1f8548a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2185b572ef20765043d3df3dbfd8bf5b21cfac28
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650485"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745553"
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox Denetiminde Kaydırma Çubukları Görüntüleme
-Varsayılan olarak, Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi gerektiği gibi yatay ve dikey kaydırma çubukları görüntülenir. Yedi olası değerleri vardır <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> özelliği <xref:System.Windows.Forms.RichTextBox> denetimi, aşağıdaki tabloda açıklanmıştır.  
+Varsayılan olarak Windows Forms <xref:System.Windows.Forms.RichTextBox> denetim, yatay ve dikey kaydırma çubuklarını gerektiği şekilde görüntüler. Aşağıdaki tabloda açıklanan <xref:System.Windows.Forms.RichTextBox> denetiminin <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> özelliği için yedi olası değer vardır.  
   
-### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>RichTextBox denetiminde kaydırma çubukları görüntülemek için  
+### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>Bir RichTextBox denetiminde kaydırma çubuklarını görüntüleme  
   
-1. Ayarlama <xref:System.Windows.Forms.RichTextBox.Multiline%2A> özelliğini `true`. Hiçbir tür yatay kaydırma çubuğu dahil olmak üzere, görüntüler, <xref:System.Windows.Forms.RichTextBox.Multiline%2A> özelliği `false`.  
+1. Ayarlama <xref:System.Windows.Forms.RichTextBox.Multiline%2A> özelliğini `true`. <xref:System.Windows.Forms.RichTextBox.Multiline%2A> özelliği `false`olarak ayarlanırsa yatay dahil olmak üzere kaydırma çubuğu türü görüntülenmez.  
   
-2. Ayarlama <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> uygun bir değere <xref:System.Windows.Forms.RichTextBoxScrollBars> sabit listesi.  
-  
-    |Değer|Açıklama|  
-    |-----------|-----------------|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (varsayılan)|Yalnızca metin genişlik veya denetim uzunluğunu aşarsa, yatay veya dikey kaydırma çubukları veya her ikisi de görüntüler.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|Hiçbir zaman herhangi bir türde kaydırma çubuğu görüntüler.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|Bir yatay kaydırma çubuğu yalnızca metin denetim genişliği aştığında görüntüler. (Bunun gerçekleşmesi <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> özelliği ayarlanmalıdır `false`.)|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|Bir dikey kaydırma çubuğu yalnızca metin denetimin yüksekliği aştığında görüntüler.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedHorizontal>|Yatay kaydırma ne zaman görüntüler <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> özelliği `false`. Metin denetim genişliği geçmediği zaman kaydırma çubuğu gri görünür.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical>|Her zaman bir dikey kaydırma çubuğu görüntülenir. Metin denetimi uzunluğunu aşan değil kaydırma çubuğu gri görünür.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth>|Her zaman bir dikey kaydırma çubuğu görüntüler. Yatay kaydırma ne zaman görüntüler <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> özelliği `false`. Kaydırma çubuklarının metin genişlik veya denetim uzunluğunu aşmadığından gri görünür.|  
-  
-3. Ayarlama <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> özelliğini uygun bir değer.  
+2. <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> özelliğini <xref:System.Windows.Forms.RichTextBoxScrollBars> sabit listesinin uygun bir değeri olarak ayarlayın.  
   
     |Değer|Açıklama|  
     |-----------|-----------------|  
-    |`false`|Denetimdeki metnin, denetiminin genişliğini satır sonu ulaşılana kadar sağa doğru kayar şekilde sığacak şekilde otomatik olarak ayarlanmaz. Yukarıda yatay kaydırma çubuklarını veya her ikisi de seçerseniz, bu değeri kullanın.|  
-    |`true` (varsayılan)|Denetimdeki metnin, denetiminin genişliğini sığacak şekilde otomatik olarak ayarlanır. Yatay kaydırma çubuğu görüntülenmez. Dikey kaydırma çubukları veya hiçbiri, yukarıdaki bir veya daha fazla paragraflar görüntülenecek seçerseniz, bu değeri kullanın.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (varsayılan)|Yalnızca metin denetimin genişliğini veya uzunluğunu aştığında yatay veya dikey kaydırma çubuklarını veya her ikisini birden görüntüler.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|Hiçbir tür kaydırma çubuğunu görüntülemez.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|Yalnızca metin denetimin genişliğini aştığında bir yatay kaydırma çubuğu görüntüler. (Bunun gerçekleşmesi için <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> özelliğinin `false`olarak ayarlanması gerekir.)|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|Yalnızca metin denetimin yüksekliğini aştığında dikey kaydırma çubuğunu görüntüler.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedHorizontal>|<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> özelliği `false`olarak ayarlandığında bir yatay kaydırma çubuğu görüntüler. Metin denetimin genişliğini aşmazsa kaydırma çubuğu soluk görünür.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical>|Her zaman dikey bir kaydırma çubuğu görüntüler. Metin denetimin uzunluğunu aşmazsa kaydırma çubuğu soluk görünür.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth>|Her zaman dikey bir kaydırma çubuğu görüntüler. <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> özelliği `false`olarak ayarlandığında bir yatay kaydırma çubuğu görüntüler. Metin, denetimin genişliğini veya uzunluğunu aşmazsa, kaydırma çubukları gri görünür.|  
+  
+3. <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> özelliğini uygun bir değer olarak ayarlayın.  
+  
+    |Değer|Açıklama|  
+    |-----------|-----------------|  
+    |`false`|Denetimdeki metin, denetimin genişliğine uyacak şekilde otomatik olarak düzeltilmez, bu nedenle, bir satır sonuna ulaşılana kadar sağa kayacaktır. Yukarıdaki yatay kaydırma çubuklarını veya her ikisini de seçtiyseniz bu değeri kullanın.|  
+    |`true` (varsayılan)|Denetimdeki metin, denetimin genişliğine uyacak şekilde otomatik olarak ayarlanır. Yatay kaydırma çubuğu görünmez. Bir veya daha fazla paragraf göstermek için yukarıdaki dikey kaydırma çubuklarını veya hiçbirini seçtiyseniz bu değeri kullanın.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

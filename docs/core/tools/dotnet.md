@@ -2,18 +2,18 @@
 title: DotNet komutu
 description: DotNet komutu (.NET Core CLI araçları için genel sürücü) ve kullanımı hakkında bilgi edinin.
 ms.date: 06/04/2018
-ms.openlocfilehash: a22340c26ca2e483e43857e2ecb31f2ab53b60f4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: fe90968560b58471c279fcd2097741ea476cef0b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117513"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734072"
 ---
 # <a name="dotnet-command"></a>DotNet komutu
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
 `dotnet`-.NET kaynak kodu ve ikili dosyaları yönetmeye yönelik bir araç.
 
@@ -47,9 +47,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ## <a name="description"></a>Açıklama
 
-`dotnet`, .NET kaynak kodu ve ikili dosyalarını yönetmeye yönelik bir araçtır. [`dotnet build`](dotnet-build.md) [Ve`dotnet run`](dotnet-run.md)gibi belirli görevleri gerçekleştiren komutları açığa çıkarır. Her komut kendi bağımsız değişkenlerini tanımlar. Kısa `--help` yardım belgelerine erişmek için her komuttan sonra yazın.
+`dotnet` .NET kaynak kodu ve ikili dosyalarını yönetmeye yönelik bir araçtır. [`dotnet build`](dotnet-build.md) ve [`dotnet run`](dotnet-run.md)gibi belirli görevleri gerçekleştiren komutları açığa çıkarır. Her komut kendi bağımsız değişkenlerini tanımlar. Kısa yardım belgelerine erişmek için her komuttan sonra `--help` yazın.
 
-`dotnet`, gibi bir uygulama DLL `dotnet myapp.dll`belirterek uygulamaları çalıştırmak için kullanılabilir. Dağıtım seçenekleri hakkında bilgi edinmek için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md) .
+`dotnet`, `dotnet myapp.dll`gibi bir uygulama DLL belirterek uygulamaları çalıştırmak için kullanılabilir. Dağıtım seçenekleri hakkında bilgi edinmek için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md) .
 
 ## <a name="options"></a>Seçenekler
 
@@ -67,7 +67,7 @@ Araştırmanın yoklama ilkesini ve derlemelerini içeren yol.
 
 Bir *Deps. JSON* dosyasının yolu.
 
-Bir *Deps. JSON* dosyası, derleme çakışmalarını çözmek için kullanılan bağımlılıkların, derleme bağımlılıklarının ve sürüm bilgilerinin bir listesini içerir. Bu dosya hakkında daha fazla bilgi için bkz. GitHub üzerinde [çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) .
+Bir *Deps. JSON* dosyası, derleme çakışmalarını çözmek için kullanılan bağımlılıklar, derleme bağımlılıkları ve sürüm bilgilerinin bir listesini içerir. Bu dosya hakkında daha fazla bilgi için bkz. GitHub üzerinde [çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) .
 
 `-d|--diagnostics`
 
@@ -79,7 +79,7 @@ Uygulamayı çalıştırmak için kullanılacak .NET Core çalışma zamanının
 
 `-h|--help`
 
-Gibi belirli bir komutun `dotnet build --help`belgelerini yazdırır. `dotnet --help`kullanılabilir komutların bir listesini yazdırır.
+`dotnet build --help`gibi belirli bir komutun belgelerini yazdırır. `dotnet --help`, kullanılabilir komutların bir listesini yazdırır.
 
 `--info`
 
@@ -97,9 +97,9 @@ Yüklü .NET Core SDK 'larını görüntüler.
 
 Gerekli paylaşılan çerçeve kullanılabilir olmadığında davranışını tanımlar. `N` aşağıdakilerden biri olabilir:
 
-- `0`-Hatta ikincil sürüm iletmeyi devre dışı bırakın.
-- `1`-Önemli sürümde değil, küçük sürümde ilet. Bu varsayılan davranıştır.
-- `2`-Küçük ve büyük sürümlerde ilet.
+- `0`-alt düzey sürüm iletmeyi devre dışı bırakın.
+- `1`-önemli sürümde değil, küçük sürümde ilet. Bu varsayılan davranıştır.
+- `2`-küçük ve büyük sürümlerde ilet.
 
  Daha fazla bilgi için bkz. [Ileri alma](../whats-new/dotnet-core-2-1.md#roll-forward).
 
@@ -107,11 +107,11 @@ Gerekli paylaşılan çerçeve kullanılabilir olmadığında davranışını ta
 
 *Runtimeconfig. JSON* dosyasının yolu.
 
-*Runtimeconfig. JSON* dosyası, çalışma zamanı yapılandırma ayarlarını içeren bir yapılandırma dosyasıdır. Daha fazla bilgi için bkz. GitHub 'da [çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) .
+*Runtimeconfig. JSON* dosyası, çalışma zamanı ayarlarını içeren bir yapılandırma dosyasıdır. Daha fazla bilgi için bkz. [.NET Core çalışma zamanı yapılandırma ayarları](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
-Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]` Her komutta desteklenmez; Bu seçeneğin kullanılabilir olup olmadığını anlamak için belirli komut sayfasına bakın.
+Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`. Her komutta desteklenmez; Bu seçeneğin kullanılabilir olup olmadığını anlamak için belirli komut sayfasına bakın.
 
 `--version`
 
@@ -143,7 +143,7 @@ Uygulamayı çalıştırmak için kullanılacak .NET Core çalışma zamanının
 
 `-h|--help`
 
-Gibi belirli bir komutun `dotnet build --help`belgelerini yazdırır. `dotnet --help`kullanılabilir komutların bir listesini yazdırır.
+`dotnet build --help`gibi belirli bir komutun belgelerini yazdırır. `dotnet --help`, kullanılabilir komutların bir listesini yazdırır.
 
 `--info`
 
@@ -151,17 +151,17 @@ Gibi belirli bir komutun `dotnet build --help`belgelerini yazdırır. `dotnet --
 
 `--roll-forward-on-no-candidate-fx`
 
- , Olarak `0`ayarlandıysa, ikincil sürüm iletmeyi devre dışı bırakır. Daha fazla bilgi için bkz. [Ileri alma](../whats-new/dotnet-core-2-1.md#roll-forward).
+ `0`olarak ayarlandıysa, ikincil sürüm iletmeyi devre dışı bırakır. Daha fazla bilgi için bkz. [Ileri alma](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 `--runtimeconfig`
 
 *Runtimeconfig. JSON* dosyasının yolu.
 
-*Runtimeconfig. JSON* dosyası, çalışma zamanı yapılandırma ayarlarını içeren bir yapılandırma dosyasıdır. Daha ayrıntılı bilgi için bkz. [GitHub 'Da çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
+*Runtimeconfig. JSON* dosyası, çalışma zamanı ayarlarını içeren bir yapılandırma dosyasıdır. Daha fazla bilgi için bkz. [.NET Core çalışma zamanı yapılandırma ayarları](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
-Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]` Her komutta desteklenmez; Bu seçeneğin kullanılabilir olup olmadığını anlamak için belirli komut sayfasına bakın.
+Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`. Her komutta desteklenmez; Bu seçeneğin kullanılabilir olup olmadığını anlamak için belirli komut sayfasına bakın.
 
 `--version`
 
@@ -189,7 +189,7 @@ Uygulamayı çalıştırmak için kullanılacak .NET Core çalışma zamanının
 
 `-h|--help`
 
-Gibi belirli bir komutun `dotnet build --help`belgelerini yazdırır. `dotnet --help`kullanılabilir komutların bir listesini yazdırır.
+`dotnet build --help`gibi belirli bir komutun belgelerini yazdırır. `dotnet --help`, kullanılabilir komutların bir listesini yazdırır.
 
 `--info`
 
@@ -199,11 +199,11 @@ Gibi belirli bir komutun `dotnet build --help`belgelerini yazdırır. `dotnet --
 
 *Runtimeconfig. JSON* dosyasının yolu.
 
-*Runtimeconfig. JSON* dosyası, çalışma zamanı yapılandırma ayarlarını içeren bir yapılandırma dosyasıdır. Daha ayrıntılı bilgi için bkz. [GitHub 'Da çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
+*Runtimeconfig. JSON* dosyası, çalışma zamanı ayarlarını içeren bir yapılandırma dosyasıdır. Daha fazla bilgi için bkz. [.NET Core çalışma zamanı yapılandırma ayarları](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
-Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]` Her komutta desteklenmez; Bu seçeneğin kullanılabilir olup olmadığını anlamak için belirli komut sayfasına bakın.
+Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`. Her komutta desteklenmez; Bu seçeneğin kullanılabilir olup olmadığını anlamak için belirli komut sayfasına bakın.
 
 `--version`
 
@@ -306,7 +306,7 @@ Komut | İşlev
 
 ### <a name="additional-tools"></a>Ek araçlar
 
-.NET Core SDK 2.1.300 ' den itibaren, yalnızca kullanılarak `DotnetCliToolReference` proje bazında kullanılabilen birçok araç, .NET Core SDK bir parçası olarak kullanılabilir. Bu araçlar aşağıdaki tabloda listelenmiştir:
+.NET Core SDK 2.1.300 ile başlayarak, yalnızca .NET Core SDK bir parçası olarak yalnızca `DotnetCliToolReference` kullanılarak proje temelinde kullanılabilen birçok araç vardır. Bu araçlar aşağıdaki tabloda listelenmiştir:
 
 | Aracı                                              | İşlev                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
@@ -316,7 +316,7 @@ Komut | İşlev
 | [Kullanıcı gizli dizileri](/aspnet/core/security/app-secrets) | Geliştirme Kullanıcı gizli dizilerini yönetir.                            |
 | [Servisi](/aspnet/core/tutorials/dotnet-watch)      | Dosyalar değiştiğinde bir komutu çalıştıran bir dosya İzleyicisi başlatır. |
 
-Her araç hakkında daha fazla bilgi için, `dotnet <tool-name> --help`yazın.
+Her araç hakkında daha fazla bilgi için `dotnet <tool-name> --help`yazın.
 
 ## <a name="examples"></a>Örnekler
 
@@ -334,7 +334,7 @@ Belirli bir dizinde bir proje ve onun bağımlılıklarını oluşturun:
 
 `dotnet build`
 
-Bir uygulama DLL 'SI çalıştırın, `myapp.dll`örneğin:
+`myapp.dll`gibi bir uygulama DLL 'SI çalıştırın:
 
 `dotnet myapp.dll`
 
@@ -344,7 +344,7 @@ Bir uygulama DLL 'SI çalıştırın, `myapp.dll`örneğin:
 
 `DOTNET_PACKAGES`
 
-Genel paketler klasörü. Ayarlanmamışsa, varsayılan `~/.nuget/packages` olarak UNIX veya `%userprofile%\.nuget\packages` Windows üzerinde olur.
+Genel paketler klasörü. Ayarlanmamışsa, varsayılan olarak UNIX veya Windows üzerinde `%userprofile%\.nuget\packages` `~/.nuget/packages`.
 
 `DOTNET_SERVICING`
 
@@ -352,21 +352,21 @@ Genel paketler klasörü. Ayarlanmamışsa, varsayılan `~/.nuget/packages` olar
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-.NET Core araçları kullanımıyla ilgili verilerin toplanıp Microsoft 'a gönderilip gönderilmeyeceğini belirtir. Telemetri özelliğini `true` devre dışı bırakmak için olarak ayarlayın (değerler `true`, `1`veya `yes` kabul edildi). Aksi takdirde, telemetri `false` özelliklerini (değerler `false`, `0`veya `no` kabul edildi) kabul etmek için olarak ayarlayın. Ayarlanmamışsa, varsayılan `false` olarak ve telemetri özelliği etkindir.
+.NET Core araçları kullanımıyla ilgili verilerin toplanıp Microsoft 'a gönderilip gönderilmeyeceğini belirtir. Telemetri özelliğinin (değerler `true`, `1`veya `yes` kabul edilir) devre dışı bırakmak için `true` olarak ayarlayın. Aksi takdirde, telemetri özelliklerine (değerler `false`, `0`veya `no` kabul edilir) kabul etmek için `false` olarak ayarlayın. Ayarlanmamışsa, varsayılan `false` ve telemetri özelliği etkindir.
 
 `DOTNET_MULTILEVEL_LOOKUP`
 
-.NET Core çalışma zamanı, paylaşılan Framework veya SDK 'nın genel konumdan çözümlenip çözümlenmediğini belirtir. Ayarlanmamışsa, varsayılan olarak `true`olur. Genel konumdan `false` çözümlenmemelidir ve yalıtılmış .NET Core yüklemelerine sahip olacak şekilde ayarlayın (değerler `0` veya `false` kabul edilir). Çoklu düzey arama hakkında daha fazla bilgi için bkz. [çok düzeyli SharedFX arama](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+.NET Core çalışma zamanı, paylaşılan Framework veya SDK 'nın genel konumdan çözümlenip çözümlenmediğini belirtir. Ayarlanmamışsa, varsayılan olarak `true`olur. Genel konumdan çözümlenmemelidir ve yalıtılmış .NET Core yüklemelerine sahip olmak için `false` olarak ayarlayın (değerler `0` veya `false` kabul edilir). Çoklu düzey arama hakkında daha fazla bilgi için bkz. [çok düzeyli SharedFX arama](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
 
-, Olarak `0`ayarlandıysa, ikincil sürüm iletmeyi devre dışı bırakır. Daha fazla bilgi için bkz. [Ileri alma](../whats-new/dotnet-core-2-1.md#roll-forward).
+`0`olarak ayarlandıysa, ikincil sürüm iletmeyi devre dışı bırakır. Daha fazla bilgi için bkz. [Ileri alma](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2,0](#tab/netcore20)
 
 `DOTNET_PACKAGES`
 
-Birincil paket önbelleği. Ayarlanmamışsa, varsayılan `$HOME/.nuget/packages` olarak UNIX veya `%userprofile%\.nuget\packages` Windows üzerinde olur.
+Birincil paket önbelleği. Ayarlanmamışsa, varsayılan olarak UNIX veya Windows üzerinde `%userprofile%\.nuget\packages` `$HOME/.nuget/packages`.
 
 `DOTNET_SERVICING`
 
@@ -374,17 +374,17 @@ Birincil paket önbelleği. Ayarlanmamışsa, varsayılan `$HOME/.nuget/packages
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-.NET Core araçları kullanımıyla ilgili verilerin toplanıp Microsoft 'a gönderilip gönderilmeyeceğini belirtir. Telemetri özelliğini `true` devre dışı bırakmak için olarak ayarlayın (değerler `true`, `1`veya `yes` kabul edildi). Aksi takdirde, telemetri `false` özelliklerini (değerler `false`, `0`veya `no` kabul edildi) kabul etmek için olarak ayarlayın. Ayarlanmamışsa, varsayılan `false` olarak ve telemetri özelliği etkindir.
+.NET Core araçları kullanımıyla ilgili verilerin toplanıp Microsoft 'a gönderilip gönderilmeyeceğini belirtir. Telemetri özelliğinin (değerler `true`, `1`veya `yes` kabul edilir) devre dışı bırakmak için `true` olarak ayarlayın. Aksi takdirde, telemetri özelliklerine (değerler `false`, `0`veya `no` kabul edilir) kabul etmek için `false` olarak ayarlayın. Ayarlanmamışsa, varsayılan `false` ve telemetri özelliği etkindir.
 
 `DOTNET_MULTILEVEL_LOOKUP`
 
-.NET Core çalışma zamanı, paylaşılan Framework veya SDK 'nın genel konumdan çözümlenip çözümlenmediğini belirtir. Ayarlanmamışsa, varsayılan olarak `true`olur. Genel konumdan `false` çözümlenmemelidir ve yalıtılmış .NET Core yüklemelerine sahip olacak şekilde ayarlayın (değerler `0` veya `false` kabul edilir). Çoklu düzey arama hakkında daha fazla bilgi için bkz. [çok düzeyli SharedFX arama](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+.NET Core çalışma zamanı, paylaşılan Framework veya SDK 'nın genel konumdan çözümlenip çözümlenmediğini belirtir. Ayarlanmamışsa, varsayılan olarak `true`olur. Genel konumdan çözümlenmemelidir ve yalıtılmış .NET Core yüklemelerine sahip olmak için `false` olarak ayarlayın (değerler `0` veya `false` kabul edilir). Çoklu düzey arama hakkında daha fazla bilgi için bkz. [çok düzeyli SharedFX arama](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 `DOTNET_PACKAGES`
 
-Birincil paket önbelleği. Ayarlanmamışsa, varsayılan `$HOME/.nuget/packages` olarak UNIX veya `%userprofile%\.nuget\packages` Windows üzerinde olur.
+Birincil paket önbelleği. Ayarlanmamışsa, varsayılan olarak UNIX veya Windows üzerinde `%userprofile%\.nuget\packages` `$HOME/.nuget/packages`.
 
 `DOTNET_SERVICING`
 
@@ -392,10 +392,11 @@ Birincil paket önbelleği. Ayarlanmamışsa, varsayılan `$HOME/.nuget/packages
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-.NET Core araçları kullanımıyla ilgili verilerin toplanıp Microsoft 'a gönderilip gönderilmeyeceğini belirtir. Telemetri özelliğini `true` devre dışı bırakmak için olarak ayarlayın (değerler `true`, `1`veya `yes` kabul edildi). Aksi takdirde, telemetri `false` özelliklerini (değerler `false`, `0`veya `no` kabul edildi) kabul etmek için olarak ayarlayın. Ayarlanmamışsa, varsayılan `false` olarak ve telemetri özelliği etkindir.
+.NET Core araçları kullanımıyla ilgili verilerin toplanıp Microsoft 'a gönderilip gönderilmeyeceğini belirtir. Telemetri özelliğinin (değerler `true`, `1`veya `yes` kabul edilir) devre dışı bırakmak için `true` olarak ayarlayın. Aksi takdirde, telemetri özelliklerine (değerler `false`, `0`veya `no` kabul edilir) kabul etmek için `false` olarak ayarlayın. Ayarlanmamışsa, varsayılan `false` ve telemetri özelliği etkindir.
 
 ---
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [.NET Core çalışma zamanı yapılandırma ayarları](../run-time-config/index.md)

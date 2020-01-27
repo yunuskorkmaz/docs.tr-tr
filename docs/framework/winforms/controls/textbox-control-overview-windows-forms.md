@@ -1,5 +1,5 @@
 ---
-title: TextBox Denetimine Genel Bakış (Windows Forms)
+title: TextBox Denetimine Genel Bakış
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], about TextBox controls
 - text boxes [Windows Forms], adding
 ms.assetid: d1a9c7f5-fa53-480a-a75c-158f8649ea2f
-ms.openlocfilehash: a91b67df1071c79707bb20a68efb4d5e6f083ae0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06ab460d720d17331881b5ba653263160eaf3cb3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932554"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742799"
 ---
 # <a name="textbox-control-overview-windows-forms"></a>TextBox Denetimine Genel Bakış (Windows Forms)
-Windows Forms metin kutuları, kullanıcıdan giriş almak veya metni görüntülemek için kullanılır. <xref:System.Windows.Forms.TextBox> Salt okunur ayrıca çalışabilmesine rağmen denetim düzenlenebilir metin için genellikle kullanılır. Metin kutuları, birden çok satır görüntüleme, denetimin boyutunu metni kaydırma ve temel biçimlendirmeler ekleyin. <xref:System.Windows.Forms.TextBox> Denetim görüntülenen veya denetimine girilen metni için bir tek biçim stili sağlar. Birden çok biçimli metin görüntülemek için kullanın <xref:System.Windows.Forms.RichTextBox> denetimi. Daha fazla bilgi için [RichTextBox denetimine genel bakış](richtextbox-control-overview-windows-forms.md).  
+Windows Forms metin kutuları, kullanıcıdan giriş almak veya metin göstermek için kullanılır. <xref:System.Windows.Forms.TextBox> denetimi genellikle düzenlenebilir metin için kullanılır, ancak salt okunabilir hale getirilebilir. Metin kutuları birden çok satır görüntüleyebilir, metni denetimin boyutuna kaydırabilirler ve temel biçimlendirme ekleyebilir. <xref:System.Windows.Forms.TextBox> denetimi, görüntülenmiş veya denetime girilen metin için tek bir biçim stili sağlar. Birden çok biçimli metin türünü göstermek için <xref:System.Windows.Forms.RichTextBox> denetimini kullanın. Daha fazla bilgi için bkz. [RichTextBox denetimine genel bakış](richtextbox-control-overview-windows-forms.md).  
   
-## <a name="working-with-the-textbox-control"></a>TextBox denetimi ile çalışma  
- Denetimi tarafından görüntülenen metni bulunan <xref:System.Windows.Forms.TextBox.Text%2A> özelliği. Varsayılan olarak, en çok 2048 karakter metin kutusuna girebilirsiniz. Ayarlarsanız <xref:System.Windows.Forms.TextBox.Multiline%2A> özelliğini `true`, en fazla 32 KB metin girebilirsiniz. <xref:System.Windows.Forms.TextBox.Text%2A> Özelliği, çalışma zamanında çalışma zamanında kodu veya kullanıcı girişi ile Özellikler penceresinde, tasarım zamanında ayarlanabilir. Geçerli bir metin kutusunun içeriğini okuyarak çalışma zamanında alınabilir <xref:System.Windows.Forms.TextBox.Text%2A> özelliği.  
+## <a name="working-with-the-textbox-control"></a>TextBox denetimiyle çalışma  
+ Denetim tarafından görünen metin, <xref:System.Windows.Forms.TextBox.Text%2A> özelliğinde bulunur. Varsayılan olarak, bir metin kutusuna en fazla 2048 karakter girebilirsiniz. <xref:System.Windows.Forms.TextBox.Multiline%2A> özelliğini `true`olarak ayarlarsanız, 32 KB 'a kadar metin girebilirsiniz. <xref:System.Windows.Forms.TextBox.Text%2A> özelliği, tasarım zamanında Özellikler penceresiyle, koddaki çalışma zamanında veya çalışma zamanında Kullanıcı girişiyle ayarlanabilir. Bir metin kutusunun geçerli içeriği, <xref:System.Windows.Forms.TextBox.Text%2A> özelliği okunarak çalışma zamanında alınabilir.  
   
- Aşağıdaki kod örneği, çalışma zamanında denetiminde metin ayarlar. `InitializeMyControl` Yordamı değil yürütülecek otomatik olarak; çağrılması gerekir.  
+ Aşağıdaki kod örneği, çalışma zamanında denetimindeki metni ayarlar. `InitializeMyControl` yordamı otomatik olarak yürütülmez; çağrılması gerekir.  
   
 ```vb  
 Private Sub InitializeMyControl()  
@@ -52,10 +52,10 @@ private:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.TextBox>
-- [Nasıl yapılır: Windows Forms TextBox denetiminde ekleme noktasını belirleme](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Nasıl yapılır: Windows Forms TextBox denetimi ile parola metin kutusu oluşturma](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Nasıl yapılır: Salt okunur metin kutusu oluşturma](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Nasıl yapılır: Dizeye tırnak işaretleri koyma](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Nasıl yapılır: Windows Forms TextBox denetiminde metni Seç](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Nasıl yapılır: Windows Forms TextBox denetiminde birden çok satır görüntüleme](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Nasıl yapılır: Windows Forms TextBox Denetiminde Ekleme Noktasını Belirleme](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Nasıl yapılır: Windows Forms TextBox Denetimi ile Parola Metin Kutusu Oluşturma](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Nasıl yapılır: Salt Okunur Metin Kutusu Oluşturma](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Nasıl yapılır: Dizeye Tırnak İşaretleri Koyma](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Nasıl yapılır: Windows Forms TextBox Denetiminde Metni Seçme](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Nasıl yapılır: Windows Forms TextBox Denetiminde Birden Fazla Çizgiyi Görüntüleme](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox Denetimi](textbox-control-windows-forms.md)

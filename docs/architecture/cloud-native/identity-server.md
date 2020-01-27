@@ -2,12 +2,12 @@
 title: Cloud Native uygulamalar için IdentityServer
 description: Azure için Cloud Native .NET uygulamaları tasarlama | IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: e96395766d1a4b63815c10c2c90e35a8f7f9159d
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 48d0b95a40682f3127127851781b4d0e26e44630
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568472"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728583"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>Bulutta yerel uygulamalar için IdentityServer
 
@@ -96,13 +96,13 @@ IdentityServer, çeşitli protokolleri ve konfigürasyonları test etmek için k
 
 ## <a name="javascript-clients"></a>JavaScript istemcileri
 
-Birçok bulutta yerel uygulama, Ön uçtaki sunucu tarafı API 'Leri ve zengin istemci tek sayfa uygulamaları (maça 'lar) ile faydalanır. IdentityServer, oturum açma, oturumu kapatma ve Web API 'lerinin belirteç tabanlı kimlik doğrulaması için IdentityServer 'ı kullanabilmesi amacıyla, NPM aracılığıyla bir [JavaScript istemcisi](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html) (`oidc-client.js`) sağlar.
+Birçok bulutta yerel uygulama, Ön uçtaki sunucu tarafı API 'Leri ve zengin istemci tek sayfa uygulamaları (maça 'lar) ile faydalanır. IdentityServer, oturum açma, oturumu kapatma ve Web API 'lerinin belirteç tabanlı kimlik doğrulaması için IdentityServer 'ı kullanabilmesi amacıyla, NPM aracılığıyla bir [JavaScript istemcisi](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) (`oidc-client.js`) sağlar.
 
 ## <a name="references"></a>Referanslar
 
 - [IdentityServer belgeleri](http://docs.identityserver.io/en/latest/)
 - [Uygulama türleri](https://docs.microsoft.com/azure/active-directory/develop/app-types)
-- [JavaScript OıDC istemcisi](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html)
+- [JavaScript OıDC istemcisi](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]
 >[Önceki](azure-active-directory.md)

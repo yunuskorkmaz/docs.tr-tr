@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Windows Forms'da ToolStrip Öğelerinin Aralık ve Hizalamasını Değiştirme"
+title: 'Nasıl yapılır: ToolStrip öğelerinin aralıklarını ve hizalamasını değiştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: c7a874659be8dbaec66b78e1e065bcbec21da3b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 805fbac5fe33071006f29692d503e5c57eacd765
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650872"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746557"
 ---
-# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Nasıl yapılır: Windows Forms'da ToolStrip Öğelerinin Aralık ve Hizalamasını Değiştirme
-<xref:System.Windows.Forms.ToolStrip> Denetimi boyutlandırma, aralıkları gibi düzen özellikleri tam olarak destekler <xref:System.Windows.Forms.ToolStripItem> denetimleri birbirine göre denetimlerin düzenlemesini üzerinde <xref:System.Windows.Forms.ToolStrip>ve denetimleri göreli aralığını <xref:System.Windows.Forms.ToolStrip>.  
+# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta ToolStrip Öğelerinin Aralık ve Hizalamasını Değiştirme
+<xref:System.Windows.Forms.ToolStrip> denetimi, boyutlandırma, birbirleriyle ilgili <xref:System.Windows.Forms.ToolStripItem> denetimlerinin aralığı, <xref:System.Windows.Forms.ToolStrip>denetim yerleşimi ve <xref:System.Windows.Forms.ToolStrip>göreli denetimlerin boşlukları gibi düzen özelliklerini tam olarak destekler.  
   
- Çünkü varsayılan değerini <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> özelliği `true`, denetimleri boyutta otomatik olarak ayarlamadığınız sürece <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> özelliğini `false`.  
+ <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> özelliğinin varsayılan değeri `true`olduğundan, <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> özelliğini `false`olarak ayarlamadığınız takdirde denetimler otomatik olarak boyutlandırılır.  
   
-### <a name="to-manually-size-a-toolstripitem"></a>El ile ToolStripItem boyutlandırmak için  
+### <a name="to-manually-size-a-toolstripitem"></a>Bir ToolStripItem 'ı el ile boyutlandırma  
   
-1. Ayarlama <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> özelliğini `false` ilişkili denetimi.  
+1. <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> özelliğini ilişkili denetim için `false` olarak ayarlayın.  
   
     ```vb  
     ToolStripButton1.AutoSize = False  
@@ -33,13 +33,13 @@ ms.locfileid: "64650872"
     toolStripButton1.AutoSize = false;  
     ```  
   
-2. Ayarlama <xref:System.Windows.Forms.ToolStripItem.Size%2A> özelliği ilişkili için istediğiniz şekilde <xref:System.Windows.Forms.ToolStripItem>.  
+2. <xref:System.Windows.Forms.ToolStripItem.Size%2A> özelliğini ilişkili <xref:System.Windows.Forms.ToolStripItem>istediğiniz şekilde ayarlayın.  
   
-### <a name="to-set-the-spacing-of-a-toolstripitem"></a>ToolStripItem aralığını ayarlamak için  
+### <a name="to-set-the-spacing-of-a-toolstripitem"></a>Bir ToolStripItem 'ın aralığını ayarlamak için  
   
-1. Piksel cinsinden istenen değerleri eklemek <xref:System.Windows.Forms.ToolStripItem.Margin%2A> ilişkili denetiminin özelliği.  
+1. İstenen değerleri piksel cinsinden, ilişkili denetimin <xref:System.Windows.Forms.ToolStripItem.Margin%2A> özelliğine ekleyin.  
   
-     Değerlerini <xref:System.Windows.Forms.ToolStripItem.Margin%2A> özelliği şu sırayla bitişik öğelerin ve öğe aralığını belirtin: Sol, üst, sağ ve alt.  
+     <xref:System.Windows.Forms.ToolStripItem.Margin%2A> özelliğinin değerleri, öğe ve bitişik öğeler arasındaki boşluğu şu sırada belirtir: Left, top, Right ve Bottom.  
   
     ```vb  
     ToolStripTextBox1.Margin = New System.Windows.Forms.Padding _  
@@ -51,9 +51,9 @@ ms.locfileid: "64650872"
         (3, 0, 3, 0);  
     ```  
   
-### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a>ToolStrip sağ tarafına ToolStripItem hizalamak için  
+### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a>Bir ToolStripItem 'ı ToolStrip 'in sağ tarafına hizalamak için  
   
-1. Ayarlama <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> özelliğini <xref:System.Windows.Forms.ToolStripItemAlignment.Right> ilişkili denetimi. Varsayılan olarak, <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> ayarlanır <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, denetimleri sol tarafıyla hizalar <xref:System.Windows.Forms.ToolStrip>.  
+1. <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> özelliğini ilişkili denetim için <xref:System.Windows.Forms.ToolStripItemAlignment.Right> olarak ayarlayın. Varsayılan olarak <xref:System.Windows.Forms.ToolStripItem.Alignment%2A>, denetimleri <xref:System.Windows.Forms.ToolStrip>sol tarafına hizalayan <xref:System.Windows.Forms.ToolStripItemAlignment.Left>olarak ayarlanır.  
   
     ```vb  
     ToolStripSplitButton1.Alignment = _  
@@ -65,9 +65,9 @@ ms.locfileid: "64650872"
         System.Windows.Forms.ToolStripItemAlignment.Right;  
     ```  
   
-### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a>ToolStrip öğeler şeridindeki düzenlemek için  
+### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a>ToolStrip 'te ToolStrip öğelerini düzenlemek için  
   
-- Ayarlama <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> değere <xref:System.Windows.Forms.ToolStripLayoutStyle> istediğiniz.  
+- <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> özelliğini istediğiniz <xref:System.Windows.Forms.ToolStripLayoutStyle> değerine ayarlayın.  
   
     ```vb  
     ToolStripDropDown1.LayoutStyle = _  

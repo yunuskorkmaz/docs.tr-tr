@@ -2,15 +2,15 @@
 title: System.Web.Routing Tümleştirmesi
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: 85137689a31573dc10e8f7384007830ab40d31df
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: fdc355d4560294a16f3e9c488fdaf142d2982c0d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976032"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745332"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing Tümleştirmesi
-Internet Information Service (IIS) içinde bir Windows Communication Foundation (WCF) hizmeti barındırırken, sanal dizinde bir. svc dosyası yerleştirebilirsiniz. Bu. svc dosyası, kullanılacak hizmet ana bilgisayar fabrikasını ve hizmeti uygulayan sınıfını belirtir. Hizmete istek yaparken, URI 'de. svc dosyasını belirtirsiniz, örneğin: `http://contoso.com/EmployeeServce.svc`. REST hizmetlerini yazan programcılar için bu tür bir URI en uygun değildir. REST Hizmetleri için URI 'Ler belirli bir kaynağı belirtir ve normalde hiçbir uzantıya sahip değildir. <xref:System.Web.Routing> tümleştirme özelliği, uzantısı olmayan URI 'lere yanıt veren bir WCF REST hizmetini barındırmanıza olanak tanır. Yönlendirme hakkında daha fazla bilgi için bkz. [ASP.net Routing](https://go.microsoft.com/fwlink/?LinkId=184660).  
+Internet Information Service (IIS) içinde bir Windows Communication Foundation (WCF) hizmeti barındırırken, sanal dizinde bir. svc dosyası yerleştirebilirsiniz. Bu. svc dosyası, kullanılacak hizmet ana bilgisayar fabrikasını ve hizmeti uygulayan sınıfını belirtir. Hizmete istek yaparken, URI 'de. svc dosyasını belirtirsiniz, örneğin: `http://contoso.com/EmployeeServce.svc`. REST Hizmetleri yazan programcılar için, bu tür bir URI en uygun değildir. REST Hizmetleri için URI 'Ler belirli bir kaynağı belirtir ve normalde hiçbir uzantıya sahip değildir. <xref:System.Web.Routing> tümleştirme özelliği, uzantısı olmayan URI 'lere yanıt veren bir WCF REST hizmetini barındırmanıza olanak tanır. Yönlendirme hakkında daha fazla bilgi için bkz. [ASP.net Routing](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100)).  
   
 ## <a name="using-systemwebrouting-integration"></a>System. Web. Routing tümleştirmesini kullanma  
  <xref:System.Web.Routing> tümleştirme özelliğini kullanmak için, bir veya daha fazla yol oluşturmak ve bunları bir Global. asax dosyasındaki <xref:System.Web.Routing.RouteTable> eklemek için <xref:System.ServiceModel.Activation.ServiceRoute> sınıfını kullanın. Bu rotalar hizmetin yanıt verdiği göreli URI 'Leri belirtir. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir.  
@@ -72,4 +72,4 @@ Internet Information Service (IIS) içinde bir Windows Communication Foundation 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [ASP.NET yönlendirme](https://go.microsoft.com/fwlink/?LinkId=184660)
+- [ASP.NET yönlendirme](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))
