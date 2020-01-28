@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Veri Bağlantılı Windows Forms DataGridView Denetimine Bağlantısız Sütun Ekleme'
+title: Veriye bağlı bir DataGridView denetimine Ilişkisiz sütun ekleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - data grids [Windows Forms], adding unbound columns
 - DataGridView control [Windows Forms], unbound data
 ms.assetid: f7bdc4d8-ba8e-421b-ad62-82d936f01372
-ms.openlocfilehash: d40eea54d908f17fc2fe893d5bc15a073a066ba1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 807bbc121f33c35d70068571e76637c078ecb3da
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651573"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747069"
 ---
-# <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a><span data-ttu-id="d1c88-102">Nasıl yapılır: Veri Bağlantılı Windows Forms DataGridView Denetimine Bağlantısız Sütun Ekleme</span><span class="sxs-lookup"><span data-stu-id="d1c88-102">How to: Add an Unbound Column to a Data-Bound Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="d1c88-103">Görüntü içinde veri <xref:System.Windows.Forms.DataGridView> denetim normalde bir tür veri kaynağından gelir, ancak bir veri kaynağından gelmeyen veri sütununu görüntülemek isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d1c88-103">The data you display in the <xref:System.Windows.Forms.DataGridView> control will normally come from a data source of some kind, but you might want to display a column of data that does not come from the data source.</span></span> <span data-ttu-id="d1c88-104">Bu tür bir sütun bağlantısız sütun adı verilir.</span><span class="sxs-lookup"><span data-stu-id="d1c88-104">This kind of column is called an unbound column.</span></span> <span data-ttu-id="d1c88-105">Bağlanmamış sütunlar birçok biçimde olabilir.</span><span class="sxs-lookup"><span data-stu-id="d1c88-105">Unbound columns can take many forms.</span></span> <span data-ttu-id="d1c88-106">Genellikle, bir veri satırı ayrıntılarını erişim sağlamak için kullanılırlar.</span><span class="sxs-lookup"><span data-stu-id="d1c88-106">Frequently, they are used to provide access to the details of a data row.</span></span>  
+# <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a><span data-ttu-id="83b6f-102">Nasıl yapılır: Veri Bağlantılı Windows Forms DataGridView Denetimine Bağlantısız Sütun Ekleme</span><span class="sxs-lookup"><span data-stu-id="83b6f-102">How to: Add an Unbound Column to a Data-Bound Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="83b6f-103"><xref:System.Windows.Forms.DataGridView> denetiminde görüntülenen veriler normalde bazı tür bir veri kaynağından gelir, ancak veri kaynağından gelmeyen veri sütununu göstermek isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="83b6f-103">The data you display in the <xref:System.Windows.Forms.DataGridView> control will normally come from a data source of some kind, but you might want to display a column of data that does not come from the data source.</span></span> <span data-ttu-id="83b6f-104">Bu tür bir sütuna ilişkisiz sütun denir.</span><span class="sxs-lookup"><span data-stu-id="83b6f-104">This kind of column is called an unbound column.</span></span> <span data-ttu-id="83b6f-105">İlişkisiz sütunlar birçok form alabilir.</span><span class="sxs-lookup"><span data-stu-id="83b6f-105">Unbound columns can take many forms.</span></span> <span data-ttu-id="83b6f-106">Genellikle, bir veri satırının ayrıntılarına erişim sağlamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="83b6f-106">Frequently, they are used to provide access to the details of a data row.</span></span>  
   
- <span data-ttu-id="d1c88-107">Aşağıdaki kod örneği, bağlantısız sütun oluşturma işlemini gösterir **ayrıntıları** bir alt tabloda gösterilecek düğmeler ilgili bir ana tablodaki belirli bir satır için ana/ayrıntı senaryo uyguladığınızda.</span><span class="sxs-lookup"><span data-stu-id="d1c88-107">The following code example demonstrates how to create an unbound column of **Details** buttons to display a child table related to a particular row in a parent table when you implement a master/detail scenario.</span></span> <span data-ttu-id="d1c88-108">Düğme tıklamalarına yanıt verme için uygulayan bir <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> alt tablo içeren bir form görüntüler olay işleyicisi.</span><span class="sxs-lookup"><span data-stu-id="d1c88-108">To respond to button clicks, implement a <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> event handler that displays a form containing the child table.</span></span>  
+ <span data-ttu-id="83b6f-107">Aşağıdaki kod örneği, ana/ayrıntı senaryosunu uyguladığınızda üst tablodaki belirli bir satırla ilgili bir alt tablo göstermek için ilişkisiz bir **ayrıntı** düğmesi sütununun nasıl oluşturulduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="83b6f-107">The following code example demonstrates how to create an unbound column of **Details** buttons to display a child table related to a particular row in a parent table when you implement a master/detail scenario.</span></span> <span data-ttu-id="83b6f-108">Düğme tıklamalarına yanıt vermek için, alt tabloyu içeren bir form görüntüleyen <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> olay işleyicisi uygulayın.</span><span class="sxs-lookup"><span data-stu-id="83b6f-108">To respond to button clicks, implement a <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> event handler that displays a form containing the child table.</span></span>  
   
- <span data-ttu-id="d1c88-109">Visual Studio'da bu görevi için desteği yoktur.</span><span class="sxs-lookup"><span data-stu-id="d1c88-109">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="d1c88-110">Ayrıca bkz: [nasıl yapılır: Ekle ve Kaldır sütunları Windows Forms DataGridView Tasarımcısı'nı kullanarak denetiminde](add-and-remove-columns-in-the-datagrid-using-the-designer.md).</span><span class="sxs-lookup"><span data-stu-id="d1c88-110">Also see [How to: Add and Remove Columns in the Windows Forms DataGridView Control Using the Designer](add-and-remove-columns-in-the-datagrid-using-the-designer.md).</span></span>  
+ <span data-ttu-id="83b6f-109">Visual Studio 'da bu görev için destek vardır.</span><span class="sxs-lookup"><span data-stu-id="83b6f-109">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="83b6f-110">Ayrıca bkz. [nasıl yapılır: tasarımcı kullanarak Windows Forms DataGridView denetiminde sütun ekleme ve kaldırma](add-and-remove-columns-in-the-datagrid-using-the-designer.md).</span><span class="sxs-lookup"><span data-stu-id="83b6f-110">Also see [How to: Add and Remove Columns in the Windows Forms DataGridView Control Using the Designer](add-and-remove-columns-in-the-datagrid-using-the-designer.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d1c88-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="d1c88-111">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="83b6f-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="83b6f-111">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#010](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#010)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#010](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#010)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d1c88-112">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="d1c88-112">Compiling the Code</span></span>  
- <span data-ttu-id="d1c88-113">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="d1c88-113">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="83b6f-112">Kod Derleme</span><span class="sxs-lookup"><span data-stu-id="83b6f-112">Compiling the Code</span></span>  
+ <span data-ttu-id="83b6f-113">Bu örnek şunları gerektirir:</span><span class="sxs-lookup"><span data-stu-id="83b6f-113">This example requires:</span></span>  
   
-- <span data-ttu-id="d1c88-114">A <xref:System.Windows.Forms.DataGridView> adlı Denetim `dataGridView1`.</span><span class="sxs-lookup"><span data-stu-id="d1c88-114">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
+- <span data-ttu-id="83b6f-114">`dataGridView1`adlı <xref:System.Windows.Forms.DataGridView> denetim.</span><span class="sxs-lookup"><span data-stu-id="83b6f-114">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
-- <span data-ttu-id="d1c88-115">Başvurular <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemeler.</span><span class="sxs-lookup"><span data-stu-id="d1c88-115">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+- <span data-ttu-id="83b6f-115"><xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemelerine başvurular.</span><span class="sxs-lookup"><span data-stu-id="83b6f-115">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d1c88-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d1c88-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="83b6f-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="83b6f-116">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
-- [<span data-ttu-id="d1c88-117">Windows Forms DataGridView Denetiminde Verileri Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="d1c88-117">Displaying Data in the Windows Forms DataGridView Control</span></span>](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [<span data-ttu-id="d1c88-118">Windows Forms DataGridView Denetiminde Veri Görüntüleme Modları</span><span class="sxs-lookup"><span data-stu-id="d1c88-118">Data Display Modes in the Windows Forms DataGridView Control</span></span>](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="83b6f-117">Windows Forms DataGridView Denetiminde Verileri Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="83b6f-117">Displaying Data in the Windows Forms DataGridView Control</span></span>](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="83b6f-118">Windows Forms DataGridView Denetiminde Veri Görüntüleme Modları</span><span class="sxs-lookup"><span data-stu-id="83b6f-118">Data Display Modes in the Windows Forms DataGridView Control</span></span>](data-display-modes-in-the-windows-forms-datagridview-control.md)
