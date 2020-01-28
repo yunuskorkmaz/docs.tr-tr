@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Çalışma zamanında resimleri ayarlama (Windows Forms)'
+title: 'Nasıl yapılır: Çalışma Zamanında Resimleri Ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,21 +13,21 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: 99d78a275c8ad8f55d9b0832a794545b65da7e20
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bd0509c05fd9c1cfc0c631fcd613c64d20296f6b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917523"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746740"
 ---
-# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Nasıl yapılır: Çalışma zamanında resimleri ayarlama (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi tarafından görünen görüntüyü programlı bir şekilde ayarlayabilirsiniz.  
+# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Nasıl yapılır: Çalışma Zamanında Resimleri Ayarlama (Windows Forms)
+Bir Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi tarafından görünen görüntüyü programlı bir şekilde ayarlayabilirsiniz.  
   
 ### <a name="to-set-a-picture-programmatically"></a>Bir resmi programlı bir şekilde ayarlamak için  
   
-- <xref:System.Windows.Forms.PictureBox.Image%2A> Sınıfının yöntemini<xref:System.Drawing.Image.FromFile%2A>kullanaraközelliğiayarlayın. <xref:System.Drawing.Image>  
+- <xref:System.Drawing.Image> sınıfının <xref:System.Drawing.Image.FromFile%2A> yöntemini kullanarak <xref:System.Windows.Forms.PictureBox.Image%2A> özelliğini ayarlayın.  
   
-     Aşağıdaki örnekte, görüntü konumu için ayarlanan yol Belgelerim klasörüdür. Bu, Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu dizini içerdiğini varsaydığı için yapılır. Bu Ayrıca, en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenle çalıştırmasına olanak tanır. Aşağıdaki örnekte, bir <xref:System.Windows.Forms.PictureBox> denetimin zaten eklendiği bir form varsayılır.  
+     Aşağıdaki örnekte, görüntü konumu için ayarlanan yol Belgelerim klasörüdür. Bu, Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu dizini içerdiğini varsaydığı için yapılır. Bu Ayrıca, en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenle çalıştırmasına olanak tanır. Aşağıdaki örnekte, <xref:System.Windows.Forms.PictureBox> denetimi zaten eklenmiş bir form varsayılır.  
   
     ```vb  
     Private Sub LoadNewPict()  
@@ -93,7 +93,7 @@ Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi tarafından görü
     ```  
   
     > [!NOTE]
-    > <xref:System.Drawing.Image.Dispose%2A> Yöntemi bu şekilde nasıl kullanmanız gerektiği hakkında daha fazla bilgi için bkz. [yönetilmeyen kaynakları temizleme](../../../standard/garbage-collection/unmanaged.md).  
+    > <xref:System.Drawing.Image.Dispose%2A> yöntemini bu şekilde nasıl kullanmanız gerektiği hakkında daha fazla bilgi için bkz. [yönetilmeyen kaynakları temizleme](../../../standard/garbage-collection/unmanaged.md).  
   
      Bu kod, tasarım zamanında denetime bir grafik yüklense bile görüntüyü temizler.  
   
@@ -102,6 +102,6 @@ Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi tarafından görü
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
 - [PictureBox Denetimine Genel Bakış](picturebox-control-overview-windows-forms.md)
-- [Nasıl yapılır: Tasarımcıyı kullanarak resim yükleme](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Nasıl yapılır: Çalışma zamanında bir resmin boyutunu veya yerleşimini değiştirme](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Nasıl yapılır: Tasarımcıyı Kullanarak Resim Yükleme](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Nasıl yapılır: Çalışma Zamanında Resmin Boyutunu veya Konumunu Değiştirme](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [PictureBox Denetimi](picturebox-control-windows-forms.md)

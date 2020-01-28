@@ -1,5 +1,5 @@
 ---
-title: WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi
+title: XAML ad alanları ve ad alanı eşleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 5cce8ff04dbf163aba95346447f0557da14197da
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 85f35c29cdd1d9e4ea9776b756245a75af58e912
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976771"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741831"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi
 Bu konu, bir WPF XAML dosyasının kök etiketinde genellikle bulunan iki XAML ad alanı eşleştirmelerinin varlığını ve amacını açıklamaktadır. Ayrıca, kendi kodunuzda ve/veya ayrı derlemelerde tanımlanmış öğeleri kullanmak için benzer eşlemelerin nasıl üretileceğini açıklar.  

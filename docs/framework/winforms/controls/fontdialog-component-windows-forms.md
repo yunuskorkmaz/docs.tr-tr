@@ -1,35 +1,35 @@
 ---
-title: FontDialog Bileşeni (Windows Forms)
+title: FontDialog Bileşeni
 ms.date: 03/30/2017
 helpviewer_keywords:
 - fonts [Windows Forms], dialog box
 - FontDialog component [Windows Forms]
 - Font dialog box [Windows Forms], Windows Forms
 ms.assetid: 54015df3-aab2-4338-84e5-ba78cedbfdfc
-ms.openlocfilehash: de3a6b8f59d5ae83d55ea408f70d54d37761f693
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c150db1d6833babd3dd53923fb11a2ab98a4b5c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971359"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745691"
 ---
 # <a name="fontdialog-component-windows-forms"></a>FontDialog Bileşeni (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.FontDialog> bir önceden yapılandırılmış bir iletişim kutusu bir bileşendir. Aynı olan **yazı tipi** Windows işletim sistemi tarafından kullanıma sunulan iletişim kutusu. Bileşen devraldığı <xref:System.Windows.Forms.CommonDialog> sınıfı.  
+Windows Forms <xref:System.Windows.Forms.FontDialog> bileşeni önceden yapılandırılmış bir iletişim kutusudur. Bu, Windows işletim sistemi tarafından sunulan **yazı tipi** iletişim kutusudur. Bileşen <xref:System.Windows.Forms.CommonDialog> sınıfından devralır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [FontDialog Bileşenine Genel Bakış](fontdialog-component-overview-windows-forms.md)  
- Genel konseptlerini tanıtan <xref:System.Windows.Forms.FontDialog> önceden yapılandırılmış iletişim kutusunu görüntülemek için kullanılan bileşen. Kullanıcılar, iletişim kutusu, yazı tipleri ve ayarlarını yönetmek için kullanabilirsiniz.  
+ Önceden yapılandırılmış bir iletişim kutusu göstermek için kullandığınız <xref:System.Windows.Forms.FontDialog> bileşeninin genel kavramlarını tanıtır. Kullanıcılar, yazı tiplerini ve ayarlarını denetlemek için iletişim kutusunu kullanabilir.  
   
- [Nasıl yapılır: FontDialog bileşeni ile yazı tipi listesi gösterme](how-to-show-a-font-list-with-the-fontdialog-component.md)  
- Bir örneği üzerinden çalışma zamanında bir yazı tipi seçin açıklanmaktadır <xref:System.Windows.Forms.FontDialog> bileşeni.  
+ [Nasıl Yapılır: FontDialog Bileşeni ile Yazı Tipi Listesi Gösterme](how-to-show-a-font-list-with-the-fontdialog-component.md)  
+ Çalışma zamanında <xref:System.Windows.Forms.FontDialog> bileşenin bir örneği aracılığıyla bir yazı tipinin nasıl bulunacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.FontDialog>  
- Hakkında başvuru bilgileri sağlar <xref:System.Windows.Forms.FontDialog> sınıfını ve üyelerini.  
+ <xref:System.Windows.Forms.FontDialog> sınıfı ve üyeleri hakkında başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [İletişim Kutusu Denetimleri ve Bileşenleri](dialog-box-controls-and-components-windows-forms.md)  
- Denetimler ve bileşenler, kullanıcıların uygulama veya sistem standart etkileşim gerçekleştirmesine olanak sağlayan birtakım açıklar.  
+ Kullanıcıların uygulama veya sistemle standart etkileşimler gerçekleştirmesini sağlayan bir denetim ve bileşen kümesi tanımlar.  
   
  [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
- Windows Forms denetimlerini, tam bir listesi kullanımları hakkında bilgi için bağlantılar sağlar.
+ , Kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte Windows Forms denetimlerinin kapsamlı bir listesini sağlar.

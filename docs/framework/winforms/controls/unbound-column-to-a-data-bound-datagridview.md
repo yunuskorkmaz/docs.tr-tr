@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Veri Bağlantılı Windows Forms DataGridView Denetimine Bağlantısız Sütun Ekleme'
+title: Veriye bağlı bir DataGridView denetimine Ilişkisiz sütun ekleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - data grids [Windows Forms], adding unbound columns
 - DataGridView control [Windows Forms], unbound data
 ms.assetid: f7bdc4d8-ba8e-421b-ad62-82d936f01372
-ms.openlocfilehash: d40eea54d908f17fc2fe893d5bc15a073a066ba1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 807bbc121f33c35d70068571e76637c078ecb3da
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651573"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747069"
 ---
 # <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a>Nasıl yapılır: Veri Bağlantılı Windows Forms DataGridView Denetimine Bağlantısız Sütun Ekleme
-Görüntü içinde veri <xref:System.Windows.Forms.DataGridView> denetim normalde bir tür veri kaynağından gelir, ancak bir veri kaynağından gelmeyen veri sütununu görüntülemek isteyebilirsiniz. Bu tür bir sütun bağlantısız sütun adı verilir. Bağlanmamış sütunlar birçok biçimde olabilir. Genellikle, bir veri satırı ayrıntılarını erişim sağlamak için kullanılırlar.  
+<xref:System.Windows.Forms.DataGridView> denetiminde görüntülenen veriler normalde bazı tür bir veri kaynağından gelir, ancak veri kaynağından gelmeyen veri sütununu göstermek isteyebilirsiniz. Bu tür bir sütuna ilişkisiz sütun denir. İlişkisiz sütunlar birçok form alabilir. Genellikle, bir veri satırının ayrıntılarına erişim sağlamak için kullanılır.  
   
- Aşağıdaki kod örneği, bağlantısız sütun oluşturma işlemini gösterir **ayrıntıları** bir alt tabloda gösterilecek düğmeler ilgili bir ana tablodaki belirli bir satır için ana/ayrıntı senaryo uyguladığınızda. Düğme tıklamalarına yanıt verme için uygulayan bir <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> alt tablo içeren bir form görüntüler olay işleyicisi.  
+ Aşağıdaki kod örneği, ana/ayrıntı senaryosunu uyguladığınızda üst tablodaki belirli bir satırla ilgili bir alt tablo göstermek için ilişkisiz bir **ayrıntı** düğmesi sütununun nasıl oluşturulduğunu gösterir. Düğme tıklamalarına yanıt vermek için, alt tabloyu içeren bir form görüntüleyen <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> olay işleyicisi uygulayın.  
   
- Visual Studio'da bu görevi için desteği yoktur.  Ayrıca bkz: [nasıl yapılır: Ekle ve Kaldır sütunları Windows Forms DataGridView Tasarımcısı'nı kullanarak denetiminde](add-and-remove-columns-in-the-datagrid-using-the-designer.md).  
+ Visual Studio 'da bu görev için destek vardır.  Ayrıca bkz. [nasıl yapılır: tasarımcı kullanarak Windows Forms DataGridView denetiminde sütun ekleme ve kaldırma](add-and-remove-columns-in-the-datagrid-using-the-designer.md).  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#010](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#010)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#010](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#010)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- A <xref:System.Windows.Forms.DataGridView> adlı Denetim `dataGridView1`.  
+- `dataGridView1`adlı <xref:System.Windows.Forms.DataGridView> denetim.  
   
-- Başvurular <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemeler.  
+- <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

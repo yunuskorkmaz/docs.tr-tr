@@ -1,5 +1,6 @@
 ---
-title: "İzlenecek yol: Windows Forms'ta Tasarım Zamanında WPF İçeriğini Düzenleme"
+title: Tasarım zamanında Windows Forms WPF içeriğini düzenleme
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in a layout panel
@@ -12,12 +13,12 @@ ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c9db49ae299870479a5cfa6372c25d793a92ff8f
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5a6b12def45052e117fb149555946ea42d6cd3c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460685"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746823"
 ---
 # <a name="walkthrough-arrange-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: tasarım zamanında Windows Forms WPF içeriğini düzenleme
 
@@ -98,7 +99,7 @@ Anlık görüntü çizgileri, bir formdaki denetimlerin kolay hizalamasını etk
 
 Bir form üzerinde barındırılan WPF denetimi, diğer Windows Forms denetimleriyle aynı sabitleme ve yerleştirme davranışına sahiptir.
 
-1. `elementHost1`seçin.
+1. `elementHost1` öğesini seçin.
 
 2. **Özellikler** penceresinde, <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini **üst, alt, sol, sağ**olarak ayarlayın.
 
@@ -106,7 +107,7 @@ Bir form üzerinde barındırılan WPF denetimi, diğer Windows Forms denetimler
 
    `elementHost1` denetim hücreyi dolduracak şekilde yeniden boyutlandırır.
 
-4. `elementHost2`seçin.
+4. `elementHost2` öğesini seçin.
 
 5. **Özellikler** penceresinde <xref:System.Windows.Forms.Control.Dock%2A> özelliğinin değerini <xref:System.Windows.Forms.DockStyle.Fill>olarak ayarlayın.
 
@@ -116,7 +117,7 @@ Bir form üzerinde barındırılan WPF denetimi, diğer Windows Forms denetimler
 
 7. <xref:System.Windows.Forms.Control.Dock%2A> özelliğinin değerini <xref:System.Windows.Forms.DockStyle.Top>olarak ayarlayın.
 
-8. `elementHost3`seçin.
+8. `elementHost3` öğesini seçin.
 
 9. <xref:System.Windows.Forms.Control.Dock%2A> özelliğinin değerini <xref:System.Windows.Forms.DockStyle.Fill>olarak ayarlayın.
 

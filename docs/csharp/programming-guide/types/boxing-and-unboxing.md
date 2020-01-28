@@ -9,16 +9,16 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 32156ad0fe4b3dce4371fe757d15f5b8040aaf19
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 62df08bf4ae3580e9b8d5b3aab0697d396674ca1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115859"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745418"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Kutulama ve Kutudan Çıkarma (C# Programlama Kılavuzu)
 
-Kutulama, bir [değer türünü](../../language-reference/keywords/value-types.md) tür `object` veya bu değer türü tarafından uygulanan herhangi bir arabirim türüne dönüştürme işlemidir. Ortak dil çalışma zamanı (CLR) bir değer türü olduğunda, değeri bir <xref:System.Object?displayProperty=nameWithType> örneği içinde sarmalanır ve yönetilen yığında depolar. Kutudan çıkarma, nesneden değer türünü ayıklar. Paketleme örtük; kutudan çıkarma açıktır. Kutulama ve kutudan çıkarma kavramı, herhangi bir türdeki C# değerin bir nesne olarak değerlendiribileceği tür sisteminin Birleşik görünümünü içermez.
+Kutulama, bir [değer türünü](../../language-reference/builtin-types/value-types.md) tür `object` veya bu değer türü tarafından uygulanan herhangi bir arabirim türüne dönüştürme işlemidir. Ortak dil çalışma zamanı (CLR) bir değer türü olduğunda, değeri bir <xref:System.Object?displayProperty=nameWithType> örneği içinde sarmalanır ve yönetilen yığında depolar. Kutudan çıkarma, nesneden değer türünü ayıklar. Paketleme örtük; kutudan çıkarma açıktır. Kutulama ve kutudan çıkarma kavramı, herhangi bir türdeki C# değerin bir nesne olarak değerlendiribileceği tür sisteminin Birleşik görünümünü içermez.
 
 Aşağıdaki örnekte, `i` tamsayı değişkeni *paketlenmelidir* ve nesne `o`atanır.
 
@@ -38,7 +38,7 @@ Basit atamalara göre, kutulama ve kutudan çıkarma, pahalı maliyetli işlemle
 
 ## <a name="boxing"></a>Kutulama
 
-Paketleme, değer türlerini atık toplanmış yığında depolamak için kullanılır. Kutulama, `object` türüne veya bu değer türü tarafından uygulanan herhangi bir arabirim türüne örtük bir [değer türü](../../language-reference/keywords/value-types.md) dönüştürmedir. Değer türünü kutulama yığında bir nesne örneği ayırır ve değeri yeni nesneye kopyalar.
+Paketleme, değer türlerini atık toplanmış yığında depolamak için kullanılır. Kutulama, `object` türüne veya bu değer türü tarafından uygulanan herhangi bir arabirim türüne örtük bir [değer türü](../../language-reference/builtin-types/value-types.md) dönüştürmedir. Değer türünü kutulama yığında bir nesne örneği ayırır ve değeri yeni nesneye kopyalar.
 
 Bir değer türü değişkeninin aşağıdaki bildirimini göz önünde bulundurun:
 
@@ -66,7 +66,7 @@ Bu örnek, kutulama kullanarak bir `i` tamsayı değişkenini nesne `o` dönüş
 
 ## <a name="unboxing"></a>Çıkarma
 
-Kutudan çıkarma, tür `object` bir [değer türüne](../../language-reference/keywords/value-types.md) veya arabirim türünden arabirimi uygulayan bir değer türüne açık bir dönüştürmedir. Kutudan çıkarma işlemi aşağıdakilerden oluşur:
+Kutudan çıkarma, tür `object` bir [değer türüne](../../language-reference/builtin-types/value-types.md) veya arabirim türünden arabirimi uygulayan bir değer türüne açık bir dönüştürmedir. Kutudan çıkarma işlemi aşağıdakilerden oluşur:
 
 - Verilen değer türünün paketlenmiş bir değeri olduğundan emin olmak için nesne örneği denetleniyor.
 
@@ -112,14 +112,8 @@ dönüştürme gerçekleştirilecek ve şu çıktıyı alacaksınız:
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="related-sections"></a>İlgili bölümler
-
-Daha fazla bilgi için:
-
-- [Başvuru Türleri](../../language-reference/keywords/reference-types.md)
-
-- [Değer Türleri](../../language-reference/keywords/value-types.md)
-
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../index.md)
+- [C#Programlama Kılavuzu](../index.md)
+- [Başvuru türleri](../../language-reference/keywords/reference-types.md)
+- [Değer türleri](../../language-reference/builtin-types/value-types.md)

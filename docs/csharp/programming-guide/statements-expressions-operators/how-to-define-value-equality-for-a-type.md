@@ -8,16 +8,18 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 5eb1aaf96097d2c00cb04e24e65e01464f5f00c6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c911dc1d0aa36ab8e57fb8a77a52d9cec20743c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711980"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745384"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Bir tür için değer eşitliği tanımlama (C# Programlama Kılavuzu)
 
-Bir sınıf veya yapı tanımladığınızda, türün tür için özel bir değer eşitlik tanımı (veya denklik) oluşturmak mantıklı olup olmadığına karar verirsiniz. Genellikle, tür nesnelerinin bir sıralama koleksiyonuna eklenmesi beklendiğinde veya birincil amaçları bir alan veya özellik kümesini depoladığınızda değer eşitliğini uygulamalısınız. Değer eşitlik tanımınızı, türdeki tüm alanların ve özelliklerin bir karşılaştırmasına dayandırıp veya tanımı bir alt küme üzerinde temel alabilirsiniz. Ancak her iki durumda da, hem sınıflarda hem de yapılarda, uygulamanız beş denklik garantisini izlemelidir:  
+Bir sınıf veya yapı tanımladığınızda, türün tür için özel bir değer eşitlik tanımı (veya denklik) oluşturmak mantıklı olup olmadığına karar verirsiniz. Genellikle, tür nesnelerinin bir sıralama koleksiyonuna eklenmesi beklendiğinde veya birincil amaçları bir alan veya özellik kümesini depoladığınızda değer eşitliğini uygulamalısınız. Değer eşitlik tanımınızı, türdeki tüm alanların ve özelliklerin bir karşılaştırmasına dayandırıp veya tanımı bir alt küme üzerinde temel alabilirsiniz. 
+
+Her iki durumda da, hem sınıflarda hem de yapılarda, uygulamanız beş denklik garantisini izlemelidir (aşağıdaki kurallar Için `x`, `y` ve `z` null olmadığını varsayın):  
   
 1. `x.Equals(x)` `true`döndürür. Bu, yansımalı özelliği olarak adlandırılır.  
   
@@ -27,8 +29,8 @@ Bir sınıf veya yapı tanımladığınızda, türün tür için özel bir değe
   
 4. `x.Equals(y)` art arda çağırmaları, x ve y tarafından başvurulan nesneler değiştirilmedikçe aynı değeri döndürür.  
   
-5. `x.Equals(null)` `false`döndürür. Ancak, `null.Equals(null)` bir özel durum oluşturur; Yukarıdaki iki kural numarasına uymaz.  
-  
+5. Null olmayan herhangi bir değer null değerine eşit değildir. Ancak, CLR tüm yöntem çağrılarında null değerini denetler ve `this` başvurusunun null olması halinde bir `NullReferenceException` oluşturur. Bu nedenle, `x` null olduğunda `x.Equals(y)` bir özel durum oluşturur. Bu, `Equals`bağımsız değişkenine bağlı olarak kuralları 1 veya 2 ' yi keser.
+ 
  Tanımladığınız herhangi bir yapı, <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> yönteminin <xref:System.ValueType?displayProperty=nameWithType> geçersiz kılmasına devraldığı bir değer eşitlik varsayılan uygulamasına sahiptir. Bu uygulama, türündeki tüm alanları ve özellikleri incelemek için yansıma kullanır. Bu uygulama doğru sonuçlar üretse de, özellikle tür için yazdığınız özel bir uygulamayla karşılaştırıldığında nispeten yavaştır.  
   
  Değer eşitlik için uygulama ayrıntıları sınıflar ve yapılar için farklıdır. Ancak, her iki sınıf ve yapı, eşitlik uygulamak için aynı temel adımları gerektirir:  
@@ -68,4 +70,4 @@ Bir sınıf veya yapı tanımladığınızda, türün tür için özel bir değe
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Eşitlik karşılaştırmaları](equality-comparisons.md)
-- [C# Programlama Kılavuzu](../index.md)
+- [C#Programlama Kılavuzu](../index.md)

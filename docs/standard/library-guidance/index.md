@@ -2,12 +2,12 @@
 title: Açık kaynaklı .NET kitaplığı Kılavuzu
 description: Geliştiricilerin yüksek kaliteli .NET kitaplıkları oluşturmalarına yönelik en iyi yöntem önerileri.
 ms.date: 10/17/2018
-ms.openlocfilehash: c1e1c302eede86fd5555a8e84630e216e96f1ce7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4c76dfae6ffc39df7f15381be64e33657067d79d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706458"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731429"
 ---
 # <a name="open-source-library-guidance"></a>Açık kaynak kitaplık kılavuzu
 
@@ -32,19 +32,19 @@ Her makalede dört tür öneri sunulmaktadır: **Do**, **düþünün**, **önley
 
 Neredeyse her zaman bir **Do** önerisi izlemeniz gerekir. Örneğin:
 
-**✔️** , bir NuGet paketi kullanarak kitaplığınızı dağıtır.
+✔️, bir NuGet paketi kullanarak kitaplığınızı dağıtır.
 
 Diğer yandan, önerilerin genellikle izlenmesi gerektiğine **dikkat** edin, ancak kuralın meşru özel durumları vardır ve bu kılavuzdan sonra da kötü bir sorun olmaz:
 
-**✔️** NuGet paketinizi sürüm Için [Semver 2.0.0](https://semver.org/) kullanmayı düşünün.
+✔️ NuGet paketinizi sürüm için [Semver 2.0.0](https://semver.org/) kullanmayı düşünün.
 
 Genellikle iyi bir fikir olmayan ancak kuralın bölünmesi bazen anlamlı hale getirmeyen önerilerden **kaçının** :
 
-**❌ önlemek** Tam bir sürümü talep eden NuGet paket başvuruları.
+❌, tam bir sürümü talep eden NuGet paket başvurularını ÖNLEYIN.
 
 Son **olarak, önermeyin,** neredeyse asla yapmanız gereken bir şeyi gösterir:
 
-❌, kitaplığınızın güçlü adlandırılmış ve tanımlayıcı olmayan sürümlerini **yayımlamaz** . Örneğin, `Contoso.Api` ve `Contoso.Api.StrongNamed`.
+❌, kitaplığınızın güçlü adlandırılmış ve tanımlayıcı olmayan sürümlerini yayımlamaz. Örneğin, `Contoso.Api` ve `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
 >[Next](get-started.md)

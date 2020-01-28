@@ -1,5 +1,5 @@
 ---
-title: ListView Denetimi (Windows Forms)
+title: ListView Denetimi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lists
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: a5f20ec34a1b4b41ec1aee667b5d4bfb0c3eebb1
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 009739f78f334d09a9f7e4f0e9f171669014b909
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960362"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745137"
 ---
 # <a name="listview-control-windows-forms"></a>ListView Denetimi (Windows Forms)
 Windows Forms `ListView` denetim, simgeleri olan öğelerin bir listesini görüntüler. Windows Gezgini 'nin sağ bölmesi gibi bir kullanıcı arabirimi oluşturmak için bir liste görünümü kullanabilirsiniz.  

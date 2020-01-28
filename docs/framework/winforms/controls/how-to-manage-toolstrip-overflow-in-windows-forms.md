@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Windows Forms'ta ToolStrip taşmasını yönetme"
+title: 'Nasıl yapılır: ToolStrip Taşmasını Yönetme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - CanOverflow property
 ms.assetid: fa10e0ad-4cbf-4c0d-9082-359c2f855d4e
-ms.openlocfilehash: 53f610a728925d454a8833a49e705818f027aec5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52cc02e626bee2d2457355028ecddc17e462d8fa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913763"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736151"
 ---
-# <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta ToolStrip taşmasını yönetme
+# <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta ToolStrip Taşmasını Yönetme
 
-Tüm öğeleri bir <xref:System.Windows.Forms.ToolStrip> denetimi ayrılan alana Sığdır değil, üzerinde taşma işlevselliğini etkinleştirmek <xref:System.Windows.Forms.ToolStrip> ve özel taşma davranışını belirlemek <xref:System.Windows.Forms.ToolStripItem>s.
+Bir <xref:System.Windows.Forms.ToolStrip> denetimindeki tüm öğeler ayrılan alana uygun olmadığında, <xref:System.Windows.Forms.ToolStrip> taşma işlevselliğini etkinleştirebilir ve belirli <xref:System.Windows.Forms.ToolStripItem>s 'nin taşma davranışını belirleyebilirsiniz.
 
-Eklediğinizde <xref:System.Windows.Forms.ToolStripItem>için ayrılan alandan daha fazla gerektiren s <xref:System.Windows.Forms.ToolStrip> formun geçerli boyutu, verilen bir <xref:System.Windows.Forms.ToolStripOverflowButton> otomatik olarak görünür <xref:System.Windows.Forms.ToolStrip>. <xref:System.Windows.Forms.ToolStripOverflowButton> Görünür ve taşma etkin öğeleri açılan taşma menüsüne taşındı. Bu sayede özelleştirme ve önceliklerini belirlemek nasıl, <xref:System.Windows.Forms.ToolStrip> öğelerini farklı form boyutları için düzgün şekilde ayarlayın. Ayrıca bunlar taşma alanına kullanarak bozulduğunda öğelerinizi görünümünü değiştirebilirsiniz <xref:System.Windows.Forms.ToolStripItem.Placement%2A> ve <xref:System.Windows.Forms.ToolStripOverflow.DisplayedItems%2A?displayProperty=nameWithType> özellikleri ve <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> olay. Formun tasarım zamanı veya çalışma zamanı daha büyütün, <xref:System.Windows.Forms.ToolStripItem>s ana üzerinde görüntülenebilir <xref:System.Windows.Forms.ToolStrip> ve <xref:System.Windows.Forms.ToolStripOverflowButton> formun boyutunu azaltma kadar bile Kaybolabiliyor.
+Formun geçerli boyutu verilen <xref:System.Windows.Forms.ToolStrip> ayrılan daha fazla alan gerektiren <xref:System.Windows.Forms.ToolStripItem>s eklediğinizde, <xref:System.Windows.Forms.ToolStrip>üzerinde otomatik olarak bir <xref:System.Windows.Forms.ToolStripOverflowButton> görüntülenir. <xref:System.Windows.Forms.ToolStripOverflowButton> görünür ve taşma özellikli öğeler aşağı açılan taşma menüsüne taşınır. Bu, <xref:System.Windows.Forms.ToolStrip> öğelerinizin farklı form boyutlarına nasıl doğru şekilde ayarlantığınızı özelleştirmenize ve önceliklendirmenize olanak tanır. Ayrıca, <xref:System.Windows.Forms.ToolStripItem.Placement%2A> ve <xref:System.Windows.Forms.ToolStripOverflow.DisplayedItems%2A?displayProperty=nameWithType> özelliklerini ve <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> olayını kullanarak, öğelerinize giren öğelerin görünümünü de değiştirebilirsiniz. Formu Tasarım zamanında veya çalışma zamanında büyütürseniz, ana <xref:System.Windows.Forms.ToolStrip> daha fazla <xref:System.Windows.Forms.ToolStripItem>görüntülenir ve formun boyutunu azaltana kadar <xref:System.Windows.Forms.ToolStripOverflowButton> bile kaybolabilir.
 
-## <a name="to-enable-overflow-on-a-toolstrip-control"></a>ToolStrip denetimi overflow'da etkinleştirmek için
+## <a name="to-enable-overflow-on-a-toolstrip-control"></a>ToolStrip denetiminde taşmayı etkinleştirmek için
 
-- Emin <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> özelliği ayarlanmamış `false` için <xref:System.Windows.Forms.ToolStrip>. Varsayılan, `True` değeridir.
+- <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> özelliğinin <xref:System.Windows.Forms.ToolStrip>için `false` ayarlı olmadığından emin olun. Varsayılan, `True` değeridir.
 
-     Zaman <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> olan `True` (varsayılan), bir <xref:System.Windows.Forms.ToolStripItem> taşma açılan menüye gönderilir, içeriğini <xref:System.Windows.Forms.ToolStripItem> yatay genişliğini aşıyor <xref:System.Windows.Forms.ToolStrip> veya dikey yüksekliğini <xref:System.Windows.Forms.ToolStrip>.
+     <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> `True` (varsayılan), <xref:System.Windows.Forms.ToolStripItem> içeriği bir yatay <xref:System.Windows.Forms.ToolStrip> veya dikey <xref:System.Windows.Forms.ToolStrip>yüksekliğini aştığında açılan taşma menüsüne bir <xref:System.Windows.Forms.ToolStripItem> gönderilir.
 
-## <a name="to-specify-overflow-behavior-of-a-specific-toolstripitem"></a>Belirli bir ToolStripItem taşma davranışını belirtmek için
+## <a name="to-specify-overflow-behavior-of-a-specific-toolstripitem"></a>Belirli bir ToolStripItem 'ın taşma davranışını belirtmek için
 
-- Ayarlama <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> özelliği <xref:System.Windows.Forms.ToolStripItem> istediğiniz değer. Olasılıklar `Always`, `Never`, ve `AsNeeded`. Varsayılan, `AsNeeded` değeridir.
+- <xref:System.Windows.Forms.ToolStripItem> <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> özelliğini istenen değere ayarlayın. `Always`, `Never`ve `AsNeeded`olanakları vardır. Varsayılan, `AsNeeded` değeridir.
 
     ```vb
     toolStripTextBox1.Overflow = _

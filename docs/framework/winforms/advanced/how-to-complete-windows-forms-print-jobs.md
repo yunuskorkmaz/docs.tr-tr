@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms Yazdırma İşlerini Tamamlama'
+title: Yazdırma işlerini Tamam
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: a95e07596a10e67d32fdd0af036a14e8d66390c7
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: b8ef4fa05b2107247181e82b72389f9503507135
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053030"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746495"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>Nasıl yapılır: Windows Forms Yazdırma İşlerini Tamamlama
-Genellikle, sözcük işlemciler ve yazdırma gerektiren diğer uygulamaları yazdırma işi tamamlandığını kullanıcılara bir ileti görüntülemek için seçeneği sunacak. Bu işlevsellik, Windows Forms'ta işleyerek sağlayabilir <xref:System.Drawing.Printing.PrintDocument.EndPrint> olayı <xref:System.Drawing.Printing.PrintDocument> bileşeni.  
+Genellikle, Word işlemcileri ve yazdırmayı içeren diğer uygulamalar, bir yazdırma işinin tamamlandığını kullanıcılara bir ileti görüntüleme seçeneği sağlar. <xref:System.Drawing.Printing.PrintDocument> bileşeninin <xref:System.Drawing.Printing.PrintDocument.EndPrint> olayını işleyerek bu işlevselliği Windows Forms sağlayabilirsiniz.  
   
- Aşağıdaki yordam, Windows tabanlı bir uygulama ile oluşturduğunuz gerektirir bir <xref:System.Drawing.Printing.PrintDocument> bileşen üzerindeki, Windows tabanlı bir uygulama yazdırma etkinleştirme standart yoludur. Kullanarak Windows Forms yazdırma hakkında daha fazla bilgi için <xref:System.Drawing.Printing.PrintDocument> bileşeni Bkz [nasıl yapılır: Standart Windows Forms yazdırma işleri oluşturma](how-to-create-standard-windows-forms-print-jobs.md).  
+ Aşağıdaki yordam, Windows tabanlı bir uygulamadan yazdırmayı etkinleştirmenin standart yolu olan üzerinde <xref:System.Drawing.Printing.PrintDocument> bir bileşeni olan Windows tabanlı bir uygulama oluşturmanız gerekir. <xref:System.Drawing.Printing.PrintDocument> bileşenini kullanarak Windows Forms yazdırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: standart Windows Forms Yazdırma Işleri oluşturma](how-to-create-standard-windows-forms-print-jobs.md).  
   
-### <a name="to-complete-a-print-job"></a>Yazdırma işi tamamlamak için  
+### <a name="to-complete-a-print-job"></a>Bir yazdırma işini tamamlamaya yönelik  
   
-1. Ayarlama <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> özelliği <xref:System.Drawing.Printing.PrintDocument> bileşeni.  
+1. <xref:System.Drawing.Printing.PrintDocument> bileşenin <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> özelliğini ayarlayın.  
   
     ```vb  
     PrintDocument1.DocumentName = "MyTextFile"  
@@ -37,9 +37,9 @@ Genellikle, sözcük işlemciler ve yazdırma gerektiren diğer uygulamaları ya
     printDocument1->DocumentName = "MyTextFile";  
     ```  
   
-2. İşlemek için kod yazma <xref:System.Drawing.Printing.PrintDocument.EndPrint> olay.  
+2. <xref:System.Drawing.Printing.PrintDocument.EndPrint> olayını işlemek için kod yazın.  
   
-     Aşağıdaki kod örneğinde, belgeyi yazdırma tamamlandığını belirten bir ileti kutusu görüntülenir.  
+     Aşağıdaki kod örneğinde, belgenin yazdırılmasını tamamladığını belirten bir ileti kutusu görüntülenir.  
   
     ```vb  
     Private Sub PrintDocument1_EndPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles PrintDocument1.EndPrint  
@@ -66,7 +66,7 @@ Genellikle, sözcük işlemciler ve yazdırma gerektiren diğer uygulamaları ya
        }  
     ```  
   
-     (Visual C# ve görsel C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.  
+     (Görsel C# ve görsel C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.  
   
     ```csharp  
     this.printDocument1.EndPrint += new  

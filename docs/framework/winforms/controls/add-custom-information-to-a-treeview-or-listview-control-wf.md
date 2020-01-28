@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir TreeView veya ListView Denetimine Özel Bilgi Ekleme (Windows Forms)'
+title: 'Nasıl yapılır: bir TreeView veya ListView denetimine özel bilgi ekleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: f588a00c430eb1ae1f0cdcde6b7dd22f0c8671c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fe507c41de97e9332f3f27e453a476d992f86627
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956994"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732223"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Nasıl yapılır: Bir TreeView veya ListView Denetimine Özel Bilgi Ekleme (Windows Forms)
-Bir Windows Forms <xref:System.Windows.Forms.TreeView> denetiminde veya bir <xref:System.Windows.Forms.ListView> denetimdeki türetilmiş bir öğede türetilmiş bir düğüm oluşturabilirsiniz. Türetme, ihtiyacınız olan tüm alanları, ayrıca bunları işlemeye yönelik özel yöntemleri ve oluşturucuları eklemenize olanak tanır. Bu özelliğin bir kullanımı, her ağaç düğümüne veya liste öğesine bir müşteri nesnesi eklemektir. Buradaki örnekler bir <xref:System.Windows.Forms.TreeView> denetim içindir, ancak aynı yaklaşım bir <xref:System.Windows.Forms.ListView> denetim için de kullanılabilir.  
+Bir Windows Forms <xref:System.Windows.Forms.TreeView> denetiminde veya bir <xref:System.Windows.Forms.ListView> denetimindeki türetilmiş bir öğede türetilmiş bir düğüm oluşturabilirsiniz. Türetme, ihtiyacınız olan tüm alanları, ayrıca bunları işlemeye yönelik özel yöntemleri ve oluşturucuları eklemenize olanak tanır. Bu özelliğin bir kullanımı, her ağaç düğümüne veya liste öğesine bir müşteri nesnesi eklemektir. Buradaki örnekler bir <xref:System.Windows.Forms.TreeView> denetimine yöneliktir, ancak aynı yaklaşım bir <xref:System.Windows.Forms.ListView> denetimi için de kullanılabilir.  
   
 ### <a name="to-derive-a-tree-node"></a>Bir ağaç düğümü türetmek için  
   
-- Bir dosya yolunu kaydetmek için özel bir alanı olan <xref:System.Windows.Forms.TreeNode> sınıfından türetilmiş yeni bir Node sınıfı oluşturun.  
+- Bir dosya yolunu kaydetmek için özel bir alan olan <xref:System.Windows.Forms.TreeNode> sınıfından türetilmiş yeni bir Node sınıfı oluşturun.  
   
     ```vb  
     Class myTreeNode  
@@ -100,7 +100,7 @@ Bir Windows Forms <xref:System.Windows.Forms.TreeView> denetiminde veya bir <xre
        "\\TextFile.txt")));  
     ```  
   
-2. Ağaç düğümünü geçirmiş ve bir <xref:System.Windows.Forms.TreeNode> sınıf olarak yazılmışsa, türetilmiş sınıfınıza dönüştürmeniz gerekir. Atama bir nesne türünden diğerine açık bir dönüşümtür. Atama hakkında daha fazla bilgi için bkz. [örtük ve açık dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic) [, atama ve tür dönüştürmeleri](../../../csharp/programming-guide/types/casting-and-type-conversions.md) ( C#görsel) veya [atama işleci: ()](/cpp/cpp/cast-operator-parens) (görsel C++).  
+2. Ağaç düğümünü geçirmiş ve bu bir <xref:System.Windows.Forms.TreeNode> sınıfı olarak yazılmışsa, türetilmiş sınıfınıza dönüştürmeniz gerekir. Atama bir nesne türünden diğerine açık bir dönüşümtür. Atama hakkında daha fazla bilgi için bkz. [örtük ve açık dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic) [, atama ve tür dönüştürmeleri](../../../csharp/programming-guide/types/casting-and-type-conversions.md) ( C#görsel) veya [atama işleci: ()](/cpp/cpp/cast-operator-parens) (görsel C++).  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  

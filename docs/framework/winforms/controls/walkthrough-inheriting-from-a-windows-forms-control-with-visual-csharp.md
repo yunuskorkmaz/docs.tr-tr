@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Visual C# ile beraber Windows Forms Denetimi'nden Devralma"
+title: Denetimden Devralma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -11,16 +11,16 @@ ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c54733a340b1855b3fc7b90ff2b5178fad8c5303
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 713ccf97a73ce9684b9124a121369f22751861d0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460587"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740143"
 ---
 # <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>İzlenecek yol: C\# ile Windows Forms denetiminden devralma
 
-Visual C#ile *Devralma*aracılığıyla güçlü özel denetimler oluşturabilirsiniz. Devralma aracılığıyla standart Windows Forms denetimlerinin tüm devralınan işlevlerini koruyan ancak özel işlevleri de birleştiren denetimler oluşturabilirsiniz. Bu izlenecek yolda, `ValueButton`adlı basit bir devralınmış denetim oluşturacaksınız. Bu düğme standart Windows Forms <xref:System.Windows.Forms.Button> denetiminden işlevselliği devralacak ve `ButtonValue`adlı özel bir özelliği kullanıma sunacaktır.
+İle C# *Devralma*yoluyla güçlü özel denetimler oluşturabilirsiniz. Devralma aracılığıyla standart Windows Forms denetimlerinin tüm devralınan işlevlerini koruyan ancak özel işlevleri de birleştiren denetimler oluşturabilirsiniz. Bu izlenecek yolda, `ValueButton`adlı basit bir devralınmış denetim oluşturacaksınız. Bu düğme standart Windows Forms <xref:System.Windows.Forms.Button> denetiminden işlevselliği devralacak ve `ButtonValue`adlı özel bir özelliği kullanıma sunacaktır.
 
 ## <a name="create-the-project"></a>Projeyi Oluşturma
 
@@ -87,7 +87,7 @@ Denetimler tek başına projeler değildir; Bunlar bir kapsayıcıda barındır�
 
 ### <a name="to-build-your-control"></a>Denetiminizi oluşturmak için
 
-**Yapı** menüsünde **çözüm oluştur**' a tıklayın. Derleme, derleyici hataları veya uyarıları olmadan başarılı olmalıdır.
+Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**. Derleme, derleyici hataları veya uyarıları olmadan başarılı olmalıdır.
 
 ### <a name="to-create-a-test-project"></a>Bir test projesi oluşturmak için
 
@@ -137,7 +137,7 @@ Denetimler tek başına projeler değildir; Bunlar bir kapsayıcıda barındır�
 
      `Form1` görüntülenir.
 
-12. `valueButton1`' ye tıklayın.
+12. Tıklatın `valueButton1`.
 
      ' 5 ' rakamı, devralınan denetiminizin `ButtonValue` özelliğinin `valueButton1_Click` yöntemi aracılığıyla `label1` geçtiğini gösteren `label1`görüntülenir. Bu nedenle `ValueButton` denetiminiz standart Windows Forms düğmesinin tüm işlevlerini devralır, ancak ek, özel bir özellik sunar.
 

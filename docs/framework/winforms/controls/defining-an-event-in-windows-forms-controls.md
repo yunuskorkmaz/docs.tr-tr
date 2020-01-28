@@ -1,5 +1,5 @@
 ---
-title: Windows Forms Denetimlerinde Olay Tanımlama
+title: Denetimlerde bir olay tanımlama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - events [Windows Forms], defining within Windows Forms custom controls
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-ms.openlocfilehash: 4235c8b3c513509023388112071e78cfd079ec6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d45c369e1fc82ee009a85b5b35fe6aa754873436
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972347"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746082"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a>Windows Forms Denetimlerinde Olay Tanımlama
-Özel olaylar tanımlama hakkında daha fazla ayrıntı için bkz [olayları](../../../standard/events/index.md). İlişkili tüm veriler yok. bir olay tanımlarsanız, temel tür, olay verileri için kullanın. <xref:System.EventArgs>ve <xref:System.EventHandler> olay temsilci olarak. Yapmak için kalan tek şey bir olay üyesi ve korumalı tanımlamak için `On` *EventName* olayını yöntemi.  
+Özel olayları tanımlama hakkında daha fazla bilgi için bkz. [Olaylar](../../../standard/events/index.md). İlişkili verileri olmayan bir olay tanımlarsanız, olay verileri için temel türü kullanın, <xref:System.EventArgs>ve olay temsilcisi olarak <xref:System.EventHandler> kullanın. Her şey, olayı oluşturan bir olay üyesini ve korunan `On`*EventName* metodunu tanımlamaktır.  
   
- Aşağıdaki kod parçası gösterir nasıl `FlashTrackBar` özel denetim tanımlayan özel bir olay `ValueChanged`. İçin tam kod için `FlashTrackBar` örnek için bkz: [nasıl yapılır: İlerleme durumunu gösteren Windows Forms denetimi oluşturma](how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ Aşağıdaki kod parçası, `FlashTrackBar` özel denetiminin özel bir olayı `ValueChanged`nasıl tanımladığını gösterir. `FlashTrackBar` örneği için tüm kod için bkz. [nasıl yapılır: bir Windows Forms denetimi oluşturma Ilerlemeyi gösterir](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ```vb  
 Option Explicit  

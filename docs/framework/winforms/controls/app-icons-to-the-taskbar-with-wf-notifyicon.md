@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Windows Forms NotifyIcon Bileşeniyle TaskBar'a Uygulama Simgeleri Ekleme"
+title: Uygulama simgelerini NotifyIcon bileşeniyle birlikte görev çubuğuna ekleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,29 +13,29 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 05b6f300afea4671c1a847b116b378514ecb8b56
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 46b50ecaabe75dba08fea922d7b5639031692269
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959510"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746252"
 ---
-# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Nasıl yapılır: Windows Forms NotifyIcon Bileşeniyle TaskBar'a Uygulama Simgeleri Ekleme
+# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Nasıl yapılır: Windows Forms NotifyIcon Bileşeniyle TaskBar'na Uygulama Simgeleri Ekleme
 
-Windows Forms <xref:System.Windows.Forms.NotifyIcon> bileşen durumu görev çubuğu bildirim alanında tek bir simge görüntüler. Durum alanında birden fazla simgeleri göstermek için birden çok sahip <xref:System.Windows.Forms.NotifyIcon> formunuzdaki bileşenleri. Bir denetim için görüntülenen simgenin ayarlamak için kullanın <xref:System.Windows.Forms.NotifyIcon.Icon%2A> özelliği. Ayrıca kod yazabileceğiniz <xref:System.Windows.Forms.NotifyIcon.DoubleClick> kullanıcı simgesine tıkladığında bu şey için olay işleyicisi. Örneğin, bir iletişim kutusu kullanıcının simgesiyle gösterilen arka plan işlemi yapılandırmak görünür yapabilirsiniz.
+Windows Forms <xref:System.Windows.Forms.NotifyIcon> bileşeni, görev çubuğunun durum bildirimi alanında tek bir simge görüntüler. Durum alanında birden çok simge göstermek için, formunuzda birden çok <xref:System.Windows.Forms.NotifyIcon> bileşeni olması gerekir. Bir denetim için görüntülenecek simgeyi ayarlamak için <xref:System.Windows.Forms.NotifyIcon.Icon%2A> özelliğini kullanın. Ayrıca, Kullanıcı simgeye çift tıkladığında bir şeyin olması için <xref:System.Windows.Forms.NotifyIcon.DoubleClick> olay işleyicisine kod yazabilirsiniz. Örneğin, kullanıcının simgesiyle gösterilen arka plan sürecini yapılandırması için bir iletişim kutusu görünür.
 
 > [!NOTE]
-> <xref:System.Windows.Forms.NotifyIcon> Çeşit durumundaki bir değişiklik veya bileşen yalnızca, bildirim amacıyla bir eylem veya olayın oluştuğunu kullanıcıları uyarmak üzere kullanılır. Menüleri, araç çubukları ve diğer kullanıcı arabirimi öğeleri uygulamalarla standart etkileşim için kullanmanız gerekir.
+> <xref:System.Windows.Forms.NotifyIcon> bileşeni, yalnızca bir eylem veya olayın oluştuğunu veya bazı bir sıralama durumunda değişiklik olduğunu uyarmak için bildirim amaçları için kullanılır. Uygulamalarla standart etkileşim için menüleri, araç çubuklarını ve diğer kullanıcı arabirimi öğelerini kullanmanız gerekir.
 
-### <a name="to-set-the-icon"></a>Simge ayarlamak için
+### <a name="to-set-the-icon"></a>Simgeyi ayarlamak için
 
-1. Bir değer atayın <xref:System.Windows.Forms.NotifyIcon.Icon%2A> özelliği. Değer türü olmalıdır `System.Drawing.Icon` ve bir .ico dosyasını yüklenebilir. Simge dosyası üç nokta düğmesine tıklayarak ya da kod belirtebilirsiniz (![Visual Studio Özellikler penceresinde üç nokta düğmesini (…)](./media/visual-studio-ellipsis-button.png)) yanındaki <xref:System.Windows.Forms.NotifyIcon.Icon%2A> özelliğinde **özellikleri** Pencere seçip ardından dosyasında **açık** görüntülenen iletişim kutusunda.
+1. <xref:System.Windows.Forms.NotifyIcon.Icon%2A> özelliğine bir değer atayın. Değer `System.Drawing.Icon` türünde olmalı ve bir. ico dosyasından yüklenebilir. Koddaki simge dosyasını veya üç nokta düğmesini (...), **Özellikler** penceresindeki <xref:System.Windows.Forms.NotifyIcon.Icon%2A> özelliğinin yanındaki (... Özellikler penceresi) ve ardından görüntülenen **Aç** iletişim kutusunda dosyayı seçerek belirtebilirsiniz (![)](./media/visual-studio-ellipsis-button.png).
 
 2. Ayarlama <xref:System.Windows.Forms.NotifyIcon.Visible%2A> özelliğini `true`.
 
-3. Ayarlama <xref:System.Windows.Forms.NotifyIcon.Text%2A> uygun bir araç ipucu dize özelliği.
+3. <xref:System.Windows.Forms.NotifyIcon.Text%2A> özelliğini uygun bir araç Ipucu dizesine ayarlayın.
 
-     Aşağıdaki kod örneğinde yolunu ayarlamak için simgenin konumunu **Belgelerim** klasör. Bu konum, Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu klasör içerdiğini varsayar çünkü kullanılır. Bu konumu seçme, güvenli bir şekilde uygulamayı çalıştırmak minimum sistem erişim düzeylerine sahip kullanıcılar sağlar. Aşağıdaki örnek bir formla gerektiren bir <xref:System.Windows.Forms.NotifyIcon> denetim zaten eklendi. Adlı bir simge dosyası aynı zamanda gerektirir `Icon.ico`.
+     Aşağıdaki kod örneğinde, simgenin konumu için ayarlanan yol **Belgelerim klasörüdür.** Bu konum, Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu klasörü içerdiğini varsaydığı için kullanılır. Bu konumun seçilmesi, en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenle çalıştırmasına de olanak sağlar. Aşağıdaki örnek, zaten eklenmiş <xref:System.Windows.Forms.NotifyIcon> denetimi olan bir form gerektirir. Ayrıca, `Icon.ico`adlı bir simge dosyası da gerektirir.
 
     ```vb
     ' You should replace the bold icon in the sample below
@@ -76,6 +76,6 @@ Windows Forms <xref:System.Windows.Forms.NotifyIcon> bileşen durumu görev çub
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Nasıl yapılır: Bir kısayol menüsünü Windows Forms Notifyıcon bileşeniyle ilişkilendirme](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
+- [Nasıl yapılır: Bir Kısayol Menüsünü Windows Forms NotifyIcon Bileşeniyle İlişkilendirme](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
 - [NotifyIcon Bileşeni](notifyicon-component-windows-forms.md)
 - [NotifyIcon Bileşenine Genel Bakış](notifyicon-component-overview-windows-forms.md)

@@ -1,17 +1,17 @@
 ---
-title: WPF İçinde Ağaçlar
+title: Ağaçlarında
 ms.date: 03/30/2017
 helpviewer_keywords:
 - logical tree [WPF]
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 0dfae3a601a07c68b2dfe029f061dcf838e98af7
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d4b17c34fb33f73ca1c173bebc8f94ddac5b1942
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459505"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746568"
 ---
 # <a name="trees-in-wpf"></a>WPF İçinde Ağaçlar
 Birçok teknolojilerde, öğeler ve bileşenler, geliştiricilerin bir uygulamanın işlenmesini veya davranışını etkilemek için ağaçta nesne düğümlerini doğrudan işleyebileceği bir ağaç yapısında düzenlenir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ayrıca, program öğeleri arasındaki ilişkileri tanımlamak için çeşitli ağaç yapısı metaphiler kullanır. Çoğu bölüm WPF geliştiricisi, kod içinde bir uygulama oluşturabilir veya nesne ağacı metaphor hakkında kavramsal olarak düşünürken XAML 'de uygulamanın bölümlerini tanımlayabilir, ancak belirli bir API 'yi çağırarak veya belirli bir biçimlendirmeyi kullanarak, bazı genel XML DOM 'da kullanabileceğiniz gibi nesne ağacı işleme API 'SI. WPF, ağaç benzetimini görünüm, <xref:System.Windows.LogicalTreeHelper> ve <xref:System.Windows.Media.VisualTreeHelper>sağlayan iki yardımcı sınıf sunar. Şartlar görsel ağacı ve mantıksal ağaç, bazı temel WPF özelliklerinin davranışını anlamak için yararlı olduğundan, WPF belgelerinde de kullanılır. Bu konu, görsel ağaç ve mantıksal ağacın ne olduğunu tanımlar, bu ağaçların genel nesne ağacı kavramıyla ilişkisini açıklar ve <xref:System.Windows.LogicalTreeHelper> ve <xref:System.Windows.Media.VisualTreeHelper>açıklar.  
@@ -35,7 +35,7 @@ Birçok teknolojilerde, öğeler ve bileşenler, geliştiricilerin bir uygulaman
   
  Bu XAML 'yi bir belge nesne modeli altında XML olarak işlemek olsaydıysanız ve öğeleri örtük olarak (yasal olacak şekilde) eklediyseniz, sonuçta elde edilen XML DOM ağacının `<ListBox.Items>` ve diğer örtük öğeler için öğeleri dahil edebilirsiniz. Ancak XAML biçimlendirmeyi okurken ve nesnelere yazdığınızda bu şekilde işlem yapmaz, sonuçta elde edilen nesne grafı `ListBox.Items`içermez. Ancak, <xref:System.Windows.Controls.ItemCollection>içeren `Items` adında bir <xref:System.Windows.Controls.ListBox> özelliğine sahiptir ve <xref:System.Windows.Controls.ListBox> XAML işlendiğinde <xref:System.Windows.Controls.ItemCollection> başlatılır ancak boştur. Daha sonra, <xref:System.Windows.Controls.ListBox> içerik olarak bulunan her bir alt nesne öğesi, `ItemCollection.Add`için ayrıştırıcı çağrıları tarafından <xref:System.Windows.Controls.ItemCollection> eklenir. XAML 'yi bir nesne ağacına işlemenin bu örneği, oluşturulan nesne ağacının temel olarak mantıksal ağaç olduğu bir örnektir.  
   
- Ancak, mantıksal ağaç, çalışma zamanında uygulama kullanıcı arabirimi için mevcut olan nesne grafiğinin tamamı değildir ve XAML örtülü sözdizimi öğeleri de buna eşit değildir. Bunun ana nedeni görseller ve şablonlarıdır. Örneğin, <xref:System.Windows.Controls.Button>göz önünde bulundurun. Mantıksal ağaç <xref:System.Windows.Controls.Button> nesnesini ve ayrıca dize `Content`bildirir. Ancak çalışma zamanı nesne ağacında bu düğmenin daha fazlası vardır. Özellikle, düğme yalnızca belirli bir <xref:System.Windows.Controls.Button> denetim şablonu uygulandığından ekranda görüntülenir. Uygulanan bir şablondan (görsel düğme etrafında koyu gri <xref:System.Windows.Controls.Border>) gelen görseller, çalışma zamanı sırasında mantıksal ağaca bakıyor olsanız bile mantıksal ağaçta bildirilmemiştir (örneğin, bir giriş olayını işleme görünür kullanıcı arabirimi ve ardından mantıksal ağacı okuma). Şablon görsellerini bulmak için, bunun yerine görsel ağacı incelemeniz gerekir.  
+ Ancak, mantıksal ağaç, çalışma zamanında uygulama kullanıcı arabirimi için mevcut olan nesne grafiğinin tamamı değildir ve XAML örtülü sözdizimi öğeleri de buna eşit değildir. Bunun ana nedeni görseller ve şablonlarıdır. Örneğin, <xref:System.Windows.Controls.Button>göz önünde bulundurun. Mantıksal ağaç <xref:System.Windows.Controls.Button> nesnesini ve ayrıca dize `Content`bildirir. Ancak çalışma zamanı nesne ağacında bu düğmenin daha fazlası vardır. Özellikle, düğme yalnızca belirli bir <xref:System.Windows.Controls.Button> denetim şablonu uygulandığından ekranda görüntülenir. Uygulanan bir şablondan (görsel düğme etrafında koyu gri <xref:System.Windows.Controls.Border>) gelen görseller, çalışma zamanı sırasında mantıksal ağaca bakıyor olsanız bile (görünür kullanıcı arabiriminden bir giriş olayı işleme ve ardından mantıksal ağacı okuma gibi) mantıksal ağaçta bildirilmemiştir. Şablon görsellerini bulmak için, bunun yerine görsel ağacı incelemeniz gerekir.  
   
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sözdiziminin oluşturulan nesne grafiğine nasıl eşlendiği ve XAML 'de örtük sözdizimi hakkında daha fazla bilgi için, bkz. [XAML sözdizimi ayrıntılı](xaml-syntax-in-detail.md) veya xaml 'de [genel bakış (WPF)](xaml-overview-wpf.md).  
   
@@ -43,7 +43,7 @@ Birçok teknolojilerde, öğeler ve bileşenler, geliştiricilerin bir uygulaman
 ### <a name="the-purpose-of-the-logical-tree"></a>Mantıksal ağacın amacı  
  Mantıksal ağaç, içerik modellerinin olası alt nesnelerinin üzerinde kolayca yineleme yapabilmesi ve böylece içerik modellerinin Genişletilebilir olması için vardır. Ayrıca, mantıksal ağaç, mantıksal ağaçtaki tüm nesneler yüklenirken olduğu gibi belirli bildirimler için bir çerçeve sağlar. Temel olarak, mantıksal ağaç, görselleri dışlayan, ancak kendi çalıştırma zamanı uygulamanızın kompozisyonundan çok sayıda sorgulama işlemi için yeterli olan bir çalışma zamanı nesne grafiğinin bir yaklaşık sıdır.  
   
- Bunlara ek olarak, hem statik hem de dinamik kaynak başvuruları, ilk istenen nesnedeki <xref:System.Windows.FrameworkElement.Resources%2A> koleksiyonları için yukarı doğru bakarak ve ardından mantıksal ağacı devam ettirerek her bir <xref:System.Windows.FrameworkElement> (veya <xref:System.Windows.FrameworkContentElement>) kontrol ederek çözümlenir. büyük olasılıkla bu anahtarı içeren bir <xref:System.Windows.ResourceDictionary>içeren başka bir `Resources` değeri. Mantıksal ağaç, hem mantıksal ağaç hem de görsel ağaç varsa kaynak arama için kullanılır. Kaynak sözlükleri ve arama hakkında daha fazla bilgi için bkz. [xaml kaynakları](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
+ Bunlara ek olarak, hem statik hem de dinamik kaynak başvuruları, ilk istenen nesnedeki <xref:System.Windows.FrameworkElement.Resources%2A> koleksiyonları için bir yukarı doğru bakarak ve ardından mantıksal ağacı devam ettirerek her bir <xref:System.Windows.FrameworkElement> (ya da <xref:System.Windows.FrameworkContentElement>), bu anahtarı içeren bir <xref:System.Windows.ResourceDictionary>içeren başka bir `Resources` değeri olup olmadığını denetler. Mantıksal ağaç, hem mantıksal ağaç hem de görsel ağaç varsa kaynak arama için kullanılır. Kaynak sözlükleri ve arama hakkında daha fazla bilgi için bkz. [xaml kaynakları](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
 <a name="composition"></a>   
 ### <a name="composition-of-the-logical-tree"></a>Mantıksal ağacın bileşimi  
@@ -67,12 +67,12 @@ Birçok teknolojilerde, öğeler ve bileşenler, geliştiricilerin bir uygulaman
   
 <a name="tree_traversal"></a>   
 ## <a name="tree-traversal"></a>Ağaç geçişi  
- <xref:System.Windows.LogicalTreeHelper> sınıfı, mantıksal ağaç geçişi için <xref:System.Windows.LogicalTreeHelper.GetChildren%2A>, <xref:System.Windows.LogicalTreeHelper.GetParent%2A>ve <xref:System.Windows.LogicalTreeHelper.FindLogicalNode%2A> yöntemleri sağlar. Çoğu durumda, bu denetimler, mantıksal alt öğelerini `Add`, Dizin Oluşturucu vb. gibi koleksiyon erişimini destekleyen ayrılmış bir koleksiyon özelliği olarak neredeyse her zaman kullanıma sunduğundan, varolan denetimlerin mantıksal ağacını gezmek zorunda değilsiniz. . Ağaç geçişi temel olarak, koleksiyon özelliklerinin zaten tanımlandığı ve kendi koleksiyon özelliğini sağlamak isteyen <xref:System.Windows.Controls.ItemsControl> veya <xref:System.Windows.Controls.Panel> gibi amaçlanan denetim desenlerinden türetilmeyen denetim yazarları tarafından kullanılan bir senaryodur. support.  
+ <xref:System.Windows.LogicalTreeHelper> sınıfı, mantıksal ağaç geçişi için <xref:System.Windows.LogicalTreeHelper.GetChildren%2A>, <xref:System.Windows.LogicalTreeHelper.GetParent%2A>ve <xref:System.Windows.LogicalTreeHelper.FindLogicalNode%2A> yöntemleri sağlar. Çoğu durumda, bu denetimler, mantıksal alt öğelerini `Add`, Dizin Oluşturucu vb. gibi koleksiyon erişimini destekleyen ayrılmış bir koleksiyon özelliği olarak neredeyse her zaman kullanıma sunduğundan, var olan denetimlerin mantıksal ağacını gezmek zorunda değilsiniz. Ağaç geçişi temel olarak, koleksiyon özelliklerinin zaten tanımlandığı ve kendi koleksiyon özelliği desteğini sağlamak isteyen <xref:System.Windows.Controls.ItemsControl> veya <xref:System.Windows.Controls.Panel> gibi amaçlanan denetim desenlerinden türetilmeyen denetim yazarları tarafından kullanılan bir senaryodur.  
   
  Görsel ağaç Ayrıca, <xref:System.Windows.Media.VisualTreeHelper>görsel ağaç geçişi için yardımcı bir sınıf destekler. Görsel ağaç denetimine özgü özelliklerle rahat bir şekilde gösterilmez, bu nedenle <xref:System.Windows.Media.VisualTreeHelper> sınıfı, programlama senaryonuz için gerekliyse görsel ağaca geçiş yapmak için önerilen yoldur. Daha fazla bilgi için bkz. [WPF Grafik Işlemeye genel bakış](../graphics-multimedia/wpf-graphics-rendering-overview.md).  
   
 > [!NOTE]
-> Bazen uygulanan bir şablonun görsel ağacını incelemek gereklidir. Bu tekniği kullanırken dikkatli olmanız gerekir. Şablonu tanımladığınız bir denetim için görsel bir ağaçta geçiş yapsanız bile, denetiminizin tüketicileri örnekleri üzerinde <xref:System.Windows.Controls.Control.Template%2A> özelliğini ayarlayarak şablonu değiştirebilir ve hatta son kullanıcı sistemi değiştirerek uygulanan şablonu etkileyebilir Tema.  
+> Bazen uygulanan bir şablonun görsel ağacını incelemek gereklidir. Bu tekniği kullanırken dikkatli olmanız gerekir. Şablonu tanımladığınız bir denetim için görsel bir ağaçta geçiş yapsanız bile, denetiminizin tüketicileri örnekleri üzerinde <xref:System.Windows.Controls.Control.Template%2A> özelliğini ayarlayarak şablonu değiştirebilir ve hatta son kullanıcı sistem temasını değiştirerek uygulanan şablonu etkileyebilir.  
   
 <a name="routes"></a>   
 ## <a name="routes-for-routed-events-as-a-tree"></a>Yönlendirilmiş olaylar için "ağaç" olarak yollar  

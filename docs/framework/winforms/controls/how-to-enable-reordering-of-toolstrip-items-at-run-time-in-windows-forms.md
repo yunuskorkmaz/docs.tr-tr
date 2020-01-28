@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Windows Forms'ta çalışma zamanında ToolStrip öğelerinin yeniden sıralanmasını etkinleştirme"
+title: 'Nasıl yapılır: Çalışma Zamanında ToolStrip Öğelerinin Yeniden Sıralanmasını Etkinleştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - toolbars [Windows Forms], rearranging controls
 - ToolStrip control [Windows Forms], reordering items
 ms.assetid: 8480b69a-379f-4dc2-8dcf-365ed93692b2
-ms.openlocfilehash: 46a5a70206e7620341a484912c7fada82d64747a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 44b52bf997819f090569d08eb395d8af18f61370
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609845"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745480"
 ---
-# <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta çalışma zamanında ToolStrip öğelerinin yeniden sıralanmasını etkinleştirme
-Kullanıcının yeniden etkinleştirebilirsiniz <xref:System.Windows.Forms.ToolStripItem> denetimlerini <xref:System.Windows.Forms.ToolStrip>.  
+# <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta Çalışma Zamanında ToolStrip Öğelerinin Yeniden Sıralanmasını Etkinleştirme
+Kullanıcının <xref:System.Windows.Forms.ToolStrip><xref:System.Windows.Forms.ToolStripItem> denetimleri yeniden düzenlenmesini sağlayabilirsiniz.  
   
-### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>Çalışma zamanında ToolStripItem yeniden etkinleştirmek için  
+### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>Çalışma zamanında ToolStripItem yeniden düzenlemesini etkinleştirmek için  
   
-- Ayarlama <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> özelliğini `true`. Varsayılan olarak, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> olduğu `false`.  
+- Ayarlama <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> özelliğini `true`. Varsayılan olarak, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> `false`.  
   
-     Çalışma zamanında kullanıcı ALT tuşunu ve sürüklemek için sol fare düğmesini tutar bir <xref:System.Windows.Forms.ToolStripItem> farklı bir konuma <xref:System.Windows.Forms.ToolStrip>.  
+     Çalışma zamanında Kullanıcı, bir <xref:System.Windows.Forms.ToolStripItem> <xref:System.Windows.Forms.ToolStrip>farklı bir konuma sürüklemek için ALT tuşunu ve sol fare düğmesini tutar.  
   
     ```vb  
     toolStrip1.AllowItemReorder = True  

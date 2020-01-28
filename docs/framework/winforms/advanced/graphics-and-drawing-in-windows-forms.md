@@ -1,5 +1,5 @@
 ---
-title: Windows Formlarında Grafikler ve Çizim
+title: Grafikler ve çizim
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [Windows Forms]
@@ -7,46 +7,46 @@ helpviewer_keywords:
 - GDI+, using in managed code
 - drawing [Windows Forms]
 ms.assetid: 362532c5-1a06-4257-bdc8-723461009ede
-ms.openlocfilehash: e110203605c31f90f71c949f81c18ebf464d52eb
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 10ad18d38c84f6e447601ab6c8bf1a953dabb7cf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505546"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746407"
 ---
 # <a name="graphics-and-drawing-in-windows-forms"></a>Windows Formlarında Grafikler ve Çizim
-Ortak dil çalışma zamanı, Gelişmiş bir uygulaması, Windows grafik cihaz arabirimi (GDI +'OLARAK adlandırılan GDI) kullanır. GDI + ile grafikler oluşturabilir, metin çizme ve grafik görüntüleri nesneler olarak yönetmek. GDI +'da performans ve kullanım kolaylığı sunmak üzere tasarlanmıştır. Windows formlar ve denetimler grafik görüntülerinde işlenecek GDI +'da kullanabilirsiniz. GDI +'da doğrudan Web formlarında kullanamasanız, grafik görüntüleri görüntü Web sunucusu denetimi ile görüntüleyebilirsiniz.  
+Ortak dil çalışma zamanı, GDI+ adlı Windows Grafik Cihaz Arabirimi (GDI) gelişmiş uygulamasını kullanır. GDI+ ile grafik oluşturabilir, metin çizebilir ve grafik görüntülerini nesne olarak değiştirebilirsiniz. GDI+, performans ve kullanım kolaylığı sunacak şekilde tasarlanmıştır. Windows Forms ve denetimlerinde grafik görüntülerini işlemek için GDI+ kullanabilirsiniz. Doğrudan Web Forms üzerinde GDI+ kullanamazsınız, ancak görüntü Web sunucusu denetimi aracılığıyla grafik görüntüleri görüntüleyebilirsiniz.  
   
- Bu bölümde, GDI + programlamanın temellerini tanıtan konuları bulur. Kapsamlı bir referans olacak şekilde tasarlanmamıştır olsa da, bu bölüm hakkında bilgiler içerir <xref:System.Drawing.Graphics>, <xref:System.Drawing.Pen>, <xref:System.Drawing.Brush>, ve <xref:System.Drawing.Color> nesneleri ve şekiller, metin çizme çizim gibi görevleri gerçekleştirmek açıklanmaktadır veya Görüntüleri görüntüleme. Daha fazla bilgi için [GDI +'BAŞVURU](/windows/desktop/gdiplus/-gdiplus-class-gdi-reference).  
+ Bu bölümde, GDI+ programlama temellerini ortaya çıkaracak konuları bulacaksınız. Kapsamlı bir başvuru olmasını amaçlanmamış olsa da, bu bölüm <xref:System.Drawing.Graphics>, <xref:System.Drawing.Pen>, <xref:System.Drawing.Brush>ve <xref:System.Drawing.Color> nesneleri hakkında bilgiler içerir ve bu görevlerin, şekil çizme, metin çizme veya görüntü görüntüleme gibi görevleri nasıl gerçekleştirebileceğinizi açıklar. Daha fazla bilgi için bkz. [GDI+ başvurusu](/windows/desktop/gdiplus/-gdiplus-class-gdi-reference).  
   
- İsterseniz hemen ve hemen kullanmaya başlamak için bkz: [grafik programlama ile çalışmaya başlama](getting-started-with-graphics-programming.md). Kod satırları, şekiller, metin ve Windows forms hakkında daha fazla bilgi çizmek için kullanma hakkında konular bulunur.  
+ Hızlı bir başlangıç yapmak ve hemen başlamak istiyorsanız bkz. [Grafik programlamaya Başlarken](getting-started-with-graphics-programming.md). Windows Forms 'ta çizgi, şekil, metin ve daha fazlasını çizmek için kodun nasıl kullanılacağına ilişkin konular içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Grafiklere Genel Bakış](graphics-overview-windows-forms.md)  
- Grafikler ile ilgili yönetilen sınıflar için bir giriş sağlar.  
+ Grafiklerle ilgili yönetilen sınıflara bir giriş sağlar.  
   
  [GDI+ Yönetilen Kodu Hakkında](about-gdi-managed-code.md)  
- Yönetilen GDI + sınıflar hakkında bilgi sağlar.  
+ Yönetilen GDI+ sınıfları hakkında bilgi sağlar.  
   
  [Yönetilen Grafik Sınıflarını Kullanma](using-managed-graphics-classes.md)  
- Nasıl için tam çeşitli görevleri kullanarak GDI + yönetilen sınıflar gösterir.  
+ GDI+ Yönetilen sınıfları kullanarak çeşitli görevlerin nasıl tamamlandığını gösterir.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Drawing>  
- GDI + grafik temel işlevlerini erişim sağlar.  
+ GDI+ temel grafik işlevselliğine erişim sağlar.  
   
  <xref:System.Drawing.Drawing2D>  
- Gelişmiş iki boyutlu sağlar ve vektör grafik işlevlerini.  
+ Gelişmiş iki boyutlu ve vektör grafik işlevselliği sağlar.  
   
  <xref:System.Drawing.Imaging>  
- Gelişmiş GDI görüntüleme işlevlerini + sağlar.  
+ Gelişmiş GDI+ görüntüleme işlevselliği sağlar.  
   
  <xref:System.Drawing.Text>  
- Gelişmiş GDI + tipografi işlevlerini sağlar. Bu ad alanındaki sınıflar oluşturmak ve yazı tipi koleksiyonları kullanmak için kullanılabilir.  
+ Gelişmiş GDI+ tipografi işlevselliği sağlar. Bu ad alanındaki sınıflar, yazı tipi koleksiyonları oluşturmak ve kullanmak için kullanılabilir.  
   
  <xref:System.Drawing.Printing>  
- Yazdırma işlevselliği sağlar.  
+ Yazdırma işlevlerini sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Özel Denetim Boyama ve İşleme](../controls/custom-control-painting-and-rendering.md)  
- Boyama denetimleri için kodu sağlayabilir açıklanmaktadır.
+ Boyama denetimleri için kod sağlama hakkında ayrıntılı bilgi.

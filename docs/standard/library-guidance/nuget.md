@@ -2,12 +2,12 @@
 title: NuGet ve .NET kitaplıkları
 description: .NET kitaplıkları için NuGet ile paketleme için en iyi yöntem önerileri.
 ms.date: 01/15/2019
-ms.openlocfilehash: 71c380f6062c09a8951769009b29b567fddfddfc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f1e8d39fe2988f11ce7fd351a4d6bee6d322f2b5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706484"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731379"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -34,7 +34,7 @@ Bir NuGet paketi oluşturmanın iki ana yolu vardır. Daha yeni ve önerilen yol
 
 NuGet paketi oluşturmanın daha eski yolu, bir `*.nuspec` dosyası ve `nuget.exe` komut satırı aracıdır. Bir nuspec dosyası harika denetim sağlar ancak son NuGet paketine hangi derlemeleri ve hedefleri dahil edileceğini dikkatle belirtmeniz gerekir. Bir hata yapmak veya birisinin değişiklik yaparken nuspec 'i güncelleştirmeyi unutmaları çok kolay. Bir nuspec 'in avantajı, henüz bir SDK stili proje dosyasını desteklemeyen çerçeveler için NuGet paketleri oluşturmayı kullanabilir.
 
-**✔️** NuGet paketini oluşturmak için SDK stili bir proje dosyası kullanmayı düşünün.
+✔️ NuGet paketini oluşturmak için SDK stili bir proje dosyası kullanmayı düşünün.
 
 ## <a name="package-dependencies"></a>Paket bağımlılıkları
 
@@ -59,15 +59,15 @@ Bir NuGet paketi birçok [meta veri özelliğini](/nuget/reference/nuspec)destek
 > [!IMPORTANT]
 > Lisansı olmayan bir proje, özel bir [telif hakkı](https://choosealicense.com/no-permission/)için varsayılan olarak, diğer kişilerin kullanması mümkün değildir.
 
-**✔️** NuGet 'in önek ayırma [ölçütlerine](/nuget/reference/id-prefix-reservation)uyan bir ön ek içeren bir NuGet paketi adı seçmeyi düşünün.
+✔️ NuGet 'in önek ayırma [ölçütlerine](/nuget/reference/id-prefix-reservation)uyan bir ön ek Içeren bir NuGet paketi adı seçmeyi düşünün.
 
-**✔️** paket SIMGENIZIN https href 'i kullanır.
+✔️ paket simgenizin HTTPS href 'i kullanır.
 
 > HTTPS ile NuGet.org Run ve HTTPS olmayan bir görüntü görüntüleme gibi siteler, karışık bir içerik uyarısı oluşturur.
 
-**✔️** , 64x64 olan ve sonuçların en iyi şekilde görüntülenmesi için saydam bir arka plana sahip olan bir paket simge görüntüsünü kullanır.
+✔️, 64x64 olan ve sonuçların en iyi şekilde görüntülenmesi için saydam bir arka plana sahip olan bir paket simge görüntüsünü kullanır.
 
-**✔️** derlemelerinize ve NuGet paketinize kaynak denetimi meta verileri eklemek Için [kaynak bağlantısı](./sourcelink.md) kurmayı düşünün.
+✔️ derlemelerinize ve NuGet paketinize kaynak denetimi meta verileri eklemek için [kaynak bağlantısı](./sourcelink.md) kurmayı düşünün.
 
 > Kaynak bağlantısı, NuGet paketine `RepositoryUrl` ve `RepositoryType` meta verileri otomatik olarak ekler. Kaynak bağlantısı, paketin oluşturulduğu tam kaynak kodu hakkında bilgi de ekler. Örneğin, bir git deposundan oluşturulan bir pakette, işlem karması meta veriler olarak eklenir.
 
@@ -84,9 +84,9 @@ Sürüm sonekine sahip NuGet paketleri [yayın öncesi](/nuget/create-packages/p
 
 ![NuGet yayın öncesi paket bağımlılığı](./media/nuget/nuget-prerelease-package.png "NuGet yayın öncesi paket bağımlılığı")
 
-**✔️** , test etme, önizleme veya deneme yaparken yayın öncesi paketi yayımlamaktır.
+✔️, test etme, önizleme veya deneme yaparken yayın öncesi paketi yayımlamaktır.
 
-**✔️** , diğer kararlı paketlerin buna başvurabilmesi için kararlı bir paket yayımlamaktır.
+✔️, diğer kararlı paketlerin buna başvurabilmesi için kararlı bir paket yayımlamaktır.
 
 ## <a name="symbol-packages"></a>Sembol paketleri
 
@@ -112,7 +112,7 @@ Sembol paketi oluşturmanın bir alternatifi, sembol dosyalarını ana NuGet pak
 
 Sembol dosyalarını gömmenin dezavantajı, SDK stilindeki projeler kullanılarak derlenen .NET kitaplıkları için paket boyutunu %30 oranında artırdı. Paket boyutu bir sorun oluşturacaksa, sembolleri bir sembol paketinde yayımlamanız gerekir.
 
-**✔️** sembolleri bir sembol paketi olarak yayımlamayı düşünün (`*.snupkg`) NuGet.org
+✔️ sembolleri bir sembol paketi olarak yayımlamayı düşünün (`*.snupkg`) NuGet.org
 
 > Sembol paketleri (`*.snupkg`), geliştiricilere ana paket boyutunu ayıklamadan ve NuGet paketinde hata ayıklamaya yönelik geri yükleme performansını etkilemeden iyi bir istek üzerine hata ayıklama deneyimi sağlar.
 >

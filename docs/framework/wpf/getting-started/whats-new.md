@@ -1,129 +1,130 @@
 ---
 title: WPF Sürüm 4.5'te Yenilikler
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 0dbe038bed3fd62589b2f3906441e27761e0438a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8eff8da7746047c450b2e23af63d43b13f3b970c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649156"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746925"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF Sürüm 4.5'te Yenilikler
-<a name="introduction"></a> Bu konu, yeni ve geliştirilmiş özellikleri hakkında bilgi içerir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sürüm 4.5.  
+<a name="introduction"></a>Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sürüm 4,5 ' deki yeni ve gelişmiş özellikler hakkında bilgiler içerir.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
 - [Şerit denetimi](#ribbon_control)  
   
-- [Gruplandırılmış veri kümelerini büyük görüntüleme performansı geliştirildi](#grouped_virtualization)  
+- [Büyük ölçekli veri kümeleri görüntülenirken performans artırıldı](#grouped_virtualization)  
   
 - [VirtualizingPanel için yeni özellikler](#VirtualizingPanel)  
   
-- [Statik özellikler bağlama](#static_properties)  
+- [Statik özelliklere bağlama](#static_properties)  
   
-- [Koleksiyonlar üzerinde olmayan UI iş parçacığı erişme](#xthread_access)  
+- [Kullanıcı arabirimi olmayan Iş parçacıklarında koleksiyonlara erişme](#xthread_access)  
   
-- [Zaman uyumlu ve zaman uyumsuz olarak verileri doğrulama](#INotifyDataErrorInfo)  
+- [Eşzamanlı ve zaman uyumsuz olarak verileri doğrulama](#INotifyDataErrorInfo)  
   
-- [Veri bağlama kaynağı otomatik olarak güncelleştiriliyor](#delay)  
+- [Veri bağlamasının kaynağını otomatik olarak güncelleştirme](#delay)  
   
-- [Bu uygulama ICustomTypeProvider türlerine bağlama](#ICustomTypeProvider)  
+- [ICustomTypeProvider 'ı uygulayan türlere bağlama](#ICustomTypeProvider)  
   
-- [Bir bağlama ifadesinden veri bağlama bilgileri alınıyor](#binding_state)  
+- [Bağlama ifadesinden veri bağlama bilgilerini alma](#binding_state)  
   
-- [İçin geçerli bir DataContext nesne denetleniyor](#DisconnectedSource)  
+- [Geçerli bir DataContext nesnesi denetleniyor](#DisconnectedSource)  
   
-- [(Canlı şekillendirme) veri değerleri değiştikçe verileri yeniden konumlandırma](#live_shaping)  
+- [Verilerin değerleri değiştiğinde verileri yeniden konumlandırma (canlı şekillendirme)](#live_shaping)  
   
-- [Bir olay zayıf bir başvuru oluşturmak için gelişmiş destek](#weak_event_pattern)  
+- [Bir olaya zayıf bir başvuru kurmak için geliştirilmiş destek](#weak_event_pattern)  
   
-- [Dispatcher sınıfı için yeni yöntemler](#async)  
+- [Dağıtıcı sınıfı için yeni Yöntemler](#async)  
   
 - [Olaylar için biçimlendirme uzantıları](#events_markup_extenions)  
   
 <a name="ribbon_control"></a>   
 ## <a name="ribbon-control"></a>Şerit denetimi  
- WPF 4.5 ile birlikte gelir bir <xref:System.Windows.Controls.Ribbon.Ribbon> hızlı erişim araç çubuğu, uygulama menüsü ve sekmeler barındıran denetimi.  Daha fazla bilgi için [Şerite Genel Bakış](/visualstudio/vsto/ribbon-overview).  
+ WPF 4,5, hızlı erişim araç çubuğu, uygulama menüsü ve sekmeler barındıran bir <xref:System.Windows.Controls.Ribbon.Ribbon> denetimiyle birlikte sunulur.  Daha fazla bilgi için [şeride genel bakış](/visualstudio/vsto/ribbon-overview)bölümüne bakın.  
   
 <a name="grouped_virtualization"></a>   
-## <a name="improved-performance-when-displaying-large-sets-of-grouped-data"></a>Gruplandırılmış veri kümelerini büyük görüntüleme performansı geliştirildi  
- Kullanıcı Arabirimi sanallaştırma, bir alt kümesi olduğunda meydana gelen çok sayıda veri öğelerinin hangi öğelerin ekranda görünür olmasına göre oluşturulan kullanıcı arabirimi (UI) öğeleri. <xref:System.Windows.Controls.VirtualizingPanel> Tanımlar <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A> ekli gruplandırılmış veriler için kullanıcı Arabirimi sanallaştırma sağlayan bir özellik.  Gruplandırma veriler hakkında daha fazla bilgi için bkz: nasıl yapılır: Bir görünümde XAML kullanarak verileri sıralama ve grup.  Gruplandırılmış veriler sanallaştırma hakkında daha fazla bilgi için bkz: <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A> ekli özellik.  
+## <a name="improved-performance-when-displaying-large-sets-of-grouped-data"></a>Büyük ölçekli veri kümeleri görüntülenirken performans artırıldı  
+ Kullanıcı arabirimi (UI) öğelerinden oluşan bir alt küme, ekranda görünür öğeleri temel alan daha fazla sayıda veri öğesinden oluşturulduğunda, UI Sanallaştırması oluşur. <xref:System.Windows.Controls.VirtualizingPanel>, gruplanmış veriler için UI sanallaştırmayı sağlayan <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A> iliştirilmiş özelliği tanımlar.  Verileri gruplandırma hakkında daha fazla bilgi için bkz. nasıl yapılır: XAML 'de görünüm kullanarak verileri sıralama ve gruplama.  Gruplanmış verileri sanallaştırıp hakkında daha fazla bilgi için <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A> Ekli özelliğine bakın.  
   
 <a name="VirtualizingPanel"></a>   
 ## <a name="new-features-for-the-virtualizingpanel"></a>VirtualizingPanel için yeni özellikler  
   
-1. Belirtebileceğiniz olup olmadığını bir <xref:System.Windows.Controls.VirtualizingPanel>, gibi <xref:System.Windows.Controls.VirtualizingStackPanel>, kısmi öğeleri kullanarak görüntüler <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> ekli özellik. Varsa <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> ayarlanır <xref:System.Windows.Controls.ScrollUnit.Item>, <xref:System.Windows.Controls.VirtualizingPanel> yalnızca tamamen görünür olan öğeleri görüntüler. Varsa <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> ayarlanır <xref:System.Windows.Controls.ScrollUnit.Pixel>, <xref:System.Windows.Controls.VirtualizingPanel> kısmen görünür öğeleri görüntüleyebilirsiniz.  
+1. <xref:System.Windows.Controls.VirtualizingStackPanel>gibi bir <xref:System.Windows.Controls.VirtualizingPanel>, <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> iliştirilmiş özelliği kullanarak kısmi öğeleri görüntüleyip görüntülemediğini belirtebilirsiniz. <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> <xref:System.Windows.Controls.ScrollUnit.Item>olarak ayarlanırsa <xref:System.Windows.Controls.VirtualizingPanel> yalnızca tamamen görünür olan öğeleri görüntüler. <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> <xref:System.Windows.Controls.ScrollUnit.Pixel>olarak ayarlanırsa, <xref:System.Windows.Controls.VirtualizingPanel> kısmen görünür öğeleri görüntüleyebilir.  
   
-2. Önce ve sonra Görünüm penceresinin önbellek boyutu belirtebilirsiniz, <xref:System.Windows.Controls.VirtualizingPanel> kullanarak sanallaştırma <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> ekli özellik.  Önbellek alanı öğeleri olmayan sanallaştırılır görünüm penceresinin altında veya üstünde miktarıdır.  Görünüme kaydırılan gibi kullanıcı Arabirimi öğeleri oluşturmaktan kaçınmak için bir önbellek kullanarak performansı artırabilirsiniz. Böylece uygulama işlemi sırasında yanıt vermemeye değil daha düşük bir öncelikte önbellek doldurulur. <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> Özelliği tarafından kullanılan ölçü belirler <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>.  
+2. <xref:System.Windows.Controls.VirtualizingPanel>, <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> iliştirilmiş özelliğini kullanarak sanallaştırırken, görünüm penceresinin önüne ve arkasına önbelleğin boyutunu belirtebilirsiniz.  Önbellek, öğelerin sanallaştırılmamış olan görünüm penceresinin üzerinde veya altında yer alan miktarıdır.  Bir önbellek kullanarak, görünümde kaydırılabilecekleri Kullanıcı arabirimi öğeleri oluşturulmasını önlemek performansı iyileştirebilir. Önbellek, işlem sırasında yanıt vermemeye devam edebilmesi için daha düşük bir önceliğe doldurulur. <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> özelliği, <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>tarafından kullanılan ölçüm birimini belirler.  
   
 <a name="static_properties"></a>   
-## <a name="binding-to-static-properties"></a>Statik özellikler bağlama  
- Statik özelliklere veri bağlama kaynağı olarak kullanabilirsiniz. Statik bir olayı oluşturulursa özelliğinin değeri değiştiğinde veri bağlama altyapısı tanır.  Örneğin, sınıf `SomeClass` adlı statik bir özellik tanımlar `MyProperty`, `SomeClass` olduğu statik bir olayı tanımlayabilir arandığında değerini `MyProperty` değişiklikler.  Statik olay aşağıdaki imzalar birini kullanabilirsiniz.  
+## <a name="binding-to-static-properties"></a>Statik özelliklere bağlama  
+ Statik özellikleri bir veri bağlamanın kaynağı olarak kullanabilirsiniz. Veri bağlama altyapısı, statik bir olay ortaya çıktığında özelliğin değerinin ne zaman değişeceğinin algılar.  Örneğin, sınıfı `SomeClass` `MyProperty`adlı statik bir özellik tanımlıyorsa `SomeClass` `MyProperty` değeri değiştiğinde oluşturulan statik bir olay tanımlayabilir.  Statik olay, aşağıdaki imzaların birini kullanabilir.  
   
 - `public static event EventHandler MyPropertyChanged;`  
   
 - `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
   
- Bu durumda, sınıf adlı statik bir olay sunan Not *PropertyName* `Changed` Geçiren <xref:System.EventArgs> için olay işleyicisi.  İkinci durumda, sınıf adlı statik bir olay sunan `StaticPropertyChanged` Geçiren <xref:System.ComponentModel.PropertyChangedEventArgs> için olay işleyicisi. Özellik değişikliği bildirimleri her iki yöntemi kullanarak yükseltmek statik özelliği uygulayan bir sınıf seçebilirsiniz.  
+ İlk durumda, sınıfının, olay işleyicisine <xref:System.EventArgs> geçiren *PropertyName*`Changed` adlı statik bir olay kullanıma sunduğunu unutmayın.  İkinci durumda, sınıfı, <xref:System.ComponentModel.PropertyChangedEventArgs> olay işleyicisine geçiren `StaticPropertyChanged` adlı statik bir olay gösterir. Statik özelliği uygulayan bir sınıf, her iki yöntemi kullanarak özellik değişikliği bildirimleri kullanmayı seçebilir.  
   
 <a name="xthread_access"></a>   
-## <a name="accessing-collections-on-non-ui-threads"></a>Koleksiyonlar üzerinde olmayan UI iş parçacığı erişme  
- WPF erişmek ve dışında koleksiyonu oluşturan bir iş parçacığı üzerinde veri koleksiyonları değiştirmenize olanak sağlar.  Bu, bir veritabanı gibi bir dış kaynaktan veri almak ve UI iş parçacığı üzerinde verileri görüntülemek için bir arka plan iş parçacığı kullanmanıza olanak sağlar.  Koleksiyonu değiştirmek için başka bir iş parçacığı kullanarak, kullanıcı arabirimi kullanıcı etkileşimine yanıt verebilecek duruma gelir.  
+## <a name="accessing-collections-on-non-ui-threads"></a>Kullanıcı arabirimi olmayan Iş parçacıklarında koleksiyonlara erişme  
+ WPF, koleksiyon oluşturenden farklı iş parçacıklarında veri koleksiyonlarına erişmenize ve bunları değiştirmenize olanak sağlar.  Bu, bir veritabanı gibi bir dış kaynaktan veri almak için bir arka plan iş parçacığı kullanmanızı ve verileri Kullanıcı arabirimi iş parçacığında görüntülemenizi sağlar.  Koleksiyonu değiştirmek için başka bir iş parçacığı kullanarak Kullanıcı arabiriminiz kullanıcı etkileşimine yanıt vermeye devam eder.  
   
 <a name="INotifyDataErrorInfo"></a>   
-## <a name="synchronously-and-asynchronously-validating-data"></a>Zaman uyumlu ve zaman uyumsuz olarak verileri doğrulama  
- <xref:System.ComponentModel.INotifyDataErrorInfo> Arabirimi, özel doğrulama kuralları uygulamak ve doğrulama sonuçlarını zaman uyumsuz olarak kullanıma sunmak veri varlık sınıfları sağlar. Bu arabirim, özel hata nesneleri, özellik, çapraz özelliği hataları ve varlık düzeyinde hataları başına birden çok hata da destekler.  Daha fazla bilgi için bkz. <xref:System.ComponentModel.INotifyDataErrorInfo>.  
+## <a name="synchronously-and-asynchronously-validating-data"></a>Eşzamanlı ve zaman uyumsuz olarak verileri doğrulama  
+ <xref:System.ComponentModel.INotifyDataErrorInfo> arabirimi, veri varlık sınıflarının özel doğrulama kuralları uygulamasına ve doğrulama sonuçlarının zaman uyumsuz olarak kullanıma sunulmasına olanak sağlar. Bu arabirim Ayrıca özel hata nesnelerini, özellik başına birden çok hatayı, çapraz Özellik hatalarını ve varlık düzeyindeki hataları destekler.  Daha fazla bilgi için bkz. <xref:System.ComponentModel.INotifyDataErrorInfo>.  
   
 <a name="delay"></a>   
-## <a name="automatically-updating-the-source-of-a-data-binding"></a>Veri bağlama kaynağı otomatik olarak güncelleştiriliyor  
- Bir veri kaynağını güncelleştirmek için bir veri bağlamayı kullanırsanız, kullanabileceğiniz <xref:System.Windows.Data.BindingBase.Delay%2A> özelliği bir hedef kaynak güncelleştirmelerinin önce sonra özellik değişiklikleri geçirmek için süreyi belirtin.  Örneğin, sahip olduğunuzu varsayalım. bir <xref:System.Windows.Controls.Slider> olan kendi <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> özellik verileri iki yönlü bir veri nesnesinin bir özelliğine bağlı ve <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> özelliği <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.  Bu örnekte, kullanıcı hareket ettirdiğinde <xref:System.Windows.Controls.Slider>, her pikselin kaynak güncelleştirmeleri, <xref:System.Windows.Controls.Slider> taşır.  Kaynak nesne kaydırıcı değeri normalde gerekir. yalnızca kaydırıcının <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> değiştirme durdurur.  Kaynak çok sık güncelleştirme önlemek için <xref:System.Windows.Data.BindingBase.Delay%2A> taşıma thumb kestikten sonra belirli bir süre sona erdiğinde kadar'ın kaynak güncelleştirilmemelidir belirtmek için.  
+## <a name="automatically-updating-the-source-of-a-data-binding"></a>Veri bağlamasının kaynağını otomatik olarak güncelleştirme  
+ Bir veri kaynağını güncelleştirmek için veri bağlama kullanırsanız, kaynak güncelleştirmelerden önce hedefteki Özellik değişikliklerinden sonra geçmesi gereken süreyi belirtmek için <xref:System.Windows.Data.BindingBase.Delay%2A> özelliğini kullanabilirsiniz.  Örneğin, <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> özellik verileri bir veri nesnesinin özelliğine iki yönlü bir <xref:System.Windows.Controls.Slider> sahip olduğunuzu ve <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> özelliğinin <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>olarak ayarlandığını varsayalım.  Bu örnekte, Kullanıcı <xref:System.Windows.Controls.Slider>taşırken <xref:System.Windows.Controls.Slider> taşınan her bir piksel için kaynak güncellenir.  Kaynak nesne, genellikle kaydırıcının <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> değiştirmeyi durdurulduğunda kaydırıcının değerine ihtiyaç duyuyor.  Kaynağın çok sık güncelleştirilmesini engellemek için <xref:System.Windows.Data.BindingBase.Delay%2A> kullanarak, parmak izi hareket ettikten sonra belirli bir süre geçtikten sonra kaynağın güncelleştirilmemelidir.  
   
 <a name="ICustomTypeProvider"></a>   
-## <a name="binding-to-types-that-implement-icustomtypeprovider"></a>Bu uygulama ICustomTypeProvider türlerine bağlama  
- WPF uygulayan nesneler için veri bağlamayı destekleyen <xref:System.Reflection.ICustomTypeProvider>, özel türleri olarak da bilinir.  Özel türler aşağıdaki durumlarda kullanabilirsiniz.  
+## <a name="binding-to-types-that-implement-icustomtypeprovider"></a>ICustomTypeProvider 'ı uygulayan türlere bağlama  
+ WPF, özel türler olarak da bilinen <xref:System.Reflection.ICustomTypeProvider>uygulayan nesnelere veri bağlamayı destekler.  Aşağıdaki durumlarda özel türleri kullanabilirsiniz.  
   
-1. Olarak bir <xref:System.Windows.PropertyPath> Veri bağlamada. Örneğin, <xref:System.Windows.Data.Binding.Path%2A> özelliği bir <xref:System.Windows.Data.Binding> özel tür bir özelliğine başvurabilir.  
+1. Bir veri bağlamasında <xref:System.Windows.PropertyPath> olarak. Örneğin, bir <xref:System.Windows.Data.Binding> <xref:System.Windows.Data.Binding.Path%2A> özelliği özel bir türün özelliğine başvurabilir.  
   
-2. Değeri olarak <xref:System.Windows.DataTemplate.DataType%2A> özelliği.  
+2. <xref:System.Windows.DataTemplate.DataType%2A> özelliğinin değeri olarak.  
   
-3. Otomatik oluşturulan sütunları belirleyen bir tür olarak bir <xref:System.Windows.Controls.DataGrid>.  
+3. <xref:System.Windows.Controls.DataGrid>otomatik olarak oluşturulan sütunları belirleyen bir tür olarak.  
   
 <a name="binding_state"></a>   
-## <a name="retrieving-data-binding-information-from-a-binding-expression"></a>Bir bağlama ifadesinden veri bağlama bilgileri alınıyor  
- Bazı durumlarda, alabilirsiniz <xref:System.Windows.Data.BindingExpression> , bir <xref:System.Windows.Data.Binding> ve kaynak ve hedef nesneler bağlama hakkında bilgi gerekiyor.  Kaynak veya hedef nesne veya ilişkili özelliğin yararlanmanıza olanak tanıyacak için yeni API'ler eklenmiştir.  Olduğunda bir <xref:System.Windows.Data.BindingExpression>, hedef ve kaynak hakkında bilgi almak için aşağıdaki API'leri kullanın.  
+## <a name="retrieving-data-binding-information-from-a-binding-expression"></a>Bağlama ifadesinden veri bağlama bilgilerini alma  
+ Belirli durumlarda, bir <xref:System.Windows.Data.Binding> <xref:System.Windows.Data.BindingExpression> alabilir ve bağlamanın kaynak ve hedef nesneleriyle ilgili bilgilere ihtiyaç duyabilirsiniz.  Kaynak veya hedef nesne ya da ilişkili özelliği almanızı sağlamak için yeni API 'Ler eklenmiştir.  Bir <xref:System.Windows.Data.BindingExpression>olduğunda, hedef ve kaynak hakkında bilgi almak için aşağıdaki API 'Leri kullanın.  
   
-|Bu bağlama değerini bulmak için|Bu API kullanın|  
+|Bağlamanın bu değerini bulmak için|Bu API 'YI kullan|  
 |---------------------------------------|------------------|  
 |Hedef nesne|<xref:System.Windows.Data.BindingExpressionBase.Target%2A?displayProperty=nameWithType>|  
-|Hedef özelliği|<xref:System.Windows.Data.BindingExpressionBase.TargetProperty%2A?displayProperty=nameWithType>|  
+|Target özelliği|<xref:System.Windows.Data.BindingExpressionBase.TargetProperty%2A?displayProperty=nameWithType>|  
 |Kaynak nesne|<xref:System.Windows.Data.BindingExpression.ResolvedSource%2A?displayProperty=nameWithType>|  
 |Source özelliği|<xref:System.Windows.Data.BindingExpression.ResolvedSourcePropertyName%2A?displayProperty=nameWithType>|  
-|Olmadığını <xref:System.Windows.Data.BindingExpression> ait bir <xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingExpressionBase.BindingGroup%2A?displayProperty=nameWithType>|  
-|Sahibi bir <xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingGroup.Owner%2A>|  
+|<xref:System.Windows.Data.BindingExpression> bir <xref:System.Windows.Data.BindingGroup> ait olup olmadığı|<xref:System.Windows.Data.BindingExpressionBase.BindingGroup%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Data.BindingGroup> sahibi|<xref:System.Windows.Data.BindingGroup.Owner%2A>|  
   
 <a name="DisconnectedSource"></a>   
-## <a name="checking-for-a-valid-datacontext-object"></a>İçin geçerli bir DataContext nesne denetleniyor  
- Durumlar burada <xref:System.Windows.FrameworkElement.DataContext%2A> içinde bir öğe kapsayıcı bir <xref:System.Windows.Controls.ItemsControl> bağlantısı kesiliyor.  Öğe kapsayıcı bir öğeyi görüntüler kullanıcı Arabirimi öğesidir bir <xref:System.Windows.Controls.ItemsControl>.  Olduğunda bir <xref:System.Windows.Controls.ItemsControl> veriler bir koleksiyona bağlı, her öğe için bir öğe kapsayıcısı oluşturulur. Bazı durumlarda, öğe kapsayıcılarını görsel ağaç'tan kaldırılır. Öğe kapsayıcı kaldırıldı burada iki tipik durumlarda: ne zaman bir öğe temel alınan koleksiyondan kaldırılır ve ne zaman şirket Sanallaştırmanın etkinleştirildiği <xref:System.Windows.Controls.ItemsControl>. Bu gibi durumlarda, <xref:System.Windows.FrameworkElement.DataContext%2A> öğe kapsayıcı özelliği tarafından döndürülen sentinel nesne için ayarlanacak <xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A?displayProperty=nameWithType> statik özellik.  Denetlemeniz gereken olup olmadığını <xref:System.Windows.FrameworkElement.DataContext%2A> eşittir <xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A> erişmeden önce nesne <xref:System.Windows.FrameworkElement.DataContext%2A> öğe kapsayıcısı.  
+## <a name="checking-for-a-valid-datacontext-object"></a>Geçerli bir DataContext nesnesi denetleniyor  
+ Bir <xref:System.Windows.Controls.ItemsControl> bir öğe kapsayıcısının <xref:System.Windows.FrameworkElement.DataContext%2A> bağlantısı kesildiğinde oluşan durumlar vardır.  Öğe kapsayıcısı, bir <xref:System.Windows.Controls.ItemsControl>öğe görüntüleyen UI öğesidir.  Bir <xref:System.Windows.Controls.ItemsControl> bir koleksiyona veri bağlandığında, her öğe için bir öğe kapsayıcısı oluşturulur. Bazı durumlarda, öğe kapsayıcıları görsel ağaçtan kaldırılır. Bir öğe kapsayıcısının kaldırıldığı iki tipik durum, temel koleksiyondan bir öğe kaldırıldığında ve <xref:System.Windows.Controls.ItemsControl>sanallaştırma etkinleştirildiğinde. Bu durumlarda, öğe kapsayıcısının <xref:System.Windows.FrameworkElement.DataContext%2A> özelliği, <xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A?displayProperty=nameWithType> static özelliği tarafından döndürülen Sentinel nesnesine ayarlanır.  Bir öğe kapsayıcısının <xref:System.Windows.FrameworkElement.DataContext%2A> erişmeden önce <xref:System.Windows.FrameworkElement.DataContext%2A> <xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A> nesnesine eşit olup olmadığını denetlemeniz gerekir.  
   
 <a name="live_shaping"></a>   
-## <a name="repositioning-data-as-the-datas-values-change-live-shaping"></a>(Canlı şekillendirme) veri değerleri değiştikçe verileri yeniden konumlandırma  
- Veri koleksiyonu gruplandırılmış, sıralar, filtre veya. WPF 4.5 verilerin veri değiştirildiğinde yeniden düzenlenecek olanak tanır. Örneğin, bir uygulamanın kullandığı varsayalım. bir <xref:System.Windows.Controls.DataGrid> listelemek için bir borsa, stocks ve borsa stok değere göre sıralanır. Canlı sıralama stocks üzerinde etkinse <xref:System.Windows.Data.CollectionView>, hisse 's konumda <xref:System.Windows.Controls.DataGrid> hisse değerin daha büyük hale geldiğinde taşır veya küçüktür başka bir stok'ın değeri.   Daha fazla bilgi için <xref:System.ComponentModel.ICollectionViewLiveShaping> arabirimi.  
+## <a name="repositioning-data-as-the-datas-values-change-live-shaping"></a>Verilerin değerleri değiştiğinde verileri yeniden konumlandırma (canlı şekillendirme)  
+ Bir veri koleksiyonu gruplandırılabilir, sıralanabilir veya filtrelenebilir. WPF 4,5, verilerin değiştirildiği sırada verilerin yeniden düzenlenmesini sağlar. Örneğin, bir uygulamanın stok pazarında hisse senetleri listelemek için <xref:System.Windows.Controls.DataGrid> kullandığını ve hisse senetleri stok değerine göre sıralandığını varsayalım. Canlı sıralama, hisse senedi ' <xref:System.Windows.Data.CollectionView>etkin hale gelirse, hisse senedi değeri başka bir hisse senedinin değerinden daha büyük veya daha az olduğunda, <xref:System.Windows.Controls.DataGrid> bir hisse senedi.   Daha fazla bilgi için <xref:System.ComponentModel.ICollectionViewLiveShaping> arabirimine bakın.  
   
 <a name="weak_event_pattern"></a>   
-## <a name="improved-support-for-establishing-a-weak-reference-to-an-event"></a>Bir olay zayıf bir başvuru oluşturmak için gelişmiş destek  
- Abonelere olayları içinde ek arabirimi uygulama olmadan katılabilir zayıf olay deseni uygulama artık daha kolay olmasıdır.  Genel <xref:System.Windows.WeakEventManager> sınıfı da zayıf olay deseni adanmış bir katılmak aboneleri sağlar <xref:System.Windows.WeakEventManager> için belirli bir olayı yok.  Daha fazla bilgi için [zayıf olay desenleri](../advanced/weak-event-patterns.md).  
+## <a name="improved-support-for-establishing-a-weak-reference-to-an-event"></a>Bir olaya zayıf bir başvuru kurmak için geliştirilmiş destek  
+ Olaylara abone olan aboneler ek bir arabirim uygulamadan bu uygulamaya katılabildiğinden, zayıf olay deseninin uygulanması artık daha kolay olur.  Genel <xref:System.Windows.WeakEventManager> sınıfı ayrıca, belirli bir olay için adanmış bir <xref:System.Windows.WeakEventManager> yoksa, abonelerin zayıf olay düzenine katılmasını sağlar.  Daha fazla bilgi için bkz. [zayıf olay desenleri](../advanced/weak-event-patterns.md).  
   
 <a name="async"></a>   
-## <a name="new-methods-for-the-dispatcher-class"></a>Dispatcher sınıfı için yeni yöntemler  
- Dispatcher sınıfı zaman uyumlu ve zaman uyumsuz işlemler için yeni yöntemleri tanımlar.  Zaman uyumlu <xref:System.Windows.Threading.Dispatcher.Invoke%2A> alan aşırı yüklemeler yöntemi tanımlayan bir <xref:System.Action> veya <xref:System.Func%601> parametresi. Yeni zaman uyumsuz yöntemin <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, ayrıca alır bir <xref:System.Action> veya <xref:System.Func%601> döndürür ve geri çağırma parametresi olarak bir <xref:System.Windows.Threading.DispatcherOperation> veya <xref:System.Windows.Threading.DispatcherOperation%601>.   <xref:System.Windows.Threading.DispatcherOperation> Ve <xref:System.Windows.Threading.DispatcherOperation%601> sınıfları tanımlayan bir <xref:System.Threading.Tasks.Task> özelliği.  Çağırdığınızda <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, kullanabileceğiniz `await` ya da anahtar sözcüğüyle <xref:System.Windows.Threading.DispatcherOperation> veya ilişkili <xref:System.Threading.Tasks.Task>. Zaman uyumlu olarak beklemesi gerekiyorsa <xref:System.Threading.Tasks.Task> tarafından döndürülen bir <xref:System.Windows.Threading.DispatcherOperation> veya <xref:System.Windows.Threading.DispatcherOperation%601>, çağrı <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> genişletme yöntemi. Çağırma <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> işlemi çağırma iş parçacığı üzerinde sıraya alınan bir kilitlenmeyle neden olur. Kullanma hakkında daha fazla bilgi için bir <xref:System.Threading.Tasks.Task> zaman uyumsuz işlemleri gerçekleştirmek için bkz: [görev Paralelliği (görev paralel kitaplığı)](../../../standard/parallel-programming/task-based-asynchronous-programming.md).  
+## <a name="new-methods-for-the-dispatcher-class"></a>Dağıtıcı sınıfı için yeni Yöntemler  
+ Dağıtıcı sınıfı, zaman uyumlu ve zaman uyumsuz işlemler için yeni Yöntemler tanımlar.  Zaman uyumlu <xref:System.Windows.Threading.Dispatcher.Invoke%2A> yöntemi, bir <xref:System.Action> veya <xref:System.Func%601> parametresi alan aşırı yüklemeleri tanımlar. <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>yeni zaman uyumsuz yöntem, geri çağırma parametresi olarak bir <xref:System.Action> veya <xref:System.Func%601> alır ve bir <xref:System.Windows.Threading.DispatcherOperation> ya da <xref:System.Windows.Threading.DispatcherOperation%601>döndürür.   <xref:System.Windows.Threading.DispatcherOperation> ve <xref:System.Windows.Threading.DispatcherOperation%601> sınıfları bir <xref:System.Threading.Tasks.Task> özelliği tanımlar.  <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>çağırdığınızda, `await` anahtar sözcüğünü <xref:System.Windows.Threading.DispatcherOperation> ya da ilişkili <xref:System.Threading.Tasks.Task>kullanabilirsiniz. Bir <xref:System.Windows.Threading.DispatcherOperation> veya <xref:System.Windows.Threading.DispatcherOperation%601>tarafından döndürülen <xref:System.Threading.Tasks.Task> için zaman uyumlu olarak beklemeniz gerekiyorsa, <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> genişletme yöntemini çağırın. <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> çağrısı, işlem çağıran bir iş parçacığında sıraya alınmışsa kilitlenmeyle sonuçlanır. Zaman uyumsuz işlemleri gerçekleştirmek için <xref:System.Threading.Tasks.Task> kullanma hakkında daha fazla bilgi için bkz. [Görev Paralelliği (görev paralel kitaplığı)](../../../standard/parallel-programming/task-based-asynchronous-programming.md).  
   
 <a name="events_markup_extenions"></a>   
 ## <a name="markup-extensions-for-events"></a>Olaylar için biçimlendirme uzantıları  
- WPF 4.5 olayları için biçimlendirme uzantıları destekler.  WPF olaylar için kullanılacak bir işaretleme uzantısı tanımlamaz, ancak üçüncü taraflara olayları ile kullanılabilecek bir işaretleme uzantısı oluşturma olanağına sahip olursunuz.  
+ WPF 4,5, olaylar için biçimlendirme uzantılarını destekler.  WPF, olaylar için kullanılmak üzere bir işaretleme uzantısı tanımlamaz, ancak üçüncü taraflar olaylarla kullanılabilecek bir işaretleme uzantısı oluşturabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
