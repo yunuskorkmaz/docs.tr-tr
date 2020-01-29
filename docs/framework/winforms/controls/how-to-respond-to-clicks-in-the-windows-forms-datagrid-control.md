@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DataGrid Denetiminde Tıklamalara Yanıt Verme'
+title: DataGrid denetiminde tıklama 'e yanıt verme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 54e41c6960c24f68cb27a6f6fb859b4b9223ed27
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9aa1331116cd3f2f8050ff9f8cc8cc52d25726d1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914991"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735758"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a><span data-ttu-id="62423-102">Nasıl yapılır: Windows Forms DataGrid Denetiminde Tıklamalara Yanıt Verme</span><span class="sxs-lookup"><span data-stu-id="62423-102">How to: Respond to Clicks in the Windows Forms DataGrid Control</span></span>
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a><span data-ttu-id="d6b30-102">Nasıl yapılır: Windows Forms DataGrid Denetiminde Tıklamalara Yanıt Verme</span><span class="sxs-lookup"><span data-stu-id="d6b30-102">How to: Respond to Clicks in the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
-> <span data-ttu-id="62423-103">Denetim yerini alır ve <xref:System.Windows.Forms.DataGrid> <xref:System.Windows.Forms.DataGrid> denetime işlevsellik ekler; ancak, isterseniz denetim hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.DataGridView></span><span class="sxs-lookup"><span data-stu-id="62423-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="62423-104">Daha fazla bilgi için bkz. [Windows Forms DataGridView ve DataGrid denetimleri arasındaki farklar](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span><span class="sxs-lookup"><span data-stu-id="62423-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
+> <span data-ttu-id="d6b30-103"><xref:System.Windows.Forms.DataGridView> denetimi yerini alır ve <xref:System.Windows.Forms.DataGrid> denetimine işlevsellik ekler; Ancak, ' yi seçerseniz, <xref:System.Windows.Forms.DataGrid> denetimi hem geri uyumluluk hem de gelecekte kullanılmak üzere korunur.</span><span class="sxs-lookup"><span data-stu-id="d6b30-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="d6b30-104">Daha fazla bilgi için bkz. [Windows Forms DataGridView ve DataGrid denetimleri arasındaki farklar](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span><span class="sxs-lookup"><span data-stu-id="d6b30-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- <span data-ttu-id="62423-105">Windows Forms <xref:System.Windows.Forms.DataGrid> bir veritabanına bağlandıktan sonra kullanıcının hangi hücreden tıkladığını izleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="62423-105">After the Windows Forms <xref:System.Windows.Forms.DataGrid> is connected to a database, you can monitor which cell the user clicked.</span></span>  
+ <span data-ttu-id="d6b30-105">Windows Forms <xref:System.Windows.Forms.DataGrid> bir veritabanına bağlandıktan sonra, kullanıcının hangi hücreden tıkladığını izleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d6b30-105">After the Windows Forms <xref:System.Windows.Forms.DataGrid> is connected to a database, you can monitor which cell the user clicked.</span></span>  
   
-### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a><span data-ttu-id="62423-106">DataGrid 'in kullanıcısının farklı bir hücre seçtiği zaman algılamak için</span><span class="sxs-lookup"><span data-stu-id="62423-106">To detect when the user of the DataGrid selects a different cell</span></span>  
+### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a><span data-ttu-id="d6b30-106">DataGrid 'in kullanıcısının farklı bir hücre seçtiği zaman algılamak için</span><span class="sxs-lookup"><span data-stu-id="d6b30-106">To detect when the user of the DataGrid selects a different cell</span></span>  
   
-- <span data-ttu-id="62423-107"><xref:System.Windows.Forms.DataGrid.CurrentCellChanged> Olay işleyicisinde, uygun şekilde yanıt vermek için kod yazın.</span><span class="sxs-lookup"><span data-stu-id="62423-107">In the <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> event handler, write code to respond appropriately.</span></span>  
+- <span data-ttu-id="d6b30-107"><xref:System.Windows.Forms.DataGrid.CurrentCellChanged> olay işleyicisinde, uygun şekilde yanıt vermek için kod yazın.</span><span class="sxs-lookup"><span data-stu-id="d6b30-107">In the <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> event handler, write code to respond appropriately.</span></span>  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -47,18 +47,18 @@ ms.locfileid: "69914991"
     }  
     ```  
   
-     <span data-ttu-id="62423-108">(Görsel C#) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="62423-108">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="d6b30-108">(Görsel C#) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="d6b30-108">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.myDataGrid.CurrentCellChanged += new  
        System.EventHandler(this.myDataGrid_CurrentCellChanged);  
     ```  
   
-### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a><span data-ttu-id="62423-109">Kullanıcının DataGrid 'in hangi kısmını tıkladığını belirleme</span><span class="sxs-lookup"><span data-stu-id="62423-109">To determine which part of the DataGrid the user clicked</span></span>  
+### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a><span data-ttu-id="d6b30-109">Kullanıcının DataGrid 'in hangi kısmını tıkladığını belirleme</span><span class="sxs-lookup"><span data-stu-id="d6b30-109">To determine which part of the DataGrid the user clicked</span></span>  
   
-- <span data-ttu-id="62423-110">Yöntemini, <xref:System.Windows.Forms.Control.MouseDown> veya<xref:System.Windows.Forms.Control.Click> olayı gibi uygun bir olay işleyicide çağırın. <xref:System.Windows.Forms.DataGrid.HitTest%2A></span><span class="sxs-lookup"><span data-stu-id="62423-110">Call the <xref:System.Windows.Forms.DataGrid.HitTest%2A> method in an appropriate event handler, such as for the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.Click> event.</span></span>  
+- <span data-ttu-id="d6b30-110"><xref:System.Windows.Forms.DataGrid.HitTest%2A> yöntemini, <xref:System.Windows.Forms.Control.MouseDown> veya <xref:System.Windows.Forms.Control.Click> olayı gibi uygun bir olay işleyicide çağırın.</span><span class="sxs-lookup"><span data-stu-id="d6b30-110">Call the <xref:System.Windows.Forms.DataGrid.HitTest%2A> method in an appropriate event handler, such as for the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.Click> event.</span></span>  
   
-     <span data-ttu-id="62423-111">Yöntemi, tıklatılan alanın <xref:System.Windows.Forms.DataGrid.HitTestInfo> satırını ve sütununu içeren bir nesnesi döndürür. <xref:System.Windows.Forms.DataGrid.HitTest%2A></span><span class="sxs-lookup"><span data-stu-id="62423-111">The <xref:System.Windows.Forms.DataGrid.HitTest%2A> method returns a <xref:System.Windows.Forms.DataGrid.HitTestInfo> object that contains the row and column of a clicked area.</span></span>  
+     <span data-ttu-id="d6b30-111"><xref:System.Windows.Forms.DataGrid.HitTest%2A> yöntemi, tıklatılan alanın satırını ve sütununu içeren bir <xref:System.Windows.Forms.DataGrid.HitTestInfo> nesnesi döndürür.</span><span class="sxs-lookup"><span data-stu-id="d6b30-111">The <xref:System.Windows.Forms.DataGrid.HitTest%2A> method returns a <xref:System.Windows.Forms.DataGrid.HitTestInfo> object that contains the row and column of a clicked area.</span></span>  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -132,7 +132,7 @@ ms.locfileid: "69914991"
     }  
     ```  
   
-     <span data-ttu-id="62423-112">(Görsel C#) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="62423-112">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="d6b30-112">(Görsel C#) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="d6b30-112">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.myDataGrid.MouseDown += new  
@@ -140,7 +140,7 @@ ms.locfileid: "69914991"
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="62423-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="62423-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d6b30-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d6b30-113">See also</span></span>
 
-- [<span data-ttu-id="62423-114">DataGrid Denetimi</span><span class="sxs-lookup"><span data-stu-id="62423-114">DataGrid Control</span></span>](datagrid-control-windows-forms.md)
-- [<span data-ttu-id="62423-115">Nasıl yapılır: Windows Forms DataGrid denetimindeki çalışma zamanında görünen verileri değiştirme</span><span class="sxs-lookup"><span data-stu-id="62423-115">How to: Change Displayed Data at Run Time in the Windows Forms DataGrid Control</span></span>](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [<span data-ttu-id="d6b30-114">DataGrid Denetimi</span><span class="sxs-lookup"><span data-stu-id="d6b30-114">DataGrid Control</span></span>](datagrid-control-windows-forms.md)
+- [<span data-ttu-id="d6b30-115">Nasıl yapılır: Windows Forms DataGrid Denetiminde Çalışma Zamanında Görüntülenen Verileri Değiştirme</span><span class="sxs-lookup"><span data-stu-id="d6b30-115">How to: Change Displayed Data at Run Time in the Windows Forms DataGrid Control</span></span>](change-displayed-data-at-run-time-wf-datagrid-control.md)

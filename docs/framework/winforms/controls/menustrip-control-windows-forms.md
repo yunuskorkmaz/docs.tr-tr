@@ -1,84 +1,84 @@
 ---
-title: MenuStrip Denetimi (Windows Forms)
+title: MenuStrip Denetimi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
-ms.openlocfilehash: 4b2a3d3d3c5a953710984c86c6754d72589a9779
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7477060e9bd0183a07e423549ed3b40c35742276
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623974"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732794"
 ---
-# <a name="menustrip-control-windows-forms"></a><span data-ttu-id="f616e-102">MenuStrip Denetimi (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="f616e-102">MenuStrip Control (Windows Forms)</span></span>
-<span data-ttu-id="f616e-103">Bu denetimi grupları uygulama komutları ve bunları kolayca erişilebilir hale getirir.</span><span class="sxs-lookup"><span data-stu-id="f616e-103">This control groups application commands and makes them easily accessible.</span></span>  
+# <a name="menustrip-control-windows-forms"></a><span data-ttu-id="5ab15-102">MenuStrip Denetimi (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="5ab15-102">MenuStrip Control (Windows Forms)</span></span>
+<span data-ttu-id="5ab15-103">Bu denetim, uygulama komutlarını gruplandırır ve kolayca erişilebilir hale getirir.</span><span class="sxs-lookup"><span data-stu-id="5ab15-103">This control groups application commands and makes them easily accessible.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f616e-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="f616e-104">In This Section</span></span>  
- [<span data-ttu-id="f616e-105">MenuStrip Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="f616e-105">MenuStrip Control Overview</span></span>](menustrip-control-overview-windows-forms.md)  
- <span data-ttu-id="f616e-106">Denetimi nedir ve önemli özellikler ve özellikleri açıklar.</span><span class="sxs-lookup"><span data-stu-id="f616e-106">Explains what the control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="5ab15-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="5ab15-104">In This Section</span></span>  
+ [<span data-ttu-id="5ab15-105">MenuStrip Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="5ab15-105">MenuStrip Control Overview</span></span>](menustrip-control-overview-windows-forms.md)  
+ <span data-ttu-id="5ab15-106">Denetimin ne olduğunu ve temel özelliklerini ve özelliklerini açıklar.</span><span class="sxs-lookup"><span data-stu-id="5ab15-106">Explains what the control is and its key features and properties.</span></span>  
   
- [<span data-ttu-id="f616e-107">Nasıl yapılır: Toolstripmenuıtems'a geliştirmeler ekleme</span><span class="sxs-lookup"><span data-stu-id="f616e-107">How to: Add Enhancements to ToolStripMenuItems</span></span>](how-to-add-enhancements-to-toolstripmenuitems.md)  
- <span data-ttu-id="f616e-108">Menüleri ve menü komutları için onay işareti, görüntüleri, kısayol tuşları, erişim anahtarları ve ayırıcı çubukları eklemeyi açıklar.</span><span class="sxs-lookup"><span data-stu-id="f616e-108">Describes how to add check marks, images, shortcut keys, access keys, and separator bars to menus and menu commands.</span></span>  
+ [<span data-ttu-id="5ab15-107">Nasıl yapılır: ToolStripMenuItems'a Geliştirmeler Ekleme</span><span class="sxs-lookup"><span data-stu-id="5ab15-107">How to: Add Enhancements to ToolStripMenuItems</span></span>](how-to-add-enhancements-to-toolstripmenuitems.md)  
+ <span data-ttu-id="5ab15-108">Menülere ve menü komutlarına onay işaretlerinin, görüntülerin, kısayol tuşlarının, erişim anahtarlarının ve ayırıcı çubukların nasıl ekleneceğini açıklar.</span><span class="sxs-lookup"><span data-stu-id="5ab15-108">Describes how to add check marks, images, shortcut keys, access keys, and separator bars to menus and menu commands.</span></span>  
   
- [<span data-ttu-id="f616e-109">Nasıl yapılır: MDI üst penceresine MenuStrip ekleme</span><span class="sxs-lookup"><span data-stu-id="f616e-109">How to: Append a MenuStrip to an MDI Parent Window</span></span>](how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md)  
- <span data-ttu-id="f616e-110">MDI üst menüye çok Belgeli Arabirim (MDI) alt menü eklemek için çeşitli özelliklerini ayarlama işlemi açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="f616e-110">Describes how to set several properties to append the multiple-document interface (MDI) child menu to the MDI parent menu.</span></span>  
+ [<span data-ttu-id="5ab15-109">Nasıl yapılır: MDI Üst Penceresine MenuStrip Ekleme</span><span class="sxs-lookup"><span data-stu-id="5ab15-109">How to: Append a MenuStrip to an MDI Parent Window</span></span>](how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md)  
+ <span data-ttu-id="5ab15-110">Birden çok belge arabirimi (MDI) alt menüsünü MDI parent menüsüne eklemek için çeşitli özelliklerin nasıl ayarlanacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="5ab15-110">Describes how to set several properties to append the multiple-document interface (MDI) child menu to the MDI parent menu.</span></span>  
   
- [<span data-ttu-id="f616e-111">Nasıl yapılır: MenuStrip ile MDI pencere listesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="f616e-111">How to: Create an MDI Window List with MenuStrip</span></span>](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
- <span data-ttu-id="f616e-112">Tüm etkin alt listesini üst pencere menüsünden formlar oluşturma işlemini gösterir.</span><span class="sxs-lookup"><span data-stu-id="f616e-112">Demonstrates how to create a list of all the active child forms on the parent's Window menu.</span></span>  
+ [<span data-ttu-id="5ab15-111">Nasıl yapılır: MenuStrip ile MDI Pencere Listesi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="5ab15-111">How to: Create an MDI Window List with MenuStrip</span></span>](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
+ <span data-ttu-id="5ab15-112">Üst öğenin pencere menüsündeki tüm etkin alt formların listesini oluşturmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="5ab15-112">Demonstrates how to create a list of all the active child forms on the parent's Window menu.</span></span>  
   
- [<span data-ttu-id="f616e-113">Nasıl yapılır: Toolstripmenuıtems öğelerini devre dışı bırak</span><span class="sxs-lookup"><span data-stu-id="f616e-113">How to: Disable ToolStripMenuItems</span></span>](how-to-disable-toolstripmenuitems.md)  
- <span data-ttu-id="f616e-114">Tüm menüler ve tek tek menü komutları devre dışı bırakmak açıklar.</span><span class="sxs-lookup"><span data-stu-id="f616e-114">Describes how to disable both entire menus and individual menu commands.</span></span>  
+ [<span data-ttu-id="5ab15-113">Nasıl yapılır: ToolStripMenuItems'ı Devre Dışı Bırakma</span><span class="sxs-lookup"><span data-stu-id="5ab15-113">How to: Disable ToolStripMenuItems</span></span>](how-to-disable-toolstripmenuitems.md)  
+ <span data-ttu-id="5ab15-114">Tüm menülerin ve bireysel menü komutlarının nasıl devre dışı bırakılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="5ab15-114">Describes how to disable both entire menus and individual menu commands.</span></span>  
   
- [<span data-ttu-id="f616e-115">Nasıl yapılır: Toolstripmenuıtems gizleme</span><span class="sxs-lookup"><span data-stu-id="f616e-115">How to: Hide ToolStripMenuItems</span></span>](how-to-hide-toolstripmenuitems.md)  
- <span data-ttu-id="f616e-116">Tüm menüler ve tek tek menü komutları gizlemeyi açıklar.</span><span class="sxs-lookup"><span data-stu-id="f616e-116">Describes how to hide both entire menus and individual menu commands.</span></span>  
+ [<span data-ttu-id="5ab15-115">Nasıl yapılır: ToolStripMenuItems Gizleme</span><span class="sxs-lookup"><span data-stu-id="5ab15-115">How to: Hide ToolStripMenuItems</span></span>](how-to-hide-toolstripmenuitems.md)  
+ <span data-ttu-id="5ab15-116">Tüm menülerin ve bireysel menü komutlarının nasıl gizlenmeyeceğini açıklar.</span><span class="sxs-lookup"><span data-stu-id="5ab15-116">Describes how to hide both entire menus and individual menu commands.</span></span>  
   
- [<span data-ttu-id="f616e-117">Nasıl yapılır: Bir MDI açılan menüsüne MenuStrip ekleme</span><span class="sxs-lookup"><span data-stu-id="f616e-117">How to: Insert a MenuStrip into an MDI Drop-Down Menu</span></span>](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
- <span data-ttu-id="f616e-118">Menü öğelerinin bir grup MDI alt menüsünden MDI üst menü açılan parçasına eklemek için çeşitli özelliklerini ayarlama işlemi açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="f616e-118">Describes how to set several properties to insert a group of menu items from the MDI child menu into the drop-down part of the MDI parent menu.</span></span>  
+ [<span data-ttu-id="5ab15-117">Nasıl yapılır: Bir MDI Açılan Menüsüne MenuStrip ekleme</span><span class="sxs-lookup"><span data-stu-id="5ab15-117">How to: Insert a MenuStrip into an MDI Drop-Down Menu</span></span>](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
+ <span data-ttu-id="5ab15-118">MDI alt menüsünden bir menü öğeleri grubunu MDI üst menüsünün aşağı açılan kısmına eklemek için çeşitli özelliklerin nasıl ayarlanacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="5ab15-118">Describes how to set several properties to insert a group of menu items from the MDI child menu into the drop-down part of the MDI parent menu.</span></span>  
   
- [<span data-ttu-id="f616e-119">Nasıl yapılır: Bir MDI açılan menüsünden ToolStripMenuItem kaldırma</span><span class="sxs-lookup"><span data-stu-id="f616e-119">How to: Remove a ToolStripMenuItem from an MDI Drop-Down Menu</span></span>](how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md)  
- <span data-ttu-id="f616e-120">MDI üst menünün aşağı açılan bölümünden bir menü öğesini kaldırmak için çeşitli özellikleri ayarlama işlemi açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="f616e-120">Describes how to set several properties to remove a menu item from the drop-down part of the MDI parent menu.</span></span>  
+ [<span data-ttu-id="5ab15-119">Nasıl yapılır: Bir MDI Açılan Menüsünden ToolStripMenuItem kaldırma</span><span class="sxs-lookup"><span data-stu-id="5ab15-119">How to: Remove a ToolStripMenuItem from an MDI Drop-Down Menu</span></span>](how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md)  
+ <span data-ttu-id="5ab15-120">MDI üst menüsünün açılan kısmından bir menü öğesini kaldırmak için birkaç özelliği nasıl ayarlayabileceğinizi açıklar.</span><span class="sxs-lookup"><span data-stu-id="5ab15-120">Describes how to set several properties to remove a menu item from the drop-down part of the MDI parent menu.</span></span>  
   
- [<span data-ttu-id="f616e-121">Nasıl yapılır: Yapılandırma MenuStrip denetim kenar boşluklarını ve görüntü kenar boşluklarını</span><span class="sxs-lookup"><span data-stu-id="f616e-121">How to: Configure MenuStrip Check Margins and Image Margins</span></span>](how-to-configure-menustrip-check-margins-and-image-margins.md)  
- <span data-ttu-id="f616e-122">Nasıl özelleştirileceğini açıklar bir <xref:System.Windows.Forms.MenuStrip> çeşitli şekillerde denetim ve görüntü kenar boşluğu özelliklerini ayarlayarak.</span><span class="sxs-lookup"><span data-stu-id="f616e-122">Describes how to customize a <xref:System.Windows.Forms.MenuStrip> by setting check and image margin properties in various ways.</span></span>  
+ [<span data-ttu-id="5ab15-121">Nasıl yapılır: MenuStrip Denetim Kenar Boşluklarını ve Görüntü Kenar Boşluklarını Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="5ab15-121">How to: Configure MenuStrip Check Margins and Image Margins</span></span>](how-to-configure-menustrip-check-margins-and-image-margins.md)  
+ <span data-ttu-id="5ab15-122">Çeşitli yollarla denetim ve resim kenar boşluğu özelliklerini ayarlayarak bir <xref:System.Windows.Forms.MenuStrip> özelleştirmeyi açıklar.</span><span class="sxs-lookup"><span data-stu-id="5ab15-122">Describes how to customize a <xref:System.Windows.Forms.MenuStrip> by setting check and image margin properties in various ways.</span></span>  
   
- [<span data-ttu-id="f616e-123">Nasıl yapılır: Bir forma standart menü öğeleri sağlama</span><span class="sxs-lookup"><span data-stu-id="f616e-123">How to: Provide Standard Menu Items to a Form</span></span>](how-to-provide-standard-menu-items-to-a-form.md)  
- <span data-ttu-id="f616e-124">Nasıl kullanılacağını açıklayan bir <xref:System.Windows.Forms.MenuStrip> denetimi ile standart bir menü bir form oluşturun.</span><span class="sxs-lookup"><span data-stu-id="f616e-124">Describes how to use a <xref:System.Windows.Forms.MenuStrip> control to create a form with a standard menu.</span></span>  
+ [<span data-ttu-id="5ab15-123">Nasıl yapılır: Bir Forma Standart Menü Öğeleri Sağlama</span><span class="sxs-lookup"><span data-stu-id="5ab15-123">How to: Provide Standard Menu Items to a Form</span></span>](how-to-provide-standard-menu-items-to-a-form.md)  
+ <span data-ttu-id="5ab15-124">Standart bir menü ile form oluşturmak için <xref:System.Windows.Forms.MenuStrip> denetiminin nasıl kullanılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="5ab15-124">Describes how to use a <xref:System.Windows.Forms.MenuStrip> control to create a form with a standard menu.</span></span>  
   
- [<span data-ttu-id="f616e-125">Nasıl yapılır: MenuStrip içinde seçenek düğmeleri görüntüleme</span><span class="sxs-lookup"><span data-stu-id="f616e-125">How to: Display Option Buttons in a MenuStrip</span></span>](how-to-display-option-buttons-in-a-menustrip-windows-forms.md)  
- <span data-ttu-id="f616e-126">Seçenek düğmesini (veya radyo düğmesi) davranışı uygulayan açıklar bir <xref:System.Windows.Forms.ToolStripMenuItem>.</span><span class="sxs-lookup"><span data-stu-id="f616e-126">Describes how to implement option-button (or radio-button) behavior in a <xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
+ [<span data-ttu-id="5ab15-125">Nasıl yapılır: Bir MenuStrip İçinde Seçenek Düğmeleri Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="5ab15-125">How to: Display Option Buttons in a MenuStrip</span></span>](how-to-display-option-buttons-in-a-menustrip-windows-forms.md)  
+ <span data-ttu-id="5ab15-126"><xref:System.Windows.Forms.ToolStripMenuItem>seçenek düğmesi (veya radyo düğmesi) davranışının nasıl uygulanacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="5ab15-126">Describes how to implement option-button (or radio-button) behavior in a <xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
   
- [<span data-ttu-id="f616e-127">Windows Forms MenuStrip Denetiminde Menü Öğelerini Birleştirme</span><span class="sxs-lookup"><span data-stu-id="f616e-127">Merging Menu Items in the Windows Forms MenuStrip Control</span></span>](merging-menu-items-in-the-windows-forms-menustrip-control.md)  
- <span data-ttu-id="f616e-128">Genel kavramlar ve menü birleştirme için yöntemleri tanımlar.</span><span class="sxs-lookup"><span data-stu-id="f616e-128">Describes general concepts and methods for menu merging.</span></span>  
+ [<span data-ttu-id="5ab15-127">Windows Forms MenuStrip Denetiminde Menü Öğelerini Birleştirme</span><span class="sxs-lookup"><span data-stu-id="5ab15-127">Merging Menu Items in the Windows Forms MenuStrip Control</span></span>](merging-menu-items-in-the-windows-forms-menustrip-control.md)  
+ <span data-ttu-id="5ab15-128">Menü birleştirme için genel kavramları ve yöntemleri açıklar.</span><span class="sxs-lookup"><span data-stu-id="5ab15-128">Describes general concepts and methods for menu merging.</span></span>  
   
- [<span data-ttu-id="f616e-129">Nasıl yapılır: MDI uygulamaları için otomatik menü birleştirmeyi ayarlama</span><span class="sxs-lookup"><span data-stu-id="f616e-129">How to: Set Up Automatic Menu Merging for MDI Applications</span></span>](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
- <span data-ttu-id="f616e-130">Menü öğelerinin çalışma zamanında otomatik olarak birleştirilecek açıklar.</span><span class="sxs-lookup"><span data-stu-id="f616e-130">Describes how to merge menu items automatically at run time.</span></span>  
+ [<span data-ttu-id="5ab15-129">Nasıl yapılır: MDI Uygulamaları için Otomatik Menü Birleştirmeyi Ayarlama</span><span class="sxs-lookup"><span data-stu-id="5ab15-129">How to: Set Up Automatic Menu Merging for MDI Applications</span></span>](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
+ <span data-ttu-id="5ab15-130">Çalışma zamanında menü öğelerinin otomatik olarak nasıl birleştirilyapılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="5ab15-130">Describes how to merge menu items automatically at run time.</span></span>  
   
-- <span data-ttu-id="f616e-131">[MenuStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="f616e-131">[MenuStrip Items Collection Editor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))</span></span>  
+- <span data-ttu-id="5ab15-131">[MenuStrip öğeleri koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="5ab15-131">[MenuStrip Items Collection Editor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))</span></span>  
   
-- [<span data-ttu-id="f616e-132">Nasıl yapılır: Toolstripmenuıtems kopyalama</span><span class="sxs-lookup"><span data-stu-id="f616e-132">How to: Copy ToolStripMenuItems</span></span>](how-to-copy-toolstripmenuitems.md)  
+- [<span data-ttu-id="5ab15-132">Nasıl yapılır: ToolStripMenuItems Kopyalama</span><span class="sxs-lookup"><span data-stu-id="5ab15-132">How to: Copy ToolStripMenuItems</span></span>](how-to-copy-toolstripmenuitems.md)  
   
-- [<span data-ttu-id="f616e-133">Nasıl yapılır: Tasarımcıyı kullanarak Toolstripmenuıtems gizleme</span><span class="sxs-lookup"><span data-stu-id="f616e-133">How to: Hide ToolStripMenuItems Using the Designer</span></span>](how-to-hide-toolstripmenuitems-using-the-designer.md)  
+- [<span data-ttu-id="5ab15-133">Nasıl yapılır: Tasarımcıyı Kullanarak ToolStripMenuItems Gizleme</span><span class="sxs-lookup"><span data-stu-id="5ab15-133">How to: Hide ToolStripMenuItems Using the Designer</span></span>](how-to-hide-toolstripmenuitems-using-the-designer.md)  
   
-- [<span data-ttu-id="f616e-134">Nasıl yapılır: Tasarımcıyı kullanarak toolstripmenuıtems öğelerini devre dışı bırak</span><span class="sxs-lookup"><span data-stu-id="f616e-134">How to: Disable ToolStripMenuItems Using the Designer</span></span>](how-to-disable-toolstripmenuitems-using-the-designer.md)  
+- [<span data-ttu-id="5ab15-134">Nasıl yapılır: Tasarımcıyı Kullanarak ToolStripMenuItems Öğelerini Devre Dışı Bırakma</span><span class="sxs-lookup"><span data-stu-id="5ab15-134">How to: Disable ToolStripMenuItems Using the Designer</span></span>](how-to-disable-toolstripmenuitems-using-the-designer.md)  
   
-- [<span data-ttu-id="f616e-135">Nasıl yapılır: Toolstripmenuıtems öğelerini taşıma</span><span class="sxs-lookup"><span data-stu-id="f616e-135">How to: Move ToolStripMenuItems</span></span>](how-to-move-toolstripmenuitems.md)  
+- [<span data-ttu-id="5ab15-135">Nasıl yapılır: ToolStripMenuItems Öğelerini Taşıma</span><span class="sxs-lookup"><span data-stu-id="5ab15-135">How to: Move ToolStripMenuItems</span></span>](how-to-move-toolstripmenuitems.md)  
   
-- [<span data-ttu-id="f616e-136">İzlenecek yol: Bir forma standart menü öğeleri sağlama</span><span class="sxs-lookup"><span data-stu-id="f616e-136">Walkthrough: Providing Standard Menu Items to a Form</span></span>](walkthrough-providing-standard-menu-items-to-a-form.md)  
+- [<span data-ttu-id="5ab15-136">İzlenecek yol: Bir Forma Standart Menü Öğeleri Sağlama</span><span class="sxs-lookup"><span data-stu-id="5ab15-136">Walkthrough: Providing Standard Menu Items to a Form</span></span>](walkthrough-providing-standard-menu-items-to-a-form.md)  
   
-- <span data-ttu-id="f616e-137">[MenuStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="f616e-137">[MenuStrip Tasks Dialog Box](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))</span></span>  
+- <span data-ttu-id="5ab15-137">[MenuStrip görevleri Iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="5ab15-137">[MenuStrip Tasks Dialog Box](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="f616e-138">Başvuru</span><span class="sxs-lookup"><span data-stu-id="f616e-138">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5ab15-138">Başvuru</span><span class="sxs-lookup"><span data-stu-id="5ab15-138">Reference</span></span>  
  <xref:System.Windows.Forms.MenuStrip>  
- <span data-ttu-id="f616e-139">Özelliklerini açıklayan <xref:System.Windows.Forms.MenuStrip> bir menü sistemi için bir form sağlar sınıfını.</span><span class="sxs-lookup"><span data-stu-id="f616e-139">Describes the features of the <xref:System.Windows.Forms.MenuStrip> class, which provides a menu system for a form.</span></span>  
+ <span data-ttu-id="5ab15-139">Form için bir menü sistemi sağlayan <xref:System.Windows.Forms.MenuStrip> sınıfının özelliklerini açıklar.</span><span class="sxs-lookup"><span data-stu-id="5ab15-139">Describes the features of the <xref:System.Windows.Forms.MenuStrip> class, which provides a menu system for a form.</span></span>  
   
  <xref:System.Windows.Forms.ContextMenuStrip>  
- <span data-ttu-id="f616e-140">Özelliklerini açıklayan <xref:System.Windows.Forms.ContextMenuStrip>, kısayol menüsünü temsil eder.</span><span class="sxs-lookup"><span data-stu-id="f616e-140">Describes the features of the <xref:System.Windows.Forms.ContextMenuStrip>, which represents a shortcut menu.</span></span>  
+ <span data-ttu-id="5ab15-140">Bir kısayol menüsünü temsil eden <xref:System.Windows.Forms.ContextMenuStrip>özelliklerini açıklar.</span><span class="sxs-lookup"><span data-stu-id="5ab15-140">Describes the features of the <xref:System.Windows.Forms.ContextMenuStrip>, which represents a shortcut menu.</span></span>  
   
  <xref:System.Windows.Forms.ToolStripMenuItem>  
- <span data-ttu-id="f616e-141">Özelliklerini açıklayan <xref:System.Windows.Forms.ToolStripMenuItem> görüntülenen seçilebilir bir seçenek temsil eden sınıf bir <xref:System.Windows.Forms.MenuStrip> veya <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="f616e-141">Describes the features of the <xref:System.Windows.Forms.ToolStripMenuItem> class, which represents a selectable option displayed on a <xref:System.Windows.Forms.MenuStrip> or <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
+ <span data-ttu-id="5ab15-141"><xref:System.Windows.Forms.MenuStrip> veya <xref:System.Windows.Forms.ContextMenuStrip>üzerinde görünen seçilebilir bir seçeneği temsil eden <xref:System.Windows.Forms.ToolStripMenuItem> sınıfının özelliklerini açıklar.</span><span class="sxs-lookup"><span data-stu-id="5ab15-141">Describes the features of the <xref:System.Windows.Forms.ToolStripMenuItem> class, which represents a selectable option displayed on a <xref:System.Windows.Forms.MenuStrip> or <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="f616e-142">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="f616e-142">Related Sections</span></span>  
- [<span data-ttu-id="f616e-143">Windows Forms'da Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="f616e-143">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="f616e-144">Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.</span><span class="sxs-lookup"><span data-stu-id="f616e-144">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="5ab15-142">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="5ab15-142">Related Sections</span></span>  
+ [<span data-ttu-id="5ab15-143">Windows Forms'da Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="5ab15-143">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="5ab15-144">Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.</span><span class="sxs-lookup"><span data-stu-id="5ab15-144">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>
