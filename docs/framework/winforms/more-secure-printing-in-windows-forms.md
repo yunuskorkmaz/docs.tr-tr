@@ -1,5 +1,5 @@
 ---
-title: Windows Forms'ta Daha Güvenli Yazdırma
+title: Daha güvenli yazdırma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, printing
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - printing [Windows Forms], security
 - security [Windows Forms], printing
 ms.assetid: 48fd36ac-872f-4de0-902a-e52969cd4367
-ms.openlocfilehash: b0387a82f142fb32912dad1370d6ac0c784e8894
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6285b76d01660bfa761ea606421f264bdc0c0af5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592648"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734884"
 ---
 # <a name="more-secure-printing-in-windows-forms"></a>Windows Forms'ta Daha Güvenli Yazdırma
-Windows Forms uygulamaları sık yazdırma yetenekleri içerir. .NET Framework kullanan <xref:System.Drawing.Printing.PrintingPermission> yazdırma özelliklerine erişimi denetlemek ve ilişkili sınıf <xref:System.Drawing.Printing.PrintingPermissionLevel> erişim düzeyini belirtmek için numaralandırma değeri. Varsayılan olarak, yazdırma, yerel Intranet ve Internet bölgelerinde varsayılan olarak etkindir; Ancak, erişim düzeyi, her iki bölgeleri sınırlıdır. Uygulamanızı yazdırabilir olup olmadığını, kullanıcı etkileşimi gerektirir ya da yazdırma öğesinin uygulamaya verilen izin değeri bağlı olamaz. Varsayılan olarak, yerel Intranet bölgesine alır <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> erişim ve Intranet bölgesi alan <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> erişim.  
+Windows Forms uygulamalar genellikle yazdırma yeteneklerini içerir. .NET Framework, erişim düzeyini göstermek için yazdırma özelliklerine ve ilişkili <xref:System.Drawing.Printing.PrintingPermissionLevel> numaralandırma değerine erişimi denetlemek için <xref:System.Drawing.Printing.PrintingPermission> sınıfını kullanır. Varsayılan olarak, yazdırma varsayılan olarak yerel Intranet ve Internet bölgelerinde etkindir; Ancak, erişim düzeyi her iki bölgede de kısıtlıdır. Uygulamanızın yazdırabilir, Kullanıcı etkileşimi ister veya yazdıramayacağı, uygulamaya verilen izin değerine bağlıdır. Varsayılan olarak, yerel Intranet bölgesi <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> erişim alır ve Intranet bölgesi <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> erişim alır.  
   
- Aşağıdaki tablo, her yazdırma izin düzeyinde işlevselliği gösterir.  
+ Aşağıdaki tabloda, her yazdırma izni düzeyinde kullanılabilen işlevler gösterilmektedir.  
   
 |PrintingPermissionLevel|Açıklama|  
 |-----------------------------|-----------------|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|Tüm yüklenen yazıcıları tam erişim sağlar.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|Varsayılan yazıcı için program aracılığıyla yazdırma ve kısıtlayıcı bir yazdırma iletişim kutusu aracılığıyla daha güvenli yazdırma sağlar. <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> bir alt kümesini <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|Yazdırma yalnızca çok sınırlı iletişim kutusu sağlar. <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> bir alt kümesini <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|Yazıcılar için erişimi engeller. <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> bir alt kümesini <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|Tüm yüklü yazıcılara tam erişim sağlar.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|Varsayılan yazıcıda programlı yazdırmayı ve kısıtlayıcı bir yazdırma iletişim kutusu aracılığıyla daha güvenli bir şekilde yazdırmayı sağlar. <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>, <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>bir alt kümesidir.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|Yalnızca daha kısıtlamalı bir iletişim kutusundan yazdırma sağlar. <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>, <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>bir alt kümesidir.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|Yazıcılara erişimi engeller. <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>, <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>bir alt kümesidir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

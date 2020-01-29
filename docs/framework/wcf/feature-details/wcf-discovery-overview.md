@@ -2,12 +2,12 @@
 title: WCF Keşif Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 56d19aa72cc5e7217a2135ef919d611c8b2c2f27
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 46092c3bce87d426f4d465367e99a9ebb6dc37fa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424527"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737482"
 ---
 # <a name="wcf-discovery-overview"></a>WCF Keşif Genel Bakış
 Bulma API 'Leri, WS-Discovery protokolünü kullanarak dinamik yayımlama ve Web Hizmetleri bulma için Birleşik bir programlama modeli sağlar. Bu API 'Ler, hizmetlerin kendilerini ve istemcileri yayımlanmış Hizmetleri bulmak için yayımlamasına olanak sağlar. Bir hizmet bulunabilir hale getirildikten sonra hizmet, duyuru iletileri gönderebilir ve bulma isteklerini dinleyebilir ve bunlara yanıt verebilir. Keşfedilebilir hizmetler, bir ağ üzerinden bir ağı duyurmak üzere bir ağ ve Bye iletileri üzerinde gelişmelerini duyurmak için Merhaba iletiler gönderebilir. İstemciler, bir hizmeti bulmak için ağ üzerinde hizmet sözleşmesi türü, anahtar sözcükler ve kapsam gibi belirli ölçütlere sahip bir `Probe` isteği gönderir. Hizmetler `Probe` isteği alır ve ölçütlere göre eşleşip eşleşmediğine göre belirlenir. Bir hizmet eşleşiyorsa, hizmetle iletişim kurmak için gereken bilgilerle istemciye bir `ProbeMatch` iletisi göndererek yanıt verir. İstemciler ayrıca, kendi uç nokta adreslerini değiştirmiş olabilecek Hizmetleri bulmasına izin veren `Resolve` istekleri de gönderebilir. Eşleşen hizmetler, istemciye geri `ResolveMatch` bir ileti göndererek `Resolve` isteklerine yanıt verir.  
@@ -57,7 +57,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
   
  Hizmetin keşfedilmesini sağlamak için bir hizmet açıklamasına bir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> örneği eklenmelidir. Hizmeti bulma isteklerinin nerede dinleneceğini bildirmek için hizmet ana bilgisayarına bir <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> örneği eklenmelidir. Bu örnekte, hizmetin UDP çok noktaya yayın aktarımı üzerinden bulma isteklerini dinlemesi gerektiğini belirtmek için bir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> (<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>türetilen) eklenir. <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, tüm iletiler çok noktaya yayın düzeyinde gönderildiğinden geçici bulma için kullanılır.  
   
-## <a name="announcement"></a>Duyur  
+## <a name="announcement"></a>Duyuru  
  Varsayılan olarak, hizmet yayını duyuru iletileri göndermez. Hizmetin duyuru iletileri gönderecek şekilde yapılandırılması gerekir. Bu, hizmeti bulma iletilerini dinlemeden ayrı olarak duyurabileceğinden, hizmet yazarları için ek esneklik sağlar. Hizmet duyurusu Ayrıca, Hizmetleri bulma proxy 'si veya diğer hizmet kayıt defterlerine kaydetme mekanizması olarak da kullanılabilir. Aşağıdaki kod, bir hizmetin UDP bağlama üzerinden duyuru iletileri göndermek için nasıl yapılandırılacağını gösterir.  
   
 ```csharp  
@@ -153,7 +153,7 @@ class Client
   
 2. Hizmet adına iletişim kurmak için bir bulma proxy 'si kullanın  
   
- Windows Server AppFabric, herhangi bir ileti alınmadan önce bir hizmetin başlatılmasını sağlayacak bir otomatik başlatma özelliğine sahiptir. Bu otomatik başlatma kümesiyle, bir IIS/WAS barındırılan hizmeti bulunabilir olacak şekilde yapılandırılabilir. Otomatik başlatma özelliği hakkında daha fazla bilgi için bkz. [Windows Server AppFabric otomatik başlatma özelliği](https://go.microsoft.com/fwlink/?LinkId=205545). Otomatik başlatma özelliğini açma ile birlikte, hizmeti bulma için yapılandırmanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: program aracılığıyla BIR WCF hizmetine bulunabilirliği ekleme ve Istemci](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[yapılandırma dosyasında bulmayı yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
+ Windows Server AppFabric, herhangi bir ileti alınmadan önce bir hizmetin başlatılmasını sağlayacak bir otomatik başlatma özelliğine sahiptir. Bu otomatik başlatma kümesiyle, bir IIS/WAS barındırılan hizmeti bulunabilir olacak şekilde yapılandırılabilir. Otomatik başlatma özelliği hakkında daha fazla bilgi için bkz. [Windows Server AppFabric otomatik başlatma özelliği](https://docs.microsoft.com/previous-versions/appfabric/ee677260(v=azure.10)). Otomatik başlatma özelliğini açma ile birlikte, hizmeti bulma için yapılandırmanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: program aracılığıyla BIR WCF hizmetine bulunabilirliği ekleme ve Istemci](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[yapılandırma dosyasında bulmayı yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
   
  Bulma proxy 'si, hizmet çalışmadığı zaman WCF hizmeti adına iletişim kurmak için kullanılabilir. Proxy, araştırmayı dinleyebilir veya iletileri çözümleyebilir ve istemciye yanıt verebilir. İstemci daha sonra iletileri doğrudan hizmete gönderebilir. İstemci hizmete bir ileti gönderdiğinde, iletiye yanıt vermek için örneği oluşturulur. Bulma proxy 'si uygulama hakkında daha fazla bilgi için bkz. [bulma proxy 'Si uygulama](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
   

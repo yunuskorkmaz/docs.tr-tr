@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Çalışma zamanında (Windows Forms) boyutunu veya bir resim yerleşimini Değiştir'
+title: 'Nasıl yapılır: Çalışma Zamanında Resmin Boyutunu veya Konumunu Değiştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 695abf51870ef9164e4543a91b3183e801eee55f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9bb094ce0b7945f23a2e9b8614e56c9492d5f832
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649249"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736029"
 ---
-# <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Nasıl yapılır: Çalışma zamanında (Windows Forms) boyutunu veya bir resim yerleşimini Değiştir
-Windows Forms kullanırsanız <xref:System.Windows.Forms.PictureBox> denetimi bir form üzerinde ayarladığınız <xref:System.Windows.Forms.PictureBox.SizeMode%2A> özelliği için:  
+# <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Nasıl yapılır: Çalışma Zamanında Resmin Boyutunu veya Konumunu Değiştirme (Windows Forms)
+Bir form üzerinde Windows Forms <xref:System.Windows.Forms.PictureBox> denetimini kullanıyorsanız, üzerinde <xref:System.Windows.Forms.PictureBox.SizeMode%2A> özelliğini şu şekilde ayarlayabilirsiniz:  
   
-- Resmin sol üst köşesinde denetimin sol üst köşesinde ile Hizala  
+- Resmin sol üst köşesini denetimin sol üst köşesinden hizalayın  
   
-- Merkezi Denetim içindeki resmi  
+- Denetimin içindeki resmi Ortala  
   
-- Denetimin görüntülediği resmi uyacak şekilde boyutu değiştirin  
+- Denetimin boyutunu gösterdiği resme uyacak şekilde ayarlayın  
   
-- Denetime sığması için görüntüler herhangi bir resmi Uzat  
+- Denetimin sığması için görüntülediği tüm resimleri uzat  
   
- Bir resim (özellikle bir bit eşlem biçimi) uzatma görüntü kalitesini kaybına neden olabilir. Çalışma zamanında resimleri çizim için grafik yönergeleri listeleridir, meta dosyaları, bit eşlemler daha uzatma için daha uygundur.  
+ Bir resmi uzatma (özellikle bit eşlem biçiminde), görüntü kalitesinde bir kayıp üretebilir. Çalışma zamanında görüntülerin çizilmesine yönelik grafik yönergelerinin listesi olan meta dosyalar, bit eşlemlerden uzama için daha uygundur.  
   
 ### <a name="to-set-the-sizemode-property-at-run-time"></a>Çalışma zamanında SizeMode özelliğini ayarlamak için  
   
-1. Ayarlama <xref:System.Windows.Forms.PictureBox.SizeMode%2A> için <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (varsayılan), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, veya <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> Görüntü denetimin sol üst köşedeki yerleştirilir anlamına gelir; görüntü denetimi büyükse, kendi alt ve sağ kenarları kırpılır. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> görüntü denetimi içinde ortalanır anlamına gelir; görüntü denetimi büyükse, resmin dış kenarları kırpılır. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> Denetimin boyutunu görüntü boyutuna ayarlanır anlamına gelir. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> geriye doğru olduğundan ve görüntünün boyutu denetimin boyutuna ayarlanır anlamına gelir.  
+1. <xref:System.Windows.Forms.PictureBox.SizeMode%2A> <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (varsayılan), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>veya <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>olarak ayarlayın. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal>, görüntünün denetimin sol üst köşesine yerleştirildiği anlamına gelir; görüntü denetimden büyükse, alt ve sağ kenarları kırpılır. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, görüntünün denetimin içinde ortalanmasıdır; görüntü denetimden büyükse, resmin dış kenarları kırpılır. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, denetimin boyutunun görüntünün boyutuna ayarlandığı anlamına gelir. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> ters ve görüntünün boyutunun denetimin boyutuna ayarlandığı anlamına gelir.  
   
-     Aşağıdaki örnekte, görüntüsünün konumunu ayarlayın Belgelerim klasörünü yoludur. Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu dizin içerdiğini varsayar çünkü bu, gerçekleştirilir. Bu, güvenli bir şekilde uygulamayı çalıştırmak minimum sistem erişim düzeylerine sahip kullanıcılar da sağlar. Aşağıdaki örnekte bir form varsayar bir <xref:System.Windows.Forms.PictureBox> denetim zaten eklendi.  
+     Aşağıdaki örnekte, görüntü konumu için ayarlanan yol Belgelerim klasörüdür. Bu, Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu dizini içerdiğini varsaydığı için yapılır. Bu Ayrıca, en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenle çalıştırmasına olanak tanır. Aşağıdaki örnekte, <xref:System.Windows.Forms.PictureBox> denetimi zaten eklenmiş bir form varsayılır.  
   
     ```vb  
     Private Sub StretchPic()  
@@ -85,7 +85,7 @@ Windows Forms kullanırsanız <xref:System.Windows.Forms.PictureBox> denetimi bi
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.PictureBox>
-- [Nasıl yapılır: Tasarımcıyı kullanarak resim yükleme](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Nasıl yapılır: Tasarımcıyı Kullanarak Resim Yükleme](how-to-load-a-picture-using-the-designer-windows-forms.md)
 - [PictureBox Denetimine Genel Bakış](picturebox-control-overview-windows-forms.md)
-- [Nasıl yapılır: Çalışma zamanında resimleri ayarlama](how-to-set-pictures-at-run-time-windows-forms.md)
+- [Nasıl yapılır: Çalışma Zamanında Resimleri Ayarlama](how-to-set-pictures-at-run-time-windows-forms.md)
 - [PictureBox Denetimi](picturebox-control-windows-forms.md)

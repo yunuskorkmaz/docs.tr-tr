@@ -2,12 +2,12 @@
 title: Dayanıklı Entity Framework Core SQL bağlantıları uygulama
 description: Dayanıklı Entity Framework Core SQL bağlantılarını nasıl uygulayacağınızı öğrenin. Bu teknik, Bulutta Azure SQL veritabanı kullanılırken özellikle önemlidir.
 ms.date: 10/16/2018
-ms.openlocfilehash: 3128cf1be7f2dc8804a002556db232f4e0fc8c33
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: 7899fc263ab3cde6ac2410ca614a7e5fa285576b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094044"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732733"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>Dayanıklı Entity Framework Core SQL bağlantıları uygulama
 
@@ -88,7 +88,7 @@ public async Task<IActionResult> UpdateProduct(
 }
 ```
 
-İlk <xref:Microsoft.EntityFrameworkCore.DbContext> `_catalogContext` ve ikinci `DbContext` `_integrationEventLogService` nesne içindedir. Yürütme eylemi, bir EF yürütme stratejisi kullanılarak tüm `DbContext` nesneleri genelinde gerçekleştirilir.
+İlk <xref:Microsoft.EntityFrameworkCore.DbContext> `_catalogContext` ve ikinci `DbContext` `_catalogIntegrationEventService` nesne içindedir. Yürütme eylemi, bir EF yürütme stratejisi kullanılarak tüm `DbContext` nesneleri genelinde gerçekleştirilir.
 
 Bu birden çok `DbContext` işlemesini başarmak için, `SaveEventAndCatalogContextChangesAsync` aşağıdaki kodda gösterildiği gibi bir `ResilientTransaction` sınıfı kullanır:
 

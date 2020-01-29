@@ -2,12 +2,12 @@
 title: Çalışma Zamanı Yönerge İlkesi Ayarları
 ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
-ms.openlocfilehash: 6001e3855610e7da5262c46413b775da3bea305c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a8933decaec45e8000f3f3d1717847f333deddd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128159"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738496"
 ---
 # <a name="runtime-directive-policy-settings"></a>Çalışma Zamanı Yönerge İlkesi Ayarları
 
@@ -32,24 +32,24 @@ ms.locfileid: "73128159"
 
   Aşağıdaki tabloda, yansıma ilkesi türleri ve bunların kullanılabileceği program öğeleri listelenmektedir.
 
-  |Öğe|Etkinleştir|Ata|Dinamik|
+  |Öğe|Etkinleştir|Gözat|Dinamik|
   |-------------|--------------|------------|-------------|
-  |[\<uygulama >](application-element-net-native.md)|✓|✓|✓|
-  |[Derleme > \<](assembly-element-net-native.md)|✓|✓|✓|
-  |[\<Attribute>](attributeimplies-element-net-native.md)|✓|✓|✓|
-  |[\<olayı >](event-element-net-native.md)||✓|✓|
-  |[\<alan >](field-element-net-native.md)||✓|✓|
-  |[\<GenericParameter >](genericparameter-element-net-native.md)|✓|✓|✓|
-  |[\<ımpliestype >](impliestype-element-net-native.md)|✓|✓|✓|
-  |[\<yöntemi >](method-element-net-native.md)||✓|✓|
-  |[\<Methodörneklemesi >](methodinstantiation-element-net-native.md)||✓|✓|
-  |[\<ad alanı >](namespace-element-net-native.md)|✓|✓|✓|
-  |[\<parametresi >](parameter-element-net-native.md)|✓|✓|✓|
-  |[\<Özellik >](property-element-net-native.md)||✓|✓|
-  |[\<alt türleri >](subtypes-element-net-native.md)|✓|✓|✓|
-  |[\<türü >](type-element-net-native.md)|✓|✓|✓|
-  |[\<Typeörneklemesi >](typeinstantiation-element-net-native.md)|✓|✓|✓|
-  |[\<TypeParameter >](typeparameter-element-net-native.md)|✓|✓|✓|
+  |[\<uygulama >](application-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[Derleme > \<](assembly-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[\<Attribute>](attributeimplies-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[\<olayı >](event-element-net-native.md)||✔ ︎|✔ ︎|
+  |[\<alan >](field-element-net-native.md)||✔ ︎|✔ ︎|
+  |[\<GenericParameter >](genericparameter-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[\<ımpliestype >](impliestype-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[\<yöntemi >](method-element-net-native.md)||✔ ︎|✔ ︎|
+  |[\<Methodörneklemesi >](methodinstantiation-element-net-native.md)||✔ ︎|✔ ︎|
+  |[\<ad alanı >](namespace-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[\<parametresi >](parameter-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[\<Özellik >](property-element-net-native.md)||✔ ︎|✔ ︎|
+  |[\<alt türleri >](subtypes-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[\<türü >](type-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[\<Typeörneklemesi >](typeinstantiation-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[\<TypeParameter >](typeparameter-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
 
 - Serileştirme ilke türleri serileştirme ve seri durumundan çıkarma için çalışma zamanında kullanılabilir hale getirilen meta verileri belirleme:
 
@@ -65,22 +65,22 @@ ms.locfileid: "73128159"
 
   |Öğe|Serialize|DataContractSerializer|DataContractJsonSerializer|Çağrılamıyor|
   |-------------|---------------|----------------------------|--------------------------------|-------------------|
-  |[\<uygulama >](application-element-net-native.md)|✓|✓|✓|✓|
-  |[Derleme > \<](assembly-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Attribute>](attributeimplies-element-net-native.md)|✓|✓|✓|✓|
+  |[\<uygulama >](application-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|✔ ︎|
+  |[Derleme > \<](assembly-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|✔ ︎|
+  |[\<Attribute>](attributeimplies-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|✔ ︎|
   |[\<olayı >](event-element-net-native.md)|||||
-  |[\<alan >](field-element-net-native.md)|✓||||
-  |[\<GenericParameter >](genericparameter-element-net-native.md)|✓|✓|✓|✓|
-  |[\<ımpliestype >](impliestype-element-net-native.md)|✓|✓|✓|✓|
+  |[\<alan >](field-element-net-native.md)|✔ ︎||||
+  |[\<GenericParameter >](genericparameter-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|✔ ︎|
+  |[\<ımpliestype >](impliestype-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|✔ ︎|
   |[\<yöntemi >](method-element-net-native.md)|||||
   |[\<Methodörneklemesi >](methodinstantiation-element-net-native.md)|||||
-  |[\<ad alanı >](namespace-element-net-native.md)|✓|✓|✓|✓|
-  |[\<parametresi >](parameter-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Özellik >](property-element-net-native.md)|✓||||
-  |[\<alt türleri >](subtypes-element-net-native.md)|✓|✓|✓|✓|
-  |[\<türü >](type-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Typeörneklemesi >](typeinstantiation-element-net-native.md)|✓|✓|✓|✓|
-  |[\<TypeParameter >](typeparameter-element-net-native.md)|✓|✓|✓|✓|
+  |[\<ad alanı >](namespace-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|✔ ︎|
+  |[\<parametresi >](parameter-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|✔ ︎|
+  |[\<Özellik >](property-element-net-native.md)|✔ ︎||||
+  |[\<alt türleri >](subtypes-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|✔ ︎|
+  |[\<türü >](type-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|✔ ︎|
+  |[\<Typeörneklemesi >](typeinstantiation-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|✔ ︎|
+  |[\<TypeParameter >](typeparameter-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|✔ ︎|
 
 - Birlikte çalışma ilkesi türleri, başvuru türlerini, değer türlerini ve işlev işaretçilerini COM 'a ve Windows Çalışma Zamanı geçirmek için çalışma zamanında hangi meta verilerin kullanılabilir hale getirilceğini belirlenir:
 
@@ -94,22 +94,22 @@ ms.locfileid: "73128159"
 
   |Öğe|MarshalObject|MarshalDelegate|MarshalStructure|
   |-------------|-------------------|---------------------|----------------------|
-  |[\<uygulama >](application-element-net-native.md)|✓|✓|✓|
-  |[Derleme > \<](assembly-element-net-native.md)|✓|✓|✓|
-  |[\<Attribute>](attributeimplies-element-net-native.md)|✓|✓|✓|
+  |[\<uygulama >](application-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[Derleme > \<](assembly-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[\<Attribute>](attributeimplies-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
   |[\<olayı >](event-element-net-native.md)||||
   |[\<alan >](field-element-net-native.md)||||
-  |[\<GenericParameter >](genericparameter-element-net-native.md)|✓|✓|✓|
-  |[\<ımpliestype >](impliestype-element-net-native.md)|✓|✓|✓|
+  |[\<GenericParameter >](genericparameter-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[\<ımpliestype >](impliestype-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
   |[\<yöntemi >](method-element-net-native.md)||||
   |[\<Methodörneklemesi >](methodinstantiation-element-net-native.md)||||
-  |[\<ad alanı >](namespace-element-net-native.md)|✓|✓|✓|
-  |[\<parametresi >](parameter-element-net-native.md)|✓|✓|✓|
+  |[\<ad alanı >](namespace-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[\<parametresi >](parameter-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
   |[\<Özellik >](property-element-net-native.md)||||
-  |[\<alt türleri >](subtypes-element-net-native.md)|✓|✓|✓|
-  |[\<türü >](type-element-net-native.md)|✓|✓|✓|
-  |[\<Typeörneklemesi >](typeinstantiation-element-net-native.md)|✓|✓|✓|
-  |[\<TypeParameter >](typeparameter-element-net-native.md)|✓|✓|✓|
+  |[\<alt türleri >](subtypes-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[\<türü >](type-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[\<Typeörneklemesi >](typeinstantiation-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
+  |[\<TypeParameter >](typeparameter-element-net-native.md)|✔ ︎|✔ ︎|✔ ︎|
 
 ## <a name="policy-settings"></a>İlke ayarları
 
@@ -117,16 +117,16 @@ Her ilke türü, aşağıdaki tabloda listelenen değerlerden birine ayarlanabil
 
 |İlke ayarı|Açıklama|`Assembly`, `Namespace`, `Type`ve `TypeInstantiation` öğeleri|`Event`, `Field`, `Method`, `MethodInstantiation`ve `Property` öğeleri|
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|
-|`All`|.NET Native araç zincirinin kaldıramayan tüm türler ve Üyeler için ilkeyi izin vermez.|✓||
-|`Auto`|Bu program öğesinin ilke türü için varsayılan ilkenin kullanılması gerektiğini belirtir. Bu, ilke türü için bir ilkeyi dışarıda bırakarak benzerdir. `Auto`, genellikle ilkenin üst öğeden devralındığını göstermek için kullanılır.|✓|✓|
-|`Excluded`|İlkenin belirli bir program öğesi için devre dışı bırakıldığını belirtir. Örneğin, çalışma zamanı yönergesi:<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> `BusinessClasses.Person` sınıfı için meta verilerin, `Person` nesneleri dinamik olarak örneği oluşturmak veya değiştirmek için kullanılabilir olmadığını belirtir.|✓|✓|
-|`Included`|Üst tür için meta veriler kullanılabiliyorsa bir ilkeyi etkinleştirilir.||✓|
-|`Public`|Araç zinciri türün veya üyenin gereksiz olduğunu belirtmediği ve bu nedenle onu kaldıran ortak türler veya Üyeler için ilkeyi etkinleştirilir. Bu ayar `Required Public`farklıdır. Bu, araç zinciri gereksiz olduğunu belirlerse bile ortak türler ve Üyeler için meta verilerin her zaman kullanılabilir olmasını sağlar.|✓||
-|`PublicAndInternal`|Araç zinciri tür veya üyenin gereksiz olduğunu belirlerse ve bu nedenle bunu kaldırmadığı takdirde, ortak ve iç türler veya Üyeler için ilkeyi etkinleştirilir. Bu ayar `Required PublicAndInternal`farklıdır. Bu, araç zinciri gereksiz olduğunu belirlerse bile ortak ve iç türlerin ve üyelerin meta verilerinin her zaman kullanılabilir olmasını sağlar.|✓||
-|`Required`|Üye için ilkenin etkinleştirildiğini ve üyenin kullanılması gibi görünse de meta verilerin kullanılabilir olacağını belirtir.||✓|
-|`Required Public`|Genel türler veya Üyeler için ilkeyi sağlar ve genel türler ve Üyeler için meta verilerin her zaman kullanılabilir olmasını sağlar. Bu ayar `Public`farklıdır, bu, ortak türlerin ve üyelerin meta verilerini yalnızca araç zinciri gerekli olduğunu belirlerse kullanılabilir hale getirir.|✓||
-|`Required PublicAndInternal`|Ortak ve iç türler ya da Üyeler için ilkeyi sağlar ve ortak ve iç türlerin ve üyelerin meta verilerinin her zaman kullanılabilir olmasını sağlar. Bu ayar `PublicAndInternal`farklıdır, bu, ortak ve iç tür ve üyelerin meta verilerini yalnızca araç zinciri gerekli olduğunu belirlerse kullanılabilir hale getirir.|✓||
-|`Required All`|, Kullanıldıkları ve kullanılmayacağı tüm türleri ve üyeleri tutmak için araç zinciri gerektirir ve bunlar için ilke sağlar.|✓||
+|`All`|.NET Native araç zincirinin kaldıramayan tüm türler ve Üyeler için ilkeyi izin vermez.|✔ ︎||
+|`Auto`|Bu program öğesinin ilke türü için varsayılan ilkenin kullanılması gerektiğini belirtir. Bu, ilke türü için bir ilkeyi dışarıda bırakarak benzerdir. `Auto`, genellikle ilkenin üst öğeden devralındığını göstermek için kullanılır.|✔ ︎|✔ ︎|
+|`Excluded`|İlkenin belirli bir program öğesi için devre dışı bırakıldığını belirtir. Örneğin, çalışma zamanı yönergesi:<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> `BusinessClasses.Person` sınıfı için meta verilerin, `Person` nesneleri dinamik olarak örneği oluşturmak veya değiştirmek için kullanılabilir olmadığını belirtir.|✔ ︎|✔ ︎|
+|`Included`|Üst tür için meta veriler kullanılabiliyorsa bir ilkeyi etkinleştirilir.||✔ ︎|
+|`Public`|Araç zinciri türün veya üyenin gereksiz olduğunu belirtmediği ve bu nedenle onu kaldıran ortak türler veya Üyeler için ilkeyi etkinleştirilir. Bu ayar `Required Public`farklıdır. Bu, araç zinciri gereksiz olduğunu belirlerse bile ortak türler ve Üyeler için meta verilerin her zaman kullanılabilir olmasını sağlar.|✔ ︎||
+|`PublicAndInternal`|Araç zinciri tür veya üyenin gereksiz olduğunu belirlerse ve bu nedenle bunu kaldırmadığı takdirde, ortak ve iç türler veya Üyeler için ilkeyi etkinleştirilir. Bu ayar `Required PublicAndInternal`farklıdır. Bu, araç zinciri gereksiz olduğunu belirlerse bile ortak ve iç türlerin ve üyelerin meta verilerinin her zaman kullanılabilir olmasını sağlar.|✔ ︎||
+|`Required`|Üye için ilkenin etkinleştirildiğini ve üyenin kullanılması gibi görünse de meta verilerin kullanılabilir olacağını belirtir.||✔ ︎|
+|`Required Public`|Genel türler veya Üyeler için ilkeyi sağlar ve genel türler ve Üyeler için meta verilerin her zaman kullanılabilir olmasını sağlar. Bu ayar `Public`farklıdır, bu, ortak türlerin ve üyelerin meta verilerini yalnızca araç zinciri gerekli olduğunu belirlerse kullanılabilir hale getirir.|✔ ︎||
+|`Required PublicAndInternal`|Ortak ve iç türler ya da Üyeler için ilkeyi sağlar ve ortak ve iç türlerin ve üyelerin meta verilerinin her zaman kullanılabilir olmasını sağlar. Bu ayar `PublicAndInternal`farklıdır, bu, ortak ve iç tür ve üyelerin meta verilerini yalnızca araç zinciri gerekli olduğunu belirlerse kullanılabilir hale getirir.|✔ ︎||
+|`Required All`|, Kullanıldıkları ve kullanılmayacağı tüm türleri ve üyeleri tutmak için araç zinciri gerektirir ve bunlar için ilke sağlar.|✔ ︎||
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

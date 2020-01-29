@@ -3,24 +3,24 @@ title: DotNet NuGet Delete komutu
 description: DotNet-NuGet-Delete komutu sunucudan bir paketi siler veya listesini kaldırır.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 79634baa9d6d7ff1f388f6a794ffd816687be105
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 0950f03c0986bde17ae3e2e7170d402ea8222853
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117643"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733128"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
-**Bu konu şu şekilde geçerlidir: ✓** .NET Core 1. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 1. x SDK ve sonraki sürümleri
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
-`dotnet nuget delete`-Sunucudan bir paketi siler veya listesini kaldırır.
+`dotnet nuget delete`-sunucudan bir paketi siler veya listesini kaldırır.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -32,7 +32,7 @@ dotnet nuget delete [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet nuget delete` Komutu sunucusundan bir paketi siler veya listesini kaldırır. [NuGet.org](https://www.nuget.org/)için eylem, paketin listesini kaldırdır.
+`dotnet nuget delete` komutu sunucudan bir paketi siler veya listesini kaldırır. [NuGet.org](https://www.nuget.org/)için eylem, paketin listesini kaldırdır.
 
 ## <a name="arguments"></a>Arguments
 
@@ -72,17 +72,17 @@ dotnet nuget delete [-h|--help]
 
 * **`-s|--source <SOURCE>`**
 
-  Sunucu URL 'sini belirtir. NuGet.org için desteklenen URL 'ler `https://www.nuget.org`, `https://www.nuget.org/api/v3`, ve `https://www.nuget.org/api/v2/package`içerir. Özel akışlar için ana bilgisayar adını (örneğin, `%hostname%/api/v3`) değiştirin.
+  Sunucu URL 'sini belirtir. Nuget.org için desteklenen URL 'Ler `https://www.nuget.org`, `https://www.nuget.org/api/v3`ve `https://www.nuget.org/api/v2/package`içerir. Özel akışlar için ana bilgisayar adını (örneğin, `%hostname%/api/v3`) değiştirin.
 
 ## <a name="examples"></a>Örnekler
 
-* Paketin `Microsoft.AspNetCore.Mvc`1,0 sürümünü siler:
+* `Microsoft.AspNetCore.Mvc`paketinin 1,0 sürümünü siler:
 
   ```dotnetcli
   dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0
   ```
 
-* Paketin `Microsoft.AspNetCore.Mvc`1,0 sürümünü siler, kimlik bilgilerini veya diğer girişleri kullanıcıya sormadan:
+* `Microsoft.AspNetCore.Mvc`paket 1,0 sürümünü siler, kullanıcıdan kimlik bilgilerini veya diğer girişleri sorma:
 
   ```dotnetcli
   dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive

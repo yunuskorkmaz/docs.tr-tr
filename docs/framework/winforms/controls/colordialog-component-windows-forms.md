@@ -1,40 +1,40 @@
 ---
-title: ColorDialog Bileşeni (Windows Forms)
+title: ColorDialog Bileşeni
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ColorDialog component
 - colors [Windows Forms], dialog box
 - color dialog box
 ms.assetid: 261793e0-8252-47c5-b76c-621857b8da44
-ms.openlocfilehash: d04794df6bce82573ff8f53b282a4d945933b1bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b44774fcace82f7e209440bc15705ad632bc223
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956318"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736927"
 ---
 # <a name="colordialog-component-windows-forms"></a>ColorDialog Bileşeni (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.ColorDialog> bir paletinden bir renk seçin ve özel renkler paleti bu eklemek için kullanıcıya izin veren bir önceden yapılandırılmış bir iletişim kutusu bir bileşendir. Diğer gördüğünüz aynı iletişim kutusu olan Windows tabanlı uygulamaların renklerini seçin. Windows tabanlı uygulamanızda kendi iletişim kutusu yapılandırma yerine basit bir çözüm olarak kullanın.  
+Windows Forms <xref:System.Windows.Forms.ColorDialog> bileşeni, kullanıcının bir paletten renk seçmesini ve bu palete özel renkler eklemesini sağlayan önceden yapılandırılmış bir iletişim kutusudur. Renk seçmek için diğer Windows tabanlı uygulamalarda gördüğünüz iletişim kutusudur. Kendi iletişim kutusunu yapılandırmak yerine, bunu Windows tabanlı uygulamanızda basit bir çözüm olarak kullanın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ColorDialog Bileşenine Genel Bakış](colordialog-component-overview-windows-forms.md)  
- Genel konseptlerini tanıtan <xref:System.Windows.Forms.ColorDialog> sağlayan önceden yapılandırılmış iletişim kutusunu görüntülemek için kullanıcıların bileşen bir paletinden renk seçmek için kullanabilirsiniz.  
+ , Kullanıcıların bir paletten renk seçmek için kullanabileceği önceden yapılandırılmış bir iletişim kutusu görüntülemenizi sağlayan <xref:System.Windows.Forms.ColorDialog> bileşeninin genel kavramlarını tanıtır.  
   
- [Nasıl yapılır: Windows Forms ColorDialog bileşeninin görünüşünü değiştirme](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)  
- Kullanıcıların ve diğer özellikleri kullanılabilir renkleri değiştirmek açıklar.  
+ [Nasıl yapılır: Windows Forms ColorDialog Bileşeninin Görünüşünü Değiştirme](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)  
+ Kullanıcılar ve diğer özellikler için kullanılabilen renklerin nasıl değiştirileceğini açıklar.  
   
- [Nasıl yapılır: ColorDialog bileşeni ile renk paleti gösterme](how-to-show-a-color-palette-with-the-colordialog-component.md)  
- Örneğini kullanarak çalışma zamanında bir renk seçin açıklanmaktadır <xref:System.Windows.Forms.ColorDialog> bileşeni.  
+ [Nasıl yapılır: ColorDialog Bileşeni ile Renk Paleti Gösterme](how-to-show-a-color-palette-with-the-colordialog-component.md)  
+ Çalışma zamanında bir rengin bir <xref:System.Windows.Forms.ColorDialog> bileşeni örneği tarafından nasıl seçileceğinizi açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Kullanabileceğiniz Windows formlarında denetimleri](controls-to-use-on-windows-forms.md)  
- Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.  
+ [Windows Forms Için kullanabileceğiniz denetimler](controls-to-use-on-windows-forms.md)  
+ Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.  
   
  <xref:System.Windows.Forms.ColorDialog>  
- Başvuru bilgileri sağlar <xref:System.Windows.Forms.ColorDialog> sınıfını ve üyelerini.  
+ <xref:System.Windows.Forms.ColorDialog> sınıfı ve üyeleri hakkında başvuru bilgileri sağlar.  
   
- [Windows için temel kod Forms iletişim kutuları](assetId:///VS|dv_vstechart|~\html\vbtchessentialcodeforwindowsformsdialogboxes.htm)  
- Windows Forms iletişim kutusu denetimleri ve bileşenleri ve bunların temel işlevlerini yürütmek için gerekli kod açıklanır.  
+ [Windows Forms Iletişim kutuları için gerekli kod](assetId:///VS|dv_vstechart|~\html\vbtchessentialcodeforwindowsformsdialogboxes.htm)  
+ Windows Forms iletişim kutusu denetimlerini ve bileşenlerini ve temel işlevlerini yürütmek için gereken kodu açıklar.  
   
  [İletişim Kutusu Denetimleri ve Bileşenleri](dialog-box-controls-and-components-windows-forms.md)  
- Kullanıcıların uygulama veya sistem standart etkileşim gerçekleştirmek denetimleri kümesini listeler.
+ Kullanıcıların uygulama veya sistemle standart etkileşimler gerçekleştirmesine izin veren bir denetim kümesini listeler.

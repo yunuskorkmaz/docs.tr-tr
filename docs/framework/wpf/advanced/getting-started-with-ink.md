@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 'da WPF uygulamasında bir InkCanvas oluşturma
+title: Visual Studio 'da InkCanvas oluşturma
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: ebbf25037921e7802b2bfcb6ffa562d16a849ffa
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: b8087d6db04f7024b9ee48f28002bee04045a14b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920245"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737894"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>WPF 'de mürekkeple çalışmaya başlama
 
@@ -24,7 +24,7 @@ Windows Presentation Foundation (WPF), uygulamanıza dijital mürekkep eklemeniz
 
 Aşağıdaki örnekleri kullanmak için, önce [Visual Studio 'yu](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)yüklemeniz gerekir. Ayrıca, temel WPF uygulamalarının nasıl yazılacağını öğrenmenize de yardımcı olur. WPF kullanmaya başlarken yardım için bkz. [Izlenecek yol: Ilk WPF Masaüstü](../getting-started/walkthrough-my-first-wpf-desktop-application.md)Uygulamam.
 
-## <a name="quick-start"></a>hızlı başlangıç
+## <a name="quick-start"></a>Hızlı Başlangıç
 
 Bu bölüm, mürekkep toplayan basit bir WPF uygulaması yazmanıza yardımcı olur.
 

@@ -3,12 +3,12 @@ title: Genelleştirme yapılandırma ayarları
 description: .NET Core uygulamasının Genelleştirme yönlerini yapılandıran çalışma zamanı ayarları hakkında bilgi edinin. Örneğin, Japonca tarihleri nasıl ayrıştırır.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 76cd4a0a0f93f4df3ff243c6024b952576e8e6cb
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3764d0eb714c094b44ae843a1e626073ff8d82e4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740545"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733458"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>Genelleştirme için çalışma zamanı yapılandırma seçenekleri
 
@@ -21,7 +21,34 @@ ms.locfileid: "75740545"
 | | Ayar adı | Değerler |
 | - | - | - |
 | **runtimeconfig. JSON** | `System.Globalization.Invariant` | `false`-kültürel verilerine erişim<br/>`true`-sabit modda çalıştır |
+| **MSBuild özelliği** | `InvariantGlobalization` | `false`-kültürel verilerine erişim<br/>`true`-sabit modda çalıştır |
 | **Ortam değişkeni** | `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` | `0`-kültürel verilerine erişim<br/>`1`-sabit modda çalıştır |
+
+### <a name="examples"></a>Örnekler
+
+*runtimeconfig. JSON* dosyası:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.Globalization.Invariant": true
+      }
+   }
+}
+```
+
+Proje dosyası:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+</Project>
+```
 
 ## <a name="era-year-ranges"></a>Dönem yıl aralıkları
 

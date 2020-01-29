@@ -3,12 +3,12 @@ title: Çöp toplayıcı yapılandırma ayarları
 description: Çöp toplayıcının .NET Core uygulamaları için belleği nasıl yönettiğini yapılandırmak üzere çalışma zamanı ayarları hakkında bilgi edinin.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 24e5c47de781e7eed5f76d2c551cac2dce1e8f05
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900102"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733522"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Çöp toplama için çalışma zamanı yapılandırma seçenekleri
 
@@ -38,10 +38,13 @@ Ayarlar bu sayfadaki gruplar halinde düzenlenir. Her grup içindeki ayarlar, be
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.Server` | `false`-iş istasyonu<br/>`true`-sunucu | .NET Core 1,0 |
+| **MSBuild özelliği** | `ServerGarbageCollection` | `false`-iş istasyonu<br/>`true`-sunucu | .NET Core 1,0 |
 | **Ortam değişkeni** | `COMPlus_gcServer` | `0`-iş istasyonu<br/>`1`-sunucu | .NET Core 1,0 |
 | **.NET Framework için App. config** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false`-iş istasyonu<br/>`true`-sunucu |  |
 
-Örnek:
+### <a name="examples"></a>Örnekler
+
+*runtimeconfig. JSON* dosyası:
 
 ```json
 {
@@ -53,6 +56,18 @@ Ayarlar bu sayfadaki gruplar halinde düzenlenir. Her grup içindeki ayarlar, be
 }
 ```
 
+Proje dosyası:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+  </PropertyGroup>
+
+</Project>
+```
+
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System. GC. eşzamanlı/COMPlus_gcConcurrent
 
 - Arka plan (eşzamanlı) Çöp toplamanın etkinleştirilip etkinleştirilmeyeceğini yapılandırır.
@@ -62,10 +77,13 @@ Ayarlar bu sayfadaki gruplar halinde düzenlenir. Her grup içindeki ayarlar, be
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.Concurrent` | `true` arka plan GC<br/>`false`-eş zamanlı olmayan GC | .NET Core 1,0 |
+| **MSBuild özelliği** | `ConcurrentGarbageCollection` | `true` arka plan GC<br/>`false`-eş zamanlı olmayan GC | .NET Core 1,0 |
 | **Ortam değişkeni** | `COMPlus_gcConcurrent` | `true` arka plan GC<br/>`false`-eş zamanlı olmayan GC | .NET Core 1,0 |
 | **.NET Framework için App. config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true` arka plan GC<br/>`false`-eş zamanlı olmayan GC |  |
 
-Örnek:
+### <a name="examples"></a>Örnekler
+
+*runtimeconfig. JSON* dosyası:
 
 ```json
 {
@@ -75,6 +93,18 @@ Ayarlar bu sayfadaki gruplar halinde düzenlenir. Her grup içindeki ayarlar, be
       }
    }
 }
+```
+
+Proje dosyası:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="manage-resource-usage"></a>Kaynak kullanımını yönetme
@@ -261,10 +291,13 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.RetainVM` | `false`-işletim sistemine yayın<br/>`true`-bekleme üzerine koy| .NET Core 1,0 |
+| **runtimeconfig. JSON** | `System.GC.RetainVM` | `false`-işletim sistemine yayın<br/>`true`-bekleme üzerine koy | .NET Core 1,0 |
+| **MSBuild özelliği** | `RetainVMGarbageCollection` | `false`-işletim sistemine yayın<br/>`true`-bekleme üzerine koy | .NET Core 1,0 |
 | **Ortam değişkeni** | `COMPlus_GCRetainVM` | `0`-işletim sistemine yayın<br/>`1`-bekleme üzerine koy | .NET Core 1,0 |
 
-Örnek:
+### <a name="examples"></a>Örnekler
+
+*runtimeconfig. JSON* dosyası:
 
 ```json
 {
@@ -274,6 +307,18 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
       }
    }
 }
+```
+
+Proje dosyası:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="large-pages"></a>Büyük sayfalar
@@ -342,4 +387,4 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
 | **runtimeconfig. JSON** | YOK | YOK | YOK |
-| **Ortam değişkeni** | `COMPlus_GCName` | *string_path* | .NET Core 2.0 |
+| **Ortam değişkeni** | `COMPlus_GCName` | *string_path* | .NET Core 2,0 |

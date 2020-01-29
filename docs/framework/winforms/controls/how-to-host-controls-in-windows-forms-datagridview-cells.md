@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DataGridView Hücrelerinde Denetimleri Barındırma'
+title: DataGridView hücrelerinde konak denetimleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], hosting controls in cells
 - cells [Windows Forms], hosting controls
 ms.assetid: e79a9d4e-64ec-41f5-93ec-f5492633cbb2
-ms.openlocfilehash: a97af9bf0ef4016e54f877d934ed401b8dde7d4e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a64521a15a272ca8140302f39d15e7f17e0c423b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966602"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736531"
 ---
 # <a name="how-to-host-controls-in-windows-forms-datagridview-cells"></a>Nasıl yapılır: Windows Forms DataGridView Hücrelerinde Denetimleri Barındırma
-Bu <xref:System.Windows.Forms.DataGridView> denetim, kullanıcılarınızın çeşitli yollarla değer girmelerini ve düzenlemesini sağlayan çeşitli sütun türleri sağlar. Bu sütun türleri veri girişi gereksinimlerinizi karşılamıyorsa, seçtiğiniz denetimleri barındıran hücrelerle kendi sütun türlerinizi oluşturabilirsiniz. Bunu yapmak için, ve ' <xref:System.Windows.Forms.DataGridViewColumn> <xref:System.Windows.Forms.DataGridViewCell>den türetilen sınıfları tanımlamanız gerekir. Ayrıca <xref:System.Windows.Forms.Control> <xref:System.Windows.Forms.IDataGridViewEditingControl> arabiriminden türetilen ve uygulayan bir sınıf tanımlamanız gerekir.  
+<xref:System.Windows.Forms.DataGridView> denetimi, kullanıcılarınızın çeşitli yollarla değer girmelerini ve düzenlemesini sağlayan çeşitli sütun türleri sağlar. Bu sütun türleri veri girişi gereksinimlerinizi karşılamıyorsa, seçtiğiniz denetimleri barındıran hücrelerle kendi sütun türlerinizi oluşturabilirsiniz. Bunu yapmak için, <xref:System.Windows.Forms.DataGridViewColumn> ve <xref:System.Windows.Forms.DataGridViewCell>türetilen sınıfları tanımlamanız gerekir. Ayrıca, <xref:System.Windows.Forms.Control> türetilen ve <xref:System.Windows.Forms.IDataGridViewEditingControl> arabirimini uygulayan bir sınıf tanımlamanız gerekir.  
   
- Aşağıdaki kod örneği, bir takvim sütununun nasıl oluşturulacağını göstermektedir. Bu sütunun hücreleri normal metin kutusu hücrelerindeki tarihleri görüntüler, ancak kullanıcı bir hücreyi düzenlediğinde bir <xref:System.Windows.Forms.DateTimePicker> denetim görüntülenir. Metin kutusu görüntüleme işlevini yeniden `CalendarCell` uygulamak zorunda kalmamak için sınıf doğrudan <xref:System.Windows.Forms.DataGridViewCell> sınıfı devralmak yerine <xref:System.Windows.Forms.DataGridViewTextBoxCell> sınıftan türetilir.  
+ Aşağıdaki kod örneği, bir takvim sütununun nasıl oluşturulacağını göstermektedir. Bu sütunun hücreleri normal metin kutusu hücrelerindeki tarihleri görüntüler, ancak kullanıcı bir hücreyi düzenlediğinde bir <xref:System.Windows.Forms.DateTimePicker> denetimi görünür. Metin kutusu görüntüleme işlevini yeniden uygulamak zorunda kalmamak için `CalendarCell` sınıfı, <xref:System.Windows.Forms.DataGridViewCell> sınıfını doğrudan devralmak yerine <xref:System.Windows.Forms.DataGridViewTextBoxCell> sınıfından türetilir.  
   
 > [!NOTE]
-> Türetilmiş sınıfa türeten <xref:System.Windows.Forms.DataGridViewCell> veya <xref:System.Windows.Forms.DataGridViewColumn> yeni özellikler eklediğinizde, kopyalama işlemleri sırasında yeni özellikleri kopyalamak için `Clone` yöntemi geçersiz kıldığınızdan emin olun. Ayrıca temel sınıfın özelliklerini yeni hücreye veya sütuna `Clone` kopyalamak için temel sınıfın yöntemini çağırmanız gerekir.  
+> <xref:System.Windows.Forms.DataGridViewCell> veya <xref:System.Windows.Forms.DataGridViewColumn> türettiğinizde ve türetilmiş sınıfa yeni özellikler eklediğinizde, kopyalama işlemleri sırasında yeni özellikleri kopyalamak için `Clone` yöntemini geçersiz kıldığınızdan emin olun. Temel sınıfın özelliklerinin yeni hücreye veya sütuna kopyalanabilmesi için temel sınıfın `Clone` yöntemini de çağırmalısınız.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[System.Windows.Forms.DataGridViewCalendarColumn#000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCalendarColumn/CS/datagridviewcalendarcolumn.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridViewCalendarColumn#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCalendarColumn/VB/datagridviewcalendarcolumn.vb#000)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
  Aşağıdaki örnek şunları gerektirir:  
   
 - System ve System. Windows. Forms derlemelerine başvurular.  

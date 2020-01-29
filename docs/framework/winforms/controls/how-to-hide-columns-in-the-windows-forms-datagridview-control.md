@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DataGridView Denetiminde Sütunları Gizleme'
+title: DataGridView Denetimindeki sütunları gizleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,38 +9,38 @@ helpviewer_keywords:
 - data grids [Windows Forms], hiding columns
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
-ms.openlocfilehash: d991f3e6a2d70631c2a904bc5952a9c8e03f7949
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ac6ccac5c02f014d5aa629956e51675cc60fddc
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651693"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736565"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Sütunları Gizleme
-Bazen yalnızca bazı Windows Forms'ta mevcut olan sütunları görüntülemek isteyeceksiniz <xref:System.Windows.Forms.DataGridView> denetimi. Örneğin, bir çalışan göstermek isteyebilirsiniz maaş sütun diğer kullanıcılardan gizleyerek sırasında yönetim kimlik bilgilerine sahip kullanıcılar için. Alternatif olarak, denetimi yalnızca bazılarının görüntülemek istediğiniz çok sayıda sütun içeren bir veri kaynağına bağlamak isteyebilirsiniz. Bu durumda, genellikle görüntülenmesinde ilgilenmediğiniz yerine, bunları gizlemek sütunları kaldırır.  
+Bazen, bir Windows Forms <xref:System.Windows.Forms.DataGridView> denetiminde kullanılabilir olan sütunlardan yalnızca bazılarını göstermek isteyeceksiniz. Örneğin, yönetim kimlik bilgilerine sahip kullanıcılara bir çalışan maaş sütununu diğer kullanıcılardan gizleyerek göstermek isteyebilirsiniz. Alternatif olarak, denetimi çok sayıda sütun içeren bir veri kaynağına ve yalnızca bir kısmını göstermek isteyebilirsiniz. Bu durumda, genellikle, görüntülemeden İlgilendiğiniz sütunları gizlemeniz yerine kaldıracaksınız.  
   
- İçinde <xref:System.Windows.Forms.DataGridView> denetimi <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> bir sütunun değerini özellik bu sütunun görüntülenip görüntülenmeyeceğini belirtir.  
+ <xref:System.Windows.Forms.DataGridView> denetiminde, sütunun <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> Özellik değeri sütunun görüntülenip görüntülenmediğini belirler.  
   
- Visual Studio'da bu görevi için desteği yoktur.  Ayrıca bkz: [nasıl yapılır: Forms DataGridView denetiminde Tasarımcı kullanarak Windows sütunları gizleme](hide-columns-in-the-datagrid-using-the-designer.md).  
+ Visual Studio 'da bu görev için destek vardır.  Ayrıca bkz. [nasıl yapılır: Tasarımcıyı kullanarak Windows Forms DataGridView Denetimindeki sütunları gizleme](hide-columns-in-the-datagrid-using-the-designer.md).  
   
-### <a name="to-hide-a-column-programmatically"></a>Program aracılığıyla bir sütunu gizlemek için  
+### <a name="to-hide-a-column-programmatically"></a>Bir sütunu programlı bir şekilde gizlemek için  
   
-- Ayarlama <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType> özelliğini `false`. Gizlemek için bir `CustomerID` veri bağlama sırasında otomatik olarak oluşturulan bir sütuna yerleştirin aşağıdaki kod örneğinde bir <xref:System.Windows.Forms.DataGridView.DataBindingComplete> olay işleyicisi.  
+- Ayarlama <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType> özelliğini `false`. Veri bağlama sırasında otomatik olarak oluşturulan bir `CustomerID` sütununu gizlemek için, aşağıdaki kod örneğini bir <xref:System.Windows.Forms.DataGridView.DataBindingComplete> olay işleyicisine yerleştirin.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#063](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#063)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#063](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#063)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- A <xref:System.Windows.Forms.DataGridView> adlı Denetim `dataGridView1` adlı bir sütun içeren `CustomerID`.  
+- `CustomerID`adlı bir sütun içeren `dataGridView1` adlı <xref:System.Windows.Forms.DataGridView> denetim.  
   
-- Başvurular <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemeler.  
+- <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>
 - [Windows Forms DataGridView Denetimindeki Temel Sütun, Satır ve Hücre Özellikleri](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Nasıl yapılır: Otomatik oluşturulan sütunları Windows Forms DataGridView denetiminden kaldırma](remove-autogenerated-columns-from-a-wf-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminde sütunların sırasını değiştirme](how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Otomatik Oluşturulan Sütunları Windows Forms DataGridView Denetiminden Kaldırma](remove-autogenerated-columns-from-a-wf-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Sütunların Sırasını Değiştirme](how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)

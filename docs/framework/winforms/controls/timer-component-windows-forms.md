@@ -1,38 +1,38 @@
 ---
-title: Süreölçer Bileşeni (Windows Forms)
+title: Süreölçer Bileşeni
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Timer component [Windows Forms]
 - timers
 - timers [Windows Forms], creating
 ms.assetid: 6700e534-6382-43d5-98ed-14205435fff7
-ms.openlocfilehash: 52a6b006b78856c9e14e13ce3e7a4dd2f1d2809e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6e42675567935f08ea7246e14cb7ac5abde23ee
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009584"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735500"
 ---
 # <a name="timer-component-windows-forms"></a>Süreölçer Bileşeni (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.Timer> düzenli aralıklarla bir olayı oluşturan bir bileşendir. Bu bileşen, bir Windows Forms ortamı için tasarlanmıştır.  
+Windows Forms <xref:System.Windows.Forms.Timer>, düzenli aralıklarla olay başlatan bir bileşendir. Bu bileşen bir Windows Forms ortamı için tasarlanmıştır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Süreölçer Bileşenine Genel Bakış](timer-component-overview-windows-forms.md)  
- Genel konseptlerini tanıtan <xref:System.Windows.Forms.Timer> düzenli olaylara yanıt vermesi için uygulamanızı ayarlamanıza olanak veren bir bileşen.  
+ , Uygulamanızı düzenli olaylara yanıt verecek şekilde ayarlamanıza olanak tanıyan <xref:System.Windows.Forms.Timer> bileşeninin genel kavramlarını tanıtır.  
   
  [Windows Forms Süreölçer Bileşeninin Aralık Özelliğiyle İlgili Sınırlamalar](limitations-of-the-timer-component-interval-property.md)  
- Zamanlayıcının aralığının nasıl kullanabileceğinizi etkileyebilecek bilinen sınırlamalar açıklanır.  
+ Zamanlayıcı aralığının nasıl kullanabileceğinizi etkileyebilecek bilinen sınırlamalarını açıklar.  
   
- [Nasıl yapılır: Windows Forms süreölçer bileşeni ile belirlenen aralıklarda yordamları çalıştırma](run-procedures-at-set-intervals-with-wf-timer-component.md)  
- Zaman aşımına Windows tabanlı uygulamalarınızı aralıkları tepki açıklar.  
+ [Nasıl yapılır: Windows Forms Süreölçer Bileşeni ile Belirlenen Aralıklarda Yordamları Çalıştırma](run-procedures-at-set-intervals-with-wf-timer-component.md)  
+ Windows tabanlı uygulamalarınızda zaman aralıklı aralıklara tepki verme işlemini açıklar.  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> Sınıfı  
- Windows Forms süreölçer ve üyeleri için kullanılan bir sınıfı hakkında başvuru bilgileri sağlar.  
+ <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> sınıfı  
+ Sınıf üzerinde Windows Forms zamanlayıcılar ve üyeleri için kullanılan başvuru bilgileri sağlar.  
   
- <xref:System.Timers.Timer?displayProperty=nameWithType> Sınıfı  
- Başvuru bilgileri sağlar <xref:System.Timers.Timer?displayProperty=nameWithType> sunucu tabanlı zamanlayıcılar tarafından kullanılan sınıf.  
+ <xref:System.Timers.Timer?displayProperty=nameWithType> sınıfı  
+ Sunucu tabanlı zamanlayıcılar tarafından kullanılan <xref:System.Timers.Timer?displayProperty=nameWithType> sınıfı hakkında başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
- Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.  
+ Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.  

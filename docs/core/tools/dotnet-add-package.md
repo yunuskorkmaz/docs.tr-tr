@@ -2,24 +2,24 @@
 title: DotNet paket Ekle komutu
 description: "' DotNet Add Package ' komutu, bir projeye NuGet paket başvurusu eklemek için uygun bir seçenek sağlar."
 ms.date: 06/26/2019
-ms.openlocfilehash: 9445cf686ec1733f5a8b3403b7efea3a544fbc99
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 210dcf0efe06672264ebfa297589bdb387591a42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117789"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733322"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
-**Bu makale şu şekilde geçerlidir: ✓** .NET Core 1. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 1. x SDK ve sonraki sürümleri
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
-`dotnet add package`-Proje dosyasına bir paket başvurusu ekler.
+`dotnet add package`-proje dosyasına bir paket başvurusu ekler.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -27,11 +27,11 @@ ms.locfileid: "71117789"
 
 ## <a name="description"></a>Açıklama
 
-Komut `dotnet add package` , bir proje dosyasına paket başvurusu eklemek için uygun bir seçenek sağlar. Komutu çalıştırdıktan sonra, paketin projedeki çerçeveler ile uyumlu olduğundan emin olmak için bir uyumluluk denetimi vardır. Denetim başarılı olursa, proje dosyasına `<PackageReference>` bir öğe eklenir ve [DotNet restore](dotnet-restore.md) çalıştırılır.
+`dotnet add package` komutu bir proje dosyasına paket başvurusu eklemek için uygun bir seçenek sağlar. Komutu çalıştırdıktan sonra, paketin projedeki çerçeveler ile uyumlu olduğundan emin olmak için bir uyumluluk denetimi vardır. Denetim başarılı olursa, proje dosyasına bir `<PackageReference>` öğesi eklenir ve [DotNet restore](dotnet-restore.md) çalıştırılır.
 
 [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
-Örneğin, `Newtonsoft.Json` *Todo. csproj* öğesine eklemek aşağıdaki örneğe benzer bir çıktı üretir:
+Örneğin, *Todo. csproj* öğesine `Newtonsoft.Json` eklemek, aşağıdaki örneğe benzer bir çıktı üretir:
 
 ```console
   Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
@@ -46,7 +46,7 @@ info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks
 info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to file 'C:\projects\ToDo\ToDo.csproj'.
 ```
 
-*Todo. csproj* dosyası artık başvurulan paket için [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) bir öğe içeriyor.
+*Todo. csproj* dosyası artık başvurulan paket için bir [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) öğesi içeriyor.
 
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
@@ -82,7 +82,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 - **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  Paketlerin geri yükleneceği dizin. Varsayılan paket geri yükleme konumu Windows `%userprofile%\.nuget\packages` ve `~/.nuget/packages` MacOS ve Linux üzerinde bulunur. Daha fazla bilgi için bkz. [NuGet 'de Genel paketleri, önbelleği ve temp klasörlerini yönetme](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
+  Paketlerin geri yükleneceği dizin. Varsayılan paket geri yükleme konumu Windows üzerinde `%userprofile%\.nuget\packages` ve macOS ve Linux üzerinde `~/.nuget/packages`. Daha fazla bilgi için bkz. [NuGet 'de Genel paketleri, önbelleği ve temp klasörlerini yönetme](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
 
 - **`-s|--source <SOURCE>`**
 
@@ -94,7 +94,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 ## <a name="examples"></a>Örnekler
 
-- Bir `Newtonsoft.Json` projeye NuGet paketi Ekle:
+- Bir projeye `Newtonsoft.Json` NuGet paketi Ekle:
 
   ```dotnetcli
   dotnet add package Newtonsoft.Json

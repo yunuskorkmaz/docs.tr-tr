@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: bc2d600afabbac9783e8fb12e3bd47e83a3495b7
-  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+  ms.openlocfilehash: 1b54ea8b3bbb63bdadb8386b0f6311f1f5458b42
+  ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/12/2019
-  ms.locfileid: "73969438"
+  ms.lasthandoff: 01/24/2020
+  ms.locfileid: "76737538"
 items:
 - durationInMinutes: 2
   content: >
@@ -43,7 +43,7 @@ items:
     - Açılış tırnak işareti karakterinden önce `$` karakteriyle başlayan bir dize sabit değeri. `$` simgesiyle tırnak işareti karakteri arasında boşluk olamaz. (Bir tane eklerseniz ne olacağını görmek isterseniz, etkileşimli penceredeki `$` karakterden sonra bir boşluk ekleyin ve güncelleştirilmiş kodu çalıştırın. C# Derleyici şikayetleri, "beklenmeyen karakter ' $ '".)
 
 
-    - Bir veya daha fazla *ilişkilendirme ifadesi*. Enterpolasyon ifadesi bir açma ve kapatma ayracı (`{` ve `}`) ile belirtilir. Küme ayraçlarının içinde C# (`null` dahil) bir değer döndüren herhangi bir ifadeyi yerleştirebilirsiniz.
+    - Bir veya daha fazla *ilişkilendirme ifadesi*. Enterpolasyon ifadesi bir açma ve kapatma ayracı (`{` ve `}`) ile belirtilir. Küme ayraçlarının içinde C# (`null`dahil) bir değer döndüren herhangi bir ifadeyi yerleştirebilirsiniz.
 
 
     Biraz daha farklı veri türleriyle daha fazla dize ilişkilendirme örneği deneyelim.
@@ -67,7 +67,7 @@ items:
 
     var date = DateTime.Now;
 
-    Console.WriteLine($"On {date}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.");
+    Console.WriteLine($"On {date}, the price of {item.Name} was {item.Price} per {item.perPackage} items.");
 
     ```
 
@@ -75,7 +75,7 @@ items:
     Enterpolasyonlu dizedeki enterpolasyon ifadesinin `item.Price`, sonuç dizesinde "1,99" metni olarak çözümlendiğine unutmayın. Yani, ifade sonucunun türü bir dize olmadığında, sonuç aşağıdaki şekilde bir dizeye çözülür:
 
 
-    - Enterpolasyon ifadesi `null` olarak değerlendirilirse, boş bir dize ("" veya <xref:System.String.Empty?displayProperty=nameWithType>) kullanılır.
+    - Enterpolasyon ifadesi `null`olarak değerlendirilirse, boş bir dize ("" veya <xref:System.String.Empty?displayProperty=nameWithType>) kullanılır.
 
 
     - Enterpolasyon ifadesi `null`olarak değerlendirilmiyorsa, genellikle sonuç ifadesinin `ToString` yöntemi çağrılır.
@@ -95,7 +95,7 @@ items:
 
     ```csharp
 
-    Console.WriteLine($"On {date:d}, the price of {item.Name} was {item.Price} per {item.perPackage} items");
+    Console.WriteLine($"On {date:d}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items");
 
     ```
 

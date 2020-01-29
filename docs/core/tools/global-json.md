@@ -3,18 +3,18 @@ title: global.json’a genel bakış
 description: .NET Core CLI komutlarını çalıştırırken .NET Core SDK sürümünü ayarlamak için Global. json dosyasını nasıl kullanacağınızı öğrenin.
 ms.date: 01/14/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: fedfe168e2c1a0555c2d4499ba02d270033e0d1a
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: f02c9129a707ddddb2c5e1975b75cc35abc5cd55
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115806"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733982"
 ---
 # <a name="globaljson-overview"></a>global.json’a genel bakış
 
-**Bu makale şu şekilde geçerlidir: ✓** .net Core 2,0 SDK ve sonraki sürümleri
+**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,0 SDK ve sonraki sürümleri
 
-*Global. JSON* dosyası, .NET Core CLI komutlarını çalıştırdığınızda hangi .NET Core SDK sürümünün kullanıldığını tanımlamanızı sağlar. .NET Core SDK seçilmesi, projenizin hedeflediği çalışma zamanını belirtmekten bağımsızdır. .NET Core SDK sürümü .NET Core CLI araçlarının hangi sürümlerinin kullanıldığını gösterir. 
+*Global. JSON* dosyası, .NET Core CLI komutlarını çalıştırdığınızda hangi .NET Core SDK sürümünün kullanıldığını tanımlamanızı sağlar. .NET Core SDK seçilmesi, projenizin hedeflediği çalışma zamanını belirtmekten bağımsızdır. .NET Core SDK sürümü .NET Core CLI araçlarının hangi sürümlerinin kullanıldığını gösterir.
 
 Genel olarak, SDK araçlarının en son sürümünü kullanmak istiyorsunuz, bu nedenle *Global. JSON* dosyası gerekli değildir. Bazı Gelişmiş senaryolarda, SDK araçlarının sürümünü denetlemek isteyebilirsiniz ve bu makalede bunun nasıl yapılacağı açıklanır.
 
@@ -24,7 +24,7 @@ Bunun yerine çalışma zamanının belirtilmesi hakkında daha fazla bilgi içi
 
 ## <a name="globaljson-schema"></a>Global. JSON şeması
 
-### <a name="sdk"></a>sdk
+### <a name="sdk"></a>'sının
 
 Tür: `object`
 
@@ -62,7 +62,7 @@ Bu değeri açıkça ayarlamazsanız, varsayılan değer Visual Studio 'dan çal
 
 - Şu tarihten itibaren kullanılabilir: .NET Core 3,0 SDK.
 
-Bir SDK sürümü seçerken kullanılacak geri alma ilkesi, belirli bir SDK sürümü eksik olduğunda geri dönüş olarak veya daha yüksek bir sürümü kullanmak için bir yönerge olarak. Bir [Sürüm](#version) , `latestMajor`ayarmadığınız müddetçe `rollForward` değerle belirtilmelidir. 
+Bir SDK sürümü seçerken kullanılacak geri alma ilkesi, belirli bir SDK sürümü eksik olduğunda geri dönüş olarak veya daha yüksek bir sürümü kullanmak için bir yönerge olarak. Bir [Sürüm](#version) , `latestMajor`ayarmadığınız müddetçe `rollForward` değerle belirtilmelidir.
 
 Kullanılabilir ilkeleri ve bunların davranışlarını anlamak için `x.y.znn`biçimdeki SDK sürümü için aşağıdaki tanımları göz önünde bulundurun:
 

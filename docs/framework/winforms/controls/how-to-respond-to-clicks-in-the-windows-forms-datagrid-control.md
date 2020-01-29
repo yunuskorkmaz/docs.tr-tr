@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DataGrid Denetiminde Tıklamalara Yanıt Verme'
+title: DataGrid denetiminde tıklama 'e yanıt verme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 54e41c6960c24f68cb27a6f6fb859b4b9223ed27
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9aa1331116cd3f2f8050ff9f8cc8cc52d25726d1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914991"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735758"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Nasıl yapılır: Windows Forms DataGrid Denetiminde Tıklamalara Yanıt Verme
 > [!NOTE]
-> Denetim yerini alır ve <xref:System.Windows.Forms.DataGrid> <xref:System.Windows.Forms.DataGrid> denetime işlevsellik ekler; ancak, isterseniz denetim hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.DataGridView> Daha fazla bilgi için bkz. [Windows Forms DataGridView ve DataGrid denetimleri arasındaki farklar](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> <xref:System.Windows.Forms.DataGridView> denetimi yerini alır ve <xref:System.Windows.Forms.DataGrid> denetimine işlevsellik ekler; Ancak, ' yi seçerseniz, <xref:System.Windows.Forms.DataGrid> denetimi hem geri uyumluluk hem de gelecekte kullanılmak üzere korunur. Daha fazla bilgi için bkz. [Windows Forms DataGridView ve DataGrid denetimleri arasındaki farklar](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Windows Forms <xref:System.Windows.Forms.DataGrid> bir veritabanına bağlandıktan sonra kullanıcının hangi hücreden tıkladığını izleyebilirsiniz.  
+ Windows Forms <xref:System.Windows.Forms.DataGrid> bir veritabanına bağlandıktan sonra, kullanıcının hangi hücreden tıkladığını izleyebilirsiniz.  
   
 ### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>DataGrid 'in kullanıcısının farklı bir hücre seçtiği zaman algılamak için  
   
-- <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> Olay işleyicisinde, uygun şekilde yanıt vermek için kod yazın.  
+- <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> olay işleyicisinde, uygun şekilde yanıt vermek için kod yazın.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -56,9 +56,9 @@ ms.locfileid: "69914991"
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Kullanıcının DataGrid 'in hangi kısmını tıkladığını belirleme  
   
-- Yöntemini, <xref:System.Windows.Forms.Control.MouseDown> veya<xref:System.Windows.Forms.Control.Click> olayı gibi uygun bir olay işleyicide çağırın. <xref:System.Windows.Forms.DataGrid.HitTest%2A>  
+- <xref:System.Windows.Forms.DataGrid.HitTest%2A> yöntemini, <xref:System.Windows.Forms.Control.MouseDown> veya <xref:System.Windows.Forms.Control.Click> olayı gibi uygun bir olay işleyicide çağırın.  
   
-     Yöntemi, tıklatılan alanın <xref:System.Windows.Forms.DataGrid.HitTestInfo> satırını ve sütununu içeren bir nesnesi döndürür. <xref:System.Windows.Forms.DataGrid.HitTest%2A>  
+     <xref:System.Windows.Forms.DataGrid.HitTest%2A> yöntemi, tıklatılan alanın satırını ve sütununu içeren bir <xref:System.Windows.Forms.DataGrid.HitTestInfo> nesnesi döndürür.  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -143,4 +143,4 @@ ms.locfileid: "69914991"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataGrid Denetimi](datagrid-control-windows-forms.md)
-- [Nasıl yapılır: Windows Forms DataGrid denetimindeki çalışma zamanında görünen verileri değiştirme](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Nasıl yapılır: Windows Forms DataGrid Denetiminde Çalışma Zamanında Görüntülenen Verileri Değiştirme](change-displayed-data-at-run-time-wf-datagrid-control.md)

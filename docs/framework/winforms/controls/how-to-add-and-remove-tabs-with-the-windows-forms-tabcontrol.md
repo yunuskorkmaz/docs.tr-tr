@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms TabControl ile Sekme Ekleme ve Kaldırma'
+title: TabControl ile sekme ekleme ve kaldırma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 938f1210eaa3479822e752327123737a3286fe9a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8292d8441f9b47334b98736cf3282c846673dbb4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624053"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732710"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>Nasıl yapılır: Windows Forms TabControl ile Sekme Ekleme ve Kaldırma
-Varsayılan olarak, bir <xref:System.Windows.Forms.TabControl> denetimi içeren iki <xref:System.Windows.Forms.TabPage> kontrol eder. Bu sekmeler aracılığıyla erişebileceğiniz <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliği.  
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>Nasıl yapılır: Windows Forms TabControl' ile Sekme Ekleme ve Kaldırma
+Varsayılan olarak, bir <xref:System.Windows.Forms.TabControl> denetimi iki <xref:System.Windows.Forms.TabPage> denetimini içerir. Bu sekmelere <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliği aracılığıyla erişebilirsiniz.  
   
 ### <a name="to-add-a-tab-programmatically"></a>Program aracılığıyla sekme eklemek için  
   
-- Kullanım <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> yöntemi <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliği.  
+- <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliğinin <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> yöntemini kullanın.  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -45,13 +45,13 @@ Varsayılan olarak, bir <xref:System.Windows.Forms.TabControl> denetimi içeren 
     tabControl1->TabPages->Add(myTabPage);  
     ```  
   
-### <a name="to-remove-a-tab-programmatically"></a>Bir sekme programlı bir şekilde kaldırmak için  
+### <a name="to-remove-a-tab-programmatically"></a>Bir sekmeyi programlı bir şekilde kaldırmak için  
   
-- Seçili sekmeleri kaldırmak için <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> yöntemi <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliği.  
+- Seçili sekmeleri kaldırmak için <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliğinin <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> yöntemini kullanın.  
   
-     -veya-  
+     veya  
   
-- Tüm sekmeler kaldırmak için <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> yöntemi <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliği.  
+- Tüm sekmeleri kaldırmak için <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliğinin <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> yöntemini kullanın.  
   
     ```vb  
     ' Removes the selected tab:  
@@ -77,6 +77,6 @@ Varsayılan olarak, bir <xref:System.Windows.Forms.TabControl> denetimi içeren 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [TabControl Denetimine Genel Bakış](tabcontrol-control-overview-windows-forms.md)
-- [Nasıl yapılır: Sekme sayfasına denetim ekleme](how-to-add-a-control-to-a-tab-page.md)
-- [Nasıl yapılır: Sekme sayfalarını devre dışı bırak](how-to-disable-tab-pages.md)
-- [Nasıl yapılır: Windows Forms Tabcontrol'un görünüşünü değiştirme](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Nasıl yapılır: Sekme Sayfasına Denetim Ekleme](how-to-add-a-control-to-a-tab-page.md)
+- [Nasıl yapılır: Sekme Sayfalarını Devre Dışı Bırakma](how-to-disable-tab-pages.md)
+- [Nasıl yapılır: Windows Forms TabControl’un Görünüşünü Değiştirme](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

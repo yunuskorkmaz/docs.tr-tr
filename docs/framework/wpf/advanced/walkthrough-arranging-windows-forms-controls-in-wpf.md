@@ -1,5 +1,6 @@
 ---
-title: "İzlenecek yol: WPF'de Windows Forms Denetimlerini Düzenleme"
+title: WPF 'de Windows Forms denetimlerini düzenleme
+titleSuffix: ''
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 484895db539b288bf388ff6c2ce3c29db55080b1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
-ms.translationtype: MT
+ms.openlocfilehash: 5e7544dfdbee234bb968c9a7f39814e8749ece15
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197846"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735291"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>İzlenecek yol: WPF'de Windows Forms Denetimlerini Düzenleme
 
@@ -53,8 +54,8 @@ Projeyi oluşturmak ve ayarlamak için şu adımları izleyin:
 2. Çözüm Gezgini, aşağıdaki derlemelere başvurular ekleyin:
 
     - WindowsFormsIntegration
-    - System. Windows. Forms
-    - System. Drawing
+    - System.Windows.Forms
+    - System.Drawing
 
 3. *MainWindow. xaml* ' ye ÇIFT tıklayarak xaml görünümünde açın.
 
@@ -74,7 +75,7 @@ Varsayılan olarak, <xref:System.Windows.Forms.Integration.WindowsFormsHost> ö�
 
 Varsayılan düzen ayarlarını kullanmak için şu adımları izleyin:
 
-1. Aşağıdaki XAML <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
+1. Aşağıdaki XAML 'yi <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]
 
@@ -86,7 +87,7 @@ Varsayılan düzen ayarlarını kullanmak için şu adımları izleyin:
 
 İçeriğe göre boyut için şu adımları izleyin:
 
-1. Aşağıdaki XAML <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
+1. Aşağıdaki XAML 'yi <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]
 
@@ -98,7 +99,7 @@ Varsayılan düzen ayarlarını kullanmak için şu adımları izleyin:
 
 Mutlak konumlandırmayı kullanmak için şu adımları izleyin:
 
-1. Aşağıdaki XAML <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
+1. Aşağıdaki XAML 'yi <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]
 
@@ -110,7 +111,7 @@ Mutlak konumlandırmayı kullanmak için şu adımları izleyin:
 
 Boyutu açıkça belirtmek için şu adımları izleyin:
 
-1. Aşağıdaki XAML <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
+1. Aşağıdaki XAML 'yi <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#6](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]
 
@@ -124,7 +125,7 @@ Boyutu açıkça belirtmek için şu adımları izleyin:
 
 Barındırılan denetimde özellikleri ayarlamanın etkilerini görmek için şu adımları izleyin:
 
-1. Aşağıdaki XAML <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
+1. Aşağıdaki XAML 'yi <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#7)]
 
@@ -141,9 +142,9 @@ Barındırılan denetimde özellikleri ayarlamanın etkilerini görmek için şu
 
 ## <a name="understanding-z-order-limitations"></a>Z düzeni sınırlamalarını anlama
 
-Görünür <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğeleri, her zaman diğer WPF öğelerinin üzerine çizilir ve z düzeninde etkilenirler. Bu z sırası davranışını görmek için aşağıdakileri yapın:
+Görünür <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğeleri her zaman diğer WPF öğelerinin üzerine çizilir ve z düzeninde etkilenirler. Bu z sırası davranışını görmek için aşağıdakileri yapın:
 
-1. Aşağıdaki XAML <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
+1. Aşağıdaki XAML 'yi <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#8](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]
 
@@ -155,7 +156,7 @@ Görünür <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğeleri, h
 
 Barındırılan bir denetimi sabitlemek için aşağıdaki adımları izleyin:
 
-1. Aşağıdaki XAML <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
+1. Aşağıdaki XAML 'yi <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#9](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]
 
@@ -167,7 +168,7 @@ Barındırılan bir denetimi sabitlemek için aşağıdaki adımları izleyin:
 
 Barındırılan bir denetimin görünürlüğünü ayarlamak için şu adımları izleyin:
 
-1. Aşağıdaki XAML <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
+1. Aşağıdaki XAML 'yi <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#10](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#10)]
 
@@ -188,19 +189,19 @@ Bazı [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.m
 
 UZAMAYAN bir denetimi barındırmak için şu adımları izleyin:
 
-1. Aşağıdaki XAML <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
+1. Aşağıdaki XAML 'yi <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]
 
-2. Uygulamayı derlemek ve çalıştırmak için <kbd>F5</kbd> tuşuna basın. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi kılavuz satırında ortalanır, ancak kullanılabilir alanı doldurmak için uzatılmamıştır. Pencere yeterince büyükse, barındırılan <xref:System.Windows.Forms.MonthCalendar> denetiminde görüntülenen iki veya daha fazla ay görebilirsiniz, ancak bunlar satırda ortalanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerleşim altyapısı, kullanılabilir alanı dolduracak şekilde boyutlandırılabilen öğeleri ortalar.
+2. Uygulamayı derlemek ve çalıştırmak için <kbd>F5</kbd> tuşuna basın. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi kılavuz satırında ortalanır, ancak kullanılabilir alanı doldurmak için uzatılmamıştır. Pencere yeterince büyükse, barındırılan <xref:System.Windows.Forms.MonthCalendar> denetimi tarafından görüntülenen iki veya daha fazla ay görebilirsiniz, ancak bunlar satırda ortalanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerleşim altyapısı, kullanılabilir alanı dolduracak şekilde boyutlandırılabilen öğeleri ortalar.
 
-## <a name="scaling"></a>Lemeyle
+## <a name="scaling"></a>Ölçeklendirme
 
 WPF öğelerinden farklı olarak, çoğu Windows Forms denetimleri sürekli ölçeklenebilir değildir. Özel ölçeklendirme sağlamak için <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A?displayProperty=nameWithType> yöntemini geçersiz kılarsınız.
 
 Barındırılan bir denetimi varsayılan davranışı kullanarak ölçeklendirmek için aşağıdaki adımları izleyin:
 
-1. Aşağıdaki XAML <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
+1. Aşağıdaki XAML 'yi <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]
 
@@ -214,7 +215,7 @@ WPF öğelerinden farklı olarak Windows Forms denetimleri döndürmeyi destekle
 
 Bir karma uygulamada döndürmenin etkisini görmek için şu adımları izleyin:
 
-1. Aşağıdaki XAML <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
+1. Aşağıdaki XAML 'yi <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#13](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]
 
@@ -226,7 +227,7 @@ Bir karma uygulamada döndürmenin etkisini görmek için şu adımları izleyin
 
 Barındırılan bir denetimin doldurmasını ve kenar boşluklarını ayarlamak için şu adımları izleyin:
 
-1. Aşağıdaki XAML <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
+1. Aşağıdaki XAML 'yi <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]
     [!code-xaml[WpfLayoutHostingWfWithXaml#15](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]
@@ -239,7 +240,7 @@ Barındırılan bir denetimin doldurmasını ve kenar boşluklarını ayarlamak 
 
 Dinamik düzen kapsayıcısını kullanmak için şu adımları izleyin:
 
-1. Aşağıdaki XAML <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
+1. Aşağıdaki XAML 'yi <xref:System.Windows.Controls.Grid> öğesine kopyalayın:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#16](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#16)]
 

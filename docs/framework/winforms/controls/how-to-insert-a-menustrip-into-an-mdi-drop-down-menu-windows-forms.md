@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir MDI açılan menüsüne (Windows Forms) bir MenuStrip ekleme'
+title: 'Nasıl yapılır: Bir MDI Açılan Menüsüne MenuStrip ekleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,49 +9,49 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], merging
 - MDI [Windows Forms], merging menu items
 ms.assetid: 0fad444e-26d9-49af-8860-044d9c10d608
-ms.openlocfilehash: febe5347ed305dc85e67d992fac8aefa18a02cff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e189dd159c48b5779679d0563fab85e9b848992
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651639"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736408"
 ---
-# <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Nasıl yapılır: Bir MDI açılan menüsüne (Windows Forms) bir MenuStrip ekleme
-Bazı uygulamalarda, bir Çoklu belge arabirimi (MDI) alt penceresi türünü MDI ana penceresinde farklı olabilir. Örneğin, bir elektronik tablo MDI olabilir ve MDI alt bir grafik olabilir. Bu durumda, farklı türlerde MDI alt pencereleri etkin olarak MDI üst menü içeriğini MDI alt menü içeriğini güncelleştirmek istediğiniz.  
+# <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Nasıl yapılır: Bir MDI Açılan Menüsüne MenuStrip ekleme (Windows Forms)
+Bazı uygulamalarda, bir çoklu belge arabirimi (MDI) alt penceresinin türü MDI ana penceresinden farklı olabilir. Örneğin, MDI parent bir elektronik tablo olabilir ve MDI alt öğesi bir grafik olabilir. Bu durumda, farklı türlerdeki MDI alt pencereleri etkinleştirildiğinden MDI üst öğesinin menüsünün içeriğini MDI alt menüsünün içeriğiyle güncelleştirmek istersiniz.  
   
- Aşağıdaki yordam kullanır <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, ve <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> özellikleri menü öğelerinin bir grup MDI alt menüsünden MDI üst menünün aşağı açılan bölümüne eklenecek. MDI alt penceresini kapatarak MDI üst eklenen menü öğeleri kaldırır.  
+ Aşağıdaki yordam, MDI alt menüsünden bir menü öğeleri grubunu MDI üst menüsünün aşağı açılan kısmına eklemek için <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>ve <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> özelliklerini kullanır. MDI alt penceresini kapatmak, ekli menü öğelerini MDI üst öğesinden kaldırır.  
   
-### <a name="to-insert-a-menustrip-into-an-mdi-drop-down-menu"></a>Bir MDI açılan menüsüne MenuStrip ekleme için  
+### <a name="to-insert-a-menustrip-into-an-mdi-drop-down-menu"></a>Bir MDI açılan menüsüne MenuStrip eklemek için  
   
-1. Bir form oluşturun ve ayarlayın, <xref:System.Windows.Forms.Form.IsMdiContainer%2A> özelliğini `true`.  
+1. Bir form oluşturun ve <xref:System.Windows.Forms.Form.IsMdiContainer%2A> özelliğini `true`olarak ayarlayın.  
   
-2. Ekleme bir <xref:System.Windows.Forms.MenuStrip> için `Form1` ayarlayıp <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> özelliği <xref:System.Windows.Forms.MenuStrip> için `true`.  
+2. `Form1` <xref:System.Windows.Forms.MenuStrip> ekleyin ve <xref:System.Windows.Forms.MenuStrip> <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> özelliğini `true`olarak ayarlayın.  
   
-3. Bir üst düzey menü öğesine eklemek `Form1` <xref:System.Windows.Forms.MenuStrip> ve kendi <xref:System.Windows.Forms.Control.Text%2A> özelliğini `&File`.  
+3. `Form1`<xref:System.Windows.Forms.MenuStrip> en üst düzey menü öğesini ekleyin ve <xref:System.Windows.Forms.Control.Text%2A> özelliğini `&File`olarak ayarlayın.  
   
-4. Üç alt öğe ekleme `&File` menü öğesi ve kümesi kendi <xref:System.Windows.Forms.ToolStripItem.Text%2A> özelliklerine `&Open`, `&Import from`, ve `E&xit`.  
+4. `&File` menü öğesine üç alt menü öğesi ekleyin ve <xref:System.Windows.Forms.ToolStripItem.Text%2A> özelliklerini `&Open`, `&Import from`ve `E&xit`olarak ayarlayın.  
   
-5. İki alt öğe ekleme `&Import from` alt öğesi ve kümesi kendi <xref:System.Windows.Forms.ToolStripItem.Text%2A> özelliklerine `&Word` ve `&Excel`.  
+5. `&Import from` alt menü öğesine iki alt menü öğesi ekleyin ve <xref:System.Windows.Forms.ToolStripItem.Text%2A> özelliklerini `&Word` ve `&Excel`olarak ayarlayın.  
   
-6. Projeye form ekleme, ekleme bir <xref:System.Windows.Forms.MenuStrip> form ve kümesi <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> özelliği `Form2` <xref:System.Windows.Forms.MenuStrip> için `true`.  
+6. Projeye bir form ekleyin, forma <xref:System.Windows.Forms.MenuStrip> ekleyin ve `Form2`<xref:System.Windows.Forms.MenuStrip> <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> özelliğini `true`olarak ayarlayın.  
   
-7. Bir üst düzey menü öğesine eklemek `Form2` <xref:System.Windows.Forms.MenuStrip> ve kendi <xref:System.Windows.Forms.ToolStripItem.Text%2A> özelliğini `&File`.  
+7. `Form2`<xref:System.Windows.Forms.MenuStrip> en üst düzey menü öğesini ekleyin ve <xref:System.Windows.Forms.ToolStripItem.Text%2A> özelliğini `&File`olarak ayarlayın.  
   
-8. Alt öğe ekleme `&File` menüsü `Form2` aşağıdaki sırayla: bir <xref:System.Windows.Forms.ToolStripSeparator>, `&Save`, `Save and &Close`ve başka bir <xref:System.Windows.Forms.ToolStripSeparator>.  
+8. `Form2` `&File` menüsüne alt menü öğelerini şu sırada ekleyin: bir <xref:System.Windows.Forms.ToolStripSeparator>, `&Save`, `Save and &Close`ve başka bir <xref:System.Windows.Forms.ToolStripSeparator>.  
   
-9. Ayarlama <xref:System.Windows.Forms.MergeAction> ve <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> özelliklerini `Form2` menü öğeleri aşağıdaki tabloda gösterildiği gibi.  
+9. Aşağıdaki tabloda gösterildiği gibi `Form2` menü öğelerinin <xref:System.Windows.Forms.MergeAction> ve <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> özelliklerini ayarlayın.  
   
     |Form2 menü öğesi|MergeAction değeri|MergeIndex değeri|  
     |---------------------|-----------------------|----------------------|  
-    |Dosya|MatchOnly|-1|  
+    |Dosya|Yalnızca eşleşme|-1|  
     |Ayırıcı|Ekleme|2|  
     |Kaydet|Ekleme|3|  
     |Kaydet ve Kapat|Ekleme|4|  
     |Ayırıcı|Ekleme|5|  
   
-10. İçin bir olay işleyicisi oluşturun <xref:System.Windows.Forms.Control.Click> olayı `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. `&Open`<xref:System.Windows.Forms.ToolStripMenuItem><xref:System.Windows.Forms.Control.Click> olayı için bir olay işleyicisi oluşturun.  
   
-11. Olay işleyicisinin içerisinde kod oluşturmak ve yeni örneklerini görüntülemek için aşağıdaki kod örneği benzer ekleme `Form2` MDI alt öğeleri olarak `Form1`.  
+11. Olay işleyicisi içinde, `Form1`MDI alt öğeleri olarak `Form2` yeni örneklerini oluşturmak ve göstermek için aşağıdaki kod örneğine benzer bir kod ekleyin.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As System.Object, _  
@@ -75,7 +75,7 @@ Bazı uygulamalarda, bir Çoklu belge arabirimi (MDI) alt penceresi türünü MD
     }  
     ```  
   
-12. Kod aşağıdaki kod örneğinde benzer yerleştirin getirin `&Open` <xref:System.Windows.Forms.ToolStripMenuItem> olay işleyicisi kaydetmek için.  
+12. Olay işleyicisini kaydetmek için `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> aşağıdaki kod örneğine benzer bir kod koyun.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  
@@ -86,17 +86,17 @@ Bazı uygulamalarda, bir Çoklu belge arabirimi (MDI) alt penceresi türünü MD
     this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);  
     ```  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- İki <xref:System.Windows.Forms.Form> adlarında `Form1` ve `Form2`.  
+- `Form1` ve `Form2`adlı iki <xref:System.Windows.Forms.Form> denetimi.  
   
-- A <xref:System.Windows.Forms.MenuStrip> denetimi `Form1` adlı `menuStrip1`ve <xref:System.Windows.Forms.MenuStrip> denetimi `Form2` adlı `menuStrip2`.  
+- `menuStrip1`adlı `Form1` ve `Form2` adlı `menuStrip2`<xref:System.Windows.Forms.MenuStrip> bir denetim <xref:System.Windows.Forms.MenuStrip> denetimi.  
   
-- Başvurular <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemeler.  
+- <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: MDI üst formları oluşturma](../advanced/how-to-create-mdi-parent-forms.md)
-- [Nasıl yapılır: MDI alt formları oluştur](../advanced/how-to-create-mdi-child-forms.md)
+- [Nasıl yapılır: MDI Üst Formları Oluşturma](../advanced/how-to-create-mdi-parent-forms.md)
+- [Nasıl yapılır: MDI Alt Formları Oluşturma](../advanced/how-to-create-mdi-child-forms.md)
 - [MenuStrip Denetimine Genel Bakış](menustrip-control-overview-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: WPF'deki Belgeler
+title: Belgeler
 ms.date: 03/30/2017
 helpviewer_keywords:
 - documents [WPF], packaging
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 36704d56b66de977ac7f63fd7e766c925ef9023b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: eccb333b8e9a71ea30454f8bdf9fd2bf6dc90b9b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974679"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737961"
 ---
 # <a name="documents-in-wpf"></a>WPF'deki Belgeler
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], Windows 'un önceki nesinden daha kolay erişilmesi ve okunması için tasarlanan yüksek kaliteli içerik oluşturulmasına olanak tanıyan çok çeşitli belge özellikleri sunmaktadır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], gelişmiş özellik ve kalite özelliklerine ek olarak belge görüntüleme, paketleme ve güvenlik için tümleşik hizmetler de sağlar. Bu konuda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] belge türleri ve belge paketleme hakkında bir giriş sunulmaktadır.  
@@ -46,7 +46,7 @@ ms.locfileid: "73974679"
  Flow belgesi içeriğini görüntüleme üç denetim tarafından desteklenir: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>ve <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader>, kullanıcının tek sayfalı (sayfa-bir zaman) görüntüleme modu, iki sayfalı bir-bir zaman (kitap okuma biçimi) görüntüleme modu ve sürekli kaydırma (bottomless) dahil çeşitli görüntüleme modları arasında dinamik olarak seçim olanağı sağlayan özellikler içerir. görüntüleme modu.  Bu görüntüleme modları hakkında daha fazla bilgi için bkz. <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  Farklı görüntüleme modları arasında dinamik olarak geçiş yapma olanağına ihtiyacınız yoksa <xref:System.Windows.Controls.FlowDocumentPageViewer> ve <xref:System.Windows.Controls.FlowDocumentScrollViewer> belirli bir görüntüleme modunda düzeltilen daha hafif akış içerik görüntüleyicilerini sağlar.  
+ <xref:System.Windows.Controls.FlowDocumentReader>, kullanıcının tek sayfalı (sayfa-bir zaman) görüntüleme modu, iki sayfalı bir-bir zaman (kitap okuma biçimi) görüntüleme modu ve sürekli kaydırma (bottomless) görüntüleme modu dahil çeşitli görüntüleme modları arasından dinamik olarak seçim kurmasını sağlayan özellikler içerir.  Bu görüntüleme modları hakkında daha fazla bilgi için bkz. <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  Farklı görüntüleme modları arasında dinamik olarak geçiş yapma olanağına ihtiyacınız yoksa <xref:System.Windows.Controls.FlowDocumentPageViewer> ve <xref:System.Windows.Controls.FlowDocumentScrollViewer> belirli bir görüntüleme modunda düzeltilen daha hafif akış içerik görüntüleyicilerini sağlar.  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer ve FlowDocumentScrollViewer  
  <xref:System.Windows.Controls.FlowDocumentPageViewer>, sayfanın bir süre görüntüleme modunda, <xref:System.Windows.Controls.FlowDocumentScrollViewer> içeriği sürekli kaydırma modunda gösterdiği sırada gösterir.  <xref:System.Windows.Controls.FlowDocumentPageViewer> ve <xref:System.Windows.Controls.FlowDocumentScrollViewer> her ikisi de belirli bir görüntüleme moduna sabitlenmiştir. Kullanıcının çeşitli görüntüleme modları arasında (<xref:System.Windows.Controls.FlowDocumentReaderViewingMode> numaralandırması tarafından sağlandığı gibi) dinamik olarak seçmesini sağlayan özellikler içeren <xref:System.Windows.Controls.FlowDocumentReader>ile karşılaştırın <xref:System.Windows.Controls.FlowDocumentPageViewer> veya <xref:System.Windows.Controls.FlowDocumentScrollViewer>daha fazla kaynak kullanımı.  

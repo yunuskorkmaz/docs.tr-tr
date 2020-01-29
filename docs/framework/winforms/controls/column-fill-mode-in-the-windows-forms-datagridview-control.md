@@ -1,5 +1,5 @@
 ---
-title: Windows Forms DataGridView Denetiminde Sütun Doldurma Modu
+title: DataGridView denetiminde sütun dolgusu modu
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,56 +9,56 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: f9eb45e9b96ccb97938c7396d177ccedbea329e6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 43b8915efe303b6f56cd4adf5fdbd69f51b0b754
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590373"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736881"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sütun Doldurma Modu
-Sütun doldurma modu içinde <xref:System.Windows.Forms.DataGridView> denetimi, böylece bunlar kullanılabilir görüntüleme alanının genişliğini dolgu sütunlarını otomatik olarak yeniden boyutlandırır. Denetimi dışında her bir sütunun genişliğini eşit tutmak gerekli veya daha büyük olduğunda yatay kaydırma çubuğunun görüntülemez, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> özellik değeri.  
+Sütun dolgusu modunda, <xref:System.Windows.Forms.DataGridView> denetimi sütunları otomatik olarak yeniden boyutlandırır, böylece kullanılabilir görüntü alanının genişliği doldurulur. Denetim, her sütunun genişliğini <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> özellik değerine eşit veya ondan büyük tutmak için gerekli olduğu durumlar dışında yatay kaydırma çubuğunu görüntülemez.  
   
- Her bir sütunun boyutlandırma davranışını bağlıdır, <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> özelliği. Bu özelliğin değeri, sütunun devralınan <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> özelliği veya denetimin <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> sütun değeri ise özellik <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet> (varsayılan değer).  
+ Her sütunun boyutlandırma davranışı <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> özelliğine bağlıdır. Bu özelliğin değeri sütunun <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> özelliğinden veya sütunun değeri <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet> (varsayılan değer) olduğunda denetimin <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> özelliğinden devralınır.  
   
- Her sütun bir başka bir boyutu modu, ancak hiçbir sütun boyutu modu olabilir <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill> diğer sütunlara göre kullanılmaz görüntüleme alanı genişliğini paylaşır. Bu genişlik arasındaki göreli oranları dolgu modunu sütunları bölünmüştür bunların <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> özellik değerleri. Örneğin, iki sütun varsa <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 100 ve 200 değerlerini, ilk sütun olacaktır yarısı olarak ikinci sütun olarak geniş.  
+ Her sütun farklı bir boyut moduna sahip olabilir, ancak <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill> boyut modu olan sütunlar, diğer sütunlarda kullanılmayan görüntü alanı genişliğini paylaşır. Bu genişlik, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> özellik değerlerine göre orantıdaki Fill-Mode sütunları arasında bölünür. Örneğin, iki sütunda 100 ve 200 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> değerler varsa, ilk sütun ikinci sütun kadar geniş olur.  
   
-## <a name="user-resizing-in-fill-mode"></a>Kullanıcı dolgu modunda yeniden boyutlandırma  
- Hücre içeriklerini temel alarak yeniden boyutlandırma modları boyutlandırma aksine doldurma modu kullanıcıların olan sütunları yeniden boyutlandırmasını engellemez <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> özellik değerlerini `true`. Bir kullanıcı, sonra yeniden boyutlandırılan sütun doldurma modu sütun doldurma modu sütun ne zaman yeniden boyutlandırır (doğru halinde <xref:System.Windows.Forms.Control.RightToLeft%2A> olduğu `false`; Aksi takdirde sola) de kullanılabilir genişliğini değişikliği dengelemek için yeniden boyutlandırılır. Sonra yeniden boyutlandırılan sütun doldurma modu sütun varsa, diğer tüm dolgu modunu sütunlar denetiminde dengelemek için boyutlandırılır. Denetimde hiç bir dolgu modunu sütun varsa, yeniden boyutlandırma göz ardı edilir. Dolgu modunda değil bir sütun boyutlandırılırsa, denetimdeki tüm dolgu modunu sütunları dengelemek için boyutları değiştirin.  
+## <a name="user-resizing-in-fill-mode"></a>Fill modunda Kullanıcı yeniden boyutlandırma  
+ Hücre içeriğine göre yeniden boyutlandırılan boyutlandırma modlarının aksine, Fill modu, kullanıcıların `true`<xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> özellik değerlerine sahip sütunları yeniden boyutlandırmasını engellemez. Bir Kullanıcı bir Fill-Mode sütununu yeniden boyutlandırdığında, yeniden boyutlandırılan sütundan sonra (<xref:System.Windows.Forms.Control.RightToLeft%2A> `false`, yoksa sola) tüm Fill modu sütunları, kullanılabilir genişlikteki değişikliği dengelemek için de yeniden boyutlandırılır. Yeniden boyutlandırılmış sütundan sonra Fill-Mode sütunları yoksa, denetimdeki diğer tüm Fill modu sütunları telafi için yeniden boyutlandırılır. Denetimde başka bir Fill-Mode sütunu yoksa yeniden boyutlandırma yok sayılır. Fill modunda olmayan bir sütun yeniden boyutlandırılırsa, denetimdeki tüm Fill modu sütunları, dengelemek için Boyutlar değişir.  
   
- Sütun doldurma modu yeniden boyutlandırma sonra <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> değerleri değiştirilmiş tüm sütunları orantılı olarak ayarlanır. Örneğin, dört dolgu modunu sütun varsa <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> yarı özgün genişliği ikinci sütunda yeniden boyutlandırma, 100 değerini neden olur <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 100 ve 50, 125 ve 125 değerleri. Dolgu modunda değil bir sütunu yeniden boyutlandırma değişmeyecek herhangi <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> dolgu modunu sütunları yalnızca aynı oranını korurken dengelemek için boyutlandırma için değerler.  
+ Bir Fill Mode sütununu yeniden boyutlandırdıktan sonra, değiştirilen tüm sütunların <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> değerleri orantılı olarak ayarlanır. Örneğin, dört Fill-Mode sütununda 100 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> değer varsa, ikinci sütunu özgün genişliğinin yarısı olacak şekilde yeniden boyutlandırılması, 100, 50, 125 ve 125 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> değerlerine neden olur. Fill modunda olmayan bir sütunun yeniden boyutlandırılması, tüm <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> değerlerini değiştirmez, çünkü Fill-Mode sütunları aynı oranları korurken yalnızca dengelemek için yeniden boyutlandırılacak.  
   
-## <a name="content-based-fillweight-adjustment"></a>İçerik tabanlı FillWeight ayarlama  
- Başlatmak <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> kullanarak sütun doldurma modu değerleri <xref:System.Windows.Forms.DataGridView> otomatik yöntemleri gibi yeniden boyutlandırma <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> yöntemi. Bu yöntem ilk sütuna göre içeriklerini görüntülemek için gerekli genişlikleri hesaplar. Ardından, denetimin ayarlar <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> böylece kendi oranlarını hesaplanan sütunların oranlarını eşleşen tüm dolgu modunu sütunlar için değer. Son olarak, denetimi kullanarak yeni bir dolgu modunu sütunları yeniden boyutlandırır <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> kullanılabilir yatay boşluğu denetimdeki tüm sütunları doldurun, böylece oranları.  
+## <a name="content-based-fillweight-adjustment"></a>İçerik tabanlı FillWeight ayarlaması  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> yöntemi gibi <xref:System.Windows.Forms.DataGridView> otomatik yeniden boyutlandırma yöntemlerini kullanarak, Fill-Mode sütunları için <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> değerlerini başlatabilirsiniz. Bu yöntem ilk olarak, içeriklerinin gösterilmesi için sütunların gerektirdiği genişlikleri hesaplar. Daha sonra Denetim, tüm Fill modundaki sütunlar için <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> değerlerini ayarlar ve bu sayede oranlar hesaplanan genişliklerin oranlarına uyacak şekilde ayarlanır. Son olarak, denetim, denetim içindeki tüm sütunların kullanılabilir yatay alanı doldurmasını sağlamak için, yeni <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> oranlarını kullanarak Fill modundaki sütunları yeniden boyutlandırır.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- İçin uygun değerleri kullanarak <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, ve <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> özellikleri, birçok farklı senaryo için sütun boyutlandırma davranışları özelleştirebilirsiniz.  
+ <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>ve <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> özellikleri için uygun değerleri kullanarak, birçok farklı senaryo için sütun boyutlandırma davranışlarını özelleştirebilirsiniz.  
   
- Aşağıdaki tanıtım kod için farklı değerlerle denemenizi etkinleştirir <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, ve <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> özellikleri farklı sütun. Bu örnekte, bir <xref:System.Windows.Forms.DataGridView> denetimin bağlı kendi <xref:System.Windows.Forms.DataGridView.Columns%2A> toplama ve bir sütuna bağlı her biri <xref:System.Windows.Forms.DataGridViewColumn.HeaderText%2A>, <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>, ve <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> özellikleri. Her sütun da bir satır denetimi tarafından temsil edilen ve satır değerleri değiştirme değerleri nasıl etkileşim görebilmeniz için karşılık gelen sütun özelliklerini güncelleştirir.  
+ Aşağıdaki gösterim kodu farklı sütunların <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>ve <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> özellikleri için farklı değerlerle denemeler yapmanızı sağlar. Bu örnekte, bir <xref:System.Windows.Forms.DataGridView> denetimi kendi <xref:System.Windows.Forms.DataGridView.Columns%2A> koleksiyonuna bağlanır ve bir sütun <xref:System.Windows.Forms.DataGridViewColumn.HeaderText%2A>, <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>ve <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> özelliklerinden her birine bağlanır. Sütunların her biri denetimdeki bir satır tarafından da temsil edilir ve bir satırdaki değerlerin değiştirilmesi karşılık gelen sütunun özelliklerini güncelleyerek değerlerin nasıl etkileşime gireceğini görebilirsiniz.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[System.Windows.Forms.DataGridViewFillColumnsDemo#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/CS/fillcolumns.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewFillColumnsDemo#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/vb/fillcolumns.vb#00)]  
   
 ### <a name="comments"></a>Açıklamalar  
- Bu Tanıtım uygulamasını kullanmak için:  
+ Bu demo uygulamasını kullanmak için:  
   
-- Formun boyutunu değiştirin. Oranlarını koruma tarafından gösterilen sırada sütun genişliklerini nasıl değiştiğini gözlemlersiniz <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> özellik değerleri.  
+- Formun boyutunu değiştirin. <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> özellik değerleri tarafından belirtilen oranları korurken sütunların genişliklerini nasıl değiştirdiğini gözlemleyin.  
   
-- Fare ile sütun ayırıcılarını sürükleyerek sütunu boyutları değiştirin. Gözlemleyin nasıl <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> değerleri değiştiğinde.  
+- Sütun bölücüleri fareyle sürükleyerek sütun boyutlarını değiştirin. <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> değerlerinin nasıl değiştiğini gözlemleyin.  
   
-- Değişiklik <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> değer için bir sütun ve formu yeniden boyutlandırmak için sürükleyin. Gözlemleyin nasıl formun yeterince, küçük yaptığınızda <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> değerlerin değil aşağıda Git <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> değerleri.  
+- Bir sütunun <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> değerini değiştirip formu yeniden boyutlandırmak için sürükleyin. Formu yeterince küçük yaptığınızda <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> değerleri <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> değerlerinin altına dönmeyeceği konusunda gözlemleyin.  
   
-- Değişiklik <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> değerleri büyük sayılar tüm sütunları ve böylece birleşik değerleri denetiminin genişliğini aşıyor. Yatay kaydırma çubuğunun nasıl göründüğünü gözlemleyin.  
+- Tüm sütunlar için <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> değerlerini, Birleşik değerlerin denetimin genişliğini aşması için büyük sayı olarak değiştirin. Yatay kaydırma çubuğunun nasıl göründüğünü gözlemleyin.  
   
-- Değişiklik <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> bazı sütunları için değerler. Sütunları veya formunu yeniden boyutlandırdığınızda etkisi gözlemleyin.  
+- Bazı sütunların <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> değerlerini değiştirin. Sütunları veya formu yeniden boyutlandırdığınızda etkiyi gözlemleyin.  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- Sistem, System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
+- System, System. Drawing ve System. Windows. Forms derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

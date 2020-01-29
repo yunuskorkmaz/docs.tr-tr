@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Panelinin Arka Planını Ayarlama'
+title: Tasarımcıyı kullanarak bir panelin arka planını ayarlama
 ms.date: 03/30/2017
 helpviewer_keywords:
 - background colors [Windows Forms], Windows Forms Panel controls
@@ -7,32 +7,32 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
-ms.openlocfilehash: 6927a7118c43ced03623a9764a3ef1e0814c95cb
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8bdefba433632f7ba02f549a549c52c7aa56c2d7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211636"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731926"
 ---
-# <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Nasıl yapılır: Tasarımcı kullanarak Windows Forms panelinin arka planını ayarlama
+# <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Nasıl yapılır: tasarımcı kullanarak Windows Forms panelinin arka planını ayarlama
 
-Bir Windows Forms <xref:System.Windows.Forms.Panel> denetim arka plan rengi hem de arka plan görüntüsü görüntüleyebilirsiniz. <xref:System.Windows.Forms.Control.BackColor%2A> Özelliği etiketler gibi panelinde bulunan ve radyo düğmeleri, denetimleri arka plan rengini ayarlar. Varsa <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği ayarlı değil, <xref:System.Windows.Forms.Control.BackColor%2A> seçimi tüm panel doldurur. Varsa <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği ayarlanmışsa, görüntünün arkasındaki panelde bulunan denetimleri görüntülenir.
+Bir Windows Forms <xref:System.Windows.Forms.Panel> denetimi hem arka plan rengini hem de arka plan görüntüsünü görüntüleyebilir. <xref:System.Windows.Forms.Control.BackColor%2A> özelliği, panelde bulunan ve Etiketler ve radyo düğmeleri gibi denetimlerin arka plan rengini ayarlar. <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği ayarlanmamışsa, <xref:System.Windows.Forms.Control.BackColor%2A> seçimi paneli dolduracaktır. <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği ayarlandıysa, görüntü, panelde bulunan denetimlerin arkasında görüntülenir.
 
-Aşağıdaki yordamı gerektiren bir **Windows uygulama** proje içeren bir form bir <xref:System.Windows.Forms.Panel> denetimi. Böyle bir projeyi Visual Studio'da ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir Windows Forms uygulaması projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project) ve [nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md).
+Aşağıdaki yordam, bir <xref:System.Windows.Forms.Panel> denetimi içeren bir form ile **Windows uygulama** projesi gerektirir. Visual Studio 'da böyle bir projeyi ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms uygulama projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project) ve [nasıl yapılır: Windows Forms denetim ekleme](how-to-add-controls-to-windows-forms.md).
 
-## <a name="set-the-background-in-the-windows-forms-designer"></a>Windows Form Tasarımcısı'nda arka planını ayarlama
+## <a name="set-the-background-in-the-windows-forms-designer"></a>Windows Form Tasarımcısı arka planı ayarlama
 
-1. Projeyi Visual Studio'da açın ve seçin <xref:System.Windows.Forms.Panel> denetimi.
+1. Projeyi Visual Studio 'da açın ve <xref:System.Windows.Forms.Panel> denetimini seçin.
 
-2. İçinde **özellikleri** penceresinde, oku, İleri düğmesine tıklayın <xref:System.Windows.Forms.Control.BackColor%2A> bir penceresi üç sekme ile görüntülenecek özelliği.
+2. **Özellikler** penceresinde, üç sekmeye sahip bir pencere göstermek için <xref:System.Windows.Forms.Control.BackColor%2A> özelliğinin yanındaki ok düğmesine tıklayın.
 
-3. Seçin **özel** renkler paleti görüntülemek için sekmesinde.
+3. Renk paletini göstermek için **özel** sekmesini seçin.
 
-4. Seçin **Web** veya **sistem** renkler için önceden tanımlanmış adlarının bir listesini görüntülemek için sekmesinde ve bir renk seçin.
+4. Renkler için önceden tanımlanmış adların listesini göstermek üzere **Web** veya **sistem** sekmesini seçin ve ardından bir renk seçin.
 
-5. İçinde **özellikleri** penceresinde, oku, İleri düğmesine tıklayın <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği.
+5. **Özellikler** penceresinde, <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliğinin yanındaki ok düğmesine tıklayın.
 
-6. İçinde **açık** iletişim kutusunda, görüntülemek istediğiniz dosyayı seçin.
+6. **Aç** iletişim kutusunda, göstermek istediğiniz dosyayı seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -40,4 +40,4 @@ Aşağıdaki yordamı gerektiren bir **Windows uygulama** proje içeren bir form
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
 - [Panel Denetimi](panel-control-windows-forms.md)
 - [Panel Denetimine Genel Bakış](panel-control-overview-windows-forms.md)
-- [Nasıl yapılır: Tasarımcı kullanarak Windows Forms Panel denetimi ile denetimleri gruplandırma](group-controls-with-wf-panel-control-using-the-designer.md)
+- [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Panel Denetimi ile Denetimleri Gruplandırma](group-controls-with-wf-panel-control-using-the-designer.md)

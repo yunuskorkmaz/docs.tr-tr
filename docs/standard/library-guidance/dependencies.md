@@ -2,12 +2,12 @@
 title: Bağımlılıklar ve .NET kitaplıkları
 description: .NET kitaplıklarında NuGet bağımlılıklarını yönetmeye yönelik en iyi yöntem önerileri.
 ms.date: 10/02/2018
-ms.openlocfilehash: b5742bf4724c4aff4beb4ca40a543bd096528a00
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6a260b54c45a0cd231059ab3bc6f2707ef7fb20e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706510"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731484"
 ---
 # <a name="dependencies"></a>Bağımlılıklar
 
@@ -29,7 +29,7 @@ Derleme zamanında, NuGet, bağımlılıkların bağımlılıkları da dahil olm
 
 Hangi paketlerin sizin de birlikte kullanılacağını Bileme olanaksızdır. Bir elmas bağımlılığını düşürmenin olasılığını azaltmanın iyi bir yolu, bağlı olduğunuz paket sayısını en aza indirmektir.
 
-**✔️** , .net kitaplığınızı gereksiz bağımlılıklar için gözden geçirin.
+✔️, .NET kitaplığınızı gereksiz bağımlılıklar için gözden geçirin.
 
 ## <a name="nuget-dependency-version-ranges"></a>NuGet bağımlılığı sürüm aralıkları
 
@@ -56,11 +56,11 @@ NuGet 'in en düşük geçerli sürüm kuralı nedeniyle, en son sürümü almay
 
 ![Elmas bağımlılığı çakışması](./media/dependencies/diamond-dependency-conflict.png "Elmas bağımlılığı çakışması")
 
-**❌** en düşük sürüm olmadan NuGet paket başvuruları yoktur.
+❌ en düşük sürüm olmadan NuGet paket başvuruları yoktur.
 
-**❌ önlemek** Tam bir sürümü talep eden NuGet paket başvuruları.
+❌, tam bir sürümü talep eden NuGet paket başvurularını ÖNLEYIN.
 
-**❌ önlemek** Sürüm üst sınırı olan NuGet paket başvuruları.
+❌ sürüm üst sınırı olan NuGet paket başvurularını ÖNLEYIN.
 
 ## <a name="nuget-shared-source-packages"></a>NuGet paylaşılan kaynak paketleri
 
@@ -78,19 +78,19 @@ Paylaşılan kaynak paketleri, küçük işlevsellik parçaları için harika. �
 
 Paylaşılan kaynak paketlerinde bazı sınırlamalar vardır. Yalnızca `PackageReference`tarafından başvurulabilirler, bu nedenle eski `packages.config` projelerin hariç tutulur. Ayrıca, paylaşılan kaynak paketleri yalnızca aynı dil türüne sahip projeler tarafından kullanılabilir. Bu sınırlamalar nedeniyle, paylaşılan kaynak paketleri, bir açık kaynak proje içindeki işlevselliği paylaşmak için en iyi şekilde kullanılır.
 
-✔️ küçük, iç işlevsellik parçaları için paylaşılan kaynak paketlerine başvurmayı **göz önünde bulundurun** .
+✔️ küçük, iç işlevsellik parçaları için paylaşılan kaynak paketlerine başvurmayı göz önünde bulundurun.
 
-**✔️** , küçük, iç işlevsellik parçaları sağlıyorsa paketinizi paylaşılan bir kaynak paketi yapmayı düşünün.
+✔️, küçük, iç işlevsellik parçaları sağlıyorsa paketinizi paylaşılan bir kaynak paketi yapmayı düşünün.
 
-**✔️** paylaşılan kaynak paketlerine `PrivateAssets="All"`başvurun.
+✔️ Paylaşılan kaynak paketlerine `PrivateAssets="All"`başvurun.
 
 > Bu ayar NuGet 'e paketin yalnızca geliştirme zamanında kullanılacağını ve genel bağımlılık olarak sunulmayacağını söyler.
 
-**❌** ortak API 'niz içinde paylaşılan kaynak paketi türleri yok.
+❌ ortak API 'niz içinde paylaşılan kaynak paketi türleri yok.
 
 > Paylaşılan kaynak türleri, başvurulan derlemeye derlenir ve derleme sınırları arasında değiştirilemez. Örneğin, bir projedeki bir paylaşılan kaynak `IRepository` türü, başka bir projede aynı paylaşılan kaynak `IRepository` ayrı bir tür. Paylaşılan kaynak paketlerindeki türlerin `internal` görünürlüğü olmalıdır.
 
-❌ paylaşılan kaynak paketlerini NuGet.org 'e **yayımlamaz** .
+❌ paylaşılan kaynak paketlerini NuGet.org 'e yayımlamaz.
 
 > Paylaşılan kaynak paketleri kaynak kodu içerir ve yalnızca aynı dil türüne sahip projeler tarafından kullanılabilir. Örneğin, paylaşılan bir C# kaynak paketi bir F# uygulama tarafından kullanılamaz.
 >

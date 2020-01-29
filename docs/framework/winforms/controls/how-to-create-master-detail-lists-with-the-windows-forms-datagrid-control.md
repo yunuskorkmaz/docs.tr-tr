@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DataGrid denetimiyle ana ayrıntı listeleri oluşturma'
+title: DataGrid denetimiyle ana ayrıntı listeleri oluşturma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,32 +10,32 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: f0fd95cf0cd66e9a5105c0b8ff77d8c536a5822d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e8ab63d52d97a8a6e6f60da741186e3937350e1e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914758"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76730986"
 ---
 # <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Nasıl yapılır: Windows Forms DataGrid Denetimi ile Ana/Ayrıntı Listeleri Oluşturma
 > [!NOTE]
-> Denetim yerini alır ve <xref:System.Windows.Forms.DataGrid> <xref:System.Windows.Forms.DataGrid> denetime işlevsellik ekler; ancak, isterseniz denetim hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.DataGridView> Daha fazla bilgi için bkz. [Windows Forms DataGridView ve DataGrid denetimleri arasındaki farklar](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> <xref:System.Windows.Forms.DataGridView> denetimi yerini alır ve <xref:System.Windows.Forms.DataGrid> denetimine işlevsellik ekler; Ancak, ' yi seçerseniz, <xref:System.Windows.Forms.DataGrid> denetimi hem geri uyumluluk hem de gelecekte kullanılmak üzere korunur. Daha fazla bilgi için bkz. [Windows Forms DataGridView ve DataGrid denetimleri arasındaki farklar](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Bir dizi ilişkili tablo <xref:System.Windows.Forms.DataGrid> içeriyorsa,verileriana/ayrıntıbiçimindegöstermekiçinikidenetimkullanabilirsiniz.<xref:System.Data.DataSet> Biri <xref:System.Windows.Forms.DataGrid> ana kılavuz olarak, ikincisi ise ayrıntılar kılavuzu olacak şekilde belirlenir. Ana listede bir giriş seçtiğinizde, ilgili alt girdilerin hepsi Ayrıntılar listesinde gösterilir. Örneğin, <xref:System.Data.DataSet> bir müşteriler tablosu ve ilgili siparişler tablosu içeriyorsa, müşteriler tablosunu ana kılavuz ve Siparişler tablosu olarak ayrıntılar kılavuzu olacak şekilde belirtirsiniz. Ana kılavuzdan bir müşteri seçildiğinde, Siparişler tablosunda bu müşteriyle ilişkili tüm siparişler Ayrıntılar kılavuzunda görüntülenir.  
+ <xref:System.Data.DataSet> bir dizi ilişkili tablo içeriyorsa, verileri bir ana/ayrıntı biçiminde göstermek için iki <xref:System.Windows.Forms.DataGrid> denetimi kullanabilirsiniz. Bir <xref:System.Windows.Forms.DataGrid> ana kılavuz olarak, ikincisi ise ayrıntılar kılavuzu olacak şekilde belirlenir. Ana listede bir giriş seçtiğinizde, ilgili alt girdilerin hepsi Ayrıntılar listesinde gösterilir. Örneğin, <xref:System.Data.DataSet> bir müşteriler tablosu ve ilgili siparişler tablosu içeriyorsa, müşteriler tablosunu ana kılavuz ve siparişler tablosunun ayrıntılar kılavuzu olacak şekilde belirtirsiniz. Ana kılavuzdan bir müşteri seçildiğinde, Siparişler tablosunda bu müşteriyle ilişkili tüm siparişler Ayrıntılar kılavuzunda görüntülenir.  
   
 ### <a name="to-set-a-masterdetail-relationship-programmatically"></a>Programlı olarak ana/ayrıntılı ilişki ayarlamak için  
   
-1. İki yeni <xref:System.Windows.Forms.DataGrid> denetim oluşturun ve özelliklerini ayarlayın.  
+1. İki yeni <xref:System.Windows.Forms.DataGrid> denetimi oluşturun ve özelliklerini ayarlayın.  
   
 2. Veri kümesine tablo ekleyin.  
   
-3. Oluşturmak istediğiniz ilişkiyi temsil etmek <xref:System.Data.DataRelation> için türünde bir değişken bildirin.  
+3. Oluşturmak istediğiniz ilişkiyi göstermek için <xref:System.Data.DataRelation> türünde bir değişken bildirin.  
   
 4. İlişki için bir ad belirterek ve iki tabloyu barındıracak tablo, sütun ve öğeyi belirterek ilişkiyi oluşturun.  
   
-5. <xref:System.Data.DataSet> İlişkiyi<xref:System.Data.DataSet.Relations%2A> nesnenin koleksiyonuna ekleyin.  
+5. İlişkiyi <xref:System.Data.DataSet> nesnesinin <xref:System.Data.DataSet.Relations%2A> koleksiyonuna ekleyin.  
   
-6. Izgaraların her birini öğesine <xref:System.Windows.Forms.DataGrid> bağlamak için <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> yöntemini kullanın <xref:System.Data.DataSet>.  
+6. Kılavuzların her birini <xref:System.Data.DataSet>bağlamak için <xref:System.Windows.Forms.DataGrid> <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> yöntemini kullanın.  
   
      Aşağıdaki örnek, daha önce oluşturulan <xref:System.Data.DataSet> (`ds`) müşteriler ve siparişler tabloları arasında bir ana/ayrıntı ilişkisinin nasıl ayarlanacağını gösterir.  
   
@@ -74,4 +74,4 @@ ms.locfileid: "69914758"
 
 - [DataGrid Denetimi](datagrid-control-windows-forms.md)
 - [DataGrid Denetimine Genel Bakış](datagrid-control-overview-windows-forms.md)
-- [Nasıl yapılır: Windows Forms DataGrid denetimini bir veri kaynağına bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Nasıl yapılır: Windows Forms DataGrid Denetimini Veri Kaynağına Bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

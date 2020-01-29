@@ -1,5 +1,5 @@
 ---
-title: WPF Özel Denetiminin UI Otomasyonu
+title: Özel denetim için UI Otomasyonu
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 1cafb6cf8fd5096e2c17d2687ec390db06faf873
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: a370ed2c6b1f3273eca93b4865a032e8299f1cfb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636074"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738207"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF Özel Denetiminin UI Otomasyonu
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)], Otomasyon istemcilerinin çeşitli platformlar ve çerçeveler için kullanıcı arabirimlerini incelemek veya işletmek üzere kullanabileceği tek ve genelleştirilmiş bir arabirim sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)], Kullanıcı arabirimi öğelerini incelemek ve diğer koddan kullanıcı etkileşiminin benzetimini yapmak için hem kalite güvencesi (test) kodu hem de ekran okuyucular gibi Erişilebilirlik uygulamalarının her ikisini de sağlar. Tüm platformlar genelinde [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] hakkında bilgi için bkz. erişilebilirlik.  

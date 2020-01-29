@@ -1,102 +1,102 @@
 ---
-title: Windows Forms'ta Otomatik Ölçeklendirme
+title: Otomatik ölçeklendirme
 ms.date: 06/15/2017
 helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: f8afece073076b9ae94faaba8477f2a13e11b295
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 96dbbb5ed20027e25f1bde89748710766ec06506
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268091"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732380"
 ---
-# <a name="automatic-scaling-in-windows-forms"></a>Windows Forms'ta otomatik ölçeklendirme
+# <a name="automatic-scaling-in-windows-forms"></a>Windows Forms otomatik ölçeklendirme
 
-Otomatik ölçeklendirme sağlar bir form ve diğer denetimler ile belirli bir ekran çözünürlüğü veya sistem yazı tipi, tek bir makinede farklı ekran çözünürlüğü veya sistem yazı tipi olan başka bir makinede uygun şekilde görüntülenmesi için tasarlanmıştır. Form, garantiler ve denetimlerini akıllıca yerel windows ve diğer uygulamaları hem kullanıcıların hem de diğer geliştiriciler makinelere tutarlı olması için yeniden boyutlandırılır. .NET Framework uygulamaları bir tutarlı her kullanıcının makinede yerel Windows uygulamaları karşılaştırıldığında genel görünüme korumak otomatik ölçeklendirme ve görsel stilleri için .NET Framework'ün destek sağlar.
+Otomatik ölçeklendirme, belirli bir görüntü çözünürlüğü veya sistem yazı tipi olan bir makinede tasarlanan bir form ve denetimlerini, farklı bir görüntü çözünürlüğü veya sistem yazı tipi olan başka bir makineye uygun şekilde görüntülenmek üzere sağlar. Formun ve denetimlerinin, hem kullanıcıların hem de diğer geliştiricilerin makinelerinde yerel pencereler ve diğer uygulamalarla tutarlı olacak şekilde yeniden boyutlandırılacağını sağlar. Otomatik ölçeklendirme ve görsel stiller için .NET Framework desteği, .NET Framework uygulamaların her bir kullanıcının makinesinde yerel Windows uygulamalarıyla karşılaştırıldığında tutarlı bir görünüm korumasına olanak sağlar.
 
-Çoğunlukla, olarak otomatik ölçeklendirme çalışır, 2.0 ve sonraki sürümlerinde .NET Framework sürümü için bekleniyor. Ancak, yazı tipi şeması değişikliklerine sorunlu olabilir. Bu sorunu gidermek nasıl bir örnek için bkz [nasıl yapılır: Bir Windows Forms uygulamasında yazı tipi şeması değişikliklerine yanıt verme](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
+Çoğu bölüm için otomatik ölçeklendirme, .NET Framework sürüm 2,0 ve sonraki sürümlerde beklendiği gibi çalışmaktadır. Ancak yazı tipi şeması değişiklikleri sorunlu olabilir. Bunun nasıl çözüleceği hakkında bir örnek için bkz. [nasıl yapılır: Windows Forms uygulamasındaki yazı tipi şeması değişikliklerine yanıt verme](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
 
-## <a name="need-for-automatic-scaling"></a>Otomatik ölçeklendirmeye yönelik gereksinimi
+## <a name="need-for-automatic-scaling"></a>Otomatik ölçeklendirme gerekiyor
 
-Otomatik ölçeklendirme, olmadan bir uygulamanın bir ekran çözünürlüğü için tasarlanan veya yazı tipi ya da zaman çözüm ya da yazı tipini değiştirdiği çok küçük veya çok büyük görünür. Örneğin, ayarlama Tahoma 9 noktası temel olarak kullanarak uygulama tasarlanmışsa, sistem yazı tipi Tahoma 12 noktası olduğu bir makinede çalıştırırsanız, çok küçük görünür. Başlıklar, menüler, metin kutusu içeriklerinin vb. gibi metin öğelerini diğer uygulamaları daha küçük işlenir. Ayrıca, başlık çubuğunda, menüler ve pek çok denetimi gibi bir metin içeren kullanıcı arabirimi (UI) öğelerinin boyutunu kullanılan yazı tipini bağımlı. Bu örnekte, bu öğeler de nispeten daha küçük görünür.
+Otomatik ölçeklendirme olmadan, bir ekran çözünürlüğü veya yazı tipi için tasarlanan bir uygulama, bu çözüm veya yazı tipi değiştirildiğinde çok küçük veya çok büyük görünür. Örneğin, uygulama, bir taban çizgisi olarak Tahoma 9 noktası kullanılarak tasarlanmışsa, sistem yazı tipinin Tahoma 12 noktası olduğu bir makinede çalıştırıldıysa çok küçük görüntülenir. Başlıklar, menüler, metin kutusu içerikleri vb. gibi metin öğeleri diğer uygulamalardan daha küçük işlenir. Ayrıca, başlık çubuğu, menüler ve birçok denetim gibi metin içeren kullanıcı arabirimi (UI) öğelerinin boyutu kullanılan yazı tipine bağımlıdır. Bu örnekte, bu öğeler nispeten daha küçüktür olarak da görünür.
 
-Bir uygulama belirli bir ekran çözünürlüğünü için tasarlanmış benzer bir durum meydana gelir. En yaygın ekran çözünürlüğünü 96 nokta / inç (DPI), % 100 ekran ölçeklendirmeyi eşittir, ancak daha yüksek çözünürlüklü destekleyen kaynağının % 125, %150, % 200 olan (sırasıyla eşit hangi 120, 144 ve 192 DPI) ve üzeri daha yaygın hale gelmektedir. Bir uygulama düzeltmesi bir çözüm için tasarlanmış özellikle bir grafik tabanlı bir başka bir çözünürlükte çalıştırdığınızda çok büyük veya çok küçük görünür.
+Bir uygulama belirli bir görüntü çözünürlüğü için tasarlandıysa, benzer bir durum oluşur. En yaygın ekran çözünürlüğü, %100 ekran ölçeklendirmeye eşit olan %96 nokta/inç (DPI), ancak daha yüksek çözünürlükte %125%, 150%, 200% (sırasıyla eşittir 120, 144 ve 192 DPı) ve üzeri daha yaygın hale geliyor. Değişiklik yapılmadan, bir çözüm için tasarlanan, özellikle de grafik tabanlı bir uygulama, başka bir çözünürlükte çalıştırıldığında çok büyük veya çok küçük görünüyor.
 
-Otomatik ölçeklendirme çözümleme görüntülemek veya form ve alt denetimlerine göre göreli yazı tipi boyutu boyutlandırarak otomatik olarak bu sorunları düzeltmek çalışmaktadır. Windows işletim sistemi, iletişim kutularını göreli bir iletişim kutusu birimleri adlı bir ölçü birimini kullanarak otomatik ölçeklendirmeyi destekler. Bir iletişim birim sistem yazı tipini alır ve piksel ilişkisini olabilir ancak Win32 SDK işlevi belirlenen `GetDialogBaseUnits`. Bir kullanıcı Windows tarafından kullanılan tema değiştiğinde tüm iletişim kutularının otomatik olarak uygun şekilde ayarlanır. Ayrıca, .NET Framework ya da varsayılan sistem yazı tipi veya ekran çözünürlüğü göre otomatik ölçeklendirmeyi destekler. İsteğe bağlı olarak, otomatik ölçeklendirme bir uygulamayı devre dışı bırakılabilir.
+Otomatik ölçeklendirme, formun ve alt denetimlerinin göreli yazı tipi boyutuna veya görüntü çözünürlüğüne göre otomatik olarak yeniden boyutlandırarak bu sorunları ameliorate olarak arar. Windows işletim sistemi, iletişim kutusu birimleri adlı göreli bir ölçü birimi kullanılarak iletişim kutularının otomatik ölçeklendirilmesini destekler. Bir iletişim kutusu birimi, sistem yazı tipine dayalıdır ve piksellere olan ilişkisi, Win32 SDK işlevi `GetDialogBaseUnits`belirlenebilir. Bir Kullanıcı Windows tarafından kullanılan temayı değiştirdiğinde, tüm iletişim kutuları otomatik olarak uygun şekilde ayarlanır. Ayrıca .NET Framework, varsayılan sistem yazı tipine ya da görüntü çözünürlüğüne göre otomatik ölçeklendirmeyi destekler. İsteğe bağlı olarak, bir uygulamada otomatik ölçeklendirme devre dışı bırakılabilir.
 
-## <a name="original-support-for-automatic-scaling"></a>Otomatik ölçeklendirme özgün desteği
+## <a name="original-support-for-automatic-scaling"></a>Otomatik ölçeklendirme için özgün destek
 
-Sürüm 1.0 ve 1.1 .NET Framework desteklenen otomatik Win32 SDK değeri tarafından temsil edilen kullanıcı Arabirimi için kullanılan Windows varsayılan yazı tipi bağımlı olduğu basit bir şekilde ölçeklendirme **DEFAULT_GUI_FONT**. Görüntü çözünürlüğü değiştiğinde bu yazı tipini genellikle yalnızca değiştirilir. Otomatik ölçeklendirme uygulamak için aşağıdaki mekanizmayı kullanılmıştır:
+.NET Framework sürüm 1,0 ve 1,1 sürümleri, Kullanıcı arabirimi için kullanılan Windows varsayılan yazı tipine bağlı olan, Win32 SDK değeri **DEFAULT_GUI_FONT**tarafından temsil edilen, basit bir şekilde otomatik ölçeklendirmeyi destekler. Bu yazı tipi genellikle yalnızca ekran çözünürlüğü değiştiğinde değişir. Otomatik ölçeklendirmeyi uygulamak için aşağıdaki mekanizma kullanılmıştır:
 
-1. Tasarım zamanında <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> Geliştirici makinesinde varsayılan sistem yazı tipi genişliği ve yüksekliği için (artık kullanım dışı) özelliği ayarlı.
+1. Tasarım zamanında, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> özelliği (artık kullanım dışı) geliştirici makinesindeki varsayılan sistem yazı tipinin yüksekliğine ve genişliğine ayarlanmıştır.
 
-2. Çalışma zamanında kullanıcının makinesine varsayılan sistem yazı tipi başlatmak için kullanılan <xref:System.Windows.Forms.Control.Font%2A> özelliği <xref:System.Windows.Forms.Form> sınıfı.
+2. Çalışma zamanında, <xref:System.Windows.Forms.Form> sınıfının <xref:System.Windows.Forms.Control.Font%2A> özelliğini başlatmak için kullanıcının makinesinin varsayılan sistem yazı tipi kullanıldı.
 
-3. Form göstermeden önce <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> form ölçeklendirme yöntemi çağrıldı. Bu yöntem göreli ölçeği boyutları hesaplanan <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> ve <xref:System.Windows.Forms.Control.Font%2A> ardından adlı <xref:System.Windows.Forms.Control.Scale%2A> gerçekten form ve alt öğeleri ölçeklendirmek için yöntemi.
+3. Formu görüntülemeden önce, formu ölçeklendirmek için <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> yöntemi çağırılır. Bu yöntem <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> ' dan göreli ölçek boyutlarını hesaplamıştır ve <xref:System.Windows.Forms.Control.Font%2A> daha sonra formu ve alt öğelerini ölçeklendirmek için <xref:System.Windows.Forms.Control.Scale%2A> yöntemi olarak adlandırılır.
 
-4. Değerini <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> bu nedenle, sonraki güncelleştirildi çağrılar <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> aşamalı olarak formun boyutlandıramazsınız.
+4. <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> değeri, sonraki <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> çağrılarının formu aşamalı olarak yeniden boyutlandırmamaları için güncelleştirildi.
 
-Bu mekanizma birçok amaç için yeterli ederken aşağıdaki sınırlamalarından çalışmaya başlayamıyorsa:
+Bu mekanizma çoğu amaçla yeterli olmakla aynı olsa da, aşağıdaki sınırlamalara sahiptir:
 
-- Bu yana <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> özelliğini temel yazı tipi boyutu tamsayı değerleri olarak temsil eder, bir form birden çok çözümleri geçiş sırasında uygulamaları, yetkisiz değiştirmeye karşı korumalı hale gelen yuvarlama hataları ortaya çıkar.
+- <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> özelliği, tamsayı değerleri olarak taban çizgisi yazı tipi boyutunu temsil ettiğinden, bir form birden çok çözünürlükte kaydırılır durumunda, yuvarlama hataları meydana gelir.
 
-- Otomatik ölçeklendirme içinde uygulanan yalnızca <xref:System.Windows.Forms.Form> de, sınıf <xref:System.Windows.Forms.ContainerControl> sınıfı. Sonuç olarak, kullanıcı denetimleri düzgün yalnızca kullanıcı denetimi form olarak aynı çözünürlükte tasarlanmıştır ve tasarım zamanında forma yerleştirilen ölçekleyecektir.
+- Otomatik ölçeklendirme, <xref:System.Windows.Forms.ContainerControl> sınıfında değil yalnızca <xref:System.Windows.Forms.Form> sınıfında uygulandı. Sonuç olarak, Kullanıcı denetimleri yalnızca Kullanıcı denetimi formla aynı çözünürlükte tasarlandıysa ve tasarım zamanında forma yerleştirilirse doğru şekilde ölçeklendirilir.
 
-- Makine çözümlerinin aynı olsaydı formlar ve onların alt denetimler yalnızca aynı anda birden fazla geliştirici tarafından tasarlanabilir. Benzer şekilde, ayrıca formun devralma üst formla ilişkili çözüm bağımlı hale.
+- Forms ve onların alt denetimleri, makine çözünürlükleri aynı olsaydı birden çok geliştirici tarafından aynı anda tasarlanabilir. Benzer şekilde, üst formla ilişkili çözünürlüğe bağlı bir formun devralımı de yapılır.
 
-- Yeni düzen yöneticileri gibi .NET Framework sürüm 2.0 ile sunulan uyumlu değil <xref:System.Windows.Forms.FlowLayoutPanel> ve <xref:System.Windows.Forms.TableLayoutPanel>.
+- <xref:System.Windows.Forms.FlowLayoutPanel> ve <xref:System.Windows.Forms.TableLayoutPanel>gibi .NET Framework sürüm 2,0 ile tanıtılan yeni düzen yöneticileriyle uyumlu değildir.
 
-- .NET Compact Framework için uyumluluk için gerekli olan ekran çözünürlüğünü doğrudan göre ölçeklendirme desteklememektedir.
+- .NET Compact Framework uyumluluk için gerekli olan görüntü çözünürlüğünde doğrudan ölçeklendirmeyi desteklemez.
 
-Bu mekanizma .NET geriye dönük uyumluluğu korumak için Framework 2.0 sürümünde korunur ancak sonraki bölümde açıklandığı daha sağlam ölçeklendirme mekanizması tarafından değiştirilmiştir. Sonuç olarak <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>ve belirli <xref:System.Windows.Forms.Control.Scale%2A> aşırı eski olarak işaretlendi.
+Bu mekanizma, geriye dönük uyumluluğu sürdürmek için .NET Framework sürüm 2,0 ' de korunsa da, daha sonra açıklanan daha güçlü ölçekleme mekanizmasıyla değiştirilmiştir. Sonuç olarak <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>ve belirli <xref:System.Windows.Forms.Control.Scale%2A> aşırı yüklemeleri eski olarak işaretlenir.
 
 > [!NOTE]
-> Kodunuzu eski .NET Framework sürüm 2.0 yükselttiğinizde bu üyeleri başvuruları güvenli bir şekilde silebilirsiniz.
+> Eski kodunuzu .NET Framework sürüm 2,0 ' e yükselttiğinizde, bu üyelere yönelik başvuruları güvenle silebilirsiniz.
 
 ## <a name="current-support-for-automatic-scaling"></a>Otomatik ölçeklendirme için geçerli destek
 
-.NET Framework sürüm 2.0, Windows Forms otomatik ölçeklendirme, aşağıdaki değişiklikleri sunarak önceki kısıtlamalardan surmounts:
+.NET Framework sürüm 2,0, Windows Forms otomatik ölçeklendirilmesine aşağıdaki değişiklikleri sunarak önceki sınırlamaları takar:
 
-- Ölçeklendirme için temel destek taşındı <xref:System.Windows.Forms.ContainerControl> Tekdüzen ölçeklendirme desteği, formları, yerel bileşik denetimler ve kullanıcı denetimleri tüm alması için bunları sınıfı. Yeni üyeler <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> ve <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> sürümüne eklenmiştir.
+- Form, yerel bileşik denetimler ve Kullanıcı denetimleri tüm Tekdüzen ölçeklendirme desteğini alacak şekilde, ölçeklendirmeye yönelik temel destek <xref:System.Windows.Forms.ContainerControl> sınıfına taşınmıştır. <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> ve <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> yeni üyeler eklenmiştir.
 
-- <xref:System.Windows.Forms.Control> Sınıfı ölçeklendirirken katılmasına olanak tanıyan birkaç yeni üyeler de sahiptir ve aynı formda ölçeklendirme desteklemek için karma. Özellikle <xref:System.Windows.Forms.Control.Scale%2A>, <xref:System.Windows.Forms.Control.ScaleChildren%2A>, ve <xref:System.Windows.Forms.Control.GetScaledBounds%2A> üyeleri destek ölçeklendirme.
+- <xref:System.Windows.Forms.Control> sınıfında Ayrıca, ölçeklendirmeye katılmasına ve aynı formda karışık ölçeklendirmeyi desteklemeye izin veren birçok yeni üye bulunur. Özellikle <xref:System.Windows.Forms.Control.Scale%2A>, <xref:System.Windows.Forms.Control.ScaleChildren%2A>ve <xref:System.Windows.Forms.Control.GetScaledBounds%2A> üyeleri ölçeklendirmeyi destekler.
 
-- Destek ölçeklendirme sırasında ekran çözünürlüğü tabanlı için eklenmiştir sistem yazı tipi desteği kapsamınızdaysa tarafından tanımlandığı gibi <xref:System.Windows.Forms.AutoScaleMode> sabit listesi. Bu mod, .NET Compact daha kolay uygulama geçiş etkinleştirme Framework tarafından desteklenen otomatik ölçeklendirme ile uyumludur.
+- <xref:System.Windows.Forms.AutoScaleMode> numaralandırması tarafından tanımlanan şekilde, sistem yazı tipi desteğini tamamlamak için ekran çözünürlüğüne göre ölçekleme desteği eklenmiştir. Bu mod, daha kolay uygulama geçişini etkinleştiren .NET Compact Framework tarafından desteklenen otomatik ölçeklendirmeyle uyumludur.
 
-- Düzen yöneticileri gibi uyumluluğunu <xref:System.Windows.Forms.FlowLayoutPanel> ve <xref:System.Windows.Forms.TableLayoutPanel> otomatik ölçeklendirme uygulaması eklendi.
+- <xref:System.Windows.Forms.FlowLayoutPanel> ve <xref:System.Windows.Forms.TableLayoutPanel> gibi düzen yöneticileriyle uyumluluk, otomatik ölçeklendirme uygulamasına eklenmiştir.
 
-- Ölçekleme faktörü, kayan nokta değerleri, genellikle kullanarak olarak artık gösterilir <xref:System.Drawing.SizeF> yapısı, böylece yuvarlama hataları bulundurmanızı kaldırıldı.
+- Ölçek faktörleri, genellikle <xref:System.Drawing.SizeF> yapısını kullanarak kayan nokta değerleri olarak temsil edilir. böylece, yuvarlama hataları pratikte kaldırılır.
 
 > [!CAUTION]
-> DPI ölçeklendirme modları yazı tipi ve rastgele mixtures desteklenmez. Bir mod (örneğin, DPI) kullanarak bir kullanıcı denetimi ölçeklendirme ve herhangi bir sorun olmadan başka bir mod (yazı tipi) kullanarak, ancak bir taban formunu bir modda karıştırma bir form üzerinde yerleştirmek ve başka bir türetilmiş bir formda beklenmeyen sonuçlara yol açabilir ancak.
+> DPı ve yazı tipi ölçeklendirme modlarının rastgele karıştırmalarını desteklenmez. Bir kullanıcı denetimini tek bir mod kullanarak ölçeklendirebilir (örneğin, DPı) ve herhangi bir sorun olmadan başka bir mod (yazı tipi) kullanarak bir forma yerleştirebilirsiniz, ancak bir temel formu tek bir modda ve türetilmiş bir formdan başka bir şekilde karıştırırsanız, beklenmeyen sonuçlara yol açabilir.
 
-### <a name="automatic-scaling-in-action"></a>Otomatik ölçeklendirme eylemi
+### <a name="automatic-scaling-in-action"></a>Otomatik ölçeklendirme eylemde
 
-Windows Forms, formlar ve bunların içeriğini otomatik olarak ölçeklendirmek için aşağıdaki mantık artık kullanır:
+Windows Forms artık formları ve bunların içeriğini otomatik olarak ölçeklendirmek için aşağıdaki mantığı kullanır:
 
-1. Tasarım zamanında her <xref:System.Windows.Forms.ContainerControl> ölçeklendirme modu ve geçerli çözüm içindeki kayıtları <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> ve <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>sırasıyla.
+1. Tasarım zamanında her <xref:System.Windows.Forms.ContainerControl> ölçek modunu ve bu geçerli çözünürlüğü sırasıyla <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> ve <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>kaydeder.
 
-2. Gerçek çözümleme depolanır çalışma zamanında <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> özelliği. <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A> Özelliği dinamik olarak çalışma zamanı ve tasarım zaman ölçeklendirme çözümü arasındaki oran hesaplar.
+2. Çalışma zamanında, gerçek çözüm <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> özelliğinde depolanır. <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A> özelliği, çalışma zamanı ve tasarım zamanı ölçeklendirme çözümlemesi arasındaki oranı dinamik olarak hesaplar.
 
-3. Formun yüklediğinde, varsa değerlerini <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> ve <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> farklıysa, ardından <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> yöntemi, Denetim ve alt öğeleri ölçeklendirmek için çağrılır. Bu yöntem, Düzen ve çağrıları askıya <xref:System.Windows.Forms.Control.Scale%2A> gerçek ölçeklendirme yapmak için yöntemi. Daha sonra değerini <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> aşamalı ölçeklendirme önlemek için güncelleştirilir.
+3. Form yüklendiğinde, <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> ve <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> değerleri farklıysa, denetimi ve alt öğelerini ölçeklendirmek için <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> yöntemi çağrılır. Bu yöntem düzeni askıya alır ve gerçek ölçeklendirmeyi gerçekleştirmek için <xref:System.Windows.Forms.Control.Scale%2A> yöntemini çağırır. Daha sonra, <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> değeri, aşamalı ölçeklendirmeyi önlemek için güncellenir.
 
-4. <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> Aşağıdaki durumlarda da otomatik olarak çağrılır:
+4. <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>, aşağıdaki durumlarda da otomatik olarak çağrılır:
 
-    - Yanıt olarak <xref:System.Windows.Forms.Control.OnFontChanged%2A> ölçeklendirme modu ise olay <xref:System.Windows.Forms.AutoScaleMode.Font>.
+    - Ölçeklendirme modu <xref:System.Windows.Forms.AutoScaleMode.Font><xref:System.Windows.Forms.Control.OnFontChanged%2A> olayına yanıt olarak.
 
-    - Ne zaman düzenini kapsayıcı denetimi devam eder ve bir değişiklik algılandığında <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> veya <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> özellikleri.
+    - Kapsayıcı denetiminin düzeni devam ettiğinde ve <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> ya da <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> özelliklerinde bir değişiklik algılandığında.
 
-    - Olarak yukarıdaki bir üst öğesi, örtük <xref:System.Windows.Forms.ContainerControl> ölçeklendirilir. Her kapsayıcı denetimi, kendi faktörleri ve değil üst kapsayıcısının olandan ölçeklendirme kullanarak alt öğelerini ölçeklendirme için sorumludur.
+    - Yukarıda belirtildiği gibi, üst <xref:System.Windows.Forms.ContainerControl> ölçeklendirildiğinde. Her kapsayıcı denetimi kendi üst kapsayıcısından değil, kendi ölçekleme faktörleri kullanılarak alt öğelerini ölçeklendirmekten sorumludur.
 
-5. Alt denetimler ölçeklendirme davranışları çeşitli araçlarla değiştirebilirsiniz:
+5. Alt denetimler, ölçeklendirme davranışlarını çeşitli yollarla değiştirebilir:
 
-    - <xref:System.Windows.Forms.Control.ScaleChildren%2A> Özelliği, kendi alt öğe denetimlerini veya daraltılacağı olmadığını belirlemek için kılınabilir.
+    - <xref:System.Windows.Forms.Control.ScaleChildren%2A> özelliği, alt denetimlerinin ölçeklendirilmesi gerekip gerekmediğini öğrenmek için geçersiz kılınabilir.
 
-    - <xref:System.Windows.Forms.Control.GetScaledBounds%2A> Yöntemi, denetim için ölçeklenir sınırları, ancak ölçeklendirme mantığı ayarlamak için kılınabilir.
+    - <xref:System.Windows.Forms.Control.GetScaledBounds%2A> yöntemi, denetimin ölçeklendirildiği ancak ölçekleme mantığı için ölçeklendirileceği sınırları ayarlamak için geçersiz kılınabilir.
 
-    - <xref:System.Windows.Forms.Control.ScaleControl%2A> Yöntemi, geçerli denetim ölçeklendirme mantığını değiştirmeye kılınabilir.
+    - Geçerli denetimin ölçekleme mantığını değiştirmek için <xref:System.Windows.Forms.Control.ScaleControl%2A> yöntemi geçersiz kılınabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -105,4 +105,4 @@ Windows Forms, formlar ve bunların içeriğini otomatik olarak ölçeklendirmek
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
 - [Denetimleri Görsel Stilde İşleme](./controls/rendering-controls-with-visual-styles.md)
-- [Nasıl yapılır: Otomatik ölçeklendirmeyi önleyerek performansı artırma](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+- [Nasıl yapılır: Otomatik Ölçeklendirmeyi Önleyerek Performansı Artırma](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

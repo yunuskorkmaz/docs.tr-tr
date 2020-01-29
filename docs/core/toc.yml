@@ -386,10 +386,7 @@
           href: tutorials/creating-app-with-plugin-support.md
         - name: .NET Core’da kaldırabilme özelliğini kullanma ve hatalarını ayıklama
           href: ../standard/assembly/unloadability-howto.md
-- name: Kaynaktan .NET Core derleme
-  href: build/index.md
+- name: .NET Core dağıtımı paketleme
   items:
-    - name: .NET Core dağıtımı paketleme
-      href: build/distribution-packaging.md
-- name: VS 2015/project.json belgeleri
-  href: ../project-json.md
+    - name: Genel Bakış
+      href: distribution-packaging.md

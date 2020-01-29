@@ -2,16 +2,16 @@
 title: DotNet derleme komutu
 description: DotNet derleme komutu bir projeyi ve tüm bağımlılıklarını oluşturur.
 ms.date: 10/14/2019
-ms.openlocfilehash: b85ef06aa445e4708487deed9ec6bfeffeab3657
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454222"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734319"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**Bu makale şu şekilde geçerlidir: ✓** .NET Core 1. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 1. x SDK ve sonraki sürümleri
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "73454222"
 
 ```dotnetcli
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force]
-    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo] 
+    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo]
     [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
@@ -45,7 +45,7 @@ dotnet build [-h|--help]
 
 .NET Core 3,0 ve üstünü hedefleyen yürütülebilir projelerde, kitaplık bağımlılıkları çıkış klasörüne kopyalanır. Bu, başka bir yayınla özel mantık (örneğin, Web projeleri) yoksa, yapı çıkışının dağıtılabilir olması anlamına gelir.
 
-Oluşturma, uygulamanızın bağımlılıklarını listeleyen *Project. varlıklar. JSON* dosyasını gerektirir. [`dotnet restore`](dotnet-restore.md) yürütüldüğünde dosya oluşturulur. Varlıklar dosyası olmadan, Araçlar başvuru derlemelerini çözemez, bu da hatalara neden olur. .NET Core 1. x SDK ile, `dotnet build` ' i çalıştırmadan önce `dotnet restore` ' ı açık olarak çalıştırmanız gerekir. .NET Core 2,0 SDK ile başlayarak, `dotnet build` çalıştırdığınızda `dotnet restore` örtülü olarak çalışır. Build komutunu çalıştırırken örtük geri yüklemeyi devre dışı bırakmak istiyorsanız, `--no-restore` seçeneğini geçirebilirsiniz.
+Oluşturma, uygulamanızın bağımlılıklarını listeleyen *Project. varlıklar. JSON* dosyasını gerektirir. [`dotnet restore`](dotnet-restore.md) yürütüldüğünde dosya oluşturulur. Varlıklar dosyası olmadan, Araçlar başvuru derlemelerini çözemez, bu da hatalara neden olur. .NET Core 1. x SDK ile `dotnet build`çalıştırmadan önce `dotnet restore` açık olarak çalıştırmanız gerekir. .NET Core 2,0 SDK ile başlayarak, `dotnet build`çalıştırdığınızda `dotnet restore` örtülü olarak çalışır. Build komutunu çalıştırırken örtük geri yüklemeyi devre dışı bırakmak istiyorsanız `--no-restore` seçeneğini geçirebilirsiniz.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -77,7 +77,7 @@ Derlenecek proje veya çözüm dosyası. Bir proje veya çözüm dosyası belirt
 
 - **`-c|--configuration {Debug|Release}`**
 
-  Yapı yapılandırmasını tanımlar. Çoğu proje için varsayılan değer `Debug` ' dır, ancak projenizde derleme yapılandırma ayarlarını geçersiz kılabilirsiniz.
+  Yapı yapılandırmasını tanımlar. Çoğu proje için varsayılan değer `Debug`, ancak projenizde derleme yapılandırma ayarlarını geçersiz kılabilirsiniz.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -113,7 +113,7 @@ Derlenecek proje veya çözüm dosyası. Bir proje veya çözüm dosyası belirt
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Oluşturulan ikililerin yerleştirileceği dizin. Belirtilmemişse, varsayılan yol `./bin/<configuration>/<framework>/` ' dır.  Birden çok hedef çerçevesi olan projeler için (`TargetFrameworks` özelliği aracılığıyla), bu seçeneği belirttiğinizde de `--framework` tanımlamanız gerekir.
+  Oluşturulan ikililerin yerleştirileceği dizin. Belirtilmemişse, varsayılan yol `./bin/<configuration>/<framework>/`.  Birden çok hedef çerçevesi olan projeler için (`TargetFrameworks` özelliği aracılığıyla), bu seçeneği belirttiğinizde de `--framework` tanımlamanız gerekir.
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -125,7 +125,7 @@ Derlenecek proje veya çözüm dosyası. Bir proje veya çözüm dosyası belirt
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
-  Projeyi oluştururken kullanılacak `$(VersionSuffix)` özelliğinin değerini ayarlar. Bu yalnızca `$(Version)` özelliği ayarlanmamışsa işe yarar. Daha sonra, `$(Version)`, bir çizgiyle ayırarak `$(VersionSuffix)` ile Birleşik `$(VersionPrefix)` ayarlanır.
+  Projeyi oluştururken kullanılacak `$(VersionSuffix)` özelliğinin değerini ayarlar. Bu yalnızca `$(Version)` özelliği ayarlanmamışsa işe yarar. Daha sonra, `$(Version)`, bir çizgiyle ayırarak `$(VersionSuffix)`ile Birleşik `$(VersionPrefix)` ayarlanır.
 
 ## <a name="examples"></a>Örnekler
 
@@ -153,7 +153,7 @@ Derlenecek proje veya çözüm dosyası. Bir proje veya çözüm dosyası belirt
   dotnet build --source c:\packages\mypackages
   ```
 
-- Projeyi derleyin ve `-p` [MSBuild seçeneğini](#msbuild)kullanarak bir yapı parametresi olarak 1.2.3.4 öğesini ayarlayın:
+- `-p` [MSBuild seçeneğini](#msbuild)kullanarak projeyi derleyin ve derleme parametresi olarak 1.2.3.4 olarak ayarlayın:
 
   ```dotnetcli
   dotnet build -p:Version=1.2.3.4

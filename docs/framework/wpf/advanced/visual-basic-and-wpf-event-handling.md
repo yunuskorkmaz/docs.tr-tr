@@ -1,16 +1,16 @@
 ---
-title: Visual Basic ve WPF Olay İşleme
+title: Visual Basic olayları işleyin
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 5625b63f2a2162f8f188476bfd61bde4c717f1dd
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 959ef66f41f6c5f06e18a202109fba058c522d1d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559865"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735401"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic ve WPF Olay İşleme
 Özellikle Microsoft Visual Basic .NET dili için, <xref:System.Windows.UIElement.AddHandler%2A> özniteliklerle olay işleyicileri eklemek yerine, olay işleyicilerini örneklerle ilişkilendirmek için dile özgü `Handles` anahtar sözcüğünü kullanabilirsiniz. Ancak, örnekleri örneklere eklemek için `Handles` tekniği bazı sınırlamalara sahiptir, çünkü `Handles` sözdizimi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay sisteminin bazı belirli yönlendirilmiş olay özelliklerini destekleyemez.  

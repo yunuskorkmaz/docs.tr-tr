@@ -1,15 +1,13 @@
 ---
 title: Yerelleştirilmiş IntelliSense dosyalarını yükler
 description: Geliştirme makinenizi, Visual Studio 'da .NET Core projeleri için yerelleştirilmiş IntelliSense dosyalarını kullanacak şekilde ayarlamayı öğrenin.
-author: mairaw
-ms.author: mairaw
-ms.date: 12/18/2019
-ms.openlocfilehash: 98d75544ab853e75c175dd2919991b250cfaa3b0
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.date: 01/23/2020
+ms.openlocfilehash: 58b462507edf953a6c28aadbb9e3239a5cbe05b2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75443479"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733654"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>.NET Core için yerelleştirilmiş IntelliSense dosyalarını nasıl yükleyeceğiniz
 
@@ -34,9 +32,10 @@ ms.locfileid: "75443479"
 
 1. ZIP dosyasının içeriğini ayıklayın.
 
-1. .NET Core yükleme klasörüne gidin. Varsayılan olarak, *%ProgramFiles%\dotnet\packs*altındadır.
+1. .NET Core IntelliSense klasörüne gidin.
 
-   - IntelliSense 'i yüklemek istediğiniz SDK 'yı seçin ve ilişkili yola gidin. Şu seçenekleriniz vardır:
+   1. .NET Core yükleme klasörüne gidin. Varsayılan olarak, *%ProgramFiles%\dotnet\packs*altındadır.
+   1. IntelliSense 'i yüklemek istediğiniz SDK 'yı seçin ve ilişkili yola gidin. Şu seçenekleriniz vardır:
 
       | SDK türü        | Yol                               |
       | --------------- | ---------------------------------- |
@@ -44,9 +43,9 @@ ms.locfileid: "75443479"
       | Windows Masaüstü | *Microsoft. WindowsDesktop. app. ref* |
       | .NET Standard   | *NETStandard. Library. ref*          |
    
-   - Yerelleştirilmiş IntelliSense 'i yüklemek istediğiniz sürüme gidin. Örneğin, *3.1.0*.
-   - *Ref* klasörünü açın.
-   - Bilinen ad klasörünü açın. Örneğin, *netcoreapp 3.1*.
+   1. Yerelleştirilmiş IntelliSense 'i yüklemek istediğiniz sürüme gidin. Örneğin, *3.1.0*.
+   1. *Ref* klasörünü açın.
+   1. Bilinen ad klasörünü açın. Örneğin, *netcoreapp 3.1*.
 
    Bu nedenle, gittiğiniz yolun tam yolu *C:\Program Files\dotnet\packs\Microsoft.NETCore.app.Ref\3.1.0\ref\netcoreapp3.1*şuna benzer.
 
@@ -76,7 +75,7 @@ Visual Studio 'nun IntelliSense için farklı bir dil kullanabilmesi için, uygu
 İstenen dil paketini kurulum sırasında yüklemediyseniz, dil paketini yüklemek için Visual Studio 'Yu aşağıdaki şekilde güncelleştirin:
 
 > [!IMPORTANT]
-> Yüklemek, güncelleştirmek veya Visual Studio değiştirmek için yönetici izinleri olan bir hesapla oturum açmalısınız. Daha fazla bilgi için bkz. [Kullanıcı izinleri ve Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio).
+> Visual Studio 'Yu yüklemek, güncelleştirmek veya değiştirmek için yönetici iznine sahip bir hesapla oturum açmalısınız. Daha fazla bilgi için bkz. [Kullanıcı izinleri ve Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio).
 
 1. Bilgisayarınızda Visual Studio yükleyicisi bulun.
 
@@ -113,9 +112,9 @@ Visual Studio 'nun IntelliSense için farklı bir dil kullanabilmesi için, uygu
 
 1. Başlangıç penceresinde, **kod olmadan devam et**' i seçin.
 
-1. Ana menüde **araçlar** > **Seçenekler**' i seçin. Seçenekler iletişim kutusu açılır.
+1. Menü çubuğunda **araçlar** > **Seçenekler**' i seçin. Seçenekler iletişim kutusu açılır.
 
-1. **Ortam** klasörü altında **Uluslararası ayarlar**' ı seçin.
+1. **Ortam** düğümü altında **Uluslararası ayarlar**' ı seçin.
 
 1. **Dil** açılan çubuğunda istediğiniz dili seçin. **Tamam**’ı seçin. 
 

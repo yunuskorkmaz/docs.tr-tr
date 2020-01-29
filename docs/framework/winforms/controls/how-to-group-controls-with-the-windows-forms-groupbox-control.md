@@ -1,36 +1,36 @@
 ---
-title: 'Nasıl yapılır: Windows Forms GroupBox Denetimiyle Denetimleri Gruplandırma'
+title: GroupBox denetimi ile grup denetimleri
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: f5b8c5ef47063663d5f8fcd2f80317e6cf6c91e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb7476c410d2802b5d32cc9842a778f290765e32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609489"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736654"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Nasıl yapılır: Windows Forms GroupBox Denetimiyle Denetimleri Gruplandırma
-Windows Forms <xref:System.Windows.Forms.GroupBox> denetimleri başka denetimler gruplandırmak için kullanılır. Grup denetimleri için üç neden vardır:  
+# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Nasıl yapılır: Windows Formları GroupBox Denetimiyle Denetimleri Gruplandırma
+Windows Forms <xref:System.Windows.Forms.GroupBox> denetimleri diğer denetimleri gruplandırmak için kullanılır. Denetimleri gruplamak için üç neden vardır:  
   
-- Görsel gruplandırılmasını ilgili form öğeleri için açık kullanıcı arabirimi oluşturmak için.  
+- Açık bir kullanıcı arabirimi için ilgili form öğelerinin görsel gruplandırmasını oluşturmak için.  
   
-- Programlı gruplandırması (örneğin radyo düğmeleri) oluşturmak için.  
+- Programlı gruplandırma oluşturmak için (örneğin, radyo düğmeleri).  
   
-- Denetimleri bir birim olarak tasarım zamanında taşımak için.  
+- Tasarım zamanında denetimleri bir birim olarak taşımak için.  
   
-### <a name="to-create-a-group-of-controls"></a>Denetimlerin bir grup oluşturmak için  
+### <a name="to-create-a-group-of-controls"></a>Bir Grup denetim oluşturmak için  
   
-1. Çizim bir <xref:System.Windows.Forms.GroupBox> form denetimi.  
+1. Form üzerinde <xref:System.Windows.Forms.GroupBox> denetimi çizin.  
   
-2. Her grup kutusunun içinde çizim grup kutusu diğer denetimleri ekleyin.  
+2. Grup kutusuna, her bir grup kutusunun içine çizerek diğer denetimleri ekleyin.  
   
-     Bir grup kutusuna eklemek istediğiniz mevcut denetimleri varsa, tüm denetimler seçip onları seçin panoya Kes <xref:System.Windows.Forms.GroupBox> denetlemek ve ardından bunları Grup kutuya yapıştırın. Ayrıca bunları grup kutusuna sürükleyebilirsiniz.  
+     Bir Grup kutusuna eklemek istediğiniz mevcut denetimleriniz varsa, tüm denetimleri seçebilir, pano 'ya kesebilir, <xref:System.Windows.Forms.GroupBox> denetimini seçebilir ve sonra bunları Grup kutusuna yapıştırabilirsiniz. Bunları Grup kutusuna da sürükleyebilirsiniz.  
   
-3. Ayarlama <xref:System.Windows.Forms.GroupBox.Text%2A> grup kutusu için uygun bir açıklamalı alt yazı özelliği.  
+3. Grup kutusunun <xref:System.Windows.Forms.GroupBox.Text%2A> özelliğini uygun bir başlık olarak ayarlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

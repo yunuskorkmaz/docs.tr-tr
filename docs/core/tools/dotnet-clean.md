@@ -2,36 +2,36 @@
 title: DotNet temizleme komutu
 description: DotNet Clean komutu geçerli dizini temizler.
 ms.date: 06/26/2019
-ms.openlocfilehash: 982232833b460b4ea4181acebee74dcef54d3131
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117737"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734244"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**Bu konu şu şekilde geçerlidir: ✓** .NET Core 1. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 1. x SDK ve sonraki sürümleri
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
-`dotnet clean`-Bir projenin çıkışını temizler.
+`dotnet clean`-bir projenin çıkışını temizler.
 
 ## <a name="synopsis"></a>Özeti
 
 ```dotnetcli
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive]
     [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
 ## <a name="description"></a>Açıklama
 
-`dotnet clean` Komut, önceki derleme çıkışını temizler. Bir [MSBuild hedefi](/visualstudio/msbuild/msbuild-targets)olarak uygulanır, bu nedenle, komut çalıştırıldığında proje değerlendirilir. Yalnızca derleme sırasında oluşturulan çıktılar temizlenir. Ara (*obj*) ve nihai çıkış (*bin*) klasörleri temizlenir.
+`dotnet clean` komutu, önceki derleme çıkışını temizler. Bir [MSBuild hedefi](/visualstudio/msbuild/msbuild-targets)olarak uygulanır, bu nedenle, komut çalıştırıldığında proje değerlendirilir. Yalnızca derleme sırasında oluşturulan çıktılar temizlenir. Ara (*obj*) ve nihai çıkış (*bin*) klasörleri temizlenir.
 
 ## <a name="arguments"></a>Arguments
 
@@ -63,7 +63,7 @@ Temizleyen MSBuild projesi veya çözümü. Bir proje veya çözüm dosyası bel
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Temizleyen derleme yapıtlarını içeren dizin. Proje oluşturulduğunda çerçeveyi belirttiyseniz, çıkış dizini anahtarıyla anahtarıbelirtin.`-f|--framework <FRAMEWORK>`
+  Temizleyen derleme yapıtlarını içeren dizin. Projenin oluşturulduğu zaman çerçevesini belirttiyseniz, çıkış dizini anahtarıyla `-f|--framework <FRAMEWORK>` anahtarı belirtin.
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -71,7 +71,7 @@ Temizleyen MSBuild projesi veya çözümü. Bir proje veya çözüm dosyası bel
 
 * **`-v|--verbosity <LEVEL>`**
 
-  MSBuild ayrıntı düzeyi düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]` Varsayılan, `normal` değeridir.
+  MSBuild ayrıntı düzeyi düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`. Varsayılan, `normal` değeridir.
 
 ## <a name="examples"></a>Örnekler
 

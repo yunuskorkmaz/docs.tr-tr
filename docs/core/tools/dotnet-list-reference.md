@@ -2,24 +2,24 @@
 title: DotNet liste başvurusu komutu
 description: DotNet liste başvurusu komutu, projeyi Proje başvurularına göre listelemek için kullanışlı bir seçenek sağlar.
 ms.date: 06/26/2019
-ms.openlocfilehash: b4b82ca1e7aeb2b73d9f99aff1c97452b2166770
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 496cbcd8fa4d921e30b363904ad0273bd5ebacd5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117670"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733227"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
-**Bu konu şu şekilde geçerlidir: ✓** .NET Core 1. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 1. x SDK ve sonraki sürümleri
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
-`dotnet list reference`-Projeden projeye başvuruları listeler.
+`dotnet list reference`-projeden projeye başvuruları listeler.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -27,7 +27,7 @@ ms.locfileid: "71117670"
 
 ## <a name="description"></a>Açıklama
 
-Komut `dotnet list reference` , belirli bir proje veya çözümün proje başvurularını listelemek için uygun bir seçenek sağlar.
+`dotnet list reference` komutu, belirli bir proje veya çözümün proje başvurularını listelemek için uygun bir seçenek sağlar.
 
 ## <a name="arguments"></a>Arguments
 

@@ -2,16 +2,16 @@
 title: DotNet-izleme aracı-.NET Core
 description: DotNet-Trace komut satırı aracını yükleme ve kullanma.
 ms.date: 11/21/2019
-ms.openlocfilehash: 64c931db5a18659707e832aaca910cfbbd6823c0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b19b159636fbf57fa2d461b398fcf9234aab491c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714430"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737652"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>DotNet-izleme performansı Analizi yardımcı programı
 
-**Bu makale şu şekilde geçerlidir:** ✓ .net Core 3,0 SDK ve sonraki sürümleri
+**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 3,0 SDK ve sonraki sürümleri
 
 ## <a name="install-dotnet-trace"></a>DotNet 'yi Install-Trace
 
@@ -38,7 +38,7 @@ dotnet-trace [-h, --help] [--version] <command>
 
 ## <a name="options"></a>Seçenekler
 
-- **`--version`**  
+- **`--version`**
 
   DotNet-Counters yardımcı programının sürümünü görüntüler.
 

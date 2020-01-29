@@ -1,17 +1,18 @@
 ---
-title: "İzlenecek yol: Win32'de WPF Barındırma"
+title: Win32 'de WPF içeriğini barındırma
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 4ac1690e7b11d908af9354e9d72097ab7db7fc61
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ff95b330ff67e916a4d27ef841e757998d847c8b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740259"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735313"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>İzlenecek yol: Win32'de WPF Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak, Win32 kodunda önemli bir yatırımınız varsa, özgün kodunuzu yeniden yazmak yerine uygulamanıza [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işlevselliği eklemek daha etkili olabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir Win32 penceresinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği barındırmak için kolay bir mekanizma sağlar.  

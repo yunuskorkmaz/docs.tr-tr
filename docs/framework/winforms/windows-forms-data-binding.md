@@ -1,5 +1,5 @@
 ---
-title: Windows Forms Veri Bağlama
+title: Veri Bağlama
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms]
@@ -7,64 +7,64 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: ed456807137e8cf7594bc50eb0eebb67b88e6b40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68871db848ab46b88865e668f27f09972e8debcf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800119"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734614"
 ---
 # <a name="windows-forms-data-binding"></a>Windows Forms Veri Bağlama
-Windows Forms veri bağlama görüntülemek ve form üzerinde denetimleri bir veri kaynağından bilgi değişiklikler yapmanız için Araçlar verir. Hem geleneksel veri kaynakları yanı sıra veri içeren neredeyse tüm yapısı bağlayabilirsiniz.  
+Windows Forms veri bağlama, formdaki denetimlerde bir veri kaynağından bilgi görüntüleme ve değişiklik yapma olanağı sunar. Hem geleneksel veri kaynaklarına hem de veri içeren neredeyse her yapıya bağlanabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Veri Bağlama ve Windows Forms](data-binding-and-windows-forms.md)  
- Windows Forms veri bağlama genel bir bakış sağlar.  
+ Windows Forms 'de veri bağlamaya genel bakış sağlar.  
   
  [Windows Forms Tarafından Desteklenen Veri Kaynakları](data-sources-supported-by-windows-forms.md)  
- Windows Forms ile kullanılabilen veri kaynaklarını anlatmaktadır.  
+ Windows Forms ile kullanılabilecek veri kaynaklarını açıklar.  
   
  [Veri Bağlama ile İlgili Arabirimler](interfaces-related-to-data-binding.md)  
- Windows Forms veri bağlama ile kullanılan arabirimlerin bazıları açıklanmaktadır.  
+ Windows Forms veri bağlama ile kullanılan birçok arabirimi açıklar.  
   
- [Nasıl yapılır: Windows Forms'ta verilerde gezinme](how-to-navigate-data-in-windows-forms.md)  
- Bir veri kaynağındaki öğeleri arasında gezinmek gösterilmektedir.  
+ [Nasıl yapılır: Windows Forms’ta Verilerde Gezinme](how-to-navigate-data-in-windows-forms.md)  
+ Bir veri kaynağındaki öğelerde nasıl gezinirsiniz gösterir.  
   
  [Windows Forms Veri Bağlamada Bildirimi Değiştirme](change-notification-in-windows-forms-data-binding.md)  
- Windows Forms veri bağlama için değişiklik bildirimi farklı türleri açıklanmaktadır.  
+ Windows Forms veri bağlama için farklı değişiklik bildirimi türlerini açıklar.  
   
- [Nasıl yapılır: INotifyPropertyChanged arabirimini uygulama](how-to-implement-the-inotifypropertychanged-interface.md)  
- Nasıl uygulayacağınızı gösteren <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi. Arabirim ilişkili bir denetim için bir iş nesnesi üzerinde özellik değişikliklerinin iletişim kurar.  
+ [Nasıl yapılır: INotifyPropertyChanged Arabirimini Uygulama](how-to-implement-the-inotifypropertychanged-interface.md)  
+ <xref:System.ComponentModel.INotifyPropertyChanged> arabiriminin nasıl uygulanacağını gösterir. Arabirim, bir iş nesnesindeki özellik değişikliklerinin bağlı bir denetime iletişim kurar  
   
- [Nasıl yapılır: PropertyNameChanged desenini uygulama](how-to-apply-the-propertynamechanged-pattern.md)  
- Nasıl uygulanacağını gösterir *PropertyName*bir Windows Forms kullanıcı denetimi özelliklerini değiştirilen deseni.  
+ [Nasıl yapılır: PropertyNameChanged Desenini Uygulama](how-to-apply-the-propertynamechanged-pattern.md)  
+ Windows Forms Kullanıcı denetiminin özelliklerine *PropertyName*değiştirilmiş deseninin nasıl uygulanacağını gösterir.  
   
- [Nasıl yapılır: Itypedlist arabirimini uygulama](how-to-implement-the-itypedlist-interface.md)  
- Uygulayarak bağlanabilir bir listesi için şema bulunmasını etkinleştirmek gösterilmektedir <xref:System.ComponentModel.ITypedList> arabirimi.  
+ [Nasıl yapılır: ITypedList Arabirimini Uygulama](how-to-implement-the-itypedlist-interface.md)  
+ <xref:System.ComponentModel.ITypedList> arabirimini uygulayarak, bağlanabilir bir liste için şemanın keşfinin nasıl etkinleştirileceğini gösterir.  
   
- [Nasıl yapılır: IListSource arabirimini uygulama](how-to-implement-the-ilistsource-interface.md)  
- Nasıl uygulayacağınızı gösteren <xref:System.ComponentModel.IListSource> bağlanabilir bir sınıf oluşturmak için arabirimi uygulamıyor <xref:System.Collections.IList>, ancak başka bir konumdan bir listesini sağlar.  
+ [Nasıl yapılır: IListSource Arabirimini Uygulama](how-to-implement-the-ilistsource-interface.md)  
+ Bağlanabilir bir sınıf oluşturmak için <xref:System.ComponentModel.IListSource> arabiriminin nasıl uygulanacağını gösterir <xref:System.Collections.IList>uygulamaz, ancak başka bir konumdan liste sağlar.  
   
- [Nasıl yapılır: Birden çok denetimin eşitlenmiş kalmasını aynı veri kaynağına bağlama](multiple-controls-bound-to-data-source-synchronized.md)  
- Nasıl işleneceğini gösterir <xref:System.Windows.Forms.BindingSource.BindingComplete> olay bir veri kaynağına bağlı tüm denetimleri eşitlenmiş kalmasını sağlamak için.  
+ [Nasıl yapılır: Aynı Veri Kaynağına Bağlanan Birden Çok Denetimin Eşitlenmiş Kalmasını Sağlama](multiple-controls-bound-to-data-source-synchronized.md)  
+ Bir veri kaynağıyla bağlantılı tüm denetimlerin eşitlenmiş olarak kalmasını sağlamak için <xref:System.Windows.Forms.BindingSource.BindingComplete> olayının nasıl işleneceğini gösterir.  
   
- [Nasıl yapılır: Bir alt tabloda seçilen satırın doğru konumda kalmasını sağlama](ensure-the-selected-row-in-a-child-table-correct.md)  
- Üst tablo alanı için bir değişiklik yapıldığında, bir alt tabloda seçilen satırı değişmez emin olmak nasıl gösterir.  
+ [Nasıl yapılır: Bir Alt Tabloda Seçilen Satırın Doğru Konumda Kalmasını Sağlama](ensure-the-selected-row-in-a-child-table-correct.md)  
+ Üst tablodaki bir alanda değişiklik yapıldığında bir alt tablonun seçili satırının değişmediğinden nasıl emin olduğunu gösterir.  
   
- Ayrıca bkz: [arabirimleri ilgili veri bağlama için](interfaces-related-to-data-binding.md), [nasıl yapılır: Windows Forms'ta verilerde gezinme](how-to-navigate-data-in-windows-forms.md), ve [nasıl yapılır: Bir Windows formunda basit bağlantılı denetim oluşturma](how-to-create-a-simple-bound-control-on-a-windows-form.md).  
+ Ayrıca bkz. [veri bağlama](interfaces-related-to-data-binding.md), [nasıl yapılır: Windows Forms verilerde gezinme](how-to-navigate-data-in-windows-forms.md)ve [nasıl yapılır: bir Windows formunda basit bağlantılı denetim oluşturma](how-to-create-a-simple-bound-control-on-a-windows-form.md).  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
- Bağlanabilir bir bileşeni ve bir veri kaynağı arasındaki bağlamayı temsil eden sınıfı açıklar.  
+ Bağlanabilir bir bileşen ve bir veri kaynağı arasındaki bağlamayı temsil eden sınıfı açıklar.  
   
  <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType>  
- Denetimlere bağlama için bir veri kaynağı kapsülleyen sınıftır açıklar.  
+ Denetimlere bağlamak için bir veri kaynağını kapsülleyen sınıfı açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [BindingSource Bileşeni](./controls/bindingsource-component.md)  
- Nasıl kullanılacağını gösteren konuların listesini içeren <xref:System.Windows.Forms.BindingSource> bileşeni.  
+ <xref:System.Windows.Forms.BindingSource> bileşenin nasıl kullanılacağını gösteren konuların bir listesini içerir.  
   
  [DataGridView Denetimi](./controls/datagridview-control-windows-forms.md)  
- Bağlanabilir datagrid denetimine nasıl kazandırabileceğinizi konuların listesini sağlar.  
+ Bağlanabilir DataGrid denetiminin nasıl kullanılacağını gösteren konuların bir listesini sağlar.  
   
- Ayrıca bkz: [Visual Studio'da verilere erişme](/visualstudio/data-tools/accessing-data-in-visual-studio).
+ Ayrıca bkz. [Visual Studio 'Da verilere erişme](/visualstudio/data-tools/accessing-data-in-visual-studio).

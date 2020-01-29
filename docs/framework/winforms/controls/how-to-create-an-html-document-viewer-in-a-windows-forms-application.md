@@ -1,5 +1,6 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Forms Uygulamasında HTML Belge Görüntüleyicisi Oluşturma'
+title: Windows Forms uygulamasında HTML belge Görüntüleyicisi oluşturma
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,34 +10,34 @@ helpviewer_keywords:
 - document viewers
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
-ms.openlocfilehash: 4118f526af1e02982f181dba9e86f8ce5b806fbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 913bc86af034645b4b8cf3d69da4c9def58fc19c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612166"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732839"
 ---
 # <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Nasıl yapılır: Bir Windows Forms Uygulamasında HTML Belge Görüntüleyicisi Oluşturma
-Kullanabileceğiniz <xref:System.Windows.Forms.WebBrowser> görüntülemek ve bir Internet Web tarayıcısı tam işlevselliğini sağlamadan HTML belge yazdırma için denetimi. HTML biçimlendirme özelliklerinden yararlanmak istiyorsanız ancak kullanıcılarınızın güvenilmeyen Web denetimleri veya kötü amaçlı kod içerebilecek isteğe bağlı Web sayfalarını yüklemek istemiyorsanız bu yararlı olur. Yeteneğini kısıtlamak isteyebilirsiniz <xref:System.Windows.Forms.WebBrowser> denetimi bu şekilde, örneğin, bir HTML e-posta görüntüleyici olarak kullanın veya uygulamanızda HTML biçimli Yardım sağlamak için.  
+<xref:System.Windows.Forms.WebBrowser> denetimini, bir Internet Web tarayıcısının tüm işlevselliğini sağlamaksızın HTML belgelerini görüntüleyip yazdırmak için kullanabilirsiniz. Bu, HTML 'nin biçimlendirme özelliğinden yararlanmak istediğinizde, ancak kullanıcılarınızın güvenilmeyen Web denetimleri veya olası kötü amaçlı betik kodu içerebilen rastgele Web sayfaları yüklemesini istemediğinizde yararlıdır. <xref:System.Windows.Forms.WebBrowser> denetimin yeteneklerini bu şekilde kısıtlamak isteyebilirsiniz, örneğin, bunu bir HTML e-posta Görüntüleyicisi olarak kullanmak veya uygulamanızda HTML biçimli yardım sağlamak için kullanabilirsiniz.  
   
-### <a name="to-create-an-html-document-viewer"></a>Bir HTML belge Görüntüleyicisi oluşturma  
+### <a name="to-create-an-html-document-viewer"></a>HTML belge Görüntüleyicisi oluşturmak için  
   
-1. Ayarlama <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> özelliğini `false` önlemek için <xref:System.Windows.Forms.WebBrowser> sürüklediğinizde bırakılan dosyaları açma denetimi.  
+1. <xref:System.Windows.Forms.WebBrowser> denetiminin bu dosya üzerinde bırakılan dosyaları açmasını engellemek için <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> özelliğini `false` olarak ayarlayın.  
   
      [!code-csharp[WebBrowserMisc#20](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#20)]
      [!code-vb[WebBrowserMisc#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#20)]  
   
-2. Ayarlama <xref:System.Windows.Forms.WebBrowser.Url%2A> özelliğini görüntülenecek ilk dosyasının konumu.  
+2. <xref:System.Windows.Forms.WebBrowser.Url%2A> özelliğini görüntülenecek ilk dosyanın konumuna ayarlayın.  
   
      [!code-csharp[WebBrowserMisc#21](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#21)]
      [!code-vb[WebBrowserMisc#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#21)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- A <xref:System.Windows.Forms.WebBrowser> adlı Denetim `webBrowser1`.  
+- `webBrowser1`adlı <xref:System.Windows.Forms.WebBrowser> denetim.  
   
-- Başvurular `System` ve `System.Windows.Forms` derlemeler.  
+- `System` ve `System.Windows.Forms` derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -45,5 +46,5 @@ Kullanabileceğiniz <xref:System.Windows.Forms.WebBrowser> görüntülemek ve bi
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
 - [WebBrowser Denetimine Genel Bakış](webbrowser-control-overview.md)
 - [WebBrowser Güvenliği](webbrowser-security.md)
-- [Nasıl yapılır: WebBrowser denetimi ile URL'ye gitme](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Nasıl yapılır: WebBrowser denetimi ile yazdırma](how-to-print-with-a-webbrowser-control.md)
+- [Nasıl yapılır: WebBrowser Denetimi ile URL'ye Gitme](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Nasıl yapılır: Bir WebBrowser Denetimi ile Yazdırma](how-to-print-with-a-webbrowser-control.md)

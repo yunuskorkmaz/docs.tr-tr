@@ -1,5 +1,5 @@
 ---
-title: WPF topluluğu geri bildirimi
+title: Topluluk kaynakları
 ms.date: 03/01/2018
 helpviewer_keywords:
 - community resources [WPF]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ebeae3e51cedd3add2de4062c8914693ac94f7b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a9e903045195d6f464659876334f7fedc5c695e9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197000"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733801"
 ---
 # <a name="wpf-community-feedback"></a>WPF topluluğu geri bildirimi
 
@@ -80,7 +80,7 @@ Bir hata hakkında gönderi gönderdiğinizde, ilgili olan yerlerde aşağıdaki
 - Hatanın sürekli olarak tekrarlanabilir olup olmadığını bahsetme.
 - İlgili özel durum bilgilerini ekleyin.
 
- Hata yükleme veya kurma ise, ilgili yükleme günlüklerini ve anlık görüntülerini ("dd_" önekini ön eki olan dosyalar,% Temp% klasöründe bulunur) ekleyin.
+ Hata yükleme veya kurulum ile ilgili yükleme günlüklerini ve anlık görüntülerini ("dd_" ön ekine sahip olan dosyaları% Temp% klasöründe bulunur) ekleyin.
 
  Derleme veya yapı sorunları için, Derleme günlüklerini iliştirin. MSBuild sistemi, komut satırından/v: anahtarını kullanarak veya Visual Studio gibi bir tümleşik geliştirme ortamından (IDE) uygun düzeyi yapılandırarak çeşitli verbosities ile günlüğe kaydetmeyi destekleyecek şekilde yapılandırılabilir.
 
@@ -104,7 +104,7 @@ Hatalar, uygulamalarınızı geliştirmek ve derlemek için kullanılan araçlar
   - MSBuild
   - İfade Grafik Tasarımcısı
   - İfade etkileşimli tasarımcı
-  - Visual Studio
+  - {1&gt;Visual Studio&lt;1}
 - Çözüm yapılandırması, örneğin:
   - Bir çözüm
   - Tek bir proje

@@ -1,5 +1,5 @@
 ---
-title: MonthCalendar Denetimine Genel Bakış (Windows Forms)
+title: MonthCalendar Denetimine Genel Bakış
 ms.date: 03/30/2017
 f1_keywords:
 - MonthCalendar
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - calendar controls [Windows Forms], Windows Forms
 - MonthCalendar control [Windows Forms], setting the first day of the week
 ms.assetid: 788c5325-b721-44ec-95bf-9b680ba0f6a2
-ms.openlocfilehash: 8928a78735392920d893661c70554bd35eba2886
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9b56164339d03b380a564b21855f6d94ec06af5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768491"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734932"
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>MonthCalendar Denetimine Genel Bakış (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetimi görüntülemek ve tarih bilgisini ayarlamak kullanıcılar için sezgisel bir grafik arabirim sağlar. Bir Takvim denetimi görüntüler: ayın sütunlarındaki haftanın günlerini seçili vurgulanmış tarih aralığı ile altında düzenlenmiş numaralı gün içeren bir kılavuz. Farklı bir ay, aylık resim yazısı her iki tarafındaki oka düğmelere tıklayarak seçebilirsiniz. Benzer aksine <xref:System.Windows.Forms.DateTimePicker> denetimi, bu denetimi ile birden fazla tarih seçebilirsiniz. Hakkında daha fazla bilgi için <xref:System.Windows.Forms.DateTimePicker> denetlemek için bkz: [DateTimePicker denetimi](datetimepicker-control-windows-forms.md).  
+Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetimi, kullanıcıların tarih bilgilerini görüntülemesi ve ayarlaması için sezgisel bir grafik arabirimi sunar. Denetimde bir takvim görüntülenir: seçilen tarih aralığı vurgulanmış şekilde, haftanın günleri altındaki sütunlarda düzenlenmiş, ayın numaralandırılmış günlerini içeren bir kılavuz. Ay başlığının her iki tarafındaki ok düğmelerine tıklayarak farklı bir ay seçebilirsiniz. Benzer <xref:System.Windows.Forms.DateTimePicker> denetiminden farklı olarak, bu denetimle birden fazla tarih seçebilirsiniz. <xref:System.Windows.Forms.DateTimePicker> denetimi hakkında daha fazla bilgi için bkz. [DateTimePicker denetimi](datetimepicker-control-windows-forms.md).  
   
-## <a name="configuring-the-monthcalendar-control"></a>MonthCalendar denetimi yapılandırma  
- <xref:System.Windows.Forms.MonthCalendar> Denetimin görünümü, yüksek oranda yapılandırılabilir. Varsayılan olarak, bugünün tarihini daire içinde olarak görüntülenir ve kılavuz alt kısmında da belirtilir. Bu özellik ayarlayarak değiştirebilirsiniz <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> ve <xref:System.Windows.Forms.MonthCalendar.ShowTodayCircle%2A> özelliklerine `false`. Ayarlayarak takvime hafta sayıları ekleyebilirsiniz <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> özelliğini `true`. Ayarlayarak <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A> özelliği, birden çok ay yatay ve dikey olarak görüntülenen sahip olabilir. Varsayılan olarak, Pazar haftanın ilk günü gösterilir, ancak herhangi bir gün kullanarak belirlenebilir <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A> özelliği.  
+## <a name="configuring-the-monthcalendar-control"></a>MonthCalendar denetimini yapılandırma  
+ <xref:System.Windows.Forms.MonthCalendar> denetiminin görünümü yüksek oranda yapılandırılabilir. Varsayılan olarak, bugünün tarihi daire içinde görüntülenir ve kılavuzun alt kısmında de belirtilmiştir. <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> ve <xref:System.Windows.Forms.MonthCalendar.ShowTodayCircle%2A> özelliklerini `false`olarak ayarlayarak bu özelliği değiştirebilirsiniz. Ayrıca, <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> özelliğini `true`olarak ayarlayarak takvime hafta numaraları ekleyebilirsiniz. <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A> özelliğini ayarlayarak, yatay ve dikey olarak birden fazla ay görüntülenmiş olabilir. Varsayılan olarak, Pazar haftanın ilk günü olarak gösterilir, ancak <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A> özelliği kullanılarak herhangi bir gün belirlenebilir.  
   
- Ayrıca belirli tarihleri görüntülenecek ekleyerek bir seferliğine yıllık veya aylık olarak kalın ayarlayabilirsiniz <xref:System.DateTime> nesneleri için <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, ve <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> özellikleri. Daha fazla bilgi için [nasıl yapılır: Windows ile belirli günleri kalın olarak görüntüleme Forms MonthCalendar denetiminde](display-specific-days-in-bold-with-wf-monthcalendar-control.md).  
+ Ayrıca, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>ve <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> özelliklerine <xref:System.DateTime> nesneleri ekleyerek belirli tarihleri tek seferlik, yılda veya ayda kalın olarak görüntülenmek üzere ayarlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms MonthCalendar denetimiyle belirli günleri kalın olarak görüntüleme](display-specific-days-in-bold-with-wf-monthcalendar-control.md).  
   
- Anahtar özelliği <xref:System.Windows.Forms.MonthCalendar> denetimi <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, denetim içinde seçilen tarih aralığı. <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> Kümesinde seçilebilir gün sayısı değeri aşamaz <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> özelliği. Kullanıcı seçebilir erken ve en son tarihlerini tarafından belirlenen <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> ve <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> özellikleri.  
+ <xref:System.Windows.Forms.MonthCalendar> denetiminin anahtar özelliği <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, denetimde seçilen tarih aralığıdır. <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> değeri, en fazla seçilecek gün sayısını aşamaz, <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> özelliğinde ayarlanır. Kullanıcının seçim yaptığı en erken ve en son tarihler <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> ve <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> özellikleri tarafından belirlenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

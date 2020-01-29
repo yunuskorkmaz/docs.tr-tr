@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 7e84da784d34be1646df982fa2594764d43d99dd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: fa30deb16be323f059aa0ec12df08793598a6da2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966881"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738353"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamalarında verilerle çalışma
 
@@ -385,10 +385,9 @@ Web uygulamalarında, her Web isteği mümkün olan en kısa sürede tamamlanmal
 ASP.NET Core iki yanıt önbelleği düzeyini destekler. İlk düzey sunucu üzerinde herhangi bir şeyi önbelleğe almaz, ancak istemcilerin ve proxy sunucularının yanıtları önbelleğe almasını sağlayan HTTP üstbilgileri ekler. Bu, bireysel denetleyicilere veya eylemlere ResponseCache özniteliği eklenerek uygulanır:
 
 ```csharp
-    [ResponseCache(Duration = 60)]
-    public IActionResult Contact()
-    { }
-
+[ResponseCache(Duration = 60)]
+public IActionResult Contact()
+{
     ViewData["Message"] = "Your contact page.";
     return View();
 }

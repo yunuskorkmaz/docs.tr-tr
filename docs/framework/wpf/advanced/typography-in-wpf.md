@@ -1,15 +1,15 @@
 ---
-title: WPF'de Tipografi
+title: Tipografi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0c98d0e7363e7732f44f2edf238b9cb6d2bf11fb
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3d94873931e3ee6df780df214f508258aa07a791
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740282"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735538"
 ---
 # <a name="typography-in-wpf"></a>WPF'de Tipografi
 Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]'in önemli tipografik özelliklerini tanıtır. Bu özellikler, metin işleme, OpenType tipografi desteği, gelişmiş uluslararası metin, gelişmiş yazı tipi desteği ve yeni metin uygulama programlama arabirimleri (API 'Ler) için geliştirilmiş kalite ve performans içerir.  

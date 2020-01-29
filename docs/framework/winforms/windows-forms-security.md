@@ -1,5 +1,5 @@
 ---
-title: Windows Forms Güvenliği
+title: Güvenlik
 ms.date: 03/30/2017
 helpviewer_keywords:
 - designer access security [Windows Forms]
@@ -9,53 +9,53 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-ms.openlocfilehash: f64d5ef2e9bb0e977b4c007e8c5109ac0c331a84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3debf487b9b2a04277d9ce3007f28662fa4899e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799378"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734497"
 ---
 # <a name="windows-forms-security"></a>Windows Forms Güvenliği
-Windows Forms (kod tabanlı güvenlik düzeyleri kod, kodu çalıştıran kullanıcının bağımsız olarak ayarlanır) bir güvenlik modeli sunar. Bu bilgisayar sisteminizin üzerinde zaten bir yerde olabilir herhangi bir güvenlik şemaları ek niteliğindedir. Bunlar tarayıcı (örneğin, bölgeye göre güvenlik Internet Explorer'da kullanılabilir) veya işletim sistemi (örneğin, Windows NT kimlik tabanlı güvenlik) de içerebilir.  
+Windows Forms, kod tabanlı bir güvenlik modeline sahiptir (kodu çalıştıran kullanıcı ne olursa olsun, kod için güvenlik düzeyleri ayarlanır). Bu, daha önce bilgisayar sisteminizde yer alan herhangi bir güvenlik şemasına ek niteliğindedir. Bunlar tarayıcıda (Internet Explorer 'da bulunan bölge tabanlı güvenlik gibi) veya işletim sistemi (Windows NT 'nin kimlik bilgileri tabanlı güvenliği gibi) içerebilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Windows Forms'ta Güvenliğe Genel Bakış](security-in-windows-forms-overview.md)  
- .NET Framework güvenlik modeli ve uygulamanızın Windows Forms'ta sağlamak için gerekli temel adımlar güvenli kısaca açıklanmaktadır.  
+ .NET Framework güvenlik modelini ve uygulamanızdaki Windows Forms güvende olmasını sağlamak için gereken temel adımları kısaca açıklar.  
   
  [Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi](more-secure-file-and-data-access-in-windows-forms.md)  
- Dosyaları ve verileri kısmen güvenilir bir ortamda nasıl açıklar.  
+ Yarı güvenilir bir ortamda dosya ve verilere nasıl erişebileceğinizi açıklar.  
   
  [Windows Forms'ta Daha Güvenli Yazdırma](more-secure-printing-in-windows-forms.md)  
- Yarı güvenilir bir ortamda yazdırma özelliklerine erişmek nasıl açıklar.  
+ Yarı güvenilir bir ortamda yazdırma özelliklerine nasıl erişebileceğinizi açıklar.  
   
  [Windows Forms'ta Ek Güvenlik Konuları](additional-security-considerations-in-windows-forms.md)  
- Pano'yu kullanıyor ve yönetilmeyen kod kısmen güvenilen bir ortamda aramaların gerçekleştirme penceresi işleme açıklar.  
+ Pencere işleme, Panoyu kullanma ve yarı güvenilir bir ortamda yönetilmeyen koda çağrı yapma işlemlerini açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Varsayılan güvenlik ilkesi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))  
- Tam güven, yerel Intranet ve İnternet'e izin kümeleri, verilen varsayılan izinleri listeler.  
+ [Varsayılan Güvenlik Ilkesi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))  
+ Tam güven, yerel Intranet ve Internet izin kümelerinde verilen varsayılan izinleri listeler.  
   
- [Genel Güvenlik İlkesi Yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))  
- .NET Framework Güvenlik İlkesi Yönetimi ve izinleri yükseltme hakkında bilgi verir.  
+ [Genel Güvenlik Ilkesi yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))  
+ .NET Framework güvenlik ilkesini yönetme ve izinleri yükseltme hakkında bilgi verir.  
   
- [Tehlikeli izinler ve ilke yönetimi](../misc/dangerous-permissions-and-policy-administration.md)  
- Bazı olası circumvented güvenlik sistemi izin verebilirsiniz.NET Framework izinleri açıklar.  
+ [Tehlikeli Izinler ve Ilke yönetimi](../misc/dangerous-permissions-and-policy-administration.md)  
+ Güvenlik sisteminin atlalanmasına izin verebilecek the.NET Framework izinlerinden bazılarını açıklar.  
   
  [Güvenli Kodlama Yönergeleri](../../standard/security/secure-coding-guidelines.md)  
- Kodu .NET Framework karşı güvenli bir şekilde yazmak için en iyi açıklayan konulara bağlantılar sağlar.  
+ .NET Framework karşı güvenli bir şekilde kod yazmak için en iyi uygulamaları açıklayan konuların bağlantıları.  
   
- [İzinler isteyen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))  
- Kodunuzu çalıştırmak için gereken izinleri bilmeniz çalışma zamanının özniteliklerin kullanmayı açıklar.  
+ [Izin isteme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))  
+ Çalışma zamanının, kodunuzun hangi izinleri çalıştırması gerektiğini bilmesini sağlamak için özniteliklerin kullanımını açıklar.  
   
  [Temel Güvenlik Kavramları](../../standard/security/key-security-concepts.md)  
- Kod güvenliği temel özelliklerini kapsayan konulara bağlantılar.  
+ Kod güvenliğinin temel yönlerini kapsayan konuların bağlantıları.  
   
- [Kod erişimi güvenliği temelleri](../misc/code-access-security-basics.md)  
- Çalıştırma zamanında güvenlik ilkesi .NET Framework ile çalışmanın temelleri açıklanır.  
+ [Kod erişim güvenliği temelleri](../misc/code-access-security-basics.md)  
+ .NET Framework çalıştırma zamanı güvenlik ilkesiyle çalışma hakkında temel bilgileri açıklar.  
   
- [Güvenlik ilkesini değiştirmek ne zaman belirleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xky659fc(v=vs.100))  
- Uygulamalarınızı varsayılan güvenlik ilkesinden ayırmak gerektiğinde olmadığının nasıl belirleneceğini açıklar.  
+ [Güvenlik Ilkesinin ne zaman değiştirileceğini belirleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xky659fc(v=vs.100))  
+ Uygulamalarınızın varsayılan güvenlik ilkesinden ne zaman yönlendirilme ihtiyacı olduğunu nasıl belirleyebileceğinizi açıklar.  
   
- [Güvenlik İlkesi dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/13wcxx6y(v=vs.100))  
- Güvenlik İlkesi değişikliklerini dağıtmak için en iyi şekilde açıklar.
+ [Güvenlik Ilkesi dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/13wcxx6y(v=vs.100))  
+ Güvenlik İlkesi değişikliklerinin dağıtılmasının en iyi şekilde anlatılmaktadır.

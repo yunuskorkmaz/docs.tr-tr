@@ -2,12 +2,12 @@
 title: Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-ms.openlocfilehash: f4c51dc269775d14d395cb464b3787cc987e086d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e74d34693446cca645003a9f93bc1777849e3182
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128137"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738412"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu
 
@@ -39,27 +39,69 @@ Kök öğesi, [yönergeleri](directives-element-net-native.md) öğesidir. Aşa�
 
 Başvuru bilgileri için aşağıdaki yapıdaki öğeleri seçin veya [çalışma zamanı yönerge öğelerini](runtime-directive-elements.md)görüntüleyin. Aşağıdaki hiyerarşide üç nokta özyinelemeli bir yapıyı işaret ediyor. Köşeli ayraçlar içindeki bilgiler, bu öğenin isteğe bağlı veya gerekli olduğunu ve kullanılıp kullanılmadığını, kaç örneğe (bir veya daha fazla) izin verildiğini gösterir.
 
-[Yönergeler](directives-element-net-native.md) [1:1] [uygulama](application-element-net-native.md) [0:1] [derleme](assembly-element-net-native.md) [0: d] [ad alanı](namespace-element-net-native.md) [0: d]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[0: d] [yazın](type-element-net-native.md) . biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Ad alanı](namespace-element-net-native.md) [0: d] [ad alanı](namespace-element-net-native.md) [0: d]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[0: d] [yazın](type-element-net-native.md) . biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[[0](type-element-net-native.md) : d] alt [türleri](subtypes-element-net-native.md) (kapsayan tür alt sınıfları) [o:1] [türü](type-element-net-native.md) [0: ı]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Attributemethod](attributeimplies-element-net-native.md) (tür bir öznitelik) [O:1] [genericparameter](genericparameter-element-net-native.md) [0: d] [metot](method-element-net-native.md) [0: ı] [parametre](parameter-element-net-native.md) [0: d] [typeparameter](typeparameter-element-net-native.md) [0: ı] [genericparameter](genericparameter-element-net-native.md) [0: d] [methodörneklemesi](methodinstantiation-element-net-native.md) ( oluşturulan genel yöntem) [0: d] [özellik](property-element-net-native.md) [0: d] [alan](field-element-net-native.md) [0: d] [olay](event-element-net-native.md) [0: d] [typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: d] [tür](type-element-net-native.md) [0: d]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Yöntem](method-element-net-native.md) [0: d] [parametre](parameter-element-net-native.md) [0: d] [typeparameter](typeparameter-element-net-native.md) [0: d] [Genericparameter](genericparameter-element-net-native.md) [0: d] [Methodörneklemesi](methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: d] [özellik](property-element-net-native.md) [0: d] [alan](field-element-net-native.md) [0: d] [olay](event-element-net-native.md) [0: d] [ Kitaplık](library-element-net-native.md) [0: d] [bütünleştirilmiş kod](assembly-element-net-native.md) [0: d] [ad alanı](namespace-element-net-native.md) [0: d]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[0: d] [yazın](type-element-net-native.md) . biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Ad alanı](namespace-element-net-native.md) [0: d] [ad alanı](namespace-element-net-native.md) [0: d]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[0: d] [yazın](type-element-net-native.md) . biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[[0](type-element-net-native.md) : d] alt [türleri](subtypes-element-net-native.md) (kapsayan tür alt sınıfları) [o:1] [türü](type-element-net-native.md) [0: ı]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Attributemethod](attributeimplies-element-net-native.md) (tür bir öznitelik) [O:1] [genericparameter](genericparameter-element-net-native.md) [0: d] [yöntemi](method-element-net-native.md) [0: d] [methodörneklemesi](methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: d] [özellik](property-element-net-native.md) [0: d] [alan](field-element-net-native.md) [0: ı] [olay](event-element-net-native.md) [0 : N] [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: d] [tür](type-element-net-native.md) [0: d]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Yöntem](method-element-net-native.md) [0: d] [methodörneklemesi](methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: d] [özellik](property-element-net-native.md) [0: d] [alan](field-element-net-native.md) [0: d] [olay](event-element-net-native.md) [0: d]
+- [Yönergeler](directives-element-net-native.md) [1:1]
+  - [Uygulama](application-element-net-native.md) [0:1]
+    - [Derleme](assembly-element-net-native.md) [0: d]
+      - [Ad alanı](namespace-element-net-native.md) [0: d]. . .
+      - [0: d] [yazın](type-element-net-native.md) . . .
+      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. . .
+    - [Ad alanı](namespace-element-net-native.md) [0: d]
+      - [Ad alanı](namespace-element-net-native.md) [0: d]. . .
+      - [0: d] [yazın](type-element-net-native.md) . . .
+      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. . .
+    - [Tür](type-element-net-native.md) [0: d]
+      - Alt [türler](subtypes-element-net-native.md) (kapsayan türün alt sınıfları) [o:1]
+      - [0: d] [yazın](type-element-net-native.md) . . .
+      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. . .
+      - [Attributeme](attributeimplies-element-net-native.md) (tür içeren bir öznitelik) [o:1]
+      - [Genericparameter](genericparameter-element-net-native.md) [0: d]
+      - [Yöntem](method-element-net-native.md) [0: d]
+        - [Parametre](parameter-element-net-native.md) [0: d]
+        - [Typeparameter](typeparameter-element-net-native.md) [0: d]
+        - [Genericparameter](genericparameter-element-net-native.md) [0: d]
+      - [Methodörneklemesi](methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a]
+      - [Özellik](property-element-net-native.md) [0: d]
+      - [Alan](field-element-net-native.md) [0: d]
+      - [Olay](event-element-net-native.md) [0: d]
+    - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: d]
+      - [0: d] [yazın](type-element-net-native.md) . . .
+      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. . .
+      - [Yöntem](method-element-net-native.md) [0: d]
+        - [Parametre](parameter-element-net-native.md) [0: d]
+        - [Typeparameter](typeparameter-element-net-native.md) [0: d]
+        - [Genericparameter](genericparameter-element-net-native.md) [0: d]
+      - [Methodörneklemesi](methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a]
+      - [Özellik](property-element-net-native.md) [0: d]
+      - [Alan](field-element-net-native.md) [0: d]
+      - [Olay](event-element-net-native.md) [0: d]
+  - [Kitaplık](library-element-net-native.md) [0: d]
+    - [Derleme](assembly-element-net-native.md) [0: d]
+      - [Ad alanı](namespace-element-net-native.md) [0: d]. . .
+      - [0: d] [yazın](type-element-net-native.md) . . .
+      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. . .
+    - [Ad alanı](namespace-element-net-native.md) [0: d]
+      - [Ad alanı](namespace-element-net-native.md) [0: d]. . .
+      - [0: d] [yazın](type-element-net-native.md) . . .
+      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. . .
+    - [Tür](type-element-net-native.md) [0: d]
+      - Alt [türler](subtypes-element-net-native.md) (kapsayan türün alt sınıfları) [o:1]
+      - [0: d] [yazın](type-element-net-native.md) . . .
+      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. . .
+      - [Attributeme](attributeimplies-element-net-native.md) (tür içeren bir öznitelik) [o:1]
+      - [Genericparameter](genericparameter-element-net-native.md) [0: d]
+      - [Yöntem](method-element-net-native.md) [0: d]
+      - [Methodörneklemesi](methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a]
+      - [Özellik](property-element-net-native.md) [0: d]
+      - [Alan](field-element-net-native.md) [0: d]
+      - [Olay](event-element-net-native.md) [0: d]
+    - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: d]
+      - [0: d] [yazın](type-element-net-native.md) . . .
+      - [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulmuş genel tür) [0: a]. . .
+      - [Yöntem](method-element-net-native.md) [0: d]
+      - [Methodörneklemesi](methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a]
+      - [Özellik](property-element-net-native.md) [0: d]
+      - [Alan](field-element-net-native.md) [0: d]
+      - [Olay](event-element-net-native.md) [0: d]
 
 [Uygulama](application-element-net-native.md) öğesinin hiç özniteliği olamaz veya [çalışma zamanı yönergesinde ve ilke bölümünde](#Directives)ele alınan ilke özniteliklerine sahip olabilir.
 
@@ -84,7 +126,7 @@ Bir [kitaplık](library-element-net-native.md) öğesi, dosya uzantısı olmadan
 
 Bir öğenin özniteliği tarafından belirtilen herhangi bir ilke, bu ilke için bir değer belirtmeyen tüm alt öğeler için geçerlidir. Örneğin, bir ilke bir [tür](type-element-net-native.md) öğesiyle belirtilmişse, bu ilke, bir ilkenin açıkça belirtilmediği tüm içerilen türler ve Üyeler için geçerlidir.
 
-[Uygulama](application-element-net-native.md), [derleme](assembly-element-net-native.md), [attributeby](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), alt [türler](subtypes-element-net-native.md)ve [tür](type-element-net-native.md) öğeleri tarafından ifade edilen ilke, ayrı Üyeler için ifade edilebilir ilkeden farklıdır ( [Yöntemi](method-element-net-native.md), [özelliği](property-element-net-native.md), [alanı](field-element-net-native.md)ve [olay](event-element-net-native.md) öğeleri).
+[Uygulama](application-element-net-native.md), [derleme](assembly-element-net-native.md), [attributeby](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), alt [türler](subtypes-element-net-native.md)ve [tür](type-element-net-native.md) öğeleri tarafından Ifade edilen ilke, ayrı Üyeler Için ifade edilebilir ilkeden farklıdır ( [Yöntem](method-element-net-native.md), [özellik](property-element-net-native.md), [alan](field-element-net-native.md)ve [olay](event-element-net-native.md) öğeleri tarafından).
 
 ### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>Derlemeler, ad alanları ve türler için ilke belirtme
 
@@ -108,7 +150,7 @@ Bir öğenin özniteliği tarafından belirtilen herhangi bir ilke, bu ilke içi
 
 - `MarshalDelegate`. Temsilci türlerini yerel koda işlev işaretçileri olarak hazırlama ilkesini denetler.
 
-- `MarshalStructure`. Yapıları yerel koda hazırlama ilkesini denetler.
+- `MarshalStructure` . Yapıları yerel koda hazırlama ilkesini denetler.
 
 Bu ilke türleriyle ilişkili ayarlar şunlardır:
 

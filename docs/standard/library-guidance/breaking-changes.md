@@ -2,12 +2,12 @@
 title: Son değişiklikler ve .NET kitaplıkları
 description: .NET kitaplıkları oluştururken önemli değişikliklere gidilme için en iyi yöntem önerileri.
 ms.date: 10/02/2018
-ms.openlocfilehash: 8536662ae1cd9733efbcc0c6526bd69d34a13177
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740989"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731471"
 ---
 # <a name="breaking-changes"></a>Yeni değişiklikler
 
@@ -25,11 +25,11 @@ Bir kitaplığın .NET topluluğu tarafından nasıl kullanıldığı, Son Kulla
 
   Üst düzey kitaplıklara doğrudan bir son kullanıcı uygulamasında başvurulur. Önemli değişiklikler gerçekleşirse, geliştirici en son sürüme güncelleştirmeyi seçebilir veya uygulamasını, son değişiklikle çalışacak şekilde değiştirebilir.
 
-**✔️** , kitaplığınızın nasıl kullanılacağını düşünün. Hangi etkilerden oluşan uygulamalar ve kitaplıklarda yapılan değişiklikler ne etkiler?
+✔️, kitaplığınızın nasıl kullanılacağını düşünün. Hangi etkilerden oluşan uygulamalar ve kitaplıklarda yapılan değişiklikler ne etkiler?
 
-düşük düzey bir .NET kitaplığı geliştirilirken, önemli değişiklikleri en aza indirir **✔️** .
+düşük düzey bir .NET kitaplığı geliştirilirken, önemli değişiklikleri en aza indirir ✔️.
 
-**✔️** yeni bir NuGet paketi olarak bir kitaplığın büyük bir yeniden yazmayı yayımlamayı düşünün.
+✔️ Yeni bir NuGet paketi olarak bir kitaplığın büyük bir yeniden yazmayı yayımlamayı düşünün.
 
 ## <a name="types-of-breaking-changes"></a>Son değişiklik türleri
 
@@ -56,7 +56,7 @@ Davranış değişiklikleri en yaygın Son değişiklik türüdür: neredeyse he
 
 Örneğin, ASP.NET Core MVC, `MvcOptions`etkinleştirilmiş ve devre dışı bırakılan özellikleri değiştiren bir [Uyumluluk sürümü](/aspnet/core/mvc/compatibility-version) kavramıdır.
 
-**✔️** , mevcut kullanıcıları etkiliyorsa ve geliştiricilerin özelliği bir ayarla birlikte kabul etmelerine izin vermek için yeni özellikleri varsayılan olarak devre dışı bırakmayı düşünün.
+✔️, mevcut kullanıcıları etkiliyorsa ve geliştiricilerin özelliği bir ayarla birlikte kabul etmelerine izin vermek için yeni özellikleri varsayılan olarak devre dışı bırakmayı düşünün.
 
 ### <a name="binary-breaking-change"></a>İkili Son değişiklik
 
@@ -64,15 +64,15 @@ Kitaplığınızın genel API 'sini değiştirdiğiniz zaman ikili bir değişik
 
 İkili bir son değişiklik, **tüm bir derlemeyi**de kesebilir. Bir derlemeyi `AssemblyName` olarak yeniden adlandırmak derlemenin kimliğini değiştirecek, bu da derlemenin tanımlayıcı adlandırma anahtarını ekler, kaldırır veya değiştirir. Bir derlemenin kimliğinin değişikliği, kendisini kullanan tüm derlenmiş kodları keser.
 
-**❌** bir derleme adını değiştirmez.
+❌ bir derleme adını değiştirmez.
 
-**❌** tanımlayıcı adlandırma anahtarını ekleme, kaldırma veya değiştirme.
+❌ tanımlayıcı adlandırma anahtarını ekleme, kaldırma veya değiştirme.
 
-✔️, arabirimler yerine soyut temel sınıflar kullanmayı **göz önünde bulundurun** .
+✔️, arabirimler yerine soyut temel sınıflar kullanmayı göz önünde bulundurun.
 
 > Bir arabirime herhangi bir şey eklemek, onu uygulayan varolan türlerin başarısız olmasına neden olur. Soyut temel sınıf, varsayılan bir sanal uygulama eklemenize olanak tanır.
 
-✔️ kaldırmak istediğiniz türlere ve üyelere <xref:System.ObsoleteAttribute> yerleştirmeyi **göz önünde bulundurun** . Öznitelik, artık kullanılmayan API 'yi kullanmayacak şekilde kodu güncelleştirme yönergelerine sahip olmalıdır.
+✔️ kaldırmak istediğiniz türlere ve üyelere <xref:System.ObsoleteAttribute> yerleştirmeyi göz önünde bulundurun. Öznitelik, artık kullanılmayan API 'yi kullanmayacak şekilde kodu güncelleştirme yönergelerine sahip olmalıdır.
 
 > <xref:System.ObsoleteAttribute> türleri ve yöntemleri çağıran kod, özniteliğe sağlanan iletiyle birlikte bir yapı uyarısı oluşturur. Uyarılar, kullanımdan kalkmış API 'nin kaldırılması için eski API yüzey süresini kullanan kişilere, çoğu zaman artık bunu kullanmayabilmesini sağlar.
 
@@ -92,7 +92,7 @@ public class Document
 }
 ```
 
-✔️, düşük ve orta düzeyde kitaplıklarda, <xref:System.ObsoleteAttribute> ile türleri ve yöntemleri süresiz olarak tutmayı **göz önünde bulundurun** .
+✔️, düşük ve orta düzeyde kitaplıklarda, <xref:System.ObsoleteAttribute> ile türleri ve yöntemleri süresiz olarak tutmayı göz önünde bulundurun.
 
 > API 'Lerin kaldırılması ikili bir son değişiklik olur. Eski türlerin ve yöntemlerin saklanması düşük maliyetlidir ve kitaplığınıza çok sayıda teknik borç eklemez. Türlerin ve yöntemlerin kaldırılmaması, yukarıda belirtilen en kötü durum senaryolarından kaçınmaya yardımcı olabilir.
 

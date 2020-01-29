@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: f5d709a35e160a8b03ac59e52f7bcb46196a3ce4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b883012cf8f72247ff4e0b47a46eee1854e2d534
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705294"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735652"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Özel Durumlar ve Özel Durum İşleme (C# Programlama Kılavuzu)
 
@@ -25,7 +25,7 @@ Bu örnekte, bir yöntem sıfıra bölme için test eder ve hatayı yakalar. Öz
 
 ## <a name="exceptions-overview"></a>Özel durumlara genel bakış
 
-Özel durumlar aşağıdaki özelliklere sahiptir:  
+Özel durumlar aşağıdaki özelliklere sahiptir:
 
 - Özel durumlar, sonuçta `System.Exception`türetilen türlerdir.
 - Özel durumlar oluşturabilecek deyimler etrafında `try` bloğu kullanın.
@@ -36,7 +36,7 @@ Bu örnekte, bir yöntem sıfıra bölme için test eder ve hatayı yakalar. Öz
 - Özel durumlar, bir program tarafından `throw` anahtar sözcüğü kullanılarak açık bir şekilde oluşturulabilir.
 - Özel durum nesneleri, hata hakkında, çağrı yığınının durumu ve hatanın metin açıklaması gibi ayrıntılı bilgiler içerir.
 - Bir özel durum oluşsa bile `finally` bloğundaki kod yürütülür. Kaynakları serbest bırakmak için `finally` bloğu kullanın, örneğin, `try` bloğunda açılan tüm akışları veya dosyaları kapatın.
-- .NET Framework yönetilen özel durumlar, Win32 yapılandırılmış özel durum işleme mekanizmasının üzerine uygulanır. Daha fazla bilgi için, bkz. [yapılandırılmış özel durum işlemeC++(C/)](/cpp/cpp/structured-exception-handling-c-cpp) ve [Win32 yapılandırılmış özel durum işleme derinlikleri üzerinde çökme kursu](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm).
+- .NET Framework yönetilen özel durumlar, Win32 yapılandırılmış özel durum işleme mekanizmasının üzerine uygulanır. Daha fazla bilgi için, bkz. [yapılandırılmış özel durum işlemeC++(C/)](/cpp/cpp/structured-exception-handling-c-cpp) ve [Win32 yapılandırılmış özel durum işleme derinlikleri üzerinde çökme kursu](http://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm).
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
@@ -63,4 +63,4 @@ Daha fazla bilgi için bkz. [ C# dil belirtiminde](/dotnet/csharp/language-refer
 - [try-catch](../../language-reference/keywords/try-catch.md)
 - [try-finally](../../language-reference/keywords/try-finally.md)
 - [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)
-- [Özel Durumlar](../../../standard/exceptions/index.md)
+- [Özel durumlar](../../../standard/exceptions/index.md)

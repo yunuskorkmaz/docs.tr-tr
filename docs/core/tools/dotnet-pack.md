@@ -2,46 +2,46 @@
 title: DotNet paketi komutu
 description: DotNet Pack komutu, .NET Core projeniz için NuGet paketleri oluşturur.
 ms.date: 08/08/2019
-ms.openlocfilehash: 99dd8e35601f82adf2a3101121028f191a4c3da4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 057d1029e5c933912c43c178b6db8a8498f2ed57
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117653"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734113"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**Bu konu şu şekilde geçerlidir: ✓** .NET Core 1. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 1. x SDK ve sonraki sürümleri
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
-`dotnet pack`-Kodu bir NuGet paketine paketler.
+`dotnet pack`-kodu bir NuGet paketine paketler.
 
 ## <a name="synopsis"></a>Özeti
 
 ```dotnetcli
-dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
-    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive]
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable]
     [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 
 ## <a name="description"></a>Açıklama
 
-`dotnet pack` Komut projeyi oluşturur ve NuGet paketleri oluşturur. Bu komutun sonucu bir NuGet paketidir (yani, bir *. nupkg* dosyası). 
+`dotnet pack` komutu projeyi oluşturur ve NuGet paketleri oluşturur. Bu komutun sonucu bir NuGet paketidir (yani, bir *. nupkg* dosyası).
 
 Hata ayıklama sembollerini içeren bir paket oluşturmak istiyorsanız iki seçeneğiniz vardır:
 
-- `--include-symbols`-Bu, semboller paketini oluşturur.
-- `--include-source`-Bu, kaynak dosyaları içeren içindeki bir `src` klasörü içeren semboller paketini oluşturur.
+- `--include-symbols`-bu, semboller paketini oluşturur.
+- `--include-source`-kaynak dosyaları içeren içindeki bir `src` klasörüyle birlikte semboller paketini oluşturur.
 
 Paketlenmiş projenin NuGet bağımlılıkları *. nuspec* dosyasına eklenir, bu nedenle paket yüklenirken düzgün şekilde çözülür. Projeden projeye başvurular proje içinde paketlenmemiş. Şu anda, projeden projeye bağımlılıklar varsa proje başına bir pakete sahip olmanız gerekir.
 
-Varsayılan olarak, `dotnet pack` önce projeyi oluşturur. Bu davranışı önlemek istiyorsanız, `--no-build` seçeneğini geçirin. Bu seçenek genellikle kodun daha önce oluşturulduğunu bildiğiniz sürekli tümleştirme (CI) derleme senaryolarında yararlıdır.
+Varsayılan olarak, `dotnet pack` önce projeyi oluşturur. Bu davranışı önlemek istiyorsanız `--no-build` seçeneğini geçirin. Bu seçenek genellikle kodun daha önce oluşturulduğunu bildiğiniz sürekli tümleştirme (CI) derleme senaryolarında yararlıdır.
 
 Paketleme işlemi için `dotnet pack` komutuna MSBuild özellikleri sağlayabilirsiniz. Daha fazla bilgi için bkz. [NuGet meta veri özellikleri](csproj.md#nuget-metadata-properties) ve [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). [Örnekler](#examples) bölümü, MSBuild-p anahtarının birkaç farklı senaryo için nasıl kullanılacağını gösterir.
 
@@ -77,7 +77,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 - **`--include-source`**
 
-  Çıkış dizinindeki normal NuGet paketlerine ek olarak hata ayıklama sembolleri NuGet paketlerini içerir. Kaynak dosyaları, semboller paketinin içindeki `src` klasörüne dahil edilmiştir.
+  Çıkış dizinindeki normal NuGet paketlerine ek olarak hata ayıklama sembolleri NuGet paketlerini içerir. Kaynak dosyaları, semboller paketinin içindeki `src` klasörüne eklenir.
 
 - **`--include-symbols`**
 
@@ -89,7 +89,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 - **`--no-build`**
 
-  Paketleme öncesinde projeyi oluşturmaz. Ayrıca `--no-restore` bayrağı örtülü olarak ayarlar.
+  Paketleme öncesinde projeyi oluşturmaz. Ayrıca `--no-restore` bayrağını örtülü olarak ayarlar.
 
 - **`--no-dependencies`**
 
@@ -121,7 +121,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`
+  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`ve `diag[nostic]`.
 
 ## <a name="examples"></a>Örnekler
 
@@ -131,25 +131,25 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
   dotnet pack
   ```
 
-- `app1` Projeyi paketleme:
+- `app1` projeyi paketleme:
 
   ```dotnetcli
   dotnet pack ~/projects/app1/project.csproj
   ```
 
-- Projeyi geçerli dizinde paketedin ve elde edilen paketleri `nupkgs` klasörüne yerleştirin:
+- Projeyi geçerli dizinde paketedin ve elde edilen paketleri `nupkgs` klasöre yerleştirin:
 
   ```dotnetcli
   dotnet pack --output nupkgs
   ```
 
-- Geçerli dizindeki `nupkgs` projeyi klasöre paketlayın ve derleme adımını atlayın:
+- Geçerli dizindeki projeyi `nupkgs` klasöre paketlayın ve derleme adımını atlayın:
 
   ```dotnetcli
   dotnet pack --no-build --output nupkgs
   ```
 
-- Projenin sürüm soneki `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` *. csproj* dosyasında olarak yapılandırıldığında, geçerli projeyi paketleyin ve elde edilen paket sürümünü verilen sonek ile güncelleştirin:
+- Projenin sürüm soneki *. csproj* dosyasında `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` olarak yapılandırıldığında, geçerli projeyi paketleyin ve elde edilen paket sürümünü verilen sonek ile güncelleştirin:
 
   ```dotnetcli
   dotnet pack --version-suffix "ci-1234"

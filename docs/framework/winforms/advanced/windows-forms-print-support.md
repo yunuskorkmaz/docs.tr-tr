@@ -1,5 +1,5 @@
 ---
-title: Windows Forms Yazdırma Desteği
+title: Yazdırma desteği
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, printing
@@ -8,57 +8,57 @@ helpviewer_keywords:
 - printing [Windows Forms], Windows Forms, support
 - printing [Windows Forms], print support
 ms.assetid: a4a2960c-eb70-48e2-b641-cfb222704e46
-ms.openlocfilehash: 8e008f2cb4b2f32cdba676e68d9fd790530e2b06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6e8f60db7afe2f1b04eaae6fe71aa93e5c22cae
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011859"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732498"
 ---
 # <a name="windows-forms-print-support"></a>Windows Forms Yazdırma Desteği
-Windows Forms'ta baskı oluşur öncelikle kullanarak [PrintDocument bileşeni](../controls/printdocument-component-windows-forms.md) yazdırmak, kullanıcının etkinleştirmek için bileşen ve [PrintPreviewDialog denetimi](../controls/printpreviewdialog-control-windows-forms.md) denetimi [PrintDialog Bileşen](../controls/printdialog-component-windows-forms.md) ve [PageSetupDialog bileşeni](../controls/pagesetupdialog-component-windows-forms.md) alışmanızı sağlamak için Windows işletim sistemi kullanıcılara tanıdık bir grafik arabirim sağlamak için bileşenler.  
+Windows Forms Yazdırma, öncelikle kullanıcının yazdırmasını sağlamak için [PrintDocument bileşen](../controls/printdocument-component-windows-forms.md) bileşenini ve [Printönizleme iletişim kutusu denetim](../controls/printpreviewdialog-control-windows-forms.md) denetimi, [PrintDialog bileşeni](../controls/printdialog-component-windows-forms.md) ve [PageSetupDialog bileşen](../controls/pagesetupdialog-component-windows-forms.md) bileşenlerini kullanarak Windows işletim sistemine alışkın kullanıcılara tanıdık bir grafik arabirimi sağlar.  
   
- Genellikle, yeni bir örneğini oluşturduğunuz <xref:System.Drawing.Printing.PrintDocument> bileşeni kullanarak yazdırma gerekenler açıklayan özellikleri ayarlamak <xref:System.Drawing.Printing.PrinterSettings> ve <xref:System.Drawing.Printing.PageSettings> sınıfları ve çağrı <xref:System.Drawing.Printing.PrintDocument.Print%2A> gerçekten belge yazdırma için yöntemi.  
+ Genellikle <xref:System.Drawing.Printing.PrintDocument> bileşenin yeni bir örneğini oluşturur, <xref:System.Drawing.Printing.PrinterSettings> ve <xref:System.Drawing.Printing.PageSettings> sınıfları kullanarak neyin yazdırılacağını tanımlayan özellikleri ayarlar ve belgeyi gerçekten yazdırmak için <xref:System.Drawing.Printing.PrintDocument.Print%2A> yöntemini çağırabilirsiniz.  
   
- Windows tabanlı bir uygulama yazdırma süresince <xref:System.Drawing.Printing.PrintDocument> bileşeni iptal uyarı kullanıcıların yazdırma oluştuğunu olgu ve yazdırma işinin izin vermek için bir iptal Yazdır iletişim kutusunu gösterir.  
+ Windows tabanlı bir uygulamadan yazdırma işlemi sırasında, <xref:System.Drawing.Printing.PrintDocument> bileşeni, kullanıcıların yazdırmanın meydana geldiğini ve yazdırma işinin iptal edilmesine izin vermek için bir yazdırmayı iptal et iletişim kutusunu gösterecektir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Standart Windows Forms yazdırma işleri oluşturma](how-to-create-standard-windows-forms-print-jobs.md)  
- Nasıl kullanılacağını açıklar <xref:System.Drawing.Printing.PrintDocument> bir Windows formdan yazdırmak için bileşen.  
+ [Nasıl yapılır: Standart Windows Forms Yazdırma İşleri Oluşturma](how-to-create-standard-windows-forms-print-jobs.md)  
+ <xref:System.Drawing.Printing.PrintDocument> bileşeninin bir Windows formdan yazdırılması için nasıl kullanılacağını açıklar.  
   
- [Nasıl yapılır: Kullanıcı girişi bir printdialog'dan çalışma zamanında yakalama](how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
- Program aracılığıyla kullanarak seçilen yazdırma seçeneklerinin nasıl değiştirileceği açıklanmaktadır <xref:System.Windows.Forms.PrintDialog> bileşeni.  
+ [Nasıl yapılır: Bir PrintDialog'dan Çalışma Zamanında Kullanıcı Girdisi Yakalama](how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
+ Seçilen yazdırma seçeneklerinin <xref:System.Windows.Forms.PrintDialog> bileşeni kullanılarak programlı bir şekilde nasıl değiştirileceği açıklanmaktadır.  
   
- [Nasıl yapılır: Windows Forms'ta bir kullanıcının bilgisayarına bağlanan yazıcıları seçme](how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md)  
- Yazıcıyı kullanarak yazdırılacak değiştirmeyi açıklar <xref:System.Windows.Forms.PrintDialog> çalışma zamanında bileşeni.  
+ [Nasıl yapılır: Windows Forms'ta Bir Kullanıcının Bilgisayarına Bağlanan Yazıcıları Seçme](how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md)  
+ Çalışma zamanında <xref:System.Windows.Forms.PrintDialog> bileşeni kullanılarak yazdırılacak yazıcının değiştirilmesini açıklar.  
   
- [Nasıl yapılır: Windows Forms'ta grafik yazdırma](how-to-print-graphics-in-windows-forms.md)  
- Gönderen grafik yazıcıya açıklar.  
+ [Nasıl yapılır: Windows Forms'ta Grafik Yazdırma](how-to-print-graphics-in-windows-forms.md)  
+ Yazıcıya grafik gönderilmesini açıklar.  
   
- [Nasıl yapılır: Windows Forms'ta çok sayfalı metin dosyası yazdırma](how-to-print-a-multi-page-text-file-in-windows-forms.md)  
- Gönderen metin yazıcı açıklar.  
+ [Nasıl yapılır: Windows Forms'ta Çok Sayfalı Metin Dosyası Yazdırma](how-to-print-a-multi-page-text-file-in-windows-forms.md)  
+ Yazıcıya metin gönderilmesini açıklar.  
   
- [Nasıl yapılır: Tam bir Windows Forms yazdırma işleri](how-to-complete-windows-forms-print-jobs.md)  
- Kullanıcılar bir yazdırma işinin tamamlanması için uyarı açıklanmaktadır.  
+ [Nasıl yapılır: Windows Forms Yazdırma İşlerini Tamamlama](how-to-complete-windows-forms-print-jobs.md)  
+ Kullanıcılara bir yazdırma işinin tamamlanmasına yönelik nasıl uyarı verileceğini açıklar.  
   
- [Nasıl yapılır: Bir Windows formunu yazdırma](how-to-print-a-windows-form.md)  
- Formun geçerli bir kopyasını yazdırmak gösterilmektedir.  
+ [Nasıl yapılır: Bir Windows Formunu Yazdırma](how-to-print-a-windows-form.md)  
+ Geçerli formun bir kopyasının nasıl yazdırılacağını gösterir.  
   
- [Nasıl yapılır: Windows Forms'ta baskı önizlemeyi kullanarak yazdırma](how-to-print-in-windows-forms-using-print-preview.md)  
- Nasıl kullanılacağını gösteren bir <xref:System.Windows.Forms.PrintPreviewDialog> belge yazdırma için.  
+ [Nasıl yapılır: Windows Forms'ta Baskı Önizlemeyi Kullanarak Yazdırma](how-to-print-in-windows-forms-using-print-preview.md)  
+ Belge yazdırmak için <xref:System.Windows.Forms.PrintPreviewDialog> nasıl kullanacağınızı gösterir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [PrintDocument Bileşeni](../controls/printdocument-component-windows-forms.md)  
- Kullanımını açıklayan <xref:System.Drawing.Printing.PrintDocument> bileşeni.  
+ <xref:System.Drawing.Printing.PrintDocument> bileşeninin kullanımını açıklar.  
   
  [PrintDialog Bileşeni](../controls/printdialog-component-windows-forms.md)  
- Kullanımını açıklayan <xref:System.Windows.Forms.PrintDialog> bileşeni.  
+ <xref:System.Windows.Forms.PrintDialog> bileşeninin kullanımını açıklar.  
   
  [PrintPreviewDialog Denetimi](../controls/printpreviewdialog-control-windows-forms.md)  
- Kullanımını açıklayan <xref:System.Windows.Forms.PrintPreviewDialog> denetimi.  
+ <xref:System.Windows.Forms.PrintPreviewDialog> denetiminin kullanımını açıklar.  
   
  [PageSetupDialog bileşeni](../controls/pagesetupdialog-component-windows-forms.md)  
- Kullanımını açıklayan <xref:System.Windows.Forms.PageSetupDialog> bileşeni.  
+ <xref:System.Windows.Forms.PageSetupDialog> bileşeninin kullanımını açıklar.  
   
  <xref:System.Drawing.Printing>  
- Sınıfları açıklar <xref:System.Drawing.Printing> ad alanı.
+ <xref:System.Drawing.Printing> ad alanındaki sınıfları açıklar.

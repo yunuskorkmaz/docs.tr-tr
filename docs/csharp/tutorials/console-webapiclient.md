@@ -3,18 +3,18 @@ title: .NET Core kullanarak REST istemcisi oluşturma
 description: Bu öğretici, .NET Core ve bu C# dilin çeşitli özelliklerini öğretir.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 85a3c8e17e14db86786950380ba745ae286dccca
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
-ms.translationtype: MT
+ms.openlocfilehash: 09eda08f82490070c66d0b290359872c1043b0c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115865"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737582"
 ---
 # <a name="rest-client"></a>REST istemcisi
 
 ## <a name="introduction"></a>Giriş
 
-Bu öğretici, .NET Core ve bu C# dilin çeşitli özelliklerini öğretir. Şunları öğrenirsiniz:
+Bu öğretici, .NET Core ve bu C# dilin çeşitli özelliklerini öğretir. Şunları öğreneceksiniz:
 
 * .NET Core komut satırı arabirimi (CLı) temelleri.
 * C# Dil özelliklerine genel bakış.
@@ -71,7 +71,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-C# Derleyicinin <xref:System.Threading.Tasks.Task> türünü tanıması için `Main` yönteminizin en üstüne `using` bir ifade eklemeniz gerekir:
+C# Derleyicinin <xref:System.Threading.Tasks.Task> türünü tanıması için `Main` yönteminizin en üstüne bir `using` yönergesi eklemeniz gerekir:
 
 ```csharp
 using System.Threading.Tasks;
@@ -81,10 +81,10 @@ Projenizi bu noktada oluşturursanız, hiçbir `await` işleci içermediğinden 
 
 Sonra, `namespace` deyiminizde tanımlanan ad alanını `ConsoleApp` varsayılan olan `WebAPIClient`olarak yeniden adlandırın. Daha sonra bu ad alanında bir `repo` sınıfı tanımlayacağız.
 
-Sonra, bu yöntemi çağırmak için `Main` yöntemini güncelleştirin. `ProcessRepositories` yöntemi bir görevi döndürür ve bu görev tamamlanmadan önce programdan çıkmamanız gerekir. Bu nedenle, `Main`imzasını değiştirmeniz gerekir. `async` değiştiricisini ekleyin ve dönüş türünü `Task`olarak değiştirin. Ardından, yönteminin gövdesinde `ProcessRepositories`bir çağrı ekleyin. Bu yöntem çağrısında `await` anahtar sözcüğünü ekleyin:
+Sonra, bu yöntemi çağırmak için `Main` yöntemini güncelleştirin. `ProcessRepositories` yöntemi bir görevi döndürür ve bu görev tamamlanmadan önce programdan çıkmamanız gerekir. Bu nedenle, `Main`imzasını değiştirmeniz gerekir. `async` değiştiricisini ekleyin ve dönüş türünü `Task`olarak değiştirin. Ardından, yönteminin gövdesinde `ProcessRepositories`bir çağrı ekleyin. Bu yöntem çağrısına `await` anahtar sözcüğünü ekleyin:
 
 ```csharp
-static Task Main(string[] args)
+static async Task Main(string[] args)
 {
     await ProcessRepositories();
 }
@@ -92,7 +92,7 @@ static Task Main(string[] args)
 
 Artık hiçbir şey yapmaz ancak zaman uyumsuz olarak bunu yapar. Bunu geliştirelim.
 
-Önce, Web 'den veri alan bir nesne gerekir; Bunu yapmak için bir <xref:System.Net.Http.HttpClient> kullanabilirsiniz. Bu nesne, isteği ve yanıtları işler. Program.cs dosyasının içindeki `Program` sınıfında bu türün tek bir örneğini oluşturun.
+Önce, Web 'den veri alan bir nesne gerekir; Bunu yapmak için bir <xref:System.Net.Http.HttpClient> kullanabilirsiniz. Bu nesne, isteği ve yanıtları işler. *Program.cs* dosyasının içindeki `Program` sınıfında bu türün tek bir örneğini oluşturun.
 
 ```csharp
 namespace WebAPIClient
@@ -101,7 +101,7 @@ namespace WebAPIClient
     {
         private static readonly HttpClient client = new HttpClient();
 
-        static Task Main(string[] args)
+        static async Task Main(string[] args)
         {
             //...
         }
@@ -126,7 +126,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-Bunun derlenmesi için dosyanın en üstüne iki yeni using deyimi de eklemeniz gerekir:
+Bunun derlenmesi için dosyanın en üstüne iki yeni `using` yönergesi de eklemeniz gerekir:
 
 ```csharp
 using System.Net.Http;
@@ -206,6 +206,12 @@ Daha fazla özellik eklemeden önce `[JsonPropertyName]` özniteliğini kullanar
 public string Name { get; set; }
 ```
 
+`[JsonPropertyName]` özniteliğini kullanmak için `using` yönergelere <xref:System.Text.Json.Serialization> ad alanını eklemeniz gerekir:
+
+```csharp
+using System.Text.Json.Serialization;
+```
+
 Bu değişiklik, program.cs içindeki her deponun adını yazan kodu değiştirmeniz gereken anlamına gelir:
 
 ```csharp
@@ -233,7 +239,7 @@ Bu yöntemi `async`olarak işaretlediğiniz için derleyici, return için `Task<
 Sonra, `Main` yöntemini bu sonuçları yakalayıp, her depo adını konsola yazar şekilde değiştirelim. `Main` yönteminiz şu şekilde görünür:
 
 ```csharp
-public static Task Main(string[] args)
+public static async Task Main(string[] args)
 {
     var repositories = await ProcessRepositories();
 
@@ -296,7 +302,7 @@ public DateTime LastPush =>
 
 Şimdi tanımladığımız yeni yapıları inceleyelim. `LastPush` özelliği, `get` erişimcisi için *ifade-Bodied üyesi* kullanılarak tanımlanır. `set` erişimcisi yok. `set` erişimcinin atlanması, içinde C# *salt okunurdur* bir özelliği nasıl tanımlayacağınızı belirler. (Evet, öğesinde C# *salt yazılır* özellikler oluşturabilirsiniz, ancak değerleri sınırlıdır.) <xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> yöntemi bir dizeyi ayrıştırır ve sağlanmış bir tarih biçimi kullanarak bir <xref:System.DateTime> nesnesi oluşturur ve bir `CultureInfo` nesnesi kullanarak `DateTime` ek meta veri ekler. Ayrıştırma işlemi başarısız olursa, özellik erişimcisi bir özel durum oluşturur.
 
-<xref:System.Globalization.CultureInfo.InvariantCulture>kullanmak için, `repo.cs`içindeki `using` deyimlerine <xref:System.Globalization> ad alanı eklemeniz gerekir:
+<xref:System.Globalization.CultureInfo.InvariantCulture>kullanmak için, `repo.cs`içindeki `using` yönergelere <xref:System.Globalization> ad alanını eklemeniz gerekir:
 
 ```csharp
 using System.Globalization;

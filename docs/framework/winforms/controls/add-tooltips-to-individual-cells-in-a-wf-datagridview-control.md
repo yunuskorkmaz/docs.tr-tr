@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Forms DataGridView Denetiminde Ayrı Hücrelere ToolTips Ekleme'
+title: DataGridView Denetimindeki ayrı hücrelere araç Ipucu ekleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,36 +10,36 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding tooltips
 - data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
-ms.openlocfilehash: d0e9b3ad742633b135a2fe1c00af3fa72af7b44a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac86db5fa27a95adb20888cd59b5e236941d9177
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663450"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732186"
 ---
 # <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Nasıl yapılır: Bir Windows Forms DataGridView Denetiminde Ayrı Hücrelere ToolTips Ekleme
-Varsayılan olarak, araç ipuçları değerlerini görüntülemek için kullanılan <xref:System.Windows.Forms.DataGridView> tüm içerikleri göstermek için çok küçük hücreleri. Ancak, tek tek hücrelere araç ipucu metin değerlerini ayarlamak için bu davranış, kılabilirsiniz. Bu, kullanıcıların bir hücre hakkında ek bilgi görüntülemek veya kullanıcılara hücre içeriğini başka bir açıklamasını sağlamak için kullanışlıdır. Örneğin, durum simgelerini görüntüleyen bir satır varsa, araç ipuçlarını kullanarak metin açıklamaları sağlamak isteyebilirsiniz.  
+Varsayılan olarak, araç Ipuçları, tüm içeriğini göstermek için çok küçük olan <xref:System.Windows.Forms.DataGridView> hücrelerinin değerlerini görüntülemek için kullanılır. Bununla birlikte, tek tek hücreler için araç Ipucu metin değerlerini ayarlamak için bu davranışı geçersiz kılabilirsiniz. Bu, kullanıcılara bir hücreyle ilgili ek bilgiler göstermek veya kullanıcılara hücre içeriğinin alternatif bir açıklamasını sağlamak için yararlıdır. Örneğin, durum simgelerini görüntüleyen bir satırınız varsa, araç Ipuçlarını kullanarak metin açıklamaları sağlamak isteyebilirsiniz.  
   
- Ayarlayarak da hücre düzeyinde araç ipuçlarının görüntülenmesini devre dışı bırakabilirsiniz <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType> özelliğini `false`.  
+ Ayrıca, <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType> özelliğini `false`olarak ayarlayarak hücre düzeyi araç Ipuçlarının görüntülenmesini devre dışı bırakabilirsiniz.  
   
-### <a name="to-add-a-tooltip-to-a-cell"></a>Bir araç ipucu bir hücreye eklemek için  
+### <a name="to-add-a-tooltip-to-a-cell"></a>Bir hücreye araç Ipucu eklemek için  
   
-- Ayarlama <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType> özelliği.  
+- <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType> özelliğini ayarlayın.  
   
      [!code-cpp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/cpp/datagridviewcell.tooltiptext.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/CS/datagridviewcell.tooltiptext.cs#1)]
      [!code-vb[System.Windows.Forms.DataGridViewCell.ToolTipText#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/VB/datagridviewcell.tooltiptext.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
   
-- Bu örnek gerektirir:  
+- Bu örnek şunları gerektirir:  
   
-- A <xref:System.Windows.Forms.DataGridView> adlı Denetim `dataGridView1` adlı bir sütun içeren `Rating` dört yıldız arasında bir dize değerleri görüntülemek için ("*") simgeler. <xref:System.Windows.Forms.DataGridView.CellFormatting> Olay denetimin olmalıdır ilişkili örnekte gösterilen olay işleyicisi yöntemi ile.  
+- `dataGridView1` adlı bir <xref:System.Windows.Forms.DataGridView> denetim, bir-dört yıldız işareti ("*") sembollerinin dize değerlerini görüntülemek için `Rating` adlı bir sütun içerir. Denetimin <xref:System.Windows.Forms.DataGridView.CellFormatting> olayının, örnekte gösterilen olay işleyicisi yöntemiyle ilişkilendirilmesi gerekir.  
   
-- Başvurular <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemeler.  
+- <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemelerine başvurular.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Bağladığınızda <xref:System.Windows.Forms.DataGridView> denetlemek için bir dış veri kaynağına veya sanal modu uygulama tarafından kendi veri kaynağı sağlamak için performans sorunlarıyla karşılaşabilirsiniz. Büyük miktarlarda veri ile çalışırken, bir performans cezasını önlemek için tanıtıcı <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> ayar yerine olay <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> birden çok hücre özelliği. Ne zaman ele bu olay bir hücrenin değerini alma <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> özelliği olayını başlatır ve değerini döndürür <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> özelliği olarak belirtilen olay işleyicisi.  
+ <xref:System.Windows.Forms.DataGridView> denetimini bir dış veri kaynağına bağladığınızda veya sanal modu uygulayarak kendi veri kaynağınızı sağladığınızda, performans sorunlarıyla karşılaşabilirsiniz. Büyük miktarlardaki verilerle çalışırken bir performans cezasından kaçınmak için, birden çok hücrenin <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> özelliğini ayarlamak yerine <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> olayı işleyin. Bu olayı işlerken, bir hücrenin değerini alma <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> özelliği olayı oluşturur ve olay işleyicisinde belirtilen <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> özelliğinin değerini döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

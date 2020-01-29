@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DomainUpDown Denetimlerinden Öğeleri Kaldırma'
+title: Öğeleri DomainUpDown Denetimlerinden kaldır
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - DomainUpDown control [Windows Forms], removing items from
 - spin button control [Windows Forms], removing items
 ms.assetid: e70f5cbc-b497-41a9-975a-344c00e56ed2
-ms.openlocfilehash: f56bc2b7b7b8a783ac298b220c83281f38da29da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e52af5c5add4fda93e2b51c8afdb90c92e8d2f62
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662345"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735776"
 ---
 # <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Nasıl yapılır: Windows Forms DomainUpDown Denetimlerinden Öğeleri Kaldırma
-Windows Forms öğelerini kaldırabilir <xref:System.Windows.Forms.DomainUpDown> çağırarak denetim <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> veya <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> yöntemi <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> sınıfı. <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> Yöntemi, belirli bir öğeyi kaldırır ancak <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> yöntemi konumuna göre bir öğeyi kaldırır.  
+<xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> sınıfının <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> veya <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> yöntemini çağırarak Windows Forms <xref:System.Windows.Forms.DomainUpDown> denetiminden öğeleri kaldırabilirsiniz. <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> yöntemi belirli bir öğeyi kaldırır, ancak <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> yöntemi bir öğeyi konumuna göre kaldırır.  
   
 ### <a name="to-remove-an-item"></a>Bir öğeyi kaldırmak için  
   
-- Kullanım <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> yöntemi <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> sınıf adına göre bir öğeyi kaldırmak için.  
+- Bir öğeyi ada göre kaldırmak için <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> sınıfının <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> yöntemini kullanın.  
   
     ```vb  
     DomainUpDown1.Items.Remove("noodles")  
@@ -35,9 +35,9 @@ Windows Forms öğelerini kaldırabilir <xref:System.Windows.Forms.DomainUpDown>
     domainUpDown1->Items->Remove("noodles");  
     ```  
   
-     -veya-  
+     veya  
   
-- Kullanım <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> konumuna göre bir öğeyi kaldırmak için yöntemi.  
+- Bir öğeyi konumuna göre kaldırmak için <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> yöntemini kullanın.  
   
     ```vb  
     ' Removes the first item in the list.  

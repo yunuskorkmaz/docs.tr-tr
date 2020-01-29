@@ -1,5 +1,5 @@
 ---
-title: Windows Forms'ta Güvenliğe Genel Bakış
+title: Güvenliğe genel bakış
 ms.date: 03/30/2017
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 08c80eccee395d9141978a7d4594205af1a51ed9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9010b45383f856079661359fdf82180526d96dde
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972126"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734849"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Forms'ta Güvenliğe Genel Bakış
 
@@ -46,11 +46,11 @@ Ardından, uygulamanızın tam güvende çalışmasına mi yoksa kısmi güvende
 
 Kısmi güven (Internet veya yerel Intranet izin kümeleri) seçeneğini belirlerseniz, uygulamanızın bu ortamda nasıl davranmasını istediğinize karar verin. Windows Forms, yarı güvenilir bir ortamda özellikler uygulamak için alternatif ve daha güvenli yollar sağlar. Uygulamanızın veri erişimi gibi belirli kısımları, hem kısmi güven hem de tam güven ortamları için farklı şekilde tasarlanıp yazılabilir. Uygulama ayarları gibi bazı Windows Forms Özellikler Kısmi güvende çalışacak şekilde tasarlanmıştır. Daha fazla bilgi için bkz. [uygulama ayarlarına genel bakış](./advanced/application-settings-overview.md).
 
-Uygulamanızda kısmi güvenle izin verilmesi gereken daha fazla izin varsa, ancak tam güvende çalıştırmak istemiyorsanız, yalnızca ihtiyacınız olan ek izinleri ele alırken kısmi güvende çalıştırabilirsiniz. Örneğin, kısmi güvende çalıştırmak istiyorsanız ancak uygulamanıza kullanıcının dosya sistemindeki bir dizine salt okuma erişimi verilmesi gerekiyorsa, yalnızca bu dizin için istek <xref:System.Security.Permissions.FileIOPermission> yapabilirsiniz. Doğru şekilde kullanıldığında, bu yaklaşım uygulamanıza daha fazla işlevsellik verebilir ve kullanıcılarınıza yönelik güvenlik risklerini en aza indirebilir.
+Uygulamanızda kısmi güvenle izin verilmesi gereken daha fazla izin varsa, ancak tam güvende çalıştırmak istemiyorsanız, yalnızca ihtiyacınız olan ek izinleri ele alırken kısmi güvende çalıştırabilirsiniz. Örneğin, kısmi güvende çalıştırmak istiyorsanız ancak uygulamanıza kullanıcının dosya sistemindeki bir dizine salt okuma erişimi verilmesi gerekiyorsa, yalnızca bu dizin için <xref:System.Security.Permissions.FileIOPermission> isteyebilirsiniz. Doğru şekilde kullanıldığında, bu yaklaşım uygulamanıza daha fazla işlevsellik verebilir ve kullanıcılarınıza yönelik güvenlik risklerini en aza indirebilir.
 
 Kısmi güvende çalışacak bir uygulama geliştirirken, uygulamanızın hangi izinlerle çalışması gerektiğini ve uygulamanızın isteğe bağlı olarak hangi izinlere sahip olacağını takip edin. Tüm izinler bilindiğinde, uygulama düzeyinde izin için bildirim temelli bir istek yapmanız gerekir. İzin istemek, uygulamanız için gereken izinlere ve özel olarak istemediğiniz izinlere ilişkin .NET Framework çalışma zamanına bildirir. İzin isteme hakkında daha fazla bilgi için bkz. [Izinleri isteme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100)).
 
-İsteğe bağlı izinler istediğinizde, uygulamanız kendisine izin verilmeyen bir eylem gerçekleştirdiğinde üretilecek olan güvenlik özel durumlarını işlemeniz gerekir. İçin uygun işleme, <xref:System.Security.SecurityException> uygulamanızın çalışmaya devam edebilmesini sağlar. Uygulamanız özel durumu kullanarak bir özelliğin Kullanıcı için devre dışı bırakılıp bırakılmadığını tespit edebilir. Örneğin, bir uygulama gerekli dosya izni verilmezse **Kaydet** menü seçeneğini devre dışı bırakabilir.
+İsteğe bağlı izinler istediğinizde, uygulamanız kendisine izin verilmeyen bir eylem gerçekleştirdiğinde üretilecek olan güvenlik özel durumlarını işlemeniz gerekir. <xref:System.Security.SecurityException> uygun işleme, uygulamanızın çalışmaya devam edebilmesini sağlar. Uygulamanız özel durumu kullanarak bir özelliğin Kullanıcı için devre dışı bırakılıp bırakılmadığını tespit edebilir. Örneğin, bir uygulama gerekli dosya izni verilmezse **Kaydet** menü seçeneğini devre dışı bırakabilir.
 
 Bazen, tüm uygun izinleri mi belirleyebileceğinizi bilmeniz zordur. Örneğin, yüzeyinde zararsız gösteren bir yöntem çağrısı (örneğin, yürütme sırasında belirli bir noktada dosya sistemine erişebilme). Uygulamanızı gerekli tüm izinlerle dağıtmadıysanız, masaüstünüzde hata ayıkladığınızda, ancak dağıtıldığında başarısız olduğunda bu durum iyi bir şekilde test edebilir. .NET Framework 2,0 SDK ve Visual Studio 2005, uygulamanın ihtiyacı olan izinleri hesaplamak için araçlar içerir: sırasıyla, MT. exe komut satırı aracı ve Izinleri hesapla özelliği.
 
@@ -58,9 +58,9 @@ Aşağıdaki konularda, ek Windows Forms güvenlik özellikleri açıklanır.
 
 |Konu|Açıklama|
 |-----------|-----------------|
-|- [Windows Forms daha güvenli dosya ve veri erişimi](more-secure-file-and-data-access-in-windows-forms.md)|Kısmi güven ortamındaki dosyalara ve verilere nasıl erişebileceğinizi açıklar.|
-|- [Windows Forms daha güvenli yazdırma](more-secure-printing-in-windows-forms.md)|Kısmi güven ortamındaki yazdırma özelliklerine nasıl erişebileceğinizi açıklar.|
-|- [Windows Forms ek güvenlik konuları](additional-security-considerations-in-windows-forms.md)|Pencere işleme, Panoyu kullanma ve kısmi güven ortamındaki yönetilmeyen koda çağrı yapma işlemlerini açıklar.|
+|[Windows Forms daha güvenli dosya ve veri erişimi](more-secure-file-and-data-access-in-windows-forms.md) - |Kısmi güven ortamındaki dosyalara ve verilere nasıl erişebileceğinizi açıklar.|
+|[Windows Forms daha güvenli yazdırma](more-secure-printing-in-windows-forms.md) - |Kısmi güven ortamındaki yazdırma özelliklerine nasıl erişebileceğinizi açıklar.|
+|[Windows Forms ek güvenlik konularını](additional-security-considerations-in-windows-forms.md) - |Pencere işleme, Panoyu kullanma ve kısmi güven ortamındaki yönetilmeyen koda çağrı yapma işlemlerini açıklar.|
 
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>Uygun Izinlerle uygulama dağıtma
 
@@ -77,13 +77,13 @@ Aşağıdaki tabloda bu teknolojiler açıklanmaktadır.
 
 Hangi teknolojiyi seçeceğiniz, dağıtım ortamınıza göre değişir. Daha fazla bilgi için bkz. [ClickOnce dağıtım stratejisi seçme](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-Varsayılan olarak, Visual Studio veya .NET Framework SDK araçları (Mage. exe ve MageUI. exe) kullanılarak dağıtılan ClickOnce uygulamaları, tam güvene sahip bir istemci bilgisayarda çalışacak şekilde yapılandırılmıştır. Uygulamanızı kısmi güven kullanarak dağıtıyorsanız veya yalnızca bazı ek izinleri kullanarak, bu varsayılan değişikliği yapmanız gerekir. Dağıtımınızı yapılandırırken Visual Studio veya .NET Framework SDK aracı MageUI. exe ile bunu yapabilirsiniz. MageUI. exe ' nin nasıl kullanılacağı hakkında daha fazla bilgi için [bkz. İzlenecek yol: ClickOnce uygulamasını](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)el ile dağıtma.  Ayrıca bkz [. nasıl yapılır: ClickOnce uygulaması](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) için özel izinleri ayarlama veya [nasıl yapılacağı: ClickOnce uygulaması](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)için özel izinleri ayarlayın.
+Varsayılan olarak, Visual Studio veya .NET Framework SDK araçları (Mage. exe ve MageUI. exe) kullanılarak dağıtılan ClickOnce uygulamaları, tam güvene sahip bir istemci bilgisayarda çalışacak şekilde yapılandırılmıştır. Uygulamanızı kısmi güven kullanarak dağıtıyorsanız veya yalnızca bazı ek izinleri kullanarak, bu varsayılan değişikliği yapmanız gerekir. Dağıtımınızı yapılandırırken Visual Studio veya .NET Framework SDK aracı MageUI. exe ile bunu yapabilirsiniz. MageUI. exe ' nin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Izlenecek yol: el ile bir ClickOnce uygulaması dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  Ayrıca bkz. [nasıl yapılır: ClickOnce uygulaması Için özel Izinleri ayarlama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) veya [nasıl yapılır: ClickOnce uygulaması Için özel izinleri ayarlama](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 ClickOnce ve Izin yükselmesinin güvenlik yönleri hakkında daha fazla bilgi için bkz. [ClickOnce uygulamalarının güvenliğini sağlama](/visualstudio/deployment/securing-clickonce-applications). Güvenilen uygulama dağıtımı hakkında daha fazla bilgi için bkz. [Güvenilen uygulama dağıtımına genel bakış](/visualstudio/deployment/trusted-application-deployment-overview).
 
 ### <a name="testing-the-application"></a>Uygulamayı Test Etme
 
-Visual Studio 'Yu kullanarak Windows Forms uygulamanızı dağıttıysanız, kısmi güvende hata ayıklamayı veya geliştirme ortamından kısıtlı bir izin kümesini etkinleştirebilirsiniz.  Ayrıca bkz [. nasıl yapılır: Kısıtlanmış Izinlerle](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)ClickOnce uygulamasında hata ayıklayın.
+Visual Studio 'Yu kullanarak Windows Forms uygulamanızı dağıttıysanız, kısmi güvende hata ayıklamayı veya geliştirme ortamından kısıtlı bir izin kümesini etkinleştirebilirsiniz.  Ayrıca bkz. [nasıl yapılır: kısıtlanmış Izinlerle ClickOnce uygulamasında hata ayıklama](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

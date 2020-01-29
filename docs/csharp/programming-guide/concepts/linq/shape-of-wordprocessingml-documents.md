@@ -2,12 +2,12 @@
 title: WordprocessingML belgelerinin şekli (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 84d893267c37ecf99a457ebb683d0451e2b4b68f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 58c028fed465f45fdcf8f63f2119eb8e8b201e32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591050"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732678"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML belgelerinin şekli (C#)
 Bu konu, bir WordprocessingML belgesinin XML şeklini tanıtır.  
@@ -18,7 +18,7 @@ Bu konu, bir WordprocessingML belgesinin XML şeklini tanıtır.
  Microsoft Office 2003 kullanıyorsanız Word, Excel ve PowerPoint 2007 dosya biçimleri için Microsoft Office Uyumluluk paketini yüklediyseniz Office Open XML biçimindeki belgeleri kaydedebilirsiniz.  
   
 ## <a name="the-shape-of-wordprocessingml-documents"></a>WordprocessingML belgelerinin şekli  
- Anlaşılması gereken ilk şey WordprocessingML belgelerinin şekildir. WordprocessingML belgesi, belgenin paragraflarını içeren bir body `w:body`öğesi (adlandırılmış) içerir. Her paragraf bir veya daha fazla metin çalıştırması (adlandırılmış `w:r`) içerir. Her metin çalışması bir veya daha fazla metin parçası (adlandırılmış `w:t`) içerir.  
+ Anlaşılması gereken ilk şey WordprocessingML belgelerinin şekildir. WordprocessingML belgesi, belgenin paragraflarını içeren bir body öğesi (`w:body`) içerir. Her paragraf bir veya daha fazla metin çalıştırması (`w:r`adlı) içerir. Her metin çalışması bir veya daha fazla metin parçası içerir (`w:t`olarak adlandırılır).  
   
  Aşağıda çok basit bir WordprocessingML belgesi verilmiştir:  
   
@@ -55,7 +55,7 @@ xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
   
  XML biçiminde bir WordprocessingML belgesinin içeriğini görmenin en kolay yolu Microsoft Word 'Ü kullanarak bir tane oluşturmak, kaydetmeniz ve ardından XML 'i konsola yazdıran aşağıdaki programı çalıştırmalıdır.  
   
- Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> Ad alanındaki türleri kullanır.  
+ Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.  
   
 ```csharp  
 const string documentRelationshipType =  
@@ -87,13 +87,13 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
 }  
 ```  
   
-## <a name="external-resources"></a>Dış Kaynaklar  
- [Office (2007) Open XML dosya biçimlerine giriş](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29)  
- [WordprocessingML 'ye Genel Bakış](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)  
- [WordProcessingML dosyasının anatomi](http://officeopenxml.com/anatomyofOOXML.php)  
- [WordprocessingML 'ye giriş](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)  
- [Office 2003: XML başvuru şemaları Indirme sayfası](https://www.microsoft.com/download/details.aspx?id=101)  
-  
+## <a name="external-resources"></a>Dış kaynaklar
+
+- [Office (2007) Open XML dosya biçimlerine giriş](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29)
+- [WordprocessingML 'ye Genel Bakış](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)
+- [WordProcessingML dosyasının anatomi](http://officeopenxml.com/anatomyofOOXML.php)
+- [WordprocessingML 'ye giriş](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: WordprocessingML belgesinde (C#) içeriği düzenleme](./shape-of-wordprocessingml-documents.md)
+- [Öğretici: bir WordprocessingML belgesinde (C#) içeriği düzenleme](./shape-of-wordprocessingml-documents.md)

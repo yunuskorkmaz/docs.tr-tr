@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms BindingSource Bileşeniyle Arama Tablosu Oluşturma'
+title: BindingSource bileşeniyle arama tablosu oluşturma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,89 +7,89 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 33b9e4e98a8a3f8c0d5dd6433ebbf15c049b608e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ccf2bfa6cf3f56a38b55f8c87004c42a46172891
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643067"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736807"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Nasıl yapılır: Windows Forms BindingSource Bileşeniyle Arama Tablosu Oluşturma
-Arama tablosu kayıttan alınan ilişkili bir tabloda görüntüleyen bir sütun olan verilerin bir tablodur. Aşağıdaki yordamlarda, bir <xref:System.Windows.Forms.ComboBox> denetimi üst alt tablo için yabancı anahtar ilişkisi alanıyla görüntülemek için kullanılır.  
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Nasıl yapılır: Windows Formları BindingSource Bileşeniyle Arama Tablosu Oluşturma
+Arama tablosu, ilişkili tablodaki kayıtlardan verileri görüntüleyen bir sütunu olan bir veri tablosudur. Aşağıdaki yordamlarda, üst-anahtar ilişkisine sahip alanı alt tabloya göstermek için bir <xref:System.Windows.Forms.ComboBox> denetimi kullanılır.  
   
- Bu iki tablo ve bu ilişkiyi görselleştirmenize yardımcı olmak için üst ve alt tablo örneği aşağıdadır:  
+ Bu iki tabloyu ve bu ilişkiyi görselleştirmenize yardımcı olmak için bir üst ve alt tablo örneği aşağıda verilmiştir:  
   
  CustomersTable (üst tablo)  
   
-|CustomerID|CustomerName|  
+|Ister|customerName|  
 |----------------|------------------|  
 |712|Paul Koch|  
 |713|Tamara Johnston|  
   
  OrdersTable (alt tablo)  
   
-|Sipariş Kimliği|orderDate|CustomerID|  
+|Sipariş|OrderDate|Ister|  
 |-------------|---------------|----------------|  
-|903|Şubat 12, 2004|712|  
+|903|12 Şubat 2004|712|  
 |904|13 Şubat 2004|713|  
   
- Bu senaryoda, bir tablo, CustomersTable, görüntülemek ve kaydetmek istediğiniz gerçek bilgi depolar. Ancak alanı kaydetmek için tabloda açıklık veri çıkışı bırakır. Diğer tablo, OrdersTable, hangi müşterinin hakkında kimlik numarasını hangi sipariş tarihi ve sipariş kimliği için eşdeğer yalnızca görünüm ile ilgili bilgiler içerir Müşterilerin adlarını hiçbir Bahsetme yoktur.  
+ Bu senaryoda, bir tablo olan CustomersTable, göstermek ve kaydetmek istediğiniz gerçek bilgileri depolar. Ancak alanı kazanmak için tablo, açıklık ekleyen verileri bırakır. Diğer tablo, OrdersTable, hangi müşteri KIMLIĞI numarasının hangi sipariş tarihi ve sipariş KIMLIĞIYLE eşdeğer olduğu hakkında yalnızca görünümle ilgili bilgileri içerir. Müşterilerin adlarından bahsetme yoktur.  
   
- Dört önemli özellikleri üzerinde ayarlanır [ComboBox denetimi](combobox-control-windows-forms.md) arama tablosu oluşturma için denetimi.  
+ Arama tablosu oluşturmak için [ComboBox Denetim](combobox-control-windows-forms.md) denetiminde dört önemli özellik ayarlanır.  
   
-- <xref:System.Windows.Forms.ComboBox.DataSource%2A> Özelliği tablo adını içerir.  
+- <xref:System.Windows.Forms.ComboBox.DataSource%2A> özelliği tablonun adını içerir.  
   
-- <xref:System.Windows.Forms.ListControl.DisplayMember%2A> Özelliği, bu tablonun (müşterinin adı) kontrol metni için görüntülemek istediğiniz veri sütunu içerir.  
+- <xref:System.Windows.Forms.ListControl.DisplayMember%2A> özelliği, denetim metni (müşterinin adı) için görüntülenmesini istediğiniz tablonun veri sütununu içerir.  
   
-- <xref:System.Windows.Forms.ListControl.ValueMember%2A> Bilgilerini (kimlik numarası üst tablodan) söz konusu tablonun veri sütununun özellik içerir.  
+- <xref:System.Windows.Forms.ListControl.ValueMember%2A> özelliği, bu tablonun depolanan bilgiler (üst tablodaki KIMLIK numarası) ile veri sütununu içerir.  
   
-- <xref:System.Windows.Forms.ListControl.SelectedValue%2A> Özelliği, temel alt tablo için arama değeri sağlar <xref:System.Windows.Forms.ListControl.ValueMember%2A>.  
+- <xref:System.Windows.Forms.ListControl.SelectedValue%2A> özelliği, alt tablo için <xref:System.Windows.Forms.ListControl.ValueMember%2A>temelinde arama değeri sağlar.  
   
- Aşağıdaki yordamlar, formunuzu arama tablosu olarak düzenleme ve denetimlere veri bağlama işlemini göstermektedir. Başarıyla yordamları tamamlamak için daha önce belirtildiği gibi bir yabancı anahtar ilişkisine sahip üst ve alt tablolar ile bir veri kaynağı olmalıdır.  
+ Aşağıdaki yordamlarda, formunuzu bir arama tablosu olarak nasıl düzenleyeni ve verileri üzerinde denetimlere nasıl bağlayacağınız gösterilmektedir. Yordamları başarıyla tamamlayabilmeniz için, daha önce belirtildiği gibi, yabancı anahtar ilişkisine sahip üst ve alt tablolar içeren bir veri kaynağınız olması gerekir.  
   
 ### <a name="to-create-the-user-interface"></a>Kullanıcı arabirimini oluşturmak için  
   
-1. Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.ComboBox> forma denetim.  
+1. **Araç kutusundan**bir <xref:System.Windows.Forms.ComboBox> denetimini form üzerine sürükleyin.  
   
-     Bu denetim, üst tablo sütunu görüntülenir.  
+     Bu denetim, üst tablodaki sütunu görüntüler.  
   
-2. Alt tablo ayrıntılarını görüntülemek için diğer denetimler sürükleyin. Hangi denetimlerin seçtiğiniz tablodaki verileri biçimi belirlemeniz gerekir. Daha fazla bilgi için [işleve göre Windows Forms denetimleri](windows-forms-controls-by-function.md).  
+2. Alt tablodaki ayrıntıları göstermek için diğer denetimleri sürükleyin. Tablodaki verilerin biçimi hangi denetimleri istediğinizi belirlemelidir. Daha fazla bilgi için bkz. [Windows Forms denetimleri işleve göre](windows-forms-controls-by-function.md).  
   
-3. Sürükleme bir <xref:System.Windows.Forms.BindingNavigator> forma denetim; bu alt tablodaki verileri gezinmenize olanak tanır.  
+3. Bir <xref:System.Windows.Forms.BindingNavigator> denetimini form üzerine sürükleyin; Bu, alt tablodaki verilerde gezinmeniz için izin verir.  
   
-### <a name="to-connect-to-the-data-and-bind-it-to-controls"></a>Verilere bağlanmak ve denetimlere bağlama  
+### <a name="to-connect-to-the-data-and-bind-it-to-controls"></a>Verilere bağlanmak ve denetimlere bağlamak için  
   
-1. Seçin <xref:System.Windows.Forms.ComboBox> ve akıllı bir görev iletişim kutusunu görüntülemek için akıllı bir görev karakter'a tıklayın.  
+1. <xref:System.Windows.Forms.ComboBox> seçin ve Akıllı Görev iletişim kutusunu göstermek için Akıllı Görev glifi ' ne tıklayın.  
   
-2. Seçin **kullanım veri bağlama öğeleri**.  
+2. **Veri bağlantılı öğeleri kullan**' ı seçin.  
   
-3. Yanındaki oka tıklayın **veri kaynağı** açılan kutusu. Bir veri kaynağını daha önce proje veya form için yapılandırılmışsa, görüntülenir. Aksi takdirde, (Bu örnekte, Northwind örnek veritabanındaki müşteriler ve Siparişler tablolarını kullanır ve parantez içinde bunlara başvuran) aşağıdaki adımları tamamlayın.  
+3. **Veri kaynağı** açılır kutusunun yanındaki oka tıklayın. Bir veri kaynağı daha önce proje veya form için yapılandırıldıysa, görünür; Aksi takdirde, aşağıdaki adımları uygulayın (Bu örnek, Northwind örnek veritabanının Customers ve Orders tablolarını kullanır ve bunları parantez içinde ifade eder).  
   
-    1. Tıklayın **proje veri kaynağı Ekle** verilere bağlanmak ve bir veri kaynağı oluşturun.  
+    1. Verilere bağlanmak ve bir veri kaynağı oluşturmak için **proje veri kaynağı Ekle** ' ye tıklayın.  
   
-    2. Üzerinde **veri kaynağı Yapılandırma Sihirbazı** Karşılama sayfasında, tıklayın **sonraki**.  
+    2. **Veri kaynağı Yapılandırma Sihirbazı** 'na hoş geldiniz sayfasında **İleri**' ye tıklayın.  
   
-    3. Seçin **veritabanı** üzerinde **bir veri kaynağı türü seçin** sayfası.  
+    3. **Veri kaynağı türü seçin** sayfasında **veritabanı** ' nı seçin.  
   
-    4. Kullanılabilir bağlantılar listesinden bir veri bağlantısı seçin **veri bağlantınızı seçin** sayfası. İstenen veri bağlantısı kullanılamıyorsa seçin **yeni bağlantı** yeni bir veri bağlantısı oluşturmak için.  
+    4. **Veri bağlantınızı seçin** sayfasında kullanılabilir bağlantılar listesinden bir veri bağlantısı seçin. İstediğiniz veri bağlantınız yoksa yeni **bağlantı** ' yı seçerek yeni bir veri bağlantısı oluşturun.  
   
-    5. Tıklayın **Evet, bağlantıyı Kaydet** bağlantı dizesini uygulama yapılandırma dosyasına kaydetmek için.  
+    5. Bağlantı dizesini uygulama yapılandırma dosyasına kaydetmek için **Evet, bağlantıyı kaydet** ' e tıklayın.  
   
-    6. Uygulamanıza getirmek için veritabanı nesneleri seçin. Bu durumda, bir üst tablo ve yabancı anahtar ilişkisi olan alt tablo (örneğin, müşteriler ve siparişler) seçin.  
+    6. Uygulamanıza getirmek istediğiniz veritabanı nesnelerini seçin. Bu durumda, bir ana tablo ve alt tablo (örneğin, müşteriler ve siparişler) yabancı anahtar ilişkisiyle seçin.  
   
-    7. İsterseniz varsayılan veri kümesi adı değiştirin.  
+    7. İsterseniz varsayılan veri kümesi adını değiştirin.  
   
     8. **Son**'a tıklayın.  
   
-4. İçinde **görünen üye** birleşik giriş kutusunda görüntülenecek sütun adı (örneğin, ContactName) açılan kutusunda seçin.  
+4. **Üye görüntüle** açılan kutusunda, açılan kutuda görüntülenecek sütun adını (örneğin, ContactName) seçin.  
   
-5. İçinde **değer üyesi** açılan kutu, alt tablosunda arama işlemi gerçekleştirmek için (örneğin, CustomerID) sütununu seçin.  
+5. **Değer üyesi** açılan kutusunda, alt tabloda arama işlemini gerçekleştirmek için sütunu (örneğin, CustomerID) seçin.  
   
-6. İçinde **seçili değer** açılan kutusunda, gitmek **Zdroje dat Projektu** ve üst ve alt tablolar içeren yeni oluşturduğunuz veri kümesi. Aynı özellik üst tablo (örneğin, siparişler.MüşteriNo) değeri üyesi olan alt tablo seçin. Uygun <xref:System.Windows.Forms.BindingSource> , veri kümesi ve tablo bağdaştırıcısı bileşenleri oluşturulur ve forma eklenir.  
+6. **Seçili değer** açılır kutusunda, **proje veri kaynakları** ' na ve üst ve alt tabloları içeren yeni oluşturduğunuz veri kümesine gidin. Üst tablonun değer üyesi olan alt tablonun aynı özelliğini seçin (örneğin, Orders. CustomerID). Uygun <xref:System.Windows.Forms.BindingSource>, veri kümesi ve tablo bağdaştırıcısı bileşenleri oluşturulacak ve forma eklenecek.  
   
-7. Bağlama <xref:System.Windows.Forms.BindingNavigator> denetimini <xref:System.Windows.Forms.BindingSource> alt tablonun (örneğin, `OrdersBindingSource`).  
+7. <xref:System.Windows.Forms.BindingNavigator> denetimini alt tablonun <xref:System.Windows.Forms.BindingSource> bağlayın (örneğin, `OrdersBindingSource`).  
   
-8. Denetimleri dışında bağlama <xref:System.Windows.Forms.ComboBox> ve <xref:System.Windows.Forms.BindingNavigator> alt tablonun ayrıntıları alanlara denetiminden <xref:System.Windows.Forms.BindingSource> (örneğin, `OrdersBindingSource`), görüntülemek istediğiniz.  
+8. <xref:System.Windows.Forms.ComboBox> ve <xref:System.Windows.Forms.BindingNavigator> denetimi dışındaki denetimleri, alt tablonun <xref:System.Windows.Forms.BindingSource> (örneğin, `OrdersBindingSource`) Ayrıntılar alanlarına bağlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

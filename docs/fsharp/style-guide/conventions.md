@@ -1,13 +1,13 @@
 ---
 title: F# kodlama kuralları
 description: Kod yazarken F# genel kılavuzları ve deyimleri öğrenin.
-ms.date: 11/04/2019
-ms.openlocfilehash: 60eff6392d71caa54eeb438f2f6ba9db910f1bc1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.date: 01/15/2020
+ms.openlocfilehash: ca86bcf714d2fb4ee5f173ee54ba12c317f9abe7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978222"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737830"
 ---
 # <a name="f-coding-conventions"></a>F# kodlama kuralları
 
@@ -36,7 +36,7 @@ type MyClass() =
     ...
 ```
 
-En üst düzey bir modülün kullanılması yalnızca öğesinden F#çağrıldığında farklı görünmeyebilir, ancak Tüketicileriniz için C# ,`MyClass``MyCode`modülle nitelendirmek için arayanlar olabilir.
+En üst düzey bir modülün kullanılması yalnızca öğesinden F#çağrıldığında farklı görünmeyebilir, ancak Tüketicileriniz için C# , `MyClass` `MyCode` modülle nitelendirmek için arayanlar olabilir.
 
 ```fsharp
 // Bad!
@@ -48,7 +48,7 @@ type MyClass() =
 
 ### <a name="carefully-apply-autoopen"></a>`[<AutoOpen>]` dikkatle uygulayın
 
-`[<AutoOpen>]` yapısı, çağıranlar için kullanılabilir olan kapsamı ve bir şeyin geldiği yanıtın "Magic" olduğunu pollute. Bu genellikle iyi bir şeydir. Bu kural için bir özel durum, F# temel kitaplığın kendisidir (Bu olgu aynı zamanda bir bit controversıal).
+`[<AutoOpen>]` yapısı, çağıranlar için kullanılabilir olan kapsamı ve bir şeyin geldiği yanıtın "Magic" olduğunu pollute. Bu iyi bir şey değildir. Bu kural için bir özel durum, F# temel kitaplığın kendisidir (Bu olgu aynı zamanda bir bit controversıal).
 
 Ancak, bu genel API 'den ayrı olarak düzenlemek istediğiniz ortak API için yardımcı işlevselliğe sahipseniz kolaylık vardır.
 
@@ -89,9 +89,9 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 ### <a name="sort-open-statements-topologically"></a>Sıralama `open` deyimleri topologically
 
-İçinde F#, `open`deyimleriyle birlikte bildirimlerin önemli sırası. Bu,`using`C#ve`using static`efektinin bir dosyadaki deyimlerin sıralarından bağımsız olduğu şekilde farklı olur.
+İçinde F#, `open` deyimleriyle birlikte bildirimlerin önemli sırası. Bu, `using` C#ve `using static` efektinin bir dosyadaki deyimlerin sıralarından bağımsız olduğu şekilde farklı olur.
 
-' F#De, bir kapsamda açılan öğeler, diğerlerinin zaten mevcut olduğu öğeleri gölgelendirebilir. Bu, yeniden sıralama `open` deyimlerinin kodun anlamını değiştirebilecek anlamına gelir. Sonuç olarak, tüm `open` deyimlerinin (örneğin, alfasayısal) herhangi bir rastgele sıralanması genellikle önerilmez, en uzun zaman beklemeniz gerekebilecek farklı davranışlar oluşturabilirsiniz.
+' F#De, bir kapsamda açılan öğeler, diğerlerinin zaten mevcut olduğu öğeleri gölgelendirebilir. Bu, yeniden sıralama `open` deyimlerinin kodun anlamını değiştirebilecek anlamına gelir. Sonuç olarak, tüm `open` deyimlerinin (örneğin, alfasayısal) herhangi bir rastgele sıralanması önerilmez, en uzun zaman beklediğimiz farklı davranışlar oluşturabilirsiniz.
 
 Bunun yerine, [topologically](https://en.wikipedia.org/wiki/Topological_sorting); diğer bir deyişle, `open` deyimlerinizi sisteminizin _katmanlarının_ tanımlandığı sırada sıralayın. Farklı topolojik katmanlarda Alfasayısal sıralama yapmak de göz önünde bulundurulmayabilir.
 
@@ -239,7 +239,7 @@ Hatalar bir sorun etki alanında gösterilemez. Bu tür hataların doğası gere
 
 ### <a name="using-exception-handling-syntax"></a>Özel durum işleme söz dizimini kullanma
 
-F#`try...with`söz dizimi aracılığıyla özel durum desenlerini destekler:
+F#`try...with` söz dizimi aracılığıyla özel durum desenlerini destekler:
 
 ```fsharp
 try
@@ -320,7 +320,7 @@ Catch-all olarak çalışmak yerine, bu işlev artık bir dosya bulunamadığı 
 
 ## <a name="partial-application-and-point-free-programming"></a>Kısmi uygulama ve noktadan ücretsiz programlama
 
-F#kısmi uygulamayı destekler ve bu nedenle, noktadan farklı stilde programlama için çeşitli yollar sunar. Bu, bir modül içindeki kod yeniden kullanımı veya bir şeyin uygulanması için yararlı olabilir, ancak genel olarak kullanıma sunulmayan bir şey değildir. Genel olarak, ücretsiz programlama, ve içinde bir virtuale değildir ve stilde sarmalanmış olmayan kişiler için önemli bir bilişsel engel ekleyebilir.
+F#kısmi uygulamayı destekler ve bu nedenle, noktadan farklı stilde programlama için çeşitli yollar sunar. Bu, bir modül içindeki kod yeniden kullanımı veya bir şeyin uygulanması için faydalı olabilir, ancak genel kullanıma sunulmayı bir şey değildir. Genel olarak, ücretsiz programlama, ve içinde bir virtuale değildir ve stilde sarmalanmış olmayan kişiler için önemli bir bilişsel engel ekleyebilir.
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>Kısmi uygulama kullanmayın ve ortak API 'lerde currying kullanın
 
@@ -443,11 +443,118 @@ Son olarak, otomatik Genelleştirme her zaman için F# yeni olan veya büyük bi
 
 ## <a name="performance"></a>Performans
 
-F#değerler, bazı hata sınıflarından kaçınmanıza izin veren (özellikle eşzamanlılık ve paralellik olanlar) varsayılan olarak sabittir. Bununla birlikte, belirli durumlarda, yürütme süresi veya bellek ayırmaları için en iyi (veya hatta makul) verimlilik elde etmek üzere bir iş yayılımı en iyi duruma geçen durum ile uygulanabilir. Bu,`mutable`anahtar sözcüğüyle birlikte F# kabul etme esasına göre yapılabilir.
+### <a name="prefer-structs-for-small-data-types"></a>Küçük veri türleri için yapıları tercih et
 
-Bununla birlikte, ' de `mutable` F# kullanımı, işlev takiresinin gürültü 'de olabilir. Bu, önemli olan beklentileri [bilgi saydamlığına](https://en.wikipedia.org/wiki/Referential_transparency)ayarlarsanız bu kadar iyidir. Bilgi saydamlığı-önemli değildir; işlevler yazılırken F# son hedeftir. Bu, performans açısından kritik kod için bir mutasyon tabanlı uygulama üzerinde işlevsel bir arabirim yazmanızı sağlar.
+Yapıları (değer türleri olarak da bilinir) kullanmak, genellikle nesne ayırmayı önlediği için bazı kodlar için daha yüksek performans oluşmasına neden olabilir. Ancak, yapılar her zaman bir "daha hızlı git" düğmesi değildir: bir yapı içindeki verilerin boyutu 16 baytı aşarsa, verilerin kopyalanması genellikle başvuru türü kullanmaktan daha fazla CPU süresi harcanmasına neden olabilir.
 
-### <a name="wrap-mutable-code-in-immutable-interfaces"></a>Değişmez arabirimlerde kesilebilir kodu sarın
+Yapısını kullanıp kullanmadığını öğrenmek için aşağıdaki koşulları göz önünde bulundurun:
+
+- Verilerinizin boyutu 16 bayt veya daha küçükse.
+- Büyük olasılıkla, çalışan bir programda bellekte yerleşik olarak bulunan bu veri türlerinden birçoğuna sahip olabilirsiniz.
+
+İlk koşul geçerliyse, genellikle bir struct kullanmanız gerekir. Her ikisi de varsa, neredeyse her zaman bir struct kullanmanız gerekir. Önceki koşulların geçerli olduğu bazı durumlar olabilir, ancak bir yapının kullanılması bir başvuru türü kullanmaktan daha iyi veya daha kötütür değildir ancak nadir olabilir. Bu, ancak bu gibi değişiklikler yaparken her zaman ölçülmek önemlidir, ancak varsayım veya ıntukon üzerinde çalışmaz.
+
+#### <a name="prefer-struct-tuples-when-grouping-small-value-types"></a>Küçük değer türlerini gruplarken yapı tanımlama gruplarını tercih et
+
+Aşağıdaki iki işlevi göz önünde bulundurun:
+
+```fsharp
+let rec runWithTuple t offset times =
+    let offsetValues x y z offset =
+        (x + offset, y + offset, z + offset)
+
+    if times <= 0 then
+        t
+    else
+        let (x, y, z) = t
+        let r = offsetValues x y z offset
+        runWithTuple r offset (times - 1)
+
+let rec runWithStructTuple t offset times =
+    let offsetValues x y z offset =
+        struct(x + offset, y + offset, z + offset)
+
+    if times <= 0 then
+        t
+    else
+        let struct(x, y, z) = t
+        let r = offsetValues x y z offset
+        runWithStructTuple r offset (times - 1)
+```
+
+Bu işlevleri [Benchmarkdotnet](https://benchmarkdotnet.org/)gibi istatistiksel bir değerlendirme aracı ile kıyasladığınızda, yapı tanımlama gruplarını kullanan `runWithStructTuple` işlevinin %40 daha hızlı çalıştığını ve bellek ayırdığını fark edeceksiniz.
+
+Ancak, bu sonuçlar her zaman kendi kodunuzda durum değildir. Bir işlevi `inline`olarak işaretlerseniz, başvuru tanımlama gruplarını kullanan kod bazı ek iyileştirmeler alabilir veya ayrılacak kod yalnızca en iyi duruma getirilebilir. Performans açısından her zaman sonuçları ölçmelisiniz ve varsayım ya da ıntuksiz göre hiçbir zaman çalışmaz.
+
+#### <a name="prefer-struct-records-when-the-data-type-is-small"></a>Veri türü küçük olduğunda yapı kayıtlarını tercih et
+
+Daha önce açıklanan Thumb kuralı [ F# kayıt türleri](../language-reference/records.md)için de geçerlidir. Aşağıdaki veri türlerini ve bunları işleyen işlevleri göz önünde bulundurun:
+
+```fsharp
+type Point = { X: float; Y: float; Z: float }
+
+[<Struct>]
+type SPoint = { X: float; Y: float; Z: float }
+
+let rec processPoint (p: Point) offset times =
+    let inline offsetValues (p: Point) offset =
+        { p with X = p.X + offset; Y = p.Y + offset; Z = p.Z + offset }
+
+    if times <= 0 then
+        p
+    else
+        let r = offsetValues p offset
+        processPoint r offset (times - 1)
+
+let rec processStructPoint (p: SPoint) offset times =
+    let inline offsetValues (p: SPoint) offset =
+        { p with X = p.X + offset; Y = p.Y + offset; Z = p.Z + offset }
+
+    if times <= 0 then
+        p
+    else
+        let r = offsetValues p offset
+        processStructPoint r offset (times - 1)
+```
+
+Bu, önceki demet koduna benzerdir, ancak bu kez örnek kayıtları ve satır içi bir iç işlevi kullanır.
+
+Bu işlevleri [Benchmarkdotnet](https://benchmarkdotnet.org/)gibi istatistiksel bir değerlendirme aracı ile kıyaslandığınızda, `processStructPoint` neredeyse %60 daha hızlı çalıştığını ve yönetilen yığında hiçbir şey ayırdığını görürsünüz.
+
+#### <a name="prefer-struct-discriminated-unions-when-the-data-type-is-small"></a>Veri türü küçük olduğunda struct ayrılmış birleşimler tercih et
+
+Yapı tanımlama grupları ve kayıtlarıyla performans hakkında önceki gözlemler, [ F# ayrılmış birleşimler](../language-reference/discriminated-unions.md)için de geçerlidir. Aşağıdaki kodu göz önünde bulundurun:
+
+```fsharp
+    type Name = Name of string
+    
+    [<Struct>]
+    type SName = SName of string
+
+    let reverseName (Name s) =
+        s.ToCharArray()
+        |> Array.rev
+        |> string
+        |> Name
+
+    let structReverseName (SName s) =
+        s.ToCharArray()
+        |> Array.rev
+        |> string
+        |> SName
+```
+
+Bu, etki alanı modelleme için bunun gibi tek büyük harfli ayırt edici birleşimler tanımlamak yaygındır. Bu işlevleri [Benchmarkdotnet](https://benchmarkdotnet.org/)gibi istatistiksel bir değerlendirme aracı ile kıyaslandığınızda, `structReverseName` küçük dizeler için `reverseName` yaklaşık %25 daha hızlı çalıştığını fark edeceksiniz. Büyük dizeler için her ikisi de aynı şekilde gerçekleştirilir. Bu nedenle, bu durumda her zaman bir struct kullanılması tercih edilir. Daha önce belirtildiği gibi, varsayımlar veya ıntuklarda her zaman ölçüm ve işlem kullanmayın.
+
+Önceki örnekte, bir yapının ayırt edici UNION birleşimi daha iyi performans olduğunu gösterdi, ancak bir etki alanını modellemesi sırasında daha büyük ayırt edici birleşimler olması yaygındır. Daha büyük veri türleri, daha fazla kopyalama söz konusu olduğundan, bunlar üzerinde işlemlere göre yapılar olmaları halinde de gerçekleştirilemeyebilir.
+
+### <a name="functional-programming-and-mutation"></a>Fonksiyonel programlama ve mutasyon
+
+F#değerler, bazı hata sınıflarından kaçınmanıza izin veren (özellikle eşzamanlılık ve paralellik olanlar) varsayılan olarak sabittir. Bununla birlikte, belirli durumlarda, yürütme süresi veya bellek ayırmaları için en iyi (veya hatta makul) verimlilik elde etmek üzere bir iş yayılımı en iyi duruma geçen durum ile uygulanabilir. Bu, `mutable` anahtar sözcüğüyle birlikte F# kabul etme esasına göre yapılabilir.
+
+`mutable` kullanımı, işlevsel F# bir şekilde Odd 'de olabilir. Bu, anlaşılır değildir ancak her yerde işlevsel anlaya, performans hedeflerine sahip gürültü 'de bulunabilir. Bir uzlaşma, çağrı yapanların bir işlevi çağırdıkları sırada ne olacağı hakkında İlgilenmemeleri gereken her şeyi kapsüllemesidir. Bu, performans açısından kritik kod için bir mutasyon tabanlı uygulama üzerinde işlevsel bir arabirim yazmanızı sağlar.
+
+#### <a name="wrap-mutable-code-in-immutable-interfaces"></a>Değişmez arabirimlerde kesilebilir kodu sarın
 
 Amaç olarak bilgi saydamlığı ile, performans açısından kritik işlevlerin değişebilir işlevlerini açığa çıkaran bir kod yazmak çok önemlidir. Örneğin, aşağıdaki kod F# çekirdek kitaplığındaki `Array.contains` işlevini uygular:
 
@@ -465,7 +572,7 @@ let inline contains value (array:'T[]) =
 
 Bu işlevi birden çok kez çağırmak, temel alınan diziyi değiştirmez veya onu tükettiği herhangi bir kesilebilir durumu korumanıza gerek duyar. Neredeyse her bir kod satırı mutation kullandığından bile, bu değer saydam bir şekilde görünür.
 
-### <a name="consider-encapsulating-mutable-data-in-classes"></a>Sınıflarda kesilebilir verileri kapsüllemek için kullanın
+#### <a name="consider-encapsulating-mutable-data-in-classes"></a>Sınıflarda kesilebilir verileri kapsüllemek için kullanın
 
 Önceki örnekte, değiştirilebilir verileri kullanarak işlemleri kapsüllemek için tek bir işlev kullanılmıştır. Bu, daha karmaşık veri kümeleri için her zaman yeterli değildir. Aşağıdaki işlev kümelerini göz önünde bulundurun:
 
@@ -511,9 +618,9 @@ type Closure1Table() =
 
 `Closure1Table` temel alınan mutasyon tabanlı veri yapısını kapsüller, böylece çağıranlar temel alınan veri yapısını sürdürmek üzere zorlar. Sınıflar, çağıranların ayrıntılarını açığa çıkarmadan tabanlı verileri ve yordamları kapsüllemek için güçlü bir yoldur.
 
-### <a name="prefer-let-mutable-to-reference-cells"></a>Hücrelere başvurmak için `let mutable` tercih et
+#### <a name="prefer-let-mutable-to-reference-cells"></a>Hücrelere başvurmak için `let mutable` tercih et
 
-Başvuru hücreleri değerin kendisi yerine bir değere başvuruyu temsil etmenin bir yoludur. Performans açısından kritik kod için kullanılabilmesine rağmen, genellikle önerilmez. Aşağıdaki örneği göz önünde bulundurun:
+Başvuru hücreleri değerin kendisi yerine bir değere başvuruyu temsil etmenin bir yoludur. Performans açısından kritik kod için kullanılabilmesine rağmen, bunlar önerilmez. Aşağıdaki örnek göz önünde bulundurun:
 
 ```fsharp
 let kernels =

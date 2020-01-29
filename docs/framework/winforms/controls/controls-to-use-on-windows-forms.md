@@ -1,16 +1,16 @@
 ---
-title: Windows Forms'ta Kullanılacak Denetimler
+title: Kullanılacak denetimler
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: bedfaef9a3d0cc81641006d254926f7bf9861c10
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2bcefd2ee2c9533d9f0afa2d12cd2e7437fc3d37
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930205"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737449"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows Forms'ta Kullanılacak Denetimler
 Aşağıda, Windows Forms kullanılabilen denetimlerin ve bileşenlerin alfabetik bir listesi verilmiştir. Bu bölümde ele alınan Windows Forms denetimlerine ek olarak, Windows Forms için ActiveX ve özel denetimler ekleyebilirsiniz. Burada listelenmesi gereken denetimi bulamazsanız, kendi kendinize de oluşturabilirsiniz. Ayrıntılar için bkz. [tasarım zamanında Windows Forms denetimleri geliştirme](developing-windows-forms-controls-at-design-time.md). İhtiyacınız olan denetimi seçme hakkında daha fazla bilgi için bkz. [Windows Forms denetimleri işleve göre](windows-forms-controls-by-function.md).  
@@ -50,10 +50,10 @@ Aşağıda, Windows Forms kullanılabilen denetimlerin ve bileşenlerin alfabeti
  Açılan Birleşik giriş kutusunda verileri görüntüler.  
   
  [ContextMenu Bileşeni](contextmenu-component-windows-forms.md)  
- Kullanıcılara, seçilen nesneyle ilişkili sık kullanılan komutların kolayca erişilebilir bir menüsünü sağlar. , Ve önceki sürümlerin <xref:System.Windows.Forms.ContextMenu> denetimine işlevsellik ekler ve bu sayede istenirse, <xref:System.Windows.Forms.ContextMenu> geriye dönük uyumluluk ve ileride kullanılmak üzere korunur. <xref:System.Windows.Forms.ContextMenuStrip>  
+ Kullanıcılara, seçilen nesneyle ilişkili sık kullanılan komutların kolayca erişilebilir bir menüsünü sağlar. <xref:System.Windows.Forms.ContextMenuStrip>, önceki sürümlerin <xref:System.Windows.Forms.ContextMenu> denetimine işlevsellik koyar, ancak istenirse, <xref:System.Windows.Forms.ContextMenu> hem geri uyumluluk hem de gelecekte kullanılmak üzere korunur.  
   
  [ContextMenuStrip Denetimi](contextmenustrip-control.md)  
- Bir kısayol menüsünü temsil eder. , Ve önceki sürümlerin <xref:System.Windows.Forms.ContextMenu> denetimine işlevsellik ekler ve bu sayede istenirse, <xref:System.Windows.Forms.ContextMenu> geriye dönük uyumluluk ve ileride kullanılmak üzere korunur. <xref:System.Windows.Forms.ContextMenuStrip>  
+ Bir kısayol menüsünü temsil eder. <xref:System.Windows.Forms.ContextMenuStrip>, önceki sürümlerin <xref:System.Windows.Forms.ContextMenu> denetimine işlevsellik koyar, ancak istenirse, <xref:System.Windows.Forms.ContextMenu> hem geri uyumluluk hem de gelecekte kullanılmak üzere korunur.  
   
  [DataGrid Denetimi](datagrid-control-windows-forms.md)  
  Bir veri kümesindeki tablo verilerini görüntüler ve veri kaynağında güncelleştirmelere izin verir.  
@@ -109,13 +109,13 @@ Aşağıda, Windows Forms kullanılabilen denetimlerin ve bileşenlerin alfabeti
  Simgeleri olan öğelerin listesini Windows Gezgini 'nin biçiminde görüntüler.  
   
  [MainMenu Bileşeni](mainmenu-component-windows-forms.md)  
- Çalışma zamanında bir menü görüntüler. , Ve önceki sürümlerin <xref:System.Windows.Forms.MainMenu> denetimine işlevsellik ekler ve bu, <xref:System.Windows.Forms.MainMenu> isterseniz hem geriye dönük uyumluluk hem de gelecekte kullanılmak üzere korunur. <xref:System.Windows.Forms.MenuStrip>  
+ Çalışma zamanında bir menü görüntüler. <xref:System.Windows.Forms.MenuStrip>, önceki sürümlerin <xref:System.Windows.Forms.MainMenu> denetimine işlevsellik koyar, ancak bunu seçerseniz, <xref:System.Windows.Forms.MainMenu> hem geri uyumluluk hem de gelecekte kullanılmak üzere korunur.  
   
  [MaskedTextBox Denetimi](maskedtextbox-control-windows-forms.md)  
  Form içindeki Kullanıcı girişinin biçimini kısıtlar.  
   
  [MenuStrip Denetimi](menustrip-control-windows-forms.md)  
- Form için bir menü sistemi sağlar. , Ve önceki sürümlerin <xref:System.Windows.Forms.MainMenu> denetimine işlevsellik ekler ve bu, <xref:System.Windows.Forms.MainMenu> isterseniz hem geriye dönük uyumluluk hem de gelecekte kullanılmak üzere korunur. <xref:System.Windows.Forms.MenuStrip>  
+ Form için bir menü sistemi sağlar. <xref:System.Windows.Forms.MenuStrip>, önceki sürümlerin <xref:System.Windows.Forms.MainMenu> denetimine işlevsellik koyar, ancak bunu seçerseniz, <xref:System.Windows.Forms.MainMenu> hem geri uyumluluk hem de gelecekte kullanılmak üzere korunur.  
   
  [MonthCalendar Denetimi](monthcalendar-control-windows-forms.md)  
  Kullanıcıların tarih bilgilerini görüntülemesi ve ayarlaması için sezgisel bir grafik arabirimi sunar.  
@@ -171,10 +171,10 @@ Aşağıda, Windows Forms kullanılabilen denetimlerin ve bileşenlerin alfabeti
  Kullanıcının yerleşik bir denetimi (.NET Framework sürüm 1. x) yeniden boyutlandırmasını sağlar.  
   
  [StatusBar Denetimi](statusbar-control-windows-forms.md)  
- Odağa sahip olan denetimle ilgili durum bilgilerini görüntüler. , <xref:System.Windows.Forms.StatusStrip> Önceki sürümlerin <xref:System.Windows.Forms.StatusBar> denetimini değiştirir ve genişletir, <xref:System.Windows.Forms.StatusBar> ancak isterseniz hem geri uyumluluk hem de gelecekte kullanılmak üzere korunur.  
+ Odağa sahip olan denetimle ilgili durum bilgilerini görüntüler. <xref:System.Windows.Forms.StatusStrip> önceki sürümlerin <xref:System.Windows.Forms.StatusBar> denetimini değiştirir ve genişletse de, <xref:System.Windows.Forms.StatusBar> hem geri uyumluluk hem de ileride kullanılmak üzere korunur.  
   
  [StatusStrip Denetimi](statusstrip-control.md)  
- Bir Windows durum çubuğu denetimini temsil eder. , <xref:System.Windows.Forms.StatusStrip> Önceki sürümlerin <xref:System.Windows.Forms.StatusBar> denetimini değiştirir ve genişletir, <xref:System.Windows.Forms.StatusBar> ancak isterseniz hem geri uyumluluk hem de gelecekte kullanılmak üzere korunur.  
+ Bir Windows durum çubuğu denetimini temsil eder. <xref:System.Windows.Forms.StatusStrip> önceki sürümlerin <xref:System.Windows.Forms.StatusBar> denetimini değiştirir ve genişletse de, <xref:System.Windows.Forms.StatusBar> hem geri uyumluluk hem de ileride kullanılmak üzere korunur.  
   
  [TabControl Denetimi](tabcontrol-control-windows-forms.md)  
  Resimleri veya diğer denetimleri içerebilen birden çok sekme görüntüler.  
@@ -189,22 +189,22 @@ Aşağıda, Windows Forms kullanılabilen denetimlerin ve bileşenlerin alfabeti
  Düzenli aralıklarla bir olay oluşturur.  
   
  [ToolBar Denetimi](toolbar-control-windows-forms.md)  
- Komutları etkinleştirmek için menüleri ve bit eşlenmiş düğmeleri görüntüler. Denetimin işlevselliğini genişletebilir ve görünümünü ve davranışını değiştirebilirsiniz. , Ve önceki sürümlerin <xref:System.Windows.Forms.ToolBar> denetimine işlevsellik ekler ve bu, <xref:System.Windows.Forms.ToolBar> isterseniz hem geriye dönük uyumluluk hem de gelecekte kullanılmak üzere korunur. <xref:System.Windows.Forms.ToolStrip>  
+ Komutları etkinleştirmek için menüleri ve bit eşlenmiş düğmeleri görüntüler. Denetimin işlevselliğini genişletebilir ve görünümünü ve davranışını değiştirebilirsiniz. <xref:System.Windows.Forms.ToolStrip>, önceki sürümlerin <xref:System.Windows.Forms.ToolBar> denetimine işlevsellik koyar, ancak bunu seçerseniz, <xref:System.Windows.Forms.ToolBar> hem geri uyumluluk hem de gelecekte kullanılmak üzere korunur.  
   
  [ToolStrip Denetimi](toolstrip-control-windows-forms.md)  
- Windows Forms uygulamalarınızda özel araç çubukları ve menüler oluşturur. , Ve önceki sürümlerin <xref:System.Windows.Forms.ToolBar> denetimine işlevsellik ekler ve bu, <xref:System.Windows.Forms.ToolBar> isterseniz hem geriye dönük uyumluluk hem de gelecekte kullanılmak üzere korunur. <xref:System.Windows.Forms.ToolStrip>  
+ Windows Forms uygulamalarınızda özel araç çubukları ve menüler oluşturur. <xref:System.Windows.Forms.ToolStrip>, önceki sürümlerin <xref:System.Windows.Forms.ToolBar> denetimine işlevsellik koyar, ancak bunu seçerseniz, <xref:System.Windows.Forms.ToolBar> hem geri uyumluluk hem de gelecekte kullanılmak üzere korunur.  
   
  [ToolStripContainer Denetimi](toolstripcontainer-control.md)  
- Yerleştirme, radye ve düzenleme <xref:System.Windows.Forms.ToolStrip> denetimleri için formun her tarafında panel ve geleneksel denetimler için Merkezi <xref:System.Windows.Forms.ToolStripContentPanel> sağlar.  
+ , Yerleştirme, radye ve düzenleme için formun her tarafında paneller sağlar <xref:System.Windows.Forms.ToolStrip> denetimleri ve geleneksel denetimler için merkezi bir <xref:System.Windows.Forms.ToolStripContentPanel>.  
   
  [ToolStripPanel Denetimi](toolstrippanel-control.md)  
  Yerleştirme, radye ve düzenleme <xref:System.Windows.Forms.ToolStrip> denetimleri için bir panel sağlar.  
   
  [ToolStripProgressBar Denetimine Genel Bakış](toolstripprogressbar-control-overview.md)  
- Bir eylemin tamamlanma durumunu grafik olarak gösterir. , <xref:System.Windows.Forms.ToolStripProgressBar> Genellikle bir <xref:System.Windows.Forms.StatusStrip>içinde bulunur.  
+ Bir eylemin tamamlanma durumunu grafik olarak gösterir. <xref:System.Windows.Forms.ToolStripProgressBar>, genellikle bir <xref:System.Windows.Forms.StatusStrip>içinde bulunur.  
   
  [ToolStripStatusLabel Denetimi](toolstripstatuslabel-control.md)  
- <xref:System.Windows.Forms.StatusStrip> Denetimdeki bir paneli temsil eder.  
+ <xref:System.Windows.Forms.StatusStrip> denetimindeki bir paneli temsil eder.  
   
  [ToolTip Bileşeni](tooltip-component-windows-forms.md)  
  Kullanıcı diğer denetimlere işaret ediyorsa metni görüntüler.  
@@ -231,5 +231,5 @@ Aşağıda, Windows Forms kullanılabilen denetimlerin ve bileşenlerin alfabeti
  [Çeşitli dillerde ve kitaplıklarda karşılaştırılan denetimler ve programlanabilir nesneler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
  Visual Basic 6,0 ' deki denetimleri Visual Basic .NET içindeki ilgili denetime eşleyen bir tablo sağlar. Denetimlerin artık .NET Framework sınıfların olduğunu unutmayın.  
   
- [Nasıl yapılır: Windows Forms için ActiveX denetimleri ekleme](how-to-add-activex-controls-to-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms’a ActiveX Denetimleri Ekleme](how-to-add-activex-controls-to-windows-forms.md)  
  Windows Forms üzerinde ActiveX denetimlerinin nasıl kullanılacağını açıklar.

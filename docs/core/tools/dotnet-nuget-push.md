@@ -3,16 +3,16 @@ title: DotNet NuGet Push komutu
 description: DotNet NuGet Push komutu, bir paketi sunucuya gönderir ve yayınlar.
 author: karann-msft
 ms.date: 12/04/2019
-ms.openlocfilehash: 5e80295a570adc30a06d86b6735cb0387e39d5a3
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
-ms.translationtype: MT
+ms.openlocfilehash: a483c559dee8b4a82cc2c792f5c2c5e4a8ff3f87
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835525"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733101"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**Bu konu şu şekilde geçerlidir: ✓** .NET Core 1. x SDK ve sonraki sürümleri
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 1. x SDK ve sonraki sürümleri
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -77,7 +77,7 @@ dotnet nuget push [-h|--help]
 * **`--skip-duplicate`**
 
   Bir HTTP (S) sunucusuna birden çok paket gönderdiğinizde, gönderim devam edebilmesi için 409 çakışma yanıtını uyarı olarak değerlendirir. .NET Core 3,1 SDK 'dan beri kullanılabilir.
-                                 
+
 * **`-sk|--symbol-api-key <API_KEY>`**
 
   Sembol sunucusu için API anahtarı.
@@ -127,11 +127,11 @@ dotnet nuget push [-h|--help]
   ```dotnetcli
   dotnet nuget push *.nupkg
   ```
-  
+
   > [!NOTE]
   > Bu komut işe yaramazsa, bunun nedeni SDK 'nın eski sürümlerinde var olan bir hata olabilir (.NET Core 2,1 SDK ve önceki sürümleri).
   > Bunu onarmak için SDK sürümünüzü yükseltin veya bunun yerine şu komutu çalıştırın: `dotnet nuget push **/*.nupkg`
-  
+
 * Bir HTTP (S) sunucusu tarafından 409 çakışma yanıtı döndürülse bile tüm *. nupkg* dosyalarını iter:
 
   ```dotnetcli
