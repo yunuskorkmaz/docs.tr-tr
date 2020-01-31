@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-ms.openlocfilehash: 79be2572f52ec509d9551261074204bf62ad5388
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 808c26f53c4089248420280a43c88a1b3af0dad9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445050"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866552"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated Yöntemi
 Profil oluşturucuya, belirtilen IID ve sınıf için bir COM birlikte çalışma vtable 'ın oluşturulduğunu bildirir.  
@@ -35,19 +35,24 @@ HRESULT COMClassicVTableCreated(
     [in] ULONG   cSlots);  
 ```  
   
-## <a name="parameters"></a>Parametreler  
- `wrappedClasId`  
- 'ndaki Vtable 'ın oluşturulduğu sınıfın KIMLIĞI.  
-  
- `implementedIID`  
- 'ndaki Sınıf tarafından uygulanan arabirimin KIMLIĞI. Arabirim yalnızca dahili ise bu değer NULL olabilir.  
-  
- `pVTable`  
- 'ndaki Vtable başlangıcına yönelik bir işaretçi.  
-  
- `cSlots`  
- 'ndaki Vtable 'daki yuva sayısı.  
-  
+## <a name="parameters"></a>Parametreler
+
+- `wrappedClasId`
+
+  \[içinde] vtable 'ın oluşturulduğu sınıfın KIMLIĞI.
+
+- `implementedIID`
+
+  \[içinde] sınıfı tarafından uygulanan arabirimin KIMLIĞI. Arabirim yalnızca dahili ise bu değer NULL olabilir.
+
+- `pVTable`
+
+  \[, vtable başlangıcını gösteren bir işaretçidir.
+
+- `cSlots`
+
+  \[içinde] vtable 'daki yuva sayısı.
+
 ## <a name="remarks"></a>Açıklamalar  
  Yığın atık toplamaya izin veren bir durumda olmadığından profil oluşturucu bu yöntemin uygulamasında engellenmemelidir, bu nedenle preemptive çöp toplama etkinleştirilemez. Profil Oluşturucu burada ve çöp toplama denendiğinde, bu geri arama dönene kadar çalışma zamanı engellenir.  
   
@@ -64,5 +69,5 @@ HRESULT COMClassicVTableCreated(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [COMClassicVTableDestroyed Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)
+- [ICorProfilerCallback Arabirimi](icorprofilercallback-interface.md)
+- [COMClassicVTableDestroyed Yöntemi](icorprofilercallback-comclassicvtabledestroyed-method.md)

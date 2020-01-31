@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70261da5-5933-4e25-9de0-ddf51cba56cc
 topic_type:
 - apiref
-ms.openlocfilehash: c7ced05692e3030bace10dab9a6793a29fac6c26
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 73d122b1ffa890bfa43f8eef7e24595ac0d26ebe
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444831"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861807"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert Yöntemi
 Belirtilen işlevlerin tüm örneklerini orijinal sürümlerine geri döndürür.  
@@ -54,8 +54,8 @@ HRESULT RequestRevert (
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Tüm istekleri dönüştürmek için bir girişimde bulunuldu; Ancak, döndürülen durum dizisinin hangi işlevlerin başarıyla geri döndürüldüğünü belirleyebilmek için denetlenmesi gerekir.|  
-|CORPROF_E_CALLBACK4_REQUIRED|Bu çağrının desteklenmesi için profil oluşturucunun [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) arabirimini uygulaması gerekir.|  
-|CORPROF_E_REJIT_NOT_ENABLED|JıT yeniden derleme etkinleştirilmemiş. `COR_PRF_ENABLE_REJIT` bayrağını ayarlamak için [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) yöntemini kullanarak başlatma sırasında JIT yeniden derlemeyi etkinleştirmeniz gerekir.|  
+|CORPROF_E_CALLBACK4_REQUIRED|Bu çağrının desteklenmesi için profil oluşturucunun [ICorProfilerCallback4](icorprofilercallback4-interface.md) arabirimini uygulaması gerekir.|  
+|CORPROF_E_REJIT_NOT_ENABLED|JıT yeniden derleme etkinleştirilmemiş. `COR_PRF_ENABLE_REJIT` bayrağını ayarlamak için [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) yöntemini kullanarak başlatma sırasında JIT yeniden derlemeyi etkinleştirmeniz gerekir.|  
 |E_INVALIDARG|`cFunctions` 0 ' dır veya `moduleIds` veya `methodIds` `NULL`.|  
 |E_OUTOFMEMORY|CLR belleği tükendiğinden isteği tamamlayamadı.|  
   
@@ -84,6 +84,6 @@ HRESULT RequestRevert (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo4 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo4 Arabirimi](icorprofilerinfo4-interface.md)
+- [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
+- [Profil Oluşturma](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a6e5dae-d366-4497-9c02-7b5b1f43f9ec
 topic_type:
 - apiref
-ms.openlocfilehash: 4ba3c378b93e3ae1ef288c0edabfacfcfd7070d7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 52ab9a089b5def4f3db2f99abc5a718d66cca739
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438668"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863458"
 ---
 # <a name="icorprofilerinfosetfunctionidmapper-method"></a>ICorProfilerInfo::SetFunctionIDMapper Yöntemi
 Profil oluşturucunun işlev girişine/çıkış kancalarına geçirilen `FunctionID` değerlerini alternatif değerlerle eşlemek için çağrılacak Profil Oluşturucu uygulanmış işlevi belirtir.  
@@ -34,12 +34,12 @@ HRESULT SetFunctionIDMapper (
   
 ## <a name="parameters"></a>Parametreler  
  `pFunc`  
- 'ndaki `FunctionID` değerlerini alternatif değerleriyle eşlemek için çağrılacak [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) uygulamasına yönelik bir işaretçi.  
+ 'ndaki `FunctionID` değerlerini alternatif değerleriyle eşlemek için çağrılacak [FunctionIDMapper](functionidmapper-function.md) uygulamasına yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `FunctionID` değerler için alternatifler, " [ICorProfilerInfo2:: SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md) yöntemi tarafından belirtilen Profiler 'ın işlev girdisine/çıkış kancalarına ([FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)ve [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)) geçirilecek.  
+ `FunctionID` değerler için alternatifler, " [ICorProfilerInfo2:: SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md) yöntemi tarafından belirtilen Profiler 'ın işlev girdisine/çıkış kancalarına ([FunctionEnter2](functionenter2-function.md), [FunctionLeave2](functionleave2-function.md)ve [FunctionTailcall2](functiontailcall2-function.md)) geçirilecek.  
   
- `FunctionIDMapper` yalnızca bir kez ayarlanabilir ve bunu [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) geri çağırması içinde ayarlamanız önerilir.  
+ `FunctionIDMapper` yalnızca bir kez ayarlanabilir ve bunu [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) geri çağırması içinde ayarlamanız önerilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -52,4 +52,4 @@ HRESULT SetFunctionIDMapper (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo Arabirimi](icorprofilerinfo-interface.md)

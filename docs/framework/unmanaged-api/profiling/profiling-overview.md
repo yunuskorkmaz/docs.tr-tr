@@ -27,12 +27,12 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: a13470b970b35a2f6f088fd305ba455167c8e107
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: aa8bff374e9698d4b7e032428ec1bdc66901e05d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937826"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860922"
 ---
 # <a name="profiling-overview"></a>Profil Oluşturmaya Genel Bakış
 
@@ -48,7 +48,7 @@ CLR uygulamasının profilini oluşturmak, profil oluşturma genel olarak derlen
 
 Genellikle, profil oluşturma API 'SI, yönetilen bir uygulamanın yürütülmesini izleyen bir program olan *kod profil oluşturucu*yazmak için kullanılır.
 
-Profil oluşturma API 'si, profili oluşturulan uygulamayla aynı işleme yüklenen bir profil oluşturucu DLL tarafından kullanılır. Profil oluşturucu DLL, .NET Framework sürüm 1,0 ve 1,1 ' de bir[geri çağırma arabirimi (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) sürüm 2,0 ve üzeri) uygular. CLR, profili oluşturulan işlemdeki olayların profil oluşturucuyu bilgilendirmek için bu arabirimdeki yöntemleri çağırır. Profil Oluşturucu, profili oluşturulmuş uygulamanın durumu hakkında bilgi almak için [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) ve [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) arabirimlerindeki yöntemleri kullanarak çalışma zamanına geri çağırabilir.
+Profil oluşturma API 'si, profili oluşturulan uygulamayla aynı işleme yüklenen bir profil oluşturucu DLL tarafından kullanılır. Profil oluşturucu DLL, .NET Framework sürüm 1,0 ve 1,1 ' de bir[geri çağırma arabirimi (](icorprofilercallback-interface.md) [ICorProfilerCallback2](icorprofilercallback2-interface.md) sürüm 2,0 ve üzeri) uygular. CLR, profili oluşturulan işlemdeki olayların profil oluşturucuyu bilgilendirmek için bu arabirimdeki yöntemleri çağırır. Profil Oluşturucu, profili oluşturulmuş uygulamanın durumu hakkında bilgi almak için [ICorProfilerInfo](icorprofilerinfo-interface.md) ve [ICorProfilerInfo2](icorprofilerinfo2-interface.md) arabirimlerindeki yöntemleri kullanarak çalışma zamanına geri çağırabilir.
 
 > [!NOTE]
 > Profil Oluşturucu çözümünün yalnızca veri toplama bölümü, profili oluşturulmuş uygulamayla aynı işlemde çalışmalıdır. Tüm Kullanıcı arabirimi ve veri analizi ayrı bir işlemde gerçekleştirilmelidir.
@@ -59,13 +59,13 @@ Aşağıdaki çizimde profil oluşturucu DLL 'nin profili oluşturulan uygulamay
 
 ### <a name="the-notification-interfaces"></a>Bildirim arabirimleri
 
-[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) ve [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) , bildirim arabirimleri olarak düşünülebilir. Bu arabirimler [ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)ve [JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)gibi yöntemlerden oluşur. CLR bir sınıfı yüklediğinde veya kaldırdığında, bir işlevi derlediğinde ve bu durumda, profil oluşturucunun `ICorProfilerCallback` veya `ICorProfilerCallback2` arabiriminde karşılık gelen yöntemi çağırır.
+[ICorProfilerCallback](icorprofilercallback-interface.md) ve [ICorProfilerCallback2](icorprofilercallback2-interface.md) , bildirim arabirimleri olarak düşünülebilir. Bu arabirimler [ClassLoadStarted](icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](icorprofilercallback-classloadfinished-method.md)ve [JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md)gibi yöntemlerden oluşur. CLR bir sınıfı yüklediğinde veya kaldırdığında, bir işlevi derlediğinde ve bu durumda, profil oluşturucunun `ICorProfilerCallback` veya `ICorProfilerCallback2` arabiriminde karşılık gelen yöntemi çağırır.
 
-Örneğin, bir profil oluşturucu iki bildirim işlevi aracılığıyla kod performansını ölçebilir: [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) ve [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md). Her bildirime yalnızca zaman damgası oluşturur, sonuçları birikir ve uygulamanın yürütülmesi sırasında en fazla CPU veya duvar saati zamanını hangi işlevlerin tükettiğini belirten bir liste verir.
+Örneğin, bir profil oluşturucu iki bildirim işlevi aracılığıyla kod performansını ölçebilir: [FunctionEnter2](functionenter2-function.md) ve [FunctionLeave2](functionleave2-function.md). Her bildirime yalnızca zaman damgası oluşturur, sonuçları birikir ve uygulamanın yürütülmesi sırasında en fazla CPU veya duvar saati zamanını hangi işlevlerin tükettiğini belirten bir liste verir.
 
 ### <a name="the-information-retrieval-interfaces"></a>Bilgi alma arabirimleri
 
-Profil oluşturma ile ilgili diğer ana arabirimler [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) ve [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md). Profil Oluşturucu, analizine yardımcı olmak üzere daha fazla bilgi edinmek için bu arabirimleri gerektiği şekilde çağırır. Örneğin, CLR [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) işlevini her çağırdığında, bir işlev tanımlayıcısı sağlar. Profil Oluşturucu, işlevin üst sınıfını, adını ve benzerlerini saptamak için [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) metodunu çağırarak, bu işlev hakkında daha fazla bilgi alabilir.
+Profil oluşturma ile ilgili diğer ana arabirimler [ICorProfilerInfo](icorprofilerinfo-interface.md) ve [ICorProfilerInfo2](icorprofilerinfo2-interface.md). Profil Oluşturucu, analizine yardımcı olmak üzere daha fazla bilgi edinmek için bu arabirimleri gerektiği şekilde çağırır. Örneğin, CLR [FunctionEnter2](functionenter2-function.md) işlevini her çağırdığında, bir işlev tanımlayıcısı sağlar. Profil Oluşturucu, işlevin üst sınıfını, adını ve benzerlerini saptamak için [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) metodunu çağırarak, bu işlev hakkında daha fazla bilgi alabilir.
 
 ## <a name="supported-features"></a>Desteklenen Özellikler
 
@@ -127,9 +127,9 @@ Profil oluşturma API 'SI aşağıdaki işlevleri desteklemez:
 
 ## <a name="notification-threads"></a>Bildirim Iş parçacıkları
 
-Çoğu durumda, bir olayı oluşturan iş parçacığı de bildirimleri yürütür. Bu tür bildirimlerin (örneğin, [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) ve [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)) açık `ThreadID`sağlaması gerekmez. Ayrıca, profil oluşturucu, etkilenen iş parçacığının `ThreadID` bağlı olarak genel depolamada analiz bloklarını dizinlemek yerine çözümleme bloklarını depolamak ve güncelleştirmek için iş parçacığı yerel depolama 'yı kullanmaya karar verebilir.
+Çoğu durumda, bir olayı oluşturan iş parçacığı de bildirimleri yürütür. Bu tür bildirimlerin (örneğin, [FunctionEnter](functionenter-function.md) ve [FunctionLeave](functionleave-function.md)) açık `ThreadID`sağlaması gerekmez. Ayrıca, profil oluşturucu, etkilenen iş parçacığının `ThreadID` bağlı olarak genel depolamada analiz bloklarını dizinlemek yerine çözümleme bloklarını depolamak ve güncelleştirmek için iş parçacığı yerel depolama 'yı kullanmaya karar verebilir.
 
-Bu geri çağırmaların serileştirilmediğini unutmayın. Kullanıcılar, iş parçacığı açısından güvenli veri yapıları oluşturarak ve birden çok iş parçacığından paralel erişimi engellemek için gerektiğinde profil oluşturucu kodunu kilitleyerek kendi kodlarını korumalıdır. Bu nedenle, bazı durumlarda olağan dışı bir geri çağırma sırası alabilirsiniz. Örneğin, yönetilen bir uygulamanın özdeş kodu yürüten iki iş parçacığını sağladığını varsayalım. Bu durumda, bir iş parçacığından bazı işlevleri için [ICorProfilerCallback:: JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) olayını ve [ICorProfilerCallback:: JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) geri aramasını almadan önce diğer iş parçacığından bir `FunctionEnter` geri aramasını almak mümkündür. Bu durumda, Kullanıcı henüz derlenmiş tam zamanında (JıT) olmayan bir işlev için `FunctionEnter` geri araması alacaktır.
+Bu geri çağırmaların serileştirilmediğini unutmayın. Kullanıcılar, iş parçacığı açısından güvenli veri yapıları oluşturarak ve birden çok iş parçacığından paralel erişimi engellemek için gerektiğinde profil oluşturucu kodunu kilitleyerek kendi kodlarını korumalıdır. Bu nedenle, bazı durumlarda olağan dışı bir geri çağırma sırası alabilirsiniz. Örneğin, yönetilen bir uygulamanın özdeş kodu yürüten iki iş parçacığını sağladığını varsayalım. Bu durumda, bir iş parçacığından bazı işlevleri için [ICorProfilerCallback:: JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md) olayını ve [ICorProfilerCallback:: JITCompilationFinished](icorprofilercallback-jitcompilationfinished-method.md) geri aramasını almadan önce diğer iş parçacığından bir `FunctionEnter` geri aramasını almak mümkündür. Bu durumda, Kullanıcı henüz derlenmiş tam zamanında (JıT) olmayan bir işlev için `FunctionEnter` geri araması alacaktır.
 
 ## <a name="security"></a>Güvenlik
 
@@ -145,9 +145,9 @@ CLR profil oluşturma API 'SI gözden geçirmesi, COM birlikte çalışma veya d
 
 Bu bir tasarım perspektifinden mümkün olsa da, profil oluşturma API 'SI yönetilen bileşenleri desteklemez. CLR profiler tamamen yönetilmeyen olmalıdır. Yönetilen ve yönetilmeyen kodu bir CLR Profiler 'da birleştirme girişimleri, erişim ihlallerine, program hatasına veya kilitlenmelere neden olabilir. Profil oluşturucunun yönetilen bileşenleri, olayları yönetilmeyen bileşenlerine geri tetikleyecektir. Bu, daha sonra yönetilen bileşenleri yeniden çağırıp döngüsel başvurular oluşmasına neden olur.
 
-Bir CLR Profiler 'ın yönetilen kodu güvenli bir şekilde çağırabildiği tek konum bir yöntemin Microsoft ara dili (MSIL) gövdesinden oluşur. MSIL gövdesini değiştirmek için önerilen yöntem, [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) arabirimindeki JIT yeniden derleme yöntemlerini kullanmaktır.
+Bir CLR Profiler 'ın yönetilen kodu güvenli bir şekilde çağırabildiği tek konum bir yöntemin Microsoft ara dili (MSIL) gövdesinden oluşur. MSIL gövdesini değiştirmek için önerilen yöntem, [ICorProfilerCallback4](icorprofilercallback4-interface.md) arabirimindeki JIT yeniden derleme yöntemlerini kullanmaktır.
 
-Ayrıca, MSIL 'yi değiştirmek için eski izleme yöntemlerini kullanmak da mümkündür. Bir işlevin tam zamanında (JıT) derlenmesi tamamlanmadan önce, profil oluşturucu bir yöntemin MSIL gövdesine yönetilen çağrılar ekleyebilir ve ardından bunu JıT-derle (bkz. [ICorProfilerInfo:: GetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbody-method.md) yöntemi). Bu teknik, yönetilen kodun seçmeli araçları için veya JıT hakkında istatistik ve performans verileri toplamak için başarılı bir şekilde kullanılabilir.
+Ayrıca, MSIL 'yi değiştirmek için eski izleme yöntemlerini kullanmak da mümkündür. Bir işlevin tam zamanında (JıT) derlenmesi tamamlanmadan önce, profil oluşturucu bir yöntemin MSIL gövdesine yönetilen çağrılar ekleyebilir ve ardından bunu JıT-derle (bkz. [ICorProfilerInfo:: GetILFunctionBody](icorprofilerinfo-getilfunctionbody-method.md) yöntemi). Bu teknik, yönetilen kodun seçmeli araçları için veya JıT hakkında istatistik ve performans verileri toplamak için başarılı bir şekilde kullanılabilir.
 
 Alternatif olarak, bir kod Profilleyicisi, yönetilmeyen koda çağıran her yönetilen işlevin MSIL gövdesine yerel kancalar ekleyebilir. Bu teknik, izleme ve kapsam için kullanılabilir. Örneğin, bir kod Profilcisi, bloğun yürütüldüğünü sağlamak için her MSIL bloğundan sonra izleme kancaları ekleyebilir. Bir yöntemin MSIL gövdesinin değiştirilmesi çok önemli bir işlemdir ve dikkate alınması gereken birçok etken vardır.
 
@@ -161,7 +161,7 @@ Ortak dil çalışma zamanı (CLR) profil oluşturma API 'SI, yönetilmeyen kod 
 
 1,0 ve 1,1 .NET Framework sürümlerinde, bu yöntemler CLR hata ayıklama API 'sinin işlem içi alt kümesi aracılığıyla kullanılabilir. CorDebug. IDL dosyasında tanımlanmıştır.
 
-.NET Framework 2,0 ve sonrasında, bu işlevsellik için [ICorProfilerInfo2::D oStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) yöntemini kullanabilirsiniz.
+.NET Framework 2,0 ve sonrasında, bu işlevsellik için [ICorProfilerInfo2::D oStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) yöntemini kullanabilirsiniz.
 
 ## <a name="using-com"></a>COM kullanarak
 
@@ -175,11 +175,11 @@ Profil oluşturma API 'SI, çağrı yığınlarının alınması için iki yol s
 
 Yığın anlık görüntüsü, zaman içinde anlık bir iş parçacığı yığınının bir izlemesinde. Profil oluşturma API 'SI yığında yönetilen işlevlerin izlenmesini destekler, ancak yönetilmeyen işlevlerin izlenmesini profil oluşturucunun kendi yığın Denetçisi ' ne bırakır.
 
-Profil oluşturucunun yönetilen yığınları izlenecek şekilde programlamanın nasıl yapılacağı hakkında daha fazla bilgi için, bu belge kümesindeki [ICorProfilerInfo2::D oStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) yöntemine ve [profiler Stack .NET Framework 2,0: temelleri ve ötesinde](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10))inceleyin.
+Profil oluşturucunun yönetilen yığınları izlenecek şekilde programlamanın nasıl yapılacağı hakkında daha fazla bilgi için, bu belge kümesindeki [ICorProfilerInfo2::D oStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) yöntemine ve [profiler Stack .NET Framework 2,0: temelleri ve ötesinde](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10))inceleyin.
 
 ### <a name="shadow-stack"></a>Gölge yığını
 
-Snapshot yönteminin çok sık kullanılması, hızlı bir şekilde performans sorunu oluşturabilir. Yığın izlemelerini sık sık almak istiyorsanız, profil oluşturucunun bunun yerine [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)ve [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) özel durum geri çağırmaları kullanarak bir gölge yığını oluşturması gerekir. Gölge yığını her zaman geçerli olur ve yığın anlık görüntüsü gerektiğinde hızlı bir şekilde depolamaya kopyalanabilir.
+Snapshot yönteminin çok sık kullanılması, hızlı bir şekilde performans sorunu oluşturabilir. Yığın izlemelerini sık sık almak istiyorsanız, profil oluşturucunun bunun yerine [FunctionEnter2](functionenter2-function.md), [FunctionLeave2](functionleave2-function.md), [FunctionTailcall2](functiontailcall2-function.md)ve [ICorProfilerCallback2](icorprofilercallback2-interface.md) özel durum geri çağırmaları kullanarak bir gölge yığını oluşturması gerekir. Gölge yığını her zaman geçerli olur ve yığın anlık görüntüsü gerektiğinde hızlı bir şekilde depolamaya kopyalanabilir.
 
 Bir gölge yığın, işlev bağımsız değişkenlerini, dönüş değerlerini ve genel örneklemeler hakkında bilgileri alabilir. Bu bilgiler yalnızca gölge yığın aracılığıyla kullanılabilir ve denetim bir işleve geldiğinde elde edilebilir. Ancak, bu bilgiler işlevin çalıştırılması sırasında daha sonra kullanılamayabilir.
 
@@ -191,8 +191,8 @@ Profiler geri çağırmaları çok yığın kısıtlı koşullarda verilebilir v
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Profil Oluşturma Ortamını Ayarlama](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|Profil oluşturucuyu başlatma, olay bildirimlerini ayarlama ve bir Windows hizmeti profili oluşturma hakkında bilgiler sağlar.|
-|[Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|Profil oluşturma API 'sinin kullandığı yönetilmeyen arabirimleri açıklar.|
-|[Profil Oluşturma Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|Profil oluşturma API 'sinin kullandığı yönetilmeyen genel statik işlevleri açıklar.|
-|[Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|Profil oluşturma API 'sinin kullandığı yönetilmeyen numaralandırmaları açıklar.|
-|[Profil Oluşturma Yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)|Profil oluşturma API 'sinin kullandığı yönetilmeyen yapıları açıklar.|
+|[Profil Oluşturma Ortamını Ayarlama](setting-up-a-profiling-environment.md)|Profil oluşturucuyu başlatma, olay bildirimlerini ayarlama ve bir Windows hizmeti profili oluşturma hakkında bilgiler sağlar.|
+|[Profil Oluşturma Arabirimleri](profiling-interfaces.md)|Profil oluşturma API 'sinin kullandığı yönetilmeyen arabirimleri açıklar.|
+|[Profil Oluşturma Genel Statik İşlevleri](profiling-global-static-functions.md)|Profil oluşturma API 'sinin kullandığı yönetilmeyen genel statik işlevleri açıklar.|
+|[Profil Oluşturma Sabit Listeleri](profiling-enumerations.md)|Profil oluşturma API 'sinin kullandığı yönetilmeyen numaralandırmaları açıklar.|
+|[Profil Oluşturma Yapıları](profiling-structures.md)|Profil oluşturma API 'sinin kullandığı yönetilmeyen yapıları açıklar.|

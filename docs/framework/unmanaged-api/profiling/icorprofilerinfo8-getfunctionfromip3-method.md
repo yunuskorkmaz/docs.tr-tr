@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: df9ecc9bc355c12f993763820eb5065ba8bcc36b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6d50a5d74eccff6fe39aca111f768bac4d8f2e2e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855923"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868336"
 ---
 # <a name="icorprofilerinfo8getfunctionfromip3-method"></a>ICorProfilerInfo8:: GetFunctionFromIP3 yöntemi
 
@@ -30,16 +30,19 @@ HRESULT GetFunctionFromIP3([in] LPCBYTE ip,
                            [out] ReJITID * pReJitId);
 ```
 
-#### <a name="parameters"></a>Parametreler
+## <a name="parameters"></a>Parametreler
 
-`ip` \
-'ndaki Yönetilen koddaki yönerge işaretçisi.
+- `ip`
 
-`pFunctionId` \
-dışı İşlev KIMLIĞI.
+  \[, Yönetilen koddaki yönerge işaretçisi.
 
-`pReJitId` \
-dışı İşlevin JıT yeniden derlenmesi sürümünün kimliği.
+- `pFunctionId`
+
+  \[out] işlev KIMLIĞI.
+
+- `pReJitId`
+
+  \[out] işlevin JıT-yeniden derlenmesi sürümünün kimliği.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -47,14 +50,14 @@ Bu yöntem hem dinamik hem de dinamik olmayan yöntemler için geçerlidir. Yaln
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
 
-**Üst bilgi** CorProf. IDL, CorProf. h
+**Üst bilgi:** CorProf. IDL, CorProf. h
 
-**Kitaplığı** Corguid. lib
+**Kitaplık:** Corguid. lib
 
 **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo8 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md)
+- [ICorProfilerInfo8 arabirimi](icorprofilerinfo8-interface.md)

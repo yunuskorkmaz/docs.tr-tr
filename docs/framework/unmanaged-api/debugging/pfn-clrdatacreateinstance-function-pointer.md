@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c66ac57-d751-4de5-af9f-26ceb949af8b
 topic_type:
 - apiref
-ms.openlocfilehash: 426a8acf2e9319725cf592db00dc97c8960bca4f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 433f34447d3bd1a57ca1e289cb0eab3facac2c69
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139163"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790364"
 ---
 # <a name="pfn_clrdatacreateinstance-function-pointer"></a>PFN_CLRDataCreateInstance İşlev İşaretçisi
 Belirtilen hedef öğe için arabirim nesnesi oluşturan bir işleve işaret eder.  
@@ -39,7 +39,7 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
  'ndaki Oluşturulacak arabirimin tanımlayıcısı.  
   
  `target`  
- 'ndaki Arabirim nesnesinin oluşturulacağı hedef öğeyi temsil eden, Kullanıcı tarafından uygulanan [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) nesnesine yönelik bir işaretçi.  
+ 'ndaki Arabirim nesnesinin oluşturulacağı hedef öğeyi temsil eden, Kullanıcı tarafından uygulanan [ICLRDataTarget](iclrdatatarget-interface.md) nesnesine yönelik bir işaretçi.  
   
  `iface`  
  dışı Döndürülen arabirim nesnesinin adresine yönelik bir işaretçi.  
@@ -58,4 +58,4 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Hata Ayıklama Genel Statik İşlevleri](debugging-global-static-functions.md)

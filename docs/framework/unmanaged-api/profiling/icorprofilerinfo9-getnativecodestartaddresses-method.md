@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7593e8873c2714df85146903c0052a9909a95ccd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8412020fb98fde245b873a2f0c6a355f6436f712
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444721"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868284"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: Getnativecodestartaadresler yöntemi
 
@@ -32,22 +32,27 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
                                      [out] UINT_PTR codeStartAddresses[]);
 ```
 
-#### <a name="parameters"></a>Parametreler
+## <a name="parameters"></a>Parametreler
 
-`functionId` \
-'ndaki Yerel kod başlatma adresleri döndürülecek olan işlevin KIMLIĞI.
+- `functionId`
 
-`reJitId` \
-'ndaki JıT-yeniden derleme işlevinin kimliği.
+  \[içinde] yerel kod başlatma adresleri döndürülecek işlevin KIMLIĞI.
 
-`cCodeStartAddresses` \
-'ndaki `codeStartAddresses` dizisinin en büyük boyutu.
+- `reJitId`
 
-`pcCodeStartAddresses` \
-dışı Kullanılabilir adreslerin sayısı.
+  \[içinde] JıT-yeniden derleme işlevinin kimliği.
 
-`codeStartAddresses` \
-dışı Her birinin belirtilen işlev için yerel gövde başlangıç adresi olan `UINT_PTR`dizisi.
+- `cCodeStartAddresses`
+
+  \[içinde] `codeStartAddresses` dizisinin en büyük boyutu.
+
+- `pcCodeStartAddresses`
+
+  \[out] kullanılabilir adreslerin sayısı.
+
+- `codeStartAddresses`
+
+  \[out] her biri, belirtilen işlev için yerel bir gövde için başlangıç adresi olan bir `UINT_PTR`dizisi.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -65,4 +70,4 @@ Katmanlı derleme etkinleştirildiğinde, bir işlevde birden fazla yerel kod g�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo9 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 arabirimi](icorprofilerinfo9-interface.md)

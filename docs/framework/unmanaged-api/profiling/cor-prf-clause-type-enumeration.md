@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f64c325a-ed3a-4aaf-b847-a88edbc4fefc
 topic_type:
 - apiref
-ms.openlocfilehash: 94230cbad95ff0a5d4234c27aa5d1d56ac5be9bb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: edf5d61baae28a82aff0d0bd32d1d900085ac375
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428406"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867327"
 ---
 # <a name="cor_prf_clause_type-enumeration"></a>COR_PRF_CLAUSE_TYPE Numaralandırması
 Kodun yalnızca girdiği veya solundaki özel durum yan tümcesinin türünü gösterir.  
@@ -35,9 +35,9 @@ typedef enum {
 } COR_PRF_CLAUSE_TYPE;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`COR_PRF_CLAUSE_NONE`|Exception yan tümcesi geçerli değil.|  
 |`COR_PRF_CLAUSE_FILTER`|Exception yan tümcesi bir filtre ifadesidir.|  
@@ -55,4 +55,4 @@ typedef enum {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Profil Oluşturma Sabit Listeleri](profiling-enumerations.md)

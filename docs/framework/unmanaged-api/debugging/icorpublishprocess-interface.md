@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d1dc41b-8aa2-4889-bb00-1cbccc00c123
 topic_type:
 - apiref
-ms.openlocfilehash: 04f6a088c5bbe96e3909ba600aa8ffab937abe2d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3ae48df9e66890161c1aef944d37b0a279939d56
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140407"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790536"
 ---
 # <a name="icorpublishprocess-interface"></a>ICorPublishProcess Arabirimi
 Bir işlem hakkında görüntülenecek bilgilere erişen yöntemler sağlar.  
@@ -28,10 +28,10 @@ Bir işlem hakkında görüntülenecek bilgilere erişen yöntemler sağlar.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[EnumAppDomains Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-enumappdomains-method.md)|Bu `ICorPublishProcess`başvurduğu işlem içindeki uygulama etki alanlarını içeren bir [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) örneği alır.|  
-|[GetDisplayName Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getdisplayname-method.md)|Bu `ICorPublishProcess`başvurduğu işlem için yürütülebilir dosyanın tam yolunu alır.|  
-|[GetProcessID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getprocessid-method.md)|Bu `ICorPublishProcess`başvurduğu işlemin işletim sistemi tanımlayıcısını alır.|  
-|[IsManaged Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-ismanaged-method.md)|Bu `ICorPublishProcess` başvurduğu işlemin yönetilen kodu çalıştırıp çalıştırmadığını gösteren bir değer alır.|  
+|[EnumAppDomains Yöntemi](icorpublishprocess-enumappdomains-method.md)|Bu `ICorPublishProcess`başvurduğu işlem içindeki uygulama etki alanlarını içeren bir [ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md) örneği alır.|  
+|[GetDisplayName Yöntemi](icorpublishprocess-getdisplayname-method.md)|Bu `ICorPublishProcess`başvurduğu işlem için yürütülebilir dosyanın tam yolunu alır.|  
+|[GetProcessID Yöntemi](icorpublishprocess-getprocessid-method.md)|Bu `ICorPublishProcess`başvurduğu işlemin işletim sistemi tanımlayıcısını alır.|  
+|[IsManaged Yöntemi](icorpublishprocess-ismanaged-method.md)|Bu `ICorPublishProcess` başvurduğu işlemin yönetilen kodu çalıştırıp çalıştırmadığını gösteren bir değer alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,5 +44,5 @@ Bir işlem hakkında görüntülenecek bilgilere erişen yöntemler sağlar.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [CorpubPublish Coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [CorpubPublish Coclass](corpubpublish-coclass.md)

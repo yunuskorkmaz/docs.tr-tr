@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d23a3408-b525-4aec-a186-2ac7ca65d7a4
 topic_type:
 - apiref
-ms.openlocfilehash: 6bbb41f8fd3ac37f1c21fe8b4f6159e3d303777c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d280b008b34befce04159d02dfbb3de37b262c3c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445186"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866671"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback:: AppDomainShutdownStarted Yöntemi
 Profil Oluşturucu bir uygulama etki alanının bir işlemden kaldırılmakta olduğunu bildirir.  
@@ -32,10 +32,12 @@ HRESULT AppDomainShutdownStarted(
     [in] AppDomainID appDomainId);  
 ```  
   
-## <a name="parameters"></a>Parametreler  
- `appDomainId`  
- 'ndaki Uygulamanın derlemelerinin depolandığı etki alanını tanımlar.  
-  
+## <a name="parameters"></a>Parametreler
+
+- `appDomainId`
+
+  \[içinde], uygulamanın derlemelerinin depolandığı etki alanını tanımlar.
+
 ## <a name="remarks"></a>Açıklamalar  
  `appDomainId` değeri `AppDomainShutdownStarted` yöntemi çağrıldıktan sonra herhangi bir bilgi isteği için geçerli değildir — bu, profil oluşturucunun bu uygulama etki alanı hakkında bilgi almak için son şansınız olur.  
   
@@ -50,4 +52,4 @@ HRESULT AppDomainShutdownStarted(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback Arabirimi](icorprofilercallback-interface.md)

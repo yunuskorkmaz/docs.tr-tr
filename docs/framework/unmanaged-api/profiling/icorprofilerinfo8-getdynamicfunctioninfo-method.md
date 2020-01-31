@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 45a40d49cea2dd5f881fbd47cc2fb4bd96e8f9ff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9b5059d9e4bf9b79dc67664c7a7971041d1cf35b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243979"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861690"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8:: Getdynamicfunctionınfo yöntemi
 
@@ -34,28 +34,35 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
                                 [out] WCHAR                   wszName[]);
 ```
 
-#### <a name="parameters"></a>Parametreler
+## <a name="parameters"></a>Parametreler
 
-`functionId` \
-'ndaki Bilgi alınacak işlevin KIMLIĞI.
+- `functionId`
 
-`moduleId` \
-'ndaki İşlevin üst sınıfının tanımlandığı modüle yönelik bir işaretçi.
+  \[içinde] bilgi alınacak işlevin KIMLIĞI.
 
-`ppvSig` \
-dışı İşlev için imzaya yönelik bir işaretçi.
+- `moduleId`
 
-`pbSig` \
-dışı İşlev imzası için bayt sayısına yönelik bir işaretçi.
+  \[içinde) işlevin üst sınıfının tanımlandığı modülün bir işaretçisi.
 
-`cchName` \
-'ndaki `wszName` Dizinin en büyük boyutu.
+- `ppvSig`
 
-`pcchName` \
-dışı `wszName` Dizideki karakterlerin sayısı.
+  \[out] işlev için imzaya yönelik bir işaretçi.
 
-`wszName` \
-dışı Bir dizi `WCHAR` , varsa işlevin adıdır.
+- `pbSig`
+
+  \[out] işlev imzası için bayt sayısına yönelik bir işaretçi.
+
+- `cchName`
+
+  \[içinde] `wszName` dizisinin en büyük boyutu.
+
+- `pcchName`
+
+  \[out] `wszName` dizisindeki karakterlerin sayısı.
+
+- `wszName`
+
+  \[out], varsa, işlevin adı olan bir `WCHAR` dizisi.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -65,14 +72,14 @@ Bu API, varsa kolay bir ad dahil dinamik yöntemler hakkında bilgi almak için 
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
 
-**Üst bilgi** CorProf. IDL, CorProf. h
+**Üst bilgi:** CorProf. IDL, CorProf. h
 
-**Kitaplığı** Corguid. lib
+**Kitaplık:** Corguid. lib
 
 **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo8 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md)
+- [ICorProfilerInfo8 arabirimi](icorprofilerinfo8-interface.md)

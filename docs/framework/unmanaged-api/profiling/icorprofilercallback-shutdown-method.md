@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ea194f0-a331-4855-a2ce-37393b8e5f84
 topic_type:
 - apiref
-ms.openlocfilehash: 63e41df8af85d94df068526ef69708687b341e78
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 490f9dd5446a51bd07881cdb9825d737e380a63e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446936"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865863"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown Yöntemi
 Profil oluşturucuyu uygulamanın kapandığını bildirir.  
@@ -32,7 +32,7 @@ HRESULT Shutdown();
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Profil Oluşturucu kodu, `Shutdown` yöntemi çağrıldıktan sonra [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) arabiriminin yöntemlerini güvenli bir şekilde çağıramaz. `ICorProfilerInfo` yöntemlere yapılan çağrılar, `Shutdown` yöntemi döndüğünde tanımsız davranışa neden olur. Bazı sabit olaylar, kapatmadan sonra yine de gerçekleşebilir; Profil Oluşturucu, bu gerçekleştiğinde hemen döndürülmelidir.  
+ Profil Oluşturucu kodu, `Shutdown` yöntemi çağrıldıktan sonra [ICorProfilerInfo](icorprofilerinfo-interface.md) arabiriminin yöntemlerini güvenli bir şekilde çağıramaz. `ICorProfilerInfo` yöntemlere yapılan çağrılar, `Shutdown` yöntemi döndüğünde tanımsız davranışa neden olur. Bazı sabit olaylar, kapatmadan sonra yine de gerçekleşebilir; Profil Oluşturucu, bu gerçekleştiğinde hemen döndürülmelidir.  
   
  `Shutdown` yöntemi yalnızca, profili oluşturulan yönetilen uygulama yönetilen kod olarak (yani, işlem yığınında ilk çerçeve yönetiliyorsa) başlatıldığında çağrılır. Uygulama, yönetilmeyen kod olarak başlatıldıysa ancak daha sonra yönetilen koda atlamışsa, bu nedenle ortak dil çalışma zamanının (CLR) bir örneğini oluşturup `Shutdown` çağırılacaktır. Bu gibi durumlarda, profil oluşturucu, tüm kaynakları serbest bırakmak ve verilerin temizleme işlemini gerçekleştirmek (örneğin, verileri diske bırakmak vb.) için DLL_PROCESS_DETACH değerini kullanan bir `DllMain` yordamını içermelidir.  
   
@@ -49,5 +49,5 @@ HRESULT Shutdown();
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Initialize Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)
+- [ICorProfilerCallback Arabirimi](icorprofilercallback-interface.md)
+- [Initialize Yöntemi](icorprofilercallback-initialize-method.md)

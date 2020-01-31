@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3ccdf18-4ec6-494d-9024-48e5c8c724f5
 topic_type:
 - apiref
-ms.openlocfilehash: 1ff36e8ef6b7c02eea5b02bc22587bc3889df093
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 69a8aabd1d79bb9bb4248259c99124ce50677600
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133698"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789240"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState Numaralandırması
 Hata ayıklama için bir iş parçacığının durumunu belirtir.  
@@ -41,7 +41,7 @@ typedef enum CorDebugThreadState {
 |`THREAD_SUSPEND`|İş parçacığı çalıştırılamıyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklayıcı, bir iş parçacığının yürütmesini denetlemek için `CorDebugThreadState` numaralandırmayı kullanır. Bir iş parçacığının durumu [ICorDebugThread:: SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) veya [ICorDebugController:: SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) yöntemi kullanılarak ayarlanabilir.  
+ Hata ayıklayıcı, bir iş parçacığının yürütmesini denetlemek için `CorDebugThreadState` numaralandırmayı kullanır. Bir iş parçacığının durumu [ICorDebugThread:: SetDebugState](icordebugthread-setdebugstate-method.md) veya [ICorDebugController:: SetAllThreadsDebugState](icordebugcontroller-setallthreadsdebugstate-method.md) yöntemi kullanılarak ayarlanabilir.  
   
  [BARıNDıRMA API](../../../../docs/framework/unmanaged-api/hosting/index.md) 'sine sunulan bir geri çağırma, ileti balonları, bu nedenle kesintiye uğramış bir durum gerekli değildir.  
   
@@ -56,4 +56,4 @@ typedef enum CorDebugThreadState {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)

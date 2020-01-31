@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: c0bf92c9b6046d531e75771a9205e6dffe0fd367
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9f61a5a60b2ba1305158d1ab570079fe6aac19ac
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458489"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870746"
 ---
 # <a name="weak-event-patterns"></a>Zayıf Olay Desenleri
 Uygulamalarda, olay kaynaklarına eklenmiş olan işleyiciler, işleyiciyi kaynağa bağlayan dinleyici nesnesiyle birlikte yok edilmez. Bu durum bellek sızıntılarına neden olabilir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], belirli olaylar için adanmış bir yönetici sınıfı sağlayarak ve bu olay için dinleyicilerine bir arabirim uygulayarak bu sorunu gidermek için kullanılabilecek bir tasarım deseninin ortaya koymaktadır. Bu tasarım deseninin *zayıf olay deseninin*olduğu bilinmektedir.  
@@ -31,12 +31,12 @@ Uygulamalarda, olay kaynaklarına eklenmiş olan işleyiciler, işleyiciyi kayna
 ## <a name="how-to-implement-the-weak-event-pattern"></a>Zayıf olay deseninin nasıl uygulanacağı  
  Zayıf olay deseninin uygulanması için üç yol vardır. Aşağıdaki tabloda üç yaklaşım listelenmekte ve her birini ne zaman kullanmanız gerektiği hakkında bazı rehberlik sunulmaktadır.  
   
-|Uygulanabilecek|Ne zaman uygulanacağı|  
+|Yaklaşım|Ne zaman uygulanacağı|  
 |--------------|-----------------------|  
 |Varolan zayıf bir olay Yöneticisi sınıfını kullan|Abone olmak istediğiniz olaya karşılık gelen bir <xref:System.Windows.WeakEventManager>varsa, varolan zayıf olay yöneticisini kullanın. WPF 'e dahil olan zayıf olay yöneticilerinin bir listesi için <xref:System.Windows.WeakEventManager> sınıfında devralma hiyerarşisine bakın. Dahil edilen zayıf olay yöneticileri sınırlı olduğundan, muhtemelen diğer yaklaşımlardan birini seçmeniz gerekir.|  
 |Genel bir zayıf olay Yöneticisi sınıfı kullanın|Mevcut bir <xref:System.Windows.WeakEventManager> kullanılabilir olmadığında genel <xref:System.Windows.WeakEventManager%602> kullanın, uygulamak için kolay bir yol ve verimlilik konusunda endişe istemezsiniz. Genel <xref:System.Windows.WeakEventManager%602>, var olan veya özel zayıf bir olay yöneticisinden daha az verimlidir. Örneğin, genel sınıf, olayın adı verilen olayı bulmaya yönelik daha fazla yansıma yapar. Ayrıca, genel <xref:System.Windows.WeakEventManager%602> kullanarak olayı kaydeden kod, var olan veya özel bir <xref:System.Windows.WeakEventManager>kullanmaktan daha ayrıntılıdır.|  
 |Özel bir zayıf olay Yöneticisi sınıfı oluşturma|Mevcut bir <xref:System.Windows.WeakEventManager> kullanılabilir olmadığında ve en iyi verimliliği istediğinizde özel bir <xref:System.Windows.WeakEventManager> oluşturun. Bir olaya abone olmak için özel <xref:System.Windows.WeakEventManager> kullanmak daha verimli olacaktır, ancak başlangıçta daha fazla kod yazma maliyetine tabi olursunuz.|  
-|Üçüncü taraf zayıf bir olay Yöneticisi kullanma|NuGet [birkaç zayıf olay yöneticilerine](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) sahiptir ve birçok WPF çerçevesi de (örneğin, [esnek olarak bağlanmış olay aboneliği ile ilgili belgelere](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/Communication.md#subscribing-to-events)bakın).|
+|Üçüncü taraf zayıf bir olay Yöneticisi kullanma|NuGet [birkaç zayıf olay yöneticilerine](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) sahiptir ve birçok WPF çerçevesi de (örneğin, [esnek olarak bağlanmış olay aboneliği ile ilgili belgelere](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/legacy/Communication.md#subscribing-to-events)bakın).|
 
  Aşağıdaki bölümlerde, zayıf olay deseninin nasıl uygulanacağı açıklanır.  Bu tartışmanın amaçları doğrultusunda Abone olunacak olay aşağıdaki özelliklere sahiptir.  
   

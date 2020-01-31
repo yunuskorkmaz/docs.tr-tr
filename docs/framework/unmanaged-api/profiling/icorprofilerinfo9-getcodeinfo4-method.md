@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: ce29703a181106353695414e8b291b14c697fc56
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3e3e3afc221d153ff3573126ff10014d39af761a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444792"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868310"
 ---
 # <a name="icorprofilerinfo9getcodeinfo4-method"></a>ICorProfilerInfo9:: GetCodeInfo4 yöntemi
 
@@ -31,32 +31,36 @@ HRESULT GetCodeInfo4( [in]  UINT_PTR pNativeCodeStartAddress,
                       [out] COR_PRF_CODE_INFO codeInfos[]);
 ```
 
-#### <a name="parameters"></a>Parametreler
+## <a name="parameters"></a>Parametreler
 
-`pNativeCodeStartAddress` \
-'ndaki Yerel bir işlevin başlangıcına yönelik bir işaretçi.
+- `pNativeCodeStartAddress`
 
-`cCodeInfos` \
-'ndaki `codeInfos` dizisinin boyutu.
+  \[, yerel bir işlevin başlangıcına yönelik bir işaretçidir.
 
-`pcCodeInfos` \
-dışı [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) yapılarının toplam sayısına yönelik bir işaretçi.
+- `cCodeInfos`
 
-`codeInfos` \
-dışı Arayan tarafından sağlanmış arabellek. Yöntemi çağrıldıktan sonra, her biri yerel kod bloğunu açıklayan `COR_PRF_CODE_INFO` yapıları dizisi içerir.
+  `codeInfos` dizisinin boyutu \[.
+
+- `pcCodeInfos`
+
+  \[out] kullanılabilen toplam [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) yapısı sayısına yönelik bir işaretçi.
+
+- `codeInfos`
+
+  \[out] arayan tarafından sağlanmış bir arabellek. Yöntemi çağrıldıktan sonra, her biri yerel kod bloğunu açıklayan `COR_PRF_CODE_INFO` yapıları dizisi içerir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`GetCodeInfo4` yöntemi [GetCodeInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md)ile benzerdir, ancak yöntemin farklı yerel sürümleri için kod bilgilerini arayabilir.
+`GetCodeInfo4` yöntemi [GetCodeInfo3](icorprofilerinfo4-getcodeinfo3-method.md)ile benzerdir, ancak yöntemin farklı yerel sürümleri için kod bilgilerini arayabilir.
 
 > [!NOTE]
 > `GetCodeInfo4` bir çöp toplama tetikleyebilirler.
 
 Kapsamlar, artan ortak ara dil (CıL) kaydırmasının sırasına göre sıralanır.
 
-`GetCodeInfo4` çağrıldıktan sonra, `codeInfos` arabelleğinin tüm [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) yapılarını içerecek kadar büyük olduğunu doğrulamanız gerekir. Bunu yapmak için `cCodeInfos` değerini `cchName` parametresinin değeri ile karşılaştırın. [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) yapısına bölünen `cCodeInfos`, `pcCodeInfos`daha küçüktür, daha büyük bir `codeInfos` arabelleği ayırın, yeni, daha büyük boyutlu `cCodeInfos` güncelleştirin ve `GetCodeInfo4` çağırın.
+`GetCodeInfo4` çağrıldıktan sonra, `codeInfos` arabelleğinin tüm [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) yapılarını içerecek kadar büyük olduğunu doğrulamanız gerekir. Bunu yapmak için `cCodeInfos` değerini `cchName` parametresinin değeri ile karşılaştırın. [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) yapısına bölünen `cCodeInfos`, `pcCodeInfos`daha küçüktür, daha büyük bir `codeInfos` arabelleği ayırın, yeni, daha büyük boyutlu `cCodeInfos` güncelleştirin ve `GetCodeInfo4` çağırın.
 
-Alternatif olarak, doğru arabellek boyutunu elde etmek için ilk olarak `GetCodeInfo4` sıfır uzunluklu `codeInfos` arabelleği ile çağırabilirsiniz. Daha sonra `codeInfos` arabellek boyutunu `pcCodeInfos`döndürülen değere ayarlayabilirsiniz, bir [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) yapısının boyutuyla çarpılır ve `GetCodeInfo4` yeniden çağırabilirsiniz.
+Alternatif olarak, doğru arabellek boyutunu elde etmek için ilk olarak `GetCodeInfo4` sıfır uzunluklu `codeInfos` arabelleği ile çağırabilirsiniz. Daha sonra `codeInfos` arabellek boyutunu `pcCodeInfos`döndürülen değere ayarlayabilirsiniz, bir [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) yapısının boyutuyla çarpılır ve `GetCodeInfo4` yeniden çağırabilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -70,4 +74,4 @@ Alternatif olarak, doğru arabellek boyutunu elde etmek için ilk olarak `GetCod
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo9 arabirimi](../../../../docs/framework/unmanaged-api/profiling/ICorProfilerInfo9-interface.md)
+- [ICorProfilerInfo9 arabirimi](ICorProfilerInfo9-interface.md)

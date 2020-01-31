@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72822b95-a7fb-485e-9d55-1cb016d9a458
 topic_type:
 - apiref
-ms.openlocfilehash: f10ec279e67b86448298745a488f5b3e833e8c39
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ec33e55f840fe735091364ebc35cb7b7c165c10a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447374"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867197"
 ---
 # <a name="cor_prf_gc_reason-enumeration"></a>COR_PRF_GC_REASON Numaralandırması
 Çöp toplamanın oluşma nedenini gösterir.  
@@ -33,9 +33,9 @@ typedef enum {
 } COR_PRF_GC_REASON;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`COR_PRF_GC_INDUCED`|Çöp toplama bir <xref:System.GC.Collect%2A> yöntemi tarafından oluşturuldu.|  
 |`COR_PRF_GC_OTHER`|Neden belirtilmedi.|  
@@ -51,4 +51,4 @@ typedef enum {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Profil Oluşturma Sabit Listeleri](profiling-enumerations.md)

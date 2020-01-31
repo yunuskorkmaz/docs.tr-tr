@@ -2,12 +2,12 @@
 title: NuGet paketi yayımlama
 description: NuGet 'e .NET kitaplıklarını yayımlamaya yönelik en iyi yöntem önerileri.
 ms.date: 10/02/2018
-ms.openlocfilehash: e567fe3f7e00bf322cdd50786e50128961107469
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 089c660bc51252c6295858b1462ae59bde968564
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706471"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744558"
 ---
 # <a name="publishing-a-nuget-package"></a>NuGet paketi yayımlama
 
@@ -22,11 +22,11 @@ NuGet paketleri, paket depolarından yayımlanır ve kullanılır. NuGet.org, en
 > [!NOTE]
 > NuGet.org, bir paketin karşıya yüklendikten sonra [silinmesine izin vermez](/nuget/policies/deleting-packages) . Bir paket, Kullanıcı arabiriminde herkese açık olmayan ancak `*.nupkg` hala geri yükleme sırasında indirilebilecek şekilde listelenmemiş şekilde görünmeyebilir. Ayrıca, nuget.org yinelenen paket sürümlerine izin vermez. Bir NuGet paketini hata ile düzeltmek için yanlış paketi listelemeyi, sürüm numarasını artırmanız ve paketin yeni bir sürümünü yayımlamanız gerekir.
 
-**✔️** , topluluk geri bildirimini NuGet.org 'e göndermek istediğiniz [kararlı paketleri ve yayın öncesi paketleri yayımlayın](/nuget/create-packages/publish-a-package) .
+✔️, topluluk geri bildirimini NuGet.org 'e göndermek istediğiniz [kararlı paketleri ve yayın öncesi paketleri yayımlayın](/nuget/create-packages/publish-a-package) .
 
-**✔️** yayın öncesi paketleri sürekli tümleştirme derlemesinden bir myget akışına yayımlamayı düşünün.
+✔️ yayın öncesi paketleri sürekli tümleştirme derlemesinden bir MyGet akışına yayımlamayı düşünün.
 
-**✔️** yerel bir akış veya myget kullanarak geliştirme ortamınızda paketleri test etmeyi düşünün. Paketin çalıştığından emin olun ve NuGet.org 'de yayımlayın.
+✔️ Yerel bir akış veya MyGet kullanarak geliştirme ortamınızda paketleri test etmeyi düşünün. Paketin çalıştığından emin olun ve NuGet.org 'de yayımlayın.
 
 ## <a name="nugetorg-security"></a>NuGet.org güvenliği
 
@@ -34,11 +34,11 @@ Kötü aktörlerin NuGet hesabınıza erişebilmeleri ve kitaplığınızın kö
 
 ![alternatif metin](./media/publish-nuget-package/nuget-2fa.png "NuGet hesap güvenliği")
 
-**✔️** NuGet 'de oturum açmak için Microsoft hesabı kullanın.
+✔️ NuGet 'de oturum açmak için Microsoft hesabı kullanın.
 
-NuGet 'e erişmek için iki öğeli kimlik doğrulamayı etkinleştirme **✔️** .
+NuGet 'e erişmek için iki öğeli kimlik doğrulamayı etkinleştirme ✔️.
 
-bir paket yayımlandığında e-posta bildirimini etkinleştir **✔️** .
+bir paket yayımlandığında e-posta bildirimini etkinleştir ✔️.
 
 >[!div class="step-by-step"]
 >[Önceki](sourcelink.md)

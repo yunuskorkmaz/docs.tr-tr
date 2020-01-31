@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea3dc625-5650-4bf4-8e67-01e42be065b1
 topic_type:
 - apiref
-ms.openlocfilehash: 3f6320d6d962e40acf494acbb5c95adda62d1461
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 367584a01e368dc591c2e93acfcc6574f2fa1ec0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445296"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866327"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionenter-method"></a>ICorProfilerCallback::ExceptionUnwindFunctionEnter Yöntemi
 Profil oluşturucuyu, özel durum işlemenin geri alma aşamasının bir işlevi geriye doğru bir şekilde geri yüklemeye başladığını bildirir.  
@@ -32,10 +32,12 @@ HRESULT ExceptionUnwindFunctionEnter(
     [in] FunctionID functionId);  
 ```  
   
-## <a name="parameters"></a>Parametreler  
- `functionId`  
- 'ndaki Kaçınılmakta olan işlevin KIMLIĞI.  
-  
+## <a name="parameters"></a>Parametreler
+
+- `functionId`
+
+  \[içinde], ölçeklendirmekte olan işlevin KIMLIĞI.
+
 ## <a name="remarks"></a>Açıklamalar  
  Yığın atık toplamaya izin veren bir durumda olmadığından profil oluşturucu bu yöntemin uygulamasında engellenmemelidir, bu nedenle preemptive çöp toplama etkinleştirilemez. Profil Oluşturucu burada ve çöp toplama denendiğinde, bu geri arama dönene kadar çalışma zamanı engellenir.  
   
@@ -52,5 +54,5 @@ HRESULT ExceptionUnwindFunctionEnter(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ExceptionUnwindFunctionLeave Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionleave-method.md)
+- [ICorProfilerCallback Arabirimi](icorprofilercallback-interface.md)
+- [ExceptionUnwindFunctionLeave Yöntemi](icorprofilercallback-exceptionunwindfunctionleave-method.md)

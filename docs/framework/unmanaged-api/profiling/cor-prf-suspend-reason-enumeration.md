@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 75594833-bed3-47b2-a426-b75c5fe6fbcf
 topic_type:
 - apiref
-ms.openlocfilehash: d2d9ca77e764fe439753f1174a42af5ef80faa59
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1036ecbdb735b95c0ad6897c1545e3bd8cb6c3a9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447712"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867080"
 ---
 # <a name="cor_prf_suspend_reason-enumeration"></a>COR_PRF_SUSPEND_REASON Numaralandırması
 Çalışma zamanının askıya alınma nedenini gösterir.  
@@ -38,12 +38,12 @@ typedef enum {
 } COR_PRF_SUSPEND_REASON;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_SUSPEND_OTHER`|Beklenmeyen bir nedenden dolayı çalışma zamanı askıya alındı.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Bir çöp toplama isteğine hizmet vermek için çalışma zamanı askıya alındı.<br /><br /> [ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) ve [ICorProfilerCallback:: RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) geri çağırmaları arasında çöp toplama ile ilgili geri çağırmaları meydana gelir.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Bir çöp toplama isteğine hizmet vermek için çalışma zamanı askıya alındı.<br /><br /> [ICorProfilerCallback:: RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md) ve [ICorProfilerCallback:: RuntimeResumeStarted](icorprofilercallback-runtimeresumestarted-method.md) geri çağırmaları arasında çöp toplama ile ilgili geri çağırmaları meydana gelir.|  
 |`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|Çalışma zamanı, bir `AppDomain` kapatılabilen şekilde askıya alınır.<br /><br /> Çalışma zamanı askıya alındığında, çalışma zamanı hangi iş parçacıklarının kapanmakta olduğunu ve sürdürüldiklerinde iptal olarak ayarlandığını belirleyen `AppDomain`. Bu askıya alma sırasında `AppDomain`özel geri çağırma yok.|  
 |`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Çalışma zamanı, kod alma işleminin gerçekleşmesi için askıya alındı.<br /><br /> Kod işleme, yalnızca tam zamanında (JıT) derleyici tarafından etkin hale geldiğinde kodun etkin hale getiriliyor. `ICorProfilerCallback::RuntimeSuspendFinished` ve `ICorProfilerCallback::RuntimeResumeStarted` geri çağırmaları arasında kod geri çağırmaları oluşur. **Note:**  CLR JıT, .NET Framework sürüm 2,0 ' deki işlevleri göstermez, bu nedenle bu değer 2,0 ' de kullanılmaz.|  
 |`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Çalışma zamanı, kapanması için askıya alındı. İşlemi gerçekleştirmek için tüm iş parçacıklarını askıya almalıdır.|  
@@ -65,4 +65,4 @@ typedef enum {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Profil Oluşturma Sabit Listeleri](profiling-enumerations.md)

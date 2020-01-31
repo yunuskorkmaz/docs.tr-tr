@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1f6b8f3-dcfc-49e8-be76-ea50ea90d5a7
 topic_type:
 - apiref
-ms.openlocfilehash: e2a4df262e076c960640977bea0d22be19802140
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 96cde35c7151bb7ce58715f2826feaa59b30efab
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449676"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862314"
 ---
 # <a name="icorprofilerinfo3getmoduleinfo2-method"></a>ICorProfilerInfo3::GetModuleInfo2 Metodu
 Modül KIMLIĞI verildiğinde, modülün dosya adını, modülün üst derleme KIMLIĞINI ve modülün özelliklerini açıklayan bir bit maskesini döndürür.  
@@ -59,12 +59,12 @@ HRESULT GetModuleInfo2(
  dışı Modülün üst derleme KIMLIĞINE yönelik bir işaretçi.  
   
  `pdwModuleFlags`  
- dışı [Cor_prf_module_flags](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) Numaralandırmadaki, modülün özelliklerini belirten değerlerin bir bit maskesi.  
+ dışı [Cor_prf_module_flags](cor-prf-module-flags-enumeration.md) Numaralandırmadaki, modülün özelliklerini belirten değerlerin bir bit maskesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Dinamik modüller için `szName` parametresi modülün meta veri adıdır ve temel adres 0 (sıfır) olur. Meta veri adı, meta veriler içindeki modül tablosundan Ad sütunundaki değerdir. Bu Ayrıca, yönetilen koda <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> özelliği olarak ve [IMetaDataImport:: GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) yönteminin `szName` parametresi olarak yönetilmeyen meta veri istemci koduna da sunulur.  
   
- `GetModuleInfo2` yöntemi modülün KIMLIĞI mevcut olduğu anda çağrılabilir olsa da, ana derlemenin KIMLIĞI, profil oluşturucu [ICorProfilerCallback:: ModuleAttachedToAssembly geri çağrısını](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) alıncaya kadar kullanılamaz.  
+ `GetModuleInfo2` yöntemi modülün KIMLIĞI mevcut olduğu anda çağrılabilir olsa da, ana derlemenin KIMLIĞI, profil oluşturucu [ICorProfilerCallback:: ModuleAttachedToAssembly geri çağrısını](icorprofilercallback-moduleattachedtoassembly-method.md) alıncaya kadar kullanılamaz.  
   
  `GetModuleInfo2` döndüğünde, `szName` arabelleğinin modülün tam dosya adını içerecek kadar büyük olduğunu doğrulamanız gerekir. Bunu yapmak için `pcchName` işaret eden değeri `cchName` parametresinin değeri ile karşılaştırın. `pcchName`, `cchName`daha büyük bir değere işaret ediyorsa, daha büyük bir `szName` arabelleği ayırın, yeni, daha büyük boyuttaki `cchName` güncelleştirin ve `GetModuleInfo2` çağırın.  
   
@@ -81,6 +81,6 @@ HRESULT GetModuleInfo2(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo Arabirimi](icorprofilerinfo-interface.md)
+- [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
+- [Profil Oluşturma](index.md)

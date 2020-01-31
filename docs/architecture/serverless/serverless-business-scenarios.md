@@ -4,12 +4,12 @@ description: Görüntü işlemeden mobil arka uçlarına ve ETL işlem hattına 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5f0d7a4c5cd736d1168ec76c1c0ea19627505f15
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72522391"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787889"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Sunucusuz iş senaryoları ve kullanım örnekleri
 
@@ -33,7 +33,7 @@ Mantıksal uygulamayı oluşturmak için tam depo ve yönergeler buradan kullan�
 
 Bkz. Azure Web portalında veya Visual Studio 'da basit sunucusuz Azure Işlevi uygulama. Android, iOS ve Windows üzerinde çalışan Xamarin. Forms ile bir istemci oluşturun. Daha sonra uygulama, sunucu ile mobil istemciler arasında sunucusuz arka uca bir iletişim ortamı olarak JavaScript Nesne Gösterimi (JSON) kullanmak üzere iyileştirilmektedir.
 
-Daha fazla bilgi için bkz. [Xamarin. Forms istemcisiyle basit bir Azure Işlevi uygulama](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/).
+Daha fazla bilgi için bkz. [Xamarin. Forms istemcisiyle basit bir Azure Işlevi uygulama](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/).
 
 ## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>Sunucusuz görüntü tanıma ile fotoğraf mozaik oluşturma
 
@@ -43,7 +43,7 @@ Daha fazla bilgi için bkz. [Xamarin. Forms istemcisiyle basit bir Azure Işlevi
 
 Örneğin, modelinize göz önünde olacak şekilde modelleyebilirsiniz. Özel Görüntü İşleme, Orlando gözle bir görüntüyü tanıyacak ve işlev, Bing resim arama sonuçlarından oluşturulan "Orlando göz" için bir fotoğraf mozaik oluşturacaktır.
 
-Daha fazla bilgi için bkz. [Azure işlevleri fotoğraf mozaik Oluşturucu](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/).
+Daha fazla bilgi için bkz. [Azure işlevleri fotoğraf mozaik Oluşturucu](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic).
 
 ## <a name="migrate-an-existing-application-to-the-cloud"></a>Mevcut bir uygulamayı buluta geçirme
 
@@ -83,17 +83,17 @@ Yönergelerin bulunduğu tam bağlantı kısa bir deposu şurada bulunabilir: [s
 
 Örnek, bir Azure IoT Hub ve bir Azure Işlevinden oluşur. IoT Hub yeni bir ileti Azure Işlevini tetikler. Sunucusuz kod, aynı ileti içeriğini gönderen cihaza geri gönderir. Projede, çözüm için gereken tüm kod ve dağıtım yapılandırması vardır.
 
-Daha fazla bilgi için bkz. [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/).
+Daha fazla bilgi için bkz. [Azure IoT Hub ping](https://github.com/Azure-Samples/iot-hub-node-ping).
 
 ## <a name="recommended-resources"></a>Önerilen Kaynaklar
 
-- [Azure Işlevleri fotoğraf mozaik Oluşturucu](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-- [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [Azure Işlevleri fotoğraf mozaik Oluşturucu](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic)
+- [Azure IoT Hub ping](https://github.com/Azure-Samples/iot-hub-node-ping)
 - [Dakikalar içinde sunucusuz .NET uygulamaları için Azure depolama](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
 - [Kendi uygulamanızı getir](https://github.com/JeremyLikness/bring-own-app-connect-17)
 - [CSV içeri aktarma Laboratuvarı](https://github.com/JeremyLikness/azure-fn-file-process-hol)
 - [Olay Kılavuzu tutkalla](https://github.com/JeremyLikness/Event-Grid-Glue)
-- [Xamarin. Forms istemcisiyle basit bir Azure Işlevi uygulama](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [Xamarin. Forms istemcisiyle basit bir Azure Işlevi uygulama](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
 - [Sunucusuz Azure işlevleri ile kaldırın ve geçiş yapın](https://channel9.msdn.com/Events/Connect/2017/E102)
 - [Sunucusuz URL kısaltalayıcı](https://github.com/jeremylikness/serverless-url-shortener)
 

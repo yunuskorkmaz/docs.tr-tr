@@ -2,12 +2,12 @@
 title: 'Icordebugmutabledatatarget:: SetThreadContext yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
-ms.openlocfilehash: 2c9e508c7a4059fee4e1cce6eb28e6de7b2fff6d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 063c7954543174caece6f3dcbe005a4b2d059c64
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132703"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792842"
 ---
 # <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>Icordebugmutabledatatarget:: SetThreadContext yöntemi
 Bir iş parçacığının bağlamını (kayıt değerlerini) ayarlar.  
@@ -31,7 +31,7 @@ HRESULT SetThreadContext(
  'ndaki Yazılacak baytların işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `SetThreadContext` yöntemi, işletim sistemi tarafından tanımlanan `dwThreadID` bağımsız değişkeni tarafından belirtilen iş parçacığının geçerli bağlamını güncelleştirir. Bağlam kaydının biçimi [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) yöntemi tarafından belirtilen platforma göre belirlenir. Windows 'ta bu bir [bağlam](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) yapısıdır.  
+ `SetThreadContext` yöntemi, işletim sistemi tarafından tanımlanan `dwThreadID` bağımsız değişkeni tarafından belirtilen iş parçacığının geçerli bağlamını güncelleştirir. Bağlam kaydının biçimi [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) yöntemi tarafından belirtilen platforma göre belirlenir. Windows 'ta bu bir [bağlam](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) yapısıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,5 +44,5 @@ HRESULT SetThreadContext(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugMutableDataTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMutableDataTarget Arabirimi](icordebugmutabledatatarget-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

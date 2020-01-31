@@ -6,51 +6,51 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f79ac28af45e8c05922373955c5317095d2c682
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748475"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744639"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation Güvenliği
-Bu bölümdeki konularda, Windows Communication Foundation (WCF) güvenlik özellikleri ve bunları güvenli iletiler yardımcı olmak için nasıl kullanılacağını açıklar.  
+Bu bölümdeki konularda, iletilerin güvenli hale getirilmesine yardımcı olmak için Windows Communication Foundation (WCF) güvenlik özellikleri ve bunların nasıl kullanılacağı açıklanır.  
   
- Windows Server AppFabric ve güvenlik hakkında daha fazla bilgi için bkz. [Windows Server AppFabric güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ Windows Server AppFabric ve Security hakkında daha fazla bilgi için bkz. [Windows Server Için güvenlik modeli AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- Wcf'de güvenlik özelliklerini açıklar.  
+ WCF 'deki güvenlik özelliklerini açıklar.  
   
  [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- Temel terminoloji ve WCF güvenliğinde kullanılan kavramları açıklar.  
+ WCF güvenliği içinde kullanılan temel terminolojiyi ve kavramları açıklar.  
   
  [Ortak Güvenlik Senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- Senaryo ve Topolojilerde WCF ile yapılandırabileceğiniz açıklanmaktadır.  
+ WCF ile yapılandırabileceğiniz senaryoları ve topolojileri açıklar.  
   
  [Güvenlik Davranışları](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- Güvenlik, kimlik bilgilerini ayarlama gibi etkileyen WCF davranışları genel bir bakış sağlar.  
+ Kimlik bilgilerini ayarlama gibi güvenliği etkileyen WCF davranışlarına genel bir bakış sağlar.  
   
  [Bağlamalar ve Güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- Özel güvenlik bağlamaları oluşturmak nasıl gösteren konular da dahil olmak üzere bağlamaları, güvenlik odaklı görünümünü.  
+ Özel güvenlik bağlamaları oluşturmayı gösteren konular da dahil olmak üzere bağlamaların güvenlik odaklı bir görünümü.  
   
  [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- WCF güvenlik özellikleri kullanarak iletileri güvenli hale getirmek açıklar.  
+ WCF güvenlik özellikleri kullanılarak iletilerin nasıl güvenli hale alınacağını açıklar.  
   
  [Kimlik Doğrulaması](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
- Genel kimlik doğrulama görevlerini gösterir.  
+ Yaygın kimlik doğrulama görevlerini gösterir.  
   
  [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- Güvenlik uygulamaları ile yetkilendirme senaryoları açıklar.  
+ Güvenlik uygulamalarıyla ortak yetkilendirme senaryolarını açıklar.  
   
  [Federasyon ve Verilen Belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- Federasyon ve Federasyon sunucuları ile iletişim kuran istemciler oluşturma hakkındaki temel bilgileri açıklar.  
+ Federasyon ve Federasyon sunucularıyla iletişim kuran istemcilerin oluşturulması hakkında temel bilgileri açıklar.  
   
  [Kısmi Güven](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- Kısmen güvenilen senaryoları ve WCF sınırlamalar kısmen güvenilen çalıştırırken çalıştırma işlemi açıklanır.  
+ Kısmen güvenilir bir şekilde çalıştırıldığında kısmen güvenilen senaryoların ve WCF kısıtlamalarının nasıl çalıştırılacağını açıklar.  
   
  [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- Güvenlik olaylarını açıklar.  
+ Güvenlik olaylarının nasıl denetleneceğini açıklar.  
   
  [Güvenlik Kılavuzu ve En İyi Uygulamalar](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  Güvenli WCF uygulamaları oluşturmaya yönelik yönergeler.  

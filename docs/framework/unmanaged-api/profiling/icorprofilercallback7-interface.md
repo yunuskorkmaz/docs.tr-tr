@@ -9,23 +9,23 @@ api_location:
 api_type:
 - COM
 ms.assetid: a0be019e-aaa1-4036-990f-565f114d4b5c
-ms.openlocfilehash: f8c2fb544cf9fd6642bd0581211e0e4e49633221
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e61f6a104b8b9613db32ed6912395fd07c18dcff
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139764"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864823"
 ---
 # <a name="icorprofilercallback7-interface"></a>ICorProfilerCallback7 Arabirimi
 [.NET Framework 4.6.1 ve sonraki sürümlerde desteklenir]  
   
- Ortak dil çalışma zamanının, bellek içi modülle ilişkilendirilen sembol akışının güncelleştirildiği profil oluşturucuyu bilgilendirmek için kullandığı bir geri çağırma yöntemi sağlayan bir [ICorProfilerCallback6](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-interface.md) alt sınıfı.  
+ Ortak dil çalışma zamanının, bellek içi modülle ilişkilendirilen sembol akışının güncelleştirildiği profil oluşturucuyu bilgilendirmek için kullandığı bir geri çağırma yöntemi sağlayan bir [ICorProfilerCallback6](icorprofilercallback6-interface.md) alt sınıfı.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ModuleInMemorySymbolsUpdated Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md)|Profil oluşturucuyu, bellek içi modülle ilişkilendirilen sembol akışının güncelleştirildiğini bildirir.|  
+|[ModuleInMemorySymbolsUpdated Yöntemi](icorprofilercallback7-moduleinmemorysymbolsupdated-method.md)|Profil oluşturucuyu, bellek içi modülle ilişkilendirilen sembol akışının güncelleştirildiğini bildirir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -36,4 +36,4 @@ ms.locfileid: "73139764"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profil Oluşturma Arabirimleri](profiling-interfaces.md)

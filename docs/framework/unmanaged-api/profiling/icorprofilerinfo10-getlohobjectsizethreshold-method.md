@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7a38ee4ae74ca5b96dd082e752fc733eb85fca3f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 95473a8ce8d5fd7540228ecd9767448e51b5b326
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427028"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868990"
 ---
 # <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10:: GetLOHObjectSizeThreshold yöntemi
 
@@ -28,10 +28,11 @@ Yapılandırılmış büyük nesne yığını (LOH) eşiğinin değerini alır.
 HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 ```
 
-#### <a name="parameters"></a>Parametreler
+## <a name="parameters"></a>Parametreler
 
-`pThreshold` \
-dışı Bayt cinsinden büyük nesne yığın eşiği.
+- `pThreshold`
+
+  \[out] bayt cinsinden büyük nesne yığın eşiği.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -49,4 +50,4 @@ Büyük nesne yığını eşiğinden daha büyük nesneler büyük nesne yığı
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo10 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 arabirimi](icorprofilerinfo10-interface.md)

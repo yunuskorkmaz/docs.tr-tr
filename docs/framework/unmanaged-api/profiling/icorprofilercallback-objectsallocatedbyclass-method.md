@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 91d688f3-a80e-419d-9755-ff94bc04188a
 topic_type:
 - apiref
-ms.openlocfilehash: 9ba021ec223d00e57081567b76f70f59768e6b9a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 028207486f43e35086ed2e515eb3ae6bca304491
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445862"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866084"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass Yöntemi
 En son çöp toplamadan bu yana oluşturulan her bir sınıfın örnek sayısı hakkında profil oluşturucuyu bilgilendirir.  
@@ -47,7 +47,7 @@ HRESULT ObjectsAllocatedByClass(
 ## <a name="remarks"></a>Açıklamalar  
  `classIds` ve `cObjects` dizileri paralel dizilerdir. Örneğin, `classIds[i]` ve `cObjects[i]` aynı sınıfa başvuru. Önceki çöp toplamadan bu yana bir sınıf örneği oluşturulmadıysa, sınıf atlanır. `ObjectsAllocatedByClass` geri çağırması, büyük nesne yığınında ayrılan nesneleri rapor etmez.  
   
- `ObjectsAllocatedByClass` tarafından bildirilen sayılar yalnızca tahminlerdir. Tam sayımlar için [ICorProfilerCallback:: Objectalkonumlandırılan](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)kullanın.  
+ `ObjectsAllocatedByClass` tarafından bildirilen sayılar yalnızca tahminlerdir. Tam sayımlar için [ICorProfilerCallback:: Objectalkonumlandırılan](icorprofilercallback-objectallocated-method.md)kullanın.  
   
  Karşılık gelen `cObjects` dizisinde kaldırma işlemi olan türler varsa `classIds` dizisi bir veya daha fazla null giriş içerebilir.  
   
@@ -62,4 +62,4 @@ HRESULT ObjectsAllocatedByClass(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback Arabirimi](icorprofilercallback-interface.md)

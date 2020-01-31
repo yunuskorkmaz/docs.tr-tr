@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT [.NET Framework profiling]
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
-ms.openlocfilehash: 0cf3e05a0353a17541ee890f0871d694acac09fd
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: b4ab5c8f7cdca1303cb4fbbc4fa39db3c5977c15
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116563"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867015"
 ---
 # <a name="corprof_e_unsupported_call_sequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
 
@@ -27,47 +27,47 @@ Bu iki senaryo aşağıdaki bölümlerde ele alınmıştır.
 
   (Bu senaryo birincil olarak ele geçirme profil oluşturucular ile ilgili bir sorundur, ancak ele alınmayan profil oluşturucular bu HRESULT 'yi görebildiği durumlar olabilir.)  
   
- Bu senaryoda, bir ele geçiren profil oluşturucu, iş parçacığının kayıt bağlamını rastgele bir zamanda zorla sıfırlar, böylece iş parçacığı profil oluşturucu kodu girebilir veya bir [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) yöntemi aracılığıyla ortak dil çalışma ZAMANıNı (CLR) yeniden girebilirler.  
+ Bu senaryoda, bir ele geçiren profil oluşturucu, iş parçacığının kayıt bağlamını rastgele bir zamanda zorla sıfırlar, böylece iş parçacığı profil oluşturucu kodu girebilir veya bir [ICorProfilerInfo](icorprofilerinfo-interface.md) yöntemi aracılığıyla ortak dil çalışma ZAMANıNı (CLR) yeniden girebilirler.  
   
  Profil oluşturma API 'sinin birçok kimliği, CLR 'deki veri yapılarına işaret verir. Birçok `ICorProfilerInfo` çağrı yalnızca bu veri yapılarındaki bilgileri okur ve geri geçirebilir. Ancak, CLR bu yapıların çalıştığı gibi herhangi bir şeyi değiştirebilir ve bunu yapmak için kilitleri kullanabilir. CLR 'nin iş parçacığını ele aldığı sırada bir kilidi zaten tutan (veya edinmeye çalışırken) bir kilit olduğunu varsayalım. İş parçacığı CLR 'ye yeniden girerse ve değiştirme sürecinde daha fazla kilit almaya veya yapıları incelemeye çalışırsa, bu yapılar tutarsız bir durumda olabilir. Kilitlenmeler ve erişim ihlalleri bu gibi durumlarda kolayca gerçekleşebilir.  
   
- Genel olarak, ele alınmayan bir profil oluşturucu kodu bir [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) yöntemi içinde yürütür ve geçerli parametrelerle bir `ICorProfilerInfo` yöntemi çağırıyorsa, kilitlenmemelidir veya bir erişim ihlali almamalıdır. Örneğin, [ICorProfilerCallback:: ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) yöntemi içinde çalışan profil oluşturucu kodu, [ICorProfilerInfo2:: GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) yöntemini çağırarak sınıf hakkında bilgi isteyebilir. Kod, bilgilerin kullanılamadığını göstermek için bir HRESULT CORPROF_E_DATAINCOMPLETE alabilir. Ancak, kilitlenmez veya bir erişim ihlali almaz. Bu `ICorProfilerInfo` çağrısı, `ICorProfilerCallback` yönteminden yapıldığından zaman uyumlu olarak değerlendirilir.  
+ Genel olarak, ele alınmayan bir profil oluşturucu kodu bir [ICorProfilerCallback](icorprofilercallback-interface.md) yöntemi içinde yürütür ve geçerli parametrelerle bir `ICorProfilerInfo` yöntemi çağırıyorsa, kilitlenmemelidir veya bir erişim ihlali almamalıdır. Örneğin, [ICorProfilerCallback:: ClassLoadFinished](icorprofilercallback-classloadfinished-method.md) yöntemi içinde çalışan profil oluşturucu kodu, [ICorProfilerInfo2:: GetClassIDInfo2](icorprofilerinfo2-getclassidinfo2-method.md) yöntemini çağırarak sınıf hakkında bilgi isteyebilir. Kod, bilgilerin kullanılamadığını göstermek için bir HRESULT CORPROF_E_DATAINCOMPLETE alabilir. Ancak, kilitlenmez veya bir erişim ihlali almaz. Bu `ICorProfilerInfo` çağrısı, `ICorProfilerCallback` yönteminden yapıldığından zaman uyumlu olarak değerlendirilir.  
   
  Ancak, bir `ICorProfilerCallback` yöntemi içinde olmayan kodu yürüten yönetilen bir iş parçacığı, zaman uyumsuz bir çağrı yapmakta olduğu kabul edilir. .NET Framework sürüm 1 ' de, zaman uyumsuz bir çağrıda ne olabileceğini belirlemek zordur. Çağrı kilitlenme, kilitlenme veya geçersiz yanıt verebilir. .NET Framework sürüm 2,0, bu sorundan kaçınmanıza yardımcı olacak bazı basit denetimler sunmuştur. .NET Framework 2,0 ' de, güvenli olmayan bir `ICorProfilerInfo` işlevini zaman uyumsuz olarak çağırırsanız, bir CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT ile başarısız olur.  
   
  Genel olarak, zaman uyumsuz çağrılar güvenli değildir. Ancak, aşağıdaki yöntemler güvenlidir ve özellikle zaman uyumsuz çağrıları destekler:  
   
-- [GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)  
+- [GetEventMask](icorprofilerinfo-geteventmask-method.md)  
   
-- [SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)  
+- [SetEventMask](icorprofilerinfo-seteventmask-method.md)  
   
-- [GetCurrentThreadID](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getcurrentthreadid-method.md)  
+- [GetCurrentThreadID](icorprofilerinfo-getcurrentthreadid-method.md)  
   
-- [GetThreadContext](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getthreadcontext-method.md)  
+- [GetThreadContext](icorprofilerinfo-getthreadcontext-method.md)  
   
-- [GetThreadAppDomain](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadappdomain-method.md)  
+- [GetThreadAppDomain](icorprofilerinfo2-getthreadappdomain-method.md)  
   
-- [GetFunctionFromIP](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md)  
+- [GetFunctionFromIP](icorprofilerinfo-getfunctionfromip-method.md)  
   
-- [GetFunctionInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctioninfo-method.md)  
+- [GetFunctionInfo](icorprofilerinfo-getfunctioninfo-method.md)  
   
-- [Getfunctionınfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)  
+- [Getfunctionınfo2](icorprofilerinfo2-getfunctioninfo2-method.md)  
   
-- [GetCodeInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getcodeinfo-method.md)  
+- [GetCodeInfo](icorprofilerinfo-getcodeinfo-method.md)  
   
-- [Getcodeınfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)  
+- [Getcodeınfo2](icorprofilerinfo2-getcodeinfo2-method.md)  
   
-- [GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md)  
+- [GetModuleInfo](icorprofilerinfo-getmoduleinfo-method.md)  
   
-- [GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md)  
+- [GetClassIDInfo](icorprofilerinfo-getclassidinfo-method.md)  
   
-- [Getclassıdınfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)  
+- [Getclassıdınfo2](icorprofilerinfo2-getclassidinfo2-method.md)  
   
-- [IsArrayClass](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-isarrayclass-method.md)  
+- [IsArrayClass](icorprofilerinfo-isarrayclass-method.md)  
   
-- [SetFunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)  
+- [SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md)  
   
-- [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
+- [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)  
   
  Daha fazla bilgi için bkz. CLR profil oluşturma API 'SI blogda [neden corprof_e_unsupported_call_sequence sahip olduğumuz](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) girişi.  
   
@@ -78,15 +78,15 @@ Bu iki senaryo aşağıdaki bölümlerde ele alınmıştır.
   
 |Çöp koleksiyonlarını sağlayan geri çağırma yöntemleri|Çöp koleksiyonları tetikleyen bilgilendirici Yöntemler|  
 |------------------------------------------------------|------------------------------------------------------------|  
-|[ThreadAssignedToOSThread](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadassignedtoosthread-method.md)<br /><br /> [ExceptionUnwindFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionenter-method.md)<br /><br /> [ExceptionUnwindFunctionLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionleave-method.md)<br /><br /> [ExceptionUnwindFinallyEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)<br /><br /> [ExceptionUnwindFinallyLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)<br /><br /> [ExceptionCatcherEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)<br /><br /> [RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)<br /><br /> [RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)<br /><br /> [RuntimeSuspendAborted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)<br /><br /> [RuntimeThreadSuspended](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)<br /><br /> [RuntimeThreadResumed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md)<br /><br /> [MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)<br /><br /> [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)<br /><br /> [ObjectsAllocatedByClass](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectsallocatedbyclass-method.md)<br /><br /> [RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)<br /><br /> [HandleCreated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)<br /><br /> [HandleDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)<br /><br /> [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)<br /><br /> [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|[GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md)<br /><br /> [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)<br /><br /> [SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)<br /><br /> [ForceGC](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-forcegc-method.md)<br /><br /> [GetClassFromToken](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassfromtoken-method.md)<br /><br /> [GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md)<br /><br /> [GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)<br /><br /> [GetAppDomainInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getappdomaininfo-method.md)<br /><br /> [EnumModules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md)<br /><br /> [RequestProfilerDetach](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-requestprofilerdetach-method.md)<br /><br /> [GetAppDomainsContainingModule](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getappdomainscontainingmodule-method.md)|  
+|[ThreadAssignedToOSThread](icorprofilercallback-threadassignedtoosthread-method.md)<br /><br /> [ExceptionUnwindFunctionEnter](icorprofilercallback-exceptionunwindfunctionenter-method.md)<br /><br /> [ExceptionUnwindFunctionLeave](icorprofilercallback-exceptionunwindfunctionleave-method.md)<br /><br /> [ExceptionUnwindFinallyEnter](icorprofilercallback-exceptionunwindfinallyenter-method.md)<br /><br /> [ExceptionUnwindFinallyLeave](icorprofilercallback-exceptionunwindfinallyleave-method.md)<br /><br /> [ExceptionCatcherEnter](icorprofilercallback-exceptioncatcherenter-method.md)<br /><br /> [RuntimeSuspendStarted](icorprofilercallback-runtimesuspendstarted-method.md)<br /><br /> [RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md)<br /><br /> [RuntimeSuspendAborted](icorprofilercallback-runtimesuspendaborted-method.md)<br /><br /> [RuntimeThreadSuspended](icorprofilercallback-runtimethreadsuspended-method.md)<br /><br /> [RuntimeThreadResumed](icorprofilercallback-runtimethreadresumed-method.md)<br /><br /> [MovedReferences](icorprofilercallback-movedreferences-method.md)<br /><br /> [ObjectReferences](icorprofilercallback-objectreferences-method.md)<br /><br /> [ObjectsAllocatedByClass](icorprofilercallback-objectsallocatedbyclass-method.md)<br /><br /> [RootReferences2](icorprofilercallback-rootreferences-method.md)<br /><br /> [HandleCreated](icorprofilercallback2-handlecreated-method.md)<br /><br /> [HandleDestroyed](icorprofilercallback2-handledestroyed-method.md)<br /><br /> [GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md)<br /><br /> [GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)|[GetILFunctionBodyAllocator](icorprofilerinfo-getilfunctionbodyallocator-method.md)<br /><br /> [SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md)<br /><br /> [SetILInstrumentedCodeMap](icorprofilerinfo-setilinstrumentedcodemap-method.md)<br /><br /> [ForceGC](icorprofilerinfo-forcegc-method.md)<br /><br /> [GetClassFromToken](icorprofilerinfo-getclassfromtoken-method.md)<br /><br /> [GetClassFromTokenAndTypeArgs](icorprofilerinfo2-getclassfromtokenandtypeargs-method.md)<br /><br /> [GetFunctionFromTokenAndTypeArgs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)<br /><br /> [GetAppDomainInfo](icorprofilerinfo-getappdomaininfo-method.md)<br /><br /> [EnumModules](icorprofilerinfo3-enummodules-method.md)<br /><br /> [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)<br /><br /> [GetAppDomainsContainingModule](icorprofilerinfo3-getappdomainscontainingmodule-method.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
-- [ICorProfilerCallback3 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)
-- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [ICorProfilerInfo3 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerCallback Arabirimi](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 Arabirimi](icorprofilercallback2-interface.md)
+- [ICorProfilerCallback3 Arabirimi](icorprofilercallback3-interface.md)
+- [ICorProfilerInfo Arabirimi](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 Arabirimi](icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo3 Yöntemi](icorprofilerinfo3-interface.md)
+- [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
+- [Profil Oluşturma](index.md)

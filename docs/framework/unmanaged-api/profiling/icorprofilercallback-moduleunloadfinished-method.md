@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 185e3327-9f9c-44bc-8a5c-febea9a6bb5b
 topic_type:
 - apiref
-ms.openlocfilehash: 40cb666c47c690dc930ec2cb7f6c89662464780e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b13573d19ab4d8bb655c1e153530dc70173abe82
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445914"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866149"
 ---
 # <a name="icorprofilercallbackmoduleunloadfinished-method"></a>ICorProfilerCallback::ModuleUnloadFinished Yöntemi
 Profil oluşturucuyu bir modülün kaldırmayı bitirmediğini bildirir.  
@@ -41,7 +41,7 @@ HRESULT ModuleUnloadFinished(
  'ndaki Modülün başarıyla yüklenip yüklenmediğini gösteren bir HRESULT.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `moduleId` değeri, [ICorProfilerCallback:: ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) yöntemi döndüğünde bir bilgi isteği için geçerli değildir.  
+ `moduleId` değeri, [ICorProfilerCallback:: ModuleUnloadStarted](icorprofilercallback-moduleunloadstarted-method.md) yöntemi döndüğünde bir bilgi isteği için geçerli değildir.  
   
  Sınıfı kaldırma işleminin bazı bölümleri `ModuleUnloadFinished` geri çağrısından sonra devam edebilir. `hrStatus` HRESULT hatası, bir hatayı gösterir. Ancak `hrStatus` başarılı bir HRESULT, yalnızca modülün kaldırılmasının ilk bölümünün başarılı olduğunu gösterir.  
   
@@ -56,4 +56,4 @@ HRESULT ModuleUnloadFinished(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback Arabirimi](icorprofilercallback-interface.md)

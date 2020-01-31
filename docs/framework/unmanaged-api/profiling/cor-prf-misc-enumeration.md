@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 619bb5de-e309-48b6-a3af-32d935a0ff46
 topic_type:
 - apiref
-ms.openlocfilehash: 8105ba34ca400771fbc4273630f20941a4a9557d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fe27c0fca6d38b4cff6cac2b9778cf2be68903a3
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432282"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867132"
 ---
 # <a name="cor_prf_misc-enumeration"></a>COR_PRF_MISC Numaralandırması
 Özel tanımlayıcılar belirten sabit değerleri içerir.  
@@ -34,11 +34,11 @@ typedef enum {
 } COR_PRF_MISC;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|Henüz bir derlemeye eklenmemiş bir modül için [ICorProfilerInfo:: GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) tarafından kullanılan varsayılan tanımlayıcı.|  
+|`PROFILER_PARENT_UNKNOWN`|Henüz bir derlemeye eklenmemiş bir modül için [ICorProfilerInfo:: GetModuleInfo](icorprofilerinfo-getmoduleinfo-method.md) tarafından kullanılan varsayılan tanımlayıcı.|  
 |`PROFILER_GLOBAL_CLASS`|Bir sınıfa ait olmayan genel sabitler için varsayılan sınıf tanımlayıcısı.|  
 |`PROFILER_GLOBAL_MODULE`|Bir modüle ait olmayan genel nesneler için varsayılan modül tanımlayıcısı.|  
   
@@ -53,4 +53,4 @@ typedef enum {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Profil Oluşturma Sabit Listeleri](profiling-enumerations.md)

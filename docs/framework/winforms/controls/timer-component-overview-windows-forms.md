@@ -1,5 +1,5 @@
 ---
-title: Süreölçer Bileşenine Genel Bakış (Windows Forms)
+title: Süreölçer Bileşenine Genel Bakış
 ms.date: 03/30/2017
 f1_keywords:
 - Timer
@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Timer component [Windows Forms], about Timer components
 - timers [Windows Forms], about timers
 ms.assetid: e672c05b-a8b6-4b26-9e4d-9223aa9e3873
-ms.openlocfilehash: 5bef0ba87d6a496acf7575965128be2b20b437ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83b52d395cdc3e3357bcf83517eab258a5c8ae08
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962623"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742771"
 ---
 # <a name="timer-component-overview-windows-forms"></a>Süreölçer Bileşenine Genel Bakış (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.Timer> düzenli aralıklarla bir olayı oluşturan bir bileşendir. Bu bileşen, bir Windows Forms ortamı için tasarlanmıştır. Bir sunucu ortamı için uygun olan bir zamanlayıcı gerekirse bkz [sunucu tabanlı zamanlayıcılar giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
+Windows Forms <xref:System.Windows.Forms.Timer>, düzenli aralıklarla olay başlatan bir bileşendir. Bu bileşen bir Windows Forms ortamı için tasarlanmıştır. Sunucu ortamı için uygun bir zamanlayıcıya ihtiyacınız varsa bkz. [sunucu tabanlı zamanlayıcılara giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
-## <a name="key-properties-methods-and-events"></a>Anahtar özellikleri, yöntemleri ve olayları  
- Aralıkların uzunluğunu tarafından tanımlanan <xref:System.Windows.Forms.Timer.Interval%2A> özelliği, değeri olan milisaniye cinsinden. Bileşen etkinleştirildiğinde <xref:System.Windows.Forms.Timer.Tick> olayı her aralığı. Burada yürütülecek kodu eklersiniz budur. Daha fazla bilgi için [nasıl yapılır: Windows Forms süreölçer bileşeni ile belirlenen aralıklarda yordamları çalıştırma](run-procedures-at-set-intervals-with-wf-timer-component.md). Anahtar yöntemlerini <xref:System.Windows.Forms.Timer> bileşenidir <xref:System.Windows.Forms.Timer.Start%2A> ve <xref:System.Windows.Forms.Timer.Stop%2A>, açma ve kapatma Zamanlayıcı açın. Zamanlayıcı kapalı olduğunda sıfırlar; duraklatmak için bir yolu yoktur bir <xref:System.Windows.Forms.Timer> bileşeni.  
+## <a name="key-properties-methods-and-events"></a>Anahtar özellikler, Yöntemler ve olaylar  
+ Aralıkların uzunluğu, değeri milisaniyelik olan <xref:System.Windows.Forms.Timer.Interval%2A> özelliği tarafından tanımlanır. Bileşen etkinleştirildiğinde <xref:System.Windows.Forms.Timer.Tick> olayı her zaman oluşur. Burada yürütülecek kodu eklersiniz. Daha fazla bilgi için bkz. [nasıl yapılır: ayarlanan aralıklarda yordamları Windows Forms Zamanlayıcı bileşeniyle çalıştırma](run-procedures-at-set-intervals-with-wf-timer-component.md). <xref:System.Windows.Forms.Timer> bileşenin temel yöntemleri <xref:System.Windows.Forms.Timer.Start%2A> ve <xref:System.Windows.Forms.Timer.Stop%2A>ve bu da süreölçeri açıp kapatır. Süreölçer devre dışı bırakıldığında, sıfırlanır; <xref:System.Windows.Forms.Timer> bileşeni duraklamanın bir yolu yoktur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

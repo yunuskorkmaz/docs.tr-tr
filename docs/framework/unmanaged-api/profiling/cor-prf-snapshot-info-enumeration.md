@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a5906b2a-ad4a-4cc6-a421-2d7d8adf7468
 topic_type:
 - apiref
-ms.openlocfilehash: 6ade4f7877e39a8307a36f3a3268f79e8b4d44fd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 97bf3e69a8ea155d53479ba6f61988e56e3bd396
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427276"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867031"
 ---
 # <a name="cor_prf_snapshot_info-enumeration"></a>COR_PRF_SNAPSHOT_INFO Numaralandırması
-Profil oluşturucunun [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) işlevine yapılan her çağrıda bir yığın anlık görüntüsüne ne kadar veri geçirileceğini belirtir.  
+Profil oluşturucunun [StackSnapshotCallback](stacksnapshotcallback-function.md) işlevine yapılan her çağrıda bir yığın anlık görüntüsüne ne kadar veri geçirileceğini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,16 +34,16 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
 } COR_PRF_SNAPSHOT_INFO;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyeleri|Açıklama|  
+|Üyeler|Açıklama|  
 |-------------|-----------------|  
 |`COR_PRF_SNAPSHOT_DEFAULT`|`context` parametresi dışında tüm `StackSnapshotCallback` parametreleri için değerlerin geçirilmesi gerektiğini gösterir.|  
 |`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|`context` parametresi dahil olmak üzere tüm `StackSnapshotCallback` parametreleri için değerlerin geçirilmesi gerektiğini gösterir.|  
 |`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|Daha basit, alternatif bir yığın yürüme algoritmasının kullanılacağını gösterir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `COR_PRF_SNAPSHOT_INFO` numaralandırması tarafından verilen değerler, [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) metoduna parametre olarak geçirilir.  
+ `COR_PRF_SNAPSHOT_INFO` numaralandırması tarafından verilen değerler, [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) metoduna parametre olarak geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -56,5 +56,5 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DoStackSnapshot Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
-- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [DoStackSnapshot Yöntemi](icorprofilerinfo2-dostacksnapshot-method.md)
+- [Profil Oluşturma Sabit Listeleri](profiling-enumerations.md)
