@@ -8,16 +8,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 92d267ee9e87e9d204fe76172ca7e0fe33cf1a1b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976574"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794217"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>İzlenecek yol: Karma Uygulamalarda Veriye Bağlama
 
-Bir veri kaynağını denetime bağlama, kullanıcıların [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] veya [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]kullanıp kullanmadığını temel verilere erişimi sağlamak için gereklidir. Bu izlenecek yol, hem [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hem de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimleri içeren karma uygulamalarda veri bağlamayı nasıl kullanabileceğinizi gösterir.
+Bir veri kaynağını denetime bağlama, kullanıcıların Windows Forms veya [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]kullanıp kullanmadığını temel verilere erişimi sağlamak için gereklidir. Bu izlenecek yol, hem Windows Forms hem de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimleri içeren karma uygulamalarda veri bağlamayı nasıl kullanabileceğinizi gösterir.
 
 Bu izlenecek yolda gösterilen görevler şunlardır:
 
@@ -57,11 +57,11 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
     - WindowsFormsIntegration
 
-    - System. Windows. Forms
+    - System.Windows.Forms
 
 3. WPF Tasarımcısında MainWindow. xaml ' i açın.
 
-4. <xref:System.Windows.Window> öğesinde, aşağıdaki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ad alanı eşlemesini ekleyin.
+4. <xref:System.Windows.Window> öğesinde, aşağıdaki Windows Forms ad alanı eşlemesini ekleyin.
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -113,7 +113,7 @@ Her müşteri kaydının ayrıntıları çeşitli <xref:System.Windows.Controls.
 
 ## <a name="displaying-data-by-using-interoperation"></a>Birlikte çalışabilirlik kullanarak verileri görüntüleme
 
-Seçilen müşteriye karşılık gelen siparişler, `dataGridView1`adlı <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> denetiminde görüntülenir. `dataGridView1` denetimi, arka plan kod dosyasındaki veri kaynağına bağlanır. <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetimi bu [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetiminin üst öğesidir.
+Seçilen müşteriye karşılık gelen siparişler, `dataGridView1`adlı <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> denetiminde görüntülenir. `dataGridView1` denetimi, arka plan kod dosyasındaki veri kaynağına bağlanır. <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetimi bu Windows Forms denetiminin üst öğesidir.
 
 ### <a name="to-display-data-in-the-datagridview-control"></a>DataGridView denetiminde verileri görüntüleme
 

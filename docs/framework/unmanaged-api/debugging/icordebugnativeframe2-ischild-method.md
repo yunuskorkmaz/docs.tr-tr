@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e2aae09-49cb-4fbd-81e5-e29cd864a88b
 topic_type:
 - apiref
-ms.openlocfilehash: 539fa612234c4cc37bed5a8fd4b1e727a35b1d6f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22722e4d602bdb9df9877b2199b4d4271a4d3105
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096387"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792725"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild Yöntemi
 Geçerli çerçevenin bir alt çerçeve olup olmadığını belirler.  
@@ -41,13 +41,13 @@ HRESULT IsChild([out] BOOL * pIsChild);
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Alt durum başarıyla döndürüldü.|  
-|E_FAıL|Alt durum döndürülemedi.|  
+|E_FAIL|Alt durum döndürülemedi.|  
 |E_INVALIDARG|`pIsChild` null.|  
   
 ## <a name="exceptions"></a>Özel Durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IsChild` yöntemi, yöntemi çağırdığınız çerçeve nesnesi başka bir çerçevenin alt öğesi ise `true` döndürür. Bu durumda, bir çerçevenin üst öğesi olup olmadığını denetlemek için [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md) metodunu kullanın.  
+ `IsChild` yöntemi, yöntemi çağırdığınız çerçeve nesnesi başka bir çerçevenin alt öğesi ise `true` döndürür. Bu durumda, bir çerçevenin üst öğesi olup olmadığını denetlemek için [IsMatchingParentFrame](icordebugnativeframe2-ismatchingparentframe-method.md) metodunu kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -60,6 +60,6 @@ HRESULT IsChild([out] BOOL * pIsChild);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugNativeFrame2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugNativeFrame2 Arabirimi](icordebugnativeframe2-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)
