@@ -44,12 +44,16 @@
         - name: Service Mesh iletişim altyapısı
           href: service-mesh-communication-infrastructure.md
     - name: Dağıtılmış Veriler
-      href: distributed-data.md
+      href: null
       items:
-        - name: Bulutta yerel veri desenleri
-          href: data-patterns.md
-        - name: Azure'da Veri Depolama
-          href: azure-data-storage.md
+        - name: Mikro hizmet başına veritabanı
+          href: database-per-microservice.md
+        - name: İlişkisel veriler ile NoSQL verilerinin karşılaştırması
+          href: relational-vs-nosql-data.md
+        - name: Bulutta yerel bir uygulamada önbelleğe alma
+          href: azure-caching.md
+        - name: Azure’da Elasticsearch
+          href: elastic-search-in-azure.md
     - name: Bulutta yerel dayanıklılık
       href: resiliency.md
       items:
