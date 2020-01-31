@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 59c4076712823faa1602448653680a31b8cd8c69
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 5668e14cd0aed33a29fd43661363131879419e61
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741075"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793916"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Otomatik Test İçin UI Otomasyonunu Kullanma
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.locfileid: "75741075"
 > Diğer erişilebilirlik modelleriyle, geliştiricilerin doğrudan ayrı düğmeler, menüler veya diğer denetimlerden bilgi toplaması gerekir. Ne yazık ki her denetim türü düzinelerce küçük çeşitliliğe gelir. Diğer bir deyişle, bir basma düğmeli on çeşitlerinin hepsi aynı şekilde çalışabilir ve aynı işlevi gerçekleştirse de, bunların hepsi benzersiz denetimler olarak değerlendirilmelidir. Bu denetimlerin işlevsel olarak eşdeğer olduğu bilinmenin bir yolu yoktur. Denetim desenleri, bu ortak denetim davranışlarını temsil edecek şekilde geliştirilmiştir. Daha fazla bilgi için bkz. [UI Otomasyonu Denetim düzenlerine genel bakış](ui-automation-control-patterns-overview.md).  
   
 ### <a name="implementing-ui-automation"></a>UI Otomasyonu uygulama  
- Daha önce belirtildiği gibi, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]tarafından sunulan birleştirilmiş model olmadan test araçları ve geliştiricileri, bu çerçevede denetimlerin özelliklerini ve davranışlarını göstermek için çerçeveye özgü bilgileri bilmek için gereklidir. Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]ve Windows Presentation Foundation (WPF) dahil olmak üzere Windows işletim sistemleri içinde herhangi bir anda çeşitli farklı kullanıcı arabirimi çerçeveleri mevcut olduğundan, benzer denetimlerle birden çok uygulamayı test etmek için zaman korkdırıcı bir görev olabilir. Örneğin, aşağıdaki tablo, bir düğme denetimiyle ilişkilendirilen adı (veya metni) almak için gereken çerçeveye özgü özellik adlarını özetler ve tek eşdeğer [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliğini gösterir.  
+ Daha önce belirtildiği gibi, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]tarafından sunulan birleştirilmiş model olmadan test araçları ve geliştiricileri, bu çerçevede denetimlerin özelliklerini ve davranışlarını göstermek için çerçeveye özgü bilgileri bilmek için gereklidir. Win32, Windows Forms ve Windows Presentation Foundation (WPF) dahil olmak üzere Windows işletim sistemleri içinde herhangi bir anda çeşitli farklı kullanıcı arabirimi çerçeveleri mevcut olduğundan, birden çok uygulamayı benzer görünüyor. Örneğin, aşağıdaki tablo, bir düğme denetimiyle ilişkilendirilen adı (veya metni) almak için gereken çerçeveye özgü özellik adlarını özetler ve tek eşdeğer [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliğini gösterir.  
   
 |UI Otomasyonu Denetim türü|UI çerçevesi|Çerçeveye özgü özellik|UI Otomasyon özelliği|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "75741075"
   
  Otomatikleştirilmiş uygulamalardan oluşan karmaşıkma, bir testi dinamik hedefle eşitlerken zorluk ortaya çıkar. Örneğin, şu anda çalışan uygulamaların bir listesini görüntüleyen Windows Görev Yöneticisi 'nde yer alan bir liste kutusu denetimi. Liste kutusundaki öğeler test uygulaması denetimi dışında dinamik olarak güncelleştirildiğinden, liste kutusunda belirli bir öğe seçimini herhangi bir tutarlılık ile tekrarlamaya çalışmak imkansız olur. Ayrıca, test uygulamasının denetimi dışında bir [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] basit odak değişikliklerini tekrarlamaya çalışırken de benzer sorunlar ortaya çıkabilir.  
   
-### <a name="programmatic-access"></a>Programlı Erişim  
+### <a name="programmatic-access"></a>Programlı erişim  
  Programlı erişim, geleneksel fare ve klavye girişi tarafından sunulan herhangi bir etkileşimi ve deneyimi kod aracılığıyla taklit etme yeteneği sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] beş bileşen aracılığıyla programlı erişime izin verebilir:  
   
 - [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]yapısına gezinmeyi kolaylaştırır. Ağaç, hWnd 'nin koleksiyonundan oluşturulmuştur. Daha fazla bilgi için bkz. [UI Otomasyon ağacına genel bakış](ui-automation-tree-overview.md)  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-ms.openlocfilehash: 83cc4eadca7c337c06c5fbf9f0e74306c2b9cb99
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b78bff2994cefc6c35a4bd59133338392c3a1b24
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131280"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791968"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx Yöntemi
 Hata ayıklayıcı altındaki uzak makinede bir işlem başlatır.  
@@ -38,7 +38,7 @@ HRESULT DebugActiveProcessEx (
   
 ## <a name="parameters"></a>Parametreler  
  `pRemoteTarget`  
- 'ndaki [ICorDebugRemoteTarget arabirimine](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)yönelik işaretçi. Bu parametre, işlemin üzerinde çalıştığı makineyi tespit etmek için kullanılır.  
+ 'ndaki [ICorDebugRemoteTarget arabirimine](icordebugremotetarget-interface.md)yönelik işaretçi. Bu parametre, işlemin üzerinde çalıştığı makineyi tespit etmek için kullanılır.  
   
  `id`  
  'ndaki Hata ayıklayıcının eklendiği işlemin KIMLIĞI.  
@@ -53,7 +53,7 @@ HRESULT DebugActiveProcessEx (
  S_OK  
  Uzak makinedeki işleme başarıyla eklendi.  
   
- E_FAıL (veya diğer E_ dönüş kodları)  
+ E_FAIL (veya diğer E_ dönüş kodları)  
  Uzak makinedeki işleme iliştirilemiyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -70,7 +70,7 @@ HRESULT DebugActiveProcessEx (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugRemote Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemote Arabirimi](icordebugremote-interface.md)
+- [ICorDebug Arabirimi](icordebug-interface.md)
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

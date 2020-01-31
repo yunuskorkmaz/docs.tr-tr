@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 5de94b1f1ab44f954b5bab9f8b5212c33325c19d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 57034fb835d4c82b5bf658e61ec78ef226c2551e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696720"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789779"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>XML belge özelliklerini kullanma
 
@@ -20,7 +20,7 @@ Aşağıdaki örnek, belgelenen bir türe temel bir genel bakış sağlar.
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-Örnek, aşağıdaki içeriklerle bir. xml dosyası oluşturur:
+Örnek, aşağıdaki içeriklerle bir *. xml* dosyası oluşturur.
 
 ```xml
 <?xml version="1.0"?>
@@ -106,7 +106,7 @@ Aşağıdaki örnek, belgelenen bir türe temel bir genel bakış sağlar.
 </doc>
 ```
 
-## <a name="compiling-the-code"></a>Kod derleme
+## <a name="compiling-the-code"></a>Kodu derleme
 
 Örneği derlemek için aşağıdaki komut satırını yazın:
 
@@ -120,7 +120,7 @@ XML belgeleri///ile başlar. Yeni bir proje oluşturduğunuzda, sihirbazlar sizi
 
 - Belgeler düzgün biçimlendirilmiş XML olmalıdır. XML doğru biçimlendirilmediyse bir uyarı oluşturulur ve belge dosyası bir hata ile karşılaşıldığını bildiren bir açıklama içerir.
 
-- Geliştiriciler kendi etiket kümesini oluşturmak ücretsizdir. Önerilen bir etiket kümesi vardır ( [belge açıklamaları Için önerilen etiketlere](recommended-tags-for-documentation-comments.md)bakın). Önerilen etiketlerden bazılarının özel anlamları vardır:
+- Geliştiriciler kendi etiket kümesini oluşturmak ücretsizdir. [Önerilen bir etiket kümesi](recommended-tags-for-documentation-comments.md)vardır. Önerilen etiketlerden bazılarının özel anlamları vardır:
 
   - Parametreleri anlatmak için \<param > etiketi kullanılır. Kullanıldıysa, derleyici parametrenin var olduğunu ve tüm parametrelerin belgelerde açıklandığını doğrular. Doğrulama başarısız olursa, derleyici bir uyarı verir.
 
@@ -133,8 +133,8 @@ XML belgeleri///ile başlar. Yeni bir proje oluşturduğunuzda, sihirbazlar sizi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../index.md)
+- [C#Programlama Kılavuzu](../index.md)
 - [-Doc (C# derleyici seçenekleri)](../../language-reference/compiler-options/doc-compiler-option.md)
-- [XML Belge Açıklamaları](./index.md)
+- [XML belge açıklamaları](./index.md)
 - [DocFX belge işlemcisi](https://dotnet.github.io/docfx/)
 - [Sandrole belge işlemcisi](https://github.com/EWSoftware/SHFB)

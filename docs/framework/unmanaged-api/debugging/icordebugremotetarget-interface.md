@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd9936a6-cc24-4869-8761-0988664464e6
 topic_type:
 - apiref
-ms.openlocfilehash: 97c4e6d3c9de7dcb8d399a956a4a58c49ca6e3b9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bab6b7f683b5563cf362366dfb007f83caeee12d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131881"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791932"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget Arabirimi
 Geliştiricilerin, ortak dil çalışma zamanı (CLR) ortamında Silverlight tabanlı uygulamalarda hata ayıklamalarına olanak tanıyan yöntemler sağlar.  
@@ -43,7 +43,7 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ICorDebugRemoteTarget::GetHostName Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|Uzak makinenin ana bilgisayar adını veya IP adresini döndürür.|  
+|[ICorDebugRemoteTarget::GetHostName Yöntemi](icordebugremotetarget-gethostname-method.md)|Uzak makinenin ana bilgisayar adını veya IP adresini döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Karma mod (yani, yönetilen ve yerel kod) hata ayıklaması Windows 95, Windows 98 veya Windows ME 'de veya x86 olmayan platformlarda (IA-64 ve AMD64 gibi) desteklenmez.  
@@ -59,6 +59,6 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugRemote Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugRemote Arabirimi](icordebugremote-interface.md)
+- [ICorDebug Arabirimi](icordebug-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

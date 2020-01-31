@@ -2,12 +2,12 @@
 title: ICorDebugMergedAssemblyRecord Arabirimi
 ms.date: 03/30/2017
 ms.assetid: fe280b11-9479-4e34-a07c-0d1ea8088422
-ms.openlocfilehash: 8dc07cb8c2f57ee6f9598c727cbd6de38bf4625f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6d5d862110cd91e8ac81c96e50486be10c579903
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139191"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793063"
 ---
 # <a name="icordebugmergedassemblyrecord-interface"></a>ICorDebugMergedAssemblyRecord Arabirimi
 Birleştirilmiş bir derleme hakkında bilgi sağlar.  
@@ -16,12 +16,12 @@ Birleştirilmiş bir derleme hakkında bilgi sağlar.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetCulture Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getculture-method.md)|Derlemenin kültür adı dizesini alır.|  
-|[GetIndex Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getindex-method.md)|Derlemenin önek dizinini alır.|  
-|[GetPublicKey Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getpublickey-method.md)|Derlemenin ortak anahtarını alır.|  
-|[GetPublicKeyToken Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getpublickeytoken-method.md)|Derlemenin ortak anahtar belirtecini alır.|  
-|[GetSimpleName Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getsimplename-method.md)|Derlemenin basit adını alır.|  
-|[GetVersion Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getversion-method.md)|Derlemenin sürüm bilgilerini alır.|  
+|[GetCulture Yöntemi](icordebugmergedassemblyrecord-getculture-method.md)|Derlemenin kültür adı dizesini alır.|  
+|[GetIndex Yöntemi](icordebugmergedassemblyrecord-getindex-method.md)|Derlemenin önek dizinini alır.|  
+|[GetPublicKey Yöntemi](icordebugmergedassemblyrecord-getpublickey-method.md)|Derlemenin ortak anahtarını alır.|  
+|[GetPublicKeyToken Yöntemi](icordebugmergedassemblyrecord-getpublickeytoken-method.md)|Derlemenin ortak anahtar belirtecini alır.|  
+|[GetSimpleName Yöntemi](icordebugmergedassemblyrecord-getsimplename-method.md)|Derlemenin basit adını alır.|  
+|[GetVersion Yöntemi](icordebugmergedassemblyrecord-getversion-method.md)|Derlemenin sürüm bilgilerini alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -39,5 +39,5 @@ Birleştirilmiş bir derleme hakkında bilgi sağlar.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)

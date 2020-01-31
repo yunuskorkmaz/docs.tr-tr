@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c8ab5dc-557c-473a-82f2-6e403eca7dac
 topic_type:
 - apiref
-ms.openlocfilehash: 3f840154d472dbcea7dfef7ba93e38c80b836734
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e9cbf4551c2f8b183e9e6c37a74b13aff3a19ec1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447554"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860989"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc Arabirimi
 Yeni bir Microsoft ara dili (MSIL) işlev gövdesi için bellek ayırmak üzere bir yöntem sağlar.  
@@ -31,7 +31,7 @@ Yeni bir Microsoft ara dili (MSIL) işlev gövdesi için bellek ayırmak üzere 
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Alloc Yöntemi](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Yeni bir MSIL işlev gövdesi için belirtilen miktarda bellek ayırmaya çalışır.|  
+|[Alloc Yöntemi](imethodmalloc-alloc-method.md)|Yeni bir MSIL işlev gövdesi için belirtilen miktarda bellek ayırmaya çalışır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Her ayırıcı modüle özeldir ve işlev gövdesinin, modülün temelini pozitif bir uzaklığa göre olacağını sağlar. Modülün temel aldığı bellek çok değerli olabilir, bu nedenle ayırıcı yalnızca bir işlev gövdesi için bellek ayırmak için kullanılmalıdır.  
@@ -47,4 +47,4 @@ Yeni bir Microsoft ara dili (MSIL) işlev gövdesi için bellek ayırmak üzere 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profil Oluşturma Arabirimleri](profiling-interfaces.md)

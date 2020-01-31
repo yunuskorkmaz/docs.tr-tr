@@ -2,12 +2,12 @@
 title: ICorDebugProcess6::MarkDebuggerAttached Yöntemi
 ms.date: 03/30/2017
 ms.assetid: bf94f090-5265-4112-8e57-5b4e20e070d0
-ms.openlocfilehash: 48bab20a71144b28f24951556eb36210d7b6aebf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b2ecd6da11bffb156826fa0c31b5f32abb54ff4a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123428"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792217"
 ---
 # <a name="icordebugprocess6markdebuggerattached-method"></a>ICorDebugProcess6::MarkDebuggerAttached Yöntemi
 .NET Framework sınıf kitaplığındaki <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> yönteminin `true`döndürmesi için hata ayıklayıcı 'nın iç durumunu değiştirir.  
@@ -49,5 +49,5 @@ HRESULT MarkDebuggerAttached(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugProcess6 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess6 Arabirimi](icordebugprocess6-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

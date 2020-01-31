@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2644f48b-db3c-429f-ae62-76f1c98a1af5
 topic_type:
 - apiref
-ms.openlocfilehash: 3a895f432ed640cc35a492df0c91cece34893062
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d403a8bfba3599a60d8af72307590f5a569480dd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122360"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791290"
 ---
 # <a name="icordebugtypegetclass-method"></a>ICorDebugType::GetClass Yöntemi
 Örneklenmiş genel türü temsil eden bir ICorDebugClass için bir arabirim işaretçisi alır.  
@@ -38,7 +38,7 @@ HRESULT GetClass (
  dışı Örneklenmemiş genel türü temsil eden `ICorDebugClass` arabiriminin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetClass`, yalnızca belirli koşullar altında çağrılabilir. `GetClass`çağrılmadan önce [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) çağırın. `ICorDebugType::GetType` ELEMENT_TYPE_CLASS veya ELEMENT_TYPE_VALUETYPE olan bir CorElementType değeri döndürürse, genel bir türün örneklenmemiş türünü almak için `GetClass` çağrılabilir.  
+ `GetClass`, yalnızca belirli koşullar altında çağrılabilir. `GetClass`çağrılmadan önce [ICorDebugType:: GetType](icordebugtype-gettype-method.md) çağırın. `ICorDebugType::GetType`, ELEMENT_TYPE_CLASS veya ELEMENT_TYPE_VALUETYPE olan bir CorElementType değeri döndürürse, bir genel türün örneklenmemiş türünü almak için `GetClass` çağrılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

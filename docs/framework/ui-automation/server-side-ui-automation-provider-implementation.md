@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 25f22d5e8caacc69643f6d79e109ebaa94159d80
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 8a52d84f7152b9cb431ad0aa97c88b143463be2d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75632325"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789619"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama
 
@@ -20,7 +20,7 @@ ms.locfileid: "75632325"
 
 Bu bölümde, özel bir denetim için sunucu tarafı UI Otomasyon sağlayıcısının nasıl uygulanacağı açıklanmaktadır.
 
-Windows Presentation Foundation (WPF) öğeleri ve WPF olmayan öğeler ([!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]için tasarlanan gibi) için uygulama temelde farklıdır. WPF öğeleri, <xref:System.Windows.Automation.Peers.AutomationPeer>türetilmiş bir sınıf aracılığıyla [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] için destek sağlar. WPF olmayan öğeler, sağlayıcı arabirimlerinin uygulamaları aracılığıyla destek sağlar.
+Windows Presentation Foundation (WPF) öğeleri ve WPF olmayan öğeler (Windows Forms için tasarlanan gibi) için uygulama temelde farklıdır. WPF öğeleri, <xref:System.Windows.Automation.Peers.AutomationPeer>türetilmiş bir sınıf aracılığıyla [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] için destek sağlar. WPF olmayan öğeler, sağlayıcı arabirimlerinin uygulamaları aracılığıyla destek sağlar.
 
 <a name="Security_Considerations"></a>
 
@@ -40,7 +40,7 @@ Bu konu hakkında daha fazla bilgi için lütfen [WPF özel denetiminin UI Otoma
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>WPF olmayan öğelere göre sağlayıcı uygulama
 
-WPF çerçevesinin parçası olmayan, ancak yönetilen kodda yazılan özel denetimler (çoğunlukla bunlar [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] denetimlerdir), arabirimleri uygulayarak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] için destek sağlar. Her öğe, sonraki bölümde ilk tabloda listelenen arabirimlerden en az birini uygulamalıdır. Ayrıca, öğe bir veya daha fazla denetim desenini destekliyorsa, her denetim deseni için uygun arabirimi uygulamalıdır.
+WPF çerçevesinin parçası olmayan, ancak yönetilen kodda yazılan özel denetimler (çoğunlukla bunlar Windows Forms denetimlerdir), arabirimleri uygulayarak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] için destek sağlar. Her öğe, sonraki bölümde ilk tabloda listelenen arabirimlerden en az birini uygulamalıdır. Ayrıca, öğe bir veya daha fazla denetim desenini destekliyorsa, her denetim deseni için uygun arabirimi uygulamalıdır.
 
 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcısı projenizin aşağıdaki derlemelere başvurması gerekir:
 
@@ -117,7 +117,7 @@ HWND tabanlı denetim sağlayıcılarının genellikle aşağıdaki özellikleri
 > [!NOTE]
 > Bir pencerede barındırılan basit bir öğe veya parça kökünün <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> pencereden elde edilir; Ancak, kök altındaki parça öğeleri (liste kutusu içindeki liste öğeleri gibi) kendi tanımlayıcılarını sağlamalıdır. Daha fazla bilgi için bkz. <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
 >
-> <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>, bir [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] denetiminde barındırılan sağlayıcılar için döndürülmelidir. Bu durumda, varsayılan pencere sağlayıcısı doğru değeri alamıyor olabilir.
+> <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>, bir Windows Forms denetiminde barındırılan sağlayıcılar için döndürülmelidir. Bu durumda, varsayılan pencere sağlayıcısı doğru değeri alamıyor olabilir.
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>, genellikle ana bilgisayar sağlayıcısı tarafından sağlanır. Örneğin, özel bir denetim <xref:System.Windows.Forms.Control>türetilirse, ad denetimin `Text` özelliğinden türetilir.
 

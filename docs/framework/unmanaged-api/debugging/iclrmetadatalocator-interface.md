@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43c944f4-406a-4df6-981e-0eabb33dd5d0
 topic_type:
 - apiref
-ms.openlocfilehash: ec92214e33cd1acda8b2702d93deba1f0fb2aaa2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 642391bce99328f3700d1783054943b6a450b22b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111025"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789025"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator Arabirimi
 Hedef işlemdeki derlemelerin meta verilerini bulmak için veri erişim Hizmetleri katmanı tarafından kullanılır.  
@@ -28,7 +28,7 @@ Hedef işlemdeki derlemelerin meta verilerini bulmak için veri erişim Hizmetle
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetMetadata Yöntemi](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Hedef işlemden bir görüntünün meta verilerini alır.|  
+|[GetMetadata Yöntemi](iclrmetadatalocator-getmetadata-method.md)|Hedef işlemden bir görüntünün meta verilerini alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  API istemcisi (yani hata ayıklayıcı) bu arabirimi belirli hedef işlem için uygun şekilde yürütmelidir. Örneğin, canlı bir işlem için uygulama, bellek dökümünden farklı olabilir.  
@@ -44,4 +44,4 @@ Hedef işlemdeki derlemelerin meta verilerini bulmak için veri erişim Hizmetle
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

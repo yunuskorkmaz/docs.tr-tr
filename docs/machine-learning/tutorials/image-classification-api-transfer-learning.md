@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4781e39a0c8827adb6ab0155d5215645242208a5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: eb61ad85580310c7becc2a1a2237efe188fbecf0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348177"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794591"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Öğretici: ML.NET görüntü sınıflandırma API 'SI ile aktarım öğrenimini kullanarak otomatikleştirilmiş görsel inceleme
 
@@ -84,7 +84,7 @@ Aktarım öğrenimine ve görüntü sınıflandırma API 'sine ilişkin genel bi
 1. **Microsoft.ml** Version **1.4.0** NuGet paketini yükler:
     1. Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
     1. Paket kaynağı olarak "nuget.org" öğesini seçin.
-    1. **Gözat** sekmesini seçin.
+    1. **Tarayıcı** sekmesini seçin.
     1. **Ön sürümü dahil et** onay kutusunu işaretleyin.
     1. **Microsoft.ml**için arama yapın.
     1. **Install** düğmesini seçin.
@@ -140,10 +140,10 @@ Bu öğreticide, yalnızca köprü destesi görüntüleri kullanılır.
 
         `ModelInput` aşağıdaki özellikleri içerir:
 
-        - `ImagePath`, görüntünün depolandığı tam yoldur.
-        - `Label` görüntünün ait olduğu kategorisidir. Tahmin edilecek değer budur.
         - `Image` görüntünün `byte[]` gösterimidir. Model, yansıma verilerinin eğitim için bu türden olmasını bekler.
         - `LabelAsKey`, `Label`sayısal gösterimidir.
+        - `ImagePath`, görüntünün depolandığı tam yoldur.
+        - `Label` görüntünün ait olduğu kategorisidir. Tahmin edilecek değer budur.
 
         Modeli eğitme ve tahmin yapmak için yalnızca `Image` ve `LabelAsKey` kullanılır. `ImagePath` ve `Label` özellikleri özgün görüntü dosyası adına ve kategorisine erişmek için kolaylık sağlamak üzere tutulur.
 
@@ -171,7 +171,7 @@ Eğitim ve doğrulama verileri sıklıkla değişmediğinde, daha fazla çalış
 
     [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L17)]
 
-1. Sonra, `mlContext` değişkenini yeni bir [Mlcontext](xref:Microsoft.ML.MLContext)örneğiyle başlatın.
+1. `mlContext` değişkenini yeni bir [Mlcontext](xref:Microsoft.ML.MLContext)örneğiyle başlatın.
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L19)]
 

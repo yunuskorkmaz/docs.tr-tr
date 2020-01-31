@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c7276f7-7e54-470c-808c-e13745ac07a1
 topic_type:
 - apiref
-ms.openlocfilehash: a9a6ca9ae3cdb1c6a7398d08c9f99e3cde125cf6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f177d441da3bd967750781e487d9fed42bc132f5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131906"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791943"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName Yöntemi
 Uzaktan hata ayıklama hedef makinesinin tam etki alanı adını veya IPv4 adresini döndürür. IPV6 Şu anda desteklenmiyor.  
@@ -49,7 +49,7 @@ HRESULT GetHostName (
  S_OK  
  Ana bilgisayar adı veya IP adresi başarıyla döndürüldü.  
   
- E_FAıL (veya diğer E_ dönüş kodları)  
+ E_FAIL (veya diğer E_ dönüş kodları)  
  Ana bilgisayar adı veya IP adresi döndürülemiyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -66,5 +66,5 @@ HRESULT GetHostName (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugRemoteTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemoteTarget Arabirimi](icordebugremotetarget-interface.md)
+- [ICorDebug Arabirimi](icordebug-interface.md)

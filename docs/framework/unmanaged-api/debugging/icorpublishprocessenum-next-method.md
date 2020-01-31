@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c399f37-1e38-4ca1-b70d-8ae41f7228b7
 topic_type:
 - apiref
-ms.openlocfilehash: d79b642735543ff84f6211fe5ca2e5b424be1f2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 084af87acd73ef65739ba69ef2bd66d10d7c27c2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103439"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790521"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>ICorPublishProcessEnum::Next Yöntemi
 Geçerli imleç konumundan başlayarak koleksiyondan belirtilen işlem sayısını alır.  
@@ -41,7 +41,7 @@ HRESULT Next (
  'ndaki Alınacak işlem sayısı.  
   
  `objects`  
- dışı Her biri bir işlemi temsil eden [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) nesnelerinin dizisine yönelik bir işaretçi.  
+ dışı Her biri bir işlemi temsil eden [ICorPublishProcess](icorpublishprocess-interface.md) nesnelerinin dizisine yönelik bir işaretçi.  
   
  `pceltFetched`  
  dışı Gerçekten döndürülen işlem sayısına yönelik işaretçi. `celt` bir tane ise bu değer null olabilir.  
@@ -57,4 +57,4 @@ HRESULT Next (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorPublishProcessEnum Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)
+- [ICorPublishProcessEnum Arabirimi](icorpublishprocessenum-interface.md)

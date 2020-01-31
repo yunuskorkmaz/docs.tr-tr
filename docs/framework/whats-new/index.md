@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ab14e6cb7d9bd4c1571040280dc35233e9b89d43
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 538806627a31366d4b8597eb010a4bbe3f8f9202
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937975"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860965"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework’teki yenilikler
 
@@ -600,7 +600,7 @@ Ayrıca, .NET Framework 4.7.1 ' deki önemli bir odak, bir uygulamanın yardımc
 
 **.NET Standard 2,0 desteği**
 
-[.NET Standard](../../standard/net-standard.md) , standart sürümünü destekleyen her bir .NET uygulamasında kullanılabilir olması gereken bir API kümesini tanımlar. .NET Framework 4.7.1, .NET Standard 2,0 ' yi tam olarak destekler ve .NET Standard 2,0 ' de tanımlanan [200 API 'leri](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) ekler ve .NET Framework 4.6.1, 4.6.2 ve 4,7. (.NET Framework bu sürümlerinin yalnızca hedef sistemde ek .NET Standard destek dosyaları da dağıtılmışsa .NET Standard 2,0 desteklediğine unutmayın.) Daha fazla bilgi için, [.NET Framework 4.7.1 çalışma zamanı ve derleyici özellikleri blog gönderisinde](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) "BCL-.NET Standard 2,0 desteği" ne bakın.
+[.NET Standard](../../standard/net-standard.md) , standart sürümünü destekleyen her bir .NET uygulamasında kullanılabilir olması gereken bir API kümesini tanımlar. .NET Framework 4.7.1, .NET Standard 2,0 ' yi tam olarak destekler ve .NET Standard 2,0 ' de tanımlanan [200 API 'leri](https://github.com/dotnet/standard/blob/master/src/netstandard/src/ApiCompatBaseline.net461.txt) ekler ve .NET Framework 4.6.1, 4.6.2 ve 4,7. (.NET Framework bu sürümlerinin yalnızca hedef sistemde ek .NET Standard destek dosyaları da dağıtılmışsa .NET Standard 2,0 desteklediğine unutmayın.) Daha fazla bilgi için, [.NET Framework 4.7.1 çalışma zamanı ve derleyici özellikleri blog gönderisinde](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) "BCL-.NET Standard 2,0 desteği" ne bakın.
 
 **Yapılandırma oluşturucuları için destek**
 
@@ -784,7 +784,7 @@ WPF 'nin <xref:System.Printing.PrintQueue?displayProperty=nameWithType> sınıf�
 
 - [Karakter kategorileri](#Strings)
 
-- [Şifreleme](#Crypto462)
+- [To](#Crypto462)
 
 - [SqlClient](#SQLClient)
 
@@ -1033,7 +1033,7 @@ Bağlantı havuzu etkinleştirildiğinde ve bir zaman aşımı ya da başka bir 
 
 Bağlantı girişimleri genellikle hızla kurtarılan geçici hatalarla başarısız olduğundan, bu davranış Azure SQL veritabanlarına bağlanırken istenmez. Bağlantı yeniden deneme deneyimini daha iyi en iyi hale getirebilmesi için, Azure SQL veritabanlarına bağlantı başarısız olduğunda bağlantı havuzu engelleme süresi davranışı kaldırılır.
 
-Yeni `PoolBlockingPeriod` anahtar sözcüğünün eklenmesi, uygulamanız için en uygun engelleme dönemini seçmenize olanak sağlar. Değerlere şunlar dahildir:
+Yeni `PoolBlockingPeriod` anahtar sözcüğünün eklenmesi, uygulamanız için en uygun engelleme dönemini seçmenize olanak sağlar. Değerler şunlardır:
 
 <xref:System.Data.SqlClient.PoolBlockingPeriod.Auto>
 
@@ -1095,7 +1095,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 **DataContractJsonSerializer sınıfına göre birden çok gün ışığından yararlanma zaman ayarlama kuralı için daha iyi destek**
 
-Müşteriler, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sınıfının tek bir saat dilimi için birden çok ayarlama kuralını destekleyip desteklemediğini tespit etmek için bir uygulama yapılandırma ayarı kullanabilir. Bu onaya bağlı bir özelliktir. Etkinleştirmek için App. config dosyanıza aşağıdaki ayarı ekleyin:
+Müşteriler, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sınıfının tek bir saat dilimi için birden çok ayarlama kuralını destekleyip desteklemediğini tespit etmek için bir uygulama yapılandırma ayarı kullanabilir. Bu bir katılım özelliğidir. Etkinleştirmek için App. config dosyanıza aşağıdaki ayarı ekleyin:
 
 ```xml
 <runtime>
@@ -1248,7 +1248,7 @@ Dönüştürülmüş masaüstü uygulamaları, UWP API 'Lerinin, canlı kutucuk 
 
 .NET Framework 4.6.1, aşağıdaki alanlardaki yeni özellikler içerir:
 
-- [Şifreleme](#Crypto)
+- [To](#Crypto)
 
 - [ADO.NET](#ADO.NET461)
 
@@ -1468,7 +1468,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
 - **Derleme yükleyici geliştirmeleri**
 
-  Derleme yükleyici artık, ilgili NGEN resmi yüklendikten sonra IL derlemeleri yüklemelerini kaldırarak belleği daha verimli bir şekilde kullanıyor. Bu değişiklik, başta büyük 32 bit uygulamalar (Visual Studio gibi) için faydalı olan sanal belleği azaltır ve fiziksel bellek alanından tasarruf eder.
+  Derleme yükleyicisi artık, ilgili bir NGEN görüntüsü yüklendikten sonra Il derlemelerini kaldırarak belleği daha verimli bir şekilde kullanmaktadır. Bu değişiklik, özellikle büyük 32 bitlik uygulamalar (Visual Studio gibi) için yararlı olan sanal belleği azaltır ve fiziksel belleği da kaydeder.
 
 - **Temel sınıf kitaplığı değişiklikleri**
 
@@ -1733,7 +1733,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   Bu özellik .NET Framework 4,6 ' de <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> ve <xref:System.Windows.Forms.ToolStripSplitButton> türlerini ve bir <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> çizerken kullanılan <xref:System.Drawing.Design.UITypeEditor>özelliği tarafından belirtilen dikdörtgeni içerecek şekilde genişletildi.
 
-  Bu onaya bağlı bir özelliktir. Etkinleştirmek için, uygulama yapılandırma (App. config) dosyasında `EnableWindowsFormsHighDpiAutoResizing` öğesini `true` olarak ayarlayın:
+  Bu bir katılım özelliğidir. Etkinleştirmek için, uygulama yapılandırma (App. config) dosyasında `EnableWindowsFormsHighDpiAutoResizing` öğesini `true` olarak ayarlayın:
 
   ```xml
   <appSettings>
@@ -1776,7 +1776,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
   - <xref:System.Windows.Forms.DataGridView>
   - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 
-  Bu onaya bağlı bir özelliktir. Etkinleştirmek için, uygulama yapılandırma (App. config) dosyasında `EnableWindowsFormsHighDpiAutoResizing` öğesini `true` olarak ayarlayın:
+  Bu bir katılım özelliğidir. Etkinleştirmek için, uygulama yapılandırma (App. config) dosyasında `EnableWindowsFormsHighDpiAutoResizing` öğesini `true` olarak ayarlayın:
 
   ```xml
   <appSettings>

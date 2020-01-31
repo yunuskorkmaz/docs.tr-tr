@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 314d29f3-feb0-4a92-9530-b569c280cc31
 topic_type:
 - apiref
-ms.openlocfilehash: bff270ff774692d058a36c7f47ab474b08bceb35
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6f9bcec66ff613d19c1198ac9849ca28c978f537
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088953"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788938"
 ---
 # <a name="icordebugappdomain2-interface"></a>ICorDebugAppDomain2 Arabirimi
 
@@ -29,8 +29,8 @@ Diziler, işaretçiler, işlev işaretçileri ve başvuru türleriyle çalışma
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetArrayOrPointerType Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|Belirtilen türde bir diziyi veya belirtilen türe bir işaretçi ya da başvuru alır.|  
-|[GetFunctionPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|Belirli bir imzaya sahip bir işleve yönelik bir işaretçi alır.|  
+|[GetArrayOrPointerType Yöntemi](icordebugappdomain2-getarrayorpointertype-method.md)|Belirtilen türde bir diziyi veya belirtilen türe bir işaretçi ya da başvuru alır.|  
+|[GetFunctionPointerType](icordebugappdomain2-getfunctionpointertype-method.md)|Belirli bir imzaya sahip bir işleve yönelik bir işaretçi alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -48,4 +48,4 @@ Diziler, işaretçiler, işlev işaretçileri ve başvuru türleriyle çalışma
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

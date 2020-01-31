@@ -9,16 +9,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 5e7544dfdbee234bb968c9a7f39814e8749ece15
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: eee26165e17b3327166a160e7c4ee3726215dcfc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735291"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794243"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>İzlenecek yol: WPF'de Windows Forms Denetimlerini Düzenleme
 
-Bu izlenecek yol, karma uygulamada [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri düzenlemek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen özelliklerini nasıl kullanacağınızı gösterir.
+Bu izlenecek yol, karma uygulamada Windows Forms denetimleri düzenlemek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen özelliklerini nasıl kullanacağınızı gösterir.
 
 Bu izlenecek yolda gösterilen görevler şunlardır:
 
@@ -39,7 +39,7 @@ Bu izlenecek yolda gösterilen görevler şunlardır:
 
 Bu izlenecek yolda gösterilen görevlerin tüm kod listesi için bkz. [WPF örneğinde Windows Forms denetimlerini düzenleme](https://go.microsoft.com/fwlink/?LinkID=159971).
 
-İşiniz bittiğinde, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]tabanlı uygulamalardaki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] düzeni özelliklerinin anlaşılmasına sahip olacaksınız.
+İşiniz bittiğinde, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]tabanlı uygulamalardaki Windows Forms düzeni özelliklerinin anlaşılmasına sahip olacaksınız.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -59,7 +59,7 @@ Projeyi oluşturmak ve ayarlamak için şu adımları izleyin:
 
 3. *MainWindow. xaml* ' ye ÇIFT tıklayarak xaml görünümünde açın.
 
-4. <xref:System.Windows.Window> öğesinde, aşağıdaki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ad alanı eşlemesini ekleyin.
+4. <xref:System.Windows.Window> öğesinde, aşağıdaki Windows Forms ad alanı eşlemesini ekleyin.
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -71,7 +71,7 @@ Projeyi oluşturmak ve ayarlamak için şu adımları izleyin:
 
 ## <a name="using-default-layout-settings"></a>Varsayılan düzen ayarlarını kullanma
 
-Varsayılan olarak, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi barındırılan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetiminin yerleşimini işler.
+Varsayılan olarak, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi barındırılan Windows Forms denetiminin yerleşimini işler.
 
 Varsayılan düzen ayarlarını kullanmak için şu adımları izleyin:
 
@@ -79,7 +79,7 @@ Varsayılan düzen ayarlarını kullanmak için şu adımları izleyin:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]
 
-2. Uygulamayı derlemek ve çalıştırmak için <kbd>F5</kbd> tuşuna basın. <xref:System.Windows.Controls.Canvas>[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> denetimi görünür. Barındırılan denetim içeriğine göre boyutlandırılır ve <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi barındırılan denetimi kapsayacak şekilde boyutlandırılır.
+2. Uygulamayı derlemek ve çalıştırmak için <kbd>F5</kbd> tuşuna basın. <xref:System.Windows.Controls.Canvas>Windows Forms <xref:System.Windows.Forms.Button?displayProperty=nameWithType> denetimi görünür. Barındırılan denetim içeriğine göre boyutlandırılır ve <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi barındırılan denetimi kapsayacak şekilde boyutlandırılır.
 
 ## <a name="sizing-to-content"></a>Içeriğe boyutlandırma
 
@@ -115,7 +115,7 @@ Boyutu açıkça belirtmek için şu adımları izleyin:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#6](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]
 
-2. Uygulamayı derlemek ve çalıştırmak için <kbd>F5</kbd> tuşuna basın. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi, varsayılan düzen ayarlarından daha küçük olan 70 piksel yüksekliğinde 50 piksellik bir boyut olarak ayarlanır. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetiminin içeriği buna göre yeniden düzenlenir.
+2. Uygulamayı derlemek ve çalıştırmak için <kbd>F5</kbd> tuşuna basın. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi, varsayılan düzen ayarlarından daha küçük olan 70 piksel yüksekliğinde 50 piksellik bir boyut olarak ayarlanır. Windows Forms denetiminin içeriği buna göre yeniden düzenlenir.
 
 ## <a name="setting-layout-properties"></a>Düzen özelliklerini ayarlama
 
@@ -164,7 +164,7 @@ Barındırılan bir denetimi sabitlemek için aşağıdaki adımları izleyin:
 
 ## <a name="setting-visibility"></a>Ayar görünürlüğü
 
-<xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinde <xref:System.Windows.UIElement.Visibility%2A> özelliğini ayarlayarak [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetiminizi görünmez hale getirebilirsiniz veya daraltabilirsiniz. Bir denetim görünmez olduğunda, görüntülenmez, ancak düzen alanı kaplar. Bir denetim daraltıldığında, görüntülenmez ve düzen alanı kaplar.
+<xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinde <xref:System.Windows.UIElement.Visibility%2A> özelliğini ayarlayarak Windows Forms denetiminizi görünmez hale getirebilirsiniz veya daraltabilirsiniz. Bir denetim görünmez olduğunda, görüntülenmez, ancak düzen alanı kaplar. Bir denetim daraltıldığında, görüntülenmez ve düzen alanı kaplar.
 
 Barındırılan bir denetimin görünürlüğünü ayarlamak için şu adımları izleyin:
 
@@ -181,11 +181,11 @@ Barındırılan bir denetimin görünürlüğünü ayarlamak için şu adımlar�
 
 4. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğeyi görünmez hale getirmek için **görünmez** düğmesini tıklatın.
 
-5. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesini düzenden tamamen gizlemek için **daraltmak Için tıklama** düğmesine tıklayın. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi daraltıldığında, çevreleyen öğeler alanını kaplamak için yeniden düzenlenir.
+5. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesini düzenden tamamen gizlemek için **daraltmak Için tıklama** düğmesine tıklayın. Windows Forms denetimi daraltıldığında, çevreleyen öğeler alanını kaplamak için yeniden düzenlenir.
 
 ## <a name="hosting-a-control-that-does-not-stretch"></a>UZAMAYAN bir denetimi barındırma
 
-Bazı [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri sabit bir boyuta sahiptir ve mizanpajda kullanılabilir alanı dolduracak şekilde uzatılmaz. Örneğin, <xref:System.Windows.Forms.MonthCalendar> denetimi sabit bir alanda bir ay görüntüler.
+Bazı Windows Forms denetimleri sabit bir boyuta sahiptir ve mizanpajda kullanılabilir alanı dolduracak şekilde uzatılmaz. Örneğin, <xref:System.Windows.Forms.MonthCalendar> denetimi sabit bir alanda bir ay görüntüler.
 
 UZAMAYAN bir denetimi barındırmak için şu adımları izleyin:
 
@@ -223,7 +223,7 @@ Bir karma uygulamada döndürmenin etkisini görmek için şu adımları izleyin
 
 ## <a name="setting-padding-and-margins"></a>Doldurma ve kenar boşlukları ayarlama
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzeninde doldurma ve kenar boşlukları [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]doldurma ve kenar boşluklarıyla benzerdir. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinde <xref:System.Windows.Controls.Control.Padding%2A> ve <xref:System.Windows.FrameworkElement.Margin%2A> özelliklerini ayarlamanız yeterlidir.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzeninde doldurma ve kenar boşlukları Windows Forms doldurma ve kenar boşluklarıyla benzerdir. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinde <xref:System.Windows.Controls.Control.Padding%2A> ve <xref:System.Windows.FrameworkElement.Margin%2A> özelliklerini ayarlamanız yeterlidir.
 
 Barındırılan bir denetimin doldurmasını ve kenar boşluklarını ayarlamak için şu adımları izleyin:
 
@@ -232,11 +232,11 @@ Barındırılan bir denetimin doldurmasını ve kenar boşluklarını ayarlamak 
      [!code-xaml[WpfLayoutHostingWfWithXaml#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]
     [!code-xaml[WpfLayoutHostingWfWithXaml#15](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]
 
-2. Uygulamayı derlemek ve çalıştırmak için <kbd>F5</kbd> tuşuna basın. Doldurma ve kenar boşluğu ayarları, barındırılan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimlerine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]uygulandıkları şekilde uygulanır.
+2. Uygulamayı derlemek ve çalıştırmak için <kbd>F5</kbd> tuşuna basın. Doldurma ve kenar boşluğu ayarları, barındırılan Windows Forms denetimlerine Windows Forms uygulandıkları şekilde uygulanır.
 
 ## <a name="using-dynamic-layout-containers"></a>Dinamik Düzen kapsayıcıları kullanma
 
-[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], <xref:System.Windows.Forms.FlowLayoutPanel> ve <xref:System.Windows.Forms.TableLayoutPanel>iki dinamik düzen kapsayıcısı sağlar. Bu kapsayıcıları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzeninde de kullanabilirsiniz.
+Windows Forms, <xref:System.Windows.Forms.FlowLayoutPanel> ve <xref:System.Windows.Forms.TableLayoutPanel>iki dinamik düzen kapsayıcısı sağlar. Bu kapsayıcıları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzeninde de kullanabilirsiniz.
 
 Dinamik düzen kapsayıcısını kullanmak için şu adımları izleyin:
 

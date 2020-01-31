@@ -2,12 +2,12 @@
 title: ICorDebugAppDomain4 Arabirimi
 ms.date: 03/30/2017
 ms.assetid: c536b9dc-148e-4924-bde1-1daa98d49d90
-ms.openlocfilehash: db5c08f74795026d7c6f3b5872fb6fdabf88ee5d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2965b43a25d016e9773ec3893661af4580e6007b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088814"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784709"
 ---
 # <a name="icordebugappdomain4-interface"></a>ICorDebugAppDomain4 Arabirimi
 Bir COM çağrılabilir sarmalayıcısından yönetilen bir nesne almak için ICorDebugAppDomain arabirimini mantıksal olarak genişletir.  
@@ -16,7 +16,7 @@ Bir COM çağrılabilir sarmalayıcısından yönetilen bir nesne almak için IC
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetObjectForCCW Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-getobjectforccw-method.md)|COM çağrılabilir sarmalayıcı (CCW) işaretçisinden yönetilen bir nesne alır.|  
+|[GetObjectForCCW Yöntemi](icordebugappdomain4-getobjectforccw-method.md)|COM çağrılabilir sarmalayıcı (CCW) işaretçisinden yönetilen bir nesne alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -31,5 +31,5 @@ Bir COM çağrılabilir sarmalayıcısından yönetilen bir nesne almak için IC
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)

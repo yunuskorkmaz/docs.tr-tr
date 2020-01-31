@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-ms.openlocfilehash: 8b9ec94184945c19b77247175e51bd5e8dc1ceee
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5dd93dcc29ace6573e313f732c45af0dfbb900e1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122659"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782220"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf Yöntemi
 `this` iç çerçevesinin belirtilen ICorDebugFrame nesnesinden daha yakın olup olmadığını denetler.  
@@ -45,7 +45,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Karşılaştırma başarıyla gerçekleştirildi.|  
-|E_FAıL|Karşılaştırma gerçekleştirilemedi.|  
+|E_FAIL|Karşılaştırma gerçekleştirilemedi.|  
 |E_INVALIDARG|`pFrameToCompare` veya `pIsCloser` null.|  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -62,6 +62,6 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugInternalFrame2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugInternalFrame2 Arabirimi](icordebuginternalframe2-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)

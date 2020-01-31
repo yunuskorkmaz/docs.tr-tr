@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e58dac7b-85c3-41ca-b9aa-3a7fc9ae6680
 topic_type:
 - apiref
-ms.openlocfilehash: d23b695550c8444264934f7aca4fa185064e89c5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cc5a2e1de79d6ba04ff3bf2bf86e0cb7ce9a5c0b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130734"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788383"
 ---
 # <a name="icordebugmanagedcallbackloadclass-method"></a>ICorDebugManagedCallback::LoadClass Yöntemi
 Bir sınıfın yüklendiğini hata ayıklayıcıya bildirir.  
@@ -57,5 +57,5 @@ HRESULT LoadClass (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UnloadClass Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)
-- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [UnloadClass Yöntemi](icordebugmanagedcallback-unloadclass-method.md)
+- [ICorDebugManagedCallback Arabirimi](icordebugmanagedcallback-interface.md)

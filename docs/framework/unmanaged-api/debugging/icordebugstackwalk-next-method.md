@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 189c36be-028c-4fba-a002-5edfb8fcd07f
 topic_type:
 - apiref
-ms.openlocfilehash: 8cebb66ecf298eaaca0e7af23a9b8c6a2932c23f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b76d17337408653d130ee0cb8594e759bdade37c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131823"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791863"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next Yöntemi
-[Icordebugstackyürüme](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) nesnesini sonraki çerçeveye kaydırır.  
+[Icordebugstackyürüme](icordebugstackwalk-interface.md) nesnesini sonraki çerçeveye kaydırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ HRESULT Next();
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Çalışma zamanı bir sonraki çerçeveye başarıyla geri alınıyor (bkz. notlar).|  
-|E_FAıL|`ICorDebugStackWalk` nesnesi gelişmiş bir nesne olamaz.|  
+|E_FAIL|`ICorDebugStackWalk` nesnesi gelişmiş bir nesne olamaz.|  
 |CORDBG_S_AT_END_OF_STACK|Bu geriye doğru bir sonuç olarak yığının sonuna ulaşıldı.|  
 |CORDBG_E_PAST_END_OF_STACK|Çerçeve işaretçisi zaten yığının sonunda. Bu nedenle, ek çerçevelere erişilemez.|  
   
@@ -57,6 +57,6 @@ HRESULT Next();
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugStackWalk Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugStackWalk Arabirimi](icordebugstackwalk-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)

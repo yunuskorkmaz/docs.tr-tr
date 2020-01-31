@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 287f5ecd-863f-4090-a615-077859f0257b
 topic_type:
 - apiref
-ms.openlocfilehash: 1116945ae1a886f1b9491e0baf183e20c4fff177
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dd31bf458dde043a04e24251cedcac585fd385f6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136625"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793036"
 ---
 # <a name="icordebugmetadatalocator-interface"></a>ICorDebugMetaDataLocator Arabirimi
 Hata ayıklayıcıya meta veri bilgileri sağlar.  
@@ -28,7 +28,7 @@ Hata ayıklayıcıya meta veri bilgileri sağlar.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetMetaData Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmetadatalocator-getmetadata-method.md)|Hata ayıklayıcının istenen bir işlemi tamamlaması için gereken meta verileri bir modülün tam yolunu döndürmesini ister.|  
+|[GetMetaData Yöntemi](icordebugmetadatalocator-getmetadata-method.md)|Hata ayıklayıcının istenen bir işlemi tamamlaması için gereken meta verileri bir modülün tam yolunu döndürmesini ister.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -46,5 +46,5 @@ Hata ayıklayıcıya meta veri bilgileri sağlar.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)

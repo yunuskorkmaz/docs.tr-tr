@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-ms.openlocfilehash: dfc2e91599e7f05d90d56af07b71313e9eecaa51
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 542bfa05c55ef224d1b9111f9af6c069e9e23542
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121049"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790966"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>Icordebugvariablehome:: Getslotındex yöntemi
 Yerel bir değişkenin yönetilen yuva dizinini alır.  
@@ -43,7 +43,7 @@ HRESULT GetSlotIndex(
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem çağrısı `pSlotIndex`bir yuva dizini değeri döndürdü.|  
-|`E_FAIL`|Geçerli [ıcordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) örneği bir işlev bağımsız değişkenini temsil eder.|  
+|`E_FAIL`|Geçerli [ıcordebugvariablehome](icordebugvariablehome-interface.md) örneği bir işlev bağımsız değişkenini temsil eder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu yerel değişken için meta verileri almak için yuva dizini kullanılabilir.  
@@ -59,4 +59,4 @@ HRESULT GetSlotIndex(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugVariableHome Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [ICorDebugVariableHome Arabirimi](icordebugvariablehome-interface.md)

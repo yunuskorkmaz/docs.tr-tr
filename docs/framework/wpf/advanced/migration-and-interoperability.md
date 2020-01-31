@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WPF [WPF], interoperability
 - migration [WPF]
 ms.assetid: d655de05-bf63-4814-bc64-6b3be01c70a2
-ms.openlocfilehash: 3e7b838bddef535572afaaaf962cdda4b0272a62
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 76641d8bd6061e3b234aaa16efbb77b0a32e3a3f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740334"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794309"
 ---
 # <a name="migration-and-interoperability"></a>Geçiş ve Birlikte Çalışabilirlik
 Bu sayfa, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar ve diğer Microsoft Windows uygulamaları türleri arasında nasıl birlikte çalışabilirlik uygulanacağını tartışan belgelerin bağlantılarını içerir.  
@@ -32,8 +32,8 @@ Bu sayfa, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclien
   
 |Terim|Tanım|  
 |----------|----------------|  
-|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|Bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sayfasının bir öğesi olarak barındırmak için kullanabileceğiniz bir öğe.|  
-|<xref:System.Windows.Forms.Integration.ElementHost>|Bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] denetimini barındırmak için kullanabileceğiniz bir denetim [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].|  
+|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|Bir Windows Forms denetimini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sayfasının bir öğesi olarak barındırmak için kullanabileceğiniz bir öğe.|  
+|<xref:System.Windows.Forms.Integration.ElementHost>|Bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] denetimini barındırmak için kullanabileceğiniz bir denetim Windows Forms.|  
 |<xref:System.Windows.Interop.HwndSource>|Bir Win32 uygulaması içinde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bölgesi barındırır.|  
 |<xref:System.Windows.Interop.HwndHost>|<xref:System.Windows.Forms.Integration.WindowsFormsHost>için temel sınıf, tüm HWND tabanlı teknolojilerin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir uygulama tarafından barındırılırken kullandığı bazı temel işlevleri tanımlar. Bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulaması içinde Win32 penceresi barındırmak için bunu alt sınıfa koyun.|  
 |<xref:System.Windows.Interop.BrowserInteropHelper>|Tarayıcı tarafından barındırılan bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamasının tarayıcı ortamının koşullarını raporlamak için yardımcı sınıf.|  

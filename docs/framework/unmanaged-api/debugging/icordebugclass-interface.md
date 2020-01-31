@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03a6facb-f12f-49be-9839-e73b9c791cd5
 topic_type:
 - apiref
-ms.openlocfilehash: 5714597b5e5ca2936aad53217ae934684e75585c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ac588591222a1abbc7b99ec7e973284c055f95e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125743"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784162"
 ---
 # <a name="icordebugclass-interface"></a>ICorDebugClass Arabirimi
 
@@ -29,9 +29,9 @@ Basit veya karmaşık (yani kullanıcı tarafından tanımlanmış) olabilecek b
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetModule Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|Bu sınıfı tanımlayan modülü alır.|  
-|[GetStaticFieldValue Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)|Belirtilen statik alanın değerini alır.|  
-|[GetToken Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|Bu sınıf için `TypeDef` meta veri belirtecini alır.|  
+|[GetModule Yöntemi](icordebugclass-getmodule-method.md)|Bu sınıfı tanımlayan modülü alır.|  
+|[GetStaticFieldValue Yöntemi](icordebugclass-getstaticfieldvalue-method.md)|Belirtilen statik alanın değerini alır.|  
+|[GetToken Yöntemi](icordebugclass-gettoken-method.md)|Bu sınıf için `TypeDef` meta veri belirtecini alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `ICorDebugClass` arabirimi örneği oluşturulmuş bir genel türü temsil eder. ICorDebugType arabirimi bir örneklenmiş genel türü temsil eder. Örneğin, `Hashtable<K, V>` `ICorDebugClass`tarafından temsil edilir, ancak `Hashtable<Int32, String>` `ICorDebugType`tarafından temsil edilir.  
@@ -52,4 +52,4 @@ Basit veya karmaşık (yani kullanıcı tarafından tanımlanmış) olabilecek b
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

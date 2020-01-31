@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: db9938f26f31506737eb0395fa389da01a1ee444
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 6d8dedafd4ffc582b529289d3583f90d81779762
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735071"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794037"
 ---
 # <a name="wpf-architecture"></a>WPF Mimarisi
 Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisinde kılavuzlu bir tur sağlar. WPF 'nin büyük alt sistemlerinin çoğunu kapsamakta ve nasıl etkileşime gireceğini anlatmaktadır. Ayrıca WPF 'nin mimarları tarafından yapılan seçimlerin bazılarını da ayrıntılarıyla görebilirsiniz.  
@@ -116,7 +116,7 @@ Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisinde kılavuzl
   
  <xref:System.Windows.FrameworkElement> tanıtılmakta olan en önemli iki şey veri bağlama ve stillerdir.  
   
- WPF 'deki veri bağlama alt sistemi, uygulama [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]oluşturmak için [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] veya ASP.NET kullanan herkese görece tanıdık olmalıdır. Bu sistemlerin her birinde, belirli bir öğeden bir veya daha fazla özelliği bir veri parçasına bağlamak istediğinizi ifade etmek için basit bir yol vardır. WPF özellik bağlama, dönüştürme ve liste bağlama için tam desteğe sahiptir.  
+ WPF 'deki veri bağlama alt sistemi, uygulama [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]oluşturmak için Windows Forms veya ASP.NET kullanan herkese görece tanıdık olmalıdır. Bu sistemlerin her birinde, belirli bir öğeden bir veya daha fazla özelliği bir veri parçasına bağlamak istediğinizi ifade etmek için basit bir yol vardır. WPF özellik bağlama, dönüştürme ve liste bağlama için tam desteğe sahiptir.  
   
  WPF 'deki veri bağlamasının en ilginç özelliklerinden biri veri şablonlarının sunumlarıdır. Veri şablonları, verilerin bir parçasının görselleştirme şeklini bildirimli olarak belirtmenize olanak tanır. Verilere bağlanabilen özel bir kullanıcı arabirimi oluşturmak yerine, bunun yerine sorunu açıp verilerin oluşturulacak görüntüyü belirlemesine izin verebilirsiniz.  
   
@@ -130,7 +130,7 @@ Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisinde kılavuzl
   
  Veri modeli (Özellikler), etkileşim modeli (komutlar ve olaylar) ve görüntüleme modeli (şablonlar) arasında bölünen bu, bir denetimin görünüm ve davranışının tamamen özelleştirilmesine izin vermez.  
   
- Denetimlerin veri modelinin ortak bir yönü, içerik modelidir. <xref:System.Windows.Controls.Button>gibi bir denetime bakarsanız, <xref:System.Object>türünün "Içerik" adlı bir özelliğe sahip olduğunu görürsünüz. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ve ASP.NET içinde, bu özellik genellikle bir dize olur, ancak bir düğmeye koyabileceğiniz içerik türünü sınırlar. Bir düğmenin içeriği basit bir dize, karmaşık veri nesnesi veya bir öğe ağacının tamamı olabilir. Veri nesnesi söz konusu olduğunda, veri şablonu bir görüntü oluşturmak için kullanılır.  
+ Denetimlerin veri modelinin ortak bir yönü, içerik modelidir. <xref:System.Windows.Controls.Button>gibi bir denetime bakarsanız, <xref:System.Object>türünün "Içerik" adlı bir özelliğe sahip olduğunu görürsünüz. Windows Forms ve ASP.NET içinde, bu özellik genellikle bir dize olur, ancak bir düğmeye koyabileceğiniz içerik türünü sınırlar. Bir düğmenin içeriği basit bir dize, karmaşık veri nesnesi veya bir öğe ağacının tamamı olabilir. Veri nesnesi söz konusu olduğunda, veri şablonu bir görüntü oluşturmak için kullanılır.  
   
 <a name="Summary"></a>   
 ## <a name="summary"></a>Özet  
@@ -138,7 +138,7 @@ Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisinde kılavuzl
   
  Geleneksel uygulamalar bir görüntü oluşturup daha sonra bazı verilere bağlar. WPF 'de, denetimle ilgili her şey, her bir veri bağlama türü tarafından oluşturulur. Düğme içinde bulunan metin, düğmenin içinde oluşturulan bir denetim oluşturularak ve görünümünü düğmenin içerik özelliğine bağlayarak görüntülenir.  
   
- WPF tabanlı uygulamalar geliştirmeye başladığınızda çok tanıdık gelmelidir. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] veya ASP.NET kullanarak özellikleri, nesneleri ve veri bağlamayı birçok şekilde ayarlayabilirsiniz. WPF mimarisine daha derin bir araştırma sayesinde, uygulamanın çekirdek sürücüsü olarak verileri temel alan çok daha zengin uygulamalar oluşturmak için bir olasılık olduğunu fark edeceksiniz.  
+ WPF tabanlı uygulamalar geliştirmeye başladığınızda çok tanıdık gelmelidir. Windows Forms veya ASP.NET kullanarak özellikleri, nesneleri ve veri bağlamayı birçok şekilde ayarlayabilirsiniz. WPF mimarisine daha derin bir araştırma sayesinde, uygulamanın çekirdek sürücüsü olarak verileri temel alan çok daha zengin uygulamalar oluşturmak için bir olasılık olduğunu fark edeceksiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

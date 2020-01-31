@@ -2,12 +2,12 @@
 title: 'Icordebugmutabledatatarget:: ContinueStatusChanged yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 5a66d3f4-dd16-4d62-9dcc-0eab7041d894
-ms.openlocfilehash: abaf2d0542e16f526ecbe369370c31c225808f1f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c918bb60fba5bc1ec3f0f7c58b103d05a3c7ddfd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139344"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792867"
 ---
 # <a name="icordebugmutabledatatargetcontinuestatuschanged-method"></a>Icordebugmutabledatatarget:: ContinueStatusChanged yöntemi
 Belirtilen iş parçacığında bekleyen hata ayıklama olayının devamlılık durumunu değiştirir.  
@@ -28,7 +28,7 @@ HRESULT ContinueStatusChanged(
  İstenen yeni Devamlılık durumunu temsil eden bir [COREDB_CONTINUE_STATUS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) değeri.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklayıcı, geçerli hata ayıklama olayının normalde işlenme yönteminden farklı bir şekilde işlenmesini gerektiren bir ICorDebug yöntemi çağırdığında `ContinueStatusChanged` yöntemini çağırır. Örneğin, bekleyen bir özel durum varsa ve hata ayıklayıcı özel durumu iptal eden bir işlem isterse ( [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) veya `FuncEval`), bu API, özel durumun iptal edilmesini istemek için kullanılır.  
+ Hata ayıklayıcı, geçerli hata ayıklama olayının normalde işlenme yönteminden farklı bir şekilde işlenmesini gerektiren bir ICorDebug yöntemi çağırdığında `ContinueStatusChanged` yöntemini çağırır. Örneğin, bekleyen bir özel durum varsa ve hata ayıklayıcı özel durumu iptal eden bir işlem isterse ( [ICorDebugILFrame:: SetIP](icordebugilframe-setip-method.md) veya `FuncEval`), bu API, özel durumun iptal edilmesini istemek için kullanılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -41,5 +41,5 @@ HRESULT ContinueStatusChanged(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugMutableDataTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMutableDataTarget Arabirimi](icordebugmutabledatatarget-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

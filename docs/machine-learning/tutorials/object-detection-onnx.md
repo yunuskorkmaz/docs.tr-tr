@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 04d7dedf9f882d9f0e0396949c71e4941c207fe3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6aaf5acc605067f378ff5d42f713fe1c63d91e46
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345042"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794633"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Öğretici: ML.NET 'de ONNX kullanarak nesneleri algılama
 
@@ -50,7 +50,7 @@ Nesne algılama bir bilgisayar vizyonu sorunudur. Görüntü sınıflandırması
 Nesne algılama için bazı kullanım örnekleri şunları içerir:
 
 - Kendi kendine yönlendiren otomobiller
-- Robotik
+- Robotics
 - Yüz Algılama
 - Çalışma alanı güvenliği
 - Nesne sayımı
@@ -213,7 +213,7 @@ Modelin veri çıktısı, görüntü içindeki nesnelerin sınırlayıcı kutula
 
     [!code-csharp [DimensionsBaseClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/DimensionsBase.cs#L3-L9)]
 
-    `DimensionsBase` aşağıdaki `float` alanlara sahiptir:
+    `DimensionsBase` aşağıdaki `float` özelliklere sahiptir:
 
     - `X`, nesnenin konumunu x ekseni üzerinde içerir.
     - `Y`, nesnenin y ekseni üzerinde konumunu içerir.
@@ -237,7 +237,7 @@ Ardından, sınırlayıcı kutularınız için bir sınıf oluşturun.
 
     [!code-csharp [YoloBoundingBoxClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L7-L21)]
 
-    `YoloBoundingBox` aşağıdaki alanlara sahiptir:
+    `YoloBoundingBox` aşağıdaki özelliklere sahiptir:
 
     - `Dimensions`, sınırlayıcı kutunun boyutlarını içerir.
     - `Label`, sınırlayıcı kutusunda algılanan nesne sınıfını içerir.
@@ -260,7 +260,7 @@ Artık boyut ve sınırlama kutuları için sınıflar oluşturuldığına göre
 
     [!code-csharp [YoloParserUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L10)]
 
-1. `YoloOutputParser` sınıf tanımı içinde aşağıdaki sabiti ve alanları ekleyin.
+1. `YoloOutputParser` sınıf tanımı içinde aşağıdaki sabitleri ve alanları ekleyin.
 
     [!code-csharp [ParserVarDefinitions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L12-L21)]
 

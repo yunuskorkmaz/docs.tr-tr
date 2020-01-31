@@ -5,14 +5,14 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 2c3ba0e12d0d7e6a568c4c3741d99b901fca2722
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bc72cade9ce6edddb88d741a3424405bba0a7ad8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696525"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793387"
 ---
-# <a name="processing-the-xml-file-c-programming-guide"></a>XML Dosyasını İşleme (C# Programlama Kılavuzu)
+# <a name="processing-the-xml-file-c-programming-guide"></a>XML dosyasını işleme (C# Programlama Kılavuzu)
 
 Derleyici, kodunuzda belge oluşturmak için etiketlenmiş her yapı için bir KIMLIK dizesi oluşturur. (Kodunuzu etiketleme hakkında daha fazla bilgi için bkz. [belge açıklamaları Için önerilen Etiketler](./recommended-tags-for-documentation-comments.md).) KIMLIK dizesi yapıyı benzersiz bir şekilde tanımlar. XML dosyasını işleyen programlar, belgelerin uygulandığı karşılık gelen .NET Framework meta veri/yansıma öğesini tanımlamak için KIMLIK dizesini kullanabilir.
 
@@ -27,7 +27,7 @@ Derleyici, KIMLIK dizelerini oluşturduğunda aşağıdaki kuralları sunar:
     |Karakter|Açıklama|
     |---------------|-----------------|
     |N|ad alanı<br /><br /> Bir ad alanına belge açıklamaları ekleyemezsiniz, ancak bu kişilere, desteklenmiş olduğu durumlarda bu başvuruları yapabilirsiniz.|
-    |T|Tür: Class, Interface, struct, Enum, Delegate|
+    |T|Tür: Class, Interface, struct, Enum veya Delegate|
     |F|alan|
     |P|Özellik (Dizin oluşturucular veya diğer dizinli özellikler dahil)|
     |M|Yöntem (oluşturucular, işleçler ve benzeri özel yöntemler dahil)|
@@ -84,6 +84,6 @@ Aşağıdaki örneklerde, bir sınıfa ve üyelerine ait KIMLIK dizelerinin nas�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../index.md)
+- [C#Programlama Kılavuzu](../index.md)
 - [-Doc (C# derleyici seçenekleri)](../../language-reference/compiler-options/doc-compiler-option.md)
-- [XML Belge Açıklamaları](./index.md)
+- [XML belge açıklamaları](./index.md)

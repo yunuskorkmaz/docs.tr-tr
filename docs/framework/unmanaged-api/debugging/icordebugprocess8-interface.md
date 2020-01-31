@@ -2,23 +2,23 @@
 title: ICorDebugProcess8 Arabirimi
 ms.date: 03/30/2017
 ms.assetid: 7ab1a70f-ec11-46ff-8869-cd8ca679cc51
-ms.openlocfilehash: dc7de361386b9ee21d6cf05c36a7f63c3e1c25f7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 813afc047f9fda060f1cf1af780336ff8b7c18be
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123363"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792151"
 ---
 # <a name="icordebugprocess8-interface"></a>ICorDebugProcess8 Arabirimi
 [.NET Framework 4,6 ve sonraki sürümlerde desteklenir]  
   
- Belirli [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) özel durum geri çağırmaları türlerini etkinleştirmek veya devre dışı bırakmak Için ICorDebugProcess arabirimini mantıksal olarak genişletir.  
+ Belirli [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) özel durum geri çağırmaları türlerini etkinleştirmek veya devre dışı bırakmak Için ICorDebugProcess arabirimini mantıksal olarak genişletir.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[EnableExceptionCallbacksOutsideOfMyCode Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-enableexceptioncallbacksoutsideofmycode-method.md)|Belirli [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) özel durum geri çağırmaları türlerini etkinleştirilir veya devre dışı bırakır.|  
+|[EnableExceptionCallbacksOutsideOfMyCode Yöntemi](icordebugprocess8-enableexceptioncallbacksoutsideofmycode-method.md)|Belirli [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) özel durum geri çağırmaları türlerini etkinleştirilir veya devre dışı bırakır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -33,5 +33,5 @@ ms.locfileid: "73123363"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)

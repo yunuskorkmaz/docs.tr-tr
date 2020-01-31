@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d6518612c213d21c2dc7d80878121ccd3b7e2abb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7fd62e0d3d9173f3b75882131e57126075c0677f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449859"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863315"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences yöntemi
 
@@ -30,20 +30,23 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
                                    [in] void* clientData);
 ```
 
-#### <a name="parameters"></a>Parametreler
+## <a name="parameters"></a>Parametreler
 
-`objectId` \
-'ndaki Başvuruların numaralandırılacağı nesne.
+- `objectId`
 
-`callback` \
-'ndaki Nesne başvuruları ile çağrılacak işlev.
+  \[içinde] başvuruların numaralandırılacağı nesne.
 
-`clientData` \
-'ndaki Profil Oluşturucu-`callback` işlevine geçirilecek veriler.
+- `callback`
+
+  \[içinde] nesnenin başvuruları ile çağrılacak işlev.
+
+- `clientData`
+
+  \[Profiler-`callback` işlevine geçirilecek verileri sağladı.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`EnumerateObjectReferences` yöntemi [nesne başvurularına](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)benzerdir, ancak başvuruları depolamak için bir diziyi önceden ayırmak yerine, Profil Oluşturucu için isteğe bağlı başvuruları açıklar.
+`EnumerateObjectReferences` yöntemi [nesne başvurularına](icorprofilercallback-objectreferences-method.md)benzerdir, ancak başvuruları depolamak için bir diziyi önceden ayırmak yerine, Profil Oluşturucu için isteğe bağlı başvuruları açıklar.
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -57,4 +60,4 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo10 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 arabirimi](icorprofilerinfo10-interface.md)

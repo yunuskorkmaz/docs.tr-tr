@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d3d9676d-0b87-4bc3-b679-7bbc7a186c88
 topic_type:
 - apiref
-ms.openlocfilehash: 1ea0274adc12f3a99df0422bfc0b5180f0ef5596
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f435db28d5c85d576f69e7612841fc46ae142332
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131385"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792082"
 ---
 # <a name="icordebugregisterset-interface"></a>ICorDebugRegisterSet Arabirimi
 Şu anda kod yürüten bilgisayarda kullanılabilir olan yazmaçların kümesini temsil eder.  
@@ -28,14 +28,14 @@ ms.locfileid: "73131385"
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetRegisters Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md)|Bit maskesi tarafından belirtilen her kaydın (Şu anda kod yürüten bilgisayardaki) değerini alır.|  
-|[GetRegistersAvailable Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)|Şu anda bu `ICorDebugRegisterSet` yazmaçların kullanılabildiğini belirten bir bit maskesi alır.|  
-|[GetThreadContext Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getthreadcontext-method.md)|Geçerli iş parçacığının bağlamını alır.|  
-|[SetRegisters Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-setregisters-method.md)|.NET Framework sürüm 2,0 için uygulanmadı.|  
-|[SetThreadContext Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-setthreadcontext-method.md)|.NET Framework 2,0 için uygulanmadı.|  
+|[GetRegisters Yöntemi](icordebugregisterset-getregisters-method.md)|Bit maskesi tarafından belirtilen her kaydın (Şu anda kod yürüten bilgisayardaki) değerini alır.|  
+|[GetRegistersAvailable Yöntemi](icordebugregisterset-getregistersavailable-method.md)|Şu anda bu `ICorDebugRegisterSet` yazmaçların kullanılabildiğini belirten bir bit maskesi alır.|  
+|[GetThreadContext Yöntemi](icordebugregisterset-getthreadcontext-method.md)|Geçerli iş parçacığının bağlamını alır.|  
+|[SetRegisters Yöntemi](icordebugregisterset-setregisters-method.md)|.NET Framework sürüm 2,0 için uygulanmadı.|  
+|[SetThreadContext Yöntemi](icordebugregisterset-setthreadcontext-method.md)|.NET Framework 2,0 için uygulanmadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugRegisterSet` arabirimi yalnızca 32 bitlik kayıtları destekler. Daha fazla kayıt gerektiren IA-64 gibi platformlarda [ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md) arabirimini kullanın.  
+ `ICorDebugRegisterSet` arabirimi yalnızca 32 bitlik kayıtları destekler. Daha fazla kayıt gerektiren IA-64 gibi platformlarda [ICorDebugRegisterSet2](icordebugregisterset2-interface.md) arabirimini kullanın.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
@@ -51,5 +51,5 @@ ms.locfileid: "73131385"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [ICorDebugRegisterSet2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [ICorDebugRegisterSet2 Arabirimi](icordebugregisterset2-interface.md)

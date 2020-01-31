@@ -2,12 +2,12 @@
 title: 'ICorDebugVirtualUnwinder:: Next yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 790e0426-e5cd-49fd-a792-f8c8635d72fe
-ms.openlocfilehash: ed80b7a630f78002ded14a1bec206cc8712bd504
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 06d5377ef123cc3f9c91fbfbcf0b0f17a14eb629
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121856"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790813"
 ---
 # <a name="icordebugvirtualunwindernext-method"></a>ICorDebugVirtualUnwinder:: Next yöntemi
 Çağıranın bağlamına ilerletir.  
@@ -43,5 +43,5 @@ HRESULT Next();
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugMemoryBuffer Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMemoryBuffer Arabirimi](icordebugmemorybuffer-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

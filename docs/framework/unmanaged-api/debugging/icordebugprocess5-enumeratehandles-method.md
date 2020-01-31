@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-ms.openlocfilehash: e0e68dba1f4d9ac5fa618aa842b823dcc046e70e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2a1653055a3834ce1bed0e7de7877b255bea0c38
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129675"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792423"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles Yöntemi
 İşlemdeki nesne tanıtıcıları için bir Numaralandırıcı alır.  
@@ -34,15 +34,15 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
 ## <a name="parameters"></a>Parametreler  
  `types`  
- 'ndaki Koleksiyona eklenecek tanıtıcıların türünü belirten [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) değerlerinin bit düzeyinde birleşimi.  
+ 'ndaki Koleksiyona eklenecek tanıtıcıların türünü belirten [CorGCReferenceType](corgcreferencetype-enumeration.md) değerlerinin bit düzeyinde birleşimi.  
   
  `ppENum`  
- dışı Çöp toplanabilecek nesneler için bir Numaralandırıcı olan [ıcorıtcggcreferenceenum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) adresine yönelik bir işaretçi.  
+ dışı Çöp toplanabilecek nesneler için bir Numaralandırıcı olan [ıcorıtcggcreferenceenum](icordebuggcreferenceenum-interface.md) adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `EnumerateHandles`, tanıtıcı tablosunun incelemesini destekleyen bir yardımcı işlevdir. [ICorDebugProcess5:: EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) yöntemine benzer, ancak tüm nesneler atık toplama olacak şekilde bir [ıcorıtcggcreferenceenum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) koleksiyonu doldurmaktansa, yalnızca tanıtıcılara sahip olan nesneleri içerir. tanıtıcı tablosu.  
+ `EnumerateHandles`, tanıtıcı tablosunun incelemesini destekleyen bir yardımcı işlevdir. [ICorDebugProcess5:: EnumerateGCReferences](icordebugprocess5-enumerategcreferences-method.md) yöntemine benzer, ancak tüm nesneler ile bir [ıcorıtcggcreferenceenum](icordebuggcreferenceenum-interface.md) koleksiyonu yerleştirmek yerine yalnızca tanıtıcı tablosundan tanıtıcılara sahip nesneleri içerir.  
   
- `types` parametresi, koleksiyona dahil edilecek tanıtıcı türlerini belirtir. `types`, [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) numaralandırması için aşağıdaki üç üyenin herhangi biri olabilir:  
+ `types` parametresi, koleksiyona dahil edilecek tanıtıcı türlerini belirtir. `types`, [CorGCReferenceType](corgcreferencetype-enumeration.md) numaralandırması için aşağıdaki üç üyenin herhangi biri olabilir:  
   
 - `CorHandleStrongOnly` (yalnızca güçlü başvurulara yönelik tanıtıcılardır).  
   
@@ -61,5 +61,5 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Yapıları](debugging-structures.md)
+- [Hata Ayıklama](index.md)

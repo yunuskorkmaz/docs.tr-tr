@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 250021c9eb475d0cbcb1bd14c8515b969fc9d30b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b6dabefceba038a129148f7ba36d4ffcfc425c80
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449830"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790032"
 ---
 # <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10:: ısfrozenobject yöntemi
 
@@ -29,13 +29,15 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
                         [out] BOOL *pbFrozen);
 ```
 
-#### <a name="parameters"></a>Parametreler
+## <a name="parameters"></a>Parametreler
 
-`objectId` \
-'ndaki İncelenecek nesne.
+- `objectId`
 
-`pbFrozen` \
-dışı Nesnenin salt okunurdur bir kesimde olup olmadığını belirten `BOOL`.
+  \[içinde] incelenecek nesne.
+
+- `pbFrozen`
+
+  \[out] nesnenin salt okunurdur bir kesimde olup olmadığını belirten bir `BOOL`.
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -49,4 +51,4 @@ dışı Nesnenin salt okunurdur bir kesimde olup olmadığını belirten `BOOL`.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo10 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 arabirimi](icorprofilerinfo10-interface.md)

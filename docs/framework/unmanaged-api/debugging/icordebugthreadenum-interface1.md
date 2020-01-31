@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 796de687-7dd4-4b7b-a10b-8bf22dc7779f
 topic_type:
 - apiref
-ms.openlocfilehash: 6969c23bcf3ea19bf6e404996d477f669f0eee5b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6de2cb7c1a1423c5bd38a6f2e5d01c39166ab119
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122403"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791327"
 ---
 # <a name="icordebugthreadenum-interface"></a>ICorDebugThreadEnum Arabirimi
 Icordebugger Genum yöntemlerini uygular ve ICorDebugThread dizilerini numaralandırır.  
@@ -28,7 +28,7 @@ Icordebugger Genum yöntemlerini uygular ve ICorDebugThread dizilerini numaralan
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki belirtilen `ICorDebugThread` örneği sayısını alır.|  
+|[Next Yöntemi](icordebugthreadenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki belirtilen `ICorDebugThread` örneği sayısını alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -46,4 +46,4 @@ Icordebugger Genum yöntemlerini uygular ve ICorDebugThread dizilerini numaralan
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68e20e62-203d-46d8-bb91-8d3c61cfacc3
 topic_type:
 - apiref
-ms.openlocfilehash: 7edf0065fa7eb39dada167a682f2b634a438f1f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7685d1b6d5458a4405fc5a4abdb2f3134618f01c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138394"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794400"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>ICorDebugHeapValue::IsValid Yöntemi
 Bu ICorDebugHeapValue tarafından temsil edilen nesnenin geçerli olup olmadığını gösteren bir değer alır.  
@@ -42,7 +42,7 @@ HRESULT IsValid (
 ## <a name="remarks"></a>Açıklamalar  
  Değer çöp toplayıcı tarafından geri kazanımışsa geçersizdir.  
   
- Bu yöntem kullanım dışı bırakıldı. .NET Framework 2,0 ' de, tüm değerler [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) çağrılana kadar geçerli olur, bu durumda değerler geçersiz kılınır.  
+ Bu yöntem kullanım dışı bırakıldı. .NET Framework 2,0 ' de, tüm değerler [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) çağrılana kadar geçerli olur, bu durumda değerler geçersiz kılınır.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

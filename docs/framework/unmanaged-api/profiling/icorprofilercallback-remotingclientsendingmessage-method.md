@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54d9a5a5-3877-49c1-a503-ce7c7943bc2a
 topic_type:
 - apiref
-ms.openlocfilehash: ae9cb089ad6c0b0422063d3db413b97eb6ff1405
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8ae58344a7a17637bf08b9b5179abdba7e7060d6
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445791"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866032"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>ICorProfilerCallback::RemotingClientSendingMessage Yöntemi
 Profil oluşturucuyu istemcinin sunucuya bir istek gönderdiğini bildirir.  
@@ -35,7 +35,7 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>Parametreler  
  `pCookie`  
- 'ndaki Şu koşullarda [ICorProfilerCallback:: RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) içinde belirtilen değere karşılık gelen bir değer:  
+ 'ndaki Şu koşullarda [ICorProfilerCallback:: RemotingServerReceivingMessage](icorprofilercallback-remotingserverreceivingmessage-method.md) içinde belirtilen değere karşılık gelen bir değer:  
   
 - Uzaktan iletişim GUID tanımlama bilgileri etkin.  
   
@@ -59,4 +59,4 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback Arabirimi](icorprofilercallback-interface.md)

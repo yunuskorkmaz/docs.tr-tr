@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16d695e8-975d-431b-8421-e9e6c3e3f476
 topic_type:
 - apiref
-ms.openlocfilehash: 48f1b485b6dfa8fd898f6ea00eee2d7b397deba6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a6283d699263dc9b79e457010f31923f77443129
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131866"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791887"
 ---
 # <a name="icordebugstackwalk-interface"></a>ICorDebugStackWalk Arabirimi
 İş parçacığının yığınındaki yönetilen yöntemleri veya çerçeveleri almak için yöntemler sağlar.  
@@ -28,10 +28,10 @@ ms.locfileid: "73131866"
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetContext Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|`ICorDebugStackWalk` nesnesindeki geçerli karenin bağlamını döndürür.|  
-|[SetContext Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|`ICorDebugStackWalk` nesnenin geçerli bağlamını iş parçacığı için geçerli bir bağlam olarak ayarlar.|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|`ICorDebugStackWalk` nesnesini sonraki çerçeveye kaydırır.|  
-|[GetFrame Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|`ICorDebugStackWalk` nesnesindeki geçerli çerçeveyi alır.|  
+|[GetContext Yöntemi](icordebugstackwalk-getcontext-method.md)|`ICorDebugStackWalk` nesnesindeki geçerli karenin bağlamını döndürür.|  
+|[SetContext Yöntemi](icordebugstackwalk-setcontext-method.md)|`ICorDebugStackWalk` nesnenin geçerli bağlamını iş parçacığı için geçerli bir bağlam olarak ayarlar.|  
+|[Next Yöntemi](icordebugstackwalk-next-method.md)|`ICorDebugStackWalk` nesnesini sonraki çerçeveye kaydırır.|  
+|[GetFrame Yöntemi](icordebugstackwalk-getframe-method.md)|`ICorDebugStackWalk` nesnesindeki geçerli çerçeveyi alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -49,5 +49,5 @@ ms.locfileid: "73131866"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)

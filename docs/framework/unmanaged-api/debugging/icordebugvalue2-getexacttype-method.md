@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e9aae1b-d1b7-4b6e-b577-6faf36dcec85
 topic_type:
 - apiref
-ms.openlocfilehash: 441d225dadbbca09ab27c8ccd70debe32f4c12da
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c5e5d1c9f734e097fc9e871d7a0cffdc9bb9138
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140260"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791133"
 ---
 # <a name="icordebugvalue2getexacttype-method"></a>ICorDebugValue2::GetExactType Yöntemi
 Bu değerin <xref:System.Type> temsil eden bir "ICorDebugType" nesnesine bir arabirim işaretçisi alır.  
@@ -38,7 +38,7 @@ HRESULT GetExactType (
  dışı Bu "ICorDebugValue2" nesnesi tarafından temsil edilen değerin <xref:System.Type> temsil eden bir `ICorDebugType` nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Genel türler kullanan `GetExactType` yöntemi hem [ICorDebugObjectValue:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) hem de [ICorDebugValue:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) yöntemlerinin yerini alır, her biri bir değer türü hakkında bilgi döndürür.  
+ Genel türler kullanan `GetExactType` yöntemi hem [ICorDebugObjectValue:: GetClass](icordebugobjectvalue-getclass-method.md) hem de [ICorDebugValue:: GetType](icordebugvalue-gettype-method.md) yöntemlerinin yerini alır, her biri bir değer türü hakkında bilgi döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5da1bf3d-dddf-4892-b266-578ee54d570b
 topic_type:
 - apiref
-ms.openlocfilehash: 8af2b6834ac8655c64a7738c65550b515a4b6675
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5fe472c4a0053ec9e37d7d61ffde5cf21d65dd2f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439051"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863524"
 ---
 # <a name="icorprofilerinfogetilfunctionbodyallocator-method"></a>ICorProfilerInfo::GetILFunctionBodyAllocator Yöntemi
 Microsoft ara dili (MSIL) kodundaki bir yöntemin gövdesini değiştirmek için kullanılacak belleği ayırmak üzere bir yöntemi sağlayan bir arabirim alır.  
@@ -38,7 +38,7 @@ HRESULT GetILFunctionBodyAllocator(
  'ndaki Yöntemin bulunduğu modülün KIMLIĞI.  
   
  `ppMalloc`  
- dışı Belleği ayırmak için bir yöntem sağlayan bir [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) arabirimine yönelik bir işaretçi.  
+ dışı Belleği ayırmak için bir yöntem sağlayan bir [IMethodMalloc](imethodmalloc-interface.md) arabirimine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
  MSIL kodundaki bir yöntem gövdesi, yüklenen modüle göre, bir göreli sanal adres (RVA) olarak yerleştirilmelidir, bu da modülün 4 GB dahilinde izlediği anlamına gelir. Bir aracın bir yöntemin gövdesini takas edilmesini kolaylaştırmak için `GetILFunctionBodyAllocator` yöntemi belleğin bu Aralık içinde ayrılmasını sağlar.  
@@ -54,4 +54,4 @@ HRESULT GetILFunctionBodyAllocator(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo Arabirimi](icorprofilerinfo-interface.md)

@@ -9,100 +9,100 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 67698a0a45bdf84d36603cd1309a8dd5bce2f895
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9f97639447284b792d52cf4aa25b81f584d7291a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598848"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787899"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar
-Bu konu açıklar nasıl <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi etkileşim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemi.  
+Bu konu, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemiyle nasıl etkileşime gireceğini açıklar.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] farklı, ancak benzer, mantıksal bir form veya sayfadaki öğeleri konumlandırma ve boyutlandırma desteği. Karma bir kullanıcı arabirimi (UI) barındıran oluştururken [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimlerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi iki Düzen şeması tümleştirir.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve Windows Forms, bir form veya sayfadaki öğelerin boyutlandırılmasına ve konumlandırılmasına yönelik farklı, ancak benzer mantığı destekler. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Windows Forms denetimleri barındıran bir karma Kullanıcı arabirimi (UI) oluşturduğunuzda, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi iki düzen şemasını tümleştirir.  
   
-## <a name="differences-in-layout-between-wpf-and-windows-forms"></a>WPF ve Windows Forms arasındaki düzeni farklılıkları  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Çözüm bağımsız düzenini kullanır. Tüm [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen boyutları kullanarak belirtilen *CİHAZDAN bağımsız piksel*. Bir CİHAZDAN bağımsız piksel bir doksan altıda inç boyutu ve çözümleme bağımsız olduğundan bir 72 dpi İzleyici veya 19.200 DPI yazıcı için işleme bağımsız olarak benzer sonuçlar elde.  
+## <a name="differences-in-layout-between-wpf-and-windows-forms"></a>WPF ve Windows Forms arasındaki düzende farklılıklar  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çözünürlükten bağımsız düzen kullanır. Tüm [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzeni boyutları *cihazdan bağımsız pikseller*kullanılarak belirtilir. Cihazdan bağımsız bir piksel, boyutun ve çözünürlükten bağımsız olarak inç bir dokun altılarından biridir, bu nedenle 72 dpi bir monitöre veya 19.200 dpi bir yazıcıda işleme yapıp olmadığına bakılmaksızın benzer sonuçlar elde edersiniz.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca dayanır *dinamik düzen*. Bu, UI öğesi kendisi bir form veya sayfa içeriği ve üst düzen kapsayıcısının kullanılabilir ekran boyutuna göre düzenler, anlamına gelir. Dinamik düzen, içerdikleri dizelerin uzunluğu değiştiğinde otomatik olarak kullanıcı Arabirimi öğeleri konumunu ve boyutunu ayarlayarak yerelleştirme kolaylaştırır.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], *dinamik düzene*de dayalıdır. Bu, bir kullanıcı arabirimi öğesinin kendisini içeriğe, üst düzen kapsayıcısına ve kullanılabilir ekran boyutuna göre bir form veya sayfaya göre düzenler. Dinamik düzen, Kullanıcı arabirimi öğelerinin boyutunu ve konumunu, içerdikleri dizeler değişiklik uzunluğuna göre otomatik olarak ayarlayarak yerelleştirmeyi kolaylaştırır.  
   
- Düzende [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] cihaza bağlı ve statik olması olasılığı. Genellikle, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri konumlandırıldığı kesinlikle donanım piksel cinsinden belirtilen boyutları kullanarak bir form üzerinde. Ancak, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aşağıdaki tabloda özetlendiği gibi bazı dinamik düzen özelliklerini destekler.  
+ Windows Forms düzen cihaza bağımlıdır ve daha büyük olasılıkla statiktir. Genellikle Windows Forms denetimleri, donanım piksellerinde belirtilen boyutları kullanarak bir form üzerinde kesinlikle konumlandırılır. Ancak Windows Forms, aşağıdaki tabloda özetlenen bazı dinamik düzen özelliklerini destekler.  
   
 |Düzen özelliği|Açıklama|  
 |--------------------|-----------------|  
-|Otomatik boyutlandırma|Bazı [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kendilerini içeriklerini düzgün görüntülenmesi için denetimleri yeniden boyutlandırma. Daha fazla bilgi için [AutoSize özelliğine genel bakış](../../winforms/controls/autosize-property-overview.md).|  
-|Sabitleme ve yerleştirme|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri konumlandırma ve boyutlandırma üst kapsayıcı tabanlı destekler. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> ve <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
-|Otomatik ölçeklendirme|Kapsayıcı denetimleri, kendileri ve alt öğelerini çıktı cihazına veya piksel cinsinden varsayılan kapsayıcı yazı tipi boyutu çözünürlüğüne göre yeniden boyutlandırın. Daha fazla bilgi için [Windows Forms'ta otomatik ölçeklendirme](../../winforms/automatic-scaling-in-windows-forms.md).|  
-|Düzen kapsayıcıları|<xref:System.Windows.Forms.FlowLayoutPanel> Ve <xref:System.Windows.Forms.TableLayoutPanel> denetimleri, alt denetimlerini düzenlemek ve kendilerini içeriklerine göre boyutu.|  
+|Otomatik boyutlandırma|Bazı Windows Forms denetimleri, içeriklerinin düzgün şekilde görüntülenmesini sağlamak için kendilerini yeniden boyutlandırır. Daha fazla bilgi için bkz. [AutoSize özelliğine genel bakış](../../winforms/controls/autosize-property-overview.md).|  
+|Sabitleme ve yerleştirme|Windows Forms denetimleri üst kapsayıcıya göre konumlandırmayı ve boyutlandırmayı destekler. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> ve <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
+|Otomatik ölçeklendirme|Kapsayıcı denetimleri, çıkış cihazının çözümüne veya varsayılan kapsayıcı yazı tipinin piksel cinsinden boyutuna bağlı olarak kendilerini ve alt öğelerini yeniden boyutlandırır. Daha fazla bilgi için bkz. [Windows Forms otomatik ölçeklendirme](../../winforms/automatic-scaling-in-windows-forms.md).|  
+|Düzen kapsayıcıları|<xref:System.Windows.Forms.FlowLayoutPanel> ve <xref:System.Windows.Forms.TableLayoutPanel> denetimleri, kendi alt denetimlerini ve boyutlarını kendi içeriklerine göre düzenler.|  
   
 ## <a name="layout-limitations"></a>Düzen sınırlamaları  
- Genel olarak, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri ölçeği ve mümkün ölçülere [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Bilinen sınırlamalar aşağıdaki listede açıklanmaktadır, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi çalışır, barındırılan bir tümleştirme [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] içine denetim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemi.  
+ Genel olarak, Windows Forms denetimleri ölçeklendirilmez ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]mümkün olan ölçüde dönüştürülemez. Aşağıdaki listede <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi barındırılan Windows Forms denetimini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemiyle tümleştirmeyi denediğinde oluşan bilinen sınırlamaları açıklar.  
   
-- Bazı durumlarda, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri yeniden boyutlandırılamaz ya da yalnızca belirli boyutlara yeniden boyutlandırılabilir. Örneğin, bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> denetimi, denetimin yazı tipi boyutu tarafından tanımlanan yalnızca tek bir yüksekliği destekler. İçinde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nerede öğeleri esnetme dikey olarak barındırılan dinamik düzen <xref:System.Windows.Forms.ComboBox> beklendiği gibi denetimi uzamaz.  
+- Bazı durumlarda Windows Forms denetimleri yeniden boyutlandırılamaz veya yalnızca belirli boyutlara boyutlandırılabilir. Örneğin, bir Windows Forms <xref:System.Windows.Forms.ComboBox> denetimi yalnızca denetimin yazı tipi boyutu tarafından tanımlanan tek bir yüksekliği destekler. Öğelerin dikey olarak uzatılabileceği [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dinamik bir düzende, barındırılan bir <xref:System.Windows.Forms.ComboBox> denetimi beklendiği gibi uzatılacaktır.  
   
-- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri Döndürülmüş veya dengesiz. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğesi başlatır <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> eğme veya döndürme dönüşümü uygularsanız olay. İşlememek varsa <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> olay, bir <xref:System.InvalidOperationException> tetiklenir.  
+- Windows Forms denetimleri döndürülemiyor veya eğilemez. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi, bir eğme veya döndürme dönüştürmesi uyguladığınızda <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> olayını oluşturur. <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> olayını işlemeyin, bir <xref:System.InvalidOperationException> tetiklenir.  
   
-- Çoğu durumda [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimlerin orantılı ölçeklendirme desteklemez. Denetim genel boyutlarını ölçeklendirilmesine rağmen alt denetimler ve denetim bileşen öğeleri beklenen şekilde yeniden boyutlandırılabilir değil. Bu sınırlama her ne kadar iyi bağlıdır [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi, ölçeklendirmeyi destekler. Ayrıca, Ölçek genişletilemiyor [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 0 piksel boyutlu aşağı denetimleri.  
+- Çoğu durumda Windows Forms denetimleri orantılı ölçeklendirmeyi desteklemez. Denetimin genel boyutları ölçeklense de, denetimin alt denetimleri ve bileşen öğeleri beklenen şekilde yeniden boyutlandırmayabilir. Bu sınırlama, her bir Windows Forms denetiminin ölçeklendirmeyi ne kadar iyi desteklediğine bağlıdır. Ayrıca, Windows Forms denetimlerini 0 piksel boyutuna ölçeklendiremezsiniz.  
   
-- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri form otomatik olarak kendisini ve yazı tipi boyutunu temel alan denetimlerini yeniden otomatik ölçeklendirmeyi destekler. İçinde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yazı tipi boyutunu değiştirme, kullanıcı arabirimi olmayan yeniden boyutlandırma tüm düzeni tek tek öğeleri dinamik olarak yeniden boyutlandırılabilir ancak.  
+- Windows Forms denetimler otomatik ölçeklendirmeyi destekler, bu da formun kendisini ve denetimlerini yazı tipi boyutuna göre otomatik olarak yeniden boyutlandıracaktır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir kullanıcı arabiriminde, tek tek öğeler dinamik olarak yeniden boyutlandırabilse de yazı tipi boyutunun değiştirilmesi tüm düzeni yeniden boyutlandıramaz.  
   
 ### <a name="z-order"></a>Z düzeni  
- İçinde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanıcı arabirimi, çakışan davranışı denetlemek için öğelerin z düzenini değiştirebilirsiniz. Barındırılan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi üst kısmındaki her zaman çizilen için ayrı bir HWND çizilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğeleri.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir kullanıcı arabiriminde, örtüşen davranışı denetlemek için öğelerin z sırasını değiştirebilirsiniz. Barındırılan bir Windows Forms denetimi ayrı bir HWND içinde çizilir, bu nedenle her zaman [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğelerin üzerine çizilir.  
   
- Barındırılan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi ayrıca çizilir herhangi üzerine <xref:System.Windows.Documents.Adorner> öğeleri.  
+ Barındırılan bir Windows Forms denetimi Ayrıca herhangi bir <xref:System.Windows.Documents.Adorner> öğesinin üzerine çizilir.  
   
 ## <a name="layout-behavior"></a>Düzen davranışı  
- Barındırırken belirli yönlerini düzen davranışı aşağıdaki bölümlerde açıklanmaktadır [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimlerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ Aşağıdaki bölümlerde, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Windows Forms denetimleri barındırırken düzen davranışının belirli yönleri açıklanır.  
   
-### <a name="scaling-unit-conversion-and-device-independence"></a>Ölçeklendirme, birim dönüştürme ve cihaz bağımsızlığı  
- Her <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi ilgili işlemler gerçekleştirdiğinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] boyutları için iki koordinat sistemi söz konusu: CİHAZDAN bağımsız piksel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve donanım piksel [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Bu nedenle, tutarlı bir düzen elde etmek için uygun birim ve ölçeklendirme dönüştürmeleri uygulamanız gerekir.  
+### <a name="scaling-unit-conversion-and-device-independence"></a>Ölçeklendirme, birim dönüştürme ve cihaz bağımsızlık  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve Windows Forms boyutlarla ilgili işlemler gerçekleştirdiğinde, iki koordinat sistemi vardır: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] için cihazdan bağımsız pikseller ve Windows Forms için donanım pikselleri. Bu nedenle, tutarlı bir düzen elde etmek için uygun birim ve ölçekleme dönüştürmeleri uygulamanız gerekir.  
   
- Koordinat sistemleri arasında dönüştürme bağlı geçerli cihaz çözünürlüğü ve herhangi bir düzeni veya uygulanan dönüştürmeler işleme <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi veya alt öğelerinden.  
+ Koordinat sistemleri arasında dönüştürme, geçerli cihaz çözünürlüğüne ve <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesine veya alt öğelerinden uygulanan herhangi bir düzen veya işleme dönüştürmelerine bağlıdır.  
   
- Çıktı cihazına 96 DPI olduğundan ve hiçbir ölçeklendirme uygulandıktan <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi, bir CİHAZDAN bağımsız piksel bir donanım piksel eşit.  
+ Çıkış cihazı 96 DPI ise ve <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesine hiçbir ölçeklendirme uygulanmışsa, cihazdan bağımsız bir piksel bir donanım pikseline eşittir.  
   
- Diğer tüm durumlarda, koordinat sistemini ölçeklendirme gerektirir. Barındırılan denetimi yeniden boyutlandırıldı değil. Bunun yerine, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesini denetimden ve tüm alt öğe denetimlerini ölçeklendirme dener. Çünkü [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ölçeklendirme, tam desteklemez <xref:System.Windows.Forms.Integration.WindowsFormsHost> belirli denetimler tarafından desteklenen derecede öğesi ölçeklendirir.  
+ Diğer tüm durumlar için koordinat sistemi Ölçeklendirmesi gerekir. Barındırılan denetim yeniden boyutlandırılmaz. Bunun yerine <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi barındırılan denetimi ve onun tüm alt denetimlerini ölçeklendirmeye çalışır. Windows Forms ölçeklendirmeyi tam olarak desteklemediğinden, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi belirli denetimler tarafından desteklenen dereceye ölçeklendirir.  
   
- Geçersiz kılma <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A> barındırılan Windows Forms denetimi için özel bir ölçeklendirme davranışına sağlamak için yöntemi.  
+ Barındırılan Windows Forms denetimi için özel ölçeklendirme davranışı sağlamak üzere <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A> yöntemini geçersiz kılın.  
   
- Ölçeklendirme, ek olarak <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi, yuvarlama ve taşma durumlarını aşağıdaki tabloda açıklandığı gibi işler.  
+ Ölçeklendirmeye ek olarak, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi aşağıdaki tabloda açıklandığı gibi yuvarlama ve taşma durumlarını işler.  
   
 |Dönüştürme sorunu|Açıklama|  
 |----------------------|-----------------|  
-|Yuvarlama|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] CİHAZDAN bağımsız piksel boyutları olarak belirtilen `double`, ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] donanım piksel boyutları olarak belirtilen `int`. Durumlarda burada `double`-tabanlı boyutlara dönüştürülür `int`-boyutları, alan <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesini kullanan standart yuvarlama, böylece 0 olarak 0,5'den küçük kesirli değer yuvarlanır.|  
-|taşma|Zaman <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi dönüştürür gelen `double` değerler `int` değerleri taşma mümkündür. Daha büyük olan değerleri <xref:System.Int32.MaxValue> ayarlandığından <xref:System.Int32.MaxValue>.|  
+|Ondalı|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] cihazdan bağımsız piksel boyutları `double`olarak belirtilir ve Windows Forms donanım piksel boyutları `int`olarak belirtilir. `double`tabanlı boyutların `int`tabanlı boyutlara dönüştürüldüğü durumlarda <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi standart yuvarlama kullanır, böylece 0,5 'den küçük kesirli değerler 0 ' a yuvarlanır.|  
+|Taşma|<xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi `double` değerlerinden `int` değerlere dönüştürdüğünde, taşma olasılığı vardır. <xref:System.Int32.MaxValue> daha büyük değerler <xref:System.Int32.MaxValue>olarak ayarlanır.|  
   
-### <a name="layout-related-properties"></a>Düzen ilgili Özellikler  
- Düzen davranışını denetleyen özellikler [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğeleri tarafından uygun şekilde eşlendi <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi. Daha fazla bilgi için [Windows Forms ve WPF özelliğini eşleme](windows-forms-and-wpf-property-mapping.md).  
+### <a name="layout-related-properties"></a>Düzenle ilgili özellikler  
+ Windows Forms Denetimlerinde ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğelerindeki düzen davranışını denetleyen özellikler <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi tarafından uygun şekilde eşlenir. Daha fazla bilgi için bkz. [Windows Forms ve WPF özellik eşleme](windows-forms-and-wpf-property-mapping.md).  
   
-### <a name="layout-changes-in-the-hosted-control"></a>Düzen değişiklikleri barındırılan denetim  
- Düzen değişiklikleri barındırılan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetim yayılır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Düzen güncelleştirmeleri tetiklemek için. <xref:System.Windows.UIElement.InvalidateMeasure%2A> Metodunda <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetimden düzen değişiklikleri neden olduğunu sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çalıştırmak için yerleşim altyapısı.  
+### <a name="layout-changes-in-the-hosted-control"></a>Barındırılan denetimdeki düzen değişiklikleri  
+ Barındırılan Windows Forms denetimindeki düzen değişiklikleri tetiklenecek düzen güncelleştirmelerine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dağıtılır. <xref:System.Windows.Forms.Integration.WindowsFormsHost> <xref:System.Windows.UIElement.InvalidateMeasure%2A> yöntemi, barındırılan denetimdeki düzen değişikliklerinin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen altyapısının çalışmasına neden olur.  
   
-### <a name="continuously-sized-windows-forms-controls"></a>Windows Forms denetimlerini sürekli olarak boyutu  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] sürekli tam olarak ölçeklendirmeyi destekleyen denetimleri etkileşimde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemi. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğesini kullanan <xref:System.Windows.FrameworkElement.MeasureOverride%2A> ve <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> zamanki boyut ve barındırılan düzenlemek için yöntemleri [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi.  
+### <a name="continuously-sized-windows-forms-controls"></a>Sürekli boyutlandırılmış Windows Forms denetimleri  
+ Sürekli ölçeklendirmeyi destekleyen Windows Forms denetimleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemiyle tamamen etkileşime geçin. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi, barındırılan Windows Forms denetimi her zamanki gibi <xref:System.Windows.FrameworkElement.MeasureOverride%2A> ve <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> yöntemlerini kullanır.  
   
 ### <a name="sizing-algorithm"></a>Boyutlandırma algoritması  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğesini denetimden boyutlandırmak için aşağıdaki yordamı kullanır:  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi barındırılan denetimin boyutunu almak için aşağıdaki yordamı kullanır:  
   
-1. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğesini geçersiz kılar <xref:System.Windows.FrameworkElement.MeasureOverride%2A> ve <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> yöntemleri.  
+1. <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi <xref:System.Windows.FrameworkElement.MeasureOverride%2A> ve <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> yöntemlerini geçersiz kılar.  
   
-2. Barındırılan denetimin boyutunu belirlemek için <xref:System.Windows.FrameworkElement.MeasureOverride%2A> yöntemini çağırır barındırılan denetimin <xref:System.Windows.Forms.Control.GetPreferredSize%2A> kısıtlamasına sahip yöntemi çevrilmiş geçirilen kısıtlaması gelen <xref:System.Windows.FrameworkElement.MeasureOverride%2A> yöntemi.  
+2. Barındırılan denetimin boyutunu öğrenmek için <xref:System.Windows.FrameworkElement.MeasureOverride%2A> yöntemi, barındırılan denetimin <xref:System.Windows.Forms.Control.GetPreferredSize%2A> yöntemini <xref:System.Windows.FrameworkElement.MeasureOverride%2A> metoduna geçirilen kısıtlamadan çevrilmiş bir kısıtlamayla çağırır.  
   
-3. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> Yöntem çalışır denetimden verilen boyuta kısıtlama olarak ayarlanacak.  
+3. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> yöntemi, barındırılan denetimi verilen boyut kısıtlamasına ayarlamaya çalışır.  
   
-4. Varsa barındırılan denetimin <xref:System.Windows.Forms.Control.Size%2A> özelliği eşleşen belirtilen sınırlama, barındırılan denetim kısıtlaması için boyutlandırılır.  
+4. Barındırılan denetimin <xref:System.Windows.Forms.Control.Size%2A> özelliği belirtilen kısıtlamayla eşleşiyorsa, barındırılan denetim kısıtlamaya boyutlandırılır.  
   
- Varsa <xref:System.Windows.Forms.Control.Size%2A> özellik belirtilen sınırlama eşleşmiyor, barındırılan denetim sürekli boyutlandırma desteklemez. Örneğin, <xref:System.Windows.Forms.MonthCalendar> denetimi yalnızca ayrık boyutları sağlar. Bu denetim için izin verilen boyutları (ay sayısını temsil eden) tamsayılar, yükseklik ve genişlik için oluşur. Bu gibi durumlarda <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi aşağıdaki gibi davranır:  
+ <xref:System.Windows.Forms.Control.Size%2A> özelliği belirtilen kısıtlamayla eşleşmezse, barındırılan denetim sürekli boyutlandırmayı desteklemez. Örneğin, <xref:System.Windows.Forms.MonthCalendar> denetimi yalnızca ayrı boyutlara izin verir. Bu denetim için izin verilen boyutlar, hem yükseklik hem genişlik için tamsayıların (ay sayısını temsil eder) oluşur. Bu gibi durumlarda <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi aşağıdaki gibi davranır:  
   
-- Varsa <xref:System.Windows.Forms.Control.Size%2A> özelliği belirtilen sınırlama, daha büyük boyutu döndürür <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesini denetimden kırpar. Yükseklik ve genişlik denetimden herhangi bir yönde kırpılmış için ayrı ayrı işlenir.  
+- <xref:System.Windows.Forms.Control.Size%2A> özelliği belirtilen kısıtlamadan daha büyük bir boyut döndürürse, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi barındırılan denetimi kırpar. Yükseklik ve genişlik ayrı olarak işlenir, bu nedenle barındırılan denetim her iki yönde de kırpılabilir.  
   
-- Varsa <xref:System.Windows.Forms.Control.Size%2A> özelliği belirtilen sınırlama, daha küçük bir boyuttan döndürür <xref:System.Windows.Forms.Integration.WindowsFormsHost> bu boyut değerini kabul eder ve değeri döndürür [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemi.  
+- <xref:System.Windows.Forms.Control.Size%2A> özelliği belirtilen kısıtlamadan daha küçük bir boyut döndürürse, <xref:System.Windows.Forms.Integration.WindowsFormsHost> bu boyut değerini kabul eder ve değeri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Düzen sistemine döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [İzlenecek yol: Düzenleme Windows Forms denetimlerini düzenleme](walkthrough-arranging-windows-forms-controls-in-wpf.md)
-- [Düzenleme Windows Forms denetimleri örneği](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [İzlenecek yol: WPF'de Windows Forms Denetimlerini Düzenleme](walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [WPF örneğindeki Windows Forms denetimlerini düzenleme](https://go.microsoft.com/fwlink/?LinkID=159971)
 - [Windows Forms ve WPF Özelliğini Eşleme](windows-forms-and-wpf-property-mapping.md)
 - [Geçiş ve Birlikte Çalışabilirlik](migration-and-interoperability.md)

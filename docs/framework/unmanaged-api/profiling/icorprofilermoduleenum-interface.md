@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 24d0fcfa-1601-4fba-868f-da8c97303467
 topic_type:
 - apiref
-ms.openlocfilehash: 5c4efff46c2460ee77f5a8011dc80796ac62a69e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2713fa90240cb0bf41f455b6ed65d76c568a2cf8
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442700"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868271"
 ---
 # <a name="icorprofilermoduleenum-interface"></a>ICorProfilerModuleEnum Arabirimi
 Uygulama veya profil oluşturucu tarafından yüklenen bir modül koleksiyonunda sırayla yinelemek için yöntemler sağlar.  
@@ -28,11 +28,11 @@ Uygulama veya profil oluşturucu tarafından yüklenen bir modül koleksiyonunda
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Clone Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-clone-method.md)|Bu `ICorProfilerModuleEnum` arabiriminin bir kopyasına bir arabirim işaretçisi alır.|  
-|[GetCount Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-getcount-method.md)|Uygulamaya yüklenmiş olan yönetilen modüllerin sayısını alır.|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-next-method.md)|Numaralandırıcının dizideki geçerli konumundan başlayarak ardışık bir nesne koleksiyonundan belirtilen sayıda bitişik modülü alır.|  
-|[Reset Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-reset-method.md)|Numaralandırıcının imlecini sıranın başlangıç konumuna taşımaktır.|  
-|[Skip Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-skip-method.md)|Numaralandırıcı imlecinizin konumunu, belirtilen sayıda öğe atlanacak şekilde ilerletir.|  
+|[Clone Yöntemi](icorprofilermoduleenum-clone-method.md)|Bu `ICorProfilerModuleEnum` arabiriminin bir kopyasına bir arabirim işaretçisi alır.|  
+|[GetCount Yöntemi](icorprofilermoduleenum-getcount-method.md)|Uygulamaya yüklenmiş olan yönetilen modüllerin sayısını alır.|  
+|[Next Yöntemi](icorprofilermoduleenum-next-method.md)|Numaralandırıcının dizideki geçerli konumundan başlayarak ardışık bir nesne koleksiyonundan belirtilen sayıda bitişik modülü alır.|  
+|[Reset Yöntemi](icorprofilermoduleenum-reset-method.md)|Numaralandırıcının imlecini sıranın başlangıç konumuna taşımaktır.|  
+|[Skip Yöntemi](icorprofilermoduleenum-skip-method.md)|Numaralandırıcı imlecinizin konumunu, belirtilen sayıda öğe atlanacak şekilde ilerletir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `ICorProfilerModuleEnum` arabirimi bir Numaralandırıcı. Bir dizinin alıcısından alıcı için uygun bir hızda öğe çekmesini sağlar. Diğer bir deyişle, alıcı, dizi öğelerinin akışını açıkça denetleyebilir ve böylece büyük dizileri Yöntem parametreleri olarak geçirme ile ilişkili sorunlardan kaçınarak.  
@@ -48,6 +48,6 @@ Uygulama veya profil oluşturucu tarafından yüklenen bir modül koleksiyonunda
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [EnumModules Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md)
+- [ICorProfilerInfo Arabirimi](icorprofilerinfo-interface.md)
+- [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
+- [EnumModules Yöntemi](icorprofilerinfo3-enummodules-method.md)
