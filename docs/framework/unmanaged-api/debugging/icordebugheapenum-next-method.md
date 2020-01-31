@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2221fd06-9e27-4113-972e-2530db8c3594
 topic_type:
 - apiref
-ms.openlocfilehash: 1beb69bfaad9acb9c269ad8becb81bea64edb6a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2c84112984e9cb7dec2a492ac16af00e14770806
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138466"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782487"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next Yöntemi
-Yönetilen yığında nesneler hakkında bilgi içeren, belirtilen [cor_heapobject](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) örnek sayısını alır.  
+Yönetilen yığında nesneler hakkında bilgi içeren [cor_heapobject](cor-heapobject-structure.md) örneklerinin belirtilen sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,10 +39,10 @@ HRESULT Next(
  'ndaki Alınacak nesne sayısı.  
   
  nesneleri  
- dışı Her biri yönetilen yığında bir nesne hakkında bilgi sağlayan bir [cor_heapobject](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) nesnesine işaret eden işaretçiler dizisi.  
+ dışı Her biri yönetilen yığında bir nesne hakkında bilgi sağlayan [cor_heapobject](cor-heapobject-structure.md) nesnesine işaret eden işaretçiler dizisi.  
   
  Pceltfettiz  
- dışı Gerçekten `objects`döndürülen [cor_heapobject](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) nesne sayısına yönelik bir işaretçi. Bu değer, `celt` 1 ise `null` olabilir.  
+ dışı Aslında `objects`döndürülen [cor_heapobject](cor-heapobject-structure.md) nesnelerinin sayısına yönelik bir işaretçi. Bu değer, `celt` 1 ise `null` olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
  `COR_HEAPOBJECT.type` alanı, iç içe geçmiş bir başvuru sayılı COM arabiriminin tanımlayıcısıdır. Bu başvuru, `ICorDebugHeapEnum::Next`çağıranı tarafından yayınlanmalıdır.  
@@ -58,5 +58,5 @@ HRESULT Next(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugHeapEnum Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugHeapEnum Arabirimi](icordebugheapenum-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

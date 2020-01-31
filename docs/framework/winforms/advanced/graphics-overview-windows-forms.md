@@ -1,5 +1,5 @@
 ---
-title: Grafiklere Genel Bakış (Windows Forms)
+title: Grafiklere Genel Bakış
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, graphics
@@ -8,41 +8,41 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-ms.openlocfilehash: e14d60e5b77fab8490c373ad76ee2d829aad7c74
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: cc99f0fda4625b278b2bea56e7d8642edb0a63d9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505382"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742271"
 ---
 # <a name="graphics-overview-windows-forms"></a>Grafiklere Genel Bakış (Windows Forms)
-GDI + grafik cihaz arabirimi programcılar CİHAZDAN bağımsız uygulamalar yazma olanağı sağlayan'dır. GDI + hizmetler, yönetilen sınıflar bir dizi aracılığıyla sunulur.  
+GDI+, programcıların cihazdan bağımsız uygulamalar yazmasını sağlayan bir Grafik Cihaz Arabirimi. GDI+ Hizmetleri bir yönetilen sınıflar kümesi aracılığıyla sunulur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Grafiklere Genel Bakış](overview-of-graphics.md)  
- GDI + genel bir giriş sağlar.  
+ GDI+ için genel bir giriş sağlar.  
   
  [Üç Grafik Hizmeti Kategorisi](three-categories-of-graphics-services.md)  
- GDI + ile programlama oluşturan üç kategoriye açıklar.  
+ GDI+ ile programlama yapan üç kategoriyi açıklar.  
   
  [Grafik Arabiriminin Yapısı](structure-of-the-graphics-interface.md)  
- GDI + yönetilen sınıf arabirimi açıklanmaktadır.  
+ GDI+ yönetilen sınıf arabirimini açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Drawing>  
- GDI + grafik temel işlevlerini erişim sağlar.  
+ GDI+ temel grafik işlevselliğine erişim sağlar.  
   
  <xref:System.Drawing.Drawing2D>  
- Gelişmiş iki boyutlu sağlar ve vektör grafik işlevlerini.  
+ Gelişmiş iki boyutlu ve vektör grafik işlevselliği sağlar.  
   
  <xref:System.Drawing.Imaging>  
- Gelişmiş GDI görüntüleme işlevlerini + sağlar.  
+ Gelişmiş GDI+ görüntüleme işlevselliği sağlar.  
   
  <xref:System.Drawing.Text>  
- Gelişmiş GDI + tipografi işlevlerini sağlar.  
+ Gelişmiş GDI+ tipografi işlevselliği sağlar.  
   
  <xref:System.Drawing.Printing>  
  Yazdırma ile ilgili hizmetler sağlar.  
   
  <xref:System.Windows.Forms.TextRenderer>  
- GDI metin çizme ve işlevleri ölçüm sağlar.
+ GDI metin çizimi ve ölçme işlevselliği sağlar.

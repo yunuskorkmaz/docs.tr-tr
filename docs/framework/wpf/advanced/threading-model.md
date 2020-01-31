@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740273"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794267"
 ---
 # <a name="threading-model"></a>İş Parçacığı Modeli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], geliştiricilerin iş parçacığı zorluklarından kaydedileceği şekilde tasarlanmıştır. Sonuç olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geliştiricilerin çoğunluğu birden fazla iş parçacığı kullanan bir arabirim yazmak zorunda kalmaz. Çok iş parçacıklı programlar karmaşık olduğu ve hata ayıklamanın zor olduğu için, tek iş parçacıklı çözümler olduğunda bu, kaçınılmalıdır.
@@ -177,7 +177,7 @@ ms.locfileid: "75740273"
 
  `GetWeatherAsync`, bir arka plan iş parçacığı oluşturma gibi daha önce açıklanan tekniklerin birini kullanarak, çağrıyı zaman uyumsuz olarak işler, çağıran iş parçacığını engellemiyor.
 
- Bu düzenin en önemli bölümlerinden biri, ile başlamak için *methodname*`Async` yöntemini çağıran aynı Iş parçacığında *MethodName*`Completed` yöntemini çağırmaktadır. Bunu, <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>depolayarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oldukça kolay bir şekilde yapabilirsiniz ancak grafik olmayan bileşen yalnızca [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalarda kullanılabilir, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] veya ASP.NET programlarında kullanılamaz.
+ Bu düzenin en önemli bölümlerinden biri, ile başlamak için *methodname*`Async` yöntemini çağıran aynı Iş parçacığında *MethodName*`Completed` yöntemini çağırmaktadır. Bunu, <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>depolayarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oldukça kolay bir şekilde yapabilirsiniz ancak grafik olmayan bileşen yalnızca [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalarda kullanılabilir, Windows Forms veya ASP.NET programlarında kullanılamaz.
 
  <xref:System.Windows.Threading.DispatcherSynchronizationContext> sınıfı bu gereksinimi giderir. Bu, diğer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] çerçeveleri ile de birlikte çalışarak Basitleştirilmiş <xref:System.Windows.Threading.Dispatcher> bir sürümü olarak düşünün.
 

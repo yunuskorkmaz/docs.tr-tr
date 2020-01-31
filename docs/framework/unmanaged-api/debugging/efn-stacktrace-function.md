@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: caea7754-867c-4360-a65c-5ced4408fd9d
 topic_type:
 - apiref
-ms.openlocfilehash: 272856c7eedbdc577158edcc463535a7946bb060
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cc5093a5ba0afcccaf960e9b8776f93a061cc2f5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122985"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785674"
 ---
 # <a name="_efn_stacktrace-function"></a>\_EFN\_StackTrace Işlevi
 Yönetilmeyen ve yönetilen kod arasındaki her geçiş için bir yönetilen yığın izlemenin ve bir dizi `CONTEXT` kaydın metin gösterimini sağlar.  
@@ -58,7 +58,7 @@ HRESULT CALLBACK _EFN_StackTrace(
  'ndaki Bağlam yapısının boyutu.  
   
  `Flags`  
- 'ndaki Her bir `module!functionname` satırının önünde EBP yazmacın ve yığın işaretçisini gir (ESP) öğesini göstermek için 0 veya SOS_STACKTRACE_SHOWADDRESSES (0x01) olarak ayarlayın.  
+ 'ndaki EBP kaydını ve her bir `module!functionname` satırının önünde yığın işaretçisini (ESP) göstermek için 0 veya SOS_STACKTRACE_SHOWADDRESSES (0x01) olarak ayarlayın.  
   
 ## <a name="remarks"></a>Açıklamalar  
  `_EFN_StackTrace` yapısı bir WinDbg programlı arabiriminden çağrılabilir. Parametreleri aşağıdaki gibi kullanılır:  
@@ -71,7 +71,7 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 - `pTransitionContexts` null ise ve `puiTransitionContextCount` null değilse, işlev `puiTransitionContextCount`gereken bağlam girişi sayısını döndürür.  
   
-- `pTransitionContexts` null değilse, işlevi onu `puiTransitionContextCount`uzunluklu bir yapı dizisi olarak değerlendirir. Yapı boyutu `uiSizeOfContext`tarafından verilir ve bu mimari için [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) veya `CONTEXT` boyutu olmalıdır.  
+- `pTransitionContexts` null değilse, işlevi onu `puiTransitionContextCount`uzunluklu bir yapı dizisi olarak değerlendirir. Yapı boyutu `uiSizeOfContext`tarafından verilir ve bu mimari için [SimpleContext](stacktrace-simplecontext-structure.md) veya `CONTEXT` boyutu olmalıdır.  
   
 - `wszTextOut` aşağıdaki biçimde yazılır:  
   
@@ -86,7 +86,7 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 - Şu anda bağlamda olan iş parçacığında yönetilen kod yoksa, işlev SOS_E_NOMANAGEDCODE döndürür.  
   
-- `Flags` parametresi, her `module!functionname` satırının önünde EBP ve ESP 'yi görmek için 0 veya SOS_STACKTRACE_SHOWADDRESSES. Varsayılan olarak, 0 ' dır.  
+- `Flags` parametresi, her bir `module!functionname` satırının önünde EBP ve ESP 'yi görmek için 0 ya da SOS_STACKTRACE_SHOWADDRESSES. Varsayılan olarak, 0 ' dır.  
   
     ```cpp  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
@@ -101,4 +101,4 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Hata Ayıklama Genel Statik İşlevleri](debugging-global-static-functions.md)

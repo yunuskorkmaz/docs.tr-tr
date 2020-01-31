@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 5416de70-43f2-4cdf-a11f-d570759c9c0c
 topic_type:
 - apiref
-ms.openlocfilehash: cb2ab28824d209dd1eed627600e30e9ddb0d7c7a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 795e9f4862992d95eeef98a986545cca47d828c6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125719"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784136"
 ---
 # <a name="icordebugclass2-interface"></a>ICorDebugClass2 Arabirimi
 
-Bir genel sınıfı veya <xref:System.Type>türünde bir yöntem parametresi olan bir sınıfı temsil eder. Bu arabirim [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)'ı genişletir.  
+Bir genel sınıfı veya <xref:System.Type>türünde bir yöntem parametresi olan bir sınıfı temsil eder. Bu arabirim [ICorDebugClass](icordebugclass-interface.md)'ı genişletir.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetParameterizedType Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|Bu sınıf için tür bildirimini alır.|  
-|[SetJMCStatus Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|Bu sınıfın her bir yöntemi için, yöntemin Kullanıcı tanımlı kod olup olmadığını belirten bir değer ayarlar.|  
+|[GetParameterizedType Yöntemi](icordebugclass2-getparameterizedtype-method.md)|Bu sınıf için tür bildirimini alır.|  
+|[SetJMCStatus Yöntemi](icordebugclass2-setjmcstatus-method.md)|Bu sınıfın her bir yöntemi için, yöntemin Kullanıcı tanımlı kod olup olmadığını belirten bir değer ayarlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -48,5 +48,5 @@ Bir genel sınıfı veya <xref:System.Type>türünde bir yöntem parametresi ola
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugClass arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugClass arabirimi](icordebugclass-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

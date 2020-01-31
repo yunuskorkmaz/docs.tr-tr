@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72f54a45-dbe6-4bb4-8c99-e879a27368e5
 topic_type:
 - apiref
-ms.openlocfilehash: b521c96d26202119dad6fedb61cbd9da8b3c2e52
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ab31ab8f83a71372c8e12b460458a26996f65ff5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137635"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782983"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction Yöntemi
 Oluşturucusu <xref:System.Type> parametreleri geçen bir sınıfın içinde iç içe yerleştirilebilen belirtilen ICorDebugFunction öğesine bir çağrı kurar veya kendisi <xref:System.Type> parametreleri alabilir.  
@@ -54,7 +54,7 @@ HRESULT CallParameterizedFunction (
  'ndaki Her biri bir işlev bağımsız değişkeninde geçirilen değeri temsil eden ICorDebugValue nesnesine işaret eden bir işaretçiler dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CallParameterizedFunction` [ıcorınkıonımagegeval:: CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) gibidir, çünkü işlev tür parametrelerine sahip bir sınıfın içinde olabilir, kendisi tür parametreleri veya her ikisini de alabilir. Tür bağımsız değişkenleri önce sınıf için, sonra da işlev için verilmelidir.  
+ `CallParameterizedFunction` [ıcorınkıonımagegeval:: CallFunction](icordebugeval-callfunction-method.md) gibidir, çünkü işlev tür parametrelerine sahip bir sınıfın içinde olabilir, kendisi tür parametreleri veya her ikisini de alabilir. Tür bağımsız değişkenleri önce sınıf için, sonra da işlev için verilmelidir.  
   
  İşlev farklı bir uygulama etki alanında ise, bir geçiş gerçekleşir. Ancak, tüm tür ve değer bağımsız değişkenleri hedef uygulama etki alanında olmalıdır.  
   

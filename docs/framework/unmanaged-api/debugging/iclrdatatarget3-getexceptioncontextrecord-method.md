@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 66076ed5-f05c-4114-9788-94cb143abb8a
 topic_type:
 - apiref
-ms.openlocfilehash: 5a090b7c4801e6b2baf56f1d80e7e52f2aaa9293
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aed301fa136ff3d45269c82b46e4cad699074874
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73112298"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785245"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>ICLRDataTarget3::GetExceptionContextRecord Metodu
 Hedef işlemle ilişkili bağlam kaydını almak için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağırılır. Örneğin, bir döküm hedefi için, bu, Windows hata ayıklama Yardım Kitaplığı 'nda (DbgHelp [), `ExceptionParam`](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) bağımsız değişkeni aracılığıyla geçirilen bağlam kaydıyla eşdeğerdir.  
@@ -67,6 +67,6 @@ HRESULT GetExceptionContextRecord(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRDataTarget3 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
-- [GetExceptionRecord Yöntemi](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)
-- [GetExceptionThreadID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
+- [ICLRDataTarget3 Arabirimi](iclrdatatarget3-interface.md)
+- [GetExceptionRecord Yöntemi](iclrdatatarget3-getexceptionrecord-method.md)
+- [GetExceptionThreadID Yöntemi](iclrdatatarget3-getexceptionthreadid-method.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3a36987-5666-4e2f-95b5-d0cb246502ec
 topic_type:
 - apiref
-ms.openlocfilehash: 37400e3b69b3884e31479fd7cdfccb473408bfbf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 85319a45861b2b48f7690f69bb8f9f9469af014c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433398"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862808"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>ICorProfilerInfo2::GetClassLayout Metodu
 Belirtilen sınıf tarafından tanımlanan alanların bellek olarak düzeni hakkında bilgi alır. Diğer bir deyişle, bu yöntem sınıfın alanlarının uzaklıklarını alır.  
@@ -55,7 +55,7 @@ HRESULT GetClassLayout(
 ## <a name="remarks"></a>Açıklamalar  
  `GetClassLayout` yöntemi yalnızca sınıfın kendisi tarafından tanımlanan alanları döndürür. Sınıfın üst sınıfı da tanımlı alanlar içeriyorsa, bu alanları almak için profil oluşturucunun üst sınıfta `GetClassLayout` çağrısı gerekir.  
   
- Dize sınıfları ile `GetClassLayout` kullanıyorsanız, yöntem E_INVALIDARG hata kodu ile başarısız olur. Bir dizenin düzeni hakkında bilgi almak için [ICorProfilerInfo2:: GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) kullanın. `GetClassLayout`, bir dizi sınıfıyla çağrıldığında de başarısız olur.  
+ Dize sınıfları ile `GetClassLayout` kullanıyorsanız, yöntem E_INVALIDARG hata kodu ile başarısız olur. Bir dizenin düzeni hakkında bilgi almak için [ICorProfilerInfo2:: GetStringLayout](icorprofilerinfo2-getstringlayout-method.md) kullanın. `GetClassLayout`, bir dizi sınıfıyla çağrıldığında de başarısız olur.  
   
  `GetClassLayout` çağrıldıktan sonra, `rFieldOffset` arabelleğinin tüm kullanılabilir `COR_FIELD_OFFSET` yapılarını içermesi için yeterince büyük olduğunu doğrulamanız gerekir. Bunu yapmak için `pcFieldOffset` işaret eden değeri, `rFieldOffset` boyutuyla `COR_FIELD_OFFSET` yapısına bölünmüş şekilde karşılaştırın. `rFieldOffset` yeterince büyük değilse, daha büyük bir `rFieldOffset` arabelleği ayırın, yeni, daha büyük boyuttaki `cFieldOffset` güncelleştirin ve `GetClassLayout` yeniden çağırın.  
   
@@ -72,7 +72,7 @@ HRESULT GetClassLayout(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo Arabirimi](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 Arabirimi](icorprofilerinfo2-interface.md)
+- [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
+- [Profil Oluşturma](index.md)

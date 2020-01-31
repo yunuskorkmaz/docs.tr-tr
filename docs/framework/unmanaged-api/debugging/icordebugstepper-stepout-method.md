@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aae0f48c-4ede-4256-9251-a7fc85a229dc
 topic_type:
 - apiref
-ms.openlocfilehash: 6c1d7db8aacaf81d47abd4a9cd972b44f56a3bb1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 08cf2d0bb09080296fc1fcc69b5817f4d6118765
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137515"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791723"
 ---
 # <a name="icordebugstepperstepout-method"></a>ICorDebugStepper::StepOut Yöntemi
 Bu ICorDebugStepper, kendisini kapsayan iş parçacığı aracılığıyla tek adımlı ve geçerli çerçeve çağıran çerçeveye denetim döndürdüğünde tamamlanmasına neden olur.  
@@ -36,7 +36,7 @@ HRESULT StepOut ();
   
  Yönetilmeyen kod içinde `StepOut` çağrılırsa, geçerli çerçeve onu çağıran yönetilen koda geri döndüğünde adım tamamlanır.  
   
- .NET Framework sürüm 2,0 ' de, başarısız olacağı için STOP_UNMANAGED bayrağı ayarlanmış olarak `StepOut` kullanmayın. (Adımlamayı ayarlamak için [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) kullanın.) Birlikte çalışma hata ayıklayıcıları yerel koda yönelik olarak kullanıma hazır olmalıdır.  
+ .NET Framework sürüm 2,0 ' de, başarısız olacağı için STOP_UNMANAGED bayrağıyla ayarlanmış `StepOut` kullanmayın. (Adımlamayı ayarlamak için [ICorDebugStepper:: SetUnmappedStopMask](icordebugstepper-setunmappedstopmask-method.md) kullanın.) Birlikte çalışma hata ayıklayıcıları yerel koda yönelik olarak kullanıma hazır olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

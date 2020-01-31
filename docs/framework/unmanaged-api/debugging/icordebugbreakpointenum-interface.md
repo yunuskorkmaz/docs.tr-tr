@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c6f4f6e-52cc-402e-881b-7b8526544c90
 topic_type:
 - apiref
-ms.openlocfilehash: 5fb4a8a508cde4455bbee8c08432d3549e3fac43
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22ae1d24040a8ee5000e0ff2fbeb2b45e08050df
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122750"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784348"
 ---
 # <a name="icordebugbreakpointenum-interface"></a>ICorDebugBreakpointEnum Arabirimi
 
@@ -29,7 +29,7 @@ Icordebugger Genum yöntemlerini uygular ve ICorDebugBreakpoint dizilerini numar
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki belirtilen `ICorDebugBreakpoint` örneği sayısını alır.|  
+|[Next Yöntemi](icordebugbreakpointenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki belirtilen `ICorDebugBreakpoint` örneği sayısını alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -47,4 +47,4 @@ Icordebugger Genum yöntemlerini uygular ve ICorDebugBreakpoint dizilerini numar
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
