@@ -1,5 +1,5 @@
 ---
-title: Windows Forms DataGridView Denetiminde Hücreler, Satırlar ve Sütunlarla Programlama
+title: DataGridView denetiminde hücreler, satırlar ve sütunlarla programlama
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data grids [Windows Forms], elements
@@ -8,53 +8,53 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], programming with grid elements
 - rows [Windows Forms], data grids
 ms.assetid: 0d76f7e4-4149-42c6-9118-bb37d6669dc5
-ms.openlocfilehash: 085fcd0114742e787c8cbcaabf89a354b0e3e830
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2d5927ecff734b359b860701e094480bbf3188f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012535"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741352"
 ---
-# <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="d9fb7-102">Windows Forms DataGridView Denetiminde Hücreler, Satırlar ve Sütunlarla Programlama</span><span class="sxs-lookup"><span data-stu-id="d9fb7-102">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="d9fb7-103">Bu bölümde, hücre, satır ve sütun nesneleri ile ilgili çeşitli programlama görevlerini gösteren konuları sağlar.</span><span class="sxs-lookup"><span data-stu-id="d9fb7-103">This section provides topics that demonstrate various programming tasks involving cell, row, and column objects.</span></span>  
+# <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="11c2d-102">Windows Forms DataGridView Denetiminde Hücreler, Satırlar ve Sütunlarla Programlama</span><span class="sxs-lookup"><span data-stu-id="11c2d-102">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="11c2d-103">Bu bölümde, hücre, satır ve sütun nesneleriyle ilgili çeşitli programlama görevlerini gösteren konular sağlanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="11c2d-103">This section provides topics that demonstrate various programming tasks involving cell, row, and column objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d9fb7-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="d9fb7-104">In This Section</span></span>  
- [<span data-ttu-id="d9fb7-105">Nasıl yapılır: Bir Windows Forms DataGridView denetiminde ayrı hücrelere ToolTips ekleme</span><span class="sxs-lookup"><span data-stu-id="d9fb7-105">How to: Add ToolTips to Individual Cells in a Windows Forms DataGridView Control</span></span>](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
- <span data-ttu-id="d9fb7-106">Nasıl yapılacağını açıklar <xref:System.Windows.Forms.DataGridView.CellFormatting> farklı araç ipuçları için tek tek hücrelere sağlamak için olay.</span><span class="sxs-lookup"><span data-stu-id="d9fb7-106">Describes how to handle the <xref:System.Windows.Forms.DataGridView.CellFormatting> event to provide different ToolTips for individual cells.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="11c2d-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="11c2d-104">In This Section</span></span>  
+ [<span data-ttu-id="11c2d-105">Nasıl yapılır: Bir Windows Forms DataGridView Denetiminde Ayrı Hücrelere ToolTips Ekleme</span><span class="sxs-lookup"><span data-stu-id="11c2d-105">How to: Add ToolTips to Individual Cells in a Windows Forms DataGridView Control</span></span>](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
+ <span data-ttu-id="11c2d-106">Tek tek hücreler için farklı araç Ipuçları sağlamak üzere <xref:System.Windows.Forms.DataGridView.CellFormatting> olayının nasıl işleneceğini açıklar.</span><span class="sxs-lookup"><span data-stu-id="11c2d-106">Describes how to handle the <xref:System.Windows.Forms.DataGridView.CellFormatting> event to provide different ToolTips for individual cells.</span></span>  
   
- [<span data-ttu-id="d9fb7-107">Nasıl yapılır: Bir Windows Forms DataGridView denetiminin bir hücresindeki değişikliklere dayalı olarak özel eylem gerçekleştirme</span><span class="sxs-lookup"><span data-stu-id="d9fb7-107">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
- <span data-ttu-id="d9fb7-108">Nasıl yapılacağını açıklar <xref:System.Windows.Forms.DataGridView.CellValueChanged> ve <xref:System.Windows.Forms.DataGridView.CellStateChanged> olayları.</span><span class="sxs-lookup"><span data-stu-id="d9fb7-108">Describes how to handle the <xref:System.Windows.Forms.DataGridView.CellValueChanged> and <xref:System.Windows.Forms.DataGridView.CellStateChanged> events.</span></span>  
+ [<span data-ttu-id="11c2d-107">Nasıl yapılır: Bir Windows Forms DataGridView Denetiminin Bir Hücresindeki Değişikliklere Dayalı Olarak Özel Eylem Gerçekleştirme</span><span class="sxs-lookup"><span data-stu-id="11c2d-107">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
+ <span data-ttu-id="11c2d-108"><xref:System.Windows.Forms.DataGridView.CellValueChanged> ve <xref:System.Windows.Forms.DataGridView.CellStateChanged> olaylarının nasıl işleneceğini açıklar.</span><span class="sxs-lookup"><span data-stu-id="11c2d-108">Describes how to handle the <xref:System.Windows.Forms.DataGridView.CellValueChanged> and <xref:System.Windows.Forms.DataGridView.CellStateChanged> events.</span></span>  
   
- [<span data-ttu-id="d9fb7-109">Nasıl yapılır: Windows Forms DataGridView denetiminde bantları yönlendirme</span><span class="sxs-lookup"><span data-stu-id="d9fb7-109">How to: Manipulate Bands in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
- <span data-ttu-id="d9fb7-110">Nesne türü ile programlamayı açıklar <xref:System.Windows.Forms.DataGridViewBand>, satırlar ve sütunlar için temel türü.</span><span class="sxs-lookup"><span data-stu-id="d9fb7-110">Describes how to program with objects of type <xref:System.Windows.Forms.DataGridViewBand>, which is the base type for rows and columns.</span></span>  
+ [<span data-ttu-id="11c2d-109">Nasıl yapılır: Windows Forms DataGridView Denetiminde Bantları Yönlendirme</span><span class="sxs-lookup"><span data-stu-id="11c2d-109">How to: Manipulate Bands in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="11c2d-110">Satırlar ve sütunlar için temel tür olan <xref:System.Windows.Forms.DataGridViewBand>türünde nesnelerle nasıl programlama yapılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="11c2d-110">Describes how to program with objects of type <xref:System.Windows.Forms.DataGridViewBand>, which is the base type for rows and columns.</span></span>  
   
- [<span data-ttu-id="d9fb7-111">Nasıl yapılır: Windows Forms DataGridView denetiminde satırları yönlendirme</span><span class="sxs-lookup"><span data-stu-id="d9fb7-111">How to: Manipulate Rows in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
- <span data-ttu-id="d9fb7-112">Nesne türü ile programlamayı açıklar `DataGridViewRow`.</span><span class="sxs-lookup"><span data-stu-id="d9fb7-112">Describes how to program with objects of type `DataGridViewRow`.</span></span>  
+ [<span data-ttu-id="11c2d-111">Nasıl yapılır: Windows Forms DataGridView Denetiminde Satırları Yönlendirme</span><span class="sxs-lookup"><span data-stu-id="11c2d-111">How to: Manipulate Rows in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="11c2d-112">`DataGridViewRow`türünde nesnelerle nasıl programlama yapılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="11c2d-112">Describes how to program with objects of type `DataGridViewRow`.</span></span>  
   
- [<span data-ttu-id="d9fb7-113">Nasıl yapılır: Windows Forms DataGridView denetiminde sütunları yönlendirme</span><span class="sxs-lookup"><span data-stu-id="d9fb7-113">How to: Manipulate Columns in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
- <span data-ttu-id="d9fb7-114">Nesne türü ile programlamayı açıklar `DataGridViewColumn`.</span><span class="sxs-lookup"><span data-stu-id="d9fb7-114">Describes how to program with objects of type `DataGridViewColumn`.</span></span>  
+ [<span data-ttu-id="11c2d-113">Nasıl yapılır: Windows Forms DataGridView Denetiminde Sütunları Yönlendirme</span><span class="sxs-lookup"><span data-stu-id="11c2d-113">How to: Manipulate Columns in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="11c2d-114">`DataGridViewColumn`türünde nesnelerle nasıl programlama yapılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="11c2d-114">Describes how to program with objects of type `DataGridViewColumn`.</span></span>  
   
- [<span data-ttu-id="d9fb7-115">Nasıl yapılır: Windows Forms DataGridView denetiminde görüntü sütunlarıyla çalışma</span><span class="sxs-lookup"><span data-stu-id="d9fb7-115">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
- <span data-ttu-id="d9fb7-116">İle programlamayı açıklar `DataGridViewImageColumn` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="d9fb7-116">Describes how to program with the `DataGridViewImageColumn` class.</span></span>  
+ [<span data-ttu-id="11c2d-115">Nasıl yapılır: Windows Forms DataGridView Denetiminde Görüntü Sütunlarıyla Çalışma</span><span class="sxs-lookup"><span data-stu-id="11c2d-115">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="11c2d-116">`DataGridViewImageColumn` sınıfıyla programlanın nasıl yapılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="11c2d-116">Describes how to program with the `DataGridViewImageColumn` class.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="d9fb7-117">Başvuru</span><span class="sxs-lookup"><span data-stu-id="d9fb7-117">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="11c2d-117">Başvuru</span><span class="sxs-lookup"><span data-stu-id="11c2d-117">Reference</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
- <span data-ttu-id="d9fb7-118">İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView> denetimi.</span><span class="sxs-lookup"><span data-stu-id="d9fb7-118">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
+ <span data-ttu-id="11c2d-118"><xref:System.Windows.Forms.DataGridView> denetimi için başvuru belgeleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="11c2d-118">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
  <xref:System.Windows.Forms.DataGridViewCell>  
- <span data-ttu-id="d9fb7-119">İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridViewCell> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="d9fb7-119">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewCell> class.</span></span>  
+ <span data-ttu-id="11c2d-119"><xref:System.Windows.Forms.DataGridViewCell> sınıfı için başvuru belgeleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="11c2d-119">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewCell> class.</span></span>  
   
  <xref:System.Windows.Forms.DataGridViewRow>  
- <span data-ttu-id="d9fb7-120">İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridViewRow> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="d9fb7-120">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewRow> class.</span></span>  
+ <span data-ttu-id="11c2d-120"><xref:System.Windows.Forms.DataGridViewRow> sınıfı için başvuru belgeleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="11c2d-120">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewRow> class.</span></span>  
   
  <xref:System.Windows.Forms.DataGridViewColumn>  
- <span data-ttu-id="d9fb7-121">İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridViewColumn> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="d9fb7-121">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewColumn> class.</span></span>  
+ <span data-ttu-id="11c2d-121"><xref:System.Windows.Forms.DataGridViewColumn> sınıfı için başvuru belgeleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="11c2d-121">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewColumn> class.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="d9fb7-122">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="d9fb7-122">Related Sections</span></span>  
- [<span data-ttu-id="d9fb7-123">Windows Forms DataGridView Denetimindeki Temel Sütun, Satır ve Hücre Özellikleri</span><span class="sxs-lookup"><span data-stu-id="d9fb7-123">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](basic-column-row-and-cell-features-wf-datagridview-control.md)  
- <span data-ttu-id="d9fb7-124">Yaygın olarak açıklayan konulara kullanılan hücre, satır ve sütun özellikleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="d9fb7-124">Provides topics that describe commonly used cell, row, and column properties.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="11c2d-122">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="11c2d-122">Related Sections</span></span>  
+ [<span data-ttu-id="11c2d-123">Windows Forms DataGridView Denetimindeki Temel Sütun, Satır ve Hücre Özellikleri</span><span class="sxs-lookup"><span data-stu-id="11c2d-123">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ <span data-ttu-id="11c2d-124">Yaygın olarak kullanılan hücre, satır ve sütun özelliklerini tanımlayan konuları sağlar.</span><span class="sxs-lookup"><span data-stu-id="11c2d-124">Provides topics that describe commonly used cell, row, and column properties.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d9fb7-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d9fb7-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="11c2d-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="11c2d-125">See also</span></span>
 
-- [<span data-ttu-id="d9fb7-126">DataGridView Denetimi</span><span class="sxs-lookup"><span data-stu-id="d9fb7-126">DataGridView Control</span></span>](datagridview-control-windows-forms.md)
-- [<span data-ttu-id="d9fb7-127">Windows Forms DataGridView Denetiminde Sütun Türleri</span><span class="sxs-lookup"><span data-stu-id="d9fb7-127">Column Types in the Windows Forms DataGridView Control</span></span>](column-types-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="11c2d-126">DataGridView Denetimi</span><span class="sxs-lookup"><span data-stu-id="11c2d-126">DataGridView Control</span></span>](datagridview-control-windows-forms.md)
+- [<span data-ttu-id="11c2d-127">Windows Forms DataGridView Denetiminde Sütun Türleri</span><span class="sxs-lookup"><span data-stu-id="11c2d-127">Column Types in the Windows Forms DataGridView Control</span></span>](column-types-in-the-windows-forms-datagridview-control.md)

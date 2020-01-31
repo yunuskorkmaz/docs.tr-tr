@@ -29,6 +29,8 @@
       href: how-to-guides/hdinsight-deploy-methods.md
     - name: İşleri Databricks’e gönderme
       href: how-to-guides/databricks-deploy-methods.md
+    - name: Çalışan ve UDF ikililerini dağıtma
+      href: how-to-guides/deploy-worker-udf-binaries.md
 - name: Başvuru
   items:
     - name: API Başvurusu

@@ -111,6 +111,8 @@
           href: native-interop/qualify-net-types-for-interoperation.md
     - name: Birlikte Çalışma Özniteliklerini Uygulama
       href: native-interop/apply-interop-attributes.md
+    - name: Özel Durumlar
+      href: native-interop/exceptions-interoperability.md
 - name: Koleksiyonlar ve Veri Yapıları
   href: collections/
 - name: .NET Sayısal Değerleri
