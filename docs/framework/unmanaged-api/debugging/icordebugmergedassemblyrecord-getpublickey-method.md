@@ -2,12 +2,12 @@
 title: 'Icordebugmergedassemblyrecord:: GetPublicKey Yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
-ms.openlocfilehash: 9cf5f6b6d12303b3f59588c5fb663c457da79cb9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c8c6e9adcb9d29f5e234dd1b8dfd351fac575301
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131391"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793113"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>Icordebugmergedassemblyrecord:: GetPublicKey Yöntemi
 Derlemenin ortak anahtarını alır.  
@@ -47,5 +47,5 @@ HRESULT GetPublicKey(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugMergedAssemblyRecord Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMergedAssemblyRecord Arabirimi](icordebugmergedassemblyrecord-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

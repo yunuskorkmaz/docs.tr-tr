@@ -2,12 +2,12 @@
 title: Hesaplama İfadeleri
 description: "' De F# denetim akışı yapıları ve bağlamaları kullanılarak sıralanmak ve birleştirilebilecek hesaplamalar yazmak için uygun bir sözdizimi oluşturmayı öğrenin."
 ms.date: 11/04/2019
-ms.openlocfilehash: 4ff7def0ed3a46acd1b0b83b111f26f5d556071f
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 55406cc12d9e6e890fe69d712f79486d23b84452
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569452"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794543"
 ---
 # <a name="computation-expressions"></a>Hesaplama İfadeleri
 
@@ -15,7 +15,7 @@ ms.locfileid: "74569452"
 
 ## <a name="overview"></a>Genel bakış
 
-Hesaplamalar birçok form alabilir. En yaygın hesaplama biçimi, anlaşılması ve değiştirilmesi kolay olan tek iş parçacıklı yürütmektir. Ancak, tüm hesaplama biçimleri tek iş parçacıklı yürütme kadar basittir. Bazı örnekler şunlardır:
+Hesaplamalar birçok form alabilir. En yaygın hesaplama biçimi, anlaşılması ve değiştirilmesi kolay olan tek iş parçacıklı yürütmektir. Ancak, tüm hesaplama biçimleri tek iş parçacıklı yürütme kadar basittir. Bazı örnekler:
 
 - Belirleyici olmayan hesaplamalar
 - Zaman uyumsuz hesaplamalar
@@ -232,7 +232,7 @@ Bir Oluşturucu sınıfı oluşturup sınıf üzerinde belirli özel yöntemleri
 
 Aşağıdaki tabloda, bir iş akışı Oluşturucu sınıfında kullanılabilecek yöntemler açıklanmıştır.
 
-|**Yöntemidir**|**Tipik imza (ler)**|**Açıklama**|
+|**Yöntemi**|**Tipik imza (ler)**|**Açıklama**|
 |----|----|----|
 |`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|Hesaplama ifadelerinde `let!` ve `do!` için çağırılır.|
 |`Delay`|`(unit -> M<'T>) -> M<'T>`|Bir hesaplama ifadesini işlev olarak kaydırır.|
@@ -260,7 +260,7 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 Yukarıdaki kodda, hesaplama ifadesi Oluşturucu sınıfında tanımlanmamışsa `Run` ve `Delay` çağrıları atlanır. `{| cexpr |}`olarak belirtilen hesaplama ifadesinin gövdesi, aşağıdaki tabloda açıklanan Çeviriler tarafından Oluşturucu sınıfının yöntemlerini içeren çağrılara çevrilir. Hesaplama ifadesi `{| cexpr |}`, `expr` bir F# ifade olduğu ve `cexpr` bir hesaplama ifadesi olduğu bu çevirilerine göre özyinelemeli olarak tanımlanır.
 
-|İfade|İde|
+|İfade|Çeviri|
 |----------|-----------|
 |<code>{ let binding in cexpr }</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
 |<code>{ let! pattern = expr in cexpr }</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
@@ -271,7 +271,7 @@ Yukarıdaki kodda, hesaplama ifadesi Oluşturucu sınıfında tanımlanmamışsa
 |<code>{ return! expr }</code>|`builder.ReturnFrom(expr)`|
 |<code>{ use pattern = expr in cexpr }</code>|<code>builder.Using(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
 |<code>{ use! value = expr in cexpr }</code>|<code>builder.Bind(expr, (fun value -> builder.Using(value, (fun value -> { cexpr }))))</code>|
-|<code>{ if expr then cexpr0 &#124;}</code>|<code>if expr then { cexpr0 } else binder.Zero()</code>|
+|<code>{ if expr then cexpr0 &#124;}</code>|<code>if expr then { cexpr0 } else builder.Zero()</code>|
 |<code>{ if expr then cexpr0 else cexpr1 &#124;}</code>|<code>if expr then { cexpr0 } else { cexpr1 }</code>|
 |<code>{ match expr with &#124; pattern_i -> cexpr_i }</code>|<code>match expr with &#124; pattern_i -> { cexpr_i }</code>|
 |<code>{ for pattern in expr do cexpr }</code>|<code>builder.For(enumeration, (fun pattern -> { cexpr }))</code>|

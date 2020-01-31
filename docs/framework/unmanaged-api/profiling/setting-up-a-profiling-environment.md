@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COR_ENABLE_PROFILING environment variable
 - profiling API [.NET Framework], enabling
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
-ms.openlocfilehash: 86720cb1739e3f193cd1d5081577d69bca1cf0f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 04b9abd8ffe04a24c08ad89ff48b037c9b003359
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427057"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860985"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Profil Oluşturma Ortamını Ayarlama
 > [!NOTE]
@@ -55,23 +55,23 @@ ms.locfileid: "74427057"
   
 ## <a name="additional-considerations"></a>Ek konular  
   
-- Profiler sınıfı [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) ve [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) arabirimlerini uygular. .NET Framework sürüm 2,0 ' de, bir profil oluşturucunun `ICorProfilerCallback2`uygulaması gerekir. Bu yoksa `ICorProfilerCallback2` yüklenmez.  
+- Profiler sınıfı [ICorProfilerCallback](icorprofilercallback-interface.md) ve [ICorProfilerCallback2](icorprofilercallback2-interface.md) arabirimlerini uygular. .NET Framework sürüm 2,0 ' de, bir profil oluşturucunun `ICorProfilerCallback2`uygulaması gerekir. Bu yoksa `ICorProfilerCallback2` yüklenmez.  
   
 - Belirli bir ortamda aynı anda yalnızca bir profil oluşturucu bir işlem profili oluşturabilir. Farklı ortamlarda iki farklı profil oluşturucular kaydedebilirsiniz, ancak her birinin ayrı süreçler profili oluşturulmalıdır. Profil Oluşturucu, profili oluşturulan işlemle aynı adres alanına eşlenmiş işlem içi bir COM Server DLL 'SI olarak uygulanmalıdır. Bu, profil oluşturucunun işlem içinde çalıştığı anlamına gelir. .NET Framework diğer COM sunucusu türlerini desteklemez. Örneğin, bir profil oluşturucu uzak bir bilgisayardan uygulamaları izlemek isterse, her bilgisayarda toplayıcı aracıları uygulamalıdır. Bu aracılar toplu sonuçlara neden olur ve bunları merkezi veri koleksiyonu bilgisayarıyla iletişim kurar.  
   
 - Profil Oluşturucu işlem içi örneği oluşturulan bir COM nesnesi olduğundan, profili oluşturulan her uygulama profil oluşturucunun kendi kopyasına sahip olur. Bu nedenle, tek bir profil oluşturucu örneği birden çok uygulamadan veri işlemek zorunda değildir. Ancak, profil oluşturucunun günlüğe kaydetme koduna, günlük dosyasının diğer profili oluşturulmuş uygulamalardan üzerine yazılmasına engel olmak için mantık eklemeniz gerekecektir.  
   
 ## <a name="initializing-the-profiler"></a>Profil oluşturucuyu başlatma  
- Her iki ortam değişkeni denetimi başarılı olduğunda, CLR, profil oluşturucunun bir örneğini COM `CoCreateInstance` işlevine benzer bir şekilde oluşturur. Profil Oluşturucu, `CoCreateInstance`doğrudan çağrısıyla yüklenmez. Bu nedenle, iş parçacığı modelini ayarlamayı gerektiren `CoInitialize`çağrısı önlenmiş olur. CLR daha sonra Profiler 'da [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) yöntemini çağırır. Bu yöntemin imzası aşağıdaki gibidir.  
+ Her iki ortam değişkeni denetimi başarılı olduğunda, CLR, profil oluşturucunun bir örneğini COM `CoCreateInstance` işlevine benzer bir şekilde oluşturur. Profil Oluşturucu, `CoCreateInstance`doğrudan çağrısıyla yüklenmez. Bu nedenle, iş parçacığı modelini ayarlamayı gerektiren `CoInitialize`çağrısı önlenmiş olur. CLR daha sonra Profiler 'da [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) yöntemini çağırır. Bu yöntemin imzası aşağıdaki gibidir.  
   
 ```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
- Profiler bir [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) veya [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) arabirim işaretçisi için `pICorProfilerInfoUnk` sorgulayıp, daha sonra profil oluşturma sırasında daha fazla bilgi isteyebilmesi için onu kaydetmeniz gerekir.  
+ Profiler bir [ICorProfilerInfo](icorprofilerinfo-interface.md) veya [ICorProfilerInfo2](icorprofilerinfo2-interface.md) arabirim işaretçisi için `pICorProfilerInfoUnk` sorgulayıp, daha sonra profil oluşturma sırasında daha fazla bilgi isteyebilmesi için onu kaydetmeniz gerekir.  
   
 ## <a name="setting-event-notifications"></a>Olay bildirimlerini ayarlama  
- Profil Oluşturucu daha sonra hangi bildirim kategorisini ilgilendiğinizi belirlemek için [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) yöntemini çağırır. Örneğin, Profil Oluşturucu yalnızca işlev girme ve bildirim ve çöp toplama bildirimleri ile ilgileniyorsanız, aşağıdakileri belirtir.  
+ Profil Oluşturucu daha sonra hangi bildirim kategorisini ilgilendiğinizi belirlemek için [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) yöntemini çağırır. Örneğin, Profil Oluşturucu yalnızca işlev girme ve bildirim ve çöp toplama bildirimleri ile ilgileniyorsanız, aşağıdakileri belirtir.  
   
 ```cpp  
 ICorProfilerInfo* pInfo;  
@@ -91,8 +91,8 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
   
  Bu değişikliklerin, sistem genelinde profil oluşturmayı etkinleştiğine unutmayın. Daha sonra çalıştırılan her yönetilen uygulamanın profili oluşturulmasını engellemek için, hedef bilgisayarı yeniden başlattıktan sonra sistem ortam değişkenlerini silmeniz gerekir.  
   
- Bu teknik, profili oluşturulan her CLR işlemine da yol açar. Profiler 'ın [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) geri çağırması için bir mantık eklemesi gerekir. Bu işlem, geçerli işlemin ilgi olup olmadığını algılar. Değilse, profil oluşturucu başlatmayı gerçekleştirmeden geri çağırma işlemini başarısız olabilir.  
+ Bu teknik, profili oluşturulan her CLR işlemine da yol açar. Profiler 'ın [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) geri çağırması için bir mantık eklemesi gerekir. Bu işlem, geçerli işlemin ilgi olup olmadığını algılar. Değilse, profil oluşturucu başlatmayı gerçekleştirmeden geri çağırma işlemini başarısız olabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil Oluşturmaya Genel Bakış](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)
+- [Profil Oluşturmaya Genel Bakış](profiling-overview.md)

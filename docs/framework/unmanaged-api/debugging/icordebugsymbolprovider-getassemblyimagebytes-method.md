@@ -2,12 +2,12 @@
 title: 'ICorDebugSymbolProvider:: Getassemblyımagebytes yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
-ms.openlocfilehash: 3184ba116704df8945b53766e62435a4252eaa11
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b7a8f942d493b7b775a31dce5ab4d351a77cfe5f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138931"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791670"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider:: Getassemblyımagebytes yöntemi
 Birleştirilen derlemede göreli bir sanal adres (RVA) verilen birleştirilmiş bir derlemeden verileri okur.  
@@ -30,7 +30,7 @@ HRESULT GetAssemblyImageBytes(
  Birleştirilmiş derlemeden okunacak bayt sayısı.  
   
  `ppMemoryBuffer`  
- Birleştirilmiş bütünleştirilmiş kod meta verileri ile bellek arabelleği hakkında bilgi içeren bir [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) nesnesinin adresine yönelik bir işaretçi.  
+ Birleştirilmiş bütünleştirilmiş kod meta verileri ile bellek arabelleği hakkında bilgi içeren bir [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -48,5 +48,5 @@ HRESULT GetAssemblyImageBytes(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugSymbolProvider Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider Arabirimi](icordebugsymbolprovider-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

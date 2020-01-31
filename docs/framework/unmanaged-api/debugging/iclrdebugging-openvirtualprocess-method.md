@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-ms.openlocfilehash: cd43dce995c2bc9a45a0c8134a91b20cb1dec26e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 585b3d605d0df9169c12ca10198846ec0a7fe6d4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111422"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793604"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess Yöntemi
 İşlemde yüklü olan bir ortak dil çalışma zamanı (CLR) modülüne karşılık gelen ICorDebugProcess arabirimini alır.  
@@ -41,10 +41,10 @@ HRESULT OpenVirtualProcess(
   
 ## <a name="parameters"></a>Parametreler  
  `moduleBaseAddress`  
- 'ndaki Hedef işlemdeki bir modülün temel adresi. Belirtilen modül bir CLR modülü değilse, COR_E_NOT_CLR döndürülecek.  
+ 'ndaki Hedef işlemdeki bir modülün temel adresi. COR_E_NOT_CLR, belirtilen modül bir CLR modülü değilse döndürülecek.  
   
  `pDataTarget`  
- 'ndaki Yönetilen hata ayıklayıcı işlem durumunu incelemeye izin veren bir veri hedefi soyutlama. Hata ayıklayıcının [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) arabirimini uygulaması gerekir. Hata ayıklanan CLR 'nin bilgisayara yerel olarak yüklenmediği senaryoları desteklemek için [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) arabirimini uygulamalısınız.  
+ 'ndaki Yönetilen hata ayıklayıcı işlem durumunu incelemeye izin veren bir veri hedefi soyutlama. Hata ayıklayıcının [ICorDebugDataTarget](icordebugdatatarget-interface.md) arabirimini uygulaması gerekir. Hata ayıklanan CLR 'nin bilgisayara yerel olarak yüklenmediği senaryoları desteklemek için [ICLRDebuggingLibraryProvider](iclrdebugginglibraryprovider-interface.md) arabirimini uygulamalısınız.  
   
  `pLibraryProvider`  
  'ndaki Sürüme özgü hata ayıklama kitaplıklarının isteğe bağlı olarak konumlandırılma ve yüklenmesine izin veren bir kitaplık sağlayıcısı geri çağırma arabirimi. Bu parametre yalnızca `ppProcess` veya `pFlags` `null`değilse gereklidir.  
@@ -53,18 +53,18 @@ HRESULT OpenVirtualProcess(
  'ndaki Bu hata ayıklayıcının hata ayıklayabilecekleri en yüksek CLR sürümü. Bu hata ayıklayıcının desteklediği en son CLR sürümünden birincil, ikincil ve derleme sürümlerini belirtmeniz ve Düzeltme numarasını gelecekteki yerinde CLR bakım yayınlarına uyum sağlayacak şekilde 65535 olarak ayarlamanız gerekir.  
   
  `riidProcess`  
- 'ndaki Alınacak ICorDebugProcess arabiriminin KIMLIĞI. Şu anda kabul edilen değerler şunlardır IID_CORDEBUGPROCESS3, IID_CORDEBUGPROCESS2 ve IID_CORDEBUGPROCESS.  
+ 'ndaki Alınacak ICorDebugProcess arabiriminin KIMLIĞI. Şu anda kabul edilen değerler IID_CORDEBUGPROCESS3, IID_CORDEBUGPROCESS2 ve IID_CORDEBUGPROCESS.  
   
  `ppProcess`  
  dışı `riidProcess`tarafından tanımlanan COM arabirimine yönelik bir işaretçi.  
   
  `pVersion`  
- [in, out] CLR sürümü. Girişte bu değer `null`olabilir. Ayrıca, [CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) yapısına işaret edebilir, bu durumda yapının `wStructVersion` alanı 0 (sıfır) olarak başlatılmalıdır.  
+ [in, out] CLR sürümü. Girişte bu değer `null`olabilir. Ayrıca, [CLR_DEBUGGING_VERSION](clr-debugging-version-structure.md) yapısına işaret edebilir, bu durumda yapının `wStructVersion` alanı 0 (sıfır) olarak başlatılmalıdır.  
   
  Çıkışta, döndürülen `CLR_DEBUGGING_VERSION` yapısı CLR için sürüm bilgileriyle doldurulur.  
   
  `pdwFlags`  
- dışı Belirtilen çalışma zamanına ilişkin bilgilendirme bayrakları. Bayrakların açıklaması için [CLR_DEBUGGING_PROCESS_FLAGS](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md) konusuna bakın.  
+ dışı Belirtilen çalışma zamanına ilişkin bilgilendirme bayrakları. Bayrakların açıklaması için [CLR_DEBUGGING_PROCESS_FLAGS](clr-debugging-process-flags-enumeration.md) konusuna bakın.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
@@ -73,7 +73,7 @@ HRESULT OpenVirtualProcess(
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |E_POINTER|`pDataTarget` `null`.|  
-|CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) geri çağırması bir hata döndürüyor veya geçerli bir tanıtıcı sağlamıyor.|  
+|CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](iclrdebugginglibraryprovider-interface.md) geri çağırması bir hata döndürüyor veya geçerli bir tanıtıcı sağlamıyor.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget`, çalışma zamanının bu sürümü için gerekli veri hedefi arabirimlerini uygulamıyor.|  
 |CORDBG_E_NOT_CLR|Belirtilen modül bir CLR modülü değil. Bu HRESULT, bellek bozulduğundan bir CLR modülü algılanmadığında da döndürülür, modül kullanılabilir değildir veya CLR sürümü dolgu sürümünden daha geç.|  
 |CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Bu çalışma zamanı sürümü bu hata ayıklama modelini desteklemiyor. Şu anda, hata ayıklama modeli .NET Framework 4 ' den önceki CLR sürümleri tarafından desteklenmez. `pwszVersion` output parametresi hala bu hatadan sonra doğru değere ayarlanmış.|  
@@ -96,5 +96,5 @@ HRESULT OpenVirtualProcess(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)

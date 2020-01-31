@@ -1,17 +1,18 @@
 ---
 title: WPF'ye Giriş
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: d8ea49bbe400c5ec478a94ad7c1adb759af28abb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ecdd3b3c24b71917efb0d982d1f23737673622f9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454199"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744714"
 ---
 # <a name="wpf-overview"></a>WPF’ye genel bakış
 
@@ -156,25 +157,25 @@ Yerleşik WPF denetimleri burada listelenmiştir:
 
 - **Tarih görüntüleme ve seçim**: <xref:System.Windows.Controls.Calendar> ve <xref:System.Windows.Controls.DatePicker>.
 
-- **Iletişim kutuları**: <xref:Microsoft.Win32.OpenFileDialog>, <xref:System.Windows.Controls.PrintDialog> ve <xref:Microsoft.Win32.SaveFileDialog>.
+- **Iletişim kutuları**: <xref:Microsoft.Win32.OpenFileDialog>, <xref:System.Windows.Controls.PrintDialog>ve <xref:Microsoft.Win32.SaveFileDialog>.
 
 - **Dijital mürekkep**: <xref:System.Windows.Controls.InkCanvas> ve <xref:System.Windows.Controls.InkPresenter>.
 
-- **Belgeler**: <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentScrollViewer> ve <xref:System.Windows.Controls.StickyNoteControl>.
+- **Belgeler**: <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentScrollViewer>ve <xref:System.Windows.Controls.StickyNoteControl>.
 
-- **Giriş**: <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox> ve <xref:System.Windows.Controls.PasswordBox>.
+- **Giriş**: <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>ve <xref:System.Windows.Controls.PasswordBox>.
 
-- **Düzen**: <xref:System.Windows.Controls.Border>, <xref:System.Windows.Controls.Primitives.BulletDecorator>, <xref:System.Windows.Controls.Canvas>, <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Expander>, <xref:System.Windows.Controls.Grid>, <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridSplitter>, <xref:System.Windows.Controls.GroupBox>, <xref:System.Windows.Controls.Panel>, <xref:System.Windows.Controls.Primitives.ResizeGrip>, <xref:System.Windows.Controls.Separator>, <xref:System.Windows.Controls.Primitives.ScrollBar>, <xref:System.Windows.Controls.ScrollViewer>, <xref:System.Windows.Controls.StackPanel>, <xref:System.Windows.Controls.Primitives.Thumb>, <xref:System.Windows.Controls.Viewbox>, <xref:System.Windows.Controls.VirtualizingStackPanel>, <xref:System.Windows.Window>ve <xref:System.Windows.Controls.WrapPanel>.
+- **Düzen**: <xref:System.Windows.Controls.Border>, <xref:System.Windows.Controls.Primitives.BulletDecorator>, <xref:System.Windows.Controls.Canvas>, <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Expander>, <xref:System.Windows.Controls.Grid>, <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridSplitter>, <xref:System.Windows.Controls.GroupBox>, <xref:System.Windows.Controls.Panel>, <xref:System.Windows.Controls.Primitives.ResizeGrip>, <xref:System.Windows.Controls.Separator>, <xref:System.Windows.Controls.Primitives.ScrollBar><xref:System.Windows.Controls.ScrollViewer>, <xref:System.Windows.Controls.StackPanel>, <xref:System.Windows.Controls.Primitives.Thumb>, <xref:System.Windows.Controls.Viewbox>ve <xref:System.Windows.Controls.VirtualizingStackPanel>.
 
-- **Medya**: <xref:System.Windows.Controls.Image>, <xref:System.Windows.Controls.MediaElement> ve <xref:System.Windows.Controls.SoundPlayerAction>.
+- **Medya**: <xref:System.Windows.Controls.Image>, <xref:System.Windows.Controls.MediaElement>ve <xref:System.Windows.Controls.SoundPlayerAction>.
 
-- **Menüler**: <xref:System.Windows.Controls.ContextMenu>, <xref:System.Windows.Controls.Menu> ve <xref:System.Windows.Controls.ToolBar>.
+- **Menüler**: <xref:System.Windows.Controls.ContextMenu>, <xref:System.Windows.Controls.Menu>ve <xref:System.Windows.Controls.ToolBar>.
 
-- **Gezinti**: <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow> ve <xref:System.Windows.Controls.TabControl>.
+- **Gezinti**: <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>ve <xref:System.Windows.Controls.TabControl>.
 
-- **Seçim**: <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.RadioButton> ve <xref:System.Windows.Controls.Slider>.
+- **Seçim**: <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.RadioButton>ve <xref:System.Windows.Controls.Slider>.
 
-- **Kullanıcı bilgileri**: <xref:System.Windows.Controls.AccessText>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Primitives.Popup>, <xref:System.Windows.Controls.ProgressBar>, <xref:System.Windows.Controls.Primitives.StatusBar>, <xref:System.Windows.Controls.TextBlock> ve <xref:System.Windows.Controls.ToolTip>.
+- **Kullanıcı bilgileri**: <xref:System.Windows.Controls.AccessText>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Primitives.Popup>, <xref:System.Windows.Controls.ProgressBar>, <xref:System.Windows.Controls.Primitives.StatusBar>, <xref:System.Windows.Controls.TextBlock>ve <xref:System.Windows.Controls.ToolTip>.
 
 ## <a name="input-and-commands"></a>Giriş ve komutlar
 
@@ -249,7 +250,7 @@ Aşağıdaki biçimlendirme <xref:System.Windows.Controls.TextBox> özel bir `Pe
 [!code-vb[SimpleDataBindingSnippets#DataBindingCODEBEHIND](~/samples/snippets/visualbasic/wpf/introduction-to-wpf/introduction-to-wpf_6.vb)]
 [!code-csharp[SimpleDataBindingSnippets#DataBindingCODEBEHIND](~/samples/snippets/csharp/wpf/introduction-to-wpf/introduction-to-wpf_6.cs)]
 
-Bu örnekte, `Person` sınıfı arka plan kodunda oluşturulur ve `DataBindingWindow` veri bağlamı olarak ayarlanır. Biçimlendirme ' de, <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.TextBox.Text%2A> özelliği `Person.Name` özelliğine bağımlıdır ("`{Binding ... }`" XAML sözdizimi kullanılarak). Bu XAML, WPF <xref:System.Windows.Controls.TextBox> denetimini pencerenin <xref:System.Windows.FrameworkElement.DataContext%2A> özelliğinde depolanan `Person` nesnesine bağlamasını söyler.
+Bu örnekte, `Person` sınıfı arka plan kodunda oluşturulur ve `DataBindingWindow`veri bağlamı olarak ayarlanır. Biçimlendirme ' de, <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.TextBox.Text%2A> özelliği `Person.Name` özelliğine bağımlıdır ("`{Binding ... }`" XAML sözdizimi kullanılarak). Bu XAML, WPF <xref:System.Windows.Controls.TextBox> denetimini pencerenin <xref:System.Windows.FrameworkElement.DataContext%2A> özelliğinde depolanan `Person` nesnesine bağlamasını söyler.
 
 WPF veri bağlama altyapısı, doğrulama, sıralama, filtreleme ve gruplamayı içeren ek destek sağlar. Ayrıca, veri bağlama, standart WPF denetimleri tarafından görüntülenecek kullanıcı arabirimi uygun olmadığında, bağlantılı veriler için özel kullanıcı arabirimi oluşturmak üzere veri şablonlarının kullanımını destekler.
 
@@ -322,7 +323,7 @@ WPF animasyon desteği, denetimlerin büyümesi, sallanması, dönmesi ve belirm
 
 Daha fazla bilgi için bkz. [animasyon genel bakış](graphics-multimedia/animation-overview.md).
 
-## <a name="media"></a>Medyasını
+## <a name="media"></a>Ortam
 
 Zengin içerik iletmenin bir yolu, Audiovisual medyası kullanmaktır. WPF, görüntüler, videolar ve ses için özel destek sağlar.
 
@@ -438,7 +439,7 @@ Aşağıdaki örnek, <xref:System.Windows.Controls.ControlTemplate>kullanarak <x
 [!code-csharp[IntroToWPFSnippets#ButtonControlTemplateWindowCODEBEHIND](~/samples/snippets/csharp/wpf/introduction-to-wpf/introduction-to-wpf_17.cs)]
 [!code-vb[IntroToWPFSnippets#ButtonControlTemplateWindowCODEBEHIND](~/samples/snippets/visualbasic/wpf/introduction-to-wpf/introduction-to-wpf_17.vb)]
 
-Bu örnekte, varsayılan düğme Kullanıcı arabirimi koyu mavi kenarlığa sahip bir <xref:System.Windows.Shapes.Ellipse> değiştirilmiştir ve <xref:System.Windows.Media.RadialGradientBrush> kullanılarak doldurulmuştur. <xref:System.Windows.Controls.ContentPresenter> denetim <xref:System.Windows.Controls.Button>içeriğini görüntüler, "bana tıklayın!" <xref:System.Windows.Controls.Button> tıklandığında, <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay <xref:System.Windows.Controls.Button> denetiminin varsayılan davranışının parçası olarak yine de oluşturulur. Sonuç aşağıdaki şekilde gösterilmiştir:
+Bu örnekte, varsayılan düğme Kullanıcı arabirimi koyu mavi kenarlığa sahip bir <xref:System.Windows.Shapes.Ellipse> değiştirilmiştir ve <xref:System.Windows.Media.RadialGradientBrush>kullanılarak doldurulmuştur. <xref:System.Windows.Controls.ContentPresenter> denetim <xref:System.Windows.Controls.Button>içeriğini görüntüler, "bana tıklayın!" <xref:System.Windows.Controls.Button> tıklandığında, <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay <xref:System.Windows.Controls.Button> denetiminin varsayılan davranışının parçası olarak yine de oluşturulur. Sonuç aşağıdaki şekilde gösterilmiştir:
 
 ![Elips düğme ve ikinci bir pencere](media/introduction-to-wpf/wpfintrofigure2.png)
 
@@ -448,7 +449,7 @@ Bir denetim şablonu bir denetimin görünümünü belirtmenize izin verirken, b
 
 ![Varsayılan görünümü içeren bir liste kutusu](media/introduction-to-wpf/wpfintrofigure18.png)
 
-Varsayılan görünüm, <xref:System.Windows.Controls.ListBox> beklediğiniz şeydir. Ancak, her görevin varsayılan görünümü yalnızca görev adını içerir. Görev adını, açıklamasını ve önceliğini göstermek için, <xref:System.Windows.Controls.ListBox> denetiminin bağlantılı liste öğelerinin varsayılan görünümünün bir <xref:System.Windows.DataTemplate> kullanılarak değiştirilmesi gerekir. Aşağıdaki XAML, <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> özniteliği kullanılarak her bir göreve uygulanan böyle bir <xref:System.Windows.DataTemplate>tanımlar:
+Varsayılan görünüm, <xref:System.Windows.Controls.ListBox>beklediğiniz şeydir. Ancak, her görevin varsayılan görünümü yalnızca görev adını içerir. Görev adını, açıklamasını ve önceliğini göstermek için, <xref:System.Windows.Controls.ListBox> denetiminin bağlantılı liste öğelerinin varsayılan görünümünün bir <xref:System.Windows.DataTemplate>kullanılarak değiştirilmesi gerekir. Aşağıdaki XAML, <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> özniteliği kullanılarak her bir göreve uygulanan böyle bir <xref:System.Windows.DataTemplate>tanımlar:
 
 ```xaml
 <Window
@@ -568,7 +569,7 @@ Aşağıdaki örnek, bir <xref:System.Windows.Controls.Button> ve <xref:System.W
 </Window>
 ```
 
-Bu örnek `Window.Resources` Property öğesini kullanarak bir arka plan rengi kaynağı uygular. Bu kaynak <xref:System.Windows.Window> tüm alt öğeleri için kullanılabilir. Aşağıdakiler de dahil olmak üzere çeşitli kaynak kapsamları çözümlendikleri sırayla listelenmiştir:
+Bu örnek `Window.Resources` Property öğesini kullanarak bir arka plan rengi kaynağı uygular. Bu kaynak <xref:System.Windows.Window>tüm alt öğeleri için kullanılabilir. Aşağıdakiler de dahil olmak üzere çeşitli kaynak kapsamları çözümlendikleri sırayla listelenmiştir:
 
 1. Tek bir denetim (devralınan <xref:System.Windows.FrameworkElement.Resources%2A?displayProperty=fullName> özelliğini kullanarak).
 
@@ -649,7 +650,7 @@ Aşağıdaki şekilde, <xref:System.Windows.Window>barındırılan `NumericUpDow
 
 ## <a name="wpf-best-practices"></a>WPF en iyi uygulamaları
 
-Her türlü geliştirme platformunda olduğu gibi, WPF istenen sonuca ulaşmak için çeşitli yollarla kullanılabilir. WPF uygulamalarınızın gerekli Kullanıcı deneyimini sağlayıp, genel olarak hedef kitle taleplerini karşıladığından emin olmanın bir yolu olarak erişilebilirlik, Genelleştirme ve yerelleştirme ve performans için önerilen en iyi uygulamalar vardır. Daha fazla bilgi için bkz.:
+Her türlü geliştirme platformunda olduğu gibi, WPF istenen sonuca ulaşmak için çeşitli yollarla kullanılabilir. WPF uygulamalarınızın gerekli Kullanıcı deneyimini sağlayıp, genel olarak hedef kitle taleplerini karşıladığından emin olmanın bir yolu olarak erişilebilirlik, Genelleştirme ve yerelleştirme ve performans için önerilen en iyi uygulamalar vardır. Daha fazla bilgi için bkz.
 
 - [Erişilebilirlik](../ui-automation/accessibility-best-practices.md)
 - [WPF Genelleştirme ve yerelleştirme](advanced/wpf-globalization-and-localization-overview.md)

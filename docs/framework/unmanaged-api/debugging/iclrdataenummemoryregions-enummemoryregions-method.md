@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22d2e339-f174-40b5-a478-0b744501566f
 topic_type:
 - apiref
-ms.openlocfilehash: 693ec07176f80711709cd9b85c6886bea8be74b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f2b2bbe8bcecf71f6d3016fb35dfbf5ba1353aea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122960"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785632"
 ---
 # <a name="iclrdataenummemoryregionsenummemoryregions-method"></a>ICLRDataEnumMemoryRegions::EnumMemoryRegions Yöntemi
 Belirtilen bellek alanını numaralandırır.  
@@ -37,7 +37,7 @@ HRESULT EnumMemoryRegions (
   
 ## <a name="parameters"></a>Parametreler  
  `callback`  
- 'ndaki Bir [ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) örneğine, sonucun hata ayıklayıcısını bildirmek üzere numaralandırılmakta olan her bellek bölgesi için bu yöntem tarafından çağrılan bir işaretçi.  
+ 'ndaki Bir [ICLRDataEnumMemoryRegionsCallback](iclrdataenummemoryregionscallback-interface.md) örneğine, sonucun hata ayıklayıcısını bildirmek üzere numaralandırılmakta olan her bellek bölgesi için bu yöntem tarafından çağrılan bir işaretçi.  
   
  Geri arama bir hata gösteriyorsa bile, bellek bölümlerinin numaralandırılması devam eder.  
   
@@ -45,10 +45,10 @@ HRESULT EnumMemoryRegions (
  'ndaki Kullanılmıyor.  
   
  `clrFlags`  
- 'ndaki Numaralandırılacak bellek bölgelerini belirten [CLRDataEnumMemoryFlags](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md) numaralandırması değeri.  
+ 'ndaki Numaralandırılacak bellek bölgelerini belirten [CLRDataEnumMemoryFlags](clrdataenummemoryflags-enumeration.md) numaralandırması değeri.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, sonuçları çağırana bildirmek için belirtilen [ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) örneğini kullanır.  
+ Bu yöntem, sonuçları çağırana bildirmek için belirtilen [ICLRDataEnumMemoryRegionsCallback](iclrdataenummemoryregionscallback-interface.md) örneğini kullanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -61,4 +61,4 @@ HRESULT EnumMemoryRegions (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRDataEnumMemoryRegions Arabirimi](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-interface.md)
+- [ICLRDataEnumMemoryRegions Arabirimi](iclrdataenummemoryregions-interface.md)

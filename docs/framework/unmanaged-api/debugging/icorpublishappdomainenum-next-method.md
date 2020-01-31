@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: 0553d8b07e3a16dc31474b5470ba2dd8ba365cb2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c8866e98be0dd064138acdf5e0f6fb9c339fb3d2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140507"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790642"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next Yöntemi
 Geçerli konumdan başlayarak, işlemde mevcut olan uygulama etki alanı sayısını alır.  
@@ -41,7 +41,7 @@ HRESULT Next (
  'ndaki Alınacak öğe sayısı.  
   
  `objects`  
- dışı Her biri bir uygulama etki alanını temsil eden [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) nesneleri dizisine yönelik bir işaretçi.  
+ dışı Her biri bir uygulama etki alanını temsil eden [ICorPublishAppDomain](icorpublishappdomain-interface.md) nesneleri dizisine yönelik bir işaretçi.  
   
  `pceltFetched`  
  dışı Aslında döndürülen uygulama etki alanlarının sayısına yönelik işaretçi. `celt` bir tane ise bu değer null olabilir.  
@@ -57,4 +57,4 @@ HRESULT Next (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorPublishAppDomainEnum Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)
+- [ICorPublishAppDomainEnum Arabirimi](icorpublishappdomainenum-interface.md)

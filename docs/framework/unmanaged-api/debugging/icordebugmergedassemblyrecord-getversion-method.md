@@ -2,12 +2,12 @@
 title: 'Icordebugmergedassemblyrecord:: GetVersion yöntemi'
 ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
-ms.openlocfilehash: 0c89d0749281da412bbf71400d51bee1ed651fbe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8b5995183be7f1c992cf3230e16456cb248eff0c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129764"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793076"
 ---
 # <a name="icordebugmergedassemblyrecordgetversion-method"></a>Icordebugmergedassemblyrecord:: GetVersion yöntemi
 Derlemenin sürüm bilgilerini alır.  
@@ -53,5 +53,5 @@ HRESULT GetVersion(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugMergedAssemblyRecord Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMergedAssemblyRecord Arabirimi](icordebugmergedassemblyrecord-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

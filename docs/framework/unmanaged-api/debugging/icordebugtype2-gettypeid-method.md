@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b933686-226e-4373-92b7-fac579ee7b1a
 topic_type:
 - apiref
-ms.openlocfilehash: 944313893d88b8eff97291d2517e4863a5ae958a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 631f605fd18559b36071964e35a15761cd4c8228
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092758"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791237"
 ---
 # <a name="icordebugtype2gettypeid-method"></a>ICorDebugType2:: GetTypeId metodu
-Bu tür için bir [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) alır.  
+Bu tür için bir [COR_TYPEID](cor-typeid-structure.md) alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,19 +35,19 @@ HRESULT GetTypeID(
   
 ## <a name="parameters"></a>Parametreler  
  `id`  
- dışı Bu ICorDebugType için [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) işaretçisi.  
+ dışı Bu ICorDebugType için [COR_TYPEID](cor-typeid-structure.md) işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Dönüş değeri `S_OK` başarılı veya hata durumunda bir hata `HRESULT`. `HRESULT` kodları şunları içerir:  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
-|`S_OK`|Yöntem başarılı oldu. Yöntem geçerli bir [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)aldı.|  
+|`S_OK`|Yöntem başarılı oldu. Yöntem geçerli bir [COR_TYPEID](cor-typeid-structure.md)aldı.|  
 |`CORDBG_E_CLASS_NOT_LOADED`|Tür yüklenmedi.|  
 |`CORDBG_E_UNSUPPORTED`|Tür desteklenmiyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, çalışma zamanına yüklenmiş bir türü tanımlayan donuk bir tanıtıcı işlevi gören ICorDebugType 'dan bir eşleme sağlar. Bu, çalışma zamanına yüklenmiş veya çalışma zamanına yüklenmiş bir türü tanımlayan opak bir tanıtıcı görevi gören bir [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md).  
+ Bu yöntem, çalışma zamanına yüklenmiş olan [COR_TYPEID](cor-typeid-structure.md)veya bir tür çalışma zamanına yüklenmiş bir türü tanımlayan donuk bir tanıtıcı görevi gören ICorDebugType öğesinden bir eşleme sağlar.  
   
  ICorDebugType 'ın gösterdiği tür henüz yüklenmediği zaman, bu yöntem `CORDBG_E_CLASS_NOT_LOADED`döndürür.  Tür desteklenmiyorsa `CORDBG_E_UNSUPPORTED`döndürür.  
   
@@ -62,4 +62,4 @@ HRESULT GetTypeID(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugType2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)
+- [ICorDebugType2 Arabirimi](icordebugtype2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5854bfb2-c568-4f19-904a-7c9d41e7b995
 topic_type:
 - apiref
-ms.openlocfilehash: fe204bbe6154bf3d512a998818cf053d1e96ab3d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c7b52954a6be449de0c3633f0ac648980c6d13f6
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433539"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865928"
 ---
 # <a name="icorprofilercallbackruntimeresumestarted-method"></a>ICorProfilerCallback::RuntimeResumeStarted Yöntemi
 Profil oluşturucuyu çalışma zamanının tüm çalışma zamanı iş parçacıklarını sürdürmeye devam etgeldiğini bildirir.  
@@ -42,5 +42,5 @@ HRESULT RuntimeResumeStarted();
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [RuntimeResumeFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)
+- [ICorProfilerCallback Arabirimi](icorprofilercallback-interface.md)
+- [RuntimeResumeFinished Yöntemi](icorprofilercallback-runtimeresumefinished-method.md)

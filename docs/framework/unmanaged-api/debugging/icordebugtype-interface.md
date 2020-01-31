@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 94e02e31-67ea-4b00-8148-a46740a4571d
 topic_type:
 - apiref
-ms.openlocfilehash: 4f3f553ed5dc93433610365e0dae5bee54863de5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8210e67f4bdd615ff65d9bd3474043fc45fd8883
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129620"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791253"
 ---
 # <a name="icordebugtype-interface"></a>ICorDebugType Arabirimi
 Temel veya karmaşık (yani Kullanıcı tanımlı) bir türü temsil eder. Tür geneldir ise, `ICorDebugType` örneklenmiş genel türü temsil eder.  
@@ -28,13 +28,13 @@ Temel veya karmaşık (yani Kullanıcı tanımlı) bir türü temsil eder. Tür 
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[EnumerateTypeParameters Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-enumeratetypeparameters-method.md)|Bu `ICorDebugType`tarafından başvurulan sınıfın genel <xref:System.Type> parametrelerine başvuran bir ICorDebugTypeEnum için bir arabirim işaretçisi alır.|  
-|[GetBase Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getbase-method.md)|Bu `ICorDebugType`tarafından başvurulan sınıfın temel sınıfına başvuran bir `ICorDebugType` için bir arabirim işaretçisi alır, varsa.|  
-|[GetClass Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)|Bu `ICorDebugType`türü belirtilmiş oluşturucuya başvuran bir ICorDebugClass için bir arabirim işaretçisi alır.|  
-|[GetFirstTypeParameter Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getfirsttypeparameter-method.md)|Bu `ICorDebugType`tarafından başvurulan sınıfın oluşturucusunun ilk genel <xref:System.Type> parametresine başvuran bir `ICorDebugType` için bir arabirim işaretçisi alır.|  
-|[GetRank Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getrank-method.md)|Bir dizi türündeki boyut sayısını alır.|  
-|[GetStaticFieldValue Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md)|Belirtilen yığın çerçevesindeki belirtilen alan belirtecinin başvurduğu statik alanın değerini içeren bir ICorDebugValue için bir arabirim işaretçisi alır.|  
-|[GetType Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)|Bu `ICorDebugType`başvurduğu ortak dil çalışma zamanının yerel türünü tanımlayan bir CorElementType değeri alır <xref:System.Type>.|  
+|[EnumerateTypeParameters Yöntemi](icordebugtype-enumeratetypeparameters-method.md)|Bu `ICorDebugType`tarafından başvurulan sınıfın genel <xref:System.Type> parametrelerine başvuran bir ICorDebugTypeEnum için bir arabirim işaretçisi alır.|  
+|[GetBase Yöntemi](icordebugtype-getbase-method.md)|Bu `ICorDebugType`tarafından başvurulan sınıfın temel sınıfına başvuran bir `ICorDebugType` için bir arabirim işaretçisi alır, varsa.|  
+|[GetClass Yöntemi](icordebugtype-getclass-method.md)|Bu `ICorDebugType`türü belirtilmiş oluşturucuya başvuran bir ICorDebugClass için bir arabirim işaretçisi alır.|  
+|[GetFirstTypeParameter Yöntemi](icordebugtype-getfirsttypeparameter-method.md)|Bu `ICorDebugType`tarafından başvurulan sınıfın oluşturucusunun ilk genel <xref:System.Type> parametresine başvuran bir `ICorDebugType` için bir arabirim işaretçisi alır.|  
+|[GetRank Yöntemi](icordebugtype-getrank-method.md)|Bir dizi türündeki boyut sayısını alır.|  
+|[GetStaticFieldValue Yöntemi](icordebugtype-getstaticfieldvalue-method.md)|Belirtilen yığın çerçevesindeki belirtilen alan belirtecinin başvurduğu statik alanın değerini içeren bir ICorDebugValue için bir arabirim işaretçisi alır.|  
+|[GetType Yöntemi](icordebugtype-gettype-method.md)|Bu `ICorDebugType`başvurduğu ortak dil çalışma zamanının yerel türünü tanımlayan bir CorElementType değeri alır <xref:System.Type>.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Tür geneldir ise `ICorDebugClass` örneklenmiş türü temsil eder. `ICorDebugType` arabirimi bir örneklenmiş genel türü temsil eder. Örneğin, Hashtable\<K, V > `ICorDebugClass`tarafından temsil edilebilir, ancak Hashtable\<Int32, String > ise `ICorDebugType`olarak temsil edilir.  
@@ -55,4 +55,4 @@ Temel veya karmaşık (yani Kullanıcı tanımlı) bir türü temsil eder. Tür 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

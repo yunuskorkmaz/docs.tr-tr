@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 2e27082ba4c35bc10eb65139b2af6c81c10d79a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b46a04d67f59c5031b5bd195cef4cc2275e1e5e0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739128"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793804"
 ---
 # <a name="dacpmoduledata-structure"></a>DacpModuleData Yapısı
 
-Bir modülün çalışma zamanı bilgileri için transport arabellek tanımlar.
+Modülün çalışma zamanı bilgileri için bir aktarım arabelleği tanımlar.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -44,22 +44,22 @@ struct DacpModuleData
 
 | Üye    | Açıklama                                                             |
 | --------- | ----------------------------------------------------------------------- |
-| `Address` | Modülü nesnesi adresi.                                           |
-| `File`    | Taşınabilir yürütülebilir (PE) dosyası için bir işaretçi.                       |
-| `ilBase`  | Yüklenen görüntü adresini temel.                                 |
-| `payLoad` | Çalışma zamanı tarafından kullanılan modül ek bilgi için yükü arabellek. |
+| `Address` | Modül nesnesinin adresi.                                           |
+| `File`    | Taşınabilir çalıştırılabilir (PE) dosyasına yönelik bir işaretçi.                       |
+| `ilBase`  | Yüklenen görüntünün tabanının adresi.                                 |
+| `payLoad` | Çalışma zamanı tarafından kullanılan ek modül bilgileri için yük arabelleği. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler veya kitaplık dosyaları gösterilmez. Bunu kullanmak için yukarıda belirtildiği gibi yapısını tanımlar.
+Bu yapı çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez. Kullanmak için, yapıyı yukarıda belirtilen şekilde tanımlayın.
 
 ## <a name="requirements"></a>Gereksinimler
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** None  
-**Kitaplığı:** Yok.  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Hata Ayıklama](index.md)
+- [Hata Ayıklama Yapıları](debugging-structures.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26fb69f8-1467-4711-bd24-cb117c63938f
 topic_type:
 - apiref
-ms.openlocfilehash: c084a3fcbbc02504124a511c6e136be32f408d21
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7eda9bfff6de6b386c16ad0a188931d9d3adcb93
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73112319"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793666"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>ICLRDataTarget2::FreeVirtual Yöntemi
 Daha önce hedef işlemin adres alanında ayrılan belleği boşaltmak için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağırılır.  
@@ -61,5 +61,5 @@ HRESULT FreeVirtual(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRDataTarget2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
-- [AllocVirtual Yöntemi](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)
+- [ICLRDataTarget2 Arabirimi](iclrdatatarget2-interface.md)
+- [AllocVirtual Yöntemi](iclrdatatarget2-allocvirtual-method.md)

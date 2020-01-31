@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b69f945-263a-4e11-8512-89d27f6ea296
 topic_type:
 - apiref
-ms.openlocfilehash: 07919398b658d735fe4c9818ab24d27d586b6629
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 33acc4d9a0819c43d17c362fcbea2e7636521fd3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122557"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792928"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 Arabirimi
 Dinamik modül için simge okuyucu oluşturur.  
@@ -41,7 +41,7 @@ interface ICorDebugModule3 : IUnknown
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ICorDebugModule3::CreateReaderForInMemorySymbols Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|Dinamik bir modül için bir sembol okuyucu (genellikle [ıstreamunmanagedreader arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) oluşturur.|  
+|[ICorDebugModule3::CreateReaderForInMemorySymbols Yöntemi](icordebugmodule3-createreaderforinmemorysymbols-method.md)|Dinamik bir modül için bir sembol okuyucu (genellikle [ıstreamunmanagedreader arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) oluşturur.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu arabirim "ICorDebugModule" ve "ICorDebugModule2" arabirimlerini mantıksal olarak genişletir.  
@@ -60,7 +60,7 @@ interface ICorDebugModule3 : IUnknown
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugRemoteTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemoteTarget Arabirimi](icordebugremotetarget-interface.md)
+- [ICorDebug Arabirimi](icordebug-interface.md)
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

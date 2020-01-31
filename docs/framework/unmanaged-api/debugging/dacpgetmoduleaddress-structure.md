@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 145b06f89b45b165b9d6329a4c16ac5739406113
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e3a62de3259c012438c64ece26e696682ec96e6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739186"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789199"
 ---
 # <a name="dacpgetmoduleaddress-structure"></a>DacpGetModuleAddress yapısı
 
-Bir modül adresi isteği için bir kapsayıcı tanımlar.
+Modül adresi isteği için kapsayıcıyı tanımlar.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,25 +41,25 @@ struct DacpGetModuleAddress
 
 | Üye      | Açıklama                |
 | ----------- | -------------------------- |
-| `ModulePtr` | Modül işaretçisi. |
+| `ModulePtr` | Modülün işaretçisi. |
 
 ## <a name="methods"></a>Yöntemler
 
 | Yöntem                                                                                               | Açıklama                                                                    |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| [İstek](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-request-method.md) | Belirtilen çalışma zamanı yapısı yapısından doldurmak için bir istek gerçekleştirir. |
+| [İstek](dacpgetmoduleaddress-request-method.md) | Yapıyı verilen çalışma zamanı yapısından doldurma isteği gerçekleştirir. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler veya kitaplık dosyaları gösterilmez. Bunu kullanmak için yapı, yukarıda belirtildiği gibi burada tanımlarsınız `CLRDATA_ADDRESS` 64-bit işaretsiz tamsayıdır.
+Bu yapı çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez. Kullanmak için, yapıyı yukarıda belirtilen şekilde tanımlayın, burada `CLRDATA_ADDRESS` 64 bitlik işaretsiz bir tamsayıdır.
 
 ## <a name="requirements"></a>Gereksinimler
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** None  
-**Kitaplığı:** None  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Hata Ayıklama](index.md)
+- [Hata Ayıklama Yapıları](debugging-structures.md)

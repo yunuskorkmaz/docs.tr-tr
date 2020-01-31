@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714765"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743910"
 ---
 # <a name="methods-c-programming-guide"></a>Yöntemler (C# Programlama Kılavuzu)
 
@@ -44,7 +44,7 @@ Yöntem tanımı, gerekli parametrelerin adlarını ve türlerini belirtir. Kodu
 
 ## <a name="passing-by-reference-vs-passing-by-value"></a>Başvuruya göre geçirme-değere göre geçirme
 
-Varsayılan olarak, bir değer türü bir yönteme geçirildiğinde nesnenin kendisi yerine bir kopya geçirilir. Bu nedenle, bağımsız değişkende yapılan değişikliklerin, çağırma yönteminde orijinal kopya üzerinde hiçbir etkisi yoktur. Ref anahtar sözcüğünü kullanarak bir değer türü başvuruya göre geçirebilirsiniz. Daha fazla bilgi için bkz. [değer türü parametrelerini geçirme](./passing-value-type-parameters.md). Yerleşik değer türlerinin bir listesi için bkz. [değer türleri tablosu](../../language-reference/keywords/value-types-table.md).
+Varsayılan olarak, bir [değer türü](../../language-reference/builtin-types/value-types.md) örneği bir yönteme geçirildiğinde, kopyasının kendisi yerine geçirilir. Bu nedenle, bağımsız değişkende yapılan değişikliklerin, çağırma yönteminde orijinal örnek üzerinde hiçbir etkisi yoktur. Değer türü örneği başvuruya göre geçirmek için `ref` anahtar sözcüğünü kullanın. Daha fazla bilgi için bkz. [değer türü parametrelerini geçirme](./passing-value-type-parameters.md).
 
 Başvuru türündeki bir nesne yöntemine geçirildiğinde, nesnesine bir başvuru geçirilir. Diğer bir deyişle, yöntem nesnenin kendisini değil, nesnenin konumunu gösteren bir bağımsız değişken alır. Bu başvuruyu kullanarak nesnesinin bir üyesini değiştirirseniz, nesneyi değere göre iletseniz bile, değişiklik çağırma yöntemindeki bağımsız değişkende yansıtılır.
 

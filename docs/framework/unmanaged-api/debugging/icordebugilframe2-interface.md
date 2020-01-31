@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f94b9d53-d8f8-4424-a95e-53a1bfd26e4a
 topic_type:
 - apiref
-ms.openlocfilehash: 08c2946a9bd6251f377ea594c0c3ca5d1bd98c67
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c5fa0a67309e23c02393b70d849af3884dfd0adf
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095085"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788536"
 ---
 # <a name="icordebugilframe2-interface"></a>ICorDebugILFrame2 Arabirimi
 
@@ -29,8 +29,8 @@ ICorDebugILFrame arabiriminin mantıksal uzantısı.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[EnumerateTypeParameters Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Bu çerçevede <xref:System.Type> parametrelerini içeren bir ICorDebugTypeEnum nesnesi alır.|  
-|[RemapFunction Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|Yeni MSIL sapmasını belirterek düzenlenmiş bir işlevi yeniden eşler.|  
+|[EnumerateTypeParameters Yöntemi](icordebugilframe2-enumeratetypeparameters-method.md)|Bu çerçevede <xref:System.Type> parametrelerini içeren bir ICorDebugTypeEnum nesnesi alır.|  
+|[RemapFunction Yöntemi](icordebugilframe2-remapfunction-method.md)|Yeni MSIL sapmasını belirterek düzenlenmiş bir işlevi yeniden eşler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -48,4 +48,4 @@ ICorDebugILFrame arabiriminin mantıksal uzantısı.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52794819-0a59-4bb1-a265-0f158cd5cd65
 topic_type:
 - apiref
-ms.openlocfilehash: 8ff7d5a593388bd3a584e031aea411dfdb6c9845
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0851ac33a2bac4fcf727cf09e5225f6b83481b50
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445205"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866682"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished Yöntemi
 Profil oluşturucuyu bir uygulama etki alanının bir işlemden kaldırılmış olduğunu bildirir.  
@@ -33,15 +33,18 @@ HRESULT AppDomainShutdownFinished(
     [in] HRESULT     hrStatus);  
 ```  
   
-## <a name="parameters"></a>Parametreler  
- `appDomainId`  
- 'ndaki Uygulamanın derlemelerinin depolandığı etki alanını tanımlar.  
-  
- `hrStatus`  
- 'ndaki Uygulama etki alanının başarıyla yüklenip yüklenmediğini gösteren bir HRESULT.  
-  
+## <a name="parameters"></a>Parametreler
+
+- `appDomainId`
+
+  \[içinde], uygulamanın derlemelerinin depolandığı etki alanını tanımlar.
+
+- `hrStatus`
+
+  \[) uygulama etki alanının başarıyla yüklenip yüklenmediğini gösteren bir HRESULT.
+
 ## <a name="remarks"></a>Açıklamalar  
- `appDomainId` değeri, [ICorProfilerCallback:: AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) yöntemi döndürüldüğünden bir bilgi isteği için geçerli değildir.  
+ `appDomainId` değeri, [ICorProfilerCallback:: AppDomainShutdownStarted](icorprofilercallback-appdomainshutdownstarted-method.md) yöntemi döndürüldüğünden bir bilgi isteği için geçerli değildir.  
   
  Uygulama etki alanını kaldırma işleminin bazı bölümleri `AppDomainCreationFinished` geri çağrısından sonra devam edebilir. `hrStatus` HRESULT hatası, bir hatayı gösterir. Ancak `hrStatus` başarılı bir HRESULT, yalnızca uygulama etki alanını kaldırmayı ilk bölümünün başarılı olduğunu gösterir.  
   
@@ -56,4 +59,4 @@ HRESULT AppDomainShutdownFinished(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback Arabirimi](icorprofilercallback-interface.md)

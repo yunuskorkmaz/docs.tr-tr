@@ -2,12 +2,12 @@
 title: 'ICorDebugSymbolProvider:: GetMergedAssemblyRecords yöntemi'
 ms.date: 03/30/2017
 ms.assetid: cc4c510d-550d-4941-af34-81987caf3425
-ms.openlocfilehash: 6faf8960c06488c8fff5a076aae375529e1d0260
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6a537a88bd4ab666eff8b5dda994da96bfcc5e52
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138865"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791621"
 ---
 # <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>ICorDebugSymbolProvider:: GetMergedAssemblyRecords yöntemi
 Tüm birleştirilmiş derlemelerin sembol kayıtlarını alır.  
@@ -30,7 +30,7 @@ HRESULT GetMergedAssemblyRecords(
  dışı Yöntemi tarafından alınan sembol kayıtlarının sayısına yönelik bir işaretçi.  
   
  `pRecords`  
- [Icordebugmergedassemblyrecord](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md) nesnelerinin dizisine yönelik bir işaretçi.  
+ [Icordebugmergedassemblyrecord](icordebugmergedassemblyrecord-interface.md) nesnelerinin dizisine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -48,5 +48,5 @@ HRESULT GetMergedAssemblyRecords(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugSymbolProvider Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider Arabirimi](icordebugsymbolprovider-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: 69288e995ec789091bf089368cd9a60f003df86e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cdf88ef193df71a638fff43add1a9648d8631731
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122981"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789123"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs İşlevi
 Bir işlemdeki CLRs 'yi listelemek için bir mekanizma sağlar.  
@@ -60,7 +60,7 @@ HRESULT EnumerateCLRs (
  E_OUTOFMEMORY  
  İşlev, tanıtıcı ve yol dizileri için yeterli bellek ayıramadı.  
   
- E_FAıL (veya diğer E_ dönüş kodları)  
+ E_FAIL (veya diğer E_ dönüş kodları)  
  Yüklenen CLRs numaralandırılamıyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -68,7 +68,7 @@ HRESULT EnumerateCLRs (
   
  Windows işletim sisteminde `debuggeePID` bir IŞLETIM sistemi işlem tanımlayıcısına eşlenir.  
   
- `ppHandleArrayOut` ve `ppStringArrayOut` bellek bu işlev tarafından ayrılır. Ayrılan belleği serbest bırakmak için [CloseCLREnumeration işlevini](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)çağırmanız gerekir.  
+ `ppHandleArrayOut` ve `ppStringArrayOut` bellek bu işlev tarafından ayrılır. Ayrılan belleği serbest bırakmak için [CloseCLREnumeration işlevini](closeclrenumeration-function.md)çağırmanız gerekir.  
   
  Bu işlev, hedef işlemdeki CLRs sayısını döndürmek için her iki dizi parametresi null olarak ayarlanmış şekilde çağrılabilir. Bu sayımla, bir arayan, oluşturulacak arabelleğin boyutunu çıkarabilir: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   

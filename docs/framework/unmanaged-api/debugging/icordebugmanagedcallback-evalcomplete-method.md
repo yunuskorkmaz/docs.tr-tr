@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f74ab4eb-cd1b-407c-a66d-8ec0d85647f3
 topic_type:
 - apiref
-ms.openlocfilehash: d52c19f8663a776215241ddb16f3aa9ba00c0d36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d29f4095a1d615285f4c4ff30e36b91404036949
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137345"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788408"
 ---
 # <a name="icordebugmanagedcallbackevalcomplete-method"></a>ICorDebugManagedCallback::EvalComplete Yöntemi
 Hata ayıklayıcıya bir değerlendirmenin tamamlandığını bildirir.  
@@ -56,4 +56,4 @@ HRESULT EvalComplete (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback Arabirimi](icordebugmanagedcallback-interface.md)

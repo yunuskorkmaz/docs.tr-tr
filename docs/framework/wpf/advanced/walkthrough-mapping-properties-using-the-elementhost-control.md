@@ -8,16 +8,16 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 7d1cf353f7e6c4b87c13598e7e6029960cd0f715
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 7ff4ff607ab70b55cda1e2c4736ff773d4907a22
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197822"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794111"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>İzlenecek yol: ElementHost Denetimini Kullanarak Özellikleri Eşleme
 
-Bu izlenecek yol, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] özelliklerini barındırılan bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğesinde karşılık gelen özelliklerle eşlemek için <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> özelliğini nasıl kullanacağınızı gösterir.
+Bu izlenecek yol, Windows Forms özelliklerini barındırılan bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğesinde karşılık gelen özelliklerle eşlemek için <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> özelliğini nasıl kullanacağınızı gösterir.
 
 Bu izlenecek yolda gösterilen görevler şunlardır:
 
@@ -31,7 +31,7 @@ Bu izlenecek yolda gösterilen görevler şunlardır:
 
 Bu kılavuzda gösterilen görevlerin tüm kod listesi için bkz. [ElementHost denetim örneğini kullanarak özellikleri eşleme](https://go.microsoft.com/fwlink/?LinkID=160018).
 
-İşiniz bittiğinde, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] özelliklerini barındırılan bir öğede karşılık gelen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellikleriyle eşleyebilirsiniz.
+İşiniz bittiğinde, Windows Forms özelliklerini barındırılan bir öğede karşılık gelen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellikleriyle eşleyebilirsiniz.
 
 ## <a name="prerequisites"></a>Prerequisites
 

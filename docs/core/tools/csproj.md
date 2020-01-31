@@ -2,12 +2,12 @@
 title: .NET Core için csproj biçimine eklemeler
 description: Mevcut ve .NET Core csproj dosyaları arasındaki farklılıklar hakkında bilgi edinin
 ms.date: 04/08/2019
-ms.openlocfilehash: 9d6a7a388cb51bf08996adc654db5722a5ef1303
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 126f5b10999e65d9715e9b52cb54a2bf1dbd3933
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733345"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787872"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core için csproj biçimine eklemeler
 
@@ -15,7 +15,7 @@ Bu belge, Project *. JSON* 'dan *csproj* ve [MSBuild](https://github.com/Microso
 
 ## <a name="implicit-package-references"></a>Örtük paket başvuruları
 
-Meta paketlere, proje dosyanızın `<TargetFramework>` veya `<TargetFrameworks>` özelliğinde belirtilen hedef çatılar temelinde örtülü olarak başvurulur. `<TargetFramework>` belirtilmişse `<TargetFrameworks>` yok sayılır. Daha fazla bilgi için bkz. [paketler, Metapackages ve çerçeveler](../packages.md). 
+Meta paketlere, proje dosyanızın `<TargetFramework>` veya `<TargetFrameworks>` özelliğinde belirtilen hedef çatılar temelinde örtülü olarak başvurulur. `<TargetFramework>` belirtilmişse `<TargetFrameworks>` yok sayılır. Daha fazla bilgi için bkz. [paketler, Metapackages ve çerçeveler](../packages.md).
 
 ```xml
  <PropertyGroup>
@@ -248,7 +248,7 @@ SDK stili projelerde `PreBuild` veya `PostBuild` adlı bir MSBuild hedefi kullan
 ```
 
 > [!NOTE]
->MSBuild hedefleri için herhangi bir ad kullanabilirsiniz, ancak Visual Studio IDE `PreBuild` ve `PostBuild` hedeflerini tanır. bu nedenle, Visual Studio IDE 'de komutları düzenleyebilmeniz için bu adları kullanmanızı öneririz. 
+>MSBuild hedefleri için herhangi bir ad kullanabilirsiniz, ancak Visual Studio IDE `PreBuild` ve `PostBuild` hedeflerini tanır. bu nedenle, Visual Studio IDE 'de komutları düzenleyebilmeniz için bu adları kullanmanızı öneririz.
 
 ## <a name="nuget-metadata-properties"></a>NuGet meta veri özellikleri
 
@@ -321,7 +321,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 Bir SPDX tanımlayıcısı atanmamış bir lisans kullanıyorsanız veya özel bir lisans (Aksi takdirde `PackageLicenseExpression` tercih edilir) paket içindeki bir lisans dosyasının yolu
 
-`PackageLicenseUrl`, `PackageLicenseExpression` ile birleştirilemez ve Visual Studio 15.9.4, .NET SDK 2.1.502 veya 2.2.101 ya da daha yeni bir sürümü gerektirir.
+`PackageLicenseUrl`, `PackageLicenseExpression`ile birleştirilemez ve Visual Studio Version 15.9.4 ve .NET SDK 2.1.502 ya da 2.2.101 ya da daha yeni bir sürüm gerektirir.
 
 Lisans dosyasının paketlenmiş olduğundan emin olmanız gerekir, bu işlem, örnek kullanım:
 
@@ -427,7 +427,7 @@ Genellikle *AssemblyInfo* dosyasında bulunan [derleme öznitelikleri](../../sta
 
 ### <a name="properties-per-attribute"></a>Öznitelik başına Özellikler
 
-Her öznitelik, aşağıdaki tabloda gösterildiği gibi, içeriğini denetleyen ve diğeri oluşturmayı devre dışı bırakan bir özelliğe sahiptir:
+Aşağıdaki tabloda gösterildiği gibi, her öznitelik, içeriğini denetleyen ve diğeri oluşturmayı devre dışı bırakan bir özelliğe sahiptir:
 
 | Öznitelik                                                      | Özellik               | Devre dışı bırakılacak Özellik                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c02338fe-da6c-467f-9567-70ebb387e901
 topic_type:
 - apiref
-ms.openlocfilehash: cee421ef7d7c856ba90dc21f4e9dc25ae6fe1a9b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e1bb5a6fd0550f7c25d46fa31ca11a10cec54986
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140193"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791069"
 ---
 # <a name="icordebugvaluebreakpoint-interface"></a>ICorDebugValueBreakpoint Arabirimi
 Belirli değerlere erişim sağlamak için ICorDebugBreakpoint arabirimini genişletir.  
@@ -28,7 +28,7 @@ Belirli değerlere erişim sağlamak için ICorDebugBreakpoint arabirimini geni�
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetValue Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvaluebreakpoint-getvalue-method.md)|Kesme noktasının ayarlandığı nesnenin değerini temsil eden ICorDebugValue nesnesine yönelik bir arabirim işaretçisi alır.|  
+|[GetValue Yöntemi](icordebugvaluebreakpoint-getvalue-method.md)|Kesme noktasının ayarlandığı nesnenin değerini temsil eden ICorDebugValue nesnesine yönelik bir arabirim işaretçisi alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -46,4 +46,4 @@ Belirli değerlere erişim sağlamak için ICorDebugBreakpoint arabirimini geni�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

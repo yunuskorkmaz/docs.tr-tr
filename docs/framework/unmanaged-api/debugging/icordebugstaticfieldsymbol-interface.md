@@ -2,12 +2,12 @@
 title: ICorDebugStaticFieldSymbol Arabirimi
 ms.date: 03/30/2017
 ms.assetid: c0b93609-631e-4b15-878a-189ede922631
-ms.openlocfilehash: 0891df1fc0528ff485605b2c4168fcff0adff990
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b50b9c8435f19e1a77229f01dc85514f5f75c9f5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131700"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791800"
 ---
 # <a name="icordebugstaticfieldsymbol-interface"></a>ICorDebugStaticFieldSymbol Arabirimi
 Statik bir alan için hata ayıklama simgesi bilgisini temsil eder.  
@@ -16,9 +16,9 @@ Statik bir alan için hata ayıklama simgesi bilgisini temsil eder.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetAddress Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getaddress-method.md)|Statik alanın adresini alır.|  
-|[GetName Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getname-method.md)|Statik alanın adını alır.|  
-|[GetSize Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getsize-method.md)|Statik alanın bayt cinsinden boyutunu alır.|  
+|[GetAddress Yöntemi](icordebugstaticfieldsymbol-getaddress-method.md)|Statik alanın adresini alır.|  
+|[GetName Yöntemi](icordebugstaticfieldsymbol-getname-method.md)|Statik alanın adını alır.|  
+|[GetSize Yöntemi](icordebugstaticfieldsymbol-getsize-method.md)|Statik alanın bayt cinsinden boyutunu alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `ICorDebugStaticFieldSymbol` arabirimi, bir statik alana yönelik hata ayıklama simgesi bilgilerini almak için kullanılır.  
@@ -37,6 +37,6 @@ Statik bir alan için hata ayıklama simgesi bilgisini temsil eder.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugInstanceFieldSymbol Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugInstanceFieldSymbol Arabirimi](icordebuginstancefieldsymbol-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 62eb5d55-53ee-4fb3-8d47-7b6c96808f9e
 topic_type:
 - apiref
-ms.openlocfilehash: 95183701987d3ddec3835a17c5d256c25c2c4c64
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 37bf5abf66b613d8432af84c7d73aff60e9127cb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132074"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791270"
 ---
 # <a name="icordebugtypegetstaticfieldvalue-method"></a>ICorDebugType::GetStaticFieldValue Metodu
 Belirtilen yığın çerçevesindeki belirtilen alan belirtecinin başvurduğu statik alanın değerini içeren bir ICorDebugValue nesnesine bir arabirim işaretçisi alır.  
@@ -46,9 +46,9 @@ HRESULT GetStaticFieldValue (
  dışı Statik alanın değerini içeren `ICorDebugValue` adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetStaticFieldValue` yöntemi, [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) yönteminde gösterildiği gibi yalnızca tür element_type_class veya element_type_valuetype olduğunda kullanılabilir.  
+ `GetStaticFieldValue` yöntemi, [ICorDebugType:: GetType](icordebugtype-gettype-method.md) yönteminde gösterildiği gibi, yalnızca tür ELEMENT_TYPE_CLASS veya element_type_valuetype olduğunda kullanılabilir.  
   
- Genel olmayan türler için, `GetStaticFieldValue` tarafından gerçekleştirilen işlem ICorDebugClass [:: GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) ' ı [ICorDebugType:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)tarafından döndürülen ICorDebugClass nesnesinde çağırma ile aynıdır.  
+ Genel olmayan türler için, `GetStaticFieldValue` tarafından gerçekleştirilen işlem ICorDebugClass [:: GetStaticFieldValue](icordebugclass-getstaticfieldvalue-method.md) ' ı [ICorDebugType:: GetClass](icordebugtype-getclass-method.md)tarafından döndürülen ICorDebugClass nesnesinde çağırma ile aynıdır.  
   
  Genel türler için, statik bir alan değeri belirli bir örnek oluşturma ile göreli olur. Ayrıca, statik alan muhtemelen bir iş parçacığına, bir içeriğe veya bir uygulama etki alanına göreli olabilir, yığın çerçevesi hata ayıklayıcının doğru değeri belirlemesine yardımcı olur.  
   

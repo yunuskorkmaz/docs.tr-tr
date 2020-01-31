@@ -6,22 +6,22 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 9002b508602a219fac80770a27f628bb24150a6b
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ec56d9b9dd4e7582f41aae0089d7be6f2b611031
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741771"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789649"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>İstemci Tarafı UI Otomasyon Sağlayıcıyı Uygulama
 > [!NOTE]
 > Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- Çeşitli farklı [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] çerçeveleri Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]ve [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]dahil olmak üzere Microsoft işletim sistemleri içinde kullanılıyor. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)], istemcilerine yönelik kullanıcı arabirimi öğeleri hakkında bilgi sunar. Ancak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bu çerçevelerde bulunan farklı denetim türlerini ve onlardan bilgi ayıklamak için gereken teknikleri kendi kendine tanıma sahip değildir. Bunun yerine, bu görevi sağlayıcılar adlı nesnelere bırakır. Sağlayıcı, belirli bir denetimden bilgi ayıklar ve bu bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ve böylece istemciye tutarlı bir şekilde sunar.  
+ Çeşitli farklı [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] çerçeveleri Win32, Windows Forms ve [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]dahil olmak üzere Microsoft işletim sistemleri içinde kullanılıyor. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)], istemcilerine yönelik kullanıcı arabirimi öğeleri hakkında bilgi sunar. Ancak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bu çerçevelerde bulunan farklı denetim türlerini ve onlardan bilgi ayıklamak için gereken teknikleri kendi kendine tanıma sahip değildir. Bunun yerine, bu görevi sağlayıcılar adlı nesnelere bırakır. Sağlayıcı, belirli bir denetimden bilgi ayıklar ve bu bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ve böylece istemciye tutarlı bir şekilde sunar.  
   
  Sağlayıcılar sunucu tarafında ya da istemci tarafında bulunabilir. Sunucu tarafı sağlayıcı, denetimin kendisi tarafından uygulanır. [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] öğeler, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] göz önünde bulundurularak yazılan üçüncü taraf denetimleri gibi sağlayıcıları uygular.  
   
- Ancak, Win32 ve [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] gibi eski denetimler [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]doğrudan desteklemez. Bu denetimler, istemci işleminde bulunan sağlayıcılar tarafından bunun yerine sunulur ve çapraz işlem iletişimini kullanarak denetimler hakkında bilgi elde eder; Örneğin, denetimlere ve denetimlerine ait Windows iletilerini izleyerek. Bu tür istemci tarafı sağlayıcılar bazen proxy olarak adlandırılır.  
+ Ancak, Win32 ve Windows Forms gibi eski denetimler [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]doğrudan desteklemez. Bu denetimler, istemci işleminde bulunan sağlayıcılar tarafından bunun yerine sunulur ve çapraz işlem iletişimini kullanarak denetimler hakkında bilgi elde eder; Örneğin, denetimlere ve denetimlerine ait Windows iletilerini izleyerek. Bu tür istemci tarafı sağlayıcılar bazen proxy olarak adlandırılır.  
   
  Windows Vista, standart Win32 ve Windows Forms denetimleri için sağlayıcılar sağlar. Ayrıca, bir geri dönüş sağlayıcısı, başka bir sunucu tarafı sağlayıcı veya proxy tarafından sunulmayan ancak Microsoft Etkin Erişilebilirlik uygulamasına sahip olan herhangi bir denetime kısmi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] desteği sağlar. Bu sağlayıcıların tümü otomatik olarak yüklenir ve istemci uygulamaları tarafından kullanılabilir.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: eafae181c74d9f3842f7f0d547bcccbbb28c09e6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 17d47b6242bb12ff5ca3cfbde3e4ec183b9c19fc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132117"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793871"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType Sabit Listesi
 Atık olarak toplanmış bir nesnenin kaynağını tanımlar.  
@@ -60,16 +60,16 @@ typedef enum {
 |`CorHandleStrongSizedByref`|Atık toplama zamanında tüm nesnelerin ve nesne köklerinin toplu kapanışının yaklaşık boyutunu tutan bir güçlü işleyici.|  
 |`CorReferenceStack`|Yönetilen yığından bir başvuru.|  
 |`CorReferenceFinalizer`|Sonlandırıcı sırasından bir başvuru.|  
-|Yalnızca corhandlestrong|Yalnızca tanıtıcı tablosundan güçlü başvurular döndürür. Bu değer yalnızca [ICorDebugProcess5:: EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) yöntemi tarafından kullanılır.|  
-|`CorHandleWeakOnly`|Tanıtıcı tablosundan yalnızca zayıf başvuruları döndürün. Bu değer yalnızca [ICorDebugProcess5:: EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) yöntemi tarafından kullanılır.|  
-|`CorHandleAll`|Tanıtıcı tablosundan tüm başvuruları döndürün. Bu değer yalnızca [ICorDebugProcess5:: EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) yöntemi tarafından kullanılır.|  
+|Yalnızca corhandlestrong|Yalnızca tanıtıcı tablosundan güçlü başvurular döndürür. Bu değer yalnızca [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) yöntemi tarafından kullanılır.|  
+|`CorHandleWeakOnly`|Tanıtıcı tablosundan yalnızca zayıf başvuruları döndürün. Bu değer yalnızca [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) yöntemi tarafından kullanılır.|  
+|`CorHandleAll`|Tanıtıcı tablosundan tüm başvuruları döndürün. Bu değer yalnızca [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) yöntemi tarafından kullanılır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `CorGCReferenceType` numaralandırması aşağıdaki gibi kullanılır:  
   
-- [Cor_gc_reference](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) yapısının `type` alanının değeri olarak, bir başvurunun veya tanıtıcının kaynağını gösterir.  
+- [Cor_gc_reference](cor-gc-reference-structure.md) yapısının `type` alanının değeri olarak, bir başvurunun veya tanıtıcının kaynağını gösterir.  
   
-- [ICorDebugProcess5:: EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) metoduna `types` bağımsız değişkeni olarak, sabit listesine dahil edilecek tanıtıcı türlerini belirtir.  
+- [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) metoduna `types` bağımsız değişkeni olarak, sabit listesine dahil edilecek tanıtıcı türlerini belirtir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -82,4 +82,4 @@ typedef enum {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)

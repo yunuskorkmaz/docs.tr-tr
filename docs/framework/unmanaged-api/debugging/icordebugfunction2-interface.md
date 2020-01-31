@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b936bef-9b75-48bf-859f-42e419c65f1c
 topic_type:
 - apiref
-ms.openlocfilehash: da440b7d2da57511545d3b63700662eb544660fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5364e39f7e0a9b6c9cd10cd8f17bab4a03a4b7af
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137773"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794475"
 ---
 # <a name="icordebugfunction2-interface"></a>ICorDebugFunction2 Arabirimi
 
@@ -29,10 +29,10 @@ Kullanıcı dışı kodu atlayan Yalnızca kendi kodum adım adım hata ayıklam
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[EnumerateNativeCode Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-enumeratenativecode-method.md)|(Henüz uygulanmadı.) Bu ICorDebugFunction2 nesnesinin başvurduğu işlevdeki yerel kod deyimlerini içeren bir ICorDebugCodeEnum için bir arabirim işaretçisi alır.|  
-|[GetJMCStatus Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getjmcstatus-method.md)|Bu işlevin Kullanıcı kodu olarak işaretlenip işaretlenmediğini gösteren bir değer alır.|  
-|[GetVersionNumber Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md)|Bu işlevin Düzenle ve devam et sürümünü alır.|  
-|[SetJMCStatus Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-setjmcstatus-method.md)|Bu işlevi Yalnızca kendi kodum Adımlama için işaretler.|  
+|[EnumerateNativeCode Yöntemi](icordebugfunction2-enumeratenativecode-method.md)|(Henüz uygulanmadı.) Bu ICorDebugFunction2 nesnesinin başvurduğu işlevdeki yerel kod deyimlerini içeren bir ICorDebugCodeEnum için bir arabirim işaretçisi alır.|  
+|[GetJMCStatus Yöntemi](icordebugfunction2-getjmcstatus-method.md)|Bu işlevin Kullanıcı kodu olarak işaretlenip işaretlenmediğini gösteren bir değer alır.|  
+|[GetVersionNumber Yöntemi](icordebugfunction2-getversionnumber-method.md)|Bu işlevin Düzenle ve devam et sürümünü alır.|  
+|[SetJMCStatus Yöntemi](icordebugfunction2-setjmcstatus-method.md)|Bu işlevi Yalnızca kendi kodum Adımlama için işaretler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -50,4 +50,4 @@ Kullanıcı dışı kodu atlayan Yalnızca kendi kodum adım adım hata ayıklam
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

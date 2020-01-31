@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: ac6244b9-54ba-475f-b72a-abed6afc46ec
 topic_type:
 - apiref
-ms.openlocfilehash: 7af3109c822dfe945a60c16d4bd3b764f7550492
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d61d37448930d451b519c93909165e5e16f92765
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131341"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792046"
 ---
 # <a name="icordebugregistersetsetregisters-method"></a>ICorDebugRegisterSet::SetRegisters Yöntemi
 `SetRegisters`, .NET Framework sürüm 2,0 ' de uygulanmamıştır. Bu yöntemi çağırmayın.  
   
 > [!NOTE]
-> [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) veya [ICorDebugNativeFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)gibi daha üst düzey işlemleri kullanın.  
+> [ICorDebugILFrame:: SetIP](icordebugilframe-setip-method.md) veya [ICorDebugNativeFrame:: SetIP](icordebugnativeframe-setip-method.md)gibi daha üst düzey işlemleri kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,5 +49,5 @@ HRESULT SetRegisters (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugRegisterSet Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
-- [ICorDebugRegisterSet2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [ICorDebugRegisterSet Arabirimi](icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 Arabirimi](icordebugregisterset2-interface.md)

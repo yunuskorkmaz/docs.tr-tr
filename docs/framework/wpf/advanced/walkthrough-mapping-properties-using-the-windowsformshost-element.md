@@ -8,16 +8,16 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 94d175ec58f35b7e807786c221437d05c605c0bc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c076937d6431adf1750793d47ece88dc82edf95c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974222"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794109"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>İzlenecek yol: WindowsFormsHost Öğesi Kullanarak Özellikleri Eşleme
 
-Bu izlenecek yol, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliklerini barındırılan bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimindeki ilgili özelliklerle eşlemek için <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> özelliğini nasıl kullanacağınızı gösterir.
+Bu izlenecek yol, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliklerini barındırılan bir Windows Forms denetimindeki ilgili özelliklerle eşlemek için <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> özelliğini nasıl kullanacağınızı gösterir.
 
 Bu izlenecek yolda gösterilen görevler şunlardır:
 
@@ -35,7 +35,7 @@ Bu izlenecek yolda gösterilen görevler şunlardır:
 
 Bu kılavuzda gösterilen görevlerin tüm kod listesi için bkz. [WindowsFormsHost öğesi örneği kullanılarak özellikleri eşleme](https://go.microsoft.com/fwlink/?LinkID=160019).
 
-İşiniz bittiğinde, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliklerini barındırılan bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimindeki ilgili özelliklerle eşleyebilirsiniz.
+İşiniz bittiğinde, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliklerini barındırılan bir Windows Forms denetimindeki ilgili özelliklerle eşleyebilirsiniz.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -53,7 +53,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 ## <a name="defining-the-application-layout"></a>Uygulama yerleşimini tanımlama
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]tabanlı uygulama bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimini barındırmak için <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesini kullanır.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]tabanlı uygulama bir Windows Forms denetimini barındırmak için <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesini kullanır.
 
 ### <a name="to-define-the-application-layout"></a>Uygulama yerleşimini tanımlamak için
 
@@ -83,7 +83,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
      `AddClipMapping` yöntemi <xref:System.Windows.UIElement.Clip%2A> özelliği için yeni bir eşleme ekler.
 
-     `OnClipChange` yöntemi, <xref:System.Windows.UIElement.Clip%2A> özelliğini [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A> özelliğine çevirir.
+     `OnClipChange` yöntemi, <xref:System.Windows.UIElement.Clip%2A> özelliğini Windows Forms<xref:System.Windows.Forms.Control.Region%2A> özelliğine çevirir.
 
      `Window1_SizeChanged` yöntemi pencerenin <xref:System.Windows.FrameworkElement.SizeChanged> olayını işler ve kırpma bölgesini uygulama penceresine uyacak şekilde boyutlandırır.
 
@@ -113,7 +113,7 @@ Varsayılan eşlemeyi kaldırarak ve <xref:System.Windows.Forms.Integration.Wind
 
      `ReplaceFlowDirectionMapping` yöntemi <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliğinin varsayılan eşlemesinin yerini alır.
 
-     `OnFlowDirectionChange` yöntemi, <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliğini [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A> özelliğine çevirir.
+     `OnFlowDirectionChange` yöntemi, <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliğini Windows Forms<xref:System.Windows.Forms.Control.RightToLeft%2A> özelliğine çevirir.
 
      `cb_CheckedChanged` yöntemi <xref:System.Windows.Forms.CheckBox> denetimindeki <xref:System.Windows.Forms.CheckBox.CheckedChanged> olayını işler. <xref:System.Windows.Forms.CheckBox.CheckState%2A> özelliğinin değerine göre <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliğini atar
 
@@ -145,7 +145,7 @@ Daha önce açıklanan yöntemleri <xref:System.Windows.FrameworkElement.Loaded>
 
      `WindowLoaded` yöntemi <xref:System.Windows.FrameworkElement.Loaded> olayını işler ve aşağıdaki başlatmayı gerçekleştirir.
 
-    - Bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox> denetimi oluşturur.
+    - Bir Windows Forms<xref:System.Windows.Forms.CheckBox> denetimi oluşturur.
 
     - Özellik eşlemelerini ayarlamak için izlenecek yolda daha önce tanımladığınız yöntemleri çağırır.
 

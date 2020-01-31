@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca7723db-7c07-4cdd-bd92-fba34928b623
 topic_type:
 - apiref
-ms.openlocfilehash: 805f9a5d1f2590a06bfa929c152bdfd13900531a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 28b9fb5a25981e5e37a5f1bbb797baeac45e0028
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134276"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793571"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach Yöntemi
 Geçerli makine ve çalışma zamanı yapılandırması bağlamında yeni bir işlemin başlatılıp başlatılmayacağını veya belirtilen mevcut işleme iliştirilip mümkün olup olmadığını belirten bir HRESULT döndürür.  
@@ -42,7 +42,7 @@ HRESULT CanLaunchOrAttach (
  'ndaki Win32 hata ayıklaması etkinken başlatmayı planlıyorsanız veya Win32 hata ayıklaması etkin olarak eklemek istiyorsanız `true` geçirin; Aksi takdirde, `false`geçirin.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Hata ayıklama Hizmetleri yeni bir işlem başlatma veya belirli bir işleme ekleme işleminin mümkün olduğunu tespit ederseniz, geçerli makine ve çalışma zamanı yapılandırmasıyla ilgili bilgiler verilir. Olası HRESULT değerleri şunlardır:  
+ Hata ayıklama Hizmetleri, yeni bir işlem başlatmayı veya belirli bir işleme eklemeyi saptarken, geçerli makine ve çalışma zamanı yapılandırmasıyla ilgili bilgiler verildiğinde S_OK. Olası HRESULT değerleri şunlardır:  
   
 - S_OK  
   
@@ -68,4 +68,4 @@ HRESULT CanLaunchOrAttach (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug Arabirimi](icordebug-interface.md)

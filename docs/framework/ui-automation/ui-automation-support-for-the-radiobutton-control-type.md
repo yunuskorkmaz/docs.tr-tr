@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Radio Button control type
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
-ms.openlocfilehash: 416d6d6b9d8e7fbd3b3bb5483ddd8dc22380166c
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 037f237537980f1c68855decf468da54e9a22d14
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741566"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76786108"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>RadioButton Denetim Türü için UI Otomasyon Desteği
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741566"
   
  Radyo düğmesi, bir yuvarlak düğme ve uygulama tanımlı metin (bir etiket), simge veya kullanıcının düğmeyi seçerek yapabileceğini belirten bir bit eşlemden oluşur. Bir uygulama genellikle bir grup kutusunda radyo düğmelerini kullanarak kullanıcının ilgili, birbirini dışlayan seçenekler kümesinden seçim almasına izin verir. Örneğin, uygulama, kullanıcının istemci alanında seçilen metin için bir biçim tercihi seçebileceğiniz bir radyo düğmeleri grubu sunabilir. Kullanıcı, ilgili radyo düğmesini seçerek sola hizalı, sağa hizalı veya ortalanmış bir biçim seçebilir. Genellikle, Kullanıcı bir radyo düğmesi kümesinden tek seferde yalnızca bir seçenek seçebilir.  
   
- Aşağıdaki bölümler, RadioButton denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısını, özellikleri, denetim desenlerini ve olayları tanımlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimleri, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 veya [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]bakılmaksızın tüm liste denetimlerine uygulanır.  
+ Aşağıdaki bölümler, RadioButton denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısını, özellikleri, denetim desenlerini ve olayları tanımlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimleri, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 veya Windows Forms bakılmaksızın tüm liste denetimlerine uygulanır.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyonu ağaç yapısı  

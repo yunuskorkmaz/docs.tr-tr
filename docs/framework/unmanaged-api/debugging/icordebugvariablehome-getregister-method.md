@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5eecd7b-b04c-4266-bff2-7c8771d519a8
 topic_type:
 - apiref
-ms.openlocfilehash: 4c9932c3eeebd0101ee364c9b4d0b0a26862c4b1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 396dd9c017fca6dc7037b43355ba7f726d7390ea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125069"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790984"
 ---
 # <a name="icordebugvariablehomegetregister-method"></a>Icordebugvariablehome:: GetRegister yöntemi
 `VLT_REGISTER`konum türüne sahip bir değişken içeren kaydı alır ve `VLT_REGISTER_RELATIVE`konum türü olan bir değişken için temel kayıt olur.  
@@ -56,5 +56,5 @@ HRESULT GetRegister(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [VariableLocationType Sabit Listesi](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)
-- [ICorDebugVariableHome Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [VariableLocationType Sabit Listesi](variablelocationtype-enumeration.md)
+- [ICorDebugVariableHome Arabirimi](icordebugvariablehome-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-ms.openlocfilehash: d0394d511197c8d0aaa366ce7b791216a3d226bc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c142b9656af2031b10de239645da76835c435655
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120199"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789234"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState Numaralandırması
 Bir iş parçacığının kullanıcı durumunu belirtir.  
@@ -57,7 +57,7 @@ typedef enum CorDebugUserState {
 ## <a name="remarks"></a>Açıklamalar  
  Bir iş parçacığının kullanıcı durumu, iş parçacığının hata ayıklayıcı tarafından incelediği durumdur. Bir iş parçacığında Kullanıcı durumlarının bir birleşimi olabilir.  
   
- Bir iş parçacığının kullanıcı durumunu almak için [ICorDebugThread:: GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) metodunu kullanın.  
+ Bir iş parçacığının kullanıcı durumunu almak için [ICorDebugThread:: GetUserState](icordebugthread-getuserstate-method.md) metodunu kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -70,4 +70,4 @@ typedef enum CorDebugUserState {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)

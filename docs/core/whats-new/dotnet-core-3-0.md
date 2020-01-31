@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: b8aa19a1d422fe7d6accd2b095f15843446599cd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742594"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789898"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -121,7 +121,7 @@ TC etkinleştirildiğinde, bir uygulama başlatıldığında Yöntem derlemesi i
 - Metodun önceden derlenen kodu veya [Readytorun](#readytorun-images)varsa, önceden oluşturulan kod kullanılır.
 - Aksi halde, yöntemi jmesdir. Genellikle, bu yöntemler değer türleri üzerinde genel türlerdir.
   - *Hızlı JIT* daha hızlı (veya daha az iyileştirilmiş) kod üretir. .NET Core 3,0 ' de hızlı JıT, döngüler içermeyen ve başlangıç sırasında tercih edilen yöntemler için varsayılan olarak etkindir.
-  - Tam iyileştirmeli JıT daha yüksek kaliteli (veya daha iyileştirilmiş) kodu daha yavaş üretir. Hızlı JıT 'in kullanılacağı yöntemler için (örneğin, yöntem <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>ile ilişkilendirilebildiği), tam olarak iyileştirmeli JıT kullanılır.
+  - JıT 'i tamamen en iyi duruma getirmek daha yavaş daha yavaş (veya daha iyileştirilmiş) kod üretir. Hızlı JıT 'in kullanılacağı yöntemler için (örneğin, yöntem <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>ile ilişkilendirilebildiği), JıT tam olarak iyileştiriliyor kullanılır.
 
 Sık çağrılan yöntemler için, tam zamanında derleyici arka planda tamamen iyileştirilmiş kod oluşturur. En iyi duruma getirilmiş kod daha sonra bu yöntem için önceden derlenmiş kodun yerini alır.
 
@@ -458,7 +458,7 @@ Tamsayı değer alan `scaleB` IEEE işlemine karşılık gelir, etkin `x * pow(2
 `log2` IEEE işlemine karşılık gelen, Base-2 logaritmasını döndürür. Yuvarlama hatasını en aza indirir.
 
 - <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
-`fma` IEEE işlemine karşılık gelir, bir fkullanılan çarpma eklemesi gerçekleştirir. Yani, tek bir işlem olarak `(x * y) + z`, böylece yuvarlama hatasını en aza indirir. `1e308`döndüren bir örnek `FusedMultiplyAdd(1e308, 2.0, -1e308)`. Normal `(1e308 * 2.0) - 1e308` `double.PositiveInfinity`döndürür.
+`fma` IEEE işlemine karşılık gelir, bir fkullanılan çarpma eklemesi gerçekleştirir. Yani, tek bir işlem olarak `(x * y) + z`, böylece yuvarlama hatasını en aza indirir. Örnek, `1e308`döndüren `FusedMultiplyAdd(1e308, 2.0, -1e308)`. Normal `(1e308 * 2.0) - 1e308` `double.PositiveInfinity`döndürür.
 
 - <xref:System.Math.CopySign(System.Double,System.Double)>\
 `copySign` IEEE işlemine karşılık gelen `x`değerini, ancak `y`işaretini döndürür.

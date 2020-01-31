@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: be86f4b5-418a-4c5c-a67c-97148c65ed8c
 topic_type:
 - apiref
-ms.openlocfilehash: 393ac8c119f111b645e7ccdb6ea94efee7207fa4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b2429052173a187297b67c756213e5d27a79298b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128788"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792598"
 ---
 # <a name="icordebugprocess-interface"></a>ICorDebugProcess Arabirimi
 Yönetilen bir kodu yürüten bir işlemi temsil eder. Bu arabirim, ICorDebugController öğesinin bir alt sınıfıdır.  
@@ -28,23 +28,23 @@ Yönetilen bir kodu yürüten bir işlemi temsil eder. Bu arabirim, ICorDebugCon
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ClearCurrentException Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-clearcurrentexception-method.md)|Belirtilen iş parçacığında geçerli yönetilmeyen özel durumu temizler.|  
-|[EnableLogMessages Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enablelogmessages-method.md)|Hata ayıklayıcıya günlük iletilerinin gönderilmesini sağlar ve devre dışı bırakır.|  
-|[EnumerateAppDomains Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enumerateappdomains-method.md)|İşlemdeki tüm uygulama etki alanlarını numaralandırır.|  
-|[EnumerateObjects Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enumerateobjects-method.md)|Uygulanmadı.|  
-|[GetHandle Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethandle-method.md)|İşlem için bir tanıtıcı alır.|  
-|[GetHelperThreadID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethelperthreadid-method.md)|Hata ayıklayıcının iç yardımcı iş parçacığı için işletim sistemi (OS) iş parçacığı KIMLIĞINI alır.|  
-|[GetID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md)|İşlemin işletim sistemi (OS) KIMLIĞINI alır.|  
-|[GetObject Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getobject-method.md)|Uygulanmadı.|  
-|[GetThread Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthread-method.md)|Belirtilen işletim sistemi iş parçacığı KIMLIĞINE sahip ICorDebugThread örneğini alır.|  
-|[GetThreadContext Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md)|Verilen iş parçacığının bağlamını alır.|  
-|[IsOSSuspended Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-isossuspended-method.md)|Hata ayıklayıcının işlemi durdurmasının bir sonucu olarak iş parçacığının askıya alınıp alınmadığını belirler.|  
-|[IsTransitionStub Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-istransitionstub-method.md)|Bir adresin, yönetilen koda geçişe neden olacak bir saplama içinde olup olmadığını belirler.|  
-|[ModifyLogSwitch Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-modifylogswitch-method.md)|Belirtilen günlük anahtarının önem derecesini ayarlar.|  
-|[ReadMemory Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-readmemory-method.md)|İşlemden belleği okur.|  
-|[SetThreadContext Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md)|Verilen iş parçacığının bağlamını ayarlar.|  
-|[ThreadForFiberCookie Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-threadforfibercookie-method.md)|Kullanım dışı.|  
-|[WriteMemory Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-writememory-method.md)|İşlemdeki bir bellek alanına veri yazar.|  
+|[ClearCurrentException Yöntemi](icordebugprocess-clearcurrentexception-method.md)|Belirtilen iş parçacığında geçerli yönetilmeyen özel durumu temizler.|  
+|[EnableLogMessages Yöntemi](icordebugprocess-enablelogmessages-method.md)|Hata ayıklayıcıya günlük iletilerinin gönderilmesini sağlar ve devre dışı bırakır.|  
+|[EnumerateAppDomains Yöntemi](icordebugprocess-enumerateappdomains-method.md)|İşlemdeki tüm uygulama etki alanlarını numaralandırır.|  
+|[EnumerateObjects Yöntemi](icordebugprocess-enumerateobjects-method.md)|Uygulanmadı.|  
+|[GetHandle Yöntemi](icordebugprocess-gethandle-method.md)|İşlem için bir tanıtıcı alır.|  
+|[GetHelperThreadID Yöntemi](icordebugprocess-gethelperthreadid-method.md)|Hata ayıklayıcının iç yardımcı iş parçacığı için işletim sistemi (OS) iş parçacığı KIMLIĞINI alır.|  
+|[GetID Yöntemi](icordebugprocess-getid-method.md)|İşlemin işletim sistemi (OS) KIMLIĞINI alır.|  
+|[GetObject Yöntemi](icordebugprocess-getobject-method.md)|Uygulanmadı.|  
+|[GetThread Yöntemi](icordebugprocess-getthread-method.md)|Belirtilen işletim sistemi iş parçacığı KIMLIĞINE sahip ICorDebugThread örneğini alır.|  
+|[GetThreadContext Yöntemi](icordebugprocess-getthreadcontext-method.md)|Verilen iş parçacığının bağlamını alır.|  
+|[IsOSSuspended Yöntemi](icordebugprocess-isossuspended-method.md)|Hata ayıklayıcının işlemi durdurmasının bir sonucu olarak iş parçacığının askıya alınıp alınmadığını belirler.|  
+|[IsTransitionStub Yöntemi](icordebugprocess-istransitionstub-method.md)|Bir adresin, yönetilen koda geçişe neden olacak bir saplama içinde olup olmadığını belirler.|  
+|[ModifyLogSwitch Yöntemi](icordebugprocess-modifylogswitch-method.md)|Belirtilen günlük anahtarının önem derecesini ayarlar.|  
+|[ReadMemory Yöntemi](icordebugprocess-readmemory-method.md)|İşlemden belleği okur.|  
+|[SetThreadContext Yöntemi](icordebugprocess-setthreadcontext-method.md)|Verilen iş parçacığının bağlamını ayarlar.|  
+|[ThreadForFiberCookie Yöntemi](icordebugprocess-threadforfibercookie-method.md)|Kullanım dışı.|  
+|[WriteMemory Yöntemi](icordebugprocess-writememory-method.md)|İşlemdeki bir bellek alanına veri yazar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -62,5 +62,5 @@ Yönetilen bir kodu yürüten bir işlemi temsil eder. Bu arabirim, ICorDebugCon
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebug Arabirimi](icordebug-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

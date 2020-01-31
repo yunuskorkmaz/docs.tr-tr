@@ -12,12 +12,12 @@ api_type:
 ms.assetid: aeda0e42-29ee-4ca8-9f21-ac4641677a62
 topic_type:
 - apiref
-ms.openlocfilehash: 5b3950a0c134afc23d51d05bca24c151bcff77ec
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: e77344a99189ec8e234129262d45698c794dc249
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937844"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788509"
 ---
 # <a name="icordebugilframe4getcodeex-method"></a>ICorDebugILFrame4::GetCodeEx Yöntemi
 [.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
@@ -35,13 +35,13 @@ HRESULT GetCodeEx(
   
 ## <a name="parameters"></a>Parametreler  
  `flags`  
- 'ndaki Profiler 'ın ReJIT isteği tarafından tanımlanan ara dilin (IL) çerçeveye dahil edilip edilmeyeceğini belirten bir [ılcodekind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) numaralandırma üyesi.  
+ 'ndaki Profiler 'ın ReJIT isteği tarafından tanımlanan ara dilin (IL) çerçeveye dahil edilip edilmeyeceğini belirten bir [ılcodekind](ilcodekind-enumeration.md) numaralandırma üyesi.  
   
  `ppCode`  
  dışı Bu yığın çerçevesinin yürütüldüğü kodu temsil eden bir "ICorDebugCode" nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem [ICorDebugFrame:: GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md) yöntemine benzer, isteğe bağlı olarak Profiler 'ın ReJIT isteği tarafından tanımlanan koda erişir. Bu yöntemin `flags` bir `ILCODE_ORIGINAL_IL` ile çağrılması [GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)çağırma ile eşdeğerdir; Yöntem belgelenmiş ise, onun Il 'ye erişilemeyecektir. `ILCODE_REJIT_IL`, hata ayıklayıcının profil oluşturucunun ReJIT isteği tarafından tanımlanan Il 'ye erişmesine izin verir. Il görünmüyorsa, `ppCode` **null**olur ve Yöntem `S_OK`döndürür.  
+ Bu yöntem [ICorDebugFrame:: GetCode](icordebugframe-getcode-method.md) yöntemine benzer, isteğe bağlı olarak Profiler 'ın ReJIT isteği tarafından tanımlanan koda erişir. Bu yöntemin `flags` bir `ILCODE_ORIGINAL_IL` ile çağrılması [GetCode](icordebugframe-getcode-method.md)çağırma ile eşdeğerdir; Yöntem belgelenmiş ise, onun Il 'ye erişilemeyecektir. `ILCODE_REJIT_IL`, hata ayıklayıcının profil oluşturucunun ReJIT isteği tarafından tanımlanan Il 'ye erişmesine izin verir. Il görünmüyorsa, `ppCode` **null**olur ve Yöntem `S_OK`döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -54,6 +54,6 @@ HRESULT GetCodeEx(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugILFrame4 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugILFrame4 Arabirimi](icordebugilframe4-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
 - [ReJIT: nasıl yapılır Kılavuzu](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

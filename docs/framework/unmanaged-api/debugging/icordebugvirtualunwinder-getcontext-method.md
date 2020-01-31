@@ -2,12 +2,12 @@
 title: 'ICorDebugVirtualUnwinder:: GetContext yöntemi'
 ms.date: 03/30/2017
 ms.assetid: fe502a76-3068-47e5-a0a0-85ccb72dfac3
-ms.openlocfilehash: ce54bfd01abb8bd4efd5e46eff1ef831a9f0c8fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ff5e5bdd66ec44a0931b51212f07485718507576
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121894"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790840"
 ---
 # <a name="icordebugvirtualunwindergetcontext-method"></a>ICorDebugVirtualUnwinder:: GetContext yöntemi
 Bu unwinder 'in geçerli bağlamını alır.  
@@ -40,7 +40,7 @@ HRESULT GetContext(
  Mscordbi tarafından alınan başarısız olan HRESULT değeri, önemli olarak değerlendirilir ve ICorDebug API 'Lerinin `CORDBG_E_DATA_TARGET_ERROR`döndürmesini sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `contextBuf` bağımsız değişkeninin başlangıç değerini [ıcordebugstackizlenecek yol:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) yöntemini çağırarak döndürülen bağlam arabelleğine ayarlarsınız.  
+ `contextBuf` bağımsız değişkeninin başlangıç değerini [ıcordebugstackizlenecek yol:: GetContext](icordebugstackwalk-getcontext-method.md) yöntemini çağırarak döndürülen bağlam arabelleğine ayarlarsınız.  
   
 > [!NOTE]
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
@@ -58,5 +58,5 @@ HRESULT GetContext(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugMemoryBuffer Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMemoryBuffer Arabirimi](icordebugmemorybuffer-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

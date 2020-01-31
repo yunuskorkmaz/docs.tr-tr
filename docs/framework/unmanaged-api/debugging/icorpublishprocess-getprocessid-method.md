@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f31185e0-f01d-463a-b392-42163e39bfe9
 topic_type:
 - apiref
-ms.openlocfilehash: 728e8bdbce7f93176324d8f80261030f8cbae283
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4cc6bbde2c7367c1109ca73e66f2670a56b2cdbe
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140409"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790552"
 ---
 # <a name="icorpublishprocessgetprocessid-method"></a>ICorPublishProcess::GetProcessID Yöntemi
 Bu işlem için işletim sistemi tanımlayıcısını alır.  
@@ -35,7 +35,7 @@ HRESULT GetProcessID (
   
 ## <a name="parameters"></a>Parametreler  
  `pid`  
- dışı Bu [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) nesnesinin temsil ettiği işlemin tanımlayıcısına yönelik bir işaretçi.  
+ dışı Bu [ICorPublishProcess](icorpublishprocess-interface.md) nesnesinin temsil ettiği işlemin tanımlayıcısına yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -48,4 +48,4 @@ HRESULT GetProcessID (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorPublishProcess Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+- [ICorPublishProcess Arabirimi](icorpublishprocess-interface.md)

@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 97079b824dbd0e056374af4173e49304babd6c32
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc54664ea8ad61005de3f3fae7407946d1c861b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739139"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793838"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData Yapısı
 
-Bir yöntemin çalışma zamanı bilgileri için transport arabellek tanımlar.
+Metodun çalışma zamanı bilgileri için bir aktarım arabelleği tanımlar.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -56,35 +56,35 @@ struct DacpMethodDescData
 
 | Üye                       | Açıklama                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
-| `bHasNativeCode`             | Çalışma zamanı yerel kod yöntemin belirli örneklemesi için kullanılabilir olup olmadığını gösterir. |
-| `bIsDynamic`                 | Basit kod oluşturma yöntemini dinamik olarak oluşturulur, gösterir.           |
-| `wSlotNumber`                | Yöntem tablosunu yöntemin yuva numarası.                                                   |
-| `NativeCodeAddr`             | Yöntemin ilk yerel adres.                                                            |
-| `data`                       | Çalışma zamanı tarafından dahili olarak kullanılan arabellek için işaretçi.                                             |
-| `MethodDescPtr`              | İşaretçi `MethodDesc` çalışma zamanında.                                                     |
-| `nativeCodeInfo`             | Dahili yöntemleri izlemek için çalışma zamanı tarafından kullanılan arabellek için işaretçi.                            |
-| `moduleInfo`                 | Çalışma zamanı tarafından modülü bilgileri için dahili olarak kullanılan arabellek için işaretçi.                      |
-| `MDToken`                    | Belirtilen yöntemle ilişkili belirteci.                                                         |
-| `payloadGC`                  | Çalışma zamanı tarafından dahili olarak kullanılan bir çöp toplama arabellek için işaretçi.                          |
-| `payloadGC2`                 | Çalışma zamanı tarafından dahili olarak kullanılan bir çöp toplama arabellek için işaretçi.                          |
-| `managedDynamicMethodObject` | Yöntem dinamik ise, çalışma zamanı bu arabellek izleme bilgileri için dahili olarak kullanır.     |
-| `requestedIP`                | Yerel kod adresi verildiğinde istek başına yapısı doldurmak için kullanılır.                    |
-| `rejitDataCurrent`           | Yöntemin belgelenmiş en son sürüm hakkında bilgi.                                   |
-| `rejitDataRequested`         | İstenen yerel adres için Rejit bilgileri.                                             |
-| `cJittedRejitVersions`       | İzleme aracılığıyla rejitted yöntemi çağrıldıysa sayısı.                           |
+| `bHasNativeCode`             | Çalışma zamanının, yöntemin belirli bir örneği için kullanılabilir yerel koda sahip olup olmadığını gösterir. |
+| `bIsDynamic`                 | Yöntemin hafif kod üretimi aracılığıyla dinamik olarak oluşturulup oluşturulmayacağını gösterir.           |
+| `wSlotNumber`                | Yöntem tablosundaki yuva numarası.                                                   |
+| `NativeCodeAddr`             | Metodun ilk yerel adresi.                                                            |
+| `data`                       | Çalışma zamanı tarafından dahili olarak kullanılan arabelleğin işaretçisi.                                             |
+| `MethodDescPtr`              | Çalışma zamanındaki `MethodDesc` işaretçisi.                                                     |
+| `nativeCodeInfo`             | Yöntemleri izlemek için çalışma zamanı tarafından dahili olarak kullanılan bir arabelleğin işaretçisi.                            |
+| `moduleInfo`                 | Modül bilgileri için çalışma zamanı tarafından dahili olarak kullanılan bir arabelleğin işaretçisi.                      |
+| `MDToken`                    | Verilen yöntemle ilişkili belirteç.                                                         |
+| `payloadGC`                  | Çalışma zamanı tarafından dahili olarak kullanılan bir çöp toplama arabelleğinin işaretçisi.                          |
+| `payloadGC2`                 | Çalışma zamanı tarafından dahili olarak kullanılan bir çöp toplama arabelleğinin işaretçisi.                          |
+| `managedDynamicMethodObject` | Yöntem dinamik ise, çalışma zamanı bu arabelleği bilgi izleme için dahili olarak kullanır.     |
+| `requestedIP`                | Yerel kod adresi verildiğinde istek başına yapıyı doldurmak için kullanılır.                    |
+| `rejitDataCurrent`           | Metodun en son belgelenmiş sürümü hakkında bilgi.                                   |
+| `rejitDataRequested`         | İstenen yerel adres için ReJIT bilgileri.                                             |
+| `cJittedRejitVersions`       | Metodun izleme aracılığıyla yeniden derlenen sayısı.                           |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler veya kitaplık dosyaları gösterilmez. Bunu kullanmak için yukarıda belirtildiği gibi yapısını tanımlar.
+Bu yapı çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez. Kullanmak için, yapıyı yukarıda belirtilen şekilde tanımlayın.
 
 ## <a name="requirements"></a>Gereksinimler
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** None  
-**Kitaplığı:** Yok.  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Hata Ayıklama](index.md)
+- [Hata Ayıklama Yapıları](debugging-structures.md)
 - [Ortak Veri Türleri](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)

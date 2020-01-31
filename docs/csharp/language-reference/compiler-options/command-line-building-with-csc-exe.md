@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: c2b674ba17360c6ee9d2b21683560e840063f17d
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: f692e66672b1804a309c6ac04c158af948a1b1ab
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636061"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789866"
 ---
 # <a name="command-line-build-with-cscexe"></a>Csc. exe ile komut satırı oluşturma
 
@@ -59,41 +59,42 @@ C# Derleyici, işletim sistemi komut satırında verilen bağımsız değişkenl
 
 - *File.cs* üreten *dosya. exe*' yi derler:
 
-```console
-csc File.cs
-```
+  ```console
+  csc File.cs
+  ```
 
 - *File.cs* üreten *dosyayı derler. dll*:
 
-```console
-csc -target:library File.cs
-```
+  ```console
+  csc -target:library File.cs
+  ```
 
 - *File.cs* derler ve *My. exe dosyasını*oluşturur:
 
-```console
-csc -out:My.exe File.cs
-```
+  ```console
+  csc -out:My.exe File.cs
+  ```
 
 - Geçerli dizindeki tüm C# dosyaları iyileştirmeler etkin olacak şekilde derler ve hata ayıklama sembolünü tanımlar. Çıktı, *dosya2. exe*' dir:
 
-```console
-csc -define:DEBUG -optimize -out:File2.exe *.cs
-```
+  ```console
+  csc -define:DEBUG -optimize -out:File2.exe *.cs
+  ```
 
 - Geçerli dizindeki tüm C# dosyaları, *dosya2. dll*' nin hata ayıklama sürümünü üreten şekilde derler. Amblem yoktur ve hiçbir uyarı gösterilmez:
 
-```console
-csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
-```
+  ```console
+  csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
+  ```
 
 - Geçerli dizindeki tüm C# dosyaları *bir. xyz* (bir dll) olarak derler:
 
-```console
-csc -target:library -out:Something.xyz *.cs
-```
+  ```console
+  csc -target:library -out:Something.xyz *.cs
+  ```
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>Derleyici ve C# C++ derleyici çıkışı arasındaki farklılıklar
+
 Derleyiciyi çağırma sonucu olarak oluşturulan nesne ( *. obj*) dosyaları yoktur; C# çıktı dosyaları doğrudan oluşturulur. Bunun sonucunda, C# derleyicinin bir bağlayıcıya ihtiyacı yoktur.
 
 ## <a name="see-also"></a>Ayrıca bkz.

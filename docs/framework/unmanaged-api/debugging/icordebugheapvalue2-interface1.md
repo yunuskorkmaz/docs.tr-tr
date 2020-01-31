@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87360a52-90b1-4ada-80c0-589a556116d8
 topic_type:
 - apiref
-ms.openlocfilehash: 8ae788094def566b4dc3a17d0a08d657cc27468f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d7126222bd23548ec7013ba234c3f3eebbc8e374
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138370"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788627"
 ---
 # <a name="icordebugheapvalue2-interface"></a>ICorDebugHeapValue2 Arabirimi
 
@@ -29,7 +29,7 @@ Ortak dil çalışma zamanı (CLR) tanıtıcıları için destek sağlayan ICorD
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[CreateHandle Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|Bu `ICorDebugHeapValue2` nesnesi için belirtilen türde bir tanıtıcı oluşturur.|  
+|[CreateHandle Yöntemi](icordebugheapvalue2-createhandle-method.md)|Bu `ICorDebugHeapValue2` nesnesi için belirtilen türde bir tanıtıcı oluşturur.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -47,4 +47,4 @@ Ortak dil çalışma zamanı (CLR) tanıtıcıları için destek sağlayan ICorD
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

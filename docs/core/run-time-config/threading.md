@@ -3,12 +3,12 @@ title: İş parçacığı yapılandırma ayarları
 description: .NET Core uygulamaları için iş parçacığı yapılandıran çalışma zamanı ayarları hakkında bilgi edinin.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: ed7688d4d8f7178440fe59afc6e2f5e0a11b2a5c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 68b8e93ca6ec3f708a7a627307655ada1955500a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733424"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789848"
 ---
 # <a name="run-time-configuration-options-for-threading"></a>İş parçacığı için çalışma zamanı yapılandırma seçenekleri
 
@@ -24,7 +24,7 @@ ms.locfileid: "76733424"
 
 ## <a name="minimum-threads"></a>En düşük iş parçacıkları
 
-- Çalışan ThreadPool için en az iş parçacığı sayısını belirtir.
+- Çalışan iş parçacığı havuzu için en az iş parçacığı sayısını belirtir.
 - <xref:System.Threading.ThreadPool.SetMinThreads%2A?displayProperty=nameWithType> yöntemine karşılık gelir.
 
 | | Ayar adı | Değerler |
@@ -61,7 +61,7 @@ Proje dosyası:
 
 ## <a name="maximum-threads"></a>En fazla iş parçacığı
 
-- Çalışan ThreadPool için en fazla iş parçacığı sayısını belirtir.
+- Çalışan iş parçacığı havuzu için en fazla iş parçacığı sayısını belirtir.
 - <xref:System.Threading.ThreadPool.SetMaxThreads%2A?displayProperty=nameWithType> yöntemine karşılık gelir.
 
 | | Ayar adı | Değerler |

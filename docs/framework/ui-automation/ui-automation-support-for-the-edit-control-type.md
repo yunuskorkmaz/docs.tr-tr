@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Edit control type
 - UI Automation, Edit control type
 ms.assetid: 6db9d231-c0a0-4e17-910e-ac80357f774f
-ms.openlocfilehash: f51e55a8a87ad1112c1b752568220611b9bf70e8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: cdbb400d438231689fe35c4bff2bd2946b6bed80
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741658"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789502"
 ---
 # <a name="ui-automation-support-for-the-edit-control-type"></a>Düzenleme Denetim Türü İçin UI Otomasyon Desteği
 
@@ -22,7 +22,7 @@ Bu konu, düzenleme denetim türü için [!INCLUDE[TLA2#tla_uiautomation](../../
 
 Denetimleri Düzenle, bir kullanıcının zengin biçimlendirme desteği olmadan basit bir metin satırını görüntülemesini ve düzenlemesini sağlar.
 
-Aşağıdaki bölümler, düzenleme denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısını, özellikleri, denetim desenlerini ve olayları tanımlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimleri, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 veya [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]gibi tüm düzenleme denetimleri için geçerlidir.
+Aşağıdaki bölümler, düzenleme denetim türü için gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısını, özellikleri, denetim desenlerini ve olayları tanımlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimleri, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 veya Windows Forms gibi tüm düzenleme denetimleri için geçerlidir.
 
 <a name="Required_UI_Automation_Tree_Structure"></a>
 

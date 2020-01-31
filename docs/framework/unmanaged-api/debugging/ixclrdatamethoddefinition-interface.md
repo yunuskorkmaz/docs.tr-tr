@@ -15,41 +15,41 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 4b1e8cb1cf34bb1c5ade1353351aab953e2b734a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 708c681a98113a406249a360c2fc81087e5b97f8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670111"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790421"
 ---
 # <a name="ixclrdatamethoddefinition-interface"></a>IXCLRDataMethodDefinition Arabirimi
 
-Bir yöntemin tanımı hakkında bilgi sorgulamak için yöntemler sağlar.
+Yöntem tanımı hakkında bilgi sorgulamak için yöntemler sağlar.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
 ## <a name="methods"></a>Yöntemler
 
-Aşağıdaki yöntemlerden arabirimindeki yöntemleri bazılarıdır.
+Aşağıdaki yöntemler, arabiriminde kullanılabilen yöntemlerin bazılarıdır.
 
 | Yöntem                                                                                                                          | Açıklama                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| [StartEnumInstances](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-startenuminstances-method.md) | Numaralandırma yöntemi örnekleri için bir tanıtıcı sağlayan bir verilen `IXCLRDataAppDomain`. |
-| [EnumInstance](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-enuminstance-method.md)             | Bu yöntem tanımını örneklerini sıralar.                                         |
-| [EndEnumInstances](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-endenuminstances-method.md)     | Örnek numaralandırma sırasında kullanılan iç yineleyiciler tarafından kullanılan kaynakları serbest bırakır.         |
+| [Startenumınstances](ixclrdatamethoddefinition-startenuminstances-method.md) | Belirli bir `IXCLRDataAppDomain`için yöntem örneklerinin numaralandırılması için bir tanıtıcı sağlar. |
+| [Enumınstance](ixclrdatamethoddefinition-enuminstance-method.md)             | Bu yöntem tanımının örneklerini numaralandırır.                                         |
+| [Endenumınstances](ixclrdatamethoddefinition-endenuminstances-method.md)     | Örnek numaralandırması sırasında kullanılan iç yineleyiciler tarafından kullanılan kaynakları serbest bırakır.         |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu arabirim, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler veya kitaplık dosyaları gösterilmez. Ancak, bu, türetilen bir COM arabirimidir `IUnknown` GUID'e sahip `AAF60008-FB2C-420b-8FB1-42D244A54A97` normal COM mekanizmalar aracılığıyla edinilebilir.
+Bu arabirim çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez. Ancak, normal COM mekanizmalarından elde edilebilir GUID `AAF60008-FB2C-420b-8FB1-42D244A54A97` `IUnknown` türetilen bir COM arabirimidir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Yok.  
-**Kitaplığı:** Yok.  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama](index.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
