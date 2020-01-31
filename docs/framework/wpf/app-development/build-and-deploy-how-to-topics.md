@@ -7,29 +7,29 @@ helpviewer_keywords:
 - WPF application [WPF], building
 - WPF application [WPF], deploying
 ms.assetid: 88952ad2-5b74-48ca-a4c5-3f4fbb53ce12
-ms.openlocfilehash: 4aaeeed4ff6a130c6d3ddda696286222d7c9efaf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e233b84da1bdecdbc0bdcf676c7bf39125ada6ca
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052241"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870716"
 ---
-# <a name="build-and-deploy-how-to-topics"></a><span data-ttu-id="65c04-102">Oluşturma ve Dağıtma ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="65c04-102">Build and Deploy How-to Topics</span></span>
-<span data-ttu-id="65c04-103">Aşağıdaki konular, proje dosyaları için çeşitli oluşturma işlemi gösterilmektedir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama türleri.</span><span class="sxs-lookup"><span data-stu-id="65c04-103">The following topics show how to create project files for the various [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application types.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="65c04-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="65c04-104">In This Section</span></span>  
- [<span data-ttu-id="65c04-105">WPF Uygulamalarını Dağıtmak için IIS 5.0 ve IIS 6.0'ı Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="65c04-105">Configure IIS 5.0 and IIS 6.0 to Deploy WPF Applications</span></span>](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
- [<span data-ttu-id="65c04-106">Web Hizmeti Çağırmak Amacıyla XAML Tarayıcı Uygulamasında Hata Ayıklamak için Visual Studio'yu Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="65c04-106">Configure Visual Studio to Debug a XAML Browser Application to Call a Web Service</span></span>](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [<span data-ttu-id="65c04-107">Yüklü WPF Sürümünü Belirleme</span><span class="sxs-lookup"><span data-stu-id="65c04-107">Determine the Installed Version of WPF</span></span>](how-to-determine-the-installed-version-of-wpf.md)  
- [<span data-ttu-id="65c04-108">.NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="65c04-108">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
- [<span data-ttu-id="65c04-109">.NET Framework 3.5'in Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="65c04-109">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
- [<span data-ttu-id="65c04-110">Firefox WPF Eklentisinin Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="65c04-110">Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
-  
-## <a name="related-sections"></a><span data-ttu-id="65c04-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="65c04-111">Related Sections</span></span>  
- [<span data-ttu-id="65c04-112">WPF Uygulaması Derleme</span><span class="sxs-lookup"><span data-stu-id="65c04-112">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
-  
- [<span data-ttu-id="65c04-113">WPF Uygulaması Dağıtma</span><span class="sxs-lookup"><span data-stu-id="65c04-113">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
-  
- [<span data-ttu-id="65c04-114">İzlenecek yol: İlk WPF Masaüstü Uygulamam</span><span class="sxs-lookup"><span data-stu-id="65c04-114">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
-  
- <span data-ttu-id="65c04-115">[Nasıl yapılır: Yeni bir WPF tarayıcı uygulaması projesi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="65c04-115">[How to: Create a New WPF Browser Application Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))</span></span>
+# <a name="build-and-deploy-how-to-topics"></a><span data-ttu-id="39742-102">Oluşturma ve dağıtma ile ilgili nasıl yapılır konuları</span><span class="sxs-lookup"><span data-stu-id="39742-102">Build and deploy how-to topics</span></span>
+
+<span data-ttu-id="39742-103">Aşağıdaki konularda çeşitli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama türleri için proje dosyalarının nasıl oluşturulacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="39742-103">The following topics show how to create project files for the various [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application types.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="39742-104">Bu bölümde</span><span class="sxs-lookup"><span data-stu-id="39742-104">In this section</span></span>
+
+- [<span data-ttu-id="39742-105">WPF Uygulamalarını Dağıtmak için IIS 5.0 ve IIS 6.0'ı Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="39742-105">Configure IIS 5.0 and IIS 6.0 to Deploy WPF Applications</span></span>](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)
+- [<span data-ttu-id="39742-106">Web Hizmeti Çağırmak Amacıyla XAML Tarayıcı Uygulamasında Hata Ayıklamak için Visual Studio'yu Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="39742-106">Configure Visual Studio to Debug a XAML Browser Application to Call a Web Service</span></span>](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [<span data-ttu-id="39742-107">.NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="39742-107">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+- [<span data-ttu-id="39742-108">.NET Framework 3.5'in Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="39742-108">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-5-is-installed.md)
+- [<span data-ttu-id="39742-109">Firefox WPF Eklentisinin Yüklü Olup Olmadığını Algılama</span><span class="sxs-lookup"><span data-stu-id="39742-109">Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)
+
+## <a name="related-sections"></a><span data-ttu-id="39742-110">İlgili bölümler</span><span class="sxs-lookup"><span data-stu-id="39742-110">Related sections</span></span>
+
+- [<span data-ttu-id="39742-111">WPF Uygulaması Derleme</span><span class="sxs-lookup"><span data-stu-id="39742-111">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)
+- [<span data-ttu-id="39742-112">WPF Uygulaması Dağıtma</span><span class="sxs-lookup"><span data-stu-id="39742-112">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)
+- [<span data-ttu-id="39742-113">İzlenecek Yol: İlk WPF masaüstü uygulamam</span><span class="sxs-lookup"><span data-stu-id="39742-113">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- <span data-ttu-id="39742-114">[Nasıl yapılır: yeni bir WPF tarayıcı uygulaması projesi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="39742-114">[How to: Create a New WPF Browser Application Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))</span></span>
+- <span data-ttu-id="39742-115">[Yüklü WPF sürümünü belirleme (.NET Framework 3,5)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa349641(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="39742-115">[Determine the Installed Version of WPF (.NET Framework 3.5)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa349641(v=vs.90))</span></span>

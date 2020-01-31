@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 47dbaea4-8857-462e-93ba-fff880fc9e50
 topic_type:
 - apiref
-ms.openlocfilehash: 6c159780b9019127d166e8437ea4ed214284011f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9153503fc114b0e4052265fca7c9399510d687ef
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121257"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792329"
 ---
-# <a name="icordebugprocess5gettypeid-method"></a><span data-ttu-id="9b7f6-102">ICorDebugProcess5::GetTypeID Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9b7f6-102">ICorDebugProcess5::GetTypeID Method</span></span>
-<span data-ttu-id="9b7f6-103">Bir nesne adresini bir [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) tanımlayıcısına dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="9b7f6-103">Converts an object address to a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) identifier.</span></span>  
+# <a name="icordebugprocess5gettypeid-method"></a><span data-ttu-id="c4f1f-102">ICorDebugProcess5::GetTypeID Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c4f1f-102">ICorDebugProcess5::GetTypeID Method</span></span>
+<span data-ttu-id="c4f1f-103">Bir nesne adresini [COR_TYPEID](cor-typeid-structure.md) tanımlayıcısına dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="c4f1f-103">Converts an object address to a [COR_TYPEID](cor-typeid-structure.md) identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9b7f6-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9b7f6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c4f1f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c4f1f-104">Syntax</span></span>  
   
 ```cpp
 HRESULT GetTypeID(  
@@ -36,25 +36,25 @@ HRESULT GetTypeID(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9b7f6-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9b7f6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c4f1f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c4f1f-105">Parameters</span></span>  
  `obj`  
- <span data-ttu-id="9b7f6-106">'ndaki Nesne adresi.</span><span class="sxs-lookup"><span data-stu-id="9b7f6-106">[in] The object address.</span></span>  
+ <span data-ttu-id="c4f1f-106">'ndaki Nesne adresi.</span><span class="sxs-lookup"><span data-stu-id="c4f1f-106">[in] The object address.</span></span>  
   
  `pId`  
- <span data-ttu-id="9b7f6-107">Nesneyi tanımlayan [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) değerine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="9b7f6-107">A pointer to the [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) value that identifies the object.</span></span>  
+ <span data-ttu-id="c4f1f-107">Nesneyi tanımlayan [COR_TYPEID](cor-typeid-structure.md) değerine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c4f1f-107">A pointer to the [COR_TYPEID](cor-typeid-structure.md) value that identifies the object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9b7f6-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9b7f6-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c4f1f-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c4f1f-108">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9b7f6-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9b7f6-109">Requirements</span></span>  
- <span data-ttu-id="9b7f6-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9b7f6-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c4f1f-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c4f1f-109">Requirements</span></span>  
+ <span data-ttu-id="c4f1f-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c4f1f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9b7f6-111">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="9b7f6-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c4f1f-111">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="c4f1f-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9b7f6-112">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="9b7f6-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c4f1f-112">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="c4f1f-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9b7f6-113">**.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9b7f6-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="c4f1f-113">**.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c4f1f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9b7f6-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9b7f6-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c4f1f-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c4f1f-114">See also</span></span>
 
-- [<span data-ttu-id="9b7f6-115">ICorDebugProcess5 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9b7f6-115">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="9b7f6-116">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="9b7f6-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="c4f1f-115">ICorDebugProcess5 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c4f1f-115">ICorDebugProcess5 Interface</span></span>](icordebugprocess5-interface.md)
+- [<span data-ttu-id="c4f1f-116">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="c4f1f-116">Debugging Interfaces</span></span>](debugging-interfaces.md)
