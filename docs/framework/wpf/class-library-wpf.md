@@ -1,39 +1,39 @@
 ---
-title: Sınıf Kitaplığı (WPF)
+title: Sınıf Kitaplığı
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-ms.openlocfilehash: d43b46be2e05561eadcba12c744368db056a3ce5
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: bd099cbbbf96c71749375dab0aadfe84412ca103
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859703"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742297"
 ---
-# <a name="class-library-wpf"></a><span data-ttu-id="59f0b-102">Sınıf Kitaplığı (WPF)</span><span class="sxs-lookup"><span data-stu-id="59f0b-102">Class Library (WPF)</span></span>
-<span data-ttu-id="59f0b-103">İçeren ad alanları için aşağıdaki bağlantılara başvurun [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] API'leri.</span><span class="sxs-lookup"><span data-stu-id="59f0b-103">The following links refer to namespaces that contain [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] APIs.</span></span>  
+# <a name="class-library-wpf"></a><span data-ttu-id="7c0b4-102">Sınıf Kitaplığı (WPF)</span><span class="sxs-lookup"><span data-stu-id="7c0b4-102">Class Library (WPF)</span></span>
+<span data-ttu-id="7c0b4-103">Aşağıdaki bağlantılar [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] API 'Leri içeren ad alanlarına başvurur.</span><span class="sxs-lookup"><span data-stu-id="7c0b4-103">The following links refer to namespaces that contain [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] APIs.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="59f0b-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="59f0b-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="7c0b4-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="7c0b4-104">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="59f0b-105">Başvuru</span><span class="sxs-lookup"><span data-stu-id="59f0b-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7c0b4-105">Başvuru</span><span class="sxs-lookup"><span data-stu-id="7c0b4-105">Reference</span></span>  
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   
-- <span data-ttu-id="59f0b-106"><xref:Microsoft.Win32> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="59f0b-106"><xref:Microsoft.Win32> (shared)</span></span>  
+- <span data-ttu-id="7c0b4-106"><xref:Microsoft.Win32> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="7c0b4-106"><xref:Microsoft.Win32> (shared)</span></span>  
   
 - <xref:Microsoft.Windows.Themes>  
   
-- <span data-ttu-id="59f0b-107"><xref:System.Collections.ObjectModel> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="59f0b-107"><xref:System.Collections.ObjectModel> (shared)</span></span>  
+- <span data-ttu-id="7c0b4-107"><xref:System.Collections.ObjectModel> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="7c0b4-107"><xref:System.Collections.ObjectModel> (shared)</span></span>  
   
-- <span data-ttu-id="59f0b-108"><xref:System.Collections.Specialized> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="59f0b-108"><xref:System.Collections.Specialized> (shared)</span></span>  
+- <span data-ttu-id="7c0b4-108"><xref:System.Collections.Specialized> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="7c0b4-108"><xref:System.Collections.Specialized> (shared)</span></span>  
   
-- <span data-ttu-id="59f0b-109"><xref:System.ComponentModel> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="59f0b-109"><xref:System.ComponentModel> (shared)</span></span>  
+- <span data-ttu-id="7c0b4-109"><xref:System.ComponentModel> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="7c0b4-109"><xref:System.ComponentModel> (shared)</span></span>  
   
-- <span data-ttu-id="59f0b-110"><xref:System.Diagnostics> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="59f0b-110"><xref:System.Diagnostics> (shared)</span></span>  
+- <span data-ttu-id="7c0b4-110"><xref:System.Diagnostics> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="7c0b4-110"><xref:System.Diagnostics> (shared)</span></span>  
   
-- <span data-ttu-id="59f0b-111"><xref:System.IO> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="59f0b-111"><xref:System.IO> (shared)</span></span>  
+- <span data-ttu-id="7c0b4-111"><xref:System.IO> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="7c0b4-111"><xref:System.IO> (shared)</span></span>  
   
 - <xref:System.IO.Packaging>  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67859703"
   
 - <xref:System.Printing.Interop>  
   
-- <span data-ttu-id="59f0b-112"><xref:System.Security.Permissions> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="59f0b-112"><xref:System.Security.Permissions> (shared)</span></span>  
+- <span data-ttu-id="7c0b4-112"><xref:System.Security.Permissions> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="7c0b4-112"><xref:System.Security.Permissions> (shared)</span></span>  
   
 - <xref:System.Security.RightsManagement>  
   
@@ -85,7 +85,7 @@ ms.locfileid: "67859703"
   
 - <xref:System.Windows.Interop>  
   
-- <span data-ttu-id="59f0b-113"><xref:System.Windows.Markup> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="59f0b-113"><xref:System.Windows.Markup> (shared)</span></span>  
+- <span data-ttu-id="7c0b4-113"><xref:System.Windows.Markup> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="7c0b4-113"><xref:System.Windows.Markup> (shared)</span></span>  
   
 - <xref:System.Windows.Markup.Localizer>  
   
@@ -123,10 +123,10 @@ ms.locfileid: "67859703"
   
 - <xref:UIAutomationClientsideProviders>  
   
-## <a name="xaml-support-in-net-4"></a><span data-ttu-id="59f0b-114">.NET 4'teki XAML desteği</span><span class="sxs-lookup"><span data-stu-id="59f0b-114">XAML Support in .NET 4</span></span>  
- <span data-ttu-id="59f0b-115">Aşağıdaki ad alanlarını, System.Xaml bütünleştirilmiş kodundaki türler bulunur.</span><span class="sxs-lookup"><span data-stu-id="59f0b-115">The following namespaces contain types from the System.Xaml assembly.</span></span> <span data-ttu-id="59f0b-116">System.Xaml ortak XAML dil desteği için .NET Framework 4'te yerleşik olan WPF gibi çerçeveleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="59f0b-116">System.Xaml provides common XAML language support for frameworks such as WPF that are built on .NET Framework 4.</span></span>  
+## <a name="xaml-support-in-net-4"></a><span data-ttu-id="7c0b4-114">.NET 4 ' te XAML desteği</span><span class="sxs-lookup"><span data-stu-id="7c0b4-114">XAML Support in .NET 4</span></span>  
+ <span data-ttu-id="7c0b4-115">Aşağıdaki ad alanları System. Xaml derlemesinden türler içerir.</span><span class="sxs-lookup"><span data-stu-id="7c0b4-115">The following namespaces contain types from the System.Xaml assembly.</span></span> <span data-ttu-id="7c0b4-116">System. xaml, .NET Framework 4 üzerine inşa edilen WPF gibi çerçeveler için genel XAML dil desteği sağlar.</span><span class="sxs-lookup"><span data-stu-id="7c0b4-116">System.Xaml provides common XAML language support for frameworks such as WPF that are built on .NET Framework 4.</span></span>  
   
-- <span data-ttu-id="59f0b-117"><xref:System.Windows.Markup> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="59f0b-117"><xref:System.Windows.Markup> (shared)</span></span>  
+- <span data-ttu-id="7c0b4-117"><xref:System.Windows.Markup> (paylaşılan)</span><span class="sxs-lookup"><span data-stu-id="7c0b4-117"><xref:System.Windows.Markup> (shared)</span></span>  
   
 - <xref:System.Xaml>  
   

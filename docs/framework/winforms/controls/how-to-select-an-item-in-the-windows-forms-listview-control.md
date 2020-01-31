@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms ListView Denetiminde Öğe Seçme'
+title: ListView denetimindeki bir öğe seçin
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - selection [Windows Forms], in list views
 - list views [Windows Forms], selecting items
 ms.assetid: ddea918e-1ddf-47f4-bd09-1e9b4c9d0c39
-ms.openlocfilehash: 41a30ba6c242d0587e98b458e41ca213e8885bca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 57e985af9d0347510d7d7782f68d5b414d36e077
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638197"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743238"
 ---
-# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a><span data-ttu-id="77078-102">Nasıl yapılır: Windows Forms ListView Denetiminde Öğe Seçme</span><span class="sxs-lookup"><span data-stu-id="77078-102">How to: Select an Item in the Windows Forms ListView Control</span></span>
-<span data-ttu-id="77078-103">Bu örnek program aracılığıyla bir Windows Formları öğeyi seçmek nasıl gösterir <xref:System.Windows.Forms.ListView> denetimi.</span><span class="sxs-lookup"><span data-stu-id="77078-103">This example demonstrates how to programmatically select an item in a Windows Forms <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="77078-104">Program aracılığıyla bir öğe seçtiğinizde otomatik olarak değişmez odağı <xref:System.Windows.Forms.ListView> denetimi.</span><span class="sxs-lookup"><span data-stu-id="77078-104">Selecting an item programmatically does not automatically change the focus to the <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="77078-105">Bu nedenle, genellikle de öğesi bir öğeyi seçerken odaklı olarak ayarlamak istersiniz.</span><span class="sxs-lookup"><span data-stu-id="77078-105">For this reason, you will typically also want to set the item as focused when selecting an item.</span></span>  
+# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a><span data-ttu-id="e2637-102">Nasıl yapılır: Windows Forms ListView Denetiminde Öğe Seçme</span><span class="sxs-lookup"><span data-stu-id="e2637-102">How to: Select an Item in the Windows Forms ListView Control</span></span>
+<span data-ttu-id="e2637-103">Bu örnek, Windows Forms <xref:System.Windows.Forms.ListView> denetimindeki bir öğeyi programlı olarak nasıl seçeceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="e2637-103">This example demonstrates how to programmatically select an item in a Windows Forms <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="e2637-104">Program aracılığıyla bir öğe seçildiğinde odak <xref:System.Windows.Forms.ListView> denetimine otomatik olarak değişmez.</span><span class="sxs-lookup"><span data-stu-id="e2637-104">Selecting an item programmatically does not automatically change the focus to the <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="e2637-105">Bu nedenle, öğe seçerken genellikle öğeyi odaklanmış olarak ayarlamak isteyeceksiniz.</span><span class="sxs-lookup"><span data-stu-id="e2637-105">For this reason, you will typically also want to set the item as focused when selecting an item.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="77078-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="77078-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e2637-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="e2637-106">Example</span></span>  
  [!code-csharp[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="77078-107">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="77078-107">Compiling the Code</span></span>  
- <span data-ttu-id="77078-108">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="77078-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="e2637-107">Kod Derleme</span><span class="sxs-lookup"><span data-stu-id="e2637-107">Compiling the Code</span></span>  
+ <span data-ttu-id="e2637-108">Bu örnek şunları gerektirir:</span><span class="sxs-lookup"><span data-stu-id="e2637-108">This example requires:</span></span>  
   
-- <span data-ttu-id="77078-109">A <xref:System.Windows.Forms.ListView> adlı Denetim `listView1` , en az bir öğe içeriyor.</span><span class="sxs-lookup"><span data-stu-id="77078-109">A <xref:System.Windows.Forms.ListView> control named `listView1` that contains at least one item.</span></span>  
+- <span data-ttu-id="e2637-109">En az bir öğe içeren `listView1` adlı <xref:System.Windows.Forms.ListView> denetim.</span><span class="sxs-lookup"><span data-stu-id="e2637-109">A <xref:System.Windows.Forms.ListView> control named `listView1` that contains at least one item.</span></span>  
   
-- <span data-ttu-id="77078-110">Başvurular <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanları.</span><span class="sxs-lookup"><span data-stu-id="77078-110">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> namespaces.</span></span>  
+- <span data-ttu-id="e2637-110"><xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanlarına başvurular.</span><span class="sxs-lookup"><span data-stu-id="e2637-110">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="77078-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="77078-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2637-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e2637-111">See also</span></span>
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListViewItem.Selected%2A?displayProperty=nameWithType>
