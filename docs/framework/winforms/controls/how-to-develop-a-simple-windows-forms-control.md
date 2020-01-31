@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Basit Bir Windows Forms Denetimi Geliştirme'
+title: Basit denetim geliştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: a190d86f5ebe258427ac4a73c16c7f271462b69c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5383cee5358dbd260fc6c023d3db607da6b10ea4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753231"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742261"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Nasıl yapılır: Basit Bir Windows Forms Denetimi Geliştirme
 
-Bu bölümde özel bir Windows Forms denetimi geliştirme için anahtar adımlarında size kılavuzluk eder. Bu izlenecek yolda geliştirilmiş basit denetimin hizalamasını izin kendi <xref:System.Windows.Forms.Control.Text%2A> özelliği değiştirilecek. Yükseltme değil veya olaylarını işleme.
+Bu bölümde, özel bir Windows Forms denetimi yazmak için temel adımlarda izlenecek yol gösterilmektedir. Bu izlenecek yolda geliştirilen basit denetim <xref:System.Windows.Forms.Control.Text%2A> özelliğinin hizalanmasına izin verir. Olayları oluşturmaz veya işlemez.
 
 ### <a name="to-create-a-simple-custom-control"></a>Basit bir özel denetim oluşturmak için
 
-1. Türetilen bir sınıf tanımlama <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.
+1. <xref:System.Windows.Forms.Control?displayProperty=nameWithType>türeten bir sınıf tanımlayın.
 
     ```vb
     Public Class FirstControl
@@ -35,30 +35,30 @@ Bu bölümde özel bir Windows Forms denetimi geliştirme için anahtar adımlar
     public class FirstControl:Control {}
     ```
 
-2. Özelliklerini tanımlayın. (Bir denetim birçok özellikleri devraldığından özelliklerini tanımlamak gerekmez <xref:System.Windows.Forms.Control> sınıfı, ancak çoğu özel denetimler genellikle ek özellikleri tanımlar.) Aşağıdaki kod parçası adlı bir özellik tanımlar `TextAlignment` , `FirstControl` görüntülenmesini biçimlendirmek için kullandığı <xref:System.Windows.Forms.Control.Text%2A> özelliği öğesinden devralınan <xref:System.Windows.Forms.Control>. Özellikleri tanımlama hakkında daha fazla bilgi için bkz. [özelliklerine genel bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120)).
+2. Özellikleri tanımlayın. (Bir denetim <xref:System.Windows.Forms.Control> sınıfından birçok özelliği devraldığından, ancak çoğu özel denetim genellikle ek özellikler tanımlayacağından, özellikleri tanımlamanız gerekmez.) Aşağıdaki kod parçası, <xref:System.Windows.Forms.Control>devralınmış <xref:System.Windows.Forms.Control.Text%2A> özelliğinin görüntülenmesini biçimlendirmek için `FirstControl` tarafından kullanılan `TextAlignment` adlı bir özelliği tanımlar. Özellikleri tanımlama hakkında daha fazla bilgi için bkz. [özelliklere genel bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120)).
 
      [!code-csharp[System.Windows.Forms.FirstControl#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]
 
-     Denetimin görsel görünümünü değiştirir bir özelliği ayarlamak, çağırmalıdır <xref:System.Windows.Forms.Control.Invalidate%2A> denetimi yeniden çizmek için yöntemi. <xref:System.Windows.Forms.Control.Invalidate%2A> temel sınıfta tanımlanan <xref:System.Windows.Forms.Control>.
+     Denetimin görsel görüntüsünü değiştiren bir özelliği ayarladığınızda, denetimi yeniden çizmek için <xref:System.Windows.Forms.Control.Invalidate%2A> yöntemini çağırmanız gerekir. <xref:System.Windows.Forms.Control.Invalidate%2A>, temel sınıfta <xref:System.Windows.Forms.Control>tanımlanır.
 
-3. Geçersiz kılma korumalı <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi öğesinden devralınan <xref:System.Windows.Forms.Control> denetiminiz için işleme mantığı sağlamak için. Geçersiz olursa <xref:System.Windows.Forms.Control.OnPaint%2A>, Denetim kendisini çizmek mümkün olmayacaktır. Aşağıdaki kod parçası, <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi görüntüler <xref:System.Windows.Forms.Control.Text%2A> özelliği öğesinden devralınan <xref:System.Windows.Forms.Control> tarafından belirtilen hizalama ile `alignmentValue` alan.
+3. Denetiminizin işleme mantığını sağlamak için <xref:System.Windows.Forms.Control> devralınmış korunan <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemini geçersiz kılın. <xref:System.Windows.Forms.Control.OnPaint%2A>geçersiz kılamazsınız, denetiminiz kendisini çizmeyecektir. Aşağıdaki kod parçasında <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi, `alignmentValue` alanı tarafından belirtilen hizalamayla <xref:System.Windows.Forms.Control> devralınan <xref:System.Windows.Forms.Control.Text%2A> özelliğini görüntüler.
 
      [!code-csharp[System.Windows.Forms.FirstControl#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]
 
-4. Öznitelikler için denetim sağlar. Öznitelikler, tasarım zamanında denetiminizi ve özellikleri ve olayları uygun şekilde görüntülemek bir görsel tasarımcı sağlar. Aşağıdaki kod parçası özniteliklere uygulanır `TextAlignment` özelliği. Visual Studio gibi bir tasarımcıda <xref:System.ComponentModel.CategoryAttribute.Category%2A> özniteliği (kod parçasında gösterilen) bir mantıksal kategorisi altında görüntülenecek özelliği neden olur. <xref:System.ComponentModel.DescriptionAttribute.Description%2A> Öznitelik neden olur, alt kısmında görüntülenmesi açıklayıcı bir dize **özellikleri** penceresi zaman `TextAlignment` özellik seçildiğinde. Öznitelikler hakkında daha fazla bilgi için bkz. [bileşenler için tasarım zamanı öznitelikleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).
+4. Denetiminizin özniteliklerini sağlayın. Öznitelikler görsel tasarımcı 'nın, tasarım zamanında denetiminizi ve özelliklerini ve olaylarını uygun şekilde görüntülemesini sağlar. Aşağıdaki kod parçası, `TextAlignment` özelliğine öznitelikler uygular. Visual Studio gibi bir tasarımcıda <xref:System.ComponentModel.CategoryAttribute.Category%2A> özniteliği (kod parçasında gösterilmektedir) özelliğin bir mantıksal kategori altında görüntülenmesine neden olur. <xref:System.ComponentModel.DescriptionAttribute.Description%2A> özniteliği, `TextAlignment` özelliği seçildiğinde **Özellikler** penceresinin alt kısmında açıklayıcı bir dizenin görüntülenmesine neden olur. Öznitelikler hakkında daha fazla bilgi için bkz. [Bileşenler Için tasarım zamanı öznitelikleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).
 
      [!code-csharp[System.Windows.Forms.FirstControl#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]
 
-5. (isteğe bağlı) Kaynaklar için denetim sağlar. Derleyici seçeneğini kullanarak denetlemek için bir bit eşlem gibi bir kaynak sağlayabilir (`/res` için C#) ile denetiminizi paket kaynaklarına. Çalışma zamanında, kaynak yöntemleri kullanılarak alınabilir <xref:System.Resources.ResourceManager> sınıfı. Oluşturma ve kaynakları kullanma hakkında daha fazla bilgi için bkz. [masaüstü uygulamalarında kaynakların](../../resources/index.md).
+5. seçim Denetiminizin kaynaklarını sağlayın. Denetim için bir derleyici seçeneği (`/res` için C#) kullanarak denetim için bit eşlem gibi bir kaynak sağlayabilirsiniz. Çalışma zamanında, kaynak <xref:System.Resources.ResourceManager> sınıfının yöntemleri kullanılarak alınabilir. Kaynakları oluşturma ve kullanma hakkında daha fazla bilgi için, bkz. [Masaüstü uygulamalarındaki kaynaklar](../../resources/index.md).
 
-6. Derleme ve denetim dağıtın. Derlemek ve dağıtmak için `FirstControl,` aşağıdaki adımları uygulayın:
+6. Denetiminizi derleyin ve dağıtın. Derlemek ve dağıtmak için `FirstControl,` aşağıdaki adımları yürütün:
 
-    1. Aşağıdaki örnek bir kaynak dosyasına (örneğin, FirstControl.cs veya FirstControl.vb) kod kaydedin.
+    1. Aşağıdaki örnekteki kodu bir kaynak dosyasına kaydedin (örneğin, FirstControl.cs veya FirstControl. vb).
 
-    2. Kaynak kodu bir araya derlemek ve uygulamanızın dizine kaydedin. Bunu yapmak için kaynak dosyasını içeren dizinden aşağıdaki komutu yürütün.
+    2. Kaynak kodu bir derlemede derleyin ve uygulamanızın dizinine kaydedin. Bunu gerçekleştirmek için, kaynak dosyayı içeren dizinden aşağıdaki komutu yürütün.
 
         ```console
         vbc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.vb
@@ -68,22 +68,22 @@ Bu bölümde özel bir Windows Forms denetimi geliştirme için anahtar adımlar
         csc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.cs
         ```
 
-         `/t:library` Derleyici seçeneği derleyici oluşturduğunuz derleme bir kitaplık (ve çalıştırılabilir değil) olduğunu söyler. `/out` Seçeneği derlemenin adını ve yolunu belirtir. `/r` Seçeneği, kodunuz tarafından başvurulan bir derleme adı sağlar. Bu örnekte, yalnızca uygulamalarınızı kullanabileceğiniz özel bir derleme oluşturun. Bu nedenle, uygulamanızın dizininde kaydetmek sahip. Paketleme ve dağıtım için bir denetim dağıtma hakkında daha fazla bilgi için bkz. [dağıtım](../../deployment/index.md).
+         `/t:library` derleyici seçeneği derleyiciye oluşturmakta olduğunuz derlemenin bir kitaplık (yürütülebilir değil) olduğunu söyler. `/out` seçeneği, derlemenin yolunu ve adını belirtir. `/r` seçeneği, kodunuzun başvurduğu derlemelerin adını sağlar. Bu örnekte, yalnızca uygulamalarınızın kullanabileceği özel bir derleme oluşturursunuz. Bu nedenle, uygulamayı uygulamanızın dizinine kaydetmelisiniz. Dağıtım için bir denetim paketleme ve dağıtma hakkında daha fazla bilgi için bkz. [dağıtım](../../deployment/index.md).
 
-Aşağıdaki örnek kodu gösterilir `FirstControl`. Denetimin ad alanı içinde alınmış `CustomWinControls`. Bir ad alanı, ilişkili mantıksal bir gruplandırmasını sağlar. Yeni veya mevcut bir ad alanındaki denetim oluşturabilirsiniz. C# ' ta, `using` bildirimi (Visual Basic'te `Imports`) türünün tam adını kullanarak olmadan bir ad alanından erişilecek türlerine izin verir. Aşağıdaki örnekte, `using` bildirimi sağlar sınıfını erişmek için kod <xref:System.Windows.Forms.Control> gelen <xref:System.Windows.Forms?displayProperty=nameWithType> basit <xref:System.Windows.Forms.Control> tam adı kullanmak zorunda olmak yerine <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.
+Aşağıdaki örnekte `FirstControl`kodu gösterilmektedir. Denetim ad alanı `CustomWinControls`alınmıştır. Bir ad alanı ilgili türlerin mantıksal bir gruplandırmasını sağlar. Denetiminizi yeni veya mevcut bir ad alanında oluşturabilirsiniz. ' C#De `using` bildirimine (Visual Basic, `Imports`), türün tam adı kullanılmadan bir ad alanından erişilmesine izin verir. Aşağıdaki örnekte `using` bildirimi, kodun, <xref:System.Windows.Forms.Control?displayProperty=nameWithType>tam adı kullanmak yerine <xref:System.Windows.Forms.Control> <xref:System.Windows.Forms?displayProperty=nameWithType> <xref:System.Windows.Forms.Control> sınıfına erişmesini sağlar.
 
 [!code-csharp[System.Windows.Forms.FirstControl#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#1)]
 [!code-vb[System.Windows.Forms.FirstControl#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#1)]
 
-## <a name="using-the-custom-control-on-a-form"></a>Formda özel denetim kullanarak
+## <a name="using-the-custom-control-on-a-form"></a>Bir form üzerinde özel denetimi kullanma
 
-Aşağıdaki örnek, kullanan basit bir form gösterir `FirstControl`. Üç örneklerini oluşturur `FirstControl`, her biri için farklı bir değerle `TextAlignment` özelliği.
+Aşağıdaki örnekte `FirstControl`kullanan basit bir form gösterilmektedir. Her biri `TextAlignment` özelliği için farklı bir değere sahip `FirstControl`üç örneğini oluşturur.
 
-#### <a name="to-compile-and-run-this-sample"></a>Derlemek ve bu örneği çalıştırmak için
+#### <a name="to-compile-and-run-this-sample"></a>Bu örneği derlemek ve çalıştırmak için
 
-1. Kodu aşağıdaki örnekte bir kaynak dosyasına (SimpleForm.cs veya SimpleForms.vb) kaydedin.
+1. Aşağıdaki örnekteki kodu bir kaynak dosyasına (SimpleForm.cs veya SimpleForms. vb) kaydedin.
 
-2. Kaynak kodu, yürütülebilir bir derlemeye kaynak dosyasını içeren dizinden aşağıdaki komutu yürüterek derleyin.
+2. Kaynak dosyayı içeren dizinden aşağıdaki komutu yürüterek, kaynak kodu yürütülebilir bir derlemede derleyin.
 
     ```console
     vbc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.vb
@@ -93,9 +93,9 @@ Aşağıdaki örnek, kullanan basit bir form gösterir `FirstControl`. Üç örn
     csc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.cs
     ```
 
-     CustomWinControls.dll olan sınıfı içeren derlemeyi `FirstControl`. Bu derleme (SimpleForm.cs veya SimpleForms.vb) eriştiği formu için kaynak dosyayla aynı dizinde olmalıdır.
+     CustomWinControls. dll, `FirstControl`sınıfını içeren derlemedir. Bu derleme, kendisine erişen form için kaynak dosyayla aynı dizinde olmalıdır (SimpleForm.cs veya SimpleForms. vb).
 
-3. Aşağıdaki komutu kullanarak SimpleForm.exe yürütün.
+3. Aşağıdaki komutu kullanarak SimpleForm. exe ' yi yürütün.
 
     ```console
     SimpleForm

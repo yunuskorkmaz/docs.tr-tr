@@ -2,12 +2,12 @@
 title: Eşler Arası Ağ
 ms.date: 03/30/2017
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
-ms.openlocfilehash: 74566d7bc7c8d817cedb0ff6f64590ba827ed4c4
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 2905a429e907f7e97c482c22229a6bc928c52243
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837369"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744679"
 ---
 # <a name="peer-to-peer-networking"></a>Eşler Arası Ağ
 Eş kanal, Windows Communication Foundation (WCF) ' de çok taraf, eşler arası (P2P) iletişim teknolojisidir. Uygulama geliştiricileri için güvenli ve ölçeklenebilir ileti tabanlı bir P2P iletişim kanalı sağlar. Eş kanaldan faydalanabilir bir çok taraflı uygulamanın yaygın bir örneği, sohbet gibi işbirliğine dayalı bir uygulamadır. Örneğin, bir kişi grubu, sunucular olmadan eşler arası bir şekilde bir başkası ile sohbet edebilir. Eş kanal, hem tüketici hem de kurumsal senaryolar için P2P işbirliği, içerik dağıtımı, yük dengeleme ve dağıtılmış işleme imkanı sunar.  
@@ -27,4 +27,4 @@ Eş kanal, Windows Communication Foundation (WCF) ' de çok taraf, eşler arası
  [Eş kanal özel eş Çözümleyicisi](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90))  
   
 ## <a name="peer-channel-team-blog"></a>Eş kanal ekip blogu  
- [Eş kanal ekip blogu](https://go.microsoft.com/fwlink/?LinkID=114530)
+ [Eş kanal ekip blogu](https://docs.microsoft.com/archive/blogs/peerchan/)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c48f764-3c64-4602-b2f4-4ffc60eb2c65
 topic_type:
 - apiref
-ms.openlocfilehash: 5aeea11b7e61869968aafe3425e27d6004f495ea
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ba138e79e0d6fb6f9c5e9c3efe3466f3c88cccae
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124070"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782616"
 ---
 # <a name="icordebugframe-interface"></a>ICorDebugFrame Arabirimi
 
@@ -29,14 +29,14 @@ Geçerli yığındaki bir çerçeveyi temsil eder.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[CreateStepper Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-createstepper-method.md)|Bu `ICorDebugFrame`göre atlama işlemleri gerçekleştirmek için bir ICorDebugStepper alır.|  
-|[GetCallee Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcallee-method.md)|Geçerli zincirde bu karenin çağırdığı `ICorDebugFrame` bir işaretçi alır veya bu, zincirdeki en içteki çerçevese null değerini döndürür.|  
-|[GetCaller Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcaller-method.md)|Bu çerçeveyi çağıran geçerli zincirde `ICorDebugFrame` bir işaretçi alır ya da zincirde en dıştaki çerçevese null değerini döndürür.|  
-|[GetChain Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getchain-method.md)|Bu `ICorDebugFrame` bir parçası olan ıcordebugzincirine yönelik bir işaretçi alır.|  
-|[GetCode Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)|Bu yığın çerçevesiyle ilişkili ICorDebugCode için bir işaretçi alır.|  
-|[GetFunction Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getfunction-method.md)|Bu yığın çerçevesiyle ilişkili kodu içeren ICorDebugFunction için bir işaretçi alır.|  
-|[GetFunctionToken Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getfunctiontoken-method.md)|Bu yığın çerçevesiyle ilişkili kodu içeren işleve ait meta veri belirtecini alır.|  
-|[GetStackRange Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getstackrange-method.md)|Bu `ICorDebugFrame`temsil eden yığın çerçevesinin mutlak adres aralığını alır.|  
+|[CreateStepper Yöntemi](icordebugframe-createstepper-method.md)|Bu `ICorDebugFrame`göre atlama işlemleri gerçekleştirmek için bir ICorDebugStepper alır.|  
+|[GetCallee Yöntemi](icordebugframe-getcallee-method.md)|Geçerli zincirde bu karenin çağırdığı `ICorDebugFrame` bir işaretçi alır veya bu, zincirdeki en içteki çerçevese null değerini döndürür.|  
+|[GetCaller Yöntemi](icordebugframe-getcaller-method.md)|Bu çerçeveyi çağıran geçerli zincirde `ICorDebugFrame` bir işaretçi alır ya da zincirde en dıştaki çerçevese null değerini döndürür.|  
+|[GetChain Yöntemi](icordebugframe-getchain-method.md)|Bu `ICorDebugFrame` bir parçası olan ıcordebugzincirine yönelik bir işaretçi alır.|  
+|[GetCode Yöntemi](icordebugframe-getcode-method.md)|Bu yığın çerçevesiyle ilişkili ICorDebugCode için bir işaretçi alır.|  
+|[GetFunction Yöntemi](icordebugframe-getfunction-method.md)|Bu yığın çerçevesiyle ilişkili kodu içeren ICorDebugFunction için bir işaretçi alır.|  
+|[GetFunctionToken Yöntemi](icordebugframe-getfunctiontoken-method.md)|Bu yığın çerçevesiyle ilişkili kodu içeren işleve ait meta veri belirtecini alır.|  
+|[GetStackRange Yöntemi](icordebugframe-getstackrange-method.md)|Bu `ICorDebugFrame`temsil eden yığın çerçevesinin mutlak adres aralığını alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -54,4 +54,4 @@ Geçerli yığındaki bir çerçeveyi temsil eder.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

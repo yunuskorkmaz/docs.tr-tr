@@ -1,21 +1,23 @@
 ---
 title: arabirim- C# başvuru
-ms.date: 07/20/2015
+ms.date: 01/17/2020
 f1_keywords:
 - interface_CSharpKeyword
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: 19ca4b8a490dc85de0d0e2be6d3ca8fa7982fc14
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b315d1f04c9e74700afba8ee7871b23ab4b2fd28
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713447"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744685"
 ---
-# <a name="interface-c-reference"></a>interface (C# Başvurusu)
+# <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (C# başvuru)
 
-Arabirim yalnızca [yöntemlerin](../../programming-guide/classes-and-structs/methods.md), [özelliklerin](../../programming-guide/classes-and-structs/properties.md), [olayların](../../programming-guide/events/index.md) veya [Dizin oluşturucuların](../../programming-guide/indexers/index.md)imzalarını içerir. Ara birimi uygulayan bir sınıfın veya yapının, ara birim tanımında belirtilen ara birim üyelerini uygulaması gerekir. Aşağıdaki örnekte `ImplementationClass` sınıfının, parametresi olmayan ve `SampleMethod`'i döndüren `void` adlı bir yöntemi uygulaması gerekir.
+Arabirim, bir sözleşmeyi tanımlar. Bu sözleşmeyi uygulayan [`class`](class.md) veya [`struct`](struct.md) , arabirimde tanımlı üyelerin bir uygulamasını sağlaması gerekir. 8,0 ile C# başlayarak bir arabirim, Üyeler için varsayılan bir uygulama tanımlayabilir. Ayrıca, yaygın işlevselliğe tek bir uygulama sağlamak için [`static`](static.md) üyelerini tanımlayabilir.
+
+Aşağıdaki örnekte `ImplementationClass` sınıfının, parametresi olmayan ve `SampleMethod`'i döndüren `void` adlı bir yöntemi uygulaması gerekir.
 
 Daha fazla bilgi ve örnek için bkz. [arabirimler](../../programming-guide/interfaces/index.md).
 
@@ -23,23 +25,39 @@ Daha fazla bilgi ve örnek için bkz. [arabirimler](../../programming-guide/inte
 
 [!code-csharp[csrefKeywordsTypes#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#14)]
 
-Ara birim, bir ad alanının veya bir sınıfın üyesi olabilir ve aşağıdaki üyelerin imzalarını içerebilir:
+Arabirim, bir ad alanı veya sınıf üyesi olabilir. Arabirim bildirimi, aşağıdaki üyelerin bildirimlerini (herhangi bir uygulama olmadan imzalar) içerebilir:
 
 - [Yöntemler](../../programming-guide/classes-and-structs/methods.md)
-
 - [Veri Erişimi](../../programming-guide/classes-and-structs/using-properties.md)
-
 - [Dizin Oluşturucular](../../programming-guide/indexers/using-indexers.md)
-
 - [Olaylar](event.md)
 
-Bir ara birim, bir veya daha fazla temel ara birimden devralınabilir.
+Bu önceki üye bildirimleri genellikle gövde içermez. 8,0 ile C# başlayarak bir arabirim üyesi bir gövde bildirebilir. Bu, varsayılan bir *uygulama*olarak adlandırılır. Gövdeler içeren Üyeler, arabirimin geçersiz kılan bir uygulama sağlamayan sınıflar ve yapılar için "varsayılan" bir uygulama sağlamasına izin verir. Ayrıca, 8,0 ile C# başlayarak bir arabirim şunlar olabilir:
+
+- [Sabitler](const.md)
+- [İşleçler](../operators/operator-overloading.md)
+- [Statik Oluşturucu](../../programming-guide/classes-and-structs/constructors.md#static-constructors).
+- [İç içe türler](../../programming-guide/classes-and-structs/nested-types.md)
+- [Statik alanlar, Yöntemler, özellikler, Dizin oluşturucular ve olaylar](static.md)
+- Açık arabirim uygulama sözdizimini kullanan üye bildirimleri.
+- Açık erişim değiştiricileri (varsayılan erişim [`public`](access-modifiers.md)).
+
+Arabirimler örnek durumu içermeyebilir. Statik alanlara artık izin verildiğinde, arabirimlerde örnek alanlarına izin verilmez. [Örnek otomatik Özellikler](../../programming-guide/classes-and-structs/auto-implemented-properties.md) , açıkça gizli bir alan bildirdiklerinde arabirimlerde desteklenmez. Bu kuralın Özellik bildirimlerinde hafif bir etkisi vardır. Bir arabirim bildiriminde, aşağıdaki kod bir `class` veya `struct`olduğu için otomatik olarak uygulanan bir özellik bildirmiyor. Bunun yerine, varsayılan bir uygulamasına sahip olmayan ancak arabirimini uygulayan herhangi bir türde uygulanması gereken bir özellik bildirir:
+
+```csharp
+public interface INamed
+{
+  public string Name {get; set;}
+}
+```
+
+Bir ara birim, bir veya daha fazla temel ara birimden devralınabilir. Bir arabirim Temel arabirimde uygulanan [bir yöntemi geçersiz kıldığında](override.md) , [Açık arabirim uygulama](../../programming-guide/interfaces/explicit-interface-implementation.md) söz dizimini kullanmalıdır.
 
 Bir temel tür listesi temel bir sınıfı ve ara birimleri içerdiğinde, temel sınıfın listede ilk sırada olması gerekir.
 
-Bir ara birimi uygulayan bir sınıf, o ara birimin üyelerini açıkça uygulayabilir. Açıkça uygulanan bir üyeye, bir sınıfın örneği üzerinden erişilemez, yalnızca ara birimin bir örneği üzerinden erişilebilir.
+Bir ara birimi uygulayan bir sınıf, o ara birimin üyelerini açıkça uygulayabilir. Açıkça uygulanan bir üyeye, bir sınıfın örneği üzerinden erişilemez, yalnızca ara birimin bir örneği üzerinden erişilebilir. Ayrıca, varsayılan arabirim üyelerine yalnızca arabirimin bir örneği üzerinden erişilebilir.
 
-Açık arabirim uygulamasındaki diğer ayrıntılar ve kod örnekleri için bkz. [Açık arabirim uygulama](../../programming-guide/interfaces/explicit-interface-implementation.md).
+Açık arabirim uygulama hakkında daha fazla bilgi için bkz. [Açık arabirim uygulama](../../programming-guide/interfaces/explicit-interface-implementation.md).
 
 ## <a name="example"></a>Örnek
 
@@ -49,7 +67,7 @@ Aşağıdaki örnek, ara birim uygulamasını gösterir. Bu örnekte, ara birim 
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Daha fazla bilgi için, [varsayılan arabirim üyeleri C# ](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md) için [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) ve özellik belirtiminin [arabirimler](~/_csharplang/spec/interfaces.md) bölümüne bakın-8,0
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

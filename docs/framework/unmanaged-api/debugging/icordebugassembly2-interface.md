@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0766e29-e573-4f9a-a928-167d1de5aa7e
 topic_type:
 - apiref
-ms.openlocfilehash: a0482ff451b05ec50c199a75a3c3fabd68c28e21
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0a56a943efd43c1ace766669dea8747024b00917
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133990"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784690"
 ---
 # <a name="icordebugassembly2-interface"></a>ICorDebugAssembly2 Arabirimi
 
@@ -29,7 +29,7 @@ Bir derlemeyi temsil eder. Bu arabirim, ICorDebugAssembly arabiriminin bir uzant
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IsFullyTrusted Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly2-isfullytrusted-method.md)|Derlemeye çalışma zamanı güvenlik sistemi tarafından tam güven verilip verilmediğini gösteren bir değer alır.|  
+|[IsFullyTrusted Yöntemi](icordebugassembly2-isfullytrusted-method.md)|Derlemeye çalışma zamanı güvenlik sistemi tarafından tam güven verilip verilmediğini gösteren bir değer alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -47,4 +47,4 @@ Bir derlemeyi temsil eder. Bu arabirim, ICorDebugAssembly arabiriminin bir uzant
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

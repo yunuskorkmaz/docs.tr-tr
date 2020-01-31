@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Windows Forms'da Çok Sayfalı Metin Dosyası Yazdırma"
+title: 'Nasıl yapılır: çok sayfalı metin dosyası yazdırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,39 +10,39 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: bd858279a4d8a3509a91bcd1c62fb1f61d6d2bb9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 51e30706bb7693988d611701d013792c82dccd0b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931784"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740652"
 ---
-# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Nasıl yapılır: Windows Forms'da Çok Sayfalı Metin Dosyası Yazdırma
-Windows tabanlı uygulamaların metin yazdırması çok yaygındır. <xref:System.Drawing.Graphics> Sınıfı, ekran veya yazıcı gibi bir cihaza nesneleri (grafik veya metin) çizmek için yöntemler sağlar.  
+# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta Çok Sayfalı Metin Dosyası Yazdırma
+Windows tabanlı uygulamaların metin yazdırması çok yaygındır. <xref:System.Drawing.Graphics> sınıfı, ekran veya yazıcı gibi bir cihaza nesneleri (grafik veya metin) çizmek için yöntemler sağlar.  
   
 > [!NOTE]
-> <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Yöntemleri<xref:System.Windows.Forms.TextRenderer> yazdırma için desteklenmez. Yazdırma amaçlarıyla metin çizmek için <xref:System.Drawing.Graphics.DrawString%2A> , aşağıdaki <xref:System.Drawing.Graphics>kod örneğinde gösterildiği gibi her zaman yöntemini kullanmanız gerekir.  
+> <xref:System.Windows.Forms.TextRenderer> <xref:System.Windows.Forms.TextRenderer.DrawText%2A> yöntemleri yazdırma için desteklenmez. Yazdırma amaçlarıyla metin çizmek için, aşağıdaki kod örneğinde gösterildiği gibi <xref:System.Drawing.Graphics><xref:System.Drawing.Graphics.DrawString%2A> yöntemlerini her zaman kullanmanız gerekir.  
   
 ### <a name="to-print-text"></a>Metin yazdırmak için  
   
-1. Formunuza bir <xref:System.Drawing.Printing.PrintDocument> bileşen ve dize ekleyin.  
+1. Formunuza bir <xref:System.Drawing.Printing.PrintDocument> bileşeni ve dize ekleyin.  
   
      [!code-csharp[System.Drawing.Printing.PrintExamples#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/CS/Form1.cs#8)]
      [!code-vb[System.Drawing.Printing.PrintExamples#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/VB/Form1.vb#8)]  
   
-2. Bir belge yazdırıyorsanız, <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> özelliği yazdırmak istediğiniz belgeye ayarlayın ve belge içeriğini açın ve daha önce eklediğiniz dizeye belge içeriğini okuyun.  
+2. Belge yazdırıyorsanız, <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> özelliğini yazdırmak istediğiniz belge olarak ayarlayın ve belgeler içeriğini açın ve daha önce eklediğiniz dizeye belge içeriğini okuyun.  
   
      [!code-csharp[System.Drawing.Printing.PrintExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/CS/Form1.cs#1)]
      [!code-vb[System.Drawing.Printing.PrintExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/VB/Form1.vb#1)]  
   
-3. Olay işleyicisinde, satır uzunluğunu ve sayfa <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> başına satırları hesaplamak <xref:System.Drawing.Printing.PrintPageEventArgs> için sınıfının özelliğini ve belge içeriğini kullanın. <xref:System.Drawing.Printing.PrintDocument.PrintPage> Her sayfa çizildikten sonra, son sayfa olup olmadığını denetleyin ve <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> özelliğini <xref:System.Drawing.Printing.PrintPageEventArgs> uygun şekilde ayarlayın. Olay, olana kadar <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A>tetiklenir. `false` <xref:System.Drawing.Printing.PrintDocument.PrintPage> Ayrıca, <xref:System.Drawing.Printing.PrintDocument.PrintPage> olayın olay işleme yöntemiyle ilişkili olduğundan emin olun.  
+3. <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay işleyicisinde, satır uzunluğunu ve sayfa başına satırları hesaplamak için <xref:System.Drawing.Printing.PrintPageEventArgs> sınıfının <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> özelliğini ve belge içeriğini kullanın. Her sayfa çizildikten sonra, son sayfa olup olmadığını denetleyin ve <xref:System.Drawing.Printing.PrintPageEventArgs> <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> özelliğini uygun şekilde ayarlayın. <xref:System.Drawing.Printing.PrintDocument.PrintPage> olayı, <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> `false`kadar tetiklenir. Ayrıca, <xref:System.Drawing.Printing.PrintDocument.PrintPage> olayının olay işleme yöntemiyle ilişkili olduğundan emin olun.  
   
      Aşağıdaki kod örneğinde, olay işleyicisi "testPage. txt" dosyasının içeriğini formda kullanılan yazı tipiyle yazdırmak için kullanılır.  
   
      [!code-csharp[System.Drawing.Printing.PrintExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/CS/Form1.cs#2)]
      [!code-vb[System.Drawing.Printing.PrintExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/VB/Form1.vb#2)]  
   
-4. Olayı yükseltmek için <xref:System.Drawing.Printing.PrintDocument.Print%2A>yönteminiçağırın <xref:System.Drawing.Printing.PrintDocument.PrintPage> .  
+4. <xref:System.Drawing.Printing.PrintDocument.PrintPage> olayını yükseltmek için <xref:System.Drawing.Printing.PrintDocument.Print%2A> yöntemi çağırın.  
   
      [!code-csharp[System.Drawing.Printing.PrintExamples#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/CS/Form1.cs#5)]
      [!code-vb[System.Drawing.Printing.PrintExamples#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/VB/Form1.vb#5)]  
@@ -51,10 +51,10 @@ Windows tabanlı uygulamaların metin yazdırması çok yaygındır. <xref:Syste
  [!code-csharp[System.Drawing.Printing.PrintExamples#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/CS/Form1.cs#0)]
  [!code-vb[System.Drawing.Printing.PrintExamples#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/VB/Form1.vb#0)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
  Bu örnek şunları gerektirir:  
   
-- C:\\sürücüsünün kökünde bulunan, yazdırılacak metni içeren TestPage. txt adlı bir metin dosyası. Farklı bir dosyayı yazdırmak için kodu düzenleyin.  
+- C:\\sürücüsünün kökünde bulunan, yazdırılacak metni içeren testPage. txt adlı bir metin dosyası. Farklı bir dosyayı yazdırmak için kodu düzenleyin.  
   
 - System, System. Windows. Forms, System. Drawing derlemelerine başvuru.  
   

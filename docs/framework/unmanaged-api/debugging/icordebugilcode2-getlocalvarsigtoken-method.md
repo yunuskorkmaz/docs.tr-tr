@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 17665b77-1342-4115-94fd-9f45b0ecfb0f
 topic_type:
 - apiref
-ms.openlocfilehash: 243000a2399b4938a3ad7f732c64e2f79b664f51
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3759cfa330ac37d2ed62a0b8bb70b5e10cd9d12e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131053"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782453"
 ---
 # <a name="icordebugilcode2getlocalvarsigtoken-method"></a>ICorDebugILCode2::GetLocalVarSigToken Metodu
 [.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
@@ -49,5 +49,5 @@ HRESULT GetLocalVarSigToken(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugILCode2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugILCode2 Arabirimi](icordebugilcode2-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

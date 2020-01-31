@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9afd0e04-a403-41e2-9528-a6dcbcdcbd4d
 topic_type:
 - apiref
-ms.openlocfilehash: 89f45208550d49f214e763728ddc9eb1bfcd9800
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 55d0b40bbdb5628f60090d9d70f7dccbebe9d58f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088968"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784992"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypes-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypes Metodu
 Tüm önbelleğe alınmış Windows Çalışma Zamanı türleri için bir Numaralandırıcı alır.  
@@ -35,7 +35,7 @@ HRESULT GetCachedWinRTTypes (
   
 ## <a name="parameters"></a>Parametreler  
  `ppGuidToTypeEnum`  
- dışı Bir [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) arabirim nesnesine yönelik bir işaretçi, uygulama etki alanında şu anda yüklü olan Windows çalışma zamanı türlerinin yönetilen gösterimlerini numaralandırabilirler.  
+ dışı Bir [ICorDebugGuidToTypeEnum](icordebugguidtotypeenum-interface.md) arabirim nesnesine yönelik bir işaretçi, uygulama etki alanında şu anda yüklü olan Windows çalışma zamanı türlerinin yönetilen gösterimlerini numaralandırabilirler.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Windows Çalışma Zamanı  
@@ -48,4 +48,4 @@ HRESULT GetCachedWinRTTypes (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugAppDomain3 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)
+- [ICorDebugAppDomain3 Arabirimi](icordebugappdomain3-interface.md)

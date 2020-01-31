@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0121753f-ebea-48d0-aeb2-ed7fda76dc60
 topic_type:
 - apiref
-ms.openlocfilehash: 3a1c4a931a61186c4737aada47ceb861e7848e7b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c25f26bb0f1f34e3799bab4bec7e697d393cccb4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122840"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784523"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next Yöntemi
-Geçerli konumdan başlayarak Numaralandırmadaki belirtilen [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) nesnelerinin sayısını alır.  
+Geçerli konumdan başlayarak Numaralandırmadaki belirtilen [CorDebugBlockingObject](cordebugblockingobject-structure.md) nesnelerinin sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,7 +39,7 @@ HRESULT Next([in] ULONG  celt,
  'ndaki Alınacak nesne sayısı.  
   
  `values`  
- dışı [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) nesnelerine yönelik işaretçiler dizisi.  
+ dışı [CorDebugBlockingObject](cordebugblockingobject-structure.md) nesnelerine yönelik işaretçiler dizisi.  
   
  `pceltFetched`  
  dışı Alınan nesne sayısına yönelik bir işaretçi.  
@@ -58,7 +58,7 @@ HRESULT Next([in] ULONG  celt,
  Giriş dizisi değerleri en az `celt`boyutunda olmalıdır. Dizi, Numaralandırmadaki bir sonraki `celt` değeri ya da `celt` daha az kalırsa kalan tüm değerlerle doldurulur. Bu yöntem döndürüldüğünde `pceltFetched` alınan değer sayısıyla doldurulur. `values` geçersiz işaretçiler içeriyorsa veya `celt`daha küçük bir arabelleğe işaret ediyorsa veya `pceltFetched` geçersiz bir işaretçisiyse, sonuç tanımsızdır.  
   
 > [!NOTE]
-> [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) yapısının serbest bırakılması gerekmez, ancak Içindeki "ICorDebugValue" arabiriminin serbest bırakılması gerekir.  
+> [CorDebugBlockingObject](cordebugblockingobject-structure.md) yapısının serbest bırakılması gerekmez, ancak Içindeki "ICorDebugValue" arabiriminin serbest bırakılması gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -71,6 +71,6 @@ HRESULT Next([in] ULONG  celt,
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugDataTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugDataTarget Arabirimi](icordebugdatatarget-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)

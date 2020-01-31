@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms Denetimlerinde Kullanıcı Girdi Olaylarını İşleme'
+title: Denetimlerde Kullanıcı giriş olaylarını işle
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - Windows Forms controls, user input
 - user input [Windows Forms], Windows Forms controls
 ms.assetid: 3de74dcf-fae3-42d0-92b5-bc04a61a6888
-ms.openlocfilehash: ae230f22c929be39ea00eafe378c6910c4a9d35f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 19adeb6c803c76cba4139841f58087487d523a50
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592089"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739424"
 ---
-# <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Nasıl yapılır: Windows Forms Denetimlerinde Kullanıcı Girdi Olaylarını İşleme
-Bu örnek, çoğu klavye, fare, odak ve bir Windows Forms denetiminde oluşabilecek doğrulama olayların nasıl ele alınacağını gösterir. Adlı metin kutusunda `TextBoxInput` odaklı ve her olay hakkında bilgiler adlı metin kutusuna yazılan olayları alır `TextBoxOutput` olaylar oluştuğunda sırada. Uygulama onay kutularını, rapora hangi olayları filtrelemek için kullanılan bir dizi de içerir.  
+# <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Nasıl yapılır: Windows Formları Denetimlerinde Kullanıcı Girdi Olaylarını İşleme
+Bu örnek, Windows Forms denetiminde gerçekleşebileceğini birçok klavye, fare, odak ve doğrulama olayının nasıl işleneceğini gösterir. `TextBoxInput` adlı metin kutusu, odağa sahip olduğunda olayları alır ve her olayla ilgili bilgiler, olayların oluşturulduğu sırada `TextBoxOutput` adlı metin kutusuna yazılır. Uygulama ayrıca bildirilecek olayları filtrelemek için kullanılabilecek bir dizi onay kutusu içerir.  
   
 ## <a name="example"></a>Örnek  
  [!code-cpp[System.Windows.Forms.UserInputWalkthrough#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.UserInputWalkthrough/cpp/form1.cpp#0)]
  [!code-csharp[System.Windows.Forms.UserInputWalkthrough#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.UserInputWalkthrough/CS/form1.cs#0)]
  [!code-vb[System.Windows.Forms.UserInputWalkthrough#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.UserInputWalkthrough/VB/form1.vb#0)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- Sistem, System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
+- System, System. Drawing ve System. Windows. Forms derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

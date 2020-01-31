@@ -4,12 +4,12 @@ description: .NET mikro hizmetleri ve Web uygulamalarında güvenlik-ASP.NET Cor
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 6d318f4efc6958610947f164d6ca63634f3d7db5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736977"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777209"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Güvenli .NET mikro hizmetleri ve Web uygulamaları oluşturun
 
@@ -121,7 +121,7 @@ else
 }
 ```
 
-Visual Studio 'da ASP.NET Code Web uygulaması projesini oluştururken **bireysel kullanıcı hesabı** kimlik doğrulaması seçeneğini belirlerseniz, Şekil 9-3 ' de gösterildiği gibi, bir dış sağlayıcı ile oturum açmak için gereken tüm kodlar zaten projede bulunur.
+Visual Studio 'da ASP.NET Core Web uygulaması projesi oluşturduğunuzda **bireysel kullanıcı hesabı** kimlik doğrulaması seçeneğini belirlerseniz, Şekil 9-3 ' de gösterildiği gibi, bir dış sağlayıcıyla oturum açmak için gereken tüm kodlar zaten projede bulunur.
 
 ![Yeni ASP.NET Core Web uygulaması iletişim kutusunun ekran görüntüsü.](./media/index/select-external-authentication-option.png)
 

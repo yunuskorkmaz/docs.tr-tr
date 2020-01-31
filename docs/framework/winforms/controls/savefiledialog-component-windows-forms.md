@@ -1,37 +1,37 @@
 ---
-title: SaveFileDialog Bileşeni (Windows Forms)
+title: SaveFileDialog Bileşeni
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Save File dialog box
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
-ms.openlocfilehash: 552e6cae64ab3b30279e04512a87b18c2f2b068a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 920816c648f5dbdd50f869e58769655e8be8e1a1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947985"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743085"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>SaveFileDialog Bileşeni (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.SaveFileDialog> bir önceden yapılandırılmış bir iletişim kutusu bir bileşendir. Bunu Windows tarafından kullanılan standart dosyayı Kaydet iletişim kutusu ile aynı olur. Devraldığı <xref:System.Windows.Forms.CommonDialog> sınıfı.  
+Windows Forms <xref:System.Windows.Forms.SaveFileDialog> bileşeni önceden yapılandırılmış bir iletişim kutusudur. Windows tarafından kullanılan standart dosya Kaydet iletişim kutusuyla aynıdır. <xref:System.Windows.Forms.CommonDialog> sınıfından devralır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [SaveFileDialog Bileşenine Genel Bakış](savefiledialog-component-overview-windows-forms.md)  
- Genel konseptlerini tanıtan <xref:System.Windows.Forms.SaveFileDialog> sağlayan önceden yapılandırılmış bir iletişim kutusunu görüntülemek için kullanıcıların bileşeni, bir dosyayı belirttiğiniz konuma kaydetmek için kullanabilirsiniz.  
+ , Kullanıcıların belirtilen konuma bir dosyayı kaydetmek için kullanabileceği önceden yapılandırılmış bir iletişim kutusu görüntülemenize olanak tanıyan <xref:System.Windows.Forms.SaveFileDialog> bileşeninin genel kavramlarını tanıtır.  
   
- [Nasıl yapılır: SaveFileDialog bileşenini kullanarak dosyaları kaydetme](how-to-save-files-using-the-savefiledialog-component.md)  
- Örneği aracılığıyla dosyanın kaydedileceği açıklanmaktadır <xref:System.Windows.Forms.SaveFileDialog> çalışma zamanında bileşeni.  
+ [Nasıl Yapılır: SaveFileDialog Bileşenini Kullanarak Dosyaları Kaydetme](how-to-save-files-using-the-savefiledialog-component.md)  
+ Çalışma zamanında <xref:System.Windows.Forms.SaveFileDialog> bileşeninin bir örneği aracılığıyla bir dosyanın nasıl kaydedileceğini açıklar.  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Windows.Forms.SaveFileDialog> Sınıfı  
- Sınıf ve onun üyeleri hakkında başvuru bilgileri sağlar.  
+ <xref:System.Windows.Forms.SaveFileDialog> sınıfı  
+ Sınıf ve üyeleri hakkında başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
- Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.  
+ Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.  
   
  [İletişim Kutusu Denetimleri ve Bileşenleri](dialog-box-controls-and-components-windows-forms.md)  
- Denetimleri ve bileşenleri kullanıcıların uygulama veya sistem standart etkileşim gerçekleştirmesine olanak sağlayan birtakım açıklar.  
+ Kullanıcıların uygulama veya sistemle standart etkileşimler gerçekleştirmesine izin veren bir denetim ve bileşen kümesini açıklar.  
   
- [Windows için temel kod Forms iletişim kutuları](https://go.microsoft.com/fwlink/?LinkID=102575)  
- Windows Forms iletişim kutusu denetimleri ve bileşenleri ve bunların temel işlevlerini yürütmek için gerekli kod açıklanır. (MSDN çevrimiçi kitaplığındaki teknik makalesi)
+ [Windows Forms Iletişim kutuları için gerekli kod](https://go.microsoft.com/fwlink/?LinkID=102575)  
+ Windows Forms iletişim kutusu denetimlerini ve bileşenlerini ve temel işlevlerini yürütmek için gereken kodu açıklar. (MSDN Çevrimiçi Kitaplığı teknik makalesi)

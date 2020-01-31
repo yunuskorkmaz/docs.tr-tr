@@ -1,52 +1,53 @@
 ---
 title: Windows Forms
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms
 - user interface
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: 00e359e7c2440b6d88f2c42fd0267fc1f12b7bb7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cdd3a71b406f1f0ae2afa1e1b3982c27f4db21a4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583431"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739189"
 ---
 # <a name="windows-forms"></a>Windows Forms
-Formları, uygulamanızın temel birim olduğundan, işlevi ve tasarım bazı düşünce vermek önemlidir. Sonuçta bir kullanıcı arabirimi oluşturmak için denetimleri ile verileri işlemek için kod, bir geliştirici olarak geliştirmek, boş bir maskeleme görüntüsü biçimidir. Bu nedenle, Visual Studio, .NET Framework ile yazılmış bir zengin denetiminin yanı sıra bir tümleşik geliştirme ortamı (IDE) kod yazmada yardımcı olmak için sağlar. Bu denetimlerin işlevleri, kodunuzu tamamlarken, olarak kolayca ve hızla, ihtiyacınız olan çözümleri geliştirin.  
+Form uygulamanızın temel birimi olduğundan, işlevleri ve tasarımı için biraz düşündük etmeniz önemlidir. Bir form, bir geliştirici olarak, bir kullanıcı arabirimi oluşturmak için denetimlerle ve verileri işlemek için kod ile geliştirecek şekilde, son olarak boş bir kurşun değer oluşturur. Bu uçta, Visual Studio size kod yazma konusunda yardımcı olmak için tümleşik bir geliştirme ortamı (IDE) ve .NET Framework yazılmış bir zengin denetim kümesi sağlar. Bu denetimlerin işlevselliğiyle ilgili işlevselliği kullanarak, ihtiyacınız olan çözümleri kolayca ve hızlı bir şekilde geliştirebilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Windows Forms'a Başlarken](getting-started-with-windows-forms.md)  
- Verileri görüntülemek için kullanıcı girişini işlemek ve uygulamalarınızı kolayca ve daha güçlü güvenlik ile dağıtmak için Windows Forms gücünden hakkındaki konulara bağlantılar sağlar.  
+ Verileri görüntüleme, Kullanıcı girişini işleme ve uygulamalarınızı daha güçlü güvenlik ile kolayca dağıtmak için Windows Forms gücünü nasıl dağıtabileceğinizi gösteren konuların bağlantılarını sağlar.  
   
  [Windows Forms Uygulamalarını Geliştirme](./advanced/index.md)  
- Windows Forms ile çeşitli özelliklerini geliştirmek nasıl hakkındaki konulara bağlantılar sağlar.  
+ Çeşitli özelliklerle Windows Forms geliştirme hakkında konuların bağlantılarını sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms Denetimleri](./controls/index.md)  
- Windows Forms denetimleri ve bunların nasıl uygulanacağını konulara bağlantılar içerir.  
+ Windows Forms denetimlerini betimleyen ve bunların nasıl uygulanacağını gösteren konuların bağlantılarını içerir.  
   
  [Windows Forms Veri Bağlama](windows-forms-data-binding.md)  
- Windows Forms veri bağlama mimarisi açıklayan konulara bağlantılar içerir.  
+ Windows Forms veri bağlama mimarisini tanımlayan konuların bağlantılarını içerir.  
   
  [Grafiklere Genel Bakış](./advanced/graphics-overview-windows-forms.md)  
- Grafik oluşturma, metin çizme ve grafik görüntüleri Windows grafik tasarım arabirimi Gelişmiş uygulamasını kullanarak nesneleri işlemek nasıl ele alınmaktadır.  
+ Windows grafik tasarım arabiriminin gelişmiş uygulamasını kullanarak grafik oluşturmayı, metin çizmeyi ve grafik görüntüleri nesne olarak işlemeyi açıklar.  
   
  [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)  
- ClickOnce dağıtım ilkeleri açıklanır.  
+ ClickOnce dağıtımının ilkelerini açıklar.  
   
  [Windows Forms/MFC programlama farkları](/cpp/dotnet/windows-forms-mfc-programming-differences)  
  MFC uygulamaları ve Windows Forms arasındaki farkları açıklar.  
   
  [Visual Studio'da verilere erişime](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- Veri erişim işlevlerini uygulamalarınızın yapısına katmayı açıklanır.  
+ Uygulamalarınıza veri erişimi işlevlerinin dahil olduğunu açıklar.  
   
  [Windows Forms Uygulamaları](/visualstudio/debugger/debugging-preparation-windows-forms-applications)  
- Windows uygulaması proje şablonu, yanı sıra hata ayıklama ve yayın yapılandırmaları değiştirme oluşturulan hata ayıklama uygulamalarını alınmaktadır.  
+ Windows uygulama projesi şablonuyla oluşturulan uygulamalarda hata ayıklama işleminin yanı sıra hata ayıklama ve sürüm yapılandırmalarının nasıl değiştirileceği açıklanır.  
   
- [Visual Studio'daki dağıtımı da ilk bakma](/visualstudio/deployment/deploying-applications-services-and-components)  
- Diğer bilgisayarlara yüklenmesi için bir tamamlanmış uygulama veya bileşen tarafından dağıttığınız işlemi açıklanmaktadır.  
+ [Visual Studio 'da dağıtıma ilk bakış](/visualstudio/deployment/deploying-applications-services-and-components)  
+ Tamamlanmış bir uygulamayı veya bileşeni başka bilgisayarlara yüklenmek üzere dağıttığınız süreci açıklar.  
   
  [Konsol Uygulamaları Derleme](../../standard/building-console-apps.md)  
- Kullanarak bir konsol uygulama oluşturmanın temellerini açıklar <xref:System.Console> sınıfı.
+ <xref:System.Console> sınıfını kullanarak bir konsol uygulaması oluşturmanın temellerini açıklar.

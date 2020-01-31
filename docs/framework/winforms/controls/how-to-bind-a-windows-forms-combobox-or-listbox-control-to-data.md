@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms ComboBox veya ListBox Denetimini Verilere Bağlama'
+title: ComboBox veya ListBox denetimini verilere bağlama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,25 +15,25 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: f361526c44f8fbb9ab282fe15ae109b67e8f01dd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 99d9b53b32d6faae888b134d4ed486980c05a75b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922749"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742040"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Nasıl yapılır: Windows Forms ComboBox veya ListBox Denetimini Verilere Bağlama
-Bir veritabanındaki verilere göz <xref:System.Windows.Forms.ComboBox> atma <xref:System.Windows.Forms.ListBox> , yeni veriler girme veya varolan verileri düzenlemek gibi görevleri gerçekleştirmek için ve verilerini bağlayabilirsiniz.  
+Bir veritabanındaki verilere göz atma, yeni veriler girme veya var olan verileri düzenlemek gibi görevleri gerçekleştirmek için <xref:System.Windows.Forms.ComboBox> ve <xref:System.Windows.Forms.ListBox> verileri bağlayabilirsiniz.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>ComboBox veya ListBox denetimini bağlamak için  
   
-1. `DataSource` Özelliği bir veri kaynağı nesnesi olarak ayarlayın. Olası veri kaynakları, veri <xref:System.Windows.Forms.BindingSource> , veri tablosu, veri görünümü, veri kümesi, veri görünümü Yöneticisi, bir dizi ya da <xref:System.Collections.IList> arabirimi uygulayan herhangi bir sınıf için bir sınırdır. Daha fazla bilgi için bkz. [Windows Forms tarafından desteklenen veri kaynakları](../data-sources-supported-by-windows-forms.md).  
+1. `DataSource` özelliğini bir veri kaynağı nesnesi olarak ayarlayın. Olası veri kaynakları, veri, veri tablosu, veri görünümü, veri kümesi, veri görünümü Yöneticisi, bir dizi veya <xref:System.Collections.IList> arabirimini uygulayan herhangi bir sınıf ile ilişkili <xref:System.Windows.Forms.BindingSource> içerir. Daha fazla bilgi için bkz. [Windows Forms tarafından desteklenen veri kaynakları](../data-sources-supported-by-windows-forms.md).  
   
-2. Bir tabloya bağlıyorsanız, `DisplayMember` özelliği veri kaynağındaki bir sütunun adı olarak ayarlayın.  
+2. Bir tabloya bağlıyorsanız, `DisplayMember` özelliğini veri kaynağındaki bir sütunun adı olarak ayarlayın.  
   
      \- veya -  
   
-     <xref:System.Collections.IList>' A bağlıyorsanız, görüntüleme üyesini listedeki türün ortak özelliği olarak ayarlayın.  
+     Bir <xref:System.Collections.IList>bağlıyorsanız, görüntüleme üyesini listedeki türün ortak özelliği olarak ayarlayın.  
   
     ```vb  
     Private Sub BindComboBox()  
@@ -51,7 +51,7 @@ Bir veritabanındaki verilere göz <xref:System.Windows.Forms.ComboBox> atma <xr
     ```  
   
     > [!NOTE]
-    > <xref:System.ComponentModel.IBindingList> Arabirimi uygulamayan bir <xref:System.Collections.ArrayList>veri kaynağına (örneğin,) bağlandıysanız, veri kaynağı güncelleştirildiği zaman, bağlanan denetimin verileri güncellenmez. Örneğin, öğesine bir <xref:System.Collections.ArrayList> Birleşik giriş kutusu varsa ve veriler <xref:System.Collections.ArrayList>öğesine eklenirse, bu yeni öğeler Birleşik giriş kutusunda görünmez. Ancak, denetimin bağlı olduğu <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> <xref:System.Windows.Forms.BindingContext> sınıfın örneğindeki ve <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> yöntemlerini çağırarak Birleşik giriş kutusunu güncelleştirilmesini zorlayabilirsiniz.  
+    > <xref:System.Collections.ArrayList>gibi <xref:System.ComponentModel.IBindingList> arabirimini uygulamayan bir veri kaynağına bağlandıysanız, veri kaynağı güncelleştirildiği zaman, bağlanan denetimin verileri güncellenmez. Örneğin, bir <xref:System.Collections.ArrayList> bağlantılı bir Birleşik giriş kutusu varsa ve veriler <xref:System.Collections.ArrayList>eklenirse, bu yeni öğeler Birleşik giriş kutusunda görünmez. Ancak, denetimin bağlı olduğu <xref:System.Windows.Forms.BindingContext> sınıfının örneği üzerinde <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> ve <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> yöntemlerini çağırarak açılan kutuyu güncelleştirilmesini zorlayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

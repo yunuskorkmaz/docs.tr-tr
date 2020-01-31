@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7c0c92fe-8bd2-477f-b307-aca0143732ca
 topic_type:
 - apiref
-ms.openlocfilehash: c7af194351290ad937e40a2fc8b960c2c242629c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 34a66a8afa118ecaaaeea0b7b78daaadf1da7509
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132804"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778269"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>CorDebugMDAFlags Numaralandırması
 Yönetilen hata ayıklama Yardımcısı 'nın (MDA) harekete geçirildiği iş parçacığının durumunu belirtir.  
@@ -52,4 +52,4 @@ typedef enum CorDebugMDAFlags {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)

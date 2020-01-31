@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms’a Denetimler Ekleme'
+title: Denetim Ekleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: bfe9449ecc862c361719d27dba2f5ed9af563957
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 560089a23fbcccb0f0d5683a95ad06dd9c59556d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046059"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743960"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a>Nasıl yapılır: Windows Forms’a Denetimler Ekleme
+# <a name="how-to-add-controls-to-windows-forms"></a>Nasıl yapılır: Windows Formlarına Denetimler Ekleme
 
 Çoğu form, bir kullanıcı arabirimi (UI) tanımlamak için formun yüzeyine denetimler eklenerek tasarlanır. *Denetim* , bilgileri göstermek veya Kullanıcı girişini kabul etmek için kullanılan bir form bileşenidir. Denetimler hakkında daha fazla bilgi için bkz. [Windows Forms denetimleri](index.md).
 
 ## <a name="to-draw-a-control-on-a-form"></a>Form üzerinde bir denetim çizmek için
 
-1. Formunu açın. Daha fazla bilgi için [nasıl yapılır: Tasarımcıda](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))Windows Forms görüntüleyin.
+1. Formunu açın. Daha fazla bilgi için bkz. [nasıl yapılır: tasarımcıda Windows Forms görüntüleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
 
 2. **Araç kutusunda**formunuza eklemek istediğiniz denetime tıklayın.
 
@@ -35,7 +35,7 @@ ms.locfileid: "70046059"
 
 ## <a name="to-drag-a-control-to-a-form"></a>Bir denetimi forma sürüklemek için
 
-1. Formunu açın. Daha fazla bilgi için [nasıl yapılır: Tasarımcıda](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))Windows Forms görüntüleyin.
+1. Formunu açın. Daha fazla bilgi için bkz. [nasıl yapılır: tasarımcıda Windows Forms görüntüleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
 
 2. **Araç kutusunda**istediğiniz denetime tıklayın ve formunuza sürükleyin.
 
@@ -44,14 +44,14 @@ ms.locfileid: "70046059"
     > [!NOTE]
     > **Araç kutusundaki** bir denetime çift tıklayarak formun varsayılan boyutunda sol üst köşesine ekleyebilirsiniz.
 
-    Ayrıca, çalışma zamanında bir forma dinamik olarak denetim ekleyebilirsiniz. Aşağıdaki kod örneğinde, bir <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.Button> denetim tıklandığında forma bir denetim eklenecektir.
+    Ayrıca, çalışma zamanında bir forma dinamik olarak denetim ekleyebilirsiniz. Aşağıdaki kod örneğinde, bir <xref:System.Windows.Forms.Button> denetimine tıklandığında forma <xref:System.Windows.Forms.TextBox> bir denetim eklenecektir.
 
     > [!NOTE]
-    > Aşağıdaki yordam, bir **düğme** denetimi `Button1`olan bir form olması gerekir, zaten üzerine yerleştirilmiş.
+    > Aşağıdaki yordam, bir **düğme** denetimi olan `Button1`, zaten üzerine yerleştirilmiş bir formun varolup olmasını gerektirir.
 
 ## <a name="to-add-a-control-to-a-form-programmatically"></a>Bir forma programlı bir şekilde denetim eklemek için
 
-1. Formunuzun sınıfı içindeki düğmenin `Click` olayını işleyen yöntemde, denetim değişkeninizin başvurusunu eklemek, `Location`denetimin öğesini ayarlamak ve denetimi eklemek için aşağıdakine benzer bir kod ekleyin.
+1. Formunuzun sınıfında düğmenin `Click` olayını işleyen yöntemde, denetim değişkeninizin başvurusunu eklemek, denetimin `Location`ayarlamak ve denetimi eklemek için aşağıdakine benzer bir kod ekleyin.
 
     ```vb
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -85,11 +85,11 @@ ms.locfileid: "70046059"
     > Ayrıca, denetimin diğer özelliklerini başlatmak için de kod ekleyebilirsiniz.
 
     > [!IMPORTANT]
-    > Kötü amaçlı `UserControl`olarak başvurarak yerel bilgisayarınızı ağ üzerinden bir güvenlik riskine maruz kalabilirsiniz. Bu durum yalnızca zararlı bir kişinin zararlı bir denetim oluşturan bir sorun olduğu ve bunu projenize yanlışlıkla ekleyerek bir sorun olacaktır.
+    > Kötü amaçlı bir `UserControl`başvurarak yerel bilgisayarınızı ağ üzerinden bir güvenlik riskine maruz kalabilirsiniz. Bu durum yalnızca zararlı bir kişinin zararlı bir denetim oluşturan bir sorun olduğu ve bunu projenize yanlışlıkla ekleyerek bir sorun olacaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows Forms Denetimleri](index.md)
-- [Nasıl yapılır: Windows Forms denetimleri yeniden boyutlandır](how-to-resize-controls-on-windows-forms.md)
-- [Nasıl yapılır: Windows Forms denetimi tarafından görünen metni ayarlama](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Nasıl yapılır: Windows Forms’da Denetimleri Yeniden Boyutlandırma](how-to-resize-controls-on-windows-forms.md)
+- [Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Metni Ayarlama](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

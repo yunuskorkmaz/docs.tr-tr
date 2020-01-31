@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Windows Forms'da ToolStrip Metni ve Resimlerinin Görünüşünü Değiştirme"
+title: 'Nasıl yapılır: ToolStrip metin ve görüntülerinin görünümünü değiştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], text
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
-ms.openlocfilehash: cf2f332b17bf6ff5b6ffb7cbc2d5777649728ec6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7816e138e44554683c201895ece1f886ace8bfa6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650852"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746602"
 ---
-# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>Nasıl yapılır: Windows Forms'da ToolStrip Metni ve Resimlerinin Görünüşünü Değiştirme
-Metin ve görüntüleri üzerinde görüntülenip görüntülenmeyeceğini denetleyebileceğiniz bir <xref:System.Windows.Forms.ToolStripItem> ve nasıl birbirlerine göreli hizalandığını ve <xref:System.Windows.Forms.ToolStrip>.  
+# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta ToolStrip Metni ve Resimlerinin Görünüşünü Değiştirme
+Metin ve görüntülerin <xref:System.Windows.Forms.ToolStripItem> gösterilip gösterilmeyeceğini ve bunların birbirlerine ve <xref:System.Windows.Forms.ToolStrip>göre nasıl hizalandığını kontrol edebilirsiniz.  
   
-### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>Üzerinde ToolStripItem görüntülenenleri tanımlamak için  
+### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>ToolStripItem üzerinde neyin görüntülendiğini tanımlamak için  
   
-- Ayarlama <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> özelliğini istediğiniz değer. Olasılıklar `Image`, `ImageAndText`, `None`, ve `Text`. Varsayılan, `ImageAndText` değeridir.  
+- <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> özelliğini istenen değere ayarlayın. `Image`, `ImageAndText`, `None`ve `Text`olanakları vardır. Varsayılan, `ImageAndText` değeridir.  
   
     ```vb  
     ToolStripButton2.DisplayStyle = _  
@@ -36,9 +36,9 @@ Metin ve görüntüleri üzerinde görüntülenip görüntülenmeyeceğini denet
     toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;  
     ```  
   
-### <a name="to-align-text-on-a-toolstripitem"></a>ToolStripItem metni hizalama  
+### <a name="to-align-text-on-a-toolstripitem"></a>Bir ToolStripItem üzerinde metin hizalamak için  
   
-- Ayarlama <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> özelliğini istediğiniz değer. Olasılıkları üstünde, Orta ve alt sol, Orta ve sağ ile herhangi bir birleşimini şunlardır. Varsayılan, `MiddleCenter` değeridir.  
+- <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> özelliğini istenen değere ayarlayın. Bu olanaklar, sol, orta ve sağ ile herhangi bir üst, orta ve alt bileşimdir. Varsayılan, `MiddleCenter` değeridir.  
   
     ```vb  
     ToolStripSplitButton1.TextAlign = _  
@@ -49,9 +49,9 @@ Metin ve görüntüleri üzerinde görüntülenip görüntülenmeyeceğini denet
     toolStripSplitButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;  
     ```  
   
-### <a name="to-align-an-image-on-a-toolstripitem"></a>Görüntünün üzerinde ToolStripItem hizalamak için  
+### <a name="to-align-an-image-on-a-toolstripitem"></a>ToolStripItem üzerinde bir görüntüyü hizalamak için  
   
-- Ayarlama <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> özelliğini istediğiniz değer. Olasılıkları üstünde, Orta ve alt sol, Orta ve sağ ile herhangi bir birleşimini şunlardır. Varsayılan, `MiddleLeft` değeridir.  
+- <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> özelliğini istenen değere ayarlayın. Bu olanaklar, sol, orta ve sağ ile herhangi bir üst, orta ve alt bileşimdir. Varsayılan, `MiddleLeft` değeridir.  
   
     ```vb  
     ToolStripSplitButton1.ImageAlign = _  
@@ -62,9 +62,9 @@ Metin ve görüntüleri üzerinde görüntülenip görüntülenmeyeceğini denet
     toolStripSplitButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;  
     ```  
   
-### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>ToolStripItem metin ve görüntüleri birbirine göre nasıl görüntüleneceğini tanımlamak için  
+### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>ToolStripItem metninin ve görüntülerinin birbirlerine göre nasıl görüntülendiğini tanımlamak için  
   
-- Ayarlama <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> özelliğini istediğiniz değer. Olasılıklar `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`, ve `TextBeforeImage`. Varsayılan, `ImageBeforeText` değeridir.  
+- <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> özelliğini istenen değere ayarlayın. `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`ve `TextBeforeImage`olanakları vardır. Varsayılan, `ImageBeforeText` değeridir.  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  

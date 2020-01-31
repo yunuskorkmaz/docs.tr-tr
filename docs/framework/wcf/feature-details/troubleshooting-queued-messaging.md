@@ -2,12 +2,12 @@
 title: Kuyruğa Alınan İletilerde Sorun Giderme
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3d2d48076fafe44687546ca27e4d8670b81ce433
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345586"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742676"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Kuyruğa Alınan İletilerde Sorun Giderme
 
@@ -113,10 +113,6 @@ Güvenlikle ilgili olmayan Web ana bilgisayar sorunları için bkz. [kuyruğa al
 
 Y **:** , Oturumdaki son iletiye karşılık gelen işlemde AutoComplete =`true` ayarlayın ve kalan tüm hizmet işlemlerinde AutoComplete =`false` ayarlayın.
 
-**S:** MSMQ üzerinde yaygın soruların yanıtlarını nerede bulabilirim?
-
-Y **:** MSMQ hakkında daha fazla bilgi için bkz. [Microsoft Message Queuing](https://go.microsoft.com/fwlink/?LinkId=87810).
-
 **S:** Hizmet sunucum, hem sıraya alınan oturum iletilerini hem de sıraya alınmış veri birimi iletilerini içeren bir kuyruktan okurken neden bir `ProtocolException` oluşturur?
 
 Y **:** Sıraya alınan oturum iletilerinin ve sıraya alınmış veri birimi iletilerinin bulunduğu şekilde temel bir farklılık vardır. Bu nedenle, sıraya alınan bir oturum iletisini okumasını bekleyen bir hizmet, bir sıraya alınmış veri birimi iletisi alamıyor ve sıradaki bir veri birimi iletisini okumak için bekleyen bir hizmet oturum iletisi alamaz. Aynı sıradan her iki türdeki iletiyi okumaya çalışmak aşağıdaki özel durumu oluşturur:
@@ -154,11 +150,11 @@ Başka bir çözüm, <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A> öz
 
 Ancak başka bir geçici çözüm de Active Directory tümleştirmeyle MSMQ yüklemektir.
 
-**S:** Bir sıraya Active Directory için varsayılan bağlama (taşıma güvenliği açık) ile bir ileti gönderdiğimde, "iç sertifika bulunamadı" iletisini alıyorum. Bunu nasıl düzeltirim?
+**S:** Bir sıraya Active Directory için varsayılan bağlama (taşıma güvenliği açık) ile bir ileti gönderdiğimde, "iç sertifika bulunamadı" iletisini alıyorum. Bu Nasıl yaparım? düzeltilsin mi?
 
 Y **:** Bu, gönderenin Active Directory sertifikanın yenilenmesi gerektiği anlamına gelir. Bunu yapmak için, **Denetim Masası**, **Yönetim Araçları**, **Bilgisayar Yönetimi**' ni açın, **MSMQ**' ya sağ tıklayın ve **Özellikler**' i seçin. **Kullanıcı sertifikası** sekmesini seçin ve **Yenile** düğmesine tıklayın.
 
-**S:** <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> kullanarak bir ileti gönderdiğimde ve kullanılacak sertifikayı belirttiğinizde, "geçersiz sertifika" iletisi alıyorum. Bunu nasıl düzeltirim?
+**S:** <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> kullanarak bir ileti gönderdiğimde ve kullanılacak sertifikayı belirttiğinizde, "geçersiz sertifika" iletisi alıyorum. Bu Nasıl yaparım? düzeltilsin mi?
 
 Y **:** Sertifika modunda yerel makine sertifika deposu kullanamazsınız. Sertifika ek bileşenini kullanarak sertifikayı makine sertifika deposundan geçerli kullanıcı deposuna kopyalamanız gerekir. Sertifika ek bileşenini almak için:
 
@@ -180,7 +176,7 @@ Y **:** Sertifika modunda yerel makine sertifika deposu kullanamazsınız. Serti
 
 Y **:** Çalışma grubu modunda, uzak bir uygulamanın sıraya erişim kazanması için, uygulamanın sıraya erişim izni olması gerekir. Kuyruğun erişim denetim listesine (ACL) "anonim oturum açma" ekleyin ve okuma izni verin.
 
-**S:** Bir ağ hizmeti istemcisi (veya etki alanı hesabı olmayan herhangi bir istemci) sıraya alınmış bir ileti gönderdiğinde, gönderme işlemi geçersiz bir sertifika ile başarısız olur. Bunu nasıl düzeltirim?
+**S:** Bir ağ hizmeti istemcisi (veya etki alanı hesabı olmayan herhangi bir istemci) sıraya alınmış bir ileti gönderdiğinde, gönderme işlemi geçersiz bir sertifika ile başarısız olur. Bu Nasıl yaparım? düzeltilsin mi?
 
 Y **:** Bağlama yapılandırmasını denetleyin. İletiyi imzalamak için varsayılan bağlamada MSMQ aktarım güvenliği açıktır. Kapatın.
 

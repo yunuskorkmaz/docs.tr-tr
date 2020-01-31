@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-ms.openlocfilehash: 29bb84341c2cb4177c43f798d25a1a6d50099aa5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 53d8d219a13f2dade16a338efccf0837f8de0158
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122788"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784370"
 ---
 # <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint Arabirimi
 
@@ -29,8 +29,8 @@ Bir işlevde bir kesme noktasını veya bir değer üzerinde bir izleme noktası
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Activate Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|Bu `ICorDebugBreakpoint`etkin durumunu ayarlar.|  
-|[IsActive Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Bu `ICorDebugBreakpoint` etkin olup olmadığını gösteren bir değer alır.|  
+|[Activate Yöntemi](icordebugbreakpoint-activate-method.md)|Bu `ICorDebugBreakpoint`etkin durumunu ayarlar.|  
+|[IsActive Yöntemi](icordebugbreakpoint-isactive-method.md)|Bu `ICorDebugBreakpoint` etkin olup olmadığını gösteren bir değer alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Kesme noktaları, Koşullu ifadeleri doğrudan desteklemez. Bu işlevsellik isteniyorsa, bir hata ayıklayıcı onu `ICorDebugBreakpoint`en üstünde uygulamalıdır.  
@@ -51,4 +51,4 @@ Bir işlevde bir kesme noktasını veya bir değer üzerinde bir izleme noktası
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: 897fb56cacb51e98cf8f1778c3529617decb5ecb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 89ce4eafa46be3e9ba7cdb06884034a521e43bca
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138436"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777530"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>ICorDebugHeapSegmentEnum::Next Yöntemi
-Yönetilen yığının bellek bölgeleri hakkında bilgi içeren, belirtilen [cor_heapobject](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) örnek sayısını alır.  
+Yönetilen yığının bellek bölgeleri hakkında bilgi içeren [cor_heapobject](cor-heapobject-structure.md) örneklerinin belirtilen sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,10 +39,10 @@ HRESULT Next(
  'ndaki Alınacak parçaların sayısı.  
   
  segmentler  
- dışı Her biri, yönetilen yığında bir bellek bölgesi hakkında bilgi sağlayan bir [cor_heapobject](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) nesnesine işaret eden bir işaretçiler dizisi.  
+ dışı Her biri yönetilen yığında bir bellek bölgesi hakkında bilgi sağlayan bir [cor_heapobject](cor-heapobject-structure.md) nesnesine işaret eden işaretçiler dizisi.  
   
  Pceltfettiz  
- dışı Gerçekten `segments`döndürülen [cor_heapobject](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) nesne sayısına yönelik bir işaretçi. Bu değer, `celt` 1 ise `null` olabilir.  
+ dışı Aslında `segments`döndürülen [cor_heapobject](cor-heapobject-structure.md) nesnelerinin sayısına yönelik bir işaretçi. Bu değer, `celt` 1 ise `null` olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -57,5 +57,5 @@ HRESULT Next(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugHeapSegmentEnum Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugHeapSegmentEnum Arabirimi](icordebugheapsegmentenum-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

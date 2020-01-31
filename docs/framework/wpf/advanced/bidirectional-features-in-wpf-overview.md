@@ -1,16 +1,16 @@
 ---
-title: WPF Genel Bakışında Çift Yönlü Özellikler
+title: Çift yönlü özelliklere genel bakış
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 19fb15a6310eba19792d7bd0744c2ae87f47c6fa
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 17167b1afa5037998d9ea8ed679a66c89babe242
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740430"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741636"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF Genel Bakışında Çift Yönlü Özellikler
 

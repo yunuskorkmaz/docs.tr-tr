@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43416dd5-8892-4106-9f59-f9143b19ddb4
 topic_type:
 - apiref
-ms.openlocfilehash: a5762079861f04e1869b206c3200c3a024c1b77a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fa154d0bb48f4ecd4fc6a50ce22fd13c592b7c40
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091002"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782742"
 ---
 # <a name="icordebugexceptionobjectvalue-interface"></a>ICorDebugExceptionObjectValue Arabirimi
 Yönetilen bir özel durum nesnesinden yığın izleme bilgisi sağlamak için "ICorDebugObjectValue" arabirimini genişletir.  
@@ -28,7 +28,7 @@ Yönetilen bir özel durum nesnesinden yığın izleme bilgisi sağlamak için "
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[EnumerateExceptionCallStack Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-enumerateexceptioncallstack-method.md)|Özel durum nesnesine katıştırılmış çağrı yığınına bir Numaralandırıcı alır.|  
+|[EnumerateExceptionCallStack Yöntemi](icordebugexceptionobjectvalue-enumerateexceptioncallstack-method.md)|Özel durum nesnesine katıştırılmış çağrı yığınına bir Numaralandırıcı alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `QueryInterface` çağrısı, <xref:System.Exception?displayProperty=nameWithType>türetilen yönetilen nesneler için başarılı olur.  
@@ -44,5 +44,5 @@ Yönetilen bir özel durum nesnesinden yığın izleme bilgisi sağlamak için "
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)

@@ -1,5 +1,5 @@
 ---
-title: WPF Güvenlik Stratejisi - Platform Güvenliği
+title: Platform güvenlik stratejisi
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: b2fd923de165c0926e6f812764c71127b7c27691
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 1ef705fcf046af1f4136ddcf1b29f417c0d72c83
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636243"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741858"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF Güvenlik Stratejisi - Platform Güvenliği
 Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetleri sağladığından, işletim sistemini, CLR 'yi ve Internet Explorer 'ı içeren temel platformun güvenlik özelliklerinden de yararlanır. Bu katmanlar WPF 'e, aşağıdaki şekilde gösterildiği gibi, tek bir hata noktası oluşmasını önlemeye yönelik güçlü, derinlemesine bir güvenlik modeli sağlamak üzere birleştirilir:  
@@ -53,7 +53,7 @@ Windows çekirdeği, WPF ile oluşturulmuş olanlar da dahil olmak üzere tüm W
 ### <a name="windows-vista"></a>Windows Vista  
 Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı erişimi", kod bütünlüğü denetimleri ve ayrıcalık yalıtımı gibi işletim sisteminin ek güvenlik geliştirmelerinden faydalanır.  
   
-#### <a name="user-account-control-uac"></a>Kullanıcı Hesabı Denetimi (UAC)  
+#### <a name="user-account-control-uac"></a>Kullanıcı hesabı denetimi (UAC)  
  Günümüzde, çoğu uygulama için yükleme veya yürütme ya da her ikisi için gerekli olduğundan, Windows kullanıcıları yönetici ayrıcalıklarıyla çalışmaya eğilimlidir. Varsayılan uygulama ayarlarını kayıt defterine yazamayacak bir örnektir.  
   
  Yönetici ayrıcalıklarıyla çalıştırmak, uygulamaların yönetici ayrıcalıkları verilen işlemlerden yürütülmesi anlamına gelir. Bunun güvenlik etkisi, yönetici ayrıcalıklarıyla çalışan bir işlemi ele alan herhangi bir kötü amaçlı kodun, kritik sistem kaynaklarına erişim de dahil olmak üzere otomatik olarak bu ayrıcalıkları devralmasını sağlar.  
@@ -103,7 +103,7 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
   
 - **Yerel Intranet**. İntranetten başlatılan uygulamalar. (Biraz güvenilir).  
   
-- **İnternet**. Internet 'ten başlatılan uygulamalar. (En az güvenilir).  
+- **Internet**. Internet 'ten başlatılan uygulamalar. (En az güvenilir).  
   
 - **Güvenilen siteler**. Bir kullanıcı tarafından güvenilen olarak tanımlanan uygulamalar. (En az güvenilir).  
   
@@ -115,7 +115,7 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
   
 - **LocalIntranet**. **Yerel Intranet** bölgesinden başlatılan uygulamalar için. Yalıtılmış depolama, sınırsız Kullanıcı Arabirimi erişimi, kısıtlanmamış dosya iletişimleri, sınırlı yansıma, ortam değişkenlerine sınırlı erişim dahil olmak üzere bir istemci makinenin kaynaklarına orta erişim sağlamak için izin alt kümesi verilir. Kayıt defteri gibi kritik kaynakların izinleri sağlanmaz.  
   
-- **İnternet**. **Internet** veya **Güvenilen siteler** bölgesinden başlatılan uygulamalar için. Yalıtılmış depolama, yalnızca dosya açma ve sınırlı kullanıcı arabirimi dahil olmak üzere bir istemci makinenin kaynaklarına sınırlı erişim sağlamak için bir izin alt kümesi verilmiştir. Temelde, bu izin kümesi, uygulamaları istemci makineden ayırır.  
+- **Internet**. **Internet** veya **Güvenilen siteler** bölgesinden başlatılan uygulamalar için. Yalıtılmış depolama, yalnızca dosya açma ve sınırlı kullanıcı arabirimi dahil olmak üzere bir istemci makinenin kaynaklarına sınırlı erişim sağlamak için bir izin alt kümesi verilmiştir. Temelde, bu izin kümesi, uygulamaları istemci makineden ayırır.  
   
  **Güvenilmeyen siteler** bölgesinde olduğu şekilde tanımlanan uygulamalara, CA 'lar tarafından hiçbir izin verilmez. Sonuç olarak, önceden tanımlanmış bir izin kümesi onlar için mevcut değildir.  
   

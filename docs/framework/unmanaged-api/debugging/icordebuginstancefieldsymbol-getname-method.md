@@ -2,12 +2,12 @@
 title: 'Icordebugınstancefieldsymbol:: GetName Yöntemi'
 ms.date: 03/30/2017
 ms.assetid: d9c12b1f-9c1d-4943-8e9e-93b55faf085f
-ms.openlocfilehash: d88e18b8d6d497098e340b396972f9ead28dbaf6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 05914863dfbc2aca608a5d74f298f81c64345fe8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139048"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782381"
 ---
 # <a name="icordebuginstancefieldsymbolgetname-method"></a>Icordebugınstancefieldsymbol:: GetName Yöntemi
 Örnek alanının adını alır.  
@@ -48,5 +48,5 @@ HRESULT GetName(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugInstanceFieldSymbol Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugInstanceFieldSymbol Arabirimi](icordebuginstancefieldsymbol-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

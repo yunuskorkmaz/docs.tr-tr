@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 6f60aae6-70ec-4c4c-963a-138df98c4668
 topic_type:
 - apiref
-ms.openlocfilehash: 544357a3ec26427cb4710f8484e0b3f8ee2b8267
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: afeec3df03fc2b122ca8deb8123b79314b5e3837
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937872"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782428"
 ---
 # <a name="icordebugilframe4enumeratelocalvariablesex-method"></a>ICorDebugILFrame4::EnumerateLocalVariablesEx Yöntemi
 [.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
@@ -35,13 +35,13 @@ HRESULT EnumerateLocalVariablesEx(
   
 ## <a name="parameters"></a>Parametreler  
  `flags`  
- 'ndaki Profil Oluşturucu yeniden JIT araçlarına eklenen değişkenlerin çerçeveye dahil edilip edilmeyeceğini belirten bir [ılcodekind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) numaralandırma üyesi.  
+ 'ndaki Profil Oluşturucu yeniden JIT araçlarına eklenen değişkenlerin çerçeveye dahil edilip edilmeyeceğini belirten bir [ılcodekind](ilcodekind-enumeration.md) numaralandırma üyesi.  
   
  `ppValueEnum`  
  dışı Bu çerçevedeki yerel değişkenlerin numaralandırıcısının bulunduğu bir "ICorDebugValueEnum" nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, isteğe bağlı olarak profil oluşturucu yeniden JIT araçları 'nda eklenen değişkenlere erişmesi dışında, [EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md) yöntemine benzerdir. `flags` `ILCODE_ORIGINAL_IL` ayarlanması [ICorDebugILFrame:: EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md)çağrısı ile eşdeğerdir. `flags` `ILCODE_REJIT_IL` olarak ayarlamak, hata ayıklayıcının profil oluşturucu ReJIT araçları 'nda eklenen yerel değişkenlere erişmesini sağlar. Ara dil (IL) görünmüyorsa, numaralandırma boştur ve Yöntem `S_OK`döndürür.  
+ Bu yöntem, isteğe bağlı olarak profil oluşturucu yeniden JIT araçları 'nda eklenen değişkenlere erişmesi dışında, [EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md) yöntemine benzerdir. `flags` `ILCODE_ORIGINAL_IL` ayarlanması [ICorDebugILFrame:: EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md)çağrısı ile eşdeğerdir. `flags` `ILCODE_REJIT_IL` olarak ayarlamak, hata ayıklayıcının profil oluşturucu ReJIT araçları 'nda eklenen yerel değişkenlere erişmesini sağlar. Ara dil (IL) görünmüyorsa, numaralandırma boştur ve Yöntem `S_OK`döndürür.  
   
  Numaralandırıcı etkin olmayabilir, bu, çalışan yöntemdeki tüm yerel değişkenleri içermeyebilir.  
   
@@ -56,6 +56,6 @@ HRESULT EnumerateLocalVariablesEx(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugILFrame4 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugILFrame4 Arabirimi](icordebugilframe4-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
 - [ReJIT: nasıl yapılır Kılavuzu](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 47a1da4982d22c63cb762a27313590c8ec0c5dd4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964753"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743970"
 ---
 # <a name="using-structs-c-programming-guide"></a>Yapıları kullanma (C# Programlama Kılavuzu)
 
@@ -27,7 +27,7 @@ Bir yapı için parametrelere sahip bir Oluşturucu yazarken, tüm üyeleri aç�
 
 Sınıflar için olduğu gibi yapılar için devralma yoktur. Yapı, başka bir struct veya sınıftan devralınabilir ve bir sınıfın temeli olamaz. Ancak yapılar, temel sınıftan devralınır <xref:System.Object>. Bir struct, arabirimler uygulayabilir ve tam olarak sınıfların yaptığı şekilde yapılır.
 
-Anahtar sözcüğünü kullanarak bir sınıf bildiremezsiniz `struct`. İçinde C#, sınıflar ve yapılar anlamsal olarak farklıdır. Yapı bir değer türüdür, ancak bir sınıf bir başvuru türüdür. Daha fazla bilgi için bkz. [değer türleri](../../language-reference/keywords/value-types.md) ve [başvuru türleri](../../language-reference/keywords/reference-types.md).
+Anahtar sözcüğünü kullanarak bir sınıf bildiremezsiniz `struct`. İçinde C#, sınıflar ve yapılar anlamsal olarak farklıdır. Yapı bir değer türüdür, ancak bir sınıf bir başvuru türüdür. Daha fazla bilgi için bkz. [değer türleri](../../language-reference/builtin-types/value-types.md) ve [başvuru türleri](../../language-reference/keywords/reference-types.md).
 
 Başvuru türü semantiklerine ihtiyacınız yoksa, bunun yerine bir yapı olarak bildirirseniz küçük bir sınıf sistem tarafından daha verimli bir şekilde işlenebilir.
 

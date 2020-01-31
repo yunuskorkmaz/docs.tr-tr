@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-ms.openlocfilehash: 90156152a2c133446dedbe22426785ab63f8dfb9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 23ad8882ad97e5ceaeb690dfae08a6be55b85f64
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131805"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791851"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>ICorDebugStackWalk::SetContext Yöntemi
-[Icordebugstackyürüme](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) nesnesinin geçerli bağlamını iş parçacığı için geçerli bir bağlam olarak ayarlar.  
+[Icordebugstackyürüme](icordebugstackwalk-interface.md) nesnesinin geçerli bağlamını iş parçacığı için geçerli bir bağlam olarak ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,7 +35,7 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
 ## <a name="parameters"></a>Parametreler  
  `flag`  
- 'ndaki Bir [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) bayrağı, bağlamın yığındaki etkin kareden mi yoksa yığının geriye doğru bir şekilde mi devraldığını gösterir.  
+ 'ndaki Bir [CorDebugSetContextFlag](cordebugsetcontextflag-enumeration.md) bayrağı, bağlamın yığındaki etkin kareden mi yoksa yığının geriye doğru bir şekilde mi devraldığını gösterir.  
   
  `contextSize`  
  'ndaki `CONTEXT` arabelleğinin ayrılan boyutu.  
@@ -49,9 +49,9 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|`ICorDebugStackWalk` nesnenin bağlamı başarıyla ayarlandı.|  
-|E_FAıL|`ICorDebugStackWalk` nesnenin bağlamı ayarlanmadı.|  
+|E_FAIL|`ICorDebugStackWalk` nesnenin bağlamı ayarlanmadı.|  
 |E_INVALIDARG|Bağlam null.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|Bağlam arabelleği çok küçük.|  
+|HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT_BUFFER)|Bağlam arabelleği çok küçük.|  
   
 ## <a name="exceptions"></a>Özel Durumlar  
   
@@ -60,7 +60,7 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
  Geçerli içeriğin geçersiz bir bağlam olarak ayarlanması, yığın denetçisi 'nden öngörülemeyen sonuçlara neden olabilir.  
   
- [Icordebugstackizlenecek yol:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) yöntemini hemen çağırarak, bu bağlamın tam bit düzeyinde bir kopyasını alabilirsiniz.  
+ [Icordebugstackizlenecek yol:: GetContext](icordebugstackwalk-getcontext-method.md) yöntemini hemen çağırarak, bu bağlamın tam bit düzeyinde bir kopyasını alabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -73,5 +73,5 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)

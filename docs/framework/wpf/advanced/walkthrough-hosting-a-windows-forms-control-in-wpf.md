@@ -1,5 +1,6 @@
 ---
-title: "İzlenecek yol: WPF'de Windows Forms Denetimini Barındırma"
+title: WPF 'de Windows Forms denetimi barındırma
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 9cb88415-39b0-4c46-80c4-ff325b674286
-ms.openlocfilehash: e353c35e9989e5887e038371672adbb6c2d3598d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: f7e925529f1bf194664c4f776bcc0322314f8857
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976522"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744904"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a>İzlenecek yol: WPF'de Windows Forms Denetimini Barındırma
 
@@ -36,7 +37,7 @@ Bu yönergeyi tamamlamak için Visual Studio gerekir.
 
     - WindowsFormsIntegration
 
-    - System. Windows. Forms
+    - System.Windows.Forms
 
 3. WPF Tasarımcısında MainWindow. xaml ' i açın.
 

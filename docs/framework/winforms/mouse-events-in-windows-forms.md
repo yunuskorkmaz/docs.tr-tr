@@ -1,5 +1,5 @@
 ---
-title: Windows Forms'ta Fare Olayları
+title: Fare olayları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MouseLeave event [Windows Forms]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: a61f4eedde611cfb7598d55465103924516e06c6
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 4909f56fc3935848fd18bc35c1cb56b5407a24c8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834603"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740968"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows Forms'ta Fare Olayları
 
@@ -28,9 +28,9 @@ Fare girişini işlerken, genellikle fare işaretçisinin konumunu ve fare düğ
 
 ## <a name="mouse-information"></a>Fare bilgileri
 
-Bir <xref:System.Windows.Forms.MouseEventArgs>, fare düğmesine tıklanması ve fare hareketlerini izlemek için ilgili fare olaylarının işleyicilerine gönderilir. <xref:System.Windows.Forms.MouseEventArgs>, fare işaretçisinin istemci koordinatlarındaki konumunu, hangi fare düğmelerine basıldığını ve fare tekerinin kaydırılmadığını de içeren, işaretçinin geçerli durumu hakkında bilgi sağlar. Fare işaretçisi bir denetimin sınırları girildiğinde veya sol tarafında bilgilendirenler gibi birçok fare olayı, daha fazla bilgi olmadan olay işleyicisine bir <xref:System.EventArgs> gönderin.
+Bir <xref:System.Windows.Forms.MouseEventArgs> fare düğmesine tıklanması ve fare hareketlerini izlemek için ilgili fare olaylarının işleyicilerine gönderilir. <xref:System.Windows.Forms.MouseEventArgs>, fare işaretçisinin, istemci koordinatlarındaki fare işaretçisi konumu, hangi fare düğmelerine basıldığı ve Fare tekerleğinin kaydırılışına dahil olmak üzere geçerli durumu hakkında bilgi sağlar. Yalnızca fare işaretçisi bir denetimin sınırları girildiğinde veya sol tarafta bilgilendirenler gibi birçok fare olayı, daha fazla bilgi olmadan olay işleyicisine <xref:System.EventArgs> gönderin.
 
-Fare düğmelerinin geçerli durumunu veya fare işaretçisinin konumunu biliyorsanız ve bir fare olayını işlemeyi önlemek istiyorsanız, <xref:System.Windows.Forms.Control> sınıfının <xref:System.Windows.Forms.Control.MouseButtons%2A> ve <xref:System.Windows.Forms.Control.MousePosition%2A> özelliklerini de kullanabilirsiniz. <xref:System.Windows.Forms.Control.MouseButtons%2A>, şu anda basılan fare düğmelerine ilişkin bilgileri döndürür. @No__t-0, fare işaretçisinin ekran koordinatlarını döndürür ve <xref:System.Windows.Forms.Cursor.Position%2A> tarafından döndürülen değere eşdeğerdir.
+Fare düğmelerinin geçerli durumunu veya fare işaretçisinin konumunu biliyorsanız ve bir fare olayını işlemeyi önlemek istiyorsanız, <xref:System.Windows.Forms.Control> sınıfının <xref:System.Windows.Forms.Control.MouseButtons%2A> ve <xref:System.Windows.Forms.Control.MousePosition%2A> özelliklerini de kullanabilirsiniz. <xref:System.Windows.Forms.Control.MouseButtons%2A>, şu anda basılan fare düğmelerine ilişkin bilgileri döndürür. <xref:System.Windows.Forms.Control.MousePosition%2A>, fare işaretçisinin ekran koordinatlarını döndürür ve <xref:System.Windows.Forms.Cursor.Position%2A>tarafından döndürülen değere eşdeğerdir.
 
 ## <a name="converting-between-screen-and-client-coordinates"></a>Ekran ve Istemci koordinatları arasında dönüştürme
 
@@ -60,7 +60,7 @@ Bir çift fare düğmesi için oluşturulan olayların sırası aşağıda veril
 
 5. <xref:System.Windows.Forms.Control.MouseDown> olayı.
 
-6. <xref:System.Windows.Forms.Control.DoubleClick> olayı. (Bu, söz konusu denetimin <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> stil biti `true` olarak ayarlanmış olmasına bağlı olarak farklılık gösterebilir. @No__t-0 biti ayarlama hakkında daha fazla bilgi için, <xref:System.Windows.Forms.Control.SetStyle%2A> yöntemine bakın.)
+6. <xref:System.Windows.Forms.Control.DoubleClick> olayı. (Bu, söz konusu denetimin <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> stil biti `true`olarak ayarlanmış olmasına bağlı olarak farklılık gösterebilir. <xref:System.Windows.Forms.ControlStyles> bitini ayarlama hakkında daha fazla bilgi için <xref:System.Windows.Forms.Control.SetStyle%2A> yöntemine bakın.)
 
 7. <xref:System.Windows.Forms.Control.MouseDoubleClick> olayı.
 
@@ -78,7 +78,7 @@ Aşağıdaki denetimler standart fare tıklaması olay davranışına uymuyor:
 - <xref:System.Windows.Forms.RadioButton>
 
   > [!NOTE]
-  > @No__t-0 denetimi için, daha sonra Kullanıcı düzenleme alanına, düğmeye veya listedeki bir öğeye tıkladığı takdirde ayrıntılı olay davranışı oluşur.
+  > <xref:System.Windows.Forms.ComboBox> denetimi için, Kullanıcı düzenleme alanına, düğmeye veya listedeki bir öğeye tıkladığında daha sonra ayrıntılı olay davranışı oluşur.
 
   - Sol tıklama: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
@@ -88,7 +88,7 @@ Aşağıdaki denetimler standart fare tıklaması olay davranışına uymuyor:
 
   - Sağ çift tıklama: hiçbir tıklama olayı tetiklendi
 
-- <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox> ve <xref:System.Windows.Forms.CheckedListBox> denetimleri
+- <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox>ve <xref:System.Windows.Forms.CheckedListBox> denetimleri
 
   > [!NOTE]
   > Daha sonra ayrıntılı olay davranışı Kullanıcı bu denetimlerin içinde herhangi bir yere tıkladığında oluşur.
@@ -104,11 +104,11 @@ Aşağıdaki denetimler standart fare tıklaması olay davranışına uymuyor:
 - <xref:System.Windows.Forms.ListView> denetimi
 
   > [!NOTE]
-  > Daha sonra ayrıntılı olay davranışı yalnızca Kullanıcı <xref:System.Windows.Forms.ListView> denetimindeki öğelerin tıkladığı zaman oluşur. Denetimde başka herhangi bir yere tıklama için hiçbir olay oluşturulmaz. Daha sonra açıklanan olaylara ek olarak, <xref:System.Windows.Forms.ListView> denetimiyle doğrulamayı kullanmak istiyorsanız, sizi ilgilendiren <xref:System.Windows.Forms.ListView.BeforeLabelEdit> ve <xref:System.Windows.Forms.ListView.AfterLabelEdit> olayları vardır.
+  > Daha sonra ayrıntılı olay davranışı yalnızca Kullanıcı <xref:System.Windows.Forms.ListView> denetimindeki öğelere tıkladığında gerçekleşir. Denetimde başka herhangi bir yere tıklama için hiçbir olay oluşturulmaz. Daha sonra açıklanan olaylara ek olarak, <xref:System.Windows.Forms.ListView> denetimiyle doğrulamayı kullanmak istiyorsanız sizi ilgilendiren <xref:System.Windows.Forms.ListView.BeforeLabelEdit> ve <xref:System.Windows.Forms.ListView.AfterLabelEdit> olayları vardır.
 
   - Sol tıklama: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Sağ tıklama: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
+  - Sağ tıklayın: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
   - Sol çift tıklama: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>
 
@@ -117,11 +117,11 @@ Aşağıdaki denetimler standart fare tıklaması olay davranışına uymuyor:
 - <xref:System.Windows.Forms.TreeView> denetimi
 
   > [!NOTE]
-  > Daha sonra ayrıntılı olay davranışı yalnızca Kullanıcı öğelerin kendilerini tıkladığı veya <xref:System.Windows.Forms.TreeView> denetimindeki öğelerin sağında oluşur. Denetimde başka herhangi bir yere tıklama için hiçbir olay oluşturulmaz. Daha sonra açıklananlara ek olarak, <xref:System.Windows.Forms.TreeView> denetimiyle doğrulamayı kullanmak istiyorsanız, sizi ilgilendiren <xref:System.Windows.Forms.TreeView.BeforeCheck>, <xref:System.Windows.Forms.TreeView.BeforeSelect>, <xref:System.Windows.Forms.TreeView.BeforeLabelEdit>, <xref:System.Windows.Forms.TreeView.AfterSelect>, <xref:System.Windows.Forms.TreeView.AfterCheck> ve <xref:System.Windows.Forms.TreeView.AfterLabelEdit> olayları vardır.
+  > Daha sonra ayrıntılı olay davranışı yalnızca Kullanıcı öğelerin kendilerini tıkladığı veya <xref:System.Windows.Forms.TreeView> denetimindeki öğelerin sağında oluşur. Denetimde başka herhangi bir yere tıklama için hiçbir olay oluşturulmaz. Daha sonra açıklananlara ek olarak, <xref:System.Windows.Forms.TreeView.BeforeCheck>, <xref:System.Windows.Forms.TreeView.BeforeSelect>, <xref:System.Windows.Forms.TreeView.BeforeLabelEdit>, <xref:System.Windows.Forms.TreeView.AfterSelect>, <xref:System.Windows.Forms.TreeView.AfterCheck>ve <xref:System.Windows.Forms.TreeView.AfterLabelEdit> olayları vardır. Bu, <xref:System.Windows.Forms.TreeView> denetimiyle doğrulamayı kullanmak istiyorsanız ilginizi çeken olabilir.
 
   - Sol tıklama: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Sağ tıklama: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
+  - Sağ tıklayın: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
   - Sol çift tıklama: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>
 
@@ -129,26 +129,26 @@ Aşağıdaki denetimler standart fare tıklaması olay davranışına uymuyor:
 
 ### <a name="painting-behavior-of-toggle-controls"></a>İki durumlu denetimlerin boyama davranışı
 
-@No__t-0 sınıfından türetilen denetimler gibi geçiş denetimleri, fare tıklama olayları ile birlikte aşağıdaki farklı boyama davranışına sahiptir:
+<xref:System.Windows.Forms.ButtonBase> sınıfından türetilen denetimler gibi geçiş denetimleri, fare tıklama olayları ile birlikte aşağıdaki farklı boyama davranışına sahiptir:
 
 1. Kullanıcı fare düğmesine basar.
 
 2. Denetim, basılan durumu boyar.
 
-3. @No__t-0 olayı tetiklenir.
+3. <xref:System.Windows.Forms.Control.MouseDown> olay tetiklenir.
 
 4. Kullanıcı fare düğmesini serbest bırakır.
 
 5. Denetim, oluşturulan durumu boyar.
 
-6. @No__t-0 olayı tetiklenir.
+6. <xref:System.Windows.Forms.Control.Click> olay tetiklenir.
 
-7. @No__t-0 olayı tetiklenir.
+7. <xref:System.Windows.Forms.Control.MouseClick> olay tetiklenir.
 
-8. @No__t-0 olayı tetiklenir.
+8. <xref:System.Windows.Forms.Control.MouseUp> olay tetiklenir.
 
     > [!NOTE]
-    > Fare düğmesi kapalıyken Kullanıcı işaretçiyi geçiş denetiminin dışına taşımışsa (örneğin, fareyi basıldığında <xref:System.Windows.Forms.Button> denetimi dışına taşıma gibi), iki durumlu denetim, ortaya çıkan ve yalnızca <xref:System.Windows.Forms.Control.MouseUp> olayı oluşur. @No__t-0 veya <xref:System.Windows.Forms.Control.MouseClick> olayları bu durumda gerçekleşmeyecektir.
+    > Fare düğmesi kapalıyken Kullanıcı işaretçiyi geçiş denetiminin dışına taşımışsa (örneğin, basıldığında fareyi <xref:System.Windows.Forms.Button> denetimin dışına taşımak gibi), iki durumlu denetim, kabarık durumunda boyama yapar ve yalnızca <xref:System.Windows.Forms.Control.MouseUp> olay oluşur. <xref:System.Windows.Forms.Control.Click> veya <xref:System.Windows.Forms.Control.MouseClick> olayları bu durumda gerçekleşmeyecektir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

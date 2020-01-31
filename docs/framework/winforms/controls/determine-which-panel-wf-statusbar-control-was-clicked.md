@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms StatusBar Denetiminde Hangi Panele Tıklandığını Belirleme'
+title: StatusBar denetiminde hangi panelin tıklandığını belirleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,27 +13,27 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: 6229d8965949641105cd0e9708474c3249d52d1d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 94619f8bd426a42e5dafa0db99880e20d24f9963
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965715"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746016"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Nasıl yapılır: Windows Forms StatusBar Denetiminde Hangi Panele Tıklandığını Belirleme
 > [!IMPORTANT]
-> <xref:System.Windows.Forms.StatusStrip> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBarPanel> Ve denetimleri, vedenetimlerine<xref:System.Windows.Forms.StatusBarPanel> işlevsellik ekler ve bunları ekler; ancak, ve denetimleri hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.ToolStripStatusLabel> 'yu.  
+> <xref:System.Windows.Forms.StatusStrip> ve <xref:System.Windows.Forms.ToolStripStatusLabel> denetimleri yerini alır ve <xref:System.Windows.Forms.StatusBar> ve <xref:System.Windows.Forms.StatusBarPanel> denetimlerine işlevsellik ekler; Ancak, <xref:System.Windows.Forms.StatusBar> ve <xref:System.Windows.Forms.StatusBarPanel> denetimleri hem geri uyumluluk hem de gelecekteki kullanım için korunur.  
   
- [Durum denetimi](statusbar-control-windows-forms.md) denetimini Kullanıcı tıklamalarına yanıt verecek şekilde programlamak için <xref:System.Windows.Forms.StatusBar.PanelClick> olay içinde bir Case ifadesini kullanın. Olay, tıklanan <xref:System.Windows.Forms.StatusBarPanel>bir başvuruyu içeren bir bağımsız değişken (panel bağımsız değişkeni) içerir. Bu başvuruyu kullanarak, tıklanan panelin dizinini ve programla buna uygun olarak bir program belirleyebilirsiniz.  
+ [Durum denetimi](statusbar-control-windows-forms.md) denetimini Kullanıcı tıklamalarına yanıt verecek şekilde programlamak için <xref:System.Windows.Forms.StatusBar.PanelClick> olayı içinde bir Case ifadesini kullanın. Olay, tıklanan <xref:System.Windows.Forms.StatusBarPanel>bir başvuru içeren bir bağımsız değişken (panel bağımsız değişkeni) içerir. Bu başvuruyu kullanarak, tıklanan panelin dizinini ve programla buna uygun olarak bir program belirleyebilirsiniz.  
   
 > [!NOTE]
-> Denetimin özelliğinin olarak`true`ayarlandığından emin olun. <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> <xref:System.Windows.Forms.StatusBar>  
+> <xref:System.Windows.Forms.StatusBar> denetiminin <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> özelliğinin `true`olarak ayarlandığından emin olun.  
   
 ### <a name="to-determine-which-panel-was-clicked"></a>Hangi panelin tıklandığını belirleme  
   
-1. `switch case` `Select Case` C# C++Olay işleyicisinde, olay bağımsız değişkenlerinde tıklatılan panelin dizinini inceleyerek hangi panelin tıklandığını belirleyen bir (Visual Basic) veya (görsel veya görsel) ifadesini kullanın. <xref:System.Windows.Forms.StatusBar.PanelClick>  
+1. <xref:System.Windows.Forms.StatusBar.PanelClick> olay işleyicisinde, olay bağımsız değişkenlerinde tıklatılan panelin dizinini inceleyerek hangi panelin tıklandığını belirleyen bir C# `Select Case` ( C++Visual Basic) veya `switch case` (Visual veya görsel) ifadesini kullanın.  
   
-     Aşağıdaki kod örneği <xref:System.Windows.Forms.StatusBar> , bir `StatusBar1`denetim,, ve iki <xref:System.Windows.Forms.StatusBarPanel> nesne `StatusBarPanel1` ve `StatusBarPanel2`için varlık gerektirir.  
+     Aşağıdaki kod örneği, bir <xref:System.Windows.Forms.StatusBar> denetimi, `StatusBar1`ve iki <xref:System.Windows.Forms.StatusBarPanel> nesne, `StatusBarPanel1` ve `StatusBarPanel2`için varlık gerektirir.  
   
     ```vb  
     Private Sub StatusBar1_PanelClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.StatusBarPanelClickEventArgs) Handles StatusBar1.PanelClick  
@@ -97,6 +97,6 @@ ms.locfileid: "69965715"
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Nasıl yapılır: Durum çubuğu panellerinin boyutunu ayarlama](how-to-set-the-size-of-status-bar-panels.md)
-- [İzlenecek yol: Çalışma zamanında durum çubuğu bilgilerini güncelleştirme](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Nasıl yapılır: Durum Çubuğu Panellerinin Boyutunu Ayarlama](how-to-set-the-size-of-status-bar-panels.md)
+- [İzlenecek yol: Çalışma Zamanında Durum Çubuğu Bilgilerini Güncelleştirme](walkthrough-updating-status-bar-information-at-run-time.md)
 - [StatusBar Denetimine Genel Bakış](statusbar-control-overview-windows-forms.md)

@@ -1,5 +1,6 @@
 ---
-title: "İzlenecek yol: WPF'te Win32 Denetimi Barındırma"
+title: WPF 'te Win32 denetimi barındırma
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 56f096dd7ba4feb677394cd26be9858a33842018
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: eb497a88c119dece85d61d6a32e7b86fb03b44b5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040811"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744937"
 ---
-# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>İzlenecek yol: WPF'te Win32 Denetimi Barındırma
+# <a name="walkthrough-host-a-win32-control-in-wpf"></a>İzlenecek yol: WPF 'te Win32 denetimi barındırma
 Windows Presentation Foundation (WPF), uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak, Win32 kodunda önemli bir yatırımınız olduğunda, bu kodu tamamen yeniden yazmak yerine WPF uygulamanızda en az bir kısmını yeniden kullanmak daha etkili olabilir. WPF, bir WPF sayfasında Win32 penceresini barındırmak için kolay bir mekanizma sağlar.  
   
  Bu konu, bir Win32 liste kutusu denetimi barındıran [WPF örneğinde Win32 ListBox denetimini barındıran](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)bir uygulamada size kılavuzluk eder. Bu genel yordam, herhangi bir Win32 penceresini barındırmak için genişletilebilir.  
@@ -61,7 +62,7 @@ Windows Presentation Foundation (WPF), uygulamalar oluşturmak için zengin bir 
 ## <a name="implement-the-page-layout"></a>Sayfa düzeni uygulama  
  ListBox denetimini barındıran WPF sayfasının düzeni iki bölgeden oluşur. Sayfanın sol tarafında, Win32 denetimini değiştirmenize olanak tanıyan bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] sağlayan çeşitli WPF denetimleri barındırır. Sayfanın sağ üst köşesinde barındırılan ListBox denetimi için bir kare bölgesi bulunur.  
   
- Bu düzeni uygulamak için kod oldukça basittir. Kök öğe, iki alt öğesi olan bir <xref:System.Windows.Controls.DockPanel>. Birincisi, ListBox denetimini barındıran bir <xref:System.Windows.Controls.Border> öğesidir. Sayfanın sağ üst köşesinde bir 200x200 kare kaplar. İkincisi, bilgileri görüntüleyen ve sunulan birlikte çalışabilirlik özelliklerini ayarlayarak ListBox denetimini değiştirmenize olanak tanıyan bir WPF denetimleri kümesini içeren <xref:System.Windows.Controls.StackPanel> öğesidir. <xref:System.Windows.Controls.StackPanel>alt öğesi olan öğelerin her biri için, bu öğelerin ne olduğu veya ne yapacaklarının ayrıntıları için kullanılan çeşitli öğelerin başvuru malzemesine bakın, bunlar aşağıdaki örnek kodda listelenir, ancak burada açıklanmaz (temel birlikte çalışabilirlik modeli bunlardan herhangi birini gerektirmez, örneğe bazı etkileşimler eklemek için bu değerler sağlanır.  
+ Bu düzeni uygulamak için kod oldukça basittir. Kök öğe, iki alt öğesi olan bir <xref:System.Windows.Controls.DockPanel>. Birincisi, ListBox denetimini barındıran bir <xref:System.Windows.Controls.Border> öğesidir. Sayfanın sağ üst köşesinde bir 200x200 kare kaplar. İkincisi, bilgileri görüntüleyen ve sunulan birlikte çalışabilirlik özelliklerini ayarlayarak ListBox denetimini değiştirmenize olanak tanıyan bir WPF denetimleri kümesini içeren <xref:System.Windows.Controls.StackPanel> öğesidir. <xref:System.Windows.Controls.StackPanel>alt öğesi olan öğelerin her biri için, bu öğelerin ne olduğu veya ne yapacaklarının ayrıntıları için kullanılan çeşitli öğelerin başvuru malzemesine bakın, bunlar aşağıdaki örnek kodda listelenir, ancak burada açıklanmaz (temel birlikte çalışabilirlik modeli, örneğe bir etkileşim eklemek için sağlanır).  
   
  [!code-xaml[WPFHostingWin32Control#WPFUI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   

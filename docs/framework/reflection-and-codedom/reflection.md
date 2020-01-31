@@ -21,16 +21,16 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 1768acd65b738af068cf98a8b8340c3179e9b885
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 42944d8267d2e99fd9eb1a2cb28c0c81d3e9af75
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130060"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744575"
 ---
 # <a name="reflection-in-net"></a>.NET 'te yansıma
 
-<xref:System.Reflection> ad alanındaki sınıflar, <xref:System.Type?displayProperty=nameWithType>ile birlikte, yüklü [derlemeler](../../standard/assembly/index.md) ve bunlar içinde tanımlanan türler ( [sınıflar](../../standard/base-types/common-type-system.md#classes), [arabirimler](../../standard/base-types/common-type-system.md#interfaces)ve [değer türleri](../../csharp/language-reference/keywords/value-types.md)gibi) hakkında bilgi edinmenizi sağlar. Ayrıca, çalışma zamanında tür örnekleri oluşturmak ve bunları çağırmak ve bunlara erişmek için yansıma de kullanabilirsiniz. Yansımanın belirli yönleri hakkında konular için bu genel bakışı sonundaki [Ilgili konular](#related_topics) bölümüne bakın.
+<xref:System.Reflection> ad alanındaki [sınıflar, <xref:System.Type?displayProperty=nameWithType>](../../standard/base-types/common-type-system.md#interfaces)ile birlikte, yüklü [derlemeler](../../standard/assembly/index.md) ve bunlar içinde tanımlanan türler [(örneğin,](../../standard/base-types/common-type-system.md#classes) [yapılar](../../standard/base-types/common-type-system.md#structures) ve [numaralandırmalar](../../standard/base-types/common-type-system.md#enumerations)) hakkında bilgi edinmenizi sağlar. Ayrıca, çalışma zamanında tür örnekleri oluşturmak ve bunları çağırmak ve bunlara erişmek için yansıma de kullanabilirsiniz. Yansımanın belirli yönleri hakkında konular için bu genel bakışı sonundaki [Ilgili konular](#related_topics) bölümüne bakın.
   
 [Ortak dil çalışma zamanı](../../standard/clr.md) yükleyicisi, aynı uygulama kapsamına sahip nesneler etrafında tanımlanmış sınırları oluşturan [uygulama etki alanlarını](../app-domains/application-domains.md)yönetir. Bu yönetim, her derlemenin uygun uygulama etki alanına yüklenmesini ve her derleme içindeki tür hiyerarşisinin bellek yerleşimini denetlemeyi içerir.  
   

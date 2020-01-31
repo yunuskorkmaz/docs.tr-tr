@@ -1,45 +1,45 @@
 ---
-title: Windows Forms DataGridView Denetiminde Veri Görüntüleme Modları
+title: DataGridView Denetimindeki veri görüntüleme modları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], display modes
 - data grids [Windows Forms], display modes
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
-ms.openlocfilehash: 673780909f6d66168548893e99d79bbfec70a0e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad6be647e3a36904b055fd6771f539df28938fab
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011453"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744013"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Veri Görüntüleme Modları
-<xref:System.Windows.Forms.DataGridView> Denetim, üç ayrı modda veri görüntüleyebilir: ilişkili, bağlantısız ve sanal. Gereksinimlerinize göre en uygun modu seçin.  
+<xref:System.Windows.Forms.DataGridView> denetim verileri üç farklı modda görüntüleyebilir: bağlı, ilişkisiz ve sanal. Gereksinimlerinize göre en uygun modu seçin.  
   
-## <a name="unbound"></a>Bağlanmamış  
- İlişkisiz Modu görece küçük miktarlarda programlama yoluyla yönetme veri görüntülemek için uygundur. Eklediğiniz değil <xref:System.Windows.Forms.DataGridView> bağımlı modu olduğu gibi veri kaynağına doğrudan denetimi. Bunun yerine, denetime kendiniz genellikle kullanarak doldurmanız gerekir <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> yöntemi.  
+## <a name="unbound"></a>Kaldır  
+ İlişkisiz mod, programlama yoluyla yönettiğiniz görece küçük miktarlarda veriyi görüntülemek için uygundur. <xref:System.Windows.Forms.DataGridView> denetimini, bağlama modunda olduğu gibi doğrudan bir veri kaynağına iliştiremez. Bunun yerine, genellikle <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> yöntemini kullanarak denetimi kendiniz doldurmanız gerekir.  
   
- İlişkisiz modu veya statik ve salt okunur veriler için bir dış veri deposuyla etkileşime giren kendi kodunuzu sağlamak istediğinizde özellikle yararlı olabilir. Ancak, bir dış veri kaynağı ile etkileşim kurmak için kullanıcılarınızın istediğinizde, genellikle bağımlı mod kullanır.  
+ İlişkisiz mod özellikle statik, salt okuma verileri için veya bir dış veri deposuyla etkileşim kuran kendi kodunuzu sağlamak istediğinizde yararlı olabilir. Kullanıcılarınızın bir dış veri kaynağıyla etkileşime geçmesini istediğinizde, genellikle sınırlı modu kullanırsınız.  
   
- Salt okunur kullanan bir örnek için ilişkisiz <xref:System.Windows.Forms.DataGridView>, bkz: [nasıl yapılır: Bir bağlantısız bir Windows Forms DataGridView denetimi oluşturma](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
+ Salt biçimli ilişkisiz <xref:System.Windows.Forms.DataGridView>kullanan bir örnek için bkz. [nasıl yapılır: ilişkisiz Windows Forms DataGridView denetimi oluşturma](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
   
-## <a name="bound"></a>bağlı  
- Bağlı mod, verileri veri deposuna otomatik olarak etkileşim kullanarak yönetmek için uygundur. İliştirebilirsiniz <xref:System.Windows.Forms.DataGridView> ayarlayarak doğrudan kendi veri kaynağı için Denetim <xref:System.Windows.Forms.DataGridView.DataSource%2A> özelliği. Denetimi veri bağımlı olduğunda, veri satırları gönderildi ve açık yönetim yapmanıza gerek olmadan çekilir. Zaman <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> özelliği `true`, her sütun, veri kaynağınızda denetiminde oluşturulacak karşılık gelen bir sütun neden olur. Kendi sütunlar oluşturmak isterseniz, bu özelliği ayarlayın `false` ve <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> her sütun, yapılandırdığınızda bağlamak için özellik. Varsayılan olarak oluşturulan türler dışında bir sütun türü kullanmak istediğinizde bu kullanışlıdır. Daha fazla bilgi için [Windows Forms DataGridView denetiminde sütun türleri](column-types-in-the-windows-forms-datagridview-control.md).  
+## <a name="bound"></a>Sınırlı  
+ Sınırlı mod, veri deposuyla otomatik etkileşim kullanılarak verilerin yönetilmesi için uygundur. <xref:System.Windows.Forms.DataGridView.DataSource%2A> özelliğini ayarlayarak <xref:System.Windows.Forms.DataGridView> denetimini doğrudan kendi veri kaynağına ekleyebilirsiniz. Denetim veri bağladığında, veri satırları, sizin bölüminizdeki açık yönetime gerek olmadan itilir ve çekilir. <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> Özellik `true`olduğunda, veri kaynağınızdaki her sütun denetimde ilgili bir sütunun oluşturulmasına neden olur. Kendi sütunlarınızı oluşturmayı tercih ediyorsanız, bu özelliği `false` olarak ayarlayabilir ve <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> özelliğini kullanarak her sütunu yapılandırdığınızda bağlayabilirsiniz. Bu, varsayılan olarak oluşturulan türlerden farklı bir sütun türü kullanmak istediğinizde yararlıdır. Daha fazla bilgi için bkz. [Windows Forms DataGridView Denetimindeki sütun türleri](column-types-in-the-windows-forms-datagridview-control.md).  
   
- Bağımlı kullanan bir örnek için <xref:System.Windows.Forms.DataGridView> denetlemek için bkz: [izlenecek yol: Doğrulama verileri Windows Forms DataGridView denetiminde](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
+ Bağlantılı <xref:System.Windows.Forms.DataGridView> denetimi kullanan bir örnek için bkz. [Walkthrough: Windows Forms DataGridView Denetimindeki verileri doğrulama](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
   
- Bağlanmamış sütunlar için de ekleyebilirsiniz bir <xref:System.Windows.Forms.DataGridView> ilişkili modunda denetimi. Düğmeler veya kullanıcıların belirli bir satırda eylemleri gerçekleştirmek bağlantılar içeren bir sütun görüntülemek istediğinizde bu kullanışlıdır. İlişkili sütunlardan hesaplanan değerlerle sütunları görüntülemek yararlıdır. İçin bir işleyici hesaplanmış sütunlar için hücre değerlerinin doldurabilirsiniz <xref:System.Windows.Forms.DataGridView.CellFormatting> olay. Kullanıyorsanız bir <xref:System.Data.DataSet> veya <xref:System.Data.DataTable> veri kaynağı olarak, ancak kullanmak isteyebileceğiniz <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType> özelliği bunun yerine hesaplanmış bir sütun oluşturun. Bu durumda, <xref:System.Windows.Forms.DataGridView> denetimi işlemek gibi herhangi bir veri kaynağı sütununda hesaplanmış sütun.  
+ Ayrıca, bağlı moddaki bir <xref:System.Windows.Forms.DataGridView> denetimine ilişkisiz sütunlar ekleyebilirsiniz. Bu, kullanıcıların belirli satırlarda eylem gerçekleştirmesini sağlayan düğmelerin veya bağlantıların bir sütununu göstermek istediğinizde yararlıdır. Ayrıca, ilişkili sütunlardan hesaplanan değerlere sahip sütunları göstermek de yararlı olur. <xref:System.Windows.Forms.DataGridView.CellFormatting> olayı için bir işleyicide hesaplanan sütunların hücre değerlerini doldurabilirsiniz. Ancak veri kaynağı olarak bir <xref:System.Data.DataSet> veya <xref:System.Data.DataTable> kullanıyorsanız, bunun yerine bir hesaplanmış sütun oluşturmak için <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType> özelliğini kullanmak isteyebilirsiniz. Bu durumda, <xref:System.Windows.Forms.DataGridView> denetimi hesaplanmış sütunu veri kaynağındaki diğer sütunlara benzer şekilde değerlendirir.  
   
- Bağlanmamış sütunlar ilişkili modunda sıralama desteklenmiyor. Kullanıcı tarafından düzenlenebilir değerleri içeren ilişkili modunda bağlantısız sütun oluşturursanız, bu değerler, Denetim, ilişkili bir sütuna göre sıralanmış korumak için sanal mod uygulamalıdır.  
+ İlişkisiz sütunlara göre sıralama, ilişkili modda desteklenmez. Bağlı modda, Kullanıcı tarafından düzenlenebilir değerler içeren ilişkisiz bir sütun oluşturursanız, denetim bir ilişkili sütuna göre sıralandığında bu değerleri korumak için sanal modu uygulamanız gerekir.  
   
 ## <a name="virtual"></a>Sanal  
- İle sanal modu, kendi veri yönetimi işlemleri uygulayabilir. Bu denetim, ilişkili sütunlara göre sıralandığında ilişkili modunda bağlanmamış sütunlar değerlerini korumak gereklidir. Birincil sanal modu ancak büyük miktarda veriyle etkileşim kurulurken performansı iyileştirmek için kullanılır.  
+ Sanal mod ile kendi veri yönetimi işlemlerinizi uygulayabilirsiniz. Bu, Denetim bağlantılı sütunlara göre sıralandığında, bağlı moddaki ilişkisiz sütunların değerlerini korumak için gereklidir. Ancak, sanal modun birincil kullanımı, büyük miktarlarda verilerle etkileşim kurarken performansı optimize etmek için kullanılır.  
   
- Eklediğiniz <xref:System.Windows.Forms.DataGridView> yönettiğiniz bir önbellek denetimi ve kod denetimlerinizi veri satırları gönderildi ve çekilir. Bellek Ayak izi küçük tutmak için önbellek boyutu şu anda görüntülenen satırların sayısı için benzer olmalıdır. Kullanıcı, yeni satır, görünüme kaydırdığında, kodunuzu yeni verileri önbellekten ister ve isteğe bağlı olarak eski verileri bellekten temizler.  
+ Yönettiğiniz bir önbelleğe <xref:System.Windows.Forms.DataGridView> denetimini iliştirmiş ve veri satırları itilmiş ve çekildiğinde kod denetimleriniz. Bellek ayak izini küçük tutmak için, önbelleğin boyut olarak şu anda görüntülenen satır sayısına benzer olması gerekir. Kullanıcı yeni satırları görünüme kaydırdığında, kodunuz önbellekteki yeni verileri ister ve isteğe bağlı olarak bellekten eski verileri temizler.  
   
- Sanal mod uygularken, yeni bir satır veri modeline geri alma, yeni satır eklenmesi gerektiğinde izlemek gerekir. Bu işlevlerin tam uygulama, veri modelinin uygulanması ve veri modeline işlem semantiği bağlıdır; işleme kapsamı bir veya daha fazla satır düzeyinde olup olmadığı.  
+ Sanal modu uygularken, veri modelinde yeni bir satır gerekli olduğunda ve yeni satırın eklenmesi ne zaman geri alınması gerektiğini izlemeniz gerekecektir. Bu işlevin tam olarak uygulanması, veri modelinin uygulamasına ve veri modelinin işlem semantiğine bağlıdır; kayıt kapsamının hücre veya satır düzeyinde olup olmadığı.  
   
- Sanal mod hakkında daha fazla bilgi için bkz: [Windows Forms DataGridView denetiminde sanal mod](virtual-mode-in-the-windows-forms-datagridview-control.md). Sanal modu olaylarını kullanmayı gösteren bir örnek için bkz: [izlenecek yol: Sanal modu uygulama içinde Windows Forms DataGridView denetiminde](implementing-virtual-mode-wf-datagridview-control.md).  
+ Sanal mod hakkında daha fazla bilgi için, [Windows Forms DataGridView Denetimindeki sanal mod](virtual-mode-in-the-windows-forms-datagridview-control.md)' a bakın. Sanal mod olaylarının nasıl kullanılacağını gösteren bir örnek için, bkz. [Izlenecek yol: Windows Forms DataGridView denetiminde sanal mod uygulama](implementing-virtual-mode-wf-datagridview-control.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -50,7 +50,7 @@ ms.locfileid: "62011453"
 - <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=nameWithType>
 - [Windows Forms DataGridView Denetiminde Verileri Görüntüleme](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetiminde Sütun Türleri](column-types-in-the-windows-forms-datagridview-control.md)
-- [İzlenecek yol: Bağlantısız bir Windows Forms DataGridView denetimi](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetimine veri bağlama](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [İzlenecek yol: Bağlantısız Bir Windows Forms DataGridView Denetimi Oluşturma](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView Denetimine Veri Bağlama](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetiminde Sanal Mod](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [İzlenecek yol: Windows Forms DataGridView denetiminde sanal modu uygulama](implementing-virtual-mode-wf-datagridview-control.md)
+- [İzlenecek yol: Windows Forms DataGridView Denetiminde Sanal Modu Çalıştırma](implementing-virtual-mode-wf-datagridview-control.md)

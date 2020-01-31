@@ -1,5 +1,5 @@
 ---
-title: WPF Fırçalarına Genel Bakış
+title: Fırçalara genel bakış
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 8a1d05ad48ce75ce67d21d5a4d508015fea879b2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 18ca9b79a6ee801638a54fcb227c44e9aea21fd0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458630"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746214"
 ---
 # <a name="wpf-brushes-overview"></a>WPF Fırçalarına Genel Bakış
 Ekranınızda görülebilen her şey, bir fırça tarafından boyandığı için görülebilir. Örneğin, bir düğmenin arka planını, metin ön kümesini ve bir şeklin dolgusunu betimleyen bir fırça kullanılır. Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fırçalarla boyama kavramlarını tanıtır ve örnekler sağlar. Fırçalar, basit ve düz renklerle karmaşık desen ve resim kümelerine [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] nesneleri boyamanıza imkan tanır.  
@@ -26,7 +26,7 @@ Fırça örnekleri
   
  Çoğu görsel nesne nasıl boyanmış olduğunu belirtmenizi sağlar. Aşağıdaki tabloda, <xref:System.Windows.Media.Brush>kullanabileceğiniz bazı ortak nesneler ve özellikler listelenmiştir.  
   
-|örneği|Fırça özellikleri|  
+|Sınıf|Fırça özellikleri|  
 |-----------|----------------------|  
 |<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
 |<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  

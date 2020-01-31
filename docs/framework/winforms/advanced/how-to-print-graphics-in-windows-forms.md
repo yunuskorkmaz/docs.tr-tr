@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Windows Forms'da Grafik Yazdırma"
+title: 'Nasıl yapılır: grafik yazdırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: 347c7064c199e953b496c9505f08c9e12c1ae670
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 2435b3bc14747a00d2a0fc03a9ebd21ae43c5369
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052809"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740649"
 ---
-# <a name="how-to-print-graphics-in-windows-forms"></a>Nasıl yapılır: Windows Forms'da Grafik Yazdırma
-Genellikle, Windows tabanlı uygulamanızdaki grafik yazdırma isteyeceksiniz. <xref:System.Drawing.Graphics> Sınıfı bir aygıta bir ekran veya yazıcı gibi çizim nesneleri için yöntemler sağlar.  
+# <a name="how-to-print-graphics-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta Grafik Yazdırma
+Genellikle, Windows tabanlı uygulamanızda grafik yazdırmak isteyeceksiniz. <xref:System.Drawing.Graphics> sınıfı, nesneleri bir ekran veya yazıcı gibi bir cihaza çizmek için yöntemler sağlar.  
   
 ### <a name="to-print-graphics"></a>Grafik yazdırma  
   
-1. Ekleme bir <xref:System.Drawing.Printing.PrintDocument> formunuza bileşen.  
+1. Formunuza bir <xref:System.Drawing.Printing.PrintDocument> bileşeni ekleyin.  
   
-2. İçinde <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay işleyicisi, kullanım <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> özelliği <xref:System.Drawing.Printing.PrintPageEventArgs> yazdırmak için grafik türüne yazıcıda istemek için sınıf.  
+2. <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay işleyicisinde, yazıcıya hangi tür grafiklerin yazdırılacağını bildirmek için <xref:System.Drawing.Printing.PrintPageEventArgs> sınıfının <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> özelliğini kullanın.  
   
-     Aşağıdaki kod örneği, sınırlayıcı bir dikdörtgen içinde mavi bir elips oluşturmak için kullanılan bir olay işleyicisi gösterir. Aşağıdaki konum ve boyut dikdörtgen vardır: 100 ile başlayan 250 genişliği ve yüksekliği 250 ile 150.  
+     Aşağıdaki kod örneğinde, bir sınırlayıcı dikdörtgen içinde mavi bir elips oluşturmak için kullanılan bir olay işleyicisi gösterilmektedir. Dikdörtgen aşağıdaki konum ve boyutlara sahiptir: 100 ve 150 ' den başlayarak, 250 ve 250 yüksekliğiyle.  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -52,7 +52,7 @@ Genellikle, Windows tabanlı uygulamanızdaki grafik yazdırma isteyeceksiniz. <
        }  
     ```  
   
-     (Visual C# ve görsel C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.  
+     (Görsel C# ve görsel C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

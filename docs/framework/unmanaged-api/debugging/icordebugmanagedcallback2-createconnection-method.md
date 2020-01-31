@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-ms.openlocfilehash: d83ad530c8a61c2bfc38fb46ad2a33ef8d5077d3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e98748b523b948dc002f2ebc4e2e79fc7d659918
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130583"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781589"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>ICorDebugManagedCallback2::CreateConnection Yöntemi
 Hata ayıklayıcıya yeni bir bağlantı oluşturulduğunu bildirir.  
@@ -48,7 +48,7 @@ HRESULT CreateConnection (
 ## <a name="remarks"></a>Açıklamalar  
  `CreateConnection` geri çağırma aşağıdaki durumlardan biri içinde tetiklenir:  
   
-- Bir hata ayıklayıcı bağlantıları içeren bir işleme iliştirayarlandığında. Bu durumda, çalışma zamanı, işlemdeki her bağlantı için bir `CreateConnection` olayı ve bir [ICorDebugManagedCallback2:: ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) olayı oluşturur ve gönderir.  
+- Bir hata ayıklayıcı bağlantıları içeren bir işleme iliştirayarlandığında. Bu durumda, çalışma zamanı, işlemdeki her bağlantı için bir `CreateConnection` olayı ve bir [ICorDebugManagedCallback2:: ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md) olayı oluşturur ve gönderir.  
   
 - Bir ana bilgisayar [BARıNDıRMA API](../../../../docs/framework/unmanaged-api/hosting/index.md)'Sinde [ICLRDebugManager:: BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) öğesini çağırdığında.  
   
@@ -63,5 +63,5 @@ HRESULT CreateConnection (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugManagedCallback2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2 Arabirimi](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback Arabirimi](icordebugmanagedcallback-interface.md)

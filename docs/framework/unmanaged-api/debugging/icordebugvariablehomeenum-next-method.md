@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: eb9ea96c-5b58-4655-8104-094fc8b393b8
 topic_type:
 - apiref
-ms.openlocfilehash: 9c2c16789fb61099c9b7c58154810739d225af1f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2bb6fee00bb99555bc19f35e1250880cc3985f7f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121930"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790934"
 ---
 # <a name="icordebugvariablehomeenumnext-method"></a>Icordebugvariablehomeenum:: Next yöntemi
-Bir işlevdeki yerel değişkenler ve bağımsız değişkenler hakkında bilgi içeren, belirtilen [ıcordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) örneği sayısını alır.  
+Bir işlevdeki yerel değişkenler ve bağımsız değişkenler hakkında bilgi içeren, belirtilen [ıcordebugvariablehome](icordebugvariablehome-interface.md) örneği sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,7 +40,7 @@ HRESULT Next(
  'ndaki Alınacak nesne sayısı.  
   
  `homes`  
- Her biri bir işlevin yerel değişkeni veya bağımsız değişkeni hakkında bilgi sağlayan [ıcordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) nesnesine işaret eden bir işaretçiler dizisi.  
+ Her biri bir işlevin yerel değişkeni veya bağımsız değişkeni hakkında bilgi sağlayan [ıcordebugvariablehome](icordebugvariablehome-interface.md) nesnesine işaret eden bir işaretçiler dizisi.  
   
  `pceltFetched`  
  dışı Gerçekte nesnelerde döndürülen örneklerin sayısı.  
@@ -54,7 +54,7 @@ HRESULT Next(
 |`S_FALSE`|`pceltFetched`' de yansıtıldıkça alınan gerçek örnek sayısı, istenen örnek sayısından daha az.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [Icordebugvariablehomeenum:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) yöntemi, Numaralandırıcının geçerli konumundan başlayarak en fazla `celt` nesne alır. Yöntemi döndürüldüğünde, `pceltFetched` alınan nesnelerin gerçek sayısını içerir.  
+ [Icordebugvariablehomeenum:: Next](icordebugvariablehomeenum-next-method.md) yöntemi, Numaralandırıcının geçerli konumundan başlayarak en fazla `celt` nesne alır. Yöntemi döndürüldüğünde, `pceltFetched` alınan nesnelerin gerçek sayısını içerir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -67,5 +67,5 @@ HRESULT Next(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugVariableHomeEnum Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
-- [ICorDebugVariableHome Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [ICorDebugVariableHomeEnum Arabirimi](icordebugvariablehomeenum-interface.md)
+- [ICorDebugVariableHome Arabirimi](icordebugvariablehome-interface.md)

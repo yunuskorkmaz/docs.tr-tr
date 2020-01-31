@@ -1,5 +1,5 @@
 ---
-title: PrintPreviewControl Denetimine Genel Bakış (Windows Forms)
+title: PrintPreviewControl Denetimine Genel Bakış
 ms.date: 03/30/2017
 f1_keywords:
 - PrintPreviewControl
@@ -7,18 +7,18 @@ helpviewer_keywords:
 - print preview
 - PrintPreviewControl control
 ms.assetid: 4513c6c7-5e9b-4f4c-82ca-00f993a26955
-ms.openlocfilehash: e9f1c2ae912b6beeba70c318b94a3052e2f99acb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8dfe5802a24d5ec85ed908fd04c5550e1fbec012
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012608"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741441"
 ---
 # <a name="printpreviewcontrol-control-overview-windows-forms"></a>PrintPreviewControl Denetimine Genel Bakış (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.PrintPreviewControl> görüntülemek için kullanılan bir [PrintDocument](printdocument-component-windows-forms.md) yazdırıldığında görünecek. Bu nedenle genellikle kullandığınız hiç düğme yok veya diğer kullanıcı arabirimi öğeleri bu denetime sahiptir <xref:System.Windows.Forms.PrintPreviewControl> yalnızca kendi Yazdır-Önizle kullanıcı arabirimi yazmak istiyorsanız. Standart kullanıcı arabirimi istiyorsanız kullanmak bir <xref:System.Windows.Forms.PrintPreviewDialog> denetimi; bkz [PrintPreviewDialog denetimine genel bakış](printpreviewdialog-control-overview-windows-forms.md) genel bakış.  
+Windows Forms <xref:System.Windows.Forms.PrintPreviewControl>, yazdırıldığında görüneceği şekilde bir [PrintDocument](printdocument-component-windows-forms.md) göstermek için kullanılır. Bu denetimde hiçbir düğme veya diğer kullanıcı arabirimi öğesi yoktur, bu nedenle genellikle <xref:System.Windows.Forms.PrintPreviewControl> yalnızca kendi baskı önizleme Kullanıcı arabiriminizi yazmak istiyorsanız kullanırsınız. Standart Kullanıcı arabirimini istiyorsanız, bir <xref:System.Windows.Forms.PrintPreviewDialog> denetimi kullanın; genel bakış için bkz. [Printönizleme Iletişim kutusu denetimine genel bakış](printpreviewdialog-control-overview-windows-forms.md) .  
   
 ## <a name="key-properties"></a>Anahtar Özellikler  
- Denetimin anahtar özelliği <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>, belgenin önizlemesi için ayarlar. Belge olmalıdır bir <xref:System.Drawing.Printing.PrintDocument> nesne. Belge yazdırma için oluşturma genel bakış için bkz: [PrintDocument bileşenine genel bakış](printdocument-component-overview-windows-forms.md) ve [Windows Forms yazdırma desteği](../advanced/windows-forms-print-support.md). <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> Ve <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> özellikleri denetimde yatay ve dikey olarak görüntülenen sayfa sayısını belirler. Daha sorunsuz yükseltmelere görünen metin düzgünleştirme yapabilirsiniz, ancak daha yavaş görünen yapabilirsiniz; Bunu kullanmak için ayarlanmış <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A> özelliğini `true`.  
+ Denetimin anahtar özelliği, belgeyi önizlenen olarak ayarlayan <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>. Belge bir <xref:System.Drawing.Printing.PrintDocument> nesnesi olmalıdır. Yazdırma için belge oluşturmaya genel bakış için bkz. [PrintDocument Bileşenine Genel Bakış](printdocument-component-overview-windows-forms.md) ve [yazdırma desteği Windows Forms](../advanced/windows-forms-print-support.md). <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> ve <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> özellikleri, denetimde yatay ve dikey olarak görünen sayfa sayısını belirler. Düzgünleştirme, metnin daha düzgün görünmesine neden olabilir, ancak aynı zamanda görüntüyü daha yavaş hale getirir; kullanmak için <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A> özelliğini `true`olarak ayarlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DataGridView Denetiminin Seçim Modunu Ayarlama'
+title: DataGridView denetiminin seçim modunu ayarlama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selection mode
 - data grids [Windows Forms], selection mode
 ms.assetid: 2f241643-7f82-4583-8757-03494f63b465
-ms.openlocfilehash: 22db5c1438405fc830202ec7baac6b6fcd631b41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: da866aac3ac5b08a06ec71744aadb4260bd0cfc4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620793"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743509"
 ---
 # <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminin Seçim Modunu Ayarlama
-Aşağıdaki kod örneğinde nasıl yapılandırılacağını gösteren bir <xref:System.Windows.Forms.DataGridView> denetim böylece satır içinde otomatik olarak herhangi bir yere tıklayarak tüm satırı seçer ve bu nedenle aynı anda yalnızca bir satır seçilebilir.  
+Aşağıdaki kod örneği bir <xref:System.Windows.Forms.DataGridView> denetiminin nasıl yapılandırılacağını gösterir. böylece, bir satırdaki herhangi bir yere tıklamak otomatik olarak tüm satırı seçer ve tek seferde yalnızca bir satır seçilebilir.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#065](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#065)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#065](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#065)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- A <xref:System.Windows.Forms.DataGridView> adlı Denetim `dataGridView1`.  
+- `dataGridView1`adlı <xref:System.Windows.Forms.DataGridView> denetim.  
   
-- Başvurular <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemeler.  
+- <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

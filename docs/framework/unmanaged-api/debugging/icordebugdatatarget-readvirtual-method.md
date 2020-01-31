@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-ms.openlocfilehash: 87316b20c5835d9b887355a1f9374fa5f2156e5c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 20cea94961a250c3981d892910da1dcee20a060b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122167"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783733"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual Yöntemi
 Belirtilen adresten başlayarak bir ardışık bellek bloğunu alır ve sağlanan arabellekte döndürür.  
@@ -63,6 +63,6 @@ HRESULT ReadVirtual(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugDataTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugDataTarget Arabirimi](icordebugdatatarget-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
+- [Hata Ayıklama](index.md)

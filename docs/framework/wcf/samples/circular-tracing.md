@@ -2,12 +2,12 @@
 title: Döngüsel İzleme
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
-ms.openlocfilehash: b0778a25c75ae48c2215625f40b08a1e3815ba81
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 0b1d62177828b52b21a3e43cc083f79c27878804
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716001"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741966"
 ---
 # <a name="circular-tracing"></a>Döngüsel İzleme
 
@@ -64,4 +64,4 @@ Bir hizmet, bir dinleyici ve kaynak öğeleri için aşağıdaki kodu ekleyerek 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric Izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric Izleme örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

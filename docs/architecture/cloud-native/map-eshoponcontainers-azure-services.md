@@ -2,12 +2,12 @@
 title: eShopOnContainers'ı Azure Hizmetlerine eşleme
 description: EShopOnContainers 'ı Azure Kubernetes hizmeti, API Gateway ve Azure Service Bus gibi Azure hizmetleriyle eşleme.
 ms.date: 06/30/2019
-ms.openlocfilehash: 67430da18c0a12c694426214de33e85c2113e454
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: eb37be94461a5373afe328572a94892dec50432d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275810"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781209"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>eShopOnContainers'ı Azure Hizmetlerine eşleme
 
@@ -54,7 +54,7 @@ EShopOnContainers uygulaması, kullanıcının güncel alışveriş sepetini ist
 
 Konumlar mikro hizmeti, sürekliliği için bir MongoDB NoSQL veritabanı kullanır. Geliştirme sırasında, veritabanı kendi kapsayıcısına dağıtılabilir ve üretimde, hizmet [Azure Cosmos DB MongoDB için API 'sini](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)kullanabilir. Azure Cosmos DB avantajlarından biri, bir SQL API 'SI ve MongoDB, Cassandra, Gremlin ve Azure Tablo depolama dahil yaygın NoSQL API 'Leri dahil olmak üzere birden çok farklı iletişim protokollerinden faydalanabilir. Azure Cosmos DB, kendisini kullanan hizmetlerin ihtiyaçlarını karşılamak üzere ölçeklenebilen bir hizmet olarak tam olarak yönetilen ve genel olarak dağıtılmış bir veritabanı sunmaktadır.
 
-Bulutta yerel uygulamalardaki dağıtılmış veriler, [Bölüm 5](distributed-data.md)' te daha ayrıntılı bir şekilde ele alınmıştır.
+Bulutta yerel uygulamalardaki dağıtılmış veriler, [Bölüm 5](database-per-microservice.md)' te daha ayrıntılı bir şekilde ele alınmıştır.
 
 ## <a name="event-bus"></a>Olay veri yolu
 

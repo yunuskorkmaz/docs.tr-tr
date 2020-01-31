@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Visual Studio Tasarım-Zamanı Özellikleri'nden Faydalanan Windows Forms Denetimi Oluşturma"
+title: Visual Studio tasarım zamanı özelliklerinden faydalanan bir denetim oluşturma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 64f637b232cf21701185e7b87d86f63fdece5127
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7166b4203c54ab31f1d929c85cf1e6481ff120f8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459526"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744083"
 ---
 # <a name="walkthrough-create-a-control-that-takes-advantage-of-design-time-features"></a>İzlenecek yol: tasarım zamanı özelliklerinden faydalanan bir denetim oluşturma
 
@@ -142,7 +142,7 @@ Visual Studio 'da yeni bir Windows Forms uygulama projesi oluşturun ve **Marque
 
 5. Bu hata ayıklama yapılandırmasını etkinleştirmek için MarqueeControlLibrary projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla** ' yı seçin.
 
-## <a name="checkpoint"></a>Mak
+## <a name="checkpoint"></a>Checkpoint
 
 Artık özel denetiminizin tasarım zamanı davranışını hata ayıklamaya hazırsınız. Hata ayıklama ortamının doğru şekilde ayarlandığını belirledikten sonra, özel denetim ve özel tasarımcı arasındaki ilişkilendirmeyi test edersiniz.
 
@@ -177,7 +177,7 @@ Bu, `MarqueeControl` özelleştirmelerin bir kapsamını. Çalışma zamanı öz
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#260](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#260)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#260](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#260)]
 
-2. <xref:System.Windows.Forms.Control.OnLayout%2A> yöntemini geçersiz kılın.
+2. Geçersiz kılma <xref:System.Windows.Forms.Control.OnLayout%2A> yöntemi.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#270](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#270)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#270](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#270)]
@@ -233,7 +233,7 @@ Düzenli animasyon özelliğini uygulamak için, <xref:System.ComponentModel?dis
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#140](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#140)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#140](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#140)]
 
-10. `IMarqueeWidget` arabirimini uygulayın.
+10. Uygulama `IMarqueeWidget` arabirimi.
 
     `StartMarquee` ve `StopMarquee` yöntemleri, animasyonu başlatmak ve durdurmak için <xref:System.ComponentModel.BackgroundWorker> bileşenin <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> ve <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> yöntemlerini çağırır.
 
@@ -299,7 +299,7 @@ Düzenli animasyon özelliğini uygulamak için, <xref:System.ComponentModel?dis
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#40)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#40)]
 
-9. `IMarqueeWidget` arabirimini uygulayın.
+9. Uygulama `IMarqueeWidget` arabirimi.
 
     `StartMarquee` ve `StopMarquee` yöntemleri, animasyonu başlatmak ve durdurmak için <xref:System.ComponentModel.BackgroundWorker> bileşenin <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> ve <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> yöntemlerini çağırır.
 
@@ -468,12 +468,12 @@ Kullanıcılar için özel bir tasarım zamanı deneyimi oluşturduğunuzda, gen
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#92](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#92)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#92](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#92)]
 
-4. <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A> yöntemini geçersiz kılın. Bu uygulama, tasarım ortamına `LightShapeEditor`nasıl görüntüleneceğini bildiren <xref:System.Drawing.Design.UITypeEditorEditStyle.DropDown>döndürür.
+4. Geçersiz kılma <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A> yöntemi. Bu uygulama, tasarım ortamına `LightShapeEditor`nasıl görüntüleneceğini bildiren <xref:System.Drawing.Design.UITypeEditorEditStyle.DropDown>döndürür.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#93](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#93)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#93](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#93)]
 
-5. <xref:System.Drawing.Design.UITypeEditor.EditValue%2A> yöntemini geçersiz kılın. Bu uygulama, <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> nesnesi için tasarım ortamını sorgular. Başarılı olursa, bir `LightShapeSelectionControl`oluşturur. <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.DropDownControl%2A> yöntemi `LightShapeEditor`başlatılacak şekilde çağrılır. Bu çağrıdan gelen dönüş değeri tasarım ortamına döndürülür.
+5. Geçersiz kılma <xref:System.Drawing.Design.UITypeEditor.EditValue%2A> yöntemi. Bu uygulama, <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> nesnesi için tasarım ortamını sorgular. Başarılı olursa, bir `LightShapeSelectionControl`oluşturur. <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.DropDownControl%2A> yöntemi `LightShapeEditor`başlatılacak şekilde çağrılır. Bu çağrıdan gelen dönüş değeri tasarım ortamına döndürülür.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#94](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#94)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#94](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#94)]
@@ -535,7 +535,7 @@ Kullanıcılar için özel bir tasarım zamanı deneyimi oluşturduğunuzda, gen
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#360](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#360)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#360](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#360)]
 
-11. <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemini geçersiz kılın. Bu uygulama doldurulmuş bir kare ve daire çizecek. Ayrıca, bir şekil ya da diğeri etrafında kenarlık çizerek seçili değeri vurgulayacaktır.
+11. Geçersiz kılma <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi. Bu uygulama doldurulmuş bir kare ve daire çizecek. Ayrıca, bir şekil ya da diğeri etrafında kenarlık çizerek seçili değeri vurgulayacaktır.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#380](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#380)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#380](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#380)]

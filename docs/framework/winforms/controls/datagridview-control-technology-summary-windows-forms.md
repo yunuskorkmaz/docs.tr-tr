@@ -1,26 +1,26 @@
 ---
-title: DataGridView Denetimi Teknoloji Özeti (Windows Forms)
+title: DataGridView Denetimi Teknoloji Özeti
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: f8898f76971b6088fa8ca831961ea7f12e1ab4e6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 18eebd067df9768e14cc81258184551d00dd1402
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588838"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742482"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView Denetimi Teknoloji Özeti (Windows Forms)
-Bu konu hakkında bilgiler için özetlenmiştir `DataGridView` denetimi ve kullanımını destekleyen sınıflar.  
+Bu konu, `DataGridView` denetimi ve kullanımını destekleyen sınıflar hakkındaki bilgileri özetler.  
   
- Verileri tablo biçiminde görüntülemek, sık gerçekleştirmek muhtemelen bir görevdir. `DataGridView` Denetimi bir kılavuzda verileri sunmak için eksiksiz bir çözüm olarak tasarlanmıştır.  
+ Verileri tablosal biçimde görüntülemek, sıkça gerçekleştirdiğiniz bir görevdir. `DataGridView` denetim, verileri bir kılavuzda sunmaya yönelik tamamen bir çözüm olacak şekilde tasarlanmıştır.  
   
-## <a name="keywords"></a>anahtar sözcükler  
- DataGridView, BindingSource, tablo, hücre, veri bağlama, sanal mod  
+## <a name="keywords"></a>Anahtar Sözcükler  
+ DataGridView, BindingSource, Table, Cell, veri bağlama, sanal mod  
   
-## <a name="namespaces"></a>Ad Alanları  
+## <a name="namespaces"></a>{1&gt;Ad alanları&lt;1}  
  <xref:System.Windows.Forms?displayProperty=nameWithType>  
   
  <xref:System.Data?displayProperty=nameWithType>  
@@ -29,36 +29,36 @@ Bu konu hakkında bilgiler için özetlenmiştir `DataGridView` denetimi ve kull
  `BindingSource`  
   
 ## <a name="background"></a>Arka Plan  
- Kullanıcı Arabirimi (UI) tasarımcıları sık, kullanıcılara tablosal verileri görüntülemek gerekli bulur. .NET Framework, verileri bir tablo veya kılavuz göstermek için birçok yol sağlar. `DataGridView` Denetimi bu teknoloji Windows Forms uygulamaları için en son evrimini temsil eder.  
+ Kullanıcı arabirimi (UI) tasarımcıları genellikle tablo verilerini kullanıcılara göstermek için gerekli olan verileri bulur. .NET Framework, verileri bir tablo veya kılavuzda göstermek için çeşitli yollar sağlar. `DataGridView` denetim, bu teknolojinin Windows Forms uygulamalar için en son evini temsil eder.  
   
- `DataGridView` Denetimi, bir veri deposundan veri satırı görüntüleyebilirsiniz. Birçok veri depolarının türleri desteklenir. Veri deposu, tek boyutlu bir dizi gibi basit, yazılmamış veri tutabilir veya türü belirtilmiş veri gibi tutabilen bir <xref:System.Data.DataSet>. Daha fazla bilgi için [nasıl yapılır: Veri bağlama Windows Forms DataGridView denetiminde](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+ `DataGridView` denetimi bir veri deposundan veri satırlarını görüntüleyebilir. Birçok veri deposu türü desteklenir. Veri deposu, tek boyutlu bir dizi gibi basit, türsüz verileri tutabilir veya <xref:System.Data.DataSet>gibi yazılmış verileri tutabilir. Daha fazla bilgi için bkz. [nasıl yapılır: verileri Windows Forms DataGridView denetimine bağlama](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   
- `DataGridView` Denetimi verileri tablo biçiminde görüntülemek için güçlü ve esnek bir yol sağlar. Denetim, küçük ve büyük veri kümelerini salt okunur veya düzenlenebilir görünümlerini göstermek için kullanabilirsiniz.  
+ `DataGridView` denetim, verileri tablolu biçimde görüntülemenin güçlü ve esnek bir yolunu sağlar. Daha küçük ve çok büyük veri kümelerinin salt okunurdur veya düzenlenebilir görünümlerini göstermek için denetimini kullanabilirsiniz.  
   
- Genişletebileceğiniz `DataGridView` denetim çeşitli şekillerde uygulamalarınızda özel davranışlar oluşturun. Örneğin, program aracılığıyla kendi algoritmaların sıralanması belirtebilirsiniz ve hücrelerin kendi türlerinizi oluşturabilirsiniz. Kolayca görünümünü özelleştirebilirsiniz `DataGridView` arasında çeşitli özellikleri seçerek denetimi. Birçok veri depolarının türde bir veri kaynağı olarak kullanılabilir veya `DataGridView` denetim, kendisiyle ilişkili bir veri kaynağı olmadan çalışabilir.  
+ `DataGridView` denetimini, uygulamalarınıza özel davranış oluşturmak için çeşitli yollarla genişletebilirsiniz. Örneğin, kendi sıralama algoritmalarınızı programlı bir şekilde belirtebilir ve kendi hücre türlerinizi oluşturabilirsiniz. `DataGridView` denetiminin görünümünü kolayca özelleştirerek birçok özellik arasından seçim yapabilirsiniz. Birçok veri deposu türü bir veri kaynağı olarak kullanılabilir veya `DataGridView` denetimi bu veri kaynağı ile bağlantılı olmadan çalışabilir.  
   
 ## <a name="implementing-datagridview-classes"></a>DataGridView sınıfları uygulama  
- Yararlanmak birkaç yol vardır `DataGridView` denetimin genişletilebilirlik özellikleri. Denetim olayları ve özellikleri birçok yönden özelleştirebilirsiniz, ancak bazı özelleştirmeler varolan türetilmiş yeni sınıflar oluşturmak ihtiyaç duyduğunuz `DataGridView` sınıfları.  
+ `DataGridView` denetiminin genişletilebilirlik özelliklerinden yararlanmak için birkaç yol vardır. Olaylar ve özellikler aracılığıyla denetimin birçok yönünü özelleştirebilirsiniz, ancak bazı özelleştirmeler varolan `DataGridView` sınıflarından türetilmiş yeni sınıflar oluşturmanızı gerektirir.  
   
- En yaygın kullanılan temel sınıflar `DataGridViewCell` ve `DataGridViewColumn`. Kendi hücre sınıftan türetilip `DataGridViewCell` veya onun alt sınıfları. Herhangi bir sütun hücresi her türlü ekleyebilirsiniz, ancak, genellikle de yardımcı sütun öğesinden bir sınıf türetin `DataGridViewColumn` varsayılan olarak, özel hücresi türü hücrelerinin barındıran.  
+ En yaygın olarak kullanılan temel sınıflar `DataGridViewCell` ve `DataGridViewColumn`. Kendi hücre sınıfınızı `DataGridViewCell` veya kendi alt sınıflarından türetebilirsiniz. Herhangi bir sütuna herhangi bir hücre türü ekleyebilseniz de, genellikle varsayılan olarak özel hücre türü hücrelerini barındıran `DataGridViewColumn` bir yardımcı sütun sınıfı türetirsiniz.  
   
- Uygulayabileceğiniz `IDataGridViewEditingCell` türetilmiş hücre sınıfınızda, düzenleme işlevi sahip, ancak düzenleme modu, bir denetimin barındırmamalıdır hücresi türü oluşturmak için arabirim. Bir hücrede düzenleme moduna barındırabilecek bir denetim oluşturmak için uygulayabileceğiniz `IDataGridViewEditingControl` sınıfından türetilen bir sınıfta arabirimi <xref:System.Windows.Forms.Control>.  
+ Türetilmiş hücre sınıfınıza `IDataGridViewEditingCell` arabirimini uygulayıp, düzen işlevselliğine sahip ancak bir denetimi bir denetim modunda barındırmayan bir hücre türü oluşturmak için uygulayabilirsiniz. Oluşturma modundaki bir hücrede barındırabileceğinizi belirten bir denetim oluşturmak için <xref:System.Windows.Forms.Control>türetilmiş bir sınıfta `IDataGridViewEditingControl` arabirimini uygulayabilirsiniz.  
   
- Daha fazla bilgi için [nasıl yapılır: Hücreleri özelleştirme ve sütunları Windows Forms DataGridView denetiminde davranış ve görünümünü genişleterek](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) ve [nasıl yapılır: Windows Forms DataGridView hücrelerinde denetimleri](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+ Daha fazla bilgi için, bkz. [nasıl yapılır: Windows Forms DataGridView Denetimindeki hücreleri ve sütunları özelleştirme](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) ve [Windows Forms DataGridView hücrelerinde denetimleri barındırma](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
-## <a name="datagridview-classes-at-a-glance"></a>Bir bakışta DataGridView sınıfları  
+## <a name="datagridview-classes-at-a-glance"></a>Tek bakışta DataGridView sınıfları  
  <xref:System.Windows.Forms>  
   
-|Teknoloji alanı|Sınıf/arabirim/yapılandırma öğeleri|  
+|Teknoloji alanı|Sınıflar/arabirimler/yapılandırma öğeleri|  
 |---------------------|-------------------------------------------------|  
 |Veri Bağlama|<xref:System.Windows.Forms.BindingSource>|  
-|Veri sunumu|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> ve türetilen sınıflar<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> ve türetilen sınıflar<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> ve türetilen sınıflar<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
-|<xref:System.Windows.Forms.DataGridView> Genişletilebilirlik|<xref:System.Windows.Forms.DataGridViewCell> ve türetilen sınıflar<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> ve türetilen sınıflar<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
+|Veri sunumu|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> ve türetilmiş sınıflar<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> ve türetilmiş sınıflar<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> ve türetilmiş sınıflar<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
+|<xref:System.Windows.Forms.DataGridView> genişletilebilirlik|<xref:System.Windows.Forms.DataGridViewCell> ve türetilmiş sınıflar<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> ve türetilmiş sınıflar<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
 ## <a name="whats-new"></a>Yenilikler  
- <xref:System.Windows.Forms.DataGridView> Denetimini Windows Forms tablo verilerini görüntülemek için eksiksiz bir çözüm olarak tasarlanmıştır. Kullanmayı düşünmelisiniz <xref:System.Windows.Forms.DataGridView> diğer çözümleri önce denetimini <xref:System.Windows.Forms.DataGrid>, yeni bir uygulama yazarken. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+ <xref:System.Windows.Forms.DataGridView> denetim, Windows Forms tablo verilerini görüntülemek için tamamen bir çözüm olacak şekilde tasarlanmıştır. Yeni bir uygulama yazarken <xref:System.Windows.Forms.DataGrid>gibi diğer çözümlerden önce <xref:System.Windows.Forms.DataGridView> denetimini kullanmayı göz önünde bulundurmanız gerekir. Daha fazla bilgi için bkz. [Windows Forms DataGridView ve DataGrid denetimleri arasındaki farklar](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- <xref:System.Windows.Forms.DataGridView> Denetim Kapat birlikte çalışabilir <xref:System.Windows.Forms.BindingSource> bileşeni. Bu bileşen, birincil veri kaynağına bir formun olacak şekilde tasarlanmıştır. Arasındaki etkileşimi yönetebilirsiniz bir <xref:System.Windows.Forms.DataGridView> denetim ve veri bağımsız olarak kendi veri kaynağı kaynak türü.  
+ <xref:System.Windows.Forms.DataGridView> denetim <xref:System.Windows.Forms.BindingSource> bileşeniyle birlikte çalışabilir. Bu bileşen, bir formun birincil veri kaynağı olacak şekilde tasarlanmıştır. Veri kaynağı türünden bağımsız olarak bir <xref:System.Windows.Forms.DataGridView> denetimi ve veri kaynağı arasındaki etkileşimi yönetebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

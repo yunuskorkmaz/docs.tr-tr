@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms Süreölçer Bileşeni ile Belirlenen Aralıklarda Yordamları Çalıştırma'
+title: Zamanlayıcı bileşeniyle belirlenen aralıklarda yordamları çalıştırma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,38 +13,38 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: 9900b96bf04668805b841c842f7c625b86e76d39
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dcc88beee947e2a83b426dcd2f3fd9d70c20fb67
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960543"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743118"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Nasıl yapılır: Windows Forms Süreölçer Bileşeni ile Belirlenen Aralıklarda Yordamları Çalıştırma
-Bazen bir döngü bitene veya bir küme zaman aralığı geçtiğinde çalıştıktan sonra belirli zaman aralıklarında çalışan bir yordam oluşturmak isteyebilirsiniz. <xref:System.Windows.Forms.Timer> Bileşen böyle bir yordamı mümkün hale getirir.  
+Bazen bir döngü bitene veya bir küme zaman aralığı geçtiğinde çalıştıktan sonra belirli zaman aralıklarında çalışan bir yordam oluşturmak isteyebilirsiniz. <xref:System.Windows.Forms.Timer> bileşeni, böyle bir yordamı mümkün hale getirir.  
   
  Bu bileşen bir Windows Forms ortamı için tasarlanmıştır. Sunucu ortamı için uygun bir zamanlayıcıya ihtiyacınız varsa bkz. [sunucu tabanlı zamanlayıcılara giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
 > [!NOTE]
-> <xref:System.Windows.Forms.Timer> Bileşeni kullanırken bazı sınırlamalar vardır. Daha fazla bilgi için [Windows Forms Süreölçer Bileşeninin Aralık özelliğinin sınırlamaları](limitations-of-the-timer-component-interval-property.md)bölümüne bakın.  
+> <xref:System.Windows.Forms.Timer> bileşeni kullanılırken bazı sınırlamalar vardır. Daha fazla bilgi için [Windows Forms Süreölçer Bileşeninin Aralık özelliğinin sınırlamaları](limitations-of-the-timer-component-interval-property.md)bölümüne bakın.  
   
 ## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Zamanlayıcı bileşeniyle ayarlama aralıklarında bir yordamı çalıştırmak için  
   
-1. Formunuza bir <xref:System.Windows.Forms.Timer> ekleyin. Bunun programlı olarak nasıl yapılacağını gösteren bir çizim için aşağıdaki örnek bölümüne bakın. Visual Studio, forma bileşen ekleme desteği de içerir. Ayrıca bkz [. nasıl yapılır: Windows Forms](how-to-add-controls-without-a-user-interface-to-windows-forms.md)Için Kullanıcı arabirimi olmadan denetimler ekleyin.  
+1. Formunuza bir <xref:System.Windows.Forms.Timer> ekleyin. Bunun programlı olarak nasıl yapılacağını gösteren bir çizim için aşağıdaki örnek bölümüne bakın. Visual Studio, forma bileşen ekleme desteği de içerir. Ayrıca bkz. [nasıl yapılır: Kullanıcı arabirimi olmadan denetim ekleme Windows Forms](how-to-add-controls-without-a-user-interface-to-windows-forms.md).  
   
-2. Süreölçer için <xref:System.Windows.Forms.Timer.Interval%2A> özelliği (milisaniye olarak) ayarlayın. Bu özellik, yordam yeniden çalıştırılmadan önce ne kadar zaman geçirileceğini belirler.  
+2. Zamanlayıcı için <xref:System.Windows.Forms.Timer.Interval%2A> özelliğini (milisaniye cinsinden) ayarlayın. Bu özellik, yordam yeniden çalıştırılmadan önce ne kadar zaman geçirileceğini belirler.  
   
     > [!NOTE]
     > Daha sık bir zamanlayıcı olayı gerçekleştiğinde, olaya yanıt vermek için daha fazla işlemci zamanı kullanılır. Bu, genel performansı yavaşlatabilir. İhtiyacınız olandan daha küçük bir Aralık ayarlamayın.  
   
-3. <xref:System.Windows.Forms.Timer.Tick> Olay işleyicisine uygun kodu yazın. Bu olaya yazdığınız kod, <xref:System.Windows.Forms.Timer.Interval%2A> özelliğinde belirtilen aralıkta çalışır.  
+3. <xref:System.Windows.Forms.Timer.Tick> olay işleyicisine uygun kodu yazın. Bu olaya yazdığınız kod <xref:System.Windows.Forms.Timer.Interval%2A> özelliğinde belirtilen aralıkta çalışacaktır.  
   
-4. Zamanlayıcıyı başlatmak için `true`özelliğiniolarakayarlayın <xref:System.Windows.Forms.Timer.Enabled%2A> . <xref:System.Windows.Forms.Timer.Tick> Olay, bir süre sonra, prosedürü ayarlanan aralıkta çalıştırılarak gerçekleştirilecek şekilde başlatılır.  
+4. Zamanlayıcıyı başlatmak için <xref:System.Windows.Forms.Timer.Enabled%2A> özelliğini `true` olarak ayarlayın. <xref:System.Windows.Forms.Timer.Tick> olay, bir süre sonra, yordamı küme aralığı üzerinde çalıştırmaya başlar.  
   
-5. Uygun zamanda, yordamını yeniden çalıştırmayı durdurmak <xref:System.Windows.Forms.Timer.Enabled%2A> için özelliğini `false` olarak ayarlayın. Aralığı `0` Zamanlayıcı 'nın durdurulmasına neden olmaz.  
+5. Uygun zamanda, yordamı yeniden çalıştırmayı durdurmak için <xref:System.Windows.Forms.Timer.Enabled%2A> özelliğini `false` olarak ayarlayın. Aralığı `0` olarak ayarlamak, zamanlayıcının durmasına neden olmaz.  
   
 ## <a name="example"></a>Örnek  
- Bu ilk kod örneği, tek saniyelik artışlarla günün saatini izler. Form üzerinde bir <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.Label>,, ve bir <xref:System.Windows.Forms.Timer> bileşeni kullanır. <xref:System.Windows.Forms.Timer.Interval%2A> Özelliği 1000 (bir saniyeye eşit) olarak ayarlanır. <xref:System.Windows.Forms.Timer.Tick> Olayda, etiketin başlık yazısı geçerli saate ayarlanır. Düğmeye tıklandığında, <xref:System.Windows.Forms.Timer.Enabled%2A> özelliği olarak `false`ayarlanır, bu da süreölçer 'in etiketin açıklamalı alt yazısının güncelleştirilmesini durdurulur. <xref:System.Windows.Forms.Button> Aşağıdaki kod örneği `Button1`, adlı bir denetim, adlı `Timer1`bir <xref:System.Windows.Forms.Timer> denetim ve <xref:System.Windows.Forms.Label> adlı `Label1`bir denetim içeren bir formunuz olmasını gerektirir.  
+ Bu ilk kod örneği, tek saniyelik artışlarla günün saatini izler. Bir form üzerinde <xref:System.Windows.Forms.Button>, bir <xref:System.Windows.Forms.Label>ve <xref:System.Windows.Forms.Timer> bileşeni kullanır. <xref:System.Windows.Forms.Timer.Interval%2A> özelliği 1000 (bir saniyeye eşit) olarak ayarlanır. <xref:System.Windows.Forms.Timer.Tick> olayında etiketin başlık yazısı geçerli saate ayarlanır. Düğmeye tıklandığında, <xref:System.Windows.Forms.Timer.Enabled%2A> özelliği `false`olarak ayarlanır, bu da zamanlayıcıyı etiketin açıklamalı alt yazısının güncelleştirilmesini durduruyor. Aşağıdaki kod örneği, `Button1`adlı bir <xref:System.Windows.Forms.Button> denetimi, `Timer1`adlı bir <xref:System.Windows.Forms.Timer> denetimi ve <xref:System.Windows.Forms.Label> adlı `Label1`denetimini içeren bir formunuz olmasını gerektirir.  
   
 ```vb  
 Private Sub InitializeTimer()  
@@ -149,7 +149,7 @@ private:
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu ikinci kod örneği, bir döngü bitene kadar her 600 milisaniyede bir yordam çalıştırır. <xref:System.Windows.Forms.Button> Aşağıdaki kod örneği `Button1`, adlı bir denetim, adlı `Timer1`bir <xref:System.Windows.Forms.Timer> denetim ve <xref:System.Windows.Forms.Label> adlı `Label1`bir denetim içeren bir formunuz olmasını gerektirir.  
+ Bu ikinci kod örneği, bir döngü bitene kadar her 600 milisaniyede bir yordam çalıştırır. Aşağıdaki kod örneği, `Button1`adlı bir <xref:System.Windows.Forms.Button> denetimi, `Timer1`adlı bir <xref:System.Windows.Forms.Timer> denetimi ve <xref:System.Windows.Forms.Label> adlı `Label1`denetimini içeren bir formunuz olmasını gerektirir.  
   
 ```vb  
 ' This variable will be the loop counter.  

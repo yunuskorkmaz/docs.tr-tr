@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9c149303-14b1-4138-83d7-e8c3e0fcd332
 topic_type:
 - apiref
-ms.openlocfilehash: a7876cd932558ad95dab7adac3c91a6f23ca647c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e3804335bacefad61c4f521ea1ef1444b7b1fed
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134663"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777701"
 ---
 # <a name="icordebugfunctionbreakpoint-interface"></a>ICorDebugFunctionBreakpoint Arabirimi
 
@@ -29,8 +29,8 @@ ms.locfileid: "73134663"
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetFunction Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|Kesme noktasının ayarlandığı işleve başvuran bir ICorDebugFunction için bir arabirim işaretçisi alır.|  
-|[GetOffset Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|İşlev içindeki kesme noktasının konumunu alır.|  
+|[GetFunction Yöntemi](icordebugfunctionbreakpoint-getfunction-method.md)|Kesme noktasının ayarlandığı işleve başvuran bir ICorDebugFunction için bir arabirim işaretçisi alır.|  
+|[GetOffset Yöntemi](icordebugfunctionbreakpoint-getoffset-method.md)|İşlev içindeki kesme noktasının konumunu alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -48,4 +48,4 @@ ms.locfileid: "73134663"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

@@ -1,41 +1,41 @@
 ---
-title: BindingNavigator Denetimi (Windows Forms)
+title: BindingNavigator Denetimi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - BindingNavigator control [Windows Forms]
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 18c1e2a5-9834-40d3-9b2e-2b545e4e769e
-ms.openlocfilehash: ce67a06a5fe43602258d52548e8d933b99548f44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96a14ac95afd9131faf1a1687bfde7f0b0c0b73a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961726"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744377"
 ---
 # <a name="bindingnavigator-control-windows-forms"></a>BindingNavigator Denetimi (Windows Forms)
-`BindingNavigator` Gezinti ve düzenleme için kullanıcı arabirimi (UI) verilere bağlı denetimler denetimidir. `BindingNavigator` Denetim gezinmek ve bir Windows formunda veri işlemek kullanıcıların sağlar.  
+`BindingNavigator` denetimi, verilere bağlanan denetimler için gezinti ve düzenleme kullanıcı arabirimidir (UI). `BindingNavigator` denetimi, kullanıcıların bir Windows formundaki verileri dolaşmalarını ve işlemesini sağlar.  
   
- Bu bölümdeki konular, genel bir bakış sağlayan `BindingNavigator` denetlemek ve denetiminin nasıl kullanılacağını verilerde gezinme ve gezinmek için adım adım yönergeler sağlar bir <xref:System.Data.DataSet>.  
+ Bu bölümdeki konular, `BindingNavigator` denetimine genel bir bakış sağlar ve denetimin verileri nasıl kullanacağınız ve bir <xref:System.Data.DataSet>üzerinden nasıl taşınacağı adım adım yönergeleri sunar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [BindingNavigator Denetimine Genel Bakış](bindingnavigator-control-overview-windows-forms.md)  
- Genel konseptlerini tanıtan `BindingNavigator` denetimi, kullanıcıların bir veri kaynağının öğeler arasında taşımasına olanak tanır.  
+ `BindingNavigator` denetiminin genel kavramlarını tanıtır ve bu, kullanıcıların bir veri kaynağının öğeleri arasında hareket etmesini sağlar.  
   
- [Nasıl yapılır: Windows Forms BindingNavigator denetimi ile verilerde gezinme](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
- Bağlama için adımları sağlar bir `BindingNavigator` denetim bir veri kaynağı.  
+ [Nasıl yapılır: Windows Forms BindingNavigator Denetimi ile Verilerde Gezinme](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
+ Bir `BindingNavigator` denetimini bir veri kaynağına bağlamak için gereken adımları sağlar.  
   
- [Nasıl yapılır: Windows Forms BindingNavigator denetimi ile DataSet Taşı](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
- Kullanmayı gösterir bir `BindingNavigator` denetim kayıtları arasında taşımak için bir <xref:System.Data.DataSet>.  
+ [Nasıl yapılır: Windows Forms BindingNavigator Denetimi ile DataSet içinde Hareket Etme](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
+ Bir <xref:System.Data.DataSet>kayıtlar arasında ilerlemek için bir `BindingNavigator` denetimi kullanmayı gösterir.  
   
- Ayrıca bkz: [nasıl yapılır: Yükleme, kaydetme ve ekleme İptal düğmeleri Windows Forms BindingNavigator denetimi](load-save-and-cancel-bindingnavigator.md).  
+ Ayrıca bkz. [nasıl yapılır: Windows Forms BindingNavigator denetimine yükleme, kaydetme ve Iptal düğmeleri ekleme](load-save-and-cancel-bindingnavigator.md).  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.BindingNavigator>  
- İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.BindingNavigator> denetimi.  
+ <xref:System.Windows.Forms.BindingNavigator> denetimi için başvuru belgeleri sağlar.  
   
  <xref:System.Windows.Forms.BindingSource>  
- İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.BindingSource> denetimi.  
+ <xref:System.Windows.Forms.BindingSource> denetimi için başvuru belgeleri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Visual Studio'da verilere denetimler bağlama](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

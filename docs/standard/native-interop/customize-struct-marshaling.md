@@ -5,12 +5,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: e69746e03cefa2444d4c34b582730824ff357858
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706354"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741524"
 ---
 # <a name="customizing-structure-marshaling"></a>Yapı hazırlamayı özelleştirme
 
@@ -20,11 +20,11 @@ Bazen yapılar için varsayılan sıralama kuralları, ihtiyacınız olan tam de
 
 .NET, alanların belleğe nasıl yerleştirileceğini özelleştirmenizi sağlamak için <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> özniteliği ve <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> numaralandırması sağlar. Aşağıdaki kılavuz yaygın sorunlardan kaçınmanıza yardımcı olur.
 
-**✔️** mümkün olduğunda `LayoutKind.Sequential` kullanmayı düşünün.
+✔️ mümkün olduğunda `LayoutKind.Sequential` kullanmayı düşünün.
 
-**✔️** yalnızca, yerel yapının birleşim gibi açık bir düzeni de olduğunda, `LayoutKind.Explicit` yalnızca sıralama sırasında kullanılır.
+✔️ yalnızca, yerel yapının birleşim gibi açık bir düzeni de olduğunda, `LayoutKind.Explicit` yalnızca sıralama sırasında kullanılır.
 
-❌ .NET Core 3,0 ' den önce çalışma zamanlarını hedeflemek gerekirse, Windows dışı platformlarda yapıları hazırlama `LayoutKind.Explicit` **kullanmaktan kaçının** . 3,0 öncesi .NET Core çalışma zamanı, Intel veya AMD 64-bit Windows dışı sistemlerdeki yerel işlevlere değere göre açık yapıların geçirilmesini desteklemez. Ancak çalışma zamanı, tüm platformlarda başvuruya göre açık yapıların geçirilmesini destekler.
+❌ .NET Core 3,0 ' den önce çalışma zamanlarını hedeflemek gerekirse, Windows dışı platformlarda yapıları hazırlama `LayoutKind.Explicit` kullanmaktan kaçının. 3,0 öncesi .NET Core çalışma zamanı, Intel veya AMD 64-bit Windows dışı sistemlerdeki yerel işlevlere değere göre açık yapıların geçirilmesini desteklemez. Ancak çalışma zamanı, tüm platformlarda başvuruya göre açık yapıların geçirilmesini destekler.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Boole alan sıralamasını özelleştirme
 

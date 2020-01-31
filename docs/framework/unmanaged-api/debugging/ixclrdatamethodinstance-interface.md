@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: f62cbdc4b3e73f0c27492f7ed20b35378654d399
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c51825433bbc86c897c097475d5c15c855f6ec8b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775511"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790418"
 ---
 # <a name="ixclrdatamethodinstance-interface"></a>IXCLRDataMethodInstance Arabirimi
 
-Metot örneği hakkında bilgi sorgulamak için yöntemler sağlar.
+Bir yöntem örneği hakkındaki bilgileri sorgulamak için yöntemler sağlar.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -32,21 +32,21 @@ Metot örneği hakkında bilgi sorgulamak için yöntemler sağlar.
 
 | Yöntem                                                                                                                  | Açıklama                                 |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| [GetILAddressMap](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getiladdressmap-method.md) | IL adresi eşleme bilgileri alır. |
-| [GetRepresentativeEntryAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getrepresentativeentryaddress-method.md) | Bir yöntem için tüm olası girdi noktalarını native derlemesi için en iyi temsil giriş noktası adresi alır. |
+| [Getıladdressmap](ixclrdatamethodinstance-getiladdressmap-method.md) | Eşleme bilgilerini ele almak için Il 'yi alır. |
+| [GetRepresentativeEntryAddress](ixclrdatamethodinstance-getrepresentativeentryaddress-method.md) | Bir yöntem için tüm olası giriş noktalarının yerel derlenmesi için en temsili giriş noktası adresini alır. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu arabirim, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler veya kitaplık dosyaları gösterilmez. Ancak, bu, türetilen bir COM arabirimidir `IUnknown` GUID'e sahip `ECD73800-22CA-4b0d-AB55-E9BA7E6318A5` normal COM mekanizmalar aracılığıyla edinilebilir.
+Bu arabirim çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez. Ancak, normal COM mekanizmalarından elde edilebilir GUID `ECD73800-22CA-4b0d-AB55-E9BA7E6318A5` `IUnknown` türetilen bir COM arabirimidir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** None  
-**Kitaplığı:** Yok.  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Hata Ayıklama](index.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

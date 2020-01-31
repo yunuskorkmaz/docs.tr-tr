@@ -12,12 +12,12 @@ helpviewer_keywords:
 - parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-ms.openlocfilehash: 823bc893c9384bb687e5f9a196abe497db14f4db
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7ab795cd4c6e0ff5e1451c05987848c41bd69577
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709484"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741741"
 ---
 # <a name="constructor-design"></a>Oluşturucu Tasarımı
 
@@ -29,51 +29,51 @@ Tür oluşturucular hiçbir parametre alamaz. Örnek oluşturucular olabilir. Pa
 
 Oluşturucular, bir türün örneklerini oluşturmanın en doğal yoludur. Çoğu geliştirici, örnek oluşturma (örneğin, Factory yöntemleri) için alternatif yolları düşünmeleri için bir oluşturucuyu arar ve kullanmayı dener.
 
-**✓ CONSIDER** sağlayan basit, ideal olarak varsayılan, Oluşturucular.
+✔️ basit, ideal varsayılan oluşturucular sağlamayı düşünün.
 
 Basit bir oluşturucunun çok az sayıda parametresi vardır ve tüm parametreler temel elemanlar veya Numaralandırmalar. Bu tür basit oluşturucular Framework kullanılabilirliğini artırır.
 
-**✓ CONSIDER** statik Üreteç yöntemi yerine bir oluşturucu istenen işlemin semantiği doğrudan yapımı yeni bir örneğini eşleşmiyorsa ya da Oluşturucusu tasarım yönergeleri izleyerek doğal olmayan hissi kullanarak.
+✔️, istenen işlemin semantiğini yeni bir örneğin yapıcıya doğrudan eşlenmiyorsa veya oluşturucunun tasarım yönergeleri doğal olarak yoksa, Oluşturucu yerine bir statik fabrika yöntemi kullanmayı düşünün.
 
-**✓ DO** ana özelliklerini ayarlamak için kısayol olarak Oluşturucusu parametrelerini kullanın.
+✔️ Oluşturucu parametrelerini, ana özellikleri ayarlamak için kısayollar olarak kullanın.
 
 Boş oluşturucuyu, ardından bazı özellik kümelerini ve birden çok bağımsız değişkenle bir oluşturucuyu kullanarak, semantik bir farklılık olmamalıdır.
 
-**✓ DO** Oluşturucu parametreleri yalnızca özelliğini ayarlamak için kullanılan Oluşturucu parametreleri ve bir özellik için aynı adı kullanın.
+✔️, Oluşturucu parametreleri için aynı adı ve Oluşturucu parametreleri özelliği ayarlamak için kullanılırsa özelliğini kullanın.
 
 Bu parametre ve özellikler arasındaki tek fark büyük küçük harf olmalıdır.
 
-**✓ DO** Oluşturucusu en az iş.
+✔️ oluşturucuda en az iş YAPıN.
 
 Oluşturucular, Oluşturucu parametrelerini yakalamaya göre çok daha fazla çalışmamalıdır. Diğer bir işleme maliyeti, gerekli olana kadar Gecikmeli olmalıdır.
 
-**✓ DO** uygunsa örnek Oluşturucular, özel durumlar oluşturma.
+✔️, uygunsa örnek oluşturuculardan özel durumlar oluşturur.
 
-**✓** , Bu tür bir Oluşturucu gerekliyse, sınıflarda Ortak parametresiz oluşturucuyu açık bir şekilde bildirir.
+Bu tür bir Oluşturucu gerekliyse, sınıflarda Ortak parametresiz oluşturucuyu açıkça bildirin ✔️.
 
 Bir tür üzerinde açıkça herhangi bir Oluşturucu bildirmezseniz, birçok dil (gibi C#) otomatik olarak ortak parametresiz bir Oluşturucu ekler. (Soyut sınıflar korumalı bir Oluşturucu alır.)
 
 Bir sınıfa parametreli Oluşturucu eklemek derleyicinin parametresiz oluşturucuyu eklemesini önler. Bu genellikle yanlışlıkla önemli değişikliklere neden olur.
 
-**X** yapılar üzerinde parametresiz oluşturucular AÇıKÇA tanımlamayı önleyin.
+❌ yapı birimlerinde açıkça parametresiz oluşturucular tanımlamayı ÖNLEYIN.
 
 Bu, parametresiz Oluşturucu tanımlanmamışsa, dizideki her yuvada çalıştırılması gerekmediğinden, dizi oluşturmayı daha hızlı hale getirir. Birçok derleyicilerin C#, bu nedenle yapıların parametresiz oluşturuculara sahip olduğuna izin vermez.
 
-**X AVOID** kurucusu içinde bir nesne üzerinde sanal üyeler çağırma.
+❌ oluşturucusunun içindeki bir nesne üzerinde sanal üye çağırmaktan KAÇıNıN.
 
 En türetilmiş türün Oluşturucusu henüz tam olarak çalıştırılmasa bile, sanal bir üyenin çağrılması en fazla türetilmiş geçersiz kılmanın çağrılmasına neden olur.
 
 ## <a name="type-constructor-guidelines"></a>Tür Oluşturucu yönergeleri
 
-**✓ DO** statik oluşturucular özel yap.
+statik oluşturucuları özel hale getirmek ✔️.
 
 Sınıf oluşturucusu olarak da adlandırılan statik bir Oluşturucu, bir türü başlatmak için kullanılır. CLR, türün ilk örneği oluşturulmadan veya bu türdeki herhangi bir statik üye çağrılmadan önce statik oluşturucuyu çağırır. Statik Oluşturucu çağrıldığında kullanıcının denetimi yoktur. Statik bir Oluşturucu özel değilse, CLR dışındaki kodla çağrılabilir. Oluşturucuda gerçekleştirilen işlemlere bağlı olarak, bu beklenmeyen davranışlara neden olabilir. C# Derleyici statik oluşturucuları özel olmaya zorlar.
 
-**X DO NOT** statik oluşturucular özel durumlar oluşturma.
+❌ statik oluşturuculardan özel durumlar oluşturmaz.
 
 Bir tür oluşturucusundan bir özel durum oluşturulursa, tür geçerli uygulama etki alanında kullanılamaz.
 
-**✓ CONSIDER** çalışma zamanı açıkça tanımlanmış bir statik oluşturucusu yok türleri performansını optimize etmek mümkün olduğundan statik oluşturucular açıkça kullanmak yerine statik alanları satır içi başlatılıyor.
+✔️, çalışma zamanı açıkça tanımlanmış bir statik oluşturucuya sahip olmayan türlerin performansını iyileştirebildiğinden, statik oluşturucuları açıkça kullanmak yerine, statik alanları satır içi olarak başlatmayı düşünün.
 
 *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 

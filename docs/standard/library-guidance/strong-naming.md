@@ -2,12 +2,12 @@
 title: Güçlü adlandırma ve .NET kitaplıkları
 description: Güçlü adlandırma .NET kitaplıkları için en iyi yöntem önerileri.
 ms.date: 10/16/2018
-ms.openlocfilehash: 0c2dba06413bc6435e3350bf6cc48f1b5882a261
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: db268093b07a2ece7cdb8329fd789b52da9c5c32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706432"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744528"
 ---
 # <a name="strong-naming"></a>Kesin adlandırma
 
@@ -45,26 +45,26 @@ Açık kaynaklı .NET kitaplıklarınızı tanımlayıcı olarak adlandırın. D
 > [!NOTE]
 > Bu kılavuz, NuGet.org üzerinde yayımlanan .NET kitaplıkları gibi genel olarak dağıtılmış .NET kitaplıklarına özgüdür. Güçlü adlandırma .NET uygulamaları için gerekli değildir ve varsayılan olarak yapılmamalıdır.
 
-**✔️** kitaplığınızın derlemelerinizi tanımlayıcı olarak adlandırmayı düşünün.
+✔️ kitaplığınızın derlemelerinizi tanımlayıcı olarak adlandırmayı düşünün.
 
-**✔️** , güçlü adlandırma anahtarını kaynak denetim sisteminize eklemeyi düşünün.
+✔️, güçlü adlandırma anahtarını kaynak denetim sisteminize eklemeyi düşünün.
 
 > Genel kullanıma açık bir anahtar, geliştiricilerin kitaplık kaynak kodunuzu aynı anahtarla değiştirmesine ve yeniden derlemenize olanak tanır.
-> 
+>
 > Geçmişte, [kısmi güven senaryolarında](../../framework/misc/using-libraries-from-partially-trusted-code.md)özel izinler vermek için geçmişte kullanılırsa, tanımlayıcı adlandırma anahtarını genel hale kullanmamanız gerekir. Aksi takdirde, mevcut ortamların güvenliğini tehlikeye atabilir.
 
 > [!IMPORTANT]
 > Kod yayımcısının kimliği isteniyorsa, [Authenticode](/windows-hardware/drivers/install/authenticode) ve [NuGet paket imzalama](/nuget/create-packages/sign-a-package) önerilir. Kod erişim güvenliği (CAS) güvenlik azaltma olarak kullanılmamalıdır.
 
-✔️, kullanıcıların bağlama yeniden yönlendirmelerini azaltmaları ve güncelleştirilme sıklığı hakkında yardım almak için derleme sürümünü yalnızca önemli sürüm değişikliklerinde **artırmayı düşünün** .
+✔️, kullanıcıların bağlama yeniden yönlendirmelerini azaltmaları ve güncelleştirilme sıklığı hakkında yardım almak için derleme sürümünü yalnızca önemli sürüm değişikliklerinde ARTıRMAYı düşünün.
 
 > [Sürüm oluşturma ve derleme sürümü](./versioning.md#assembly-version)hakkında daha fazla bilgi edinin.
 
-**❌** tanımlayıcı adlandırma anahtarını ekleme, kaldırma veya değiştirme.
+❌ tanımlayıcı adlandırma anahtarını ekleme, kaldırma veya değiştirme.
 
 > Bir derlemenin tanımlayıcı adlandırma anahtarını değiştirmek derlemenin kimliğini değiştirir ve onu kullanan derlenmiş kodu keser. Daha fazla bilgi için bkz. [ikili son değişiklikler](./breaking-changes.md#binary-breaking-change).
 
-❌, kitaplığınızın güçlü adlandırılmış ve tanımlayıcı olmayan sürümlerini **yayımlamaz** . Örneğin, `Contoso.Api` ve `Contoso.Api.StrongNamed`.
+❌, kitaplığınızın güçlü adlandırılmış ve tanımlayıcı olmayan sürümlerini yayımlamaz. Örneğin, `Contoso.Api` ve `Contoso.Api.StrongNamed`.
 
 > İki paket yayımlandığında geliştirici ekonomik sisteminize çatalın. Ayrıca, her iki pakete bağlı olarak bir uygulama sonlanıyorsa, geliştirici tür adı çakışmaları ile karşılaşabilir. .NET, farklı derlemelerdeki farklı türlerdir.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List control type
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
-ms.openlocfilehash: d870452348f8837ec6773fc066ed52844f7acccd
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 17c0116ba6610ef28e873696bbf3162175bc0601
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741614"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778616"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>Liste Denetim Türü İçin UI Otomasyon Desteği
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741614"
   
  Liste denetim türü, düz bir grup veya öğe gruplarını düzenlemek için bir yol sağlar ve bir kullanıcının bu öğelerden birini veya birkaçını seçmesini sağlar. Liste denetim türünün içerebileceği alt öğe türleri için gevşek bir kısıtlaması vardır. Bu, UI Otomasyon sağlayıcılarının seçim kapsayıcıları için iyi bilinen bir öğeyi desteklemesini sağlar.  
   
- Aşağıdaki bölümlerde yer alan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimleri, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 veya [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]bakılmaksızın liste denetim türünü uygulayan tüm denetimler için geçerlidir. Liste kapsayıcı denetimleri, liste denetim türünü uygulayan denetimlerin bir örneğidir.  
+ Aşağıdaki bölümlerde yer alan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gereksinimleri, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 veya Windows Forms bakılmaksızın liste denetim türünü uygulayan tüm denetimler için geçerlidir. Liste kapsayıcı denetimleri, liste denetim türünü uygulayan denetimlerin bir örneğidir.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyonu ağaç yapısı  

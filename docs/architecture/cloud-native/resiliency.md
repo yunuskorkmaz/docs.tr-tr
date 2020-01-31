@@ -2,12 +2,12 @@
 title: Bulutta yerel dayanıklılık
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Cloud Native dayanıklılık
 ms.date: 06/30/2019
-ms.openlocfilehash: 680542abc5d8c43c577321d5ae834f0a13290da3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 427405d95534c4467ab519c2188fe88e2f18e2b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184843"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781079"
 ---
 # <a name="cloud-native-resiliency"></a>Bulutta yerel dayanıklılık
 
@@ -41,5 +41,5 @@ Küçük ölçekli bir dağıtılmış sistemde, hata sık sık olacaktır, anca
 Bu nedenle, uygulamanız ve altyapınız dayanıklı olmalıdır. Aşağıdaki bölümlerde, uygulamanıza ekleyebileceğiniz savunma tekniklerini ve Kullanıcı deneyiminizin madde işaretine yardımcı olmak için kullanabileceğiniz yerleşik bulut özelliklerini keşfedeceğiz.
 
 >[!div class="step-by-step"]
->[Önceki](azure-data-storage.md)
+>[Önceki](elastic-search-in-azure.md)
 >[İleri](application-resiliency-patterns.md)

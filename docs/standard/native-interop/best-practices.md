@@ -2,12 +2,12 @@
 title: Yerel birlikte çalışabilirlik en iyi uygulamaları-.NET
 description: .NET 'teki yerel bileşenlerle arabirimlendirme için en iyi uygulamaları öğrenin.
 ms.date: 01/18/2019
-ms.openlocfilehash: 7fe0dd0545f8ba800174f8be18bb2f11f39463f9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9486256b815856c0c283f5fe231be3d35d6e8f00
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706406"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742756"
 ---
 # <a name="native-interoperability-best-practices"></a>Yerel birlikte çalışabilirlik en iyi uygulamaları
 
@@ -17,12 +17,12 @@ ms.locfileid: "75706406"
 
 Bu bölümdeki kılavuz tüm birlikte çalışma senaryoları için geçerlidir.
 
-- **✔️** , yöntemlerinizi ve parametreleriniz için, çağırmak istediğiniz yerel yöntem olarak aynı adlandırma ve büyük harfleri kullanır.
-- **✔️** sabit değerler için aynı adlandırma ve büyük harfleri kullanmayı düşünün.
-- **✔️** , yerel türe en yakın eşleme olan .NET türlerini kullanır. Örneğin, ' de C#, yerel tür `unsigned int`olduğunda `uint` kullanın.
-- **✔️** yalnızca `[In]` ve `[Out]` özniteliklerini kullanarak istediğiniz davranış varsayılan davranıştan farklıdır.
-- **✔️** , yerel dizi arabelleklerinizi havuza almak için <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> kullanmayı düşünün.
-- **✔️** , P/Invoke bildirimlerinizi yerel kitaplığınız ile aynı ada ve büyük harfe sahip bir sınıfta Sarmalamanızı düşünün.
+- ✔️, yöntemlerinizi ve parametreleriniz için, çağırmak istediğiniz yerel yöntem olarak aynı adlandırma ve büyük harfleri kullanır.
+- ✔️ sabit değerler için aynı adlandırma ve büyük harfleri kullanmayı düşünün.
+- ✔️, yerel türe en yakın eşleme olan .NET türlerini kullanır. Örneğin, ' de C#, yerel tür `unsigned int`olduğunda `uint` kullanın.
+- ✔️ yalnızca `[In]` ve `[Out]` özniteliklerini kullanarak istediğiniz davranış varsayılan davranıştan farklıdır.
+- ✔️, yerel dizi arabelleklerinizi havuza almak için <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> kullanmayı düşünün.
+- ✔️, P/Invoke bildirimlerinizi yerel kitaplığınız ile aynı ada ve büyük harfe sahip bir sınıfta sarmalamanızı düşünün.
   - Bu, `[DllImport]` niteliklerinin yerel kitaplığın adını geçirmek C# için `nameof` dil özelliğini kullanmasını sağlar ve yerel kitaplığın adını yanlış yazmadığınızdan emin olun.
 
 ## <a name="dllimport-attribute-settings"></a>DllImport öznitelik ayarları
@@ -40,15 +40,15 @@ Karakter kümesi Unicode olduğunda veya bağımsız değişken açıkça `[Mars
 
 Dizelerinizin ANSI düzeltmesini açıkça istemediğiniz sürece `[DllImport]` `Charset.Unicode` olarak işaretleyeceğini unutmayın.
 
-**❌** `[Out] string` parametrelerini kullanmaz. Değer tarafından `[Out]` özniteliği ile geçirilen dize parametreleri, dize birbirine bağlı bir dizeyse çalışma zamanının kararlılığını bozabilir. <xref:System.String.Intern%2A?displayProperty=nameWithType>belgelerde dize oluşturma hakkında daha fazla bilgi görüntüleyin.
+❌ `[Out] string` parametrelerini kullanmaz. Değer tarafından `[Out]` özniteliği ile geçirilen dize parametreleri, dize birbirine bağlı bir dizeyse çalışma zamanının kararlılığını bozabilir. <xref:System.String.Intern%2A?displayProperty=nameWithType>belgelerde dize oluşturma hakkında daha fazla bilgi görüntüleyin.
 
-**❌** `StringBuilder` parametrelerden kaçının. `StringBuilder` sıralaması *her zaman* yerel bir arabellek kopyası oluşturur. Bu nedenle, son derece verimsiz olabilir. Bir dize alan bir Windows API 'SI çağırmanın tipik senaryosunu gerçekleştirin:
+❌ `StringBuilder` parametrelerden KAÇıNıN. `StringBuilder` sıralaması *her zaman* yerel bir arabellek kopyası oluşturur. Bu nedenle, son derece verimsiz olabilir. Bir dize alan bir Windows API 'SI çağırmanın tipik senaryosunu gerçekleştirin:
 
 1. İstenen kapasiteyi (yönetilen kapasiteyi ayırır) bir SB oluşturun **{1}**
 2. Çağır
-   1. Yerel bir arabellek ayırır **{2}**  
-   2. `[In]` _(`StringBuilder` parametresi için varsayılan)_ içeriğini kopyalar  
-   3. `[Out]` **{3}** _(Ayrıca `StringBuilder`için varsayılan)_ , yerel arabelleği yeni ayrılmış bir yönetilen diziye kopyalar  
+   1. Yerel bir arabellek ayırır **{2}**
+   2. `[In]` _(`StringBuilder` parametresi için varsayılan)_ içeriğini kopyalar
+   3. `[Out]` **{3}** _(Ayrıca `StringBuilder`için varsayılan)_ , yerel arabelleği yeni ayrılmış bir yönetilen diziye kopyalar
 3. `ToString()`, henüz başka bir yönetilen diziyi ayırır **{4}**
 
 Bu, yerel koddan bir dizeyi almak için ayırmaların *{4}* . Bunu, başka bir çağrıda `StringBuilder` yeniden kullanmak için en iyi yöntem, ancak yalnızca *1* ayırmayı kaydetmeye devam edebilir. `ArrayPool`bir karakter arabelleğini kullanmak ve önbelleğe almak çok daha iyidir. daha sonra, sonraki çağrılarda yalnızca `ToString()` ayırmaya erişebilirsiniz.
@@ -57,17 +57,15 @@ Bu, yerel koddan bir dizeyi almak için ayırmaların *{4}* . Bunu, başka bir �
 
 `StringBuilder`kullanırsanız *,* son Gotcha, kapasitenin birlikte çalışma içinde her zaman hesaba katılmış olan gizli bir **null içermediği anlamına** gelir. Çoğu API 'nin, null değeri *de dahil olmak üzere* arabellek boyutunu istediği için bu, insanların bu yanlış alması yaygındır. Bu, harcanan/gereksiz ayırmalara neden olabilir. Ayrıca, bu Gotcha, çalışma zamanının kopyaları en aza indirmek için `StringBuilder` sıralamasını iyileştirmesine engel olur.
 
-✔️ `ArrayPool``char[]`s kullanmayı **göz önünde bulundurun** .
+✔️ `ArrayPool``char[]`s kullanmayı göz önünde bulundurun.
 
 Dize sıralaması hakkında daha fazla bilgi için bkz. [dizeler Için varsayılan sıralama](../../framework/interop/default-marshaling-for-strings.md) ve [dize sıralamasını özelleştirme](customize-parameter-marshaling.md#customizing-string-parameters).
 
-> __Windows 'a özgü__  
-> `[Out]` dizeleri için, CLR varsayılan olarak, `UnmanagedType.BSTR`olarak işaretlenen dizeler için `CoTaskMemFree` veya `SysStringFree` boş dizeler için kullanır.  
-**Çıkış dizesi arabelleğine sahip çoğu API için:**  
-> Geçirilen karakter sayısı null içermelidir. Döndürülen değer geçilen karakter sayısından küçükse, çağrı başarılı olur ve değer sondaki null *olmayan* karakter sayısıdır. Aksi takdirde, sayı null karakter *dahil olmak üzere* arabelleğin gerekli boyutudur.  
+> __Windows 'A özgü__ `[Out]` dizeleri için, CLR varsayılan olarak, `UnmanagedType.BSTR`olarak işaretlenen dizeler için `CoTaskMemFree` veya `SysStringFree` boş dizeler için kullanır.
+> **Çıkış dizesi arabelleğine sahip çoğu API için:** Geçirilen karakter sayısı null içermelidir. Döndürülen değer geçilen karakter sayısından küçükse, çağrı başarılı olur ve değer sondaki null *olmayan* karakter sayısıdır. Aksi takdirde, sayı null karakter *dahil olmak üzere* arabelleğin gerekli boyutudur.
 >
 > - 5 ' te geçiş yapın, 4 ' ü alın: dize sonunda null olan 4 karakter uzunluğundadır.
-> - 5 ' te geçiş yapın, 6: dize 5 karakter uzunluğundadır, null tutmak için 6 karakterlik bir arabellek gerekir.  
+> - 5 ' te geçiş yapın, 6: dize 5 karakter uzunluğundadır, null tutmak için 6 karakterlik bir arabellek gerekir.
 > [Dizeler için Windows veri türleri](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>Boole parametreleri ve alanları
@@ -82,7 +80,7 @@ GUID 'Ler doğrudan imzalarda kullanılabilir. Birçok Windows API 'si `REFIID`g
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-**❌** `ref` GUID parametrelerinden başka herhangi bir şey için `[MarshalAs(UnmanagedType.LPStruct)]` kullanın.
+❌ `ref` GUID parametrelerinden başka bir şey için `[MarshalAs(UnmanagedType.LPStruct)]` kullanmayın.
 
 ## <a name="blittable-types"></a>Blittable türleri
 
@@ -120,11 +118,11 @@ public struct UnicodeCharStruct
 
 Sabitlenmiş bir `GCHandle`oluşturmaya çalışan bir türün blittable olup olmadığını görebilirsiniz. Tür bir dize değilse veya blittable olarak kabul edilir `GCHandle.Alloc`, bir `ArgumentException`oluşturur.
 
-**✔️** yapılarınızı mümkün olduğunca blittable yapın.
+✔️ yapılarınızı mümkün olduğunca blittable yapın.
 
 Daha fazla bilgi için bkz.
 
-- [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](../../framework/interop/blittable-and-non-blittable-types.md)  
+- [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](../../framework/interop/blittable-and-non-blittable-types.md)
 - [Tür sıralaması](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>Yönetilen nesneleri canlı tutma
@@ -133,7 +131,7 @@ Daha fazla bilgi için bkz.
 
 [`HandleRef`](xref:System.Runtime.InteropServices.HandleRef) , hazırlayıcısı 'In bir P/Invoke süresince bir nesneyi canlı tutmaya izin verir. Yöntem imzalarında `IntPtr` yerine kullanılabilir. `SafeHandle` bu sınıfın yerini etkin bir şekilde değiştirir ve bunun yerine kullanılmalıdır.
 
-[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle) yönetilen bir nesnenin sabitlenmesini ve yerel işaretçinin alınmasını sağlar. Temel model:  
+[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle) yönetilen bir nesnenin sabitlenmesini ve yerel işaretçinin alınmasını sağlar. Temel model:
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj, GCHandleType.Pinned);
@@ -215,9 +213,9 @@ Yapı *blittable ise,* daha iyi performans için `Marshal.SizeOf<MyStruct>()` ye
 
 Tanımlarda yapıların işaretçilerine `ref` ya da `unsafe` ve `*`kullanılması gerekir.
 
-**✔️** , resmi platform belgelerinde veya üstbilgisinde kullanılan şekle ve adlara göre, yönetilen yapı ile mümkün olduğunca yakından eşleşir.
+✔️, resmi platform belgelerinde veya üstbilgisinde kullanılan şekle ve adlara göre, yönetilen yapı ile mümkün olduğunca yakından eşleşir.
 
-**✔️** , C# performansı artırmak için blittable yapıları `Marshal.SizeOf<MyStruct>()` yerine `sizeof()` kullanın.
+✔️, C# performansı artırmak için blittable yapıları `Marshal.SizeOf<MyStruct>()` yerine `sizeof()` kullanın.
 
 `INT_PTR Reserved1[2]` gibi bir dizi iki `IntPtr` alanı `Reserved1a` ve `Reserved1b`olarak sıralanmalıdır. Yerel dizi basit bir tür olduğunda, `fixed` anahtar sözcüğünü kullanarak biraz daha düzgün bir şekilde yazabilirsiniz. Örneğin, `SYSTEM_PROCESS_INFORMATION` yerel üst bilgide şöyle görünür:
 

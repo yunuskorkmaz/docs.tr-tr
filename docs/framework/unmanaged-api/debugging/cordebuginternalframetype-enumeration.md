@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-ms.openlocfilehash: e76800316885c27c697421d454341d5f0789c611
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2be827e12db765485ee889d6a4a19a982dad5d54
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097945"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778364"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType Numaralandırması
-Yığın çerçevesinin türünü tanımlar. Bu numaralandırma [ICorDebugInternalFrame:: GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) yöntemi tarafından kullanılır.  
+Yığın çerçevesinin türünü tanımlar. Bu numaralandırma [ICorDebugInternalFrame:: GetFrameType](icordebuginternalframe-getframetype-method.md) yöntemi tarafından kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -70,4 +70,4 @@ typedef enum CorDebugInternalFrameType {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)

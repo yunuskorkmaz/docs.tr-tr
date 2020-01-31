@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: fa30deb16be323f059aa0ec12df08793598a6da2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: d3c91f594eedd2636cbf08285f0dee352bc4835a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738353"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777126"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamalarında verilerle çalışma
 
@@ -55,7 +55,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-DbContext 'in DbContextOptions kabul eden bir oluşturucusu olmalıdır ve bu bağımsız değişkeni temel DbContext oluşturucusuna geçirin. Uygulamanızda yalnızca bir DbContext varsa, DbContextOptions 'ın bir örneğini geçirebileceğinizi unutmayın, ancak birden fazla tane varsa, DbContext türünü genel parametre olarak geçirerek, genel DbContextOptions\<T > türünü kullanmanız gerekir.
+DbContext 'in DbContextOptions kabul eden bir oluşturucusu olmalıdır ve bu bağımsız değişkeni temel DbContext oluşturucusuna geçirin. Uygulamanızda yalnızca bir DbContext varsa, DbContextOptions 'ın bir örneğini geçirebilirsiniz, ancak birden fazla tane varsa, DbContext türünü genel parametre olarak geçirerek genel DbContextOptions\<T > türünü kullanmanız gerekir.
 
 ### <a name="configuring-ef-core"></a>EF Core yapılandırma
 
@@ -127,7 +127,7 @@ var brandsWithItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-Birden çok ilişki ekleyebilirsiniz ve Thenınclude kullanarak alt ilişkileri de dahil edebilirsiniz. EF Core, sonuçta elde edilen varlık kümesini almak için tek bir sorgu yürütülür. Alternatif olarak, gezinti özelliklerinin gezinti özelliklerini bir '. ' geçirerek dahil edebilirsiniz. `.Include()` uzantısı yöntemine ayrılmış dize, örneğin:
+Birden çok ilişki ekleyebilirsiniz ve Thenınclude kullanarak alt ilişkiler de ekleyebilirsiniz. EF Core, sonuçta elde edilen varlık kümesini almak için tek bir sorgu yürütülür. Alternatif olarak, gezinti özelliklerinin gezinti özelliklerini bir '. ' geçirerek dahil edebilirsiniz. `.Include()` uzantısı yöntemine ayrılmış dize, örneğin:
 
 ```csharp
     .Include(“Items.Products”)
@@ -180,7 +180,7 @@ public class Basket : BaseEntity
 }
 ```
 
-Bu varlık türünün ortak bir `List` veya `ICollection` özelliğini kullanıma sunmadığını, bunun yerine temel alınan liste türünü sarmalayan bir `IReadOnlyCollection` türünü gösterir. Bu model kullanılırken, şu şekilde bir yedekleme alanı kullanacağınızı Entity Framework Core belirtebilirsiniz:
+Bu varlık türü, ortak bir `List` veya `ICollection` özelliğini kullanıma sunmaz, bunun yerine temel alınan liste türünü sarmalayan bir `IReadOnlyCollection` türü gösterir. Bu model kullanılırken, şu şekilde bir yedekleme alanı kullanacağınızı Entity Framework Core belirtebilirsiniz:
 
 ```csharp
 private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
@@ -236,11 +236,11 @@ public class Startup
 
 #### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>BeginTransaction ve birden çok Dbbağlamlarını kullanarak yürütme stratejileri ve açık işlemler
 
-EF Core bağlantılarında yeniden denemeler etkinleştirildiğinde, EF Core kullanarak gerçekleştirdiğiniz her işlem kendi yeniden kullanılabilir işlem haline gelir. Her bir sorgu ve her SaveChanges çağrısı, geçici bir hata oluşursa bir birim olarak yeniden denenir.
+EF Core bağlantılarında yeniden denemeler etkinleştirildiğinde, EF Core kullanarak gerçekleştirdiğiniz her işlem kendi yeniden denenebilir işlemi haline gelir. Her bir sorgu ve her SaveChanges çağrısı, geçici bir hata oluşursa bir birim olarak yeniden denenir.
 
 Ancak, kodunuz BeginTransaction kullanarak bir işlem başlatırsa, birim olarak değerlendirilmesi gereken kendi işlem grubunuzu tanımlamanız gerekir; bir hata oluşursa işlem içindeki her şeyin geri alınması gerekmez. Bir EF yürütme stratejisi (yeniden deneme ilkesi) kullanırken bu işlemi yürütmeye çalışırsanız ve içinde birden fazla Dbbağlamdan birkaç SaveChanges eklerseniz, aşağıdaki gibi bir özel durum görürsünüz.
 
-System. InvalidOperationException: yapılandırılan ' Sqlserverretryingexecutionstrateji ' yürütme stratejisi, Kullanıcı tarafından başlatılan işlemleri desteklemez. İşlemdeki tüm işlemleri yeniden kullanılabilir bir birim olarak yürütmek için ' DbContext. Database. Createexecutionstrateji () ' tarafından döndürülen yürütme stratejisini kullanın.
+System. InvalidOperationException: yapılandırılan ' Sqlserverretryingexecutionstrateji ' yürütme stratejisi, Kullanıcı tarafından başlatılan işlemleri desteklemez. İşlemdeki tüm işlemleri yeniden denenebilir bir birim olarak yürütmek için ' DbContext. Database. Createexecutionstrateji () ' tarafından döndürülen yürütme stratejisini kullanın.
 
 Çözüm, yürütülmesi gereken her şeyi temsil eden bir temsilciyle EF yürütme stratejisini el ile çağırmalıdır. Geçici bir hata oluşursa, yürütme stratejisi temsilciyi tekrar çağıracaktır. Aşağıdaki kod, bu yaklaşımın nasıl uygulanacağını göstermektedir:
 
@@ -271,16 +271,16 @@ await strategy.ExecuteAsync(async () =>
 
 > ### <a name="references--entity-framework-core"></a>Başvurular – Entity Framework Core
 >
-> - **EF Core docs**  
+> - **EF Core Docs**
 >   <https://docs.microsoft.com/ef/>
-> - **EF Core: Ilgili veriler**  
+> - **EF Core: Ilgili veri**
 >   <https://docs.microsoft.com/ef/core/querying/related-data>
-> - **ASPNET uygulamalarında daha yavaş yükleme varlıklarını önleyin**  
->   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
+> - **ASPNET uygulamalarında
+>   yavaş yükleme varlıklarından kaçının** <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>EF Core veya Micro-ORM?
 
-EF Core, kalıcılığı yönetmek için harika bir seçimdir ve çoğu bölüm uygulama geliştiricilerinden veritabanı ayrıntılarını kapsüller, tek seçim değildir. Diğer bir popüler açık kaynak alternatifi [, mikro](https://github.com/StackExchange/Dapper)-ORM adlı bir, yani olarak adlandırılır. Mikro-ORM, nesneleri veri yapılarına eşlemek için hafif ve daha az bir tam özellikli araçtır. Paber söz konusu olduğunda, tasarım hedefleri, verileri almak ve güncelleştirmek için kullandığı temeldeki sorguları tamamen kapsüllemek yerine performansa odaklanmaktadır. Geliştiriciden SQL soyut olmadığından, kaber "metal 'ya yakındır" ve geliştiricilerin belirli bir veri erişim işlemi için kullanmak istedikleri tam sorguları yazmasına izin verir.
+EF Core, kalıcılığı yönetmek için harika bir seçimdir ve çoğu bölüm uygulama geliştiricilerinden veritabanı ayrıntılarını kapsüller, tek seçim değildir. Diğer bir popüler açık kaynak alternatifi, mikro-ORM adlı [, yani olarak](https://github.com/StackExchange/Dapper)adlandırılır. Mikro-ORM, nesneleri veri yapılarına eşlemek için hafif ve daha az bir tam özellikli araçtır. Paber söz konusu olduğunda, tasarım hedefleri, verileri almak ve güncelleştirmek için kullandığı temeldeki sorguları tamamen kapsüllemek yerine performansa odaklanmaktadır. Geliştiriciden SQL soyut olmadığından, kaber "metal 'ya yakındır" ve geliştiricilerin belirli bir veri erişim işlemi için kullanmak istedikleri tam sorguları yazmasına izin verir.
 
 EF Core, bu iki önemli özelliğe sahiptir ve bu, bunu bir yandan da kendi performans yüklerine ekler. İlki LINQ ifadelerinden SQL 'e çevirmesidir. Bu çeviriler önbelleğe alınır, ancak bunu ilk kez gerçekleştirmede ek yük vardır. İkincisi, varlıklarda değişiklik izleme (etkin güncelleştirme deyimlerinin üretilebilmesi için). Bu davranış, AsNotTracking uzantısı kullanılarak belirli sorgular için kapatılabilir. EF Core Ayrıca genellikle çok verimli olan ve performans açısından kusursuz bir şekilde kabul edilebilir olan SQL sorguları üretir, ancak yürütülecek kesin sorgu üzerinde iyi denetime ihtiyacınız varsa, EF kullanarak özel SQL (veya saklı yordam yürütme) geçirebilirsiniz Çekirdek, çok. Bu durumda, kaber hala EF Core, ancak biraz daha fazlasını gerçekleştirir. Julie Lerman, Mayıs 2016 MSDN makalesi [kaber, Entity Framework ve hibrit uygulamalarında](https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps)bazı performans verileri sunmaktadır. Çeşitli veri erişim yöntemlerine yönelik ek performans kıyaslama verileri [, kaber sitesinde](https://github.com/StackExchange/Dapper)bulunabilir.
 
@@ -326,13 +326,13 @@ var data = connection.Query<Post, User, Post>(sql,
 (post, user) => { post.Owner = user; return post;});
 ```
 
-Paber, daha az kapsülleme sağladığından, geliştiricilerin verilerinin nasıl depolandığı, nasıl verimli bir şekilde sorgulanacağı ve bunu getirmek için daha fazla kod yazabileceği hakkında daha fazla bilgi sahibi olmasını gerektirir. Model değiştiğinde, yalnızca yeni bir geçiş (başka bir EF Core özelliği) oluşturmak ve/veya eşleme bilgilerini bir DbContext içinde tek bir yerde güncelleştirmek yerine, etkilenen her sorgunun güncelleştirilmesi gerekir. Bu sorgularda derleme zamanı garantisi yoktur, bu nedenle model veya veritabanındaki değişikliklere yanıt olarak çalışma zamanında kesintiye uğrarabilir ve hataları hızla algılamaya daha zor hale gelebilir. Bu avantajları için Exchange 'de, kaber son derece hızlı performans sunmaktadır.
+Paber, daha az kapsülleme sağladığından, geliştiricilerin verilerinin nasıl depolandığı, nasıl verimli bir şekilde sorgulanacağı ve bunu getirmek için daha fazla kod yazabileceği hakkında daha fazla bilgi sahibi olmasını gerektirir. Model değiştiğinde, yalnızca yeni bir geçiş (başka bir EF Core özelliği) oluşturmak ve/veya eşleme bilgilerini bir DbContext içinde tek bir yerde güncelleştirmek yerine, etkilenen her sorgunun güncelleştirilmesi gerekir. Bu sorguların derleme zamanı garantisi yoktur, bu nedenle model veya veritabanındaki değişikliklere yanıt olarak çalışma zamanında kesintiye uğrarabilir ve hataları hızla algılamaya daha zor hale gelebilir. Bu avantajları için Exchange 'de, kaber son derece hızlı performans sunmaktadır.
 
 Çoğu uygulama ve neredeyse tüm uygulamaların birçok bölümü için EF Core, kabul edilebilir performans sağlar. Bu nedenle, geliştirici üretkenlik avantajları büyük olasılıkla performans yükünü ortadan kaldırır. Önbelleğe alma işleminden faydalanabilir sorgular için, gerçek sorgu yalnızca büyük bir yüzde oranında yürütülebilir ve görece küçük sorgu performansı farklılıklarına sahiptir.
 
 ## <a name="sql-or-nosql"></a>SQL veya NoSQL
 
-Geleneksel olarak, SQL Server gibi ilişkisel veritabanları kalıcı veri depolama alanı için Market 'e sahiptir, ancak bunlar kullanılabilir tek çözüm değildir. [MongoDB](https://www.mongodb.com/what-is-mongodb) gibi NoSQL veritabanları, nesneleri depolamanın farklı bir yaklaşımını sunmaktadır. Nesneleri tablo ve satırlara eşlemek yerine, diğer bir seçenek de nesne grafiğinin tamamını seri hale getirmek ve sonucu depolar. En azından başlangıçta bu yaklaşımın avantajları basitlik ve performanslardır. Tek bir seri hale getirilmiş bir nesneyi, bir anahtarla, nesnenin veritabanından en son alınmasından bu yana değişmiş olabilecek ilişkiler ve güncelleştirmeler ve satırlar içeren çok sayıda tabloya parçalanmaya kıyasla bir anahtarla depolamak kesinlikle daha basittir. Benzer şekilde, anahtar tabanlı bir mağazadan tek bir nesneyi getirme ve serisini kaldırma genellikle karmaşık birleşimlerden çok daha hızlı ve daha kolay ve aynı nesneyi ilişkisel bir veritabanından tamamen oluşturmak için gereken birden çok veritabanı sorgusuna sahiptir. Kilitleri veya işlemleri ya da sabit bir şemanın olmaması, NoSQL veritabanlarının çok büyük veri kümelerini destekleyen birçok makine genelinde ölçeklendirilmesine çok daha fazla değişiklik yapabilmesini sağlar.
+Geleneksel olarak, SQL Server gibi ilişkisel veritabanları kalıcı veri depolama alanı için Market 'e sahiptir, ancak bunlar kullanılabilir tek çözüm değildir. [MongoDB](https://www.mongodb.com/what-is-mongodb) gibi NoSQL veritabanları, nesneleri depolamanın farklı bir yaklaşımını sunmaktadır. Nesneleri tablo ve satırlara eşlemek yerine, diğer bir seçenek de nesne grafiğinin tamamını seri hale getirmek ve sonucu depolar. En azından başlangıçta bu yaklaşımın avantajları basitlik ve performanslardır. Tek bir seri hale getirilmiş bir nesneyi, bir anahtarla, nesne veritabanından en son alınmasından sonra değişmiş olabilecek ilişkiler ve güncelleştirme ve satırlar içeren çok sayıda tabloya parçalanmaya kıyasla bir anahtarla depolamak daha basittir. Benzer şekilde, anahtar tabanlı bir mağazadan tek bir nesneyi getirme ve serisini kaldırma genellikle karmaşık birleşimlerden çok daha hızlı ve daha kolay ve aynı nesneyi ilişkisel bir veritabanından tamamen oluşturmak için gereken birden çok veritabanı sorgusuna sahiptir. Kilitleri veya işlemleri ya da sabit bir şemanın bulunmaması, NoSQL veritabanlarının çok büyük veri kümelerini destekleyen birçok makine genelinde ölçeklendirilmesine de olanak sağlar.
 
 Diğer taraftan, NoSQL veritabanlarının (genellikle çağrıldığı gibi) dezavantajları vardır. İlişkisel veritabanları, tutarlılığı zorlamak ve verilerin çoğaltılmasını önlemek için normalleştirme kullanır. Bu, veritabanının toplam boyutunu azaltır ve paylaşılan veriler için güncelleştirmelerin hemen veritabanının tamamında kullanılabilmesini sağlar. İlişkisel bir veritabanında, bir ülke/bölge adı değiştirilirse adres kayıtları güncelleştirmeden önce güncelleştirilmesi gerekmeden, bir ülke tablosuna KIMLIĞE göre başvurabilir. bu şekilde, Ancak, bir NoSQL veritabanında, adreste ve ilişkili ülkede birçok saklı nesnenin parçası olarak serileştirilmiş olabilir. Ülke/bölge adına yapılan bir güncelleştirme, bu gibi tüm nesnelerin tek bir satır yerine güncelleştirilmesini gerektirir. İlişkisel veritabanları, yabancı anahtarlar gibi kuralları zorunlu tutarak ilişkisel bütünlüğünden de emin olabilir. NoSQL veritabanları genellikle verileri üzerinde böyle kısıtlamalar sunmaz.
 
@@ -340,7 +340,7 @@ Başka bir karmaşıklık NoSQL veritabanlarının sürümü oluşturma ile uğr
 
 Nesnelerin birden çok sürümünü depolamak için NoSQL veritabanlarında, sabit bir şema ilişkisel veritabanları genellikle desteklemez. Bununla birlikte, bu durumda, uygulama kodunuzun önceki nesne sürümlerinin varlığını hesaba getirmeniz gerekir, ek karmaşıklık ekliyor.
 
-NoSQL veritabanları genellikle, ilişkisel veritabanları üzerinde performans ve ölçeklenebilirlik avantajları olan [ACID](https://en.wikipedia.org/wiki/ACID)'yi zorlamaz. Bunlara çok büyük veri kümeleri ve normalleştirilmiş tablo yapılarında depolamaya uygun olmayan nesneler de uygundur. Tek bir uygulamanın hem ilişkisel hem de NoSQL veritabanlarından yararlanması, her yerde en iyi şekilde yararlanamaması gerekmez.
+NoSQL veritabanları genellikle, ilişkisel veritabanları üzerinde performans ve ölçeklenebilirlik avantajları olan [ACID](https://en.wikipedia.org/wiki/ACID)'yi zorlamaz. Bunlara çok büyük veri kümeleri ve Normalleştirilmemiş tablo yapılarında depolamaya uygun olmayan nesneler için de idealdir. Tek bir uygulamanın hem ilişkisel hem de NoSQL veritabanlarından yararlanması, her yerde en iyi şekilde yararlanamaması gerekmez.
 
 ## <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
@@ -354,8 +354,7 @@ Azure Cosmos DB sorgu dili, JSON belgelerini sorgulamak için basit ancak güçl
 
 **Başvurular – Azure Cosmos DB**
 
-- Azure Cosmos DB giriş  
-  <https://docs.microsoft.com/azure/cosmos-db/introduction>
+- Azure Cosmos DB giriş <https://docs.microsoft.com/azure/cosmos-db/introduction>
 
 ## <a name="other-persistence-options"></a>Diğer kalıcılık seçenekleri
 
@@ -371,8 +370,7 @@ Azure Cosmos DB sorgu dili, JSON belgelerini sorgulamak için basit ancak güçl
 
 **Başvurular – Azure Storage**
 
-- Azure depolama giriş  
-  <https://docs.microsoft.com/azure/storage/storage-introduction>
+- Azure depolama giriş <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Önbelleğe Alma
 
@@ -484,9 +482,9 @@ services.AddScoped<ICatalogService, CachedCatalogService>();
 services.AddScoped<CatalogService>();
 ```
 
-Bu şekilde, katalog verilerini getirmek için veritabanı çağrıları her istek yerine yalnızca dakikada bir kez yapılır. Site trafiğine bağlı olarak, bu, veritabanına yapılan sorgu sayısı üzerinde çok önemli bir etkiye ve ana sayfa için o anda bu hizmetin açığa çıkarılan her birine bağlı olan ortalama sayfa yükleme süresine sahip olabilir.
+Bu şekilde, katalog verilerini getirmek için veritabanı çağrıları her istek yerine yalnızca dakikada bir kez yapılır. Site trafiğine bağlı olarak, bu, veritabanına yapılan sorgu sayısı üzerinde önemli bir etkiye ve ana sayfa için o anda bu hizmet tarafından kullanıma sunulan her bir sorguya bağlı olan ortalama sayfa yükleme süresine sahip olabilir.
 
-Önbelleğe alma işlemi uygulandığında ortaya çıkan bir sorun _eski veri_ , diğer bir deyişle, kaynakta Değiştirilen ancak güncel olmayan bir sürümü önbellekte kalır. Bu sorunu hafifletmenin basit bir yolu, yoğun bir uygulama için, verilerin uzatılması için sınırlı sayıda daha fazla avantaj olduğundan, küçük önbellek süreleri kullanmaktır. Örneğin, tek bir veritabanı sorgusu oluşturan ve saniyede 10 kez istenen bir sayfa düşünün. Bu sayfa bir dakika boyunca önbelleğe alınmışsa, 600 ' dan 1 ' e düşürülmesi için dakika başına yapılan Veritabanı sorgularının sayısına,% 99,8 oranında bir azalmaya neden olur. Bunun yerine önbellek süresi bir saat yapılırsa, genel azaltma% 99,997 olur, ancak artık eski verilerin olasılığı ve potansiyel yaşı önemli ölçüde artar.
+Önbelleğe alma işlemi uygulandığında ortaya çıkan bir sorun _eski veriler_ , yani kaynakta değiştirilen veriler, ancak güncel olmayan bir sürüm önbellekte kalır. Bu sorunu hafifletmenin basit bir yolu, yoğun bir uygulama için, verilerin uzatılması için sınırlı sayıda daha fazla avantaj olduğundan, küçük önbellek süreleri kullanmaktır. Örneğin, tek bir veritabanı sorgusu oluşturan ve saniyede 10 kez istenen bir sayfa düşünün. Bu sayfa bir dakika boyunca önbelleğe alınmışsa, 600 ' dan 1 ' e düşürülmesi için dakika başına yapılan Veritabanı sorgularının sayısına,% 99,8 oranında bir azalmaya neden olur. Bunun yerine önbellek süresi bir saat yapılırsa, genel azaltma% 99,997 olur, ancak artık eski verilerin olasılığı ve potansiyel yaşı önemli ölçüde artar.
 
 Diğer bir yaklaşım, içerdikleri veriler güncelleştirilirken önbellek girişlerini önceden kaldırmak olur. Anahtarı biliniyorsa her bir giriş kaldırılabilir:
 

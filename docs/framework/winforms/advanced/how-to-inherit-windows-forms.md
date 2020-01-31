@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Formlarını Devralma'
+title: Form devralma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 402386e16687162e25e16e5c30c787f7e721fbba
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: cc3a4cc75fd13e8f193a6920ed5b4a9bc8fd5d74
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306370"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743329"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Nasıl yapılır: Windows Formlarını Devralma
 
 Temel formlardan devralarak yeni Windows Forms oluşturmak, her ihtiyacınız olduğunda bir formu tamamen yeniden oluşturma işlemini gerçekleştirmeden en iyi çabalarınızı yinelemek için kullanışlı bir yoldur.
 
-**Devralma Seçici** iletişim kutusunu kullanarak formları tasarım zamanında devralma ve devralınan denetimlerin güvenlik düzeyleri arasında görsel açıdan ayrım yapma hakkında daha fazla bilgi için bkz [. nasıl yapılır: Devralma Seçici Iletişim kutusunu](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)kullanarak formları devral.
+**Devralma Seçici** iletişim kutusunu kullanarak formları tasarım zamanında devralma ve devralınan denetimlerin güvenlik düzeyleri arasında görsel açıdan ayrım yapma hakkında daha fazla bilgi için bkz. [nasıl yapılır: formları devralma Seçicisi iletişim kutusu kullanarak](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)devralma.
 
 > [!NOTE]
 > Formdan devralması için, bu formu içeren dosya veya ad alanı yürütülebilir bir dosyaya veya DLL 'ye derlenmiş olmalıdır. Projeyi derlemek için **derleme** menüsünden **Oluştur** ' u seçin. Ayrıca, form devralan sınıfa ad alanı başvurusu eklenmelidir.

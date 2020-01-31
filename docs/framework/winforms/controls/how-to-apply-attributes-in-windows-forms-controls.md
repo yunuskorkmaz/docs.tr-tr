@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms Denetiminde Öznitelikleri Uygulama'
+title: Denetimlere öznitelik uygulama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: 273d32927582f4467a92cd3b8f87e699c1f167d7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b8ecd516cf6bb189c6ad1b208dd8e3a5444f001c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922792"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741486"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Nasıl yapılır: Windows Forms Denetiminde Öznitelikleri Uygulama
 Tasarım ortamıyla doğru şekilde etkileşim kuran ve çalışma zamanında doğru şekilde yürütülen bileşenleri ve denetimleri geliştirmek için, öznitelikleri sınıflara ve üyelere doğru bir şekilde uygulamanız gerekir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bir özel denetimde çeşitli özniteliklerin nasıl kullanılacağını göstermektedir. Denetim, basit bir günlüğe kaydetme özelliğini gösterir. Denetim bir veri kaynağına bağlandığında, veri kaynağı tarafından bir <xref:System.Windows.Forms.DataGridView> denetimde gönderilen değerleri görüntüler. Bir değer, `Threshold` özelliği tarafından belirtilen değeri aşarsa bir `ThresholdExceeded` olay tetiklenir.  
+ Aşağıdaki kod örneği, bir özel denetimde çeşitli özniteliklerin nasıl kullanılacağını göstermektedir. Denetim, basit bir günlüğe kaydetme özelliğini gösterir. Denetim bir veri kaynağına bağlandığında, veri kaynağı tarafından gönderilen değerleri bir <xref:System.Windows.Forms.DataGridView> denetiminde görüntüler. Bir değer `Threshold` özelliği tarafından belirtilen değeri aşarsa `ThresholdExceeded` bir olay tetiklenir.  
   
- Değerleri bir`LogEntry` sınıfıyla günlüğe kaydedilir. `AttributesDemoControl` `LogEntry` Sınıfı, bir şablon sınıfıdır, bu, günlüğe kaydettiği tür üzerinde parametreleştirimiş olması anlamına gelir. Örneğin, Eğer `AttributesDemoControl` , türü `float`günlüğe kaydetme ise, her `LogEntry` örnek aşağıdaki şekilde bildirilmiştir ve kullanılır.  
+ `AttributesDemoControl`, değerleri bir `LogEntry` sınıfıyla günlüğe kaydeder. `LogEntry` sınıfı bir şablon sınıfıdır ve bu, günlüğe kaydettiği tür üzerinde parametreleştirilenir. Örneğin, `AttributesDemoControl` `float`türündeki günlüğe kayıt alıyorsa, her `LogEntry` örnek aşağıdaki şekilde tanımlanır ve kullanılır.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/form1.cs#110)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/form1.vb#110)]  
   
 > [!NOTE]
-> `LogEntry` , Rastgele bir tür tarafından parametrelendirildiği için, parametre türü üzerinde çalışması için yansıma kullanması gerekir. Eşik özelliğinin çalışması için, parametre türünün `T` <xref:System.IComparable> arabirimini uygulaması gerekir.  
+> `LogEntry` rastgele bir tür tarafından parametrelendirildiği için, parametre türü üzerinde çalışmak üzere yansıma kullanması gerekir. Eşik özelliğinin çalışması için `T` parametre türü <xref:System.IComparable> arabirimini uygulamalıdır.  
   
- Bir performans sayacını düzenli aralıklarla `AttributesDemoControl` sorgulayan form. Her bir değer uygun bir `LogEntry` tür içinde paketlenmiştir ve <xref:System.Windows.Forms.BindingSource>formun öğesine eklenir. , `AttributesDemoControl` Değeri veri bağlama aracılığıyla alır ve bir <xref:System.Windows.Forms.DataGridView> denetimdeki değeri görüntüler.  
+ `AttributesDemoControl` barındıran form, düzenli aralıklarla bir performans sayacını sorgular. Her değer uygun türdeki bir `LogEntry` paketlenir ve formun <xref:System.Windows.Forms.BindingSource>eklenir. `AttributesDemoControl`, değeri veri bağlama aracılığıyla alır ve değeri bir <xref:System.Windows.Forms.DataGridView> denetiminde görüntüler.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#1)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#1)]  
@@ -38,7 +38,7 @@ Tasarım ortamıyla doğru şekilde etkileşim kuran ve çalışma zamanında do
  [!code-csharp[System.ComponentModel.AttributesDemoControl#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/form1.cs#100)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/form1.vb#100)]  
   
- İlk kod örneği `AttributesDemoControl` uygulama. İkinci kod örneği, `AttributesDemoControl`kullanan bir formu gösterir.  
+ İlk kod örneği `AttributesDemoControl` uygulamasıdır. İkinci kod örneği, `AttributesDemoControl`kullanan bir formu gösterir.  
   
 ## <a name="class-level-attributes"></a>Sınıf düzeyi öznitelikleri  
  Bazı öznitelikler sınıf düzeyinde uygulanır. Aşağıdaki kod örneği, bir Windows Forms denetimine yaygın olarak uygulanan öznitelikleri gösterir.  
@@ -47,7 +47,7 @@ Tasarım ortamıyla doğru şekilde etkileşim kuran ve çalışma zamanında do
  [!code-vb[System.ComponentModel.AttributesDemoControl#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#20)]  
   
 ### <a name="typeconverter-attribute"></a>TypeConverter özniteliği  
- <xref:System.ComponentModel.TypeConverterAttribute>, başka bir yaygın kullanılan sınıf düzeyi özniteliğidir. Aşağıdaki kod örneği, `LogEntry` sınıfı için kullanımını gösterir. Bu örnek ayrıca, olarak adlandırılan <xref:System.ComponentModel.TypeConverter> `LogEntry` `LogEntryTypeConverter`türü için bir uygulamasını gösterir.  
+ <xref:System.ComponentModel.TypeConverterAttribute>, yaygın olarak kullanılan bir sınıf düzeyi özniteliğidir. Aşağıdaki kod örneği, `LogEntry` sınıfı için kullanımını gösterir. Bu örnek ayrıca `LogEntryTypeConverter`olarak adlandırılan `LogEntry` türü için <xref:System.ComponentModel.TypeConverter> bir uygulamasını gösterir.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#5)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#5)]  
@@ -59,13 +59,13 @@ Tasarım ortamıyla doğru şekilde etkileşim kuran ve çalışma zamanında do
  [!code-vb[System.ComponentModel.AttributesDemoControl#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#21)]  
   
 ### <a name="ambientvalue-attribute"></a>AmbientValue özniteliği  
- Aşağıdaki örnek öğesini gösterir <xref:System.ComponentModel.AmbientValueAttribute> ve tasarım ortamıyla etkileşimini destekleyen kodu gösterir. Bu etkileşime *Ambience*adı verilir.  
+ Aşağıdaki örnek, <xref:System.ComponentModel.AmbientValueAttribute> gösterir ve tasarım ortamıyla etkileşimini destekleyen kodu gösterir. Bu etkileşime *Ambience*adı verilir.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#23)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#23)]  
   
 ### <a name="databinding-attributes"></a>Veri bağlama öznitelikleri  
- Aşağıdaki örneklerde karmaşık veri bağlamasının bir uygulama gösterilmektedir. Daha önce gösterilen sınıf <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>düzeyi, veri bağlama için kullanılacak `DataSource` ve `DataMember` özelliklerini belirtir. , <xref:System.ComponentModel.AttributeProviderAttribute> `DataSource` Özelliğin bağlanacağı türü belirtir.  
+ Aşağıdaki örneklerde karmaşık veri bağlamasının bir uygulama gösterilmektedir. Daha önce gösterilen sınıf düzeyi <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>, veri bağlama için kullanılacak `DataSource` ve `DataMember` özelliklerini belirtir. <xref:System.ComponentModel.AttributeProviderAttribute>, `DataSource` özelliğinin bağlanacağı türü belirtir.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#25)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#25)]  
@@ -73,9 +73,9 @@ Tasarım ortamıyla doğru şekilde etkileşim kuran ve çalışma zamanında do
  [!code-csharp[System.ComponentModel.AttributesDemoControl#26](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#26)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#26](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#26)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
+## <a name="compiling-the-code"></a>Kod Derleme  
   
-- Öğesini barındıran `AttributesDemoControl` form, derlemek için `AttributesDemoControl` derlemeye bir başvuru gerektirir.  
+- `AttributesDemoControl` barındıran form, derlemek için `AttributesDemoControl` derlemesine bir başvuru gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: BindingNavigator Denetimine Genel Bakış (Windows Forms)
+title: BindingNavigator Denetimine Genel Bakış
 ms.date: 03/30/2017
 f1_keywords:
 - DataNavigator
@@ -9,38 +9,38 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
-ms.openlocfilehash: ad63f622aae55cb4175eddc93ab5e086965a8fe8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2747a6801d4aa9cfde4227ffd5c29ca1de78d48
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011794"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744105"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>BindingNavigator Denetimine Genel Bakış (Windows Forms)
-Kullanabileceğiniz <xref:System.Windows.Forms.BindingNavigator> aramak ve bir Windows Form üzerinde verileri değiştirmek kullanıcılar için standartlaştırılmış bir yol oluşturmak için denetimi. Sık kullandığınız <xref:System.Windows.Forms.BindingNavigator> ile <xref:System.Windows.Forms.BindingSource> kullanıcıların bir form üzerinde veri Kayıtlarda gezinmek ve kayıtlarla etkileşimde etkinleştirmek için bileşen.  
+Kullanıcıların bir Windows formundaki verileri aramasını ve değiştirmesini sağlamak üzere standartlaştırılmış bir yol oluşturmak için <xref:System.Windows.Forms.BindingNavigator> denetimini kullanabilirsiniz. Kullanıcıların bir formdaki veri kayıtları arasında hareket kurmasını ve kayıtlarla etkileşime geçmesini sağlamak için <xref:System.Windows.Forms.BindingSource> bileşeniyle <xref:System.Windows.Forms.BindingNavigator> sık sık kullanırsınız.  
   
-## <a name="how-the-bindingnavigator-works"></a>BindingNavigator nasıl çalışır?  
+## <a name="how-the-bindingnavigator-works"></a>BindingNavigator nasıl kullanılır?  
 
- <xref:System.Windows.Forms.BindingNavigator> Denetim oluşan bir <xref:System.Windows.Forms.ToolStrip> bir dizi <xref:System.Windows.Forms.ToolStripItem> nesneler için ortak verilerle ilgili işlemlerin çoğu: veri ekleme, verileri silme ve verilerine gezinme. Varsayılan olarak, <xref:System.Windows.Forms.BindingNavigator> denetimi bu standart düğmeleri içerir. Aşağıdaki ekran görüntüsü gösterildiği <xref:System.Windows.Forms.BindingNavigator> form denetimi:
+ <xref:System.Windows.Forms.BindingNavigator> denetimi, veri ekleme, verileri silme ve veriler arasında gezinme gibi <xref:System.Windows.Forms.ToolStripItem> nesne dizileri içeren bir <xref:System.Windows.Forms.ToolStrip> oluşur. Varsayılan olarak, <xref:System.Windows.Forms.BindingNavigator> denetimi bu standart düğmeleri içerir. Aşağıdaki ekran görüntüsünde bir formda <xref:System.Windows.Forms.BindingNavigator> denetimi gösterilmektedir:
   
- ![BindingNavigator denetimi gösteren ekran görüntüsü.](./media/bindingnavigator-control-overview-windows-forms/bindingnavigator-control-form.gif)  
+ ![BindingNavigator denetimini gösteren ekran görüntüsü.](./media/bindingnavigator-control-overview-windows-forms/bindingnavigator-control-form.gif)  
   
- Aşağıdaki tablo, denetimleri listeler ve bunların işlevleri açıklanır.  
+ Aşağıdaki tabloda denetimler listelenmiş ve işlevleri açıklanmaktadır.  
   
 |Denetim|İşlev|  
 |-------------|--------------|  
-|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> Düğme|Temel alınan veri kaynağına yeni bir satır ekler.|  
-|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> Düğme|Geçerli satırı temel alınan veri kaynağından siler.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> Düğme|Temel alınan veri kaynağına ilk öğesinde taşır.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> Düğme|Son öğe temel alınan veri kaynağında taşır.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A> Düğme|Temel alınan veri kaynağı'na taşır.|  
-|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> Düğme|Temel alınan veri kaynağı önceki öğede taşır.|  
+|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> düğmesi|Temel alınan veri kaynağına yeni bir satır ekler.|  
+|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> düğmesi|Temel alınan veri kaynağından geçerli satırı siler.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> düğmesi|Temel alınan veri kaynağındaki ilk öğeye gider.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> düğmesi|Temel alınan veri kaynağındaki son öğeye gider.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A> düğmesi|Temel alınan veri kaynağındaki bir sonraki öğeye gider.|  
+|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> düğmesi|Temel alınan veri kaynağındaki bir önceki öğeye gider.|  
 |<xref:System.Windows.Forms.BindingNavigator.PositionItem%2A> metin kutusu|Temel alınan veri kaynağı içindeki geçerli konumu döndürür.|  
-|<xref:System.Windows.Forms.BindingNavigator.CountItem%2A> metin kutusu|Temel alınan veri kaynağında toplam öğe sayısını döndürür.|  
+|<xref:System.Windows.Forms.BindingNavigator.CountItem%2A> metin kutusu|Temel alınan veri kaynağındaki toplam öğe sayısını döndürür.|  
   
- Bu koleksiyondaki her bir denetim için karşılık gelen bir üye yoktur <xref:System.Windows.Forms.BindingSource> bileşeni programlı olarak aynı işlevselliği sağlar. Örneğin, <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> düğmesi karşılık gelen <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> yöntemi <xref:System.Windows.Forms.BindingSource> bileşeni <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> düğmesi karşılık gelen <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> yöntemi ve benzeri.  
+ Bu koleksiyondaki her denetim için, program aracılığıyla aynı işlevselliği sağlayan <xref:System.Windows.Forms.BindingSource> bileşenin karşılık gelen bir üyesi vardır. Örneğin, <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> düğmesi <xref:System.Windows.Forms.BindingSource> bileşenin <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> yöntemine karşılık gelir, <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> düğmesi <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> yöntemine karşılık gelir ve bu şekilde devam eder.  
   
- Varsayılan düğme, uygulamanız için uygun olmayan ya da diğer işlevleri türlerini desteklemek için ek düğmeler ihtiyacınız varsa, kendi sağlayabilirsiniz <xref:System.Windows.Forms.ToolStrip> düğmeleri. Ayrıca bkz: [nasıl yapılır: Yükleme, kaydetme ve ekleme İptal düğmeleri Windows Forms BindingNavigator denetimi](load-save-and-cancel-bindingnavigator.md).  
+ Varsayılan düğmeler uygulamanıza uygun değilse veya diğer işlev türlerini desteklemek için ek düğmeler gerekiyorsa, kendi <xref:System.Windows.Forms.ToolStrip> düğmelerinizi sağlayabilirsiniz. Ayrıca bkz. [nasıl yapılır: Windows Forms BindingNavigator denetimine yükleme, kaydetme ve Iptal düğmeleri ekleme](load-save-and-cancel-bindingnavigator.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

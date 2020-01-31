@@ -2,12 +2,12 @@
 title: Hizmet Uç Noktaları ve Kuyruk İşleme
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 6bdd3b0966f85ff456e0e2ed0b6da773046201dc
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ec932e83a2b37330f54be545a45358a5ab055423
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837993"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744622"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Hizmet Uç Noktaları ve Kuyruk İşleme
 Bu konuda, istemcilerin kuyruklardan okuyan hizmetleri nasıl ele aldığı ve hizmet uç noktalarının kuyrukların nasıl eşlenme açıklanmaktadır. Bir anımsatıcı olarak, aşağıdaki çizimde, klasik Windows Communication Foundation (WCF) sıraya alınmış uygulama dağıtımı gösterilmektedir.  
@@ -21,7 +21,7 @@ Bu konuda, istemcilerin kuyruklardan okuyan hizmetleri nasıl ele aldığı ve h
   
  Yol adları, Yönlendirme ve kuyruk yöneticisi Aktarım Protokolü dahil olmak üzere adresin ek yönlerini belirleyebilmek için "FormatNames" ile eşleştirilir. Kuyruk Yöneticisi iki aktarım protokolünü destekler: yerel MSMQ Protokolü ve SOAP Güvenilir Mesajlaşma Protokolü (SRMP).  
   
- MSMQ yolu ve biçim adları hakkında daha fazla bilgi için bkz. [about Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94837).  
+ MSMQ yolu ve biçim adları hakkında daha fazla bilgi için bkz. [about Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding ve hizmet adresleme  
  Bir hizmete bir ileti adreslenirken, URI 'deki şema, iletişim için kullanılan ulaşım 'e göre seçilir. WCF 'deki her bir taşımanın benzersiz bir şeması vardır. Düzenin, iletişim için kullanılan taşımanın yapısını yansıtması gerekir. Örneğin, net. TCP, net. pipe, HTTP ve benzeri.  
@@ -96,7 +96,7 @@ Bu konuda, istemcilerin kuyruklardan okuyan hizmetleri nasıl ele aldığı ve h
   
  MSMQ. FormatName:\<*MSMQ-biçim-adı*>>  
   
- MSMQ biçimindeki adı, hakkında MSMQ tarafından belirtilen biçimde belirtilir [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94837).  
+ MSMQ biçimindeki adı, hakkında MSMQ tarafından belirtilen biçimde belirtilir [Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
  `MsmqIntegrationBinding`kullanarak bir kuyruktan ileti alırken yalnızca doğrudan biçim adlarını ve ortak ve özel biçim adlarını (Active Directory tümleştirme gerektirir) kullanabileceğinizi unutmayın. Ancak, doğrudan biçim adları kullanmanız önerilir. Örneğin, Windows Vista 'da, başka bir biçim adı kullanılması, sistem bir alt sıra açmaya çalıştığı ve yalnızca doğrudan biçim adlarıyla açılabilen bir hataya neden olur.  
   

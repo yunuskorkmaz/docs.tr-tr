@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6c394ad2721bcdd91fb750fe93c03f16ca9f799f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4285ed3c0488ea615ca89b0b771bf09c8c29b318
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714084"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739120"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Komut satırını kullanarak Windows/Linux/macOS 'ta .NET Core ile çalışmaya başlama
 
@@ -22,7 +22,7 @@ Bu makalede, .NET Core CLI araçları kullanılarak makinenizde platformlar aras
 ## <a name="prerequisites"></a>Prerequisites
 
 - [.NET Core SDK 3,1](https://dotnet.microsoft.com/download) veya sonraki sürümler.
-- Tercih ettiğiniz bir metin veya kod düzenleyicisi.
+- Seçtiğiniz bir metin düzenleyici veya kod Düzenleyicisi.
 
 ## <a name="hello-console-app"></a>Merhaba, konsol uygulaması!
 
@@ -56,7 +56,7 @@ Hızlı bir yol açalım:
     
     Program `using System`başlar, bu, "`System` ad alanındaki her şeyi bu dosyanın kapsamına getir" anlamına gelir. `System` ad alanı `Console` sınıfını içerir.
     
-    Daha sonra `Hello`adlı bir ad alanı tanımlayacağız. Bunu istediğiniz herhangi bir şekilde değiştirebilirsiniz. `Program` adlı bir sınıf, `args`adlı dizelerin dizisini alan `Main` yöntemi ile bu ad alanı içinde tanımlanır. Bu dizi, program çalıştırıldığında geçirilen bağımsız değişkenlerin listesini içerir. Çünkü bu dizi kullanılmaz ve program yalnızca "Merhaba Dünya!" metnini yazar metni görüntülenmelidir. Daha sonra, bu bağımsız değişken tarafından kullanılacak kodda değişiklik yapacağız.
+    Daha sonra `Hello`adlı bir ad alanı tanımlayacağız. Bunu istediğiniz herhangi bir şekilde değiştirebilirsiniz. `Program` adlı bir sınıf, `args`adlı dizelerin dizisini alan `Main` yöntemi ile bu ad alanı içinde tanımlanır. Bu dizi, program çalıştırıldığında geçirilen bağımsız değişkenlerin listesini içerir. Çünkü bu dizi kullanılmaz ve program yalnızca "Merhaba Dünya!" metnini yazar konsoluna gidin. Daha sonra, bu bağımsız değişken tarafından kullanılacak kodda değişiklik yapacağız.
     
     `dotnet new` [DotNet restore](../tools/dotnet-restore.md) dolaylı olarak çağırır. Bağımlılıklar ağacını geri yüklemek için [NuGet](https://www.nuget.org/) 'e (.net Package Manager) çağrı `dotnet restore`. NuGet, *Hello. csproj* dosyasını analiz eder, dosyada tanımlanan bağımlılıkları indirir (veya makinenizde bir önbellekten Dallarınızla) ve örneği derlemek ve çalıştırmak için gerekli olan *obj/Project. varlıklar. JSON* dosyasını yazar.
 
@@ -183,7 +183,7 @@ Hello World!
 Bu makalenin başlangıcında belirtildiği gibi, `Hello.dll`birlikte işletim sistemine özgü bir yürütülebilir dosya oluşturulmuştur. Windows 'da bu `Hello.exe`olur; Linux veya macOS üzerinde bu `hello`. Yukarıdaki örnekte, dosya `Hello.exe` veya `Hello`ile adlandırılır. Bu yayınlanan yürütülebilir dosyayı doğrudan çalıştırabilirsiniz.
 
 ```console
-.\bin\Debug\netcoreapp3.1\Hello.exe
+.\bin\Debug\netcoreapp3.1\publish\Hello.exe
 
 Hello World!
 ```

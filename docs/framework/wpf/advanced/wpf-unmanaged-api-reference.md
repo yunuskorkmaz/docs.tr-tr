@@ -1,16 +1,16 @@
 ---
-title: WPF Yönetilmeyen API Başvurusu
+title: Yönetilmeyen API Başvurusu
 ms.date: 03/30/2017
 ms.assetid: 2a2e8274-6556-46a2-80d3-a1812903cbcf
-ms.openlocfilehash: 5a9a122f8df9786b457291b955c15bddb39696a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 33f6624b68e7d3a4c2365eb7326089e97c03c471
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780633"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744445"
 ---
 # <a name="wpf-unmanaged-api-reference"></a>WPF Yönetilmeyen API Başvurusu
-Windows Presentation Foundation (WPF) kitaplıkları, yalnızca iç kullanım için hedeflenen yönetilmeyen işlevleri sayısını kullanıma sunar. Bunlar kullanıcı koddan çağrılmamalıdır.  
+Windows Presentation Foundation (WPF) kitaplıkları yalnızca iç kullanım için tasarlanan bazı yönetilmeyen işlevleri kullanıma sunar. Kullanıcı kodundan çağrılmamalıdır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Activate İşlevi](activate-function-wpf-unmanaged-api-reference.md)  

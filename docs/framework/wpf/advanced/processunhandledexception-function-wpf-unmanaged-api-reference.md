@@ -1,5 +1,6 @@
 ---
-title: ProcessUnhandledException işlevi (WPF yönetilmeyen API Başvurusu)
+title: ProcessUnhandledException Işlevi-WPF yönetilmeyen API başvurusu
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +9,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 495ce5f6-bb4d-4b30-807a-c3c35f1ca95c
-ms.openlocfilehash: 0c8751454be6e0eed547c38e9d0bc7931abaec3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 757e5ac3aa2dc4c87b210b026998523bd82045c1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62030361"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743926"
 ---
-# <a name="processunhandledexception-function-wpf-unmanaged-api-reference"></a>ProcessUnhandledException işlevi (WPF yönetilmeyen API Başvurusu)
+# <a name="processunhandledexception-function-wpf-unmanaged-api-reference"></a>ProcessUnhandledException Işlevi (WPF yönetilmeyen API Başvurusu)
 Bu API Windows Presentation Foundation (WPF) altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
- Windows Presentation Foundation (WPF) altyapısı tarafından özel durum işleme için kullanılır.  
+ Özel durum işleme için Windows Presentation Foundation (WPF) altyapısı tarafından kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,15 +34,15 @@ void __stdcall ProcessUnhandledException(
  Hata iletisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [.NET Framework sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [.NET Framework sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **DLL:**  
+ **DOSYASıNı**  
   
- .NET Framework 3.0 ve 3.5: PresentationHostDLL.dll  
+ .NET Framework 3,0 ve 3,5: PresentationHostDLL. dll  
   
- .NET Framework 4 ve üzeri: PresentationHost_v0400.dll  
+ .NET Framework 4 ve üzeri: PresentationHost_v0400. dll  
   
- **.NET framework sürümü:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **.NET Framework sürümü:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

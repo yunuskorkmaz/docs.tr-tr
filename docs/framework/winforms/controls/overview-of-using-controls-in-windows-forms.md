@@ -1,5 +1,5 @@
 ---
-title: Windows Forms'ta Denetimlerin Kullanımına Genel Bakış
+title: Denetimleri kullanmaya genel bakış
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 16a28db6477ea86a8bc853fbf506cf6d6d4fa5e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca8b9fab3c53e256792faf0969b5066d5e35f6c7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654585"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744353"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Windows Forms'ta Denetimlerin Kullanımına Genel Bakış
-Bu konu, bir Windows Forms uygulaması temel öğelerini açıklar ve denetimlerini kullanır ve bir Windows Forms uygulamasında olayları işleyen basit bir örnektir.  
+Bu konu, bir Windows Forms uygulamasının temel öğelerini açıklar ve denetimleri kullanan basit bir örnek sağlar ve bir Windows Forms uygulamasındaki olayları işler.  
   
-## <a name="simple-windows-forms-applications"></a>Basit bir Windows Forms uygulamaları  
- En az bir Windows Forms uygulaması aşağıdaki öğelerden oluşur:  
+## <a name="simple-windows-forms-applications"></a>Basit Windows Forms uygulamalar  
+ En azından, bir Windows Forms uygulaması aşağıdaki öğelerden oluşur:  
   
-- Öğesinden türetilen bir veya daha fazla sınıf <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
+- <xref:System.Windows.Forms.Form?displayProperty=nameWithType>türetilen bir veya daha fazla sınıf.  
   
-- A `Main` çağıran yöntem `static` (`shared` Visual Basic'te) <xref:System.Windows.Forms.Application.Run%2A> yöntemi ve geçişleri bir <xref:System.Windows.Forms.Form> ona örneği. <xref:System.Windows.Forms.Application.Run%2A> Yöntemi uygulama işletim sisteminden iletileri işler.  
+- `static` (Visual Basic içinde`shared`) ve <xref:System.Windows.Forms.Application.Run%2A> bir örneği ileten bir `Main` yöntemi. <xref:System.Windows.Forms.Application.Run%2A> yöntemi, işletim sistemindeki iletileri uygulamaya işler.  
   
- Aşağıdaki kod örneği, bir Windows Forms uygulaması temel öğelerini gösterir.  
+ Aşağıdaki kod örneği, bir Windows Forms uygulamasının temel öğelerini gösterir.  
   
 ```vb  
 Option Explicit  
@@ -74,8 +74,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="using-controls-in-a-windows-forms-application"></a>Bir Windows Forms uygulamasında denetimlerini kullanma  
- Aşağıdaki kod örneği, Windows Forms uygulamaları nasıl denetimlerini kullanın ve olayları işlemek gösteren basit bir uygulamayı gösterir. Formdaki üç düğme örnek oluşur; Her düğme tıklandığında arka plan rengini değiştirir.  
+## <a name="using-controls-in-a-windows-forms-application"></a>Windows Forms uygulamasında denetimleri kullanma  
+ Aşağıdaki kod örneği, Windows Forms uygulamalarının denetimleri nasıl kullandığını ve olayları nasıl işleyeceğini gösteren basit bir uygulamadır. Örnek, bir formdaki üç düğmeden oluşur; Her düğme tıklandığında arka plan rengini değiştirir.  
   
 ```vb  
 Option Explicit  
