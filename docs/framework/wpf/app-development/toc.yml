@@ -130,9 +130,7 @@
               href: how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md
             - name: Web Hizmeti Çağırmak Amacıyla XAML Tarayıcı Uygulamasında Hata Ayıklamak için Visual Studio'yu Yapılandırma
               href: configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md
-            - name: Yüklü WPF Sürümünü Belirleme
-              href: how-to-determine-the-installed-version-of-wpf.md
-            - name: .NET Framework 3.0'in Yüklü Olup Olmadığını Algılama
+            - name: .NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama
               href: how-to-detect-whether-the-net-framework-3-0-is-installed.md
             - name: .NET Framework 3.5'in Yüklü Olup Olmadığını Algılama
               href: how-to-detect-whether-the-net-framework-3-5-is-installed.md

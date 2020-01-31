@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 466ad51b-8f0c-41d9-81f7-371aac3374cb
 topic_type:
 - apiref
-ms.openlocfilehash: 7f83469920956d73a275f510b0d3c3e94a4caa8d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: af0ef412395394bb660ae6ed64fb154caef41655
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440676"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866924"
 ---
-# <a name="functionidmapper2-function"></a><span data-ttu-id="cdf50-102">FunctionIDMapper2 İşlevi</span><span class="sxs-lookup"><span data-stu-id="cdf50-102">FunctionIDMapper2 Function</span></span>
-<span data-ttu-id="cdf50-103">Profil oluşturucuyu, bir işlevin verilen tanımlayıcısının, bu işlev için [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)ve [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)veya[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)ve [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) geri çağırmalar içinde kullanılacak alternatif bir kimliğe yeniden eşlenilebileceği konusunda bilgilendirir.</span><span class="sxs-lookup"><span data-stu-id="cdf50-103">Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), and [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md), or[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) callbacks for that function.</span></span> <span data-ttu-id="cdf50-104">`FunctionIDMapper2`, profil oluşturucunun bu işlev için geri çağırmaları almak isteyip istemediğini belirtmek için de olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="cdf50-104">`FunctionIDMapper2` also enables the profiler to indicate whether it wants to receive callbacks for that function.</span></span>  
+# <a name="functionidmapper2-function"></a><span data-ttu-id="0ebd9-102">FunctionIDMapper2 İşlevi</span><span class="sxs-lookup"><span data-stu-id="0ebd9-102">FunctionIDMapper2 Function</span></span>
+<span data-ttu-id="0ebd9-103">Profil oluşturucuyu, bir işlevin verilen tanımlayıcısının, bu işlev için [FunctionEnter3](functionenter3-function.md), [FunctionLeave3](functionleave3-function.md)ve [FunctionTailcall3](functiontailcall3-function.md)veya[FunctionEnter3WithInfo](functionenter3withinfo-function.md), [FunctionLeave3WithInfo](functionleave3withinfo-function.md)ve [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) geri çağırmalar içinde kullanılacak alternatif bir kimliğe yeniden eşlenilebileceği konusunda bilgilendirir.</span><span class="sxs-lookup"><span data-stu-id="0ebd9-103">Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter3](functionenter3-function.md), [FunctionLeave3](functionleave3-function.md), and [FunctionTailcall3](functiontailcall3-function.md), or[FunctionEnter3WithInfo](functionenter3withinfo-function.md), [FunctionLeave3WithInfo](functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) callbacks for that function.</span></span> <span data-ttu-id="0ebd9-104">`FunctionIDMapper2`, profil oluşturucunun bu işlev için geri çağırmaları almak isteyip istemediğini belirtmek için de olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="0ebd9-104">`FunctionIDMapper2` also enables the profiler to indicate whether it wants to receive callbacks for that function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cdf50-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cdf50-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0ebd9-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0ebd9-105">Syntax</span></span>  
   
 ```cpp  
 UINT_PTR __stdcall FunctionIDMapper2 (  
@@ -34,39 +34,43 @@ UINT_PTR __stdcall FunctionIDMapper2 (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cdf50-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cdf50-106">Parameters</span></span>  
- `funcId`  
- <span data-ttu-id="cdf50-107">'ndaki Yeniden eşleştirilecek işlev tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="cdf50-107">[in] The function identifier to be remapped.</span></span>  
-  
- `clientData`  
- <span data-ttu-id="cdf50-108">'ndaki Çalışma zamanları arasında belirsizliği ortadan kaldırmak için kullanılan veriler için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="cdf50-108">[in] A pointer to data that is used to disambiguate among runtimes.</span></span>  
-  
- `pbHookFunction`  
- <span data-ttu-id="cdf50-109">dışı Profil oluşturucunun `FunctionEnter3`, `FunctionLeave3`ve `FunctionTailcall3`veya `FunctionEnter3WithInfo`, `FunctionLeave3WithInfo`ve `FunctionTailcall3WithInfo` geri çağırmaları almak istiyorsa `true` için ayarladığı değere yönelik bir işaretçi. Aksi takdirde, bu değeri `false`olarak ayarlar.</span><span class="sxs-lookup"><span data-stu-id="cdf50-109">[out] A pointer to a value that the profiler sets to `true` if it wants to receive `FunctionEnter3`, `FunctionLeave3`, and `FunctionTailcall3`, or `FunctionEnter3WithInfo`, `FunctionLeave3WithInfo`, and `FunctionTailcall3WithInfo` callbacks; otherwise, it sets this value to `false`.</span></span>  
-  
-## <a name="return-value"></a><span data-ttu-id="cdf50-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="cdf50-110">Return Value</span></span>  
- <span data-ttu-id="cdf50-111">Profiler, yürütme altyapısının alternatif işlev tanımlayıcısı olarak kullandığı bir değer döndürür.</span><span class="sxs-lookup"><span data-stu-id="cdf50-111">The profiler returns a value that the execution engine uses as an alternative function identifier.</span></span> <span data-ttu-id="cdf50-112">`pbHookFunction``false` döndürülmediği takdirde dönüş değeri null olamaz.</span><span class="sxs-lookup"><span data-stu-id="cdf50-112">The return value cannot be null unless `false` is returned in `pbHookFunction`.</span></span> <span data-ttu-id="cdf50-113">Aksi takdirde, bir null dönüş değeri beklenmedik sonuçlar üretir, bu da işlemi büyük olasılıkla halele vermez.</span><span class="sxs-lookup"><span data-stu-id="cdf50-113">Otherwise, a null return value produces unpredictable results, including possibly halting the process.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="cdf50-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="cdf50-114">Remarks</span></span>  
- <span data-ttu-id="cdf50-115">Bu yöntem, [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) işlevini, istemci verilerini iletmek için kullanılan ek bir parametre ile genişletir.</span><span class="sxs-lookup"><span data-stu-id="cdf50-115">This method extends the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function with an additional parameter that is used to pass client data.</span></span> <span data-ttu-id="cdf50-116">İstemci verileri, çalışma zamanları arasında belirsizliği ortadan kaldırmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="cdf50-116">The client data is used to disambiguate among runtimes.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="cdf50-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cdf50-117">Requirements</span></span>  
- <span data-ttu-id="cdf50-118">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cdf50-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="cdf50-119">**Üst bilgi:** CorProf. IDL</span><span class="sxs-lookup"><span data-stu-id="cdf50-119">**Header:** CorProf.idl</span></span>  
-  
- <span data-ttu-id="cdf50-120">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="cdf50-120">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="cdf50-121">**.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cdf50-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="cdf50-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cdf50-122">See also</span></span>
+## <a name="parameters"></a><span data-ttu-id="0ebd9-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0ebd9-106">Parameters</span></span>
 
-- [<span data-ttu-id="cdf50-123">ICorProfilerInfo:: SetFunctionIDMapper</span><span class="sxs-lookup"><span data-stu-id="cdf50-123">ICorProfilerInfo::SetFunctionIDMapper</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
-- [<span data-ttu-id="cdf50-124">ICorProfilerInfo3:: Setfunctionıdmapper2</span><span class="sxs-lookup"><span data-stu-id="cdf50-124">ICorProfilerInfo3::SetFunctionIDMapper2</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setfunctionidmapper2-method.md)
-- [<span data-ttu-id="cdf50-125">FunctionEnter3</span><span class="sxs-lookup"><span data-stu-id="cdf50-125">FunctionEnter3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
-- [<span data-ttu-id="cdf50-126">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="cdf50-126">FunctionLeave3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
-- [<span data-ttu-id="cdf50-127">FunctionTailcall3</span><span class="sxs-lookup"><span data-stu-id="cdf50-127">FunctionTailcall3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
-- [<span data-ttu-id="cdf50-128">Functionenter3withınfo</span><span class="sxs-lookup"><span data-stu-id="cdf50-128">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
-- [<span data-ttu-id="cdf50-129">Functionleave3withınfo</span><span class="sxs-lookup"><span data-stu-id="cdf50-129">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [<span data-ttu-id="cdf50-130">Functiontailcall3withınfo</span><span class="sxs-lookup"><span data-stu-id="cdf50-130">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
-- [<span data-ttu-id="cdf50-131">Profil Oluşturma Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="cdf50-131">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- `funcId`
+
+  <span data-ttu-id="0ebd9-107">\[içinde] yeniden eşleştirilecek işlev tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="0ebd9-107">\[in] The function identifier to be remapped.</span></span>
+
+- `clientData`
+
+  <span data-ttu-id="0ebd9-108">\[, çalışma zamanları arasında belirsizliği ortadan kaldırmak için kullanılan verilerin bir işaretçisidir.</span><span class="sxs-lookup"><span data-stu-id="0ebd9-108">\[in] A pointer to data that is used to disambiguate among runtimes.</span></span>
+
+- `pbHookFunction`
+
+  <span data-ttu-id="0ebd9-109">\[out] `FunctionEnter3`, `FunctionLeave3`, `FunctionTailcall3`veya `FunctionEnter3WithInfo`, `FunctionLeave3WithInfo`ve `FunctionTailcall3WithInfo` geri çağırmaları almak istiyorsa Profiler 'ın `true` için ayarladığı değere yönelik bir işaretçi. Aksi takdirde, bu değeri `false`olarak ayarlar.</span><span class="sxs-lookup"><span data-stu-id="0ebd9-109">\[out] A pointer to a value that the profiler sets to `true` if it wants to receive `FunctionEnter3`, `FunctionLeave3`, and `FunctionTailcall3`, or `FunctionEnter3WithInfo`, `FunctionLeave3WithInfo`, and `FunctionTailcall3WithInfo` callbacks; otherwise, it sets this value to `false`.</span></span>
+
+## <a name="return-value"></a><span data-ttu-id="0ebd9-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="0ebd9-110">Return Value</span></span>  
+ <span data-ttu-id="0ebd9-111">Profiler, yürütme altyapısının alternatif işlev tanımlayıcısı olarak kullandığı bir değer döndürür.</span><span class="sxs-lookup"><span data-stu-id="0ebd9-111">The profiler returns a value that the execution engine uses as an alternative function identifier.</span></span> <span data-ttu-id="0ebd9-112">`pbHookFunction``false` döndürülmediği takdirde dönüş değeri null olamaz.</span><span class="sxs-lookup"><span data-stu-id="0ebd9-112">The return value cannot be null unless `false` is returned in `pbHookFunction`.</span></span> <span data-ttu-id="0ebd9-113">Aksi takdirde, bir null dönüş değeri beklenmedik sonuçlar üretir, bu da işlemi büyük olasılıkla halele vermez.</span><span class="sxs-lookup"><span data-stu-id="0ebd9-113">Otherwise, a null return value produces unpredictable results, including possibly halting the process.</span></span>  
+  
+## <a name="remarks"></a><span data-ttu-id="0ebd9-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0ebd9-114">Remarks</span></span>  
+ <span data-ttu-id="0ebd9-115">Bu yöntem, [FunctionIDMapper](functionidmapper-function.md) işlevini, istemci verilerini iletmek için kullanılan ek bir parametre ile genişletir.</span><span class="sxs-lookup"><span data-stu-id="0ebd9-115">This method extends the [FunctionIDMapper](functionidmapper-function.md) function with an additional parameter that is used to pass client data.</span></span> <span data-ttu-id="0ebd9-116">İstemci verileri, çalışma zamanları arasında belirsizliği ortadan kaldırmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="0ebd9-116">The client data is used to disambiguate among runtimes.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="0ebd9-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0ebd9-117">Requirements</span></span>  
+ <span data-ttu-id="0ebd9-118">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0ebd9-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="0ebd9-119">**Üst bilgi:** CorProf. IDL</span><span class="sxs-lookup"><span data-stu-id="0ebd9-119">**Header:** CorProf.idl</span></span>  
+  
+ <span data-ttu-id="0ebd9-120">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="0ebd9-120">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="0ebd9-121">**.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0ebd9-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="0ebd9-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0ebd9-122">See also</span></span>
+
+- [<span data-ttu-id="0ebd9-123">ICorProfilerInfo:: SetFunctionIDMapper</span><span class="sxs-lookup"><span data-stu-id="0ebd9-123">ICorProfilerInfo::SetFunctionIDMapper</span></span>](icorprofilerinfo-setfunctionidmapper-method.md)
+- [<span data-ttu-id="0ebd9-124">ICorProfilerInfo3:: Setfunctionıdmapper2</span><span class="sxs-lookup"><span data-stu-id="0ebd9-124">ICorProfilerInfo3::SetFunctionIDMapper2</span></span>](icorprofilerinfo3-setfunctionidmapper2-method.md)
+- [<span data-ttu-id="0ebd9-125">FunctionEnter3</span><span class="sxs-lookup"><span data-stu-id="0ebd9-125">FunctionEnter3</span></span>](functionenter3-function.md)
+- [<span data-ttu-id="0ebd9-126">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="0ebd9-126">FunctionLeave3</span></span>](functionleave3-function.md)
+- [<span data-ttu-id="0ebd9-127">FunctionTailcall3</span><span class="sxs-lookup"><span data-stu-id="0ebd9-127">FunctionTailcall3</span></span>](functiontailcall3-function.md)
+- [<span data-ttu-id="0ebd9-128">Functionenter3withınfo</span><span class="sxs-lookup"><span data-stu-id="0ebd9-128">FunctionEnter3WithInfo</span></span>](functionenter3withinfo-function.md)
+- [<span data-ttu-id="0ebd9-129">Functionleave3withınfo</span><span class="sxs-lookup"><span data-stu-id="0ebd9-129">FunctionLeave3WithInfo</span></span>](functionleave3withinfo-function.md)
+- [<span data-ttu-id="0ebd9-130">Functiontailcall3withınfo</span><span class="sxs-lookup"><span data-stu-id="0ebd9-130">FunctionTailcall3WithInfo</span></span>](functiontailcall3withinfo-function.md)
+- [<span data-ttu-id="0ebd9-131">Profil Oluşturma Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="0ebd9-131">Profiling Global Static Functions</span></span>](profiling-global-static-functions.md)

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4611ee6f-0f05-4d84-91e1-e83d5e7dd7e4
 topic_type:
 - apiref
-ms.openlocfilehash: 174486a88192bd5ff11074930d5ad3375603f8a5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0210aca5698cd9c86979c13afd1e622b50d194df
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449463"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867195"
 ---
-# <a name="cor_prf_gc_root_flags-enumeration"></a><span data-ttu-id="6962e-102">COR_PRF_GC_ROOT_FLAGS Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="6962e-102">COR_PRF_GC_ROOT_FLAGS Enumeration</span></span>
-<span data-ttu-id="6962e-103">Çöp toplama kökünün bir özelliğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="6962e-103">Indicates a property of a garbage collection root.</span></span>  
+# <a name="cor_prf_gc_root_flags-enumeration"></a><span data-ttu-id="fc71e-102">COR_PRF_GC_ROOT_FLAGS Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="fc71e-102">COR_PRF_GC_ROOT_FLAGS Enumeration</span></span>
+<span data-ttu-id="fc71e-103">Çöp toplama kökünün bir özelliğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="fc71e-103">Indicates a property of a garbage collection root.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6962e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6962e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc71e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fc71e-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -35,27 +35,27 @@ typedef enum {
 } COR_PRF_GC_ROOT_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="6962e-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="6962e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="fc71e-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="fc71e-105">Members</span></span>  
   
-|<span data-ttu-id="6962e-106">Üye</span><span class="sxs-lookup"><span data-stu-id="6962e-106">Member</span></span>|<span data-ttu-id="6962e-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6962e-107">Description</span></span>|  
+|<span data-ttu-id="fc71e-106">Üye</span><span class="sxs-lookup"><span data-stu-id="fc71e-106">Member</span></span>|<span data-ttu-id="fc71e-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="fc71e-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|<span data-ttu-id="6962e-108">Kök bir çöp toplamanın nesneyi taşımasını engeller.</span><span class="sxs-lookup"><span data-stu-id="6962e-108">The root prevents a garbage collection from moving the object.</span></span>|  
-|`COR_PRF_GC_ROOT_WEAKREF`|<span data-ttu-id="6962e-109">Kök çöp toplamayı engellemez.</span><span class="sxs-lookup"><span data-stu-id="6962e-109">The root does not prevent garbage collection.</span></span>|  
-|`COR_PRF_GC_ROOT_INTERIOR`|<span data-ttu-id="6962e-110">Kök nesnenin kendisi yerine nesnesinin bir alanına başvurur.</span><span class="sxs-lookup"><span data-stu-id="6962e-110">The root refers to a field of the object rather than the object itself.</span></span>|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|<span data-ttu-id="6962e-111">Nesnenin başvuru sayısı belirli bir değer ise, kök çöp toplamayı önler.</span><span class="sxs-lookup"><span data-stu-id="6962e-111">The root prevents garbage collection if the reference count of the object is a certain value.</span></span>|  
+|`COR_PRF_GC_ROOT_PINNING`|<span data-ttu-id="fc71e-108">Kök bir çöp toplamanın nesneyi taşımasını engeller.</span><span class="sxs-lookup"><span data-stu-id="fc71e-108">The root prevents a garbage collection from moving the object.</span></span>|  
+|`COR_PRF_GC_ROOT_WEAKREF`|<span data-ttu-id="fc71e-109">Kök çöp toplamayı engellemez.</span><span class="sxs-lookup"><span data-stu-id="fc71e-109">The root does not prevent garbage collection.</span></span>|  
+|`COR_PRF_GC_ROOT_INTERIOR`|<span data-ttu-id="fc71e-110">Kök nesnenin kendisi yerine nesnesinin bir alanına başvurur.</span><span class="sxs-lookup"><span data-stu-id="fc71e-110">The root refers to a field of the object rather than the object itself.</span></span>|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|<span data-ttu-id="fc71e-111">Nesnenin başvuru sayısı belirli bir değer ise, kök çöp toplamayı önler.</span><span class="sxs-lookup"><span data-stu-id="fc71e-111">The root prevents garbage collection if the reference count of the object is a certain value.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6962e-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6962e-112">Remarks</span></span>  
- <span data-ttu-id="6962e-113">`COR_PRF_GC_ROOT_FLAGS`, özel köklerle ilgili ek bilgiler sağlayan bir bit dır.</span><span class="sxs-lookup"><span data-stu-id="6962e-113">`COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots.</span></span> <span data-ttu-id="6962e-114">Ancak, tüm kökler özel değildir.</span><span class="sxs-lookup"><span data-stu-id="6962e-114">However, not all roots are special.</span></span> <span data-ttu-id="6962e-115">Örneğin, bazı köklere zayıf başvurular, iç işaretçiler, sabitlenmiş veya başvuru sayılır.</span><span class="sxs-lookup"><span data-stu-id="6962e-115">For example, some roots are not weak references, interior pointers, pinned, or reference-counted.</span></span> <span data-ttu-id="6962e-116">Bu tür kökler için, iletmek üzere bayrak yoktur.</span><span class="sxs-lookup"><span data-stu-id="6962e-116">For such roots, there are no flags to convey.</span></span> <span data-ttu-id="6962e-117">Bu nedenle, [ICorProfilerCallback2:: RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) yöntemi gibi bu numaralandırmayı kullanan Yöntemler, bayraklar bit maskesi için 0 gönderir ve tüm bayrakların kapalı olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="6962e-117">Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fc71e-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="fc71e-112">Remarks</span></span>  
+ <span data-ttu-id="fc71e-113">`COR_PRF_GC_ROOT_FLAGS`, özel köklerle ilgili ek bilgiler sağlayan bir bit dır.</span><span class="sxs-lookup"><span data-stu-id="fc71e-113">`COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots.</span></span> <span data-ttu-id="fc71e-114">Ancak, tüm kökler özel değildir.</span><span class="sxs-lookup"><span data-stu-id="fc71e-114">However, not all roots are special.</span></span> <span data-ttu-id="fc71e-115">Örneğin, bazı köklere zayıf başvurular, iç işaretçiler, sabitlenmiş veya başvuru sayılır.</span><span class="sxs-lookup"><span data-stu-id="fc71e-115">For example, some roots are not weak references, interior pointers, pinned, or reference-counted.</span></span> <span data-ttu-id="fc71e-116">Bu tür kökler için, iletmek üzere bayrak yoktur.</span><span class="sxs-lookup"><span data-stu-id="fc71e-116">For such roots, there are no flags to convey.</span></span> <span data-ttu-id="fc71e-117">Bu nedenle, [ICorProfilerCallback2:: RootReferences2](icorprofilercallback2-rootreferences2-method.md) yöntemi gibi bu numaralandırmayı kullanan Yöntemler, bayraklar bit maskesi için 0 gönderir ve tüm bayrakların kapalı olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="fc71e-117">Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6962e-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6962e-118">Requirements</span></span>  
- <span data-ttu-id="6962e-119">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6962e-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fc71e-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="fc71e-118">Requirements</span></span>  
+ <span data-ttu-id="fc71e-119">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fc71e-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6962e-120">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="6962e-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="fc71e-120">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="fc71e-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6962e-121">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="6962e-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fc71e-121">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="fc71e-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6962e-122">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6962e-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="fc71e-122">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fc71e-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6962e-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6962e-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fc71e-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fc71e-123">See also</span></span>
 
-- [<span data-ttu-id="6962e-124">Profil Oluşturma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="6962e-124">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="fc71e-124">Profil Oluşturma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="fc71e-124">Profiling Enumerations</span></span>](profiling-enumerations.md)

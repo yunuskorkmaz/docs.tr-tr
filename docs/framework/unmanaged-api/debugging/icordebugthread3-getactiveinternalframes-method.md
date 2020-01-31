@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-ms.openlocfilehash: b4f228d55c9ffd6b85ebd0b430a7f5db404320f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 25cd3e05bc80dd39d2ca558bb4dd5fb77d255f5a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124343"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791403"
 ---
-# <a name="icordebugthread3getactiveinternalframes-method"></a><span data-ttu-id="c4c11-102">ICorDebugThread3::GetActiveInternalFrames Metodu</span><span class="sxs-lookup"><span data-stu-id="c4c11-102">ICorDebugThread3::GetActiveInternalFrames Method</span></span>
-<span data-ttu-id="c4c11-103">Yığında iç çerçeveler ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) nesneleri) dizisini döndürür.</span><span class="sxs-lookup"><span data-stu-id="c4c11-103">Returns an array of internal frames ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) objects) on the stack.</span></span>  
+# <a name="icordebugthread3getactiveinternalframes-method"></a><span data-ttu-id="28871-102">ICorDebugThread3::GetActiveInternalFrames Metodu</span><span class="sxs-lookup"><span data-stu-id="28871-102">ICorDebugThread3::GetActiveInternalFrames Method</span></span>
+<span data-ttu-id="28871-103">Yığında iç çerçeveler ([ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) nesneleri) dizisini döndürür.</span><span class="sxs-lookup"><span data-stu-id="28871-103">Returns an array of internal frames ([ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) objects) on the stack.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c4c11-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c4c11-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="28871-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="28871-104">Syntax</span></span>  
   
 ```cpp 
 HRESULT GetActiveInternalFrames  
@@ -37,46 +37,46 @@ HRESULT GetActiveInternalFrames
       );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c4c11-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c4c11-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="28871-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="28871-105">Parameters</span></span>  
  `cInternalFrames`  
- <span data-ttu-id="c4c11-106">'ndaki `ppInternalFrames`beklenen iç çerçeve sayısı.</span><span class="sxs-lookup"><span data-stu-id="c4c11-106">[in] The number of internal frames expected in `ppInternalFrames`.</span></span>  
+ <span data-ttu-id="28871-106">'ndaki `ppInternalFrames`beklenen iç çerçeve sayısı.</span><span class="sxs-lookup"><span data-stu-id="28871-106">[in] The number of internal frames expected in `ppInternalFrames`.</span></span>  
   
  `pcInternalFrames`  
- <span data-ttu-id="c4c11-107">dışı Yığındaki iç çerçevelerin sayısını içeren bir `ULONG32` işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="c4c11-107">[out] A pointer to a `ULONG32` that contains the number of internal frames on the stack.</span></span>  
+ <span data-ttu-id="28871-107">dışı Yığındaki iç çerçevelerin sayısını içeren bir `ULONG32` işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="28871-107">[out] A pointer to a `ULONG32` that contains the number of internal frames on the stack.</span></span>  
   
  `ppInternalFrames`  
- <span data-ttu-id="c4c11-108">[in, out] Yığındaki iç çerçeveler dizisinin adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c4c11-108">[in, out] A pointer to the address of an array of internal frames on the stack.</span></span>  
+ <span data-ttu-id="28871-108">[in, out] Yığındaki iç çerçeveler dizisinin adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="28871-108">[in, out] A pointer to the address of an array of internal frames on the stack.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c4c11-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="c4c11-109">Return Value</span></span>  
- <span data-ttu-id="c4c11-110">Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.</span><span class="sxs-lookup"><span data-stu-id="c4c11-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="28871-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="28871-109">Return Value</span></span>  
+ <span data-ttu-id="28871-110">Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.</span><span class="sxs-lookup"><span data-stu-id="28871-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="c4c11-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c4c11-111">HRESULT</span></span>|<span data-ttu-id="c4c11-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c4c11-112">Description</span></span>|  
+|<span data-ttu-id="28871-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="28871-111">HRESULT</span></span>|<span data-ttu-id="28871-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="28871-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c4c11-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="c4c11-113">S_OK</span></span>|<span data-ttu-id="c4c11-114">[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) nesnesi başarıyla oluşturuldu.</span><span class="sxs-lookup"><span data-stu-id="c4c11-114">The [ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) object was successfully created.</span></span>|  
-|<span data-ttu-id="c4c11-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="c4c11-115">E_INVALIDARG</span></span>|<span data-ttu-id="c4c11-116">`cInternalFrames` sıfır değil ve `ppInternalFrames` `null`ya da `pcInternalFrames` `null`.</span><span class="sxs-lookup"><span data-stu-id="c4c11-116">`cInternalFrames` is not zero and `ppInternalFrames` is `null`, or `pcInternalFrames` is `null`.</span></span>|  
-|<span data-ttu-id="c4c11-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="c4c11-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|<span data-ttu-id="c4c11-118">`ppInternalFrames` iç çerçeve sayısından daha küçüktür.</span><span class="sxs-lookup"><span data-stu-id="c4c11-118">`ppInternalFrames` is smaller than the count of internal frames.</span></span>|  
+|<span data-ttu-id="28871-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="28871-113">S_OK</span></span>|<span data-ttu-id="28871-114">[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) nesnesi başarıyla oluşturuldu.</span><span class="sxs-lookup"><span data-stu-id="28871-114">The [ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) object was successfully created.</span></span>|  
+|<span data-ttu-id="28871-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="28871-115">E_INVALIDARG</span></span>|<span data-ttu-id="28871-116">`cInternalFrames` sıfır değil ve `ppInternalFrames` `null`ya da `pcInternalFrames` `null`.</span><span class="sxs-lookup"><span data-stu-id="28871-116">`cInternalFrames` is not zero and `ppInternalFrames` is `null`, or `pcInternalFrames` is `null`.</span></span>|  
+|<span data-ttu-id="28871-117">HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="28871-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|<span data-ttu-id="28871-118">`ppInternalFrames` iç çerçeve sayısından daha küçüktür.</span><span class="sxs-lookup"><span data-stu-id="28871-118">`ppInternalFrames` is smaller than the count of internal frames.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="c4c11-119">Özel Durumlar</span><span class="sxs-lookup"><span data-stu-id="c4c11-119">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="28871-119">Özel Durumlar</span><span class="sxs-lookup"><span data-stu-id="28871-119">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c4c11-120">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c4c11-120">Remarks</span></span>  
- <span data-ttu-id="c4c11-121">İç çerçeveler, geçici verileri depolamak için çalışma zamanı tarafından yığına gönderilen veri yapılarıdır.</span><span class="sxs-lookup"><span data-stu-id="c4c11-121">Internal frames are data structures pushed onto the stack by the runtime to store temporary data.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="28871-120">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="28871-120">Remarks</span></span>  
+ <span data-ttu-id="28871-121">İç çerçeveler, geçici verileri depolamak için çalışma zamanı tarafından yığına gönderilen veri yapılarıdır.</span><span class="sxs-lookup"><span data-stu-id="28871-121">Internal frames are data structures pushed onto the stack by the runtime to store temporary data.</span></span>  
   
- <span data-ttu-id="c4c11-122">`GetActiveInternalFrames`ilk kez çağırdığınızda, `cInternalFrames` parametresini 0 (sıfır) ve `ppInternalFrames` parametresini null olarak ayarlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="c4c11-122">When you first call `GetActiveInternalFrames`, you should set the `cInternalFrames` parameter to 0 (zero), and the `ppInternalFrames` parameter to null.</span></span> <span data-ttu-id="c4c11-123">`GetActiveInternalFrames` ilk döndürüldüğünde, `pcInternalFrames` yığındaki iç çerçevelerin sayısını içerir.</span><span class="sxs-lookup"><span data-stu-id="c4c11-123">When `GetActiveInternalFrames` first returns, `pcInternalFrames` contains the count of the internal frames on the stack.</span></span>  
+ <span data-ttu-id="28871-122">`GetActiveInternalFrames`ilk kez çağırdığınızda, `cInternalFrames` parametresini 0 (sıfır) ve `ppInternalFrames` parametresini null olarak ayarlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="28871-122">When you first call `GetActiveInternalFrames`, you should set the `cInternalFrames` parameter to 0 (zero), and the `ppInternalFrames` parameter to null.</span></span> <span data-ttu-id="28871-123">`GetActiveInternalFrames` ilk döndürüldüğünde, `pcInternalFrames` yığındaki iç çerçevelerin sayısını içerir.</span><span class="sxs-lookup"><span data-stu-id="28871-123">When `GetActiveInternalFrames` first returns, `pcInternalFrames` contains the count of the internal frames on the stack.</span></span>  
   
- <span data-ttu-id="c4c11-124">`GetActiveInternalFrames` ikinci kez çağrılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="c4c11-124">`GetActiveInternalFrames` should then be called a second time.</span></span> <span data-ttu-id="c4c11-125">Uygun sayıyı (`pcInternalFrames`) `cInternalFrames` parametresine geçirmeniz ve `ppInternalFrames`uygun boyutta bir diziye yönelik bir işaretçi belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="c4c11-125">You should pass the proper count (`pcInternalFrames`) in the `cInternalFrames` parameter, and specify a pointer to an appropriately sized array in `ppInternalFrames`.</span></span>  
+ <span data-ttu-id="28871-124">`GetActiveInternalFrames` ikinci kez çağrılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="28871-124">`GetActiveInternalFrames` should then be called a second time.</span></span> <span data-ttu-id="28871-125">Uygun sayıyı (`pcInternalFrames`) `cInternalFrames` parametresine geçirmeniz ve `ppInternalFrames`uygun boyutta bir diziye yönelik bir işaretçi belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="28871-125">You should pass the proper count (`pcInternalFrames`) in the `cInternalFrames` parameter, and specify a pointer to an appropriately sized array in `ppInternalFrames`.</span></span>  
   
- <span data-ttu-id="c4c11-126">Gerçek yığın çerçevelerini döndürmek için [ıcordebugstackyürüme:: GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) metodunu kullanın.</span><span class="sxs-lookup"><span data-stu-id="c4c11-126">Use the [ICorDebugStackWalk::GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) method to return actual stack frames.</span></span>  
+ <span data-ttu-id="28871-126">Gerçek yığın çerçevelerini döndürmek için [ıcordebugstackyürüme:: GetFrame](icordebugthread3-getactiveinternalframes-method.md) metodunu kullanın.</span><span class="sxs-lookup"><span data-stu-id="28871-126">Use the [ICorDebugStackWalk::GetFrame](icordebugthread3-getactiveinternalframes-method.md) method to return actual stack frames.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c4c11-127">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c4c11-127">Requirements</span></span>  
- <span data-ttu-id="c4c11-128">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c4c11-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="28871-127">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="28871-127">Requirements</span></span>  
+ <span data-ttu-id="28871-128">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="28871-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c4c11-129">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="c4c11-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="28871-129">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="28871-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c4c11-130">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="c4c11-130">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="28871-130">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="28871-130">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c4c11-131">**.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c4c11-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="28871-131">**.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="28871-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c4c11-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c4c11-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28871-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="28871-132">See also</span></span>
 
-- [<span data-ttu-id="c4c11-133">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="c4c11-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="c4c11-134">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="c4c11-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="28871-133">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="28871-133">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="28871-134">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="28871-134">Debugging</span></span>](index.md)

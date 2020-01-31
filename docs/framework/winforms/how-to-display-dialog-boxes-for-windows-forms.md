@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms için İletişim Kutularını Görüntüleme'
+title: 'Nasıl yapılır: Iletişim kutularını görüntüleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - Windows Forms, calling one form from another
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
-ms.openlocfilehash: b99f2273dae88faf86448da6e1d2986a83803abf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd04a06eaa0dd7583ef2f72edb4cffa99aaaa60c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802589"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739468"
 ---
-# <a name="how-to-display-dialog-boxes-for-windows-forms"></a><span data-ttu-id="1320e-102">Nasıl yapılır: Windows Forms için İletişim Kutularını Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="1320e-102">How to: Display Dialog Boxes for Windows Forms</span></span>
-<span data-ttu-id="1320e-103">Uygulamada herhangi bir biçimde görüntüler aynı şekilde bir iletişim kutusu görüntüler.</span><span class="sxs-lookup"><span data-stu-id="1320e-103">You display a dialog box in the same way you display any other form in an application.</span></span> <span data-ttu-id="1320e-104">Uygulamayı çalıştırdığınızda başlangıç formu otomatik olarak yükler.</span><span class="sxs-lookup"><span data-stu-id="1320e-104">The startup form loads automatically when the application is run.</span></span> <span data-ttu-id="1320e-105">İkinci form veya iletişim kutusu uygulamada görünür hale getirmek için yükleme ve görüntüleme için kod yazın.</span><span class="sxs-lookup"><span data-stu-id="1320e-105">To make a second form or dialog box appear in the application, write code to load and display it.</span></span> <span data-ttu-id="1320e-106">Benzer şekilde, form veya iletişim kutusu kaybolur, kaldırma veya gizlemek için kod yazın.</span><span class="sxs-lookup"><span data-stu-id="1320e-106">Similarly, to make the form or dialog box disappear, write code to unload or hide it.</span></span>  
+# <a name="how-to-display-dialog-boxes-for-windows-forms"></a><span data-ttu-id="b0290-102">Nasıl yapılır: Windows Forms için İletişim Kutularını Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="b0290-102">How to: Display Dialog Boxes for Windows Forms</span></span>
+<span data-ttu-id="b0290-103">Bir iletişim kutusunu, bir uygulamadaki diğer formları görüntülerken kullandığınız şekilde görüntüleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b0290-103">You display a dialog box in the same way you display any other form in an application.</span></span> <span data-ttu-id="b0290-104">Başlangıç formu, uygulama çalıştırıldığında otomatik olarak yüklenir.</span><span class="sxs-lookup"><span data-stu-id="b0290-104">The startup form loads automatically when the application is run.</span></span> <span data-ttu-id="b0290-105">Uygulamada ikinci bir form veya iletişim kutusu görüntülenmesini sağlamak için kodu yazın ve görüntüleyin.</span><span class="sxs-lookup"><span data-stu-id="b0290-105">To make a second form or dialog box appear in the application, write code to load and display it.</span></span> <span data-ttu-id="b0290-106">Benzer şekilde, form veya iletişim kutusunun kaybolması için, kaldırmak veya gizlemek için kod yazın.</span><span class="sxs-lookup"><span data-stu-id="b0290-106">Similarly, to make the form or dialog box disappear, write code to unload or hide it.</span></span>  
   
-### <a name="to-display-a-dialog-box"></a><span data-ttu-id="1320e-107">İletişim kutusunu görüntülemek için</span><span class="sxs-lookup"><span data-stu-id="1320e-107">To display a dialog box</span></span>  
+### <a name="to-display-a-dialog-box"></a><span data-ttu-id="b0290-107">Bir iletişim kutusunu göstermek için</span><span class="sxs-lookup"><span data-stu-id="b0290-107">To display a dialog box</span></span>  
   
-1. <span data-ttu-id="1320e-108">İletişim kutusunu açmak istediğiniz olay işleyicisine Git.</span><span class="sxs-lookup"><span data-stu-id="1320e-108">Navigate to the event handler with which you want to open the dialog box.</span></span> <span data-ttu-id="1320e-109">Bir menü komutu seçildiğinde bir düğme tıklandığında ya da başka bir olay meydana geldiğinde bu durum oluşabilir.</span><span class="sxs-lookup"><span data-stu-id="1320e-109">This can happen when a menu command is selected, when a button is clicked, or when any other event occurs.</span></span>  
+1. <span data-ttu-id="b0290-108">İletişim kutusunu açmak istediğiniz olay işleyicisine gidin.</span><span class="sxs-lookup"><span data-stu-id="b0290-108">Navigate to the event handler with which you want to open the dialog box.</span></span> <span data-ttu-id="b0290-109">Bu, bir menü komutu seçildiğinde, bir düğmeye tıklandığında veya başka herhangi bir olay gerçekleştiğinde meydana gelir.</span><span class="sxs-lookup"><span data-stu-id="b0290-109">This can happen when a menu command is selected, when a button is clicked, or when any other event occurs.</span></span>  
   
-2. <span data-ttu-id="1320e-110">Olay işleyicisi, iletişim kutusunu açmak için kodu ekleyin.</span><span class="sxs-lookup"><span data-stu-id="1320e-110">In the event handler, add code to open the dialog box.</span></span> <span data-ttu-id="1320e-111">Bu örnekte, bir düğme tıklama olayı, iletişim kutusunu göstermek için kullanılır:</span><span class="sxs-lookup"><span data-stu-id="1320e-111">In this example, a button-click event is used to show the dialog box:</span></span>  
+2. <span data-ttu-id="b0290-110">Olay işleyicisinde, iletişim kutusunu açmak için kod ekleyin.</span><span class="sxs-lookup"><span data-stu-id="b0290-110">In the event handler, add code to open the dialog box.</span></span> <span data-ttu-id="b0290-111">Bu örnekte, iletişim kutusunu göstermek için bir düğme tıklama olayı kullanılır:</span><span class="sxs-lookup"><span data-stu-id="b0290-111">In this example, a button-click event is used to show the dialog box:</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

@@ -11,18 +11,18 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 45a40d49cea2dd5f881fbd47cc2fb4bd96e8f9ff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9b5059d9e4bf9b79dc67664c7a7971041d1cf35b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243979"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861690"
 ---
-# <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a><span data-ttu-id="29a3f-102">ICorProfilerInfo8:: Getdynamicfunctionınfo yöntemi</span><span class="sxs-lookup"><span data-stu-id="29a3f-102">ICorProfilerInfo8::GetDynamicFunctionInfo Method</span></span>
+# <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a><span data-ttu-id="3823e-102">ICorProfilerInfo8:: Getdynamicfunctionınfo yöntemi</span><span class="sxs-lookup"><span data-stu-id="3823e-102">ICorProfilerInfo8::GetDynamicFunctionInfo Method</span></span>
 
-<span data-ttu-id="29a3f-103">Dinamik yöntemler hakkında bilgi alır.</span><span class="sxs-lookup"><span data-stu-id="29a3f-103">Retrieves information about dynamic methods.</span></span>
+<span data-ttu-id="3823e-103">Dinamik yöntemler hakkında bilgi alır.</span><span class="sxs-lookup"><span data-stu-id="3823e-103">Retrieves information about dynamic methods.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="29a3f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="29a3f-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="3823e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3823e-104">Syntax</span></span>
 
 ```cpp
 HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
@@ -34,45 +34,52 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
                                 [out] WCHAR                   wszName[]);
 ```
 
-#### <a name="parameters"></a><span data-ttu-id="29a3f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="29a3f-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="3823e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3823e-105">Parameters</span></span>
 
-`functionId` \
-<span data-ttu-id="29a3f-106">'ndaki Bilgi alınacak işlevin KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="29a3f-106">[in] The ID of the function for which to retrieve information.</span></span>
+- `functionId`
 
-`moduleId` \
-<span data-ttu-id="29a3f-107">'ndaki İşlevin üst sınıfının tanımlandığı modüle yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="29a3f-107">[in] A pointer to the module in which the function's parent class is defined.</span></span>
+  <span data-ttu-id="3823e-106">\[içinde] bilgi alınacak işlevin KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="3823e-106">\[in] The ID of the function for which to retrieve information.</span></span>
 
-`ppvSig` \
-<span data-ttu-id="29a3f-108">dışı İşlev için imzaya yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="29a3f-108">[out] A pointer to the signature for the function.</span></span>
+- `moduleId`
 
-`pbSig` \
-<span data-ttu-id="29a3f-109">dışı İşlev imzası için bayt sayısına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="29a3f-109">[out] A pointer to the count of bytes for the function signature.</span></span>
+  <span data-ttu-id="3823e-107">\[içinde) işlevin üst sınıfının tanımlandığı modülün bir işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="3823e-107">\[in] A pointer to the module in which the function's parent class is defined.</span></span>
 
-`cchName` \
-<span data-ttu-id="29a3f-110">'ndaki `wszName` Dizinin en büyük boyutu.</span><span class="sxs-lookup"><span data-stu-id="29a3f-110">[in] The maximum size of the `wszName` array.</span></span>
+- `ppvSig`
 
-`pcchName` \
-<span data-ttu-id="29a3f-111">dışı `wszName` Dizideki karakterlerin sayısı.</span><span class="sxs-lookup"><span data-stu-id="29a3f-111">[out] The number of characters in the `wszName` array.</span></span>
+  <span data-ttu-id="3823e-108">\[out] işlev için imzaya yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="3823e-108">\[out] A pointer to the signature for the function.</span></span>
 
-`wszName` \
-<span data-ttu-id="29a3f-112">dışı Bir dizi `WCHAR` , varsa işlevin adıdır.</span><span class="sxs-lookup"><span data-stu-id="29a3f-112">[out] An array of `WCHAR` which is the name of the function, if one exists.</span></span>
+- `pbSig`
 
-## <a name="remarks"></a><span data-ttu-id="29a3f-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="29a3f-113">Remarks</span></span>
+  <span data-ttu-id="3823e-109">\[out] işlev imzası için bayt sayısına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="3823e-109">\[out] A pointer to the count of bytes for the function signature.</span></span>
 
-<span data-ttu-id="29a3f-114">Il saplamaları veya LCG gibi bazı yöntemlerin [IMetaDataImport](../metadata/imetadataimport-interface.md) ve [IMetaDataImport2](../metadata/imetadataimport2-interface.md) API 'leri kullanılarak alınabilecek ilişkili meta verileri yoktur.</span><span class="sxs-lookup"><span data-stu-id="29a3f-114">Certain methods like IL Stubs or LCG do not have associated metadata that can be retrieved using the [IMetaDataImport](../metadata/imetadataimport-interface.md) and [IMetaDataImport2](../metadata/imetadataimport2-interface.md) APIs.</span></span> <span data-ttu-id="29a3f-115">Bu tür yöntemlere profil oluşturucular ile yönerge işaretçileri aracılığıyla veya [ICorProfilerCallback8::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)dinleyerek erişilebilir.</span><span class="sxs-lookup"><span data-stu-id="29a3f-115">Such methods can be encountered by profilers through instruction pointers or by listening to [ICorProfilerCallback8::DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md).</span></span>
+- `cchName`
 
-<span data-ttu-id="29a3f-116">Bu API, varsa kolay bir ad dahil dinamik yöntemler hakkında bilgi almak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="29a3f-116">This API can be used to retrieve information about dynamic methods, including a friendly name, if available.</span></span>
+  <span data-ttu-id="3823e-110">\[içinde] `wszName` dizisinin en büyük boyutu.</span><span class="sxs-lookup"><span data-stu-id="3823e-110">\[in] The maximum size of the `wszName` array.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="29a3f-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="29a3f-117">Requirements</span></span>
+- `pcchName`
 
-<span data-ttu-id="29a3f-118">**Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="29a3f-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+  <span data-ttu-id="3823e-111">\[out] `wszName` dizisindeki karakterlerin sayısı.</span><span class="sxs-lookup"><span data-stu-id="3823e-111">\[out] The number of characters in the `wszName` array.</span></span>
 
-<span data-ttu-id="29a3f-119">**Üst bilgi** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="29a3f-119">**Header:** CorProf.idl, CorProf.h</span></span>
+- `wszName`
 
-<span data-ttu-id="29a3f-120">**Kitaplığı** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="29a3f-120">**Library:** CorGuids.lib</span></span>
+  <span data-ttu-id="3823e-112">\[out], varsa, işlevin adı olan bir `WCHAR` dizisi.</span><span class="sxs-lookup"><span data-stu-id="3823e-112">\[out] An array of `WCHAR` which is the name of the function, if one exists.</span></span>
 
-<span data-ttu-id="29a3f-121">**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="29a3f-121">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+## <a name="remarks"></a><span data-ttu-id="3823e-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3823e-113">Remarks</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="29a3f-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="29a3f-122">See also</span></span>
+<span data-ttu-id="3823e-114">Il saplamaları veya LCG gibi bazı yöntemlerin [IMetaDataImport](../metadata/imetadataimport-interface.md) ve [IMetaDataImport2](../metadata/imetadataimport2-interface.md) API 'leri kullanılarak alınabilecek ilişkili meta verileri yoktur.</span><span class="sxs-lookup"><span data-stu-id="3823e-114">Certain methods like IL Stubs or LCG do not have associated metadata that can be retrieved using the [IMetaDataImport](../metadata/imetadataimport-interface.md) and [IMetaDataImport2](../metadata/imetadataimport2-interface.md) APIs.</span></span> <span data-ttu-id="3823e-115">Bu tür yöntemlere profil oluşturucular ile yönerge işaretçileri aracılığıyla veya [ICorProfilerCallback8::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)dinleyerek erişilebilir.</span><span class="sxs-lookup"><span data-stu-id="3823e-115">Such methods can be encountered by profilers through instruction pointers or by listening to [ICorProfilerCallback8::DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md).</span></span>
 
-- [<span data-ttu-id="29a3f-123">ICorProfilerInfo8 arabirimi</span><span class="sxs-lookup"><span data-stu-id="29a3f-123">ICorProfilerInfo8 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md)
+<span data-ttu-id="3823e-116">Bu API, varsa kolay bir ad dahil dinamik yöntemler hakkında bilgi almak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="3823e-116">This API can be used to retrieve information about dynamic methods, including a friendly name, if available.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="3823e-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3823e-117">Requirements</span></span>
+
+<span data-ttu-id="3823e-118">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3823e-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+<span data-ttu-id="3823e-119">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="3823e-119">**Header:** CorProf.idl, CorProf.h</span></span>
+
+<span data-ttu-id="3823e-120">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="3823e-120">**Library:** CorGuids.lib</span></span>
+
+<span data-ttu-id="3823e-121">**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="3823e-121">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="3823e-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3823e-122">See also</span></span>
+
+- [<span data-ttu-id="3823e-123">ICorProfilerInfo8 arabirimi</span><span class="sxs-lookup"><span data-stu-id="3823e-123">ICorProfilerInfo8 Interface</span></span>](icorprofilerinfo8-interface.md)
