@@ -1190,16 +1190,16 @@
               href: programming-guide/unsafe-code-pointers/pointer-conversions.md
             - name: Bayt dizisine kopyalamak için işaretçileri kullanma
               href: programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md
-    - name: XML Belgeleri Yorumları
+    - name: XML belgeleri yorumları
       items:
         - name: Genel Bakış
           displayName: xml documentation comments
           href: programming-guide/xmldoc/index.md
-        - name: Belge Açıklamaları için Önerilen Etiketler
+        - name: Belge açıklamaları için önerilen etiketler
           href: programming-guide/xmldoc/recommended-tags-for-documentation-comments.md
-        - name: XML Dosyasını İşleme
+        - name: XML dosyasını işleme
           href: programming-guide/xmldoc/processing-the-xml-file.md
-        - name: Belge Etiketleri için Sınırlayıcılar
+        - name: Belge etiketleri için sınırlayıcılar
           href: programming-guide/xmldoc/delimiters-for-documentation-tags.md
         - name: XML belge özelliklerini kullanma
           href: programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md
@@ -1209,7 +1209,7 @@
               href: programming-guide/xmldoc/code-inline.md
             - name: <code>
               href: programming-guide/xmldoc/code.md
-            - name: cref Özniteliği
+            - name: cref özniteliği
               href: programming-guide/xmldoc/cref-attribute.md
             - name: <example>
               href: programming-guide/xmldoc/example.md
