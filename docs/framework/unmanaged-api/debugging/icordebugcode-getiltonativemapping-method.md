@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8ecd8c8-9627-4356-9c6f-bd05e24637c0
 topic_type:
 - apiref
-ms.openlocfilehash: 011da6aacbf4c40420329952f47b1fabdfc2c1a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 98709c0ce7469db1d0365d71e10d2d021cd3b3f0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125627"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777883"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping Metodu
 Microsoft ara dili (MSIL) uzaklıklarından yerel uzaklıklara olan eşlemeleri temsil eden "COR_DEBUG_IL_TO_NATIVE_MAP" örneklerinin bir dizisini alır.  
@@ -62,4 +62,4 @@ HRESULT GetILToNativeMapping (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugCode arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)
+- [ICorDebugCode arabirimi](icordebugcode-interface1.md)

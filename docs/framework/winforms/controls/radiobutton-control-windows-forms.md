@@ -1,5 +1,5 @@
 ---
-title: RadioButton Denetimi (Windows Forms)
+title: RadioButton Denetimi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - checked list items [Windows Forms], Windows Forms controls
@@ -8,27 +8,27 @@ helpviewer_keywords:
 - radio buttons
 - RadioButton control [Windows Forms]
 ms.assetid: e895b2a5-9bcb-4486-b165-eaf4c3ea9644
-ms.openlocfilehash: cf2da32dd286e03b89cfa59e09d38eceb030f5ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff83bc64215df1771b84d28e99ad7754831b29d1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755408"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741102"
 ---
 # <a name="radiobutton-control-windows-forms"></a>RadioButton Denetimi (Windows Forms)
-Windows Forms `RadioButton` denetimleri kullanıcıya iki veya daha fazla birbirini dışlayan seçenekleri kümesi sunar. Radyo düğmeleri ve onay kutularını benzer şekilde çalışması için görünebilse de önemli bir fark yoktur: kullanıcı bir radyo düğmesini seçtiğinde, aynı gruptaki diğer radyo düğmeleri de seçilemez.  
+Windows Forms `RadioButton` denetimleri, kullanıcıya birbirini dışlayan iki veya daha fazla seçenek kümesi sunar. Radyo düğmeleri ve onay kutuları benzer şekilde işlev gibi görünebilir ve önemli bir farklılık vardır: bir Kullanıcı radyo düğmesini seçtiğinde, aynı gruptaki diğer radyo düğmeleri de seçilemez.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [RadioButton Denetimine Genel Bakış](radiobutton-control-overview-windows-forms.md)  
- Bu denetimi nedir ve önemli özellikler ve özellikleri açıklar.  
+ Bu denetimin ne olduğunu ve temel özelliklerini ve özelliklerini açıklar.  
   
- [Nasıl yapılır: Grup Windows Forms RadioButton denetimlerini küme işlevi görecek](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
- Radyo düğmeleri yalnızca bir tane seçilebilir bir küme olarak Grup açıklanmaktadır.  
+ [Nasıl yapılır: Windows Forms RadioButton Denetimlerini Küme İşlevi Görecek Şekilde Gruplama](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ Radyo düğmelerinin bir küme olarak nasıl gruplandırılacağını açıklar, bunlardan yalnızca biri seçilebilir.  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Windows.Forms.RadioButton> Sınıfı  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
+ <xref:System.Windows.Forms.RadioButton> sınıfı  
+ Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
- Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.
+ Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.

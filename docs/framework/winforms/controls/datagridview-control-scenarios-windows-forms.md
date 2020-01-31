@@ -1,90 +1,90 @@
 ---
-title: DataGridView Denetimi Senaryoları (Windows Forms)
+title: DataGridView Denetimi Senaryoları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], displaying in tabular format
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-ms.openlocfilehash: 7350b0da19650b99bcfd456f93e994492a56d7e3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 160d967c6445fb753cb6c73babfb02a734a07e28
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648088"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742465"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>DataGridView Denetimi Senaryoları (Windows Forms)
-İle <xref:System.Windows.Forms.DataGridView> denetimi, çeşitli veri kaynaklarından tablo verilerini görüntüleyebilir. El ile doldurabilirsiniz basit kullanımları bir <xref:System.Windows.Forms.DataGridView> ve denetim verilerine doğrudan düzenleyebilirsiniz. Genellikle, ancak bir dış veri kaynağındaki verileri depolamak ve üzerinden denetime bağlamak bir <xref:System.Windows.Forms.BindingSource> bileşeni.  
+<xref:System.Windows.Forms.DataGridView> denetimiyle, çeşitli veri kaynaklarından tablosal verileri görüntüleyebilirsiniz. Basit kullanımlar için bir <xref:System.Windows.Forms.DataGridView> el ile doldurabilir ve verileri doğrudan denetim aracılığıyla işleyebilirsiniz. Ancak, genellikle verilerinizi bir dış veri kaynağında depolar ve bir <xref:System.Windows.Forms.BindingSource> bileşeni aracılığıyla denetimi buna bağlarsınız.  
   
- Bu konu başlığı altında içeren yaygın senaryolara bazılarını açıklar <xref:System.Windows.Forms.DataGridView> denetimi.  
+ Bu konu, <xref:System.Windows.Forms.DataGridView> denetimini içeren bazı yaygın senaryolardan bazılarını açıklamaktadır.  
   
-## <a name="scenario-1-displaying-small-amounts-of-data"></a>Senaryo 1: Küçük miktarlarda veri görüntüleme  
- İçinde görüntülemek için bir dış veri kaynağındaki verileri depolamak gerekmez <xref:System.Windows.Forms.DataGridView> denetimi. Az miktarda veriniz ile çalışıyorsanız, kendiniz denetimi doldurmak ve verileri denetim yoluyla. Bu adlandırılır *ilişkisiz modu*. Daha fazla bilgi için [nasıl yapılır: Bir bağlantısız bir Windows Forms DataGridView denetimi oluşturma](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
+## <a name="scenario-1-displaying-small-amounts-of-data"></a>Senaryo 1: küçük miktarlarda veri görüntüleme  
+ <xref:System.Windows.Forms.DataGridView> denetiminde göstermek için verilerinizi bir dış veri kaynağına depolamanız gerekmez. Az miktarda veriyle çalışıyorsanız, denetimi kendiniz doldurabilir ve verileri denetim aracılığıyla düzenleyebilirsiniz. Buna *ilişkisiz mod*denir. Daha fazla bilgi için bkz. [nasıl yapılır: ilişkisiz Windows Forms DataGridView denetimi oluşturma](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
   
-### <a name="scenario-key-points"></a>Senaryo temel noktaları  
+### <a name="scenario-key-points"></a>Senaryo anahtar noktaları  
   
-- Bağlantısız modda denetimi el ile doldurun.  
+- İlişkisiz modda, denetimi el ile doldurursunuz.  
   
-- İlişkisiz Modu, özellikle küçük miktarda salt okunur veriler için uygundur.  
+- İlişkisiz mod özellikle küçük miktarlarda salt okunan veriler için uygundur.  
   
-- İlişkisiz modu aynı zamanda benzeyen veya seyrek doldurulmuş tablolar için uygundur.  
+- İlişkisiz mod ayrıca elektronik tablo gibi veya en seyrek doldurulmuş tablolar için de uygundur.  
   
-## <a name="scenario-2-viewing-and-updating-data-stored-in-an-external-data-source"></a>Senaryo 2: Bir dış veri kaynağında depolanan verileri güncelleştirme ve görüntüleme  
- Kullanabileceğiniz <xref:System.Windows.Forms.DataGridView> denetleyen bir kullanıcı arabirimi (UI) hangi kullanıcıların bir veritabanı tablosu ya da iş nesneleri koleksiyonu gibi bir veri kaynağında tutulan verilere erişebilir. Daha fazla bilgi için [nasıl yapılır: Veri bağlama Windows Forms DataGridView denetiminde](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+## <a name="scenario-2-viewing-and-updating-data-stored-in-an-external-data-source"></a>Senaryo 2: dış veri kaynağında depolanan verileri görüntüleme ve güncelleştirme  
+ <xref:System.Windows.Forms.DataGridView> denetimini, kullanıcıların veritabanı tablosu veya iş nesneleri koleksiyonu gibi bir veri kaynağında tutulan verilere erişebileceği Kullanıcı arabirimi (UI) olarak kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: verileri Windows Forms DataGridView denetimine bağlama](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   
-### <a name="scenario-key-points"></a>Senaryo temel noktaları  
+### <a name="scenario-key-points"></a>Senaryo anahtar noktaları  
   
-- Bağlı mod bir veri kaynağına bağlanmak, veri kaynağı özellikleri veya veritabanı sütunlarını göre sütunları otomatik olarak oluşturmak ve denetimi otomatik olarak doldurmak olanak tanır.  
+- Bağlama modu bir veri kaynağına bağlanmanıza, veri kaynağı özelliklerine veya veritabanı sütunlarına göre otomatik olarak sütun oluşturmanıza ve denetimi otomatik olarak doldurmasına olanak sağlar.  
   
-- Bağlı mod verilerle yoğun bir kullanıcı etkileşimi için uygundur. Veri görüntülenmek üzere biçimlendirilebilir ve veri kullanıcı tarafından belirtilen veri kaynağı tarafından beklenen biçime ayrıştırılabilir. Hataları ve veritabanı kısıtlaması hataları biçimlendirme veri girişi, böylece kullanıcılar uyarı ve hatalı hücreleri düzeltilebilir algılanabilir.  
+- Sınırlı modu, verilerle ağır Kullanıcı etkileşimi için uygundur. Veriler görüntülenmek üzere biçimlendirilebilir ve Kullanıcı tarafından belirtilen veriler veri kaynağı tarafından beklenen biçimde ayrıştırılabilir. Veri girişi biçimlendirme hataları ve veritabanı kısıtlama hataları, kullanıcıların uyarılabilmesi ve hatalı hücrelerin düzeltibilmesi için algılanabilir.  
   
-- Sütun sıralama gibi ek işlevler, kullanıcılar kendi iş akışının için en uygun şekilde verileri görüntülemek dondurma ve yeniden etkinleştirin.  
+- Sütun sıralama, dondurma ve yeniden düzenleme gibi ek işlevler, kullanıcıların verileri iş akışları için en uygun şekilde görüntülemesine olanak tanır.  
   
-- Kullanıcılar, uygulamanın diğer uygulamalara veri kopyalamak Pano desteği sağlar.  
+- Pano desteği, kullanıcıların uygulamanızdan diğer uygulamalara veri kopyalamasını sağlar.  
   
-## <a name="scenario-3-advanced-data"></a>Senaryo 3: Gelişmiş veri  
- Standart veri bağlama modelini değil gideren özel gereksinimleriniz varsa, Denetim ve verilerinizi arasındaki etkileşimi uygulayarak yönetebileceğiniz *sanal modu*. Uygulama denetimi isteği hakkında bilgi hücreleri bilgi sağlayan bir veya daha fazla olay işleyicilerini uygulayan sanal modu anlamına gelir gereklidir.  
+## <a name="scenario-3-advanced-data"></a>Senaryo 3: Gelişmiş veriler  
+ Standart veri bağlama modelinin ele gerekmediği özel gereksinimleriniz varsa, *sanal mod*'u uygulayarak denetim ve verileriniz arasındaki etkileşimi yönetebilirsiniz. Sanal modu uygulamak, bir veya daha fazla olay işleyicisinin, bilgilerin gerekli olduğu şekilde hücreler hakkında bilgi istemesine izin veren bir veya daha fazla olay işleyicisini uygulama  
   
- Örneğin, büyük miktarlarda veri ile çalışıyorsanız, en uygun verimlilik sağlamak için sanal mod uygulamak isteyebilirsiniz. Başka bir veri kaynağından alınan sütunları birlikte görüntüleme bağlanmamış sütunlar değerlerini korumak için sanal mod de yararlıdır.  
+ Örneğin, büyük miktarlarda verilerle çalışıyorsanız, en iyi verimliliği sağlamak için sanal modu uygulamak isteyebilirsiniz. Sanal mod ayrıca, başka bir veri kaynağından alınan sütunlarla birlikte görüntülenen ilişkisiz sütunların değerlerini korumak için de kullanışlıdır.  
   
- Sanal mod hakkında daha fazla bilgi için bkz: [izlenecek yol: Sanal modu uygulama içinde Windows Forms DataGridView denetiminde](implementing-virtual-mode-wf-datagridview-control.md).  
+ Sanal mod hakkında daha fazla bilgi için bkz. [Izlenecek yol: Windows Forms DataGridView denetiminde sanal mod uygulama](implementing-virtual-mode-wf-datagridview-control.md).  
   
-### <a name="scenario-key-points"></a>Senaryo temel noktaları  
+### <a name="scenario-key-points"></a>Senaryo anahtar noktaları  
   
-- Performans üzerinde ince ayar gerektiğinde, çok büyük miktarda veriyi görüntülemek için sanal mod uygundur.  
+- Sanal mod, performansı hassas bir şekilde ayarlamanız gerektiğinde çok büyük miktarlarda veri görüntülemek için uygundur.  
   
-## <a name="scenario-4-automatically-resizing-rows-and-columns"></a>Senaryo 4: Otomatik olarak satırları ve sütunları yeniden boyutlandırma  
- Düzenli olarak güncelleştirilen veri görüntülediğinizde, satır ve sütun tüm içeriğini görünür olduğundan emin olmak için otomatik olarak boyutlandırabilirsiniz. <xref:System.Windows.Forms.DataGridView> Denetimi etkinleştir veya devre dışı bırakma elle, programlı olarak belirli zamanlarda yeniden boyutlandırmak yeniden boyutlandırma olanak tanıyan çeşitli seçenekler sağlar veya yeniden boyutlandırma otomatik olarak değişiklikler olduğunda içerik. Daha fazla bilgi için [Windows Forms DataGridView denetimindeki boyutlandırma seçenekleri](sizing-options-in-the-windows-forms-datagridview-control.md).  
+## <a name="scenario-4-automatically-resizing-rows-and-columns"></a>Senaryo 4: satırları ve sütunları otomatik olarak yeniden boyutlandırma  
+ Düzenli olarak güncellenen verileri görüntülediğinizde, tüm içeriğin görünür olmasını sağlamak için satırları ve sütunları otomatik olarak yeniden boyutlandırabilirsiniz. <xref:System.Windows.Forms.DataGridView> denetim, el ile yeniden boyutlandırmayı etkinleştirmenizi veya devre dışı bırakmanızı, belirli zamanlarda programlama yoluyla yeniden boyutlandırmayı veya içerik değiştiğinde otomatik olarak yeniden boyutlandırmayı sağlayan çeşitli seçenekler sağlar. Daha fazla bilgi için [Windows Forms DataGridView Denetimindeki Boyutlandırma Seçenekleri](sizing-options-in-the-windows-forms-datagridview-control.md)bölümüne bakın.  
   
-### <a name="scenario-key-points"></a>Senaryo temel noktaları  
+### <a name="scenario-key-points"></a>Senaryo anahtar noktaları  
   
-- El ile yeniden boyutlandırma, hücre yükseklik ve genişlik ayarlamak kullanıcıların sağlar.  
+- El ile yeniden boyutlandırma, kullanıcıların hücre yüksekliklerini ve genişliklerini ayarlamasına olanak sağlar.  
   
-- Otomatik yeniden boyutlandırma, böylece hücre içerik hiçbir zaman kırpılır hücre boyutlarını tutmanızı sağlar.  
+- Otomatik yeniden boyutlandırma, hücre içeriğinin hiçbir şekilde kırpılmaması için hücre boyutlarını korumanıza olanak sağlar.  
   
-- Programlı olarak yeniden boyutlandırma, sürekli otomatik yeniden boyutlandırma, performans cezasını önlemek için belirli zamanlarda hücreleri yeniden boyutlandırma sağlar.  
+- Programlı yeniden boyutlandırma, sürekli otomatik yeniden boyutlandırmanın performans cezasından kaçınmak için hücreleri belirli zamanlarda yeniden boyutlandırmanızı sağlar.  
   
-## <a name="scenario-5-simple-customization"></a>Senaryo 5: Basit özelleştirme  
- <xref:System.Windows.Forms.DataGridView> Denetim temel görünümünü ve davranışını değiştirmek birçok yol sağlar. Daha fazla bilgi için [Windows Forms DataGridView denetimindeki hücre stilleri](cell-styles-in-the-windows-forms-datagridview-control.md).  
+## <a name="scenario-5-simple-customization"></a>Senaryo 5: basit özelleştirme  
+ <xref:System.Windows.Forms.DataGridView> denetimi, temel görünümünü ve davranışını değiştirmek için birçok yol sunar. Daha fazla bilgi için [Windows Forms DataGridView Denetimindeki Hücre stilleri](cell-styles-in-the-windows-forms-datagridview-control.md)bölümüne bakın.  
   
-### <a name="scenario-key-points"></a>Senaryo temel noktaları  
+### <a name="scenario-key-points"></a>Senaryo anahtar noktaları  
   
-- <xref:System.Windows.Forms.DataGridViewCellStyle> nesneleri, renk, yazı tipi, biçimlendirme ve bilgi birden çok düzeyi ve ayrı ayrı öğeler denetimin konumlandırma sağlamanıza olanak tanır.  
+- <xref:System.Windows.Forms.DataGridViewCellStyle> nesneler, birden çok düzeyde ve denetimin bağımsız öğeleri için renk, yazı tipi, biçimlendirme ve konumlama bilgilerini sağlamanıza olanak tanır.  
   
-- Hücre stilleri, katmanlı ve kodu yeniden izin vererek birden çok öğe tarafından paylaşılır.  
+- Hücre stilleri birden çok öğe tarafından katmanlanmış olabilir ve kodu yeniden kullanmanıza olanak tanır.  
   
-## <a name="scenario-6-advanced-customization"></a>6. Senaryo: Gelişmiş özelleştirme  
- <xref:System.Windows.Forms.DataGridView> Denetim görünümünü ve davranışını özelleştirmek birçok yol sağlar.  
+## <a name="scenario-6-advanced-customization"></a>Senaryo 6: Gelişmiş özelleştirme  
+ <xref:System.Windows.Forms.DataGridView> denetimi, görünümünü ve davranışını özelleştirmek için birçok yol sunar.  
   
-### <a name="scenario-key-points"></a>Senaryo temel noktaları  
+### <a name="scenario-key-points"></a>Senaryo anahtar noktaları  
   
-- Kendi hücre boyama kodunuzu sağlayabilir. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGridView denetiminde hücrelerin görünüşünü özelleştirme](customize-the-appearance-of-cells-in-the-datagrid.md).  
+- Kendi hücre boyama kodunuzu sağlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms DataGridView Denetimindeki hücrelerin görünümünü özelleştirme](customize-the-appearance-of-cells-in-the-datagrid.md).  
   
-- Kendi satır boyama sağlayabilir. Örneğin, birden fazla sütuna yayılmış içeriğiyle satır oluşturmak için kullanışlıdır. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGridView denetiminde satırların görünüşünü özelleştirme](customize-the-appearance-of-rows-in-the-datagrid.md).  
+- Kendi satır boyamayı sağlayabilirsiniz. Bu, örneğin, birden çok sütuna yayılan içeriğe sahip satırlar oluşturmak için kullanışlıdır. Daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms DataGridView Denetimindeki satırların görünümünü özelleştirme](customize-the-appearance-of-rows-in-the-datagrid.md).  
   
-- Hücre görünümünü özelleştirmek için kendi hücre ve sütun sınıflarınızı uygulayabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Hücreleri özelleştirme ve sütunları Windows Forms DataGridView denetiminde davranış ve görünümünü genişleterek](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).  
+- Hücre görünümünü özelleştirmek için kendi hücre ve sütun sınıflarınızı uygulayabilirsiniz. Daha fazla bilgi için, bkz. [nasıl yapılır: davranış ve görünümünü genişleterek Windows Forms DataGridView Denetimindeki hücreleri ve sütunları özelleştirme](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).  
   
-- Konak denetimleri yerleşik sütun türleri tarafından sağlanan olanlar dışındaki kendi hücre ve sütun sınıflarına uygulayabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGridView hücrelerinde denetimleri](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+- Yerleşik sütun türleri tarafından sağlandıklardan farklı denetimleri barındırmak için kendi hücre ve sütun sınıflarınızı uygulayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms DataGridView hücrelerinde denetimleri barındırma](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

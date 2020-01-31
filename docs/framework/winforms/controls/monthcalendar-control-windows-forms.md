@@ -1,5 +1,5 @@
 ---
-title: MonthCalendar Denetimi (Windows Forms)
+title: MonthCalendar Denetimi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - calendar controls
@@ -7,39 +7,39 @@ helpviewer_keywords:
 - dates [Windows Forms], controls
 - calendars
 ms.assetid: 051c6518-e0ca-426b-855c-f9bf70972970
-ms.openlocfilehash: 589eb55e001441230da3f8a0c5652c2a3dccb829
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcc7b48a8d8a51fb83edf7529cdef987f28724dd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012756"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742172"
 ---
 # <a name="monthcalendar-control-windows-forms"></a>MonthCalendar Denetimi (Windows Forms)
-Windows Forms `MonthCalendar` denetimi görüntülemek ve tarih bilgisini ayarlamak kullanıcılar için sezgisel bir grafik arabirim sağlar. Denetimin ayın sütunlarındaki haftanın günleri altında düzenlenmiş numaralı gün içeren bir kılavuz görüntüler. Farklı bir ay, aylık resim yazısı her iki tarafındaki oka düğmelere tıklayarak seçebilirsiniz. Benzer aksine <xref:System.Windows.Forms.DateTimePicker> denetimi, bu denetimi; tarih aralığı seçebilirsiniz ancak <xref:System.Windows.Forms.DateTimePicker> denetimi kez ayarlamanızı sağlar tarihleri yanı sıra.  
+Windows Forms `MonthCalendar` denetimi, kullanıcıların tarih bilgilerini görüntülemesi ve ayarlaması için sezgisel bir grafik arabirimi sunar. Denetim, haftanın günleri altında sütunlar halinde düzenlenmiş, ayın numaralandırılmış günlerini içeren bir kılavuz görüntüler. Ay başlığının her iki tarafındaki ok düğmelerine tıklayarak farklı bir ay seçebilirsiniz. Benzer <xref:System.Windows.Forms.DateTimePicker> denetiminden farklı olarak, bu denetimle bir tarih aralığı seçebilirsiniz; Ancak, <xref:System.Windows.Forms.DateTimePicker> denetimi saatleri ve tarihleri ayarlamanıza olanak sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [MonthCalendar Denetimine Genel Bakış](monthcalendar-control-overview-windows-forms.md)  
- Genel konseptlerini tanıtan `MonthCalendar` görüntülemek ve bir uygulama için tarih bilgisini ayarlamak kullanıcıların denetimi.  
+ `MonthCalendar` denetiminin genel kavramlarını tanıtır ve bu, kullanıcıların bir uygulama için tarih bilgilerini görüntülemesine ve ayarlamasına olanak tanır.  
   
- [Nasıl yapılır: Windows Forms MonthCalendar denetiminin görünüşünü değiştirme](how-to-change-monthcalendar-control-appearance.md)  
- Özelleştirme açıklar `MonthCalendar` denetimi.  
+ [Nasıl yapılır: Windows Forms MonthCalendar Denetiminin Görünüşünü Değiştirme](how-to-change-monthcalendar-control-appearance.md)  
+ `MonthCalendar` denetiminin görünümünü özelleştirmeyi açıklar.  
   
- [Nasıl yapılır: Windows Forms MonthCalendar denetiminde birden fazla ay görüntüleme](display-more-than-one-month-wf-monthcalendar-control.md)  
- Nasıl yapılandırılacağını açıklar `MonthCalendar` birkaç ay görüntülenecek denetim aynı anda.  
+ [Nasıl yapılır: Windows Forms MonthCalendar Denetiminde Birden Fazla Ay Görüntüleme](display-more-than-one-month-wf-monthcalendar-control.md)  
+ `MonthCalendar` denetiminin aynı anda birkaç ay görüntülemesi için nasıl yapılandırılacağını açıklar.  
   
- [Nasıl yapılır: Windows ile belirli günleri kalın olarak görüntüleme Forms MonthCalendar denetimi](display-specific-days-in-bold-with-wf-monthcalendar-control.md)  
- Belirli tarihleri kalın görünecek ayarlanacak açıklanmaktadır.  
+ [Nasıl yapılır: Windows Forms MonthCalendar Denetimi ile Belirli Günleri Kalın Olarak Görüntüleme](display-specific-days-in-bold-with-wf-monthcalendar-control.md)  
+ Belirli tarihlerin kalın görünmesini nasıl ayarlayabileceğinizi açıklar.  
   
- [Nasıl yapılır: Windows Forms MonthCalendar denetiminde tarih aralığı seçin](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
- Program aracılığıyla tarih aralığı seçme açıklanmaktadır `MonthCalendar` denetimi.  
+ [Nasıl yapılır: Windows Forms MonthCalendar Denetiminde Tarih Aralığı Seçme](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
+ `MonthCalendar` denetiminden programlı olarak bir tarih aralığı seçme açıklanmaktadır.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.MonthCalendar>  
- Sınıf ve onun üyeleri hakkında başvuru bilgileri sağlar.  
+ Sınıf ve üyeleri hakkında başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
- Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.  
+ Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.  
   
  [DateTimePicker Denetimi](datetimepicker-control-windows-forms.md)  
- Benzer şekilde bir denetimi açıklamaktadır <xref:System.Windows.Forms.MonthCalendar>, ancak <xref:System.Windows.Forms.DateTimePicker> denetimi de birer seçmenize olanak sağlar ve bir tarih aralığı seçmek izin vermez.
+ <xref:System.Windows.Forms.MonthCalendar>benzer bir denetim açıklar, ancak <xref:System.Windows.Forms.DateTimePicker> denetimi de bir zaman seçmenizi sağlar ve bir tarih aralığı seçmenize izin vermez.

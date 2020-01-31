@@ -1,5 +1,5 @@
 ---
-title: Windows Forms'ta Fare İşaretçileri
+title: Fare Işaretçileri
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pointers [Windows Forms], setting
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: e9b572ba40618a72b8db58917008ebd61a23de79
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e8349effcd9b59045e39b763b4cb8b7d2fceb91
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800790"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740963"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Windows Forms'ta Fare İşaretçileri
-Fare *işaretçi*, fare ile kullanıcı girişi için ekrandaki bir odak noktası belirten bir bit eşlem olduğundan, bazen bir imleç adlandırılır. Bu konu, Windows Forms'ta fare işaretçisi genel bir bakış sağlar ve bazı değiştirebilir ve fare işaretçisini denetim yolları açıklanmaktadır.  
+Bazen imleç olarak adlandırılan fare *işaretçisi*, fare ile Kullanıcı girişi için ekranda bir odak noktasını belirten bir bit eşlemdir. Bu konu, Windows Forms fare işaretçisine genel bir bakış sağlar ve fare işaretçisini değiştirme ve denetleme yöntemlerinden bazılarını açıklar.  
   
-## <a name="accessing-the-mouse-pointer"></a>Fare işaretçisi erişme  
- Fare işaretçisi tarafından temsil edilen <xref:System.Windows.Forms.Cursor> sınıfı ve her <xref:System.Windows.Forms.Control> sahip bir <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> işaretçiyi denetimin belirten özelliği. <xref:System.Windows.Forms.Cursor> Sınıfı gibi işaretçi tanımlayan özellikler içerir <xref:System.Windows.Forms.Cursor.Position%2A> ve <xref:System.Windows.Forms.Cursor.HotSpot%2A> özellikleri ve yöntemleri işaretçisi görünümünü gibi değiştirebileceğiniz <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A>, ve <xref:System.Windows.Forms.Cursor.DrawStretched%2A> yöntemleri.  
+## <a name="accessing-the-mouse-pointer"></a>Fare Işaretçisine erişme  
+ Fare işaretçisi <xref:System.Windows.Forms.Cursor> sınıfı tarafından temsil edilir ve her <xref:System.Windows.Forms.Control>, bu denetimin işaretçisini belirten bir <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> özelliğine sahiptir. <xref:System.Windows.Forms.Cursor> sınıfı, <xref:System.Windows.Forms.Cursor.Position%2A> ve <xref:System.Windows.Forms.Cursor.HotSpot%2A> özellikleri gibi işaretçiyi tanımlayan özellikleri ve <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A>ve <xref:System.Windows.Forms.Cursor.DrawStretched%2A> yöntemleri gibi işaretçinin görünümünü değiştirebilen yöntemleri içerir.  
   
-## <a name="controlling-the-mouse-pointer"></a>Fare işaretçisi denetleme  
- Bazen, fare işaretçisini kullanılabilir veya fare konumunu değiştirme alanı sınırlamak isteyebilirsiniz. Get veya fare kullanarak geçerli konumunu ayarla <xref:System.Windows.Forms.Cursor.Position%2A> özelliği <xref:System.Windows.Forms.Cursor>. Ayrıca, fare işaretçisini kullanılabilir alanı sınırlayabilirsiniz ayarı <xref:System.Windows.Forms.Cursor.Clip%2A> özelliği. Klip alanında, varsayılan olarak, tüm ekrandır.  
+## <a name="controlling-the-mouse-pointer"></a>Fare Işaretçisini denetleme  
+ Bazen, fare işaretçisinin kullanılabileceği alanı sınırlamak veya fare konumunu değiştirmek isteyebilirsiniz. <xref:System.Windows.Forms.Cursor><xref:System.Windows.Forms.Cursor.Position%2A> özelliğini kullanarak farenin geçerli konumunu alabilir veya ayarlayabilirsiniz. Ayrıca, fare işaretçisinin <xref:System.Windows.Forms.Cursor.Clip%2A> özelliğini ayarlamak için kullanılacak alanı sınırlayabilirsiniz. Klip alanı varsayılan olarak tüm ekrandır.  
   
-## <a name="changing-the-mouse-pointer"></a>Fare işaretçisi değiştirme  
- Fare işaretçisi değiştirme, kullanıcıya geri bildirim sağlamanın önemli bir yoludur. Örneğin, fare işaretçisini işleyiciler değiştirilebilir <xref:System.Windows.Forms.Control.MouseEnter> ve <xref:System.Windows.Forms.Control.MouseLeave> hesaplamalar oluşan kullanıcı anlaşılır ve kullanıcı etkileşimi denetiminde sınırlamak için olayları. Bazı durumlarda, fare işaretçisini nedeniyle sistem olayları, uygulamanızın bir Sürükle ve bırak işlemi zaman söz konusu gibi değişecektir.  
+## <a name="changing-the-mouse-pointer"></a>Fare Işaretçisini değiştirme  
+ Fare işaretçisini değiştirmek, kullanıcıya geri bildirim sağlamanın önemli bir yoludur. Örneğin, fare işaretçisi, kullanıcıya hesaplamaların oluştuğunu söylemek ve denetimdeki kullanıcı etkileşimini sınırlamak için <xref:System.Windows.Forms.Control.MouseEnter> işleyicilerde değiştirilebilir ve olayları <xref:System.Windows.Forms.Control.MouseLeave>. Bazen, uygulamanız bir sürükle ve bırak işleminde yer alırken olduğu gibi sistem olayları nedeniyle fare işaretçisi değişecektir.  
   
- Fare işaretçisi değiştirmek için birincil ayarlayarak yoludur <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> veya <xref:System.Windows.Forms.Control.DefaultCursor%2A> denetiminin yeni bir özellik <xref:System.Windows.Forms.Cursor>. Fare işaretçisi değiştirme örnekleri görmek için aşağıdaki kod örneğinde <xref:System.Windows.Forms.Cursor> sınıfı. Ayrıca, <xref:System.Windows.Forms.Cursors> sınıfı bir dizi gösterir <xref:System.Windows.Forms.Cursor> işaretçileri, bir yandan benzer bir işaretçi gibi birçok farklı türde nesneleri. Fare işaretçisini denetim üzerinde olduğunda, bir kum saati benzeyen, bekleme işaretçisi görüntülemek için kullanın <xref:System.Windows.Forms.Control.UseWaitCursor%2A> özelliği <xref:System.Windows.Forms.Control> sınıfı.  
+ Fare işaretçisini değiştirmek için birincil yol, bir denetimin <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> veya <xref:System.Windows.Forms.Control.DefaultCursor%2A> özelliğini yeni bir <xref:System.Windows.Forms.Cursor>ayarlamadır. Fare işaretçisini değiştirme örnekleri için <xref:System.Windows.Forms.Cursor> sınıfındaki kod örneğine bakın. Ayrıca, <xref:System.Windows.Forms.Cursors> sınıfı, bir el ile benzeyen bir işaretçi gibi birçok farklı işaretçi türü için <xref:System.Windows.Forms.Cursor> nesneleri kümesi sunar. Bir kum saati gibi bekleme işaretçisini göstermek için, fare işaretçisi denetimde olduğunda, <xref:System.Windows.Forms.Control> sınıfının <xref:System.Windows.Forms.Control.UseWaitCursor%2A> özelliğini kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

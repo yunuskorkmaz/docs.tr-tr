@@ -1,5 +1,5 @@
 ---
-title: WPF Kısmi Güven Güvenliği
+title: Kısmi güven güvenliği
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: ce9341a45b43c4af4543cf473597c273c33701fc
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 0d9bbcc32eea49afc6ecc713b0cf005b4434a67d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636555"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743333"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF Kısmi Güven Güvenliği
 <a name="introduction"></a>Genel olarak, kötü amaçlı hasar engellemek için Internet uygulamalarının kritik sistem kaynaklarına doğrudan erişimi olması kısıtlanmalıdır. Varsayılan olarak, HTML ve istemci tarafı komut dosyası dilleri kritik sistem kaynaklarına erişemez. Windows Presentation Foundation (WPF) tarayıcıda barındırılan uygulamalar tarayıcıdan başlatılabildiğinden, benzer bir kısıtlama kümesine uymalıdır. Bu kısıtlamaları zorlamak için WPF hem kod erişim güvenliği (CAS) hem de ClickOnce kullanır (bkz. [WPF Güvenlik Stratejisi-Platform güvenliği](wpf-security-strategy-platform-security.md)). Varsayılan olarak, tarayıcıda barındırılan uygulamalar Internet, yerel intranet veya yerel bilgisayar tarafından başlatıldıklarından bağımsız olarak Internet bölgesi CA 'ları izin kümesi ister. Tüm izin kümesinden daha az bir şekilde çalışan uygulamalar kısmi güvenle çalışıyor olarak kabul edilir.  
@@ -45,8 +45,8 @@ ms.locfileid: "75636555"
 |------------------|-------------|  
 |Genel|Tarayıcı penceresi<br /><br /> Kaynak erişimi sitesi<br /><br /> IsolatedStorage (512KB sınırı)<br /><br /> UIAutomation sağlayıcıları<br /><br /> Verme<br /><br /> Giriş Yöntemi Düzenleyicileri (IME'ler)<br /><br /> Tablet ekran kalemi ve mürekkep<br /><br /> Fare yakalama ve taşıma olayları kullanılarak sanal sürükleyip bırakma<br /><br /> OpenFileDialog<br /><br /> XAML serisini kaldırma (XamlReader. Load aracılığıyla)|  
 |Web tümleştirmesi|Tarayıcı Indirme Iletişim kutusu<br /><br /> En üst düzey kullanıcı tarafından başlatılan Gezinti<br /><br /> mailto: bağlantılar<br /><br /> Tekdüzen Kaynak tanımlayıcısı parametreleri<br /><br /> HTTPWebRequest<br /><br /> IFRAME 'de barındırılan WPF Içeriği<br /><br /> Çerçeve kullanarak aynı site HTML sayfalarının barındırılması<br /><br /> WebBrowser kullanarak aynı site HTML sayfalarının barındırılması<br /><br /> Web Hizmetleri (ASMX)<br /><br /> Web Hizmetleri (Windows Communication Foundation kullanarak)<br /><br /> Komut Dosyaları<br /><br /> Belge Nesne Modeli|  
-|Görseller|2B ve 3B<br /><br /> Animasyon<br /><br /> Medya (kaynak ve etki alanları arası)<br /><br /> Görüntü/ses/video|  
-|Okuma|FlowDocuments<br /><br /> XPS belgeleri<br /><br /> Katıştırılmış & sistem yazı tipleri<br /><br /> CFF & TrueType yazı tipleri|  
+|Öğeleri|2B ve 3B<br /><br /> Animasyon<br /><br /> Medya (kaynak ve etki alanları arası)<br /><br /> Görüntü/ses/video|  
+|Okuyamadı|FlowDocuments<br /><br /> XPS belgeleri<br /><br /> Katıştırılmış & sistem yazı tipleri<br /><br /> CFF & TrueType yazı tipleri|  
 |Düzenleme|Yazım denetimi<br /><br /> RichTextBox<br /><br /> Düz metin ve mürekkep panosu desteği<br /><br /> Kullanıcı tarafından başlatılan yapıştırma<br /><br /> Seçili Içerik kopyalanıyor|  
 |Denetimler|Genel denetimler|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75636555"
 |Özellik alanı|Özellik|  
 |------------------|-------------|  
 |Genel|Pencere (uygulama tanımlı pencereler ve Iletişim kutuları)<br /><br /> SaveFileDialog<br /><br /> Dosya sistemi<br /><br /> Kayıt defteri erişimi<br /><br /> Sürükleme ve Bırakma<br /><br /> XAML serileştirme (XamlWriter. Save aracılığıyla)<br /><br /> UIAutomation Istemcileri<br /><br /> Kaynak pencere erişimi (HwndHost)<br /><br /> Tam konuşma desteği<br /><br /> Windows Forms birlikte çalışabilirlik|  
-|Görseller|Bit Eşlem Efektleri<br /><br /> Görüntü kodlama|  
+|Öğeleri|Bit Eşlem Efektleri<br /><br /> Görüntü kodlama|  
 |Düzenleme|Zengin metin biçimi panosu<br /><br /> Tam XAML desteği|  
   
 <a name="Partial_Trust_Programming"></a>   
@@ -133,7 +133,7 @@ ms.locfileid: "75636555"
 |DNS|DNS sunucularına erişme|Evet|Hayır|  
 |Ortam Değişkenleri|Okuma|Evet|Hayır|  
 |Dosya Iletişimleri|Open|Evet|Evet|  
-|Dosya Iletişimleri|Sınırsız|Evet|Hayır|  
+|Dosya Iletişimleri|Edin|Evet|Hayır|  
 |Yalıtılmış Depolama|Kullanıcıya göre derleme yalıtımı|Evet|Hayır|  
 |Yalıtılmış Depolama|Bilinmeyen yalıtım|Evet|Evet|  
 |Yalıtılmış Depolama|Sınırsız Kullanıcı kotası|Evet|Hayır|  
@@ -143,7 +143,7 @@ ms.locfileid: "75636555"
 |Yansıma|Pdb|Evet|Hayır|  
 |Güvenlik|Yönetilen kod yürütme|Evet|Evet|  
 |Güvenlik|İzin verilen izinler|Evet|Hayır|  
-|Kullanıcı Arabirimi|Sınırsız|Evet|Hayır|  
+|Kullanıcı Arabirimi|Edin|Evet|Hayır|  
 |Kullanıcı Arabirimi|Güvenli üst düzey pencereler|Evet|Evet|  
 |Kullanıcı Arabirimi|Kendi Pano|Evet|Evet|  
 |Web tarayıcısı|HTML 'e güvenli çerçeve gezintisi|Evet|Evet|  

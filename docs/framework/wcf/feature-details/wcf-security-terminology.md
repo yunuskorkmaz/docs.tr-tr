@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: e1194a8e340504ce02c0a5daec7074fc34d962f3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6751513b72f732bd7392de11a203467a9ead1bce
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951636"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743349"
 ---
 # <a name="wcf-security-terminology"></a>WCF Güvenlik Terimleri
 Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir. Bu konu, bazı güvenlik koşullarının kısa açıklamalarını sağlar, ancak her öğe için kapsamlı belgeler sağlamaya yönelik değildir.  
@@ -56,7 +56,7 @@ Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir.
  Dijital imza  
  Gönderenin kimliğini gönderilmekte olan bilgilere bağlayan veriler. Dijital imza herhangi bir ileti, dosya veya dijital olarak kodlanan diğer bilgilerle birlikte paketlenmiştir veya ayrı olarak iletilebilir. Dijital imzalar ortak anahtar ortamlarında kullanılır ve kimlik doğrulama ve bütünlük hizmetleri sağlar.  
   
- encoding  
+ {1&gt;encoding&lt;1}  
  Verileri bir bit akışına çevirme işlemi. Kodlama, verileri bir ve sıfırlardan oluşan bir akışa dönüştüren serileştirme işleminin bir parçasıdır.  
   
  Exchange anahtar çifti  
@@ -75,7 +75,7 @@ Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir.
  Kullanıcıları kimlik doğrulaması yapan ve yerel sistemde oturum açan korumalı bir alt sistem. LSA ayrıca, sistemin yerel güvenlik ilkesi olarak bilinen bir sistemdeki tüm yerel güvenlik özellikleri hakkında bilgi de sağlar.  
   
  'Nin  
- Güvenlik desteği sağlayıcısı arabirimi (SSPI) ve diğer SSPs 'ler arasında bir uygulama katmanı görevi gören bir güvenlik desteği sağlayıcısı (SSP). Bir uygulama bir ağda oturum açmak için SSPI 'e çağırdığında, isteği işlemek için bir SSP belirtebilir. Uygulama belirtiyorsa `Negotiate`, `Negotiate` isteği analiz eder ve müşterinin yapılandırdığı güvenlik ilkesine göre isteği işlemek için en iyi SSP 'yi seçer.  
+ Güvenlik desteği sağlayıcısı arabirimi (SSPI) ve diğer SSPs 'ler arasında bir uygulama katmanı görevi gören bir güvenlik desteği sağlayıcısı (SSP). Bir uygulama bir ağda oturum açmak için SSPI 'e çağırdığında, isteği işlemek için bir SSP belirtebilir. Uygulama `Negotiate`belirtiyorsa, isteği analiz `Negotiate` ve müşterinin yapılandırdığı güvenlik ilkesine göre isteği işlemek için en iyi SSP 'yi seçer.  
   
  nonce  
  "Yeniden yürütme" saldırılarını erteetmek için kullanılan rastgele oluşturulmuş bir değer.  
@@ -120,7 +120,7 @@ Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir.
  CA hiyerarşisinin en üstündeki CA. Kök yetkili, CA 'Ların, hiyerarşinin bir sonraki düzeyinde sertifika yetkilileri.  
   
  Güvenli karma algoritması (SHA)  
- İleti Özeti üreten bir karma algoritması. SHA, dijital Imza standardı (DSS) içindeki dijital Imza algoritması (DSA) ile diğer yerleri arasında kullanılır. SHA 'nın dört değişkenli derecesi vardır: SHA-1, SHA-256, SHA-384 ve SHA-512. SHA-1 160 bitlik bir ileti özeti üretir. SHA-256, SHA-384 ve SHA-512 sırasıyla 256-bit, 384-bit ve 512-bit ileti digests oluşturma. SHA, ulusal standartlar ve Teknoloji Enstitüsü (NıST) ve Ulusal Güvenlik Kurumu (NSA) tarafından geliştirilmiştir.  
+ İleti Özeti üreten bir karma algoritması. SHA, dijital Imza standardı (DSS) içindeki dijital Imza algoritması (DSA) ile diğer yerleri arasında kullanılır. SHA 'nın dört türlü derecesi vardır: SHA-1, SHA-256, SHA-384 ve SHA-512. SHA-1 160 bitlik bir ileti özeti üretir. SHA-256, SHA-384 ve SHA-512 sırasıyla 256-bit, 384-bit ve 512-bit ileti digests oluşturma. SHA, ulusal standartlar ve Teknoloji Enstitüsü (NıST) ve Ulusal Güvenlik Kurumu (NSA) tarafından geliştirilmiştir.  
   
  Güvenli Yuva Katmanı (SSL)  
  Ortak ve gizli anahtar teknolojisinin birleşimini kullanarak güvenli ağ iletişimleri için bir protokol.  
@@ -137,7 +137,7 @@ Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir.
  Güvenlik desteği sağlayıcısı arabirimi (SSPI)  
  Microsoft Uzak yordam çağrısı (RPC) gibi aktarım düzeyi uygulamalar ve Windows dağıtılmış güvenlik gibi güvenlik sağlayıcıları arasındaki ortak bir arabirim. SSPI, bir aktarım uygulamasının kimliği doğrulanmış bir bağlantı almak için çeşitli güvenlik sağlayıcılarından birini çağırmasını sağlar. Bu çağrılar güvenlik protokolünün ayrıntıları hakkında kapsamlı bilgi gerektirmez.  
   
- güvenlik belirteci hizmeti  
+ Güvenlik belirteci hizmeti  
  Çoklu hizmet senaryosunda özel güvenlik belirteçleri (verilen belirteçler) vermek ve yönetmek için tasarlanan hizmetler. Özel belirteçler genellikle özel bir kimlik bilgisi içeren güvenlik onaylama işlemi biçimlendirme dili (SAML) belirteçleridir.  
   
  sunucu sertifikası  
@@ -185,4 +185,4 @@ Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir.
 
 - [Temel Windows Communication Foundation Kavramları](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Windows Server App Fabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

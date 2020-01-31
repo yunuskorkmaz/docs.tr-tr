@@ -1,19 +1,19 @@
 ---
-title: Sınıf Kitaplığı (WPF)
+title: Sınıf Kitaplığı
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-ms.openlocfilehash: d43b46be2e05561eadcba12c744368db056a3ce5
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: bd099cbbbf96c71749375dab0aadfe84412ca103
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859703"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742297"
 ---
 # <a name="class-library-wpf"></a>Sınıf Kitaplığı (WPF)
-İçeren ad alanları için aşağıdaki bağlantılara başvurun [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] API'leri.  
+Aşağıdaki bağlantılar [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] API 'Leri içeren ad alanlarına başvurur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
@@ -123,8 +123,8 @@ ms.locfileid: "67859703"
   
 - <xref:UIAutomationClientsideProviders>  
   
-## <a name="xaml-support-in-net-4"></a>.NET 4'teki XAML desteği  
- Aşağıdaki ad alanlarını, System.Xaml bütünleştirilmiş kodundaki türler bulunur. System.Xaml ortak XAML dil desteği için .NET Framework 4'te yerleşik olan WPF gibi çerçeveleri sağlar.  
+## <a name="xaml-support-in-net-4"></a>.NET 4 ' te XAML desteği  
+ Aşağıdaki ad alanları System. Xaml derlemesinden türler içerir. System. xaml, .NET Framework 4 üzerine inşa edilen WPF gibi çerçeveler için genel XAML dil desteği sağlar.  
   
 - <xref:System.Windows.Markup> (paylaşılan)  
   

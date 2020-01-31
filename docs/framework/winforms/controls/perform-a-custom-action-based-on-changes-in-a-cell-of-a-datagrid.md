@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Forms DataGridView Denetiminin Bir Hücresindeki Değişikliklere Dayalı Olarak Özel Eylem Gerçekleştirme'
+title: DataGridView denetiminin hücresindeki değişikliklere dayalı olarak özel eylem gerçekleştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,36 +9,36 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], detecting changes in cells
 - data grids [Windows Forms], detecting changes in cells
 ms.assetid: 7fa44d01-97f4-4ccb-a149-bc72628d2c36
-ms.openlocfilehash: 23753a2c0ceab9452bde24a1c56348eabf87d655
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a809134b0a79bc9685c5b84acce58b4c61b5c526
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654428"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744288"
 ---
 # <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>Nasıl yapılır: Bir Windows Forms DataGridView Denetiminin Bir Hücresindeki Değişikliklere Dayalı Olarak Özel Eylem Gerçekleştirme
-<xref:System.Windows.Forms.DataGridView> Denetim olayları durumunda değişikliklerini algılamak için kullanabileceğiniz bir dizi sahip <xref:System.Windows.Forms.DataGridView> hücreleri. En sık kullanılan iki <xref:System.Windows.Forms.DataGridView.CellValueChanged> ve <xref:System.Windows.Forms.DataGridView.CellStateChanged> olayları.  
+<xref:System.Windows.Forms.DataGridView> denetiminde, <xref:System.Windows.Forms.DataGridView> hücrelerinin durumundaki değişiklikleri algılamak için kullanabileceğiniz bir dizi olay vardır. En yaygın olarak kullanılan ikisi <xref:System.Windows.Forms.DataGridView.CellValueChanged> ve <xref:System.Windows.Forms.DataGridView.CellStateChanged> olaylardır.  
   
-### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a>DataGridView hücrelerinin değerleri değişikliklerini algılamak için  
+### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a>DataGridView hücrelerinin değerlerinde değişiklik algılamak için  
   
-- Yazma için bir işleyici <xref:System.Windows.Forms.DataGridView.CellValueChanged> olay.  
+- <xref:System.Windows.Forms.DataGridView.CellValueChanged> olayı için bir işleyici yazın.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#130)]  
   
-### <a name="to-detect-changes-in-the-states-of-datagridview-cells"></a>DataGridView hücrelerinin durumlarda değişikliklerini algılamak için  
+### <a name="to-detect-changes-in-the-states-of-datagridview-cells"></a>DataGridView hücrelerinin durumlarındaki değişiklikleri algılamak için  
   
-- Yazma için bir işleyici <xref:System.Windows.Forms.DataGridView.CellStateChanged> olay.  
+- <xref:System.Windows.Forms.DataGridView.CellStateChanged> olayı için bir işleyici yazın.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#135)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#135)]  
   
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+## <a name="compiling-the-code"></a>Kod Derleme  
+ Bu örnek şunları gerektirir:  
   
-- A <xref:System.Windows.Forms.DataGridView> adlı Denetim `dataGridView1`. İçin C#, olay işleyicilerini olaylara karşılık gelen'e bağlı olması gerekir.  
+- `dataGridView1`adlı <xref:System.Windows.Forms.DataGridView> denetim. İçin C#, olay işleyicilerinin ilgili olaylara bağlı olması gerekir.  
   
-- Başvurular <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemeler.  
+- <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -46,4 +46,4 @@ ms.locfileid: "64654428"
 - <xref:System.Windows.Forms.DataGridView.CellValueChanged?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.CellStateChanged?displayProperty=nameWithType>
 - [Windows Forms DataGridView Denetiminde Hücreler, Satırlar ve Sütunlarla Programlama](programming-with-cells-rows-and-columns-in-the-datagrid.md)
-- [İzlenecek yol: Windows Forms DataGridView denetiminde verileri doğrulama](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [İzlenecek yol: Windows Forms DataGridView Denetiminde Verileri Doğrulama](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)

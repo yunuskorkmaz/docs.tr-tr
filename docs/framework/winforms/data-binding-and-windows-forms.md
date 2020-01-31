@@ -1,5 +1,5 @@
 ---
-title: Veri Bağlama ve Windows Forms
+title: Veri Bağlama
 ms.date: 03/30/2017
 helpviewer_keywords:
 - master-details lists
@@ -12,50 +12,50 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: 240b68f901f819313fcae7aab0474abd5535c30d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c5cb16d57dde35ca3b243191f27ea118cf19a680
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592314"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742321"
 ---
 # <a name="data-binding-and-windows-forms"></a>Veri Bağlama ve Windows Forms
-Windows Forms'ta yalnızca geleneksel veri kaynaklarına da bağlayabilirsiniz, ancak Ayrıca verileri içeren neredeyse her yapı için. Çalışma zamanında hesaplamak, bir dosyadan okunan veya diğer denetimlerin değerleri türetilen değerler dizisi bağlayabilirsiniz.  
+Windows Forms ' de, yalnızca geleneksel veri kaynaklarına değil, verileri içeren bir yapıya de bağlanabilirsiniz. Çalışma zamanında hesaplacağınız, bir dosyadan okunan veya diğer denetimlerin değerlerinden türeten bir değerler dizisine bağlayabilirsiniz.  
   
- Ayrıca, herhangi bir denetime herhangi bir özelliği veri kaynağına da bağlayabilirsiniz. Geleneksel veri bağlamasında, genellikle görüntü özelliği bağlamak — Örneğin, <xref:System.Windows.Forms.Control.Text%2A> özelliği bir <xref:System.Windows.Forms.TextBox> denetim — veri kaynağı. .NET Framework ile aynı zamanda diğer özelliklerini de bağlama aracılığıyla ayarlama seçeneğiniz vardır. Bağlama, aşağıdaki görevleri gerçekleştirmek için kullanabilirsiniz:  
+ Ayrıca, herhangi bir denetimin herhangi bir özelliğini veri kaynağına bağlayabilirsiniz. Geleneksel veri bağlamasında, genellikle görüntü özelliğini (örneğin, bir <xref:System.Windows.Forms.TextBox> denetiminin <xref:System.Windows.Forms.Control.Text%2A> özelliğini) veri kaynağına bağlarsınız. .NET Framework, diğer özellikleri de bağlama aracılığıyla ayarlama seçeneğiniz de vardır. Aşağıdaki görevleri gerçekleştirmek için bağlamayı kullanabilirsiniz:  
   
-- Grafiği bir görüntü denetiminin ayarlanıyor.  
+- Görüntü denetiminin grafiğini ayarlama.  
   
-- Bir veya daha fazla denetim arka plan rengini ayarlama.  
+- Bir veya daha fazla denetimin arka plan rengini ayarlama.  
   
-- Denetimleri boyutunu ayarlama.  
+- Denetimlerin boyutunu ayarlama.  
   
- Esas olarak, veri bağlama herhangi bir çalışma zamanı erişilebilir özelliği herhangi bir form denetiminin ayarlanmasından otomatik bir yolu var.  
+ Esas olarak, veri bağlama, form üzerinde herhangi bir denetimin çalışma zamanı erişilebilir özelliğini ayarlamanın otomatik bir yoludur.  
   
-## <a name="types-of-data-binding"></a>Veri bağlama türü  
- Windows Forms veri bağlama iki tür bir avantajlarından faydalanabilirsiniz: basit bağlama ve karmaşık bağlama. Her farklı avantajlar sunar.  
+## <a name="types-of-data-binding"></a>Veri bağlama türleri  
+ Windows Forms, iki tür veri bağlama özelliğinden yararlanabilir: basit bağlama ve karmaşık bağlama. Her biri farklı avantajlar sunar.  
   
-|Veri bağlama türü|Açıklama|  
+|Veri bağlamanın türü|Açıklama|  
 |--------------------------|-----------------|  
-|Basit veri bağlama|Bir veri kümesi tablodaki bir sütundaki bir değer gibi bir tek veri öğesine bağlamak için bir denetim yeteneğidir. Bu tür denetimler için tipik bağlantı olduğu gibi bir <xref:System.Windows.Forms.TextBox> denetim veya <xref:System.Windows.Forms.Label> genellikle yalnızca tek bir değer görüntüler denetimleri denetimi. Aslında, bir denetim üzerinde herhangi bir özelliği bir veritabanında bir alana bağlı olabilir. Visual Studio'da bu özellik için kapsamlı desteği yoktur.<br /><br /> Daha fazla bilgi için bkz.:<br /><br /> -   [Veri bağlama ile ilgili arabirimler](interfaces-related-to-data-binding.md)<br />-   [Nasıl Yapılır: Windows Forms'ta verilerde gezinme](how-to-navigate-data-in-windows-forms.md)<br />-   [Nasıl Yapılır: Bir Windows formunda basit bağlantılı denetim oluşturma](how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
-|Karmaşık veri bağlama|Birden fazla veri öğesi, genellikle birden fazla kayıtla bir veritabanında bağlamak için bir denetim yeteneğidir. Karmaşık bağlama, liste tabanlı bağlama olarak da adlandırılır. Karmaşık bağlamayı destekleyen denetimleri örnekler <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.ListBox>, ve <xref:System.Windows.Forms.ComboBox> kontrol eder. Karmaşık veri bağlama bir örnek için bkz [nasıl yapılır: Bir Windows Forms ComboBox veya ListBox denetimini verilere bağlama](./controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md).|  
+|Basit veri bağlama|Bir denetimin veri kümesi tablosundaki bir sütundaki değer gibi tek bir veri öğesine bağlanması özelliği. Bu, genellikle yalnızca tek bir değeri görüntüleyen denetimler olan <xref:System.Windows.Forms.TextBox> denetimi veya <xref:System.Windows.Forms.Label> denetimi gibi denetimler için tipik bağlama türüdür. Aslında, bir denetimdeki herhangi bir özellik, veritabanındaki bir alana bağlanabilir. Visual Studio 'da bu özellik için kapsamlı destek vardır.<br /><br /> Daha fazla bilgi için bkz.<br /><br /> [veri bağlama Ile Ilgili arabirimleri](interfaces-related-to-data-binding.md) -   <br />-   [nasıl yapılır: Windows Forms verilerde gezinme](how-to-navigate-data-in-windows-forms.md)<br />-   [nasıl yapılır: bir Windows formunda basit bağlantılı denetim oluşturma](how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
+|Karmaşık veri bağlama|Bir denetimin birden fazla veri öğesine bağlanması, genellikle bir veritabanında birden çok kayıt olması. Karmaşık bağlama da liste tabanlı bağlama olarak adlandırılır. Karmaşık bağlamayı destekleyen denetimlerin örnekleri <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.ListBox>ve <xref:System.Windows.Forms.ComboBox> denetimleridir. Karmaşık veri bağlama örneği için bkz. [nasıl yapılır: Windows Forms ComboBox veya ListBox denetimini verilere bağlama](./controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md).|  
   
 ## <a name="bindingsource-component"></a>BindingSource Bileşeni  
- Veri bağlama işlemini basitleştirmek için Windows Forms bir veri kaynağına bağlama sayesinde <xref:System.Windows.Forms.BindingSource> bileşeni ve bağlama denetimlerini <xref:System.Windows.Forms.BindingSource>. Kullanabileceğiniz <xref:System.Windows.Forms.BindingSource> basit veya karmaşık bağlama senaryolarda. Her iki durumda da <xref:System.Windows.Forms.BindingSource> bildirim para birimi yönetimi ve diğer hizmetleri sağlama bağlama denetimleri ve veri kaynağı arasında aracı görevi görür değiştirin.  
+ Windows Forms veri bağlamayı basitleştirmek için, bir veri kaynağını <xref:System.Windows.Forms.BindingSource> bileşenine bağlamanıza sonra denetimleri <xref:System.Windows.Forms.BindingSource>bağlamanıza olanak sağlar. Basit veya karmaşık bağlama senaryolarında <xref:System.Windows.Forms.BindingSource> kullanabilirsiniz. Her iki durumda da <xref:System.Windows.Forms.BindingSource>, değişiklik bildirimi para birimi yönetimi ve diğer hizmetler sağlayan veri kaynağı ve bağlantılı denetimler arasında bir aracı görevi görür.  
   
-## <a name="common-scenarios-that-employ-data-binding"></a>Veri bağlama Görevlendirmek yaygın senaryoları  
- Neredeyse tüm ticari bir uygulamaya, bir tür ya da başka veri kaynaklarından veri bağlama aracılığıyla genellikle okunan bilgileri kullanır. Aşağıdaki listede, birkaç veri bağlama verilerini sunumu ve düzenleme iletişim yöntemi olarak kullanan en yaygın senaryolar gösterilmektedir.  
+## <a name="common-scenarios-that-employ-data-binding"></a>Veri bağlama kullanan yaygın senaryolar  
+ Neredeyse her ticari uygulama, genellikle veri bağlama aracılığıyla tek bir türdeki veya başka bir veri kaynağından okunan bilgileri kullanır. Aşağıdaki listede veri sunumu ve düzenlemesi yöntemi olarak veri bağlamayı kullanan en yaygın senaryolardan bazıları gösterilmektedir.  
   
 |Senaryo|Açıklama|  
 |--------------|-----------------|  
-|Raporlama|Raporları görüntülemek ve verilerinizi yazdırılan belgede özetlemek esnek bir yol sağlar. Seçili içerikleri ekranına veya yazıcı için bir veri kaynağının yazdıran bir rapor oluşturmak için çok yaygındır. Sık kullanılan raporlar listeleri, faturaları ve özetleri içerir. Öğeleri genellikle her bir liste öğesi altında düzenlenmiş alt öğeleri ile listeleri, sütunlara biçimlendirilir ancak verileri en uygun Düzen seçmeniz gerekir.|  
-|Veri girişi|Bir ortak ilgili verileri büyük miktarlarda girin veya kullanıcıların bilgi istemek için bir veri giriş formunu yoludur. Kullanıcılar, bilgileri girin veya metin kutuları, seçenek düğmeleri, açılan listeleri ve onay kutularını kullanarak seçim. Bilgileri sonra gönderilen ve yapısını girmiş bilgiyi temel alan bir veritabanında depolanır.|  
-|Ana/ayrıntı ilişkisi|Ana/ayrıntılı uygulama ilgili verilere baktığımızda bir biçimidir. Özellikle, iki tablo veri bağlamayı bir ilişkisi vardır: Klasik iş örneği, "Müşteri" tablosu ve onlara bağlama müşteriler ve bunların ilgili Siparişler arasında bir ilişki ile "Siparişler" bir tablo. İki Windows Forms ile ana/ayrıntılı uygulama oluşturma hakkında daha fazla bilgi için <xref:System.Windows.Forms.DataGridView> denetimlerini, [nasıl yapılır: İki Windows Forms DataGridView denetimi kullanarak ana/ayrıntı formu oluşturma](./controls/create-a-master-detail-form-using-two-datagridviews.md)|  
-|Arama tablosu|Başka bir ortak veri sunu/işleme tablosu aramasında bir senaryodur. Genellikle, daha büyük bir veri görünen bir parçası olarak bir <xref:System.Windows.Forms.ComboBox> denetimi görüntülemek ve veri işlemek için kullanılır. İçinde görüntülenen verileri anahtardır <xref:System.Windows.Forms.ComboBox> denetimidir veritabanına yazılan veriler farklı. Örneğin, bir <xref:System.Windows.Forms.ComboBox> öğeleri görüntüleyen bir denetimi Market kullanılabilir, büyük olasılıkla ürünlerin (ekmek, sütlü, örneğin sucuklu) adlarını görmek istediğiniz. Ancak, veritabanı içinde ve veritabanı normalleştirmesi için bilgi alma kolaylaştırmak için büyük olasılıkla bilgi belirli bir sırada belirli öğeler için öğesi numaraları saklayacağından (#501, #603 vb.). Bu nedenle, Market öğesinde "kolay adı" arasında örtük bir bağlantı yoktur <xref:System.Windows.Forms.ComboBox> formunuza ve bir sırada mevcut olan ilgili öğe numarası üzerinde denetim. Bu tablo arama olduğu. Daha fazla bilgi için [nasıl yapılır: Windows Forms BindingSource bileşeniyle arama tablosu oluşturma](./controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md).|  
+|Raporlama|Raporlar, verileri yazdırılmış bir belgede görüntüleyip özetlemeniz için esnek bir yol sağlar. Bir veri kaynağının seçili içeriğini ekrana ya da bir yazıcıya yazdıran bir rapor oluşturmak çok yaygındır. Ortak raporlarda listeler, faturalar ve özetler bulunur. Öğeler genellikle her liste öğesi altında düzenlenmiş alt öğelerle birlikte liste sütunları halinde biçimlendirilir, ancak verilere en uygun düzeni seçmeniz gerekir.|  
+|Veri girişi|Büyük miktarlarda ilgili verileri girmek veya kullanıcılara bilgi istemek için bir veri girişi formu aracılığıyla kullanılan yaygın bir yoldur. Kullanıcılar, metin kutuları, seçenek düğmeleri, açılan listeler ve onay kutularını kullanarak bilgi girebilir veya seçim yapabilir. Daha sonra bilgiler, bir veritabanında gönderilir ve depolanır ve bu, yapısı girilen bilgileri temel alır.|  
+|Ana/ayrıntı ilişkisi|Ana/ayrıntı uygulaması, ilgili verilere bakmaya yönelik bir biçimdir. Özellikle, bir ilişkiye bağlanan iki veri tablosu vardır — klasik iş örneğinde, müşterileri ve ilgili siparişlerini bağlayan aralarında ilişki içeren bir "müşteriler" tablosu ve "Siparişler" tablosu. İki Windows Forms <xref:System.Windows.Forms.DataGridView> denetimi ile ana/ayrıntı uygulaması oluşturma hakkında daha fazla bilgi için bkz [. nasıl yapılır: iki Windows Forms DataGridView denetimi kullanarak ana/ayrıntı formu oluşturma](./controls/create-a-master-detail-form-using-two-datagridviews.md)|  
+|Arama tablosu|Diğer bir yaygın veri sunumu/işleme senaryosu tablo aramadır. Genellikle, daha büyük bir veri görüntüleme kapsamında, verileri göstermek ve işlemek için bir <xref:System.Windows.Forms.ComboBox> denetimi kullanılır. Anahtar, <xref:System.Windows.Forms.ComboBox> denetiminde görüntülenen verilerin veritabanına yazılan verilerden farklı olduğu anahtardır. Örneğin, bir market mağazasından bulunan öğeleri görüntüleyen bir <xref:System.Windows.Forms.ComboBox> denetiminiz varsa, büyük olasılıkla ürünlerin (ekten, MILI, yumurlar) adlarını görmek istersiniz. Ancak, veritabanı içinde bilgi alımını kolaylaştırmak ve veritabanı normalleştirmesi için, büyük olasılıkla belirli bir sıra için bilgileri öğe numarası (#501, #603 vb.) olarak depoladığınızda. Bu nedenle, formunuzdaki <xref:System.Windows.Forms.ComboBox> denetimindeki Market öğesinin "kolay adı" ve bir siparişte bulunan ilgili öğe numarası arasında örtülü bir bağlantı vardır. Bu, bir tablo aramasının özünü. Daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms BindingSource bileşeniyle arama tablosu oluşturma](./controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md).|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.Binding>
 - [Windows Forms Veri Bağlama](windows-forms-data-binding.md)
-- [Nasıl yapılır: Windows Forms DataGrid denetimini veri kaynağına bağlama](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Nasıl yapılır: Windows Forms DataGrid Denetimini Veri Kaynağına Bağlama](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [BindingSource Bileşeni](./controls/bindingsource-component.md)

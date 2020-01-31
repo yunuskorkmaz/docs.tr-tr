@@ -1,53 +1,53 @@
 ---
-title: SplitContainer Denetimine Genel Bakış (Windows Forms)
+title: SplitContainer Denetimine Genel Bakış
 ms.date: 03/30/2017
 f1_keywords:
 - SplitContainer
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 76299d9bbd2b3eac4e765dfacf579c9979721fff
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5cb5240ed4ebe3e27c20844681068711c222e9a9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963204"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742915"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.SplitContainer> denetimi bileşik olarak düşünülebilir; taşınabilir bir çubukla ayrılmış iki paneldir. Fare işaretçisi çubuğun üzerindeyken, işaretçiyi çubuğun taşınabilir olduğunu göstermek için şeklini değiştirir.  
   
 > [!IMPORTANT]
-> **Araç kutusunda** <xref:System.Windows.Forms.SplitContainer> denetim, Visual Studio 'nun <xref:System.Windows.Forms.Splitter> önceki sürümünde bulunan denetimin yerini almıştır. Denetim, denetimin <xref:System.Windows.Forms.Splitter> üzerinde çok tercih edilir. <xref:System.Windows.Forms.SplitContainer> Sınıfı, var olan uygulamalarla uyumluluk için .NET Framework dahil edilmiştir, ancak yeni projeler için <xref:System.Windows.Forms.SplitContainer> denetimi kullanmanızı kesinlikle öneririz. <xref:System.Windows.Forms.Splitter>  
+> **Araç kutusunda**<xref:System.Windows.Forms.SplitContainer> Control, Visual Studio 'nun önceki sürümünde bulunan <xref:System.Windows.Forms.Splitter> denetimini değiştirir. <xref:System.Windows.Forms.SplitContainer> denetimi <xref:System.Windows.Forms.Splitter> denetimi üzerinde çok tercih edilir. <xref:System.Windows.Forms.Splitter> sınıfı, var olan uygulamalarla uyumluluk için yine de .NET Framework dahil edilmiştir, ancak yeni projeler için <xref:System.Windows.Forms.SplitContainer> denetimini kullanmanızı kesinlikle öneririz.  
   
- <xref:System.Windows.Forms.SplitContainer> Denetimle, karmaşık kullanıcı arabirimleri oluşturabilirsiniz; genellikle, bir panelde seçim diğer panelde hangi nesnelerin gösterileceğini belirler. Bu düzenleme bilgileri görüntülemek ve göz atmak için oldukça etkilidir. İki panel olması, alanlarda bilgi toplamanıza olanak sağlar ve çubuk veya "Bölümlendirici", kullanıcıların panoları yeniden boyutlandırmasını kolaylaştırır.  
+ <xref:System.Windows.Forms.SplitContainer> denetimiyle, karmaşık kullanıcı arabirimleri oluşturabilirsiniz; Genellikle, bir panelde bulunan bir seçim diğer panelde hangi nesnelerin gösterileceğini belirler. Bu düzenleme bilgileri görüntülemek ve göz atmak için oldukça etkilidir. İki panel olması, alanlarda bilgi toplamanıza olanak sağlar ve çubuk veya "Bölümlendirici", kullanıcıların panoları yeniden boyutlandırmasını kolaylaştırır.  
   
- <xref:System.Windows.Forms.SplitContainer> İkinci<xref:System.Windows.Forms.SplitContainer> Denetim yatay olarak, üst ve alt panel oluşturmak için aynı zamanda birden fazla denetim de iç içe olabilir.  
+ Birden fazla <xref:System.Windows.Forms.SplitContainer> denetimi aynı zamanda iç ve alt panolar oluşturmak için ikinci <xref:System.Windows.Forms.SplitContainer> denetimi yatay olarak yönelimli iç içe olabilir.  
   
- <xref:System.Windows.Forms.SplitContainer> Denetimin varsayılan olarak klavyeden erişilebilir olduğunu unutmayın; kullanıcılar, <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> özellik olarak `false`ayarlandıysa ayırıcıyı taşımak için ok tuşlarına basabilir.  
+ <xref:System.Windows.Forms.SplitContainer> denetimine varsayılan olarak klavyeden erişilebilen unutmayın; Kullanıcılar, <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> özelliği `false`olarak ayarlandıysa ayırıcıyı taşımak için ok tuşlarına basabilir.  
   
- <xref:System.Windows.Forms.SplitContainer> Denetimin özelliği, denetimin kendisinin değil, ayırıcının yönünü belirler. <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Bu nedenle, bu özellik olarak <xref:System.Windows.Forms.Orientation.Vertical>ayarlandığında, Bölümlendirici yukarıdan aşağıya doğru çalışır ve sol ve sağ panolar oluşturur.  
+ <xref:System.Windows.Forms.SplitContainer> denetiminin <xref:System.Windows.Forms.SplitContainer.Orientation%2A> özelliği, denetimin kendisinin değil, ayırıcının yönünü belirler. Bu nedenle, bu özellik <xref:System.Windows.Forms.Orientation.Vertical>olarak ayarlandığında, Bölümlendirici yukarıdan aşağıya doğru çalışır ve sol ve sağ panolar oluşturur.  
   
- Ayrıca, <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> özelliğin değerinin <xref:System.Windows.Forms.SplitContainer.Orientation%2A> özelliğin değerine göre değiştiğini unutmayın. Daha fazla bilgi için bkz <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> . özellik.  
+ Ayrıca, <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> özelliğinin değerinin <xref:System.Windows.Forms.SplitContainer.Orientation%2A> özelliğinin değerine göre değiştiğini unutmayın. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> özelliği.  
   
- Ayrıca, <xref:System.Windows.Forms.SplitContainer> denetimin boyutunu ve hareketini de kısıtlayabilirsiniz. Özelliği, denetim yeniden boyutlandırılırken hangi panelin aynı boyutta kalacağınıbelirlervebuözellik,ayırıcınınklavyeveyafaretarafındantaşınabilirolupolmadığınıbelirler.<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> <xref:System.Windows.Forms.SplitContainer> <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>  
+ Ayrıca, <xref:System.Windows.Forms.SplitContainer> denetiminin boyutunu ve hareketini de kısıtlayabilirsiniz. <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> özelliği, <xref:System.Windows.Forms.SplitContainer> denetimi yeniden boyutlandırılırken hangi panelin aynı boyutta kalacağını belirler ve <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> özelliği ayırıcının klavye veya fare tarafından taşınabilir olup olmadığını belirler.  
   
 > [!NOTE]
-> Özelliği olarak `true`ayarlanmış olsa bile, Bölümlendirici yine de program aracılığıyla taşınabilir veya <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> Örneğin, özelliğini kullanarak. <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>  
+> <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> özelliği `true`olarak ayarlanmış olsa bile, Bölümlendirici yine de programlı bir şekilde taşınabilir. Örneğin, <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> özelliğini kullanarak.  
   
- Son olarak, <xref:System.Windows.Forms.SplitContainer> denetimin her bir panelinin kendine özgü boyutunu belirlemesi için özellikleri vardır.  
+ Son olarak, <xref:System.Windows.Forms.SplitContainer> denetiminin her bir paneli, tek boyutunun belirlenmesi için özelliklere sahiptir.  
   
 ## <a name="commonly-used-properties-methods-and-events"></a>Yaygın olarak kullanılan özellikler, Yöntemler ve olaylar  
   
-|Ad|Açıklama|  
+|Name|Açıklama|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>özelliði|<xref:System.Windows.Forms.SplitContainer> Denetim yeniden boyutlandırılırken hangi panelin aynı boyutta kalacağını belirler.|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>özelliði|Bölümlendiricinin klavye veya fareyle taşınıp taşınamayacağını belirler.|  
-|<xref:System.Windows.Forms.SplitContainer.Orientation%2A>özelliði|Bölümlendiricinin dikey veya yatay olarak düzenlenmesini belirler.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>özelliði|Sol veya üst kenardan taşınabilir ayırıcı çubuğuna piksel cinsinden mesafeyi belirler.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>özelliði|Ayırıcının Kullanıcı tarafından taşınabileceği minimum mesafeyi piksel cinsinden belirler.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>özelliði|Ayırıcının piksel cinsinden kalınlığını belirler.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving>olay|Bölümlendirici taşınırken gerçekleşir.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved>olay|Ayırıcı taşındığında gerçekleşir.|  
+|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> özelliği|<xref:System.Windows.Forms.SplitContainer> denetimi yeniden boyutlandırılırken hangi panelin aynı boyutta kalacağını belirler.|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> özelliği|Bölümlendiricinin klavye veya fareyle taşınıp taşınamayacağını belirler.|  
+|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> özelliği|Bölümlendiricinin dikey veya yatay olarak düzenlenmesini belirler.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> özelliği|Sol veya üst kenardan taşınabilir ayırıcı çubuğuna piksel cinsinden mesafeyi belirler.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> özelliği|Ayırıcının Kullanıcı tarafından taşınabileceği minimum mesafeyi piksel cinsinden belirler.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> özelliği|Ayırıcının piksel cinsinden kalınlığını belirler.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> olayı|Bölümlendirici taşınırken gerçekleşir.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> olayı|Ayırıcı taşındığında gerçekleşir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

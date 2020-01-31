@@ -1,5 +1,5 @@
 ---
-title: TabControl Denetimine Genel Bakış (Windows Forms)
+title: TabControl Denetimine Genel Bakış
 ms.date: 03/30/2017
 f1_keywords:
 - TabControl
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - property pages [Windows Forms], Windows Forms
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
-ms.openlocfilehash: 4511882aa4c7804e535f228dd150c26a8f7689f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2668169488b4087673fbf2552650c23cda780642
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971944"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742833"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>TabControl Denetimine Genel Bakış (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.TabControl> etiketler, bir dosya dolabı klasörlerinde kümesi ya da bir not defterinde Bölücü gibi birden fazla sekme görüntüler. Sekmeler, resim ve diğer denetimleri içerebilir. Sekme denetimi, Windows işletim sisteminde, Denetim Masası görüntü özellikleri gibi pek çok yerde görünür çok sayfalı iletişim kutusu türünü oluşturmak için kullanabilirsiniz. Ayrıca, <xref:System.Windows.Forms.TabControl> bir grup ilgili özellikleri ayarlamak için kullanılan özellik sayfaları oluşturmak için kullanılabilir.  
+Windows Forms <xref:System.Windows.Forms.TabControl>, bir not defterindeki bölücüler veya bir dosyalama dolabında bir klasör kümesindeki Etiketler gibi birden çok sekme görüntüler. Sekmeler resimleri ve diğer denetimleri içerebilir. Windows işletim sisteminde Denetim Masası ekran özellikleri gibi birçok yerde görünen birden çok sayfalı iletişim kutusu türünü oluşturmak için Tab denetimini kullanabilirsiniz. Ayrıca <xref:System.Windows.Forms.TabControl>, ilgili özellikler grubunu ayarlamak için kullanılan özellik sayfaları oluşturmak için kullanılabilir.  
   
 ## <a name="working-with-tabcontrol"></a>TabControl ile çalışma  
- En önemli özelliği <xref:System.Windows.Forms.TabControl> olduğu <xref:System.Windows.Forms.TabControl.TabPages%2A>, tek tek sekmeleri içerir. Tek tek her sekme bir <xref:System.Windows.Forms.TabPage> nesne. Bir sekme tıklandığında bilmemektedir <xref:System.Windows.Forms.Control.Click> söz konusu olay <xref:System.Windows.Forms.TabPage> nesne.  
+ <xref:System.Windows.Forms.TabControl> en önemli özelliği, bireysel sekmeleri içeren <xref:System.Windows.Forms.TabControl.TabPages%2A>. Her tek sekme <xref:System.Windows.Forms.TabPage> nesnesidir. Bir sekmeye tıklandığında, bu <xref:System.Windows.Forms.TabPage> nesnesi için <xref:System.Windows.Forms.Control.Click> olayını başlatır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.TabControl>
 - [TabControl Denetimi](tabcontrol-control-windows-forms.md)
-- [Nasıl yapılır: Windows Forms Tabcontrol'un görünüşünü değiştirme](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
-- [Nasıl yapılır: Sekme sayfasına denetim ekleme](how-to-add-a-control-to-a-tab-page.md)
-- [Nasıl yapılır: Windows Forms TabControl ile sekme ekleyip](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [Nasıl yapılır: Sekme sayfalarını devre dışı bırak](how-to-disable-tab-pages.md)
+- [Nasıl yapılır: Windows Forms TabControl’un Görünüşünü Değiştirme](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Nasıl yapılır: Sekme Sayfasına Denetim Ekleme](how-to-add-a-control-to-a-tab-page.md)
+- [Nasıl yapılır: Windows Forms TabControl ile Sekme Ekleme ve Kaldırma](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Nasıl yapılır: Sekme Sayfalarını Devre Dışı Bırakma](how-to-disable-tab-pages.md)
 - [Windows Forms'ta İletişim Kutuları](../dialog-boxes-in-windows-forms.md)

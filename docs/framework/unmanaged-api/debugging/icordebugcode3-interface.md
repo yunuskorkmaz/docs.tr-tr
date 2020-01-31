@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 70f07c9e-0614-4bee-ac34-09fe6c51c5a9
 topic_type:
 - apiref
-ms.openlocfilehash: f3ae25f7d16600a1b09f30f96a191d7ecf76713e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f2f75c3c54c0fa2d55dc0179c05e4edea6e36738
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121070"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777822"
 ---
 # <a name="icordebugcode3-interface"></a>ICorDebugCode3 Arabirimi
 Yönetilen bir dönüş değeri hakkında bilgi sağlamak için "ICorDebugCode" ve "ICorDebugCode2" değerlerini genişleten bir yöntem sağlar.  
@@ -28,7 +28,7 @@ Yönetilen bir dönüş değeri hakkında bilgi sağlamak için "ICorDebugCode" 
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetReturnValueLiveOffset Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)|Belirtilen bir Il ofseti için, hata ayıklayıcının bir işlevden dönüş değeri alabileceği şekilde, bir kesme noktasının yerleştirilmesi gereken yerel uzaklıkları alır.|  
+|[GetReturnValueLiveOffset Yöntemi](icordebugcode3-getreturnvalueliveoffset-method.md)|Belirtilen bir Il ofseti için, hata ayıklayıcının bir işlevden dönüş değeri alabileceği şekilde, bir kesme noktasının yerleştirilmesi gereken yerel uzaklıkları alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -46,5 +46,5 @@ Yönetilen bir dönüş değeri hakkında bilgi sağlamak için "ICorDebugCode" 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugILFrame3 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugILFrame3 Arabirimi](icordebugilframe3-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

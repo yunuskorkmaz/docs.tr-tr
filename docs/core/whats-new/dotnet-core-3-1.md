@@ -6,20 +6,20 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: eba3d21cfc787c5d388de31f988b835522118151
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 0905cbebb2d966570be4ac3aefb40f4377b97061
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936921"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742579"
 ---
 # <a name="whats-new-in-net-core-31"></a>​.NET Core 3.1’deki yenilikler
 
 Bu makalede .NET Core 3,1 ' deki yenilikler açıklanır. Bu sürüm, .NET Core 3,0 ' de küçük, küçük, ancak önemli düzeltmeleri içeren küçük iyileştirmeler içerir. .NET Core 3,1 hakkındaki en önemli özellik, [uzun süreli destek (LTS)](#long-term-support) sürümüdür.
 
-Visual Studio 2019 kullanıyorsanız, .NET Core 3,1 projeleriyle çalışmak için [Visual studio 2019 sürüm 16,4](https://visualstudio.microsoft.com/downloads/) ' e güncelleştirmeniz gerekir. Visual Studio 'daki yenilikler hakkında daha fazla bilgi için [Visual Studio bloguna](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/)bakın.
+Visual Studio 2019 kullanıyorsanız, .NET Core 3,1 projeleriyle çalışmak için [Visual studio 2019 sürüm 16,4](https://visualstudio.microsoft.com/downloads/) ' e güncelleştirmeniz gerekir. Visual Studio 'daki yenilikler hakkında daha fazla bilgi için bkz. [Visual studio 2019 sürüm 16,4 ' deki](/visualstudio/releases/2019/release-notes#whats-new-in-visual-studio-2019-version-164)yenilikler.
 
-Mac için Visual Studio Ayrıca, Mac için Visual Studio 8,4 Önizleme kanalında .NET Core 3,1 'i de destekler. .NET Core 3,1 ' i kullanmak için Önizleme kanalını kabul etmeniz gerekir.
+Mac için Visual Studio Ayrıca, Mac için Visual Studio 8,4 ' de .NET Core 3,1 ' u destekler ve içerir.
 
 Yayın hakkında daha fazla bilgi için bkz. [.NET Core 3,1 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/).
 
@@ -32,8 +32,8 @@ Yayın hakkında daha fazla bilgi için bkz. [.NET Core 3,1 duyurusu](https://de
 | Sürüm | Not |
 | ------- | ---- |
 | .NET Core 3.0 | 3 Mart 2020 ' de yaşam sonu.     |
-| .NET Core 2.2 | 23 Aralık 2019 ' de yaşam sonu. |
-| .NET Core 2.1 | 21 Ağustos 2021 ' de yaşam sonu.    |
+| .NET Core 2,2 | 23 Aralık 2019 ' de yaşam sonu. |
+| .NET Core 2,1 | 21 Ağustos 2021 ' de yaşam sonu.    |
 
 Daha fazla bilgi için bkz. [.NET Core destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
 
@@ -64,7 +64,7 @@ Uygulamalarınızı .NET Core 3,1 ' a güncelleştirmenizi ve değiştirme denet
 
 /CLI ("yönetilen C++ C++" olarak da bilinir) projeleri oluşturmak için destek eklendi. Bu projelerden oluşturulan ikili dosyalar .NET Core 3,0 ve sonraki sürümlerle uyumludur.
 
-Visual Studio 2019 16,4 C++' de/CLI desteği eklemek için, [ C++ iş yüküyle masaüstü geliştirmeyi](https://docs.microsoft.com/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads)yükler. Bu iş yükü, Visual Studio 'ya iki şablon ekler:
+Visual Studio 2019 sürüm C++16,4 ' de/CLI desteği eklemek Için, [Masaüstü geliştirmeyi iş yüküyle C++ birlikte](/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads)yüklersiniz. Bu iş yükü, Visual Studio 'ya iki şablon ekler:
 
 - CLR sınıf kitaplığı (.NET Core)
 - CLR boş proje (.NET Core)
@@ -72,4 +72,4 @@ Visual Studio 2019 16,4 C++' de/CLI desteği eklemek için, [ C++ iş yüküyle 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [.NET Core 3,0 ve 3,1 arasındaki son değişiklikleri gözden geçirin.](../compatibility/3.0-3.1.md)
-- [Windows Forms uygulamalar için .NET Core 3,1 arasındaki son değişiklikleri gözden geçirin.](../compatibility/winforms.md#net-core-31)
+- [Windows Forms uygulamalar için .NET Core 3,1 'deki son değişiklikleri gözden geçirin.](../compatibility/winforms.md#net-core-31)

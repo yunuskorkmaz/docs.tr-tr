@@ -7,12 +7,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 74e9909fda83c781b5a15727f79ff755e7682b0f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 8d9a23a0813423571c894758257b284ad67a72e2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963120"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744651"
 ---
 # <a name="struct-c-reference"></a>struct (C# Başvurusu)
 
@@ -47,12 +47,10 @@ Daha fazla bilgi için bkz. [yapılar](../../programming-guide/classes-and-struc
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../index.md)
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Sözcükleri](index.md)
-- [Yerleşik Türler Tablosu](built-in-types-table.md)
-- [Türler](/dotnet/csharp/language-reference/keywords)
-- [Değer Türleri](value-types.md)
+- [C#başvurunun](../index.md)
+- [C# anahtar sözcükleri](index.md)
+- [Yerleşik türler tablosu](built-in-types-table.md)
+- [Değer türleri](../builtin-types/value-types.md)
 - [class](class.md)
 - [interface](interface.md)
-- [Sınıflar ve Yapılar](../../programming-guide/classes-and-structs/index.md)
+- [Sınıflar ve yapılar](../../programming-guide/classes-and-structs/index.md)

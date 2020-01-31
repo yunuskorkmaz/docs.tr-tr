@@ -1,16 +1,16 @@
 ---
-title: WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
+title: Genelleştirme ve yerelleştirme genel bakış
 ms.date: 03/30/2017
 helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: c2b78b990969fb5bc9814ebda8ffcf38efa458b1
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 9be6245d7429466490d9dac93c5b94d70bde30bd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559930"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744481"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
 
@@ -184,8 +184,8 @@ Bu dosyayı düzenlemek için Unicode 'U destekleyen en sevdiğiniz CSV düzenle
 |Button_2: System. Windows. Controls. Button. $Content|Düğme|İptal|
 |Button_3: System. Windows. Controls. Button. $Content|Düğme|Gözat...|
 |ComboBox_1: System. Windows. Controls. ComboBox. $Content|ComboBox||
-|TextBlock_1: System. Windows. Controls. TextBlock. $Content|Metin|Bir program, klasör, belge veya İnternet kaynağının adını girdiğinizde Windows tarafından açılır.|
-|TextBlock_2: System. Windows. Controls. TextBlock. $Content|Metin|Açık:|
+|TextBlock_1: System. Windows. Controls. TextBlock. $Content|Metin|Bir program, klasör, belge veya Internet kaynağı adı yazın ve Windows bunu sizin için açar.|
+|TextBlock_2: System. Windows. Controls. TextBlock. $Content|Metin|Açın|
 |Window_1: System. Windows. Window. title|Başlık|Çalıştır|
 
 Uygulamayı Almanca olarak yerelleştirirken aşağıdaki Çeviriler gereklidir:

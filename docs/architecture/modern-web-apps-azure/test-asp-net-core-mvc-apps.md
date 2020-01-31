@@ -4,23 +4,23 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın MVC 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 82c9815abdd5140340f9a8ea39be23496d433889
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0cb5c5c604d4a82798d4af736ff278b096621588
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738384"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777102"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>MVC uygulamalarını test ASP.NET Core
 
 > *"Ürününüzün birim testini beğenmezseniz, büyük olasılıkla müşterileriniz test etmek zorunda kalmaz."*
  > \_-anonim-
 
-Herhangi bir karmaşıklığın yazılımı, değişikliklere yanıt olarak beklenmedik yollarla başarısız olabilir. Bu nedenle, en önemsiz (veya en az kritik) uygulamalar için değişiklik yaptıktan sonra test edilmesi gerekir. El ile test etme, yazılımın test edilmesine yönelik en yavaş ve en ucuz yoldur. Ne yazık ki, uygulamalar test edilebilir olacak şekilde tasarlanmamışsa, kullanılabilir tek yol olabilir. [Bölüm 4](architectural-principles.md) ' te bulunan mimari ilkeleri takip eden bir şekilde yazılan uygulamalar Unit test edilmelidir ve ASP.NET Core uygulamalar otomatik tümleştirme ve işlevsel testi de destekler.
+Herhangi bir karmaşıklığın yazılımı, değişikliklere yanıt olarak beklenmedik yollarla başarısız olabilir. Bu nedenle, en önemsiz (veya en az kritik) uygulamalar için değişiklik yaptıktan sonra test edilmesi gerekir. El ile test etme, yazılımın test edilmesine yönelik en yavaş ve en ucuz yoldur. Ne yazık ki, uygulamalar test edilebilir olacak şekilde tasarlanmamışsa, kullanılabilir tek yol olabilir. [Bölüm 4](architectural-principles.md) ' te bulunan mimari ilkeleri izlemek için yazılan uygulamalar Unit Instable olmalıdır. ASP.NET Core uygulamalar otomatik tümleştirme ve işlevsel testi destekler.
 
 ## <a name="kinds-of-automated-tests"></a>Otomatikleştirilmiş test türleri
 
-Yazılım uygulamaları için birçok tür otomatikleştirilmiş test vardır. En basit, en düşük düzey test birim sınamadır. Daha yüksek bir düzeyde, tümleştirme testleri ve işlevsel testler vardır. UI testleri, yük testleri, stres testleri ve duman testleri gibi diğer test türleri, bu belgenin kapsamı dışındadır.
+Yazılım uygulamaları için birçok tür otomatikleştirilmiş test vardır. En basit, en düşük düzey test birim sınamadır. Biraz daha yüksek bir düzeyde, tümleştirme testleri ve işlevsel testler vardır. UI testleri, yük testleri, stres testleri ve duman testleri gibi diğer test türleri, bu belgenin kapsamı dışındadır.
 
 ### <a name="unit-tests"></a>Birim testleri
 
@@ -58,7 +58,7 @@ Piramit 'in farklı katmanları ve bunların göreli boyutları, farklı test t�
 
 ### <a name="what-to-test"></a>Test edilecek
 
-Otomatikleştirilmiş testler yazma konusunda deneyimli geliştiriciler için sık karşılaşılan bir sorun test edilecek. İyi bir başlangıç noktası, koşullu mantığı test etmek için kullanılır. Bir koşullu ifadeye (If-Else, Switch, vb.) göre değişen davranışlardan herhangi bir yerde, belirli koşullarda doğru davranışı onaylamak için en az birkaç test sunabileceksiniz. Kodunuzun hata koşulları varsa, kod aracılığıyla "mutlu yol" için en az bir test yazmak iyi olur (hata olmadan) ve uygulamanın hata durumunda beklendiği gibi davrandığını doğrulamak için en az bir test (hata olmadan) ve "Sad yol" (hatalar veya tipik sonuçlar içeren) Son olarak, kod kapsamı gibi ölçümlere odaklanmak yerine başarısız olan test işlemleri üzerinde odaklanmayı deneyin. Daha fazla kod kapsamı, genellikle daha küçüktür. Ancak, çok karmaşık ve iş açısından kritik bir yöntemin birkaç testini yazmak genellikle test kod kapsamı ölçümlerini geliştirmek üzere otomatik özellikler için testlerin yazılmasından daha iyi bir zaman kullanmaktır.
+Otomatikleştirilmiş testler yazma konusunda deneyimli geliştiriciler için sık karşılaşılan bir sorun test edilecek. İyi bir başlangıç noktası, koşullu mantığı test etmek için kullanılır. Bir koşullu ifadeye (Else, Switch, vb.) göre değişen davranışlardan herhangi bir yerde, belirli koşullarda doğru davranışı onaylamak için en az birkaç test ile birlikte gelebilmelisiniz. Kodunuzun hata koşulları varsa, kod aracılığıyla "mutlu yol" için en az bir test yazmak iyi olur (hata olmadan) ve uygulamanın hata durumunda beklendiği gibi davrandığını doğrulamak için en az bir test (hata olmadan) ve "Sad yol" (hatalar veya tipik sonuçlar içeren) Son olarak, kod kapsamı gibi ölçümlere odaklanmak yerine başarısız olan test işlemleri üzerinde odaklanmayı deneyin. Daha fazla kod kapsamı, genellikle daha küçüktür. Ancak, karmaşık ve iş açısından kritik bir yöntemin birkaç testini yazmak genellikle test kod kapsamı ölçümlerini geliştirmek için otomatik özellikler için testlerin yazılmasından daha iyi bir zaman kullanmaktır.
 
 ## <a name="organizing-test-projects"></a>Test projelerini düzenleme
 
@@ -102,7 +102,7 @@ Yukarıdaki gibi birçok küçük test sınıfı üreten bir adlandırma kuralı
 
 **Şekil 9-4.** Test sınıflarını, sınanmakta olan sınıfa göre klasöre göre düzenleme.
 
-Kuşkusuz, belirli bir uygulama sınıfının test edilmekte olan çok sayıda yöntemi (ve bu nedenle birçok test sınıfı) varsa, bunları uygulama sınıfına karşılık gelen bir klasöre yerleştirmek mantıklı olabilir. Bu kuruluş, dosyaları başka bir yerde farklı şekilde düzenlemenize göre farklılık gösterebilir. Birçok başka dosya içeren bir klasörde üçten fazla veya dört ilişkili dosya varsa, bunları kendi alt klasörüne taşımak genellikle yararlı olur.
+Belirli bir uygulama sınıfının test edilmekte olan çok sayıda yöntemi (ve bu nedenle birçok test sınıfı) varsa, bunları uygulama sınıfına karşılık gelen bir klasöre yerleştirmek mantıklı olabilir. Bu kuruluş, dosyaları başka bir yerde farklı şekilde düzenlemenize göre farklılık gösterebilir. Birçok başka dosya içeren bir klasörde üçten fazla veya dört ilişkili dosya varsa, bunları kendi alt klasörüne taşımak genellikle yararlı olur.
 
 ## <a name="unit-testing-aspnet-core-apps"></a>Uygulamalar ASP.NET Core birim testi
 

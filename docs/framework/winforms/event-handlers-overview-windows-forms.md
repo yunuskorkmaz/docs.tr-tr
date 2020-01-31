@@ -1,5 +1,5 @@
 ---
-title: Olay İşleyicilerine Genel Bakış (Windows Forms)
+title: Olay İşleyicilerine Genel Bakış
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - event handling [Windows Forms], Windows Forms
 - event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
-ms.openlocfilehash: 05acbfaf427060d015c2445360a7d73ebe97d070
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10ba458197973ede35849a86fec35003f139b8d2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966842"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743462"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>Olay İşleyicilerine Genel Bakış (Windows Forms)
-Bir olay işleyicisi olaya bağlı olan bir yöntemdir. Bir olay oluştuğunda, olay işleyicisi içindeki kod yürütülür. Her bir olay işleyicisi doğru olayı işlemek izin veren iki parametre sağlar. Aşağıdaki örnek, bir olay işleyicisi için gösterir. bir <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olay.  
+Olay işleyicisi, bir olaya bağlanan bir yöntemdir. Olay ortaya çıktığında, olay işleyicisi içindeki kod yürütülür. Her olay işleyicisi, olayı doğru bir şekilde işleyebilmeniz için iki parametre sağlar. Aşağıdaki örnekte, bir <xref:System.Windows.Forms.Button> denetiminin <xref:System.Windows.Forms.Control.Click> olayı için bir olay işleyicisi gösterilmektedir.  
   
 ```vb  
 Private Sub button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button1.Click  
@@ -42,11 +42,11 @@ private:
   }  
 ```  
   
- İlk parametre`sender`, olayı oluşturan nesneye bir başvuru sağlar. İkinci parametre `e`, yukarıdaki örnekte, bir nesne belirli o anda işlenen olay geçirir. Nesnenin özelliklerini (ve bazı durumlarda, metotlarını) başvurarak fare olayları ya da sürükle ve bırak olayları aktarılan veri için fare konumu gibi bilgiler elde edebilirsiniz.  
+ `sender`ilk parametresi, olayı oluşturan nesneye bir başvuru sağlar. Yukarıdaki örnekte `e`ikinci parametresi, işlenmekte olan olaya özgü bir nesne geçirir. Nesnenin özelliklerine (ve bazen yöntemlerine) başvurarak, fare olayları veya sürükle ve bırak olaylarında aktarılan veriler için fare konumu gibi bilgileri elde edebilirsiniz.  
   
- Genellikle her olay ikinci parametre için farklı olay nesne türüne sahip bir olay işleyicisi oluşturur. Yönelik olanlar gibi bazı olay işleyicileri <xref:System.Windows.Forms.Control.MouseDown> ve <xref:System.Windows.Forms.Control.MouseUp> olaylar, aynı nesne türünü, ikinci parametresinin sahiptir. Bu tür olaylar için her iki olayları işlemek için aynı olay işleyicisi kullanabilirsiniz.  
+ Genellikle her olay, ikinci parametre için farklı bir olay nesnesi türüne sahip bir olay işleyicisi oluşturur. <xref:System.Windows.Forms.Control.MouseDown> ve <xref:System.Windows.Forms.Control.MouseUp> olayları gibi bazı olay işleyicileri, ikinci parametreleri için aynı nesne türüne sahiptir. Bu olay türleri için, her iki olayı da işlemek üzere aynı olay işleyicisini kullanabilirsiniz.  
   
- Aynı olay işleyicisi, farklı denetimler için aynı olayı işlemek için de kullanabilirsiniz. Örneğin, bir grup varsa <xref:System.Windows.Forms.RadioButton> bir form üzerinde denetimleri için tek olay işleyicisine oluşturabilir <xref:System.Windows.Forms.Control.Click> olay ve her bir denetimin <xref:System.Windows.Forms.Control.Click> olayını tek olay işleyicisine bağlı. Daha fazla bilgi için [nasıl yapılır: Windows Forms'ta tek olay işleyicisine birden fazla olay bağlama](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
+ Aynı olay işleyicisini farklı denetimler için aynı olayı işlemek için de kullanabilirsiniz. Örneğin, bir formda <xref:System.Windows.Forms.RadioButton> denetimleri grubunuz varsa, <xref:System.Windows.Forms.Control.Click> olayı için tek bir olay işleyicisi oluşturabilir ve her bir denetimin <xref:System.Windows.Forms.Control.Click> olayının tek olay işleyicisine bağlı olmasını sağlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: birden çok olayı Windows Forms Içindeki tek bir olay Işleyicisine bağlama](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

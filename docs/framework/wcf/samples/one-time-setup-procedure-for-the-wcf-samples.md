@@ -2,12 +2,12 @@
 title: Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: b0f452ba7aabcaa5ea995acba1873029c67f0f5d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: b75dd523d4c88eae70f8d21ac8b3c9f72ae055ed
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544659"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744778"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) örneklerinin çoğu Internet Information
 
 2. .NET Framework 4 ' ün yüklü olduğundan emin olun. V 4.0 (veya üzeri) için şu dizinde arama yapın: **\Windows\microsoft.NET\Framework**
 
-3. Visual Studio 2012 yüklü değilse ve işletim sisteminiz Windows Server 2008 SP2 veya üstü değilse, [düzeltme 251798](https://go.microsoft.com/fwlink/?LinkId=184693)' i yükleme.
+3. Visual Studio 2012 veya sonraki bir sürümünün yüklü olduğundan veya işletim sisteminizin Windows Server 2008 SP2 veya sonraki bir sürümü olduğundan emin olun.
 
 4. Aşağıdaki komutları çalıştırın. Bu komutların neden çalıştırılması gereken hakkında daha fazla bilgi için bkz. [IIS barındırılan hizmeti başarısız oluyor](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).
 

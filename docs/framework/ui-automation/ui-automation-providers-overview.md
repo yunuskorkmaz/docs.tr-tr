@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: f41fc102dfbe24d47e194da7477791a46f8d712d
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 98208f1e1fa1b540bf3880e33478854128505233
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741738"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778780"
 ---
 # <a name="ui-automation-providers-overview"></a>UI Otomasyon Sağlayıcılara Genel Bakış
 > [!NOTE]
@@ -18,9 +18,9 @@ ms.locfileid: "75741738"
   
  UI Otomasyon sağlayıcıları, kullanıcıların UI Otomasyonu istemci uygulamalarıyla iletişim kurmasını sağlar. Genel olarak, bir [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] her denetim veya diğer ayrı öğe bir sağlayıcı tarafından temsil edilir. Sağlayıcı, öğesi hakkında bilgi gösterir ve isteğe bağlı olarak, istemci uygulamanın denetimle etkileşime geçmesini sağlayan denetim düzenlerini uygular.  
   
- İstemci uygulamalarının genellikle doğrudan sağlayıcılarıyla çalışması gerekmez. Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]veya [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] çerçeveleri kullanan uygulamalardaki Standart denetimlerin çoğu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sistemine otomatik olarak sunulur. Özel denetimleri uygulayan uygulamalar da bu denetimler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcıları uygulayabilir ve istemci uygulamalarının bunlara erişim kazanmak için özel adımlar yapması gerekmez.  
+ İstemci uygulamalarının genellikle doğrudan sağlayıcılarıyla çalışması gerekmez. Win32, Windows Forms veya [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] çerçeveleri kullanan uygulamalardaki Standart denetimlerin çoğu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sistemine otomatik olarak sunulur. Özel denetimleri uygulayan uygulamalar da bu denetimler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcıları uygulayabilir ve istemci uygulamalarının bunlara erişim kazanmak için özel adımlar yapması gerekmez.  
   
- Bu konu, denetim geliştiricilerinin, özellikle [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] ve Win32 Windows denetimlerinde bulunan denetimler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcıları nasıl uygulayacağından ilgili bir genel bakış sunar.  
+ Bu konu, denetim geliştiricilerinin, özellikle Windows Forms ve Win32 Windows denetimlerinde bulunan denetimler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcıları nasıl uygulayacağından ilgili bir genel bakış sunar.  
   
 <a name="Types_of_Providers"></a>   
 ## <a name="types-of-providers"></a>Sağlayıcı türleri  

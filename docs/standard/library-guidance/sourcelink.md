@@ -2,12 +2,12 @@
 title: Kaynak bağlantısı ve .NET kitaplıkları
 description: .NET kitaplıklarında hata ayıklamayı geliştirmek için kaynak bağlantısını kullanmaya yönelik en iyi yöntem önerileri.
 ms.date: 01/15/2019
-ms.openlocfilehash: 0ebc7601f1ad92b0fc6ab4c7599b010cb42feb5d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706445"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744546"
 ---
 # <a name="source-link"></a>Kaynak Bağlantısı
 
@@ -25,7 +25,7 @@ Kaynak bağlantısı meta verilerinin pakete başarıyla eklenmiş olduğunu do�
 
 ![NuGet Paket Gezgininde kaynak bağlantısı](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet Paket Gezgininde kaynak bağlantısı")
 
-**✔️** derlemelerinize ve NuGet paketlerine kaynak denetimi meta verileri eklemek Için kaynak bağlantısı kullanmayı düşünün.
+✔️ derlemelerinize ve NuGet paketlerine kaynak denetimi meta verileri eklemek için kaynak bağlantısı kullanmayı düşünün.
 
 > [!TIP]
 > Türlerinizi hata ayıklayıcı öznitelikleri ekleyerek bir geliştiricinin hata ayıklama deneyimini daha da geliştirebilirsiniz.
@@ -34,7 +34,7 @@ Kaynak bağlantısı meta verilerinin pakete başarıyla eklenmiş olduğunu do�
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute>, hata ayıklayıcıya koda adımla değil kodun içinde ilermesini söyler.
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute>, bir üyenin hata ayıklayıcı değişken pencerelerinin görüntülenip görüntülenmediğini denetler.
 
-**✔️** sembol dosyalarını yayımlamayı düşünün (`*.pdb`).
+✔️ sembol dosyalarını yayımlamayı düşünün (`*.pdb`).
 
 > En iyi hata ayıklama deneyimi için kitaplığınızın sembol dosyalarını yayımlaması ve kaynak bağlantısı kullanması gerekir. Sembol dosyaları ve sembol paketleri hakkında daha fazla bilgi için bkz. [sembol paketleri](./nuget.md#symbol-packages).
 

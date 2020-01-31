@@ -1,37 +1,37 @@
 ---
-title: PrintDocument Bileşeni (Windows Forms)
+title: PrintDocument Bileşeni
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PrintDocument component [Windows Forms]
 - printing [Windows Forms], documents
 ms.assetid: 5af6a51d-66f6-43cd-a8cd-d64eb18fe7e7
-ms.openlocfilehash: 4bb03ef95f10f5eb1795e50f5147d245623e18e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8908a8161a60a5edf384da6f37746d04c0d5655
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012613"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741456"
 ---
 # <a name="printdocument-component-windows-forms"></a>PrintDocument Bileşeni (Windows Forms)
-Windows Forms `PrintDocument` bileşen ne açıklayan özellikleri ayarlamak için kullanılır ve sonra Windows tabanlı uygulamalar içinde belge yazdırma için. İle birlikte kullanılabilir <xref:System.Windows.Forms.PrintDialog> belge yazdırma tüm yönlerini komutta olmasını bileşeni.  
+Windows Forms `PrintDocument` bileşeni, nelerin yazdırılacağını tanımlayan özellikleri ayarlamak ve ardından belgeyi Windows tabanlı uygulamalar içinde yazdırmak için kullanılır. Belge yazdırmanın her yönüyle ilgili olarak, <xref:System.Windows.Forms.PrintDialog> bileşeniyle birlikte kullanılabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [PrintDocument Bileşenine Genel Bakış](printdocument-component-overview-windows-forms.md)  
- Genel konseptlerini tanıtan `PrintDocument` yazdırmak açıklayan özelliklerini ayarlamanıza olanak sağlar ve Windows tabanlı bir uygulama baskı başlatır, bileşeni.  
+ `PrintDocument` bileşeninin genel kavramlarını tanıtır, bu, nelerin yazdırılacağını ve Windows tabanlı bir uygulamada yazdırmanın nasıl başlatıldığını açıklayan özellikler ayarlamanıza olanak sağlar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Drawing.Printing.PrintDocument>  
- Sınıf ve onun üyeleri hakkında başvuru bilgileri sağlar.  
+ Sınıf ve üyeleri hakkında başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms Yazdırma Desteği](../advanced/windows-forms-print-support.md)  
- Windows Forms yazdırma başlıklarını bir listesini sunar.  
+ Windows Forms ilgili yazdırma konularının bir listesini gösterir.  
   
  [PrintDialog Bileşeni](printdialog-component-windows-forms.md)  
- Genel konseptlerini tanıtan <xref:System.Windows.Forms.PrintDialog> , kullanıcıların bir yazıcı seçmek için kullanabileceği bir önceden yapılandırılmış iletişim kutusunu görüntülemek için izin veren bileşen yazdırılacak sayfa seçin ve yazdırmayla ayarları belirler.  
+ , Kullanıcıların bir yazıcı seçmek, yazdırılacak sayfaları seçmek ve yazdırma ile ilgili ayarları belirlemek için kullanabileceği önceden yapılandırılmış bir iletişim kutusu görüntülemenizi sağlayan <xref:System.Windows.Forms.PrintDialog> bileşeninin genel kavramlarını tanıtır.  
   
  [PrintPreviewControl Denetimi](printpreviewcontrol-control-windows-forms.md)  
- Genel konseptlerini tanıtan <xref:System.Windows.Forms.PrintPreviewControl>, hangi kendi yazdırma önizleme iletişim kutusu veya bileşen tasarlamak için kullanabilirsiniz.  
+ , Kendi Baskı Önizleme iletişim kutusunu veya bileşenini tasarlamak için kullanabileceğiniz <xref:System.Windows.Forms.PrintPreviewControl>genel kavramlarını tanıtır.  
   
  [PrintPreviewDialog Denetimi](printpreviewdialog-control-windows-forms.md)  
- Genel konseptlerini tanıtan <xref:System.Windows.Forms.PrintPreviewDialog> denetimi, kullanıcılar kendi belge sürümünü yazdırıldığında nasıl görüneceğini görmek için kullanabileceğiniz bir önceden yapılandırılmış bir iletişim kutusu görüntülemenizi sağlar.
+ <xref:System.Windows.Forms.PrintPreviewDialog> denetiminin genel kavramlarını tanıtır ve bu, kullanıcıların, yazdırıldığında bakacağı bir sürümünü görmek için kullanabileceği önceden yapılandırılmış bir iletişim kutusu görüntülemenizi sağlar.

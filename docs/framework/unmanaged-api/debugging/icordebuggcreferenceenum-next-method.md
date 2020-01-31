@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 91b1345c-a94f-4ef8-9696-3823d06c6d05
 topic_type:
 - apiref
-ms.openlocfilehash: 43408486fec9cd50222eed08ec2d3397bc11bc18
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3a8e967a3ecc452ebda08872d8bcd9e9d08c766f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134615"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777686"
 ---
 # <a name="icordebuggcreferenceenumnext-method"></a>ICorDebugGCReferenceEnum::Next Yöntemi
-Atık olarak toplanabilecek nesneler hakkında bilgi içeren, belirtilen [cor_gc_reference](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) örnek sayısını alır.  
+Atık olarak toplanabilecek nesneler hakkında bilgi içeren [cor_gc_reference](cor-gc-reference-structure.md) örneklerinin belirtilen sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,10 +39,10 @@ HRESULT Next(
  'ndaki Alınacak köklerin sayısı.  
   
  kök  
- dışı Her biri, atık toplanan bir nesnenin kökünü temsil eden bir [cor_gc_reference](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) nesnesine işaret eden bir işaretçiler dizisi.  
+ dışı Her biri, atık toplanan bir nesnenin kökünü temsil eden bir [cor_gc_reference](cor-gc-reference-structure.md) nesnesine işaret eden bir işaretçiler dizisi.  
   
  Pceltfettiz  
- dışı Gerçekten `roots`döndürülen [cor_gc_reference](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) nesne sayısına yönelik bir işaretçi. Bu değer, `celt` 1 ise `null` olabilir.  
+ dışı Aslında `roots`döndürülen [cor_gc_reference](cor-gc-reference-structure.md) nesnelerinin sayısına yönelik bir işaretçi. Bu değer, `celt` 1 ise `null` olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -57,5 +57,5 @@ HRESULT Next(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugGCReferenceEnum Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugGCReferenceEnum Arabirimi](icordebuggcreferenceenum-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

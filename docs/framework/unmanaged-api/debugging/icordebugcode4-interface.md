@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3fdf523-274a-449c-920b-9fcb0aed1d97
 topic_type:
 - apiref
-ms.openlocfilehash: 6c74a6c371ababb21bfda9b8dd2910d6a7881e6a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 373df8a47bdcbc833ffaea05bb205a63b5f583ec
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125535"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777766"
 ---
 # <a name="icordebugcode4-interface"></a>ICorDebugCode4 Arabirimi
 Bir işlevdeki yerel değişkenleri ve bağımsız değişkenleri numaralandırmak için hata ayıklayıcı sağlayan bir yöntem sağlar.  
@@ -28,7 +28,7 @@ Bir işlevdeki yerel değişkenleri ve bağımsız değişkenleri numaralandırm
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[EnumerateVariableHomes Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md)|Bir işlevdeki yerel değişkenlere ve bağımsız değişkenlere bir Numaralandırıcı alır.|  
+|[EnumerateVariableHomes Yöntemi](icordebugcode4-enumeratevariablehomes-method.md)|Bir işlevdeki yerel değişkenlere ve bağımsız değişkenlere bir Numaralandırıcı alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -46,5 +46,5 @@ Bir işlevdeki yerel değişkenleri ve bağımsız değişkenleri numaralandırm
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugCode3 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
-- [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugCode3 Arabirimi](icordebugcode3-interface.md)
+- [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

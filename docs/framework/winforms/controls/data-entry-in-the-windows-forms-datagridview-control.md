@@ -1,56 +1,56 @@
 ---
-title: Windows Forms DataGridView Denetimindeki Veri Girişi
+title: DataGridView Denetimindeki veri girişi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], data entry
 - data entry [Windows Forms], dataGridView control
 - data grids [Windows Forms], data entry
 ms.assetid: 4a6d4676-d4e7-4b0e-9c22-50ce65ffe0d6
-ms.openlocfilehash: 3ebfcaaf22ca632e5784dc1f01a351583e78e865
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e95095624f45cc1507735083a87293730e9133e9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011514"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743999"
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Veri Girişi
-`DataGridView` Denetimi nasıl kullanıcıları ekleyin veya denetiminde verileri değiştirme değiştirme olanak veren çeşitli özellikler sunar. Örneğin, veri girişini daha verimli yeni satırlar için varsayılan değerleri sağlayarak ve hatalar ortaya çıktığında kullanıcıları uyarı tarafından yapabilirsiniz.  
+`DataGridView` denetimi, kullanıcıların denetimdeki verileri ekleme veya değiştirme şeklini değiştirmenize olanak sağlayan çeşitli özellikler sağlar. Örneğin, yeni satırlar için varsayılan değerleri sağlayarak ve hata oluştuğunda kullanıcıları uyarlayarak veri girişini daha verimli hale getirebilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: İçin Windows Forms DataGridView denetiminin düzenleme modunu belirtme](how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
- Hücre düzenleme kullanıcıların başlangıç şeklini değiştirmek açıklar.  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminin Düzenleme Modunu Belirtme](how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
+ Kullanıcıların hücreleri düzenlemenin başlama şeklini nasıl değiştirbileceğinizi açıklar.  
   
- [Nasıl yapılır: Windows Forms DataGridView denetiminde yeni satırlar için varsayılan değerleri belirtme](specify-default-values-for-new-rows-in-the-datagrid.md)  
- Veri girişi zaman kazanmak yeni kayıtlar için satır önceden açıklar.  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminde Yeni Satırlar İçin Varsayılan Değerleri Belirtme](specify-default-values-for-new-rows-in-the-datagrid.md)  
+ Veri girişi süresini kaydetmek üzere yeni kayıtlar için satırı önceden doldurmayı açıklar.  
   
  [Windows Forms DataGridView Denetiminde Yeni Kayıtlar için Satır Kullanma](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)  
- Ayrıntılı bilgiler gizleyerek, görünümünü özelleştirme ve onu ilişkisini dahil olmak üzere, yeni kayıtlar için satır açıklar <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyonu.  
+ Yeni kayıtlar için, görünümü gizleme, görünümünü özelleştirme ve <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyonuyla ilişkilendirme hakkında bilgiler dahil olmak üzere satırı açıklar.  
   
- [İzlenecek yol: Windows Forms DataGridView denetiminde verileri doğrulama](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
- Veri girişi biçimlendirme hataları önlemek için kullanıcı girişini doğrulama açıklar.  
+ [İzlenecek yol: Windows Forms DataGridView Denetiminde Verileri Doğrulama](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
+ Veri girişi biçimlendirme hatalarını engellemek için Kullanıcı girişinin nasıl doğrulanacağını açıklar.  
   
- [İzlenecek yol: Windows Forms DataGridView denetimine veri girişi sırasında oluşan hataları ele alma](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
- Kullanıcı yeni bir değer kaydetmeye çalıştığında, veri kaynağından kaynaklanan veri girişi sırasında oluşan hataları nasıl ele alınacağını açıklar.  
+ [İzlenecek yol: Windows Forms DataGridView Denetimine Veri Girişi Sırasında Oluşan Hataları Ele Alma](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+ Kullanıcı yeni bir değer yürütmeyi denediğinde veri kaynağından kaynaklanan veri girişi hatalarının nasıl işleneceğini açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.DataGridView>  
- İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView> denetimi.  
+ <xref:System.Windows.Forms.DataGridView> denetimi için başvuru belgeleri sağlar.  
   
  <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>  
- İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView.EditMode%2A> özelliği.  
+ <xref:System.Windows.Forms.DataGridView.EditMode%2A> özelliği için başvuru belgeleri sağlar.  
   
  <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>  
- İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> olay.  
+ <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> olayı için başvuru belgeleri sağlar.  
   
  <xref:System.Windows.Forms.DataGridView.DataError?displayProperty=nameWithType>  
- İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView.DataError> olay.  
+ <xref:System.Windows.Forms.DataGridView.DataError> olayı için başvuru belgeleri sağlar.  
   
  <xref:System.Windows.Forms.DataGridView.CellValidating?displayProperty=nameWithType>  
- İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView.CellValidating> olay.  
+ <xref:System.Windows.Forms.DataGridView.CellValidating> olayı için başvuru belgeleri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms DataGridView Denetiminde Verileri Görüntüleme](displaying-data-in-the-windows-forms-datagridview-control.md)  
- El ile veya bir dış veri kaynağından denetimi veriyle doldurmak nasıl açıklayan konuları sağlar.  
+ Denetimi el ile veya dış bir veri kaynağından nasıl veriyle dolduramayacağınız konuları sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

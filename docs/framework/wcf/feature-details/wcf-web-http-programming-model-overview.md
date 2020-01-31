@@ -2,12 +2,12 @@
 title: WCF Web HTTP Programlama Modeli Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 4862ae0e5151177e74da0f94d06b5b39205ed4c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8a4b4ff6c0482ed8a09fe30b7d03afc1f84db581
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283299"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739907"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP Programlama Modeli Genel Bakış
 Windows Communication Foundation (WCF) WEB HTTP programlama modeli, WCF ile WEB HTTP Hizmetleri oluşturmak için gereken temel öğeleri sağlar. WCF WEB HTTP Hizmetleri, Web tarayıcıları dahil olmak üzere en geniş olası istemciler arasında erişilecek şekilde tasarlanmıştır ve aşağıdaki benzersiz gereksinimlere sahiptir:  
@@ -101,7 +101,7 @@ interface ICustomer
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>UriTemplate sorgu dizesi parametreleri ve URL 'Leri  
  Web stili hizmetler bir Web tarayıcısından, bir hizmet işlemiyle ilişkili bir URL yazılarak çağrılabilir. Bu hizmet işlemleri, URL içindeki bir dize biçiminde belirtilmesi gereken sorgu dizesi parametreleri alabilir. Aşağıdaki tabloda bir URL ve kullanılan biçim içinde geçirilebilecek türler gösterilmektedir.  
   
-|Type|Biçimi|  
+|Tür|Biçimi|  
 |----------|------------|  
 |<xref:System.Byte>|0 - 255|  
 |<xref:System.SByte>|-128 - 127|  
@@ -138,7 +138,8 @@ interface ICustomer
  .NET Framework 3,5, JSON verileri (AJAX) ve dağıtım akışlarının yanı sıra (ATOM ve RSS dahil) destek sağlar. Bu özellikler hakkında daha fazla bilgi için bkz. [WCF Web http biçimlendirme](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF dağıtımı genel bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) ve [AJAX Tümleştirme ve JSON desteği](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP programlama modeli ve güvenliği  
- WCF WEB HTTP programlama modeli WS-* protokollerini desteklemediğinden, bir WCF WEB HTTP hizmetini güvenli hale getirmenin tek yolu, Hizmeti SSL kullanarak HTTPS üzerinden kullanıma sunmasıdır. IIS 7,0 ile SSL ayarlama hakkında daha fazla bilgi için bkz. [IIS 'de SSL uygulama](https://go.microsoft.com/fwlink/?LinkId=131613)  
+
+WCF WEB HTTP programlama modeli WS-* protokollerini desteklemediğinden, bir WCF WEB HTTP hizmetini güvenli hale getirmenin tek yolu, Hizmeti SSL kullanarak HTTPS üzerinden kullanıma sunmasıdır. IIS 7,0 ile SSL ayarlama hakkında daha fazla bilgi için bkz. [IIS 'de SSL uygulama](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis).
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP programlama modeli sorunlarını giderme  
  Bir kanal oluşturmak için bir <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> kullanarak WCF WEB HTTP hizmetlerini çağırırken <xref:System.ServiceModel.Description.WebHttpBehavior>, <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>farklı bir <xref:System.ServiceModel.EndpointAddress> geçirilse bile yapılandırma dosyasında ayarlanan <xref:System.ServiceModel.EndpointAddress> kullanır.  

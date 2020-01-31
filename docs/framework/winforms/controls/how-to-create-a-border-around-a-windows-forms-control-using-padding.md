@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Doldurmayı kullanarak Windows Forms Denetiminin Çevresinde Kenarlık Oluşturma'
+title: Doldurma kullanarak denetim etrafında kenarlık oluşturma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - margins [Windows Forms], Windows Forms
 - Margin property [Windows Forms]
 ms.assetid: bac7ed4d-a163-4259-98bd-155a36345890
-ms.openlocfilehash: e3bbf43dbe45e675df172a6c3e1db16a3ba9caa8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 114186ab5784cf892cb01e9fe2648ce22cecc4b7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746902"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742192"
 ---
 # <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>Nasıl yapılır: Doldurmayı kullanarak Windows Forms Denetiminin Çevresinde Kenarlık Oluşturma
-Aşağıdaki kod örneği, kenarlık oluşturma veya geçici olarak ana hatlarıyla gösterilmiştir bir <xref:System.Windows.Forms.RichTextBox> denetimi. Örnek ayarlar bir <xref:System.Windows.Forms.Panel> denetimin <xref:System.Windows.Forms.Padding> 5 ve kümeleri için özellik <xref:System.Windows.Forms.Control.Dock%2A> bir alt özellik <xref:System.Windows.Forms.RichTextBox> denetimi <xref:System.Windows.Forms.DockStyle.Fill>. <xref:System.Windows.Forms.Control.BackColor%2A> , <xref:System.Windows.Forms.Panel> Denetim ayarı <xref:System.Drawing.Color.Blue%2A>, etrafında mavi bir kenarlık oluşturan <xref:System.Windows.Forms.RichTextBox> denetimi.  
+Aşağıdaki kod örneği, bir <xref:System.Windows.Forms.RichTextBox> denetimi etrafında kenarlık veya anahat oluşturmayı gösterir. Örnek, bir <xref:System.Windows.Forms.Panel> denetiminin <xref:System.Windows.Forms.Padding> özelliğinin değerini 5 olarak ayarlar ve alt <xref:System.Windows.Forms.RichTextBox> denetiminin <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>olarak ayarlar. <xref:System.Windows.Forms.Panel> denetiminin <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.RichTextBox> denetiminin etrafında mavi bir kenarlık oluşturan <xref:System.Drawing.Color.Blue%2A>olarak ayarlanmıştır.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[System.Windows.Forms.Padding#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Padding/CS/Form1.cs#1)]

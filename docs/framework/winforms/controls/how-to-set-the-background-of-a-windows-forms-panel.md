@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Forms panelinin arka planını ayarlama'
+title: Bir Panelin Arka Planını Ayarlama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: 9336be2aebb10e5c0bd0bf4648cae34a3b5fe7c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba2619354403793aea7ca15d43649da9637079a6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013185"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744735"
 ---
-# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Nasıl yapılır: Bir Windows Forms panelinin arka planını ayarlama
-Bir Windows Forms <xref:System.Windows.Forms.Panel> denetim arka plan rengi hem de arka plan görüntüsü görüntüleyebilirsiniz. <xref:System.Windows.Forms.Control.BackColor%2A> Özelliği etiketleri ve radyo düğmeleri gibi içerdiği denetimlerle arka plan rengini ayarlar. Varsa <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği ayarlı değil, <xref:System.Windows.Forms.Control.BackColor%2A> seçimi tüm panel doldurur. Varsa <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği ayarlanmışsa, görüntünün içerdiği denetimlerle görüntülenir.  
+# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Nasıl yapılır: Windows Forms Panelinin Arka Planını Ayarlama
+Bir Windows Forms <xref:System.Windows.Forms.Panel> denetimi hem arka plan rengini hem de arka plan görüntüsünü görüntüleyebilir. <xref:System.Windows.Forms.Control.BackColor%2A> özelliği, Etiketler ve radyo düğmeleri gibi içerilen denetimlerin arka plan rengini ayarlar. <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği ayarlanmamışsa, <xref:System.Windows.Forms.Control.BackColor%2A> seçimi Panelin tamamını dolduracaktır. <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği ayarlandıysa, görüntü içerilen denetimlerin arkasında görüntülenir.  
   
-### <a name="to-set-the-background-programmatically"></a>Arka plan program üzerinden ayarlamak için  
+### <a name="to-set-the-background-programmatically"></a>Arka planı programlı olarak ayarlamak için  
   
-1. Bölmenin ayarlamak <xref:System.Windows.Forms.Control.BackColor%2A> türünde bir değer özelliğini <xref:System.Drawing.Color?displayProperty=nameWithType>.  
+1. Panelin <xref:System.Windows.Forms.Control.BackColor%2A> özelliğini <xref:System.Drawing.Color?displayProperty=nameWithType>türünde bir değere ayarlayın.  
   
     ```vb  
     Panel1.BackColor = Color.AliceBlue  
@@ -37,7 +37,7 @@ Bir Windows Forms <xref:System.Windows.Forms.Panel> denetim arka plan rengi hem 
     panel1->BackColor = Color::AliceBlue;  
     ```  
   
-2. Bölmenin ayarlamak <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliğini kullanarak <xref:System.Drawing.Image.FromFile%2A> yöntemi <xref:System.Drawing.Image?displayProperty=nameWithType> sınıfı.  
+2. <xref:System.Drawing.Image?displayProperty=nameWithType> sınıfının <xref:System.Drawing.Image.FromFile%2A> yöntemini kullanarak bölmenin <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliğini ayarlayın.  
   
     ```vb  
     ' You should replace the bolded image   
